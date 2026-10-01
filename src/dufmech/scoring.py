@@ -26,6 +26,14 @@ EXPERIMENTAL_GO_EVIDENCE = {
     "HGI",
     "HEP",
 }
+EGGNOG_FUNCTION_FIELDS = (
+    "go_terms",
+    "ec_numbers",
+    "kegg_kos",
+    "kegg_reactions",
+    "cazy_terms",
+    "bigg_reactions",
+)
 
 SCORE_TSV_FIELDNAMES = [
     "pfam_id",
@@ -40,6 +48,7 @@ SCORE_TSV_FIELDNAMES = [
     "rhea_reaction_count",
     "experimental_go_mf_count",
     "specific_cdd_hit_count",
+    "eggnog_function_count",
     "quickgo_mf_count",
     "cdd_superfamily_count",
     "cath_funfam_count",
@@ -48,6 +57,7 @@ SCORE_TSV_FIELDNAMES = [
     "alphafold_model_count",
     "threedbeacons_model_count",
     "string_edge_count",
+    "eggnog_ortholog_count",
     "demotion_reasons",
     "context_sources",
     "source_url",
@@ -61,6 +71,7 @@ class EvidenceBundle:
     alphafold: tuple[Mapping[str, Any], ...] = ()
     cath: tuple[Mapping[str, Any], ...] = ()
     cdsearch: tuple[Mapping[str, Any], ...] = ()
+    eggnog: tuple[Mapping[str, Any], ...] = ()
     pdbe_kb: tuple[Mapping[str, Any], ...] = ()
     quickgo: tuple[Mapping[str, Any], ...] = ()
     rcsb: tuple[Mapping[str, Any], ...] = ()
@@ -85,6 +96,7 @@ class FamilyScoreRow:
     rhea_reaction_count: int
     experimental_go_mf_count: int
     specific_cdd_hit_count: int
+    eggnog_function_count: int
     quickgo_mf_count: int
     cdd_superfamily_count: int
     cath_funfam_count: int
@@ -93,6 +105,7 @@ class FamilyScoreRow:
     alphafold_model_count: int
     threedbeacons_model_count: int
     string_edge_count: int
+    eggnog_ortholog_count: int
     demotion_reasons: tuple[str, ...]
     context_sources: tuple[str, ...]
     source_url: str
@@ -130,6 +143,10 @@ def score_families(
         accession_to_pfam_ids,
     )
     cath = _cath_funfam_by_pfam(evidence.cath, accession_to_pfam_ids)
+    eggnog_function, eggnog_ortholog = _eggnog_by_pfam(
+        evidence.eggnog,
+        accession_to_pfam_ids,
+    )
     rcsb = _evidence_by_pfam(evidence.rcsb, accession_to_pfam_ids, "pdb_id")
     pdbe_kb = _evidence_by_pfam(
         evidence.pdbe_kb,
@@ -167,6 +184,9 @@ def score_families(
             specific_cdd_hit_count=len(
                 specific_cdd.get(_string(family.get("pfam_id")), ())
             ),
+            eggnog_function_count=len(
+                eggnog_function.get(_string(family.get("pfam_id")), ())
+            ),
             quickgo_mf_count=len(quickgo.get(_string(family.get("pfam_id")), ())),
             cdd_superfamily_count=len(
                 superfamily_cdd.get(_string(family.get("pfam_id")), ())
@@ -183,6 +203,9 @@ def score_families(
                 threedbeacons.get(_string(family.get("pfam_id")), ())
             ),
             string_edge_count=len(stringdb.get(_string(family.get("pfam_id")), ())),
+            eggnog_ortholog_count=len(
+                eggnog_ortholog.get(_string(family.get("pfam_id")), ())
+            ),
         )
         for family in families
     ]
@@ -220,6 +243,7 @@ def _score_family(
     rhea_reaction_count: int,
     experimental_go_mf_count: int,
     specific_cdd_hit_count: int,
+    eggnog_function_count: int,
     quickgo_mf_count: int,
     cdd_superfamily_count: int,
     cath_funfam_count: int,
@@ -228,12 +252,17 @@ def _score_family(
     alphafold_model_count: int,
     threedbeacons_model_count: int,
     string_edge_count: int,
+    eggnog_ortholog_count: int,
 ) -> FamilyScoreRow:
     seed_status = _string(family.get("unknown_status"))
     known_count = rhea_reaction_count + experimental_go_mf_count
-    partial_count = specific_cdd_hit_count + max(
-        0,
-        quickgo_mf_count - experimental_go_mf_count,
+    partial_count = (
+        specific_cdd_hit_count
+        + eggnog_function_count
+        + max(
+            0,
+            quickgo_mf_count - experimental_go_mf_count,
+        )
     )
     context_count = (
         cdd_superfamily_count
@@ -243,6 +272,7 @@ def _score_family(
         + alphafold_model_count
         + threedbeacons_model_count
         + string_edge_count
+        + eggnog_ortholog_count
     )
 
     reasons: list[str] = []
@@ -254,6 +284,8 @@ def _score_family(
         reasons.append("has_experimental_go_molecular_function")
     if specific_cdd_hit_count:
         reasons.append("has_specific_cdd_hit")
+    if eggnog_function_count:
+        reasons.append("has_eggnog_function")
 
     if seed_status == KNOWN_HISTORICAL_DUF or known_count:
         characterization_status = KNOWN_HISTORICAL_DUF
@@ -275,6 +307,7 @@ def _score_family(
         rhea_reaction_count=rhea_reaction_count,
         experimental_go_mf_count=experimental_go_mf_count,
         specific_cdd_hit_count=specific_cdd_hit_count,
+        eggnog_function_count=eggnog_function_count,
         quickgo_mf_count=quickgo_mf_count,
         cdd_superfamily_count=cdd_superfamily_count,
         cath_funfam_count=cath_funfam_count,
@@ -283,6 +316,7 @@ def _score_family(
         alphafold_model_count=alphafold_model_count,
         threedbeacons_model_count=threedbeacons_model_count,
         string_edge_count=string_edge_count,
+        eggnog_ortholog_count=eggnog_ortholog_count,
         demotion_reasons=tuple(reasons),
         context_sources=_context_sources(
             cdd_superfamily_count=cdd_superfamily_count,
@@ -292,6 +326,7 @@ def _score_family(
             alphafold_model_count=alphafold_model_count,
             threedbeacons_model_count=threedbeacons_model_count,
             string_edge_count=string_edge_count,
+            eggnog_ortholog_count=eggnog_ortholog_count,
         ),
         source_url=_string(family.get("source_url")),
     )
@@ -399,6 +434,33 @@ def _cath_funfam_by_pfam(
     return dict(by_pfam)
 
 
+def _eggnog_by_pfam(
+    rows: Iterable[Mapping[str, Any]],
+    accession_to_pfam_ids: Mapping[str, set[str]],
+) -> tuple[dict[str, set[str]], dict[str, set[str]]]:
+    functions: dict[str, set[str]] = defaultdict(set)
+    orthologs: dict[str, set[str]] = defaultdict(set)
+    for row in rows:
+        if not isinstance(row, Mapping):
+            continue
+        accession = _string(row.get("query_id"))
+        if not accession:
+            continue
+
+        function_terms = _eggnog_function_terms(row)
+        ortholog_terms = {
+            f"eggnog_og:{term}" for term in _string_terms(row.get("eggnog_ogs"))
+        }
+        seed_ortholog = _string(row.get("seed_ortholog"))
+        if seed_ortholog:
+            ortholog_terms.add(f"seed_ortholog:{seed_ortholog}")
+
+        for pfam_id in accession_to_pfam_ids.get(accession, ()):
+            functions[pfam_id].update(function_terms)
+            orthologs[pfam_id].update(ortholog_terms)
+    return (dict(functions), dict(orthologs))
+
+
 def _representative_count(rows: Iterable[Mapping[str, Any]]) -> int:
     accessions = {
         _string(row.get("representative_accession"))
@@ -417,6 +479,7 @@ def _context_sources(
     alphafold_model_count: int,
     threedbeacons_model_count: int,
     string_edge_count: int,
+    eggnog_ortholog_count: int,
 ) -> tuple[str, ...]:
     sources = []
     if cdd_superfamily_count:
@@ -431,9 +494,29 @@ def _context_sources(
         sources.append("alphafold")
     if threedbeacons_model_count:
         sources.append("3dbeacons")
+    if eggnog_ortholog_count:
+        sources.append("eggnog")
     if string_edge_count:
         sources.append("string")
     return tuple(sources)
+
+
+def _eggnog_function_terms(row: Mapping[str, Any]) -> set[str]:
+    return {
+        f"{field}:{term}"
+        for field in EGGNOG_FUNCTION_FIELDS
+        for term in _string_terms(row.get(field))
+    }
+
+
+def _string_terms(value: object) -> tuple[str, ...]:
+    if isinstance(value, str):
+        values: Iterable[object] = (value,)
+    elif isinstance(value, Iterable):
+        values = value
+    else:
+        return ()
+    return tuple(term for item in values if (term := _string(item)))
 
 
 def _string(value: object) -> str:

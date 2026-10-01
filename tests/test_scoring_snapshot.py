@@ -27,12 +27,14 @@ def score_row(pfam_id: str = "PF00001") -> FamilyScoreRow:
         specific_cdd_hit_count=0,
         quickgo_mf_count=0,
         cdd_superfamily_count=1,
+        eggnog_function_count=0,
         cath_funfam_count=0,
         rcsb_structure_count=0,
         pdbe_kb_annotation_count=0,
         alphafold_model_count=0,
         threedbeacons_model_count=0,
         string_edge_count=0,
+        eggnog_ortholog_count=0,
         demotion_reasons=(),
         context_sources=("cdd_superfamily",),
         source_url="https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00001",
@@ -124,6 +126,19 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
         ),
         encoding="utf-8",
     )
+    eggnog_path = tmp_path / "eggnog-mapper-2026-10-01.json"
+    eggnog_path.write_text(
+        json.dumps(
+            [
+                {
+                    "query_id": "P11111",
+                    "seed_ortholog": "1234.seed",
+                    "ec_numbers": ["1.1.1.1"],
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
 
     assert (
         score_duf_puf(
@@ -136,6 +151,8 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
                 str(rhea_path),
                 "--cath-json",
                 str(cath_path),
+                "--eggnog-json",
+                str(eggnog_path),
                 "--snapshot-date",
                 "2026-10-01",
                 "--out-dir",
@@ -148,8 +165,12 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
     assert "wrote duf-characterization-scores-2026-10-01 (1 rows)" in (
         capsys.readouterr().out
     )
-    assert (
-        tmp_path
-        / "worklists"
-        / "duf-characterization-scores-2026-10-01.manifest.json"
-    ).is_file()
+    manifest_path = (
+        tmp_path / "worklists" / "duf-characterization-scores-2026-10-01.manifest.json"
+    )
+    assert manifest_path.is_file()
+
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    assert manifest["snapshot"]["input_snapshot_ids"]["eggnog"] == (
+        "eggnog-mapper-2026-10-01"
+    )
