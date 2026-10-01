@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv
 import json
 from io import StringIO
+from urllib.parse import parse_qs
 
 import httpx
 
@@ -198,6 +199,37 @@ def test_uniprot_mapping_client_follows_results_pagination() -> None:
 
     rows = collect_uniref_mappings(client.map_uniref(["B2BDZ3", "B2BDZ4"]))
 
+    assert [row.uniprot_accession for row in rows] == ["B2BDZ3", "B2BDZ4"]
+
+
+def test_uniprot_mapping_client_batches_accessions() -> None:
+    submitted_ids: list[list[str]] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path == "/idmapping/run":
+            payload = parse_qs(request.read().decode("utf-8"))
+            submitted_ids.append(payload["ids"])
+            return httpx.Response(200, json={"jobId": f"job-{len(submitted_ids)}"})
+
+        if request.url.path == "/idmapping/status/job-1":
+            return httpx.Response(200, json={"results": [uniref_result()]})
+
+        assert request.url.path == "/idmapping/status/job-2"
+        return httpx.Response(
+            200,
+            json={"results": [uniref_result(source="B2BDZ3")]},
+        )
+
+    client = UniProtIdMappingClient(
+        poll_interval=0,
+        transport=httpx.MockTransport(handler),
+    )
+
+    rows = collect_uniref_mappings(
+        client.map_uniref(["B2BDZ4", "B2BDZ3", "B2BDZ4"], batch_size=1)
+    )
+
+    assert submitted_ids == [["B2BDZ4"], ["B2BDZ3"]]
     assert [row.uniprot_accession for row in rows] == ["B2BDZ3", "B2BDZ4"]
 
 

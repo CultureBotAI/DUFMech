@@ -6,7 +6,7 @@ import csv
 import io
 import json
 import time
-from collections.abc import Iterable, Mapping
+from collections.abc import Iterable, Mapping, Sequence
 from dataclasses import asdict, dataclass
 from typing import Any
 
@@ -89,9 +89,13 @@ class UniProtIdMappingClient:
         self,
         accessions: Iterable[str],
         *,
+        batch_size: int = 100_000,
         target: str = DEFAULT_UNIREF_TARGET,
     ) -> Iterable[Mapping[str, Any]]:
-        accessions = [accession for accession in accessions if accession]
+        if batch_size < 1:
+            raise ValueError("batch_size must be positive")
+
+        accessions = _unique_accessions(accessions)
         if not accessions:
             return
 
@@ -100,13 +104,14 @@ class UniProtIdMappingClient:
             follow_redirects=True,
             transport=self.transport,
         ) as client:
-            job_id = _submit_mapping_job(client, accessions, target)
-            yield from _iter_mapping_results(
-                client,
-                job_id,
-                max_polls=self.max_polls,
-                poll_interval=self.poll_interval,
-            )
+            for batch in _chunked(accessions, batch_size):
+                job_id = _submit_mapping_job(client, batch, target)
+                yield from _iter_mapping_results(
+                    client,
+                    job_id,
+                    max_polls=self.max_polls,
+                    poll_interval=self.poll_interval,
+                )
 
 
 def collect_uniref_mappings(
@@ -293,6 +298,22 @@ def _next_link(response: httpx.Response) -> str | None:
         return None
     next_url = next_link.get("url")
     return next_url if isinstance(next_url, str) and next_url else None
+
+
+def _unique_accessions(accessions: Iterable[str]) -> list[str]:
+    unique: list[str] = []
+    seen: set[str] = set()
+    for accession in accessions:
+        if not accession or accession in seen:
+            continue
+        seen.add(accession)
+        unique.append(accession)
+    return unique
+
+
+def _chunked(items: Sequence[str], size: int) -> Iterable[list[str]]:
+    for offset in range(0, len(items), size):
+        yield list(items[offset : offset + size])
 
 
 def _mapping(value: object) -> Mapping[str, Any]:
