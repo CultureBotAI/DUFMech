@@ -1,0 +1,60 @@
+{
+  "files": {
+    "json": {
+      "bytes": 4919041,
+      "path": "interpro-pfam-duf-2026-10-01.json",
+      "sha256": "141fd83d020563444c6498a3f0dc4d7924e7cf759647b449271f4d00c612b689"
+    },
+    "tsv": {
+      "bytes": 2685895,
+      "path": "interpro-pfam-duf-2026-10-01.tsv",
+      "sha256": "90c20b768cb80b35826cbceffb729589470c8fd84d77692c21beeac7c80d4756"
+    }
+  },
+  "rows": {
+    "by_candidate_reason": {
+      "description_says_unknown_function": 768,
+      "domain_of_unknown_function": 2832,
+      "name_matches_duf": 155,
+      "name_says_unknown_function": 4320,
+      "short_name_matches_duf": 6371
+    },
+    "by_unknown_status": {
+      "KNOWN_HISTORICAL_DUF": 1999,
+      "UNKNOWN_CANDIDATE": 4533
+    },
+    "total": 6532
+  },
+  "schema": {
+    "tsv_fieldnames": [
+      "pfam_id",
+      "short_name",
+      "name",
+      "interpro_id",
+      "unknown_status",
+      "candidate_reasons",
+      "proteins",
+      "matches",
+      "proteomes",
+      "taxa",
+      "structures",
+      "alphafold_models",
+      "domain_architectures",
+      "description",
+      "source_url"
+    ]
+  },
+  "snapshot": {
+    "date": "2026-10-01",
+    "generated_at": "2026-10-01T02:02:24.459424Z",
+    "id": "interpro-pfam-duf-2026-10-01"
+  },
+  "source": {
+    "extra_fields": "entry_id,short_name,description,counters",
+    "include_false_positives": false,
+    "name": "InterPro Pfam API",
+    "page_size": 200,
+    "search": "DUF",
+    "url": "https://www.ebi.ac.uk/interpro/api/entry/pfam/"
+  }
+}

@@ -23,6 +23,12 @@ The worklist can also read saved InterPro JSON for offline fixture runs:
 just duf-puf-worklist --input-json interpro-page.json --format json
 ```
 
+Freeze the canonical InterPro/Pfam seed worklist with a matching manifest:
+
+```bash
+just freeze-duf-puf-worklist --snapshot-date 2026-10-01
+```
+
 ## Scope
 
 DUFMech records domains, protein families, and evidence layers that help
@@ -43,6 +49,8 @@ as proof that the family is still functionally unknown.
 
 ```text
 DUFMech/
+├── data/
+│   └── worklists/
 ├── docs/
 │   ├── provenance/
 │   └── reports/

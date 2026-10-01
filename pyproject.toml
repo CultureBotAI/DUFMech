@@ -41,6 +41,7 @@ Homepage = "https://github.com/CultureBotAI/DUFMech"
 Repository = "https://github.com/CultureBotAI/DUFMech"
 
 [project.scripts]
+duf-puf-freeze = "dufmech.snapshot_cli:main"
 duf-puf-worklist = "dufmech.cli:main"
 
 [build-system]

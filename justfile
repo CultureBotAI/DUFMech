@@ -18,3 +18,7 @@ lint:
 # Build the first InterPro/Pfam DUF-family worklist.
 duf-puf-worklist *args="":
     uv run python scripts/duf_puf_worklist.py {{args}}
+
+# Freeze the first InterPro/Pfam DUF-family worklist snapshot.
+freeze-duf-puf-worklist *args="":
+    uv run python scripts/freeze_duf_puf_worklist.py {{args}}
