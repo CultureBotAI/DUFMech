@@ -1,9 +1,9 @@
 # Transferred From DisMech PR 13237
 
-DUFMech was accidentally initialized in
-`monarch-initiative/dismech` as PR 13237, `Add first DUF/Pfam worklist`.
-Chris Mungall noticed the wrong repository on 2026-10-01 and opened DisMech
-PR 13251 to revert it.
+DUFMech was accidentally initialized in `monarch-initiative/dismech` as
+monarch-initiative/dismech#13237, `Add first DUF/Pfam worklist`. Chris Mungall
+noticed the wrong repository on 2026-10-01 and opened
+monarch-initiative/dismech#13251 to revert it.
 
 The useful work transferred here was:
 
