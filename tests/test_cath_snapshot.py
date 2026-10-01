@@ -6,7 +6,7 @@ import json
 from datetime import datetime, timezone
 from io import StringIO
 
-from dufmech.cath import CathFunFamRow
+from dufmech.cath import CathFetchFailure, CathFunFamRow
 from dufmech.cath_snapshot import write_cath_snapshot
 from dufmech.cath_snapshot_cli import load_member_uniprot_accessions
 from dufmech.cath_snapshot_cli import main as freeze_cath_snapshot
@@ -63,6 +63,7 @@ def test_write_cath_snapshot_writes_artifacts_and_manifest(tmp_path) -> None:
         snapshot_date="2026-10-01",
         generated_at=datetime(2026, 10, 1, 3, 4, 5, tzinfo=timezone.utc),
         seed_snapshot_id="pfam-uniprot-uniref90-2026-10-01",
+        fetch_failures=[CathFetchFailure("P0A000", "timed out")],
     )
 
     json_path = tmp_path / "uniprot-cath-funfam-v4_4_0-2026-10-01.json"
@@ -82,6 +83,15 @@ def test_write_cath_snapshot_writes_artifacts_and_manifest(tmp_path) -> None:
     }
     assert manifest["source"]["cath_version"] == "v4_4_0"
     assert manifest["rows"]["total"] == 2
+    assert manifest["failures"] == {
+        "total": 1,
+        "fetch_failures": [
+            {
+                "uniprot_accession": "P0A000",
+                "error": "timed out",
+            }
+        ],
+    }
     assert manifest["rows"]["unique_funfams"] == 1
     assert manifest["files"]["json"]["sha256"] == hashlib.sha256(
         json_path.read_bytes()
@@ -147,3 +157,55 @@ def test_freeze_cath_snapshot_cli_reads_saved_member_rows(
         / "worklists"
         / "uniprot-cath-funfam-v4_4_0-2026-10-01.manifest.json"
     ).is_file()
+
+
+def test_freeze_cath_snapshot_cli_can_record_skipped_failures(
+    tmp_path,
+    monkeypatch,
+) -> None:
+    def fake_collect(accessions, **kwargs) -> list[CathFunFamRow]:
+        assert accessions == ["P75259"]
+        kwargs["failures"].append(CathFetchFailure("P75259", "timed out"))
+        return []
+
+    monkeypatch.setattr(
+        "dufmech.cath_snapshot_cli.collect_cath_snapshot_rows",
+        fake_collect,
+    )
+
+    input_path = tmp_path / "pfam-uniprot-uniref90-2026-10-01.json"
+    input_path.write_text(
+        json.dumps([{"uniprot_accession": "B2BDZ3", "representative_accession": "P75259"}]),
+        encoding="utf-8",
+    )
+    out_dir = tmp_path / "worklists"
+
+    assert (
+        freeze_cath_snapshot(
+            [
+                "--input-json",
+                str(input_path),
+                "--skip-failures",
+                "--snapshot-date",
+                "2026-10-01",
+                "--out-dir",
+                str(out_dir),
+            ]
+        )
+        == 0
+    )
+
+    manifest = json.loads(
+        (out_dir / "uniprot-cath-funfam-v4_4_0-2026-10-01.manifest.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    assert manifest["failures"] == {
+        "total": 1,
+        "fetch_failures": [
+            {
+                "uniprot_accession": "P75259",
+                "error": "timed out",
+            }
+        ],
+    }

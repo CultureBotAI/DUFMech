@@ -42,6 +42,11 @@ def main(argv: list[str] | None = None) -> int:
         help=f"CATH version path component (default: {CATH_VERSION})",
     )
     parser.add_argument(
+        "--skip-failures",
+        action="store_true",
+        help="record and skip accessions that still fail after CATH retries",
+    )
+    parser.add_argument(
         "--out-dir",
         type=Path,
         default=Path("data/worklists"),
@@ -68,9 +73,11 @@ def main(argv: list[str] | None = None) -> int:
     if args.limit_accessions is not None:
         accessions = accessions[: args.limit_accessions]
 
+    fetch_failures = [] if args.skip_failures else None
     rows = collect_cath_snapshot_rows(
         accessions,
         client=CathClient(version=args.cath_version),
+        failures=fetch_failures,
     )
     manifest = write_cath_snapshot(
         rows,
@@ -78,6 +85,7 @@ def main(argv: list[str] | None = None) -> int:
         snapshot_date=args.snapshot_date,
         seed_snapshot_id=seed_snapshot_id,
         cath_version=args.cath_version,
+        fetch_failures=fetch_failures or (),
     )
     print(
         f"wrote {manifest['snapshot']['id']} "
