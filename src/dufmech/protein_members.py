@@ -135,6 +135,31 @@ def collect_members(
     return sorted(rows, key=lambda row: row.uniprot_accession)
 
 
+def collect_family_members(
+    pfam_ids: Iterable[str],
+    client: InterProPfamProteinClient,
+    *,
+    page_size: int = 200,
+    limit_members_per_family: int | None = None,
+) -> list[PfamProteinMemberRow]:
+    """Collect UniProtKB members for a stable Pfam family list."""
+
+    rows: list[PfamProteinMemberRow] = []
+    seen: set[str] = set()
+    for pfam_id in pfam_ids:
+        if pfam_id in seen:
+            continue
+        seen.add(pfam_id)
+        rows.extend(
+            collect_members(
+                pfam_id,
+                client.iter_proteins(pfam_id, page_size=page_size),
+                limit=limit_members_per_family,
+            )
+        )
+    return sorted(rows, key=lambda row: (row.pfam_id, row.uniprot_accession))
+
+
 def row_from_interpro_protein(
     pfam_id: str,
     protein: Mapping[str, Any],

@@ -8,6 +8,7 @@ import httpx
 
 from dufmech.protein_members import (
     InterProPfamProteinClient,
+    collect_family_members,
     collect_members,
     render_members_json,
     render_members_tsv,
@@ -142,6 +143,40 @@ def test_interpro_protein_client_follows_pagination() -> None:
     rows = collect_members("PF01519", client.iter_proteins("PF01519"))
 
     assert [row.uniprot_accession for row in rows] == ["B2BDZ3", "B2BDZ4"]
+
+
+def test_collect_family_members_expands_stable_pfam_list() -> None:
+    pages = {
+        "/interpro/api/protein/UniProt/entry/pfam/PF01519/": {
+            "count": 1,
+            "next": None,
+            "results": [interpro_protein(accession="B2BDZ4", start=39, end=154)],
+        },
+        "/interpro/api/protein/UniProt/entry/pfam/PF01579/": {
+            "count": 1,
+            "next": None,
+            "results": [interpro_protein(accession="O44526", start=21, end=148)],
+        },
+    }
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        payload = pages[request.url.path]
+        assert request.url.params["page_size"] == "50"
+        return httpx.Response(200, json=payload)
+
+    client = InterProPfamProteinClient(transport=httpx.MockTransport(handler))
+
+    rows = collect_family_members(
+        ["PF01579", "PF01519", "PF01579"],
+        client,
+        page_size=50,
+        limit_members_per_family=1,
+    )
+
+    assert [(row.pfam_id, row.uniprot_accession) for row in rows] == [
+        ("PF01519", "B2BDZ4"),
+        ("PF01579", "O44526"),
+    ]
 
 
 def test_render_member_tsv_and_json_are_stable() -> None:

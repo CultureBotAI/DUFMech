@@ -22,3 +22,7 @@ duf-puf-worklist *args="":
 # Freeze the first InterPro/Pfam DUF-family worklist snapshot.
 freeze-duf-puf-worklist *args="":
     uv run python scripts/freeze_duf_puf_worklist.py {{args}}
+
+# Expand Pfam worklist rows to UniProtKB protein members.
+duf-puf-members *args="":
+    uv run python scripts/duf_puf_members.py {{args}}
