@@ -65,6 +65,12 @@ Freeze PDBe-KB residue annotations for RCSB PDB entities:
 just freeze-duf-puf-pdbe-kb --pdb-entity P68871:1A00:2 --endpoint domains
 ```
 
+Freeze Rhea reactions for UniProt accessions:
+
+```bash
+just freeze-duf-puf-rhea --uniprot-accession P08159
+```
+
 ## Scope
 
 DUFMech records domains, protein families, and evidence layers that help

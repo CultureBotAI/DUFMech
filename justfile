@@ -46,3 +46,7 @@ freeze-duf-puf-rcsb *args="":
 # Freeze RCSB PDB entities with PDBe-KB annotation metadata.
 freeze-duf-puf-pdbe-kb *args="":
     uv run python scripts/freeze_duf_puf_pdbe_kb.py {{args}}
+
+# Freeze UniProt accessions with Rhea reaction metadata.
+freeze-duf-puf-rhea *args="":
+    uv run python scripts/freeze_duf_puf_rhea.py {{args}}
