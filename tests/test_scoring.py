@@ -86,7 +86,7 @@ def test_score_families_demotes_known_partial_and_contextual_families() -> None:
                 },
             ),
             alphafold=(
-                {"uniprot_accession": "R11111", "model_identifier": "AF-R11111-F1"},
+                {"uniprot_accession": "R11111", "model_entity_id": "AF-R11111-F1"},
             ),
             cath=(
                 {
