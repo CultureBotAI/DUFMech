@@ -43,6 +43,7 @@ Repository = "https://github.com/CultureBotAI/DUFMech"
 [project.scripts]
 duf-puf-freeze = "dufmech.snapshot_cli:main"
 duf-puf-freeze-alphafold = "dufmech.alphafold_snapshot_cli:main"
+duf-puf-freeze-cdsearch = "dufmech.cdsearch_snapshot_cli:main"
 duf-puf-freeze-members = "dufmech.member_snapshot_cli:main"
 duf-puf-freeze-mgnify = "dufmech.mgnify_snapshot_cli:main"
 duf-puf-freeze-pdbe-kb = "dufmech.pdbe_kb_snapshot_cli:main"

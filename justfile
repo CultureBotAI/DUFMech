@@ -39,6 +39,10 @@ freeze-duf-puf-mgnify *args="":
 freeze-duf-puf-alphafold *args="":
     uv run python scripts/freeze_duf_puf_alphafold.py {{args}}
 
+# Freeze UniProt accessions with NCBI Batch CD-Search domain metadata.
+freeze-duf-puf-cdsearch *args="":
+    uv run python scripts/freeze_duf_puf_cdsearch.py {{args}}
+
 # Freeze UniProt accessions with RCSB PDB experimental structure metadata.
 freeze-duf-puf-rcsb *args="":
     uv run python scripts/freeze_duf_puf_rcsb.py {{args}}
