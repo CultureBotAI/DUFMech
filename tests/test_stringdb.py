@@ -84,6 +84,20 @@ def test_stringdb_client_raises_on_http_failure() -> None:
         raise AssertionError("expected StringDbClientError")
 
 
+def test_stringdb_client_treats_unknown_organism_as_no_evidence() -> None:
+    client = StringDbClient(
+        transport=httpx.MockTransport(
+            lambda request: httpx.Response(
+                400,
+                text="\t".join(STRING_ERROR_FIELDNAMES)
+                + "\nunknown organism\tUnsupported seed taxon\n",
+            )
+        )
+    )
+
+    assert collect_stringdb_rows([StringDbSeed("A0A010YFW0", "927661")], client) == []
+
+
 def test_parse_string_tsv_raises_on_unexpected_fieldnames() -> None:
     try:
         parse_string_tsv(

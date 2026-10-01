@@ -192,6 +192,8 @@ class StringDbClient:
             )
             if empty_on_404 and response.status_code == 404:
                 return "\t".join(STRING_ERROR_FIELDNAMES) + "\n"
+            if response.status_code == 400 and is_unknown_organism_tsv(response.text):
+                return response.text
             try:
                 response.raise_for_status()
             except httpx.HTTPError as exc:
@@ -200,6 +202,7 @@ class StringDbClient:
 
 
 STRING_ERROR_FIELDNAMES = ["Error", "ErrorMessage"]
+STRING_UNKNOWN_ORGANISM_ERROR = "unknown organism"
 
 
 def collect_stringdb_rows(
@@ -265,6 +268,15 @@ def parse_string_tsv(
         {key: value or "" for key, value in row.items() if key is not None}
         for row in reader
     ]
+
+
+def is_unknown_organism_tsv(text: str) -> bool:
+    """Return whether one STRING error TSV reports an unindexed organism."""
+
+    reader = csv.DictReader(io.StringIO(text), dialect="excel-tab")
+    if reader.fieldnames != STRING_ERROR_FIELDNAMES:
+        return False
+    return any(row.get("Error") == STRING_UNKNOWN_ORGANISM_ERROR for row in reader)
 
 
 def mapping_row_from_string_record(
