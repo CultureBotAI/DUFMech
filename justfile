@@ -50,3 +50,7 @@ freeze-duf-puf-pdbe-kb *args="":
 # Freeze UniProt accessions with Rhea reaction metadata.
 freeze-duf-puf-rhea *args="":
     uv run python scripts/freeze_duf_puf_rhea.py {{args}}
+
+# Freeze UniProt accessions with QuickGO molecular-function annotations.
+freeze-duf-puf-quickgo *args="":
+    uv run python scripts/freeze_duf_puf_quickgo.py {{args}}
