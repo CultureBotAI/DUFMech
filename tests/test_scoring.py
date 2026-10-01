@@ -77,6 +77,14 @@ def test_score_families_demotes_known_partial_and_contextual_families() -> None:
                     "ec_numbers": ["1.1.1.1"],
                 },
             ),
+            mgnify=(
+                {
+                    "pfam_id": "PF00002",
+                    "mgyp": "MGYP000000000166",
+                    "full_length": True,
+                    "biome_names": ["root:Environmental:Aquatic:Marine"],
+                },
+            ),
             alphafold=(
                 {"uniprot_accession": "R11111", "model_identifier": "AF-R11111-F1"},
             ),
@@ -114,15 +122,19 @@ def test_score_families_demotes_known_partial_and_contextual_families() -> None:
 
     assert by_pfam["PF00002"].characterization_status == PARTIALLY_CHARACTERIZED
     assert by_pfam["PF00002"].partial_evidence_count == 3
-    assert by_pfam["PF00002"].context_evidence_count == 4
+    assert by_pfam["PF00002"].context_evidence_count == 5
     assert by_pfam["PF00002"].cdd_superfamily_count == 1
     assert by_pfam["PF00002"].cath_funfam_count == 1
     assert by_pfam["PF00002"].eggnog_function_count == 1
     assert by_pfam["PF00002"].eggnog_ortholog_count == 1
+    assert by_pfam["PF00002"].mgnify_protein_count == 1
+    assert by_pfam["PF00002"].mgnify_full_length_count == 1
+    assert by_pfam["PF00002"].mgnify_biome_count == 1
     assert by_pfam["PF00002"].string_edge_count == 1
     assert by_pfam["PF00002"].context_sources == (
         "cdd_superfamily",
         "cath_gene3d",
+        "mgnify",
         "eggnog",
         "string",
     )

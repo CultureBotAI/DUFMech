@@ -52,6 +52,9 @@ SCORE_TSV_FIELDNAMES = [
     "quickgo_mf_count",
     "cdd_superfamily_count",
     "cath_funfam_count",
+    "mgnify_protein_count",
+    "mgnify_full_length_count",
+    "mgnify_biome_count",
     "rcsb_structure_count",
     "pdbe_kb_annotation_count",
     "alphafold_model_count",
@@ -72,6 +75,7 @@ class EvidenceBundle:
     cath: tuple[Mapping[str, Any], ...] = ()
     cdsearch: tuple[Mapping[str, Any], ...] = ()
     eggnog: tuple[Mapping[str, Any], ...] = ()
+    mgnify: tuple[Mapping[str, Any], ...] = ()
     pdbe_kb: tuple[Mapping[str, Any], ...] = ()
     quickgo: tuple[Mapping[str, Any], ...] = ()
     rcsb: tuple[Mapping[str, Any], ...] = ()
@@ -100,6 +104,9 @@ class FamilyScoreRow:
     quickgo_mf_count: int
     cdd_superfamily_count: int
     cath_funfam_count: int
+    mgnify_protein_count: int
+    mgnify_full_length_count: int
+    mgnify_biome_count: int
     rcsb_structure_count: int
     pdbe_kb_annotation_count: int
     alphafold_model_count: int
@@ -147,6 +154,9 @@ def score_families(
         evidence.eggnog,
         accession_to_pfam_ids,
     )
+    mgnify_proteins, mgnify_full_length, mgnify_biomes = _mgnify_by_pfam(
+        evidence.mgnify
+    )
     rcsb = _evidence_by_pfam(evidence.rcsb, accession_to_pfam_ids, "pdb_id")
     pdbe_kb = _evidence_by_pfam(
         evidence.pdbe_kb,
@@ -192,6 +202,15 @@ def score_families(
                 superfamily_cdd.get(_string(family.get("pfam_id")), ())
             ),
             cath_funfam_count=len(cath.get(_string(family.get("pfam_id")), ())),
+            mgnify_protein_count=len(
+                mgnify_proteins.get(_string(family.get("pfam_id")), ())
+            ),
+            mgnify_full_length_count=len(
+                mgnify_full_length.get(_string(family.get("pfam_id")), ())
+            ),
+            mgnify_biome_count=len(
+                mgnify_biomes.get(_string(family.get("pfam_id")), ())
+            ),
             rcsb_structure_count=len(rcsb.get(_string(family.get("pfam_id")), ())),
             pdbe_kb_annotation_count=len(
                 pdbe_kb.get(_string(family.get("pfam_id")), ())
@@ -247,6 +266,9 @@ def _score_family(
     quickgo_mf_count: int,
     cdd_superfamily_count: int,
     cath_funfam_count: int,
+    mgnify_protein_count: int,
+    mgnify_full_length_count: int,
+    mgnify_biome_count: int,
     rcsb_structure_count: int,
     pdbe_kb_annotation_count: int,
     alphafold_model_count: int,
@@ -267,6 +289,7 @@ def _score_family(
     context_count = (
         cdd_superfamily_count
         + cath_funfam_count
+        + mgnify_biome_count
         + rcsb_structure_count
         + pdbe_kb_annotation_count
         + alphafold_model_count
@@ -311,6 +334,9 @@ def _score_family(
         quickgo_mf_count=quickgo_mf_count,
         cdd_superfamily_count=cdd_superfamily_count,
         cath_funfam_count=cath_funfam_count,
+        mgnify_protein_count=mgnify_protein_count,
+        mgnify_full_length_count=mgnify_full_length_count,
+        mgnify_biome_count=mgnify_biome_count,
         rcsb_structure_count=rcsb_structure_count,
         pdbe_kb_annotation_count=pdbe_kb_annotation_count,
         alphafold_model_count=alphafold_model_count,
@@ -321,6 +347,7 @@ def _score_family(
         context_sources=_context_sources(
             cdd_superfamily_count=cdd_superfamily_count,
             cath_funfam_count=cath_funfam_count,
+            mgnify_biome_count=mgnify_biome_count,
             rcsb_structure_count=rcsb_structure_count,
             pdbe_kb_annotation_count=pdbe_kb_annotation_count,
             alphafold_model_count=alphafold_model_count,
@@ -461,6 +488,28 @@ def _eggnog_by_pfam(
     return (dict(functions), dict(orthologs))
 
 
+def _mgnify_by_pfam(
+    rows: Iterable[Mapping[str, Any]],
+) -> tuple[dict[str, set[str]], dict[str, set[str]], dict[str, set[str]]]:
+    proteins: dict[str, set[str]] = defaultdict(set)
+    full_length: dict[str, set[str]] = defaultdict(set)
+    biomes: dict[str, set[str]] = defaultdict(set)
+    for row in rows:
+        if not isinstance(row, Mapping):
+            continue
+        pfam_id = _string(row.get("pfam_id"))
+        mgyp = _string(row.get("mgyp"))
+        if not pfam_id or not mgyp:
+            continue
+
+        proteins[pfam_id].add(mgyp)
+        if row.get("full_length") is True:
+            full_length[pfam_id].add(mgyp)
+        biomes[pfam_id].update(_string_terms(row.get("biome_names")))
+
+    return (dict(proteins), dict(full_length), dict(biomes))
+
+
 def _representative_count(rows: Iterable[Mapping[str, Any]]) -> int:
     accessions = {
         _string(row.get("representative_accession"))
@@ -474,6 +523,7 @@ def _context_sources(
     *,
     cdd_superfamily_count: int,
     cath_funfam_count: int,
+    mgnify_biome_count: int,
     rcsb_structure_count: int,
     pdbe_kb_annotation_count: int,
     alphafold_model_count: int,
@@ -486,6 +536,8 @@ def _context_sources(
         sources.append("cdd_superfamily")
     if cath_funfam_count:
         sources.append("cath_gene3d")
+    if mgnify_biome_count:
+        sources.append("mgnify")
     if rcsb_structure_count:
         sources.append("rcsb_pdb")
     if pdbe_kb_annotation_count:
