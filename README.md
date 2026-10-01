@@ -53,6 +53,12 @@ Freeze AlphaFold DB evidence for UniProt accessions:
 just freeze-duf-puf-alphafold --uniprot-accession B2BDZ3
 ```
 
+Freeze CATH-Gene3D FunFam evidence for UniProt accessions:
+
+```bash
+just freeze-duf-puf-cath --uniprot-accession P68871
+```
+
 Freeze NCBI Batch CD-Search conserved-domain evidence for UniProt accessions:
 
 ```bash
