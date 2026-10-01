@@ -29,6 +29,18 @@ Freeze the canonical InterPro/Pfam seed worklist with a matching manifest:
 just freeze-duf-puf-worklist --snapshot-date 2026-10-01
 ```
 
+Expand frozen Pfam rows to UniProtKB protein members through InterPro:
+
+```bash
+just duf-puf-members --pfam-id PF01519 --limit-members-per-family 5
+```
+
+Freeze a Pfam member snapshot with UniProtKB metadata and UniRef clusters:
+
+```bash
+just freeze-duf-puf-members --input-json data/worklists/interpro-pfam-duf-2026-10-01.json --limit-families 1
+```
+
 ## Scope
 
 DUFMech records domains, protein families, and evidence layers that help
