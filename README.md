@@ -77,6 +77,12 @@ Freeze QuickGO molecular-function annotations for UniProt accessions:
 just freeze-duf-puf-quickgo --uniprot-accession P08159
 ```
 
+Freeze STRING interaction partners for UniProt/taxon pairs:
+
+```bash
+just freeze-duf-puf-string --uniprot-taxon P68871:9606 --limit-partners-per-protein 5
+```
+
 ## Scope
 
 DUFMech records domains, protein families, and evidence layers that help
