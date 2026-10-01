@@ -15,6 +15,7 @@ from dufmech.cath import (
     CATH_UNIPROT_TO_FUNFAM_URL,
     CATH_VERSION,
     CathClient,
+    CathFetchFailure,
     CathFunFamRow,
     collect_cath_rows,
     render_cath_json,
@@ -28,10 +29,11 @@ def collect_cath_snapshot_rows(
     accessions: Iterable[str],
     *,
     client: CathClient | None = None,
+    failures: list[CathFetchFailure] | None = None,
 ) -> list[CathFunFamRow]:
     """Collect CATH rows with the default live client."""
 
-    return collect_cath_rows(accessions, client or CathClient())
+    return collect_cath_rows(accessions, client or CathClient(), failures=failures)
 
 
 def write_cath_snapshot(
@@ -42,6 +44,7 @@ def write_cath_snapshot(
     generated_at: datetime | None = None,
     seed_snapshot_id: str = "",
     cath_version: str = CATH_VERSION,
+    fetch_failures: Iterable[CathFetchFailure] = (),
 ) -> dict[str, Any]:
     """Write date-stamped CATH FunFam JSON, TSV, and manifest files."""
 
@@ -83,6 +86,7 @@ def write_cath_snapshot(
         tsv_text=tsv_text,
         seed_snapshot_id=seed_snapshot_id,
         cath_version=cath_version,
+        fetch_failures=fetch_failures,
     )
     manifest_path.write_text(
         json.dumps(manifest, indent=2, sort_keys=True) + "\n",
@@ -103,10 +107,12 @@ def build_cath_manifest(
     tsv_text: str,
     seed_snapshot_id: str = "",
     cath_version: str = CATH_VERSION,
+    fetch_failures: Iterable[CathFetchFailure] = (),
 ) -> dict[str, Any]:
     """Build provenance and checksum metadata for a CATH FunFam snapshot."""
 
     rows = list(rows)
+    fetch_failures = list(fetch_failures)
     superfamily_counts = Counter(row.superfamily_id for row in rows)
 
     return {
@@ -134,6 +140,16 @@ def build_cath_manifest(
                 {(row.superfamily_id, row.funfam_number) for row in rows}
             ),
             "by_superfamily": dict(sorted(superfamily_counts.items())),
+        },
+        "failures": {
+            "total": len(fetch_failures),
+            "fetch_failures": [
+                {
+                    "uniprot_accession": failure.uniprot_accession,
+                    "error": failure.error,
+                }
+                for failure in fetch_failures
+            ],
         },
         "files": {
             "json": _file_manifest(json_path, json_text),

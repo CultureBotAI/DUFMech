@@ -86,6 +86,14 @@ class CathFunFamRow:
         return row
 
 
+@dataclass(frozen=True)
+class CathFetchFailure:
+    """One UniProt accession that could not be fetched from CATH."""
+
+    uniprot_accession: str
+    error: str
+
+
 class CathClient:
     """Small client for the CATH-Gene3D UniProt-to-FunFam API."""
 
@@ -147,6 +155,8 @@ class CathClient:
 def collect_cath_rows(
     accessions: Iterable[str],
     client: CathClient,
+    *,
+    failures: list[CathFetchFailure] | None = None,
 ) -> list[CathFunFamRow]:
     """Collect CATH FunFam rows for ordered, unique UniProt accessions."""
 
@@ -158,24 +168,30 @@ def collect_cath_rows(
         if not accession or accession in seen_accessions:
             continue
         seen_accessions.add(accession)
-        for record in client.uniprot_to_funfam(accession):
-            row = row_from_cath_record(
-                accession,
-                record,
-                cath_version=client.version,
-            )
-            if row is None:
-                continue
-            key = (
-                row.uniprot_accession,
-                row.member_id,
-                row.superfamily_id,
-                row.funfam_number,
-            )
-            if key in seen_rows:
-                continue
-            seen_rows.add(key)
-            rows.append(row)
+        try:
+            for record in client.uniprot_to_funfam(accession):
+                row = row_from_cath_record(
+                    accession,
+                    record,
+                    cath_version=client.version,
+                )
+                if row is None:
+                    continue
+                key = (
+                    row.uniprot_accession,
+                    row.member_id,
+                    row.superfamily_id,
+                    row.funfam_number,
+                )
+                if key in seen_rows:
+                    continue
+                seen_rows.add(key)
+                rows.append(row)
+        except CathClientError as exc:
+            if failures is None:
+                raise
+            failures.append(CathFetchFailure(accession, str(exc)))
+            continue
 
     return sorted(
         rows,

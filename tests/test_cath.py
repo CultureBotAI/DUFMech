@@ -119,6 +119,19 @@ def test_cath_client_raises_on_http_failure() -> None:
         raise AssertionError("expected CathClientError")
 
 
+def test_collect_cath_rows_records_failures() -> None:
+    failures = []
+    rows = collect_cath_rows(
+        ["P68871", "P68872"],
+        CathClient(transport=httpx.MockTransport(lambda request: httpx.Response(500))),
+        failures=failures,
+    )
+
+    assert rows == []
+    assert [failure.uniprot_accession for failure in failures] == ["P68871", "P68872"]
+    assert all("could not fetch CATH FunFam" in failure.error for failure in failures)
+
+
 def test_cath_client_raises_on_invalid_payload() -> None:
     client = CathClient(
         transport=httpx.MockTransport(lambda request: httpx.Response(200, json={}))
