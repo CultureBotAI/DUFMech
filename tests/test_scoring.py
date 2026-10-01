@@ -73,6 +73,18 @@ def test_score_families_demotes_known_partial_and_contextual_families() -> None:
             alphafold=(
                 {"uniprot_accession": "R11111", "model_identifier": "AF-R11111-F1"},
             ),
+            cath=(
+                {
+                    "uniprot_accession": "P33333",
+                    "superfamily_id": "1.10.490.10",
+                    "funfam_number": "1",
+                },
+                {
+                    "uniprot_accession": "P33333",
+                    "superfamily_id": "1.10.490.10",
+                    "funfam_number": "1",
+                },
+            ),
             stringdb=(
                 {
                     "uniprot_accession": "P33333",
@@ -95,9 +107,15 @@ def test_score_families_demotes_known_partial_and_contextual_families() -> None:
 
     assert by_pfam["PF00002"].characterization_status == PARTIALLY_CHARACTERIZED
     assert by_pfam["PF00002"].partial_evidence_count == 2
+    assert by_pfam["PF00002"].context_evidence_count == 3
     assert by_pfam["PF00002"].cdd_superfamily_count == 1
+    assert by_pfam["PF00002"].cath_funfam_count == 1
     assert by_pfam["PF00002"].string_edge_count == 1
-    assert by_pfam["PF00002"].context_sources == ("cdd_superfamily", "string")
+    assert by_pfam["PF00002"].context_sources == (
+        "cdd_superfamily",
+        "cath_gene3d",
+        "string",
+    )
 
     assert by_pfam["PF00003"].characterization_status == KNOWN_HISTORICAL_DUF
     assert by_pfam["PF00003"].demotion_reasons == (

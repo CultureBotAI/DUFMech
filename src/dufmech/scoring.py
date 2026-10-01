@@ -42,6 +42,7 @@ SCORE_TSV_FIELDNAMES = [
     "specific_cdd_hit_count",
     "quickgo_mf_count",
     "cdd_superfamily_count",
+    "cath_funfam_count",
     "rcsb_structure_count",
     "pdbe_kb_annotation_count",
     "alphafold_model_count",
@@ -58,6 +59,7 @@ class EvidenceBundle:
     """Frozen evidence rows keyed by their source snapshot."""
 
     alphafold: tuple[Mapping[str, Any], ...] = ()
+    cath: tuple[Mapping[str, Any], ...] = ()
     cdsearch: tuple[Mapping[str, Any], ...] = ()
     pdbe_kb: tuple[Mapping[str, Any], ...] = ()
     quickgo: tuple[Mapping[str, Any], ...] = ()
@@ -85,6 +87,7 @@ class FamilyScoreRow:
     specific_cdd_hit_count: int
     quickgo_mf_count: int
     cdd_superfamily_count: int
+    cath_funfam_count: int
     rcsb_structure_count: int
     pdbe_kb_annotation_count: int
     alphafold_model_count: int
@@ -126,6 +129,7 @@ def score_families(
         evidence.cdsearch,
         accession_to_pfam_ids,
     )
+    cath = _cath_funfam_by_pfam(evidence.cath, accession_to_pfam_ids)
     rcsb = _evidence_by_pfam(evidence.rcsb, accession_to_pfam_ids, "pdb_id")
     pdbe_kb = _evidence_by_pfam(
         evidence.pdbe_kb,
@@ -167,6 +171,7 @@ def score_families(
             cdd_superfamily_count=len(
                 superfamily_cdd.get(_string(family.get("pfam_id")), ())
             ),
+            cath_funfam_count=len(cath.get(_string(family.get("pfam_id")), ())),
             rcsb_structure_count=len(rcsb.get(_string(family.get("pfam_id")), ())),
             pdbe_kb_annotation_count=len(
                 pdbe_kb.get(_string(family.get("pfam_id")), ())
@@ -217,6 +222,7 @@ def _score_family(
     specific_cdd_hit_count: int,
     quickgo_mf_count: int,
     cdd_superfamily_count: int,
+    cath_funfam_count: int,
     rcsb_structure_count: int,
     pdbe_kb_annotation_count: int,
     alphafold_model_count: int,
@@ -231,6 +237,7 @@ def _score_family(
     )
     context_count = (
         cdd_superfamily_count
+        + cath_funfam_count
         + rcsb_structure_count
         + pdbe_kb_annotation_count
         + alphafold_model_count
@@ -270,6 +277,7 @@ def _score_family(
         specific_cdd_hit_count=specific_cdd_hit_count,
         quickgo_mf_count=quickgo_mf_count,
         cdd_superfamily_count=cdd_superfamily_count,
+        cath_funfam_count=cath_funfam_count,
         rcsb_structure_count=rcsb_structure_count,
         pdbe_kb_annotation_count=pdbe_kb_annotation_count,
         alphafold_model_count=alphafold_model_count,
@@ -278,6 +286,7 @@ def _score_family(
         demotion_reasons=tuple(reasons),
         context_sources=_context_sources(
             cdd_superfamily_count=cdd_superfamily_count,
+            cath_funfam_count=cath_funfam_count,
             rcsb_structure_count=rcsb_structure_count,
             pdbe_kb_annotation_count=pdbe_kb_annotation_count,
             alphafold_model_count=alphafold_model_count,
@@ -372,6 +381,24 @@ def _cdsearch_by_pfam(
     return (dict(specific), dict(superfamily))
 
 
+def _cath_funfam_by_pfam(
+    rows: Iterable[Mapping[str, Any]],
+    accession_to_pfam_ids: Mapping[str, set[str]],
+) -> dict[str, set[tuple[str, str]]]:
+    by_pfam: dict[str, set[tuple[str, str]]] = defaultdict(set)
+    for row in rows:
+        if not isinstance(row, Mapping):
+            continue
+        accession = _string(row.get("uniprot_accession"))
+        superfamily_id = _string(row.get("superfamily_id"))
+        funfam_number = _string(row.get("funfam_number"))
+        if not accession or not superfamily_id or not funfam_number:
+            continue
+        for pfam_id in accession_to_pfam_ids.get(accession, ()):
+            by_pfam[pfam_id].add((superfamily_id, funfam_number))
+    return dict(by_pfam)
+
+
 def _representative_count(rows: Iterable[Mapping[str, Any]]) -> int:
     accessions = {
         _string(row.get("representative_accession"))
@@ -384,6 +411,7 @@ def _representative_count(rows: Iterable[Mapping[str, Any]]) -> int:
 def _context_sources(
     *,
     cdd_superfamily_count: int,
+    cath_funfam_count: int,
     rcsb_structure_count: int,
     pdbe_kb_annotation_count: int,
     alphafold_model_count: int,
@@ -393,6 +421,8 @@ def _context_sources(
     sources = []
     if cdd_superfamily_count:
         sources.append("cdd_superfamily")
+    if cath_funfam_count:
+        sources.append("cath_gene3d")
     if rcsb_structure_count:
         sources.append("rcsb_pdb")
     if pdbe_kb_annotation_count:
