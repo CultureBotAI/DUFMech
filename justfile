@@ -39,6 +39,10 @@ freeze-duf-puf-mgnify *args="":
 freeze-duf-puf-alphafold *args="":
     uv run python scripts/freeze_duf_puf_alphafold.py {{args}}
 
+# Freeze UniProt accessions with CATH-Gene3D FunFam metadata.
+freeze-duf-puf-cath *args="":
+    uv run python scripts/freeze_duf_puf_cath.py {{args}}
+
 # Freeze UniProt accessions with NCBI Batch CD-Search domain metadata.
 freeze-duf-puf-cdsearch *args="":
     uv run python scripts/freeze_duf_puf_cdsearch.py {{args}}
