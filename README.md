@@ -65,6 +65,12 @@ Freeze NCBI Batch CD-Search conserved-domain evidence for UniProt accessions:
 just freeze-duf-puf-cdsearch --uniprot-accession P68871
 ```
 
+Freeze eggNOG-mapper annotations:
+
+```bash
+just freeze-duf-puf-eggnog --annotations-tsv out.emapper.annotations
+```
+
 Freeze 3D-Beacons structural coverage evidence for UniProt accessions:
 
 ```bash
