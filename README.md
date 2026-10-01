@@ -41,6 +41,12 @@ Freeze a Pfam member snapshot with UniProtKB metadata and UniRef clusters:
 just freeze-duf-puf-members --input-json data/worklists/interpro-pfam-duf-2026-10-01.json --limit-families 1
 ```
 
+Freeze MGnify Proteins environmental representatives for Pfam rows:
+
+```bash
+just freeze-duf-puf-mgnify --input-json data/worklists/interpro-pfam-duf-2026-10-01.json --limit-families 1
+```
+
 ## Scope
 
 DUFMech records domains, protein families, and evidence layers that help

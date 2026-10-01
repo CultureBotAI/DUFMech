@@ -30,3 +30,7 @@ duf-puf-members *args="":
 # Freeze Pfam members with UniProtKB metadata and UniRef clusters.
 freeze-duf-puf-members *args="":
     uv run python scripts/freeze_duf_puf_members.py {{args}}
+
+# Freeze Pfam families with MGnify Proteins representatives.
+freeze-duf-puf-mgnify *args="":
+    uv run python scripts/freeze_duf_puf_mgnify.py {{args}}
