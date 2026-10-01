@@ -90,6 +90,24 @@ def test_cath_404_is_no_evidence() -> None:
     assert rows == []
 
 
+def test_cath_client_retries_transient_http_failure() -> None:
+    statuses = [504, 200]
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        status = statuses.pop(0)
+        if status == 200:
+            return httpx.Response(200, json=cath_payload())
+        return httpx.Response(status)
+
+    rows = collect_cath_rows(
+        ["P68871"],
+        CathClient(transport=httpx.MockTransport(handler)),
+    )
+
+    assert len(rows) == 2
+    assert statuses == []
+
+
 def test_cath_client_raises_on_http_failure() -> None:
     client = CathClient(transport=httpx.MockTransport(lambda request: httpx.Response(500)))
 

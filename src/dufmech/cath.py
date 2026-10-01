@@ -17,6 +17,7 @@ CATH_VERSION = "v4_4_0"
 CATH_UNIPROT_TO_FUNFAM_URL = (
     f"{CATH_BASE_URL}/version/{{version}}/api/rest/uniprot_to_funfam/{{accession}}"
 )
+CATH_RETRY_STATUSES = frozenset({429, 500, 502, 503, 504})
 
 CATH_TSV_FIELDNAMES = [
     "uniprot_accession",
@@ -93,10 +94,12 @@ class CathClient:
         *,
         version: str = CATH_VERSION,
         timeout: float = 30.0,
+        max_retries: int = 2,
         transport: httpx.BaseTransport | None = None,
     ) -> None:
         self.version = version
         self.timeout = timeout
+        self.max_retries = max(0, max_retries)
         self.transport = transport
 
     def uniprot_to_funfam(self, accession: str) -> Iterable[Mapping[str, Any]]:
@@ -109,16 +112,23 @@ class CathClient:
             follow_redirects=True,
             transport=self.transport,
         ) as client:
-            response = client.get(url, params={"content-type": "application/json"})
-            if response.status_code == 404:
-                return
-            try:
-                response.raise_for_status()
-                payload = response.json()
-            except (httpx.HTTPError, ValueError) as exc:
-                raise CathClientError(
-                    f"could not fetch CATH FunFam assignments for {accession}"
-                ) from exc
+            for attempt in range(self.max_retries + 1):
+                response = client.get(url, params={"content-type": "application/json"})
+                if response.status_code == 404:
+                    return
+                if (
+                    response.status_code in CATH_RETRY_STATUSES
+                    and attempt < self.max_retries
+                ):
+                    continue
+                try:
+                    response.raise_for_status()
+                    payload = response.json()
+                except (httpx.HTTPError, ValueError) as exc:
+                    raise CathClientError(
+                        f"could not fetch CATH FunFam assignments for {accession}"
+                    ) from exc
+                break
 
         if not isinstance(payload, Mapping):
             raise CathClientError(
