@@ -47,6 +47,10 @@ freeze-duf-puf-cath *args="":
 freeze-duf-puf-cdsearch *args="":
     uv run python scripts/freeze_duf_puf_cdsearch.py {{args}}
 
+# Freeze a saved eggNOG-mapper annotation table.
+freeze-duf-puf-eggnog *args="":
+    uv run python scripts/freeze_duf_puf_eggnog.py {{args}}
+
 # Freeze UniProt accessions with 3D-Beacons structural coverage metadata.
 freeze-duf-puf-threedbeacons *args="":
     uv run python scripts/freeze_duf_puf_threedbeacons.py {{args}}
