@@ -47,6 +47,12 @@ Freeze MGnify Proteins environmental representatives for Pfam rows:
 just freeze-duf-puf-mgnify --input-json data/worklists/interpro-pfam-duf-2026-10-01.json --limit-families 1
 ```
 
+Freeze AlphaFold DB evidence for UniProt accessions:
+
+```bash
+just freeze-duf-puf-alphafold --uniprot-accession B2BDZ3
+```
+
 ## Scope
 
 DUFMech records domains, protein families, and evidence layers that help

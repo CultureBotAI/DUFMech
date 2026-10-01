@@ -34,3 +34,7 @@ freeze-duf-puf-members *args="":
 # Freeze Pfam families with MGnify Proteins representatives.
 freeze-duf-puf-mgnify *args="":
     uv run python scripts/freeze_duf_puf_mgnify.py {{args}}
+
+# Freeze UniProt accessions with AlphaFold DB prediction metadata.
+freeze-duf-puf-alphafold *args="":
+    uv run python scripts/freeze_duf_puf_alphafold.py {{args}}
