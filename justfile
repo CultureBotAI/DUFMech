@@ -1,0 +1,20 @@
+set dotenv-load := true
+
+default:
+    @just --list --unsorted
+
+# Install package + dev tools.
+install:
+    uv sync --extra dev
+
+# Run the test suite.
+test:
+    uv run --extra dev pytest
+
+# Run Ruff over source, scripts, and tests.
+lint:
+    uv run --extra dev ruff check src scripts tests
+
+# Build the first InterPro/Pfam DUF-family worklist.
+duf-puf-worklist *args="":
+    uv run python scripts/duf_puf_worklist.py {{args}}
