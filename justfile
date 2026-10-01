@@ -43,6 +43,10 @@ freeze-duf-puf-alphafold *args="":
 freeze-duf-puf-cdsearch *args="":
     uv run python scripts/freeze_duf_puf_cdsearch.py {{args}}
 
+# Freeze UniProt accessions with 3D-Beacons structural coverage metadata.
+freeze-duf-puf-threedbeacons *args="":
+    uv run python scripts/freeze_duf_puf_threedbeacons.py {{args}}
+
 # Freeze UniProt accessions with RCSB PDB experimental structure metadata.
 freeze-duf-puf-rcsb *args="":
     uv run python scripts/freeze_duf_puf_rcsb.py {{args}}
