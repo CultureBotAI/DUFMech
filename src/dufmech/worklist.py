@@ -42,6 +42,24 @@ STATUS_ORDER = {
     FALSE_POSITIVE_TEXT_HIT: 2,
 }
 
+TSV_FIELDNAMES = [
+    "pfam_id",
+    "short_name",
+    "name",
+    "interpro_id",
+    "unknown_status",
+    "candidate_reasons",
+    "proteins",
+    "matches",
+    "proteomes",
+    "taxa",
+    "structures",
+    "alphafold_models",
+    "domain_architectures",
+    "description",
+    "source_url",
+]
+
 
 class InterProClientError(RuntimeError):
     """Raised when InterPro returns an invalid or failing response."""
@@ -217,23 +235,7 @@ def render_tsv(rows: Iterable[DufFamilyRow]) -> str:
     out = io.StringIO()
     writer = csv.DictWriter(
         out,
-        fieldnames=[
-            "pfam_id",
-            "short_name",
-            "name",
-            "interpro_id",
-            "unknown_status",
-            "candidate_reasons",
-            "proteins",
-            "matches",
-            "proteomes",
-            "taxa",
-            "structures",
-            "alphafold_models",
-            "domain_architectures",
-            "description",
-            "source_url",
-        ],
+        fieldnames=TSV_FIELDNAMES,
         dialect="excel-tab",
         lineterminator="\n",
     )
