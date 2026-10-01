@@ -59,6 +59,12 @@ Freeze NCBI Batch CD-Search conserved-domain evidence for UniProt accessions:
 just freeze-duf-puf-cdsearch --uniprot-accession P68871
 ```
 
+Freeze 3D-Beacons structural coverage evidence for UniProt accessions:
+
+```bash
+just freeze-duf-puf-threedbeacons --uniprot-accession P75259
+```
+
 Freeze RCSB PDB experimental-structure evidence for UniProt accessions:
 
 ```bash
