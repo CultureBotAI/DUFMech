@@ -66,3 +66,7 @@ freeze-duf-puf-quickgo *args="":
 # Freeze UniProt accessions with STRING interaction partner metadata.
 freeze-duf-puf-string *args="":
     uv run python scripts/freeze_duf_puf_string.py {{args}}
+
+# Score frozen DUF/Pfam families with evidence snapshots.
+score-duf-puf *args="":
+    uv run python scripts/score_duf_puf.py {{args}}

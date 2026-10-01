@@ -95,6 +95,12 @@ Freeze STRING interaction partners for UniProt/taxon pairs:
 just freeze-duf-puf-string --uniprot-taxon P68871:9606 --limit-partners-per-protein 5
 ```
 
+Score frozen DUF/Pfam families with evidence snapshots:
+
+```bash
+just score-duf-puf --worklist-json data/worklists/interpro-pfam-duf-2026-10-01.json
+```
+
 ## Scope
 
 DUFMech records domains, protein families, and evidence layers that help
