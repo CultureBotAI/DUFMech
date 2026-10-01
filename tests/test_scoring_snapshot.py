@@ -29,6 +29,9 @@ def score_row(pfam_id: str = "PF00001") -> FamilyScoreRow:
         cdd_superfamily_count=1,
         eggnog_function_count=0,
         cath_funfam_count=0,
+        mgnify_protein_count=0,
+        mgnify_full_length_count=0,
+        mgnify_biome_count=0,
         rcsb_structure_count=0,
         pdbe_kb_annotation_count=0,
         alphafold_model_count=0,
@@ -139,6 +142,20 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
         ),
         encoding="utf-8",
     )
+    mgnify_path = tmp_path / "pfam-mgnify-proteins-2026-10-01.json"
+    mgnify_path.write_text(
+        json.dumps(
+            [
+                {
+                    "pfam_id": "PF00001",
+                    "mgyp": "MGYP000000000166",
+                    "full_length": True,
+                    "biome_names": ["root:Environmental:Aquatic:Marine"],
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
 
     assert (
         score_duf_puf(
@@ -153,6 +170,8 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
                 str(cath_path),
                 "--eggnog-json",
                 str(eggnog_path),
+                "--mgnify-json",
+                str(mgnify_path),
                 "--snapshot-date",
                 "2026-10-01",
                 "--out-dir",
@@ -173,4 +192,7 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     assert manifest["snapshot"]["input_snapshot_ids"]["eggnog"] == (
         "eggnog-mapper-2026-10-01"
+    )
+    assert manifest["snapshot"]["input_snapshot_ids"]["mgnify"] == (
+        "pfam-mgnify-proteins-2026-10-01"
     )
