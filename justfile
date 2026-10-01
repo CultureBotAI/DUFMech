@@ -54,3 +54,7 @@ freeze-duf-puf-rhea *args="":
 # Freeze UniProt accessions with QuickGO molecular-function annotations.
 freeze-duf-puf-quickgo *args="":
     uv run python scripts/freeze_duf_puf_quickgo.py {{args}}
+
+# Freeze UniProt accessions with STRING interaction partner metadata.
+freeze-duf-puf-string *args="":
+    uv run python scripts/freeze_duf_puf_string.py {{args}}

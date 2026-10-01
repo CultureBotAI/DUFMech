@@ -49,6 +49,7 @@ duf-puf-freeze-pdbe-kb = "dufmech.pdbe_kb_snapshot_cli:main"
 duf-puf-freeze-quickgo = "dufmech.quickgo_snapshot_cli:main"
 duf-puf-freeze-rcsb = "dufmech.rcsb_snapshot_cli:main"
 duf-puf-freeze-rhea = "dufmech.rhea_snapshot_cli:main"
+duf-puf-freeze-string = "dufmech.stringdb_snapshot_cli:main"
 duf-puf-members = "dufmech.member_cli:main"
 duf-puf-worklist = "dufmech.cli:main"
 
