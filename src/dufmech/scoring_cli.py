@@ -94,6 +94,7 @@ class EvidenceFlag:
 
 EVIDENCE_FLAGS = (
     EvidenceFlag("alphafold", "alphafold", "AlphaFold DB"),
+    EvidenceFlag("cath", "cath", "CATH-Gene3D"),
     EvidenceFlag("cdsearch", "cdsearch", "NCBI Batch CD-Search"),
     EvidenceFlag("pdbe_kb", "pdbe-kb", "PDBe-KB"),
     EvidenceFlag("quickgo", "quickgo", "QuickGO"),

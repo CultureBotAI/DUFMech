@@ -27,6 +27,7 @@ def score_row(pfam_id: str = "PF00001") -> FamilyScoreRow:
         specific_cdd_hit_count=0,
         quickgo_mf_count=0,
         cdd_superfamily_count=1,
+        cath_funfam_count=0,
         rcsb_structure_count=0,
         pdbe_kb_annotation_count=0,
         alphafold_model_count=0,
@@ -110,6 +111,19 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
         json.dumps([{"uniprot_accession": "P11111", "rhea_id": "RHEA:10012"}]),
         encoding="utf-8",
     )
+    cath_path = tmp_path / "uniprot-cath-funfam-v4_4_0-2026-10-01.json"
+    cath_path.write_text(
+        json.dumps(
+            [
+                {
+                    "uniprot_accession": "P11111",
+                    "superfamily_id": "1.10.490.10",
+                    "funfam_number": "1",
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
 
     assert (
         score_duf_puf(
@@ -120,6 +134,8 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
                 str(members_path),
                 "--rhea-json",
                 str(rhea_path),
+                "--cath-json",
+                str(cath_path),
                 "--snapshot-date",
                 "2026-10-01",
                 "--out-dir",
