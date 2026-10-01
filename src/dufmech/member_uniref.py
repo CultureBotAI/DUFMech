@@ -9,20 +9,27 @@ from collections.abc import Iterable
 from dataclasses import asdict, dataclass
 
 from dufmech.protein_members import PfamProteinMemberRow
+from dufmech.uniprotkb import UniProtKbMetadataRow
 from dufmech.uniref import UniRefMappingRow
 
 MEMBER_UNIREF_TSV_FIELDNAMES = [
     "pfam_id",
     "uniprot_accession",
+    "uniprot_id",
+    "reviewed",
     "name",
+    "protein_name",
     "source_database",
     "length",
     "taxon_id",
     "organism",
+    "uniprot_taxon_id",
+    "uniprot_organism",
     "gene",
     "in_alphafold",
     "match_count",
     "match_ranges",
+    "proteome_ids",
     "uniref_id",
     "uniref_type",
     "uniref_name",
@@ -38,6 +45,7 @@ MEMBER_UNIREF_TSV_FIELDNAMES = [
     "representative_length",
     "uniref_seed_id",
     "member_source_url",
+    "uniprot_source_url",
     "uniref_source_url",
 ]
 
@@ -48,15 +56,21 @@ class PfamMemberUniRefRow:
 
     pfam_id: str
     uniprot_accession: str
+    uniprot_id: str
+    reviewed: bool | None
     name: str
+    protein_name: str
     source_database: str
     length: int | None
     taxon_id: str
     organism: str
+    uniprot_taxon_id: str
+    uniprot_organism: str
     gene: str
     in_alphafold: bool | None
     match_count: int
     match_ranges: tuple[str, ...]
+    proteome_ids: tuple[str, ...]
     uniref_id: str
     uniref_type: str
     uniref_name: str
@@ -72,23 +86,31 @@ class PfamMemberUniRefRow:
     representative_length: int | None
     uniref_seed_id: str
     member_source_url: str
+    uniprot_source_url: str
     uniref_source_url: str
 
     def tsv_row(self) -> dict[str, object]:
         row = asdict(self)
         row["match_ranges"] = ";".join(self.match_ranges)
+        row["proteome_ids"] = ";".join(self.proteome_ids)
         return row
 
 
 def join_members_to_uniref(
     members: Iterable[PfamProteinMemberRow],
     mappings: Iterable[UniRefMappingRow],
+    metadata: Iterable[UniProtKbMetadataRow] = (),
 ) -> list[PfamMemberUniRefRow]:
     """Join Pfam member rows to UniRef mappings by UniProt accession."""
 
     mappings_by_accession = {row.uniprot_accession: row for row in mappings}
+    metadata_by_accession = {row.uniprot_accession: row for row in metadata}
     rows = [
-        row_from_member_uniref(member, mappings_by_accession.get(member.uniprot_accession))
+        row_from_member_uniref(
+            member,
+            mappings_by_accession.get(member.uniprot_accession),
+            metadata_by_accession.get(member.uniprot_accession),
+        )
         for member in members
     ]
     return sorted(rows, key=lambda row: (row.pfam_id, row.uniprot_accession))
@@ -97,21 +119,28 @@ def join_members_to_uniref(
 def row_from_member_uniref(
     member: PfamProteinMemberRow,
     uniref: UniRefMappingRow | None,
+    metadata: UniProtKbMetadataRow | None = None,
 ) -> PfamMemberUniRefRow:
     """Return a joined Pfam member / UniRef row."""
 
     return PfamMemberUniRefRow(
         pfam_id=member.pfam_id,
         uniprot_accession=member.uniprot_accession,
+        uniprot_id="" if metadata is None else metadata.uniprot_id,
+        reviewed=None if metadata is None else metadata.reviewed,
         name=member.name,
+        protein_name="" if metadata is None else metadata.protein_name,
         source_database=member.source_database,
         length=member.length,
         taxon_id=member.taxon_id,
         organism=member.organism,
+        uniprot_taxon_id="" if metadata is None else metadata.taxon_id,
+        uniprot_organism="" if metadata is None else metadata.organism,
         gene=member.gene,
         in_alphafold=member.in_alphafold,
         match_count=member.match_count,
         match_ranges=member.match_ranges,
+        proteome_ids=() if metadata is None else metadata.proteome_ids,
         uniref_id="" if uniref is None else uniref.uniref_id,
         uniref_type="" if uniref is None else uniref.uniref_type,
         uniref_name="" if uniref is None else uniref.name,
@@ -129,6 +158,7 @@ def row_from_member_uniref(
         representative_length=None if uniref is None else uniref.representative_length,
         uniref_seed_id="" if uniref is None else uniref.seed_id,
         member_source_url=member.source_url,
+        uniprot_source_url="" if metadata is None else metadata.source_url,
         uniref_source_url="" if uniref is None else uniref.source_url,
     )
 

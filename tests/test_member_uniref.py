@@ -10,6 +10,7 @@ from dufmech.member_uniref import (
     render_member_uniref_tsv,
 )
 from dufmech.protein_members import PfamProteinMemberRow
+from dufmech.uniprotkb import UniProtKbMetadataRow
 from dufmech.uniref import UniRefMappingRow
 
 
@@ -49,19 +50,36 @@ def uniref(accession: str = "B2BDZ4") -> UniRefMappingRow:
     )
 
 
+def metadata(accession: str = "B2BDZ4") -> UniProtKbMetadataRow:
+    return UniProtKbMetadataRow(
+        uniprot_accession=accession,
+        uniprot_id=f"{accession}_MYCPM",
+        reviewed=False,
+        protein_name="UPF0134 protein MPN_139",
+        taxon_id="2104",
+        organism="Mycoplasmoides pneumoniae",
+        proteome_ids=("UP000000808",),
+    )
+
+
 def test_join_members_to_uniref_carries_member_and_cluster_metadata() -> None:
-    rows = join_members_to_uniref([member()], [uniref()])
+    rows = join_members_to_uniref([member()], [uniref()], [metadata()])
 
     assert len(rows) == 1
     row = rows[0]
     assert row.pfam_id == "PF01519"
     assert row.uniprot_accession == "B2BDZ4"
+    assert row.uniprot_id == "B2BDZ4_MYCPM"
+    assert row.reviewed is False
+    assert row.protein_name == "UPF0134 protein MPN_139"
+    assert row.proteome_ids == ("UP000000808",)
     assert row.match_ranges == ("39-154",)
     assert row.uniref_id == "UniRef90_P75259"
     assert row.uniref_updated == "2026-06-10"
     assert row.uniref_member_count == 2
     assert row.representative_accession == "P75259"
     assert row.member_source_url.endswith("/B2BDZ4/")
+    assert row.uniprot_source_url.endswith("/B2BDZ4")
     assert row.uniref_source_url.endswith("/UniRef90_P75259")
 
 
@@ -70,6 +88,9 @@ def test_join_members_to_uniref_preserves_unmapped_members() -> None:
 
     assert len(rows) == 1
     assert rows[0].uniprot_accession == "B2BDZ3"
+    assert rows[0].uniprot_id == ""
+    assert rows[0].reviewed is None
+    assert rows[0].proteome_ids == ()
     assert rows[0].uniref_id == ""
     assert rows[0].uniref_member_count is None
     assert rows[0].uniref_source_url == ""
@@ -79,12 +100,14 @@ def test_render_member_uniref_tsv_and_json_are_stable() -> None:
     rows = join_members_to_uniref(
         [member("B2BDZ4"), member("B2BDZ3")],
         [uniref("B2BDZ4"), uniref("B2BDZ3")],
+        [metadata("B2BDZ4"), metadata("B2BDZ3")],
     )
 
     tsv = render_member_uniref_tsv(rows)
     parsed = list(csv.DictReader(StringIO(tsv), dialect="excel-tab"))
     assert [row["uniprot_accession"] for row in parsed] == ["B2BDZ3", "B2BDZ4"]
     assert parsed[0]["match_ranges"] == "39-154"
+    assert parsed[0]["proteome_ids"] == "UP000000808"
 
     payload = json.loads(render_member_uniref_json(rows))
     assert [row["uniprot_accession"] for row in payload] == ["B2BDZ3", "B2BDZ4"]

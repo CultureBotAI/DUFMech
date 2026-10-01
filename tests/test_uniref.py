@@ -157,6 +157,50 @@ def test_uniprot_mapping_client_waits_for_results() -> None:
     assert attempts == 2
 
 
+def test_uniprot_mapping_client_follows_results_pagination() -> None:
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path == "/idmapping/run":
+            return httpx.Response(200, json={"jobId": "job-1"})
+        if request.url.params.get("cursor") == "next":
+            return httpx.Response(
+                200,
+                json={
+                    "results": [
+                        uniref_result(
+                            source="B2BDZ4",
+                            cluster_id="UniRef90_P75259",
+                        )
+                    ]
+                },
+            )
+        return httpx.Response(
+            200,
+            headers={
+                "Link": (
+                    "<https://rest.uniprot.org/idmapping/uniref/results/"
+                    'job-1?cursor=next>; rel="next"'
+                )
+            },
+            json={
+                "results": [
+                    uniref_result(
+                        source="B2BDZ3",
+                        cluster_id="UniRef90_B2BDZ3",
+                    )
+                ]
+            },
+        )
+
+    client = UniProtIdMappingClient(
+        poll_interval=0,
+        transport=httpx.MockTransport(handler),
+    )
+
+    rows = collect_uniref_mappings(client.map_uniref(["B2BDZ3", "B2BDZ4"]))
+
+    assert [row.uniprot_accession for row in rows] == ["B2BDZ3", "B2BDZ4"]
+
+
 def test_render_uniref_tsv_and_json_are_stable() -> None:
     rows = collect_uniref_mappings(
         [

@@ -246,13 +246,53 @@ def _iter_mapping_results(
 
         results = payload.get("results")
         if isinstance(results, list):
-            for result in results:
-                if isinstance(result, Mapping):
-                    yield result
+            yield from _iter_mapping_result_pages(client, response, results)
             return
         time.sleep(poll_interval)
 
     raise UniProtIdMappingError(f"UniProt ID Mapping job {job_id} did not finish")
+
+
+def _iter_mapping_result_pages(
+    client: httpx.Client,
+    response: httpx.Response,
+    results: list[Any],
+) -> Iterable[Mapping[str, Any]]:
+    while True:
+        for result in results:
+            if isinstance(result, Mapping):
+                yield result
+
+        next_url = _next_link(response)
+        if next_url is None:
+            return
+
+        response = client.get(next_url)
+        try:
+            response.raise_for_status()
+            payload = response.json()
+        except (httpx.HTTPError, ValueError) as exc:
+            raise UniProtIdMappingError(
+                f"could not fetch UniProt ID Mapping results page {next_url}"
+            ) from exc
+        if not isinstance(payload, Mapping):
+            raise UniProtIdMappingError(
+                f"UniProt ID Mapping results page {next_url} was not a JSON object"
+            )
+        raw_results = payload.get("results")
+        if not isinstance(raw_results, list):
+            raise UniProtIdMappingError(
+                f"UniProt ID Mapping results page {next_url} had no results list"
+            )
+        results = raw_results
+
+
+def _next_link(response: httpx.Response) -> str | None:
+    next_link = response.links.get("next")
+    if not isinstance(next_link, Mapping):
+        return None
+    next_url = next_link.get("url")
+    return next_url if isinstance(next_url, str) and next_url else None
 
 
 def _mapping(value: object) -> Mapping[str, Any]:
