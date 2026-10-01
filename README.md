@@ -53,6 +53,12 @@ Freeze AlphaFold DB evidence for UniProt accessions:
 just freeze-duf-puf-alphafold --uniprot-accession B2BDZ3
 ```
 
+Freeze RCSB PDB experimental-structure evidence for UniProt accessions:
+
+```bash
+just freeze-duf-puf-rcsb --uniprot-accession P68871 --limit-entities-per-accession 5
+```
+
 ## Scope
 
 DUFMech records domains, protein families, and evidence layers that help

@@ -38,3 +38,7 @@ freeze-duf-puf-mgnify *args="":
 # Freeze UniProt accessions with AlphaFold DB prediction metadata.
 freeze-duf-puf-alphafold *args="":
     uv run python scripts/freeze_duf_puf_alphafold.py {{args}}
+
+# Freeze UniProt accessions with RCSB PDB experimental structure metadata.
+freeze-duf-puf-rcsb *args="":
+    uv run python scripts/freeze_duf_puf_rcsb.py {{args}}
