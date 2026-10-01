@@ -167,7 +167,7 @@ def score_families(
     alphafold = _evidence_by_pfam(
         evidence.alphafold,
         accession_to_pfam_ids,
-        "model_identifier",
+        "model_entity_id",
     )
     threedbeacons = _evidence_by_pfam(
         evidence.threedbeacons,
