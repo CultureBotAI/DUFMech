@@ -42,3 +42,7 @@ freeze-duf-puf-alphafold *args="":
 # Freeze UniProt accessions with RCSB PDB experimental structure metadata.
 freeze-duf-puf-rcsb *args="":
     uv run python scripts/freeze_duf_puf_rcsb.py {{args}}
+
+# Freeze RCSB PDB entities with PDBe-KB annotation metadata.
+freeze-duf-puf-pdbe-kb *args="":
+    uv run python scripts/freeze_duf_puf_pdbe_kb.py {{args}}

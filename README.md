@@ -59,6 +59,12 @@ Freeze RCSB PDB experimental-structure evidence for UniProt accessions:
 just freeze-duf-puf-rcsb --uniprot-accession P68871 --limit-entities-per-accession 5
 ```
 
+Freeze PDBe-KB residue annotations for RCSB PDB entities:
+
+```bash
+just freeze-duf-puf-pdbe-kb --pdb-entity P68871:1A00:2 --endpoint domains
+```
+
 ## Scope
 
 DUFMech records domains, protein families, and evidence layers that help
