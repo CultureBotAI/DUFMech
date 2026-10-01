@@ -71,6 +71,12 @@ Freeze Rhea reactions for UniProt accessions:
 just freeze-duf-puf-rhea --uniprot-accession P08159
 ```
 
+Freeze QuickGO molecular-function annotations for UniProt accessions:
+
+```bash
+just freeze-duf-puf-quickgo --uniprot-accession P08159
+```
+
 ## Scope
 
 DUFMech records domains, protein families, and evidence layers that help
