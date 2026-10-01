@@ -101,6 +101,12 @@ Freeze STRING interaction partners for UniProt/taxon pairs:
 just freeze-duf-puf-string --uniprot-taxon P68871:9606 --limit-partners-per-protein 5
 ```
 
+Freeze UniParc permanent sequence archive IDs for UniProt accessions:
+
+```bash
+just freeze-duf-puf-uniparc --uniprot-accession P75259
+```
+
 Score frozen DUF/Pfam families with evidence snapshots:
 
 ```bash
@@ -115,6 +121,7 @@ The initial source stack is:
 
 - InterPro/Pfam for DUF-family discovery.
 - UniProtKB and UniRef for reference-proteome members.
+- UniParc for permanent sequence IDs and checksums.
 - MGnify Proteins for environmental representatives.
 - AlphaFold DB, PDB, PDBe-KB, CATH-Gene3D, CDD, STRING, eggNOG, EFI-GNT, JGI
   IMG, Rhea, GO, and QuickGO as follow-on structure, neighborhood, network,

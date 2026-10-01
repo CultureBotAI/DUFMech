@@ -85,12 +85,12 @@ class UniProtIdMappingClient:
         self.max_polls = max_polls
         self.transport = transport
 
-    def map_uniref(
+    def map_accessions(
         self,
         accessions: Iterable[str],
         *,
         batch_size: int = 100_000,
-        target: str = DEFAULT_UNIREF_TARGET,
+        target: str,
     ) -> Iterable[Mapping[str, Any]]:
         if batch_size < 1:
             raise ValueError("batch_size must be positive")
@@ -112,6 +112,19 @@ class UniProtIdMappingClient:
                     max_polls=self.max_polls,
                     poll_interval=self.poll_interval,
                 )
+
+    def map_uniref(
+        self,
+        accessions: Iterable[str],
+        *,
+        batch_size: int = 100_000,
+        target: str = DEFAULT_UNIREF_TARGET,
+    ) -> Iterable[Mapping[str, Any]]:
+        yield from self.map_accessions(
+            accessions,
+            batch_size=batch_size,
+            target=target,
+        )
 
 
 def collect_uniref_mappings(

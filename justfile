@@ -71,6 +71,10 @@ freeze-duf-puf-quickgo *args="":
 freeze-duf-puf-string *args="":
     uv run python scripts/freeze_duf_puf_string.py {{args}}
 
+# Freeze UniProt accessions with UniParc sequence archive metadata.
+freeze-duf-puf-uniparc *args="":
+    uv run python scripts/freeze_duf_puf_uniparc.py {{args}}
+
 # Score frozen DUF/Pfam families with evidence snapshots.
 score-duf-puf *args="":
     uv run python scripts/score_duf_puf.py {{args}}
