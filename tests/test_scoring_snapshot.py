@@ -38,6 +38,7 @@ def score_row(pfam_id: str = "PF00001") -> FamilyScoreRow:
         threedbeacons_model_count=0,
         string_edge_count=0,
         eggnog_ortholog_count=0,
+        efi_gnt_neighbor_pfam_count=0,
         demotion_reasons=(),
         context_sources=("cdd_superfamily",),
         source_url="https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00001",
@@ -156,6 +157,19 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
         ),
         encoding="utf-8",
     )
+    efi_gnt_path = tmp_path / "efi-gnt-pfam-neighbors-2026-10-01.json"
+    efi_gnt_path.write_text(
+        json.dumps(
+            [
+                {
+                    "query_id": "P11111",
+                    "neighbor_id": "Q11111",
+                    "neighbor_pfam": "PF00005",
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
 
     assert (
         score_duf_puf(
@@ -172,6 +186,8 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
                 str(eggnog_path),
                 "--mgnify-json",
                 str(mgnify_path),
+                "--efi-gnt-json",
+                str(efi_gnt_path),
                 "--snapshot-date",
                 "2026-10-01",
                 "--out-dir",
@@ -195,4 +211,7 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
     )
     assert manifest["snapshot"]["input_snapshot_ids"]["mgnify"] == (
         "pfam-mgnify-proteins-2026-10-01"
+    )
+    assert manifest["snapshot"]["input_snapshot_ids"]["efi_gnt"] == (
+        "efi-gnt-pfam-neighbors-2026-10-01"
     )

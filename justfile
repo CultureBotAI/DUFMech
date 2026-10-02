@@ -51,6 +51,10 @@ freeze-duf-puf-cdsearch *args="":
 freeze-duf-puf-eggnog *args="":
     uv run python scripts/freeze_duf_puf_eggnog.py {{args}}
 
+# Freeze a saved EFI-GNT Pfam Neighbor Mapping Table.
+freeze-duf-puf-efi-gnt *args="":
+    uv run python scripts/freeze_duf_puf_efi_gnt.py {{args}}
+
 # Freeze UniProt accessions with 3D-Beacons structural coverage metadata.
 freeze-duf-puf-threedbeacons *args="":
     uv run python scripts/freeze_duf_puf_threedbeacons.py {{args}}
