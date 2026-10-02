@@ -84,23 +84,14 @@ def parse_ncbifam_hits(text: str) -> list[NcbifamHitRow]:
     _require_columns(reader.fieldnames or [])
 
     rows: list[NcbifamHitRow] = []
-    seen: set[tuple[object, ...]] = set()
+    seen: set[NcbifamHitRow] = set()
     for record in reader:
         row = row_from_ncbifam_record(record)
         if row is None:
             continue
-        key = (
-            row.query_id,
-            row.ncbifam_accession,
-            row.source_accession,
-            row.query_start,
-            row.query_end,
-            row.e_value,
-            row.bitscore,
-        )
-        if key in seen:
+        if row in seen:
             continue
-        seen.add(key)
+        seen.add(row)
         rows.append(row)
 
     return sort_ncbifam_rows(rows)
@@ -165,6 +156,11 @@ def sort_ncbifam_rows(rows: Iterable[NcbifamHitRow]) -> list[NcbifamHitRow]:
             row.query_id,
             row.ncbifam_accession,
             row.source_accession,
+            row.model_name,
+            row.product_name,
+            row.gene_symbol,
+            row.ec_numbers,
+            row.go_terms,
             _int_sort_key(row.query_start),
             _int_sort_key(row.query_end),
             _float_sort_key(row.e_value),

@@ -37,6 +37,7 @@ def ncbifam_line(
     query_id: str = "P75259",
     ncbifam_accession: str = "NF002448",
     *,
+    product_name: str = "UPF0134 protein",
     start: str = "39",
     end: str = "154",
     e_value: str = "1e-80",
@@ -47,7 +48,7 @@ def ncbifam_line(
         ncbifam_accession,
         "TIGR00001",
         "UPF0134 protein family",
-        "UPF0134 protein",
+        product_name,
         "upf0134",
         "1.2.3.4, 5.6.7.8",
         "GO:0003674;GO:0008150",
@@ -96,6 +97,24 @@ def test_parse_ncbifam_hits_deduplicates_and_sorts() -> None:
     assert [(row.query_id, row.ncbifam_accession) for row in rows] == [
         ("B2BDZ3", "NF009946"),
         ("P75259", "NF002448"),
+    ]
+
+
+def test_parse_ncbifam_hits_keeps_distinct_annotation_metadata() -> None:
+    rows = parse_ncbifam_hits(
+        "\n".join(
+            [
+                NCBIFAM_HEADER,
+                ncbifam_line(product_name="UPF0134 protein"),
+                ncbifam_line(product_name="DUF45 domain-containing protein"),
+                ncbifam_line(product_name="UPF0134 protein"),
+            ]
+        )
+    )
+
+    assert [row.product_name for row in rows] == [
+        "DUF45 domain-containing protein",
+        "UPF0134 protein",
     ]
 
 
