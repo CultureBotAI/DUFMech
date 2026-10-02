@@ -65,6 +65,12 @@ Freeze NCBI Batch CD-Search conserved-domain evidence for UniProt accessions:
 just freeze-duf-puf-cdsearch --uniprot-accession P68871
 ```
 
+Freeze a saved NCBIFAM HMM hit table:
+
+```bash
+just freeze-duf-puf-ncbifam --hits-tsv ncbifam-hits.tsv
+```
+
 Freeze eggNOG-mapper annotations:
 
 ```bash
@@ -141,9 +147,9 @@ The initial source stack is:
 - UniProtKB and UniRef for reference-proteome members.
 - UniParc for permanent sequence IDs and checksums.
 - MGnify Proteins for environmental representatives.
-- AlphaFold DB, PDB, PDBe-KB, CATH-Gene3D, CDD, STRING, eggNOG, EFI-GNT, JGI
-  IMG, Rhea, GO, and QuickGO as follow-on structure, neighborhood, network,
-  and function-evidence layers.
+- AlphaFold DB, PDB, PDBe-KB, CATH-Gene3D, CDD, NCBIFAM, STRING, eggNOG,
+  EFI-GNT, JGI IMG, Rhea, GO, and QuickGO as follow-on structure,
+  neighborhood, network, and function-evidence layers.
 
 The first pass deliberately treats a `DUFnnnn` Pfam short name as a clue, not
 as proof that the family is still functionally unknown.

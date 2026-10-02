@@ -48,6 +48,7 @@ SCORE_TSV_FIELDNAMES = [
     "rhea_reaction_count",
     "experimental_go_mf_count",
     "specific_cdd_hit_count",
+    "ncbifam_hit_count",
     "eggnog_function_count",
     "quickgo_mf_count",
     "cdd_superfamily_count",
@@ -80,6 +81,7 @@ class EvidenceBundle:
     eggnog: tuple[Mapping[str, Any], ...] = ()
     jgi_img: tuple[Mapping[str, Any], ...] = ()
     mgnify: tuple[Mapping[str, Any], ...] = ()
+    ncbifam: tuple[Mapping[str, Any], ...] = ()
     pdbe_kb: tuple[Mapping[str, Any], ...] = ()
     quickgo: tuple[Mapping[str, Any], ...] = ()
     rcsb: tuple[Mapping[str, Any], ...] = ()
@@ -104,6 +106,7 @@ class FamilyScoreRow:
     rhea_reaction_count: int
     experimental_go_mf_count: int
     specific_cdd_hit_count: int
+    ncbifam_hit_count: int
     eggnog_function_count: int
     quickgo_mf_count: int
     cdd_superfamily_count: int
@@ -156,6 +159,12 @@ def score_families(
         accession_to_pfam_ids,
     )
     cath = _cath_funfam_by_pfam(evidence.cath, accession_to_pfam_ids)
+    ncbifam = _evidence_by_pfam(
+        evidence.ncbifam,
+        accession_to_pfam_ids,
+        "ncbifam_accession",
+        accession_field="query_id",
+    )
     eggnog_function, eggnog_ortholog = _eggnog_by_pfam(
         evidence.eggnog,
         accession_to_pfam_ids,
@@ -211,6 +220,9 @@ def score_families(
             ),
             specific_cdd_hit_count=len(
                 specific_cdd.get(_string(family.get("pfam_id")), ())
+            ),
+            ncbifam_hit_count=len(
+                ncbifam.get(_string(family.get("pfam_id")), ())
             ),
             eggnog_function_count=len(
                 eggnog_function.get(_string(family.get("pfam_id")), ())
@@ -286,6 +298,7 @@ def _score_family(
     rhea_reaction_count: int,
     experimental_go_mf_count: int,
     specific_cdd_hit_count: int,
+    ncbifam_hit_count: int,
     eggnog_function_count: int,
     quickgo_mf_count: int,
     cdd_superfamily_count: int,
@@ -306,6 +319,7 @@ def _score_family(
     known_count = rhea_reaction_count + experimental_go_mf_count
     partial_count = (
         specific_cdd_hit_count
+        + ncbifam_hit_count
         + eggnog_function_count
         + max(
             0,
@@ -335,6 +349,8 @@ def _score_family(
         reasons.append("has_experimental_go_molecular_function")
     if specific_cdd_hit_count:
         reasons.append("has_specific_cdd_hit")
+    if ncbifam_hit_count:
+        reasons.append("has_ncbifam_hit")
     if eggnog_function_count:
         reasons.append("has_eggnog_function")
 
@@ -358,6 +374,7 @@ def _score_family(
         rhea_reaction_count=rhea_reaction_count,
         experimental_go_mf_count=experimental_go_mf_count,
         specific_cdd_hit_count=specific_cdd_hit_count,
+        ncbifam_hit_count=ncbifam_hit_count,
         eggnog_function_count=eggnog_function_count,
         quickgo_mf_count=quickgo_mf_count,
         cdd_superfamily_count=cdd_superfamily_count,
