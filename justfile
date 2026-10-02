@@ -55,6 +55,10 @@ freeze-duf-puf-eggnog *args="":
 freeze-duf-puf-efi-gnt *args="":
     uv run python scripts/freeze_duf_puf_efi_gnt.py {{args}}
 
+# Freeze a saved JGI IMG gene-neighborhood table.
+freeze-duf-puf-jgi-img *args="":
+    uv run python scripts/freeze_duf_puf_jgi_img.py {{args}}
+
 # Freeze UniProt accessions with 3D-Beacons structural coverage metadata.
 freeze-duf-puf-threedbeacons *args="":
     uv run python scripts/freeze_duf_puf_threedbeacons.py {{args}}

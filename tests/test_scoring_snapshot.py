@@ -39,6 +39,7 @@ def score_row(pfam_id: str = "PF00001") -> FamilyScoreRow:
         string_edge_count=0,
         eggnog_ortholog_count=0,
         efi_gnt_neighbor_pfam_count=0,
+        jgi_img_neighbor_pfam_count=0,
         demotion_reasons=(),
         context_sources=("cdd_superfamily",),
         source_url="https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00001",
@@ -170,6 +171,19 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
         ),
         encoding="utf-8",
     )
+    jgi_img_path = tmp_path / "jgi-img-gene-neighborhoods-2026-10-01.json"
+    jgi_img_path.write_text(
+        json.dumps(
+            [
+                {
+                    "query_id": "P11111",
+                    "neighbor_gene_oid": "3300049538",
+                    "neighbor_pfam": "PF00005",
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
 
     assert (
         score_duf_puf(
@@ -188,6 +202,8 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
                 str(mgnify_path),
                 "--efi-gnt-json",
                 str(efi_gnt_path),
+                "--jgi-img-json",
+                str(jgi_img_path),
                 "--snapshot-date",
                 "2026-10-01",
                 "--out-dir",
@@ -214,4 +230,7 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
     )
     assert manifest["snapshot"]["input_snapshot_ids"]["efi_gnt"] == (
         "efi-gnt-pfam-neighbors-2026-10-01"
+    )
+    assert manifest["snapshot"]["input_snapshot_ids"]["jgi_img"] == (
+        "jgi-img-gene-neighborhoods-2026-10-01"
     )

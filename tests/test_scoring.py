@@ -89,6 +89,18 @@ def test_score_families_demotes_known_partial_and_contextual_families() -> None:
                     "neighbor_pfam": "PF00005",
                 },
             ),
+            jgi_img=(
+                {
+                    "query_id": "P33333",
+                    "neighbor_gene_oid": "3300049538",
+                    "neighbor_pfam": "PF00005",
+                },
+                {
+                    "query_id": "P33333",
+                    "neighbor_gene_oid": "3300049555",
+                    "neighbor_pfam": "PF00005",
+                },
+            ),
             mgnify=(
                 {
                     "pfam_id": "PF00002",
@@ -134,7 +146,7 @@ def test_score_families_demotes_known_partial_and_contextual_families() -> None:
 
     assert by_pfam["PF00002"].characterization_status == PARTIALLY_CHARACTERIZED
     assert by_pfam["PF00002"].partial_evidence_count == 3
-    assert by_pfam["PF00002"].context_evidence_count == 6
+    assert by_pfam["PF00002"].context_evidence_count == 7
     assert by_pfam["PF00002"].cdd_superfamily_count == 1
     assert by_pfam["PF00002"].cath_funfam_count == 1
     assert by_pfam["PF00002"].eggnog_function_count == 1
@@ -144,12 +156,14 @@ def test_score_families_demotes_known_partial_and_contextual_families() -> None:
     assert by_pfam["PF00002"].mgnify_full_length_count == 1
     assert by_pfam["PF00002"].mgnify_biome_count == 1
     assert by_pfam["PF00002"].string_edge_count == 1
+    assert by_pfam["PF00002"].jgi_img_neighbor_pfam_count == 1
     assert by_pfam["PF00002"].context_sources == (
         "cdd_superfamily",
         "cath_gene3d",
         "mgnify",
         "eggnog",
         "efi_gnt",
+        "jgi_img",
         "string",
     )
 

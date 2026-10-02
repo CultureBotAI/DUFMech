@@ -62,6 +62,7 @@ SCORE_TSV_FIELDNAMES = [
     "string_edge_count",
     "eggnog_ortholog_count",
     "efi_gnt_neighbor_pfam_count",
+    "jgi_img_neighbor_pfam_count",
     "demotion_reasons",
     "context_sources",
     "source_url",
@@ -77,6 +78,7 @@ class EvidenceBundle:
     cdsearch: tuple[Mapping[str, Any], ...] = ()
     efi_gnt: tuple[Mapping[str, Any], ...] = ()
     eggnog: tuple[Mapping[str, Any], ...] = ()
+    jgi_img: tuple[Mapping[str, Any], ...] = ()
     mgnify: tuple[Mapping[str, Any], ...] = ()
     pdbe_kb: tuple[Mapping[str, Any], ...] = ()
     quickgo: tuple[Mapping[str, Any], ...] = ()
@@ -116,6 +118,7 @@ class FamilyScoreRow:
     string_edge_count: int
     eggnog_ortholog_count: int
     efi_gnt_neighbor_pfam_count: int
+    jgi_img_neighbor_pfam_count: int
     demotion_reasons: tuple[str, ...]
     context_sources: tuple[str, ...]
     source_url: str
@@ -159,6 +162,12 @@ def score_families(
     )
     efi_gnt = _evidence_by_pfam(
         evidence.efi_gnt,
+        accession_to_pfam_ids,
+        "neighbor_pfam",
+        accession_field="query_id",
+    )
+    jgi_img = _evidence_by_pfam(
+        evidence.jgi_img,
         accession_to_pfam_ids,
         "neighbor_pfam",
         accession_field="query_id",
@@ -237,6 +246,9 @@ def score_families(
             efi_gnt_neighbor_pfam_count=len(
                 efi_gnt.get(_string(family.get("pfam_id")), ())
             ),
+            jgi_img_neighbor_pfam_count=len(
+                jgi_img.get(_string(family.get("pfam_id")), ())
+            ),
         )
         for family in families
     ]
@@ -288,6 +300,7 @@ def _score_family(
     string_edge_count: int,
     eggnog_ortholog_count: int,
     efi_gnt_neighbor_pfam_count: int,
+    jgi_img_neighbor_pfam_count: int,
 ) -> FamilyScoreRow:
     seed_status = _string(family.get("unknown_status"))
     known_count = rhea_reaction_count + experimental_go_mf_count
@@ -310,6 +323,7 @@ def _score_family(
         + string_edge_count
         + eggnog_ortholog_count
         + efi_gnt_neighbor_pfam_count
+        + jgi_img_neighbor_pfam_count
     )
 
     reasons: list[str] = []
@@ -358,6 +372,7 @@ def _score_family(
         string_edge_count=string_edge_count,
         eggnog_ortholog_count=eggnog_ortholog_count,
         efi_gnt_neighbor_pfam_count=efi_gnt_neighbor_pfam_count,
+        jgi_img_neighbor_pfam_count=jgi_img_neighbor_pfam_count,
         demotion_reasons=tuple(reasons),
         context_sources=_context_sources(
             cdd_superfamily_count=cdd_superfamily_count,
@@ -370,6 +385,7 @@ def _score_family(
             string_edge_count=string_edge_count,
             eggnog_ortholog_count=eggnog_ortholog_count,
             efi_gnt_neighbor_pfam_count=efi_gnt_neighbor_pfam_count,
+            jgi_img_neighbor_pfam_count=jgi_img_neighbor_pfam_count,
         ),
         source_url=_string(family.get("source_url")),
     )
@@ -547,6 +563,7 @@ def _context_sources(
     string_edge_count: int,
     eggnog_ortholog_count: int,
     efi_gnt_neighbor_pfam_count: int,
+    jgi_img_neighbor_pfam_count: int,
 ) -> tuple[str, ...]:
     sources = []
     if cdd_superfamily_count:
@@ -567,6 +584,8 @@ def _context_sources(
         sources.append("eggnog")
     if efi_gnt_neighbor_pfam_count:
         sources.append("efi_gnt")
+    if jgi_img_neighbor_pfam_count:
+        sources.append("jgi_img")
     if string_edge_count:
         sources.append("string")
     return tuple(sources)
