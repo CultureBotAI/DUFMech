@@ -100,6 +100,7 @@ EVIDENCE_FLAGS = (
     EvidenceFlag("eggnog", "eggnog", "eggNOG-mapper"),
     EvidenceFlag("jgi_img", "jgi-img", "JGI IMG"),
     EvidenceFlag("mgnify", "mgnify", "MGnify Proteins"),
+    EvidenceFlag("ncbifam", "ncbifam", "NCBIFAM"),
     EvidenceFlag("pdbe_kb", "pdbe-kb", "PDBe-KB"),
     EvidenceFlag("quickgo", "quickgo", "QuickGO"),
     EvidenceFlag("rcsb", "rcsb", "RCSB PDB"),

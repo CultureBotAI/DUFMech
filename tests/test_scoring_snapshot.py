@@ -25,6 +25,7 @@ def score_row(pfam_id: str = "PF00001") -> FamilyScoreRow:
         rhea_reaction_count=0,
         experimental_go_mf_count=0,
         specific_cdd_hit_count=0,
+        ncbifam_hit_count=0,
         quickgo_mf_count=0,
         cdd_superfamily_count=1,
         eggnog_function_count=0,
@@ -184,6 +185,18 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
         ),
         encoding="utf-8",
     )
+    ncbifam_path = tmp_path / "uniprot-ncbifam-2026-10-01.json"
+    ncbifam_path.write_text(
+        json.dumps(
+            [
+                {
+                    "query_id": "P11111",
+                    "ncbifam_accession": "NF002448",
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
 
     assert (
         score_duf_puf(
@@ -204,6 +217,8 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
                 str(efi_gnt_path),
                 "--jgi-img-json",
                 str(jgi_img_path),
+                "--ncbifam-json",
+                str(ncbifam_path),
                 "--snapshot-date",
                 "2026-10-01",
                 "--out-dir",
@@ -233,4 +248,7 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
     )
     assert manifest["snapshot"]["input_snapshot_ids"]["jgi_img"] == (
         "jgi-img-gene-neighborhoods-2026-10-01"
+    )
+    assert manifest["snapshot"]["input_snapshot_ids"]["ncbifam"] == (
+        "uniprot-ncbifam-2026-10-01"
     )
