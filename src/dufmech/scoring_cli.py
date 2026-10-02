@@ -98,6 +98,7 @@ EVIDENCE_FLAGS = (
     EvidenceFlag("cdsearch", "cdsearch", "NCBI Batch CD-Search"),
     EvidenceFlag("efi_gnt", "efi-gnt", "EFI-GNT"),
     EvidenceFlag("eggnog", "eggnog", "eggNOG-mapper"),
+    EvidenceFlag("jgi_img", "jgi-img", "JGI IMG"),
     EvidenceFlag("mgnify", "mgnify", "MGnify Proteins"),
     EvidenceFlag("pdbe_kb", "pdbe-kb", "PDBe-KB"),
     EvidenceFlag("quickgo", "quickgo", "QuickGO"),

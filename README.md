@@ -77,6 +77,12 @@ Freeze an EFI-GNT Pfam Neighbor Mapping Table:
 just freeze-duf-puf-efi-gnt --pfam-neighbors-tsv pfam-neighbors.tsv
 ```
 
+Freeze a saved JGI IMG gene-neighborhood table:
+
+```bash
+just freeze-duf-puf-jgi-img --gene-neighbors-tsv img-gene-neighbors.tsv
+```
+
 Freeze 3D-Beacons structural coverage evidence for UniProt accessions:
 
 ```bash
