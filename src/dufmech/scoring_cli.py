@@ -96,6 +96,7 @@ EVIDENCE_FLAGS = (
     EvidenceFlag("alphafold", "alphafold", "AlphaFold DB"),
     EvidenceFlag("cath", "cath", "CATH-Gene3D"),
     EvidenceFlag("cdsearch", "cdsearch", "NCBI Batch CD-Search"),
+    EvidenceFlag("efi_gnt", "efi-gnt", "EFI-GNT"),
     EvidenceFlag("eggnog", "eggnog", "eggNOG-mapper"),
     EvidenceFlag("mgnify", "mgnify", "MGnify Proteins"),
     EvidenceFlag("pdbe_kb", "pdbe-kb", "PDBe-KB"),

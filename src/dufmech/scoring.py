@@ -61,6 +61,7 @@ SCORE_TSV_FIELDNAMES = [
     "threedbeacons_model_count",
     "string_edge_count",
     "eggnog_ortholog_count",
+    "efi_gnt_neighbor_pfam_count",
     "demotion_reasons",
     "context_sources",
     "source_url",
@@ -74,6 +75,7 @@ class EvidenceBundle:
     alphafold: tuple[Mapping[str, Any], ...] = ()
     cath: tuple[Mapping[str, Any], ...] = ()
     cdsearch: tuple[Mapping[str, Any], ...] = ()
+    efi_gnt: tuple[Mapping[str, Any], ...] = ()
     eggnog: tuple[Mapping[str, Any], ...] = ()
     mgnify: tuple[Mapping[str, Any], ...] = ()
     pdbe_kb: tuple[Mapping[str, Any], ...] = ()
@@ -113,6 +115,7 @@ class FamilyScoreRow:
     threedbeacons_model_count: int
     string_edge_count: int
     eggnog_ortholog_count: int
+    efi_gnt_neighbor_pfam_count: int
     demotion_reasons: tuple[str, ...]
     context_sources: tuple[str, ...]
     source_url: str
@@ -153,6 +156,12 @@ def score_families(
     eggnog_function, eggnog_ortholog = _eggnog_by_pfam(
         evidence.eggnog,
         accession_to_pfam_ids,
+    )
+    efi_gnt = _evidence_by_pfam(
+        evidence.efi_gnt,
+        accession_to_pfam_ids,
+        "neighbor_pfam",
+        accession_field="query_id",
     )
     mgnify_proteins, mgnify_full_length, mgnify_biomes = _mgnify_by_pfam(
         evidence.mgnify
@@ -225,6 +234,9 @@ def score_families(
             eggnog_ortholog_count=len(
                 eggnog_ortholog.get(_string(family.get("pfam_id")), ())
             ),
+            efi_gnt_neighbor_pfam_count=len(
+                efi_gnt.get(_string(family.get("pfam_id")), ())
+            ),
         )
         for family in families
     ]
@@ -275,6 +287,7 @@ def _score_family(
     threedbeacons_model_count: int,
     string_edge_count: int,
     eggnog_ortholog_count: int,
+    efi_gnt_neighbor_pfam_count: int,
 ) -> FamilyScoreRow:
     seed_status = _string(family.get("unknown_status"))
     known_count = rhea_reaction_count + experimental_go_mf_count
@@ -296,6 +309,7 @@ def _score_family(
         + threedbeacons_model_count
         + string_edge_count
         + eggnog_ortholog_count
+        + efi_gnt_neighbor_pfam_count
     )
 
     reasons: list[str] = []
@@ -343,6 +357,7 @@ def _score_family(
         threedbeacons_model_count=threedbeacons_model_count,
         string_edge_count=string_edge_count,
         eggnog_ortholog_count=eggnog_ortholog_count,
+        efi_gnt_neighbor_pfam_count=efi_gnt_neighbor_pfam_count,
         demotion_reasons=tuple(reasons),
         context_sources=_context_sources(
             cdd_superfamily_count=cdd_superfamily_count,
@@ -354,6 +369,7 @@ def _score_family(
             threedbeacons_model_count=threedbeacons_model_count,
             string_edge_count=string_edge_count,
             eggnog_ortholog_count=eggnog_ortholog_count,
+            efi_gnt_neighbor_pfam_count=efi_gnt_neighbor_pfam_count,
         ),
         source_url=_string(family.get("source_url")),
     )
@@ -530,6 +546,7 @@ def _context_sources(
     threedbeacons_model_count: int,
     string_edge_count: int,
     eggnog_ortholog_count: int,
+    efi_gnt_neighbor_pfam_count: int,
 ) -> tuple[str, ...]:
     sources = []
     if cdd_superfamily_count:
@@ -548,6 +565,8 @@ def _context_sources(
         sources.append("3dbeacons")
     if eggnog_ortholog_count:
         sources.append("eggnog")
+    if efi_gnt_neighbor_pfam_count:
+        sources.append("efi_gnt")
     if string_edge_count:
         sources.append("string")
     return tuple(sources)

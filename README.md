@@ -71,6 +71,12 @@ Freeze eggNOG-mapper annotations:
 just freeze-duf-puf-eggnog --annotations-tsv out.emapper.annotations
 ```
 
+Freeze an EFI-GNT Pfam Neighbor Mapping Table:
+
+```bash
+just freeze-duf-puf-efi-gnt --pfam-neighbors-tsv pfam-neighbors.tsv
+```
+
 Freeze 3D-Beacons structural coverage evidence for UniProt accessions:
 
 ```bash
