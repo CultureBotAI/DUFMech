@@ -15,6 +15,22 @@ test:
 lint:
     uv run --extra dev ruff check src scripts tests
 
+# Run the authoritative local quality gate.
+qc:
+    uv run --extra dev python scripts/run_qc.py
+
+# Refresh the generated current-corpus block in README.md.
+docs-stats:
+    uv run python scripts/check_docs.py --write
+
+# Fail if README.md's current-corpus block is stale.
+docs-check:
+    uv run python scripts/check_docs.py --check
+
+# Verify every frozen worklist artifact matches its manifest.
+provenance-check:
+    uv run python scripts/check_provenance.py
+
 # Build the first InterPro/Pfam DUF-family worklist.
 duf-puf-worklist *args="":
     uv run python scripts/duf_puf_worklist.py {{args}}
@@ -94,3 +110,15 @@ freeze-duf-puf-uniparc *args="":
 # Score frozen DUF/Pfam families with evidence snapshots.
 score-duf-puf *args="":
     uv run python scripts/score_duf_puf.py {{args}}
+
+# Print a corpus report from frozen DUF/Pfam snapshots.
+report *args="":
+    uv run python scripts/duf_puf_report.py {{args}}
+
+# Render the browsable static dashboard under pages/.
+render *args="":
+    uv run python scripts/render_pages.py {{args}}
+
+# Fail if pages/ is out of step with frozen snapshots.
+render-check:
+    uv run python scripts/render_pages.py --check
