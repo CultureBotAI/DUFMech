@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import argparse
 import subprocess
 import sys
 from collections.abc import Iterable, Sequence
@@ -78,9 +79,8 @@ def run_quality_commands(
 def main(argv: Sequence[str] | None = None) -> int:
     """Run DUFMech QC."""
 
-    if argv:
-        print("run_qc.py does not accept arguments", file=sys.stderr)
-        return 2
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.parse_args(argv)
     return run_quality_commands()
 
 

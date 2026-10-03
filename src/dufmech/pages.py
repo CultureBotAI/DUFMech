@@ -3,18 +3,34 @@
 from __future__ import annotations
 
 import argparse
-import filecmp
 import json
-import shutil
+import os
 import tempfile
 from html import escape
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlsplit
 
-from dufmech.report import build_report, family_index, load_latest_rows
+from dufmech.report import ReportError, build_report, family_index, load_latest_rows
 
 PAGES_DIR = Path("pages")
 WORKLISTS_DIR = Path("data/worklists")
+REPO_ROOT = Path(__file__).resolve().parents[2]
+
+
+def validate_output_directory(out_dir: Path) -> None:
+    """Reject repository roots, ancestors, and symlink destinations before writing."""
+
+    target = out_dir.absolute()
+    if target.is_symlink():
+        raise ReportError(f"output directory must not be a symlink: {out_dir}")
+    resolved = target.resolve()
+    for protected in (REPO_ROOT, Path.cwd().resolve(), Path.home().resolve()):
+        if resolved == protected or resolved in protected.parents:
+            raise ReportError(f"refusing to render into protected directory: {out_dir}")
+    if target.exists() and not target.is_dir():
+        raise ReportError(f"output is not a directory: {out_dir}")
+
 
 STYLE_CSS = """
 :root {
@@ -28,11 +44,11 @@ STYLE_CSS = """
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #111827;
-    --panel: #1f2937;
+    --bg: #161616;
+    --panel: #242424;
     --text: #f9fafb;
     --muted: #cbd5e1;
-    --line: #374151;
+    --line: #424242;
     --accent: #86efac;
   }
 }
@@ -53,15 +69,15 @@ a { color: var(--accent); }
 .lede {
   max-width: 820px;
   color: var(--muted);
+  overflow-wrap: anywhere;
 }
 .metrics {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
   gap: 12px;
   margin: 28px 0;
 }
-.metric,
-.section {
+.metric {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
@@ -71,7 +87,7 @@ a { color: var(--accent); }
 }
 .metric strong {
   display: block;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   line-height: 1;
 }
 .metric span,
@@ -83,16 +99,17 @@ th {
 }
 .section {
   margin-top: 18px;
-  overflow: hidden;
 }
 .section h2 {
   margin: 0;
-  padding: 14px 16px;
+  padding: 14px 0;
   border-bottom: 1px solid var(--line);
   font-size: 1rem;
 }
+.table-wrap { overflow-x: auto; }
 table {
   width: 100%;
+  min-width: 1100px;
   border-collapse: collapse;
 }
 th,
@@ -111,12 +128,15 @@ td.num {
   white-space: nowrap;
 }
 .status {
-  white-space: nowrap;
+  overflow-wrap: anywhere;
+  min-width: 140px;
+  max-width: 200px;
 }
 @media (max-width: 720px) {
   main { padding: 20px 12px 32px; }
-  .table-wrap { overflow-x: auto; }
-  table { min-width: 760px; }
+  .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .metric { padding: 12px; }
+  .metric strong { font-size: 1.25rem; }
 }
 """.strip()
 
@@ -133,11 +153,11 @@ def render_site(
     families = family_index(worklist_rows, score_rows)
     report = build_report(worklist_rows, score_rows, top_n=20)
 
-    out_dir.mkdir(parents=True, exist_ok=True)
-    (out_dir / ".nojekyll").write_text("", encoding="utf-8")
-    (out_dir / "style.css").write_text(STYLE_CSS + "\n", encoding="utf-8")
-    (out_dir / "index.json").write_text(
-        json.dumps(
+    artifacts = {
+        ".nojekyll": "",
+        "style.css": STYLE_CSS + "\n",
+        "index.html": _index_html(report, families, input_ids),
+        "index.json": json.dumps(
             {
                 "inputs": dict(sorted(input_ids.items())),
                 "summary": report,
@@ -147,12 +167,19 @@ def render_site(
             sort_keys=True,
         )
         + "\n",
-        encoding="utf-8",
-    )
-    (out_dir / "index.html").write_text(
-        _index_html(report, families, input_ids),
-        encoding="utf-8",
-    )
+    }
+    validate_output_directory(out_dir)
+    for name in artifacts:
+        target = out_dir / name
+        if target.is_symlink() or (target.exists() and not target.is_file()):
+            raise ReportError(f"generated output is not a regular file: {target}")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    # Stage every artifact before replacing generated files; never remove the output tree.
+    with tempfile.TemporaryDirectory(dir=out_dir) as tmp:
+        for name, content in artifacts.items():
+            (Path(tmp) / name).write_text(content, encoding="utf-8")
+        for name in artifacts:
+            os.replace(Path(tmp) / name, out_dir / name)
 
 
 def render_from_paths(
@@ -164,6 +191,12 @@ def render_from_paths(
 ) -> None:
     """Load frozen snapshots and render pages."""
 
+    for input_path in (worklists_dir, worklist_json, score_json):
+        if input_path is not None:
+            source = input_path.resolve()
+            target = out_dir.resolve()
+            if source == target or target in source.parents or source in target.parents:
+                raise ReportError(f"output directory overlaps snapshot inputs: {out_dir}")
     worklist_rows, score_rows, input_ids = load_latest_rows(
         worklists_dir,
         worklist_json=worklist_json,
@@ -180,15 +213,19 @@ def render_from_paths(
 def diff_trees(expected: Path, actual: Path) -> list[str]:
     """Return deterministic relative paths that differ between two trees."""
 
+    if actual.is_symlink() or not actual.is_dir():
+        return ["."]
+    left = {path.relative_to(expected): path for path in expected.rglob("*")}
+    right = {path.relative_to(actual): path for path in actual.rglob("*")}
     diffs: list[str] = []
-
-    def walk(cmp: filecmp.dircmp, prefix: str) -> None:
-        names = sorted(cmp.left_only + cmp.right_only + cmp.diff_files)
-        diffs.extend(f"{prefix}{name}" for name in names)
-        for name in sorted(cmp.subdirs):
-            walk(cmp.subdirs[name], f"{prefix}{name}/")
-
-    walk(filecmp.dircmp(expected, actual), "")
+    for name in sorted(left.keys() | right.keys()):
+        a, b = left.get(name), right.get(name)
+        if a is None or b is None or a.is_symlink() or b.is_symlink():
+            diffs.append(name.as_posix())
+        elif a.is_dir() and b.is_dir():
+            continue
+        elif not a.is_file() or not b.is_file() or a.read_bytes() != b.read_bytes():
+            diffs.append(name.as_posix())
     return diffs
 
 
@@ -229,8 +266,6 @@ def main(argv: list[str] | None = None) -> int:
         print(f"{args.out} is current")
         return 0
 
-    if args.out.exists():
-        shutil.rmtree(args.out)
     render_from_paths(
         out_dir=args.out,
         worklists_dir=args.worklists_dir,
@@ -264,20 +299,22 @@ def _index_html(
   <main>
     <h1>DUFMech</h1>
     <p class="lede">
-      First-pass Domain of Unknown Function and Protein of Unknown Function
-      families from frozen InterPro/Pfam snapshots, with optional evidence
-      scores folded into a reproducible corpus dashboard.
+      Domain and protein families of unknown function, including historical DUFs.
     </p>
     <p class="lede">{inputs}</p>
 
     <section class="metrics" aria-label="Corpus metrics">
       {_metric("Families", metrics["total"])}
-      {_metric("InterPro IDs", metrics["with_interpro_id"])}
-      {_metric("Structures", metrics["with_structures"])}
-      {_metric("AlphaFold", metrics["with_alphafold_models"])}
-      {_metric("Proteins", metrics["interpro_proteins"])}
-      {_metric("Matches", metrics["interpro_matches"])}
+      {_metric("Families with InterPro IDs", metrics["with_interpro_id"])}
+      {_metric("Families with structures", metrics["with_structures"])}
+      {_metric("Families with AlphaFold models", metrics["with_alphafold_models"])}
+      {_metric("Per-family protein total", metrics["interpro_proteins"])}
+      {_metric("Per-family match total", metrics["interpro_matches"])}
     </section>
+    <p class="lede">Per-family totals are sums of reported InterPro counters,
+      not unique proteins or matches. Missing counts are excluded:
+      {metrics["missing_protein_counts"]:,} families lack protein counts and
+      {metrics["missing_match_counts"]:,} lack match counts.</p>
 
     <section class="section">
       <h2>Families</h2>
@@ -287,8 +324,9 @@ def _index_html(
             <tr>
               <th>Pfam</th>
               <th>Family</th>
-              <th>Status</th>
-              <th>Scores</th>
+              <th>Seed status</th>
+              <th>Characterization</th>
+              <th>Evidence counts</th>
               <th class="num">Proteins</th>
               <th class="num">Structures</th>
               <th class="num">AlphaFold</th>
@@ -316,22 +354,42 @@ def _metric(label: str, value: int) -> str:
 def _family_row(row: dict[str, Any]) -> str:
     name = escape(row["name"] or row["short_name"] or row["pfam_id"])
     short_name = escape(row["short_name"])
-    source_url = escape(row["source_url"], quote=True)
+    pfam = escape(row["pfam_id"])
+    source_url = row["source_url"]
+    if _safe_url(source_url):
+        pfam = f'<a href="{escape(source_url, quote=True)}">{pfam}</a>'
     characterization_status = row["characterization_status"] or "UNSCORED"
     score_text = (
-        f"K {row['known_evidence_count']} / "
-        f"P {row['partial_evidence_count']} / "
-        f"C {row['context_evidence_count']}"
+        f"Known: {_count(row['known_evidence_count'])}; "
+        f"partial: {_count(row['partial_evidence_count'])}; "
+        f"context: {_count(row['context_evidence_count'])}"
     )
+    if characterization_status == "UNSCORED":
+        score_text = "Not scored"
     return f"""<tr>
-  <td><a href="{source_url}">{escape(row["pfam_id"])}</a></td>
+  <td>{pfam}</td>
   <td><strong>{name}</strong><br>{short_name}</td>
-  <td class="status">{escape(characterization_status)}</td>
+  <td class="status">{escape(row["unknown_status"].replace("_", " "))}</td>
+  <td class="status">{escape(characterization_status.replace("_", " "))}</td>
   <td>{escape(score_text)}</td>
-  <td class="num">{row["proteins"]:,}</td>
-  <td class="num">{row["structures"]:,}</td>
-  <td class="num">{row["alphafold_models"]:,}</td>
+  <td class="num">{_count(row["proteins"])}</td>
+  <td class="num">{_count(row["structures"])}</td>
+  <td class="num">{_count(row["alphafold_models"])}</td>
 </tr>"""
+
+
+def _count(value: int | None) -> str:
+    return "Not available" if value is None else f"{value:,}"
+
+
+def _safe_url(value: str) -> bool:
+    if any(ord(char) < 32 for char in value):
+        return False
+    try:
+        parts = urlsplit(value)
+        return parts.scheme in {"http", "https"} and bool(parts.hostname)
+    except ValueError:
+        return False
 
 
 if __name__ == "__main__":

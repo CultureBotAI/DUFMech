@@ -144,6 +144,16 @@ just render
 just render-check
 ```
 
+Reports, README statistics, and pages validate the selected snapshot manifests.
+Score snapshots must name the selected worklist in their input provenance;
+use matching `--worklist-json` and `--score-json` paths when selecting older inputs.
+Without a score snapshot, families remain `UNSCORED`, with seed status shown separately.
+Missing counters remain unavailable rather than becoming zero, and per-family
+protein totals are not deduplicated protein counts.
+
+`just render` replaces only its four generated files and preserves unrelated files
+in the output directory. `just render-check` compares the full output tree by content.
+
 Run the local quality gate:
 
 ```bash

@@ -6,10 +6,14 @@ import json
 import re
 from collections import Counter
 from collections.abc import Iterable, Mapping
+from datetime import date
 from pathlib import Path
 from typing import Any
 
+from dufmech.provenance import check_manifest
+from dufmech.scoring import PARTIALLY_CHARACTERIZED
 from dufmech.scoring_snapshot import SCORE_STEM
+from dufmech.worklist import KNOWN_HISTORICAL_DUF, PFAM_RE, STATUS_ORDER, UNKNOWN_CANDIDATE
 
 WORKLIST_STEM = "interpro-pfam-duf"
 
@@ -27,6 +31,11 @@ def latest_snapshot_path(directory: Path, stem: str, *, required: bool = True) -
         for path in directory.glob(f"{stem}-*.json")
         if pattern.fullmatch(path.name)
     )
+    for path in paths:
+        try:
+            date.fromisoformat(path.stem[-10:])
+        except ValueError as exc:
+            raise ReportError(f"invalid snapshot date in {path}") from exc
     if paths:
         return paths[-1]
     if required:
@@ -41,12 +50,14 @@ def load_json_rows(path: Path) -> list[Mapping[str, Any]]:
         payload = json.loads(path.read_text(encoding="utf-8"))
     except OSError as exc:
         raise ReportError(f"could not read {path}") from exc
-    except json.JSONDecodeError as exc:
+    except (ValueError, UnicodeError) as exc:
         raise ReportError(f"{path} is not valid JSON") from exc
 
     if not isinstance(payload, list):
         raise ReportError(f"expected a JSON row list in {path}")
-    return [row for row in payload if isinstance(row, Mapping)]
+    if any(not isinstance(row, Mapping) for row in payload):
+        raise ReportError(f"every row in {path} must be an object")
+    return payload
 
 
 def load_latest_rows(
@@ -61,13 +72,30 @@ def load_latest_rows(
     score_path = score_json or latest_snapshot_path(worklists_dir, SCORE_STEM, required=False)
 
     assert worklist_path is not None
+    _verified_manifest(worklist_path)
     input_ids = {"worklist": worklist_path.stem}
     worklist_rows = load_json_rows(worklist_path)
     score_rows: list[Mapping[str, Any]] = []
     if score_path is not None:
+        manifest = _verified_manifest(score_path)
+        score_input = _mapping(manifest["snapshot"].get("input_snapshot_ids")).get("worklist")
+        if score_input != worklist_path.stem:
+            raise ReportError(
+                f"{score_path.name} was scored against {score_input}, not {worklist_path.stem}; "
+                "select matching --worklist-json/--score-json snapshots or regenerate scores"
+            )
         input_ids["scores"] = score_path.stem
         score_rows = load_json_rows(score_path)
+    family_index(worklist_rows, score_rows)
     return (worklist_rows, score_rows, input_ids)
+
+
+def _verified_manifest(path: Path) -> dict[str, Any]:
+    manifest_path = path.with_suffix(".manifest.json")
+    issues = check_manifest(manifest_path)
+    if issues:
+        raise ReportError("; ".join(issue.render() for issue in issues))
+    return json.loads(manifest_path.read_text(encoding="utf-8"))
 
 
 def family_index(
@@ -76,19 +104,25 @@ def family_index(
 ) -> list[dict[str, Any]]:
     """Join worklist families to score rows and return a stable display index."""
 
-    scores = {
-        _string(row.get("pfam_id")): row
-        for row in score_rows
-        if isinstance(row, Mapping) and _string(row.get("pfam_id"))
-    }
+    worklist = _rows_by_pfam(worklist_rows, "worklist")
+    scores = _rows_by_pfam(score_rows, "scores")
+    extra = scores.keys() - worklist.keys()
+    if extra:
+        raise ReportError(f"score families absent from worklist: {', '.join(sorted(extra))}")
     families: list[dict[str, Any]] = []
-    for row in worklist_rows:
-        if not isinstance(row, Mapping):
-            continue
-        pfam_id = _string(row.get("pfam_id"))
-        if not pfam_id:
-            continue
+    for pfam_id, row in worklist.items():
         score = scores.get(pfam_id, {})
+        seed_status = row.get("unknown_status")
+        characterization_status = score.get("characterization_status")
+        if not isinstance(seed_status, str) or seed_status not in STATUS_ORDER:
+            raise ReportError(f"{pfam_id}: invalid unknown_status")
+        if score and (
+            not isinstance(characterization_status, str)
+            or characterization_status not in {
+                UNKNOWN_CANDIDATE, KNOWN_HISTORICAL_DUF, PARTIALLY_CHARACTERIZED
+            }
+        ):
+            raise ReportError(f"{pfam_id}: invalid characterization_status")
         families.append(
             {
                 "pfam_id": pfam_id,
@@ -101,22 +135,28 @@ def family_index(
                 ),
                 "candidate_reasons": _string_list(row.get("candidate_reasons")),
                 "demotion_reasons": _string_list(score.get("demotion_reasons")),
-                "proteins": _int(row.get("proteins")),
-                "matches": _int(row.get("matches")),
-                "proteomes": _int(row.get("proteomes")),
-                "taxa": _int(row.get("taxa")),
-                "structures": _int(row.get("structures")),
-                "alphafold_models": _int(row.get("alphafold_models")),
-                "domain_architectures": _int(row.get("domain_architectures")),
-                "known_evidence_count": _int(score.get("known_evidence_count")),
-                "partial_evidence_count": _int(score.get("partial_evidence_count")),
-                "context_evidence_count": _int(score.get("context_evidence_count")),
+                **{
+                    field: _optional_count(row.get(field), pfam_id, field)
+                    for field in (
+                        "proteins", "matches", "proteomes", "taxa", "structures",
+                        "alphafold_models", "domain_architectures",
+                    )
+                },
+                **{
+                    field: _optional_count(score.get(field), pfam_id, field)
+                    for field in (
+                        "known_evidence_count", "partial_evidence_count", "context_evidence_count",
+                    )
+                },
                 "description": _string(row.get("description")),
                 "source_url": _string(row.get("source_url")),
             }
         )
 
-    return sorted(families, key=lambda row: (-row["proteins"], row["pfam_id"]))
+    return sorted(
+        families,
+        key=lambda row: (row["proteins"] is None, -(row["proteins"] or 0), row["pfam_id"]),
+    )
 
 
 def build_report(
@@ -127,20 +167,24 @@ def build_report(
 ) -> dict[str, Any]:
     """Build corpus summary metrics for DUF/PUF snapshots."""
 
+    if type(top_n) is not int or top_n < 0:
+        raise ReportError("top_n must be a non-negative integer")
     families = family_index(worklist_rows, score_rows)
     return {
         "families": {
             "total": len(families),
             "with_interpro_id": sum(1 for row in families if row["interpro_id"]),
-            "with_structures": sum(1 for row in families if row["structures"] > 0),
+            "with_structures": sum(1 for row in families if (row["structures"] or 0) > 0),
             "with_alphafold_models": sum(
-                1 for row in families if row["alphafold_models"] > 0
+                1 for row in families if (row["alphafold_models"] or 0) > 0
             ),
             "with_domain_architectures": sum(
-                1 for row in families if row["domain_architectures"] > 0
+                1 for row in families if (row["domain_architectures"] or 0) > 0
             ),
-            "interpro_proteins": sum(row["proteins"] for row in families),
-            "interpro_matches": sum(row["matches"] for row in families),
+            "interpro_proteins": sum(row["proteins"] or 0 for row in families),
+            "interpro_matches": sum(row["matches"] or 0 for row in families),
+            "missing_protein_counts": sum(row["proteins"] is None for row in families),
+            "missing_match_counts": sum(row["matches"] is None for row in families),
         },
         "by_unknown_status": dict(
             _sorted_counter(row["unknown_status"] or "UNKNOWN" for row in families)
@@ -193,8 +237,11 @@ def render_report_text(report: Mapping[str, Any], *, input_ids: Mapping[str, str
                 f"{_int(families.get('with_alphafold_models'))} with AlphaFold DB "
                 "model counters"
             ),
-            f"{_int(families.get('interpro_proteins'))} InterPro proteins",
-            f"{_int(families.get('interpro_matches'))} InterPro matches",
+            f"{_int(families.get('interpro_proteins'))} summed per-family InterPro protein counts",
+            f"{_int(families.get('interpro_matches'))} summed per-family InterPro match counts",
+            "Per-family sums are not counts of unique proteins or matches.",
+            f"{_int(families.get('missing_protein_counts'))} families lack protein counts",
+            f"{_int(families.get('missing_match_counts'))} families lack match counts",
         ]
     )
 
@@ -206,7 +253,37 @@ def render_report_text(report: Mapping[str, Any], *, input_ids: Mapping[str, str
     )
     _append_counter(lines, "Candidate reasons", report.get("by_candidate_reason"))
     _append_counter(lines, "Demotion reasons", report.get("by_demotion_reason"))
+    top_rows = report.get("top_by_proteins", [])
+    if top_rows:
+        lines.extend(["", "Top families by protein count:"])
+        for row in top_rows:
+            proteins = "Not available" if row["proteins"] is None else f"{row['proteins']:,}"
+            lines.append(f"  {row['pfam_id']}  {proteins:>13s}  {row['short_name']}")
     return "\n".join(lines)
+
+
+def _rows_by_pfam(
+    rows: Iterable[Mapping[str, Any]], label: str
+) -> dict[str, Mapping[str, Any]]:
+    indexed: dict[str, Mapping[str, Any]] = {}
+    for row in rows:
+        if not isinstance(row, Mapping):
+            raise ReportError(f"every {label} row must be an object")
+        pfam_id = row.get("pfam_id")
+        if not isinstance(pfam_id, str) or not PFAM_RE.fullmatch(pfam_id):
+            raise ReportError(f"invalid {label} pfam_id: {pfam_id!r}")
+        if pfam_id in indexed:
+            raise ReportError(f"duplicate {label} pfam_id: {pfam_id}")
+        indexed[pfam_id] = row
+    return indexed
+
+
+def _optional_count(value: object, pfam_id: str, field: str) -> int | None:
+    if value is None:
+        return None
+    if type(value) is not int or value < 0:
+        raise ReportError(f"{pfam_id}: {field} must be a non-negative integer or null")
+    return value
 
 
 def _append_counter(lines: list[str], title: str, payload: object) -> None:
