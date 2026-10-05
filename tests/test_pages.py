@@ -151,3 +151,18 @@ def test_dashboard_distinguishes_missing_counts_seed_status_and_unscored(tmp_pat
     assert soup.select_one("tbody a")["href"].startswith("https://")
     assert "not unique proteins or matches" in soup.get_text()
     assert "Families with structures" in soup.get_text()
+
+
+def test_status_legend_is_visible_and_distinguishes_missing_evidence(tmp_path) -> None:
+    render_site([], [], input_ids={}, out_dir=tmp_path / "pages")
+    soup = BeautifulSoup((tmp_path / "pages/index.html").read_text(), "html.parser")
+    legend = soup.select_one("section.status-legend")
+    assert legend is not None and not legend.has_attr("hidden")
+    assert [heading.get_text() for heading in legend.select("h3")] == [
+        "Seed classification", "Characterization scoring"
+    ]
+    text = " ".join(legend.get_text().split())
+    assert "Missing scores are not negative evidence" in text
+    assert "this heuristic is not proof of a known function" in text
+    assert "context alone does not assign function" in text
+    assert "not unique proteins, publications, or confidence scores" in text

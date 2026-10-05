@@ -39,6 +39,10 @@ duf-puf-worklist *args="":
 freeze-duf-puf-worklist *args="":
     uv run python scripts/freeze_duf_puf_worklist.py {{args}}
 
+# Version a classification correction using verified, frozen metadata only.
+reclassify-duf-puf-worklist *args="":
+    uv run python scripts/reclassify_duf_puf_worklist.py {{args}}
+
 # Expand Pfam worklist rows to UniProtKB protein members.
 duf-puf-members *args="":
     uv run python scripts/duf_puf_members.py {{args}}

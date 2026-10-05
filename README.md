@@ -31,6 +31,23 @@ Freeze the canonical InterPro/Pfam seed worklist with a matching manifest:
 just freeze-duf-puf-worklist --snapshot-date 2026-10-01
 ```
 
+The current seed worklist is a versioned classification correction of that
+original metadata, not a newer InterPro fetch. It retains all 6,532 families
+and source counters; 1,621 historical seed labels were corrected to unknown
+candidates. See the [correction audit](docs/provenance/seed-classification-correction-2026-10-05.md)
+for the classification policy, parent hashes, and limitations.
+
+Reclassify verified frozen metadata into a new snapshot without contacting InterPro:
+
+```bash
+just reclassify-duf-puf-worklist \
+  --input-json data/worklists/interpro-pfam-duf-2026-10-01.json \
+  --snapshot-date 2026-10-05 --out-dir /tmp/dufmech-classification-check
+```
+
+Existing output artifacts are never overwritten. Seed labels reflect frozen
+wording, not experimental validation. Scoring remains a separate step.
+
 Expand frozen Pfam rows to UniProtKB protein members through InterPro:
 
 ```bash
@@ -176,14 +193,14 @@ just qc
 
 6,492 carry InterPro IDs, 820 have InterPro structure counters, and 6,478 have AlphaFold DB model counters.
 
-Latest inputs: `worklist=interpro-pfam-duf-2026-10-01`.
+Latest inputs: `worklist=interpro-pfam-duf-2026-10-05`.
 
 **Unknown-function seed status**
 
 | Value | Families |
 |---|---:|
-| `KNOWN_HISTORICAL_DUF` | 1,999 |
-| `UNKNOWN_CANDIDATE` | 4,533 |
+| `KNOWN_HISTORICAL_DUF` | 378 |
+| `UNKNOWN_CANDIDATE` | 6,154 |
 
 **Characterization status**
 
@@ -195,10 +212,10 @@ Latest inputs: `worklist=interpro-pfam-duf-2026-10-01`.
 
 | Value | Families |
 |---|---:|
-| `description_says_unknown_function` | 768 |
+| `description_says_unknown_function` | 1,359 |
 | `domain_of_unknown_function` | 2,832 |
 | `name_matches_duf` | 155 |
-| `name_says_unknown_function` | 4,320 |
+| `name_says_unknown_function` | 6,115 |
 | `short_name_matches_duf` | 6,371 |
 <!-- END GENERATED CORPUS STATS -->
 

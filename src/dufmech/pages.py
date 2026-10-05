@@ -106,6 +106,12 @@ th {
   border-bottom: 1px solid var(--line);
   font-size: 1rem;
 }
+.status-legend { border-top: 1px solid var(--line); margin-top: 24px; }
+.status-legend h2, .status-legend h3 { font-size: 1rem; }
+.legend-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.status-legend dt { font-weight: 600; }
+.status-legend dd { margin: 4px 0 16px; color: var(--muted); }
+.status-legend p { max-width: 900px; }
 .table-wrap { overflow-x: auto; }
 table {
   width: 100%;
@@ -137,6 +143,7 @@ td.num {
   .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .metric { padding: 12px; }
   .metric strong { font-size: 1.25rem; }
+  .legend-columns { grid-template-columns: minmax(0, 1fr); gap: 0; }
 }
 """.strip()
 
@@ -315,6 +322,50 @@ def _index_html(
       not unique proteins or matches. Missing counts are excluded:
       {metrics["missing_protein_counts"]:,} families lack protein counts and
       {metrics["missing_match_counts"]:,} lack match counts.</p>
+
+    <section class="status-legend" aria-labelledby="status-legend-title">
+      <h2 id="status-legend-title">Status and evidence</h2>
+      <div class="legend-columns">
+        <div>
+          <h3>Seed classification</h3>
+          <dl>
+            <dt>Unknown candidate</dt>
+            <dd>Frozen family names or descriptions explicitly indicate unknown function.
+              This metadata signal does not establish that no function has been discovered.</dd>
+            <dt>Known historical DUF</dt>
+            <dd>A DUF name is present, but the frozen wording lacks a recognized unknown-function
+              phrase. Despite its label, this heuristic is not proof of a known function.</dd>
+            <dt>False positive text hit</dt>
+            <dd>The saved metadata lacks recognized DUF or unknown-function signals.
+              These broad-search hits are normally excluded from the seed worklist.</dd>
+          </dl>
+        </div>
+        <div>
+          <h3>Characterization scoring</h3>
+          <dl>
+            <dt>Unscored / Not scored</dt>
+            <dd>No matching score row is available. Missing scores are not negative evidence.</dd>
+            <dt>Unknown candidate</dt>
+            <dd>No known-function or partial-function signal was counted in the supplied
+              evidence. Context may still be present; this is not proof of unknown function.</dd>
+            <dt>Partially characterized</dt>
+            <dd>Partial-function signals were counted without a known-function signal
+              or an inherited historical seed label.</dd>
+            <dt>Known historical DUF</dt>
+            <dd>Either the historical seed label was inherited or a known-function signal
+              was counted. This status alone does not imply experimental validation.</dd>
+          </dl>
+        </div>
+      </div>
+      <p>Evidence counts aggregate source-specific signals, not unique proteins, publications,
+        or confidence scores. <strong>Known</strong> counts Rhea reactions and experimentally
+        supported GO molecular-function annotations. <strong>Partial</strong> counts specific
+        domain/family assignments and other functional annotations.
+        <strong>Context</strong> counts structural, environmental, orthology, interaction,
+        and neighborhood signals; context alone does not assign function.</p>
+      <p><strong>Not available</strong> means a counter was absent from the frozen input.
+        A numeric zero is a reported zero, not a substitute for missing data.</p>
+    </section>
 
     <section class="section">
       <h2>Families</h2>

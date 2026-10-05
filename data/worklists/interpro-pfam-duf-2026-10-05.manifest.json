@@ -1,0 +1,95 @@
+{
+  "derivation": {
+    "changed_fields": [
+      "unknown_status",
+      "candidate_reasons"
+    ],
+    "changed_reason_rows": 2101,
+    "changed_status_rows": 1621,
+    "classifier_policy": "unknown-function-metadata-v2",
+    "fetched_live": false,
+    "input_files": {
+      "json": {
+        "bytes": 4919041,
+        "path": "interpro-pfam-duf-2026-10-01.json",
+        "sha256": "141fd83d020563444c6498a3f0dc4d7924e7cf759647b449271f4d00c612b689"
+      },
+      "manifest": {
+        "bytes": 1501,
+        "path": "interpro-pfam-duf-2026-10-01.manifest.json",
+        "sha256": "a3284c29fd374d8a7c23bb8feb344f124c8c12729e0d114cb9766a119222408f"
+      },
+      "tsv": {
+        "bytes": 2685895,
+        "path": "interpro-pfam-duf-2026-10-01.tsv",
+        "sha256": "90c20b768cb80b35826cbceffb729589470c8fd84d77692c21beeac7c80d4756"
+      }
+    },
+    "input_snapshot_generated_at": "2026-10-01T02:02:24.459424Z",
+    "method": "reclassify_saved_worklist",
+    "status_transitions": {
+      "KNOWN_HISTORICAL_DUF -> UNKNOWN_CANDIDATE": 1621
+    }
+  },
+  "files": {
+    "json": {
+      "bytes": 5004211,
+      "path": "interpro-pfam-duf-2026-10-05.json",
+      "sha256": "7f8100b9bb9106f1055229e23d8100cbaef5e3cf9341e9b917a2855e023eae41"
+    },
+    "tsv": {
+      "bytes": 2749591,
+      "path": "interpro-pfam-duf-2026-10-05.tsv",
+      "sha256": "d45d6da79f2dea1840b550245a3e0564af80cf90760624c007a3febbf3ba3afc"
+    }
+  },
+  "rows": {
+    "by_candidate_reason": {
+      "description_says_unknown_function": 1359,
+      "domain_of_unknown_function": 2832,
+      "name_matches_duf": 155,
+      "name_says_unknown_function": 6115,
+      "short_name_matches_duf": 6371
+    },
+    "by_unknown_status": {
+      "KNOWN_HISTORICAL_DUF": 378,
+      "UNKNOWN_CANDIDATE": 6154
+    },
+    "total": 6532
+  },
+  "schema": {
+    "tsv_fieldnames": [
+      "pfam_id",
+      "short_name",
+      "name",
+      "interpro_id",
+      "unknown_status",
+      "candidate_reasons",
+      "proteins",
+      "matches",
+      "proteomes",
+      "taxa",
+      "structures",
+      "alphafold_models",
+      "domain_architectures",
+      "description",
+      "source_url"
+    ]
+  },
+  "snapshot": {
+    "date": "2026-10-05",
+    "generated_at": "2026-10-05T19:54:12.605461Z",
+    "id": "interpro-pfam-duf-2026-10-05",
+    "input_snapshot_ids": {
+      "worklist": "interpro-pfam-duf-2026-10-01"
+    }
+  },
+  "source": {
+    "extra_fields": "entry_id,short_name,description,counters",
+    "include_false_positives": false,
+    "name": "InterPro Pfam API",
+    "page_size": 200,
+    "search": "DUF",
+    "url": "https://www.ebi.ac.uk/interpro/api/entry/pfam/"
+  }
+}

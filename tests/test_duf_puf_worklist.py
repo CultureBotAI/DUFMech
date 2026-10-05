@@ -5,6 +5,7 @@ import json
 from io import StringIO
 
 import httpx
+import pytest
 
 from dufmech.worklist import (
     FALSE_POSITIVE_TEXT_HIT,
@@ -94,6 +95,59 @@ def test_historical_duf_names_are_kept_but_demoted() -> None:
     assert row is not None
     assert row.unknown_status == KNOWN_HISTORICAL_DUF
     assert row.candidate_reasons == ("short_name_matches_duf",)
+
+
+@pytest.mark.parametrize(
+    "name",
+    [
+        "Family of unknown function (DUF5641)",
+        "Domain of unknown function (DUF5641)",
+        "Protein of unknown function (DUF5641)",
+        "Families of unknown function (DUF5641)",
+        "FAMILY OF UNKNOWN FUNCTION (DUF5641)",
+        "Family of\nunknown\tfunction (DUF5641)",
+        "Family of unknown-function (DUF5641)",
+        "Family of <b>unknown</b> function (DUF5641)",
+        "Repeat of unknown function (DUF5641)",
+        "Coiled-coil region of unknown function (DUF5641)",
+        "Protein structure with unknown function (DUF5641)",
+    ],
+)
+def test_unknown_function_names_are_candidates_regardless_of_entity_word(name) -> None:
+    row = row_from_interpro_entry(interpro_result(
+        accession="PF18701", short_name="DUF5641", name=name,
+        description="This presumed domain is found in a range of retrotransposon polyproteins.",
+    ))
+    assert row.unknown_status == UNKNOWN_CANDIDATE
+    assert "name_says_unknown_function" in row.candidate_reasons
+
+
+@pytest.mark.parametrize(
+    "description",
+    [
+        "This is a family of unknown function.",
+        "Families of unknown function occur here.",
+        "The function of this family is unknown.",
+        "The function of the family is unknown.",
+        "A FAMILY of\nunknown-function.",
+        "A family of <b>unknown</b> function.",
+    ],
+)
+def test_family_description_unknown_function_is_not_historical(description) -> None:
+    row = row_from_interpro_entry(interpro_result(
+        name="DUF5641", short_name="DUF5641", description=description,
+    ))
+    assert row.unknown_status == UNKNOWN_CANDIDATE
+    assert "description_says_unknown_function" in row.candidate_reasons
+
+
+def test_broad_unknown_function_mentions_in_description_do_not_assign_function() -> None:
+    row = row_from_interpro_entry(interpro_result(
+        name="DUF5641", short_name="DUF5641",
+        description="Nearby loci include repeats with unknown function.",
+    ))
+    assert row.unknown_status == KNOWN_HISTORICAL_DUF
+
 
 
 def test_domain_descriptions_can_mark_unknown_function() -> None:

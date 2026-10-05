@@ -71,6 +71,12 @@ th {
   border-bottom: 1px solid var(--line);
   font-size: 1rem;
 }
+.status-legend { border-top: 1px solid var(--line); margin-top: 24px; }
+.status-legend h2, .status-legend h3 { font-size: 1rem; }
+.legend-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.status-legend dt { font-weight: 600; }
+.status-legend dd { margin: 4px 0 16px; color: var(--muted); }
+.status-legend p { max-width: 900px; }
 .table-wrap { overflow-x: auto; }
 table {
   width: 100%;
@@ -102,4 +108,5 @@ td.num {
   .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .metric { padding: 12px; }
   .metric strong { font-size: 1.25rem; }
+  .legend-columns { grid-template-columns: minmax(0, 1fr); gap: 0; }
 }
