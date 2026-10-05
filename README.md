@@ -2,6 +2,8 @@
 
 Domain of Unknown Function mechanism knowledge base.
 
+[Browse the DUFMech dashboard](https://culturebotai.github.io/DUFMech/).
+
 DUFMech starts from Pfam families whose public InterPro metadata still looks
 like a domain or protein of unknown function. The first tool builds a
 triage worklist from the InterPro Pfam API, normalizes Pfam rows, keeps DUF
@@ -143,6 +145,12 @@ Render and verify the committed DUFMech dashboard:
 just render
 just render-check
 ```
+
+GitHub Actions runs the offline quality gate and builds the dashboard on pull
+requests and pushes to `main`. After those checks pass, current `main` commits
+publish the generated site to GitHub Pages. The workflow can also be run manually
+on `main`. Publishing uses the committed frozen snapshots and does not refresh
+upstream data. The repository's Pages source must be set to **GitHub Actions**.
 
 Reports, README statistics, and pages validate the selected snapshot manifests.
 Score snapshots must name the selected worklist in their input provenance;
