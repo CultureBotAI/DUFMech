@@ -72,12 +72,12 @@ def load_latest_rows(
     score_path = score_json or latest_snapshot_path(worklists_dir, SCORE_STEM, required=False)
 
     assert worklist_path is not None
-    _verified_manifest(worklist_path)
+    verified_manifest(worklist_path)
     input_ids = {"worklist": worklist_path.stem}
     worklist_rows = load_json_rows(worklist_path)
     score_rows: list[Mapping[str, Any]] = []
     if score_path is not None:
-        manifest = _verified_manifest(score_path)
+        manifest = verified_manifest(score_path)
         score_input = _mapping(manifest["snapshot"].get("input_snapshot_ids")).get("worklist")
         if score_input != worklist_path.stem:
             raise ReportError(
@@ -90,7 +90,9 @@ def load_latest_rows(
     return (worklist_rows, score_rows, input_ids)
 
 
-def _verified_manifest(path: Path) -> dict[str, Any]:
+def verified_manifest(path: Path) -> dict[str, Any]:
+    """Return a snapshot manifest after checking its files and row counts."""
+
     manifest_path = path.with_suffix(".manifest.json")
     issues = check_manifest(manifest_path)
     if issues:

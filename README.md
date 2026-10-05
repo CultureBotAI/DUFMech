@@ -139,6 +139,23 @@ Score frozen DUF/Pfam families with evidence snapshots:
 just score-duf-puf --worklist-json data/worklists/interpro-pfam-duf-2026-10-01.json
 ```
 
+Freeze the DUF/PUF families and proteins already curated in sibling Mechs, then
+write the reuse report:
+
+```bash
+git -C ../TraitMech fetch origin main   # likewise for each sibling Mech
+just freeze-cross-mech --ref origin/main --uniprot-cache data/raw/cross-mech-uniprot-pfam.json
+just cross-mech-report
+```
+
+The scan reads tracked YAML from each sibling checkout at the given ref, so local
+edits never leak in, and records every Mech commit in the manifest. ProteinTraitsMech
+links come from its structured trait identifiers and canonical-example family
+classifications. In the other Mechs, the scan matches Pfam IDs, DUF/UPF short names
+and InterPro IDs in record text, and checks every cited UniProtKB accession for
+worklist Pfam cross-references. DUF/UPF names that no longer match a worklist family,
+usually because Pfam renamed them, are kept as `NOT_IN_WORKLIST` rows.
+
 Render and verify the committed DUFMech dashboard:
 
 ```bash
@@ -224,6 +241,7 @@ as proof that the family is still functionally unknown.
 ```text
 DUFMech/
 ├── data/
+│   ├── cross_mech/
 │   └── worklists/
 ├── docs/
 │   ├── provenance/

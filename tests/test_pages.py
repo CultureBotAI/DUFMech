@@ -147,7 +147,7 @@ def test_dashboard_distinguishes_missing_counts_seed_status_and_unscored(tmp_pat
     )
     soup = BeautifulSoup((out / "index.html").read_text(encoding="utf-8"), "html.parser")
     cells = [cell.get_text() for cell in soup.select("tbody tr td")]
-    assert cells[2:] == ["KNOWN HISTORICAL DUF", "UNSCORED", "Not scored", "0", "Not available", "0"]
+    assert cells[2:] == ["KNOWN HISTORICAL DUF", "UNSCORED", "Not scored", "0", "Not available", "0", ""]
     assert soup.select_one("tbody a")["href"].startswith("https://")
     assert "not unique proteins or matches" in soup.get_text()
     assert "Families with structures" in soup.get_text()

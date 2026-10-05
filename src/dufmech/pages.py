@@ -11,7 +11,17 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlsplit
 
-from dufmech.report import ReportError, build_report, family_index, load_latest_rows
+from dufmech.cross_mech import PROTEIN_TRAITS_MECH
+from dufmech.cross_mech_snapshot import CROSS_MECH_DIR, CROSS_MECH_STEM
+from dufmech.report import (
+    ReportError,
+    build_report,
+    family_index,
+    latest_snapshot_path,
+    load_json_rows,
+    load_latest_rows,
+    verified_manifest,
+)
 
 PAGES_DIR = Path("pages")
 WORKLISTS_DIR = Path("data/worklists")
@@ -147,16 +157,22 @@ def render_site(
     *,
     input_ids: dict[str, str],
     out_dir: Path,
+    cross_mech_rows: list[dict[str, Any]] | None = None,
+    cross_mech_sources: dict[str, Any] | None = None,
 ) -> None:
     """Render a static DUFMech dashboard into ``out_dir``."""
 
     families = family_index(worklist_rows, score_rows)
     report = build_report(worklist_rows, score_rows, top_n=20)
+    cross_mech_rows = cross_mech_rows or []
+    report["cross_mech"] = _attach_cross_mech(families, cross_mech_rows)
 
     artifacts = {
         ".nojekyll": "",
         "style.css": STYLE_CSS + "\n",
-        "index.html": _index_html(report, families, input_ids),
+        "index.html": _index_html(
+            report, families, input_ids, cross_mech_rows, cross_mech_sources or {}
+        ),
         "index.json": json.dumps(
             {
                 "inputs": dict(sorted(input_ids.items())),
@@ -188,10 +204,11 @@ def render_from_paths(
     worklists_dir: Path = WORKLISTS_DIR,
     worklist_json: Path | None = None,
     score_json: Path | None = None,
+    cross_mech_dir: Path = CROSS_MECH_DIR,
 ) -> None:
     """Load frozen snapshots and render pages."""
 
-    for input_path in (worklists_dir, worklist_json, score_json):
+    for input_path in (worklists_dir, worklist_json, score_json, cross_mech_dir):
         if input_path is not None:
             source = input_path.resolve()
             target = out_dir.resolve()
@@ -202,11 +219,31 @@ def render_from_paths(
         worklist_json=worklist_json,
         score_json=score_json,
     )
+    cross_mech_rows: list[dict[str, Any]] = []
+    cross_mech_sources: dict[str, Any] = {}
+    cross_mech_path = (
+        latest_snapshot_path(cross_mech_dir, CROSS_MECH_STEM, required=False)
+        if cross_mech_dir.is_dir()
+        else None
+    )
+    if cross_mech_path is not None:
+        manifest = verified_manifest(cross_mech_path)
+        worklist_input = manifest["snapshot"].get("input_snapshot_ids", {}).get("worklist")
+        if worklist_input != input_ids["worklist"]:
+            raise ReportError(
+                f"{cross_mech_path.name} was built against {worklist_input}, "
+                f"not {input_ids['worklist']}; regenerate the cross-Mech snapshot"
+            )
+        input_ids["cross_mech"] = cross_mech_path.stem
+        cross_mech_rows = [dict(row) for row in load_json_rows(cross_mech_path)]
+        cross_mech_sources = dict(manifest["source"].get("mechs", {}))
     render_site(
         [dict(row) for row in worklist_rows],
         [dict(row) for row in score_rows],
         input_ids=input_ids,
         out_dir=out_dir,
+        cross_mech_rows=cross_mech_rows,
+        cross_mech_sources=cross_mech_sources,
     )
 
 
@@ -280,9 +317,14 @@ def _index_html(
     report: dict[str, Any],
     families: list[dict[str, Any]],
     input_ids: dict[str, str],
+    cross_mech_rows: list[dict[str, Any]],
+    cross_mech_sources: dict[str, Any],
 ) -> str:
     metrics = report["families"]
+    cross = report["cross_mech"]
     rows = "\n".join(_family_row(row) for row in families)
+    curated = [row for row in cross_mech_rows if row["source_mech"] != PROTEIN_TRAITS_MECH]
+    curated_rows = "\n".join(_cross_mech_row(row, cross_mech_sources) for row in curated)
     inputs = " / ".join(
         f"{escape(key)}: {escape(value)}"
         for key, value in sorted(input_ids.items())
@@ -310,11 +352,38 @@ def _index_html(
       {_metric("Families with AlphaFold models", metrics["with_alphafold_models"])}
       {_metric("Per-family protein total", metrics["interpro_proteins"])}
       {_metric("Per-family match total", metrics["interpro_matches"])}
+      {_metric("Families linked from other Mechs", cross["families"])}
+      {_metric("DUF example proteins in other Mechs", cross["proteins"])}
     </section>
     <p class="lede">Per-family totals are sums of reported InterPro counters,
       not unique proteins or matches. Missing counts are excluded:
       {metrics["missing_protein_counts"]:,} families lack protein counts and
       {metrics["missing_match_counts"]:,} lack match counts.</p>
+
+    <section class="section">
+      <h2>DUF examples curated in other Mechs</h2>
+      <p class="lede">Records outside ProteinTraitsMech that name a DUF/PUF family or
+        cite a protein whose UniProtKB entry carries one. ProteinTraitsMech trait and
+        canonical-example links are counted per family below.
+        Names marked "not in worklist" are DUF/UPF names that no longer match a current
+        Pfam short name.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Family</th>
+              <th>Mech</th>
+              <th>Record</th>
+              <th>Protein</th>
+              <th>Link basis</th>
+            </tr>
+          </thead>
+          <tbody>
+            {curated_rows}
+          </tbody>
+        </table>
+      </div>
+    </section>
 
     <section class="section">
       <h2>Families</h2>
@@ -330,6 +399,7 @@ def _index_html(
               <th class="num">Proteins</th>
               <th class="num">Structures</th>
               <th class="num">AlphaFold</th>
+              <th>Other Mechs</th>
             </tr>
           </thead>
           <tbody>
@@ -375,6 +445,76 @@ def _family_row(row: dict[str, Any]) -> str:
   <td class="num">{_count(row["proteins"])}</td>
   <td class="num">{_count(row["structures"])}</td>
   <td class="num">{_count(row["alphafold_models"])}</td>
+  <td>{_other_mechs(row["cross_mech"])}</td>
+</tr>"""
+
+
+def _attach_cross_mech(
+    families: list[dict[str, Any]], rows: list[dict[str, Any]]
+) -> dict[str, int]:
+    """Attach per-family cross-Mech links and return dashboard totals."""
+
+    by_pfam: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        pfam_id = row.get("pfam_id") or ""
+        if not pfam_id:
+            continue
+        entry = by_pfam.setdefault(pfam_id, {"mechs": {}, "proteins": set()})
+        entry["mechs"][row["source_mech"]] = entry["mechs"].get(row["source_mech"], 0) + 1
+        if row.get("uniprot_accession"):
+            entry["proteins"].add(row["uniprot_accession"])
+    known = {family["pfam_id"] for family in families}
+    extra = by_pfam.keys() - known
+    if extra:
+        raise ReportError(f"cross-Mech families absent from worklist: {', '.join(sorted(extra))}")
+    for family in families:
+        entry = by_pfam.get(family["pfam_id"], {"mechs": {}, "proteins": set()})
+        family["cross_mech"] = {
+            "records_by_mech": dict(sorted(entry["mechs"].items())),
+            "example_proteins": len(entry["proteins"]),
+        }
+    return {
+        "rows": len(rows),
+        "families": len(by_pfam),
+        "proteins": len({row["uniprot_accession"] for row in rows if row.get("uniprot_accession")}),
+    }
+
+
+def _other_mechs(summary: dict[str, Any]) -> str:
+    mechs = summary["records_by_mech"]
+    if not mechs:
+        return ""
+    text = "<br>".join(f"{escape(name)}: {count:,}" for name, count in mechs.items())
+    proteins = summary["example_proteins"]
+    if proteins:
+        text += f"<br>{proteins:,} example protein{'s' if proteins != 1 else ''}"
+    return text
+
+
+def _cross_mech_row(row: dict[str, Any], sources: dict[str, Any]) -> str:
+    family = escape(row["short_name"] or row["pfam_id"])
+    if row["pfam_id"]:
+        family = f"{family}<br>{escape(row['pfam_id'])}"
+    else:
+        family = f"{family}<br>not in worklist"
+    source = sources.get(row["source_mech"], {})
+    record = escape(row["source_record_label"] or row["source_record_id"])
+    url = f"{source.get('repository', '')}/blob/{source.get('commit', '')}/{row['source_path']}"
+    if source and _safe_url(url):
+        record = f'<a href="{escape(url, quote=True)}">{record}</a>'
+    protein = ""
+    if row["uniprot_accession"]:
+        accession = escape(row["uniprot_accession"])
+        protein = (
+            f'<a href="https://rest.uniprot.org/uniprotkb/{accession}">{accession}</a>'
+            f"<br>{escape(row['protein_label'])}"
+        )
+    return f"""<tr>
+  <td>{family}</td>
+  <td>{escape(row["source_mech"])}</td>
+  <td>{record}</td>
+  <td>{protein}</td>
+  <td class="status">{escape(", ".join(row["link_basis"]).replace("_", " "))}</td>
 </tr>"""
 
 
