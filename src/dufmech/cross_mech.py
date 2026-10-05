@@ -26,7 +26,12 @@ NOT_IN_WORKLIST = "NOT_IN_WORKLIST"
 # Word-bounded identifiers; the guards reject drug codes such as PF07321332 and
 # GenBank prefixes such as LIPF01000008.
 PFAM_TEXT_RE = re.compile(r"(?<![A-Za-z0-9])(PF\d{5})(?:\.\d+)?(?![0-9])")
-SHORT_NAME_TEXT_RE = re.compile(r"(?<![A-Za-z0-9])(DUF\d{1,5}|UPF\d{4})(?![0-9])")
+# Bare DUF/UPF names only; an underscore-joined name (QueG_DUF1730, DUF3458_C) is a
+# different Pfam family and is matched exactly through FamilyIndex.compound_names, which
+# also masks the few hyphenated worklist names. Other hyphens are prose
+# ("DUF1814-family", "COG5340-DUF1814") and still count as the bare name.
+SHORT_NAME_TEXT_RE = re.compile(r"(?<![A-Za-z0-9_])(DUF\d{1,5}|UPF\d{4})(?![0-9]|_[A-Za-z0-9])")
+COMPOUND_NAME_RE = re.compile(r"[A-Za-z0-9_-]*(?:DUF\d{1,5}|UPF\d{4})[A-Za-z0-9_-]*")
 INTERPRO_TEXT_RE = re.compile(r"(?<![A-Za-z0-9])(IPR\d{6})(?![0-9])")
 UNIPROT_TEXT_RE = re.compile(
     r"UniProt(?:KB)?(?:/(?:Swiss-Prot|TrEMBL))?[:\s]\s*"
@@ -105,6 +110,7 @@ class FamilyIndex:
     by_pfam: Mapping[str, WorklistFamily]
     by_short_name: Mapping[str, tuple[str, ...]]
     by_interpro: Mapping[str, tuple[str, ...]]
+    compound_names: re.Pattern[str] | None = None
 
     @classmethod
     def from_rows(cls, rows: Iterable[Mapping[str, Any]]) -> FamilyIndex:
@@ -122,15 +128,38 @@ class FamilyIndex:
             if not family.pfam_id:
                 continue
             by_pfam[family.pfam_id] = family
-            if SHORT_NAME_TEXT_RE.fullmatch(family.short_name.upper()):
-                by_short.setdefault(family.short_name.upper(), set()).add(family.pfam_id)
+            if SHORT_NAME_TEXT_RE.fullmatch(family.short_name) or COMPOUND_NAME_RE.fullmatch(
+                family.short_name
+            ):
+                by_short.setdefault(family.short_name, set()).add(family.pfam_id)
             if family.interpro_id:
                 by_interpro.setdefault(family.interpro_id, set()).add(family.pfam_id)
+        compounds = sorted(
+            (name for name in by_short if not SHORT_NAME_TEXT_RE.fullmatch(name)),
+            key=lambda name: (-len(name), name),
+        )
         return cls(
             by_pfam=by_pfam,
             by_short_name={key: tuple(sorted(value)) for key, value in by_short.items()},
             by_interpro={key: tuple(sorted(value)) for key, value in by_interpro.items()},
+            compound_names=(
+                re.compile(
+                    r"(?<![A-Za-z0-9_-])("
+                    + "|".join(re.escape(name) for name in compounds)
+                    + r")(?![A-Za-z0-9_-])"
+                )
+                if compounds
+                else None
+            ),
         )
+
+    def _short_names(self, text: str) -> tuple[list[str], str]:
+        """Return exact compound-name hits and the text with those hits masked."""
+
+        if self.compound_names is None:
+            return [], text
+        found = self.compound_names.findall(text)
+        return found, self.compound_names.sub(" ", text)
 
     def text_matches(self, text: str) -> dict[str, set[str]]:
         """Return worklist Pfam IDs mentioned in ``text`` with their link bases."""
@@ -139,7 +168,8 @@ class FamilyIndex:
         for pfam_id in PFAM_TEXT_RE.findall(text):
             if pfam_id in self.by_pfam:
                 matches.setdefault(pfam_id, set()).add("record_mentions_pfam_id")
-        for short_name in SHORT_NAME_TEXT_RE.findall(text):
+        compounds, masked = self._short_names(text)
+        for short_name in [*compounds, *SHORT_NAME_TEXT_RE.findall(masked)]:
             for pfam_id in self.by_short_name.get(short_name, ()):
                 matches.setdefault(pfam_id, set()).add("record_mentions_short_name")
         for interpro_id in INTERPRO_TEXT_RE.findall(text):
@@ -148,13 +178,17 @@ class FamilyIndex:
         return matches
 
     def unlisted_short_names(self, text: str) -> set[str]:
-        """Return DUF/UPF names in ``text`` that the worklist does not carry.
+        """Return bare DUF/UPF names in ``text`` that the worklist does not carry.
 
-        These are usually families Pfam has renamed since characterization, so they
-        are kept as historical-name leads instead of being dropped.
+        DUF names are usually families Pfam renamed after characterization. UPF names
+        are UniProt family nomenclature, which the Pfam-derived worklist never carries.
+        Both are kept as leads instead of being dropped.
         """
 
-        return {name for name in SHORT_NAME_TEXT_RE.findall(text) if name not in self.by_short_name}
+        _, masked = self._short_names(text)
+        return {
+            name for name in SHORT_NAME_TEXT_RE.findall(masked) if name not in self.by_short_name
+        }
 
 
 @dataclass(frozen=True)
@@ -241,6 +275,8 @@ class ScanResult:
     mechs: dict[str, dict[str, Any]] = field(default_factory=dict)
     uniprot_requested: int = 0
     uniprot_resolved: int = 0
+    uniprot_unresolved: list[str] = field(default_factory=list)
+    uniprot_lookup: dict[str, Any] = field(default_factory=dict)
 
 
 def iter_mech_records(
@@ -305,6 +341,7 @@ def scan_mechs(
     if pending and uniprot_lookup is not None:
         lookups = uniprot_lookup(sorted(pending))
         result.uniprot_resolved = len(lookups)
+        result.uniprot_unresolved = sorted(set(pending) - set(lookups))
         for accession, contexts in sorted(pending.items()):
             lookup = lookups.get(accession)
             if lookup is None:
@@ -505,7 +542,13 @@ class UniProtPfamClient:
 def uniprot_pfam_rows(
     entry: Mapping[str, Any], requested: Iterable[str]
 ) -> dict[str, UniProtPfamRow]:
-    """Map a UniProtKB entry back to each requested primary or secondary accession."""
+    """Map an active UniProtKB entry back to each requested accession it answers.
+
+    UniProt answers a merged, demerged, or deleted accession with an ``Inactive`` stub
+    rather than the successor entry, so those accessions are not mapped here; the
+    snapshot manifest lists them as unresolved. ``secondaryAccessions`` is still
+    honored when an active entry carries a requested accession there.
+    """
 
     primary = _string(entry.get("primaryAccession"))
     if not primary or "inactive" in _string(entry.get("entryType")).lower():

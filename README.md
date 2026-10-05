@@ -153,8 +153,13 @@ edits never leak in, and records every Mech commit in the manifest. ProteinTrait
 links come from its structured trait identifiers and canonical-example family
 classifications. In the other Mechs, the scan matches Pfam IDs, DUF/UPF short names
 and InterPro IDs in record text, and checks every cited UniProtKB accession for
-worklist Pfam cross-references. DUF/UPF names that no longer match a worklist family,
-usually because Pfam renamed them, are kept as `NOT_IN_WORKLIST` rows.
+worklist Pfam cross-references. Bare DUF names that no longer match a worklist
+family, usually because Pfam renamed them after characterization, and UPF names,
+which are UniProt nomenclature the Pfam-derived worklist never carries, are kept as
+`NOT_IN_WORKLIST` rows. Compound names such as `DUF3458_C` match only their exact
+worklist family. The manifest records how UniProtKB lookups were made (live or from
+a cache, with the cache checksum) and lists every cited accession that did not
+resolve, which includes merged and demerged entries.
 
 Render and verify the committed DUFMech dashboard:
 

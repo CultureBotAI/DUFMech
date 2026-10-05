@@ -85,8 +85,9 @@ def render_cross_mech_report(
     lines += [
         "",
         (f"{len(unlisted)} names do not match a current worklist short name: "
-        f"{', '.join(unlisted) or 'none'}. Pfam has usually renamed these families after "
-        "characterization, so they need a Pfam ID before DUFMech can score them."),
+        f"{', '.join(unlisted) or 'none'}. DUF names here are usually families Pfam renamed "
+        "after characterization; UPF names are UniProt nomenclature, which the Pfam-derived "
+        "worklist never carries. Both need a Pfam ID before DUFMech can score them."),
         "",
         "## ProteinTraitsMech",
         "",
@@ -126,21 +127,28 @@ def _reuse_sections(
     for row in examples:
         examples_by_family[row["pfam_id"]].append(row)
 
+    trait_rows = [row for row in curated if row["source_mech"] == "TraitMech" and row["pfam_id"]]
     trait_families = sorted(
-        {row["pfam_id"] for row in curated if row["source_mech"] == "TraitMech" and row["pfam_id"]}
+        {row["pfam_id"] for row in trait_rows if row["source_section"] == "record_text"}
     )
     lines += [
         "### TraitMech",
         "",
-        ("Families named in TraitMech records, with the ProteinTraitsMech canonical examples "
-        "that could supply a protein example:"),
+        ("Families named in TraitMech records, with proteins that could supply an example: "
+        "UniProtKB accessions already cited by TraitMech, then ProteinTraitsMech canonical "
+        "examples."),
         "",
-        "| Family | ProteinTraitsMech example proteins |",
-        "|---|---|",
+        "| Family | TraitMech proteins | ProteinTraitsMech example proteins |",
+        "|---|---|---|",
     ]
     for pfam_id in trait_families:
+        own = _protein_list(
+            [row for row in trait_rows if row["pfam_id"] == pfam_id and row["uniprot_accession"]],
+            limit=3,
+        )
         proteins = _protein_list(examples_by_family.get(pfam_id, []), limit=3)
-        lines.append(f"| {pfam_id} | {proteins or 'none; needs a DUFMech member example'} |")
+        gap = "none; needs a DUFMech member example" if not own else ""
+        lines.append(f"| {pfam_id} | {own} | {proteins or gap} |")
 
     cited = {(row["pfam_id"], row["uniprot_accession"]) for row in examples}
     missing = sorted(

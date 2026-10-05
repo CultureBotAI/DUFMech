@@ -162,6 +162,28 @@ def test_text_matches_use_identifier_boundaries() -> None:
     assert FAMILIES.unlisted_short_names(text) == {"DUF1998"}
 
 
+def test_compound_short_names_match_only_their_own_family() -> None:
+    families = FamilyIndex.from_rows(
+        [
+            {**worklist_row("PF11940", proteins=1), "short_name": "DUF3458"},
+            {**worklist_row("PF17432", proteins=1), "short_name": "DUF3458_C"},
+            {**worklist_row("PF08331", proteins=1), "short_name": "QueG_DUF1730"},
+        ]
+    )
+    assert families.text_matches("the DUF3458_C domain") == {
+        "PF17432": {"record_mentions_short_name"}
+    }
+    assert families.text_matches("QueG_DUF1730 and DUF3458") == {
+        "PF08331": {"record_mentions_short_name"},
+        "PF11940": {"record_mentions_short_name"},
+    }
+    # An unlisted suffixed name is neither its base family nor an unlisted base name.
+    assert families.text_matches("DUF1285_N") == {}
+    assert families.unlisted_short_names("DUF1285_N DUF3458_C UPF0265") == {"UPF0265"}
+    # Hyphens in prose still name the bare family.
+    assert families.unlisted_short_names("a DUF1814-family toxin; COG5340-DUF1814") == {"DUF1814"}
+
+
 def test_scan_reads_committed_yaml_and_links_proteins(mechs_root: Path) -> None:
     result = scan_mechs(mechs_root, FAMILIES, mechs=MECHS, uniprot_lookup=_lookup)
     rows = {
@@ -221,7 +243,13 @@ def test_uniprot_rows_map_secondary_accessions_and_skip_inactive() -> None:
     assert rows["P76345"].uniprot_accession == "P0A8M6"
     assert rows["P76345"].reviewed is True
     assert rows["P76345"].pfam_ids == ("PF04363",)
-    assert uniprot_pfam_rows({"primaryAccession": "X1", "entryType": "Inactive"}, ["X1"]) == {}
+    # UniProt answers a merged secondary accession with an inactive stub, not the successor.
+    merged = {
+        "primaryAccession": "Q15086",
+        "entryType": "Inactive",
+        "inactiveReason": {"inactiveReasonType": "MERGED", "mergeDemergeTo": ["P04637"]},
+    }
+    assert uniprot_pfam_rows(merged, ["Q15086"]) == {}
     assert load_uniprot_cache(render_uniprot_cache(rows)) == rows
 
 
@@ -292,9 +320,12 @@ def test_dashboard_lists_cross_mech_links(mechs_root: Path, tmp_path: Path) -> N
     )
     payload = json.loads((out / "index.json").read_text(encoding="utf-8"))
     by_pfam = {family["pfam_id"]: family["cross_mech"] for family in payload["families"]}
-    assert by_pfam["PF06226"]["records_by_mech"] == {"ProteinTraitsMech": 2, "TraitMech": 2}
+    assert by_pfam["PF06226"]["records_by_mech"] == {"ProteinTraitsMech": 1, "TraitMech": 2}
     assert by_pfam["PF06226"]["example_proteins"] == 1
     assert payload["summary"]["cross_mech"]["proteins"] == 3
+    # Trait-record-only links are a flag, not a per-Mech count or a headline family.
+    assert payload["summary"]["cross_mech"]["families"] == 2
+    assert by_pfam["PF06226"]["protein_traits_record"] is True
 
     soup = BeautifulSoup((out / "index.html").read_text(encoding="utf-8"), "html.parser")
     curated = soup.select("section")[1]
@@ -333,3 +364,88 @@ def test_report_lists_curated_rows_and_reuse_gaps(mechs_root: Path, tmp_path: Pa
     assert report_main(["--cross-mech-dir", str(out), "--out-dir", str(reports), "--check"]) == 0
     (reports / "cross-mech-duf-examples-2026-10-05.md").write_text("stale", encoding="utf-8")
     assert report_main(["--cross-mech-dir", str(out), "--out-dir", str(reports), "--check"]) == 1
+
+
+
+REPO_WORKLISTS = Path(__file__).resolve().parents[1] / "data" / "worklists"
+
+
+def test_render_from_paths_validates_cross_mech_snapshot(mechs_root: Path, tmp_path: Path) -> None:
+    import shutil
+
+    from dufmech.pages import render_from_paths
+    from dufmech.report import ReportError
+
+    worklists = tmp_path / "worklists"
+    shutil.copytree(REPO_WORKLISTS, worklists)
+    result = scan_mechs(mechs_root, FAMILIES, mechs=MECHS, uniprot_lookup=_lookup)
+    cross = tmp_path / "cross_mech"
+    write_cross_mech_snapshot(
+        result, cross, worklist_snapshot_id="interpro-pfam-duf-1999-01-01",
+        source_ref="HEAD", snapshot_date="2026-10-05",
+    )
+    with pytest.raises(ReportError, match="regenerate the cross-Mech snapshot"):
+        render_from_paths(out_dir=tmp_path / "pages", worklists_dir=worklists, cross_mech_dir=cross)
+
+    write_cross_mech_snapshot(
+        result, cross, worklist_snapshot_id="interpro-pfam-duf-2026-10-01",
+        source_ref="HEAD", snapshot_date="2026-10-05",
+    )
+    render_from_paths(out_dir=tmp_path / "pages", worklists_dir=worklists, cross_mech_dir=cross)
+    payload = json.loads((tmp_path / "pages" / "index.json").read_text(encoding="utf-8"))
+    assert payload["inputs"]["cross_mech"] == "cross-mech-duf-examples-2026-10-05"
+
+
+def test_dashboard_rejects_cross_mech_family_absent_from_worklist(tmp_path: Path) -> None:
+    from dufmech.report import ReportError
+
+    row = {
+        "pfam_id": "PF99999", "short_name": "DUF9", "source_mech": "TraitMech",
+        "source_section": "record_text", "uniprot_accession": "",
+    }
+    with pytest.raises(ReportError, match="absent from worklist: PF99999"):
+        render_site(
+            [worklist_row("PF00001", proteins=1)], [], input_ids={}, out_dir=tmp_path / "p",
+            cross_mech_rows=[row],
+        )
+
+
+def test_cli_records_uniprot_cache_provenance(
+    mechs_root: Path, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    import shutil
+
+    from dufmech import cross_mech_snapshot_cli as cli
+
+    calls: list[list[str]] = []
+
+    class FakeClient:
+        def __call__(self, accessions):
+            calls.append(list(accessions))
+            return {key: value for key, value in _lookup(["P22041", "Q99999"]).items()
+                    if key in accessions}
+
+    monkeypatch.setattr(cli, "UniProtPfamClient", FakeClient)
+    worklists = tmp_path / "worklists"
+    shutil.copytree(REPO_WORKLISTS, worklists)
+    cache = tmp_path / "raw" / "uniprot.json"
+    args = [
+        "--mechs-root", str(mechs_root), "--worklists-dir", str(worklists),
+        "--mech", "TraitMech", "--uniprot-cache", str(cache), "--snapshot-date", "2026-10-05",
+    ]
+    out = tmp_path / "cross_mech"
+    manifest_path = out / "cross-mech-duf-examples-2026-10-05.manifest.json"
+
+    assert cli.main([*args, "--out-dir", str(out)]) == 0
+    first = json.loads(manifest_path.read_text(encoding="utf-8"))["source"]
+    assert calls == [["P22041", "Q99999"]]
+    assert first["uniprotkb_lookup"]["mode"] == "cache"
+    assert first["uniprotkb_lookup"]["fetched_accessions"] == 2
+    assert first["uniprotkb_accessions_unresolved"] == []
+
+    assert cli.main([*args, "--out-dir", str(out)]) == 0
+    second = json.loads(manifest_path.read_text(encoding="utf-8"))["source"]["uniprotkb_lookup"]
+    assert len(calls) == 1
+    assert second["cache_hits"] == 2
+    assert "fetched_at" not in second
+    assert second["cache_sha256"] == first["uniprotkb_lookup"]["cache_sha256"]

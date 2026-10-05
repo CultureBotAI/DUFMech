@@ -352,7 +352,7 @@ def _index_html(
       {_metric("Families with AlphaFold models", metrics["with_alphafold_models"])}
       {_metric("Per-family protein total", metrics["interpro_proteins"])}
       {_metric("Per-family match total", metrics["interpro_matches"])}
-      {_metric("Families linked from other Mechs", cross["families"])}
+      {_metric("Families with examples or mentions in other Mechs", cross["families"])}
       {_metric("DUF example proteins in other Mechs", cross["proteins"])}
     </section>
     <p class="lede">Per-family totals are sums of reported InterPro counters,
@@ -365,8 +365,8 @@ def _index_html(
       <p class="lede">Records outside ProteinTraitsMech that name a DUF/PUF family or
         cite a protein whose UniProtKB entry carries one. ProteinTraitsMech trait and
         canonical-example links are counted per family below.
-        Names marked "not in worklist" are DUF/UPF names that no longer match a current
-        Pfam short name.</p>
+        Names marked "not in worklist" are DUF names that no longer match a current Pfam
+        short name, or UniProt UPF names, which the Pfam worklist never carries.</p>
       <div class="table-wrap">
         <table>
           <thead>
@@ -459,7 +459,12 @@ def _attach_cross_mech(
         pfam_id = row.get("pfam_id") or ""
         if not pfam_id:
             continue
-        entry = by_pfam.setdefault(pfam_id, {"mechs": {}, "proteins": set()})
+        entry = by_pfam.setdefault(pfam_id, {"mechs": {}, "proteins": set(), "trait": False})
+        # Every worklist family has a ProteinTraitsMech trait record; report it as a flag
+        # so it does not swamp the per-Mech counts and the headline metric.
+        if row["source_section"] == "trait_identifier":
+            entry["trait"] = True
+            continue
         entry["mechs"][row["source_mech"]] = entry["mechs"].get(row["source_mech"], 0) + 1
         if row.get("uniprot_accession"):
             entry["proteins"].add(row["uniprot_accession"])
@@ -468,14 +473,15 @@ def _attach_cross_mech(
     if extra:
         raise ReportError(f"cross-Mech families absent from worklist: {', '.join(sorted(extra))}")
     for family in families:
-        entry = by_pfam.get(family["pfam_id"], {"mechs": {}, "proteins": set()})
+        entry = by_pfam.get(family["pfam_id"], {"mechs": {}, "proteins": set(), "trait": False})
         family["cross_mech"] = {
             "records_by_mech": dict(sorted(entry["mechs"].items())),
             "example_proteins": len(entry["proteins"]),
+            "protein_traits_record": entry["trait"],
         }
     return {
         "rows": len(rows),
-        "families": len(by_pfam),
+        "families": sum(1 for entry in by_pfam.values() if entry["mechs"]),
         "proteins": len({row["uniprot_accession"] for row in rows if row.get("uniprot_accession")}),
     }
 

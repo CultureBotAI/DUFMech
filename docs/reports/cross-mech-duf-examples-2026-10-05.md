@@ -10,17 +10,17 @@ Link bases: `record_mentions_*` means the record text names the family; `uniprot
 
 | Mech | Commit | Records scanned | Rows | Families | Proteins |
 |---|---|---:|---:|---:|---:|
-| AntibioticMech | `f1604be2ab` | 2,939 | 2 | 2 | 2 |
-| CellStructureMech | `6f9c21f864` | 889 | 8 | 4 | 1 |
-| CommunityMech | `dc1f4346d9` | 456 | 0 | 0 | 0 |
+| AntibioticMech | `2c4fe6b21c` | 2,939 | 2 | 2 | 2 |
+| CellStructureMech | `55c4e773da` | 892 | 8 | 4 | 1 |
+| CommunityMech | `6bf636bf3a` | 456 | 0 | 0 | 0 |
 | CultureMech | `70a34fef70` | 15,910 | 0 | 0 | 0 |
-| HabitatMech | `d9ce354822` | 3,206 | 0 | 0 | 0 |
+| HabitatMech | `6a0499084e` | 3,206 | 0 | 0 | 0 |
 | MediaIngredientMech | `6643131b0f` | 2,953 | 0 | 0 | 0 |
 | NaturalProductMech | `aa0e38c4ac` | 3,115 | 5 | 2 | 3 |
 | PathwayMech | `d8ec2b69f7` | 152 | 1 | 1 | 1 |
-| ProteinTraitsMech | `316a8005e6` | 429,293 | 16,243 | 6,532 | 3,529 |
+| ProteinTraitsMech | `71499ae52a` | 429,293 | 16,243 | 6,532 | 3,529 |
 | TaxonMech | `700c6732ce` | 625,960 | 10 | 4 | 0 |
-| TraitMech | `9dea24521a` | 1,009 | 29 | 26 | 2 |
+| TraitMech | `84c3430f1f` | 1,011 | 29 | 26 | 2 |
 
 ## DUF examples curated outside ProteinTraitsMech
 
@@ -84,7 +84,7 @@ These records are now carried in DUFMech's cross-Mech snapshot and dashboard.
 | DUF6988 (PF22491) | KNOWN_HISTORICAL_DUF | TraitMech | DS-15 system |  | record_mentions_short_name |
 | DUF8724 (PF30764) | UNKNOWN_CANDIDATE | TraitMech | DISARM system | P0DW06 DISARM protein DrmB | uniprot_pfam_xref |
 
-12 names do not match a current worklist short name: DUF1814, DUF1998, DUF262, DUF4201, DUF4263, DUF4297, DUF4338, DUF4393, UPF0014, UPF0018, UPF0037, UPF0265. Pfam has usually renamed these families after characterization, so they need a Pfam ID before DUFMech can score them.
+12 names do not match a current worklist short name: DUF1814, DUF1998, DUF262, DUF4201, DUF4263, DUF4297, DUF4338, DUF4393, UPF0014, UPF0018, UPF0037, UPF0265. DUF names here are usually families Pfam renamed after characterization; UPF names are UniProt nomenclature, which the Pfam-derived worklist never carries. Both need a Pfam ID before DUFMech can score them.
 
 ## ProteinTraitsMech
 
@@ -105,28 +105,26 @@ These records are now carried in DUFMech's cross-Mech snapshot and dashboard.
 
 ### TraitMech
 
-Families named in TraitMech records, with the ProteinTraitsMech canonical examples that could supply a protein example:
+Families named in TraitMech records, with proteins that could supply an example: UniProtKB accessions already cited by TraitMech, then ProteinTraitsMech canonical examples.
 
-| Family | ProteinTraitsMech example proteins |
-|---|---|
-| PF03990 | H8EZH5, P37546, P9WG29, +1 more |
-| PF08862 | none; needs a DUFMech member example |
-| PF10053 | none; needs a DUFMech member example |
-| PF10088 | Q45598 |
-| PF11185 | none; needs a DUFMech member example |
-| PF11236 | none; needs a DUFMech member example |
-| PF11445 | none; needs a DUFMech member example |
-| PF11523 | Q5D869, Q8L557, Q9C642, +1 more |
-| PF11828 | none; needs a DUFMech member example |
-| PF12476 | none; needs a DUFMech member example |
-| PF13643 | none; needs a DUFMech member example |
-| PF14022 | none; needs a DUFMech member example |
-| PF18928 | none; needs a DUFMech member example |
-| PF19148 | none; needs a DUFMech member example |
-| PF20385 | none; needs a DUFMech member example |
-| PF20505 | none; needs a DUFMech member example |
-| PF22491 | none; needs a DUFMech member example |
-| PF30764 | none; needs a DUFMech member example |
+| Family | TraitMech proteins | ProteinTraitsMech example proteins |
+|---|---|---|
+| PF08862 |  | none; needs a DUFMech member example |
+| PF10053 |  | none; needs a DUFMech member example |
+| PF10088 |  | Q45598 |
+| PF11185 |  | none; needs a DUFMech member example |
+| PF11236 |  | none; needs a DUFMech member example |
+| PF11445 |  | none; needs a DUFMech member example |
+| PF11523 |  | Q5D869, Q8L557, Q9C642, +1 more |
+| PF11828 |  | none; needs a DUFMech member example |
+| PF12476 |  | none; needs a DUFMech member example |
+| PF13643 |  | none; needs a DUFMech member example |
+| PF14022 |  | none; needs a DUFMech member example |
+| PF18928 |  | none; needs a DUFMech member example |
+| PF19148 |  | none; needs a DUFMech member example |
+| PF20385 |  | none; needs a DUFMech member example |
+| PF20505 |  | none; needs a DUFMech member example |
+| PF22491 |  | none; needs a DUFMech member example |
 
 ### ProteinTraitsMech
 

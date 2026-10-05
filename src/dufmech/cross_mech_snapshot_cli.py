@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 from dufmech.cross_mech import (
@@ -58,10 +60,12 @@ def main(argv: list[str] | None = None) -> int:
         )
         families = FamilyIndex.from_rows(worklist_rows)
         mechs = [mech for mech in DEFAULT_MECH_SOURCES if not args.mech or mech.name in args.mech]
-        lookup = None if args.no_uniprot else _lookup(args.uniprot_cache)
+        lookup_info: dict[str, object] = {"mode": "none" if args.no_uniprot else "live"}
+        lookup = None if args.no_uniprot else _lookup(args.uniprot_cache, lookup_info)
         result = scan_mechs(
             args.mechs_root, families, mechs=mechs, ref=args.ref, uniprot_lookup=lookup
         )
+        result.uniprot_lookup = lookup_info
         manifest = write_cross_mech_snapshot(
             result,
             args.out_dir,
@@ -81,22 +85,36 @@ def main(argv: list[str] | None = None) -> int:
     return 0
 
 
-def _lookup(cache: Path | None):
+def _lookup(cache: Path | None, info: dict[str, object]):
+    """Return a UniProtKB lookup that records how it was answered in ``info``."""
+
     client = UniProtPfamClient()
+
+    def live(accessions):
+        info["fetched_at"] = _now()
+        info["fetched_accessions"] = len(accessions)
+        return client(accessions)
+
     if cache is None:
-        return client
+        return live
 
     def cached(accessions):
         # Unresolved accessions are refetched; only resolved lookups are cached.
         rows = load_uniprot_cache(cache.read_text(encoding="utf-8")) if cache.is_file() else {}
         missing = [accession for accession in accessions if accession not in rows]
+        info.update({"mode": "cache", "cache_path": cache.name, "cache_hits": len(accessions) - len(missing)})
         if missing:
-            rows.update(client(missing))
+            rows.update(live(missing))
             cache.parent.mkdir(parents=True, exist_ok=True)
             cache.write_text(render_uniprot_cache(rows) + "\n", encoding="utf-8")
+        info["cache_sha256"] = hashlib.sha256(cache.read_bytes()).hexdigest()
         return {accession: rows[accession] for accession in accessions if accession in rows}
 
     return cached
+
+
+def _now() -> str:
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
 if __name__ == "__main__":

@@ -65,6 +65,8 @@ def write_cross_mech_snapshot(
             "uniprotkb_url": UNIPROTKB_SEARCH_URL,
             "uniprotkb_accessions_requested": result.uniprot_requested,
             "uniprotkb_accessions_resolved": result.uniprot_resolved,
+            "uniprotkb_accessions_unresolved": result.uniprot_unresolved,
+            "uniprotkb_lookup": result.uniprot_lookup,
         },
         "schema": {"tsv_fieldnames": CROSS_MECH_TSV_FIELDNAMES},
         "rows": {
