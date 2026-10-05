@@ -176,14 +176,14 @@ just qc
 
 6,492 carry InterPro IDs, 820 have InterPro structure counters, and 6,478 have AlphaFold DB model counters.
 
-Latest inputs: `worklist=interpro-pfam-duf-2026-10-01`.
+Latest inputs: `worklist=interpro-pfam-duf-2026-10-05`.
 
 **Unknown-function seed status**
 
 | Value | Families |
 |---|---:|
-| `KNOWN_HISTORICAL_DUF` | 1,999 |
-| `UNKNOWN_CANDIDATE` | 4,533 |
+| `KNOWN_HISTORICAL_DUF` | 378 |
+| `UNKNOWN_CANDIDATE` | 6,154 |
 
 **Characterization status**
 
@@ -195,10 +195,10 @@ Latest inputs: `worklist=interpro-pfam-duf-2026-10-01`.
 
 | Value | Families |
 |---|---:|
-| `description_says_unknown_function` | 768 |
+| `description_says_unknown_function` | 1,359 |
 | `domain_of_unknown_function` | 2,832 |
 | `name_matches_duf` | 155 |
-| `name_says_unknown_function` | 4,320 |
+| `name_says_unknown_function` | 6,115 |
 | `short_name_matches_duf` | 6,371 |
 <!-- END GENERATED CORPUS STATS -->
 
