@@ -11,7 +11,8 @@ from dufmech.provenance import check_manifest, sha256
 from dufmech.reclassify import main, reclassify_snapshot
 from dufmech.report import ReportError
 from dufmech.scoring import score_families
-from dufmech.snapshot import write_worklist_snapshot
+from dufmech.snapshot import write_snapshot_artifacts, write_worklist_snapshot
+from dufmech.snapshot_cli import main as freeze_main
 from dufmech.worklist import (
     CLASSIFIER_POLICY,
     KNOWN_HISTORICAL_DUF,
@@ -78,7 +79,7 @@ def test_correction_requires_a_newer_date(parent, tmp_path, day) -> None:
 def test_correction_refuses_existing_or_symlink_outputs(parent, tmp_path, suffix) -> None:
     target = tmp_path / f"interpro-pfam-duf-2026-10-05.{suffix}"
     target.symlink_to(tmp_path / "nonexistent")
-    with pytest.raises(ReportError, match="already exists"):
+    with pytest.raises(FileExistsError, match="already exists"):
         reclassify_snapshot(parent, tmp_path, snapshot_date="2026-10-05")
     assert target.is_symlink()
     assert not (tmp_path / "nonexistent").exists()
@@ -90,6 +91,76 @@ def test_correction_rejects_corrupted_parent_before_writing(parent, tmp_path) ->
     with pytest.raises(ReportError, match="differs"):
         reclassify_snapshot(parent, out, snapshot_date="2026-10-05")
     assert not out.exists()
+
+
+def test_unencodable_metadata_cannot_leave_partial_correction_outputs(parent, tmp_path) -> None:
+    payload = json.loads(parent.read_text())
+    payload[0]["name"] = "unknown function \ud800"
+    parent.write_text(json.dumps(payload), encoding="utf-8")
+    manifest_path = parent.with_suffix(".manifest.json")
+    manifest = json.loads(manifest_path.read_text())
+    manifest["files"]["json"].update(sha256=sha256(parent), bytes=parent.stat().st_size)
+    manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+    out = tmp_path / "out"
+    with pytest.raises(UnicodeError):
+        reclassify_snapshot(parent, out, snapshot_date="2026-10-05")
+    assert not out.exists() or list(out.iterdir()) == []
+
+
+def test_standard_freezer_cannot_overwrite_a_published_worklist(parent, tmp_path) -> None:
+    before = {path.name: path.read_bytes() for path in tmp_path.iterdir()}
+    row = row_from_interpro_entry(interpro_result())
+    with pytest.raises(FileExistsError):
+        write_worklist_snapshot([row], tmp_path, snapshot_date="2026-10-01")
+    assert before == {path.name: path.read_bytes() for path in tmp_path.iterdir()}
+
+
+def test_standard_freezer_rejects_unencodable_metadata_before_writing(tmp_path) -> None:
+    row = row_from_interpro_entry(interpro_result())
+    with pytest.raises(UnicodeError):
+        write_worklist_snapshot([replace(row, name="\ud800")], tmp_path, snapshot_date="2026-10-05")
+    assert list(tmp_path.iterdir()) == []
+
+
+@pytest.mark.parametrize("suffix", ["json", "tsv", "manifest.json"])
+def test_standard_freezer_does_not_follow_output_symlinks(tmp_path, suffix) -> None:
+    target = tmp_path / f"interpro-pfam-duf-2026-10-05.{suffix}"
+    target.symlink_to(tmp_path / "absent")
+    with pytest.raises(FileExistsError):
+        write_worklist_snapshot([], tmp_path, snapshot_date="2026-10-05")
+    assert target.is_symlink()
+    assert not (tmp_path / "absent").exists()
+    assert list(tmp_path.iterdir()) == [target]
+
+
+def test_artifact_writer_rolls_back_only_new_files_after_io_failure(tmp_path, monkeypatch) -> None:
+    sentinel = tmp_path / "unrelated"
+    sentinel.write_bytes(b"preserve")
+    open_path = Path.open
+
+    def failing_open(path, *args, **kwargs):
+        if path.name == "second.tsv":
+            raise OSError("simulated disk failure")
+        return open_path(path, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "open", failing_open)
+    with pytest.raises(OSError, match="simulated disk failure"):
+        write_snapshot_artifacts(tmp_path, {"first.json": "[]", "second.tsv": "header"})
+    assert list(tmp_path.iterdir()) == [sentinel]
+    assert sentinel.read_bytes() == b"preserve"
+
+
+def test_freeze_cli_reports_existing_snapshot_without_modifying_it(parent, tmp_path, capsys) -> None:
+    saved = tmp_path / "input.json"
+    saved.write_text(json.dumps([interpro_result()]), encoding="utf-8")
+    before = {path.name: path.read_bytes() for path in tmp_path.iterdir()}
+    with pytest.raises(SystemExit) as exc:
+        freeze_main([
+            "--input-json", str(saved), "--snapshot-date", "2026-10-01", "--out-dir", str(tmp_path)
+        ])
+    assert exc.value.code == 1
+    assert "already exists" in capsys.readouterr().err
+    assert before == {path.name: path.read_bytes() for path in tmp_path.iterdir()}
 
 
 def test_reclassify_rows_preserves_metadata_and_retains_false_positive_rows() -> None:

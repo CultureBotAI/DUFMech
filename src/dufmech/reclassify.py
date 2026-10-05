@@ -13,7 +13,7 @@ from typing import Any
 
 from dufmech.provenance import check_manifest
 from dufmech.report import ReportError, family_index
-from dufmech.snapshot import WORKLIST_STEM, build_worklist_manifest
+from dufmech.snapshot import WORKLIST_STEM, build_worklist_manifest, write_snapshot_artifacts
 from dufmech.worklist import (
     CLASSIFIER_POLICY,
     DufFamilyRow,
@@ -115,20 +115,7 @@ def reclassify_snapshot(
         "fetched_live": False,
     }
     texts[f"{snapshot_id}.manifest.json"] = json.dumps(manifest, indent=2, sort_keys=True) + "\n"
-    paths = [out_dir / name for name in texts]
-    if any(path.exists() or path.is_symlink() for path in paths):
-        raise ReportError(f"snapshot {snapshot_id} already exists; choose a new date or output directory")
-    out_dir.mkdir(parents=True, exist_ok=True)
-    written: list[Path] = []
-    try:
-        for path in paths:
-            with path.open("x", encoding="utf-8", newline="") as handle:
-                written.append(path)
-                handle.write(texts[path.name])
-    except OSError:
-        for path in written:
-            path.unlink()
-        raise
+    write_snapshot_artifacts(out_dir, texts)
     return manifest
 
 

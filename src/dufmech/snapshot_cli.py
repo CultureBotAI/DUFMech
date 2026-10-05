@@ -73,14 +73,17 @@ def main(argv: list[str] | None = None) -> int:
         entries,
         include_false_positives=args.include_false_positives,
     )
-    manifest = write_worklist_snapshot(
-        rows,
-        args.out_dir,
-        snapshot_date=args.snapshot_date,
-        search=args.search,
-        page_size=args.page_size,
-        include_false_positives=args.include_false_positives,
-    )
+    try:
+        manifest = write_worklist_snapshot(
+            rows,
+            args.out_dir,
+            snapshot_date=args.snapshot_date,
+            search=args.search,
+            page_size=args.page_size,
+            include_false_positives=args.include_false_positives,
+        )
+    except (OSError, ValueError) as exc:
+        parser.exit(1, f"worklist freeze failed: {exc}\n")
     print(
         f"wrote {manifest['snapshot']['id']} "
         f"({manifest['rows']['total']} rows) to {args.out_dir}"

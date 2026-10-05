@@ -5,7 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 from collections import Counter
-from collections.abc import Iterable
+from collections.abc import Iterable, Mapping
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -40,8 +40,6 @@ def write_worklist_snapshot(
         snapshot_date = generated_at.astimezone(timezone.utc).date()
     snapshot_date = _snapshot_date_text(snapshot_date)
 
-    out_dir.mkdir(parents=True, exist_ok=True)
-
     snapshot_id = f"{WORKLIST_STEM}-{snapshot_date}"
     json_path = out_dir / f"{snapshot_id}.json"
     tsv_path = out_dir / f"{snapshot_id}.tsv"
@@ -49,9 +47,6 @@ def write_worklist_snapshot(
 
     json_text = render_json(rows) + "\n"
     tsv_text = render_tsv(rows) + "\n"
-
-    json_path.write_text(json_text, encoding="utf-8")
-    tsv_path.write_text(tsv_text, encoding="utf-8")
 
     manifest = build_worklist_manifest(
         rows,
@@ -66,11 +61,40 @@ def write_worklist_snapshot(
         page_size=page_size,
         include_false_positives=include_false_positives,
     )
-    manifest_path.write_text(
-        json.dumps(manifest, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
+    write_snapshot_artifacts(
+        out_dir,
+        {
+            json_path.name: json_text,
+            tsv_path.name: tsv_text,
+            manifest_path.name: json.dumps(manifest, indent=2, sort_keys=True) + "\n",
+        },
     )
     return manifest
+
+
+def write_snapshot_artifacts(out_dir: Path, artifacts: Mapping[str, str]) -> None:
+    """Write a complete new worklist artifact set, never overwriting existing files."""
+
+    if any(not name or Path(name).name != name or name in {".", ".."} for name in artifacts):
+        raise ValueError("snapshot artifact names must be filenames")
+    encoded = {name: text.encode("utf-8") for name, text in artifacts.items()}
+    for name in encoded:
+        target = out_dir / name
+        if target.exists() or target.is_symlink():
+            raise FileExistsError(f"snapshot artifact already exists: {target}")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    written: list[Path] = []
+    try:
+        for name, data in encoded.items():
+            target = out_dir / name
+            # Exclusive creation also protects against a target appearing after preflight.
+            with target.open("xb") as handle:
+                written.append(target)
+                handle.write(data)
+    except OSError:
+        for target in written:
+            target.unlink()
+        raise
 
 
 def build_worklist_manifest(
