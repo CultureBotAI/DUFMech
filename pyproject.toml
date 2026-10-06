@@ -63,6 +63,7 @@ duf-puf-freeze-uniparc = "dufmech.uniparc_snapshot_cli:main"
 duf-puf-members = "dufmech.member_cli:main"
 duf-puf-score = "dufmech.scoring_cli:main"
 duf-puf-worklist = "dufmech.cli:main"
+duf-puf-reclassify = "dufmech.reclassify:main"
 
 [build-system]
 requires = ["hatchling"]

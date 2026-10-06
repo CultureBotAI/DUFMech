@@ -14,7 +14,7 @@ import io
 import json
 import re
 from collections.abc import Iterable, Mapping
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, replace
 from typing import Any
 
 import httpx
@@ -25,11 +25,10 @@ EXTRA_FIELDS = "entry_id,short_name,description,counters"
 
 PFAM_RE = re.compile(r"^PF\d{5}$")
 DUF_SHORT_NAME_RE = re.compile(r"\bDUF\d+\b", re.IGNORECASE)
-# A family name explicitly saying unknown function is a candidate regardless of
-# whether Pfam calls it a family, repeat, region, domain or protein (#83).
-UNKNOWN_NAME_RE = re.compile(r"\bunknown[\s-]+function\b", re.IGNORECASE)
+CLASSIFIER_POLICY = "unknown-function-metadata-v2"
+UNKNOWN_FUNCTION_NAME_RE = re.compile(r"\bunknown[\s-]+function\b", re.IGNORECASE)
 UNKNOWN_FUNCTION_RE = re.compile(
-    r"\b(?:domains?|proteins?|family|families)\s+of\s+unknown[\s-]+function\b|"
+    r"\b(?:domains?|proteins?|famil(?:y|ies))\s+of\s+unknown[\s-]+function\b|"
     r"\bfunction\s+of\s+(?:this|the)\s+(?:domain|protein|family)\s+is\s+unknown\b|"
     r"\bfunction\s+is\s+unknown\b",
     re.IGNORECASE,
@@ -232,6 +231,16 @@ def load_interpro_fixture(payload: object) -> list[Mapping[str, Any]]:
     raise ValueError("expected an InterPro page object, page list, or result list")
 
 
+def reclassify_worklist(rows: Iterable[DufFamilyRow]) -> list[DufFamilyRow]:
+    """Recompute only seed classifications, retaining every family and its metadata."""
+
+    result = []
+    for row in rows:
+        reasons = _candidate_reasons(row.short_name, row.name, row.description)
+        result.append(replace(row, candidate_reasons=reasons, unknown_status=_unknown_status(reasons)))
+    return sorted(result, key=_sort_key)
+
+
 def render_tsv(rows: Iterable[DufFamilyRow]) -> str:
     """Render rows as deterministic TSV."""
 
@@ -263,13 +272,16 @@ def _candidate_reasons(
     name: str,
     description: str,
 ) -> tuple[str, ...]:
+    # Names directly label the family; descriptions can mention unrelated unknown proteins.
+    name = _description_text(name)
+    description = _description_text(description)
     haystack = f"{short_name}\n{name}\n{description}"
     reasons: list[str] = []
     if DUF_SHORT_NAME_RE.search(short_name):
         reasons.append("short_name_matches_duf")
     if DUF_SHORT_NAME_RE.search(name) and "short_name_matches_duf" not in reasons:
         reasons.append("name_matches_duf")
-    if UNKNOWN_NAME_RE.search(name) or UNKNOWN_FUNCTION_RE.search(name):
+    if UNKNOWN_FUNCTION_NAME_RE.search(name) or UNKNOWN_FUNCTION_RE.search(name):
         reasons.append("name_says_unknown_function")
     if UNKNOWN_FUNCTION_RE.search(description):
         reasons.append("description_says_unknown_function")

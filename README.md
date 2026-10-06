@@ -25,11 +25,31 @@ The worklist can also read saved InterPro JSON for offline fixture runs:
 just duf-puf-worklist --input-json interpro-page.json --format json
 ```
 
-Freeze the canonical InterPro/Pfam seed worklist with a matching manifest:
+Freeze a new InterPro/Pfam seed worklist with a matching manifest (today's UTC date):
 
 ```bash
-just freeze-duf-puf-worklist --snapshot-date 2026-10-01
+just freeze-duf-puf-worklist
 ```
+
+The original seed worklist was frozen on 2026-10-01. The current seed worklist
+is a versioned classification correction of that metadata, not a newer
+InterPro fetch. It retains all 6,532 families
+and source counters; 1,621 historical seed labels were corrected to unknown
+candidates. See the [correction audit](docs/provenance/seed-classification-correction-2026-10-05.md)
+for the classification policy, parent hashes, and limitations.
+
+Reclassify verified frozen metadata into a new snapshot without contacting InterPro:
+
+```bash
+just reclassify-duf-puf-worklist \
+  --input-json data/worklists/interpro-pfam-duf-2026-10-01.json \
+  --snapshot-date 2026-10-05 --out-dir /tmp/dufmech-classification-check
+```
+
+Both worklist freezing and reclassification refuse existing output artifacts;
+choose a new date or output directory instead of rewriting a published snapshot.
+Seed labels reflect frozen
+wording, not experimental validation. Scoring remains a separate step.
 
 Expand frozen Pfam rows to UniProtKB protein members through InterPro:
 

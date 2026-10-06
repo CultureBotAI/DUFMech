@@ -447,15 +447,24 @@ def _index_html(
         <dt>Seed status</dt><dd>A name-based classification of the frozen InterPro/Pfam metadata.
           UNKNOWN CANDIDATE means the name or description explicitly says the function is unknown.
           KNOWN HISTORICAL DUF means a DUF name matched without that unknown-function wording;
-          it does not establish experimental characterization. FALSE POSITIVE TEXT HIT means
+          this heuristic is not proof of a known function and does not establish experimental
+          characterization. FALSE POSITIVE TEXT HIT means
           the metadata did not meet the DUF or unknown-function naming rules.</dd>
         <dt>Characterization</dt><dd>A separate evidence-scoring result, when a matching score
           snapshot is available. UNSCORED means no score has been calculated for this family;
-          it is not evidence that the family lacks a known function. PARTIALLY CHARACTERIZED
-          records have partial support; the score snapshot records its classification evidence.</dd>
-        <dt>Evidence counts</dt><dd>Counts of supporting evidence rows classified as known,
-          partial or context-only in the score snapshot. They are not protein counts or
-          necessarily independent experiments. Not scored means those counts are unavailable.</dd>
+          it is not evidence that the family lacks a known function.
+          Missing scores are not negative evidence. A scored UNKNOWN CANDIDATE has no counted
+          known or partial signal; context may still be present. PARTIALLY CHARACTERIZED has
+          partial support without a known signal or inherited historical seed label.
+          KNOWN HISTORICAL DUF can inherit the seed label or reflect a known-function signal;
+          neither implies experimental validation by itself.</dd>
+        <dt>Evidence counts</dt><dd>Counts of source-specific signals, not unique proteins,
+          publications, or confidence scores. Known counts Rhea reactions and experimentally
+          supported GO molecular-function annotations. Partial counts specific domain/family
+          assignments and other functional annotations. Context counts structural, environmental,
+          orthology, interaction, and neighborhood signals; context alone does not assign function.
+          Repeated annotations are not necessarily independent experiments.
+          Not scored means those counts are unavailable.</dd>
         <dt>Missing counts</dt><dd>Not available means the source did not supply that counter.
           A displayed zero is a reported count, not a missing value.</dd>
       </dl>
