@@ -34,6 +34,16 @@ def render_cross_mech_report(
     trait_families = {row["pfam_id"] for row in ptm if row["source_section"] == "trait_identifier"}
     self_examples = {row["pfam_id"] for row in examples if row["family_mentioned_in_record"]}
     functional = [row for row in examples if row["source_category"].startswith("function/")]
+    derivation = snapshot.get("derivation")
+    derivation_note = []
+    if derivation:
+        derivation_note = [
+            (f"Derived offline from `{derivation['source_snapshot_id']}`: "
+             f"{derivation['rows_with_changed_seed_status']:,} rows received corrected seed labels. "
+             "Source records, proteins, source commits, and UniProt lookup dates are unchanged; "
+             "no new Mech scan or UniProt retrieval was performed."),
+            "",
+        ]
 
     lines = [
         f"# DUF/PUF examples across Mechs ({snapshot['date']})",
@@ -50,6 +60,7 @@ def render_cross_mech_report(
         "`trait_identifier` come from ProteinTraitsMech's structured fields. A text "
         "mention says the family is discussed, not that a specific protein was curated."),
         "",
+        *derivation_note,
         "## Coverage by Mech",
         "",
         "| Mech | Commit | Records scanned | Rows | Families | Proteins |",
@@ -263,13 +274,14 @@ def _cell(value: str) -> str:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cross-mech-dir", type=Path, default=CROSS_MECH_DIR)
+    parser.add_argument("--cross-mech-json", type=Path, help="select a historical cross-Mech snapshot")
     parser.add_argument("--worklists-dir", type=Path, default=Path("data/worklists"))
     parser.add_argument("--worklist-json", type=Path, help="select a worklist for a historical report")
     parser.add_argument("--out-dir", type=Path, default=REPORTS_DIR)
     parser.add_argument("--check", action="store_true", help="fail if the report is stale")
     args = parser.parse_args(argv)
     try:
-        path = latest_snapshot_path(args.cross_mech_dir, CROSS_MECH_STEM)
+        path = args.cross_mech_json or latest_snapshot_path(args.cross_mech_dir, CROSS_MECH_STEM)
         assert path is not None
         worklist_rows, _, input_ids = load_latest_rows(
             args.worklists_dir, worklist_json=args.worklist_json

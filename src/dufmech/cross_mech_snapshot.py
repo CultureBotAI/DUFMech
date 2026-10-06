@@ -63,6 +63,7 @@ def write_cross_mech_snapshot(
     source_ref: str,
     snapshot_date: str | date | None = None,
     generated_at: datetime | None = None,
+    derivation: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Write new date-stamped artifacts, refusing to replace any existing evidence."""
 
@@ -117,6 +118,8 @@ def write_cross_mech_snapshot(
             "tsv": _file_manifest(f"{snapshot_id}.tsv", tsv_text),
         },
     }
+    if derivation is not None:
+        manifest["snapshot"]["derivation"] = dict(derivation)
     # Encode the complete set before opening anything. Exclusive creation also
     # protects against a destination appearing after the existence check.
     artifacts = {

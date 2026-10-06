@@ -133,7 +133,9 @@ def test_dashboard_does_not_link_unsafe_sources(tmp_path, url) -> None:
         input_ids={}, out_dir=out,
     )
     soup = BeautifulSoup((out / "index.html").read_text(encoding="utf-8"), "html.parser")
-    assert soup.select("tbody a") == []
+    assert [a["href"] for a in soup.select("tbody a")] == [
+        "https://www.ebi.ac.uk/interpro/entry/pfam/PF00001/", "#PF00001"
+    ]
     assert "PF00001" in soup.get_text()
 
 
@@ -151,3 +153,22 @@ def test_dashboard_distinguishes_missing_counts_seed_status_and_unscored(tmp_pat
     assert soup.select_one("tbody a")["href"].startswith("https://")
     assert "not unique proteins or matches" in soup.get_text()
     assert "Families with structures" in soup.get_text()
+
+
+def test_family_discovery_navigation_and_provenance(tmp_path) -> None:
+    out = tmp_path / "pages"
+    render_site([worklist_row("PF18701", proteins=10), worklist_row("PF04149", proteins=20)], [],
+                input_ids={"worklist": "frozen-input"}, out_dir=out)
+    soup = BeautifulSoup((out / "index.html").read_text(), "html.parser")
+    assert {row["id"] for row in soup.select("tbody tr")} == {"PF18701", "PF04149"}
+    assert soup.select_one('a[download][href="index.json"]')
+    assert soup.select_one('nav a[href="https://culturebotai.github.io/mechs/"]')
+    assert soup.select_one('nav a[href="https://github.com/CultureBotAI/DUFMech"]')
+    assert "CC BY 4.0" in soup.footer.get_text() and "BSD 3-Clause" in soup.footer.get_text()
+    assert soup.select_one('link[rel="icon"]')["href"] == "data:,"
+    assert soup.select_one('label input[type="search"]')
+    assert soup.select_one('#family-count[role="status"]')
+    assert "not establish experimental characterization" in soup.get_text()
+    assert "not evidence that the family lacks a known function" in soup.get_text()
+    assert "position: sticky" in (out / "style.css").read_text()
+    assert (out / "dashboard.js").is_file()

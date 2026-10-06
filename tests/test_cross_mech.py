@@ -360,10 +360,12 @@ def test_report_lists_curated_rows_and_reuse_gaps(mechs_root: Path, tmp_path: Pa
     assert "| GO:0009058 biosynthetic process | DUF496 | P0A8M6 |" in text
 
     reports = tmp_path / "reports"
-    assert report_main(["--cross-mech-dir", str(out), "--out-dir", str(reports)]) == 0
-    assert report_main(["--cross-mech-dir", str(out), "--out-dir", str(reports), "--check"]) == 0
+    args = ["--cross-mech-dir", str(out), "--out-dir", str(reports), "--worklist-json",
+            str(REPO_WORKLISTS / "interpro-pfam-duf-2026-10-01.json")]
+    assert report_main(args) == 0
+    assert report_main([*args, "--check"]) == 0
     (reports / "cross-mech-duf-examples-2026-10-05.md").write_text("stale", encoding="utf-8")
-    assert report_main(["--cross-mech-dir", str(out), "--out-dir", str(reports), "--check"]) == 1
+    assert report_main([*args, "--check"]) == 1
 
 
 
@@ -392,7 +394,10 @@ def test_render_from_paths_validates_cross_mech_snapshot(mechs_root: Path, tmp_p
         result, cross, worklist_snapshot_id="interpro-pfam-duf-2026-10-01",
         source_ref="HEAD", snapshot_date="2026-10-05",
     )
-    render_from_paths(out_dir=tmp_path / "pages", worklists_dir=worklists, cross_mech_dir=cross)
+    render_from_paths(
+        out_dir=tmp_path / "pages", worklists_dir=worklists, cross_mech_dir=cross,
+        worklist_json=worklists / "interpro-pfam-duf-2026-10-01.json",
+    )
     payload = json.loads((tmp_path / "pages" / "index.json").read_text(encoding="utf-8"))
     assert payload["inputs"]["cross_mech"] == "cross-mech-duf-examples-2026-10-05"
 

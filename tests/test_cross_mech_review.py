@@ -169,7 +169,10 @@ def test_report_validates_family_metadata(tmp_path: Path, capsys, change, error:
         worklist_snapshot_id="interpro-pfam-duf-2026-10-01", source_ref="HEAD",
         snapshot_date="2026-10-05",
     )
-    assert report_main(["--cross-mech-dir", str(tmp_path), "--check"]) == 1
+    assert report_main([
+        "--cross-mech-dir", str(tmp_path), "--check", "--worklist-json",
+        "data/worklists/interpro-pfam-duf-2026-10-01.json",
+    ]) == 1
     assert error in capsys.readouterr().err
 
 
@@ -303,3 +306,31 @@ def test_cli_no_lookup_and_missing_repository(tmp_path: Path, capsys) -> None:
 def test_malformed_cache_is_a_domain_error(payload) -> None:
     with pytest.raises(CrossMechError, match="invalid UniProt cache row"):
         load_uniprot_cache(json.dumps(payload))
+
+
+def test_worklist_correction_preserves_cross_mech_evidence() -> None:
+    root = Path(__file__).resolve().parents[1]
+    source = root / "data/cross_mech/cross-mech-duf-examples-2026-10-05.json"
+    target = root / "data/cross_mech/cross-mech-duf-examples-2026-10-06.json"
+    before = json.loads(source.read_text())
+    after = json.loads(target.read_text())
+    manifest = json.loads(target.with_suffix(".manifest.json").read_text())
+    lineage = manifest["snapshot"]["derivation"]
+    worklist = root / "data/worklists/interpro-pfam-duf-2026-10-05.json"
+    families = {row["pfam_id"]: row for row in json.loads(worklist.read_text())}
+    assert len(before) == len(after) == 16298
+    changed = 0
+    for old, new in zip(before, after):
+        assert {key: value for key, value in old.items() if key != "unknown_status"} == {
+            key: value for key, value in new.items() if key != "unknown_status"
+        }
+        if new["pfam_id"]:
+            assert new["unknown_status"] == families[new["pfam_id"]]["unknown_status"]
+        changed += old["unknown_status"] != new["unknown_status"]
+    assert changed == lineage["rows_with_changed_seed_status"] == 2479
+    assert lineage["source_json_sha256"] == hashlib.sha256(source.read_bytes()).hexdigest()
+    assert lineage["source_manifest_sha256"] == hashlib.sha256(
+        source.with_suffix(".manifest.json").read_bytes()
+    ).hexdigest()
+    assert lineage["target_worklist_json_sha256"] == hashlib.sha256(worklist.read_bytes()).hexdigest()
+    assert manifest["snapshot"]["input_snapshot_ids"]["worklist"] == worklist.stem
