@@ -25,10 +25,13 @@ EXTRA_FIELDS = "entry_id,short_name,description,counters"
 
 PFAM_RE = re.compile(r"^PF\d{5}$")
 DUF_SHORT_NAME_RE = re.compile(r"\bDUF\d+\b", re.IGNORECASE)
+# A family name explicitly saying unknown function is a candidate regardless of
+# whether Pfam calls it a family, repeat, region, domain or protein (#83).
+UNKNOWN_NAME_RE = re.compile(r"\bunknown[\s-]+function\b", re.IGNORECASE)
 UNKNOWN_FUNCTION_RE = re.compile(
-    r"\b(?:domain|protein)s? of unknown function\b|"
-    r"\bfunction of (?:this|the) (?:domain|protein) is unknown\b|"
-    r"\bfunction is unknown\b",
+    r"\b(?:domains?|proteins?|family|families)\s+of\s+unknown[\s-]+function\b|"
+    r"\bfunction\s+of\s+(?:this|the)\s+(?:domain|protein|family)\s+is\s+unknown\b|"
+    r"\bfunction\s+is\s+unknown\b",
     re.IGNORECASE,
 )
 
@@ -266,7 +269,7 @@ def _candidate_reasons(
         reasons.append("short_name_matches_duf")
     if DUF_SHORT_NAME_RE.search(name) and "short_name_matches_duf" not in reasons:
         reasons.append("name_matches_duf")
-    if UNKNOWN_FUNCTION_RE.search(name):
+    if UNKNOWN_NAME_RE.search(name) or UNKNOWN_FUNCTION_RE.search(name):
         reasons.append("name_says_unknown_function")
     if UNKNOWN_FUNCTION_RE.search(description):
         reasons.append("description_says_unknown_function")

@@ -106,7 +106,7 @@ th {
   border-bottom: 1px solid var(--line);
   font-size: 1rem;
 }
-.table-wrap { overflow-x: auto; }
+.table-wrap { overflow: auto; max-height: 65vh; border: 1px solid var(--line); }
 table {
   width: 100%;
   min-width: 1100px;
@@ -121,7 +121,25 @@ td {
 }
 th {
   border-top: 0;
+  position: sticky;
+  top: 0;
+  background: var(--panel);
+  z-index: 1;
 }
+nav, .controls, .pagination { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
+.controls { margin: 16px 0; }
+label { display: grid; gap: 4px; }
+input, select, button { font: inherit; color: var(--text); background: var(--panel); border: 1px solid var(--muted); border-radius: 4px; padding: 6px 10px; max-width: 100%; }
+button { cursor: pointer; }
+button:disabled { opacity: .55; cursor: default; }
+.pagination { margin-top: 12px; }
+[hidden] { display: none !important; }
+tr:target { outline: 2px solid var(--accent); outline-offset: -2px; }
+.row-link { display: block; font-size: .85rem; }
+.legend dt { font-weight: 600; }
+.legend dd { margin: 0 0 10px; max-width: 850px; }
+footer { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 16px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 td.num {
   font-variant-numeric: tabular-nums;
   text-align: right;
@@ -156,6 +174,7 @@ def render_site(
     artifacts = {
         ".nojekyll": "",
         "style.css": STYLE_CSS + "\n",
+        "dashboard.js": Path(__file__).with_name("dashboard.js").read_text(encoding="utf-8"),
         "index.html": _index_html(report, families, input_ids),
         "index.json": json.dumps(
             {
@@ -293,10 +312,15 @@ def _index_html(
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DUFMech</title>
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="style.css">
+  <script src="dashboard.js" defer></script>
 </head>
 <body>
   <main>
+    <nav aria-label="Project navigation"><a href="#families">Browse families</a>
+      <a href="https://github.com/CultureBotAI/DUFMech">Repository</a>
+      <a href="https://culturebotai.github.io/mechs/">All Mech projects</a></nav>
     <h1>DUFMech</h1>
     <p class="lede">
       Domain and protein families of unknown function, including historical DUFs.
@@ -317,8 +341,18 @@ def _index_html(
       {metrics["missing_match_counts"]:,} lack match counts.</p>
 
     <section class="section">
-      <h2>Families</h2>
-      <div class="table-wrap">
+      <h2 id="families">Families</h2>
+      <p><a href="index.json" download>Download the complete family index (JSON)</a>
+        — all {len(families):,} families, source snapshot IDs, summary and evidence counts.</p>
+      <div class="controls" id="family-controls" hidden>
+        <label>Search accession or family <input id="family-query" type="search"></label>
+        <label>Seed status <select id="seed-filter"><option value="">All seed statuses</option></select></label>
+        <button id="reset-families" type="button">Clear search and filters</button>
+      </div>
+      <p id="family-count" role="status" aria-live="polite">{len(families):,} families.</p>
+      <noscript><p>Search and paging require JavaScript. All families remain available in the
+        scrollable table and complete JSON download.</p></noscript>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Family worklist; scroll to read all columns">
         <table>
           <thead>
             <tr>
@@ -337,7 +371,35 @@ def _index_html(
           </tbody>
         </table>
       </div>
+      <div class="pagination" id="family-pagination" hidden>
+        <button id="previous-families" type="button">Previous page</button>
+        <span id="family-page"></span>
+        <button id="next-families" type="button">Next page</button>
+      </div>
     </section>
+    <section class="section legend" aria-labelledby="status-guide">
+      <h2 id="status-guide">How to read this worklist</h2>
+      <dl>
+        <dt>Seed status</dt><dd>A name-based classification of the frozen InterPro/Pfam metadata.
+          UNKNOWN CANDIDATE means the name or description explicitly says the function is unknown.
+          KNOWN HISTORICAL DUF means a DUF name matched without that unknown-function wording;
+          it does not establish experimental characterization. FALSE POSITIVE TEXT HIT means
+          the metadata did not meet the DUF or unknown-function naming rules.</dd>
+        <dt>Characterization</dt><dd>A separate evidence-scoring result, when a matching score
+          snapshot is available. UNSCORED means no score has been calculated for this family;
+          it is not evidence that the family lacks a known function. PARTIALLY CHARACTERIZED
+          records have partial support; the score snapshot records its classification evidence.</dd>
+        <dt>Evidence counts</dt><dd>Counts of supporting evidence rows classified as known,
+          partial or context-only in the score snapshot. They are not protein counts or
+          necessarily independent experiments. Not scored means those counts are unavailable.</dd>
+        <dt>Missing counts</dt><dd>Not available means the source did not supply that counter.
+          A displayed zero is a reported count, not a missing value.</dd>
+      </dl>
+    </section>
+    <footer>Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      Code: <a href="https://github.com/CultureBotAI/DUFMech/blob/main/LICENSE-CODE">BSD 3-Clause</a>.
+      Redistributed source material retains its applicable third-party terms.
+      <a href="https://github.com/CultureBotAI/DUFMech/blob/main/LICENSE">License policy</a>.</footer>
   </main>
 </body>
 </html>
@@ -356,8 +418,11 @@ def _family_row(row: dict[str, Any]) -> str:
     short_name = escape(row["short_name"])
     pfam = escape(row["pfam_id"])
     source_url = row["source_url"]
-    if _safe_url(source_url):
-        pfam = f'<a href="{escape(source_url, quote=True)}">{pfam}</a>'
+    # family_index validates the accession, so the human entry URL is independent
+    # of an optional API/source URL supplied by a snapshot.
+    pfam = f'<a href="https://www.ebi.ac.uk/interpro/entry/pfam/{pfam}/">{pfam}</a>'
+    source = (f' <a href="{escape(source_url, quote=True)}">Source API</a>'
+              if _safe_url(source_url) else "")
     characterization_status = row["characterization_status"] or "UNSCORED"
     score_text = (
         f"Known: {_count(row['known_evidence_count'])}; "
@@ -366,8 +431,9 @@ def _family_row(row: dict[str, Any]) -> str:
     )
     if characterization_status == "UNSCORED":
         score_text = "Not scored"
-    return f"""<tr>
-  <td>{pfam}</td>
+    search = escape(" ".join(str(row[k]) for k in ("pfam_id", "short_name", "name", "interpro_id")), quote=True)
+    return f"""<tr id="{escape(row['pfam_id'], quote=True)}" data-search="{search}" data-status="{escape(row['unknown_status'], quote=True)}">
+  <td>{pfam}<a class="row-link" href="#{escape(row['pfam_id'], quote=True)}">Link to this family</a>{source}</td>
   <td><strong>{name}</strong><br>{short_name}</td>
   <td class="status">{escape(row["unknown_status"].replace("_", " "))}</td>
   <td class="status">{escape(characterization_status.replace("_", " "))}</td>

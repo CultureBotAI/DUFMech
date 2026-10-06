@@ -5,6 +5,7 @@ import json
 from io import StringIO
 
 import httpx
+import pytest
 
 from dufmech.worklist import (
     FALSE_POSITIVE_TEXT_HIT,
@@ -94,6 +95,21 @@ def test_historical_duf_names_are_kept_but_demoted() -> None:
     assert row is not None
     assert row.unknown_status == KNOWN_HISTORICAL_DUF
     assert row.candidate_reasons == ("short_name_matches_duf",)
+
+
+@pytest.mark.parametrize("name", [
+    "Family of unknown function (DUF5641)", "FAMILIES OF UNKNOWN FUNCTION",
+    "Domain of unknown function", "Protein of unknown function",
+    "Family  of\nunknown-function", "The function of this family is unknown",
+    "Repeat of unknown function", "Region of unknown function", "Domain if unknown function",
+])
+def test_unknown_function_family_wording_is_not_historical(name) -> None:
+    row = row_from_interpro_entry(interpro_result(
+        accession="PF18701", short_name="DUF5641", name=name,
+        description="This presumed domain is found in retrotransposon polyproteins.",
+    ))
+    assert row.unknown_status == UNKNOWN_CANDIDATE
+    assert "name_says_unknown_function" in row.candidate_reasons
 
 
 def test_domain_descriptions_can_mark_unknown_function() -> None:
