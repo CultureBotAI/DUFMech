@@ -12,15 +12,13 @@ from typing import Any
 from urllib.parse import urlsplit
 
 from dufmech.cross_mech import PROTEIN_TRAITS_MECH
-from dufmech.cross_mech_snapshot import CROSS_MECH_DIR, CROSS_MECH_STEM
+from dufmech.cross_mech_snapshot import CROSS_MECH_DIR, CROSS_MECH_STEM, load_cross_mech_snapshot
 from dufmech.report import (
     ReportError,
     build_report,
     family_index,
     latest_snapshot_path,
-    load_json_rows,
     load_latest_rows,
-    verified_manifest,
 )
 
 PAGES_DIR = Path("pages")
@@ -227,15 +225,10 @@ def render_from_paths(
         else None
     )
     if cross_mech_path is not None:
-        manifest = verified_manifest(cross_mech_path)
-        worklist_input = manifest["snapshot"].get("input_snapshot_ids", {}).get("worklist")
-        if worklist_input != input_ids["worklist"]:
-            raise ReportError(
-                f"{cross_mech_path.name} was built against {worklist_input}, "
-                f"not {input_ids['worklist']}; regenerate the cross-Mech snapshot"
-            )
+        cross_mech_rows, manifest = load_cross_mech_snapshot(
+            cross_mech_path, worklist_rows=worklist_rows, worklist_snapshot_id=input_ids["worklist"]
+        )
         input_ids["cross_mech"] = cross_mech_path.stem
-        cross_mech_rows = [dict(row) for row in load_json_rows(cross_mech_path)]
         cross_mech_sources = dict(manifest["source"].get("mechs", {}))
     render_site(
         [dict(row) for row in worklist_rows],
@@ -364,7 +357,8 @@ def _index_html(
       <h2>DUF examples curated in other Mechs</h2>
       <p class="lede">Records outside ProteinTraitsMech that name a DUF/PUF family or
         cite a protein whose UniProtKB entry carries one. ProteinTraitsMech trait and
-        canonical-example links are counted per family below.
+        canonical-example links appear per family below. Counts represent distinct
+        records with examples or mentions; trait-record availability is shown separately.
         Names marked "not in worklist" are DUF names that no longer match a current Pfam
         short name, or UniProt UPF names, which the Pfam worklist never carries.</p>
       <div class="table-wrap">
@@ -454,6 +448,10 @@ def _attach_cross_mech(
 ) -> dict[str, int]:
     """Attach per-family cross-Mech links and return dashboard totals."""
 
+    known = {family["pfam_id"] for family in families}
+    extra = {row["pfam_id"] for row in rows if row.get("pfam_id")} - known
+    if extra:
+        raise ReportError(f"cross-Mech families absent from worklist: {', '.join(sorted(extra))}")
     by_pfam: dict[str, dict[str, Any]] = {}
     for row in rows:
         pfam_id = row.get("pfam_id") or ""
@@ -462,20 +460,17 @@ def _attach_cross_mech(
         entry = by_pfam.setdefault(pfam_id, {"mechs": {}, "proteins": set(), "trait": False})
         # Every worklist family has a ProteinTraitsMech trait record; report it as a flag
         # so it does not swamp the per-Mech counts and the headline metric.
-        if row["source_section"] == "trait_identifier":
+        if (row["source_mech"] == PROTEIN_TRAITS_MECH
+                and row["source_section"] == "trait_identifier"):
             entry["trait"] = True
             continue
-        entry["mechs"][row["source_mech"]] = entry["mechs"].get(row["source_mech"], 0) + 1
+        entry["mechs"].setdefault(row["source_mech"], set()).add(row["source_path"])
         if row.get("uniprot_accession"):
             entry["proteins"].add(row["uniprot_accession"])
-    known = {family["pfam_id"] for family in families}
-    extra = by_pfam.keys() - known
-    if extra:
-        raise ReportError(f"cross-Mech families absent from worklist: {', '.join(sorted(extra))}")
     for family in families:
         entry = by_pfam.get(family["pfam_id"], {"mechs": {}, "proteins": set(), "trait": False})
         family["cross_mech"] = {
-            "records_by_mech": dict(sorted(entry["mechs"].items())),
+            "records_by_mech": {mech: len(paths) for mech, paths in sorted(entry["mechs"].items())},
             "example_proteins": len(entry["proteins"]),
             "protein_traits_record": entry["trait"],
         }
@@ -488,12 +483,12 @@ def _attach_cross_mech(
 
 def _other_mechs(summary: dict[str, Any]) -> str:
     mechs = summary["records_by_mech"]
-    if not mechs:
-        return ""
     text = "<br>".join(f"{escape(name)}: {count:,}" for name, count in mechs.items())
     proteins = summary["example_proteins"]
     if proteins:
         text += f"<br>{proteins:,} example protein{'s' if proteins != 1 else ''}"
+    if summary["protein_traits_record"]:
+        text += ("<br>" if text else "") + "ProteinTraitsMech trait record"
     return text
 
 

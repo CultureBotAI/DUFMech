@@ -320,7 +320,7 @@ def test_dashboard_lists_cross_mech_links(mechs_root: Path, tmp_path: Path) -> N
     )
     payload = json.loads((out / "index.json").read_text(encoding="utf-8"))
     by_pfam = {family["pfam_id"]: family["cross_mech"] for family in payload["families"]}
-    assert by_pfam["PF06226"]["records_by_mech"] == {"ProteinTraitsMech": 1, "TraitMech": 2}
+    assert by_pfam["PF06226"]["records_by_mech"] == {"ProteinTraitsMech": 1, "TraitMech": 1}
     assert by_pfam["PF06226"]["example_proteins"] == 1
     assert payload["summary"]["cross_mech"]["proteins"] == 3
     # Trait-record-only links are a flag, not a per-Mech count or a headline family.
@@ -387,6 +387,7 @@ def test_render_from_paths_validates_cross_mech_snapshot(mechs_root: Path, tmp_p
     with pytest.raises(ReportError, match="regenerate the cross-Mech snapshot"):
         render_from_paths(out_dir=tmp_path / "pages", worklists_dir=worklists, cross_mech_dir=cross)
 
+    cross = tmp_path / "matching_cross_mech"
     write_cross_mech_snapshot(
         result, cross, worklist_snapshot_id="interpro-pfam-duf-2026-10-01",
         source_ref="HEAD", snapshot_date="2026-10-05",
@@ -443,8 +444,10 @@ def test_cli_records_uniprot_cache_provenance(
     assert first["uniprotkb_lookup"]["fetched_accessions"] == 2
     assert first["uniprotkb_accessions_unresolved"] == []
 
-    assert cli.main([*args, "--out-dir", str(out)]) == 0
-    second = json.loads(manifest_path.read_text(encoding="utf-8"))["source"]["uniprotkb_lookup"]
+    replay = tmp_path / "replay"
+    assert cli.main([*args, "--out-dir", str(replay)]) == 0
+    replay_manifest = json.loads((replay / manifest_path.name).read_text(encoding="utf-8"))
+    second = replay_manifest["source"]["uniprotkb_lookup"]
     assert len(calls) == 1
     assert second["cache_hits"] == 2
     assert "fetched_at" not in second

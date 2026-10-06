@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import sys
+from dataclasses import replace
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -91,23 +92,34 @@ def _lookup(cache: Path | None, info: dict[str, object]):
     client = UniProtPfamClient()
 
     def live(accessions):
-        info["fetched_at"] = _now()
+        fetched_at = _now()
+        info["fetched_at"] = fetched_at
         info["fetched_accessions"] = len(accessions)
-        return client(accessions)
+        return {key: replace(row, fetched_at=fetched_at) for key, row in client(accessions).items()}
 
     if cache is None:
         return live
 
     def cached(accessions):
         # Unresolved accessions are refetched; only resolved lookups are cached.
-        rows = load_uniprot_cache(cache.read_text(encoding="utf-8")) if cache.is_file() else {}
+        cache_bytes = cache.read_bytes() if cache.is_file() else None
+        rows = load_uniprot_cache(cache_bytes.decode("utf-8")) if cache_bytes is not None else {}
+        hits = [rows[accession] for accession in accessions if accession in rows]
         missing = [accession for accession in accessions if accession not in rows]
-        info.update({"mode": "cache", "cache_path": cache.name, "cache_hits": len(accessions) - len(missing)})
+        info.update({
+            "mode": "cache", "cache_path": cache.name, "cache_hits": len(hits),
+            "cache_input_sha256": (
+                hashlib.sha256(cache_bytes).hexdigest() if cache_bytes is not None else None
+            ),
+            "cache_hit_fetch_times": sorted({row.fetched_at for row in hits if row.fetched_at}),
+            "cache_hits_without_fetch_time": sum(not row.fetched_at for row in hits),
+        })
         if missing:
             rows.update(live(missing))
             cache.parent.mkdir(parents=True, exist_ok=True)
             cache.write_text(render_uniprot_cache(rows) + "\n", encoding="utf-8")
-        info["cache_sha256"] = hashlib.sha256(cache.read_bytes()).hexdigest()
+        if cache.is_file():
+            info["cache_sha256"] = hashlib.sha256(cache.read_bytes()).hexdigest()
         return {accession: rows[accession] for accession in accessions if accession in rows}
 
     return cached

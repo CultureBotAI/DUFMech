@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 from collections import Counter
+from collections.abc import Mapping, Sequence
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -17,9 +18,41 @@ from dufmech.cross_mech import (
     render_cross_mech_json,
     render_cross_mech_tsv,
 )
+from dufmech.report import ReportError, load_json_rows, verified_manifest
 
 CROSS_MECH_STEM = "cross-mech-duf-examples"
 CROSS_MECH_DIR = Path("data/cross_mech")
+
+
+def load_cross_mech_snapshot(
+    path: Path,
+    *,
+    worklist_rows: Sequence[Mapping[str, Any]],
+    worklist_snapshot_id: str,
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Verify cross-Mech evidence against the selected worklist for every consumer."""
+
+    manifest = verified_manifest(path)
+    worklist_input = manifest["snapshot"].get("input_snapshot_ids", {}).get("worklist")
+    if worklist_input != worklist_snapshot_id:
+        raise ReportError(
+            f"{path.name} was built against {worklist_input}, "
+            f"not {worklist_snapshot_id}; regenerate the cross-Mech snapshot"
+        )
+    rows = [dict(row) for row in load_json_rows(path)]
+    families = {row["pfam_id"]: row for row in worklist_rows}
+    extra = {row["pfam_id"] for row in rows if row["pfam_id"]} - families.keys()
+    if extra:
+        raise ReportError(f"cross-Mech families absent from worklist: {', '.join(sorted(extra))}")
+    for row in rows:
+        if row["pfam_id"] and any(
+            row[key] != families[row["pfam_id"]][key] for key in ("short_name", "unknown_status")
+        ):
+            raise ReportError(
+                f"{path.name}: {row['pfam_id']} metadata differs from {worklist_snapshot_id}; "
+                "regenerate the cross-Mech snapshot"
+            )
+    return rows, manifest
 
 
 def write_cross_mech_snapshot(
@@ -31,7 +64,7 @@ def write_cross_mech_snapshot(
     snapshot_date: str | date | None = None,
     generated_at: datetime | None = None,
 ) -> dict[str, Any]:
-    """Write date-stamped cross-Mech JSON, TSV, and manifest files."""
+    """Write new date-stamped artifacts, refusing to replace any existing evidence."""
 
     rows = sorted(result.rows, key=lambda row: row.sort_key())
     generated_at = generated_at or datetime.now(timezone.utc)
@@ -43,11 +76,8 @@ def write_cross_mech_snapshot(
         else date.fromisoformat(snapshot_date).isoformat()
     )
     snapshot_id = f"{CROSS_MECH_STEM}-{snapshot_date}"
-    out_dir.mkdir(parents=True, exist_ok=True)
     json_text = render_cross_mech_json(rows) + "\n"
     tsv_text = render_cross_mech_tsv(rows) + "\n"
-    (out_dir / f"{snapshot_id}.json").write_text(json_text, encoding="utf-8")
-    (out_dir / f"{snapshot_id}.tsv").write_text(tsv_text, encoding="utf-8")
 
     proteins = {row.uniprot_accession for row in rows if row.uniprot_accession}
     manifest = {
@@ -87,9 +117,29 @@ def write_cross_mech_snapshot(
             "tsv": _file_manifest(f"{snapshot_id}.tsv", tsv_text),
         },
     }
-    (out_dir / f"{snapshot_id}.manifest.json").write_text(
-        json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8"
-    )
+    # Encode the complete set before opening anything. Exclusive creation also
+    # protects against a destination appearing after the existence check.
+    artifacts = {
+        out_dir / f"{snapshot_id}.json": json_text.encode("utf-8"),
+        out_dir / f"{snapshot_id}.tsv": tsv_text.encode("utf-8"),
+        out_dir / f"{snapshot_id}.manifest.json": (
+            json.dumps(manifest, indent=2, sort_keys=True) + "\n"
+        ).encode("utf-8"),
+    }
+    for path in artifacts:
+        if path.exists() or path.is_symlink():
+            raise FileExistsError(f"snapshot artifact already exists: {path}")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    written: list[Path] = []
+    try:
+        for path, data in artifacts.items():
+            with path.open("xb") as handle:
+                written.append(path)
+                handle.write(data)
+    except OSError:
+        for path in written:
+            path.unlink()
+        raise
     return manifest
 
 

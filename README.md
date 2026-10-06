@@ -157,9 +157,17 @@ worklist Pfam cross-references. Bare DUF names that no longer match a worklist
 family, usually because Pfam renamed them after characterization, and UPF names,
 which are UniProt nomenclature the Pfam-derived worklist never carries, are kept as
 `NOT_IN_WORKLIST` rows. Compound names such as `DUF3458_C` match only their exact
-worklist family. The manifest records how UniProtKB lookups were made (live or from
-a cache, with the cache checksum) and lists every cited accession that did not
-resolve, which includes merged and demerged entries.
+worklist family, including next to prose such as `DUF3458_C-containing`. The manifest
+records cache input/output checksums, fetch times for cache hits where known, and
+the time and count of new UniProtKB requests. Legacy cache entries retain an explicit
+unknown fetch age; a new request does not redate existing cached results. Unresolved
+accessions, including merged and demerged entries, are listed separately.
+
+A freeze refuses to replace any existing artifact for the selected date. Use a new
+snapshot date or a separate output directory for another run. Both the report and
+dashboard require cross-Mech evidence to match the selected worklist; a historical
+report can select its original worklist with `--worklist-json`. Dashboard Mech counts
+represent distinct source records, with trait-record availability shown separately.
 
 Render and verify the committed DUFMech dashboard:
 

@@ -10,8 +10,12 @@ from pathlib import Path
 from typing import Any
 
 from dufmech.cross_mech import PROTEIN_TRAITS_MECH
-from dufmech.cross_mech_snapshot import CROSS_MECH_DIR, CROSS_MECH_STEM
-from dufmech.report import ReportError, latest_snapshot_path, load_json_rows, verified_manifest
+from dufmech.cross_mech_snapshot import (
+    CROSS_MECH_DIR,
+    CROSS_MECH_STEM,
+    load_cross_mech_snapshot,
+)
+from dufmech.report import ReportError, latest_snapshot_path, load_latest_rows
 
 REPORTS_DIR = Path("docs/reports")
 TOP_N = 15
@@ -259,14 +263,21 @@ def _cell(value: str) -> str:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cross-mech-dir", type=Path, default=CROSS_MECH_DIR)
+    parser.add_argument("--worklists-dir", type=Path, default=Path("data/worklists"))
+    parser.add_argument("--worklist-json", type=Path, help="select a worklist for a historical report")
     parser.add_argument("--out-dir", type=Path, default=REPORTS_DIR)
     parser.add_argument("--check", action="store_true", help="fail if the report is stale")
     args = parser.parse_args(argv)
     try:
         path = latest_snapshot_path(args.cross_mech_dir, CROSS_MECH_STEM)
         assert path is not None
-        manifest = verified_manifest(path)
-        text = render_cross_mech_report(list(load_json_rows(path)), manifest)
+        worklist_rows, _, input_ids = load_latest_rows(
+            args.worklists_dir, worklist_json=args.worklist_json
+        )
+        rows, manifest = load_cross_mech_snapshot(
+            path, worklist_rows=worklist_rows, worklist_snapshot_id=input_ids["worklist"]
+        )
+        text = render_cross_mech_report(rows, manifest)
     except (ReportError, KeyError) as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1

@@ -9,6 +9,7 @@ import re
 import subprocess
 import threading
 from collections.abc import Iterable, Iterator, Mapping, Sequence
+from contextlib import closing
 from dataclasses import asdict, dataclass, field
 from pathlib import PurePosixPath
 from typing import Any
@@ -30,7 +31,7 @@ PFAM_TEXT_RE = re.compile(r"(?<![A-Za-z0-9])(PF\d{5})(?:\.\d+)?(?![0-9])")
 # different Pfam family and is matched exactly through FamilyIndex.compound_names, which
 # also masks the few hyphenated worklist names. Other hyphens are prose
 # ("DUF1814-family", "COG5340-DUF1814") and still count as the bare name.
-SHORT_NAME_TEXT_RE = re.compile(r"(?<![A-Za-z0-9_])(DUF\d{1,5}|UPF\d{4})(?![0-9]|_[A-Za-z0-9])")
+SHORT_NAME_TEXT_RE = re.compile(r"(?<![A-Za-z0-9_])(DUF\d{1,5}|UPF\d{4})(?![A-Za-z0-9_])")
 COMPOUND_NAME_RE = re.compile(r"[A-Za-z0-9_-]*(?:DUF\d{1,5}|UPF\d{4})[A-Za-z0-9_-]*")
 INTERPRO_TEXT_RE = re.compile(r"(?<![A-Za-z0-9])(IPR\d{6})(?![0-9])")
 UNIPROT_TEXT_RE = re.compile(
@@ -144,9 +145,9 @@ class FamilyIndex:
             by_interpro={key: tuple(sorted(value)) for key, value in by_interpro.items()},
             compound_names=(
                 re.compile(
-                    r"(?<![A-Za-z0-9_-])("
+                    r"(?<![A-Za-z0-9_])("
                     + "|".join(re.escape(name) for name in compounds)
-                    + r")(?![A-Za-z0-9_-])"
+                    + r")(?![A-Za-z0-9_])"
                 )
                 if compounds
                 else None
@@ -225,6 +226,8 @@ class UniProtPfamRow:
     taxon_id: str
     taxon_label: str
     pfam_ids: tuple[str, ...]
+    # Empty for legacy caches whose original lookup time was not recorded.
+    fetched_at: str = ""
 
 
 @dataclass(frozen=True)
@@ -319,16 +322,19 @@ def scan_mechs(
         commit, records = iter_mech_records(mechs_root, mech, ref=ref)
         scanned = 0
         before = len(result.rows)
-        for record in records:
-            scanned += 1
-            if mech.name == PROTEIN_TRAITS_MECH:
-                result.rows.extend(protein_traits_rows(record, families))
-                continue
-            mentioned = families.text_matches(record.text)
-            result.rows.extend(family_mention_rows(record, families, mentioned))
-            result.rows.extend(unlisted_name_rows(record, families.unlisted_short_names(record.text)))
-            for accession in sorted(set(UNIPROT_TEXT_RE.findall(record.text))):
-                pending.setdefault(accession, []).append((record, set(mentioned)))
+        with closing(records):
+            for record in records:
+                scanned += 1
+                if mech.name == PROTEIN_TRAITS_MECH:
+                    result.rows.extend(protein_traits_rows(record, families))
+                    continue
+                mentioned = families.text_matches(record.text)
+                result.rows.extend(family_mention_rows(record, families, mentioned))
+                result.rows.extend(
+                    unlisted_name_rows(record, families.unlisted_short_names(record.text))
+                )
+                for accession in sorted(set(UNIPROT_TEXT_RE.findall(record.text))):
+                    pending.setdefault(accession, []).append((record, set(mentioned)))
         result.mechs[mech.name] = {
             "commit": commit,
             "data_dir": mech.data_dir,
@@ -521,8 +527,8 @@ class UniProtPfamClient:
                 }
                 next_url: str | None = UNIPROTKB_SEARCH_URL
                 while next_url:
-                    response = client.get(next_url, params=params)
                     try:
+                        response = client.get(next_url, params=params)
                         response.raise_for_status()
                         payload = response.json()
                     except (httpx.HTTPError, ValueError) as exc:
@@ -596,9 +602,14 @@ def load_uniprot_cache(text: str) -> dict[str, UniProtPfamRow]:
         raise CrossMechError("UniProt cache must be a JSON list")
     rows = {}
     for item in payload:
-        item = dict(item)
-        item["pfam_ids"] = tuple(item.get("pfam_ids", ()))
-        row = UniProtPfamRow(**item)
+        try:
+            item = dict(item)
+            item["pfam_ids"] = tuple(item.get("pfam_ids", ()))
+            row = UniProtPfamRow(**item)
+        except (TypeError, ValueError) as exc:
+            raise CrossMechError("invalid UniProt cache row") from exc
+        if not isinstance(row.fetched_at, str):
+            raise CrossMechError("invalid UniProt cache fetch time")
         rows[row.requested_accession] = row
     return rows
 
@@ -695,30 +706,48 @@ def _cat_blobs(
     )
     assert process.stdin is not None and process.stdout is not None
     stdin = process.stdin
+    feed_errors: list[OSError] = []
 
     def feed() -> None:
         # Stream every request up front; a per-blob round trip is ~20x slower on large Mechs.
         try:
-            for sha, _ in blobs:
-                stdin.write(f"{sha}\n".encode())
-        except BrokenPipeError:
-            pass
-        finally:
-            stdin.close()
+            # Closing a buffered pipe can itself raise when the reader exits early.
+            with stdin:
+                for sha, _ in blobs:
+                    stdin.write(f"{sha}\n".encode())
+        except OSError as exc:
+            feed_errors.append(exc)
 
-    feeder = threading.Thread(target=feed, daemon=True)
+    feeder = threading.Thread(target=feed, name="dufmech-cat-file", daemon=True)
     feeder.start()
     try:
-        for _, path in blobs:
+        for sha, path in blobs:
             header = process.stdout.readline().split()
-            if len(header) != 3:
+            if (len(header) != 3 or header[0] != sha.encode() or header[1] != b"blob"
+                    or not header[2].isdigit()):
                 raise CrossMechError(f"could not read {mech.name}:{path}")
-            data = process.stdout.read(int(header[2]))
-            process.stdout.read(1)
+            size = int(header[2])
+            data = process.stdout.read(size)
+            if len(data) != size or process.stdout.read(1) != b"\n":
+                raise CrossMechError(f"could not read {mech.name}:{path}: incomplete blob")
             yield SourceRecord(mech, commit, path, data.decode("utf-8", errors="replace"))
+        returncode = process.wait()
+        feeder.join()
+        if returncode:
+            raise CrossMechError(f"git cat-file failed in {repo} with exit code {returncode}")
+        if feed_errors:
+            raise CrossMechError(f"could not send git cat-file requests in {repo}") from feed_errors[0]
     finally:
+        # A consumer may close the generator, or fail while parsing a yielded record.
+        # Stop git first so the writer cannot remain blocked on a full stdin pipe.
+        if process.poll() is None:
+            process.terminate()
         process.stdout.close()
-        process.wait()
+        try:
+            process.wait(timeout=5)
+        except subprocess.TimeoutExpired:
+            process.kill()
+            process.wait()
         feeder.join()
 
 

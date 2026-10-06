@@ -269,7 +269,9 @@
       "R6TBR9"
     ],
     "uniprotkb_lookup": {
+      "cache_hit_fetch_times": [],
       "cache_hits": 1103,
+      "cache_hits_without_fetch_time": 1103,
       "cache_path": "cross-mech-uniprot-pfam.json",
       "cache_sha256": "1cb0655233f18a1b9af12136688bee9032eed179f961a41b93f79d435a378760",
       "fetched_accessions": 110,
