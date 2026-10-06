@@ -159,6 +159,38 @@ Score frozen DUF/Pfam families with evidence snapshots:
 just score-duf-puf --worklist-json data/worklists/interpro-pfam-duf-2026-10-01.json
 ```
 
+Freeze the DUF/PUF families and proteins already curated in sibling Mechs, then
+write the reuse report:
+
+```bash
+git -C ../TraitMech fetch origin main   # likewise for each sibling Mech
+just freeze-cross-mech --ref origin/main --uniprot-cache data/raw/cross-mech-uniprot-pfam.json
+just cross-mech-report
+```
+
+The scan reads tracked YAML from each sibling checkout at the given ref, so local
+edits never leak in, and records every Mech commit in the manifest. ProteinTraitsMech
+links come from its structured trait identifiers and canonical-example family
+classifications. In the other Mechs, the scan matches Pfam IDs, DUF/UPF short names
+and InterPro IDs in record text, and checks every cited UniProtKB accession for
+worklist Pfam cross-references. Bare DUF names that no longer match a worklist
+family, usually because Pfam renamed them after characterization, and UPF names,
+which are UniProt nomenclature the Pfam-derived worklist never carries, are kept as
+`NOT_IN_WORKLIST` rows. Compound names such as `DUF3458_C` match only their exact
+worklist family, including next to prose such as `DUF3458_C-containing`. The manifest
+records cache input/output checksums, fetch times for cache hits where known, and
+the time and count of new UniProtKB requests. Legacy cache entries retain an explicit
+unknown fetch age; a new request does not redate existing cached results. Unresolved
+accessions, including merged and demerged entries, are listed separately.
+
+A freeze refuses to replace any existing artifact for the selected date. Use a new
+snapshot date or a separate output directory for another run. Both the report and
+dashboard require cross-Mech evidence to match the selected worklist; a historical
+report can select matching `--cross-mech-json` and `--worklist-json` inputs. Dashboard Mech counts
+represent distinct source records, with trait-record availability shown separately.
+The current cross-Mech snapshot derives from the original scan by applying the
+corrected worklist's seed labels; see the [offline derivation record](docs/provenance/cross-mech-worklist-2026-10-06.md).
+
 Render and verify the committed DUFMech dashboard:
 
 ```bash
@@ -244,6 +276,7 @@ as proof that the family is still functionally unknown.
 ```text
 DUFMech/
 ├── data/
+│   ├── cross_mech/
 │   └── worklists/
 ├── docs/
 │   ├── provenance/

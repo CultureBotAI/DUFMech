@@ -11,7 +11,15 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlsplit
 
-from dufmech.report import ReportError, build_report, family_index, load_latest_rows
+from dufmech.cross_mech import PROTEIN_TRAITS_MECH
+from dufmech.cross_mech_snapshot import CROSS_MECH_DIR, CROSS_MECH_STEM, load_cross_mech_snapshot
+from dufmech.report import (
+    ReportError,
+    build_report,
+    family_index,
+    latest_snapshot_path,
+    load_latest_rows,
+)
 
 PAGES_DIR = Path("pages")
 WORKLISTS_DIR = Path("data/worklists")
@@ -106,13 +114,7 @@ th {
   border-bottom: 1px solid var(--line);
   font-size: 1rem;
 }
-.status-legend { border-top: 1px solid var(--line); margin-top: 24px; }
-.status-legend h2, .status-legend h3 { font-size: 1rem; }
-.legend-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-.status-legend dt { font-weight: 600; }
-.status-legend dd { margin: 4px 0 16px; color: var(--muted); }
-.status-legend p { max-width: 900px; }
-.table-wrap { overflow-x: auto; }
+.table-wrap { overflow: auto; max-height: 65vh; border: 1px solid var(--line); }
 table {
   width: 100%;
   min-width: 1100px;
@@ -127,7 +129,25 @@ td {
 }
 th {
   border-top: 0;
+  position: sticky;
+  top: 0;
+  background: var(--panel);
+  z-index: 1;
 }
+nav, .controls, .pagination { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
+.controls { margin: 16px 0; }
+label { display: grid; gap: 4px; }
+input, select, button { font: inherit; color: var(--text); background: var(--panel); border: 1px solid var(--muted); border-radius: 4px; padding: 6px 10px; max-width: 100%; }
+button { cursor: pointer; }
+button:disabled { opacity: .55; cursor: default; }
+.pagination { margin-top: 12px; }
+[hidden] { display: none !important; }
+tr:target { outline: 2px solid var(--accent); outline-offset: -2px; }
+.row-link { display: block; font-size: .85rem; }
+.legend dt { font-weight: 600; }
+.legend dd { margin: 0 0 10px; max-width: 850px; }
+footer { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 16px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 td.num {
   font-variant-numeric: tabular-nums;
   text-align: right;
@@ -143,7 +163,6 @@ td.num {
   .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .metric { padding: 12px; }
   .metric strong { font-size: 1.25rem; }
-  .legend-columns { grid-template-columns: minmax(0, 1fr); gap: 0; }
 }
 """.strip()
 
@@ -154,16 +173,23 @@ def render_site(
     *,
     input_ids: dict[str, str],
     out_dir: Path,
+    cross_mech_rows: list[dict[str, Any]] | None = None,
+    cross_mech_sources: dict[str, Any] | None = None,
 ) -> None:
     """Render a static DUFMech dashboard into ``out_dir``."""
 
     families = family_index(worklist_rows, score_rows)
     report = build_report(worklist_rows, score_rows, top_n=20)
+    cross_mech_rows = cross_mech_rows or []
+    report["cross_mech"] = _attach_cross_mech(families, cross_mech_rows)
 
     artifacts = {
         ".nojekyll": "",
         "style.css": STYLE_CSS + "\n",
-        "index.html": _index_html(report, families, input_ids),
+        "dashboard.js": Path(__file__).with_name("dashboard.js").read_text(encoding="utf-8"),
+        "index.html": _index_html(
+            report, families, input_ids, cross_mech_rows, cross_mech_sources or {}
+        ),
         "index.json": json.dumps(
             {
                 "inputs": dict(sorted(input_ids.items())),
@@ -195,10 +221,11 @@ def render_from_paths(
     worklists_dir: Path = WORKLISTS_DIR,
     worklist_json: Path | None = None,
     score_json: Path | None = None,
+    cross_mech_dir: Path = CROSS_MECH_DIR,
 ) -> None:
     """Load frozen snapshots and render pages."""
 
-    for input_path in (worklists_dir, worklist_json, score_json):
+    for input_path in (worklists_dir, worklist_json, score_json, cross_mech_dir):
         if input_path is not None:
             source = input_path.resolve()
             target = out_dir.resolve()
@@ -209,11 +236,26 @@ def render_from_paths(
         worklist_json=worklist_json,
         score_json=score_json,
     )
+    cross_mech_rows: list[dict[str, Any]] = []
+    cross_mech_sources: dict[str, Any] = {}
+    cross_mech_path = (
+        latest_snapshot_path(cross_mech_dir, CROSS_MECH_STEM, required=False)
+        if cross_mech_dir.is_dir()
+        else None
+    )
+    if cross_mech_path is not None:
+        cross_mech_rows, manifest = load_cross_mech_snapshot(
+            cross_mech_path, worklist_rows=worklist_rows, worklist_snapshot_id=input_ids["worklist"]
+        )
+        input_ids["cross_mech"] = cross_mech_path.stem
+        cross_mech_sources = dict(manifest["source"].get("mechs", {}))
     render_site(
         [dict(row) for row in worklist_rows],
         [dict(row) for row in score_rows],
         input_ids=input_ids,
         out_dir=out_dir,
+        cross_mech_rows=cross_mech_rows,
+        cross_mech_sources=cross_mech_sources,
     )
 
 
@@ -287,9 +329,14 @@ def _index_html(
     report: dict[str, Any],
     families: list[dict[str, Any]],
     input_ids: dict[str, str],
+    cross_mech_rows: list[dict[str, Any]],
+    cross_mech_sources: dict[str, Any],
 ) -> str:
     metrics = report["families"]
+    cross = report["cross_mech"]
     rows = "\n".join(_family_row(row) for row in families)
+    curated = [row for row in cross_mech_rows if row["source_mech"] != PROTEIN_TRAITS_MECH]
+    curated_rows = "\n".join(_cross_mech_row(row, cross_mech_sources) for row in curated)
     inputs = " / ".join(
         f"{escape(key)}: {escape(value)}"
         for key, value in sorted(input_ids.items())
@@ -300,10 +347,15 @@ def _index_html(
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DUFMech</title>
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="style.css">
+  <script src="dashboard.js" defer></script>
 </head>
 <body>
   <main>
+    <nav aria-label="Project navigation"><a href="#families">Browse families</a>
+      <a href="https://github.com/CultureBotAI/DUFMech">Repository</a>
+      <a href="https://culturebotai.github.io/mechs/">All Mech projects</a></nav>
     <h1>DUFMech</h1>
     <p class="lede">
       Domain and protein families of unknown function, including historical DUFs.
@@ -317,60 +369,54 @@ def _index_html(
       {_metric("Families with AlphaFold models", metrics["with_alphafold_models"])}
       {_metric("Per-family protein total", metrics["interpro_proteins"])}
       {_metric("Per-family match total", metrics["interpro_matches"])}
+      {_metric("Families with examples or mentions in other Mechs", cross["families"])}
+      {_metric("DUF example proteins in other Mechs", cross["proteins"])}
     </section>
     <p class="lede">Per-family totals are sums of reported InterPro counters,
       not unique proteins or matches. Missing counts are excluded:
       {metrics["missing_protein_counts"]:,} families lack protein counts and
       {metrics["missing_match_counts"]:,} lack match counts.</p>
 
-    <section class="status-legend" aria-labelledby="status-legend-title">
-      <h2 id="status-legend-title">Status and evidence</h2>
-      <div class="legend-columns">
-        <div>
-          <h3>Seed classification</h3>
-          <dl>
-            <dt>Unknown candidate</dt>
-            <dd>Frozen family names or descriptions explicitly indicate unknown function.
-              This metadata signal does not establish that no function has been discovered.</dd>
-            <dt>Known historical DUF</dt>
-            <dd>A DUF name is present, but the frozen wording lacks a recognized unknown-function
-              phrase. Despite its label, this heuristic is not proof of a known function.</dd>
-            <dt>False positive text hit</dt>
-            <dd>The saved metadata lacks recognized DUF or unknown-function signals.
-              These broad-search hits are normally excluded from the seed worklist.</dd>
-          </dl>
-        </div>
-        <div>
-          <h3>Characterization scoring</h3>
-          <dl>
-            <dt>Unscored / Not scored</dt>
-            <dd>No matching score row is available. Missing scores are not negative evidence.</dd>
-            <dt>Unknown candidate</dt>
-            <dd>No known-function or partial-function signal was counted in the supplied
-              evidence. Context may still be present; this is not proof of unknown function.</dd>
-            <dt>Partially characterized</dt>
-            <dd>Partial-function signals were counted without a known-function signal
-              or an inherited historical seed label.</dd>
-            <dt>Known historical DUF</dt>
-            <dd>Either the historical seed label was inherited or a known-function signal
-              was counted. This status alone does not imply experimental validation.</dd>
-          </dl>
-        </div>
+    <section class="section">
+      <h2>DUF examples curated in other Mechs</h2>
+      <p class="lede">Records outside ProteinTraitsMech that name a DUF/PUF family or
+        cite a protein whose UniProtKB entry carries one. ProteinTraitsMech trait and
+        canonical-example links appear per family below. Counts represent distinct
+        records with examples or mentions; trait-record availability is shown separately.
+        Names marked "not in worklist" are DUF names that no longer match a current Pfam
+        short name, or UniProt UPF names, which the Pfam worklist never carries.</p>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Cross-Mech examples; scroll to read all columns">
+        <table>
+          <thead>
+            <tr>
+              <th>Family</th>
+              <th>Mech</th>
+              <th>Record</th>
+              <th>Protein</th>
+              <th>Link basis</th>
+            </tr>
+          </thead>
+          <tbody>
+            {curated_rows}
+          </tbody>
+        </table>
       </div>
-      <p>Evidence counts aggregate source-specific signals, not unique proteins, publications,
-        or confidence scores. <strong>Known</strong> counts Rhea reactions and experimentally
-        supported GO molecular-function annotations. <strong>Partial</strong> counts specific
-        domain/family assignments and other functional annotations.
-        <strong>Context</strong> counts structural, environmental, orthology, interaction,
-        and neighborhood signals; context alone does not assign function.</p>
-      <p><strong>Not available</strong> means a counter was absent from the frozen input.
-        A numeric zero is a reported zero, not a substitute for missing data.</p>
     </section>
 
     <section class="section">
-      <h2>Families</h2>
-      <div class="table-wrap">
-        <table>
+      <h2 id="families">Families</h2>
+      <p><a href="index.json" download>Download the complete family index (JSON)</a>
+        — all {len(families):,} families, source snapshot IDs, summary and evidence counts.</p>
+      <div class="controls" id="family-controls" hidden>
+        <label>Search accession or family <input id="family-query" type="search"></label>
+        <label>Seed status <select id="seed-filter"><option value="">All seed statuses</option></select></label>
+        <button id="reset-families" type="button">Clear search and filters</button>
+      </div>
+      <p id="family-count" role="status" aria-live="polite">{len(families):,} families.</p>
+      <noscript><p>Search and paging require JavaScript. All families remain available in the
+        scrollable table and complete JSON download.</p></noscript>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Family worklist; scroll to read all columns">
+        <table id="family-table">
           <thead>
             <tr>
               <th>Pfam</th>
@@ -381,6 +427,7 @@ def _index_html(
               <th class="num">Proteins</th>
               <th class="num">Structures</th>
               <th class="num">AlphaFold</th>
+              <th>Other Mechs</th>
             </tr>
           </thead>
           <tbody>
@@ -388,7 +435,44 @@ def _index_html(
           </tbody>
         </table>
       </div>
+      <div class="pagination" id="family-pagination" hidden>
+        <button id="previous-families" type="button">Previous page</button>
+        <span id="family-page"></span>
+        <button id="next-families" type="button">Next page</button>
+      </div>
     </section>
+    <section class="section legend" aria-labelledby="status-guide">
+      <h2 id="status-guide">How to read this worklist</h2>
+      <dl>
+        <dt>Seed status</dt><dd>A name-based classification of the frozen InterPro/Pfam metadata.
+          UNKNOWN CANDIDATE means the name or description explicitly says the function is unknown.
+          KNOWN HISTORICAL DUF means a DUF name matched without that unknown-function wording;
+          this heuristic is not proof of a known function and does not establish experimental
+          characterization. FALSE POSITIVE TEXT HIT means
+          the metadata did not meet the DUF or unknown-function naming rules.</dd>
+        <dt>Characterization</dt><dd>A separate evidence-scoring result, when a matching score
+          snapshot is available. UNSCORED means no score has been calculated for this family;
+          it is not evidence that the family lacks a known function.
+          Missing scores are not negative evidence. A scored UNKNOWN CANDIDATE has no counted
+          known or partial signal; context may still be present. PARTIALLY CHARACTERIZED has
+          partial support without a known signal or inherited historical seed label.
+          KNOWN HISTORICAL DUF can inherit the seed label or reflect a known-function signal;
+          neither implies experimental validation by itself.</dd>
+        <dt>Evidence counts</dt><dd>Counts of source-specific signals, not unique proteins,
+          publications, or confidence scores. Known counts Rhea reactions and experimentally
+          supported GO molecular-function annotations. Partial counts specific domain/family
+          assignments and other functional annotations. Context counts structural, environmental,
+          orthology, interaction, and neighborhood signals; context alone does not assign function.
+          Repeated annotations are not necessarily independent experiments.
+          Not scored means those counts are unavailable.</dd>
+        <dt>Missing counts</dt><dd>Not available means the source did not supply that counter.
+          A displayed zero is a reported count, not a missing value.</dd>
+      </dl>
+    </section>
+    <footer>Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      Code: <a href="https://github.com/CultureBotAI/DUFMech/blob/main/LICENSE-CODE">BSD 3-Clause</a>.
+      Redistributed source material retains its applicable third-party terms.
+      <a href="https://github.com/CultureBotAI/DUFMech/blob/main/LICENSE">License policy</a>.</footer>
   </main>
 </body>
 </html>
@@ -407,8 +491,11 @@ def _family_row(row: dict[str, Any]) -> str:
     short_name = escape(row["short_name"])
     pfam = escape(row["pfam_id"])
     source_url = row["source_url"]
-    if _safe_url(source_url):
-        pfam = f'<a href="{escape(source_url, quote=True)}">{pfam}</a>'
+    # family_index validates the accession, so the human entry URL is independent
+    # of an optional API/source URL supplied by a snapshot.
+    pfam = f'<a href="https://www.ebi.ac.uk/interpro/entry/pfam/{pfam}/">{pfam}</a>'
+    source = (f' <a href="{escape(source_url, quote=True)}">Source API</a>'
+              if _safe_url(source_url) else "")
     characterization_status = row["characterization_status"] or "UNSCORED"
     score_text = (
         f"Known: {_count(row['known_evidence_count'])}; "
@@ -417,8 +504,9 @@ def _family_row(row: dict[str, Any]) -> str:
     )
     if characterization_status == "UNSCORED":
         score_text = "Not scored"
-    return f"""<tr>
-  <td>{pfam}</td>
+    search = escape(" ".join(str(row[k]) for k in ("pfam_id", "short_name", "name", "interpro_id")), quote=True)
+    return f"""<tr id="{escape(row['pfam_id'], quote=True)}" data-search="{search}" data-status="{escape(row['unknown_status'], quote=True)}">
+  <td>{pfam}<a class="row-link" href="#{escape(row['pfam_id'], quote=True)}">Link to this family</a>{source}</td>
   <td><strong>{name}</strong><br>{short_name}</td>
   <td class="status">{escape(row["unknown_status"].replace("_", " "))}</td>
   <td class="status">{escape(characterization_status.replace("_", " "))}</td>
@@ -426,6 +514,83 @@ def _family_row(row: dict[str, Any]) -> str:
   <td class="num">{_count(row["proteins"])}</td>
   <td class="num">{_count(row["structures"])}</td>
   <td class="num">{_count(row["alphafold_models"])}</td>
+  <td>{_other_mechs(row["cross_mech"])}</td>
+</tr>"""
+
+
+def _attach_cross_mech(
+    families: list[dict[str, Any]], rows: list[dict[str, Any]]
+) -> dict[str, int]:
+    """Attach per-family cross-Mech links and return dashboard totals."""
+
+    known = {family["pfam_id"] for family in families}
+    extra = {row["pfam_id"] for row in rows if row.get("pfam_id")} - known
+    if extra:
+        raise ReportError(f"cross-Mech families absent from worklist: {', '.join(sorted(extra))}")
+    by_pfam: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        pfam_id = row.get("pfam_id") or ""
+        if not pfam_id:
+            continue
+        entry = by_pfam.setdefault(pfam_id, {"mechs": {}, "proteins": set(), "trait": False})
+        # Every worklist family has a ProteinTraitsMech trait record; report it as a flag
+        # so it does not swamp the per-Mech counts and the headline metric.
+        if (row["source_mech"] == PROTEIN_TRAITS_MECH
+                and row["source_section"] == "trait_identifier"):
+            entry["trait"] = True
+            continue
+        entry["mechs"].setdefault(row["source_mech"], set()).add(row["source_path"])
+        if row.get("uniprot_accession"):
+            entry["proteins"].add(row["uniprot_accession"])
+    for family in families:
+        entry = by_pfam.get(family["pfam_id"], {"mechs": {}, "proteins": set(), "trait": False})
+        family["cross_mech"] = {
+            "records_by_mech": {mech: len(paths) for mech, paths in sorted(entry["mechs"].items())},
+            "example_proteins": len(entry["proteins"]),
+            "protein_traits_record": entry["trait"],
+        }
+    return {
+        "rows": len(rows),
+        "families": sum(1 for entry in by_pfam.values() if entry["mechs"]),
+        "proteins": len({row["uniprot_accession"] for row in rows if row.get("uniprot_accession")}),
+    }
+
+
+def _other_mechs(summary: dict[str, Any]) -> str:
+    mechs = summary["records_by_mech"]
+    text = "<br>".join(f"{escape(name)}: {count:,}" for name, count in mechs.items())
+    proteins = summary["example_proteins"]
+    if proteins:
+        text += f"<br>{proteins:,} example protein{'s' if proteins != 1 else ''}"
+    if summary["protein_traits_record"]:
+        text += ("<br>" if text else "") + "ProteinTraitsMech trait record"
+    return text
+
+
+def _cross_mech_row(row: dict[str, Any], sources: dict[str, Any]) -> str:
+    family = escape(row["short_name"] or row["pfam_id"])
+    if row["pfam_id"]:
+        family = f"{family}<br>{escape(row['pfam_id'])}"
+    else:
+        family = f"{family}<br>not in worklist"
+    source = sources.get(row["source_mech"], {})
+    record = escape(row["source_record_label"] or row["source_record_id"])
+    url = f"{source.get('repository', '')}/blob/{source.get('commit', '')}/{row['source_path']}"
+    if source and _safe_url(url):
+        record = f'<a href="{escape(url, quote=True)}">{record}</a>'
+    protein = ""
+    if row["uniprot_accession"]:
+        accession = escape(row["uniprot_accession"])
+        protein = (
+            f'<a href="https://rest.uniprot.org/uniprotkb/{accession}">{accession}</a>'
+            f"<br>{escape(row['protein_label'])}"
+        )
+    return f"""<tr>
+  <td>{family}</td>
+  <td>{escape(row["source_mech"])}</td>
+  <td>{record}</td>
+  <td>{protein}</td>
+  <td class="status">{escape(", ".join(row["link_basis"]).replace("_", " "))}</td>
 </tr>"""
 
 

@@ -180,14 +180,24 @@ def test_cli_runs_offline_and_reports_new_snapshot(parent, tmp_path, capsys) -> 
     assert exc.value.code == 1
 
 
-def test_committed_correction_is_reproducible_and_original_snapshot_is_unchanged(tmp_path) -> None:
+def test_correction_matches_published_records_without_rewriting_snapshots(tmp_path) -> None:
     directory = Path("data/worklists")
     old = directory / "interpro-pfam-duf-2026-10-01.json"
     committed_manifest = directory / "interpro-pfam-duf-2026-10-05.manifest.json"
     manifest = json.loads(committed_manifest.read_text())
+    frozen_paths = [old, committed_manifest, *(
+        directory / entry["path"] for entry in manifest["files"].values()
+    )]
+    frozen = {path: path.read_bytes() for path in frozen_paths}
     timestamp = datetime.fromisoformat(manifest["snapshot"]["generated_at"].replace("Z", "+00:00"))
     regenerated = reclassify_snapshot(old, tmp_path, snapshot_date="2026-10-05", generated_at=timestamp)
-    assert manifest == regenerated
-    for entry in regenerated["files"].values():
-        assert (directory / entry["path"]).read_bytes() == (tmp_path / entry["path"]).read_bytes()
+    published = json.loads((directory / manifest["files"]["json"]["path"]).read_text())
+    corrected = json.loads((tmp_path / regenerated["files"]["json"]["path"]).read_text())
+    assert {row["pfam_id"]: row for row in published} == {
+        row["pfam_id"]: row for row in corrected
+    }
+    assert regenerated["derivation"]["changed_status_rows"] == 1621
+    assert regenerated["derivation"]["changed_reason_rows"] == 2101
+    assert check_manifest(tmp_path / committed_manifest.name) == []
+    assert frozen == {path: path.read_bytes() for path in frozen_paths}
     assert sha256(old) == "141fd83d020563444c6498a3f0dc4d7924e7cf759647b449271f4d00c612b689"

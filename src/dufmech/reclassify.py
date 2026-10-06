@@ -6,7 +6,7 @@ import argparse
 import hashlib
 import json
 from collections import Counter
-from dataclasses import fields
+from dataclasses import dataclass, fields
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -23,14 +23,22 @@ from dufmech.worklist import (
 )
 
 
-def reclassify_snapshot(
+@dataclass(frozen=True)
+class PreparedReclassification:
+    """Verified correction artifacts and a dry-run summary, with no files written."""
+
+    manifest: dict[str, Any]
+    artifacts: dict[str, str]
+    summary: dict[str, Any]
+
+
+def prepare_reclassification(
     input_json: Path,
-    out_dir: Path,
     *,
     snapshot_date: str,
     generated_at: datetime | None = None,
-) -> dict[str, Any]:
-    """Create a new, non-overwriting JSON/TSV/manifest snapshot without fetching data."""
+) -> PreparedReclassification:
+    """Validate frozen input and prepare complete correction provenance without writing."""
 
     manifest_path = input_json.with_suffix(".manifest.json")
     issues = check_manifest(manifest_path)
@@ -44,7 +52,9 @@ def reclassify_snapshot(
         raise ReportError("input must be an InterPro/Pfam worklist snapshot")
     day = date.fromisoformat(snapshot_date)
     if day <= date.fromisoformat(parent["snapshot"]["date"]):
-        raise ReportError("the correction date must be later than the input snapshot date")
+        raise ReportError(
+            "reclassification needs a newer snapshot date, later than the input snapshot date"
+        )
     input_bytes = input_json.read_bytes()
     if (
         hashlib.sha256(input_bytes).hexdigest() != parent["files"]["json"]["sha256"]
@@ -114,9 +124,45 @@ def reclassify_snapshot(
         "status_transitions": dict(sorted(transitions.items())),
         "fetched_live": False,
     }
+    changes = [
+        {
+            "pfam_id": row.pfam_id,
+            "before": original[row.pfam_id].unknown_status,
+            "after": row.unknown_status,
+            "before_reasons": list(original[row.pfam_id].candidate_reasons),
+            "after_reasons": list(row.candidate_reasons),
+        }
+        for row in corrected
+        if row.unknown_status != original[row.pfam_id].unknown_status
+        or tuple(row.candidate_reasons) != tuple(original[row.pfam_id].candidate_reasons)
+    ]
+    summary = {
+        "source_snapshot": parent["snapshot"]["id"],
+        "source_sha256": parent["files"]["json"]["sha256"],
+        "policy": CLASSIFIER_POLICY,
+        "rows": len(corrected),
+        "changed_statuses": sum(transitions.values()),
+        "by_unknown_status": manifest["rows"]["by_unknown_status"],
+        "changes": changes,
+    }
     texts[f"{snapshot_id}.manifest.json"] = json.dumps(manifest, indent=2, sort_keys=True) + "\n"
-    write_snapshot_artifacts(out_dir, texts)
-    return manifest
+    return PreparedReclassification(manifest, texts, summary)
+
+
+def reclassify_snapshot(
+    input_json: Path,
+    out_dir: Path,
+    *,
+    snapshot_date: str,
+    generated_at: datetime | None = None,
+) -> dict[str, Any]:
+    """Create a new, non-overwriting JSON/TSV/manifest snapshot without fetching data."""
+
+    prepared = prepare_reclassification(
+        input_json, snapshot_date=snapshot_date, generated_at=generated_at
+    )
+    write_snapshot_artifacts(out_dir, prepared.artifacts)
+    return prepared.manifest
 
 
 def main(argv: list[str] | None = None) -> int:

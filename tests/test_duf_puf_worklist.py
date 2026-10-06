@@ -111,6 +111,8 @@ def test_historical_duf_names_are_kept_but_demoted() -> None:
         "Repeat of unknown function (DUF5641)",
         "Coiled-coil region of unknown function (DUF5641)",
         "Protein structure with unknown function (DUF5641)",
+        "The function of this family is unknown",
+        "Domain if unknown function",
     ],
 )
 def test_unknown_function_names_are_candidates_regardless_of_entity_word(name) -> None:

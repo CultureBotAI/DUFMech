@@ -5,8 +5,10 @@ This is an offline correction of the classifier applied to
 curation. The original JSON, TSV, and manifest remain unchanged. All 6,532
 families, identifiers, names, descriptions, source URLs, and counters are
 preserved in the new `interpro-pfam-duf-2026-10-05` snapshot. Only
-`unknown_status` and `candidate_reasons` can change; row order follows the
-existing status/protein-count/accession ordering.
+`unknown_status` and `candidate_reasons` can change. The snapshot published
+in PR #93 is retained byte-for-byte, including its original row ordering and
+manifest. The hardened correction command produces the same family records
+in status/protein-count/accession order, with expanded provenance for new runs.
 
 ## Defect And Policy
 
@@ -60,9 +62,11 @@ remaining 378 families as characterized.
 
 ## Provenance And Reproduction
 
-The derived manifest records the parent snapshot identity, its generation time,
-the classifier policy, transition counts, and the byte size and SHA-256 of
-all three parent artifacts. Parent JSON SHA-256:
+The published manifest retains its per-family `reclassification` audit from
+PR #93. Newly generated correction manifests use a `derivation` block recording
+the parent snapshot identity, its generation time, classifier policy, transition
+counts, and the byte size and SHA-256 of all three parent artifacts. Parent
+JSON SHA-256:
 
 ```text
 141fd83d020563444c6498a3f0dc4d7924e7cf759647b449271f4d00c612b689
@@ -78,13 +82,21 @@ just reclassify-duf-puf-worklist \
   --snapshot-date 2026-10-05 --out-dir /tmp/dufmech-classification-check
 ```
 
-The output JSON and TSV are deterministic. The manifest generation time
-records the actual reclassification run. A corpus regression test supplies
-the committed generation time and verifies all regenerated artifacts exactly,
-as well as the original JSON hash.
+The output JSON and TSV are deterministic. The manifest generation time records
+the actual reclassification run. Regression tests verify byte-identical outputs
+for repeated runs with the same inputs and generation time, equality of all
+family records with the published correction, preservation of the published
+files, and the original JSON hash. Re-running does not reproduce the older
+manifest format or row ordering; it must not replace the published snapshot.
+
+The legacy `scripts/reclassify_worklist.py` command retains its `--source`,
+`--out`, and `--apply` interface and dry-run default. Both commands now use the
+same verified preparation and exclusive writer. Unknown fields and duplicate
+families are rejected, and the complete correction manifest is prepared before
+any output is opened rather than rewriting a base manifest after publication.
 
 No score snapshot was generated or relabeled by this correction. The current
 dashboard therefore still marks all families `UNSCORED`. Scores derived from
 the old worklist must be regenerated, not silently attached to the corrected
-worklist. Cross-Mech snapshots referencing the old worklist also need explicit
-lineage updates; see the coordination note on PR #68.
+worklist. PR #68 supplied an explicit cross-Mech lineage update in
+`cross-mech-duf-examples-2026-10-06`; that snapshot and its inputs remain unchanged.

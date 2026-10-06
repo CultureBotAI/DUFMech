@@ -111,6 +111,14 @@ freeze-duf-puf-string *args="":
 freeze-duf-puf-uniparc *args="":
     uv run python scripts/freeze_duf_puf_uniparc.py {{args}}
 
+# Freeze DUF/PUF families and proteins already curated in sibling Mechs.
+freeze-cross-mech *args="":
+    uv run python scripts/freeze_cross_mech_examples.py {{args}}
+
+# Write docs/reports/ for the latest cross-Mech snapshot.
+cross-mech-report *args="":
+    uv run python scripts/cross_mech_report.py {{args}}
+
 # Score frozen DUF/Pfam families with evidence snapshots.
 score-duf-puf *args="":
     uv run python scripts/score_duf_puf.py {{args}}
