@@ -19,9 +19,18 @@ def main(argv: list[str] | None = None) -> int:
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--worklists-dir", type=Path, default=Path("data/worklists"))
+    parser.add_argument(
+        "--cross-mech-dir",
+        type=Path,
+        default=Path("data/cross_mech"),
+        help="checked when present; cross-Mech snapshots are optional",
+    )
     args = parser.parse_args(argv)
 
-    issues = check_worklist_manifests(args.worklists_dir)
+    directories = [args.worklists_dir]
+    if args.cross_mech_dir.exists():
+        directories.append(args.cross_mech_dir)
+    issues = [issue for directory in directories for issue in check_worklist_manifests(directory)]
     if issues:
         print(
             "DUFMech provenance check failed:\n  "
@@ -30,8 +39,8 @@ def main(argv: list[str] | None = None) -> int:
         )
         return 1
 
-    count = len(worklist_manifest_paths(args.worklists_dir))
-    print(f"validated {count} DUFMech worklist manifest(s)")
+    count = sum(len(worklist_manifest_paths(directory)) for directory in directories)
+    print(f"validated {count} DUFMech snapshot manifest(s)")
     return 0
 
 

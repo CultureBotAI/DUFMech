@@ -48,6 +48,11 @@ COMMANDS = (
         "Exercise cross-snapshot DUF/PUF summary metrics.",
     ),
     QualityCommand(
+        "cross-Mech report",
+        (sys.executable, "scripts/cross_mech_report.py", "--check"),
+        "The committed cross-Mech report must match the frozen snapshot.",
+    ),
+    QualityCommand(
         "generated site",
         (sys.executable, "scripts/render_pages.py", "--check"),
         "The committed dashboard must not drift from frozen data.",

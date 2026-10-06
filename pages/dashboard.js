@@ -1,7 +1,7 @@
 /* Progressive enhancement: without JavaScript the bounded table keeps every row. */
 (() => {
   'use strict';
-  const rows = Array.from(document.querySelectorAll('tbody tr'));
+  const rows = Array.from(document.querySelectorAll('#family-table tbody tr'));
   const query = document.getElementById('family-query');
   const status = document.getElementById('seed-filter');
   const previous = document.getElementById('previous-families');
