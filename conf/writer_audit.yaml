@@ -94,6 +94,11 @@ helpers:
     formats: ["json","tsv","manifest.json"]
     policy: "exclusive-artifact-set"
     tests: ["tests/test_cross_mech.py"]
+  write_pfam_previous_names_snapshot:
+    path: "src/dufmech/pfam_history_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "exclusive-artifact-set"
+    tests: ["tests/test_pfam_history.py"]
   write_snapshot_artifacts:
     path: "src/dufmech/snapshot.py"
     formats: ["json","tsv","manifest.json"]

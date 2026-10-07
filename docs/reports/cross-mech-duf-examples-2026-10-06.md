@@ -88,6 +88,23 @@ These records are now carried in DUFMech's cross-Mech snapshot and dashboard.
 
 12 names do not match a current worklist short name: DUF1814, DUF1998, DUF262, DUF4201, DUF4263, DUF4297, DUF4338, DUF4393, UPF0014, UPF0018, UPF0037, UPF0265. DUF names here are usually families Pfam renamed after characterization; UPF names are UniProt nomenclature, which the Pfam-derived worklist never carries. Both need a Pfam ID before DUFMech can score them.
 
+Pfam previous identifiers (`pfam-previous-unknown-names-2026-10-07`) resolve these names to current families. A former DUF name records Pfam history; it is not by itself evidence of characterization.
+
+| Name | Cited in | Current Pfam family | Description | In worklist |
+|---|---|---|---|---|
+| DUF1814 | TraitMech | PF08843 AbiEii | Nucleotidyl transferase AbiEii toxin, Type IV TA system | no |
+| DUF1998 | TraitMech | PF09369 MZB | MrfA Zn-binding domain | no |
+| DUF262 | TaxonMech, TraitMech | PF03235 GmrSD_N | GmrSD restriction endonuclease, N-terminal domain | no |
+| DUF4201 | TraitMech | PF13870 CCDC113_CCDC96_CC | CCDC113/CCDC96, coiled-coil | no |
+| DUF4263 | TraitMech | PF14082 SduA_C | Shedu protein SduA, C-terminal | no |
+| DUF4297 | TraitMech | PF14130 Cap4_nuclease | Cap4, dsDNA endonuclease domain | no |
+| DUF4338 | TraitMech | PF14236 DruA | Druantia protein DruA | no |
+| DUF4393 | TraitMech | PF14337 Abi_alpha | Abortive infection alpha | no |
+| UPF0014 | TaxonMech | not a Pfam previous identifier (UniProt UPF nomenclature) | | |
+| UPF0018 | TaxonMech | not a Pfam previous identifier (UniProt UPF nomenclature) | | |
+| UPF0037 | TaxonMech | not a Pfam previous identifier (UniProt UPF nomenclature) | | |
+| UPF0265 | CellStructureMech | not a Pfam previous identifier (UniProt UPF nomenclature) | | |
+
 ## ProteinTraitsMech
 
 - 6,532 of 6,532 linked families have a ProteinTraitsMech trait record.

@@ -359,3 +359,23 @@
   writer: "write_cross_mech_snapshot"
   scoring: "NOT_SCORED"
   artifacts: ["data/cross_mech/cross-mech-duf-examples-2026-10-05.manifest.json","data/cross_mech/cross-mech-duf-examples-2026-10-06.manifest.json"]
+
+- source: "pfam_previous_ids"
+  name: "Pfam-A.seed previous identifiers"
+  url: "https://ftp.ebi.ac.uk/pub/databases/Pfam/releases/Pfam38.2/Pfam-A.seed.gz"
+  status: "enrichment"
+  seeder: "freeze_pfam_previous_names.py"
+  license: "CC0-1.0"
+  redistribution: "CC0_OK"
+  license_url: "https://interpro-documentation.readthedocs.io/en/latest/license.html"
+  license_verified_on: "2026-10-07"
+  license_note: "InterPro, Pfam, PRINTS and SFLD downloadable data are CC0 1.0; only family header fields are retained, not alignments."
+  access: "BULK"
+  access_note: "Streams the pinned Pfam release seed file and keeps #=GF ID/AC/DE/PI headers; the manifest records release, Last-Modified, byte count and SHA-256."
+  implementation: "IMPLEMENTED"
+  reviewed_on: "2026-10-07"
+  review_basis: "docs/provenance/pfam-previous-unknown-names-2026-10-07.md"
+  adapter: "src/dufmech/pfam_history_snapshot.py"
+  writer: "write_pfam_previous_names_snapshot"
+  scoring: "NOT_SCORED"
+  artifacts: ["data/worklists/pfam-previous-unknown-names-2026-10-07.manifest.json"]

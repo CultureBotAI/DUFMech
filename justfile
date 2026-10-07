@@ -169,6 +169,10 @@ freeze-duf-puf-string *args="":
 freeze-duf-puf-uniparc *args="":
     uv run python scripts/freeze_duf_puf_uniparc.py {{args}}
 
+# Freeze Pfam families renamed from DUF/UPF names (Pfam-A.seed previous IDs).
+freeze-pfam-previous-names *args="":
+    uv run python scripts/freeze_pfam_previous_names.py {{args}}
+
 # Freeze DUF/PUF families and proteins already curated in sibling Mechs.
 freeze-cross-mech *args="":
     uv run python scripts/freeze_cross_mech_examples.py {{args}}

@@ -15,14 +15,28 @@ from dufmech.cross_mech_snapshot import (
     CROSS_MECH_STEM,
     load_cross_mech_snapshot,
 )
-from dufmech.report import ReportError, latest_snapshot_path, load_latest_rows
+from dufmech.pfam_history import previous_name_index
+from dufmech.pfam_history_snapshot import PFAM_PREVIOUS_NAMES_STEM
+from dufmech.report import (
+    ReportError,
+    latest_snapshot_path,
+    load_json_rows,
+    load_latest_rows,
+    verified_manifest,
+)
 
 REPORTS_DIR = Path("docs/reports")
 TOP_N = 15
 
 
 def render_cross_mech_report(
-    rows: list[Mapping[str, Any]], manifest: Mapping[str, Any], *, top_n: int = TOP_N
+    rows: list[Mapping[str, Any]],
+    manifest: Mapping[str, Any],
+    *,
+    top_n: int = TOP_N,
+    previous_names: list[Mapping[str, Any]] | None = None,
+    previous_names_id: str = "",
+    worklist_ids: frozenset[str] = frozenset(),
 ) -> str:
     """Return a deterministic Markdown report for one cross-Mech snapshot."""
 
@@ -103,6 +117,7 @@ def render_cross_mech_report(
         f"{', '.join(unlisted) or 'none'}. DUF names here are usually families Pfam renamed "
         "after characterization; UPF names are UniProt nomenclature, which the Pfam-derived "
         "worklist never carries. Both need a Pfam ID before DUFMech can score them."),
+        *_renamed_section(curated, unlisted, previous_names, previous_names_id, worklist_ids),
         "",
         "## ProteinTraitsMech",
         "",
@@ -246,6 +261,48 @@ def _reuse_sections(
     return lines
 
 
+def _renamed_section(
+    curated: list[Mapping[str, Any]],
+    unlisted: list[str],
+    previous_names: list[Mapping[str, Any]] | None,
+    previous_names_id: str,
+    worklist_ids: frozenset[str] = frozenset(),
+) -> list[str]:
+    """Resolve unlisted names through Pfam previous identifiers, when a snapshot exists."""
+
+    if previous_names is None or not unlisted:
+        return []
+    index = previous_name_index(previous_names)
+    lines = [
+        "",
+        (f"Pfam previous identifiers (`{previous_names_id}`) resolve these names to current "
+         "families. A former DUF name records Pfam history; it is not by itself evidence "
+         "of characterization."),
+        "",
+        "| Name | Cited in | Current Pfam family | Description | In worklist |",
+        "|---|---|---|---|---|",
+    ]
+    for name in unlisted:
+        mechs = ", ".join(sorted({
+            row["source_mech"] for row in curated
+            if not row["pfam_id"] and row["short_name"] == name
+        }))
+        matches = index.get(name, [])
+        if not matches:
+            reason = (
+                "not a Pfam previous identifier (UniProt UPF nomenclature)"
+                if name.startswith("UPF") else "not found in Pfam previous identifiers"
+            )
+            lines.append(f"| {name} | {mechs} | {reason} | | |")
+        for match in matches:
+            lines.append(
+                f"| {name} | {mechs} | {match['pfam_id']} {_cell(match['short_name'])} | "
+                f"{_cell(match['description'])} | "
+                f"{'yes' if match['pfam_id'] in worklist_ids else 'no'} |"
+            )
+    return lines
+
+
 def _protein_list(rows: Iterable[Mapping[str, Any]], *, limit: int) -> str:
     seen: dict[str, Mapping[str, Any]] = {}
     for row in sorted(rows, key=lambda row: (row["reviewed"] is not True, row["uniprot_accession"])):
@@ -289,7 +346,20 @@ def main(argv: list[str] | None = None) -> int:
         rows, manifest = load_cross_mech_snapshot(
             path, worklist_rows=worklist_rows, worklist_snapshot_id=input_ids["worklist"]
         )
-        text = render_cross_mech_report(rows, manifest)
+        previous_path = latest_snapshot_path(
+            args.worklists_dir, PFAM_PREVIOUS_NAMES_STEM, required=False
+        )
+        previous_names = None
+        if previous_path is not None:
+            verified_manifest(previous_path)
+            previous_names = list(load_json_rows(previous_path))
+        text = render_cross_mech_report(
+            rows,
+            manifest,
+            previous_names=previous_names,
+            previous_names_id=previous_path.stem if previous_path is not None else "",
+            worklist_ids=frozenset(row["pfam_id"] for row in worklist_rows),
+        )
     except (ReportError, KeyError) as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1
