@@ -204,6 +204,10 @@ freeze-duf-puf-uniparc *args="":
 freeze-pfam-previous-names *args="":
     uv run python scripts/freeze_pfam_previous_names.py {{args}}
 
+# Freeze UniProtKB example-protein candidates for DUF families that lack one.
+freeze-example-candidates *args="":
+    uv run python scripts/freeze_example_candidates.py {{args}}
+
 # Freeze DUF/PUF families and proteins already curated in sibling Mechs.
 freeze-cross-mech *args="":
     uv run python scripts/freeze_cross_mech_examples.py {{args}}

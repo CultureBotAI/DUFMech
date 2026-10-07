@@ -379,3 +379,23 @@
   writer: "write_pfam_previous_names_snapshot"
   scoring: "NOT_SCORED"
   artifacts: ["data/worklists/pfam-previous-unknown-names-2026-10-07.manifest.json"]
+
+- source: "uniprot_example_candidates"
+  name: "UniProtKB example-protein candidates for DUF families"
+  url: "https://rest.uniprot.org/uniprotkb/search"
+  status: "enrichment"
+  seeder: "freeze_example_candidates.py"
+  license: "CC-BY-4.0"
+  redistribution: "ATTRIBUTION"
+  license_url: "https://rest.uniprot.org/help/license"
+  license_verified_on: "2026-10-07"
+  license_note: "CC BY 4.0 covers copyrightable UniProt database content; preserve attribution. Pfam membership comes from UniProtKB cross-references."
+  access: "API"
+  access_note: "One UniProtKB search per target family (xref:pfam-ID, sorted by annotation score then accession); the manifest records query, fields, sort, release and targets."
+  implementation: "IMPLEMENTED"
+  reviewed_on: "2026-10-07"
+  review_basis: "docs/provenance/uniprot-duf-example-candidates-2026-10-07.md"
+  adapter: "src/dufmech/example_candidates_snapshot.py"
+  writer: "write_example_candidates_snapshot"
+  scoring: "NOT_SCORED"
+  artifacts: ["data/worklists/uniprot-duf-example-candidates-2026-10-07.manifest.json"]
