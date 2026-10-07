@@ -1,0 +1,27 @@
+id: Pfam:PF20029
+pfam_id: PF20029
+name: Domain of unknown function (DUF6436)
+short_name: DUF6436
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20029
+counters:
+  proteins: 805
+  matches: 805
+  proteomes: 760
+  taxa: 1020
+  structures: 0
+  alphafold_models: 452
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045494
+description: This domain of unknown function is found in uncharacterised bacterial proteins. This domain
+  is about 60 amino acids in length and contains the conserved motifs GPY, GxxC and GCxC. These conserved
+  cysteine residues and the fact that this domain has overlaps with families in clan CL0172 suggest that
+  it is related to thioredoxins and it is likely in thiol-disulfide isomerases.

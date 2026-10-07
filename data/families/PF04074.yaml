@@ -1,0 +1,26 @@
+id: Pfam:PF04074
+pfam_id: PF04074
+name: YhcH/YjgK/YiaL
+short_name: DUF386
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04074
+counters:
+  proteins: 3803
+  matches: 3805
+  proteomes: 2623
+  taxa: 4146
+  structures: 4
+  alphafold_models: 2435
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004375
+description: This family consists of bacterial proteins. YjgK (TabA) influences biofilm formation by toxin-antitoxin
+  systems [[cite:PUB00078078]]. Another member of this family, YhcH, is a possible sugar isomerase of
+  sialic acid catabolism [[cite:PUB00054289]].

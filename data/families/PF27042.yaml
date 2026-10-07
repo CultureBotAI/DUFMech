@@ -1,0 +1,27 @@
+id: Pfam:PF27042
+pfam_id: PF27042
+name: Domain of unknown function (DUF8343)
+short_name: DUF8343
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF27042
+counters:
+  proteins: 32
+  matches: 32
+  proteomes: 29
+  taxa: 68
+  structures: 0
+  alphafold_models: 6
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059387
+description: This entry represents a domain of unknown function in uncharacterised eukaryotic proteins
+  mainly from Trypanosoma. This domain contains a RNase-like fold. The core architecture typically features
+  a central five-stranded beta-sheet flanked by several alpha-helices. This domain can be found associated
+  with [pfam:PF01612].

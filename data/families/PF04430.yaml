@@ -1,0 +1,26 @@
+id: Pfam:PF04430
+pfam_id: PF04430
+name: Protein of unknown function (DUF498/DUF598)
+short_name: DUF498
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04430
+counters:
+  proteins: 8557
+  matches: 8559
+  proteomes: 7131
+  taxa: 14086
+  structures: 9
+  alphafold_models: 6673
+  domain_architectures: 80
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007523
+description: This is a large family of uncharacterised proteins found in all domains of life. The structure
+  shows a novel fold with three beta sheets. A dimeric form is found in the crystal structure. It was
+  suggested that the cleft in between the two monomers might bing nucleic acid [[cite:PUB00019473]].

@@ -48,6 +48,26 @@ COMMANDS = (
         "Exercise cross-snapshot DUF/PUF summary metrics.",
     ),
     QualityCommand(
+        "family records and schema",
+        (sys.executable, "-m", "dufmech.records", "--check"),
+        "Closed schemas, frozen identity/labels, evidence quotes and projections must agree.",
+    ),
+    QualityCommand(
+        "source governance",
+        (sys.executable, "-m", "dufmech.source_governance"),
+        "The source catalogue, adoption queue and native writer inventory must remain valid.",
+    ),
+    QualityCommand(
+        "retained review reports",
+        (sys.executable, "-m", "dufmech.reviews", "check"),
+        "Review artifacts retain timestamps, source hashes, scope and actual findings.",
+    ),
+    QualityCommand(
+        "curation history",
+        (sys.executable, "-m", "dufmech.history", "check"),
+        "Append-only events must conform to the canonical history schema.",
+    ),
+    QualityCommand(
         "cross-Mech report",
         (sys.executable, "scripts/cross_mech_report.py", "--check"),
         "The committed cross-Mech report must match the frozen snapshot.",
@@ -56,6 +76,16 @@ COMMANDS = (
         "generated site",
         (sys.executable, "scripts/render_pages.py", "--check"),
         "The committed dashboard must not drift from frozen data.",
+    ),
+    QualityCommand(
+        "site contract and budgets",
+        (sys.executable, "-m", "dufmech.site_contract"),
+        "Site links, full-corpus reachability, contrast tokens and byte limits are checked offline.",
+    ),
+    QualityCommand(
+        "browser regression tests",
+        ("npm", "run", "test:browser"),
+        "Playwright verifies catalogue controls, static fallback, themes and responsive layout.",
     ),
 )
 

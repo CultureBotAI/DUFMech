@@ -1,0 +1,10 @@
+{
+  "site_total_bytes": 250000000,
+  "generated_file_count": 25000,
+  "min_files": 10,
+  "groups": {
+    "index": {"glob": "index.html", "largest_bytes": 140000, "min_files": 1},
+    "html": {"glob": "**/*.html", "largest_bytes": 300000, "min_files": 1},
+    "catalogue": {"glob": "catalogue.json", "largest_bytes": 3000000, "min_files": 1}
+  }
+}

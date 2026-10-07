@@ -1,0 +1,26 @@
+id: Pfam:PF12045
+pfam_id: PF12045
+name: Protein of unknown function (DUF3528)
+short_name: DUF3528
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12045
+counters:
+  proteins: 2413
+  matches: 2514
+  proteomes: 746
+  taxa: 2346
+  structures: 0
+  alphafold_models: 2149
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021918
+description: This family of proteins is functionally uncharacterised. This protein is found in eukaryotes.
+  Proteins in this family are typically between 185 to 298 amino acids in length. This protein is found
+  associated with [pfam:PF00046].

@@ -1,0 +1,25 @@
+id: Pfam:PF25845
+pfam_id: PF25845
+name: Domain of unknown function (DUF7956)
+short_name: DUF7956
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25845
+counters:
+  proteins: 35
+  matches: 35
+  proteomes: 26
+  taxa: 43
+  structures: 0
+  alphafold_models: 21
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058262
+description: This entry corresponds to a mycobacterial domain of unknown function that shows structural
+  similarity to [pfam:PF04603].

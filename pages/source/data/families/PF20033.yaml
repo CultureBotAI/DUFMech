@@ -1,0 +1,28 @@
+id: Pfam:PF20033
+pfam_id: PF20033
+name: Domain of unknown function (DUF6438)
+short_name: DUF6438
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20033
+counters:
+  proteins: 1102
+  matches: 1103
+  proteomes: 934
+  taxa: 1497
+  structures: 0
+  alphafold_models: 697
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045497
+description: This domain of unknown function is found in uncharacterised proteins from bacteria and archaea.
+  This domain is about 75 amino acids in length and it contains the conserved motif CxxxGxCP. Towards
+  the C-terminal there are two conserved residues, a Glycine and an Aspartate. Some of the proteins containing
+  this domain also have an ankyrin repeat-containing region. This domain is related to the Emfourin proteins
+  [pfam:PF20242] and may have a related peptidase inhibitor function.

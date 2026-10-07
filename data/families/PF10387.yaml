@@ -1,0 +1,28 @@
+id: Pfam:PF10387
+pfam_id: PF10387
+name: Protein of unknown function (DUF2442)
+short_name: DUF2442
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10387
+counters:
+  proteins: 3900
+  matches: 3902
+  proteomes: 2496
+  taxa: 4598
+  structures: 3
+  alphafold_models: 2708
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018841
+description: This family of bacterial and fungal proteins has several members annotated as being putative
+  molybdopterin-guanine dinucleotide biosynthesis protein A; however this could not be verified. Hence
+  the function is not known. This family also includes the DUF3532 that was found to be related and was
+  merged into this family. Members of this family also fall into the NE0471 N-terminal domain-like superfamily,
+  a family of proteins with a unique fold in SCOP:143880.

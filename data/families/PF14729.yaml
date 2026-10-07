@@ -1,0 +1,27 @@
+id: Pfam:PF14729
+pfam_id: PF14729
+name: Domain of unknown function with cystatin-like fold (DUF4467)
+short_name: DUF4467
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14729
+counters:
+  proteins: 92
+  matches: 92
+  proteomes: 66
+  taxa: 112
+  structures: 1
+  alphafold_models: 60
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR028075
+description: Large family of predicted lipoproteins from Gram-positive bacteria Experimentally determined
+  structure shows a cystatitin-like fold, allowing us to classify this family in the NFT2 clan, despite
+  lack of any detectable sequence similarity between members of this family and other families in this
+  clan

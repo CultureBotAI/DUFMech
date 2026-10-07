@@ -1,0 +1,26 @@
+id: Pfam:PF28882
+pfam_id: PF28882
+name: Domain of unknown function (DUF8473)
+short_name: DUF8473
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28882
+counters:
+  proteins: 1289
+  matches: 1315
+  proteomes: 734
+  taxa: 1018
+  structures: 0
+  alphafold_models: 880
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061543
+description: This entry represents two tandem domains found at the N-terminal of [swissprot:Q89YF2] described
+  as TraN and related sequences. TraN is encoded by transfer region genes of conjugative transposons of
+  Bacteroides. These tandem domains may have a Ig-like fold.

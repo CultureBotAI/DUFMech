@@ -1,0 +1,28 @@
+id: Pfam:PF30808
+pfam_id: PF30808
+name: Domain of unknown function (DUF8746)
+short_name: DUF8746
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30808
+counters:
+  proteins: 9690
+  matches: 9691
+  proteomes: 3254
+  taxa: 3867
+  structures: 0
+  alphafold_models: 5162
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061807
+description: This entry represents a C-terminal domain of approximately 65 residues found in ABC transporter
+  ATP-binding proteins. The domain is located C-terminal to ABC_tran ([pfam:PF00005]) and AAA_21 ([pfam:PF13304])
+  domains. Many of these proteins are annotated as multidrug ABC transporters or ABC-2 type transport
+  systems, including some daunorubicin/doxorubicin resistance proteins. This family is found almost exclusively
+  in Actinomycetota, particularly Streptomyces. The function of this domain remains to be determined.

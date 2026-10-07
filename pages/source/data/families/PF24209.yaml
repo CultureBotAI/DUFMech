@@ -1,0 +1,26 @@
+id: Pfam:PF24209
+pfam_id: PF24209
+name: Domain of unknown function (DUF7431)
+short_name: DUF7431
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24209
+counters:
+  proteins: 596
+  matches: 624
+  proteomes: 23
+  taxa: 46
+  structures: 0
+  alphafold_models: 440
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055854
+description: This entry represents the domain of unknown function found towards the C-terminal of some
+  MACPF domain-containing proteins from fungi, such as SwissProt:A0A2P4PCT2. It is found associated with
+  MACPF_1 ([pfam:PF22693]) domain.

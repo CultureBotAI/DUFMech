@@ -1,0 +1,28 @@
+id: Pfam:PF26413
+pfam_id: PF26413
+name: Family of unknown function (DUF8108)
+short_name: DUF8108
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26413
+counters:
+  proteins: 265
+  matches: 265
+  proteomes: 170
+  taxa: 283
+  structures: 0
+  alphafold_models: 246
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058421
+description: This entry represents a family of uncharacterised proteins in archaea. The proteins containing
+  this domain are predominantly found in the class Halobacteria, which are known for their adaptation
+  to high-salt environments. The proteins in this family are typically around 100 to 300 amino acids in
+  length. Many of these proteins are predicted to be integral membrane proteins, as suggested by the presence
+  of multiple transmembrane helices. The family contains a C-terminal zinc ribbon domain.

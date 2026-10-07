@@ -1,0 +1,29 @@
+id: Pfam:PF26504
+pfam_id: PF26504
+name: Domain of unknown function (DUF8168) C-terminal domain
+short_name: DUF8168_C
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26504
+counters:
+  proteins: 36
+  matches: 36
+  proteomes: 36
+  taxa: 152
+  structures: 0
+  alphafold_models: 26
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059012
+description: This entry represents the C-terminal domain from a family of uncharacterised proteins found
+  predominantly in Proteobacteria that contain two domains. The proteins are distributed among various
+  orders including Burkholderiales, Rhodobacterales, and Hyphomicrobiales. The proteins in this family
+  are typically around 240 to 250 amino acids in length. This domain contains a conserved RHG motif that
+  may be functionally important. This alpha helical domain belongs to the Hpt superfamily according to
+  CATH.

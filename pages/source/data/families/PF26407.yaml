@@ -1,0 +1,31 @@
+id: Pfam:PF26407
+pfam_id: PF26407
+name: Family of unknown function (DUF8105)
+short_name: DUF8105
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26407
+counters:
+  proteins: 66
+  matches: 66
+  proteomes: 60
+  taxa: 117
+  structures: 0
+  alphafold_models: 61
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058418
+description: This entry represents a domain from a family of uncharacterised proteins in halobacteria.
+  The proteins in this family are predominantly found in archaea, specifically within the Halobacteria
+  class. The taxonomic distribution includes genera such as Halorubrum, Haloquadratum, and Haloarcula,
+  among others. The proteins in this family are typically around 116 to 118 amino acids in length. Some
+  proteins in this family are associated with plasmids, suggesting potential roles in horizontal gene
+  transfer or adaptation. The subcellular localization of these proteins is not well-defined, but they
+  may contain zinc finger-like motifs, indicating potential roles in nucleic acid binding or protein-protein
+  interactions.

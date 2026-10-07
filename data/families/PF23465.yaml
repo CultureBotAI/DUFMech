@@ -1,0 +1,29 @@
+id: Pfam:PF23465
+pfam_id: PF23465
+name: Domain of unknown function (DUF7131)
+short_name: DUF7131
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23465
+counters:
+  proteins: 1093
+  matches: 1093
+  proteomes: 1013
+  taxa: 2049
+  structures: 0
+  alphafold_models: 875
+  domain_architectures: 33
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055555
+description: This entry is a domain of unknown function found in some PA-PLA1 family members, which consists
+  of mitochondrial proteins that are probable phospholipases with a specific function to hydrolyze phosphatidic
+  acid. Members of this family are involved in the metabolism of phospholipids, which are critical components
+  of cell membranes. By hydrolyzing phosphatidic acid, these enzymes may play a role in the regulation
+  of mitochondrial membrane composition and dynamics, as well as in signaling pathways related to lipid
+  metabolism.

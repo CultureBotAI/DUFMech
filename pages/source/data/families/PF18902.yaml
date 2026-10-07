@@ -1,0 +1,27 @@
+id: Pfam:PF18902
+pfam_id: PF18902
+name: Domain of unknown function (DUF5658)
+short_name: DUF5658
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18902
+counters:
+  proteins: 1225
+  matches: 1225
+  proteomes: 872
+  taxa: 1602
+  structures: 0
+  alphafold_models: 986
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043717
+description: This family of proteins is found in bacteria, archaea and viruses. Proteins in this family
+  are typically between 101 and 135 amino acids in length. There is a completely conserved aspartate and
+  a conserved EXNP motif that may be functionally important. These and others residues form a deep pocket
+  that may bind to an as yet unidentified ligand. This family is related to [pfam:PF01889].

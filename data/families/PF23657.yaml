@@ -1,0 +1,26 @@
+id: Pfam:PF23657
+pfam_id: PF23657
+name: Domain of unknown function (DUF7151)
+short_name: DUF7151
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23657
+counters:
+  proteins: 502
+  matches: 961
+  proteomes: 371
+  taxa: 675
+  structures: 0
+  alphafold_models: 281
+  domain_architectures: 80
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055575
+description: This entry represents a domain of unknown function found in bacterial proteins. Some of the
+  members of this family might contain an EF-hand calcium binding site. The predicted structure of this
+  domain consists of three beta sheets.

@@ -1,0 +1,30 @@
+id: Pfam:PF26552
+pfam_id: PF26552
+name: Family of unknown function (DUF8181)
+short_name: DUF8181
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26552
+counters:
+  proteins: 32
+  matches: 32
+  proteomes: 32
+  taxa: 64
+  structures: 0
+  alphafold_models: 31
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058494
+description: This entry represents a domain from a family of uncharacterised proteins in the archaeal
+  phylum Thermoproteota. The proteins are predominantly found in the order Sulfolobales, which includes
+  genera such as Acidianus, Metallosphaera, and Sulfolobus. The domain is approximately 110 amino acids
+  in length. The reviewed protein SSO0428 from Saccharolobus solfataricus is a representative member of
+  this family. Proteins in this family are predicted to form a single long alpha helix. Structure prediction
+  suggests that this protein does not form a homomeric coiled-coil complex. Based on genomic context this
+  protein may be an accessory subunit of the V-type ATP synthase complex.

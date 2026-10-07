@@ -1,0 +1,26 @@
+id: Pfam:PF21914
+pfam_id: PF21914
+name: Domain of unknown function (DUF6921)
+short_name: DUF6921
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21914
+counters:
+  proteins: 36
+  matches: 36
+  proteomes: 35
+  taxa: 77
+  structures: 1
+  alphafold_models: 20
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054214
+description: This family of proteins is based on the known structure of a protein from Ruminococcus gnavus
+  PDB:3noh. The structure shows similarity to solute binding proteins. The exact function of these proteins
+  is not yet known.

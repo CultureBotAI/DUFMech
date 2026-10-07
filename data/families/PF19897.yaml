@@ -1,0 +1,27 @@
+id: Pfam:PF19897
+pfam_id: PF19897
+name: Family of unknown function (DUF6370)
+short_name: DUF6370
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19897
+counters:
+  proteins: 406
+  matches: 406
+  proteomes: 402
+  taxa: 512
+  structures: 0
+  alphafold_models: 252
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045950
+description: 'This family of proteins is found in bacteria and it is functionally uncharacterised. Proteins
+  in this family are approximately 110 amino acids in length. Some of the members included in this family
+  are thought to be glutaminyl-tRNA synthetases. There are some conserved sequence motifs: CGxC, YFVD/EG
+  and GDAH.'

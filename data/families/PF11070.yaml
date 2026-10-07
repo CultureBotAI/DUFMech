@@ -1,0 +1,29 @@
+id: Pfam:PF11070
+pfam_id: PF11070
+name: Protein of unknown function (DUF2871)
+short_name: DUF2871
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11070
+counters:
+  proteins: 914
+  matches: 914
+  proteomes: 859
+  taxa: 1357
+  structures: 0
+  alphafold_models: 576
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021299
+description: This is a family of short uncharacterised proteins predominantly found in bacteria. This
+  model matches four of the twelve transmembrane helices of cytochrome c and quinol oxidase subunit I
+  ([pfam:PF00115]) and contains the HxH motif conserved in both. A DALI search suggests that this family
+  may be related to Cox1, however, there is no evidence for the involvement of this family in any Cox1-like
+  assembly. AlphaFold prediction suggests that these proteins contain four transmembrane alpha helices
+  which can for a homotrimeric complex.

@@ -1,0 +1,26 @@
+id: Pfam:PF22653
+pfam_id: PF22653
+name: Domain of unknown function (DUF7007)
+short_name: DUF7007
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22653
+counters:
+  proteins: 444
+  matches: 445
+  proteomes: 358
+  taxa: 699
+  structures: 0
+  alphafold_models: 288
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054276
+description: This domain is found in uncharacterised bacterial proteins. It is predicted to adopt a globular
+  structure consisting of segregated alpha-helices and a five-stranded antiparallel beta-sheet. This domain
+  contains two highly conserved sequence motifs TxxHGG and YEED that may be of a functional importance.

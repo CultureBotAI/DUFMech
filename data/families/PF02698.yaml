@@ -1,0 +1,29 @@
+id: Pfam:PF02698
+pfam_id: PF02698
+name: DUF218 domain
+short_name: DUF218
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02698
+counters:
+  proteins: 25685
+  matches: 25685
+  proteomes: 14217
+  taxa: 20830
+  structures: 1
+  alphafold_models: 15881
+  domain_architectures: 92
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003848
+description: This domain contains several highly conserved charged amino acids, suggesting this may be
+  an enzymatic domain (Bateman A pers. obs). The entry includes SanA [swissprot:P33017] and Sfix ([swissprot:O33790])
+  from Salmonella typhimurium which are involved in Vancomycin resistance [[cite:PUB00019464]]. These
+  proteins may be involved in murein synthesis [[cite:PUB00019465]]. This domain is found in Escherichia
+  coli YdcF, which has been shown to bind S-adenosyl-L-methionine (AdoMet), but whose biochemical function
+  has not been identified [[cite:PUB00050945]].

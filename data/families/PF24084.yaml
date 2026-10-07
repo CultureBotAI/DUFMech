@@ -1,0 +1,27 @@
+id: Pfam:PF24084
+pfam_id: PF24084
+name: Domain of unknown function (DUF7369)
+short_name: DUF7369
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24084
+counters:
+  proteins: 112
+  matches: 112
+  proteomes: 112
+  taxa: 236
+  structures: 0
+  alphafold_models: 5
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055793
+description: This entry represents a small family of uncharacterised phage proteins. Structure prediction
+  suggests that this protein forms a small domain that likely forms a stable dimeric complex. In this
+  predicted complex there is a C-terminal alpha helix that binds to the opposite oligomer in a helix swapped
+  arrangement.

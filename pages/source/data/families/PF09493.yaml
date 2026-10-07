@@ -1,0 +1,27 @@
+id: Pfam:PF09493
+pfam_id: PF09493
+name: Tryptophan-rich protein (DUF2389)
+short_name: DUF2389
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09493
+counters:
+  proteins: 1174
+  matches: 1174
+  proteomes: 1152
+  taxa: 2018
+  structures: 0
+  alphafold_models: 695
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012663
+description: Members of this family are small hypothetical proteins of 60 to 100 residues from Cyanobacteria
+  and some Proteobacteria. Prochlorococcus marinus strains have two members, other species one only. Interestingly,
+  of the eight most conserved residues, four are aromatic and three are invariant tryptophans. It appears
+  all species that encode this protein can synthesise tryptophan de novo.

@@ -1,0 +1,27 @@
+id: Pfam:PF26498
+pfam_id: PF26498
+name: Domain of unknown function (DUF8164)
+short_name: DUF8164
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26498
+counters:
+  proteins: 37
+  matches: 37
+  proteomes: 37
+  taxa: 100
+  structures: 0
+  alphafold_models: 33
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058478
+description: This entry represents a family of uncharacterised proteins from halophilic archaea. The proteins
+  are primarily found in members of the Halobacteria class, including genera such as Natrialba, Natrarchaeobaculum,
+  and Halobiforma. The proteins in this family typically range from 200 to 300 amino acids in length.
+  These proteins contain an Ig-like fold.

@@ -1,0 +1,27 @@
+id: Pfam:PF28554
+pfam_id: PF28554
+name: Domain of unknown function (DUF8437)
+short_name: DUF8437
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28554
+counters:
+  proteins: 2405
+  matches: 2405
+  proteomes: 1679
+  taxa: 2928
+  structures: 0
+  alphafold_models: 151
+  domain_architectures: 167
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059481
+description: This entry represents a domain found in uncharacterised bacterial proteins. It is predicted
+  to fold into a small alpha/beta structure composed of beta-hairpin and array of helices packed on it.
+  This domain is usually found associated with a pair of P-loop domains with the typical for helicases
+  arrangement.

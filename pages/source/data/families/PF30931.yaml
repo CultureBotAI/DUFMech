@@ -1,0 +1,26 @@
+id: Pfam:PF30931
+pfam_id: PF30931
+name: Domain of unknown function (DUF8764)
+short_name: DUF8764
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30931
+counters:
+  proteins: 5286
+  matches: 5297
+  proteomes: 272
+  taxa: 1133
+  structures: 0
+  alphafold_models: 4208
+  domain_architectures: 303
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061825
+description: This entry represents a domain of unknown function mainly found at the C-terminal of sequences
+  from ticks, spiders and similar sequences from arthropods. This domain may adopt an alpha-helical bundle
+  fold similar to Ty3 transposon capsid-like proteins.

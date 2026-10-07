@@ -1,0 +1,26 @@
+id: Pfam:PF28543
+pfam_id: PF28543
+name: Domain of unknown function (DUF8435)
+short_name: DUF8435
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28543
+counters:
+  proteins: 287
+  matches: 287
+  proteomes: 106
+  taxa: 239
+  structures: 0
+  alphafold_models: 278
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059479
+description: This domain is found in a group of uncharacterised proteins from worms. This domain has highly
+  conserved motifs YRF and HLRxRK and is predicted to show high structural similarity with UBA domains,
+  which are often involved in ubiquitin binding. It is often found associated with [pfam:PF00650].

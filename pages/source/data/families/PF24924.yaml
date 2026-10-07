@@ -1,0 +1,25 @@
+id: Pfam:PF24924
+pfam_id: PF24924
+name: Domain of unknown function (DUF7745)
+short_name: DUF7745
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24924
+counters:
+  proteins: 9216
+  matches: 10094
+  proteomes: 108
+  taxa: 290
+  structures: 0
+  alphafold_models: 8097
+  domain_architectures: 109
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056647
+description: This domain is found in uncharacterised proteins mainly from plants. It has detectable similarity
+  to plant mobile domains and it is predicted to adopt similar structure.

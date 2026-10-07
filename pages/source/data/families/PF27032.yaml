@@ -1,0 +1,27 @@
+id: Pfam:PF27032
+pfam_id: PF27032
+name: Domain of unknown function (DUF8340) N-terminal domain
+short_name: DUF8340_N
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF27032
+counters:
+  proteins: 31
+  matches: 31
+  proteomes: 18
+  taxa: 52
+  structures: 0
+  alphafold_models: 28
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: This entry represents a domain of unknown function at the N-terminal in uncharacterised fungal
+  proteins. This domain contains a RNases-like fold. The core architecture typically features a central
+  five-stranded beta-sheet flanked by several alpha-helices. Most RNases H also possess an active site
+  with a conserved DEDD motif (aspartate and glutamate residues), essential for coordinating catalytically
+  required metal ions, usually Mg [[cite:PUB00016297]].

@@ -1,0 +1,25 @@
+id: Pfam:PF18690
+pfam_id: PF18690
+name: Family of unknown function (DUF5639)
+short_name: DUF5639
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18690
+counters:
+  proteins: 93
+  matches: 93
+  proteomes: 92
+  taxa: 124
+  structures: 1
+  alphafold_models: 50
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040948
+description: This is a domain of unknown function which is mainly found in Deinococcus-Thermus. Some family
+  members can be found in the C-terminal region of [pfam:PF01565].

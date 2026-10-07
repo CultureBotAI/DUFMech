@@ -1,0 +1,25 @@
+id: Pfam:PF23918
+pfam_id: PF23918
+name: Domain of unknown function (DUF7257)
+short_name: DUF7257
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23918
+counters:
+  proteins: 456
+  matches: 462
+  proteomes: 404
+  taxa: 934
+  structures: 1
+  alphafold_models: 46
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055681
+description: This entry represents a phage protein which contains a C1q and TNF superfamily domain. Structure
+  prediction suggests that this domain forms a confident homotrimeric interaction.

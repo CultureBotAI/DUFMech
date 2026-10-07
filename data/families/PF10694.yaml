@@ -1,0 +1,25 @@
+id: Pfam:PF10694
+pfam_id: PF10694
+name: Protein of unknown function (DUF2500)
+short_name: DUF2500
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10694
+counters:
+  proteins: 1537
+  matches: 1540
+  proteomes: 1360
+  taxa: 1954
+  structures: 3
+  alphafold_models: 911
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019635
+description: The members of this family are largely confined to the Gammaproteobacteria. The function
+  is not known.

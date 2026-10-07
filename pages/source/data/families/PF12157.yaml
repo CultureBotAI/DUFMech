@@ -1,0 +1,26 @@
+id: Pfam:PF12157
+pfam_id: PF12157
+name: Protein of unknown function (DUF3591)
+short_name: DUF3591
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12157
+counters:
+  proteins: 5144
+  matches: 5429
+  proteomes: 3243
+  taxa: 8558
+  structures: 30
+  alphafold_models: 1665
+  domain_architectures: 140
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022591
+description: This domain is found in eukaryotes and is typically between 445 to 462 amino acids in length.
+  Most members are annotated as being transcription initiation factor TFIID subunit 1, and this region
+  is the conserved central portion of these proteins.

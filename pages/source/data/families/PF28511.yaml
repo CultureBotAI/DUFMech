@@ -1,0 +1,26 @@
+id: Pfam:PF28511
+pfam_id: PF28511
+name: Domain of unknown function (DUF8420)
+short_name: DUF8420
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28511
+counters:
+  proteins: 226
+  matches: 226
+  proteomes: 124
+  taxa: 230
+  structures: 0
+  alphafold_models: 188
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059464
+description: This domain is found in uncharacterised fungal proteins. It is usually flanked by domains
+  predicted as transmembrane. This domain is predicted to fold into a globular structure composed of a
+  open barrel decorated with alpha-helices.

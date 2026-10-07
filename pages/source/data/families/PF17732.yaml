@@ -1,0 +1,25 @@
+id: Pfam:PF17732
+pfam_id: PF17732
+name: Family of unknown function (DUF5571)
+short_name: DUF5571
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17732
+counters:
+  proteins: 506
+  matches: 656
+  proteomes: 245
+  taxa: 830
+  structures: 0
+  alphafold_models: 419
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040943
+description: This is a family of unknown function found in chordata. Family members carry a zinc finger
+  family on the N-terminal [pfam:PF15663].

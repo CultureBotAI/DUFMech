@@ -1,0 +1,26 @@
+id: Pfam:PF22491
+pfam_id: PF22491
+name: Family of unknown function (DUF6988)
+short_name: DUF6988
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22491
+counters:
+  proteins: 325
+  matches: 325
+  proteomes: 300
+  taxa: 611
+  structures: 0
+  alphafold_models: 172
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054257
+description: This family of uncharacterised proteins is found mainly in Proteobacteria. These proteins
+  are predicted to adopt an alpha-helical structure. They contain a highly conserved RXXXE-motif and an
+  invariant histidine that may have a functional role.

@@ -1,0 +1,27 @@
+id: Pfam:PF25858
+pfam_id: PF25858
+name: Family of unknown function (DUF7958)
+short_name: DUF7958
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25858
+counters:
+  proteins: 270
+  matches: 336
+  proteomes: 39
+  taxa: 84
+  structures: 0
+  alphafold_models: 245
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058264
+description: This entry represents uncharacterised protein from Halogeometricum borinquense (Hbor_38910)
+  and related archaeal proteins. This protein is found next to a toxic gene Hbor_38900 and is likely a
+  immunity protein which is able to prevent self-intoxication [[cite:PUB00160456]]. This protein is predicted
+  to adopt a complex alpha/beta structure with an unique topology.

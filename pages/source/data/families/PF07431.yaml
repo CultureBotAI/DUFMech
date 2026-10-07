@@ -1,0 +1,25 @@
+id: Pfam:PF07431
+pfam_id: PF07431
+name: Protein of unknown function (DUF1512) N-terminal domain
+short_name: DUF1512
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07431
+counters:
+  proteins: 120
+  matches: 120
+  proteomes: 118
+  taxa: 288
+  structures: 0
+  alphafold_models: 115
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056460
+description: This family consists of several archaeal proteins of around 370 residues in length. The function
+  of this family is unknown. This entry corresponds to the N-terminal domain.

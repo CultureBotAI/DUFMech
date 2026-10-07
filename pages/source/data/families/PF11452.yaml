@@ -1,0 +1,24 @@
+id: Pfam:PF11452
+pfam_id: PF11452
+name: Protein of unknown function (DUF3000)
+short_name: DUF3000
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11452
+counters:
+  proteins: 3761
+  matches: 3765
+  proteomes: 3750
+  taxa: 4421
+  structures: 0
+  alphafold_models: 2189
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021555
+description: This is a bacterial family of uncharacterised proteins.

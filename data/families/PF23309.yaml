@@ -1,0 +1,25 @@
+id: Pfam:PF23309
+pfam_id: PF23309
+name: Domain of unknown function (DUF7083)
+short_name: DUF7083
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23309
+counters:
+  proteins: 1718
+  matches: 1723
+  proteomes: 110
+  taxa: 401
+  structures: 0
+  alphafold_models: 1268
+  domain_architectures: 151
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055510
+description: This is a presumed domain found at the N-terminal of the uncharacterised protein K02A2.6
+  from C.elegans and similar worm sequences. This domain may adopt a fold similar to retrotransposons.

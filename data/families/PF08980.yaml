@@ -1,0 +1,27 @@
+id: Pfam:PF08980
+pfam_id: PF08980
+name: Domain of unknown function (DUF1883)
+short_name: DUF1883
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08980
+counters:
+  proteins: 930
+  matches: 930
+  proteomes: 889
+  taxa: 1349
+  structures: 1
+  alphafold_models: 547
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015073
+description: Predicted ligand-binding domain of the PPC-like beta-sandwich fold. Observed in conserved
+  gene neighbourhoods with diverse nucleotide-activated effector and related conflict systems, potentially
+  recognises invasive molecules and initiates system responses or directly triggers directly-associated
+  effector domains [[cite:PUB00097693]].

@@ -1,0 +1,26 @@
+id: Pfam:PF30221
+pfam_id: PF30221
+name: Domain of unknown function (DUF8614)
+short_name: DUF8614
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30221
+counters:
+  proteins: 1483
+  matches: 1483
+  proteomes: 1278
+  taxa: 2481
+  structures: 2
+  alphafold_models: 1004
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061675
+description: This entry represents a domain of unknown function found in bacterial proteins. The function
+  of this domain remains to be determined. The predicted structure shows strong similarity to dipeptidyl
+  peptidase III. This suggests proteins of this family are likely to be peptidase enzymes.

@@ -1,0 +1,28 @@
+id: Pfam:PF24129
+pfam_id: PF24129
+name: Family of unknown function (DUF7396)
+short_name: DUF7396
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24129
+counters:
+  proteins: 55
+  matches: 55
+  proteomes: 55
+  taxa: 129
+  structures: 0
+  alphafold_models: 4
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055820
+description: This entry represents an uncharacterized protein found in several bacteriophages that infect
+  bacteria such as Escherichia coli, Enterobacter, Klebsiella and Shigella. The protein is short, around
+  44-51 amino acids in length. It is predicted to contain a single transmembrane helix. The function of
+  this protein is currently unknown. One representative of this family is the [swissprot:P18922] protein
+  from bacteriophage T4.

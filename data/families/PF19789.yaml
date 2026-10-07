@@ -1,0 +1,27 @@
+id: Pfam:PF19789
+pfam_id: PF19789
+name: Domain of unknown function (DUF6273)
+short_name: DUF6273
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19789
+counters:
+  proteins: 704
+  matches: 734
+  proteomes: 436
+  taxa: 892
+  structures: 1
+  alphafold_models: 403
+  domain_architectures: 110
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046240
+description: This domain is predominantly found in Firmicute bacterial proteins and is functionally uncharacterised.
+  It is found in proteins that are likely to be surface exposed. It is predicted to fold into a globular
+  structure with C-type lectin topology. This domain is frequently found in combination with other carbohydrate-binding
+  domains implying that it may be involved in carbohydrate recognition/binding.

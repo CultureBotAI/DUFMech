@@ -1,0 +1,30 @@
+id: Pfam:PF26463
+pfam_id: PF26463
+name: Family of unknown function (DUF8140)
+short_name: DUF8140
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26463
+counters:
+  proteins: 108
+  matches: 108
+  proteomes: 83
+  taxa: 167
+  structures: 0
+  alphafold_models: 103
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058453
+description: This entry represents a pair of domains found in family of uncharacterised proteins from
+  halophilic archaea. Based on structural similarity of other domains in these proteins this family may
+  represents a family of primase proteins. This entry represents a pair of protein domains with one nested
+  within the loop of another. The proteins in this family are predominantly found in the class Halobacteria,
+  which includes families such as Natrialbaceae, Halobacteriaceae, and Haloarculaceae. The proteins are
+  typically around 500 amino acids in length. Many of these proteins are encoded on plasmids, suggesting
+  a potential role in plasmid-associated functions.

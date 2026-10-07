@@ -1,0 +1,30 @@
+id: Pfam:PF14467
+pfam_id: PF14467
+name: Domain of unknown function (DUF4426)
+short_name: DUF4426
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14467
+counters:
+  proteins: 1617
+  matches: 1617
+  proteomes: 1606
+  taxa: 2118
+  structures: 1
+  alphafold_models: 981
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025218
+description: Members of this entry are found mostly in g-proteobacteria, especially in Vibrio. Strangely
+  enough, there seems to be one eukaryotic homolog in Nematostella vectensis (NEMVEDRAFT_v1g226006), where
+  the PA0388-like domain is fused with a domain homogous to the Methionine biosynthesis protein MetW (see
+  below). In several Pseudomonas species, but also in Vibrio vulnificus and Azotobacter vinelandii PA0388
+  homologs are genomic neighbors of Nucleoside 5-triphosphatase RdgB (dHAPTP, dITP, XTP-specific) (EC
+  3.6.1.15) and Methionine biosynthesis protein MetW. On the other hand, in most Vibrio species it appears
+  as a part of a conserved operon involved in possible response to stress.

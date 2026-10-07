@@ -1,0 +1,30 @@
+id: Pfam:PF12967
+pfam_id: PF12967
+name: Domain of Unknown Function with PDB structure (DUF3855)
+short_name: DUF3855
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12967
+counters:
+  proteins: 4
+  matches: 4
+  proteomes: 4
+  taxa: 16
+  structures: 1
+  alphafold_models: 4
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024482
+description: Family based on orphan protein (TM0875) from Thermotoga maritima that has been structurally
+  determined as PDB:1022. The TM0875 gene of Thermotoga maritima encodes a hypothetical protein NP_228683
+  [[cite:PUB00029305]] of unknown function. Analysis of TM0875 genomic context reveals the presence of
+  MMT1 (a predicted Co/Zn/Cd cation transporter) and an inactive homolog of metal-dependent proteases.
+  1O22 shows weak structural similarity with the phosphoribosylformylglycinamidine synthase 1t4a (Dali
+  Z-scr=4.6), the yggU protein (PDB structure:1n91; with DALI Z-scr=3), and with the thioesterase superfamily
+  member (PDB structure 2cy9 - found using FATCAT), even though they have very low sequence identity.

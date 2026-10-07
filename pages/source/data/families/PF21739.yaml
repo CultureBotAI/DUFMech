@@ -1,0 +1,25 @@
+id: Pfam:PF21739
+pfam_id: PF21739
+name: Family of unknown function (DUF6866) N-terminal domain
+short_name: DUF6866_N
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21739
+counters:
+  proteins: 82
+  matches: 82
+  proteomes: 82
+  taxa: 205
+  structures: 0
+  alphafold_models: 72
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049199
+description: This entry represents the N-terminal alpha+beta domain found in DUF6866 family proteins.
+  The function of these proteins is unknown. Proteins in this family are primarily found in Proteobacteria.

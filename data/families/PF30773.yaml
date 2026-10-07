@@ -1,0 +1,28 @@
+id: Pfam:PF30773
+pfam_id: PF30773
+name: Domain of unknown function (DUF8729)
+short_name: DUF8729
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30773
+counters:
+  proteins: 861
+  matches: 861
+  proteomes: 656
+  taxa: 1359
+  structures: 0
+  alphafold_models: 440
+  domain_architectures: 122
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061790
+description: This entry represents an N-terminal domain of approximately 90 residues found in S8 family
+  serine peptidases (subtilisins). The domain is found N-terminal to the Peptidase_S8 catalytic domain
+  ([pfam:PF00082]). In Bacteroidota members, the proteins often contain a C-terminal T9SS secretion signal
+  ([pfam:PF18962]). This family is found in bacteria including Pseudomonadota, Actinomycetota and Bacteroidota,
+  as well as fungi (Ascomycota). The function of this domain remains to be determined.

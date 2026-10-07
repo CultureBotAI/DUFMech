@@ -1,0 +1,26 @@
+id: Pfam:PF17399
+pfam_id: PF17399
+name: Domain of unknown function (DUF5405)
+short_name: DUF5405
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17399
+counters:
+  proteins: 204
+  matches: 205
+  proteomes: 152
+  taxa: 328
+  structures: 0
+  alphafold_models: 74
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR035404
+description: This domain family is found in Enterobacteriaceae. This protein may have a phage origin being
+  found in bacteriophage P2 [swissprot:Q06425]. The majority of proteins have a conserved cysteine residue
+  close to their C-terminus which may have functional significance.

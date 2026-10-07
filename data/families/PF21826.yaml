@@ -1,0 +1,24 @@
+id: Pfam:PF21826
+pfam_id: PF21826
+name: Family of unknown function (DUF6887)
+short_name: DUF6887
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21826
+counters:
+  proteins: 620
+  matches: 620
+  proteomes: 151
+  taxa: 438
+  structures: 0
+  alphafold_models: 400
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054053
+description: This entry represents a family of uncharacterised cyanobacterial proteins.

@@ -1,0 +1,25 @@
+id: Pfam:PF24248
+pfam_id: PF24248
+name: Domain of unknown function (DUF7451)
+short_name: DUF7451
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24248
+counters:
+  proteins: 0
+  matches: 0
+  proteomes: 0
+  taxa: 0
+  structures: 0
+  alphafold_models: 0
+  domain_architectures: 0
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: This entry represents a presumed domain found in a group of uncharacterised sequences from
+  bacteria. According to structure predictions, this domain may adopt and all-beta configuration with
+  beta-strands of different lengths. This domain is usually associated with DUF7450 ([pfam:PF24247]).

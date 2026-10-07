@@ -1,0 +1,29 @@
+id: Pfam:PF10980
+pfam_id: PF10980
+name: Protein of unknown function (DUF2787)
+short_name: DUF2787
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10980
+counters:
+  proteins: 505
+  matches: 505
+  proteomes: 259
+  taxa: 433
+  structures: 2
+  alphafold_models: 289
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021248
+description: This bacterial family of proteins has no known function. The conserved hypothetical protein
+  VC1805 from Vibrio cholerae belongs to this group. It adopts a monomeric assembly, showing an unusual
+  topology with a flat seven-stranded anti-parallel beta-sheet and two helices located on the same side
+  of the sheet. It has some structural homology with the human protein p32 and binds to the complement
+  protein C1q, which suggests a possible role in the adherence of the bacteria to the intestinal wall
+  [[cite:PUB00049533]].

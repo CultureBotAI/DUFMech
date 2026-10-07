@@ -1,0 +1,24 @@
+id: Pfam:PF20407
+pfam_id: PF20407
+name: Domain of unknown function (DUF1583_N)
+short_name: DUF1583_N
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20407
+counters:
+  proteins: 86
+  matches: 107
+  proteomes: 31
+  taxa: 73
+  structures: 0
+  alphafold_models: 45
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046518
+description: Most of these Rhodopirellula baltica hypothetical proteins also match [pfam:PF07619].

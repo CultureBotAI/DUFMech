@@ -1,0 +1,25 @@
+id: Pfam:PF26685
+pfam_id: PF26685
+name: Domain of unknown function (DUF8230) C-terminal domain
+short_name: DUF8230_C
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26685
+counters:
+  proteins: 319
+  matches: 319
+  proteomes: 277
+  taxa: 456
+  structures: 0
+  alphafold_models: 293
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR060063
+description: This entry represents the C-terminal domain of an uncharacterised putative enzyme. It shows
+  structural similarity to the C-terminal domain of enolase and has a TIM barrel fold.

@@ -1,0 +1,27 @@
+id: Pfam:PF19477
+pfam_id: PF19477
+name: Family of unknown function (DUF6014)
+short_name: DUF6014
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19477
+counters:
+  proteins: 14
+  matches: 14
+  proteomes: 13
+  taxa: 51
+  structures: 0
+  alphafold_models: 11
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046056
+description: This entry represents a member of a biosynthetic gene cluster (BGC). This BGC (BGC0000332)
+  is described by MIBiG as an example of the following biosynthetic class, NRP (non-ribosomal peptide).
+  This family includes a protein from the cyanopeptolin biosynthetic gene cluster from Microcystis sp.
+  NIVA-CYA 172/5 and appears to be predominantly found in Cyanobacteria [[cite:PUB00099392]].

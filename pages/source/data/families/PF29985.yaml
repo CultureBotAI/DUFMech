@@ -1,0 +1,26 @@
+id: Pfam:PF29985
+pfam_id: PF29985
+name: Domain of unknown function (DUF8604)
+short_name: DUF8604
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29985
+counters:
+  proteins: 170
+  matches: 171
+  proteomes: 159
+  taxa: 334
+  structures: 0
+  alphafold_models: 115
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061665
+description: This entry represents a domain found at the N-terminal of a group of uncharacterised sequences
+  from bacteria, found associated with [pfam:PF19672] at the C-terminal. This domain may adopt an elongated
+  fold consisting of three beta-strands and three alpha-helices.

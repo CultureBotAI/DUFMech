@@ -1,0 +1,26 @@
+id: Pfam:PF31175
+pfam_id: PF31175
+name: Domain of unknown function (DUF8833)
+short_name: DUF8833
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF31175
+counters:
+  proteins: 366
+  matches: 455
+  proteomes: 62
+  taxa: 364
+  structures: 0
+  alphafold_models: 290
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061894
+description: This entry represents a domain of approximately 60 amino acids found at the N-terminal of
+  20.7 kDa protein in NOF-FB from Drosophila melanogaster and as tandem arrays of 10-11 copies in other
+  members of this entry, from insects. The function of this domain remains to be determined.

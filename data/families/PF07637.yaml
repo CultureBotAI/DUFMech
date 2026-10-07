@@ -1,0 +1,25 @@
+id: Pfam:PF07637
+pfam_id: PF07637
+name: Protein of unknown function (DUF1595)
+short_name: PSD5
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07637
+counters:
+  proteins: 2158
+  matches: 2158
+  proteomes: 456
+  taxa: 898
+  structures: 0
+  alphafold_models: 1540
+  domain_architectures: 102
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013043
+description: A family of proteins in Rhodopirellula baltica, associated with [pfam:PF07635], [pfam:PF07626],
+  [pfam:PF07631], [pfam:PF07627], and [pfam:PF07624].

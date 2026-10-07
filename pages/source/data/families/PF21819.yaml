@@ -1,0 +1,26 @@
+id: Pfam:PF21819
+pfam_id: PF21819
+name: Family of unknown function (DUF6885)
+short_name: DUF6885
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21819
+counters:
+  proteins: 113
+  matches: 119
+  proteomes: 113
+  taxa: 206
+  structures: 0
+  alphafold_models: 71
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049252
+description: This is a small family of proteins that are likely to adopt a papain-like fold. Most members
+  of this family have conserved residues in equivalent positions as the residues that constitute the active
+  site of cysteine proteases.

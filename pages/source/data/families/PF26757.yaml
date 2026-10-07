@@ -1,0 +1,26 @@
+id: Pfam:PF26757
+pfam_id: PF26757
+name: Domain of unknown function (DUF8250)
+short_name: DUF8250
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26757
+counters:
+  proteins: 50
+  matches: 50
+  proteomes: 48
+  taxa: 186
+  structures: 0
+  alphafold_models: 37
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059294
+description: This domain is found in uncharacterised proteins predominantly from bacteria. It contains
+  two pairs of conserved cysteine residues that may be involved in metal ion coordination. This domain
+  is predicted to adopt a fold typical for zinc beta-ribbon domains.

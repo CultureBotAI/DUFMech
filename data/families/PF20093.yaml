@@ -1,0 +1,27 @@
+id: Pfam:PF20093
+pfam_id: PF20093
+name: Domain of unknown function (DUF6484)
+short_name: DUF6484
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20093
+counters:
+  proteins: 419
+  matches: 419
+  proteomes: 347
+  taxa: 625
+  structures: 0
+  alphafold_models: 254
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045506
+description: This domain of unknown function is found in uncharacterised proteins from Proteobacteria.
+  This domain is approximately 80 amino acids in length and exhibits overlaps with [pfam:PF04717], which
+  suggests that it has an OB fold and, thus, it belongs to the same clan. Many proteins containing this
+  domain are related to the Type VI secretion system and to Phage-related baseplate proteins.

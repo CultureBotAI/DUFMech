@@ -1,0 +1,27 @@
+id: Pfam:PF29217
+pfam_id: PF29217
+name: Domain of unknown function (DUF8514)
+short_name: DUF8514
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29217
+counters:
+  proteins: 82
+  matches: 82
+  proteomes: 82
+  taxa: 151
+  structures: 0
+  alphafold_models: 60
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061584
+description: This entry represents a small helical bundle domain of approximately 60-80 residues found
+  in spirochaetes, including Treponema and Spirochaeta species. This domain is found in multi-domain proteins
+  and is typically located between an N-terminal domain and a C-terminal domain. The function of this
+  domain remains to be determined.

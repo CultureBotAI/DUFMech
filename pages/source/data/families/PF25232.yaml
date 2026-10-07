@@ -1,0 +1,26 @@
+id: Pfam:PF25232
+pfam_id: PF25232
+name: Domain of unknown function (DUF7848)
+short_name: DUF7848
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25232
+counters:
+  proteins: 895
+  matches: 895
+  proteomes: 448
+  taxa: 540
+  structures: 0
+  alphafold_models: 424
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057170
+description: This entry represents a likely zinc binding domain that according to structural modelling
+  may form homodimers. The domain is primarily found in actinobacteria as well as a small range of bacteriophage.
+  The function of this domain is unknown.

@@ -1,0 +1,27 @@
+id: Pfam:PF10105
+pfam_id: PF10105
+name: Uncharacterized protein conserved in bacteria (DUF2344)
+short_name: DUF2344
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10105
+counters:
+  proteins: 3741
+  matches: 3743
+  proteomes: 3719
+  taxa: 5969
+  structures: 0
+  alphafold_models: 2333
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018768
+description: This domain, found in various hypothetical bacterial proteins and Radical Sam domain proteins,
+  has no known function. This domain is distantly related to tRNA pseudouridine synthases, suggesting
+  this family may carry out a function related to RNA modification. But this family appears to lack the
+  catalytic aspartate found in pseudouridine synthases.

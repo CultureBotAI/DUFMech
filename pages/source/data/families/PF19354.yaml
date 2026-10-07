@@ -1,0 +1,27 @@
+id: Pfam:PF19354
+pfam_id: PF19354
+name: Family of unknown function (DUF5931)
+short_name: DUF5931
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19354
+counters:
+  proteins: 2168
+  matches: 2168
+  proteomes: 2155
+  taxa: 2483
+  structures: 0
+  alphafold_models: 1161
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045975
+description: This presumed domain is functionally uncharacterised. This domain family is found in actinobacteria,
+  and is approximately 170 amino acids in length. This domain is found at the N-terminus of 2 component
+  signalling proteins which also contain [pfam:PF07730], and [pfam:PF02518]. This domain presumably binds
+  an as yet unknown ligand.

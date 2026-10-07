@@ -1,0 +1,25 @@
+id: Pfam:PF06103
+pfam_id: PF06103
+name: Bacterial protein of unknown function (DUF948)
+short_name: DUF948
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06103
+counters:
+  proteins: 5145
+  matches: 5145
+  proteomes: 4467
+  taxa: 5722
+  structures: 0
+  alphafold_models: 3078
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009293
+description: This family consists of bacterial sequences several of which are thought to be general stress
+  proteins.

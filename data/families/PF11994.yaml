@@ -1,0 +1,26 @@
+id: Pfam:PF11994
+pfam_id: PF11994
+name: Protein of unknown function (DUF3489)
+short_name: DUF3489
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11994
+counters:
+  proteins: 1263
+  matches: 1263
+  proteomes: 720
+  taxa: 1310
+  structures: 0
+  alphafold_models: 849
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021880
+description: This family of proteins is functionally uncharacterised. This protein is found in bacteria.
+  Proteins in this family are typically between 84 to 211 amino acids in length. This protein has a single
+  completely conserved residue W that may be functionally important.

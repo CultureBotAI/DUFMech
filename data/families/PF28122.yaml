@@ -1,0 +1,28 @@
+id: Pfam:PF28122
+pfam_id: PF28122
+name: Domain of unknown function (DUF8369)
+short_name: DUF8369
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28122
+counters:
+  proteins: 928
+  matches: 932
+  proteomes: 893
+  taxa: 1779
+  structures: 0
+  alphafold_models: 774
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059413
+description: This domain is found in uncharacterised fungal proteins. It is predicted to fold into an
+  alpha/beta structure composed of a four-stranded antiparallel beta-sheet packed on both sides with alpha-helices.
+  It also contains a long alpha-hairpin, stabilised by conserved interactions, which is inserted after
+  the first strand and may be functionally important. In addition, it contains a highly conserved KTGYx(5-6)[FW]DLD
+  sequence motif which may constitute a part of a binding interface.

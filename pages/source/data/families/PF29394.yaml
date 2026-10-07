@@ -1,0 +1,28 @@
+id: Pfam:PF29394
+pfam_id: PF29394
+name: Family of unknown function (DUF8543)
+short_name: DUF8543
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29394
+counters:
+  proteins: 72
+  matches: 72
+  proteomes: 72
+  taxa: 159
+  structures: 0
+  alphafold_models: 1
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061613
+description: This entry represents a family of small proteins of approximately 50-70 amino acids found
+  exclusively in tailed bacteriophages. The family is found in the class Caudoviricetes, with members
+  in the family Demerecviridae and the subfamilies Markadamsvirinae and Mccorquodalevirinae. Members are
+  found in diverse genera including Epseptimavirus, Myunavirus and Sugarlandvirus. The function of these
+  proteins remains to be determined.

@@ -1,0 +1,25 @@
+id: Pfam:PF15123
+pfam_id: PF15123
+name: Domain of unknown function (DUF4562)
+short_name: DUF4562
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15123
+counters:
+  proteins: 482
+  matches: 486
+  proteomes: 355
+  taxa: 1348
+  structures: 4
+  alphafold_models: 395
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027814
+description: This family of proteins is functionally uncharacterised. This family of proteins is found
+  in eukaryotes. There is a conserved HRYQNPW sequence motif. This family includes the human protein C4orf45.

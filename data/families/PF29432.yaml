@@ -1,0 +1,25 @@
+id: Pfam:PF29432
+pfam_id: PF29432
+name: Domain of unknown function (DUF8552)
+short_name: DUF8552
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29432
+counters:
+  proteins: 259
+  matches: 259
+  proteomes: 258
+  taxa: 414
+  structures: 0
+  alphafold_models: 166
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061622
+description: This is a domain found ata the C-terminal of a group of uncharacterised sequences from bacteria,
+  which is associated with [pfam:PF18980] at the N-terminal. This domain may adopt a beta-sandwich fold.

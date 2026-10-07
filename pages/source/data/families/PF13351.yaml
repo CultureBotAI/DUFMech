@@ -1,0 +1,25 @@
+id: Pfam:PF13351
+pfam_id: PF13351
+name: Protein of unknown function (DUF4099)
+short_name: DUF4099
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13351
+counters:
+  proteins: 1269
+  matches: 1271
+  proteomes: 610
+  taxa: 843
+  structures: 0
+  alphafold_models: 878
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025343
+description: A family of uncharacterized proteins found by clustering human gut metagenomic sequences
+  [[cite:PUB00055601]]. The C-terminal repeat region of this family is DUF4098, [pfam:PF13345].

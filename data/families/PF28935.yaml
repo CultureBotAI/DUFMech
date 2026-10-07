@@ -1,0 +1,29 @@
+id: Pfam:PF28935
+pfam_id: PF28935
+name: Domain of unknown function (DUF8482)
+short_name: DUF8482
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28935
+counters:
+  proteins: 223
+  matches: 223
+  proteomes: 209
+  taxa: 421
+  structures: 0
+  alphafold_models: 152
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061552
+description: This domain is found in uncharacterised proteins mainly from gram negative bacteria which
+  are probably related to the RND tripartite drug efflux pumps. The domain represented in this entry folds
+  into a six-stranded closed beta-barrel with a greek-key topology which has a structural similarity to
+  the C-terminal domain of alanine racemase. This domain is interrupted by the barrel-sandwich hybrid
+  domain which is inserted after the first beta-strand of the barrel. This model does not include the
+  N-terminal strand.

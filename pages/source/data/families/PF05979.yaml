@@ -1,0 +1,30 @@
+id: Pfam:PF05979
+pfam_id: PF05979
+name: Bacterial protein of unknown function (DUF896)
+short_name: DUF896
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05979
+counters:
+  proteins: 3234
+  matches: 3234
+  proteomes: 2870
+  taxa: 4172
+  structures: 3
+  alphafold_models: 2133
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009242
+description: 'In B. subtilis, one small SOS response operon under the control of LexA, the yneA operon,
+  is comprised of three genes: yneA, yneB, and ynzC [[cite:PUB00053936]]. This family consists of several
+  short, hypothetical bacterial proteins of unknown function. These proteins are mainly found in gram-positive
+  firmicutes. Structures show that the N-terminus is composed of two alpha helices forming a helix-loop-helix
+  motif. The structure of ynzC from B. subtilis forms a trimeric complex [[cite:PUB00047592]]. Structural
+  modelling suggests this domain may bind nucleic acids [[cite:PUB00070793]]. This family is also known
+  as UPF0291.'

@@ -1,0 +1,25 @@
+id: Pfam:PF19837
+pfam_id: PF19837
+name: Domain of unknown function (DUF6316)
+short_name: DUF6316
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19837
+counters:
+  proteins: 438
+  matches: 438
+  proteomes: 335
+  taxa: 477
+  structures: 0
+  alphafold_models: 278
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045630
+description: This domain is found in bacterial proteins, functionally uncharacterised. It is approximately
+  50-70 amino acids in length and it has the conserved sequence TRExxxxGPF/Y.

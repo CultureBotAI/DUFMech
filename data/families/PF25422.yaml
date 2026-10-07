@@ -1,0 +1,25 @@
+id: Pfam:PF25422
+pfam_id: PF25422
+name: Domain of unknown function (DUF7892)
+short_name: DUF7892
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25422
+counters:
+  proteins: 600
+  matches: 602
+  proteomes: 580
+  taxa: 1254
+  structures: 0
+  alphafold_models: 105
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057214
+description: This predicted domain is found in a group of uncharacterised fungal proteins that also contain
+  an F-box domain. This domain is predicted to adopt a winged helix fold.

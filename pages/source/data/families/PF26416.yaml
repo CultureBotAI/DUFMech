@@ -1,0 +1,29 @@
+id: Pfam:PF26416
+pfam_id: PF26416
+name: Putative primase C-terminal domain
+short_name: DUF8111
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26416
+counters:
+  proteins: 114
+  matches: 115
+  proteomes: 88
+  taxa: 170
+  structures: 0
+  alphafold_models: 108
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058424
+description: This entry represents the C-terminal alpha-helical domain from a family of putative primase
+  protein in halophilic archaea. The proteins in this family are predominantly found in the class Halobacteria,
+  which includes several families such as Haloferacaceae, Halobacteriaceae, and Natrialbaceae. The proteins
+  containing this domain are typically around 500 amino acids in length, as observed in several sequences
+  from the SEED alignment. This domain is associated with proteins that are often encoded on plasmids
+  in various halophilic archaea.

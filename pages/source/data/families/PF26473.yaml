@@ -1,0 +1,33 @@
+id: Pfam:PF26473
+pfam_id: PF26473
+name: Domain of unknown function (DUF8148) N-terminal domain
+short_name: DUF8148
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26473
+counters:
+  proteins: 35
+  matches: 35
+  proteomes: 26
+  taxa: 62
+  structures: 0
+  alphafold_models: 24
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058461
+description: This entry represents the N-terminal winged helix domain from a family of uncharacterised
+  proteins found predominantly in archaea, specifically within the Halobacteria class. The proteins in
+  this family are typically found in species such as Halovenus, Halobellus, and Natrarchaeobaculum, among
+  others. Additionally, some members are associated with viruses like the Pleolipoviridae family. The
+  proteins containing this domain are predicted to be involved in replication processes, although their
+  exact function remains unknown. The domain is found in proteins that are generally around 600-700 amino
+  acids in length. These proteins are primarily associated with replication functions, as indicated by
+  their presence in replication proteins across various archaeal species and viruses. The domain is sometimes
+  found in association with other domains involved in replication, but specific domain associations are
+  not consistently observed across all members of this family.

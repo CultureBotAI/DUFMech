@@ -1,0 +1,24 @@
+id: Pfam:PF04306
+pfam_id: PF04306
+name: Protein of unknown function (DUF456)
+short_name: DUF456
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04306
+counters:
+  proteins: 5579
+  matches: 5579
+  proteomes: 5526
+  taxa: 7686
+  structures: 0
+  alphafold_models: 3440
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007403
+description: This family is a putative membrane protein that contains glycine zipper motifs [[cite:PUB00055608]].

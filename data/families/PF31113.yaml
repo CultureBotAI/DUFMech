@@ -1,0 +1,26 @@
+id: Pfam:PF31113
+pfam_id: PF31113
+name: Domain of unknown function (DUF8813)
+short_name: DUF8813
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF31113
+counters:
+  proteins: 443
+  matches: 443
+  proteomes: 437
+  taxa: 1133
+  structures: 0
+  alphafold_models: 279
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061874
+description: This entry represents a small C-terminal helical domain of approximately 40 residues found
+  in bacterial ImmA/IrrE family metallopeptidases. This domain is located C-terminal to the Peptidase_M78
+  catalytic domain ([pfam:PF06114]). The function of this domain remains to be determined.

@@ -1,0 +1,25 @@
+id: Pfam:PF19061
+pfam_id: PF19061
+name: Family of unknown function (DUF5757)
+short_name: DUF5757
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19061
+counters:
+  proteins: 75
+  matches: 75
+  proteomes: 63
+  taxa: 166
+  structures: 0
+  alphafold_models: 65
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043920
+description: This is a family of uncharacterised proteins of unknown function found in viruses. It is
+  thought to be part of the early transcription factor large subunit.

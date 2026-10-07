@@ -1,0 +1,25 @@
+id: Pfam:PF21028
+pfam_id: PF21028
+name: Protein of unknown function (DUF1285), C-terminal domain
+short_name: DUF1285_C
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21028
+counters:
+  proteins: 3594
+  matches: 3594
+  proteomes: 3586
+  taxa: 4708
+  structures: 1
+  alphafold_models: 2300
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR048342
+description: This domain is found at the C-terminal end of several hypothetical bacterial proteins. The
+  structure revealed a superficial similarity of this domain to pleckstrin homology-like folds [[cite:PUB00062529]].

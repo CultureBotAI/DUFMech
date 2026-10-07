@@ -1,0 +1,30 @@
+id: Pfam:PF26397
+pfam_id: PF26397
+name: Domain of unknown function (DUF8097)
+short_name: DUF8097
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26397
+counters:
+  proteins: 53
+  matches: 53
+  proteomes: 45
+  taxa: 99
+  structures: 0
+  alphafold_models: 49
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058410
+description: This entry represents a family of small transmembrane proteins found exclusively in extremely
+  halophilic archaea (Halobacteria). Members of this family typically contain two transmembrane helices
+  with a conserved cytoplasmic region. Most proteins in this family are approximately 115-130 amino acids
+  in length. The family is widely distributed across different genera within Halobacteriales, including
+  Halococcus, Haloferax, Natrialba, Natronobacterium, and Haladaptatus. The specific function of these
+  proteins remains unknown, but their conservation suggests they may play an important role in the adaptation
+  to high-salt environments.

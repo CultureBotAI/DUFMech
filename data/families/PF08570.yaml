@@ -1,0 +1,24 @@
+id: Pfam:PF08570
+pfam_id: PF08570
+name: Protein of unknown function (DUF1761)
+short_name: DUF1761
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08570
+counters:
+  proteins: 3768
+  matches: 3769
+  proteomes: 3415
+  taxa: 5717
+  structures: 0
+  alphafold_models: 2576
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013879
+description: Family of conserved fungal and bacterial membrane proteins with unknown function.

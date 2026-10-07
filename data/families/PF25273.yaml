@@ -1,0 +1,27 @@
+id: Pfam:PF25273
+pfam_id: PF25273
+name: Domain of unknown function (DUF7869)
+short_name: DUF7869
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25273
+counters:
+  proteins: 4972
+  matches: 5023
+  proteomes: 309
+  taxa: 1359
+  structures: 0
+  alphafold_models: 3760
+  domain_architectures: 153
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057191
+description: This domain is found in uncharacterised eukaryotic proteins. It is predicted to adopt a globular
+  structure composed of a curved beta-sheet and helices packed on it. It contains conserved histidine
+  and aspartate residues some of which cluster in space. This domain shares similarity with domains members
+  of the Ribonuclease H-like superfamily.

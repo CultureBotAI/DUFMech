@@ -1,0 +1,25 @@
+id: Pfam:PF22239
+pfam_id: PF22239
+name: Domain of unknown function (DUF6947)
+short_name: DUF6947
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22239
+counters:
+  proteins: 3
+  matches: 3
+  proteomes: 3
+  taxa: 17
+  structures: 1
+  alphafold_models: 3
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054225
+description: This is a domain found in a group of uncharacterised bacterial sequences whose function is
+  unknown. This domain adopts a galactose-binding-like structure (PDBe:4lr4).

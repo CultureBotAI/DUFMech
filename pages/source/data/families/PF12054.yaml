@@ -1,0 +1,27 @@
+id: Pfam:PF12054
+pfam_id: PF12054
+name: Domain of unknown function (DUF3535)
+short_name: DUF3535
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12054
+counters:
+  proteins: 4104
+  matches: 4195
+  proteomes: 3104
+  taxa: 8240
+  structures: 5
+  alphafold_models: 274
+  domain_architectures: 117
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022707
+description: This presumed domain is functionally uncharacterised. This domain is found in eukaryotes.
+  This domain is typically between 439 to 459 amino acids in length. This domain is found associated with
+  [pfam:PF00271], [pfam:PF02985], [pfam:PF00176]. This domain has two completely conserved residues (P
+  and K) that may be functionally important.

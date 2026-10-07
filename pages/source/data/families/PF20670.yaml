@@ -1,0 +1,28 @@
+id: Pfam:PF20670
+pfam_id: PF20670
+name: Domain of unknown function (DUF6816)
+short_name: DUF6816
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20670
+counters:
+  proteins: 466
+  matches: 469
+  proteomes: 305
+  taxa: 879
+  structures: 0
+  alphafold_models: 343
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049213
+description: This presumed domain is functionally uncharacterised and it is found in bacterial (predominantly
+  in cyanobacteria) and eukaryotic (mainly from plants) sequences. Structure prediction using AlphaFold
+  resource, suggest that this domain may have a START-like (StAR-related lipid-transfer) fold consisting
+  of an alpha/beta structure of a helix-grip fold, that forms cavities for hydrophobic substrates or ligands
+  which may indicate a possible function for this domain.

@@ -1,0 +1,26 @@
+id: Pfam:PF04289
+pfam_id: PF04289
+name: Protein of unknown function (DUF447) N-terminal domain
+short_name: DUF447_N
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04289
+counters:
+  proteins: 1138
+  matches: 1138
+  proteomes: 1103
+  taxa: 1783
+  structures: 4
+  alphafold_models: 919
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007386
+description: Archaeal protein of unknown function. A fungal member UniProtKB:M2LN89 is clearly a Flavine-reductase
+  enzyme by homology, and UniProtKB:O28442 has been shown to bind riboflavin 5'-phosphate (unpublished
+  structural Xray analysis).

@@ -1,0 +1,26 @@
+id: Pfam:PF20783
+pfam_id: PF20783
+name: DUF5575 N-terminal domain
+short_name: DUF5575_N
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20783
+counters:
+  proteins: 343
+  matches: 426
+  proteomes: 200
+  taxa: 735
+  structures: 0
+  alphafold_models: 261
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049217
+description: This entry represents the N-terminal domain from a family of Chordate proteins that includes
+  C19orf68. These proteins appear to be transposon related. This domain appears to be related to the WRKY-like
+  DNA-binding domains.

@@ -1,0 +1,25 @@
+id: Pfam:PF21843
+pfam_id: PF21843
+name: Domain of unknown function (DUF6902)
+short_name: DUF6902
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21843
+counters:
+  proteins: 173
+  matches: 173
+  proteomes: 171
+  taxa: 253
+  structures: 0
+  alphafold_models: 123
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054197
+description: This entry represents a family of bacterial proteins that have an alpha/alpha(6) toroid structure.
+  This suggests that these proteins are likely to be an as yet uncharacterised family of glycosyl hydrolases.

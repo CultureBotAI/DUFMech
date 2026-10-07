@@ -1,0 +1,24 @@
+id: Pfam:PF09980
+pfam_id: PF09980
+name: Predicted membrane protein (DUF2214)
+short_name: DUF2214
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09980
+counters:
+  proteins: 1212
+  matches: 1212
+  proteomes: 1199
+  taxa: 1815
+  structures: 0
+  alphafold_models: 724
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018706
+description: This domain, found in various hypothetical bacterial proteins, has no known function.

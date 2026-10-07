@@ -1,0 +1,25 @@
+id: Pfam:PF16111
+pfam_id: PF16111
+name: Domain of unknown function (DUF4829)
+short_name: DUF4829
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16111
+counters:
+  proteins: 208
+  matches: 209
+  proteomes: 167
+  taxa: 385
+  structures: 0
+  alphafold_models: 158
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032256
+description: This family consists of several uncharacterized proteins around 150 residues in length and
+  is mainly found in various Clostridium species. The function of this family is unknown.

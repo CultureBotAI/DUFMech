@@ -1,0 +1,27 @@
+id: Pfam:PF18885
+pfam_id: PF18885
+name: Domain of unknown function (DUF5648)
+short_name: DUF5648
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18885
+counters:
+  proteins: 3054
+  matches: 3257
+  proteomes: 938
+  taxa: 2019
+  structures: 0
+  alphafold_models: 2168
+  domain_architectures: 408
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043708
+description: This entry represents a three-bladed beta-alpha propeller domain with unknown function. It
+  is often associated with enzymatic domains in bacterial cell surface proteins. Individual blade consist
+  of a three-stranded antiparallel beta-sheet and an alpha-helix packed on it. In some members this helix
+  may have transitioned to a random coil.

@@ -1,0 +1,29 @@
+id: Pfam:PF30546
+pfam_id: PF30546
+name: Domain of unknown function (DUF8623)
+short_name: DUF8623
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30546
+counters:
+  proteins: 241
+  matches: 242
+  proteomes: 239
+  taxa: 644
+  structures: 0
+  alphafold_models: 142
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061684
+description: This entry represents a C-terminal immunoglobulin-like domain of approximately 100 residues
+  found in cyanobacterial proteins. These proteins contain an N-terminal NTF2-like domain followed by
+  this Ig-like C-terminal domain. Proteomic studies have shown that one family member (Slr2144 in Synechocystis
+  sp. PCC 6803) accumulates under salt stress and hexane stress conditions and is localised to the periplasm.
+  The family is found exclusively in cyanobacteria, including Nostocales and Oscillatoriophycideae. The
+  function of this domain remains to be determined.

@@ -1,0 +1,27 @@
+id: Pfam:PF04418
+pfam_id: PF04418
+name: Domain of unknown function (DUF543)
+short_name: DUF543
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04418
+counters:
+  proteins: 3901
+  matches: 3910
+  proteomes: 2958
+  taxa: 7989
+  structures: 0
+  alphafold_models: 3396
+  domain_architectures: 41
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007512
+description: This family of short eukaryotic proteins has no known function. Most of the members of this
+  family are only 80 amino acid residues long. However the Arabidopsis homologue is over 300 residues
+  long. The presumed domain contains a conserved amino terminal cysteine and a conserved motif GXGXGXG
+  in the carboxy terminal half that may be functionally important.

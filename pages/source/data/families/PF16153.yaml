@@ -1,0 +1,27 @@
+id: Pfam:PF16153
+pfam_id: PF16153
+name: Domain of unknown function (DUF4861)
+short_name: DUF4861
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16153
+counters:
+  proteins: 1918
+  matches: 1922
+  proteomes: 1255
+  taxa: 1860
+  structures: 0
+  alphafold_models: 1195
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032342
+description: This family consists of uncharacterized proteins around 400 residues in length and is mainly
+  found in various Bacteroides species. The function of this family is unknown. However, in many instances
+  the domain lies upstream of a glycosyl hydrolase family, usually family 88, so it might be involved
+  in carbohydrate binding.

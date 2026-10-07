@@ -1,0 +1,27 @@
+id: Pfam:PF07237
+pfam_id: PF07237
+name: Protein of unknown function (DUF1428)
+short_name: DUF1428
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07237
+counters:
+  proteins: 3131
+  matches: 3392
+  proteomes: 2854
+  taxa: 4136
+  structures: 1
+  alphafold_models: 1979
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009874
+description: This family consists of several hypothetical bacterial and one archaeal sequence of around
+  120 residues in length. The function of this family is unknown. The structure of this family shows it
+  to be part of the Dimeric-alpha-beta-barrel superfamily. Many members are annotated as being RNA signal
+  recognition particle 4.5S RNA, but this could not be verified.

@@ -1,0 +1,26 @@
+id: Pfam:PF20591
+pfam_id: PF20591
+name: Domain of unknown function (DUF6792)
+short_name: DUF6792
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20591
+counters:
+  proteins: 213
+  matches: 213
+  proteomes: 156
+  taxa: 318
+  structures: 0
+  alphafold_models: 133
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046742
+description: This presumed domain is functionally uncharacterised. This domain is found in bacteria, and
+  is around 250 amino acids in length. There is a conserved sequence motif GHSLGG. It may have an alpha/beta
+  hydrolase fold suggesting a catalytic role.

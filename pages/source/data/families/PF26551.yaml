@@ -1,0 +1,29 @@
+id: Pfam:PF26551
+pfam_id: PF26551
+name: Domain of unknown function (DUF8180)
+short_name: DUF8180
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26551
+counters:
+  proteins: 280
+  matches: 280
+  proteomes: 256
+  taxa: 541
+  structures: 0
+  alphafold_models: 203
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058493
+description: This entry represents a domain from a family of uncharacterised proteins predominantly found
+  in the class Clostridia. The proteins containing this domain are typically between 60 and 130 amino
+  acids in length. The domain is highly conserved across various species within the Bacillota and Thermodesulfobacteriota
+  phyla. Structure prediction suggests this protein is composed of two alpha helices and forms a head
+  to tail dimer conformation. The sequences contain a set of histidines in helix one that according to
+  AlphaFold 3 confidently binds to a zinc ion.

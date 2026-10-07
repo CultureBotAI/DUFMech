@@ -1,0 +1,25 @@
+id: Pfam:PF22858
+pfam_id: PF22858
+name: Domain of unknown function (DUF7016)
+short_name: DUF7016
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22858
+counters:
+  proteins: 1
+  matches: 1
+  proteomes: 1
+  taxa: 10
+  structures: 0
+  alphafold_models: 1
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054282
+description: This entry represents a pair of OB fold domains found in a group of uncharacterised proteins
+  from bacteria which have a [pfam:PF22707] domain at the C-terminal.

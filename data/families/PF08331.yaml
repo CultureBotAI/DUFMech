@@ -1,0 +1,27 @@
+id: Pfam:PF08331
+pfam_id: PF08331
+name: Epoxyqueuosine reductase QueG, DUF1730
+short_name: QueG_DUF1730
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08331
+counters:
+  proteins: 10770
+  matches: 10771
+  proteomes: 10737
+  taxa: 15247
+  structures: 5
+  alphafold_models: 6905
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013542
+description: This domain of unknown function occurs in Epoxyqueuosine reductase QueG, an iron-sulfur cluster-binding
+  protein, together with the 4Fe-4S binding domain ([pfam:PF00037]). QueG catalyses the conversion of
+  epoxyqueuosine (oQ) to queuosine (Q), which is a hypermodified base found in the wobble positions of
+  tRNA(Asp), tRNA(Asn), tRNA(His) and tRNA(Tyr) [[cite:PUB00058202]].

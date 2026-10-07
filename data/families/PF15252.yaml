@@ -1,0 +1,26 @@
+id: Pfam:PF15252
+pfam_id: PF15252
+name: Domain of unknown function (DUF4589)
+short_name: DUF4589
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15252
+counters:
+  proteins: 1353
+  matches: 1493
+  proteomes: 679
+  taxa: 2095
+  structures: 0
+  alphafold_models: 1173
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027997
+description: 'This protein family is a domain of unknown function. The precise function of the protein
+  domain remains to be elucidated. This family of proteins is found in eukaryotes and are typically between
+  215 and 293 amino acids in length. The protein contains two conserved sequence motifs: SSS and KST.'

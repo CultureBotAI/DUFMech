@@ -1,0 +1,26 @@
+id: Pfam:PF14258
+pfam_id: PF14258
+name: Domain of unknown function (DUF4350)
+short_name: DUF4350
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14258
+counters:
+  proteins: 5702
+  matches: 5708
+  proteomes: 5273
+  taxa: 7409
+  structures: 0
+  alphafold_models: 3498
+  domain_architectures: 42
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025646
+description: This domain family is found in bacteria, archaea, and is approximately 170 to 200 amino acids
+  in length. This domain is part of the glutaminase superfamily, suggesting it may have an enzymatic function.
+  The domain is founded between two transmembrane helix domains giving it a membrane localisation.

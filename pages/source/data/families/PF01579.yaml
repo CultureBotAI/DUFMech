@@ -1,0 +1,28 @@
+id: Pfam:PF01579
+pfam_id: PF01579
+name: Domain of unknown function (DUF19)
+short_name: DUF19
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01579
+counters:
+  proteins: 1028
+  matches: 1261
+  proteomes: 126
+  taxa: 389
+  structures: 0
+  alphafold_models: 944
+  domain_architectures: 27
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002542
+description: This presumed domain has no known function. It is found in one or two copies in several Caenorhabditis
+  elegans proteins. It is roughly 130 amino acids long. The domain contains 12 conserved cysteines which
+  suggests that the domain is an extracellular domain and that these cysteines form six intradomain disulphide
+  bridges. The GO annotation for this protein indicates that it has a function in nematode larval development
+  and has a positive regulation of growth rate.

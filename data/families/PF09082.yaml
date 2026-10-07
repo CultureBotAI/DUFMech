@@ -1,0 +1,27 @@
+id: Pfam:PF09082
+pfam_id: PF09082
+name: Domain of unknown function (DUF1922)
+short_name: DUF1922
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09082
+counters:
+  proteins: 69
+  matches: 69
+  proteomes: 69
+  taxa: 140
+  structures: 1
+  alphafold_models: 57
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015166
+description: This entry represents a putative zinc finger domain. Proteins containing this domain typically
+  consist of a beta-sheet region followed by an alpha-helix and an unstructured C-terminus. The beta-sheet
+  region contains a CXCX...XCXC sequence with Cys residues located in two proximal loops and pointing
+  towards each other. The precise function of this set of bacterial proteins is, as yet, unknown [[cite:PUB00008047]].

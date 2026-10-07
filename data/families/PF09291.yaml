@@ -1,0 +1,26 @@
+id: Pfam:PF09291
+pfam_id: PF09291
+name: Domain of unknown function (DUF1968)
+short_name: DUF1968
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09291
+counters:
+  proteins: 269
+  matches: 269
+  proteomes: 125
+  taxa: 493
+  structures: 661
+  alphafold_models: 242
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015370
+description: Members of this family are found in mammalian T-cell antigen receptor, and adopt an immunoglobulin-like
+  beta-sandwich fold, with seven strands in two beta-sheets in a Greek-key topology. Their exact function
+  has not, as yet, been determined.

@@ -1,0 +1,30 @@
+id: Pfam:PF11998
+pfam_id: PF11998
+name: Low psii accumulation1 / Rep27
+short_name: DUF3493
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11998
+counters:
+  proteins: 1512
+  matches: 1514
+  proteomes: 698
+  taxa: 1944
+  structures: 0
+  alphafold_models: 1181
+  domain_architectures: 38
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021883
+description: This family includes members such as low psii accumulation1 (lpa1) from plants as well as
+  Rep27 proteins found in unicellular green alga Chlamydomonas reinhardtii. The Arabidopsis LPA1 is a
+  chaperone required for efficient photosystem II (PSII) assembly. It binds to psbA during de novo biogenesis
+  of PSII [[cite:PUB00086019]]. Other studies show that REP27 in Chlamydomonas reinhardtii chloroplast
+  thylakoids, plays a dual role in the regulation of D1 protein turnover by facilitating cotranslational
+  biosynthesis insertion (C-terminal domain) and activation (tetratricopeptide repeat [TPR] motifs) of
+  the nascent D1 during the PSII repair process [[cite:PUB00138194]].

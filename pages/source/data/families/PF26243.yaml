@@ -1,0 +1,28 @@
+id: Pfam:PF26243
+pfam_id: PF26243
+name: Domain of unknown function (DUF8056)
+short_name: DUF8056
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26243
+counters:
+  proteins: 195
+  matches: 195
+  proteomes: 195
+  taxa: 295
+  structures: 0
+  alphafold_models: 185
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058369
+description: This entry represents a family of uncharacterised integral membrane proteins found in halobacteria.
+  These proteins contain four predicted transmembrane helices. These proteins are often found in genomic
+  contexts with a glucose-6-phosphate isomerase family proteins, which is usually diver gently transcribed
+  to the gene in this family. SecD and SecF homologoues are also found in the genomic neighbourhood perhaps
+  suggesting a role in secretion. Additionally members of [pfam:PF19129] are found as well.

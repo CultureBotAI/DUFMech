@@ -1,0 +1,25 @@
+id: Pfam:PF31038
+pfam_id: PF31038
+name: Family of unknown function (DUF8778)
+short_name: DUF8778
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF31038
+counters:
+  proteins: 501
+  matches: 501
+  proteomes: 439
+  taxa: 1017
+  structures: 0
+  alphafold_models: 302
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061839
+description: This entry rerpesents uncharacterised proteins found mainly in Cyanobacteria. They contain
+  a ribbon-helix-helix (RHH) motif and may interact with DNA.

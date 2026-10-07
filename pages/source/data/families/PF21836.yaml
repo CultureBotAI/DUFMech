@@ -1,0 +1,26 @@
+id: Pfam:PF21836
+pfam_id: PF21836
+name: Domain of unknown function (DUF6895)
+short_name: DUF6895
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21836
+counters:
+  proteins: 880
+  matches: 882
+  proteomes: 569
+  taxa: 901
+  structures: 0
+  alphafold_models: 407
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054190
+description: This entry contains a set of proteins that have a predicted 6-helical hairpin fold found
+  in a wide range of glycosyl hydrolase enzymes, suggesting a potential function for these proteins. These
+  proteins are largely found in actinobacteria and Alphaproteobacteria.

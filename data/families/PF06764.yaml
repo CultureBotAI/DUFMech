@@ -1,0 +1,26 @@
+id: Pfam:PF06764
+pfam_id: PF06764
+name: Protein of unknown function (DUF1223)
+short_name: DUF1223
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06764
+counters:
+  proteins: 3945
+  matches: 3963
+  proteomes: 3312
+  taxa: 5423
+  structures: 1
+  alphafold_models: 2730
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010634
+description: This family consists of several hypothetical proteins of around 250 residues in length which
+  are found in both plants and bacteria. The function of this family is unknown. Structurally it lies
+  in the Thioredoxin-like superfamily.

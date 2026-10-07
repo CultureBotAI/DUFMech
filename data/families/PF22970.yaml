@@ -1,0 +1,25 @@
+id: Pfam:PF22970
+pfam_id: PF22970
+name: Domain of unknown function (DUF7028)
+short_name: DUF7028
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22970
+counters:
+  proteins: 2569
+  matches: 3423
+  proteomes: 369
+  taxa: 1005
+  structures: 0
+  alphafold_models: 1215
+  domain_architectures: 126
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054292
+description: This domain is found in a group of uncharacterised proteins mainly from plants. It is predicted
+  to adopt a globular structure that has significant sequence and structural similarity to MBD domains.

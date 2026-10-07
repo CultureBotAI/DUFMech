@@ -1,0 +1,28 @@
+id: Pfam:PF06869
+pfam_id: PF06869
+name: Protein of unknown function (DUF1258)
+short_name: DUF1258
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06869
+counters:
+  proteins: 394
+  matches: 394
+  proteomes: 68
+  taxa: 273
+  structures: 0
+  alphafold_models: 359
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009667
+description: This family represents a conserved region approximately 260 residues long within a number
+  of hypothetical proteins of unknown function that seem to be specific to C. elegans. Note that this
+  family contains a number of conserved cysteine and histidine residues.This family corresponds to the
+  Mirage group of putative transposases and family members are relatively close homologs of Transposase_21
+  ([pfam:PF02992]) proteins (1).

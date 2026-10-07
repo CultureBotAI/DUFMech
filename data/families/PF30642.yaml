@@ -1,0 +1,26 @@
+id: Pfam:PF30642
+pfam_id: PF30642
+name: Domain of unknown function (DUF8687)
+short_name: DUF8687
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30642
+counters:
+  proteins: 573
+  matches: 581
+  proteomes: 169
+  taxa: 477
+  structures: 0
+  alphafold_models: 510
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061748
+description: This entry represents a domain found in a family of membrane and transmembrane proteins from
+  mycobacterial and related species. This domain has similarity to the ligand-binding domains of neurotransmitter
+  ligand-gated ion channels and sensory receptors and it is likely to have similar function.

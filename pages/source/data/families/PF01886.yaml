@@ -1,0 +1,30 @@
+id: Pfam:PF01886
+pfam_id: PF01886
+name: Protein of unknown function DUF61
+short_name: DUF61
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01886
+counters:
+  proteins: 196
+  matches: 196
+  proteomes: 193
+  taxa: 381
+  structures: 1
+  alphafold_models: 181
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002746
+description: This Domain of unknown function 61 (DUF61) family of proteins are widely distributed in archaea.
+  In crenarchaea, the genes of DUF61 proteins are in an operon containing two genes of box C/D RNA protein
+  complexes. The NMR structure of a DUF61 family member from the hyperthermophilic archaeon Sulfolobus
+  solfataricus revealed a rigid core structure and flexible N- and C-terminal regions, including a negatively-charged
+  independent C-terminal helix. The core structure consists of N- and C-terminal subdomains, in which
+  the C-terminal subdomain shows significant structural similarity with several nucleic acid binding proteins
+  [[cite:PUB00098020]].

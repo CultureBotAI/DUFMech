@@ -1,0 +1,25 @@
+id: Pfam:PF30972
+pfam_id: PF30972
+name: Domain of unknown function (DUF8770)
+short_name: DUF8770
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30972
+counters:
+  proteins: 943
+  matches: 947
+  proteomes: 575
+  taxa: 1170
+  structures: 0
+  alphafold_models: 778
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061831
+description: This domain is found in uncharcaterised proteins mainly from fungi. It shares similarity
+  to the C-terminal domain of Heparinase II/III.

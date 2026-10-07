@@ -1,0 +1,26 @@
+id: Pfam:PF07293
+pfam_id: PF07293
+name: Protein of unknown function (DUF1450)
+short_name: DUF1450
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07293
+counters:
+  proteins: 2748
+  matches: 2748
+  proteomes: 1437
+  taxa: 1909
+  structures: 0
+  alphafold_models: 1737
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009910
+description: This family consists of several hypothetical bacterial proteins of around 80 residues in
+  length. Members of this family contain four highly conserved cysteine residues. The function of this
+  family is unknown.

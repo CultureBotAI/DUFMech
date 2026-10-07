@@ -1,0 +1,27 @@
+id: Pfam:PF09498
+pfam_id: PF09498
+name: Protein of unknown function (DUF2388)
+short_name: DUF2388
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09498
+counters:
+  proteins: 2053
+  matches: 2054
+  proteomes: 576
+  taxa: 671
+  structures: 0
+  alphafold_models: 1067
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012661
+description: This family consists of small hypothetical proteins, about 100 amino acids in length. The
+  family includes five members (three in tandem) in Pseudomonas aeruginosa PAO1 and in Pseudomonas putida
+  (strain KT2440), four in Pseudomonas syringae DC3000, and single members in several other Proteobacteria.
+  The function is unknown.

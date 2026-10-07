@@ -1,0 +1,25 @@
+id: Pfam:PF24255
+pfam_id: PF24255
+name: Family of unknown function (DUF7456)
+short_name: DUF7456
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24255
+counters:
+  proteins: 32
+  matches: 32
+  proteomes: 32
+  taxa: 74
+  structures: 0
+  alphafold_models: 1
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055879
+description: This entry represents a family of uncharacterised proteins found in Mycobacterial phage.
+  The family includes gene 48 from phage Bxb1.

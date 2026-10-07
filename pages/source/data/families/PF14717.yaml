@@ -1,0 +1,28 @@
+id: Pfam:PF14717
+pfam_id: PF14717
+name: Domain of unknown function (DUF4465)
+short_name: DUF4465
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14717
+counters:
+  proteins: 400
+  matches: 451
+  proteomes: 323
+  taxa: 608
+  structures: 7
+  alphafold_models: 262
+  domain_architectures: 26
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027828
+description: A large family of uncharacterized proteins mostly from human gut bacteroides, but also some
+  environmental and water bacteria (Planctomycetes) as well as metagenomic samples Most proteins from
+  this family are secreted or located on the outer surface and may participate in cell-cell interactions
+  or cell-nutrient interactions This function is supported by a solved structure of a Bacteroides ovatus
+  homolog, which adapts a galactose binding (jelly-roll) beta barrel structure

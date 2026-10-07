@@ -1,0 +1,26 @@
+id: Pfam:PF23581
+pfam_id: PF23581
+name: Domain of unknown function (DUF7135)
+short_name: DUF7135
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23581
+counters:
+  proteins: 1090
+  matches: 1097
+  proteomes: 413
+  taxa: 1122
+  structures: 0
+  alphafold_models: 870
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055559
+description: This domain of unknown function is found N-terminal in a group of uncharacterised proteins
+  mainly from plants. This domain is predicted to adopt a beta-barrel with topology typical for PH domains.
+  It has a weak sequence similarity to Dcp1 PH domain.

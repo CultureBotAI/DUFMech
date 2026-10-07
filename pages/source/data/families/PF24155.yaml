@@ -1,0 +1,25 @@
+id: Pfam:PF24155
+pfam_id: PF24155
+name: Domain of unknown function (DUF7406)
+short_name: DUF7406
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24155
+counters:
+  proteins: 146
+  matches: 146
+  proteomes: 136
+  taxa: 225
+  structures: 0
+  alphafold_models: 132
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055829
+description: This is a small domain found in a group of uncharacterised archaeal sequences. This small
+  domain may have an all-beta fold.

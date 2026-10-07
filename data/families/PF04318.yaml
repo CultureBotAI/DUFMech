@@ -1,0 +1,25 @@
+id: Pfam:PF04318
+pfam_id: PF04318
+name: Protein of unknown function (DUF468)
+short_name: DUF468
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04318
+counters:
+  proteins: 15
+  matches: 15
+  proteomes: 3
+  taxa: 26
+  structures: 0
+  alphafold_models: 14
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007414
+description: These conserved ORFs probably are probably not translated into protein [Personal communication,
+  Val Wood].

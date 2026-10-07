@@ -1,0 +1,25 @@
+id: Pfam:PF25853
+pfam_id: PF25853
+name: DUF6311 C-terminal domain
+short_name: DUF6311_C
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25853
+counters:
+  proteins: 386
+  matches: 386
+  proteomes: 307
+  taxa: 624
+  structures: 0
+  alphafold_models: 234
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058671
+description: This entry represents a C-terminal domain found in a presumed integral membrane domain is
+  functionally uncharacterised.

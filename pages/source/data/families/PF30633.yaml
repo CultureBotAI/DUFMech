@@ -1,0 +1,25 @@
+id: Pfam:PF30633
+pfam_id: PF30633
+name: Domain of unknown function (DUF8682)
+short_name: DUF8682
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30633
+counters:
+  proteins: 15
+  matches: 15
+  proteomes: 15
+  taxa: 43
+  structures: 0
+  alphafold_models: 10
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061743
+description: This entry represents a domain of approximately 45 residues found in cyanobacteria, particularly
+  in marine Prochlorococcus species. The function of this domain remains to be determined.

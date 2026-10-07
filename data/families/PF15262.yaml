@@ -1,0 +1,28 @@
+id: Pfam:PF15262
+pfam_id: PF15262
+name: Domain of unknown function (DUF4592)
+short_name: DUF4592
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15262
+counters:
+  proteins: 2269
+  matches: 2295
+  proteomes: 532
+  taxa: 1903
+  structures: 0
+  alphafold_models: 1518
+  domain_architectures: 24
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR028030
+description: This protein family is a domain of unknown function, which lies to the N-terminus of the
+  protein. This domain family is found in eukaryotes, and is typically between 114 and 130 amino acids
+  in length. There are two completely conserved residues (L and A) that may be functionally important.
+  In humans, the gene that encodes this protein lies in the position, chromosome 2 open reading frame
+  55.

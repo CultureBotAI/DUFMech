@@ -147,6 +147,8 @@ def build_member_uniref_manifest(
             "seed_snapshot_id": seed_snapshot_id,
         },
         "source": {
+            "name": "InterPro Pfam members, UniProtKB and UniRef",
+            "url": "https://www.ebi.ac.uk/interpro/api/protein/UniProt/",
             "interpro_pfam_proteins_url": INTERPRO_PFAM_PROTEINS_URL,
             "uniprotkb_search_url": UNIPROTKB_SEARCH_URL,
             "uniprot_id_mapping_url": UNIPROT_ID_MAPPING_URL,

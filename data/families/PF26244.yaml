@@ -1,0 +1,25 @@
+id: Pfam:PF26244
+pfam_id: PF26244
+name: Family of unknown function (DUF8057)
+short_name: DUF8057
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26244
+counters:
+  proteins: 176
+  matches: 176
+  proteomes: 170
+  taxa: 262
+  structures: 0
+  alphafold_models: 165
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058370
+description: This entry represents a family of Halobacterial proteins that are composed of an N-terminal
+  helical bundle domain followed by a C-terminal tail with three short conserved motifs within it.

@@ -1,0 +1,33 @@
+id: Pfam:PF10988
+pfam_id: PF10988
+name: Putative auto-transporter adhesin, head GIN domain
+short_name: DUF2807
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10988
+counters:
+  proteins: 10865
+  matches: 11258
+  proteomes: 3662
+  taxa: 5354
+  structures: 14
+  alphafold_models: 7045
+  domain_architectures: 34
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021255
+description: This bacterial family of proteins shows structural similarity to other pectin lyase families.
+  Although structures from this family align with acetyl-transferases, there is no conservation of catalytic
+  residues found. It is likely that the function is one of cell-adhesion. In PDB:3jx8, it is interesting
+  to note that the sequence of contains several well defined sequence repeats, centred around GSG motifs
+  defining the tight beta turn between the two sheets of the super-helix; there are 8 such repeats in
+  the C-terminal half of the protein, which could be grouped into 4 repeats of two. It seems likely that
+  this family belongs to the superfamily of trimeric auto-transporter adhesins (TAAs), which are important
+  virulence factors in Gram-negative pathogens [[cite:PUB00029784]] [[cite:PUB00051306]]. In the case
+  of Parabacteroides distasonis, which is a component of the normal distal human gut microbiota, TAA-like
+  complexes probably modulate adherence to the host (information derived from TOPSAN).

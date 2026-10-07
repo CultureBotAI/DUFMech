@@ -1,0 +1,28 @@
+id: Pfam:PF07759
+pfam_id: PF07759
+name: Protein of unknown function (DUF1615)
+short_name: DUF1615
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07759
+counters:
+  proteins: 1213
+  matches: 1214
+  proteomes: 1186
+  taxa: 1593
+  structures: 0
+  alphafold_models: 665
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011673
+description: This is a family of proteins of unknown function expressed by various bacterial species.
+  Some members of this family (e.g. [swissprot:Q8Z8Z7], [swissprot:Q8ZRF4]) are thought to be lipoproteins.
+  Another member of this family ([swissprot:Q93SV8]) is thought to be involved in photosynthesis [[cite:PUB00015226]].
+  Based on structure predictions (from AlphaFold and structural comparisons using DALI server), this family
+  may have a lysozyme-like fold.

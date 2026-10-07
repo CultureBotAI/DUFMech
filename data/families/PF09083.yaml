@@ -1,0 +1,26 @@
+id: Pfam:PF09083
+pfam_id: PF09083
+name: Domain of unknown function (DUF1923)
+short_name: DUF1923
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09083
+counters:
+  proteins: 5
+  matches: 5
+  proteomes: 4
+  taxa: 16
+  structures: 2
+  alphafold_models: 5
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015167
+description: Members of this family are found in maltosyltransferases, and adopt a secondary structure
+  consisting of eight antiparallel beta-strands, which form an open-sided 'jelly roll' Greek key beta-barrel.
+  Their exact function is, as yet, unknown [[cite:PUB00025274]].

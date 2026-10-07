@@ -1,0 +1,25 @@
+id: Pfam:PF09860
+pfam_id: PF09860
+name: Uncharacterized protein conserved in bacteria (DUF2087)
+short_name: DUF2087
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09860
+counters:
+  proteins: 3891
+  matches: 3891
+  proteomes: 3355
+  taxa: 4859
+  structures: 0
+  alphafold_models: 2286
+  domain_architectures: 35
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018656
+description: This domain, found in various hypothetical prokaryotic proteins and transcriptional activators,
+  has no known function. Structural modelling suggests this domain may bind nucleic acids [[cite:PUB00070793]].

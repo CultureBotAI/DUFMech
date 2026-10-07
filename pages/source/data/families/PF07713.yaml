@@ -1,0 +1,26 @@
+id: Pfam:PF07713
+pfam_id: PF07713
+name: G patch domain-containing protein, N-terminal
+short_name: DUF1604
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07713
+counters:
+  proteins: 3570
+  matches: 3576
+  proteomes: 2990
+  taxa: 8113
+  structures: 4
+  alphafold_models: 3000
+  domain_architectures: 88
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011666
+description: This domain is found at the N-terminal of several eukaryotic RNA processing proteins, including
+  Arabidopsis TGH, which is involved in microRNA (miRNA) and small interfering RNA (siRNA) biogenesis
+  [[cite:PUB00077126]].

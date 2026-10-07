@@ -1,0 +1,27 @@
+id: Pfam:PF31160
+pfam_id: PF31160
+name: Domain of unknown function (DUF8826)
+short_name: DUF8826
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF31160
+counters:
+  proteins: 443
+  matches: 443
+  proteomes: 4
+  taxa: 29
+  structures: 0
+  alphafold_models: 440
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061887
+description: This entry represents a C-terminal domain of approximately 57 residues found in aspartic
+  peptidases in Arachis (peanut). This domain is located C-terminal to the Asp_protease_2 domain ([pfam:PF13650]).
+  These proteins may be associated with transposable elements. The function of this C-terminal domain
+  remains to be determined.

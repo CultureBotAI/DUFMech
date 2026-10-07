@@ -1,0 +1,27 @@
+id: Pfam:PF12094
+pfam_id: PF12094
+name: Protein of unknown function (DUF3570)
+short_name: DUF3570
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12094
+counters:
+  proteins: 1574
+  matches: 1754
+  proteomes: 1352
+  taxa: 2021
+  structures: 0
+  alphafold_models: 989
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021953
+description: This family of proteins is functionally uncharacterised. This protein is found in bacteria.
+  Proteins in this family are typically between 396 to 444 amino acids in length. Proteins in this family
+  contain the [S/T]GA[S/T] motif and thus, is flavinylated by ApbE. This suggests that they may be involved
+  in extracytosolic redox activities [[cite:PUB00098250]].

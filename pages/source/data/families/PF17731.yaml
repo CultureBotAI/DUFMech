@@ -1,0 +1,25 @@
+id: Pfam:PF17731
+pfam_id: PF17731
+name: Family of unknown function (DUF5570)
+short_name: DUF5570
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17731
+counters:
+  proteins: 28
+  matches: 28
+  proteomes: 19
+  taxa: 79
+  structures: 0
+  alphafold_models: 27
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR041391
+description: This is a family of unknown function found in chordata. Family members contain a transmembrane
+  region in the C-terminal and have been shown to be localized to the Golgi apparatus [[cite:PUB00091556]].

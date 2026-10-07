@@ -1,0 +1,26 @@
+id: Pfam:PF19825
+pfam_id: PF19825
+name: Domain of unknown function (DUF6306)
+short_name: DUF6306
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19825
+counters:
+  proteins: 158
+  matches: 159
+  proteomes: 150
+  taxa: 293
+  structures: 0
+  alphafold_models: 119
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046273
+description: This family of proteins is functionally uncharacterised. This family of proteins is found
+  in bacteria. Proteins in this family are typically between 137 and 172 amino acids in length. Protein
+  in this family belong to the ferritin clan.

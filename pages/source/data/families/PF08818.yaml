@@ -1,0 +1,25 @@
+id: Pfam:PF08818
+pfam_id: PF08818
+name: Domain of unknown function (DU1801)
+short_name: DUF1801
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08818
+counters:
+  proteins: 18172
+  matches: 18242
+  proteomes: 8371
+  taxa: 11668
+  structures: 4
+  alphafold_models: 11286
+  domain_architectures: 33
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014922
+description: This domain is found in the Intracellular iron chaperone frataxin YdhG [[cite:PUB00098100]]
+  and the uncharacterised protein YdeI from Bacillus subtilis.

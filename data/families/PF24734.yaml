@@ -1,0 +1,28 @@
+id: Pfam:PF24734
+pfam_id: PF24734
+name: Domain of unknown function (DUF7685)
+short_name: DUF7685
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24734
+counters:
+  proteins: 114
+  matches: 114
+  proteomes: 103
+  taxa: 239
+  structures: 0
+  alphafold_models: 69
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056102
+description: This domain is found in uncharacterised bacterial proteins. It contains two pairs of conserved
+  cysteine residues and it is predicted to adopt a fold typical for treble clef zinc fingers. It has a
+  detectable similarity to the N-terminal zinc finger domain of the bacterial AAA+ disaggregase ClpG,
+  which confers extreme heat resistance to bacteria. The latter is is crucial for structural integrity
+  and disaggregase functionality of ClpG.

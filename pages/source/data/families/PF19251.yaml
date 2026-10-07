@@ -1,0 +1,29 @@
+id: Pfam:PF19251
+pfam_id: PF19251
+name: Minor capsid protein P2, DUF5899
+short_name: DUF5899
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19251
+counters:
+  proteins: 18
+  matches: 18
+  proteomes: 14
+  taxa: 53
+  structures: 2
+  alphafold_models: 7
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045418
+description: This is a domain of unknown function found in Minor capsid protein P2 from Paramecium bursaria
+  Chlorella virus 1 and related sequences from Mimiviridae and Phycodnaviridae. Minor capsid protein P2
+  is one of the minor capsid proteins that constitute a network internal to the major capsid proteins
+  and outside the lipid membrane [[cite:PUB00154526]]. The minor capsid proteins glue and stabilize the
+  capsomers [[cite:PUB00154526]]. It also acts as a molecular tape measure protein that determines the
+  size of the viral capsid [[cite:PUB00154526]].

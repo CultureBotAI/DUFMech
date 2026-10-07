@@ -1,0 +1,26 @@
+id: Pfam:PF24330
+pfam_id: PF24330
+name: Family of unknown function (DUF7499)
+short_name: DUF7499
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24330
+counters:
+  proteins: 23
+  matches: 23
+  proteomes: 22
+  taxa: 48
+  structures: 1
+  alphafold_models: 13
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055922
+description: This entry represents uncharacterised proteins found in Chlamydiia. They adopt a globular
+  alpha/beta structure consisting of a curved mixed beta-sheet and alpha-helices packed on both sides
+  (PDB:6UXC).

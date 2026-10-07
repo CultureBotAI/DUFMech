@@ -1,0 +1,27 @@
+id: Pfam:PF23799
+pfam_id: PF23799
+name: Domain of unknown function (DUF7175)
+short_name: DUF7175
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23799
+counters:
+  proteins: 43
+  matches: 43
+  proteomes: 43
+  taxa: 108
+  structures: 0
+  alphafold_models: 3
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055599
+description: This entry represents an uncharacterized protein family found in various phages infecting
+  Gram-negative bacterial hosts, including Salmonella, Shigella, Erwinia, Aeromonas, Vibrio and Klebsiella
+  phages. The family typically contains proteins between 80-120 amino acids in length. The function of
+  this protein family is currently unknown.

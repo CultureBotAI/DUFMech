@@ -1,0 +1,24 @@
+id: Pfam:PF09871
+pfam_id: PF09871
+name: Uncharacterized protein conserved in archaea (DUF2098)
+short_name: DUF2098
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09871
+counters:
+  proteins: 159
+  matches: 159
+  proteomes: 154
+  taxa: 288
+  structures: 3
+  alphafold_models: 141
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019209
+description: This domain, found in various hypothetical prokaryotic proteins, has no known function.

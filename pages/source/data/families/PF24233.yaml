@@ -1,0 +1,29 @@
+id: Pfam:PF24233
+pfam_id: PF24233
+name: Family of unknown function (DUF7446)
+short_name: DUF7446
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24233
+counters:
+  proteins: 149
+  matches: 149
+  proteomes: 144
+  taxa: 384
+  structures: 0
+  alphafold_models: 46
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055869
+description: This entry represents a highly conserved domain found in various bacteriophages, particularly
+  those infecting Salmonella and related bacteria. The domain is also present in some bacterial species,
+  suggesting possible horizontal gene transfer. The function is unknown, but the high degree of conservation
+  implies an important role in phage biology. A conserved motif DVT is present centrally in many family
+  members. The aspartate and threonine form side chain hydrogen bonds that help stabilise the dimeric
+  interaction. Structure prediction suggests these proteins form a confident homodimer (iPTM=0.83).

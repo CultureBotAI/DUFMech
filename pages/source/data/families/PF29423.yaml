@@ -1,0 +1,27 @@
+id: Pfam:PF29423
+pfam_id: PF29423
+name: Family of unknown function (DUF8546)
+short_name: DUF8546
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29423
+counters:
+  proteins: 12
+  matches: 12
+  proteomes: 11
+  taxa: 55
+  structures: 0
+  alphafold_models: 5
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061616
+description: This entry represents a protein domain found in tailed bacteriophages (Caudoviricetes). The
+  domain is approximately 67-87 amino acids in length and can occur as a single copy or be repeated within
+  proteins. The family is also found in the Deinococcus bacterial genome, likely derived from an integrated
+  prophage. The function of this domain remains to be determined.

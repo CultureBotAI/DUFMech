@@ -1,0 +1,27 @@
+id: Pfam:PF28039
+pfam_id: PF28039
+name: Domain of unknown function (DUF8366)
+short_name: DUF8366
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28039
+counters:
+  proteins: 17
+  matches: 18
+  proteomes: 16
+  taxa: 51
+  structures: 0
+  alphafold_models: 11
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059410
+description: This domain is found in uncharacterised proteins mainly from Ochrophyta lineage. It is predicted
+  to fold into a structure with a shape of a double barrel. It contains a highly conserved APQFxSxGVGYxRLGDD
+  sequence motif that probably defines an interaction interface. In some proteins, it is found in combination
+  with SAM domain [pfam:PF00536].

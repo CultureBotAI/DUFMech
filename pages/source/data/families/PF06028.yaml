@@ -1,0 +1,25 @@
+id: Pfam:PF06028
+pfam_id: PF06028
+name: Alpha/beta hydrolase of unknown function (DUF915)
+short_name: DUF915
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06028
+counters:
+  proteins: 2045
+  matches: 2132
+  proteomes: 894
+  taxa: 1503
+  structures: 3
+  alphafold_models: 1318
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010315
+description: This family consists of several bacterial proteins of unknown function. Members of this family
+  have an alpha/beta hydrolase fold.

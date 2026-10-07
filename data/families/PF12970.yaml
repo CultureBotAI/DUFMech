@@ -1,0 +1,26 @@
+id: Pfam:PF12970
+pfam_id: PF12970
+name: Domain of Unknown Function with PDB structure (DUF3858)
+short_name: DUF3858
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12970
+counters:
+  proteins: 5265
+  matches: 5270
+  proteomes: 1921
+  taxa: 2789
+  structures: 1
+  alphafold_models: 3392
+  domain_architectures: 51
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024544
+description: This family is based on the third domain of the PDB structure 3KD4(residues 410-525). It
+  is structurally similar to part of neuropilin-2 (Z=4.6, rmsd 3.6A for 83 CA, 7% seq id). This domain
+  and the second domain appears to be part of peptide-n-glycanase (1x3w, 2g9f).

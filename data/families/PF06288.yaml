@@ -1,0 +1,24 @@
+id: Pfam:PF06288
+pfam_id: PF06288
+name: Protein of unknown function (DUF1040)
+short_name: DUF1040
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06288
+counters:
+  proteins: 888
+  matches: 889
+  proteomes: 887
+  taxa: 1261
+  structures: 1
+  alphafold_models: 595
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009383
+description: This family consists of several bacterial YihD proteins of unknown function [[cite:PUB00009964]].

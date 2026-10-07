@@ -1,0 +1,26 @@
+id: Pfam:PF18077
+pfam_id: PF18077
+name: Domain of unknown function (DUF5595)
+short_name: DUF5595
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18077
+counters:
+  proteins: 1048
+  matches: 1048
+  proteomes: 866
+  taxa: 2717
+  structures: 12
+  alphafold_models: 931
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040967
+description: This domain is found in Nude C 80 (Ndc80) proteins which can be found in species such as
+  Homo sapiens. Ndc80 protein complexes are a core component of the end-on attachment sites for kinetochore
+  microtubules. Ndc80 is also known as Hec1, for highly expressed in cancer 1 [[cite:PUB00049694]].

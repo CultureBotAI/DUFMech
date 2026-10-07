@@ -1,0 +1,27 @@
+id: Pfam:PF14358
+pfam_id: PF14358
+name: Domain of unknown function (DUF4405)
+short_name: DUF4405
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14358
+counters:
+  proteins: 1330
+  matches: 1335
+  proteomes: 1115
+  taxa: 2418
+  structures: 0
+  alphafold_models: 964
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025517
+description: This presumed domain is found in a group of uncharacterised prokaryotic proteins. Proteins
+  in this group are thought to mediate flavinylation-associated electron transfer in the cytoplasmic membrane
+  and constitute a novel class of cytochromes. There are two conserved histidines in this domain, which
+  are predicted to bind to two haem cofactors [[cite:PUB00160945]].

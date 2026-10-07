@@ -1,0 +1,24 @@
+id: Pfam:PF10929
+pfam_id: PF10929
+name: Protein of unknown function (DUF2811)
+short_name: DUF2811
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10929
+counters:
+  proteins: 289
+  matches: 289
+  proteomes: 214
+  taxa: 598
+  structures: 0
+  alphafold_models: 176
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021231
+description: This is a bacterial family of uncharacterised proteins.

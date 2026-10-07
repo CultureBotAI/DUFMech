@@ -1,0 +1,27 @@
+id: Pfam:PF11830
+pfam_id: PF11830
+name: Domain of unknown function (DUF3350)
+short_name: DUF3350
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11830
+counters:
+  proteins: 3672
+  matches: 3675
+  proteomes: 1039
+  taxa: 3476
+  structures: 0
+  alphafold_models: 2630
+  domain_architectures: 37
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021785
+description: This domain is functionally uncharacterised and is found in eukaryotic proteins, such as
+  TBC1 domain family members 1 and 4. This presumed domain is typically between 50 to 64 amino acids in
+  length. TBC domain proteins may act as GTPase-activating proteins for RAB2A, RAB8A, RAB10 and RAB14
+  [[cite:PUB00079096]].

@@ -1,0 +1,28 @@
+id: Pfam:PF25453
+pfam_id: PF25453
+name: Domain of unknown function (DUF7898)
+short_name: DUF7898
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25453
+counters:
+  proteins: 1405
+  matches: 1406
+  proteomes: 1148
+  taxa: 2960
+  structures: 17
+  alphafold_models: 624
+  domain_architectures: 52
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057220
+description: This entry describes the N-terminal domain of unknown function of DNA polymerase theta subunit
+  (PolQ) majoritarily from fungal and and yeast proteins. Structural predictions suggest that this family
+  adopts Helix-Helix-Helix (HHH) motifs. Proteins containing HHH motifs are typically associated with
+  DNA-binding functions. These structural elements are often found in enzymes involved in DNA metabolism,
+  such as DNA polymerases and helicases [[cite:PUB00101275],[cite:PUB00021052]].

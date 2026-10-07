@@ -1,0 +1,25 @@
+id: Pfam:PF18429
+pfam_id: PF18429
+name: Domain of unknown function (DUF5609)
+short_name: DUF5609
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18429
+counters:
+  proteins: 782
+  matches: 782
+  proteomes: 782
+  taxa: 1069
+  structures: 1
+  alphafold_models: 499
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR041449
+description: This is a probable HAD-like (haloalkanoate dehalogenase) domain found in bacterial phosphoserine
+  phosphatases.

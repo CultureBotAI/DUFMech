@@ -1,0 +1,28 @@
+id: Pfam:PF30767
+pfam_id: PF30767
+name: Domain of unknown function (DUF8726)
+short_name: DUF8726
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30767
+counters:
+  proteins: 640
+  matches: 640
+  proteomes: 586
+  taxa: 1022
+  structures: 0
+  alphafold_models: 437
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061787
+description: This entry represents a bacterial immunoglobulin-like (Big) domain of approximately 100 residues.
+  The domain is found at the N-terminus of multi-domain proteins that also contain the DUF7408 domain
+  ([pfam:PF24157]). Structural similarity searches identify this as a member of the E-set Ig-like superfamily.
+  This family is restricted to Bacillota, particularly Bacillales (including Paenibacillus and Bacillaceae)
+  and Clostridia. The function of this domain remains to be determined.

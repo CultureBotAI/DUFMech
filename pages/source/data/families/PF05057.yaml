@@ -1,0 +1,26 @@
+id: Pfam:PF05057
+pfam_id: PF05057
+name: Putative serine esterase (DUF676)
+short_name: DUF676
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05057
+counters:
+  proteins: 15503
+  matches: 16829
+  proteomes: 4005
+  taxa: 10132
+  structures: 0
+  alphafold_models: 10211
+  domain_architectures: 547
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007751
+description: This domain, whose function is unknown, is found within a group of putative lipases. Proteins
+  containing this domain include YOR059C (Lpl1) from budding yeasts. Lpl1 has been identified as a phospholipase
+  B [[cite:PUB00073522]]. They contain an alpha/beta hydrolase fold.

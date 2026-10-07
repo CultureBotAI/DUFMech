@@ -1,0 +1,27 @@
+id: Pfam:PF31107
+pfam_id: PF31107
+name: Domain of unknown function (DUF8811)
+short_name: DUF8811
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF31107
+counters:
+  proteins: 488
+  matches: 488
+  proteomes: 443
+  taxa: 730
+  structures: 0
+  alphafold_models: 246
+  domain_architectures: 32
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061872
+description: This entry represents a C-terminal domain of approximately 220 residues found in subtilisin-like
+  serine peptidases in Actinomycetota. This domain is typically located C-terminal to the Peptidase_S8
+  catalytic domain ([pfam:PF00082]) and PA domain ([pfam:PF02225]). The function of this domain remains
+  to be determined.

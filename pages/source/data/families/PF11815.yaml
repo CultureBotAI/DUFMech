@@ -1,0 +1,25 @@
+id: Pfam:PF11815
+pfam_id: PF11815
+name: Domain of unknown function (DUF3336)
+short_name: DUF3336
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11815
+counters:
+  proteins: 5403
+  matches: 5418
+  proteomes: 2403
+  taxa: 5273
+  structures: 0
+  alphafold_models: 4418
+  domain_architectures: 78
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021771
+description: This family of proteins are functionally uncharacterised. This family is found in bacteria
+  and eukaryotes. This presumed domain is typically between 143 to 227 amino acids in length.

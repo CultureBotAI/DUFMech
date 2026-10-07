@@ -1,0 +1,27 @@
+id: Pfam:PF19459
+pfam_id: PF19459
+name: Family of unknown function (DUF5996)
+short_name: DUF5996
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19459
+counters:
+  proteins: 1984
+  matches: 1986
+  proteomes: 1867
+  taxa: 2846
+  structures: 0
+  alphafold_models: 1180
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046038
+description: This entry represents a member of a biosynthetic gene cluster (BGC). This BGC (BGC0000434)
+  is described by MIBiG as an example of the following biosynthetic class, NRP (non-ribosomal peptide).
+  This family includes a protein from the SW-163C biosynthetic gene cluster from Streptomyces sp. SNA15896
+  [[cite:PUB00083668]].

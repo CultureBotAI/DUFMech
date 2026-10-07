@@ -1,0 +1,24 @@
+id: Pfam:PF17823
+pfam_id: PF17823
+name: Family of unknown function (DUF5585)
+short_name: DUF5585
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17823
+counters:
+  proteins: 910
+  matches: 943
+  proteomes: 679
+  taxa: 2154
+  structures: 0
+  alphafold_models: 841
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR041056
+description: This is a family of unknown function found in chordata.

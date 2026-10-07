@@ -1,0 +1,27 @@
+id: Pfam:PF09558
+pfam_id: PF09558
+name: Protein of unknown function (DUF2375)
+short_name: DUF2375
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09558
+counters:
+  proteins: 146
+  matches: 147
+  proteomes: 96
+  taxa: 131
+  structures: 0
+  alphafold_models: 72
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014271
+description: Two members of this family are found in Colwellia psychrerythraea (strain 34H / ATCC BAA-681)
+  and one each in various other species of Colwellia and Shewanella. One member from C. psychrerythraea
+  is of special interest because it is preceded by the same cis-regulatory site as a number of genes that
+  have the PEP-CTERM domain described by PEP_anchor (IPR013424).

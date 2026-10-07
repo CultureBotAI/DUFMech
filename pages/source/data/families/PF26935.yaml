@@ -1,0 +1,26 @@
+id: Pfam:PF26935
+pfam_id: PF26935
+name: Domain of unknown function (DUF8286)
+short_name: DUF8286
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26935
+counters:
+  proteins: 297
+  matches: 298
+  proteomes: 51
+  taxa: 183
+  structures: 11
+  alphafold_models: 218
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059330
+description: This domain is ubiquitously found in uncharacterised proteins. It is found in combination
+  with different domains and give the AlphaFold prediction either associates with another part of th polypeptide
+  chain or with another molecule.

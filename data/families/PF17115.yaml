@@ -1,0 +1,26 @@
+id: Pfam:PF17115
+pfam_id: PF17115
+name: N-terminal domain of toast_rack, DUF2154
+short_name: Toast_rack_N
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17115
+counters:
+  proteins: 851
+  matches: 858
+  proteomes: 801
+  taxa: 1320
+  structures: 1
+  alphafold_models: 561
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031346
+description: This short domain lies at the N-terminus of DUF2154, [pfam:PF09922], hereafter named Toast_rack
+  from its structural resemblance. The function of both domains is unknown though DUF2154 is proposed
+  to be a cell-adhesion protein.

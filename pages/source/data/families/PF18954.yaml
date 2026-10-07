@@ -1,0 +1,25 @@
+id: Pfam:PF18954
+pfam_id: PF18954
+name: Family of unknown function (DUF5697)
+short_name: DUF5697
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18954
+counters:
+  proteins: 125
+  matches: 125
+  proteomes: 104
+  taxa: 197
+  structures: 0
+  alphafold_models: 71
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043752
+description: This entry likely contains an N-terminal Helix-tun-helix motif and is therefore likely to
+  be a transcriptional regulator.

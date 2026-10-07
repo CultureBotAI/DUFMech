@@ -1,0 +1,25 @@
+id: Pfam:PF10360
+pfam_id: PF10360
+name: Protein of unknown function (DUF2433)
+short_name: DUF2433
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10360
+counters:
+  proteins: 1384
+  matches: 1386
+  proteomes: 1326
+  taxa: 2784
+  structures: 0
+  alphafold_models: 1097
+  domain_architectures: 28
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018829
+description: This is a conserved 120 residue region of a family of proteins found in fungi. The function
+  is not known.

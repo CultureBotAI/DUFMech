@@ -1,0 +1,33 @@
+id: Pfam:PF03990
+pfam_id: PF03990
+name: G5-linked-Ubiquitin-like domain
+short_name: DUF348
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03990
+counters:
+  proteins: 4937
+  matches: 12547
+  proteomes: 4394
+  taxa: 5839
+  structures: 1
+  alphafold_models: 3055
+  domain_architectures: 44
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007137
+description: This domain normally occurs as tandem repeats; however it is found as a single copy in the
+  S. cerevisiae DNA-binding nuclear protein YCR593 ([swissprot:P25357]). This protein is involved in sporulation
+  part of the SET3C complex, which is required to repress early/middle sporulation genes during meiosis
+  ([[cite:PUB00019472]]). The bacterial proteins are likely to be involved in a cell wall function as
+  they are found in conjunction with the [pfam:PF07501] domain, which is involved in various cell surface
+  processes. This domain is also present in the resuscitation-promoting factors RpfB from Mycobacterium
+  tuberculosis and Rpf2 from Corynebacterium glutamicum. These are factors that stimulate resuscitation
+  of dormant cells [[cite:PUB00075582]]. This domain has a beta grasp fold. Structural description of
+  this domain revealed a structural conservation between these domains and ubiquitin, hence it is termed
+  UBL-G5 [[cite:PUB00137668]].

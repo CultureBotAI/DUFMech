@@ -1,0 +1,25 @@
+id: Pfam:PF05632
+pfam_id: PF05632
+name: Borrelia burgdorferi protein of unknown function (DUF792)
+short_name: DUF792
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05632
+counters:
+  proteins: 96
+  matches: 96
+  proteomes: 31
+  taxa: 54
+  structures: 0
+  alphafold_models: 52
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008510
+description: This family consists of several hypothetical proteins from the Lyme disease spirochete Borrelia
+  burgdorferi.

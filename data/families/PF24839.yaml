@@ -1,0 +1,27 @@
+id: Pfam:PF24839
+pfam_id: PF24839
+name: Domain of unknown function (DUF7718)
+short_name: DUF7718
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24839
+counters:
+  proteins: 137
+  matches: 137
+  proteomes: 101
+  taxa: 239
+  structures: 0
+  alphafold_models: 117
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056135
+description: This domain is found in uncharacterised prokaryotic proteins. It is predicted to adopt alpha/beta
+  structure consisting of a meander beta-sheet and a kinked alpha-helix. It contains several conserved
+  aspartate and histidine residues that are predicted to come close in space and may constitute a metal
+  binding site.

@@ -1,0 +1,26 @@
+id: Pfam:PF24803
+pfam_id: PF24803
+name: Domain of unknown function (DUF7704)
+short_name: DUF7704
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24803
+counters:
+  proteins: 2820
+  matches: 2824
+  proteomes: 1087
+  taxa: 2247
+  structures: 0
+  alphafold_models: 2359
+  domain_architectures: 37
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056121
+description: This domain is found in a group of uncharacterised eukaryotic proteins. It has a detectable
+  similarity to Tumor protein p53-inducible protein 11 (TP53I11) and it is predicted to adopt similar
+  structure.

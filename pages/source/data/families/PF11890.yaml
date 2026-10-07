@@ -1,0 +1,26 @@
+id: Pfam:PF11890
+pfam_id: PF11890
+name: Domain of unknown function (DUF3410)
+short_name: DUF3410
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11890
+counters:
+  proteins: 2325
+  matches: 2325
+  proteomes: 2252
+  taxa: 3158
+  structures: 3
+  alphafold_models: 1412
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024531
+description: This domain is functionally uncharacterised. This domain is found in bacteria. This presumed
+  domain is about 90 amino acids in length. This domain is found associated with [pfam:PF02826], [pfam:PF00389].
+  This domain has a conserved RRE sequence motif.

@@ -1,0 +1,25 @@
+id: Pfam:PF30219
+pfam_id: PF30219
+name: Domain of unknown function (DUF8613)
+short_name: DUF8613
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30219
+counters:
+  proteins: 584
+  matches: 592
+  proteomes: 552
+  taxa: 825
+  structures: 0
+  alphafold_models: 190
+  domain_architectures: 104
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061674
+description: This entry represents an uncharacterised domain found in bacteria. It may to adopt a beta-sandwich
+  fold with an Ig-like topology.

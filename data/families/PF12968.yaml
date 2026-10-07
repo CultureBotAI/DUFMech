@@ -1,0 +1,29 @@
+id: Pfam:PF12968
+pfam_id: PF12968
+name: Domain of Unknown Function (DUF3856)
+short_name: DUF3856
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12968
+counters:
+  proteins: 27
+  matches: 27
+  proteomes: 25
+  taxa: 118
+  structures: 1
+  alphafold_models: 23
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024552
+description: TPR-like protein. The 2hr2 structure belongs to the SCOP all alpha class, TPR-like superfamily,
+  CT2138-like family. A DALI search gives hits with the putative peptidyl-prolyl isomerase 2fbn (Z=16),
+  the SGTA protein (Z=16), the PLCR protein 2qfc (Z=16), a putative FK506-binding protein (PDB:1qz2-A;
+  DALI Z-score 15.3; RMSD 2.9; 16% sequence identity within 132 superimposed residues), and with the tetratricopeptide
+  repeats of the protein phosphatase 5 (PDB:2bug; DALI Z-score 15.1; RMSD 2.5; 19% sequence identity within
+  117 superimposed residues).

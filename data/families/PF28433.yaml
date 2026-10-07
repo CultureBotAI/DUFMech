@@ -1,0 +1,27 @@
+id: Pfam:PF28433
+pfam_id: PF28433
+name: Domain of unknown function (DUF8394)
+short_name: DUF8394
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28433
+counters:
+  proteins: 435
+  matches: 485
+  proteomes: 329
+  taxa: 471
+  structures: 0
+  alphafold_models: 199
+  domain_architectures: 56
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059438
+description: This domain is found in uncharacterised proteins mainly from Actinomycetota lineage. It is
+  predicted to adopt a complex alpha/beta structure resembling the shape of 'stalk and head'. Structurally
+  it is similar to the so-called choice-of-anchor G proteins, which are sortase and exosortase targets,
+  and are likely to be found on the cell surface.

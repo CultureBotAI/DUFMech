@@ -1,0 +1,29 @@
+id: Pfam:PF11928
+pfam_id: PF11928
+name: Early growth response N-terminal domain
+short_name: DUF3446
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11928
+counters:
+  proteins: 2563
+  matches: 2576
+  proteomes: 717
+  taxa: 2470
+  structures: 2
+  alphafold_models: 2221
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021849
+description: Proteins containing this domain include early growth response protein 1/2/3 (EGR1/2/3). EGR1
+  is a transcriptional regulator that binds specifically to 9-bp target sequences containing two CpG sites
+  that can potentially be methylated at four cytosine bases [[cite:PUB00086408]]. EGR2, also known as
+  Krox20, is an E3 ligase that sumoylates its Nab coregulators [[cite:PUB00086407]]. This domain has a
+  single completely conserved residue P that may be functionally important. Furthermore, it is found associated
+  with [pfam:PF00096].

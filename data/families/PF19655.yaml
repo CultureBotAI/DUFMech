@@ -1,0 +1,27 @@
+id: Pfam:PF19655
+pfam_id: PF19655
+name: Family of unknown function (DUF6158)
+short_name: DUF6158
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19655
+counters:
+  proteins: 980
+  matches: 980
+  proteomes: 954
+  taxa: 1116
+  structures: 0
+  alphafold_models: 522
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046156
+description: This entry represents a member of a biosynthetic gene cluster (BGC). This BGC (BGC0000703)
+  is described by MIBiG as an example of the following biosynthetic class, saccharide. It includes a member
+  from the kanamycin biosynthetic gene cluster from Streptomyces kanamyceticus and appears to be predominantly
+  found in actinobacteria [[cite:PUB00098882]].

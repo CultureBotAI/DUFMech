@@ -1,0 +1,25 @@
+id: Pfam:PF29852
+pfam_id: PF29852
+name: Domain of unknown function (DUF8591)
+short_name: DUF8591
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29852
+counters:
+  proteins: 1794
+  matches: 1796
+  proteomes: 191
+  taxa: 505
+  structures: 0
+  alphafold_models: 1455
+  domain_architectures: 19
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061652
+description: This domain is found in uncharacterised fungal proteins. This domain has similarity to BAH
+  domains.

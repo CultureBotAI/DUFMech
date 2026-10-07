@@ -1,0 +1,25 @@
+id: Pfam:PF21727
+pfam_id: PF21727
+name: Family of unknown function (DUF6863)
+short_name: DUF6863
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21727
+counters:
+  proteins: 10
+  matches: 10
+  proteomes: 10
+  taxa: 21
+  structures: 0
+  alphafold_models: 9
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049196
+description: This entry represents an alpha helical bundle domain found at the N-terminus of a small group
+  of putative bacterial toxins. The function of this domain is unknown.

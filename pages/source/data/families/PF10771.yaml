@@ -1,0 +1,28 @@
+id: Pfam:PF10771
+pfam_id: PF10771
+name: Winged helix-turn-helix domain (DUF2582)
+short_name: DUF2582
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10771
+counters:
+  proteins: 575
+  matches: 575
+  proteomes: 323
+  taxa: 576
+  structures: 2
+  alphafold_models: 404
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019707
+description: This family is conserved in bacteria and archaea. The function is not known. The structure
+  of two proteins in this family were solved using NMR and shown to adopt a winged helix-turn-helix fold
+  [[cite:PUB00075673]]. Structural analysis shows that these proteins form an unusual dimeric conformation.
+  This dimer was shown to be similar to that found in the FadR and TubR wHTH domains. It was suggested
+  [[cite:PUB00075673]] that these proteins are not very likely to bind to DNA.

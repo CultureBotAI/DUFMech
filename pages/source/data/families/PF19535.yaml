@@ -1,0 +1,27 @@
+id: Pfam:PF19535
+pfam_id: PF19535
+name: Family of unknown function (DUF6060)
+short_name: DUF6060
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19535
+counters:
+  proteins: 469
+  matches: 469
+  proteomes: 292
+  taxa: 673
+  structures: 0
+  alphafold_models: 354
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045702
+description: This entry represents a member of a biosynthetic gene cluster (BGC). This BGC (BGC0001035)
+  is described by MIBiG as an example of the following biosynthetic classes, NRP (non-ribosomal peptide),
+  polyketide and other (Aminocoumarin). This family includes a protein from the pneumocandin B0 biosynthetic
+  gene cluster from Glarea lozoyensis ATCC 20868 and appear to be predominantly found in fungi [[cite:PUB00098936],[cite:PUB00098937]].

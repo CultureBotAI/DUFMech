@@ -1,0 +1,35 @@
+id: Pfam:PF11306
+pfam_id: PF11306
+name: Protein of unknown function (DUF3108)
+short_name: DUF3108
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11306
+counters:
+  proteins: 8047
+  matches: 8049
+  proteomes: 6575
+  taxa: 9208
+  structures: 0
+  alphafold_models: 5141
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021457
+description: This is a bacterial family of putative lipoproteins. The structure for [swissprot:Q64U78],
+  PDB:3fzx, the first structural template for this large family including several homologues in the human
+  gut microbiome and in metagenomic datasets, folds into a beta barrel that topologically looks like a
+  small-scale porin (such as FepA). [swissprot:Q64U78] is a putative exported protein, and this fold is
+  of the YmcC-like type, with a predicted signal peptide SpI cleavage site AGAMA|QNQDC, and a Phobius
+  server prediction of non-cytoplasmic localisation for amino acids 21-236. The possibility of it being
+  a membrane protein can be ruled out by the hydrophilic nature of the solvent exposed surface outside
+  the barrels. Analysis of sequence conservation suggests that an area near Glu172/Trp206 is potentially
+  interesting. These two residues are also conserved in Dali hit PDB:2in5, a hypothetical lipoprotein
+  classified as a new YmcC-like fold in SCOP (SCOP:159271, with a 12-stranded meander beta-sheet folded
+  into a deformed beta-barrel) despite large structural differences between the two structures, suggesting
+  similarity in function.

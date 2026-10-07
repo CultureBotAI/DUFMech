@@ -1,0 +1,26 @@
+id: Pfam:PF20394
+pfam_id: PF20394
+name: DUF6688 N-terminal domain
+short_name: DUF6688
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20394
+counters:
+  proteins: 177
+  matches: 177
+  proteomes: 172
+  taxa: 367
+  structures: 0
+  alphafold_models: 116
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046510
+description: This family of proteins is functionally uncharacterised. This family of proteins is found
+  in bacteria. Proteins in this family are typically between 360 and 412 amino acids in length. This entry
+  corresponds to the N-terminal integral membrane domain.

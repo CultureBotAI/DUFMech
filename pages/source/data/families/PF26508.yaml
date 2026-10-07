@@ -1,0 +1,28 @@
+id: Pfam:PF26508
+pfam_id: PF26508
+name: Family of unknown function (DUF8170)
+short_name: DUF8170
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26508
+counters:
+  proteins: 289
+  matches: 289
+  proteomes: 183
+  taxa: 307
+  structures: 0
+  alphafold_models: 272
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058483
+description: This entry represents a pair of domains from a family of uncharacterised proteins in halophilic
+  archaea. The proteins are predominantly found in the class Halobacteria, which includes genera such
+  as Halorubrum, Natrialbaceae, and Haloferacaceae. The proteins in this family typically range from 180
+  to 270 amino acids in length. The family contains one domain nested withing another. The outer domain
+  shows structural similarity to [pfam:PF05014] a family of Nucleoside 2-deoxyribosyltransferases.

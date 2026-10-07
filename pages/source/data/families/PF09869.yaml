@@ -1,0 +1,25 @@
+id: Pfam:PF09869
+pfam_id: PF09869
+name: DUF2096 C-terminal KH-like domain
+short_name: KH_DUF2096_C
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09869
+counters:
+  proteins: 53
+  matches: 53
+  proteomes: 53
+  taxa: 101
+  structures: 0
+  alphafold_models: 47
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056730
+description: This domain, found in various hypothetical archaeal proteins, has no known function. The
+  domain shows structural similarity to KH domains suggesting it may have an RNA-binding function.

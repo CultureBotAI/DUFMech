@@ -1,0 +1,30 @@
+id: Pfam:PF04175
+pfam_id: PF04175
+name: Protein of unknown function (DUF406)
+short_name: DUF406
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04175
+counters:
+  proteins: 1083
+  matches: 1083
+  proteomes: 977
+  taxa: 1360
+  structures: 3
+  alphafold_models: 703
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005272
+description: Members of this family appear to be found only in gamma proteobacteria. The function of this
+  protein family is undetermined. Solution of the structures of the two members of this family investigated
+  bear some resemblance to that of the single domain enzyme pterin-4a-carbinolamine dehydratase, PDC.
+  Although the residues of PCDs involved in binding of metabolite are not conserved in the two structures
+  under study, they do correspond to a surface-region structurally aligned with residues that are highly
+  conserved, eg Glu 89, suggesting that this region is also involved in binding of a ligand, thereby possibly
+  constituting a catalytic site of a yet uncharacterised enzyme specific for gamma proteobacteria.

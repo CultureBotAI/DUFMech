@@ -1,0 +1,26 @@
+id: Pfam:PF08226
+pfam_id: PF08226
+name: Domain of unknown function (DUF1720)
+short_name: DUF1720
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08226
+counters:
+  proteins: 1675
+  matches: 1877
+  proteomes: 1014
+  taxa: 2308
+  structures: 0
+  alphafold_models: 826
+  domain_architectures: 113
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013182
+description: This domain is found in different combinations with cortical patch components EF hand, SH3
+  and ENTH and is therefore likely to be involved in cytoskeletal processes. This family contains many
+  hypothetical proteins.

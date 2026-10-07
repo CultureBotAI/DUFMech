@@ -1,0 +1,25 @@
+id: Pfam:PF10726
+pfam_id: PF10726
+name: Protein of function (DUF2518)
+short_name: DUF2518
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10726
+counters:
+  proteins: 245
+  matches: 245
+  proteomes: 243
+  taxa: 670
+  structures: 0
+  alphafold_models: 148
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019664
+description: This family is conserved in Cyanobacteria. Several members are annotated as the protein Ycf51.
+  The function is not known.

@@ -1,0 +1,28 @@
+id: Pfam:PF11223
+pfam_id: PF11223
+name: SPP41, DUF3020
+short_name: DUF3020
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11223
+counters:
+  proteins: 427
+  matches: 432
+  proteomes: 253
+  taxa: 580
+  structures: 0
+  alphafold_models: 293
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021386
+description: This domain is found in the conserved fungal proteins SPP41 (suppressor of PrP4, there are
+  four members, 1 to 4). In S. cerevisiae it is conserved towards the C-terminus of HMG domains. The function
+  is not known. However, it has been shown that SPP41 is involved in negative regulation of expression
+  of spliceosome components PRP4 and PRP3 and that it relocalizes to the cytosol in response to hypoxia
+  [[cite:PUB00098543],[cite:PUB00098542]].

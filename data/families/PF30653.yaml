@@ -1,0 +1,27 @@
+id: Pfam:PF30653
+pfam_id: PF30653
+name: Domain of unknown function (DUF8689)
+short_name: DUF8689
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30653
+counters:
+  proteins: 1536
+  matches: 1536
+  proteomes: 1295
+  taxa: 1971
+  structures: 0
+  alphafold_models: 1080
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061750
+description: This entry represents a C-terminal domain of approximately 75 residues found in bacterial
+  proteins. This domain is always located C-terminal to AAA+ ATPase domains. The family is found predominantly
+  in Alphaproteobacteria, particularly in the orders Rhodobacterales, and in Planctomycetota. The function
+  of this domain remains to be determined.

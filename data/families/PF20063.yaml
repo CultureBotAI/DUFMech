@@ -1,0 +1,27 @@
+id: Pfam:PF20063
+pfam_id: PF20063
+name: Family of unknown function (DUF6462)
+short_name: DUF6462
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20063
+counters:
+  proteins: 289
+  matches: 300
+  proteomes: 114
+  taxa: 227
+  structures: 0
+  alphafold_models: 166
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045591
+description: This family of proteins is functionally uncharacterised. This family of proteins is found
+  in bacteria, mainly in Firmicutes. Proteins in this family are typically between 62 and 78 amino acids
+  in length. Some of the members are probably transcriptional regulators. This family has overlaps with
+  families in clan CL0123, which suggests that they share the helix-turn-helix motif.

@@ -1,0 +1,25 @@
+id: Pfam:PF30721
+pfam_id: PF30721
+name: Domain of unknown function (DUF8703)
+short_name: DUF8703
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30721
+counters:
+  proteins: 1591
+  matches: 1606
+  proteomes: 116
+  taxa: 678
+  structures: 0
+  alphafold_models: 1325
+  domain_architectures: 96
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061764
+description: This domain is found in uncharacterised proteins from Metazoa lineage. This domain share
+  similarity with the RAG recombinase RNase H domain.

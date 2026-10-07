@@ -1,0 +1,25 @@
+id: Pfam:PF24007
+pfam_id: PF24007
+name: Domain of unknown function (DUF7321)
+short_name: DUF7321
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24007
+counters:
+  proteins: 198
+  matches: 198
+  proteomes: 197
+  taxa: 297
+  structures: 0
+  alphafold_models: 188
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055745
+description: This domain is found in uncharacterised archaeal proteins. It is predicted to fold into a
+  four-helical bundle and it is likely associated with the membrane.

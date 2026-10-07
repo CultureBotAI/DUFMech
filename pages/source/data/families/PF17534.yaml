@@ -1,0 +1,25 @@
+id: Pfam:PF17534
+pfam_id: PF17534
+name: Family of unknown function (DUF5453)
+short_name: DUF5453
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17534
+counters:
+  proteins: 8
+  matches: 8
+  proteomes: 8
+  taxa: 30
+  structures: 0
+  alphafold_models: 7
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR035217
+description: This is a family of unknown function found in Mycoplasma. Family members have 4 predicted
+  trans-membrane regions.

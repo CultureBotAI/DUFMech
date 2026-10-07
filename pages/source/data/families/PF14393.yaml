@@ -1,0 +1,25 @@
+id: Pfam:PF14393
+pfam_id: PF14393
+name: Domain of unknown function (DUF4422)
+short_name: DUF4422
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14393
+counters:
+  proteins: 960
+  matches: 967
+  proteomes: 774
+  taxa: 1505
+  structures: 1
+  alphafold_models: 668
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025536
+description: This family of proteins is found in bacteria and archaea. Proteins in this family are typically
+  between 255 and 371 amino acids in length.

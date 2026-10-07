@@ -1,0 +1,28 @@
+id: Pfam:PF14534
+pfam_id: PF14534
+name: Domain of unknown function (DUF4440)
+short_name: DUF4440
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14534
+counters:
+  proteins: 20901
+  matches: 21018
+  proteomes: 9416
+  taxa: 13277
+  structures: 14
+  alphafold_models: 13058
+  domain_architectures: 127
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027843
+description: This domain is found in uncharacterised proteins from bacteria, archaea and eukaryotes, including
+  NTF2-Like SgcJ protein from Streptomyces carzinostaticus, which plays a role in the biosynthesis of
+  the 9-membered enediyne antitumor antibiotic C-1027. It shows a cone-like alpha+beta barrel structure
+  with a long N-terminal alpha- helix, a curved six-stranded antiparallel beta-sheet and two additional
+  shorter alpha-helices. Its specific function is still unkown [[cite:PUB00100883]].

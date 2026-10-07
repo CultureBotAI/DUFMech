@@ -1,0 +1,27 @@
+id: Pfam:PF20562
+pfam_id: PF20562
+name: Domain of unknown function (DUF6772)
+short_name: DUF6772
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20562
+counters:
+  proteins: 260
+  matches: 260
+  proteomes: 229
+  taxa: 430
+  structures: 0
+  alphafold_models: 159
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046663
+description: This family of proteins is functionally uncharacterised. This family of proteins is found
+  in bacteria. Proteins in this family are typically between 292 and 316 amino acids in length. An AlphaFold
+  prediction show similarity to the concanavalin superfamily suggesting that this family may be involved
+  in carbohydrate binding.

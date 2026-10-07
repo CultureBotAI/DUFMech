@@ -1,0 +1,26 @@
+id: Pfam:PF15936
+pfam_id: PF15936
+name: Domain of unknown function (DUF4749)
+short_name: DUF4749
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15936
+counters:
+  proteins: 8665
+  matches: 8771
+  proteomes: 1150
+  taxa: 3816
+  structures: 0
+  alphafold_models: 7320
+  domain_architectures: 96
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031847
+description: This presumed domain is functionally uncharacterised. This domain family is found in eukaryotes,
+  and is typically between 121 and 170 amino acids in length. It is usually found in association with
+  [pfam:PF00595] (PDZ) and [pfam:PF00412] (LIM), and often contains the conserved Zasp-like motif (IPR006643).

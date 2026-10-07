@@ -1,0 +1,807 @@
+{
+  "$defs": {
+    "CharacterizationStatus": {
+      "description": "",
+      "enum": [
+        "UNSCORED",
+        "UNKNOWN_CANDIDATE",
+        "KNOWN_HISTORICAL_DUF",
+        "PARTIALLY_CHARACTERIZED"
+      ],
+      "title": "CharacterizationStatus",
+      "type": "string"
+    },
+    "ClaimEvidence": {
+      "additionalProperties": false,
+      "description": "A primary-source quotation retained locally for an independently checkable claim.",
+      "properties": {
+        "cache_path": {
+          "pattern": "^evidence/[A-Za-z0-9_./-]+[.]txt$",
+          "type": "string"
+        },
+        "cache_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "explanation": {
+          "type": "string"
+        },
+        "reference": {
+          "pattern": "^(PMID:[0-9]+|doi:10[.][0-9]{4,9}/\\S+|https://\\S+)$",
+          "type": "string"
+        },
+        "snippet": {
+          "type": "string"
+        },
+        "source_url": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "reference",
+        "source_url",
+        "snippet",
+        "explanation",
+        "cache_path",
+        "cache_sha256"
+      ],
+      "title": "ClaimEvidence",
+      "type": "object"
+    },
+    "CrossCorpusLink": {
+      "additionalProperties": false,
+      "description": "A directed link from the containing record or sub-object to a record in another Mech corpus. The five field names preserve NaturalProductMech's existing link shape. Consumers define allowed relations and evidence requirements; this class alone does not verify a target, its version, organism scope, or the scientific basis of the relation.",
+      "properties": {
+        "basis": {
+          "description": "How the relation was established, for example SAME_INCHIKEY for an exact chemical-structure join. A match on a protein or reaction must not be presented as sufficient evidence for a stronger relation.",
+          "type": "string"
+        },
+        "corpus": {
+          "description": "Canonical target corpus name, for example PathwayMech or AntibioticMech.",
+          "type": "string"
+        },
+        "identifier": {
+          "description": "Target record identifier, verbatim, in the named corpus.",
+          "type": "string"
+        },
+        "relation": {
+          "description": "Directed relation from the containing record or sub-object to the target. Consumers may constrain this string with a local enum through slot_usage on a subclass, without changing the shared module.",
+          "type": "string"
+        },
+        "source_version": {
+          "description": "Pinned commit or release of the target corpus that was checked. Optional for compatibility with existing NaturalProductMech links; consumers should require a full immutable version for newly added links.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "corpus",
+        "identifier",
+        "relation",
+        "basis"
+      ],
+      "title": "CrossCorpusLink",
+      "type": "object"
+    },
+    "CurationEvent": {
+      "additionalProperties": false,
+      "description": "Generated record-level view of a canonical sidecar event; the referenced history record is authoritative.",
+      "properties": {
+        "action": {
+          "type": "string"
+        },
+        "curator": {
+          "type": "string"
+        },
+        "event_index": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "history_record": {
+          "pattern": "^history/records/PF[0-9]{5}/[A-Za-z0-9_.-]+[.]ya?ml$",
+          "type": "string"
+        },
+        "llm_assisted": {
+          "type": "boolean"
+        },
+        "outcome": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "timestamp": {
+          "allOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            }
+          ],
+          "description": "Preserve the canonical UTC timestamp spelling and precision through model serialization.",
+          "pattern": "^20[0-9]{2}-",
+          "type": "string"
+        }
+      },
+      "required": [
+        "timestamp",
+        "curator",
+        "action",
+        "outcome",
+        "summary",
+        "history_record",
+        "event_index",
+        "llm_assisted"
+      ],
+      "title": "CurationEvent",
+      "type": "object"
+    },
+    "CurationStatus": {
+      "description": "",
+      "enum": [
+        "SEEDED",
+        "IN_PROGRESS",
+        "REVIEWED"
+      ],
+      "title": "CurationStatus",
+      "type": "string"
+    },
+    "Dataset": {
+      "additionalProperties": false,
+      "description": "A reference to a publicly available dataset (omics, sequence, phenotype) relevant to this record. A lightweight repository-accession reference, not a full Datasheets-for-Datasets / DCAT description.",
+      "properties": {
+        "accession": {
+          "description": "Repository accession or CURIE, e.g. `geo:GSE36701`, `NCBI_SRA:SRP...`. (CultureMech `dataset_id` migrates here.)",
+          "type": "string"
+        },
+        "conditions": {
+          "description": "Experimental conditions / groups represented.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "dataset_type": {
+          "$ref": "#/$defs/DatasetTypeEnum"
+        },
+        "description": {
+          "description": "Human-readable description; may add nuance beyond the title.",
+          "type": "string"
+        },
+        "evidence": {
+          "description": "Supporting citations.",
+          "items": {
+            "$ref": "#/$defs/SupportingReference"
+          },
+          "type": "array"
+        },
+        "findings": {
+          "description": "Brief note on what the dataset shows relevant to this record.",
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "organism": {
+          "description": "Source organism / community label (free text or CURIE).",
+          "type": "string"
+        },
+        "platform": {
+          "description": "Sequencing/assay platform.",
+          "type": "string"
+        },
+        "publication": {
+          "description": "Associated publication reference (e.g. PMID:...).",
+          "type": "string"
+        },
+        "repository": {
+          "$ref": "#/$defs/DatasetRepositoryEnum"
+        },
+        "sample_count": {
+          "type": "integer"
+        },
+        "sample_types": {
+          "description": "Sample/material types represented (free text or term labels).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "title": {
+          "description": "Short dataset title. (CommunityMech `name` migrates here.)",
+          "type": "string"
+        },
+        "url": {
+          "description": "Direct URL to the dataset landing page, if no CURIE applies.",
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "title": "Dataset",
+      "type": "object"
+    },
+    "DatasetRepositoryEnum": {
+      "description": "Public repository hosting the dataset. Superset of CommunityMech's enum (all values preserved) plus common additions; CultureMech datasets have no repository field today and migrate with repository unset / OTHER.",
+      "enum": [
+        "NCBI_SRA",
+        "NCBI_BIOPROJECT",
+        "NCBI_GEO",
+        "NCBI_ASSEMBLY",
+        "ENA",
+        "ARRAYEXPRESS",
+        "MGNIFY",
+        "JGI_GOLD",
+        "JGI_IMG",
+        "NMDC",
+        "METABOLOMICS_WORKBENCH",
+        "METABOLIGHTS",
+        "MASSIVE",
+        "GNPS",
+        "PRIDE",
+        "DBGAP",
+        "GTEX",
+        "FIGSHARE",
+        "ZENODO",
+        "BIOMODELS",
+        "KBASE",
+        "OTHER"
+      ],
+      "title": "DatasetRepositoryEnum",
+      "type": "string"
+    },
+    "DatasetTypeEnum": {
+      "description": "Type of dataset or data resource. Canonical UNION of CultureMech's and CommunityMech's enums plus microbial additions. Migration map (old \u2192 this): CultureMech values carry over unchanged; CommunityMech GENOME\u2192GENOMICS, METAGENOME\u2192METAGENOMICS, METATRANSCRIPTOME\u2192METATRANSCRIPTOMICS, METAPROTEOME\u2192METAPROTEOMICS (AMPLICON_16S / AMPLICON_ITS / METABOLOMICS / PHENOTYPE / MULTI_OMICS / OTHER are unchanged).",
+      "enum": [
+        "GENOMICS",
+        "METAGENOMICS",
+        "AMPLICON_16S",
+        "AMPLICON_ITS",
+        "AMPLICON_OTHER",
+        "TRANSCRIPTOMICS",
+        "METATRANSCRIPTOMICS",
+        "PROTEOMICS",
+        "METAPROTEOMICS",
+        "METABOLOMICS",
+        "FLUXOMICS",
+        "PHENOMICS",
+        "PHENOTYPE",
+        "MULTI_OMICS",
+        "OTHER"
+      ],
+      "title": "DatasetTypeEnum",
+      "type": "string"
+    },
+    "Discussion": {
+      "additionalProperties": false,
+      "description": "A thread-like record of an open question, controversy, curation todo, emerging hypothesis, knowledge gap, or interpretation debate attached to a record or one of its sub-objects. Captures the discourse / knowledge-gap layer of curation. External thread links (GitHub issues, forum posts) are cited via the `evidence` block, not a separate slot.",
+      "properties": {
+        "attaches_to": {
+          "description": "Hash-anchor pointers into the sections/nodes this discussion concerns: `<section>#<anchor>`, e.g. `causal_graphs#edge_x`, `composition#ingredient_y`, `ecological_interactions#z`, `ontology_mapping#m`. Free-form so each Mech can anchor into its own record structure.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "discussion_id": {
+          "description": "Stable local identifier for this discussion thread.",
+          "type": "string"
+        },
+        "evidence": {
+          "description": "Supporting / contextual citations.",
+          "items": {
+            "$ref": "#/$defs/SupportingReference"
+          },
+          "type": "array"
+        },
+        "kind": {
+          "$ref": "#/$defs/DiscussionKindEnum"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "posed_by": {
+          "description": "Curator or agent that raised the discussion.",
+          "type": "string"
+        },
+        "posed_date": {
+          "format": "date",
+          "type": "string"
+        },
+        "prompt": {
+          "description": "The open question, gap statement, or todo, in one or two sentences.",
+          "type": "string"
+        },
+        "proposed_experiments": {
+          "description": "Optional sketches of how the gap could be resolved.",
+          "items": {
+            "$ref": "#/$defs/ProposedExperiment"
+          },
+          "type": "array"
+        },
+        "rationale": {
+          "description": "Why this matters / what resolving it would change.",
+          "type": "string"
+        },
+        "resolution_note": {
+          "description": "How it was resolved (when status is RESOLVED).",
+          "type": "string"
+        },
+        "resolved_date": {
+          "format": "date",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/DiscussionStatusEnum"
+        }
+      },
+      "required": [
+        "discussion_id",
+        "prompt"
+      ],
+      "title": "Discussion",
+      "type": "object"
+    },
+    "DiscussionKindEnum": {
+      "description": "Kind of unresolved / in-progress item captured by a Discussion. Knowledge gaps are represented as a discussion kind so they reuse the shared pointer, evidence, and lifecycle machinery, while optional proposed experiments capture how a gap could be resolved.",
+      "enum": [
+        "OPEN_QUESTION",
+        "KNOWLEDGE_GAP",
+        "CONTROVERSY",
+        "CURATION_TODO",
+        "EMERGING_HYPOTHESIS",
+        "INTERPRETATION",
+        "HUMAN_MODEL_MISMATCH"
+      ],
+      "title": "DiscussionKindEnum",
+      "type": "string"
+    },
+    "DiscussionStatusEnum": {
+      "description": "Lifecycle status for a Discussion.",
+      "enum": [
+        "OPEN",
+        "UNDER_DISCUSSION",
+        "RESOLVED",
+        "ARCHIVED"
+      ],
+      "title": "DiscussionStatusEnum",
+      "type": "string"
+    },
+    "EvidenceKind": {
+      "description": "",
+      "enum": [
+        "EXPERIMENTAL",
+        "COMPUTATIONAL",
+        "CONTEXTUAL"
+      ],
+      "title": "EvidenceKind",
+      "type": "string"
+    },
+    "FamilyCounters": {
+      "additionalProperties": false,
+      "description": "",
+      "properties": {
+        "alphafold_models": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "domain_architectures": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "matches": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "proteins": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "proteomes": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "structures": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "taxa": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "title": "FamilyCounters",
+      "type": "object"
+    },
+    "FamilyCuration": {
+      "additionalProperties": false,
+      "description": "Human-owned overlay. Imported identity and counters cannot be overridden.",
+      "properties": {
+        "assertions": {
+          "items": {
+            "$ref": "#/$defs/FunctionalAssertion"
+          },
+          "type": "array"
+        },
+        "cross_corpus_links": {
+          "items": {
+            "$ref": "#/$defs/CrossCorpusLink"
+          },
+          "type": "array"
+        },
+        "curation_history": {
+          "pattern": "^history/records/PF[0-9]{5}$",
+          "type": "string"
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus"
+        },
+        "datasets": {
+          "items": {
+            "$ref": "#/$defs/Dataset"
+          },
+          "type": "array"
+        },
+        "discussions": {
+          "items": {
+            "$ref": "#/$defs/Discussion"
+          },
+          "type": "array"
+        },
+        "pfam_id": {
+          "pattern": "^PF[0-9]{5}$",
+          "type": "string"
+        },
+        "review_id": {
+          "pattern": "^reports/yaml_record_review/[A-Za-z0-9_.-]+[.]md$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pfam_id",
+        "curation_status"
+      ],
+      "title": "FamilyCuration",
+      "type": "object"
+    },
+    "FamilyRecord": {
+      "additionalProperties": false,
+      "description": "A source-derived family projection; SEEDED is not scientific review.",
+      "properties": {
+        "assertions": {
+          "items": {
+            "$ref": "#/$defs/FunctionalAssertion"
+          },
+          "type": "array"
+        },
+        "characterization_status": {
+          "$ref": "#/$defs/CharacterizationStatus"
+        },
+        "counters": {
+          "$ref": "#/$defs/FamilyCounters"
+        },
+        "cross_corpus_links": {
+          "items": {
+            "$ref": "#/$defs/CrossCorpusLink"
+          },
+          "type": "array"
+        },
+        "curation_events": {
+          "description": "Read-only index derived from validated canonical history sidecars, never an authoring surface.",
+          "items": {
+            "$ref": "#/$defs/CurationEvent"
+          },
+          "type": "array"
+        },
+        "curation_history": {
+          "description": "Stable directory containing canonical append-only history for this family.",
+          "pattern": "^history/records/PF[0-9]{5}$",
+          "type": "string"
+        },
+        "curation_status": {
+          "$ref": "#/$defs/CurationStatus"
+        },
+        "datasets": {
+          "items": {
+            "$ref": "#/$defs/Dataset"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "Imported source description, not a verified functional assertion.",
+          "type": "string"
+        },
+        "discussions": {
+          "items": {
+            "$ref": "#/$defs/Discussion"
+          },
+          "type": "array"
+        },
+        "id": {
+          "pattern": "^Pfam:PF[0-9]{5}$",
+          "type": "string"
+        },
+        "interpro_id": {
+          "pattern": "^InterPro:IPR[0-9]{6}$",
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "pfam_id": {
+          "pattern": "^PF[0-9]{5}$",
+          "type": "string"
+        },
+        "provenance": {
+          "$ref": "#/$defs/SnapshotProvenance"
+        },
+        "review_id": {
+          "description": "Retained completed record report; required with matching content and history for REVIEWED.",
+          "pattern": "^reports/yaml_record_review/[A-Za-z0-9_.-]+[.]md$",
+          "type": "string"
+        },
+        "score_provenance": {
+          "$ref": "#/$defs/SnapshotProvenance"
+        },
+        "seed_status": {
+          "$ref": "#/$defs/SeedStatus"
+        },
+        "short_name": {
+          "type": "string"
+        },
+        "source_url": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "pfam_id",
+        "name",
+        "short_name",
+        "seed_status",
+        "characterization_status",
+        "curation_status",
+        "source_url",
+        "provenance"
+      ],
+      "title": "FamilyRecord",
+      "type": "object"
+    },
+    "FunctionalAssertion": {
+      "additionalProperties": false,
+      "description": "Scoped experimental or computational claim, not implied by a DUF name.",
+      "properties": {
+        "assertion_id": {
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/ClaimEvidence"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "evidence_kind": {
+          "$ref": "#/$defs/EvidenceKind"
+        },
+        "scope": {
+          "description": "Exact family/subfamily/protein scope and limits of generalization.",
+          "type": "string"
+        },
+        "statement": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "assertion_id",
+        "statement",
+        "evidence_kind",
+        "scope",
+        "evidence"
+      ],
+      "title": "FunctionalAssertion",
+      "type": "object"
+    },
+    "ProposedExperiment": {
+      "additionalProperties": false,
+      "description": "A lightweight, domain-neutral sketch of an experiment or analysis that could resolve a knowledge gap. Records the idea and how its outcome would decide the gap; intentionally simpler than a full study design.",
+      "properties": {
+        "approach": {
+          "description": "Method/assay in brief (e.g. \"defined-coculture growth assay\", \"isolate WGS\").",
+          "type": "string"
+        },
+        "decision_criterion": {
+          "description": "The observation that would settle the question.",
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "experiment_id": {
+          "description": "Stable local id (optional; for cross-reference).",
+          "type": "string"
+        },
+        "model_systems": {
+          "description": "Systems to use (e.g. isolate, enrichment, defined coculture, metagenome).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        },
+        "perturbations": {
+          "description": "Interventions applied (e.g. gene knockout, nutrient removal).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "readouts": {
+          "description": "What would be measured.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "would_refute": {
+          "description": "Outcome that would refute it.",
+          "type": "string"
+        },
+        "would_support": {
+          "description": "Outcome that would support the hypothesis/assertion.",
+          "type": "string"
+        }
+      },
+      "title": "ProposedExperiment",
+      "type": "object"
+    },
+    "SeedStatus": {
+      "description": "",
+      "enum": [
+        "UNKNOWN_CANDIDATE",
+        "KNOWN_HISTORICAL_DUF",
+        "FALSE_POSITIVE_TEXT_HIT"
+      ],
+      "title": "SeedStatus",
+      "type": "string"
+    },
+    "SnapshotProvenance": {
+      "additionalProperties": false,
+      "description": "",
+      "properties": {
+        "generated_at": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T.*(Z|[+-]\\d{2}:\\d{2})$",
+          "type": "string"
+        },
+        "path": {
+          "pattern": "^data/worklists/[A-Za-z0-9_-]+[.]json$",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "type": "string"
+        },
+        "source_url": {
+          "description": "Upstream URL when the snapshot is acquired rather than locally derived.",
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "snapshot_id",
+        "path",
+        "sha256",
+        "generated_at"
+      ],
+      "title": "SnapshotProvenance",
+      "type": "object"
+    },
+    "SupportLevelEnum": {
+      "description": "How a SupportingReference bears on the claim it is attached to (mirrors the supports semantics already used in the Mech EvidenceItem models).",
+      "enum": [
+        "SUPPORT",
+        "REFUTE",
+        "PARTIAL",
+        "NO_EVIDENCE",
+        "WRONG_STATEMENT"
+      ],
+      "title": "SupportLevelEnum",
+      "type": "string"
+    },
+    "SupportingReference": {
+      "additionalProperties": false,
+      "description": "A lightweight literature/database citation supporting a Discussion or Dataset. Self-contained (so this module has no dependency on each repo's EvidenceItem); carries a verbatim `snippet` so the same anti-hallucination snippet-vs-cached-abstract check the Mechs already run can validate it.",
+      "properties": {
+        "evidence_source": {
+          "description": "How the snippet was obtained (e.g. abstract, full_text, figure, supplement, database). Free-form to stay self-contained.",
+          "type": "string"
+        },
+        "explanation": {
+          "description": "Why this source bears on the claim.",
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "reference": {
+          "description": "PMID:..., DOI:..., a repository accession/CURIE, or an opaque URL.",
+          "type": "string"
+        },
+        "reference_title": {
+          "description": "Title of the cited source (optional; populated by tooling).",
+          "type": "string"
+        },
+        "snippet": {
+          "description": "Verbatim quote from the source supporting the attached claim.",
+          "type": "string"
+        },
+        "supports": {
+          "$ref": "#/$defs/SupportLevelEnum"
+        }
+      },
+      "required": [
+        "reference"
+      ],
+      "title": "SupportingReference",
+      "type": "object"
+    }
+  },
+  "$id": "https://w3id.org/dufmech/schema",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "additionalProperties": false,
+  "description": "Human-owned overlay. Imported identity and counters cannot be overridden.",
+  "metamodel_version": "1.11.0",
+  "properties": {
+    "assertions": {
+      "items": {
+        "$ref": "#/$defs/FunctionalAssertion"
+      },
+      "type": "array"
+    },
+    "cross_corpus_links": {
+      "items": {
+        "$ref": "#/$defs/CrossCorpusLink"
+      },
+      "type": "array"
+    },
+    "curation_history": {
+      "pattern": "^history/records/PF[0-9]{5}$",
+      "type": "string"
+    },
+    "curation_status": {
+      "$ref": "#/$defs/CurationStatus"
+    },
+    "datasets": {
+      "items": {
+        "$ref": "#/$defs/Dataset"
+      },
+      "type": "array"
+    },
+    "discussions": {
+      "items": {
+        "$ref": "#/$defs/Discussion"
+      },
+      "type": "array"
+    },
+    "pfam_id": {
+      "pattern": "^PF[0-9]{5}$",
+      "type": "string"
+    },
+    "review_id": {
+      "pattern": "^reports/yaml_record_review/[A-Za-z0-9_.-]+[.]md$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "pfam_id",
+    "curation_status"
+  ],
+  "title": "dufmech",
+  "type": "object",
+  "version": null
+}

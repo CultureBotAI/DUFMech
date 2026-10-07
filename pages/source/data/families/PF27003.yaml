@@ -1,0 +1,28 @@
+id: Pfam:PF27003
+pfam_id: PF27003
+name: Domain of unknown function (DUF8324)
+short_name: DUF8324
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF27003
+counters:
+  proteins: 94
+  matches: 126
+  proteomes: 24
+  taxa: 94
+  structures: 0
+  alphafold_models: 90
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059368
+description: This entry represents a domain of unknown function in uncharacterised proteins mostly from
+  plants. This domain contains a Spectring fold with a conserved three-helix bundle structure that is
+  typically arranged in tandem repeats. These repeats confer mechanical flexibility and structural resilience,
+  allowing the proteins to maintain cell shape and organisation. Spectrin-repeat proteins form elongated
+  scaffolds beneath the plasma membrane and contribute to cytoskeletal integrity and membrane stability.

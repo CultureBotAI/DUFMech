@@ -1,0 +1,28 @@
+id: Pfam:PF11589
+pfam_id: PF11589
+name: Domain of unknown function (DUF3244)
+short_name: DUF3244
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11589
+counters:
+  proteins: 290
+  matches: 290
+  proteomes: 156
+  taxa: 281
+  structures: 4
+  alphafold_models: 200
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021638
+description: This domain adopts an immunoglobulin-like beta-sandwich fold and structurally is most similar
+  to fibronectin. This domain is found at the C-terminus of the Listeria monocytogenes InlP protein. This
+  domain shares some similarity with the secretion signal domain of type X secretion systems [pfam:PF18962].
+  This domain is also found at the C-terminus of likely cell surface proteins suggesting this domain has
+  a similar function.

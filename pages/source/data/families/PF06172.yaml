@@ -1,0 +1,25 @@
+id: Pfam:PF06172
+pfam_id: PF06172
+name: Cupin superfamily (DUF985)
+short_name: Cupin_5
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06172
+counters:
+  proteins: 7881
+  matches: 7933
+  proteomes: 7039
+  taxa: 11447
+  structures: 7
+  alphafold_models: 5387
+  domain_architectures: 53
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009327
+description: Family of uncharacterised proteins found in bacteria and eukaryotes that belongs to the Cupin
+  superfamily.

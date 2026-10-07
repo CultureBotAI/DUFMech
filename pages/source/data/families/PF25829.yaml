@@ -1,0 +1,27 @@
+id: Pfam:PF25829
+pfam_id: PF25829
+name: Domain of unknown function (DUF7953)
+short_name: DUF7953
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25829
+counters:
+  proteins: 782
+  matches: 801
+  proteomes: 360
+  taxa: 1018
+  structures: 0
+  alphafold_models: 641
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057713
+description: 'The domain described by this entry is located towards the N-terminal in putative transmembrane
+  and uncharacterised proteins found in plants. It is predicted to adopt a C2 fold. C2 domains are membrane-binding
+  modules that share a common overall fold: a single compact greek-key motif organised as an eight-stranded
+  anti-parallel beta-sandwich consisting of a pair of four-stranded beta-sheets [[cite:PUB00160608]].'

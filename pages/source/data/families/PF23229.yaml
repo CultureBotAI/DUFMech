@@ -1,0 +1,29 @@
+id: Pfam:PF23229
+pfam_id: PF23229
+name: Alpha-glucan water dikinase, DUF7067
+short_name: DUF7067
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23229
+counters:
+  proteins: 1012
+  matches: 1603
+  proteomes: 409
+  taxa: 1119
+  structures: 0
+  alphafold_models: 202
+  domain_architectures: 50
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055495
+description: This domain is found in two tandem copies in the Alpha-glucan water dikinase (GWD1 and GWD2)
+  from Arabidopsis thaliana and related proteins. It is predicted to adopt a globular structure consisting
+  of three helical bundle. GWD1 is involved in the incorporation of phosphate into starch-like alpha-glucan,
+  mostly at the C-6 position of glucose units [[cite:PUB00153995]]. This enzyme acts as regulator of starch
+  mobilization by controlling the phosphate content of starch. The function of the domain represented
+  in this entry is unknown.

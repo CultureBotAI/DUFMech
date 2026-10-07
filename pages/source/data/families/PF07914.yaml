@@ -1,0 +1,28 @@
+id: Pfam:PF07914
+pfam_id: PF07914
+name: Uncharacterized oxidoreductase dhs-27
+short_name: DUF1679
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07914
+counters:
+  proteins: 1968
+  matches: 2154
+  proteomes: 182
+  taxa: 632
+  structures: 0
+  alphafold_models: 1845
+  domain_architectures: 59
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012877
+description: The region featured in this family is found in a number of C. elegans proteins, in one case
+  ([swissprot:Q19034]) as a repeat. In many of the family members, this region is associated with the
+  CHK region described by SMART as being found in ZnF_C4 and HLH domain-containing kinases. In fact, one
+  member of this family ([swissprot:Q9GUC1]) is annotated as being a member of the nuclear hormone receptor
+  family, and contains regions typical of such proteins (Interpro:IPR000536, Interpro:IPR008946, and Interpro:IPR001628).

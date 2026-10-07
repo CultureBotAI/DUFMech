@@ -1,0 +1,26 @@
+id: Pfam:PF16245
+pfam_id: PF16245
+name: Domain of unknown function (DUF4902)
+short_name: DUF4902
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16245
+counters:
+  proteins: 274
+  matches: 274
+  proteomes: 222
+  taxa: 348
+  structures: 1
+  alphafold_models: 159
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032598
+description: This family of proteins mainly found in Proteobacteria includes RsaM from Burkholderia cenocepacia.
+  RsaM is a transcriptional regulator involved in quorum sensing (QS). This protein folds into a unique
+  domain with a five-stranded antiparallel beta-sheet that wraps around two alpha-helices [[cite:PUB00100860],[cite:PUB00100861]].

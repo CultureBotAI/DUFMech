@@ -1,0 +1,25 @@
+id: Pfam:PF17127
+pfam_id: PF17127
+name: Domain of unknown function (DUF5106)
+short_name: DUF5106
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17127
+counters:
+  proteins: 620
+  matches: 621
+  proteomes: 527
+  taxa: 830
+  structures: 1
+  alphafold_models: 417
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR033395
+description: This domain, found in Bacteroidetes proteins, is frequently associated with a putative thiol-disulfide
+  oxidoreductase domain, [pfam:PF13905]. The function of this domain is not known.

@@ -1,0 +1,26 @@
+id: Pfam:PF14291
+pfam_id: PF14291
+name: ZMYM1/FAM200, RNase-like domain
+short_name: DUF4371
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14291
+counters:
+  proteins: 21818
+  matches: 22713
+  proteomes: 1267
+  taxa: 4275
+  structures: 0
+  alphafold_models: 15479
+  domain_architectures: 951
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025398
+description: This entry (ex DUF4371) represents a RNase-like domain in Zinc finger MYM-type protein 1
+  (ZMYM1), FAM200 and similar proteins mainly found in animals. FAM200 is characterised by its involvement
+  in cellular regulatory processes, its precise function remains to be elucidated.

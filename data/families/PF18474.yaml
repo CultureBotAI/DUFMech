@@ -1,0 +1,25 @@
+id: Pfam:PF18474
+pfam_id: PF18474
+name: Family of unknown function (DUF5614)
+short_name: DUF5614
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18474
+counters:
+  proteins: 1368
+  matches: 1375
+  proteomes: 1160
+  taxa: 3892
+  structures: 0
+  alphafold_models: 1226
+  domain_architectures: 27
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR041076
+description: This is an N-terminal domain found in C7orf25 protein UPF0415. It is distantly related to
+  the PD-(D/E)XK nucleases [[cite:PUB00091006]].

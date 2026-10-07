@@ -1,0 +1,26 @@
+id: Pfam:PF19407
+pfam_id: PF19407
+name: Domain of unknown function (DUF5979)
+short_name: DUF5979
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19407
+counters:
+  proteins: 1164
+  matches: 4440
+  proteomes: 615
+  taxa: 966
+  structures: 2
+  alphafold_models: 414
+  domain_architectures: 260
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046022
+description: This domain is found as tandem repeats in bacterial cell surface proteins, associated with
+  TED adhesive domains. This domain contains a conserved lysine, glutamic acid and asparagine diagnostic
+  of an intradomain isopeptide bond.

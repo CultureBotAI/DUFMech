@@ -1,0 +1,24 @@
+id: Pfam:PF07874
+pfam_id: PF07874
+name: Prophage protein (DUF1660)
+short_name: DUF1660
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07874
+counters:
+  proteins: 554
+  matches: 554
+  proteomes: 455
+  taxa: 632
+  structures: 0
+  alphafold_models: 330
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012455
+description: This protein is found in Lactobacillae prophages.

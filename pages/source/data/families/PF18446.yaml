@@ -1,0 +1,28 @@
+id: Pfam:PF18446
+pfam_id: PF18446
+name: Domain of unknown function (DUF5611)
+short_name: DUF5611
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18446
+counters:
+  proteins: 400
+  matches: 400
+  proteomes: 400
+  taxa: 674
+  structures: 1
+  alphafold_models: 374
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040713
+description: This is a domain of unknown function. Studies of the TA0095 gene product indicate that this
+  96-residue hypothetical protein from Thermoplasma acidophilum is a member of the COG4004 orthologous
+  group of unknown function found in Archaea bacteria. The structure displays an alpha/beta two-layer
+  sandwich architecture formed by three alpha-helices and five beta-strands. Furthermore, structural homologs
+  indicate that the TA0095 structure belongs to the TBP-like fold [[cite:PUB00047999]].

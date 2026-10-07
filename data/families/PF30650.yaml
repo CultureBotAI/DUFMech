@@ -1,0 +1,28 @@
+id: Pfam:PF30650
+pfam_id: PF30650
+name: Domain of unknown function (DUF8688)
+short_name: DUF8688
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30650
+counters:
+  proteins: 3160
+  matches: 3160
+  proteomes: 3148
+  taxa: 3756
+  structures: 0
+  alphafold_models: 1742
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061749
+description: This entry represents an N-terminal helical domain of approximately 60 residues found in
+  bacterial SAM-dependent methyltransferases. This domain is always located N-terminal to a methyltransferase
+  domain ([pfam:PF09445], [pfam:PF13649]) and is frequently followed by a THUMP-like domain ([pfam:PF18096]).
+  The family is found almost exclusively in Actinomycetota, particularly in Streptomyces species and related
+  genera. The specific function of this N-terminal domain remains to be determined.

@@ -1,0 +1,26 @@
+id: Pfam:PF08338
+pfam_id: PF08338
+name: Domain of unknown function (DUF1731)
+short_name: DUF1731
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08338
+counters:
+  proteins: 15266
+  matches: 15270
+  proteomes: 12014
+  taxa: 19138
+  structures: 2
+  alphafold_models: 9814
+  domain_architectures: 54
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013549
+description: This domain of unknown function appears towards the C-terminus of proteins of the NAD dependent
+  epimerase/dehydratase family ([pfam:PF01370]) in bacteria, eukaryotes and archaea. Many of the proteins
+  in which it is found are involved in cell-division inhibition.

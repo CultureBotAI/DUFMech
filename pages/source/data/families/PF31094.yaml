@@ -1,0 +1,27 @@
+id: Pfam:PF31094
+pfam_id: PF31094
+name: Domain of unknown function (DUF8807)
+short_name: DUF8807
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF31094
+counters:
+  proteins: 558
+  matches: 558
+  proteomes: 532
+  taxa: 1340
+  structures: 0
+  alphafold_models: 359
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061868
+description: This entry represents a domain of approximately 100 residues found in bacteria. This domain
+  is typically located at the C-terminus of proteins containing DUF1156 ([pfam:PF06634]). These proteins
+  are often associated with mobile genetic elements, including transposases and site-specific DNA methyltransferases.
+  The function of this domain remains to be determined.

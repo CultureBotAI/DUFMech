@@ -1,0 +1,26 @@
+id: Pfam:PF10071
+pfam_id: PF10071
+name: Domain of unknown function (DUF2310)
+short_name: DUF2310
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10071
+counters:
+  proteins: 637
+  matches: 637
+  proteomes: 634
+  taxa: 953
+  structures: 0
+  alphafold_models: 385
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR016908
+description: This entry represents a domain found central in a family of proteobacterial zinc ribbon proteins.
+  Their exact function has not as yet been defined. This domain shares significant similarity with some
+  CdiI immunity proteins.

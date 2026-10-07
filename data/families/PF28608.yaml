@@ -1,0 +1,34 @@
+id: Pfam:PF28608
+pfam_id: PF28608
+name: Family of unknown function (DUF8443)
+short_name: DUF8443
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28608
+counters:
+  proteins: 2103
+  matches: 2104
+  proteomes: 1778
+  taxa: 2473
+  structures: 0
+  alphafold_models: 1415
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061513
+description: This entry represents a conserved domain found at the C-terminus of S41 family carboxyl-terminal
+  processing peptidases in members of the phylum Bacteroidota. The domain is approximately 85-90 amino
+  acids in length and is located immediately downstream of the Peptidase_S41 catalytic domain ([pfam:PF03572]).
+  S41 family peptidases are serine proteases involved in C-terminal processing of proteins, including
+  the removal of C-terminal extensions from penicillin-binding proteins and other substrates. This C-terminal
+  domain is found exclusively in Bacteroidota, particularly in the classes Bacteroidia, Flavobacteriia,
+  Cytophagia and Sphingobacteriia, suggesting it may confer phylum-specific functionality or substrate
+  specificity. The domain architecture of these proteins typically consists of an N-terminal CtpB_N-like
+  domain ([pfam:PF22694]), one or more PDZ domains ([pfam:PF00595], [pfam:PF13180], [pfam:PF17820]), the
+  catalytic Peptidase_S41 domain, and this C-terminal domain. The function of this domain remains to be
+  determined.

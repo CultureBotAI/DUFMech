@@ -1,0 +1,26 @@
+id: Pfam:PF26061
+pfam_id: PF26061
+name: Domain of unknown function (DUF8021)
+short_name: DUF8021
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26061
+counters:
+  proteins: 1780
+  matches: 1842
+  proteomes: 676
+  taxa: 1183
+  structures: 0
+  alphafold_models: 1376
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058334
+description: This domain is ubiquitously found in one or multiple tandem copies. It has a detectable similarity
+  to known NTF2-like domains and it is predicted to fold into a similar structure. When found in tandem,
+  two copies pack on each other forming a barrel like structure.

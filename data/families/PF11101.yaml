@@ -1,0 +1,25 @@
+id: Pfam:PF11101
+pfam_id: PF11101
+name: Protein of unknown function (DUF2884)
+short_name: DUF2884
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11101
+counters:
+  proteins: 1622
+  matches: 1627
+  proteomes: 1286
+  taxa: 1735
+  structures: 0
+  alphafold_models: 915
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021307
+description: Some members in this bacterial family of proteins are annotated as YggN which currently has
+  no known function.

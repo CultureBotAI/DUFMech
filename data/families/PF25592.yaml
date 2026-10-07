@@ -1,0 +1,25 @@
+id: Pfam:PF25592
+pfam_id: PF25592
+name: Domain of unknown function (DUF7937)
+short_name: DUF7937
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25592
+counters:
+  proteins: 353
+  matches: 355
+  proteomes: 336
+  taxa: 473
+  structures: 0
+  alphafold_models: 228
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057697
+description: This entry represents a family of uncharacterised membrane proteins found in Actinomycetes.
+  These proteins contain 12 putative transmembrane helices.

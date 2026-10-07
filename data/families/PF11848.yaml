@@ -1,0 +1,26 @@
+id: Pfam:PF11848
+pfam_id: PF11848
+name: PIN domain
+short_name: DUF3368
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11848
+counters:
+  proteins: 3206
+  matches: 3208
+  proteomes: 1816
+  taxa: 3821
+  structures: 0
+  alphafold_models: 2281
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021799
+description: This entry represents a family of PIN domains that cleaves single-stranded RNA in a sequence-
+  or structure-dependent manner. The PIN domain has a Rossmanoid fold with a central parallel beta-sheet
+  surrounded by alpha-helices.

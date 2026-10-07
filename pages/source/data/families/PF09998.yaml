@@ -1,0 +1,24 @@
+id: Pfam:PF09998
+pfam_id: PF09998
+name: Uncharacterized protein conserved in bacteria (DUF2239)
+short_name: DUF2239
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09998
+counters:
+  proteins: 1317
+  matches: 1326
+  proteomes: 1284
+  taxa: 1934
+  structures: 0
+  alphafold_models: 785
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018715
+description: This domain, found in various hypothetical bacterial proteins, has no known function.

@@ -1,0 +1,25 @@
+id: Pfam:PF25276
+pfam_id: PF25276
+name: Domain of unknown function (DUF7870)
+short_name: DUF7870
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25276
+counters:
+  proteins: 2300
+  matches: 3215
+  proteomes: 378
+  taxa: 1082
+  structures: 0
+  alphafold_models: 1849
+  domain_architectures: 50
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057192
+description: This domain is found in uncharacterised plant proteins. It has detectable similarity to methyltransferases
+  and it is predicted to adopt similar structure. It contains two highly conserved cysteines and a histidine.

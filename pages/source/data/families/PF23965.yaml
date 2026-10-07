@@ -1,0 +1,29 @@
+id: Pfam:PF23965
+pfam_id: PF23965
+name: Family of unknown function (DUF7293)
+short_name: DUF7293
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23965
+counters:
+  proteins: 123
+  matches: 123
+  proteomes: 122
+  taxa: 256
+  structures: 0
+  alphafold_models: 1
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055717
+description: This entry represents an uncharacterized protein of approximately 54 amino acids found in
+  T5-like bacteriophages that infect Escherichia coli and Salmonella. Homologs have been identified in
+  several T5-like phages including bacteriophage T5, Salmonella phage vB_SenS_SB13, and Escherichia phage
+  vB_EcoS-26175V. Structure prediction suggests that this protein forms a strand swapped homodimeric arrangement.
+  The dimeric structure forms two four stranded sheets that are connected by two alpha helices. The C-terminal
+  of each protein is donated to the sheet made by the other monomer.

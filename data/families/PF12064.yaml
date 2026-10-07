@@ -1,0 +1,30 @@
+id: Pfam:PF12064
+pfam_id: PF12064
+name: Protein kinase C-binding protein 1
+short_name: DUF3544
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12064
+counters:
+  proteins: 3284
+  matches: 3369
+  proteomes: 702
+  taxa: 2145
+  structures: 0
+  alphafold_models: 2827
+  domain_architectures: 30
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021931
+description: This is a domain found predominantly in eukaryotes and associated with [pfam:PF00628] [pfam:PF01753]
+  [pfam:PF00439] [pfam:PF00855]. Family members include protein kinase C-binding protein 1 (also known
+  as ZMYND8) which acts as a transcriptional corepressor of the H3K4 demethylase JARID1D [[cite:PUB00085454]].
+  ZMYND8 (zinc finger and MYND [myeloid, Nervy, and DEAF-1] domain containing 8) binds acetylated damaged
+  chromatin, including actively transcribed regions, as a means of recruiting the nucleosome remodeling
+  and histone deacetylation (NuRD) chromatin remodeling complex for transcriptional repression and DNA
+  double-strand break (DSB) repair by homologous recombination (HR) [[cite:PUB00103635]].

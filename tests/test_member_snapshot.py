@@ -15,6 +15,7 @@ from dufmech.member_snapshot import (
 from dufmech.member_snapshot_cli import main as freeze_member_snapshot
 from dufmech.member_uniref import PfamMemberUniRefRow
 from dufmech.protein_members import InterProPfamProteinClient
+from dufmech.provenance import check_manifest
 from dufmech.uniprotkb import UniProtKbMetadataClient
 from dufmech.uniref import UniProtIdMappingClient
 
@@ -214,6 +215,8 @@ def test_write_member_uniref_snapshot_writes_artifacts_and_manifest(tmp_path) ->
         "seed_snapshot_id": "interpro-pfam-duf-2026-10-01",
     }
     assert manifest["source"]["uniref_target"] == "UniRef90"
+    assert manifest["source"]["name"] == "InterPro Pfam members, UniProtKB and UniRef"
+    assert check_manifest(manifest_path) == []
     assert manifest["rows"]["total"] == 2
     assert manifest["rows"]["unique_pfam_families"] == 1
     assert manifest["rows"]["unique_uniprot_accessions"] == 2

@@ -1,0 +1,25 @@
+id: Pfam:PF08590
+pfam_id: PF08590
+name: Domain of unknown function (DUF1771)
+short_name: DUF1771
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08590
+counters:
+  proteins: 7421
+  matches: 7427
+  proteomes: 2861
+  taxa: 7508
+  structures: 0
+  alphafold_models: 5346
+  domain_architectures: 237
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013899
+description: This domain is highly charged and may represent a small helical extension of the Smr domain
+  ([pfam:PF01713]), known as N-ext, whose function is not yet clear [[cite:PUB00098095]].

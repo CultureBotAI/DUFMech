@@ -1,0 +1,24 @@
+id: Pfam:PF16426
+pfam_id: PF16426
+name: Domain of unknown function (DUF5023)
+short_name: DUF5023
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16426
+counters:
+  proteins: 1
+  matches: 1
+  proteomes: 1
+  taxa: 11
+  structures: 0
+  alphafold_models: 1
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: This family consists of several uncharacterised proteins around 300 residues in length and
+  is mainly found in various Eubacterium species. The function of this family is unknown.

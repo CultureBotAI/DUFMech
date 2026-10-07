@@ -1,0 +1,27 @@
+id: Pfam:PF19000
+pfam_id: PF19000
+name: Family of unknown function (DUF5729)
+short_name: DUF5729
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19000
+counters:
+  proteins: 11
+  matches: 11
+  proteomes: 11
+  taxa: 41
+  structures: 0
+  alphafold_models: 7
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043787
+description: This is a highly conserved domain of unknown function found in Platyhelminthes, with many
+  of the sequences annotated as being the small conductance calcium-activated potassium channel protein.
+  However, the location suggests that this domain belongs to the intracellular amino terminus of these
+  transmembrane proteins, near the calcium-activated SK potassium channel.

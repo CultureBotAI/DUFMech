@@ -1,0 +1,34 @@
+id: Pfam:PF04149
+pfam_id: PF04149
+name: Domain of unknown function (DUF397)
+short_name: DUF397
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04149
+counters:
+  proteins: 37657
+  matches: 40691
+  proteomes: 1831
+  taxa: 2162
+  structures: 0
+  alphafold_models: 19000
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007278
+description: The function of this family is unknown.
+curation_events:
+- timestamp: '2026-10-07T12:26:02Z'
+  curator: Codex
+  action: REVIEW
+  outcome: no_change
+  summary: Completed a scoped PF04149 frozen-seed and native audit integration review; biological content
+    unchanged.
+  history_record: history/records/PF04149/2026-10-07T122602Z-codex-3e2c16.yaml
+  event_index: 0
+  llm_assisted: true

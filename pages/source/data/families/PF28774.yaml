@@ -1,0 +1,27 @@
+id: Pfam:PF28774
+pfam_id: PF28774
+name: Domain of unknown function (DUF8457)
+short_name: DUF8457
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28774
+counters:
+  proteins: 1940
+  matches: 1940
+  proteomes: 1939
+  taxa: 2567
+  structures: 0
+  alphafold_models: 1258
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061527
+description: This entry represents a small helical domain of unknown function found in proteins from Flavobacteriia.
+  The domain is typically around 70-90 residues in length and is located towards the C-terminus of these
+  proteins, following a short N-terminal region. The proteins are found almost exclusively in the Flavobacteriaceae
+  family within the Bacteroidota phylum. The function of this domain remains to be determined.

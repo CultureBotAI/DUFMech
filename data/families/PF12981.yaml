@@ -1,0 +1,28 @@
+id: Pfam:PF12981
+pfam_id: PF12981
+name: Domain of Unknown Function with PDB structure (DUF3865)
+short_name: DUF3865
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12981
+counters:
+  proteins: 39
+  matches: 39
+  proteomes: 38
+  taxa: 111
+  structures: 2
+  alphafold_models: 20
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024477
+description: 'Family based of PDB:3B5P encoded by ZP_00108531 from nitrogen-fixing cyanobacterium Nostoc
+  punctiforme pcc 73102 is a CADD-like protein of unknown function. Superposition between protein structures
+  encoded by CT610 from Chlamydia trachomatis (PDB code 1rwc), pyrroloquinolinquinone synthase C (PqqC,
+  PDB code 1otv) and ZP_00108531 revealed that putative active sites in CT610 and ZP_00108531 are identical.
+  ( REF: http://www.topsan.org/Proteins/JCSG/3B5P).'

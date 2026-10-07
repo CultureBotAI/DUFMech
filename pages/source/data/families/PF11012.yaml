@@ -1,0 +1,24 @@
+id: Pfam:PF11012
+pfam_id: PF11012
+name: Protein of unknown function (DUF2850)
+short_name: DUF2850
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11012
+counters:
+  proteins: 306
+  matches: 306
+  proteomes: 189
+  taxa: 240
+  structures: 0
+  alphafold_models: 195
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021271
+description: This family of proteins with unknown function appear to be restricted to Vibrionaceae.

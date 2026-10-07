@@ -1,0 +1,31 @@
+id: Pfam:PF26474
+pfam_id: PF26474
+name: Domain of unknown function (DUF8148) central domain
+short_name: DUF8148_M
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26474
+counters:
+  proteins: 36
+  matches: 36
+  proteomes: 27
+  taxa: 64
+  structures: 0
+  alphafold_models: 25
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059015
+description: This entry represents a the central domain from a family of uncharacterised proteins found
+  predominantly in archaea, specifically within the Halobacteria class. The proteins in this family are
+  typically found in species such as Halovenus, Halobellus, and Natrarchaeobaculum, among others. Additionally,
+  some members are associated with viruses like the Pleolipoviridae family. The domain is approximately
+  60-70 amino acids in length. The proteins containing this domain are predicted to be involved in replication
+  processes, although their exact function remains unknown. The domain is found in proteins that are generally
+  around 600-700 amino acids in length. These proteins are primarily associated with replication functions,
+  as indicated by their presence in replication proteins across various archaeal species and viruses.

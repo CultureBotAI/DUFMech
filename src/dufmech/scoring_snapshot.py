@@ -10,12 +10,14 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from dufmech.score_inputs import ScoreInputError, score_input_validation
 from dufmech.scoring import (
     SCORE_TSV_FIELDNAMES,
     FamilyScoreRow,
     render_scores_json,
     render_scores_tsv,
 )
+from dufmech.snapshot import write_snapshot_artifacts
 
 SCORE_STEM = "duf-characterization-scores"
 
@@ -27,16 +29,17 @@ def write_score_snapshot(
     snapshot_date: str | date | None = None,
     generated_at: datetime | None = None,
     input_snapshot_ids: Mapping[str, str] | None = None,
+    input_provenance: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Write date-stamped DUF characterization JSON, TSV, and manifest files."""
 
     rows = sorted(rows, key=lambda row: (row.characterization_status, row.pfam_id))
+    if len({row.pfam_id for row in rows}) != len(rows):
+        raise ScoreInputError("duplicate score family identifiers")
     generated_at = generated_at or datetime.now(timezone.utc)
     if snapshot_date is None:
         snapshot_date = generated_at.astimezone(timezone.utc).date()
     snapshot_date = _snapshot_date_text(snapshot_date)
-
-    out_dir.mkdir(parents=True, exist_ok=True)
 
     snapshot_id = f"{SCORE_STEM}-{snapshot_date}"
     json_path = out_dir / f"{snapshot_id}.json"
@@ -45,9 +48,6 @@ def write_score_snapshot(
 
     json_text = render_scores_json(rows) + "\n"
     tsv_text = render_scores_tsv(rows) + "\n"
-
-    json_path.write_text(json_text, encoding="utf-8")
-    tsv_path.write_text(tsv_text, encoding="utf-8")
 
     manifest = build_score_manifest(
         rows,
@@ -59,10 +59,12 @@ def write_score_snapshot(
         tsv_path=tsv_path,
         tsv_text=tsv_text,
         input_snapshot_ids=input_snapshot_ids or {},
+        input_provenance=input_provenance or {},
     )
-    manifest_path.write_text(
-        json.dumps(manifest, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
+    write_snapshot_artifacts(
+        out_dir,
+        {json_path.name: json_text, tsv_path.name: tsv_text,
+         manifest_path.name: json.dumps(manifest, indent=2, sort_keys=True) + "\n"},
     )
     return manifest
 
@@ -78,20 +80,27 @@ def build_score_manifest(
     tsv_path: Path,
     tsv_text: str,
     input_snapshot_ids: Mapping[str, str] | None = None,
+    input_provenance: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Build provenance and checksum metadata for a score snapshot."""
 
     rows = list(rows)
     status_counts = Counter(row.characterization_status for row in rows)
     demotion_counts = Counter(reason for row in rows for reason in row.demotion_reasons)
+    input_ids = dict(sorted((input_snapshot_ids or {}).items()))
+    provenance = dict(sorted((input_provenance or {}).items()))
+    validation = score_input_validation(input_ids, provenance)
 
     return {
         "snapshot": {
             "id": snapshot_id,
             "date": snapshot_date,
             "generated_at": _datetime_text(generated_at),
-            "input_snapshot_ids": dict(sorted((input_snapshot_ids or {}).items())),
+            "input_snapshot_ids": input_ids,
         },
+        "input_provenance_version": 1,
+        "input_validation": validation,
+        "input_provenance": provenance,
         "schema": {
             "tsv_fieldnames": SCORE_TSV_FIELDNAMES,
         },

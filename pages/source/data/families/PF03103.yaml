@@ -1,0 +1,25 @@
+id: Pfam:PF03103
+pfam_id: PF03103
+name: Domain of unknown function (DUF243)
+short_name: DUF243
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03103
+counters:
+  proteins: 2116
+  matches: 2167
+  proteomes: 249
+  taxa: 942
+  structures: 0
+  alphafold_models: 1835
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004145
+description: This family of uncharacterised proteins is only found in fly proteins. It is found associated
+  with YLP motifs [pfam:PF02757] in some proteins.

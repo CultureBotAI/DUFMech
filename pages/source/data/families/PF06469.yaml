@@ -1,0 +1,31 @@
+id: Pfam:PF06469
+pfam_id: PF06469
+name: Neurobeachin-like, DUF1088
+short_name: DUF1088
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06469
+counters:
+  proteins: 4966
+  matches: 4996
+  proteomes: 1181
+  taxa: 3860
+  structures: 0
+  alphafold_models: 517
+  domain_architectures: 84
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010508
+description: This domain is found in the neurobeachins (NBEAs) and BEACH domain containing proteins (BDCPs).
+  NBEAS are localised near Golgi apparatus and is involved in vesicular trafficking, intracellular transport,
+  membrane dynamics, endosomal recycling, and receptor signalling. BDCPs are associated with lysosome
+  size, apoptosis, autophagy, granule size, or synapse formation. Mutations in this domain have been related
+  to autosomal recessively inherited lipopolysaccharide-responsive beige-like anchor (LRBA) protein deficiency,
+  responsible for common variable immunodeficiency (CVID) and autoimmune lymphoproliferative syndrome
+  (ALPS) [[cite:PUB00098183]]. NBEAs deficiency may induce spine loss with defects in synaptic efficacy
+  and plasticity, being associated with autism spectrum disorder (ASD) and ASD-related syndromes [[cite:PUB00098182]].

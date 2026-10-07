@@ -1,0 +1,27 @@
+id: Pfam:PF31129
+pfam_id: PF31129
+name: Domain of unknown function (DUF8820)
+short_name: DUF8820
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF31129
+counters:
+  proteins: 1024
+  matches: 1024
+  proteomes: 893
+  taxa: 1412
+  structures: 0
+  alphafold_models: 576
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061881
+description: This family represents a small domain of approximately 93 amino acids found predominantly
+  in Actinobacteria including Streptomyces, Thermomonosporaceae, and Streptosporangiaceae. The domain
+  is also found in some cyanobacteria. The domain is typically found as the sole domain in uncharacterized
+  proteins and shows genomic context association with DUF6745 domain proteins.

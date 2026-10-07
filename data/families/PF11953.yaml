@@ -1,0 +1,26 @@
+id: Pfam:PF11953
+pfam_id: PF11953
+name: Domain of unknown function (DUF3470)
+short_name: DUF3470
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11953
+counters:
+  proteins: 6412
+  matches: 6412
+  proteomes: 5697
+  taxa: 7784
+  structures: 32
+  alphafold_models: 4254
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022569
+description: This presumed domain is functionally uncharacterised. This domain is found in bacteria. This
+  domain is about 50 amino acids in length. This domain is found associated with [pfam:PF00037]. This
+  domain has a single completely conserved residue N that may be functionally important.

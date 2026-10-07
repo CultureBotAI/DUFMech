@@ -1,0 +1,25 @@
+id: Pfam:PF25678
+pfam_id: PF25678
+name: Domain of unknown function (DUF7946)
+short_name: DUF7946
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25678
+counters:
+  proteins: 154
+  matches: 154
+  proteomes: 152
+  taxa: 409
+  structures: 0
+  alphafold_models: 94
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057706
+description: This entry represents a domain of unknown function found at the N-terminus of a set of bacterial
+  and phage proteins. It is often associated with a C-terminal small beta barrel domain.

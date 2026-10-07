@@ -1,0 +1,26 @@
+id: Pfam:PF11883
+pfam_id: PF11883
+name: Domain of unknown function (DUF3403)
+short_name: DUF3403
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11883
+counters:
+  proteins: 9192
+  matches: 9317
+  proteomes: 359
+  taxa: 979
+  structures: 0
+  alphafold_models: 6926
+  domain_architectures: 403
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021820
+description: This domain is functionally uncharacterised. This domain is found in eukaryotes. This presumed
+  domain is about 50 amino acids in length. This domain is found associated with [pfam:PF00069], [pfam:PF08276],
+  [pfam:PF00954], [pfam:PF01453].

@@ -1,0 +1,25 @@
+id: Pfam:PF28792
+pfam_id: PF28792
+name: Domain of unknown function (DUF8461)
+short_name: DUF8461
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28792
+counters:
+  proteins: 651
+  matches: 651
+  proteomes: 533
+  taxa: 755
+  structures: 0
+  alphafold_models: 350
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061531
+description: This domain is found in uncharacterised sequences from bacteria, mainly from Streptomyces.
+  It may constitute transmembrane helices.

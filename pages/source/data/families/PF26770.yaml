@@ -1,0 +1,25 @@
+id: Pfam:PF26770
+pfam_id: PF26770
+name: Domain of unknown function (DUF8251)
+short_name: DUF8251
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26770
+counters:
+  proteins: 66
+  matches: 70
+  proteomes: 66
+  taxa: 203
+  structures: 0
+  alphafold_models: 42
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059295
+description: This domain is found in uncharacterised bacterial proteins. It is predicted to fold in a
+  beta-sandwich with unique topology.

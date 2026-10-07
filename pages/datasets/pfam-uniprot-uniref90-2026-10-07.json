@@ -1,0 +1,82 @@
+[
+  {
+    "gene": "CryarDRAFT_0138",
+    "in_alphafold": true,
+    "length": 67,
+    "match_count": 1,
+    "match_ranges": [
+      "9-60"
+    ],
+    "member_source_url": "https://www.ebi.ac.uk/interpro/protein/UniProt/A0A010YFW0/",
+    "name": "DUF397 domain-containing protein",
+    "organism": "Cryptosporangium arvum DSM 44712",
+    "pfam_id": "PF04149",
+    "protein_name": "DUF397 domain-containing protein",
+    "proteome_ids": [
+      "UP000021053"
+    ],
+    "representative_accession": "A0A010YFW0",
+    "representative_length": 67,
+    "representative_member_id": "A0A010YFW0_9ACTN",
+    "representative_protein_name": "DUF397 domain-containing protein",
+    "representative_taxon_id": "927661",
+    "reviewed": false,
+    "source_database": "unreviewed",
+    "taxon_id": "927661",
+    "uniprot_accession": "A0A010YFW0",
+    "uniprot_id": "A0A010YFW0_9ACTN",
+    "uniprot_organism": "Cryptosporangium arvum DSM 44712",
+    "uniprot_source_url": "https://rest.uniprot.org/uniprotkb/A0A010YFW0",
+    "uniprot_taxon_id": "927661",
+    "uniref_common_taxon_id": "65502",
+    "uniref_common_taxon_name": "Cryptosporangium",
+    "uniref_id": "UniRef90_A0A010YFW0",
+    "uniref_member_count": 2,
+    "uniref_name": "Cluster: DUF397 domain-containing protein",
+    "uniref_organism_count": 2,
+    "uniref_seed_id": "A0ABN0UXF9",
+    "uniref_source_url": "https://rest.uniprot.org/uniref/UniRef90_A0A010YFW0",
+    "uniref_type": "UniRef90",
+    "uniref_updated": "2026-06-10"
+  },
+  {
+    "gene": "CryarDRAFT_1344",
+    "in_alphafold": true,
+    "length": 65,
+    "match_count": 1,
+    "match_ranges": [
+      "5-57"
+    ],
+    "member_source_url": "https://www.ebi.ac.uk/interpro/protein/UniProt/A0A010YYK3/",
+    "name": "DUF397 domain-containing protein",
+    "organism": "Cryptosporangium arvum DSM 44712",
+    "pfam_id": "PF04149",
+    "protein_name": "DUF397 domain-containing protein",
+    "proteome_ids": [
+      "UP000021053"
+    ],
+    "representative_accession": "A0A010YYK3",
+    "representative_length": 65,
+    "representative_member_id": "A0A010YYK3_9ACTN",
+    "representative_protein_name": "DUF397 domain-containing protein",
+    "representative_taxon_id": "927661",
+    "reviewed": false,
+    "source_database": "unreviewed",
+    "taxon_id": "927661",
+    "uniprot_accession": "A0A010YYK3",
+    "uniprot_id": "A0A010YYK3_9ACTN",
+    "uniprot_organism": "Cryptosporangium arvum DSM 44712",
+    "uniprot_source_url": "https://rest.uniprot.org/uniprotkb/A0A010YYK3",
+    "uniprot_taxon_id": "927661",
+    "uniref_common_taxon_id": "927661",
+    "uniref_common_taxon_name": "Cryptosporangium arvum DSM 44712",
+    "uniref_id": "UniRef90_A0A010YYK3",
+    "uniref_member_count": 1,
+    "uniref_name": "Cluster: DUF397 domain-containing protein",
+    "uniref_organism_count": 1,
+    "uniref_seed_id": "A0A010YYK3",
+    "uniref_source_url": "https://rest.uniprot.org/uniref/UniRef90_A0A010YYK3",
+    "uniref_type": "UniRef90",
+    "uniref_updated": "2025-10-08"
+  }
+]

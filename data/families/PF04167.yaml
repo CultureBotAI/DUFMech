@@ -1,0 +1,31 @@
+id: Pfam:PF04167
+pfam_id: PF04167
+name: Protein of unknown function (DUF402)
+short_name: DUF402
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04167
+counters:
+  proteins: 8509
+  matches: 8523
+  proteomes: 5477
+  taxa: 7221
+  structures: 12
+  alphafold_models: 5048
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007295
+description: Family member FomD is a protein encoded in the fosfomycin biosynthesis gene cluster [[cite:PUB00009885],[cite:PUB00100530]],
+  which hydrolyses (S)-HPP-CMP to give (S)-HPP and CMP in the presence of Mn2 or Co2 [[cite:PUB00100530]].
+  FomD also hydrolyses cytidylyl 2-hydroxyethylphosphonate (HEP-CMP), which is a biosynthetic intermediate
+  before C-methylation. FomD structure revealed that it has a beta-barrel fold consisting of a large twisted
+  antiparallel beta-sheet, a key feature of DUF402-containing proteins. The function of this domain is
+  unknown. It has a Tyr residue which activates a water molecule to promote nucleophilic attack on the
+  phosphorus atom of the phosphonate moiety [[cite:PUB00100530]]. This domain has also been found in Ntdp
+  (nucleoside tri- and diphosphatase, also known as Sa1684) from Staphylococcus aureus [[cite:PUB00100531]].

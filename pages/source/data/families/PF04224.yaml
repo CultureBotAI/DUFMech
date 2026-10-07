@@ -1,0 +1,26 @@
+id: Pfam:PF04224
+pfam_id: PF04224
+name: Protein of unknown function, DUF417
+short_name: DUF417
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04224
+counters:
+  proteins: 1971
+  matches: 2090
+  proteomes: 1536
+  taxa: 2351
+  structures: 0
+  alphafold_models: 1271
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007339
+description: This family of uncharacterised integral membrane proteins appears to be restricted to proteobacteria.
+  These proteins are related to the DoxX family [pfam:PF07681]. Members of this family form a confident
+  homodimeric structure, for example UniProtKB:A0A4R5FQM0 iPTM=0.94.

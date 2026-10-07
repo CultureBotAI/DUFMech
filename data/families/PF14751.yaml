@@ -1,0 +1,25 @@
+id: Pfam:PF14751
+pfam_id: PF14751
+name: Domain of unknown function (DUF4474)
+short_name: DUF4474
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14751
+counters:
+  proteins: 196
+  matches: 197
+  proteomes: 166
+  taxa: 358
+  structures: 0
+  alphafold_models: 143
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR029322
+description: Domain found on N-termina of few families of uncharacterized Clostridia proteins. Typically
+  followed by a proline-rich domain or other kinds of repeats

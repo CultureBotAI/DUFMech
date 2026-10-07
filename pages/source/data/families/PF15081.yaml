@@ -1,0 +1,25 @@
+id: Pfam:PF15081
+pfam_id: PF15081
+name: Domain of unknown function (DUF4548)
+short_name: DUF4548
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15081
+counters:
+  proteins: 217
+  matches: 225
+  proteomes: 123
+  taxa: 394
+  structures: 0
+  alphafold_models: 173
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027845
+description: This family of proteins is found in eukaryotes. Proteins in this family are typically between
+  and 178 amino acids in length. The human member of this family is C1orf105.

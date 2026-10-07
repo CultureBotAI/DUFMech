@@ -1,0 +1,25 @@
+id: Pfam:PF09130
+pfam_id: PF09130
+name: Domain of unknown function (DUF1932)
+short_name: DUF1932
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09130
+counters:
+  proteins: 3360
+  matches: 3360
+  proteomes: 2856
+  taxa: 4890
+  structures: 3
+  alphafold_models: 2281
+  domain_architectures: 35
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015814
+description: This domain is found in a set of hypothetical prokaryotic proteins. Its exact function has
+  not, as yet, been described.

@@ -1,0 +1,25 @@
+id: Pfam:PF08950
+pfam_id: PF08950
+name: Protein of unknown function (DUF1861)
+short_name: DUF1861
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08950
+counters:
+  proteins: 561
+  matches: 561
+  proteomes: 368
+  taxa: 589
+  structures: 6
+  alphafold_models: 388
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015045
+description: This hypothetical protein, found in bacteria and in the eukaryote Leishmania, has no known
+  function.

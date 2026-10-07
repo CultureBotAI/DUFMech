@@ -1,0 +1,25 @@
+id: Pfam:PF14415
+pfam_id: PF14415
+name: Domain of unknown function (DUF4424)
+short_name: DUF4424
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14415
+counters:
+  proteins: 606
+  matches: 622
+  proteomes: 568
+  taxa: 953
+  structures: 1
+  alphafold_models: 378
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025538
+description: This family of proteins is functionally uncharacterised. This family of proteins is found
+  in bacteria. Proteins in this family are typically between 310 and 361 amino acids in length.

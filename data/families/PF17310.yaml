@@ -1,0 +1,25 @@
+id: Pfam:PF17310
+pfam_id: PF17310
+name: Family of unknown function (DUF5357)
+short_name: DUF5357
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17310
+counters:
+  proteins: 163
+  matches: 166
+  proteomes: 162
+  taxa: 442
+  structures: 0
+  alphafold_models: 86
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR020360
+description: This is a family of unknown function found in Cyanobacteria. Most of the family members are
+  predicted to have several trans-membrane regions.

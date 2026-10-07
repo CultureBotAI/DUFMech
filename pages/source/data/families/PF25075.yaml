@@ -1,0 +1,25 @@
+id: Pfam:PF25075
+pfam_id: PF25075
+name: Domain of unknown function (DUF7799)
+short_name: DUF7799
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25075
+counters:
+  proteins: 270
+  matches: 270
+  proteomes: 162
+  taxa: 568
+  structures: 0
+  alphafold_models: 55
+  domain_architectures: 124
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056701
+description: This entry represents a presumed domain found towards the N-terminal of a group of uncharacterised
+  sequences from C. elegans and related proteins from nematodes. This domain may consist of spectrin repeats.

@@ -1,0 +1,25 @@
+id: Pfam:PF17671
+pfam_id: PF17671
+name: Family of unknown function (DUF5531)
+short_name: DUF5531
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17671
+counters:
+  proteins: 151
+  matches: 157
+  proteomes: 132
+  taxa: 428
+  structures: 0
+  alphafold_models: 135
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR038788
+description: This is a family of unknown function found in Mammalia. Family members have one or several
+  predicted trans-membrane regions.

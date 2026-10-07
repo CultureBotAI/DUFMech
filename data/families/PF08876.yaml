@@ -1,0 +1,32 @@
+id: Pfam:PF08876
+pfam_id: PF08876
+name: Domain of unknown function (DUF1836)
+short_name: DUF1836
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08876
+counters:
+  proteins: 2153
+  matches: 2156
+  proteomes: 1785
+  taxa: 2610
+  structures: 0
+  alphafold_models: 1398
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014975
+description: This protein family appears to be primarily involved in transcriptional regulation and cellular
+  processes. Members of this family, such as the one represented by [swissprot:Q8E4L3] (gene gbs1388),
+  exhibit high levels of transcriptional activity and may be regulated by factors like the rex gene, indicating
+  a role in significant cellular processes [[cite:PUB00156067]]. Another member, [swissprot:A6M310], gene
+  name cbei_4884), is implicated in strain degeneration and regulatory functions linked to sporulation
+  and solvent formation in Clostridium beijerinckii, suggesting conservation among clostridial species
+  [[cite:PUB00156068]]. The sgo_1308 gene encodes a protein [swissprot:A8AXS9] containing the DUF1836
+  domain which belongs to the helix-turn-helix (HTH) clan, hinting at its role in transcriptional regulation,
+  specifically influencing bacterial hemolysin III [[cite:PUB00156066]].

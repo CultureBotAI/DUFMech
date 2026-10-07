@@ -1,0 +1,25 @@
+id: Pfam:PF22880
+pfam_id: PF22880
+name: Family of unknown function (DUF7019)
+short_name: DUF7019
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22880
+counters:
+  proteins: 232
+  matches: 233
+  proteomes: 217
+  taxa: 381
+  structures: 0
+  alphafold_models: 121
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054284
+description: This is a family of uncharacterised proteins found mainly in actinomycetes. Their function
+  is unknown. They are predicted to adopt OB fold with significant similarity to Rpa.

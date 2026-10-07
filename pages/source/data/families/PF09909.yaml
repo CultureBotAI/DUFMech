@@ -1,0 +1,27 @@
+id: Pfam:PF09909
+pfam_id: PF09909
+name: Uncharacterized protein conserved in bacteria (DUF2138)
+short_name: DUF2138
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09909
+counters:
+  proteins: 286
+  matches: 292
+  proteomes: 286
+  taxa: 385
+  structures: 0
+  alphafold_models: 152
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018671
+description: This entry includes uncharacterised protein YfaA from Escherichia coli (strain K12). This
+  protein has a fold that seems to be a a fusion of membrane permeability and extracellular sensor domains
+  according to DALI pairwise alignment of PDBe:eszA, PDBe:3k8hA and PDBe:4esqA structures [[cite:PUB00152793]].
+  This suggests that the protein could serve as a signaling device.

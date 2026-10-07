@@ -1,0 +1,26 @@
+id: Pfam:PF24136
+pfam_id: PF24136
+name: Domain of unknown function (DUF7403)
+short_name: DUF7403
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24136
+counters:
+  proteins: 30
+  matches: 30
+  proteomes: 30
+  taxa: 46
+  structures: 0
+  alphafold_models: 19
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055827
+description: This entry represents a domain of unknown function found in some PRiA4b ORF-3-like proteins
+  from bacteria, such as SwissProt:A0A1I7K0M5. This domain may adopt an all-helical fold and is generally
+  found alongside the PriA4_ORF3 ([pfam:PF07929]) domain.

@@ -1,0 +1,25 @@
+id: Pfam:PF11021
+pfam_id: PF11021
+name: Protein of unknown function (DUF2613)
+short_name: DUF2613
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11021
+counters:
+  proteins: 718
+  matches: 718
+  proteomes: 645
+  taxa: 847
+  structures: 0
+  alphafold_models: 480
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022566
+description: This is a family of putative small secreted proteins expressed by Actinobacteria. The function
+  is not known.

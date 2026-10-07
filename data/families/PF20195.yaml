@@ -1,0 +1,26 @@
+id: Pfam:PF20195
+pfam_id: PF20195
+name: Phage tail protein N-terminal domain
+short_name: DUF6558
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20195
+counters:
+  proteins: 146
+  matches: 146
+  proteomes: 143
+  taxa: 280
+  structures: 0
+  alphafold_models: 66
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046688
+description: This family includes uncharacterised proteins from Firmicutes and phages, some members are
+  phage tail-related proteins. Included in this entry is the prophage-derived protein YomH from Bacillus
+  subtilis (swiss:O31977). This entry contains a RIFT-related beta barrel domain.

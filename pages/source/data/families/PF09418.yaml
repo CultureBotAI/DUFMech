@@ -1,0 +1,30 @@
+id: Pfam:PF09418
+pfam_id: PF09418
+name: Non-canonical E2 ubiquitin-conjugating enzyme, DUF2009 family
+short_name: DUF2009
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09418
+counters:
+  proteins: 924
+  matches: 1077
+  proteomes: 659
+  taxa: 1643
+  structures: 0
+  alphafold_models: 769
+  domain_architectures: 37
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057668
+description: This entry represents a novel family of non-canonical E2 ubiquitin-conjugating enzymes that
+  lack the typical HPN motif found in other E2 enzymes. The domain contains a highly conserved catalytic
+  cysteine (C572 in PF3D7_0811400) that forms a thioester bond with ubiquitin. This was experimentally
+  validated through mutational analysis and biochemical assays [[cite:PUB00160741]]. The domain is found
+  in the C-terminal region of proteins, while the N-terminal region contains coiled helices involved in
+  protein-protein interactions with other ubiquitin pathway components like Rbx1. The domain represents
+  a new class of E2 enzymes particularly found in Apicomplexan parasites.

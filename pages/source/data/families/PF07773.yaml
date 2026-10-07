@@ -1,0 +1,33 @@
+id: Pfam:PF07773
+pfam_id: PF07773
+name: Tectonic domain of DUF1619
+short_name: TCTN_DUF1619
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07773
+counters:
+  proteins: 3441
+  matches: 6251
+  proteomes: 1145
+  taxa: 3864
+  structures: 0
+  alphafold_models: 2961
+  domain_architectures: 51
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011677
+description: This is a conserved domain found in tectonic proteins (TCTN1/2/3) which contains conserved
+  cysteine residues predicted to form disulfide bond. This domain is found in two tandem copies. It is
+  predicted to fold into an alpha/beta structure with unique topology composed of a central mixed beta-sheet
+  and alpha-helix packed on it. Although function of this domain is currently unknown, studies on TCTN2
+  suggest that it is indispensable for its functions [[cite:PUB00097826],[cite:PUB00097827]]. TCTN1, TCTN2,
+  and TCTN3 are members of the tectonic protein family that play crucial roles in ciliogenesis and ciliary
+  function. While they share some common functions, each protein also has specific roles in the process
+  of cilia formation and maintenance. These proteins interact with several other ciliopathy proteins,
+  forming a complex known as the Tectonic ciliopathy complex. This complex is required for hedgehog signalling
+  transduction and regulation of ciliary membrane composition [[cite:PUB00069722],[cite:PUB00160606]].

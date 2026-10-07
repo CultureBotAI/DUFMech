@@ -1,0 +1,25 @@
+id: Pfam:PF16125
+pfam_id: PF16125
+name: Domain of unknown function (DUF4837)
+short_name: DUF4837
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16125
+counters:
+  proteins: 1243
+  matches: 1244
+  proteomes: 1214
+  taxa: 1725
+  structures: 0
+  alphafold_models: 816
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032286
+description: This entry consists of uncharacterized proteins from bacteria. It is found at the C-terminal
+  and may adopt a fold related to Bet_v_1_like superfamily.

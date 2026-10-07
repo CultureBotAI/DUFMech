@@ -1,0 +1,31 @@
+id: Pfam:PF08409
+pfam_id: PF08409
+name: Protein O-mannosyl-transferase TMTC, DUF1736
+short_name: TMTC_DUF1736
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08409
+counters:
+  proteins: 6936
+  matches: 6939
+  proteomes: 1367
+  taxa: 4389
+  structures: 0
+  alphafold_models: 6079
+  domain_architectures: 1307
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013618
+description: This domain of unknown function is found in O-mannosyl -transferases TMTC1-4, and constitutes
+  a loop between TM7 and TM8 located in the ER lumen that contains a small hydrophobic, but not membrane-embedded
+  helix. This loop is critical for catalysis and binding of ligands, especially the lipid-linked sugar
+  moiety [[cite:PUB00098068]]. TMTCs transfers mannosyl residues to the hydroxyl group of serine or threonine
+  residues. The 4 members of the TMTC family are O-mannosyl-transferases acting primarily on the cadherin
+  superfamily; each member has distinct roles in decorating the cadherin domains with O-linked mannose
+  glycans at specific regions. These proteins also act as O-mannosyl-transferase on other proteins such
+  as PDIA3 [[cite:PUB00098069]].

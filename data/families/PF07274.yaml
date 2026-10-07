@@ -1,0 +1,25 @@
+id: Pfam:PF07274
+pfam_id: PF07274
+name: Protein of unknown function (DUF1440)
+short_name: DUF1440
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07274
+counters:
+  proteins: 1086
+  matches: 1086
+  proteomes: 969
+  taxa: 1599
+  structures: 0
+  alphafold_models: 723
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009898
+description: This family contains a number of bacterial proteins of unknown function approximately 180
+  residues long. These are possibly integral membrane proteins.

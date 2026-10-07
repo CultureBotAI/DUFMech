@@ -1,0 +1,27 @@
+id: Pfam:PF26933
+pfam_id: PF26933
+name: Domain of unknown function (DUF8284)
+short_name: DUF8284
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26933
+counters:
+  proteins: 45
+  matches: 97
+  proteomes: 9
+  taxa: 28
+  structures: 0
+  alphafold_models: 24
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059328
+description: This domain is found in uncharacterised proteins mainly from Alveolata lineage. It is predicted
+  to fold into a simple structure composed of beta-hairpin followed by an alpha-hairpin. Many proteins
+  contain tandem repeats of this domain. It is frequently found in combination with [pfam:PF26932] and
+  [pfam:PF00575].

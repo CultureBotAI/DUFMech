@@ -1,0 +1,26 @@
+id: Pfam:PF08875
+pfam_id: PF08875
+name: Domain of unknown function (DUF1833)
+short_name: DUF1833
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08875
+counters:
+  proteins: 524
+  matches: 524
+  proteomes: 456
+  taxa: 993
+  structures: 0
+  alphafold_models: 242
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014974
+description: This family of proteins are functionally uncharacterised and are predicted to adopt an all-beta
+  fold [[cite:PUB00034476]]. They are often found in gene neighborhoods containing genes for an NlpC peptidase
+  and a Ubiquitin domain predicted to be involved in tail assembly [[cite:PUB00034476]].

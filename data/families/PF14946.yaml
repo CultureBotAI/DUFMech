@@ -1,0 +1,26 @@
+id: Pfam:PF14946
+pfam_id: PF14946
+name: Domain of unknown function (DUF4501)
+short_name: DUF4501
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14946
+counters:
+  proteins: 810
+  matches: 913
+  proteomes: 440
+  taxa: 1508
+  structures: 0
+  alphafold_models: 661
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027888
+description: This family of proteins is found in eukaryotes. Proteins in this family are typically between
+  167 and 308 amino acids in length. The exact function of this protein remains unknown, but it is thought
+  to be a single-pass membrane protein. This family contains many highly conserved cysteine residues.

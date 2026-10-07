@@ -9,12 +9,39 @@ like a domain or protein of unknown function. The first tool builds a
 triage worklist from the InterPro Pfam API, normalizes Pfam rows, keeps DUF
 short-name hits that may be historically solved, and can render TSV or JSON.
 
+## Records and Reviews
+
+The frozen worklists feed reproducible LinkML family records. Scientific curation
+lives in separate overlays; imported descriptions and automated seed labels do
+not become functional claims or completed reviews.
+
+```bash
+just records                 # dry run
+just records --apply         # guarded regeneration
+just validate-all            # records, schema, review and history checks
+just sources-check           # offline source and writer governance
+just qc                      # authoritative local and CI gate
+```
+
+See [family records and evidence](docs/records.md), [timestamped reviews](docs/reviews.md),
+[append-only history](docs/history.md), and [source adoption and licensing](docs/sources.md).
+
+The stable validation check is `qc`, provided by `.github/workflows/validate.yaml`
+(**Validate DUFMech**). Its local equivalent is `just qc` after `uv sync --locked
+--extra dev` and `just browser-install`. CLAW's merge-queue policy must reference
+this exact workflow and job name; changes to either require a coordinated policy
+update. Passing a local command does not establish that GitHub rules are enabled.
+Record, category and repository skills are shipped under `.claude/skills/` and
+`.agents/skills/`. Review reports preserve source hashes, timestamps, scope,
+findings and follow-ups; they do not automatically certify scientific conclusions.
+
 ## Quick Start
 
 Use Python 3.13 for development.
 
 ```bash
 just install
+just browser-install  # Node 22+; needed once for the full QC browser gate
 just test
 just duf-puf-worklist --limit 10 --format tsv
 ```
@@ -191,28 +218,126 @@ represent distinct source records, with trait-record availability shown separate
 The current cross-Mech snapshot derives from the original scan by applying the
 corrected worklist's seed labels; see the [offline derivation record](docs/provenance/cross-mech-worklist-2026-10-06.md).
 
-Render and verify the committed DUFMech dashboard:
+Render and verify the DUFMech family website:
 
 ```bash
 just render
 just render-check
 ```
 
-GitHub Actions runs the offline quality gate and builds the dashboard on pull
-requests and pushes to `main`. After those checks pass, current `main` commits
-publish the generated site to GitHub Pages. The workflow can also be run manually
-on `main`. Publishing uses the committed frozen snapshots and does not refresh
-upstream data. The repository's Pages source must be set to **GitHub Actions**.
+The **Validate DUFMech** GitHub Actions workflow runs `just qc`, including Python
+and browser checks, on pull requests, pushes, merge groups and manual runs. To
+rerun validation and publishing manually, dispatch **Validate DUFMech** on `main`.
+Pages has no direct manual dispatch: its serialized deployment workflow accepts
+successful same-repository `main` push or manual validation runs. `queue: max`
+retains up to 100 pending runs; additional runs are canceled when that queue is full,
+so dispatch **Validate DUFMech** on `main` again after capacity becomes available.
+This avoids the default single-pending-slot replacement behavior; see
+[GitHub's concurrency documentation](https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency).
+The workflow checks the validated SHA against current `main` before building and
+again after Configure Pages, immediately before deployment. It publishes the artifact
+from that exact validated SHA, with serialization preventing an older queued run from
+overwriting a newer published revision. These checks do not atomically freeze `main`:
+it can advance during deployment, and Pages may lag while the newer revision awaits
+validation. The final step reports the deployed validated SHA and any main advancement.
+Publishing uses committed frozen inputs and does not refresh upstream data. The
+repository's Pages source must be set to **GitHub Actions**.
 
 Reports, README statistics, and pages validate the selected snapshot manifests.
-Score snapshots must name the selected worklist in their input provenance;
-use matching `--worklist-json` and `--score-json` paths when selecting older inputs.
+New score snapshots bind every input to its verified bytes and companion manifest.
+Ad hoc JSON requires explicit `--allow-ad-hoc-inputs` and is marked accordingly;
+legacy or ad hoc scores cannot enter the curated family-record publication layer.
+Historical snapshot reports still require matching worklist IDs; use matching
+`--worklist-json` and `--score-json` paths when selecting older inputs.
 Without a score snapshot, families remain `UNSCORED`, with seed status shown separately.
 Missing counters remain unavailable rather than becoming zero, and per-family
 protein totals are not deduplicated protein counts.
 
-`just render` replaces only its four generated files and preserves unrelated files
-in the output directory. `just render-check` compares the full output tree by content.
+The generated site includes static family HTML/JSON pages, 50-row catalogue pages,
+seed-category pages, sources/schema documentation when the record layer is available,
+a compact search index (`catalogue.json`), a complete export (`index.json`), and local
+CSS/JavaScript assets. Every family remains reachable through static pagination without
+JavaScript. Search, filters, sorting and pagination restore from the URL, and the
+light/dark/system theme preference persists across pages. Search fetch failures retain
+the static catalogue and display an explicit error.
+
+Descriptions and citations come from frozen inputs. InterPro `PUB...` references are
+not interpreted as PMIDs: unresolved citations link to their originating InterPro entry.
+Own-source links use the explicit, content-verified `conf/site_source_pins.json` ledger,
+never checkout history or a moving branch. The repository build reads
+generated `data/families/` records and retained history/review artifacts when present;
+snapshot-only rendering remains supported. Curation, reviews and history enter through
+their validated native loaders; arbitrary supplemental metadata is not accepted by the CLI.
+Native corpus builds discover the latest
+`data/worklists/pfam-uniprot-uniref90-YYYY-MM-DD.json` member snapshot using the existing
+default UniRef target. Explicit worklist/score selections and custom input directories
+require `--members-json` to select a member snapshot. Every selected member manifest must
+verify and name the selected worklist seed; a mismatched newest snapshot fails the build
+instead of silently selecting an older one. Scoring inputs are selected independently.
+
+The bounded `pfam-uniprot-uniref90-2026-10-07` dataset contains two PF04149 proteins.
+Family pages plot its actual one-based, inclusive match coordinates; the catalogue links
+to these views. Sources links the frozen member JSON, checksum manifest and attribution:
+InterPro match data under CC0, and UniProtKB/UniRef metadata from the UniProt Consortium
+under CC BY 4.0. These are observed sequence ranges, not inferred protein structures or
+functional assignments. The corpus chart uses actual protein counts; records without range
+evidence say so explicitly. Builds do not retrieve upstream data.
+
+After publishing a source checkpoint containing the frozen inputs, records, curation,
+history, reviews and schema, capture its full immutable SHA offline before final rendering:
+
+```bash
+uv run python -m dufmech.site_sources capture --commit FULL_PUBLISHED_SOURCE_SHA
+uv run python -m dufmech.site_sources check
+just render
+```
+
+Capture requires every local file in the website source directories to match that commit,
+including ignored files, and records relative paths and SHA-256 hashes without timestamps.
+It neither publishes nor checks remote reachability: the checkpoint must already be
+published and retained. Commit the ledger with generated pages. Rendering checks pinned
+bytes without calling Git, so squash merges and different local histories do not change
+the output. Changed or newly consumed sources require an updated checkpoint and ledger.
+Unpinned preview builds make no immutable own-source claim; local record/review/schema
+and member-dataset downloads remain available. Rendering never generates a ledger.
+
+`just render` serializes writers using a destination-adjacent `.NAME.dufmech-render.lock`
+file, independent of `TMPDIR`. Descriptor-relative writes reject symlink traversal.
+It stages generated artifacts before replacing them and preserves unrelated files.
+Temporary staging directories are also destination-adjacent, so abrupt process exits
+cannot leave unpublished staging content inside the Pages artifact.
+An ownership manifest permits removal of unchanged obsolete generated pages;
+modified obsolete pages cause an error. The ownership manifest is published only after
+cleanup succeeds. A pending-ownership journal preserves old and new content hashes after
+interrupted replacement or cleanup, including retries with different inputs; edited
+pending files cause an error instead of deletion. `just render-check` compares the full output
+tree by content. To build and check
+an isolated preview without changing the tracked site:
+
+```bash
+uv run python scripts/render_pages.py --out /tmp/dufmech-site
+uv run python -m dufmech.site_contract --site /tmp/dufmech-site --budgets conf/pages_budgets.json
+```
+
+The contract checks complete catalogue reachability, local links, bounded initial rows,
+byte budgets, and light/dark color-token contrast. `conf/pages_budgets.json` also follows
+the shared `kg-microbe-pages audit` budget format. Browser tests check real layout and
+computed contrast at 1440px and 390px, controls, URL/back/reload behavior, theme persistence,
+failed data requests, denied storage, and JavaScript-free pagination:
+
+```bash
+npm ci
+npx playwright install chromium
+DUFMECH_PYTHON="$(pwd)/.venv/bin/python" DUFMECH_SITE_DIR=/tmp/dufmech-site npm run test:browser
+```
+
+Browser tests require Node.js 20 or newer. Dependency/browser installation needs network
+access once. The test run itself uses a
+temporary local HTTP server, a synthetic engineering fixture, and the actual generated
+`pages/` site. Set `DUFMECH_SITE_DIR` to test a different generated tree. Screenshots
+default to the system temporary directory under
+`dufmech-browser-screenshots`; set `DUFMECH_SCREENSHOT_DIR` to retain them elsewhere.
+`PLAYWRIGHT_CHROMIUM_EXECUTABLE` can select an existing Chrome/Chromium executable.
 
 Run the local quality gate:
 

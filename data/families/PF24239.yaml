@@ -1,0 +1,28 @@
+id: Pfam:PF24239
+pfam_id: PF24239
+name: Family of unknown function (DUF7447)
+short_name: DUF7447
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24239
+counters:
+  proteins: 56
+  matches: 56
+  proteomes: 53
+  taxa: 156
+  structures: 0
+  alphafold_models: 12
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055870
+description: This entry represents an uncharacterized family found in various bacteriophage proteins.
+  It is predominantly found in phages infecting diverse bacterial species including Burkholderia, Bacillus,
+  Streptomyces, Listeria, and Caulobacter. The proteins are typically around 100-150 amino acids in length.
+  Many of the proteins containing this domain are annotated as uncharacterized or hypothetical proteins.
+  The proteins form a compact domain composed of a four stranded antiparallel beta sheet.

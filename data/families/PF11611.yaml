@@ -1,0 +1,25 @@
+id: Pfam:PF11611
+pfam_id: PF11611
+name: Domain of unknown function (DUF4352)
+short_name: DUF4352
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11611
+counters:
+  proteins: 4179
+  matches: 4227
+  proteomes: 2845
+  taxa: 4337
+  structures: 2
+  alphafold_models: 2485
+  domain_architectures: 41
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR029051
+description: Members of these family are putative lipoproteins that fall into the Antigen MPT63/MPB63
+  (immunoprotective extracellular protein) superfamily.

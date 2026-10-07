@@ -1,0 +1,26 @@
+id: Pfam:PF26028
+pfam_id: PF26028
+name: Domain of unknown function (DUF8006)
+short_name: DUF8006
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26028
+counters:
+  proteins: 193
+  matches: 193
+  proteomes: 193
+  taxa: 290
+  structures: 0
+  alphafold_models: 184
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058319
+description: This entry represents a family of uncharacterised proteins found in halobacteria. These proteins
+  are predicted to form a small alpha helical bundle composed of three helices with a fourth perpendicular
+  helix. The three helices are likely to form transmembrane helices.

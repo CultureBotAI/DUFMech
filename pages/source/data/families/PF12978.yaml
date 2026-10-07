@@ -1,0 +1,26 @@
+id: Pfam:PF12978
+pfam_id: PF12978
+name: Domain of Unknown Function with PDB structure (DUF3862)
+short_name: DUF3862
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12978
+counters:
+  proteins: 231
+  matches: 231
+  proteomes: 186
+  taxa: 331
+  structures: 1
+  alphafold_models: 149
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024418
+description: PDB:3D4E shared structural similarity to beta-lactamase inhibitory proteins (BLIP) which
+  already include 1XXM, 1S0W, 1JTG, 2G2U, 2G2W, 2B5R, and 3due. All of structures are involved in beta-lactamase
+  inhibitor complex. (REF http://www.topsan.org/Proteins/JCSG/3d4e)

@@ -1,0 +1,27 @@
+id: Pfam:PF19468
+pfam_id: PF19468
+name: DUF6005 N-terminal domain
+short_name: DUF6005
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19468
+counters:
+  proteins: 255
+  matches: 255
+  proteomes: 247
+  taxa: 424
+  structures: 0
+  alphafold_models: 147
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046047
+description: This entry represents the N-terminal domain of uncharacterised bacterial proteins. A member
+  of a biosynthetic gene cluster (BGC). (BGC0000942) is described by MIBiG as an example of the following
+  biosynthetic class, other (unspecified). This family includes a protein from the petrobactin biosynthetic
+  gene cluster from Bacillus anthracis str. Ames [[cite:PUB00099423]].

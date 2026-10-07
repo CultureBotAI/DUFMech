@@ -1,0 +1,27 @@
+id: Pfam:PF01865
+pfam_id: PF01865
+name: Protein of unknown function DUF47
+short_name: PhoU_div
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01865
+counters:
+  proteins: 9082
+  matches: 9082
+  proteomes: 8245
+  taxa: 11416
+  structures: 3
+  alphafold_models: 5897
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018445
+description: This family includes prokaryotic proteins of unknown function, as well as a protein annotated
+  as the pit accessory protein from Sinorhizobium meliloti [swissprot:O30498]. However, the function of
+  this protein is also unknown (Pit stands for Phosphate transport). It is probably distantly related
+  to [pfam:PF01895] (personal obs:Yeats C).

@@ -1,0 +1,30 @@
+id: Pfam:PF07000
+pfam_id: PF07000
+name: Protein of unknown function (DUF1308)
+short_name: DUF1308
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07000
+counters:
+  proteins: 2550
+  matches: 2576
+  proteomes: 2155
+  taxa: 6269
+  structures: 0
+  alphafold_models: 2190
+  domain_architectures: 49
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010733
+description: This is a domain of unknown function found on the C-terminal of C7orf25 protein UPF0415.
+  The C-terminal domain is homologous to the known PIN-like domains. The PIN-like domain is widespread
+  among eukaryotes, including animals, plants, and fungi, but also present in some cyanobacteria, Deinococcus,
+  and dsDNA viruses from the Mimiviridae family. The domain retains up to four potential catalytic residues,
+  thus, depending on the protein is predicted to be an active or inactive nuclease and in a majority of
+  the family members, the PIN-like domain is N-terminally fused with a potentially active PD-(D/E)XK-like
+  domain [pfam:PF18474] [[cite:PUB00091006]].

@@ -1,0 +1,26 @@
+id: Pfam:PF19017
+pfam_id: PF19017
+name: Domain of unknown function (DUF5746)
+short_name: DUF5746
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19017
+counters:
+  proteins: 37
+  matches: 39
+  proteomes: 32
+  taxa: 92
+  structures: 0
+  alphafold_models: 33
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043955
+description: This is a highly conserved domain found in various Platyhelminthes. Its function is currently
+  unknown, with some of the sequences annotated as being Palmitoyltransferase. This highly conserved domain
+  is located at the amino terminus, next to a DHHC domain (named for its signature tetrapeptide Asp-His-His-Cys).

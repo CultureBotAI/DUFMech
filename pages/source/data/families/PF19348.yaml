@@ -1,0 +1,27 @@
+id: Pfam:PF19348
+pfam_id: PF19348
+name: Family of unknown function (DUF5926)
+short_name: DUF5926
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19348
+counters:
+  proteins: 2423
+  matches: 2433
+  proteomes: 2409
+  taxa: 2856
+  structures: 0
+  alphafold_models: 1364
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045970
+description: This entry represents a presumed domain that is functionally uncharacterised. This family
+  of proteins is found in bacteria. Proteins in this family are typically between 294 and 327 amino acids
+  in length. Many proteins in this family are annotated at Topoisomerase II, but the source of this annotation
+  is unclear.

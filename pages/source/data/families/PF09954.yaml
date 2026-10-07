@@ -1,0 +1,27 @@
+id: Pfam:PF09954
+pfam_id: PF09954
+name: Uncharacterized protein conserved in bacteria (DUF2188)
+short_name: DUF2188
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09954
+counters:
+  proteins: 3987
+  matches: 3990
+  proteomes: 3119
+  taxa: 5021
+  structures: 0
+  alphafold_models: 2476
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018691
+description: This domain represents a ribosome-associating protein predicted to mediate translation inhibition
+  alongside repair of DNA damage or restriction in conflict contexts. A subset of this family contains
+  a conserved histidine residue, raising the possibility that it directly acts as a RNase or in RNA end-processing
+  [[cite:PUB00097693]].

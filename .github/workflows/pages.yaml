@@ -1,77 +1,84 @@
-name: Build and publish Pages
+name: Publish Pages
 
 on:
-  pull_request:
-  push:
+  workflow_run:
+    workflows: [Validate DUFMech]
+    types: [completed]
     branches: [main]
-  workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: pages-${{ github.ref }}
+  group: publish-pages
+  queue: max
   cancel-in-progress: false
 
 jobs:
-  qc:
-    name: qc
+  build:
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      (github.event.workflow_run.event == 'push' || github.event.workflow_run.event == 'workflow_dispatch') &&
+      github.event.workflow_run.head_branch == 'main' &&
+      github.event.workflow_run.head_repository.full_name == github.repository
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    steps:
-      - name: Check out source
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-        with:
-          persist-credentials: false
-      - name: Set up uv and Python
-        uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
-        with:
-          version: "0.12.5"
-          python-version: "3.13"
-      - name: Install locked dependencies
-        run: uv sync --locked --extra dev
-      - name: Run offline quality checks
-        run: uv run --locked --extra dev python scripts/run_qc.py
-      - name: Build the deployment artifact from frozen snapshots
-        run: uv run --locked python scripts/render_pages.py --out "$RUNNER_TEMP/dufmech-site"
-      - name: Upload the generated site
-        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
-        with:
-          path: ${{ runner.temp }}/dufmech-site
-          include-hidden-files: true
-
-  current-main:
-    name: Verify current main before publishing
-    needs: qc
-    if: >-
-      github.ref == 'refs/heads/main' &&
-      (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
     outputs:
       publish: ${{ steps.current.outputs.publish }}
     steps:
-      - name: Skip superseded workflow runs
+      - name: Skip superseded validation runs
         id: current
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
-          CANDIDATE_SHA: ${{ github.sha }}
+          CANDIDATE_SHA: ${{ github.event.workflow_run.head_sha }}
         run: |
           current_sha="$(gh api "repos/$GH_REPO/git/ref/heads/main" --jq '.object.sha')"
           if [ "$CANDIDATE_SHA" = "$current_sha" ]; then
             echo "publish=true" >> "$GITHUB_OUTPUT"
           else
             echo "publish=false" >> "$GITHUB_OUTPUT"
-            echo "Skipping superseded commit $CANDIDATE_SHA; main is $current_sha."
+            echo "Skipping superseded validated commit $CANDIDATE_SHA; main is $current_sha."
           fi
+      - name: Check out the validated main commit
+        if: steps.current.outputs.publish == 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+          persist-credentials: false
+      - name: Set up uv and Python
+        if: steps.current.outputs.publish == 'true'
+        uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
+        with:
+          version: '0.12.5'
+          python-version: '3.13'
+      - name: Install locked dependencies
+        if: steps.current.outputs.publish == 'true'
+        run: uv sync --locked
+      - name: Set up the repository recipe runner
+        if: steps.current.outputs.publish == 'true'
+        uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3 # v4.0.0
+        with:
+          just-version: '1.46.0'
+      - name: Build the deployment artifact
+        if: steps.current.outputs.publish == 'true'
+        run: just render --out "$RUNNER_TEMP/dufmech-site"
+      - name: Validate the deployment artifact
+        if: steps.current.outputs.publish == 'true'
+        run: just site-check --site "$RUNNER_TEMP/dufmech-site"
+      - name: Upload the generated site
+        if: steps.current.outputs.publish == 'true'
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
+        with:
+          path: ${{ runner.temp }}/dufmech-site
+          include-hidden-files: true
 
   deploy:
     name: Deploy Pages
-    needs: [qc, current-main]
-    if: needs.current-main.outputs.publish == 'true'
+    needs: build
+    if: needs.build.outputs.publish == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     permissions:
       contents: read
       pages: write
@@ -82,6 +89,32 @@ jobs:
     steps:
       - name: Configure Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+      - name: Recheck current main after the build
+        id: current
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          CANDIDATE_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          current_sha="$(gh api "repos/$GH_REPO/git/ref/heads/main" --jq '.object.sha')"
+          if [ "$CANDIDATE_SHA" = "$current_sha" ]; then
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Deploy the validated site
+        if: steps.current.outputs.publish == 'true'
         id: deployment
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+      - name: Report deployed revision and main advancement
+        if: steps.deployment.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          CANDIDATE_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          current_sha="$(gh api "repos/$GH_REPO/git/ref/heads/main" --jq '.object.sha')"
+          echo "Published validated revision $CANDIDATE_SHA; main is $current_sha."
+          if [ "$CANDIDATE_SHA" != "$current_sha" ]; then
+            echo "::notice::Main advanced during deployment. The newer revision requires its own successful validation and Pages run."
+          fi

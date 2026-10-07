@@ -1,0 +1,26 @@
+id: Pfam:PF25208
+pfam_id: PF25208
+name: Domain of unknown function (DUF7838)
+short_name: DUF7838
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25208
+counters:
+  proteins: 239
+  matches: 239
+  proteomes: 239
+  taxa: 443
+  structures: 0
+  alphafold_models: 227
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057160
+description: This entry represents a small family of uncharacterised proteins found in Halobacteria. They
+  contain two pairs of conserved cysteines that are likely involved in metal coordination. These proteins
+  are predicted to structurally resemble Zinc beta-ribbon domains.

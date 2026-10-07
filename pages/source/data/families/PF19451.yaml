@@ -1,0 +1,27 @@
+id: Pfam:PF19451
+pfam_id: PF19451
+name: Family of unknown function (DUF5989)
+short_name: DUF5989
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19451
+counters:
+  proteins: 530
+  matches: 530
+  proteomes: 499
+  taxa: 1226
+  structures: 0
+  alphafold_models: 352
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046031
+description: This family of proteins is primarily found in bacteria. Proteins in this family are integral
+  membrane proteins that are approximately 50 amino acids in length. There is a C-terminal conserved APFIY
+  sequence motif. This family may have distant partial similarity to [pfam:PF02694] suggesting this may
+  be a transporter protein.

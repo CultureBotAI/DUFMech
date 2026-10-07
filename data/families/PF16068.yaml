@@ -1,0 +1,25 @@
+id: Pfam:PF16068
+pfam_id: PF16068
+name: Domain of unknown function (DUF4810)
+short_name: DUF4810
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16068
+counters:
+  proteins: 1040
+  matches: 1040
+  proteomes: 1031
+  taxa: 1645
+  structures: 0
+  alphafold_models: 642
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014508
+description: This family of proteins is found in bacteria. Proteins in this family are typically between
+  117 and 134 amino acids in length. There is a conserved PES sequence motif. It is a putative lipoprotein.

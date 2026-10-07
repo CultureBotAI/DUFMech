@@ -1,0 +1,26 @@
+id: Pfam:PF23865
+pfam_id: PF23865
+name: Domain of unknown function (DUF7223)
+short_name: DUF7223
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23865
+counters:
+  proteins: 1685
+  matches: 1688
+  proteomes: 778
+  taxa: 1679
+  structures: 0
+  alphafold_models: 1385
+  domain_architectures: 47
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055647
+description: This domain is found in uncharacterised proteins mainly from fungi. It is frequently found
+  associated with ([pfam:PF22974]). This domain is predicted to adopt a globular structure with an elongated
+  beta-sandwich topology.

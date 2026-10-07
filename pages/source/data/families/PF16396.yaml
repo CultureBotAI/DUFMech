@@ -1,0 +1,25 @@
+id: Pfam:PF16396
+pfam_id: PF16396
+name: Domain of unknown function (DUF5005)
+short_name: DUF5005
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16396
+counters:
+  proteins: 1375
+  matches: 1384
+  proteomes: 1080
+  taxa: 1728
+  structures: 1
+  alphafold_models: 819
+  domain_architectures: 71
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032169
+description: This small family of proteins is functionally uncharacterised. This family is found in bacteroides.
+  Proteins in this family are typically around 440 amino acids in length.

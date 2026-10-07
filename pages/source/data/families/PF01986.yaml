@@ -1,0 +1,26 @@
+id: Pfam:PF01986
+pfam_id: PF01986
+name: Domain of unknown function DUF123
+short_name: DUF123
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01986
+counters:
+  proteins: 924
+  matches: 931
+  proteomes: 912
+  taxa: 1943
+  structures: 0
+  alphafold_models: 790
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002837
+description: This archaebacterial domain has no known function. It is attached to an endonuclease domain
+  in [swissprot:Q58030]. The domain contains several conserved cysteines and histidines. This suggests
+  that the domain may be a zinc binding nucleic acid interaction domain (Bateman A unpubl.).

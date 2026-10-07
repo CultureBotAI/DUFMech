@@ -1,0 +1,24 @@
+id: Pfam:PF09912
+pfam_id: PF09912
+name: Uncharacterized protein conserved in bacteria (DUF2141)
+short_name: DUF2141
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09912
+counters:
+  proteins: 4079
+  matches: 4079
+  proteomes: 2713
+  taxa: 4304
+  structures: 0
+  alphafold_models: 2585
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018673
+description: This domain, found in various hypothetical prokaryotic proteins, has no known function.

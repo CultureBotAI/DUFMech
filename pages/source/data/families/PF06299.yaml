@@ -1,0 +1,25 @@
+id: Pfam:PF06299
+pfam_id: PF06299
+name: Protein of unknown function (DUF1045)
+short_name: DUF1045
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06299
+counters:
+  proteins: 2087
+  matches: 2087
+  proteomes: 1857
+  taxa: 2689
+  structures: 0
+  alphafold_models: 1366
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009389
+description: This family consists of several hypothetical proteins from Agrobacterium, Rhizobium and Brucella
+  species. The function of this family is unknown.

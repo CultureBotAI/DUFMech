@@ -1,0 +1,25 @@
+id: Pfam:PF27509
+pfam_id: PF27509
+name: Domain of unknown function (DUF8349)
+short_name: DUF8349
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF27509
+counters:
+  proteins: 372
+  matches: 500
+  proteomes: 177
+  taxa: 920
+  structures: 0
+  alphafold_models: 306
+  domain_architectures: 50
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059393
+description: This domain of unknown function is found in human Ras-related protein Rab-34, isoform NARR
+  and related proteins. It contains several RP motifs.

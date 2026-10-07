@@ -1,0 +1,25 @@
+id: Pfam:PF12077
+pfam_id: PF12077
+name: Transmembrane protein of unknown function (DUF3556)
+short_name: DUF3556
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12077
+counters:
+  proteins: 979
+  matches: 982
+  proteomes: 605
+  taxa: 835
+  structures: 0
+  alphafold_models: 636
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021941
+description: This family of transmembrane proteins is functionally uncharacterised. This protein is found
+  in bacteria. Proteins in this family are typically between 576 to 592 amino acids in length.

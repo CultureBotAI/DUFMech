@@ -1,0 +1,27 @@
+id: Pfam:PF22478
+pfam_id: PF22478
+name: Family of unknown function (DUF6982)
+short_name: DUF6982
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22478
+counters:
+  proteins: 105
+  matches: 105
+  proteomes: 88
+  taxa: 170
+  structures: 0
+  alphafold_models: 56
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054251
+description: This family of proteins is found in bacteria. Proteins in this family are typically between
+  135 and 1024 amino acids in length. This family of proteins are structurally related to [pfam:PF03614]
+  a family of transcriptional repressors of phase-1 flagellin genes. The family appears to contain two
+  related subdomains with Sm-like topology.

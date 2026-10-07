@@ -1,0 +1,26 @@
+id: Pfam:PF24351
+pfam_id: PF24351
+name: Domain of unknown function (DUF7511)
+short_name: DUF7511
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24351
+counters:
+  proteins: 687
+  matches: 687
+  proteomes: 261
+  taxa: 410
+  structures: 0
+  alphafold_models: 655
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055933
+description: This domain is found in a group of uncharacterised archaeal proteins. It is predicted to
+  fold into a three-stranded antiparallel beta-sheet. It contains a highly conserved tryptophan residue
+  located at the beginning of the third beta-strand.
