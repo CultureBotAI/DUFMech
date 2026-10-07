@@ -39,6 +39,9 @@ def write_example_candidates_snapshot(
     input_snapshot_ids: dict[str, str],
     snapshot_date: str | date | None = None,
     generated_at: datetime | None = None,
+    checkpoint_name: str = "",
+    limit_families: int | None = None,
+    targets_before_limit: int | None = None,
 ) -> dict[str, Any]:
     """Write a new date-stamped JSON/TSV/manifest set; never replace existing files."""
 
@@ -71,6 +74,16 @@ def write_example_candidates_snapshot(
             "sort": CANDIDATE_SORT,
             "per_family": per_family,
             "uniprot_releases": sorted(run.uniprot_releases),
+            "families_fetched": run.families_fetched,
+            "checkpoint": {
+                "path": checkpoint_name,
+                "families_reused": run.families_from_checkpoint,
+                "reused_fetch_times": (
+                    [min(run.checkpoint_fetch_times), max(run.checkpoint_fetch_times)]
+                    if run.checkpoint_fetch_times
+                    else []
+                ),
+            },
             "selection": (
                 "Top-ranked UniProtKB entries by annotation score, ties by accession. "
                 "Candidates for review, not curated or representative examples."
@@ -79,6 +92,10 @@ def write_example_candidates_snapshot(
         "schema": {"tsv_fieldnames": EXAMPLE_CANDIDATE_TSV_FIELDNAMES},
         "targets": {
             "families": len(targets),
+            "limit_families": limit_families,
+            "families_before_limit": (
+                targets_before_limit if targets_before_limit is not None else len(targets)
+            ),
             "by_reason": dict(sorted(Counter(r for v in targets.values() for r in v).items())),
             "families_queried": run.families_queried,
             "families_without_members": sorted(run.families_without_members),
@@ -140,7 +157,12 @@ def main(argv: list[str] | None = None) -> int:
         targets = select_target_families(
             cross_rows, renamed_traitmech_families=args.renamed_traitmech_pfam_id
         )
+        all_targets = len(targets)
         if args.limit_families is not None:
+            if args.out_dir.resolve() == Path("data/worklists").resolve():
+                raise ValueError(
+                    "--limit-families is for canaries; write them to another --out-dir"
+                )
             targets = {key: targets[key] for key in sorted(targets)[: args.limit_families]}
         client = UniProtExampleClient(per_family=args.per_family, retries=args.retries)
         run = client.collect(targets, progress=_progress, checkpoint=args.checkpoint)
@@ -151,6 +173,9 @@ def main(argv: list[str] | None = None) -> int:
             per_family=args.per_family,
             input_snapshot_ids={"worklist": input_ids["worklist"], "cross_mech": cross_path.stem},
             snapshot_date=args.snapshot_date,
+            checkpoint_name=args.checkpoint.name if args.checkpoint else "",
+            limit_families=args.limit_families,
+            targets_before_limit=all_targets,
         )
     except (ExampleCandidateError, ReportError, OSError, ValueError) as exc:
         print(f"error: {exc}", file=sys.stderr)

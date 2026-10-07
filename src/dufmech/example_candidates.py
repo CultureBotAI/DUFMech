@@ -5,9 +5,11 @@ from __future__ import annotations
 import csv
 import io
 import json
+import re
 import time
 from collections.abc import Callable, Iterable, Mapping, Sequence
 from dataclasses import asdict, dataclass, field
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -18,6 +20,8 @@ CANDIDATE_FIELDS = "accession,reviewed,annotation_score,protein_name,organism_na
 # Highest UniProt annotation score first; reviewed entries usually score highest.
 # Accession breaks ties so the selection is reproducible within one UniProt release.
 CANDIDATE_SORT = "annotation_score desc,accession asc"
+CANDIDATE_QUERY = "xref:pfam-{pfam_id}"
+PFAM_ID_RE = re.compile(r"PF\d{5}")
 
 # Why a family needs an example; a family can carry several reasons.
 TRAITMECH_NAMED = "traitmech_named_without_protein"
@@ -82,6 +86,9 @@ class CandidateRun:
     families_queried: int = 0
     families_without_members: list[str] = field(default_factory=list)
     uniprot_releases: set[str] = field(default_factory=set)
+    families_fetched: int = 0
+    families_from_checkpoint: int = 0
+    checkpoint_fetch_times: set[str] = field(default_factory=set)
 
 
 def select_target_families(
@@ -115,7 +122,9 @@ def select_target_families(
     trait_records = {
         row["pfam_id"]
         for row in rows
-        if row["source_mech"] == "ProteinTraitsMech" and row["source_section"] == "trait_identifier"
+        if row["pfam_id"]
+        and row["source_mech"] == "ProteinTraitsMech"
+        and row["source_section"] == "trait_identifier"
     }
     own_examples = {
         row["pfam_id"]
@@ -130,6 +139,8 @@ def select_target_families(
     for pfam_id in trait_records - own_examples:
         targets.setdefault(pfam_id, set()).add(PROTEIN_TRAITS_GAP)
     for pfam_id in renamed_traitmech_families:
+        if not PFAM_ID_RE.fullmatch(pfam_id):
+            raise ValueError(f"not a Pfam family ID: {pfam_id!r}")
         targets.setdefault(pfam_id, set()).add(TRAITMECH_RENAMED)
     return targets
 
@@ -156,6 +167,17 @@ class UniProtExampleClient:
         self.backoff = backoff
         self.sleep = sleep
 
+    @property
+    def settings(self) -> dict[str, Any]:
+        """Query settings a checkpointed response must share to be reused."""
+
+        return {
+            "query": CANDIDATE_QUERY,
+            "fields": CANDIDATE_FIELDS,
+            "sort": CANDIDATE_SORT,
+            "per_family": self.per_family,
+        }
+
     def collect(
         self,
         targets: Mapping[str, Iterable[str]],
@@ -166,12 +188,13 @@ class UniProtExampleClient:
         """Query every target family.
 
         With ``checkpoint``, each family's raw response is appended as one JSON line as
-        soon as it arrives, and families already in the file are not queried again, so
-        an interrupted run resumes where it stopped.
+        soon as it arrives, and families already in the file with the same query
+        settings are not queried again, so an interrupted run resumes where it stopped.
+        A run whose responses span more than one UniProt release is refused.
         """
 
         run = CandidateRun()
-        done = _load_checkpoint(checkpoint, self.per_family) if checkpoint is not None else {}
+        done = _load_checkpoint(checkpoint, self.settings) if checkpoint is not None else {}
         sink = None
         if checkpoint is not None:
             checkpoint.parent.mkdir(parents=True, exist_ok=True)
@@ -183,15 +206,19 @@ class UniProtExampleClient:
                 for index, pfam_id in enumerate(sorted(targets), start=1):
                     if pfam_id in done:
                         response = done[pfam_id]
+                        run.families_from_checkpoint += 1
+                        run.checkpoint_fetch_times.add(response.get("fetched_at") or "")
                     else:
                         payload, headers = self._get(client, pfam_id)
                         if not isinstance(payload.get("results"), list):
                             raise ExampleCandidateError(
                                 f"UniProtKB page for {pfam_id} had no results list"
                             )
+                        run.families_fetched += 1
                         response = {
                             "pfam_id": pfam_id,
-                            "per_family": self.per_family,
+                            "settings": self.settings,
+                            "fetched_at": _now(),
                             "release": headers.get("x-uniprot-release", ""),
                             "total": _int(headers.get("x-total-results")),
                             "results": payload["results"],
@@ -205,6 +232,11 @@ class UniProtExampleClient:
         finally:
             if sink is not None:
                 sink.close()
+        if len(run.uniprot_releases) > 1:
+            raise ExampleCandidateError(
+                f"responses span UniProt releases {sorted(run.uniprot_releases)}; "
+                "use a fresh checkpoint"
+            )
         return run
 
     @staticmethod
@@ -232,7 +264,7 @@ class UniProtExampleClient:
 
     def _get(self, client: httpx.Client, pfam_id: str) -> tuple[Mapping[str, Any], httpx.Headers]:
         params = {
-            "query": f"xref:pfam-{pfam_id}",
+            "query": CANDIDATE_QUERY.format(pfam_id=pfam_id),
             "fields": CANDIDATE_FIELDS,
             "sort": CANDIDATE_SORT,
             "size": str(self.per_family),
@@ -318,31 +350,40 @@ def render_candidates_json(rows: Iterable[ExampleCandidateRow]) -> str:
     )
 
 
-def _load_checkpoint(path: Path, per_family: int) -> dict[str, Mapping[str, Any]]:
-    """Load completed family responses made with the same ``per_family``.
+def _load_checkpoint(path: Path, settings: Mapping[str, Any]) -> dict[str, Mapping[str, Any]]:
+    """Load completed family responses made with identical query ``settings``.
 
-    A torn final line from a crash is ignored; any other unreadable line is an error.
+    A torn final line from a crash is removed from the file so later appends start on
+    a clean line; any other unreadable line is an error. Lines from other settings
+    (including legacy lines without settings) are kept but never reused.
     """
 
     done: dict[str, Mapping[str, Any]] = {}
     if not path.is_file():
         return done
-    lines = path.read_text(encoding="utf-8").splitlines()
-    for number, line in enumerate(lines, start=1):
+    data = path.read_bytes()
+    if data and not data.endswith(b"\n"):
+        # Keep only complete lines; the torn tail never parsed into a usable response.
+        data = data[: data.rfind(b"\n") + 1]
+        with path.open("r+b") as handle:
+            handle.truncate(len(data))
+    for number, line in enumerate(data.decode("utf-8").splitlines(), start=1):
         try:
             item = json.loads(line)
         except ValueError:
-            if number == len(lines):
-                break
             raise ExampleCandidateError(f"corrupt checkpoint line {number} in {path}") from None
         if (
             isinstance(item, Mapping)
             and isinstance(item.get("pfam_id"), str)
-            and item.get("per_family") == per_family
+            and item.get("settings") == dict(settings)
             and isinstance(item.get("results"), list)
         ):
             done[item["pfam_id"]] = item
     return done
+
+
+def _now() -> str:
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
 def _protein_name(value: object) -> str:

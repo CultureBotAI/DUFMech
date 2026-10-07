@@ -183,3 +183,106 @@ def test_checkpoint_resumes_without_requerying(tmp_path: Path) -> None:
     )
     other.collect(targets, checkpoint=checkpoint)
     assert calls[-2:] == ["PF00001", "PF00004"]
+
+
+def _ok_handler(release: str = "2026_03"):
+    def handler(request: httpx.Request) -> httpx.Response:
+        pfam = request.url.params["query"].removeprefix("xref:pfam-")
+        return httpx.Response(
+            200,
+            json={"results": [_entry(f"A{pfam[-1]}")]},
+            headers={"X-Total-Results": "1", "X-UniProt-Release": release},
+        )
+
+    return handler
+
+
+def test_checkpoint_survives_repeated_resumes_after_torn_line(tmp_path: Path) -> None:
+    checkpoint = tmp_path / "checkpoint.jsonl"
+    client = UniProtExampleClient(transport=httpx.MockTransport(_ok_handler()))
+    client.collect({"PF00001": {TRAITMECH_NAMED}}, checkpoint=checkpoint)
+    checkpoint.write_text(checkpoint.read_text() + '{"pfam_id": "PF0', encoding="utf-8")
+
+    for extra in ("PF00002", "PF00003"):
+        client.collect({"PF00001": {TRAITMECH_NAMED}, extra: {TRAITMECH_NAMED}},
+                       checkpoint=checkpoint)
+    run = client.collect(
+        {key: {TRAITMECH_NAMED} for key in ("PF00001", "PF00002", "PF00003")},
+        checkpoint=checkpoint,
+    )
+    assert run.families_from_checkpoint == 3
+    assert run.families_fetched == 0
+    assert all(json.loads(line) for line in checkpoint.read_text().splitlines())
+
+
+def test_checkpoint_reuse_requires_identical_settings(tmp_path: Path) -> None:
+    checkpoint = tmp_path / "checkpoint.jsonl"
+    # A legacy line without settings is never reused.
+    checkpoint.write_text(json.dumps({
+        "pfam_id": "PF00001", "per_family": 3, "release": "2026_01", "total": 1,
+        "results": [_entry("OLD")],
+    }) + "\n", encoding="utf-8")
+    client = UniProtExampleClient(transport=httpx.MockTransport(_ok_handler()))
+    run = client.collect({"PF00001": {TRAITMECH_NAMED}}, checkpoint=checkpoint)
+    assert run.families_fetched == 1
+    assert run.rows[0].uniprot_accession == "A1"
+    assert run.uniprot_releases == {"2026_03"}
+
+    again = client.collect({"PF00001": {TRAITMECH_NAMED}}, checkpoint=checkpoint)
+    assert again.families_from_checkpoint == 1
+    assert again.checkpoint_fetch_times and "" not in again.checkpoint_fetch_times
+
+
+def test_mixed_releases_are_refused(tmp_path: Path) -> None:
+    checkpoint = tmp_path / "checkpoint.jsonl"
+    UniProtExampleClient(transport=httpx.MockTransport(_ok_handler("2026_03"))).collect(
+        {"PF00001": {TRAITMECH_NAMED}}, checkpoint=checkpoint
+    )
+    later = UniProtExampleClient(transport=httpx.MockTransport(_ok_handler("2026_04")))
+    with pytest.raises(ExampleCandidateError, match="span UniProt releases"):
+        later.collect(
+            {"PF00001": {TRAITMECH_NAMED}, "PF00002": {TRAITMECH_NAMED}}, checkpoint=checkpoint
+        )
+
+
+def test_target_selection_rejects_bad_ids() -> None:
+    rows = [*CROSS_ROWS, _cross("", "ProteinTraitsMech", "trait_identifier")]
+    assert "" not in select_target_families(rows)
+    with pytest.raises(ValueError, match="not a Pfam family ID"):
+        select_target_families(rows, renamed_traitmech_families=["DUF4393"])
+
+
+def test_main_records_limit_and_refuses_limited_runs_into_worklists(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    import shutil
+
+    from dufmech import example_candidates_snapshot as cli
+
+    repo = Path(__file__).resolve().parents[1]
+    monkeypatch.chdir(tmp_path)
+    shutil.copytree(repo / "data" / "worklists", tmp_path / "data" / "worklists")
+    shutil.copytree(repo / "data" / "cross_mech", tmp_path / "data" / "cross_mech")
+    original = cli.UniProtExampleClient
+    monkeypatch.setattr(
+        cli, "UniProtExampleClient",
+        lambda **kw: original(transport=httpx.MockTransport(_ok_handler()), **kw),
+    )
+    common = ["--limit-families", "2", "--snapshot-date", "2026-10-07",
+              "--checkpoint", str(tmp_path / "raw" / "c.jsonl")]
+
+    assert cli.main(common) == 1  # default --out-dir is data/worklists
+
+    out = tmp_path / "canary"
+    assert cli.main([*common, "--out-dir", str(out),
+                     "--renamed-traitmech-pfam-id", "PF14337"]) == 0
+    manifest = json.loads(
+        (out / "uniprot-duf-example-candidates-2026-10-07.manifest.json").read_text("utf-8")
+    )
+    assert manifest["targets"]["families"] == 2
+    assert manifest["targets"]["limit_families"] == 2
+    assert manifest["targets"]["families_before_limit"] > 4000
+    assert manifest["source"]["checkpoint"] == {
+        "path": "c.jsonl", "families_reused": 0, "reused_fetch_times": [],
+    }
+    assert manifest["snapshot"]["input_snapshot_ids"]["cross_mech"].startswith("cross-mech-")
