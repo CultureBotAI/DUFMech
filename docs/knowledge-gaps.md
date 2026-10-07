@@ -52,9 +52,22 @@ same sentence across different records is not accepted silently.
 
 Read the retained packet and source. Verify the exact family/subfamily scope,
 publication identity, quotation and interpretation. Record a canonical family
-`REVIEW` / `no_change` event using `just new-history`, with the retained packet's
-repository-relative path in the event details. Its timestamp must not predate
-the packet. This event records the proposal review, not a record mutation.
+`REVIEW` / `no_change` event using `just new-history`, targeting exactly this
+family's `data/families/PFxxxxx.yaml` or `curation/families/PFxxxxx.yaml`.
+After deciding to accept, render the structured event details with:
+
+```bash
+CLAW_SRC=/path/to/culturebotai-claw/src just knowledge-gap-scan approval \
+  --packet reports/knowledge_gap_scan/ACTUAL-TIMESTAMP-knowledge-gaps.yaml \
+  --pfam PF04149 --rationale 'Actual reviewed scope and evidence assessment'
+```
+
+Pass that exact JSON as `just new-history --details` (or retain it for
+`--details-file`). It binds the affirmative decision to the exact packet SHA-256
+and family. Do not generate an ACCEPT decision for rejected proposals. Plain
+prose, a packet pathname mention, a different family, or altered packet bytes
+cannot authorize acceptance. Its timestamp must not predate the packet. This
+event records the proposal review, not a record mutation or functional finding.
 
 ```bash
 CLAW_SRC=/path/to/culturebotai-claw/src just knowledge-gap-scan accept \

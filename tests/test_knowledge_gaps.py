@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import copy
 import json
+import os
 from pathlib import Path
 
 import pytest
@@ -53,7 +54,8 @@ def reviewed(root):
     audit = history.new_history(
         root, kind="record", slug="PF00001", target_path="data/families/PF00001.yaml",
         timestamp="2026-10-07T12:00:00Z", summary="Reviewed synthetic gap proposal.",
-        details=f"Fixture-only approval of {p.relative_to(root)}; not real scientific evidence.",
+        details=gaps.approval_details(root, p.relative_to(root).as_posix(), "PF00001",
+                                      "Fixture-only approval, not real scientific evidence."),
         actor_name="fixture-curator", actor_type="human", event="REVIEW", outcome="no_change",
     )
     return p.relative_to(root).as_posix(), audit.relative_to(root).as_posix(), report
@@ -236,3 +238,100 @@ def test_output_symlink_is_not_followed(corpus, tmp_path):
     with pytest.raises((ValueError, OSError)):
         gaps.retain(corpus, result, "2026-10-07T11:00:00Z")
     assert not list(outside.iterdir())
+
+
+def test_coherent_packet_replacement_requires_a_new_review(corpus):
+    p, audit, _ = reviewed(corpus)
+    cache = corpus / "evidence/knowledge_gaps/fixture.json"
+    data = json.loads(cache.read_text())
+    data["results"][0]["abstract"] = (
+        "The DUF1 membrane topology remains unknown. Further studies of DUF1 "
+        "are needed to determine membrane topology."
+    )
+    cache.write_text(json.dumps(data))
+    replacement = gaps.scan(corpus, "evidence/knowledge_gaps/fixture.json", limit=2,
+                            records=list(build_records(corpus).values()))
+    replacement["created_at"] = "2026-10-07T11:00:00Z"
+    (corpus / p).write_text(yaml.safe_dump(replacement))
+    with pytest.raises(RecordError, match="affirmative approval"):
+        accept(corpus, p, audit, apply=True)
+    assert not (corpus / "curation/families/PF00001.yaml").exists()
+
+
+@pytest.mark.parametrize("change", ["rejection", "wrong_target", "wrong_family", "reject_decision"])
+def test_rejection_or_wrong_family_cannot_authorize(corpus, change):
+    p, audit, _ = reviewed(corpus)
+    doc = load_yaml(corpus / audit)
+    if change == "rejection":
+        doc["events"][0]["details"] = f"Rejected {p}. Do not accept this proposal."
+    elif change == "wrong_target":
+        doc["target"]["path"] = "data/families/PF00002.yaml"
+    else:
+        decision = json.loads(doc["events"][0]["details"])
+        decision["pfam_id" if change == "wrong_family" else "decision"] = (
+            "PF00002" if change == "wrong_family" else "REJECT"
+        )
+        doc["events"][0]["details"] = json.dumps(decision)
+    (corpus / audit).write_text(yaml.safe_dump(doc))
+    with pytest.raises(RecordError, match="canonical REVIEW"):
+        accept(corpus, p, audit, apply=True)
+    assert not (corpus / "curation/families/PF00001.yaml").exists()
+
+
+def test_external_edit_after_replay_is_not_adopted(corpus, monkeypatch):
+    p, audit, _ = reviewed(corpus)
+    original = gaps.load_history_metadata
+    destination = corpus / "curation/families/PF00001.yaml"
+    edited = yaml.safe_dump({"pfam_id": "PF00001", "curation_status": "IN_PROGRESS",
+                            "curation_history": "history/records/PF00001"}).encode()
+
+    def race(*args, **kwargs):
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_bytes(edited)
+        return original(*args, **kwargs)
+
+    monkeypatch.setattr(gaps, "load_history_metadata", race)
+    with pytest.raises(RecordError, match="changed during"):
+        accept(corpus, p, audit, apply=True)
+    assert destination.read_bytes() == edited
+
+
+def test_secondary_evidence_is_included_in_corpus_dedup(corpus):
+    cache = corpus / "evidence/knowledge_gaps/fixture.json"
+    data = json.loads(cache.read_text())
+    data["results"].append({"reference": "PMID:2", "title": "Synthetic shared quotation",
+                            "abstract": "The DUF1 and DUF2 substrate remains unknown."})
+    cache.write_text(json.dumps(data))
+    records = list(build_records(corpus).values())
+    initial = gaps.scan(corpus, "evidence/knowledge_gaps/fixture.json", records=records)
+    shared = next(e for e in initial["results"][0]["discussion"]["evidence"]
+                  if e["reference"] == "PMID:2")
+    records[1]["discussions"] = [{"evidence": [shared]}]
+    result = gaps.scan(corpus, "evidence/knowledge_gaps/fixture.json", records=records,
+                       limit=1)["results"][0]
+    assert len(result["discussion"]["evidence"]) == 2
+    assert result["status"] == "already_filed"
+    assert result["existing_owners"] == ["Pfam:PF00002"]
+
+
+def test_fifo_cache_is_rejected_without_reading(corpus):
+    cache = corpus / "evidence/knowledge_gaps/fixture.json"
+    cache.unlink()
+    os.mkfifo(cache)
+    with pytest.raises(ValueError, match="regular file"):
+        packet(corpus)
+
+
+def test_cache_limit_is_enforced_on_open_descriptor(corpus):
+    cache = corpus / "evidence/knowledge_gaps/fixture.json"
+    cache.write_bytes(b" " * 10_000_001)
+    with pytest.raises(ValueError, match="byte limit"):
+        packet(corpus)
+
+
+def test_retained_provenance_does_not_claim_live_europe_pmc(corpus):
+    result = packet(corpus)
+    rationale = result["results"][0]["discussion"]["rationale"]
+    assert "Europe PMC" not in rationale
+    assert "offline" in rationale and result["source_url"] in rationale
+    assert result["abstracts_sha256"] in rationale

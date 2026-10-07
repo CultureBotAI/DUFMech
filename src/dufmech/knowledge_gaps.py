@@ -17,6 +17,7 @@ import yaml
 from dufmech.history import load_history_metadata, new_history
 from dufmech.records import (
     RecordError,
+    UniqueKeyLoader,
     _encoded,
     _publish_projection,
     _writer_lock,
@@ -26,7 +27,12 @@ from dufmech.records import (
     safe_path,
     validate_record,
 )
-from dufmech.reviews import append_document, record_content_digest, utc_timestamp
+from dufmech.reviews import (
+    append_document,
+    read_source_bytes,
+    record_content_digest,
+    utc_timestamp,
+)
 
 ROOT = Path(__file__).resolve().parents[2]
 CONFIG = "conf/kgscan_config.yaml"
@@ -68,10 +74,8 @@ def _config(root):
 def _abstracts(root, relative):
     if not relative.startswith("evidence/knowledge_gaps/") or not relative.endswith(".json"):
         raise RecordError("abstracts must be retained under evidence/knowledge_gaps/*.json")
-    path = safe_path(root, relative)
-    if path.stat().st_size > 10_000_000:
-        raise RecordError("abstract cache exceeds the 10 MB limit")
-    raw = path.read_bytes()
+    safe_path(root, relative)
+    raw = read_source_bytes(root, relative, max_bytes=10_000_000)
     data = json.loads(raw, object_pairs_hook=_unique)
     if not isinstance(data, dict) or set(data) != {"version", "source_url", "retrieved_at", "results"}:
         raise RecordError("invalid retained abstract envelope")
@@ -145,21 +149,30 @@ def scan(root: Path, abstracts: str, *, offset: int = 0, limit: int = 25,
         if score < cfg["min_score"]:
             continue
         discussion = build_discussion(record["id"], {"name": record["short_name"], "matches": matches})
-        key = prompt_key(discussion)
+        discussion["rationale"] = (
+            f"Surfaced by offline gap-signal scoring of retained abstracts from "
+            f"{cache['source_url']} (retrieved {cache['retrieved_at']}; SHA-256 {digest}). "
+            "The quotation and family scope require curator review; this is not functional evidence."
+        )
+        keys = {prompt_key({"evidence": [e]}) for e in discussion.get("evidence", [])}
+        keys.discard(None)
         proposed.append({"record_id": record["id"], "pfam_id": record["pfam_id"],
                          "record_sha256": record_content_digest(record), "score": score,
-                         "discussion": discussion, "sentence_key": key})
-    best = {}
+                         "discussion": discussion, "sentence_keys": keys})
+    selected = set()
     for candidate in sorted(proposed, key=lambda p: (-p["score"], p["record_id"])):
-        best.setdefault(candidate["sentence_key"], candidate["record_id"])
+        keys = candidate["sentence_keys"]
+        existing = set().union(*(owners.get(key, set()) for key in keys))
+        candidate["existing_owners"] = sorted(existing)
+        candidate["status"] = (
+            "already_filed" if existing else
+            "cross_record_duplicate" if keys & selected else "proposed"
+        )
+        if candidate["status"] == "proposed":
+            selected.update(keys)
     results = []
     for candidate in sorted(proposed, key=lambda p: p["record_id"]):
-        key = candidate.pop("sentence_key")
-        candidate["status"] = (
-            "already_filed" if key in owners else
-            "cross_record_duplicate" if best[key] != candidate["record_id"] else "proposed"
-        )
-        candidate["existing_owners"] = sorted(owners.get(key, set()))
+        candidate.pop("sentence_keys")
         results.append(candidate)
     return {"version": 1, "repo_name": "DUFMech", "engine": "retained-abstracts-offline",
             "engine_sha256": hashlib.sha256(Path(shared_scan.__file__).read_bytes()).hexdigest(),
@@ -202,22 +215,63 @@ def retain(root: Path, packet: dict, timestamp: str) -> tuple[Path, Path]:
     return path, report
 
 
+def _packet_bytes(root: Path, packet_path: str) -> bytes:
+    if not packet_path.startswith("reports/knowledge_gap_scan/") or not packet_path.endswith(".yaml"):
+        raise RecordError("acceptance requires a retained proposal packet")
+    return read_source_bytes(root, packet_path, max_bytes=10_000_000)
+
+
+def approval_details(root: Path, packet_path: str, pfam: str, rationale: str) -> str:
+    """Render an explicit decision for a curator to retain in canonical event details."""
+    if not re.fullmatch(r"PF[0-9]{5}", pfam):
+        raise RecordError("expected exact Pfam accession")
+    return json.dumps({
+        "contract": "dufmech-gap-approval-v1", "decision": "ACCEPT", "pfam_id": pfam,
+        "packet": packet_path, "packet_sha256": hashlib.sha256(_packet_bytes(root, packet_path)).hexdigest(),
+        "rationale": _text(rationale, "rationale"),
+    }, sort_keys=True)
+
+
+def _approved(event: dict, packet_path: str, digest: str, pfam: str) -> bool:
+    if event["type"] != "REVIEW" or event["outcome"] != "no_change":
+        return False
+    try:
+        decision = json.loads(event["details"], object_pairs_hook=_unique)
+        if not isinstance(decision, dict):
+            return False
+        rationale = decision.pop("rationale")
+        _text(rationale, "rationale")
+    except (ValueError, KeyError, TypeError):
+        return False
+    return decision == {
+        "contract": "dufmech-gap-approval-v1", "decision": "ACCEPT", "pfam_id": pfam,
+        "packet": packet_path, "packet_sha256": digest,
+    }
+
+
 def accept(root: Path, packet_path: str, pfam: str, history_path: str, *, apply=False,
            actor_name: str, actor_type: str, model: str | None = None,
            agent_tool: str | None = None) -> dict:
     """Preview, then explicitly accept one reviewed proposal into its native overlay."""
     if not re.fullmatch(r"PF[0-9]{5}", pfam):
         raise RecordError("expected exact Pfam accession")
-    if not packet_path.startswith("reports/knowledge_gap_scan/") or not packet_path.endswith(".yaml"):
-        raise RecordError("acceptance requires a retained proposal packet")
     _text(actor_name, "actor_name")
     if actor_type not in {"human", "ai_agent"}:
         raise RecordError("actor_type must be human or ai_agent")
     if actor_type == "ai_agent" and (not model or not agent_tool):
         raise RecordError("AI actors require model and agent_tool")
     with _writer_lock(root):
-        packet = load_yaml(safe_path(root, packet_path))
+        raw_packet = _packet_bytes(root, packet_path)
+        packet = yaml.load(raw_packet, Loader=UniqueKeyLoader)
+        if not isinstance(packet, dict):
+            raise RecordError("proposal packet must be an object")
         utc_timestamp(packet.get("created_at"))
+        destination = safe_path(root, f"curation/families/{pfam}.yaml")
+        try:
+            before = read_source_bytes(root, destination.relative_to(root).as_posix(),
+                                       max_bytes=10_000_000)
+        except FileNotFoundError:
+            before = None
         corpus = list(build_records(root).values())
         replay = scan(root, packet["abstracts"], offset=packet["offset"], limit=packet["limit"],
                       records=corpus)
@@ -229,16 +283,19 @@ def accept(root: Path, packet_path: str, pfam: str, history_path: str, *, apply=
         audits = load_history_metadata(root, pfam)
         audit = next((a for a in audits if history_path ==
                       f"history/records/{pfam}/{a['session']['id']}.yaml"), None)
-        if audit is None or not any(
-            e["type"] == "REVIEW" and e["outcome"] == "no_change" and
-            packet_path in e["details"] for e in audit["events"]
-        ):
-            raise RecordError("need a canonical REVIEW/no_change audit naming the reviewed packet")
+        if audit is None or audit["target"]["path"] not in {
+            f"data/families/{pfam}.yaml", f"curation/families/{pfam}.yaml",
+        }:
+            raise RecordError("need a canonical REVIEW/no_change audit targeting this exact family")
         if utc_timestamp(audit["session"]["timestamp"]) < utc_timestamp(packet["created_at"]):
             raise RecordError("review must not predate the proposal packet")
-        destination = safe_path(root, f"curation/families/{pfam}.yaml")
-        before = destination.read_bytes() if destination.exists() else None
-        prior = (load_yaml(destination) if before is not None else
+        digest = hashlib.sha256(raw_packet).hexdigest()
+        if not any(_approved(e, packet_path, digest, pfam) for e in audit["events"]):
+            raise RecordError("need a canonical REVIEW/no_change affirmative approval bound to packet SHA-256 and family")
+        current = list(build_records(root).values())
+        if [record_content_digest(r) for r in current] != [record_content_digest(r) for r in corpus]:
+            raise RecordError("corpus changed during proposal replay")
+        prior = (yaml.load(before, Loader=UniqueKeyLoader) if before is not None else
                  {"pfam_id": pfam, "curation_status": "SEEDED"})
         overlay = copy.deepcopy(prior)
         overlay["curation_status"] = "IN_PROGRESS"
@@ -256,7 +313,7 @@ def accept(root: Path, packet_path: str, pfam: str, history_path: str, *, apply=
                     target_path=f"curation/families/{pfam}.yaml",
                     timestamp=datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
                     summary="Accepted a reviewed knowledge-gap proposal; function remains unscored.",
-                    details=f"Accepted {packet_path} after review in {history_path}; "
+                    details=f"Accepted {packet_path} (SHA-256 {digest}) after review in {history_path}; "
                             f"abstract cache SHA-256 {packet['abstracts_sha256']}.",
                     actor_name=actor_name, actor_type=actor_type, model=model,
                     agent_tool=agent_tool, event="EDIT", outcome="changed",
@@ -278,6 +335,10 @@ def main(argv=None):
     propose.add_argument("--abstracts", required=True)
     propose.add_argument("--offset", type=int, default=0)
     propose.add_argument("--limit", type=int, default=25)
+    decision = commands.add_parser("approval")
+    decision.add_argument("--packet", required=True)
+    decision.add_argument("--pfam", required=True)
+    decision.add_argument("--rationale", required=True)
     approve = commands.add_parser("accept")
     approve.add_argument("--packet", required=True)
     approve.add_argument("--pfam", required=True)
@@ -295,6 +356,8 @@ def main(argv=None):
             timestamp = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
             for path in retain(root, packet, timestamp):
                 print(path.relative_to(root))
+        elif args.command == "approval":
+            print(approval_details(root, args.packet, args.pfam, args.rationale))
         else:
             print(json.dumps(accept(root, args.packet, args.pfam, args.history,
                                     apply=args.apply, actor_name=args.actor_name,
