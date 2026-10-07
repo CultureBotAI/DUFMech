@@ -78,7 +78,7 @@ content requires a fresh review; history-index bookkeeping is separately validat
 Before an authorized publication, run `just qc` and inspect the full diff. Changes
 to source bytes can invalidate the website source-pin ledger: the supported Pages
 workflow first publishes an authorized source checkpoint, then captures that exact
-commit with `python -m dufmech.site_sources capture --commit FULL_SHA`, regenerates
+commit with `uv run --locked python -m dufmech.site_sources capture --commit FULL_SHA`, regenerates
 with `just render`, and reruns QC. Never invent a pin or weaken a check. If publishing
 was not authorized, retain the local changes and report that remaining publication
 step instead of committing or pushing to make a gate pass.
