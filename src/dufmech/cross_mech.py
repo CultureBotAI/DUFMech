@@ -66,6 +66,10 @@ RESOLUTION_ACTIVE = "active"
 RESOLUTION_SECONDARY = "secondary"
 RESOLUTION_MERGED = "merged"
 RESOLUTION_DEMERGED = "demerged"
+RESOLUTIONS = frozenset(
+    {RESOLUTION_ACTIVE, RESOLUTION_SECONDARY, RESOLUTION_MERGED, RESOLUTION_DEMERGED}
+)
+MAX_SUCCESSOR_HOPS = 5
 SUCCESSOR_BASIS = {
     RESOLUTION_MERGED: "uniprot_merged_successor",
     RESOLUTION_DEMERGED: "uniprot_demerged_successor",
@@ -361,9 +365,9 @@ def scan_mechs(
     result.uniprot_requested = len(pending)
     if pending and uniprot_lookup is not None:
         lookups = {
-            accession: _as_rows(value)
+            accession: as_lookup_rows(value)
             for accession, value in uniprot_lookup(sorted(pending)).items()
-            if _as_rows(value)
+            if as_lookup_rows(value)
         }
         result.uniprot_resolved = len(lookups)
         result.uniprot_unresolved = sorted(set(pending) - set(lookups))
@@ -533,26 +537,41 @@ class UniProtPfamClient:
         self.batch_size = batch_size
 
     def __call__(self, accessions: Sequence[str]) -> dict[str, tuple[UniProtPfamRow, ...]]:
-        """Resolve accessions, following merged/demerged stubs to their successors."""
+        """Resolve accessions, following merged/demerged stubs to their successors.
+
+        Chains are followed up to ``MAX_SUCCESSOR_HOPS``. A stub is resolved only when
+        every successor reaches an active entry; otherwise it stays unresolved, so a
+        partial demerge is never cached as complete.
+        """
 
         with httpx.Client(
             timeout=self.timeout, follow_redirects=True, transport=self.transport
         ) as client:
             found, moved = self._fetch(client, accessions)
-            successors = sorted({acc for _, targets in moved.values() for acc in targets} - set(found))
-            successor_rows, _ = self._fetch(client, successors) if successors else ({}, {})
-        resolved = {key: (row,) for key, row in found.items()}
-        for requested, (resolution, targets) in sorted(moved.items()):
-            if requested in resolved:
+            attempted = set(accessions)
+            for _ in range(MAX_SUCCESSOR_HOPS):
+                wanted = sorted(
+                    {target for _, targets in moved.values() for target in targets} - attempted
+                )
+                if not wanted:
+                    break
+                attempted.update(wanted)
+                more_found, more_moved = self._fetch(client, wanted)
+                found.update(more_found)
+                moved.update(more_moved)
+        resolved = {key: (row,) for key, row in found.items() if key in set(accessions)}
+        for requested in sorted(set(accessions) & set(moved) - set(resolved)):
+            leaves = _successor_leaves(requested, found, moved, MAX_SUCCESSOR_HOPS)
+            if leaves is None:
                 continue
-            rows = tuple(
-                replace(row, requested_accession=requested, resolution=resolution)
-                for target in targets
-                for row in [found.get(target) or successor_rows.get(target)]
-                if row is not None
+            leaf_rows, kinds = leaves
+            resolution = (
+                RESOLUTION_DEMERGED if RESOLUTION_DEMERGED in kinds else RESOLUTION_MERGED
             )
-            if rows:
-                resolved[requested] = rows
+            resolved[requested] = tuple(
+                replace(row, requested_accession=requested, resolution=resolution)
+                for row in sorted(leaf_rows.values(), key=lambda row: row.uniprot_accession)
+            )
         return resolved
 
     def _fetch(
@@ -642,6 +661,30 @@ def uniprot_pfam_rows(
     }
 
 
+def _successor_leaves(
+    accession: str,
+    found: Mapping[str, UniProtPfamRow],
+    moved: Mapping[str, tuple[str, tuple[str, ...]]],
+    hops: int,
+) -> tuple[dict[str, UniProtPfamRow], set[str]] | None:
+    """Return active entries reached from a stub, or ``None`` if any branch is lost."""
+
+    if accession in found:
+        return {found[accession].uniprot_accession: found[accession]}, set()
+    if accession not in moved or hops <= 0:
+        return None
+    kind, targets = moved[accession]
+    leaves: dict[str, UniProtPfamRow] = {}
+    kinds = {kind}
+    for target in targets:
+        branch = _successor_leaves(target, found, moved, hops - 1)
+        if branch is None:
+            return None
+        leaves.update(branch[0])
+        kinds |= branch[1]
+    return leaves, kinds
+
+
 def uniprot_successors(
     entry: Mapping[str, Any], requested: Iterable[str]
 ) -> dict[str, tuple[str, tuple[str, ...]]]:
@@ -684,6 +727,8 @@ def load_uniprot_cache(text: str) -> dict[str, tuple[UniProtPfamRow, ...]]:
             raise CrossMechError("invalid UniProt cache row") from exc
         if not isinstance(row.fetched_at, str):
             raise CrossMechError("invalid UniProt cache fetch time")
+        if row.resolution not in RESOLUTIONS:
+            raise CrossMechError(f"invalid UniProt cache resolution: {row.resolution!r}")
         rows.setdefault(row.requested_accession, []).append(row)
     return {
         key: tuple(sorted(value, key=lambda row: row.uniprot_accession))
@@ -700,14 +745,17 @@ def render_uniprot_cache(
         [
             asdict(row)
             for key in sorted(rows)
-            for row in sorted(_as_rows(rows[key]), key=lambda row: row.uniprot_accession)
+            for row in sorted(as_lookup_rows(rows[key]), key=lambda row: row.uniprot_accession)
         ],
         indent=2,
         sort_keys=True,
     )
 
 
-def _as_rows(value: UniProtPfamRow | Iterable[UniProtPfamRow] | None) -> tuple[UniProtPfamRow, ...]:
+def as_lookup_rows(
+    value: UniProtPfamRow | Iterable[UniProtPfamRow] | None,
+) -> tuple[UniProtPfamRow, ...]:
+    """Normalize a lookup value (one row, several rows, or none) to a tuple."""
     if value is None:
         return ()
     if isinstance(value, UniProtPfamRow):
@@ -782,8 +830,33 @@ def _row(
 def _dedupe(rows: Iterable[CrossMechRow]) -> list[CrossMechRow]:
     unique: dict[tuple[str, ...], CrossMechRow] = {}
     for row in rows:
-        unique.setdefault(row.sort_key(), row)
+        key = row.sort_key()
+        unique[key] = row if key not in unique else _merge_rows(unique[key], row)
     return [unique[key] for key in sorted(unique)]
+
+
+def _merge_rows(first: CrossMechRow, second: CrossMechRow) -> CrossMechRow:
+    """Combine two rows for the same record and protein without losing a citation.
+
+    A record can cite a protein directly and through a merged or secondary accession.
+    The merged row keeps every link basis and prefers the direct citation.
+    """
+
+    cited = sorted(
+        {first.cited_uniprot_accession, second.cited_uniprot_accession} - {""},
+        key=lambda accession: (accession != first.uniprot_accession, accession),
+    )
+    mentioned = [
+        value
+        for value in (first.family_mentioned_in_record, second.family_mentioned_in_record)
+        if value is not None
+    ]
+    return replace(
+        first,
+        link_basis=tuple(sorted(set(first.link_basis) | set(second.link_basis))),
+        cited_uniprot_accession=cited[0] if cited else "",
+        family_mentioned_in_record=any(mentioned) if mentioned else None,
+    )
 
 
 def _cat_blobs(

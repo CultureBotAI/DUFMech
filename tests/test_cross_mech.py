@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import subprocess
+from dataclasses import replace
 from pathlib import Path
 
 import httpx
@@ -527,3 +528,65 @@ def test_scan_rows_keep_cited_accession_for_successors(mechs_root: Path) -> None
     assert result.uniprot_unresolved == ["Q99999"]
     header = render_cross_mech_tsv(rows).splitlines()[0].split("\t")
     assert header[-1] == "cited_uniprot_accession"
+
+
+def _mock_client(entries: dict) -> UniProtPfamClient:
+    def handler(request: httpx.Request) -> httpx.Response:
+        wanted = [part.split(":", 1)[1] for part in request.url.params["query"].split(" OR ")]
+        return httpx.Response(200, json={"results": [entries[a] for a in wanted if a in entries]})
+
+    return UniProtPfamClient(transport=httpx.MockTransport(handler))
+
+
+def test_uniprot_client_follows_successor_chains() -> None:
+    client = _mock_client(
+        {
+            "A1": _stub("A1", "MERGED", ["B1"]),
+            "B1": _stub("B1", "DEMERGED", ["C1", "C2"]),
+            "C1": _entry("C1", ("PF04363",)),
+            "C2": _entry("C2", ("PF04363",)),
+        }
+    )
+    resolved = client(["A1"])
+    assert [row.uniprot_accession for row in resolved["A1"]] == ["C1", "C2"]
+    # Any demerge along the chain makes the cited accession ambiguous.
+    assert {row.resolution for row in resolved["A1"]} == {"demerged"}
+
+
+def test_partial_demerge_stays_unresolved() -> None:
+    client = _mock_client(
+        {
+            "P24247": _stub("P24247", "DEMERGED", ["P0AF12", "P0AF13"]),
+            "P0AF12": _entry("P0AF12", ("PF04363",)),
+        }
+    )
+    assert client(["P24247"]) == {}
+
+
+def test_direct_and_merged_citations_of_one_protein_merge_into_one_row(
+    mechs_root: Path,
+) -> None:
+    direct = UniProtPfamRow("Q99999", "Q99999", "Kept", True, "562", "E. coli", ("PF04363",))
+
+    def lookup(accessions):
+        return {
+            # P22041 sorts first and was merged into Q99999, which is also cited directly.
+            "P22041": (replace(direct, requested_accession="P22041", resolution="merged"),),
+            "Q99999": (direct,),
+        }
+
+    result = scan_mechs(mechs_root, FAMILIES, mechs=MECHS[:1], uniprot_lookup=lookup)
+    rows = [row for row in result.rows if row.source_section == "uniprot_accession"]
+
+    assert len(rows) == 1
+    assert rows[0].cited_uniprot_accession == "Q99999"
+    assert rows[0].link_basis == ("uniprot_merged_successor", "uniprot_pfam_xref")
+
+
+def test_uniprot_cache_rejects_unknown_resolution() -> None:
+    row = UniProtPfamRow("P1", "P1", "", None, "", "", (), resolution="Merged")
+    with pytest.raises(CrossMechError, match="invalid UniProt cache resolution"):
+        load_uniprot_cache(render_uniprot_cache({"P1": row}))
+    legacy = json.loads(render_uniprot_cache({"P1": replace(row, resolution="active")}))
+    del legacy[0]["resolution"]
+    assert load_uniprot_cache(json.dumps(legacy))["P1"][0].resolution == "active"

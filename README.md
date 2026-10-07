@@ -210,8 +210,10 @@ the time and count of new UniProtKB requests. Legacy cache entries retain an exp
 unknown fetch age; a new request does not redate existing cached results. A cited
 accession that UniProt has merged or demerged is followed to its successor entries;
 those rows keep the cited accession in `cited_uniprot_accession` and add a
-`uniprot_merged_successor` or `uniprot_demerged_successor` link basis. Deleted
-accessions have no successor and are listed as unresolved.
+`uniprot_merged_successor` or `uniprot_demerged_successor` link basis. Chains of
+merges are followed for up to five hops. An accession is listed as unresolved when it
+was deleted, or when any of its successors cannot be reached; a partial demerge is
+never recorded as complete.
 
 A freeze refuses to replace any existing artifact for the selected date. Use a new
 snapshot date or a separate output directory for another run. Both the report and

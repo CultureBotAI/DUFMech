@@ -14,7 +14,7 @@ from dufmech.cross_mech import (
     CrossMechError,
     FamilyIndex,
     UniProtPfamClient,
-    _as_rows,
+    as_lookup_rows,
     load_uniprot_cache,
     render_uniprot_cache,
     scan_mechs,
@@ -97,7 +97,7 @@ def _lookup(cache: Path | None, info: dict[str, object]):
         info["fetched_at"] = fetched_at
         info["fetched_accessions"] = len(accessions)
         return {
-            key: tuple(replace(row, fetched_at=fetched_at) for row in _as_rows(rows))
+            key: tuple(replace(row, fetched_at=fetched_at) for row in as_lookup_rows(rows))
             for key, rows in client(accessions).items()
         }
 
