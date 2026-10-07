@@ -39,8 +39,11 @@ CLAW's environment from its lock, offline. `--check-index` returns
 `REFERENCE_VERIFIED`, never an OAK PASS. Regenerate after adopting a newer verified
 snapshot; the check refuses an index from an older source.
 
-The helper invokes the unmodified, governed
-shared CLI in enforce mode, with its working directory set to DUF:
+The helper copies the exact captured inputs into a private temporary repository,
+verifies them there, and invokes the unmodified governed CLI in enforce mode
+against that copy. This binds OAK's actual reads to the verified bytes even if an
+original path is temporarily replaced and restored. A direct invocation below
+illustrates the isolated runtime, but is not the complete native adoption gate:
 
 ```bash
 uv run --project "$CLAW_ROOT" --locked --offline python -I -B \
@@ -57,11 +60,17 @@ No Pfam prefix is ignored and no label waiver is allowed. `interpro_id` is not
 paired with a Pfam label: it is a separate identifier without a corresponding
 InterPro label in the native schema.
 
+All captured inputs use descriptor-confined, nonblocking regular-file reads,
+limited to 64 MiB per file; symlinks and FIFOs are rejected. The native source
+verifier also receives private copies of its captured JSON/TSV/manifest companions.
 Before invocation the helper verifies the generated index and provenance,
-the complete frozen-source record
-inventory and root record identifiers. After invocation it requires exactly
+the complete frozen-source record inventory and root record identifiers.
+After invocation it requires exactly
 one `OK_CANONICAL` result per expected family, with no skips or other verdicts,
-and checks that input bytes and inventory did not change during the check.
+and checks both private snapshot and original input bytes/inventory for changes.
+The receipt includes the snapshot fingerprint, actual temporary command/cwd and
+original repository root. The private copy is removed afterward; its recorded
+command is an audit trail, not a persistent path to rerun.
 Bad labels, missing or empty references, missing records and skipped pairs
 fail. Counts are derived from the verified snapshot, not hard-coded to 6,532.
 

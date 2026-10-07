@@ -4,6 +4,12 @@ version: 1
 validators: [validate_record, _validate_record, _validate_content, check_manifest, verified_manifest]
 history_helpers: [new_history]
 helpers:
+  _materialize:
+    path: "src/dufmech/id_labels.py"
+    formats: ["json", "tsv", "yaml", "obo", "python"]
+    policy: "private-temporary-validation-input-capture"
+    tests: ["tests/test_id_labels.py"]
+    required_calls: [mkdir, write_bytes]
   retain_result:
     path: "src/dufmech/research.py"
     formats: ["yaml"]

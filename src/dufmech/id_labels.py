@@ -9,10 +9,14 @@ import os
 import re
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
-from dufmech.records import _publish, _writer_lock, load_yaml, safe_path
+import yaml
+
+from dufmech.records import UniqueKeyLoader, _publish, _writer_lock, safe_path
 from dufmech.report import latest_snapshot_path
+from dufmech.reviews import read_source_bytes
 from dufmech.score_inputs import load_score_input
 from dufmech.snapshot import WORKLIST_STEM
 
@@ -22,6 +26,7 @@ PROVENANCE = "conf/id_labels/provenance.json"
 CONFIG_PATH = "conf/id_label_targets.yaml"
 VALIDATOR = "scripts/validate_id_label_correspondence.py"
 SELECTOR = "simpleobo:" + INDEX
+MAX_INPUT_BYTES = 64 * 1024 * 1024
 CONFIG = {
     "adapters": {"Pfam": SELECTOR},
     "ignored_prefixes": [],
@@ -46,14 +51,42 @@ def _json_bytes(value: dict) -> bytes:
     return (json.dumps(value, indent=2, sort_keys=True, ensure_ascii=False) + "\n").encode()
 
 
-def _source(root: Path):
+def _bytes(root: Path, name: str) -> bytes:
+    safe_path(root, name)
+    return read_source_bytes(root, name, max_bytes=MAX_INPUT_BYTES)
+
+
+def _yaml(root: Path, name: str) -> dict:
+    value = yaml.load(_bytes(root, name), Loader=UniqueKeyLoader)
+    if not isinstance(value, dict):
+        raise IdLabelError(f"expected a YAML object: {name}")
+    return value
+
+
+def _source_path(root: Path) -> Path:
     directory = safe_path(root, "data/worklists")
     path = latest_snapshot_path(directory, WORKLIST_STEM)
-    assert path is not None
-    safe_path(root, path.relative_to(root).as_posix())
-    for suffix in (".manifest.json", ".tsv"):
-        safe_path(root, path.with_suffix(suffix).relative_to(root).as_posix())
-    source = load_score_input(path, "worklist")
+    if path is None:
+        raise IdLabelError("missing frozen Pfam source")
+    return path
+
+
+def _materialize(root: Path, captures: dict[str, bytes]) -> None:
+    for name, raw in captures.items():
+        path = root / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(raw)
+
+
+def _source(root: Path):
+    path = _source_path(root)
+    captures = {p.name: _bytes(root, p.relative_to(root).as_posix()) for p in (
+        path, path.with_suffix(".manifest.json"), path.with_suffix(".tsv"))}
+    # The native verifier reads only these captured regular files, not mutable companions.
+    with tempfile.TemporaryDirectory(prefix="duf-pfam-source-") as temporary:
+        private = Path(temporary).resolve(strict=True)
+        _materialize(private, captures)
+        source = load_score_input(private / path.name, "worklist")
     if not source.rows:
         raise IdLabelError("frozen Pfam source must contain at least one family")
     return path, source
@@ -103,7 +136,11 @@ def write_index(root: Path) -> list[str]:
         changed = []
         for name, content in artifacts.items():
             path = paths[name]
-            if not path.exists() or path.read_bytes() != content:
+            try:
+                before = _bytes(root, name)
+            except FileNotFoundError:
+                before = None
+            if before != content:
                 _publish(root, path, content)
                 changed.append(name)
     return changed
@@ -112,10 +149,13 @@ def write_index(root: Path) -> list[str]:
 def _reference(root: Path) -> tuple[dict, dict[str, bytes]]:
     artifacts = build_artifacts(root)
     for name, expected in artifacts.items():
-        path = safe_path(root, name)
-        if not path.is_file() or path.read_bytes() != expected:
+        try:
+            actual = _bytes(root, name)
+        except FileNotFoundError:
+            actual = None
+        if actual != expected:
             raise IdLabelError(f"stale or missing {name}; regenerate the derived label index")
-    if load_yaml(safe_path(root, CONFIG_PATH)) != CONFIG:
+    if _yaml(root, CONFIG_PATH) != CONFIG:
         raise IdLabelError("id-label configuration must enforce the complete frozen Pfam target")
     return json.loads(artifacts[PROVENANCE]), artifacts
 
@@ -127,7 +167,7 @@ def _record_paths(root: Path, expected: set[str]) -> list[Path]:
         raise IdLabelError("family record inventory differs from the complete frozen Pfam source")
     for path in paths:
         safe_path(root, path.relative_to(root).as_posix())
-        record = load_yaml(path)
+        record = _yaml(root, path.relative_to(root).as_posix())
         if record.get("id") != "Pfam:" + path.stem:
             raise IdLabelError(f"{path.name}: root id must match its Pfam filename")
     return paths
@@ -135,7 +175,17 @@ def _record_paths(root: Path, expected: set[str]) -> list[Path]:
 
 def _fingerprints(root: Path, paths: list[Path]) -> dict[str, str]:
     return {path.relative_to(root).as_posix(): _sha(
-        safe_path(root, path.relative_to(root).as_posix()).read_bytes()) for path in paths}
+        _bytes(root, path.relative_to(root).as_posix())) for path in paths}
+
+
+def _capture_inputs(root: Path) -> dict[str, bytes]:
+    source = _source_path(root)
+    paths = [source, source.with_suffix(".manifest.json"), source.with_suffix(".tsv")]
+    paths += [safe_path(root, name) for name in (
+        INDEX, PROVENANCE, CONFIG_PATH, VALIDATOR, "scripts/chem_formula.py")]
+    paths += sorted(safe_path(root, "data/families").glob("*.yaml"))
+    return {path.relative_to(root).as_posix(): _bytes(root, path.relative_to(root).as_posix())
+            for path in paths}
 
 
 def _preflight(root: Path) -> tuple[dict, dict[str, str], set[str]]:
@@ -171,20 +221,25 @@ def check(root: Path, claw_root: Path, *, timeout: int = 180) -> dict:
     for name in ("pyproject.toml", "uv.lock"):
         if not (claw_root / name).is_file():
             raise IdLabelError(f"CLAW runtime is missing {name}")
-    metadata, before, expected_names = _preflight(root)
-    command = ["uv", "run", "--project", str(claw_root), "--locked", "--offline",
-               "python", "-I", "-B", str(safe_path(root, VALIDATOR)),
-               "-c", str(safe_path(root, CONFIG_PATH))]
-    runtime_lock = _sha((claw_root / "uv.lock").read_bytes())
+    runtime_lock = _sha(_bytes(claw_root, "uv.lock"))
     environment = {key: value for key, value in os.environ.items()
                    if key not in {"VIRTUAL_ENV", "UV_PROJECT_ENVIRONMENT", "PYTHONPATH", "PYTHONHOME"}}
-    done = subprocess.run(command, cwd=root, capture_output=True, text=True, timeout=timeout,
-                          check=False, env={**environment, "PYTHONDONTWRITEBYTECODE": "1"})
-    if _sha((claw_root / "uv.lock").read_bytes()) != runtime_lock:
-        raise IdLabelError("CLAW runtime lock changed during validation")
-    _, after, after_names = _preflight(root)
-    if after != before or after_names != expected_names:
-        raise IdLabelError("validation inputs changed during the shared CLI check")
+    captures = _capture_inputs(root)
+    with tempfile.TemporaryDirectory(prefix="duf-oak-inputs-") as temporary:
+        private = Path(temporary).resolve(strict=True)
+        _materialize(private, captures)
+        metadata, before, expected_names = _preflight(private)
+        command = ["uv", "run", "--project", str(claw_root), "--locked", "--offline",
+                   "python", "-I", "-B", str(private / VALIDATOR),
+                   "-c", str(private / CONFIG_PATH)]
+        done = subprocess.run(command, cwd=private, capture_output=True, text=True, timeout=timeout,
+                              check=False, env={**environment, "PYTHONDONTWRITEBYTECODE": "1"})
+        if _sha(_bytes(claw_root, "uv.lock")) != runtime_lock:
+            raise IdLabelError("CLAW runtime lock changed during validation")
+        after = _fingerprints(private, [private / name for name in before])
+        original_after = {name: _sha(raw) for name, raw in _capture_inputs(root).items()}
+        if after != before or original_after != before:
+            raise IdLabelError("validation inputs changed during the shared CLI check")
     counts = {key: int(value) for key, value in re.findall(
         r"^\s+([A-Z_]+): (\d+)\s*$", done.stdout, re.MULTILINE)}
     if done.returncode != 0 or counts != {"OK_CANONICAL": len(expected_names)}:
@@ -198,7 +253,8 @@ def check(root: Path, claw_root: Path, *, timeout: int = 180) -> dict:
         "validator_sha256": before[VALIDATOR],
         "config_sha256": before[CONFIG_PATH],
         "claw_lock_sha256": runtime_lock,
-        "command": command, "cwd": str(root),
+        "command": command, "cwd": str(private), "repository_root": str(root),
+        "snapshot_sha256": _sha(_json_bytes(before)), "snapshot_removed": True,
     }
 
 
@@ -221,7 +277,8 @@ def main(argv: list[str] | None = None) -> int:
             raise IdLabelError("--check requires --claw-root or CLAW_ROOT for the isolated runtime")
         else:
             result = check(args.repo_root, args.claw_root)
-    except (OSError, ValueError, RuntimeError, ImportError, subprocess.SubprocessError) as error:
+    except (OSError, ValueError, RuntimeError, ImportError, yaml.YAMLError,
+            subprocess.SubprocessError) as error:
         print(f"id-label validation: {error}", file=sys.stderr)
         return 1
     print(json.dumps(result, indent=2, sort_keys=True))

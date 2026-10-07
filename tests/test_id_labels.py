@@ -5,9 +5,11 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 import runpy
 import shutil
+import stat
 import subprocess
 import sys
 import tempfile
@@ -88,6 +90,79 @@ def oak_regression(root: Path) -> dict:
             "source_sha256": provenance["source"]["sha256"],
             "index_sha256": provenance["index"]["sha256"],
             "network_denied": True, "native_duf_imported": False, "cases": results}
+
+
+def snapshot_regression(root: Path, claw_root: Path) -> dict:
+    """Native runtime harness: exercise the actual locked OAK child with a path swap."""
+    from unittest.mock import patch
+
+    sys.path.insert(0, str(root.resolve() / "src"))
+    from dufmech import id_labels
+    from dufmech.snapshot import write_worklist_snapshot
+    from dufmech.worklist import DufFamilyRow
+
+    root = root.resolve()
+    _, retained = id_labels._source(root)
+    row = dict(retained.rows[0])
+    row.pop("source_url", None)
+    real_run = subprocess.run
+    with tempfile.TemporaryDirectory(prefix="duf-oak-snapshot-regression-") as temporary:
+        fixture = Path(temporary).resolve() / "fixture"
+        write_worklist_snapshot([DufFamilyRow(**row)], fixture / "data/worklists",
+                                snapshot_date="2026-10-01")
+        record = fixture / "data/families" / (row["pfam_id"] + ".yaml")
+        record.parent.mkdir(parents=True)
+        record.write_text(json.dumps({"id": "Pfam:" + row["pfam_id"], "name": row["name"]}))
+        for relative in (id_labels.CONFIG_PATH, id_labels.VALIDATOR, "scripts/chem_formula.py"):
+            path = fixture / relative
+            path.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(root / relative, path)
+        id_labels.write_index(fixture)
+        positive = id_labels.check(fixture, claw_root.resolve())
+        assert positive["checked_pairs"] == 1 and positive["status"] == "PASS"
+        assert positive["repository_root"] == str(fixture)
+        assert positive["cwd"] != str(fixture) and not Path(positive["cwd"]).exists()
+        assert positive["snapshot_removed"] is True
+        bad_label = "Deliberately incorrect correspondence regression label"
+        record.write_text(json.dumps({"id": "Pfam:" + row["pfam_id"], "name": bad_label}))
+        index = fixture / id_labels.INDEX
+        canonical = index.read_bytes()
+        outside = Path(temporary).resolve() / "outside.obo"
+        outside.write_bytes(canonical.replace(row["name"].encode(), bad_label.encode()))
+        assert outside.read_bytes() != canonical
+        child_receipt = {}
+
+        def substitute_original_index(command, **kwargs):
+            private = Path(kwargs["cwd"])
+            assert private != fixture
+            assert command[9:] == [str(private / id_labels.VALIDATOR),
+                                   "-c", str(private / id_labels.CONFIG_PATH)]
+            assert (private / id_labels.INDEX).read_bytes() == canonical
+            index.unlink()
+            index.symlink_to(outside)
+            try:
+                done = real_run(command, **kwargs)
+                child_receipt.update(command=command, cwd=str(private), exit_code=done.returncode,
+                                     stdout=done.stdout)
+                return done
+            finally:
+                index.unlink()
+                index.write_bytes(canonical)
+
+        with patch.object(id_labels.subprocess, "run", substitute_original_index):
+            try:
+                id_labels.check(fixture, claw_root.resolve())
+            except id_labels.IdLabelError as error:
+                assert "MISMATCH" in str(error), str(error)
+            else:
+                raise AssertionError("outside-index substitution produced a false PASS")
+        assert child_receipt["exit_code"] == 2 and "MISMATCH" in child_receipt["stdout"]
+        assert index.read_bytes() == canonical and not index.is_symlink()
+        assert not Path(child_receipt["cwd"]).exists()
+    return {"status": "PASS", "positive": positive, "outside_index_swap": child_receipt,
+            "retained_source_sha256": retained.provenance["sha256"],
+            "scope": "One retained Pfam row repackaged as a disposable fixture, not a new data freeze",
+            "scientific_repository_writes": False}
 
 
 if __name__ != "__main__":
@@ -220,24 +295,39 @@ if __name__ != "__main__":
             (runtime / name).write_text("test runtime contract")
         for name in ("VIRTUAL_ENV", "UV_PROJECT_ENVIRONMENT", "PYTHONPATH", "PYTHONHOME"):
             monkeypatch.setenv(name, "/bad/inherited/native/environment")
+        _, expected_hashes, _ = id_labels._preflight(corpus)
+        invoked = []
 
         def run(command, **kwargs):
             assert command[:7] == ["uv", "run", "--project", str(runtime), "--locked",
                                    "--offline", "python"]
             assert command[7:9] == ["-I", "-B"]
-            assert command[9:] == [str(corpus / id_labels.VALIDATOR),
-                                   "-c", str(corpus / id_labels.CONFIG_PATH)]
-            assert kwargs["cwd"] == corpus and "--report" not in command
+            private = Path(kwargs["cwd"])
+            invoked.append(private)
+            assert private != corpus and private.is_dir()
+            assert command[9:] == [str(private / id_labels.VALIDATOR),
+                                   "-c", str(private / id_labels.CONFIG_PATH)]
+            assert "--report" not in command
+            assert {path: hashlib.sha256((private / path).read_bytes()).hexdigest()
+                    for path in expected_hashes} == expected_hashes
             assert not {"VIRTUAL_ENV", "UV_PROJECT_ENVIRONMENT", "PYTHONPATH", "PYTHONHOME"} & set(
                 kwargs["env"])
             return subprocess.CompletedProcess(command, code, stdout, "")
 
         monkeypatch.setattr(id_labels.subprocess, "run", run)
         if passes:
-            assert id_labels.check(corpus, runtime)["checked_pairs"] == 1
+            receipt = id_labels.check(corpus, runtime)
+            assert receipt["checked_pairs"] == 1
+            assert receipt["repository_root"] == str(corpus)
+            assert receipt["cwd"] == str(invoked[0])
+            assert receipt["command"][9] == str(invoked[0] / id_labels.VALIDATOR)
+            assert receipt["snapshot_removed"] is True
+            assert receipt["snapshot_sha256"] == hashlib.sha256(
+                id_labels._json_bytes(expected_hashes)).hexdigest()
         else:
             with pytest.raises(id_labels.IdLabelError, match="failed or skipped"):
                 id_labels.check(corpus, runtime)
+        assert len(invoked) == 1 and not invoked[0].exists()
 
     def test_concurrent_record_change_rejected(corpus, monkeypatch):
         runtime = corpus / "runtime"
@@ -247,12 +337,105 @@ if __name__ != "__main__":
 
         def run(command, **kwargs):
             path = corpus / "data/families/PF00001.yaml"
+            private_record = Path(kwargs["cwd"]) / "data/families/PF00001.yaml"
+            captured = private_record.read_bytes()
             path.write_bytes(path.read_bytes() + b"\n")
+            assert private_record.read_bytes() == captured
             return subprocess.CompletedProcess(command, 0, "  OK_CANONICAL: 1\n", "")
 
         monkeypatch.setattr(id_labels.subprocess, "run", run)
         with pytest.raises(id_labels.IdLabelError, match="inputs changed"):
             id_labels.check(corpus, runtime)
+
+    @pytest.mark.parametrize("relative", [id_labels.INDEX, id_labels.CONFIG_PATH,
+                                          "data/families/PF00001.yaml"])
+    def test_temporary_original_edits_never_reach_child(corpus, monkeypatch, relative):
+        runtime = corpus / "runtime"
+        runtime.mkdir()
+        for name in ("pyproject.toml", "uv.lock"):
+            (runtime / name).write_text("test runtime contract")
+        target = corpus / relative
+        canonical = target.read_bytes()
+        outside = corpus / "outside"
+        outside.write_bytes(b"temporary outside input\n")
+
+        def run(command, **kwargs):
+            private = Path(kwargs["cwd"])
+            assert private != corpus
+            target.unlink()
+            target.symlink_to(outside)
+            try:
+                assert (private / relative).read_bytes() == canonical
+                return subprocess.CompletedProcess(command, 0, "  OK_CANONICAL: 1\n", "")
+            finally:
+                target.unlink()
+                target.write_bytes(canonical)
+
+        monkeypatch.setattr(id_labels.subprocess, "run", run)
+        assert id_labels.check(corpus, runtime)["status"] == "PASS"
+        assert target.read_bytes() == canonical and not target.is_symlink()
+
+    def test_child_snapshot_edit_is_not_a_pass(corpus, monkeypatch):
+        runtime = corpus / "runtime"
+        runtime.mkdir()
+        for name in ("pyproject.toml", "uv.lock"):
+            (runtime / name).write_text("test runtime contract")
+        before = files(corpus)
+
+        def run(command, **kwargs):
+            target = Path(kwargs["cwd"]) / id_labels.INDEX
+            target.write_bytes(target.read_bytes() + b"\n")
+            return subprocess.CompletedProcess(command, 0, "  OK_CANONICAL: 1\n", "")
+
+        monkeypatch.setattr(id_labels.subprocess, "run", run)
+        with pytest.raises(id_labels.IdLabelError, match="inputs changed"):
+            id_labels.check(corpus, runtime)
+        assert files(corpus) == before
+
+    SOURCE_FILES = ["data/worklists/interpro-pfam-duf-2026-10-01" + suffix
+                    for suffix in (".json", ".tsv", ".manifest.json")]
+
+    @pytest.mark.parametrize("mode,relative", [
+        ("--check-index", relative) for relative in (
+            "data/families/PF00001.yaml", id_labels.CONFIG_PATH, id_labels.INDEX,
+            id_labels.PROVENANCE, id_labels.VALIDATOR, "scripts/chem_formula.py", *SOURCE_FILES)
+    ] + [("--apply", relative) for relative in (
+        id_labels.INDEX, id_labels.PROVENANCE, *SOURCE_FILES)])
+    def test_fifo_inputs_fail_without_blocking_or_changes(corpus, mode, relative):
+        target = corpus / relative
+        target.unlink()
+        os.mkfifo(target)
+        before = files(corpus)
+        done = subprocess.run(
+            [sys.executable, "-B", "-m", "dufmech.id_labels", "--repo-root", str(corpus), mode],
+            cwd=corpus, capture_output=True, text=True, timeout=15, check=False,
+            env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1",
+                 "PYTHONPATH": str(id_labels.REPO_ROOT / "src")},
+        )
+        assert done.returncode == 1 and "regular file" in done.stderr, (done.stdout, done.stderr)
+        assert files(corpus) == before
+        assert stat.S_ISFIFO(target.lstat().st_mode)
+
+    @pytest.mark.parametrize("relative", [id_labels.CONFIG_PATH, id_labels.INDEX,
+                                          "data/families/PF00001.yaml", *SOURCE_FILES])
+    def test_fifo_replacement_at_open_is_nonblocking(corpus, monkeypatch, relative):
+        target = corpus / relative
+        original = os.open
+        replaced = False
+
+        def swap(path, flags, *args, **kwargs):
+            nonlocal replaced
+            if Path(path).name == target.name and not replaced:
+                assert flags & os.O_NOFOLLOW and flags & os.O_NONBLOCK
+                replaced = True
+                target.unlink()
+                os.mkfifo(target)
+            return original(path, flags, *args, **kwargs)
+
+        monkeypatch.setattr(os, "open", swap)
+        with pytest.raises(ValueError, match="regular file"):
+            id_labels.check_index(corpus)
+        assert replaced and stat.S_ISFIFO(target.lstat().st_mode)
 
     def test_cli_cannot_claim_oak_without_runtime(corpus, monkeypatch, capsys):
         monkeypatch.delenv("CLAW_ROOT", raising=False)
@@ -266,14 +449,20 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--oak-regression", action="store_true")
+    mode.add_argument("--snapshot-regression", action="store_true")
     mode.add_argument("--validator", type=Path)
     parser.add_argument("--repo-root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--config", type=Path)
+    parser.add_argument("--claw-root", type=Path)
     args = parser.parse_args()
     if args.validator:
         sys.addaudithook(_deny_network)
         print("OFFLINE_AUDIT_ACTIVE", file=sys.stderr)
         sys.argv = [str(args.validator), "-c", str(args.config)]
         runpy.run_path(str(args.validator), run_name="__main__")
+    elif args.snapshot_regression:
+        if args.claw_root is None:
+            parser.error("--snapshot-regression requires --claw-root and the native DUF runtime")
+        print(json.dumps(snapshot_regression(args.repo_root, args.claw_root), indent=2, sort_keys=True))
     else:
         print(json.dumps(oak_regression(args.repo_root), indent=2, sort_keys=True))
