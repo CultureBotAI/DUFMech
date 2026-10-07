@@ -29,7 +29,10 @@ dependencies = [
     "beautifulsoup4>=4.12",
     "httpx>=0.27",
     "jsonschema>=4.23",
-    "linkml>=1.9,<2",
+    "linkml>=1.10,<2",
+    # Older ShEx parsers import typing.io, removed in Python 3.13.
+    "pyshex>=0.9.0",
+    "pyshexc>=0.10.3.post1",
     "pyyaml>=6",
 ]
 
