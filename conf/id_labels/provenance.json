@@ -1,0 +1,60 @@
+{
+  "derivation": "Sorted Pfam IDs and verbatim source names only; no relationships or inferred labels.",
+  "format_version": 1,
+  "index": {
+    "bytes": 448877,
+    "entities": 6532,
+    "path": "conf/id_labels/pfam.obo",
+    "selector": "simpleobo:conf/id_labels/pfam.obo",
+    "sha256": "6ca2519b5e2749cbca43867e961c36911f73631c2cfb4137b7964a02123a1ea3"
+  },
+  "kind": "derived_frozen_pfam_label_index",
+  "scope": "Frozen Pfam ID/name correspondence; not live ontology or scientific validation.",
+  "source": {
+    "bytes": 5004211,
+    "manifest_bytes": 729329,
+    "manifest_path": "interpro-pfam-duf-2026-10-05.manifest.json",
+    "manifest_sha256": "23d9d926caade8c9886d782e8e7cf7369598a64d4df61c64e2c7366c3949a36e",
+    "path": "interpro-pfam-duf-2026-10-05.json",
+    "role": "worklist",
+    "rows": 6532,
+    "sha256": "4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10",
+    "snapshot_id": "interpro-pfam-duf-2026-10-05",
+    "source": {
+      "extra_fields": "entry_id,short_name,description,counters",
+      "include_false_positives": false,
+      "name": "Reclassification of frozen InterPro Pfam API metadata",
+      "note": "No new API retrieval; all names, descriptions, identifiers and counters are copied unchanged from the source snapshot.",
+      "original_generated_at": "2026-10-01T02:02:24.459424Z",
+      "page_size": 200,
+      "search": "DUF",
+      "url": "https://www.ebi.ac.uk/interpro/api/entry/pfam/"
+    },
+    "tsv_fieldnames": [
+      "pfam_id",
+      "short_name",
+      "name",
+      "interpro_id",
+      "unknown_status",
+      "candidate_reasons",
+      "proteins",
+      "matches",
+      "proteomes",
+      "taxa",
+      "structures",
+      "alphafold_models",
+      "domain_architectures",
+      "description",
+      "source_url"
+    ],
+    "validation_state": "verified",
+    "worklist_reclassification": {
+      "input_generated_at": "2026-10-01T02:02:24.459424Z",
+      "input_json_sha256": "141fd83d020563444c6498a3f0dc4d7924e7cf759647b449271f4d00c612b689",
+      "input_snapshot_id": "interpro-pfam-duf-2026-10-01",
+      "policy": "Recognize explicit unknown-function names and family/families descriptions; seed status is a metadata classification, not experimental evidence.",
+      "profile": "reclassification-v1"
+    }
+  },
+  "source_path": "data/worklists/interpro-pfam-duf-2026-10-05.json"
+}
