@@ -14,6 +14,7 @@ from dufmech.cross_mech import (
     CrossMechError,
     FamilyIndex,
     UniProtPfamClient,
+    _as_rows,
     load_uniprot_cache,
     render_uniprot_cache,
     scan_mechs,
@@ -95,7 +96,10 @@ def _lookup(cache: Path | None, info: dict[str, object]):
         fetched_at = _now()
         info["fetched_at"] = fetched_at
         info["fetched_accessions"] = len(accessions)
-        return {key: replace(row, fetched_at=fetched_at) for key, row in client(accessions).items()}
+        return {
+            key: tuple(replace(row, fetched_at=fetched_at) for row in _as_rows(rows))
+            for key, rows in client(accessions).items()
+        }
 
     if cache is None:
         return live
@@ -104,10 +108,11 @@ def _lookup(cache: Path | None, info: dict[str, object]):
         # Unresolved accessions are refetched; only resolved lookups are cached.
         cache_bytes = cache.read_bytes() if cache.is_file() else None
         rows = load_uniprot_cache(cache_bytes.decode("utf-8")) if cache_bytes is not None else {}
-        hits = [rows[accession] for accession in accessions if accession in rows]
+        hits = [row for accession in accessions for row in rows.get(accession, ())]
         missing = [accession for accession in accessions if accession not in rows]
         info.update({
-            "mode": "cache", "cache_path": cache.name, "cache_hits": len(hits),
+            "mode": "cache", "cache_path": cache.name,
+            "cache_hits": sum(accession in rows for accession in accessions),
             "cache_input_sha256": (
                 hashlib.sha256(cache_bytes).hexdigest() if cache_bytes is not None else None
             ),

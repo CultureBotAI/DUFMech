@@ -250,7 +250,8 @@ def test_uniprot_rows_map_secondary_accessions_and_skip_inactive() -> None:
         "inactiveReason": {"inactiveReasonType": "MERGED", "mergeDemergeTo": ["P04637"]},
     }
     assert uniprot_pfam_rows(merged, ["Q15086"]) == {}
-    assert load_uniprot_cache(render_uniprot_cache(rows)) == rows
+    assert rows["P76345"].resolution == "secondary"
+    assert load_uniprot_cache(render_uniprot_cache(rows)) == {"P76345": (rows["P76345"],)}
 
 
 def test_uniprot_client_batches_and_follows_pages() -> None:
@@ -457,3 +458,72 @@ def test_cli_records_uniprot_cache_provenance(
     assert second["cache_hits"] == 2
     assert "fetched_at" not in second
     assert second["cache_sha256"] == first["uniprotkb_lookup"]["cache_sha256"]
+
+
+def _entry(accession: str, pfams: tuple[str, ...]) -> dict:
+    return {
+        "primaryAccession": accession,
+        "entryType": "UniProtKB unreviewed (TrEMBL)",
+        "proteinDescription": {"submissionNames": [{"fullName": {"value": f"Protein {accession}"}}]},
+        "organism": {"taxonId": 562, "scientificName": "Escherichia coli"},
+        "uniProtKBCrossReferences": [{"database": "Pfam", "id": pfam} for pfam in pfams],
+    }
+
+
+def _stub(accession: str, kind: str, targets: list[str]) -> dict:
+    reason = {"inactiveReasonType": kind}
+    if targets:
+        reason["mergeDemergeTo"] = targets
+    return {"primaryAccession": accession, "entryType": "Inactive", "inactiveReason": reason}
+
+
+def test_uniprot_client_follows_merged_and_demerged_successors() -> None:
+    entries = {
+        "P24247": _stub("P24247", "DEMERGED", ["P0AF13", "P0AF12"]),
+        "Q15086": _stub("Q15086", "MERGED", ["P04637"]),
+        "A0A045J7I4": _stub("A0A045J7I4", "DELETED", []),
+        "P0AF12": _entry("P0AF12", ("PF04363",)),
+        "P0AF13": _entry("P0AF13", ("PF04363", "PF00001")),
+        "P04637": _entry("P04637", ("PF06226",)),
+    }
+    queries: list[list[str]] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        wanted = [part.split(":", 1)[1] for part in request.url.params["query"].split(" OR ")]
+        queries.append(wanted)
+        return httpx.Response(200, json={"results": [entries[a] for a in wanted if a in entries]})
+
+    client = UniProtPfamClient(transport=httpx.MockTransport(handler))
+    resolved = client(["A0A045J7I4", "P24247", "Q15086"])
+
+    assert queries[1] == ["P04637", "P0AF12", "P0AF13"]
+    assert set(resolved) == {"P24247", "Q15086"}
+    assert [row.uniprot_accession for row in resolved["P24247"]] == ["P0AF12", "P0AF13"]
+    assert {row.resolution for row in resolved["P24247"]} == {"demerged"}
+    assert {row.requested_accession for row in resolved["P24247"]} == {"P24247"}
+    assert resolved["Q15086"][0].resolution == "merged"
+    assert load_uniprot_cache(render_uniprot_cache(resolved)) == resolved
+
+
+def test_scan_rows_keep_cited_accession_for_successors(mechs_root: Path) -> None:
+    def lookup(accessions):
+        return {
+            "P22041": (
+                UniProtPfamRow("P22041", "P0AF12", "Successor A", False, "562", "E. coli",
+                               ("PF04363",), resolution="demerged"),
+                UniProtPfamRow("P22041", "P0AF13", "Successor B", False, "562", "E. coli",
+                               ("PF04363",), resolution="demerged"),
+            ),
+        }
+
+    result = scan_mechs(mechs_root, FAMILIES, mechs=MECHS[:1], uniprot_lookup=lookup)
+    rows = [row for row in result.rows if row.source_section == "uniprot_accession"]
+
+    assert [(row.uniprot_accession, row.cited_uniprot_accession) for row in rows] == [
+        ("P0AF12", "P22041"),
+        ("P0AF13", "P22041"),
+    ]
+    assert all("uniprot_demerged_successor" in row.link_basis for row in rows)
+    assert result.uniprot_unresolved == ["Q99999"]
+    header = render_cross_mech_tsv(rows).splitlines()[0].split("\t")
+    assert header[-1] == "cited_uniprot_accession"

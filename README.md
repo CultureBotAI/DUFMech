@@ -207,8 +207,11 @@ which are UniProt nomenclature the Pfam-derived worklist never carries, are kept
 worklist family, including next to prose such as `DUF3458_C-containing`. The manifest
 records cache input/output checksums, fetch times for cache hits where known, and
 the time and count of new UniProtKB requests. Legacy cache entries retain an explicit
-unknown fetch age; a new request does not redate existing cached results. Unresolved
-accessions, including merged and demerged entries, are listed separately.
+unknown fetch age; a new request does not redate existing cached results. A cited
+accession that UniProt has merged or demerged is followed to its successor entries;
+those rows keep the cited accession in `cited_uniprot_accession` and add a
+`uniprot_merged_successor` or `uniprot_demerged_successor` link basis. Deleted
+accessions have no successor and are listed as unresolved.
 
 A freeze refuses to replace any existing artifact for the selected date. Use a new
 snapshot date or a separate output directory for another run. Both the report and

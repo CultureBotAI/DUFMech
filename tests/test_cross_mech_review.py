@@ -197,12 +197,12 @@ def test_cache_merge_preserves_fetch_age_and_unrelated_rows(
     info = {}
     rows = cross_mech_snapshot_cli._lookup(cache, info)(["P22041", "Q99999"])
     assert calls == [["Q99999"]]
-    assert rows["P22041"].fetched_at == "2026-10-01T00:00:00Z"
-    assert rows["Q99999"].fetched_at == "2026-10-05T00:00:00Z"
+    assert rows["P22041"][0].fetched_at == "2026-10-01T00:00:00Z"
+    assert rows["Q99999"][0].fetched_at == "2026-10-05T00:00:00Z"
     assert info["cache_input_sha256"] == before
     assert info["cache_hit_fetch_times"] == ["2026-10-01T00:00:00Z"]
     assert info["cache_hits_without_fetch_time"] == 0
-    assert load_uniprot_cache(cache.read_text())["P99999"] == other
+    assert load_uniprot_cache(cache.read_text())["P99999"] == (other,)
     replay_info = {}
     assert cross_mech_snapshot_cli._lookup(cache, replay_info)(list(rows)) == rows
     assert len(calls) == 1

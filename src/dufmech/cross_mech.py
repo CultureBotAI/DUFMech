@@ -10,7 +10,7 @@ import subprocess
 import threading
 from collections.abc import Iterable, Iterator, Mapping, Sequence
 from contextlib import closing
-from dataclasses import asdict, dataclass, field
+from dataclasses import asdict, dataclass, field, replace
 from pathlib import PurePosixPath
 from typing import Any
 
@@ -58,7 +58,18 @@ CROSS_MECH_TSV_FIELDNAMES = [
     "taxon_id",
     "taxon_label",
     "family_mentioned_in_record",
+    "cited_uniprot_accession",
 ]
+
+# How a cited accession reached the UniProtKB entry that supplied its Pfam xrefs.
+RESOLUTION_ACTIVE = "active"
+RESOLUTION_SECONDARY = "secondary"
+RESOLUTION_MERGED = "merged"
+RESOLUTION_DEMERGED = "demerged"
+SUCCESSOR_BASIS = {
+    RESOLUTION_MERGED: "uniprot_merged_successor",
+    RESOLUTION_DEMERGED: "uniprot_demerged_successor",
+}
 
 
 class CrossMechError(RuntimeError):
@@ -228,6 +239,7 @@ class UniProtPfamRow:
     pfam_ids: tuple[str, ...]
     # Empty for legacy caches whose original lookup time was not recorded.
     fetched_at: str = ""
+    resolution: str = RESOLUTION_ACTIVE
 
 
 @dataclass(frozen=True)
@@ -250,6 +262,9 @@ class CrossMechRow:
     taxon_id: str = ""
     taxon_label: str = ""
     family_mentioned_in_record: bool | None = None
+    # The accession the source record cited; differs from uniprot_accession when the
+    # cited entry was a secondary accession or was merged or demerged by UniProt.
+    cited_uniprot_accession: str = ""
 
     def sort_key(self) -> tuple[str, ...]:
         return (
@@ -345,15 +360,17 @@ def scan_mechs(
 
     result.uniprot_requested = len(pending)
     if pending and uniprot_lookup is not None:
-        lookups = uniprot_lookup(sorted(pending))
+        lookups = {
+            accession: _as_rows(value)
+            for accession, value in uniprot_lookup(sorted(pending)).items()
+            if _as_rows(value)
+        }
         result.uniprot_resolved = len(lookups)
         result.uniprot_unresolved = sorted(set(pending) - set(lookups))
         for accession, contexts in sorted(pending.items()):
-            lookup = lookups.get(accession)
-            if lookup is None:
-                continue
-            for record, mentioned in contexts:
-                result.rows.extend(uniprot_rows(record, families, lookup, mentioned))
+            for lookup in lookups.get(accession, ()):
+                for record, mentioned in contexts:
+                    result.rows.extend(uniprot_rows(record, families, lookup, mentioned))
     result.rows = _dedupe(result.rows)
     return result
 
@@ -414,8 +431,11 @@ def uniprot_rows(
             record_id,
             label,
             section="uniprot_accession",
-            basis={"uniprot_pfam_xref"},
+            basis={"uniprot_pfam_xref", *(
+                (SUCCESSOR_BASIS[lookup.resolution],) if lookup.resolution in SUCCESSOR_BASIS else ()
+            )},
             accession=lookup.uniprot_accession,
+            cited_accession=lookup.requested_accession,
             protein_label=lookup.protein_label,
             reviewed=lookup.reviewed,
             taxon_id=f"NCBITaxon:{lookup.taxon_id}" if lookup.taxon_id else "",
@@ -512,37 +532,61 @@ class UniProtPfamClient:
         self.transport = transport
         self.batch_size = batch_size
 
-    def __call__(self, accessions: Sequence[str]) -> dict[str, UniProtPfamRow]:
-        found: dict[str, UniProtPfamRow] = {}
+    def __call__(self, accessions: Sequence[str]) -> dict[str, tuple[UniProtPfamRow, ...]]:
+        """Resolve accessions, following merged/demerged stubs to their successors."""
+
         with httpx.Client(
             timeout=self.timeout, follow_redirects=True, transport=self.transport
         ) as client:
-            for offset in range(0, len(accessions), self.batch_size):
-                batch = list(accessions[offset : offset + self.batch_size])
-                params: dict[str, str] | None = {
-                    "query": " OR ".join(f"accession:{accession}" for accession in batch),
-                    "fields": UNIPROTKB_FIELDS,
-                    "format": "json",
-                    "size": "500",
-                }
-                next_url: str | None = UNIPROTKB_SEARCH_URL
-                while next_url:
-                    try:
-                        response = client.get(next_url, params=params)
-                        response.raise_for_status()
-                        payload = response.json()
-                    except (httpx.HTTPError, ValueError) as exc:
-                        raise CrossMechError(f"could not fetch UniProtKB page {next_url}") from exc
-                    results = payload.get("results") if isinstance(payload, Mapping) else None
-                    if not isinstance(results, list):
-                        raise CrossMechError(f"UniProtKB page {next_url} had no results list")
-                    for entry in results:
-                        if isinstance(entry, Mapping):
-                            found.update(uniprot_pfam_rows(entry, batch))
-                    next_link = response.links.get("next")
-                    next_url = next_link.get("url") if isinstance(next_link, Mapping) else None
-                    params = None
-        return found
+            found, moved = self._fetch(client, accessions)
+            successors = sorted({acc for _, targets in moved.values() for acc in targets} - set(found))
+            successor_rows, _ = self._fetch(client, successors) if successors else ({}, {})
+        resolved = {key: (row,) for key, row in found.items()}
+        for requested, (resolution, targets) in sorted(moved.items()):
+            if requested in resolved:
+                continue
+            rows = tuple(
+                replace(row, requested_accession=requested, resolution=resolution)
+                for target in targets
+                for row in [found.get(target) or successor_rows.get(target)]
+                if row is not None
+            )
+            if rows:
+                resolved[requested] = rows
+        return resolved
+
+    def _fetch(
+        self, client: httpx.Client, accessions: Sequence[str]
+    ) -> tuple[dict[str, UniProtPfamRow], dict[str, tuple[str, tuple[str, ...]]]]:
+        found: dict[str, UniProtPfamRow] = {}
+        moved: dict[str, tuple[str, tuple[str, ...]]] = {}
+        for offset in range(0, len(accessions), self.batch_size):
+            batch = list(accessions[offset : offset + self.batch_size])
+            params: dict[str, str] | None = {
+                "query": " OR ".join(f"accession:{accession}" for accession in batch),
+                "fields": UNIPROTKB_FIELDS,
+                "format": "json",
+                "size": "500",
+            }
+            next_url: str | None = UNIPROTKB_SEARCH_URL
+            while next_url:
+                try:
+                    response = client.get(next_url, params=params)
+                    response.raise_for_status()
+                    payload = response.json()
+                except (httpx.HTTPError, ValueError) as exc:
+                    raise CrossMechError(f"could not fetch UniProtKB page {next_url}") from exc
+                results = payload.get("results") if isinstance(payload, Mapping) else None
+                if not isinstance(results, list):
+                    raise CrossMechError(f"UniProtKB page {next_url} had no results list")
+                for entry in results:
+                    if isinstance(entry, Mapping):
+                        found.update(uniprot_pfam_rows(entry, batch))
+                        moved.update(uniprot_successors(entry, batch))
+                next_link = response.links.get("next")
+                next_url = next_link.get("url") if isinstance(next_link, Mapping) else None
+                params = None
+        return found, moved
 
 
 def uniprot_pfam_rows(
@@ -551,9 +595,9 @@ def uniprot_pfam_rows(
     """Map an active UniProtKB entry back to each requested accession it answers.
 
     UniProt answers a merged, demerged, or deleted accession with an ``Inactive`` stub
-    rather than the successor entry, so those accessions are not mapped here; the
-    snapshot manifest lists them as unresolved. ``secondaryAccessions`` is still
-    honored when an active entry carries a requested accession there.
+    rather than the successor entry; :func:`uniprot_successors` reads those stubs.
+    ``secondaryAccessions`` is still honored when an active entry carries a requested
+    accession there.
     """
 
     primary = _string(entry.get("primaryAccession"))
@@ -588,14 +632,44 @@ def uniprot_pfam_rows(
         "pfam_ids": pfam_ids,
     }
     return {
-        accession: UniProtPfamRow(requested_accession=accession, **row_args)
+        accession: UniProtPfamRow(
+            requested_accession=accession,
+            resolution=RESOLUTION_ACTIVE if accession == primary else RESOLUTION_SECONDARY,
+            **row_args,
+        )
         for accession in requested
         if accession in aliases
     }
 
 
-def load_uniprot_cache(text: str) -> dict[str, UniProtPfamRow]:
-    """Load a cached accession lookup written by :func:`render_uniprot_cache`."""
+def uniprot_successors(
+    entry: Mapping[str, Any], requested: Iterable[str]
+) -> dict[str, tuple[str, tuple[str, ...]]]:
+    """Return ``{accession: (merged|demerged, successors)}`` for an inactive stub.
+
+    Deleted entries have no successor and are left unresolved.
+    """
+
+    accession = _string(entry.get("primaryAccession"))
+    if accession not in set(requested) or "inactive" not in _string(entry.get("entryType")).lower():
+        return {}
+    reason = _mapping(entry.get("inactiveReason"))
+    kind = _string(reason.get("inactiveReasonType")).upper()
+    targets = reason.get("mergeDemergeTo")
+    successors = tuple(
+        sorted({_string(target) for target in (targets if isinstance(targets, list) else ())} - {""})
+    )
+    resolution = {"MERGED": RESOLUTION_MERGED, "DEMERGED": RESOLUTION_DEMERGED}.get(kind)
+    if resolution is None or not successors:
+        return {}
+    return {accession: (resolution, successors)}
+
+
+def load_uniprot_cache(text: str) -> dict[str, tuple[UniProtPfamRow, ...]]:
+    """Load a cached accession lookup written by :func:`render_uniprot_cache`.
+
+    A demerged accession has one cached row per successor entry.
+    """
 
     payload = json.loads(text)
     if not isinstance(payload, list):
@@ -610,16 +684,35 @@ def load_uniprot_cache(text: str) -> dict[str, UniProtPfamRow]:
             raise CrossMechError("invalid UniProt cache row") from exc
         if not isinstance(row.fetched_at, str):
             raise CrossMechError("invalid UniProt cache fetch time")
-        rows[row.requested_accession] = row
-    return rows
+        rows.setdefault(row.requested_accession, []).append(row)
+    return {
+        key: tuple(sorted(value, key=lambda row: row.uniprot_accession))
+        for key, value in rows.items()
+    }
 
 
-def render_uniprot_cache(rows: Mapping[str, UniProtPfamRow]) -> str:
+def render_uniprot_cache(
+    rows: Mapping[str, UniProtPfamRow | tuple[UniProtPfamRow, ...]],
+) -> str:
     """Render accession lookups as stable JSON for offline re-runs."""
 
     return json.dumps(
-        [asdict(rows[key]) for key in sorted(rows)], indent=2, sort_keys=True
+        [
+            asdict(row)
+            for key in sorted(rows)
+            for row in sorted(_as_rows(rows[key]), key=lambda row: row.uniprot_accession)
+        ],
+        indent=2,
+        sort_keys=True,
     )
+
+
+def _as_rows(value: UniProtPfamRow | Iterable[UniProtPfamRow] | None) -> tuple[UniProtPfamRow, ...]:
+    if value is None:
+        return ()
+    if isinstance(value, UniProtPfamRow):
+        return (value,)
+    return tuple(value)
 
 
 def render_cross_mech_tsv(rows: Iterable[CrossMechRow]) -> str:
@@ -663,6 +756,7 @@ def _row(
     taxon_label: str = "",
     family_mentioned: bool | None = None,
     short_name: str = "",
+    cited_accession: str = "",
 ) -> CrossMechRow:
     return CrossMechRow(
         pfam_id=family.pfam_id,
@@ -681,6 +775,7 @@ def _row(
         taxon_id=taxon_id,
         taxon_label=taxon_label,
         family_mentioned_in_record=family_mentioned,
+        cited_uniprot_accession=cited_accession,
     )
 
 
