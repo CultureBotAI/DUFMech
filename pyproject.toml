@@ -40,6 +40,7 @@ dependencies = [
 dev = [
     "pytest>=8",
     "ruff>=0.6",
+    "sssom-schema>=1.0",
 ]
 
 [project.urls]
@@ -72,6 +73,10 @@ duf-puf-reclassify = "dufmech.reclassify:main"
 dufmech-records = "dufmech.records:main"
 dufmech-review = "dufmech.reviews:main"
 dufmech-history = "dufmech.history:main"
+dufmech-knowledge-gaps = "dufmech.knowledge_gaps:main"
+dufmech-exports = "dufmech.exports:main"
+dufmech-id-labels = "dufmech.id_labels:main"
+dufmech-research = "dufmech.research:main"
 
 [build-system]
 # Isolated build dependencies are not governed by the runtime uv lock.

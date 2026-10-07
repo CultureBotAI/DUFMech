@@ -20,10 +20,20 @@ jobs:
     name: qc
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    env:
+      CLAW_SRC: ${{ github.workspace }}/.claw/src
+      CLAW_ROOT: ${{ github.workspace }}/.claw
     steps:
       - name: Check out source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
+          persist-credentials: false
+      - name: Check out published shared adapter runtime
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: CultureBotAI/culturebotai-claw
+          ref: b81580f150d5334841f3eb16434575701607bc81
+          path: .claw
           persist-credentials: false
       - name: Set up uv and Python
         uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
@@ -32,6 +42,8 @@ jobs:
           python-version: "3.13"
       - name: Install locked dependencies
         run: uv sync --locked --extra dev
+      - name: Install separate locked OAK runtime
+        run: env -u VIRTUAL_ENV -u UV_PROJECT_ENVIRONMENT -u PYTHONPATH -u PYTHONHOME uv sync --project "$CLAW_ROOT" --locked
       - name: Verify published CLAW artifacts
         run: bash scripts/check_vendored_sync.sh
       - name: Set up Node for browser regression tests
@@ -49,3 +61,5 @@ jobs:
           just-version: '1.46.0'
       - name: Run offline quality checks
         run: just qc
+      - name: Exercise real offline OAK rejection cases
+        run: just id-labels-oak-test

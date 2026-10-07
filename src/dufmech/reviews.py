@@ -136,7 +136,7 @@ def internal_href(root: Path, relative: str) -> str:
     return quote(relative, safe="/._-")
 
 
-def read_source_bytes(root: Path, relative: str) -> bytes:
+def read_source_bytes(root: Path, relative: str, *, max_bytes: int | None = None) -> bytes:
     """Capture one regular file without following symlinks in any path component."""
     root = root.absolute()
     if ".." in root.parts:
@@ -153,7 +153,10 @@ def read_source_bytes(root: Path, relative: str) -> bytes:
             os.close(descriptor)
             raise ValueError(f"source must be a regular file: {relative}")
         with os.fdopen(descriptor, "rb") as handle:
-            return handle.read()
+            raw = handle.read() if max_bytes is None else handle.read(max_bytes + 1)
+            if max_bytes is not None and len(raw) > max_bytes:
+                raise ValueError(f"source exceeds the {max_bytes} byte limit: {relative}")
+            return raw
     finally:
         os.close(directory)
 

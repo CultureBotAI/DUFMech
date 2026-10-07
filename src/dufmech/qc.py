@@ -53,6 +53,21 @@ COMMANDS = (
         "Closed schemas, frozen identity/labels, evidence quotes and projections must agree.",
     ),
     QualityCommand(
+        "offline research profile",
+        (sys.executable, "-m", "dufmech.research", "check"),
+        "Validate the shared planning profile; no provider availability or execution is claimed.",
+    ),
+    QualityCommand(
+        "KGX and SSSOM exports",
+        (sys.executable, "-m", "dufmech.exports", "--check"),
+        "Verified native records must reproduce every committed export byte without writing.",
+    ),
+    QualityCommand(
+        "isolated OAK ID/label correspondence",
+        (sys.executable, "-m", "dufmech.id_labels", "--check"),
+        "Require complete canonical Pfam matches in CLAW_ROOT's separate locked offline runtime.",
+    ),
+    QualityCommand(
         "source governance",
         (sys.executable, "-m", "dufmech.source_governance"),
         "The source catalogue, adoption queue and native writer inventory must remain valid.",

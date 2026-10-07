@@ -4,6 +4,44 @@ version: 1
 validators: [validate_record, _validate_record, _validate_content, check_manifest, verified_manifest]
 history_helpers: [new_history]
 helpers:
+  _materialize:
+    path: "src/dufmech/id_labels.py"
+    formats: ["json", "tsv", "yaml", "obo", "python"]
+    policy: "private-temporary-validation-input-capture"
+    tests: ["tests/test_id_labels.py"]
+    required_calls: [mkdir, write_bytes]
+  retain_result:
+    path: "src/dufmech/research.py"
+    formats: ["yaml"]
+    policy: "shared-validated-dummy-dry-run-append"
+    tests: ["tests/test_research.py"]
+    required_calls: [_shared, _result_path, new_result_path, write_result]
+  write_exports:
+    path: "src/dufmech/exports.py"
+    formats: ["tsv"]
+    policy: "validated-generated-batch-stage-per-file-replace-apply-only"
+    tests: ["tests/test_exports.py"]
+    apply_default: false
+    required_calls: [build_exports, safe_path, _existing, _directory_fd, _stage_file, _existing_at, replace]
+  write_index:
+    path: "src/dufmech/id_labels.py"
+    formats: ["obo", "json"]
+    policy: "frozen-reference-derived-explicit-cli-apply"
+    tests: ["tests/test_id_labels.py"]
+    required_calls: [_writer_lock, build_artifacts, safe_path, _publish]
+  retain:
+    path: "src/dufmech/knowledge_gaps.py"
+    formats: ["yaml", "markdown"]
+    policy: "timestamped-proposal-append"
+    tests: ["tests/test_knowledge_gaps.py"]
+    required_calls: [utc_timestamp, append_document]
+  accept:
+    path: "src/dufmech/knowledge_gaps.py"
+    formats: ["yaml"]
+    policy: "reviewed-overlay-explicit-apply-with-history"
+    tests: ["tests/test_knowledge_gaps.py"]
+    apply_default: false
+    required_calls: [_writer_lock, scan, load_history_metadata, validate_record, _publish_projection, new_history]
   write_worklist_snapshot:
     path: "src/dufmech/snapshot.py"
     formats: ["json","tsv","manifest.json"]

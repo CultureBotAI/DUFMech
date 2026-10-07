@@ -1,0 +1,13 @@
+adapters:
+  Pfam: simpleobo:conf/id_labels/pfam.obo
+ignored_prefixes: []
+synonym_scope: exact
+targets:
+  - name: frozen-pfam-family-labels
+    kind: yaml
+    glob: data/families/*.yaml
+    pairs:
+      - [id, name]
+    policy: canonical
+    required: true
+    severity: error
