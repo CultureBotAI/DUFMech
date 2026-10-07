@@ -1,0 +1,28 @@
+id: Pfam:PF12225
+pfam_id: PF12225
+name: Methylene-tetrahydrofolate reductase C terminal
+short_name: DUF5981
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12225
+counters:
+  proteins: 1276
+  matches: 1276
+  proteomes: 1049
+  taxa: 1917
+  structures: 0
+  alphafold_models: 864
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022026
+description: This family is found in bacteria and archaea, and is approximately 100 amino acids in length.
+  There is a conserved NGPCGG sequence motif. This family is the C terminal of methylene-tetrahydrofolate
+  reductase. This protein reduces FAD using the reducing equivalents from reduced FAD, subsequently reduces
+  tetrahydrofolate. The C terminal of MTHFR contains the FAD binding site and is the catalytic portion
+  of the enzyme.

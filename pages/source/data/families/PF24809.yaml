@@ -1,0 +1,25 @@
+id: Pfam:PF24809
+pfam_id: PF24809
+name: Domain of unknown function (DUF7708)
+short_name: DUF7708
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24809
+counters:
+  proteins: 5537
+  matches: 5544
+  proteomes: 844
+  taxa: 1715
+  structures: 0
+  alphafold_models: 3729
+  domain_architectures: 601
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056125
+description: This domain is found N-terminal in uncharacterised fungal proteins. It shares detectable
+  similarity to the N-terminal domain of NACHT proteins and it is predicted to adopt similar structure.

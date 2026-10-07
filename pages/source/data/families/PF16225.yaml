@@ -1,0 +1,28 @@
+id: Pfam:PF16225
+pfam_id: PF16225
+name: Domain of unknown function (DUF4884)
+short_name: DUF4884
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16225
+counters:
+  proteins: 190
+  matches: 190
+  proteomes: 190
+  taxa: 478
+  structures: 0
+  alphafold_models: 53
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032618
+description: This family consists of several uncharacterized proteins around 90 residues in length and
+  is mainly found in various Bacteroides species. The function of this family is unknown. Structure prediction
+  strongly suggests that four copies of this protein form a homotetramer complex where each monomer forms
+  a single blade of a beta propeller structure. Proteins in this family contain an N-terminal lipoprotein
+  attachment motif.

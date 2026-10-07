@@ -1,0 +1,26 @@
+id: Pfam:PF24242
+pfam_id: PF24242
+name: Domain of unknown function (DUF7449)
+short_name: DUF7449
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24242
+counters:
+  proteins: 32
+  matches: 32
+  proteomes: 32
+  taxa: 76
+  structures: 0
+  alphafold_models: 1
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055872
+description: This entry represents a small family of uncharacterised proteins found in pseudomonas phage.
+  The protein contains a compact domain composed of two alpha helices followed by four beta strands that
+  form a beta sheet.

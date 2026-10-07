@@ -1,0 +1,26 @@
+id: Pfam:PF16819
+pfam_id: PF16819
+name: Domain of unknown function (DUF5074)
+short_name: DUF5074
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16819
+counters:
+  proteins: 2145
+  matches: 2145
+  proteomes: 1504
+  taxa: 2299
+  structures: 17
+  alphafold_models: 1369
+  domain_architectures: 40
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031815
+description: This family of proteins from Bacteroidetes, is found with a PKD domain at the N-terminus.
+  Several members are annotated as putative quinonprotein alcohol dehydrogenase-like proteins but this
+  could not be confirmed. This entry represents a beta propeller like domain.

@@ -1,0 +1,27 @@
+id: Pfam:PF19840
+pfam_id: PF19840
+name: Domain of unknown function (DUF6317)
+short_name: DUF6317
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19840
+counters:
+  proteins: 540
+  matches: 540
+  proteomes: 413
+  taxa: 548
+  structures: 0
+  alphafold_models: 253
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045558
+description: This entry represents a member of a biosynthetic gene cluster (BGC). This BGC (BGC0001740)
+  is described by MIBiG as an example of the following biosynthetic classes, NRP (non-ribosomal peptide)
+  and polyketide, in particular the phthoxazolin biosynthetic gene cluster from Streptomyces avermitilis
+  [[cite:PUB00098835]]. Shows some similarity to secretion system proteins.

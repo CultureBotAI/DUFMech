@@ -1,0 +1,27 @@
+id: Pfam:PF06897
+pfam_id: PF06897
+name: Protein of unknown function (DUF1269)
+short_name: DUF1269
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06897
+counters:
+  proteins: 2668
+  matches: 2668
+  proteomes: 2012
+  taxa: 3219
+  structures: 0
+  alphafold_models: 1677
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009200
+description: This family consists of several bacterial and archaeal proteins of around 200 residues in
+  length. The function of this family is unknown. The family carries a repeated glycine-zipper sequence-
+  motif, GxxxGxxxG, where the x following the G is frequently found to be an alanine. As glycine-zippers
+  occur in membrane proteins, this family is likely to be found spanning a membrane.

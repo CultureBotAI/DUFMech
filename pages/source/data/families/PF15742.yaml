@@ -1,0 +1,25 @@
+id: Pfam:PF15742
+pfam_id: PF15742
+name: Domain of unknown function (DUF4686)
+short_name: DUF4686
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15742
+counters:
+  proteins: 1419
+  matches: 1450
+  proteomes: 741
+  taxa: 2443
+  structures: 0
+  alphafold_models: 1150
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031476
+description: This family of proteins is found in eukaryotes. Proteins in this family are typically between
+  498 and 775 amino acids in length. There is a conserved DLK sequence motif.

@@ -1,0 +1,26 @@
+id: Pfam:PF05987
+pfam_id: PF05987
+name: Bacterial protein of unknown function (DUF898)
+short_name: DUF898
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05987
+counters:
+  proteins: 2143
+  matches: 2295
+  proteomes: 2073
+  taxa: 3332
+  structures: 0
+  alphafold_models: 1355
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010295
+description: This entry consists of several bacterial proteins of unknown function. Some of the family
+  members are described as inner membrane proteins. These proteins have a beta/alpha/alpha/beta/alpha
+  hairpin structure that is repeated.

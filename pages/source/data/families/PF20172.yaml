@@ -1,0 +1,24 @@
+id: Pfam:PF20172
+pfam_id: PF20172
+name: Domain of unknown function (DUF6538)
+short_name: DUF6538
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20172
+counters:
+  proteins: 2658
+  matches: 2658
+  proteomes: 1858
+  taxa: 2995
+  structures: 0
+  alphafold_models: 1673
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046668
+description: This short presumed domain is found at the N-terminus of a variety of phage integrase proteins.

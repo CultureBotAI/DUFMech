@@ -1,0 +1,26 @@
+id: Pfam:PF25125
+pfam_id: PF25125
+name: Domain of unknown function (DUF7817)
+short_name: DUF7817
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25125
+counters:
+  proteins: 904
+  matches: 904
+  proteomes: 637
+  taxa: 1971
+  structures: 0
+  alphafold_models: 37
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056719
+description: This domain is found towards the C terminus of human NEDD4 -binding protein 2 (N4BP2), which
+  has 5'-polynucleotide kinase and nicking endonuclease activity and may play a role in DNA repair or
+  recombination. This domain is often found N-terminal to [pfam:PF25124] and [pfam:PF08590].

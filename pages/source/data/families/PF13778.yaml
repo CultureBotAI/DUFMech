@@ -1,0 +1,26 @@
+id: Pfam:PF13778
+pfam_id: PF13778
+name: Domain of unknown function (DUF4174)
+short_name: DUF4174
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13778
+counters:
+  proteins: 5184
+  matches: 7353
+  proteomes: 2744
+  taxa: 5180
+  structures: 0
+  alphafold_models: 4088
+  domain_architectures: 38
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025232
+description: This domain of unknown function is found in a putative tumour suppressor gene [[cite:PUB00057318]]
+  and in a ligand for the the urokinase-type plasminogen activator receptor, which plays a role in cellular
+  migration and adhesion [[cite:PUB00057319],[cite:PUB00057320]].

@@ -1,0 +1,25 @@
+id: Pfam:PF24193
+pfam_id: PF24193
+name: Domain of unknown function (DUF7418)
+short_name: DUF7418
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24193
+counters:
+  proteins: 97
+  matches: 97
+  proteomes: 96
+  taxa: 219
+  structures: 0
+  alphafold_models: 4
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055841
+description: This entry represents a small uncharacterised family of phage proteins. It adopts a novel
+  triangular beta prism structure.

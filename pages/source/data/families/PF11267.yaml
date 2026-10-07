@@ -1,0 +1,26 @@
+id: Pfam:PF11267
+pfam_id: PF11267
+name: Domain of unknown function (DUF3067)
+short_name: DUF3067
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11267
+counters:
+  proteins: 892
+  matches: 895
+  proteomes: 674
+  taxa: 1903
+  structures: 1
+  alphafold_models: 682
+  domain_architectures: 18
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021420
+description: This family of proteins found in plants and cyanobacteria has no known function. The structure
+  of this domain has been solved by NMR for the alr2454 protein [[cite:PUB00061127]]. The structure was
+  determined to be a novel fold composed of four alpha helices and a sheet of three anti-parallel beta-strands.

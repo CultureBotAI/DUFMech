@@ -1,0 +1,25 @@
+id: Pfam:PF09989
+pfam_id: PF09989
+name: CoA enzyme activase uncharacterised domain (DUF2229)
+short_name: DUF2229
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09989
+counters:
+  proteins: 2867
+  matches: 2884
+  proteomes: 2007
+  taxa: 3700
+  structures: 0
+  alphafold_models: 923
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018709
+description: Members of this family include various bacterial hypothetical proteins, as well as CoA enzyme
+  activases. The exact function of this domain has not, as yet, been defined.

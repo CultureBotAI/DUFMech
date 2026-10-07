@@ -1,0 +1,26 @@
+id: Pfam:PF20664
+pfam_id: PF20664
+name: Family of unknown function (DUF6814)
+short_name: DUF6814
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20664
+counters:
+  proteins: 584
+  matches: 584
+  proteomes: 583
+  taxa: 717
+  structures: 0
+  alphafold_models: 362
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049211
+description: 'This family of proteins is functionally uncharacterised. Proteins in this family are predominantly
+  found in Bacteroidetes and are approximately 80 amino acids in length. There are several conserved motifs:
+  IxxGL, FGxY and GEY.'

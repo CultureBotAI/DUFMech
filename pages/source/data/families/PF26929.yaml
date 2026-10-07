@@ -1,0 +1,25 @@
+id: Pfam:PF26929
+pfam_id: PF26929
+name: Domain of unknown function (DUF8280)
+short_name: DUF8280
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26929
+counters:
+  proteins: 48
+  matches: 48
+  proteomes: 47
+  taxa: 147
+  structures: 0
+  alphafold_models: 31
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059324
+description: This domain was found in uncharacterised bacterial proteins. It is predicted to fold into
+  an alpha/beta structure composed of three stranded antiparallel beta-sheet packed with two alpha-helices.

@@ -1,0 +1,26 @@
+id: Pfam:PF19773
+pfam_id: PF19773
+name: Domain of unknown function (DUF6259)
+short_name: DUF6259
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19773
+counters:
+  proteins: 273
+  matches: 277
+  proteomes: 194
+  taxa: 486
+  structures: 0
+  alphafold_models: 195
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046226
+description: This domain is found in bacterial proteins and it is functionally uncharacterised. However,
+  some proteins are putative glycoside hydrolases and this domain has some overlaps with clan family members
+  of CL0058. Proteins containing this domain are typically between 678 and 749 amino acids in length.

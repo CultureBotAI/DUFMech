@@ -1,0 +1,26 @@
+id: Pfam:PF12585
+pfam_id: PF12585
+name: Virulence factor CipC-like
+short_name: DUF3759
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12585
+counters:
+  proteins: 2255
+  matches: 2272
+  proteomes: 1236
+  taxa: 2613
+  structures: 0
+  alphafold_models: 1916
+  domain_architectures: 33
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022234
+description: This entry (ex DUF3759) represents virulence factors and related proteins in fungi including
+  Concanamycin-induced protein C. Virulence factor cipC is involved in host Brassica napus (canola) leaf
+  infection [[cite:PUB00163274]].

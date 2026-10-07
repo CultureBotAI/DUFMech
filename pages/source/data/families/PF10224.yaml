@@ -1,0 +1,32 @@
+id: Pfam:PF10224
+pfam_id: PF10224
+name: Short coiled-coil protein
+short_name: DUF2205
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10224
+counters:
+  proteins: 3242
+  matches: 3243
+  proteomes: 2499
+  taxa: 6762
+  structures: 1
+  alphafold_models: 2825
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019357
+description: This entry represents a highly conserved 100 residue coiled-coil region which is found in
+  short coiled-coil protein (SCOC) in human and UNC-69 in Caenorhabditis elegans. In human, SCOC is required
+  for autophagosome formation during amino acid starvation. It forms a starvation-sensitive trimeric complex
+  with UVRAG (UV radiation resistance associated gene) and FEZ1 and may regulate ULK1 and Beclin 1 complex
+  activities [[cite:PUB00086016]]. In C. elegans, this small, evolutionarily conserved coiled-coil domain-containing
+  protein, UNC-69, acts as a binding partner of UNC-76. Together they participate in a common genetic
+  pathway necessary for axon extension and cooperate to regulate the size and position of synaptic vesicles
+  in axons. Moreover, both proteins colocalize as puncta in neuronal processes and mutations in UNC-69
+  preferentially disrupt membrane traffic within axons [[cite:PUB00109243]].

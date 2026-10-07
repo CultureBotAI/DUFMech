@@ -1,0 +1,29 @@
+id: Pfam:PF23773
+pfam_id: PF23773
+name: Domain of unknown function (DUF7169)
+short_name: DUF7169
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23773
+counters:
+  proteins: 75
+  matches: 75
+  proteomes: 73
+  taxa: 191
+  structures: 0
+  alphafold_models: 16
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055593
+description: This domain family consists of a group of uncharacterized proteins, typically between 99
+  to 116 amino acids in length, found in bacteriophages that infect Microbacterium and Arthrobacter bacterial
+  hosts. These proteins are encoded in the genomes of phages belonging to the Caudoviricetes class, primarily
+  within the families Azeevirinae, Dismasvirus, Yangvirus, Manhattanvirus, Liebevirus, Zetavirus, and
+  Armstrongvirus. An AlphaFold prediction shows these proteins are composed of two alpha helices. AlphaFold
+  also predicts that these proteins likely form homodimers.

@@ -1,0 +1,30 @@
+id: Pfam:PF24219
+pfam_id: PF24219
+name: Family of unknown function (DUF7438)
+short_name: DUF7438
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24219
+counters:
+  proteins: 536
+  matches: 536
+  proteomes: 185
+  taxa: 414
+  structures: 0
+  alphafold_models: 29
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055861
+description: This entry represents a family of uncharacterized proteins found in bacteriophages. The function
+  of this protein family is currently unknown. The family appears to be conserved across various phage
+  species that infect Escherichia coli and related bacteria. The family includes members from Phage T2,
+  T4 and T6. Members of this family are typically short proteins of around 60-67 amino acids in length.
+  Bacteriophage T4 contains four proteins that belong to this family. The structure of these proteins
+  is predicted to be composed of two alpha helices that pack together. Structure prediction suggests these
+  proteins may homodimerise (iPTM=0.83).

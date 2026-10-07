@@ -1,0 +1,26 @@
+id: Pfam:PF28436
+pfam_id: PF28436
+name: Family of unknown function (DUF8396)
+short_name: DUF8396
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28436
+counters:
+  proteins: 38
+  matches: 40
+  proteomes: 36
+  taxa: 131
+  structures: 0
+  alphafold_models: 28
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059440
+description: This entry represents a group of uncharacterised bacterial proteins. They are probably associated
+  with the membrane and are predicted to fold into a large barrel structure which in addition to an internal
+  plug contains an insertion which points out of the barrel.

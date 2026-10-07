@@ -1,0 +1,25 @@
+id: Pfam:PF26387
+pfam_id: PF26387
+name: Family of unknown function (DUF6079) 5th domain
+short_name: DUF6079_5th
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26387
+counters:
+  proteins: 255
+  matches: 255
+  proteomes: 247
+  taxa: 771
+  structures: 0
+  alphafold_models: 180
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058573
+description: This entry represents the fifth domain found in DUF6079 family proteins. DUF6079 proteins
+  are likely to be BREX (bacteriophage exclusion) system proteins.

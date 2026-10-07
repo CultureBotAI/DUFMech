@@ -1,0 +1,25 @@
+id: Pfam:PF19672
+pfam_id: PF19672
+name: Domain of unknown function (DUF6175)
+short_name: DUF6175
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19672
+counters:
+  proteins: 165
+  matches: 165
+  proteomes: 155
+  taxa: 316
+  structures: 0
+  alphafold_models: 112
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046173
+description: This domain is found at the C-terminal of a group of proteins that is functionally uncharacterised,
+  found in bacteria. This domain may adopt a fold similar to that in TolB_N superfamily.

@@ -1,0 +1,31 @@
+id: Pfam:PF10350
+pfam_id: PF10350
+name: THADA/TRM732, DUF2428
+short_name: DUF2428
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10350
+counters:
+  proteins: 4556
+  matches: 4613
+  proteomes: 3000
+  taxa: 7989
+  structures: 1
+  alphafold_models: 662
+  domain_architectures: 87
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019442
+description: 'This conserved domain is found in Thyroid adenoma-associated proteins (THADA) and the yeast
+  homologue, TRM732. Trm732 forms a complex with the methyltransferase Trm7 to 2''- O-methylate tRNA residue
+  32 (Nm32), being required for Trm7 methylation activity. In humans, mutations of the Trm7 homologue
+  FTSJ1, which interacts with THADA, impair Nm32 modifications, associated with non-syndromic X-linked
+  intellectual disability [[cite:PUB00098320],[cite:PUB00098321],[cite:PUB00098322]]. It has been suggested
+  that these proteins may play a role in additional biological processes not related to translation. This
+  domain contains a RRSAGLP conserved motif that is required for tRNA modification activity (Funk HM et.al.,
+  Preprint from bioRxiv, 03 Jun 2021 DOI: 10.1101/2021.06.03.446962) [[cite:PUB00098320],[cite:PUB00098321],[cite:PUB00098322]].'

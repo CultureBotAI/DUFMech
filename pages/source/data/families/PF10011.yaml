@@ -1,0 +1,25 @@
+id: Pfam:PF10011
+pfam_id: PF10011
+name: Predicted membrane protein (DUF2254)
+short_name: DUF2254
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10011
+counters:
+  proteins: 5235
+  matches: 5242
+  proteomes: 4446
+  taxa: 6796
+  structures: 0
+  alphafold_models: 3287
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018723
+description: Members of this family of bacterial proteins comprises various hypothetical and putative
+  membrane proteins. Their exact function, has not, as yet, been defined.

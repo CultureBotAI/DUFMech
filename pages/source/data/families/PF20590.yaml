@@ -1,0 +1,26 @@
+id: Pfam:PF20590
+pfam_id: PF20590
+name: Domain of unknown function (DUF6791)
+short_name: DUF6791
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20590
+counters:
+  proteins: 424
+  matches: 424
+  proteomes: 409
+  taxa: 941
+  structures: 0
+  alphafold_models: 253
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046741
+description: This presumed domain is functionally uncharacterised. This domain family is found, and is
+  approximately 160 amino acids in length. The domain is found in sequences that belong to the Thif family
+  and is in association with [pfam:PF00899], located at its N-terminal.

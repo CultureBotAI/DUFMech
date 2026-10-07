@@ -1,0 +1,27 @@
+id: Pfam:PF20681
+pfam_id: PF20681
+name: Domain of unknown function (DUF6818)
+short_name: DUF6818
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20681
+counters:
+  proteins: 886
+  matches: 887
+  proteomes: 172
+  taxa: 489
+  structures: 0
+  alphafold_models: 798
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049203
+description: This presumed domain is functionally uncharacterised. It is found in proteins from eukaryotes,
+  and is typically between 39 and 76 amino acids in length. There are several conserved motifs, Y/FxN,
+  KF and KPTG and a highly conserved W residue at the N-terminal. Structural predictions indicate this
+  domain may fold into three alpha helices.

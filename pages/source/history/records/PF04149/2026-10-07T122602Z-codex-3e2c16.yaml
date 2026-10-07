@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF04149
+  path: data/families/PF04149.yaml
+session:
+  id: 2026-10-07T122602Z-codex-3e2c16
+  timestamp: '2026-10-07T12:26:02Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: no_change
+  summary: Completed a scoped PF04149 frozen-seed and native audit integration review;
+    biological content unchanged.
+  details: Saved reports/yaml_record_review/20261007T122924Z-PF04149.md with verdict
+    SEED_ONLY and scientific_review false. Verified PF04149/DUF397/InterPro:IPR007278
+    identity and all frozen counters, strict worklist and two-member manifest provenance,
+    native FamilyRecord validation against synchronized schemas, and a full 6532-record
+    baseline dry run with zero drift. The review finished at 2026-10-07T12:29:24Z
+    against HEAD 611617feeda7ac0480898e7042bbd2fb4bdaf930 plus recorded working-tree
+    inputs. No primary functional evidence was assessed and no biological claim, overlay,
+    SEEDED status, or UNSCORED status was changed. The semantic digest before this
+    bookkeeping append was b294554d93d69202f55e68bec9614b6f0b8c6abf544981c6548e2c347580ec35.
+    The generated read-only event index will be refreshed separately through the native
+    builder; this sidecar remains authoritative. This event records actual completed
+    scoped review, not scientific endorsement or REVIEWED promotion.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reports/yaml_record_review/20261007T122924Z-PF04149.md

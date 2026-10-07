@@ -1,0 +1,27 @@
+id: Pfam:PF13349
+pfam_id: PF13349
+name: Toastrack DUF4097
+short_name: DUF4097
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13349
+counters:
+  proteins: 16423
+  matches: 16667
+  proteomes: 8115
+  taxa: 13326
+  structures: 0
+  alphafold_models: 10032
+  domain_architectures: 69
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025164
+description: This an all-beta structure with a twenty-residue repeat with a highly conserved repeating
+  GD, gly-asp, motif that has been described as Toastrack DUF4097, whose function is unknown. It has been
+  suggested to form part of a bacterial adhesin. Toastrack has been transferred from bacteria to certain
+  eukaryotes, such as FAM185A from human and its orthologues in animals and other eukaryotes.

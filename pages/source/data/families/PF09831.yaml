@@ -1,0 +1,24 @@
+id: Pfam:PF09831
+pfam_id: PF09831
+name: Uncharacterized protein conserved in bacteria (DUF2058)
+short_name: DUF2058
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09831
+counters:
+  proteins: 2715
+  matches: 2718
+  proteomes: 2460
+  taxa: 3341
+  structures: 0
+  alphafold_models: 1653
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018636
+description: This domain, found in various prokaryotic proteins, has no known function.

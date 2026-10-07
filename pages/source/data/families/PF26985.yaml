@@ -1,0 +1,26 @@
+id: Pfam:PF26985
+pfam_id: PF26985
+name: Domain of unknown function (DUF8313)
+short_name: DUF8313
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26985
+counters:
+  proteins: 9
+  matches: 14
+  proteomes: 2
+  taxa: 17
+  structures: 0
+  alphafold_models: 9
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059357
+description: This domain is found in uncharacterised fungal proteins. It contains several highly conserved
+  cysteine residues that are predicted to form disulfide bonds. Some proteins contains two copies of this
+  domain.

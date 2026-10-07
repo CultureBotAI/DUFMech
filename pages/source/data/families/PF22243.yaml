@@ -1,0 +1,25 @@
+id: Pfam:PF22243
+pfam_id: PF22243
+name: DUF5018-related
+short_name: DUF5018-rel
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22243
+counters:
+  proteins: 117
+  matches: 117
+  proteomes: 94
+  taxa: 185
+  structures: 2
+  alphafold_models: 81
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054460
+description: This domain is found in the putative secreted protein BF4250 from Bacteroides fragilis ([swissprot:Q5L7M9])
+  and similar bacterial functionally uncharacterised proteins. This domain seems to be related to [pfam:PF16410].

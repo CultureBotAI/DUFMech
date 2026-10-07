@@ -1,0 +1,28 @@
+id: Pfam:PF24720
+pfam_id: PF24720
+name: Family of unknown function (DUF7673)
+short_name: DUF7673
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24720
+counters:
+  proteins: 512
+  matches: 513
+  proteomes: 421
+  taxa: 769
+  structures: 0
+  alphafold_models: 327
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056090
+description: This entry represents an uncharacterised family of proteins, which are typically between
+  100 and 122 amino acids in length. This protein is often found to be plasmid borne and in a few cases
+  is associated with ParBc domains that are critical for plasmid segregation. This suggests that this
+  domain may play a role in chromosome segregation or plasmid partitioning. Structural modelling suggests
+  this domain will form a homodimeric complex.

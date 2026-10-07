@@ -1,0 +1,25 @@
+id: Pfam:PF15509
+pfam_id: PF15509
+name: Domain of unknown function (DUF4650)
+short_name: DUF4650
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15509
+counters:
+  proteins: 776
+  matches: 789
+  proteomes: 567
+  taxa: 1715
+  structures: 0
+  alphafold_models: 668
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR029388
+description: This family of vertebrate proteins lies to the C-terminus of Ubiquitin-specific peptidase-like
+  protein family peptidase_C98, [pfam:PF15499]. It might be acting as the exosite for the peptidase.

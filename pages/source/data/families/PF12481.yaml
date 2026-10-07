@@ -1,0 +1,25 @@
+id: Pfam:PF12481
+pfam_id: PF12481
+name: Aluminium induced protein
+short_name: DUF3700
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12481
+counters:
+  proteins: 3430
+  matches: 3520
+  proteomes: 418
+  taxa: 1197
+  structures: 0
+  alphafold_models: 2815
+  domain_architectures: 66
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024286
+description: 'This domain family is found in eukaryotes, and is approximately 120 amino acids in length.
+  There are two conserved sequence motifs: YGL and LRDR. This family is related to GATase enzyme domains.'

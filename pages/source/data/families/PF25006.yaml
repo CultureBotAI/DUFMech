@@ -1,0 +1,25 @@
+id: Pfam:PF25006
+pfam_id: PF25006
+name: Domain of unknown function (DUF7783)
+short_name: DUF7783
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25006
+counters:
+  proteins: 1537
+  matches: 1539
+  proteomes: 1233
+  taxa: 2584
+  structures: 0
+  alphafold_models: 1086
+  domain_architectures: 77
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056685
+description: This domain is found in uncharacterised fungal proteins. It is predicted to fold into a four-helical
+  up-and-down bundle. It has a detectable similarity to Talin 1-like four-helical domains.

@@ -1,0 +1,26 @@
+id: Pfam:PF28123
+pfam_id: PF28123
+name: Domain of unknown function (DUF8370)
+short_name: DUF8370
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28123
+counters:
+  proteins: 661
+  matches: 662
+  proteomes: 633
+  taxa: 1481
+  structures: 0
+  alphafold_models: 420
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059414
+description: This domain is found in uncharacterised bacterial proteins. It is predicted to adopt a globular
+  structure composed of array of alpha-helices. It contains several highly conserved negatively charged
+  residues that cluster in space and may be important for function.

@@ -1,0 +1,25 @@
+id: Pfam:PF09883
+pfam_id: PF09883
+name: DUF2110 central domain
+short_name: DUF2110
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09883
+counters:
+  proteins: 363
+  matches: 364
+  proteomes: 362
+  taxa: 583
+  structures: 0
+  alphafold_models: 348
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056756
+description: This domain, found in various hypothetical archaeal proteins, has no known function. This
+  domain is the middle of three domains found in the DUF2110 family proteins. It has an OB-like fold.

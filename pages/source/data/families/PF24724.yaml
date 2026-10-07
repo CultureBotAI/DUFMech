@@ -1,0 +1,27 @@
+id: Pfam:PF24724
+pfam_id: PF24724
+name: Family of unknown function (DUF7676)
+short_name: DUF7676
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24724
+counters:
+  proteins: 199
+  matches: 199
+  proteomes: 188
+  taxa: 464
+  structures: 0
+  alphafold_models: 122
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056093
+description: This entry represents a family of bacterial proteins that based on structural similarities
+  are likely to bind to heme or a related derivative molecule. Structural modelling suggests these proteins
+  are likely to form homodimers and that this complex can bind to two heme-like molecules. Each heme binding
+  site is composed of parts of both subunits.

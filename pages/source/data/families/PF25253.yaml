@@ -1,0 +1,28 @@
+id: Pfam:PF25253
+pfam_id: PF25253
+name: DUF7855 N-terminal dimerisation domain
+short_name: DUF7855
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25253
+counters:
+  proteins: 176
+  matches: 176
+  proteomes: 176
+  taxa: 264
+  structures: 0
+  alphafold_models: 166
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057177
+description: This entry represents the N-terminal domain found in DUF7855 family proteins found in halobacteria.
+  This domain is predicted to mediate dimerisation as well as DNA-binding. This domain belongs to the
+  dimeric alpha/beta barrel superfamily. There is a notable pocket in each subunit beneath the DNA-binding
+  interface that might might to a small molecule to regulate DNA-binding. The protein A0A371M7Z4 appears
+  to bind to the DNA sequence GAGGTTACCTGGGCCAGGTAACCTC (pTM-0.9 iPTM=0.89).

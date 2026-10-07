@@ -1,0 +1,26 @@
+id: Pfam:PF21962
+pfam_id: PF21962
+name: Domain of unknown function (DUF6924)
+short_name: DUF6924
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21962
+counters:
+  proteins: 970
+  matches: 1033
+  proteomes: 753
+  taxa: 1308
+  structures: 0
+  alphafold_models: 550
+  domain_architectures: 18
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR053832
+description: This domain of unknown function is found mainly in bacterial proteins, either standalone
+  or in combination with other domains. It is probably remotely related to the anticodon binding domain
+  observed in histidyl, glycyl, threonyl and prolyl tRNA synthetases.

@@ -1,0 +1,30 @@
+id: Pfam:PF12903
+pfam_id: PF12903
+name: Protein of unknown function (DUF3830)
+short_name: DUF3830
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12903
+counters:
+  proteins: 2028
+  matches: 2028
+  proteomes: 1945
+  taxa: 2830
+  structures: 1
+  alphafold_models: 1249
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024532
+description: This is a family of bacterial and archaeal proteins, the structure for one of whose members
+  has been characterised. PDB:3kop from [swissprot:A0JVT3] probably adopts a new hexameric form compared
+  to previous structures. The putative active is near the domain interface. 3kop is most closely related,
+  structurally to PDB:1zx8, where the potential active site is located near residues E51 and Y53 (conserved
+  in 1zx8). Beyond the two residues above, the other residues are not conserved. Also the shape of the
+  active site differs from that of 1zx8. PDB:1zx8 belongs to family DUF369. [pfam:PF04126], which is part
+  of the cyclophilin-like clan.

@@ -1,0 +1,27 @@
+id: Pfam:PF19404
+pfam_id: PF19404
+name: Family of unknown function (DUF5977)
+short_name: DUF5977
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19404
+counters:
+  proteins: 420
+  matches: 838
+  proteomes: 255
+  taxa: 376
+  structures: 0
+  alphafold_models: 182
+  domain_architectures: 39
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046020
+description: This entry represents a small domain that is found in tandem repeats in Bacteroidota bacterial
+  surface proteins, commonly associated with PA14 adhesive domain. This domain is composed of a beta hairpin
+  followed by an alpha helix. There is a conserved pair of cysteine residues in each domain that form
+  a disulphide bridge that presumably stabilises this small domain.

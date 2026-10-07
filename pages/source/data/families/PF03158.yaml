@@ -1,0 +1,25 @@
+id: Pfam:PF03158
+pfam_id: PF03158
+name: Multigene family 530 protein
+short_name: DUF249
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03158
+counters:
+  proteins: 158
+  matches: 158
+  proteomes: 17
+  taxa: 26
+  structures: 0
+  alphafold_models: 86
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004858
+description: Members of this family are multigene family 530 proteins from African swine fever viruses.
+  These proteins may be involved in promoting survival of infected macrophages [[cite:PUB00007712]].

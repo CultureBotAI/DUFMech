@@ -1,0 +1,27 @@
+id: Pfam:PF14730
+pfam_id: PF14730
+name: Domain of unknown function (DUF4468) with TBP-like fold
+short_name: DUF4468
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14730
+counters:
+  proteins: 933
+  matches: 934
+  proteomes: 713
+  taxa: 1117
+  structures: 2
+  alphafold_models: 602
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027823
+description: A large family of (predicted) secreted proteins with unknown functions from human gut and
+  oral cavity. Typically forms a N-terminal domain with FMN binding domain at the C-terminus. Experimentaly
+  determined 3D structure of this domain shows a variant of a TATA box binding - like fold, but no detectable
+  sequence similarity to other proteins with this fold

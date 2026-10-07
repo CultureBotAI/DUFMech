@@ -1,0 +1,26 @@
+id: Pfam:PF22028
+pfam_id: PF22028
+name: Family of unknown function (DUF6934)
+short_name: DUF6934
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22028
+counters:
+  proteins: 588
+  matches: 589
+  proteomes: 266
+  taxa: 373
+  structures: 0
+  alphafold_models: 395
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR053865
+description: This is a family of uncharacterised bacterial proteins. They are predicted to adopt an alpha/beta
+  structure consisting of a central mixed beta-sheet packed on both sides with alpha-helices that is reminiscent
+  to the common structural core of N-acetyltransferases (NAT).

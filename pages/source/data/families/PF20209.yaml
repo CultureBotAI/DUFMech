@@ -1,0 +1,25 @@
+id: Pfam:PF20209
+pfam_id: PF20209
+name: Domain of unknown function (DUF6570)
+short_name: DUF6570
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20209
+counters:
+  proteins: 6915
+  matches: 6955
+  proteomes: 686
+  taxa: 2302
+  structures: 0
+  alphafold_models: 3977
+  domain_architectures: 332
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046700
+description: This entry represents a presumed domain of unknown function that is found in a wide range
+  of proteins that includes eukaryotic transposon protein.

@@ -1,0 +1,24 @@
+id: Pfam:PF24201
+pfam_id: PF24201
+name: Domain of unknown function (DUF7426)
+short_name: DUF7426
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24201
+counters:
+  proteins: 311
+  matches: 313
+  proteomes: 246
+  taxa: 472
+  structures: 0
+  alphafold_models: 107
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055849
+description: This entry represents an uncharacterised domain found in phage proteins.

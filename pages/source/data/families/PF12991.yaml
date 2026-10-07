@@ -1,0 +1,26 @@
+id: Pfam:PF12991
+pfam_id: PF12991
+name: Domain of unknown function, B. Theta Gene description (DUF3875)
+short_name: DUF3875
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12991
+counters:
+  proteins: 1383
+  matches: 1383
+  proteomes: 828
+  taxa: 1127
+  structures: 0
+  alphafold_models: 943
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024451
+description: Based on Bacteroides thetaiotaomicron gene BT_4769, a conserved protein found in a conjugate
+  transposon. As seem in gene expression experiments (http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2231).
+  It appears to be upregulated in the presence of host or other bacterial species vs when in culture [[cite:PUB00056011],[cite:PUB00056012]].

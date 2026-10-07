@@ -1,0 +1,25 @@
+id: Pfam:PF17884
+pfam_id: PF17884
+name: Domain of unknown function (DUF5591)
+short_name: DUF5591
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17884
+counters:
+  proteins: 673
+  matches: 673
+  proteomes: 532
+  taxa: 999
+  structures: 1
+  alphafold_models: 621
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040777
+description: This is a domain of unknown function found in archaeal tRNA-guanine transglycosylase ([ec:2.4.2.48])
+  and in archaeosine synthase ([ec:2.6.1.97]) proteins.

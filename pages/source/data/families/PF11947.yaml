@@ -1,0 +1,26 @@
+id: Pfam:PF11947
+pfam_id: PF11947
+name: Photosynthesis affected mutant 68
+short_name: DUF3464
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11947
+counters:
+  proteins: 1265
+  matches: 1269
+  proteomes: 711
+  taxa: 2035
+  structures: 0
+  alphafold_models: 985
+  domain_architectures: 18
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021855
+description: This entry includes chloroplastic protein PAM68 and the Sll0933 homolog from Cyanobacteria
+  (blue-green algae) [[cite:PUB00067687]]. PAM68 is involved in early steps in photosystem II (PSII) biogenesis
+  and in maturation and stability of newly synthesized psbA protein [[cite:PUB00086018]].

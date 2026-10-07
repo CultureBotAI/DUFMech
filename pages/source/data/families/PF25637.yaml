@@ -1,0 +1,32 @@
+id: Pfam:PF25637
+pfam_id: PF25637
+name: Family of unknown function (DUF7942)
+short_name: DUF7942
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25637
+counters:
+  proteins: 608
+  matches: 654
+  proteomes: 487
+  taxa: 641
+  structures: 0
+  alphafold_models: 245
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057702
+description: This family of uncharacterised bacterial proteins is found mainly in Actinomycetes. Members
+  of this family are predicted to contain three transmembrane helices. A member of this family, SCO4225,
+  is a putative integral membrane protein found in Streptomyces coelicolor, [swissprot:Q9FCE5]. The gene
+  encoding SCO4225 is part of a cluster of genes (phoU to sco4225) that are involved in phosphate regulation
+  and metabolism. This gene cluster is regulated by the two-component system PhoR-PhoP, which responds
+  to phosphate availability in the environment [[cite:PUB00159567]]. The expression of SCO4225 is directly
+  regulated by MacR, a response regulator that binds to a specific sequence in the promoter region of
+  SCO4225. This regulation links SCO4225 to other genes in the MacR regulon, many of which are also membrane
+  proteins [[cite:PUB00159414]].

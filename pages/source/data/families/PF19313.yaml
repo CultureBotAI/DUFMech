@@ -1,0 +1,26 @@
+id: Pfam:PF19313
+pfam_id: PF19313
+name: Domain of unknown function (DUF5916)
+short_name: DUF5916
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19313
+counters:
+  proteins: 3279
+  matches: 3651
+  proteomes: 1897
+  taxa: 2747
+  structures: 0
+  alphafold_models: 2059
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045670
+description: This entry represents a long region of similarity found to the C-terminus of a CBM9 domain.
+  According to BOCTOPUS prediction this region has a membrane barrel topology suggesting this entry may
+  represent a novel carbohydrate channel.

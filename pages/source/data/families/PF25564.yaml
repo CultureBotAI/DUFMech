@@ -1,0 +1,27 @@
+id: Pfam:PF25564
+pfam_id: PF25564
+name: Domain of unknown function (DUF7933)
+short_name: DUF7933
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25564
+counters:
+  proteins: 706
+  matches: 1854
+  proteomes: 570
+  taxa: 1090
+  structures: 0
+  alphafold_models: 239
+  domain_architectures: 344
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057693
+description: This domain of unknown function is found in multiple copies in a number of bacterial proteins.
+  It is closely related to domains represented by DUF11 ([pfam:PF01345]). Some members, similarly to DUF11,
+  contains a conserved N-terminal lysine and a C-terminal asparagine with central aspartate/glutamate
+  residues suggesting that they may contain an isopeptide bond.

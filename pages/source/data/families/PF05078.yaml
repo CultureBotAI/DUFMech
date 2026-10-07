@@ -1,0 +1,33 @@
+id: Pfam:PF05078
+pfam_id: PF05078
+name: Protein of unknown function (DUF679)
+short_name: DUF679
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05078
+counters:
+  proteins: 4584
+  matches: 4715
+  proteomes: 395
+  taxa: 1097
+  structures: 0
+  alphafold_models: 3757
+  domain_architectures: 52
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007770
+description: This family includes members such as plant proteins AtDMPs 1-10 (Arabidopsis thaliana DUF679
+  domain membrane proteins 1 -10) [[cite:PUB00136742]]. The AtDMP proteins are predicted to have four
+  transmembrane spans, with cytosolic amino- and carboxy-termini. DMP1 is a membrane protein that may
+  be involved in membrane fission during breakdown of the ER and the tonoplast during leaf senescence
+  and in membrane fusion during vacuole biogenesis in roots [[cite:PUB00086645]]. Several DMP proteins
+  are expressed in senescing organs (DMP1, -3, -4) or tissues that will stall later in development (DMP1,
+  -2, -4, -7). These expression patterns strongly suggest involvement of several DMPs in various programmed
+  cell death processes, e.g. senescence, dehiscence and abscission [[cite:PUB00136742]]. AtDMP8 and AtDMP9
+  however, have been shown to facilitate gamete fusion during double fertilisation in flowering plants
+  [[cite:PUB00093467]].

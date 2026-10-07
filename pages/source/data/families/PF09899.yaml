@@ -1,0 +1,28 @@
+id: Pfam:PF09899
+pfam_id: PF09899
+name: Putative amidoligase enzyme (DUF2126)
+short_name: DUF2126
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09899
+counters:
+  proteins: 3222
+  matches: 3483
+  proteomes: 3132
+  taxa: 4574
+  structures: 0
+  alphafold_models: 2055
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018667
+description: Members of this family of bacterial domains are predominantly found in transglutaminase and
+  transglutaminase-like proteins. Their exact function is, as yet, unknown, but they are likely to act
+  as amidoligase enzymes [[cite:PUB00053382]] Protein in this family are found in conserved gene neighborhoods
+  encoding a glutamine amidotransferase-like thiol peptidase (in proteobacteria) or an Aig2 family cyclotransferase
+  protein (in firmicutes) [[cite:PUB00053382]].

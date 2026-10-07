@@ -1,0 +1,24 @@
+id: Pfam:PF20244
+pfam_id: PF20244
+name: Family of unknown function (DUF6599)
+short_name: DUF6599
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20244
+counters:
+  proteins: 139
+  matches: 140
+  proteomes: 123
+  taxa: 334
+  structures: 0
+  alphafold_models: 105
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046534
+description: This entry represents a family of uncharacterised bacterial proteins.

@@ -1,0 +1,25 @@
+id: Pfam:PF09741
+pfam_id: PF09741
+name: Uncharacterized conserved protein (DUF2045)
+short_name: DUF2045
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09741
+counters:
+  proteins: 2724
+  matches: 2841
+  proteomes: 1472
+  taxa: 4691
+  structures: 0
+  alphafold_models: 2265
+  domain_architectures: 52
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: This entry represents Uncharacterized protein KIAA0930 homolog found in animals. KIAA0930
+  is localised in the cytosol and not secreted from cells. Expression of KIAA0930 (C22orf9) is significantly
+  higher in pancreatic, colorectal, gastric, and tongue cancer tissues than in normal tissues [[cite:PUB00163385]].

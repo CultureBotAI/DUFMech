@@ -1,0 +1,26 @@
+id: Pfam:PF03994
+pfam_id: PF03994
+name: Domain of Unknown Function (DUF350)
+short_name: DUF350
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03994
+counters:
+  proteins: 7119
+  matches: 7639
+  proteomes: 5751
+  taxa: 7882
+  structures: 0
+  alphafold_models: 4316
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007140
+description: This entry represents a family of bacterial proteins that form an integral membrane protein
+  complex. These complexes form an alpha/alpha(8) structure. These proteins are composed of repeats of
+  a two TM helix motif. The function of these proteins is currently unknown.

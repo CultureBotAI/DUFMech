@@ -1,0 +1,25 @@
+id: Pfam:PF24845
+pfam_id: PF24845
+name: Domain of unknown function (DUF7721)
+short_name: DUF7721
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24845
+counters:
+  proteins: 1267
+  matches: 1274
+  proteomes: 1171
+  taxa: 2453
+  structures: 0
+  alphafold_models: 1057
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056138
+description: This domain is found in uncharacterised proteins from fungi. It is predicted to adopt globular
+  structure consisting of array of helices.

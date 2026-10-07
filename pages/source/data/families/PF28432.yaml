@@ -1,0 +1,26 @@
+id: Pfam:PF28432
+pfam_id: PF28432
+name: Domain of unknown function (DUF8393)
+short_name: DUF8393
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28432
+counters:
+  proteins: 915
+  matches: 915
+  proteomes: 871
+  taxa: 1336
+  structures: 1
+  alphafold_models: 548
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059437
+description: This immunoglobulin-like (Ig-like) domain is found in a group of uncharacterised proteobacterial
+  proteins. It is often found associated with [pfam:PF13899], [pfam:PF02683] and [pfam:PF11412] and has
+  conserved P, L, F and D residues. Its function is unknown.

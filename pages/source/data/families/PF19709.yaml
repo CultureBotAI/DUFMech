@@ -1,0 +1,28 @@
+id: Pfam:PF19709
+pfam_id: PF19709
+name: Family of unknown function (DUF6206)
+short_name: DUF6206
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19709
+counters:
+  proteins: 134
+  matches: 134
+  proteomes: 131
+  taxa: 264
+  structures: 0
+  alphafold_models: 98
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045780
+description: This entry represents a member of a biosynthetic gene cluster (BGC). This BGC (BGC0001063)
+  is described by MIBiG as an example of the following biosynthetic classes, polyketide and NRP (non-ribosomal
+  peptide). It includes a member from the undecylprodigiosin biosynthetic gene cluster from Streptomyces
+  coelicolor A3(2) [[cite:PUB00098992],[cite:PUB00098991]]. This family appears to be predominantly present
+  in bacteria.

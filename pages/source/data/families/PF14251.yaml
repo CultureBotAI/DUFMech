@@ -1,0 +1,30 @@
+id: Pfam:PF14251
+pfam_id: PF14251
+name: PterinBD-DUF4346
+short_name: PterinBD-DUF4346
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14251
+counters:
+  proteins: 775
+  matches: 781
+  proteomes: 668
+  taxa: 1712
+  structures: 0
+  alphafold_models: 574
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025595
+description: 'This domain is found in bacteria, archaea and a few lower eukaryotes species. There are
+  two conserved sequence motifs: LDP and DHA. Many members of this family have been annotated as dihydropteroate
+  synthases, however no experimental evidence can be found for this and [swissprot:Q57571] has been shown
+  not to possess dihydropteroate synthase activity [[cite:PUB00057368]]. In bacteria, this domain is found
+  in predicted conflict systems that also encode genes for an active Thymidylate synthase and a pterin-dependent
+  one-carbon carrier (MtrA domain). This system is predicted to deplete virally generated nucleotides
+  and replace them with a nucleotide that restricts invasive DNA or protects host DNA [[cite:PUB00155486]].'

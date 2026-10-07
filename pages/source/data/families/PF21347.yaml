@@ -1,0 +1,24 @@
+id: Pfam:PF21347
+pfam_id: PF21347
+name: DUF3108-like
+short_name: DUF3108_like
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21347
+counters:
+  proteins: 755
+  matches: 755
+  proteomes: 653
+  taxa: 1113
+  structures: 2
+  alphafold_models: 514
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049279
+description: This is a domain found in bacteria which adopts a beta-barrel fold of the YmcC-like type.

@@ -1,0 +1,27 @@
+id: Pfam:PF16157
+pfam_id: PF16157
+name: Domain of unknown function (DUF4865)
+short_name: DUF4865
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16157
+counters:
+  proteins: 1348
+  matches: 1354
+  proteomes: 1328
+  taxa: 1903
+  structures: 0
+  alphafold_models: 714
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032349
+description: This family consists of uncharacterized proteins around 180 residues in length and is mainly
+  found in various Bacillus species. Distant homology and fold prediction suggests proteins from this
+  family would have a ferrodoxin dimeric fold and specifically be related to the putative mono-oxygenase
+  ydhR family PF08803, however this prediction has not been verified by experiment

@@ -1,0 +1,26 @@
+id: Pfam:PF25920
+pfam_id: PF25920
+name: Family of unknown function (DUF7966)
+short_name: DUF7966
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25920
+counters:
+  proteins: 128
+  matches: 128
+  proteomes: 128
+  taxa: 188
+  structures: 0
+  alphafold_models: 119
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058272
+description: This entry represents a small family of uncharacterised halobacterial proteins. Structure
+  prediction shows that these proteins form a non-compact fold composed of four alpha helices. There is
+  weak evidence from structure prediction that this protein may form a domain swapped homodimer

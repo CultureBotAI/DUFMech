@@ -1,0 +1,29 @@
+id: Pfam:PF31066
+pfam_id: PF31066
+name: Domain of unknown function (DUF8799)
+short_name: DUF8799
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF31066
+counters:
+  proteins: 5603
+  matches: 5604
+  proteomes: 1563
+  taxa: 4976
+  structures: 0
+  alphafold_models: 1103
+  domain_architectures: 200
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061860
+description: This entry represents a domain of approximately 70 residues found in BPTF (Bromodomain PHD
+  finger transcription factor) proteins and related DDT domain-containing proteins in eukaryotes. This
+  domain is located downstream of the WSD domain ([pfam:PF15613]). BPTF is a subunit of the NURF chromatin
+  remodelling complex that catalyses ATP-dependent nucleosome sliding [[cite:PUB00101089]]. In plant RLT
+  (RINGLET) proteins, this domain is also present downstream of the WSD domain. The function of this domain
+  remains to be determined.

@@ -1,0 +1,26 @@
+id: Pfam:PF18300
+pfam_id: PF18300
+name: Domain of unknown function (DUF5604)
+short_name: DUF5604
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18300
+counters:
+  proteins: 1278
+  matches: 1296
+  proteomes: 604
+  taxa: 1964
+  structures: 24
+  alphafold_models: 821
+  domain_architectures: 50
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040880
+description: This domain is often found in the N-terminal region of proteins carrying the SET domain ([pfam:PF00856]),
+  such as the SETDB1 protein present in Homo sapiens. SETDB1 is a histone methyltransferase that suppresses
+  gene expression and modulates heterochromatin formation through H3K9me2/3 [[cite:PUB00091314]].

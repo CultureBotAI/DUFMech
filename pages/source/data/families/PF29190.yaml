@@ -1,0 +1,28 @@
+id: Pfam:PF29190
+pfam_id: PF29190
+name: Domain of unknown function (DUF8508)
+short_name: DUF8508
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29190
+counters:
+  proteins: 3848
+  matches: 3863
+  proteomes: 3545
+  taxa: 5602
+  structures: 0
+  alphafold_models: 2037
+  domain_architectures: 459
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061578
+description: This entry represents a domain of unknown function found in large multi-domain proteins.
+  The domain is typically located between N-terminal domains, such as lamin tail domains ([pfam:PF00932])
+  or cadherin-like domains, and C-terminal regions containing endonuclease/exonuclease ([pfam:PF03372],
+  [pfam:PF19580]) or calcium-binding repeat domains ([pfam:PF00353]). The function of this domain remains
+  to be determined.

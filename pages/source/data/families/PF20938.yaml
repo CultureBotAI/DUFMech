@@ -1,0 +1,26 @@
+id: Pfam:PF20938
+pfam_id: PF20938
+name: DUF2264 C-terminal domain
+short_name: DUF2264_C
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20938
+counters:
+  proteins: 2450
+  matches: 2471
+  proteomes: 1675
+  taxa: 3090
+  structures: 0
+  alphafold_models: 1805
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049237
+description: This domain is found at the C-terminus of DUF2264 family proteins. This domain adopts a beta
+  sandwich domain that is structurally related to [pfam:PF07940], suggesting that DUF2264 proteins are
+  oligosaccharide degrading enzymes.

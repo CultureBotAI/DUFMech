@@ -1,0 +1,26 @@
+id: Pfam:PF09149
+pfam_id: PF09149
+name: Domain of unknown function (DUF1935)
+short_name: DUF1935
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09149
+counters:
+  proteins: 636
+  matches: 775
+  proteomes: 29
+  taxa: 70
+  structures: 2
+  alphafold_models: 590
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015232
+description: Members of this family are found in various Trypanosomatida hypothetical proteins, as well
+  as in the cysteine protease calpain. Their exact function has not, as yet, been defined. This domain
+  adopts a jelly-roll fold.

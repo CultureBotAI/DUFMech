@@ -1,0 +1,28 @@
+id: Pfam:PF12683
+pfam_id: PF12683
+name: Protein of unknown function (DUF3798)
+short_name: DUF3798
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12683
+counters:
+  proteins: 338
+  matches: 339
+  proteomes: 257
+  taxa: 568
+  structures: 1
+  alphafold_models: 250
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024258
+description: This family of proteins is functionally uncharacterised. This family of proteins is found
+  in bacteria. Proteins in this family are typically between 247 and 417 amino acids in length. Most of
+  the proteins in this family have an N-terminal lipoprotein attachment site. These proteins have distant
+  similarity to periplasmic ligand binding families such as [pfam:PF02608], which suggests that this family
+  have a similar role.

@@ -1,0 +1,25 @@
+id: Pfam:PF18926
+pfam_id: PF18926
+name: 2TM family of unknown function (DUF5676)
+short_name: DUF5676
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18926
+counters:
+  proteins: 457
+  matches: 457
+  proteomes: 413
+  taxa: 900
+  structures: 0
+  alphafold_models: 316
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR044020
+description: This family of presumed integral membrane proteins is found in bacteria and archaea. Proteins
+  in this family are approximately 90 amino acids in length and contain two predicted transmembrane helices.

@@ -1,0 +1,27 @@
+id: Pfam:PF29208
+pfam_id: PF29208
+name: Domain of unknown function (DUF8510)
+short_name: DUF8510
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29208
+counters:
+  proteins: 81
+  matches: 81
+  proteomes: 81
+  taxa: 155
+  structures: 0
+  alphafold_models: 57
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061580
+description: This entry represents an N-terminal domain found in uncharacterised proteins from spirochaetes,
+  predominantly from Treponema species. The domain is approximately 110 residues in length. This domain
+  is found in combination with a C-terminal domain ([pfam:PF29207]) in proteins exclusive to spirochaetes.
+  The function of this domain remains to be determined.

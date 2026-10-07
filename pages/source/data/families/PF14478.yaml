@@ -1,0 +1,27 @@
+id: Pfam:PF14478
+pfam_id: PF14478
+name: Domain of unknown function (DUF4430)
+short_name: DUF4430
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14478
+counters:
+  proteins: 3827
+  matches: 4032
+  proteomes: 2349
+  taxa: 5024
+  structures: 9
+  alphafold_models: 2681
+  domain_architectures: 237
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027954
+description: Although this family has overlaps with SLBB, the majority of its sequences are unique. Several
+  family members, eg UniProtKB:A0RGA8, that do not overlap have an LPXTG-cell wall anchor at their C-terminus,
+  a SSF_Family 10_polysaccharide_lyase or Glycosyltransferase structure associated with them in the middle
+  region, as shown by InterPro, as well as this domain at the N-terminus.

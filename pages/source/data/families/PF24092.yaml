@@ -1,0 +1,28 @@
+id: Pfam:PF24092
+pfam_id: PF24092
+name: Domain of unknown function (DUF7373) C-terminal
+short_name: DUF7373_C
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24092
+counters:
+  proteins: 1002
+  matches: 1002
+  proteomes: 289
+  taxa: 356
+  structures: 0
+  alphafold_models: 637
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056463
+description: This domain is found C-terminal in uncharacterised bacterial proteins. It is predicted to
+  adopt a seven-stranded antiparallel beta-sheet with similarity to Mog1p/PsbP-like domains. Some proteins
+  containing this domain have a lipoprotein attachment motif at the N-terminus suggesting they may be
+  associated with the membrane. This domain is usually found in two copies that share little if any sequence
+  similarity to each other.

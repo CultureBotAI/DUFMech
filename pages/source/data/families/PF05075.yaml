@@ -1,0 +1,26 @@
+id: Pfam:PF05075
+pfam_id: PF05075
+name: Protein of unknown function (DUF684)
+short_name: DUF684
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05075
+counters:
+  proteins: 267
+  matches: 301
+  proteomes: 20
+  taxa: 50
+  structures: 0
+  alphafold_models: 265
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007767
+description: This family contains several uncharacterised proteins from Caenorhabditis elegans. The GO
+  annotation suggests that the protein is involved in nematode larval development and has a positive regulation
+  on growth rate.

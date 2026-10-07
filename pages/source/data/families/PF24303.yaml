@@ -1,0 +1,27 @@
+id: Pfam:PF24303
+pfam_id: PF24303
+name: Domain of unknown function (DUF7485)
+short_name: DUF7485
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24303
+counters:
+  proteins: 4
+  matches: 4
+  proteomes: 4
+  taxa: 15
+  structures: 0
+  alphafold_models: 4
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055908
+description: This entry includes uncharacterised sequences mainly from actinobacteria. According to structure
+  predictions, they may form a beta-propeller-like fold consisting of four repeated units containing three
+  (in one of them) and four (on the other three units) beta-strands. There is an additional unit which
+  is slightly different that resembles a seven stranded beta-sandwich.

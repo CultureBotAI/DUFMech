@@ -1,0 +1,28 @@
+id: Pfam:PF03625
+pfam_id: PF03625
+name: Domain of unknown function DUF302
+short_name: DUF302
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03625
+counters:
+  proteins: 8300
+  matches: 8521
+  proteomes: 5609
+  taxa: 9120
+  structures: 3
+  alphafold_models: 5910
+  domain_architectures: 28
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005180
+description: Domain is found in an undescribed set of proteins [[cite:PUB00016669]]. Normally occurs uniquely
+  within a sequence, but is found as a tandem repeat ([swissprot:Q9X8B8]). Shows interesting phylogenetic
+  distribution with majority of examples in bacteria and archaea, but it is also found in some fungal
+  proteins. The hypothetical protein TT1751 from Thermus thermophilus has a beta-alpha-beta(4)-alpha structural
+  fold [[cite:PUB00028717]].

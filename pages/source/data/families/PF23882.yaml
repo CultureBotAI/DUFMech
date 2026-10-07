@@ -1,0 +1,26 @@
+id: Pfam:PF23882
+pfam_id: PF23882
+name: Family of unknown function (DUF7235)
+short_name: DUF7235
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23882
+counters:
+  proteins: 106
+  matches: 108
+  proteomes: 105
+  taxa: 224
+  structures: 0
+  alphafold_models: 4
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055659
+description: This entry represents an uncharacterized protein found in various phages that infect bacteria.
+  The function of this protein is currently unknown. It is typically around 300-340 amino acids in length.
+  This protein contains a predicted coiled-coil region near its C-terminus.

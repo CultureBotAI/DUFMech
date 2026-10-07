@@ -1,0 +1,27 @@
+id: Pfam:PF24040
+pfam_id: PF24040
+name: Domain of unknown function (DUF7349)
+short_name: DUF7349
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24040
+counters:
+  proteins: 126
+  matches: 126
+  proteomes: 126
+  taxa: 280
+  structures: 0
+  alphafold_models: 9
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055773
+description: This family of uncharacterized proteins is found in various phages that infect bacterial
+  hosts such as Bacillus, Staphylococcus, Enterococcus, Listeria, Lactobacillus, and Brochothrix species.
+  The proteins in the family are typically 75 to 100 amino acids in length. The protein contains a small
+  N-terminal domain represented by this entry followed by a C-terminal disordered region.

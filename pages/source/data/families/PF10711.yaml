@@ -1,0 +1,24 @@
+id: Pfam:PF10711
+pfam_id: PF10711
+name: Hypothetical protein (DUF2513)
+short_name: DUF2513
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10711
+counters:
+  proteins: 690
+  matches: 691
+  proteomes: 649
+  taxa: 1473
+  structures: 0
+  alphafold_models: 439
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019650
+description: This family is found in bacteria. The function is not known.

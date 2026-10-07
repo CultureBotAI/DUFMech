@@ -1,0 +1,25 @@
+id: Pfam:PF05344
+pfam_id: PF05344
+name: Domain of Unknown Function (DUF746)
+short_name: DUF746
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05344
+counters:
+  proteins: 46
+  matches: 62
+  proteomes: 39
+  taxa: 82
+  structures: 0
+  alphafold_models: 29
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008008
+description: This is a short conserved region found in some transposons. Structural modelling suggests
+  this domain may bind nucleic acids [[cite:PUB00070793]].

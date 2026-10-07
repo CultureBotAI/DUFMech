@@ -1,0 +1,30 @@
+id: Pfam:PF26554
+pfam_id: PF26554
+name: Domain of unknown function (DUF8182)
+short_name: DUF8182
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26554
+counters:
+  proteins: 103
+  matches: 103
+  proteomes: 102
+  taxa: 270
+  structures: 0
+  alphafold_models: 91
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058495
+description: This entry represents a domain from a family of uncharacterised proteins predominantly found
+  in the bacterial phylum Thermodesulfobacteriota. The proteins containing this domain are mainly distributed
+  among the orders Desulfovibrionales and Desulfobacterales. The domain is approximately 85 amino acids
+  in length. Proteins containing this domain are predicted to be involved in various cellular processes,
+  but their exact function remains unknown. The domain is sometimes associated with the [pfam:PF11823]
+  domain, which is a putative Se/S carrier protein-like domain. This domain shows structure similarity
+  to the N-terminal domain of Enolase.

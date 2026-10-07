@@ -1,0 +1,24 @@
+id: Pfam:PF08899
+pfam_id: PF08899
+name: Domain of unknown function (DUF1844)
+short_name: DUF1844
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08899
+counters:
+  proteins: 2872
+  matches: 2872
+  proteomes: 2866
+  taxa: 3747
+  structures: 0
+  alphafold_models: 1690
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014995
+description: This family of proteins are functionally uncharacterised.

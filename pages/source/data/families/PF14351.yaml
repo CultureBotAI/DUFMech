@@ -1,0 +1,26 @@
+id: Pfam:PF14351
+pfam_id: PF14351
+name: Domain of unknown function (DUF4401)
+short_name: DUF4401
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14351
+counters:
+  proteins: 837
+  matches: 841
+  proteomes: 823
+  taxa: 1298
+  structures: 0
+  alphafold_models: 488
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025513
+description: This family of proteins is found in bacteria. Proteins in this family are typically between
+  357 and 735 amino acids in length. The family is found in association with [pfam:PF09925]. There is
+  a single completely conserved residue K that may be functionally important.

@@ -1,0 +1,26 @@
+id: Pfam:PF19819
+pfam_id: PF19819
+name: Family of unknown function (DUF6302)
+short_name: DUF6302
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19819
+counters:
+  proteins: 91
+  matches: 91
+  proteomes: 76
+  taxa: 104
+  structures: 0
+  alphafold_models: 29
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046269
+description: This entry represents a member of a biosynthetic gene cluster (BGC). This BGC (BGC0000703)
+  is described by MIBiG as an example of the following biosynthetic class, saccharide, in particular the
+  kanamycin biosynthetic gene cluster from Streptomyces kanamyceticus [[cite:PUB00098882]].

@@ -1,0 +1,26 @@
+id: Pfam:PF24595
+pfam_id: PF24595
+name: Domain of unknown function (DUF7619)
+short_name: DUF7619
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24595
+counters:
+  proteins: 1664
+  matches: 1705
+  proteomes: 798
+  taxa: 1284
+  structures: 0
+  alphafold_models: 888
+  domain_architectures: 280
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055353
+description: This domain is found in uncharacterised proteins frequently in multiple copies. Some proteins
+  containing this domain contain LPXTG cell wall anchor motif [pfam:PF00746] at the C-terminus. It is
+  likely that some members of this entry contain an intramolecular isopeptide bond.

@@ -1,0 +1,25 @@
+id: Pfam:PF29510
+pfam_id: PF29510
+name: DUF2586, C-terminal domain
+short_name: DUF2586_C
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29510
+counters:
+  proteins: 604
+  matches: 604
+  proteomes: 527
+  taxa: 998
+  structures: 0
+  alphafold_models: 319
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR062236
+description: This entry represents the C-terminal domain found in bacterial family of proteins which is
+  is a component of a contractile injection system related to phage sheath proteins [[cite:PUB00097484]].

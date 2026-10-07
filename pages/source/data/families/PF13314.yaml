@@ -1,0 +1,26 @@
+id: Pfam:PF13314
+pfam_id: PF13314
+name: Domain of unknown function (DUF4083)
+short_name: DUF4083
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13314
+counters:
+  proteins: 236
+  matches: 236
+  proteomes: 205
+  taxa: 332
+  structures: 0
+  alphafold_models: 141
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025143
+description: This is a family of very short, approximately 60 residue, proteins from Firmicutes, that
+  are all putatively annotated as being MutT/Nudix. However, the characteristic Nudix motif of GX(5)EX(7)REUXEE
+  is absent.

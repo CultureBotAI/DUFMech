@@ -1,0 +1,29 @@
+id: Pfam:PF12204
+pfam_id: PF12204
+name: Domain of unknown function (DUF3598), N-terminal
+short_name: DUF3598_N
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12204
+counters:
+  proteins: 998
+  matches: 1001
+  proteomes: 627
+  taxa: 1801
+  structures: 2
+  alphafold_models: 711
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022017
+description: This domain is predominantly found at the N-terminal end of proteins from cyanobacteria and
+  plants, including Biogenesis factor required for ATP synthase 1 (BFA1, [swissprot:F4J1U2]) from Arabidopsis
+  thaliana. BFA1 promotes the assembly of the CF1 subcomplex of the chloroplast ATP synthase by specifically
+  interacting with the gamma and beta subunits. This domain consists of nine beta-sheets and two alpha-
+  helices forming an atypical beta-barrel, which locates perpendicularly to the typical beta-barrel formed
+  by the C-terminal domain [[cite:PUB00100989]].

@@ -1,0 +1,25 @@
+id: Pfam:PF24359
+pfam_id: PF24359
+name: Domain of unknown function (DUF7515)
+short_name: DUF7515
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24359
+counters:
+  proteins: 154
+  matches: 156
+  proteomes: 39
+  taxa: 117
+  structures: 0
+  alphafold_models: 141
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055937
+description: This domain is found in a group of uncharacterised metazoan proteins. It has a detectable
+  sequence similarity to HTH winged helix domains and it is predicted to adopt similar structure.

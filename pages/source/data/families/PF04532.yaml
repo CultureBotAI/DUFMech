@@ -1,0 +1,26 @@
+id: Pfam:PF04532
+pfam_id: PF04532
+name: Protein of unknown function (DUF587)
+short_name: DUF587
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04532
+counters:
+  proteins: 34
+  matches: 34
+  proteomes: 26
+  taxa: 103
+  structures: 0
+  alphafold_models: 25
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007618
+description: This family consists of the N termini of some human herpesvirus U58 proteins, and some cytomegalovirus
+  UL87 proteins. This region is always found N terminal to the Pfam family UL87 ([pfam:PF03043]), which
+  has no known function.

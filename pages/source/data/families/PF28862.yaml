@@ -1,0 +1,27 @@
+id: Pfam:PF28862
+pfam_id: PF28862
+name: Domain of unknown function (DUF8470)
+short_name: DUF8470
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28862
+counters:
+  proteins: 138
+  matches: 139
+  proteomes: 132
+  taxa: 249
+  structures: 0
+  alphafold_models: 43
+  domain_architectures: 36
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061540
+description: This domain is found at the N-terminal of a group of uncharacterised bacterial sequences
+  and it is predicted to adopt a single-stranded right-handed beta-helix with similarity to ice-binding
+  proteins and other adhesive domains. These proteins are usually associated with tandem Ig-like domain,
+  such as [swissprot:A1S2S0] which has five Ig-like domains.

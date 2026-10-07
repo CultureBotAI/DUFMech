@@ -1,0 +1,25 @@
+id: Pfam:PF07920
+pfam_id: PF07920
+name: Protein of unknown function (DUF1684)
+short_name: DUF1684
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07920
+counters:
+  proteins: 5991
+  matches: 5999
+  proteomes: 4487
+  taxa: 5862
+  structures: 4
+  alphafold_models: 3592
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012467
+description: The sequences featured in this family are found in hypothetical archaeal and bacterial proteins
+  of unknown function. The region in question is approximately 200 amino acids long.

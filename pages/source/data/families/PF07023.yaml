@@ -1,0 +1,25 @@
+id: Pfam:PF07023
+pfam_id: PF07023
+name: Protein of unknown function (DUF1315)
+short_name: DUF1315
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07023
+counters:
+  proteins: 2189
+  matches: 2189
+  proteomes: 2181
+  taxa: 2818
+  structures: 0
+  alphafold_models: 1366
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009749
+description: This family consists of several bacterial proteins of around 90 residues in length. The function
+  of this family is unknown.

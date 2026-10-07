@@ -1,0 +1,29 @@
+id: Pfam:PF14325
+pfam_id: PF14325
+name: Domain of unknown function (DUF4383)
+short_name: DUF4383
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14325
+counters:
+  proteins: 3778
+  matches: 3778
+  proteomes: 2396
+  taxa: 3221
+  structures: 0
+  alphafold_models: 2153
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: This family of proteins is functionally uncharacterised. This family of proteins is found
+  in bacteria. Proteins in this family are typically between 137 and 164 amino acids in length. These
+  proteins are integral membrane proteins with four transmembrane helices. The contain several conserved
+  histidines and AlphaFold 3 predicts a confident zinc binding site. Structure prediction also suggests
+  that these proteins might form a homotetrameric complex UniProt:A0A3B9LPY9 iPTM=0.9. The four subunits
+  are alternating in different orientations in the presumed membrane. The structure prediction also suggests
+  a central pore between the subunits.

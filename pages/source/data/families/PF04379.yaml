@@ -1,0 +1,29 @@
+id: Pfam:PF04379
+pfam_id: PF04379
+name: ApaG domain
+short_name: DUF525
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04379
+counters:
+  proteins: 11744
+  matches: 11776
+  proteomes: 9065
+  taxa: 15356
+  structures: 9
+  alphafold_models: 8600
+  domain_architectures: 67
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007474
+description: The apaG domain is a ~125 amino acids domain present in bacterial apaG proteins and in eukaryotic
+  F-box proteins. The domain is named after the bacterial apaG protein, of which it forms the core. The
+  domain also occurs in the C-terminal part of eukaryotic proteins with an N-terminal F-box domain. The
+  Salmonella typhimurium apaG domain protein corD is involved in Co(2+) resistance and Mg(2+) efflux.
+  Tertiary structures from different apaG proteins show a fold of several beta-sheets. The apaG domain
+  may be involved in protein-protein interactions which could be implicated in substrate-specificity [[cite:PUB00009972],[cite:PUB00016988],[cite:PUB00018539],[cite:PUB00016989]].

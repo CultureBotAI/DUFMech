@@ -1,0 +1,25 @@
+id: Pfam:PF10217
+pfam_id: PF10217
+name: Uncharacterized conserved protein (DUF2039)
+short_name: DUF2039
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10217
+counters:
+  proteins: 1797
+  matches: 1807
+  proteomes: 1399
+  taxa: 4558
+  structures: 0
+  alphafold_models: 1529
+  domain_architectures: 28
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019351
+description: This entry is a region of approximately 100 residues containing three pairs of cysteine residues.
+  The region is conserved from plants to humans but its function is unknown.

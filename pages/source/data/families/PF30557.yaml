@@ -1,0 +1,26 @@
+id: Pfam:PF30557
+pfam_id: PF30557
+name: Domain of unknown function (DUF8626)
+short_name: DUF8626
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30557
+counters:
+  proteins: 229
+  matches: 229
+  proteomes: 191
+  taxa: 505
+  structures: 0
+  alphafold_models: 148
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061687
+description: This entry represents a C-terminal domain of approximately 50 residues found in bacterial
+  proteins containing an RNase_T-like exonuclease domain ([pfam:PF00929]). It is found in Bacillota and
+  Pseudomonadota. The function of this domain remains to be determined.

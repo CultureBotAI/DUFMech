@@ -1,0 +1,26 @@
+id: Pfam:PF20554
+pfam_id: PF20554
+name: Domain of unknown function (DUF6766)
+short_name: DUF6766
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20554
+counters:
+  proteins: 1664
+  matches: 1665
+  proteomes: 1561
+  taxa: 2190
+  structures: 0
+  alphafold_models: 950
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046657
+description: This family of proteins is functionally uncharacterised. This family of proteins is found
+  in bacteria and archaea. Proteins in this family are typically between 215 and 226 amino acids in length.
+  Structure prediction shows this family contains 4 alpha helices.

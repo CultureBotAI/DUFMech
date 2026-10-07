@@ -1,0 +1,25 @@
+id: Pfam:PF25472
+pfam_id: PF25472
+name: Domain of unknown function (DUF7902)
+short_name: DUF7902
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25472
+counters:
+  proteins: 1694
+  matches: 1694
+  proteomes: 1688
+  taxa: 2393
+  structures: 0
+  alphafold_models: 24
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057224
+description: This domain is found in uncharacterised bacterial proteins. It is predicted to adopt a three-helical
+  bundle with some topological similarity to spectrin.

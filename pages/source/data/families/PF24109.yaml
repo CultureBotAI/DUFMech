@@ -1,0 +1,25 @@
+id: Pfam:PF24109
+pfam_id: PF24109
+name: Family of unknown function (DUF7384)
+short_name: DUF7384
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24109
+counters:
+  proteins: 269
+  matches: 269
+  proteomes: 268
+  taxa: 418
+  structures: 0
+  alphafold_models: 259
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055808
+description: This is a group of uncharacterised sequences from archaea which are related to VapC (virulence-associated
+  protein C) family of proteins. Members of this entry may adopt a PIN-like fold.

@@ -1,0 +1,31 @@
+id: Pfam:PF13689
+pfam_id: PF13689
+name: YfiR/HmsC-like
+short_name: DUF4154
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13689
+counters:
+  proteins: 2780
+  matches: 2788
+  proteomes: 1988
+  taxa: 3030
+  structures: 12
+  alphafold_models: 1729
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025293
+description: This family of proteins is found in bacteria and includes YfiR from E. coli. YfiR has been
+  shown to regulate YfiN, a diguanylate cyclase and a bifunctional protein that produces c-di-GMP in response
+  to reductive stress and then dynamically relocates to the division site to arrest cell division in response
+  to envelope stress in Escherichia coli. YfiR may serve as a periplasmic redox sensor that regulates
+  YfiN activity in response to reducing conditions [[cite:PUB00088310],[cite:PUB00088309]]. HmsC in Yersinia
+  Pestis is the orthologue of YfiR from E. coli [[cite:PUB00091013]]. HmsC is a periplasmic protein that
+  interacts directly with the periplasmic domain (PD) of HmsD and causes proteolytic degradation of HmsD,
+  which in turn negatively regulates Y. pestis biofilm formation [[cite:PUB00091014]].

@@ -1,0 +1,25 @@
+id: Pfam:PF03112
+pfam_id: PF03112
+name: Uncharacterized protein family (ORF7) DUF
+short_name: DUF244
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03112
+counters:
+  proteins: 118
+  matches: 118
+  proteomes: 28
+  taxa: 67
+  structures: 0
+  alphafold_models: 78
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004335
+description: Several members of this family are Borrelia burgdorferi plasmid proteins of uncharacterized
+  function.

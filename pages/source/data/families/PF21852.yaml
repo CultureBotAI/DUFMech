@@ -1,0 +1,25 @@
+id: Pfam:PF21852
+pfam_id: PF21852
+name: Family of unknown function (DUF6911)
+short_name: DUF6911
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21852
+counters:
+  proteins: 116
+  matches: 116
+  proteomes: 102
+  taxa: 236
+  structures: 1
+  alphafold_models: 59
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054205
+description: This entry represents a family of uncharacterised proteins. Proteins in this family are primarily
+  found in Proteobacteria. The structure of these proteins contains a six stranded beta sheet.

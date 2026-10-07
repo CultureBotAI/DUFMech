@@ -1,0 +1,28 @@
+id: Pfam:PF26472
+pfam_id: PF26472
+name: Domain of unknown function (DUF8147)
+short_name: DUF8147
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26472
+counters:
+  proteins: 179
+  matches: 179
+  proteomes: 155
+  taxa: 259
+  structures: 0
+  alphafold_models: 166
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058460
+description: This entry represents a domain from a family of uncharacterised proteins in archaea. The
+  proteins are predominantly found in the class Halobacteria, which includes various genera such as Halorubrum,
+  Haloarcula, and Natrialba. The domain is typically found in proteins ranging from 59 to 484 amino acids
+  in length. The proteins in this family are integral membrane proteins usually with four transmembrane
+  helices.

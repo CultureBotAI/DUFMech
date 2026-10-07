@@ -1,0 +1,26 @@
+id: Pfam:PF26671
+pfam_id: PF26671
+name: Protein of unknown function (DUF1631) 2nd domain
+short_name: DUF1631_2nd
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26671
+counters:
+  proteins: 2790
+  matches: 2790
+  proteomes: 1515
+  taxa: 1996
+  structures: 0
+  alphafold_models: 1591
+  domain_architectures: 24
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059907
+description: This entry represents the second domain found in DUF1631 family proteins. The members of
+  this family are sequences derived from a group of hypothetical proteins expressed by certain bacterial
+  species.

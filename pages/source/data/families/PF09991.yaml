@@ -1,0 +1,27 @@
+id: Pfam:PF09991
+pfam_id: PF09991
+name: Predicted membrane protein (DUF2232)
+short_name: DUF2232
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09991
+counters:
+  proteins: 3490
+  matches: 3490
+  proteomes: 3333
+  taxa: 5896
+  structures: 0
+  alphafold_models: 2349
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018710
+description: This family of bacterial proteins are multi-pass membrane proteins with up to 10 (2 x 4/5)
+  transmembrane regions. The exact function of this potential pore molecule is not known, but in many
+  instances it is associated with ABC-transporter-like domains, implying that it is part of a secretion
+  system that uses energy.

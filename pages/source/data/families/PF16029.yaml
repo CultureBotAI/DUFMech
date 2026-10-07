@@ -1,0 +1,25 @@
+id: Pfam:PF16029
+pfam_id: PF16029
+name: Domain of unknown function (DUF4787)
+short_name: DUF4787
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16029
+counters:
+  proteins: 819
+  matches: 820
+  proteomes: 622
+  taxa: 2157
+  structures: 0
+  alphafold_models: 683
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031985
+description: This presumed domain is functionally uncharacterised. This domain family is found in eukaryotes,
+  and is approximately 70 amino acids in length.

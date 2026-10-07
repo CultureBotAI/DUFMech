@@ -1,0 +1,27 @@
+id: Pfam:PF26403
+pfam_id: PF26403
+name: Domain of unknown function (DUF8101)
+short_name: DUF8101
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26403
+counters:
+  proteins: 91
+  matches: 91
+  proteomes: 91
+  taxa: 150
+  structures: 0
+  alphafold_models: 82
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058414
+description: This entry represents a domain from a family of uncharacterised proteins found predominantly
+  in the Halobacteria class of Archaea. The proteins containing this domain are primarily distributed
+  among members of the Haloarculaceae and Haloferacaceae families. The domain is typically found in proteins
+  ranging from 85 to 117 amino acids in length. The domain adopts a four helical bundle structure.

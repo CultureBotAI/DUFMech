@@ -1,0 +1,28 @@
+id: Pfam:PF28811
+pfam_id: PF28811
+name: Domain of unknown function (DUF8466)
+short_name: DUF8466
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28811
+counters:
+  proteins: 283
+  matches: 283
+  proteomes: 137
+  taxa: 237
+  structures: 0
+  alphafold_models: 200
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061536
+description: This entry represents a small domain of unknown function. It includes Porphyromonas gingivalis
+  protein PGN_1290 [swissprot:B2RGS5] which was found to be down-regulated in a GppX mutant [[cite:PUB00163732]].
+  This domain is composed of a four stranded beta sheet (strand order 1-4-3-2) with two alpha helices
+  packed on one side. AlphaFold3 suggests these proteins form confident homodimers ([swissprot:R9HNH3]
+  ipTM=0.9 pTM=0.92).

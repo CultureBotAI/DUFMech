@@ -1,0 +1,24 @@
+id: Pfam:PF18939
+pfam_id: PF18939
+name: Family of unknown function (DUF5686)
+short_name: DUF5686
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18939
+counters:
+  proteins: 4450
+  matches: 4451
+  proteomes: 2044
+  taxa: 2729
+  structures: 0
+  alphafold_models: 2898
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043741
+description: This entry represents the second domain of DUF5686 family protein.

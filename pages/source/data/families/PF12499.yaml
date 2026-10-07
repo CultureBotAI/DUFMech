@@ -1,0 +1,26 @@
+id: Pfam:PF12499
+pfam_id: PF12499
+name: Pherophorin
+short_name: DUF3707
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12499
+counters:
+  proteins: 1245
+  matches: 1803
+  proteomes: 18
+  taxa: 49
+  structures: 0
+  alphafold_models: 1048
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024616
+description: This domain family is found in eukaryotes, and is typically between 147 and 160 amino acids
+  in length. The proteins in this family are frequently annotated as pherophorins however there is little
+  accompanying literature to confirm this.

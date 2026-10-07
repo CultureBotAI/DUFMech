@@ -1,0 +1,25 @@
+id: Pfam:PF11103
+pfam_id: PF11103
+name: Protein of unknown function (DUF2887)
+short_name: DUF2887
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11103
+counters:
+  proteins: 1227
+  matches: 1232
+  proteomes: 232
+  taxa: 628
+  structures: 0
+  alphafold_models: 645
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022573
+description: This bacterial family of proteins has no known function. These proteins may be distantly
+  related to the PD(D/E)XK superfamily.

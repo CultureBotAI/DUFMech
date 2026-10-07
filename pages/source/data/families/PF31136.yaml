@@ -1,0 +1,29 @@
+id: Pfam:PF31136
+pfam_id: PF31136
+name: Domain of unknown function (DUF8821)
+short_name: DUF8821
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF31136
+counters:
+  proteins: 969
+  matches: 969
+  proteomes: 907
+  taxa: 1299
+  structures: 0
+  alphafold_models: 552
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061882
+description: This entry represents a family of uncharacterised proteins of approximately 145 residues
+  found in Bacillota (particularly Paenibacillaceae and Bacillaceae) and Actinomycetota (including Streptomycetaceae).
+  The proteins occur as single-domain proteins. While computationally annotated as phage tail proteins
+  in UniProt, there is no experimental evidence supporting this function, and the annotation likely reflects
+  genomic proximity to prophage regions rather than demonstrated function. The function of this family
+  remains to be determined.

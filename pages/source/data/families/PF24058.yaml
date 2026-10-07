@@ -1,0 +1,26 @@
+id: Pfam:PF24058
+pfam_id: PF24058
+name: Domain of unknown function (DUF7359)
+short_name: DUF7359
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24058
+counters:
+  proteins: 17
+  matches: 23
+  proteomes: 17
+  taxa: 53
+  structures: 0
+  alphafold_models: 4
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055783
+description: This entry represents a domain of unknown function found in SPbeta prophage-derived uncharacterized
+  protein (YomG) from Bacillus subtilis (strain 168). This domain may adopt a FN3-like fold and can be
+  found in association with a prophage endopeptidase tail domain ([pfam:PF06605]).

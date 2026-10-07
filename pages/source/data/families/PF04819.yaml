@@ -1,0 +1,26 @@
+id: Pfam:PF04819
+pfam_id: PF04819
+name: Family of unknown function (DUF716)
+short_name: DUF716
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04819
+counters:
+  proteins: 6890
+  matches: 6932
+  proteomes: 1331
+  taxa: 4107
+  structures: 1
+  alphafold_models: 5873
+  domain_architectures: 74
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006904
+description: This family is equally distributed in both metazoa and plants. Annotation associated with
+  [swissprot:Q9SLW7] suggest that it may be involved in response to viral attack in plants. However, no
+  clear function has been assigned to this family.

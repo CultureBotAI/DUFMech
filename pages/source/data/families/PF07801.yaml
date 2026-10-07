@@ -1,0 +1,27 @@
+id: Pfam:PF07801
+pfam_id: PF07801
+name: Protein of unknown function (DUF1647)
+short_name: DUF1647
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07801
+counters:
+  proteins: 1208
+  matches: 1235
+  proteomes: 280
+  taxa: 1008
+  structures: 0
+  alphafold_models: 1088
+  domain_architectures: 40
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012444
+description: The sequences making up this family are all derived from hypothetical proteins expressed
+  by C. elegans. The region in question is approximately 160 amino acids long. The GO annotation for this
+  protein indicates the protein to be involved in nematode larval development and to have a positive regulation
+  on growth rate.

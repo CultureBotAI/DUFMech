@@ -1,0 +1,31 @@
+id: Pfam:PF04016
+pfam_id: PF04016
+name: Putative heavy-metal chelation
+short_name: DUF364
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04016
+counters:
+  proteins: 1766
+  matches: 1766
+  proteomes: 1491
+  taxa: 2706
+  structures: 2
+  alphafold_models: 1247
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007161
+description: This domain of unknown function has a PLP-dependent transferase-like fold. Its genomic context
+  suggests that it may have a role in anaerobic vitamin B12 biosynthesis. This domain is often found at
+  the C-terminus of proteins containing DUF4213, [pfam:PF13938]. The structure of UnioProtKB:B8FUJ5, PDB:3l5o,
+  suggests that the protein has an enolase N-terminal-like fold and this Rossmann-like C-terminal domain.
+  Structural and bioinformatic analyses reveal partial similarities to Rossmann-like methyltransferases,
+  with residues from the enolase-like fold combining to form a unique active site that is likely to be
+  involved in the condensation or hydrolysis of molecules implicated in the synthesis of flavins, pterins
+  or other siderophores. The protein may be playing a role in heavy-metal chelation [[cite:PUB00075371]].

@@ -1,0 +1,25 @@
+id: Pfam:PF21737
+pfam_id: PF21737
+name: Family of unknown function (DUF6865)
+short_name: DUF6865
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21737
+counters:
+  proteins: 758
+  matches: 773
+  proteomes: 320
+  taxa: 927
+  structures: 0
+  alphafold_models: 616
+  domain_architectures: 20
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049198
+description: This entry represents a short family of uncharacterised proteins from plants. AlphaFold predictions
+  suggest that the protein contains two non-contacting alpha-helices.

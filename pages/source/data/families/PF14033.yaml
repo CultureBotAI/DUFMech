@@ -1,0 +1,26 @@
+id: Pfam:PF14033
+pfam_id: PF14033
+name: Protein of unknown function (DUF4246)
+short_name: DUF4246
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14033
+counters:
+  proteins: 4354
+  matches: 4696
+  proteomes: 1303
+  taxa: 2721
+  structures: 0
+  alphafold_models: 3544
+  domain_architectures: 123
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049192
+description: This domain is functionally uncharacterised, found in bacteria and fungi. Proteins in this
+  family are typically between 392 and 644 amino acids in length. According to structure predictions,
+  this domain may have a cupin-like fold.

@@ -1,0 +1,27 @@
+id: Pfam:PF15756
+pfam_id: PF15756
+name: Small Novel Rich in Cartilage
+short_name: DUF4690
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15756
+counters:
+  proteins: 681
+  matches: 684
+  proteomes: 636
+  taxa: 1981
+  structures: 0
+  alphafold_models: 613
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031500
+description: 'This family of proteins is found in eukaryotes and include SNORC, a cartilage specific small
+  membrane proteoglycan that plays a role in the regulation of chondrocyte maturation and postnatal endochondral
+  ossification [[cite:PUB00088166],[cite:PUB00088164]]. There are two conserved sequence motifs: LGPGAI
+  and LRKF.'

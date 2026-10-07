@@ -1,0 +1,26 @@
+id: Pfam:PF29988
+pfam_id: PF29988
+name: Domain of unknown function (DUF8605)
+short_name: DUF8605
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29988
+counters:
+  proteins: 1940
+  matches: 1941
+  proteomes: 1934
+  taxa: 2597
+  structures: 0
+  alphafold_models: 1142
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061666
+description: This is a domain of unknown function found in a group of uncharacterised bacterial sequences.
+  This domain is found at the N-terminal of [pfam:PF09839] and may have a fold consisting of three anti-parallel
+  beta-strands followed by alpha-helices of which one is longer than the other two.

@@ -1,0 +1,29 @@
+id: Pfam:PF15130
+pfam_id: PF15130
+name: Domain of unknown function (DUF4566)
+short_name: DUF4566
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15130
+counters:
+  proteins: 706
+  matches: 726
+  proteomes: 525
+  taxa: 1819
+  structures: 0
+  alphafold_models: 618
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027903
+description: This entry represents a domain covering the whole length in Uncharacterized protein C6orf62
+  from metazoa. C6orf62 is ubiquitously expressed, including in brain tissue, which led to its inclusion
+  in neurogenetic linkage studies, particularly in the region associated with developmental dyslexia.
+  Though C6orf62 itself was not confirmed as causal, it lies adjacent to dyslexia-associated genes such
+  as KIAA0319 and DCDC2, both of which are involved in neuronal migration and axonal growth [[cite:PUB00162470]].
+  This domain covers other regions in related proteins.

@@ -1,0 +1,26 @@
+id: Pfam:PF31053
+pfam_id: PF31053
+name: Domain of unknown function (DUF8792)
+short_name: DUF8792
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF31053
+counters:
+  proteins: 1144
+  matches: 1158
+  proteomes: 1002
+  taxa: 2109
+  structures: 0
+  alphafold_models: 945
+  domain_architectures: 31
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061853
+description: This entry represents uncharacterised fungal proteins. They are predicted to fold into an
+  up-and-down bundle of four transmembrane helices that is similar to the bundle of p53-inducible protein
+  11.

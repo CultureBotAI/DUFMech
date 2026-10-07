@@ -1,0 +1,25 @@
+id: Pfam:PF13946
+pfam_id: PF13946
+name: Domain of unknown function (DUF4214)
+short_name: DUF4214
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13946
+counters:
+  proteins: 3439
+  matches: 4503
+  proteomes: 940
+  taxa: 1878
+  structures: 0
+  alphafold_models: 1856
+  domain_architectures: 855
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025282
+description: This domain is found on a variety of different proteins including transferases, and allergen
+  V5/Tpx-1 related proteins.

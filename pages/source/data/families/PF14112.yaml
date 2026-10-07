@@ -1,0 +1,28 @@
+id: Pfam:PF14112
+pfam_id: PF14112
+name: Immunity protein 22
+short_name: DUF4284
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14112
+counters:
+  proteins: 558
+  matches: 564
+  proteomes: 502
+  taxa: 869
+  structures: 0
+  alphafold_models: 333
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025560
+description: A predicted immunity protein with an alpha+beta fold and conserved tryptophan,tyrosine and
+  an acidic residues. Proteins containing this domain are present in bacterial polymorphic toxin systems
+  as an immediate gene neighbor of the toxin gene, which usually contains toxin domains of the ColD/E5,
+  Tox-REase-4, Ntox49 or Ntox14 families [[cite:PUB00066726]]. The domain is also found in heterogeneous
+  polyimmunity loci.

@@ -1,0 +1,25 @@
+id: Pfam:PF19668
+pfam_id: PF19668
+name: Family of unknown function (DUF6171)
+short_name: DUF6171
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19668
+counters:
+  proteins: 357
+  matches: 357
+  proteomes: 347
+  taxa: 557
+  structures: 0
+  alphafold_models: 200
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046169
+description: This family of proteins is functionally uncharacterised. This family of proteins is found
+  in bacteria and viruses. Proteins in this family are approximately 90 amino acids in length.

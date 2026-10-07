@@ -1,0 +1,26 @@
+id: Pfam:PF12112
+pfam_id: PF12112
+name: Protein of unknown function (DUF3579)
+short_name: DUF3579
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12112
+counters:
+  proteins: 1334
+  matches: 1334
+  proteomes: 1248
+  taxa: 1666
+  structures: 1
+  alphafold_models: 911
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021969
+description: This family of proteins is functionally uncharacterised. This protein is found in bacteria.
+  Proteins in this family are typically between 98 to 126 amino acids in length. This protein has a conserved
+  FRP sequence motif.

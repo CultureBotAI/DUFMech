@@ -1,0 +1,24 @@
+id: Pfam:PF06245
+pfam_id: PF06245
+name: Protein of unknown function (DUF1015)
+short_name: DUF1015
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06245
+counters:
+  proteins: 5367
+  matches: 5449
+  proteomes: 5159
+  taxa: 7869
+  structures: 0
+  alphafold_models: 3449
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008323
+description: Family of proteins with unknown function found in archaea and bacteria.

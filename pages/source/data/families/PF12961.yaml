@@ -1,0 +1,30 @@
+id: Pfam:PF12961
+pfam_id: PF12961
+name: Domain of unknown function (DUF3850)
+short_name: DUF3850
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12961
+counters:
+  proteins: 604
+  matches: 604
+  proteomes: 544
+  taxa: 1185
+  structures: 1
+  alphafold_models: 282
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR039440
+description: The search results from NCBI sequence alignment indicates a conserved domain belonging to
+  ASCH superfamily [[cite:PUB00044668]]. Dali searching results show that the protein is a structurally
+  similar to the PUA domain, suggesting it may be involved in RNA recognition. It has been reported that
+  the deletion of PUA genes results in impaired growth (RluD) and competitive disadvantage (TruB) in Escherichia
+  coli. Suggestions have been put forward that, apart from their usual catalytic role, certain PUS enzymes
+  (e.g. TruB) may also act as chaperones for RNA folding. The interface interaction indicates that the
+  biomolecule of protein NP_809782.1 should be a dimer.

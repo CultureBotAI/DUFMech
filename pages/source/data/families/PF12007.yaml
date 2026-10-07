@@ -1,0 +1,31 @@
+id: Pfam:PF12007
+pfam_id: PF12007
+name: Protein of unknown function (DUF3501)
+short_name: DUF3501
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12007
+counters:
+  proteins: 673
+  matches: 673
+  proteomes: 663
+  taxa: 1241
+  structures: 1
+  alphafold_models: 480
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021890
+description: This family of proteins is functionally uncharacterised. This protein is found in bacteria
+  and archaea. Proteins in this family are about 200 amino acids in length. The structure of protein [swissprot:Q63J81]
+  from B. pseudomallei has been solved. This protein contains two domains, domain I (1:31, 46:81) is a
+  helical domain, domain II (32:45,82-193) is a mainly beta protein with a beta barrel. According to crystal
+  contacts the proteins probably functions as a dimer. The gene neighbourhood analysis suggests that this
+  protein may be functionally related to rubrerythrin and ferredoxin. The wedge surface between the two
+  domains might be functionally important. The fold of this protein could best be described as a circularly
+  permuted C2-like fold (details derived from TOPSAN).

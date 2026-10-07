@@ -1,0 +1,27 @@
+id: Pfam:PF03713
+pfam_id: PF03713
+name: Domain of unknown function (DUF305)
+short_name: DUF305
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03713
+counters:
+  proteins: 15758
+  matches: 16107
+  proteomes: 7077
+  taxa: 9875
+  structures: 11
+  alphafold_models: 9380
+  domain_architectures: 40
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005183
+description: Domain found in small family of bacterial secreted proteins with no known function. Also
+  found in Paramecium bursaria chlorella virus 1. This domain is short and found in one or two copies.
+  The domain has a conserved HH motif that may be functionally important. This domain belongs to the ferritin
+  superfamily. It contains two sequence similar repeats each of which is composed of two alpha helices.

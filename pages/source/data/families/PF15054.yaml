@@ -1,0 +1,27 @@
+id: Pfam:PF15054
+pfam_id: PF15054
+name: Domain of unknown function (DUF4535)
+short_name: DUF4535
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15054
+counters:
+  proteins: 1931
+  matches: 1932
+  proteomes: 885
+  taxa: 3025
+  structures: 0
+  alphafold_models: 1677
+  domain_architectures: 42
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027854
+description: This family includes the uncharacterised protein C7orf73 that is found in eukaryotes. Members
+  are generally less than 100 residues in length. Although the precise function of the domain is still
+  unknown, members have a predicted N-terminal signal peptide sequence which suggests they are short secreted
+  peptides.

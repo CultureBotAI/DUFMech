@@ -1,0 +1,25 @@
+id: Pfam:PF20594
+pfam_id: PF20594
+name: Domain of unknown function (DUF6794)
+short_name: DUF6794
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20594
+counters:
+  proteins: 255
+  matches: 262
+  proteomes: 227
+  taxa: 554
+  structures: 0
+  alphafold_models: 145
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046744
+description: This domain is functionally uncharacterised, found in bacteria. It is around 120 amino acids
+  in length. There is a conserved sequence motif GxxxRN.

@@ -1,0 +1,26 @@
+id: Pfam:PF18919
+pfam_id: PF18919
+name: Family of unknown function (DUF5670)
+short_name: DUF5670
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18919
+counters:
+  proteins: 3242
+  matches: 3242
+  proteomes: 2519
+  taxa: 3735
+  structures: 0
+  alphafold_models: 2001
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043727
+description: This family of proteins is found in bacteria and archaea. Proteins in this family are approximately
+  50 amino acids in length. There is a single completely conserved residue W that may be functionally
+  important. These proteins contain two transmembrane helices.

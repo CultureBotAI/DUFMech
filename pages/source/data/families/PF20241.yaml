@@ -1,0 +1,25 @@
+id: Pfam:PF20241
+pfam_id: PF20241
+name: Domain of unknown function (DUF6598)
+short_name: DUF6598
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20241
+counters:
+  proteins: 5730
+  matches: 6189
+  proteomes: 148
+  taxa: 497
+  structures: 0
+  alphafold_models: 5268
+  domain_architectures: 128
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046533
+description: This putative domain is found in one or more copies in several plant proteins. The function
+  of the domain is unknown.

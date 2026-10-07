@@ -1,0 +1,26 @@
+id: Pfam:PF09823
+pfam_id: PF09823
+name: Domain of unknown function (DUF2357)
+short_name: DUF2357
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09823
+counters:
+  proteins: 1051
+  matches: 1054
+  proteomes: 988
+  taxa: 2075
+  structures: 0
+  alphafold_models: 669
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018633
+description: This entry was previously the N terminal portion of DUF524 ([pfam:PF04411]) before it was
+  split into two. This domain has no known function. It is predicted to adopt an all beta secondary structure
+  pattern followed by mainly alpha-helical structures [[cite:PUB00044133]].

@@ -1,0 +1,25 @@
+id: Pfam:PF20090
+pfam_id: PF20090
+name: Family of unknown function (DUF6482)
+short_name: DUF6482
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20090
+counters:
+  proteins: 1420
+  matches: 1420
+  proteomes: 1075
+  taxa: 1357
+  structures: 0
+  alphafold_models: 820
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045508
+description: This family of proteins is functionally uncharacterised. This family of proteins is found
+  in bacteria. Proteins in this family are approximately 100 amino acids in length.

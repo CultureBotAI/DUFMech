@@ -1,0 +1,26 @@
+id: Pfam:PF15377
+pfam_id: PF15377
+name: Domain of unknown function (DUF4604)
+short_name: DUF4604
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15377
+counters:
+  proteins: 2408
+  matches: 2410
+  proteomes: 2162
+  taxa: 5846
+  structures: 0
+  alphafold_models: 2040
+  domain_architectures: 28
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027911
+description: This protein family is a domain of unknown function, which is found in eukaryotes. Proteins
+  in this family are typically between 141 and 174 amino acids in length and contain a conserved LSF sequence
+  motif.

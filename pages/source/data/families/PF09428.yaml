@@ -1,0 +1,25 @@
+id: Pfam:PF09428
+pfam_id: PF09428
+name: Fungal protein of unknown function (DUF2011)
+short_name: DUF2011
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09428
+counters:
+  proteins: 1130
+  matches: 1134
+  proteomes: 1107
+  taxa: 2216
+  structures: 0
+  alphafold_models: 927
+  domain_architectures: 29
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018555
+description: This is a family of fungal proteins whose function is unknown. They are distantly related
+  to CUSTOS proteins [pfam:PF23999] from animals.

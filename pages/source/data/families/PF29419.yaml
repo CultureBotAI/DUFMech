@@ -1,0 +1,26 @@
+id: Pfam:PF29419
+pfam_id: PF29419
+name: Family of unknown function (DUF8544)
+short_name: DUF8544
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29419
+counters:
+  proteins: 48
+  matches: 48
+  proteomes: 48
+  taxa: 137
+  structures: 0
+  alphafold_models: 1
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061614
+description: This entry represents a virion protein found in Caudoviricetes, the class of tailed bacteriophages.
+  Proteins in this family are approximately 248 amino acids in length and appear to be single domain proteins.
+  The specific function of this virion protein remains to be determined.
