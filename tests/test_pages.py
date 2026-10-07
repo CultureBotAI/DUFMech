@@ -133,9 +133,9 @@ def test_dashboard_does_not_link_unsafe_sources(tmp_path, url) -> None:
         input_ids={}, out_dir=out,
     )
     soup = BeautifulSoup((out / "index.html").read_text(encoding="utf-8"), "html.parser")
-    assert [a["href"] for a in soup.select("tbody a")] == [
-        "https://www.ebi.ac.uk/interpro/entry/pfam/PF00001/", "#PF00001"
-    ]
+    assert [a["href"] for a in soup.select("tbody a")] == ["families/PF00001.html"]
+    record = BeautifulSoup((out / "families/PF00001.html").read_text(), "html.parser")
+    assert not any(a["href"] == url for a in record.select("a[href]"))
     assert "PF00001" in soup.get_text()
 
 
@@ -149,8 +149,8 @@ def test_dashboard_distinguishes_missing_counts_seed_status_and_unscored(tmp_pat
     )
     soup = BeautifulSoup((out / "index.html").read_text(encoding="utf-8"), "html.parser")
     cells = [cell.get_text() for cell in soup.select("tbody tr td")]
-    assert cells[2:] == ["KNOWN HISTORICAL DUF", "UNSCORED", "Not scored", "0", "Not available", "0", ""]
-    assert soup.select_one("tbody a")["href"].startswith("https://")
+    assert cells[2:] == ["KNOWN HISTORICAL DUF", "UNSCORED", "Not scored", "0", "Not available", "0", "", "SNAPSHOT ONLY"]
+    assert soup.select_one("tbody a")["href"] == "families/PF00001.html"
     assert "not unique proteins or matches" in soup.get_text()
     assert "Families with structures" in soup.get_text()
 

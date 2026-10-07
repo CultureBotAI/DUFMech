@@ -7,6 +7,11 @@ default:
 install:
     uv sync --extra dev
 
+# Install the locked browser-test dependency and Chromium for full QC.
+browser-install:
+    npm ci
+    npx playwright install chromium
+
 # Run the test suite.
 test:
     uv run --extra dev pytest
@@ -17,7 +22,57 @@ lint:
 
 # Run the authoritative local quality gate.
 qc:
-    uv run --extra dev python scripts/run_qc.py
+    uv run --locked --extra dev python scripts/run_qc.py
+
+# Preview or apply deterministic family/schema projections.
+records *args="":
+    uv run --locked python -m dufmech.records {{args}}
+
+# Closed schema, frozen ID/label correspondence, quotes, and generated drift.
+records-check:
+    uv run --locked python -m dufmech.records --check
+
+# Shared fleet interfaces backed by the native closed-schema pipeline.
+validate-data: records-check
+
+validate-schema:
+    uv run --locked python -m dufmech.records --schema-only --check
+
+validate-all: records-check history-check reviews-check
+
+gen-python:
+    uv run --locked python -m dufmech.records --schema-only --apply
+
+# Retain timestamped, scoped review artifacts.
+review *args="":
+    uv run --locked python -m dufmech.reviews {{args}}
+
+# Append or validate canonical curation history.
+history *args="":
+    uv run --locked python -m dufmech.history {{args}}
+
+# Append one explicit, validated curation event (the fleet recipe contract).
+new-history *args="":
+    uv run --locked python -m dufmech.history new {{args}}
+
+# Validate retained review and history artifacts without creating scaffolds.
+history-check:
+    uv run --locked python -m dufmech.history check
+
+reviews-check:
+    uv run --locked python -m dufmech.reviews check
+
+# Check generated HTML links, accessibility tokens and repository-selected budgets.
+site-check *args="":
+    uv run --locked python -m dufmech.site_contract {{args}}
+
+# Playwright interaction and mobile/desktop regression suite.
+browser-test:
+    npm run test:browser
+
+# Validate source catalogue, adoption queue and native writer inventory offline.
+sources-check:
+    uv run --locked python -m dufmech.source_governance
 
 # Refresh the generated current-corpus block in README.md.
 docs-stats:

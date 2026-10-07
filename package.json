@@ -1,0 +1,11 @@
+{
+  "name": "dufmech-site-tests",
+  "private": true,
+  "engines": {"node": ">=20"},
+  "scripts": {
+    "test:browser": "node --test tests/site_browser.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
