@@ -17,6 +17,7 @@ UV = shutil.which("uv")
     ("review", ["dufmech.reviews"]),
     ("history", ["dufmech.history"]),
     ("new-history", ["dufmech.history", "new"]),
+    ("knowledge-gap-scan", ["dufmech.knowledge_gaps"]),
 ])
 @pytest.mark.parametrize("with_prose", [False, True], ids=["no-args", "quoted-prose"])
 def test_curation_recipe_preserves_argument_boundaries(tmp_path, recipe, module_args, with_prose):
@@ -24,6 +25,8 @@ def test_curation_recipe_preserves_argument_boundaries(tmp_path, recipe, module_
     sentinel = tmp_path / "SHELL_COMMAND_RAN"
     commands = tmp_path / "bin"
     commands.mkdir()
+    claw = tmp_path / "claw with spaces" / "src"
+    (claw / "kg_microbe_kgscan").mkdir(parents=True)
     uv = commands / "uv"
     uv.write_text("#!/bin/sh\nprintf '%s\\0' \"$@\" > \"$DUFMECH_ARGV_CAPTURE\"\n")
     uv.chmod(0o755)
@@ -33,7 +36,7 @@ def test_curation_recipe_preserves_argument_boundaries(tmp_path, recipe, module_
         "--content", "a directory/completed review.json", "", "*.yaml",
     ] if with_prose else []
     env = dict(os.environ, PATH=str(commands) + os.pathsep + os.environ.get("PATH", ""),
-               DUFMECH_ARGV_CAPTURE=str(capture))
+               DUFMECH_ARGV_CAPTURE=str(capture), CLAW_SRC=str(claw))
     subprocess.run(
         [JUST, "--no-dotenv", "--justfile", str(ROOT / "justfile"), recipe, *args],
         cwd=tmp_path, env=env, check=True, capture_output=True, text=True,

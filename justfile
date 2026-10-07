@@ -21,8 +21,17 @@ lint:
     uv run --extra dev ruff check src scripts tests
 
 # Run the authoritative local quality gate.
-qc:
-    uv run --locked --extra dev python scripts/run_qc.py
+qc: require-claw
+    PYTHONPATH="$CLAW_SRC${PYTHONPATH:+:$PYTHONPATH}" uv run --locked --extra dev python scripts/run_qc.py
+
+# Shared adapters run against an explicit published CLAW source checkout.
+[private]
+require-claw:
+    test -d "${CLAW_SRC:-/nonexistent}/kg_microbe_kgscan" || { printf '%s\n' 'Set CLAW_SRC to the published culturebotai-claw src directory.' >&2; exit 2; }
+
+[positional-arguments]
+knowledge-gap-scan *args: require-claw
+    PYTHONPATH="$CLAW_SRC${PYTHONPATH:+:$PYTHONPATH}" uv run --locked python -m dufmech.knowledge_gaps "$@"
 
 # Preview or apply deterministic family/schema projections.
 records *args="":

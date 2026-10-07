@@ -1,0 +1,8 @@
+repo_name: DUFMech
+record_glob: ../data/families/*.yaml
+id_field: id
+name_fields: [short_name, name]
+discussions_field: discussions
+require_topic_in_sentence: true
+topic_token_min_matches: 0
+min_score: 5

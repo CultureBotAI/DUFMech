@@ -4,6 +4,19 @@ version: 1
 validators: [validate_record, _validate_record, _validate_content, check_manifest, verified_manifest]
 history_helpers: [new_history]
 helpers:
+  retain:
+    path: "src/dufmech/knowledge_gaps.py"
+    formats: ["yaml", "markdown"]
+    policy: "timestamped-proposal-append"
+    tests: ["tests/test_knowledge_gaps.py"]
+    required_calls: [utc_timestamp, append_document]
+  accept:
+    path: "src/dufmech/knowledge_gaps.py"
+    formats: ["yaml"]
+    policy: "reviewed-overlay-explicit-apply-with-history"
+    tests: ["tests/test_knowledge_gaps.py"]
+    apply_default: false
+    required_calls: [_writer_lock, scan, load_history_metadata, validate_record, _publish_projection, new_history]
   write_worklist_snapshot:
     path: "src/dufmech/snapshot.py"
     formats: ["json","tsv","manifest.json"]
