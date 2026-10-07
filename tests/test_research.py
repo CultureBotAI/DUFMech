@@ -287,6 +287,27 @@ def test_module_cli_forwards_process_arguments(root):
     assert json.loads(result.stdout)["execution_authorized"] is False
 
 
+def test_module_cli_malformed_target_returns_json_without_retention(root):
+    target = root / "data/families/PF04149.yaml"
+    malformed = b"pfam_id: [unterminated\n"
+    target.write_bytes(malformed)
+    pythonpath = f"{ROOT / 'src'}:{Path(shared.__file__).resolve().parents[1]}"
+    result = subprocess.run(
+        [sys.executable, "-B", "-m", "dufmech.research", "scaffold-result", "--root", str(root),
+         "--simulate", "--pfam-id", "PF04149", "--question", "Identity?", "--retain",
+         "--output", "research/runs/malformed.yaml"],
+        env={"PYTHONPATH": pythonpath, "PYTHONDONTWRITEBYTECODE": "1"},
+        capture_output=True, text=True, timeout=60, check=False,
+    )
+    assert result.returncode == 1
+    assert result.stderr == ""
+    error = json.loads(result.stdout)
+    assert set(error) == {"error", "execution_authorized"}
+    assert error["error"] and error["execution_authorized"] is False
+    assert target.read_bytes() == malformed
+    assert not (root / "research").exists()
+
+
 def test_missing_shared_package_fails_closed(root, monkeypatch, capsys):
     def missing(name):
         raise ImportError(name)

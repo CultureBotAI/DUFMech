@@ -224,7 +224,7 @@ def main(argv: list[str] | None = None) -> int:
         if "no_paid_unsatisfiable" in result:
             return 1
         return 3 if args.command == "authorize" else 0
-    except (OSError, ValueError, RuntimeError) as exc:
+    except (OSError, ValueError, RuntimeError, yaml.YAMLError) as exc:
         print(json.dumps({"error": str(exc), "execution_authorized": False}))
         return 2 if shared is not None and isinstance(exc, shared.PolicyError) else 1
 
