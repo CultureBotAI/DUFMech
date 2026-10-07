@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any
 
 from dufmech.pfam_history import (
+    DEFAULT_MIN_FAMILIES,
     DEFAULT_PFAM_RELEASE,
     PFAM_PREVIOUS_NAMES_TSV_FIELDNAMES,
     PFAM_SEED_URL,
@@ -62,6 +63,8 @@ def write_pfam_previous_names_snapshot(
             "last_modified": read.last_modified,
             "compressed_bytes": read.compressed_bytes,
             "compressed_sha256": read.compressed_sha256,
+            "input_mode": read.input_mode,
+            "local_path": read.local_path,
             "families_scanned": read.families_scanned,
             "families_with_previous_ids": read.families_with_previous_ids,
             "selection": (
@@ -100,10 +103,18 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument("--out-dir", type=Path, default=Path("data/worklists"))
     parser.add_argument("--snapshot-date")
+    parser.add_argument(
+        "--min-families",
+        type=int,
+        default=DEFAULT_MIN_FAMILIES,
+        help="refuse input that parses to fewer families (guards wrong or truncated files)",
+    )
     args = parser.parse_args(argv)
     url = PFAM_SEED_URL.format(release=args.pfam_release)
     try:
-        read = read_seed(seed_gz=args.seed_gz, release=args.pfam_release)
+        read = read_seed(
+            seed_gz=args.seed_gz, release=args.pfam_release, min_families=args.min_families
+        )
         manifest = write_pfam_previous_names_snapshot(
             read,
             args.out_dir,

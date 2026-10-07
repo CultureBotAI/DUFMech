@@ -18,11 +18,14 @@ import httpx
 DEFAULT_PFAM_RELEASE = "38.2"
 PFAM_SEED_URL = "https://ftp.ebi.ac.uk/pub/databases/Pfam/releases/Pfam{release}/Pfam-A.seed.gz"
 
-# A previous identifier that is itself an unknown-function name, alone or joined to a
-# prefix/suffix the way Pfam builds compound names (DUF1285_N, QueG_DUF1730).
+# A previous identifier that is itself an unknown-function name, alone or joined to
+# prefixes/suffixes the way Pfam builds compound names: DUF1285_N, QueG_DUF1730,
+# Mycop_pep_DUF31, PterinBD-DUF4346, DUF_B2046, DUFDUF4849, DUF488-N3i.
 UNKNOWN_NAME_RE = re.compile(
-    r"(?:[A-Za-z0-9]+_)?(?:DUF\d{1,5}|UPF\d{4})(?:[_-][A-Za-z0-9]+)*"
+    r"(?:[A-Za-z0-9]+[_-])*(?:DUF|UPF)(?:DUF)?_?[A-Z]?\d+(?:[_-][A-Za-z0-9]+)*"
 )
+# Pfam 38.2 has ~30,000 families; far fewer means a wrong or truncated input.
+DEFAULT_MIN_FAMILIES = 10_000
 PFAM_ACCESSION_RE = re.compile(r"(PF\d{5})(?:\.(\d+))?")
 
 PFAM_PREVIOUS_NAMES_TSV_FIELDNAMES = [
@@ -76,6 +79,8 @@ class SeedRead:
     compressed_bytes: int
     compressed_sha256: str
     last_modified: str = ""
+    input_mode: str = "download"
+    local_path: str = ""
 
 
 def is_unknown_name(name: str) -> bool:
@@ -119,8 +124,13 @@ def read_seed(
     release: str = DEFAULT_PFAM_RELEASE,
     transport: httpx.BaseTransport | None = None,
     timeout: float = 120.0,
+    min_families: int = DEFAULT_MIN_FAMILIES,
 ) -> SeedRead:
-    """Read a local or downloaded ``Pfam-A.seed.gz`` without keeping alignments."""
+    """Read a local or downloaded ``Pfam-A.seed.gz`` without keeping alignments.
+
+    Raises when the input parses to fewer than ``min_families`` families, so an empty,
+    wrong or truncated file never becomes a valid-looking snapshot.
+    """
 
     digest = hashlib.sha256()
     counter = {"bytes": 0}
@@ -144,9 +154,13 @@ def read_seed(
                 httpx.Client(
                     timeout=timeout, transport=transport, follow_redirects=True
                 ) as client,
-                client.stream("GET", url) as response,
+                # Ask for the file's own bytes; a re-encoded body would hash and parse wrong.
+                client.stream("GET", url, headers={"Accept-Encoding": "identity"}) as response,
             ):
                 response.raise_for_status()
+                encoding = response.headers.get("content-encoding", "identity").lower()
+                if encoding not in {"", "identity"}:
+                    raise PfamHistoryError(f"{url} was served with Content-Encoding {encoding}")
                 last_modified = response.headers.get("last-modified", "")
                 expected = response.headers.get("content-length")
                 rows, scanned, with_previous = parse_seed_headers(
@@ -158,6 +172,10 @@ def read_seed(
             raise PfamHistoryError(
                 f"{url} returned {counter['bytes']} bytes, expected {expected}"
             )
+    if scanned < min_families:
+        raise PfamHistoryError(
+            f"Pfam seed parsed to {scanned} families, fewer than the expected {min_families}"
+        )
     return SeedRead(
         rows=rows,
         families_scanned=scanned,
@@ -165,6 +183,8 @@ def read_seed(
         compressed_bytes=counter["bytes"],
         compressed_sha256=digest.hexdigest(),
         last_modified=last_modified,
+        input_mode="local_file" if seed_gz is not None else "download",
+        local_path=seed_gz.name if seed_gz is not None else "",
     )
 
 
@@ -236,12 +256,15 @@ def _gunzip_lines(chunks: Iterable[bytes]) -> Iterator[str]:
     decompressor = zlib.decompressobj(16 + zlib.MAX_WBITS)
     pending = b""
     for chunk in chunks:
-        data = decompressor.decompress(chunk)
-        # Pfam-A.seed.gz is a concatenation of gzip members; continue into each one.
-        while decompressor.eof and decompressor.unused_data:
-            rest = decompressor.unused_data
-            decompressor = zlib.decompressobj(16 + zlib.MAX_WBITS)
-            data += decompressor.decompress(rest)
+        try:
+            data = decompressor.decompress(chunk)
+            # Pfam-A.seed.gz is a concatenation of gzip members; continue into each one.
+            while decompressor.eof and decompressor.unused_data:
+                rest = decompressor.unused_data
+                decompressor = zlib.decompressobj(16 + zlib.MAX_WBITS)
+                data += decompressor.decompress(rest)
+        except zlib.error as exc:
+            raise PfamHistoryError(f"Pfam seed is not a valid gzip stream: {exc}") from exc
         pending += data
         *lines, pending = pending.split(b"\n")
         for line in lines:

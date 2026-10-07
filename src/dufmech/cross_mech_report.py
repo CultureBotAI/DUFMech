@@ -273,11 +273,12 @@ def _renamed_section(
     if previous_names is None or not unlisted:
         return []
     index = previous_name_index(previous_names)
+    found = sum(name in index for name in unlisted)
     lines = [
         "",
-        (f"Pfam previous identifiers (`{previous_names_id}`) resolve these names to current "
-         "families. A former DUF name records Pfam history; it is not by itself evidence "
-         "of characterization."),
+        (f"Pfam previous identifiers (`{previous_names_id}`) map {found} of {len(unlisted)} "
+         "names to current families. A former DUF/UPF name records Pfam history; it is not "
+         "by itself evidence of characterization."),
         "",
         "| Name | Cited in | Current Pfam family | Description | In worklist |",
         "|---|---|---|---|---|",
@@ -289,11 +290,7 @@ def _renamed_section(
         }))
         matches = index.get(name, [])
         if not matches:
-            reason = (
-                "not a Pfam previous identifier (UniProt UPF nomenclature)"
-                if name.startswith("UPF") else "not found in Pfam previous identifiers"
-            )
-            lines.append(f"| {name} | {mechs} | {reason} | | |")
+            lines.append(f"| {name} | {mechs} | not found in these Pfam previous identifiers | | |")
         for match in matches:
             lines.append(
                 f"| {name} | {mechs} | {match['pfam_id']} {_cell(match['short_name'])} | "
@@ -334,6 +331,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--cross-mech-json", type=Path, help="select a historical cross-Mech snapshot")
     parser.add_argument("--worklists-dir", type=Path, default=Path("data/worklists"))
     parser.add_argument("--worklist-json", type=Path, help="select a worklist for a historical report")
+    parser.add_argument(
+        "--pfam-previous-json",
+        type=Path,
+        help="select a Pfam previous-names snapshot (default: latest) for a historical report",
+    )
     parser.add_argument("--out-dir", type=Path, default=REPORTS_DIR)
     parser.add_argument("--check", action="store_true", help="fail if the report is stale")
     args = parser.parse_args(argv)
@@ -346,7 +348,7 @@ def main(argv: list[str] | None = None) -> int:
         rows, manifest = load_cross_mech_snapshot(
             path, worklist_rows=worklist_rows, worklist_snapshot_id=input_ids["worklist"]
         )
-        previous_path = latest_snapshot_path(
+        previous_path = args.pfam_previous_json or latest_snapshot_path(
             args.worklists_dir, PFAM_PREVIOUS_NAMES_STEM, required=False
         )
         previous_names = None

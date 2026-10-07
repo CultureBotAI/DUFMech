@@ -84,7 +84,7 @@ def test_read_seed_handles_multimember_gzip_and_records_bytes(tmp_path: Path) ->
     path = tmp_path / "Pfam-A.seed.gz"
     path.write_bytes(data)
 
-    read = read_seed(seed_gz=path)
+    read = read_seed(seed_gz=path, min_families=1)
 
     assert [row.pfam_id for row in read.rows] == ["PF14337", "PF17432"]
     assert read.families_scanned == 3
@@ -95,7 +95,7 @@ def test_read_seed_rejects_truncated_gzip(tmp_path: Path) -> None:
     path = tmp_path / "Pfam-A.seed.gz"
     path.write_bytes(_gz(SEED)[:-20])
     with pytest.raises(PfamHistoryError, match="truncated"):
-        read_seed(seed_gz=path)
+        read_seed(seed_gz=path, min_families=1)
 
 
 def test_read_seed_download_checks_length_and_records_headers() -> None:
@@ -112,7 +112,7 @@ def test_read_seed_download_checks_length_and_records_headers() -> None:
             },
         )
 
-    read = read_seed(transport=httpx.MockTransport(handler))
+    read = read_seed(transport=httpx.MockTransport(handler), min_families=1)
     assert read.last_modified == "Thu, 22 Jan 2026 16:03:00 GMT"
     assert len(read.rows) == 2
 
@@ -122,7 +122,7 @@ def test_read_seed_download_checks_length_and_records_headers() -> None:
         )
 
     with pytest.raises(PfamHistoryError):
-        read_seed(transport=httpx.MockTransport(short))
+        read_seed(transport=httpx.MockTransport(short), min_families=1)
 
 
 def test_snapshot_is_exclusive_and_manifest_validates(tmp_path: Path) -> None:
@@ -130,7 +130,8 @@ def test_snapshot_is_exclusive_and_manifest_validates(tmp_path: Path) -> None:
     path.write_bytes(_gz(SEED))
     out = tmp_path / "worklists"
 
-    assert main(["--seed-gz", str(path), "--out-dir", str(out), "--snapshot-date", "2026-10-07"]) == 0
+    args = ["--seed-gz", str(path), "--out-dir", str(out), "--snapshot-date", "2026-10-07"]
+    assert main([*args, "--min-families", "1"]) == 0
     manifest_path = out / "pfam-previous-unknown-names-2026-10-07.manifest.json"
     assert check_manifest(manifest_path) == []
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
@@ -141,12 +142,15 @@ def test_snapshot_is_exclusive_and_manifest_validates(tmp_path: Path) -> None:
         "renamed_away_from_unknown": 1,
     }
     assert manifest["source"]["release"] == "38.2"
+    assert (manifest["source"]["input_mode"], manifest["source"]["local_path"]) == (
+        "local_file", "Pfam-A.seed.gz"
+    )
     rows = json.loads((out / "pfam-previous-unknown-names-2026-10-07.json").read_text("utf-8"))
     assert previous_name_index(rows)["DUF4393"][0]["short_name"] == "Abi_alpha"
 
     with pytest.raises(FileExistsError):
         write_pfam_previous_names_snapshot(
-            read_seed(seed_gz=path), out, release="38.2", source_url="x",
+            read_seed(seed_gz=path, min_families=1), out, release="38.2", source_url="x",
             snapshot_date="2026-10-07",
         )
 
@@ -169,5 +173,75 @@ def test_report_resolves_unlisted_names_through_previous_ids() -> None:
         curated, ["DUF4393"], previous, "pfam-previous-x", frozenset({"PF14337"})
     )
     assert marked[-1].endswith("| yes |")
-    assert any("UPF0265" in line and "UniProt UPF nomenclature" in line for line in lines)
+    assert any("map 1 of 2 names" in line for line in lines)
+    assert "| UPF0265 | CellStructureMech | not found in these Pfam previous identifiers | | |" in lines
     assert _renamed_section(curated, ["DUF4393"], None, "") == []
+
+
+def test_unknown_name_accepts_pfam_compound_shapes() -> None:
+    for name in ("Mycop_pep_DUF31", "PterinBD-DUF4346", "DUF_B2046", "DUFDUF4849", "UPF0001-like"):
+        assert is_unknown_name(name)
+    assert not is_unknown_name("duf123")
+
+
+def test_lines_and_members_split_across_chunks() -> None:
+    from dufmech.pfam_history import _gunzip_lines
+
+    data = _gz(SEED, members=3)
+    one_byte = list(_gunzip_lines(data[i : i + 1] for i in range(len(data))))
+    whole = list(_gunzip_lines([data]))
+    assert one_byte == whole
+    assert parse_seed_headers(whole)[1] == 3
+
+
+@pytest.mark.parametrize(
+    ("payload", "message"),
+    [(gzip.compress(b""), "fewer than"), (b"<html>not gzip</html>", "not a valid gzip")],
+)
+def test_bad_inputs_fail_without_writing(tmp_path: Path, payload: bytes, message: str, capsys) -> None:
+    path = tmp_path / "Pfam-A.seed.gz"
+    path.write_bytes(payload)
+    out = tmp_path / "worklists"
+    assert main(["--seed-gz", str(path), "--out-dir", str(out), "--snapshot-date", "2026-10-07"]) == 1
+    assert message in capsys.readouterr().err
+    assert not out.exists()
+
+
+def test_download_rejects_content_encoding_and_requests_identity() -> None:
+    data = _gz(SEED)
+    seen = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        seen.append(request.headers.get("accept-encoding"))
+        return httpx.Response(
+            200, stream=httpx.ByteStream(gzip.compress(data)),
+            headers={"Content-Encoding": "gzip"},
+        )
+
+    with pytest.raises(PfamHistoryError, match="Content-Encoding gzip"):
+        read_seed(transport=httpx.MockTransport(handler), min_families=1)
+    assert seen == ["identity"]
+
+
+def test_report_can_pin_a_pfam_snapshot(tmp_path: Path) -> None:
+    import shutil
+
+    from dufmech.cross_mech_report import main as report_main
+
+    repo = Path(__file__).resolve().parents[1]
+    worklists = tmp_path / "worklists"
+    shutil.copytree(repo / "data" / "worklists", worklists)
+    pinned = worklists / "pfam-previous-unknown-names-2026-10-07.json"
+    seed = tmp_path / "Pfam-A.seed.gz"
+    seed.write_bytes(_gz(SEED))
+    write_pfam_previous_names_snapshot(
+        read_seed(seed_gz=seed, min_families=1), worklists, release="38.2", source_url="x",
+        snapshot_date="2026-11-01",
+    )
+    common = [
+        "--worklists-dir", str(worklists), "--cross-mech-dir", str(repo / "data" / "cross_mech"),
+        "--out-dir", str(repo / "docs" / "reports"), "--check",
+    ]
+    # The newer snapshot changes the default report; pinning reproduces the committed one.
+    assert report_main(common) == 1
+    assert report_main([*common, "--pfam-previous-json", str(pinned)]) == 0

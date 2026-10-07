@@ -629,7 +629,8 @@
       "Mycop_pep_DUF31"
     ],
     "previous_unknown_names": [
-      "DUF31"
+      "DUF31",
+      "Mycop_pep_DUF31"
     ],
     "short_name": "Myco_protease",
     "source_url": "https://www.ebi.ac.uk/interpro/entry/pfam/PF01732/"
@@ -19317,6 +19318,7 @@
       "DUF3580"
     ],
     "previous_unknown_names": [
+      "DUF_B2046",
       "DUF3580"
     ],
     "short_name": "NS1_C",
@@ -20297,6 +20299,21 @@
     ],
     "short_name": "QSregVF_b",
     "source_url": "https://www.ebi.ac.uk/interpro/entry/pfam/PF12843/"
+  },
+  {
+    "currently_unknown_name": true,
+    "description": "Domain of unknown function (DUF4878)",
+    "pfam_id": "PF12870",
+    "pfam_version": "PF12870.14",
+    "previous_ids": [
+      "Lumazine_bd",
+      "DUFDUF4878"
+    ],
+    "previous_unknown_names": [
+      "DUFDUF4878"
+    ],
+    "short_name": "DUF4878",
+    "source_url": "https://www.ebi.ac.uk/interpro/entry/pfam/PF12870/"
   },
   {
     "currently_unknown_name": false,
@@ -21524,7 +21541,7 @@
     "source_url": "https://www.ebi.ac.uk/interpro/entry/pfam/PF14243/"
   },
   {
-    "currently_unknown_name": false,
+    "currently_unknown_name": true,
     "description": "PterinBD-DUF4346",
     "pfam_id": "PF14251",
     "pfam_version": "PF14251.13",
@@ -23133,6 +23150,7 @@
       "DUF4849"
     ],
     "previous_unknown_names": [
+      "DUFDUF4849",
       "DUF4849"
     ],
     "short_name": "GH18_BT1044-like",
@@ -23165,6 +23183,20 @@
     ],
     "short_name": "KwaB",
     "source_url": "https://www.ebi.ac.uk/interpro/entry/pfam/PF16162/"
+  },
+  {
+    "currently_unknown_name": true,
+    "description": "Domain of unknown function (DUF4869)",
+    "pfam_id": "PF16163",
+    "pfam_version": "PF16163.11",
+    "previous_ids": [
+      "DUFDUF4869"
+    ],
+    "previous_unknown_names": [
+      "DUFDUF4869"
+    ],
+    "short_name": "DUF4869",
+    "source_url": "https://www.ebi.ac.uk/interpro/entry/pfam/PF16163/"
   },
   {
     "currently_unknown_name": false,
@@ -24179,7 +24211,7 @@
     "source_url": "https://www.ebi.ac.uk/interpro/entry/pfam/PF18127/"
   },
   {
-    "currently_unknown_name": false,
+    "currently_unknown_name": true,
     "description": "RNA helicase UPF1, 1B domain",
     "pfam_id": "PF18141",
     "pfam_version": "PF18141.8",
@@ -25264,7 +25296,7 @@
     "source_url": "https://www.ebi.ac.uk/interpro/entry/pfam/PF22665/"
   },
   {
-    "currently_unknown_name": false,
+    "currently_unknown_name": true,
     "description": "DUF2089 zinc ribbon",
     "pfam_id": "PF22747",
     "pfam_version": "PF22747.3",

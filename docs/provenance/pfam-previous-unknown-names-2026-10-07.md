@@ -16,16 +16,19 @@ The script streamed the pinned release file
 `c53a1397f6741c3501f21db2179ad7810d98ddf9f3b3172257bd71ca07ba8c3b`). It kept only
 the `#=GF ID`, `AC`, `DE` and `PI` header lines; no alignment was retained.
 A canary run of the same command to a scratch directory produced identical rows
-before this artifact was written.
+before this artifact was written. Previous names are matched in Pfam's compound
+forms as well as bare ones (for example `Mycop_pep_DUF31`, `DUF_B2046`,
+`DUFDUF4849`); 83 rows carry a former UPF name. The run refuses inputs that parse to
+fewer than 10,000 families and downloads that arrive content-encoded.
 
 | Measure | Count |
 | --- | ---: |
 | Families scanned | 30,134 |
 | Families with any previous identifier | 4,687 |
-| Families with a previous DUF/UPF name (rows) | 1,832 |
-| Rows whose current name is no longer DUF/UPF | 1,798 |
-| Distinct previous DUF/UPF names | 1,840 |
-| Rows already in `interpro-pfam-duf-2026-10-05` | 67 |
+| Families with a previous DUF/UPF name (rows) | 1,834 |
+| Rows whose current name is no longer DUF/UPF | 1,795 |
+| Distinct previous DUF/UPF names | 1,845 |
+| Rows already in `interpro-pfam-duf-2026-10-05` | 69 |
 | Rows outside the worklist | 1,765 |
 
 All eight DUF names in issue #78 resolve:
@@ -41,8 +44,9 @@ All eight DUF names in issue #78 resolve:
 | DUF4338 | PF14236 DruA |
 | DUF4393 | PF14337 Abi_alpha |
 
-UPF0014, UPF0018, UPF0037 and UPF0265 do not occur: UPF names are UniProt family
-nomenclature, not Pfam identifiers.
+UPF0014, UPF0018, UPF0037 and UPF0265, which sibling Mechs also cite, are not among
+the Pfam 38.2 previous identifiers. Other UPF names are: for example PF00902 TatC was
+UPF0032 and PF01169 GDT1 was UPF0016.
 
 ## Interpretation limits
 

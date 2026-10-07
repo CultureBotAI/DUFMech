@@ -61,7 +61,7 @@ manifests. It does not remove, relicense, redownload, or redate historical data.
 | QuickGO | Molecular-function annotation API | External pilot: four GO:0003677 rows; annotation contributor terms unverified |
 | STRING | Pinned v12.0 API | External pilot: four partners; unsupported taxon was recorded, not treated as absence |
 | UniParc | UniProt ID mapping | External pilot: 12 identity rows; no direct characterization score input |
-| Pfam previous identifiers | Pinned Pfam 38.2 `Pfam-A.seed.gz` headers | October 7 freeze: 1,832 families with a former DUF/UPF name; ADOPTED as reference |
+| Pfam previous identifiers | Pinned Pfam 38.2 `Pfam-A.seed.gz` headers | October 7 freeze: 1,834 families with a former DUF/UPF name; ADOPTED as reference |
 | Cross-Mech | Pinned sibling git records and UniProt cache | October 5 scan and October 6 offline derivation retained; combined terms unverified |
 
 Pilot counts above come from

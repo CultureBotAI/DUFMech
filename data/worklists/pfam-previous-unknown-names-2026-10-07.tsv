@@ -42,7 +42,7 @@ PF01679	PF01679.23	Pmp3	Proteolipid membrane potential modulator	UPF0057	UPF0057
 PF01680	PF01680.24	SOR_SNZ	SOR/SNZ family	UPF0019	UPF0019	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF01680/
 PF01697	PF01697.34	Glyco_transf_92	Glycosyltransferase family 92	DUF23	DUF23	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF01697/
 PF01709	PF01709.27	Transcrip_reg	TACO1/YebC second and third domain	DUF28	DUF28	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF01709/
-PF01732	PF01732.23	Myco_protease	Mycoplasma immunoglobulin protease	DUF31	DUF31;Mycop_pep_DUF31	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF01732/
+PF01732	PF01732.23	Myco_protease	Mycoplasma immunoglobulin protease	DUF31;Mycop_pep_DUF31	DUF31;Mycop_pep_DUF31	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF01732/
 PF01757	PF01757.29	Acyl_transf_3	Acyltransferase domain	DUF33	DUF33	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF01757/
 PF01784	PF01784.25	DUF34_NIF3	Duf34/NIF3 (NGG1p interacting factor 3)	DUF34	DUF34;NIF3	true	https://www.ebi.ac.uk/interpro/entry/pfam/PF01784/
 PF01795	PF01795.26	Methyltransf_5	MraW methylase family	DUF36;UPF0117	DUF36;UPF0117	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF01795/
@@ -1361,7 +1361,7 @@ PF12072	PF12072.14	RNase_Y_N	RNase Y N-terminal region	DUF3552	DUF3552	false	htt
 PF12074	PF12074.14	Gcn1_N	Generalcontrol nonderepressible 1 (Gcn1) N-terminal	DUF3554	DUF3554	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF12074/
 PF12095	PF12095.14	CRR7	Protein CHLORORESPIRATORY REDUCTION 7	DUF3571	DUF3571	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF12095/
 PF12102	PF12102.14	MrcB_N	MrcB-like, N-terminal domain	DUF3578	DUF3578	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF12102/
-PF12117	PF12117.13	NS1_C	Parvovirus non-structural protein 1, C-terminal	DUF3580	DUF_B2046;DUF3580	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF12117/
+PF12117	PF12117.13	NS1_C	Parvovirus non-structural protein 1, C-terminal	DUF_B2046;DUF3580	DUF_B2046;DUF3580	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF12117/
 PF12122	PF12122.14	Rhomboid_N	Cytoplasmic N-terminal domain of rhomboid serine protease	DUF3582	DUF3582	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF12122/
 PF12126	PF12126.14	PML_CC	PML-like, coiled-coil	DUF3583	DUF3583	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF12126/
 PF12130	PF12130.14	bMERB_dom	Bivalent Mical/EHBP Rab binding domain	DUF3585	DUF3585	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF12130/
@@ -1431,6 +1431,7 @@ PF12769	PF12769.13	PNTB_4TM	4TM region of pyridine nucleotide transhydrogenase, 
 PF12821	PF12821.14	ThrE_2	Threonine/Serine exporter, ThrE	DUF3815	DUF3815	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF12821/
 PF12822	PF12822.13	ECF_trnsprt	ECF transporter, substrate-specific component	DUF3816	DUF3816	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF12822/
 PF12843	PF12843.13	QSregVF_b	Putative quorum-sensing-regulated virulence factor	DUF3820	DUF3820	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF12843/
+PF12870	PF12870.14	DUF4878	Domain of unknown function (DUF4878)	DUFDUF4878	Lumazine_bd;DUFDUF4878	true	https://www.ebi.ac.uk/interpro/entry/pfam/PF12870/
 PF12877	PF12877.14	KIAA1549	UPF0606 protein KIAA1549 alpha/beta domain 2	DUF3827	DUF3827	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF12877/
 PF12941	PF12941.13	HCV_NS5a_C	HCV NS5a protein C-terminal region	DUF3838	DUF3838	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF12941/
 PF12944	PF12944.14	HAV_VP	Hepatitis A virus viral protein VP	DUF3840	DUF3840	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF12944/
@@ -1518,7 +1519,7 @@ PF14203	PF14203.12	TTRAP	Putative transposon-transfer assisting protein	DUF4319	
 PF14236	PF14236.13	DruA	Druantia protein DruA	DUF4338	DUF4338	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF14236/
 PF14237	PF14237.12	GYF_2	GYF domain 2	DUF4339	DUF4339	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF14237/
 PF14243	PF14243.12	R2K_3	ATP-grasp domain, R2K clade family 3	DUF4343	DUF4343	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF14243/
-PF14251	PF14251.13	PterinBD-DUF4346	PterinBD-DUF4346	DUF4346	DUF4346	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF14251/
+PF14251	PF14251.13	PterinBD-DUF4346	PterinBD-DUF4346	DUF4346	DUF4346	true	https://www.ebi.ac.uk/interpro/entry/pfam/PF14251/
 PF14262	PF14262.13	Cthe_2159	Carbohydrate-binding domain-containing protein Cthe_2159	DUF4353	DUF4353	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF14262/
 PF14266	PF14266.12	YceG_bac	YceG domain	DUF4356	DUF4356	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF14266/
 PF14274	PF14274.13	BT_3044-like_C	BT_3044-like, C-terminal	DUF4361	DUF4361	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF14274/
@@ -1632,9 +1633,10 @@ PF16062	PF16062.11	MavL-like	ADP-ribosylhydrolase MavL-like	DUF4804	DUF4804	fals
 PF16088	PF16088.11	BORCS7	BLOC-1-related complex sub-unit 7	UPF0693	UPF0693	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF16088/
 PF16090	PF16090.13	Cic	Protein capicua homolog-like domain	DUF4819	DUF4819	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF16090/
 PF16092	PF16092.12	CFAP61_N	Cilia- and flagella-associated protein 61, N-terminal domain	DUF4821	DUF4821	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF16092/
-PF16141	PF16141.12	GH18_BT1044-like	Glycoside hydrolase family 18, BT1044-like	DUF4849	DUFDUF4849;DUF4849	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF16141/
+PF16141	PF16141.12	GH18_BT1044-like	Glycoside hydrolase family 18, BT1044-like	DUFDUF4849;DUF4849	DUFDUF4849;DUF4849	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF16141/
 PF16155	PF16155.12	PnbB	4-hydroxylaminobenzoate lyase	DUF4863	DUF4863	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF16155/
 PF16162	PF16162.11	KwaB	Kiwa protein KwaB-like	DUF4868	DUF4868	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF16162/
+PF16163	PF16163.11	DUF4869	Domain of unknown function (DUF4869)	DUFDUF4869	DUFDUF4869	true	https://www.ebi.ac.uk/interpro/entry/pfam/PF16163/
 PF16216	PF16216.11	GxGYxYP_N	GxGYxYP_N 1st domain	DUF4877	DUF4877	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF16216/
 PF16285	PF16285.11	DUF4931_N	Domain of unknown function (DUF4931) N-terminal domain	DUF4931	DUF4931	true	https://www.ebi.ac.uk/interpro/entry/pfam/PF16285/
 PF16289	PF16289.12	PIN_12	PIN domain	DUF4935	DUF4935	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF16289/
@@ -1707,7 +1709,7 @@ PF18007	PF18007.8	Rv3651-like_N	Rv3651-like, N-terminal	DUF5593	DUF5593	false	ht
 PF18082	PF18082.8	NAT_N	N-acyltransferase N-terminal domain	DUF5596	DUF5596	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF18082/
 PF18099	PF18099.8	CBM_35_2	Carbohydrate binding module (family 35)	DUF5010_C	DUF5010_C	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF18099/
 PF18127	PF18127.7	NAMPT_N	Nicotinamide phosphoribosyltransferase, N-terminal domain	DUF5598	DUF5598	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF18127/
-PF18141	PF18141.8	UPF1_1B_dom	RNA helicase UPF1, 1B domain	DUF5599	DUF5599	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF18141/
+PF18141	PF18141.8	UPF1_1B_dom	RNA helicase UPF1, 1B domain	DUF5599	DUF5599	true	https://www.ebi.ac.uk/interpro/entry/pfam/PF18141/
 PF18197	PF18197.7	TTHB210-like	Hypothetical protein TTHB210	DUF5602	DUF5602	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF18197/
 PF18231	PF18231.8	SerK_C	L-serine kinase SerK, C-terminal domain	DUF5603	DUF5603	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF18231/
 PF18621	PF18621.9	Rv3651-like_middle	Rv3651-like, middle domain	DUF5628	DUF5628	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF18621/
@@ -1784,7 +1786,7 @@ PF22397	PF22397.4	NADAR-DarT1	DarT1-associated NADAR antitoxin	DUF6977	DUF6977	f
 PF22479	PF22479.3	Pam3_gp18	Cyanophage baseplate Pam3 plug gp18	DUF6983	DUF6983	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF22479/
 PF22511	PF22511.4	PBP2	PolB1 Binding Protein 2	DUF6995	DUF6995	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF22511/
 PF22665	PF22665.4	WHD_DUF6293	DUF6293 C-terminal winged helix domain	DUF6293_C	DUF6293_C	true	https://www.ebi.ac.uk/interpro/entry/pfam/PF22665/
-PF22747	PF22747.3	Zn_ribbon_DUF2089	DUF2089 zinc ribbon	DUF2089_Zn_ribbon	DUF2089_Zn_ribbon	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF22747/
+PF22747	PF22747.3	Zn_ribbon_DUF2089	DUF2089 zinc ribbon	DUF2089_Zn_ribbon	DUF2089_Zn_ribbon	true	https://www.ebi.ac.uk/interpro/entry/pfam/PF22747/
 PF22798	PF22798.3	DUF5817_CT	DUF5817, C-terminal domain	DUF5817_HTH	z-alpha-like;DUF5817_HTH	true	https://www.ebi.ac.uk/interpro/entry/pfam/PF22798/
 PF22833	PF22833.3	C5orf34_2nd	C5orf34-like, second domain	DUF4524_C	DUF4524_C	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF22833/
 PF22997	PF22997.2	CHS4	Chitin synthase 4-like domain	DUF7031	DUF7031	false	https://www.ebi.ac.uk/interpro/entry/pfam/PF22997/
