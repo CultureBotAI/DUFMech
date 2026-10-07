@@ -45,7 +45,8 @@ VERDICTS = ("SEED_ONLY", "NEEDS_FOLLOWUP", "BLOCKED", "FAIL", "PASS")
 PFAM = re.compile(r"PF\d{5}")
 TOKEN = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,159}")
 PLACEHOLDER = re.compile(
-    r"\b(?:TODO|TBD|FIXME|placeholder)\b|<[^>]+>|\[(?:fill|insert)[^]]*\]", re.IGNORECASE
+    r"(?:TODO|TBD|FIXME)(?:\s*[:\-].*)?[.!]?|placeholder[.!]?"
+    r"|<[^>\n]+>|\[(?:fill|insert)[^]\n]*\]", re.IGNORECASE | re.DOTALL
 )
 
 
@@ -78,8 +79,13 @@ def token(value: Any, label: str = "slug") -> str:
 
 def actual_text(value: Any, label: str) -> str:
     """Reject empty/scaffold content; substantive correctness still needs a reviewer."""
-    if (not isinstance(value, str) or not value.strip() or PLACEHOLDER.search(value)
-            or value.strip().lower() in {"...", "n/a", "none", "pending", "not reviewed"}):
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError(f"{label} requires actual non-placeholder content")
+    lines = [line.strip() for line in value.splitlines() if line.strip()]
+    if PLACEHOLDER.fullmatch(value.strip()) or all(
+        PLACEHOLDER.fullmatch(line) or line.lower() in {"...", "n/a", "none", "pending", "not reviewed"}
+        for line in lines
+    ):
         raise ValueError(f"{label} requires actual non-placeholder content")
     return value.strip()
 

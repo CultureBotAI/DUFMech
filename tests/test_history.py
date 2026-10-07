@@ -63,6 +63,7 @@ def test_same_timestamp_and_shortid_collision_never_overwrites(root, monkeypatch
 
 @pytest.mark.parametrize("kwargs", [
     {"details": "TODO: replace this placeholder"}, {"summary": ""}, {"actor_name": "TBD"},
+    {"details": "TODO\nTBD"}, {"details": "<protein_id>\n<source_url>"},
     {"actor_type": "invented"}, {"event": "SCIENCE_COMPLETE"}, {"outcome": "reviewed"},
     {"slug": "../escape"}, {"target_path": "../README.md"},
     {"target_path": "/etc/passwd"}, {"target_path": "https://example.org"},

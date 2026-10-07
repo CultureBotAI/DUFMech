@@ -124,6 +124,29 @@ def test_missing_or_placeholder_section_is_not_a_review(root):
         reviews.save_review(root, payload)
 
 
+def test_substantive_review_can_quote_scaffold_markers_and_source_fields(root):
+    payload = review_payload(root)
+    payload["sections"]["Findings"] = (
+        "The source retains a TODO marker and placeholder label in <protein_id>; "
+        "this audit records that concrete gap rather than treating it as functional evidence."
+    )
+    saved = reviews.save_review(root, payload)
+    assert payload["sections"]["Findings"] in saved.read_text()
+    assert reviews.load_review_metadata(root)[0]["verdict"] == payload["verdict"]
+
+
+@pytest.mark.parametrize("scaffold", [
+    "TODO\nTBD", "<protein_id>\n<source_url>", "[fill evidence]\n[insert reference]",
+    "TODO\n\npending",
+])
+def test_multiline_scaffold_only_sections_remain_invalid(root, scaffold):
+    payload = review_payload(root)
+    payload["sections"]["Findings"] = scaffold
+    with pytest.raises(ValueError, match="actual"):
+        reviews.save_review(root, payload)
+    assert not (root / "reports").exists()
+
+
 def test_projection_and_overlay_changes_invalidate_unsaved_context(root):
     projection = root / "data/families/PF04149.yaml"
     projection.parent.mkdir()
