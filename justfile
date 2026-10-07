@@ -21,13 +21,35 @@ lint:
     uv run --extra dev ruff check src scripts tests
 
 # Run the authoritative local quality gate.
-qc: require-claw
+qc: require-claw require-claw-root
     PYTHONPATH="$CLAW_SRC${PYTHONPATH:+:$PYTHONPATH}" uv run --locked --extra dev python scripts/run_qc.py
 
 # Shared adapters run against an explicit published CLAW source checkout.
 [private]
 require-claw:
     test -d "${CLAW_SRC:-/nonexistent}/kg_microbe_kgscan" || { printf '%s\n' 'Set CLAW_SRC to the published culturebotai-claw src directory.' >&2; exit 2; }
+
+[private]
+require-claw-root:
+    test -f "${CLAW_ROOT:-/nonexistent}/pyproject.toml" && test -f "${CLAW_ROOT:-/nonexistent}/uv.lock" || { printf '%s\n' 'Set CLAW_ROOT to the published culturebotai-claw checkout with its separate locked OAK environment.' >&2; exit 2; }
+
+[positional-arguments]
+research *args: require-claw
+    PYTHONPATH="$CLAW_SRC${PYTHONPATH:+:$PYTHONPATH}" uv run --locked python -m dufmech.research "$@"
+
+[positional-arguments]
+exports *args:
+    uv run --locked python -m dufmech.exports "$@"
+
+[positional-arguments]
+id-labels *args:
+    uv run --locked python -m dufmech.id_labels "$@"
+
+id-labels-check: require-claw-root
+    uv run --locked python -m dufmech.id_labels --check --claw-root "$CLAW_ROOT"
+
+id-labels-oak-test: require-claw-root
+    env -u VIRTUAL_ENV -u UV_PROJECT_ENVIRONMENT -u PYTHONPATH -u PYTHONHOME uv run --project "$CLAW_ROOT" --locked --offline python -I -B "$PWD/tests/test_id_labels.py" --oak-regression --repo-root "$PWD"
 
 [positional-arguments]
 knowledge-gap-scan *args: require-claw

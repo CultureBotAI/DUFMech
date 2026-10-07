@@ -24,16 +24,56 @@ just qc                      # authoritative local and CI gate
 ```
 
 See [family records and evidence](docs/records.md), [timestamped reviews](docs/reviews.md),
-[append-only history](docs/history.md), and [source adoption and licensing](docs/sources.md).
+[append-only history](docs/history.md), [source adoption and licensing](docs/sources.md),
+[offline research planning](docs/research.md), [KGX and SSSOM exports](docs/exports.md),
+[offline ID/label validation](docs/id-labels.md), and [knowledge-gap proposals](docs/knowledge-gaps.md).
 
 The stable validation check is `qc`, provided by `.github/workflows/validate.yaml`
-(**Validate DUFMech**). Its local equivalent is `just qc` after `uv sync --locked
---extra dev` and `just browser-install`. CLAW's merge-queue policy must reference
+(**Validate DUFMech**). Its local equivalent is `just qc` followed by
+`just id-labels-oak-test`, after the locked runtime setup below and
+`just browser-install`. CLAW's merge-queue policy must reference
 this exact workflow and job name; changes to either require a coordinated policy
 update. Passing a local command does not establish that GitHub rules are enabled.
 Record, category and repository skills are shipped under `.claude/skills/` and
 `.agents/skills/`. Review reports preserve source hashes, timestamps, scope,
 findings and follow-ups; they do not automatically certify scientific conclusions.
+
+## Offline Adapter Checks
+
+Use an immutable published CLAW checkout. CI checks out
+`b81580f150d5334841f3eb16434575701607bc81`; use that same revision locally.
+`CLAW_SRC` supplies the shared profile and interchange contracts to the native
+environment. OAK runs only in the separate locked CLAW environment because its
+dependencies conflict with DUFMech's native ShEx runtime. Do not add OAK to the
+native environment or weaken either dependency lock.
+
+```bash
+export CLAW_ROOT=/absolute/path/to/published/culturebotai-claw
+export CLAW_SRC="$CLAW_ROOT/src"
+uv sync --locked --extra dev
+env -u VIRTUAL_ENV -u UV_PROJECT_ENVIRONMENT -u PYTHONPATH -u PYTHONHOME \
+  uv sync --project "$CLAW_ROOT" --locked
+just research check
+just exports --check
+just id-labels-check
+just qc
+just id-labels-oak-test
+```
+
+Dependency installation may need network access; the checks do not call research
+providers or retrieve source data. Full QC requires `CLAW_ROOT` and fails closed
+without it. It runs the real OAK correspondence gate through the isolated wrapper,
+not merely `--check-index`. The separate OAK regression tests genuine adapter
+round trips and rejection cases with network access denied.
+
+`just research` forwards arguments to offline planning and explicitly labelled
+dummy `DRY_RUN` scaffolding. Provider-backed execution stays disabled; a retained
+plan is not research findings. `just exports` defaults to a read-only dry run;
+`--apply` is explicit and changes only the three generated interchange files.
+`just id-labels --apply` regenerates only the frozen-source reference index.
+Reference correspondence and Pfam/InterPro associations do not establish
+biological function or promote SEEDED/UNSCORED records. Writer declarations
+record delegation, required calls and policy tests, not a blanket safety proof.
 
 ## Quick Start
 

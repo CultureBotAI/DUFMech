@@ -22,6 +22,7 @@ jobs:
     timeout-minutes: 25
     env:
       CLAW_SRC: ${{ github.workspace }}/.claw/src
+      CLAW_ROOT: ${{ github.workspace }}/.claw
     steps:
       - name: Check out source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -41,6 +42,8 @@ jobs:
           python-version: "3.13"
       - name: Install locked dependencies
         run: uv sync --locked --extra dev
+      - name: Install separate locked OAK runtime
+        run: env -u VIRTUAL_ENV -u UV_PROJECT_ENVIRONMENT -u PYTHONPATH -u PYTHONHOME uv sync --project "$CLAW_ROOT" --locked
       - name: Verify published CLAW artifacts
         run: bash scripts/check_vendored_sync.sh
       - name: Set up Node for browser regression tests
@@ -58,3 +61,5 @@ jobs:
           just-version: '1.46.0'
       - name: Run offline quality checks
         run: just qc
+      - name: Exercise real offline OAK rejection cases
+        run: just id-labels-oak-test

@@ -94,19 +94,17 @@ no directories or lock files. No export operation rewrites native family YAML.
 
 ## Integration Recipes
 
-The integration owner can add these recipes to `justfile` and invoke the check
-recipe in offline CI after native record validation:
+The native recipe preserves argument boundaries and defaults to a read-only
+preview. Full `just qc` invokes the reproducibility check after native record
+validation:
 
-```make
-exports:
-    uv run python -m dufmech.exports --apply
-
-exports-check:
-    uv run python -m dufmech.exports --check
+```bash
+just exports
+just exports --check
+just exports --apply
 ```
 
-An optional `pyproject.toml` entry point is
-`dufmech-exports = "dufmech.exports:main"`. The module CLI works without it.
+The installed entry point is `dufmech-exports`; the module CLI remains available.
 Validate actual artifacts using the canonical shared contracts:
 
 ```python
