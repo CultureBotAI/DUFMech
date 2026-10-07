@@ -65,7 +65,11 @@ gates and assertion evidence; and requires stored family projections and their
 ownership manifest to match. It never regenerates or writes `data/families`,
 curation, history or source snapshots. Malformed or stale native inputs fail
 before output publication. Source and output path symlinks are rejected using
-the native path guards. Unrelated source pipelines are not exported.
+the native path guards. Existing exports are read through noncreating,
+descriptor-confined directory walks and nonblocking, no-follow file opens;
+regular-file checks and byte reads use the same descriptor. A leaf replaced by
+a symlink or FIFO cannot redirect or block these reads. Unrelated source
+pipelines are not exported.
 
 Rows and nodes have stable identifier ordering. TSV uses UTF-8, LF and no CSV
 quoting. In text cells, backslashes become `\\`, double quotes become `\u0022`,
@@ -82,6 +86,9 @@ left untouched. The three-file batch is not a filesystem transaction: interrupti
 between replacements can leave a mixed generation, which `--check` detects and
 `--apply` repairs. Callers must serialize writers (fleet callers use the CLAW
 repository operation lease); a detected edit during staging aborts publication.
+Post-staging comparisons use the same pinned directories as publication, so a
+replacement parent cannot hide an edit to the actual destination. If a pinned
+directory is renamed, publication remains there and never follows its replacement.
 Apply replaces only these three generated export files. Check and dry-run create
 no directories or lock files. No export operation rewrites native family YAML.
 

@@ -4,6 +4,7 @@ import csv
 import hashlib
 import io
 import json
+import os
 import socket
 from datetime import datetime, timezone
 from pathlib import Path
@@ -214,6 +215,138 @@ def test_source_symlink_is_rejected(corpus, tmp_path):
     path.symlink_to(outside)
     with pytest.raises((RecordError, ReportError, ValueError)):
         exports.build_exports(corpus)
+
+
+@pytest.mark.parametrize("mode", ["dry_run", "check", "apply"])
+@pytest.mark.parametrize("replacement", ["leaf_symlink", "parent_symlink", "fifo"])
+def test_output_reads_reject_replacements_at_open(corpus, tmp_path, monkeypatch, mode, replacement):
+    artifacts = exports.build_exports(corpus)
+    monkeypatch.setattr(exports, "build_exports", lambda _: artifacts)
+    exports.write_exports(corpus, apply=True)
+    target = corpus / exports.KGX_NODES
+    outside = tmp_path / "outside"
+    outside.mkdir()
+    for name in (exports.KGX_NODES, exports.KGX_EDGES):
+        (outside / Path(name).name).write_bytes(artifacts[name])
+    before = inventory(outside)
+    original = os.open
+    replaced = False
+
+    def replace_before_open(path, flags, *args, **kwargs):
+        nonlocal replaced
+        component = "kgx" if replacement == "parent_symlink" else target.name
+        if path == component and not replaced:
+            replaced = True
+            assert flags & os.O_NOFOLLOW
+            if replacement == "parent_symlink":
+                assert flags & os.O_DIRECTORY
+                target.parent.rename(corpus / "old-kgx")
+                target.parent.symlink_to(outside, target_is_directory=True)
+            else:
+                assert flags & os.O_NONBLOCK
+                target.unlink()
+                if replacement == "fifo":
+                    os.mkfifo(target)
+                else:
+                    target.symlink_to(outside / target.name)
+        return original(path, flags, *args, **kwargs)
+
+    monkeypatch.setattr(os, "open", replace_before_open)
+    options = {"check": True} if mode == "check" else {"apply": mode == "apply"}
+    with pytest.raises((OSError, exports.ExportError)):
+        exports.write_exports(corpus, **options)
+    assert replaced
+    assert inventory(outside) == before
+    assert (corpus / exports.SSSOM).read_bytes() == artifacts[exports.SSSOM]
+
+
+@pytest.mark.parametrize("replacement", ["symlink", "fifo"])
+def test_staged_destination_reads_reject_replaced_leaves(corpus, tmp_path, monkeypatch, replacement):
+    artifacts = exports.build_exports(corpus)
+    monkeypatch.setattr(exports, "build_exports", lambda _: artifacts)
+    exports.write_exports(corpus, apply=True)
+    for name in artifacts:
+        (corpus / name).write_bytes(b"previous\n")
+    target = corpus / exports.KGX_NODES
+    outside = tmp_path / "outside.tsv"
+    outside.write_bytes(b"previous\n")
+    original_stage = exports._stage_file
+    original_open = os.open
+    replaced = False
+
+    def replace_after_stage(directory, payload):
+        nonlocal replaced
+        temporary = original_stage(directory, payload)
+        if not replaced:
+            replaced = True
+            target.unlink()
+            if replacement == "fifo":
+                os.mkfifo(target)
+            else:
+                target.symlink_to(outside)
+        return temporary
+
+    def guarded_open(path, flags, *args, **kwargs):
+        if replaced and path == target.name:
+            assert flags & os.O_NOFOLLOW
+            assert flags & os.O_NONBLOCK
+        return original_open(path, flags, *args, **kwargs)
+
+    monkeypatch.setattr(exports, "_stage_file", replace_after_stage)
+    monkeypatch.setattr(os, "open", guarded_open)
+    with pytest.raises((OSError, exports.ExportError)):
+        exports.write_exports(corpus, apply=True)
+    assert replaced
+    assert outside.read_bytes() == b"previous\n"
+    assert (corpus / exports.KGX_EDGES).read_bytes() == b"previous\n"
+    assert (corpus / exports.SSSOM).read_bytes() == b"previous\n"
+    assert not list((corpus / "exports").rglob(".dufmech-*"))
+
+
+@pytest.mark.parametrize("replacement", ["directory_with_edit", "symlink"])
+def test_staged_checks_use_the_pinned_publication_directory(corpus, tmp_path, monkeypatch, replacement):
+    artifacts = exports.build_exports(corpus)
+    monkeypatch.setattr(exports, "build_exports", lambda _: artifacts)
+    exports.write_exports(corpus, apply=True)
+    for name in artifacts:
+        (corpus / name).write_bytes(b"previous\n")
+    parent = corpus / "exports/kgx"
+    retained = corpus / "retained-kgx"
+    outside = tmp_path / "outside"
+    outside.mkdir()
+    for name in ("nodes.tsv", "edges.tsv"):
+        (outside / name).write_bytes(b"previous\n")
+    before = inventory(outside)
+    original = exports._stage_file
+
+    def replace_parent_after_stage(directory, payload):
+        temporary = original(directory, payload)
+        if not retained.exists():
+            parent.rename(retained)
+            if replacement == "symlink":
+                parent.symlink_to(outside, target_is_directory=True)
+            else:
+                parent.mkdir()
+                for name in ("nodes.tsv", "edges.tsv"):
+                    (parent / name).write_bytes(b"previous\n")
+                (retained / "nodes.tsv").write_bytes(b"concurrent edit\n")
+        return temporary
+
+    monkeypatch.setattr(exports, "_stage_file", replace_parent_after_stage)
+    if replacement == "directory_with_edit":
+        with pytest.raises(exports.ExportError, match="changed during staging"):
+            exports.write_exports(corpus, apply=True)
+        assert (retained / "nodes.tsv").read_bytes() == b"concurrent edit\n"
+        assert (retained / "edges.tsv").read_bytes() == b"previous\n"
+        assert (parent / "nodes.tsv").read_bytes() == b"previous\n"
+        assert (corpus / exports.SSSOM).read_bytes() == b"previous\n"
+    else:
+        assert exports.write_exports(corpus, apply=True) == list(artifacts)
+        for name in (exports.KGX_NODES, exports.KGX_EDGES):
+            assert (retained / Path(name).name).read_bytes() == artifacts[name]
+        assert (corpus / exports.SSSOM).read_bytes() == artifacts[exports.SSSOM]
+    assert inventory(outside) == before
+    assert not list(retained.glob(".dufmech-*"))
 
 
 def test_staging_failure_preserves_entire_previous_generation(corpus, monkeypatch):

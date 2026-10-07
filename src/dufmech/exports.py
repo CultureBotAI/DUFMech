@@ -22,6 +22,7 @@ from dufmech.records import (
     safe_path,
 )
 from dufmech.report import ReportError
+from dufmech.reviews import read_source_bytes
 
 REPOSITORY = "https://github.com/CultureBotAI/DUFMech"
 PFAM_SOURCE = "https://www.ebi.ac.uk/interpro/entry/pfam/"
@@ -160,14 +161,29 @@ def build_exports(root: Path) -> dict[str, bytes]:
     }
 
 
-def _existing(path: Path) -> bytes | None:
+def _existing(root: Path, relative: str) -> bytes | None:
     try:
-        mode = path.lstat().st_mode
+        return read_source_bytes(root, relative)
     except FileNotFoundError:
         return None
-    if not stat.S_ISREG(mode):
-        raise ExportError(f"export destination must be a regular file: {path}")
-    return path.read_bytes()
+    except ValueError as exc:
+        raise ExportError(str(exc)) from exc
+
+
+def _existing_at(directory: int, name: str) -> bytes | None:
+    try:
+        descriptor = os.open(
+            name, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK, dir_fd=directory,
+        )
+    except FileNotFoundError:
+        return None
+    try:
+        if not stat.S_ISREG(os.fstat(descriptor).st_mode):
+            raise ExportError(f"export destination must be a regular file: {name}")
+        with os.fdopen(descriptor, "rb", closefd=False) as stream:
+            return stream.read()
+    finally:
+        os.close(descriptor)
 
 
 def write_exports(root: Path, *, apply: bool = False, check: bool = False) -> list[str]:
@@ -177,7 +193,7 @@ def write_exports(root: Path, *, apply: bool = False, check: bool = False) -> li
     root = root.absolute()
     artifacts = build_exports(root)
     paths = {name: safe_path(root, name) for name in artifacts}
-    observed = {name: _existing(path) for name, path in paths.items()}
+    observed = {name: _existing(root, name) for name in paths}
     changed = [name for name, payload in artifacts.items() if observed[name] != payload]
     if check and changed:
         raise ExportError(f"stale or missing exports: {', '.join(changed)}")
@@ -193,9 +209,9 @@ def write_exports(root: Path, *, apply: bool = False, check: bool = False) -> li
             for name in changed:
                 fd = directories[paths[name].parent.relative_to(root)]
                 staged.append((name, fd, _stage_file(fd, artifacts[name])))
-            # Finish validation and staging before replacing any existing output.
-            for name in changed:
-                if _existing(safe_path(root, name)) != observed[name]:
+            # Compare the actual publication destinations, not fresh pathname lookups.
+            for name, fd, _ in staged:
+                if _existing_at(fd, paths[name].name) != observed[name]:
                     raise ExportError(f"export changed during staging: {name}")
             for name, fd, temporary in staged:
                 os.replace(temporary, paths[name].name, src_dir_fd=fd, dst_dir_fd=fd)
