@@ -44,16 +44,19 @@ gen-python:
     uv run --locked python -m dufmech.records --schema-only --apply
 
 # Retain timestamped, scoped review artifacts.
-review *args="":
-    uv run --locked python -m dufmech.reviews {{args}}
+[positional-arguments]
+review *args:
+    uv run --locked python -m dufmech.reviews "$@"
 
 # Append or validate canonical curation history.
-history *args="":
-    uv run --locked python -m dufmech.history {{args}}
+[positional-arguments]
+history *args:
+    uv run --locked python -m dufmech.history "$@"
 
 # Append one explicit, validated curation event (the fleet recipe contract).
-new-history *args="":
-    uv run --locked python -m dufmech.history new {{args}}
+[positional-arguments]
+new-history *args:
+    uv run --locked python -m dufmech.history new "$@"
 
 # Validate retained review and history artifacts without creating scaffolds.
 history-check:
