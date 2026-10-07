@@ -1,0 +1,32 @@
+id: Pfam:PF01724
+pfam_id: PF01724
+name: Domain of unknown function DUF29
+short_name: DUF29
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01724
+counters:
+  proteins: 4280
+  matches: 4280
+  proteomes: 791
+  taxa: 1622
+  structures: 1
+  alphafold_models: 2600
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002636
+description: This family consists of various hypothetical proteins from cyanobacteria, none of which are
+  functionally described. The aligned region is approximately 120-140 amino acids long corresponding to
+  almost the entire length of the proteins in the family. [swissprot:Q2RPE2], PDB:3fcn, is a small protein
+  that has a novel all-alpha fold. The N-terminal helical hairpin is likely to function as a dimerisation
+  module. This protein is a member of PFam family PF01724. The function of this protein is unknown. One
+  protein sequence contains a fusion of this protein and a DnaB domain, suggesting a possible role in
+  DNA helicase activity (hypothetical). Dali hits have low Z and high rmsd, suggesting probably only topological
+  similarities (not functional relevance) (details derived from TOPSAN). The family has several highly
+  conserved sequence motifs, including YD/ExD, DxxNVxEEIE, and CPY/F/W, as well as conserved tryptophans.

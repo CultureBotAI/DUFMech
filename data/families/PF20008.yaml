@@ -1,0 +1,25 @@
+id: Pfam:PF20008
+pfam_id: PF20008
+name: Domain of unknown function (DUF6429)
+short_name: DUF6429
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20008
+counters:
+  proteins: 656
+  matches: 656
+  proteomes: 588
+  taxa: 1170
+  structures: 0
+  alphafold_models: 399
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045489
+description: This domain of unknown function is found in uncharacterised bacterial proteins. This domain
+  is about 70 amino acids in length and contains the conserved sequence motifs WK, RS and TxxG.

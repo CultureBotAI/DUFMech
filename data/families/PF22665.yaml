@@ -1,0 +1,27 @@
+id: Pfam:PF22665
+pfam_id: PF22665
+name: DUF6293 C-terminal winged helix domain
+short_name: WHD_DUF6293
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22665
+counters:
+  proteins: 318
+  matches: 318
+  proteomes: 250
+  taxa: 506
+  structures: 0
+  alphafold_models: 299
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054162
+description: This domain is found C-terminal in functionally uncharacterised archaeal proteins. This domain
+  is predicted to adopt winged helix domain structure. It is usually located upstream [pfam:PF19810] and
+  this domain organisation as well as the predicted structure are reminiscent of CRISPR-associated protein,
+  Csa3.

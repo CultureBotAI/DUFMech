@@ -1,0 +1,27 @@
+id: Pfam:PF23904
+pfam_id: PF23904
+name: Domain of unknown function (DUF7246)
+short_name: DUF7246
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23904
+counters:
+  proteins: 136
+  matches: 136
+  proteomes: 136
+  taxa: 337
+  structures: 0
+  alphafold_models: 8
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055670
+description: This entry describes a domain of unknown function found in phage proteins. The proteins containing
+  this domain average 90 to 100 amino acids in length and is found in a variety of phage proteins, particularly
+  those from Streptomyces and Mycobacterium phages. The domain usually occurs near the middle or C-terminus
+  of proteins. The domain forms a small beta barrel.

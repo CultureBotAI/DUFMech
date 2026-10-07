@@ -1,0 +1,25 @@
+id: Pfam:PF11677
+pfam_id: PF11677
+name: Protein of unknown function (DUF3273)
+short_name: DUF3273
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11677
+counters:
+  proteins: 222
+  matches: 226
+  proteomes: 61
+  taxa: 119
+  structures: 0
+  alphafold_models: 204
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021691
+description: Some members in this family of proteins are annotated as multi-transmembrane proteins however
+  this cannot be confirmed. Currently this family has no known function.

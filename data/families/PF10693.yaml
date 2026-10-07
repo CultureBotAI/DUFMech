@@ -1,0 +1,26 @@
+id: Pfam:PF10693
+pfam_id: PF10693
+name: Protein of unknown function (DUF2499)
+short_name: DUF2499
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10693
+counters:
+  proteins: 1008
+  matches: 1011
+  proteomes: 722
+  taxa: 2030
+  structures: 0
+  alphafold_models: 766
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019634
+description: Members of this family are found in plants, lower eukaryotes, and bacteria and the chloroplast
+  where it is annotated as Ycf49 or Ycf49-like. The function is not known though several members are annotated
+  as putative membrane proteins.

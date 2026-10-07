@@ -1,0 +1,28 @@
+id: Pfam:PF29231
+pfam_id: PF29231
+name: Domain of unknown function (DUF8517)
+short_name: DUF8517
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29231
+counters:
+  proteins: 32
+  matches: 32
+  proteomes: 31
+  taxa: 66
+  structures: 0
+  alphafold_models: 27
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061587
+description: This entry represents an N-terminal domain of approximately 90-100 residues found in serine
+  proteases from spirochaetes, predominantly Treponema species. The domain is located N-terminal to a
+  trypsin-like serine protease domain ([pfam:PF00089], [pfam:PF13365]) and is typically followed by one
+  or two C-terminal PDZ domains. Members include the periplasmic serine protease TP0546 from Treponema
+  pallidum. The function of this domain remains to be determined.

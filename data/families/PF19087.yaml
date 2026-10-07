@@ -1,0 +1,26 @@
+id: Pfam:PF19087
+pfam_id: PF19087
+name: Domain of unknown function (DUF5776)
+short_name: DUF5776
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19087
+counters:
+  proteins: 1144
+  matches: 1620
+  proteomes: 333
+  taxa: 537
+  structures: 4
+  alphafold_models: 588
+  domain_architectures: 167
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR044081
+description: Presumed stalk domain found in bacterial surface proteins forming tandem repeats with high
+  sequence identity. This domain is also associated with other known bacterial surface protein stalks
+  and adhesive domains.

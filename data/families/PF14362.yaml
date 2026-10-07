@@ -1,0 +1,26 @@
+id: Pfam:PF14362
+pfam_id: PF14362
+name: Domain of unknown function (DUF4407)
+short_name: DUF4407
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14362
+counters:
+  proteins: 2491
+  matches: 2527
+  proteomes: 2160
+  taxa: 2938
+  structures: 0
+  alphafold_models: 1581
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025519
+description: This family of proteins is found in bacteria. Proteins in this family are typically between
+  366 and 597 amino acids in length. There is a single completely conserved residue R that may be functionally
+  important.

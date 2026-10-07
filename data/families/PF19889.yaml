@@ -1,0 +1,25 @@
+id: Pfam:PF19889
+pfam_id: PF19889
+name: Domain of unknown function (DUF6362)
+short_name: DUF6362
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19889
+counters:
+  proteins: 566
+  matches: 566
+  proteomes: 402
+  taxa: 826
+  structures: 0
+  alphafold_models: 388
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045942
+description: This domain of unknown function is found in uncharacterised bacterial proteins. It has a
+  conserved WP motif and it may contain a helix-turn-helix motif as it overlaps with members in clan CL0123.

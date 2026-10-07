@@ -1,0 +1,26 @@
+id: Pfam:PF26309
+pfam_id: PF26309
+name: Domain of unknown function (DUF8082)
+short_name: DUF8082
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26309
+counters:
+  proteins: 740
+  matches: 996
+  proteomes: 568
+  taxa: 1158
+  structures: 0
+  alphafold_models: 482
+  domain_architectures: 30
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058395
+description: This entry represents a four helical bundle domain found at the C-terminus of Aquifex aeolicus
+  aq_1824 protein ([swissprot:O67685]). The function of these proteins is not known. This domain is often
+  associated with proteins containing kinase domains.

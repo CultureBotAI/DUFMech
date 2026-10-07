@@ -1,0 +1,25 @@
+id: Pfam:PF25103
+pfam_id: PF25103
+name: Domain of unknown function (DUF7811)
+short_name: DUF7811
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25103
+counters:
+  proteins: 606
+  matches: 615
+  proteomes: 393
+  taxa: 1077
+  structures: 0
+  alphafold_models: 511
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056713
+description: This domain is found in uncharacterised plant proteins. It is predicted to fold into a five-stranded
+  antiparallel beta-sheet and two alpha-helices packed on it.

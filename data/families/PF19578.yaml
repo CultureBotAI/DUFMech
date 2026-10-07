@@ -1,0 +1,25 @@
+id: Pfam:PF19578
+pfam_id: PF19578
+name: Family of unknown function (DUF6090)
+short_name: DUF6090
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19578
+counters:
+  proteins: 2802
+  matches: 2802
+  proteomes: 505
+  taxa: 833
+  structures: 0
+  alphafold_models: 1450
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045749
+description: This family of proteins is functionally uncharacterised. Proteins in this family are primarily
+  found in Bacteroidetes. Proteins in this family are typically between 241 and 255 amino acids in length.

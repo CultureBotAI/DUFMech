@@ -1,0 +1,25 @@
+id: Pfam:PF16481
+pfam_id: PF16481
+name: Domain of unknown function (DUF5058)
+short_name: DUF5058
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16481
+counters:
+  proteins: 593
+  matches: 593
+  proteomes: 482
+  taxa: 902
+  structures: 0
+  alphafold_models: 341
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032479
+description: This family consists of uncharacterized proteins around 250 residues in length and is mainly
+  found in various Firmicutes species. The function of this family is unknown.

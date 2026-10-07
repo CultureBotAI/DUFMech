@@ -1,0 +1,25 @@
+id: Pfam:PF05071
+pfam_id: PF05071
+name: NADH ubiquinone oxidoreductase subunit NDUFA12
+short_name: NDUFA12
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05071
+counters:
+  proteins: 9214
+  matches: 9228
+  proteomes: 5704
+  taxa: 11992
+  structures: 291
+  alphafold_models: 7460
+  domain_architectures: 92
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007763
+description: This family contains the 17.2 kD subunit of complex I (NDUFA12) and its homologues. The family
+  also contains a second related eukaryotic protein of unknown function, e.g. [swissprot:Q9BV02].

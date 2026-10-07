@@ -1,0 +1,24 @@
+id: Pfam:PF06388
+pfam_id: PF06388
+name: Protein of unknown function (DUF1075)
+short_name: DUF1075
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06388
+counters:
+  proteins: 2320
+  matches: 2332
+  proteomes: 1124
+  taxa: 3691
+  structures: 0
+  alphafold_models: 2122
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009432
+description: This family consists of several eukaryotic proteins of unknown function.

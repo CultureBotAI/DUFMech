@@ -1,0 +1,26 @@
+id: Pfam:PF07469
+pfam_id: PF07469
+name: Nuclear receptor coactivator, DUF1518
+short_name: DUF1518
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07469
+counters:
+  proteins: 2780
+  matches: 3753
+  proteomes: 701
+  taxa: 2146
+  structures: 0
+  alphafold_models: 226
+  domain_architectures: 62
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010011
+description: This conserved domain of unknown function is usually found tandemly repeated in the nuclear
+  receptor coactivator family (NCOA1/2/3, also known as the SRC/p160 nuclear receptor coactivator family,
+  which are ligand-dependent transcription factors [[cite:PUB00097822],[cite:PUB00069373]].

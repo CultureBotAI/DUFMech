@@ -1,0 +1,25 @@
+id: Pfam:PF09755
+pfam_id: PF09755
+name: Uncharacterized conserved protein H4 (DUF2046)
+short_name: DUF2046
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09755
+counters:
+  proteins: 2257
+  matches: 2348
+  proteomes: 1648
+  taxa: 5194
+  structures: 2
+  alphafold_models: 1988
+  domain_architectures: 34
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019152
+description: This is the conserved N-terminal 350 residues of a family of proteins of unknown function
+  possibly containing a coiled-coil domain.

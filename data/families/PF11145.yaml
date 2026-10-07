@@ -1,0 +1,29 @@
+id: Pfam:PF11145
+pfam_id: PF11145
+name: Transmembrane E3 ligase/DUF2921 transmembrane domain
+short_name: DUF2921
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11145
+counters:
+  proteins: 4715
+  matches: 5532
+  proteomes: 1974
+  taxa: 4518
+  structures: 0
+  alphafold_models: 3772
+  domain_architectures: 106
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021319
+description: This entry describes a domain of unknown function, which could adopt a similar fold to the
+  SWEET-like (TM helices) domain. It was found in Transmembrane E3 ubiquitin-proteins and members of the
+  DSC E3 ubiquitin ligase complex. It is predominant in fungi and plants, including the FLY1/2 proteins
+  from Arabidopsis thaliana, the DSC complex protein from Schizosaccharomyces pombe, and TUL1 from Saccharomyces
+  cerevisiae. This domain hasn't been functionally characterised yet but it is formed by seven alpha-helices
+  [[cite:PUB00150892]].

@@ -1,0 +1,30 @@
+id: Pfam:PF07564
+pfam_id: PF07564
+name: Domain of Unknown Function (DUF1542)
+short_name: DUF1542
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07564
+counters:
+  proteins: 393
+  matches: 2712
+  proteomes: 153
+  taxa: 310
+  structures: 0
+  alphafold_models: 112
+  domain_architectures: 192
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011439
+description: This domain is found in several cell surface proteins, such as extracellular matrix-binding
+  protein ebh [[cite:PUB00014728]]. Some members are involved in antibiotic resistance (e.g [swissprot:Q9RL69]
+  and [swissprot:Q9LCJ9]) [[cite:PUB00014727]] and/or cellular adhesion (e.g. [swissprot:Q931R6]) [[cite:PUB00014728]].
+  In some proteins it is repeated more than fifteen times, being the most repeated domain in streptococci
+  [[cite:PUB00097824]]. This is a predominantly alpha-helical domain that form a long, thin, fibre-like
+  structure and it has been proposed to function as a stalk that helps the adhesive non-repeat region
+  (NRR) of proteins protrude beyond the cell surface [[cite:PUB00097823],[cite:PUB00065268]].

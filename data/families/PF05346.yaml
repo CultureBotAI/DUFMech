@@ -1,0 +1,27 @@
+id: Pfam:PF05346
+pfam_id: PF05346
+name: Eukaryotic membrane protein family
+short_name: DUF747
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05346
+counters:
+  proteins: 4804
+  matches: 4980
+  proteomes: 3258
+  taxa: 8637
+  structures: 0
+  alphafold_models: 4083
+  domain_architectures: 84
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008010
+description: This family is a family of eukaryotic membrane proteins. It was previously annotated as including
+  a putative receptor for human cytomegalovirus gH [[cite:PUB00019476]] but this has has since been disputed
+  [[cite:PUB00044752]]. Analysis of the mouse Tapt1 protein (transmembrane anterior posterior transformation
+  1) has shown it to be involved in patterning of the vertebrate axial skeleton.

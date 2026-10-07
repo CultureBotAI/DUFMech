@@ -1,0 +1,26 @@
+id: Pfam:PF26952
+pfam_id: PF26952
+name: Domain of unknown function (DUF8300)
+short_name: DUF8300
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26952
+counters:
+  proteins: 14
+  matches: 14
+  proteomes: 12
+  taxa: 30
+  structures: 0
+  alphafold_models: 9
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059344
+description: This domain is found in uncharacterised proteins from proteobacteria. It is predicted to
+  fold into a mainly alpha-helical structure and is frequently found in combination with PKD or GEVED
+  domains.

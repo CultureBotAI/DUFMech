@@ -1,0 +1,26 @@
+id: Pfam:PF13028
+pfam_id: PF13028
+name: Protein of unknown function (DUF3889)
+short_name: DUF3889
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13028
+counters:
+  proteins: 796
+  matches: 802
+  proteomes: 638
+  taxa: 752
+  structures: 1
+  alphafold_models: 447
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024987
+description: This family of proteins is functionally uncharacterised. This family of proteins is found
+  in bacteria. Proteins in this family are approximately 110 amino acids in length. There are two completely
+  conserved residues (A and Y) that may be functionally important.

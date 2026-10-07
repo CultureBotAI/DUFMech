@@ -1,0 +1,25 @@
+id: Pfam:PF11659
+pfam_id: PF11659
+name: Protein of unknown function (DUF3261)
+short_name: DUF3261
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11659
+counters:
+  proteins: 1115
+  matches: 1115
+  proteomes: 1115
+  taxa: 1721
+  structures: 0
+  alphafold_models: 624
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021675
+description: This family of proteins with unknown function appears to be restricted to Proteobacteria.
+  The family is related to the LolB family suggesting a role in lipoprotein insertion in the outer membrane.

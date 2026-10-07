@@ -1,0 +1,25 @@
+id: Pfam:PF17128
+pfam_id: PF17128
+name: Domain of unknown function (DUF5107)
+short_name: DUF5107
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17128
+counters:
+  proteins: 2188
+  matches: 2200
+  proteomes: 1921
+  taxa: 2863
+  structures: 1
+  alphafold_models: 1284
+  domain_architectures: 239
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR033396
+description: This family is found in range of different bacterial species. In many proteins it lies N-terminal
+  to a TPR-repeat region at the C-terminus.

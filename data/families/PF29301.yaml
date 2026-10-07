@@ -1,0 +1,26 @@
+id: Pfam:PF29301
+pfam_id: PF29301
+name: Domain of unknown function (DUF8531)
+short_name: DUF8531
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29301
+counters:
+  proteins: 33
+  matches: 33
+  proteomes: 33
+  taxa: 105
+  structures: 0
+  alphafold_models: 23
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061601
+description: This entry represents a domain found in the YonD protein from Bacillus subtilis and related
+  proteins. It is predicted to fold into a curved beta-sheet enclosing an alpha-helix. The function of
+  this domain is unknown.

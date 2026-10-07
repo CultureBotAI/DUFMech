@@ -6,6 +6,8 @@ import json
 from datetime import datetime, timezone
 from io import StringIO
 
+import pytest
+
 from dufmech.scoring import UNKNOWN_CANDIDATE, FamilyScoreRow
 from dufmech.scoring_cli import main as score_duf_puf
 from dufmech.scoring_snapshot import write_score_snapshot
@@ -79,6 +81,8 @@ def test_write_score_snapshot_writes_artifacts_and_manifest(tmp_path) -> None:
     }
     assert manifest["rows"]["total"] == 2
     assert manifest["rows"]["with_context_evidence"] == 2
+    assert manifest["input_validation"] == "unverified"
+    assert manifest["input_provenance"] == {}
     assert manifest["files"]["json"]["sha256"] == hashlib.sha256(
         json_path.read_bytes()
     ).hexdigest()
@@ -201,6 +205,7 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
     assert (
         score_duf_puf(
             [
+                "--allow-ad-hoc-inputs",
                 "--worklist-json",
                 str(worklist_path),
                 "--member-json",
@@ -252,3 +257,33 @@ def test_score_cli_reads_frozen_json_inputs(tmp_path, capsys) -> None:
     assert manifest["snapshot"]["input_snapshot_ids"]["ncbifam"] == (
         "uniprot-ncbifam-2026-10-01"
     )
+    assert manifest["input_validation"] == "ad_hoc"
+    assert all(value["validation_state"] == "ad_hoc"
+               for value in manifest["input_provenance"].values())
+    scores = json.loads(manifest_path.with_name("duf-characterization-scores-2026-10-01.json").read_text())
+    assert scores[0]["known_evidence_count"] == 1
+    assert scores[0]["partial_evidence_count"] == 2
+    assert scores[0]["context_evidence_count"] == 5
+
+
+def test_score_writer_refuses_overwrite_without_altering_existing_bytes(tmp_path):
+    write_score_snapshot([score_row()], tmp_path, snapshot_date="2026-10-01")
+    before = {path.name: path.read_bytes() for path in tmp_path.iterdir()}
+    with pytest.raises(FileExistsError):
+        write_score_snapshot([score_row("PF00002")], tmp_path, snapshot_date="2026-10-01")
+    assert {path.name: path.read_bytes() for path in tmp_path.iterdir()} == before
+
+
+def test_score_writer_preflights_entire_artifact_set_and_symlink_collisions(tmp_path):
+    occupied = tmp_path / "duf-characterization-scores-2026-10-01.tsv"
+    occupied.symlink_to(tmp_path / "missing-target")
+    with pytest.raises(FileExistsError):
+        write_score_snapshot([score_row()], tmp_path, snapshot_date="2026-10-01")
+    assert list(tmp_path.iterdir()) == [occupied]
+
+
+def test_score_writer_rejects_duplicate_families_before_creating_output(tmp_path):
+    output = tmp_path / "scores"
+    with pytest.raises(ValueError, match="duplicate score family"):
+        write_score_snapshot([score_row(), score_row()], output, snapshot_date="2026-10-01")
+    assert not output.exists()

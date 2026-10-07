@@ -1,0 +1,26 @@
+id: Pfam:PF21839
+pfam_id: PF21839
+name: Domain of unknown function (DUF6898)
+short_name: DUF6898
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21839
+counters:
+  proteins: 323
+  matches: 323
+  proteomes: 322
+  taxa: 533
+  structures: 0
+  alphafold_models: 214
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054193
+description: This entry represents a small protein that has a domain with a structure resembling a double
+  stranded RNA-binding domain such as [pfam:PF00035]. Thus suggesting this protein may also have a dsRNA
+  binding function. This is supported by the presence of several conserved positively charged residues.

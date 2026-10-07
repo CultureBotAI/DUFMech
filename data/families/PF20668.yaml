@@ -1,0 +1,26 @@
+id: Pfam:PF20668
+pfam_id: PF20668
+name: Domain of unknown function (DUF6815)
+short_name: DUF6815
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20668
+counters:
+  proteins: 638
+  matches: 748
+  proteomes: 456
+  taxa: 821
+  structures: 0
+  alphafold_models: 425
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049212
+description: 'This presumed domain is functionally uncharacterised and is found in bacteria and eukaryotes.
+  It may contain an ATP-grasp-like fold which suggest an ATP-binding function. There are several conserved
+  motifs: EGxxR, PxxWxxDF and ExNCSCV.'

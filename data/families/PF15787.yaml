@@ -1,0 +1,27 @@
+id: Pfam:PF15787
+pfam_id: PF15787
+name: Neurobeachin/BDCP, DUF4704 alpha solenoid region
+short_name: DUF4704
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15787
+counters:
+  proteins: 10161
+  matches: 11316
+  proteomes: 1996
+  taxa: 6072
+  structures: 0
+  alphafold_models: 510
+  domain_architectures: 349
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031570
+description: This domain of unknown function is found in eukaryotes on neurobeachin and BEACH domain-containing
+  proteins (BDCPs) [[cite:PUB00075927],[cite:PUB00098184]]. Mutations in this proteins are associated
+  with Lipopolysaccharide-responsive and beige-like anchor (LRBA) deficiency [[cite:PUB00098184]]. According
+  to structure prediction is adopts an alpha-helical solenoid structure.

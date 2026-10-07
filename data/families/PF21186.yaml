@@ -1,0 +1,26 @@
+id: Pfam:PF21186
+pfam_id: PF21186
+name: Domain of unknown function (DUF6852)
+short_name: DUF6852
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21186
+counters:
+  proteins: 2043
+  matches: 2043
+  proteomes: 2041
+  taxa: 2676
+  structures: 1
+  alphafold_models: 1343
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049280
+description: This domain is found at the C-terminal end of BVU_3817 from Phocaeicola vulgatus ([swissprot:A6L6W4])
+  and similar proteins mostly found in Bacteroidetes. This domain shows an alpha/beta structure and is
+  normally found associated with [pfam:PF18347]. Its function is unknown.

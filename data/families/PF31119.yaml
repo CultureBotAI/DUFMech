@@ -1,0 +1,27 @@
+id: Pfam:PF31119
+pfam_id: PF31119
+name: Domain of unknown function (DUF8816)
+short_name: DUF8816
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF31119
+counters:
+  proteins: 277
+  matches: 277
+  proteomes: 238
+  taxa: 536
+  structures: 0
+  alphafold_models: 216
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061877
+description: This entry represents a bacterial immunoglobulin-like domain of approximately 65 residues.
+  This domain is found predominantly in Planctomycetota and Bacillota. These domains are typically found
+  in large secreted or surface-associated proteins, often with multiple tandem repeats. The function of
+  this domain remains to be determined.

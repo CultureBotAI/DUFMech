@@ -1,0 +1,27 @@
+id: Pfam:PF20581
+pfam_id: PF20581
+name: Family of unknown function (DUF6785)
+short_name: DUF6785
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20581
+counters:
+  proteins: 136
+  matches: 148
+  proteomes: 72
+  taxa: 238
+  structures: 0
+  alphafold_models: 100
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046712
+description: 'This family of proteins is functionally uncharacterised. This family of proteins is found
+  in bacteria and archaea. There are highly conserved sequence motifs: FSxWFF and ExxxFP. There are eleven
+  conserved tryptophan residues, which may suggest to play an important role. Proteins members of this
+  family are likely composed of transmembrane helices and probably carry out transporter activity.'

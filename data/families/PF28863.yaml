@@ -1,0 +1,25 @@
+id: Pfam:PF28863
+pfam_id: PF28863
+name: Domain of unknown function (DUF8471)
+short_name: DUF8471
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28863
+counters:
+  proteins: 913
+  matches: 922
+  proteomes: 471
+  taxa: 902
+  structures: 0
+  alphafold_models: 830
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061541
+description: This is a helical domain found in a group of uncharacterised sequences from bacteria and
+  archaea. It is usually found in association with [pfam:PF07760].

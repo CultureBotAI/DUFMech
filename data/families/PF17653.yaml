@@ -1,0 +1,33 @@
+id: Pfam:PF17653
+pfam_id: PF17653
+name: Family of unknown function (DUF5522)
+short_name: DUF5522
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17653
+counters:
+  proteins: 2412
+  matches: 2412
+  proteomes: 2151
+  taxa: 4314
+  structures: 0
+  alphafold_models: 1609
+  domain_architectures: 40
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040807
+description: This is a family of unknown function. Family members are found in Bacteria and Eukaryotes.
+  In algae, this family is found on the N-terminal of diphthamide synthase family [pfam:PF01902] and is
+  predicted to be a membrane transporter belonging to The ATP-binding Cassette (ABC) family [[cite:PUB00091274]].
+  In nematoda, it is found on the N-terminal side of ribosomal protein family L14 [pfam:PF00238]. It is
+  also found on the N-terminal of Cob(I)alamin adenosyltransferase [pfam:PF01923] in other eukaryotes.
+  Family members found in homo sapiens such as [swissprot:Q5VUE5], have been shown to be highly expressed
+  in 15 high-grade neuroendocrine tumor cell lines and YAP1-positive small-cell lung cancer cell lines
+  [[cite:PUB00091275]] as well as being up-regulated in two human Multiple Myloma cell lines in response
+  to selective nuclear export inhibitor KPT-276 [[cite:PUB00091276]]. The HMM profile of this family reveals
+  4 highly conserved cysteines.

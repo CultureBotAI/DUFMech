@@ -1,0 +1,28 @@
+id: Pfam:PF12158
+pfam_id: PF12158
+name: Domain of unknown function (DUF3592)
+short_name: DUF3592
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12158
+counters:
+  proteins: 3762
+  matches: 3919
+  proteomes: 2802
+  taxa: 4789
+  structures: 0
+  alphafold_models: 2433
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021994
+description: This entry represents a beta barrel domain found in primarily in bacteria, but also in archaea
+  and in kinetoplastids. Proteins in this family are typically between 150 and 242 amino acids in length.
+  The domain is often found in integral membrane proteins. This family contains the Tsi4 immunity protein
+  from P. aeruginosa which acts as an immunity protein to the Tse4 toxin [[cite:PUB00155609]]. AlphaFold
+  multimer modelling shows that these two protein are likely to interact directly.

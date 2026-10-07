@@ -1,0 +1,26 @@
+id: Pfam:PF30888
+pfam_id: PF30888
+name: Domain of unknown function (DUF8757)
+short_name: DUF8757
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30888
+counters:
+  proteins: 536
+  matches: 536
+  proteomes: 523
+  taxa: 1219
+  structures: 0
+  alphafold_models: 318
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061818
+description: This entry represents a C-terminal domain of approximately 165 residues predicted to adopt
+  an OB-fold. This family is found in bacteria, predominantly Actinomycetota, Pseudomonadota, and Bacteroidota.
+  The function of this domain remains to be determined.

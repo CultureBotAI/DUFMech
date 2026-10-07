@@ -1,0 +1,24 @@
+id: Pfam:PF04017
+pfam_id: PF04017
+name: Domain of unknown function (DUF366)
+short_name: DUF366
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04017
+counters:
+  proteins: 193
+  matches: 195
+  proteomes: 193
+  taxa: 381
+  structures: 1
+  alphafold_models: 177
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007162
+description: Archaeal domain of unknown function.

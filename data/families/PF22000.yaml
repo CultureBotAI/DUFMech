@@ -1,0 +1,26 @@
+id: Pfam:PF22000
+pfam_id: PF22000
+name: Family of unknown function (DUF6929)
+short_name: DUF6929
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22000
+counters:
+  proteins: 744
+  matches: 745
+  proteomes: 725
+  taxa: 1015
+  structures: 0
+  alphafold_models: 469
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR053851
+description: This is a family of uncharacterised bacterial proteins. They are predicted to fold into five-bladed
+  beta-propeller that has similarity to apyrase but it is circularly permuted. The C-terminal two beta-strands
+  of this domain occupy the position of the two N-terminal beta-strands in apyrase.

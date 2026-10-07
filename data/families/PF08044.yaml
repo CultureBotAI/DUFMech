@@ -1,0 +1,26 @@
+id: Pfam:PF08044
+pfam_id: PF08044
+name: DUF1707 SHOCT-like domain
+short_name: DUF1707
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08044
+counters:
+  proteins: 12418
+  matches: 12531
+  proteomes: 2787
+  taxa: 3401
+  structures: 0
+  alphafold_models: 7035
+  domain_architectures: 38
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012551
+description: This domain is found in a variety of Actinomycetales proteins. All of the proteins containing
+  this domain are uncharacterised and probably membrane bound or associated. It is unclear to the function
+  of this domain.

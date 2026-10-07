@@ -1,0 +1,28 @@
+id: Pfam:PF22253
+pfam_id: PF22253
+name: Domain of unknown function (DUF6948)
+short_name: DUF6948
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22253
+counters:
+  proteins: 46
+  matches: 46
+  proteomes: 37
+  taxa: 145
+  structures: 0
+  alphafold_models: 31
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054226
+description: This domain is found either as standalone or in combination with other domains in a group
+  of uncharacterised proteins. It is distantly related to EDC3 mRNA-decapping protein 3 and it could be
+  involved in RNA-binding. It is predicted to adopt a barrel-like structure with a typical Sm-like fold.
+  The pair of glycines responsible for maintaining the Sm-barrel curvature are also conserved in the members
+  of this family.

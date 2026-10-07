@@ -1,0 +1,26 @@
+id: Pfam:PF28536
+pfam_id: PF28536
+name: Domain of unknown function (DUF8432)
+short_name: DUF8432
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28536
+counters:
+  proteins: 880
+  matches: 880
+  proteomes: 866
+  taxa: 1684
+  structures: 0
+  alphafold_models: 732
+  domain_architectures: 27
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059476
+description: This domain is found in a group of uncharacterised proteins from fungi. It is predicted to
+  adopt a UBA domain-like structure. UBA domains are often involved in ubiquitin binding. The specific
+  function of this domain

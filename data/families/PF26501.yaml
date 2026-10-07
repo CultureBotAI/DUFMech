@@ -1,0 +1,28 @@
+id: Pfam:PF26501
+pfam_id: PF26501
+name: Domain of unknown function (DUF8167) N-terminal domain
+short_name: DUF8167
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26501
+counters:
+  proteins: 543
+  matches: 543
+  proteomes: 247
+  taxa: 388
+  structures: 0
+  alphafold_models: 513
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058480
+description: This entry represents the N-terminal integral membrane domain of a family of uncharacterised
+  proteins from halophilic archaea that contain four domains. The proteins in this family are predominantly
+  found in the class Halobacteria, which includes families such as Haloferacaceae, Natrialbaceae, and
+  Haloarculaceae. These proteins are typically around 400 amino acids in length. This domain contains
+  three predicted transmembrane helices.

@@ -1,0 +1,27 @@
+id: Pfam:PF18955
+pfam_id: PF18955
+name: Domain of unknown function (DUF5698)
+short_name: DUF5698
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18955
+counters:
+  proteins: 2198
+  matches: 2198
+  proteomes: 1934
+  taxa: 3195
+  structures: 0
+  alphafold_models: 1506
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR044035
+description: This family is functionally uncharacterised. This family family is found in bacteria and
+  archaea, and is approximately 60 amino acids in length and contains two probable transmembrane helices.
+  This entry is found in association with [pfam:PF10035]. The C-terminal transmembrane helix contains
+  a GXXXGXXXG motif that is characteristic of transmembrane helices that dimerise.

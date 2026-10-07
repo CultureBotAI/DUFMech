@@ -1,0 +1,31 @@
+id: Pfam:PF22507
+pfam_id: PF22507
+name: Family of unknown function (DUF6994)
+short_name: DUF6994
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22507
+counters:
+  proteins: 203
+  matches: 203
+  proteomes: 178
+  taxa: 462
+  structures: 0
+  alphafold_models: 129
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054263
+description: This is a family of uncharacterised bacterial proteins. They are probably remotely related
+  to His-Me finger endonucleases. The conservation of the putative active site residues in this family
+  is not strict, in particular the position of the catalytic histidine. The residues involved in metal
+  coordination are conserved. The presence in the vicinity of two invariant aspartate residues that point
+  toward the putative active site suggests that these proteins may still function as enzymes but probably
+  via a somewhat different catalytic mechanism. They may still retain their catalytic activity by employing
+  these conserved aspartates that in the predicted AF2 models are well positioned to undertake a role
+  in a potential nucleophilic attack.

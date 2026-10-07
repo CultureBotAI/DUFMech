@@ -1,0 +1,25 @@
+id: Pfam:PF25074
+pfam_id: PF25074
+name: Domain of unknown function (DUF7798)
+short_name: DUF7798
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25074
+counters:
+  proteins: 658
+  matches: 679
+  proteomes: 383
+  taxa: 1066
+  structures: 0
+  alphafold_models: 536
+  domain_architectures: 30
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056700
+description: This domain is found in uncharacterised proteins mainly from plants. It is predicted to fold
+  into an alpha-helical bundle.

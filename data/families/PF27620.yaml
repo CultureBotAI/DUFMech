@@ -1,0 +1,26 @@
+id: Pfam:PF27620
+pfam_id: PF27620
+name: Domain of unknown function (DUF8354)
+short_name: DUF8354
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF27620
+counters:
+  proteins: 49
+  matches: 50
+  proteomes: 26
+  taxa: 42
+  structures: 0
+  alphafold_models: 38
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059398
+description: This domain is found in uncharacterised proteins mainly from gammaproteobacteria. It is predicted
+  to fold into a helical structure. It contains two highly conserved sequence motifs HxAWRYL and RAHNW
+  that may be of functional importance.

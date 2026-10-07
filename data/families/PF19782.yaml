@@ -1,0 +1,25 @@
+id: Pfam:PF19782
+pfam_id: PF19782
+name: Family of unknown function (DUF6267)
+short_name: DUF6267
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19782
+counters:
+  proteins: 73
+  matches: 89
+  proteomes: 71
+  taxa: 203
+  structures: 0
+  alphafold_models: 6
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046234
+description: This family of proteins is functionally uncharacterised. This family of proteins is primarily
+  found in myoviruses. Proteins in this family are typically between 298 and 400 amino acids in length.

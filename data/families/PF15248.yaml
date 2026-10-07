@@ -1,0 +1,27 @@
+id: Pfam:PF15248
+pfam_id: PF15248
+name: Domain of unknown function (DUF4587)
+short_name: DUF4587
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15248
+counters:
+  proteins: 1105
+  matches: 1105
+  proteomes: 544
+  taxa: 1821
+  structures: 0
+  alphafold_models: 972
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027904
+description: 'This protein family is a domain of unknown function. The precise function of this protein
+  domain remains to be elucidated. This domain family is found in eukaryotes, and is typically between
+  64 and 79 amino acids in length. There are two conserved sequence motifs: QNAQ and HHH. In humans, it
+  is found in the position, chromosome 21 open reading frame 58.'

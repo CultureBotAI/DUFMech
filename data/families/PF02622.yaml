@@ -1,0 +1,25 @@
+id: Pfam:PF02622
+pfam_id: PF02622
+name: AlgH-like
+short_name: DUF179
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02622
+counters:
+  proteins: 14657
+  matches: 14759
+  proteomes: 12317
+  taxa: 17355
+  structures: 8
+  alphafold_models: 9886
+  domain_architectures: 101
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003774
+description: This entry represents a group of bacterial proteins, including AlgH from Pseudomonas aeruginosa,
+  which is involved in the transcriptional regulation of alginate biosynthesis [[cite:PUB00104069]].

@@ -1,0 +1,26 @@
+id: Pfam:PF25268
+pfam_id: PF25268
+name: Domain of unknown function (DUF7866)
+short_name: DUF7866
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25268
+counters:
+  proteins: 1057
+  matches: 1063
+  proteomes: 341
+  taxa: 942
+  structures: 0
+  alphafold_models: 857
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057188
+description: This domain is found in uncharacterised proteins from plants. It is predicted to fold into
+  a three-stranded antiparallel twisted beta-sheet. It contains several highly conserved cysteine residues
+  that are predicted to form disulfide bonds.

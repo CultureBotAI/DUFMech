@@ -1,0 +1,27 @@
+id: Pfam:PF16044
+pfam_id: PF16044
+name: DUF4796 C-terminal
+short_name: DUF4796_C
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16044
+counters:
+  proteins: 1219
+  matches: 1244
+  proteomes: 1051
+  taxa: 3551
+  structures: 0
+  alphafold_models: 1079
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR053921
+description: This domain is functionally uncharacterised and is found in eukaryotes. Proteins with this
+  domain are typically between 194 and 289 amino acids in length. There is a single completely conserved
+  residue C that may be functionally important. This domain has been identified as structurally similar
+  to peptidase C97 domain ([pfam:PF05903]) [[cite:PUB00152793]].

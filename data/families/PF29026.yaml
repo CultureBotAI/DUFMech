@@ -1,0 +1,27 @@
+id: Pfam:PF29026
+pfam_id: PF29026
+name: DUF4350 C-terminal helical domain
+short_name: DUF4350_C
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29026
+counters:
+  proteins: 1407
+  matches: 1407
+  proteomes: 1402
+  taxa: 1857
+  structures: 0
+  alphafold_models: 913
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR062916
+description: This entry represents a C-terminal helical domain found in DUF4350 family proteins. This
+  domain follows the DUF4350 domain ([pfam:PF14258]) and is approximately 85-100 residues in length. The
+  family is found almost exclusively in Bacteroidota, particularly in Flavobacteriales. The function of
+  this domain remains to be determined.

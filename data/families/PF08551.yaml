@@ -1,0 +1,26 @@
+id: Pfam:PF08551
+pfam_id: PF08551
+name: Eukaryotic integral membrane protein (DUF1751)
+short_name: DUF1751
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08551
+counters:
+  proteins: 6596
+  matches: 6654
+  proteomes: 3657
+  taxa: 9370
+  structures: 0
+  alphafold_models: 5575
+  domain_architectures: 89
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061914
+description: This entry represents an integral membrane domain found in eukaryotic proteins. [swissprot:Q12239],
+  a Saccharomyces cerervisiae protein, has been shown to localise COP II vesicles [[cite:PUB00016470]].
+  This protein has a predicted structure which shows similiarity to the rhomboid proteases.

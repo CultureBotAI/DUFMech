@@ -1,0 +1,25 @@
+id: Pfam:PF13422
+pfam_id: PF13422
+name: Domain of unknown function (DUF4110)
+short_name: DUF4110
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13422
+counters:
+  proteins: 1975
+  matches: 1978
+  proteomes: 1792
+  taxa: 4083
+  structures: 0
+  alphafold_models: 1644
+  domain_architectures: 46
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025183
+description: This is a family that is found predominantly at the C-terminus of Kelch-containing proteins.
+  However, the exact function of this region is not known.

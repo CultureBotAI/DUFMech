@@ -2,6 +2,8 @@
 .pytest_cache/
 .ruff_cache/
 .venv/
+.dufmech/
+node_modules/
 __pycache__/
 *.py[cod]
 build/

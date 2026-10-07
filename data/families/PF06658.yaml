@@ -1,0 +1,24 @@
+id: Pfam:PF06658
+pfam_id: PF06658
+name: Protein of unknown function (DUF1168)
+short_name: DUF1168
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06658
+counters:
+  proteins: 3557
+  matches: 3569
+  proteomes: 3082
+  taxa: 8297
+  structures: 7
+  alphafold_models: 3062
+  domain_architectures: 39
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009548
+description: This family consists of several hypothetical eukaryotic proteins of unknown function.

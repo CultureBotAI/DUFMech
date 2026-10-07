@@ -1,0 +1,28 @@
+id: Pfam:PF14265
+pfam_id: PF14265
+name: Capsid assembly scaffolding protein Gp46
+short_name: DUF4355
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14265
+counters:
+  proteins: 891
+  matches: 891
+  proteomes: 784
+  taxa: 1631
+  structures: 1
+  alphafold_models: 433
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025580
+description: This entry includes the capsid assembly scaffolding protein Gp46 from Staphylococcus phage
+  80alpha, which is involved in icosaedric procapsid assembly. It coassembles with capsid proteins to
+  form the procapsid [[cite:PUB00153369]]. The scaffolding protein is found within the capsid as a series
+  of concentric shells. During DNA packaging, the scaffolding protein molecules are released from the
+  procapsid.

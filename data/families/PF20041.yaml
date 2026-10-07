@@ -1,0 +1,28 @@
+id: Pfam:PF20041
+pfam_id: PF20041
+name: Domain of unknown function (DUF6443)
+short_name: DUF6443
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20041
+counters:
+  proteins: 2105
+  matches: 2128
+  proteomes: 812
+  taxa: 1303
+  structures: 0
+  alphafold_models: 752
+  domain_architectures: 258
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045619
+description: This presumed domain is functionally uncharacterised. This domain family is predominantly
+  found in Bacteroidetes, and is about 100 amino acids in length. This domain contains a highly conserved
+  YDxxGR motif which suggests that it is related the RHS repeats, that appear to be involved in ligand
+  binding. RHS repeats share structural similarity with the eukaryotic tyrosine-aspartate (YD) repeat
+  [[cite:PUB00070343]].

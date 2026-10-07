@@ -1,0 +1,28 @@
+id: Pfam:PF14263
+pfam_id: PF14263
+name: Domain of unknown function (DUF4354)
+short_name: DUF4354
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14263
+counters:
+  proteins: 74
+  matches: 74
+  proteomes: 70
+  taxa: 154
+  structures: 2
+  alphafold_models: 41
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025581
+description: Several members of this family are annotated as being ATP/GTP-binding site motif A (P-loop)
+  proteins, but this could not be confirmed. The one PDB:3NRF structure solved for this family exhibits
+  an immunoglobin-like beta-sandwich fold. Crystal packing suggests that a tetramer is a significant oligomerisation
+  state, and a disulfide bridge is formed between Cys 125 at the C-terminal end of the monomer, and Cys
+  69.

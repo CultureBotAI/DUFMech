@@ -1,0 +1,27 @@
+id: Pfam:PF19570
+pfam_id: PF19570
+name: Family of unknown function (DUF6088)
+short_name: DUF6088
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19570
+counters:
+  proteins: 2262
+  matches: 2262
+  proteomes: 1855
+  taxa: 3422
+  structures: 0
+  alphafold_models: 1543
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045738
+description: This family of proteins is functionally uncharacterised. This family of proteins is found
+  primarily in bacteria. Proteins in this family are typically between 197 and 228 amino acids in length.
+  This family appears to be distantly related to [pfam:PF13338] suggesting proteins in this family may
+  be an antitoxin component of a toxin/antitoxin system.

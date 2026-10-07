@@ -1,0 +1,29 @@
+id: Pfam:PF11861
+pfam_id: PF11861
+name: Ribosomal RNA methyltransferase Spb1, DUF3381
+short_name: DUF3381
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11861
+counters:
+  proteins: 3891
+  matches: 3912
+  proteomes: 3174
+  taxa: 8437
+  structures: 35
+  alphafold_models: 3292
+  domain_architectures: 77
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024576
+description: This domain is functionally uncharacterised and it is found in the central region of fungal
+  SPB1 and mammalian homologue FTSJ3. This domain is found associated with [pfam:PF07780], [pfam:PF01728].
+  SPB1 is an adoMet-dependent rRNA methyltransferase required for proper assembly of pre-ribosomal particles
+  during the biogenesis of the 60S ribosomal subunit [[cite:PUB00016377]]. FTSJ3, SPB1 homologue in humans,
+  is associated with NIP7 (involved in the biogenesis of 40S subunit) and functions in pre-rRNA processing
+  [[cite:PUB00068805]].

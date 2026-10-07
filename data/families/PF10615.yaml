@@ -1,0 +1,29 @@
+id: Pfam:PF10615
+pfam_id: PF10615
+name: Domain of unknown function (DUF2470)
+short_name: DUF2470
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10615
+counters:
+  proteins: 7608
+  matches: 7613
+  proteomes: 5685
+  taxa: 9310
+  structures: 16
+  alphafold_models: 5075
+  domain_architectures: 76
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019595
+description: This domain is found in a group of putative heme-iron utilisation proteins, such as HugZ.
+  It can also be found in C-terminal of the glutamyl-tRNA reductase-binding (GluTRBP) protein from Arabidopsis
+  [[cite:PUB00075508]]. GluTRBP is involved in the regulation of glutamyl-tRNA reductase (GluTR) which
+  is important for the synthesis and distribution of 5-aminolevulinate, a precursor in heme and chlorophyll
+  biosynthesis [[cite:PUB00075509]]. GluTRBP is necessary for efficient photosynthetic electron transport
+  in chloroplasts [[cite:PUB00075510]].

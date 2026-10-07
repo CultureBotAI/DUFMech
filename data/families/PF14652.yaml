@@ -1,0 +1,25 @@
+id: Pfam:PF14652
+pfam_id: PF14652
+name: Domain of unknown function (DUF4457)
+short_name: DUF4457
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14652
+counters:
+  proteins: 1986
+  matches: 4917
+  proteomes: 1148
+  taxa: 3719
+  structures: 0
+  alphafold_models: 709
+  domain_architectures: 32
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027859
+description: This family of proteins is found in eukaryotes. It is found repeated several times in the
+  vertebrate KIAA0556 proteins.

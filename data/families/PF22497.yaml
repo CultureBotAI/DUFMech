@@ -1,0 +1,25 @@
+id: Pfam:PF22497
+pfam_id: PF22497
+name: Domain of unknown function (DUF6989)
+short_name: DUF6989
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22497
+counters:
+  proteins: 142
+  matches: 142
+  proteomes: 140
+  taxa: 297
+  structures: 0
+  alphafold_models: 91
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054258
+description: This domain is found in a number of uncharacterised bacterial proteins that are likely associated
+  with the membrane.

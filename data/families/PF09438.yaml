@@ -1,0 +1,25 @@
+id: Pfam:PF09438
+pfam_id: PF09438
+name: Domain of unknown function (DUF2017)
+short_name: DUF2017
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09438
+counters:
+  proteins: 3819
+  matches: 3823
+  proteomes: 3718
+  taxa: 4448
+  structures: 0
+  alphafold_models: 2231
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018561
+description: This is an alpha-helical domain found in gene neighborhoods that contain genes encoding ubiquitin,
+  cysteine synthases and JAB peptidases [[cite:PUB00034476]].

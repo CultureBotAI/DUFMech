@@ -1,0 +1,26 @@
+id: Pfam:PF19952
+pfam_id: PF19952
+name: Domain of unknown function (DUF6414)
+short_name: DUF6414
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19952
+counters:
+  proteins: 666
+  matches: 666
+  proteomes: 627
+  taxa: 1423
+  structures: 0
+  alphafold_models: 403
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045633
+description: This entry represents a family of uncharacterised proteins found in bacteria. These proteins
+  share a conserved beta barrel domain with extensive variable insertions. The N and C-terminus of these
+  proteins are the most conserved regions and interact with each other.

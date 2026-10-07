@@ -1,0 +1,26 @@
+id: Pfam:PF19116
+pfam_id: PF19116
+name: Domain of unknown function (DUF5801)
+short_name: DUF5801
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19116
+counters:
+  proteins: 691
+  matches: 2360
+  proteomes: 495
+  taxa: 840
+  structures: 1
+  alphafold_models: 113
+  domain_architectures: 349
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043824
+description: This entry contains a domain that is found as tandem repeats in a number of bacterial proteins.
+  The domain is rich in negatively charged amino acids and contains multiple potential calcium binding
+  sites.

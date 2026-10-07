@@ -1,0 +1,31 @@
+id: Pfam:PF11938
+pfam_id: PF11938
+name: TLR4 regulator and MIR-interacting MSAP
+short_name: DUF3456
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11938
+counters:
+  proteins: 6340
+  matches: 7021
+  proteomes: 1740
+  taxa: 5435
+  structures: 1
+  alphafold_models: 5514
+  domain_architectures: 121
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021852
+description: This family of proteins, found from plants to humans, is PRAT4 (A and B), a Protein Associated
+  with Toll-like receptor 4. The Toll family of receptors - TLRs - plays an essential role in innate recognition
+  of microbial products, the first line of defence against bacterial infection [[cite:PUB00109675]]. PRAT4A
+  influences the subcellular distribution and the strength of TLR responses and alters the relative activity
+  of each TLR. PRAT4B regulates TLR4 trafficking to the cell surface and the extent of its expression
+  there [[cite:PUB00109676]][[cite:PUB00109677]]. TLR4 recognizes lipopolysaccharide (LPS), one of the
+  most immuno-stimulatory glycolipids constituting the outer membrane of the Gram-negative bacteria. This
+  family has also been described as a SAP-like MIR-interacting protein family.

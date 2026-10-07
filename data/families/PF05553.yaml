@@ -1,0 +1,26 @@
+id: Pfam:PF05553
+pfam_id: PF05553
+name: Cotton fibre expressed protein
+short_name: DUF761
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05553
+counters:
+  proteins: 13240
+  matches: 13264
+  proteomes: 375
+  taxa: 1045
+  structures: 0
+  alphafold_models: 10797
+  domain_architectures: 110
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008480
+description: This family consists of several plant proteins of unknown function. Three of the sequences
+  (from Gossypium hirsutum) in this family are described as cotton fibre expressed proteins [[cite:PUB00011314]].
+  The remaining sequences, found in Arabidopsis thaliana, are uncharacterised.

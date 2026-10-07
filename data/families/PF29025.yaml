@@ -1,0 +1,27 @@
+id: Pfam:PF29025
+pfam_id: PF29025
+name: Domain of unknown function (DUF8492)
+short_name: DUF8492
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29025
+counters:
+  proteins: 1407
+  matches: 1407
+  proteomes: 1386
+  taxa: 1965
+  structures: 0
+  alphafold_models: 913
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061562
+description: This entry represents a C-terminal domain found in TIGR00341 family proteins. This domain
+  follows the TIGR00341/DUF389 domain ([pfam:PF04087]) and is approximately 70-80 residues in length.
+  The family is found predominantly in Bacteroidota, particularly in Flavobacteriales. The function of
+  this domain remains to be determined.

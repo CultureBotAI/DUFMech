@@ -1,0 +1,26 @@
+id: Pfam:PF19531
+pfam_id: PF19531
+name: Family of unknown function (DUF6058)
+short_name: DUF6058
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19531
+counters:
+  proteins: 372
+  matches: 374
+  proteomes: 350
+  taxa: 559
+  structures: 0
+  alphafold_models: 185
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045694
+description: This entry represents a member of a biosynthetic gene cluster (BGC). This BGC (BGC0001590)
+  is described by MIBiG as an example of the following biosynthetic class, polyketide. This family includes
+  a protein from the formicamycins A-M biosynthetic gene cluster from Streptomyces sp. KY5 [[cite:PUB00098929]].

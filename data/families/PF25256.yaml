@@ -1,0 +1,26 @@
+id: Pfam:PF25256
+pfam_id: PF25256
+name: Family of unknown function (DUF7857)
+short_name: DUF7857
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25256
+counters:
+  proteins: 218
+  matches: 218
+  proteomes: 211
+  taxa: 329
+  structures: 0
+  alphafold_models: 205
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057179
+description: This family represents a group of uncharacterised proteins from halobacteria. Members are
+  around 284 residues and are predicted to adopt a mainly beta configuration an the N-terminal and show
+  short alpha helices in the C-terminal.

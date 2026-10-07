@@ -1,0 +1,27 @@
+id: Pfam:PF19457
+pfam_id: PF19457
+name: Family of unknown function (DUF5994)
+short_name: DUF5994
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19457
+counters:
+  proteins: 2979
+  matches: 2984
+  proteomes: 1343
+  taxa: 1586
+  structures: 0
+  alphafold_models: 1551
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046036
+description: This entry represents a member of a biosynthetic gene cluster (BGC). This BGC (BGC0000202)
+  is described by MIBiG as an example of the following biosynthetic class, polyketide. This family contains
+  a protein found in the azicemicin B biosynthetic gene cluster from Kibdelosporangium sp. MJ126-NF4 [[cite:PUB00099399]].
+  The function of this protein is unknown.

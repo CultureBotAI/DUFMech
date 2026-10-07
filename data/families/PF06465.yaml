@@ -1,0 +1,25 @@
+id: Pfam:PF06465
+pfam_id: PF06465
+name: CHD subfamily II, DUF1087
+short_name: DUF1087
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06465
+counters:
+  proteins: 7326
+  matches: 7329
+  proteomes: 1594
+  taxa: 5059
+  structures: 2
+  alphafold_models: 432
+  domain_architectures: 196
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009463
+description: This domain is found in chromatin remodelling factors (CHDs) from subfamily II [[cite:PUB00098174]]
+  including CHD3/4/5 from animals and PICKLE. from Arabidopsis. The exact function is, as yet, unknown.

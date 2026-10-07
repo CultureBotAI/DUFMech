@@ -1,0 +1,30 @@
+id: Pfam:PF04343
+pfam_id: PF04343
+name: Domain of unknown function DUF488
+short_name: DUF488
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04343
+counters:
+  proteins: 4633
+  matches: 4652
+  proteomes: 4007
+  taxa: 6608
+  structures: 0
+  alphafold_models: 2903
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007438
+description: This entry has been described to include subclades of DUF488 domains (namely DUF488-s, for
+  DUF488-short subclade, DUF488-l for long subclade and DUF488-u for DUF488-standalone subclade) which
+  all which contain the ancestral core of the domain. DUF488-s commonly pairs with the DUF488-l subclade
+  on the genome. In the case of DUF488-l and DUF488-u, the core domain is followed by a single beta-strand
+  that stacks at the C-terminus of the core beta-sheet and a multi-helical 'cap' [[cite:PUB00153826]].
+  Unlike the DUF488-s and DUF488-l subclades, DUF488-u is not found adjacent to other DUF488 subclades
+  on the genome [[cite:PUB00153826]].

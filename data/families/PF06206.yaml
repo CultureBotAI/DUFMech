@@ -1,0 +1,28 @@
+id: Pfam:PF06206
+pfam_id: PF06206
+name: CpeT/CpcT family (DUF1001)
+short_name: CpeT
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06206
+counters:
+  proteins: 1567
+  matches: 1617
+  proteomes: 871
+  taxa: 2426
+  structures: 5
+  alphafold_models: 1101
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010404
+description: This family consists of proteins of proteins belonging to the CpeT/CpcT family. These proteins
+  are around 200 amino acids in length. The proteins contain a conserved motif PYR in the amino terminal
+  half of the protein that may be functionally important. The species distribution of the family is interesting.
+  So far it is restricted to cyanobacteria, cryptomonads and plants. It has been shown that CpcT encodes
+  a bilin lyase responsible for attachment of phycocyanobilin to the beta subunit of phycocyanin [[cite:PUB00056796]].

@@ -1,0 +1,29 @@
+id: Pfam:PF26506
+pfam_id: PF26506
+name: Domain of unknown function (DUF8574)
+short_name: DUF8574
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26506
+counters:
+  proteins: 94
+  matches: 94
+  proteomes: 75
+  taxa: 143
+  structures: 0
+  alphafold_models: 81
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058481
+description: This entry represents a domain from a family of uncharacterised proteins in archaea. The
+  proteins containing this domain are predominantly found in members of the Halobacteria class, including
+  families such as Haloarculaceae, Natrialbaceae, and Haloferacaceae. The domain is typically found in
+  proteins ranging from approximately 240 to 300 amino acids in length. This domain shows structural similarity
+  to the Csm1 protein covering the HD-like domain and domain A [[cite:PUB00091420]]. This finding suggests
+  that this domain may have DNase activity.

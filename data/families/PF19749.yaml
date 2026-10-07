@@ -1,0 +1,27 @@
+id: Pfam:PF19749
+pfam_id: PF19749
+name: Family of unknown function (DUF6236)
+short_name: DUF6236
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19749
+counters:
+  proteins: 272
+  matches: 272
+  proteomes: 267
+  taxa: 586
+  structures: 0
+  alphafold_models: 143
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046203
+description: This entry represents a member of a biosynthetic gene cluster (BGC). This BGC (BGC0001432)
+  is described by MIBiG as an example of the following biosynthetic classes, NRP (non-ribosomal peptide)
+  and polyketide. It includes a member from the myxochromide D biosynthetic gene cluster from Stigmatella
+  erecta [[cite:PUB00098945]].

@@ -1,0 +1,25 @@
+id: Pfam:PF31065
+pfam_id: PF31065
+name: Domain of unknown function (DUF8798)
+short_name: DUF8798
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF31065
+counters:
+  proteins: 462
+  matches: 464
+  proteomes: 320
+  taxa: 884
+  structures: 0
+  alphafold_models: 380
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061859
+description: This domain is found in uncharacterised plant proteins. It contains several conserved aromatic
+  residues.

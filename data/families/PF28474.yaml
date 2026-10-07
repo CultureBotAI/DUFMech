@@ -1,0 +1,26 @@
+id: Pfam:PF28474
+pfam_id: PF28474
+name: Domain of unknown function (DUF8412)
+short_name: DUF8412
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28474
+counters:
+  proteins: 5877
+  matches: 5878
+  proteomes: 5237
+  taxa: 7681
+  structures: 0
+  alphafold_models: 3600
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059456
+description: This entry represents an uncharacterised domain that is found N-terminal to [pfam:PF13376].
+  The function of these proteins is unknown. These proteins contain a conserved motif ALCXGWID in the
+  central part of the sequence. This domain is found in both bacterial and fungal proteins.

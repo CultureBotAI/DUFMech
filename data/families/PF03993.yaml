@@ -1,0 +1,25 @@
+id: Pfam:PF03993
+pfam_id: PF03993
+name: Domain of Unknown Function (DUF349)
+short_name: DUF349
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03993
+counters:
+  proteins: 6957
+  matches: 23114
+  proteomes: 6539
+  taxa: 8240
+  structures: 0
+  alphafold_models: 4199
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007139
+description: This domain is found singly or as up to five tandem repeats in a small set of bacterial proteins.
+  There are two or three alpha-helices, and possibly a beta-strand.

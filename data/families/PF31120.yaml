@@ -1,0 +1,26 @@
+id: Pfam:PF31120
+pfam_id: PF31120
+name: Family of unknown function (DUF8817)
+short_name: DUF8817
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF31120
+counters:
+  proteins: 2442
+  matches: 2457
+  proteomes: 2136
+  taxa: 3226
+  structures: 11
+  alphafold_models: 1447
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061878
+description: This is a family of fungal uncharacterised sequences of unknown function. Some members are
+  annotated as related to antimicrobial resistance. There are two highly conserved motifs FYxxLGF and
+  GxPR.

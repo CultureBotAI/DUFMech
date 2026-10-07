@@ -1,0 +1,25 @@
+id: Pfam:PF11274
+pfam_id: PF11274
+name: Protein of unknown function (DUF3074)
+short_name: DUF3074
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11274
+counters:
+  proteins: 2126
+  matches: 2134
+  proteomes: 1284
+  taxa: 2656
+  structures: 0
+  alphafold_models: 1734
+  domain_architectures: 24
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024500
+description: This eukaryotic family of proteins has no known function but appears to be part of the START
+  superfamily.

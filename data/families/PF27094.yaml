@@ -1,0 +1,26 @@
+id: Pfam:PF27094
+pfam_id: PF27094
+name: Domain of unknown function (DUF8346)
+short_name: DUF8346
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF27094
+counters:
+  proteins: 247
+  matches: 249
+  proteomes: 7
+  taxa: 49
+  structures: 0
+  alphafold_models: 238
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059390
+description: This entry represents a Leucine Rich domain in uncharacterised proteins mainly from animals.
+  Each Leucine Rich Repeat is composed of a beta-alpha unit. These units form elongated non-globular structures.
+  Leucine Rich Repeats are often flanked by cysteine rich domains.

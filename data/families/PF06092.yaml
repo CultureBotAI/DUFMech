@@ -1,0 +1,28 @@
+id: Pfam:PF06092
+pfam_id: PF06092
+name: Enterobacterial putative membrane protein (DUF943)
+short_name: DUF943
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06092
+counters:
+  proteins: 553
+  matches: 553
+  proteomes: 141
+  taxa: 239
+  structures: 0
+  alphafold_models: 295
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010351
+description: This family consists of several hypothetical putative membrane proteins from Escherichia
+  coli, Yersinia pestis and Salmonella typhi. Recently, it was proposed that members of this family along
+  with members of DUF3289 ([pfam:PF11692]) should be recognised as a putative toxin-antitoxin pair in
+  which DUF3289 ([pfam:PF11692]) is a homolog of Colicin M and DUF943 acts as its cognate immunity protein
+  [[cite:PUB00154362]].

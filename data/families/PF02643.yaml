@@ -1,0 +1,36 @@
+id: Pfam:PF02643
+pfam_id: PF02643
+name: Uncharacterized ACR, COG1430
+short_name: DUF192
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02643
+counters:
+  proteins: 8199
+  matches: 8203
+  proteomes: 7198
+  taxa: 10914
+  structures: 2
+  alphafold_models: 5508
+  domain_architectures: 19
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003795
+description: Two structures have been solved for members of this large (>500 members) family of bacterial
+  proteins present mostly in environmental bacteria and metagenomes (distant homologues are also present
+  in several Plasmodium species). TOPSAN analysis for pdb:3pjy shows that there is much similarity with
+  the other solved structure, pdb:3m7a, solved for UniProt:Q2GA55 (Saro_0823), a homologue of Thermotoga
+  maritima TM1668, UniProt:Q9X1Z6., The homologue in Caulobacter crescentus (CC1388), UniProt:Q9A8G6,
+  is associated with CspD, a cold shock protein (CC1387), UniProt:Q9A8G7. However, the genomic context
+  of UniProt:Q2GA55 is most conserved with a putative xylose isomerase, suggesting a possible role in
+  extracellular sugar processing. Saro_0821, UniProt:Q2GA57, is annotated as an AMP-dependent synthetase
+  and ligase. PDB:3m7a structure corresponds to the C-terminal (27-165) fragment of the YP_496102 (Saro_0823)
+  protein and it is structurally unique, as the best hits from Dali have a Z-score of 3.8 (1nt0, 2j1t,
+  3kq4) and it is thus a likely candidate for a new fold. Interestingly, many of the top Dali hits are
+  involved in sugar metabolism. There are no obvious active site-like cavities on the protein surface
+  of 3m7a (http://www.topsan.org/Proteins/JCSG/).

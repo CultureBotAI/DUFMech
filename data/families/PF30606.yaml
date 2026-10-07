@@ -1,0 +1,28 @@
+id: Pfam:PF30606
+pfam_id: PF30606
+name: Domain of unknown function (DUF8667)
+short_name: DUF8667
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30606
+counters:
+  proteins: 17
+  matches: 17
+  proteomes: 17
+  taxa: 45
+  structures: 0
+  alphafold_models: 12
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061728
+description: This entry represents a family of small uncharacterised proteins of approximately 67 residues.
+  Some family members are annotated as containing NIF11 or DUF1292 domains, although the functional significance
+  of this is unclear as the family is restricted to marine picocyanobacteria (Prochlorococcus, Synechococcus,
+  and Cyanobium species in Synechococcales), which are not nitrogen-fixing organisms. The function of
+  this family remains to be determined.

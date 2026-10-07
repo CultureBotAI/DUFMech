@@ -1,0 +1,27 @@
+id: Pfam:PF22795
+pfam_id: PF22795
+name: DUF4796 N-terminal
+short_name: DUF4796_N
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22795
+counters:
+  proteins: 764
+  matches: 764
+  proteomes: 687
+  taxa: 2543
+  structures: 0
+  alphafold_models: 656
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR053922
+description: This cysteine-rich domain is functionally uncharacterised and is found in eukaryotes. Proteins
+  with this domain are typically between 194 and 289 amino acids in length. AlphaFold structural models
+  reveal a C-terminal beta-strand, usually located after the DUF4796_C domain ([pfam:PF16044]). This beta-strand
+  (not included in this entry's seed alignment) contributes to the beta-sheet structure within this domain.

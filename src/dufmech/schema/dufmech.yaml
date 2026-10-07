@@ -1,0 +1,208 @@
+id: https://w3id.org/dufmech/schema
+name: dufmech
+title: DUFMech Family Records
+description: Frozen family identities with separately curated, evidence-backed assertions.
+license: BSD-3-Clause
+prefixes:
+  linkml: https://w3id.org/linkml/
+  dufmech: https://w3id.org/dufmech/
+  Pfam: https://www.ebi.ac.uk/interpro/entry/pfam/
+  InterPro: https://www.ebi.ac.uk/interpro/entry/InterPro/
+default_prefix: dufmech
+default_range: string
+imports:
+  - linkml:types
+  - mech_shared
+classes:
+  FamilyRecord:
+    tree_root: true
+    description: A source-derived family projection; SEEDED is not scientific review.
+    attributes:
+      id:
+        identifier: true
+        required: true
+        pattern: '^Pfam:PF[0-9]{5}$'
+      pfam_id:
+        required: true
+        pattern: '^PF[0-9]{5}$'
+      name:
+        required: true
+      short_name:
+        required: true
+      interpro_id:
+        pattern: '^InterPro:IPR[0-9]{6}$'
+      seed_status:
+        required: true
+        range: SeedStatus
+      characterization_status:
+        required: true
+        range: CharacterizationStatus
+      curation_status:
+        required: true
+        range: CurationStatus
+      review_id:
+        description: Retained completed record report; required with matching content and history for REVIEWED.
+        pattern: '^reports/yaml_record_review/[A-Za-z0-9_.-]+[.]md$'
+      curation_history:
+        description: Stable directory containing canonical append-only history for this family.
+        pattern: '^history/records/PF[0-9]{5}$'
+      description:
+        description: Imported source description, not a verified functional assertion.
+      source_url:
+        required: true
+        range: uri
+      counters:
+        range: FamilyCounters
+        inlined: true
+      provenance:
+        required: true
+        range: SnapshotProvenance
+        inlined: true
+      score_provenance:
+        range: SnapshotProvenance
+        inlined: true
+      assertions:
+        range: FunctionalAssertion
+        multivalued: true
+        inlined_as_list: true
+      discussions:
+        range: Discussion
+        multivalued: true
+        inlined_as_list: true
+      datasets:
+        range: Dataset
+        multivalued: true
+        inlined_as_list: true
+      cross_corpus_links:
+        range: CrossCorpusLink
+        multivalued: true
+        inlined_as_list: true
+  FamilyCuration:
+    description: Human-owned overlay. Imported identity and counters cannot be overridden.
+    attributes:
+      pfam_id:
+        required: true
+        pattern: '^PF[0-9]{5}$'
+      curation_status:
+        required: true
+        range: CurationStatus
+      review_id:
+        pattern: '^reports/yaml_record_review/[A-Za-z0-9_.-]+[.]md$'
+      curation_history:
+        pattern: '^history/records/PF[0-9]{5}$'
+      assertions:
+        range: FunctionalAssertion
+        multivalued: true
+        inlined_as_list: true
+      discussions:
+        range: Discussion
+        multivalued: true
+        inlined_as_list: true
+      datasets:
+        range: Dataset
+        multivalued: true
+        inlined_as_list: true
+      cross_corpus_links:
+        range: CrossCorpusLink
+        multivalued: true
+        inlined_as_list: true
+  FamilyCounters:
+    attributes:
+      proteins:
+        range: integer
+        minimum_value: 0
+      matches:
+        range: integer
+        minimum_value: 0
+      proteomes:
+        range: integer
+        minimum_value: 0
+      taxa:
+        range: integer
+        minimum_value: 0
+      structures:
+        range: integer
+        minimum_value: 0
+      alphafold_models:
+        range: integer
+        minimum_value: 0
+      domain_architectures:
+        range: integer
+        minimum_value: 0
+  SnapshotProvenance:
+    attributes:
+      snapshot_id:
+        required: true
+      path:
+        required: true
+        pattern: '^data/worklists/[A-Za-z0-9_-]+[.]json$'
+      sha256:
+        required: true
+        pattern: '^[a-f0-9]{64}$'
+      generated_at:
+        required: true
+        pattern: '^\d{4}-\d{2}-\d{2}T.*(Z|[+-]\d{2}:\d{2})$'
+      source_url:
+        description: Upstream URL when the snapshot is acquired rather than locally derived.
+        range: uri
+  FunctionalAssertion:
+    description: Scoped experimental or computational claim, not implied by a DUF name.
+    attributes:
+      assertion_id:
+        required: true
+        pattern: '^[A-Za-z0-9_-]+$'
+      statement:
+        required: true
+      evidence_kind:
+        required: true
+        range: EvidenceKind
+      scope:
+        required: true
+        description: Exact family/subfamily/protein scope and limits of generalization.
+      evidence:
+        required: true
+        range: ClaimEvidence
+        multivalued: true
+        inlined_as_list: true
+        minimum_cardinality: 1
+  ClaimEvidence:
+    description: A primary-source quotation retained locally for an independently checkable claim.
+    attributes:
+      reference:
+        required: true
+        pattern: '^(PMID:[0-9]+|doi:10[.][0-9]{4,9}/\S+|https://\S+)$'
+      source_url:
+        required: true
+        range: uri
+      snippet:
+        required: true
+      explanation:
+        required: true
+      cache_path:
+        required: true
+        pattern: '^evidence/[A-Za-z0-9_./-]+[.]txt$'
+      cache_sha256:
+        required: true
+        pattern: '^[a-f0-9]{64}$'
+enums:
+  SeedStatus:
+    permissible_values:
+      UNKNOWN_CANDIDATE:
+      KNOWN_HISTORICAL_DUF:
+      FALSE_POSITIVE_TEXT_HIT:
+  CharacterizationStatus:
+    permissible_values:
+      UNSCORED:
+      UNKNOWN_CANDIDATE:
+      KNOWN_HISTORICAL_DUF:
+      PARTIALLY_CHARACTERIZED:
+  CurationStatus:
+    permissible_values:
+      SEEDED:
+      IN_PROGRESS:
+      REVIEWED:
+  EvidenceKind:
+    permissible_values:
+      EXPERIMENTAL:
+      COMPUTATIONAL:
+      CONTEXTUAL:

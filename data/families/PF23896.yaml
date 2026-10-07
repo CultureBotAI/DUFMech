@@ -1,0 +1,27 @@
+id: Pfam:PF23896
+pfam_id: PF23896
+name: Domain of unknown function (DUF7244)
+short_name: DUF7244
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23896
+counters:
+  proteins: 62
+  matches: 62
+  proteomes: 62
+  taxa: 169
+  structures: 0
+  alphafold_models: 4
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055668
+description: This entry represents an uncharacterized protein found in various bacteriophages that infect
+  bacteria in the family Enterobacteriaceae, including phages of Escherichia, Shigella and Citrobacter.
+  The protein is approximately 55-60 amino acids in length. An AlphaFold model shows this domain adopts
+  a small beta barrel structure. This domain is possibly related to the KOW motif.

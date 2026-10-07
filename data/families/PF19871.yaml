@@ -1,0 +1,27 @@
+id: Pfam:PF19871
+pfam_id: PF19871
+name: Family of unknown function (DUF6344)
+short_name: DUF6344
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19871
+counters:
+  proteins: 597
+  matches: 597
+  proteomes: 592
+  taxa: 635
+  structures: 0
+  alphafold_models: 249
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045925
+description: This entry represents a member of a biosynthetic gene cluster (BGC). This BGC (BGC0000843)
+  is described by MIBiG as an example of the following biosynthetic class, other (unspecified), in particular
+  the alanylclavam biosynthetic gene cluster from Streptomyces clavuligerus ATCC 27064 [[cite:PUB00099389],[cite:PUB00099390]].
+  This family appears to be predominantly found in Actinobacteria.

@@ -1,0 +1,168 @@
+# Local multi-format audit; NOT a CLAW YAML writer profile.
+# Policies describe reviewed behavior, not a static proof or blanket safety gate.
+version: 1
+validators: [validate_record, _validate_record, _validate_content, check_manifest, verified_manifest]
+history_helpers: [new_history]
+helpers:
+  write_worklist_snapshot:
+    path: "src/dufmech/snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "exclusive-artifact-set"
+    tests: ["tests/test_duf_puf_snapshot.py"]
+  write_member_uniref_snapshot:
+    path: "src/dufmech/member_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "legacy-replace"
+    tests: ["tests/test_member_snapshot.py"]
+  write_mgnify_snapshot:
+    path: "src/dufmech/mgnify_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "legacy-replace"
+    tests: ["tests/test_mgnify_snapshot.py"]
+  write_alphafold_snapshot:
+    path: "src/dufmech/alphafold_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "legacy-replace"
+    tests: ["tests/test_alphafold_snapshot.py"]
+  write_cath_snapshot:
+    path: "src/dufmech/cath_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "legacy-replace"
+    tests: ["tests/test_cath_snapshot.py"]
+  write_cdsearch_snapshot:
+    path: "src/dufmech/cdsearch_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "legacy-replace"
+    tests: ["tests/test_cdsearch_snapshot.py"]
+  write_ncbifam_snapshot:
+    path: "src/dufmech/ncbifam_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "legacy-replace"
+    tests: ["tests/test_ncbifam_snapshot.py"]
+  write_eggnog_snapshot:
+    path: "src/dufmech/eggnog_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "legacy-replace"
+    tests: ["tests/test_eggnog_snapshot.py"]
+  write_efi_gnt_snapshot:
+    path: "src/dufmech/efi_gnt_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "legacy-replace"
+    tests: ["tests/test_efi_gnt_snapshot.py"]
+  write_jgi_img_snapshot:
+    path: "src/dufmech/jgi_img_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "legacy-replace"
+    tests: ["tests/test_jgi_img_snapshot.py"]
+  write_threedbeacons_snapshot:
+    path: "src/dufmech/threedbeacons_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "legacy-replace"
+    tests: ["tests/test_threedbeacons_snapshot.py"]
+  write_rcsb_snapshot:
+    path: "src/dufmech/rcsb_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "legacy-replace"
+    tests: ["tests/test_rcsb_snapshot.py"]
+  write_pdbe_kb_snapshot:
+    path: "src/dufmech/pdbe_kb_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "legacy-replace"
+    tests: ["tests/test_pdbe_kb_snapshot.py"]
+  write_rhea_snapshot:
+    path: "src/dufmech/rhea_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "legacy-replace"
+    tests: ["tests/test_rhea_snapshot.py"]
+  write_quickgo_snapshot:
+    path: "src/dufmech/quickgo_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "legacy-replace"
+    tests: ["tests/test_quickgo_snapshot.py"]
+  write_stringdb_snapshot:
+    path: "src/dufmech/stringdb_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "legacy-replace"
+    tests: ["tests/test_stringdb_snapshot.py"]
+  write_uniparc_snapshot:
+    path: "src/dufmech/uniparc_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "legacy-replace"
+    tests: ["tests/test_uniparc_snapshot.py"]
+  write_cross_mech_snapshot:
+    path: "src/dufmech/cross_mech_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "exclusive-artifact-set"
+    tests: ["tests/test_cross_mech.py"]
+  write_snapshot_artifacts:
+    path: "src/dufmech/snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "exclusive-artifact-set"
+    tests: ["tests/test_duf_puf_snapshot.py"]
+  write_score_snapshot:
+    path: "src/dufmech/scoring_snapshot.py"
+    formats: ["json","tsv","manifest.json"]
+    policy: "exclusive-artifact-set"
+    tests: ["tests/test_scoring_snapshot.py"]
+    required_calls: [build_score_manifest, write_snapshot_artifacts]
+  write_records:
+    path: "src/dufmech/records.py"
+    formats: ["yaml","json"]
+    policy: "generated-owned-files-apply-only"
+    tests: ["tests/test_records.py"]
+    apply_default: false
+    required_calls: [_writer_lock, _write_records]
+  _write_records:
+    path: "src/dufmech/records.py"
+    formats: ["yaml","json"]
+    policy: "validated-owned-projection-internal"
+    tests: ["tests/test_records.py"]
+    required_calls: [validate_record, safe_path, _publish_projection]
+  _writer_lock:
+    path: "src/dufmech/records.py"
+    formats: ["lockfile"]
+    policy: "advisory-writer-lock-internal"
+    tests: ["tests/test_records.py"]
+    required_calls: [safe_path, open, flock]
+  _publish_projection:
+    path: "src/dufmech/records.py"
+    formats: ["yaml","json"]
+    policy: "retained-recovery-exclusive-publish-internal"
+    tests: ["tests/test_records.py"]
+    required_calls: [safe_path, rename, link]
+  write_schema_artifacts:
+    path: "src/dufmech/records.py"
+    formats: ["json","markdown"]
+    policy: "generated-schema-apply-only"
+    tests: ["tests/test_records.py"]
+    apply_default: false
+    required_calls: [schema_artifacts, safe_path, _publish]
+  _publish:
+    path: "src/dufmech/records.py"
+    formats: ["yaml","json","markdown"]
+    policy: "atomic-file-replace-internal"
+    tests: ["tests/test_records.py"]
+  _stage_file:
+    path: "src/dufmech/records.py"
+    formats: ["yaml","json","markdown"]
+    policy: "exclusive-staging-directory-descriptor-internal"
+    tests: ["tests/test_records.py"]
+    required_calls: [open, fsync]
+  append_document:
+    path: "src/dufmech/reviews.py"
+    formats: ["yaml","markdown"]
+    policy: "exclusive-append"
+    tests: ["tests/test_reviews.py"]
+    required_calls: [link, fsync]
+  save_review:
+    path: "src/dufmech/reviews.py"
+    formats: ["markdown"]
+    policy: "validated-append"
+    tests: ["tests/test_reviews.py"]
+    required_calls: [_validate_content, append_document]
+  new_history:
+    path: "src/dufmech/history.py"
+    formats: ["yaml"]
+    policy: "validated-append"
+    tests: ["tests/test_history.py"]
+    required_calls: [_validate_record, append_document]

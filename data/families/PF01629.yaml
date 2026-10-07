@@ -1,0 +1,25 @@
+id: Pfam:PF01629
+pfam_id: PF01629
+name: Domain of unknown function DUF22
+short_name: DUF22
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01629
+counters:
+  proteins: 83
+  matches: 101
+  proteomes: 72
+  taxa: 153
+  structures: 0
+  alphafold_models: 76
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002572
+description: This domain is found in 1 to 3 copies in archaebacterial proteins. The function of the domain
+  is unknown. This family appears to be expanded in Archaeoglobus fulgidus.

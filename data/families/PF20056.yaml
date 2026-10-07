@@ -1,0 +1,26 @@
+id: Pfam:PF20056
+pfam_id: PF20056
+name: Family of unknown function (DUF6455)
+short_name: DUF6455
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20056
+counters:
+  proteins: 1016
+  matches: 1016
+  proteomes: 637
+  taxa: 971
+  structures: 0
+  alphafold_models: 710
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045601
+description: This family of proteins is functionally uncharacterised. This family of proteins is found
+  in bacteria. Proteins in this family are approximately 90 amino acids in length. This presumed domain
+  contains a conserved histidine and four conserved cysteines suggestive of zinc binding.

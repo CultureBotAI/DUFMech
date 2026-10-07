@@ -1,0 +1,24 @@
+id: Pfam:PF12581
+pfam_id: PF12581
+name: Protein of unknown function (DUF3756)
+short_name: DUF3756
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12581
+counters:
+  proteins: 60
+  matches: 60
+  proteomes: 2
+  taxa: 20
+  structures: 0
+  alphafold_models: 4
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022230
+description: This domain family is found in viruses, and is approximately 40 amino acids in length.

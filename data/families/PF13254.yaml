@@ -1,0 +1,27 @@
+id: Pfam:PF13254
+pfam_id: PF13254
+name: Family of unknown function (DUF4045)
+short_name: DUF4045
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13254
+counters:
+  proteins: 910
+  matches: 984
+  proteomes: 864
+  taxa: 1730
+  structures: 0
+  alphafold_models: 84
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025118
+description: This presumed domain is functionally uncharacterised. This protein region family is found
+  in fungi, and is typically between 384 and 430 amino acids in length. These proteins are largely disordered
+  with small regions of high conservation that are likely acting as short linear motifs. Some members
+  of this family contain gelsolin domains at the C-terminus.

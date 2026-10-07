@@ -1,0 +1,25 @@
+id: Pfam:PF12299
+pfam_id: PF12299
+name: Protein of unknown function (DUF3627)
+short_name: DUF3627
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12299
+counters:
+  proteins: 494
+  matches: 497
+  proteomes: 131
+  taxa: 408
+  structures: 0
+  alphafold_models: 418
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022549
+description: This domain family is found in bacteria and viruses, and is approximately 90 amino acids
+  in length. The family is found in association with [pfam:PF02498].

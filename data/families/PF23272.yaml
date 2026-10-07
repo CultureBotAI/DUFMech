@@ -1,0 +1,26 @@
+id: Pfam:PF23272
+pfam_id: PF23272
+name: Domain of unknown function (DUF7075)
+short_name: DUF7075
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23272
+counters:
+  proteins: 1396
+  matches: 1427
+  proteomes: 372
+  taxa: 1027
+  structures: 0
+  alphafold_models: 1119
+  domain_architectures: 31
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055503
+description: This domain is found in a group of uncharacterised plant proteins. It shares a significant
+  sequence similarity with members of the GDP-fucose protein O-fucosyltransferase family ([pfam:PF10250])
+  and it is predicted to adopt similar structure.

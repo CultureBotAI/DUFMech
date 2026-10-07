@@ -1,0 +1,27 @@
+id: Pfam:PF02582
+pfam_id: PF02582
+name: RMND1/Sif2-Sif3/Mrx10, DUF155
+short_name: DUF155
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02582
+counters:
+  proteins: 9028
+  matches: 9108
+  proteomes: 4343
+  taxa: 10538
+  structures: 0
+  alphafold_models: 7471
+  domain_architectures: 131
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003734
+description: This entry represents a domain found in RMND1 from mammals, Sif2/Sif3 from fission yeasts
+  and Rmd1/Rmd8/YDR282C (Mrx10) from budding yeasts. RMND1 and its yeast homologue, Mrx10, are mitochondrial
+  proteins required for mitochondrial translation [[cite:PUB00076329],[cite:PUB00076330]]. Rmd1 and Rmd8
+  are cytoplasmic proteins required for sporulation [[cite:PUB00075393]].

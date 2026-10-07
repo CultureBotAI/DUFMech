@@ -1,0 +1,26 @@
+id: Pfam:PF28131
+pfam_id: PF28131
+name: Domain of unknown function (DUF8372)
+short_name: DUF8372
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28131
+counters:
+  proteins: 1148
+  matches: 1167
+  proteomes: 509
+  taxa: 1032
+  structures: 0
+  alphafold_models: 617
+  domain_architectures: 156
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059416
+description: This domain is found in uncharacterised fungal proteins. It is predicted to fold into an
+  alpha/beta structure composed of an open beta-barrel with alpha-helices packed on one side. It contains
+  highly conserved G[FWY][DE] sequence motif that may be important for function.

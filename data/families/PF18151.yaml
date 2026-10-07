@@ -1,0 +1,26 @@
+id: Pfam:PF18151
+pfam_id: PF18151
+name: Domain of unknown function (DUF5601)
+short_name: DUF5601
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18151
+counters:
+  proteins: 6756
+  matches: 6758
+  proteomes: 3165
+  taxa: 8367
+  structures: 9
+  alphafold_models: 4099
+  domain_architectures: 99
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR041545
+description: This domain is found in the catalytic core RABEX-5 present in Homo sapiens. RABEX, also known
+  as Rab GTPase exchange factors, regulate endocytic trafficking through activation of the Rab families
+  RAB5, RAB21 and RAB22. The domain is helical in nature [[cite:PUB00042275]].

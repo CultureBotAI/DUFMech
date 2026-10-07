@@ -1,0 +1,25 @@
+id: Pfam:PF17240
+pfam_id: PF17240
+name: Family of unknown function (DUF5313)
+short_name: DUF5313
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17240
+counters:
+  proteins: 1405
+  matches: 1405
+  proteomes: 847
+  taxa: 1017
+  structures: 0
+  alphafold_models: 868
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR035197
+description: This is a family of unknown function, found mostly in Actinobacteria and composed of trans-membrane
+  proteins.

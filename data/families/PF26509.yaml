@@ -1,0 +1,28 @@
+id: Pfam:PF26509
+pfam_id: PF26509
+name: Family of unknown function (DUF8171)
+short_name: DUF8171
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26509
+counters:
+  proteins: 278
+  matches: 278
+  proteomes: 276
+  taxa: 513
+  structures: 0
+  alphafold_models: 183
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058484
+description: This entry represents a family of uncharacterised proteins from the Bacillota phylum. The
+  family is predominantly found in bacteria such as Paenibacillus and Bacillus species. Proteins in this
+  family are typically around 280-300 amino acids in length. The proteins are predicted integral membrane
+  proteins containing eight transmembrane domains. These proteins show structural similarity to [pfam:PF12822]
+  suggesting this family is likely to be a transporter for an as yet unidentified substrate.

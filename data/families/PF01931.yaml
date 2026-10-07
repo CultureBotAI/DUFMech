@@ -1,0 +1,26 @@
+id: Pfam:PF01931
+pfam_id: PF01931
+name: Protein of unknown function DUF84
+short_name: NTPase_I-T
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01931
+counters:
+  proteins: 3984
+  matches: 4030
+  proteomes: 3631
+  taxa: 7463
+  structures: 4
+  alphafold_models: 2998
+  domain_architectures: 24
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR026533
+description: NTPase_I-T is a family of NTPases with supreme activity against ITP and XTP. Active site
+  analysis and structure comparison of YjjX strongly suggested that it is an NTP binding protein with
+  nucleoside triphosphatase activity. YjjX exhibits a mixed alpha-beta fold [[cite:PUB00038960],[cite:PUB00037841]].

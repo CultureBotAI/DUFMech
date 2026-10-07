@@ -1,0 +1,25 @@
+id: Pfam:PF19314
+pfam_id: PF19314
+name: Family of unknown function (DUF5917)
+short_name: DUF5917
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19314
+counters:
+  proteins: 5822
+  matches: 5825
+  proteomes: 2033
+  taxa: 5875
+  structures: 1
+  alphafold_models: 4957
+  domain_architectures: 73
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045669
+description: This short presumed domain is found close to the C-terminus of FHIP proteins, FAM160B proteins
+  and UPF0518 family proteins.

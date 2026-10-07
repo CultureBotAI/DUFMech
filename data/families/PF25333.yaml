@@ -1,0 +1,26 @@
+id: Pfam:PF25333
+pfam_id: PF25333
+name: DUF2921 lipocalin-like domain
+short_name: DUF2921_N
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25333
+counters:
+  proteins: 2385
+  matches: 6449
+  proteomes: 371
+  taxa: 1021
+  structures: 0
+  alphafold_models: 1882
+  domain_architectures: 76
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057425
+description: This entry represents an 8-stranded flattened beta barrel domain which shows structural similarity
+  to the lipocalin fold. The domain shows is found in three copies towards the N-terminus of DUF2921 family
+  proteins.

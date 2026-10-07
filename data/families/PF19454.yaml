@@ -1,0 +1,25 @@
+id: Pfam:PF19454
+pfam_id: PF19454
+name: Family of unknown function (DUF5992)
+short_name: DUF5992
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19454
+counters:
+  proteins: 50
+  matches: 50
+  proteomes: 33
+  taxa: 124
+  structures: 0
+  alphafold_models: 26
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046034
+description: This family of proteins is found in bacteria. Proteins in this family are typically between
+  105 and 116 amino acids in length.

@@ -1,0 +1,25 @@
+id: Pfam:PF17137
+pfam_id: PF17137
+name: Domain of unknown function (DUF5110)
+short_name: DUF5110
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17137
+counters:
+  proteins: 9478
+  matches: 9482
+  proteomes: 6011
+  taxa: 10913
+  structures: 30
+  alphafold_models: 6218
+  domain_architectures: 246
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR033403
+description: This domain is likely to be a carbohydrate-binding domain of some description as it is found
+  immediately C-terminal to the glycosyl-hydrolase family Glyco_hydro_31, [pfam:PF01055].

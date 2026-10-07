@@ -1,0 +1,26 @@
+id: Pfam:PF01519
+pfam_id: PF01519
+name: Protein of unknown function DUF16
+short_name: DUF16
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01519
+counters:
+  proteins: 26
+  matches: 28
+  proteomes: 1
+  taxa: 10
+  structures: 1
+  alphafold_models: 26
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002862
+description: The function of this protein is unknown. It appears to only occur in Mycoplasma pneumoniae.
+  The crystal structure revealed that this domain is composed of two separated homotrimeric coiled-coils
+  [[cite:PUB00039581]].

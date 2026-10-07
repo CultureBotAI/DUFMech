@@ -1,0 +1,28 @@
+id: Pfam:PF28803
+pfam_id: PF28803
+name: Domain of unknown function (DUF8465)
+short_name: DUF8465
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF28803
+counters:
+  proteins: 1822
+  matches: 1822
+  proteomes: 1820
+  taxa: 2357
+  structures: 0
+  alphafold_models: 1187
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061535
+description: This entry represents a small SH3-like beta-barrel domain found N-terminal to the Smr domain
+  ([pfam:PF01713]) in DNA mismatch repair proteins from Bacteroidota. The domain is approximately 50 residues
+  in length and is found predominantly in Flavobacteriaceae, Sphingobacteriaceae and Cytophagales families.
+  The Smr domain itself is involved in DNA mismatch repair processes. The specific function of this N-terminal
+  domain remains to be determined.

@@ -1,0 +1,26 @@
+id: Pfam:PF26805
+pfam_id: PF26805
+name: Domain of unknown function (DUF8553)
+short_name: DUF8553
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26805
+counters:
+  proteins: 257
+  matches: 257
+  proteomes: 257
+  taxa: 479
+  structures: 0
+  alphafold_models: 156
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059785
+description: This entry represents a domain found at the C-terminus of a family of uncharacterised fungal
+  proteins. These proteins are long and largely composed of disordered regions. This domain is predicted
+  to adopt an alpha/beta structure.

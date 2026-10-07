@@ -1,0 +1,27 @@
+id: Pfam:PF12526
+pfam_id: PF12526
+name: Protein of unknown function (DUF3729)
+short_name: DUF3729
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12526
+counters:
+  proteins: 281
+  matches: 289
+  proteomes: 12
+  taxa: 35
+  structures: 0
+  alphafold_models: 20
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022202
+description: This family of proteins is found in viruses. Proteins in this family are typically between
+  145 and 1707 amino acids in length. The family is found in association with [pfam:PF01443], [pfam:PF01661],
+  [pfam:PF05417], [pfam:PF01660], [pfam:PF00978]. There is a single completely conserved residue L that
+  may be functionally important.

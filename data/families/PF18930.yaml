@@ -1,0 +1,26 @@
+id: Pfam:PF18930
+pfam_id: PF18930
+name: Domain of unknown function (DUF5679)
+short_name: DUF5679
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18930
+counters:
+  proteins: 958
+  matches: 958
+  proteomes: 854
+  taxa: 1395
+  structures: 0
+  alphafold_models: 633
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR044044
+description: This family of domains is found in bacteria, archaea, eukaryotes and viruses. Proteins in
+  this family are typically between 48 and 68 amino acids in length. These domains contain four conserved
+  cysteines suggesting that this domain is zinc binding

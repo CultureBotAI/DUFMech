@@ -1,0 +1,26 @@
+id: Pfam:PF24953
+pfam_id: PF24953
+name: Domain of unknown function (DUF7762)
+short_name: DUF7762
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24953
+counters:
+  proteins: 70
+  matches: 70
+  proteomes: 27
+  taxa: 62
+  structures: 0
+  alphafold_models: 65
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056664
+description: This domain is found in uncharacterised proteins mainly from flagellate Discoba. It has detectable
+  similarity to known PDZ domains and it is predicted to adopt similar structure. It is frequently found
+  in multiple tandem copies.

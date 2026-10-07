@@ -1,0 +1,29 @@
+id: Pfam:PF26998
+pfam_id: PF26998
+name: Domain of unknown function (DUF8323)
+short_name: DUF8323
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26998
+counters:
+  proteins: 25
+  matches: 25
+  proteomes: 22
+  taxa: 67
+  structures: 0
+  alphafold_models: 10
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR059367
+description: This entry represents a domain of unknown function in a small group of proteins mostly found
+  in animals , particularly nematodes. This domain contains a Spectrin fold with a conserved three-helix
+  bundle structure that is typically arranged in tandem repeats. These repeats confer mechanical flexibility
+  and structural resilience, allowing the proteins to maintain cell shape and organisation. Spectrin-repeat
+  proteins form elongated scaffolds beneath the plasma membrane and contribute to cytoskeletal integrity
+  and membrane stability [[cite:PUB00161917]]. This domain can be found associated with [pfam:PF00307].

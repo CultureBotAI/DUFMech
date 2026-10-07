@@ -1,0 +1,27 @@
+id: Pfam:PF16283
+pfam_id: PF16283
+name: Domain of unknown function (DUF4929)
+short_name: DUF4929
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16283
+counters:
+  proteins: 23
+  matches: 23
+  proteomes: 23
+  taxa: 55
+  structures: 0
+  alphafold_models: 15
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032562
+description: This entry consists of uncharacterised proteins around 400 residues in length and is mainly
+  found in various species, such as Bacteroides, Capnocytophaga and Prevotella. The function of this proteins
+  is unknown. This entry represents the N-terminal domain of these sequences which may adopt a Ig-like
+  fold.

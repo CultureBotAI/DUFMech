@@ -1,0 +1,24 @@
+id: Pfam:PF09926
+pfam_id: PF09926
+name: Uncharacterized small protein (DUF2158)
+short_name: DUF2158
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09926
+counters:
+  proteins: 979
+  matches: 980
+  proteomes: 858
+  taxa: 1457
+  structures: 0
+  alphafold_models: 622
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019226
+description: Members of this family of prokaryotic proteins have no known function.

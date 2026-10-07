@@ -1,0 +1,24 @@
+id: Pfam:PF07596
+pfam_id: PF07596
+name: Protein of unknown function (DUF1559)
+short_name: SBP_bac_10
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07596
+counters:
+  proteins: 11251
+  matches: 11484
+  proteomes: 173
+  taxa: 429
+  structures: 0
+  alphafold_models: 9492
+  domain_architectures: 65
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011453
+description: A large family of paralogous proteins apparently unique to planctomycetes.

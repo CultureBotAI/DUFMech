@@ -1,0 +1,27 @@
+id: Pfam:PF09843
+pfam_id: PF09843
+name: Predicted membrane protein (DUF2070)
+short_name: DUF2070
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09843
+counters:
+  proteins: 407
+  matches: 430
+  proteomes: 397
+  taxa: 735
+  structures: 0
+  alphafold_models: 386
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019204
+description: This is a family of Archaeal 7-TM proteins. There are 6 closely assembled TM-regions at the
+  N-terminus followed by a long intracellular, from residues 220-590, highly conserved region, of unknown
+  function, terminating with one more TM-region. The short 25 residue section between TMs 5 and 6 might
+  lie on the outer surface of the membrane and be acting as a receptor (from TMHMM).

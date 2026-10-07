@@ -1,0 +1,30 @@
+id: Pfam:PF30500
+pfam_id: PF30500
+name: DUF3084-associated C-terminal helical hairpin
+short_name: DUF3084_C
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30500
+counters:
+  proteins: 334
+  matches: 334
+  proteomes: 330
+  taxa: 873
+  structures: 0
+  alphafold_models: 209
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR062273
+description: This entry represents a C-terminal helical hairpin domain found in DUF3084-containing membrane
+  proteins. It follows the N-terminal DUF3084 domain ([pfam:PF11283]) and one or more intervening domains.
+  The proteins contain an N-terminal signal peptide and a transmembrane helix, suggesting membrane localisation.
+  In Nostoc sp. PCC 7120, the protein Alr4393 is predicted to be a single-pass membrane protein. In Synechococcus
+  sp. WH 8102, the homologue SYNW0274 has been computationally linked to the nitrogen assimilation regulatory
+  network controlled by NtcA. The family is found predominantly in Cyanobacteria (Nostocales, Oscillatoriales)
+  and in Negativicutes (Veillonellaceae). The function of this domain remains to be determined.

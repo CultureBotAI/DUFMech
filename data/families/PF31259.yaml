@@ -1,0 +1,27 @@
+id: Pfam:PF31259
+pfam_id: PF31259
+name: Domain of unknown function (DUF8847)
+short_name: DUF8847
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF31259
+counters:
+  proteins: 1484
+  matches: 1484
+  proteomes: 1231
+  taxa: 1384
+  structures: 0
+  alphafold_models: 771
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061908
+description: This family represents a small domain of approximately 69 amino acids found in uncharacterised
+  proteins from Actinobacteria, particularly Streptomyces, Micromonospora, and Pseudonocardiaceae. It
+  contains a conserved FxGGpxDG sequence motif. This domain is predicted to fold into an open five-stranded
+  beta-barrel.

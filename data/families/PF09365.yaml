@@ -1,0 +1,26 @@
+id: Pfam:PF09365
+pfam_id: PF09365
+name: Conserved hypothetical protein (DUF2461)
+short_name: DUF2461
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09365
+counters:
+  proteins: 7048
+  matches: 7150
+  proteomes: 6081
+  taxa: 9261
+  structures: 0
+  alphafold_models: 4670
+  domain_architectures: 20
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012808
+description: Members of this family are widely (though sparsely) distributed bacterial proteins, about
+  230 residues in length. All members have a motif RxxRDxRFxxx[DN]KxxY. The function of this protein family
+  is unknown.

@@ -1,0 +1,28 @@
+id: Pfam:PF21959
+pfam_id: PF21959
+name: Repeat of unknown function (DUF6923)
+short_name: DUF6923
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21959
+counters:
+  proteins: 1554
+  matches: 1701
+  proteomes: 1295
+  taxa: 2237
+  structures: 0
+  alphafold_models: 794
+  domain_architectures: 297
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054215
+description: This entry represents a beta propeller domain composed of five blades. It is often found
+  in large extracellular proteins in one or more copies. It is uncertain whether this domain might have
+  an enzymatic function or a ligand binding function. Structurally this domain appears to have a sixfold
+  symmetry, but one of the blades takes up the space of normal repeats. This unusual blade is composed
+  of three strands of the first repeat and a final C-terminal strand from the last repeat.

@@ -1,0 +1,25 @@
+id: Pfam:PF25233
+pfam_id: PF25233
+name: Domain of unknown function (DUF7849)
+short_name: DUF7849
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25233
+counters:
+  proteins: 300
+  matches: 300
+  proteomes: 300
+  taxa: 392
+  structures: 0
+  alphafold_models: 181
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057171
+description: This domain is found in uncharacterised proteins from Gram-negative bacteria. It has a detectable
+  similarity to OmpA-like transmembrane domains and it is predicted to adopt a similar beta-barrel structure.

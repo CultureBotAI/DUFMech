@@ -1,0 +1,26 @@
+id: Pfam:PF25927
+pfam_id: PF25927
+name: Family of unknown function (DUF7972)
+short_name: DUF7972
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25927
+counters:
+  proteins: 923
+  matches: 924
+  proteomes: 264
+  taxa: 416
+  structures: 0
+  alphafold_models: 870
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058278
+description: This entry represents a family of uncharacterised proteins found in halobacteria. These proteins
+  are about 350-400 amino acids in length. These proteins form a large all alpha helical fold. These proteins
+  may be integral membrane proteins.

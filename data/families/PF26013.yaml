@@ -1,0 +1,26 @@
+id: Pfam:PF26013
+pfam_id: PF26013
+name: Domain of unknown function (DUF8004)
+short_name: DUF8004
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26013
+counters:
+  proteins: 1958
+  matches: 1958
+  proteomes: 872
+  taxa: 1707
+  structures: 0
+  alphafold_models: 1605
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058317
+description: 'This domain is found in a group of uncharacterised fungal proteins, including Choriogenin
+  Hminor from Beauveria bassiana (Swiss: J4W9A9) [[cite:PUB00161221]]. Its function is unknown. It is
+  predicted to adopt an all-alpha configuration.'

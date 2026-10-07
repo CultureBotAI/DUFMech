@@ -1,0 +1,27 @@
+id: Pfam:PF24728
+pfam_id: PF24728
+name: Domain of unknown function (DUF7680)
+short_name: DUF7680
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24728
+counters:
+  proteins: 215
+  matches: 215
+  proteomes: 198
+  taxa: 579
+  structures: 0
+  alphafold_models: 147
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056097
+description: This entry represents a group of uncharacterised prokaryotic proteins. These proteins share
+  a common semi-conserved EExxWY sequence motif which is predicted as a solvent-exposed in a alpha/beta
+  structure consisting of a four-stranded antiparallel beta-sheet and alpha-helices packed on one side
+  of it.

@@ -1,0 +1,25 @@
+id: Pfam:PF05331
+pfam_id: PF05331
+name: Protein of unknown function (DUF742)
+short_name: DUF742
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05331
+counters:
+  proteins: 15048
+  matches: 15056
+  proteomes: 2263
+  taxa: 2627
+  structures: 0
+  alphafold_models: 7687
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007995
+description: This family consists of several uncharacterised Streptomyces proteins as well as one from
+  Mycobacterium tuberculosis. The function of these proteins is unknown.

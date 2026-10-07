@@ -1,0 +1,25 @@
+id: Pfam:PF05811
+pfam_id: PF05811
+name: Eukaryotic protein of unknown function (DUF842)
+short_name: DUF842
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05811
+counters:
+  proteins: 2249
+  matches: 2282
+  proteomes: 1539
+  taxa: 4899
+  structures: 0
+  alphafold_models: 1924
+  domain_architectures: 31
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008560
+description: This family consists of a number of conserved eukaryotic proteins of unknown function. The
+  sequences carry three sets of CxxxC motifs, which might suggest a type of zinc-finger formation.

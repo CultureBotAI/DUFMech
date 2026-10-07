@@ -1,0 +1,26 @@
+id: Pfam:PF11443
+pfam_id: PF11443
+name: Domain of unknown function (DUF2828)
+short_name: DUF2828
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11443
+counters:
+  proteins: 3487
+  matches: 4233
+  proteomes: 1366
+  taxa: 3464
+  structures: 0
+  alphafold_models: 2612
+  domain_architectures: 83
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058580
+description: This is a uncharacterised domain found in eukaryotes and viruses. According to structure
+  predictions and comparison, this domain may have a alpha-helical fold closely related to the TROVE domain
+  suggesting possible involvement in RNA binding [[cite:PUB00152793]].

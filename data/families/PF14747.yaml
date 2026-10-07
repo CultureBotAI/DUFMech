@@ -1,0 +1,25 @@
+id: Pfam:PF14747
+pfam_id: PF14747
+name: Domain of unknown function (DUF4473)
+short_name: DUF4473
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14747
+counters:
+  proteins: 333
+  matches: 348
+  proteomes: 15
+  taxa: 40
+  structures: 0
+  alphafold_models: 324
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027913
+description: This short family is largely confined to Caenorhabditis proteins. The function is not known.
+  There are two well-conserved aspartate residues.

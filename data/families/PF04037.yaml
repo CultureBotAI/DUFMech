@@ -1,0 +1,29 @@
+id: Pfam:PF04037
+pfam_id: PF04037
+name: Domain of unknown function (DUF382)
+short_name: DUF382
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04037
+counters:
+  proteins: 4347
+  matches: 4397
+  proteomes: 3033
+  taxa: 8016
+  structures: 57
+  alphafold_models: 3682
+  domain_architectures: 60
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007180
+description: This domain is specific to the human splicing factor 3b subunit 2 and it's orthologues. Splicing
+  factor 3b subunit 2 or SAP145 is a suppressor of U2 snRNA mutations. Pre-mRNA splicing is catalysed
+  by a large ribonucleoprotein complex called the spliceosome. Spliceosomes are multi-component enzymes
+  that catalyse pre-mRNA splicing and form step-wise by the ordered interaction of UsnRNPs and non-snRNP
+  proteins with short conserved regions of the pre-mRNA at the 5' and 3' splice sites and branch site
+  [[cite:PUB00013034]].

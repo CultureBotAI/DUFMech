@@ -3,12 +3,13 @@
 from __future__ import annotations
 
 import argparse
-import json
+import sys
 from collections.abc import Mapping
 from datetime import date
 from pathlib import Path
 from typing import Any
 
+from dufmech.score_inputs import ScoreInputError, load_score_input
 from dufmech.scoring import EvidenceBundle, score_families
 from dufmech.scoring_snapshot import write_score_snapshot
 
@@ -36,6 +37,11 @@ def main(argv: list[str] | None = None) -> int:
             help=f"read frozen {flag.label} JSON rows",
         )
     parser.add_argument(
+        "--allow-ad-hoc-inputs",
+        action="store_true",
+        help="allow inputs without companion manifests; never bypass an invalid existing manifest",
+    )
+    parser.add_argument(
         "--snapshot-date",
         help="ISO snapshot date for generated filenames (default: today in UTC)",
     )
@@ -53,31 +59,30 @@ def main(argv: list[str] | None = None) -> int:
         except ValueError:
             parser.error("--snapshot-date must be an ISO date")
 
-    worklist_rows = load_json_rows(args.worklist_json)
-    member_rows = load_json_rows(args.member_json) if args.member_json else []
-    evidence = EvidenceBundle(
-        **{
-            flag.name: tuple(load_json_rows(getattr(args, f"{flag.name}_json")))
-            for flag in EVIDENCE_FLAGS
-            if getattr(args, f"{flag.name}_json")
-        }
-    )
-    rows = score_families(worklist_rows, member_rows=member_rows, evidence=evidence)
-
-    input_snapshot_ids = {"worklist": args.worklist_json.stem}
+    paths = {"worklist": args.worklist_json}
     if args.member_json:
-        input_snapshot_ids["members"] = args.member_json.stem
+        paths["members"] = args.member_json
     for flag in EVIDENCE_FLAGS:
         path = getattr(args, f"{flag.name}_json")
         if path:
-            input_snapshot_ids[flag.name] = path.stem
-
-    manifest = write_score_snapshot(
-        rows,
-        args.out_dir,
-        snapshot_date=args.snapshot_date,
-        input_snapshot_ids=input_snapshot_ids,
-    )
+            paths[flag.name] = path
+    try:
+        inputs = {role: load_score_input(path, role, allow_ad_hoc=args.allow_ad_hoc_inputs)
+                  for role, path in paths.items()}
+        evidence = EvidenceBundle(**{flag.name: inputs[flag.name].rows for flag in EVIDENCE_FLAGS
+                                     if flag.name in inputs})
+        rows = score_families(
+            inputs["worklist"].rows,
+            member_rows=inputs["members"].rows if "members" in inputs else (), evidence=evidence,
+        )
+        manifest = write_score_snapshot(
+            rows, args.out_dir, snapshot_date=args.snapshot_date,
+            input_snapshot_ids={role: value.provenance["snapshot_id"] for role, value in inputs.items()},
+            input_provenance={role: value.provenance for role, value in inputs.items()},
+        )
+    except (OSError, ScoreInputError) as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 1
     print(
         f"wrote {manifest['snapshot']['id']} "
         f"({manifest['rows']['total']} rows) to {args.out_dir}"
@@ -110,13 +115,11 @@ EVIDENCE_FLAGS = (
 )
 
 
-def load_json_rows(path: Path) -> list[Mapping[str, Any]]:
-    """Load one frozen JSON row list."""
-
-    payload = json.loads(path.read_text(encoding="utf-8"))
-    if not isinstance(payload, list):
-        raise TypeError(f"expected a JSON row list in {path}")
-    return [row for row in payload if isinstance(row, Mapping)]
+def load_json_rows(
+    path: Path, *, role: str = "worklist", allow_ad_hoc: bool = False,
+) -> list[Mapping[str, Any]]:
+    """Compatibility entrypoint with the same strict policy as the scoring CLI."""
+    return list(load_score_input(path, role, allow_ad_hoc=allow_ad_hoc).rows)
 
 
 if __name__ == "__main__":

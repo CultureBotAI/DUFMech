@@ -1,0 +1,33 @@
+id: Pfam:PF11208
+pfam_id: PF11208
+name: Protein of unknown function (DUF2992)
+short_name: DUF2992
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11208
+counters:
+  proteins: 936
+  matches: 937
+  proteomes: 873
+  taxa: 1561
+  structures: 0
+  alphafold_models: 585
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR016787
+description: This bacterial family of proteins has no known function. However, the cis-regulatory yjdF
+  motif, just upstream from the gene encoding the proteins for this family, is a small non-coding RNA,
+  Rfam:RF01764. The yjdF motif is found in many Firmicutes, including Bacillus subtilis. In most cases,
+  it resides in potential 5' UTRs of homologues of the yjdF gene whose function is unknown. However, in
+  Streptococcus thermophilus, a yjdF RNA motif is associated with an operon whose protein products synthesise
+  nicotinamide adenine dinucleotide (NAD+). Also, the S. thermophilus yjdF RNA lacks typical yjdF motif
+  consensus features downstream of and including the P4 stem. Thus, if yjdF RNAs are riboswitch aptamers,
+  the S. thermophilus RNAs might sense a distinct compound that structurally resembles the ligand bound
+  by other yjdF RNAs. On the ohter hand, perhaps these RNAs have an alternative solution forming a similar
+  binding site, as is observed with some SAM riboswitches [[cite:PUB00109804]].

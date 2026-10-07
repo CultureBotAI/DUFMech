@@ -1,0 +1,28 @@
+id: Pfam:PF29220
+pfam_id: PF29220
+name: Domain of unknown function (DUF8515)
+short_name: DUF8515
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29220
+counters:
+  proteins: 79
+  matches: 79
+  proteomes: 79
+  taxa: 143
+  structures: 0
+  alphafold_models: 57
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061585
+description: This entry represents a conserved domain of unknown function found in the Spirochaetes, including
+  species of Treponema, Borrelia, and Spirochaeta. The domain is approximately 150-200 residues long.
+  Analysis of AlphaFold models reveals this domain is typically followed by a larger C-terminal domain
+  (approximately 200-280 residues) that shares no significant overlap with other Pfam families. The function
+  of this domain remains to be determined.

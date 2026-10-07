@@ -1,0 +1,25 @@
+id: Pfam:PF24925
+pfam_id: PF24925
+name: Domain of unknown function (DUF7746)
+short_name: DUF7746
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24925
+counters:
+  proteins: 1759
+  matches: 1783
+  proteomes: 95
+  taxa: 370
+  structures: 0
+  alphafold_models: 1163
+  domain_architectures: 197
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056648
+description: This presumed domain is found in a group of plant sequences, whose function is unknown. This
+  domain may adopt a three-helical bundle fold similar to that found in viral Gag proteins.

@@ -1,0 +1,25 @@
+id: Pfam:PF17141
+pfam_id: PF17141
+name: Domain of unknown function (DUF5114)
+short_name: DUF5114
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17141
+counters:
+  proteins: 36
+  matches: 36
+  proteomes: 36
+  taxa: 75
+  structures: 0
+  alphafold_models: 26
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR033407
+description: This family lies further downstream of DUF5111, [pfam:PF17138], on proteins from Bacteroidetes
+  that also carry a SusE family, [pfam:PF14292].

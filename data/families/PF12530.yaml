@@ -1,0 +1,31 @@
+id: Pfam:PF12530
+pfam_id: PF12530
+name: Focadhesin/RST1, DUF3730
+short_name: DUF3730
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12530
+counters:
+  proteins: 2311
+  matches: 2822
+  proteomes: 1335
+  taxa: 4349
+  structures: 0
+  alphafold_models: 506
+  domain_architectures: 38
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022542
+description: This domain of unknown function is found in Focadhesin from animals and RST1 (RESURRECTION
+  1) from plants. Focadhesin (FOCAD) is a focal adhesion protein with potential tumour suppressor function
+  in gliomas [[cite:PUB00075175]]. RST1 was originally identified in a genetic screen for factors involved
+  in the biosynthesis of epicuticular waxes [[cite:PUB00098180]]. Later, RST1 and RST1 INTERACTING PROTEIN
+  (RIPR) have been shown to act as cofactors of the cytoplasmic exosome and the Ski complex in plants
+  [[cite:PUB00098179]]. It is involved in the suppression of siRNA-mediated silencing of transgenes and
+  certain endogenous transcripts [[cite:PUB00098181]]. Structure predictions suggest that this is an alpha-helical
+  domain with and armadillo-like fold.

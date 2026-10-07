@@ -1,0 +1,26 @@
+id: Pfam:PF22308
+pfam_id: PF22308
+name: Domain of unknown function (DUF6969)
+short_name: DUF6969
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22308
+counters:
+  proteins: 405
+  matches: 406
+  proteomes: 385
+  taxa: 725
+  structures: 0
+  alphafold_models: 281
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054242
+description: This domain is found in uncharacterised proteins from Proteobacteria. It is predicted to
+  adopt an alpha/beta globular structure. It has three highly conserved histidines that are predicted
+  to cluster together in space and are likely involved in metal coordination.

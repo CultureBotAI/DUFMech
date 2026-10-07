@@ -1,0 +1,28 @@
+id: Pfam:PF09664
+pfam_id: PF09664
+name: Protein of unknown function C-terminus (DUF2399)
+short_name: DUF2399
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09664
+counters:
+  proteins: 1652
+  matches: 1653
+  proteomes: 1471
+  taxa: 2302
+  structures: 0
+  alphafold_models: 940
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024465
+description: 'Proteins in this entry are encoded within a conserved gene four-gene neighbourhood found
+  sporadically in a phylogenetically broad range of bacteria including: Nocardia farcinica, Symbiobacterium
+  thermophilum, and Streptomyces avermitilis (Actinobacteria), Geobacillus kaustophilus (Firmicutes),
+  Azoarcus sp. EbN1 and Ralstonia solanacearum (Beta-proteobacteria). Just the C-terminal region is ioncluded
+  here.'

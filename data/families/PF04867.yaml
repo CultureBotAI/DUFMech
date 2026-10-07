@@ -1,0 +1,24 @@
+id: Pfam:PF04867
+pfam_id: PF04867
+name: Protein of unknown function (DUF643)
+short_name: DUF643
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04867
+counters:
+  proteins: 49
+  matches: 49
+  proteomes: 15
+  taxa: 29
+  structures: 0
+  alphafold_models: 22
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006951
+description: Protein of unknown function found in Borrelia burgdorferi, the Lyme disease spirochete.

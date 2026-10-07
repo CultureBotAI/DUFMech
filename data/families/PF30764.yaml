@@ -1,0 +1,27 @@
+id: Pfam:PF30764
+pfam_id: PF30764
+name: Domain of unknown function (DUF8724)
+short_name: DUF8724
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF30764
+counters:
+  proteins: 1658
+  matches: 1658
+  proteomes: 1485
+  taxa: 2909
+  structures: 2
+  alphafold_models: 953
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061785
+description: This entry represents a bacterial domain of approximately 220 residues. The domain is predominantly
+  found in Actinomycetes, particularly Streptomycetaceae and related species, as well as in Pseudomonadota.
+  In some proteins, this domain is found N-terminal to the MZB domain ([pfam:PF09369]). The function of
+  this domain remains to be determined.

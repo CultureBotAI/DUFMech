@@ -1,0 +1,25 @@
+id: Pfam:PF07027
+pfam_id: PF07027
+name: Protein of unknown function (DUF1318)
+short_name: DUF1318
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07027
+counters:
+  proteins: 2258
+  matches: 2258
+  proteomes: 2228
+  taxa: 3311
+  structures: 1
+  alphafold_models: 1457
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008309
+description: This family consists of several bacterial proteins of around 100 residues in length and is
+  often known as YdbL. The function of this family is unknown.

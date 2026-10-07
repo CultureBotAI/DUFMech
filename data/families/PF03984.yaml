@@ -1,0 +1,27 @@
+id: Pfam:PF03984
+pfam_id: PF03984
+name: Repeat of unknown function (DUF346)
+short_name: DUF346
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03984
+counters:
+  proteins: 175
+  matches: 538
+  proteomes: 134
+  taxa: 352
+  structures: 0
+  alphafold_models: 106
+  domain_architectures: 53
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007132
+description: This repeat is found as seven tandem copies in carbohydrate-binding proteins, including Fucose-binding
+  Lectin from Photorhabdus laumondii ([swissprot:Q7N8J0]) and similar fungal and bacterial proteins. It
+  is composed of beta-strands and forms a seven-bladed beta-propeller structure [[cite:PUB00100843],[cite:PUB00100844]].
+  It is found in association with BNR repeats, which also form a beta-propeller.

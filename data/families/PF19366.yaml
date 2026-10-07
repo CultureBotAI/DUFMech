@@ -1,0 +1,26 @@
+id: Pfam:PF19366
+pfam_id: PF19366
+name: Domain of unknown function (DUF5942)
+short_name: DUF5942
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19366
+counters:
+  proteins: 262
+  matches: 262
+  proteomes: 256
+  taxa: 667
+  structures: 0
+  alphafold_models: 155
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045986
+description: This presumed integral membrane domain is functionally uncharacterised. This domain family
+  is found mainly in cyanobacteria, and is approximately 190 amino acids in length. The family is found
+  to the C-terminus of [pfam:PF00082].

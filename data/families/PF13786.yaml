@@ -1,0 +1,23 @@
+id: Pfam:PF13786
+pfam_id: PF13786
+name: Domain of unknown function (DUF4179)
+short_name: DUF4179
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13786
+counters:
+  proteins: 3104
+  matches: 3104
+  proteomes: 1191
+  taxa: 1711
+  structures: 1
+  alphafold_models: 1775
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025436

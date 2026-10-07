@@ -1,0 +1,28 @@
+id: Pfam:PF26485
+pfam_id: PF26485
+name: Domain of unknown function (DUF8156)
+short_name: DUF8156
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26485
+counters:
+  proteins: 398
+  matches: 398
+  proteomes: 278
+  taxa: 509
+  structures: 0
+  alphafold_models: 355
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058469
+description: This entry represents a domain from a family of uncharacterised proteins in halophilic archaea.
+  The domain is predominantly found in members of the Halobacteria class, including families such as Haloferacaceae
+  and Haloarculaceae. Proteins containing this domain are typically between 90 and 110 amino acids in
+  length. The C-terminus of this domain is predicted by AlphaFold 3 to form a trimeric coiled-coil structure
+  [swissprot:Q5V7B6] (ipTM=0.89 pTM=0.89).

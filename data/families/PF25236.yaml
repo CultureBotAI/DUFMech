@@ -1,0 +1,27 @@
+id: Pfam:PF25236
+pfam_id: PF25236
+name: Domain of unknown function (DUF7851)
+short_name: DUF7851
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25236
+counters:
+  proteins: 662
+  matches: 668
+  proteomes: 341
+  taxa: 955
+  structures: 0
+  alphafold_models: 533
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057173
+description: This domain is found in uncharacterised proteins from plants. It is predicted to adopt a
+  structure consisting of a mixed beta-sheet and alpha-helices packed on both sides with unique topology.
+  It contains a highly conserved sequence motif RxKxRKG that contributes to the formation of a highly
+  basic surface patch.

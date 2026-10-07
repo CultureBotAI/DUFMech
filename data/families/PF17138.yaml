@@ -1,0 +1,25 @@
+id: Pfam:PF17138
+pfam_id: PF17138
+name: Domain of unknown function (DUF5111)
+short_name: DUF5111
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17138
+counters:
+  proteins: 81
+  matches: 85
+  proteomes: 80
+  taxa: 148
+  structures: 0
+  alphafold_models: 50
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR033404
+description: This family is found immediately downstream of SusE, a putative starch-processing family,
+  [pfam:PF14292]. It is possible that this domain represents a substrate-binding site.

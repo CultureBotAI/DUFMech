@@ -1,0 +1,28 @@
+id: Pfam:PF07142
+pfam_id: PF07142
+name: Repeat of unknown function (DUF1388)
+short_name: DUF1388
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07142
+counters:
+  proteins: 311
+  matches: 746
+  proteomes: 189
+  taxa: 748
+  structures: 0
+  alphafold_models: 226
+  domain_architectures: 37
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010790
+description: This family consists of several repeats of around 29 residues in length. Members of this
+  family are found in the variable surface lipoproteins in Mycoplasma bovis and in mammalian neurofilament
+  triplet H (NefH or NF-H) proteins. This repeat contains several Lys-Ser-Pro (KSP) motifs and in NefH
+  these are thought to function as the main target for neurofilament directed protein kinases in vivo
+  [[cite:PUB00013013]].

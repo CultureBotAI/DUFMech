@@ -1,0 +1,27 @@
+id: Pfam:PF09537
+pfam_id: PF09537
+name: Domain of unknown function (DUF2383)
+short_name: DUF2383
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09537
+counters:
+  proteins: 5046
+  matches: 5046
+  proteomes: 3489
+  taxa: 5006
+  structures: 1
+  alphafold_models: 3179
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019052
+description: This domain is found in found in uncharacterised proteins predominantly from bacteria. The
+  uncharacterised [swissprot:Q9I1U6] from Pseudomonas aeruginosa shows a ferritin-like topology with a
+  four-helix-bundle fold that lacks metal-ion-binding site typical of the ferritin family ([pfam:PF00210])
+  but has a potential metal-binding site [[cite:PUB00065044]]. The function is unknown.

@@ -1,0 +1,25 @@
+id: Pfam:PF13084
+pfam_id: PF13084
+name: Domain of unknown function (DUF3943)
+short_name: DUF3943
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13084
+counters:
+  proteins: 665
+  matches: 665
+  proteomes: 591
+  taxa: 993
+  structures: 0
+  alphafold_models: 442
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025079
+description: This presumed domain is functionally uncharacterised. This domain family is found in bacteria,
+  and is approximately 110 amino acids in length.

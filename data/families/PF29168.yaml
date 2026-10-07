@@ -1,0 +1,26 @@
+id: Pfam:PF29168
+pfam_id: PF29168
+name: Domain of unknown function (DUF8506)
+short_name: DUF8506
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF29168
+counters:
+  proteins: 209
+  matches: 209
+  proteomes: 198
+  taxa: 343
+  structures: 0
+  alphafold_models: 134
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061576
+description: Ths domain is found in uncharacterised proteins from gram negative bacteria. It is found
+  either standalone or in combination with other domains. It is predicted to fold into a very simple structure
+  composed of a beta-hairpin flanked by two helices.

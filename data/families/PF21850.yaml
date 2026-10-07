@@ -1,0 +1,26 @@
+id: Pfam:PF21850
+pfam_id: PF21850
+name: Family of unknown function (DUF6909)
+short_name: DUF6909
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21850
+counters:
+  proteins: 1301
+  matches: 2471
+  proteomes: 1262
+  taxa: 1816
+  structures: 0
+  alphafold_models: 851
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054204
+description: This is a family of uncharacterised proteins. They are predicted to adopt a globular structure
+  consisting of two domains. The predicted C-terminal domain share similarity with the catalytic domains
+  of purine and uridine phosphorylases.

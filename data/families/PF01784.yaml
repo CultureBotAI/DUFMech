@@ -1,0 +1,32 @@
+id: Pfam:PF01784
+pfam_id: PF01784
+name: Duf34/NIF3 (NGG1p interacting factor 3)
+short_name: DUF34_NIF3
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01784
+counters:
+  proteins: 18574
+  matches: 18654
+  proteomes: 16807
+  taxa: 26806
+  structures: 16
+  alphafold_models: 12676
+  domain_architectures: 53
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002678
+description: This family includes the DUF34/metal-binding protein/NIF3 proteins, which are widely distributed
+  across superkingdoms. They were previously annotated as GTP cyclohydrolase 1 type 2 [[cite:PUB00070175]]
+  and, recently, through a comprehensive literature review and integrative bioinformatics analyses it
+  was revealed that annotations for these members were misleading as they were based on a single set of
+  in vitro results examining the NIF3 homolog of Helicobacter pylori [[cite:PUB00070175]]. Actually, they
+  have varied phenotypes with the unifying functional role as metal-binding proteins [[cite:PUB00100327]].
+  This entry contains several NIF3 (NGG1p interacting factor 3) protein homologues. NIF3 interacts with
+  the yeast transcriptional coactivator NGG1p which is part of the ADA complex, the exact function of
+  this interaction is unknown [[cite:PUB00002954],[cite:PUB00019927]].

@@ -1,0 +1,25 @@
+id: Pfam:PF09767
+pfam_id: PF09767
+name: Predicted membrane protein (DUF2053)
+short_name: DUF2053
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09767
+counters:
+  proteins: 1959
+  matches: 1987
+  proteomes: 1351
+  taxa: 4461
+  structures: 5
+  alphafold_models: 1642
+  domain_architectures: 40
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019164
+description: This entry is of the conserved N-terminal 150 residues of proteins conserved from plants
+  to humans. The function is unknown although some annotation suggests it to be a transmembrane protein.

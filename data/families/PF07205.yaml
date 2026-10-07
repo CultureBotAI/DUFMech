@@ -1,0 +1,26 @@
+id: Pfam:PF07205
+pfam_id: PF07205
+name: Domain of unknown function (DUF1413)
+short_name: DUF1413
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07205
+counters:
+  proteins: 341
+  matches: 341
+  proteomes: 293
+  taxa: 641
+  structures: 0
+  alphafold_models: 242
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010813
+description: This family consists of several hypothetical bacterial proteins which seem to be specific
+  to firmicute species. Members of this family are typically around 100 residues in length. The function
+  of this family is unknown.

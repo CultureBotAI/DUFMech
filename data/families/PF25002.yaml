@@ -1,0 +1,25 @@
+id: Pfam:PF25002
+pfam_id: PF25002
+name: Domain of unknown function (DUF7780)
+short_name: DUF7780
+seed_status: UNKNOWN_CANDIDATE
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25002
+counters:
+  proteins: 563
+  matches: 624
+  proteomes: 291
+  taxa: 789
+  structures: 0
+  alphafold_models: 449
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056682
+description: This domain is found in uncharacterised plant proteins. It has a detectable similarity to
+  known glycosyltransferases clan GT-A and is predicted to adopt similar structure.

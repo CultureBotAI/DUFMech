@@ -1,0 +1,26 @@
+id: Pfam:PF25903
+pfam_id: PF25903
+name: DUF7961 C-terminal domain
+short_name: DUF7961_C
+seed_status: KNOWN_HISTORICAL_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25903
+counters:
+  proteins: 82
+  matches: 128
+  proteomes: 76
+  taxa: 149
+  structures: 0
+  alphafold_models: 73
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-05
+  path: data/worklists/interpro-pfam-duf-2026-10-05.json
+  sha256: 4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10
+  generated_at: '2026-10-05T19:04:14.368061Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058993
+description: This domain is found to the C-terminus of a restriction endonuclease-like domain [pfam:PF25902].
+  Many members of this family contain two copies of this domain. The structure of the domain forms a small
+  partial beta barrel.
