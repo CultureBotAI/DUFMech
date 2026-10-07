@@ -1,0 +1,53 @@
+mech: DUFMech
+target: DUF/Pfam family identity, frozen-source provenance, and scoped evidence questions
+default_focus: identity_provenance
+evidence_policy: >-
+  This profile supports offline planning only. A dummy DRY_RUN is not research
+  findings, provider availability, source permission, scientific review, or
+  curation authorization. Keep SEEDED status, lexical seed labels, automated
+  characterization scores and experimental findings distinct. Missing evidence
+  is not negative evidence. Verify exact accessions, source releases, protein
+  scope, methods, licensed minimal extracts and independent primary citations
+  before any separately authorized scientific assertion. No family-wide function
+  follows merely from a name, co-occurrence, prediction, or one member's activity.
+focuses:
+  identity_provenance:
+    label: family identity and frozen-source provenance
+    objective: Plan checks of Pfam/InterPro identity, source versions and retained byte provenance without characterizing biological function.
+    source_priorities:
+      - retained DUFMech FamilyRecord and checksum-verified source snapshots
+      - source-native Pfam and integrated InterPro identities and release metadata
+      - official accession lifecycle and license documentation; unverified terms remain unverified
+    stages:
+      discovery:
+        objective: Locate source-native identities and provenance for the exact family accession.
+        capabilities: {structured_databases: 5, citation_tracking: 3, web_search: 2}
+        cost_weight: 1
+      synthesis:
+        objective: Separate identity equivalence, hierarchy, member overlap and historical labels.
+        capabilities: {structured_databases: 5, synthesis: 3, code_interpretation: 3}
+        synthesis_weight: 1
+      verification:
+        objective: Check accession lifecycle, snapshot hashes, release dates and evidence scope; do not promote seed status.
+        capabilities: {structured_databases: 5, citation_tracking: 5, code_interpretation: 3}
+        cost_weight: 1
+  functional_evidence:
+    label: scoped functional-evidence questions
+    objective: Plan an evidence search that distinguishes experimentally tested proteins from predictions and family-wide generalization.
+    source_priorities:
+      - primary experiments with exact protein accessions, assay conditions and results
+      - source-native reviewed protein, reaction and experimental structure records
+      - computational and contextual sources explicitly labelled as such, never experimental proof
+    stages:
+      discovery:
+        objective: Identify primary characterization studies and exact tested family members.
+        capabilities: {academic_search: 5, scientific_literature: 5, citation_tracking: 4}
+        speed_weight: 1
+      synthesis:
+        objective: Distinguish experimental, computational and contextual support with explicit protein-level scope.
+        capabilities: {scientific_literature: 5, synthesis: 5, citation_tracking: 4}
+        synthesis_weight: 2
+      verification:
+        objective: Plan independent source checks of every proposed assertion, limitations, minimal quoted support and data permissions.
+        capabilities: {scientific_literature: 5, structured_databases: 4, citation_tracking: 5}
+        cost_weight: 1
