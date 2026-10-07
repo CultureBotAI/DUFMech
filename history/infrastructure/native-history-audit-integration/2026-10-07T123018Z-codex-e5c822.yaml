@@ -1,0 +1,51 @@
+history_version: 1
+target:
+  kind: infrastructure
+  slug: native-history-audit-integration
+  path: src/dufmech/schema/dufmech.yaml
+session:
+  id: 2026-10-07T123018Z-codex-e5c822
+  timestamp: '2026-10-07T12:30:18Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Recorded completed native schema, retained-history export, and captured-artifact
+    publication guard integration.
+  details: 'This event records coordinated implementation already present in the working
+    tree on HEAD 611617feeda7ac0480898e7042bbd2fb4bdaf930; the session timestamp is
+    the recording time, not an invented timestamp for each prior code edit. The native
+    FamilyRecord now exposes a generated-only eight-field CurationEvent index derived
+    from canonical validated sidecars, while FamilyCuration rejects event overrides
+    and sidecars remain the sole editable history authority. Native history rejects
+    timestamps outside years 2000 through 2099, preserves exact timestamp strings
+    through the generated model, and excludes only derived event metadata from the
+    semantic review digest in addition to the existing status/review-id exclusions.
+    Confined exact-byte review/history capture and pure internal predicates now bind
+    Pages publication to the captured artifacts: REVIEWED requires the same passing
+    linked report/current-content digest and actual canonical REVIEW event, and every
+    curated history pointer requires a qualifying family target. CI invokes synchronized
+    canonical governance checks without failure-masking bypasses. The coordinating
+    parent supplied final receipts of 847 passing native/shared-source tests with
+    three optional skips, 18 passing canonical checks, passing Ruff, clean 106/107
+    rereview with 270 focused tests, and clean 108 independent review with nine tests
+    and ten bypass mutations. Those suites were not rerun by this recording command.
+    A fresh PF04149 audit independently passed native record validation, exact frozen-input
+    checks, and a 6532-record zero-drift baseline dry run. Target schema SHA-256 is
+    0dfef7f73232f80969f81d0073da307b1f15b481da0e1aa77b19473b757d035a; canonical history
+    schema SHA-256 is b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d;
+    canonical pin is 59aead1ba791d1b1840a263a41260a0717115870. Parent commit, publication,
+    fleet rollout, and deployment remain pending. No scientific family claim or curation-status
+    promotion is implied.'
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/105
+  - https://github.com/CultureBotAI/DUFMech/issues/106
+  - https://github.com/CultureBotAI/DUFMech/issues/107
+  - https://github.com/CultureBotAI/DUFMech/issues/108
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reports/yaml_record_review/20261007T122924Z-PF04149.md

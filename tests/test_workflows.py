@@ -30,6 +30,22 @@ def test_required_qc_runs_unconditionally_on_event_commit_and_queue():
     assert {step.get("run") for step in steps} >= {"just qc", "npm ci", "uv sync --locked --extra dev"}
 
 
+def test_required_qc_checks_canonical_artifacts_before_browser_setup():
+    document = workflow("validate.yaml")
+    assert document["permissions"] == {"contents": "read"}
+    steps = document["jobs"]["qc"]["steps"]
+    command = "bash scripts/check_vendored_sync.sh"
+    checks = [i for i, step in enumerate(steps) if step.get("run") == command]
+    assert len(checks) == 1
+    index = checks[0]
+    assert set(steps[index]) == {"name", "run"}
+    install = next(i for i, step in enumerate(steps)
+                   if step.get("run") == "uv sync --locked --extra dev")
+    browser = next(i for i, step in enumerate(steps)
+                   if step.get("uses", "").startswith("actions/setup-node@"))
+    assert install < index < browser
+
+
 def test_pages_uses_successful_main_validation_and_serialized_current_main_guards():
     document = workflow("pages.yaml")
     events = document.get("on", document.get(True))

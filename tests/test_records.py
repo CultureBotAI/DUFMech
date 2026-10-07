@@ -8,6 +8,7 @@ from pathlib import Path
 import pytest
 import yaml
 
+from dufmech import history
 from dufmech import records as records_module
 from dufmech.records import (
     RecordError,
@@ -38,6 +39,23 @@ def corpus(tmp_path):
     return root
 
 
+@pytest.fixture
+def history_corpus(corpus, monkeypatch):
+    canonical = history.history_validator(history.REPO_ROOT)
+    monkeypatch.setattr(history, "history_validator", lambda _: canonical)
+    write_records(corpus, build_records(corpus), apply=True)
+    return corpus
+
+
+def append_family_audit(root, timestamp="2026-10-07T12:00:00Z"):
+    return history.new_history(
+        root, kind="record", slug="PF00001", target_path="data/families/PF00001.yaml",
+        timestamp=timestamp, summary="Checked fixture source identity.",
+        details="Compared the generated fixture identity with its frozen source row.",
+        actor_name="fixture-curator", actor_type="human", event="REVIEW", outcome="no_change",
+    )
+
+
 def test_deterministic_identity_projection_dry_run_apply_and_check(corpus):
     records = build_records(corpus)
     record = records["PF00001.yaml"]
@@ -46,6 +64,7 @@ def test_deterministic_identity_projection_dry_run_apply_and_check(corpus):
     assert record["curation_status"] == "SEEDED"
     assert record["characterization_status"] == "UNSCORED"
     assert record["interpro_id"] == "InterPro:IPR000001"
+    assert "curation_events" not in record
     assert write_records(corpus, records) == ["PF00001.yaml", "manifest.json"]
     assert not (corpus / "data/families").exists()
     with pytest.raises(RecordError, match="stale"):
@@ -53,6 +72,118 @@ def test_deterministic_identity_projection_dry_run_apply_and_check(corpus):
     write_records(corpus, records, apply=True)
     assert load_records(corpus) == [record]
     assert write_records(corpus, build_records(corpus), check=True) == []
+
+
+def test_history_export_replays_real_sidecars_without_promoting_seed(history_corpus):
+    path = append_family_audit(history_corpus)
+    record = build_records(history_corpus)["PF00001.yaml"]
+    assert record["curation_status"] == "SEEDED"
+    assert "curation_history" not in record
+    assert record["curation_events"] == [{
+        "timestamp": "2026-10-07T12:00:00Z", "curator": "fixture-curator",
+        "action": "REVIEW", "outcome": "no_change", "summary": "Checked fixture source identity.",
+        "history_record": path.relative_to(history_corpus).as_posix(),
+        "event_index": 0, "llm_assisted": False,
+    }]
+    validate_record(record, history_corpus)
+    write_records(history_corpus, {"PF00001.yaml": record}, apply=True)
+    assert load_records(history_corpus) == [record]
+    from dufmech.datamodel.dufmech import FamilyRecord
+
+    model = FamilyRecord(**record)
+    assert model.curation_events[0].history_record == record["curation_events"][0]["history_record"]
+
+
+@pytest.mark.parametrize("timestamp", [
+    "2000-01-01T00:00:00Z", "2026-10-07T12:00:00Z", "2026-10-07T12:00:00+00:00",
+    "2026-10-07T12:00:00.123456789Z", "2099-12-31T23:59:59.123456789+00:00",
+])
+def test_history_export_preserves_model_serialization_round_trip(history_corpus, timestamp):
+    from linkml_runtime.dumpers import json_dumper, yaml_dumper
+
+    from dufmech.datamodel.dufmech import FamilyRecord
+
+    append_family_audit(history_corpus, timestamp)
+    record = build_records(history_corpus)["PF00001.yaml"]
+    model = FamilyRecord(**record)
+    restored = (
+        json.loads(json_dumper.dumps(model, inject_type=False)),
+        yaml.safe_load(yaml_dumper.dumps(model)),
+    )
+    for result in restored:
+        assert result == record
+        assert result["curation_events"][0]["timestamp"] == timestamp
+        validate_record(result, history_corpus)
+
+
+@pytest.mark.parametrize("timestamp", [
+    "1999-12-31T23:59:59Z", "2100-01-01T00:00:00Z", "2026-10-07",
+    "2026-13-07T12:00:00Z", "2026-02-30T12:00:00Z", "2026-10-07T12:00:00",
+])
+def test_history_export_schema_retains_century_and_datetime_validation(history_corpus, timestamp):
+    append_family_audit(history_corpus)
+    record = build_records(history_corpus)["PF00001.yaml"]
+    record["curation_events"][0]["timestamp"] = timestamp
+    errors = list(records_module.validator().iter_errors(record))
+    assert any(list(error.path) == ["curation_events", 0, "timestamp"] for error in errors)
+
+
+@pytest.mark.parametrize("mutation", [
+    lambda r: r.pop("curation_events"),
+    lambda r: r.update(curation_events=[]),
+    lambda r: r["curation_events"][0].update(summary="Fabricated audit summary"),
+    lambda r: r["curation_events"][0].update(event_index=1),
+    lambda r: r["curation_events"][0].update(llm_assisted=True),
+    lambda r: r["curation_events"][0].update(
+        history_record="history/records/PF00002/2026-10-07T120000Z-other.yaml"),
+])
+def test_history_export_rejects_forged_or_missing_views(history_corpus, mutation):
+    append_family_audit(history_corpus)
+    record = build_records(history_corpus)["PF00001.yaml"]
+    mutation(record)
+    with pytest.raises(RecordError, match="curation_events"):
+        validate_record(record, history_corpus)
+    original = (history_corpus / "data/families/PF00001.yaml").read_bytes()
+    with pytest.raises(RecordError, match="curation_events"):
+        write_records(history_corpus, {"PF00001.yaml": record}, apply=True)
+    assert (history_corpus / "data/families/PF00001.yaml").read_bytes() == original
+
+
+def test_appended_history_requires_projection_refresh(history_corpus):
+    append_family_audit(history_corpus)
+    first = build_records(history_corpus)
+    write_records(history_corpus, first, apply=True)
+    append_family_audit(history_corpus, "2026-10-07T12:01:00Z")
+    with pytest.raises(RecordError, match="curation_events"):
+        validate_record(first["PF00001.yaml"], history_corpus)
+    with pytest.raises(RecordError):
+        load_records(history_corpus)
+    refreshed = build_records(history_corpus)
+    assert len(refreshed["PF00001.yaml"]["curation_events"]) == 2
+    write_records(history_corpus, refreshed, apply=True)
+    assert load_records(history_corpus) == [refreshed["PF00001.yaml"]]
+
+
+def test_history_export_is_not_an_overlay_authoring_surface(history_corpus):
+    append_family_audit(history_corpus)
+    record = build_records(history_corpus)["PF00001.yaml"]
+    overlay = {key: record[key] for key in ("pfam_id", "curation_status", "curation_events")}
+    with pytest.raises(RecordError, match="Additional properties"):
+        validate_record(overlay, history_corpus, target="FamilyCuration")
+
+
+def test_builder_loads_one_validated_history_index(history_corpus, monkeypatch):
+    append_family_audit(history_corpus)
+    original = history.load_history_metadata
+    loads = []
+
+    def tracked(root, pfam_id=None):
+        loads.append(pfam_id)
+        return original(root, pfam_id)
+
+    monkeypatch.setattr(history, "load_history_metadata", tracked)
+    build_records(history_corpus)
+    assert loads == [None]
 
 
 def test_derived_scores_retain_distinct_provenance(corpus):

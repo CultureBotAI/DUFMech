@@ -136,6 +136,28 @@ def internal_href(root: Path, relative: str) -> str:
     return quote(relative, safe="/._-")
 
 
+def read_source_bytes(root: Path, relative: str) -> bytes:
+    """Capture one regular file without following symlinks in any path component."""
+    root = root.absolute()
+    if ".." in root.parts:
+        raise ValueError("source root must not contain parent traversal")
+    parts = (*root.parts[1:], *relative_path(relative).parts)
+    directory = os.open(root.anchor, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+    try:
+        for component in parts[:-1]:
+            child = os.open(component, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=directory)
+            os.close(directory)
+            directory = child
+        descriptor = os.open(parts[-1], os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK, dir_fd=directory)
+        if not stat.S_ISREG(os.fstat(descriptor).st_mode):
+            os.close(descriptor)
+            raise ValueError(f"source must be a regular file: {relative}")
+        with os.fdopen(descriptor, "rb") as handle:
+            return handle.read()
+    finally:
+        os.close(directory)
+
+
 def append_document(
     root: Path, directory: str, stem: str, suffix: str, render: Callable[[str], str]
 ) -> Path:
@@ -215,9 +237,9 @@ def _sha(path: Path) -> str:
 
 
 def record_content_digest(record: dict[str, Any]) -> str:
-    """Hash effective FamilyRecord content, excluding only review bookkeeping."""
+    """Hash effective content, excluding review bookkeeping and the derived audit index."""
     content = {key: value for key, value in record.items()
-               if key not in {"curation_status", "review_id"}}
+               if key not in {"curation_status", "review_id", "curation_events"}}
     return hashlib.sha256(json.dumps(
         content, sort_keys=True, separators=(",", ":"), ensure_ascii=True, allow_nan=False
     ).encode("utf-8")).hexdigest()
@@ -461,9 +483,13 @@ def save_review(root: Path, payload: dict[str, Any]) -> Path:
     )
 
 
-def read_review(root: Path, path: Path) -> dict[str, Any]:
-    relative = path.relative_to(root.resolve()).as_posix()
-    text = safe_path(root, relative).read_text(encoding="utf-8")
+def read_review(
+    root: Path, path: Path, *, source_bytes: dict[str, bytes] | None = None,
+) -> dict[str, Any]:
+    """Validate a captured report; optionally retain those exact bytes in an output sink."""
+    relative = path.relative_to(root.absolute()).as_posix()
+    raw = read_source_bytes(root, relative)
+    text = raw.decode("utf-8")
     if not text.startswith("---\n") or "\n---\n" not in text[4:]:
         raise ValueError(f"{relative}: missing review metadata")
     front, body = text[4:].split("\n---\n", 1)
@@ -488,22 +514,33 @@ def read_review(root: Path, path: Path) -> dict[str, Any]:
         raise ValueError(f"{relative}: filename/directory disagrees with review metadata")
     if text != _render_report(payload):
         raise ValueError(f"{relative}: report body and metadata disagree")
+    if source_bytes is not None:
+        source_bytes[relative] = raw
     return payload
 
 
-def load_review_metadata(root: Path, pfam_id: str | None = None) -> list[dict[str, Any]]:
-    """Read validated reports for Pages; hrefs are relative to the repository root."""
-    root = root.resolve(strict=True)
+def load_review_metadata(
+    root: Path, pfam_id: str | None = None, *, source_bytes: dict[str, bytes] | None = None,
+) -> list[dict[str, Any]]:
+    """Read validated reports and optionally capture their source bytes for publication.
+
+    ``source_bytes`` is output-only; existing entries never substitute for a read.
+    Hrefs remain relative to the repository root; source bytes are not metadata.
+    """
+    root = root.absolute()
     result = []
     for directory in REPORT_DIRS.values():
         for path in artifact_paths(root, directory, {".md"}):
-            review = read_review(root, path)
+            captured = {} if source_bytes is not None else None
+            review = read_review(root, path, source_bytes=captured)
             if pfam_id is not None and pfam_id not in review["context"]["members"]:
                 continue
             item = {k: v for k, v in review.items() if k != "sections"}
             item["path"] = path.relative_to(root).as_posix()
             item["href"] = internal_href(root, item["path"])
             result.append(item)
+            if source_bytes is not None:
+                source_bytes.update(captured)
     return sorted(result, key=lambda item: (utc_timestamp(item["finished_utc"]), item["path"]))
 
 
@@ -526,7 +563,25 @@ def require_completed_review(
     if not PFAM.fullmatch(pfam_id) or record.get("pfam_id") != pfam_id:
         raise ValueError("review target must match the effective FamilyRecord")
     path = safe_path(root, review_id)
-    review = read_review(root, path)
+    review = {**read_review(root, path), "path": review_id}
+    history_records = load_history_metadata(root, pfam_id)
+    return _require_completed_review_from_metadata(pfam_id, review_id, record, review, history_records)
+
+
+def _require_completed_review_from_metadata(
+    pfam_id: str, review_id: str, record: dict[str, Any], review: dict[str, Any],
+    history_records: Sequence[dict[str, Any]],
+) -> dict[str, Any]:
+    """Apply the REVIEWED predicate to internally validated captured artifacts.
+
+    This pure helper never loads or validates external input. Public callers use
+    ``require_completed_review``; publication adapters pass the exact validated
+    report and history metadata whose captured source bytes they publish.
+    """
+    if not PFAM.fullmatch(pfam_id) or record.get("pfam_id") != pfam_id:
+        raise ValueError("review target must match the effective FamilyRecord")
+    if review.get("path") != review_id:
+        raise ValueError("review artifact path does not match review_id")
     context = review["context"]
     if (context["kind"] != "record" or context["members"] != [pfam_id]
             or review["verdict"] != "PASS"):
@@ -535,8 +590,9 @@ def require_completed_review(
         raise ValueError("reviewed record content changed or no projection was reviewed")
     expected_url = review_report_url(review_id)
     matches = []
-    for history in load_history_metadata(root, pfam_id):
-        if (history["target"]["path"] == f"data/families/{pfam_id}.yaml"
+    for history in history_records:
+        if (history["target"]["kind"] == "record" and history["target"].get("slug") == pfam_id
+                and history["target"]["path"] == f"data/families/{pfam_id}.yaml"
                 and expected_url in history.get("links", {}).get("urls", [])
                 and utc_timestamp(history["session"]["timestamp"])
                 >= utc_timestamp(review["started_utc"])
@@ -545,7 +601,7 @@ def require_completed_review(
             matches.append(history["path"])
     if not matches:
         raise ValueError("REVIEWED requires a canonical REVIEW event linked to this report URL")
-    return {"review_id": review_id, "history_paths": matches,
+    return {"review_id": review_id, "history_paths": sorted(matches),
             "review_scope": review["review_scope"], "scientific_review": review["scientific_review"],
             "record_digest": context["record_digests"][pfam_id]}
 

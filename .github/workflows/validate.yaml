@@ -32,6 +32,8 @@ jobs:
           python-version: "3.13"
       - name: Install locked dependencies
         run: uv sync --locked --extra dev
+      - name: Verify published CLAW artifacts
+        run: bash scripts/check_vendored_sync.sh
       - name: Set up Node for browser regression tests
         uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:

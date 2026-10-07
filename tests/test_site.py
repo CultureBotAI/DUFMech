@@ -138,11 +138,15 @@ def test_snapshot_review_adapter_uses_validated_loader_without_promoting_status(
     source = tmp_path / path
     source.parent.mkdir(parents=True)
     source.write_text("Fixture retained report")
-    monkeypatch.setattr("dufmech.reviews.load_review_metadata", lambda root: [{
-        "path": path, "finished_utc": "2026-10-07T12:00:00Z", "verdict": "SEED_ONLY",
-        "reviewer": "Fixture reviewer", "review_scope": "Imported identity only",
-        "scientific_review": False, "context": {"members": ["PF00001"]},
-    }])
+    def captured_review(root, *, source_bytes):
+        source_bytes[path] = b"Fixture retained report"
+        return [{
+            "path": path, "finished_utc": "2026-10-07T12:00:00Z", "verdict": "SEED_ONLY",
+            "reviewer": "Fixture reviewer", "review_scope": "Imported identity only",
+            "scientific_review": False, "context": {"members": ["PF00001"]},
+        }]
+
+    monkeypatch.setattr("dufmech.reviews.load_review_metadata", captured_review)
     metadata, provenance, copies = load_review_site_metadata(tmp_path, {"PF00001"})
     assert "curation_status" not in metadata["PF00001"]
     assert metadata["PF00001"]["reviews"][0]["scientific_review"] is False

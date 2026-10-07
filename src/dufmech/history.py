@@ -22,6 +22,7 @@ from dufmech.reviews import (
     append_document,
     artifact_paths,
     internal_href,
+    read_source_bytes,
     read_yaml,
     safe_path,
     token,
@@ -72,6 +73,8 @@ def _validate_record(root: Path, record: Any, *, path: Path | None = None) -> No
     token(target.get("slug"))
     safe_path(root, target["path"], must_exist=path is None)
     timestamp = utc_timestamp(session["timestamp"])
+    if not 2000 <= timestamp.year <= 2099:
+        raise ValueError("history timestamp year must be between 2000 and 2099")
     token(session["id"], "session.id")
     prefix = timestamp.strftime("%Y-%m-%dT%H%M%SZ-")
     if not session["id"].startswith(prefix):
@@ -145,13 +148,17 @@ def new_history(
     return append_document(root, f"history/{KIND_DIRS[kind]}/{slug}", stem, ".yaml", render)
 
 
-def load_history_metadata(root: Path, pfam_id: str | None = None) -> list[dict[str, Any]]:
+def load_history_metadata(
+    root: Path, pfam_id: str | None = None, *, source_bytes: dict[str, bytes] | None = None,
+) -> list[dict[str, Any]]:
     """Return schema-validated events and repository-relative links for Pages.
 
     A removed historical target has target_href=None. Unsafe/symlinked targets
     still fail validation rather than becoming links outside the repository.
+    The optional output-only sink receives the exact bytes parsed and validated;
+    callers can publish them without reopening a mutable filesystem path.
     """
-    root = root.resolve(strict=True)
+    root = root.absolute()
     directory = "history"
     if pfam_id is not None:
         if not isinstance(pfam_id, str) or not PFAM.fullmatch(pfam_id):
@@ -165,7 +172,8 @@ def load_history_metadata(root: Path, pfam_id: str | None = None) -> list[dict[s
     result = []
     for path in paths:
         relative = path.relative_to(root).as_posix()
-        record = read_yaml(safe_path(root, relative).read_text(encoding="utf-8"))
+        raw = read_source_bytes(root, relative)
+        record = read_yaml(raw.decode("utf-8"))
         _validate_record(root, record, path=path)
         if pfam_id is not None and not (
             record["target"]["kind"] == "record" and record["target"]["slug"] == pfam_id
@@ -176,7 +184,40 @@ def load_history_metadata(root: Path, pfam_id: str | None = None) -> list[dict[s
             **record, "path": relative, "href": internal_href(root, relative),
             "target_href": internal_href(root, record["target"]["path"]) if target.exists() else None,
         })
+        if source_bytes is not None:
+            source_bytes[relative] = raw
     return sorted(result, key=lambda item: (utc_timestamp(item["session"]["timestamp"]), item["path"]))
+
+
+def _project_curation_events(records: Sequence[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Flatten already-validated family metadata supplied by an internal caller.
+
+    This pure helper is not an input-validation boundary. Public callers must use
+    ``project_curation_events``; builders may reuse their own validated index.
+    """
+    ordered = sorted(records, key=lambda item: (utc_timestamp(item["session"]["timestamp"]), item["path"]))
+    result = []
+    for record in ordered:
+        session = record["session"]
+        for index, event in enumerate(record["events"]):
+            result.append({
+                "timestamp": session["timestamp"],
+                "curator": ", ".join(actor["name"] for actor in session["actors"]),
+                "action": event["type"],
+                "outcome": event["outcome"],
+                "summary": event["summary"],
+                "history_record": record["path"],
+                "event_index": index,
+                "llm_assisted": any(actor["type"] == "ai_agent" for actor in session["actors"]),
+            })
+    return result
+
+
+def project_curation_events(root: Path, pfam_id: str) -> list[dict[str, Any]]:
+    """Derive the read-only audit index from validated authoritative family sidecars."""
+    if not isinstance(pfam_id, str) or not PFAM.fullmatch(pfam_id):
+        raise ValueError("pfam_id must be an exact Pfam accession")
+    return _project_curation_events(load_history_metadata(root, pfam_id))
 
 
 def require_record_history(root: Path, pfam_id: str, history_path: str) -> list[dict[str, Any]]:
@@ -186,9 +227,23 @@ def require_record_history(root: Path, pfam_id: str, history_path: str) -> list[
     directory = safe_path(root, history_path)
     if not directory.is_dir():
         raise ValueError("curation_history must identify a directory")
+    return _require_record_history_from_metadata(pfam_id, history_path, load_history_metadata(root, pfam_id))
+
+
+def _require_record_history_from_metadata(
+    pfam_id: str, history_path: str, history_records: Sequence[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Check the pointer predicate on internally validated captured family history.
+
+    This pure helper is not a public validation boundary. ``require_record_history``
+    additionally validates the directory and loads authoritative sidecars itself.
+    """
+    if not PFAM.fullmatch(pfam_id) or history_path != f"history/records/{pfam_id}":
+        raise ValueError("curation_history must be history/records/<exact Pfam accession>")
     targets = {f"data/families/{pfam_id}.yaml", f"curation/families/{pfam_id}.yaml"}
-    events = [record for record in load_history_metadata(root, pfam_id)
-              if record["target"]["path"] in targets]
+    events = [record for record in history_records
+              if record["target"]["kind"] == "record" and record["target"].get("slug") == pfam_id
+              and record["target"]["path"] in targets]
     if not events:
         raise ValueError("curation_history requires an actual canonical event for this family")
     return events

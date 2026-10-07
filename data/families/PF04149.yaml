@@ -22,3 +22,13 @@ provenance:
   source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
 interpro_id: InterPro:IPR007278
 description: The function of this family is unknown.
+curation_events:
+- timestamp: '2026-10-07T12:26:02Z'
+  curator: Codex
+  action: REVIEW
+  outcome: no_change
+  summary: Completed a scoped PF04149 frozen-seed and native audit integration review; biological content
+    unchanged.
+  history_record: history/records/PF04149/2026-10-07T122602Z-codex-3e2c16.yaml
+  event_index: 0
+  llm_assisted: true

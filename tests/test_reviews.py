@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import copy
 import json
+import os
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
@@ -227,13 +228,124 @@ def test_cli_inspect_save_check_list(root, capsys):
     assert json.loads(capsys.readouterr().out) == []
 
 
-def test_record_digest_excludes_only_bookkeeping():
+def test_record_digest_excludes_only_bookkeeping_and_derived_events():
     original = {"pfam_id": "PF04149", "curation_status": "IN_PROGRESS", "assertions": []}
     reviewed = {**original, "curation_status": "REVIEWED", "review_id": "reports/review.md"}
     assert reviews.record_content_digest(original) == reviews.record_content_digest(reviewed)
+    exported = {**reviewed, "curation_events": [{"summary": "Appended canonical event index"}]}
+    assert reviews.record_content_digest(original) == reviews.record_content_digest(exported)
+    for key in ("curation_history", "assertions", "discussions", "datasets", "cross_corpus_links", "provenance"):
+        assert reviews.record_content_digest(original) != reviews.record_content_digest({**exported, key: "changed"})
     changed = copy.deepcopy(reviewed)
     changed["assertions"].append({"statement": "Changed content."})
     assert reviews.record_content_digest(original) != reviews.record_content_digest(changed)
+
+
+def test_review_source_sink_preserves_validated_bytes_after_path_replacement(root, monkeypatch):
+    path = reviews.save_review(root, review_payload(root))
+    relative = path.relative_to(root).as_posix()
+    original = path.read_bytes()
+    capture = reviews.read_source_bytes
+    calls = []
+
+    def replace_after_capture(base, name):
+        calls.append(name)
+        raw = capture(base, name)
+        (base / name).write_bytes(b"Unvalidated replacement, not the reviewed document.\n")
+        return raw
+
+    monkeypatch.setattr(reviews, "read_source_bytes", replace_after_capture)
+    captured = {relative: b"untrusted sink entry is not input"}
+    metadata = reviews.load_review_metadata(root, source_bytes=captured)
+    assert calls == [relative]
+    assert captured == {relative: original}
+    assert metadata[0]["verdict"] == "SEED_ONLY"
+    assert "## Evidence\n" in captured[relative].decode("utf-8")
+    assert "sections" not in metadata[0] and "source_bytes" not in metadata[0]
+    json.dumps(metadata)
+    failed_capture = {}
+    with pytest.raises(ValueError, match="missing review metadata"):
+        reviews.load_review_metadata(root, source_bytes=failed_capture)
+    assert failed_capture == {}
+
+
+def test_review_source_sink_only_contains_selected_validated_reports(root):
+    selected = reviews.save_review(root, review_payload(root))
+    reviews.save_review(root, review_payload(root, "repo"))
+    captured = {}
+    metadata = reviews.load_review_metadata(root, "PF04149", source_bytes=captured)
+    assert [item["path"] for item in metadata] == [selected.relative_to(root).as_posix()]
+    assert captured == {selected.relative_to(root).as_posix(): selected.read_bytes()}
+
+
+def test_source_reader_preserves_bytes_and_refuses_unsafe_or_nonregular_paths(tmp_path):
+    path = tmp_path / "source.yaml"
+    raw = b"summary: caf\xc3\xa9\r\n"
+    path.write_bytes(raw)
+    assert reviews.read_source_bytes(tmp_path, path.name) == raw
+    for relative in ("../escape", "/etc/passwd", "a/../source.yaml", "a//source.yaml"):
+        with pytest.raises(ValueError, match="unsafe"):
+            reviews.read_source_bytes(tmp_path, relative)
+    for relative in ("missing.yaml", "missing/leaf.yaml"):
+        with pytest.raises(FileNotFoundError):
+            reviews.read_source_bytes(tmp_path, relative)
+    (tmp_path / "directory.yaml").mkdir()
+    os.mkfifo(tmp_path / "pipe.yaml")
+    for relative in ("directory.yaml", "pipe.yaml"):
+        with pytest.raises((ValueError, OSError)):
+            reviews.read_source_bytes(tmp_path, relative)
+
+
+@pytest.mark.parametrize("swap", ["root-before", "root-after", "parent-before", "parent-after", "leaf-before"])
+def test_source_reader_does_not_follow_a_racing_directory_or_leaf_symlink(tmp_path, monkeypatch, swap):
+    root, outside = tmp_path / "root", tmp_path / "outside"
+    inside = root / "inside"
+    inside.mkdir(parents=True)
+    outside.mkdir()
+    (inside / "source.yaml").write_bytes(b"validated inside bytes\n")
+    (outside / "source.yaml").write_bytes(b"outside secret must not be read\n")
+    (outside / "inside").mkdir()
+    (outside / "inside/source.yaml").write_bytes(b"outside secret must not be read\n")
+    original_open = os.open
+    swapped = False
+
+    def racing_open(path, flags, *args, **kwargs):
+        nonlocal swapped
+        if path == "root" and not swapped and swap.startswith("root"):
+            swapped = True
+            descriptor = original_open(path, flags, *args, **kwargs) if swap == "root-after" else None
+            root.rename(tmp_path / "original-root")
+            root.symlink_to(outside, target_is_directory=True)
+            return descriptor if descriptor is not None else original_open(path, flags, *args, **kwargs)
+        if path == "inside" and not swapped and swap.startswith("parent"):
+            swapped = True
+            descriptor = original_open(path, flags, *args, **kwargs) if swap == "parent-after" else None
+            inside.rename(root / "original")
+            inside.symlink_to(outside, target_is_directory=True)
+            return descriptor if descriptor is not None else original_open(path, flags, *args, **kwargs)
+        if path == "source.yaml" and not swapped and swap == "leaf-before":
+            swapped = True
+            (inside / "source.yaml").unlink()
+            (inside / "source.yaml").symlink_to(outside / "source.yaml")
+        return original_open(path, flags, *args, **kwargs)
+
+    monkeypatch.setattr(reviews.os, "open", racing_open)
+    if swap.endswith("after"):
+        assert reviews.read_source_bytes(root, "inside/source.yaml") == b"validated inside bytes\n"
+    else:
+        with pytest.raises(OSError):
+            reviews.read_source_bytes(root, "inside/source.yaml")
+    assert swapped
+
+
+def test_source_reader_rejects_preexisting_root_symlink(tmp_path):
+    outside = tmp_path / "outside"
+    outside.mkdir()
+    (outside / "source.yaml").write_bytes(b"outside secret must not be read\n")
+    root = tmp_path / "root"
+    root.symlink_to(outside, target_is_directory=True)
+    with pytest.raises(OSError):
+        reviews.read_source_bytes(root, "source.yaml")
 
 
 def test_duplicate_yaml_key_and_header_injection_are_rejected(root):

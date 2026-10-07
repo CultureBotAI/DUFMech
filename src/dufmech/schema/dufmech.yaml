@@ -46,6 +46,11 @@ classes:
       curation_history:
         description: Stable directory containing canonical append-only history for this family.
         pattern: '^history/records/PF[0-9]{5}$'
+      curation_events:
+        description: Read-only index derived from validated canonical history sidecars, never an authoring surface.
+        range: CurationEvent
+        multivalued: true
+        inlined_as_list: true
       description:
         description: Imported source description, not a verified functional assertion.
       source_url:
@@ -106,6 +111,34 @@ classes:
         range: CrossCorpusLink
         multivalued: true
         inlined_as_list: true
+  CurationEvent:
+    description: Generated record-level view of a canonical sidecar event; the referenced history record is authoritative.
+    attributes:
+      timestamp:
+        description: Preserve the canonical UTC timestamp spelling and precision through model serialization.
+        range: string
+        all_of:
+          - range: datetime
+        required: true
+        pattern: '^20[0-9]{2}-'
+      curator:
+        required: true
+      action:
+        required: true
+      outcome:
+        required: true
+      summary:
+        required: true
+      history_record:
+        required: true
+        pattern: '^history/records/PF[0-9]{5}/[A-Za-z0-9_.-]+[.]ya?ml$'
+      event_index:
+        range: integer
+        minimum_value: 0
+        required: true
+      llm_assisted:
+        range: boolean
+        required: true
   FamilyCounters:
     attributes:
       proteins:

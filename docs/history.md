@@ -12,7 +12,10 @@ Use `uv run dufmech-history`, or `uv run python -m dufmech.history`. Global
 
 - `--kind`, `--slug`, `--path`: target kind, stable directory identifier, and
   existing repository-relative target path.
-- `--timestamp`: explicit quoted UTC session start, retained verbatim.
+- `--timestamp`: explicit quoted UTC session start, retained verbatim. The native
+  validator requires a year from 2000 through 2099, inclusive, on both creation
+  and retained-file loading. This deterministic typo guard does not consult the
+  current clock or modify the canonical schema.
 - `--event`, `--outcome`: an actual event and outcome from the canonical schema.
 - `--summary` and `--details` or `--details-file`: actual work, evidence, validation,
   and remaining limits. There are no completed scaffold events.
@@ -58,8 +61,8 @@ Removed historical targets have `target_href: null`; unsafe or symlinked targets
 are errors. A Pfam-specific load reads and validates only that family's directory;
 the unfiltered loader and global `check` validate the whole tree. No persistent
 validation cache is used, so newly written or changed sidecars are seen immediately.
-Load once and index `target.slug` for Pages without embedding sidecar
-pointers in generated family records. An empty history list does not require a
+Load once and index record targets by `target.slug` for Pages and the generated
+family audit export. An empty history list does not require a
 schema at render time, but any existing event does. Corrections are new events
 that identify the superseded session in their details.
 
@@ -69,8 +72,38 @@ this constant for overlays; it must validate it with
 `history.require_record_history(root, pfam_id, history_path)`. The helper requires
 at least one actual canonical event targeting this family's overlay or projection.
 Create that first event before the initial curated projection is reviewed. Appending
-later sidecars leaves the pointer and record digest unchanged; event lists and
-individual session pointers do not belong in deterministic projections.
+later sidecars leaves the pointer and semantic review digest unchanged.
+
+## Generated Audit Index
+
+Canonical history sidecars are the sole editable history authority. The generated
+`FamilyRecord.curation_events` is a read-only machine-readable index of those
+events, not another place to curate history. `FamilyCuration` cannot supply it.
+The family builder derives it with `history.project_curation_events(root, pfam_id)`;
+families without sidecars need no field and the helper returns an empty list.
+
+Every exported event contains exactly `timestamp`, `curator`, `action`, `outcome`,
+`summary`, `history_record`, `event_index`, and `llm_assisted`. Timestamp and summary
+are retained verbatim. Curator joins session actor names with `, `; `llm_assisted`
+is true when any session actor is an AI agent. Action is the canonical event type.
+`history_record` is the validated repository-relative sidecar path, and
+`event_index` is its zero-based index within `events`. Full details, actor metadata,
+and links stay in that sidecar and are retrieved by this pair of references.
+
+The public helper never writes files and always validates the family's sidecars.
+It sorts by parsed UTC session time, sidecar path, then original event index.
+Internal builders may load history once, group record targets by Pfam slug, and
+use the private pure `_project_curation_events(records)` on that already-validated
+metadata. This internal path must never carry user input into a public validator
+or become a persistent stale cache. Snapshot-targeted audits can appear in the
+index, but do not satisfy the stricter history-pointer or REVIEWED target rules.
+
+Append history first, then regenerate the affected family projections. The native
+record validator must replay the canonical view and reject forged or stale exports.
+Full generated-file integrity checks still include the export, even though the
+semantic review digest excludes `curation_events`. Thus an appended REVIEW event
+does not invalidate the review it records, while changed scientific content still
+requires a new review. The index alone never establishes scientific endorsement.
 
 See [reviews.md](reviews.md) for the exact gate linking a passing retained report,
 a canonical REVIEW event, and the digest of the current effective family record.

@@ -7,6 +7,7 @@ import hashlib
 import json
 import os
 import secrets
+from collections import defaultdict
 from contextlib import ExitStack, contextmanager
 from functools import lru_cache
 from pathlib import Path
@@ -90,11 +91,29 @@ def validator(target: str = "FamilyRecord") -> Draft202012Validator:
 
 
 def validate_record(record: dict, root: Path, *, target: str = "FamilyRecord") -> None:
+    """Validate content and independently replay any generated history index."""
+    _validate_family_record(record, root, target=target)
+
+
+def _validate_family_record(
+    record: dict, root: Path, *, target: str = "FamilyRecord",
+    history_events: list[dict] | None = None,
+) -> None:
     errors = sorted(validator(target).iter_errors(record), key=lambda e: str(list(e.path)))
     if errors:
         raise RecordError("; ".join(f"{list(e.path)}: {e.message}" for e in errors))
     if target == "FamilyRecord" and record["id"] != f"Pfam:{record['pfam_id']}":
         raise RecordError("id does not match pfam_id")
+    if target == "FamilyRecord":
+        from dufmech.history import project_curation_events
+
+        try:
+            expected_events = (project_curation_events(root, record["pfam_id"])
+                               if history_events is None else history_events)
+        except (ValueError, OSError) as exc:
+            raise RecordError(str(exc)) from exc
+        if record.get("curation_events", []) != expected_events:
+            raise RecordError("curation_events differ from canonical history; regenerate records")
     if record.get("curation_status") == "REVIEWED":
         if not record.get("review_id"):
             raise RecordError("REVIEWED requires a retained review_id")
@@ -145,6 +164,8 @@ def validate_record(record: dict, root: Path, *, target: str = "FamilyRecord") -
 
 def build_records(root: Path) -> dict[str, dict]:
     """Project source identity unchanged and merge only explicitly curated fields."""
+    from dufmech.history import _project_curation_events, load_history_metadata
+
     worklists = safe_path(root, "data/worklists")
     rows, scores, inputs = load_latest_rows(worklists)
     source = safe_path(root, f"data/worklists/{inputs['worklist']}.json")
@@ -171,6 +192,12 @@ def build_records(root: Path) -> dict[str, dict]:
         identities[row["pfam_id"]] = row
     seen = set()
     result = {}
+    history_by_family = defaultdict(list)
+    for event in load_history_metadata(root):
+        if event["target"]["kind"] == "record":
+            history_by_family[event["target"]["slug"]].append(event)
+    history_events = {pfam: _project_curation_events(events)
+                      for pfam, events in history_by_family.items()}
     for family in family_index(rows, scores):
         pfam = family["pfam_id"]
         if pfam not in identities:
@@ -198,7 +225,10 @@ def build_records(root: Path) -> dict[str, dict]:
                 raise RecordError(f"overlay filename/identity mismatch: {overlay}")
             record.update({key: curated[key] for key in OVERLAY_FIELDS if key in curated})
             seen.add(overlay.name)
-        validate_record(record, root)
+        events = history_events.get(pfam, [])
+        if events:
+            record["curation_events"] = events
+        _validate_family_record(record, root, history_events=events)
         result[f"{pfam}.yaml"] = record
     if overlays.exists():
         unknown = {p.name for p in overlays.iterdir()} - seen

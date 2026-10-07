@@ -52,8 +52,8 @@ from rdflib import (
     URIRef
 )
 
-from linkml_runtime.linkml_model.types import Date, Integer, String, Uri
-from linkml_runtime.utils.metamodelcore import URI, XSDDate
+from linkml_runtime.linkml_model.types import Boolean, Date, Integer, String, Uri
+from linkml_runtime.utils.metamodelcore import Bool, URI, XSDDate
 
 metamodel_version = "1.11.0"
 version = None
@@ -98,6 +98,7 @@ class FamilyRecord(YAMLRoot):
     interpro_id: Optional[str] = None
     review_id: Optional[str] = None
     curation_history: Optional[str] = None
+    curation_events: Optional[Union[Union[dict, "CurationEvent"], list[Union[dict, "CurationEvent"]]]] = empty_list()
     description: Optional[str] = None
     counters: Optional[Union[dict, "FamilyCounters"]] = None
     score_provenance: Optional[Union[dict, "SnapshotProvenance"]] = None
@@ -160,6 +161,8 @@ class FamilyRecord(YAMLRoot):
 
         if self.curation_history is not None and not isinstance(self.curation_history, str):
             self.curation_history = str(self.curation_history)
+
+        self._normalize_inlined_as_list(slot_name="curation_events", slot_type=CurationEvent, key_name="timestamp", keyed=False)
 
         if self.description is not None and not isinstance(self.description, str):
             self.description = str(self.description)
@@ -230,6 +233,71 @@ class FamilyCuration(YAMLRoot):
         self.datasets = [v if isinstance(v, Dataset) else Dataset(**as_dict(v)) for v in self.datasets]
 
         self._normalize_inlined_as_list(slot_name="cross_corpus_links", slot_type=CrossCorpusLink, key_name="corpus", keyed=False)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class CurationEvent(YAMLRoot):
+    """
+    Generated record-level view of a canonical sidecar event; the referenced history record is authoritative.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DUFMECH["CurationEvent"]
+    class_class_curie: ClassVar[str] = "dufmech:CurationEvent"
+    class_name: ClassVar[str] = "CurationEvent"
+    class_model_uri: ClassVar[URIRef] = DUFMECH.CurationEvent
+
+    timestamp: str = None
+    curator: str = None
+    action: str = None
+    outcome: str = None
+    summary: str = None
+    history_record: str = None
+    event_index: int = None
+    llm_assisted: Union[bool, Bool] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.timestamp):
+            self.MissingRequiredField("timestamp")
+        if not isinstance(self.timestamp, str):
+            self.timestamp = str(self.timestamp)
+
+        if self._is_empty(self.curator):
+            self.MissingRequiredField("curator")
+        if not isinstance(self.curator, str):
+            self.curator = str(self.curator)
+
+        if self._is_empty(self.action):
+            self.MissingRequiredField("action")
+        if not isinstance(self.action, str):
+            self.action = str(self.action)
+
+        if self._is_empty(self.outcome):
+            self.MissingRequiredField("outcome")
+        if not isinstance(self.outcome, str):
+            self.outcome = str(self.outcome)
+
+        if self._is_empty(self.summary):
+            self.MissingRequiredField("summary")
+        if not isinstance(self.summary, str):
+            self.summary = str(self.summary)
+
+        if self._is_empty(self.history_record):
+            self.MissingRequiredField("history_record")
+        if not isinstance(self.history_record, str):
+            self.history_record = str(self.history_record)
+
+        if self._is_empty(self.event_index):
+            self.MissingRequiredField("event_index")
+        if not isinstance(self.event_index, int):
+            self.event_index = int(self.event_index)
+
+        if self._is_empty(self.llm_assisted):
+            self.MissingRequiredField("llm_assisted")
+        if not isinstance(self.llm_assisted, Bool):
+            self.llm_assisted = Bool(self.llm_assisted)
 
         super().__post_init__(**kwargs)
 
@@ -1027,6 +1095,9 @@ slots.familyRecord__curation_history = Slot(uri=DUFMECH.curation_history, name="
                    model_uri=DUFMECH.familyRecord__curation_history, domain=None, range=Optional[str],
                    pattern=re.compile(r'^history/records/PF[0-9]{5}$'))
 
+slots.familyRecord__curation_events = Slot(uri=DUFMECH.curation_events, name="familyRecord__curation_events", curie=DUFMECH.curie('curation_events'),
+                   model_uri=DUFMECH.familyRecord__curation_events, domain=None, range=Optional[Union[Union[dict, CurationEvent], list[Union[dict, CurationEvent]]]])
+
 slots.familyRecord__description = Slot(uri=DUFMECH.description, name="familyRecord__description", curie=DUFMECH.curie('description'),
                    model_uri=DUFMECH.familyRecord__description, domain=None, range=Optional[str])
 
@@ -1080,6 +1151,32 @@ slots.familyCuration__datasets = Slot(uri=DUFMECH.datasets, name="familyCuration
 
 slots.familyCuration__cross_corpus_links = Slot(uri=DUFMECH.cross_corpus_links, name="familyCuration__cross_corpus_links", curie=DUFMECH.curie('cross_corpus_links'),
                    model_uri=DUFMECH.familyCuration__cross_corpus_links, domain=None, range=Optional[Union[Union[dict, CrossCorpusLink], list[Union[dict, CrossCorpusLink]]]])
+
+slots.curationEvent__timestamp = Slot(uri=DUFMECH.timestamp, name="curationEvent__timestamp", curie=DUFMECH.curie('timestamp'),
+                   model_uri=DUFMECH.curationEvent__timestamp, domain=None, range=str,
+                   pattern=re.compile(r'^20[0-9]{2}-'))
+
+slots.curationEvent__curator = Slot(uri=DUFMECH.curator, name="curationEvent__curator", curie=DUFMECH.curie('curator'),
+                   model_uri=DUFMECH.curationEvent__curator, domain=None, range=str)
+
+slots.curationEvent__action = Slot(uri=DUFMECH.action, name="curationEvent__action", curie=DUFMECH.curie('action'),
+                   model_uri=DUFMECH.curationEvent__action, domain=None, range=str)
+
+slots.curationEvent__outcome = Slot(uri=DUFMECH.outcome, name="curationEvent__outcome", curie=DUFMECH.curie('outcome'),
+                   model_uri=DUFMECH.curationEvent__outcome, domain=None, range=str)
+
+slots.curationEvent__summary = Slot(uri=DUFMECH.summary, name="curationEvent__summary", curie=DUFMECH.curie('summary'),
+                   model_uri=DUFMECH.curationEvent__summary, domain=None, range=str)
+
+slots.curationEvent__history_record = Slot(uri=DUFMECH.history_record, name="curationEvent__history_record", curie=DUFMECH.curie('history_record'),
+                   model_uri=DUFMECH.curationEvent__history_record, domain=None, range=str,
+                   pattern=re.compile(r'^history/records/PF[0-9]{5}/[A-Za-z0-9_.-]+[.]ya?ml$'))
+
+slots.curationEvent__event_index = Slot(uri=DUFMECH.event_index, name="curationEvent__event_index", curie=DUFMECH.curie('event_index'),
+                   model_uri=DUFMECH.curationEvent__event_index, domain=None, range=int)
+
+slots.curationEvent__llm_assisted = Slot(uri=DUFMECH.llm_assisted, name="curationEvent__llm_assisted", curie=DUFMECH.curie('llm_assisted'),
+                   model_uri=DUFMECH.curationEvent__llm_assisted, domain=None, range=Union[bool, Bool])
 
 slots.familyCounters__proteins = Slot(uri=DUFMECH.proteins, name="familyCounters__proteins", curie=DUFMECH.curie('proteins'),
                    model_uri=DUFMECH.familyCounters__proteins, domain=None, range=Optional[int])

@@ -77,7 +77,9 @@ after the overlay is merged into the effective `FamilyRecord`. The helper checks
 
 1. A saved per-record `PASS` report for exactly this Pfam accession.
 2. A SHA-256 digest matching the current record's content, excluding only
-   `curation_status` and `review_id` to avoid circular bookkeeping.
+   `curation_status`, `review_id`, and the generated-only `curation_events` audit
+   index to avoid circular bookkeeping. The stable `curation_history` pointer
+   and all claim/evidence/provenance content remain in the digest.
 3. A canonical-schema-valid history event targeting `data/families/PFxxxxx.yaml`,
    with `type: REVIEW` and `outcome: changed` or `no_change`.
 4. That event's `links.urls` includes `reviews.review_report_url(review_id)`, a
@@ -87,7 +89,9 @@ after the overlay is merged into the effective `FamilyRecord`. The helper checks
 Generate the `IN_PROGRESS` projection before inspecting it. Finalize the review,
 write the real linked history event, then set the overlay's `review_id` and
 `curation_status`. Regenerating projections after those bookkeeping changes leaves
-the reviewed content digest unchanged. A changed claim, evidence, provenance,
+the reviewed content digest unchanged. Appending history refreshes the read-only
+audit index without invalidating that semantic digest; full projection validation
+must still reject stale or forged audit indexes. A changed claim, evidence, provenance,
 dataset, discussion, or source counter requires a new review. Row-only reviews
 remain useful but cannot satisfy the projection digest gate. Category/repository
 reviews and `SEED_ONLY`/`NEEDS_FOLLOWUP` verdicts cannot promote a record.
@@ -103,10 +107,11 @@ in memory; do not run a repository scan for every generated family page.
 `href` is URL-encoded **relative to the repository root**, not a Pages page. Link it
 under a pinned GitHub repository URL or copy the validated artifact into the site
 and link that destination. Escape displayed text. Never concatenate an unvalidated
-overlay path into HTML. Individual history event pointers stay outside deterministic
-family projections; curated records may carry the stable history directory pointer
-described in [history.md](history.md). `review_id` identifies a specific finalized
-report without embedding event lists or generation timestamps in the record.
+overlay path into HTML. The generated-only `curation_events` index references
+canonical sidecars by repository-relative path and zero-based event index; use
+those sidecars for full details. Curated records retain the stable history directory
+pointer described in [history.md](history.md). `review_id` identifies a specific
+finalized report. No invented event or generation-time clock enters either index.
 
 Repository skills live in `.claude/skills/review-yaml-record/`,
 `.claude/skills/review-yaml-category/`, and `.claude/skills/review-repo/`.

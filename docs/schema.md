@@ -18,6 +18,7 @@ A source-derived family projection; SEEDED is not scientific review.
 | curation_status | CurationStatus | True |
 | review_id | string | False |
 | curation_history | string | False |
+| curation_events | CurationEvent | False |
 | description | string | False |
 | source_url | uri | True |
 | counters | FamilyCounters | False |
@@ -42,6 +43,21 @@ Human-owned overlay. Imported identity and counters cannot be overridden.
 | discussions | Discussion | False |
 | datasets | Dataset | False |
 | cross_corpus_links | CrossCorpusLink | False |
+
+## CurationEvent
+
+Generated record-level view of a canonical sidecar event; the referenced history record is authoritative.
+
+| Field | Type | Required |
+| --- | --- | --- |
+| timestamp | string | True |
+| curator | string | True |
+| action | string | True |
+| outcome | string | True |
+| summary | string | True |
+| history_record | string | True |
+| event_index | integer | True |
+| llm_assisted | boolean | True |
 
 ## FamilyCounters
 

@@ -83,6 +83,58 @@
       "title": "CrossCorpusLink",
       "type": "object"
     },
+    "CurationEvent": {
+      "additionalProperties": false,
+      "description": "Generated record-level view of a canonical sidecar event; the referenced history record is authoritative.",
+      "properties": {
+        "action": {
+          "type": "string"
+        },
+        "curator": {
+          "type": "string"
+        },
+        "event_index": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "history_record": {
+          "pattern": "^history/records/PF[0-9]{5}/[A-Za-z0-9_.-]+[.]ya?ml$",
+          "type": "string"
+        },
+        "llm_assisted": {
+          "type": "boolean"
+        },
+        "outcome": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "timestamp": {
+          "allOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            }
+          ],
+          "description": "Preserve the canonical UTC timestamp spelling and precision through model serialization.",
+          "pattern": "^20[0-9]{2}-",
+          "type": "string"
+        }
+      },
+      "required": [
+        "timestamp",
+        "curator",
+        "action",
+        "outcome",
+        "summary",
+        "history_record",
+        "event_index",
+        "llm_assisted"
+      ],
+      "title": "CurationEvent",
+      "type": "object"
+    },
     "CurationStatus": {
       "description": "",
       "enum": [
@@ -432,6 +484,13 @@
           },
           "type": "array"
         },
+        "curation_events": {
+          "description": "Read-only index derived from validated canonical history sidecars, never an authoring surface.",
+          "items": {
+            "$ref": "#/$defs/CurationEvent"
+          },
+          "type": "array"
+        },
         "curation_history": {
           "description": "Stable directory containing canonical append-only history for this family.",
           "pattern": "^history/records/PF[0-9]{5}$",
@@ -713,6 +772,13 @@
     "cross_corpus_links": {
       "items": {
         "$ref": "#/$defs/CrossCorpusLink"
+      },
+      "type": "array"
+    },
+    "curation_events": {
+      "description": "Read-only index derived from validated canonical history sidecars, never an authoring surface.",
+      "items": {
+        "$ref": "#/$defs/CurationEvent"
       },
       "type": "array"
     },

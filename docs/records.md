@@ -19,12 +19,20 @@ curation. They are not interchangeable review states.
   assertion quotation checks. Never commit restricted full-text publications.
 - Timestamped review Markdown and canonical history YAML remain separate retained
   artifacts; a source freeze or regeneration is not a scientific review.
+- `curation_events` is a generated, read-only index of actual canonical sidecar
+  events. Each entry identifies its source file and zero-based event index.
+  Overlays cannot supply it; validation replays it from the authoritative sidecars.
+  Records without history have no index. Append history first, then regenerate
+  the affected projections; do not hand-edit the exported events.
 
 `REVIEWED` requires a retained `review_id` with an explicit PASS for the exact
 current record content and a linked canonical REVIEW history event. PASS is scoped:
 the report's separate `scientific_review` flag and `review_scope` must be read before
 treating a validation or identity audit as functional characterization. Editing the
-record invalidates this gate until a new review is completed.
+scientific content invalidates this gate until a new review is completed.
+The generated history index, curation status and review pointer are bookkeeping,
+excluded from the semantic review digest. Their exclusion never bypasses the
+independent checks on history validity, index freshness or the linked REVIEW event.
 
 Run `just records` for a dry run, `just records --apply` to regenerate, and
 `just records-check` for the CI gate. Generation validates the entire batch before
