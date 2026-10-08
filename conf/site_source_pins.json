@@ -1,5 +1,5 @@
 {
-  "commit": "658dc8c9e4ed2587f7bf1c62ee59563f327706de",
+  "commit": "ba8f948a7bbe62a9274981b796f5ee5d907cc66f",
   "files": {
     "data/cross_mech/cross-mech-duf-examples-2026-10-05.json": "e801932f7c9e89012c03a183463a84819e448b6359f804f4fbc3c30b726c0b08",
     "data/cross_mech/cross-mech-duf-examples-2026-10-05.manifest.json": "8184082d43beb90745b5c852de8c0a3e9771d773f87fe921fb20bf74664475ad",
@@ -6546,9 +6546,15 @@
     "data/worklists/interpro-pfam-duf-2026-10-05.json": "4c70383682228942940565906d83c8289fdd2e67f1841504ff280c30c4efac10",
     "data/worklists/interpro-pfam-duf-2026-10-05.manifest.json": "23d9d926caade8c9886d782e8e7cf7369598a64d4df61c64e2c7366c3949a36e",
     "data/worklists/interpro-pfam-duf-2026-10-05.tsv": "2a2e441c3a76c06ad33e30c12cd253dc50b72f9858d58be6c33a24f53dc23d4d",
+    "data/worklists/pfam-previous-unknown-names-2026-10-07.json": "70ae05ac5e8ae061cb80391ea0e50cd6a56b52e35a86952851e1d78bcc0278a2",
+    "data/worklists/pfam-previous-unknown-names-2026-10-07.manifest.json": "6fd209631ab63d1f41f712a00fa5bbb4ee935996bc1155827e3f1eeab4dcbaac",
+    "data/worklists/pfam-previous-unknown-names-2026-10-07.tsv": "38132bab6cbd63cc01e888dee485b4c060a72691590be97a93e583116cc0ede2",
     "data/worklists/pfam-uniprot-uniref90-2026-10-07.json": "8915922e639601527d923bcba45420386add54180525fdb242f77e961437dcda",
     "data/worklists/pfam-uniprot-uniref90-2026-10-07.manifest.json": "de715575b52f9f12309f8d36b44ff2d459ff1d55a654217ee00ecc48239f687b",
     "data/worklists/pfam-uniprot-uniref90-2026-10-07.tsv": "22fd00bc08594b006d46adb018090c04030b423326ec350efbf0653739ccaebc",
+    "data/worklists/uniprot-duf-example-candidates-2026-10-07.json": "0c9e637106357244f3b70f34b14c29e034e9bfdd4fec6b977b5f323174d55cbe",
+    "data/worklists/uniprot-duf-example-candidates-2026-10-07.manifest.json": "1004848bc569d67505929c529fcf7e7012537b3053d4c423e22dd7abb84aa45f",
+    "data/worklists/uniprot-duf-example-candidates-2026-10-07.tsv": "3f0483d14baca4f47a73b3c7227d5a0a410e3a06a2eda660985cac5ec6c0152e",
     "history/infrastructure/native-history-audit-integration/2026-10-07T123018Z-codex-e5c822.yaml": "37b97727a2216639fc7e40e8e607aa88571deded5a8e859ae69de9f7af0466d7",
     "history/records/PF04149/2026-10-07T122602Z-codex-3e2c16.yaml": "ceec6d29e32973ad4b38e31d157bb430926748768c2a10b2731d50a8c3abb2b6",
     "reports/repo_review/20261007T072423Z-review-history-workflows.md": "a25f5bd5ed598b322d89dfac9e4ff252bc60370692d4fc423f10fb7eb0c189ad",
@@ -6556,7 +6562,7 @@
     "reports/yaml_record_review/20261007T072423Z-PF04149.md": "53abd2cdd2f7de6506a0087d8ca507e49a5fc7d148f9035587722ed6f523c56e",
     "reports/yaml_record_review/20261007T080630Z-PF04149.md": "9264cdccfea29079836d3a85d003d07b41aeb9c527450abc3d4ed700044b4d64",
     "reports/yaml_record_review/20261007T122924Z-PF04149.md": "09eaf7b39379c8c006fe87724c63ef7714e5706ca6c796eebb5b8139268677db",
-    "src/dufmech/schema/dufmech.yaml": "0dfef7f73232f80969f81d0073da307b1f15b481da0e1aa77b19473b757d035a",
+    "src/dufmech/schema/dufmech.yaml": "74d6420774b554400ba013627caaa7295a1312e23bdf890c3930958a9e47c561",
     "src/dufmech/schema/history.yaml": "b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d",
     "src/dufmech/schema/mech_shared.yaml": "c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895"
   },
