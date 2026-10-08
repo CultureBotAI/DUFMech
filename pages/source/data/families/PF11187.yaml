@@ -1,0 +1,27 @@
+id: Pfam:PF11187
+pfam_id: PF11187
+name: Mbeg1-like
+short_name: Mbeg1-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11187
+counters:
+  proteins: 1058
+  matches: 1065
+  proteomes: 833
+  taxa: 1566
+  structures: 0
+  alphafold_models: 756
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024499
+description: This family includes a group of uncharacterised proteins from bacteria. Recently, a member
+  from Gemella sanguinis M325, Mbeg1 (for "microbiome bacteria effector gene") has been identified as
+  the first example of this protein family being associated with a potential effector function in the
+  human microbiome [[cite:PUB00097783]].

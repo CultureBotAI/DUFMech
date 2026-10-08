@@ -1,0 +1,27 @@
+id: Pfam:PF10017
+pfam_id: PF10017
+name: Histidine-specific methyltransferase, SAM-dependent
+short_name: Methyltransf_33
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10017
+counters:
+  proteins: 9308
+  matches: 9704
+  proteomes: 7637
+  taxa: 11798
+  structures: 17
+  alphafold_models: 6174
+  domain_architectures: 79
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019257
+description: The mycobacterial members of this family are expressed from part of the ergothioneine biosynthetic
+  gene cluster. EGTD is the histidine methyltransferase that transfers three methyl groups to the alpha-amino
+  moiety of histidine, in the first stage of the production of this histidine betaine derivative that
+  carries a thiol group attached to the C2 atom of an imidazole ring [[cite:PUB00060032]].

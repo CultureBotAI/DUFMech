@@ -1,0 +1,26 @@
+id: Pfam:PF04939
+pfam_id: PF04939
+name: Ribosome biogenesis regulatory protein (RRS1)
+short_name: RRS1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04939
+counters:
+  proteins: 3691
+  matches: 3721
+  proteomes: 3104
+  taxa: 8264
+  structures: 42
+  alphafold_models: 3129
+  domain_architectures: 66
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007023
+description: This family consists of several eukaryotic ribosome biogenesis regulatory (RRS1) proteins.
+  RRS1 is a nuclear protein that is essential for the maturation of 25 S rRNA and the 60 S ribosomal subunit
+  assembly in Saccharomyces cerevisiae [[cite:PUB00020277]].

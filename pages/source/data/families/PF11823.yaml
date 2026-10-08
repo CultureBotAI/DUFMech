@@ -1,0 +1,27 @@
+id: Pfam:PF11823
+pfam_id: PF11823
+name: Putative Se/S carrier protein-like
+short_name: Se_S_carrier
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11823
+counters:
+  proteins: 2297
+  matches: 2297
+  proteomes: 1650
+  taxa: 2822
+  structures: 0
+  alphafold_models: 1620
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021778
+description: This family of proteins are functionally uncharacterised. This protein is found in bacteria
+  and archaea. Proteins in this family are typically between 78 to 102 amino acids in length. It has been
+  suggested that this family of proteins may be chaperones involved in Se or S trafficking in the cell
+  [[cite:PUB00098047]].

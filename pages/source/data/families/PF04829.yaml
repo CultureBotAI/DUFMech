@@ -1,0 +1,25 @@
+id: Pfam:PF04829
+pfam_id: PF04829
+name: Pre-toxin domain with VENN motif
+short_name: PT-VENN
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04829
+counters:
+  proteins: 1423
+  matches: 1424
+  proteomes: 608
+  taxa: 1023
+  structures: 0
+  alphafold_models: 497
+  domain_architectures: 413
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006914
+description: This family represents a conserved region found in many bacterial porlymorphic toxins which
+  is located before the C-terminal toxin modules [[cite:PUB00057479]][[cite:PUB00057480]].

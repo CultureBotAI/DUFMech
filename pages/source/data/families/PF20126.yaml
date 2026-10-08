@@ -1,0 +1,28 @@
+id: Pfam:PF20126
+pfam_id: PF20126
+name: Toxin TumE
+short_name: TumE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20126
+counters:
+  proteins: 1963
+  matches: 1963
+  proteomes: 1095
+  taxa: 2207
+  structures: 0
+  alphafold_models: 1558
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045397
+description: This entry represents a family of proteins found in archaea and bacteria. These proteins
+  have been recently described as the toxin component TumE from the novel toxin-antitoxin system TumA,
+  which constitutes a translation-targeting toxic effector [[cite:PUB00154744]]. These proteins are predicted
+  to adopt a conserved alpha+beta fold, where two alpha-helices pack against an antiparallel beta-sheet
+  with seven strands [[cite:PUB00154744]].

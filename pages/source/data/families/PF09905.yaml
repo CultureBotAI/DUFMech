@@ -1,0 +1,25 @@
+id: Pfam:PF09905
+pfam_id: PF09905
+name: DNA-binding protein VF530
+short_name: VF530
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09905
+counters:
+  proteins: 4097
+  matches: 4097
+  proteomes: 3685
+  taxa: 4925
+  structures: 1
+  alphafold_models: 2513
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018668
+description: VF530 contains a unique four-helix motif that shows some similarity to the C-terminal double-stranded
+  DNA (dsDNA) binding domain of RecA, as well as other nucleic acid binding domains [[cite:PUB00066059]].

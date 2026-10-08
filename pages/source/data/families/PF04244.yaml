@@ -1,0 +1,24 @@
+id: Pfam:PF04244
+pfam_id: PF04244
+name: Deoxyribodipyrimidine photo-lyase-related protein
+short_name: DPRP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04244
+counters:
+  proteins: 4929
+  matches: 4955
+  proteomes: 4872
+  taxa: 7362
+  structures: 14
+  alphafold_models: 3111
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007357
+description: This family appears to be related to [pfam:PF00875].

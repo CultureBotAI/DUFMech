@@ -1,0 +1,32 @@
+id: Pfam:PF01868
+pfam_id: PF01868
+name: Ribonuclease P/MRP, subunit p29
+short_name: RNase_P-MRP_p29
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01868
+counters:
+  proteins: 4328
+  matches: 4328
+  proteomes: 3725
+  taxa: 9455
+  structures: 19
+  alphafold_models: 3775
+  domain_architectures: 51
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002730
+description: This family consists of several archaeal and eukaryotic proteins. The archaeal proteins are
+  found to be expressed within ribosomal operons and several of the sequences are described as ribonuclease
+  P protein subunit p29 proteins [[cite:PUB00042726],[cite:PUB00028005]]. The structure of the RNase P
+  subunit, Rpp29, from Methanobacterium thermoautotrophicum has been determined. Mth Rpp29 is a member
+  of the oligonucleotide/oligosaccharide binding fold family. It contains a structured beta-barrel core
+  and unstructured N- and C-terminal extensions bearing several highly conserved amino acid residues that
+  could be involved in RNA contacts in the protein-RNA complex [[cite:PUB00028005]]. Rpp29 catalyses the
+  endonucleolytic cleavage of RNA, removing 5'-extranucleotides from tRNA precursor. It interacts with
+  the Rpp25 and Pop5 subunits.

@@ -1,0 +1,24 @@
+id: Pfam:PF03141
+pfam_id: PF03141
+name: Putative S-adenosyl-L-methionine-dependent methyltransferase
+short_name: Methyltransf_29
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03141
+counters:
+  proteins: 17659
+  matches: 18751
+  proteomes: 384
+  taxa: 1201
+  structures: 0
+  alphafold_models: 14289
+  domain_architectures: 295
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004159
+description: This family is a putative S-adenosyl-L-methionine (SAM)-dependent methyltransferase [[cite:PUB00057439],[cite:PUB00057440]].

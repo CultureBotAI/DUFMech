@@ -1,0 +1,30 @@
+id: Pfam:PF07126
+pfam_id: PF07126
+name: Cell-division protein ZapC, C-terminal
+short_name: ZapC_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07126
+counters:
+  proteins: 1065
+  matches: 1065
+  proteomes: 1061
+  taxa: 1410
+  structures: 2
+  alphafold_models: 670
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR048372
+description: ZapC is one of four FtsZ-binding components of the Z ring in bacteria. Formation of the Z
+  ring on the cytoplasmic surface of the membrane is the starting process for assembly of the cell-division
+  apparatus. It binds directly to the Z ring, and although it is not essential for absolute cell division
+  it contributes to it by enhancing the interactions between the FtsZ protofilaments (or polymers) which
+  aggregate to form the ring conformation in the Z ring [[cite:PUB00060666]]. This is the C-terminal domain
+  which contains a pocket with a hydrophobic centre surrounded by conserved basic residues, critical for
+  FtsZ binding [[cite:PUB00101038],[cite:PUB00101039]].

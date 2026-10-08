@@ -1,0 +1,28 @@
+id: Pfam:PF15089
+pfam_id: PF15089
+name: Regulator of DNA class I crossover intermediates 1-like
+short_name: Redic1-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15089
+counters:
+  proteins: 218
+  matches: 234
+  proteomes: 157
+  taxa: 574
+  structures: 0
+  alphafold_models: 167
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027883
+description: This family of proteins mainly found in vertebrates includes mouse Regulator of DNA class
+  I crossover intermediates 1 (Redic1). Redic1 is involved in recombination, probably acting by stabilising
+  recombination intermediates during meiotic crossover formation. It is required for normal germline development
+  and fertility as well as for meiotic progression, complete chromosomal synapsis and crossover formation
+  [[cite:PUB00153152],[cite:PUB00153151]]. This protein binds double-stranded DNA [[cite:PUB00153152]].

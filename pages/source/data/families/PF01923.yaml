@@ -1,0 +1,28 @@
+id: Pfam:PF01923
+pfam_id: PF01923
+name: Cobalamin adenosyltransferase
+short_name: Cob_adeno_trans
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01923
+counters:
+  proteins: 15667
+  matches: 15721
+  proteomes: 13951
+  taxa: 21483
+  structures: 52
+  alphafold_models: 10554
+  domain_architectures: 37
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR016030
+description: Cobalamin adenosyltransferase This family contains the gene products of PduO and EutT which
+  are both cobalamin adenosyltransferases. PduO is a protein with ATP:cob(I)alamin adenosyltransferase
+  activity. The main role of this protein is the conversion of inactive cobalamins to AdoCbl for 1,2-propanediol
+  degradation [[cite:PUB00013593]].The EutT enzyme appears to be an adenosyl transferase, converting CNB12
+  to AdoB12 [[cite:PUB00009955]].

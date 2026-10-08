@@ -1,0 +1,29 @@
+id: Pfam:PF12401
+pfam_id: PF12401
+name: FhaA, N-terminal domain
+short_name: FhaA_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12401
+counters:
+  proteins: 4333
+  matches: 4335
+  proteomes: 4028
+  taxa: 5081
+  structures: 1
+  alphafold_models: 2532
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022128
+description: This domain can be found at the N terminus of FHA domain-containing protein Fha from Mycobacterium
+  tuberculosis. The FHA (Fork Head Associated) domain is a phosphopeptide- specific binding domain that
+  enables the protein to specifically bind to sequences containing phosphothreonine. FhaA is one of the
+  major substrates of Ser/Thr protein kinases (STPK) [[cite:PUB00059641]] and plays a role in the regulation
+  of cell growth and peptidoglycan synthesis by binding to MviN. It may inhibit the late stages of peptidoglycan
+  synthesis [[cite:PUB00057590]].

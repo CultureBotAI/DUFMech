@@ -1,0 +1,27 @@
+id: Pfam:PF07381
+pfam_id: PF07381
+name: EarA-like
+short_name: EarA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07381
+counters:
+  proteins: 76
+  matches: 76
+  proteomes: 57
+  taxa: 144
+  structures: 0
+  alphafold_models: 75
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010863
+description: This family includes EarA from Methanococcus maripaludis (MMP1718, [swissprot:Q6LWJ1]) and
+  similar sequences from archaea. EarA is a transcriptional activator that directly regulates the fla
+  operon, which contains genes involved in archaella formation [[cite:PUB00158985],[cite:PUB00158986]].
+  Proteins in this family possess a winged helix DNA -binding domain.

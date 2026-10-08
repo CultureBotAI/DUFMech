@@ -1,0 +1,32 @@
+id: Pfam:PF11330
+pfam_id: PF11330
+name: C-Terminal of 30K viral movement proteins
+short_name: 30K_MP_C_Ter
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11330
+counters:
+  proteins: 4
+  matches: 4
+  proteomes: 2
+  taxa: 15
+  structures: 0
+  alphafold_models: 1
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021479
+description: This entry represents the C-terminal region found in viral movement proteins (MP) of the
+  30K type. This region has been suggested to be conserved in secondary structure in Ophioviruses Mps.
+  It contains two parts, (i) a long segment with the potential to form an alpha-helix (alphaB), rich in
+  charged residues, and (ii) a region highly variable in sequence downstream of alphaB. The C-terminal
+  region corresponds to a protease domain which contains a strictly conserved DTG tripeptide also found
+  in related aspartic retroviral proteases. This protease is required for autocleavage of the Movement
+  Protein of ophioviruses in an N-terminal part that supports movement of viral particles through the
+  plant, and this C-terminal part which retains protease activity [[cite:PUB00097831]]. Mutations in the
+  aspartate residue in the core domain [pfam:PF17644] had an impact on cell to cell movement [[cite:PUB00091032]].

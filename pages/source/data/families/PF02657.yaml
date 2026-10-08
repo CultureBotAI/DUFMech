@@ -1,0 +1,25 @@
+id: Pfam:PF02657
+pfam_id: PF02657
+name: Fe-S metabolism associated domain
+short_name: SufE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02657
+counters:
+  proteins: 11435
+  matches: 11440
+  proteomes: 9414
+  taxa: 13735
+  structures: 9
+  alphafold_models: 7640
+  domain_architectures: 56
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003808
+description: This family consists of the SufE-related proteins. These have been implicated in Fe-S metabolism
+  and export [[cite:PUB00014310]]).

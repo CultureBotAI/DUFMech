@@ -1,0 +1,26 @@
+id: Pfam:PF09175
+pfam_id: PF09175
+name: Vitellinogen, beta-sheet shell
+short_name: Vit_b-sht_shell
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09175
+counters:
+  proteins: 2766
+  matches: 2810
+  proteomes: 579
+  taxa: 1910
+  structures: 1
+  alphafold_models: 665
+  domain_architectures: 72
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015258
+description: This entry represents the beta-sheet shell domain found in vitellinogen, which generally
+  corresponds to the lipovitellin-2 peptide product. This domain consists of several large open beta-sheets
+  [[cite:PUB00007158]].

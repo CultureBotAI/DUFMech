@@ -1,0 +1,28 @@
+id: Pfam:PF14616
+pfam_id: PF14616
+name: Transcription regulator Rua1, C-terminal
+short_name: Rua1_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14616
+counters:
+  proteins: 1557
+  matches: 1568
+  proteomes: 1133
+  taxa: 2507
+  structures: 0
+  alphafold_models: 1306
+  domain_architectures: 39
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR028012
+description: This entry represents a domain that can be found at the C terminus f fungal proteins such
+  as meiotic expression up-regulated protein 26 from Schizosaccharomyces pombe [[cite:PUB00034710]], Ecm8
+  from Saccharomyces cerevisiae and Rua1 from Ustilago maydis. Rua1 is a transcription factor and part
+  of the gene cluster that mediates the biosynthesis of the glycolipid biosurfactant ustilagic acid (UA)
+  [[cite:PUB00097885],[cite:PUB00097886]].

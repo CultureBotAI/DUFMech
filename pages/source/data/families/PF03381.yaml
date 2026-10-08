@@ -1,0 +1,38 @@
+id: Pfam:PF03381
+pfam_id: PF03381
+name: LEM3 (ligand-effect modulator 3) family / CDC50 family
+short_name: CDC50
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03381
+counters:
+  proteins: 8587
+  matches: 8770
+  proteomes: 3431
+  taxa: 9045
+  structures: 62
+  alphafold_models: 7263
+  domain_architectures: 147
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005045
+description: Members of this family have been predicted to contain transmembrane helices. The family member
+  LEM3 ([swissprot:P42838]) is a ligand-effect modulator, mutation of which increases glucocorticoid receptor
+  activity in response to dexamethasone and also confers increased activity on other intracellular receptors
+  including the progesterone, oestrogen and mineralocorticoid receptors. LEM3 is thought to affect a downstream
+  step in the glucocorticoid receptor pathway. Factors that modulate ligand responsiveness are likely
+  to contribute to the context-specific actions of the glucocorticoid receptor in mammalian cells [[cite:PUB00019272]].
+  The products of genes YNR048w ([swissprot:P53740]), YNL323w ([swissprot:P42838]) and YCR094w ([swissprot:P25656])
+  (CDC50) show redundancy of function and are involved in regulation of transcription via CDC39 [[cite:PUB00019273]].
+  CDC39 (also known as NOT1) is normally a negative regulator of transcription either by affecting the
+  general RNA polymerase II machinery or by altering chromatin structure [[cite:PUB00019275]]. One function
+  of CDC39 is to block activation of the mating response pathway in the absence of pheromone, and mutation
+  causes arrest in G1 by activation of the pathway [[cite:PUB00019274]]. It may be that the cold-sensitive
+  arrest in G1 noticed in CDC50 mutants [[cite:PUB00019273]] may be due to inactivation of CDC39. The
+  effects of LEM3 on glucocorticoid receptor activity may also be due to effects on transcription via
+  CDC39.

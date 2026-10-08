@@ -1,0 +1,26 @@
+id: Pfam:PF04143
+pfam_id: PF04143
+name: Sulphur transport
+short_name: Sulf_transp
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04143
+counters:
+  proteins: 15961
+  matches: 17115
+  proteomes: 9646
+  taxa: 15270
+  structures: 4
+  alphafold_models: 10919
+  domain_architectures: 28
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007272
+description: This is an integral membrane protein. It is predicted to have a function in the transport
+  of sulphur-containing molecules [[cite:PUB00057481]]. It contains several conserved glycines and an
+  invariant cysteine that is probably an important functional residue.

@@ -1,0 +1,28 @@
+id: Pfam:PF01594
+pfam_id: PF01594
+name: AI-2E family transporter
+short_name: AI-2E_transport
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01594
+counters:
+  proteins: 58169
+  matches: 58317
+  proteomes: 19308
+  taxa: 29447
+  structures: 2
+  alphafold_models: 37191
+  domain_architectures: 79
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002549
+description: This family includes four different proteins from E. coli alone. One of them, YdgG or TqsA,
+  has been shown to mediate transport of the quorum-sensing signal autoinducer 2 (AI-2). It is not clear
+  if TqsA enhances secretion of AI-2 or inhibits AI-2 uptake. By altering the intracellular concentration
+  of AI-2, TqsA affects gene expression in biofilms and biofilm formation [[cite:PUB00076990]]. TsqA belongs
+  to the AI-2 exporter (AI-2E) superfamily [[cite:PUB00076989]].

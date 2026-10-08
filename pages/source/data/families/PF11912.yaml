@@ -1,0 +1,28 @@
+id: Pfam:PF11912
+pfam_id: PF11912
+name: Counting factor-associated protein A/B/C
+short_name: CfaA_B_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11912
+counters:
+  proteins: 244
+  matches: 248
+  proteomes: 12
+  taxa: 56
+  structures: 0
+  alphafold_models: 242
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021837
+description: Developing Dictyostelium (Slime mold) cells form large aggregation streams that break up
+  into groups of cells. Each group then becomes a fruiting body. Cells sense if there are too many cells
+  in a stream by sensing the concentration of counting factor (CF), a protein complex secreted by the
+  aggregating cells [[cite:PUB00088382]]. This entry includes counting factor-associated protein A/B/C
+  from Slime mold.

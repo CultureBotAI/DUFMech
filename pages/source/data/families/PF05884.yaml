@@ -1,0 +1,26 @@
+id: Pfam:PF05884
+pfam_id: PF05884
+name: Interactor of ZYG-11
+short_name: ZYG-11_interact
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05884
+counters:
+  proteins: 281
+  matches: 291
+  proteomes: 85
+  taxa: 200
+  structures: 0
+  alphafold_models: 268
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008574
+description: This family of proteins represents the protein product of the gene W03D8.9 which has been
+  identified as an interactor of ZYG-11. ZYG-11 is the substrate-recognition subunit for a CUL-2 based
+  complex that regulates cell division and embryonic development [[cite:PUB00090865]].

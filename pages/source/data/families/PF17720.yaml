@@ -1,0 +1,28 @@
+id: Pfam:PF17720
+pfam_id: PF17720
+name: RNA ligase 1
+short_name: RLIG1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17720
+counters:
+  proteins: 882
+  matches: 923
+  proteomes: 614
+  taxa: 2034
+  structures: 2
+  alphafold_models: 721
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR041211
+description: This entry includes RNA ligase 1 from animals (RLIG1), which functions as an RNA ligase in
+  vitro [[cite:PUB00151146]]. This protein catalyses ATP-dependent RNA ligation via a three-step mechanism,
+  involving tandem auto- and RNA AMPylation. It exhibits selectivity for single-stranded RNA substrates.
+  RLIG1 may play a role in maintaining RNA integrity under stress conditions, such as in response to reactive
+  oxygen species (ROS) [[cite:PUB00151146]].

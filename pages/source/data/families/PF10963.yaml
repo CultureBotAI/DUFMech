@@ -1,0 +1,24 @@
+id: Pfam:PF10963
+pfam_id: PF10963
+name: Phage tail assembly chaperone
+short_name: Phage_TAC_10
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10963
+counters:
+  proteins: 296
+  matches: 296
+  proteomes: 268
+  taxa: 492
+  structures: 0
+  alphafold_models: 138
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024406
+description: This is a family of phage tail assembly chaperone proteins.

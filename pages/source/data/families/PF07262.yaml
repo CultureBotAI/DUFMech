@@ -1,0 +1,30 @@
+id: Pfam:PF07262
+pfam_id: PF07262
+name: CDI immunity protein
+short_name: CdiI
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07262
+counters:
+  proteins: 357
+  matches: 357
+  proteomes: 236
+  taxa: 552
+  structures: 5
+  alphafold_models: 215
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009888
+description: CdiI immunity proteins function as part of the bacterial contact-dependent growth inhibition
+  (CDI) system. CDI is mediated by the CdiB-CdiA two-partner secretion system. Each CdiA protein exhibits
+  a distinct growth inhibition activity, which resides in the polymorphic C-terminal region (CdiA-CT).
+  Cells with the CDI sytem also express a CdiI immunity protein that blocks the activity of cognate CdiA-CT,
+  thereby protecting the cell from autoinhibition. In many CDI systems the cdiBAI genes are followed by
+  orphan cdiA-CT/cdiI modules, suggesting that these modules are exchanged between the CDI systems of
+  different bacteria [[cite:PUB00074283]].

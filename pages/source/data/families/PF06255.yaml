@@ -1,0 +1,28 @@
+id: Pfam:PF06255
+pfam_id: PF06255
+name: Neisseria toxin MafB
+short_name: MafB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06255
+counters:
+  proteins: 42
+  matches: 42
+  proteomes: 12
+  taxa: 30
+  structures: 0
+  alphafold_models: 36
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR064118
+description: MafB constitutes a family of secreted toxins in pathogenic Neisseria species, probably involved
+  in interbacterial competition [[cite:PUB00073618]]. Genes immediately downstream of mafB encode a specific
+  immunity protein (MafI). MafB proteins exhibit a signal peptide sequence, a N-terminal conserved domain
+  and a C-terminal variable region. Toxic domains identified at the C terminus include [pfam:PF15542],
+  [pfam:PF14437], [pfam:PF15524], and [pfam:PF14436].

@@ -1,0 +1,30 @@
+id: Pfam:PF10058
+pfam_id: PF10058
+name: ER junction formation factor lunapark, zinc ribbon finger
+short_name: Zn_ribbon_10
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10058
+counters:
+  proteins: 4482
+  matches: 4485
+  proteomes: 2989
+  taxa: 7983
+  structures: 0
+  alphafold_models: 3819
+  domain_architectures: 81
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019273
+description: This zinc ribbon domain is found in Endoplasmic reticulum junction formation protein (LNP1)
+  and other related eukaryotic proteins. LNP1 plays a role in endoplasmic reticulum (ER) network formation
+  [[cite:PUB00155939]]. It binds to the reticulons and Yop1p and resides at ER tubule junctions in both
+  yeast and mammalian cells [[cite:PUB00155939]]. Lnp1 dimerises in vitro via this zinc finger domain
+  and this is required for proper ER structure but not for the nuclear pore complex (NPC) integrity [[cite:PUB00155940]].
+  The latter role is determined by the interactions with other ER components, including Rtn1, Yop1, Pom33,
+  and Per33 [[cite:PUB00155940]].

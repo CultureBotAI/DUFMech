@@ -1,0 +1,30 @@
+id: Pfam:PF11459
+pfam_id: PF11459
+name: Transcriptional regulator, AbiEi antitoxin, Type IV TA system
+short_name: AbiEi_3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11459
+counters:
+  proteins: 1179
+  matches: 1179
+  proteomes: 1071
+  taxa: 2060
+  structures: 0
+  alphafold_models: 780
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021561
+description: AbiEi_3 is the cognate antitoxin of the type IV toxin-antitoxin 'innate immunity' bacterial
+  abortive infection (Abi) system that protects bacteria from the spread of a phage infection. The Abi
+  system is activated upon infection with phage to abort the cell thus preventing the spread of phage
+  through viral replication. There are some 20 or more Abis, and they are predominantly plasmid-encoded
+  lactococcal systems. TA, toxin-antitoxin, systems on plasmids function by killing cells that lose the
+  plasmid upon division. AbiE phage resistance systems function as novel Type IV TAs and are widespread
+  in bacteria and archaea. The cognate antitoxin is [pfam:PF13338] [[cite:PUB00075538]].

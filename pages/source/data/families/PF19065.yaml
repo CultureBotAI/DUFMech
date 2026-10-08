@@ -1,0 +1,27 @@
+id: Pfam:PF19065
+pfam_id: PF19065
+name: Minor capsid protein P8 central region
+short_name: P8_CR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19065
+counters:
+  proteins: 35
+  matches: 35
+  proteomes: 32
+  taxa: 107
+  structures: 2
+  alphafold_models: 9
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043916
+description: This entry represents the central region of the minor capsid protein P8 found in PBCV-1 and
+  related viruses. The central region of P8 folds into a wedge-shaped structure that consists of three
+  short alpha-helices wrapped around a long alpha-helix [[cite:PUB00154516],[cite:PUB00154526]]. P8 and
+  other minor capsid proteins contribute to the stability of the pentasymmetrons of the viral capsid [[cite:PUB00154516],[cite:PUB00154526]].

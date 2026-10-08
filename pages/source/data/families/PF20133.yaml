@@ -1,0 +1,25 @@
+id: Pfam:PF20133
+pfam_id: PF20133
+name: Protein HHL1-like
+short_name: HHL1-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20133
+counters:
+  proteins: 661
+  matches: 661
+  proteomes: 441
+  taxa: 1349
+  structures: 0
+  alphafold_models: 538
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045388
+description: This entry represents a group of proteins from plants and Cyanobacteria, including HHL1 from
+  Arabidopsis. HHL1 functions in protecting photosystem II against photodamage [[cite:PUB00098774]].

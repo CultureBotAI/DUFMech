@@ -1,0 +1,34 @@
+id: Pfam:PF10986
+pfam_id: PF10986
+name: ZrgA family zinc uptake protein
+short_name: ZrgA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10986
+counters:
+  proteins: 1443
+  matches: 1522
+  proteomes: 1386
+  taxa: 2045
+  structures: 6
+  alphafold_models: 869
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021253
+description: This entry represents the ZrgA family of zinc uptake proteins. ZrgA plays a predominant role
+  in zinc acquisition in Vibrio parahaemolyticus and other members of the Vibrionaceae family. The protein
+  is part of the ZrgABCDE system that functions as a zinc transporter [[cite:PUB00159002]]. ZrgA expression
+  is negatively regulated by the zinc uptake regulator (Zur) and is derepressed under zinc limitation
+  conditions. The gene is part of an operon that includes zrgB (ABC transporter permease), zrgC (ABC transporter
+  ATP-binding protein), zrgD and zrgE. The ZrgA protein contains several conserved motifs potentially
+  involved in zinc binding. The wild type ZrgA can bind up to 10 zinc ions with four high-affinity zinc
+  binding sites [[cite:PUB00159005]]. The structures of ZrgA from Vibrio cholerae and its homologue, protein
+  PA4063 from Pseudomonas aeruginosa, were determined bound to zinc [[cite:PUB00159005],[cite:PUB00159006]].
+  These proteins adopt an alpha/beta structure consisting of a six-stranded meander beta-sheet and two
+  alpha-helices packed on it with an unique topology.

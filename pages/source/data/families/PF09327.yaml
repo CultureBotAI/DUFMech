@@ -1,0 +1,31 @@
+id: Pfam:PF09327
+pfam_id: PF09327
+name: Bacteriophage tail tip fiber protein
+short_name: Phage_Tail_Tip
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09327
+counters:
+  proteins: 1499
+  matches: 1531
+  proteomes: 1211
+  taxa: 2365
+  structures: 14
+  alphafold_models: 418
+  domain_architectures: 53
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015406
+description: The Tail Tip Fiber Protein family includes proteins involved in the attachment and penetration
+  of bacteriophages into host cells. Members of this family are responsible for recognizing and irreversibly
+  binding to specific host receptors, which triggers structural changes in the viral tail necessary for
+  the injection of viral DNA into the host. This process is critical for the successful infection and
+  propagation of the virus. The family includes proteins that initiate distal tail tip assembly during
+  phage tail assembly and play a key role in the virus entry by mediating the attachment to the host receptor
+  and inducing DNA ejection through the receptor's pore. This entry represents the beta prism domain which
+  is formed from a homotrimeric complex of members of this family.

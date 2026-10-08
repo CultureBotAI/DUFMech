@@ -1,0 +1,27 @@
+id: Pfam:PF05164
+pfam_id: PF05164
+name: Cell division protein ZapA
+short_name: ZapA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05164
+counters:
+  proteins: 12174
+  matches: 12174
+  proteomes: 11736
+  taxa: 16542
+  structures: 7
+  alphafold_models: 8175
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007838
+description: ZapA is a cell division protein which interacts with FtsZ. FtsZ is part of a mid-cell cytokinetic
+  structure termed the Z-ring that recruits a hierarchy of fission related proteins early in the bacterial
+  cell cycle. The interaction of FtsZ with ZapA drives its polymerisation and promotes FtsZ filament bundling
+  thereby contributing to the spatio-temporal tuning of the Z-ring [[cite:PUB00021077]][[cite:PUB00021078]].

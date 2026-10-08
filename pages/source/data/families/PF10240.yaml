@@ -1,0 +1,30 @@
+id: Pfam:PF10240
+pfam_id: PF10240
+name: MABP domain
+short_name: MABP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10240
+counters:
+  proteins: 5658
+  matches: 5672
+  proteomes: 1228
+  taxa: 4000
+  structures: 2
+  alphafold_models: 1252
+  domain_architectures: 65
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR023341
+description: This domain is found in the N-terminal region of MVB12 proteins, which are subunits of the
+  ESCRT-I complex involved in multivesicular body formation. The MABP domain adopts a type-I beta-prism
+  fold with internal three-fold symmetry, consisting of three homologous segments each forming a three-stranded
+  beta-sheet. It is found in diverse proteins including vertebrate DENND4A/B/C, Drosophila Crag, and bacterial
+  MACPF-like proteins. The domain is believed to function as a membrane-associated adaptor that links
+  other domains to vesicular membranes during intracellular trafficking. Most eukaryotic versions contain
+  conserved cysteine residues in the first and third subdomains [[cite:PUB00045017],[cite:PUB00054220]].

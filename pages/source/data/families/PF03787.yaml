@@ -1,0 +1,26 @@
+id: Pfam:PF03787
+pfam_id: PF03787
+name: RAMP superfamily
+short_name: RAMPs
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03787
+counters:
+  proteins: 5674
+  matches: 6188
+  proteomes: 1604
+  taxa: 3775
+  structures: 138
+  alphafold_models: 4267
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005537
+description: The molecular function of these proteins is not yet known. However, they have been identified
+  and called the RAMP (Repair Associated Mysterious Proteins) superfamily. The members of this family
+  have no known function they are around 300 amino acids in length and have several conserved motifs.

@@ -1,0 +1,25 @@
+id: Pfam:PF12469
+pfam_id: PF12469
+name: CRISPR-associated protein Cmr2, N-terminal
+short_name: Cmr2_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12469
+counters:
+  proteins: 754
+  matches: 754
+  proteomes: 637
+  taxa: 1806
+  structures: 23
+  alphafold_models: 539
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024615
+description: This domain family is typically between 101 and 138 amino acids in length and it is found
+  in subunit Crm2 of the CRISPR RNA-Cas protein complex (Cmr complex) [[cite:PUB00088224]].

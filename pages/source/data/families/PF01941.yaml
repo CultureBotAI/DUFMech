@@ -1,0 +1,30 @@
+id: Pfam:PF01941
+pfam_id: PF01941
+name: S-adenosylmethionine synthetase (AdoMet synthetase)
+short_name: AdoMet_Synthase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01941
+counters:
+  proteins: 974
+  matches: 991
+  proteomes: 897
+  taxa: 1739
+  structures: 12
+  alphafold_models: 794
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027790
+description: This family consists of several archaebacterial S-adenosylmethionine synthetase C(AdoMet
+  synthetase or MAT) (EC 2.5.1.6). S-Adenosylmethionine (AdoMet) occupies a central role in the metabolism
+  of all cells. The biological roles of AdoMet include acting as the primary methyl group donor, as a
+  precursor to the polyamines, and as a progenitor of a 5'-deoxyadenosyl radical. S-Adenosylmethionine
+  synthetase catalyses the only known route of AdoMet biosynthesis. The synthetic process occurs in a
+  unique reaction in which the complete triphosphate chain is displaced from ATP and a sulfonium ion formed.
+  MATs from various organisms contain ~400-amino acid polypeptide chains [[cite:PUB00019110]].

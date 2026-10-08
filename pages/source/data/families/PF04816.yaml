@@ -1,0 +1,26 @@
+id: Pfam:PF04816
+pfam_id: PF04816
+name: tRNA (adenine(22)-N(1))-methyltransferase
+short_name: TrmK
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04816
+counters:
+  proteins: 2761
+  matches: 2763
+  proteomes: 2749
+  taxa: 3816
+  structures: 9
+  alphafold_models: 1711
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006901
+description: tRNA_MT is a family of bacterial tRNA (adenine(22)-N(1))-methyltransferase enzymes with a
+  Rossmann-like fold. This enzyme carries out the function of N1-adenosine methylation at position 22
+  of bacterial tRNA [[cite:PUB00057355]].

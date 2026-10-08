@@ -1,0 +1,33 @@
+id: Pfam:PF02415
+pfam_id: PF02415
+name: Chlamydia polymorphic membrane protein (Chlamydia_PMP) repeat
+short_name: Chlam_PMP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02415
+counters:
+  proteins: 2631
+  matches: 5667
+  proteomes: 838
+  taxa: 2170
+  structures: 0
+  alphafold_models: 1511
+  domain_architectures: 557
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003368
+description: This family contains several Chlamydia polymorphic membrane proteins. Chlamydia pneumoniae
+  is an obligate intracellular bacterium and a common human pathogen causing infection of the upper and
+  lower respiratory tract. Common for the Pmps are the tetrapeptide GGA(I/V/L) motif repeated several
+  times in the N-terminal part. The C-terminal half is characterised by conserved tryptophans and a carboxy-terminal
+  phenylalanine. A signal peptide leader sequence is predicted in 20 C. pneumoniae Pmps, which indicates
+  an outer membrane localisation. Pmp10 and Pmp11 contain a signal peptidase II cleavage site suggesting
+  lipid modification. The C. pneumoniae pmp genes represent 17.5% of the chlamydia-specific coding capacity
+  and they are all transcribed during chlamydial growth but the function of Pmps remains unknown [[cite:PUB00015051]].
+  This family shows some similarity to [pfam:PF05594] and hence is likely to also form a beta-helical
+  structure (personal obs:C Yeats).

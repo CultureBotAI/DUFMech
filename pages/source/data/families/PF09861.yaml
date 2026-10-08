@@ -1,0 +1,28 @@
+id: Pfam:PF09861
+pfam_id: PF09861
+name: Lactate racemase N-terminal domain
+short_name: Lar_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09861
+counters:
+  proteins: 3790
+  matches: 3797
+  proteomes: 2308
+  taxa: 4356
+  structures: 14
+  alphafold_models: 2673
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018657
+description: This is the N-terminal domain found in Lactate racemase enzymes [ec:5.1.2.1]. LarA is a nickel-dependent
+  lactate racemase from the larA-E operon of Lactobacillus plantarum, whereas LarB, LarC and LarE are
+  accessory proteins required for the incorporation of Ni in the lactate racemase apoprotein. LarA contains
+  18 beta-strands and 16 alpha-helices arranged in a novel fold composed of two domains of similar size.
+  This entry represents the N-terminal domain of LarA and related proteins [[cite:PUB00085157]].

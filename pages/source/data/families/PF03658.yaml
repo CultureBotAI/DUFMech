@@ -1,0 +1,31 @@
+id: Pfam:PF03658
+pfam_id: PF03658
+name: RnfH family Ubiquitin
+short_name: Ub-RnfH
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03658
+counters:
+  proteins: 4515
+  matches: 4515
+  proteomes: 4211
+  taxa: 5754
+  structures: 5
+  alphafold_models: 2916
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005346
+description: A member of the RnfH family of the ubiquitin superfamily. Members of this family strongly
+  co-occur in two distinct gene neighborhood contexts. In one it is associated with a START domain protein,
+  a membrane protein SmpA and the transfer mRNA binding protein SmpB. This association suggests a possible
+  role in the SmpB-tmRNA-based tagging and degradation system of bacteria, which is interesting given
+  that other members of the ubiquitin system are analogously involved in protein-tagging and degradation
+  across eukaryotes and various prokaryotes. The second context in which the RnfH genes are present is
+  in a membrane associated complex involved in transporting electrons for various reductive reactions
+  such as nitrogen fixation [[cite:PUB00034476]].

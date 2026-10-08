@@ -1,0 +1,27 @@
+id: Pfam:PF14082
+pfam_id: PF14082
+name: Shedu protein SduA, C-terminal
+short_name: SduA_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14082
+counters:
+  proteins: 1304
+  matches: 1304
+  proteomes: 1214
+  taxa: 2464
+  structures: 5
+  alphafold_models: 753
+  domain_architectures: 18
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025359
+description: This domain is found mostly in bacteria. It is found at the C-terminal of Shedu protein SduA,
+  the only component of antiviral defense system Shedu. Expression of Shedu in B.subtilis (strain BEST7003)
+  confers resistance to phages phi105, phi29, rho14 and to a lesser extent to SPP1 [[cite:PUB00097806]].
+  This domain may have endonuclease activity [[cite:PUB00066699]].

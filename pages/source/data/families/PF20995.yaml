@@ -1,0 +1,28 @@
+id: Pfam:PF20995
+pfam_id: PF20995
+name: Type VI lipase adapter protein Tla3, C-terminal
+short_name: Tla3_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20995
+counters:
+  proteins: 397
+  matches: 397
+  proteomes: 188
+  taxa: 285
+  structures: 1
+  alphafold_models: 240
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR048303
+description: This entry represents the the C-terminal domain of Type VI lipase adapter protein Tla3, an
+  adapter protein that targets and loads the Tle3 toxin onto the H2 type VI secretion system (H2-T6SS)
+  machinery through an interaction with the TTR domain of VgrG2b [[cite:PUB00100136]] and it seems to
+  be specific for Tle3 [[cite:PUB00100136]]. This domain and its N-terminal ([pfam:PF11394]) are both
+  required for the interaction with the toxin [[cite:PUB00100136]].

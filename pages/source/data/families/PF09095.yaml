@@ -1,0 +1,27 @@
+id: Pfam:PF09095
+pfam_id: PF09095
+name: Alpha-amylase/4-alpha-glucanotransferase, C-terminal
+short_name: AmyA-gluTrfs_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09095
+counters:
+  proteins: 374
+  matches: 424
+  proteomes: 370
+  taxa: 815
+  structures: 3
+  alphafold_models: 321
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015179
+description: This entry represents a domain found in prokaryotic alpha-amylase and 4-alpha-glucanotransferase.
+  It adopts a beta-sandwich fold, in which two layers of anti-parallel beta-sheets are arranged in a nearly
+  parallel fashion. The exact function of this family is, as yet, unknown, however it has been proposed
+  that they may play a role in transglycosylation reactions [[cite:PUB00014074]].

@@ -1,0 +1,27 @@
+id: Pfam:PF07289
+pfam_id: PF07289
+name: Bardet-Biedl syndrome 5 protein N-terminal PH-like domain
+short_name: BBL5
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07289
+counters:
+  proteins: 1791
+  matches: 1802
+  proteomes: 1269
+  taxa: 4180
+  structures: 5
+  alphafold_models: 1598
+  domain_architectures: 48
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014003
+description: BBS5 is part of the BBSome complex that may function as a coat complex required for sorting
+  of specific membrane proteins to the primary cilia [[cite:PUB00060532]]. Mutations in the BBS5 gene
+  cause Bardet-Biedl syndrome 5 [[cite:PUB00073459],[cite:PUB00073460]]. This entry represents the N-terminal
+  PH-like domain.

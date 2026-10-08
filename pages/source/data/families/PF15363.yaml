@@ -1,0 +1,29 @@
+id: Pfam:PF15363
+pfam_id: PF15363
+name: BTB/POZ domain-containing protein 8, C-terminal
+short_name: BTBD8_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15363
+counters:
+  proteins: 1304
+  matches: 1304
+  proteomes: 654
+  taxa: 2031
+  structures: 0
+  alphafold_models: 302
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027907
+description: This domain is found at the C terminus of BTB/POZ domain-containing protein 8 (BTBD8, also
+  known as AP2-interacting clathrin-endocytosis protein). BTBD8 is involved in clathrin-mediated endocytosis
+  at the synapse and plays a role in neuronal development and in synaptic vesicle recycling in mature
+  neurons, a process required for normal synaptic transmission [[cite:PUB00090548]]. There is a conserved
+  ELET sequence motif. There are two completely conserved residues (S and E) that may be functionally
+  important.

@@ -1,0 +1,32 @@
+id: Pfam:PF14092
+pfam_id: PF14092
+name: BamH
+short_name: BamH
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14092
+counters:
+  proteins: 2444
+  matches: 2444
+  proteomes: 2014
+  taxa: 2671
+  structures: 4
+  alphafold_models: 1580
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025366
+description: This entry, previously known as DUF4270, represents BamH subunit of the beta-barrel-assembly
+  machinery so-called BAM. BamH along with BamG are involved in forming the extracellular canopy and are
+  both required for BAM function. They are conserved across the Bacteroidota, suggesting that they form
+  an essential extension to the canonical BAM core in this phylum. BamH interacts with BamM to form a
+  long canopy structure on the extracellular side of the outer membrane that extends from the rear of
+  BamA across the BamA barrel [[cite:PUB00163537]]. BamH consists of two homologous beta-sandwich domains
+  with a Nucleoplasmin-like jelly roll topology. One of the domains is inserted into the other resulting
+  in a circular permutation. The N-terminal strand of one of the domains occupies the position of the
+  C-terminal strand of the other.

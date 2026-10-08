@@ -1,0 +1,25 @@
+id: Pfam:PF04522
+pfam_id: PF04522
+name: Broad bean mottle virus, Gp1, N-terminal
+short_name: BBMV_Gp1_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04522
+counters:
+  proteins: 17
+  matches: 17
+  proteomes: 7
+  taxa: 23
+  structures: 0
+  alphafold_models: 2
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007610
+description: This region represents the N terminus of Broad bean mottle virus, Gp1 (2a protein), and is
+  always found N terminal to a predicted RNA-dependent RNA polymerase region ([pfam:PF00978]).

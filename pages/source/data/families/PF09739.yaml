@@ -1,0 +1,27 @@
+id: Pfam:PF09739
+pfam_id: PF09739
+name: Mini-chromosome maintenance replisome factor
+short_name: MCM_bind
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09739
+counters:
+  proteins: 3024
+  matches: 3657
+  proteomes: 2157
+  taxa: 6400
+  structures: 0
+  alphafold_models: 2568
+  domain_architectures: 67
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019140
+description: This entry is of proteins of approximately 600 residues in length containing alternating
+  regions of conservation and low complexity. The Arabidopsis protein is a replisome factor found to bind
+  with the mini-chromosome maintenance, MCM-binding, complex and is crucial for efficient DNA replication.
+  The family now spans the full-length proteins.

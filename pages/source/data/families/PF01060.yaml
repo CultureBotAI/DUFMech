@@ -1,0 +1,28 @@
+id: Pfam:PF01060
+pfam_id: PF01060
+name: Transthyretin-like family
+short_name: TTR-52
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01060
+counters:
+  proteins: 4864
+  matches: 5108
+  proteomes: 114
+  taxa: 297
+  structures: 1
+  alphafold_models: 4620
+  domain_architectures: 133
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR001534
+description: TTR-52 was called family 2 in [[cite:PUB00001984]], and has weak similarity to transthyretin
+  (formerly called pre-albumin) which transports thyroid hormones. The specific function of this protein
+  is as a bridging molecule in apoptosis cross-linking dying cells to phagocytes. TTR-52 bridges by cross-linking
+  surface-exposed phosphatidylserine (PtdSer) on apoptotic cells to the CED-1 receptor, a transmembrane
+  receptor, on phagocytes. TTR-52 has an open beta-barrel-like structure [[cite:PUB00109168]].

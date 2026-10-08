@@ -1,0 +1,26 @@
+id: Pfam:PF09154
+pfam_id: PF09154
+name: Alpha-amylase C-terminal
+short_name: Alpha-amy_C_pro
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09154
+counters:
+  proteins: 1895
+  matches: 1895
+  proteomes: 1622
+  taxa: 2814
+  structures: 44
+  alphafold_models: 1305
+  domain_architectures: 31
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015237
+description: This entry represents a C-terminal domain associated with prokaryotic alpha-amylases, which
+  adopt a secondary structure consisting of an eight-stranded antiparallel beta-sheet containing a Greek
+  key motif. Their exact function has not, as yet, been determined [[cite:PUB00027474]].

@@ -1,0 +1,36 @@
+id: Pfam:PF05639
+pfam_id: PF05639
+name: Pup-like protein
+short_name: Pup
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05639
+counters:
+  proteins: 3495
+  matches: 3495
+  proteomes: 3401
+  taxa: 4136
+  structures: 12
+  alphafold_models: 2101
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008515
+description: This family consists of several short bacterial proteins formely known as (DUF797). It was
+  recently shown that Mycobacterium tuberculosis contains a small protein, Pup (Rv2111c), that is covalently
+  conjugated to the e-NH2 groups of lysines on several target proteins (pupylation) such as the malonyl
+  CoA acyl carrier protein (FabD) [[cite:PUB00053383]]. Pupylation of FabD was shown to result in its
+  recruitment to the mycobacterial proteasome and subsequent degradation analogous to eukaryotic ubiquitin-conjugated
+  proteins. Searches recovered Pup orthologs in all major actinobacteria lineages including the basal
+  bifidobacteria and also sporadically in certain other bacterial lineages. [[cite:PUB00053382]] The Pup
+  proteins were all between 50-90 residues in length and a multiple alignment shows that they all contain
+  a conserved motif with a G [EQ] signature at the C-terminus. Thus, all of them are suitable for conjugation
+  via the terminal glutamate or the deamidated glutamine (as shown in the case of the Mycobacterium Pup
+  [[cite:PUB00053382]]). The conserved globular core of Pup is predicted to form a bihelical unit with
+  the extreme C-terminal 6-7 residues forming a tail in the extended conformation. Thus, Pup is structurally
+  unrelated to the ubiquitin fold and has convergently evolved the function of protein modifier.

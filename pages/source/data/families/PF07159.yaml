@@ -1,0 +1,28 @@
+id: Pfam:PF07159
+pfam_id: PF07159
+name: CYRIA/CYRIB Rac1 binding domain
+short_name: CYRIA-B_Rac1-bd
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07159
+counters:
+  proteins: 8041
+  matches: 8217
+  proteomes: 1782
+  taxa: 5573
+  structures: 9
+  alphafold_models: 6654
+  domain_architectures: 71
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009828
+description: This domain has been annotated as Rac1-binding domain [[cite:PUB00093956],[cite:PUB00093955]].
+  It can be found in human CYRIA/CYRIB and at the N terminus of CYFIP1/2 [[cite:PUB00093957]]. CYFIP proteins
+  are known RAC1 effectors that stimulate actin polymerization [[cite:PUB00093957]]. In mice, CYRIB (also
+  known as CYRI or FAM49B) negatively regulates RAC1-driven cytoskeletal remodelling and plays a role
+  in restricting infection mediated by Mycobacterium tuberculosis and Listeria monocytogenes [[cite:PUB00093957]].

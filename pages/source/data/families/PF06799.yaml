@@ -1,0 +1,27 @@
+id: Pfam:PF06799
+pfam_id: PF06799
+name: Conserved in the green lineage and diatoms 27
+short_name: CGLD27-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06799
+counters:
+  proteins: 1350
+  matches: 1385
+  proteomes: 694
+  taxa: 1956
+  structures: 0
+  alphafold_models: 1051
+  domain_architectures: 28
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009631
+description: This family consist of proteins found in plants and algal chloroplasts, and in cyanobacteria.
+  It includes CGLD27 (Conserved in the green lineage and diatoms 27), which has been described as one
+  out of 14 Fe-responsive orthologues in Chlamydomonas and Arabidopsis, indicating that it is an important
+  component of the iron deficiency response of the plant lineage [[cite:PUB00086879]].

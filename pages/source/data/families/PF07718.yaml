@@ -1,0 +1,25 @@
+id: Pfam:PF07718
+pfam_id: PF07718
+name: Coatomer beta C-terminal region
+short_name: Coatamer_beta_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07718
+counters:
+  proteins: 4482
+  matches: 4541
+  proteomes: 3366
+  taxa: 8886
+  structures: 11
+  alphafold_models: 3752
+  domain_architectures: 67
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011710
+description: This family is found at the C-terminus of the coatamer beta subunit proteins (Beta-coat proteins).
+  This C-terminal domain probably adapts the function of the N-terminal [pfam:PF01602] domain.

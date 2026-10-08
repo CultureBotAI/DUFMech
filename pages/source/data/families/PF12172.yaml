@@ -1,0 +1,32 @@
+id: Pfam:PF12172
+pfam_id: PF12172
+name: ChsH2, rubredoxin-like zinc ribbon domain
+short_name: zf-ChsH2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12172
+counters:
+  proteins: 12165
+  matches: 12166
+  proteomes: 4066
+  taxa: 5926
+  structures: 15
+  alphafold_models: 7456
+  domain_architectures: 44
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022002
+description: 'This domain is found at the C-terminal end of the probable enoyl -CoA hydratase alpha subunit
+  from Thermomonospora curvata (ChsH2) and similar archaeal and bacterial proteins. ChsH2 is likely to
+  be involved in bile acid degradation. The C-terminal region of this protein is organised into two domains:
+  an N-terminal zinc finger domain with a three-stranded antiparallel beta-sheet and an N-terminal alpha-helix
+  (this entry) and a OB-fold domain ([pfam:PF01796]) [[cite:PUB00155451]]. The domain is duplicated in
+  some members like [swissprot:O53566] from M.tuberculosis. The structure of [swissprot:Q97WQ4] from Saccharolobus
+  solfataricus reveals two long N-terminal helices followed by a rubredoxin -like zinc ribbon domain represented
+  in this family and a C-terminal OB fold domain [[cite:PUB00097287]]. Zinc is chelated by the four conserved
+  cysteines in the alignment.'

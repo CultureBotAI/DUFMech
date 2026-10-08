@@ -1,0 +1,30 @@
+id: Pfam:PF06381
+pfam_id: PF06381
+name: Phage portal protein
+short_name: Phage_portal_3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06381
+counters:
+  proteins: 1449
+  matches: 1451
+  proteomes: 1186
+  taxa: 2536
+  structures: 13
+  alphafold_models: 637
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024459
+description: This family represents phage and prophage portal proteins that form the portal of the phage
+  particle [[cite:PUB00155786],[cite:PUB00153918],[cite:PUB00154413]]. These proteins form a dodecamer
+  assembly that defines a channel for DNA entry and exit. The dodecamer structure resembles a flying saucer
+  with a central channel, which is filled with a rope-like DNA chain [[cite:PUB00154413]]. Each subunit
+  of the dodecamer is involved in interaction with capsomers. The dodecameric portal is connected with
+  the neck, which comprises a dodecameric adaptor, a hexameric connector, and a hexameric terminator gp12,
+  forming a continuous DNA injection channel at the center [[cite:PUB00154413]].

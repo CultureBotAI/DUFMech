@@ -1,0 +1,28 @@
+id: Pfam:PF10806
+pfam_id: PF10806
+name: SAM35, subunit of SAM coomplex
+short_name: SAM35
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10806
+counters:
+  proteins: 408
+  matches: 408
+  proteomes: 401
+  taxa: 815
+  structures: 6
+  alphafold_models: 349
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021211
+description: SAM35 is a family of fungal proteins found in the peripheral mitochondrial outer membrane.
+  It is essential for cell viability. It forms a subunit of the SAM (sorting and assembly machinery) complex
+  and is crucial for the assembly of the precursors of Tom40 and porin, the outer membrane beta-barrel
+  proteins involved in mitochondrial biogenesis [[cite:PUB00074955],[cite:PUB00016442]]. SAM35 is required
+  in order for the Sam50 subunit of the SAM complex to bind outer membrane substrate proteins [[cite:PUB00110449]].

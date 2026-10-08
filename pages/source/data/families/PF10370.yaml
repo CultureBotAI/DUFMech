@@ -1,0 +1,26 @@
+id: Pfam:PF10370
+pfam_id: PF10370
+name: Rv2993c-like, N-terminal
+short_name: Rv2993c-like_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10370
+counters:
+  proteins: 6665
+  matches: 6665
+  proteomes: 5683
+  taxa: 8039
+  structures: 6
+  alphafold_models: 4129
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018833
+description: This is the N-terminal 50 amino acids of a group of bacterial proteins annotated as fumarylacetoacetate
+  hydrolase-containing enzymes, including Rv2993c from Mycobacterium tuberculosis. In most cases members
+  are associated with FAA_hydrolase [pfam:PF01557] further towards the C-terminus.

@@ -1,0 +1,27 @@
+id: Pfam:PF11886
+pfam_id: PF11886
+name: Translocase of chloroplast 159/132, membrane anchor domain
+short_name: TOC159_MAD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11886
+counters:
+  proteins: 2372
+  matches: 2411
+  proteomes: 418
+  taxa: 1139
+  structures: 0
+  alphafold_models: 1340
+  domain_architectures: 48
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024283
+description: This is the membrane-anchor domain of translocase of chloroplast 159, TOC159/132. This domain
+  is present in plants at the C-terminus of the GTPase, AIG1, [pfam:PF04548], and anchors the GTPas region
+  to the outer membrane of the chloroplast. The domain may carry a very C-terminal sequence motif that
+  resembles a transit peptide [[cite:PUB00075666]].

@@ -1,0 +1,25 @@
+id: Pfam:PF07950
+pfam_id: PF07950
+name: MDM10-complementing protein 1, transmembrane domain
+short_name: MCP1_TM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07950
+counters:
+  proteins: 1177
+  matches: 1314
+  proteomes: 1149
+  taxa: 2398
+  structures: 0
+  alphafold_models: 991
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012472
+description: This entry represents the transmembrane domains found in MDM10-complementing protein 1 from
+  yeast, a mitochondrial protein involved in in mitochondrial lipid homeostasis [[cite:PUB00090363]].

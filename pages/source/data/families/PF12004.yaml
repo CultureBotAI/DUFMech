@@ -1,0 +1,27 @@
+id: Pfam:PF12004
+pfam_id: PF12004
+name: Disabled homolog 2-interacting protein, C-terminal domain
+short_name: DAB2P_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12004
+counters:
+  proteins: 7363
+  matches: 8025
+  proteomes: 1032
+  taxa: 3408
+  structures: 1
+  alphafold_models: 4817
+  domain_architectures: 60
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021887
+description: This domain is found at the C terminus of some GTPase-activating proteins (also known as
+  GAP) found in animals, including Disabled homolog 2-interacting protein (DAB2P). This region is found
+  associated with [pfam:PF00616] and [pfam:PF00168], and includes a coiled-coil domain that forms a parallel
+  trimer in solution with one helical strand from each monomer [[cite:PUB00100693]].

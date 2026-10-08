@@ -1,0 +1,27 @@
+id: Pfam:PF06159
+pfam_id: PF06159
+name: Trafficking protein particle complex subunit 13, N-terminal
+short_name: TRAPPC13_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06159
+counters:
+  proteins: 4150
+  matches: 4168
+  proteomes: 2953
+  taxa: 7956
+  structures: 0
+  alphafold_models: 3591
+  domain_architectures: 69
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055427
+description: Trafficking protein particle complex subunit 13 (TRAPPC13) is involved in regulating autophagy
+  and survival in response to small molecule compound-induced Golgi stress [[cite:PUB00090991]]. This
+  entry represents the N-terminal domain, which may adopt a beta-sandwich fold with an insertion at the
+  very N-terminal consisting of a short beta-strand and alpha helix connected by a long loop.

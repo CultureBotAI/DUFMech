@@ -1,0 +1,28 @@
+id: Pfam:PF04328
+pfam_id: PF04328
+name: Selenoprotein, putative
+short_name: Sel_put
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04328
+counters:
+  proteins: 4237
+  matches: 4241
+  proteomes: 3897
+  taxa: 4993
+  structures: 0
+  alphafold_models: 2587
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007423
+description: This entry includes a group of putative selenoproteins from Proteobacteria, Actinobacteria
+  and Firmicutes. The invariant cysteine at the C terminus is encoded by a TGA Sec codon in some Epsilonproteobacteria,
+  suggesting a redox activity for the protein[[cite:PUB00081206]]. Some members of this family have been
+  suggested to be required for pyruvate transport in diverse bacteria, along with a CstA-like transporter
+  found adjacent in the genome (see Supplementary note 5 in [[cite:PUB00093610]].)

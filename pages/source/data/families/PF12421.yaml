@@ -1,0 +1,29 @@
+id: Pfam:PF12421
+pfam_id: PF12421
+name: Tip attachment protein J, C-terminal receptor binding domain
+short_name: Ig_GpJ_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12421
+counters:
+  proteins: 91
+  matches: 91
+  proteomes: 58
+  taxa: 172
+  structures: 9
+  alphafold_models: 54
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021034
+description: This entry represents the C-terminal receptor binding domain of Tip attachment protein J
+  from Escherichia phage lambda (GpJ) and similar bacterial and viral proteins. J attaches the virion
+  to the host receptor LamB, inducing viral DNA ejection. This domain, which determines the host specificity
+  of the phage, shows an immunoglobulin-like fold [[cite:PUB00155963],[cite:PUB00109155]]. Many of the
+  proteins in this entry are annotated as fibronectin type III. This domain was previously known as DUF3672
+  and is normally found associated with [pfam:PF09327] and [pfam:PF13550].

@@ -1,0 +1,26 @@
+id: Pfam:PF01951
+pfam_id: PF01951
+name: Archease protein family (MTH1598/TM1083)
+short_name: Archease
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01951
+counters:
+  proteins: 3523
+  matches: 3542
+  proteomes: 2944
+  taxa: 7482
+  structures: 9
+  alphafold_models: 2910
+  domain_architectures: 34
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR023572
+description: This archease family of proteins [[cite:PUB00109176]], has two SHS2 domains [[cite:PUB00057445]],
+  with one inserted into another. It is predicted to be an enzyme [[cite:PUB00057445]]. It is predicted
+  to act as a chaperone in DNA/RNA metabolism [[cite:PUB00109176]].

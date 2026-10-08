@@ -1,0 +1,28 @@
+id: Pfam:PF10686
+pfam_id: PF10686
+name: YspA, cpYpsA-related SLOG family
+short_name: YAcAr
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10686
+counters:
+  proteins: 2713
+  matches: 2713
+  proteomes: 1810
+  taxa: 3216
+  structures: 0
+  alphafold_models: 1619
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019627
+description: Family in the SLOG superfamily, related to YspA and cpYpsA families and shows associations
+  with NAD utilization and ADP-ribosylation domains including NUDIX, NADAR and MACRO. Members of this
+  family are predicted to function as sensors of nucleotide, nucleotide-derived ligands, or nucleic acids,
+  which are potentially processed/modified by associating effectors. Also associates in a distinct system
+  with a phosphoribosyltransferase (PRTase) domain [[cite:PUB00091021]].

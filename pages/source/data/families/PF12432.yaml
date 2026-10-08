@@ -1,0 +1,35 @@
+id: Pfam:PF12432
+pfam_id: PF12432
+name: Integrator complex subunit 1, RP2B-binding domain
+short_name: INTS1_RP2B-bd
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12432
+counters:
+  proteins: 1741
+  matches: 1776
+  proteomes: 1243
+  taxa: 4101
+  structures: 8
+  alphafold_models: 141
+  domain_architectures: 35
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022145
+description: 'Integrator (INT) complex is involved in the small nuclear RNAs (snRNA) U1 and U2 transcription
+  and in their 3''-box-dependent processing. It binds the C-terminal domain (CTD) of RNA polymerase II
+  (Pol II) and functions as an RNA endonuclease to cleave different classes of RNAs, regulating the transcription
+  of both protein-coding genes and noncoding elements [[cite:PUB00152015],[cite:PUB00153137]]. Integrator
+  also associates with protein phosphatase 2A (PP2A) core enzyme to form the INTAC complex [[cite:PUB00152015]]
+  which regulates transcription through dephosphorylation of Pol II CTD. This entry includes the Integrator
+  complex subunit 1 (INTS1) which forms the backbone module of the complex (it consists of four modules:
+  backbone, shoulder, phosphatase and endonuclease) through the association with INTS2 and INTS7 to form
+  a rigid scaffold. The backbone and shoulder modules form a central cruciform scaffold. INTS1 is an all-alpha
+  helical protein with four repetitive helix hairpin domains towards the C-terminal (R1-R4) [[cite:PUB00152015]].
+  This entry represents a domain found at the N-terminal of INTS1, which interacts with Pol II subunit
+  RPB2 and form interface A [[cite:PUB00153137]].'

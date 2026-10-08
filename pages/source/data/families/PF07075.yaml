@@ -1,0 +1,27 @@
+id: Pfam:PF07075
+pfam_id: PF07075
+name: Exo-beta-N-acetylmuramidase NamZ, N-terminal
+short_name: NamZ_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07075
+counters:
+  proteins: 6284
+  matches: 6295
+  proteomes: 5412
+  taxa: 7889
+  structures: 2
+  alphafold_models: 3928
+  domain_architectures: 34
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR048502
+description: NamZ is an exo-beta-N-acetylmuramidase which catalyzes an exo-lytic cleavage of beta-1,4-acetylmuramic
+  acid from from the non-reducing ends of peptidoglycan chains [[cite:PUB00100156]] and it is a founding
+  member of a new family of glycosidases (GH171). NamZ consists of a N-terminal catalytic domain with
+  a Rossmann-like fold (represented in this entry) and a C-terminal auxiliary alpha/beta domain [[cite:PUB00100156]].

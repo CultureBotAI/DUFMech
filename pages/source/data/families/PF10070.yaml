@@ -1,0 +1,31 @@
+id: Pfam:PF10070
+pfam_id: PF10070
+name: Probable inorganic carbon transporter subunit DabA
+short_name: DabA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10070
+counters:
+  proteins: 2360
+  matches: 2419
+  proteomes: 2033
+  taxa: 3561
+  structures: 3
+  alphafold_models: 1624
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018752
+description: This entry represents the probable inorganic carbon transporter subunit DabA, which is part
+  of an energy-coupled inorganic carbon pump together with DabB subunit in DAB operons (DAB1 and DAB2),
+  found in a wide range of bacteria and archaea. Members of this family were previously known as UPF0753.
+  DAB operon is required for CO2 concentrating mechanisms [[cite:PUB00093673]]. The substrate of this
+  subunit may be CO2 rather than carbonate ions based on kinetic calculations and in experimental assays
+  in which E.coli was deleted of its carbonic anhydrase genes and expression of DAB2 operon restores its
+  growth. Structural homology modelling suggests that DabA contains a domain that is distantly homologous
+  to a type II beta-carbonic anhydrase (CA).

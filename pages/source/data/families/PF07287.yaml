@@ -1,0 +1,26 @@
+id: Pfam:PF07287
+pfam_id: PF07287
+name: Acyclic terpene utilisation family protein AtuA
+short_name: AtuA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07287
+counters:
+  proteins: 10535
+  matches: 11274
+  proteomes: 6422
+  taxa: 11135
+  structures: 2
+  alphafold_models: 7223
+  domain_architectures: 102
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010839
+description: This family consists of several bacterial and plant proteins of around 400 residues in length.
+  One member of this family has been characterised in Pseudomonas citronellolis as AtuA, a member of a
+  gene cluster that is essential for the acyclic terpene utilisation (Atu) pathway [[cite:PUB00081891]].

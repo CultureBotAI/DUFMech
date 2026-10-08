@@ -1,0 +1,28 @@
+id: Pfam:PF22997
+pfam_id: PF22997
+name: Chitin synthase 4-like domain
+short_name: CHS4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22997
+counters:
+  proteins: 2475
+  matches: 2475
+  proteomes: 1464
+  taxa: 3068
+  structures: 0
+  alphafold_models: 1582
+  domain_architectures: 62
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054295
+description: This domain is found in a group of fungal proteins, including Chitin synthase 4 from Gibberella
+  zeae (CHS4), which plays a role in the polymerisation of chitin [[cite:PUB00155063],[cite:PUB00155061]].
+  This domain is predicted to adopt a globular structure with similarity to Cytochrome b5-like heme/steroid
+  binding domain ([pfam:PF00173]). Despite this global similarity this domain lacks haem coordinating
+  residues and is probably not involved in haem binding.

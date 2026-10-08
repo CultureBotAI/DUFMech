@@ -1,0 +1,27 @@
+id: Pfam:PF11903
+pfam_id: PF11903
+name: ParD-like antitoxin of type II bacterial toxin-antitoxin system
+short_name: ParD_like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11903
+counters:
+  proteins: 2487
+  matches: 2487
+  proteomes: 2259
+  taxa: 3444
+  structures: 0
+  alphafold_models: 1537
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021831
+description: ParD-like antitoxin is a family of archaeal and bacterial proteins of a type II bacterial
+  toxin-antitoxin system. Many of the cognate toxins for these molecules fall into family ParE-like_toxin,
+  [pfam:PF15781]. Gene-pairs are expressed from the same operon, the toxin of the pair being expressed
+  first, eg, for UniProtKB:Q3AQ93 and UniProtKB:Q3AQ94.

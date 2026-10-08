@@ -1,0 +1,31 @@
+id: Pfam:PF13835
+pfam_id: PF13835
+name: Wadjet protein JetB
+short_name: JetB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13835
+counters:
+  proteins: 2811
+  matches: 2811
+  proteomes: 2611
+  taxa: 4161
+  structures: 11
+  alphafold_models: 1795
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025449
+description: This family includes Wadjet protein JetB, a component of anti plasmid transformation system
+  Wadjet type I, composed of JetA, JetB, JetC and JetD. Expression of Wadjet type I in B.subtilis (strain
+  BEST7003) reduces the transformation efficiency of plasmid pHCMC05 [[cite:PUB00097806]]. The Wadjet
+  proteins JetA, JetB, and JetC show sequence similarity to subunits of the bacterial condensin complex
+  MukBEF, a member of the SMCs complex superfamily. The overall structure of JetB and its interaction
+  with JetA is very similar to that of MukE, and the overall positioning of the JetB dimer with respect
+  to JetA is also similar to the MukF-MukE complex [[cite:PUB00163953]]. JetB is composed of two winged
+  helix domains.

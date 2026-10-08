@@ -1,0 +1,32 @@
+id: Pfam:PF06500
+pfam_id: PF06500
+name: Esterase FrsA-like
+short_name: FrsA-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06500
+counters:
+  proteins: 3494
+  matches: 3495
+  proteomes: 2667
+  taxa: 4571
+  structures: 15
+  alphafold_models: 2440
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010520
+description: The FrsA-like family includes FrsA, an esterase found to have the alpha/beta-hydrolase fold
+  [[cite:PUB00094022],[cite:PUB00094021],[cite:PUB00058796]]. t also includes the hydrolytic polyketide
+  shortening protein Ayg1 from fungi [[cite:PUB00080691]], 2,6-dihydropseudooxynicotine hydrolase from
+  Paenarthrobacter nicotinovorans [[cite:PUB00041915]] and Fus2 from Gibberella species [[cite:PUB00082317]].
+  The enzyme 2,6-dihydroxy-pseudo-oxynicotine hydrolase is involved in the nicotine-degradation pathway
+  of Arthrobacter nicotinovorans [[cite:PUB00041915]]. Fus2 is part of the gene cluster that mediates
+  the biosynthesis of the mycotoxin fusarin C. Fus2 catalyses closure of the 2-pyrrolidone ring of the
+  intermediate 20-hydroxy-prefusarin to form another intermediate, 20-hydroxy-fusarin, which is then oxidized
+  by Fus8 [[cite:PUB00082317]].

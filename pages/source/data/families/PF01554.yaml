@@ -1,0 +1,24 @@
+id: Pfam:PF01554
+pfam_id: PF01554
+name: MatE
+short_name: MatE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01554
+counters:
+  proteins: 99069
+  matches: 188649
+  proteomes: 20019
+  taxa: 31326
+  structures: 43
+  alphafold_models: 70770
+  domain_architectures: 598
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002528
+description: The MatE domain

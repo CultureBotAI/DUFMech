@@ -1,0 +1,28 @@
+id: Pfam:PF12478
+pfam_id: PF12478
+name: UBAP2/protein lingerer
+short_name: UBAP2-Lig
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12478
+counters:
+  proteins: 4781
+  matches: 4782
+  proteomes: 1032
+  taxa: 3518
+  structures: 0
+  alphafold_models: 3803
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022166
+description: This entry includes ubiquitin-associated protein 2 (UBAP2) from humans and protein lingerer
+  (lig) from Drosophila melanogaster. Lig is a cytoplasmic protein involved in initiation and termination
+  of copulation [[cite:PUB00092497]]. Lig can act as a growth suppressor that associates with the RNA-binding
+  proteins Fragile X messenger ribonucleoprotein 1 (FMR1) and Caprin (Capr) and directly interacts with
+  and regulates the RNA-binding protein Rasputin (Rin) [[cite:PUB00069369]].

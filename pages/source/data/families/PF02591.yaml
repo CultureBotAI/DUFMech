@@ -1,0 +1,30 @@
+id: Pfam:PF02591
+pfam_id: PF02591
+name: C4-type zinc ribbon domain
+short_name: Zn_ribbon_9
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02591
+counters:
+  proteins: 6047
+  matches: 6047
+  proteomes: 6025
+  taxa: 8321
+  structures: 4
+  alphafold_models: 3806
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003743
+description: Zn-ribbon_9 is a Zn-ribbon domain rich in aromatic and positively charged amino acid residues.
+  This C-terminal Zn-ribbon domain consists of two beta-strands acting as a scaffold for the two Zn knuckles.
+  Both pairs of cysteines making up the two Zn knuckles are situated at highly conserved sharp beta-turns,
+  an arrangement that facilitates the tetrahedral coordination of the divalent Zn ion. The two Zn-knuckle
+  cysteine motifs are separated by 20 residues, 9 of which form an alpha-helix (helix 4) [[cite:PUB00075417]].Structural
+  modelling suggests this domain may bind nucleic acids [[cite:PUB00070793]]. The domain appears to bind
+  flaA-mRNA, thus contributing to flagellum formation and motility [[cite:PUB00075417]].

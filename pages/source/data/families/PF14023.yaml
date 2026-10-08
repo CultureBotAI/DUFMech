@@ -1,0 +1,28 @@
+id: Pfam:PF14023
+pfam_id: PF14023
+name: Bestrophin-like domain
+short_name: Bestrophin-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14023
+counters:
+  proteins: 4843
+  matches: 4851
+  proteomes: 3237
+  taxa: 4565
+  structures: 0
+  alphafold_models: 2878
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025333
+description: This family of domains is functionally uncharacterised, however it is distantly related to
+  bestrophin proteins. Structure prediction suggests that these proteins can form homopentamers as Bestrophin
+  proteins do. These proteins may function as chloride channels. This domain is sometimes found at the
+  C-terminus in large RHS proteins suggesting that it may function as a toxin. This domain was formerly
+  known as DUF4239.

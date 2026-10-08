@@ -1,0 +1,27 @@
+id: Pfam:PF13281
+pfam_id: PF13281
+name: MAP3K TRAFs-binding domain
+short_name: MAP3K_TRAF_bd
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13281
+counters:
+  proteins: 4193
+  matches: 4348
+  proteomes: 1297
+  taxa: 4235
+  structures: 2
+  alphafold_models: 1768
+  domain_architectures: 83
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025136
+description: This entry corresponds to the TNF receptor-associated factors (TRAFs)-binding domain found
+  at the N-terminus of some MAP3Ks, like Apoptosis signal-regulating kinases (ASK). This domain is flanked
+  by a thioredoxin-binding domain and a PH-like domain. It includes seven tetratricopeptide repeats (TPRs)
+  and, together with the PH-like domain, constitutes the central regulatory domain of ASK1 [[cite:PUB00094650]].

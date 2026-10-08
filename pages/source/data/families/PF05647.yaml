@@ -1,0 +1,31 @@
+id: Pfam:PF05647
+pfam_id: PF05647
+name: Tandem-repeating region of mucin, epiglycanin-like
+short_name: Epiglycanin_TR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05647
+counters:
+  proteins: 93
+  matches: 302
+  proteomes: 78
+  taxa: 322
+  structures: 0
+  alphafold_models: 70
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008519
+description: The unusual mucin, epiglycanin, is membrane-bound at the C-terminus but has a long region
+  of this tandem-repeat at the N-terminus [[cite:PUB00066740]]. It was the first mucin identified to be
+  associated with the malignant behaviour of carcinoma cells [[cite:PUB00066741]]. Mouse Muc21/epiglycanin
+  is thought to be a highly glycosylated molecule, which makes it likely that its function is dependent
+  on its glycoforms. Cells expressing Muc21 are significantly less adherent to each other and to extracellular
+  matrix components than control cells, and this loss of adhesion is mediated by the TR portion of Muc21
+  [[cite:PUB00066742]]. This family also now contains the repeat that was the C. elegans protein of unknown
+  function (DUF801).

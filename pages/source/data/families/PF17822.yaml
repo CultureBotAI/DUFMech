@@ -1,0 +1,24 @@
+id: Pfam:PF17822
+pfam_id: PF17822
+name: Armadillo-like helical domain-containing protein 2
+short_name: ARMH2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17822
+counters:
+  proteins: 260
+  matches: 263
+  proteomes: 244
+  taxa: 893
+  structures: 1
+  alphafold_models: 218
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040268
+description: The function of this Armadillo-like helical domain-containing protein is not known.

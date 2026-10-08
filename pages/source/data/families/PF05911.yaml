@@ -1,0 +1,25 @@
+id: Pfam:PF05911
+pfam_id: PF05911
+name: Filament-like plant protein, long coiled-coil
+short_name: FPP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05911
+counters:
+  proteins: 4531
+  matches: 8945
+  proteomes: 379
+  taxa: 1038
+  structures: 0
+  alphafold_models: 3566
+  domain_architectures: 85
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008587
+description: FPP is a family of long coiled-coil plant proteins that are filament-like. It interacts with
+  the nuclear envelope-associated protein, MAF1, the WPP family [pfam:PF13943].

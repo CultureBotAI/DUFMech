@@ -1,0 +1,25 @@
+id: Pfam:PF13318
+pfam_id: PF13318
+name: 1-carboxybiuret hydrolase subunit AtzG-like
+short_name: AtzG-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13318
+counters:
+  proteins: 1005
+  matches: 1005
+  proteomes: 989
+  taxa: 1632
+  structures: 2
+  alphafold_models: 616
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025148
+description: AtzG is essential for the production of soluble, active AtzE, which is a 1-carboxybiuret
+  hydrolase [[cite:PUB00092869]].

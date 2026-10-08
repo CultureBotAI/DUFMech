@@ -1,0 +1,26 @@
+id: Pfam:PF11992
+pfam_id: PF11992
+name: TgpA N-terminal domain
+short_name: TgpA_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11992
+counters:
+  proteins: 8161
+  matches: 8195
+  proteomes: 6697
+  taxa: 9425
+  structures: 2
+  alphafold_models: 4830
+  domain_architectures: 19
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021878
+description: This domain can be found at the N terminus of TgpA from Pseudomonas aeruginosa. TgpA is a
+  transglutaminase that plays a critical role in the viability of Pseudomonas aeruginosa [[cite:PUB00092521],[cite:PUB00092522]].
+  This domain is composed of 5 transmembrane helices [[cite:PUB00092522]].

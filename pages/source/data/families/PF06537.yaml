@@ -1,0 +1,27 @@
+id: Pfam:PF06537
+pfam_id: PF06537
+name: Di-haem oxidoreductase, putative peroxidase
+short_name: DHOR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06537
+counters:
+  proteins: 3781
+  matches: 4242
+  proteomes: 3212
+  taxa: 4802
+  structures: 0
+  alphafold_models: 2340
+  domain_architectures: 86
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010538
+description: DHOR is a family of di-haem oxidoreductases. It carries the two characteristic Cys-X-Y-Cys-His
+  haem-binding motifs. The C-terminal high-potential site functions as an electron transfer centre, and
+  the N-terminal low-potential site corresponds to the peroxidatic centre. Its probable function is as
+  a peroxidase [[cite:PUB00075353]].

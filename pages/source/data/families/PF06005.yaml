@@ -1,0 +1,30 @@
+id: Pfam:PF06005
+pfam_id: PF06005
+name: ZapB family
+short_name: ZapB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06005
+counters:
+  proteins: 1534
+  matches: 1534
+  proteomes: 1468
+  taxa: 2333
+  structures: 1
+  alphafold_models: 1054
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009252
+description: The ZapB family consists of non-essential, abundant cell division proteins that play a crucial
+  role in the formation of the Z-ring during bacterial cell division. These proteins are recruited early
+  to the divisome through direct interaction with FtsZ, a key protein in the assembly of the Z-ring. By
+  stimulating Z-ring assembly, ZapB proteins promote cell division earlier in the cell cycle. Their recruitment
+  to the Z-ring is dependent on the presence of functional FtsA or ZipA proteins. Structurally, ZapB proteins
+  form homodimers, with the ends of the coiled-coil dimers binding to each other to form polymers. This
+  polymerization is essential for their function in cell division [[cite:PUB00078060]].

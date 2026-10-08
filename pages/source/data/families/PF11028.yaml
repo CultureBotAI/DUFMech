@@ -1,0 +1,26 @@
+id: Pfam:PF11028
+pfam_id: PF11028
+name: Protein O-mannosyl-transferase TMEM260 N-terminal domain
+short_name: TMEM260_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11028
+counters:
+  proteins: 4138
+  matches: 4147
+  proteomes: 3041
+  taxa: 5849
+  structures: 0
+  alphafold_models: 2994
+  domain_architectures: 24
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021280
+description: This entry includes human Protein O-mannosyl-transferase TMEM260 and similar sequences from
+  bacteria and eukaryota. TMEM260 transfers mannosyl residues to the hydroxyl group of serine or threonine
+  residues of proteins [[cite:PUB00151531]]. This entry represents the transmembrane region.

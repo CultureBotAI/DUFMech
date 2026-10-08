@@ -1,0 +1,26 @@
+id: Pfam:PF12034
+pfam_id: PF12034
+name: Uncharacterized protein YfbK, C-terminal
+short_name: YfbK_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12034
+counters:
+  proteins: 3690
+  matches: 3750
+  proteomes: 3299
+  taxa: 4817
+  structures: 0
+  alphafold_models: 2215
+  domain_architectures: 37
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021908
+description: This domain is functionally uncharacterised. This domain represents the C-terminal of the
+  uncharacterized protein YfbK. This domain is about 180 amino acids in length. This domain is found at
+  the C-terminal of [pfam:PF00092].

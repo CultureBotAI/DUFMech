@@ -1,0 +1,25 @@
+id: Pfam:PF19094
+pfam_id: PF19094
+name: EMC6-arch
+short_name: EMC6_arch
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19094
+counters:
+  proteins: 441
+  matches: 441
+  proteomes: 441
+  taxa: 738
+  structures: 0
+  alphafold_models: 410
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043941
+description: This family represents the ER membrane protein complex subunit 6 (EMC6) homologue from archaea.
+  They contain three transmembrane regions.

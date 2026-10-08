@@ -1,0 +1,30 @@
+id: Pfam:PF06581
+pfam_id: PF06581
+name: Mad1 and Cdc20-bound-Mad2 binding
+short_name: p31comet
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06581
+counters:
+  proteins: 1184
+  matches: 1201
+  proteomes: 998
+  taxa: 3345
+  structures: 2
+  alphafold_models: 1041
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009511
+description: This family is involved in the cell-cycle surveillance mechanism called the spindle checkpoint.
+  This mechanism monitors the proper bipolar attachment of sister chromatids to spindle microtubules and
+  ensures the fidelity of chromosome segregation during mitosis. A key player in mitosis is Mad2, and
+  Mad2 exhibits an unusual two-state behaviour. A Mad1-Mad2 core complex recruits cytosolic Mad2 to kinetochores
+  through Mad2 dimerisation and converts Mad2 to a conformer amenable to Cdc20 binding. p31comet inactivates
+  the checkpoint by binding to Mad1- or Cdc20-bound Mad2 in such a way as to stop Mad2 activation and
+  to promote the dissociation of the Mad2-Cdc20 complex [[cite:PUB00049186]].

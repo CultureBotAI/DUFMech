@@ -1,0 +1,29 @@
+id: Pfam:PF05050
+pfam_id: PF05050
+name: Methyltransferase FkbM domain
+short_name: Methyltransf_21
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05050
+counters:
+  proteins: 21317
+  matches: 21481
+  proteomes: 8683
+  taxa: 15058
+  structures: 1
+  alphafold_models: 14912
+  domain_architectures: 576
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006342
+description: This domain is characterised by two well-conserved short regions separated by a variable
+  region in both sequence and length. Proteins containing this domain have been characterised as methyltransferases.
+  FkbM, was shown to be required for a specific methylation in the biosynthesis of the immunosuppressant
+  FK506 in Streptomyces strain MA6548 [[cite:PUB00009583]]. This domain is also found in other methyltransferases
+  such as SdnD from the fungus Sordaria araneosa, involved in the biosynthesis of glycoside antibiotics
+  with tetracyclic diterpene aglycone structure [[cite:PUB00089798]].

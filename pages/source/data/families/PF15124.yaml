@@ -1,0 +1,25 @@
+id: Pfam:PF15124
+pfam_id: PF15124
+name: FANCD2 opposite strand protein
+short_name: FANCD2OS
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15124
+counters:
+  proteins: 258
+  matches: 272
+  proteomes: 202
+  taxa: 699
+  structures: 0
+  alphafold_models: 215
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027966
+description: 'This family of proteins of unknown function gets its name from its position in the mammalian
+  genome: Fanconi anemia group D2 protein opposite strand transcript protein.'

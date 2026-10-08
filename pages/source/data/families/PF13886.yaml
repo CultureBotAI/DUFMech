@@ -1,0 +1,28 @@
+id: Pfam:PF13886
+pfam_id: PF13886
+name: TM7S3/TM198-like domain
+short_name: TM7S3_TM198
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13886
+counters:
+  proteins: 6044
+  matches: 6101
+  proteomes: 2578
+  taxa: 6899
+  structures: 0
+  alphafold_models: 5110
+  domain_architectures: 80
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025256
+description: This domain is found at the C-terminal end of human Transmembrane 7 superfamily member 3
+  (TM7SF3), which is is involved in the inhibition of cytokine-induced death of pancreatic beta cells,
+  towards the N terminus of human Transmembrane protein 198 (TM198), which plays a role in Wnt signalling
+  and in similar proteins mainly found in animal, fungi and bacteria. This domain is predicted to adopt
+  an all alpha-helical structure.

@@ -1,0 +1,27 @@
+id: Pfam:PF15141
+pfam_id: PF15141
+name: Ubiquinol-cytochrome-c reductase complex assembly factor 3
+short_name: UQCC3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15141
+counters:
+  proteins: 448
+  matches: 451
+  proteomes: 413
+  taxa: 1477
+  structures: 0
+  alphafold_models: 402
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027896
+description: Complex III (cytochrome bc1) is a protein complex of the mitochondrial inner membrane that
+  transfers electrons from ubiquinol to cytochrome c. UQCC3 functions in complex III assembly. The human
+  UQCC3 is the ortholog of the fungal complex III assembly factor CBP4 [[cite:PUB00087489]]. It is also
+  a potent antiviral protein independent of interferon production [[cite:PUB00087490]].

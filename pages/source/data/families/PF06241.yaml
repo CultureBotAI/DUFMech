@@ -1,0 +1,26 @@
+id: Pfam:PF06241
+pfam_id: PF06241
+name: Castor and Pollux, part of voltage-gated ion channel
+short_name: Castor_Poll_mid
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06241
+counters:
+  proteins: 3481
+  matches: 3561
+  proteomes: 1386
+  taxa: 2920
+  structures: 4
+  alphafold_models: 2493
+  domain_architectures: 63
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010420
+description: This family represents a short region in the middle of largely plant proteins that belong
+  to the TCDB:1.A.1.23.2 family of the voltage-gated ion channel superfamily, eg UniProtKB:Q5H8A6, Q5H8A5
+  and Q4VY51.

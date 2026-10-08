@@ -1,0 +1,39 @@
+id: Pfam:PF03781
+pfam_id: PF03781
+name: Sulfatase-modifying factor enzyme 1-like domain
+short_name: FGE-sulfatase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03781
+counters:
+  proteins: 38188
+  matches: 41371
+  proteomes: 14430
+  taxa: 23526
+  structures: 65
+  alphafold_models: 25146
+  domain_architectures: 587
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005532
+description: This domain is found in eukaryotic proteins [[cite:PUB00019471]] required for post-translational
+  sulfatase modification (SUMF1). These proteins are associated with the rare disorder multiple sulfatase
+  deficiency (MSD) [[cite:PUB00033658]]. The protein product of the SUMF1 gene is FGE, formylglycine (FGly),-generating
+  enzyme, which is a sulfatase. Sulfatases are enzymes essential for degradation and remodelling of sulfate
+  esters, and formylglycine (FGly), the key catalytic in the active site, is unique to sulfatases [[cite:PUB00038408]].
+  FGE is localised to the endoplasmic reticulum (ER) and interacts with and modifies the unfolded form
+  of newly synthesised sulfatases. FGE is a single-domain monomer with a surprising paucity of secondary
+  structure that adopts a unique fold which is stabilised by two Ca2+ ions. The effect of all mutations
+  found in MSD patients is explained by the FGE structure, providing a molecular basis for MSD. A redox-active
+  disulfide bond is present in the active site of FGE. An oxidised cysteine residue, possibly cysteine
+  sulfenic acid, has been detected that may allow formulation of a structure-based mechanism for FGly
+  formation from cysteine residues in all sulfatases [[cite:PUB00055960]]. In Mycobacteria and Treponema
+  denticola this enzyme functions as an iron(II)-dependent oxidoreductase [[cite:PUB00060032],[cite:PUB00066766]].
+  This domain is also found in the Serine/threonine-protein kinase Pkn1 from Chlamydia trachomatis which
+  is a multidomain protein. Pkn1 plays a role in specific interactions with host proteins during host
+  intracellular growth.

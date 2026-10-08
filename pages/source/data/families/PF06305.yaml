@@ -1,0 +1,26 @@
+id: Pfam:PF06305
+pfam_id: PF06305
+name: Lipopolysaccharide assembly protein A domain
+short_name: LapA_dom
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06305
+counters:
+  proteins: 9195
+  matches: 9195
+  proteomes: 8766
+  taxa: 12596
+  structures: 0
+  alphafold_models: 6040
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010445
+description: This family includes a domain found in lipopolysaccharide assembly protein A (LapA). LapA
+  functions along with LapB in the assembly of lipopolysaccharide (LPS) [[cite:PUB00074284]]. Domains
+  in this family are also found in some uncharacterised bacterial proteins.

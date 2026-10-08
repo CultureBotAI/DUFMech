@@ -1,0 +1,25 @@
+id: Pfam:PF01988
+pfam_id: PF01988
+name: VIT family
+short_name: VIT1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01988
+counters:
+  proteins: 18585
+  matches: 20370
+  proteomes: 10793
+  taxa: 16977
+  structures: 6
+  alphafold_models: 13084
+  domain_architectures: 112
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008217
+description: This family includes the vacuolar Fe2+/Mn2+ uptake transporter [swissprot:P47818], Ccc1 [[cite:PUB00005731]]
+  and the vacuolar iron transporter VIT1 [swissprot:Q9ZUA5].

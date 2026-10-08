@@ -1,0 +1,27 @@
+id: Pfam:PF10176
+pfam_id: PF10176
+name: NEDD4/Bsd2
+short_name: NEDD4_Bsd2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10176
+counters:
+  proteins: 4457
+  matches: 6814
+  proteomes: 2520
+  taxa: 6609
+  structures: 0
+  alphafold_models: 3903
+  domain_architectures: 51
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019325
+description: Proteins in this entry includes NEDD4 family-interacting protein 1/2 (Ndfip1 and Ndfip2)
+  and the yeast Bsd2 metal homeostasis proteins. Ndfip1 and Ndfip2 are endosomal membrane proteins that
+  bind to and activate members of the Nedd4 family of E3 ubiquitin ligases [[cite:PUB00075325],[cite:PUB00075323]].
+  Ndfip1 plays a role in regulating metal transport in human neurons [[cite:PUB00075324]].

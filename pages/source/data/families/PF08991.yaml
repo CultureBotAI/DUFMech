@@ -1,0 +1,30 @@
+id: Pfam:PF08991
+pfam_id: PF08991
+name: Cx9C motif-containing protein 4
+short_name: CMC4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08991
+counters:
+  proteins: 1928
+  matches: 1928
+  proteomes: 1755
+  taxa: 5263
+  structures: 3
+  alphafold_models: 1686
+  domain_architectures: 30
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027179
+description: Members of this family adopt a coiled coil structure, with two antiparallel alpha-helices
+  that are tightly strapped together by two disulfide bridges at each end. The protein sequence shows
+  a cysteine motif, required for the stabilisation of the coiled-coil-like structure. Additional inter-helix
+  hydrophobic contacts impart stability to this scaffold [[cite:PUB00024565]]. The precise function of
+  this eukaryotic domain is, as yet, unknown [[cite:PUB00013217]]. Cx9C motif-containing protein 4 (CMC4,
+  also known as Mature T-cell proliferation 1 neighbor protein) is found in mitochondria. CMC4 is the
+  first gene unequivocally identified in the group of uncommon leukemias with a mature phenotype [[cite:PUB00075489]].

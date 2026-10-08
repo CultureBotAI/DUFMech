@@ -1,0 +1,27 @@
+id: Pfam:PF12618
+pfam_id: PF12618
+name: PHD finger protein 20, AT-hook
+short_name: PHF20_AT-hook
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12618
+counters:
+  proteins: 781
+  matches: 781
+  proteomes: 508
+  taxa: 1509
+  structures: 0
+  alphafold_models: 689
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022255
+description: PHD finger protein 20 (PHF20) is a Methyllysine-binding protein, component of the MOF histone
+  acetyltransferase protein complex. It consists of tandem Tudor domains at the N-terminal, an AT hook,
+  a C2H2-type zinc finger, and a plant homeodomain (PHD) finger [[cite:PUB00059425],[cite:PUB00094038],[cite:PUB00061037]].
+  This entry represents the AT-hook domain, a putative DNA-binding domain [[cite:PUB00059425],[cite:PUB00094038],[cite:PUB00061037]].

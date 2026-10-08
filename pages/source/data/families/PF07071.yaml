@@ -1,0 +1,27 @@
+id: Pfam:PF07071
+pfam_id: PF07071
+name: KDGP aldolase
+short_name: KDGP_aldolase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07071
+counters:
+  proteins: 1020
+  matches: 1020
+  proteomes: 924
+  taxa: 1371
+  structures: 6
+  alphafold_models: 604
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010763
+description: DgaF is part of the dga operon required for wild-type growth of Salmonella Typhimurium with
+  D-glucosaminate. It catalyses the conversion of keto-3-deoxygluconate 6-phosphate (KDGP) to yield pyruvate
+  and glyceraldehyde-3-phosphate. Orthologues of the dga genes are largely restricted to certain enteric
+  bacteria and a few species in the phylum Firmicutes [[cite:PUB00075650]].

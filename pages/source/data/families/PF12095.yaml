@@ -1,0 +1,31 @@
+id: Pfam:PF12095
+pfam_id: PF12095
+name: Protein CHLORORESPIRATORY REDUCTION 7
+short_name: CRR7
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12095
+counters:
+  proteins: 705
+  matches: 705
+  proteomes: 578
+  taxa: 1666
+  structures: 1
+  alphafold_models: 527
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021954
+description: This entry includes protein from blue-green algae and plants, including CRR7 protein from
+  Arabidopsis. CRR7 is part of the chloroplastic NAD(P)H dehydrogenase complex (NDH Complex) involved
+  in respiration, photosystem I (PSI) cyclic electron transport and CO2 uptake [[cite:PUB00075318]]. A
+  member of this family, Ssl3829, was shown to play an important role in the assembly of the NDH-1 hydrophilic
+  arm by accumulating the NAI300 complex and Slr1097 protein in the cytoplasm [[cite:PUB00163390]]. The
+  structure of another member of this family, Asl3597 from Nostoc sp. PCC7120, was determined [[cite:PUB00163389]].
+  This protein folds into an alpha/beta structure consisting of a small antiparallel beta-sheet and alpha-helices
+  packed on one side of it.

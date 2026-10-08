@@ -1,0 +1,32 @@
+id: Pfam:PF01207
+pfam_id: PF01207
+name: Dihydrouridine synthase (Dus)
+short_name: Dus
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01207
+counters:
+  proteins: 46157
+  matches: 47750
+  proteomes: 21293
+  taxa: 34157
+  structures: 15
+  alphafold_models: 33123
+  domain_architectures: 370
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR035587
+description: Members of this family catalyse the reduction of the 5,6-double bond of a uridine residue
+  on tRNA. Dihydrouridine modification of tRNA is widely observed in prokaryotes and eukaryotes, and also
+  in some archae. Most dihydrouridines are found in the D loop of t-RNAs. The role of dihydrouridine in
+  tRNA is currently unknown, but may increase conformational flexibility of the tRNA. It is likely that
+  different family members have different substrate specificities, which may overlap. Dus 1 ([swissprot:Q9HGN6])
+  from Saccharomyces cerevisiae acts on pre-tRNA-Phe, while Dus 2 ([swissprot:P53720]) acts on pre-tRNA-Tyr
+  and pre-tRNA-Leu. Dus 1 is active as a single subunit, requiring NADPH or NADH, and is stimulated by
+  the presence of FAD [[cite:PUB00014304]]. Some family members may be targeted to the mitochondria and
+  even have a role in mitochondria [[cite:PUB00014304]].

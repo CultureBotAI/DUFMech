@@ -1,0 +1,26 @@
+id: Pfam:PF06458
+pfam_id: PF06458
+name: MucBP domain
+short_name: MucBP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06458
+counters:
+  proteins: 2614
+  matches: 7268
+  proteomes: 789
+  taxa: 1344
+  structures: 11
+  alphafold_models: 1313
+  domain_architectures: 852
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009459
+description: The MucBP (MUCin-Binding Protein) domain is found in a wide variety of bacterial proteins,
+  in several repeats. The domain is found in bacterial peptidoglycan bound proteins and is often found
+  in conjunction with [pfam:PF00746] and [pfam:PF00560].

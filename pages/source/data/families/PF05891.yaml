@@ -1,0 +1,30 @@
+id: Pfam:PF05891
+pfam_id: PF05891
+name: AdoMet dependent proline di-methyltransferase
+short_name: Methyltransf_PK
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05891
+counters:
+  proteins: 5051
+  matches: 5426
+  proteomes: 3284
+  taxa: 8737
+  structures: 25
+  alphafold_models: 4329
+  domain_architectures: 101
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008576
+description: This protein is expressed in the tail neuron PVT and in uterine cells in C. elegans [worm-base].
+  In Saccharomyces cerevisiae this is AdoMet dependent proline di-methyltransferase. This enzyme catalyses
+  the di-methylation of ribosomal proteins Rpl12 and Rps25 at N-terminal proline residues. The methyltransferases
+  described here specifically recognise the N-terminal X-Pro-Lys sequence motif, and they may account
+  for nearly all previously described eukaryotic protein N-terminal methylation reactions. A number of
+  other yeast and human proteins also share the recognition motif and may be similarly modified [[cite:PUB00073462]].
+  As with other methyltransferases, this family carries the characteristic GxGxG motif.

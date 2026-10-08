@@ -1,0 +1,32 @@
+id: Pfam:PF01809
+pfam_id: PF01809
+name: Putative membrane protein insertion efficiency factor
+short_name: YidD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01809
+counters:
+  proteins: 17388
+  matches: 17388
+  proteomes: 16077
+  taxa: 23500
+  structures: 0
+  alphafold_models: 11202
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002696
+description: This family consists of membrane insertion efficiency factor proteins. They contain three
+  conserved cysteine residues. Family members such as YidD may be involved in insertion of integral membrane
+  proteins into the membrane by assisting YidC (membrane protein insertase). Some members of the yidD
+  family have been previously thought to posses alpha-hemolysin activity, however no sufficient evidence
+  was found to corroborate this idea. Secondary structure prediction indicated the presence of three alpha-helices
+  in YidD. None of the three alpha-helices appeared sufficiently hydrophobic to serve as a transmembrane,
+  suggesting a cytoplasmic localization for YidD. However, a closer examination of the alpha-helical wheel
+  projection of the predicted first alpha-helix in YidD suggested an amphipathic structure in its N-terminal
+  region which might be involved in membrane targeting [[cite:PUB00064882]].

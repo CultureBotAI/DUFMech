@@ -1,0 +1,32 @@
+id: Pfam:PF11102
+pfam_id: PF11102
+name: Group 4 capsule polysaccharide lipoprotein gfcB, YjbF
+short_name: YjbF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11102
+counters:
+  proteins: 1487
+  matches: 1487
+  proteomes: 1355
+  taxa: 1884
+  structures: 1
+  alphafold_models: 951
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021308
+description: This family includes lipoprotein GfcB (YmcC), involved in group 4 capsule polysaccharide
+  formation [[cite:PUB00066719]]. YjbF is a family of Gram-negative bacterial outer-membrane lipoproteins,
+  predicted to be a beta-barrel and possibly a porin that is one of four gene-products expressed from
+  an operon, yjbEFGH, which is regulated by the Rcs phosphorelay in a RcsA-dependent manner, similar to
+  that of other exopolysaccharide biosynthetic pathways. It is highly possible that the yjbEFGH operon
+  encodes a system involved in EPS secretion since none of the products is predicted to have enzymic activity,
+  the products are all secreted and YbjF and H are predicted to be beta-barrel lipoproteins similar to
+  porins. It may be that the operon products play some role in biofilm formation and/or matrix production
+  [[cite:PUB00066719]].

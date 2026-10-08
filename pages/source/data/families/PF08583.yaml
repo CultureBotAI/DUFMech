@@ -1,0 +1,27 @@
+id: Pfam:PF08583
+pfam_id: PF08583
+name: Cytochrome c oxidase biogenesis protein Cmc1 like
+short_name: Cmc1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08583
+counters:
+  proteins: 6753
+  matches: 6771
+  proteomes: 3205
+  taxa: 8526
+  structures: 3
+  alphafold_models: 5817
+  domain_architectures: 81
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013892
+description: Cmc1 is a metallo-chaperone like protein which is known to localise to the inner mitochondrial
+  membrane in Saccharomyces cerevisiae. It is essential for full expression of cytochrome c oxidase and
+  respiration [[cite:PUB00044676]]. Cmc1 contains two Cx9C motifs and is able to bind copper(I). Cmc1
+  is thought to play a role in mitochondrial copper trafficking and transfer to cytochrome c oxidase [[cite:PUB00044676]].

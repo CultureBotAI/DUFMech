@@ -1,0 +1,27 @@
+id: Pfam:PF09209
+pfam_id: PF09209
+name: HTH-type transcriptional dual regulator CecR, C-terminal domain
+short_name: CecR_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09209
+counters:
+  proteins: 2046
+  matches: 2047
+  proteomes: 1822
+  taxa: 2903
+  structures: 4
+  alphafold_models: 1312
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015292
+description: This entry represents the C-terminal domain found in CecR (regulator of cefoperazone and
+  chloramphenicol sensitivity), previously known as YbiH. CecR has been shown to control sensitivity to
+  cefoperazone and chloramphenicol through regulating the transcription of the cecR-ybhGFSR operon and
+  the rhlE gene [[cite:PUB00104740]].

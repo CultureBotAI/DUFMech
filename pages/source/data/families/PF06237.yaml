@@ -1,0 +1,28 @@
+id: Pfam:PF06237
+pfam_id: PF06237
+name: Solute carrier family 52, riboflavin transporter
+short_name: SLC52_ribofla_tr
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06237
+counters:
+  proteins: 3128
+  matches: 3419
+  proteomes: 1243
+  taxa: 4015
+  structures: 2
+  alphafold_models: 2727
+  domain_architectures: 50
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009357
+description: This family includes animal riboflavin transporters belonging to the Solute carrier family
+  52 (SLC52). They are plasma membrane proteins that transport vitamin B2 (riboflavin, RF) into cells
+  [[cite:PUB00078059]]. In case of infection by retroviruses, they act as cell receptors to retroviral
+  envelopes similar to the porcine endogenous retrovirus (PERV-A) [[cite:PUB00078058]]. These proteins
+  belong to the MFS superfamily [[cite:PUB00103553]].

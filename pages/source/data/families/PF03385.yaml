@@ -1,0 +1,32 @@
+id: Pfam:PF03385
+pfam_id: PF03385
+name: STELLO glycosyltransferases
+short_name: STELLO
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03385
+counters:
+  proteins: 1545
+  matches: 1632
+  proteomes: 602
+  taxa: 1830
+  structures: 0
+  alphafold_models: 1297
+  domain_architectures: 39
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005049
+description: This domain family is found in Metazoa and in Virdiplantae. Two of the family members are
+  characterized in Arabidopsis thaliana. [swissprot:O22943] and [swissprot:Q9SCN0] and named STELLO1 (STL1)
+  and STELLO2 (STL2) respectively. They are Golgi-localized proteins that can interact with CesAs (cellulose
+  synthase A) and control cellulose quantity. In the absence of STELLO function, the spatial distribution
+  within the Golgi, secretion and activity of the CSCs are impaired indicating a central role of the STELLO
+  proteins in CSC assembly. Point mutations in the predicted catalytic domains of the STELLO proteins
+  indicate that they are glycosyltransferases facing the Golgi lumen. STL homologues are present throughout
+  the plant kingdom, but STL proteins are distinct from distantly related proteins in nematodes, fungi
+  and molluscs [[cite:PUB00081895]].

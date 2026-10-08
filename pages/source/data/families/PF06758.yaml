@@ -1,0 +1,25 @@
+id: Pfam:PF06758
+pfam_id: PF06758
+name: Olduvai domain
+short_name: Olduvai
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06758
+counters:
+  proteins: 1373
+  matches: 3063
+  proteomes: 120
+  taxa: 406
+  structures: 0
+  alphafold_models: 506
+  domain_architectures: 36
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010630
+description: This domain formerly known as DUF1220 or NBPF domain has been renamed as the Olduvai domain.
+  It is found highly duplicated in the human lineage.

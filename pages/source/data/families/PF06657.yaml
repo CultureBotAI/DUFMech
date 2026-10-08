@@ -1,0 +1,25 @@
+id: Pfam:PF06657
+pfam_id: PF06657
+name: Centrosome microtubule-binding domain of Cep57
+short_name: Cep57_MT_bd
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06657
+counters:
+  proteins: 3097
+  matches: 3097
+  proteomes: 1843
+  taxa: 4719
+  structures: 2
+  alphafold_models: 2622
+  domain_architectures: 27
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024957
+description: This C-terminal region of Cep57 binds, nucleates and bundles microtubules. The N-terminal
+  part, family Cep57_CLD, [pfam:PF14073], is the centrosome localisation domain Cep57 [[cite:PUB00057253]].

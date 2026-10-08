@@ -1,0 +1,29 @@
+id: Pfam:PF11904
+pfam_id: PF11904
+name: ANKRD13 C-terminal
+short_name: ANKRD13_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11904
+counters:
+  proteins: 8651
+  matches: 9113
+  proteomes: 1827
+  taxa: 5655
+  structures: 0
+  alphafold_models: 7470
+  domain_architectures: 117
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055285
+description: This domain, and the associated ANK family repeat [pfam:PF00023] domain, are found in ANKRD13
+  of which at least 4 subtypes are known to exist, termed A-D. ANKRD13C act as a chaperone for biogenesis
+  and folding of the DP receptor for prostaglandin D2 [[cite:PUB00057233]]. ANKRD13A/B/D are ubiquitin-binding
+  proteins that specifically recognise and bind Lys-63-linked ubiquitin. They positively regulate the
+  internalisation of ligand-activated EGFR by binding to the Ub moiety of ubiquitinated EGFR at the cell
+  membrane [[cite:PUB00155297]].

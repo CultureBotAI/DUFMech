@@ -1,0 +1,30 @@
+id: Pfam:PF22397
+pfam_id: PF22397
+name: DarT1-associated NADAR antitoxin
+short_name: NADAR-DarT1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22397
+counters:
+  proteins: 250
+  matches: 250
+  proteomes: 244
+  taxa: 629
+  structures: 1
+  alphafold_models: 153
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR053913
+description: This entry, previously known as DUF6977, represents the DarT1-associated NADAR antitoxin
+  and related proteins. The DarT-NADAR system is a TA system catalysing the specific and reversible ADP-ribosylation
+  of guanosine bases in which DarT1-associated NADARs reverse guanine ADP-ribosylation catalysed by DarT1.
+  DarT1-associated NADAR antitoxin adopts an alpha/beta globular structure characterised by an alpha-helical
+  core that forms the active site flanked by two small beta sheet regions, comprising two and three strands
+  [[cite:PUB00154386]]. Its structural core is globally similar to the structure of E.coli protein YbiA,
+  a member of the NADAR domain family.

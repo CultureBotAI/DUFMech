@@ -1,0 +1,32 @@
+id: Pfam:PF01970
+pfam_id: PF01970
+name: Tripartite tricarboxylate transporter TctA family
+short_name: TctA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01970
+counters:
+  proteins: 18234
+  matches: 18244
+  proteomes: 7121
+  taxa: 9990
+  structures: 0
+  alphafold_models: 11882
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002823
+description: This family, formerly known as DUF112, is a family of bacterial and archaeal tripartite tricarboxylate
+  transporters of the extracytoplasmic solute binding receptor-dependent transporter group of families,
+  distinct from the ABC and TRAP-T families [[cite:PUB00106923]]. TctA is part of the tripartite TctABC
+  system which, as characterised in S. typhimurium [[cite:PUB00106922]], is a secondary carrier that depends
+  for activity on the extracytoplasmic tricarboxylate-binding receptor TctC as well as two integral membrane
+  proteins, TctA and TctB. complete three-component systems are found only in bacteria. TctA is a large
+  transmembrane protein with up to 12 predicted membrane spanning regions in bacteria and up to 11 such
+  in archaea, with the N-terminal within the cytoplasm. TctA is thought to be a permease, and in most
+  other bacteria functions without TctB and TctC molecules [[cite:PUB00106923]].

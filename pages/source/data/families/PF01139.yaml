@@ -1,0 +1,26 @@
+id: Pfam:PF01139
+pfam_id: PF01139
+name: tRNA-splicing ligase RtcB
+short_name: RtcB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01139
+counters:
+  proteins: 12598
+  matches: 15105
+  proteomes: 9357
+  taxa: 17245
+  structures: 20
+  alphafold_models: 8370
+  domain_architectures: 66
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR001233
+description: This family of RNA ligases ([ec:6.5.1.3]) join 2',3'-cyclic phosphate and 5'-OH ends. They
+  catalyse the splicing of tRNA and may also participate in tRNA repair and recovery from stress-induced
+  RNA damage [[cite:PUB00152168],[cite:PUB00057853],[cite:PUB00056744]].

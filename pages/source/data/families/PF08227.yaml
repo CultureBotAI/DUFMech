@@ -1,0 +1,28 @@
+id: Pfam:PF08227
+pfam_id: PF08227
+name: DASH complex subunit Hsk3 like
+short_name: DASH_Hsk3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08227
+counters:
+  proteins: 1859
+  matches: 1859
+  proteomes: 1708
+  taxa: 4301
+  structures: 3
+  alphafold_models: 1641
+  domain_architectures: 20
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013183
+description: The DASH complex is a ~10 subunit microtubule-binding complex that is transferred to the
+  kinetochore prior to mitosis [[cite:PUB00017174]]. In Saccharomyces cerevisiae DASH forms both rings
+  and spiral structures on microtubules in vitro [[cite:PUB00033281],[cite:PUB00033282]]. This family
+  also includes several higher eukaryotic proteins. However, other DASH subunits do not appear to be conserved
+  in higher eukaryotes.

@@ -38,8 +38,8 @@ pipelines still awaiting inputs. Queue priority 1 is highest, 5 lowest.
 
 The legacy cross-Mech source is `enrichment` in the catalogue because its
 artifacts are already present, but `BLOCKED` in the adoption queue because the
-combined licensing review is unfinished. The checker warns about both retained
-manifests. It does not remove, relicense, redownload, or redate historical data.
+combined licensing review is unfinished. The checker warns about all three
+retained manifests (October 5, 6 and 8; the latter two are offline relabels). It does not remove, relicense, redownload, or redate historical data.
 
 ## Implemented Inventory
 

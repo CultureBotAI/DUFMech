@@ -1,0 +1,25 @@
+id: Pfam:PF07134
+pfam_id: PF07134
+name: Autographa californica nuclear polyhedrosis virus (AcMNPV), Orf18
+short_name: AcMNPV_Orf18
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07134
+counters:
+  proteins: 76
+  matches: 78
+  proteomes: 75
+  taxa: 162
+  structures: 0
+  alphafold_models: 70
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010785
+description: This family is represented by Autographa californica nuclear polyhedrosis virus (AcMNPV),
+  Orf18 (ac18) [[cite:PUB00082301]]; it is a family of uncharacterised viral proteins.

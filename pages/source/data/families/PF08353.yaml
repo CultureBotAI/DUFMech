@@ -1,0 +1,31 @@
+id: Pfam:PF08353
+pfam_id: PF08353
+name: MurT ligase C-terminal
+short_name: MurT_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08353
+counters:
+  proteins: 4479
+  matches: 4479
+  proteomes: 4418
+  taxa: 6081
+  structures: 6
+  alphafold_models: 2758
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013564
+description: This entry represents the C-terminal domain of MurT ligase from Gram-positive bacteria. MurT
+  is part of the bi-enzymatic complex MurT-GatD involved in the amidation of the alpha-carboxyl group
+  of the D-isoglutamate residue in Lipid II in the peptidoglycan layer to produce D-isoglutamine. This
+  domain contains an aspartate at position 349, the third residue in the catalytic triad GatD-C94, GatD-H189,
+  MurT-D349. This C-terminal domain is built around a central six-stranded, predominantly parallel beta-sheet
+  that is sandwiched between four alpha-helices on one side and two alpha-helices on the other. The MurT-GatD
+  heterodimer adopts a boomerang-shaped conformation, with GatD packing against the C-terminal domain
+  of MurT [[cite:PUB00094480]].

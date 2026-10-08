@@ -1,0 +1,25 @@
+id: Pfam:PF01795
+pfam_id: PF01795
+name: MraW methylase family
+short_name: Methyltransf_5
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01795
+counters:
+  proteins: 21149
+  matches: 21395
+  proteomes: 19595
+  taxa: 30968
+  structures: 20
+  alphafold_models: 14300
+  domain_architectures: 96
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002903
+description: Members of this family are probably SAM dependent methyltransferases based on [swissprot:P18595]
+  [[cite:PUB00017338]]. This family appears to be related to [pfam:PF01596].

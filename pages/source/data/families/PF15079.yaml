@@ -1,0 +1,25 @@
+id: Pfam:PF15079
+pfam_id: PF15079
+name: Testis-specific protein 35
+short_name: Tsc35
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15079
+counters:
+  proteins: 365
+  matches: 432
+  proteomes: 137
+  taxa: 440
+  structures: 0
+  alphafold_models: 290
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027874
+description: Tsc35 (also referred to in the literature as Tsc24) is essential for spermatogenesis in mammalian
+  male reproduction. It is expressed in the testis from day 35 onwards in mice [[cite:PUB00067396]].

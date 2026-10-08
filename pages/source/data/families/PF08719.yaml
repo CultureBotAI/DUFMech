@@ -1,0 +1,25 @@
+id: Pfam:PF08719
+pfam_id: PF08719
+name: NADAR domain
+short_name: NADAR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08719
+counters:
+  proteins: 9165
+  matches: 9274
+  proteomes: 5545
+  taxa: 10389
+  structures: 2
+  alphafold_models: 6293
+  domain_architectures: 243
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012816
+description: This is a domain of unknown function, it has been named been named the NADAR (NAD and ADP-ribose)
+  domain [[cite:PUB00079392]].

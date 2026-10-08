@@ -1,0 +1,29 @@
+id: Pfam:PF08216
+pfam_id: PF08216
+name: Catenin-beta-like, Arm-motif containing nuclear
+short_name: CTNNBL
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08216
+counters:
+  proteins: 4228
+  matches: 4569
+  proteomes: 3098
+  taxa: 8317
+  structures: 9
+  alphafold_models: 3601
+  domain_architectures: 69
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013180
+description: CTNNBL is a family of eukaryotic nuclear proteins of the catenin-beta-like 1 type that contain
+  an armadillo motif. A human nuclear protein with this domain ([swissprot:Q8WYA6]) is thought to have
+  a role in apoptosis [[cite:PUB00017164]]. The interaction of CTNNBL1 with its known partners (the Prp19-CDC5L
+  complex and AID) is mediated by recognition of NLS (nuclear localisation signal) motifs. The RNA-splicing
+  factor Prp31 is also an interactor, with recognition also occurring through the NLS. CTNNBL1 uses its
+  central armadillo (ARM) domain to bind NLS-containing partners [[cite:PUB00110056],[cite:PUB00110057]].

@@ -1,0 +1,35 @@
+id: Pfam:PF23926
+pfam_id: PF23926
+name: LtfC-like, beta-sandwich domain
+short_name: LtfC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23926
+counters:
+  proteins: 522
+  matches: 536
+  proteomes: 498
+  taxa: 1092
+  structures: 7
+  alphafold_models: 59
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055688
+description: This entry, previously known as DUF7264, represents a domain found in the Minor tail protein
+  Gp6, Collar protein p132, Lateral tail fiber protein C (LtfC) and related phage proteins. This domain
+  folds into a beta-sandwich fold with and extended beta-hairpin that projects away from it. The minor
+  tail proteins Gp6 are likely involved in the assembly or function of the tail structure in bacteriophages.
+  The collar protein p132 forms the T5 phage collar structure, which serves as an anchoring point for
+  the side tail fiber protein pb1, suggesting a role in stabilising the tail fibers and ensuring proper
+  attachment to the host cell [[cite:PUB00155631]]. The lateral tail fiber protein C (LtfC) is a component
+  of the DT57C bacteriophage tail tip complex where it forms a dodecameric ring [[cite:PUB00155646]].
+  LtfC adopts a compact, single-domain structure. The LtfC ring is complemented by another lateral tail
+  fiber protein, LtfA. Each of the LtfA monomers is connected to the LtfC assembly in a unique way by
+  augmenting the edges of LtfC beta-sheets with two short beta-strands and thus completing the LtfC beta-sandwich
+  structure.

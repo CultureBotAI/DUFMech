@@ -1,0 +1,25 @@
+id: Pfam:PF02714
+pfam_id: PF02714
+name: Calcium-dependent channel, 7TM region, putative phosphate
+short_name: RSN1_7TM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02714
+counters:
+  proteins: 21614
+  matches: 22510
+  proteomes: 3299
+  taxa: 8701
+  structures: 41
+  alphafold_models: 17197
+  domain_architectures: 366
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003864
+description: RSN1_7TM is the seven transmembrane domain region of putative phosphate transporter [[cite:PUB00075479],[cite:PUB00075480]].
+  The family is the 7TM region of osmosensitive calcium-permeable cation channels [[cite:PUB00076961]].

@@ -1,0 +1,26 @@
+id: Pfam:PF06101
+pfam_id: PF06101
+name: Vacuolar protein sorting-associated protein 62
+short_name: Vps62
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06101
+counters:
+  proteins: 6708
+  matches: 8512
+  proteomes: 1886
+  taxa: 4483
+  structures: 1
+  alphafold_models: 4344
+  domain_architectures: 334
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009291
+description: This protein family includes vacuolar protein sorting (VPS) proteins found, including Vps62
+  from Saccharomyces cerevisiae, and uncharacterised proteins predominantly found in fungi and plants.
+  Vps62 is required for cytoplasm to vacuole targeting of proteins [[cite:PUB00019468],[cite:PUB00151576]].

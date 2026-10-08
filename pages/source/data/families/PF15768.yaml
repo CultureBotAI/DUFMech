@@ -1,0 +1,25 @@
+id: Pfam:PF15768
+pfam_id: PF15768
+name: Coiled-coil domain-containing protein 190
+short_name: CC190
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15768
+counters:
+  proteins: 298
+  matches: 345
+  proteomes: 234
+  taxa: 841
+  structures: 0
+  alphafold_models: 251
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031525
+description: This family of proteins is found in eukaryotes. Proteins in this family are typically between
+  234 and 297 amino acids in length.

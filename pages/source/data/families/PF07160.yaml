@@ -1,0 +1,28 @@
+id: Pfam:PF07160
+pfam_id: PF07160
+name: Spindle and kinetochore-associated protein 1
+short_name: SKA1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07160
+counters:
+  proteins: 1873
+  matches: 1976
+  proteomes: 1423
+  taxa: 4522
+  structures: 4
+  alphafold_models: 1644
+  domain_architectures: 44
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009829
+description: Spindle and kinetochore-associated protein 1 (SKA1) is a component of the SKA1 complex (consists
+  of Ska1, Ska2, and Ska3/Rama1), a microtubule-binding subcomplex of the outer kinetochore that is essential
+  for proper chromosome segregation [[cite:PUB00061771]]. It is required for timely anaphase onset during
+  mitosis, when chromosomes undergo bipolar attachment on spindle microtubules leading to silencing of
+  the spindle checkpoint [[cite:PUB00061805]].

@@ -1,0 +1,29 @@
+id: Pfam:PF01902
+pfam_id: PF01902
+name: Diphthamide synthase N-terminal domain
+short_name: Diphthami_syn_2_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01902
+counters:
+  proteins: 6563
+  matches: 6660
+  proteomes: 5387
+  taxa: 11776
+  structures: 4
+  alphafold_models: 5074
+  domain_architectures: 91
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR060003
+description: This entry represents the N-terminal domain of Diphthamide synthase. Diphthamide synthase
+  catalyses the last amidation step of diphthamide biosynthesis using ammonium and ATP. Diphthamide synthase
+  is evolutionarily conserved in eukaryotes. Diphthamide is a post-translationally modified histidine
+  residue found on archaeal and eukaryotic translation elongation factor 2 (eEF-2) [[cite:PUB00073561]].
+  In some members of this family e.g. [swissprot:Q12429], this domain is associated with [pfam:PF01042].
+  The enzyme classification is [ec:6.3.1.14].

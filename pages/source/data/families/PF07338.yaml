@@ -1,0 +1,30 @@
+id: Pfam:PF07338
+pfam_id: PF07338
+name: YdgH/BhsA/McbA-like domain
+short_name: YdgH_BhsA-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07338
+counters:
+  proteins: 4596
+  matches: 5637
+  proteomes: 538
+  taxa: 823
+  structures: 6
+  alphafold_models: 2805
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010854
+description: This domain is found in several Enterobacterial proteins of around 90 residues in length,
+  including E. coli YdgH, YhcN, BhsA and McbA, which play a role in stress response, biofilm formation
+  and pathogenesis [[cite:PUB00097758],[cite:PUB00097759]]. BhsA (also known as ComC) reduces the permeability
+  of the outer membrane to copper and may decrease biofilm formation by repressing cell-cell interaction
+  and cell surface interaction [[cite:PUB00097760]]. Members of this entry have one copy of this domain
+  with the exception of YdgH, which has three copies. The function of this domain is unknown, however,
+  it is suggested to be directly involved in host-pathogen interaction [[cite:PUB00097759]].

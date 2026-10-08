@@ -1,0 +1,25 @@
+id: Pfam:PF04520
+pfam_id: PF04520
+name: Senescence regulator
+short_name: Senescence_reg
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04520
+counters:
+  proteins: 6070
+  matches: 6099
+  proteomes: 418
+  taxa: 1180
+  structures: 0
+  alphafold_models: 4948
+  domain_architectures: 55
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007608
+description: This protein regulates the expression of proteins associated with leaf senescence in plants
+  [[cite:PUB00057491],[cite:PUB00057492]].

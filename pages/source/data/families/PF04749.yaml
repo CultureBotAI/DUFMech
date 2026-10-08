@@ -1,0 +1,24 @@
+id: Pfam:PF04749
+pfam_id: PF04749
+name: PLAC8 family
+short_name: PLAC8
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04749
+counters:
+  proteins: 17863
+  matches: 18028
+  proteomes: 2389
+  taxa: 6331
+  structures: 0
+  alphafold_models: 14963
+  domain_architectures: 232
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006461
+description: This family includes [swissprot:Q9NZF1], the Placenta-specific gene 8 protein.

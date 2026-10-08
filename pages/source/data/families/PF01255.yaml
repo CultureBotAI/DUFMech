@@ -1,0 +1,25 @@
+id: Pfam:PF01255
+pfam_id: PF01255
+name: Putative undecaprenyl diphosphate synthase
+short_name: Prenyltransf
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01255
+counters:
+  proteins: 31979
+  matches: 33207
+  proteomes: 21625
+  taxa: 34832
+  structures: 103
+  alphafold_models: 22269
+  domain_architectures: 142
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR001441
+description: Previously known as uncharacterized protein family UPF0015, a single member of this family
+  [swissprot:O82827] has been identified as an undecaprenyl diphosphate synthase [[cite:PUB00003021]].

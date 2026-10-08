@@ -1,0 +1,29 @@
+id: Pfam:PF13870
+pfam_id: PF13870
+name: CCDC113/CCDC96, coiled-coil
+short_name: CCDC113_CCDC96_CC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13870
+counters:
+  proteins: 2436
+  matches: 2457
+  proteomes: 1073
+  taxa: 3592
+  structures: 8
+  alphafold_models: 2103
+  domain_architectures: 50
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025254
+description: This entry represents the coiled-coil region of Coiled-coil domain-containing protein 113
+  (CCDC113, also known as cilia- and flagella-associated protein 263, CFAP263) and coiled-coil domain-containing
+  protein 96 (CCDC96, also known as cilia- and flagella-associated protein 184, CFAP184) [[cite:PUB00159884],[cite:PUB00153410]].
+  These proteins form a complex and regulate ciliary beating that connects radial spoke 3 (RS3) to the
+  inner dynein arm (IDA) and the nexin-dynein regulatory complex (N-DRC). The complex is positioned parallel
+  to N-DRC and forms a connection between the arch at the base of RS3, the IDA tail and N-DRC [[cite:PUB00159884]].

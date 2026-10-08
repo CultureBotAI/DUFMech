@@ -1,0 +1,36 @@
+id: Pfam:PF01837
+pfam_id: PF01837
+name: Homocysteine biosynthesis enzyme, sulfur-incorporation
+short_name: HcyBio
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01837
+counters:
+  proteins: 825
+  matches: 827
+  proteomes: 684
+  taxa: 1663
+  structures: 0
+  alphafold_models: 656
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002708
+description: This presumed domain is about is about 360 residues long. The function of this domain is
+  not clear. It is found at N terminus in some proteins that have two C-terminal cystathionine beta-synthase
+  (CBS) domains, such as MJ0100 from Methanocaldococcus jannaschii. This domain can also be found in proteins
+  that contain two C-terminal inserted Fe4S domains [[cite:PUB00093781]]. In Methanocaldococcus jannaschii,
+  MJ0100 and its ortholog MA1821 from Methanosarcina acetivorans are involved in Hcy (homocysteine) biosynthesis.
+  MJ0100 CBS domains bind S-adenosyl-l-methionine (SAM) and 5'-methylthioadenosine (MTA), which induce
+  a conformational change consistent with regulatory function. Another protein in the homocysteine biosynthesis
+  pathway, MJ0099 and its ortholog MA1822, is involved in the reduction of the disulfide formed in MJ0100/MA1821
+  during the conversion of Asa (aspartate semialdehyde) to Hcy [[cite:PUB00078766],[cite:PUB00093781]].
+  The DUF39-CBS and DUF39-ferredoxin architectures repeatedly occur together in the genomes of methanogenic
+  Archaea, suggesting they may be of diverged function. This is consistent with a phylogenetic reconstruction
+  of the DUF39 family, which clearly distinguishes the CBS-associated and ferredoxin-associated DUF39s
+  [[cite:PUB00078766]] .

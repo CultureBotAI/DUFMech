@@ -1,0 +1,31 @@
+id: Pfam:PF09957
+pfam_id: PF09957
+name: Bacterial antitoxin of type II TA system, VapB
+short_name: VapB_antitoxin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09957
+counters:
+  proteins: 3852
+  matches: 3852
+  proteomes: 2644
+  taxa: 4342
+  structures: 2
+  alphafold_models: 2335
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019239
+description: VapB is the antitoxin of a bacterial toxin-antitoxin gene pair. The cognate toxin is VapC,
+  [pfam:PF05016]. The family contains several related antitoxins from Cyanobacteria and Actinobacterial
+  families. Antitoxins of this class carry an N-terminal ribbon-helix-helix domain, RHH, that is highly
+  conserved across all type II bacterial antitoxins, which dimerises with the RHH domain of a second VapB
+  molecule. A hinge section follows the RHH, with an additional pair of flexible alpha helices at the
+  C-terminus. This C-terminus is the Toxin-binding region of the dimer, and so is specific to the cognate
+  toxin, whereas the RHH domain has the specific function of lying across the RNA-binding groove of the
+  toxin dimer and inactivating the active-site - a more general function of all antitoxins.

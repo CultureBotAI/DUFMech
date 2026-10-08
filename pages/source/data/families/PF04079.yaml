@@ -1,0 +1,29 @@
+id: Pfam:PF04079
+pfam_id: PF04079
+name: Segregation and condensation complex subunit ScpB
+short_name: SMC_ScpB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04079
+counters:
+  proteins: 15280
+  matches: 15281
+  proteomes: 14360
+  taxa: 20342
+  structures: 6
+  alphafold_models: 9916
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005234
+description: This is a family of prokaryotic proteins that form one of the subunits, ScpB, of the segregation
+  and condensation complex, condensin, that plays a key role in the maintenance of the chromosome. In
+  prokaryotes the complex consists of three proteins, SMC, ScpA (kleisin) and ScpB. ScpB dimerises and
+  binds to ScpA. As originally predicted, ScpB is structurally a winged-helix at both its N- and C-terminal
+  halves. IN Bacillus subtilis,one Smc dimer is bridged by a single ScpAB to generate asymmetric tripartite
+  rings analogous to eukaryotic SMC complex ring-shaped assemblies [[cite:PUB00109191],[cite:PUB00109192]].

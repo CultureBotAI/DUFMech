@@ -1,0 +1,25 @@
+id: Pfam:PF04844
+pfam_id: PF04844
+name: Transcriptional repressor, ovate
+short_name: Ovate
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04844
+counters:
+  proteins: 9667
+  matches: 9681
+  proteomes: 380
+  taxa: 1057
+  structures: 0
+  alphafold_models: 7927
+  domain_architectures: 89
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006458
+description: This is a family of transcriptional repressors. In plants, these proteins are important regulators
+  of growth and development [[cite:PUB00057482],[cite:PUB00057483]].

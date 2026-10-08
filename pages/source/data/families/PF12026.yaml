@@ -1,0 +1,29 @@
+id: Pfam:PF12026
+pfam_id: PF12026
+name: Crk-Associated Substrate C-terminal domain
+short_name: CAS_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12026
+counters:
+  proteins: 4918
+  matches: 4939
+  proteomes: 1182
+  taxa: 3860
+  structures: 2
+  alphafold_models: 4372
+  domain_architectures: 44
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021901
+description: This is a C-terminal domain found in CAS family members. The CAS (Crk-Associated Substrate)
+  protein family is a group of scaffolding proteins that play important modulatory roles in both normal
+  and pathological cell growth regulation. They contain an N-terminal Src homology 3 (SH3) domain [pfam:PF00018]
+  and a substrate domain (SD). The SD contains a large number of YxxP motifs, which when phosphorylated
+  by Src-family kinases provide canonical binding sites for proteins containing SH2 domains such as Crk,
+  Crk-L, CRKII presumed domain is functionally uncharacterised [[cite:PUB00069470]].

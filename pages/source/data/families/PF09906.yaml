@@ -1,0 +1,24 @@
+id: Pfam:PF09906
+pfam_id: PF09906
+name: YfaP C-terminal domain
+short_name: YfaP_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09906
+counters:
+  proteins: 2578
+  matches: 2580
+  proteomes: 1815
+  taxa: 3266
+  structures: 0
+  alphafold_models: 1478
+  domain_architectures: 174
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019220
+description: This entry represents the C-terminal domain found in the E.coli YfaP protein.

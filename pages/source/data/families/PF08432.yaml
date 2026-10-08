@@ -1,0 +1,26 @@
+id: Pfam:PF08432
+pfam_id: PF08432
+name: AAA-ATPase Vps4-associated protein 1
+short_name: Vfa1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08432
+counters:
+  proteins: 1397
+  matches: 1407
+  proteomes: 1361
+  taxa: 2890
+  structures: 0
+  alphafold_models: 1170
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013640
+description: Vps Four-Associated 1, Vfa1, in yeast, is an endosomal protein that interacts with the AAA-ATPase
+  Vps4. It would seem to be involved in regulating the trafficking of other proteins to the endocytic
+  vacuole [[cite:PUB00066734]]. There is a CCCH zinc finger at the N-terminus.

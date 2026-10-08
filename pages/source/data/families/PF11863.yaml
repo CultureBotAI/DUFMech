@@ -1,0 +1,27 @@
+id: Pfam:PF11863
+pfam_id: PF11863
+name: E217 tail sheath protein gp31-like, N-terminal domain
+short_name: E217_gp31_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11863
+counters:
+  proteins: 1049
+  matches: 1051
+  proteomes: 916
+  taxa: 1947
+  structures: 13
+  alphafold_models: 389
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021808
+description: This entry represents the N-terminal domain of the Pseudomonas bacteriophage E217 tail sheath
+  protein gp31 and related proteins, including phage Pa193 gp32 and Shigella flexneri bacteriophage Sf14
+  gp39. It folds into an alpha/beta structure that shares similarity with the members of the TssC1 N-terminal
+  domain superfamily [[cite:PUB00163741],[cite:PUB00163742],[cite:PUB00153918]].

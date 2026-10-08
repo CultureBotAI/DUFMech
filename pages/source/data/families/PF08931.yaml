@@ -1,0 +1,29 @@
+id: Pfam:PF08931
+pfam_id: PF08931
+name: Lactophage receptor-binding protein C-terminal head domain
+short_name: Caudo_bapla_RBP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08931
+counters:
+  proteins: 71
+  matches: 71
+  proteomes: 59
+  taxa: 156
+  structures: 20
+  alphafold_models: 7
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015027
+description: Caudo_bapla_RBP is a family of proteins expressed from ORF18 of the Lactococcus P2-like phage.
+  This is one of three protein domains, shoulders, neck, and head, that form the phage tail base-plate.
+  In the overall structure this head domain exists as six trimers, and is necessary for specific recognition
+  of the receptors at the host cell surface. Siphoviridae are the P2-like Caudovirales of Lactococcus
+  [[cite:PUB00054437]]. This family now includes DUF1914. Family Baseplate, [pfam:PF16774], is the ORF15
+  or shoulder component of the base-plate complex.

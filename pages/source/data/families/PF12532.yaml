@@ -1,0 +1,28 @@
+id: Pfam:PF12532
+pfam_id: PF12532
+name: LmuB C-terminal
+short_name: LmuB_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12532
+counters:
+  proteins: 806
+  matches: 806
+  proteomes: 765
+  taxa: 1702
+  structures: 7
+  alphafold_models: 478
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022205
+description: This entry, previously known as DUF3732 represents the C-terminal region of Salmonella enterica
+  Lamassu LmuB. Lamassu is a diverse family of defense systems that protect bacteria, including seventh-pandemic
+  strains of Vibrio cholerae, against both plasmids and phage infection. During phage infection, Lamassu
+  targets essential cellular processes, thereby halting phage propagation by terminating the infected
+  host. This region forms extensive interactions with the LmuB N-terminal region [[cite:PUB00164006]].

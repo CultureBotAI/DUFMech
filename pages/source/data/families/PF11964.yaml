@@ -1,0 +1,26 @@
+id: Pfam:PF11964
+pfam_id: PF11964
+name: SpoIIAA-like
+short_name: SpoIIAA-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11964
+counters:
+  proteins: 4901
+  matches: 5151
+  proteomes: 3542
+  taxa: 5398
+  structures: 2
+  alphafold_models: 3211
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021866
+description: These proteins adopt an alpha/beta SpoIIAA-like fold, similar to that found in STAT ([pfam:PF01740]).
+  They adopt open and closed conformations arising from different arrangements of their alpha-2 and alpha-3
+  helices. They may be membrane associated and may function as carriers of non-polar compounds [[cite:PUB00066715]].

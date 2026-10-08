@@ -1,0 +1,28 @@
+id: Pfam:PF05258
+pfam_id: PF05258
+name: Dna[CI] antecedent, DciA
+short_name: DciA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05258
+counters:
+  proteins: 12811
+  matches: 12812
+  proteomes: 12625
+  taxa: 17544
+  structures: 2
+  alphafold_models: 8175
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007922
+description: This family contains several actinomycete proteins. Family members such as DciA (dna[CI]
+  antecedent) found in Pseudomonas aeruginosa, has been shown to share a common function with DnaC (in
+  Escherichia coli) and DnaI (in Bacillus subtilis), acting as a replicative helicase. Furthermore, functional
+  analysis revealed that DciA is essential for replication initiation and protein depletion resulted in
+  a blockage of the initiation of replication after the formation of the open complex [[cite:PUB00085163]].

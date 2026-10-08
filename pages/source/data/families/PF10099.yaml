@@ -1,0 +1,26 @@
+id: Pfam:PF10099
+pfam_id: PF10099
+name: Anti-sigma-K factor rskA, C-terminal
+short_name: RskA_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10099
+counters:
+  proteins: 10466
+  matches: 10468
+  proteomes: 8036
+  taxa: 10558
+  structures: 0
+  alphafold_models: 6284
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018764
+description: This domain, formerly known as DUF2337, is found at the C-terminal end of the anti-sigma-K
+  factor from Mycobacterium tuberculosis (RskA), which positively regulates expression of the antigenic
+  proteins MPB70 and MPB83 [[cite:PUB00044882],[cite:PUB00154216]].

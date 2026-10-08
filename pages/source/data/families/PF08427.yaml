@@ -1,0 +1,27 @@
+id: Pfam:PF08427
+pfam_id: PF08427
+name: Armadillo-like helical domain-containing protein 3, C-terminal
+short_name: ARMH3_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08427
+counters:
+  proteins: 3029
+  matches: 3092
+  proteomes: 2293
+  taxa: 6284
+  structures: 0
+  alphafold_models: 2604
+  domain_architectures: 39
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013636
+description: This is the C-terminal domain of Armadillo-like helical domain- containing protein 3 (ARMH3),
+  the previously uncharacterised peripheral Golgi protein C10orf76. ARMH3 interacts with and is involved
+  in GBF1 recruitment, Golgi maintenance and protein secretion [[cite:PUB00098076]]. The function of this
+  domain is unknown.

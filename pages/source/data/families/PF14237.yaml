@@ -1,0 +1,35 @@
+id: Pfam:PF14237
+pfam_id: PF14237
+name: GYF domain 2
+short_name: GYF_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14237
+counters:
+  proteins: 8264
+  matches: 8373
+  proteomes: 4666
+  taxa: 9912
+  structures: 4
+  alphafold_models: 4115
+  domain_architectures: 191
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025640
+description: This domain is found in bacteria, archaea and eukaryotes, and is approximately 50 amino acids
+  in length. It contains an evolutionary conserved signature W-X-Y-X6-11-GPF-X4-M-X2-W-X3-GYF, the site
+  of interaction with proline-rich peptides. Family members include RME-8 (Required for receptor-mediated
+  endocytosis 8), a DNAJC13 protein. RME-8 was first identified as a protein that is required for endocytosis
+  in Caenorhabditis elegans. It coordinates the activity of the WASH complex with the function of the
+  retromer SNX dimer to control endosomal tubulation [[cite:PUB00091010]]. Family members found in Arabidopsis
+  include Arabidopsis trithorax-related3 (Atxr3), also known as set domain group 2 (Sdg2). It is the major
+  enzyme responsible for H3K4me3 in Arabidopsis and SDG2-dependent H3K4m3 is critical for regulating gene
+  expression and plant development [[cite:PUB00085381]]. Another family member found in Arabidopsis is
+  Tic56. It is an essential subunit of a 1-MDa protein complex at the inner chloroplast envelope membrane
+  [[cite:PUB00091011]]. Furthermore, Tic56 is important for rRNA processing and chloroplast ribosome assembly
+  [[cite:PUB00091012]].

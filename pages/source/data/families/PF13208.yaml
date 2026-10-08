@@ -1,0 +1,28 @@
+id: Pfam:PF13208
+pfam_id: PF13208
+name: TerB N-terminal domain
+short_name: TerB_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13208
+counters:
+  proteins: 847
+  matches: 853
+  proteomes: 826
+  taxa: 1683
+  structures: 0
+  alphafold_models: 518
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025266
+description: The TerB_N domain is found N-terminal to TerB, and TerB_C containing proteins [[cite:PUB00066658]].
+  It has a predominantly alpha-helical structure and contains an absolutely conserved glutamate [[cite:PUB00066658]].
+  The presence of a conserved acidic residue suggests that it might chelate metal like TerB [[cite:PUB00066658]].
+  These proteins occur in a two-gene operon containing an AAA+ ATPase and SF-II DNA helicase suggesting
+  a role in stress-response or phage defence [[cite:PUB00066658]].

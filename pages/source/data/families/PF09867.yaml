@@ -1,0 +1,32 @@
+id: Pfam:PF09867
+pfam_id: PF09867
+name: TagF N-terminal domain, Type VI secretion system-associated
+short_name: TagF_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09867
+counters:
+  proteins: 2309
+  matches: 2312
+  proteomes: 1976
+  taxa: 2835
+  structures: 3
+  alphafold_models: 1373
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR017748
+description: This is the N-terminal domain of the T6S-associated protein, TagF. A post-translational repressor
+  of the hemolysin co-regulated secretion island I (HSI-I)-encoded type VI secretion system (H1-T6SS)
+  found in Pseudomonas aeruginosa. The type VI secretion system (T6SS) is found broadly among the Proteobacteria
+  and is implicated in diverse processes including host-cell interactions, biofilm formation and gene
+  regulation. Furthermore, studies indicate that the T6SS plays a critical role in interbacterial interactions.
+  TagF has been shown to regulate the activity of the H1-T6SS in a manner that does not require phosphorylated-Fha1,
+  PpkA, or other Tag proteins. Additionally TagF is found to associate as a homodimer with nearly identical
+  monomers composed of alpha and beta elements assembled as a three-layer sandwich (alpha-beta-alpha)
+  [[cite:PUB00086563]].

@@ -1,0 +1,27 @@
+id: Pfam:PF17833
+pfam_id: PF17833
+name: NIP7/UPF0113, pre-PUA domain
+short_name: pre-PUA_NIP7
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17833
+counters:
+  proteins: 4024
+  matches: 4026
+  proteomes: 3304
+  taxa: 8782
+  structures: 29
+  alphafold_models: 3433
+  domain_architectures: 51
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040598
+description: This entry represents the N-terminal, pre-PUA domain of yeast 60S ribosome subunit biogenesis
+  protein NIP7 and homologues, some uncharacterised proteins from the UPF0113 family and similar sequences
+  from eukaryotes and some archaeal species. NIP7 is required for proper 27S pre-rRNA processing and 60S
+  ribosome subunit assembly. This domain is found associated with [pfam:PF03657].

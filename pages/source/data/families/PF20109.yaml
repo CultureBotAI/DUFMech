@@ -1,0 +1,26 @@
+id: Pfam:PF20109
+pfam_id: PF20109
+name: Proteobacterial transcriptional regulator-like domain
+short_name: Trans_reg_dom
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20109
+counters:
+  proteins: 1109
+  matches: 1109
+  proteomes: 764
+  taxa: 1317
+  structures: 1
+  alphafold_models: 692
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045465
+description: This domain is found in transcriptional regulators and similar proteins mainly found in proteobacteria
+  [[cite:PUB00152792]]. This domain is found in association with the DNA binding domain [pfam:PF10074]
+  in many proteins. It is predicted to adopt an all-alpha structure.

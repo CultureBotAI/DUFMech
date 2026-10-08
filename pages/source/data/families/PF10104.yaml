@@ -1,0 +1,28 @@
+id: Pfam:PF10104
+pfam_id: PF10104
+name: Di-sulfide bridge nucleocytoplasmic transport domain
+short_name: Brr6_like_C_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10104
+counters:
+  proteins: 1884
+  matches: 1891
+  proteomes: 1570
+  taxa: 3350
+  structures: 0
+  alphafold_models: 1583
+  domain_architectures: 33
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018767
+description: Brr6_like_C_C is the highly conserved C-terminal region of a group of proteins found in fungi.
+  It carries four highly conserved cysteine residues. It is suggested that members of the family interact
+  with each other via di-sulfide bridges to form a complex which is involved in nucleocytoplasmic transport
+  [[cite:PUB00044174]]. Brr6 in yeast is an essential integral membrane protein of the NE-ER, wit two
+  predicted transmembrane domains, and is a dosage suppressor of Apq12, [pfam:PF12716] [[cite:PUB00055994]].

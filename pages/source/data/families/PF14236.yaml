@@ -1,0 +1,26 @@
+id: Pfam:PF14236
+pfam_id: PF14236
+name: Druantia protein DruA
+short_name: DruA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14236
+counters:
+  proteins: 531
+  matches: 626
+  proteomes: 325
+  taxa: 962
+  structures: 0
+  alphafold_models: 371
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025639
+description: Druantia type I is an antiviral defense system composed of DruA, DruB, DruC, DruD and DruE.
+  Expression of Druantia in E.coli (strain MG1655) confers resistance to phage lambda, SECphi18, SECphi27
+  and T4. This entry represents DruA [[cite:PUB00097806]].

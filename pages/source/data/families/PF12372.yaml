@@ -1,0 +1,32 @@
+id: Pfam:PF12372
+pfam_id: PF12372
+name: Huntingtin, N-terminal HEAT
+short_name: Htt_N-HEAT
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12372
+counters:
+  proteins: 2033
+  matches: 2362
+  proteomes: 1042
+  taxa: 3613
+  structures: 13
+  alphafold_models: 219
+  domain_architectures: 94
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024613
+description: This entry represents HEAT repeats from Huntingtin (HTT), which are part of the N-terminal
+  HEAT domain. These are a second set, separated from N-HEAT_1 ([pfam:PF20926]) by an unstructured region
+  [[cite:PUB00018624],[cite:PUB00100583]]. HTT is expressed in many tissues with various expression levels
+  and is involved in a number of cellular functions. However, its exact function is not yet clear. An
+  abnormal polyglutamine (polyQ) expansion in this protein causes Huntington's disease (HD) a progressive
+  autosomal-dominant neurodegenerative disease characterised by an uncontrolled motor movement known as
+  chorea, cognitive disorder and depression [[cite:PUB00018624]]. HTT consists of multiple HEAT repeats
+  organised in N-terminal, bridge and C-terminal domains [[cite:PUB00018624]], which function as a scaffold
+  that mediated interactions with binding partners.

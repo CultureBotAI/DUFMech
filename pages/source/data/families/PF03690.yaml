@@ -1,0 +1,32 @@
+id: Pfam:PF03690
+pfam_id: PF03690
+name: Uncharacterised protein family (UPF0160)
+short_name: MYG1_exonuc
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03690
+counters:
+  proteins: 5549
+  matches: 5764
+  proteomes: 4320
+  taxa: 10390
+  structures: 21
+  alphafold_models: 4529
+  domain_architectures: 89
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003226
+description: This entry includes MYG1 exonuclease from human and its orthologues. MYG1 is a 3'-5' exonuclease
+  which cleaves in situ on specific transcripts in both nucleus and mitochondrion. It is involved in regulating
+  spatially segregated organellar RNA processing, acting as a coordinator of nucleo-mitochondrial crosstalk
+  [[cite:PUB00155300]]. In nucleolus, processes pre-ribosomal RNA involved in ribosome assembly and alters
+  cytoplasmic translation. In mitochondrial matrix, it processes 3'-termini of the mito-ribosomal and
+  messenger RNAs and controls translation of mitochondrial proteins [[cite:PUB00155300]]. Overexpression
+  of MYG1 has been associated with the autoimmune disorder vitiligo, suggesting that MYG1 may play some
+  role in human innate immunity [[cite:PUB00155301]]. Studies in yeast suggested a potential antiviral
+  function of MYG1 [[cite:PUB00155302]].

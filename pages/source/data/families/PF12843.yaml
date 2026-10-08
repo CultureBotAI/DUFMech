@@ -1,0 +1,29 @@
+id: Pfam:PF12843
+pfam_id: PF12843
+name: Putative quorum-sensing-regulated virulence factor
+short_name: QSregVF_b
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12843
+counters:
+  proteins: 4730
+  matches: 4734
+  proteomes: 4578
+  taxa: 6351
+  structures: 0
+  alphafold_models: 3005
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024530
+description: QSregVF_b is a family of short Pseudomonas proteins that are potential virulence factors.
+  The structure of UniProtKB:Q9HY15 a secreted protein has been solved and deposited as PDB:3npd, from
+  [pfam:PF13652]. It is predicted that these two adjacent proteins form a single transcriptional unit
+  based on the prediction that together they interact with their adjacent protein PotD, which is the putrescine-binding
+  periplasmic protein in the polyamine uptake system comprising PotABCD. These two adjacent proteins are
+  predicted to be quroum-sensing-regulated virulence factors [[cite:PUB00075641]].

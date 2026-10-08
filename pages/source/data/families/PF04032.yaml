@@ -1,0 +1,29 @@
+id: Pfam:PF04032
+pfam_id: PF04032
+name: RNAse P Rpr2/Rpp21/SNM1 subunit domain
+short_name: Rpr2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04032
+counters:
+  proteins: 4495
+  matches: 4495
+  proteomes: 3138
+  taxa: 8020
+  structures: 13
+  alphafold_models: 3875
+  domain_architectures: 63
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007175
+description: This family contains a ribonuclease P subunit of humans and yeast. Other members of the family
+  include the probable archaeal homologues. This family includes SNM1 [[cite:PUB00017140]]. It is a subunit
+  of RNase MRP (mitochondrial RNA processing), a ribonucleoprotein endoribonuclease that has roles in
+  both mitochondrial DNA replication and nuclear 5.8S rRNA processing. SNM1 is an RNA binding protein
+  that binds the MRP RNA specifically [[cite:PUB00017140]]. This subunit possibly binds the precursor
+  tRNA [[cite:PUB00010581]].

@@ -1,0 +1,30 @@
+id: Pfam:PF06781
+pfam_id: PF06781
+name: Cell division protein CrgA
+short_name: CrgA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06781
+counters:
+  proteins: 3912
+  matches: 4009
+  proteomes: 3858
+  taxa: 4590
+  structures: 2
+  alphafold_models: 2328
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009619
+description: 'CrgA is a trans-membrane (TM) protein, first described in Streptomyces as being required
+  for sporulation through the coordination of several aspects of reproductive growth. In Mtb (Mycobacterium
+  tuberculosis ) CrgA is a central component of the divisome, and consists of 93 residues with two predicted
+  TM helices (TM1: residues 29-51; and TM2: residues 66-88). CrgA facilitates the recruitment of the proteins
+  essential for peptidoglycan synthesis to the divisome and also stabilizes the divisome. Reduced production
+  of CrgA results in elongated cells and reduced growth rate, and loss of CrgA impairs peptidoglycan synthesis.
+  CrgA has homologs in other actinomycetes [[cite:PUB00081940]].'

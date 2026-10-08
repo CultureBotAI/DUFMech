@@ -1,0 +1,29 @@
+id: Pfam:PF11931
+pfam_id: PF11931
+name: SF3a60/Prp9 C-terminal
+short_name: SF3a60_Prp9_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11931
+counters:
+  proteins: 4089
+  matches: 4116
+  proteomes: 3337
+  taxa: 8787
+  structures: 52
+  alphafold_models: 3491
+  domain_architectures: 99
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024598
+description: 'This domain corresponds to the C-terminal region of SF3a60 subunit (Prp9 in yeast counterpart)
+  from the highly conserved heterotrimeric complex SF3a found in eukaryotes. It is essential for pre-mRNA
+  splicing that functions in spliceosome assembly within the mature U2 snRNP (small ribonucleoprotein
+  particle). This domain has two conserved sequence motifs: PIP and CEICG. It contains a zinc-finger domain
+  of the C2H2-type which might be important for RNA binding and protein-protein interactions with components
+  of the SF3b complex [[cite:PUB00059480]].'

@@ -1,0 +1,27 @@
+id: Pfam:PF02676
+pfam_id: PF02676
+name: Methyltransferase TYW3
+short_name: TYW3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02676
+counters:
+  proteins: 3105
+  matches: 3172
+  proteomes: 2533
+  taxa: 6632
+  structures: 6
+  alphafold_models: 2640
+  domain_architectures: 82
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003827
+description: The methyltransferase TYW3 (tRNA-yW- synthesising protein 3) has been identified in yeast
+  to be involved in wybutosine (yW) biosynthesis [[cite:PUB00044611]]. yW is a complexly modified guanosine
+  residue that contains a tricyclic base and is found at the 3' position adjacent the anticodon of phenylalanine
+  tRNA. TYW3 is an N-4 methylase that methylates yW-86 to yield yW-72 in an Ado-Met-dependent manner [[cite:PUB00044611]].

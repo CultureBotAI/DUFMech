@@ -1,0 +1,31 @@
+id: Pfam:PF04727
+pfam_id: PF04727
+name: ELMO/CED-12 family
+short_name: ELMO_CED12
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04727
+counters:
+  proteins: 14425
+  matches: 14729
+  proteomes: 3212
+  taxa: 8666
+  structures: 15
+  alphafold_models: 12473
+  domain_architectures: 226
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006816
+description: This family represents a conserved domain which is found in a number of eukaryotic proteins
+  including CED-12, ELMO I and ELMO II. ELMO1 is a component of signalling pathways that regulate phagocytosis
+  and cell migration and is the mammalian orthologue of the C. elegans gene, ced-12. CED-12 is required
+  for the engulfment of dying cells and cell migration. In mammalian cells, ELMO1 interacts with Dock180
+  as part of the CrkII/Dock180/Rac pathway responsible for phagocytosis and cell migration. ELMO1 is ubiquitously
+  expressed, although its expression is highest in the spleen, an organ rich in immune cells [[cite:PUB00019508]].
+  ELMO1 has a PH domain and a polyproline sequence motif at its C terminus which are not present in this
+  alignment.

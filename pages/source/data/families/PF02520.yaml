@@ -1,0 +1,29 @@
+id: Pfam:PF02520
+pfam_id: PF02520
+name: SXP/RAL-2 family protein Ani s 5-like, metal-binding domain
+short_name: ANIS5_cation-bd
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02520
+counters:
+  proteins: 2048
+  matches: 2126
+  proteomes: 94
+  taxa: 232
+  structures: 1
+  alphafold_models: 1927
+  domain_architectures: 50
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003677
+description: 'This domain is found in proteins from nematodes, including SXP/RAL-2 family protein Ani
+  s 5 (ANIS5) from Anisakis simplex, and comprises two conserved motifs: SXP1 and SXP2 [[cite:PUB00097764]].
+  Although the function of this domain is not clear, structural information from ANIS5 revealed an alpha
+  helical arrangement with a Calmodulin-like fold. Functional studies indicates that ANIS5 can bind magnesium
+  and calcium, suggesting that this domain plays a role in cation binding [[cite:PUB00097763]]. These
+  proteins are interesting targets to develop control strategies against the diseases caused by parasites.'

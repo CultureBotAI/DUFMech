@@ -1,0 +1,27 @@
+id: Pfam:PF17733
+pfam_id: PF17733
+name: PEX14-like KPWE domain
+short_name: KPWE_dom
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17733
+counters:
+  proteins: 2409
+  matches: 2409
+  proteomes: 2042
+  taxa: 5094
+  structures: 0
+  alphafold_models: 2013
+  domain_architectures: 45
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040554
+description: This domain, previously known as DUF5572, is found in Peroxisomal membrane protein PEX14
+  from Arabidopsis thaliana and other eukaryotic proteins. PEX14 is a component of the PEX13-PEX14 docking
+  complex, a translocon channel that specifically mediates the import of peroxisomal cargo proteins bound
+  to PEX5 receptor. This domain carry a highly conserved KPWE sequence at the C-terminal.

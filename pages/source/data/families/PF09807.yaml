@@ -1,0 +1,27 @@
+id: Pfam:PF09807
+pfam_id: PF09807
+name: Elongation complex protein 6
+short_name: ELP6
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09807
+counters:
+  proteins: 2538
+  matches: 2678
+  proteomes: 2067
+  taxa: 6120
+  structures: 0
+  alphafold_models: 2160
+  domain_architectures: 48
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018627
+description: ELP6 is a subunit of the RNA polymerase II elongator complex. The Elongator complex promotes
+  RNA-polymerase II transcript elongation through histone acetylation in the nucleus and tRNA modification
+  in the cytoplasm. ELP5 and ELP6 play a major role in the migration, invasion and tumorigenicity of melanoma
+  cells, as integral subunits of Elongator [[cite:PUB00075653]]

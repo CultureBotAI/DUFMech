@@ -1,0 +1,33 @@
+id: Pfam:PF01796
+pfam_id: PF01796
+name: ChsH2, C-terminal OB-fold domain
+short_name: OB_ChsH2_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01796
+counters:
+  proteins: 14915
+  matches: 16307
+  proteomes: 4357
+  taxa: 6361
+  structures: 12
+  alphafold_models: 9479
+  domain_architectures: 41
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002878
+description: 'This domain is found at the C-terminal end of the probable enoyl -CoA hydratase alpha subunit
+  from Thermomonospora curvata (ChsH2) and similar archaeal and bacterial proteins. ChsH2 is likely to
+  be involved in bile acid degradation. The C-terminal region of this protein is organised into two domains:
+  an N-terminal zinc finger domain ([pfam:PF12172]) and an OB-fold domain (this entry) that consists of
+  a five-stranded beta-barrel [[cite:PUB00155451]]. This domain is also found in 3-oxo-4,17- pregnadiene-20-carboxyl-CoA
+  hydratase alpha subunit from Mycobacterium tuberculosis that is involved in cholesterol side chain degradation
+  [[cite:PUB00154876]]. It is also found in Methanothermococcus thermolithotrophicus HMGCS, an enzyme
+  complex comprising the thiolase and 3-hydroxy-3-methylglutaryl (HMG)-CoA synthase, that catalyses the
+  second reaction in the mevalonate pathway-the exergonic condensation of acetoacetyl-CoA and acetyl-CoA
+  to HMG-CoA [[cite:PUB00154878]].'

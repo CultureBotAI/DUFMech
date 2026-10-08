@@ -1,0 +1,33 @@
+id: Pfam:PF11681
+pfam_id: PF11681
+name: Bacteriophage PhiTE tail tube protein
+short_name: Phage_Tube_PhiTE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11681
+counters:
+  proteins: 636
+  matches: 636
+  proteomes: 594
+  taxa: 1273
+  structures: 10
+  alphafold_models: 225
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021695
+description: This entry includes the tail tube protein of bacteriophage PhiTE that infects the plant pathogen
+  Pectobacterium atrosepticum. The tube protein forms the rigid inner tube of the phage tail and consists
+  of a primary eight-stranded beta-sandwich flanked by a large alpha-helix. The luminal components of
+  each tube protein's beta-sandwich intercalate with adjacent tube proteins in the hexameric disk to form
+  a continuous 24-stranded beta-barrel on the internal surface of each ring. The inner tube lumen has
+  a strong negative charge distribution, typical of bacteriophage DNA conduits. An extended beta-hairpin
+  motif extends between strands 2 and 5 of the beta-sandwich and wraps around the tube, making contacts
+  with loops from head distal tube subunits. The C-terminal arm features a second alpha-helix that wraps
+  laterally around adjacent subunits and forms strong hydrophobic contacts with helices from the sheath
+  D1 domain.

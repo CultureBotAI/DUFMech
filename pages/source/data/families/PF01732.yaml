@@ -1,0 +1,31 @@
+id: Pfam:PF01732
+pfam_id: PF01732
+name: Mycoplasma immunoglobulin protease
+short_name: Myco_protease
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01732
+counters:
+  proteins: 480
+  matches: 483
+  proteomes: 120
+  taxa: 185
+  structures: 1
+  alphafold_models: 346
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022382
+description: This is the serine protease domain of MIP (Mycoplasma immunoglobulin protease), a protein
+  that is related to pathogenicity of animal and human pathogenic Mycoplasmas [[cite:PUB00098027],[cite:PUB00098028],[cite:PUB00098029],[cite:PUB00151017]].
+  This protein functions together with the Ig binding protein M (MIB) to evade host Ig-mediated defense
+  against the MIB-MIP system, which is a novel mechanism that protects mycoplasma against host immune
+  response [[cite:PUB00098028],[cite:PUB00151017]]. MIB tightly interacts to the antigen-binding fragment
+  (Fab) and recruits the MIP protease that is activated and cleaves the IgG heavy chain, disrupting the
+  antigen binding site. Therefore, the MIB-MIP system appears to be crucial to mycoplasma immune evasion
+  [[cite:PUB00151017]].

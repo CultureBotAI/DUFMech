@@ -1,0 +1,27 @@
+id: Pfam:PF04525
+pfam_id: PF04525
+name: LURP-one-related
+short_name: LOR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04525
+counters:
+  proteins: 14951
+  matches: 15178
+  proteomes: 4601
+  taxa: 7829
+  structures: 2
+  alphafold_models: 11500
+  domain_architectures: 130
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007612
+description: The structure of this family has been solved. It comprises a 12-stranded beta barrel with
+  a central C-terminal alpha helix. This helix is thought to be a transmembrane helix. It is structurally
+  similar to the C-terminal domain of the Tubby protein [[cite:PUB00057493]]. In plants it plays a role
+  in defense against pathogens [[cite:PUB00057494]].

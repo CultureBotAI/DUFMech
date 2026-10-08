@@ -1,0 +1,28 @@
+id: Pfam:PF05943
+pfam_id: PF05943
+name: EvpB/VC_A0108, tail sheath N-terminal domain
+short_name: VipB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05943
+counters:
+  proteins: 5453
+  matches: 5471
+  proteomes: 3174
+  taxa: 4597
+  structures: 9
+  alphafold_models: 3370
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR044031
+description: EvpB is a family of Gram-negative probable type VI secretion system components of the tail
+  sheath. They have been known as COG:COG3517. These sheath-components, of which there are many copies
+  in the sheath, are also variously referred to as VipA/VipB and TssB/TssC. On contact with another bacterial
+  cell the sheath contracts and pushes the puncturing device and tube through the cell envelope and punches
+  the target bacterial cell [[cite:PUB00075434]].

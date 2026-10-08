@@ -1,0 +1,26 @@
+id: Pfam:PF17672
+pfam_id: PF17672
+name: Fertilisation-influencing membrane protein
+short_name: FIMP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17672
+counters:
+  proteins: 150
+  matches: 153
+  proteomes: 132
+  taxa: 464
+  structures: 0
+  alphafold_models: 126
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR038813
+description: 'In mice, 4930451I11Rik encodes two isoforms: a transmembrane (TM) form and a secreted form.
+  FIMP is the TM form. It is a sperm-specific transmembrane protein that is essential for the sperm-oocyte
+  fusion process [[cite:PUB00095075]].'

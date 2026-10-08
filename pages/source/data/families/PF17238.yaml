@@ -1,0 +1,29 @@
+id: Pfam:PF17238
+pfam_id: PF17238
+name: NUP160, helical domain
+short_name: NUP160_helical_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17238
+counters:
+  proteins: 611
+  matches: 619
+  proteomes: 352
+  taxa: 989
+  structures: 1
+  alphafold_models: 101
+  domain_architectures: 31
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR035192
+description: This entry represents a helical domain that can be found in NUP160, also known as SAR1, a
+  nucleoporin protein in Arabidopsis thaliana. It is a member of the NUP107-160 nuclear pore sub-complex
+  [[cite:PUB00085245]]. NUP160 plays a role in normal auxin signalling, which works in synergy with ethylene
+  to control various ethylene-dependent phenomena [[cite:PUB00155768]]. Also, it contributes to pathogen
+  defense [[cite:PUB00085247]], nucleocytoplasmic mRNA export [[cite:PUB00155768]], and is required for
+  disease resistance [[cite:PUB00085246]].

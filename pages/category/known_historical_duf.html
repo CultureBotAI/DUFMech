@@ -19,12 +19,12 @@ data-category="KNOWN_HISTORICAL_DUF" data-page="1">
 <form id="family-controls" class="controls" role="search" hidden>
 <label>Search accession or family <input id="family-query" type="search" name="q"></label>
 <label>Seed status <select id="seed-filter"><option value="">All seed statuses</option>
-<option value="KNOWN_HISTORICAL_DUF">KNOWN HISTORICAL DUF</option><option value="UNKNOWN_CANDIDATE">UNKNOWN CANDIDATE</option></select></label>
+<option value="EX_DUF">EX DUF</option><option value="KNOWN_HISTORICAL_DUF">KNOWN HISTORICAL DUF</option><option value="UNKNOWN_CANDIDATE">UNKNOWN CANDIDATE</option></select></label>
 <label>Characterization <select id="characterization-filter"><option value="">All characterizations</option>
 <option value="UNSCORED">UNSCORED</option></select></label>
 <label>Sort by <select id="family-sort"><option value="proteins-desc">Proteins: high to low</option><option value="proteins-asc">Proteins: low to high</option><option value="pfam_id-asc">Pfam accession</option><option value="name-asc">Family name: A to Z</option><option value="structures-desc">Structures: high to low</option></select></label>
 <button id="reset-families" type="button">Clear search and filters</button></form>
-<p id="family-count" role="status" aria-live="polite">378 of 6,532 families.
+<p id="family-count" role="status" aria-live="polite">373 of 8,295 families.
 Page 1 of 8.</p>
 <p id="catalogue-error" role="alert" hidden></p>
 <noscript><p>All families are available through the numbered catalogue pages and JSON download.</p></noscript>
@@ -103,11 +103,6 @@ Page 1 of 8.</p>
 <td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
 <td class="num">10,865</td><td class="num">14</td>
 <td class="num">7,045</td><td>ProteinTraitsMech trait record</td>
-<td>SEEDED</td></tr><tr id="PF13593"><td><a href="../families/PF13593.html">PF13593</a></td>
-<td><strong>SBF-like CPA transporter family (DUF4137)</strong><br>SBF_like</td>
-<td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
-<td class="num">10,043</td><td class="num">0</td>
-<td class="num">6,899</td><td>ProteinTraitsMech: 3; ProteinTraitsMech trait record</td>
 <td>SEEDED</td></tr><tr id="PF02582"><td><a href="../families/PF02582.html">PF02582</a></td>
 <td><strong>RMND1/Sif2-Sif3/Mrx10, DUF155</strong><br>DUF155</td>
 <td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
@@ -138,11 +133,6 @@ Page 1 of 8.</p>
 <td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
 <td class="num">8,028</td><td class="num">0</td>
 <td class="num">5,272</td><td>ProteinTraitsMech: 3; ProteinTraitsMech trait record</td>
-<td>SEEDED</td></tr><tr id="PF06172"><td><a href="../families/PF06172.html">PF06172</a></td>
-<td><strong>Cupin superfamily (DUF985)</strong><br>Cupin_5</td>
-<td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
-<td class="num">7,881</td><td class="num">7</td>
-<td class="num">5,387</td><td>ProteinTraitsMech: 4; ProteinTraitsMech trait record</td>
 <td>SEEDED</td></tr><tr id="PF09917"><td><a href="../families/PF09917.html">PF09917</a></td>
 <td><strong>Uncharacterized protein conserved in bacteria (DUF2147)</strong><br>DUF2147</td>
 <td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
@@ -283,6 +273,16 @@ Page 1 of 8.</p>
 <td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
 <td class="num">4,556</td><td class="num">1</td>
 <td class="num">662</td><td>ProteinTraitsMech: 7; ProteinTraitsMech trait record</td>
+<td>SEEDED</td></tr><tr id="PF09844"><td><a href="../families/PF09844.html">PF09844</a></td>
+<td><strong>Uncharacterized conserved protein (COG2071)</strong><br>DUF2071</td>
+<td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
+<td class="num">4,522</td><td class="num">0</td>
+<td class="num">2,825</td><td>ProteinTraitsMech: 3; ProteinTraitsMech trait record</td>
+<td>SEEDED</td></tr><tr id="PF12609"><td><a href="../families/PF12609.html">PF12609</a></td>
+<td><strong>Wound-induced protein</strong><br>DUF3774</td>
+<td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
+<td class="num">4,377</td><td class="num">0</td>
+<td class="num">3,517</td><td>ProteinTraitsMech trait record</td>
 <td>SEEDED</td></tr></tbody></table></div>
 <p id="family-empty" hidden>No matching families. Clear the search or filters to try again.</p>
 <div class="pagination" id="family-pagination" hidden>
@@ -290,7 +290,7 @@ Page 1 of 8.</p>
 <span id="family-page"></span><button id="next-families" type="button" aria-label="Next page">Next</button>
 </div><nav id="static-pagination" class="pagination" aria-label="Catalogue pages"><a href="../category/known_historical_duf.html" aria-label="Catalogue page 1" aria-current=page>1</a><a href="../category/known_historical_duf-2.html" aria-label="Catalogue page 2">2</a><a href="../category/known_historical_duf-3.html" aria-label="Catalogue page 3">3</a><a href="../category/known_historical_duf-4.html" aria-label="Catalogue page 4">4</a><a href="../category/known_historical_duf-5.html" aria-label="Catalogue page 5">5</a><a href="../category/known_historical_duf-6.html" aria-label="Catalogue page 6">6</a><a href="../category/known_historical_duf-7.html" aria-label="Catalogue page 7">7</a><a href="../category/known_historical_duf-8.html" aria-label="Catalogue page 8">8</a></nav>
 </section></main><footer>
-<p>Site build <code>0bf17b6b91cc3993</code>. <a href="https://github.com/CultureBotAI/DUFMech/blob/ba8f948a7bbe62a9274981b796f5ee5d907cc66f/data/worklists/interpro-pfam-duf-2026-10-05.json">Corpus source ba8f948a7bbe</a><br>cross_mech: cross-mech-duf-examples-2026-10-06 / members: pfam-uniprot-uniref90-2026-10-07 / worklist: interpro-pfam-duf-2026-10-05</p>
+<p>Site build <code>7a5e8f84bb4a9a7a</code>. <a href="https://github.com/CultureBotAI/DUFMech/blob/311e161679bf9996fab901fc014537635753a411/data/worklists/interpro-pfam-duf-2026-10-08.json">Corpus source 311e161679bf</a><br>cross_mech: cross-mech-duf-examples-2026-10-08 / members: pfam-uniprot-uniref90-2026-10-07 / worklist: interpro-pfam-duf-2026-10-08</p>
 <p>Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
 Code: <a href="https://github.com/CultureBotAI/DUFMech/blob/main/LICENSE-CODE">BSD 3-Clause</a>.
 Redistributed source material retains its applicable third-party terms.

@@ -1,0 +1,27 @@
+id: Pfam:PF15749
+pfam_id: PF15749
+name: MRN-interacting protein
+short_name: MRNIP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15749
+counters:
+  proteins: 1583
+  matches: 1591
+  proteomes: 1219
+  taxa: 4007
+  structures: 0
+  alphafold_models: 1370
+  domain_architectures: 27
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049472
+description: This family is found in eukaryotes. Family members include MRN complex-interacting protein
+  (MRNIP), which plays a role in preventing the accumulation of damaged DNA in cells. It associates with
+  the MRE11-RAD50-NBS1 (MRN) damage-sensing complex and is rapidly recruited to sites of DNA damage. Phosphorylation
+  of a serine promotes nuclear localization of MRNIP [[cite:PUB00083234]].

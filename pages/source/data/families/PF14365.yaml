@@ -1,0 +1,30 @@
+id: Pfam:PF14365
+pfam_id: PF14365
+name: Neprosin activation peptide
+short_name: Neprosin_AP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14365
+counters:
+  proteins: 8262
+  matches: 8485
+  proteomes: 378
+  taxa: 1061
+  structures: 3
+  alphafold_models: 6531
+  domain_architectures: 163
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025521
+description: Pitcher plants are insectivorous and secrete a digestive fluid into the pitcher. This fluid
+  contains a mixture of enzymes including peptidases. One of these is neprosin, characterized from the
+  pitcher plant Nepenthes ventrata. This peptidase is of unknown catalytic type and is unaffected by standard
+  peptidase inhibitors. Unusually, activity is directed towards prolyl bonds, but unlike most peptidase
+  that cleave after proline, there is no restriction on sequence length or position of the proline residue.
+  The peptidase is secreted and is presumed to possess an N-terminal activation peptide [[cite:PUB00081922]].
+  This domain corresponds to the presumed activation peptide.

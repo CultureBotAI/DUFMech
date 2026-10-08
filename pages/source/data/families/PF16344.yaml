@@ -1,0 +1,28 @@
+id: Pfam:PF16344
+pfam_id: PF16344
+name: FecR, C-terminal
+short_name: FecR_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16344
+counters:
+  proteins: 22280
+  matches: 22286
+  proteomes: 2482
+  taxa: 3570
+  structures: 2
+  alphafold_models: 14798
+  domain_architectures: 36
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032508
+description: This domain is found at the C-terminal of FecR [[cite:PUB00151597],[cite:PUB00016138]], which
+  adopts a secretin N0-like fold [[cite:PUB00151597]]. FecARI are responsible for induction of the ferric
+  citrate uptake system. When ferric citrate binds FecA, a signal is transmitted across the outer membrane
+  to FecR, a cytoplasmic membrane protein that transmits signal across the membrane and activates the
+  sigma-70 family protein FecI [[cite:PUB00016138]].

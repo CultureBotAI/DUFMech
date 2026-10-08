@@ -1,0 +1,26 @@
+id: Pfam:PF14825
+pfam_id: PF14825
+name: Cilia- and flagella-associated protein 77
+short_name: CFAP77
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14825
+counters:
+  proteins: 1303
+  matches: 1315
+  proteomes: 931
+  taxa: 3024
+  structures: 16
+  alphafold_models: 1172
+  domain_architectures: 29
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR029147
+description: This family of proteins is found in flagella [[cite:PUB00086673]]. Proteins in this family
+  are typically between 203 and 326 amino acids in length. There is a single completely conserved residue
+  N that may be functionally important.

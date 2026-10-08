@@ -1,0 +1,31 @@
+id: Pfam:PF06244
+pfam_id: PF06244
+name: Coiled-coil domain-containing protein 124 /Oxs1
+short_name: Ccdc124
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06244
+counters:
+  proteins: 3669
+  matches: 3679
+  proteomes: 3093
+  taxa: 8262
+  structures: 5
+  alphafold_models: 3137
+  domain_architectures: 61
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054414
+description: Oxs1 (oxidative stress transcription corepressor Oxs1) and Pap1 form a complex to regulate
+  transcription when cells are exposed to diamide or Cd that causes disulfide stress. In fission yeast
+  such as S. pombe, heterologous Oxs1-like proteins can enhance diamide stress tolerance. Furthermore,
+  human and arabidopsis Oxs1 can interchangeably bind Pap1 or Pap1 homologues from human (cJun) and arabidopsis
+  (bZIP10), suggesting that Oxs1 may be a component of an evolutionarily-conserved stress response pathway
+  [[cite:PUB00091062]]. Family members found in human such as Ccdc124 (Coiled-Coil Domain Containing Protein
+  124), were identified as a novel component of the centrosome during interphase and G2/M transition and
+  is involved in cytokinesis [[cite:PUB00091062],[cite:PUB00073830]].

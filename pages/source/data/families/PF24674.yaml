@@ -1,0 +1,29 @@
+id: Pfam:PF24674
+pfam_id: PF24674
+name: SNTX, MACPF/CDC-like domain
+short_name: MACPF_SNTX
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24674
+counters:
+  proteins: 2236
+  matches: 2256
+  proteomes: 534
+  taxa: 1702
+  structures: 1
+  alphafold_models: 1831
+  domain_architectures: 175
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056072
+description: This MACPF/CDC-like domain is found N-terminal in a number of toxins including Stonustoxin
+  (SNTX), Neoverrucotoxin (NeoVTX), Verrucotoxin (VTX), Sp-CTx and related proteins. This domain is a
+  pore-forming domain and is involved in the formation of large ring-shaped pores in rat erythrocyte membranes
+  [[cite:PUB00091171]]. The formation of MACPF/CDC-like pores is probably central to the toxin's hemolytic
+  activity, and cell lysis could explain physiological effects, including edema, increased vascular permeability,
+  and muscle damage.

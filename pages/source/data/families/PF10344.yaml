@@ -1,0 +1,33 @@
+id: Pfam:PF10344
+pfam_id: PF10344
+name: Hobbit/FMP27/BTLP2 family
+short_name: Hobbit
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10344
+counters:
+  proteins: 4971
+  matches: 6616
+  proteomes: 2947
+  taxa: 7811
+  structures: 0
+  alphafold_models: 835
+  domain_architectures: 118
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045167
+description: This entry represents the Hobbit protein from Drosophila melanogaster and its homologues
+  such as the mitochondrial FMP27 protein from yeast (also known as Hob1) and BLTP2 (also known as KIAA0100)
+  from human. These proteins are localized to endoplasmic reticulum-plasma membrane (ER-PM) contact sites
+  described as conserved lipid-binding proteins. They are tube-forming transport proteins which bind to
+  phosphatidylinositols and affect phosphatidylinositol-4,5-bisphosphate (PtdIns-4,5-P2) distribution
+  [[cite:PUB00101862],[cite:PUB00101860],[cite:PUB00101861]]. They belong to the repeating beta-groove
+  (RBG) superfamily together with VPS13, ATG2, SHIP164, Csf1/BLTP1 proteins, which are all conserved lipid
+  transfer proteins containing long hydrophobic grooves [[cite:PUB00101860],[cite:PUB00101861]]. They
+  all share the same structure consisting of multiple repeating modules comprising five beta-sheets followed
+  by a loop.

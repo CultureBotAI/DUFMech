@@ -1,0 +1,26 @@
+id: Pfam:PF12285
+pfam_id: PF12285
+name: Astroviridae polyprotein 1
+short_name: Astrovir_pp_1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12285
+counters:
+  proteins: 45
+  matches: 45
+  proteomes: 2
+  taxa: 36
+  structures: 0
+  alphafold_models: 3
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022068
+description: 'This family of proteins is found in non-structural polyprotein 1 A/AB from Astroviridae
+  [[cite:PUB00098608]]. They are typically between 49 and 62 amino acids in length. There are two conserved
+  sequence motifs: QPLDLS and EQQ.'

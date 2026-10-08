@@ -1,0 +1,28 @@
+id: Pfam:PF26064
+pfam_id: PF26064
+name: VP3-like
+short_name: VP3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26064
+counters:
+  proteins: 252
+  matches: 254
+  proteomes: 171
+  taxa: 352
+  structures: 0
+  alphafold_models: 210
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058336
+description: This entry represents a family of uncharacterised integral membrane proteins found in DNA
+  viruses that infect archaea and halobacteria, incuding Matrix protein Halorubrum pleomorphic virus 1
+  (VP3). These proteins contain four predicted transmembrane helices. These proteins have a pair of beta
+  hairpin structures inserted between the first and second alpha helices. There is some evidence that
+  this beta hairpin may mediate a homodimerisation interaction (AlphaFold3 W0JNP7 ipTM=0.7 pTM=0.74).

@@ -1,0 +1,32 @@
+id: Pfam:PF03935
+pfam_id: PF03935
+name: Beta-glucan synthesis-associated protein SKN1/KRE6/Sbg1
+short_name: SKN1_KRE6_Sbg1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03935
+counters:
+  proteins: 4278
+  matches: 5105
+  proteomes: 1189
+  taxa: 2707
+  structures: 0
+  alphafold_models: 3577
+  domain_architectures: 121
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005629
+description: This family consists of the beta-glucan synthesis-associated proteins KRE6, SKN1 and Sbg1.
+  Beta1,6-Glucan is a key component of the yeast cell wall, interconnecting cell wall proteins, beta1,3-glucan,
+  and chitin. SKN1 and KRE6 show similarities to glycoside hydrolase family 16 glycoside hydrolases, suggesting
+  that they are glycosyl hydrolases or transglycosylases. They are related with the synthesis and anchorage
+  of cell wall proteins of glucan polymers of the yeast cell wall, although they play redundant roles
+  [[cite:PUB00016652],[cite:PUB00095438]]. SKN1, KRE6 and Sbg1 share the SKN1 domain which is conserved
+  in SKN1 and KRE6 proteins of many fungal species. Sbg1 is an integral membrane protein essential for
+  contractile-ring constriction and septum formation during cytokinesis, which interacts with the conserved
+  beta-glucan synthase Bgs1 and regulates its protein levels ans localisation [[cite:PUB00095438],[cite:PUB00095437]].

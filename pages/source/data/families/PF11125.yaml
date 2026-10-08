@@ -1,0 +1,28 @@
+id: Pfam:PF11125
+pfam_id: PF11125
+name: Bacteriophage MS2, lysis protein
+short_name: Phage_MS2_lysis
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11125
+counters:
+  proteins: 23
+  matches: 23
+  proteomes: 2
+  taxa: 22
+  structures: 0
+  alphafold_models: 1
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022599
+description: This entry represents putative lysis proteins from Bacteriophage MS2 and Bacteriophage BZ13.
+  The bacteriophage MS2 lysin protein swiss:C0M1L5 was identified as an overlapping cistron in the bacteriophage
+  MS2 RNA [[cite:PUB00053761]]. This proteins induces the formation of specific membrane adhesion sites
+  between the inner and outer membranes, apparently leading to host cell lysis. Lysis may be performed
+  via activation of host murein hydrolases [[cite:PUB00097482],[cite:PUB00097483]].

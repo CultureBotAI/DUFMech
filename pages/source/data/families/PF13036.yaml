@@ -1,0 +1,30 @@
+id: Pfam:PF13036
+pfam_id: PF13036
+name: Peptidoglycan-synthase activator LpoB
+short_name: LpoB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13036
+counters:
+  proteins: 2477
+  matches: 2478
+  proteomes: 2269
+  taxa: 3652
+  structures: 6
+  alphafold_models: 1619
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014094
+description: This is a family of Gram-negative bacterial outer membrane lipoproteins. LpoB is required
+  for the function of the major peptidoglycan synthase enzyme PBP1B. It interacts with PBP1B protein via
+  the UvrB-like non-catalytic domain on that protein. LpoB has a 54-aa-long flexible N-terminal stretch
+  followed by a globular domain with similarity to the N-terminal domain of the prevalent periplasmic
+  protein TolB. The long, flexible N-terminal region of LpoB enables it to span the periplasm and reach
+  its docking site in PBP1B. Peptidoglycan is the essential polymer within the sacculus that surrounds
+  the cytoplasmic membrane of bacteria [[cite:PUB00110446]].

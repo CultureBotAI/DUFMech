@@ -1,0 +1,30 @@
+id: Pfam:PF07970
+pfam_id: PF07970
+name: Endoplasmic reticulum vesicle transporter
+short_name: COPIIcoated_ERV
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07970
+counters:
+  proteins: 12470
+  matches: 12717
+  proteomes: 3381
+  taxa: 8945
+  structures: 1
+  alphafold_models: 10681
+  domain_architectures: 221
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012936
+description: This family is conserved from plants and fungi to humans. Erv46 works in close conjunction
+  with Erv41 and together they form a complex which cycles between the endoplasmic reticulum and Golgi
+  complex. Erv46-41 interacts strongly with the endoplasmic reticulum glucosidase II. Mammalian glucosidase
+  II comprises a catalytic alpha-subunit and a 58 kDa beta subunit, which is required for ER localisation.
+  All proteins identified biochemically as Erv41p-Erv46p interactors are localised to the early secretory
+  pathway and are involved in protein maturation and processing in the ER and/or sorting into COPII vesicles
+  for transport to the Golgi [[cite:PUB00063190]].

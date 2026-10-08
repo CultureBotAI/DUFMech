@@ -1,0 +1,29 @@
+id: Pfam:PF04134
+pfam_id: PF04134
+name: DCC1-like thiol-disulfide oxidoreductase
+short_name: DCC1-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04134
+counters:
+  proteins: 12691
+  matches: 12712
+  proteomes: 9253
+  taxa: 14036
+  structures: 0
+  alphafold_models: 8314
+  domain_architectures: 78
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007263
+description: Members of this family have two highly conserved cysteine residues within the DxxCxxC motif
+  at the N-terminal. This motif is conserved in the thiol-disulfide oxidoreductase family [[cite:PUB00096851]].
+  This family includes At5g50100 (also known as DCC1) from Arabidopsis thaliana, a thioredoxin that modulates
+  ROS homeostasis resulting in de novo shoot initiation and may be involved in the improvement of the
+  capacity of plant regeneration [[cite:PUB00096851]]. Uncharacterised proteins from bacteria are also
+  included in this family.

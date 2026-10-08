@@ -1,0 +1,27 @@
+id: Pfam:PF04575
+pfam_id: PF04575
+name: Surface lipoprotein assembly modifier
+short_name: SlipAM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04575
+counters:
+  proteins: 1516
+  matches: 1516
+  proteomes: 1048
+  taxa: 1795
+  structures: 0
+  alphafold_models: 1018
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007655
+description: Surface lipoprotein assembly modifier (Slam) is a surface lipoprotein that may have a role
+  in virulence [[cite:PUB00095100]]. In Neisseria, it is required for the surface display of lipidated
+  virulence factors [[cite:PUB00095101]]. Proteins in this family contain an eight-stranded beta-barrel
+  domain [[cite:PUB00095100]].

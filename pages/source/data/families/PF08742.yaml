@@ -1,0 +1,26 @@
+id: Pfam:PF08742
+pfam_id: PF08742
+name: C8 domain
+short_name: C8
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08742
+counters:
+  proteins: 17796
+  matches: 45563
+  proteomes: 1150
+  taxa: 3948
+  structures: 36
+  alphafold_models: 8017
+  domain_architectures: 3699
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014853
+description: This domain contains 8 conserved cysteine residues, but this family only contains 7 of them
+  to overlaps with other domains. It is found in disease-related proteins including von Willebrand factor,
+  Alpha tectorin, Zonadhesin and Mucin. It is often found on proteins containing [pfam:PF00094] and [pfam:PF01826].

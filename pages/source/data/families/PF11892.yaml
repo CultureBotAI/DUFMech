@@ -1,0 +1,30 @@
+id: Pfam:PF11892
+pfam_id: PF11892
+name: Pyrimidine/purine nucleotide monophosphate nucleosidase, C-terminal
+short_name: PpnN_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11892
+counters:
+  proteins: 2629
+  matches: 2629
+  proteomes: 2622
+  taxa: 3451
+  structures: 9
+  alphafold_models: 1597
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021826
+description: This domain is found at the C-terminal end of Pyrimidine/purine nucleotide 5'-monophosphate
+  nucleosidase from Escherichia coli (PpnN, also known as YgdH) and similar proteins mainly found in gammaproteobacteria.
+  PpnN is a nucleosidase that catalyses the hydrolysis of the N-glycosidic bond of diverse pyrimidine
+  and purine nucleotide 5'-monophosphates. The binding of (p)ppGpp, an alarmone molecule that plays a
+  role in the bacterial stringent response, gives rise to a large conformational change in the terminal
+  region that leads to the exposure of the catalytic pocket. This domain shows a completely alpha-helical
+  fold with an extension that wraps around the central domain [[cite:PUB00100958],[cite:PUB00084997]].

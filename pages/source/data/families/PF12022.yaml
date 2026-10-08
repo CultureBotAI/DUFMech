@@ -1,0 +1,32 @@
+id: Pfam:PF12022
+pfam_id: PF12022
+name: COG complex component, COG2, C-terminal
+short_name: COG2_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12022
+counters:
+  proteins: 3152
+  matches: 3267
+  proteomes: 2247
+  taxa: 6622
+  structures: 0
+  alphafold_models: 2684
+  domain_architectures: 68
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024603
+description: The COG complex comprises eight proteins (COG1-8) and plays critical roles in Golgi structure
+  and function [[cite:PUB00012274]]. It is necessary for retrograde trafficking in the Golgi apparatus
+  and for protein glycosylation [[cite:PUB00097774]]. COG complex, together with exocyst, Golgi-associated
+  retrograde protein (GARP) and Dsl1 complexes, is a member of the CATHR (complexes associated with tethering
+  containing helical rods) family sharing an evolutionary origin and structural features [[cite:PUB00100047]].
+  This domain represents the C-terminal of COG complex subunit 2 and consists of a conserved alpha-helical
+  bundle. In Arabidopsis, COG2 forms a complex with FPP3/VETH1 and FPP2/VETH2 and ensures the correct
+  secondary cell wall (SCW) deposition pattern by recruiting exocyst components to cortical microtubules
+  in xylem cells during secondary cell wall deposition [[cite:PUB00097774]].

@@ -1,0 +1,25 @@
+id: Pfam:PF10023
+pfam_id: PF10023
+name: Putative aminopeptidase
+short_name: Aminopep
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10023
+counters:
+  proteins: 1578
+  matches: 1582
+  proteomes: 1570
+  taxa: 2179
+  structures: 0
+  alphafold_models: 907
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014553
+description: This family of bacterial proteins has a conserved HEXXH motif, suggesting that members are
+  putative peptidases of zincin fold [[cite:PUB00075429]].

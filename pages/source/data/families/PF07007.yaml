@@ -1,0 +1,27 @@
+id: Pfam:PF07007
+pfam_id: PF07007
+name: Lysozyme inhibitor LprI
+short_name: LprI
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07007
+counters:
+  proteins: 8516
+  matches: 8658
+  proteomes: 5093
+  taxa: 7477
+  structures: 2
+  alphafold_models: 5100
+  domain_architectures: 102
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009739
+description: This family consists of several bacterial proteins of around 120 residues in length. Members
+  of this family contain four highly conserved cysteine residues. Family members include lipoprotein LprI
+  from Mycobacterium, which binds to and inhibits macrophage lysozyme, which may aid bacterial survival
+  [[cite:PUB00083126]].

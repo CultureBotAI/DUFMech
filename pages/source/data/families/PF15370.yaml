@@ -1,0 +1,26 @@
+id: Pfam:PF15370
+pfam_id: PF15370
+name: NOP protein chaperone 1
+short_name: NOPCHAP1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15370
+counters:
+  proteins: 2264
+  matches: 2265
+  proteomes: 1821
+  taxa: 5081
+  structures: 0
+  alphafold_models: 1909
+  domain_architectures: 40
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027921
+description: This entry includes NOPCHAP1 from animals and New4 from fission yeast. NOPCHAP1 is a client-loading
+  PAQosome/R2TP complex cofactor that selects NOP58 to promote box C/D small nucleolar ribonucleoprotein
+  (snoRNP) assembly [[cite:PUB00097888]]. The function of New4 is not clear.

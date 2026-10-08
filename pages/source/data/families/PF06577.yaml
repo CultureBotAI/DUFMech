@@ -1,0 +1,27 @@
+id: Pfam:PF06577
+pfam_id: PF06577
+name: Envelope integrity protein A
+short_name: EipA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06577
+counters:
+  proteins: 1554
+  matches: 1554
+  proteomes: 1534
+  taxa: 2053
+  structures: 1
+  alphafold_models: 1006
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008325
+description: This family includes envelope integrity protein A (EipA), a protein required for B. abortus
+  envelope stress resistance and infection. It's gene expression is directly activated by CtrA which binds
+  to the promoter region. eipA encodes a soluble periplasmic protein that adopts an unusual eight-stranded
+  beta-barrel fold [[cite:PUB00091721]].

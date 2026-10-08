@@ -1,0 +1,25 @@
+id: Pfam:PF13372
+pfam_id: PF13372
+name: Alginate export
+short_name: Alginate_exp
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13372
+counters:
+  proteins: 5194
+  matches: 5248
+  proteomes: 3498
+  taxa: 5279
+  structures: 12
+  alphafold_models: 3309
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025388
+description: This domain forms an 18-stranded beta-barrel pore which is likely to act as an alginate export
+  channel [[cite:PUB00056376]].

@@ -1,0 +1,28 @@
+id: Pfam:PF23767
+pfam_id: PF23767
+name: TscA antitoxin
+short_name: TscA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23767
+counters:
+  proteins: 48
+  matches: 48
+  proteomes: 37
+  taxa: 78
+  structures: 0
+  alphafold_models: 24
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055590
+description: This protein domain is found in a variety of staphylococcus phage proteins. It was shown
+  to be the antitoxin TscA of a toxin-antitoxin system [[cite:PUB00159162]], with TscT being the toxin
+  [pfam:PF07342]. It is composed of two alpha helices and a beta hairpin and shows weak structural similarity
+  to archaeal prefoldins. Members of this family form a confident homodimer structure with AlphaFold 3
+  (A0A0H3JR29 iPTM=0.81).

@@ -1,0 +1,28 @@
+id: Pfam:PF11876
+pfam_id: PF11876
+name: Type VI immunity for VRR-NUC
+short_name: TsiV
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11876
+counters:
+  proteins: 1059
+  matches: 1088
+  proteomes: 418
+  taxa: 775
+  structures: 1
+  alphafold_models: 622
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021815
+description: This entry represents bacterial immunity proteins that in are encoded by the PAAR2 cluster
+  [[cite:PUB00103837]] and have been named Type VI immunity for VRR-NUC (TsiV). These proteins form an
+  effector-immunity pair with TseV (type VI effector VRR-NUC), the TseV-TsiV pair [[cite:PUB00103837],[cite:PUB00103836]].
+  These are alpha+beta class of proteins whose surface is mainly electronegative with a a hydrophobic
+  core formed by the N-terminal region [[cite:PUB00103837]].

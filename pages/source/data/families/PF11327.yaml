@@ -1,0 +1,27 @@
+id: Pfam:PF11327
+pfam_id: PF11327
+name: Egh16-like virulence factor
+short_name: Egh16-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11327
+counters:
+  proteins: 3120
+  matches: 3135
+  proteomes: 721
+  taxa: 1537
+  structures: 0
+  alphafold_models: 2669
+  domain_architectures: 27
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021476
+description: This eukaryotic family of proteins includes a group of fungal proteins, including Egh16 from
+  Erysiphe graminis f.sp. hordei and its homologues [[cite:PUB00086549],[cite:PUB00086548]]. They are
+  found in pathogenic fungi and may play important roles during the early infection stage in fungal pathogens
+  [[cite:PUB00086551]].

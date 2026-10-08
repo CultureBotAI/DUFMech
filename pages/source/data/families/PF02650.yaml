@@ -1,0 +1,26 @@
+id: Pfam:PF02650
+pfam_id: PF02650
+name: WhiA C-terminal HTH domain
+short_name: HTH_WhiA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02650
+counters:
+  proteins: 7551
+  matches: 7551
+  proteomes: 7363
+  taxa: 9969
+  structures: 3
+  alphafold_models: 4807
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR023054
+description: This domain is found at the C-terminus of the sporulation regulator WhiA. It is predicted
+  to form a DNA-binding helix-turn-helix structure [[cite:PUB00044539]]. The WhiA protein also contains
+  two N-terminal domains that are distant homologues of LAGLIDADG homing endonucleases [[cite:PUB00044539]].

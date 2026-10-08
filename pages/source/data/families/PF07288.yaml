@@ -1,0 +1,27 @@
+id: Pfam:PF07288
+pfam_id: PF07288
+name: RNA polymerase epsilon subunit
+short_name: RpoY
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07288
+counters:
+  proteins: 1628
+  matches: 1628
+  proteomes: 1565
+  taxa: 2153
+  structures: 11
+  alphafold_models: 1105
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009907
+description: RNA polymerase in bacteria is a multisubunit protein complex that is essential for gene expression.
+  This entry represents the epsilon subunit encoded by the rpoY gene. The structure of epsilon shows simple
+  beta sheet with an alpha helix running diagonally along the back of the structure forming a beta-beta-alpha-beta
+  fold [[cite:PUB00095126]].

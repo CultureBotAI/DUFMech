@@ -1,0 +1,27 @@
+id: Pfam:PF09979
+pfam_id: PF09979
+name: Pa193 gp24 scaffolding protein
+short_name: Pa193_gp24
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09979
+counters:
+  proteins: 1110
+  matches: 1262
+  proteomes: 1002
+  taxa: 2199
+  structures: 1
+  alphafold_models: 469
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR016913
+description: This entry, previously known as DUF2213, represents the Pseudomonas phage Pa193 gp24 scaffolding
+  protein and various hypothetical and phage-related proteins. The structure of gp24 was partly resolved
+  featuring small helical hairpin [[cite:PUB00163741]]. gp24 functions as a scaffolding protein for capsid
+  assembly. It forms a pentamer that probably is directly stabilizing the capsid five-fold vertices [[cite:PUB00163741]].

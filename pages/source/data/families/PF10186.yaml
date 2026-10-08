@@ -1,0 +1,39 @@
+id: Pfam:PF10186
+pfam_id: PF10186
+name: Vacuolar sorting 38 and autophagy-related subunit 14
+short_name: ATG14
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10186
+counters:
+  proteins: 5914
+  matches: 6025
+  proteomes: 2963
+  taxa: 7961
+  structures: 15
+  alphafold_models: 5015
+  domain_architectures: 82
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018791
+description: 'The Atg14 or Apg14 proteins are hydrophilic proteins with a predicted molecular mass of
+  40.5 kDa, and have a coiled-coil motif at the N terminus region. Yeast cells with mutant Atg14 are defective
+  not only in autophagy but also in sorting of carboxypeptidase Y (CPY), a vacuolar-soluble hydrolase,
+  to the vacuole. Subcellular fractionation indicate that Apg14p and Apg6p are peripherally associated
+  with a membrane structure(s). Apg14p was co-immunoprecipitated with Apg6p, suggesting that they form
+  a stable protein complex. These results imply that Apg6/Vps30p has two distinct functions: in the autophagic
+  process and in the vacuolar protein sorting pathway. Apg14p may be a component specifically required
+  for the function of Apg6/Vps30p through the autophagic pathway [[cite:PUB00009843]]. There are 17 auto-phagosomal
+  component proteins which are categorized into six functional units, one of which is the AS-PI3K complex
+  (Vps30/Atg6 and Atg14). The AS-PI3K complex and the Atg2-Atg18 complex are essential for nucleation,
+  and the specific function of the AS-PI3K apparently is to produce phosphatidylinositol 3-phosphate (PtdIns(3)P)
+  at the pre-autophagosomal structure (PAS). The localisation of this complex at the PAS is controlled
+  by Atg14 [[cite:PUB00055554]]. Autophagy mediates the cellular response to nutrient deprivation, protein
+  aggregation, and pathogen invasion in humans, and malfunction of autophagy has been implicated in multiple
+  human diseases including cancer. This effect seems to be mediated through direct interaction of the
+  human Atg14 with Beclin 1 in the human phosphatidylinositol 3-kinase class III complex [[cite:PUB00054155]].'

@@ -1,0 +1,35 @@
+id: Pfam:PF06114
+pfam_id: PF06114
+name: IrrE N-terminal-like domain
+short_name: Peptidase_M78
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06114
+counters:
+  proteins: 21240
+  matches: 21261
+  proteomes: 11259
+  taxa: 16625
+  structures: 10
+  alphafold_models: 13293
+  domain_architectures: 143
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010359
+description: This entry includes the catalytic domain of the protein ImmA, which is a metallopeptidase
+  containing an HEXXH zinc-binding motif from peptidase family M78. ImmA is encoded on a conjugative transposon.
+  Conjugating bacteria are able to transfer conjugative transposons that can, for example, confer resistance
+  to antibiotics. The transposon is integrated into the chromosome, but during conjugation excises itself
+  and then moves to the recipient bacterium and re-integrate into its chromosome. Typically a conjugative
+  tranposon encodes only the proteins required for this activity and the proteins that regulate it. During
+  exponential growth, the ICEBs1 transposon of Bacillus subtilis is inactivated by the immunity repressor
+  protein ImmR, which is encoded by the transposon and represses the genes for excision and transfer.
+  Cleavage of ImmR relaxes repression and allows transfer of the transposon. ImmA has been shown to be
+  essential for the cleavage of ImmR [[cite:PUB00066798]]. This domain is also found in in metalloprotease
+  IrrE, a central regulator of DNA damage repair in Deinococcaceae [[cite:PUB00051490]], HTH-type transcriptional
+  regulators RamB [[cite:PUB00074928]] and PrpC [[cite:PUB00074929]].

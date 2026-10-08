@@ -1,0 +1,27 @@
+id: Pfam:PF11779
+pfam_id: PF11779
+name: Small subunit of serine palmitoyltransferase-like
+short_name: SPT_ssu-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11779
+counters:
+  proteins: 4017
+  matches: 4022
+  proteomes: 2398
+  taxa: 6530
+  structures: 21
+  alphafold_models: 3505
+  domain_architectures: 41
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024512
+description: Serine palmitoyltransferase (SPT) catalyzes the first committed step in sphingolipid biosynthesis.
+  In mammals, two small subunits of serine palmitoyltransferase, ssSPTa and ssSPTb, substantially enhance
+  the activity of SPT, conferring full enzyme activity upon it [[cite:PUB00056204]]. The 2 ssSPT isoforms
+  share a conserved hydrophobic central domain, which is predicted to reside in the membrane.

@@ -1,0 +1,26 @@
+id: Pfam:PF09894
+pfam_id: PF09894
+name: Connectase MJ0548-like, N-terminal domain
+short_name: Connectase_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09894
+counters:
+  proteins: 83
+  matches: 83
+  proteomes: 82
+  taxa: 152
+  structures: 4
+  alphafold_models: 68
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057262
+description: This domain is found at the N-terminal end of Connectase MJ0548 from Methanocaldococcus jannaschii
+  and similar archaeal sequences. MJ0548 is a distant, monomeric proteasome homologue which connects proteins
+  in a sequence-specific manner [[cite:PUB00158988]].

@@ -1,0 +1,25 @@
+id: Pfam:PF03629
+pfam_id: PF03629
+name: Carbohydrate esterase, sialic acid-specific acetylesterase
+short_name: SASA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03629
+counters:
+  proteins: 12083
+  matches: 14257
+  proteomes: 4267
+  taxa: 8324
+  structures: 10
+  alphafold_models: 8563
+  domain_architectures: 367
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005181
+description: The catalytic triad of this esterase enzyme comprises residues Ser127, His403 and Asp391
+  in UniProtKB:P70665 [[cite:PUB00039360],[cite:PUB00078761]].

@@ -1,0 +1,29 @@
+id: Pfam:PF20716
+pfam_id: PF20716
+name: ATPTG10-like
+short_name: ATPTG10
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20716
+counters:
+  proteins: 60
+  matches: 60
+  proteomes: 57
+  taxa: 124
+  structures: 3
+  alphafold_models: 54
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049262
+description: 'This entry, previously known as DUF6828, represents a domain found in the T. gondii ATP
+  synthase subunit 10 (ATPTG10) and related proteins from Apicomplexan species. This domain adopts an
+  alpha-helical structure consisting of five helices [[cite:PUB00152764]]. It contains two highly conserved
+  sequence motifs: FSWxD and MxLWI/LKxRI/L. The formation of the T.gondii ATP synthase hexamer involves
+  two contact sites in the lumenal region. ATPTG10 contributes to the the second site via interaction
+  with ATP synthase subunit 11 (ATPTG11).'

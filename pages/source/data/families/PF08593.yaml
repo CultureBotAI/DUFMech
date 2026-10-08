@@ -1,0 +1,30 @@
+id: Pfam:PF08593
+pfam_id: PF08593
+name: Mug135-like, C-terminal domain
+short_name: Mug135_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08593
+counters:
+  proteins: 570
+  matches: 572
+  proteomes: 181
+  taxa: 487
+  structures: 2
+  alphafold_models: 472
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013902
+description: This entry represents the C-terminal domain found in Meiotically up-regulated gene 135 protein
+  from Schizosaccharomyces pombe (Mug135, also known as Tdk1, O74876) and similar fungal proteins that
+  are annotated as meiotically up-regulated gene products. Mug135 is a killer meiotic driver (KMD), a
+  selfish genetic element that by selectively kills meiotic products lacking its gene, thereby promoting
+  its own propagation. This protein exists in a nontoxic tetrameric form during vegetative growth and
+  meiosis but transforms into a distinct toxic form in spores [[cite:PUB00159004],[cite:PUB00159007]].
+  These proteins generally contain a long coiled-coil region with this domain found at the C-terminus.

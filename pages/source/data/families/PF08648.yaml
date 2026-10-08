@@ -1,0 +1,25 @@
+id: Pfam:PF08648
+pfam_id: PF08648
+name: U4/U6.U5 small nuclear ribonucleoproteins
+short_name: SNRNP27
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08648
+counters:
+  proteins: 3313
+  matches: 3318
+  proteomes: 2927
+  taxa: 7934
+  structures: 10
+  alphafold_models: 2849
+  domain_architectures: 55
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013957
+description: This is a family of eukaryotic proteins including U4/U6.U5 small nuclear ribonucleoprotein
+  27 kDa protein may play a role in mRNA splicing [[cite:PUB00084347]].

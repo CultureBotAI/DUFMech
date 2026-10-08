@@ -1,0 +1,27 @@
+id: Pfam:PF06074
+pfam_id: PF06074
+name: Portal protein of Mu bacteriophage
+short_name: Portal_Mu
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06074
+counters:
+  proteins: 2378
+  matches: 2384
+  proteomes: 1956
+  taxa: 4267
+  structures: 9
+  alphafold_models: 1237
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009279
+description: This entry represents phage portal proteins found in bacteriophage Mu (gp29 protein [swissprot:Q9T1W5]).
+  This protein Forms the portal vertex of the capsid. This portal plays critical roles in head assembly,
+  genome packaging, neck/tail attachment, and genome ejection. The portal protein multimerizes as a single
+  ring-shaped homododecamer arranged around a central channel.

@@ -1,0 +1,29 @@
+id: Pfam:PF09931
+pfam_id: PF09931
+name: Baseplate hub protein, N-terminal attachment domain
+short_name: Phage_phiJL001_Gp84_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09931
+counters:
+  proteins: 2302
+  matches: 2303
+  proteomes: 1940
+  taxa: 3191
+  structures: 6
+  alphafold_models: 1505
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: This entry represents the N-terminal attachment domain (residues 1-142) of the baseplate
+  hub protein found in phages and gene transfer agents [[cite:PUB00153971]]. This domain is part of a
+  multi-domain protein that also contains an ion-binding domain (143-167, 250-263), an oligosaccharide-binding
+  domain (168-249), and a C-terminal clip domain (264-296). The attachment domain enables binding to the
+  distal tail proteins and helps anchor the hub protein within the baseplate structure. This family is
+  found almost exclusively in phages and prophage regions of bacterial genomes, including the Rhodobacter
+  capsulatus gene transfer agent.

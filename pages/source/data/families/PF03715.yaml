@@ -1,0 +1,27 @@
+id: Pfam:PF03715
+pfam_id: PF03715
+name: Noc2p family
+short_name: Noc2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03715
+counters:
+  proteins: 4981
+  matches: 5094
+  proteomes: 3306
+  taxa: 8752
+  structures: 20
+  alphafold_models: 4227
+  domain_architectures: 75
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005343
+description: At least one member, Noc2p from yeast, is required for a late step in 60S subunit export
+  from the nucleus [[cite:PUB00020526]]. It has also been shown to co-precipitate with Nug1p, a nuclear
+  GTPase also required for ribosome nucleus export [[cite:PUB00020525]]. This family was formerly known
+  as UPF0120.

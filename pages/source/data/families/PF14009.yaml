@@ -1,0 +1,29 @@
+id: Pfam:PF14009
+pfam_id: PF14009
+name: PADRE domain
+short_name: PADRE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14009
+counters:
+  proteins: 15658
+  matches: 15711
+  proteomes: 381
+  taxa: 1078
+  structures: 0
+  alphafold_models: 12753
+  domain_architectures: 134
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025322
+description: This entry represents the Pathogen and abiotic stress response, cadmium tolerance, disordered
+  region-containing (PADRE) domain, which is specifically found in plants. PADRE typically occurs in small
+  single-domain proteins with a bipartite architecture. PADRE contains conserved sequence motifs at the
+  N-terminal, and its C-terminal includes an intrinsically disordered region with multiple phosphorylation
+  sites. This domain is associated with plant defense upon diverse stress stimulus and has a role in disease
+  resistance to fungi [[cite:PUB00098607]].

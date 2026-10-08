@@ -1,0 +1,26 @@
+id: Pfam:PF11923
+pfam_id: PF11923
+name: NFACT protein C-terminal domain
+short_name: NFACT-C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11923
+counters:
+  proteins: 3629
+  matches: 3636
+  proteomes: 2945
+  taxa: 7889
+  structures: 9
+  alphafold_models: 2989
+  domain_architectures: 50
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021846
+description: This is the C-terminal domain of the NFACT (NEMF, FbpA, Caliban, and Tae2) proteins involved
+  in the ribosomal quality control pathway. This context is conserved in archaea and eukaryotes, but NFACT
+  proteins in bacteria lack the NFACT-C domain [[cite:PUB00091027]].

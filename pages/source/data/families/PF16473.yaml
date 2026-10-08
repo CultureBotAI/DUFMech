@@ -1,0 +1,30 @@
+id: Pfam:PF16473
+pfam_id: PF16473
+name: 3'-5' exoribonuclease Rv2179c-like domain
+short_name: Rv2179c-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16473
+counters:
+  proteins: 2547
+  matches: 2547
+  proteomes: 2444
+  taxa: 4185
+  structures: 8
+  alphafold_models: 1296
+  domain_architectures: 18
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR033390
+description: This is a highly divergent 3' exoribonuclease family. The proteins constitute a typical RNase
+  fold, where the active site residues form a magnesium catalytic centre. The protein of the solved structure
+  readily cleaves 3' overhangs in a time-dependent manner. It is similar to DEDD-type RNases and is an
+  unusual ATP-binding protein that binds ATP and dATP. It forms a dimer in solution and both protomers
+  in the asymmetric unit bind a magnesium ion through Asp-6 in SwissProt:P9WJ73 [[cite:PUB00074134]].
+  Proteins containing this domain also include 3'-5' exonuclease dexA from bacteriophage T4. It may play
+  a role in the final step of host DNA degradation, by scavenging DNA into mononucleotides [[cite:PUB00078716],[cite:PUB00078717]].

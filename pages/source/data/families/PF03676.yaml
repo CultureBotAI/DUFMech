@@ -1,0 +1,25 @@
+id: Pfam:PF03676
+pfam_id: PF03676
+name: Phagosome assembly factor 1
+short_name: PHAF1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03676
+counters:
+  proteins: 4069
+  matches: 5321
+  proteomes: 2971
+  taxa: 7937
+  structures: 0
+  alphafold_models: 3404
+  domain_architectures: 75
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005373
+description: PHAF1 and BCAS3 form a complex that affects the recruitment of several core autophagy proteins
+  to the phagophore assembly site [[cite:PUB00097858]].

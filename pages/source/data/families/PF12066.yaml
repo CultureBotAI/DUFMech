@@ -1,0 +1,29 @@
+id: Pfam:PF12066
+pfam_id: PF12066
+name: SERRATE/Ars2, N-terminal domain
+short_name: SERRATE_Ars2_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12066
+counters:
+  proteins: 4526
+  matches: 4550
+  proteomes: 2693
+  taxa: 7319
+  structures: 7
+  alphafold_models: 3779
+  domain_architectures: 74
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021933
+description: This domain can be found in the N terminus of the SERRATE (SE) from plants and its homologue,
+  Ars2, from animals. They play a role in nuclear RNA metabolism. They interact with the nuclear cap-binding
+  complex (CBC) and mediates interactions with diverse RNA processing and transport machineries in a transcript-dependent
+  manner. Interestingly, the plant SERRATE does not have the RNA recognition motif (RRM) domain found
+  in metazoans and S. pombe [[cite:PUB00090022]]. This domain has two completely conserved Y residues
+  that may be functionally important.

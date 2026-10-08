@@ -1,0 +1,26 @@
+id: Pfam:PF15719
+pfam_id: PF15719
+name: Ribonuclease MRP subunit P24-like
+short_name: Rmp24-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15719
+counters:
+  proteins: 1081
+  matches: 1089
+  proteomes: 833
+  taxa: 2701
+  structures: 3
+  alphafold_models: 968
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR029779
+description: This protein family includes human Ribonuclease MRP subunit P24-like (Rmp24, also known as
+  C18orf21) and similar animal proteins. Rmp24 is required for the activity of human RNase MRP but not
+  RNase P [[cite:PUB00160952]].

@@ -1,0 +1,26 @@
+id: Pfam:PF04315
+pfam_id: PF04315
+name: Elongation factor P hydroxylase
+short_name: EpmC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04315
+counters:
+  proteins: 1795
+  matches: 1795
+  proteomes: 1777
+  taxa: 2428
+  structures: 2
+  alphafold_models: 1135
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007411
+description: This family catalyses the final step in the elongation factor P modification pathway. It
+  hydroxylates Lys-34 of elongation factor P [[cite:PUB00109139]]. Members of this family have a conserved
+  HEXXH motif, suggesting they are putative peptidases of zincin fold [[cite:PUB00075429]].

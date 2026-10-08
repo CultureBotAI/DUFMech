@@ -1,0 +1,25 @@
+id: Pfam:PF09550
+pfam_id: PF09550
+name: Phage tail assembly chaperone protein, TAC
+short_name: Phage_TAC_6
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09550
+counters:
+  proteins: 1423
+  matches: 1423
+  proteomes: 1371
+  taxa: 1996
+  structures: 0
+  alphafold_models: 963
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019056
+description: This is a family of phage tail assembly chaperone proteins largely derived from the Rhodobacter
+  species viral agent GTA (gene transfer agent) gp10.

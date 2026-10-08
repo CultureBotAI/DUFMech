@@ -1,0 +1,28 @@
+id: Pfam:PF08592
+pfam_id: PF08592
+name: Anthrone oxygenase
+short_name: Anthrone_oxy
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08592
+counters:
+  proteins: 8942
+  matches: 8946
+  proteomes: 4965
+  taxa: 8017
+  structures: 0
+  alphafold_models: 5890
+  domain_architectures: 76
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013901
+description: This family consists of anthrone oxygenases found in bacteria and fungi, and involved in
+  the synthesis of different products. GedH from Aspergillus terreus is part of the gene cluster that
+  mediates the biosynthesis of geodin [[cite:PUB00081405]], EncC from Neosartorya fumigata is involved
+  in the biosynthesis of endocrocin [[cite:PUB00081406]], and MdpH from Aspergillus nidulans in the biosynthesis
+  of monodictyphenone [[cite:PUB00081407]].

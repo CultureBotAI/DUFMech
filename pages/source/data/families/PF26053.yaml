@@ -1,0 +1,28 @@
+id: Pfam:PF26053
+pfam_id: PF26053
+name: Scytalone dehydratase-like protein Arp1, N-terminal domain
+short_name: Arp1_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26053
+counters:
+  proteins: 2115
+  matches: 2121
+  proteomes: 856
+  taxa: 1755
+  structures: 0
+  alphafold_models: 1768
+  domain_architectures: 54
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058329
+description: This domain is found at the N-terminal end of Scytalone dehydratase-like protein Arp1 from
+  Metarhizium brunneum and similar fungal proteins. Arp1 is part of the Pks2 gene cluster that encode
+  for proteins that mediate the formation of infectious structures (appressoria), enabling these fungi
+  to kill insects faster [[cite:PUB00095155]]. This domain is predicted to fold into a partly open beta-barrel
+  capped with two helices on one side.

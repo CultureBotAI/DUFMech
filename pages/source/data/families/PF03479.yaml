@@ -1,0 +1,30 @@
+id: Pfam:PF03479
+pfam_id: PF03479
+name: Plants and Prokaryotes Conserved (PCC) domain
+short_name: PCC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03479
+counters:
+  proteins: 19177
+  matches: 19300
+  proteomes: 3910
+  taxa: 7806
+  structures: 7
+  alphafold_models: 15108
+  domain_architectures: 165
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005175
+description: This is a Plants and Prokaryotes Conserved (PPC) domain found in proteins that contain AT-hook
+  motifs [pfam:PF02178] which strongly suggests a DNA-binding function for the proteins as a whole. Proteins
+  with PPC domains are found in Bacteria, Archaea and the plant kingdom [[cite:PUB00074814],[cite:PUB00040306]].The
+  PPC domain has a single alpha-helix packed against an antiparallel beta-sheet, which is formed by five
+  beta-strands. There are three highly conserved histidine residues, eg at 117, 119 and 133 in [swissprot:Q46QL5]
+  which appear to form a zinc-binding site, and the domain has been observed to form homotrimers. The
+  domain co-occurs with a thioredoxin-like domain in uncharacterized cyanobacterial proteins [[cite:PUB00040306]].

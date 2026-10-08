@@ -1,0 +1,27 @@
+id: Pfam:PF12537
+pfam_id: PF12537
+name: The Golgi pH Regulator (GPHR) Family N-terminal
+short_name: GPHR_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12537
+counters:
+  proteins: 3783
+  matches: 3784
+  proteomes: 2934
+  taxa: 8060
+  structures: 0
+  alphafold_models: 3252
+  domain_architectures: 51
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022535
+description: GPHR_N is the N-terminal 5TM region of the Golgi pH regulator proteins in eukaryotes. It
+  plays vital roles in the transport of newly synthesized proteins from the Golgi to the plasma membrane,
+  in the glycosylation of proteins along the exocytic pathway and the structural organisation of the Golgi
+  apparatus [[cite:PUB00059167],[cite:PUB00059166],[cite:PUB00109674]].

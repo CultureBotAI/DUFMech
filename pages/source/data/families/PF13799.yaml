@@ -1,0 +1,28 @@
+id: Pfam:PF13799
+pfam_id: PF13799
+name: Fibrillar ENdospore Appendages
+short_name: F-ENAs
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13799
+counters:
+  proteins: 797
+  matches: 855
+  proteomes: 379
+  taxa: 531
+  structures: 3
+  alphafold_models: 421
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025237
+description: This entry, previously known as DUF4183, represents the so-called Fibrillar ENdospore Appendages
+  or F-ENAs found mainly in Bacilli lineage. F-ENA subunits assemble into trimeric units that stack axially
+  into a helical ultrastructure fibers [[cite:PUB00163791]]. F-ENAs contribute to spore clustering. At
+  the spore distal terminus, F-ENAs are decorated with a flexible tip fibrillum that consists of the collagen-like
+  protein F-BclA [[cite:PUB00163791]].

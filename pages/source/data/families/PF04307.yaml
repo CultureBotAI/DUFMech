@@ -1,0 +1,26 @@
+id: Pfam:PF04307
+pfam_id: PF04307
+name: YdjM inner membrane protein
+short_name: YdjM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04307
+counters:
+  proteins: 14526
+  matches: 15208
+  proteomes: 9176
+  taxa: 13475
+  structures: 0
+  alphafold_models: 9793
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007404
+description: YdjM is a family of putative LexA-binding proteins. Members are predicted to be membrane-bound
+  metal-dependent hydrolases that may be acting as phospholipases. It is a member of the SOS network,
+  that rescues cells from UV and other DNA-damage. Expression of YdjM is regulated by LexA [[cite:PUB00075708],[cite:PUB00155923]].

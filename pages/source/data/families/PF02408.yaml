@@ -1,0 +1,25 @@
+id: Pfam:PF02408
+pfam_id: PF02408
+name: CUB-like domain
+short_name: CUB_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02408
+counters:
+  proteins: 536
+  matches: 593
+  proteomes: 20
+  taxa: 87
+  structures: 0
+  alphafold_models: 523
+  domain_architectures: 37
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003366
+description: This is a family of hypothetical C. elegans proteins. The aligned region has no known function
+  nor do any of the proteins which possess it. However, this domain is related to the CUB domain.

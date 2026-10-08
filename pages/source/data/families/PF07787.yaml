@@ -1,0 +1,25 @@
+id: Pfam:PF07787
+pfam_id: PF07787
+name: Transmembrane protein 43
+short_name: TMEM43
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07787
+counters:
+  proteins: 2207
+  matches: 2260
+  proteomes: 1624
+  taxa: 4657
+  structures: 0
+  alphafold_models: 1809
+  domain_architectures: 34
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012430
+description: This entry represents the transmembrane protein 43 family of proteins, which may function
+  as tetraspanin-like membrane organisers [[cite:PUB00059300]].

@@ -19,12 +19,12 @@ data-category="KNOWN_HISTORICAL_DUF" data-page="3">
 <form id="family-controls" class="controls" role="search" hidden>
 <label>Search accession or family <input id="family-query" type="search" name="q"></label>
 <label>Seed status <select id="seed-filter"><option value="">All seed statuses</option>
-<option value="KNOWN_HISTORICAL_DUF">KNOWN HISTORICAL DUF</option><option value="UNKNOWN_CANDIDATE">UNKNOWN CANDIDATE</option></select></label>
+<option value="EX_DUF">EX DUF</option><option value="KNOWN_HISTORICAL_DUF">KNOWN HISTORICAL DUF</option><option value="UNKNOWN_CANDIDATE">UNKNOWN CANDIDATE</option></select></label>
 <label>Characterization <select id="characterization-filter"><option value="">All characterizations</option>
 <option value="UNSCORED">UNSCORED</option></select></label>
 <label>Sort by <select id="family-sort"><option value="proteins-desc">Proteins: high to low</option><option value="proteins-asc">Proteins: low to high</option><option value="pfam_id-asc">Pfam accession</option><option value="name-asc">Family name: A to Z</option><option value="structures-desc">Structures: high to low</option></select></label>
 <button id="reset-families" type="button">Clear search and filters</button></form>
-<p id="family-count" role="status" aria-live="polite">378 of 6,532 families.
+<p id="family-count" role="status" aria-live="polite">373 of 8,295 families.
 Page 3 of 8.</p>
 <p id="catalogue-error" role="alert" hidden></p>
 <noscript><p>All families are available through the numbered catalogue pages and JSON download.</p></noscript>
@@ -33,22 +33,7 @@ Page 3 of 8.</p>
 <th scope="col">Seed status</th><th scope="col">Characterization</th><th scope="col">Evidence counts</th>
 <th scope="col">Proteins</th><th scope="col">Structures</th><th scope="col">AlphaFold</th>
 <th scope="col">Other Mechs</th><th scope="col">Curation status</th></tr></thead>
-<tbody><tr id="PF09967"><td><a href="../families/PF09967.html">PF09967</a></td>
-<td><strong>VWA-like domain (DUF2201)</strong><br>DUF2201</td>
-<td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
-<td class="num">2,775</td><td class="num">0</td>
-<td class="num">1,574</td><td>ProteinTraitsMech: 2; ProteinTraitsMech trait record</td>
-<td>SEEDED</td></tr><tr id="PF10029"><td><a href="../families/PF10029.html">PF10029</a></td>
-<td><strong>Predicted periplasmic protein (DUF2271)</strong><br>DUF2271</td>
-<td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
-<td class="num">2,764</td><td class="num">0</td>
-<td class="num">1,695</td><td>ProteinTraitsMech trait record</td>
-<td>SEEDED</td></tr><tr id="PF10056"><td><a href="../families/PF10056.html">PF10056</a></td>
-<td><strong>Uncharacterized conserved protein (DUF2293)</strong><br>DUF2293</td>
-<td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
-<td class="num">2,733</td><td class="num">0</td>
-<td class="num">1,936</td><td>ProteinTraitsMech trait record</td>
-<td>SEEDED</td></tr><tr id="PF09741"><td><a href="../families/PF09741.html">PF09741</a></td>
+<tbody><tr id="PF09741"><td><a href="../families/PF09741.html">PF09741</a></td>
 <td><strong>Uncharacterized conserved protein (DUF2045)</strong><br>DUF2045</td>
 <td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
 <td class="num">2,724</td><td class="num">0</td>
@@ -283,6 +268,21 @@ Page 3 of 8.</p>
 <td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
 <td class="num">1,650</td><td class="num">0</td>
 <td class="num">1,086</td><td>ProteinTraitsMech trait record</td>
+<td>SEEDED</td></tr><tr id="PF09933"><td><a href="../families/PF09933.html">PF09933</a></td>
+<td><strong>Predicted small integral membrane protein (DUF2165)</strong><br>DUF2165</td>
+<td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
+<td class="num">1,577</td><td class="num">0</td>
+<td class="num">862</td><td>ProteinTraitsMech trait record</td>
+<td>SEEDED</td></tr><tr id="PF09866"><td><a href="../families/PF09866.html">PF09866</a></td>
+<td><strong>Uncharacterized protein conserved in bacteria (DUF2093)</strong><br>DUF2093</td>
+<td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
+<td class="num">1,562</td><td class="num">0</td>
+<td class="num">1,016</td><td>ProteinTraitsMech trait record</td>
+<td>SEEDED</td></tr><tr id="PF10031"><td><a href="../families/PF10031.html">PF10031</a></td>
+<td><strong>Small integral membrane protein (DUF2273)</strong><br>DUF2273</td>
+<td>KNOWN HISTORICAL DUF</td><td>UNSCORED</td><td>Not scored</td>
+<td class="num">1,560</td><td class="num">0</td>
+<td class="num">1,030</td><td>ProteinTraitsMech trait record</td>
 <td>SEEDED</td></tr></tbody></table></div>
 <p id="family-empty" hidden>No matching families. Clear the search or filters to try again.</p>
 <div class="pagination" id="family-pagination" hidden>
@@ -290,7 +290,7 @@ Page 3 of 8.</p>
 <span id="family-page"></span><button id="next-families" type="button" aria-label="Next page">Next</button>
 </div><nav id="static-pagination" class="pagination" aria-label="Catalogue pages"><a href="../category/known_historical_duf.html" aria-label="Catalogue page 1">1</a><a href="../category/known_historical_duf-2.html" aria-label="Catalogue page 2">2</a><a href="../category/known_historical_duf-3.html" aria-label="Catalogue page 3" aria-current=page>3</a><a href="../category/known_historical_duf-4.html" aria-label="Catalogue page 4">4</a><a href="../category/known_historical_duf-5.html" aria-label="Catalogue page 5">5</a><a href="../category/known_historical_duf-6.html" aria-label="Catalogue page 6">6</a><a href="../category/known_historical_duf-7.html" aria-label="Catalogue page 7">7</a><a href="../category/known_historical_duf-8.html" aria-label="Catalogue page 8">8</a></nav>
 </section></main><footer>
-<p>Site build <code>0bf17b6b91cc3993</code>. <a href="https://github.com/CultureBotAI/DUFMech/blob/ba8f948a7bbe62a9274981b796f5ee5d907cc66f/data/worklists/interpro-pfam-duf-2026-10-05.json">Corpus source ba8f948a7bbe</a><br>cross_mech: cross-mech-duf-examples-2026-10-06 / members: pfam-uniprot-uniref90-2026-10-07 / worklist: interpro-pfam-duf-2026-10-05</p>
+<p>Site build <code>7a5e8f84bb4a9a7a</code>. <a href="https://github.com/CultureBotAI/DUFMech/blob/311e161679bf9996fab901fc014537635753a411/data/worklists/interpro-pfam-duf-2026-10-08.json">Corpus source 311e161679bf</a><br>cross_mech: cross-mech-duf-examples-2026-10-08 / members: pfam-uniprot-uniref90-2026-10-07 / worklist: interpro-pfam-duf-2026-10-08</p>
 <p>Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
 Code: <a href="https://github.com/CultureBotAI/DUFMech/blob/main/LICENSE-CODE">BSD 3-Clause</a>.
 Redistributed source material retains its applicable third-party terms.

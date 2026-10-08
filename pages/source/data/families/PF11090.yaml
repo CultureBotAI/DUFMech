@@ -1,0 +1,25 @@
+id: Pfam:PF11090
+pfam_id: PF11090
+name: Bacteriophage T7, probable scaffold protein Gp13
+short_name: Phage_T7_Gp13
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11090
+counters:
+  proteins: 393
+  matches: 393
+  proteomes: 386
+  taxa: 889
+  structures: 0
+  alphafold_models: 22
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR020335
+description: This family represents Bacteriophage T7 Gp13, which may act as an organiser for the correct
+  association of several proteins in the surrounding of the head-tail connector protein gp8 [[cite:PUB00055981]].

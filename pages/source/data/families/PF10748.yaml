@@ -1,0 +1,27 @@
+id: Pfam:PF10748
+pfam_id: PF10748
+name: DNA utilization proteins HofP
+short_name: HofP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10748
+counters:
+  proteins: 266
+  matches: 266
+  proteomes: 266
+  taxa: 373
+  structures: 0
+  alphafold_models: 144
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019684
+description: This family includes the Escherischia coli protein HofP, one of eight genes shown to be required
+  for the utilization of extracellular DNA as a nutrient source in starving conditions, allowing DNA to
+  be the sole source for carbon and energy [[cite:PUB00068649]]. Proteins in this entry appear are found
+  only in Enterobacteriaceae.

@@ -1,0 +1,32 @@
+id: Pfam:PF08568
+pfam_id: PF08568
+name: Uncharacterised protein family, YAP/Alf4/glomulin
+short_name: Kinetochor_Ybp2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08568
+counters:
+  proteins: 3520
+  matches: 4201
+  proteomes: 2663
+  taxa: 7140
+  structures: 1
+  alphafold_models: 2972
+  domain_architectures: 43
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013877
+description: This entry contains a number of protein families with apparently unrelated functions. These
+  include the YAP binding proteins of yeasts. These are stress response and redox homeostasis proteins,
+  induced by hydrogen peroxide or induced in response to alkylating agent methyl methanesulphonate (MMS)
+  [[cite:PUB00053725]] [[cite:PUB00053726]]. The family includes Aberrant root formation protein 4 (Alf4)
+  of Arabidopsis thaliana (Mouse-ear cress), which is required for the initiation of lateral roots independent
+  from auxin signalling. It may also function in maintaining the pericycle in the mitotically competent
+  state needed for lateral root formation [[cite:PUB00053727]]. The family includes glomulin (FAP68),
+  which is essential for normal development of the vasculature and may represent a naturally occurring
+  ligand of the immunophilins FKBP59 and FKBP12 [[cite:PUB00044263]] [[cite:PUB00053728]].

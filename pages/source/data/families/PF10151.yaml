@@ -1,0 +1,26 @@
+id: Pfam:PF10151
+pfam_id: PF10151
+name: TMEM214, C-terminal, caspase 4 activator
+short_name: TMEM214
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10151
+counters:
+  proteins: 2721
+  matches: 2917
+  proteomes: 1404
+  taxa: 4532
+  structures: 0
+  alphafold_models: 2280
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019308
+description: This is the N-terminal domain of transmembrane family 214, from eukaryotes. The family is
+  localised on the endoplasmic reticulum where it recruits procaspase 4 to the ER and subsequently allows
+  this to be cleaved to caspase 4 so leading to apoptosis [[cite:PUB00078722]].

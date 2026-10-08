@@ -1,0 +1,28 @@
+id: Pfam:PF12640
+pfam_id: PF12640
+name: Peptide arginase FlmR/OhkR-like, N-terminal domain
+short_name: FlmR_OhkR_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12640
+counters:
+  proteins: 1799
+  matches: 1816
+  proteomes: 1333
+  taxa: 4226
+  structures: 1
+  alphafold_models: 1530
+  domain_architectures: 33
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR063574
+description: This entry represents a domain found at the N-terminal end of FlmR from Flagellimonas meridianipacifica
+  (Swiss A0A2T0MFS9), OhkR from Ohtaekwangia koreensis (Swiss A0A1T5M544) and similar uncharacterised
+  proteins found in animals and bacteria. FlmR and OhkR have been reported to be peptide arginases that
+  modify Arg residues to ornithine in bioactive RiPP peptides [[cite:PUB00162570]]. This domain is predicted
+  to adopt an alpha/beta arginase-like fold.

@@ -1,0 +1,29 @@
+id: Pfam:PF20207
+pfam_id: PF20207
+name: Pediocin PA-1 biosynthesis protein PedC-like
+short_name: PedC-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20207
+counters:
+  proteins: 731
+  matches: 732
+  proteomes: 521
+  taxa: 987
+  structures: 1
+  alphafold_models: 487
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046698
+description: This family of proteins, previously known as DUF6568, represents the Pediocin PA-1 biosynthesis
+  protein PedC and related proteins, including Protein MesC, that are mainly found in firmicutes. PedC
+  is probably involved in pediocin PA-1 biosynthesis , a class II bacteriocin produced by the bacterium
+  Pediococcus acidilactici [[cite:PUB00034683]]. Member of this family contain two conserved motifs, CxxF
+  and YxN, and two conserved residues, Tyr at the N-terminal and a Gly at the C-terminal end. Many members
+  of this family are thought to belong to the Thioredoxin superfamily.

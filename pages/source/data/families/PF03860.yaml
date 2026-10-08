@@ -1,0 +1,27 @@
+id: Pfam:PF03860
+pfam_id: PF03860
+name: Copper storage protein
+short_name: Csp
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03860
+counters:
+  proteins: 6459
+  matches: 6459
+  proteomes: 4703
+  taxa: 6934
+  structures: 28
+  alphafold_models: 3965
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005560
+description: This domain is found in a number of copper storage proteins. It contains a repeat of highly
+  conserved cysteines. The cysteines mostly follow a C-X(2)-C-X(3)-C-X(2)-C-X(3) pattern, though they
+  often appear at other positions in the repeat as well [[cite:PUB00016669]]. These residues are involved
+  in copper binding. This domain folds into a four helical up-and-down bundle [[cite:PUB00161196],[cite:PUB00161197]].

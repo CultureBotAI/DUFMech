@@ -1,0 +1,29 @@
+id: Pfam:PF05638
+pfam_id: PF05638
+name: Type VI secretion system effector, Hcp
+short_name: T6SS_HCP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05638
+counters:
+  proteins: 7751
+  matches: 7781
+  proteomes: 3501
+  taxa: 5255
+  structures: 22
+  alphafold_models: 4734
+  domain_architectures: 36
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008514
+description: HCP is a family of proteins which are expressed in up to 1000 copies in Gram-negative bacteria.
+  Together these copies aggregate into a needle-like shaft or tube that will penetrate other bacteria
+  via a puncturing protein attached to its head [[cite:PUB00075434]] being part of the type VI secretion
+  system [[cite:PUB00155386],[cite:PUB00054686]]. Initially Hcp forms a hexameric structure with a central
+  channel of 40 Angstroms. These hexamers pile up one on top of each other forming nanotubes resembling
+  the gp19 tail phage tube [[cite:PUB00034462]].

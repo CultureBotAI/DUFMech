@@ -1,0 +1,31 @@
+id: Pfam:PF07314
+pfam_id: PF07314
+name: Lipoprotein intramolecular transacylase Lit
+short_name: Lit
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07314
+counters:
+  proteins: 1709
+  matches: 1709
+  proteomes: 1655
+  taxa: 2669
+  structures: 4
+  alphafold_models: 1127
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010178
+description: This entry represents the lipoprotein intramolecular transacylase, Lit [[cite:PUB00158976],[cite:PUB00158977]].
+  Lit creates a lipoprotein that is less immunogenic, possibly enabling the bacteria to gain a foothold
+  in the host by stealth. The crystal structure of the Lit enzyme from Bacillus cereus ([swissprot:Q813T3])
+  revealed that it consists of consists of four transmembrane helices with an extracellular cap [[cite:PUB00158977]].
+  The conserved residues map to the cap-membrane interface and they include two catalytic histidines that
+  function to effect unimolecular transacylation. The reaction involves acyl transfer from the sn-2 position
+  of the glyceryl moiety to the amino group on the N-terminal cysteine of the substrate via an 8-membered
+  ring intermediate.

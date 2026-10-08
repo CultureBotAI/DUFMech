@@ -1,0 +1,30 @@
+id: Pfam:PF12554
+pfam_id: PF12554
+name: Mitotic-spindle organizing gamma-tubulin ring associated
+short_name: MOZART1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12554
+counters:
+  proteins: 2874
+  matches: 2874
+  proteomes: 2400
+  taxa: 6757
+  structures: 36
+  alphafold_models: 2443
+  domain_architectures: 61
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022214
+description: The name MOZART is derived from letters of 'mitotic-spindle organizing proteins associated
+  with a ring of gamma-tubulin'. This family operates as part of the gamma-tubulin ring complex, gamma-TuRC,
+  one of the complexes necessary for chromosome segregation. This complex is located at centrosomes and
+  mediates the formation of bipolar spindles in mitosis; it consists of six subunits. However, unlike
+  the other four known subunits, this family does not carry the conserved 'Spc97-Spc98' GCP domain, so
+  the TUBCGP nomenclature cannot be used for it. MOZART1 is required for gamma-TuRC recruitment to centrosomes
+  [[cite:PUB00056001]].

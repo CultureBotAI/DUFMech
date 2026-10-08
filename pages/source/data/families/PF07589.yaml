@@ -1,0 +1,28 @@
+id: Pfam:PF07589
+pfam_id: PF07589
+name: PEP-CTERM protein-sorting motif
+short_name: PEP_exosort_dom
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07589
+counters:
+  proteins: 18700
+  matches: 18734
+  proteomes: 1716
+  taxa: 3064
+  structures: 0
+  alphafold_models: 12061
+  domain_architectures: 252
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013424
+description: This entry describes a 25-residue motif that includes an invariant Pro-Glu-Pro (PEP) motif,
+  a thirteen-residue strongly hydrophobic sequence likely to span the membrane, and a five-residue strongly
+  basic motif that often contains four Arg residues. In most cases, this motif is found within nine residues
+  of the C-terminal end of the protein. Proteins containing this motif typically have signal sequences
+  at the N-terminal [[cite:PUB00034422],[cite:PUB00105164]].

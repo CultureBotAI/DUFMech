@@ -1,0 +1,27 @@
+id: Pfam:PF13020
+pfam_id: PF13020
+name: Protein NO VEIN, C-terminal
+short_name: NOV_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13020
+counters:
+  proteins: 4311
+  matches: 4314
+  proteomes: 3281
+  taxa: 7097
+  structures: 0
+  alphafold_models: 1929
+  domain_architectures: 90
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024975
+description: This domain of unknown function is found at the C-terminal of Protein NO VEIN from Arabidopsis,
+  a protein essential for cell fate determination during embryogenesis [[cite:PUB00085159]]. It mediates
+  this process through an auxin-dependent pathway [[cite:PUB00097628]]. This domain is also found in some
+  restriction endonucleases.

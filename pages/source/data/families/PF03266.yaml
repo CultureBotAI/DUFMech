@@ -1,0 +1,29 @@
+id: Pfam:PF03266
+pfam_id: PF03266
+name: NTPase
+short_name: NTPase_1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03266
+counters:
+  proteins: 2847
+  matches: 2897
+  proteomes: 2218
+  taxa: 6361
+  structures: 2
+  alphafold_models: 2351
+  domain_architectures: 41
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004948
+description: This domain is found across all species from bacteria to human, and the function was determined
+  first in a hyperthermophilic bacterium to be an NTPase [[cite:PUB00055956]]. The structure of one member-sequence
+  represents a variation of the RecA fold, and implies that the function might be that of a DNA/RNA modifying
+  enzyme [[cite:PUB00032635]]. The sequence carries both a Walker A and Walker B motif which together
+  are characteristic of ATPases or GTPases. The protein exhibits an increased expression profile in human
+  liver cholangiocarcinoma when compared to normal tissue [[cite:PUB00041591]].

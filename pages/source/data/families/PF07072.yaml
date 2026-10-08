@@ -1,0 +1,25 @@
+id: Pfam:PF07072
+pfam_id: PF07072
+name: Cell division protein
+short_name: ZapD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07072
+counters:
+  proteins: 2624
+  matches: 2624
+  proteomes: 2559
+  taxa: 3615
+  structures: 5
+  alphafold_models: 1763
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009777
+description: Cell division protein ZapD enhances FtsZ-ring assembly. It directly interacts with FtsZ and
+  promotes bundling of FtsZ protofilaments, with a reduction in FtsZ GTPase activity [[cite:PUB00060570]].

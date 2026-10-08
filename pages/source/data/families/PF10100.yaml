@@ -1,0 +1,29 @@
+id: Pfam:PF10100
+pfam_id: PF10100
+name: Staphylopine dehydrogenase
+short_name: Staph_opine_DH
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10100
+counters:
+  proteins: 231
+  matches: 231
+  proteomes: 218
+  taxa: 387
+  structures: 13
+  alphafold_models: 128
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR016935
+description: A member of this family has been identified in Staphylococcus aureus as a dehydrogenase involved
+  in the synthesis of a new metallophore,named staphylopine. It is encoded as part of an operon that also
+  includes an histidine racemase and an enzyme distantly related to nicotianamine synthase [[cite:PUB00081137]].
+  Staphylopine is involved in metal acquisition, chelating nickel, cobalt, zinc, copper or iron, depending
+  on the growing conditions. Metal acquisition is vital for bacteria growing in metal-scarce environments,
+  such as inside a host in the case of pathogens.

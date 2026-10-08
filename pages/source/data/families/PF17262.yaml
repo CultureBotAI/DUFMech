@@ -1,0 +1,33 @@
+id: Pfam:PF17262
+pfam_id: PF17262
+name: Cas6b C-terminal domain
+short_name: Cas6b_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17262
+counters:
+  proteins: 251
+  matches: 251
+  proteomes: 213
+  taxa: 538
+  structures: 2
+  alphafold_models: 202
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR020209
+description: Clustered, regularly interspaced, short palindromic repeat (CRISPR) loci play a pivotal role
+  in the prokaryotic host defense system against invading genetic materials. The CRISPR loci are transcribed
+  to produce CRISPR RNAs (crRNAs), which form interference complexes with CRISPR-associated (Cas) proteins
+  to target the invading nucleic acid for degradation [[cite:PUB00085375]]. Four Cas proteins (Cas5, Cas6b,
+  Cas7 and Cas8b) are proposed to form a Type I-B Cascade complex that mediates the antiviral defense
+  [[cite:PUB00085160]]. This is the C-terminal domain found in Cas6b proteins. Cas6b is a member of Cas6
+  RNA processing endoribonucleases found in bacteria and archaea whose RNA substrates have a wide range
+  of structural features. Cocrystal structures of Cas6 from Methanococcus maripaludis (MmCas6b) bound
+  with its repeat RNA revealed a dual-site binding structure and a cleavage site conformation poised for
+  phosphodiester bond breakage [[cite:PUB00085376]].

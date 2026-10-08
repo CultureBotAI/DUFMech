@@ -1,0 +1,32 @@
+id: Pfam:PF19877
+pfam_id: PF19877
+name: Cell division protein PerM
+short_name: PerM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19877
+counters:
+  proteins: 3622
+  matches: 3640
+  proteomes: 3589
+  taxa: 4293
+  structures: 0
+  alphafold_models: 2046
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045931
+description: PerM is an integral membrane protein containing 8-10 transmembrane helices that is highly
+  conserved amongst mycobacteria and actinobacteria but absent from other bacterial lineages. The protein
+  functions as an essential component of the mycobacterial divisome complex, directly interacting with
+  FtsB through conserved hydrophobic residues. PerM localises to division septa where it modulates cell
+  wall synthesis, with activity critically dependent on magnesium availability. Disruption results in
+  magnesium-dependent growth defects, cell elongation, hypersensitivity to beta-lactam antibiotics, and
+  severe attenuation during chronic infections. The protein appears to integrate environmental stress
+  signals, enabling mycobacteria to regulate cell division in response to host-induced stress during persistent
+  infection.

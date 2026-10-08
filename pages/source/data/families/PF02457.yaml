@@ -1,0 +1,36 @@
+id: Pfam:PF02457
+pfam_id: PF02457
+name: DisA bacterial checkpoint controller nucleotide-binding
+short_name: DAC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02457
+counters:
+  proteins: 11457
+  matches: 11457
+  proteomes: 9309
+  taxa: 14001
+  structures: 71
+  alphafold_models: 7613
+  domain_architectures: 47
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003390
+description: The DisA protein is a bacterial checkpoint protein that dimerises into an octameric complex.
+  The protein consists of three distinct domains. This domain is the first and is a globular, nucleotide-binding
+  region; the next 146-289 residues constitute the DisA-linker family, [pfam:PF10635], that consists of
+  an elongated bundle of three alpha helices (alpha-6, alpha-10, and alpha-11), one side of which carries
+  an additional three helices (alpha7-9), which thus forms a spine like-linker between domains 1 and 3.
+  The C-terminal residues, of domain 3, are represented by family HHH, [pfam:PF00633], the specific DNA-binding
+  domain. The octameric complex thus has structurally linked nucleotide-binding and DNA-binding HhH domains
+  and the nucleotide-binding domains are bound to a cyclic di-adenosine phosphate such that DisA is a
+  specific di-adenylate cyclase. This N-terminal domain has been identified as a diadenylate cyclase (DAC)
+  responsible for producing c-di-AMP from two molecules of ATP [[cite:PUB00109173]]. The di-adenylate
+  cyclase activity is strongly suppressed by binding to branched DNA, but not to duplex or single-stranded
+  DNA, suggesting a role for DisA as a monitor of the presence of stalled replication forks or recombination
+  intermediates via DNA structure-modulated c-di-AMP synthesis [[cite:PUB00044227]].

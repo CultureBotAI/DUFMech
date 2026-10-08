@@ -1,0 +1,28 @@
+id: Pfam:PF05769
+pfam_id: PF05769
+name: SIKE family
+short_name: SIKE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05769
+counters:
+  proteins: 2933
+  matches: 3127
+  proteomes: 1606
+  taxa: 5060
+  structures: 3
+  alphafold_models: 2613
+  domain_architectures: 44
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008555
+description: This family consists of several eukaryotic proteins. Suppressor of IKBKE 1 (SIKE) is a physiological
+  suppressor of IKK-epsilon and TBK1, which are two IKK-related kinases involved in virus- and TLR3-triggered
+  activation of interferon regulatory factor 3 (IRF-3). Other members of this family are circulating cathodic
+  antigen (CCA), found in Schistosoma mansoni (Blood fluke) [[cite:PUB00011317],[cite:PUB00059263]], and
+  FGFR1 oncogene partner 2, which may be involved in wound healing pathway [[cite:PUB00059262]].

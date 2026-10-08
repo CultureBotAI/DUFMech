@@ -1,0 +1,30 @@
+id: Pfam:PF05608
+pfam_id: PF05608
+name: RTE1-like
+short_name: RTE1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05608
+counters:
+  proteins: 3287
+  matches: 3707
+  proteomes: 1749
+  taxa: 5517
+  structures: 0
+  alphafold_models: 2837
+  domain_architectures: 54
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008496
+description: This entry, previously known as DUF778, represents RTE1 (REVERSION-TO-ETHYLENE SENSITIVITY1)
+  from Arabidopsis thaliana. RTE1 is positive regulator of the ETR1 ethylene receptor, leading to negative
+  regulation of ethylene responses.[[cite:PUB00092499],[cite:PUB00092500]]. This entry also includes Arabidopsis
+  RTE1 homologue, RTH, which acts via RTE1 in regulating ethylene responses and signaling [[cite:PUB00092501]].
+  This domain is also present in TMEM222 from animals which in humans plays a role in brain development
+  and function and mutations result in autosomal recessive neurodevelopmental disorder. This domain has
+  been identified as structurally similar to peptidase C97 domain ([pfam:PF05903]).

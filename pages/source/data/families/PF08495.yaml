@@ -1,0 +1,27 @@
+id: Pfam:PF08495
+pfam_id: PF08495
+name: FIST N domain
+short_name: FIST
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08495
+counters:
+  proteins: 6777
+  matches: 6781
+  proteomes: 5036
+  taxa: 8763
+  structures: 0
+  alphafold_models: 4552
+  domain_architectures: 104
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013702
+description: The FIST N domain is a novel sensory domain, which is present in signal transduction proteins
+  from Bacteria, Archaea and Eukarya. Chromosomal proximity of FIST-encoding genes to those coding for
+  proteins involved in amino acid metabolism and transport suggest that FIST domains bind small ligands,
+  such as amino acids [[cite:PUB00044261]].

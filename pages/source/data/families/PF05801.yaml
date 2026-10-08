@@ -1,0 +1,27 @@
+id: Pfam:PF05801
+pfam_id: PF05801
+name: Lagovirus minor capsid protein VP2
+short_name: VP2_lagovir
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05801
+counters:
+  proteins: 129
+  matches: 129
+  proteomes: 2
+  taxa: 21
+  structures: 0
+  alphafold_models: 2
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008558
+description: This entry includes minor capsid protein VP2 from Rabbit hemorrhagic disease virus and related
+  lagoviruses. VP2 is minor structural protein that forms a portal-like structure at a unique three-fold
+  axis of symmetry, following binding to the host receptor. The channel formed by VP2 may allow the delivery
+  of the viral genome through the host endosomal membrane.

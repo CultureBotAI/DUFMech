@@ -1,0 +1,29 @@
+id: Pfam:PF10972
+pfam_id: PF10972
+name: Peptidoglycan-binding protein, CsiV
+short_name: CsiV
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10972
+counters:
+  proteins: 1405
+  matches: 1610
+  proteomes: 1402
+  taxa: 1889
+  structures: 0
+  alphafold_models: 864
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021241
+description: CsiV, a small periplasmic protein (cell-shape integrity in Vibrio), is essential for growth
+  of Vibrio cholerae in the presence of DAA, non-canonical amino-acids, the typical components of peptidoglycan
+  side-chains in Vibrio cholerae. CsiV interacts with LpoA, the lipoprotein activator of penicillin-binding-protein1A
+  that is necessary for mediating the assembly of peptidoglycan. CsiV acts through LpoA to promote peptidoglycan
+  biogenesis in V. cholerae and other vibrio species as well as in the other genera where this protein
+  is found [[cite:PUB00075620]].

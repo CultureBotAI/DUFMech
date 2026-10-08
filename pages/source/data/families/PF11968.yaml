@@ -1,0 +1,27 @@
+id: Pfam:PF11968
+pfam_id: PF11968
+name: 25S rRNA (adenine(2142)-N(1))-methyltransferase, Bmt2
+short_name: Bmt2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11968
+counters:
+  proteins: 2402
+  matches: 2466
+  proteomes: 2182
+  taxa: 5584
+  structures: 8
+  alphafold_models: 2062
+  domain_architectures: 40
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021867
+description: This entry represents Bmt2 and its homogues. In Saccharomyces cerevisiae, Bmt2 is a nucleolar
+  S-adenosylmethionine-dependent rRNA methyltransferase that is responsible for the N-1-methyl-adenosine
+  base modification of 25S rRNA [[cite:PUB00066965]].It specifically methylates the N1 position of adenine
+  2142 in 25S rRNA [[cite:PUB00066965]].

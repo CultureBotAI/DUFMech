@@ -1,0 +1,29 @@
+id: Pfam:PF08924
+pfam_id: PF08924
+name: Rv2525c-like, glycoside hydrolase-like domain
+short_name: Rv2525c_GlyHyd-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08924
+counters:
+  proteins: 3876
+  matches: 3876
+  proteomes: 2610
+  taxa: 3609
+  structures: 5
+  alphafold_models: 2197
+  domain_architectures: 98
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015020
+description: This domain is found in uncharacterised bacterial proteins, including the putative peptidoglycan
+  hydrolase Rv2525c from Mycobacterium tuberculosis [[cite:PUB00100887],[cite:PUB00100886]]. It has been
+  proposed to function as a peptidoglycan hydrolase with glycosidase activity regarding structural studies
+  showed that this domain has a typical TIM-barrel-like fold, characteristic of glycoside hydrolases [[cite:PUB00100887]].
+  However, it displays esterase activity toward p-nitrophenyl esters of various acyl chain length in vitro
+  [[cite:PUB00100886]].

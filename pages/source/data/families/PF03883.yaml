@@ -1,0 +1,26 @@
+id: Pfam:PF03883
+pfam_id: PF03883
+name: Peroxide stress protein YaaA
+short_name: H2O2_YaaD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03883
+counters:
+  proteins: 11056
+  matches: 11068
+  proteomes: 10769
+  taxa: 14641
+  structures: 1
+  alphafold_models: 6915
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005583
+description: YaaA is a key element of the stress response to H2O2. It acts by reducing the level of intracellular
+  iron levels after peroxide stress, thereby attenuating the Fenton reaction and the DNA damage that this
+  would cause [[cite:PUB00077122]]. The molecular mechanism of action is not known.

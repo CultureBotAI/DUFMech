@@ -1,0 +1,29 @@
+id: Pfam:PF05667
+pfam_id: PF05667
+name: CCDC22 protein coiled-coil region
+short_name: CCDC22_CC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05667
+counters:
+  proteins: 1802
+  matches: 1924
+  proteomes: 1233
+  taxa: 4130
+  structures: 4
+  alphafold_models: 1532
+  domain_architectures: 29
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR048348
+description: Human coiled-coil domain-containing protein 22 (CCDC22) is involved in regulation of NF-kappa-B
+  signalling; the function may involve association with COMMD8 and a CUL1-dependent E3 ubiquitin ligase
+  complex [[cite:PUB00077065]]. It is part of the COMMD/CCDC22/CCDC93 (CCC) complex, which interacts with
+  the multisubunit WASH complex required for endosomal deposition of F-actin and cargo trafficking in
+  conjunction with the retromer [[cite:PUB00077066]]. This entry also includes CCDC22 homologues from
+  animals and plants.

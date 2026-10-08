@@ -1,0 +1,29 @@
+id: Pfam:PF05708
+pfam_id: PF05708
+name: Permuted papain-like amidase enzyme, YaeF/YiiX, C92 family
+short_name: Peptidase_C92
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05708
+counters:
+  proteins: 3259
+  matches: 3260
+  proteomes: 2690
+  taxa: 4781
+  structures: 2
+  alphafold_models: 2152
+  domain_architectures: 32
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024453
+description: Amidase_YiiX is a family of permuted papain-like amidases. It has amidase specificity for
+  the amide bond between a lipid and an amino acid (or peptide). From the structure, a tetramer, each
+  monomer is made up of a layered alpha-beta fold with a central, 6-stranded, antiparallel beta-sheet
+  that is protected by helices on either side. The catalytic Cys154 in UniProtKB:Q74NK7, PDB:3kw0, is
+  located on the N-terminus of helix alphaF. The two additional helices located above Cys154 contribute
+  to the formation of the active site, where the lysine ligand is bound [[cite:PUB00075488]].

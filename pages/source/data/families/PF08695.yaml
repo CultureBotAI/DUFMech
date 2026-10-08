@@ -1,0 +1,34 @@
+id: Pfam:PF08695
+pfam_id: PF08695
+name: Cytochrome oxidase complex assembly protein 1
+short_name: Coa1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08695
+counters:
+  proteins: 3587
+  matches: 3591
+  proteomes: 3174
+  taxa: 7878
+  structures: 0
+  alphafold_models: 2908
+  domain_architectures: 44
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014807
+description: Coa1 is an inner mitochondrial membrane protein that associates with Shy1 and is required
+  for cytochrome oxidase complex IV assembly. It contains a conserved hydrophobic segment (amino acids
+  74-92) with the potential to form a membrane-spanning helix. The N-terminus of Coa1 is rich in positively
+  charged amino acids and could form an amphipathic alpha helix, characteristic of a mitochondrial presequence.
+  A cleavage site for the mitochondrial processing peptidase is predicted adjacent to the presequence.
+  Upon in vitro import into mitochondria, Coa1 is processed to a mature form, indicating that it possesses
+  a cleavable presequence [[cite:PUB00053933]]. The eukaryotic cytochrome oxidase complex consists of
+  12-13 subunits, with three mitochondrial encoded subunits, Cox1-Cox3, forming the core enzyme. Translation
+  of the Cox1 transcript requires the two promoters, Pet309 and Mss51, and the latter has an additional
+  role in translational elongation. Coa1 is necessary for linking the activity of Mss51 to Cox1 insertion
+  into the assembly complex [[cite:PUB00053932]].

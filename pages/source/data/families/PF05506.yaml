@@ -1,0 +1,25 @@
+id: Pfam:PF05506
+pfam_id: PF05506
+name: Bacterial phospholipase C, C-terminal domain
+short_name: PLipase_C_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05506
+counters:
+  proteins: 5406
+  matches: 9471
+  proteomes: 2883
+  taxa: 3681
+  structures: 3
+  alphafold_models: 2864
+  domain_architectures: 31
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008475
+description: This domain is found, normally as a tandem repeat, at the C-terminus of bacterial phospholipase
+  C proteins.

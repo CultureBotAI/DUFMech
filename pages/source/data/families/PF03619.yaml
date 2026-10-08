@@ -1,0 +1,26 @@
+id: Pfam:PF03619
+pfam_id: PF03619
+name: Organic solute transporter Ostalpha
+short_name: Solute_trans_a
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03619
+counters:
+  proteins: 16376
+  matches: 16888
+  proteomes: 3347
+  taxa: 8907
+  structures: 10
+  alphafold_models: 14134
+  domain_architectures: 210
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005178
+description: This family is a transmembrane organic solute transport protein. In vertebrates these proteins
+  form a complex with Ostbeta, and function as bile transporters [[cite:PUB00057471]]. In plants they
+  may transport brassinosteroid-like compounds and act as regulators of cell death [[cite:PUB00057472]].

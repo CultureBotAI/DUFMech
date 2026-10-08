@@ -1,0 +1,30 @@
+id: Pfam:PF05670
+pfam_id: PF05670
+name: NFACT protein RNA binding domain
+short_name: NFACT-R_1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05670
+counters:
+  proteins: 13115
+  matches: 13157
+  proteomes: 8466
+  taxa: 17368
+  structures: 20
+  alphafold_models: 10207
+  domain_architectures: 128
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008532
+description: 'This domain occurs in proteins that have been annotated as Fibronectin/fibrinogen binding
+  protein by similarity. This annotation comes from [swissprot:O34693] where the N-terminal region is
+  involved in this activity [[cite:PUB00011315]]. It is an RNA binding domain of the NFACT (NEMF, FbpA,
+  Caliban, and Tae2) proteins. This NFACT-R family is found in two eukaryotic gene contexts: fused to
+  the NFACT-N and NFACT-C domains in the NFACT protein involved in the ribosomal quality control pathway
+  which contributes to CAT-tailing and as a standalone domain [[cite:PUB00091027]]. Additionally this
+  domain contains a conserved motif D/E-X-W/Y-X-H that may be functionally important.'

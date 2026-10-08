@@ -1,0 +1,26 @@
+id: Pfam:PF07155
+pfam_id: PF07155
+name: ECF-type riboflavin transporter, S component
+short_name: ECF-ribofla_trS
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07155
+counters:
+  proteins: 4492
+  matches: 4500
+  proteomes: 2762
+  taxa: 4442
+  structures: 1
+  alphafold_models: 3045
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009825
+description: This family is the substrate-binding component (S component) of the energy coupling-factor
+  (ECF)-type riboflavin transporter. It is a transmembrane protein which binds riboflavin, and is responsible
+  for riboflavin-uptake by cells [[cite:PUB00109144],[cite:PUB00057921]].

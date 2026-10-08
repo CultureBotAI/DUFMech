@@ -1,0 +1,25 @@
+id: Pfam:PF07009
+pfam_id: PF07009
+name: NusG domain II
+short_name: NusG_II
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07009
+counters:
+  proteins: 2048
+  matches: 2048
+  proteomes: 1785
+  taxa: 3132
+  structures: 4
+  alphafold_models: 1414
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: This domain is found in some NusG proteins where it forms domain II [[cite:PUB00017610]].
+  However most NusG proteins are missing this domain. In other cases this domain is found in isolation
+  [[cite:PUB00075435]]. The function of this domain is unknown.

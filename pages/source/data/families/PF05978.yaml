@@ -1,0 +1,33 @@
+id: Pfam:PF05978
+pfam_id: PF05978
+name: Ion channel regulatory protein UNC-93
+short_name: UNC-93
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05978
+counters:
+  proteins: 11159
+  matches: 11823
+  proteomes: 2949
+  taxa: 8050
+  structures: 0
+  alphafold_models: 9617
+  domain_architectures: 156
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010291
+description: The proteins in this family are represented by UNC-93 from Caenorhabditis elegans and also
+  includes protein unc-93 homologue A (UNC93A), protein unc-93 homologue B1 (UNC93B1), and UNC93-like
+  protein MFSD11 (also called major facilitator superfamily domain- containing protein 11 or protein ET).
+  UNC-93 colocalizes with SUP-10 and SUP-9 within muscle cells. UNC-93 acts as a regulatory subunit of
+  a multi-subunit potassium channel complex that may function in coordinating muscle contraction in C.
+  elegans [[cite:PUB00053696]]. UNC93B1 controls intracellular trafficking and transport of a subset of
+  Toll-like receptors (TLRs), including TLR3, TLR7 and TLR9, from the endoplasmic reticulum to endolysosomes
+  where they can engage pathogen nucleotides and activate signaling cascades [[cite:PUB00097046]]. MFSD11
+  is ubiquitously expressed in the periphery and the central nervous system of mice, where it is expressed
+  in excitatory and inhibitory mouse brain neurons [[cite:PUB00097045]].

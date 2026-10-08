@@ -1,0 +1,28 @@
+id: Pfam:PF06603
+pfam_id: PF06603
+name: UpxZ family of transcription anti-terminator antagonists
+short_name: UpxZ
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06603
+counters:
+  proteins: 156
+  matches: 156
+  proteomes: 28
+  taxa: 49
+  structures: 1
+  alphafold_models: 125
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010570
+description: The UpxZ family of proteins acts to inhibit transcription of heterologous capsular polysaccharide
+  loci in Bacteroides species by interfering with the action of the UpxY family of transcription anti-terminators.
+  As antagonists of polysaccharide locus-specific UpxY transcription anti-terminators, the UpxZ proteins
+  exert a hierarchical level of regulation, insuring that only one of the multiple phase-variable capsular
+  polysaccharide loci per cell characteristic of this genus is transcribed at a time.

@@ -1,0 +1,25 @@
+id: Pfam:PF07642
+pfam_id: PF07642
+name: Putative beta-barrel porin-2, OmpL-like. bbp2
+short_name: BBP2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07642
+counters:
+  proteins: 3605
+  matches: 3609
+  proteomes: 2372
+  taxa: 3519
+  structures: 0
+  alphafold_models: 2405
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011486
+description: BBP2 is a family of putative porin proteins that are likely to be outer membrane beta barrel
+  proteins porins.

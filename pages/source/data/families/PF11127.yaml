@@ -1,0 +1,28 @@
+id: Pfam:PF11127
+pfam_id: PF11127
+name: Inner membrane protein YgaP-like, transmembrane domain
+short_name: YgaP-like_TM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11127
+counters:
+  proteins: 11110
+  matches: 11132
+  proteomes: 7897
+  taxa: 11931
+  structures: 1
+  alphafold_models: 7483
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021309
+description: 'This domain is found in proteins from bacteria and archaea, including Inner membrane protein
+  YgaP from Escherichia coli, a membrane protein with a rhodanese domain (Pfam: PF00581) that may have
+  sulfurtransferase activity. YgaP adopts a dimeric assembly. This entry represents the transmembrane
+  domain. It consist of two slightly tilted alpha-helices [[cite:PUB00100968]]. Structure prediction suggests
+  that this region may homodimerise to form a 4 helical bundle.'

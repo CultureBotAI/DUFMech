@@ -1,0 +1,31 @@
+id: Pfam:PF11916
+pfam_id: PF11916
+name: Vacuolar protein 14 C-terminal Fig4p binding
+short_name: Vac14_Fig4_bd
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11916
+counters:
+  proteins: 4615
+  matches: 4765
+  proteomes: 3255
+  taxa: 8564
+  structures: 0
+  alphafold_models: 3826
+  domain_architectures: 86
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021841
+description: 'Vac14 is a scaffold for the Fab1 kinase complex, a complex that allows for the dynamic interconversion
+  of PI3P and PI(3,5)P2p (phosphoinositide phosphate (PIP) lipids, that are generated transiently on the
+  cytoplasmic face of selected intracellular membranes). This interconversion is regulated by at least
+  five proteins in yeast: the lipid kinase Fab1p, lipid phosphatase Fig4p, the Fab1p activator Vac7p,
+  the Fab1p inhibitor Atg18p, and Vac14p, a protein required for the activity of both Fab1p and Fig4p.
+  The C-terminal region of Vac14 binds to Fig4p. The full length Vac14 in yeasts is likely to be a protein
+  carrying a succession of HEAT repeats, most of which have now degenerated. This regulatory system is
+  crucial for the proper functioning of the mammalian nervous system.'

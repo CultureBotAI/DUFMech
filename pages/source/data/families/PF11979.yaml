@@ -1,0 +1,27 @@
+id: Pfam:PF11979
+pfam_id: PF11979
+name: Smad anchor for receptor activation-like, C-terminal
+short_name: SARA_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11979
+counters:
+  proteins: 3470
+  matches: 3678
+  proteomes: 1225
+  taxa: 3946
+  structures: 1
+  alphafold_models: 1641
+  domain_architectures: 42
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022557
+description: This domain is found at the C-terminal end of a group of animal zinc finger FYVE domain-containing
+  proteins, including Smad anchor for receptor activation (SARA), which plays a significant role in TGF-mediated
+  signalling. This domain is involved in the interaction with the TGF-beta receptor [[cite:PUB00042868],[cite:PUB00024191]].
+  This domain is found associated with [pfam:PF01363].

@@ -1,0 +1,32 @@
+id: Pfam:PF17659
+pfam_id: PF17659
+name: RPA-related protein RADX N-terminal domain
+short_name: RADX
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17659
+counters:
+  proteins: 614
+  matches: 615
+  proteomes: 402
+  taxa: 1399
+  structures: 2
+  alphafold_models: 534
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR061920
+description: This entry represents the N-terminal domain of a family of proteins that includes RPA-related
+  protein RADX from animals, the human member is also known as CXorf57. High-throughput sequencing used
+  to identify genes driving tumorigenesis in Avian leukosis virus (ALV)-induced B-cell lymphomas, showed
+  CXorf57 as the 10th most frequently targeted common integration site by ALV. ALV induces B-cell lymphoma
+  and other neoplasms in chickens by integrating within or near cancer genes and perturbing their expression
+  [[cite:PUB00138338]]. RADX is a replication factor A protein-like (RPA-like), single-stranded DNA binding
+  protein recruited to replication forks to maintain genome stability [[cite:PUB00091321]]. It also modulates
+  stalled fork protection by antagonising RAD51 [[cite:PUB00091322]]. These proteins consist of four tandem
+  OB fold domains.

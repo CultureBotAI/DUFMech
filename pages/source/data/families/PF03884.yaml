@@ -1,0 +1,28 @@
+id: Pfam:PF03884
+pfam_id: PF03884
+name: DNA gyrase inhibitor YacG
+short_name: YacG
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03884
+counters:
+  proteins: 6133
+  matches: 6133
+  proteomes: 6051
+  taxa: 8377
+  structures: 2
+  alphafold_models: 4036
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005584
+description: YacG inhibits all the catalytic activities of DNA gyrase by preventing its interaction with
+  DNA. It acts by binding directly to the C-terminal domain of GyrB, which probably disrupts DNA binding
+  by the gyrase [[cite:PUB00060604]]. YacG has been shown to bind zinc and contains the structural motifs
+  typical of zinc-binding proteins [[cite:PUB00022116]]. The conserved four cysteine motif in this protein
+  (-C-X(2)-C-X(15)-C-X(3)-C-) is not found in other zinc-binding proteins with known structures.

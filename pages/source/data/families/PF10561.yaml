@@ -1,0 +1,25 @@
+id: Pfam:PF10561
+pfam_id: PF10561
+name: C2orf69
+short_name: C2orf69
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10561
+counters:
+  proteins: 1690
+  matches: 2176
+  proteomes: 1374
+  taxa: 4434
+  structures: 0
+  alphafold_models: 1437
+  domain_architectures: 43
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018881
+description: This family includes C2orf69 from human, previously known as UPF0565, which is an important
+  regulator of human mitochondrial function and may also influence other metabolic pathways [[cite:PUB00098152]].

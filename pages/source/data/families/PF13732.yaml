@@ -1,0 +1,26 @@
+id: Pfam:PF13732
+pfam_id: PF13732
+name: ATP-binding protein DrrA1-3-like, C-terminal domain
+short_name: DrrA1-3_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13732
+counters:
+  proteins: 20925
+  matches: 20927
+  proteomes: 9012
+  taxa: 12965
+  structures: 5
+  alphafold_models: 13059
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025302
+description: This domain is found at the C-terminal end of Daunorubicin resistance ATP-binding protein
+  DrrA1-3 from Streptomyces coeruleorubidus and related prokaryotic sequences. DrrA1-3 are part of the
+  ABC transporter complex DrrA3B3 involved in daunorubicin efflux [[cite:PUB00158909]].

@@ -1,0 +1,28 @@
+id: Pfam:PF02576
+pfam_id: PF02576
+name: RimP N-terminal domain
+short_name: RimP_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02576
+counters:
+  proteins: 17354
+  matches: 17361
+  proteomes: 16898
+  taxa: 24395
+  structures: 13
+  alphafold_models: 11476
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR028989
+description: This entry represents the N-terminal domain of the ribosome maturation factor RimP (also
+  known as yhbC). RimP facilitates the maturation of the 30S ribosomal subunit [[cite:PUB00053910]]. The
+  N-terminal domain contains two alpha-helices and a three-stranded beta-sheet. It is suggested that the
+  N-terminal domain of SP14.3 (RimP orthologue) could function as a protein module that binds to other
+  proteins, especially those that contain highly positively charged surfaces. [[cite:PUB00021814]].

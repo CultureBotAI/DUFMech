@@ -1,0 +1,28 @@
+id: Pfam:PF13826
+pfam_id: PF13826
+name: Monooxygenase af470-like
+short_name: Monooxy_af470-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13826
+counters:
+  proteins: 2841
+  matches: 2846
+  proteomes: 2518
+  taxa: 4153
+  structures: 0
+  alphafold_models: 1872
+  domain_architectures: 20
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025444
+description: This entry includes Monooxygenase af470-like from Aspergillus fumigatus, which is part of
+  the fma gene cluster that mediates the biosynthesis of fumagillin, a meroterpenoid with numerous biological
+  activities [[cite:PUB00081410]]. It has been suggested that af470 mediates the oxidative cleavage of
+  the terminal alkene of the dodecapentaenoate side chain into the carboxylic acid present in fumagillin
+  [[cite:PUB00081411]].

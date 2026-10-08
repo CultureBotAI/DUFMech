@@ -1,0 +1,27 @@
+id: Pfam:PF11963
+pfam_id: PF11963
+name: Betacoronavirus, lineage A, NSP1
+short_name: B-CoV_A_NSP1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11963
+counters:
+  proteins: 165
+  matches: 184
+  proteomes: 6
+  taxa: 73
+  structures: 0
+  alphafold_models: 11
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022570
+description: This family the N-terminal region of the Betacoronavirus polyprotein which contains non-structural
+  protein 1 (Nsp1) from Betacoronavirus lineage A. This protein is important for viral replication and
+  pathogenesis [[cite:PUB00094116],[cite:PUB00097618]]. It suppresses the host innate immune functions
+  by inhibiting type I interferon expression and host antiviral signalling pathways.

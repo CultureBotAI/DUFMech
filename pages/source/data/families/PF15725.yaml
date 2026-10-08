@@ -1,0 +1,25 @@
+id: Pfam:PF15725
+pfam_id: PF15725
+name: Renal cancer differentiation gene 1 protein
+short_name: RCDG1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15725
+counters:
+  proteins: 334
+  matches: 337
+  proteomes: 289
+  taxa: 972
+  structures: 0
+  alphafold_models: 293
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031457
+description: This family includes human protein C4orf46, also known as renal cancer differentiation gene
+  1 protein (RCDG1) [[cite:PUB00075868]].

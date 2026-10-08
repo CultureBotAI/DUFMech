@@ -1,0 +1,35 @@
+id: Pfam:PF01595
+pfam_id: PF01595
+name: Cyclin M transmembrane N-terminal domain
+short_name: CNNM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01595
+counters:
+  proteins: 56844
+  matches: 56920
+  proteomes: 21107
+  taxa: 33615
+  structures: 4
+  alphafold_models: 38019
+  domain_architectures: 249
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002550
+description: This transmembrane domain is found in metal transporter proteins such as cyclin M 1/2 (CNNM).
+  CNNMs are integral membrane proteins that are conserved from bacteria to humans. CNNM family members
+  influence metal ion homeostasis through mechanisms that may not involve direct membrane transport of
+  the ions. Structurally, CNNMs are complex proteins that contain an extracellular N-terminal domain preceding
+  a transmembrane domain, a 'Bateman module', which consists of two cystathionine- beta-synthase (CBS)
+  domains [pfam:PF00571], and a C-terminal cNMP (cyclic nucleotide monophosphate) binding domain [[cite:PUB00088668],[cite:PUB00088669],[cite:PUB00088670],[cite:PUB00088671]].
+  This entry describes the CNNM transmembrane domain which contains four hydrophobic regions and forms
+  a dimer through hydrophobic contacts between TM2 and TM3, in which each chain is composed of three transmembrane
+  helices (TM1-3), a pair of short helices exposed on the intracellular side, and a juxtamembrane (JM)
+  helix that forms a belt-like structure [[cite:PUB00088669],[cite:PUB00098586]]. The homodimer adopts
+  an inward-facing conformation with a negatively charged cavity containing a conserved pi-helical turn
+  in TM3 that coordinates a Mg2 ion [[cite:PUB00098586]].

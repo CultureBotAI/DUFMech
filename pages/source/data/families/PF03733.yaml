@@ -1,0 +1,27 @@
+id: Pfam:PF03733
+pfam_id: PF03733
+name: Inner membrane component domain
+short_name: YccF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03733
+counters:
+  proteins: 7675
+  matches: 12748
+  proteomes: 7046
+  taxa: 11783
+  structures: 0
+  alphafold_models: 5222
+  domain_architectures: 30
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005185
+description: Domain occurs as one or more copies in bacterial and eukaryotic proteins. These are membrane
+  proteins of four TM regions, two appearing in each of the two copies when both are present. Many of
+  the latter members also carry the sodium/calcium exchanger protein family [pfam:PF01699], which have
+  multipass membrane regions.

@@ -1,0 +1,26 @@
+id: Pfam:PF14858
+pfam_id: PF14858
+name: Cilia- and flagella-associated protein 54
+short_name: CFAP54_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14858
+counters:
+  proteins: 963
+  matches: 1051
+  proteomes: 665
+  taxa: 2319
+  structures: 3
+  alphafold_models: 372
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027912
+description: This domain family is found in eukaryotes, and is typically between 542 and 565 amino acids
+  in length. This entry represents the N-terminal region of the cilia- and flagella-associated protein
+  54 which is required for assembly and function of cilia and flagella.

@@ -1,0 +1,28 @@
+id: Pfam:PF06047
+pfam_id: PF06047
+name: NF-kappa-B-activating protein C-terminal domain
+short_name: Nkap_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06047
+counters:
+  proteins: 2915
+  matches: 2925
+  proteomes: 2230
+  taxa: 6580
+  structures: 4
+  alphafold_models: 2470
+  domain_architectures: 67
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009269
+description: This is the C-terminal domain found in NF-kappa-B-activating protein (Nkap) and a hypothetical
+  open reading frame on chromosome 6, c6orf194. Functional studies in Nkap indicate that this domain is
+  the HDAC3 binding domain and is required for transcriptional repression [[cite:PUB00075800]]. Nkap functions
+  as a transcriptional repressor on Notch target genes, and is required for T cell development and acquisition
+  of functional competency [[cite:PUB00075800],[cite:PUB00075801],[cite:PUB00075802]].

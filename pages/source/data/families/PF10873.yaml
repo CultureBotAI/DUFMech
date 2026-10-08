@@ -1,0 +1,25 @@
+id: Pfam:PF10873
+pfam_id: PF10873
+name: Cysteine and tyrosine-rich protein 1
+short_name: CYYR1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10873
+counters:
+  proteins: 800
+  matches: 810
+  proteomes: 621
+  taxa: 1953
+  structures: 0
+  alphafold_models: 707
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022640
+description: Members in this family of proteins are annotated as Cysteine and tyrosine-rich protein 1,
+  however currently no function is known [[cite:PUB00053891]].

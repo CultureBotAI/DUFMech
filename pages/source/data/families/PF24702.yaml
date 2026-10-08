@@ -1,0 +1,27 @@
+id: Pfam:PF24702
+pfam_id: PF24702
+name: Bacterial E2-like ubiquitin protein BilB
+short_name: BilB-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24702
+counters:
+  proteins: 90
+  matches: 90
+  proteomes: 88
+  taxa: 250
+  structures: 0
+  alphafold_models: 63
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056082
+description: This protein family includes Bacterial E2-like ubiquitin protein BilB from Collimonas sp.
+  and similar short uncharacterised bacterial proteins. BilB is a component of the Bil (bacterial ISG15-like)
+  antiviral defense system. BilB probably accepts ubiquitin from the BilA-BilD (E1) complex and catalyses
+  its covalent attachment to target protein (CTF) [[cite:PUB00160357]].

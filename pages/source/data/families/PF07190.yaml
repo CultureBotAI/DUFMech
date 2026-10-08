@@ -1,0 +1,30 @@
+id: Pfam:PF07190
+pfam_id: PF07190
+name: Tumour necrosis factor receptor, SECRET domain
+short_name: CrmD_SECRET
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07190
+counters:
+  proteins: 87
+  matches: 87
+  proteomes: 19
+  taxa: 92
+  structures: 2
+  alphafold_models: 51
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010806
+description: This domain, named as the SECRET domain, is found at the C-terminal end of Tumour necrosis
+  factor receptor (CrmD) from the orthopoxvirus Ectromelia virus. This domain binds a subset of human
+  and mouse CC, CXC and C chemokines. It is thought to be responsible for the anti-chemokine activity
+  of CrmD. The SECRET domain monomer adopts a beta-sandwich fold, consisting of two parallel beta-sheets
+  with five and six anti-parallel strands, and the connecting loops [[cite:PUB00151577]]. This domain
+  is also found in other uncharacterised sequences from poxvirus, including Protein OPG192 and Protein
+  C8 from Vaccinia virus.

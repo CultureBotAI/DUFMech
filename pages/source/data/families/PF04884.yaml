@@ -1,0 +1,28 @@
+id: Pfam:PF04884
+pfam_id: PF04884
+name: Vitamin B6 photo-protection and homoeostasis domain
+short_name: UVB_sens_prot
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04884
+counters:
+  proteins: 7118
+  matches: 7323
+  proteomes: 2607
+  taxa: 7106
+  structures: 0
+  alphafold_models: 5934
+  domain_architectures: 166
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054549
+description: In plants, this domain plays a role in auxin-transport, plant growth and development [[cite:PUB00057512],[cite:PUB00057513]]
+  and appears to be expressed by all cells in the plant as well as in plastids. The family has been shown
+  to play a role in vitamin B6 photo-protection and homoeostasis in plants [[cite:PUB00066759]]. In line
+  with various literature findings, these proteins likely function as transporters and may be directly
+  involved in the transport of one or more forms of the vitamin.

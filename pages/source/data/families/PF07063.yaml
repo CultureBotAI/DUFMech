@@ -1,0 +1,29 @@
+id: Pfam:PF07063
+pfam_id: PF07063
+name: 2-oxoadipate dioxygenase/decarboxylase
+short_name: HGLS
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07063
+counters:
+  proteins: 5110
+  matches: 5475
+  proteomes: 4514
+  taxa: 7095
+  structures: 6
+  alphafold_models: 3348
+  domain_architectures: 39
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009770
+description: This entry represents a group of bacterial, fungal and plant sequences, including 2-oxoadipate
+  dioxygenase/decarboxylase (referred to as HGLS and YdcJ) from Escherichia coli. YdcJ, which is involved
+  in D-lysine metabolism, catalyses a successive decarboxylation and intramolecular hydroxylation of 2-oxoadipate
+  forming 2-hydroxyglutarate in a Fe(II) and oxygen-dependent manner. Members of this protein family are
+  thought to belong to the the vicinal oxygen chelate (VOC) superfamily [[cite:PUB00102155],[cite:PUB00102156]].
+  The structure has been solved (PDB:3iuz, PDB:6w1g).

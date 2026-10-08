@@ -1,0 +1,28 @@
+id: Pfam:PF02616
+pfam_id: PF02616
+name: Segregation and condensation protein ScpA
+short_name: SMC_ScpA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02616
+counters:
+  proteins: 14767
+  matches: 14810
+  proteomes: 14601
+  taxa: 20656
+  structures: 7
+  alphafold_models: 9617
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003768
+description: This is a family of proteins that from part of the condensin complex that regulates chromosome
+  segregation. This is the A subunit, which binds to the ScpB subunit, [pfam:PF04079], and SMC, [pfam:PF02463],
+  to participate in chromosomal partition during cell division [[cite:PUB00109191],[cite:PUB00109192]].
+  The condensin complex pulls DNA away from the mid-cell into both cell halves [[cite:PUB00020315]]. These
+  proteins are part of the Kleisin superfamily.

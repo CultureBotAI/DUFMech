@@ -1,0 +1,26 @@
+id: Pfam:PF07004
+pfam_id: PF07004
+name: Sperm-tail PG-rich repeat
+short_name: SHIPPO-rpt
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07004
+counters:
+  proteins: 9242
+  matches: 45358
+  proteomes: 1349
+  taxa: 4508
+  structures: 13
+  alphafold_models: 7665
+  domain_architectures: 245
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010736
+description: This family represents a short conserved region carrying a PGP motif that is repeated in
+  eukaryotic proteins of sperm-tails. Shippo orthologues from some species may include up to 40 Pro-Gly-Pro
+  repeats.

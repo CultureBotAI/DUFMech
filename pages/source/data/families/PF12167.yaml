@@ -1,0 +1,24 @@
+id: Pfam:PF12167
+pfam_id: PF12167
+name: Arm DNA-binding domain
+short_name: Arm-DNA-bind_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12167
+counters:
+  proteins: 1585
+  matches: 1585
+  proteomes: 1186
+  taxa: 2075
+  structures: 0
+  alphafold_models: 915
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022000
+description: This domain is found at the N-terminus of various phage integrases. The domain binds to DNA.

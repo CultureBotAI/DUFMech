@@ -1,0 +1,29 @@
+id: Pfam:PF09342
+pfam_id: PF09342
+name: Nudel, serine protease domain
+short_name: Nudel
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09342
+counters:
+  proteins: 358
+  matches: 362
+  proteomes: 298
+  taxa: 1160
+  structures: 0
+  alphafold_models: 91
+  domain_architectures: 64
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015420
+description: This domain is found in Nudel from Drosophila melanogaster and related proteins. Nudel is
+  involved in defining embryonic dorsoventral polarity. Three proteiases ndl, gd and snk process easter
+  to create active easter. Active easter defines cell identities along the dorsal-ventral continuum by
+  activating the spz ligand for the Tl receptor in the ventral region of the embryo. Nudel, pipe and windbeutel
+  together trigger the protease cascade within the extraembryonic perivitelline compartment which induces
+  dorsoventral polarity of the Drosophila embryo [[cite:PUB00054161]].

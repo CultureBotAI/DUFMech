@@ -1,0 +1,28 @@
+id: Pfam:PF03478
+pfam_id: PF03478
+name: KIB1-4 beta-propeller
+short_name: Beta-prop_KIB1-4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03478
+counters:
+  proteins: 29927
+  matches: 32016
+  proteomes: 382
+  taxa: 1130
+  structures: 0
+  alphafold_models: 24983
+  domain_architectures: 744
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005174
+description: This entry represents the beta-propeller domain found in F-box proteins KIB1-4, from Arabidopsis
+  thaliana, and similar plant proteins. This domain adopts a beta-propeller structure with 6 blades and
+  is often found in association with F-box domain ([pfam:PF00646]). KIB1-4 are ubiquitin ligases that
+  act as essential positive regulators in brassinosteroid signalling, mediating the ubiquitination, substrate
+  interaction and degradation of GSK3 kinase BIN2 [[cite:PUB00094297]].

@@ -1,0 +1,29 @@
+id: Pfam:PF11806
+pfam_id: PF11806
+name: Enterochelin esterase, N-terminal
+short_name: Enterochelin_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11806
+counters:
+  proteins: 1499
+  matches: 1499
+  proteomes: 1262
+  taxa: 1948
+  structures: 5
+  alphafold_models: 821
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021764
+description: This entry represents the N-terminal domain of enterochelin esterase. The activity of the
+  enzyme has been characterised [[cite:PUB00053482],[cite:PUB00097189]]. Fes catalyses the hydrolysis
+  of the 2,3-dihydroxy-N- benzoyl-L-serine trimer, enterochelin, forming 2,3- dihydroxybenzoylserine.
+  It also catalyses hydrolysis of free enterobactin and ferric enterobactin. Upon hydrolysis of ferric
+  enterobactin by Fes, released iron is probably reduced by a second enzyme. Enterochelin esterase represents
+  a family of non-peptidase homologues belonging to the MEROPS peptidase family S9, clan SC.

@@ -1,0 +1,31 @@
+id: Pfam:PF09431
+pfam_id: PF09431
+name: SPIN90/Ldb17, leucine-rich domain
+short_name: SPIN90_LRD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09431
+counters:
+  proteins: 3159
+  matches: 3169
+  proteomes: 2626
+  taxa: 6971
+  structures: 7
+  alphafold_models: 2686
+  domain_architectures: 55
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018556
+description: This is the conserved leucine-rich domain (LRD) within the C-terminal domain of SPIN90 (also
+  known as NCK interacting protein with SH3 domain (NCKIPSD)) from animals, Ldb17 from budding yeasts
+  and Dip1 from fission yeasts [[cite:PUB00098231]]. Ldb17 is involved in the regulation of endocytosis
+  in yeast [[cite:PUB00054166]]. SPIN90 is an F-actin binding protein that regulates actin polymerization
+  and endocytosis [[cite:PUB00085468]]. It associates with and activates the Arp2/3 complex, without requiring
+  a preformed actin filament [[cite:PUB00054166],[cite:PUB00033588],[cite:PUB00054167]]. This LRD, within
+  the C-terminal armadillo repeat (ARM) domain of SPIN90, is important for activation of Arp2/3 complex
+  [[cite:PUB00098231]].

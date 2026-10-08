@@ -1,0 +1,29 @@
+id: Pfam:PF17775
+pfam_id: PF17775
+name: YchJ, middle NTF2-like domain
+short_name: YchJ_M-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17775
+counters:
+  proteins: 8600
+  matches: 8609
+  proteomes: 8365
+  taxa: 11015
+  structures: 4
+  alphafold_models: 5143
+  domain_architectures: 24
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR048469
+description: This entry represents the NTF2-like domain found in the functionally uncharacterised YchJ
+  family protein from Psychrobacter arcticus and related proteins. This domain is usually found flanked
+  by either ([pfam:PF21612]) and ([pfam:PF02810]) at the N and C terminus or flanked on both sides by
+  ([pfam:PF02810]]). The structure of YchJ shows that this domain adopts structure typical for Nuclear
+  transport factor 2 (NTF2) that consists of a curved three-stranded beta-sheet and array of alpha-helices
+  packed on one side of it. The function of this domain is unknown.

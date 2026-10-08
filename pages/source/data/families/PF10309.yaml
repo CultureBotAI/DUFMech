@@ -1,0 +1,26 @@
+id: Pfam:PF10309
+pfam_id: PF10309
+name: Nuclear cap-binding protein subunit 3
+short_name: NCBP3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10309
+counters:
+  proteins: 2587
+  matches: 2743
+  proteomes: 2243
+  taxa: 6034
+  structures: 0
+  alphafold_models: 2197
+  domain_architectures: 32
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019416
+description: NCBP3 and NCBP1 form an alternative cap-binding complex in higher eukaryotes. NCBP3 binds
+  mRNA, associates with components of the mRNA processing machinery and contributes to polyA RNA export
+  [[cite:PUB00077116]].

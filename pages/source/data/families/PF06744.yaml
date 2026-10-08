@@ -1,0 +1,28 @@
+id: Pfam:PF06744
+pfam_id: PF06744
+name: Type VI secretion protein IcmF C2-like domain
+short_name: IcmF_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06744
+counters:
+  proteins: 4309
+  matches: 4309
+  proteomes: 2895
+  taxa: 4029
+  structures: 5
+  alphafold_models: 2258
+  domain_architectures: 20
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010623
+description: IcmF_C family represents a conserved region situated towards the C-terminal end of IcmF-like
+  proteins. It was thought to be involved in Vibrio cholerae cell surface reorganisation that results
+  in increased adherence to epithelial cells leading to an increased conjugation frequency [[cite:PUB00012816]].
+  IcmF as a whole interacts with DotU whereby these bind tightly and form the docking area of the T6SS
+  within the inner membrane. The exact function of this domain is not clear [[cite:PUB00075434]].

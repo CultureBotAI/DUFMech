@@ -1,0 +1,29 @@
+id: Pfam:PF20254
+pfam_id: PF20254
+name: N,N-dimethylformamidase beta subunit-like, C-terminal
+short_name: DMFA2_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20254
+counters:
+  proteins: 4303
+  matches: 4320
+  proteomes: 2858
+  taxa: 4293
+  structures: 9
+  alphafold_models: 2159
+  domain_architectures: 234
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046540
+description: This entry represents a domain found at the C-terminal of bacterial proteins, including N,N-dimethylformamidase
+  beta (DMFA2) subunit from Paracoccus [[cite:PUB00101281]], the large subunit of dimethylformamidase
+  (DMFase), an enzyme containing a Fe+3 ion in the active site that catalyses the hydrolytic cleavage
+  of the amide bond in N,N-dimethyl formamide. This domain is described as domain III, which adopts an
+  alpha/beta/alpha fold, with five beta-strands that are parallel and sandwiched between alpha-helices.
+  This domain is also found in some uncharacterised fungal sequences.
