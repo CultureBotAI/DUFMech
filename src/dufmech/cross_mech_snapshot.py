@@ -227,6 +227,14 @@ def derive_cross_mech_snapshot(
     scanned = {row["pfam_id"] for row in load_json_rows(source_worklist)}
     scanned -= cross_mech_unscanned(source_manifest)
     unscanned = sorted(families.keys() - scanned)
+    # Name the worklist the original scan searched: carried by a covered source, else the
+    # legacy derivation's original worklist, else the source's own (a direct scan).
+    source_derivation = source_manifest["snapshot"].get("derivation") or {}
+    scanned_label = (
+        (source_derivation.get("coverage") or {}).get("scanned_worklist_snapshot_id")
+        or source_derivation.get("source_worklist_snapshot_id")
+        or source_worklist_id
+    )
 
     index: dict[str, list[str]] = {}
     previous_provenance: dict[str, Any] = {}
@@ -294,7 +302,7 @@ def derive_cross_mech_snapshot(
         "source_worklist_snapshot_id": source_worklist_id,
         "target_worklist_json_sha256": hashlib.sha256(worklist_json.read_bytes()).hexdigest(),
         "coverage": {
-            "scanned_worklist_snapshot_id": source_worklist_id,
+            "scanned_worklist_snapshot_id": scanned_label,
             "scanned_families": len(scanned & families.keys()),
             "unscanned_pfam_ids": unscanned,
         },

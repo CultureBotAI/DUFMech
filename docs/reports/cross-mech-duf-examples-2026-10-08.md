@@ -6,9 +6,9 @@ Snapshot `cross-mech-duf-examples-2026-10-08` against worklist `interpro-pfam-du
 
 Link bases: `record_mentions_*` means the record text names the family; `uniprot_pfam_xref` means a UniProtKB accession cited by the record carries the family in UniProtKB; `canonical_example_family_classification` and `trait_identifier` come from ProteinTraitsMech's structured fields. A text mention says the family is discussed, not that a specific protein was curated.
 
-Derived offline from `cross-mech-duf-examples-2026-10-06`: 201 rows received the selected worklist's seed labels. Source records, proteins, source commits, and UniProt lookup dates are unchanged; no new Mech scan or UniProt retrieval was performed.
+Derived offline from `cross-mech-duf-examples-2026-10-06`: every Pfam-linked row carries the selected worklist's seed label, and 201 rows changed label. Source records, proteins, source commits, and UniProt lookup dates are unchanged; no new Mech scan or UniProt retrieval was performed.
 
-Coverage: the scan searched the 6,532 families of `interpro-pfam-duf-2026-10-05`. 1,763 worklist families joined later and were never searched, so their missing links (including ProteinTraitsMech trait records) are not evidence of absence.
+Coverage: the scan searched the 6,532 families of `interpro-pfam-duf-2026-10-01`. 1,763 worklist families joined later and were never searched, so their missing links (including ProteinTraitsMech trait records) are not evidence of absence.
 
 11 rows citing a former DUF/UPF name were resolved offline through `pfam-previous-unknown-names-2026-10-07` (link basis `record_mentions_previous_pfam_name`): DUF1814 → PF08843, DUF1998 → PF09369, DUF262 → PF03235, DUF4201 → PF13870, DUF4263 → PF14082, DUF4297 → PF14130, DUF4338 → PF14236, DUF4393 → PF14337.
 
@@ -103,7 +103,7 @@ Pfam previous identifiers (`pfam-previous-unknown-names-2026-10-07`) map 0 of 4 
 
 ## ProteinTraitsMech
 
-- 6,532 of 6,540 linked families have a ProteinTraitsMech trait record.
+- 6,532 of 6,532 scanned linked families have a ProteinTraitsMech trait record. 8 linked families were never scanned, so whether ProteinTraitsMech has records for them is unknown here.
 - 1,746 of those trait records list a canonical example that carries the family; 4,786 do not.
 - 6,879 canonical-example rows place 3,529 DUF-carrying proteins under 1,747 families.
 - 918 of those rows sit under functional traits (398 proteins, 264 families).
@@ -124,10 +124,10 @@ Families named in TraitMech records, with proteins that could supply an example:
 
 | Family | TraitMech proteins | ProteinTraitsMech example proteins |
 |---|---|---|
-| PF03235 |  | none; needs a DUFMech member example |
-| PF08843 |  | none; needs a DUFMech member example |
+| PF03235 |  | not scanned (joined after the cross-Mech scan) |
+| PF08843 |  | not scanned (joined after the cross-Mech scan) |
 | PF08862 |  | none; needs a DUFMech member example |
-| PF09369 |  | none; needs a DUFMech member example |
+| PF09369 |  | not scanned (joined after the cross-Mech scan) |
 | PF10053 |  | none; needs a DUFMech member example |
 | PF10088 |  | Q45598 |
 | PF11185 |  | none; needs a DUFMech member example |
@@ -137,12 +137,12 @@ Families named in TraitMech records, with proteins that could supply an example:
 | PF11828 |  | none; needs a DUFMech member example |
 | PF12476 |  | none; needs a DUFMech member example |
 | PF13643 |  | none; needs a DUFMech member example |
-| PF13870 |  | none; needs a DUFMech member example |
+| PF13870 |  | not scanned (joined after the cross-Mech scan) |
 | PF14022 |  | none; needs a DUFMech member example |
-| PF14082 |  | none; needs a DUFMech member example |
-| PF14130 |  | none; needs a DUFMech member example |
-| PF14236 |  | none; needs a DUFMech member example |
-| PF14337 |  | none; needs a DUFMech member example |
+| PF14082 |  | not scanned (joined after the cross-Mech scan) |
+| PF14130 |  | not scanned (joined after the cross-Mech scan) |
+| PF14236 |  | not scanned (joined after the cross-Mech scan) |
+| PF14337 |  | not scanned (joined after the cross-Mech scan) |
 | PF18928 |  | none; needs a DUFMech member example |
 | PF19148 |  | none; needs a DUFMech member example |
 | PF20385 |  | none; needs a DUFMech member example |

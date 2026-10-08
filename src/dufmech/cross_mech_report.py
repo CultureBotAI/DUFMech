@@ -13,6 +13,7 @@ from dufmech.cross_mech import PROTEIN_TRAITS_MECH
 from dufmech.cross_mech_snapshot import (
     CROSS_MECH_DIR,
     CROSS_MECH_STEM,
+    cross_mech_unscanned,
     load_cross_mech_snapshot,
 )
 from dufmech.pfam_history import previous_name_index
@@ -49,22 +50,26 @@ def render_cross_mech_report(
     self_examples = {row["pfam_id"] for row in examples if row["family_mentioned_in_record"]}
     functional = [row for row in examples if row["source_category"].startswith("function/")]
     derivation = snapshot.get("derivation")
+    unscanned = cross_mech_unscanned(manifest)
+    linked = {row["pfam_id"] for row in rows if row["pfam_id"]}
+    unscanned_linked = linked & unscanned
     derivation_note = []
     if derivation:
         derivation_note = [
-            (f"Derived offline from `{derivation['source_snapshot_id']}`: "
-             f"{derivation['rows_with_changed_seed_status']:,} rows received the selected "
-             "worklist's seed labels. Source records, proteins, source commits, and UniProt "
-             "lookup dates are unchanged; no new Mech scan or UniProt retrieval was performed."),
+            (f"Derived offline from `{derivation['source_snapshot_id']}`: every Pfam-linked row "
+             f"carries the selected worklist's seed label, and "
+             f"{derivation['rows_with_changed_seed_status']:,} rows changed label. Source "
+             "records, proteins, source commits, and UniProt lookup dates are unchanged; no new "
+             "Mech scan or UniProt retrieval was performed."),
             "",
         ]
         coverage = derivation.get("coverage") or {}
-        unscanned = coverage.get("unscanned_pfam_ids") or []
-        if unscanned:
+        unscanned_ids = coverage.get("unscanned_pfam_ids") or []
+        if unscanned_ids:
             derivation_note += [
                 (f"Coverage: the scan searched the {coverage.get('scanned_families', 0):,} "
                  f"families of `{coverage.get('scanned_worklist_snapshot_id')}`. "
-                 f"{len(unscanned):,} worklist families joined later and were never searched, "
+                 f"{len(unscanned_ids):,} worklist families joined later and were never searched, "
                  "so their missing links (including ProteinTraitsMech trait records) are not "
                  "evidence of absence."),
                 "",
@@ -142,8 +147,10 @@ def render_cross_mech_report(
         "",
         "## ProteinTraitsMech",
         "",
-        (f"- {len(trait_families):,} of {manifest['rows']['unique_pfam_ids']:,} linked "
-        "families have a ProteinTraitsMech trait record."),
+        (f"- {len(trait_families):,} of {len(linked - unscanned):,} scanned linked "
+        "families have a ProteinTraitsMech trait record."
+        + (f" {len(unscanned_linked):,} linked families were never scanned, so whether "
+           "ProteinTraitsMech has records for them is unknown here." if unscanned_linked else "")),
         (f"- {len(self_examples):,} of those trait records list a canonical example that "
         f"carries the family; {len(trait_families - self_examples):,} do not."),
         (f"- {len(examples):,} canonical-example rows place {len(_proteins(examples)):,} "
@@ -163,7 +170,7 @@ def render_cross_mech_report(
             f"{len(_families(group)):,} |"
         )
 
-    lines += _reuse_sections(curated, examples, functional, top_n)
+    lines += _reuse_sections(curated, examples, functional, top_n, unscanned)
     return "\n".join(lines) + "\n"
 
 
@@ -172,6 +179,7 @@ def _reuse_sections(
     examples: list[Mapping[str, Any]],
     functional: list[Mapping[str, Any]],
     top_n: int,
+    unscanned: set[str] = frozenset(),
 ) -> list[str]:
     lines = ["", "## Reuse candidates", ""]
     examples_by_family: dict[str, list[Mapping[str, Any]]] = defaultdict(list)
@@ -198,6 +206,9 @@ def _reuse_sections(
             limit=3,
         )
         proteins = _protein_list(examples_by_family.get(pfam_id, []), limit=3)
+        if pfam_id in unscanned:
+            # The scan never searched ProteinTraitsMech for this family; no claim either way.
+            proteins = proteins or "not scanned (joined after the cross-Mech scan)"
         gap = "none; needs a DUFMech member example" if not own else ""
         lines.append(f"| {pfam_id} | {own} | {proteins or gap} |")
 
@@ -208,6 +219,7 @@ def _reuse_sections(
              row["source_mech"])
             for row in curated
             if row["uniprot_accession"] and (row["pfam_id"], row["uniprot_accession"]) not in cited
+            and row["pfam_id"] not in unscanned
         }
     )
     lines += [

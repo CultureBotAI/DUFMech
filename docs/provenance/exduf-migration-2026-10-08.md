@@ -27,11 +27,15 @@ was found.
 - **32 existing families became EX_DUF** (27 from UNKNOWN_CANDIDATE and 5 from
   KNOWN_HISTORICAL_DUF). Pfam renamed their short names away from a DUF/UPF name.
   Their names, descriptions, identifiers and counters are unchanged.
-- **Some EX_DUF families still say "unknown function".** For 27 of the 32, the current
-  Pfam name or description still says so (e.g. PF01865, "Protein of unknown function
-  DUF47"). Across all 1,795 EX_DUF families, 88 do (29 by name). These rows keep their
-  text candidate reasons, and scoring does not treat them as characterized: they get
-  characterization `UNKNOWN_CANDIDATE` with reason `pfam_metadata_still_says_unknown_function`.
+- **Some EX_DUF families still mention "unknown function".** 27 of the 32 have an
+  unknown-function candidate reason from their current Pfam name or description (e.g.
+  PF01865, "Protein of unknown function DUF47"). Across all 1,795 EX_DUF families, 88
+  have one, 29 of them from the name. A few match only because the description cites the
+  former DUF name (e.g. PF14298, "previously annotated as DUF4374 (domain of unknown
+  function 4374)"); refining that is tracked in issue #173. These rows keep their text
+  candidate reasons. Scoring does not count the rename alone as characterization for them:
+  without other known or partial evidence they get `UNKNOWN_CANDIDATE`, with reason
+  `pfam_metadata_still_says_unknown_function`.
 - **1,763 families were added as EX_DUF**, with metadata from the InterPro entry API.
   Of the 1,795 EX_DUF families, 1,777 are integrated into an InterPro entry.
 - **Two families with a former DUF name were not added**, because the previous-names
@@ -53,7 +57,8 @@ families, and the live fetch. The verified-input loader accepts it as lineage pr
 - `cross-mech-duf-examples-2026-10-08` is derived offline from the 10-06 snapshot with
   `python -m dufmech.cross_mech_snapshot ... --previous-names-json`. There was no new
   scan or UniProt retrieval; source Mech commits and lookup times remain those of the
-  October 5 acquisition. 201 rows take their family's seed label from this worklist:
+  October 5 acquisition. Every Pfam-linked row carries its family's seed label from this
+  worklist, and 201 rows changed label:
   - **190 rows** keep their family and change seed status.
   - **11 rows resolved through former names.** They cited a former DUF name (DUF1814,
     DUF1998, DUF262, DUF4201, DUF4263, DUF4297, DUF4338 and DUF4393) and are resolved
@@ -61,9 +66,11 @@ families, and the live fetch. The verified-input loader accepts it as lineage pr
     link basis `record_mentions_previous_pfam_name`. 11 rows that cite UniProt UPF
     names stay `NOT_IN_WORKLIST`.
   - **Coverage.** The October 5 scan searched only the 6,532 families of
-    `interpro-pfam-duf-2026-10-05`. The 1,763 added families were never searched. The
-    manifest lists them in `coverage.unscanned_pfam_ids`, and the site and report mark
-    them "not covered by the cross-Mech scan". Missing links for these families are not
+    `interpro-pfam-duf-2026-10-01` (the same families as 10-05). The 1,763 added families
+    were never searched. The
+    manifest lists them in `coverage.unscanned_pfam_ids`. The site marks them "not
+    covered by the cross-Mech scan", and the report counts them separately and lists them
+    as "not scanned". Missing links for these families are not
     evidence of absence. That includes ProteinTraitsMech trait records, which do exist
     for them at the recorded commit. A new scan waits on the cross-Mech licensing review.
   - **Backfill.** Relabeled legacy rows carry an empty `cited_uniprot_accession`,

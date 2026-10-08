@@ -60,7 +60,7 @@ def _cross(tmp_path: Path) -> Path:
     ]
     out = tmp_path / "cross"
     write_cross_mech_snapshot(
-        ScanResult(rows=rows, mechs={"TraitMech": {"commit": "a" * 40}}), out,
+        ScanResult(rows=rows, mechs={"TraitMech": {"commit": "a" * 40, "records_scanned": 2}}), out,
         worklist_snapshot_id="interpro-pfam-duf-2026-10-05", source_ref="origin/main",
         snapshot_date="2026-10-06", generated_at=T,
     )
@@ -82,7 +82,7 @@ def test_cross_mech_derivation_relabels_and_records_provenance(tmp_path: Path) -
     assert derivation["target_worklist_json_sha256"] == hashlib.sha256(
         migrated.read_bytes()).hexdigest()
     assert manifest["snapshot"]["input_snapshot_ids"] == {"worklist": migrated.stem}
-    assert manifest["source"]["mechs"] == {"TraitMech": {"commit": "a" * 40}}
+    assert manifest["source"]["mechs"] == {"TraitMech": {"commit": "a" * 40, "records_scanned": 2}}
 
 
 def test_cross_mech_derivation_never_drops_evidence(tmp_path: Path) -> None:
@@ -233,14 +233,13 @@ def test_derivation_cli_and_ambiguous_names(tmp_path: Path, capsys) -> None:
 
 def test_site_marks_unscanned_families(tmp_path: Path) -> None:
     from dufmech.pages import _attach_cross_mech
-    from dufmech.site import UNSCANNED_NOTE, family_row
+    from dufmech.site import family_row
 
     families = [{"pfam_id": "PF14337"}, {"pfam_id": "PF01519"}]
     summary = _attach_cross_mech(families, [], {"PF14337"})
     assert summary["unscanned_families"] == 1
     assert families[0]["cross_mech"]["scanned"] is False
     assert families[1]["cross_mech"]["scanned"] is True
-    assert "evidence" in UNSCANNED_NOTE
     row = {"pfam_id": "PF14337", "characterization_status": "", "known_evidence_count": None,
            "partial_evidence_count": None, "context_evidence_count": None, "name": "n",
            "short_name": "s", "unknown_status": EX_DUF, "proteins": 1, "structures": 0,
@@ -280,9 +279,95 @@ def test_real_cross_mech_relabel_keeps_evidence_and_records_coverage() -> None:
         "UPF0014", "UPF0018", "UPF0037", "UPF0265"}
     coverage = derivation["coverage"]
     assert coverage["scanned_families"] == 6532
+    assert coverage["scanned_worklist_snapshot_id"] == "interpro-pfam-duf-2026-10-01"
     assert len(coverage["unscanned_pfam_ids"]) == 1763
     added = json.loads((REPO / "data/worklists/interpro-pfam-duf-2026-10-08.manifest.json")
                        .read_text())["derivation"]["added_pfam_ids"]
     assert coverage["unscanned_pfam_ids"] == sorted(added)
     assert derivation["backfilled_fields"] == {
         "cited_uniprot_accession": "empty: not recorded by the source scan"}
+
+
+def test_ancestor_walk_stops_at_the_seed_without_verifying_further(tmp_path: Path) -> None:
+    from dufmech.reclassify import reclassify_snapshot
+    from dufmech.report import iter_metadata_preserving_ancestors
+
+    migrated = _migrate(tmp_path)
+    directory = migrated.parent
+    reclassify_snapshot(migrated, directory, snapshot_date="2026-10-09", generated_at=T)
+    for name in ("json", "tsv", "manifest.json"):
+        (directory / f"interpro-pfam-duf-2026-10-05.{name}").unlink()
+    # The seed is the immediate parent; the missing grandparent is never touched.
+    assert migrated.stem in iter_metadata_preserving_ancestors(directory, "interpro-pfam-duf-2026-10-09")
+    with pytest.raises(ReportError):
+        metadata_preserving_ancestors(directory, "interpro-pfam-duf-2026-10-09")
+
+
+def test_v1_reclassification_parent_hash_is_checked(tmp_path: Path) -> None:
+    import shutil
+
+    from dufmech.snapshot import write_worklist_snapshot
+
+    directory = tmp_path / "w"
+    directory.mkdir()
+    for name in ("json", "tsv", "manifest.json"):
+        shutil.copy(REPO / f"data/worklists/interpro-pfam-duf-2026-10-05.{name}", directory)
+    # A self-consistent but different 10-01 parent: the v1 child's source_sha256 disagrees.
+    write_worklist_snapshot(PARENT, directory, snapshot_date="2026-10-01", generated_at=T)
+    with pytest.raises(ReportError, match="recorded parent hash"):
+        metadata_preserving_ancestors(directory, "interpro-pfam-duf-2026-10-05")
+
+
+def test_coverage_carries_through_chained_derivations(tmp_path: Path) -> None:
+    from dufmech.cross_mech_snapshot import cross_mech_unscanned
+    from dufmech.reclassify import reclassify_snapshot
+
+    migrated = _migrate(tmp_path)
+    first = derive_cross_mech_snapshot(
+        _cross(tmp_path), migrated, tmp_path / "c1", snapshot_date="2026-10-08",
+        source_git_commit="b" * 40, generated_at=T)
+    reclassify_snapshot(migrated, migrated.parent, snapshot_date="2026-10-09", generated_at=T)
+    second = derive_cross_mech_snapshot(
+        tmp_path / "c1/cross-mech-duf-examples-2026-10-08.json",
+        migrated.parent / "interpro-pfam-duf-2026-10-09.json", tmp_path / "c2",
+        snapshot_date="2026-10-09", source_git_commit="e" * 40, generated_at=T)
+    assert cross_mech_unscanned(first) == cross_mech_unscanned(second) == {"PF14337"}
+    # The label names the worklist the original scan searched, not an intermediate one.
+    coverage = second["snapshot"]["derivation"]["coverage"]
+    assert coverage["scanned_worklist_snapshot_id"] == "interpro-pfam-duf-2026-10-05"
+    assert coverage["scanned_families"] == 2
+
+
+def test_report_does_not_claim_absence_for_unscanned_families(tmp_path: Path) -> None:
+    from dufmech.cross_mech_report import render_cross_mech_report
+
+    migrated = _migrate(tmp_path)
+    previous = _previous_names(tmp_path / "prev", [
+        {"pfam_id": "PF14337", "short_name": "Abi_alpha", "names": ["DUF1814"]},
+    ])
+    manifest = derive_cross_mech_snapshot(
+        _cross(tmp_path), migrated, tmp_path / "d", snapshot_date="2026-10-08",
+        source_git_commit="b" * 40, previous_names_json=previous, generated_at=T)
+    rows = json.loads((tmp_path / "d/cross-mech-duf-examples-2026-10-08.json").read_text())
+    text = render_cross_mech_report(rows, manifest)
+    assert "| PF14337 |  | not scanned (joined after the cross-Mech scan) |" in text
+    assert "| PF06172 |  | none; needs a DUFMech member example |" in text
+    assert "0 of 1 scanned linked families have a ProteinTraitsMech trait record. 1 linked" in text
+    assert "1 worklist families joined later and were never searched" in text
+
+
+def test_targeting_does_not_claim_missing_examples_for_unscanned_families() -> None:
+    from dufmech.example_candidates import (
+        TRAITMECH_NAMED,
+        TRAITMECH_RENAMED,
+        select_target_families,
+    )
+
+    rows = [
+        {"pfam_id": "PF14337", "source_mech": "TraitMech", "source_section": "record_text",
+         "uniprot_accession": ""},
+        {"pfam_id": "PF06172", "source_mech": "TraitMech", "source_section": "record_text",
+         "uniprot_accession": ""},
+    ]
+    targets = select_target_families(rows, unscanned={"PF14337"})
+    assert targets == {"PF14337": {TRAITMECH_RENAMED}, "PF06172": {TRAITMECH_NAMED}}
