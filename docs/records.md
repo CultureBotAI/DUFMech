@@ -47,6 +47,39 @@ another writer; concurrent edits remain recoverable. On an interrupted batch,
 resolve the reported conflict and rerun before committing. Do not discard recovery
 copies until any concurrent editor's changes have been reconciled.
 
+## EX_DUF Families And Migration
+
+`EX_DUF` is the seed status for families Pfam renamed away from a DUF/UPF name. The
+evidence is Pfam's own previous-identifier history (`#=GF PI`, frozen as
+`pfam-previous-unknown-names-*`), not the current name or description, so text
+reclassification never undoes it. Candidate reason `pfam_previous_unknown_name` marks
+these rows. Scoring treats an EX_DUF seed like a historical DUF: characterization
+`KNOWN_HISTORICAL_DUF` with reason `pfam_renamed_from_unknown_name`. A rename usually
+follows published work on some members; it is not experimental evidence for every member.
+
+`just migrate-exduf` derives a new worklist snapshot (dry run unless `--apply`):
+
+```bash
+just migrate-exduf --parent-json data/worklists/interpro-pfam-duf-<date>.json \
+  --previous-names-json data/worklists/pfam-previous-unknown-names-<date>.json \
+  --snapshot-date <new-date> [--live-json <fresh DUF-search worklist>] --apply
+```
+
+- Families in the worklist that Pfam renamed become `EX_DUF`; their frozen metadata is
+  unchanged.
+- Renamed families outside the worklist are added with metadata fetched from the
+  InterPro Pfam entry API.
+- For future cases: freeze the previous identifiers of a new Pfam release, freeze a
+  fresh DUF search, and pass it as `--live-json`. A family that left the search is
+  carried forward as `EX_DUF` when Pfam renamed it or it was already `EX_DUF`. Any
+  other departure stops the migration and names the family, so nothing is dropped
+  silently.
+
+The manifest records both (or all three) parents with file hashes, every status change,
+added, carried and not-found families, and whether anything was fetched live. The
+verified-input loader accepts it as lineage profile `exduf-migration-v1` and checks that
+every `EX_DUF` row, and only those, carries the migration reason.
+
 ## Evidence Contract
 
 Each functional assertion states its experimental, computational or contextual

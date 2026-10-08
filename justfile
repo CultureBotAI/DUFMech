@@ -129,6 +129,10 @@ freeze-duf-puf-worklist *args="":
     uv run python scripts/freeze_duf_puf_worklist.py {{args}}
 
 # Version a classification correction using verified, frozen metadata only.
+# Migrate Pfam-renamed DUF/UPF families into EX_DUF (dry run unless --apply).
+migrate-exduf *args="":
+    uv run python scripts/migrate_exduf_worklist.py {{args}}
+
 reclassify-duf-puf-worklist *args="":
     uv run python scripts/reclassify_duf_puf_worklist.py {{args}}
 

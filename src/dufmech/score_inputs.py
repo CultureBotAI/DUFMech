@@ -36,7 +36,15 @@ import dufmech.rhea_snapshot as rhea
 import dufmech.snapshot as worklist
 import dufmech.stringdb_snapshot as string
 import dufmech.threedbeacons_snapshot as beacons
-from dufmech.worklist import CLASSIFIER_POLICY
+from dufmech.worklist import (
+    CLASSIFIER_POLICY,
+    EX_DUF,
+    MIGRATED_SOURCE,
+    MIGRATION_NOTE,
+    MIGRATION_POLICY,
+    MIGRATION_PROFILE,
+    PREVIOUS_UNKNOWN_NAME_REASON,
+)
 
 RECLASSIFIED_SOURCE = "Reclassification of frozen InterPro Pfam API metadata"
 RECLASSIFICATION_NOTE = (
@@ -185,6 +193,11 @@ def _source_identity(
         _timestamp(source.get("original_generated_at"))
         if lineage is None:
             raise ScoreInputError("reclassification source requires native lineage provenance")
+    if role == "worklist" and source.get("name") == MIGRATED_SOURCE:
+        expected = {**expected, "name": MIGRATED_SOURCE, "note": MIGRATION_NOTE}
+        _timestamp(source.get("original_generated_at"))
+        if lineage is None or lineage.get("profile") != MIGRATION_PROFILE:
+            raise ScoreInputError("EX_DUF migration source requires migration lineage provenance")
     if any(source.get(key) != value for key, value in expected.items()):
         raise ScoreInputError(f"{role}: manifest source identity does not match source role")
     prefix = spec.stem
@@ -218,7 +231,8 @@ def _source_identity(
         except ValueError as exc:
             raise ScoreInputError("reclassification parent date must be valid and older") from exc
         policies = {"reclassification-v1": LEGACY_RECLASSIFICATION_POLICY,
-                    "derivation-v2": CLASSIFIER_POLICY}
+                    "derivation-v2": CLASSIFIER_POLICY,
+                    MIGRATION_PROFILE: MIGRATION_POLICY}
         if lineage.get("profile") not in policies or lineage.get("policy") != policies[lineage["profile"]]:
             raise ScoreInputError("unsupported native reclassification profile/policy")
         digest = lineage.get("input_json_sha256")
@@ -240,10 +254,12 @@ def _worklist_lineage(manifest: dict, rows: tuple[dict[str, Any], ...]) -> dict 
         raise ScoreInputError("ambiguous reclassification profile")
     snapshot, source = manifest["snapshot"], manifest["source"]
     parents = _mapping(snapshot.get("input_snapshot_ids"), "reclassification input snapshots")
+    info = _mapping(manifest[kinds[0]], "reclassification metadata")
+    if kinds[0] == "derivation" and info.get("method") == "exduf_migration":
+        return _migration_lineage(manifest, rows, parents, info)
     if set(parents) != {"worklist"}:
         raise ScoreInputError("reclassification requires exactly one worklist parent")
     parent = parents["worklist"]
-    info = _mapping(manifest[kinds[0]], "reclassification metadata")
     if kinds[0] == "reclassification":
         if (source.get("name") != RECLASSIFIED_SOURCE or info.get("source_snapshot") != parent
                 or type(info.get("rows")) is not int or info["rows"] != len(rows)
@@ -290,6 +306,72 @@ def _worklist_lineage(manifest: dict, rows: tuple[dict[str, Any], ...]) -> dict 
                    "input_generated_at": info.get("input_snapshot_generated_at")}
     if _timestamp(lineage["input_generated_at"]) > _timestamp(snapshot["generated_at"]):
         raise ScoreInputError("reclassification parent timestamp is later than its output")
+    return lineage
+
+
+def _migration_lineage(
+    manifest: dict, rows: tuple[dict[str, Any], ...], parents: dict, info: dict,
+) -> dict:
+    """Validate an EX_DUF migration: parents, parent file hashes, and the change log.
+
+    Every EX_DUF row must carry the migration reason, every migration-reason row must be
+    EX_DUF, and every row that is neither a logged change nor an added or carried family
+    must be EX_DUF-free; the full parent rows stay bound by the recorded hashes.
+    """
+    allowed = {"worklist", "pfam_previous_names", "live_worklist"}
+    if not {"worklist", "pfam_previous_names"} <= set(parents) <= allowed:
+        raise ScoreInputError("EX_DUF migration requires worklist and pfam_previous_names parents")
+    if (info.get("profile") != MIGRATION_PROFILE or info.get("migration_policy") != MIGRATION_POLICY
+            or info.get("changed_fields") != ["unknown_status", "candidate_reasons"]
+            or not isinstance(info.get("fetched_live"), bool)):
+        raise ScoreInputError("unsupported EX_DUF migration derivation")
+    parent = parents["worklist"]
+    for key, name in (("input_files", parent), ("previous_names_files", parents["pfam_previous_names"])):
+        files = _mapping(info.get(key), f"migration {key}")
+        if not {"json", "manifest"} <= set(files):
+            raise ScoreInputError(f"migration {key} requires JSON and manifest provenance")
+        for kind, suffix in (("json", "json"), ("manifest", "manifest.json")):
+            entry = _mapping(files[kind], "migration parent file")
+            if (entry.get("path") != f"{name}.{suffix}"
+                    or type(entry.get("bytes")) is not int or entry["bytes"] <= 0
+                    or not isinstance(entry.get("sha256"), str)
+                    or not re.fullmatch(r"[0-9a-f]{64}", entry["sha256"])):
+                raise ScoreInputError("invalid EX_DUF migration parent file provenance")
+    indexed = {row["pfam_id"]: row for row in rows}
+    added = info.get("added_pfam_ids")
+    carried = info.get("carried_pfam_ids")
+    changes = info.get("changes")
+    if not all(isinstance(value, list) for value in (added, carried, changes)):
+        raise ScoreInputError("EX_DUF migration lists are required")
+    if (set(added) | set(carried)) - indexed.keys():
+        raise ScoreInputError("EX_DUF migration lists families absent from the worklist")
+    if bool(added or carried) != info["fetched_live"]:
+        raise ScoreInputError("EX_DUF migration fetched_live disagrees with added/carried families")
+    changed = set()
+    for change in changes:
+        change = _mapping(change, "migration change")
+        pfam = change.get("pfam_id")
+        if (pfam not in indexed or pfam in changed
+                or change.get("after") != indexed[pfam]["unknown_status"]
+                or change.get("after_reasons") != indexed[pfam]["candidate_reasons"]):
+            raise ScoreInputError("EX_DUF migration change does not match worklist")
+        changed.add(pfam)
+    for row in rows:
+        migrated = PREVIOUS_UNKNOWN_NAME_REASON in row["candidate_reasons"]
+        if migrated != (row["unknown_status"] == EX_DUF):
+            raise ScoreInputError(f"{row['pfam_id']}: EX_DUF status and migration reason disagree")
+    transitions = Counter(
+        f"{change['before']} -> {change['after']}"
+        for change in changes if change["before"] != change["after"]
+    )
+    if dict(sorted(transitions.items())) != info.get("status_transitions"):
+        raise ScoreInputError("EX_DUF migration status transitions do not match its changes")
+    lineage = {"profile": MIGRATION_PROFILE, "input_snapshot_id": parent,
+               "input_json_sha256": info["input_files"]["json"]["sha256"],
+               "policy": info.get("migration_policy"),
+               "input_generated_at": info.get("input_snapshot_generated_at")}
+    if _timestamp(lineage["input_generated_at"]) > _timestamp(manifest["snapshot"]["generated_at"]):
+        raise ScoreInputError("EX_DUF migration parent timestamp is later than its output")
     return lineage
 
 

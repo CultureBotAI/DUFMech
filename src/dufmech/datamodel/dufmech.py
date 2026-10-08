@@ -803,6 +803,9 @@ class SeedStatus(EnumDefinitionImpl):
 
     UNKNOWN_CANDIDATE = PermissibleValue(text="UNKNOWN_CANDIDATE")
     KNOWN_HISTORICAL_DUF = PermissibleValue(text="KNOWN_HISTORICAL_DUF")
+    EX_DUF = PermissibleValue(
+        text="EX_DUF",
+        description="""Pfam renamed the family away from a DUF/UPF name; its previous identifiers record the former name. Naming history, not experimental evidence.""")
     FALSE_POSITIVE_TEXT_HIT = PermissibleValue(text="FALSE_POSITIVE_TEXT_HIT")
 
     _defn = EnumDefinition(

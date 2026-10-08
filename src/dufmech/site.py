@@ -35,7 +35,10 @@ GUIDE = """<section class="section legend" aria-labelledby="status-guide">
 UNKNOWN CANDIDATE means the metadata explicitly says the function is unknown.
 KNOWN HISTORICAL DUF means a DUF name matched without that wording;
 this heuristic is not proof of a known function and does not establish experimental
-characterization. FALSE POSITIVE TEXT HIT means the naming rules did not match.</dd>
+characterization. EX DUF means Pfam renamed the family away from a DUF/UPF name, as
+recorded in Pfam's previous identifiers; a rename usually follows published work on some
+members but is naming history, not proof of function for every member.
+FALSE POSITIVE TEXT HIT means the naming rules did not match.</dd>
 <dt>Characterization</dt><dd>A separate evidence-scoring result. UNSCORED means no score
 has been calculated; it is not evidence that the family lacks a known function.
 Missing scores are not negative evidence. PARTIALLY CHARACTERIZED has partial support;
