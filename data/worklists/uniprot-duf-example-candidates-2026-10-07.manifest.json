@@ -1,0 +1,75 @@
+{
+  "files": {
+    "json": {
+      "bytes": 6801210,
+      "path": "uniprot-duf-example-candidates-2026-10-07.json",
+      "sha256": "0c9e637106357244f3b70f34b14c29e034e9bfdd4fec6b977b5f323174d55cbe"
+    },
+    "tsv": {
+      "bytes": 2920248,
+      "path": "uniprot-duf-example-candidates-2026-10-07.tsv",
+      "sha256": "3f0483d14baca4f47a73b3c7227d5a0a410e3a06a2eda660985cac5ec6c0152e"
+    }
+  },
+  "rows": {
+    "families_with_candidates": 4788,
+    "families_with_reviewed_candidate": 24,
+    "reviewed_rows": 39,
+    "total": 14320,
+    "unique_uniprot_accessions": 13751
+  },
+  "schema": {
+    "tsv_fieldnames": [
+      "pfam_id",
+      "rank",
+      "uniprot_accession",
+      "reviewed",
+      "annotation_score",
+      "protein_name",
+      "taxon_id",
+      "organism",
+      "length",
+      "family_members",
+      "selection_reasons",
+      "source_url"
+    ]
+  },
+  "snapshot": {
+    "date": "2026-10-07",
+    "generated_at": "2026-10-07T22:56:54.368878Z",
+    "id": "uniprot-duf-example-candidates-2026-10-07",
+    "input_snapshot_ids": {
+      "cross_mech": "cross-mech-duf-examples-2026-10-06",
+      "worklist": "interpro-pfam-duf-2026-10-05"
+    }
+  },
+  "source": {
+    "fields": "accession,reviewed,annotation_score,protein_name,organism_name,organism_id,length",
+    "name": "UniProtKB search by Pfam cross-reference",
+    "per_family": 3,
+    "query": "xref:pfam-<PFAM_ID>",
+    "selection": "Top-ranked UniProtKB entries by annotation score, ties by accession. Candidates for review, not curated or representative examples.",
+    "sort": "annotation_score desc,accession asc",
+    "uniprot_releases": [
+      "2026_03"
+    ],
+    "url": "https://rest.uniprot.org/uniprotkb/search"
+  },
+  "targets": {
+    "by_reason": {
+      "protein_traits_trait_without_family_example": 4786,
+      "traitmech_named_renamed_family": 8,
+      "traitmech_named_without_protein": 14
+    },
+    "families": 4794,
+    "families_queried": 4794,
+    "families_without_members": [
+      "PF12976",
+      "PF16424",
+      "PF20318",
+      "PF24248",
+      "PF25588",
+      "PF28257"
+    ]
+  }
+}
