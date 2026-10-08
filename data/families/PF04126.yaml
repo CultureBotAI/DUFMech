@@ -1,0 +1,27 @@
+id: Pfam:PF04126
+pfam_id: PF04126
+name: Cyclophilin-like
+short_name: Cyclophil_like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04126
+counters:
+  proteins: 564
+  matches: 565
+  proteomes: 531
+  taxa: 1025
+  structures: 3
+  alphafold_models: 389
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025658
+description: This domain has a cyclophilin-like fold, consisting of an eight-stranded beta-barrel with
+  an alpha helix located between the beta-2 and beta-3 strands and a 310 helix located between the beta-7
+  and beta-8 strands. The catalytic site found in human cyclophilin is not conserved in this domain, suggesting
+  a different function for this domain [[cite:PUB00039053],[cite:PUB00048358]].

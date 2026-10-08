@@ -1,0 +1,36 @@
+id: Pfam:PF06664
+pfam_id: PF06664
+name: Wntless-like, transmembrane domain
+short_name: WLS-like_TM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06664
+counters:
+  proteins: 3813
+  matches: 3913
+  proteomes: 1345
+  taxa: 4379
+  structures: 9
+  alphafold_models: 3297
+  domain_architectures: 54
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR047843
+description: This entry represents the seven transmembrane domain of wntless (WLS) from Drosophila and
+  its homologues, also known as MIG-14 in C.elegans which regulates endocytosis and secretion of the wnt
+  ligand egl-20[[cite:PUB00058252]]. Newly synthesised EGL-20/Wnt binds to MIG-14 in the Golgi, targetting
+  the Wnt to the cell membrane for secretion. AP-2-mediated endocytosis and retromer retrieval at the
+  sorting endosome would recycle MIG-14 to the Golgi, where it can bind to EGL-20/Wnt for next cycle of
+  secretion [[cite:PUB00058252],[cite:PUB00154330]]. WLS is a membrane trafficking and secretion chaperone
+  for lipidated Wnt signaling proteins [[cite:PUB00151072]]. It regulates Wnt proteins sorting and secretion
+  in a feedback regulatory mechanism [[cite:PUB00151072],[cite:PUB00061859]]. This entry also includes
+  TMEM181, a cell surface protein associated with Escherichia coli CDT toxicity [[cite:PUB00151072]].
+  Members of this entry are homologous to GPR180 and TMEM145, and together with TMEM87A/B, GPR107 and
+  GPR108, they have been described as GOLD domain seven-transmembrane helix (GOST) proteins given their
+  domain architecture similarities. They all consist of a GOLD domain atop of a seven-transmembrane helix
+  domain [[cite:PUB00151072]].

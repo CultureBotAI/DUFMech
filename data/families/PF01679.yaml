@@ -1,0 +1,29 @@
+id: Pfam:PF01679
+pfam_id: PF01679
+name: Proteolipid membrane potential modulator
+short_name: Pmp3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01679
+counters:
+  proteins: 12165
+  matches: 12229
+  proteomes: 5976
+  taxa: 10614
+  structures: 2
+  alphafold_models: 9376
+  domain_architectures: 139
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR000612
+description: Pmp3 is an evolutionarily conserved proteolipid in the plasma membrane which, in S. pombe,
+  is transcriptionally regulated by the Spc1 stress MAPK (mitogen-activated protein kinases) pathway.
+  It functions to modulate the membrane potential, particularly to resist high cellular cation concentration.
+  In eukaryotic organisms, stress-activated mitogen-activated protein kinases play crucial roles in transmitting
+  environmental signals that will regulate gene expression for allowing the cell to adapt to cellular
+  stress. Pmp3-like proteins are highly conserved in bacteria, yeast, nematode and plants.

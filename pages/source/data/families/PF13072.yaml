@@ -1,0 +1,31 @@
+id: Pfam:PF13072
+pfam_id: PF13072
+name: Mother cell inhibitor of FtsZ
+short_name: MciZ
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13072
+counters:
+  proteins: 471
+  matches: 471
+  proteomes: 469
+  taxa: 610
+  structures: 2
+  alphafold_models: 273
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025177
+description: This family of proteins is found in bacteria. Family members are approximately 40 amino acids
+  in length. There is a conserved GKAW sequence motif. There is a single completely conserved residue
+  G that may be functionally important. Family members include the Bacillus subtilis cell-division inhibitor,
+  MciZ (mother cell inhibitor of FtsZ) which blocks the assembly of FtsZ. FtsZ (filamentation temperature-sensitive
+  Z) is the bacterial homolog of tubulin. Crystal structure reveals that MciZ binds to the C-terminal
+  polymerization interface of FtsZ, the equivalent of the minus end of tubulin, causing shortening of
+  protofilaments and blocking the assembly of higher-order FtsZ structures. Hence, MciZ provides a capping-based
+  regulatory mechanism for FtsZ [[cite:PUB00091017]].

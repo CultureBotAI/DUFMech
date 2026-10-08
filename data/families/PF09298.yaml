@@ -1,0 +1,25 @@
+id: Pfam:PF09298
+pfam_id: PF09298
+name: Fumarylacetoacetase N-terminal
+short_name: FAA_hydrolase_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09298
+counters:
+  proteins: 10599
+  matches: 10608
+  proteomes: 8232
+  taxa: 14450
+  structures: 15
+  alphafold_models: 7446
+  domain_architectures: 109
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015377
+description: The N-terminal domain of fumarylacetoacetate hydrolase is functionally uncharacterised, and
+  adopts a structure consisting of an SH3-like barrel [[cite:PUB00025833]].

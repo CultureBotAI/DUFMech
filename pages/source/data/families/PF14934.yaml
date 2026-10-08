@@ -1,0 +1,28 @@
+id: Pfam:PF14934
+pfam_id: PF14934
+name: Transmembrane protein 254
+short_name: TMEM254
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14934
+counters:
+  proteins: 2097
+  matches: 2117
+  proteomes: 1429
+  taxa: 4424
+  structures: 0
+  alphafold_models: 1802
+  domain_architectures: 35
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR028110
+description: This family contains proteins found in eukaryotes, including human Transmembrane protein
+  TMEM254 (C10orf57). The exact function of this protein is still unknown, however it is thought to be
+  an integral membrane protein. The protein sequence is 123 amino acids in length and has a mass of approximately
+  14.2 kDa. The family also includes some longer proteins that possess an N-terminal dehydrogenase domain,
+  [pfam:PF01073].

@@ -1,0 +1,33 @@
+id: Pfam:PF09170
+pfam_id: PF09170
+name: CST, complex subunit STN1, C terminal
+short_name: STN1_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09170
+counters:
+  proteins: 1178
+  matches: 1210
+  proteomes: 755
+  taxa: 2397
+  structures: 8
+  alphafold_models: 1016
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015253
+description: STN1 is a component of the CST complex, a complex that binds to single-stranded DNA and is
+  required for protecting telomeres from DNA degradation. The CST complex binds single-stranded DNA with
+  high affinity in a sequence-independent manner, while isolated subunits bind DNA with low affinity on
+  their own. In addition to telomere protection, the CST complex probably has a more general role in DNA
+  metabolism at non-telomeric sites. This entry represents the C-terminal region of Stn1 which has two
+  winged helix-turn-helix (wHTH) motifs, wHTH1 and wHTH2 [[cite:PUB00053885],[cite:PUB00097419]]. wHTH1
+  is structurally similar to that in RPA32 with a large insertion between helices alpha2 and alpha3, unique
+  to Stn1, that may allow interaction with a different set of proteins that function at telomeres such
+  as Ctc1 [[cite:PUB00097419]]. wHTH2 is most similar to the DNA-binding wHTH motifs of the pur operon
+  repressor and RepE replication initiator, but it does not bind double-stranded DNA [[cite:PUB00057805]].

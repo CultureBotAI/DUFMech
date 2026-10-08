@@ -1,0 +1,26 @@
+id: Pfam:PF06713
+pfam_id: PF06713
+name: Bacterial PH domain
+short_name: bPH_4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06713
+counters:
+  proteins: 1522
+  matches: 1522
+  proteomes: 1295
+  taxa: 2076
+  structures: 0
+  alphafold_models: 964
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009589
+description: This family consists of several hypothetical proteins specific to Oceanobacillus and Bacillus
+  species. Members of this family are typically around 130 residues in length. The function of this family
+  is unknown. Members of this family have a PH domain like structure [[cite:PUB00054230]].

@@ -1,0 +1,26 @@
+id: Pfam:PF10651
+pfam_id: PF10651
+name: BppU N-terminal domain
+short_name: BppU_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10651
+counters:
+  proteins: 776
+  matches: 776
+  proteomes: 567
+  taxa: 1171
+  structures: 4
+  alphafold_models: 317
+  domain_architectures: 40
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018913
+description: This is the N-terminal domain of baseplate upper proteins (BppU, also known as ORF48) which
+  is found in phage from a number of different bacteria. The N-terminal domain exhibits a beta-sandwich
+  immunoglobulin fold [[cite:PUB00059344]].

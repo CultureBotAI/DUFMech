@@ -1,0 +1,28 @@
+id: Pfam:PF04672
+pfam_id: PF04672
+name: S-adenosyl methyltransferase
+short_name: Methyltransf_19
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04672
+counters:
+  proteins: 17491
+  matches: 17521
+  proteomes: 1897
+  taxa: 2351
+  structures: 3
+  alphafold_models: 9288
+  domain_architectures: 36
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006764
+description: This family contains a SAM (S-adenosyl methyltransferase) domain, with a central beta sheet
+  with 3 alpha-helices on both sides. Crystal packing analysis of the structure PDB:3giw from [swissprot:Q82L35]
+  suggests that a monomer is the solution state oligomeric form. An unidentified ligand (UNL, cyan) was
+  found at the putative active site surrounded by the residues His57, His170, Phe171, Tyr216 and Met22
+  . The UNL is likely to be a phenylalanine or phenylalanine-like molecule. (details derived from TOPSAN).

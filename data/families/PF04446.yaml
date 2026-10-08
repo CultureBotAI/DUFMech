@@ -1,0 +1,30 @@
+id: Pfam:PF04446
+pfam_id: PF04446
+name: tRNAHis guanylyltransferase
+short_name: Thg1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04446
+counters:
+  proteins: 4888
+  matches: 5546
+  proteomes: 3738
+  taxa: 9628
+  structures: 16
+  alphafold_models: 3998
+  domain_architectures: 102
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024956
+description: The Thg1 protein from Saccharomyces cerevisiae is responsible for adding a GMP residue to
+  the 5' end of tRNA His [[cite:PUB00020433]]. The catalytic domain Thg1 contains a RRM (ferredoxin) fold
+  palm domain, just like the viral RNA-dependent RNA polymerases, reverse transcriptases, family A and
+  B DNA polymerases, adenylyl cyclases, diguanylate cyclases (GGDEF domain) and the predicted polymerase
+  of the CRISPR system [[cite:PUB00057251]]. Thg1 possesses an active site with three acidic residues
+  that chelate Mg++ cations [[cite:PUB00057251]]. Thg1 catalyzes polymerization similar to the 5'-3' polymerases
+  [[cite:PUB00057251]][[cite:PUB00057252]].

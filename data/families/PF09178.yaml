@@ -1,0 +1,26 @@
+id: Pfam:PF09178
+pfam_id: PF09178
+name: 4-alpha-glucanotransferase, C-terminal
+short_name: MGTA_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09178
+counters:
+  proteins: 8
+  matches: 8
+  proteomes: 6
+  taxa: 22
+  structures: 2
+  alphafold_models: 8
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015261
+description: Members of this family, which are predominantly found in prokaryotic 4-alpha-glucanotransferase,
+  adopt a structure composed of six antiparallel beta-strands, four of which form a beta-sheet and another
+  two form a type I' beta-hairpin. The role of this family of domains, has not, as yet, been defined [[cite:PUB00027143]].

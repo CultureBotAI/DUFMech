@@ -1,0 +1,27 @@
+id: Pfam:PF12822
+pfam_id: PF12822
+name: ECF transporter, substrate-specific component
+short_name: ECF_trnsprt
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12822
+counters:
+  proteins: 8451
+  matches: 8472
+  proteomes: 3797
+  taxa: 5807
+  structures: 17
+  alphafold_models: 5684
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024529
+description: Energy-coupling factor (ECF) transporters consist of a substrate-specific component (known
+  as the S component), and an energy-coupling module [[cite:PUB00056162]]. The substrate-binding component
+  is a small integral membrane protein which captures specific substrates and forms an active transporter
+  in the presence of the energy-coupling AT module.

@@ -1,0 +1,26 @@
+id: Pfam:PF10015
+pfam_id: PF10015
+name: ThermoDBP-related, archaea
+short_name: ThermoDBP-RP_arch
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10015
+counters:
+  proteins: 94
+  matches: 94
+  proteomes: 86
+  taxa: 198
+  structures: 4
+  alphafold_models: 92
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR017140
+description: This protein family is related to archaeal non-canonical single- stranded DNA-binding proteins
+  (ThermoDBPs) named ThermoDBP-related proteins. These proteins have been related to genome maintenance
+  in particularly challenging environments, but their specific function is still unknown [[cite:PUB00100849]].

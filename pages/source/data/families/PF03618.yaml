@@ -1,0 +1,25 @@
+id: Pfam:PF03618
+pfam_id: PF03618
+name: Kinase/pyrophosphorylase
+short_name: Kinase-PPPase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03618
+counters:
+  proteins: 10013
+  matches: 10037
+  proteomes: 8845
+  taxa: 13142
+  structures: 2
+  alphafold_models: 6748
+  domain_architectures: 27
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005177
+description: This family of regulatory proteins has ADP-dependent kinase and inorganic phosphate-dependent
+  pyrophosphorylase activity [[cite:PUB00044657],[cite:PUB00057469],[cite:PUB00057470]].

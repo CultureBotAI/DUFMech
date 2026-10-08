@@ -1,0 +1,31 @@
+id: Pfam:PF06682
+pfam_id: PF06682
+name: SOCE-associated regulatory factor of calcium homoeostasis
+short_name: SARAF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06682
+counters:
+  proteins: 2681
+  matches: 2789
+  proteomes: 2228
+  taxa: 5903
+  structures: 3
+  alphafold_models: 2297
+  domain_architectures: 44
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009567
+description: SARAF is as family of eukaryotic proteins embedded in the ER. SARAF is SOCE-associated regulatory
+  factor, where SOCE is store operated calcium entry. ie a mechanism governing calcium homoeostasis in
+  the cell and the mitochondria. SOCE involves the enabling of Ca2+ release-activated Ca2+ (CRAC) channels.
+  SARAF is a single pass ER membrane protein whose systolic-facing domain is responsible for activity
+  and whose luminary-facing domain carries out a regulatory function in conjunction with another membrane
+  protein STIM, an ER single pass membrane protein that detects changes in ER Ca2+ levels through its
+  EF-hand, conserved Ca2+ binding domain. STIM is the major target for SARAF regulation, and thus SARAF
+  negatively regulates the SOCE entry of calcium into cells protecting them from overfilling [[cite:PUB00075537]].

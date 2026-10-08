@@ -1,0 +1,26 @@
+id: Pfam:PF01997
+pfam_id: PF01997
+name: Translin family
+short_name: Translin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01997
+counters:
+  proteins: 7161
+  matches: 7307
+  proteomes: 3143
+  taxa: 8392
+  structures: 16
+  alphafold_models: 6158
+  domain_architectures: 78
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002848
+description: Members of this family include Translin [swissprot:Q15631] that interacts with DNA and forms
+  a ring around the DNA. This family also includes [swissprot:Q99598], that was found to interact with
+  translin with yeast two-hybrid screen [[cite:PUB00005776]].

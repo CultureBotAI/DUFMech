@@ -1,0 +1,28 @@
+id: Pfam:PF06475
+pfam_id: PF06475
+name: Putative glycolipid-binding
+short_name: Glycolipid_bind
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06475
+counters:
+  proteins: 2647
+  matches: 2651
+  proteomes: 2479
+  taxa: 3459
+  structures: 1
+  alphafold_models: 1664
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009467
+description: This family has a novel fold known as a spiral beta-roll, consisting of a 15-stranded beta
+  sheet wrapped around a single alpha helix. It forms dimers. It has some structural similarity to the
+  E. coli lipoprotein localisation factors LolA, [swissprot:P61316] and LolB, [swissprot:P61320]. Its
+  structure suggests that it may have a role in glycolipid binding. Its genomic context supports a role
+  in glycolipid metabolism [[cite:PUB00057505]].

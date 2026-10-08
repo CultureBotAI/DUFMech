@@ -1,0 +1,26 @@
+id: Pfam:PF11894
+pfam_id: PF11894
+name: Nuclear pore complex scaffold, nucleoporins 186/192/205
+short_name: Nup192
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11894
+counters:
+  proteins: 4872
+  matches: 5536
+  proteomes: 3194
+  taxa: 8411
+  structures: 31
+  alphafold_models: 1085
+  domain_architectures: 84
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021827
+description: This is a family of eukaryotic nucleoporins of several different sizes. All of them are long
+  and form the scaffold of the nuclear pore complex. Nup192 in particular modulates the permeability of
+  the central channel of the NPC central or nuclear pore complex [[cite:PUB00109663]].

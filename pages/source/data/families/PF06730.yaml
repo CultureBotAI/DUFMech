@@ -1,0 +1,26 @@
+id: Pfam:PF06730
+pfam_id: PF06730
+name: FAM92 protein
+short_name: FAM92
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06730
+counters:
+  proteins: 2327
+  matches: 2420
+  proteomes: 1136
+  taxa: 3771
+  structures: 2
+  alphafold_models: 2070
+  domain_architectures: 24
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009602
+description: This family of proteins has a role in embryogenesis. During embryogenesis it is essential
+  for ectoderm and axial mesoderm development [[cite:PUB00057417]]. It may regulate cell proliferation
+  and apoptosis [[cite:PUB00057418]].

@@ -1,0 +1,27 @@
+id: Pfam:PF10923
+pfam_id: PF10923
+name: BREX system ATP-binding protein BrxC/D
+short_name: BrxC_BrxD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10923
+counters:
+  proteins: 2010
+  matches: 2091
+  proteomes: 1770
+  taxa: 3346
+  structures: 0
+  alphafold_models: 1261
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021228
+description: This is the ATP-binding domain found in proteins that are associated with Bacteriophage Exclusion
+  (BREX) system, a defense system that allows bacteriophage adsorption but blocks phage DNA replication
+  [[cite:PUB00093365]]. This domain is found in the ATP-binding proteins BrxC/pglY (due to its homology
+  with pglY from Pgl system) and BrxD [[cite:PUB00093365]].

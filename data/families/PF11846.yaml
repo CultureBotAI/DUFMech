@@ -1,0 +1,30 @@
+id: Pfam:PF11846
+pfam_id: PF11846
+name: Virulence factor membrane-bound polymerase, C-terminal
+short_name: Wzy_C_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11846
+counters:
+  proteins: 1437
+  matches: 1437
+  proteomes: 1263
+  taxa: 1732
+  structures: 0
+  alphafold_models: 859
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021797
+description: Wzy is a membrane-bound polymerase of 12 TMs, found in Gram-positive bacteria such as Streptococcus
+  pnuemoniae. It forms part of the EPS or exopolysaccharide system. This family is the 6xTMs at the C-terminal
+  end of the molecule. Wzy functions in polymerizing the oligosaccharide repeat subunits to form high-molecular-weight
+  capsular polysaccharides. A contiguous emebrane-bound flippase, Wzx, [pfam:PF01943], transports the
+  repeat units to the external surface of the membrane. These polysaccharides form the capsule and their
+  differing compositions contribute to the multidudinous pneumococcal capsular serotypes, all being structurally
+  and antigenically different [[cite:PUB00075665]].

@@ -1,0 +1,26 @@
+id: Pfam:PF05643
+pfam_id: PF05643
+name: Putative lipoprotein GNA1162-like
+short_name: GNA1162-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05643
+counters:
+  proteins: 1120
+  matches: 1127
+  proteomes: 1096
+  taxa: 1797
+  structures: 1
+  alphafold_models: 702
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008517
+description: This family of putative lipoproteins mainly found in Proteobacteria includes GNA1162 from
+  Neisseria meningitidis, which shows five alpha-helices and four beta-strands, three of them forming
+  a beta-sheet [[cite:PUB00101016]].

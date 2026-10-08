@@ -1,0 +1,27 @@
+id: Pfam:PF11574
+pfam_id: PF11574
+name: Resuscitation-promoting factor Rpf1, C-terminal
+short_name: Rpf1_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11574
+counters:
+  proteins: 277
+  matches: 277
+  proteomes: 275
+  taxa: 360
+  structures: 1
+  alphafold_models: 177
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021630
+description: This is the C-terminal domain of Resuscitation-promoting factor Rpf1 from Corynebacterium
+  glutamicum [[cite:PUB00097296]], which is adjacent the RPF domain ([pfam:PF06737]). The function of
+  this domain is not yet known. Rpf1 has peptidoglycan hydrolytic activity and stimulates resuscitation
+  of dormant cells [[cite:PUB00097296]].

@@ -1,0 +1,26 @@
+id: Pfam:PF14348
+pfam_id: PF14348
+name: IncC plasmid conjugative DNA transfer protein DtrJ-like
+short_name: DtrJ-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14348
+counters:
+  proteins: 1262
+  matches: 1262
+  proteomes: 962
+  taxa: 1582
+  structures: 0
+  alphafold_models: 772
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022266
+description: This family includes the DNA transfer protein DtrJ (encoded by A074), a membrane-located
+  homologue of TraJ that interacts with the coupling protein TraD, and is essential for IncC plasmid conjugation
+  [[cite:PUB00161025]]. Members of this group are mainly found in proteobacteria.

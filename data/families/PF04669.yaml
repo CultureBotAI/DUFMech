@@ -1,0 +1,28 @@
+id: Pfam:PF04669
+pfam_id: PF04669
+name: PBDC1 protein
+short_name: PBDC1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04669
+counters:
+  proteins: 3007
+  matches: 3036
+  proteomes: 2606
+  taxa: 6858
+  structures: 1
+  alphafold_models: 2555
+  domain_architectures: 47
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021148
+description: This entry includes PBDC1 protein from mammals and its homologues from fungi. PBDC1 homolog
+  from S. cerevisiae also known as Ypl225w (Chp1, Chaperone 1 for eEF1A) functions as a co-translational
+  chaperone by forming dual interactions with the eEF1A G domain nascent chain and the UBA domain of ribosome-bound
+  nascent polypeptide-associated complex [[cite:PUB00160075]]. This protein primes the eEF1A nascent chains
+  for binding to GTP as part of a folding mechanism which is tightly coupled to chaperone recycling [[cite:PUB00160075]].

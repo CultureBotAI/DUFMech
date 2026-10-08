@@ -1,0 +1,30 @@
+id: Pfam:PF06544
+pfam_id: PF06544
+name: Small nuclear ribonucleoprotein Prp3, C-terminal domain
+short_name: Prp3_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06544
+counters:
+  proteins: 7079
+  matches: 7097
+  proteomes: 3389
+  taxa: 8940
+  structures: 35
+  alphafold_models: 6124
+  domain_architectures: 123
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010541
+description: This domain is found at the C-terminal end of U4/U6 and U4/U5/U6- small nuclear ribonucleoprotein
+  Prp3, part of the tri-RNA complex that form the spliceosome. Prp3 plays a key role in the recognition
+  of the snRNA duplex. This binding domain, highly conserved among eukaryotes, interacts with the 3' end
+  of U6 snRNA. It adopts a ferredoxin-like fold, showing a five-stranded mixed beta-sheet with three alpha-helices,
+  two of them running parallel to the beta-strands on one side of the sheet and one on the other. This
+  fold is extended with a long beta-hairpin, an extra beta-strand, an helix and a final loop at the C
+  terminus. It is located C-terminal to [pfam:PF08572] [[cite:PUB00100665],[cite:PUB00100667],[cite:PUB00100664],[cite:PUB00100666]].

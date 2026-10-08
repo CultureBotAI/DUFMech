@@ -1,0 +1,36 @@
+id: Pfam:PF11860
+pfam_id: PF11860
+name: N-acetylmuramidase
+short_name: Muramidase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11860
+counters:
+  proteins: 1485
+  matches: 1492
+  proteomes: 1311
+  taxa: 2361
+  structures: 4
+  alphafold_models: 794
+  domain_architectures: 24
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024408
+description: Endolysins are bacteriophage encoded proteins synthesized at the end of the lytic infection
+  cycle. They degrade the peptidoglycan (PG) of the host bacterium to allow viral progeny release. This
+  domain family is found in bacteria and viruses. It is also found associated with [pfam:PF01471]. One
+  of the family members is the modular Gp110 endolysin found in the Salmonella phage. This domain represents
+  the catalytic region found in the C-terminal of Gp110. It has been demonstrated to have N-acetylmuramidase
+  (lysozyme) activity cleaving the beta-(1,4) glycosidic bond between N-acetylmuramic acid and N-acetylglucosamine
+  residues in the sugar backbone of the PG. Furthermore, sequence alignments containing this domain show
+  that the Gp110 E101 residue is conserved (suggesting that is is the catalytic residue), and followed
+  by serine (a common feature in lysozymes). The structure of endolysins varies depending on their origin.
+  In general, most of the endolysins from phages infecting Gram-positive bacteria have a modular structure
+  consisting of one or two N-terminal enzymatic active domains (EADs) and a C-terminal cell wall binding
+  domain (CBD) separated by a short linker. In silico analysis indicate that this endolysin has a modular
+  structure harboring this EAD family at the C terminus and a PG_binding_1 CBD at the N terminus [[cite:PUB00081896]].

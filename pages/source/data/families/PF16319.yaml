@@ -1,0 +1,28 @@
+id: Pfam:PF16319
+pfam_id: PF16319
+name: Surface glycan binding protein BT4661-like, N-terminal
+short_name: Ig_BT4661_1st
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16319
+counters:
+  proteins: 46
+  matches: 46
+  proteomes: 46
+  taxa: 92
+  structures: 1
+  alphafold_models: 30
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032529
+description: This entry, mainly found in Bacteroides, includes the putative surface glycan binding protein
+  (SGBP) BT4661 from Bacteroides thetaiotaomicron ([swissprot:Q89YS0]). BT4661 appears to play a role
+  in the bacterial degrading apparatus of the host glycosaminoglycans heparin (Hep) and heparan sulfate
+  (HS). It shows six discrete domains that adopt an Ig-like fold arranged in an extended, curved conformation
+  [[cite:PUB00100963]]. This is the first Ig-like domain.

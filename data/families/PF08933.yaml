@@ -1,0 +1,29 @@
+id: Pfam:PF08933
+pfam_id: PF08933
+name: Monodechloroaminopyrrolnitrin synthase PrnB
+short_name: PrnB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08933
+counters:
+  proteins: 346
+  matches: 347
+  proteomes: 332
+  taxa: 604
+  structures: 15
+  alphafold_models: 193
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015029
+description: 'This protein family includes Monodechloroaminopyrrolnitrin synthase PrnB from Pseudomonas
+  fluorescens and similar bacterial proteins. PrnB is involved in the biosynthesis of the antifungal compound
+  pyrrolnitrin. It is organised into two domains: a small N-terminal capping domain that consists of 7
+  alpha-helices and the core helical domain, which is related to myoglobin. PrnB shows structural homology
+  to the heme b-dependent two-domain indoleamine 2,3-dioxygenase enzyme (IDO, [pfam:PF01231]) and to the
+  tryptophan 2,3-dioxygenase (TDO, [pfam:PF03301]) family [[cite:PUB00049615],[cite:PUB00054440]].'

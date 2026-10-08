@@ -1,0 +1,29 @@
+id: Pfam:PF11962
+pfam_id: PF11962
+name: Peptidase_G2, IMC autoproteolytic cleavage domain
+short_name: Peptidase_G2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11962
+counters:
+  proteins: 321
+  matches: 340
+  proteomes: 241
+  taxa: 502
+  structures: 11
+  alphafold_models: 163
+  domain_architectures: 31
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021865
+description: This domain is found at the very C-terminus of bacteriophage parallel beta-helical tailspike
+  proteins. It carries the enzymic residues that induce autoproteolytic cleavage to bring about maturation
+  of the folding process of the helix in a chaperone-like manner. The domain thus mediates the assembly
+  of a large tailspike protein and then releases itself after maturation. These C-terminal regions that
+  autoproteolytically release themselves after maturation are exchangeable between functionally unrelated
+  N-terminal proteins and have been identified in a number of bacteriophage tailspike proteins [[cite:PUB00057232]].

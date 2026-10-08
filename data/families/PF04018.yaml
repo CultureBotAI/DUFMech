@@ -1,0 +1,27 @@
+id: Pfam:PF04018
+pfam_id: PF04018
+name: Undecaprenyl phosphate translocase-like
+short_name: VCA0040-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04018
+counters:
+  proteins: 5190
+  matches: 5250
+  proteomes: 4457
+  taxa: 6778
+  structures: 0
+  alphafold_models: 3478
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007163
+description: This family represents a group of prokaryotic proteins associated with transmembrane transport
+  of undecaprenyl phosphate lipids, which is required for the biogenesis of microbial cell surface polymers,
+  including VCA0040 ([swissprot:Q9KNC5]) from Vibrio cholerae [[cite:PUB00103953]]. Family members have
+  between 6 and 9 predicted transmembrane segments.

@@ -1,0 +1,29 @@
+id: Pfam:PF04765
+pfam_id: PF04765
+name: TOD1/MUCI70, glycosyltransferase-like domain
+short_name: TOD1_MUCI70
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04765
+counters:
+  proteins: 5489
+  matches: 5706
+  proteomes: 686
+  taxa: 1874
+  structures: 0
+  alphafold_models: 4377
+  domain_architectures: 126
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR048354
+description: This entry represents a glycosyltransferase-like domain found in alkaline ceramidase TOD1
+  and the probable hexosyltransferase MUCI70 from Arabidopsis. MUCI70 is a predicted glycosyltransferase
+  essential for the accumulation of seed mucilage, a gelatinous wall rich in unbranched rhamnogalacturonan
+  I (RG I), and for shaping the surface morphology of seeds [[cite:PUB00095110],[cite:PUB00101913]]. TOD1
+  is an endoplasmic reticulum ceramidase that catalyses the hydrolysis of ceramides into sphingosine and
+  free fatty acids at alkaline pH (e.g. pH 9.5) [[cite:PUB00101912],[cite:PUB00101914]].

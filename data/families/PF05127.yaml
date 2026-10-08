@@ -1,0 +1,30 @@
+id: Pfam:PF05127
+pfam_id: PF05127
+name: RNA cytidine acetyltransferase NAT10/TcmA, helicase domain
+short_name: NAT10_TcmA_helicase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05127
+counters:
+  proteins: 6449
+  matches: 6486
+  proteomes: 5368
+  taxa: 11846
+  structures: 35
+  alphafold_models: 5050
+  domain_architectures: 137
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007807
+description: This domain contains a P-loop (Walker A) motif, suggesting that it has ATPase activity, and
+  a Walker B motif. It si found in RNA cytidine acetyltransferase NAT10 from eukaryotes and tRNA(Met)
+  cytidine acetyltransferase TcmA from prokaryotes. NAT10 catalyses the formation of N4-acetylcytidine
+  (ac4C) modification on mRNAs, 18S rRNA and tRNAs [[cite:PUB00050413],[cite:PUB00076725],[cite:PUB00158943],[cite:PUB00158942]].
+  In tRNA(Met) cytidine acetyltransferase (TmcA) it may function as an RNA helicase motor (driven by ATP
+  hydrolysis) which delivers the wobble base to the active centre of the GCN5-related N-acetyltransferase
+  (GNAT) domain [[cite:PUB00050413]].

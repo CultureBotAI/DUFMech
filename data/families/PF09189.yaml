@@ -1,0 +1,31 @@
+id: Pfam:PF09189
+pfam_id: PF09189
+name: Archaeal MoaD-like protein
+short_name: MoaD_arch
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09189
+counters:
+  proteins: 369
+  matches: 371
+  proteomes: 351
+  taxa: 626
+  structures: 1
+  alphafold_models: 317
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015272
+description: This entry represents an archaeal MoaD-like domain with a ubiquitin-like fold found in various
+  archaebacterial proteins. These proteins have a highly conserved Gly-Gly motif at their C-terminus,
+  a hallmark of the MoaD/ThiS/ubiquitin superfamily [[cite:PUB00011756],[cite:PUB00035630]]. The bacterial
+  MoaD protein functions as a sulfur carrier in molybdenum cofactor (Moco) biosynthesis, with the C-terminal
+  Gly-Gly motif being essential for activation by the MoeB enzyme. After activation, MoaD receives a sulfur
+  atom to form a thiocarboxylate intermediate that acts as a sulfur donor. Based on the conserved Gly-Gly
+  motif and association with ThiS genes and MoaB-like proteins, these archaeal proteins likely function
+  as sulfur carriers in cofactor biosynthesis pathways, similar to their bacterial counterparts.

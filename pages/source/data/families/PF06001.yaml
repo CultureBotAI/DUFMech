@@ -1,0 +1,36 @@
+id: Pfam:PF06001
+pfam_id: PF06001
+name: CREB-binding protein/p300, atypical RING domain
+short_name: RING_CBP-p300
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06001
+counters:
+  proteins: 4477
+  matches: 4480
+  proteomes: 1232
+  taxa: 4016
+  structures: 36
+  alphafold_models: 170
+  domain_architectures: 120
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010303
+description: CBP (CREB-binding protein) and p300 (also known as CREBBP or KAT3A and EP300 or KAT3B, respectively)
+  are two histone acetyltransferases (HATs) that associate with and acetylate transcriptional regulators
+  and chromatin. The catalytic core of animal CBP-p300 contains a bromodomain, a CH2 region containing
+  a discontinuous PHD domain interrupted by this RING domain, and a HAT domain. Bromodomain-RING-PHD forms
+  a compact module in which the RING domain is juxtaposed with the HAT substrate-binding site. This RING
+  domain contains only a single zinc ion-binding cluster instead of two; instead of a second zinc atom,
+  a network of hydrophobic interactions stabilizes the domain. The RING domain has an inhibitory role.
+  Disease mutations that disrupt RING attachment lead to upregulation of HAT activity. HAT regulation
+  may require repositioning of the RING domain to facilitate access to an otherwise partially occluded
+  HAT active site. Plant CBP-p300 type HATs lack a bromodomain whose role in the animal animal CBP-p300's
+  is to bind acetylated histones; it has been suggested that these plant proteins may utilise a different
+  domain or another bromodomain protein to perform this function [[cite:PUB00074827]]. This RING domain
+  has also been referred to as DUF902.

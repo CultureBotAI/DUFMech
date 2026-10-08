@@ -1,0 +1,27 @@
+id: Pfam:PF10991
+pfam_id: PF10991
+name: Enterobacter phage Enc34, ssDNA-binding protein
+short_name: Enc34_ssDNA-bd
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10991
+counters:
+  proteins: 1078
+  matches: 1078
+  proteomes: 919
+  taxa: 2040
+  structures: 5
+  alphafold_models: 576
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022595
+description: ssDNA-binding protein from Enterobacter phage Enc34 ([swissprot:H6WYG2]) shows a globular
+  shape with a mixed alpha/beta architecture consisting mainly of beta-strands that clearly resembles
+  the oligosaccharide/ oligonucleotide-binding (OB)-fold [[cite:PUB00100680]]. The characteristics of
+  the protein distribution suggest prophage matches in addition to the phage matches.

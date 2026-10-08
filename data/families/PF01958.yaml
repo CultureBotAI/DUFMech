@@ -1,0 +1,32 @@
+id: Pfam:PF01958
+pfam_id: PF01958
+name: Aspartate dehydrogenase, C-terminal
+short_name: Asp_DH_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01958
+counters:
+  proteins: 3184
+  matches: 3195
+  proteomes: 2698
+  taxa: 5585
+  structures: 3
+  alphafold_models: 2258
+  domain_architectures: 31
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002811
+description: This entry represents the C-terminal domain of aspartate dehydrogenases that belong to a
+  unique class of amino acid dehydrogenases. The structure of Thermotoga maritima TM1643 has been found
+  to contain an N-terminal Rossmann fold domain (which binds the NAD(P)+ cofactor) and a C-terminal alpha/beta
+  domain [[cite:PUB00014412]]. Enzymatic characterisation of TM1643 revealed that it possesses NAD or
+  NADP-dependent dehydrogenase activity toward L-aspartate but no aspartate oxidase activity [[cite:PUB00014412]].
+  Members of this group share some structural similarity to several other NAD(P)+-dependent oxidoreductases,
+  including inositol 1-phosphate synthase, dihydrodipicolinate reductase, and ASA-DH [[cite:PUB00014412]].
+  It has been proposed that in Thermotoga maritima, TM1643 catalyses the first reaction of de novo biosynthesis
+  of NAD from aspartate, and it produces iminoaspartate required for this pathway.

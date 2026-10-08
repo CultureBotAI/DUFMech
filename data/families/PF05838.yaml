@@ -1,0 +1,28 @@
+id: Pfam:PF05838
+pfam_id: PF05838
+name: Glycosyl hydrolase 108
+short_name: Glyco_hydro_108
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05838
+counters:
+  proteins: 2895
+  matches: 2895
+  proteomes: 2293
+  taxa: 4020
+  structures: 6
+  alphafold_models: 1838
+  domain_architectures: 35
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008565
+description: This family acts as a lysozyme (N-acetylmuramidase), [ec:3.2.1.17]. It contains a conserved
+  EGGY motif near the N-terminus, the glutamic acid within this motif is essential for catalytic activity
+  [[cite:PUB00109141]]. In bacteria, it may activate the secretion of large proteins via the breaking
+  and rearrangement of the peptidoglycan layer during secretion [[cite:PUB00021044],[cite:PUB00109142]].
+  It is frequently found at the N-terminus of proteins containing a C-terminal [pfam:PF09374] domain.

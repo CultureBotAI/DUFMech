@@ -1,0 +1,27 @@
+id: Pfam:PF09850
+pfam_id: PF09850
+name: Type VI secretion system protein DotU
+short_name: DotU
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09850
+counters:
+  proteins: 5087
+  matches: 5093
+  proteomes: 3221
+  taxa: 4650
+  structures: 6
+  alphafold_models: 3075
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR017732
+description: DotU is a family of Gram-negative bacterial proteins that form part of the membrane-joining
+  complex of the type VI secretion system. DotU binds tightly to IcmF and together they are tethered to
+  the inner membrane at one end and the peptidoglycan layer at the other; they interact with Lip1 which
+  then tethers the peptidoglycan layer to the outer membrane [[cite:PUB00075434]].

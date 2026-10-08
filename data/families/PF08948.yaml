@@ -1,0 +1,27 @@
+id: Pfam:PF08948
+pfam_id: PF08948
+name: Bacteriophage PRD1, P5, spike N-terminal
+short_name: PRD1_P5_spike_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08948
+counters:
+  proteins: 6
+  matches: 6
+  proteomes: 2
+  taxa: 15
+  structures: 2
+  alphafold_models: 2
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015043
+description: The spike structure of bacteriophage PRD1 is comprised of proteins P2, P5, and P31. P5 is
+  an elongated multidomain trimer. This domain is found at the N-terminal of bacteriophage PRD1 spike
+  protein P5 and mediates the interaction with protein P31. The C-terminal domain appears to contain the
+  residues responsible for the trimerization of the protein [[cite:PUB00032209],[cite:PUB00088279]].

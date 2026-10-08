@@ -1,0 +1,29 @@
+id: Pfam:PF24481
+pfam_id: PF24481
+name: CT398-like coiled coil hairpin domain
+short_name: CT398_CC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24481
+counters:
+  proteins: 4456
+  matches: 4456
+  proteomes: 4444
+  taxa: 6159
+  structures: 3
+  alphafold_models: 2705
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056003
+description: This entry, previously known as DUF7581, represents a coiled coil hairpin domain found N-terminal
+  in CT398 from C. trachomatis, MSMEG_4306 M. smegmatis and related bacterial sequences predominantly
+  from actinobacteria. Both CT398 and MSMEG_4306 proteins have been structurally characterised [[cite:PUB00155616],[cite:PUB00156044]].
+  CT398 protein is involved in several aspects of chlamydial biology and pathogenesis, and is capable
+  of interacting with multiple binding partners. The coiled coil hairpin domain of CT398 engages in interaction
+  with RpoN as well as both T3SS ATPase-regulators FliH and CdsL [[cite:PUB00156044]].

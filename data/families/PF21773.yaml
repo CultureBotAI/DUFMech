@@ -1,0 +1,30 @@
+id: Pfam:PF21773
+pfam_id: PF21773
+name: ODAD1 central coiled coil region
+short_name: ODAD1_CC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21773
+counters:
+  proteins: 3489
+  matches: 3740
+  proteomes: 1307
+  taxa: 4258
+  structures: 13
+  alphafold_models: 3002
+  domain_architectures: 65
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049258
+description: 'This domain, previously know as DUF6872, is found in Outer dynein arm-docking complex subunit
+  1 (ODAD1, CCDC114) from humans and similar eukaryotic proteins. In mammals, CCDC114 forms a hetero-coiled
+  coil with ODAD1/CCDC151 within the A07/A08 interprotofilament cleft, analogous to the DC1/2 coiled coil
+  of the trimeric ODA-DC observed in C. reinhardtii axoneme [[cite:PUB00152762],[cite:PUB00100771]]. DC2
+  is a homolog of the human ODAD1/CCDC151 and in C.reinhardtii it is a part of the ODA-DC that consists
+  of three proteins: DC1, DC2, and DC3. The N-terminal halves of DC1 and DC2 form a microtubule-bound
+  heteromeric coiled-coil [[cite:PUB00152762],[cite:PUB00152763]].'

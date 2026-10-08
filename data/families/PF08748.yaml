@@ -1,0 +1,24 @@
+id: Pfam:PF08748
+pfam_id: PF08748
+name: Phage tail assembly chaperone
+short_name: Phage_TAC_4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08748
+counters:
+  proteins: 711
+  matches: 716
+  proteomes: 657
+  taxa: 1311
+  structures: 0
+  alphafold_models: 189
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014859
+description: This is a family of phage tail assembly chaperone proteins largely from phage T1 Gp40.

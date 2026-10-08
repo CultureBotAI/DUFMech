@@ -1,0 +1,26 @@
+id: Pfam:PF04258
+pfam_id: PF04258
+name: Signal peptide peptidase
+short_name: Peptidase_A22B
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04258
+counters:
+  proteins: 13660
+  matches: 14137
+  proteomes: 3348
+  taxa: 8908
+  structures: 2
+  alphafold_models: 11659
+  domain_architectures: 192
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR064098
+description: The members of this family are membrane proteins. In some proteins this region is found associated
+  with [pfam:PF02225]. This family corresponds with Merops subfamily A22B, the type example of which is
+  signal peptide peptidase. There is a sequence-similarity relationship with [pfam:PF01080].

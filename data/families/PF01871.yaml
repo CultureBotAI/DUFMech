@@ -1,0 +1,40 @@
+id: Pfam:PF01871
+pfam_id: PF01871
+name: AMMECR1
+short_name: AMMECR1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01871
+counters:
+  proteins: 7217
+  matches: 7346
+  proteomes: 5587
+  taxa: 13329
+  structures: 3
+  alphafold_models: 6109
+  domain_architectures: 58
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002733
+description: This domain is found at the C-terminal of several AMMECR1 proteins. Homologues appear in
+  species ranging from bacteria and archaea to eukaryotes, including Protein PH0010 from Pyrococcus horikoshii
+  [[cite:PUB00017067]]. The high level of conservation of the AMMECR1 domain points to a basic cellular
+  function, potentially in either the transcription, replication, repair or translation machinery [[cite:PUB00006433]].
+  The AMMECR1 domain consists of two distinct subdomains of different sizes. The large subdomain, which
+  contains both the N- and C-terminal regions, consists of five alpha-helices and five beta-strands. These
+  five beta-strands form an antiparallel beta-sheet. The small subdomain consists of four alpha-helices
+  and three beta-strands, and these beta-strands also form an antiparallel beta-sheet. The conserved 'LRGCIG'
+  motif is located at beta(2) and its N-terminal loop, and most of the side chains of these residues point
+  toward the interface of the two subdomains. The two subdomains are connected by only two loops, and
+  the interaction between the two subdomains is not strong. Thus, these subdomains may move dynamically
+  when the substrate enters the cleft. The size of the cleft suggests that the substrate is large, e.g.,
+  the substrate may be a nucleic acid or protein. However, the inner side of the cleft is not filled with
+  positively charged residues, and therefore it is unlikely that negatively charged nucleic acids such
+  as DNA or RNA interact at this site [[cite:PUB00017067]]. The contiguous gene deletion syndrome AMME
+  is characterised by Alport syndrome, midface hypoplasia, mental retardation and elliptocytosis and is
+  caused by a deletion in Xq22.3, comprising several genes including COL4A5, FACL4 and AMMECR1 [[cite:PUB00015590]].

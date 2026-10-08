@@ -1,0 +1,25 @@
+id: Pfam:PF10005
+pfam_id: PF10005
+name: zinc-ribbon domain
+short_name: Zn_ribbon_DZR_6
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10005
+counters:
+  proteins: 2762
+  matches: 2796
+  proteomes: 2568
+  taxa: 3597
+  structures: 0
+  alphafold_models: 1741
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011201
+description: This family appears to be a true zinc-ribbon, with two sets of putative zinc-binding domains
+  in tandem.

@@ -1,0 +1,25 @@
+id: Pfam:PF06281
+pfam_id: PF06281
+name: Structural protein VP1/VP3
+short_name: VP1_VP3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06281
+counters:
+  proteins: 31
+  matches: 31
+  proteomes: 14
+  taxa: 46
+  structures: 1
+  alphafold_models: 11
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009379
+description: This family consists of Structural proteins VP1 and VP3 from Sulfolobus spindle-shape virus
+  1 (SSV1), two of the three structural proteins [[cite:PUB00014897]].

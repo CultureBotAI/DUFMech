@@ -1,0 +1,26 @@
+id: Pfam:PF06201
+pfam_id: PF06201
+name: PITH domain
+short_name: PITH
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06201
+counters:
+  proteins: 8085
+  matches: 8206
+  proteomes: 3410
+  taxa: 9033
+  structures: 9
+  alphafold_models: 6894
+  domain_architectures: 170
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010400
+description: This family was formerly known as DUF1000. The full-length, Txnl1, protein which is a probable
+  component of the 26S proteasome, uses its C-terminal, PITH, domain to associate specifically with the
+  26S proteasome. PITH derives from proteasome-interacting thioredoxin domain.

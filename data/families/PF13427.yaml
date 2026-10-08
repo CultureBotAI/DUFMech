@@ -1,0 +1,31 @@
+id: Pfam:PF13427
+pfam_id: PF13427
+name: Aminoglycoside adenylyltransferase, C-terminal domain
+short_name: AadA_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13427
+counters:
+  proteins: 2850
+  matches: 2850
+  proteomes: 1991
+  taxa: 3364
+  structures: 9
+  alphafold_models: 1883
+  domain_architectures: 27
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025184
+description: 'This domain is found at the C-terminal end of Aminoglycoside adenylyltransferase from Salmonella
+  typhimurium (AadA) and other proteins associated with methicillin-resistant bacteria. AadA adenylates
+  the 3''''-hydroxyl group of the streptomycin glucosamine ring and the 9-hydroxyl group of the spectinomycin
+  actinamine ring, mediating bacterial resistance to these antibiotics. This enzyme is organised into
+  two domains: a N-terminal domain with a nucleotidyltransferase fold ([pfam:PF01909]) and a C-terminal
+  domain (this entry) which consists of five alpha-helices forming an up-and-down alpha-helical bundle.
+  This domain undergoes small conformational changes upon binding of ATP and magnesium that play a key
+  role in the binding of the antibiotic compounds [[cite:PUB00091136],[cite:PUB00100854]].'

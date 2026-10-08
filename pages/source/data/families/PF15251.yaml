@@ -1,0 +1,29 @@
+id: Pfam:PF15251
+pfam_id: PF15251
+name: Telomere attrition and p53 response 1 protein-like
+short_name: TAPR1-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15251
+counters:
+  proteins: 2553
+  matches: 2580
+  proteomes: 1830
+  taxa: 5222
+  structures: 0
+  alphafold_models: 2173
+  domain_architectures: 20
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR029196
+description: This entry represents the Telomere attrition and p53 response 1 protein (TAPR1) from eukaryotes,
+  including TAPR1 from human (also known as C16orf72/HAPSTR1), which is a multistress-responsive protein
+  that functions as a negative regulator of TP53/P53 in the cellular response to telomere erosion and
+  probably also DNA damage. It may attenuate p53/TP53 activation through the E3 ubiquitin ligase HUWE1
+  which also promotes TAPR1's degradation [[cite:PUB00100199],[cite:PUB00101217]]. This family also includes
+  uncharacterised proteins from fungi, such as YJR056C from yeast.

@@ -1,0 +1,30 @@
+id: Pfam:PF04519
+pfam_id: PF04519
+name: Polymer-forming cytoskeletal
+short_name: Bactofilin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04519
+counters:
+  proteins: 9607
+  matches: 9649
+  proteomes: 6945
+  taxa: 10792
+  structures: 3
+  alphafold_models: 6555
+  domain_architectures: 35
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007607
+description: This is a family of bactofilins, a functionally diverse class of cytoskeletal, polymer-forming,
+  proteins that is widely conserved among bacteria. In the example species C. crescentus, two bactofilins
+  assemble into a membrane-associated laminar structure that shows cell-cycle-dependent polar localisation
+  and acts as a platform for the recruitment of a cell wall biosynthetic enzyme involved in polar morphogenesis.
+  Bactofilins display distinct subcellular distributions and dynamics in different bacterial species,
+  suggesting that they are versatile structural elements that have adopted a range of different cellular
+  functions.

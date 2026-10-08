@@ -1,0 +1,24 @@
+id: Pfam:PF05636
+pfam_id: PF05636
+name: HIGH Nucleotidyl Transferase
+short_name: HIGH_NTase1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05636
+counters:
+  proteins: 3304
+  matches: 3332
+  proteomes: 3199
+  taxa: 4830
+  structures: 8
+  alphafold_models: 2177
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008513
+description: This family consists of HIGH Nucleotidyl Transferases

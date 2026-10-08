@@ -1,0 +1,31 @@
+id: Pfam:PF13387
+pfam_id: PF13387
+name: Lnb N-terminal periplasmic domain
+short_name: Lnb_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13387
+counters:
+  proteins: 4837
+  matches: 4839
+  proteomes: 3704
+  taxa: 5476
+  structures: 0
+  alphafold_models: 2926
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025178
+description: This domain, previously known as DUF4105, is found N-terminal in Lipoprotein N-acyltransferase
+  Lnb from Bacteroides and related uncharacterised bacterial proteins. Lnb functions as a lipoprotein
+  N-acyltransferase in its native cell background [[cite:PUB00158892]]. It is composed of two domains,
+  N-terminal (this entry) and C-terminal alpha- helical transmembrane domain. The domain represented by
+  this entry contains a highly conserved histidine residue and a well-conserved NCT motif. Its predicted
+  structure has a significant similarity to the papain-like cysteine peptidases. In addition, the putative
+  catalytic triad Asn-His-Cys is highly conserved. This domain is also found in combination with other
+  domains.

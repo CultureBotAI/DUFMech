@@ -1,0 +1,33 @@
+id: Pfam:PF00990
+pfam_id: PF00990
+name: Diguanylate cyclase, GGDEF domain
+short_name: GGDEF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00990
+counters:
+  proteins: 238353
+  matches: 240443
+  proteomes: 13288
+  taxa: 19352
+  structures: 70
+  alphafold_models: 144091
+  domain_architectures: 6727
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR000160
+description: This domain is found linked to a wide range of non-homologous domains in a variety of bacteria.
+  It has been shown to be homologous to the adenylyl cyclase catalytic domain [[cite:PUB00007061]] and
+  has diguanylate cyclase activity [[cite:PUB00016966]]. This observation correlates with the functional
+  information available on two GGDEF-containing proteins, namely diguanylate cyclase and phosphodiesterase
+  A of Acetobacter xylinum, both of which regulate the turnover of cyclic diguanosine monophosphate. In
+  the WspR protein of Pseudomonas aeruginosa, the GGDEF domain acts as a diguanylate cyclase, PDB:3bre,
+  when the whole molecule appears to form a tetramer consisting of two symmetrically-related dimers representing
+  a biological unit. The active site is the GGD/EF motif, buried in the structure, and the cyclic dimeric
+  guanosine monophosphate (c-di-GMP) bind to the inhibitory-motif RxxD on the surface. The enzyme thus
+  catalyses the cyclisation of two guanosine triphosphate (GTP) molecules to one c-di-GMP molecule [[cite:PUB00016971],[cite:PUB00109145],[cite:PUB00050740]].

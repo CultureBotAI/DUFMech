@@ -1,0 +1,30 @@
+id: Pfam:PF06777
+pfam_id: PF06777
+name: Helical and beta-bridge domain
+short_name: HBB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06777
+counters:
+  proteins: 3960
+  matches: 3984
+  proteomes: 3064
+  taxa: 8095
+  structures: 85
+  alphafold_models: 3353
+  domain_architectures: 86
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010643
+description: HBB is the domain on DEAD-box eukaryotic DNA repair helicases ([ec:3.6.1.-]) that appears
+  to be a unique fold. It's conformation is of alpha-helices 12-16 plus a short beta-bridge to the FeS-cluster
+  domain at the N-terminal. The full-length XPD protein verifies the presence of damage to DNA and allows
+  DNA repair to proceed. XPD is an assembly of several domains to form a doughnut-shaped molecule that
+  is able to separate two DNA strands and scan the DNA for damage. HBB helps to form the overall DNA-clamping
+  architecture [[cite:PUB00049879]]. This family represents a conserved region within a number of eukaryotic
+  DNA repair helicases ([ec:3.6.1.-]).

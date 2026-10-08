@@ -1,0 +1,33 @@
+id: Pfam:PF20173
+pfam_id: PF20173
+name: RZ type zinc finger domain
+short_name: ZnF_RZ-type
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20173
+counters:
+  proteins: 4869
+  matches: 4880
+  proteomes: 2015
+  taxa: 5628
+  structures: 11
+  alphafold_models: 895
+  domain_architectures: 272
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046439
+description: This entry represents the RZ type zinc finger domain, found in NFX1-type zinc finger-containing
+  protein 1 (ZNFX1) and E3 ubiquitin-protein ligase RNF213 from humans. It contains two conserved histidine
+  residues and four conserved cysteine residues in a CHC3H motif. It can bind divalent transition metals,
+  with a preference for Zn2+. ZNFX1 is an RNA-binding protein that initiates the antiviral response and
+  is required to restrict the replication of RNA viruses [[cite:PUB00100916],[cite:PUB00100918]]. RNF213
+  is a giant E3 ubiquitin ligase that can catalyse ubiquitination of both proteins and lipids, which is
+  involved in various processes, such as lipid metabolism, angiogenesis and cell-autonomous immunity.
+  It functions as a key immune sensor by catalysing ubiquitination of the lipid A moiety of bacterial
+  LPS via its RZ-type zinc-finger and restricts the proliferation of cytosolic bacteria [[cite:PUB00100919],[cite:PUB00100915]].
+  RNF213 is a major susceptibility factor of Moyamoya disease [[cite:PUB00100917]].

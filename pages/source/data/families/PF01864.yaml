@@ -1,0 +1,27 @@
+id: Pfam:PF01864
+pfam_id: PF01864
+name: CDP-archaeol synthase
+short_name: CarS-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01864
+counters:
+  proteins: 898
+  matches: 958
+  proteomes: 876
+  taxa: 1726
+  structures: 1
+  alphafold_models: 786
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032690
+description: CDP-archaeol synthase functions in the archaeal lipid biosynthetic pathway. It catalyses
+  the transfer of the nucleotide to its specific archaeal lipid substrate, leading to the formation of
+  a CDP-activated precursor (CDP-archaeol) to which polar head groups are attached [[cite:PUB00076744]].
+  Bacterial members of this family are uncharacterized.

@@ -1,0 +1,32 @@
+id: Pfam:PF01980
+pfam_id: PF01980
+name: tRNA-methyltransferase O N-terminal domain
+short_name: TrmO_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01980
+counters:
+  proteins: 8639
+  matches: 8684
+  proteomes: 7015
+  taxa: 12908
+  structures: 6
+  alphafold_models: 5968
+  domain_architectures: 76
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR023370
+description: This family includes members such as TrmO (tRNA-methyltransferase O) also known as YaeB,
+  which contains a single-sheeted beta-barrel structure. TrmO is an AdoMet-dependent methyltransferase
+  responsible for m6t6A formation [[cite:PUB00086552]]. Its human homolog, is responsible for formation
+  of m6t6A37 in cytoplasmic tRNASer. Lack of TrmO decreases attenuation activity of the thr operon, indicating
+  that N6 methylation of m6t6A37 ensures efficient decoding of ACY codons [[cite:PUB00137799]]. In bacteria
+  and eukaryotes, TrmO has a C-terminal domain containing the conserved DPRxxY motif. Where the Asp194
+  and Arg196 in this motif of E. coli TrmO are necessary for N6-methylation. However, no archaeal YaeB
+  has a C-terminal domain containing the DPRxxY motif that is conserved in bacterial and mammalian TrmO
+  homologs [[cite:PUB00086552]]. This entry represents the N-terminal domain of TrmO.

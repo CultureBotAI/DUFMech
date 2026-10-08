@@ -1,0 +1,27 @@
+id: Pfam:PF08747
+pfam_id: PF08747
+name: BREX protein BrxB
+short_name: BrxB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08747
+counters:
+  proteins: 1196
+  matches: 1196
+  proteomes: 1121
+  taxa: 2516
+  structures: 3
+  alphafold_models: 819
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014858
+description: This family includes BREX protein BrxB from Bacillus cereus, which is part of a type 1 BREX
+  (bacteriophage exclusion) system, a system that provides immunity against bacteriophage, which allows
+  phage adsorption but prevents phage DNA replication, without degradation of the phage DNA [[cite:PUB00093365]].
+  The exact function of BrxB is not clear.

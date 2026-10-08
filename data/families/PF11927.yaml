@@ -1,0 +1,29 @@
+id: Pfam:PF11927
+pfam_id: PF11927
+name: Haem-dependent oxidative N-demethylase, alpha subunit-like
+short_name: HODM_asu-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11927
+counters:
+  proteins: 6200
+  matches: 6341
+  proteomes: 3026
+  taxa: 5492
+  structures: 3
+  alphafold_models: 4748
+  domain_architectures: 88
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021848
+description: This protein family is found in fungi and bacteria, including the alpha subunit of an haem-dependent
+  oxidative N-demethylase (HODM) from Pseudomonas mendocina. This protein, catalytically active, is responsible
+  for haem, oxygen and NADPH-dependent dimethylamine (DMA) binding. It shows structural similarity to
+  the to the Aer2 PAS domain, but lacks the core PAS-domain alpha-helix that forms the Aer2 haem pocket,
+  and displays extended beta-strands and a longer loop [[cite:PUB00100877]]. The structure of [swissprot:A4XXY9],
+  PDBe:5lte, shows that it is an haem-binding PAS domain, similar in structure to PAS gas sensors [[cite:PUB00100877]].

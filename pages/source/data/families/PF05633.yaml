@@ -1,0 +1,25 @@
+id: Pfam:PF05633
+pfam_id: PF05633
+name: Protein ROH1-like
+short_name: ROH1-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05633
+counters:
+  proteins: 2920
+  matches: 3300
+  proteomes: 378
+  taxa: 1067
+  structures: 0
+  alphafold_models: 2358
+  domain_architectures: 60
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008511
+description: This family consists of several plant proteins and includes RHO1, an interactor of the exocyst
+  subunit Exo70A1 and has been shown to be required for seed coat mucilage deposition [[cite:PUB00093724]].

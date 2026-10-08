@@ -1,0 +1,31 @@
+id: Pfam:PF12018
+pfam_id: PF12018
+name: Domain of unknown function
+short_name: FAP206
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12018
+counters:
+  proteins: 1601
+  matches: 1641
+  proteomes: 1224
+  taxa: 4024
+  structures: 1
+  alphafold_models: 1404
+  domain_architectures: 28
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021897
+description: 'This domain of about 280 residues is found in eukaryotes. There are two conserved sequence
+  motifs: GFC and GLL. This family is also known as UPF0704. This domain is found FAP206 [swissprot:Q23H79],
+  a protein associated with cilia and flagella. In the ciliate Tetrahymena, the cilium has radial spokes,
+  each of which is a macromolecular complex essential for motility. A triplet of three radial spokes,
+  RS1, RS2, and RS3, is repeated every 96 nm along the doublet microtubule. Each spoke has a distinct
+  base that docks to the doublet and is linked to different inner dynein arms. Knockout of the FAP206
+  gene results in slow cell motility and the 96-nm repeats lack RS2 and dynein c. FAP206 is probably part
+  of the front prong and docks RS2 and dynein c to the microtubule [[cite:PUB00082324]].'

@@ -1,0 +1,25 @@
+id: Pfam:PF03409
+pfam_id: PF03409
+name: Transmembrane glycoprotein
+short_name: Glycoprotein
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03409
+counters:
+  proteins: 241
+  matches: 291
+  proteomes: 21
+  taxa: 44
+  structures: 0
+  alphafold_models: 230
+  domain_architectures: 18
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005071
+description: This family of proteins has some GO annotations for positive regulation of growth rate and
+  nematode larval development. This is probably a family of membrane glycoproteins [[cite:PUB00061891]].

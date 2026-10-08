@@ -1,0 +1,29 @@
+id: Pfam:PF07632
+pfam_id: PF07632
+name: Cellulose-binding Sde182, nucleoside hydrolase-like domain
+short_name: Sde182_NH-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07632
+counters:
+  proteins: 2890
+  matches: 2925
+  proteomes: 1414
+  taxa: 2658
+  structures: 1
+  alphafold_models: 2090
+  domain_architectures: 85
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011483
+description: This Rossmann-related domain is found at the N-terminal end of the C-terminal domain region
+  of the cellulose-binding protein Sde182 from Saccharophagus degradans ([swissprot:Q21PD3]), which seems
+  to have capacity to bind plant carbohydrates. This domain shows an alpha/beta configuration with a central
+  beta-sheet of eight beta-strands and 12 alpha-helices. It is structurally similar to pyrimidine-specific
+  ribonucleoside hydrolases (NH) [[cite:PUB00100688]]. This domain is also found in other uncharacterised
+  bacterial and fungal proteins.

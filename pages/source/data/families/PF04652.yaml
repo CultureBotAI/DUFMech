@@ -1,0 +1,27 @@
+id: Pfam:PF04652
+pfam_id: PF04652
+name: Vta1 like
+short_name: Vta1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04652
+counters:
+  proteins: 7394
+  matches: 7431
+  proteomes: 3259
+  taxa: 8687
+  structures: 12
+  alphafold_models: 4159
+  domain_architectures: 146
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR039431
+description: Vta1 (VPS20-associated protein 1) is a positive regulator of Vps4. Vps4 is an ATPase that
+  is required in the multivesicular body (MVB) sorting pathway to dissociate the endosomal sorting complex
+  required for transport (ESCRT). Vta1 promotes correct assembly of Vps4 and stimulates its ATPase activity
+  through its conserved Vta1/SBP1/LIP5 region [[cite:PUB00044969]].

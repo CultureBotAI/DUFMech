@@ -1,0 +1,30 @@
+id: Pfam:PF09324
+pfam_id: PF09324
+name: Mon2/Sec7/BIG1-like, HDS
+short_name: Sec7-like_HDS
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09324
+counters:
+  proteins: 12400
+  matches: 12422
+  proteomes: 3349
+  taxa: 8869
+  structures: 1
+  alphafold_models: 1000
+  domain_architectures: 230
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015403
+description: This entry represents a HDS (homology downstream of Sec7) domain found towards the C-terminal
+  of guanine nucleotide exchange factors involved Golgi transport, such as budding yeast protein Sec7,
+  protein Mon2 and BIG1-like proteins [[cite:PUB00101185],[cite:PUB00101184]]. Sec7 is involved in the
+  secretory pathway as a protein binding scaffold for the COPII-COPI protein switch for maturation of
+  the VTC intermediate compartments for Golgi compartment biogenesis [[cite:PUB00076747]]. Sec7 has four
+  HDS1-4 domains, which act to integrate the signals from several small GTPases, including Arf1 itself,
+  to switch Sec7 from a strongly autoinhibited to a strongly auto activated form [[cite:PUB00101184]].

@@ -1,0 +1,32 @@
+id: Pfam:PF11081
+pfam_id: PF11081
+name: Adenovirus L4-33K/L4-22K
+short_name: Adeno_L433K_22K
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11081
+counters:
+  proteins: 270
+  matches: 285
+  proteomes: 131
+  taxa: 381
+  structures: 0
+  alphafold_models: 162
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021304
+description: Adenoviruses express up to 20 distinct mRNAs from five major late transcription unit (MLTU)
+  regions, L1 to L5. The L4 region expresses L4-33K and a related protein, L4-22K [[cite:PUB00076403]].
+  L4-22K and L4-33K have complementary but not redundant functions that provide the normal pattern of
+  mRNA production during the late phase of infection [[cite:PUB00076403]]. L4-33K is an alternative RNA
+  splicing factor that up-regulates several MLTU splice acceptor sites as the late phase progresses [[cite:PUB00076403],[cite:PUB00076401]].
+  L4-22K plays a role in genome packaging via its binding, in association with IVa2, to the A2 sequence
+  within the packaging signal [[cite:PUB00076402]]. Additionally, L4-22K plays an important role in the
+  temporal switch from the early to late phase of infection by regulating both early and late gene expression
+  [[cite:PUB00076404],[cite:PUB00144935]].

@@ -1,0 +1,29 @@
+id: Pfam:PF12597
+pfam_id: PF12597
+name: Cytochrome c oxidase assembly protein COX20
+short_name: Cox20
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12597
+counters:
+  proteins: 2661
+  matches: 2679
+  proteomes: 2417
+  taxa: 6450
+  structures: 0
+  alphafold_models: 2317
+  domain_architectures: 29
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022533
+description: Complex IV (CIV) is a copper-heme oxidase that couples electron transfer from cytochrome
+  c to oxygen with proton extrusion across the inner membrane to contribute to the proton gradient required
+  for ATP generation. This entry includes fungal mitochondrial complex IV assembly factor Cox20 [[cite:PUB00053731]]
+  and its homologues (also known as FAM36A in metazoa [[cite:PUB00086694]]. Human CIV is formed by three
+  catalytic core subunits (COX1/2/3). COX20 has been found to form a complex with SCO1, SCO2, and newly
+  synthesized COX2. It may act as a chaperone in the early steps of COX2 maturation [[cite:PUB00088297]].

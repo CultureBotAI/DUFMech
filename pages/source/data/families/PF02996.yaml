@@ -1,0 +1,29 @@
+id: Pfam:PF02996
+pfam_id: PF02996
+name: Prefoldin subunit
+short_name: Prefoldin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02996
+counters:
+  proteins: 12752
+  matches: 12782
+  proteomes: 4076
+  taxa: 10385
+  structures: 9
+  alphafold_models: 10916
+  domain_architectures: 219
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004127
+description: This family comprises of several prefoldin subunits. The biogenesis of the cytoskeletal proteins
+  actin and tubulin involves interaction of nascent chains of each of the two proteins with the oligomeric
+  protein prefoldin (PFD) and their subsequent transfer to the cytosolic chaperonin CCT (chaperonin containing
+  TCP-1). Electron microscopy shows that eukaryotic PFD, which has a similar structure to its archaeal
+  counterpart, interacts with unfolded actin along the tips of its projecting arms. In its PFD-bound state,
+  actin seems to acquire a conformation similar to that adopted when it is bound to CCT [[cite:PUB00013187]].

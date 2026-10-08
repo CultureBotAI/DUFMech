@@ -1,0 +1,27 @@
+id: Pfam:PF04366
+pfam_id: PF04366
+name: Las17-binding protein actin regulator
+short_name: Ysc84
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04366
+counters:
+  proteins: 11690
+  matches: 11738
+  proteomes: 5737
+  taxa: 11239
+  structures: 1
+  alphafold_models: 9138
+  domain_architectures: 156
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007461
+description: Ysc84 is a family of Las17-binding proteins found in metazoa. Together, Las17 and Ysc84 are
+  essential for proper polymerisation of actin; Ysc84 is able to bind to and stabilise the actin dimer
+  presented by Las17 and thereby promote polymerisation. An active actin cytoskeleton is necessary for
+  adequate endocytosis. ([pfam:PF00018]), or a FYVE zinc finger ([pfam:PF01363]).

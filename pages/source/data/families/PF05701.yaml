@@ -1,0 +1,28 @@
+id: Pfam:PF05701
+pfam_id: PF05701
+name: Weak chloroplast movement under blue light
+short_name: WEMBL
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05701
+counters:
+  proteins: 5908
+  matches: 6970
+  proteomes: 384
+  taxa: 1123
+  structures: 0
+  alphafold_models: 4740
+  domain_architectures: 119
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008545
+description: WEMBL consists of several plant proteins required for the chloroplast avoidance response
+  under high intensity blue light. This avoidance response consists in the relocation of chloroplasts
+  on the anticlinal side of exposed cells. Acts in association with PMI2 to maintain the velocity of chloroplast
+  photo-relocation movement via the regulation of cp-actin filaments [[cite:PUB00066738]]. Thus several
+  member-sequences are described as "myosin heavy chain-like".

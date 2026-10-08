@@ -1,0 +1,30 @@
+id: Pfam:PF03159
+pfam_id: PF03159
+name: XRN 5'-3' exonuclease N-terminus
+short_name: XRN_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03159
+counters:
+  proteins: 10701
+  matches: 11038
+  proteomes: 3313
+  taxa: 8706
+  structures: 19
+  alphafold_models: 6220
+  domain_architectures: 271
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004859
+description: This family aligns residues towards the N-terminus of several proteins with multiple functions.
+  The members of this family all appear to possess 5'-3' exonuclease activity [ec:3.1.11.-]. Thus, the
+  aligned region may be necessary for 5' to 3' exonuclease function. The family also contains several
+  Xrn1 and Xrn2 proteins. The 5'-3' exoribonucleases Xrn1p and Xrn2p/Rat1p function in the degradation
+  and processing of several classes of RNA in Saccharomyces cerevisiae. Xrn1p is the main enzyme catalysing
+  cytoplasmic mRNA degradation in multiple decay pathways, whereas Xrn2p/Rat1p functions in the processing
+  of rRNAs and small nucleolar RNAs (snoRNAs) in the nucleus [[cite:PUB00020569]].

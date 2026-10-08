@@ -1,0 +1,31 @@
+id: Pfam:PF13652
+pfam_id: PF13652
+name: Putative quorum-sensing-regulated virulence factor
+short_name: QSregVF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13652
+counters:
+  proteins: 432
+  matches: 432
+  proteomes: 430
+  taxa: 489
+  structures: 1
+  alphafold_models: 240
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025203
+description: This is a family of short ~14 kDa proteins from Psuedomonas. The structure of UniProtKB:Q9HY15
+  a secreted protein has been solved and deposited as PDB:3npd. It comprises one structural domain with
+  five beta-strands and five alpha-helices. Various comparative structural prediction methods plus its
+  genomic location point to the protein forming a functional dimer with its adjacent genomic partner,
+  UniProtKB:Q9HY14, in [pfam:PF12843]. Together these might be regulated by the other product from the
+  PotABCD operon, namely the putrescine-binding periplasmic protein UniProtKB:Q9HY16. which has been implicated
+  in quorum-sensing. QSregVF is certainly up-regulated in quorum-sensing, and is predicted to be a virulence
+  factor [[cite:PUB00075641]].

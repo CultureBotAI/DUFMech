@@ -1,0 +1,28 @@
+id: Pfam:PF05603
+pfam_id: PF05603
+name: Hikeshi-like, N-terminal domain
+short_name: Hikeshi-like_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05603
+counters:
+  proteins: 3553
+  matches: 3560
+  proteomes: 3124
+  taxa: 8350
+  structures: 2
+  alphafold_models: 3070
+  domain_architectures: 60
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008493
+description: This domain is found at the N-terminal end of Protein Hikeshi from humans and its orthologues
+  OPI10 from other eukaryotes. Hikeshi is an specific nuclear import carrier for HSP70 proteins following
+  heat-shock stress, which is required to protect cells from heat- shock damages. The N-terminal domain
+  shows a jelly-roll/beta- sandwich fold with two layers of beta-sheets consisting of three and five and
+  five antiparallel beta-strands [[cite:PUB00101203]].

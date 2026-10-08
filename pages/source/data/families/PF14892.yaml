@@ -1,0 +1,28 @@
+id: Pfam:PF14892
+pfam_id: PF14892
+name: Piercer of microtubule wall 1/2
+short_name: PIRC1_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14892
+counters:
+  proteins: 1504
+  matches: 1504
+  proteomes: 1009
+  taxa: 3488
+  structures: 17
+  alphafold_models: 1319
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR026507
+description: This family of proteins is found in eukaryotes and includes Piercer of microtubule wall 1/2
+  proteins (PIRC1/2). In mice PIRC1 expression is induced by p53 may play a role in DNA damage response
+  and has been shown to function at the initial step of left-right asymmetry specification of the visceral
+  organs [[cite:PUB00111186]]. PIRC1/2 are microtubule inner proteins involved in the attachment of outer
+  dynein arms (ODAs) to dynein-decorated doublet microtubules (DMTs) in cilia axoneme [[cite:PUB00100771]].

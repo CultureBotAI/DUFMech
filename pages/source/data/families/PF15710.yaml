@@ -1,0 +1,29 @@
+id: Pfam:PF15710
+pfam_id: PF15710
+name: Break repair meiotic recombinase recruitment factor 1
+short_name: Brme1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15710
+counters:
+  proteins: 393
+  matches: 519
+  proteomes: 232
+  taxa: 865
+  structures: 2
+  alphafold_models: 330
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031441
+description: Brme1 (also known as Meiok21) is a component of meiotic recombination bridges involved in
+  meiotic double-strand break repair [[cite:PUB00095580],[cite:PUB00095581]]. The C-terminal domain of
+  Brme1 physically interacts with the N-terminal domain of HSF2BP [[cite:PUB00095580]]. BRME1 facilitates
+  the loading of RAD51 and DMC1 recombinases onto DSBs (DNA double-strand breaks) through interaction
+  with MEILB2/HSF2BP and replacing ssDNA binding proteins [[cite:PUB00095581]]. Brme1 is highly expressed
+  in mice testes and fetal ovaries. Knockout of Brme1 results in male mice infertility [[cite:PUB00095580]].

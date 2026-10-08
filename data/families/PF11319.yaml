@@ -1,0 +1,25 @@
+id: Pfam:PF11319
+pfam_id: PF11319
+name: Type VI secretion system VasI, EvfG, VC_A0118
+short_name: VasI
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11319
+counters:
+  proteins: 651
+  matches: 651
+  proteomes: 623
+  taxa: 1007
+  structures: 0
+  alphafold_models: 384
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR017738
+description: VasI is a family of Gram-negative proteins that form part of the pathogenicity apparatus
+  for bacteria-to-bacteria attack. The exact function of this com[component is not known [[cite:PUB00075433],[cite:PUB00067810]].

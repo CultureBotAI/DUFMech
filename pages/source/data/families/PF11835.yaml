@@ -1,0 +1,24 @@
+id: Pfam:PF11835
+pfam_id: PF11835
+name: RRM-like domain
+short_name: RRM_8
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11835
+counters:
+  proteins: 12213
+  matches: 12222
+  proteomes: 1726
+  taxa: 5353
+  structures: 9
+  alphafold_models: 10537
+  domain_architectures: 160
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021790
+description: This domain is related to the RRM domains suggesting it may have an RNA-binding function.

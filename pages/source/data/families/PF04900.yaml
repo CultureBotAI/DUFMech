@@ -1,0 +1,26 @@
+id: Pfam:PF04900
+pfam_id: PF04900
+name: Fcf1
+short_name: Fcf1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04900
+counters:
+  proteins: 7843
+  matches: 8050
+  proteomes: 3439
+  taxa: 9086
+  structures: 57
+  alphafold_models: 6711
+  domain_architectures: 125
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006984
+description: Fcf1 is a nucleolar protein involved in pre-rRNA processing [[cite:PUB00035397]]. Depletion
+  of yeast Fcf1 and Fcf2 leads to a decrease in synthesis of the 18S rRNA and results in a deficit in
+  40S ribosomal subunits [[cite:PUB00035397]].

@@ -1,0 +1,30 @@
+id: Pfam:PF04720
+pfam_id: PF04720
+name: PDDEXK-like family of unknown function
+short_name: PDDEXK_6
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04720
+counters:
+  proteins: 6363
+  matches: 6430
+  proteomes: 428
+  taxa: 1179
+  structures: 0
+  alphafold_models: 5140
+  domain_architectures: 86
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006502
+description: PDDEXK_6 is a family of plant proteins that are distant homologues of the PD-(D/E)XK nuclease
+  superfamily. The core structure is retained, as alpha-beta-beta-beta-alpha-beta. It retains the characteristic
+  PDDEXK motifs II and III in modified forms - xDxxx motif located in the second core beta-strand, where
+  x is any hydrophobic residue, and a D/E)X(D/N/S/C/G) pattern. The missing positively charged residue
+  in motif III is possibly replaced by a conserved arginine in motif IV located in the proceeding alpha-helix
+  [[cite:PUB00044133]]. The family is not in general fused with any other domains, so its function cannot
+  be predicted [[cite:PUB00075365]].

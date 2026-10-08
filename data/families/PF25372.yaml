@@ -1,0 +1,28 @@
+id: Pfam:PF25372
+pfam_id: PF25372
+name: F-box/LRR-repeat protein 15, leucine rich repeat domain
+short_name: LRR_FBXL15
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF25372
+counters:
+  proteins: 30220
+  matches: 38539
+  proteomes: 3479
+  taxa: 9284
+  structures: 9
+  alphafold_models: 24573
+  domain_architectures: 1075
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057207
+description: This domain represents a set of tandem leucine rich repeats found in human F-box/LRR-repeat
+  protein 15 (FBXL15) and similar eukaryotic proteins. FBXL15 is the substrate recognition component of
+  a SCF (SKP1-CUL1-F-box protein), an E3 ubiquitin-protein ligase complex which mediates the ubiquitination
+  and subsequent proteasomal degradation of SMURF1, thereby acting as a positive regulator of the BMP
+  signalling pathway. It is required for dorsal/ventral pattern formation and bone mass maintenance [[cite:PUB00147666]].

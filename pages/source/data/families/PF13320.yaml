@@ -1,0 +1,28 @@
+id: Pfam:PF13320
+pfam_id: PF13320
+name: Glycoside hydrolase 123, catalytic domain
+short_name: GH123_cat
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13320
+counters:
+  proteins: 2146
+  matches: 2177
+  proteomes: 1422
+  taxa: 2901
+  structures: 19
+  alphafold_models: 1398
+  domain_architectures: 151
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025150
+description: This domain is found at the C terminus of protein members of the glycoside hydrolase family
+  123, including N-acetylgalactosaminidase from Clostridium perfringens. This enzyme removes specific
+  terminal N-D-acetylgalactosamine from glycosphingolipids. This catalytic domain adopts an alpha/beta
+  barrel configuration with a two-stranded beta sheet and a pair of alpha-helices at the C-terminal end
+  [[cite:PUB00100654],[cite:PUB00151590]].

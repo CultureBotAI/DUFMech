@@ -1,0 +1,27 @@
+id: Pfam:PF10340
+pfam_id: PF10340
+name: Steryl acetyl hydrolase
+short_name: Say1_Mug180
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10340
+counters:
+  proteins: 545
+  matches: 551
+  proteomes: 327
+  taxa: 905
+  structures: 0
+  alphafold_models: 456
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019436
+description: This entry includes budding yeast steryl acetyl hydrolase 1 (Say1) and fission yeast Mug180.
+  Say1 is a a membrane-anchored deacetylase required for the deacetylation of acetylated sterols. It is
+  involved in the resistance to eugenol and pregnenolone toxicity [[cite:PUB00054134]]. Mug180 has a role
+  in meiosis [[cite:PUB00044889]].

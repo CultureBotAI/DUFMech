@@ -1,0 +1,37 @@
+id: Pfam:PF07754
+pfam_id: PF07754
+name: Ribosomal protein aS21
+short_name: Ribosomal_aS21
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07754
+counters:
+  proteins: 557
+  matches: 557
+  proteomes: 551
+  taxa: 1013
+  structures: 33
+  alphafold_models: 526
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011668
+description: This entry represents ribosomal protein aS21, an archaea-specific component of the small
+  ribosomal subunit (SSU). The protein was first characterised as HVO_2753 (Small CPxCG-related zinc finger
+  protein) from Haloferax volcanii [[cite:PUB00096940]] and has been identified in ribosome structures
+  from Pyrococcus abyssi [[cite:PUB00114374]] and Pyrobaculum calidifontis [[cite:PUB00161770]], where
+  it is located at a position corresponding to eS21 in eukaryotic ribosomes. NMR 3D structure analysis
+  revealed four C(P)XCG motifs, suggesting the presence of two zinc-binding pockets (ZBPs). While some
+  members of this entry bind two zinc ions [[cite:PUB00161688]], in HVO_2753, only C(P)XCG motifs 2 and
+  4 (comprising Cys-32 to Cys-35 and Cys-50 to Cys-53) form a ZBP and bind one zinc atom, while C(P)XCG
+  motifs 1 and 3 (comprising Cys-12 to Cys-15 and Cys-39 to Cys-42) form a four-Cys cluster that do not
+  bind zinc. The four C(P)XCG motifs are critical for protein stability, folding and functionality [[cite:PUB00096940]].
+  Despite structural topology resembling eukaryotic eS21, sequence identities in the structurally superimposed
+  regions are limited, and the archaeal protein contains two zinc knuckles not observed in the eukaryotic
+  version [[cite:PUB00114374]]. The widespread conservation of this protein in archaeal genomes supports
+  its role as a core ribosomal component [[cite:PUB00114374],[cite:PUB00161770]].

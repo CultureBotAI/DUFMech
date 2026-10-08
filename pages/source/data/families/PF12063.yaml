@@ -1,0 +1,33 @@
+id: Pfam:PF12063
+pfam_id: PF12063
+name: Atg1-like, MIT domain 1
+short_name: ATG1-like_MIT1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12063
+counters:
+  proteins: 4128
+  matches: 4135
+  proteomes: 2270
+  taxa: 5730
+  structures: 4
+  alphafold_models: 3568
+  domain_architectures: 55
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022708
+description: Members of this entry are serine/threonine-protein kinases and includes ATG1 from yeasts,
+  Unc-51 from C. elegans and ULK1-2 from humans. ATG1 is required for vesicle formation in autophagy and
+  the cytoplasm-to-vacuole targeting (Cvt) pathway [[cite:PUB00101056],[cite:PUB00066530]]. Unc-51 is
+  important for axonal elongation and axonal guidance [[cite:PUB00042769]] and ULK1-2 are involved in
+  autophagy in response to starvation [[cite:PUB00098424]]. They consist of a kinase domain at the N-terminal
+  ([pfam:PF00069]) and two tandem microtubule interacting and transport (MIT) domains (tMIT) at the C-terminal.
+  MIT domains are known to mediate protein-protein interactions. In ATG1, MIT domains mediate the interaction
+  with ATG13 [[cite:PUB00101056]]. In ULK1-2, MIT domains control the regulatory function and localization
+  of the proteins and also mediate interactions with additional autophagy proteins [[cite:PUB00098424]].
+  This is the C-terminal MIT domain (MIT2).

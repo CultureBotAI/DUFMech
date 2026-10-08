@@ -1,0 +1,25 @@
+id: Pfam:PF06974
+pfam_id: PF06974
+name: WS/DGAT C-terminal domain
+short_name: WS_DGAT_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06974
+counters:
+  proteins: 16019
+  matches: 16123
+  proteomes: 4236
+  taxa: 7505
+  structures: 2
+  alphafold_models: 11175
+  domain_architectures: 124
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009721
+description: This domain is found at the C-terminus of wax ester synthases (WS)/diacylglycerol O-acyltransferases
+  (DGAT). These enzymes are utilised for the in vivo production of biodiesel and other wax esters [[cite:PUB00100087]].

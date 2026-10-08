@@ -1,0 +1,32 @@
+id: Pfam:PF06769
+pfam_id: PF06769
+name: YoeB-like toxin of bacterial type II toxin-antitoxin system
+short_name: YoeB_toxin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06769
+counters:
+  proteins: 5636
+  matches: 5637
+  proteomes: 4123
+  taxa: 6920
+  structures: 19
+  alphafold_models: 3682
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009614
+description: YoeB_toxin is a family of bacterial toxins that forms one component of the type II toxin-antitoxin
+  system in E. coli whose antitoxin is represented by YefM, found in [pfam:PF02604]. The plasmid encoded
+  Axe-Txe proteins in Enterococcus faecium act as an antitoxin-toxin pair. When the plasmid is lost, the
+  antitoxin is degraded relatively quickly by host enzymes. This allows the toxin to interact with its
+  intracellular target, thus killing the cell or impeding cell growth [[cite:PUB00015566]]. These toxins
+  are highly potent protein synthesis inhibitors, specifically blocking the initiation of translation.
+  In the case of YoeB, it binds to the 50 S ribosomal subunit in 70 S ribosomes and interacts with the
+  A site leading to mRNA cleavage at this site. As a result, the 3'-end portion of the mRNA is released
+  from ribosomes, and translation initiation is effectively inhibited [[cite:PUB00075545],[cite:PUB00075546]].

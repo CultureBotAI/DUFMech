@@ -1,0 +1,25 @@
+id: Pfam:PF13102
+pfam_id: PF13102
+name: Phage integrase SAM-like domain
+short_name: Phage_int_SAM_5
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13102
+counters:
+  proteins: 12837
+  matches: 12837
+  proteomes: 3487
+  taxa: 5781
+  structures: 1
+  alphafold_models: 8564
+  domain_architectures: 32
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025269
+description: A family of uncharacterised proteins found by clustering human gut metagenomic sequences
+  [[cite:PUB00055601]]. This family appears related to the N-terminal domain of phage integrases.

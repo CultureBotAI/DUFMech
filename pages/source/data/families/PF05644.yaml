@@ -1,0 +1,24 @@
+id: Pfam:PF05644
+pfam_id: PF05644
+name: Mitochondrial and peroxisomal fission factor Mff
+short_name: Miff
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05644
+counters:
+  proteins: 3353
+  matches: 4466
+  proteomes: 1141
+  taxa: 3804
+  structures: 0
+  alphafold_models: 2898
+  domain_architectures: 41
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR039433
+description: This protein has a role in mitochondrial and peroxisomal fission [[cite:PUB00057504]].

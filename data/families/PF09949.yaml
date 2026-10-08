@@ -1,0 +1,29 @@
+id: Pfam:PF09949
+pfam_id: PF09949
+name: Phosphatidate phosphatase APP1, catalytic domain
+short_name: APP1_cat
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09949
+counters:
+  proteins: 7412
+  matches: 7431
+  proteomes: 4992
+  taxa: 7879
+  structures: 0
+  alphafold_models: 5212
+  domain_architectures: 76
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019236
+description: This entry represents a conserved region found in Phosphatidate phosphatase APP1 from yeast,
+  which contains the catalytic motif DXDX(T/V) [[cite:PUB00071676],[cite:PUB00098278]], present in other
+  Mg+2-dependent phosphatases. This domain has a weak sequence similarity to the haloacid dehalogenase-like
+  domain [[cite:PUB00071676]]. APP1 catalyses the dephosphorylation of phosphatidate to yield diacylglycerol
+  and may play a role in vesicular trafficking through its phosphatidate phosphatase activity at cortical
+  actin patches [[cite:PUB00071676],[cite:PUB00098278]].

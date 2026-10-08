@@ -1,0 +1,25 @@
+id: Pfam:PF06449
+pfam_id: PF06449
+name: ATP synthase YMF19, C-terminal
+short_name: YMF19_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06449
+counters:
+  proteins: 396
+  matches: 397
+  proteomes: 179
+  taxa: 726
+  structures: 0
+  alphafold_models: 347
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009455
+description: This domain represents the C-terminal region of YMF19 of the F0 complex of mitochondrial
+  F-ATPases from plants [[cite:PUB00016657]]. This family is found in conjunction with [pfam:PF02326].

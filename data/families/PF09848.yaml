@@ -1,0 +1,31 @@
+id: Pfam:PF09848
+pfam_id: PF09848
+name: Schlafen group 3, DNA/RNA helicase domain
+short_name: SLFN-g3_helicase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09848
+counters:
+  proteins: 4291
+  matches: 4302
+  proteomes: 3492
+  taxa: 6469
+  structures: 8
+  alphafold_models: 2775
+  domain_architectures: 46
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018647
+description: This domain is found in at the C terminus of group 3 Schlafen proteins from mammals, and
+  represents the DNA/RNA helicase domain [[cite:PUB00070629]]. Schlafen proteins are involved in the control
+  of cell proliferation, induction of immune responses, and in the regulation of viral replication [[cite:PUB00070625],[cite:PUB00070629],[cite:PUB00098266]].
+  These proteins inhibit DNA replication and promote cell death in response to DNA damage. They play a
+  role in genome surveillance to kill cells with defective replication [[cite:PUB00098266]]. This domain
+  is also found in various uncharacterised prokaryotic proteins fused to a DNA helicase, GIY-YIG or PD-(D/E)XK
+  catalytic domain or HsdR-N(terminal) domain, which are similar to AAA DNA helicase, Type III restriction
+  enzyme ATPase, RecD and RuvB helicase [[cite:PUB00098266]].

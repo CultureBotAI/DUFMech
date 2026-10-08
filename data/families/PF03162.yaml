@@ -1,0 +1,24 @@
+id: Pfam:PF03162
+pfam_id: PF03162
+name: Tyrosine phosphatase family
+short_name: Y_phosphatase2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03162
+counters:
+  proteins: 5842
+  matches: 6026
+  proteomes: 2039
+  taxa: 4527
+  structures: 17
+  alphafold_models: 4826
+  domain_architectures: 74
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004861
+description: This family is closely related to the [pfam:PF00102] and [pfam:PF00782] families.

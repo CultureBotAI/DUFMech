@@ -1,0 +1,29 @@
+id: Pfam:PF09994
+pfam_id: PF09994
+name: T6SS, Phospholipase effector Tle1-like, catalytic domain
+short_name: T6SS_Tle1-like_cat
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09994
+counters:
+  proteins: 12473
+  matches: 13510
+  proteomes: 4775
+  taxa: 7945
+  structures: 4
+  alphafold_models: 9172
+  domain_architectures: 286
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018712
+description: This domain is found in the type VI secretion system (T6SS) protein Phospholipase effector
+  Tle1 from Pseudomonas aeruginosa ([swissprot:Q9HYV3]), which hydrolyse membrane phospholipids. Tle1
+  is organised into two distinct parts, the phospholipase catalytic module (this entry) and the putative
+  membrane-anchoring module ([pfam:PF22137]). This domain adopts a compact conformation with a classical
+  mixed alpha/beta-hydrolase fold that shows of seven central parallel beta-sheets and 13 alpha-helices
+  [[cite:PUB00154252]].

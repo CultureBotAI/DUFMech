@@ -1,0 +1,30 @@
+id: Pfam:PF08489
+pfam_id: PF08489
+name: TiaS FLD domain
+short_name: TiaS_FLD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08489
+counters:
+  proteins: 592
+  matches: 593
+  proteomes: 586
+  taxa: 1064
+  structures: 7
+  alphafold_models: 557
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013696
+description: This is the FLD domain found in tRNA(Ile2) 2-agmatinylcytidine synthetase TiaS. TiaS is an
+  archaeal ATP-dependent agmatine transferase that catalyses the formation of 2-agmatinylcytidine (agm2C)
+  at the wobble position (C34) of tRNA(Ile2) [[cite:PUB00056803],[cite:PUB00154283],[cite:PUB00106019]].
+  This modified base specifically recognises AUA codons. TiaS consists of four domains, the TCKD domain
+  ([pfam:PF22641]) at the N-terminal followed by the FLD domain, an OB fold domain and a zinc ribbon domain
+  (ZRD) domain at the C-terminal [[cite:PUB00154283]]. This domain is responsible for agmantine binding
+  [[cite:PUB00056803]].

@@ -1,0 +1,31 @@
+id: Pfam:PF04504
+pfam_id: PF04504
+name: Glabrous-enhancer-binding protein-like family, DBD domain
+short_name: GeBP-like_DBD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04504
+counters:
+  proteins: 4360
+  matches: 4422
+  proteomes: 376
+  taxa: 1071
+  structures: 0
+  alphafold_models: 3520
+  domain_architectures: 95
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR053932
+description: This entry represents the DNA binding domain (DBD) present in GLABROUS1 enhancer-binding
+  protein (GeBP) and GeBP-like proteins, such us storekeeper and storekeeper-like (STKL) transcription
+  factors. GeBP and GeBP-like proteins play a redundant role in cytokinin hormone pathway regulation [[cite:PUB00153966],[cite:PUB00153967],[cite:PUB00081457]].
+  Storekeeper was identified as a B-box motif binding factor that regulates expression of patatin, a storage
+  protein in potato [[cite:PUB00081460]]. Storekeeper-like transcription factors STKL1 and STKL2 function
+  as transcription factors in the glucose signalling pathway [[cite:PUB00081459]]. The overall predicted
+  structure of this DNA binding domain (DBD) reveals a bundle of four helices, with helices alpha1 to
+  alpha3 making up a single myb-type helix-turn-helix (HTH) domain.

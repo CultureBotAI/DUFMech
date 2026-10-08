@@ -1,0 +1,28 @@
+id: Pfam:PF17304
+pfam_id: PF17304
+name: Mitochondrial outer membrane protein OM14, C-terminal
+short_name: OM14_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17304
+counters:
+  proteins: 605
+  matches: 605
+  proteomes: 585
+  taxa: 1218
+  structures: 0
+  alphafold_models: 503
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR039453
+description: This entry includes Mitochondrial outer membrane protein OM14 from yeast and similar fungal
+  sequences. OM14 is a mitochondrial membrane receptor for cytosolic ribosomes. It interacts with the
+  nascent chain-associated complex (NAC) bound to ribosomes, contributing to co-translational mitochondrial
+  import [[cite:PUB00155773],[cite:PUB00089691]]. This entry represents two transmembrane found at the
+  C-terminal of OM14.

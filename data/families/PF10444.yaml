@@ -1,0 +1,30 @@
+id: Pfam:PF10444
+pfam_id: PF10444
+name: Nbl1 / Borealin N terminal
+short_name: Nbl1_Borealin_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10444
+counters:
+  proteins: 2589
+  matches: 2591
+  proteomes: 2074
+  taxa: 5378
+  structures: 13
+  alphafold_models: 2226
+  domain_architectures: 20
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018851
+description: Nbl1 is a subunit of the conserved CPC, the chromosomal passenger complex, which regulates
+  mitotic chromosome segregation. In Fungi and Animalia, this complex consists of the kinase Aurora B/AIR-2/Ipl1p,
+  INCENP/ICP-1/Sli15p, and Survivin/BIR-1/Bir1p. In Animalia, a fourth subunit (Borealin/Dasra/CSC-1)
+  is required for targeting CPC to centromeres and central spindles. Nbl1 has been shown in budding yeast
+  to be essential for viability, and for CPC localisation, stability, integrity, and function [[cite:PUB00053916]].
+  The N terminus of Borealin is homologous to Nbl1 [[cite:PUB00053916]]. This family contains both Nbl1,
+  and the N terminal region of Borealin.

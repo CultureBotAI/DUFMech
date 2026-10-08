@@ -1,0 +1,26 @@
+id: Pfam:PF03978
+pfam_id: PF03978
+name: Borrelia burgdorferi REV protein
+short_name: Borrelia_REV
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03978
+counters:
+  proteins: 39
+  matches: 39
+  proteomes: 16
+  taxa: 29
+  structures: 1
+  alphafold_models: 18
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007126
+description: This family consists of several REV proteins from Borrelia burgdorferi (Lyme disease spirochete).
+  The function of REV is unknown although it known that gene is induced during the ingesting of host blood
+  suggesting a role in the metabolic activation of borreliae to adapt to physiological stimuli [[cite:PUB00016651]].

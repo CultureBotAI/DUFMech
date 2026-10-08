@@ -1,0 +1,27 @@
+id: Pfam:PF08965
+pfam_id: PF08965
+name: Aca2/YdiL-like
+short_name: Aca2_YdiL
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08965
+counters:
+  proteins: 173
+  matches: 173
+  proteomes: 166
+  taxa: 364
+  structures: 7
+  alphafold_models: 104
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015060
+description: This domain is found in Aca2 repressor from Pectobacterium phage ZF40, the uncharacterised
+  protein YdiL from Escherichia coli and related sequences. Aca2 regulates the transcription and translation
+  of phage anti-CRISPR acrIF8 gene through DNA binding and translationally by binding conserved RNA stem-loops
+  on mRNAs. This protein contains six alpha-helices and two parallel beta-strands [[cite:PUB00160094],[cite:PUB00158951],[cite:PUB00158952]].

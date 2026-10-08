@@ -1,0 +1,28 @@
+id: Pfam:PF07059
+pfam_id: PF07059
+name: Protein ENHANCED DISEASE RESISTANCE 2, C-terminal
+short_name: EDR2_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07059
+counters:
+  proteins: 8626
+  matches: 8806
+  proteomes: 529
+  taxa: 1506
+  structures: 0
+  alphafold_models: 6913
+  domain_architectures: 166
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009769
+description: This family represents the C-terminus (approximately 250 residues) of protein ENHANCED DISEASE
+  RESISTANCE 2 (EDR2) from plants. EDR2 is a negative regulator of the salicylic acid (SA)-mediated resistance
+  to pathogens, including the biotrophic powdery mildew pathogens Golovinomyces cichoracearum and Blumeria
+  graminis, and the downy mildew pathogen Hyaloperonospora parasitica, probably by limiting the initiation
+  of cell death and the establishment of the hypersensitive response (HR) [[cite:PUB00078901],[cite:PUB00095635]].

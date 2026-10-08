@@ -1,0 +1,33 @@
+id: Pfam:PF06565
+pfam_id: PF06565
+name: DM10 domain
+short_name: DM10_dom
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06565
+counters:
+  proteins: 4090
+  matches: 11385
+  proteomes: 1456
+  taxa: 4653
+  structures: 25
+  alphafold_models: 3629
+  domain_architectures: 80
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006602
+description: This entry represents the DM10 domain, which consists of approximately 105 residues whose
+  function is unknown. It has been identified in nucleoside diphosphate kinases, namely Nucleoside diphosphate
+  kinase 7 (NDK7), which contain a single copy of the DM10 domain [[cite:PUB00085676],[cite:PUB00087484]],
+  and in uncharacterised proteins including Rib72 from Chlamydomonas and EF-hand domain-containing protein
+  1/EF-hand domain-containing family member C2 (EFHC1/2) from mammals, which contain multiple copies of
+  DM10 domains. In Chlamydomonas, and possibly mammals, DM10 domain-containing proteins are tightly bound
+  to the flagellar doublet microtubules. This suggests that DM10 domains might act as flagellar NDK regulatory
+  modules or as units specifically involved in axonemal targeting or assembly [[cite:PUB00043716],[cite:PUB00097750]].
+  This domain have a PH-like fold which includes seven beta strands, with a short 3-4 residue helix after
+  the first strand, and a more extended alpha helical region at the C terminus [[cite:PUB00087484],[cite:PUB00043716]].

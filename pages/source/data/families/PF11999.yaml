@@ -1,0 +1,30 @@
+id: Pfam:PF11999
+pfam_id: PF11999
+name: Ice-binding-like
+short_name: Ice_binding
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11999
+counters:
+  proteins: 2322
+  matches: 2427
+  proteomes: 1257
+  taxa: 2377
+  structures: 25
+  alphafold_models: 1582
+  domain_architectures: 158
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021884
+description: This family includes members found in bacteria, fungi and archaea, many of which are ice-binding
+  proteins (IBPs) [[cite:PUB00094907]]. In Antarctic bacterium Flavobacterium frigoris PS1, FfIBP is an
+  ice-binding protein that inhibits ice growth through direct interaction with ice crystals to permit
+  the survival of polar organisms in extremely cold environments [[cite:PUB00089804]]. In arctic yeast
+  Leucosporidium sp, LeIBP, an ice-binding protein, can lower the freezing point below the melting point
+  once it binds to ice [[cite:PUB00058444]]. Family members also have a single completely conserved glycine
+  residue that may be functionally important.

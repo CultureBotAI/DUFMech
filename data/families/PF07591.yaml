@@ -1,0 +1,25 @@
+id: Pfam:PF07591
+pfam_id: PF07591
+name: Pretoxin HINT domain
+short_name: PT-HINT
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07591
+counters:
+  proteins: 4593
+  matches: 4640
+  proteomes: 2065
+  taxa: 3206
+  structures: 3
+  alphafold_models: 1207
+  domain_architectures: 1049
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: A member of the HINT superfamily of proteases that is usually found N-terminal to the toxin
+  module in polymorphic toxin systems. The domain is predicted to function in releasing the toxin domain
+  by autoproteolysis [[cite:PUB00057479]].

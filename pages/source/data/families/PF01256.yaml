@@ -1,0 +1,30 @@
+id: Pfam:PF01256
+pfam_id: PF01256
+name: NAD(P)H-hydrate dehydratase
+short_name: Carb_kinase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01256
+counters:
+  proteins: 22302
+  matches: 22644
+  proteomes: 19898
+  taxa: 32358
+  structures: 37
+  alphafold_models: 15274
+  domain_architectures: 88
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR000631
+description: Hydration of NAD(P)H to NAD(P)HX, which inhibits several dehydrogenases, is corrected by
+  an ATP-dependent dehydratase and an epimerase. The ATP-dependent dehydratase has been identified as
+  the product of the vertebrate Carkd (carbohydrate kinase domain) gene [[cite:PUB00073185],[cite:PUB00100876]].
+  Variants of this enzyme leads to deficient NADHX repair mitochondrial dysfunction in humans, associated
+  with a lethal neurometabolic disorder in early childhood [[cite:PUB00100876]]. In E. coli, it is found
+  as the C-terminal domain of a bifunctional enzyme (YjeF) that also includes the epimerase and uses ADP
+  instead of ATP [[cite:PUB00060794]]. These enzymes are widespread in eukaryotes, prokaryotes, and archaea.

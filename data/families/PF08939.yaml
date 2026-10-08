@@ -1,0 +1,28 @@
+id: Pfam:PF08939
+pfam_id: PF08939
+name: Basophilic leukemia-expressed protein Bles03
+short_name: Bles03
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08939
+counters:
+  proteins: 1951
+  matches: 1995
+  proteomes: 1597
+  taxa: 4096
+  structures: 2
+  alphafold_models: 1644
+  domain_architectures: 40
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015034
+description: This domain is found in Basophilic leukemia-expressed protein Bles03 from humans (also known
+  as UPF0696 protein C11orf68, [swissprot:Q9H3H3]) and various proteins from eukaryotes, bacteria and
+  archaea. Bles03 has been suggested to have phosphothreonine lyase activity and to play a role in the
+  biosynthesis of dehydro amino acids [[cite:PUB00039014]]. It shows a two-layer sandwich architecture
+  with a a nine-stranded beta-sheet and three alpha-helices on each side [[cite:PUB00100679]].

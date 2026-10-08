@@ -1,0 +1,30 @@
+id: Pfam:PF01900
+pfam_id: PF01900
+name: Rpp14/Pop5 family
+short_name: RNase_P_Rpp14
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01900
+counters:
+  proteins: 5287
+  matches: 5297
+  proteomes: 3673
+  taxa: 9445
+  structures: 15
+  alphafold_models: 4599
+  domain_architectures: 79
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002759
+description: tRNA processing enzyme ribonuclease P (RNase P) is a ubiquitous ribozyme that catalyzes a
+  Mg2-dependent hydrolysis to remove the 5'-leader sequence of precursor tRNA (pre-tRNA). Archaeal and
+  eukaryotic RNase P consist of a single RNA and archaeal RNase P has four or five proteins, while eukaryotic
+  RNase P consists of 9 or 10 proteins [[cite:PUB00007201]]. Human RNase P is composed of a singular protein
+  Pop1 and three subcomplexes, the Rpp20-Rpp25 heterodimer, Pop5-Rpp14- (Rpp30)2-Rpp40 heteropentamer,
+  and Rpp21-Rpp29-Rpp38 heterotrimer. This family includes Rnp2 (also known as Pop5) from archaea [[cite:PUB00097410]]
+  and Pop5/Rpp14 from eukaryotes [[cite:PUB00100655],[cite:PUB00097413]].

@@ -1,0 +1,27 @@
+id: Pfam:PF02589
+pfam_id: PF02589
+name: LUD domain
+short_name: LUD_dom
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02589
+counters:
+  proteins: 19968
+  matches: 19995
+  proteomes: 9198
+  taxa: 13257
+  structures: 1
+  alphafold_models: 12910
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003741
+description: This entry represents a domain found in lactate utilization proteins B (LutB) and C (LutC),
+  as well as several uncharacterised proteins. LutB and LutC are encoded by th conserved LutABC operon
+  in bacteria. They are involved in lactate utilization and is implicated in the oxidative conversion
+  of L-lactate into pyruvate [[cite:PUB00053899],[cite:PUB00076952]]

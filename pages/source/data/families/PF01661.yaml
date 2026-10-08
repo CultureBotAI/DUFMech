@@ -1,0 +1,39 @@
+id: Pfam:PF01661
+pfam_id: PF01661
+name: Macro domain
+short_name: Macro
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01661
+counters:
+  proteins: 32372
+  matches: 38291
+  proteomes: 12852
+  taxa: 24044
+  structures: 1152
+  alphafold_models: 21017
+  domain_architectures: 1119
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002589
+description: 'The Macro or A1pp domain is a module of about 180 amino acids which can bind ADP-ribose
+  (an NAD metabolite) or related ligands. Binding to ADP-ribose could be either covalent or non-covalent
+  [[cite:PUB00052327]]: in certain cases it is believed to bind non-covalently [[cite:PUB00052325]]; while
+  in other cases (such as Aprataxin) it appears to bind both non-covalently through a zinc finger motif,
+  and covalently through a separate region of the protein [[cite:PUB00052328]]. This domain is found in
+  a number of otherwise unrelated proteins. It is found at the C-terminus of the macro-H2A histone protein
+  4 and also in the non-structural proteins of several types of ssRNA viruses such as NSP3 from alpha-viruses
+  and coronaviruses. This domain is also found on its own in a family of proteins from bacteria, archaebacteria
+  and eukaryotes. The 3D structure of the SARS-CoV Macro domain has a mixed alpha/beta fold consisting
+  of a central seven-stranded twisted mixed beta sheet sandwiched between two alpha helices on one face,
+  and three on the other. The final alpha-helix, located on the edge of the central beta-sheet, forms
+  the C terminus of the protein [[cite:PUB00043976]]. The crystal structure of AF1521 (a Macro domain-only
+  protein from Archaeoglobus fulgidus) has also been reported and compared with other Macro domain containing
+  proteins. Several Macro domain only proteins are shorter than AF1521, and appear to lack either the
+  first strand of the beta-sheet or the C-terminal helix 5. Well conserved residues form a hydrophobic
+  cleft and cluster around the AF1521-ADP-ribose binding site [[cite:PUB00021744]].'

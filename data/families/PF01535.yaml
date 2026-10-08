@@ -1,0 +1,29 @@
+id: Pfam:PF01535
+pfam_id: PF01535
+name: PPR repeat
+short_name: PPR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01535
+counters:
+  proteins: 228033
+  matches: 700640
+  proteomes: 3274
+  taxa: 9110
+  structures: 30
+  alphafold_models: 180864
+  domain_architectures: 35610
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002885
+description: This repeat has no known function. It is about 35 amino acids long and found in up to 18
+  copies in some proteins. This family appears to be greatly expanded in plants. This repeat occurs in
+  PET309 [swissprot:P32522] that may be involved in RNA stabilisation [[cite:PUB00001271]]. This domain
+  occurs in crp1 that is involved in RNA processing [[cite:PUB00001258]]. This repeat is associated with
+  a predicted plant protein [swissprot:O49549] that has a domain organisation similar to the human BRCA1
+  protein. The repeat has been called PPR [[cite:PUB00017589]].

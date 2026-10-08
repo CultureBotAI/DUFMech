@@ -1,0 +1,27 @@
+id: Pfam:PF08878
+pfam_id: PF08878
+name: HamA
+short_name: HamA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08878
+counters:
+  proteins: 1257
+  matches: 1257
+  proteomes: 1170
+  taxa: 2426
+  structures: 6
+  alphafold_models: 786
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014976
+description: Hachiman antiphage defense system has been described in Ralstonia solanacearum species complex
+  (RSSC), and is composed of two genes, hamAB, which encode a protein of unknown function HamA, represented
+  in this entry, and an helicase (HamB). Only one strain (KACC10722) from phylotype IV shows this system
+  complete and both genes are organised in an operon [[cite:PUB00097806],[cite:PUB00097805]].

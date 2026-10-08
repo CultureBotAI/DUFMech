@@ -1,0 +1,28 @@
+id: Pfam:PF11873
+pfam_id: PF11873
+name: Membrane-bound lytic murein transglycosylase C, N-terminal domain
+short_name: Mltc_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11873
+counters:
+  proteins: 1266
+  matches: 1266
+  proteomes: 1161
+  taxa: 1815
+  structures: 4
+  alphafold_models: 845
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024570
+description: This domain is found associated with [pfam:PF01464]. It is the N-terminal structural domain
+  of MltC (Membrane-bound lytic murein transglycosylase C), one of the seven lytic transglycosylases found
+  in the genome of the Gram-negative bacterium Escherichia coli. The role of the N-terminal domain is
+  suggested to be important not as a mere structural extension of the active site beyond what is seen
+  in other lytic transglycosylases but one that creates a peptide-binding site at position +2 [[cite:PUB00109606]].

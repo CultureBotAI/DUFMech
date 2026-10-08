@@ -1,0 +1,28 @@
+id: Pfam:PF10899
+pfam_id: PF10899
+name: Putative abortive phage resistance protein AbiGi, antitoxin
+short_name: AbiGi
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10899
+counters:
+  proteins: 323
+  matches: 323
+  proteomes: 317
+  taxa: 774
+  structures: 0
+  alphafold_models: 208
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021223
+description: This is a bacterial family of proteins with unknown function. AbiGi is a family of putative
+  type IV toxin-antitoxin system antitoxins. The AbiG abortive phage resistance system affects lactococcal
+  bacteriophages phiP335 and phiQ30 but not the other P335 phage species. AbiGii toxin appears to confer
+  resistance to phages by a mechanism of abortive infection that acts by interfering with phage RNA synthesis
+  [[cite:PUB00016885]]. The cognate toxin is found in [pfam:PF16873].

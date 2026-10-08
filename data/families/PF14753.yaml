@@ -1,0 +1,25 @@
+id: Pfam:PF14753
+pfam_id: PF14753
+name: Protein FAM221A/B
+short_name: FAM221
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14753
+counters:
+  proteins: 1721
+  matches: 1857
+  proteomes: 879
+  taxa: 2775
+  structures: 0
+  alphafold_models: 1483
+  domain_architectures: 20
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR026755
+description: This family of proteins is found in eukaryotes. Proteins in this family are typically between
+  99 and 305 amino acids in length.

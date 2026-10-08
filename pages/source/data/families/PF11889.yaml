@@ -1,0 +1,25 @@
+id: Pfam:PF11889
+pfam_id: PF11889
+name: Capsid protein C, pestivirus
+short_name: Capsid_pestivir
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11889
+counters:
+  proteins: 475
+  matches: 476
+  proteomes: 19
+  taxa: 86
+  structures: 0
+  alphafold_models: 25
+  domain_architectures: 20
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021824
+description: This domain is found in the genome polyprotein from Pestivirus. It covers part of the capsid
+  protein C region in the polyprotein.

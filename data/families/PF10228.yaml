@@ -1,0 +1,28 @@
+id: Pfam:PF10228
+pfam_id: PF10228
+name: Histone PARylation factor 1
+short_name: HPF1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10228
+counters:
+  proteins: 1724
+  matches: 1797
+  proteomes: 1319
+  taxa: 4217
+  structures: 11
+  alphafold_models: 1506
+  domain_architectures: 42
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR064898
+description: Histone PARylation factor 1 (HPF1, previously known as C4orf27) is a key regulator of ADP-ribosylation
+  (ADPr) signaling in response to DNA damage. It forms a complex with PARP-1 (poly(ADP-ribose) polymerase
+  1), creating a composite active site. HPF1 is essential for Ser-ADPr (ADPr on serine residues), which
+  represents the major fraction of ADPr synthesised after DNA damage. This protein is organised into two
+  tightly-associated domains connected via an elaborate linker, showing an alpha-beta structure [[cite:PUB00081458],[cite:PUB00101317],[cite:PUB00101318],[cite:PUB00101316]].

@@ -1,0 +1,25 @@
+id: Pfam:PF04657
+pfam_id: PF04657
+name: Putative inner membrane exporter, YdcZ
+short_name: DMT_YdcZ
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04657
+counters:
+  proteins: 9496
+  matches: 11625
+  proteomes: 6282
+  taxa: 9270
+  structures: 0
+  alphafold_models: 5877
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006750
+description: DMT_YdcZ is a family of putative inner membrane exporters from both Gram-positive and Gram-negative
+  bacteria.

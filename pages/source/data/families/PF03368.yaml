@@ -1,0 +1,31 @@
+id: Pfam:PF03368
+pfam_id: PF03368
+name: Dicer dimerisation domain
+short_name: Dicer_dimer
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03368
+counters:
+  proteins: 8259
+  matches: 8274
+  proteomes: 2973
+  taxa: 8119
+  structures: 47
+  alphafold_models: 1094
+  domain_architectures: 386
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005034
+description: This domain is found in members of the Dicer protein family which function in RNA interference,
+  an evolutionarily conserved mechanism for gene silencing using double-stranded RNA (dsRNA) molecules.
+  It is essential for the activity of Dicer [[cite:PUB00067933],[cite:PUB00043694]]. It is a divergent
+  double stranded RNA-binding domain [[cite:PUB00043692]]. The N-terminal alpha helix of this domain is
+  in a different orientation to that found in canonical dsRNA-binding domains. This results in a change
+  of charge distribution at the potential dsRNA-binding surface and in the N- and C-termini of the domain
+  being in close proximity [[cite:PUB00066744]]. This domain has weak dsRNA-binding activity. It mediates
+  heterodimerisation of Dicer proteins with their respective protein partners [[cite:PUB00066744]].

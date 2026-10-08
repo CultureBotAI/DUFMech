@@ -1,0 +1,27 @@
+id: Pfam:PF01977
+pfam_id: PF01977
+name: 3-octaprenyl-4-hydroxybenzoate carboxy-lyase Rift-related domain
+short_name: UbiD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01977
+counters:
+  proteins: 11717
+  matches: 11748
+  proteomes: 9103
+  taxa: 13944
+  structures: 83
+  alphafold_models: 7643
+  domain_architectures: 34
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR048304
+description: This family has been characterised as 3-octaprenyl-4- hydroxybenzoate carboxy-lyase enzymes
+  [[cite:PUB00020511]]. This enzyme catalyses the third reaction in ubiquinone biosynthesis. For optimal
+  activity the carboxy-lase was shown to require Mn2+ [[cite:PUB00020511]]. This entry represents the
+  central RIFT-related domain.

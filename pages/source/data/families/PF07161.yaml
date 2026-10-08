@@ -1,0 +1,25 @@
+id: Pfam:PF07161
+pfam_id: PF07161
+name: LppX_LprAFG lipoprotein
+short_name: LppX_LprAFG
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07161
+counters:
+  proteins: 1675
+  matches: 1679
+  proteomes: 1240
+  taxa: 1591
+  structures: 6
+  alphafold_models: 1053
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009830
+description: This entry consists of several lipoproteins mainly from Mycobacterium species, collectively
+  known as the LppX_ LprAFG family. Proteins in this entry include LprG, LppX, LprF and lprA [[cite:PUB00020730],[cite:PUB00020731],[cite:PUB00020732],[cite:PUB00039808],[cite:PUB00020734],[cite:PUB00076900]].

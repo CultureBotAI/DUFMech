@@ -1,0 +1,38 @@
+id: Pfam:PF15854
+pfam_id: PF15854
+name: G-protein coupled receptor ligand 15
+short_name: GPR15L
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15854
+counters:
+  proteins: 121
+  matches: 122
+  proteomes: 114
+  taxa: 422
+  structures: 1
+  alphafold_models: 106
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031713
+description: GPR15 is an orphan G protein-coupled receptor (GPCR) that is found in lymphocytes. It functions
+  as a co-receptor of simian immunodeficiency virus and HIV-2 and plays a role in the trafficking of T
+  cells to the lamina propria in the colon and to the skin [[cite:PUB00088053]]. An activating ligand
+  named GPR15L is shown to bind GPR15 and attract GPR15-expressing T cells including lymphocytes in colon-draining
+  lymph nodes and thymic precursors of dermal epithelial T cell. This 9kDa CC-motif containing cationic
+  polypeptide has been previously described as the 57 amino acid antimicrobial peptide AP-57, and as a
+  Sushi Containing Domain-2 (SUSD2)-binding factor (CSBF), capable of inhibiting the growth of intestinal
+  epithelial cancer cell lines. The chemokine is expressed by epithelial cells in gastrointestinal and
+  genitourinary mucosae and in the skin [[cite:PUB00088054]]. In humans GPR15L, is encoded by the gene
+  C10ORF99 and has some features similar to the CC family of chemokines [[cite:PUB00088053]]. However,
+  it lacks significant homology to classic CC and CXC chemokines, yet shares many features with them,
+  including a cationic domain predicted to comprise two disulfide bonds and a highly conserved GPCR-activating
+  terminal peptide. Furthermore, the activating peptides of CC chemokines are typically located at the
+  N-terminus, while that of GPR15L is C-terminal, a feature that it shares with some other GPCR ligands
+  like chemerin and apela [[cite:PUB00088054]].

@@ -1,0 +1,28 @@
+id: Pfam:PF16162
+pfam_id: PF16162
+name: Kiwa protein KwaB-like
+short_name: KwaB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16162
+counters:
+  proteins: 539
+  matches: 539
+  proteomes: 527
+  taxa: 1329
+  structures: 4
+  alphafold_models: 348
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032359
+description: This family includes Kiwa protein KwaB from E.coli, a component of antiviral defense system
+  Kiwa composed of KwaA and KwaB. The expression of Kiwa in E.coli (strain MG1655) confers resistance
+  to phages lambda and SECphi18 [[cite:PUB00097806]]. This family also includes a phylogenetically broad
+  range of bacteria associated with the human gut microbiome. A member of this family from Lactobacillus
+  casei CRL 705 is part of the gene cluster involved in synthesis of bacteriocin toxin [[cite:PUB00016503]].

@@ -1,0 +1,28 @@
+id: Pfam:PF12122
+pfam_id: PF12122
+name: Cytoplasmic N-terminal domain of rhomboid serine protease
+short_name: Rhomboid_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12122
+counters:
+  proteins: 1303
+  matches: 1303
+  proteomes: 1267
+  taxa: 1789
+  structures: 3
+  alphafold_models: 811
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022732
+description: Rhomboid_N is the N-terminal cytoplasmic domain of the rhomboid intra-membraneous serine
+  protease, otherwise known as Peptidase_S54, [pfam:PF01694]. This N-terminal domain has similarity to
+  other GlnB-like domains, some of which appear to have a binding role, eg to peptidoglycan. It is not
+  clear exactly what the function of this domain is in the protease, but its presence is critical for
+  maintaining a catalytically competent state for the protein [[cite:PUB00088222]].

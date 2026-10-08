@@ -1,0 +1,30 @@
+id: Pfam:PF06916
+pfam_id: PF06916
+name: FAM210A/B-like domain
+short_name: FAM210A-B_dom
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06916
+counters:
+  proteins: 5800
+  matches: 5823
+  proteomes: 3286
+  taxa: 8695
+  structures: 0
+  alphafold_models: 5002
+  domain_architectures: 81
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009688
+description: This domain is found in mitochondrial proteins, including FAM210A and B, which contains a
+  transmembrane peptide [[cite:PUB00097753],[cite:PUB00097752],[cite:PUB00097751]]. Its function is not
+  clear. FAM210A, a protein essential in maintaining skeletal muscle structure and strength [[cite:PUB00097754]],
+  interacts with mitochondrial translation elongation factor EF-Tu and promotes mitochondrial protein
+  expression. In FAM210A, this domain is responsible for binding EF-Tu [[cite:PUB00097751]]. FAM210B plays
+  a role in erythroid differentiation and is involved in cell proliferation and tumour cell growth suppression
+  [[cite:PUB00097753],[cite:PUB00097755]].

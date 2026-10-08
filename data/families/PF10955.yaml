@@ -1,0 +1,27 @@
+id: Pfam:PF10955
+pfam_id: PF10955
+name: Anti-sigma-F factor Fin
+short_name: Fin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10955
+counters:
+  proteins: 1137
+  matches: 1137
+  proteomes: 1129
+  taxa: 1433
+  structures: 1
+  alphafold_models: 704
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR020115
+description: Fin (formerly known as YabK) is a small protein required for efficient switching from sigma(F)-
+  to sigma(G)-directed gene expression during sporulation in Bacillus subtilis. Fin has been proposed
+  to be an anti-sigma(F) factor which, by disabling sigma(F), promotes the switch to late developmental
+  gene expression in the forespore [[cite:PUB00078865]].

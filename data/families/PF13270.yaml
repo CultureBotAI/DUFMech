@@ -1,0 +1,25 @@
+id: Pfam:PF13270
+pfam_id: PF13270
+name: Coiled-coil domain-containing protein 28
+short_name: CCDC28
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13270
+counters:
+  proteins: 2378
+  matches: 2390
+  proteomes: 1213
+  taxa: 4004
+  structures: 0
+  alphafold_models: 2087
+  domain_architectures: 34
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025271
+description: This entry includes CCDC28A and CCDC28B. CCDC28B modulates mTORC2 complex assembly and function,
+  possibly enhances AKT1 phosphorylation [[cite:PUB00092906]].

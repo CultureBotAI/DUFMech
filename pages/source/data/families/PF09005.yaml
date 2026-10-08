@@ -1,0 +1,30 @@
+id: Pfam:PF09005
+pfam_id: PF09005
+name: Far upstream element-binding protein, C-terminal
+short_name: FUBP_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09005
+counters:
+  proteins: 4547
+  matches: 7000
+  proteomes: 1177
+  taxa: 3896
+  structures: 2
+  alphafold_models: 3925
+  domain_architectures: 66
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015096
+description: This entry represents the transactivation domain of Far upstream element-binding protein
+  1/2 (FUBP1/2) which is found at the C-terminal. FUBP1 regulates MYC expression by binding to a single-stranded
+  far-upstream element (FUSE) upstream of the MYC promoter. FUBP2, also known as KSRP (K homology-type
+  splicing regulatory protein), is a single-strand-RNA binding protein that integrate different levels
+  of gene expression and is required for proper immune response, lipid metabolism, cell fate decisions,
+  and tissue regeneration [[cite:PUB00084324]]. This domain contains the tyrosine residues required for
+  transactivation and adopts an alpha-helical configuration [[cite:PUB00159898]].

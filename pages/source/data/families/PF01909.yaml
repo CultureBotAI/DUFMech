@@ -1,0 +1,27 @@
+id: Pfam:PF01909
+pfam_id: PF01909
+name: Nucleotidyltransferase domain
+short_name: NTP_transf_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01909
+counters:
+  proteins: 24660
+  matches: 24705
+  proteomes: 12011
+  taxa: 19472
+  structures: 133
+  alphafold_models: 16552
+  domain_architectures: 272
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002934
+description: Members of this family belong to a large family of nucleotidyltransferases [[cite:PUB00005745]].
+  This family includes kanamycin nucleotidyltransferase (KNTase) which is a plasmid-coded enzyme responsible
+  for some types of bacterial resistance to aminoglycosides. KNTase in-activates antibiotics by catalysing
+  the addition of a nucleotidyl group onto the drug.

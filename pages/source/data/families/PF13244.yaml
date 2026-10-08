@@ -1,0 +1,33 @@
+id: Pfam:PF13244
+pfam_id: PF13244
+name: MBH, subunit D
+short_name: MbhD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13244
+counters:
+  proteins: 11122
+  matches: 11122
+  proteomes: 8758
+  taxa: 12656
+  structures: 5
+  alphafold_models: 7166
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025383
+description: Hydrogen gas-evolving membrane-bound hydrogenase (MBH) is a respiratory complex homologous
+  to the quinone-reducing Complex I. Like Complex I, MBH has peripheral and membrane arms. MBH is made
+  of 14 subunits (MbhA-N). MbhJ, K, L, N and M form the Membrane-anchored hydrogenase module. MbhJ, K,
+  L, N are predicted to be exposed to the cytoplasm and form the peripheral arm. The remaining 10 subunits
+  are predicted to be integral membrane proteins forming the membrane arm, made of 44 transmembrane helices
+  (TMH) [[cite:PUB00098955],[cite:PUB00098954]]. MbhA, B, C and F form the Sodium translocation module.
+  MbhD, E, G and H form the Proton translocation module. MbhI is the linker between the hydrogenase module
+  and the proton-translocating membrane module. It anchors the discontinuous TMH7 of MbhH via its middle
+  lateral helix and the C-terminal of TMH2, found in MbhE. MbhD and MbhE together are equivalent to Nqo10
+  of Complex I [[cite:PUB00098952]]. MbhD has three TM helices.

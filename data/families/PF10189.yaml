@@ -1,0 +1,32 @@
+id: Pfam:PF10189
+pfam_id: PF10189
+name: Integrator complex subunit 3 N-terminal
+short_name: Ints3_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10189
+counters:
+  proteins: 2571
+  matches: 2681
+  proteomes: 1692
+  taxa: 5317
+  structures: 4
+  alphafold_models: 2112
+  domain_architectures: 65
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019333
+description: The Integrator complex is involved in small nuclear RNA (snRNA) U1 and U2 transcription,
+  and in their 3'-box-dependent processing. This complex associates with the C-terminal domain of RNA
+  polymerase II largest subunit and is recruited to the U1 and U2 snRNAs genes [[cite:PUB00045283]]. This
+  entry represents the N-terminal domain of the Integrator complex subunit 3 (Ints3), also known as SOSS
+  complex subunit A (SOSSA). It is a component of the sensor of single-stranded DNA complex (SOSS), which
+  associates with single-stranded DNA, important for DNA repair and efficient homologous recombination
+  [[cite:PUB00098617]]. This subunit serves as a central adaptor for SOSS complex assembly and stability,
+  and facilitates the accumulation of the complex to the sites of DNA damage. This region acts as a scaffold
+  for SOSSB1 and SOSSC interaction and it is not essential for ssDNA binding [[cite:PUB00098617]].

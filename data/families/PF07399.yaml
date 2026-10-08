@@ -1,0 +1,27 @@
+id: Pfam:PF07399
+pfam_id: PF07399
+name: Putative Na+/H+ antiporter
+short_name: Na_H_antiport_3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07399
+counters:
+  proteins: 776
+  matches: 795
+  proteomes: 684
+  taxa: 1141
+  structures: 0
+  alphafold_models: 486
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009978
+description: This family consists of several hypothetical bacterial proteins of around 440 residues in
+  length. The function of this family is unknown. Many members carry 11 or 12 transmembrane regions, suggesting
+  that they might be transporters. One family member, UniProtKB:Q821X2 is classified by TCDB as being
+  an NhaE type of Na+/H+ antiporter.

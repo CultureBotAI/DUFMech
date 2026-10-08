@@ -1,0 +1,27 @@
+id: Pfam:PF04339
+pfam_id: PF04339
+name: Peptidogalycan biosysnthesis/recognition
+short_name: FemAB_like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04339
+counters:
+  proteins: 7176
+  matches: 7306
+  proteomes: 6481
+  taxa: 9769
+  structures: 0
+  alphafold_models: 4573
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007434
+description: FemAB_like is a family of both baterial and Viridiplantae proteins with responsibility for
+  building interpeptide bridges in peptidoglycan. Such a function is feasible for bacteria but less likely
+  for the plant members of this family. Perhaps the plant-members are using homologous proteins to recognise
+  bacterial peptidoglcans as part of their innate immune system [[cite:PUB00075353]].

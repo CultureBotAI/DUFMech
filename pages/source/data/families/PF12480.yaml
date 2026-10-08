@@ -1,0 +1,29 @@
+id: Pfam:PF12480
+pfam_id: PF12480
+name: Golgi associated RAB2 interactor protein-like, Rab2B-binding domain
+short_name: GARIL_Rab2_bd
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12480
+counters:
+  proteins: 2442
+  matches: 2570
+  proteomes: 325
+  taxa: 1056
+  structures: 0
+  alphafold_models: 1670
+  domain_architectures: 34
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022168
+description: This domain is found in Golgi associated RAB2 interactor proteins and it is likely a Rab2B-binding
+  domain [[cite:PUB00100833],[cite:PUB00100832],[cite:PUB00100834]]. Some members included in this entry,
+  such as GAR1A/B and GAR2, are RAB2B effector proteins required for accurate acrosome formation and normal
+  male fertility [[cite:PUB00100833],[cite:PUB00100834]]. GARI-L4 is a RAB2B effector protein required
+  for the compacted Golgi morphology [[cite:PUB00100832]]. GARIL5 is a Rab2B effector protein which promotes
+  cytosolic DNA-induced innate immune responses [[cite:PUB00100835]].

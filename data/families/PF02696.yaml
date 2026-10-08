@@ -1,0 +1,28 @@
+id: Pfam:PF02696
+pfam_id: PF02696
+name: Protein adenylyltransferase SelO
+short_name: SelO
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02696
+counters:
+  proteins: 14609
+  matches: 14895
+  proteomes: 12188
+  taxa: 20440
+  structures: 8
+  alphafold_models: 10025
+  domain_architectures: 74
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003846
+description: SelO and its homologues are widespread among most eukaryotic taxa, and are also common in
+  many major bacterial taxa. SelO is a conserved pseudokinase that transfers AMP from ATP to Ser, Thr,
+  and Tyr residues on protein substrates (AMPylation). It contains a protein kinase fold with ATP flipped
+  in the active site [[cite:PUB00092455]]. In eukaryotes, it is a mitochondrial protein that may be involved
+  in redox biology [[cite:PUB00092456]].

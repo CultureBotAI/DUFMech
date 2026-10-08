@@ -1,0 +1,25 @@
+id: Pfam:PF07998
+pfam_id: PF07998
+name: Peptidase family M54
+short_name: Peptidase_M54
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07998
+counters:
+  proteins: 2434
+  matches: 2449
+  proteomes: 1799
+  taxa: 4260
+  structures: 5
+  alphafold_models: 1970
+  domain_architectures: 39
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012962
+description: This is a family of metallopeptidases. Two human proteins have been reported to degrade synthetic
+  substrates and peptides [[cite:PUB00033883]].

@@ -1,0 +1,26 @@
+id: Pfam:PF06608
+pfam_id: PF06608
+name: Cilia- and flagella-associated protein 68
+short_name: CFAP68
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06608
+counters:
+  proteins: 616
+  matches: 621
+  proteomes: 396
+  taxa: 1454
+  structures: 7
+  alphafold_models: 545
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009524
+description: This family represents the homologues of Cilia- and flagella-associated protein 68 (CFAP68).
+  This protein is a microtubule inner protein (MIP) part of the doublet microtubules (DMTs). CFAP68 belongs
+  to the axoneme core-MIPs and binds to the protofilament A09 of the sperm DMTs [[cite:PUB00151496]].

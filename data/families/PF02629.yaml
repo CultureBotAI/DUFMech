@@ -1,0 +1,25 @@
+id: Pfam:PF02629
+pfam_id: PF02629
+name: CoA binding domain
+short_name: CoA_binding
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02629
+counters:
+  proteins: 34081
+  matches: 34107
+  proteomes: 20741
+  taxa: 33520
+  structures: 92
+  alphafold_models: 24075
+  domain_architectures: 179
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003781
+description: This domain has a Rossmann fold and is found in a number of proteins including succinyl CoA
+  synthetases, malate and ATP-citrate ligases.

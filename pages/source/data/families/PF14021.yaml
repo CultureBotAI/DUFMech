@@ -1,0 +1,35 @@
+id: Pfam:PF14021
+pfam_id: PF14021
+name: Tuberculosis necrotizing toxin
+short_name: TNT
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14021
+counters:
+  proteins: 2673
+  matches: 2676
+  proteomes: 1695
+  taxa: 2848
+  structures: 8
+  alphafold_models: 1685
+  domain_architectures: 109
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025331
+description: This is the C-terminal domain secreted by Mycobacterium tuberculosis (Mtb). It induces necrosis
+  of infected cells to evade immune responses. Mtb utilizes the protein CpnT to kill human macrophages
+  by secreting its C-terminal domain (CTD), named tuberculosis necrotizing toxin (TNT) that induces necrosis.
+  It acts as a NAD+ glycohydrolase which hydrolyzes the essential cellular coenzyme NAD+ in the cytosol
+  of infected macrophages resulting in necrotic cell death [[cite:PUB00082601]]. CpnT transports its toxic
+  CTD from the cell surface of M. tuberculosis by proteolytic cleavage, where the toxin is cleaved to
+  induce host cell death [[cite:PUB00082600]]. Structural analysis determined that the TNT core contains
+  only six beta-strands as opposed to seven found in all known NAD+-utilizing toxins, and is significantly
+  smaller, with only two short alpha-helices and two 3/10 helices. Furthermore, the putative NAD+ binding
+  pocket identified Q822, Y765 and R757 as residues possibly involved in NAD+-binding and hydrolysis based
+  on similar positions of catalytic amino acids of ADP-ribosylating toxins. While glutamine 822 residue
+  was detected to be highly conserved among TNT homologs [[cite:PUB00082601]].

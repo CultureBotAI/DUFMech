@@ -1,0 +1,25 @@
+id: Pfam:PF09012
+pfam_id: PF09012
+name: FeoC like transcriptional regulator
+short_name: FeoC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09012
+counters:
+  proteins: 1362
+  matches: 1362
+  proteomes: 1285
+  taxa: 2298
+  structures: 5
+  alphafold_models: 941
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015102
+description: This family contains several transcriptional regulators, including FeoC, which contain a
+  HTH motif. FeoC acts as a [Fe-S] dependent transcriptional repressor [[cite:PUB00035969]].

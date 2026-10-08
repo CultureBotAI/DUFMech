@@ -1,0 +1,27 @@
+id: Pfam:PF05970
+pfam_id: PF05970
+name: PIF1-like helicase
+short_name: PIF1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05970
+counters:
+  proteins: 26740
+  matches: 27374
+  proteomes: 5288
+  taxa: 11185
+  structures: 37
+  alphafold_models: 18182
+  domain_architectures: 1063
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010285
+description: This family includes homologues of the PIF1 helicase, which inhibits telomerase activity
+  and is cell cycle regulated [[cite:PUB00053693],[cite:PUB00053694],[cite:PUB00151827],[cite:PUB00151828]].
+  This family includes a large number of largely uncharacterised plant proteins. This entry includes a
+  P-loop motif that is involved in nucleotide binding.

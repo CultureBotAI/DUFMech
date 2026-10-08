@@ -1,0 +1,26 @@
+id: Pfam:PF07790
+pfam_id: PF07790
+name: Archaeal Type IV pilin, N-terminal
+short_name: Pilin_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07790
+counters:
+  proteins: 1647
+  matches: 1647
+  proteomes: 394
+  taxa: 677
+  structures: 3
+  alphafold_models: 1483
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012859
+description: This entry represents the N-terminal domain of archaeal pilins, which play important roles
+  in surface adhesion [[cite:PUB00160950]]. Sequences covered by this domain are not mixed up with sequences
+  having such an extremely high sequence conservation as described in [[cite:PUB00069628],[cite:PUB00160950]].

@@ -1,0 +1,31 @@
+id: Pfam:PF11009
+pfam_id: PF11009
+name: Monothiol bacilliredoxin BrxC
+short_name: BrxC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11009
+counters:
+  proteins: 3076
+  matches: 3076
+  proteomes: 2928
+  taxa: 3744
+  structures: 1
+  alphafold_models: 1910
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022551
+description: Bacillithiol (BSH) functions as a general thiol reductant, analogous to glutathione, in a
+  wide range of bacterial species. Bacilliredoxins reduce those proteins that are modified by disulfide
+  bond formation with BSH (S-bacillithiolation) [[cite:PUB00100073]]. This entry represents BrxC from
+  Bacillus subtilis (formerly known as YtxJ) and similar bacterial proteins related to BSH. BrxC is a
+  monothiol bacilliredoxin responsible for the removal of BSH from oxidized cytosolic proteins. It can
+  also debacillithiolate the mixed disulfide form of the bacilliredoxin BrxB [[cite:PUB00055031],[cite:PUB00100075]].
+  It has a similar fold to thioredoxin. The homologue in Deinococcus radiodurans, named AbxC, plays a
+  role in the response to oxidative stress [[cite:PUB00100126]].

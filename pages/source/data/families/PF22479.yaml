@@ -1,0 +1,33 @@
+id: Pfam:PF22479
+pfam_id: PF22479
+name: Cyanophage baseplate Pam3 plug gp18
+short_name: Pam3_gp18
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22479
+counters:
+  proteins: 1235
+  matches: 1235
+  proteomes: 1081
+  taxa: 2192
+  structures: 9
+  alphafold_models: 507
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR054252
+description: 'This family, previously known as DUF6983, represents Cyanophage baseplate Pam3 plug gp18
+  and related proteins. Gp18 has structural similarity to a component of the baseplate Complex for Myoviridae
+  Phage XM1. The cyanophage Pam3 has a substantially simpler molecular organisation than the prototypical,
+  contractile-tail bacteriophage T4, but it retains the essential elements required for DNA injection.
+  The baseplate of Pam3 contains six protein components: the trimeric spike gp20, the trimeric hub gp19,
+  the baseplate wedge (six heterotriplexes of gp22-gp23), the plug of six gp18 monomers, and the fibers
+  (12 trimers of gp24) [[cite:PUB00154413]]. The plug gp18 consists of two-layered beta-sheets and a C-terminal
+  alpha-helix, resembling the immunoglobin fold. Each plug monomer is embedded between the two C-terminal
+  helices of the tube initiator, forming a ''plug'' to fix the core helical bundle of the wedge onto the
+  hub [[cite:PUB00154413]]'

@@ -1,0 +1,29 @@
+id: Pfam:PF14027
+pfam_id: PF14027
+name: Questin oxidase-like
+short_name: Questin_oxidase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14027
+counters:
+  proteins: 4856
+  matches: 4969
+  proteomes: 2173
+  taxa: 4131
+  structures: 7
+  alphafold_models: 3719
+  domain_architectures: 72
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025337
+description: This family consists of oxidoreductases involved in the synthesis of different polyketides
+  and derivatives. Questin oxidase GedK from Aspergillus terreus catalyzes the ring cleavage of the anthraquinone
+  questin to form benzophenone desmethylsulochrin [[cite:PUB00086982]]. It is part of the gene cluster
+  that mediates the biosynthesis of geodin, an intermediate in the biosynthesis of other natural products
+  [[cite:PUB00081405]]. MdpL from Emericella nidulans is part of the gene cluster that mediates the biosynthesis
+  of monodictyphenone [[cite:PUB00086983]].

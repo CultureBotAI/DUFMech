@@ -1,0 +1,29 @@
+id: Pfam:PF14970
+pfam_id: PF14970
+name: Tubulin epsilon and delta complex protein 1
+short_name: TEDC1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14970
+counters:
+  proteins: 1191
+  matches: 1245
+  proteomes: 831
+  taxa: 2779
+  structures: 0
+  alphafold_models: 1019
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027996
+description: This family represents the tubulin epsilon and delta complex protein 1 (TEDC1). This complex
+  is required for centriole maintenance and it is a component of several ciliary structures. It acts as
+  a positive regulator of hedgehog signalling, which play key roles in embryonic development and in cancers
+  [[cite:PUB00094182]]. Additionally, this protein may play a role in counteracting perturbation of actin
+  filaments, such as after treatment with the actin depolymerising microbial metabolite Chivosazole F
+  [[cite:PUB00094181]].

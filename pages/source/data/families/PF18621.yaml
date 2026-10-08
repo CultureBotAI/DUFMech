@@ -1,0 +1,26 @@
+id: Pfam:PF18621
+pfam_id: PF18621
+name: Rv3651-like, middle domain
+short_name: Rv3651-like_middle
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18621
+counters:
+  proteins: 309
+  matches: 309
+  proteomes: 296
+  taxa: 351
+  structures: 1
+  alphafold_models: 213
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR041439
+description: This domain is found in Rv3651 from Mycobacterium tuberculosis ([swissprot:I6YCP0]) and similar
+  proteins from Actinobacteria. Rv3651 adopts a three-domain configuration. This entry represents the
+  middle domain, a PAS domain that shows a central antiparallel beta-sheet of five beta-strands [[cite:PUB00100971]].

@@ -1,0 +1,27 @@
+id: Pfam:PF09982
+pfam_id: PF09982
+name: Outer membrane protein LpxR
+short_name: LpxR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09982
+counters:
+  proteins: 2613
+  matches: 2613
+  proteomes: 2316
+  taxa: 3513
+  structures: 1
+  alphafold_models: 1730
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018707
+description: The outer membrane protein LpxR from Salmonella typhimurium is a lipid A deacylase that catalyses
+  the removal of the 3'-acyloxyacyl moiety from lipid A. This protein folds into a 12-stranded antiparallel
+  beta-barrel with the N- and C- terminal ends pointing towards the periplasm and three extracellular
+  loops consisting of alpha-helical regions at the opposite side of the beta-barrel [[cite:PUB00051973]].

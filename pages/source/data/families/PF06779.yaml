@@ -1,0 +1,26 @@
+id: Pfam:PF06779
+pfam_id: PF06779
+name: Uncharacterised MFS-type transporter YbfB
+short_name: MFS_4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06779
+counters:
+  proteins: 4956
+  matches: 5076
+  proteomes: 3927
+  taxa: 5519
+  structures: 0
+  alphafold_models: 2938
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010645
+description: This family represents putative bacterial membrane proteins which may be sugar transporters.
+  Members carry twelve transmembrane regions which are characteristic of members of the major facilitator
+  sugar-transporter superfamily.

@@ -1,0 +1,26 @@
+id: Pfam:PF07571
+pfam_id: PF07571
+name: TAF6 C-terminal HEAT repeat domain
+short_name: TAF6_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07571
+counters:
+  proteins: 5265
+  matches: 5386
+  proteomes: 3077
+  taxa: 8172
+  structures: 43
+  alphafold_models: 4442
+  domain_architectures: 97
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011442
+description: TAF6_C is the C-terminal domain of the TAF6 subunit of the general transcription factor TFIID.
+  The crystal structure reveals the presence of five conserved HEAT repeats. This region is necessary
+  for the complexing together of the subunits TAF5, TAF6 and TAF9 [[cite:PUB00075536],[cite:PUB00099783],[cite:PUB00122818]].

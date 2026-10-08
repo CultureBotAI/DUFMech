@@ -1,0 +1,27 @@
+id: Pfam:PF20906
+pfam_id: PF20906
+name: S-Me-THD-like, C-terminal domain
+short_name: S-Me-THD_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20906
+counters:
+  proteins: 4960
+  matches: 4979
+  proteomes: 2804
+  taxa: 5281
+  structures: 1
+  alphafold_models: 3385
+  domain_architectures: 53
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR048350
+description: This beta barrel domain is found at the C-terminal of S-methyl thiohydantoin desulfurase
+  from Variovorax sp. (S-Me-THD) and similar sequences mainly found in bacteria and fungi. S-Me-THD catalyses
+  the hydrolysis of S-methyl -thiohydantoin-5-propanoate into hydantoin-5-propanoate and methanethiol,
+  the third step in S-methyl ergothioneine degradation [[cite:PUB00155448]].

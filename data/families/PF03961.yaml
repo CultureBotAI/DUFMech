@@ -1,0 +1,31 @@
+id: Pfam:PF03961
+pfam_id: PF03961
+name: Flagellar Assembly Protein A beta solenoid domain
+short_name: FapA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03961
+counters:
+  proteins: 3264
+  matches: 3325
+  proteomes: 2432
+  taxa: 3856
+  structures: 0
+  alphafold_models: 2229
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046865
+description: This entry represents the C-terminal beta solenoid domain of FapA and its homologues. Members
+  of this family include FapA (flagellar assembly protein A) [swissprot:Q7MBR0] found in Vibrio vulnificus.
+  The synthesis of flagella allows bacteria to respond to chemotaxis by facilitating motility. Studies
+  examining the role of FapA show that the loss or delocalization of FapA results in a complete failure
+  of the flagellar biosynthesis and motility in response to glucose mediated chemotaxis. The polar localization
+  of FapA is required for flagellar synthesis, and dephosphorylated EIIAGlc (Glucose-permease IIA component)
+  inhibited the polar localization of FapA through direct interaction [[cite:PUB00085059]]. This entry
+  shows similarity to [pfam:PF03775] suggesting a similar functional role.

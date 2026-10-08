@@ -1,0 +1,27 @@
+id: Pfam:PF13186
+pfam_id: PF13186
+name: Iron-sulfur cluster-binding domain
+short_name: SPASM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13186
+counters:
+  proteins: 16680
+  matches: 16683
+  proteomes: 9267
+  taxa: 14353
+  structures: 10
+  alphafold_models: 11292
+  domain_architectures: 93
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR023885
+description: This domain occurs as an additional C-terminal iron-sulfur cluster binding domain in many
+  radical SAM domain, [pfam:PF04055] proteins. The domain occurs in a number of proteins that modify a
+  protein to become an active enzyme, or a peptide to become a ribosomal natural product. The domain is
+  named SPASM because it occurs in the maturases of Subilitosin, PQQ, Anaerobic Sulfatases, and Mycofactocin.

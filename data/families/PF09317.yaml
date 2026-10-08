@@ -1,0 +1,25 @@
+id: Pfam:PF09317
+pfam_id: PF09317
+name: Acyl-CoA dehydrogenase, C-terminal, bacterial type
+short_name: ACDH_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09317
+counters:
+  proteins: 4456
+  matches: 4459
+  proteomes: 3452
+  taxa: 4878
+  structures: 0
+  alphafold_models: 2692
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015396
+description: This C-terminal domain is functionally uncharacterised and is predominantly found in various
+  prokaryotic acyl-coenzyme A dehydrogenases and seems to be essential for its function [[cite:PUB00101040]].

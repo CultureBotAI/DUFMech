@@ -1,0 +1,28 @@
+id: Pfam:PF13164
+pfam_id: PF13164
+name: Diedel
+short_name: Diedel
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13164
+counters:
+  proteins: 173
+  matches: 173
+  proteomes: 82
+  taxa: 367
+  structures: 2
+  alphafold_models: 159
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025061
+description: Diedel (die) was identified as an insect immune response protein. It is up-regulated after
+  a septic injury and may act as a negative regulator of the JAK/STAT signalling pathway [[cite:PUB00078735]].
+  Its homologues can be found in Drosophila and Acyrtosiphon pisum. Interestingly, the orthologues of
+  the die gene are present in the genome of insect DNA viruses of the Baculoviridae and Ascoviridae families.
+  The viral homologues suppress the immune deficiency (IMD) pathway in Drosophila [[cite:PUB00078736]].

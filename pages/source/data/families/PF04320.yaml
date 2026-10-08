@@ -1,0 +1,27 @@
+id: Pfam:PF04320
+pfam_id: PF04320
+name: YggL 50S ribosome-binding protein
+short_name: YggL_50S_bp
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04320
+counters:
+  proteins: 1654
+  matches: 1654
+  proteomes: 1590
+  taxa: 2142
+  structures: 0
+  alphafold_models: 1020
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007416
+description: This family represents bacterial proteins predominantly found in Gammaproteobacteria. YggL
+  from E.coli has been characterised and it interacts with ribosome subunits 50S and 70S. It is a 50S-binding
+  protein likely to be involved in particle assembly. It is a small protein extremely conserved in Gammaproteobacteria
+  but also present in orders Burkholderiales and Neisseriales from Betaproteobacteria [[cite:PUB00095181]].

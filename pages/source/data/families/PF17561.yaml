@@ -1,0 +1,29 @@
+id: Pfam:PF17561
+pfam_id: PF17561
+name: Type VI secretion system, TssO
+short_name: TssO
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17561
+counters:
+  proteins: 597
+  matches: 597
+  proteomes: 417
+  taxa: 568
+  structures: 0
+  alphafold_models: 395
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR039449
+description: T6SSs are toxin delivery systems. It is a multiprotein complex requiring numerous core proteins
+  (Tss proteins) including cytoplasmic, transmembrane, and outer membrane components. The needle or tube
+  apparatus is comprised of a phage-like complex, similar to the T4 contractile bacteriophage tail, which
+  is thought to be anchored to the membrane by a trans-envelope complex [[cite:PUB00090998]]. TssO proteins
+  have one predicted TM region near their N-termini. In Flavobacterium johnsoniae, three specific components
+  (TssN, TssO and TssP) are absent in the other sub-types of T6SS [[cite:PUB00090999]].

@@ -1,0 +1,26 @@
+id: Pfam:PF17742
+pfam_id: PF17742
+name: Fibronectin type III domain-containing protein 10
+short_name: Fndc10
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17742
+counters:
+  proteins: 493
+  matches: 600
+  proteomes: 475
+  taxa: 1589
+  structures: 0
+  alphafold_models: 425
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR034446
+description: This is a family of unknown function found in chordates. Family members carry one predicted
+  transmembrane region. These proteins are known as Fibronectin type III domain-containing protein 10.
+  This region represents the FN3 like domain.

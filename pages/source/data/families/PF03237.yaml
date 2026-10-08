@@ -1,0 +1,27 @@
+id: Pfam:PF03237
+pfam_id: PF03237
+name: Terminase large subunit, T4likevirus-type, N-terminal
+short_name: Terminase_6N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03237
+counters:
+  proteins: 8175
+  matches: 8176
+  proteomes: 6717
+  taxa: 12187
+  structures: 17
+  alphafold_models: 3902
+  domain_architectures: 36
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: This entry represents the N-terminal domain of terminase large subunits found in a variety
+  of the Caudovirales and prophage regions of bacterial genomes. It includes the terminase large subunit
+  of Bacteriophage T4 (terminase gene 17, Gp17) [[cite:PUB00082635],[cite:PUB00095683]]. Homologues are
+  also found in Gene Transfer Agents (GTA) [[cite:PUB00055430]], including ORFg2 (RCAP_rcc01683) of the
+  GTA of Rhodobacter capsulatus (Rhodopseudomonas capsulata) [see Fig.1, in 4].

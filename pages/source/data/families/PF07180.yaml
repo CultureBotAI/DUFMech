@@ -1,0 +1,27 @@
+id: Pfam:PF07180
+pfam_id: PF07180
+name: CaiF/GrlA transcriptional regulator
+short_name: CaiF_GrlA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07180
+counters:
+  proteins: 166
+  matches: 166
+  proteomes: 128
+  taxa: 215
+  structures: 1
+  alphafold_models: 119
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR020357
+description: This is a family of transcriptional regulators. CaiF is involved in carnitine metabolism
+  [[cite:PUB00077941]]. GrlA is encoded within the LEE type III secretion system in the enteropathogenic
+  E. coli O157:H [[cite:PUB00076312]]. GrlR interacts with GrlA at its Helix-Turn-Helix (HTH) motif, preventing
+  GrlA from binding to its target promoter DNA.

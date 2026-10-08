@@ -1,0 +1,31 @@
+id: Pfam:PF11250
+pfam_id: PF11250
+name: Fantastic Four meristem regulator
+short_name: FAF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11250
+counters:
+  proteins: 4362
+  matches: 4370
+  proteomes: 373
+  taxa: 1017
+  structures: 0
+  alphafold_models: 3553
+  domain_architectures: 51
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046431
+description: FAF is a family of plant proteins that regulate the size of the shoot meristem by modulating
+  the CLV3-WUS feedback loop. The proteins are expressed in the centre of the shoot meristem, overlapping
+  with the site of WUS - the homeodomain transcription factor WUSCHEL- expression. FAF proteins are capable
+  of modulating shoot growth by repressing WUS in the organising centre of the shoot meristem. The ability
+  of plants to form new organs throughout their life cycle requires tight control of the meristems to
+  avoid unregulated growth. Plants have evolved an elaborate genetic network that controls meristem size
+  and maintenance. WUS and the CLAVATA (CLV) ligand-receptor system are at the core of the network that
+  regulates the size of the stem cell population in the shoot meristem.

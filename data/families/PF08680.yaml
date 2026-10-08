@@ -1,0 +1,27 @@
+id: Pfam:PF08680
+pfam_id: PF08680
+name: Sporulation protein SpoIIT
+short_name: SpoIIT
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08680
+counters:
+  proteins: 1213
+  matches: 1213
+  proteomes: 1173
+  taxa: 1690
+  structures: 1
+  alphafold_models: 766
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014794
+description: This entry represents sporulation protein SpoIIT and related proteins. TATA-box_bdg is a
+  family of bacterial proteins.SpoIIT from Bacillus subtilis contains a circularly permuted TATA-box binding
+  protein-like fold. It participates in cell-cell signalling pathways during sporulation. It functions
+  in the SpoIIGA-dependent proteolytic activation of sigma E in the mother cell [[cite:PUB00162567]].

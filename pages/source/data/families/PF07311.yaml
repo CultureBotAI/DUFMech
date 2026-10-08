@@ -1,0 +1,27 @@
+id: Pfam:PF07311
+pfam_id: PF07311
+name: Dodecin
+short_name: Dodecin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07311
+counters:
+  proteins: 6289
+  matches: 6289
+  proteomes: 5666
+  taxa: 7954
+  structures: 34
+  alphafold_models: 4094
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009923
+description: Dodecin is a flavin-binding protein [[cite:PUB00057445]],found in several bacteria and few
+  archaea and represents a stand-alone version of the SHS2 domain [[cite:PUB00027394]]. It most closely
+  resembles the SHS2 domains of FtsA and Rpb7p, and represents a single domain small-molecule binding
+  form[[cite:PUB00057445]].

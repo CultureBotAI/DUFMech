@@ -1,0 +1,33 @@
+id: Pfam:PF01877
+pfam_id: PF01877
+name: RNA binding
+short_name: RNA_binding
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01877
+counters:
+  proteins: 1082
+  matches: 1082
+  proteomes: 562
+  taxa: 1009
+  structures: 7
+  alphafold_models: 1034
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002739
+description: 'PH1010 [swissprot:O58738] is composed of five alpha-helices (1-5) and eight beta-strands
+  (1-8) with the following topology: beta-1, alpha-1, beta-2, beta-3, alpha-2, alpha-3, beta-4, beta-5,
+  alpha-4, beta-6, alpha-5, beta-7, beta-8. The first six beta-strands (1-6) form a slightly twisted antiparallel
+  beta-sheet and face five alpha-helices on one side. The last two beta-strands form an antiparallel beta-sheet
+  in the C-terminus. PH1010 forms a characteristic homodimer structure in the crystal. Dimerisation of
+  the molecule is crucial for function. The structure resembles that of some ribosomal proteins such as
+  the 50S ribosomal protein L5 [[cite:PUB00051274]]. Although the structure resembles that of the RRM-type
+  RNA-binding domain of the ribosomal L5 protein, the residues involved in RNA-binding in the L5 protein
+  are not conserved in this family [[cite:PUB00048377]]. Despite this, these proteins bind to double-stranded
+  RNA in a non-sequence specific manner [[cite:PUB00066786]].'

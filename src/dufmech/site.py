@@ -37,7 +37,9 @@ KNOWN HISTORICAL DUF means a DUF name matched without that wording;
 this heuristic is not proof of a known function and does not establish experimental
 characterization. EX DUF means Pfam renamed the family away from a DUF/UPF name, as
 recorded in Pfam's previous identifiers; a rename usually follows published work on some
-members but is naming history, not proof of function for every member.
+members but is naming history, not proof of function for every member. Some EX DUF
+families' current names or descriptions still say the function is unknown; their
+classification basis lists this, and scoring does not treat them as characterized.
 FALSE POSITIVE TEXT HIT means the naming rules did not match.</dd>
 <dt>Characterization</dt><dd>A separate evidence-scoring result. UNSCORED means no score
 has been calculated; it is not evidence that the family lacks a known function.
@@ -148,6 +150,8 @@ def family_row(row: dict, root: str = "") -> str:
     other = "; ".join(f"{mech}: {n}" for mech, n in summary["records_by_mech"].items())
     if summary["protein_traits_record"]:
         other += ("; " if other else "") + "ProteinTraitsMech trait record"
+    if summary.get("scanned") is False:
+        other += ("; " if other else "") + "not covered by the cross-Mech scan"
     return f"""<tr id="{pfam}"><td><a href="{root}families/{pfam}.html">{pfam}</a></td>
 <td><strong>{text(row['name'] or row['short_name'] or pfam)}</strong><br>{text(row['short_name'])}</td>
 <td>{human(row['unknown_status'])}</td><td>{human(score)}</td><td>{signals}</td>
@@ -234,6 +238,12 @@ def cross_row(row: dict, sources: dict, root: str = "") -> str:
     return (f'<tr><td>{family}</td><td>{text(row["source_mech"])}</td><td>{record}</td>'
             f'<td>{protein}<br>{text(row.get("protein_label", ""))}</td>'
             f'<td>{human(", ".join(row.get("link_basis", [])))}</td></tr>')
+
+
+UNSCANNED_NOTE = ("<p>This family joined the worklist after the frozen cross-Mech scan, so "
+                  "other Mechs were not searched for it. Missing links here are not evidence "
+                  "that other Mechs lack it; rows shown come from mentions of a former DUF/UPF "
+                  "name.</p>")
 
 
 def cross_table(rows: list[dict], sources: dict, root: str = "") -> str:
@@ -367,7 +377,7 @@ def record_page(row: dict, metadata: dict, context: dict) -> str:
 <section><h2>Snapshot counters</h2><dl class="record-facts">{counters}</dl></section>
 <section><h2>Classification basis</h2><p>{human(seed_reasons) or 'No seed reasons supplied.'}</p>
 <p>{human('; '.join(row['demotion_reasons'])) or 'No scoring reasons supplied.'}</p></section>
-<section><h2>Related Mech records</h2>
+<section><h2>Related Mech records</h2>{UNSCANNED_NOTE if row['cross_mech'].get('scanned') is False else ''}
 {cross_table(context['cross'].get(pfam, []), context['cross_sources'], '../')}</section>
 {related}
 <section><h2>Curation history and reviews</h2>{history}</section>

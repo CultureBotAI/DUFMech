@@ -1,0 +1,31 @@
+id: Pfam:PF06167
+pfam_id: PF06167
+name: Glucose-regulated metallo-peptidase M90
+short_name: Peptidase_M90
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06167
+counters:
+  proteins: 4702
+  matches: 4705
+  proteomes: 4323
+  taxa: 6130
+  structures: 2
+  alphafold_models: 2921
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010384
+description: MtfA (earlier known as YeeI) is a transcription factor A that binds Mlc (make large colonies),
+  itself a repressor of glucose and hence a protein important in regulation of the phosphoenolpyruvate:glucose-phosphotransferase
+  (ptsG) system, the major glucose transporter in E.coli. Mlc is a repressor of ptsG, and MtfA is found
+  to bind and inactivate Mlc with high affinity [[cite:PUB00054592]]. The membrane-bound protein EIICBGlc
+  encoded by the ptsG gene is the major glucose transporter in Escherichia coli. MtfA is found to be a
+  glucose-regulated peptidase [[cite:PUB00066805]], whose activity is regulated by binding to Mlc available
+  in the cytoplasm, which in turn has been released from EIICBGlc during times when no glucose is taken
+  up. A physiologically relevant target for this peptidase is not yet known.

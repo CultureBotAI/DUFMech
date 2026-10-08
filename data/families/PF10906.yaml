@@ -1,0 +1,25 @@
+id: Pfam:PF10906
+pfam_id: PF10906
+name: MIOREX complex component 7
+short_name: Mrx7
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10906
+counters:
+  proteins: 701
+  matches: 701
+  proteomes: 690
+  taxa: 1450
+  structures: 0
+  alphafold_models: 587
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR020301
+description: This entry includes budding yeast MIOREX complex component 7 (Mrx7), which associates with
+  mitochondrial ribosome [[cite:PUB00076405]]. Its function is not clear.

@@ -1,0 +1,26 @@
+id: Pfam:PF09004
+pfam_id: PF09004
+name: Alkylated DNA repair protein alkB homolog 8, N-terminal
+short_name: ALKBH8_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09004
+counters:
+  proteins: 7805
+  matches: 7859
+  proteomes: 347
+  taxa: 1239
+  structures: 0
+  alphafold_models: 6648
+  domain_architectures: 794
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015095
+description: This domain is the N-terminal domain of Alkylated DNA repair protein alkB homolog 8 (ALKBH8)
+  and its homologues. This domain corresponds to the basic alpha-helix located at the N-terminal of the
+  RRM domain, which enhances its RNA binding affinity [[cite:PUB00062550]].

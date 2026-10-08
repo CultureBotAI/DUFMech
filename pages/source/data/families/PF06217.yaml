@@ -1,0 +1,27 @@
+id: Pfam:PF06217
+pfam_id: PF06217
+name: GAGA binding protein-like family
+short_name: GAGA_bind
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06217
+counters:
+  proteins: 2897
+  matches: 2945
+  proteomes: 380
+  taxa: 1093
+  structures: 0
+  alphafold_models: 2344
+  domain_architectures: 38
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010409
+description: This family includes gbp a protein from Soybean that binds to GAGA element dinucleotide repeat
+  DNA [[cite:PUB00013455]]. It seems likely that the this domain mediates DNA binding. This putative domain
+  contains several conserved cysteines and a histidine suggesting this may be a zinc-binding DNA interaction
+  domain.

@@ -1,0 +1,27 @@
+id: Pfam:PF02405
+pfam_id: PF02405
+name: Permease MlaE
+short_name: MlaE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02405
+counters:
+  proteins: 26408
+  matches: 26428
+  proteomes: 11914
+  taxa: 17526
+  structures: 22
+  alphafold_models: 17443
+  domain_architectures: 43
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR030802
+description: MlaE is a permease which in E. coli is a component of the Mla pathway, an ABC transport system
+  that functions to maintain the asymmetry of the outer membrane [[cite:PUB00059298]]. In [swissprot:Q7DD59]
+  it is involved in L-glutamate import into the cell [[cite:PUB00057443]]. In [swissprot:Q8L4R0] it is
+  involved in lipid transfer within the cell [[cite:PUB00057443]].

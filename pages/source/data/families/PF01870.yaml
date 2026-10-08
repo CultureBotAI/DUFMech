@@ -1,0 +1,26 @@
+id: Pfam:PF01870
+pfam_id: PF01870
+name: Archaeal holliday junction resolvase (hjc)
+short_name: Hjc
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01870
+counters:
+  proteins: 744
+  matches: 744
+  proteomes: 674
+  taxa: 1463
+  structures: 15
+  alphafold_models: 638
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002732
+description: This family of archaebacterial proteins are holliday junction resolvases (hjc gene) [[cite:PUB00007198]].
+  The Holliday junction is an essential intermediate of homologous recombination. This protein is the
+  archaeal equivalent of RuvC but is not sequence similar.

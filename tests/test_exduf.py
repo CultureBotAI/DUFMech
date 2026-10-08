@@ -227,6 +227,17 @@ def test_ex_duf_seed_scores_as_historically_characterized() -> None:
     assert "pfam_renamed_from_unknown_name" in scored.demotion_reasons
 
 
+def test_ex_duf_with_unknown_function_text_is_not_scored_as_characterized() -> None:
+    reasons = ["name_says_unknown_function", PREVIOUS_UNKNOWN_NAME_REASON]
+    row = mark_ex_duf(PARENT[1]).tsv_row() | {"candidate_reasons": reasons}
+    scored = score_families([row])[0]
+    assert scored.seed_unknown_status == EX_DUF
+    assert scored.characterization_status == UNKNOWN_CANDIDATE
+    assert {"pfam_renamed_from_unknown_name", "pfam_metadata_still_says_unknown_function"} <= set(
+        scored.demotion_reasons
+    )
+
+
 def _write(out: Path, artifacts: dict[str, str]) -> Path:
     out.mkdir(parents=True, exist_ok=True)
     for name, text in artifacts.items():

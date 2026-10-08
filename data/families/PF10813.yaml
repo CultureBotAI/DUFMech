@@ -1,0 +1,31 @@
+id: Pfam:PF10813
+pfam_id: PF10813
+name: Herpesvirus UL11 homologue
+short_name: Herpesvir_UL11
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10813
+counters:
+  proteins: 35
+  matches: 35
+  proteomes: 30
+  taxa: 85
+  structures: 0
+  alphafold_models: 30
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024360
+description: This entry contains viral proteins that are involved in virion envelopment and egress. It
+  includes Epstein-Barr virus (EBV) BBLF1 protein (also known as cytoplasmic envelopment protein 3), which
+  is present in the tegument layer of EBV and is involved in virion maturation. BBLF1 also participates
+  in viral entry at the fusion step probably by regulating the core fusion machinery. BBLF1 has been shown
+  to localise to the trans-Golgi network along with gp350/220, a site where final envelopment of EBV particles
+  takes place. BBLF1 shares 13 to 15% amino acid sequence identity with the herpes simplex virus 1 UL11
+  and cytomegalovirus UL99 tegument proteins, and like these it is a myristoylated and palmitoylated protein
+  [[cite:PUB00082568]].

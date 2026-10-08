@@ -1,0 +1,31 @@
+id: Pfam:PF10934
+pfam_id: PF10934
+name: Contractile injection system sheath initiator
+short_name: Sheath_initiator
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10934
+counters:
+  proteins: 2400
+  matches: 2400
+  proteomes: 1845
+  taxa: 3585
+  structures: 26
+  alphafold_models: 1129
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR020288
+description: This entry represents the sheath initiator protein found in contractile injection systems
+  like diffocins, pyocins, and phage tail-like particles. The sheath initiator acts as an intermediate
+  between the baseplate triplex and the first layer of the sheath, and between the tube tail and hub.
+  It has a critical role in transmitting contraction signals from the baseplate wedge to the sheath through
+  the N-terminal domain which binds to the core bundle of the triplex, while the C-terminal beta-hairpin
+  interacts with two sheath proteins on the first layer by forming a conserved handshake interface. The
+  N-terminal loops of adjacent sheath initiators adopt different conformations to accommodate the symmetry
+  mismatch between the baseplate wedge and hub.

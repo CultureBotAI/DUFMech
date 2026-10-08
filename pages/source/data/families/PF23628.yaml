@@ -1,0 +1,28 @@
+id: Pfam:PF23628
+pfam_id: PF23628
+name: Putative E3 ubiquitin-protein ligase LIN, ARM-like domain
+short_name: ARM_LIN_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23628
+counters:
+  proteins: 2561
+  matches: 2662
+  proteomes: 366
+  taxa: 993
+  structures: 0
+  alphafold_models: 1375
+  domain_architectures: 96
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055566
+description: This entry represents a domain found in E3 ubiquitin-protein ligase LIN, a putative E3 ubiquitin
+  ligase involved in the rhizobial infection process [[cite:PUB00156036]]. It plays an important role
+  in the early steps of bacterial symbiont thread formation in roots, and in growth, differentiation and
+  maintenance of nodules [[cite:PUB00156036],[cite:PUB00156035]]. This domain may adopt an ARM-repeat
+  fold.

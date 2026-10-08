@@ -1,0 +1,27 @@
+id: Pfam:PF10307
+pfam_id: PF10307
+name: HAD domain family 1 in Swiss Army Knife RNA repair proteins
+short_name: HAD_SAK_1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10307
+counters:
+  proteins: 1186
+  matches: 1192
+  proteomes: 1103
+  taxa: 2287
+  structures: 0
+  alphafold_models: 991
+  domain_architectures: 24
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018812
+description: Family of HAD domain phophoesterases observed in large eukaryotic proteins with predicted
+  role in RNA repair, the so-called 'Swiss Army Knife' repair proteins. May be involved in phosphate group
+  removal during RNA re-ligation [[cite:PUB00091037]].There are two characteristic sequence motifs, GGWW
+  and TGR.

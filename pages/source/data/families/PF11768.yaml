@@ -1,0 +1,26 @@
+id: Pfam:PF11768
+pfam_id: PF11768
+name: WD repeat-containing and planar cell polarity effector protein Fritz
+short_name: Frtz
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11768
+counters:
+  proteins: 1679
+  matches: 1831
+  proteomes: 1070
+  taxa: 3608
+  structures: 2
+  alphafold_models: 1415
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024511
+description: Fritz is a probable effector of the planar cell polarity signaling pathway which regulates
+  the septin cytoskeleton in both ciliogenesis and collective cell movements. In Drosophila melanogaster,
+  fritz regulates both the location and the number of wing cell prehair initiation sites [[cite:PUB00069294]].

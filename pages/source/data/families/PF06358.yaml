@@ -1,0 +1,25 @@
+id: Pfam:PF06358
+pfam_id: PF06358
+name: Beet necrotic yellow vein virus, movement protein TGB3
+short_name: BNYVV_TGB3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06358
+counters:
+  proteins: 24
+  matches: 24
+  proteomes: 3
+  taxa: 16
+  structures: 0
+  alphafold_models: 2
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010470
+description: This family is represented by Beet necrotic yellow vein virus movement protein TGB3 (also
+  known as p15) which participates in the transport of viral RNA to the plasmodesmata [[cite:PUB00097496]].

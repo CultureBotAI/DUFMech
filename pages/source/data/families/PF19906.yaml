@@ -1,0 +1,28 @@
+id: Pfam:PF19906
+pfam_id: PF19906
+name: C-glycoside deglycosidase beta subunit
+short_name: CGDB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19906
+counters:
+  proteins: 826
+  matches: 826
+  proteomes: 350
+  taxa: 648
+  structures: 16
+  alphafold_models: 496
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045959
+description: This is the structural domain of C-glycoside deglycosidase beta subunit (CGDB, also known
+  as CarC), a carbon-carbon bond-cleaving enzyme which participates in the metabolism of C-glycosides
+  [[cite:PUB00155029]]. It acts on the C6-glycosylated compounds 3''-dehydroisovitexin (3''-oxo-isovitexin)
+  and 3''-dehydroisoorientin (3''-oxo-homoorientin) [[cite:PUB00155029]]. In some members, this domain
+  is found in combination with other domains.

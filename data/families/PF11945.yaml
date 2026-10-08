@@ -1,0 +1,27 @@
+id: Pfam:PF11945
+pfam_id: PF11945
+name: WAHD domain of WASH complex
+short_name: WASH_WAHD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11945
+counters:
+  proteins: 1850
+  matches: 1881
+  proteomes: 1325
+  taxa: 4376
+  structures: 0
+  alphafold_models: 1638
+  domain_architectures: 24
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021854
+description: This domain forms part of the WASH-complex of domains and proteins that activates the Arp2/3
+  complex, see [pfam:PF04062]. The Arp2/3 complex regulates endocytosis, sorting, and trafficking within
+  the cell. The WAHD domain attaches to the FAM21 proteins via its N-terminal residues and to the microtubules
+  via its C-terminal residues.

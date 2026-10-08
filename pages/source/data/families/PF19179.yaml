@@ -1,0 +1,30 @@
+id: Pfam:PF19179
+pfam_id: PF19179
+name: E3 ubiquitin-protein ligase TTC3/DZIP3 domain
+short_name: TTC3_DZIP3_dom
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19179
+counters:
+  proteins: 1379
+  matches: 1380
+  proteomes: 560
+  taxa: 2123
+  structures: 0
+  alphafold_models: 430
+  domain_architectures: 87
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043866
+description: This domain is found in E3 ubiquitin-protein ligases TTC3 and DZIP3 and its function is unknown.
+  TTC3 mediates ubiquitination and degradation of phosphorylated Akt, apparently its preferable target
+  [[cite:PUB00094613]]. DZIP3 is also able to bind RNA through a Lys-rich region which enhances is ubiquitination
+  activity. It is suggested that RNA-binding proteins or ribonucleoprotein particles might be physiological
+  targets for this enzyme, which could be important during viral infections, especially for those replicating
+  through RNA intermediates [[cite:PUB00077706]]. This domain is also found in uncharacterised proteins
+  found in viruses.

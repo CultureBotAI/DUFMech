@@ -1,0 +1,32 @@
+id: Pfam:PF09995
+pfam_id: PF09995
+name: ER-bound oxygenase mpaB/B'/Rubber oxygenase, catalytic domain
+short_name: MPAB_Lcp_cat
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09995
+counters:
+  proteins: 17931
+  matches: 17952
+  proteomes: 7118
+  taxa: 10739
+  structures: 2
+  alphafold_models: 10982
+  domain_architectures: 79
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018713
+description: This is the catalytic domain found in the endoplasmic reticulum (ER) -bound oxygenases mpaB'
+  (MPAB2) and mpaB (MPAB) from Penicillium roqueforti and Penicillium brevicompactum and in the rubber
+  oxygenase (Lcp) from Streptomyces sp., which contains highly conserved arginine and histidine residues.
+  Structural analysis from Lcp revealed that Arg164, Thr168 and His198 are crucial active site residues
+  [[cite:PUB00087009]]. The mpaB and mpaB' are part of the gene cluster that mediates the biosynthesis
+  of mycophenolic acid (MPA) [[cite:PUB00096709]]. Lcp (Latex clearing proteins) is a rubber oxygenase
+  that catalyses the extracellular cleavage of poly (cis-1,4-isoprene) [[cite:PUB00087009],[cite:PUB00096710]].
+  This domain is also present in uncharacterised proteins from Mycobacterium sp. and hypothetical proteins,
+  mainly from bacteria and fungi.

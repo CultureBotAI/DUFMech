@@ -1,0 +1,30 @@
+id: Pfam:PF06250
+pfam_id: PF06250
+name: YhcG PDDEXK nuclease domain
+short_name: YhcG_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06250
+counters:
+  proteins: 4815
+  matches: 4819
+  proteomes: 2895
+  taxa: 4985
+  structures: 0
+  alphafold_models: 3190
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009362
+description: This domain can be found in uncharacterised proteins in viruses, archaea and bacteria, most
+  notably it is found in YhcG proteins found in E.coli. This entry represents the C-terminal PDDEXK domain
+  belonging to the PD-(D/E)XK superfamily of nucleases involved in DNA recombination and repair [[cite:PUB00091061]].
+  Profile HMM analysis identified a relationship between this C-terminal domain of YhcG and [pfam:PF01939]
+  , a family of NucS endonucleases [[cite:PUB00054003]]. YHcG was identified in association with DNA processing
+  enzymes, including the restriction complexes HsdMRS and McrABC, the integrases IntF and IntS, and the
+  recombinase PinE [[cite:PUB00091061]].

@@ -1,0 +1,27 @@
+id: Pfam:PF02082
+pfam_id: PF02082
+name: Iron-dependent Transcriptional regulator
+short_name: Rrf2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02082
+counters:
+  proteins: 39881
+  matches: 39881
+  proteomes: 15706
+  taxa: 22367
+  structures: 21
+  alphafold_models: 25715
+  domain_architectures: 34
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR000944
+description: Several proteins in this family form iron-sulfur clusters enabling iron dependent DNA transcription
+  regulation [[cite:PUB00109206]]. The iron binding is mediated by three conserved cysteine residues.
+  Members of this family can also bind O-acetyl-L-serine, [Fe-S] and nitric oxide (Matilla et. al., FEMS
+  Microbiology Reviews, fuab043, 45, 2021, 1. https://doi.org/10.1093/femsre/fuab043).

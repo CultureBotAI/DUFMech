@@ -1,0 +1,24 @@
+id: Pfam:PF03647
+pfam_id: PF03647
+name: Transmembrane proteins 14C
+short_name: Tmemb_14
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03647
+counters:
+  proteins: 8269
+  matches: 8292
+  proteomes: 3277
+  taxa: 8848
+  structures: 3
+  alphafold_models: 7037
+  domain_architectures: 129
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005349
+description: This family of short membrane proteins are as yet uncharacterised.

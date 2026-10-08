@@ -1,0 +1,28 @@
+id: Pfam:PF15055
+pfam_id: PF15055
+name: DMAC1/Dmo2-like domain
+short_name: DMAC1_Dmo2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15055
+counters:
+  proteins: 1572
+  matches: 1573
+  proteomes: 1495
+  taxa: 4098
+  structures: 0
+  alphafold_models: 1370
+  domain_architectures: 20
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR028036
+description: This domain is found in human Distal membrane-arm assembly complex protein 1 (DMAC1), which
+  is required for the assembly of the mitochondrial NADH:ubiquinone oxidoreductase complex, Tam6 from
+  Schizosaccharomyces pombe (also known as Dmo2), which is required for the stability and maturation of
+  Cox2p, the second subunit of the COX complex, and similar eukaryotic proteins. This domain is predicted
+  to show two alpha helices.

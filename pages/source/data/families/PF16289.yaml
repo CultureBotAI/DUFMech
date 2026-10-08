@@ -1,0 +1,26 @@
+id: Pfam:PF16289
+pfam_id: PF16289
+name: PIN domain
+short_name: PIN_12
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16289
+counters:
+  proteins: 1104
+  matches: 1106
+  proteomes: 1020
+  taxa: 2210
+  structures: 0
+  alphafold_models: 644
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032557
+description: This domain is found on the N-terminal region of uncharacterized proteins. It shows homology
+  to other PIN-like families and contains several acidic residues critical for chelating metal ions that
+  are conserved in other PIN-like domains [[cite:PUB00091006]].

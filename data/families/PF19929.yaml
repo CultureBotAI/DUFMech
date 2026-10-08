@@ -1,0 +1,30 @@
+id: Pfam:PF19929
+pfam_id: PF19929
+name: Immunity protein CdiI
+short_name: CdiI_5
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19929
+counters:
+  proteins: 579
+  matches: 580
+  proteomes: 344
+  taxa: 850
+  structures: 0
+  alphafold_models: 368
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045657
+description: This family includes immunity protein CdiI from Erwinia chrysanthemi and related sequences,
+  predominantly from gammaproteobacteria. It is an immunity protein component of a toxin-immunity protein
+  module, which functions as a cellular contact-dependent growth inhibition (CDI) system. CDI modules
+  allow bacteria to communicate with and inhibit the growth of closely related neighbouring bacteria in
+  a contact-dependent fashion. It protects cells against the DNase activity of CdiA, its cognate toxin
+  protein, but not against non-cognate CdiA from E.coli strain 536/UPEC. Immunity protein CdiI is species-specific
+  [[cite:PUB00057480]].

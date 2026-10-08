@@ -1,0 +1,26 @@
+id: Pfam:PF04303
+pfam_id: PF04303
+name: PrpF protein
+short_name: PrpF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04303
+counters:
+  proteins: 8159
+  matches: 8335
+  proteomes: 6103
+  taxa: 9244
+  structures: 9
+  alphafold_models: 5224
+  domain_architectures: 57
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007400
+description: PrpF is a protein found in the 2-methylcitrate pathway. It is structurally similar to DAP
+  epimerase and proline racemase. This protein is likely to acts to isomerise trans-aconitate to cis-aconitate
+  [[cite:PUB00044740]].

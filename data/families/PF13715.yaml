@@ -1,0 +1,24 @@
+id: Pfam:PF13715
+pfam_id: PF13715
+name: CarboxypepD_reg-like domain
+short_name: CarbopepD_reg_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13715
+counters:
+  proteins: 114619
+  matches: 114712
+  proteomes: 2697
+  taxa: 4216
+  structures: 19
+  alphafold_models: 74447
+  domain_architectures: 357
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: This domain family is found in bacteria, archaea and eukaryotes, and is approximately 90
+  amino acids in length. The family is found in association with [pfam:PF07715] and [pfam:PF00593].

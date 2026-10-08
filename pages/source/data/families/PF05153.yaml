@@ -1,0 +1,31 @@
+id: Pfam:PF05153
+pfam_id: PF05153
+name: Myo-inositol oxygenase
+short_name: MIOX
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05153
+counters:
+  proteins: 5483
+  matches: 5682
+  proteomes: 3279
+  taxa: 8215
+  structures: 3
+  alphafold_models: 4460
+  domain_architectures: 97
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007828
+description: MIOX is the enzyme myo-inositol oxygenase. It catalyses the first committed step in the glucuronate-xylulose
+  pathway, It is a di-iron oxygenase with a key role in inositol metabolism. The structure reveals a monomeric,
+  single-domain protein with a mostly helical fold that is distantly related to the diverse HD domain
+  superfamily. The structural core is of five alpha-helices that contribute six ligands, four His and
+  two Asp, to the di-iron centre where the two iron atoms are bridged by a putative hydroxide ion and
+  one of the Asp ligands. The substrate is myo-inositol is bound in a terminal substrate-binding mode
+  to a di-iron cluster [[cite:PUB00041510]]. Within the structure are two additional proteinous lids that
+  cover and shield the enzyme's active site [[cite:PUB00047694]].

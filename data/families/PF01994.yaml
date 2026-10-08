@@ -1,0 +1,28 @@
+id: Pfam:PF01994
+pfam_id: PF01994
+name: tRNA ribose 2'-O-methyltransferase, aTrm56
+short_name: Trm56
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01994
+counters:
+  proteins: 591
+  matches: 595
+  proteomes: 581
+  taxa: 1062
+  structures: 4
+  alphafold_models: 555
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002845
+description: This family is an aTrm56 that catalyses the 2'-O-methylation of the cytidine residue in archaeal
+  tRNA, using S-adenosyl-L-methionine. Biochemical assays showed that aTrm56 forms a dimer and prefers
+  the L-shaped tRNA to the lambda form as its substrate [[cite:PUB00046137]] [[cite:PUB00046138]]. aTrm56
+  consists of the SPOUT domain, which contains the characteristic deep trefoil knot for AdoMet binding,
+  and a unique C-terminal beta-hairpin [[cite:PUB00046136]].

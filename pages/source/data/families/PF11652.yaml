@@ -1,0 +1,24 @@
+id: Pfam:PF11652
+pfam_id: PF11652
+name: FAM167
+short_name: FAM167
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11652
+counters:
+  proteins: 1641
+  matches: 1641
+  proteomes: 792
+  taxa: 2524
+  structures: 0
+  alphafold_models: 1485
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024280
+description: This entry describes a eukaryotic protein family of unknown function designated FAM167.

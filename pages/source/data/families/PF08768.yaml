@@ -1,0 +1,31 @@
+id: Pfam:PF08768
+pfam_id: PF08768
+name: THAP4-like, heme-binding beta-barrel domain
+short_name: THAP4_heme-bd
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08768
+counters:
+  proteins: 7499
+  matches: 7560
+  proteomes: 5589
+  taxa: 9588
+  structures: 16
+  alphafold_models: 5205
+  domain_architectures: 73
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014878
+description: This domain can be found in THAP4 from mammals and At1g79260 from Arabidopsis. THAP4 catalyzes
+  the heme-based conversion of peroxynitrite into nitrate-NO3- in vitro [[cite:PUB00095798]]. At1g79260
+  is a nitrophorin-like heme-binding protein that may reversibly bind nitric oxide (NO) and be involved
+  in NO transport [[cite:PUB00063678]]. This entry also includes the beta-barrel domain of Caenorhabditis
+  elegans protein male abnormal 7 (Mab-7) which plays an important role in determining body shape and
+  sensory ray morphology [[cite:PUB00095799]]. Nitrobindins (Nbs), constituting a heme-protein family
+  spanning from bacteria to Homo sapiens, display an all-beta-barrel structural organisation. Proteins
+  containing this domain are putatively related to fatty acid-binding proteins (FABPs) [[cite:PUB00040845]].

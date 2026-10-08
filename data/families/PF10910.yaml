@@ -1,0 +1,27 @@
+id: Pfam:PF10910
+pfam_id: PF10910
+name: Phage gene 29 protein family
+short_name: Phage_gene29
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10910
+counters:
+  proteins: 510
+  matches: 510
+  proteomes: 466
+  taxa: 997
+  structures: 0
+  alphafold_models: 93
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021226
+description: This entry represents a family of phage proteins related to gene 29 protein from Mycobacterium
+  phage D29 and L5. The function of the proteins in this family is unknown. AlphaFold multimer shows that
+  the proteins in the family adopt a confident dimeric structure. The individual proteins are not compact
+  in isolated structure predictions.

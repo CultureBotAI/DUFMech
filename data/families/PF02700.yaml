@@ -1,0 +1,24 @@
+id: Pfam:PF02700
+pfam_id: PF02700
+name: Phosphoribosylformylglycinamidine (FGAM) synthase
+short_name: PurS
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02700
+counters:
+  proteins: 9847
+  matches: 9866
+  proteomes: 9805
+  taxa: 13892
+  structures: 10
+  alphafold_models: 6531
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003850
+description: This family forms a component of the de novo purine biosynthesis pathway.

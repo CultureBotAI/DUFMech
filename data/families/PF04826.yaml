@@ -1,0 +1,28 @@
+id: Pfam:PF04826
+pfam_id: PF04826
+name: Armadillo-like
+short_name: Arm_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04826
+counters:
+  proteins: 3403
+  matches: 3438
+  proteomes: 1160
+  taxa: 3821
+  structures: 0
+  alphafold_models: 2659
+  domain_architectures: 73
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006911
+description: This domain contains armadillo-like repeats [[cite:PUB00057475]]. Proteins containing this
+  domain interact with numerous other proteins, through these interactions they are involved in a wide
+  variety of processes including carcinogenesis [[cite:PUB00057476]], control of cellular ageing and survival
+  [[cite:PUB00057475]], regulation of circadian rhythm [[cite:PUB00057477]] and lysosomal sorting of G
+  protein-coupled receptors [[cite:PUB00057478]].

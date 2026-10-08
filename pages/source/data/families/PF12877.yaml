@@ -1,0 +1,32 @@
+id: Pfam:PF12877
+pfam_id: PF12877
+name: UPF0606 protein KIAA1549 alpha/beta domain 2
+short_name: KIAA1549
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12877
+counters:
+  proteins: 2272
+  matches: 2276
+  proteomes: 734
+  taxa: 2277
+  structures: 0
+  alphafold_models: 670
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024606
+description: This entry represents an alpha/beta domain found in the KIAA1549 protein from human ([swissprot:Q9HCM3])
+  which has been implicated in pilocytic astrocytomas [[cite:PUB00056166],[cite:PUB00056167],[cite:PUB00056168]].
+  It has been found to be fused to BRAF gene in many cases of pilocytic astrocytomas. The fusion is due
+  mainly to a tandem duplication of 2 Mb at 7q34 [[cite:PUB00056166],[cite:PUB00056167]]. The BRAF protein
+  is a well characterised oncoprotein. It is a serine/threonine protein kinase which is implicated in
+  MAP/ERK signalling, a critical pathway for the regulation of cell division, differentiation and secretion
+  [[cite:PUB00056166],[cite:PUB00056167],[cite:PUB00056168]]. More recently, KIAA1549 has been described
+  to play a role in photoreceptor function [[cite:PUB00101492]]. This protein contains three homologous
+  domains of this type found in tandem.

@@ -1,0 +1,28 @@
+id: Pfam:PF04041
+pfam_id: PF04041
+name: beta-1,4-mannooligosaccharide phosphorylase
+short_name: Glyco_hydro_130
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04041
+counters:
+  proteins: 6736
+  matches: 6975
+  proteomes: 3640
+  taxa: 5878
+  structures: 33
+  alphafold_models: 4505
+  domain_architectures: 27
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007184
+description: This is a family of glycosyl-hydrolases of the CAZy GH130 family. Several have been characterised
+  as mannosylglucose phosphorylase [[cite:PUB00068792],[cite:PUB00068791],[cite:PUB00109137]]. This enzyme
+  is part of the mannan catalytic pathway and feeds into the glycolysis cycle [[cite:PUB00068792]]. Specifically
+  it catalyses the reversible phosphorolysis of beta-1,4-D-mannosyl-N-acetyl-D-glucosamine [[cite:PUB00109137]].
+  This family was noted to belong to the Beta fructosidase superfamily in [[cite:PUB00015849]].

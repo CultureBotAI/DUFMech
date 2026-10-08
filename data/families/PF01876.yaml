@@ -1,0 +1,24 @@
+id: Pfam:PF01876
+pfam_id: PF01876
+name: RNase P subunit p30
+short_name: RNase_P_p30
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01876
+counters:
+  proteins: 4590
+  matches: 4644
+  proteomes: 3743
+  taxa: 9545
+  structures: 16
+  alphafold_models: 3969
+  domain_architectures: 62
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002738
+description: This protein is part of the RNase P complex that is involved in tRNA maturation [[cite:PUB00020266]].

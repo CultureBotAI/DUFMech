@@ -1,0 +1,27 @@
+id: Pfam:PF04570
+pfam_id: PF04570
+name: zinc-finger of the FCS-type, C2-C2
+short_name: zf-FLZ
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04570
+counters:
+  proteins: 9056
+  matches: 9126
+  proteomes: 390
+  taxa: 1125
+  structures: 0
+  alphafold_models: 7440
+  domain_architectures: 66
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007650
+description: zf-FLZ is a FCS-like zinc-finger domain found in higher plants. It is bryophitic in origin.
+  It carries a zf-FCS-like C2-C2 zinc finger, consisting of a consensus cysteine-signature sequence with
+  conserved phenyl alanine and serine residue associated with a third cysteine. It acts as a protein-protein
+  interaction module [[cite:PUB00070912]].

@@ -1,0 +1,26 @@
+id: Pfam:PF10997
+pfam_id: PF10997
+name: Alternate to MurJ
+short_name: Amj
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10997
+counters:
+  proteins: 921
+  matches: 921
+  proteomes: 849
+  taxa: 1308
+  structures: 0
+  alphafold_models: 579
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021260
+description: This bacterial family of proteins has no known function. However, family members include
+  lipid II flippase Amj, which is required for bacterial cell wall synthesis. It transports lipid-linked
+  peptidoglycan precursors from the inner to the outer surface of the cytoplasmic membrane [[cite:PUB00083236]].

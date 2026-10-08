@@ -1,0 +1,30 @@
+id: Pfam:PF02682
+pfam_id: PF02682
+name: Carboxyltransferase domain, subdomain C and D
+short_name: CT_C_D
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02682
+counters:
+  proteins: 16088
+  matches: 16123
+  proteomes: 11515
+  taxa: 16224
+  structures: 11
+  alphafold_models: 9538
+  domain_architectures: 83
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003833
+description: Urea carboxylase (UC) catalyses a two-step, ATP- and biotin-dependent carboxylation reaction
+  of urea. It is composed of biotin carboxylase (BC), carboxyltransferase (CT), and biotin carboxyl carrier
+  protein (BCCP) domains. The CT domain of UC consists of four subdomains, named A, B, C and D. This domain
+  covers the C and D subdomains of the CT domain. This domain covers the whole length of kipI (kinase
+  A inhibitor) from Bacillus subtilis [[cite:PUB00064884]]. It can also be found in S. cerevisiae urea
+  amidolyase Dur1,2, which is a multifunctional biotin-dependent enzyme with domains for urea carboxylase
+  and allophanate (urea carboxylate) hydrolase activity[[cite:PUB00076467]].

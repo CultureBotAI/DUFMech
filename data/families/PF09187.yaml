@@ -1,0 +1,27 @@
+id: Pfam:PF09187
+pfam_id: PF09187
+name: RNA-directed DNA methylation 1
+short_name: RdDM_RDM1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09187
+counters:
+  proteins: 706
+  matches: 713
+  proteomes: 330
+  taxa: 894
+  structures: 5
+  alphafold_models: 560
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015270
+description: This family of plant proteins includes RDM1 from Arabidopsis, which is a component of the
+  RNA-directed DNA methylation (RdDM) effector complex and may have a role in linking siRNA production
+  with pre-existing or de novo cytosine methylation [[cite:PUB00057309]]. As part of the DDR complex with
+  two other RdDM components, it has been shown to facilitate association of PolV to chromatin [[cite:PUB00109101],[cite:PUB00096469]].

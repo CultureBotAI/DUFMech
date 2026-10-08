@@ -1,0 +1,27 @@
+id: Pfam:PF12621
+pfam_id: PF12621
+name: Extracellular tail, of 10TM putative phosphate transporter
+short_name: PHM7_ext
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12621
+counters:
+  proteins: 3999
+  matches: 4000
+  proteomes: 1436
+  taxa: 3041
+  structures: 0
+  alphafold_models: 3099
+  domain_architectures: 59
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022257
+description: This PHM7_ext family is found in plants and fungi. It represents the C-terminal extracellular
+  domain of the putative phosphate transporter, PHM7 [[cite:PUB00063120]]. The three N-terminal TMS are
+  found in family RSN1_TM, [pfam:PF02714]; the cytoplssmic domain is [pfam:PF14703], and the remaining
+  7TM region is in [pfam:PF02714].

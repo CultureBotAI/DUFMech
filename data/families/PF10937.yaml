@@ -1,0 +1,30 @@
+id: Pfam:PF10937
+pfam_id: PF10937
+name: Alpha-ketoglutarate dehydrogenase component 4/YMR-31
+short_name: Kgd4-YMR31
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10937
+counters:
+  proteins: 1927
+  matches: 1958
+  proteomes: 1742
+  taxa: 4549
+  structures: 0
+  alphafold_models: 1635
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR020373
+description: This entry represents the alpha-ketoglutarate dehydrogenase component 4 (Kgd4, also referred
+  to as Ymr31/MRPS36) which was originally identified as a subunit of the mitochondrial ribosome [[cite:PUB00056057],[cite:PUB00012961],[cite:PUB00010175]].
+  Through biochemical studies, it was shown that this protein co purifies with the oxoglutarate dehydrogenase
+  complex (OGDC). Both mitochondrial ribosome 28S subunit and OGDC have a similar size and OGDC is highly
+  abundant, being found to contaminate ribosomal preparations [[cite:PUB00089008]]. Kgd4 plays an evolutionarily
+  conserved role in the organisation of mitochondrial alpha-KGDH complexes of fungi and animals which
+  constitutes a molecular adaptor that is necessary to form a stable alpha-KGDH enzyme complex [[cite:PUB00089008],[cite:PUB00100356]].

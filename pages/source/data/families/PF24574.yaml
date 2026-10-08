@@ -1,0 +1,29 @@
+id: Pfam:PF24574
+pfam_id: PF24574
+name: ACP-like domain
+short_name: Nm-ACP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24574
+counters:
+  proteins: 283
+  matches: 293
+  proteomes: 194
+  taxa: 317
+  structures: 2
+  alphafold_models: 213
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056025
+description: This domain, previously known as DUF7606, is found in Neisseria Adhesin Complex Protein (ACP)
+  and in a group of uncharacterised sequences from proteobacteria. It folds into an eight-stranded beta-barrel,
+  stabilised by a disulphide bond between the first and last beta-strands [[cite:PUB00147614]]. Nm-ACP
+  is structurally similar to members of the MliC/PliC protein family of lysozyme inhibitors. Despite it
+  does not share any conserved MliC/PliC sequence motifs associated with lysozyme recognition, ACP is
+  capable of inhibiting lysozyme.

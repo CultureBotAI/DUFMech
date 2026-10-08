@@ -1,0 +1,29 @@
+id: Pfam:PF06485
+pfam_id: PF06485
+name: RNA-binding protein Tab2/Atab2 N terminal
+short_name: Tab2-like_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06485
+counters:
+  proteins: 1052
+  matches: 1056
+  proteomes: 697
+  taxa: 1954
+  structures: 0
+  alphafold_models: 777
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046760
+description: This is the N-terminal domain of proteins from photosynthetic organisms including plants
+  and cyanobacteria, such as Tab2 proteins. Tab2 was first identified in Chlamydomonas reinhardtii as
+  a RNA binding protein required for translation of the chloroplast PsaB photosystem I subunit [[cite:PUB00083885]].
+  Later, the Tab2 homologue (ATAB2) from Arabidopsis was found involved in the signalling pathway of light-controlled
+  synthesis of photosystem proteins during early plant development [[cite:PUB00083887]], presumably functioning
+  as an activator of translation with targets at PSI and PSII [[cite:PUB00098288]].

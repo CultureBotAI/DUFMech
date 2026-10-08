@@ -1,0 +1,26 @@
+id: Pfam:PF06541
+pfam_id: PF06541
+name: Putative ABC-transporter type IV
+short_name: ABC_trans_CmpB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06541
+counters:
+  proteins: 3937
+  matches: 4085
+  proteomes: 2155
+  taxa: 4963
+  structures: 0
+  alphafold_models: 2870
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010540
+description: CmpB is a family of membrane proteins that are likely to be part of a two-component type
+  IV ABC-transporter system. Families can transport multiple drugs including ethidium and fluoroquinolones.
+  UniProtKB:Q83XH0 is a member of TCDB family 3.A.1.121.4.

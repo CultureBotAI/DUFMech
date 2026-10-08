@@ -9,12 +9,18 @@ from pathlib import Path
 from typing import Any
 
 from dufmech.cross_mech import PROTEIN_TRAITS_MECH
-from dufmech.cross_mech_snapshot import CROSS_MECH_DIR, CROSS_MECH_STEM, load_cross_mech_snapshot
+from dufmech.cross_mech_snapshot import (
+    CROSS_MECH_DIR,
+    CROSS_MECH_STEM,
+    cross_mech_unscanned,
+    load_cross_mech_snapshot,
+)
 from dufmech.member_snapshot import MEMBER_UNIREF_STEM
 from dufmech.report import (
     ReportError,
     build_report,
     family_index,
+    iter_metadata_preserving_ancestors,
     latest_snapshot_path,
     load_json_rows,
     load_latest_rows,
@@ -57,6 +63,7 @@ def render_site(
     input_ids: dict[str, str], out_dir: Path,
     cross_mech_rows: list[dict[str, Any]] | None = None,
     cross_mech_sources: dict[str, Any] | None = None,
+    cross_mech_unscanned: set[str] | None = None,
     family_metadata: dict[str, dict[str, Any]] | None = None,
     member_rows: list[dict[str, Any]] | None = None,
     provenance: dict[str, Any] | None = None,
@@ -72,7 +79,7 @@ def render_site(
     families = family_index(worklist_rows, score_rows)
     report = build_report(worklist_rows, score_rows, top_n=20)
     cross_mech_rows = cross_mech_rows or []
-    report["cross_mech"] = _attach_cross_mech(families, cross_mech_rows)
+    report["cross_mech"] = _attach_cross_mech(families, cross_mech_rows, cross_mech_unscanned or set())
     provenance = dict(provenance or {})
     if extra_artifacts:
         provenance["artifact_sha256"] = {
@@ -142,6 +149,7 @@ def render_from_paths(
         provenance[key] = tracked_source(path, REPO_ROOT, pins=source_pins)
     cross_mech_rows: list[dict[str, Any]] = []
     cross_mech_sources: dict[str, Any] = {}
+    unscanned: set[str] = set()
     cross_mech_path = (latest_snapshot_path(cross_mech_dir, CROSS_MECH_STEM, required=False)
                        if cross_mech_dir.is_dir() else None)
     if cross_mech_path is not None:
@@ -150,6 +158,7 @@ def render_from_paths(
         )
         input_ids["cross_mech"] = cross_mech_path.stem
         cross_mech_sources = dict(manifest["source"].get("mechs", {}))
+        unscanned = cross_mech_unscanned(manifest)
         provenance["cross_mech"] = tracked_source(cross_mech_path, REPO_ROOT, pins=source_pins)
     metadata, extra_artifacts = {}, {}
     default_corpus = (worklist_json is None and score_json is None
@@ -181,9 +190,11 @@ def render_from_paths(
     if members_json is not None:
         manifest = verified_manifest(members_json)
         seed = manifest["snapshot"].get("seed_snapshot_id")
-        if seed != input_ids["worklist"]:
-            raise ReportError(f"member snapshot was seeded against {seed}, not {input_ids['worklist']}")
         members = [dict(row) for row in load_json_rows(members_json)]
+        check_member_seed(
+            members, seed, worklist_rows, input_ids["worklist"],
+            worklist_json.parent if worklist_json is not None else worklists_dir,
+        )
         input_ids["members"] = members_json.stem
         provenance["members"] = {
             **tracked_source(members_json, REPO_ROOT, pins=source_pins),
@@ -210,7 +221,8 @@ def render_from_paths(
     render_site(
         [dict(row) for row in worklist_rows], [dict(row) for row in score_rows],
         input_ids=input_ids, out_dir=out_dir, cross_mech_rows=cross_mech_rows,
-        cross_mech_sources=cross_mech_sources, family_metadata=metadata,
+        cross_mech_sources=cross_mech_sources, cross_mech_unscanned=unscanned,
+        family_metadata=metadata,
         member_rows=members, provenance=provenance, extra_artifacts=extra_artifacts,
     )
 
@@ -262,7 +274,27 @@ def main(argv: list[str] | None = None) -> int:
     return 0
 
 
-def _attach_cross_mech(families: list[dict[str, Any]], rows: list[dict[str, Any]]) -> dict[str, int]:
+def check_member_seed(
+    members: list[dict[str, Any]], seed: Any, worklist_rows: list[Any],
+    worklist_id: str, lineage_dir: Path,
+) -> None:
+    """Accept members seeded on the selected worklist or a metadata-preserving ancestor.
+
+    Members seeded on an ancestor still apply when every derivation since kept the
+    families' metadata and every member family is still in the worklist.
+    """
+    if seed == worklist_id:
+        return
+    if seed not in iter_metadata_preserving_ancestors(lineage_dir, worklist_id):
+        raise ReportError(f"member snapshot was seeded against {seed}, not {worklist_id}")
+    catalogue = {row["pfam_id"] for row in worklist_rows}
+    if {row.get("pfam_id") for row in members} - catalogue:
+        raise ReportError("member snapshot names families absent from the worklist")
+
+
+def _attach_cross_mech(
+    families: list[dict[str, Any]], rows: list[dict[str, Any]], unscanned: set[str] = frozenset(),
+) -> dict[str, int]:
     known = {family["pfam_id"] for family in families}
     extra = {row["pfam_id"] for row in rows if row.get("pfam_id")} - known
     if extra:
@@ -284,9 +316,13 @@ def _attach_cross_mech(families: list[dict[str, Any]], rows: list[dict[str, Any]
         family["cross_mech"] = {
             "records_by_mech": {mech: len(paths) for mech, paths in sorted(entry["mechs"].items())},
             "example_proteins": len(entry["proteins"]), "protein_traits_record": entry["trait"],
+            # False: the cross-Mech scan never searched this family, so missing links are
+            # not evidence of absence.
+            "scanned": family["pfam_id"] not in unscanned,
         }
     return {"rows": len(rows), "families": sum(1 for entry in by_pfam.values() if entry["mechs"]),
-            "proteins": len({row["uniprot_accession"] for row in rows if row.get("uniprot_accession")})}
+            "proteins": len({row["uniprot_accession"] for row in rows if row.get("uniprot_accession")}),
+            "unscanned_families": len(unscanned & {family["pfam_id"] for family in families})}
 
 
 if __name__ == "__main__":

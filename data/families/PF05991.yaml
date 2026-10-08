@@ -1,0 +1,28 @@
+id: Pfam:PF05991
+pfam_id: PF05991
+name: YacP-like NYN domain
+short_name: NYN_YacP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05991
+counters:
+  proteins: 6344
+  matches: 6405
+  proteomes: 5929
+  taxa: 9190
+  structures: 2
+  alphafold_models: 4095
+  domain_architectures: 33
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010298
+description: This family consists of bacterial proteins related to YacP. This family is uncharacterised
+  functionally, but it has been suggested that these proteins are nucleases due to them containing a NYN
+  domain. NYN (for N4BP1, YacP-like Nuclease) domains were discovered by Anantharaman and Aravind [[cite:PUB00056584]].
+  Based on gene neighborhoods it was suggested that the bacterial YacP proteins interact with the Ribonuclease
+  III and TrmH methylase in a processome complex that catalyzes the maturation of rRNA and tRNA [[cite:PUB00056584]].

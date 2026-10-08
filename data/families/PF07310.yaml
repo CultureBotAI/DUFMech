@@ -1,0 +1,25 @@
+id: Pfam:PF07310
+pfam_id: PF07310
+name: PAS domain
+short_name: PAS_5
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07310
+counters:
+  proteins: 2674
+  matches: 2676
+  proteomes: 1522
+  taxa: 2186
+  structures: 0
+  alphafold_models: 1851
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009922
+description: This family contains a number of hypothetical bacterial proteins of unknown function approximately
+  200 residues long. This region is is distantly similar to other PAS domains.

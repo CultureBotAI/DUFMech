@@ -1,0 +1,28 @@
+id: Pfam:PF03694
+pfam_id: PF03694
+name: Erg28 like protein
+short_name: Erg28
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03694
+counters:
+  proteins: 3505
+  matches: 3525
+  proteomes: 2752
+  taxa: 7329
+  structures: 0
+  alphafold_models: 2990
+  domain_architectures: 47
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005352
+description: This is a family of integral membrane proteins, which may contain four transmembrane helices.
+  Members of this family are thought to be involved in sterol C-4 demethylation. In S. cerevisiae they
+  may tether Erg26p (sterol dehydrogenase/decarboxylase) and Erg27p (3-ketoreductase) to the endoplasmic
+  reticulum or may facilitate interaction between these proteins [[cite:PUB00019518]]. The family contains
+  a conserved arginine and histidine that may be functionally important.

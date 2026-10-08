@@ -1,0 +1,37 @@
+id: Pfam:PF04002
+pfam_id: PF04002
+name: RadC-like JAB domain
+short_name: RadC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04002
+counters:
+  proteins: 19203
+  matches: 19208
+  proteomes: 13115
+  taxa: 19503
+  structures: 1
+  alphafold_models: 12619
+  domain_architectures: 69
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025657
+description: A family of proteins present widely across the bacteria. This family was named initially
+  with reference to the E. coli radC102 mutation which suggested that RadC was involved in repair of DNA
+  lesions [[cite:PUB00009802]]. However the relevant mutation has subsequently been shown to be in recG,
+  where radC is in fact an allele of recG [[cite:PUB00044698]]. In addition, a personal communication
+  from Claverys, J-P, et al, indicates a total failure of all attempts to characterise a radiation-related
+  function for RadC in Streptococcus pneumoniae, suggesting that it is not involved in repair of DNA lesions,
+  in recombination during transformation, in gene conversion, nor in mismatch repair. Computational analysis,
+  however, provides a possible function. The RadC-like family belong to the JAB superfamily of metalloproteins
+  [[cite:PUB00057473]]. The domain shows fusions to an N-terminal Helix-hairpin-Helix (HhH) domain in
+  most instances. Other domain combinations include fusions to the anti-restriction module ArdC, the DinG/RAD3-like
+  superfamily II helicases and the DNAG-like primase. In some bacteria, closely related DinG/Rad3- like
+  superfamily II helicases are fused to a 3'-5' exonuclease in the same position as the RadC-like JAB
+  domain. These conserved domain associations lead to the hypothesis that the RadC-like JAB domains might
+  function as a nuclease [[cite:PUB00057473]].

@@ -1,0 +1,32 @@
+id: Pfam:PF12038
+pfam_id: PF12038
+name: tRNA-queuosine alpha-mannosyltransferase N-terminal
+short_name: QTMAN_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12038
+counters:
+  proteins: 2272
+  matches: 2313
+  proteomes: 1429
+  taxa: 4073
+  structures: 0
+  alphafold_models: 1894
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022701
+description: 'This is the N-terminal domain of tRNA-queuosine alpha-mannosyltransferase (QTMAN, also known
+  as GTDC1) from animals. QTMAN is a glycosyltransferase that specifically catalyses mannosylation of
+  cytoplasmic tRNA(Asp) modified with queuosine at position 34 (queuosine(34)) to form mannosyl-queuosine(34)
+  [[cite:PUB00153407]]. Mannosylation of queuosine(34) in tRNA(Asp) is required to slow-down elongation
+  at cognate codons GAC and GAU, thereby regulating protein translation [[cite:PUB00153407]]. This domain
+  is about 170 amino acids in length and adopts a Rossmann-fold. This domain is found associated with
+  [pfam:PF00534] found at the C-terminal. This domain has two conserved sequence motifs: HENQ and FNS
+  and it also has a single completely conserved residue S that may be functionally important. This domain
+  is also found in uncharacterised bacterial sequences.'

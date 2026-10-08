@@ -1,0 +1,27 @@
+id: Pfam:PF17104
+pfam_id: PF17104
+name: YBL010C/LAA2
+short_name: YBL010C_LAA2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17104
+counters:
+  proteins: 1400
+  matches: 1445
+  proteomes: 1358
+  taxa: 2880
+  structures: 0
+  alphafold_models: 1159
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031355
+description: This is a family of fungal sequences, including YBL010C (also known as LAA2) from S. cerevisiae
+  and its orthologue from S. pombe, C8E11.05c. LAA2 is a clathrin adaptor (adaptin) accessory protein
+  that physically interacts with and is involved in localization of clathrin adaptor protein complex-1
+  (AP-1) [[cite:PUB00155153]].

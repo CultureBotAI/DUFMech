@@ -1,0 +1,31 @@
+id: Pfam:PF02130
+pfam_id: PF02130
+name: Endoribonuclease YbeY
+short_name: YbeY
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02130
+counters:
+  proteins: 20178
+  matches: 20283
+  proteomes: 19123
+  taxa: 29306
+  structures: 5
+  alphafold_models: 13642
+  domain_architectures: 53
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002036
+description: YbeY is a single strand-specific metallo-endoribonuclease involved in late-stage 70S ribosome
+  quality control and in maturation of the 3' terminus of the 16S rRNA. It acts together with the RNase
+  R to eliminate defective 70S ribosomes, but not properly maturated 70S ribosomes or individual subunits,
+  by a process mediated specifically by the 30S ribosomal subunit. It is involved in the processing of
+  16S, 23S and 5S rRNAs, with a particularly strong effect on maturation at both the 5'-and 3'-ends of
+  16S rRNA as well as maturation of the 5'-end of 23S and 5S rRNAs [[cite:PUB00064743],[cite:PUB00064742],[cite:PUB00096939]].
+  The crystal structure of the protein from Aquifex aeolicus showed an overall fold consisting of one
+  central alpha-helix surrounded by a four-stranded beta-sheet and four other alpha-helices [[cite:PUB00027806]].

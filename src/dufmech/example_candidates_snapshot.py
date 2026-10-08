@@ -11,7 +11,12 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from dufmech.cross_mech_snapshot import CROSS_MECH_DIR, CROSS_MECH_STEM, load_cross_mech_snapshot
+from dufmech.cross_mech_snapshot import (
+    CROSS_MECH_DIR,
+    CROSS_MECH_STEM,
+    cross_mech_unscanned,
+    load_cross_mech_snapshot,
+)
 from dufmech.example_candidates import (
     CANDIDATE_FIELDS,
     CANDIDATE_SORT,
@@ -151,11 +156,12 @@ def main(argv: list[str] | None = None) -> int:
         worklist_rows, _, input_ids = load_latest_rows(args.worklists_dir)
         cross_path = latest_snapshot_path(args.cross_mech_dir, CROSS_MECH_STEM)
         assert cross_path is not None
-        cross_rows, _ = load_cross_mech_snapshot(
+        cross_rows, cross_manifest = load_cross_mech_snapshot(
             cross_path, worklist_rows=worklist_rows, worklist_snapshot_id=input_ids["worklist"]
         )
         targets = select_target_families(
-            cross_rows, renamed_traitmech_families=args.renamed_traitmech_pfam_id
+            cross_rows, renamed_traitmech_families=args.renamed_traitmech_pfam_id,
+            unscanned=cross_mech_unscanned(cross_manifest),
         )
         all_targets = len(targets)
         if args.limit_families is not None:

@@ -1,0 +1,25 @@
+id: Pfam:PF12356
+pfam_id: PF12356
+name: Baculoviral IAP repeat-containing protein 6
+short_name: BIRC6
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12356
+counters:
+  proteins: 1890
+  matches: 1890
+  proteomes: 901
+  taxa: 3041
+  structures: 14
+  alphafold_models: 19
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022103
+description: BIRC6 is an anti-apoptotic protein which can regulate cell death by controlling caspases
+  and by acting as an E3 ubiquitin-protein ligase [[cite:PUB00047485]].

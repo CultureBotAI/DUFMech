@@ -1,0 +1,25 @@
+id: Pfam:PF11471
+pfam_id: PF11471
+name: Maltoporin periplasmic N-terminal extension
+short_name: Sugarporin_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11471
+counters:
+  proteins: 428
+  matches: 428
+  proteomes: 289
+  taxa: 429
+  structures: 0
+  alphafold_models: 251
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021570
+description: This domain would appear to be the periplasmic, N-terminal extension of the outer membrane
+  maltoporins, [pfam:PF02264], LamB.

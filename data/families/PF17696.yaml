@@ -1,0 +1,26 @@
+id: Pfam:PF17696
+pfam_id: PF17696
+name: Another-regulin-like
+short_name: ALN
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17696
+counters:
+  proteins: 270
+  matches: 270
+  proteomes: 224
+  taxa: 834
+  structures: 0
+  alphafold_models: 248
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR038780
+description: This is a family of short proteins from vertebrates, including mouse Another-regulin (ALN,
+  previously known as the uncharacterised C4orf3 homolog). This protein is a SERCA regulator [[cite:PUB00143562]].
+  The C-terminal has a strongly conserved WxxxW motif and is predicted to adopt an alpha-helical configuration.

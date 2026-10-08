@@ -1,0 +1,28 @@
+id: Pfam:PF17198
+pfam_id: PF17198
+name: Spirocyclase AveC-like
+short_name: AveC_like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17198
+counters:
+  proteins: 854
+  matches: 854
+  proteomes: 334
+  taxa: 536
+  structures: 0
+  alphafold_models: 589
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR033459
+description: AveC catalyzes the stereospecific spiroketalization of a dihydroxy-ketone polyketide intermediate
+  in the biosynthetic pathway of Avermectin, a potent antiparasitic agent. Additionally, it has a unique
+  dehydration activity that serves to determine the regiospecific saturation pattern for spiroketal diversity
+  [[cite:PUB00081205]]. MeiC, the counterpart in the biosynthesis of AVE-like meilingmycin, also has spirocyclase
+  activity, but lacks the dehydratase activity.

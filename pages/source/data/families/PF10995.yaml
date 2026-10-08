@@ -1,0 +1,32 @@
+id: Pfam:PF10995
+pfam_id: PF10995
+name: Cellulose biosynthesis protein BcsE, N-terminal domain
+short_name: BcsE_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10995
+counters:
+  proteins: 604
+  matches: 605
+  proteomes: 594
+  taxa: 869
+  structures: 4
+  alphafold_models: 326
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR063588
+description: This entry includes members involved in cellulose biosynthesis such as BcsE proteins found
+  in Salmonella typhimurium. They consist of a N-terminal NTPase catalytically incompetent nucleoside
+  triphosphatase domain followed by a REC (phosphorylation-incompetent receiver domain) and a C-terminal
+  GGDEF (degenerate diguanylate cyclase domain). The REC and GGDEF domains were firstly described as the
+  GIL domain [[cite:PUB00100649],[cite:PUB00163548]]. BcsE proteins are not essential for cellulose synthesis
+  but is critical for maximal cellulose production. Cellulose production in enterobacteria is controlled
+  by a two-tiered c-di-GMP-dependent system involving BcsE and the PilZ domain containing glycosyltransferase
+  BcsA [[cite:PUB00086880],[cite:PUB00075887],[cite:PUB00100649],[cite:PUB00100650],[cite:PUB00100648]].
+  This domain forms a membrane-proximal head-to-head dimer of P-loop nucleotide NTPase-like modules [[cite:PUB00163548]].

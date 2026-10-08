@@ -1,0 +1,23 @@
+id: Pfam:PF01168
+pfam_id: PF01168
+name: Alanine racemase, N-terminal domain
+short_name: Ala_racemase_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01168
+counters:
+  proteins: 61405
+  matches: 61451
+  proteomes: 20949
+  taxa: 33587
+  structures: 114
+  alphafold_models: 39913
+  domain_architectures: 206
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR001608

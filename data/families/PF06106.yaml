@@ -1,0 +1,32 @@
+id: Pfam:PF06106
+pfam_id: PF06106
+name: S. aureus uracil DNA glycosylase inhibitor
+short_name: SAUGI
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06106
+counters:
+  proteins: 101
+  matches: 101
+  proteomes: 36
+  taxa: 65
+  structures: 8
+  alphafold_models: 79
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009295
+description: Uracil-DNA glycosylase inhibitors, are DNA mimic proteins that prevent the DNA binding sites
+  of UDGs (Uracil DNA glycosylase) from interacting with their DNA substrate. SSP0047 [swissprot:Q4A134]
+  (or SAUGI; for Staphylococcus aureus uracil-DNA glycosylase inhibitor) acts as a uracil-DNA glycosylase
+  inhibitor that breaks the uracil-removing activity of S. aureus uracil-DNA glycosylase (SAUDG) [pfam:PF03167]
+  [[cite:PUB00085049]]. The SAUGI/SAUDG complex has been determined, and shows that SAUGI binds to the
+  SAUDG DNA binding region via several strong interactions, by using a hydrophobic pocket to hold SAUDG's
+  protruding residue (i.e. SAUDG Leu184, E. coli UDG Leu191 and B. subtilis UDG Phe191). By binding to
+  SAUDG in this way, SAUGI thus prevents SAUDG from binding to its DNA substrate and performing DNA repair
+  activity [[cite:PUB00085050]].

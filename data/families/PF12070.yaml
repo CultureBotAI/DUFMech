@@ -1,0 +1,26 @@
+id: Pfam:PF12070
+pfam_id: PF12070
+name: Protein SCAI
+short_name: SCAI
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12070
+counters:
+  proteins: 3464
+  matches: 3823
+  proteomes: 1682
+  taxa: 5209
+  structures: 0
+  alphafold_models: 2971
+  domain_architectures: 51
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022709
+description: SCAI is a transcriptional cofactor and tumour suppressor that suppresses MKL1-induced SRF
+  transcriptional activity. It may function in the RHOA-DIAPH1 signal transduction pathway and regulate
+  cell migration through transcriptional regulation of ITGB1 [[cite:PUB00068364]].

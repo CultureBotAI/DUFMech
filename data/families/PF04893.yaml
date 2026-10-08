@@ -1,0 +1,26 @@
+id: Pfam:PF04893
+pfam_id: PF04893
+name: Yip1 domain
+short_name: Yip1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04893
+counters:
+  proteins: 20702
+  matches: 20704
+  proteomes: 9024
+  taxa: 17244
+  structures: 0
+  alphafold_models: 16138
+  domain_architectures: 210
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006977
+description: The Yip1 integral membrane domain contains four transmembrane alpha helices. The domain is
+  characterised by the motifs DLYGP and GY. The Yip1 protein is a golgi protein involved in vesicular
+  transport that interacts with GTPases [[cite:PUB00020577]].

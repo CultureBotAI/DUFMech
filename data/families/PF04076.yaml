@@ -1,0 +1,30 @@
+id: Pfam:PF04076
+pfam_id: PF04076
+name: Bacterial OB fold (BOF) protein
+short_name: BOF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04076
+counters:
+  proteins: 2142
+  matches: 2146
+  proteomes: 1544
+  taxa: 2390
+  structures: 1
+  alphafold_models: 1372
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005220
+description: Proteins in this family form an OB-fold. Analysis of the predicted binding site of BOF family
+  proteins implies that they lack nucleic acid-binding properties [[cite:PUB00016305]]. They contain an
+  predicted N-terminal signal peptide which indicates that they localise in the periplasm where they may
+  function to bind proteins, small molecules, or other typical OB-fold ligands [[cite:PUB00016305]]. As
+  hypothesised for the distantly related OB-fold containing bacterial enterotoxins, the loss of nucleotide-binding
+  function and the rapid evolution of the BOF ligand-binding site may be associated with the presence
+  of BOF proteins in mobile genetic elements and their potential role in bacterial pathogenicity [[cite:PUB00016305]].

@@ -1,0 +1,25 @@
+id: Pfam:PF19904
+pfam_id: PF19904
+name: SusR C-terminal domain
+short_name: SusR_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19904
+counters:
+  proteins: 1230
+  matches: 1230
+  proteomes: 699
+  taxa: 959
+  structures: 0
+  alphafold_models: 791
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045957
+description: This entry represents the C-terminal domain of the SusR protein. This region contains the
+  DNA-binding region that promotes transcription of the Sus operon.

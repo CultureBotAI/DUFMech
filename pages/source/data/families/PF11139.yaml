@@ -1,0 +1,30 @@
+id: Pfam:PF11139
+pfam_id: PF11139
+name: Sap, sulfolipid-1-addressing protein
+short_name: SfLAP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11139
+counters:
+  proteins: 3664
+  matches: 3667
+  proteomes: 2162
+  taxa: 2950
+  structures: 0
+  alphafold_models: 2255
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021315
+description: SAP is a transmembrane transport protein with six predicted transmembrane helices, with a
+  hydrophilic domain between helices 3 and 4. This hyrodphobic region is highly variable among identified
+  Gap-like (GPL, peptidoglycolipid, addressing protein) proteins and may be involved in substrate recognition.
+  SAP also belongs to the LysE protein superfamily ([pfam:PF01810]), whose members have been implicated
+  in small molecule transport in bacteria. Other Gap proteins export metabolites across the cell membrane
+  so it is possible that Sap specifically may be involved in transport of sulfolipid-1 across the membrane
+  [[cite:PUB00077558]].

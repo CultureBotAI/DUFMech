@@ -1,0 +1,24 @@
+id: Pfam:PF10917
+pfam_id: PF10917
+name: Fungus-induced protein
+short_name: Fungus-induced
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10917
+counters:
+  proteins: 58
+  matches: 59
+  proteomes: 13
+  taxa: 64
+  structures: 0
+  alphafold_models: 58
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024415
+description: This entry represents fungus-induced proteins which may have role in hypoxia response [[cite:PUB00056206]].

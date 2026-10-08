@@ -1,0 +1,26 @@
+id: Pfam:PF15848
+pfam_id: PF15848
+name: Odontogenesis associated phosphoprotein
+short_name: ODAPH
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15848
+counters:
+  proteins: 137
+  matches: 138
+  proteomes: 114
+  taxa: 393
+  structures: 0
+  alphafold_models: 121
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031706
+description: This family is found in mammals. It includes odontogenesis associated phosphoprotein (ODAPH
+  or in human C4orf26) which is expressed in the enamel organ of the tooth and may promote nucleation
+  of hydroxyapatite [[cite:PUB00087303]].

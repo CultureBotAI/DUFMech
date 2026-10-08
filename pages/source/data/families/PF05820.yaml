@@ -1,0 +1,27 @@
+id: Pfam:PF05820
+pfam_id: PF05820
+name: Baculoviridae AC81
+short_name: Ac81
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05820
+counters:
+  proteins: 129
+  matches: 129
+  proteomes: 121
+  taxa: 286
+  structures: 0
+  alphafold_models: 116
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008563
+description: This family consists of several highly related Baculovirus proteins and includes Autographa
+  californica multiple nucleopolyhedrovirus (AcMNPV) protein AC81, which is required for nucleocapsid
+  envelopment. Ac81 contains a functional hydrophobic transmembrane (TM) domain, whose deletion resulted
+  in a phenotype similar to that of Ac81 knockout [[cite:PUB00082599]].

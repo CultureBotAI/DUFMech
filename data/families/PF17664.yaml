@@ -1,0 +1,28 @@
+id: Pfam:PF17664
+pfam_id: PF17664
+name: Cilia- and flagella-associated protein HOATZ-like
+short_name: HOATZ-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17664
+counters:
+  proteins: 543
+  matches: 562
+  proteomes: 412
+  taxa: 1509
+  structures: 0
+  alphafold_models: 455
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040681
+description: This entry represents cilia- and flagella-associated protein, HOATZ, and related proteins,
+  found in metazoa. In mice HOATZ is encoded by the gene designated 4833427G06Rik (C11orf88). Mouse Hoatz
+  mRNA is specifically expressed in tissues with motile cilia and flagella [[cite:PUB00135090]]. Hoatz
+  knockout mice developed hydrocephalus and male infertility, and the ependymal cilia frequently showed
+  disorganised axonemes [[cite:PUB00135090]].

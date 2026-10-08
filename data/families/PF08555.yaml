@@ -1,0 +1,24 @@
+id: Pfam:PF08555
+pfam_id: PF08555
+name: FAM32A
+short_name: FAM32A
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08555
+counters:
+  proteins: 3380
+  matches: 3383
+  proteomes: 2597
+  taxa: 7103
+  structures: 4
+  alphafold_models: 2860
+  domain_architectures: 58
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013865
+description: FAM32A, also known as OTAG12, has been linked to ovarian tumour in humans and mice [[cite:PUB00092488]].

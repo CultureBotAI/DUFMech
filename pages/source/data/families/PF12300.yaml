@@ -1,0 +1,24 @@
+id: Pfam:PF12300
+pfam_id: PF12300
+name: ATP-dependent RNA helicase RhlB
+short_name: RhlB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12300
+counters:
+  proteins: 270
+  matches: 270
+  proteomes: 264
+  taxa: 351
+  structures: 0
+  alphafold_models: 140
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022077
+description: Proteins in this entry are DEAD Box RhlB RNA Helicases found in Xanthomonadaceae bacteria.

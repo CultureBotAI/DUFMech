@@ -1,0 +1,25 @@
+id: Pfam:PF08698
+pfam_id: PF08698
+name: Fcf2 pre-rRNA processing
+short_name: Fcf2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08698
+counters:
+  proteins: 3864
+  matches: 3898
+  proteomes: 3264
+  taxa: 8708
+  structures: 45
+  alphafold_models: 3302
+  domain_architectures: 84
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014810
+description: This is a family of eukaryotic nucleolar proteins that are involved in pre-rRNA processing
+  [[cite:PUB00035397]].

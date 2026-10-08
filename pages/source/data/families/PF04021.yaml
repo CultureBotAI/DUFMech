@@ -1,0 +1,27 @@
+id: Pfam:PF04021
+pfam_id: PF04021
+name: Class III signal peptide
+short_name: Class_IIIsignal
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04021
+counters:
+  proteins: 357
+  matches: 357
+  proteomes: 136
+  taxa: 264
+  structures: 0
+  alphafold_models: 329
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007166
+description: This family of archaeal proteins contains. an amino terminal motif QXSXEXXXL that has been
+  suggested to be part of a class III signal sequence. With the Q being the +1 residue of the signal peptidase
+  cleavage site [[cite:PUB00044084]]. Two members of this family are cleaved by a type IV pilin-like signal
+  peptidase.

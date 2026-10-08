@@ -1,0 +1,31 @@
+id: Pfam:PF08351
+pfam_id: PF08351
+name: tRNA(Met) cytidine acetyltransferase TmcA, N-terminal
+short_name: TmcA_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08351
+counters:
+  proteins: 6077
+  matches: 6079
+  proteomes: 5151
+  taxa: 11311
+  structures: 36
+  alphafold_models: 4736
+  domain_architectures: 102
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013562
+description: This domain of unknown function is often found at the N-terminal of the bacterial tRNA(Met)
+  cytidine acetyltransferase TmcA. TmcA catalyses the formation of N(4)-acetylcytidine (ac4C) at the wobble
+  position of tRNA(Met) by using acetyl-CoA as an acetyl donor and either ATP or GTP [[cite:PUB00050413],[cite:PUB00056806],[cite:PUB00107449]].
+  This modification is thought to ensure precise recognition of the AUG codon by strengthening C-G base-pair
+  interaction and also prevent misrecognition of the near cognate AUA codon [[cite:PUB00050413]]. This
+  domain is also found in mammalian N-acetyltransferase 10 (NAT10) and fungal protein Kre33. Kre33 and
+  NAT10 are RNA cytosine acetyltransferases with specificity toward both 18S rRNA and tRNAs and contain
+  additional putative nuclear and nucleolar localisation signals (NLS and NoLS respectively) [[cite:PUB00076725],[cite:PUB00076726],[cite:PUB00107449]].

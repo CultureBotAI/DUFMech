@@ -1,0 +1,27 @@
+id: Pfam:PF01925
+pfam_id: PF01925
+name: Sulfite exporter TauE/SafE
+short_name: TauE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01925
+counters:
+  proteins: 74133
+  matches: 78411
+  proteomes: 17917
+  taxa: 26326
+  structures: 0
+  alphafold_models: 48156
+  domain_architectures: 154
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002781
+description: This is a family of integral membrane proteins where the alignment appears to contain two
+  duplicated modules of three transmembrane helices. The proteins are involved in the transport of anions
+  across the cytoplasmic membrane [[cite:PUB00060436]] during taurine metabolism as an exporter of sulfoacetate
+  [[cite:PUB00060437]]. This family used to be known as DUF81.

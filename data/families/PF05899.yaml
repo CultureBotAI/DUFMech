@@ -1,0 +1,31 @@
+id: Pfam:PF05899
+pfam_id: PF05899
+name: EutQ-like cupin domain
+short_name: Cupin_3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05899
+counters:
+  proteins: 11191
+  matches: 11372
+  proteomes: 5435
+  taxa: 8650
+  structures: 19
+  alphafold_models: 7292
+  domain_architectures: 78
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008579
+description: This entry represents the cupin domain, with a conserved jelly roll-like beta-barrel fold
+  capable of homodimerisation found in bacteria, plant and fungi. It is present in EutQ family from the
+  eut operon, involved in ethanolamine degradation. EutQ is essential during anoxic growth and has acetate
+  kinase activity [[cite:PUB00096913]]. The cupin domain from EutQ does not possess the His residues responsible
+  for metal coordination in other classes of cupins [[cite:PUB00063996]]. This domain is also found in
+  (S)-ureidoglycine aminohydrolase (UGlyAH) from E.coli, which is involved in the anaerobic nitrogen utilisation
+  via the assimilation of allantoin. It catalyses the deamination of allantoin to produce S-ureidoglycolate
+  and ammonia from S-ureidoglycine [[cite:PUB00078751],[cite:PUB00096858]].

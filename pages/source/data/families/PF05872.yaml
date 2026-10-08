@@ -1,0 +1,28 @@
+id: Pfam:PF05872
+pfam_id: PF05872
+name: Helicase HerA-like C-terminal
+short_name: HerA_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05872
+counters:
+  proteins: 8459
+  matches: 8512
+  proteomes: 8043
+  taxa: 11029
+  structures: 8
+  alphafold_models: 5303
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR033186
+description: HerA is a DNA helicase able to utilise either 3' or 5' single-stranded DNA extensions for
+  loading and subsequent DNA duplex unwinding [[cite:PUB00076694]]. It forms a complex with NurA nuclease,
+  this complex has the 5'-3' DNA end resection activity and is essential for cell viability in the crenarchaeon
+  Sulfolobus islandicus [[cite:PUB00076695]]. This entry represents the C-terminal domain of HerA which
+  seems to be involved in the conversion of ATP hydrolysis into DNA translocation [[cite:PUB00078094]].

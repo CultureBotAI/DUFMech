@@ -1,0 +1,27 @@
+id: Pfam:PF03724
+pfam_id: PF03724
+name: META domain
+short_name: META
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03724
+counters:
+  proteins: 11140
+  matches: 12776
+  proteomes: 7924
+  taxa: 10868
+  structures: 2
+  alphafold_models: 6968
+  domain_architectures: 94
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005184
+description: Small domain family found in proteins of of unknown function. Some are secreted (e.g. [swissprot:O25998])
+  and implicated in motility in bacteria. Also occurs in Leishmania spp. as an essential gene. Over-expression
+  in L.amazonensis increases virulence ([swissprot:O43987]; [[cite:PUB00016654]]). A pair of cysteine
+  residues show correlated conservation, suggesting that they form a disulphide bond.

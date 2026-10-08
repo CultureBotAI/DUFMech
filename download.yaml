@@ -11,14 +11,14 @@
   license_verified_on: "2026-10-07"
   license_note: "InterPro and Pfam downloadable data are CC0; this does not license other member database collections."
   access: "API"
-  access_note: "Public InterPro Pfam entry API; record query and extra_fields in each manifest."
+  access_note: "Public InterPro Pfam entry API: search manifests record query and extra_fields; EX_DUF migration manifests record the per-accession entry endpoint, parents and added families."
   implementation: "IMPLEMENTED"
-  reviewed_on: "2026-10-07"
-  review_basis: "docs/provenance/seed-classification-correction-2026-10-05.md"
+  reviewed_on: "2026-10-08"
+  review_basis: "docs/provenance/exduf-migration-2026-10-08.md"
   adapter: "src/dufmech/snapshot.py"
   writer: "write_worklist_snapshot"
   scoring: "--worklist-json"
-  artifacts: ["data/worklists/interpro-pfam-duf-2026-10-01.manifest.json","data/worklists/interpro-pfam-duf-2026-10-05.manifest.json"]
+  artifacts: ["data/worklists/interpro-pfam-duf-2026-10-01.manifest.json","data/worklists/interpro-pfam-duf-2026-10-05.manifest.json","data/worklists/interpro-pfam-duf-2026-10-08.manifest.json"]
 
 - source: "uniprot_members"
   name: "UniProtKB and UniRef member expansion"
@@ -353,12 +353,12 @@
   access: "MANUAL"
   access_note: "Reads tracked sibling YAML at an explicit git ref plus a saved/live UniProt cross-reference cache; requires local checkouts."
   implementation: "IMPLEMENTED"
-  reviewed_on: "2026-10-07"
-  review_basis: "docs/provenance/cross-mech-worklist-2026-10-06.md"
+  reviewed_on: "2026-10-08"
+  review_basis: "docs/provenance/exduf-migration-2026-10-08.md"
   adapter: "src/dufmech/cross_mech_snapshot.py"
   writer: "write_cross_mech_snapshot"
   scoring: "NOT_SCORED"
-  artifacts: ["data/cross_mech/cross-mech-duf-examples-2026-10-05.manifest.json","data/cross_mech/cross-mech-duf-examples-2026-10-06.manifest.json"]
+  artifacts: ["data/cross_mech/cross-mech-duf-examples-2026-10-05.manifest.json","data/cross_mech/cross-mech-duf-examples-2026-10-06.manifest.json","data/cross_mech/cross-mech-duf-examples-2026-10-08.manifest.json"]
 
 - source: "pfam_previous_ids"
   name: "Pfam-A.seed previous identifiers"

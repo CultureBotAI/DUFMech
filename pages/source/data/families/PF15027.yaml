@@ -1,0 +1,29 @@
+id: Pfam:PF15027
+pfam_id: PF15027
+name: MGT5A-like, N-terminal
+short_name: MGT5A_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15027
+counters:
+  proteins: 1799
+  matches: 1810
+  proteomes: 816
+  taxa: 2563
+  structures: 4
+  alphafold_models: 1642
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027833
+description: This domain is found at the N-terminal end of human Alpha-1,6 -mannosylglycoprotein 6-beta-N-acetylglucosaminyltransferase
+  A (MGT5A) [[cite:PUB00155403]] and similar sequences mainly found in vertebrates. MGT5A is a glycosyltransferase
+  family 18 enzyme that also has the catalytic region [pfam:PF15024]. This domain, which shows an all
+  helical structure, plays a critical role in the recognition of glycoprotein substrates [[cite:PUB00155403],[cite:PUB00155404],[cite:PUB00155405]].
+  It is also found in Coiled -coil domain-containing protein 126, a smaller sequence that only contains
+  this domain.

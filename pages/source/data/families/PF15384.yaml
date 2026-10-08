@@ -1,0 +1,27 @@
+id: Pfam:PF15384
+pfam_id: PF15384
+name: PAXX, PAralog of XRCC4 and XLF, also called C9orf142
+short_name: PAXX
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15384
+counters:
+  proteins: 757
+  matches: 777
+  proteomes: 553
+  taxa: 1971
+  structures: 20
+  alphafold_models: 650
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027873
+description: PAXX is a set of eukaryotic proteins that belong to the XRCC4 superfamily of DNA-double-strand
+  break-repair proteins. PAXX interacts directly with DSB-repair protein Ku and is recruited to DNA-damage
+  sites in cells thus functioning with XRCC4 and XLF to bring about DSB repair and cell survival in response
+  to DSB-inducing agents [[cite:PUB00074304]].

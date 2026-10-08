@@ -1,0 +1,29 @@
+id: Pfam:PF09345
+pfam_id: PF09345
+name: SiaC family regulatory phosphoprotein
+short_name: SiaC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09345
+counters:
+  proteins: 1367
+  matches: 1368
+  proteomes: 970
+  taxa: 1698
+  structures: 4
+  alphafold_models: 984
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018530
+description: This entry represents the SiaC family regulatory phosphoprotein which undergoes a regulatory
+  phosphorylation at Thr-68 of founder protein PA0170 from Pseudomonas aeruginosa, but in more distant
+  homologs, T can be S. Also, it is part of motif NTSS, so may contain more than one phosphorylation site.
+  Phosphorylation causes regulatory change to protein-protein interaction, in a pathway that seems broadly
+  distributed, involves a diguanylate cyclase, and in the case of Pseudomonas aeruginosa affects aggregation
+  and biofilm formation responses.

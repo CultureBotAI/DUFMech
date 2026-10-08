@@ -1,0 +1,30 @@
+id: Pfam:PF06532
+pfam_id: PF06532
+name: Negative regulator of sigma F
+short_name: NrsF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06532
+counters:
+  proteins: 2051
+  matches: 2052
+  proteomes: 1684
+  taxa: 2411
+  structures: 0
+  alphafold_models: 1262
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009495
+description: This family includes CC3252 (NrsF- Negative regulator of sigma F) from Caulobacter crescentus,
+  which is proposed to be an anti-sigma factor. In particular, overexpression of NrsF prevents the induction
+  of the sigF regulon after dichromate stress [[cite:PUB00086036]]. Family members also include the anti-sigma
+  factor OsrA (blr3039) from Bradyrhizobium japonicum, which is involved in sensing reactive oxygen species.
+  There is evidence that OsrA binds an ECF-type sigma factor (EcfF) in vivo. Furthermore, the conserved
+  cysteine residues 129 and 179 of OsrA are shown to be required for normal function [[cite:PUB00109140]].
+  Family members have 6 predicted transmembrane regions.

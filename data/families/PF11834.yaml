@@ -1,0 +1,25 @@
+id: Pfam:PF11834
+pfam_id: PF11834
+name: KHA, dimerisation domain of potassium ion channel
+short_name: KHA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11834
+counters:
+  proteins: 5977
+  matches: 6005
+  proteomes: 1356
+  taxa: 4360
+  structures: 25
+  alphafold_models: 4966
+  domain_architectures: 131
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021789
+description: KHA is the tetramerisation domain of eukaryotic voltage-dependent potassium ion-channel proteins.
+  In plants the domain lies at the C-terminus whereas in many chordates it lies at the N-terminus.

@@ -1,0 +1,25 @@
+id: Pfam:PF11933
+pfam_id: PF11933
+name: Cytoplasmic domain of voltage-gated Na+ ion channel
+short_name: Na_trans_cytopl
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11933
+counters:
+  proteins: 10424
+  matches: 10479
+  proteomes: 1019
+  taxa: 3427
+  structures: 47
+  alphafold_models: 804
+  domain_architectures: 87
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024583
+description: This is a large cytoplasmic domain towards the start of voltage-dependent sodium ion channel
+  proteins in eukaryotes. It is found closely associated with [pfam:PF06512] and [pfam:PF00520].

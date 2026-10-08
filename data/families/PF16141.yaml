@@ -1,0 +1,26 @@
+id: Pfam:PF16141
+pfam_id: PF16141
+name: Glycoside hydrolase family 18, BT1044-like
+short_name: GH18_BT1044-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16141
+counters:
+  proteins: 335
+  matches: 359
+  proteomes: 135
+  taxa: 243
+  structures: 2
+  alphafold_models: 214
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032320
+description: This family of glycosyl hydrolases (GH) from CAZy family 18 is mainly found in Bacteroidetes,
+  including the endoglycosidase BT1044 from Bacteroides thetaiotaomicron. This protein folds into the
+  canonical (beta/alpha)8 barrel (TIM barrel) fold common to many GH structures [[cite:PUB00101017]].

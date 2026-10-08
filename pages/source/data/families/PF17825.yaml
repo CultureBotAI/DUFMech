@@ -1,0 +1,29 @@
+id: Pfam:PF17825
+pfam_id: PF17825
+name: SHOC1 ATPase domain
+short_name: SHOC1_ATPase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17825
+counters:
+  proteins: 793
+  matches: 818
+  proteomes: 575
+  taxa: 2030
+  structures: 0
+  alphafold_models: 301
+  domain_architectures: 29
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR063559
+description: This domain is found in the human Protein shortage in chiasmata 1 ortholog (SHOC1) and related
+  proteins from chordate. SHOC1 is an integral to the formation of crossover recombination intermediates
+  during mammalian meiosis [[cite:PUB00090399]]. SHOC1 preferentially binds branched DNA molecules but
+  apparently lacks in vitro endonuclease activity [[cite:PUB00090399]]. The core of SHOC1 resembles the
+  DNA repair endonuclease XPF. This domain has significant similarity to P-loop AAA ATPase domains. This
+  aligns with the SHOC1 ATPase activity, which is stimulated by the presence of single-stranded DNA [[cite:PUB00090399]].

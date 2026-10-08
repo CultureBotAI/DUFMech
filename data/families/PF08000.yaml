@@ -1,0 +1,26 @@
+id: Pfam:PF08000
+pfam_id: PF08000
+name: Bacterial PH domain
+short_name: bPH_1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08000
+counters:
+  proteins: 4624
+  matches: 4699
+  proteomes: 4148
+  taxa: 5881
+  structures: 3
+  alphafold_models: 2811
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012544
+description: This family contains many bacterial hypothetical proteins. The structures of [swissprot:A1SD03],
+  PDB:3hsa, and [swissprot:A3QB43], PDB:3dcx, show similarities to the PH or pleckstrin homology domain.
+  First evidence of PH-like domains in bacteria suggests role in cell envelope stress response [[cite:PUB00054230]].

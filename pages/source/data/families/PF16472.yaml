@@ -1,0 +1,29 @@
+id: Pfam:PF16472
+pfam_id: PF16472
+name: LRP1, beta-propeller domain
+short_name: LRP1-like_beta_prop
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16472
+counters:
+  proteins: 1489
+  matches: 1662
+  proteomes: 869
+  taxa: 2200
+  structures: 1
+  alphafold_models: 807
+  domain_architectures: 367
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032485
+description: This is a beta-propeller domain found in Prolow-density lipoprotein receptor-related protein
+  1 (LRP1) from human, an endocytic receptor involved in endocytosis and in phagocytosis of apoptotic
+  cells [[cite:PUB00151931],[cite:PUB00151932]]. LRP1 is involved in cellular lipid homeostasis and in
+  the plasma clearance of chylomicron remnants and activated LRPAP1 (alpha 2-macroglobulin), as well as
+  the local metabolism of complexes between plasminogen activators and their endogenous inhibitors. It
+  acts as an LRPAP1 alpha-2-macroglobulin receptor [[cite:PUB00151934],[cite:PUB00151933]].

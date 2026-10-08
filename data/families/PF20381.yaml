@@ -1,0 +1,27 @@
+id: Pfam:PF20381
+pfam_id: PF20381
+name: Membrane protein Rv1476
+short_name: Rv1476
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20381
+counters:
+  proteins: 628
+  matches: 628
+  proteomes: 627
+  taxa: 746
+  structures: 0
+  alphafold_models: 411
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046498
+description: This entry, previously known as DUF6676, represents Membrane protein Rv1476 an related proteins
+  found in actinobacteria. Rv1476 probably affects the expression of genes linked to host macrophage apoptosis
+  and immune response, thereby promoting the survival of Mycobacterium tuberculosis in host macrophages
+  [[cite:PUB00155435]].

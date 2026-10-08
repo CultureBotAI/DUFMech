@@ -1,0 +1,26 @@
+id: Pfam:PF11837
+pfam_id: PF11837
+name: Beta-fructofuranosidase, N-terminal domain
+short_name: INV_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11837
+counters:
+  proteins: 1425
+  matches: 1427
+  proteomes: 357
+  taxa: 1074
+  structures: 0
+  alphafold_models: 1202
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021792
+description: This entry represents the N-terminal domain of beta-fructofuranosidase, which is involved
+  in the hydrolysis of terminal non-reducing beta-D-fructofuranoside residues in beta-D-fructofuranosides
+  [[cite:PUB00098224]].

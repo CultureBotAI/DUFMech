@@ -1,0 +1,26 @@
+id: Pfam:PF06254
+pfam_id: PF06254
+name: Bacterial toxin ydaT
+short_name: YdaT_toxin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06254
+counters:
+  proteins: 365
+  matches: 365
+  proteomes: 270
+  taxa: 474
+  structures: 2
+  alphafold_models: 173
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009364
+description: YdaT_toxin was first thought to be neutralised by the putative antitoxin YdaS ([pfam:PF15943])
+  [[cite:PUB00075651]] but recent studies showed that both YdaS and YdaT can act independently as toxins
+  and are regulated by RacR [[cite:PUB00099919]].

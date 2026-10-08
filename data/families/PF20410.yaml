@@ -1,0 +1,28 @@
+id: Pfam:PF20410
+pfam_id: PF20410
+name: X-Tfes, XVIPCD
+short_name: X-Tfes_XVIPCD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20410
+counters:
+  proteins: 1260
+  matches: 1263
+  proteomes: 153
+  taxa: 231
+  structures: 2
+  alphafold_models: 571
+  domain_architectures: 40
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046519
+description: This conserved domain is found in Xanthomonas VirD4 interacting proteins (XVIPs) and other
+  type IV secretion system (T4SS) specialised in translocating effector proteins (toxic effector proteins,
+  X-Tfes) into competing gram-negative species, leading to target cell death. This domain interacts with
+  the central all-alpha domain of VirD4. Its structure shows two well ordered N-terminal antiparallel
+  alpha-helices that pack against a carboxyl-terminal three-stranded antiparallel beta sheet [[cite:PUB00151936],[cite:PUB00145392],[cite:PUB00151937]].

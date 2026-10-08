@@ -1,0 +1,25 @@
+id: Pfam:PF11271
+pfam_id: PF11271
+name: Porin PorA
+short_name: PorA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11271
+counters:
+  proteins: 2727
+  matches: 2727
+  proteomes: 1928
+  taxa: 2298
+  structures: 2
+  alphafold_models: 1507
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021424
+description: Members of this family include PorA, a channel-forming protein found mostly in Gram-positive
+  bacteria [[cite:PUB00086004]].

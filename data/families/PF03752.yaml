@@ -1,0 +1,26 @@
+id: Pfam:PF03752
+pfam_id: PF03752
+name: Short repeats of unknown function
+short_name: ALF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03752
+counters:
+  proteins: 1404
+  matches: 5860
+  proteomes: 718
+  taxa: 858
+  structures: 2
+  alphafold_models: 515
+  domain_architectures: 101
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005506
+description: This set of repeats is found in a small family of secreted proteins of no known function,
+  though they are possibly involved in signal transduction. ALF stands for Alanine-rich (AL) - conserved
+  Phenylalanine (F).

@@ -1,0 +1,33 @@
+id: Pfam:PF01989
+pfam_id: PF01989
+name: Aconitase X swivel domain
+short_name: AcnX_swivel_put
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01989
+counters:
+  proteins: 2019
+  matches: 2019
+  proteomes: 1838
+  taxa: 3213
+  structures: 6
+  alphafold_models: 1449
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002840
+description: This entry represents a domain centrally found in Phosphomevalonate dehydratase small subunit
+  from Aeropyrum pernix (PMDh-S) and similar prokaryotic proteins previously annotated as aconitase X
+  subunit 2, the swiveling domain subunit [[cite:PUB00080857]]. PMDh-S is a component of a hydro-lyase
+  that catalyses the dehydration of mevalonate 5-phosphate (MVA5P) to form trans- anhydromevalonate 5-phosphate
+  (tAHMP) [[cite:PUB00098043],[cite:PUB00154971]]. It is involved in the archaea; mevalonate (MVA) pathway,
+  which provides fundamental precursos for isoprenoid biosynthesis such as isopentenyl diphosphate (IPP)
+  and dimenthylallyl diphosphate (DMAPP) [[cite:PUB00098043],[cite:PUB00154970]]. This domain is also
+  found at the N-terminal end of Cis-3-hydroxy-L-proline dehydratase from Agrobacterium fabrum (LhpI),
+  which catalyses the dehydration of cis-3-hydroxy-L-proline (c3LHyp) to Delta1-pyrroline-2- carboxylate
+  (Pyr2C) [[cite:PUB00088769]].

@@ -1,0 +1,25 @@
+id: Pfam:PF07734
+pfam_id: PF07734
+name: F-box associated beta propeller domain
+short_name: FBA_1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07734
+counters:
+  proteins: 24373
+  matches: 25229
+  proteomes: 376
+  taxa: 1098
+  structures: 0
+  alphafold_models: 18568
+  domain_architectures: 618
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006527
+description: Most of these proteins contain [pfam:PF00646] at the N terminus, suggesting that they are
+  effectors linked with ubiquitination.

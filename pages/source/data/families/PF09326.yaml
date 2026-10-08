@@ -1,0 +1,25 @@
+id: Pfam:PF09326
+pfam_id: PF09326
+name: NADH-ubiquinone oxidoreductase subunit G, C-terminal
+short_name: NADH_dhqG_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09326
+counters:
+  proteins: 6348
+  matches: 6349
+  proteomes: 5454
+  taxa: 11484
+  structures: 288
+  alphafold_models: 4974
+  domain_architectures: 71
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015405
+description: Members of this family of are found at the C-terminus of NADH dehydrogenases subunit G or
+  NADH-ubiquinone oxidoreductase subunit G. [ec:1.6.99.5].

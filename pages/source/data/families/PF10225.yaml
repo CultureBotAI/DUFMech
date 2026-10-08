@@ -1,0 +1,26 @@
+id: Pfam:PF10225
+pfam_id: PF10225
+name: NEMP family
+short_name: NEMP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10225
+counters:
+  proteins: 3899
+  matches: 3975
+  proteomes: 1692
+  taxa: 5209
+  structures: 0
+  alphafold_models: 3341
+  domain_architectures: 70
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019358
+description: This entry includes a group of nuclear envelope integral membrane proteins from animals and
+  plants, including NEMP1 from Xenopus laevis. NEMP1 is a RanGTP-binding protein and is involved in eye
+  development [[cite:PUB00078907],[cite:PUB00078908]].

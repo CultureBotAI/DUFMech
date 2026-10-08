@@ -1,0 +1,26 @@
+id: Pfam:PF02645
+pfam_id: PF02645
+name: Uncharacterised protein, DegV family COG1307
+short_name: DegV
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02645
+counters:
+  proteins: 16441
+  matches: 16499
+  proteomes: 7206
+  taxa: 9975
+  structures: 30
+  alphafold_models: 10587
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003797
+description: The structure of this protein revealed a bound fatty-acid molecule in a pocket between the
+  two protein domains. The structure indicates that this family has the molecular function of fatty-acid
+  binding and may play a role in the cellular functions of fatty acid transport or metabolism [[cite:PUB00019402]].

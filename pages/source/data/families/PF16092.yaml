@@ -1,0 +1,27 @@
+id: Pfam:PF16092
+pfam_id: PF16092
+name: Cilia- and flagella-associated protein 61, N-terminal domain
+short_name: CFAP61_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16092
+counters:
+  proteins: 1556
+  matches: 1915
+  proteomes: 1103
+  taxa: 3653
+  structures: 5
+  alphafold_models: 1098
+  domain_architectures: 54
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032151
+description: This entry represents the N-terminal domain of proteins described as cilia- and flagella-associated
+  protein. Proteins containing this domain includes FAP61 from Chlamydomonas reinhardtii. FAP61 is part
+  of the calmodulin and spoke-associated complex (CSC) required for wild-type motility and for the stable
+  assembly of a subset of radial spokes in motile cilia [[cite:PUB00076499]].

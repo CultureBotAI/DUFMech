@@ -1,0 +1,25 @@
+id: Pfam:PF12015
+pfam_id: PF12015
+name: Bud3, N-terminal
+short_name: Bud3_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12015
+counters:
+  proteins: 361
+  matches: 362
+  proteomes: 353
+  taxa: 694
+  structures: 0
+  alphafold_models: 53
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021895
+description: This domain is found in the N-terminal of the yeast Bud3 protein. Bud3 is involved in bud-site
+  selection in budding yeasts. This domain has a conserved ENL sequence motif [[cite:PUB00073057]].

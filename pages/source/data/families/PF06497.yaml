@@ -1,0 +1,28 @@
+id: Pfam:PF06497
+pfam_id: PF06497
+name: Baculovirus Ac102
+short_name: Baculo_Ac102
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06497
+counters:
+  proteins: 94
+  matches: 94
+  proteomes: 94
+  taxa: 190
+  structures: 1
+  alphafold_models: 88
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009477
+description: This family of baculovirus proteins is represented by Autographa californica nuclear polyhedrosis
+  virus (AcMNPV) Ac102. Nuclear actin is critical for AcMNPV progeny production, and Ac102 plays an essential
+  role in actin translocation to the nucleus [[cite:PUB00082590]]. It plays a role in regulating nuclear
+  actin polymerisation as well as the morphogenesis and spatial distribution of viral capsid structures
+  in the host nucleus [[cite:PUB00097495],[cite:PUB00097494]].

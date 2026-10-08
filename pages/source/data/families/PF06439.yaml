@@ -1,0 +1,28 @@
+id: Pfam:PF06439
+pfam_id: PF06439
+name: 3-keto-alpha-glucoside-1,2-lyase-like domain
+short_name: 3keto-disac_hyd
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06439
+counters:
+  proteins: 19525
+  matches: 21475
+  proteomes: 4164
+  taxa: 6169
+  structures: 18
+  alphafold_models: 12269
+  domain_architectures: 757
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010496
+description: This family has structural similarity to an endo-1,3-1,4-beta glucanase belonging to glycoside
+  hydrolase family 16. A member containing this domain, BT2157 from B. thetaiotaomicron [[cite:PUB00097337]],
+  was initially described as a 3-keto trehalose hydrolase involved in trehalose degradation [[cite:PUB00097337]].
+  However, members of this group of proteins, previously known as DUF1080, have been reported to be 3-keto-alpha-glucoside-1,2-lyases
+  and 3-keto-2-hydroxy-glucal hydratases and named AL/BT2 enzymes [[cite:PUB00160473]].

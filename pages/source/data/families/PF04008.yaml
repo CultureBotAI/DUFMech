@@ -1,0 +1,26 @@
+id: Pfam:PF04008
+pfam_id: PF04008
+name: Adenosine specific kinase
+short_name: Adenosine_kin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04008
+counters:
+  proteins: 767
+  matches: 767
+  proteomes: 756
+  taxa: 1640
+  structures: 7
+  alphafold_models: 562
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007153
+description: The structure of a member of this family from the hyperthermophilic archaeon Pyrobaculum
+  aerophilum contains a modified histidine residue which is interpreted as stable phosphorylation [[cite:PUB00041095]].
+  In vitro binding studies confirmed that adenosine and AMP but not ADP or ATP bind to the protein [[cite:PUB00041095]].

@@ -1,0 +1,29 @@
+id: Pfam:PF09924
+pfam_id: PF09924
+name: Phosphatidylglycerol lysyltransferase, C-terminal
+short_name: LPG_synthase_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09924
+counters:
+  proteins: 11396
+  matches: 11427
+  proteomes: 8231
+  taxa: 12407
+  structures: 15
+  alphafold_models: 7112
+  domain_architectures: 132
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024320
+description: This domain can be found in the C-terminal region of phosphatidylglycerol lysyltransferase
+  mprF, which catalyses the transfer of a lysyl group from L-lysyl-tRNA(Lys) to to membrane-bound phosphatidylglycerol
+  (PG), which produces lysylphosphatidylglycerol (LPG) [[cite:PUB00056129],[cite:PUB00109263]]. This domain
+  can also be found in lysylphosphatidylglycerol biosynthesis bifunctional protein LysX, which is the
+  two-domain lysyl-transferase (mprF)-lysyl-tRNA synthetase (lysU) protein is responsible for LPG production
+  [[cite:PUB00078731]].

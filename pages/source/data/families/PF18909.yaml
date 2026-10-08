@@ -1,0 +1,26 @@
+id: Pfam:PF18909
+pfam_id: PF18909
+name: dATP/dGTP diphosphohydrolase, N-terminal
+short_name: dGTP_diPhyd_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18909
+counters:
+  proteins: 596
+  matches: 597
+  proteomes: 574
+  taxa: 1488
+  structures: 0
+  alphafold_models: 171
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR044038
+description: This entry represent the N-terminal region of SHab15497_00040, an Acinetobacter phage protein
+  that catalyses the hydrolysis of dGTP into dGMP, which is needed among others for the first step of
+  biosynthesis of dZTP (2-amino-2'-deoxyadenosine-5'- triphosphate) [[cite:PUB00097959]].

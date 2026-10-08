@@ -1,0 +1,35 @@
+id: Pfam:PF14337
+pfam_id: PF14337
+name: Abortive infection alpha
+short_name: Abi_alpha
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14337
+counters:
+  proteins: 1144
+  matches: 1144
+  proteomes: 945
+  taxa: 1811
+  structures: 1
+  alphafold_models: 693
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025506
+description: Enterococci such as Enterococcus faecalis and Enterococcus faecium are part of the normal
+  human gut microbiota. However they can also be a source of nosocomial infections specially in immunocompromised
+  patients. Virulent bacteriophages, i.e., viruses that infect and obligatorily lyse bacteria might provide
+  alternative options for combating them. Yet, bacterial resistance to phage is taking place in similar
+  fashion to antibiotic resistance. This might be, in part due to temperate phages that are stably associated
+  with their host. They compete for their bacterial host, in addition to repressor-dependent immunity
+  against similar phages, some phage express genes conferring resistance to infection by more or less
+  unrelated phages. They can encode abortive infection (Abi) mechanisms that cause an interruption of
+  invasive phage development and a premature death of the infected bacteria. For instance, E. faecalis
+  V583 prophage 6 confers resistance to the virulent phage Idefix infection mainly due to Abia-alpha protein.
+  This Pfam family corresponds to Abi-alpha protein sequences which is mostly found in prophages, arguing
+  that it is essentially a temperate phage weapon to fight against other phages [[cite:PUB00101291]].

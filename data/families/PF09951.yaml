@@ -1,0 +1,25 @@
+id: Pfam:PF09951
+pfam_id: PF09951
+name: Immunity protein Imm33 domain
+short_name: Imm33
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09951
+counters:
+  proteins: 874
+  matches: 875
+  proteomes: 798
+  taxa: 1491
+  structures: 0
+  alphafold_models: 529
+  domain_architectures: 19
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018689
+description: This domain has been identified as a putative family of immunity proteins found in bacterial
+  toxin/antitoxin systems [[cite:PUB00066726]]. This domain was previously called DUF2185.

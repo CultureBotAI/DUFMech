@@ -1,0 +1,26 @@
+id: Pfam:PF00893
+pfam_id: PF00893
+name: Small Multidrug Resistance protein
+short_name: Multi_Drug_Res
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00893
+counters:
+  proteins: 28663
+  matches: 28666
+  proteomes: 13207
+  taxa: 18029
+  structures: 20
+  alphafold_models: 17571
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045324
+description: This family is the Small Multidrug Resistance (SMR) family. Several members have been shown
+  to export a range of toxins, including ethidium bromide ([[cite:PUB00019898]] and quaternary ammonium
+  compounds [[cite:PUB00002174]], through coupling with proton influx [[cite:PUB00019899]].

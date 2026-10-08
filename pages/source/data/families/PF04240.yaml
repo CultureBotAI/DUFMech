@@ -1,0 +1,26 @@
+id: Pfam:PF04240
+pfam_id: PF04240
+name: Carotenoid biosynthesis protein
+short_name: Caroten_synth
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04240
+counters:
+  proteins: 2764
+  matches: 2774
+  proteomes: 2661
+  taxa: 4360
+  structures: 0
+  alphafold_models: 1868
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007354
+description: The representative member of this family is CruF, a C50 carotenoid 2',3'-hydratase involved
+  in the synthesis of the C50 carotenoid bacterioruberin in the halophilic archaeon Haloarcula japonica
+  [[cite:PUB00077981]].

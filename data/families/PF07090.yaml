@@ -1,0 +1,29 @@
+id: Pfam:PF07090
+pfam_id: PF07090
+name: Putative glutamine amidotransferase
+short_name: GATase1_like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07090
+counters:
+  proteins: 1774
+  matches: 1777
+  proteomes: 1451
+  taxa: 2583
+  structures: 3
+  alphafold_models: 1174
+  domain_architectures: 30
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010768
+description: This family consists of several hypothetical bacterial proteins of around 250 residues in
+  length. The function of this family is unknown. The structure of this cytoplasmic domain was solved
+  by the Midwest Center for Structural Genomics (MCSG). The structure has been classified as part of the
+  Class-I Glutamine amidotransferase superfamily owing to similarity with other known structures. The
+  monomer combines with itself to form a hexamer, and this hexamer exposes a potential catalytic surface
+  rich in Glu, Asp, Tyr, Ser.Trp and His residues [[cite:PUB00075436]].

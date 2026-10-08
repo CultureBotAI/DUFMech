@@ -1,0 +1,26 @@
+id: Pfam:PF15072
+pfam_id: PF15072
+name: Homologous recombination OB-fold protein
+short_name: HROB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15072
+counters:
+  proteins: 2185
+  matches: 2190
+  proteomes: 1279
+  taxa: 4107
+  structures: 0
+  alphafold_models: 1623
+  domain_architectures: 62
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058570
+description: This family represents Homologous recombination OB-fold protein (HROB). During homologous
+  recombination, HROB acts by recruiting the MCM8-MCM9 helicase complex to sites of DNA damage to promote
+  DNA repair synthesis [[cite:PUB00093964],[cite:PUB00093965]].

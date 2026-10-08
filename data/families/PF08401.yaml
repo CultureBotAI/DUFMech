@@ -1,0 +1,30 @@
+id: Pfam:PF08401
+pfam_id: PF08401
+name: N-terminal domain of anti-restriction factor ArdC
+short_name: ArdcN
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08401
+counters:
+  proteins: 6492
+  matches: 6494
+  proteomes: 4027
+  taxa: 6807
+  structures: 2
+  alphafold_models: 4276
+  domain_architectures: 194
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013610
+description: This is the ssDNA binding domain of anti-restriction factor ArdC deployed by plasmids and
+  phages in polyvalent proteins related to the BHD domains of XPC/Rad4 and the Tc-38 domain found in kinetoplastid
+  minicircle binding proteins [[cite:PUB00098071],[cite:PUB00091133],[cite:PUB00098072]]. The structure
+  of this domain is composed of three alpha-helices and a three-stranded beta-sheet that supports a long
+  and protuberant beta-hairpin [[cite:PUB00098072]]. This domain is also found in the N-terminal region
+  of the RP4 TraC1 primase [[cite:PUB00043496]], together with the Toprim domain (pfam:PF01751, pfam:PF13362
+  and pfam:PF13662).

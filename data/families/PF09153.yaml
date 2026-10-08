@@ -1,0 +1,29 @@
+id: Pfam:PF09153
+pfam_id: PF09153
+name: Methylated DNA-protein cysteine methyltransferase, N-terminal
+short_name: MGMT_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09153
+counters:
+  proteins: 36
+  matches: 36
+  proteomes: 35
+  taxa: 61
+  structures: 1
+  alphafold_models: 35
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015236
+description: This domain is found in the archaeal protein O6-alkylguanine-DNA alkyltransferase (also known
+  as Methylated DNA-protein cysteine methyltransferase MGMT), adopt a secondary structure consisting of
+  a three stranded antiparallel beta-sheet and three alpha helices. This entry represents the N-terminal
+  ribonuclease H-like domain, associated with 6-O-methylguanine DNA methyltransferase activity. The exact
+  function has not, as yet, been defined, though it has been postulated that they confer thermostability
+  to the archaeal protein [[cite:PUB00027330]].

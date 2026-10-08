@@ -1,0 +1,26 @@
+id: Pfam:PF12769
+pfam_id: PF12769
+name: 4TM region of pyridine nucleotide transhydrogenase, mitoch
+short_name: PNTB_4TM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12769
+counters:
+  proteins: 13121
+  matches: 13130
+  proteomes: 11302
+  taxa: 18794
+  structures: 14
+  alphafold_models: 9222
+  domain_architectures: 80
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024605
+description: PNTB_4TM is the region upstream of family PNTB, [pfam:PF02233], that carries four of this
+  transporters transmembrane regions. PNTB is the beta-subunit of pyridine nucleotide transhydrogenase.
+  This family forms part of the Proton-translocating Transhydrogenase (PTH) Family.

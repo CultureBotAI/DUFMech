@@ -1,0 +1,26 @@
+id: Pfam:PF06181
+pfam_id: PF06181
+name: Urate oxidase N-terminal
+short_name: Urate_ox_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06181
+counters:
+  proteins: 3759
+  matches: 3780
+  proteomes: 3513
+  taxa: 4862
+  structures: 0
+  alphafold_models: 2379
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010389
+description: Cytochrome c urate oxidase (Uox) PuuD is involved in purine degradation. In contrast with
+  soluble Uox it is a membrane protein with an 8-helix transmembrane N-terminal domain and a C-terminal
+  cytochrome c [[cite:PUB00081215]].

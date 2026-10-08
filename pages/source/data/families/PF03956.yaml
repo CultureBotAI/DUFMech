@@ -1,0 +1,26 @@
+id: Pfam:PF03956
+pfam_id: PF03956
+name: Lysine exporter LysO
+short_name: Lys_export
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03956
+counters:
+  proteins: 2618
+  matches: 2703
+  proteomes: 2006
+  taxa: 3232
+  structures: 0
+  alphafold_models: 1835
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005642
+description: Members of this family contain a conserved core of four predicted transmembrane segments.
+  Some members have an additional pair of N-terminal transmembrane helices. This family includes lysine
+  exporter LysO (YbjE) from E. coli [[cite:PUB00075629]].

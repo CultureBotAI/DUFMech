@@ -1,0 +1,27 @@
+id: Pfam:PF06550
+pfam_id: PF06550
+name: Signal-peptide peptidase, presenilin aspartyl protease
+short_name: SPP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06550
+counters:
+  proteins: 425
+  matches: 449
+  proteomes: 405
+  taxa: 710
+  structures: 4
+  alphafold_models: 397
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010545
+description: SPP is a family of signal-peptide aspartyl proteases. The family carries the characteristic
+  catalytic aspartate GXGD motif, and members are integral membrane peptidases of the presenilin-type
+  with nine transmembrane regions. UniProtKB:Q18K19 is part of the TCDB family 1.A.54.3.4, the presenilin
+  er Ca(2+) leak channel (presenilin).

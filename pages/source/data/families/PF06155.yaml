@@ -1,0 +1,31 @@
+id: Pfam:PF06155
+pfam_id: PF06155
+name: Gamma-butyrobetaine hydroxylase-like, N-terminal
+short_name: GBBH-like_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06155
+counters:
+  proteins: 11413
+  matches: 11424
+  proteomes: 7190
+  taxa: 14088
+  structures: 19
+  alphafold_models: 8604
+  domain_architectures: 122
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010376
+description: This domain is found in several proteins including gamma-butyrobetaine dioxygenase, Fe-S
+  cluster assembly factor HCF101 and trimethyllysine dioxygenase proteins. Gamma-butyrobetaine hydroxylase
+  (GBBH) is a alpha-ketoglutarate-dependent dioxygenase that catalyzes the biosynthesis of L-carnitine
+  by hydroxylation of gamma-butyrobetaine (GBB). GBBH is a dimeric enzyme. The monomer consists of a catalytic
+  double-stranded beta-helix domain and a smaller N-terminal domain. The N-terminal domain has a bound
+  Zn ion, which is coordinated by three cysteines and one histidine. The N-terminal domain could facilitate
+  dimer formation, but its precise function is not known [[cite:PUB00075680]]. Other family members have
+  been suggested to be involved in FeS cluster maintenance (see Supplementary note 5 in [[cite:PUB00093610]].)

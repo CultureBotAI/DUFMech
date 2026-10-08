@@ -1,0 +1,30 @@
+id: Pfam:PF11380
+pfam_id: PF11380
+name: Stealth protein CR2, conserved region 2
+short_name: Stealth_CR2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11380
+counters:
+  proteins: 4740
+  matches: 4777
+  proteomes: 3139
+  taxa: 6946
+  structures: 8
+  alphafold_models: 3289
+  domain_architectures: 147
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021520
+description: Stealth_CR2 is the second of several highly conserved regions on stealth proteins in metazoa
+  and bacteria. There are up to four CR regions on all member proteins. CR2 carries a well-conserved NDD
+  sequence-motif. The domain is found in tandem with CR1, CR3 and CR4 on both potential metazoan hosts
+  and pathogenic eubacterial species that are capsular polysaccharide phosphotransferases. The CR domains
+  appear on eukaryotic proteins such as GNPTAB, N-acetylglucosamine-1-phosphotransferase subunits alpha/beta.
+  Horizontal gene-transfer seems to have occurred between host and bacteria of these sequence-regions
+  in order for the bacteria to evade detection by the host innate immune system [[cite:PUB00075655]].

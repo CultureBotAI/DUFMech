@@ -1,0 +1,25 @@
+id: Pfam:PF05653
+pfam_id: PF05653
+name: Magnesium transporter NIPA
+short_name: Mg_trans_NIPA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05653
+counters:
+  proteins: 21330
+  matches: 22921
+  proteomes: 4521
+  taxa: 10148
+  structures: 0
+  alphafold_models: 17719
+  domain_architectures: 227
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008521
+description: NIPA (nonimprinted in Prader-Willi/Angelman syndrome) is a family of integral membrane proteins
+  which function as magnesium transporters [[cite:PUB00057506],[cite:PUB00057507]].

@@ -1,0 +1,26 @@
+id: Pfam:PF10218
+pfam_id: PF10218
+name: SREBP regulating gene protein
+short_name: SPRING1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10218
+counters:
+  proteins: 2163
+  matches: 2190
+  proteomes: 1532
+  taxa: 4943
+  structures: 2
+  alphafold_models: 1856
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019352
+description: SPRING1 is a glycosylated Golgi-resident membrane protein involved in SREBP signaling and
+  cholesterol metabolism. It modulates the proper localisation of SCAP (SREBP cleavage-activating protein)
+  to the endoplasmic reticulum, thereby controlling the level of functional SCAP [[cite:PUB00094523]].

@@ -1,0 +1,26 @@
+id: Pfam:PF05527
+pfam_id: PF05527
+name: Tumor necrosis factor alpha-induced protein 8-like
+short_name: TNFAIP8
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05527
+counters:
+  proteins: 3812
+  matches: 3831
+  proteomes: 1267
+  taxa: 4156
+  structures: 6
+  alphafold_models: 3414
+  domain_architectures: 24
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008477
+description: This family includes human tumor necrosis factor alpha-induced protein 8-like (TNFAIP8) and
+  similar proteins mainly found in animals. TNFAIP8 functions as a negative mediator of apoptosis and
+  may play a role in tumour progression. Proteins in this family adopt an all-alpha configuration.

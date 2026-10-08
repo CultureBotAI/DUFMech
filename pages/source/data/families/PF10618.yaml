@@ -1,0 +1,26 @@
+id: Pfam:PF10618
+pfam_id: PF10618
+name: Phage tail tube protein
+short_name: Tail_tube
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10618
+counters:
+  proteins: 686
+  matches: 686
+  proteomes: 610
+  taxa: 1128
+  structures: 3
+  alphafold_models: 389
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019596
+description: This bacterial family of proteins contains phage tail tube proteins related to the Mu phage
+  protein [swissprot:P79679] [[cite:PUB00019895]]. Bacteriophage Mu has an eicosahedral head and contractile
+  tail. The tail is composed of an outer sheath and an inner tube.

@@ -1,0 +1,30 @@
+id: Pfam:PF06755
+pfam_id: PF06755
+name: CbtA_toxin of type IV toxin-antitoxin system
+short_name: CbtA_toxin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06755
+counters:
+  proteins: 440
+  matches: 440
+  proteomes: 252
+  taxa: 392
+  structures: 0
+  alphafold_models: 244
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009610
+description: CbtA is a family of bacterial and archaeal toxins of type IV toxin-antitoxin system. Toxins
+  from such systems in free-living bacteria inhibit cell growth by targeting essential functions of cellular
+  metabolism [[cite:PUB00086029]]. In this case the toxin inhibits cell-division leading to changes in
+  morphology and finally lysis, by interacting with two essential cytoskeletal proteins, FtsZ and MreB.
+  For FtsZ it inhibits its GTPase activity and GTP-dependent polymerisation, and for MreB it inhibits
+  its ATP-dependent polymerisation. These actions of CbtA appear to occur simultaneously [[cite:PUB00075543]].
+  he cognate antitoxin family is represented by [pfam:PF06154].

@@ -1,0 +1,28 @@
+id: Pfam:PF21053
+pfam_id: PF21053
+name: Biogenesis factor required for ATP synthase 1, C-terminal domain
+short_name: BFA1_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21053
+counters:
+  proteins: 798
+  matches: 802
+  proteomes: 564
+  taxa: 1611
+  structures: 2
+  alphafold_models: 605
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR048378
+description: This domain is predominantly found at the C-terminal end of proteins from cyanobacteria and
+  plants, including Biogenesis factor required for ATP synthase 1 (BFA1, [swissprot:F4J1U2]) from Arabidopsis
+  thaliana. BFA1 promotes the assembly of the CF1 subcomplex of the chloroplast ATP synthase by specifically
+  interacting with the gamma and beta subunits. This domain consists of ten beta-sheets and one alpha-
+  helix forming a typical beta-barrel, which locates perpendicularly to [pfam:PF12204] [[cite:PUB00100989]].

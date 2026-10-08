@@ -1,0 +1,27 @@
+id: Pfam:PF05814
+pfam_id: PF05814
+name: Orf76 (Ac76)
+short_name: Ac76
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05814
+counters:
+  proteins: 108
+  matches: 108
+  proteomes: 108
+  taxa: 274
+  structures: 0
+  alphafold_models: 100
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008561
+description: This family consists mainly of baculovirus proteins. Family members include Autographa californica
+  multiple nucleopolyhedrovirus (AcMNPV), protein AC76. Ac76 has been shown to be involved in intranuclear
+  microvesicle formation. Functional studies suggest that ac76 is essential for both BV (budded virus)
+  and ODV (occlusion-derived virus) development but is not required for viral DNA synthesis [[cite:PUB00082598]].

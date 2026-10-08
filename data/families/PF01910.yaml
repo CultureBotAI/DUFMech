@@ -1,0 +1,35 @@
+id: Pfam:PF01910
+pfam_id: PF01910
+name: Thiamine-binding protein
+short_name: Thiamine_BP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01910
+counters:
+  proteins: 9298
+  matches: 9331
+  proteomes: 8093
+  taxa: 12399
+  structures: 7
+  alphafold_models: 6343
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002767
+description: The crystal structure of two of these members shows that this domain has a ferredoxin like
+  fold and is likely to exists as at least homodimers. Sulphate ions are are located at the dimer interfaces,
+  which are thought to confer additional stability. Although the function of this domain remains to be
+  identified, its structure suggests a role in protein-protein interactions possibly regulated by the
+  binding of small-molecule ligands [[cite:PUB00019479]]. Solution of the structure of the hyperthermophilic
+  anaerobic Thermotoga maritima sequence, UniProtKB:Q9WYV6, shows that this has a beta-alpha-beta-beta-alpha-beta
+  ferredoxin-like fold and assembles as a homotetramer. It was possible to identify a pocket in each monmer
+  that bound an unidentified ligand. It was also found that it bound charged thiamine though not hydroxymethyl
+  pyrimidine. It is proposed that it is transporting charged thiamine around the cytoplasm. Under oxidative
+  conditions this bacterium is under stress, and the transcriiptional unit within which this protein is
+  expressed is up-regulated in these conditions, suggesting that the chelation of cytoplasmic thaimine
+  is part of the response mechanism to such oxidatvie stress, which is mediated by this family [[cite:PUB00055842]].

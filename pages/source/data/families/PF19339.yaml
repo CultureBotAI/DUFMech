@@ -1,0 +1,26 @@
+id: Pfam:PF19339
+pfam_id: PF19339
+name: Protein angel homolog 2 N-terminal
+short_name: ANGEL2_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19339
+counters:
+  proteins: 736
+  matches: 747
+  proteomes: 506
+  taxa: 1514
+  structures: 2
+  alphafold_models: 668
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045816
+description: This family represents the N-terminal unstructured domain of the protein angel homolog 2
+  (ANGEL2). This protein is a member of the CCR4 nocturin family and 2',3'-cyclic phosphatase activity
+  involved in RNA processing and modification [[cite:PUB00099092]].

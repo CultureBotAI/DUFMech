@@ -1,0 +1,27 @@
+id: Pfam:PF14924
+pfam_id: PF14924
+name: Microtubule associated protein 10, N-terminal domain
+short_name: MAP10_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14924
+counters:
+  proteins: 1145
+  matches: 1162
+  proteomes: 585
+  taxa: 2212
+  structures: 0
+  alphafold_models: 922
+  domain_architectures: 31
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: This domain is found at the N-terminal of MAP10 (Microtubule associated protein 10, also
+  known as MTR120/KIAA1383) from mammals. There are two completely conserved G residues that may be functionally
+  important. It adopts a C2-like fold. MAP10 localises to stabilised MTs during interphase and to the
+  mitotic apparatus during mitosis. It may promote microtubule stability and ensures normal progress of
+  cytokinesis [[cite:PUB00068314]].

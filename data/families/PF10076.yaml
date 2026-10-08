@@ -1,0 +1,25 @@
+id: Pfam:PF10076
+pfam_id: PF10076
+name: Bacteriophage Mu-like, Gp48
+short_name: Phage_Mu_Gp48
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10076
+counters:
+  proteins: 1866
+  matches: 1871
+  proteomes: 1416
+  taxa: 2510
+  structures: 6
+  alphafold_models: 1091
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018755
+description: Members of this family of proteins comprise various hypothetical and putative bacteriophage
+  tail proteins, including Gp48 from Bacteriophage Mu and other Mu-like prophages such as FluMu [[cite:PUB00015900]].

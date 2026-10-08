@@ -1,0 +1,26 @@
+id: Pfam:PF09936
+pfam_id: PF09936
+name: SAM-dependent RNA methyltransferase
+short_name: Methyltrn_RNA_4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09936
+counters:
+  proteins: 484
+  matches: 484
+  proteomes: 480
+  taxa: 1079
+  structures: 3
+  alphafold_models: 385
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019230
+description: This family has a Rossmanoid fold, with a deep trefoil knot in its C-terminal region. It
+  has structural similarity to RNA methyltransferases, and is likely to function as an S-adenosyl-L-methionine
+  (SAM)-dependent RNA 2'-O methyltransferase [[cite:PUB00051341]].

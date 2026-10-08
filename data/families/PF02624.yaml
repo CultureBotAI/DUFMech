@@ -1,0 +1,29 @@
+id: Pfam:PF02624
+pfam_id: PF02624
+name: YcaO cyclodehydratase, ATP-ad Mg2+-binding
+short_name: YcaO
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02624
+counters:
+  proteins: 8762
+  matches: 8814
+  proteomes: 6003
+  taxa: 8712
+  structures: 16
+  alphafold_models: 5234
+  domain_architectures: 59
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003776
+description: 'YcaO is an ATP- an Mg2+-binding protein involved in the peptidic biosynthesis of azoline.
+  There three motifs involved in the binding are, in UniProtKB:P75838, 71-79: Sx3ExxER, 184-203: Sx6Ex3Qx3ExxER,
+  and 286-290: RxxxE. Three slightly different functional families are represented in this family, proteins
+  involved in TOMM (thiazole/oxazole-modified microcin) biogenesis, non-TOMM proteins such as UniProtKB:P75838,
+  and TfuA-associated non-TOMM proteins involved in trifolitoxin biosynthesis. UniProtKB:P75838 hydrolyses
+  ATP to AMP and pyrophosphate [[cite:PUB00078765]].'

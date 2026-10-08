@@ -1,0 +1,26 @@
+id: Pfam:PF06258
+pfam_id: PF06258
+name: Mitochondrial fission ELM1
+short_name: Mito_fiss_Elm1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06258
+counters:
+  proteins: 3154
+  matches: 3238
+  proteomes: 2097
+  taxa: 3881
+  structures: 0
+  alphafold_models: 2258
+  domain_architectures: 35
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009367
+description: In plants, this family is involved in mitochondrial fission. It binds to dynamin-related
+  proteins and plays a role in their relocation from the cytosol to mitochondrial fission sites [[cite:PUB00057490]].
+  Its function in bacteria is unknown.

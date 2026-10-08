@@ -1,0 +1,30 @@
+id: Pfam:PF04447
+pfam_id: PF04447
+name: dATP/dGTP pyrophosphohydrolase
+short_name: dATP-dGTP_PPHyd
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04447
+counters:
+  proteins: 202
+  matches: 204
+  proteomes: 188
+  taxa: 506
+  structures: 1
+  alphafold_models: 83
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007538
+description: This domain is found in phage proteins, such as A0A2H5BHG5 from Acinetobacter phage SH-Ab
+  15497, which are associated with PurZ, an enzyme that catalyses the synthesis of diaminopurine (Z),
+  a DNA modification that gives phages an advantage for evading host restriction enzymes activity [[cite:PUB00097959]].
+  This domain has dATP and dGTP pyrophosphohydrolase activity; it catalyses the hydrolysis of dATP/dGTP
+  to pyrophosphate and dAMP/dGMP, respectively, with little or no activities for NTPs and pyrimidine dNTPs.
+  It is suggested that enzymes containing this domain supply dGMP as the substrate for PurZ, elevating
+  dZTP level to promote Z incorporation [[cite:PUB00097959]].

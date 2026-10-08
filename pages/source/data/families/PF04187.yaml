@@ -1,0 +1,27 @@
+id: Pfam:PF04187
+pfam_id: PF04187
+name: Haem-binding uptake, Tiki superfamily, ChaN
+short_name: Cofac_haem_bdg
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04187
+counters:
+  proteins: 4545
+  matches: 4567
+  proteomes: 3958
+  taxa: 6774
+  structures: 1
+  alphafold_models: 3078
+  domain_architectures: 47
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007314
+description: This is a family of putative bacterial lipoproteins necessary for the uptake of haem-iron.
+  The structure of UniProtKB:Q0PBW2, PDB:2g5g, comprises a large parallel beta-sheet with flanking alpha-helices
+  and a smaller domain consisting of alpha-helices. Two cofacial haem groups (~3.5 Angstom apart with
+  an inter-iron distance of 4.4 Angstrom) bind in a pocket formed by a dimer of two ChaN monomers [[cite:PUB00075535],[cite:PUB00040938]].

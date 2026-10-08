@@ -1,0 +1,27 @@
+id: Pfam:PF16346
+pfam_id: PF16346
+name: GH32, BT1760-like, C-terminal domain
+short_name: GH32_BT1760-like_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16346
+counters:
+  proteins: 194
+  matches: 194
+  proteomes: 185
+  taxa: 309
+  structures: 7
+  alphafold_models: 132
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032507
+description: This domain is found at the C-terminal end of BT1760 from Bacteroides thetaiotaomicron and
+  similar bacterial proteins that predominantly belong to the glycoside hydrolase family 32 (GH32). BT1760
+  is an endo-levanase that requires its C-terminal beta-sandwich domain to fold and function correctly.
+  This domain shows two facing beta-sheets consisting of seven and eight antiparallel beta-strands [[cite:PUB00100993]].

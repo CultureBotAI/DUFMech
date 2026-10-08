@@ -1,0 +1,29 @@
+id: Pfam:PF03706
+pfam_id: PF03706
+name: Lysylphosphatidylglycerol synthase TM region
+short_name: LPG_synthase_TM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03706
+counters:
+  proteins: 23174
+  matches: 23283
+  proteomes: 12135
+  taxa: 17771
+  structures: 6
+  alphafold_models: 14907
+  domain_architectures: 70
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022791
+description: LPG_synthase_TM is the N-terminal region of this family of bacterial phosphatidylglycerol
+  lysyltransferases. The function of the family is to add lysyl groups to membrane lipids, and this region
+  is the transmembrane domain of 7xTMs. In order to counteract attack by membrane-damaging external cationic
+  antimicrobial molecules - from host immune systems, bacteriocins, defensins, etc - bacteria modify their
+  anionic membrane phosphatidylglycerol with positively-charged L-lysine; this results in repulsion of
+  the foreign cationic peptides [[cite:PUB00009951],[cite:PUB00109237],[cite:PUB00056129]].

@@ -1,0 +1,27 @@
+id: Pfam:PF16403
+pfam_id: PF16403
+name: Bacterial surface protein, Ig-like domain
+short_name: Bact_surface_Ig-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16403
+counters:
+  proteins: 3038
+  matches: 5878
+  proteomes: 1732
+  taxa: 2837
+  structures: 15
+  alphafold_models: 1468
+  domain_architectures: 1076
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032179
+description: This entry represents a bacterial immunoglobulin-like domain found in bacterial proteins,
+  including Pesticidal crystal protein Cry22Aa from Bacillus thuringiensis, a protein with a toxic effect
+  on several insect larvae and Chitinase 60 from Moritella marina ([swissprot:B1VBB0]), responsible for
+  degradation of krill chitin.

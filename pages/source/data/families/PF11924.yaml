@@ -1,0 +1,29 @@
+id: Pfam:PF11924
+pfam_id: PF11924
+name: Inverse autotransporter, beta-domain
+short_name: IAT_beta
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11924
+counters:
+  proteins: 1587
+  matches: 1588
+  proteomes: 768
+  taxa: 1397
+  structures: 3
+  alphafold_models: 789
+  domain_architectures: 256
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024519
+description: This is a family of beta-barrel porin-like outer membrane proteins from enteropathogenic
+  Gram-negative bacteria. Intimins and invasins are virulence factors produced by pathogenic Gram-negative
+  bacteria. They carry C-terminal extracellular passenger domains that are involved in adhesion to host
+  cells and N-terminal beta domains that are embedded in the outer membrane. This family represents the
+  beta-barrel porin-like domain in the outer membrane that can be found in intimins, invasins and some
+  inverse autotransporters [[cite:PUB00059501],[cite:PUB00081211]].

@@ -1,0 +1,29 @@
+id: Pfam:PF10048
+pfam_id: PF10048
+name: BufA1 family periplasmic bufferin-type metallophore
+short_name: BufA1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10048
+counters:
+  proteins: 3198
+  matches: 3200
+  proteomes: 2492
+  taxa: 3581
+  structures: 0
+  alphafold_models: 2072
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018740
+description: BufA1 family periplasmic bufferin-type metallophore belongs to a family of ribosomally synthesised
+  and post-translationally modified peptide (RiPP) precursors that are modified by multinuclear nonheme
+  iron-dependent oxidase (MNIO) enzymes. Unusual among RiPPs, these peptides have an Sec-dependent N-terminal
+  signal peptide, and are delivered to the periplasm. Members of this family act as metallophores, analogous
+  to methanobactin, can be induced by stress from excess concentrations of copper or other metals, reduce
+  metal toxicity by sequestration, and are termed bufferins [[cite:PUB00161747],[cite:PUB00161748],[cite:PUB00161749]].

@@ -1,0 +1,28 @@
+id: Pfam:PF11557
+pfam_id: PF11557
+name: Solitary outer membrane autotransporter beta-barrel domain
+short_name: Omp_AT
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11557
+counters:
+  proteins: 230
+  matches: 230
+  proteomes: 198
+  taxa: 321
+  structures: 0
+  alphafold_models: 134
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021621
+description: Omp_AT is a family of Gram-negative Gamma-proteobacteria outer membrane autotransporter beta-barrel
+  proteins. Secondary structure prediction indicates a beta-barrel domain of 12 beta-strands. with an
+  N terminal helix running along the central barrel axis perpendicular to the 12 antiparallel strands
+  that form the barrel. Autotransporter translocation units defined by a beta-barrel of 12 to 14 antiparallel
+  strands with an N terminal helix perpendicular to the barrel [[cite:PUB00086595]].

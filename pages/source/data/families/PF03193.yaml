@@ -1,0 +1,27 @@
+id: Pfam:PF03193
+pfam_id: PF03193
+name: RsgA GTPase
+short_name: RsgA_GTPase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03193
+counters:
+  proteins: 20259
+  matches: 20432
+  proteomes: 15648
+  taxa: 22637
+  structures: 17
+  alphafold_models: 12792
+  domain_architectures: 40
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010914
+description: RsgA (also known as EngC and YjeQ) represents a protein family whose members are broadly
+  conserved in bacteria and are indispensable for growth. The GTPase domain of RsgA is very similar to
+  several P-loop GTPases, but differs in having a circular permutation of the GTPase structure described
+  by a G4-G1-G3 pattern [[cite:PUB00013951]].

@@ -1,0 +1,31 @@
+id: Pfam:PF20661
+pfam_id: PF20661
+name: SutA RNAP-binding domain
+short_name: SutA-RBD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20661
+counters:
+  proteins: 1448
+  matches: 1448
+  proteomes: 819
+  taxa: 1076
+  structures: 3
+  alphafold_models: 879
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049191
+description: This domain (previously known as DUF6813) is found in the transcriptional regulator SutA
+  from Pseudomonas aeruginosa and similar proteins mainly from Gammaproteobacteria. In Pseudomonas aeruginosa,
+  SutA adapts bacteria to hypoxia and nutrition-limited environment during chronic infection by increasing
+  transcriptional activity of an RNA polymerase (RNAP) holoenzyme. SutA interacts directly with RNAP holoenzyme
+  and the RNAP-beta protrusion is its primary anchor site. This domain comprises an alpha-helix and a
+  beta-strand and is responsible for interaction with RNAP-beta protrusion [[cite:PUB00152756]]. It contains
+  a conserved FLxxGG sequence motif that appears to be located near the C-terminal helix cap. The SutA-RBD
+  alpha-helix binds to a hydrophobic groove on RNAP-beta protrusion [[cite:PUB00152756]].

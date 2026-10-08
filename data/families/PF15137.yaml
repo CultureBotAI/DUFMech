@@ -1,0 +1,27 @@
+id: Pfam:PF15137
+pfam_id: PF15137
+name: Exosomal polycystin 1 interacting protein
+short_name: ECPIP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15137
+counters:
+  proteins: 509
+  matches: 514
+  proteomes: 416
+  taxa: 1407
+  structures: 0
+  alphafold_models: 442
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR029250
+description: This family includes the exosomal polycystin 1 interacting protein (also known as C21orf62
+  or CU062 in human), which is a small glycoprotein that can oligomerize with itself and interact with
+  PC1 protein polycystin-1 (PC1). It may have a role in the identification of senescent mitochondria and
+  their extrusion in extracellular vesicles [[cite:PUB00153072]].

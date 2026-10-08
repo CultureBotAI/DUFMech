@@ -1,0 +1,26 @@
+id: Pfam:PF13272
+pfam_id: PF13272
+name: Putative 2/3 transmembrane domain holin
+short_name: Holin_2-3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13272
+counters:
+  proteins: 276
+  matches: 276
+  proteomes: 239
+  taxa: 514
+  structures: 0
+  alphafold_models: 173
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025140
+description: Holin_2-3 is a putative holins with 2 or 3 transmembrane segments. It consists of many proteobacterial
+  proteins ranging in size from about 70 aas to 120 aas. They have 2 or 3 predicted TMSs. Although some
+  are annotated as phage proteins or holins, none appears to be functionally characterised.

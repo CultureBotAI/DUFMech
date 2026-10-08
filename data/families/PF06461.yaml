@@ -1,0 +1,31 @@
+id: Pfam:PF06461
+pfam_id: PF06461
+name: CHD subfamily II, SANT-like domain
+short_name: CHDII_SANT-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06461
+counters:
+  proteins: 6755
+  matches: 6800
+  proteomes: 1593
+  taxa: 5027
+  structures: 3
+  alphafold_models: 495
+  domain_architectures: 194
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009462
+description: CHD proteins (name derived from the presence of a Chromodomain, SWI2/SNF2 ATPase/Helicase
+  and a motif with sequence similarity to a DNA)binding domain) are ATP-dependent chromatin remodelers
+  found in plant and animals. In eukaryotes, there are three subfamilies, I, II and III. This domain is
+  found in members of subfamily II which play a role in repression of genes involved in developmental
+  regulation, including Mi-2 from Drosophila melanogaster, CHD3/4/5 from animals and PICKLE (a CHD3/4-related
+  protein) from Arabidopsis. Sequence analysis revealed that this domain has a considerable similarity
+  to SANT domains suggesting that it fold into this type of domain and it is integral to the DNA binding
+  domain of CHD remodelers in subfamily II [[cite:PUB00098174]].

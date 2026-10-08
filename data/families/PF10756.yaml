@@ -1,0 +1,27 @@
+id: Pfam:PF10756
+pfam_id: PF10756
+name: Bacterial PH domain
+short_name: bPH_6
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10756
+counters:
+  proteins: 7606
+  matches: 7609
+  proteomes: 3319
+  taxa: 4075
+  structures: 0
+  alphafold_models: 4362
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019692
+description: This domain has a bacterial type PH domain structure. This domain was previously known as
+  DUF2581. This family is conserved in the Actinomycetales. Although several members are annotated as
+  RbiX homologues, RbiX being a putative regulator of riboflavin biosynthesis, the function could not
+  be confirmed.

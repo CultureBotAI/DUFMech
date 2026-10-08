@@ -1,0 +1,33 @@
+id: Pfam:PF03652
+pfam_id: PF03652
+name: Holliday junction resolvase
+short_name: RuvX
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03652
+counters:
+  proteins: 19330
+  matches: 19371
+  proteomes: 17943
+  taxa: 26077
+  structures: 7
+  alphafold_models: 12884
+  domain_architectures: 56
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005227
+description: The central intermediate formed during mitotic and meiotic recombination is a four stranded
+  DNA structure, also known as the Holliday junction (HJ), and its efficient resolution is essential for
+  proper segregation of chromosomes. Resolution of HJs is mediated by a diverse group of DNA structure
+  specific endonucleases known as Holliday junction resolvases (HJR) [[cite:PUB00108910]]. This entry
+  is specific for RuvX also known as YqgF a family of nucleases which resolves the Holliday junction intermediates
+  in genetic recombination[[cite:PUB00009701],[cite:PUB00001215]]. Studies carried out in M. tuberculosis,
+  have shown that YqgF/RuvX is a genuine HJR analogous to RuvC from E. coli. Furthermore, a single cysteine
+  present in M. tuberculosis RuvX was found to be required for disulfide-bond mediated intermolecular
+  dimerization and HJ resolution activity, suggesting that M. tuberculosis RuvX has adapted its YqgF protein
+  to function like a typical RuvC family HJR [[cite:PUB00108910]].

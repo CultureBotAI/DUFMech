@@ -1,0 +1,26 @@
+id: Pfam:PF06429
+pfam_id: PF06429
+name: Flagellar basal body rod FlgEFG protein C-terminal
+short_name: Flg_bbr_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06429
+counters:
+  proteins: 48344
+  matches: 48359
+  proteomes: 8805
+  taxa: 12724
+  structures: 48
+  alphafold_models: 31623
+  domain_architectures: 74
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010930
+description: This family consists of a number of C-terminal domains of unknown function. This domain seems
+  to be specific to flagellar basal-body rod and flagellar hook proteins in which [pfam:PF00460] is often
+  present at the extreme N terminus.

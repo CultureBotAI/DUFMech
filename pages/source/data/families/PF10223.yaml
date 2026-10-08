@@ -1,0 +1,31 @@
+id: Pfam:PF10223
+pfam_id: PF10223
+name: Menorin N-terminal domain
+short_name: Menorin_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10223
+counters:
+  proteins: 2267
+  matches: 2741
+  proteomes: 1273
+  taxa: 4141
+  structures: 0
+  alphafold_models: 1940
+  domain_architectures: 42
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019356
+description: This entyr includes proteins FAM151A and FAM151B, the mammalian homologues of C. elegans
+  menorin which is involved in generation of neurons and regulation of dendrite extension [[cite:PUB00100987],[cite:PUB00100988]].
+  FAM151B has been shown to be essential for retinal function [[cite:PUB00100987]]. Sequence analysis
+  and the fact that these proteins have a TIM-barrel fold similar to that in phospholipase D and glycerophosphodiester
+  phosphodiesterase (GDPD) families, indicate that they belong to PLC-like phosphodiesterase superfamily,
+  although their substrates and function remain unknown. According to structure predictions, this domain
+  is found at the N-terminal of menorin while in FAM151A is found twice and in FAM151B which is much shorter,
+  it is the only domain present.

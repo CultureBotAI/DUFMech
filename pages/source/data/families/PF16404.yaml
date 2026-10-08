@@ -1,0 +1,28 @@
+id: Pfam:PF16404
+pfam_id: PF16404
+name: BT_2262-like, C-terminal domain
+short_name: BT_2262-like_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16404
+counters:
+  proteins: 150
+  matches: 150
+  proteomes: 145
+  taxa: 271
+  structures: 3
+  alphafold_models: 105
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032180
+description: This domain found at the C-terminal end of proteins found in Bacteroidetes, including BT_2262
+  from Bacteroides thetaiotaomicron, a small outer membrane lipoprotein located on the periphery of the
+  SusCD complex, which is essential for the import of oligosaccharides and for glycan degradation. This
+  domain shows an eight-stranded beta-barrel with structural similarity to lipid binding domains. Its
+  specific function remains unknown [[cite:PUB00100658]].

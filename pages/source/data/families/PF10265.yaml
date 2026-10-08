@@ -1,0 +1,27 @@
+id: Pfam:PF10265
+pfam_id: PF10265
+name: Mitoguardin
+short_name: Miga
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10265
+counters:
+  proteins: 2970
+  matches: 3183
+  proteomes: 1243
+  taxa: 4033
+  structures: 3
+  alphafold_models: 2653
+  domain_architectures: 36
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019392
+description: Mitoguardin (Miga) was first identified in flies as a mitochondrial outer-membrane protein
+  that promotes mitochondrial fusion. Later, the mammalian Miga homologues, Miga1 and Miga2, were identified.
+  They are found to promote mitochondrial fusion by regulating mitochondrial phospholipid metabolism via
+  MitoPLD [[cite:PUB00077967],[cite:PUB00077968]].

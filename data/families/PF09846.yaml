@@ -1,0 +1,28 @@
+id: Pfam:PF09846
+pfam_id: PF09846
+name: Origin-associated protein OapB
+short_name: OapB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09846
+counters:
+  proteins: 419
+  matches: 419
+  proteomes: 418
+  taxa: 699
+  structures: 0
+  alphafold_models: 393
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012017
+description: This entry includes archaeal proteins whose function is unclear. Some members of this entry
+  have been described as OapB/Arvb, encoded by oapB gene which is part of the three-gene cluster oapABC,
+  involved in generation of extracellular vesicles (arv, archaeal vesiculating GTAse) [[cite:PUB00154442],[cite:PUB00154443]].
+  It has been suggested that OapB/ArvB could be a guanine nucleotide exchange factor (GEF), however, further
+  experimental research is required to confirm this [[cite:PUB00154443]].

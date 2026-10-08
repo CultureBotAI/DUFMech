@@ -1,0 +1,33 @@
+id: Pfam:PF13699
+pfam_id: PF13699
+name: eCIS core domain
+short_name: eCIS_core
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13699
+counters:
+  proteins: 5359
+  matches: 5421
+  proteomes: 2781
+  taxa: 4406
+  structures: 0
+  alphafold_models: 2834
+  domain_architectures: 192
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025295
+description: This entry represents a domain found in a group of prokaryotic proteins that was previously
+  known as DUF4157. This domain has been recently identified as a highly conserved eCIS (extracellular
+  Contractile Injection System) core domain [[cite:PUB00154361]]. eCIS is a cell-free toxin-delivery system
+  that evolved from a bacteriophage tail and is prevalent in prokaryotes. This eCIS core DUF4157 domain
+  contains an HEXXH motif that is characteristic of many families of metallopeptidases and a putative
+  metal-binding site for a divalent cation such as zinc. Proteobacterial members of this family are thought
+  to be related to the type VI secretion system (T6SS). This region is responsible for the toxicity of
+  the protein in the bacterial periplasm [[cite:PUB00100134]]. eCIS-associated toxins carry DUF4157 domains
+  in their N-terminus or are found adjacent to genes with this domain [[cite:PUB00154361]]. No peptidase
+  activity has been reported for this domain so far.

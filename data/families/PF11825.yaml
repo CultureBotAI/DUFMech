@@ -1,0 +1,29 @@
+id: Pfam:PF11825
+pfam_id: PF11825
+name: Nuclear/hormone receptor activator site AF-1
+short_name: Nuc_recep-AF1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11825
+counters:
+  proteins: 3896
+  matches: 3914
+  proteomes: 744
+  taxa: 2283
+  structures: 5
+  alphafold_models: 3578
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021780
+description: Nuclear receptors (NRs) are a family of ligand-inducible transcription factors, and, like
+  other transcription factors, they contain a distinct DNA binding domain that allows for target gene
+  recognition and several activation domains that possess the ability to activate transcription [[cite:PUB00063250]].
+  One of these activation domains is at the N-terminal, although there are two distinct motifs within
+  this domain, between residues 20-36 and between 74 and the end of this domain, which are the binding
+  regions. One of the co-activators is TIF1beta, which appears to bind at the first motif [[cite:PUB00063251]].

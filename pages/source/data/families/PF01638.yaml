@@ -1,0 +1,25 @@
+id: Pfam:PF01638
+pfam_id: PF01638
+name: HxlR-like helix-turn-helix
+short_name: HxlR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01638
+counters:
+  proteins: 69591
+  matches: 70398
+  proteomes: 14385
+  taxa: 20061
+  structures: 18
+  alphafold_models: 41510
+  domain_architectures: 74
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002577
+description: HxlR, a member of this family, is a DNA-binding protein that acts as a positive regulator
+  of the formaldehyde-inducible hxlAB operon in Bacillus subtilis.

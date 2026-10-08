@@ -1,0 +1,24 @@
+id: Pfam:PF01918
+pfam_id: PF01918
+name: Alba
+short_name: Alba
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01918
+counters:
+  proteins: 8285
+  matches: 8303
+  proteomes: 2523
+  taxa: 7180
+  structures: 36
+  alphafold_models: 7010
+  domain_architectures: 155
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002775
+description: Alba is a novel chromosomal protein that coats archaeal DNA without compacting it.

@@ -1,0 +1,33 @@
+id: Pfam:PF01172
+pfam_id: PF01172
+name: Shwachman-Bodian-Diamond syndrome (SBDS) N-terminal domain
+short_name: SBDS_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01172
+counters:
+  proteins: 5765
+  matches: 5781
+  proteomes: 3701
+  taxa: 9360
+  structures: 14
+  alphafold_models: 4925
+  domain_architectures: 73
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019783
+description: This entry represents the N-terminal domain of proteins that are highly conserved in species
+  ranging from archaea to vertebrates and plants [[cite:PUB00020303]], including several Shwachman-Bodian-Diamond
+  syndrome (SBDS) proteins from both mouse and humans. Shwachman-Diamond syndrome is an autosomal recessive
+  disorder with clinical features that include pancreatic exocrine insufficiency, haematological dysfunction
+  and skeletal abnormalities. It is characterised by bone marrow failure and leukemia predisposition.
+  Members of this entry play a role in RNA metabolism [[cite:PUB00020304]][[cite:PUB00020305]]. In yeast
+  these proteins have been shown to be critical for the release and recycling of the nucleolar shuttling
+  factor Tif6 from pre-60S ribosomes, a key step in 60S maturation and translational activation of ribosomes
+  [[cite:PUB00045126]]. This data links defective late 60S subunit maturation to an inherited bone marrow
+  failure syndrome associated with leukemia predisposition [[cite:PUB00045126]].

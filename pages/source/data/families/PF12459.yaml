@@ -1,0 +1,26 @@
+id: Pfam:PF12459
+pfam_id: PF12459
+name: D-Ala-teichoic acid biosynthesis protein
+short_name: DltX
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12459
+counters:
+  proteins: 636
+  matches: 636
+  proteomes: 626
+  taxa: 881
+  structures: 0
+  alphafold_models: 402
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021008
+description: This entry represents a family of DltX proteins of approximately 50 amino acids in length
+  predominantly found in firmicutes. DltX are small, single-pass transmembrane proteins required for the
+  D-alanylation of teichoic acids [[cite:PUB00153779],[cite:PUB00153778]].

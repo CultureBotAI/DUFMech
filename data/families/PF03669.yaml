@@ -1,0 +1,32 @@
+id: Pfam:PF03669
+pfam_id: PF03669
+name: PAT complex subunit Asterix
+short_name: ASTER
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03669
+counters:
+  proteins: 2823
+  matches: 2834
+  proteomes: 2417
+  taxa: 6945
+  structures: 2
+  alphafold_models: 2398
+  domain_architectures: 39
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005351
+description: This family represents Asterix proteins which are a component of the PAT complex, an endoplasmic
+  reticulum (ER)-resident membrane multiprotein complex that facilitates multi-pass membrane proteins
+  insertion into membranes [[cite:PUB00097218]]. The PAT complex acts as an intramembrane chaperone by
+  directly interacting with nascent transmembrane domains (TMDs), releasing its substrates upon correct
+  folding, and is needed for optimal biogenesis of multi-pass membrane proteins [[cite:PUB00097218]].
+  Asterix is the substrate-interacting subunit of the PAT complex and associates with the first TMD of
+  the nascent chain. The PAT complex favors the binding to TMDs with exposed hydrophilic amino acids within
+  the lipid bilayer and provides a membrane-embedded partially hydrophilic environment in which TMD1 binds
+  [[cite:PUB00097218]].

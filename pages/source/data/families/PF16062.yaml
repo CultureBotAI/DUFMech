@@ -1,0 +1,28 @@
+id: Pfam:PF16062
+pfam_id: PF16062
+name: ADP-ribosylhydrolase MavL-like
+short_name: MavL-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16062
+counters:
+  proteins: 581
+  matches: 750
+  proteomes: 319
+  taxa: 1126
+  structures: 2
+  alphafold_models: 470
+  domain_architectures: 24
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032063
+description: This entry represents a class of MavL-like macrodomain enzymes whose representative members
+  show unique selectivity for mono-ADP-ribosylated arginine residue in synthetic substrates, including
+  [swissprot:Q9W2W5] and [swissprot:Q9W4J9] from Drosophila melanogaster, which are distantly related
+  to MavL from Legionella pneumophila [[cite:PUB00155313]]. They are (ADP-ribosyl)hydrolases that share
+  a mode of ADP-ribose interaction distinct from previously characterised macrodomains [[cite:PUB00155313]].

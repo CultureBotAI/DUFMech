@@ -1,0 +1,27 @@
+id: Pfam:PF19343
+pfam_id: PF19343
+name: HAM1-like, N-terminal domain
+short_name: HAM1_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19343
+counters:
+  proteins: 2939
+  matches: 4050
+  proteomes: 1323
+  taxa: 2830
+  structures: 0
+  alphafold_models: 2413
+  domain_architectures: 59
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045967
+description: This entry represents a domain found at the N-terminal end of the putative cell signalling
+  protein HAM1 from Cryptococcus neoformans and similar fungal sequences. HAM1 may act as a negative regulator
+  of mating during vegetative growth [[cite:PUB00155454]]. Proteins with this domain often also contain
+  a C-terminal domain [pfam:PF14613].

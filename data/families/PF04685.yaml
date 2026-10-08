@@ -1,0 +1,33 @@
+id: Pfam:PF04685
+pfam_id: PF04685
+name: Glycosyl-hydrolase family 116, catalytic region
+short_name: GH116_catalytic
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04685
+counters:
+  proteins: 5324
+  matches: 5493
+  proteomes: 2539
+  taxa: 6811
+  structures: 36
+  alphafold_models: 4187
+  domain_architectures: 83
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006775
+description: This represents a family of archaeal, bacterial and eukaryotic glycosyl hydrolases, that
+  belong to superfamily GH116. The primary catabolic pathway for glucosylceramide is catalysis by the
+  lysosomal enzyme glucocerebrosidase. In higher eukaryotes, glucosylceramide is the precursor of glycosphingolipids,
+  a complex group of ubiquitous membrane lipids [[cite:PUB00044658]]. Mutations in the human protein cause
+  motor-neurone defects in hereditary spastic paraplegia [[cite:PUB00078737]]. The catalytic nucleophile,
+  identified in UniProtKB:Q97YG8_SULSO, is a glutamine-335, with the likely acid/base at Asp-442 and the
+  aspartates at Asp-406 and Asp-458 residues also playing a role in the catalysis of glucosides and xylosides
+  that are beta-bound to hydrophobic groups. The family is defined as GH116, which presently includes
+  enzymes with beta-glucosidase, [ec:3.2.1.21], beta-xylosidase, [ec:3.2.1.37], and glucocerebrosidase
+  [ec:3.2.1.45] activity [[cite:PUB00044658],[cite:PUB00073615]].

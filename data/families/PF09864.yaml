@@ -1,0 +1,31 @@
+id: Pfam:PF09864
+pfam_id: PF09864
+name: Membrane-bound lysozyme-inhibitor of c-type lysozyme
+short_name: MliC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09864
+counters:
+  proteins: 4043
+  matches: 4095
+  proteomes: 3595
+  taxa: 5116
+  structures: 6
+  alphafold_models: 2513
+  domain_architectures: 37
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018660
+description: Lysozymes are ancient and important components of the innate immune system of animals that
+  hydrolyse peptidoglycan, the major bacterial cell wall polymer. Various mechanisms have evolved by which
+  bacteria can evade this bactericidal enzyme, one being the production of lysozyme inhibitors. MliC (membrane
+  bound lysozyme inhibitor of c-type lysozyme) of E. coli and Pseudomonas aeruginosa, possess lysozyme
+  inhibitory activity and confer increased lysozyme tolerance upon expression in E. coli [[cite:PUB00054072]].
+  Structural analyses show that the invariant loop of MliC plays a crucial role in the inhibition of the
+  lysozyme by its insertion into the active site cleft of the lysozyme, where the loop forms hydrogen
+  and ionic bonds with the catalytic residues [[cite:PUB00051886]].

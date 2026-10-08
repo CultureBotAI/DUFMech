@@ -1,0 +1,28 @@
+id: Pfam:PF02659
+pfam_id: PF02659
+name: Putative manganese efflux pump
+short_name: Mntp
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02659
+counters:
+  proteins: 6974
+  matches: 8099
+  proteomes: 4717
+  taxa: 7605
+  structures: 0
+  alphafold_models: 4558
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003810
+description: MntP is a family of bacterial proteins with a signal peptide and four transmembrane domains.
+  It is a putative manganese efflux pump, since deletion of the gene leads to profound manganese sensitivity
+  and elevated intracellular manganese levels in bacteria. Manganese is a highly important trace nutrient
+  for organisms from bacteria to humans, and acts as an important element in the defence against oxidative
+  stress and as an enzyme cofactor [[cite:PUB00064727]].

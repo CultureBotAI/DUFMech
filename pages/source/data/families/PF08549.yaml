@@ -1,0 +1,32 @@
+id: Pfam:PF08549
+pfam_id: PF08549
+name: SWI/SNF and RSC complexes subunit Ssr4 N-terminal
+short_name: SWI-SNF_Ssr4_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08549
+counters:
+  proteins: 1093
+  matches: 1098
+  proteomes: 1066
+  taxa: 2251
+  structures: 3
+  alphafold_models: 907
+  domain_architectures: 18
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013859
+description: This entry represents the N-terminal domain of SWI/SNF and RSC complexes subunit Ssr4 from
+  S. pombe, a essential member of the chromatin structure remodelling complex (RSC) and the SWI/SNF complex
+  [[cite:PUB00066307],[cite:PUB00101211]]. The structure of this domain revealed that it has a novel fold
+  comprising an antiparallel beta-sheet of seven strands with alpha-helices on one side and random coil
+  on the other [[cite:PUB00101211]]. It contains the highly conserved motif WxxxxxPxxGxxxxxxxxxxxxxxxDG.
+  RSC is involved in transcription regulation and nucleosome positioning which controls, particularly,
+  membrane and organelle development genes. The ATP-dependent chromatin remodelling complex SWI/SNF is
+  required for the positive and negative regulation of gene expression of a large number of genes through
+  the regulation of nucleosome remodelling [[cite:PUB00066307]].

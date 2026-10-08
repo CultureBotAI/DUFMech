@@ -1,0 +1,26 @@
+id: Pfam:PF15838
+pfam_id: PF15838
+name: LLLL and CFNLAS motif-containing protein 1
+short_name: LLCFC1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15838
+counters:
+  proteins: 174
+  matches: 176
+  proteomes: 158
+  taxa: 553
+  structures: 0
+  alphafold_models: 148
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031684
+description: 'LLCFC1 (also known as SOF1) and its homologues can be found in eukaryotes. They have two
+  conserved sequence motifs: LLLL and CFNLAS. LLCFC1 is a sperm protein required for sperm-oocyte fusion
+  in mice [[cite:PUB00094436]].'

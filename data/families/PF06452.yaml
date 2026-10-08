@@ -1,0 +1,30 @@
+id: Pfam:PF06452
+pfam_id: PF06452
+name: Carbohydrate family 9 binding domain-like
+short_name: CBM9_1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06452
+counters:
+  proteins: 6161
+  matches: 6400
+  proteomes: 3332
+  taxa: 5255
+  structures: 7
+  alphafold_models: 3453
+  domain_architectures: 503
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010502
+description: CBM9_1 is a C-terminal domain on bacterial xylanase proteins, and it is tandemly repeated
+  in a number of family-members. The CBM9 module binds to amorphous and crystalline cellulose and a range
+  of soluble di- and monosaccharides as well as to cello- and xylo- oligomers of different degrees of
+  polymerisation. Comparison of the glucose and cellobiose complexes during crystallisation reveals surprising
+  differences in binding of these two substrates by CBM9-2. Cellobiose was found to bind in a distinct
+  orientation from glucose, while still maintaining optimal stacking and electrostatic interactions with
+  the reducing end sugar [[cite:PUB00011788]].

@@ -1,0 +1,24 @@
+id: Pfam:PF09171
+pfam_id: PF09171
+name: N-glycosylase/DNA lyase
+short_name: AGOG
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09171
+counters:
+  proteins: 128
+  matches: 128
+  proteomes: 110
+  taxa: 292
+  structures: 12
+  alphafold_models: 122
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015254
+description: This domain is predominantly found in the Archaeal protein N-glycosylase/DNA lyase.

@@ -1,0 +1,28 @@
+id: Pfam:PF17236
+pfam_id: PF17236
+name: SU10 major capsid protein
+short_name: SU10_MCP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17236
+counters:
+  proteins: 694
+  matches: 694
+  proteomes: 621
+  taxa: 1485
+  structures: 9
+  alphafold_models: 337
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR035198
+description: 'This family (previously known as DUF5309) represents the bacteriophage SU10 major capsid
+  protein and related proteins found in phages and bacteriophages. The capsid of SU10 is organised in
+  fivefold symmetry and build from 715 copies of major capsid protein [[cite:PUB00153713]]. The major
+  capsid protein of SU10 adopts an HK97 fold, which is common among tailed bacteriophages and herpesviruses
+  [[cite:PUB00153713]]. This protein forms a capsomers of two types: pentamers and hexamers.'

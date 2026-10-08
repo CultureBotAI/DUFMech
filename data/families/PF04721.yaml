@@ -1,0 +1,29 @@
+id: Pfam:PF04721
+pfam_id: PF04721
+name: PNGase C-terminal domain, mannose-binding module PAW
+short_name: PAW
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04721
+counters:
+  proteins: 1623
+  matches: 1671
+  proteomes: 991
+  taxa: 3432
+  structures: 3
+  alphafold_models: 1367
+  domain_architectures: 58
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006588
+description: The PAW domain is found at the C-terminus of PGNase, or peptide-N-glycanase, enzymes. It
+  was named for 'domain present in PNGases and other worm proteins' [[cite:PUB00011448]]. PNGase catalyses
+  the deglycosylation of several misfolded N-linked glycoproteins by cleaving off the bulky glycan chain
+  before these proteins are degraded by the proteasome. PNGase specifically acts on the unfolded form
+  of high-mannose type N-glycosylated proteins, and this domain appears to be the mannose-binding domain,
+  which contributes to the oligosaccharide-binding specificity of PNGase [[cite:PUB00041628]].

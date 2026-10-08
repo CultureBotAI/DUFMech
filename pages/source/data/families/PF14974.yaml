@@ -1,0 +1,25 @@
+id: Pfam:PF14974
+pfam_id: PF14974
+name: Protein C10
+short_name: P_C10
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14974
+counters:
+  proteins: 1289
+  matches: 1314
+  proteomes: 1082
+  taxa: 3598
+  structures: 0
+  alphafold_models: 1119
+  domain_architectures: 30
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR026317
+description: The function of this protein family is unknown. Mutations in protein C (C12orf57) are implicated
+  in the pathogenesis of colobomatous microphthalmia [[cite:PUB00069935],[cite:PUB00069936]].

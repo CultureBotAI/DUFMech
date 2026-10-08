@@ -1,0 +1,32 @@
+id: Pfam:PF04440
+pfam_id: PF04440
+name: Dysbindin (Dystrobrevin binding protein 1)
+short_name: Dysbindin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04440
+counters:
+  proteins: 3277
+  matches: 3296
+  proteomes: 761
+  taxa: 2313
+  structures: 0
+  alphafold_models: 2940
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007531
+description: Dysbindin is an evolutionary conserved 40-kDa coiled-coil-containing protein that binds to
+  alpha- and beta-dystrobrevin in muscle and brain. Dystrophin and alpha-dystrobrevin are co-immunoprecipitated
+  with dysbindin, indicating that dysbindin is DPC-associated in muscle. Dysbindin co-localises with alpha-dystrobrevin
+  at the sarcolemma and is up-regulated in dystrophin-deficient muscle. In the brain, dysbindin is found
+  primarily in axon bundles and especially in certain axon terminals, notably mossy fibre synaptic terminals
+  in the cerebellum and hippocampus. Dysbindin may have implications for the molecular pathology of Duchenne
+  muscular dystrophy and may provide an alternative route for anchoring dystrobrevin and the DPC to the
+  muscle membrane [[cite:PUB00014974]]. Genetic variation in the human dysbindin gene is also thought
+  to be associated with Schizophrenia [[cite:PUB00019482]].

@@ -1,0 +1,30 @@
+id: Pfam:PF05617
+pfam_id: PF05617
+name: Prolamin-like
+short_name: Prolamin_like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05617
+counters:
+  proteins: 6673
+  matches: 7444
+  proteomes: 358
+  taxa: 962
+  structures: 0
+  alphafold_models: 5457
+  domain_architectures: 83
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008502
+description: Prolamin_like (in which DUF784 and DUF1278 have been merged) is found to be expressed in
+  the plant embryo sac and to be regulated by the Myb98 transcription factor. Computational analysis has
+  revealed that members are homologous to the plant prolamin superfamily (Protease inhibitor-seed storage-LTP
+  family, [pfam:PF00234]) [[cite:PUB00057502]]. In contrast to typical prolamin members that have eight
+  conserved Cys residues forming four pairs of disulfide bonds, this domain contains only six conserved
+  Cys residues that may form three pairs of disulfide bonds. The domain may have a potential function
+  in lipid transfer or protection during plant embryo sac development and reproduction [[cite:PUB00057503]].

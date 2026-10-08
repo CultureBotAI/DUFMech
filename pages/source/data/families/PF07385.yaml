@@ -1,0 +1,28 @@
+id: Pfam:PF07385
+pfam_id: PF07385
+name: D-lyxose isomerase
+short_name: Lyx_isomer
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07385
+counters:
+  proteins: 1432
+  matches: 1432
+  proteomes: 1296
+  taxa: 2278
+  structures: 3
+  alphafold_models: 919
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010864
+description: Members of this family of sugar isomerases belong to the cupin superfamily and consist of
+  group I and II of D-lyxose isomerases [[cite:PUB00103833]]. The enzyme from Cohnella laevoribosii has
+  been shown to be specific for D-lyxose, L-ribose, and D-mannose [[cite:PUB00075374]]. E. coli sugar
+  isomerase (EcSI) shows a preference for D-lyxose and D-mannose [[cite:PUB00055252]] and its active site
+  is highly similar to YdaE from the sigma B regulon of Bacillus subtilis [[cite:PUB00103833]].

@@ -1,0 +1,29 @@
+id: Pfam:PF10090
+pfam_id: PF10090
+name: Histidine phosphotransferase C-terminal domain
+short_name: HPTransfase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10090
+counters:
+  proteins: 2320
+  matches: 2320
+  proteomes: 2317
+  taxa: 3145
+  structures: 4
+  alphafold_models: 1567
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018762
+description: 'HPTransfase is a family of essential histidine phosphotransferases. It controls the activity
+  of the master bacterial cell-cycle regulator CtrA through phosphorylation. It behaves as a homodimer
+  by adopting the domain architecture of the intracellular part of class I histidine kinases. Each subunit
+  consists of two distinct domains: an N-terminal helical hairpin domain and a C-terminal [alpha]/[beta]
+  domain. The two N-terminal domains are adjacent within the dimer, forming a four-helix bundle. The C-terminal
+  domain adopts an atypical Bergerat ATP-binding fold [[cite:PUB00075663]].'

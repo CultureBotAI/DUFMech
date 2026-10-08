@@ -1,0 +1,27 @@
+id: Pfam:PF12441
+pfam_id: PF12441
+name: CopG antitoxin of type II toxin-antitoxin system
+short_name: CopG_antitoxin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12441
+counters:
+  proteins: 916
+  matches: 916
+  proteomes: 740
+  taxa: 1768
+  structures: 0
+  alphafold_models: 654
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022148
+description: CopG antitoxin is a member of a type II toxin-antitoxin system family found in bacteria and
+  archaea. Most antitoxins encoded by the relBE and parDE loci belong to the MetJ/Arc/CopG family of dimeric
+  proteins which bind DNA through N-terminal ribbon-helix-helix (RHH) motifs [[cite:PUB00075548]]. The
+  toxin for CopG proteins falls into the family BrnT_toxin, [pfam:PF04365].

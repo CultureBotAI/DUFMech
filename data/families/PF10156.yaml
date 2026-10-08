@@ -1,0 +1,27 @@
+id: Pfam:PF10156
+pfam_id: PF10156
+name: Subunit 17 of Mediator complex
+short_name: Med17
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10156
+counters:
+  proteins: 2870
+  matches: 2912
+  proteomes: 2346
+  taxa: 6182
+  structures: 33
+  alphafold_models: 2445
+  domain_architectures: 41
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR063477
+description: This Mediator complex subunit was formerly known as Srb4 in yeasts or Trap80 in Drosophila
+  and human. The Med17 subunit is located within the head domain and is essential for cell viability to
+  the extent that a mutant strain of cerevisiae lacking it shows all RNA polymerase II-dependent transcription
+  ceasing at non-permissive temperatures.

@@ -1,0 +1,27 @@
+id: Pfam:PF05951
+pfam_id: PF05951
+name: Peptidoglycan L,D-endopeptidase MepK
+short_name: Peptidase_M15_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05951
+counters:
+  proteins: 3871
+  matches: 3871
+  proteomes: 3319
+  taxa: 4791
+  structures: 0
+  alphafold_models: 2536
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010275
+description: This family represents Peptidoglycan L,D-endopeptidase MepK from Escherichia coli and similar
+  bacterial proteins. MepK cleaves meso-diaminopimelic acid cross-links in peptidoglycan. It acts in conjunction
+  with other elongation-specific D, D-endopeptidases to create space for the efficient incorporation of
+  nascent peptidoglycan strands into the sacculus, thereby enabling cell wall expansion [[cite:PUB00160786]].

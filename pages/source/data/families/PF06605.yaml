@@ -1,0 +1,24 @@
+id: Pfam:PF06605
+pfam_id: PF06605
+name: Prophage endopeptidase tail
+short_name: Prophage_tail
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06605
+counters:
+  proteins: 2107
+  matches: 2113
+  proteomes: 1575
+  taxa: 2899
+  structures: 4
+  alphafold_models: 940
+  domain_architectures: 90
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010572
+description: This family is of prophage tail proteins that are probably acting as endopeptidases.

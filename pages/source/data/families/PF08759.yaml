@@ -1,0 +1,29 @@
+id: Pfam:PF08759
+pfam_id: PF08759
+name: Glycosyltransferase GT-D fold
+short_name: GT-D
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08759
+counters:
+  proteins: 343
+  matches: 343
+  proteomes: 310
+  taxa: 665
+  structures: 4
+  alphafold_models: 198
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014869
+description: This domain is found at the C terminus of proteins such as the probable glycosyltransferase
+  Gly ([swissprot:Q9AEU2]) that also contain the glycosyl transferase domain at the N terminus. It is
+  also found N-terminal in numerous putative glycosyltransferases such as GalT1. GalT1 has been shown
+  to catalyse the third step of Fap1 glycosylation [[cite:PUB00081880]]. This domain is structurally distinct
+  from all known GT folds of glycosyltransferases and contains a metal binding site. This new glycosyltransferase
+  fold has been named GT-D [[cite:PUB00081880]].

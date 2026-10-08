@@ -1,0 +1,30 @@
+id: Pfam:PF19647
+pfam_id: PF19647
+name: 7(1) septoil knot domain
+short_name: Septknot
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19647
+counters:
+  proteins: 615
+  matches: 616
+  proteomes: 583
+  taxa: 1076
+  structures: 0
+  alphafold_models: 395
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046148
+description: This entry represents a small protein domain with a 7(1) septoil knot topology, one of the
+  most complex protein knots known. The structured core consists of a beta-barrel with six beta-strands
+  and two short alpha-helices. The domain contains a conserved SFPD tetrapeptide motif in the loops between
+  beta-strands, resulting in a pseudo fivefold symmetry with conserved phenylalanine side chains pointing
+  outward. The domain is exceptionally stable against chemical denaturation and shows high mechanical
+  resistance. The domain was first predicted by AlphaFold2 and experimentally confirmed by X-ray crystallography
+  and solution NMR.

@@ -1,0 +1,29 @@
+id: Pfam:PF10288
+pfam_id: PF10288
+name: Cytoplasmic tRNA 2-thiolation protein 2
+short_name: CTU2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10288
+counters:
+  proteins: 2997
+  matches: 2997
+  proteomes: 2511
+  taxa: 6765
+  structures: 0
+  alphafold_models: 2543
+  domain_architectures: 39
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019407
+description: CTU2 is a family of proteins necessary for the formation of the wobble nucleoside 5-methoxycarbonylmethyl-2-thiouridine
+  in Saccharomyces cerevisiae. The family is conserved from plants to humans ]1]. It plays a central role
+  in the 2-thiolation of 5-methoxycarbonylmethyl-2-thiouridine, or the wobble nucleoside [[cite:PUB00109223]].
+  This wobble modification in tRNAs, 5-methoxycarbonylmethyl-2-thiouridine (mcm(5)s(2)U), is required
+  for the proper decoding of NNR codons in eukaryotes. The 2-thio group gives rigidity by largely fixing
+  the C3'-endo ribose puckering, ensuring stable and accurate codon-anticodon pairing [[cite:PUB00069587]].

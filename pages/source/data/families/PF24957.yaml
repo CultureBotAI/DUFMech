@@ -1,0 +1,25 @@
+id: Pfam:PF24957
+pfam_id: PF24957
+name: DISARM protein DrmE, C-terminal domain
+short_name: DrmE_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24957
+counters:
+  proteins: 278
+  matches: 278
+  proteomes: 270
+  taxa: 768
+  structures: 0
+  alphafold_models: 181
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056666
+description: This domain is found at the C-terminal end of DISARM protein DrmE from Bacillus paralicheniformis
+  and similar uncharacterised bacterial proteins.

@@ -1,0 +1,25 @@
+id: Pfam:PF11449
+pfam_id: PF11449
+name: Putative, 10TM heavy-metal exporter
+short_name: ArsP_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11449
+counters:
+  proteins: 758
+  matches: 868
+  proteomes: 734
+  taxa: 1329
+  structures: 0
+  alphafold_models: 522
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021552
+description: This is a family of putative manganese transporters with 9-11 TMs. Members carry two well-conserved
+  characteristic sequence- motifs of 'PGCG'.

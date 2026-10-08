@@ -1,0 +1,27 @@
+id: Pfam:PF01174
+pfam_id: PF01174
+name: SNO glutamine amidotransferase family
+short_name: SNO
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01174
+counters:
+  proteins: 9115
+  matches: 9939
+  proteomes: 8607
+  taxa: 14067
+  structures: 12
+  alphafold_models: 6364
+  domain_architectures: 34
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002161
+description: This family and its amidotransferase domain was first described in [[cite:PUB00020352]].
+  It is predicted that members of this family are involved in the pyridoxine biosynthetic pathway, based
+  on the proximity and co-regulation of the corresponding genes and physical interaction between the members
+  of [pfam:PF01174] and [pfam:PF01680] [[cite:PUB00007176]].

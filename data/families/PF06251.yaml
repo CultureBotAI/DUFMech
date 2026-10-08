@@ -1,0 +1,31 @@
+id: Pfam:PF06251
+pfam_id: PF06251
+name: Capsule biosynthesis GfcC C-terminal
+short_name: Caps_syn_GfcC_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06251
+counters:
+  proteins: 940
+  matches: 941
+  proteomes: 900
+  taxa: 1356
+  structures: 1
+  alphafold_models: 549
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010425
+description: Many bacteria are covered in a layer of surface-associated polysaccharide called the capsule.
+  These capsules can be divided into four groups depending upon the organisation of genes responsible
+  for capsule assembly, the assembly pathway and regulation [[cite:PUB00062058]]. This family plays a
+  role in group 4 capsule biosynthesis [[cite:PUB00066719]]. These proteins have a beta-grasp fold [[cite:PUB00044948]].
+  Two beta-grasp domains, D2 and D3, are arranged in tandem. There is a C-terminal amphipathic helix which
+  packs against D3. A helical hairpin insert in D2 binds to D3 and constrains its position, a conserved
+  arginine residue at the end of this hairpin is essential for structural integrity [[cite:PUB00099551]].
+  This is the C-terminal domain which covers D3 and D4 domains [[cite:PUB00099551]].

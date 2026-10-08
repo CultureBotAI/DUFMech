@@ -1,0 +1,28 @@
+id: Pfam:PF02604
+pfam_id: PF02604
+name: Antitoxin Phd_YefM, type II toxin-antitoxin system
+short_name: PhdYeFM_antitox
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02604
+counters:
+  proteins: 22715
+  matches: 22715
+  proteomes: 9546
+  taxa: 14306
+  structures: 24
+  alphafold_models: 14574
+  domain_architectures: 33
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006442
+description: Members of this family act as antitoxins in type II toxin-antitoxin systems [[cite:PUB00015218]].
+  When bound to their toxin partners, they can bind DNA via the N-terminus and repress the expression
+  of operons containing genes encoding the toxin and the antitoxin [[cite:PUB00054755]]. This domain complexes
+  with Txe toxins containing [pfam:PF06769], Fic/DOC toxins containing [pfam:PF02661] and YafO toxins
+  containing [pfam:PF13957].

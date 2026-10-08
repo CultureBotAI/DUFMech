@@ -1,0 +1,28 @@
+id: Pfam:PF11160
+pfam_id: PF11160
+name: Hypervirulence associated proteins TUDOR domain
+short_name: Hva1_TUDOR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11160
+counters:
+  proteins: 5238
+  matches: 5242
+  proteomes: 4414
+  taxa: 7010
+  structures: 1
+  alphafold_models: 3515
+  domain_architectures: 48
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021331
+description: Family members include Cryptococcus neoformans HVA1 (hypervirulence-associated protein 1)
+  whose absence is associated with a hypervirulent phenotype in mice. Metabolomics analysis suggests that
+  when HVA1 is absent there is a block in the citric acid cycle, while structural analysis of the Hva1
+  protein suggests a potential interaction with NADPH. The structural architecture of Hva1 bears similarity
+  with Tudor domains [[cite:PUB00091033]].

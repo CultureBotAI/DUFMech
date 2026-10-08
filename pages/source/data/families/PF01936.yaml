@@ -1,0 +1,32 @@
+id: Pfam:PF01936
+pfam_id: PF01936
+name: NYN domain
+short_name: NYN
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01936
+counters:
+  proteins: 25419
+  matches: 25756
+  proteomes: 13584
+  taxa: 22386
+  structures: 3
+  alphafold_models: 16110
+  domain_architectures: 329
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021139
+description: These domains are found in the eukaryotic proteins typified by the Nedd4-binding protein
+  1 and the bacterial YacP-like proteins (Nedd4-BP1, YacP nucleases; NYN domains). The NYN domain shares
+  a common protein fold with two other previously characterized groups of nucleases, namely the PIN (PilT
+  N-terminal) and FLAP/5' --> 3' exonuclease superfamilies. These proteins share a common set of 4 acidic
+  conserved residues that are predicted to constitute their active site. Based on the conservation of
+  the acidic residues and structural elements Aravind and colleagues suggest that PIN and NYN domains
+  are likely to bind only a single metal ion, unlike the FLAP/5' --> 3' exonuclease superfamily, which
+  binds two metal ions. Based on conserved gene neighborhoods Aravind and colleagues infer that the bacterial
+  members are likely to be components of the processome/degradsome that process tRNAs or ribosomal RNAs.

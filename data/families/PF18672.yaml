@@ -1,0 +1,28 @@
+id: Pfam:PF18672
+pfam_id: PF18672
+name: N-terminal PilZ-like domain PilZN1
+short_name: PilZN1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18672
+counters:
+  proteins: 77
+  matches: 77
+  proteomes: 33
+  taxa: 60
+  structures: 1
+  alphafold_models: 49
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040638
+description: This domain is found in PilZ domain-containing proteins from Deltaproteobacteria, such as
+  swiss:Q748G9 from Geobacter sulfurreducens. This domain is located N-terminal to a canonical PilZ domain,
+  with a PilZ-related structure comprising the beta-barrel fold, lacking the C-terminal alpha-helix and
+  both c-d-GMP-binding motifs [[cite:PUB00098203]]. This domain also has a N-terminal loop that forms
+  a short alpha-helix (3 residues) [[cite:PUB00098203]].

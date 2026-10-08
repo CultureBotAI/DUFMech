@@ -1,0 +1,27 @@
+id: Pfam:PF09847
+pfam_id: PF09847
+name: Membrane protein of 12 TMs
+short_name: 12TM_1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09847
+counters:
+  proteins: 429
+  matches: 429
+  proteomes: 404
+  taxa: 835
+  structures: 0
+  alphafold_models: 313
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018646
+description: 'This family carries twelve transmembrane regions. It does not have any characteristic nucleotide-binding-domains
+  of the GxSGSGKST type. so it may not be an ATP-binding cassette transporter. However, it may well be
+  a transporter of some description. ABC transporters always have two nucleotide binding domains; this
+  has two unusual conserved sequence-motifs: ''KDhKxhhR'' and ''LxxLP''.'

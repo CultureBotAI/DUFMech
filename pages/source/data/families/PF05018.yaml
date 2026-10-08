@@ -1,0 +1,31 @@
+id: Pfam:PF05018
+pfam_id: PF05018
+name: CFA20 domain
+short_name: CFA20_dom
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05018
+counters:
+  proteins: 5992
+  matches: 6394
+  proteomes: 2195
+  taxa: 6576
+  structures: 28
+  alphafold_models: 4438
+  domain_architectures: 223
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007714
+description: This domain is characteristic of cilia- and flagella-associated protein 20 (CFA20). CFA20
+  is a cilium- and flagellum-specific protein that plays a role in axonemal structure organisation and
+  motility [[cite:PUB00072946],[cite:PUB00072975]]. In Chlamydomonas reinhardtii, it stabilises outer
+  doublet microtubules (DMTs) of the axoneme and may work as a scaffold for intratubular proteins, such
+  as tektin and PACRG, to produce the beak structures in DMT1 [[cite:PUB00072975],[cite:PUB00072976]].
+  Other proteins contain a domain with homology to CFA20. WDR90/POC16 contains such a domain in its N
+  terminus, followed by a large C-terminal domain with multiple WD40 repeats [[cite:PUB00072975]]. This
+  domain is also present in the N terminus of uncharacterised protein C3orf67.

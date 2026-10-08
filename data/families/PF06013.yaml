@@ -1,0 +1,27 @@
+id: Pfam:PF06013
+pfam_id: PF06013
+name: Proteins of 100 residues with WXG
+short_name: WXG100
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06013
+counters:
+  proteins: 15659
+  matches: 15663
+  proteomes: 4540
+  taxa: 5854
+  structures: 24
+  alphafold_models: 9559
+  domain_architectures: 57
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010310
+description: ESAT-6 is a small protein appears to be of fundamental importance in virulence and protective
+  immunity in Mycobacterium tuberculosis. Homologues have been detected in other Gram-positive bacterial
+  species. It may represent a novel secretion system potentially driven by the [pfam:PF01580] domains
+  in the YukA-like proteins [[cite:PUB00018371]].

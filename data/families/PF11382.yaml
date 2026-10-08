@@ -1,0 +1,30 @@
+id: Pfam:PF11382
+pfam_id: PF11382
+name: Copper transport outer membrane protein, MctB
+short_name: MctB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11382
+counters:
+  proteins: 2374
+  matches: 2398
+  proteomes: 2353
+  taxa: 3169
+  structures: 5
+  alphafold_models: 1543
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021522
+description: Outer membrane channel protein MctB in Mycobacterium tuberculosis is part of a Cu resistance
+  mechanism that ensures low intracellular Cu levels in the bacterium. Human resistance to bacteria, mediated
+  via IFN-gamma-mediated activation of macrophages, may involve the use of reactive Cu(1) in the presence
+  of hydrogen peroxide, since activated Cu is toxic to bacteria. IFN-gamma stimulates the trafficking
+  of the Cu transporter ATP7a to the vesicles that fuse with phagosome and these phagosomes are found
+  to have a high Cu content and an increased bactericidal activity against E.coli. Using MctB, Mycobacterium
+  tuberculosis may limit the amount of excess Cu within it whole in the host [[cite:PUB00075654]].

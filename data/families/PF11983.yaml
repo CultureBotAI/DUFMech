@@ -1,0 +1,28 @@
+id: Pfam:PF11983
+pfam_id: PF11983
+name: Cell division protein FtsA, C-terminal
+short_name: FtsA_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11983
+counters:
+  proteins: 347
+  matches: 347
+  proteomes: 344
+  taxa: 469
+  structures: 0
+  alphafold_models: 223
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021873
+description: This family is the C-terminal region of essential streptococcal FtsA proteins and their homologues.
+  It acts as an intra-molecular switch, triggered by ATP, to promote polymerisation of the whole protein
+  and to attach it to the membrane. FtsA is essential for the formation of the septum that divides fully-grown
+  cells into two daughter cells at cell-division. FtsA anchors the constricting FtsZ ring to the membrane
+  [[cite:PUB00078723]].

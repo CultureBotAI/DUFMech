@@ -1,0 +1,31 @@
+id: Pfam:PF06775
+pfam_id: PF06775
+name: Putative adipose-regulatory protein (Seipin)
+short_name: Seipin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06775
+counters:
+  proteins: 4646
+  matches: 4729
+  proteomes: 2764
+  taxa: 7460
+  structures: 4
+  alphafold_models: 3811
+  domain_architectures: 102
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009617
+description: Seipin is a protein of approximately 400 residues, in humans, which is the product of a gene
+  homologous to the murine guanine nucleotide-binding protein (G protein) gamma-3 linked gene. This gene
+  is implicated in the regulation of body fat distribution and insulin resistance and particularly in
+  the auto-immune disease Berardinelli-Seip congenital lipodystrophy type 2. Seipin has no similarity
+  with other known proteins or consensus motifs that might predict its function, but it is predicted to
+  contain two transmembrane domains at residues 28-49 and 237-258, in human, and a third transmembrane
+  domain might be present at residues 155-173. Seipin may also be implicated in Silver spastic paraplegia
+  syndrome and distal hereditary motor neuropathy type V [[cite:PUB00044745]].

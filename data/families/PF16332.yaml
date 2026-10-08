@@ -1,0 +1,30 @@
+id: Pfam:PF16332
+pfam_id: PF16332
+name: Dermatan-sulfate epimerase-like, N-terminal
+short_name: DSE-like_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16332
+counters:
+  proteins: 3098
+  matches: 3125
+  proteomes: 1686
+  taxa: 4044
+  structures: 14
+  alphafold_models: 2372
+  domain_architectures: 101
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032518
+description: This entry represents the N-terminal of dermatan-sulfate epimerase (DSE) from mammals, and
+  heparin-sulfate lyase (HepB) from bacteria [[cite:PUB00076523]]. DSE converts D-glucuronic acid to L-iduronic
+  acid (IdoUA) residues. It plays an important role in the biosynthesis of the glycosaminoglycan/mucopolysaccharide
+  dermatan sulfate [[cite:PUB00162452],[cite:PUB00109125]]. HepB cleaves both heparin and heparan sulfate
+  glycosaminoglycans through a beta-elimination mechanism. It cleaves heparin at alpha-D-GlcNp2S6S(1->4)
+  alpha-L-IdoAp2S and heparan sulfate at alpha-D-GlcNp2Ac(or 2S)6OH(1->4)beta-D-GlcAp [[cite:PUB00016410]].
+  This domain is composed of helical hairpins.

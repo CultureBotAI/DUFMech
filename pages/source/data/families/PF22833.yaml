@@ -1,0 +1,28 @@
+id: Pfam:PF22833
+pfam_id: PF22833
+name: C5orf34-like, second domain
+short_name: C5orf34_2nd
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22833
+counters:
+  proteins: 635
+  matches: 650
+  proteomes: 468
+  taxa: 1675
+  structures: 0
+  alphafold_models: 533
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR053899
+description: This entry represents a domain located C-terminal to [pfam:PF15025] in a family of eukaryotic
+  proteins, including the human uncharacterised protein C5orf34, which has been reported to be correlated
+  with an unfavourable prognosis of patients from a variety of human malignancies [[cite:PUB00154384]].
+  This domain is predicted to show an alpha-beta structure with high structural similarity to a polo box
+  [[cite:PUB00152793]].

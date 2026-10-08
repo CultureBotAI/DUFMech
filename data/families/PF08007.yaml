@@ -1,0 +1,28 @@
+id: Pfam:PF08007
+pfam_id: PF08007
+name: JmjC domain
+short_name: JmjC_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08007
+counters:
+  proteins: 10353
+  matches: 10424
+  proteomes: 7434
+  taxa: 13149
+  structures: 22
+  alphafold_models: 7020
+  domain_architectures: 139
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003347
+description: This entry includes proteins with a JmjC domain that belong to the cupin superfamily, including
+  Bifunctional lysine-specific demethylase and histidyl-hydroxylase NO66 [[cite:PUB00090402]], Ribosomal
+  oxygenase 1/2 [[cite:PUB00090403],[cite:PUB00090404]], and 50S ribosomal protein L16 3-hydroxylase from
+  Escherichia coli [[cite:PUB00090405],[cite:PUB00099121]]. Proteins are bifunctional, acting as histone
+  lysine demethylases and ribosomal histidine hydroxylases.

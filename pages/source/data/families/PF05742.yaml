@@ -1,0 +1,29 @@
+id: Pfam:PF05742
+pfam_id: PF05742
+name: Transport and Golgi organisation 2
+short_name: TANGO2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05742
+counters:
+  proteins: 10332
+  matches: 10698
+  proteomes: 8215
+  taxa: 15243
+  structures: 3
+  alphafold_models: 7660
+  domain_architectures: 86
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008551
+description: In eukaryotes this family is predicted to play a role in protein secretion and Golgi organisation
+  [[cite:PUB00075420]]. In plants this family includes [swissprot:A9X6Y0], which is involved in water
+  permeability in the cuticles of fruit [[cite:PUB00075421]]. [swissprot:P54797] has been found to be
+  expressed during early embryogenesis in mice [[cite:PUB00011316]]. This protein contains a conserved
+  NRDE motif. This gene has been characterised in Drosophila melanogaster and named as transport and Golgi
+  organisation 2, hence the name Tango2.

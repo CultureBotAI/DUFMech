@@ -1,0 +1,31 @@
+id: Pfam:PF08900
+pfam_id: PF08900
+name: Transcriptional regulator AcaB
+short_name: AcaB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08900
+counters:
+  proteins: 720
+  matches: 720
+  proteomes: 596
+  taxa: 1057
+  structures: 0
+  alphafold_models: 414
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014996
+description: This family of proteins is found in the IncC family of broad-host-range plasmids which enables
+  the spread of antibiotic resistance genes among human enteric pathogens. Recently, AcaB member has been
+  characterised as a transcriptional regulator that plays a crucial role in the regulation of IncC conjugation.
+  It is a DNA binding protein which binds upstream of the acaDB promoter to increase its transcription
+  and, in turn, acaDB activates the transcription of IncC conjugation genes. Structurally, AcaB consists
+  of two helical hairpins in tandem which assemble into an anti-parallel four-helix bundle to form a two-stranded
+  antiparallel beta-sheet positioned parallel to the helices. This is structurally similar to bacterial
+  transcription factors from the ribbon-helix-helix (RHH) superfamily [[cite:PUB00098625]].

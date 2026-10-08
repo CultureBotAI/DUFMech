@@ -1,0 +1,28 @@
+id: Pfam:PF01959
+pfam_id: PF01959
+name: 3-dehydroquinate synthase II N-terminal domain
+short_name: DHQS
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01959
+counters:
+  proteins: 1847
+  matches: 1855
+  proteomes: 1461
+  taxa: 2975
+  structures: 0
+  alphafold_models: 1397
+  domain_architectures: 24
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR030960
+description: This entry represents the N-terminal TIM barrel domain of 3-dehydroquinate synthase II. This
+  family includes members of 3-dehydroquinate synthase II ([ec:1.4.1.24]), encoded by aroB genes in M.
+  maripaludis which is widely distributed in methanogens. In M. jannaschii, proteins ADTH synthase (AroA)
+  and DHQ synthase II (AroB) are required to convert 6-deoxy-5-ketofructose-1-phosphate (DKFP) and aspartate
+  semialdehyde to 3-dehydroquinate (DHQ) in vitro [[cite:PUB00109170],[cite:PUB00060486]].

@@ -1,0 +1,33 @@
+id: Pfam:PF05093
+pfam_id: PF05093
+name: Cytokine-induced anti-apoptosis inhibitor 1, Fe-S biogenesis
+short_name: CIAPIN1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05093
+counters:
+  proteins: 4152
+  matches: 4936
+  proteomes: 3289
+  taxa: 8763
+  structures: 0
+  alphafold_models: 3590
+  domain_architectures: 90
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046408
+description: Anamorsin, subsequently named CIAPIN1 for cytokine-induced anti-apoptosis inhibitor 1, in
+  humans is the homologue of yeast Dre2, a conserved soluble eukaryotic Fe-S cluster protein, that functions
+  in cytosolic Fe-S protein biogenesis. It is found in both the cytoplasm and in the mitochondrial intermembrane
+  space (IMS) [[cite:PUB00055951]]. CIAPIN1 is found to be up-regulated in hepatocellular cancer, is considered
+  to be a downstream effector of the receptor tyrosine kinase-Ras signalling pathway, and is essential
+  in mouse definitive haematopoiesis [[cite:PUB00055952]]. Dre2 has been found to interact with the yeast
+  reductase Tah18, forming a tight cytosolic complex implicated in the response to high levels of oxidative
+  stress [[cite:PUB00109169]]. These proteins consist of two domains, the N-terminal well-folded one,
+  with a S-adenosylmethionine methyltransferase-like fold and the C-terminal more flexible domain, represented
+  in this entry, which contains two highly conserved cysteine rich motifs that bind Fe-S clusters [[cite:PUB00067100],[cite:PUB00056284]].

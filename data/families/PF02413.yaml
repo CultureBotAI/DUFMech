@@ -1,0 +1,32 @@
+id: Pfam:PF02413
+pfam_id: PF02413
+name: Caudovirales tail fibre assembly protein, lambda gpK
+short_name: Caudo_TAP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02413
+counters:
+  proteins: 2047
+  matches: 2050
+  proteomes: 872
+  taxa: 1595
+  structures: 1
+  alphafold_models: 1042
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003458
+description: This family contains bacterial and phage tail fibre assembly proteins [[cite:PUB00009480]].
+  E.coli contains several members of this family although the function of these proteins is uncertain.
+  Using the lambda phage members as examples, there are both gptfa and gpK tail proteins here [[cite:PUB00048232]].
+  GpK forms part of the TTC or tail-tip complex that is located at the distal end of the tail. TTCs form
+  the platform on which the tail-tube proteins self-assemble and are also the attachment point for fibres
+  or receptor-binding proteins that mediate phage-adsorption to the surface of the host cell. TTC assembly
+  starts with gpJ, which is also known as the central tail fibre and is involved in host-cell adsorption.
+  It is the C-terminus of gpJ that interacts with the lamB receptor on host cells. A number of intermediates
+  including gpK then interact with gpJ during tail morphogenesis [[cite:PUB00109155]].

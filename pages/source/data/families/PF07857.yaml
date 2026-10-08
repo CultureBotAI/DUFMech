@@ -1,0 +1,26 @@
+id: Pfam:PF07857
+pfam_id: PF07857
+name: Transmembrane family, TMEM144 of transporters
+short_name: TMEM144
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07857
+counters:
+  proteins: 2489
+  matches: 2757
+  proteomes: 1029
+  taxa: 3231
+  structures: 0
+  alphafold_models: 2208
+  domain_architectures: 70
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012435
+description: Members of this family fall in to the drug/metabolite transporter (dmt) superfamily. They
+  carry 10xTM domains arranged as 5+5. Although these two sets may originally have arisen by gene-duplication
+  the divergence now is such that the similarity between the two halves is no longer detectable by sequence.

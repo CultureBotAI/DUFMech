@@ -1,0 +1,28 @@
+id: Pfam:PF11331
+pfam_id: PF11331
+name: EDR4 zinc-ribbon domain
+short_name: Zn_ribbon_12
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11331
+counters:
+  proteins: 2560
+  matches: 2562
+  proteomes: 375
+  taxa: 1026
+  structures: 0
+  alphafold_models: 2050
+  domain_architectures: 34
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021480
+description: This zinc beta ribbon domain is found in Protein ENHANCED DISEASE RESISTANCE 4 (EDR4) and
+  related plant proteins. EDR4 mainly localizes to the plasma membrane and endosomal compartments. It
+  plays a negative role in resistance to powdery mildew and this requires salicylic acid signaling [[cite:PUB00090747]].
+  In Arabidopsis, EDR4 associates with CLATHRIN HEAVY CHAIN2 (CHC2) and modulates plant immunity by regulating
+  the relocation of EDR1 [[cite:PUB00090747]].

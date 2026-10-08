@@ -1,0 +1,28 @@
+id: Pfam:PF06762
+pfam_id: PF06762
+name: Lipase maturation factor transmembrane domain
+short_name: LMF1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06762
+counters:
+  proteins: 4751
+  matches: 4909
+  proteomes: 2921
+  taxa: 6050
+  structures: 0
+  alphafold_models: 3452
+  domain_architectures: 66
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR057434
+description: This entry represents a domain found in the transmembrane proteins lipase maturation factor,
+  LMF1 and LMF2. Lipoprotein lipase and hepatic lipase require LMF1 to fold into their active states [[cite:PUB00057509]].
+  It acts as a chaperone required for maturation and transport of active lipoprotein lipase (LPL), through
+  the secretory pathway [[cite:PUB00057511],[cite:PUB00098585]]. This domain is predicted as a transmembrane.
+  It contains two structural repeats each of which is similar to members of the DoxD-like superfamily.

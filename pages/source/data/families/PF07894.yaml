@@ -1,0 +1,35 @@
+id: Pfam:PF07894
+pfam_id: PF07894
+name: Scaffolding anchor of CK1 domain
+short_name: SACK1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07894
+counters:
+  proteins: 7127
+  matches: 7530
+  proteomes: 767
+  taxa: 2356
+  structures: 13
+  alphafold_models: 6117
+  domain_architectures: 43
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012461
+description: This entry represents the scaffolding anchor of CK1 domain (SACK1 domain) found in the FAM83
+  family, which includes FAM83A-H. This domain was formerly known as DUF1669 and it has been identified
+  as a CK1 binding domain, which allows the correct subcellular localisation of both FAM83 proteins and
+  the CK1 binding partners and their function [[cite:PUB00155374]]. These proteins are involved in diverse
+  biological processes, depending on their subcellular localisation and binding partners. FAM83A-H interact
+  with the alpha and alpha-like isoforms of CK1, while FAM83A, B, E, and H also interact with the delta
+  and epsilon isoforms of CK1. FAM83 members have function as intermediaries in EGFR/RAS signalling [[cite:PUB00084963]].
+  FAM83D has been reported to localise to the mitotic spindle and interact with the chromokinesin kinesin
+  family member 22 (KIF22, also called Kid) [[cite:PUB00124155]]. FAM83G, also known as PAWS1 interacts
+  with the transcription factor SMAD1 and promotes the transcription of non-canonical bone morphogenetic
+  protein (BMP) target genes [[cite:PUB00155375]]. FAM83H mutations have been associated with amelogenesis
+  imperfecta [[cite:PUB00092186]].

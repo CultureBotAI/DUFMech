@@ -1,0 +1,27 @@
+id: Pfam:PF19810
+pfam_id: PF19810
+name: HFX_2341-like, N-terminal
+short_name: HFX_2341_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19810
+counters:
+  proteins: 687
+  matches: 697
+  proteomes: 395
+  taxa: 718
+  structures: 0
+  alphafold_models: 644
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046260
+description: This domain is found at the N-terminal of HFX_2341 from Haloferax mediterranei and similar
+  archaeal proteins. HFX_2341 is a global regulator involved in cas gene regulation. This domain contains
+  a conserved sequence motif HxxPxxG and a conserved asparagine residue. It is often found associated
+  with [pfam:PF22665].

@@ -1,0 +1,25 @@
+id: Pfam:PF09879
+pfam_id: PF09879
+name: EhaF-like
+short_name: EhaF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09879
+counters:
+  proteins: 89
+  matches: 89
+  proteomes: 87
+  taxa: 157
+  structures: 0
+  alphafold_models: 77
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011313
+description: This entry represents a group of archaeal small membrane proteins that are predicted to be
+  the EhaF transmembrane subunits of multi-subunit membrane-bound [NiFe]-hydrogenase Eha complexes.

@@ -1,0 +1,28 @@
+id: Pfam:PF20131
+pfam_id: PF20131
+name: ABC-three component (ABC-3C) system Middle Component 3
+short_name: MC3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20131
+counters:
+  proteins: 673
+  matches: 673
+  proteomes: 650
+  taxa: 1443
+  structures: 7
+  alphafold_models: 386
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045390
+description: Middle Components (MCs) of the ABC-3C biological conflict systems occupy the central position
+  between the catalytic effector and ABC ATPases of the systems. MCs are defined by distinctive patterns
+  of conserved charged residues. As some MCs are HTH domains, they are predicted to function akin to kleisins
+  as DNA-binding partners for the ABC ATPases, assisting in recognition and responding to invasive elements
+  such as DNA viruses [[cite:PUB00101219]].

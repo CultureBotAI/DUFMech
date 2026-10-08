@@ -1,0 +1,27 @@
+id: Pfam:PF12031
+pfam_id: PF12031
+name: SWI/SNF-like complex subunit BAF250/Osa
+short_name: BAF250_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12031
+counters:
+  proteins: 4970
+  matches: 5040
+  proteomes: 1548
+  taxa: 4911
+  structures: 6
+  alphafold_models: 629
+  domain_architectures: 26
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR033388
+description: This entry represents the mammalian BAF250a/b and its homologue osa from fruit flies [[cite:PUB00071661]].
+  They are part of the SWI/SNF-like ATP-dependent chromatin remodelling complex that regulates gene expression
+  through regulating nucleosome remodelling. In humans there are two BAF250 isoforms, BAF250a/ARID1a and
+  BAF250b/ARID1b. BAF250a/b may be E3 ubiquitin ligases that target histone H2B [[cite:PUB00071658]].

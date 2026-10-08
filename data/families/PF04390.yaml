@@ -1,0 +1,29 @@
+id: Pfam:PF04390
+pfam_id: PF04390
+name: Lipopolysaccharide-assembly
+short_name: LptE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04390
+counters:
+  proteins: 8831
+  matches: 8831
+  proteomes: 8765
+  taxa: 12339
+  structures: 39
+  alphafold_models: 5850
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007485
+description: LptE (formerly known as RplB) is involved in lipopolysaccharide-assembly on the outer membrane
+  of Gram-negative organisms. The lipopolysaccharide component of the outer bacterial membrane is transported
+  from its source of origin to the outer membrane by a set of proteins constituting a transport machinery
+  that is made up of LptA, LptB, LptC, LptD, LptE. LptD appears to be anchored in the outer membrane,
+  and LptE forms a complex with it. This part of the machinery complex is involved in the assembly of
+  lipopolysaccharide in the outer leaflet of the outer membrane [[cite:PUB00053165]].

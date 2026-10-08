@@ -1,0 +1,32 @@
+id: Pfam:PF26607
+pfam_id: PF26607
+name: PLL-like beta propeller
+short_name: Beta-prop_PLL
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF26607
+counters:
+  proteins: 3295
+  matches: 3660
+  proteomes: 1819
+  taxa: 3095
+  structures: 31
+  alphafold_models: 1884
+  domain_architectures: 208
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR058502
+description: This domain, previously known as DUF8189, is found in the L-fucose-binding lectins PHL and
+  PLLs(1-5) from various Photorhabdus species and their homologues. This domain forms a seven-bladed beta-propeller
+  [[cite:PUB00100843],[cite:PUB00109482],[cite:PUB00161611]]. Each blade makes a W-motif composed of four
+  antiparallel beta-strands (beta1-beta4) connected by beta-turns and loops. The C and N terminus are
+  located on the same side of the torus and create a cap of the inner cavity of the torus. With exception
+  of PLL3, which is a monomer, all other domains assemble into oligomeric structures, either homo-dimeric
+  or homo-tetrameric, connected with an inter-subunit disulfide bridge [[cite:PUB00100843],[cite:PUB00109482],[cite:PUB00161611]].
+  Besides L-fucose or fucosylated saccharides, some of these domains bind to unusual O-methylated disaccharide
+  3,6-O-Me2-d-Glc-beta1-4(2,3-O-Me2)-l-Rha-alpha (MGMR) [[cite:PUB00161611]].

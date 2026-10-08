@@ -1,0 +1,28 @@
+id: Pfam:PF02675
+pfam_id: PF02675
+name: S-adenosylmethionine decarboxylase
+short_name: AdoMet_dc
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02675
+counters:
+  proteins: 7560
+  matches: 7574
+  proteomes: 6298
+  taxa: 10257
+  structures: 7
+  alphafold_models: 5065
+  domain_architectures: 27
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003826
+description: This family contains several S-adenosylmethionine decarboxylase proteins from bacterial and
+  archaebacterial species. S-adenosylmethionine decarboxylase (AdoMetDC), a key enzyme in the biosynthesis
+  of spermidine and spermine, is first synthesised as a proenzyme, which is cleaved post translationally
+  to form alpha and beta subunits. The alpha subunit contains a covalently bound pyruvoyl group derived
+  from serine that is essential for activity [[cite:PUB00019108],[cite:PUB00019109]].

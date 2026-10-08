@@ -1,0 +1,28 @@
+id: Pfam:PF10164
+pfam_id: PF10164
+name: Brain protein I3
+short_name: BRI3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10164
+counters:
+  proteins: 1725
+  matches: 1731
+  proteomes: 1240
+  taxa: 4040
+  structures: 0
+  alphafold_models: 1526
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019317
+description: This is a highly conserved family of proteins which contains three pairs of cysteine residues
+  within a length of 42 amino acids and is rich in proline residues towards the N-terminus. It includes
+  a membrane protein that has been found to be highly expressed in the mouse brain and consequently, several
+  members have been assigned as brain protein I3 (Bri3) [[cite:PUB00083183]]. Their function is unknown
+  but they appear to play a role in TNF-induced cell death [[cite:PUB00095376]].

@@ -1,0 +1,31 @@
+id: Pfam:PF10157
+pfam_id: PF10157
+name: BLOC-1-related complex sub-unit 6 C-terminal helix
+short_name: BORCS6
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10157
+counters:
+  proteins: 1983
+  matches: 1984
+  proteomes: 1541
+  taxa: 4966
+  structures: 1
+  alphafold_models: 1674
+  domain_architectures: 36
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046465
+description: This is a family of conserved proteins found from nematodes to humans. Family members include
+  BORCS6 (BLOC-1-related complex sub-unit 6) also known as Lyspersin (lysosome-dispersing protein) or
+  C17orf59. It constitutes sub-unit 6 of the BORC complex (BLOC-one-related complex). BORC is a multisubunit
+  complex that regulates the positioning of lysosomes at the cell periphery, and consequently affects
+  cell migration. BORC associates with the lysosomal membrane, where it functions to recruit the small
+  GTPase Arl8. This initiates a series of interactions that promote the microtubule-guided transport of
+  lysosomes toward the cell periphery [[cite:PUB00082308],[cite:PUB00074975]]. this entry represents a
+  C-terminal alpha helix according to structure predictions.

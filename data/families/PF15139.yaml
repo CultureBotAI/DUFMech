@@ -1,0 +1,25 @@
+id: Pfam:PF15139
+pfam_id: PF15139
+name: Protein CFAP95
+short_name: CFAP95
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15139
+counters:
+  proteins: 633
+  matches: 649
+  proteomes: 422
+  taxa: 1608
+  structures: 12
+  alphafold_models: 521
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027905
+description: This family includes Protein CFAP95, whose function is unknown, found in eukaryotes. Proteins
+  in this family are typically between 160 and 220 amino acids in length.

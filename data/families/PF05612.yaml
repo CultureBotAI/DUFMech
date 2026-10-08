@@ -1,0 +1,25 @@
+id: Pfam:PF05612
+pfam_id: PF05612
+name: Leg1
+short_name: Leg1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05612
+counters:
+  proteins: 1001
+  matches: 1062
+  proteomes: 730
+  taxa: 2260
+  structures: 3
+  alphafold_models: 893
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008499
+description: Protein liver-enriched gene 1 (Leg1) has been suggested to function as a novel secreted regulator
+  for the liver development [[cite:PUB00074295]].

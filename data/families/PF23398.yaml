@@ -1,0 +1,28 @@
+id: Pfam:PF23398
+pfam_id: PF23398
+name: FAZ1, conserved domain
+short_name: FAZ1_cons
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23398
+counters:
+  proteins: 569
+  matches: 1449
+  proteomes: 30
+  taxa: 73
+  structures: 0
+  alphafold_models: 347
+  domain_architectures: 70
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056614
+description: This entry represents a conserved repeated domain found twice in FAZ1 from Trypanosoma brucei
+  and similar sequences from trypanosomatids [[cite:PUB00155625]]. This domain is found near the central
+  region and at the very C-terminal of FAZ1. At least 50% of the T. cruzi genome is repetitive sequence,
+  consisting mostly of large gene families of surface proteins, retrotransposons, and subtelomeric repeats
+  [[cite:PUB00155626]].

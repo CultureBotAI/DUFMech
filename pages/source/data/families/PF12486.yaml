@@ -1,0 +1,29 @@
+id: Pfam:PF12486
+pfam_id: PF12486
+name: Type VI secretion system, EvfB, or VasL
+short_name: VasL
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12486
+counters:
+  proteins: 524
+  matches: 524
+  proteomes: 403
+  taxa: 613
+  structures: 0
+  alphafold_models: 274
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021069
+description: EvfB or VasL is a domain found on many Gram-negative proteins with an ImpA_N domain at the
+  N-terminus. These proteins are expressed from the pathogenicity locus that forms the bacterial type
+  VI secretion system. The exact function of VasL is not known. One E.coli member is annotated as being
+  EvfB, though the E.coli equivalent of ImpA would be expected to be EvfG. It is possible that in many
+  bacteria what is a single protein in one species, eg E.coli, is a fusion of two genes in others, which
+  would explain an ImpA at the N-terminus and a VasL at the C-terminus.

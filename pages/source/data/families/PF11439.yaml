@@ -1,0 +1,34 @@
+id: Pfam:PF11439
+pfam_id: PF11439
+name: Type III secretion system filament chaperone CesA
+short_name: T3SchapCesA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11439
+counters:
+  proteins: 8
+  matches: 8
+  proteomes: 5
+  taxa: 24
+  structures: 3
+  alphafold_models: 6
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021545
+description: This family represents a chaperone protein for the type III secretion system - TTSS - translocon
+  protein EspA, to prevent the latter's self-polymerisation. The TTSS is a highly specialised bacterial
+  protein secretory pathway, similar in many ways to the flagellar system, that is essential for the pathogenesis
+  of many Gram-negative bacteria. The twenty or so proteins making up the TTSS apparatus, referred to
+  as the needle complex, allow the injection of virulence proteins (known as effectors) directly into
+  the cytoplasm of the eukaryotic host cells they infect; however, the injection process itself is mediated
+  by a subset of extracellular proteins that are secreted by the needle complex to the bacterial surface
+  and assembled into the type III translocon - EspA. EspB and EspD. EspA polymerises into an extracellular
+  filament, and, as with other fibrous proteins, is apt to undergo massive polymerisation when overexpressed.
+  CesA is the secretion chaperone protein that binds to EspA. CesA is dimeric and helical, and it traps
+  EspA in a monomeric state and inhibits its polymerisation.

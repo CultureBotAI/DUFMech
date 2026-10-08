@@ -1,0 +1,38 @@
+id: Pfam:PF03937
+pfam_id: PF03937
+name: Flavinator of succinate dehydrogenase
+short_name: Sdh5
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03937
+counters:
+  proteins: 10651
+  matches: 10656
+  proteomes: 9808
+  taxa: 17438
+  structures: 9
+  alphafold_models: 7861
+  domain_architectures: 66
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005631
+description: This family includes the highly conserved mitochondrial and bacterial proteins Sdh5/SDHAF2/SdhE.
+  Both yeast and human Sdh5/SDHAF2 interact with the catalytic subunit of the succinate dehydrogenase
+  (SDH) complex, a component of both the electron transport chain and the tricarboxylic acid cycle. Sdh5
+  is required for SDH-dependent respiration and for Sdh1 flavination (incorporation of the flavin adenine
+  dinucleotide cofactor). Mutational inactivation of Sdh5 confers tumor susceptibility in humans [[cite:PUB00066692]].
+  Bacterial homologues of Sdh5, termed SdhE, are functionally conserved being required for the flavinylation
+  of SdhA and succinate dehydrogenase activity. Like Sdh5, SdhE interacts with SdhA. Furthermore, SdhE
+  was characterised as a FAD co-factor chaperone that directly binds FAD to facilitate the flavinylation
+  of SdhA. Phylogenetic analysis demonstrates that SdhE/Sdh5 proteins evolved only once in an ancestral
+  alpha-proteobacteria prior to the evolution of the mitochondria and now remain in subsequent descendants
+  including eukaryotic mitochondria and the alpha, beta and gamma proteobacteria [[cite:PUB00066693]].
+  This family was previously annotated in Pfam as being a divergent TPR repeat but structural evidence
+  has indicated this is not true. The E. coli protein, YgfY also acts as the antitoxin to the membrane-bound
+  toxin family Cpta, [pfam:PF13166], whose E. coli member YgfX, expressed from the same operon as YgfY
+  [[cite:PUB00075551]].

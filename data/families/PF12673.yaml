@@ -1,0 +1,26 @@
+id: Pfam:PF12673
+pfam_id: PF12673
+name: SipL, SPOCS domain
+short_name: SipL
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12673
+counters:
+  proteins: 1154
+  matches: 2472
+  proteomes: 757
+  taxa: 1335
+  structures: 0
+  alphafold_models: 782
+  domain_architectures: 27
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024300
+description: This is the SPOCS domain found in three copies in SipL from C. difficile, N-terminal to the
+  LysM domain ([pfam:PF01476]) [[cite:PUB00101296]]. SipL (for SpoIVA-interacting protein) is involved
+  in coat localization, and, together with SpoIVA, is a critical spore morphogenetic protein [[cite:PUB00101297]].

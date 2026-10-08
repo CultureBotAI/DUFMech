@@ -1,0 +1,27 @@
+id: Pfam:PF08550
+pfam_id: PF08550
+name: Nitrogen regulatory protein areA, GATA-like domain
+short_name: GATA_AreA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08550
+counters:
+  proteins: 5330
+  matches: 5331
+  proteomes: 1559
+  taxa: 3362
+  structures: 0
+  alphafold_models: 4349
+  domain_architectures: 81
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013860
+description: This entry represents fungal proteins containing GATA domains, including nitrogen regulatory
+  protein areA, a transcription activator that binds the consensus DNA element 5'-CGATAG-3' and mediates
+  nitrogen metabolite repression [[cite:PUB00089490]]. This entry also contains the Negative regulator
+  of RAS-cAMP pathway MKS1 from yeast that is thought to be a negative regulator of RAS-cAMP pathway.

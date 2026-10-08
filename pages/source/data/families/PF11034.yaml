@@ -1,0 +1,24 @@
+id: Pfam:PF11034
+pfam_id: PF11034
+name: Glucose-repressible protein Grg1
+short_name: Grg1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11034
+counters:
+  proteins: 1225
+  matches: 1251
+  proteomes: 718
+  taxa: 1444
+  structures: 0
+  alphafold_models: 1044
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR020100
+description: This fungal protein increases during glucose deprivation. Its function is unknown [[cite:PUB00052491]].

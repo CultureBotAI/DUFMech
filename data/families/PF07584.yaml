@@ -1,0 +1,29 @@
+id: Pfam:PF07584
+pfam_id: PF07584
+name: Aerotolerance regulator N-terminal
+short_name: BatA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07584
+counters:
+  proteins: 10073
+  matches: 10073
+  proteomes: 6574
+  taxa: 9479
+  structures: 0
+  alphafold_models: 6810
+  domain_architectures: 64
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024163
+description: These proteins share a highly-conserved sequence at their N-terminus. They include several
+  proteins from Rhodopirellula baltica and also several from proteobacteria. The proteins are produced
+  by the Batl operon which appears to be important in pathogenicity and aerotolerance. This family is
+  the conserved N-terminus, but the full length proteins carry multiple membrane-spanning domains [[cite:PUB00055562]].
+  BatA ensures bacterial survival in the early stages of the infection process, when the infected sites
+  are aerobic, and is produced under conditions of oxidative stress [[cite:PUB00055563]].

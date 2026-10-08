@@ -1,0 +1,28 @@
+id: Pfam:PF07856
+pfam_id: PF07856
+name: Mediator of CRAC channel activity
+short_name: Orai-1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07856
+counters:
+  proteins: 3588
+  matches: 3642
+  proteomes: 1398
+  taxa: 4474
+  structures: 8
+  alphafold_models: 3178
+  domain_architectures: 49
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012446
+description: ORAI-1 is a protein homologue of Drosophila Orai and human Orai1, Orai2 and Orai3. ORAI-1
+  GFP reporters are co- expressed with STIM-1 (ER CA(2+) sensors) in the gonad and intestine. The protein
+  has four predicted transmembrane domains with a highly conserved region between TM2 ad TM3. This conserved
+  domain is thought to function in channel regulation. ORAI1- related proteins are required for the production
+  of the calcium channel, CRAC, along with STIM1-related proteins [[cite:PUB00055566]].

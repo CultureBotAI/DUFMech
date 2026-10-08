@@ -1,0 +1,28 @@
+id: Pfam:PF04174
+pfam_id: PF04174
+name: A circularly permuted ATPgrasp
+short_name: CP_ATPgrasp_1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04174
+counters:
+  proteins: 411
+  matches: 412
+  proteomes: 325
+  taxa: 554
+  structures: 0
+  alphafold_models: 306
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007302
+description: An ATP-grasp family that is present both as catalytically active and inactive versions. Contextual
+  analysis suggests that it functions in a distinct peptide synthesis/modification system that additionally
+  contains a transglutaminase, an NTN-hydrolase, the Alpha-E domain, and a transglutaminase fused N-terminal
+  to a circularly permuted COOH-NH2 ligase. The inactive forms are often fused N-terminal to the Alpha-E
+  domain [[cite:PUB00057486]].

@@ -1,0 +1,27 @@
+id: Pfam:PF15041
+pfam_id: PF15041
+name: Tektin bundle interacting protein 1
+short_name: TKTI1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15041
+counters:
+  proteins: 257
+  matches: 277
+  proteomes: 198
+  taxa: 684
+  structures: 8
+  alphafold_models: 217
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR029203
+description: This family includes Tektin bundle interacting protein 1 (TKTI1) which has been recently
+  characterised as a microtubule inner protein (MIP) part of the dynein-decorated doublet microtubules
+  (DMTs) in cilia axoneme, which is required for motile cilia beating. It is located at the center of
+  the tektin bundle where may function to recruit tektins or stabilize the bundle [[cite:PUB00100771]].

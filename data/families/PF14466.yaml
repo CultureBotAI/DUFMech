@@ -1,0 +1,30 @@
+id: Pfam:PF14466
+pfam_id: PF14466
+name: PLAT/LH2 and C2-like Ca2+-binding lipoprotein
+short_name: PLCC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14466
+counters:
+  proteins: 58
+  matches: 58
+  proteomes: 52
+  taxa: 112
+  structures: 2
+  alphafold_models: 39
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025219
+description: A small family of bacterial proteins, found in several Bacteroides species. Structure determination
+  (NMR and Xray) shows an immunoglobulin beta-barrel fold. Multiple homologues have been found in human
+  gut metagenomics data sets. Structural experimentation shows it to share features with two well-established
+  protein architectures in the SCOP database, ie, C2 (calcium/lipid-binding domain) of [pfam:PF00168]
+  and PLAT/LH2 (lipase/lipooxigenase domain) of [pfam:PF01477]. The C2 and PLAT/LH2 domains bind Ca2+
+  in their functions of targeting proteins to cell-membranes; this domain is also shown to bind Ca2+ as
+  well as to be a novel fold [[cite:PUB00075637]].

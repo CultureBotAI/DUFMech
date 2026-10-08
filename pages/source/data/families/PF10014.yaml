@@ -1,0 +1,25 @@
+id: Pfam:PF10014
+pfam_id: PF10014
+name: 2OG-Fe dioxygenase
+short_name: 2OG-Fe_Oxy_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10014
+counters:
+  proteins: 2843
+  matches: 2844
+  proteomes: 2537
+  taxa: 3954
+  structures: 11
+  alphafold_models: 1707
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018724
+description: This family contains 2-oxoglutarate (2OG) and Fe-dependent dioxygenases. It includes L-isoleucine
+  dioxygenase (IDO) [[cite:PUB00066716],[cite:PUB00109260]].

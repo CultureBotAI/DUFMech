@@ -1,0 +1,27 @@
+id: Pfam:PF06840
+pfam_id: PF06840
+name: Programmed cell death protein 10, C-terminal
+short_name: PDC10_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06840
+counters:
+  proteins: 1839
+  matches: 1841
+  proteomes: 1219
+  taxa: 4069
+  structures: 10
+  alphafold_models: 1642
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: Programmed cell death 10 protein (PDCD10/CCM3) is part of the CCM complex and is required
+  for neuronal migration [[cite:PUB00076417]]. Outside of this complex, it is crucial in vascularization
+  and in angiogenesis as it functions in vessel permeability and stability [[cite:PUB00096889]]. PDCD10/CCM3
+  contains an N-terminal dimerisation domain and a C-terminal focal adhesion targeting-homology (FAT-H)
+  domain (represented in this entry) [[cite:PUB00076418]].

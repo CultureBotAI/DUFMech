@@ -1,0 +1,27 @@
+id: Pfam:PF17721
+pfam_id: PF17721
+name: POU domain class 2-associating factor 2
+short_name: POU2AF2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17721
+counters:
+  proteins: 608
+  matches: 616
+  proteomes: 446
+  taxa: 1498
+  structures: 0
+  alphafold_models: 520
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR037655
+description: POU domain class 2-associating factor 2 (also known as Protein OCA-T1) is a transcriptional
+  coactivator that specifically associates with POU2F3 [[cite:PUB00101325]], forming a complex that drives
+  the development of tuft cells, a rare chemosensory cells that coordinate immune and neural functions
+  within mucosal epithelial tissues [[cite:PUB00101325]].

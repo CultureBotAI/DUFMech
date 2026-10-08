@@ -1,0 +1,26 @@
+id: Pfam:PF08928
+pfam_id: PF08928
+name: PoNe immunity protein (PoNi), N-terminal
+short_name: PoNi_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08928
+counters:
+  proteins: 415
+  matches: 415
+  proteomes: 292
+  taxa: 621
+  structures: 0
+  alphafold_models: 230
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015024
+description: This entry represents the N-terminal domain of the PoNe immunity proteins (PoNi) which antagonise
+  the DNAse toxin PoNe (Polymorphic Nuclease effector) [[cite:PUB00099821]]. PoNi proteins may directly
+  interact with PoNe.

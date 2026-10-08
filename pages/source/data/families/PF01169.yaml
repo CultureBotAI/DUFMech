@@ -1,0 +1,30 @@
+id: Pfam:PF01169
+pfam_id: PF01169
+name: Divalent cation/proton antiporter GDT1
+short_name: GDT1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01169
+counters:
+  proteins: 13378
+  matches: 25173
+  proteomes: 9440
+  taxa: 17433
+  structures: 0
+  alphafold_models: 9762
+  domain_architectures: 121
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR001727
+description: This entry, previously known as UPF0016, represents the budding yeast Divalent cation/proton
+  antiporter GDT1 and its homologue, the human TMEM165 that are functionally related and form a new group
+  of Golgi-localised cation/Ca(2+) exchangers. Budding yeast GDT1 is a Golgi-localised calcium transporter
+  required for stress-induced calcium signalling and protein glycosylation [[cite:PUB00079030]]. TMEM165,
+  also a Golgi protein, transports Ca2+ and Mn2+, which are both required for proper protein glycosylation
+  in cells [[cite:PUB00079031],[cite:PUB00152812]]. Most members of the family contain two copies of a
+  region that contains an EXGD motif. Each of these regions contains three predicted transmembrane regions.

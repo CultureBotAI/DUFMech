@@ -1,0 +1,25 @@
+id: Pfam:PF15029
+pfam_id: PF15029
+name: Transmembrane protein 174
+short_name: TMEM174
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15029
+counters:
+  proteins: 679
+  matches: 681
+  proteomes: 636
+  taxa: 1944
+  structures: 0
+  alphafold_models: 629
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027835
+description: This family of proteins is found in chordates and includes the human integral membrane protein
+  TMEM174 protein.

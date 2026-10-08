@@ -1,0 +1,31 @@
+id: Pfam:PF09415
+pfam_id: PF09415
+name: CENP-S associating Centromere protein X
+short_name: CENP-X
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09415
+counters:
+  proteins: 2465
+  matches: 2529
+  proteomes: 2090
+  taxa: 5655
+  structures: 24
+  alphafold_models: 2089
+  domain_architectures: 30
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018552
+description: The centromere, essential for faithful chromosome segregation during mitosis, has a network
+  of constitutive centromere-associated (CCAN) proteins associating with it during mitosis. So far in
+  vertebrates at least 15 centromere proteins have been identified, which are divided into several subclasses
+  based on functional and biochemical analyses. These provide a platform for the formation of a functional
+  kinetochore during mitosis. CENP-S is one that does not associate with the CENP-H-containing complex
+  but rather interacts with CENP-X to form a stable assembly of outer kinetochore proteins that functions
+  downstream of other components of the CCAN. This complex may directly allow efficient and stable formation
+  of the outer kinetochore on the CCAN platform.

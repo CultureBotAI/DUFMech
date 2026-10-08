@@ -1,0 +1,25 @@
+id: Pfam:PF08849
+pfam_id: PF08849
+name: BrxA
+short_name: BrxA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08849
+counters:
+  proteins: 1107
+  matches: 1108
+  proteomes: 1039
+  taxa: 2298
+  structures: 2
+  alphafold_models: 755
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014948
+description: BrxA is part of the phage resistance system BREX (Bacteriophage Exclusion). It shares structural
+  homology with the RNA-binding antitermination protein NusB [[cite:PUB00093365]].

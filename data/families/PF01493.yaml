@@ -1,0 +1,26 @@
+id: Pfam:PF01493
+pfam_id: PF01493
+name: GXGXG motif
+short_name: GXGXG
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01493
+counters:
+  proteins: 21023
+  matches: 21244
+  proteomes: 17485
+  taxa: 27304
+  structures: 13
+  alphafold_models: 1560
+  domain_architectures: 158
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002489
+description: This domain is found in glutamate synthase, tungsten formylmethanofuran dehydrogenase subunit
+  c (FwdC) and molybdenum formylmethanofuran dehydrogenase subunit c (FmdC). A repeated G-XX-G-XXX-G motif
+  is seen in the alignment.

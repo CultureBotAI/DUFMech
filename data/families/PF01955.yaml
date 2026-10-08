@@ -1,0 +1,25 @@
+id: Pfam:PF01955
+pfam_id: PF01955
+name: Adenosylcobinamide amidohydrolase
+short_name: CbiZ
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01955
+counters:
+  proteins: 2665
+  matches: 2701
+  proteomes: 2525
+  taxa: 3886
+  structures: 0
+  alphafold_models: 1772
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002808
+description: This prokaryotic protein family includes CbiZ which converts adenosylcobinamide (AdoCbi)
+  to adenosylcobyric acid (AdoCby), an intermediate of the de novo coenzyme B12 biosynthetic route [[cite:PUB00019258]].

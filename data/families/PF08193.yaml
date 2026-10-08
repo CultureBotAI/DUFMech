@@ -1,0 +1,26 @@
+id: Pfam:PF08193
+pfam_id: PF08193
+name: INO80 complex subunit Ies4
+short_name: INO80_Ies4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08193
+counters:
+  proteins: 979
+  matches: 985
+  proteomes: 951
+  taxa: 1942
+  structures: 3
+  alphafold_models: 816
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013175
+description: The INO80 ATPase is a member of the SNF2 family of ATPases and functions as an integral component
+  of a multisubunit ATP-dependent chromatin remodelling complex. This family of proteins corresponds to
+  the fungal Ies4 subunit of INO80.

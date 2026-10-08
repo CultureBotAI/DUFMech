@@ -1,0 +1,24 @@
+id: Pfam:PF10863
+pfam_id: PF10863
+name: Nucleolar protein 19
+short_name: NOP19
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10863
+counters:
+  proteins: 129
+  matches: 129
+  proteomes: 123
+  taxa: 256
+  structures: 0
+  alphafold_models: 110
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022592
+description: Nucleolar protein 19 plays an essential role in 40S ribosomal subunit biogenesis [[cite:PUB00074620]].

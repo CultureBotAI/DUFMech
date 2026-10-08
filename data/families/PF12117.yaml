@@ -1,0 +1,33 @@
+id: Pfam:PF12117
+pfam_id: PF12117
+name: Parvovirus non-structural protein 1, C-terminal
+short_name: NS1_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12117
+counters:
+  proteins: 186
+  matches: 186
+  proteomes: 3
+  taxa: 49
+  structures: 0
+  alphafold_models: 5
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021972
+description: 'This domain is the transactivation domain of the Parvovirus NS1 protein, located immediately
+  C-terminal to the helicase [[cite:PUB00096849],[cite:PUB00083690]]. Parvovirus are some of the smallest
+  viruses containing linear, non-segmented single-stranded DNA genomes, with an average genome size of
+  5000 nucleotides. They infect a wide range of invertebrates and vertebrates and are well known for causing
+  enteric disease in mammals. Genomes contain two large ORFs: NS1 and VP1; other ORFs are found in some
+  sub-types and different gene products can arise from splice variants and the use of different start
+  codons [[cite:PUB00054921]]. NS1 protein is essential for viral life cycle stages, including DNA replication,
+  trans-regulation of the two viral promoters and modulation of heterologous promoters. It exhibits DNA
+  binding, endonuclease and helicase activities and is the major contributor to the toxic effect on host
+  cells [[cite:PUB00096898]].'

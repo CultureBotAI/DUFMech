@@ -1,0 +1,26 @@
+id: Pfam:PF01914
+pfam_id: PF01914
+name: MarC family integral membrane protein
+short_name: MarC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01914
+counters:
+  proteins: 15684
+  matches: 15727
+  proteomes: 10592
+  taxa: 14991
+  structures: 0
+  alphafold_models: 10306
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002771
+description: Integral membrane protein family that includes the protein MarC. MarC was thought to be a
+  multiple antibiotic resistance protein. Nevertheless, a study has shown that MarC is not involved in
+  multiple antibiotic resistance [[cite:PUB00077123]]. The function of this family is unclear.

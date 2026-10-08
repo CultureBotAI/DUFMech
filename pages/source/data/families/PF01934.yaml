@@ -1,0 +1,34 @@
+id: Pfam:PF01934
+pfam_id: PF01934
+name: Ribonuclease HepT-like
+short_name: HepT-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01934
+counters:
+  proteins: 7949
+  matches: 7950
+  proteomes: 4926
+  taxa: 8359
+  structures: 11
+  alphafold_models: 5432
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008201
+description: This family includes the toxic component HepT of a type II toxin-antitoxin (TA) system, which
+  has RNase activity. These proteins contain a HEPN (higher eukaryotes and prokaryotes nucleotide-binding)
+  domain and are neutralised through tri-AMPylation by the cognate antitoxin MntA, containing a MNT (minimal
+  nucleotidyltransferase) domain [[cite:PUB00097221],[cite:PUB00097219],[cite:PUB00097220]]. HepT-MnA
+  form an heterooctamer (at a 2:6 ratio), a rare organisation for this kind of TA systems. HepT dimerises
+  and enables the formation of a deep cleft at the HEPN-domain interface, containing the RX4-6H motif
+  (where X is any amino acid and the residue immediately after the conserved R is typically a polar amino
+  acid) as the active site that functions as an RNA-cleaving RNase. This type II TA system regulates cell
+  motility and confers plasmid stability [[cite:PUB00097219]]. Due to the prevalence of these HEPN/MNT
+  modules in bacteria and archaea, it has been suggested that these TA systems may also play a role in
+  the environmental adaptation to extreme habitats [[cite:PUB00097220]].

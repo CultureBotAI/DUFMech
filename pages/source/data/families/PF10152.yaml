@@ -1,0 +1,25 @@
+id: Pfam:PF10152
+pfam_id: PF10152
+name: Subunit CCDC53 of WASH complex
+short_name: CCDC53
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10152
+counters:
+  proteins: 2418
+  matches: 3597
+  proteomes: 1403
+  taxa: 4578
+  structures: 0
+  alphafold_models: 1926
+  domain_architectures: 155
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019309
+description: CCDC53 is a component of the WASH complex, which plays a key role in the fission of tubules
+  that serve as transport intermediates during endosome sorting [[cite:PUB00054152]].

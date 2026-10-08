@@ -1,0 +1,26 @@
+id: Pfam:PF07855
+pfam_id: PF07855
+name: Autophagy-related protein 101
+short_name: ATG101
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07855
+counters:
+  proteins: 3681
+  matches: 3716
+  proteomes: 2980
+  taxa: 8114
+  structures: 9
+  alphafold_models: 3129
+  domain_architectures: 66
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012445
+description: Atg101 is a critical autophagy factor that functions together with ULK, Atg13 and FIP200
+  [[cite:PUB00059287],[cite:PUB00078911]]. Atg101 has been shown to be a HORMA (Hop1, Rev7 and MAD2) domain
+  protein with an open conformation [[cite:PUB00109143]].

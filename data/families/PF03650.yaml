@@ -1,0 +1,29 @@
+id: Pfam:PF03650
+pfam_id: PF03650
+name: Mitochondrial pyruvate carriers
+short_name: MPC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03650
+counters:
+  proteins: 9095
+  matches: 9202
+  proteomes: 3356
+  taxa: 8841
+  structures: 17
+  alphafold_models: 7815
+  domain_architectures: 124
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005336
+description: This family includes mitochondrial pyruvate carrier proteins, such as Mpc 1/2 and their homologues.
+  They mediate the uptake of pyruvate into mitochondria [[cite:PUB00066748]]. In humans, Mpc1 and Mpc2
+  associate to form an ~150-kilodalton complex in the inner mitochondrial membrane [[cite:PUB00066748]].
+  MPC1 contains two predicted transmembrane regions. MPC2 contains three predicted transmembrane regions.
+  Several studies have demonstrated MPC involvement in the control of cell fate in cancer and gluconeogenesis
+  in models of type 2 diabetes [[cite:PUB00136144]].

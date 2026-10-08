@@ -1,0 +1,29 @@
+id: Pfam:PF12014
+pfam_id: PF12014
+name: Cyclin D1 binding domain
+short_name: Cyclin_D1_bind
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12014
+counters:
+  proteins: 4404
+  matches: 4415
+  proteomes: 2264
+  taxa: 6018
+  structures: 2
+  alphafold_models: 3724
+  domain_architectures: 75
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: Ubiquitin-dependent proteolysis of cyclin D1 is associated with normal and tumour cell proliferation
+  and survival. The best characterised member of this family is the SCF FBXO31 (Skp1-Cul1-Rbx1-FBXO31)
+  ubiquitin ligase complex mediates genotoxic stress-induced cyclin D1 degradation [[cite:PUB00098610]].
+  FBXO31 possesses a unique substrate-binding beta barrel domain, whereas cyclin D1 binds to FBXO31 by
+  tucking its free C-terminal carboxylate tail into an open cavity of the C-terminal FBXO31 beta-barrel.
+  Biophysical and functional studies demonstrated that SCFFBXO31 is capable of recruiting and ubiquitinating
+  cyclin D1 in a phosphorylation-independent manner.

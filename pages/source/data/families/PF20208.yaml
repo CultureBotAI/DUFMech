@@ -1,0 +1,32 @@
+id: Pfam:PF20208
+pfam_id: PF20208
+name: ARG and Rhodanese-Phosphatase-superfamily-associated Protein domain
+short_name: ARPP-1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20208
+counters:
+  proteins: 313
+  matches: 315
+  proteomes: 283
+  taxa: 687
+  structures: 0
+  alphafold_models: 230
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046699
+description: ARPP-1 shows a distinguishing group of absolutely conserved residues, including a cysteine
+  and a glutamine, suggestive of enzymatic activity. Structural predictions reveal a core beta-sheet comprised
+  of a duplicated four-stranded beta-meander with a beta-barrel domain bearing the absolutely conserved
+  residues inserted into the first repeat. The unifying biochemical theme across its conserved contextual
+  genome linkages is the presence of molecules with sugar moieties (ADPr, nucleotides, and polysaccharides).
+  In genome contexts linking ARPP-1 with ARG and other counter viral ribosylation domains, ARPP is predicted
+  to act on ribose moieties coming from ADPr. The presence of the conserved cysteine suggests that it
+  could function analogous to the recently characterized SRAP domain by forming covalent cross-links with
+  sugars [[cite:PUB00153825],[cite:PUB00153826]].

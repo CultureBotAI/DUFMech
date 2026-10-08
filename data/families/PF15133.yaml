@@ -1,0 +1,29 @@
+id: Pfam:PF15133
+pfam_id: PF15133
+name: TLR adaptor interacting with SLC15A4 on the lysosome
+short_name: TASL
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15133
+counters:
+  proteins: 812
+  matches: 817
+  proteomes: 469
+  taxa: 1580
+  structures: 1
+  alphafold_models: 704
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027869
+description: In humans, TASL (TLR adaptor interacting with SLC15A4 on the lysosome) is encoded by CXorf21
+  that is associated with systemic lupus erythematosus [[cite:PUB00093601]]. It is an immune adaptor that
+  is required for recruitment and activation of IRF5 by TLR7, TLR8 and TLR9, in mechanistic analogy to
+  IRF3 and its three adaptors STING, MAVS and TRIF. TASL interacts with the endolysosomal transporter
+  SLC15A4 forming the SLC15A4-TASL complex, which is required for endolysosomal TLR signalling. TASL contains
+  a pLxIS motif that is important for its function [[cite:PUB00095082]].

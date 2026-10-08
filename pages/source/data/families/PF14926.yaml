@@ -1,0 +1,26 @@
+id: Pfam:PF14926
+pfam_id: PF14926
+name: Cilia- and flagella-associated protein 300
+short_name: CFAP300
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14926
+counters:
+  proteins: 1441
+  matches: 1484
+  proteomes: 1112
+  taxa: 3546
+  structures: 0
+  alphafold_models: 1279
+  domain_architectures: 26
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR029416
+description: CFAP300 is a cilia- and flagella-associated protein that is essential for assembly of dynein
+  arms. Mutations in the CFAP300 gene (C11orf70) cause defective cilia motility and primary ciliary dyskinesia
+  [[cite:PUB00089790],[cite:PUB00089791]].

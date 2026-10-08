@@ -1,0 +1,28 @@
+id: Pfam:PF09722
+pfam_id: PF09722
+name: Antitoxin Xre/MbcA/ParS C-terminal toxin-binding domain
+short_name: Xre_MbcA_ParS_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09722
+counters:
+  proteins: 7332
+  matches: 7333
+  proteomes: 4456
+  taxa: 6594
+  structures: 8
+  alphafold_models: 4658
+  domain_architectures: 40
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024467
+description: This entry represents the C-terminal domain of antitoxin components of a type II toxin-antitoxin
+  (TA) system, including Xre from Pseudomonas putida, MbcA from Mycobacterium sp. and ParS from Sphingobium
+  sp. [[cite:PUB00098292],[cite:PUB00098291],[cite:PUB00093678],[cite:PUB00098290]]. This domain interacts
+  with the toxin component and sterically blocks its active site, neutralising its effect [[cite:PUB00098291],[cite:PUB00093678]].
+  These antitoxins also have a HTH domain at the N-terminal.

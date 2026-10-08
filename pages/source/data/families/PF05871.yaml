@@ -1,0 +1,29 @@
+id: Pfam:PF05871
+pfam_id: PF05871
+name: ESCRT-II complex subunit
+short_name: ESCRT-II
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05871
+counters:
+  proteins: 3782
+  matches: 3804
+  proteomes: 3214
+  taxa: 8677
+  structures: 8
+  alphafold_models: 3245
+  domain_architectures: 83
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008570
+description: This family of conserved eukaryotic proteins are subunits of the endosome associated complex
+  ESCRT-II which recruits transport machinery for protein sorting at the multivesicular body (MVB) [[cite:PUB00019520]].
+  This protein complex transiently associates with the endosomal membrane and thereby initiates the formation
+  of ESCRT-III, a membrane-associated protein complex that functions immediately downstream of ESCRT-II
+  during sorting of MVB cargo. ESCRT-II in turn functions downstream of ESCRT-I, a protein complex that
+  binds to ubiquitinated endosomal cargo [[cite:PUB00019520]].

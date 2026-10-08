@@ -1,0 +1,32 @@
+id: Pfam:PF11001
+pfam_id: PF11001
+name: YDR124W-like, helical bundle domain
+short_name: AFUB_07903_YDR124W_hel
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11001
+counters:
+  proteins: 1718
+  matches: 1722
+  proteomes: 1067
+  taxa: 2117
+  structures: 0
+  alphafold_models: 1429
+  domain_architectures: 26
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR047092
+description: This entry represents mitochondrial proteins from fungi, such as subtelomeric hrmA-associated
+  cluster protein AFUB_079030 from Aspergillus fumigatus and YDR124W from yeast. Null mutant showed severe
+  fragmentation of mitochondria and its expression is strongly induced by alpha factor. These proteins
+  may have a role in maintenance of mitochondrial morphology [[cite:PUB00101836]]. This entry represents
+  an helical bundle domain which seems to adopt a similar arrangement than the EIN3-like DNA-binding domain
+  (Based on structural comparison, DALI server). AFUB_079030 is part of the subtelomeric hrmA-associated
+  cluster (HAC) containing genes that alter the hyphal surface (such as reduced total chitin or increased
+  beta-glucan exposure) and perturb inter-hyphal interactions within the developing biofilms, resulting
+  in a loss of vertically aligned polarised growing filaments [[cite:PUB00153731]].

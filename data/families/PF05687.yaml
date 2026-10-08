@@ -1,0 +1,26 @@
+id: Pfam:PF05687
+pfam_id: PF05687
+name: BES1/BZR1 plant transcription factor, N-terminal
+short_name: BES1_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05687
+counters:
+  proteins: 4260
+  matches: 4280
+  proteomes: 381
+  taxa: 1092
+  structures: 10
+  alphafold_models: 3408
+  domain_architectures: 63
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008540
+description: This family consists of the N terminal regions of several plant transcription factors. It
+  is classified as BES1/BZR1, a plant-specific transcription factor that cooperates with transcription
+  factors such as BIM1 to regulate brassinosteroid-induced genes [[cite:PUB00075707]].

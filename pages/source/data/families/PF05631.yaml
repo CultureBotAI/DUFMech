@@ -1,0 +1,24 @@
+id: Pfam:PF05631
+pfam_id: PF05631
+name: Sugar-tranasporters, 12 TM
+short_name: MFS_5
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05631
+counters:
+  proteins: 4751
+  matches: 5044
+  proteomes: 2148
+  taxa: 6114
+  structures: 0
+  alphafold_models: 4017
+  domain_architectures: 128
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008509
+description: MFS_5 is a family of sugar-transporters from both prokaryotes and eukaryotes.

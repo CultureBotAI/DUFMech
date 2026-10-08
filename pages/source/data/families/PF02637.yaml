@@ -1,0 +1,25 @@
+id: Pfam:PF02637
+pfam_id: PF02637
+name: GatB domain
+short_name: GatB_Yqey
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02637
+counters:
+  proteins: 20276
+  matches: 20335
+  proteomes: 18236
+  taxa: 30116
+  structures: 15
+  alphafold_models: 14437
+  domain_architectures: 77
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018027
+description: This domain is found in GatB. It is about 140 amino acid residues long. This domain is found
+  at the C terminus of GatB [swissprot:O30509] which transamidates Glu-tRNA to Gln-tRNA.

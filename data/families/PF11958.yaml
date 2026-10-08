@@ -1,0 +1,27 @@
+id: Pfam:PF11958
+pfam_id: PF11958
+name: Surface attachment protein BPSS1860
+short_name: BPSS1860
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11958
+counters:
+  proteins: 1476
+  matches: 1481
+  proteomes: 1064
+  taxa: 2087
+  structures: 5
+  alphafold_models: 967
+  domain_architectures: 71
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021862
+description: This entry represents Surface attachment protein BP1026B_II1992. This protein is required
+  for infection of the mammalian host cells and complete B.pseudomallei pathogenesis in vivo. Attaches
+  to host cells [[cite:PUB00159059]]. This entry includes Surface attachment protein BPSS1860 which is
+  required for infection of the mammalian host cells and complete B.pseudomallei pathogenesis in vivo.

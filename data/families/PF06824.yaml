@@ -1,0 +1,27 @@
+id: Pfam:PF06824
+pfam_id: PF06824
+name: Metal-independent alpha-mannosidase (GH125)
+short_name: Glyco_hydro_125
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06824
+counters:
+  proteins: 5382
+  matches: 5479
+  proteomes: 3430
+  taxa: 5989
+  structures: 12
+  alphafold_models: 3901
+  domain_architectures: 59
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008313
+description: This family, which contains bacterial and fungal glycoside hydrolases, is also known as GH125.
+  They function as metal-independent alpha-mannosidases, with specificity for alpha-1,6-linked non-reducing
+  terminal mannose residues[[cite:PUB00055745]]. Structurally this family is part of the 6 hairpin glycosidase
+  superfamily.

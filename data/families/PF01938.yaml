@@ -1,0 +1,25 @@
+id: Pfam:PF01938
+pfam_id: PF01938
+name: TRAM domain
+short_name: TRAM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01938
+counters:
+  proteins: 35071
+  matches: 35074
+  proteomes: 19606
+  taxa: 31439
+  structures: 18
+  alphafold_models: 24317
+  domain_architectures: 123
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002792
+description: This small domain has no known function. However it may perform a nucleic acid binding role
+  (Bateman A. unpublished observation).

@@ -1,0 +1,33 @@
+id: Pfam:PF13355
+pfam_id: PF13355
+name: ARC6-like, IMS domain
+short_name: ARC6-like_IMS
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13355
+counters:
+  proteins: 1579
+  matches: 1587
+  proteomes: 668
+  taxa: 1893
+  structures: 7
+  alphafold_models: 1214
+  domain_architectures: 42
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025344
+description: This domain corresponds to the C-terminal intermembrane space (IMS) region from protein accumulation
+  and replication of chloroplasts 6 (ARC6) and its paralogue PARC6 [[cite:PUB00096838]]. ARC6 and PARC6
+  are components of the plastid division machinery which are essential for the chloroplast replication
+  process [[cite:PUB00096838],[cite:PUB00096839]], which implies the assembly and constriction of the
+  tubulin-like FtsZ ring on the stromal surface of the inner envelope membrane (IEM) and the dynamin-like
+  ARC5 ring on the cytosolic surface of the outer envelope membrane (OEM). ARC6 is evolutionarily related
+  to the cyanobacterial cell division protein Ftn2/ZipN [[cite:PUB00096838]], having similar structures.
+  This domain from ARC6 and PARC6 interacts with PDV2 and PDV1 respectively. PDV proteins recruit dynamin-like
+  ARC5 ring to the chloroplast surface and mediates its constriction. ARC6/PARC6 are key to connect and
+  coordinate Fst and ARC5 rings during fission [[cite:PUB00096837],[cite:PUB00096840]].

@@ -1,0 +1,28 @@
+id: Pfam:PF15806
+pfam_id: PF15806
+name: TRAPP14 N-terminal
+short_name: TRAPP14_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15806
+counters:
+  proteins: 723
+  matches: 791
+  proteomes: 423
+  taxa: 1453
+  structures: 0
+  alphafold_models: 612
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055453
+description: This entry includes Trafficking protein particle complex subunit 14 (TRAPP14), a specific
+  subunit of the TRAPP (transport protein particle) II complex, a conserved vesicle tethering complex
+  that functions in late Golgi trafficking as a membrane tether [[cite:PUB00092767],[cite:PUB00096661]].
+  This entry represents the N-terminal region consisting of two domains which adopt a Ig-like fold, where
+  distant amino acids in the sequence contribute to different beta-sheets in the structure.

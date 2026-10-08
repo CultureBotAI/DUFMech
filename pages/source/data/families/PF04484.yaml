@@ -1,0 +1,27 @@
+id: Pfam:PF04484
+pfam_id: PF04484
+name: QWRF family
+short_name: QWRF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04484
+counters:
+  proteins: 4369
+  matches: 4531
+  proteomes: 423
+  taxa: 1217
+  structures: 3
+  alphafold_models: 3438
+  domain_architectures: 85
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007573
+description: AUG8 belongs to the plant QWRF motif-containing protein family, which also includes microtubule-associated
+  protein ENDOSPERM DEFECTIVE 1 [[cite:PUB00076700],[cite:PUB00076701]] and SNOWY COTYLEDON 3 [[cite:PUB00076702]].
+  AUG8 binds the microtubule plus-end and participates in the reorientation of microtubules in hypocotyls
+  (the stem of a germinating seedling) [[cite:PUB00076698],[cite:PUB00076699]].

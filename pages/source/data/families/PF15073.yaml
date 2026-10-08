@@ -1,0 +1,26 @@
+id: Pfam:PF15073
+pfam_id: PF15073
+name: Spermatogenesis-associated protein 48
+short_name: SPATA48
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15073
+counters:
+  proteins: 477
+  matches: 481
+  proteomes: 390
+  taxa: 1413
+  structures: 4
+  alphafold_models: 406
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027867
+description: Spermatogenesis-associated protein 48 is also known as post-meiotic spermatogenesis protein
+  1 [[cite:PUB00087304]]. Proteins in this family are typically between 109 and 302 amino acids in length.
+  In humans, it is found in the chromosomal position, C7orf72.

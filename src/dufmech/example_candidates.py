@@ -95,6 +95,7 @@ def select_target_families(
     cross_mech_rows: Iterable[Mapping[str, Any]],
     *,
     renamed_traitmech_families: Iterable[str] = (),
+    unscanned: Iterable[str] = (),
 ) -> dict[str, set[str]]:
     """Return ``{pfam_id: reasons}`` for families that need an example protein.
 
@@ -104,9 +105,13 @@ def select_target_families(
       examples carries the family.
     - ``renamed_traitmech_families``: current Pfam families for names TraitMech cites
       under a former DUF name (resolved separately through Pfam previous identifiers).
+    - Families the cross-Mech scan never searched (``unscanned``, from the snapshot's
+      coverage) cannot be said to lack an example. A TraitMech mention of one through a
+      former DUF name makes it a renamed-family target; nothing else is claimed.
     """
 
     rows = list(cross_mech_rows)
+    unscanned = set(unscanned)
     with_protein = {
         row["pfam_id"]
         for row in rows
@@ -135,7 +140,9 @@ def select_target_families(
     }
     targets: dict[str, set[str]] = {}
     for pfam_id in traitmech_named - with_protein:
-        targets.setdefault(pfam_id, set()).add(TRAITMECH_NAMED)
+        targets.setdefault(pfam_id, set()).add(
+            TRAITMECH_RENAMED if pfam_id in unscanned else TRAITMECH_NAMED
+        )
     for pfam_id in trait_records - own_examples:
         targets.setdefault(pfam_id, set()).add(PROTEIN_TRAITS_GAP)
     for pfam_id in renamed_traitmech_families:

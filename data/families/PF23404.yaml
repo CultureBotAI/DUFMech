@@ -1,0 +1,28 @@
+id: Pfam:PF23404
+pfam_id: PF23404
+name: FAZ1, C-terminal
+short_name: FAZ1_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23404
+counters:
+  proteins: 190
+  matches: 723
+  proteomes: 103
+  taxa: 572
+  structures: 0
+  alphafold_models: 111
+  domain_architectures: 74
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056615
+description: The entry represents a repeats-containing region found at the C-terminal of FAZ1 from Trypanosoma
+  brucei brucei and related proteins from typanosomatids. FAZ1 is a component of FAZ filament that is
+  required for correct FAZ assembly and attachment [[cite:PUB00155625]]. These repeats consist of 36x14aa
+  repeats in T.brucei and T.cruzi while in the Leishmania major LmjF34.0690 orthologue there are 70x14aa
+  repeats [[cite:PUB00155625]].

@@ -1,0 +1,29 @@
+id: Pfam:PF19528
+pfam_id: PF19528
+name: STM0557-like, N-terminal glycosyltransferase domain
+short_name: GT_STM0557_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19528
+counters:
+  proteins: 1146
+  matches: 1157
+  proteomes: 931
+  taxa: 1648
+  structures: 0
+  alphafold_models: 715
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045691
+description: This glycosyltransferase domain is found at the N-terminal end of Inner membrane protein
+  STM0557 from Salmonella typhimurium ([swissprot:Q8ZR61]) and in similar sequences mainly found in bacteria.
+  STM0557 is involved in the the addition of glucose to the galactose moiety of the S.Typhimurium O-antigen
+  via an alpha 1-4 linkage [[cite:PUB00163180],[cite:PUB00163181]]. This domain is predicted to show an
+  all-alpha configuration with several transmembrane helices. There is a conserved NYL sequence motif.
+  It was previously known as DUF6056.

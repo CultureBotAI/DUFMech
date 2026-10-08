@@ -1,0 +1,28 @@
+id: Pfam:PF07139
+pfam_id: PF07139
+name: Spermatogenesis-associated serine-rich protein 2-like
+short_name: SPATS2-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07139
+counters:
+  proteins: 1891
+  matches: 2097
+  proteomes: 857
+  taxa: 2752
+  structures: 0
+  alphafold_models: 1669
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009816
+description: This family includes spermatogenesis-associated serine-rich protein 2 (SPATS2) and SPATS2-like
+  proteins from mammals. SPATS2 is involved in spermatogenesis and likely to be a cytoplasmic RNA-binding
+  protein [[cite:PUB00101497],[cite:PUB00101498]]. SPATS2 is highly expressed in hepatocellular carcinoma
+  (HCC) and may function as an oncogene. It constitutes a novel diagnostic prognostic marker in liver
+  cancer and a potential therapeutic target for the treatment of HCC [[cite:PUB00101499]].

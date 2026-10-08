@@ -1,0 +1,25 @@
+id: Pfam:PF02638
+pfam_id: PF02638
+name: Glycosyl hydrolase-like 10
+short_name: GHL10
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02638
+counters:
+  proteins: 7854
+  matches: 7990
+  proteomes: 4949
+  taxa: 7338
+  structures: 2
+  alphafold_models: 4664
+  domain_architectures: 164
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003790
+description: This is family of bacterial glycosyl-hydrolase-like proteins falling into the family GHL10
+  as described above, [[cite:PUB00057447],[cite:PUB00066710]].

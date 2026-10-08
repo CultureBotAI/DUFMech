@@ -1,0 +1,27 @@
+id: Pfam:PF01889
+pfam_id: PF01889
+name: Archaeal lipoprotein biogenesis component AliA/AliB-like
+short_name: AliA_AliB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01889
+counters:
+  proteins: 866
+  matches: 872
+  proteomes: 473
+  taxa: 801
+  structures: 0
+  alphafold_models: 805
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002749
+description: This entry represents AliA and AliB from Haloferax volcanii and similar uncharacterised transmembrane
+  proteins from archaea. Ali stands for archaeal lipoprotein biogenesis components. These proteins are
+  important for lipoprotein lipidation as well as for for the organism's cell shape, growth and motility
+  [[cite:PUB00162475]].

@@ -1,0 +1,25 @@
+id: Pfam:PF01878
+pfam_id: PF01878
+name: EVE domain
+short_name: EVE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01878
+counters:
+  proteins: 11128
+  matches: 11187
+  proteomes: 9908
+  taxa: 17496
+  structures: 11
+  alphafold_models: 7863
+  domain_architectures: 124
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002740
+description: This domain was formerly known as DUF55. Crystal structures have shown that this domain is
+  part of the PUA superfamily. This domain has been named EVE and is thought to be RNA-binding [[cite:PUB00055624]].

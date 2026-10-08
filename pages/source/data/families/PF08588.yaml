@@ -1,0 +1,31 @@
+id: Pfam:PF08588
+pfam_id: PF08588
+name: Domain of unknown function at the cortex 1 (Duc1)
+short_name: Duc1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08588
+counters:
+  proteins: 2341
+  matches: 2488
+  proteomes: 1476
+  taxa: 3195
+  structures: 0
+  alphafold_models: 1913
+  domain_architectures: 67
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013897
+description: This entry represents the Duc1 (Domain of Unknown Function at the Cortex 1) protein, which
+  is involved in maintaining proper plasma membrane lipid composition and cytokinetic ring anchoring in
+  Schizosaccharomyces pombe [[cite:PUB00155608]]. Duc1 localizes to the plasma membrane, except at the
+  cell division site, and its localization is controlled by interactions with the ER-PM contact site proteins
+  Scs2 and Scs22 through a FFAT-like motif. Duc1 promotes proper localization of the PI-5 kinase Its3,
+  thereby maintaining appropriate levels of PI(4,5)P2 at the plasma membrane. This function is important
+  for proper anchoring of the cytokinetic ring during cell division. Duc1 contains a conserved domain
+  previously known as the DUF1769 domain of unknown function.

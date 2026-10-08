@@ -1,0 +1,28 @@
+id: Pfam:PF02679
+pfam_id: PF02679
+name: (2R)-phospho-3-sulfolactate synthase (ComA)
+short_name: ComA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02679
+counters:
+  proteins: 2768
+  matches: 2796
+  proteomes: 2472
+  taxa: 4674
+  structures: 3
+  alphafold_models: 2010
+  domain_architectures: 37
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003830
+description: In methanobacteria (2R)-phospho-3-sulfolactate synthase (ComA) catalyses the first step of
+  the biosynthesis of coenzyme M from phosphoenolpyruvate (P-enolpyruvate). This novel enzyme catalyses
+  the stereospecific Michael addition of sulfite to P-enolpyruvate, forming L-2-phospho-3-sulfolactate
+  (PSL). It is suggested that the ComA-catalysed reaction is analogous to those reactions catalysed by
+  beta-elimination enzymes that proceed through an enolate intermediate [[cite:PUB00010730]].

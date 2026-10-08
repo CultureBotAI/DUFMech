@@ -1,0 +1,30 @@
+id: Pfam:PF10221
+pfam_id: PF10221
+name: Cell cycle and development regulator Mat89Bb
+short_name: Mat89Bb
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10221
+counters:
+  proteins: 2014
+  matches: 2302
+  proteomes: 1297
+  taxa: 4173
+  structures: 10
+  alphafold_models: 1761
+  domain_architectures: 32
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019355
+description: This is entry represents the cell cycle regulator Mat89b (also known as protein asunder),
+  which plays an evolutionarily conserved role as a crucial regulator of both cell cycle and development
+  [[cite:PUB00052522],[cite:PUB00088536]]. It is a component of INT (Integrator) complex, being involved
+  in the 3'-end processing of the U7 snRNA, and also the spliceosomal snRNAs U1 and U5 [[cite:PUB00090216]].
+  Mat89Bb is also required for the correct dynein-dynactin perinuclear localization [[cite:PUB00097736]].
+  Mat89Bb is a PNG kinase substrate, that is essential for S-M cycles of early Drosophila embryogenesis,
+  Xenopus embryonic cell cycles and morphogenesis, and cell division in cultured mammalian cells.

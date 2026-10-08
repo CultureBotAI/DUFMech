@@ -1,0 +1,28 @@
+id: Pfam:PF17703
+pfam_id: PF17703
+name: piRNA-mediated silencing protein C19orf84
+short_name: C19orf84
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17703
+counters:
+  proteins: 132
+  matches: 132
+  proteomes: 122
+  taxa: 402
+  structures: 0
+  alphafold_models: 110
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040606
+description: This entry, previously known as DUF5549, represents the piRNA-mediated silencing protein
+  C19orf84 and related proteins found in mammals. C19orf84 is essential for orchestrating piRNA-directed
+  DNA methylation [[cite:PUB00158929]]. C19orf84 interacts with SPOCD1 and mediates the in vivo association
+  of SPOCD1 with the de novo methylation machinery. DNMT3C, the DNA methyltransferase responsible for
+  transposon methylation, associates with SPOCD1 and C19ORF84 [[cite:PUB00158929]].

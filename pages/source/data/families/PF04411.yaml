@@ -1,0 +1,32 @@
+id: Pfam:PF04411
+pfam_id: PF04411
+name: PD-(D/E)XK nuclease superfamily
+short_name: PDDEXK_7
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04411
+counters:
+  proteins: 970
+  matches: 972
+  proteomes: 917
+  taxa: 1891
+  structures: 0
+  alphafold_models: 623
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007505
+description: This domain has been identified as a member of the PD-(D/E)XK nuclease superfamily through
+  transitive meta profile searches [[cite:PUB00044133]]. The domain has two additional beta-strands inserted
+  to the core fold after the first core alpha-helix. It has been speculated that it could function as
+  s methylation-dependent restriction [[cite:PUB00044133]]. The domain has two additional beta-strands
+  inserted into the core fold after the first core alpha-helix. The PD-(D/E)XK signature is clearly conserved
+  corresponding to an invariant PD (motif II) and DAK (motif III) motifs. There is also a conserved glutamic
+  acid in motif I that is most likely to be involved in metal ion binding. The second core alpha-helix
+  contains an invariant MHXYRD motif. It has been speculated that it could function as s methylation-dependent
+  restriction enzyme [[cite:PUB00044133]].

@@ -1,0 +1,29 @@
+id: Pfam:PF14336
+pfam_id: PF14336
+name: D-glutamate cyclase-like, C-terminal
+short_name: GLUCM-like_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14336
+counters:
+  proteins: 1872
+  matches: 1931
+  proteomes: 1349
+  taxa: 3617
+  structures: 6
+  alphafold_models: 1483
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025504
+description: This entry represents the C-terminal domain of mitochondrial D-glutamate cyclase, which converts
+  D-glutamate to 5-oxo-D-proline [[cite:PUB00086027]]. This is a conserved domain also found in uncharacterised
+  proteins from bacteria and archaea. Structural studies of the hypothetical protein TON_0340 from Thermococcus
+  onnurineus revealed an active-site cavity harbouring a metal-binding site containing six invariant aspartate
+  and glutamate residues that adopts an alpha/beta-structure [[cite:PUB00151593]]. Biochemical and mutational
+  analysis show that TON_0340 is a Mn+2-dependent phosphatase [[cite:PUB00151593]].

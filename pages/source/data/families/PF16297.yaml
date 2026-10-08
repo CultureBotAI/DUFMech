@@ -1,0 +1,31 @@
+id: Pfam:PF16297
+pfam_id: PF16297
+name: RTL1/3-8/LDOC, capsid-like domain
+short_name: RTL1-8_LDOC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16297
+counters:
+  proteins: 7561
+  matches: 7573
+  proteomes: 514
+  taxa: 1766
+  structures: 0
+  alphafold_models: 4801
+  domain_architectures: 405
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032549
+description: This entry represents a domain found in eukaryotic Gag or capsid-like retrotranspon-related
+  proteins, including LDOC1, and RTL1/3-8 from animals. LDOC1 is a MZF-1-interacting protein, inhibits
+  NF-kappaB activation and relates with cancer and some other diseases [[cite:PUB00070719],[cite:PUB00076517],[cite:PUB00076518],[cite:PUB00076519]].
+  LDOC1 is a small protein and this entry covers almost its full length. In RTL proteins, it represents
+  the N-terminal capsid-like domain. RTL1 plays an essential role in capillaries endothelial cells for
+  the maintenance of feto-maternal interface and for development of the placenta [[cite:PUB00091629]].
+  RTL3 plays a role in postnatal myogenesis, may be involved in the regulation of satellite cells self-renewal
+  [[cite:PUB00163386]].

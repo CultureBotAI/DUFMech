@@ -1,0 +1,27 @@
+id: Pfam:PF08552
+pfam_id: PF08552
+name: Inositolphosphorylceramide synthase subunit Kei1
+short_name: Kei1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08552
+counters:
+  proteins: 1407
+  matches: 1444
+  proteomes: 1348
+  taxa: 2795
+  structures: 3
+  alphafold_models: 1183
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013862
+description: Kei1 is a subunit of Saccharomyces cerevisiae inositol phosphorylceramide (IPC) synthase
+  [[cite:PUB00092487]]. It is localised to the Golgi and is cleaved by the late Golgi processing endopeptidase
+  Kex2 [[cite:PUB00092487]]. Kei1 is essential for both the activity and the Golgi localization of IPC
+  synthase [[cite:PUB00092487]].

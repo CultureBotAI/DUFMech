@@ -1,0 +1,33 @@
+id: Pfam:PF14487
+pfam_id: PF14487
+name: ssDNA thymidine ADP-ribosyltransferase, DarT
+short_name: DarT
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14487
+counters:
+  proteins: 1461
+  matches: 1475
+  proteomes: 1330
+  taxa: 2780
+  structures: 11
+  alphafold_models: 881
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR029494
+description: This family of proteins is found in bacteria, archaea and eukaryotes. Proteins in this family
+  are typically between 201 and 230 amino acids in length. There is a single completely conserved residue
+  E that may be functionally important. This family is distantly similar to [pfam:PF01885]. Studies in
+  search for novel ADP-ribosylation systems in bacterial genomes have identified an operon that encodes
+  a conserved protein containing a distinct type of macrodomain associated with this family. This led
+  to the identification of a toxin-antitoxin (TA) system, with DarT acting as the toxin. It is an enzyme
+  that specifically modifies thymidines on single-stranded DNA in a sequence-specific manner by a nucleotide-type
+  modification called ADP-ribosylation. This modification in turn can be removed by DarG, the antitoxin
+  macrodomain protein. In addition, it was illustrated that substitution of the single completely conserved
+  glutamate residue resulted in attenuation of function where DarT was non-toxic [[cite:PUB00091008]].

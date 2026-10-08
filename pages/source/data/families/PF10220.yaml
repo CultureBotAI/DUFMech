@@ -1,0 +1,26 @@
+id: Pfam:PF10220
+pfam_id: PF10220
+name: Smg8_Smg9
+short_name: Smg8_Smg9
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10220
+counters:
+  proteins: 2394
+  matches: 3813
+  proteomes: 1604
+  taxa: 5105
+  structures: 8
+  alphafold_models: 1986
+  domain_architectures: 58
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019354
+description: Smg8 and Smg9 are two subunits of the Smg-1 complex. They suppress Smg-1 kinase activity
+  in the isolated Smg-1 complex, and are involved in nonsense-mediated mRNA decay (NMD) in both mammals
+  and nematodes [[cite:PUB00054170]].

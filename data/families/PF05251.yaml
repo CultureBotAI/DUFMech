@@ -1,0 +1,31 @@
+id: Pfam:PF05251
+pfam_id: PF05251
+name: Oligosaccharyltransferase subunit 5
+short_name: Ost5
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05251
+counters:
+  proteins: 3042
+  matches: 3052
+  proteomes: 2536
+  taxa: 7096
+  structures: 12
+  alphafold_models: 2628
+  domain_architectures: 59
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007915
+description: Eukaryotic N-glycosylation is catalysed in the ER lumen, where the enzyme oligosaccharyltransferase
+  (OTase) transfers donor glycans from a dolichol pyrophosphate (DolP) carrier (Lipid-linked oligosaccharide;
+  LLO) to polypeptides. The yeast OTase is a hetero-oligomeric complex composed of essential (Ost1, Ost2,
+  Wbp1, Stt3, and Swp1) and nonessential (Ost3, Ost4, Ost5, and Ost6) subunits. This domain family is
+  found in Ost5, [swissprot:Q92316]. The precise function of this subunit is not known, however Ost5 appears
+  to form a sub-complex with Ost1, and this sub-complex associates with the catalytic Stt3 subunit of
+  OTase. Down regulation of Ost5 resulted in a limited effect on glycosylation and no effect on the stability
+  of Ost1 or Stt3 subunits [[cite:PUB00109240],[cite:PUB00109241]].

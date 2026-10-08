@@ -1,0 +1,29 @@
+id: Pfam:PF10354
+pfam_id: PF10354
+name: rRNA (uridine-N3-)-methyltransferase BTM5-like
+short_name: BMT5-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10354
+counters:
+  proteins: 5700
+  matches: 6225
+  proteomes: 3040
+  taxa: 7802
+  structures: 0
+  alphafold_models: 4666
+  domain_architectures: 206
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019446
+description: This is the N-terminal domain found in proteins from plants, yeast and humans, including
+  25S rRNA (uridine-N(3))-methyltransferase BMT5 from S. cerevisiae and the poorly characterised Ferredoxin-fold
+  anticodon-binding domain-containing protein 1 from human and Heavy metal-associated isoprenylated plant
+  protein 41 from Arabidopsis. This domain has a characteristic Rossmann-like fold of S-adenosyl-L-methionine
+  (SAM) binding domains [[cite:PUB00075659]]. BTM5 is a SAM-dependent methyltransferase that specifically
+  methylates the N3 position of uridine in 25S rRNA.

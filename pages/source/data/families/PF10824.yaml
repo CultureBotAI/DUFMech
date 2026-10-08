@@ -1,0 +1,25 @@
+id: Pfam:PF10824
+pfam_id: PF10824
+name: Excreted virulence factor EspC, type VII ESX diderm
+short_name: T7SS_ESX_EspC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10824
+counters:
+  proteins: 3745
+  matches: 3745
+  proteomes: 1205
+  taxa: 1509
+  structures: 0
+  alphafold_models: 2406
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022536
+description: T7SS_ESX-EspC is a family of exported virulence proteins from largely Acinetobacteria and
+  a few Fimicutes, Gram-positive bacteria. It is exported in conjunction with EspA as an interacting pair.

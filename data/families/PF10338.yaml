@@ -1,0 +1,26 @@
+id: Pfam:PF10338
+pfam_id: PF10338
+name: YBL028C ribosome biogenesis factor, N-terminal domain
+short_name: YBL028C_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10338
+counters:
+  proteins: 1531
+  matches: 1531
+  proteomes: 1486
+  taxa: 3164
+  structures: 50
+  alphafold_models: 1291
+  domain_architectures: 18
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019434
+description: This entry represents a domain (previously known as DUF2423) found N-terminal in YBL028C
+  ribosome biogenesis factor and related fungal protein [[cite:PUB00100535],[cite:PUB00154332],[cite:PUB00154333]].
+  This domain adopts an alpha-helix and makes extensive contacts with the ribosomal protein uL3 and rRNA.

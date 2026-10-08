@@ -1,0 +1,25 @@
+id: Pfam:PF01128
+pfam_id: PF01128
+name: 2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase
+short_name: IspD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01128
+counters:
+  proteins: 19574
+  matches: 19791
+  proteomes: 16789
+  taxa: 26255
+  structures: 56
+  alphafold_models: 13015
+  domain_architectures: 60
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR034683
+description: Members of this family are enzymes which catalyse the formation of 4-diphosphocytidyl-2-C-methyl-D-erythritol
+  from cytidine triphosphate and 2-C-methyl-D-erythritol 4-phosphate (MEP) [[cite:PUB00011034]].

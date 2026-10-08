@@ -1,0 +1,31 @@
+id: Pfam:PF03007
+pfam_id: PF03007
+name: Wax ester synthase/diacylglycerol acyltransferase catalytic domain
+short_name: WS_DGAT_cat
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03007
+counters:
+  proteins: 15050
+  matches: 15215
+  proteomes: 4055
+  taxa: 6769
+  structures: 2
+  alphafold_models: 10311
+  domain_architectures: 107
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004255
+description: This domain is found in wax ester synthases/diacylglycerol O-acyltransferases (WS/DAGs),
+  largely found in bacteria, plants and animals. They catalyse the condensation of a fatty alcohol and
+  a fatty acyl-Coenzyme A (acyl-CoA) and they can also catalyse the transesterification of acyl-CoAs with
+  diacylglycerols. These are bifunctional enzymes (WS/DAGs) that share low overall sequence similarity
+  but all WS/DGATs share a conserved HHXXXDG motif, which is also found in other acyltransferases [[cite:PUB00099698],[cite:PUB00100087]].
+  This entry represents the N-terminal catalytic domain of WS/DAGs which contains the conserved HHXXXDG
+  motif. It consists of a mixed beta-sheet flanked by four alpha-helices and a small antiparallel beta-sheet
+  [[cite:PUB00100087]].

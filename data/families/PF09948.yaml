@@ -1,0 +1,26 @@
+id: Pfam:PF09948
+pfam_id: PF09948
+name: Copper chaperone
+short_name: PpoB2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09948
+counters:
+  proteins: 2168
+  matches: 2169
+  proteomes: 1758
+  taxa: 2757
+  structures: 0
+  alphafold_models: 1306
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018688
+description: This family includes Copper chaperone PpoB2 from Marinomonas mediterranea and similar prokaryotic
+  sequences. PpoB2 is a membrane copper transporter involved in the delivery of this ion to the PpoB1
+  tyrosinase [[cite:PUB00160081]].

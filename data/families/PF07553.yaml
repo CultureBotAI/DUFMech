@@ -1,0 +1,27 @@
+id: Pfam:PF07553
+pfam_id: PF07553
+name: Host cell surface-exposed lipoprotein
+short_name: Lipoprotein_Ltp
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07553
+counters:
+  proteins: 1280
+  matches: 2791
+  proteomes: 1147
+  taxa: 1971
+  structures: 1
+  alphafold_models: 745
+  domain_architectures: 46
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011434
+description: This domain is found as 1 to 5 copies in lipoproteins that are involved in superinfection
+  exclusion. Proteins in this group have been shown to act at the stage of DNA release from the phage
+  head into the cell [[cite:PUB00108413]]. This domain shows a three-helix bundle belonging to the HTH
+  superfamily [[cite:PUB00101011]].

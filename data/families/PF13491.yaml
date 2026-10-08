@@ -1,0 +1,27 @@
+id: Pfam:PF13491
+pfam_id: PF13491
+name: 4TM region of DNA translocase FtsK/SpoIIIE
+short_name: FtsK_4TM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13491
+counters:
+  proteins: 13056
+  matches: 13056
+  proteomes: 12945
+  taxa: 18378
+  structures: 0
+  alphafold_models: 8415
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025199
+description: 4TM_FtsK is the integral membrane domain of the FtsK DNA tranlocases. During sporulation
+  in Bacillus subtilis, the SpoIIIE protein is believed to form a translocation pore at the leading edge
+  of the nearly closed septum. The E. coli FtsK protein is homologous to SpoIIIE, and can free chromosomes
+  trapped in vegetative septa.

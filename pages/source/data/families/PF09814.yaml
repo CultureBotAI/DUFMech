@@ -1,0 +1,24 @@
+id: Pfam:PF09814
+pfam_id: PF09814
+name: HECT-like Ubiquitin-conjugating enzyme (E2)-binding
+short_name: HECT_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09814
+counters:
+  proteins: 3662
+  matches: 3976
+  proteomes: 2931
+  taxa: 7752
+  structures: 0
+  alphafold_models: 3061
+  domain_architectures: 72
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019193
+description: HECT_2 is a family of UbcH10-binding proteins.

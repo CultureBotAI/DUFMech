@@ -1,0 +1,28 @@
+id: Pfam:PF13898
+pfam_id: PF13898
+name: Deubiquitinating enzyme MINDY-3/4, conserved domain
+short_name: MINDY-3_4_CD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13898
+counters:
+  proteins: 4929
+  matches: 5272
+  proteomes: 1768
+  taxa: 5489
+  structures: 0
+  alphafold_models: 4295
+  domain_architectures: 66
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025257
+description: Deubiquitinating enzymes (DUBs) remove ubiquitin (Ub) from Ub-conjugated substrates to regulate
+  the functional outcome of ubiquitination. This entry includes MINDY-3/4. They belong to the MINDY (motif
+  interacting with Ub-containing novel DUB) family (peptidase family C121), whose members are deubiquitinating
+  enzymes releasing Lys48-linked ubiquitin [[cite:PUB00081935]]. This is a conserved domain found in deubiquitinating
+  enzymes, MINDY-3 and MINDY-4.

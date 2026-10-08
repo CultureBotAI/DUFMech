@@ -1,0 +1,29 @@
+id: Pfam:PF12102
+pfam_id: PF12102
+name: MrcB-like, N-terminal domain
+short_name: MrcB_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12102
+counters:
+  proteins: 787
+  matches: 790
+  proteomes: 748
+  taxa: 1530
+  structures: 13
+  alphafold_models: 479
+  domain_architectures: 38
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021961
+description: This model describes the N-terminal domain of a group of mostly uncharacterised proteins,
+  including 5-methylcytosine-specific restriction enzyme B (also known as MrcB) from E. coli. MrcB recognises
+  N4- and C5-methylcytosine (and 5-hydroxy-methylcytosines) produced by a broad range of DNA methylases
+  and appears to act against 5-methylcytosine preceded by a purine residue [[cite:PUB00070724]]. The N-terminal
+  domain of MrcB has been shown to be a DNA-binding domain, and the crystal structure has been solved
+  [[cite:PUB00100346]].

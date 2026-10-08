@@ -1,0 +1,26 @@
+id: Pfam:PF09803
+pfam_id: PF09803
+name: Pet100
+short_name: Pet100
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09803
+counters:
+  proteins: 2738
+  matches: 2739
+  proteomes: 2399
+  taxa: 6453
+  structures: 0
+  alphafold_models: 2325
+  domain_architectures: 44
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018625
+description: Pet100 is a chaperone required for the assembly of cytochrome c oxidase [[cite:PUB00075399]].
+  The human Pet100 homologue (also known as C19orf79) has been shown to be located in the mitochondrial
+  inner membrane and forms a ~300 kDa subcomplex with mitochondrial complex IV subunits [[cite:PUB00075400]].

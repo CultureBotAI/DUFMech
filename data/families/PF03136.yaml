@@ -1,0 +1,28 @@
+id: Pfam:PF03136
+pfam_id: PF03136
+name: Pup-ligase protein
+short_name: Pup_ligase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03136
+counters:
+  proteins: 7051
+  matches: 7064
+  proteomes: 3457
+  taxa: 4287
+  structures: 11
+  alphafold_models: 4186
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004347
+description: Pupylation is a novel protein modification system found in some bacteria [[cite:PUB00053382]].
+  This family of proteins are the enzyme that can conjugate proteins of the Pup family to lysine residues
+  in target proteins marking them for degradation. The archetypal protein in this family is PafA (proteasome
+  accessory factor) from Mycobacterium tuberculosis [[cite:PUB00053383]]. It has been suggested that these
+  proteins are related to gamma-glutamyl-cysteine synthetases [[cite:PUB00053382]].

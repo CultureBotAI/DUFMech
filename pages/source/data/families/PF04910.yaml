@@ -1,0 +1,25 @@
+id: Pfam:PF04910
+pfam_id: PF04910
+name: Transcriptional repressor TCF25
+short_name: Tcf25
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04910
+counters:
+  proteins: 4322
+  matches: 4442
+  proteomes: 3288
+  taxa: 8736
+  structures: 1
+  alphafold_models: 3667
+  domain_architectures: 77
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006994
+description: Members of this family are transcriptional repressors. They may act by increasing histone
+  deacetylase activity at promoter regions [[cite:PUB00033388]].

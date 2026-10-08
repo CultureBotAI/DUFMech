@@ -1,0 +1,27 @@
+id: Pfam:PF14332
+pfam_id: PF14332
+name: Protein PatA, N-terminal domain
+short_name: PatA_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14332
+counters:
+  proteins: 3314
+  matches: 3399
+  proteomes: 784
+  taxa: 1843
+  structures: 0
+  alphafold_models: 2178
+  domain_architectures: 90
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025497
+description: This domain (previously known as DUF4388) is found in the Protein PatA from Nostoc sp. and
+  related proteins including Uncharacterized protein aq_1845 from Aquifex aeolicus. PatA controls heterocyst
+  pattern formation. It is required for the differentiation of intercalary heterocysts but not for terminal
+  heterocysts [[cite:PUB00014608],[cite:PUB00075466]].

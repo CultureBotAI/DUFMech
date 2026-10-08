@@ -1,0 +1,29 @@
+id: Pfam:PF04384
+pfam_id: PF04384
+name: Iron-sulphur cluster assembly
+short_name: Fe-S_assembly
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04384
+counters:
+  proteins: 2957
+  matches: 2957
+  proteomes: 2947
+  taxa: 4104
+  structures: 2
+  alphafold_models: 1979
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007479
+description: This family of proteins is likely to be involved in the assembly of iron-sulphur clusters.
+  It may function as an adaptor protein. In Escherichia coli [swissprot:P0C0L9] forms part of the isc
+  operon, which encodes genes involved in iron-sulphur cluster assembly. Its structure is entirely alpha
+  helical, and it contains a modified wing-helix structure, usually found in DNA-binding proteins. It
+  binds to Fe2+ and Fe3+ ions and to the cysteine desulfurase IscS, the same surface of the protein is
+  involved in both binding to iron and to IscS [[cite:PUB00035643],[cite:PUB00054897]].

@@ -1,0 +1,24 @@
+id: Pfam:PF04883
+pfam_id: PF04883
+name: Bacteriophage HK97-gp10, putative tail-component
+short_name: HK97-gp10_like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04883
+counters:
+  proteins: 3943
+  matches: 3943
+  proteomes: 3211
+  taxa: 5952
+  structures: 1
+  alphafold_models: 2123
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010064
+description: This family of proteins is found in the caudovirales. It may be a tail component.

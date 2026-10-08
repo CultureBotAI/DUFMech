@@ -1,0 +1,27 @@
+id: Pfam:PF11308
+pfam_id: PF11308
+name: Glycosyl hydrolases related to GH101 family, GH129
+short_name: Glyco_hydro_129
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11308
+counters:
+  proteins: 623
+  matches: 631
+  proteomes: 598
+  taxa: 1031
+  structures: 0
+  alphafold_models: 334
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021459
+description: This family of bacterial and lower eukaryote glycosyl hydrolases is related to CAZy family
+  GH129,and distantly to GH101, and is made up of sub-families GHL1-GHL3. In the example [swissprot:C02A26],
+  the substrate-binding Asp is residue 596, the nucleophilic Asp is residue 706, and the proton donor
+  Glu is residue 747.

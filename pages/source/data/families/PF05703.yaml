@@ -1,0 +1,26 @@
+id: Pfam:PF05703
+pfam_id: PF05703
+name: Auxin canalisation
+short_name: Auxin_canalis
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05703
+counters:
+  proteins: 4056
+  matches: 4765
+  proteomes: 380
+  taxa: 1040
+  structures: 0
+  alphafold_models: 3252
+  domain_architectures: 77
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008546
+description: This domain is frequently found at the N-terminus of proteins containing [pfam:PF08458] at
+  the C-terminus. It is a component of the auto-regulatory loop which enables auxin canalisation by recruitment
+  of the PIN1 auxin efflux protein to the cell membrane [[cite:PUB00090780]].

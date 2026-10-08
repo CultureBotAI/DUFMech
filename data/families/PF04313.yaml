@@ -1,0 +1,29 @@
+id: Pfam:PF04313
+pfam_id: PF04313
+name: Type I restriction enzyme R protein N terminus (HSDR_N)
+short_name: HSDR_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04313
+counters:
+  proteins: 14720
+  matches: 14727
+  proteomes: 9564
+  taxa: 15110
+  structures: 11
+  alphafold_models: 9590
+  domain_architectures: 90
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007409
+description: 'This family consists of a number of N terminal regions found in type I restriction enzyme
+  R (HSDR) proteins. Restriction and modification (R/M) systems are found in a wide variety of prokaryotes
+  and are thought to protect the host bacterium from the uptake of foreign DNA [[cite:PUB00019721]]. Type
+  I restriction and modification systems are encoded by three genes: hsdR, hsdM, and hsdS. The three polypeptides,
+  HsdR, HsdM, and HsdS, often assemble to give an enzyme (R2M2S1) that modifies hemimethylated DNA and
+  restricts unmethylated DNA [[cite:PUB00019722]].'

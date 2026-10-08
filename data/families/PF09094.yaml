@@ -1,0 +1,26 @@
+id: Pfam:PF09094
+pfam_id: PF09094
+name: Alpha-amylase/4-alpha-glucanotransferase, middle domain
+short_name: AmyA-A_glucT_m
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09094
+counters:
+  proteins: 342
+  matches: 343
+  proteomes: 339
+  taxa: 761
+  structures: 3
+  alphafold_models: 294
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015178
+description: This entry represents a domain found in prokaryotic alpha-amylase and 4-alpha-glucanotransferase.
+  It is adjacent to the C-terminal domain ([pfam:PF09095]). This domain adopts an immunoglobulin/ albumin-binding
+  domain-like fold, with a bundle of three alpha-helices. Their function is, as yet, unknown [[cite:PUB00014074]].

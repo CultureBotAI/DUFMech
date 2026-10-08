@@ -1,0 +1,30 @@
+id: Pfam:PF11821
+pfam_id: PF11821
+name: Alternative complex III, ActD subunit
+short_name: ActD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11821
+counters:
+  proteins: 2774
+  matches: 2774
+  proteomes: 2651
+  taxa: 3957
+  structures: 8
+  alphafold_models: 1860
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021776
+description: Alternative complex III (ACIII) is a multisubunit quinol:electron acceptor oxidoreductase
+  that couples quinol oxidation with transmembrane proton translocation similar to bc1 complex (or complex
+  III). It is a key component of the respiratory and photosynthetic electron transport chains in many
+  bacteria. It has six subunits (ActA-F), ActD subunit represented in this entry. The transmembrane regions
+  of this subunit form part of the TM arm of the complex [[cite:PUB00099731],[cite:PUB00099732]]. Although
+  the function of this subunit is not clear, it may play a role in stabilizing the TM region of ACIII
+  which contributes to a stable menaquinol binding pocket and proton translocation passage [[cite:PUB00099732]].

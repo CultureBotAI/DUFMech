@@ -1,0 +1,28 @@
+id: Pfam:PF10862
+pfam_id: PF10862
+name: FcoT-like thioesterase domain
+short_name: FcoT
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10862
+counters:
+  proteins: 298
+  matches: 298
+  proteomes: 264
+  taxa: 450
+  structures: 4
+  alphafold_models: 186
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022598
+description: Proteins in this family have a HotDog fold. This family was formerly known as domain of unknown
+  function 2662 (DUF2662). The structure of Rv0098 from M. tuberculosis [[cite:PUB00048671]] suggested
+  a thioesterase function. Assays showed that this protein was a thioesterase with a preference for long
+  chain fatty acyl groups [[cite:PUB00048671]]. The maximal Kcat was observed for palmitoyl-CoA although
+  longer and shorter molecules were also cleaved. In solution this protein forms a homo-hexameric complex.

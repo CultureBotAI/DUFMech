@@ -1,0 +1,27 @@
+id: Pfam:PF19291
+pfam_id: PF19291
+name: Trehalase-like, N-terminal
+short_name: TREH_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19291
+counters:
+  proteins: 13539
+  matches: 13540
+  proteomes: 7617
+  taxa: 10895
+  structures: 0
+  alphafold_models: 8077
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045582
+description: This presumed domain is found at the N-terminal region of bacterial and archaeal trehalases
+  which catalyse the hydrolysis of alpha,alpha-trehalose into two molecules of D-glucose, followed by
+  the glycoside hydrolase domain ([pfam:PF00723]). This domain is also found in the uncharacterised protein
+  C4H3.03c from S. pombe. The function of this domain is not clear.

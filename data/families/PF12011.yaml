@@ -1,0 +1,28 @@
+id: Pfam:PF12011
+pfam_id: PF12011
+name: RNA helicase NPH-II
+short_name: NPH-II
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12011
+counters:
+  proteins: 59
+  matches: 59
+  proteomes: 52
+  taxa: 156
+  structures: 0
+  alphafold_models: 50
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021892
+description: RNA helicase NPH-II or I8 is found in Poxviridae. It is essential for viral replication and
+  plays an important role during transcription of early mRNAs, presumably by preventing R-loop formation
+  behind the elongating RNA polymerase. It acts as NTP-dependent helicase that catalyzes unidirectional
+  unwinding of 3'tailed duplex RNAs. It might also play a role in the export of newly synthesized mRNA
+  chains out of the core into the cytoplasm and is required for propagation of viral particles [[cite:PUB00053892]].

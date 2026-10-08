@@ -1,0 +1,30 @@
+id: Pfam:PF17384
+pfam_id: PF17384
+name: RimP C-terminal Sm-like domain
+short_name: RimP_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17384
+counters:
+  proteins: 14671
+  matches: 14689
+  proteomes: 14368
+  taxa: 20554
+  structures: 13
+  alphafold_models: 9640
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR028998
+description: This family represents the C-terminal domain from the bacterial ribosome assembly factor
+  RimP. In Gram-negative bacteria, RimP knockout causes slow cell growth whereas in Gram-positive Streptococcus
+  pneumoniae, the deletion of RimP is lethal. RimP is essential for survival under stress conditions in
+  Mycobacterium. RimP is seen in four ribosome assembly states (states A to D) bound on the front of the
+  30S subunit [[cite:PUB00164403]]. RimP contains two domains, an N-terminal and a C-terminal domain having
+  a Sm-like fold, characteristic of the Sm/Lsm superfamily proteins, connected by an unstructured region
+  [[cite:PUB00021814],[cite:PUB00164403]].

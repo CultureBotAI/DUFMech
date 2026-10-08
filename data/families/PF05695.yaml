@@ -1,0 +1,30 @@
+id: Pfam:PF05695
+pfam_id: PF05695
+name: Ycf2 family
+short_name: Ycf2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05695
+counters:
+  proteins: 3134
+  matches: 3819
+  proteomes: 303
+  taxa: 1843
+  structures: 2
+  alphafold_models: 1689
+  domain_architectures: 119
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR056777
+description: This entry, previously known as DUF825, represents Ycf2 protein from Arabidopsis thaliana
+  and related plant proteins. Ycf2 is a component of the Ycf2-FtsHi complex which has been identified
+  as chloroplast import motor. The Ycf2-FtsHi complex is composed of six distinct components. This heterohexameric
+  assembly is organized in a counterclockwise order with components arranged as Ycf2, FtsHi5, FtsHi1,
+  FtsHi2, FtsHi4, and FtsH12 [[cite:PUB00159880]]. A collaborative interplay between the Ycf2-FtsHi complex
+  and the TIC (translocon at the inner chloroplast membrane) complex, contributes to the efficient translocation
+  of preproteins into the chloroplasts [[cite:PUB00159880]].

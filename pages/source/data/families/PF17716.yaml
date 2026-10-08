@@ -1,0 +1,28 @@
+id: Pfam:PF17716
+pfam_id: PF17716
+name: RAB7A-interacting MON1-CCZ1 complex subunit 1
+short_name: RIMC1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17716
+counters:
+  proteins: 943
+  matches: 979
+  proteomes: 765
+  taxa: 2434
+  structures: 0
+  alphafold_models: 851
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR037657
+description: RAB7A-interacting MON1-CCZ1 complex subunit 1 (RIMC1, previously known as UPF0600 protein
+  C5orf51) plays an important role in the removal of damaged mitochondria via mitophagy by controlling
+  the stability and localization of RAB7A. It is required for the recruitment of RAB7A and ATG9A vesicles
+  to damaged mitochondria and promotes the stability of RAB7A by inhibiting its proteasomal degradation
+  during mitophagy [[cite:PUB00100228]].

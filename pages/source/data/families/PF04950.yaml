@@ -1,0 +1,28 @@
+id: Pfam:PF04950
+pfam_id: PF04950
+name: 40S ribosome biogenesis protein Tsr1 and BMS1 C-terminal
+short_name: RIBIOP_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04950
+counters:
+  proteins: 8669
+  matches: 8930
+  proteomes: 3455
+  taxa: 9157
+  structures: 84
+  alphafold_models: 6899
+  domain_architectures: 164
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007034
+description: RIBIOP_C is a family of eukaryotic proteins from the C-terminus of pre-rRNA-processing protein
+  or ribosome biogenesis proteins BMS1 and TSR1. These proteins act, in the nucleolus, as a molecular
+  switch during maturation of the 40S ribosomal subunit [[cite:PUB00072548],[cite:PUB00072547]]. This
+  domain, domain IV of translation elongation factor selb, adopts the same fold as translation proteins
+  such as domain II of GTP-elongation factor Tu proteins [[cite:PUB00038060]].

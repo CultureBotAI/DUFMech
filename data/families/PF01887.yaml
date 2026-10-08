@@ -1,0 +1,28 @@
+id: Pfam:PF01887
+pfam_id: PF01887
+name: SAM hydroxide adenosyltransferase N-terminal domain
+short_name: SAM_HAT_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01887
+counters:
+  proteins: 4611
+  matches: 4632
+  proteomes: 4378
+  taxa: 7070
+  structures: 33
+  alphafold_models: 3211
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046469
+description: This is a family of proteins, previously known as DUF62, found in archaebacteria and bacteria.
+  The structure of proteins in this family is similar to that of a bacterial fluorinating enzyme [[cite:PUB00047427]].
+  S-adenosyl-l-methionine hydroxide adenosyltransferases utilises a rigorously conserved amino acid side
+  chain triad (Asp-Arg-His) which may have a role in activating water to hydroxide ion [[cite:PUB00054078]].
+  This family used to be known as DUF62.

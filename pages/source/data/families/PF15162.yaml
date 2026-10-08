@@ -1,0 +1,30 @@
+id: Pfam:PF15162
+pfam_id: PF15162
+name: Protein SPO16 homolog
+short_name: SCRE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15162
+counters:
+  proteins: 556
+  matches: 558
+  proteomes: 477
+  taxa: 1717
+  structures: 0
+  alphafold_models: 485
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027857
+description: This entry represents the Protein SPO16 homolog (SPO16, also known as Synaptonemal complex
+  reinforcing element SCRE), including the mammalian orthologue of budding yeast Spo16. It plays a key
+  role in reinforcing the integrity of the central element of the synaptonemal complex (SC), resulting
+  in the SC stabilization which ensures the progression of meiotic prophase I in male and female germ
+  cells [1. It promotes homologous recombination and crossing-over in meiotic prophase I via its association
+  with SHOC1 [[cite:PUB00096701]]. It is also required for the localization of TEX11 and MSH4 to recombination
+  intermediates [[cite:PUB00096701]].

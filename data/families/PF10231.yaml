@@ -1,0 +1,28 @@
+id: Pfam:PF10231
+pfam_id: PF10231
+name: Cytochrome c oxidase assembly factor 8
+short_name: COA8
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10231
+counters:
+  proteins: 1836
+  matches: 1842
+  proteomes: 1499
+  taxa: 4636
+  structures: 0
+  alphafold_models: 1633
+  domain_architectures: 41
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018796
+description: Apoptogenic protein 1 (Apop1, also known as cytochrome c oxidase assembly factor 8), previously
+  thought to induce apoptosis through the Cyclophilin-D-dependent pathway [[cite:PUB00086677]], is required
+  for cytochrome c oxidase (COX) assembly and function. Apop1 is controlled by the ubiquitination-proteasome
+  system (UPS) [[cite:PUB00093669]]. In Drosophila melanogaster, Apop1 is also involved in neurological
+  impairment, COX enzymatic activity, and resistance to oxidative stress conditions [[cite:PUB00093671]].

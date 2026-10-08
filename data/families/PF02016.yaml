@@ -1,0 +1,28 @@
+id: Pfam:PF02016
+pfam_id: PF02016
+name: LD-carboxypeptidase N-terminal domain
+short_name: Peptidase_S66
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02016
+counters:
+  proteins: 13359
+  matches: 13365
+  proteomes: 9836
+  taxa: 14121
+  structures: 37
+  alphafold_models: 8109
+  domain_architectures: 31
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040449
+description: Muramoyl-tetrapeptide carboxypeptidase hydrolyses a peptide bond between a di-basic amino
+  acid and the C-terminal D-alanine in the tetrapeptide moiety in peptidoglycan. This cleaves the bond
+  between an L- and a D-amino acid. The function of this activity is in murein recycling. This family
+  also includes the microcin c7 self-immunity protein [swissprot:Q47511]. This family corresponds to Merops
+  family S66.

@@ -1,0 +1,30 @@
+id: Pfam:PF17397
+pfam_id: PF17397
+name: TSX
+short_name: TSX
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17397
+counters:
+  proteins: 371
+  matches: 371
+  proteomes: 340
+  taxa: 1027
+  structures: 0
+  alphafold_models: 352
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR035352
+description: This is a family of unknown function found in Chordata. This domain is located downstream
+  the N-terminal of Fip1 [pfam:PF05182]. Family members such as [swissprot:P70537] and [swissprot:P70675]
+  contain this domain. The Tsx gene resides at the X-inactivation centre and once thought to encode a
+  protein expressed in testis. However, this was disputed upon further analysis. ORF and immunostaining
+  analysis concluded that Tsx may be non-coding. Tsx long transcript is abundantly expressed in meiotic
+  germ cells, embryonic stem cells, and brain. In vertebrates, Fip1 is the evolutionary precursor of eutherian
+  Tsx, hence its location upstream from the Tsx gene [[cite:PUB00085337]].

@@ -1,0 +1,27 @@
+id: Pfam:PF17881
+pfam_id: PF17881
+name: Cell wall elongation regulator TseB-like domain
+short_name: TseB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17881
+counters:
+  proteins: 1545
+  matches: 1545
+  proteomes: 1544
+  taxa: 1991
+  structures: 1
+  alphafold_models: 973
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR041401
+description: This domain is found in the probable cell wall elongation regulator TseB from Bacillus subtilis
+  and similar sequences from firmicutes. TseB is required for normal cell shape. It plays an important
+  role in cell wall elongation during exponential phase and spore outgrowth [[cite:PUB00105892]]. This
+  domain shows an alpha-beta structure.

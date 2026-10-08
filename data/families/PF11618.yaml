@@ -1,0 +1,25 @@
+id: Pfam:PF11618
+pfam_id: PF11618
+name: First C2 domain of RPGR-interacting protein 1
+short_name: C2-C2_1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11618
+counters:
+  proteins: 1856
+  matches: 1956
+  proteomes: 913
+  taxa: 3105
+  structures: 1
+  alphafold_models: 1158
+  domain_architectures: 59
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021656
+description: This domain is the first, more N-terminal, C2 domain on X-linked retinitis pigmentosa GTPase
+  regulator-interacting proteins, or RPGR-interacting proteins [[cite:PUB00074742]].

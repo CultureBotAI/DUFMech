@@ -1,0 +1,26 @@
+id: Pfam:PF08520
+pfam_id: PF08520
+name: Mitofissin
+short_name: Mitofissin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08520
+counters:
+  proteins: 1770
+  matches: 1787
+  proteomes: 1272
+  taxa: 2767
+  structures: 1
+  alphafold_models: 1470
+  domain_architectures: 28
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013726
+description: This is a family of fungal proteins identified as mitochondrial fission factors (mitofissin,
+  also referred to as Atg44) which are essential for mitophagy. Mitofissin directly binds to lipid membranes
+  to drive mitochondrial fission required for mitophagy [[cite:PUB00151415]].

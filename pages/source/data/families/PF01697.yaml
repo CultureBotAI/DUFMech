@@ -1,0 +1,27 @@
+id: Pfam:PF01697
+pfam_id: PF01697
+name: Glycosyltransferase family 92
+short_name: Glyco_transf_92
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01697
+counters:
+  proteins: 12672
+  matches: 12970
+  proteomes: 2717
+  taxa: 6960
+  structures: 2
+  alphafold_models: 10516
+  domain_architectures: 229
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008166
+description: Members of this family act as galactosyltransferases, belonging to glycosyltransferase family
+  92 [[cite:PUB00075505],[cite:PUB00075506],[cite:PUB00075507]]. The aligned region contains several conserved
+  cysteine residues and several charged residues that may be catalytic residues. This is supported by
+  the inclusion of this family in the GT-A glycosyl transferase superfamily.

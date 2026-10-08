@@ -1,0 +1,31 @@
+id: Pfam:PF01937
+pfam_id: PF01937
+name: Damage-control phosphatase ARMT1-like domain
+short_name: ARMT1-like_dom
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01937
+counters:
+  proteins: 9217
+  matches: 9512
+  proteomes: 4951
+  taxa: 11762
+  structures: 16
+  alphafold_models: 7564
+  domain_architectures: 110
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002791
+description: This domain is widely distributed in all domains of life and occur in stand-alone form and
+  as C-terminal fusions to pantothenate kinase (PanK) in plants and animals. They are metal-dependent
+  phosphatases involved in metabolic damage-control processes termed "damage pre-emption" or "housecleaning".
+  S.cerevisiae Damage-control phosphatase YMR027W and the human orthologue Damage-control phosphatase
+  ARMT1 (also known as C6orf211) are involved in response to DNA damage, a damage pre-emption function.
+  Crystal structure of Damage-control phosphatase At2g17340 from Arabidopsis revealed a novel protein
+  fold and several conserved residues coordinating a metal ion (probably Mg2+), which exhibits a high
+  degree of conservation, suggesting that the metal-binding site is central for the function [[cite:PUB00088733]].

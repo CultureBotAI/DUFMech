@@ -1,0 +1,27 @@
+id: Pfam:PF11816
+pfam_id: PF11816
+name: WDR48/Bun107, ubiquitin-like domain
+short_name: Ubl_WDR48-Bun107
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11816
+counters:
+  proteins: 4442
+  matches: 4519
+  proteomes: 3062
+  taxa: 8139
+  structures: 14
+  alphafold_models: 3587
+  domain_architectures: 138
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021772
+description: This entry represents the ubiquitin-like domain of WDR48 and its homologues. WDR48 (also
+  known as UAF1) is a regulator of deubiquitinating complexes [[cite:PUB00092494],[cite:PUB00092495],[cite:PUB00092496]].
+  Bun107 is required for the Ubp9 recruitment to septa and cell tips but also for its enzymatic activity
+  at these specific locations [[cite:PUB00057398]].

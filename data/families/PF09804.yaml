@@ -1,0 +1,26 @@
+id: Pfam:PF09804
+pfam_id: PF09804
+name: DENN domain-containing protein 11
+short_name: DENND11
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09804
+counters:
+  proteins: 2696
+  matches: 2811
+  proteomes: 2225
+  taxa: 5650
+  structures: 0
+  alphafold_models: 2319
+  domain_architectures: 37
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018626
+description: DENN domain-containing protein 11 (also known as LCHN) is thought to play a role in neuritogenesis,
+  as well as in neuronal recovery and/or restructuring in the hippocampus following transient cerebral
+  ischemia [[cite:PUB00092489]].

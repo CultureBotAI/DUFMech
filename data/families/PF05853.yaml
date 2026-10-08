@@ -1,0 +1,27 @@
+id: Pfam:PF05853
+pfam_id: PF05853
+name: beta-keto acid cleavage enzyme
+short_name: BKACE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05853
+counters:
+  proteins: 11546
+  matches: 11865
+  proteomes: 6039
+  taxa: 8565
+  structures: 25
+  alphafold_models: 7293
+  domain_architectures: 34
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008567
+description: BKACE, beta-keto acid cleavage enzyme plays, a role in lysine degradation. In certain instances
+  it catalyses the conversion of 3-keto-5-aminohexanoate and acetyl-CoA into acetoacetate and 3-aminobutyryl-CoA
+  [[cite:PUB00056558]]. The family is found to have at least 14 slightly different potential new enzymatic
+  activities, all of which can therefore be designated as beta-keto acid cleavage enzymes [[cite:PUB00103502]].

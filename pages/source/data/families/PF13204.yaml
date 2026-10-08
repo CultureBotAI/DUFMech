@@ -1,0 +1,27 @@
+id: Pfam:PF13204
+pfam_id: PF13204
+name: Apiosidase-like, catalytic domain
+short_name: Apiosidase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13204
+counters:
+  proteins: 2796
+  matches: 2828
+  proteomes: 1847
+  taxa: 3180
+  structures: 5
+  alphafold_models: 1871
+  domain_architectures: 73
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025277
+description: This entry represents the catalytic domain of endo-apiosidase ([swissprot:Q8A905]) and related
+  proteins, some of which form part of the rhamnogalacturonan-II (RG-II) degradome. This domain adopts
+  an (alpha-beta)8-barrel that harbours the aspartate and glutamate residues essential for the catalytic
+  activity.

@@ -1,0 +1,29 @@
+id: Pfam:PF11852
+pfam_id: PF11852
+name: Alpha-1,6-glucosidases, pullulanase-type, C-terminal
+short_name: Pullul_strch_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11852
+counters:
+  proteins: 3239
+  matches: 3256
+  proteomes: 2756
+  taxa: 4152
+  structures: 28
+  alphafold_models: 1099
+  domain_architectures: 143
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024561
+description: This entry represents the uncharacterised C-terminal domain of secreted (or membrane-anchored)
+  pullulanases of Gram-negative bacteria and pullulanase-type starch debranching enzymes of plants [[cite:PUB00097791]].
+  Both enzymes hydrolyse alpha-1,6 glycosidic linkages. Pullulan is an unusual, industrially important
+  polysaccharide in which short alpha-1,4 chains (maltotriose) are connected in alpha-1,6 linkages. Enzymes
+  that cleave alpha-1,6 linkages in pullulan and release maltotriose are called pullulanases although
+  pullulan itself may not be the natural substrate.

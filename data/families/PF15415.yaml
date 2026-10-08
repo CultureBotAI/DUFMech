@@ -1,0 +1,26 @@
+id: Pfam:PF15415
+pfam_id: PF15415
+name: Fimbrillin-like
+short_name: Mfa_like_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15415
+counters:
+  proteins: 30
+  matches: 30
+  proteomes: 19
+  taxa: 73
+  structures: 1
+  alphafold_models: 24
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR029231
+description: This family of proteins is found in bacteria. Proteins in this family are typically between
+  348 and 360 amino acids in length. Analysis of structural comparisons shows this family to be part of
+  the FimbA (CL0450) superfamily of adhesin components or fimbrillins.

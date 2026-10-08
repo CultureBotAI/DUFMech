@@ -1,0 +1,29 @@
+id: Pfam:PF09313
+pfam_id: PF09313
+name: TehB-like domain
+short_name: TehB-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09313
+counters:
+  proteins: 1552
+  matches: 1552
+  proteomes: 1261
+  taxa: 2093
+  structures: 3
+  alphafold_models: 1007
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015392
+description: This domain, previously known as DUF1971, is found at the N-terminal associated with [pfam:PF03848],
+  and covering the whole length of the sequence in other bacterial uncharacterised proteins. TehB plays
+  a role in both resistance to oxidative damage and haem uptake/utilisation, and is important for virulence
+  of this organism in an animal model of invasive disease. It also protects H.influenzae from tellurite
+  exposure in vitro [[cite:PUB00161042]]. In Escherichia coli, TehB is thought to utilise a methyltransferase
+  activity in the detoxification of tellurite [[cite:PUB00014885]].

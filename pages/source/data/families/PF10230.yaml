@@ -1,0 +1,25 @@
+id: Pfam:PF10230
+pfam_id: PF10230
+name: Lipid-droplet associated hydrolase
+short_name: LIDHydrolase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10230
+counters:
+  proteins: 4186
+  matches: 4380
+  proteomes: 3022
+  taxa: 8090
+  structures: 0
+  alphafold_models: 3502
+  domain_architectures: 79
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019363
+description: This family of proteins is conserved from plants to humans. The function is as a lipid-droplet
+  hydrolase. Human LDAH plays a role in cholesterol homeostasis [[cite:PUB00075335]].

@@ -1,0 +1,41 @@
+id: Pfam:PF05947
+pfam_id: PF05947
+name: Type VI secretion system, TssF
+short_name: T6SS_TssF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05947
+counters:
+  proteins: 5516
+  matches: 5531
+  proteomes: 3423
+  taxa: 4977
+  structures: 3
+  alphafold_models: 3292
+  domain_architectures: 19
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010272
+description: This is a family of Gram-negative bacterial proteins that form part of the type VI pathogenicity
+  secretion system (T6SS) , including TssF. TssF is homologues to phage tail proteins and is required
+  for proper assembly of the Hcp tube (the T6SS inner tube) in bacteria [[cite:PUB00077772]]. T6SSs are
+  toxin delivery systems. It is a multiprotein complex requiring numerous core proteins (Tss proteins)
+  including cytoplasmic, transmembrane, and outer membrane components. The needle or tube apparatus is
+  comprised of a phage-like complex, similar to the T4 contractile bacteriophage tail, which is thought
+  to be anchored to the membrane by a trans-envelope complex [[cite:PUB00090998]]. T6SSs contain 13 conserved
+  components (TssA-TssM) which are thought to form the core apparatus and to enable effector proteins
+  to be injected into target cells in a single cell-contact-dependent step. TssF one of the core components
+  of T6SSs machinery, has been shown to be recruited by TssK into the membrane-associated T6SS complex,
+  contributing to the dynamic mechanism of the system [[cite:PUB00136430]]. Furthermore, it has been reported
+  to interact with TssG proteins stabilizing each other while making contact with TssE, TssK and VgrG
+  as well as with tube and sheath components. Bioinformatic analysis suggest that TssF and TssG share
+  similarities with the J and I proteins of the bacteriophage P2 baseplate respectively. Further experimental
+  studies show that functional TssF and TssK proteins assemble into static foci near the cell envelope.
+  Moreover, biochemical and cytological approaches provide support to the role of TssE, TssF, TssG, TssK
+  and VgrG as T6SS baseplate components and to a sequential recruitment hierarchy (membrane complex, baseplate,
+  tail tube/sheath) during T6SS biogenesis [[cite:PUB00077772]].

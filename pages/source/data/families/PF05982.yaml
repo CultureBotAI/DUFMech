@@ -1,0 +1,27 @@
+id: Pfam:PF05982
+pfam_id: PF05982
+name: Na+-dependent bicarbonate transporter superfamily
+short_name: Sbt_1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05982
+counters:
+  proteins: 2540
+  matches: 2543
+  proteomes: 2201
+  taxa: 3817
+  structures: 5
+  alphafold_models: 1677
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010293
+description: Family of bacterial proteins that are likely to be part of the Na(+)-dependent bicarbonate
+  transporter (sbt) family. Members carry 10TMS in a 5+5 duplicated structure. The loop between helices
+  5 and 6 in Synechocystis PCC6803 is likely to be the location for regulatory mechanisms governing the
+  activation of the transporter [[cite:PUB00075354]].

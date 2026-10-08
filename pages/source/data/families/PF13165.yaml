@@ -1,0 +1,28 @@
+id: Pfam:PF13165
+pfam_id: PF13165
+name: Six-cysteine peptide SCIFF
+short_name: SCIFF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13165
+counters:
+  proteins: 980
+  matches: 983
+  proteomes: 974
+  taxa: 1678
+  structures: 0
+  alphafold_models: 672
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR023975
+description: Members of this protein family are essentially universal in the class Clostidia and therefore
+  highly abundant in the human gut microbiome. This short peptide is designated SCIFF, for Six Cysteines
+  in Forty-Five residues. It is a presumed ribosomal natural product precursor, always found associated
+  with a yet-uncharacterised radical SAM protein that resembles other peptide modification radical SAM
+  enzymes and is designated SCIFF radical SAM maturase [[cite:PUB00055953]].

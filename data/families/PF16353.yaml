@@ -1,0 +1,25 @@
+id: Pfam:PF16353
+pfam_id: PF16353
+name: Beta-galactosidase, domain 4
+short_name: LacZ_4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16353
+counters:
+  proteins: 9741
+  matches: 9745
+  proteomes: 5673
+  taxa: 9165
+  structures: 107
+  alphafold_models: 5882
+  domain_architectures: 163
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032312
+description: This entry represents domain 4 found in beta-galactosidase [[cite:PUB00004183]] and it is
+  organised in a jelly-roll type barrel (Rutkiewicz-Krotewicz M. et al. Crystals 2018, 8(1), 13, https://doi.org/10.3390/cryst8010013).

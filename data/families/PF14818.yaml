@@ -1,0 +1,30 @@
+id: Pfam:PF14818
+pfam_id: PF14818
+name: SOGA 1/2-like, coiled-coil
+short_name: SOGA1-2-like_CC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14818
+counters:
+  proteins: 2945
+  matches: 2946
+  proteomes: 745
+  taxa: 2252
+  structures: 0
+  alphafold_models: 735
+  domain_architectures: 19
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027882
+description: This entry represents a coiled-coil region found in microtubule cross-linking factors 1 and
+  2 (also known as SOGA1/2), which are members of the SOGA (suppressor of glucose by autophagy) family
+  and in the uncharacterised human protein KIAA0408. SOGA1 regulates autophagy by playing a role in the
+  reduction of glucose production in an adiponectin- and insulin-dependent manner [[cite:PUB00067397]].
+  SOGA1/2 are required for faithful chromosome segregation during mitosis [[cite:PUB00153172]]. These
+  proteins contain long coiled-coils that dimerize and holds two N-terminal domains that bind to microtubules
+  [[cite:PUB00153172]]. This region is found in association with [pfam:PF11365].

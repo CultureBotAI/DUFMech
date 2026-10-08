@@ -1,0 +1,27 @@
+id: Pfam:PF02410
+pfam_id: PF02410
+name: Ribosomal silencing factor during starvation
+short_name: RsfS
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02410
+counters:
+  proteins: 21229
+  matches: 21269
+  proteomes: 20133
+  taxa: 31990
+  structures: 56
+  alphafold_models: 14690
+  domain_architectures: 103
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: This family is expressed by almost all bacterial and eukaryotic genomes but not by archaea.
+  Its function is to down-regulate protein synthesis under conditions of nutrient shortage, and it does
+  this by binding to protein L14 of the large ribosomal subunit, thus acting as a ribosomal silencing
+  factor (RsfS) by blocking the joining of the ribosomal subunits [[cite:PUB00064845]]. This family is
+  structurally homologous to nucleotidyltransferases.

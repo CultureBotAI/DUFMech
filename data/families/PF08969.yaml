@@ -1,0 +1,25 @@
+id: Pfam:PF08969
+pfam_id: PF08969
+name: USP8 dimerisation domain
+short_name: USP8_dimer
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08969
+counters:
+  proteins: 6744
+  matches: 6751
+  proteomes: 2859
+  taxa: 7794
+  structures: 4
+  alphafold_models: 5723
+  domain_architectures: 112
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015063
+description: This domain is predominantly found in the amino terminal region of Ubiquitin carboxyl-terminal
+  hydrolase 8 (USP8). It forms a five helical bundle that dimerises [[cite:PUB00039203]].

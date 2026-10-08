@@ -1,0 +1,25 @@
+id: Pfam:PF07910
+pfam_id: PF07910
+name: Peptidase family C78
+short_name: Peptidase_C78
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07910
+counters:
+  proteins: 6486
+  matches: 6856
+  proteomes: 3027
+  taxa: 8183
+  structures: 8
+  alphafold_models: 5506
+  domain_architectures: 145
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012462
+description: This family formerly known as DUF1671 has been shown to be a cysteine peptidase called (Ufm1)-specific
+  protease [[cite:PUB00034739]].

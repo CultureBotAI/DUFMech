@@ -1,0 +1,27 @@
+id: Pfam:PF02578
+pfam_id: PF02578
+name: Multi-copper polyphenol oxidoreductase laccase
+short_name: Cu-oxidase_4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02578
+counters:
+  proteins: 15217
+  matches: 15292
+  proteomes: 14656
+  taxa: 22070
+  structures: 13
+  alphafold_models: 9887
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003730
+description: Laccases are multi-copper oxidoreductases able to oxidise a wide variety of phenolic and
+  non-phenolic compounds and are widely distributed among both prokaryotes and eukaryotes. There are two
+  main active catalytic sites with conserved histidines that are capable of binding four copper atoms
+  [[cite:PUB00044734]].

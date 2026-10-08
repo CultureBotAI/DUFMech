@@ -1,0 +1,30 @@
+id: Pfam:PF11351
+pfam_id: PF11351
+name: Holin of 3TMs, for gene-transfer release
+short_name: GTA_holin_3TM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11351
+counters:
+  proteins: 1476
+  matches: 1476
+  proteomes: 1335
+  taxa: 2117
+  structures: 0
+  alphafold_models: 1007
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021497
+description: This is a family of bacterial 3TM holins. In Rhodobacter capsulatus the protein is expressed
+  just overlapping and downstream of a putative N-acetylmuramidase lysozyme (an endolysin) thought to
+  be responsible for lysing a phage particle, RcGTA - a gene-transfer agent. A holin would be necessary
+  for such an endolysin to access the peptidoglycan [[cite:PUB00075656]]. Gene-transfer agents are bacteriophage-like
+  genetic elements with the sole known function of horizontal gene transfer, serving an important role
+  in microbial evolution. In order to be released from the cell these require the combined action of an
+  endolysin and this holin [[cite:PUB00075657]].

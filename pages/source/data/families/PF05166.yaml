@@ -1,0 +1,26 @@
+id: Pfam:PF05166
+pfam_id: PF05166
+name: YcgL domain
+short_name: YcgL
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05166
+counters:
+  proteins: 2833
+  matches: 2833
+  proteomes: 2746
+  taxa: 3707
+  structures: 1
+  alphafold_models: 1822
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027354
+description: This family of proteins formerly called DUF709 includes the E. coli gene ycgL. Homologues
+  of YcgL are found in gammaproteobacteria. The structure of this protein shows a novel alpha/beta/alpha
+  sandwich structure [[cite:PUB00041298]].

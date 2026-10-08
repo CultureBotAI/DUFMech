@@ -1,0 +1,26 @@
+id: Pfam:PF07191
+pfam_id: PF07191
+name: Double zinc ribbon
+short_name: Zn_ribbon_6
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07191
+counters:
+  proteins: 700
+  matches: 700
+  proteomes: 691
+  taxa: 1045
+  structures: 2
+  alphafold_models: 436
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010807
+description: This family consists of several short, hypothetical bacterial proteins of around 70 residues
+  in length. Members of this family have 8 highly conserved cysteine residues, which form two zinc beta-ribbon
+  domains.

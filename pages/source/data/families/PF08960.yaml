@@ -1,0 +1,28 @@
+id: Pfam:PF08960
+pfam_id: PF08960
+name: STIV B116-like
+short_name: STIV_B116-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08960
+counters:
+  proteins: 143
+  matches: 143
+  proteomes: 135
+  taxa: 475
+  structures: 8
+  alphafold_models: 92
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015055
+description: The sulfolobus turreted icosahedral virus (STIV) infects Sulfolobus species found in the
+  hot springs of Yellowstone National Park. It has 37 ORFs including B116, whose function is unknown.
+  The structure of B116 reveals a fold consisting of a five-stranded beta-sheet flanked on one side by
+  three alpha helices. Two subunits come together to form a homodimer with a 10-stranded mixed beta-sheet,
+  where the topology of the central strands resembles an unclosed beta-barrel [[cite:PUB00041899]].

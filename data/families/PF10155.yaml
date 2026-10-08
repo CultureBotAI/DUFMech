@@ -1,0 +1,26 @@
+id: Pfam:PF10155
+pfam_id: PF10155
+name: CCR4-NOT transcription complex subunit 11
+short_name: CNOT11
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10155
+counters:
+  proteins: 2977
+  matches: 3017
+  proteomes: 2128
+  taxa: 6464
+  structures: 5
+  alphafold_models: 2551
+  domain_architectures: 56
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019312
+description: This is a family of unknown function found in eukaryotes. Family members include CNOT 11
+  a subunit of the CCR4-NOT. CNOT11 was shown to interact with the first amino acids of CNOT1 and with
+  CNOT10 and to be required for the association of CNOT10 with the CCR4-NOT complex.

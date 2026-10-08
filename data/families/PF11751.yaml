@@ -1,0 +1,28 @@
+id: Pfam:PF11751
+pfam_id: PF11751
+name: Type IX secretion system membrane protein PorP/SprF
+short_name: PorP_SprF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11751
+counters:
+  proteins: 11687
+  matches: 11693
+  proteomes: 1926
+  taxa: 2652
+  structures: 0
+  alphafold_models: 7659
+  domain_architectures: 18
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019861
+description: This entry describes a protein family unique to, and greatly expanded in, the Bacteriodetes.
+  Species in this lineage include several, such as Cytophaga hutchinsonii and Cytophaga johnsonae (Flavobacterium
+  johnsoniae), that exhibit a poorly understood rapid gliding phenotype. Several members of this protein
+  family are found in operons with other genes whose loss leads to a loss of the rapid gliding phenotype
+  [[cite:PUB00074052],[cite:PUB00074053]].

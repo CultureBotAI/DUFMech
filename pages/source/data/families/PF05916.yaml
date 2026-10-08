@@ -1,0 +1,28 @@
+id: Pfam:PF05916
+pfam_id: PF05916
+name: GINS complex protein helical bundle domain
+short_name: Sld5
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05916
+counters:
+  proteins: 13691
+  matches: 13694
+  proteomes: 3614
+  taxa: 9502
+  structures: 51
+  alphafold_models: 11723
+  domain_architectures: 205
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021151
+description: This entry represents the C-terminal alpha helical bundle domain. The eukaryotic GINS complex
+  is essential for the initiation and elongation phases of DNA replication [[cite:PUB00012381],[cite:PUB00015004],[cite:PUB00152224]].
+  It consists of four paralogous protein subunits (Sld5, Psf1, Psf2 and Psf3), all of which are included
+  in this family. The GINS complex is conserved from yeast to humans, and has been shown in human to bind
+  directly to DNA primase [[cite:PUB00109209]].

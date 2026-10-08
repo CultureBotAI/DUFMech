@@ -1,0 +1,26 @@
+id: Pfam:PF10180
+pfam_id: PF10180
+name: WKF domain
+short_name: WKF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10180
+counters:
+  proteins: 2470
+  matches: 2473
+  proteomes: 2183
+  taxa: 5778
+  structures: 0
+  alphafold_models: 2070
+  domain_architectures: 33
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019327
+description: This is the C-terminal conserved region of a family of proteins found from fungi to humans.
+  The domain is named WKF after a conserved sequence motif. This domain has been shown to bind RNA [[cite:PUB00101041]].
+  This domain was previously known as DUF2373.

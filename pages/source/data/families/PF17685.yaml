@@ -1,0 +1,27 @@
+id: Pfam:PF17685
+pfam_id: PF17685
+name: Transmembrane protein 250
+short_name: TM250
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17685
+counters:
+  proteins: 696
+  matches: 698
+  proteomes: 656
+  taxa: 2055
+  structures: 0
+  alphafold_models: 634
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR041156
+description: This family includes human Transmembrane protein 250 (TM250) and similar proteins from vertebrates.
+  TM250 is involved in cellular processes related to cell proliferation, specifically by aiding the transition
+  into the S phase of the cell cycle. Additionally, it has a role in viral pathogenesis, as it is known
+  to enhance the proliferation of human herpes simplex virus 1 (HHV-1) [[cite:PUB00155240]].

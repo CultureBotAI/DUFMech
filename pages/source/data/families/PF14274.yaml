@@ -1,0 +1,26 @@
+id: Pfam:PF14274
+pfam_id: PF14274
+name: BT_3044-like, C-terminal
+short_name: BT_3044-like_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14274
+counters:
+  proteins: 411
+  matches: 411
+  proteomes: 250
+  taxa: 416
+  structures: 4
+  alphafold_models: 292
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025371
+description: This entry represents a domain found at the C-terminal end of a group of proteins from bacteroidetes,
+  including BT_3044 from Bacteroides thetaiotaomicron, a glycan binding enzyme that could degrade oligosaccharides
+  or even large molecular size glycans [[cite:PUB00152802]].

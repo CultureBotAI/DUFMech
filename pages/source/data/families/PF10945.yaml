@@ -1,0 +1,29 @@
+id: Pfam:PF10945
+pfam_id: PF10945
+name: Cellulose biosynthesis protein BcsR-like
+short_name: CBP_BcsR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10945
+counters:
+  proteins: 624
+  matches: 624
+  proteomes: 606
+  taxa: 847
+  structures: 9
+  alphafold_models: 389
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024487
+description: Cellulose is necessary for biofilm formation in bacteria and is synthesized by the bacterial
+  cellulose biosynthesis complex (Bcs) which is widespread among beta and gamma proteobacteria [[cite:PUB00075887],[cite:PUB00105928]].
+  CBP_BcsR is a small subunit of this complex, essential for cellulose secretion [[cite:PUB00105928]].
+  It may play a regulatory role together with BcsQ subunit as they form a subcomplex with chaperone-like
+  function toward each other [[cite:PUB00151583]]. BcsR stabilizes BcsQ to form monodisperse BcsR2Q2 heterotetramers
+  in solution and BcsQ may play a role in the folding and subsequent stability of BcsR [[cite:PUB00151583]].

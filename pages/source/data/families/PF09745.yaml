@@ -1,0 +1,27 @@
+id: Pfam:PF09745
+pfam_id: PF09745
+name: Nuclear speckle splicing regulatory protein 1, N-terminal
+short_name: NSRP1_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09745
+counters:
+  proteins: 3772
+  matches: 3787
+  proteomes: 3150
+  taxa: 8427
+  structures: 0
+  alphafold_models: 3230
+  domain_architectures: 73
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018612
+description: This domain is found at the N-terminal of Nuclear speckle splicing regulatory protein 1 (NRP1,
+  also known as Nuclear speckle-related protein 70 and Coiled-coil domain-containing protein 55) and contains
+  a coiled-coil domain that plays a critical role in NRP1 alternative splicing activity and self-oligomerization.
+  NRP1 is a RNA-binding protein that mediates pre-mRNA alternative splicing regulation [[cite:PUB00093376],[cite:PUB00093375]].

@@ -1,0 +1,29 @@
+id: Pfam:PF13907
+pfam_id: PF13907
+name: Chromodomain-helicase-DNA-binding protein 1-like, C-terminal
+short_name: CHD1-like_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13907
+counters:
+  proteins: 6052
+  matches: 6053
+  proteomes: 2985
+  taxa: 7935
+  structures: 8
+  alphafold_models: 905
+  domain_architectures: 106
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025260
+description: This domain is found at the C-terminus of chromodomain-helicase-DNA-binding proteins, including
+  Chromodomain-helicase-DNA-binding protein 1 from humans (CHD1), an ATP-dependent chromatin-remodeling
+  factor which acts as substrate recognition component of the transcription regulatory histone acetylation
+  (HAT) complex SAGA. This helical domain consists of five alpha-helices organised in a variant helical
+  bundle topology. Its surface is positively charged and can bind dsDNA and nucleosomes, but its specific
+  function remains unknown [[cite:PUB00100856],[cite:PUB00100857],[cite:PUB00091268]].

@@ -1,0 +1,31 @@
+id: Pfam:PF14203
+pfam_id: PF14203
+name: Putative transposon-transfer assisting protein
+short_name: TTRAP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14203
+counters:
+  proteins: 567
+  matches: 567
+  proteomes: 270
+  taxa: 505
+  structures: 1
+  alphafold_models: 353
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025468
+description: TTRAP is a family of small bacterial proteins largely from Clostrium difficile. From comparative
+  and other structural studies of the PDB:2L7K, UniProtKB:Q18AW3, it has been suggested that this family
+  is required for interacting with other proteins in order to facilitate the transfer of the transposon
+  CTn4 between different bacterial species. PDB:2L7K comprises an alpha-helical fold of four alpha-helices
+  leading to the production of two clefts, the larger of which displays two highly conserved residues
+  in close proximity, Glu-8 and Lys-48. The gene concerned is part of an operon within transposon CTn4,
+  and is expressed alongside a putative DNA primase, a DNA topoisomerase and conjugal transfer proteins
+  [[cite:PUB00075684]].

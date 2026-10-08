@@ -1,0 +1,28 @@
+id: Pfam:PF14908
+pfam_id: PF14908
+name: CCDC81 eukaryotic HU domain 1
+short_name: HU-CCDC81_euk_1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14908
+counters:
+  proteins: 1262
+  matches: 1264
+  proteomes: 801
+  taxa: 2643
+  structures: 9
+  alphafold_models: 1098
+  domain_architectures: 38
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR028034
+description: This is the first of two HU domains found in the CCDC81-like proteins. CCDC81 has been experimentally
+  linked to the centrosome; eukaryotic CCDC81 HU domains are predicted to function in protein-protein
+  interactions in centrosome organization and potentially contribute to cargo-binding in conjunction with
+  Dynein-VII. A striking lineage-specific expansion of the domain is observed in birds, where the HU domains
+  could function in recognition of non-self molecules [[cite:PUB00091007]].

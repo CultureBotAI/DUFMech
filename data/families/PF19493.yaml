@@ -1,0 +1,28 @@
+id: Pfam:PF19493
+pfam_id: PF19493
+name: Trypsin-co-occurring domain 1
+short_name: Trypco1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19493
+counters:
+  proteins: 2475
+  matches: 2475
+  proteomes: 1433
+  taxa: 2137
+  structures: 0
+  alphafold_models: 1210
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045794
+description: Trypsin-like peptidase effector in the classical NTP-dependent ternary system (vWA-MoxR-VMAP)
+  frequently co-occurs with one of two proteins (Trypco1 or Trypco2) which are mostly mutually exclusively
+  [[cite:PUB00098776]]. This entry represents a member of a biosynthetic gene cluster (BGC). This BGC
+  (BGC0000703) is described by MIBiG as an example of the following biosynthetic class, saccharide, in
+  particular the kanamycin biosynthetic gene cluster from Streptomyces kanamyceticus [[cite:PUB00098882]].

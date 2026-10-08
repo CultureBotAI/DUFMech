@@ -1,0 +1,30 @@
+id: Pfam:PF02623
+pfam_id: PF02623
+name: FliW protein
+short_name: FliW
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02623
+counters:
+  proteins: 3298
+  matches: 3305
+  proteomes: 3142
+  taxa: 5053
+  structures: 4
+  alphafold_models: 2217
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003775
+description: 'The protein BSU35380 from Bacillus subtilis (renamed FliW) was characterised as being a
+  flagellar assembly factor. Experimental characterisation was also carried out in Treponema pallidum
+  (TP0658). In Campylobacter jejuni, Cj1075 has been shown to be involved in motility and flagellin biosynthesis.
+  The two paralogues in Helicobacter pylori (HP1154 and HP1377) were found to be able to bind to flagellin.
+  FliW proteins are involved in flagellar assembly [[cite:PUB00067598]]. FliW is part of a three-part
+  feedback loop: in Bacillus subtilis FliW inhibits CsrA (an RNA-binding protein) which inhibits FliC
+  translation; hence FliW is required for FliC (flagellin) production [[cite:PUB00067599]].'

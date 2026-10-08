@@ -1,0 +1,31 @@
+id: Pfam:PF06327
+pfam_id: PF06327
+name: Adenylate cyclase, conserved domain
+short_name: Adcy_cons_dom
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06327
+counters:
+  proteins: 8560
+  matches: 8592
+  proteomes: 1178
+  taxa: 3902
+  structures: 4
+  alphafold_models: 6799
+  domain_architectures: 63
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009398
+description: 'Adenylate cyclase (AC) enzyme uses ATP as its substrate to produce Cyclic AMP (cAMP), a
+  ubiquitous signalling molecule that mediates many cellular processes by activating cAMP- dependent kinases
+  and also inducing protein-protein interactions. Mammalian adenylate cyclase has nine closely related
+  membrane-bound isoforms (AC1-9) showing significant sequence homology and sharing the same overall structure:
+  two hydrophobic transmembrane domains, and two cytoplasmic domains that are responsible for the catalytic
+  activity. These isoforms differ in both their tissue specificity and their regulation [[cite:PUB00034664],[cite:PUB00034665]].
+  This entry represents a region of unknown function found in many of these isoforms. It is part of the
+  N-terminal cytoplasmic domain but its presence is not necessary for catalytic activity [[cite:PUB00034666]].'

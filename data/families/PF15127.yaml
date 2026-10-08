@@ -1,0 +1,28 @@
+id: Pfam:PF15127
+pfam_id: PF15127
+name: Small membrane A-kinase anchor protein
+short_name: SmAKAP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15127
+counters:
+  proteins: 678
+  matches: 678
+  proteomes: 631
+  taxa: 1983
+  structures: 1
+  alphafold_models: 628
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027969
+description: SmAKAP is a small membrane-bound PKA-RI-specific protein kinase A-anchoring protein, referred
+  to as small membrane-AKAP. It is probably tethered to the plasma membrane most through a dual acylation
+  of its N-terminal Met-Gly-Cys- motif (myristoylation and palmitoylation, respectively). It specifically
+  targets PKA-RI isoforms to the plasma membrane. It localizes to plasma membranes, is enriched at cell-cell
+  junctions and associates with filopodia [[cite:PUB00067440]].

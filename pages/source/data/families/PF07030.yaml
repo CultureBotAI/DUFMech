@@ -1,0 +1,25 @@
+id: Pfam:PF07030
+pfam_id: PF07030
+name: Bacteriophage Mu, Gp36
+short_name: Phage_Mu_Gp36
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07030
+counters:
+  proteins: 1428
+  matches: 1428
+  proteomes: 1178
+  taxa: 2491
+  structures: 6
+  alphafold_models: 891
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009752
+description: This family is represented by the Bacteriophage Mu, Gp36. The characteristics of the protein
+  distribution suggest prophage matches in addition to the phage matches.

@@ -1,0 +1,32 @@
+id: Pfam:PF04768
+pfam_id: PF04768
+name: NAT, N-acetyltransferase, of N-acetylglutamate synthase
+short_name: NAT
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04768
+counters:
+  proteins: 4045
+  matches: 4354
+  proteomes: 2336
+  taxa: 5183
+  structures: 10
+  alphafold_models: 3250
+  domain_architectures: 68
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006855
+description: 'This is the C-terminal NAT or N-acetyltransferase domain of bifunctional N-acetylglutamate
+  synthase/kinases. It catalyzes the first two steps in arginine biosynthesis. This domain contains the
+  putative NAGS - N-acetylglutamate synthase - active site. It is found at the C-terminus of Neurospora
+  crassa acetylglutamate synthase - amino-acid acetyltransferase, EC: 2.3.1.1. It is also found C-terminal
+  to the amino acid kinase region ([pfam:PF00696]) in some fungal acetylglutamate kinase enzymes [[cite:PUB00110296]].
+  it stabilises the yeast NAGK, N-acetyl-L-glutamate kinase, slows catalysis and modulates feed-back inhibition
+  by arginine [[cite:PUB00059379]]. This domain is found to be the N-acetyltransferase (NAT) domain, and
+  it has a typical GCN5-related NAT fold and a site that catalyzes NAG synthesis which is located >25
+  Angstrom away from the L-arginine binding site in the N-terminal domain [pfam:PF00696] [[cite:PUB00074836]].'

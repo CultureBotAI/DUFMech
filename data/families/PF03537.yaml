@@ -1,0 +1,26 @@
+id: Pfam:PF03537
+pfam_id: PF03537
+name: Glycoside-hydrolase family GH114
+short_name: Glyco_hydro_114
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03537
+counters:
+  proteins: 5821
+  matches: 5859
+  proteomes: 3947
+  taxa: 6464
+  structures: 10
+  alphafold_models: 3876
+  domain_architectures: 91
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004352
+description: This family is recognised as a glycosyl-hydrolase family, number 114. It is endo-alpha-1,4-polygalactosaminidase,
+  a rare enzyme. It is proposed to be TIM-barrel, the most common structure amongst the catalytic domains
+  of glycosyl-hydrolases [[cite:PUB00066755]].

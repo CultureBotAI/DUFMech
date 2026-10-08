@@ -1,0 +1,27 @@
+id: Pfam:PF14121
+pfam_id: PF14121
+name: Putative porin
+short_name: Porin_10
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14121
+counters:
+  proteins: 2097
+  matches: 2102
+  proteomes: 2077
+  taxa: 2749
+  structures: 0
+  alphafold_models: 1357
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025631
+description: This family of membrane bet-barrel proteins is functionally uncharacterised. This family
+  of proteins is found in bacteria. Proteins in this family are typically between 655 and 722 amino acids
+  in length. [swissprot:Q2S343] is identified by Gene3D as a membrane bound beta-barrel. These sequences
+  are putative porins.

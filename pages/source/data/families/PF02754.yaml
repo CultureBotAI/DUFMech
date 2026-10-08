@@ -1,0 +1,29 @@
+id: Pfam:PF02754
+pfam_id: PF02754
+name: Cysteine-rich domain
+short_name: CCG
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02754
+counters:
+  proteins: 37412
+  matches: 67945
+  proteomes: 14229
+  taxa: 20217
+  structures: 19
+  alphafold_models: 23792
+  domain_architectures: 142
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004017
+description: The key element of this domain is the CX31-38CCX33-34CXXC sequence motif normally found at
+  the C-terminus in archaeal and bacterial Hdr-like proteins [[cite:PUB00109129]]. There may be one or
+  two copies, and the motif is probably an iron-sulfur binding cluster. In some instances one of the cysteines
+  is replaced by an aspartate, and aspartate can in principle also function as a ligand of an iron-sulfur
+  cluster [[cite:PUB00109129]]. The entry includes a subunit from heterodisulphide reductase and a subunit
+  from glycolate oxidase ([swissprot:P52074]) [[cite:PUB00007282]] and glycerol-3-phosphate dehydrogenase.

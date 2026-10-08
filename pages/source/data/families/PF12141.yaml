@@ -1,0 +1,29 @@
+id: Pfam:PF12141
+pfam_id: PF12141
+name: Beta-mannosyltransferases
+short_name: BMT
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12141
+counters:
+  proteins: 525
+  matches: 808
+  proteomes: 154
+  taxa: 389
+  structures: 0
+  alphafold_models: 429
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021988
+description: This entry represents a group of fungal beta-mannosyltransferase that are involved in cell
+  wall biosynthesis [[cite:PUB00086020]]. For example, in Candida albicans, BMT1-4 enzymes act stepwise
+  to add beta-mannoses on to cell-wall phosphopeptidomannan (PPM). While Bmt5 and Bmt6 are involved in
+  the addition of the first and third beta-mans to phospholipomannan (PLM), respectively [[cite:PUB00097617]].
+  Furthermore, in Saccharomyces cerevisiae, BMT5 and BMT6 are responsible for methylation of uridine residues
+  in the 25S rRNA [[cite:PUB00075659]].

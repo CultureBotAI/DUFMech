@@ -1,0 +1,28 @@
+id: Pfam:PF11822
+pfam_id: PF11822
+name: SANT and BTB domain regulator of CSR, BTB domain
+short_name: BTB_SANBR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11822
+counters:
+  proteins: 1467
+  matches: 1469
+  proteomes: 934
+  taxa: 3290
+  structures: 0
+  alphafold_models: 1256
+  domain_architectures: 29
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021777
+description: Class switch recombination (CSR) is the process by which B cells switch production from IgM/IgD
+  to other immunoglobulin isotypes in the immune response process. This entry represents the BTB domain
+  found at the N-terminal half of the protein SANT and BTB domain regulator of class switch recombination
+  (SANBR, previously known as KIAA1841). This domain is responsible for the negative regulation of CSR
+  [[cite:PUB00099259]].

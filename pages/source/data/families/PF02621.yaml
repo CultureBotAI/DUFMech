@@ -1,0 +1,29 @@
+id: Pfam:PF02621
+pfam_id: PF02621
+name: Menaquinone biosynthesis
+short_name: VitK2_biosynth
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02621
+counters:
+  proteins: 6058
+  matches: 6185
+  proteomes: 3141
+  taxa: 4752
+  structures: 13
+  alphafold_models: 3768
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003773
+description: This family includes two enzymes which are involved in menaquinone biosynthesis. One which
+  catalyses the conversion of cyclic de-hypoxanthine futalosine to 1,4-dihydroxy-6-naphthoate, and one
+  which may be involved in the conversion of chorismate to futalosine [[cite:PUB00045374]]. These enzymes
+  comprise two domains with alpha/beta structures, a large domain and a small domain. A pocket between
+  the two domains may form the active site, a conserved histidine located within this pocket could be
+  the catalytic base [[cite:PUB00057460]].

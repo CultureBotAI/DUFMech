@@ -1,0 +1,31 @@
+id: Pfam:PF20137
+pfam_id: PF20137
+name: Bacterial ubiquitination-like system serine protease (BubE)
+short_name: BubE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20137
+counters:
+  proteins: 801
+  matches: 801
+  proteomes: 743
+  taxa: 1575
+  structures: 0
+  alphafold_models: 450
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045384
+description: This family of proteins is functionally uncharacterised. This family This entry represents
+  a novel family of serine proteases (BubE) that function in bacterial ubiquitination-like (Bub) pathways.
+  BubE proteins contain a conserved serine-histidine catalytic dyad that can cleave both peptide and isopeptide
+  bonds. The proteins also contain a conserved C4 zinc finger motif formed by four cysteine residues.
+  BubE appears to negatively regulate Bub activity by cleaving ubiquitin-like protein-target conjugates.
+  The proteins often contain hydrophobic N- or C-terminal extensions that may mediate association with
+  membranes. BubE proteins are found in both Type I and Type II Bub operons, which encode components of
+  bacterial protein conjugation systems that function through unusual oxyester intermediates.

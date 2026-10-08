@@ -1,0 +1,26 @@
+id: Pfam:PF02618
+pfam_id: PF02618
+name: YceG-like family
+short_name: YceG
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02618
+counters:
+  proteins: 18081
+  matches: 18210
+  proteomes: 16741
+  taxa: 23234
+  structures: 4
+  alphafold_models: 11324
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003770
+description: This family of proteins is found in bacteria. Proteins in this family are typically between
+  332 and 389 amino acids in length. This family was previously incorrectly annotated and names as aminodeoxychorismate
+  lyase. The structure of [swissprot:P28306] was solved by X-ray crystallography.

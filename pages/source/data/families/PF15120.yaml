@@ -1,0 +1,27 @@
+id: Pfam:PF15120
+pfam_id: PF15120
+name: Sperm acrosome-associated protein 9
+short_name: SPACA9
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15120
+counters:
+  proteins: 794
+  matches: 816
+  proteomes: 570
+  taxa: 1757
+  structures: 12
+  alphafold_models: 714
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027818
+description: This family of proteins found in eukaryotes represents sperm acrosome-associated protein
+  9 (SPACA9, previously known as C9orf9 or MAST). Sperm acrosome-associated protein 9 has been suggested
+  to form a complex with calcium-binding proteins calreticulin and caldendrin localised to the acrosome.
+  Despite this, no known protein interaction motifs have been identified in MAST/SPACA9 [[cite:PUB00080694]].

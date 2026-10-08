@@ -2,7 +2,8 @@
 
 `download.yaml` inventories the 20 implemented source pipelines. It was reviewed
 against every existing source-freeze module, the source roadmap, the October 1
-pilot reports, and the retained manifests on **2026-10-07**. The derived score
+pilot reports, and the retained manifests on **2026-10-07**; the InterPro/Pfam and
+cross-Mech entries were updated on **2026-10-08** for the EX_DUF migration. The derived score
 writer is covered by the writer audit; it is not a twenty-first upstream source.
 No provider data is fetched by the governance checker.
 
@@ -38,14 +39,14 @@ pipelines still awaiting inputs. Queue priority 1 is highest, 5 lowest.
 
 The legacy cross-Mech source is `enrichment` in the catalogue because its
 artifacts are already present, but `BLOCKED` in the adoption queue because the
-combined licensing review is unfinished. The checker warns about both retained
-manifests. It does not remove, relicense, redownload, or redate historical data.
+combined licensing review is unfinished. The checker warns about all three
+retained manifests (October 5, 6 and 8; the latter two are offline relabels). It does not remove, relicense, redownload, or redate historical data.
 
 ## Implemented Inventory
 
 | Pipeline | Implemented input | Retained observation and next gate |
 | --- | --- | --- |
-| InterPro/Pfam | Pfam entry API | October 1 worklist and October 5 offline label correction retained; ADOPTED |
+| InterPro/Pfam | Pfam entry API | October 1 worklist, October 5 offline label correction and October 8 EX_DUF migration (1,763 added) retained; ADOPTED |
 | UniProtKB/UniRef | InterPro members, UniProtKB search, ID mapping | October 7 bounded PF04149 domain-view freeze: 2 rows retained; ADOPTED as reference evidence |
 | MGnify | Pfam cluster-representative API | External pilot: 12 rows; data terms unverified |
 | AlphaFold DB | Prediction metadata API | External pilot: 12 rows; no committed evidence freeze |
@@ -64,7 +65,7 @@ manifests. It does not remove, relicense, redownload, or redate historical data.
 | UniParc | UniProt ID mapping | External pilot: 12 identity rows; no direct characterization score input |
 | Pfam previous identifiers | Pinned Pfam 38.2 `Pfam-A.seed.gz` headers | October 7 freeze: 1,834 families with a former DUF/UPF name; ADOPTED as reference |
 | UniProtKB example candidates | Per-family UniProtKB search by Pfam cross-reference | October 7 freeze for TraitMech and ProteinTraitsMech DUF gaps; ADOPTED as reference candidates |
-| Cross-Mech | Pinned sibling git records and UniProt cache | October 5 scan and October 6 offline derivation retained; combined terms unverified |
+| Cross-Mech | Pinned sibling git records and UniProt cache | October 5 scan with October 6 and October 8 offline derivations retained (October 8 records unscanned EX_DUF families); combined terms unverified |
 
 Pilot counts above come from
 [the expanded freeze report](provenance/expanded-first-pass-freeze-2026-10-01.md),

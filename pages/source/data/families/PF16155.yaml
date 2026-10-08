@@ -1,0 +1,29 @@
+id: Pfam:PF16155
+pfam_id: PF16155
+name: 4-hydroxylaminobenzoate lyase
+short_name: PnbB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16155
+counters:
+  proteins: 851
+  matches: 854
+  proteomes: 764
+  taxa: 1350
+  structures: 0
+  alphafold_models: 601
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032345
+description: This family, previously known as DUF4863, represents 4-hydroxylaminobenzoate lyase (PnbB)
+  and related proteins mainly found in various proteobacteria, but also several fungal species. PnbB catalyses
+  the conversion of 4-hydroxylaminobenzoate to 3,4-dihydroxybenzoate (protocatechuate) and ammonium. This
+  enzyme is involved in the degradation of nitroaromatic compounds [[cite:PUB00158932],[cite:PUB00114928]].
+  Proteins from this family have a cupin-like fold and may be related to a group of lyases involved in
+  the metabolism of benzoate.

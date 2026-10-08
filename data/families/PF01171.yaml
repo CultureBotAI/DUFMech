@@ -1,0 +1,27 @@
+id: Pfam:PF01171
+pfam_id: PF01171
+name: PP-loop domain
+short_name: ATP_bind_3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01171
+counters:
+  proteins: 33613
+  matches: 34389
+  proteomes: 21356
+  taxa: 34246
+  structures: 16
+  alphafold_models: 23049
+  domain_architectures: 200
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011063
+description: The structure of tRNA(Ile)-lysidine synthetase consists of an N-terminal dinucleotide-binding
+  fold domain (NTD), and a C-terminal globular domain (CTD). The structure of the NTD closely resembles
+  that of a P-loop "N-type" ATP pyrophosphatase [[cite:PUB00034489]]. These proteins belong to the PP-loop
+  superfamily [[cite:PUB00014303]].

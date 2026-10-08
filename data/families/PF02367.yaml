@@ -1,0 +1,25 @@
+id: Pfam:PF02367
+pfam_id: PF02367
+name: Threonylcarbamoyl adenosine biosynthesis protein TsaE
+short_name: TsaE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02367
+counters:
+  proteins: 17972
+  matches: 17998
+  proteomes: 17861
+  taxa: 25332
+  structures: 8
+  alphafold_models: 11648
+  domain_architectures: 47
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003442
+description: This family of proteins is involved in the synthesis of threonylcarbamoyl adenosine (t(6)A)
+  [[cite:PUB00063355],[cite:PUB00063366]].

@@ -1,0 +1,26 @@
+id: Pfam:PF11895
+pfam_id: PF11895
+name: Fungal peroxidase extension region
+short_name: Peroxidase_ext
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11895
+counters:
+  proteins: 1401
+  matches: 1408
+  proteomes: 169
+  taxa: 497
+  structures: 76
+  alphafold_models: 1209
+  domain_architectures: 28
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024589
+description: This region is found as an extension to a haem peroxidase domain in some fungi. This region
+  is about 80 amino acids in length and forms an extended structure on the surface of the peroxidase domain
+  [pfam:PF00141].

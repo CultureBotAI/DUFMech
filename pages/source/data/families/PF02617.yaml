@@ -1,0 +1,28 @@
+id: Pfam:PF02617
+pfam_id: PF02617
+name: ATP-dependent Clp protease adaptor protein ClpS
+short_name: ClpS
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02617
+counters:
+  proteins: 19694
+  matches: 19697
+  proteomes: 15812
+  taxa: 25224
+  structures: 39
+  alphafold_models: 10649
+  domain_architectures: 120
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003769
+description: In the bacterial cytosol, ATP-dependent protein degradation is performed by several different
+  chaperone-protease pairs, including ClpAP. ClpS directly influences the ClpAP machine by binding to
+  the N-terminal domain of the chaperone ClpA. The degradation of ClpAP substrates, both SsrA-tagged proteins
+  and ClpA itself, is specifically inhibited by ClpS. ClpS modifies ClpA substrate specificity, potentially
+  redirecting degradation by ClpAP toward aggregated proteins [[cite:PUB00013965]].

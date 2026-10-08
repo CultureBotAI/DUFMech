@@ -1,0 +1,28 @@
+id: Pfam:PF06224
+pfam_id: PF06224
+name: DNA glycosylase AlkZ-like
+short_name: AlkZ-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06224
+counters:
+  proteins: 16955
+  matches: 17024
+  proteomes: 7771
+  taxa: 10387
+  structures: 2
+  alphafold_models: 9642
+  domain_architectures: 19
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009351
+description: This protein family includes DNA glycosylase AlkZ from Streptomyces sahachiroi (also known
+  as Azi36) and similar proteins predominantly found in bacteria. AlkZ is an enzyme that provides self-resistance
+  from azinomycin B (AZB) toxicity by unhooking interstrand cross- links (ICLs). The crystal structure
+  of AlkZ revealed a C-shaped configuration with three tandem winged helix-turn-helix (wHTH) motifs and
+  a positively charged surface that shows residues of great importance for the enzymatic activity [[cite:PUB00100682]].

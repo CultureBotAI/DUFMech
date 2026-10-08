@@ -1,0 +1,28 @@
+id: Pfam:PF10474
+pfam_id: PF10474
+name: Syndetin, C-terminal
+short_name: Syndetin_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10474
+counters:
+  proteins: 3084
+  matches: 3139
+  proteomes: 1737
+  taxa: 5463
+  structures: 0
+  alphafold_models: 2621
+  domain_architectures: 43
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019514
+description: The function of this domain is unknown but it is found at the C terminus of syndetin (VPS50),
+  a unique component of the endosome-associated retrograde protein (EARP) complex. The EARP complex otherwise
+  shares four of its five subunits with the Golgi-associated retrograde protein (GARP) complex. The EARP
+  complex is localised to recycling to endosomes where it acts as a tethering complex for recycling of
+  plasma membrane receptors [[cite:PUB00077150]].

@@ -1,0 +1,29 @@
+id: Pfam:PF06690
+pfam_id: PF06690
+name: FeGP cofactor biosynthesis protein, methyltransferase HcgC
+short_name: HcgC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06690
+counters:
+  proteins: 49
+  matches: 49
+  proteomes: 45
+  taxa: 114
+  structures: 9
+  alphafold_models: 44
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009573
+description: The iron guanylylpyridinol (FeGP) cofactor biosynthesis enzymes are encoded in a cluster
+  of at least seven conserved genes (hcgA-G). This family represents the (SAM)-dependent methyltransferase
+  HgcC [[cite:PUB00098593],[cite:PUB00098592]], which covalently attaches the methyl group at the 3-position
+  of the pyridinol ring. It is predominantly found as a monomer in solution, composed of a Rossmann-like
+  coenzyme-binding-domain consisting of six parallel and one peripheral antiparallel strand flanked by
+  six alpha-helices and a smaller alpha/beta domain [[cite:PUB00098593]].

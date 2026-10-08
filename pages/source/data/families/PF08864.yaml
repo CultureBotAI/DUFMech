@@ -1,0 +1,29 @@
+id: Pfam:PF08864
+pfam_id: PF08864
+name: ReoY-like, N-terminal domain
+short_name: ReoY_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08864
+counters:
+  proteins: 1238
+  matches: 1238
+  proteomes: 1139
+  taxa: 1562
+  structures: 1
+  alphafold_models: 807
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014963
+description: This entry represents the N-terminal domain of Peptidoglycan synthesis regulatory protein
+  ReoY ([swissprot:Q8Y5Y2]) which is involved in the PASTA kinase-mediated signalling pathway regulating
+  peptidoglycan synthesis to maintain cell wall integrity [[cite:PUB00104135]]. It modulates peptidoglycan
+  (PG) synthesis pathway committed-step enzyme MurA [[cite:PUB00104135]]. ReoY positively modulates ClpCP-dependent
+  proteolysis of MurA, thereby regulating PG synthesis and inhibiting intrinsic cephalosporin resistance
+  [[cite:PUB00104135]].

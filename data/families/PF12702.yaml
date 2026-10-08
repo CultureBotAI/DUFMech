@@ -1,0 +1,25 @@
+id: Pfam:PF12702
+pfam_id: PF12702
+name: Lipocalin-like
+short_name: Lipocalin_3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12702
+counters:
+  proteins: 259
+  matches: 259
+  proteomes: 229
+  taxa: 432
+  structures: 1
+  alphafold_models: 184
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024311
+description: This is a family of proteins of 115 residues on average. The family has two highly conserved
+  tryptophan residues. The fold is very similar to the lipocalin-like fold from several comparable structures.

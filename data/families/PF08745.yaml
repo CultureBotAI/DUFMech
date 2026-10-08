@@ -1,0 +1,27 @@
+id: Pfam:PF08745
+pfam_id: PF08745
+name: PINc domain ribonuclease
+short_name: PIN_5
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08745
+counters:
+  proteins: 328
+  matches: 328
+  proteomes: 322
+  taxa: 664
+  structures: 9
+  alphafold_models: 306
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014856
+description: This is a family of bacterial and archaeal PINc domains. PIN domains are characterised by
+  the conservation of three acidic residues, possibly four, an Asp at residue 13, a Glu at 63, and then
+  Asps at 172 and 194 in UniProtKB:Q58360. Family members include Homologs of Aquifex RNase P (HARP) proteins
+  [[cite:PUB00091006]].

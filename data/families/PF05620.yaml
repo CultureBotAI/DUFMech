@@ -1,0 +1,30 @@
+id: Pfam:PF05620
+pfam_id: PF05620
+name: SRP-independent targeting protein 2/TMEM208
+short_name: TMEM208_SND2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05620
+counters:
+  proteins: 3823
+  matches: 3893
+  proteomes: 3211
+  taxa: 8600
+  structures: 0
+  alphafold_models: 3288
+  domain_architectures: 54
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008506
+description: This family includes SRP-independent targeting protein 2 (SND2) from yeast and transmembrane
+  protein 208 (TMEM208) from mammals. Both are localized to the endoplasmic reticulum (ER) [[cite:PUB00083911],[cite:PUB00083915]].
+  SND2 works together with SND1 and SND3 in an alternative targeting route to the ER [[cite:PUB00083911]].
+  TMEM208 regulates both ER stress and autophagy. It contains three predicted transmembrane regions [[cite:PUB00083915]].
+  SND2 also known as Env10 in Saccharomyces cerevisiae, and its homologue as Mug69 in Schizosaccharomyces
+  pombe. They were identified as proteins involved in vacuolar processing and morphology [[cite:PUB00066964]]
+  and meiosis [[cite:PUB00044889]], respectively.

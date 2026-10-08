@@ -1,0 +1,28 @@
+id: Pfam:PF09845
+pfam_id: PF09845
+name: Origin-associated protein OapC
+short_name: OapC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09845
+counters:
+  proteins: 423
+  matches: 617
+  proteomes: 421
+  taxa: 724
+  structures: 0
+  alphafold_models: 394
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018645
+description: This entry includes archaeal Zinc-ribbon containing proteins which are mostly uncharacterised.
+  Some members of this entry have been described as OapC/ArvC, encoded by oapC gene which is part of the
+  three-gene cluster oapABC, involved in generation of extracellular vesicles (arv, archaeal vesiculating
+  GTAse). Knockout of OapC/ArvC leads to over vesiculation, possibly due to dysregulation of OapA/ArvA,
+  a small GTPase, therefore, it has been suggested that OapC/ArvC may represent a GAP [[cite:PUB00154442],[cite:PUB00154443]].

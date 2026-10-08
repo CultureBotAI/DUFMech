@@ -1,0 +1,27 @@
+id: Pfam:PF13111
+pfam_id: PF13111
+name: pPIWI_RE module N-terminal domain
+short_name: pPIWI_RE_X
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13111
+counters:
+  proteins: 587
+  matches: 588
+  proteomes: 535
+  taxa: 921
+  structures: 0
+  alphafold_models: 289
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025085
+description: Domain observed N-terminal to the pPIWI_RE domain module. PIWI/Argonaute modules are typically
+  N-terminally fused to the PTND1 and PTND2 domains [[cite:PUB00091015]], pPIWI_RE_X may represent an
+  ancestral version of these domains or represent a N-terminal innovation predating the emergence of PTND1
+  and PTND2 [[cite:PUB00091016]].

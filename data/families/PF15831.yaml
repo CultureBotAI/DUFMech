@@ -1,0 +1,30 @@
+id: Pfam:PF15831
+pfam_id: PF15831
+name: Small integral membrane protein 5/18/22
+short_name: SMIM5_18_22
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15831
+counters:
+  proteins: 1626
+  matches: 1626
+  proteomes: 714
+  taxa: 2179
+  structures: 0
+  alphafold_models: 1524
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031671
+description: This entry represents a small family of single-pass membrane proteins described as small
+  integral membrane proteins, including SMIM5/18/22 which have been described as variants of the Cancer-Associated
+  Small Integral Membrane Open reading frame 1 (CASIMO1), a small open reading frame (sORF)-encode protein.
+  CASIMO1 controls cell proliferation and interacts with squalene epoxidase (SQLE) modulating lipid droplet
+  formation. CASIMO1 RNA is overexpressed predominantly in hormone receptor-positive breast tumors. Loss
+  of CASIMO1 disturbs the organisation of the actin cytoskeleton, leads to inhibitions of cell motility,
+  and stalls the cell cycle in the G0/G1 phase [[cite:PUB00102005]].

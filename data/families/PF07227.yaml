@@ -1,0 +1,30 @@
+id: Pfam:PF07227
+pfam_id: PF07227
+name: PHD - plant homeodomain finger protein
+short_name: PHD_Oberon
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07227
+counters:
+  proteins: 5129
+  matches: 5141
+  proteomes: 384
+  taxa: 1093
+  structures: 1
+  alphafold_models: 4029
+  domain_architectures: 89
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032881
+description: PHD_oberon is a plant homeodomain finger domain of Oberon proteins from plants. Oberon is
+  necessary for maintenance and/or establishment of both the shoot and root apical meristems in Arabidopsis.
+  Oberon proteins are made up of a PHD finger domain and a coiled-coil domain. The PHD-finger domain is
+  found in a wide variety of proteins involved in the regulation of chromatin structure [[cite:PUB00067922]].
+  Oberon proteins mediate the TMO7 (the direct target of MP) expression through modification of, or binding
+  to, chromatin at the TMO7 locus. TMO7 stands for the target of Monopteros 7 (MP) (or Auxin response
+  factor 7) [[cite:PUB00076514]].

@@ -1,0 +1,26 @@
+id: Pfam:PF11951
+pfam_id: PF11951
+name: Fungal specific transcription factor domain
+short_name: Fungal_trans_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11951
+counters:
+  proteins: 61055
+  matches: 63460
+  proteomes: 1303
+  taxa: 2751
+  structures: 4
+  alphafold_models: 51044
+  domain_architectures: 1080
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021858
+description: This family of are likely to be transcription factors. This protein is found in fungi. Proteins
+  in this family are typically between 454 to 826 amino acids in length. This protein is found associated
+  with [pfam:PF00172].

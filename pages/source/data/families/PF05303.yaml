@@ -1,0 +1,26 @@
+id: Pfam:PF05303
+pfam_id: PF05303
+name: GSKIP domain
+short_name: GSKIP_dom
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05303
+counters:
+  proteins: 3265
+  matches: 3271
+  proteomes: 2124
+  taxa: 6349
+  structures: 1
+  alphafold_models: 2130
+  domain_architectures: 85
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007967
+description: This domain is found in GSK3-beta interaction protein (GSKIP), which binds to GSK3beta [[cite:PUB00054079]].
+  It is also found as a short domain towards the N terminus in clustered mitochondria protein, also known
+  as clueless in Drosophila, which is involved in proper cytoplasmic distribution of mitochondria [[cite:PUB00064791],[cite:PUB00068099],[cite:PUB00068100]].

@@ -1,0 +1,25 @@
+id: Pfam:PF06182
+pfam_id: PF06182
+name: ABC-2 family transporter protein
+short_name: ABC2_membrane_6
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06182
+counters:
+  proteins: 10322
+  matches: 10334
+  proteomes: 3670
+  taxa: 5440
+  structures: 0
+  alphafold_models: 5949
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010390
+description: This family acts as the transmembrane domain (TMD) of ABC transporters [[cite:PUB00101288],[cite:PUB00101289]].
+  The family includes proteins responsible for the transport of herbicides [[cite:PUB00101288]].

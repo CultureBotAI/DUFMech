@@ -1,0 +1,36 @@
+id: Pfam:PF01905
+pfam_id: PF01905
+name: CRISPR-associated negative auto-regulator DevR/Csa2
+short_name: DevR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01905
+counters:
+  proteins: 771
+  matches: 773
+  proteomes: 699
+  taxa: 1783
+  structures: 14
+  alphafold_models: 609
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010154
+description: 'This group of families is one of several protein families that are always found associated
+  with prokaryotic CRISPRs, themselves a family of clustered regularly interspaced short palindromic repeats,
+  DNA repeats found in nearly half of all bacterial and archaeal genomes. These DNA repeat regions have
+  a remarkably regular structure: unique sequences of constant size, called spacers, sit between each
+  pair of repeats [[cite:PUB00020781]]. It has been shown that the CRISPRs are virus-derived sequences
+  acquired by the host to enable them to resist viral infection. The Cas proteins from the host use the
+  CRISPRs to mediate an antiviral response. After transcription of the CRISPR, a complex of Cas proteins
+  termed Cascade cleaves a CRISPR RNA precursor in each repeat and retains the cleavage products containing
+  the virus-derived sequence. Assisted by the helicase Cas3, these mature CRISPR RNAs then serve as small
+  guide RNAs that enable Cascade to interfere with virus proliferation [[cite:PUB00106643]]. Cas5 contains
+  an endonuclease motif, whose inactivation leads to loss of resistance, even in the presence of phage-derived
+  spacers [[cite:PUB00109113]]. This family used to be known as DUF73. DevR appears to be negative auto-regulator
+  within the system [[cite:PUB00020781]].'

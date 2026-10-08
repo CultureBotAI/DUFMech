@@ -1,0 +1,31 @@
+id: Pfam:PF04412
+pfam_id: PF04412
+name: Aconitase X first domain
+short_name: AcnX
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04412
+counters:
+  proteins: 2037
+  matches: 2040
+  proteomes: 1846
+  taxa: 3243
+  structures: 5
+  alphafold_models: 1460
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR060004
+description: This entry represents the first domain of aconitase X (AcnX), which corresponds to domain
+  2 in the canonical four-domain architecture of the aconitase superfamily. This domain contains a central
+  parallel beta-sheet linked by alpha-helices, similar to nucleotide-binding domains of dehydrogenases
+  [[cite:PUB00161781]]. The AcnX subfamily includes bacterial Type I enzymes that function as cis-3-hydroxy-L-proline
+  dehydratases and archaeal Type II enzymes that act as mevalonate 5-phosphate dehydratases. Unlike other
+  aconitase family members that contain [4Fe-4S] clusters, AcnX enzymes utilise [2Fe-2S] or [3Fe-4S] clusters
+  for catalysis [[cite:PUB00088769],[cite:PUB00161781]]. This domain forms part of the active site architecture
+  but does not directly coordinate the iron-sulphur cluster.

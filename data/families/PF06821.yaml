@@ -1,0 +1,28 @@
+id: Pfam:PF06821
+pfam_id: PF06821
+name: Serine hydrolase
+short_name: Ser_hydrolase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06821
+counters:
+  proteins: 7512
+  matches: 7519
+  proteomes: 5469
+  taxa: 8376
+  structures: 5
+  alphafold_models: 4651
+  domain_architectures: 33
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010662
+description: Members of this family have serine hydrolase activity. They contain a conserved serine hydrolase
+  motif, GXSXG/A, where the serine is a putative nucleophile [[cite:PUB00070832]]. This family has an
+  alpha-beta hydrolase fold [[cite:PUB00019449],[cite:PUB00049125]]. Eukaryotic members of this family
+  have a conserved LXCXE motif, which binds to retinoblastomas. This motif is absent from prokaryotic
+  members of this family [[cite:PUB00049125]].

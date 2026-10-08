@@ -1,0 +1,25 @@
+id: Pfam:PF14283
+pfam_id: PF14283
+name: Mobile element protein CD1107-like
+short_name: CD1107-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14283
+counters:
+  proteins: 949
+  matches: 1032
+  proteomes: 421
+  taxa: 788
+  structures: 0
+  alphafold_models: 619
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025376
+description: This family includes the mobile element protein CD1107 from Clostridioides difficile ([swissprot:Q18AV9],
+  [[cite:PUB00154582]]) and similar proteins mainly found in firmicutes.

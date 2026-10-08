@@ -1,0 +1,27 @@
+id: Pfam:PF13259
+pfam_id: PF13259
+name: Gag1-like, clamp domain
+short_name: clamp_Gag1-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13259
+counters:
+  proteins: 4020
+  matches: 4616
+  proteomes: 1512
+  taxa: 3454
+  structures: 0
+  alphafold_models: 3221
+  domain_architectures: 54
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025124
+description: 'This domain found in a group of sequences from fungi and plants, including Gag1 from Saccharomyces
+  cerevisiae, which interacts with Cka2, the fourth subunit of the eukaryotic kinase CK2. Gag1 is organised
+  into three domains: lock, Gag and Clap (this entry). This domain has three regions: rear, hinge and
+  front [[cite:PUB00153176]]. It contains two conserved sequence motifs: IPL and FLVD.'

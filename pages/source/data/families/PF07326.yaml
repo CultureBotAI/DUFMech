@@ -1,0 +1,28 @@
+id: Pfam:PF07326
+pfam_id: PF07326
+name: Regulator of chromosome segregation 1
+short_name: RCS1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07326
+counters:
+  proteins: 1192
+  matches: 1238
+  proteomes: 706
+  taxa: 2154
+  structures: 0
+  alphafold_models: 1113
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009932
+description: This family consists of several mammalian proteins of around 240 residues in length. Family
+  members include regulator of chromosome segregation 1 (RCS1), also known as FAM64A, CATS or PIMREG (PICALM-interacting
+  mitotic regulator). It is a substrate of APC/C. It may control the metaphase to anaphase transition
+  [[cite:PUB00084339]]. It is also a substrate of the Kinase Interacting Stathmin (KIS). RCS1 is highly
+  expressed in cancer cell lines in a cell cycle dependent manner and is induced by mitogens [[cite:PUB00084340]].

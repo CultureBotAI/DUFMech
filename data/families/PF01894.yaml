@@ -1,0 +1,27 @@
+id: Pfam:PF01894
+pfam_id: PF01894
+name: UPF0047 protein YjbQ-like
+short_name: YjbQ
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01894
+counters:
+  proteins: 14125
+  matches: 14162
+  proteomes: 12151
+  taxa: 20399
+  structures: 9
+  alphafold_models: 9964
+  domain_architectures: 83
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR001602
+description: This family includes YjbQ from Escherichia coli, its orthologue from Pyrococcus furiosus
+  and similar sequences. These proteins have been shown to have sufficient thiamine phosphate synthase
+  activity to complement thiE mutants. However, it is presumed that this is a secondary activity, and
+  the primary function of the YjbQ family enzyme remains unknown [[cite:PUB00101019],[cite:PUB00101020]].

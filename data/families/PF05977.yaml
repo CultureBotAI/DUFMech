@@ -1,0 +1,26 @@
+id: Pfam:PF05977
+pfam_id: PF05977
+name: Transmembrane secretion effector
+short_name: MFS_3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05977
+counters:
+  proteins: 30466
+  matches: 30537
+  proteomes: 10616
+  taxa: 14862
+  structures: 0
+  alphafold_models: 17747
+  domain_architectures: 59
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010290
+description: This is a family of transport proteins. Members of this family include a protein responsible
+  for the secretion of the ferric chelator, enterobactin [[cite:PUB00053441]], and a protein involved
+  in antibiotic resistance [[cite:PUB00060970]].

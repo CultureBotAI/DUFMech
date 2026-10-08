@@ -1,0 +1,27 @@
+id: Pfam:PF11061
+pfam_id: PF11061
+name: Cytochrome b6f, subunit Tsr0524-like
+short_name: Tsr0524-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11061
+counters:
+  proteins: 247
+  matches: 247
+  proteomes: 238
+  taxa: 647
+  structures: 2
+  alphafold_models: 152
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021291
+description: This family of proteins is predominantly found in cyanobacteria and red algae, including
+  Tsr0524 from Thermosynechococcus vestitus. Tsr0524 (also known as PetP) is a component of the cyanobacterial
+  cytochrome b6f that may play an essential role in the regulation of photosynthetic electron transport.
+  It shows an SH3 domain fold with five antiparallel beta-sheets [[cite:PUB00100692]].

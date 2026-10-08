@@ -1,0 +1,32 @@
+id: Pfam:PF01345
+pfam_id: PF01345
+name: CLIPPER domain
+short_name: CLIPPER
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01345
+counters:
+  proteins: 12543
+  matches: 33340
+  proteomes: 5220
+  taxa: 8073
+  structures: 1
+  alphafold_models: 5072
+  domain_architectures: 3336
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR001434
+description: This entry, previously known as DUF11, represents the CLIPPER domain, (Cross-Linked IsoPeptide
+  Protein in the Extracellular Region) which is usually found in multiple copies in a number of archaebacterial
+  proteins. CLIPPER domain adopts an Ig-like fold and contains a conserved N-terminal lysine and a C-terminal
+  asparagine with central aspartate/glutamate residues that form an intramolecular isopeptide bond [[cite:PUB00163642]].
+  The positions of the residues predicted to form isopeptide bonds are not universally conserved suggesting
+  that some domains appear to lack the intramolecular isopeptide bonds. CLIPPER domains are found in proteins
+  from Gram-positive and Gram-negative bacteria. Some have also been identified in multiple cell-surface
+  proteins from archaea. In Methanothermobacter sp. CaT2, this domain plays a key role as a membrane-bound
+  adhesion protein in the aggregation of CaT2 [[cite:PUB00097782]].

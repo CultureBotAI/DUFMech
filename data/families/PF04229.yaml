@@ -1,0 +1,26 @@
+id: Pfam:PF04229
+pfam_id: PF04229
+name: GrpB protein
+short_name: GrpB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04229
+counters:
+  proteins: 7942
+  matches: 7971
+  proteomes: 5605
+  taxa: 8694
+  structures: 2
+  alphafold_models: 4945
+  domain_architectures: 98
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007344
+description: This family has been suggested to belong to the nucleotidyltransferase superfamily [[cite:PUB00066751]].
+  It occurs at the C-terminus of dephospho-CoA kinase (CoaE) in a number of cases, where it plays a role
+  in the proper folding of the enzyme [[cite:PUB00066752]].

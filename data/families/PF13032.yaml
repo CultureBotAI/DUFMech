@@ -1,0 +1,27 @@
+id: Pfam:PF13032
+pfam_id: PF13032
+name: RNaseH domain of pPIWI_RE
+short_name: RNaseH_pPIWI_RE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13032
+counters:
+  proteins: 693
+  matches: 695
+  proteomes: 603
+  taxa: 1031
+  structures: 0
+  alphafold_models: 329
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024996
+description: RNaseH domain of the pPIWI_RE PIWI/Argonaute module. pPIWI_RE is found in a conserved three-gene
+  island that also contains a DinG-type helicase and an REase nuclease. This three gene island is predicted
+  to form a conflict system which targets R-loop formation of invasive plasmids during plasmid replication
+  [[cite:PUB00091016]].

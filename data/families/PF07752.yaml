@@ -1,0 +1,24 @@
+id: Pfam:PF07752
+pfam_id: PF07752
+name: S-layer protein
+short_name: S-layer
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07752
+counters:
+  proteins: 336
+  matches: 606
+  proteomes: 51
+  taxa: 96
+  structures: 2
+  alphafold_models: 273
+  domain_architectures: 45
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006457
+description: Archaeal S-layer proteins consist of two copies of this domain [[cite:PUB00060425],[cite:PUB00152243]].

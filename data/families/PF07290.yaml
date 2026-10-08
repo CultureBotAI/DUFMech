@@ -1,0 +1,25 @@
+id: Pfam:PF07290
+pfam_id: PF07290
+name: Inner membrane protein YqiJ, OB-fold
+short_name: YqiJ_OB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07290
+counters:
+  proteins: 906
+  matches: 906
+  proteomes: 834
+  taxa: 1345
+  structures: 0
+  alphafold_models: 584
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010840
+description: This entry represents the OB-fold domain found in several bacterial proteins, including the
+  inner membrane protein YqiJ from E. coli, whose function is not clear.

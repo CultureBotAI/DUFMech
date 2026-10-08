@@ -1,0 +1,28 @@
+id: Pfam:PF10179
+pfam_id: PF10179
+name: Neuron-derived neurotrophic factor, first Fn(III) domain
+short_name: NDNF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10179
+counters:
+  proteins: 1828
+  matches: 1834
+  proteomes: 1030
+  taxa: 3297
+  structures: 0
+  alphafold_models: 1643
+  domain_architectures: 28
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055271
+description: This domain is found towards the N-terminal of Neuron-derived neurotrophic factor (NDNF)
+  which contains the first fibronectin type III domain and one of the predicted N-linked glycosylation
+  sites [[cite:PUB00092493],[cite:PUB00092492]]. NDNF is a glycosylated and disulfide-bonded secreted
+  protein expressed in brain and spinal cord that promotes migration and neurite growth. It also promotes
+  endothelial cell survival, vessel formation and plays an important role in the process of revascularization.

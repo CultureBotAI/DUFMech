@@ -1,0 +1,33 @@
+id: Pfam:PF00902
+pfam_id: PF00902
+name: Sec-independent protein translocase protein (TatC)
+short_name: TatC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00902
+counters:
+  proteins: 18890
+  matches: 19252
+  proteomes: 16293
+  taxa: 23768
+  structures: 11
+  alphafold_models: 12534
+  domain_architectures: 28
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002033
+description: 'The bacterial Tat system has a remarkable ability to transport folded proteins even enzyme
+  complexes across the cytoplasmic membrane. It is structurally and mechanistically similar to the Delta
+  pH-driven thylakoidal protein import pathway. A functional Tat system or Delta pH-dependent pathway
+  requires three integral membrane proteins: TatA/Tha4, TatB/Hcf106 and TatC/cpTatC. The TatC protein
+  is essential for the function of both pathways. It might be involved in twin-arginine signal peptide
+  recognition, protein translocation and proton translocation. Sequence analysis predicts that TatC contains
+  six transmembrane helices (TMHs), and experimental data confirmed that N- and C-termini of TatC or cpTatC
+  are exposed to the cytoplasmic or stromal face of the membrane. The cytoplasmic N-terminus and the first
+  cytoplasmic loop region of the Escherichia coli TatC protein are essential for protein export. At least
+  two TatC molecules co-exist within each Tat translocon [[cite:PUB00011123]].'

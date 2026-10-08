@@ -1,0 +1,27 @@
+id: Pfam:PF09260
+pfam_id: PF09260
+name: Alpha-amylase, domain C
+short_name: A_amylase_dom_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09260
+counters:
+  proteins: 2227
+  matches: 2228
+  proteomes: 836
+  taxa: 1871
+  structures: 20
+  alphafold_models: 1835
+  domain_architectures: 33
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015340
+description: This domain is found at the C-terminal of various fungal alpha-amylase proteins [[cite:PUB00027691]].
+  It has been identified as a secondary binding site, which might be part of a starch interaction site
+  [[cite:PUB00097489]]. It has a beta- sandwich fold comprising an antiparallel beta-sheet with eight
+  strands [[cite:PUB00097489],[cite:PUB00097488]].

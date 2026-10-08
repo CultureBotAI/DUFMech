@@ -1,0 +1,30 @@
+id: Pfam:PF09210
+pfam_id: PF09210
+name: 1,4-alpha-glucan branching enzyme, C-terminal
+short_name: BE_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09210
+counters:
+  proteins: 1789
+  matches: 1789
+  proteomes: 1707
+  taxa: 3006
+  structures: 7
+  alphafold_models: 1202
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015293
+description: This entry represents the C-terminal domain found in bacterial 1,4-alpha-glucan branching
+  enzymes, such as TTHA1902 from Thermus thermophilus and TK1436 from Thermococcus kodakarensis, which
+  belong to the glycoside hydrolase family 57 (GH57). These enzymes catalyse the formation of branch points
+  in alpha-glucans by cleavage of an alpha-1,4 glycosidic bond and subsequent transfer of the cleaved-off
+  oligosaccharide to a new alpha-1,6 position. This is an alpha-helical domain composed of a four alpha-helical
+  bundle. It plays a role in the formation of the active-site cleft, being essential for substrate binding
+  and catalysis [[cite:PUB00090452],[cite:PUB00058786]].

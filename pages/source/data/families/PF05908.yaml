@@ -1,0 +1,27 @@
+id: Pfam:PF05908
+pfam_id: PF05908
+name: Poly-gamma-glutamate hydrolase
+short_name: Gamma_PGA_hydro
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05908
+counters:
+  proteins: 1128
+  matches: 1141
+  proteomes: 878
+  taxa: 1430
+  structures: 8
+  alphafold_models: 711
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008585
+description: This family consists of a number of bacterial and phage proteins that function as gamma-PGA
+  hydrolase enzymes [[cite:PUB00078732]]. Structurally the protein in this family adopted an open alpha/beta
+  mixed core structure with a seven-stranded parallel/anti-parallel beta-sheet. This structure shows similarity
+  to mammalian carboxypeptidase A and related enzymes.

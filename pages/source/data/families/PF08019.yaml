@@ -1,0 +1,26 @@
+id: Pfam:PF08019
+pfam_id: PF08019
+name: Phosphoethanolamine transferase EptA/EptB
+short_name: EptA_B_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08019
+counters:
+  proteins: 3699
+  matches: 3702
+  proteomes: 2709
+  taxa: 3951
+  structures: 2
+  alphafold_models: 2195
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012549
+description: This entry represents a domain found in a group of bacterial phosphoethanolamine transferases,
+  including eptA from Helicobacter pylori [[cite:PUB00084966]] and eptB from Escherichia coli [ec:2.7.8.42]
+  [[cite:PUB00084967]]. This domain is found immediately N-terminal to the sulphatase domain in many sulphatases.

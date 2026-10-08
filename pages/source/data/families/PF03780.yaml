@@ -1,0 +1,30 @@
+id: Pfam:PF03780
+pfam_id: PF03780
+name: Asp23 family, cell envelope-related function
+short_name: Asp23
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03780
+counters:
+  proteins: 13917
+  matches: 13921
+  proteomes: 6035
+  taxa: 8426
+  structures: 0
+  alphafold_models: 8818
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005531
+description: The alkaline shock protein Asp23 was identified as an alkaline shock protein that was expressed
+  in a sigmaB-dependent manner in Staphylococcus aureus [[cite:PUB00008427]]. Following an alkaline shock
+  Asp23 accumulates in the soluble protein fraction of the S. aureus cell. Asp23 is one of the most abundant
+  proteins in the cytosolic protein fraction of stationary S. aureus cells, with a copy-number of >25000
+  per cell. A second Asp23-family protein, AmaP, which is encoded within the asp23-operon, is required
+  to localise Asp23 to the cell membrane [[cite:PUB00075359]]. The overall function for the family is
+  thus a cell envelope-related one in Gram-positive bacteria. UniProtKB:Q2FW64 [[cite:PUB00075359]].

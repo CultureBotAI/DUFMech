@@ -1,0 +1,26 @@
+id: Pfam:PF18007
+pfam_id: PF18007
+name: Rv3651-like, N-terminal
+short_name: Rv3651-like_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18007
+counters:
+  proteins: 585
+  matches: 585
+  proteomes: 406
+  taxa: 480
+  structures: 1
+  alphafold_models: 377
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR041458
+description: This domain is found in Rv3651 from Mycobacterium tuberculosis ([swissprot:I6YCP0]) and similar
+  proteins from Actinobacteria. Rv3651 adopts a three-domain configuration. This entry represents the
+  N-terminal domain, a GAF domain that shows a central antiparallel beta-sheet of six beta-strands [[cite:PUB00100971]].

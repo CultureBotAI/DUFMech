@@ -1,0 +1,28 @@
+id: Pfam:PF08988
+pfam_id: PF08988
+name: Type III secretion system, cytoplasmic E component of needle
+short_name: T3SS_needle_E
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08988
+counters:
+  proteins: 270
+  matches: 270
+  proteomes: 241
+  taxa: 460
+  structures: 7
+  alphafold_models: 178
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012671
+description: T3SS_needle_E is a family of proteins from the operon that builds and controls the needle
+  of the injection system of type III secretion. The YscE protein, produced by the pathogen Yersinia,
+  assumes a secondary structure composed of two anti-parallel alpha-helices separated by a flexible loop
+  [[cite:PUB00049490]]. The family is cytoplasmic and may help to stabilise and prevent early polymerisation
+  of the needle-protein F [[cite:PUB00048615],[cite:PUB00109133]].

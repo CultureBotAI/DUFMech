@@ -1,0 +1,30 @@
+id: Pfam:PF03353
+pfam_id: PF03353
+name: Ras-mediated vulval-induction antagonist
+short_name: Lin-8
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03353
+counters:
+  proteins: 166
+  matches: 203
+  proteomes: 10
+  taxa: 26
+  structures: 0
+  alphafold_models: 164
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005020
+description: LIN-8 is a nuclear protein, present at the sites of transcriptional repressor complexes,
+  which interacts with LIN-35 Rb. Lin35 Rb is a product of the class B synMuv gene lin-35 which silences
+  genes required for vulval specification through chromatin modification and remodelling [[cite:PUB00083139]].
+  The biological role of the interaction has not yet been determined however predictions have been made.
+  The interaction shows that class A synMuv genes control vulval induction through the transcriptional
+  regulation of gene expression. LIN-8 normally functions as part of a protein complex however when the
+  complex is absent, other family members can partially replace LIN-8 activity [[cite:PUB00083139]].

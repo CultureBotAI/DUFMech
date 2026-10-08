@@ -1,0 +1,27 @@
+id: Pfam:PF03702
+pfam_id: PF03702
+name: Anhydro-N-acetylmuramic acid kinase
+short_name: AnmK
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03702
+counters:
+  proteins: 11320
+  matches: 11495
+  proteomes: 10656
+  taxa: 15660
+  structures: 20
+  alphafold_models: 7349
+  domain_architectures: 42
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005338
+description: Anhydro-N-acetylmuramic acid kinase catalyses the specific phosphorylation of 1,6-anhydro-N-acetylmuramic
+  acid (anhMurNAc) with the simultaneous cleavage of the 1,6-anhydro ring, generating MurNAc-6-P. It is
+  also required for the utilization of anhMurNAc, either imported from the medium, or derived from its
+  own cell wall murein, and in so doing plays a role in cell wall recycling [[cite:PUB00046146],[cite:PUB00043013]].

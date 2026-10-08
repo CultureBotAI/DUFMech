@@ -1,0 +1,28 @@
+id: Pfam:PF11865
+pfam_id: PF11865
+name: Serine/threonine-protein kinase mTOR domain
+short_name: mTOR_dom
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11865
+counters:
+  proteins: 4633
+  matches: 4788
+  proteomes: 3091
+  taxa: 8323
+  structures: 42
+  alphafold_models: 284
+  domain_architectures: 202
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024585
+description: This entry represents a domain found in human serine/threonine-protein kinase mTOR and its
+  homologues, a central regulator of cellular metabolism, growth and survival in response to hormones,
+  growth factors, nutrients, energy and stress signals [[cite:PUB00151556],[cite:PUB00151557],[cite:PUB00151558],[cite:PUB00151559],[cite:PUB00151555]].
+  In Saccharomyces cerevisiae, the TOR proteins, TOR1 and TOR2, regulate growth in a rapamycin-sensitive
+  manner [[cite:PUB00015261]]. This domain consists of HEAT repeats [[cite:PUB00103870],[cite:PUB00151560]].

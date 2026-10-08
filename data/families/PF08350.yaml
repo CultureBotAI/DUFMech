@@ -1,0 +1,27 @@
+id: Pfam:PF08350
+pfam_id: PF08350
+name: Methanogenesis regulatory protein FilR1, middle domain
+short_name: FilR1_middle
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08350
+counters:
+  proteins: 2179
+  matches: 2193
+  proteomes: 403
+  taxa: 674
+  structures: 0
+  alphafold_models: 2031
+  domain_architectures: 44
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013561
+description: This archaeal domain of unknown function has been found at the middle of Methanogenesis regulatory
+  protein FilR1 [[cite:PUB00091155],[cite:PUB00098067]] and at the C-terminus of archaeal proteins, including
+  several transcriptional regulators of the ArsR family (see [pfam:PF01022]). FilR1 is a member of the
+  two-component regulatory system FilI/FilRs which is involved in the regulation of methanogenesis.

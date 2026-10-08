@@ -1,0 +1,26 @@
+id: Pfam:PF06972
+pfam_id: PF06972
+name: GBF-interacting protein 1 N-terminal
+short_name: GIP1_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06972
+counters:
+  proteins: 3687
+  matches: 3712
+  proteomes: 408
+  taxa: 1137
+  structures: 0
+  alphafold_models: 2915
+  domain_architectures: 42
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009719
+description: This entry represents the N-terminal domain of GBF1-interacting protein 1 (GIP1, AT3G13222)
+  from Arabidopsis. GIP1 may act as a coactivator that regulates transcription factors involved in lateral
+  organ development of plants, such as bZIP transcription factors and LBD18 [[cite:PUB00074653],[cite:PUB00074654]].

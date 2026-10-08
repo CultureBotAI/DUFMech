@@ -1,0 +1,25 @@
+id: Pfam:PF08847
+pfam_id: PF08847
+name: Chlororespiratory reduction 6
+short_name: Crr6
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08847
+counters:
+  proteins: 768
+  matches: 771
+  proteomes: 614
+  taxa: 1784
+  structures: 0
+  alphafold_models: 574
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014946
+description: Chlororespiratory reduction 6 (Crr6) is a factor required for the assembly or stabilisation
+  of the chloroplast NAD(P)H dehydrogenase complex in Arabidopsis [[cite:PUB00075334]].

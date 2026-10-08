@@ -1,0 +1,24 @@
+id: Pfam:PF12000
+pfam_id: PF12000
+name: Glycosyl transferase family 4 group
+short_name: Glyco_trans_4_3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12000
+counters:
+  proteins: 1597
+  matches: 1599
+  proteomes: 1398
+  taxa: 2356
+  structures: 0
+  alphafold_models: 1054
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022623
+description: This domain is found associated with [pfam:PF00534].

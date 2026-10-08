@@ -1,0 +1,28 @@
+id: Pfam:PF05903
+pfam_id: PF05903
+name: PPPDE putative peptidase domain
+short_name: Peptidase_C97
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05903
+counters:
+  proteins: 13767
+  matches: 13857
+  proteomes: 3325
+  taxa: 8933
+  structures: 2
+  alphafold_models: 11440
+  domain_architectures: 274
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008580
+description: The PPPDE superfamily (after Permuted Papain fold Peptidases of DsRNA viruses and Eukaryotes),
+  consists of predicted thiol peptidases with a circularly permuted papain-like fold. The inference of
+  the likely DUB function of the PPPDE superfamily proteins is based on the fusions of the catalytic domain
+  to Ub-binding PUG (PUB)/UBA domains and a novel alpha-helical Ub-associated domain (the PUL domain,
+  after PLAP, Ufd3p and Lub1p) [[cite:PUB00020916]].

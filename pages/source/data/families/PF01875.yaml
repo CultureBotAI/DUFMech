@@ -1,0 +1,27 @@
+id: Pfam:PF01875
+pfam_id: PF01875
+name: Memo-like protein
+short_name: Memo
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01875
+counters:
+  proteins: 6407
+  matches: 6527
+  proteomes: 5074
+  taxa: 12387
+  structures: 5
+  alphafold_models: 5333
+  domain_architectures: 85
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002737
+description: This family contains members from all branches of life. The molecular function of this protein
+  is unknown, but Memo (mediator of ErbB2-driven cell motility) a human protein is included in this family
+  [[cite:PUB00044702]]. It has been suggested that Memo controls cell migration by relaying extracellular
+  chemotactic signals to the microtubule cytoskeleton [[cite:PUB00044702]].

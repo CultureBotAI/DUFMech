@@ -1,0 +1,27 @@
+id: Pfam:PF06722
+pfam_id: PF06722
+name: Erythromycin biosynthesis protein CIII-like, C-terminal domain
+short_name: EryCIII-like_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06722
+counters:
+  proteins: 25744
+  matches: 25805
+  proteomes: 7523
+  taxa: 12630
+  structures: 57
+  alphafold_models: 15860
+  domain_architectures: 290
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010610
+description: This domain is found at the C-terminal of Erythromycin biosynthesis protein CIII (EryCIII)
+  from Saccharopolyspora erythraea and similar proteins found in bacteria and eukaryotes. This protein
+  is organised into two domains, both of them with a Rossmann-like alpha/beta fold. The C-terminal domain
+  contains the nucleotide disphospho-sugar (NDP-sugar) binding site [[cite:PUB00074327]].

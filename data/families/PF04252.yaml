@@ -1,0 +1,26 @@
+id: Pfam:PF04252
+pfam_id: PF04252
+name: Protein arginine N-methyltransferase SFM1-like
+short_name: SFM1-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04252
+counters:
+  proteins: 1605
+  matches: 1631
+  proteomes: 1517
+  taxa: 3206
+  structures: 5
+  alphafold_models: 1360
+  domain_architectures: 27
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007364
+description: This family of proteins includes Protein arginine N-methyltransferase SFM1 from Saccharomyces
+  cerevisiae and similar proteins from fungi and archaea. Sfm1 is a S-adenosyl-L-methionine-dependent
+  protein- arginine N-methyltransferase that monomethylates ribosomal protein S3 (RPS3) at 'Arg-146' [[cite:PUB00075405]].

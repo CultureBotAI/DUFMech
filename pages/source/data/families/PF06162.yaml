@@ -1,0 +1,27 @@
+id: Pfam:PF06162
+pfam_id: PF06162
+name: Putative pyroglutamyl peptidase PgaPase_1
+short_name: PgaPase_1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06162
+counters:
+  proteins: 166
+  matches: 174
+  proteomes: 112
+  taxa: 491
+  structures: 0
+  alphafold_models: 157
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010381
+description: PgaPase_1 is a family of functionally diverse Caenorhabditis proteins. The family is homologous
+  to the cysteine-peptidases, but lack of a strictly conserved Glu-Cys-His catalytic triad or pGlu binding
+  site implies that it has other functions that could have resulted in a change in reaction-specificity
+  or even of catalytic activity [[cite:PUB00075353]].

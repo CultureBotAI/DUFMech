@@ -1,0 +1,28 @@
+id: Pfam:PF13739
+pfam_id: PF13739
+name: Deacetylase PdaC
+short_name: PdaC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13739
+counters:
+  proteins: 3167
+  matches: 3188
+  proteomes: 2665
+  taxa: 3887
+  structures: 3
+  alphafold_models: 1993
+  domain_architectures: 41
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025303
+description: This domain forms an alpha-beta-two layer sandwich. It is found in the Bacillus subtilis
+  proteins anti-sigma-V factor RsiV, which downregulates SigV activity [[cite:PUB00084362]], and peptidoglycan-N-acetylmuramic
+  acid deacetylase PdaC, which catalyzes the deacetylation of N-acetylmuramic acid which makes the peptidoglycan
+  resistant to lysosyme [[cite:PUB00084363]]. It is found in association with Heat-shock cognate 70kd
+  protein 44kd ATPase, [pfam:PF11738].

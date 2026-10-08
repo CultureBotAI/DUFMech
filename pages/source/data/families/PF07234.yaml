@@ -1,0 +1,30 @@
+id: Pfam:PF07234
+pfam_id: PF07234
+name: Movement and RNA silencing protein
+short_name: Babuvirus_MP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07234
+counters:
+  proteins: 21
+  matches: 21
+  proteomes: 6
+  taxa: 16
+  structures: 0
+  alphafold_models: 1
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009871
+description: This family consists of several Babuvirus proteins of around 120 residues in length. Proteins
+  in this family include movement and RNA silencing protein (also known as MP) from Banana bunchy top
+  virus. MP acts as a suppressor of RNA-mediated gene silencing, also known as post-transcriptional gene
+  silencing (PTGS), a mechanism of plant viral defense that limits the accumulation of viral RNAs. It
+  transports viral genome to neighbouring plant cells directly through plasmosdesmata, without any budding.
+  The movement protein allows efficient cell to cell propagation, by bypassing the host cell wall barrier
+  [[cite:PUB00070087]].

@@ -1,0 +1,27 @@
+id: Pfam:PF05815
+pfam_id: PF05815
+name: Autographa californica nuclear polyhedrosis virus (AcMNPV), Orf101
+short_name: AcMNPV_Orf101
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05815
+counters:
+  proteins: 97
+  matches: 97
+  proteomes: 97
+  taxa: 195
+  structures: 10
+  alphafold_models: 89
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008562
+description: This family is represented by Autographa californica nuclear polyhedrosis virus (AcMNPV),
+  Orf101 (also known as Protein C42) [[cite:PUB00097485]]. It plays a role in host nuclear actin polymerization
+  by recruiting p78/73 protein that is capable of activating an actin-related protein 2/3 complex to initiate
+  nuclear actin polymerization [[cite:PUB00097485]].

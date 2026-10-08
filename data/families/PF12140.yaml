@@ -1,0 +1,25 @@
+id: Pfam:PF12140
+pfam_id: PF12140
+name: SLED domain
+short_name: SLED
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12140
+counters:
+  proteins: 6903
+  matches: 6915
+  proteomes: 1228
+  taxa: 3976
+  structures: 1
+  alphafold_models: 6018
+  domain_architectures: 97
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021987
+description: The SLED (Scm-Like Embedded Domain) domain is a double-stranded DNA binding domain found
+  in Scml2 which is a member of the Polycomb group of proteins involved in epigenetic gene silencing [[cite:PUB00081213]].

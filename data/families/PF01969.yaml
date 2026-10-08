@@ -1,0 +1,28 @@
+id: Pfam:PF01969
+pfam_id: PF01969
+name: Nickel insertion protein
+short_name: Ni_insertion
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01969
+counters:
+  proteins: 4090
+  matches: 4175
+  proteomes: 3294
+  taxa: 6143
+  structures: 5
+  alphafold_models: 2928
+  domain_architectures: 19
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002822
+description: Members of this family may be involved in the activation of nickel-pincer cofactor-dependent
+  enzymes. LarC from Lactobacillus plantarum is involved, together with LarB and LarE, in the synthesis
+  of the enzyme-bound cofactor of lactate racemase (LarA). Larc C binds Ni2+, and functions in nickel
+  delivery to pyridinium-3,5-bisthiocarboxylic acid mononucleotide (P2TMN), to form the mature cofactor
+  [[cite:PUB00085157],[cite:PUB00086644]].

@@ -1,0 +1,34 @@
+id: Pfam:PF12568
+pfam_id: PF12568
+name: Acetyltransferase (GNAT) domain, PanZ
+short_name: PanZ
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12568
+counters:
+  proteins: 899
+  matches: 899
+  proteomes: 895
+  taxa: 1212
+  structures: 5
+  alphafold_models: 531
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040448
+description: This domain family is found in bacteria, and is approximately 40 amino acids in length. The
+  proteins in this family are members of the acetyltransferases of the GNAT family. Family members such
+  as PanZ has been shown to be involved in the biosynthesis of Coenzyme A (CoA). CoA is a ubiquitous and
+  essential cofactor, synthesized from the precursor pantothenate. In all organisms, the final step in
+  pantothenate biosynthesis relies on the presence of beta-alanine, which comes from different sources
+  in bacteria, yeast, and plants. In bacteria, beta-alanine is derived by the action of alpha-decarboxylase
+  (ADC) enzyme. PanZ promotes the activation of the zymogen, PanD, to form aspartate alpha-decarboxylase
+  (ADC) in a CoA-dependent manner. Thereby, playing an essential role in the biosynthetic pathway to pantothenate
+  and the regulation of CoA biosynthesis. Structure and function studies show that direct interaction
+  of PanD with the PanZ Arg43-Leu46 loop promotes PanD to adopt a reactive conformation, which leads to
+  activation [[cite:PUB00091022]].

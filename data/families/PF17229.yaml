@@ -1,0 +1,27 @@
+id: Pfam:PF17229
+pfam_id: PF17229
+name: Serine/threonine-protein kinase SMG1 N-terminal
+short_name: SMG1_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17229
+counters:
+  proteins: 1092
+  matches: 1093
+  proteomes: 638
+  taxa: 2006
+  structures: 2
+  alphafold_models: 117
+  domain_architectures: 18
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR035175
+description: This entry represents the N-terminal disordered region of SMG1, which is a member of the
+  phosphoinositide 3 kinase-like kinase (PIKK) family. SMG1 associates with components of the mRNA surveillance
+  complex and is involved in the regulation of nonsense-mediated mRNA decay [[cite:PUB00085231]]. It also
+  plays an important role in genotoxic stress responses to DNA damage [[cite:PUB00085233]].

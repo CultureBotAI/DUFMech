@@ -1,0 +1,27 @@
+id: Pfam:PF04400
+pfam_id: PF04400
+name: (Na+)-NQR maturation NqrM
+short_name: NqrM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04400
+counters:
+  proteins: 2095
+  matches: 2095
+  proteomes: 1952
+  taxa: 2760
+  structures: 0
+  alphafold_models: 1392
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007495
+description: The NqrM gene is often found adjacent to the nqr operons that encode (Na+)-NQR subunits.
+  It is involved in the maturation of (Na+) translocating NADH:quinone oxidoreductase in proteobacteria.
+  The four conserved Cys residues found in NqrM are required for (Na+)- NQR maturation and may serve as
+  ligands for a metal ion or metal cluster used to build up the (Na+)-NQR molecule [[cite:PUB00077340]].

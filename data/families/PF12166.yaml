@@ -1,0 +1,35 @@
+id: Pfam:PF12166
+pfam_id: PF12166
+name: Piezo non-specific cation channel, cap domain
+short_name: Piezo_cap
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12166
+counters:
+  proteins: 5773
+  matches: 6167
+  proteomes: 1708
+  taxa: 5363
+  structures: 30
+  alphafold_models: 930
+  domain_architectures: 138
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031334
+description: This is an extracellular domain at the C-terminus of Piezo, or FAM38 mechanosensitive non-specific
+  cation channel proteins [[cite:PUB00075636],[cite:PUB00063634]]. Piezo is a family of proteins that
+  form mechanosensitive non-specific cation channels whose conductance is higher for Li+, intermediate
+  for Na+ and lowest for Li+. Divalent ions except for Mn2+ permeate the channel but more slowly than
+  monovalent ions and can reduce K+ currents [[cite:PUB00075636],[cite:PUB00063634],[cite:PUB00155396],[cite:PUB00155399]].
+  These channels have a homotrimeric three-blade propeller-shaped structure that use a cap-motion and
+  plug-and-latch mechanism to gate their ion-conducting pathways [[cite:PUB00063634],[cite:PUB00155396],[cite:PUB00155399]].
+  Each protomer consists of 38 TM helices that form unusual non-planar blades, and an extracellular cap-like
+  structure, the latter represented in this entry [[cite:PUB00063634],[cite:PUB00155396],[cite:PUB00155399],[cite:PUB00155398]].
+  This domain is embedded in the centre of the trimer and may control the transmembrane constriction site
+  suggested to act as a transmembrane gate [[cite:PUB00155398]]. This domain adopts a distinctive beta-sandwich
+  fold [[cite:PUB00063634],[cite:PUB00155396],[cite:PUB00155399],[cite:PUB00155397],[cite:PUB00155398]].

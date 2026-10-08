@@ -1,0 +1,28 @@
+id: Pfam:PF14026
+pfam_id: PF14026
+name: Nickel responsive protein SCO4226-like
+short_name: SCO4226-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14026
+counters:
+  proteins: 3059
+  matches: 3085
+  proteomes: 2553
+  taxa: 3944
+  structures: 2
+  alphafold_models: 1873
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025336
+description: This family of proteins is found in prokaryotes, including the nickel responsive protein
+  SCO4226 from Streptomyces coelicolor ([swissprot:Q9FCE4]). SCO4226 adopts a dimeric configuration able
+  to bind four nickel ions, with each monomer showing a typical ferredoxin-like fold with five beta-strands
+  packing against two alpha-helices. It seems to play a role in cellular nickel homeostasis, detoxification,
+  and/or nickel utilization in specialised cytoplasmic compartment [[cite:PUB00093075]].
