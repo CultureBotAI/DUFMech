@@ -21,8 +21,10 @@ PFAM_SEED_URL = "https://ftp.ebi.ac.uk/pub/databases/Pfam/releases/Pfam{release}
 # A previous identifier that is itself an unknown-function name, alone or joined to
 # prefixes/suffixes the way Pfam builds compound names: DUF1285_N, QueG_DUF1730,
 # Mycop_pep_DUF31, PterinBD-DUF4346, DUF_B2046, DUFDUF4849, DUF488-N3i.
+# UPF family labels have four digits; UPF1/UPF2 gene names are not such labels.
 UNKNOWN_NAME_RE = re.compile(
-    r"(?:[A-Za-z0-9]+[_-])*(?:DUF|UPF)(?:DUF)?_?[A-Z]?\d+(?:[_-][A-Za-z0-9]+)*"
+    r"(?:[A-Za-z0-9]+[_-])*(?:DUF(?:DUF)?_?[A-Z]?\d+|UPF\d{4})"
+    r"(?:[_-][A-Za-z0-9]+)*"
 )
 # Pfam 38.2 has ~30,000 families; far fewer means a wrong or truncated input.
 DEFAULT_MIN_FAMILIES = 10_000

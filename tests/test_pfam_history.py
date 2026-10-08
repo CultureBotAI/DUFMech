@@ -58,6 +58,32 @@ def test_unknown_name_matches_bare_and_compound_names() -> None:
         assert not is_unknown_name(name)
 
 
+@pytest.mark.parametrize("name", ["UPF1", "UPF2", "UPF3", "UPF1_1B_dom", "RNA_UPF1", "UPF12345"])
+def test_upf_gene_names_are_not_unknown_function_identifiers(name: str) -> None:
+    assert not is_unknown_name(name)
+
+
+@pytest.mark.parametrize("name", ["UPF0001", "UPF0265", "UPF0001-like", "Y_UPF0014_N"])
+def test_numbered_upf_families_remain_unknown_names(name: str) -> None:
+    assert is_unknown_name(name)
+
+
+def test_upf1_former_duf_is_available_for_migration() -> None:
+    from dataclasses import asdict
+
+    from dufmech.exduf import plan_migration
+
+    rows, _, _ = parse_seed_headers([
+        "#=GF ID   UPF1_1B_dom", "#=GF AC   PF18141.1",
+        "#=GF DE   UPF1 RNA helicase 1B domain", "#=GF PI   DUF5599;", "//",
+        "#=GF ID   Other", "#=GF AC   PF00001.1", "#=GF PI   UPF1;", "//",
+    ])
+    assert len(rows) == 1
+    assert rows[0].previous_unknown_names == ("DUF5599",)
+    assert rows[0].currently_unknown_name is False
+    assert plan_migration([], [asdict(rows[0])], fetch=None).to_fetch == ["PF18141"]
+
+
 def test_parse_seed_keeps_only_families_with_unknown_previous_names() -> None:
     rows, scanned, with_previous = parse_seed_headers(SEED.splitlines())
 

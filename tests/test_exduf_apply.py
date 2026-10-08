@@ -49,7 +49,7 @@ def test_refresh_migration_stops_the_ancestor_walk(tmp_path: Path) -> None:
     assert metadata_preserving_ancestors(parent_dir, out.stem) == []
 
 
-def _cross(tmp_path: Path) -> Path:
+def _cross(tmp_path: Path, extra_rows=()) -> Path:
     rows = [
         CrossMechRow("PF06172", "Cupin_8", "UNKNOWN_CANDIDATE", "TraitMech", "genomics",
                      "data/traits/genomics/x.yaml", "traitmech:1", "X", "record_text",
@@ -58,6 +58,7 @@ def _cross(tmp_path: Path) -> Path:
                      "data/traits/genomics/y.yaml", "traitmech:2", "Y", "record_text",
                      ("record_mentions_unlisted_short_name",)),
     ]
+    rows.extend(extra_rows)
     out = tmp_path / "cross"
     write_cross_mech_snapshot(
         ScanResult(rows=rows, mechs={"TraitMech": {"commit": "a" * 40, "records_scanned": 2}}), out,
@@ -165,7 +166,7 @@ def test_member_seed_check_accepts_ancestor_and_rejects_absent_families(tmp_path
                           migrated.stem, migrated.parent)
 
 
-def _previous_names(directory: Path, rows: list[dict]) -> Path:
+def _previous_names(directory: Path, rows: list[dict], *, day="2026-10-07") -> Path:
     from dufmech.pfam_history import PfamPreviousNamesRow, SeedRead
     from dufmech.pfam_history_snapshot import write_pfam_previous_names_snapshot
 
@@ -173,8 +174,8 @@ def _previous_names(directory: Path, rows: list[dict]) -> Path:
                                  tuple(r["names"]), tuple(r["names"]), False) for r in rows]
     write_pfam_previous_names_snapshot(SeedRead(objs, 9, 9, 1, "0" * 64), directory,
                                        release="38.2", source_url="x",
-                                       snapshot_date="2026-10-07", generated_at=T)
-    return directory / "pfam-previous-unknown-names-2026-10-07.json"
+                                       snapshot_date=day, generated_at=T)
+    return directory / f"pfam-previous-unknown-names-{day}.json"
 
 
 def test_derivation_records_coverage_and_resolves_former_names(tmp_path: Path) -> None:

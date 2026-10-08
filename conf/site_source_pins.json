@@ -1,5 +1,5 @@
 {
-  "commit": "5a3594876199794400ffa8aa2ce13c91ddd32f64",
+  "commit": "86d2e0845317773e5cabc1b8c1508f62b6b5dfbf",
   "files": {
     "data/cross_mech/cross-mech-duf-examples-2026-10-05.json": "e801932f7c9e89012c03a183463a84819e448b6359f804f4fbc3c30b726c0b08",
     "data/cross_mech/cross-mech-duf-examples-2026-10-05.manifest.json": "8184082d43beb90745b5c852de8c0a3e9771d773f87fe921fb20bf74664475ad",
@@ -8326,7 +8326,11 @@
     "data/worklists/uniprot-duf-example-candidates-2026-10-07.tsv": "3f0483d14baca4f47a73b3c7227d5a0a410e3a06a2eda660985cac5ec6c0152e",
     "history/infrastructure/native-history-audit-integration/2026-10-07T123018Z-codex-e5c822.yaml": "37b97727a2216639fc7e40e8e607aa88571deded5a8e859ae69de9f7af0466d7",
     "history/records/PF04149/2026-10-07T122602Z-codex-3e2c16.yaml": "ceec6d29e32973ad4b38e31d157bb430926748768c2a10b2731d50a8c3abb2b6",
+    "history/reports/pr-180-adversarial/2026-10-08T155730Z-codex-4802a0.yaml": "85c9bd75555da771c90777dccf76125b72e70afd3ea969baea5dd7c065c0a7e8",
     "reports/repo_review/20261007T072423Z-review-history-workflows.md": "a25f5bd5ed598b322d89dfac9e4ff252bc60370692d4fc423f10fb7eb0c189ad",
+    "reports/repo_review/20261008T071432Z-classification-release-guards.md": "5246b4b13299747a313695f8ed7ace16d72c5195fb2b514ec4d43e0c5cb6807d",
+    "reports/repo_review/20261008T075422Z-worklist-parent-and-alias-provenance.md": "5bda0c8d6c72c02cf88c700c301bc5b5c160c22179591cec4344485a541b623c",
+    "reports/repo_review/20261008T160521Z-pr-180-adversarial.md": "9ad1f99e5fb049e4704574345bb613fda6029087b9040695d4624319d9a0c16a",
     "reports/yaml_category_review/20261007T072423Z-two-seed-provenance.md": "1a0686b6360a862a2978fb1f66098f637ce9dd14c3ed323dd9bacf1837e704b1",
     "reports/yaml_record_review/20261007T072423Z-PF04149.md": "53abd2cdd2f7de6506a0087d8ca507e49a5fc7d148f9035587722ed6f523c56e",
     "reports/yaml_record_review/20261007T080630Z-PF04149.md": "9264cdccfea29079836d3a85d003d07b41aeb9c527450abc3d4ed700044b4d64",

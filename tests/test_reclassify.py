@@ -15,8 +15,11 @@ from dufmech.snapshot import write_snapshot_artifacts, write_worklist_snapshot
 from dufmech.snapshot_cli import main as freeze_main
 from dufmech.worklist import (
     CLASSIFIER_POLICY,
+    EX_DUF,
     KNOWN_HISTORICAL_DUF,
+    LEGACY_CLASSIFIER_POLICY,
     UNKNOWN_CANDIDATE,
+    DufFamilyRow,
     reclassify_worklist,
     row_from_interpro_entry,
 )
@@ -190,7 +193,10 @@ def test_correction_matches_published_records_without_rewriting_snapshots(tmp_pa
     )]
     frozen = {path: path.read_bytes() for path in frozen_paths}
     timestamp = datetime.fromisoformat(manifest["snapshot"]["generated_at"].replace("Z", "+00:00"))
-    regenerated = reclassify_snapshot(old, tmp_path, snapshot_date="2026-10-05", generated_at=timestamp)
+    regenerated = reclassify_snapshot(
+        old, tmp_path, snapshot_date="2026-10-05", generated_at=timestamp,
+        classifier_policy=LEGACY_CLASSIFIER_POLICY,
+    )
     published = json.loads((directory / manifest["files"]["json"]["path"]).read_text())
     corrected = json.loads((tmp_path / regenerated["files"]["json"]["path"]).read_text())
     assert {row["pfam_id"]: row for row in published} == {
@@ -201,3 +207,39 @@ def test_correction_matches_published_records_without_rewriting_snapshots(tmp_pa
     assert check_manifest(tmp_path / committed_manifest.name) == []
     assert frozen == {path: path.read_bytes() for path in frozen_paths}
     assert sha256(old) == "141fd83d020563444c6498a3f0dc4d7924e7cf759647b449271f4d00c612b689"
+
+
+def test_current_corpus_historical_labels_are_fixed_without_metadata_or_evidence_changes() -> None:
+    path = Path("data/worklists/interpro-pfam-duf-2026-10-08.json")
+    captured = path.read_bytes()
+    old = json.loads(captured)
+    objects = [DufFamilyRow(**{
+        key: tuple(value) if key == "candidate_reasons" else value
+        for key, value in row.items() if key != "source_url"
+    }) for row in old]
+    corrected = reclassify_worklist(objects)
+    original = {row.pfam_id: asdict(row) for row in objects}
+    for row in corrected:
+        assert {
+            key for key, value in asdict(row).items() if value != original[row.pfam_id][key]
+        } <= {"unknown_status", "candidate_reasons"}
+    before = {row.pfam_id: row for row in score_families(old)}
+    after = {row.pfam_id: row for row in score_families([asdict(row) for row in corrected])}
+    historical = {"PF14298", "PF10862", "PF05647"}
+    still_unknown = {
+        "PF10015", "PF10912", "PF11503", "PF13907", "PF14934", "PF16392", "PF16404",
+    }
+    assert {
+        pfam for pfam in before
+        if before[pfam].characterization_status != after[pfam].characterization_status
+    } == historical | still_unknown
+    for pfam in historical:
+        assert before[pfam].characterization_status == UNKNOWN_CANDIDATE
+        assert after[pfam].seed_unknown_status == EX_DUF
+        assert after[pfam].characterization_status == KNOWN_HISTORICAL_DUF
+        assert after[pfam].known_evidence_count == 0
+    for pfam in still_unknown:
+        assert before[pfam].characterization_status == KNOWN_HISTORICAL_DUF
+        assert after[pfam].characterization_status == UNKNOWN_CANDIDATE
+        assert after[pfam].known_evidence_count == 0
+    assert path.read_bytes() == captured

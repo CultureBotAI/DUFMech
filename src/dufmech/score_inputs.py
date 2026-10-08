@@ -37,7 +37,7 @@ import dufmech.snapshot as worklist
 import dufmech.stringdb_snapshot as string
 import dufmech.threedbeacons_snapshot as beacons
 from dufmech.worklist import (
-    CLASSIFIER_POLICY,
+    CLASSIFIER_POLICIES,
     EX_DUF,
     MIGRATED_SOURCE,
     MIGRATION_NOTE,
@@ -46,6 +46,7 @@ from dufmech.worklist import (
     MIGRATION_REFRESH_NOTE,
     PREVIOUS_UNKNOWN_NAME_REASON,
 )
+from dufmech.worklist_lineage import verify_worklist_parent_rows
 
 RECLASSIFIED_SOURCE = "Reclassification of frozen InterPro Pfam API metadata"
 RECLASSIFICATION_NOTE = (
@@ -238,10 +239,11 @@ def _source_identity(
                 raise ValueError("parent must be older")
         except ValueError as exc:
             raise ScoreInputError("reclassification parent date must be valid and older") from exc
-        policies = {"reclassification-v1": LEGACY_RECLASSIFICATION_POLICY,
-                    "derivation-v2": CLASSIFIER_POLICY,
-                    MIGRATION_PROFILE: MIGRATION_POLICY}
-        if lineage.get("profile") not in policies or lineage.get("policy") != policies[lineage["profile"]]:
+        policies = {"reclassification-v1": (LEGACY_RECLASSIFICATION_POLICY,),
+                    "derivation-v2": CLASSIFIER_POLICIES,
+                    MIGRATION_PROFILE: (MIGRATION_POLICY,)}
+        if (lineage.get("profile") not in policies
+                or lineage.get("policy") not in policies[lineage["profile"]]):
             raise ScoreInputError("unsupported native reclassification profile/policy")
         digest = lineage.get("input_json_sha256")
         if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest):
@@ -503,6 +505,11 @@ def load_score_input(
         raise ScoreInputError("JSON row count does not match manifest rows.total")
     lineage = _worklist_lineage(manifest, rows) if role == "worklist" else None
     _source_identity(role, path.stem, source, fields, lineage)
+    if role == "worklist":
+        try:
+            verify_worklist_parent_rows(manifest_path, manifest, rows)
+        except (ValueError, UnicodeError) as exc:
+            raise ScoreInputError(str(exc)) from exc
     try:
         reader = csv.reader(io.StringIO(tsv_raw.decode("utf-8"), newline=""), delimiter="\t", strict=True)
         if next(reader, None) != fields:
