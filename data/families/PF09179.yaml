@@ -1,0 +1,24 @@
+id: Pfam:PF09179
+pfam_id: PF09179
+name: TilS substrate binding domain
+short_name: TilS
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09179
+counters:
+  proteins: 8735
+  matches: 8735
+  proteomes: 8667
+  taxa: 11792
+  structures: 2
+  alphafold_models: 5244
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015262
+description: This domain is found in the tRNA(Ile) lysidine synthetase (TilS) protein.

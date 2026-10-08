@@ -1,0 +1,31 @@
+id: Pfam:PF08937
+pfam_id: PF08937
+name: Thoeris protein ThsB, TIR-like domain
+short_name: ThsB_TIR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08937
+counters:
+  proteins: 2293
+  matches: 2293
+  proteomes: 1821
+  taxa: 3640
+  structures: 8
+  alphafold_models: 1413
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015032
+description: Thoeris is a bacterial antiphage defense system, which consists of two genes, thsA and thsB,
+  via NAD+ degradation [[cite:PUB00097806],[cite:PUB00101118],[cite:PUB00101117]]. ThsA has robust NAD+
+  cleavage activity and and a two-domain architecture containing a N-terminal NAD-binding domain (denoted
+  as sirtuin-like or Macro) and C-terminal SLOG-like domain. In some instances, such as in B. amyloliquefaciens
+  ThsA has an N-terminal transmembrane domain [[cite:PUB00097806]]. ThsB (also referred to as TIR1 and
+  TIR2) is structurally similar to TIR domain proteins but without enzymatic activity. This is the TIR-like
+  domain of ThsB proteins, which adopts a Rossmann-like fold. ThsB is responsible for recognizing phage
+  infection [[cite:PUB00101118]].

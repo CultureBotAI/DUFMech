@@ -1,0 +1,29 @@
+id: Pfam:PF01042
+pfam_id: PF01042
+name: Endoribonuclease L-PSP
+short_name: Ribonuc_L-PSP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01042
+counters:
+  proteins: 74014
+  matches: 76763
+  proteomes: 19722
+  taxa: 31830
+  structures: 76
+  alphafold_models: 48953
+  domain_architectures: 403
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006175
+description: Endoribonuclease active on single-stranded mRNA. Inhibits protein synthesis by cleavage of
+  mRNA [[cite:PUB00007949]]. Previously thought to inhibit protein synthesis initiation [[cite:PUB00002939]].
+  This protein may also be involved in the regulation of purine biosynthesis [[cite:PUB00007948]]. YjgF
+  (renamed RidA) family members are enamine/imine deaminases. They hydrolyze reactive intermediates released
+  by PLP-dependent enzymes, including threonine dehydratase [[cite:PUB00064878]]. YjgF also prevents inhibition
+  of transaminase B (IlvE) in Salmonella [[cite:PUB00109184]].

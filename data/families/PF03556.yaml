@@ -1,0 +1,28 @@
+id: Pfam:PF03556
+pfam_id: PF03556
+name: Cullin binding
+short_name: Cullin_binding
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03556
+counters:
+  proteins: 11830
+  matches: 11874
+  proteomes: 3311
+  taxa: 8850
+  structures: 30
+  alphafold_models: 10278
+  domain_architectures: 161
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005176
+description: This domain binds to cullins and to Rbx-1, components of an E3 ubiquitin ligase complex for
+  neddylation [[cite:PUB00047735],[cite:PUB00050725],[cite:PUB00057468]]. Neddylation is the process by
+  which the C-terminal glycine of the ubiquitin-like protein Nedd8 is covalently linked to lysine residues
+  in a protein through an isopeptide bond. The structure of this domain is composed entirely of alpha
+  helices [[cite:PUB00047735],[cite:PUB00050725]].

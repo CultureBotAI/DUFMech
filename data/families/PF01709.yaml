@@ -1,0 +1,27 @@
+id: Pfam:PF01709
+pfam_id: PF01709
+name: TACO1/YebC second and third domain
+short_name: Transcrip_reg
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01709
+counters:
+  proteins: 23092
+  matches: 23105
+  proteomes: 20420
+  taxa: 32390
+  structures: 12
+  alphafold_models: 15841
+  domain_architectures: 67
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR048300
+description: This is a family of transcriptional regulators. In mammals, it activates the transcription
+  of mitochondrially-encoded COX1 [[cite:PUB00057436]]. In bacteria, it negatively regulates the quorum-sensing
+  response regulator by binding to its promoter region [[cite:PUB00057437]]. This entry represents the
+  second and third domains in this protein, with one domain nested within the other.

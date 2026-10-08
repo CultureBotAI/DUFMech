@@ -1,0 +1,25 @@
+id: Pfam:PF13116
+pfam_id: PF13116
+name: YhdP protein
+short_name: YhdP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13116
+counters:
+  proteins: 4918
+  matches: 5329
+  proteomes: 4796
+  taxa: 6769
+  structures: 0
+  alphafold_models: 1672
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025263
+description: This entry represents the Uncharacterized protein YhdP from E.coli and related proteins.
+  Some members of this family are related to the AsmA family proteins.

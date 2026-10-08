@@ -1,0 +1,30 @@
+id: Pfam:PF10902
+pfam_id: PF10902
+name: WYL_2, Sm-like SH3 beta-barrel fold
+short_name: WYL_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10902
+counters:
+  proteins: 390
+  matches: 395
+  proteomes: 329
+  taxa: 740
+  structures: 0
+  alphafold_models: 139
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024401
+description: WYL_2 is a family of Sm-like SH3 beta-barrel fold containing domains. WYL is named for three
+  conserved amino acids found in a subset of domains of this superfamily. These residues are not strongly
+  conserved throughout the family. Rather, the conservation pattern includes four basic residues and a
+  position often occupied by a cysteine [[cite:PUB00085051]], which are predicted to line a ligand-binding
+  groove typical of the Sm-like SH3 beta-barrels. It is predicted to be a ligand-sensing domain that could
+  bind negatively charged ligands, such as nucleotides or nucleic acid fragments, to regulate CRISPR-Cas
+  and other defense systems such as the abortive infection AbiG system [[cite:PUB00085051]]

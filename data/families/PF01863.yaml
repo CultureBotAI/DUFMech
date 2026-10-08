@@ -1,0 +1,30 @@
+id: Pfam:PF01863
+pfam_id: PF01863
+name: YgjP-like, metallopeptidase domain
+short_name: YgjP-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01863
+counters:
+  proteins: 15247
+  matches: 15593
+  proteomes: 12259
+  taxa: 17503
+  structures: 2
+  alphafold_models: 9610
+  domain_architectures: 18
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002725
+description: This is a conserved domain containing the catalytic zinc-metallopeptidase (HExxH) catalytic
+  motif. Proteins containing this domain are found in some archaebacteria, as well as Helicobacter pylori.
+  The proteins are 190-240 amino acids long, with the C terminus being the most conserved region, containing
+  three conserved histidines [[cite:PUB00098014],[cite:PUB00098016],[cite:PUB00098015],[cite:PUB00084997]].
+  This domain is found in YgjP from E. coli [[cite:PUB00084997]], a predicted metal-dependent hydrolase
+  that hydrolyses UTP to UMP and diphosphate in vitro; and in MJ0123 from Methanocaldococcus jannaschii
+  (also referred to as projannalysin) [[cite:PUB00098015]].

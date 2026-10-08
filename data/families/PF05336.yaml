@@ -1,0 +1,28 @@
+id: Pfam:PF05336
+pfam_id: PF05336
+name: L-rhamnose mutarotase
+short_name: rhaM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05336
+counters:
+  proteins: 9564
+  matches: 9607
+  proteomes: 6648
+  taxa: 10089
+  structures: 6
+  alphafold_models: 6086
+  domain_architectures: 36
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008000
+description: This family contains L-rhamnose mutarotase which is a glycosyl hydrolase that converts the
+  monosaccharide L-rhamnopyranose from the alpha to the beta stereoisomer. In Escherichia coli this enzyme
+  is the product of the rhaM gene (also known as yiiL). The tertiary structure has been solved, in complex
+  with L-rhamnose, and the catalytic mechanism determined. His22 is the proton donor. The enzyme naturally
+  exists as a dimer.

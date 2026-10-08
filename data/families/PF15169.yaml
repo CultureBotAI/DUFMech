@@ -1,0 +1,26 @@
+id: Pfam:PF15169
+pfam_id: PF15169
+name: Cytochrome b-245 chaperone 1 / Eros
+short_name: Cybc1_Eros
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15169
+counters:
+  proteins: 1072
+  matches: 1080
+  proteomes: 790
+  taxa: 2557
+  structures: 1
+  alphafold_models: 985
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027846
+description: Cytochrome b-245 chaperone 1, also known as Eros (essential for reactive oxygen species)
+  in mice, is a transmembrane protein that may play a central role as a chaperone critical for expression
+  of gp91phox and p22phox and hence for the cytochrome b558 heterodimer [[cite:PUB00089794]].

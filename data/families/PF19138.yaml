@@ -1,0 +1,28 @@
+id: Pfam:PF19138
+pfam_id: PF19138
+name: Transcriptional regulator TbsP-like, N-terminal
+short_name: TbsP_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19138
+counters:
+  proteins: 428
+  matches: 429
+  proteomes: 279
+  taxa: 435
+  structures: 0
+  alphafold_models: 403
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043859
+description: This domain is found at the N-terminal of the putative transcriptional regulator TbsP from
+  Halobacterium volcanii ([swissprot:D4GXF9], also known as HVO_2861) and similar sequences predominantly
+  found in Halobacteria. TbsP is required for adhesion to abiotic surfaces (i.e., biofilm formation) and
+  maintains wild-type cell morphology and motility. This domain shows weak structural similarity with
+  the DNA -binding protein TrmBL2 of P. furiosus ([pfam:PF11495]) [[cite:PUB00153356]].

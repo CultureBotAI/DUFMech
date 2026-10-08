@@ -1,0 +1,25 @@
+id: Pfam:PF08908
+pfam_id: PF08908
+name: Putative oxygenase MesX
+short_name: MesX
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08908
+counters:
+  proteins: 1633
+  matches: 1634
+  proteomes: 1610
+  taxa: 2214
+  structures: 0
+  alphafold_models: 919
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015004
+description: This family represents MesX, the putative oxygenase component of an oxygen-dependent methionine
+  synthase MesD. It is required for MesD for activity [[cite:PUB00097274]].

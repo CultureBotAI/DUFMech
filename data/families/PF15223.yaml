@@ -1,0 +1,37 @@
+id: Pfam:PF15223
+pfam_id: PF15223
+name: Elongin BC and Polycomb repressive complex 2-associated protein
+short_name: EPOP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15223
+counters:
+  proteins: 888
+  matches: 905
+  proteomes: 644
+  taxa: 2016
+  structures: 1
+  alphafold_models: 764
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027971
+description: This family of proteins is found in eukaryotes. Family members are approximately 835 amino
+  acids in length and include the polycomb repressive complex 2-associated factor EPOP (Elongin BC and
+  Polycomb Repressive Complex 2 (PRC2) Associated Protein, also termed C17orf96, esPRC2p48, E130012A19Rik),
+  a scaffold protein expressed in the inner cell mass of the mouse blastocyst serving as a bridging partner
+  between the PRC2/EED-EZH2 complex and the elongin BC complex, and fine-tuning the transcriptional status
+  of Polycomb group (PcG) target genes in embryonic stem cells. Both EPOP and Elongin BC are required
+  to maintain low levels of expression at PRC2 genomic targets [[cite:PUB00083907]]. EPOP interacts with
+  the H2B deubiquitinase USP7 to modulate transcriptional processes in mESCs similar to MYC [[cite:PUB00083908]].
+  Functional studies found that the C-terminal region of EPOP directly interacts with PRC2 and that this
+  region associates with the VEFS-box of the PRC2 core member SUZ12. Thus, suggesting that EPOP may directly
+  affect PRC2 chromatin binding by altering the functionality of Suz12. This region is proposed to have
+  evolved in early vertebrates and is also present in the paralog SKIDA1 (C10orf140) another novel PRC2-interacting
+  protein, supporting the idea that proteins possessing this sequence are PRC2 regulators in the entire
+  vertebrate branch [[cite:PUB00111127]]. The family is found in association with [pfam:PF02437].

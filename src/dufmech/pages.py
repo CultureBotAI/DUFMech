@@ -18,6 +18,7 @@ from dufmech.report import (
     latest_snapshot_path,
     load_json_rows,
     load_latest_rows,
+    metadata_preserving_ancestors,
     verified_manifest,
 )
 from dufmech.site import render_artifacts
@@ -181,9 +182,17 @@ def render_from_paths(
     if members_json is not None:
         manifest = verified_manifest(members_json)
         seed = manifest["snapshot"].get("seed_snapshot_id")
-        if seed != input_ids["worklist"]:
-            raise ReportError(f"member snapshot was seeded against {seed}, not {input_ids['worklist']}")
         members = [dict(row) for row in load_json_rows(members_json)]
+        if seed != input_ids["worklist"]:
+            # Members seeded on an ancestor still apply when every derivation since kept
+            # the families' metadata and the families are all still in the worklist.
+            if seed not in metadata_preserving_ancestors(worklists_dir, input_ids["worklist"]):
+                raise ReportError(
+                    f"member snapshot was seeded against {seed}, not {input_ids['worklist']}"
+                )
+            catalogue = {row["pfam_id"] for row in worklist_rows}
+            if {row.get("pfam_id") for row in members} - catalogue:
+                raise ReportError("member snapshot names families absent from the worklist")
         input_ids["members"] = members_json.stem
         provenance["members"] = {
             **tracked_source(members_json, REPO_ROOT, pins=source_pins),

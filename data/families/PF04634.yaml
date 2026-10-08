@@ -1,0 +1,28 @@
+id: Pfam:PF04634
+pfam_id: PF04634
+name: Immunity protein YezG-like
+short_name: YezG-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04634
+counters:
+  proteins: 545
+  matches: 547
+  proteomes: 356
+  taxa: 750
+  structures: 4
+  alphafold_models: 343
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006728
+description: This protein family includes the immunity protein YezG from Bacillus subtilis and similar
+  sequences predominantly found in Firmicutes. YezG is the antitoxin component of a LXG toxin-antitoxin
+  (TA) module that promote kin selection, mediate competition in biofilms, and drive spatial segregation
+  of different strains, probably helping to avoid warfare between strains in biofilms [[cite:PUB00101092]].
+  It shows an alpha/beta structure with an antiparallel beta-sheet.

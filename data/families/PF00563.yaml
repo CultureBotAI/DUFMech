@@ -1,0 +1,27 @@
+id: Pfam:PF00563
+pfam_id: PF00563
+name: EAL domain
+short_name: EAL
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00563
+counters:
+  proteins: 131837
+  matches: 131993
+  proteomes: 12530
+  taxa: 17849
+  structures: 75
+  alphafold_models: 78574
+  domain_architectures: 3876
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR001633
+description: This domain is found in diverse bacterial signaling proteins. It is called EAL after its
+  conserved residues. The EAL domain is a good candidate for a diguanylate phosphodiesterase function
+  [[cite:PUB00007150]]. The domain contains many conserved acidic residues that could participate in metal
+  binding and might form the phosphodiesterase active site [[cite:PUB00007150]].

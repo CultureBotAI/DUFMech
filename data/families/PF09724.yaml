@@ -1,0 +1,27 @@
+id: Pfam:PF09724
+pfam_id: PF09724
+name: Sister chromatid cohesion protein Dcc1
+short_name: Dcc1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09724
+counters:
+  proteins: 3718
+  matches: 3816
+  proteomes: 3182
+  taxa: 8443
+  structures: 9
+  alphafold_models: 3143
+  domain_architectures: 68
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019128
+description: Sister chromatid cohesion protein Dcc1 is a component of the Ctf18-RFC complex. This complex
+  is required for the efficient establishment of chromosome cohesion during S-phase and for loading the
+  replication clamp Pol30/PCNA, which functions in DNA replication and repair [[cite:PUB00045276],[cite:PUB00109231]].
+  Ctf18-RFC loads PCNA onto DNA in an ATP-dependent manner. It may also have PCNA-unloading activity [[cite:PUB00045277]].

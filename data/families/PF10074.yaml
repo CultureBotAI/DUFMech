@@ -1,0 +1,29 @@
+id: Pfam:PF10074
+pfam_id: PF10074
+name: T6SS, Transcription factor, DNA binding domain
+short_name: RovC_DNA-bd
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10074
+counters:
+  proteins: 2443
+  matches: 2443
+  proteomes: 1012
+  taxa: 1628
+  structures: 2
+  alphafold_models: 1599
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018754
+description: This domain is found in a group of proteins from proteobacteria, including the hexameric
+  transcription factor from Yersinia pseudotuberculosis RovC, which is essential for the activation of
+  one of the Type VI secretion systems of this organism (T6SS4). This domain folds into a distinct variant
+  of the helix-turn-helix domain that shows an 'extended-turn' motif. It is responsible for DNA binding,
+  participating in transcriptional activation and antiactivation to initiate or inhibit horizontal gene
+  transfer [[cite:PUB00152791],[cite:PUB00152792]].

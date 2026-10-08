@@ -1,0 +1,26 @@
+id: Pfam:PF14108
+pfam_id: PF14108
+name: ABA DEFICIENT 4-like
+short_name: ABA4-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14108
+counters:
+  proteins: 2432
+  matches: 2436
+  proteomes: 1858
+  taxa: 3701
+  structures: 0
+  alphafold_models: 1679
+  domain_architectures: 26
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025461
+description: This family of proteins is found in bacteria and plants. It includes abscisic acid (ABA)-deficient
+  4 protein (ABA4) from Arabidopsis thaliana, which has a role in neoxanthin synthesis [[cite:PUB00078861]]
+  and may be important for the de novo ABA synthesis specifically during dehydration [[cite:PUB00078861]].

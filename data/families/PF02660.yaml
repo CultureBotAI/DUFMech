@@ -1,0 +1,25 @@
+id: Pfam:PF02660
+pfam_id: PF02660
+name: Glycerol-3-phosphate acyltransferase
+short_name: G3P_acyltransf
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02660
+counters:
+  proteins: 13599
+  matches: 13601
+  proteomes: 11593
+  taxa: 17407
+  structures: 6
+  alphafold_models: 9067
+  domain_architectures: 26
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003811
+description: This family of enzymes catalyses the transfer of an acyl group from acyl-ACP to glycerol-3-phosphate
+  to form lysophosphatidic acid [[cite:PUB00057466]]].

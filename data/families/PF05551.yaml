@@ -1,0 +1,29 @@
+id: Pfam:PF05551
+pfam_id: PF05551
+name: Zinc-binding loop region of homing endonuclease
+short_name: zf-His_Me_endon
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05551
+counters:
+  proteins: 408
+  matches: 426
+  proteomes: 236
+  taxa: 812
+  structures: 46
+  alphafold_models: 315
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008704
+description: This domain [[cite:PUB00028315]] is the short zinc-binding loops region of a number of much
+  longer chain homing endonucleases. Such loops are probably stabilised by the zinc and may be viewed
+  as small but separate domains. The common structural feature of these domains is that at least three
+  zinc ligands lie very close to each other in the sequence and are not incorporated into regular secondary
+  structural elements. The biological roles played by these small zinc-binding domains are presently unknown
+  [[cite:PUB00053732]].

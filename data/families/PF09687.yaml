@@ -1,0 +1,32 @@
+id: Pfam:PF09687
+pfam_id: PF09687
+name: Plasmodium RESA N-terminal
+short_name: PRESAN
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09687
+counters:
+  proteins: 854
+  matches: 867
+  proteomes: 25
+  taxa: 93
+  structures: 2
+  alphafold_models: 751
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019111
+description: The short, four-helical domain first identified in the Plasmodium export proteins PHISTa
+  and PHISTc [[cite:PUB00053439]] has been extended to become this six-helical PRESAN domain identified
+  in the P. falciparum-specific RESA-type (Ring-infected erythrocyte surface antigen) proteins in association
+  with the DnaJ domain. Overall, at least 67 proteins have been detected in P. falciparum with complete
+  copies of the PRESAN domain. No versions of this domain were detected in other apicomplexan genera,
+  suggesting that the domain was 'invented' after the divergence of the lineage leading to the genus Plasmodium
+  undergoing a dramatic proliferation only in P. falciparum. A secondary structure-prediction derived
+  from the multiple alignment of the PRESAN family reveals that it is composed of an all-helical fold
+  with six conserved helical segments. There is some evidence it might localise to membranes [[cite:PUB00055558]].

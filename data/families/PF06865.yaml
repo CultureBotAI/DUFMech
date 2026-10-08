@@ -1,0 +1,25 @@
+id: Pfam:PF06865
+pfam_id: PF06865
+name: Pyrimidine/purine nucleoside phosphorylase
+short_name: Ppnp
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06865
+counters:
+  proteins: 3868
+  matches: 3869
+  proteomes: 3666
+  taxa: 5293
+  structures: 8
+  alphafold_models: 2558
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009664
+description: This family consist of YaiE and related proteins. YaiE from E. coli catalyses phosphorolysis
+  of diverse nucleosides, yielding D-ribose 1-phosphate and free bases [[cite:PUB00084997]].

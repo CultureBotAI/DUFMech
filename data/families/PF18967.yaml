@@ -1,0 +1,30 @@
+id: Pfam:PF18967
+pfam_id: PF18967
+name: Pycsar effector protein domain
+short_name: PycTM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18967
+counters:
+  proteins: 4373
+  matches: 4373
+  proteomes: 3328
+  taxa: 4875
+  structures: 0
+  alphafold_models: 2626
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043760
+description: Pycsar (pyrimidine cyclase system for antiphage resistance) provides immunity against bacteriophage
+  and consists of a pyrimidine cyclase (PycC), which synthesizes cyclic nucleotides in response to infection,
+  and an effector protein. Cyclic nucleotides serve as specific second messenger signals, which activate
+  the adjacent effector, leading to bacterial cell death and abortive phage infection [[cite:PUB00100705]].
+  This entry represents a domain found in the effector protein from Pycsar system. Structure prediction
+  suggests it may form a homohexameric complex. This domain is found either standalone or in combination
+  with HD domain [pfam:PF01966].

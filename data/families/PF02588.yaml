@@ -1,0 +1,24 @@
+id: Pfam:PF02588
+pfam_id: PF02588
+name: Uncharacterised 5xTM membrane BCR, YitT family COG1284
+short_name: YitT_membrane
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02588
+counters:
+  proteins: 18836
+  matches: 18872
+  proteomes: 7512
+  taxa: 11123
+  structures: 0
+  alphafold_models: 12122
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003740
+description: This is probably a bacterial ABC transporter permease (personal obs:Yeats C).

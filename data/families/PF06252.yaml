@@ -1,0 +1,29 @@
+id: Pfam:PF06252
+pfam_id: PF06252
+name: Bacteriophage Mu, GemA protein
+short_name: GemA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06252
+counters:
+  proteins: 1310
+  matches: 1312
+  proteomes: 1041
+  taxa: 2192
+  structures: 0
+  alphafold_models: 854
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009363
+description: This family consists of several bacterial and phage proteins, including GemA (also known
+  as gp16) protein from Bacteriophage Mu. GemA is an early protein responsible for decreasing host DNA
+  gyrase activity, that promotes DNA relaxation of bacterial host genome. Modulates the expression of
+  various host genes probably controlled by supercoiling of their promoters. Host genes affected include
+  DNA replication and cell division determinants [[cite:PUB00097481]]. This family also includes the Mu-like
+  prophage FluMu protein gp16 from Haemophilus influenzae.

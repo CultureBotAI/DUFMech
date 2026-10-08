@@ -1,0 +1,27 @@
+id: Pfam:PF13665
+pfam_id: PF13665
+name: Toxin PAAR-like domain
+short_name: Tox-PAAR-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13665
+counters:
+  proteins: 1800
+  matches: 1800
+  proteomes: 1029
+  taxa: 1707
+  structures: 1
+  alphafold_models: 1061
+  domain_architectures: 93
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: This domain is found at the N-terminal of bacterial toxin systems, including Tse7 (type IV
+  secretion exported 7) from Pseudomonas aeruginosa, a type VI secretion exported toxin with DNase activity
+  that induces growth arrest and ultimately DNA degradation within target cell [[cite:PUB00098743]]. The
+  structure of this domain has a PAAR-like organisation necessary for interaction with T6SS VgrG tip and
+  correct toxin delivery [[cite:PUB00098743],[cite:PUB00098744]].

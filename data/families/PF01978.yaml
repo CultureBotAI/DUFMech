@@ -1,0 +1,25 @@
+id: Pfam:PF01978
+pfam_id: PF01978
+name: Sugar-specific transcriptional regulator TrmB
+short_name: TrmB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01978
+counters:
+  proteins: 8669
+  matches: 8670
+  proteomes: 3373
+  taxa: 5343
+  structures: 15
+  alphafold_models: 6625
+  domain_architectures: 86
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002831
+description: One member of this family, TrmB, has been shown to be a sugar-specific transcriptional regulator
+  of the trehalose/maltose ABC transporter [[cite:PUB00015607]] in Thermococcus litoralis.

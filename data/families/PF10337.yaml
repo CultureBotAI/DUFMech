@@ -1,0 +1,26 @@
+id: Pfam:PF10337
+pfam_id: PF10337
+name: Putative ER transporter, 6TM, N-terminal
+short_name: ArAE_2_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10337
+counters:
+  proteins: 3168
+  matches: 3668
+  proteomes: 1339
+  taxa: 2805
+  structures: 0
+  alphafold_models: 2501
+  domain_architectures: 73
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018823
+description: This is a family of proteins conserved in fungi. The function is not known. This family is
+  the C-terminal half of some member proteins which contain the DUF2421 [pfam:PF10334] domain at their
+  N-terminus. These proteins are putative endoplasmic reticulum tranpsorters, with a total of 12 TMs.

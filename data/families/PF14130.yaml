@@ -1,0 +1,31 @@
+id: Pfam:PF14130
+pfam_id: PF14130
+name: Cap4, dsDNA endonuclease domain
+short_name: Cap4_nuclease
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14130
+counters:
+  proteins: 634
+  matches: 634
+  proteomes: 609
+  taxa: 1422
+  structures: 7
+  alphafold_models: 353
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025382
+description: This domain family corresponds to the N-terminal of CD-NTase associated protein 4 (Cap4)
+  from bacteria and archaea. CD-NTase-associated protein 4 (Cap4) is a nucleotide second messenger sensor
+  that functions is CBASS immunity. This is the effector domain which has dsDNA nuclease activity, sharing
+  structural homology with type II restriction endonucleases and it has the putative active-site conserved
+  residues required for divalent metal coordination. This domain is inactive as a monomer; after Cap4
+  signal recognition through its C-terminal SAVED domain ([pfam:PF18145]), it oligomerises to closely
+  locate two nuclease effector domains. This domain does not participates in ligand specificity and it
+  has a promiscuous DNA cleavage response [[cite:PUB00094500]].

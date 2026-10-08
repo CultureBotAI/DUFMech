@@ -1,0 +1,26 @@
+id: Pfam:PF10040
+pfam_id: PF10040
+name: CRISPR-associated endoribonuclease Cas6
+short_name: CRISPR_Cas6
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10040
+counters:
+  proteins: 1540
+  matches: 1540
+  proteomes: 1154
+  taxa: 2835
+  structures: 11
+  alphafold_models: 1115
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019267
+description: Cas6 is a member of the RAMP (repeat-associated mysterious protein) superfamily [[cite:PUB00043288]].
+  It is among the most widely distributed Cas proteins and is found in both bacteria and archaea [[cite:PUB00020781]].
+  Cas6 functions in the generation of CRISPR-derived guide RNAs for invader defense in prokaryotes [[cite:PUB00054084]].

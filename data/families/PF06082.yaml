@@ -1,0 +1,30 @@
+id: Pfam:PF06082
+pfam_id: PF06082
+name: Exopolysaccharide biosynthesis protein YbjH
+short_name: YjbH
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06082
+counters:
+  proteins: 2228
+  matches: 2441
+  proteomes: 1876
+  taxa: 2865
+  structures: 0
+  alphafold_models: 1401
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010344
+description: YjbH is a family of Gram-negative beta-barrel outer-membrane lipoproteins that act as putative
+  porins. YbjH is one of four gene-products expressed from an operon, yjbEFGH, which is regulated by the
+  Rcs phosphorelay in a RcsA-dependent manner, similar to that of other exopolysaccharide biosynthetic
+  pathways. It is highly possible that the yjbEFGH operon encodes a system involved in EPS secretion since
+  none of the products is predicted to have enzymic activity, the products are all secreted and YbjH and
+  F are predicted to be beta-barrel lipoproteins similar to porins. It may be that the operon products
+  play some role in biofilm formation and/or matrix production [[cite:PUB00058168]].

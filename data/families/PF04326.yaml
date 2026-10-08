@@ -1,0 +1,28 @@
+id: Pfam:PF04326
+pfam_id: PF04326
+name: Schlafen, AlbA_2
+short_name: SLFN_AlbA_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04326
+counters:
+  proteins: 12925
+  matches: 12943
+  proteomes: 7286
+  taxa: 13051
+  structures: 31
+  alphafold_models: 8752
+  domain_architectures: 234
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007421
+description: This is the AlbA_2 domain from the Schlafen (SLFN) family of proteins which are important
+  in cell differentiation and defense against viruses [[cite:PUB00151569],[cite:PUB00151570]]. This domain
+  is present at the N-terminal of all SLFN proteins and includes the SLFN box, a sequence unique to these
+  proteins that may form a dimer interface [[cite:PUB00151569]]. The AlbA_2 domain is RNA-binding and
+  RNase region as it contains the highly conserved catalytic glutamic acid residues [[cite:PUB00151569]].

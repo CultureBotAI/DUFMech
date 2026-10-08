@@ -1,0 +1,29 @@
+id: Pfam:PF07944
+pfam_id: PF07944
+name: Beta-L-arabinofuranosidase, GH127 catalytic domain
+short_name: Beta-AFase-like_GH127_cat
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07944
+counters:
+  proteins: 12425
+  matches: 12991
+  proteomes: 5607
+  taxa: 9109
+  structures: 20
+  alphafold_models: 8038
+  domain_architectures: 263
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012878
+description: This entry represents the catalytic domain of Non-reducing end beta-L-arabinofuranosidase
+  from Bifidobacterium longum (Beta -AFase) and similar proteins that belong to the glycoside hydrolase
+  family 127 (GH127). This domain folds into an (alpha /alpha)6 barrel. Beta-AFase has been characterised
+  as an unusual beta-L-arabinofuranosidase enzyme, [ec:3.2.1.185]. It releases l-arabinose from the l-arabinofuranose
+  (Araf)-beta1,2-Araf disaccharide and also transglycosylates 1-alkanols with retention of the anomeric
+  configuration [[cite:PUB00075450],[cite:PUB00151606]].

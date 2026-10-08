@@ -1,0 +1,26 @@
+id: Pfam:PF10753
+pfam_id: PF10753
+name: Toxin GhoT_OrtT
+short_name: Toxin_GhoT_OrtT
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10753
+counters:
+  proteins: 370
+  matches: 370
+  proteomes: 339
+  taxa: 502
+  structures: 0
+  alphafold_models: 226
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019689
+description: GhoT is part of the GhoT-GhoS type V toxin-antitoxin (TA) system [[cite:PUB00065335],[cite:PUB00074308]].
+  OrtT is homologous to GhoT, but it is not part of a TA pair. In this case, it acts as an independent
+  toxin to reduce growth during stress related to amino acid and DNA synthesis [[cite:PUB00074307]].

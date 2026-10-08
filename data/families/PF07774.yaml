@@ -1,0 +1,30 @@
+id: Pfam:PF07774
+pfam_id: PF07774
+name: ER membrane protein complex subunit 1, second beta-propeller
+short_name: EMC1_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07774
+counters:
+  proteins: 4701
+  matches: 4882
+  proteomes: 3296
+  taxa: 8699
+  structures: 12
+  alphafold_models: 3919
+  domain_architectures: 100
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011678
+description: This is the second beta-propeller domain of ER membrane protein complex subunit 1. ER membrane
+  protein complex subunit 1 is a component of the ER membrane protein complex (EMC, composed of EMC1,
+  EMC2, EMC3, EMC4, EMC5 and EMC6). In Saccharomyces cerevisiae, the EMC seems to be required for efficient
+  folding of proteins in the endoplasmic reticulum (ER) [[cite:PUB00061987]]. EMC1 contains two eight-bladed
+  beta-propellers and stabilises the entire EMC complex, contacting six of the remaining eight subunits
+  [[cite:PUB00096682]]. The beta-propellers are in the lumen and may serve as a platform for recruitment
+  of co-factors at the site of nascent protein insertion [[cite:PUB00096682]].

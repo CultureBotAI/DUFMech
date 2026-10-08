@@ -1,0 +1,26 @@
+id: Pfam:PF09747
+pfam_id: PF09747
+name: Coiled-coil domain containing protein 97-like, C-terminal
+short_name: CCD97-like_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09747
+counters:
+  proteins: 2876
+  matches: 3569
+  proteomes: 2428
+  taxa: 6593
+  structures: 0
+  alphafold_models: 2425
+  domain_architectures: 54
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040233
+description: This domain is found at the C-terminal of CCD97. In some proteins, this domain is found as
+  two conserved domains separated by a region of low complexity, spanning some 200 residues. The function
+  is unknown.

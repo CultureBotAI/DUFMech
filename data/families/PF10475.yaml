@@ -1,0 +1,28 @@
+id: Pfam:PF10475
+pfam_id: PF10475
+name: Vacuolar-sorting protein 54, of GARP complex
+short_name: Vps54_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10475
+counters:
+  proteins: 5144
+  matches: 5274
+  proteomes: 2258
+  taxa: 6739
+  structures: 0
+  alphafold_models: 4342
+  domain_architectures: 75
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019515
+description: This is a family of vacuolar-sorting proteins 54, from eukaryotes. Along with VPS52 and VPS53
+  this forms the Golgi-associated retrograde protein complex GARP [[cite:PUB00090044]]. VPS54 is separated
+  into N- and C-terminal regions each of which has a different function. This N-terminal family of is
+  important for GARP complex assembly and stability, whereas the C-terminal domain, [pfam:PF07928], brings
+  about localisation to an early endocytic compartment [[cite:PUB00109230]].

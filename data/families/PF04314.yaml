@@ -1,0 +1,29 @@
+id: Pfam:PF04314
+pfam_id: PF04314
+name: Putative lipoprotein LpqE-like
+short_name: LpqE-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04314
+counters:
+  proteins: 11792
+  matches: 11825
+  proteomes: 8450
+  taxa: 11175
+  structures: 26
+  alphafold_models: 7072
+  domain_architectures: 24
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007410
+description: This entry represents LpqE, putative lipoprotein Lxx21020, and uncharacterised protein RP573,
+  mainly found in bacteria. Putative lipoprotein LpqE is a membrane-associated bacterial protein predicted
+  to be involved in cell envelope processes. As a putative lipoprotein, LpqE is likely anchored to the
+  membrane via a lipid-modified N-terminal cysteine residue, a hallmark of bacterial lipoproteins. While
+  its precise biological function remains uncharacterised, LpqE is commonly found in pathogenic bacteria
+  and may contribute to host-pathogen interactions or membrane stability [[cite:PUB00161580]].

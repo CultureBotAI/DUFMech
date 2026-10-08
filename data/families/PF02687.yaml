@@ -1,0 +1,28 @@
+id: Pfam:PF02687
+pfam_id: PF02687
+name: FtsX-like permease C-terminal
+short_name: FtsX
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02687
+counters:
+  proteins: 143181
+  matches: 194321
+  proteomes: 18550
+  taxa: 26730
+  structures: 72
+  alphafold_models: 90109
+  domain_architectures: 129
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003838
+description: This entry represents the C-terminal helices found in members of the ABC type 3 transporter
+  family of permeases, including Cell division protein FtsX from Gram-negative and Gram-positive bacteria
+  [[cite:PUB00096431]], Permease protein MacB [[cite:PUB00072503]], Lipoprotein-releasing system transmembrane
+  protein LolC ([swissprot:P57382]) which has been shown to transport lipids targeted to the outer membrane
+  across the inner membrane [[cite:PUB00071889]]. This region contains three transmembrane helices.

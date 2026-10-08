@@ -1,0 +1,25 @@
+id: Pfam:PF05206
+pfam_id: PF05206
+name: Methyltransferase TRM13
+short_name: TRM13
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05206
+counters:
+  proteins: 2750
+  matches: 2998
+  proteomes: 2016
+  taxa: 5947
+  structures: 0
+  alphafold_models: 2353
+  domain_architectures: 70
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007871
+description: This is a family of eukaryotic proteins which are responsible for 2'-O-methylation of tRNA
+  at position 4 [[cite:PUB00045160]]. TRM13 shows no sequence similarity to other known methyltransferases.

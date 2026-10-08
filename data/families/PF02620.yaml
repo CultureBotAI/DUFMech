@@ -1,0 +1,28 @@
+id: Pfam:PF02620
+pfam_id: PF02620
+name: Large ribosomal RNA subunit accumulation protein YceD
+short_name: YceD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02620
+counters:
+  proteins: 17397
+  matches: 17397
+  proteomes: 16887
+  taxa: 23868
+  structures: 0
+  alphafold_models: 11341
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003772
+description: This family is nearly universally conserved in bacteria and plants except the Chlorophyceae
+  algae. Thus far, mutantional analysis in bacteria have not established a function. In contrast, mutants
+  have embryo lethal phenotypes in maize and Arabidopsis. In maize, the mutant embryos arrest at an early
+  transition stage.It has been suggested that family members specifically affect 23S rRNA accumulation
+  in plastids as well as bacteria [[cite:PUB00083910]].

@@ -1,0 +1,29 @@
+id: Pfam:PF22046
+pfam_id: PF22046
+name: Enoyl-acyl carrier protein reductase FabMG
+short_name: FabMG
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF22046
+counters:
+  proteins: 237
+  matches: 237
+  proteomes: 231
+  taxa: 393
+  structures: 2
+  alphafold_models: 135
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR053909
+description: This entry, previously known as DUF6936, represents FabMG enoyl-acyl carrier protein reductase
+  (ENR) and related proteins. This enzyme is a FabI-type ENR that employs NADH as a coenzyme and mediates
+  resistance to triclosan. FabMG adopts an alpha/beta structure, with a central parallel beta-sheet elaborated
+  with alpha-helices on both sides. FabMG differs from other related ENRs in sequence and structure. These
+  differences, in particular in the substrate-binding loop and pocket regions in which triclosan binds,
+  could be responsible for the triclosan resistance [[cite:PUB00154385]].

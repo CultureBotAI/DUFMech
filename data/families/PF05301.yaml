@@ -1,0 +1,27 @@
+id: Pfam:PF05301
+pfam_id: PF05301
+name: GNAT acetyltransferase, Mec-17
+short_name: Acetyltransf_16
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05301
+counters:
+  proteins: 2356
+  matches: 2415
+  proteomes: 1155
+  taxa: 3938
+  structures: 18
+  alphafold_models: 2052
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007965
+description: Mec-17 is the protein product of one of the 18 genes required for the development and function
+  of the touch receptor neuron for gentle touch. Mec-17 is specifically required for maintaining the differentiation
+  of the touch receptor [[cite:PUB00053857]]. The family shares all the residue-motifs characteristic
+  of Gcn5-related acetyl-transferases, though the exact unction is still unknown [[cite:PUB00044970]].

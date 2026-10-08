@@ -1,0 +1,29 @@
+id: Pfam:PF02958
+pfam_id: PF02958
+name: Ecdysteroid kinase-like family
+short_name: EcKL
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02958
+counters:
+  proteins: 11893
+  matches: 13042
+  proteomes: 2359
+  taxa: 5457
+  structures: 0
+  alphafold_models: 9868
+  domain_architectures: 210
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004119
+description: This family includes ecdysteroid 22-kinase, an enzyme responsible for the phosphorylation
+  of ecdysteroids (insect growth and moulting hormones) at C-22, to form physiologically inactive ecdysteroid
+  22-phosphates [[cite:PUB00091343]]. Most insects contain 12 to 105 genes encoding this family and yet
+  so far only one enzyme (ecdysteroid 22-kinase from Bombyx mori) has characterised substrates (2-deoxyecdysone,
+  ecdysone, 20-hydroxyecdysone). There are good reasons to believe that this family includes kinases that
+  act on other small molecule substrates and that they may function in detoxification processes [[cite:PUB00094481]].

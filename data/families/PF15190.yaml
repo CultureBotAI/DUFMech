@@ -1,0 +1,25 @@
+id: Pfam:PF15190
+pfam_id: PF15190
+name: Transmembrane protein 251
+short_name: TMEM251
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15190
+counters:
+  proteins: 818
+  matches: 820
+  proteomes: 704
+  taxa: 2291
+  structures: 0
+  alphafold_models: 742
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR028024
+description: This family of proteins, also known as UPF0694, is found in eukaryotes. Proteins in this
+  family are around 135 amino acids in length. In humans, it is found on the chromosomal position, C14orf109.

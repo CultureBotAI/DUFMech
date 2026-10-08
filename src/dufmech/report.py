@@ -90,6 +90,35 @@ def load_latest_rows(
     return (worklist_rows, score_rows, input_ids)
 
 
+def metadata_preserving_ancestors(worklists_dir: Path, worklist_id: str) -> list[str]:
+    """Return verified parent worklists whose family metadata ``worklist_id`` kept unchanged.
+
+    Follows ``snapshot.input_snapshot_ids.worklist`` through text reclassifications
+    (v1 ``reclassification`` or ``reclassify_saved_worklist``) and EX_DUF migrations
+    without a live refresh. Those derivations change only seed status and candidate
+    reasons of existing families, so evidence seeded on an ancestor still applies to
+    the families it names. A live refresh may change metadata, so the walk stops there.
+    """
+
+    ancestors: list[str] = []
+    current = worklist_id
+    while True:
+        manifest = verified_manifest(worklists_dir / f"{current}.json")
+        snapshot = manifest["snapshot"]
+        parents = _mapping(snapshot.get("input_snapshot_ids"))
+        parent = parents.get("worklist")
+        if not isinstance(parent, str) or "live_worklist" in parents:
+            return ancestors
+        derivation = _mapping(manifest.get("derivation"))
+        preserving = "reclassification" in manifest or derivation.get("method") in {
+            "reclassify_saved_worklist", "exduf_migration",
+        }
+        if not preserving or parent in ancestors or parent == worklist_id:
+            return ancestors
+        ancestors.append(parent)
+        current = parent
+
+
 def verified_manifest(path: Path) -> dict[str, Any]:
     """Return a snapshot manifest after checking its files and row counts."""
 

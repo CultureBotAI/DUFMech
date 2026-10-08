@@ -1,0 +1,24 @@
+id: Pfam:PF02595
+pfam_id: PF02595
+name: Glycerate kinase family
+short_name: Gly_kinase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02595
+counters:
+  proteins: 12566
+  matches: 13214
+  proteomes: 10064
+  taxa: 14142
+  structures: 2
+  alphafold_models: 7697
+  domain_architectures: 26
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004381
+description: This is family of Glycerate kinases.

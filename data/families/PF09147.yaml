@@ -1,0 +1,28 @@
+id: Pfam:PF09147
+pfam_id: PF09147
+name: Carbapenam-3-carboxylate synthase, N-terminal
+short_name: CarA_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09147
+counters:
+  proteins: 40
+  matches: 40
+  proteomes: 38
+  taxa: 86
+  structures: 2
+  alphafold_models: 28
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015230
+description: This domain is found in the N-terminal of carbapenam-3-carboxylate synthase (carA), and is
+  composed of two antiparallel six-stranded beta-sheets that form a sandwich, flanked on each side by
+  two alpha-helices [[cite:PUB00022497]]. carA is involved in the biosynthesis of carbapenam-3-carboxylate,
+  a beta-lactam antibiotic of the carbapenem class. It catalyses the ATP-dependent formation of (3S,5S)-carbapenam-3-carboxylate
+  from (2S,5S)-5-carboxymethylproline [[cite:PUB00069787],[cite:PUB00069788],[cite:PUB00069789]].

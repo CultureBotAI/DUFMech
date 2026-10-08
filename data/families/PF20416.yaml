@@ -1,0 +1,29 @@
+id: Pfam:PF20416
+pfam_id: PF20416
+name: U3 small nucleolar RNA-associated protein 20 domain
+short_name: UTP20
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20416
+counters:
+  proteins: 3725
+  matches: 3767
+  proteomes: 3019
+  taxa: 8023
+  structures: 41
+  alphafold_models: 200
+  domain_architectures: 77
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046523
+description: This domain is found towards the C-terminal the U3 small nucleolar RNA-associated protein
+  20 (UTP20) from yeast and its human homologue, also known as DRIM (Down-Regulated In Metastasis). DRIM
+  is differentially expressed in metastatic and non-metastatic human breast carcinoma cells [[cite:PUB00014724]].
+  Proteins of this entry are involved in processing of non-coding RNA as components of the small-subunit
+  (SSU) processome; SSU processome is involved in the biogenesis of the 18S rRNA [[cite:PUB00014725],[cite:PUB00101284]].
+  UTP20 is a huge alpha-solenoid that functions as a scaffold [[cite:PUB00101286],[cite:PUB00101285]].

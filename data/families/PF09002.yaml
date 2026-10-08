@@ -1,0 +1,28 @@
+id: Pfam:PF09002
+pfam_id: PF09002
+name: Card1-like, endonuclease domain
+short_name: Card1_endonuc
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09002
+counters:
+  proteins: 627
+  matches: 627
+  proteomes: 597
+  taxa: 1248
+  structures: 8
+  alphafold_models: 429
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015093
+description: This is the endonuclease domain found in a set of bacterial proteins, including Card1 (cyclic-oligoadenylate-activated
+  single-stranded ribonuclease and single-stranded deoxyribonuclease 1) from Treponema succinifaciens
+  ([swissprot:F2NWD3]), a protein that is part of type III CRISPR-Cas immune response system. This protein
+  consists of a CARF (CRISPR-associated Rossman fold) domain at the N-terminal, an helical hinge domain
+  and a C-terminal endonuclease domain [[cite:PUB00153094]].

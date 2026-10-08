@@ -1,0 +1,26 @@
+id: Pfam:PF07342
+pfam_id: PF07342
+name: TscT toxin protein
+short_name: TscT
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07342
+counters:
+  proteins: 51
+  matches: 51
+  proteomes: 28
+  taxa: 50
+  structures: 0
+  alphafold_models: 31
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009942
+description: This family consists of several bacterial proteins of around 100 residues in length. Members
+  of this family seem to be found exclusively in Staphylococcus aureus. This family includes the TscT
+  protein [[cite:PUB00159162]] which is part of the TscT/TscA toxin-antitoxin system.

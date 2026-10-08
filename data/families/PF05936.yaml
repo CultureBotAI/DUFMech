@@ -1,0 +1,26 @@
+id: Pfam:PF05936
+pfam_id: PF05936
+name: Bacterial Type VI secretion, VC_A0110, EvfL, ImpJ, VasE
+short_name: T6SS_VasE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05936
+counters:
+  proteins: 4791
+  matches: 4848
+  proteomes: 3180
+  taxa: 4651
+  structures: 7
+  alphafold_models: 2893
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010263
+description: T6SS_VasE is a family of of bacterial proteins that are essential for the type VI pathogenic
+  secretion system, although the exact function of this particular component of the system is still not
+  known [[cite:PUB00075481],[cite:PUB00075482]].

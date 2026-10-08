@@ -1,0 +1,29 @@
+id: Pfam:PF06862
+pfam_id: PF06862
+name: Utp25, C-terminal domain
+short_name: Utp25_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06862
+counters:
+  proteins: 3980
+  matches: 4001
+  proteomes: 3238
+  taxa: 8653
+  structures: 0
+  alphafold_models: 3382
+  domain_architectures: 65
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR053939
+description: UTP25 is a family of eukaryotic proteins. The family displays limited sequence similarity
+  to DEAD-box RNA helicases, having alternative residues at the Walker A and DEAD-box sites, but conservation
+  of structural and other key residues [[cite:PUB00109164]]. The domain is required and sufficient for
+  the interaction of Utp25 with Utp3. UTP25 interacts with nucleolar protein Nop19 in S. cerevisiae, and
+  Nop19p is essential for the incorporation of Utp25p into pre-ribosomes [[cite:PUB00074620]]. Proteins
+  in this entry consist of two domains of which the C-terminal one is represented in this model.

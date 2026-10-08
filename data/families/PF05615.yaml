@@ -1,0 +1,24 @@
+id: Pfam:PF05615
+pfam_id: PF05615
+name: Tho complex subunit 7
+short_name: THOC7
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05615
+counters:
+  proteins: 3723
+  matches: 3729
+  proteomes: 3019
+  taxa: 8138
+  structures: 8
+  alphafold_models: 3175
+  domain_architectures: 51
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008501
+description: The Tho complex is involved in transcription elongation and mRNA export from the nucleus.

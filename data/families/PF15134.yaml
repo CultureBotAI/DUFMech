@@ -1,0 +1,25 @@
+id: Pfam:PF15134
+pfam_id: PF15134
+name: Centrosomal protein 15-like
+short_name: CEP15-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15134
+counters:
+  proteins: 592
+  matches: 599
+  proteomes: 456
+  taxa: 1685
+  structures: 0
+  alphafold_models: 517
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR028006
+description: This family of animal proteins includes human Centrosomal protein 15 (CEP15), which may play
+  a role in ciliary assembly.

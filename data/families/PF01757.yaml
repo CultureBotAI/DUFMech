@@ -1,0 +1,33 @@
+id: Pfam:PF01757
+pfam_id: PF01757
+name: Acyltransferase domain
+short_name: Acyl_transf_3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01757
+counters:
+  proteins: 79491
+  matches: 80016
+  proteomes: 17243
+  taxa: 26410
+  structures: 0
+  alphafold_models: 51499
+  domain_architectures: 429
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002656
+description: This family includes a range of acyltransferase enzymes. This domain is found in a wide range
+  of acyltransferase enzymes, including, mainly, bacterial proteins which catalyse the transfer of acyl
+  groups, other than amino-acyl, from one compound to another, such as Glucans biosynthesis protein C
+  (OPGC) or protein OatA from Listeria monocytogenes serovar 1/2a and Staphylococcus aureus, an integral
+  membrane protein which is responsible for O-acetylation at the C6-hydroxyl group of N-acetylmuramyl
+  residues, forming the corresponding N,6-O-diacetylmuramic acid of the peptidoglycan, a modification
+  that determines lysozyme resistance [[cite:PUB00097284],[cite:PUB00097283]]. This domain is also present
+  in eukaryotic proteins, namely O-acyltransferase like protein (OACYL) from mouse and RHY1 (Regulator
+  of hypoxia-inducible factor 1) [[cite:PUB00097285]] and NRF6 (Nose resistant to fluoxetine protein 6)
+  from Caenorhabditis elegans [[cite:PUB00097286]].

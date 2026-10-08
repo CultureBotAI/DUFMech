@@ -1,0 +1,28 @@
+id: Pfam:PF10674
+pfam_id: PF10674
+name: Ycf54 protein
+short_name: Ycf54
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10674
+counters:
+  proteins: 850
+  matches: 851
+  proteomes: 638
+  taxa: 1792
+  structures: 5
+  alphafold_models: 632
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019616
+description: 'Ycf54 is found encoded in the chloroplast genomes of algae, also found in plants and cyanobacteria.
+  It is a component of the MgPME-cyclase complex and plays two roles: first, it plays a critical role
+  in the assembly/stability of the Mg-cyclase complex and its constituents; secondly, it is required for
+  normal Pchlide formation [[cite:PUB00151582],[cite:PUB00097432]]. This protein is required for optimal
+  MgPME-cyclase activity, although it is not absolutely essential.'

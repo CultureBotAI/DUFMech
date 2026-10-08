@@ -1,0 +1,26 @@
+id: Pfam:PF15261
+pfam_id: PF15261
+name: Jhy protein
+short_name: JHY
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15261
+counters:
+  proteins: 1046
+  matches: 1055
+  proteomes: 788
+  taxa: 2594
+  structures: 0
+  alphafold_models: 877
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027968
+description: Jhy protein is the protein product of the gene Jhy (previously known as 4931429I11Rik). This
+  protein family is found in eukaryotes, and is approximately 120 amino acids in length. In humans, the
+  gene encoding this protein lies in the position chromosome 11 open reading frame 63.

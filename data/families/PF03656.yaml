@@ -1,0 +1,30 @@
+id: Pfam:PF03656
+pfam_id: PF03656
+name: Pam16
+short_name: Pam16
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03656
+counters:
+  proteins: 4502
+  matches: 4516
+  proteomes: 3157
+  taxa: 8470
+  structures: 1
+  alphafold_models: 3869
+  domain_architectures: 88
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: The Pam16 protein ([swissprot:P42949]) is the fifth essential subunit of the pre-sequence
+  translocase-associated protein import motor (PAM) [[cite:PUB00019986]]. In Saccharomyces cerevisiae,
+  Pam16 is required for preprotein translocation into the matrix, but not for protein insertion into the
+  inner membrane [[cite:PUB00019986]]. Pam16 has a degenerate J domain. J-domain proteins play important
+  regulatory roles as co-chaperones, recruiting Hsp70 partners and accelerating the ATP-hydrolysis step
+  of the chaperone cycle [[cite:PUB00005482]]. Pam16's J-like domain strongly interacts with Pam18's J
+  domain, leading to a productive interaction of Pam18 with mtHsp70 at the mitochondria import channel
+  [[cite:PUB00033671]]. Pam18 stimulates the ATPase activity of mtHsp70.

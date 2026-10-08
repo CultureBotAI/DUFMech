@@ -1,0 +1,25 @@
+id: Pfam:PF12944
+pfam_id: PF12944
+name: Hepatitis A virus viral protein VP
+short_name: HAV_VP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12944
+counters:
+  proteins: 617
+  matches: 618
+  proteomes: 28
+  taxa: 116
+  structures: 11
+  alphafold_models: 35
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024354
+description: This is a family of the viral protein found in hepatitis A viruses. HAV is unique among picornaviruses
+  in targeting the liver [[cite:PUB00075612]].

@@ -1,0 +1,27 @@
+id: Pfam:PF03886
+pfam_id: PF03886
+name: ABC-type transport auxiliary lipoprotein component
+short_name: ABC_trans_aux
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03886
+counters:
+  proteins: 8077
+  matches: 8081
+  proteomes: 5845
+  taxa: 8107
+  structures: 7
+  alphafold_models: 5066
+  domain_architectures: 11
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005586
+description: ABC_trans_aux is a family of bacterial proteins that act as auxiliarires to the ABC-transporter
+  in the gamma-hexachlorocyclohexane uptake permease system in Sphingobium japonicum. Gamma-hexachlorocyclohexane,
+  or Lindane, can be used as the sole source of carbon in S.japonicum in aerobic conditions. Lindane is
+  an insecticide [[cite:PUB00075438]].

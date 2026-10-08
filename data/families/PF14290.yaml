@@ -1,0 +1,28 @@
+id: Pfam:PF14290
+pfam_id: PF14290
+name: Succinate dehydrogenase subunit 5, mitochondrial
+short_name: SDH5_plant
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14290
+counters:
+  proteins: 718
+  matches: 725
+  proteomes: 362
+  taxa: 1028
+  structures: 0
+  alphafold_models: 606
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025397
+description: Complex II [succinate dehydrogenase (succinate-ubiquinone oxidoreductase); SDH] is the only
+  enzyme shared by both the electron transport chain and the tricarboxylic acid (TCA) cycle in mitochondria.
+  In plants, this complex is considered unusual because it has accessory subunits (SDH5-SDH8), in addition
+  to the catalytic subunits of SDH found in all eukaryotes (SDH1- SDH4). This family represents the accessory
+  complex II subunit Succinate dehydrogenase subunit 5 mitochondrial, from plants [[cite:PUB00098021],[cite:PUB00097630]].

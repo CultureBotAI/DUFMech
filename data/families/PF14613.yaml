@@ -1,0 +1,29 @@
+id: Pfam:PF14613
+pfam_id: PF14613
+name: HAM1-like, C-terminal domain
+short_name: HAM1_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14613
+counters:
+  proteins: 1927
+  matches: 1931
+  proteomes: 1257
+  taxa: 2678
+  structures: 0
+  alphafold_models: 1593
+  domain_architectures: 29
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027842
+description: This is a domain found at the C-terminal end of the putative cell signalling protein HAM1
+  from Cryptococcus neoformans and similar fungal sequences. HAM1 may act as a negative regulator of mating
+  during vegetative growth [[cite:PUB00110896]]. Proteins with this domain often also contain an N-terminal
+  domain [pfam:PF19343]. The member [swissprot:Q7SB48], named HAM-13, is thought to associate with MAPKs
+  and to be required for proper cell communication but it is also possible to be involved in other processes
+  such as cell signalling or trafficking [[cite:PUB00110895]].

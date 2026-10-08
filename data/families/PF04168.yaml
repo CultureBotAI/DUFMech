@@ -1,0 +1,28 @@
+id: Pfam:PF04168
+pfam_id: PF04168
+name: A predicted alpha-helical domain with a conserved ER motif.
+short_name: Alpha-E
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04168
+counters:
+  proteins: 10852
+  matches: 10891
+  proteomes: 7165
+  taxa: 10082
+  structures: 0
+  alphafold_models: 7027
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007296
+description: An uncharacterized alpha helical domain containing a highly conserved ER motif and typically
+  found as a tandem duplication. Contextual analysis suggests that it functions in a distinct peptide
+  synthesis/modification system comprising of a transglutaminase, a peptidase of the NTN-hydrolase superfamily,
+  an active and inactive circularly permuted ATP-grasp domains and a transglutaminase fused N-terminal
+  to a circularly permuted COOH-NH2 ligase domain [[cite:PUB00057486]].

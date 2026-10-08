@@ -1,0 +1,28 @@
+id: Pfam:PF20235
+pfam_id: PF20235
+name: PIR2-like, helical domain
+short_name: PIR2-like_helical
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20235
+counters:
+  proteins: 3036
+  matches: 3844
+  proteomes: 373
+  taxa: 1007
+  structures: 0
+  alphafold_models: 2578
+  domain_architectures: 64
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046527
+description: This helical domain is found at the N-terminal of plant E3-ligase proteins, including PP2CA
+  INTERACTING RING FINGER PROTEIN 2 (PIR2, also known as MND1-interacting protein 1) and its paralogues
+  RF4 and RF298 from Arabidopsis. The function of this domain is unknown. PIR2 is the closest homologue
+  of PIR1 (PP2CA interacting RING finger protein 1) and both positively modulate ABA signaling by targeting
+  PP2CA for degradation [[cite:PUB00101279]].

@@ -1,0 +1,25 @@
+id: Pfam:PF02655
+pfam_id: PF02655
+name: ATP-grasp domain
+short_name: ATP-grasp_3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02655
+counters:
+  proteins: 4548
+  matches: 4554
+  proteomes: 3410
+  taxa: 6170
+  structures: 9
+  alphafold_models: 3093
+  domain_architectures: 74
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003806
+description: No functional information or experimental verification of function is known in this family.
+  This family appears to be an ATP-grasp domain (Pers. obs. A Bateman).

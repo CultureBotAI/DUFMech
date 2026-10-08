@@ -1,0 +1,29 @@
+id: Pfam:PF11854
+pfam_id: PF11854
+name: Putative outer membrane beta-barrel porin, MtrB/PioB
+short_name: MtrB_PioB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11854
+counters:
+  proteins: 523
+  matches: 525
+  proteomes: 318
+  taxa: 611
+  structures: 1
+  alphafold_models: 311
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR020016
+description: MtrB-PioB is a family of bacterial putative outer membrane porins. This family, is secreted
+  as part of the pio (phototrophic iron oxidation) operon that has been found to couple the oxidation
+  of ferrous iron [Fe(II)] to reductive CO2 fixation using light energy. PioABC is found in Rhodopseudomonas
+  palustris and MtrB-PioB is likely to be a beta-barrel porin. Similar to other outer membrane porins,
+  PioB and MtrB are predicted to have long loops protruding into the extracellular space and short turns
+  on the periplasmic side [[cite:PUB00045463]].

@@ -1,0 +1,34 @@
+id: Pfam:PF07946
+pfam_id: PF07946
+name: PAT complex subunit CCDC47
+short_name: CCDC47
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07946
+counters:
+  proteins: 4200
+  matches: 4288
+  proteomes: 3257
+  taxa: 8584
+  structures: 4
+  alphafold_models: 3589
+  domain_architectures: 65
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012879
+description: This family represents CCDC47 proteins which are a component of the PAT complex, an endoplasmic
+  reticulum (ER)-resident membrane multiprotein complex that facilitates multi-pass membrane proteins
+  insertion into membranes [[cite:PUB00097218]]. The PAT complex, formed by CCDC47 and Asterix proteins,
+  acts as an intramembrane chaperone by directly interacting with nascent transmembrane domains (TMDs),
+  releasing its substrates upon correct folding, and is needed for optimal biogenesis of multi-pass membrane
+  proteins [[cite:PUB00097218]]. CCDC47 ([swissprot:Q96A33]) is required to maintain the stability of
+  Asterix [[cite:PUB00097218],[cite:PUB00097217]]. CCDC47 is associated with various membrane-associated
+  processes and is component of a ribosome-associated ER translocon complex involved in multi-pass membrane
+  protein transport into the ER membrane and biogenesis [[cite:PUB00097241]]. It is also involved in the
+  regulation of calcium ion homeostasis in the ER [[cite:PUB00097242]], being also required for proper
+  protein degradation via the ERAD (ER-associated degradation) pathway [[cite:PUB00097243]].

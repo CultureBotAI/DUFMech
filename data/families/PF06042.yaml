@@ -1,0 +1,25 @@
+id: Pfam:PF06042
+pfam_id: PF06042
+name: Nucleotidyltransferase
+short_name: NTP_transf_6
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06042
+counters:
+  proteins: 3134
+  matches: 3149
+  proteomes: 2958
+  taxa: 4244
+  structures: 1
+  alphafold_models: 1822
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009267
+description: This family consists of several hypothetical bacterial proteins of unknown function. This
+  family was recently identified as belonging to the nucleotidyltransferase superfamily [[cite:PUB00066751]].

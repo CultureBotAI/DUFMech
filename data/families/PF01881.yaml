@@ -1,0 +1,38 @@
+id: Pfam:PF01881
+pfam_id: PF01881
+name: CRISPR associated protein Cas6, C-terminal
+short_name: Cas_Cas6_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01881
+counters:
+  proteins: 1831
+  matches: 1832
+  proteomes: 1415
+  taxa: 2926
+  structures: 7
+  alphafold_models: 1415
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049435
+description: 'This group of families is one of several protein families that are always found associated
+  with prokaryotic CRISPRs, themselves a family of clustered regularly interspaced short palindromic repeats,
+  DNA repeats found in nearly half of all bacterial and archaeal genomes. These DNA repeat regions have
+  a remarkably regular structure: unique sequences of constant size, called spacers, sit between each
+  pair of repeats [[cite:PUB00020781]]. It has been shown that the CRISPRs are virus-derived sequences
+  acquired by the host to enable them to resist viral infection. The Cas proteins from the host use the
+  CRISPRs to mediate an antiviral response. After transcription of the CRISPR, a complex of Cas proteins
+  termed Cascade cleaves a CRISPR RNA precursor in each repeat and retains the cleavage products containing
+  the virus-derived sequence. Assisted by the helicase Cas3, these mature CRISPR RNAs then serve as small
+  guide RNAs that enable Cascade to interfere with virus proliferation [[cite:PUB00106643]]. Cas5 contains
+  an endonuclease motif, whose inactivation leads to loss of resistance, even in the presence of phage-derived
+  spacers [[cite:PUB00109113]]. In Type I and III CRISPR/Cas systems, the Cas6 family of endoribonucleases
+  generates functional CRISPR-derived RNAs by site-specific cleavage of repeat sequences in precursor
+  transcripts. The structure of Cas6 [[cite:PUB00098896]] showed it adopts a tandem ferredoxin/RRM fold.
+  This entry represents the C-terminal domain.'

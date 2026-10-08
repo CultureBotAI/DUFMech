@@ -1,0 +1,28 @@
+id: Pfam:PF01205
+pfam_id: PF01205
+name: Impact N-terminal domain
+short_name: Impact_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01205
+counters:
+  proteins: 18592
+  matches: 18629
+  proteomes: 16361
+  taxa: 26223
+  structures: 5
+  alphafold_models: 12878
+  domain_architectures: 121
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR001498
+description: This entry represents the N-terminal domain of the Impact proteins. The Impact protein is
+  a translational regulator that ensures constant high levels of translation under amino acid starvation.
+  It acts by interacting with Gcn1/Gcn1L1, thereby preventing activation of Gcn2 protein kinases (EIF2AK1
+  to 4) and subsequent down-regulation of protein synthesis [[cite:PUB00161305],[cite:PUB00158485]]. It
+  is evolutionary conserved from eukaryotes to archaea [[cite:PUB00046141]].

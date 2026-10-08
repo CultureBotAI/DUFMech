@@ -1,0 +1,30 @@
+id: Pfam:PF14780
+pfam_id: PF14780
+name: Nucleolus and neural progenitor protein, N-terminal
+short_name: NEPRO_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14780
+counters:
+  proteins: 2220
+  matches: 2231
+  proteomes: 1669
+  taxa: 5231
+  structures: 3
+  alphafold_models: 1930
+  domain_architectures: 29
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027951
+description: This domain is found at the N-terminal of nucleolus and neural progenitor protein (NEPRO)
+  which may play a role in cortex development as part of the Notch signalling pathway. Downstream of Notch
+  may repress the expression of proneural genes and inhibit neuronal differentiation thereby maintaining
+  neural progenitors [[cite:PUB00101272]]. NEPRO may also play a role in preimplentation embryo development
+  [[cite:PUB00101273]]. NEPRO interacts with multiple protein subunits of RMRP and is implicated in Anauxetic
+  dysplasia 3 [[cite:PUB00101274]]. NEPRO is likely the human orthologue of RMP1 subunit from yeast and
+  they share a four-helix bundle domain structure.

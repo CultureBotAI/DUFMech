@@ -1,0 +1,30 @@
+id: Pfam:PF08354
+pfam_id: PF08354
+name: Fatty acid synthase subunit beta/Fas1-like, helical
+short_name: Fas1-AflB-like_hel
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08354
+counters:
+  proteins: 3260
+  matches: 3333
+  proteomes: 2302
+  taxa: 4165
+  structures: 45
+  alphafold_models: 205
+  domain_architectures: 233
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013565
+description: This domain has been identified in fungi and bacteria. It is found in fatty acid synthase
+  beta subunit from fungi, including Fas1 from yeasts and aflB from Aspergillus parasiticus. This is an
+  inserted helical domain, whose function is not clear, and is found together with the MaoC-like domain
+  ([pfam:PF01575]) and the acyltransferase domain ([pfam:PF00698]) [[cite:PUB00016843]]. Fas1 is a fatty
+  acid synthetase that catalyses the formation of long-chain fatty acids from acetyl-CoA, malonyl-CoA
+  and NADPH [[cite:PUB00006544]]. AflB is part of the gene cluster that mediates the biosynthesis of aflatoxins
+  [[cite:PUB00083132]].

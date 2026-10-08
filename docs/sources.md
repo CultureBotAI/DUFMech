@@ -45,7 +45,7 @@ manifests. It does not remove, relicense, redownload, or redate historical data.
 
 | Pipeline | Implemented input | Retained observation and next gate |
 | --- | --- | --- |
-| InterPro/Pfam | Pfam entry API | October 1 worklist and October 5 offline label correction retained; ADOPTED |
+| InterPro/Pfam | Pfam entry API | October 1 worklist, October 5 offline label correction and October 8 EX_DUF migration (1,763 added) retained; ADOPTED |
 | UniProtKB/UniRef | InterPro members, UniProtKB search, ID mapping | October 7 bounded PF04149 domain-view freeze: 2 rows retained; ADOPTED as reference evidence |
 | MGnify | Pfam cluster-representative API | External pilot: 12 rows; data terms unverified |
 | AlphaFold DB | Prediction metadata API | External pilot: 12 rows; no committed evidence freeze |

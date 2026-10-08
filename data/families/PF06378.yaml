@@ -1,0 +1,29 @@
+id: Pfam:PF06378
+pfam_id: PF06378
+name: Sak Single Strand Annealing Protein
+short_name: SSAP_Sak
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06378
+counters:
+  proteins: 269
+  matches: 276
+  proteomes: 247
+  taxa: 555
+  structures: 2
+  alphafold_models: 99
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009425
+description: This family represents the Sak Single Strand Annealing Protein (SSAP) from Staphylococcal
+  Bacteriophage 80alpha which belongs to Rad52-like superfamily. The Sak protein from phage 80alpha shares
+  similarities with other SSAPs, such as Red-beta from phage alpha and RAD52 from eukaryotes. SSAPs like
+  Sak play a crucial role in homologous recombination by promoting the annealing of complementary single-stranded
+  DNA. Sak adopts a similar to other SSAPs structure and shows the groove commonly seen in SSAPs to accommodate
+  ssDNA in the outer surface of the torus, known as the ssDNA binding groove or ssDBG [[cite:PUB00160682]].

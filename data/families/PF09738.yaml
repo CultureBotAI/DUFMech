@@ -1,0 +1,27 @@
+id: Pfam:PF09738
+pfam_id: PF09738
+name: LRRFIP family
+short_name: LRRFIP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09738
+counters:
+  proteins: 7493
+  matches: 12575
+  proteomes: 1252
+  taxa: 4062
+  structures: 1
+  alphafold_models: 5721
+  domain_architectures: 40
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019139
+description: LRRFIP1 is a transcriptional repressor which preferentially binds to the GC-rich consensus
+  sequence (5'- AGCCCCCGGCG-3') and may regulate expression of TNF, EGFR and PDGFA [[cite:PUB00078055]].
+  LRRFIP2 may function as activator of the canonical Wnt signalling pathway, in association with DVL3,
+  upstream of CTNNB1/beta-catenin [[cite:PUB00078057]].

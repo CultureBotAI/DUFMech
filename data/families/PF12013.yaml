@@ -1,0 +1,29 @@
+id: Pfam:PF12013
+pfam_id: PF12013
+name: Orsellinic acid/F9775 biosynthesis cluster protein D
+short_name: OrsD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12013
+counters:
+  proteins: 2099
+  matches: 2142
+  proteomes: 608
+  taxa: 1505
+  structures: 0
+  alphafold_models: 1473
+  domain_architectures: 58
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022698
+description: This family of proteins is functionally uncharacterised. This protein is found in eukaryotes.
+  Proteins in this family are typically between 247 to 1018 amino acids in length. Family members include
+  orsellinic acid/F9775 biosynthesis cluster protein D (orsD) from Emericella nidulans. The orsD gene
+  is part of the cluster that encodes components for the biosynthesis of orsellinic acid, as well as biosynthesis
+  of the cathepsin K inhibitors F9775 A and F9775 B [[cite:PUB00083127]] [[cite:PUB00083128]], but the
+  function of orsD is unknown. OrsD contains two segments that are likely to be C2H2 zinc binding domains.

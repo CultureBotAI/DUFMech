@@ -1,0 +1,28 @@
+id: Pfam:PF01973
+pfam_id: PF01973
+name: 6-hydroxymethylpterin diphosphokinase MptE-like
+short_name: MptE-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01973
+counters:
+  proteins: 3321
+  matches: 3325
+  proteomes: 2320
+  taxa: 4154
+  structures: 3
+  alphafold_models: 2353
+  domain_architectures: 52
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002826
+description: This domain can be found in a group of proteins, including archaeal 6-hydroxymethylpterin
+  diphosphokinase (6-HMDPK), known as MptE, which catalyses the formation of 6-hydroxymethyl-7,8-dihydropterin
+  diphosphate (6-HMDP) from 6-HMD and ATP [[cite:PUB00061602]]. 6-HMDP is the precursor of the pterin
+  containing moiety of the essential C1-carriers tetrahydrofolate and tetrahydromethanopterin. This entry
+  also includes a number of uncharacterised proteins from bacteria.

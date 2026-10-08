@@ -1,0 +1,33 @@
+id: Pfam:PF11041
+pfam_id: PF11041
+name: Bacteriophage baseplate wedge 1 protein
+short_name: Phage_Wedge1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11041
+counters:
+  proteins: 835
+  matches: 886
+  proteomes: 694
+  taxa: 1468
+  structures: 10
+  alphafold_models: 373
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021283
+description: This entry includes the baseplate wedge 1 protein of bacteriophage PhiTE that infects the
+  plant pathogen Pectobacterium atrosepticum. Wedge 1 is a component of the wedge complex that comprises
+  six lobed protomeric units in the baseplate. Each protomer contains a single copy of wedge 1 protein,
+  two copies of wedge 2 protein in alternate conformations, and a singular IG-like protein referred to
+  as the spacer. Wedge 1 forms the bulk of the wedge structure along with wedge 2, constituting the canonical
+  trifurcation unit that acts as a coordination platform adhering wedge 1 and 2 proteins into a continuous
+  ring. The short tail fiber (STF) attaches to wedge 1 monomers through its N-terminal loops that form
+  a globular joint, making electrostatic and hydrophobic interactions. Wedge 1 also forms a putative disulfide
+  bond with the sheath initiator (SI) protein (Wedge1:C143, SI:C143) that may serve as a pivoting point
+  to transduce signals associated with receptor binding.

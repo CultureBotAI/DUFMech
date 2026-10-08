@@ -1,0 +1,29 @@
+id: Pfam:PF14065
+pfam_id: PF14065
+name: Pvc16 N-terminal domain
+short_name: Pvc16_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14065
+counters:
+  proteins: 3474
+  matches: 3474
+  proteomes: 2784
+  taxa: 4423
+  structures: 8
+  alphafold_models: 2051
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025351
+description: This protein forms part of a contractile injection system [[cite:PUB00097484]]. Photorhabdus
+  virulence cassette (PVC) represents one group of extracellular CISs that are present in both bacteria
+  and archaea [[cite:PUB00097484]]. This entry include Pvc16. This family of proteins is found in bacteria
+  and archaea. Proteins in this family are typically between 190 and 320 amino acids in length. This domain
+  alone in Pvc16 is able to produce PVC particles with normal length but without the outer sheath, indicating
+  the main function of this N-terminal domain in terminating the tube growth [[cite:PUB00097484]].

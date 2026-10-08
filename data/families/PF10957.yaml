@@ -1,0 +1,26 @@
+id: Pfam:PF10957
+pfam_id: PF10957
+name: Sporulation protein Cse60
+short_name: Spore_Cse60
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10957
+counters:
+  proteins: 519
+  matches: 519
+  proteomes: 503
+  taxa: 739
+  structures: 0
+  alphafold_models: 298
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR020296
+description: Cse60 is expressed during sporulation in Bacillus subtilis. Transcription commences around
+  2h after the start of sporulation and had an absolute requirement for the transcription factor sigmaE.
+  Cse60 is an acidic product of only 60 residues, whose function is not known [[cite:PUB00045975]].

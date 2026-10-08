@@ -1,0 +1,26 @@
+id: Pfam:PF04181
+pfam_id: PF04181
+name: Rtr1/RPAP2 family
+short_name: RPAP2_Rtr1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04181
+counters:
+  proteins: 3353
+  matches: 3353
+  proteomes: 2673
+  taxa: 7179
+  structures: 5
+  alphafold_models: 2833
+  domain_architectures: 54
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007308
+description: This family includes the human RPAP2 (RNAP II associated polypeptide) protein and the yeast
+  Rtr1 protein [[cite:PUB00045120]]. It has been suggested that this family of proteins are regulators
+  of core RNA polymerase II function [[cite:PUB00045120]].

@@ -1,0 +1,23 @@
+id: Pfam:PF05168
+pfam_id: PF05168
+name: HEPN domain
+short_name: HEPN
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05168
+counters:
+  proteins: 7290
+  matches: 7296
+  proteomes: 3476
+  taxa: 7657
+  structures: 6
+  alphafold_models: 4256
+  domain_architectures: 50
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007842

@@ -1,0 +1,29 @@
+id: Pfam:PF10521
+pfam_id: PF10521
+name: Tti2 family
+short_name: Tti2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10521
+counters:
+  proteins: 2074
+  matches: 2084
+  proteomes: 1836
+  taxa: 4720
+  structures: 2
+  alphafold_models: 1736
+  domain_architectures: 38
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018870
+description: This family includes budding yeast Tel2-interacting protein 2 (Tti2) and similar proteins
+  from animals and fungi. Tti2 is a component of the tel2-tti1-tti2 (TTT) complex, which is involved in
+  the cellular resistance to DNA damage stresses, like ionizing radiation (IR), ultraviolet (UV) and mitomycin
+  C (MMC). Its homologue from humans, together with the TTT complex and HSP90, may participate in the
+  proper folding of newly synthesised phosphatidylinositol 3-kinase-related protein kinase (PIKK) proteins
+  [[cite:PUB00075571],[cite:PUB00073582],[cite:PUB00151832],[cite:PUB00088257]].

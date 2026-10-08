@@ -1,0 +1,28 @@
+id: Pfam:PF10577
+pfam_id: PF10577
+name: FAM171A1/A2/B, N-terminal
+short_name: FAM171A1-2-B_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10577
+counters:
+  proteins: 2670
+  matches: 2751
+  proteomes: 780
+  taxa: 2365
+  structures: 0
+  alphafold_models: 2305
+  domain_architectures: 48
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR048530
+description: This a domain found at the N-terminal of a family of proteins that includes FAM171A1/A2 and
+  FAM171B. FAM171A1 is a type 1 transmembrane glycoprotein also known as astroprincin (APCN) due to abundant
+  expression in astrocytes. APCN is also expressed in placental trophoblasts, skeletal and heart muscle,
+  kidney and pancreas [[cite:PUB00100164]]. APCN is involved in the regulation of the cytoskeletal dynamics,
+  playing a role in actin stress fiber formation.

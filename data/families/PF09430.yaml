@@ -1,0 +1,31 @@
+id: Pfam:PF09430
+pfam_id: PF09430
+name: ER membrane protein complex subunit 7, beta-sandwich domain
+short_name: EMC7_beta-sandw
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09430
+counters:
+  proteins: 3924
+  matches: 3930
+  proteomes: 3079
+  taxa: 8340
+  structures: 9
+  alphafold_models: 3381
+  domain_architectures: 103
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019008
+description: This is the beta-sandwich domain found in ER membrane protein complex subunit 7 (EMC7) [[cite:PUB00096682],[cite:PUB00096681]],
+  which is an integral membrane component of the EMC. EMC is widely conserved and involved in membrane
+  protein biogenesis. It mediates the insertion into endoplasmic reticulum membranes of newly synthesized
+  membrane proteins in an energy-independent manner, both post-translational insertions of tail-anchored
+  proteins and co-translational insertion of multipass membrane proteins [[cite:PUB00096679],[cite:PUB00096678]].
+  This entry includes UPF0620 protein C83.10 from S. pombe, an orthologue of animal EMC7. This domain
+  is also found in nodal modulators, which have been identified as part of a protein complex that participates
+  in the nodal signalling pathway during vertebrate development [[cite:PUB00054165]].

@@ -1,0 +1,25 @@
+id: Pfam:PF11176
+pfam_id: PF11176
+name: Translation machinery-associated protein 16
+short_name: Tma16
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11176
+counters:
+  proteins: 2885
+  matches: 2939
+  proteomes: 2504
+  taxa: 6596
+  structures: 11
+  alphafold_models: 2496
+  domain_architectures: 27
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021346
+description: Proteins in this family localise to the nucleus [[cite:PUB00016470],[cite:PUB00035474]].
+  Their function is not clear.

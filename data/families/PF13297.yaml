@@ -1,0 +1,29 @@
+id: Pfam:PF13297
+pfam_id: PF13297
+name: Replication stress response SDE2 C-terminal
+short_name: SDE2_2C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13297
+counters:
+  proteins: 4063
+  matches: 4067
+  proteomes: 1782
+  taxa: 5538
+  structures: 50
+  alphafold_models: 3532
+  domain_architectures: 78
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025086
+description: This domain represents the C-terminal region of the Replication stress response SDE2, a genome
+  surveillance factor. It contains the DNA-binding SAP domain, frequently found in proteins involved in
+  DNA repair. SDE2 C-terminal domain must be cleaved from its N-terminal at a diglycine motif within the
+  ubiquitin-like fold, after Proliferating cell nuclear antigen (PCNA) interaction. This generates a functional
+  protein that negatively regulates damage-inducible PCNA monoubiquitination, which then is proteolytically
+  degraded to allow S phase progression and replication fork recovery in response to DNA damage [[cite:PUB00101934]].

@@ -1,0 +1,29 @@
+id: Pfam:PF02649
+pfam_id: PF02649
+name: Type I GTP cyclohydrolase folE2
+short_name: GCHY-1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02649
+counters:
+  proteins: 4512
+  matches: 4514
+  proteomes: 4215
+  taxa: 6631
+  structures: 7
+  alphafold_models: 3145
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003801
+description: This is a family of prokaryotic proteins with type I GTP cyclohydrolase activity. GTP cyclohydrolase
+  I is the first enzyme of the de novo tetrahydrofolate biosynthetic pathway present in bacteria, fungi,
+  and plants, and encoded in Escherichia coli by the folE gene; it is also the first enzyme of the biopterin
+  (BH4) pathway in Homo sapiens[[cite:PUB00051207]]. The invariate, highly conserved glutamate residue
+  at position 216 in [swissprot:Q5F9K6] is likely to be the substrate ligand and the metal ligand is likely
+  to be the cysteine at position 147. The enzyme is Zinc 2+ dependent [[cite:PUB00057465]].

@@ -1,0 +1,26 @@
+id: Pfam:PF14964
+pfam_id: PF14964
+name: Integrator complex subunit 15
+short_name: INTS15
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14964
+counters:
+  proteins: 1234
+  matches: 1281
+  proteomes: 923
+  taxa: 3205
+  structures: 8
+  alphafold_models: 1077
+  domain_architectures: 27
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027844
+description: Integrator complex subunit 15 (C7orf26) is likely a component of the Integrator (INT) complex,
+  which is involved in the small nuclear RNAs (snRNA) U1 and U2 transcription and in their 3'-box-dependent
+  processing [[cite:PUB00100760]].

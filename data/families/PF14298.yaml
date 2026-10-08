@@ -1,0 +1,37 @@
+id: Pfam:PF14298
+pfam_id: PF14298
+name: Xenosiderophore-binding lipoprotein XusB
+short_name: XusB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14298
+counters:
+  proteins: 1660
+  matches: 1673
+  proteomes: 872
+  taxa: 1301
+  structures: 8
+  alphafold_models: 1059
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025401
+description: 'This entry represents XusB, a surface-exposed lipoprotein found exclusively in Bacteroidetes
+  that functions in xenosiderophore acquisition. XusB adopts a unique seven-bladed beta-propeller fold
+  with a deep, positively charged central calyx that binds enterobactin and other catecholate siderophores
+  with high affinity (Kd = 148 nM for enterobactin) [[cite:PUB00162406]]. The protein is enriched in outer
+  membrane vesicles (OMVs) and can be secreted into the extracellular milieu. XusB forms part of the xenosiderophore
+  utilization system (xus operon: xusABC) in Bacteroides thetaiotaomicron, where it captures siderophores
+  produced by other bacteria, particularly during iron-limiting conditions such as intestinal inflammation
+  [[cite:PUB00162406],[cite:PUB00162407]]. XusB-bound enterobactin is shielded from sequestration by host
+  lipocalin-2, thereby modifying nutritional immunity and potentially benefiting both commensal and pathogenic
+  bacteria. The N-terminus contains a lipobox-like sequence with a conserved cysteine (typically at position
+  23) that is essential for membrane association, followed by a lipoprotein export signal (LES). Structural
+  homologues are encoded by diverse Bacteroidetes species with conserved genetic synteny, though primary
+  sequences are poorly conserved. This domain was previously annotated as DUF4374 (domain of unknown function
+  4374).'

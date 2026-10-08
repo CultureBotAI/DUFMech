@@ -1,0 +1,32 @@
+id: Pfam:PF08214
+pfam_id: PF08214
+name: Histone acetyltransferase KAT11-type domain
+short_name: HAT_KAT11
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08214
+counters:
+  proteins: 1484
+  matches: 2178
+  proteomes: 1444
+  taxa: 3025
+  structures: 19
+  alphafold_models: 1224
+  domain_architectures: 30
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR016849
+description: This entry represents a histone acetyltransferase catalytic domain found in fungal proteins,
+  including RTT109 (also known as KAT11) from budding and fission yeasts and Candida species. This domain
+  catalyses the acetylation of lysine residues on histone H3, including H3K56, H3K9, H3K14, H3K23 and
+  H3K27 [[cite:PUB00045009],[cite:PUB00042670]]. The domain functions within a complex with histone chaperones
+  such as VPS75 that regulate substrate specificity [[cite:PUB00051225]]. Acetylation of H3K56 by this
+  domain promotes nucleosome assembly, DNA repair and transcriptional regulation during S-phase [[cite:PUB00045009],[cite:PUB00042670]].
+  The domain is also found in other histone acetyltransferases including p300/CBP which share a similar
+  fold but differ in catalytic properties and cofactor requirements [[cite:PUB00051225]]. Members of this
+  family show conservation across most eukaryotic fungi.

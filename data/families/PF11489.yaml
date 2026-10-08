@@ -1,0 +1,26 @@
+id: Pfam:PF11489
+pfam_id: PF11489
+name: Altered inheritance of mitochondria protein 21
+short_name: Aim21
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11489
+counters:
+  proteins: 989
+  matches: 1050
+  proteomes: 954
+  taxa: 1903
+  structures: 0
+  alphafold_models: 808
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021582
+description: This is a family of proteins conserved in yeasts. Saccharomyces cerevisiae Aim21 may be involved
+  in mitochondrial migration along actin filament [[cite:PUB00057438]]. It may also interact with ribosomes
+  [[cite:PUB00035474]].

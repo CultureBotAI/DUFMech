@@ -1,0 +1,27 @@
+id: Pfam:PF05571
+pfam_id: PF05571
+name: JNK1/MAPK8-associated membrane protein
+short_name: JAMP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05571
+counters:
+  proteins: 1738
+  matches: 1806
+  proteomes: 1217
+  taxa: 3997
+  structures: 0
+  alphafold_models: 1550
+  domain_architectures: 29
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008485
+description: This family consists of several eukaryotic proteins including JAMP, a Jun N-terminal kinase
+  1 (JNK1)-associated membrane protein. It associates with JNK1 through its C-terminal domain and regulates
+  the duration of JNK1 activity in response to diverse stress stimuli [[cite:PUB00086473]]. It is an important
+  component for coordinated clearance of misfolded proteins from the ER [[cite:PUB00086474],[cite:PUB00086475]].

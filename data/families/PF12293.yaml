@@ -1,0 +1,27 @@
+id: Pfam:PF12293
+pfam_id: PF12293
+name: Putative outer membrane core complex of type IVb secretion
+short_name: T4BSS_DotH_IcmK
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12293
+counters:
+  proteins: 371
+  matches: 378
+  proteomes: 317
+  taxa: 643
+  structures: 14
+  alphafold_models: 250
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022073
+description: T4BSS_DotH_IcmK is a family of bacterial transporter proteins from Proteobacteria. DotH is
+  an integral outer membrane component and it may form an outer membrane complex along with DotD and DotC
+  functionally equivalent to secretins. DotH is the strongest candidate for the VirB9 counterpart of other
+  T4BSS systems [[cite:PUB00075640]].

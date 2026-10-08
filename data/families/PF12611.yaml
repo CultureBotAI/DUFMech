@@ -1,0 +1,26 @@
+id: Pfam:PF12611
+pfam_id: PF12611
+name: Putative flagellar
+short_name: Flagellar_put
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12611
+counters:
+  proteins: 1447
+  matches: 1447
+  proteomes: 1427
+  taxa: 2208
+  structures: 0
+  alphafold_models: 962
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013367
+description: Proteins in this entry are encoded in a subset of bacterial flagellar operons, generally
+  between genes designated flgD and flgE, in species as diverse as Bacillus halodurans and various other
+  Firmicutes, Geobacter sulfurreducens, and Bdellovibrio bacteriovorus.

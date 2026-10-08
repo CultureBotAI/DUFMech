@@ -1,0 +1,27 @@
+id: Pfam:PF11841
+pfam_id: PF11841
+name: ELMO, armadillo-like helical domain
+short_name: ELMO_ARM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11841
+counters:
+  proteins: 5922
+  matches: 5951
+  proteomes: 2423
+  taxa: 6579
+  structures: 15
+  alphafold_models: 5286
+  domain_architectures: 83
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024574
+description: This domain is found in eukaryotes and predominantly in ELMO (Elongation and Cell motility)
+  proteins and corresponds to the armadillo repeats domain (ARR). It may play an important role in defining
+  the functions of the ELMO family members and may be functionally linked to the ELMO domain in these
+  proteins [[cite:PUB00073882],[cite:PUB00109603]], being involved in protein-protein interactions.

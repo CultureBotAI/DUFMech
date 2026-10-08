@@ -1,0 +1,28 @@
+id: Pfam:PF01885
+pfam_id: PF01885
+name: RNA 2'-phosphotransferase, Tpt1 / KptA family
+short_name: PTS_2-RNA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01885
+counters:
+  proteins: 8160
+  matches: 8272
+  proteomes: 6226
+  taxa: 12585
+  structures: 28
+  alphafold_models: 5779
+  domain_architectures: 192
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002745
+description: Tpt1 catalyses the last step of tRNA splicing in yeast. It transfers the splice junction
+  2'-phosphate from ligated tRNA to NAD, to produce ADP-ribose 1"-2"-cyclic phosphate. This is presumed
+  to be followed by a transesterification step to release the RNA. The first step of this reaction is
+  similar to that catalysed by some bacterial toxins. E. coli KptA and mouse Tpt1 are likely to use the
+  same reaction mechanism [[cite:PUB00008050]].

@@ -1,0 +1,26 @@
+id: Pfam:PF01861
+pfam_id: PF01861
+name: Branched-chain polyamine synthase A C-terminal domain
+short_name: BpsA_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01861
+counters:
+  proteins: 927
+  matches: 927
+  proteomes: 891
+  taxa: 1573
+  structures: 7
+  alphafold_models: 635
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002723
+description: This domain is found in the C terminus of N(4)-bis(aminopropyl)spermidine synthase ([ec:2.5.1.128],
+  also known as Branched-chain polyamine synthase A, BpsA) from hyperthermophiles [[cite:PUB00074302]]
+  and in uncharacterised proteins from bacteria and archaea.

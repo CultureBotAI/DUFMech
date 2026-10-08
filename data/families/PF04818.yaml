@@ -1,0 +1,25 @@
+id: Pfam:PF04818
+pfam_id: PF04818
+name: CID domain
+short_name: CID
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04818
+counters:
+  proteins: 25708
+  matches: 25747
+  proteomes: 3441
+  taxa: 9070
+  structures: 42
+  alphafold_models: 18538
+  domain_architectures: 380
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006569
+description: This domain binds to the phosphorylated C-terminal domain (CTD) of RNA polymerase II [[cite:PUB00051303],[cite:PUB00057474]].
+  This domain is known as the CTD-interacting domain (CID).

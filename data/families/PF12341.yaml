@@ -1,0 +1,28 @@
+id: Pfam:PF12341
+pfam_id: PF12341
+name: Minichromosome loss protein, Mcl1, middle region
+short_name: Mcl1_mid
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12341
+counters:
+  proteins: 3965
+  matches: 4023
+  proteomes: 3159
+  taxa: 8329
+  structures: 27
+  alphafold_models: 3248
+  domain_architectures: 104
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022100
+description: Mcl1_mid, or the middle domain of minichromosome loss protein 1, is the domain that lies
+  between a 7-bladed beta-propeller at the N-terminus, family WD40 [pfam:PF00400] etc, and a Homeobox
+  (HMG) domain, [pfam:PF00505], at the C-terminus. The full length proteins with all three domains are
+  referred to as DNA polymerase alpha accessory factor Mcl1, but the exact function of this domain is
+  not known.

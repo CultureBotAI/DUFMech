@@ -1,0 +1,26 @@
+id: Pfam:PF06011
+pfam_id: PF06011
+name: Transient receptor potential (TRP) ion channel
+short_name: TRP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06011
+counters:
+  proteins: 5709
+  matches: 5855
+  proteomes: 1551
+  taxa: 3364
+  structures: 0
+  alphafold_models: 4511
+  domain_architectures: 136
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010308
+description: This family of proteins are transient receptor potential (TRP) ion channels. They are essential
+  for cellular viability and are involved in cell growth and cell wall synthesis [[cite:PUB00020495]].
+  The genes for these proteins are homologous to polycystic kidney disease related ion channel genes [[cite:PUB00020495]].

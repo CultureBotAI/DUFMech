@@ -1,0 +1,27 @@
+id: Pfam:PF07280
+pfam_id: PF07280
+name: Per os infectivity factor AC110
+short_name: Ac110_PIF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07280
+counters:
+  proteins: 91
+  matches: 91
+  proteomes: 91
+  taxa: 185
+  structures: 0
+  alphafold_models: 83
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009903
+description: This family consists of several Baculovirus proteins of around 55 residues in length. Family
+  members include Autographa californica nuclear polyhedrosis virus (AcMNPV) Per os infectivity factor
+  AC110, which is required for oral infectivity. It may play a role after occlusion-derived virions pass
+  through the host's peritrophic membrane [[cite:PUB00082597]].

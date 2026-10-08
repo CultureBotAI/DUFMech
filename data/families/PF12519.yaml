@@ -1,0 +1,25 @@
+id: Pfam:PF12519
+pfam_id: PF12519
+name: Mitochondrial distribution and morphology protein 10
+short_name: MDM10
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12519
+counters:
+  proteins: 1517
+  matches: 2105
+  proteomes: 1464
+  taxa: 3083
+  structures: 2
+  alphafold_models: 1272
+  domain_architectures: 24
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027539
+description: MDM10 is a family of eukaryotic proteins that forms a subunit of the SAM complex for biogenesis
+  of beta-barrel proteins, though not porins, into the outer mitochondrial membrane.

@@ -1,0 +1,25 @@
+id: Pfam:PF13464
+pfam_id: PF13464
+name: RodZ C-terminal domain
+short_name: RodZ_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13464
+counters:
+  proteins: 9024
+  matches: 9079
+  proteomes: 8747
+  taxa: 12428
+  structures: 0
+  alphafold_models: 5596
+  domain_architectures: 18
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025194
+description: This short domain is often found at the C-terminus of RodZ cytoskeletal proteins. These proteins
+  usually contain a helix-turn-helix domain.

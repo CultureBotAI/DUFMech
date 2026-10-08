@@ -1,0 +1,33 @@
+id: Pfam:PF03671
+pfam_id: PF03671
+name: Ubiquitin fold modifier 1 protein
+short_name: Ufm1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03671
+counters:
+  proteins: 1961
+  matches: 1977
+  proteomes: 1382
+  taxa: 4552
+  structures: 18
+  alphafold_models: 1706
+  domain_architectures: 36
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005375
+description: This is a family of short ubiquitin-like proteins, that is like neither type-1 or type-2.
+  It is a ubiquitin-fold modifier 1 (Ufm1) that is synthesised in a precursor form of 85 amino-acid residues.
+  In humans the enzyme for Ufm1 is Uba5 and the conjugating enzyme is Ufc1. Prior to activation by Uba5
+  the extra two amino acids at the C-terminal region of the human pro-Ufm1 protein are removed to expose
+  Gly whose residue is necessary for conjugation to target molecule(s). The mature Ufm1 is conjugated
+  to yet unidentified endogenous proteins,[[cite:PUB00034740]]. While Ubiquitin and many Ubls possess
+  the conserved C-terminal di-glycine that is adenylated by each specific E1 or E1-like enzyme, respectively,
+  in an ATP-dependent manner, Ufm1(1-83) possesses a single glycine at its C-terminus, which is followed
+  by a Ser-Cys dipeptide in the precursor form of Ufm1. The C-terminally processed Ufm1(1-83) is specifically
+  activated by Uba5, an E1-like enzyme, and then transferred to its cognate Ufc1, an E2-like enzyme [[cite:PUB00034738]].

@@ -1,0 +1,27 @@
+id: Pfam:PF06110
+pfam_id: PF06110
+name: Thioredoxin domain-containing protein 17-like, thioredoxin domain
+short_name: TXD17-like_Trx
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06110
+counters:
+  proteins: 3438
+  matches: 3610
+  proteomes: 2533
+  taxa: 7078
+  structures: 6
+  alphafold_models: 3009
+  domain_architectures: 65
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010357
+description: This is the thioredoxin domain from in Thioredoxin domain-containing protein 17, also known
+  as TRP14, which is a highly conserved and ubiquitously expressed oxidoreductase involved in controlling
+  of cellular redox signalling pathways [[cite:PUB00032290]]. This domain is also found at the C-terminal
+  of Acireductone dioxygenase (ARD) from Leishmania.

@@ -1,0 +1,26 @@
+id: Pfam:PF11229
+pfam_id: PF11229
+name: Focadhesin
+short_name: Focadhesin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11229
+counters:
+  proteins: 1357
+  matches: 1487
+  proteomes: 722
+  taxa: 2572
+  structures: 0
+  alphafold_models: 295
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021392
+description: Focadhesin (FOCAD) is focal adhesion protein with potential tumour suppressor function in
+  gliomas [[cite:PUB00075175]]. The structure prediction indicates that it consists in repetitive alpha
+  hairpins that adopt an armadillo-like fold.

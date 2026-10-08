@@ -1,0 +1,25 @@
+id: Pfam:PF10079
+pfam_id: PF10079
+name: Bacillithiol biosynthesis BshC, N-terminal Rossmann-like domain
+short_name: Rossmann-like_BshC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10079
+counters:
+  proteins: 3391
+  matches: 3399
+  proteomes: 3336
+  taxa: 4480
+  structures: 1
+  alphafold_models: 2128
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055398
+description: This entry represents the N-terminal Rossmann-like domain of the bacillithiol biosynthesis
+  protein BshC from Bacillus subtilis, which has been described as a cysteine-adding enzyme [[cite:PUB00055031],[cite:PUB00155578]].

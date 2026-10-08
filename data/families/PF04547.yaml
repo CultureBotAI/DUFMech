@@ -1,0 +1,27 @@
+id: Pfam:PF04547
+pfam_id: PF04547
+name: Calcium-activated chloride channel
+short_name: Anoctamin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04547
+counters:
+  proteins: 24367
+  matches: 25823
+  proteomes: 3289
+  taxa: 8741
+  structures: 78
+  alphafold_models: 20769
+  domain_architectures: 348
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049452
+description: The family carries eight putative transmembrane domains, and, although it has no similarity
+  to other known channel proteins, it is clearly a calcium-activated ionic channel. It is expressed in
+  various secretory epithelia, the retina and sensory neurons, and mediates receptor-activated chloride
+  currents in diverse physiological processes [[cite:PUB00069342]].

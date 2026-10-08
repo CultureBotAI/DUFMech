@@ -1,0 +1,32 @@
+id: Pfam:PF07897
+pfam_id: PF07897
+name: Ethylene-responsive binding factor-associated repression
+short_name: EAR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07897
+counters:
+  proteins: 1575
+  matches: 1577
+  proteomes: 357
+  taxa: 955
+  structures: 0
+  alphafold_models: 1265
+  domain_architectures: 29
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012463
+description: The EAR motif is the ethylene-responsive element binding factor-associated amphiphilic repression
+  motif. This motif binds to the Groucho/Tup1-type co-repressor TOPLESS (TPL) and TPL-related proteins.
+  The motif is frequently to be find at the N-terminus of NINJA, or Novel INteractor of JAZ, proteins
+  [[cite:PUB00066523]]. The EAR motif, defined by the consensus sequence patterns of either LxLxL or DLN
+  xxP, is the most predominant form of transcriptional repression motif so far identified in plants. It
+  is highly conserved in transcriptional regulators that are known to function as negative regulators
+  in a broad range of developmental and physiological processes across evolutionarily diverse plant species
+  [[cite:PUB00075457]]. This family is closely related to family AUX_IAA Pam:PF02309 which also has an
+  LxLxL signature.

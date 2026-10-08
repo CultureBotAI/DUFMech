@@ -1,0 +1,34 @@
+id: Pfam:PF10300
+pfam_id: PF10300
+name: Iml2/Tetratricopeptide repeat protein 39
+short_name: Iml2-TPR_39
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10300
+counters:
+  proteins: 9006
+  matches: 9867
+  proteomes: 2835
+  taxa: 7559
+  structures: 0
+  alphafold_models: 7859
+  domain_architectures: 143
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019412
+description: This is a family of proteins conserved from fungi to humans, including fungal Inclusion body
+  clearance protein Iml2 protein, animal tetratricopeptide repeat protein 39A/B/C (TT39A/B/C) and some
+  uncharacterised proteins. Members of this family carry a tetratricopeptide repeat [pfam:PF07719] at
+  their C terminus. This entry includes Iml2 and its paralogue-YKR018C from S. cerevisiae; Iml2 localises
+  to the cytoplasm and nucleus [[cite:PUB00016470]], and its expression is increased in response to DNA
+  replication stress [[cite:PUB00066967]]. It is found to be involved in lipid droplet-mediated inclusion
+  body clearing after protein folding stress [[cite:PUB00088292]]. In humans, TTC39A (also known as DEME6)
+  is expressed in primary breast carcinomas but not in normal breast tissue, and has a putative eukaryotic
+  RNP-1 RNA binding region and a candidate anchoring transmembrane domain. It is coordinately regulated
+  with oestrogen receptor, but is not necessarily oestradiol-responsive [[cite:PUB00044224]]. TTC39B has
+  been linked to lipid metabolism [[cite:PUB00072592]].

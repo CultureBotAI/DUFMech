@@ -1,0 +1,31 @@
+id: Pfam:PF05971
+pfam_id: PF05971
+name: RNA methyltransferase
+short_name: Methyltransf_10
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05971
+counters:
+  proteins: 7120
+  matches: 7961
+  proteomes: 6099
+  taxa: 12386
+  structures: 31
+  alphafold_models: 5338
+  domain_architectures: 87
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010286
+description: This family includes ribosomal RNA large subunit methyltransferase F, and related proteins,
+  including methyltransferase-like protein 16 (METTL16). METTL16 is a conserved RNA methyltransferase
+  which interacts specifically with the MALAT1 triple helix. METTL16 shows nuclear localisation [[cite:PUB00085149]].
+  Another functional study indicates that METTL16 regulates expression of human MAT2A, which encodes the
+  SAM synthetase expressed in most cells. Furthermore, results indicate that METTL16 is the long-unknown
+  methyltransferase for the U6 spliceosomal small nuclear RNA (snRNA) and it has evolved an additional
+  function in vertebrates to control SAM homeostasis by post-transcriptionally regulating SAM synthetase
+  gene expression [[cite:PUB00086421]].

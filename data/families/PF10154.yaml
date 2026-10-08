@@ -1,0 +1,28 @@
+id: Pfam:PF10154
+pfam_id: PF10154
+name: Ferry endosomal RAB5 effector complex subunit 3
+short_name: Fy-3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10154
+counters:
+  proteins: 1971
+  matches: 2297
+  proteomes: 1364
+  taxa: 4364
+  structures: 0
+  alphafold_models: 1732
+  domain_architectures: 44
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019311
+description: This entry represents a human Ferry endosomal RAB5 effector complex subunit 3 (Fy-3) and
+  similar sequences from animals and some fungal species. Fy-3 is a component of the FERRY complex (Five-subunit
+  Endosomal Rab5 and RNA/ribosome intermediary), which is involved in the localisation and the distribution
+  of specific mRNAs most likely by mediating their endosomal transport. The complex recruits mRNAs and
+  ribosomes to early endosomes through direct mRNA-interaction [[cite:PUB00152264]].

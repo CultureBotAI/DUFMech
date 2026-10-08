@@ -1,0 +1,31 @@
+id: Pfam:PF08935
+pfam_id: PF08935
+name: Viral protein VP4 subunit
+short_name: VP4_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08935
+counters:
+  proteins: 93
+  matches: 93
+  proteomes: 36
+  taxa: 86
+  structures: 10
+  alphafold_models: 35
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015031
+description: This domain is predominantly found in viral proteins from the family Picornaviridae. It is
+  VP4 of the viral polyprotein which, in poliovirus, is part of the capsid that consists of 60 copies
+  each of four proteins VP1, VP2, VP3, and VP4 arranged on an icosahedral lattice [[cite:PUB00109098]].
+  VP4 is on the inside and differs from the others in being small, myristoylated and having an extended
+  structure. Productive infection involves the externalisation of the VP4, which is cleaved from the rest,
+  along with the N-terminus of VP1. There thus seem to be three stages of the virus, ie a multi-step process
+  for cell entry involving RNA translocation through a membrane channel formed by the externalised N termini
+  of VP1 [[cite:PUB00109099]].

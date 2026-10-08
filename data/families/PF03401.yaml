@@ -1,0 +1,30 @@
+id: Pfam:PF03401
+pfam_id: PF03401
+name: Tripartite tricarboxylate transporter family receptor
+short_name: TctC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03401
+counters:
+  proteins: 64590
+  matches: 64621
+  proteomes: 6826
+  taxa: 9512
+  structures: 13
+  alphafold_models: 38963
+  domain_architectures: 60
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005064
+description: These probable extra-cytoplasmic solute receptors are strongly overrepresented in several
+  beta-proteobacteria [[cite:PUB00019234]]. This family, formerly known as Bug - Bordetella uptake gene
+  (bug) product - is a family of bacterial tripartite tricarboxylate receptors of the extracytoplasmic
+  solute binding receptor-dependent transporter group of families, distinct from the ABC and TRAP-T families
+  [[cite:PUB00106922]]. The TctABC system has been characterised in S. typhimurium [[cite:PUB00106923]],
+  and TctC is the extracytoplasmic tricarboxylate-binding receptor which binds the transporters TctA and
+  TctB, two integral membrane proteins. Complete three-component systems are found only in bacteria [[cite:PUB00106923]].

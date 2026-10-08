@@ -1,0 +1,29 @@
+id: Pfam:PF14159
+pfam_id: PF14159
+name: CAAD domains of cyanobacterial aminoacyl-tRNA synthetase
+short_name: CAAD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14159
+counters:
+  proteins: 3537
+  matches: 3553
+  proteomes: 674
+  taxa: 1866
+  structures: 0
+  alphafold_models: 2760
+  domain_architectures: 68
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025564
+description: This domain is present in aminoacyl-tRNA synthetases (aaRSs), enzymes that couple tRNAs to
+  their cognate amino acids [[cite:PUB00066703]]. aaRSs from cyanobacteria containing the CAAD (for cyanobacterial
+  aminoacyl-tRNA synthetases appended domain) protein domains are localised in the thylakoid membrane.
+  The domain bears two putative transmembrane helices and is present in glutamyl-, isoleucyl-, leucyl-,
+  and valyl-tRNA synthetases, the latter of which has probably recruited the domain more than once during
+  evolution.

@@ -1,0 +1,34 @@
+id: Pfam:PF07792
+pfam_id: PF07792
+name: Docking domain of Afi1 for Arf3 in vesicle trafficking
+short_name: Afi1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07792
+counters:
+  proteins: 1569
+  matches: 1570
+  proteomes: 1504
+  taxa: 3386
+  structures: 0
+  alphafold_models: 1306
+  domain_architectures: 27
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012860
+description: This domain occurs at the N-terminal of Afi1, an Arf3p-interacting protein, is a protein
+  necessary for vesicle trafficking in yeast. This domain is the interacting region of the protein which
+  binds to Arf3, the highly conserved small GTPases (ADP-ribosylation factors). Afi1 is distributed asymmetrically
+  at the plasma membrane and is required for polarized distribution of Arf3 but not of an Arf3 guanine
+  nucleotide-exchange factor, Yel1p. However, Afi1 is not required for targeting of Arf3 or Yel1p to the
+  plasma membrane. Afi1 functions as an Arf3 polarization-specific adapter and participates in development
+  of polarity. Although Arf3 is the homologue of human Arf6 it does not function in the same way, not
+  being necessary for endocytosis or for mating factor receptor internalization. In the S phase, however,
+  it is concentrated at the plasma membrane of the emerging bud. Because of its polarized localisation
+  and its critical function in the normal budding pattern of yeast, Arf3 is probably a regulator of vesicle
+  trafficking, which is important for polarized growth.

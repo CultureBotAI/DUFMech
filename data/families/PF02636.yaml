@@ -1,0 +1,25 @@
+id: Pfam:PF02636
+pfam_id: PF02636
+name: Putative S-adenosyl-L-methionine-dependent methyltransferase
+short_name: Methyltransf_28
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02636
+counters:
+  proteins: 13694
+  matches: 13871
+  proteomes: 10337
+  taxa: 18599
+  structures: 6
+  alphafold_models: 10000
+  domain_architectures: 112
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003788
+description: This family is a putative S-adenosyl-L-methionine (SAM)-dependent methyltransferase [[cite:PUB00057461],[cite:PUB00057462]].
+  In eukaryotes it plays a role in mitochondrial complex I activity [[cite:PUB00057462]].

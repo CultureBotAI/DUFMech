@@ -1,0 +1,42 @@
+id: Pfam:PF01458
+pfam_id: PF01458
+name: SUF system FeS cluster assembly, SufBD core domain
+short_name: SUFBD_core
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01458
+counters:
+  proteins: 30443
+  matches: 30502
+  proteomes: 15015
+  taxa: 22322
+  structures: 8
+  alphafold_models: 20235
+  domain_architectures: 56
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR000825
+description: 'Iron-sulphur (FeS) clusters are important cofactors for numerous proteins involved in electron
+  transfer, in redox and non-redox catalysis, in gene regulation, and as sensors of oxygen and iron. These
+  functions depend on the various FeS cluster prosthetic groups, the most common being [2Fe-2S] and [4Fe-4S]
+  [[cite:PUB00035635]]. FeS cluster assembly is a complex process involving the mobilisation of Fe and
+  S atoms from storage sources, their assembly into [Fe-S] form, their transport to specific cellular
+  locations, and their transfer to recipient apoproteins. So far, three FeS assembly machineries have
+  been identified, which are capable of synthesising all types of [Fe-S] clusters: ISC (iron-sulphur cluster),
+  SUF (sulphur assimilation), and NIF (nitrogen fixation) systems. The SUF system is an alternative pathway
+  to the ISC system that operates under iron starvation and oxidative stress. It is found in eubacteria,
+  archaea and eukaryotes (plastids). The SUF system is encoded by the suf operon (sufABCDSE), and the
+  six encoded proteins are arranged into two complexes (SufSE and SufBCD) and one protein (SufA). SufS
+  is a pyridoxal-phosphate (PLP) protein displaying cysteine desulphurase activity. SufE acts as a scaffold
+  protein that accepts S from SufS and donates it to SufA [[cite:PUB00035639]]. SufC is an ATPase with
+  an unorthodox ATP-binding cassette (ABC)-like component. SufA is homologous to IscA [[cite:PUB00035640]],
+  acting as a scaffold protein in which Fe and S atoms are assembled into [FeS] cluster forms, which can
+  then easily be transferred to apoproteins targets. This entry represents the core domain of SufB and
+  SufD proteins, which are homologous, and form part of the SufBCD complex in the SUF system [[cite:PUB00089444]].
+  SufB accepts sulfur transferred from SufE [[cite:PUB00089442]], whereas SufD may play a role in iron
+  acquisition [[cite:PUB00089443]].'

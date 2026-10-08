@@ -1,0 +1,24 @@
+id: Pfam:PF11836
+pfam_id: PF11836
+name: Phage tail tube protein, GTA-gp10
+short_name: Phage_TAC_11
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11836
+counters:
+  proteins: 1887
+  matches: 1893
+  proteomes: 1534
+  taxa: 2187
+  structures: 0
+  alphafold_models: 1300
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021791
+description: This is a family of phage tail tube proteins.

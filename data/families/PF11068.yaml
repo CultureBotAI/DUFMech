@@ -1,0 +1,26 @@
+id: Pfam:PF11068
+pfam_id: PF11068
+name: YlqD protein
+short_name: YlqD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11068
+counters:
+  proteins: 1024
+  matches: 1025
+  proteomes: 1012
+  taxa: 1775
+  structures: 1
+  alphafold_models: 673
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021297
+description: The structure of a representative of this family has been solved (pdb:4dci) and found to
+  form a tetrameric structure of prefoldin-like architecture with the beta-barrel core and helical coiled
+  coil tentacles. This suggests that this family may act as molecular chaperones.

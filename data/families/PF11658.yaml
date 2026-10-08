@@ -1,0 +1,28 @@
+id: Pfam:PF11658
+pfam_id: PF11658
+name: Cellulose biosynthesis protein BcsG C-terminal domain
+short_name: CBP_BcsG
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11658
+counters:
+  proteins: 719
+  matches: 721
+  proteomes: 701
+  taxa: 1030
+  structures: 9
+  alphafold_models: 416
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR063479
+description: CBP_BcsG is a component of bacterial cellulose synthase complex that plays a role in biofilm
+  formation in bacteria [[cite:PUB00075887]]. It is a Zn(2+)-dependent phosphoethanolamine transferase
+  that catalyses transfer of phosphoethanolamine residues from membrane phosphatidylethanolamine to the
+  glucosyl residues in the nascent cellulose chain [[cite:PUB00100650],[cite:PUB00100651],[cite:PUB00100652],[cite:PUB00100653]].
+  This entry represents the C-terminal domain which functions as a phosphoethanolamine transferase [[cite:PUB00100653]].

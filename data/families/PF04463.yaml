@@ -1,0 +1,26 @@
+id: Pfam:PF04463
+pfam_id: PF04463
+name: 2-thiouracil desulfurase
+short_name: 2-thiour_desulf
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04463
+counters:
+  proteins: 6456
+  matches: 6456
+  proteomes: 5023
+  taxa: 7714
+  structures: 5
+  alphafold_models: 4053
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007553
+description: This family of proteins, predominantly found in Bacteria, are involved in the desulfuration
+  of 2-thiouracil into uracil in the 2-thiouridine degradation pathway. It has been demonstrated that
+  these proteins contain a Fe-S cluster required for their activity [[cite:PUB00098595]].

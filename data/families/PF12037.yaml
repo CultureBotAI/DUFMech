@@ -1,0 +1,29 @@
+id: Pfam:PF12037
+pfam_id: PF12037
+name: ATPase family AAA domain-containing protein 3, N-terminal
+short_name: ATAD3_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12037
+counters:
+  proteins: 3619
+  matches: 3759
+  proteomes: 1805
+  taxa: 5566
+  structures: 0
+  alphafold_models: 3101
+  domain_architectures: 69
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021911
+description: This is the conserved N-terminal domain of ATPase family AAA domain-containing protein 3
+  (ATAD3) which is involved in dimerisation [[cite:PUB00097486]] and interacts with the inner surface
+  of the outer mitochondrial membrane [[cite:PUB00089261]]. This domain is found associated with the AAA
+  ATPase domain ([pfam:PF00004]). ATAD3 is essential for mitochondrial network organisation, mitochondrial
+  metabolism and cell growth at organism and cellular level. It may also play an important role in mitochondrial
+  protein synthesis.

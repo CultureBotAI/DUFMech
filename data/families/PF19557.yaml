@@ -1,0 +1,29 @@
+id: Pfam:PF19557
+pfam_id: PF19557
+name: BrxC/PglY, N-terminal domain
+short_name: BrxC-PglY_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19557
+counters:
+  proteins: 1880
+  matches: 1899
+  proteomes: 1736
+  taxa: 3488
+  structures: 3
+  alphafold_models: 1075
+  domain_architectures: 34
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045725
+description: This entry (ex DUF6079) represents the P-loop domain at the N-terminal in Probable ATP-binding
+  protein BrxC and ATPase pglY. BrxC is a core protein of a type 1 BREX system, which provides immunity
+  against bacteriophage. The ATPase PglY is part of a type 2 BREX system, which provides immunity against
+  bacteriophage infections [[cite:PUB00093365],[cite:PUB00161155],[cite:PUB00151239],[cite:PUB00105105]].
+  PglY hydrolyses ATP but not other nucleotides, and its activity is inhibited by the non-hydrolysable
+  ATP analogue 5-adenylyl beta,gamma-imidodiphosphate.

@@ -1,0 +1,25 @@
+id: Pfam:PF06119
+pfam_id: PF06119
+name: Nidogen-like domain
+short_name: NIDO
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06119
+counters:
+  proteins: 11280
+  matches: 12816
+  proteomes: 1538
+  taxa: 4783
+  structures: 0
+  alphafold_models: 5803
+  domain_architectures: 2394
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003886
+description: This is a nidogen-like domain (NIDO) domain and is an extracellular domain found in nidogen
+  and hypothetical proteins of unknown function [[cite:PUB00014202]].

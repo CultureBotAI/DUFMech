@@ -1,0 +1,29 @@
+id: Pfam:PF20238
+pfam_id: PF20238
+name: Copper acquisition factor BIM1-like
+short_name: BIM1-like_dom
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20238
+counters:
+  proteins: 4158
+  matches: 4180
+  proteomes: 1330
+  taxa: 2901
+  structures: 3
+  alphafold_models: 3468
+  domain_architectures: 50
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR046530
+description: This domain is found in fungal proteins, including copper acquisition factor BIM1 from Cryptococcus
+  neoformans, a cell-surface bound protein that functions in the copper-accumulation pathway shared by
+  the CUF1-dependent copper transporter CTR1 [[cite:PUB00101283],[cite:PUB00101282]]. BIM1 facilitates
+  copper acquisition in the brain of mammalian hosts and acts as a copper-dependent virulence trait in
+  fungal meningitis [[cite:PUB00101283]]. This domain has a lytic polysaccharide monooxygenase-like (LPMO,
+  [pfam:PF03067]) fold, which are evolutionarily related but have diverged to a different biological function.

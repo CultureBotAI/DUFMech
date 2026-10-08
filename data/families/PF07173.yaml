@@ -1,0 +1,25 @@
+id: Pfam:PF07173
+pfam_id: PF07173
+name: Glycine-rich domain-containing protein-like
+short_name: GRDP-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07173
+counters:
+  proteins: 4904
+  matches: 5190
+  proteomes: 1704
+  taxa: 4156
+  structures: 0
+  alphafold_models: 3983
+  domain_architectures: 100
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009836
+description: This entry includes Arabidopsis Glycine-rich domain- containing protein 1 and 2 (GRDP1/2).
+  They are involved in development and stress responses [[cite:PUB00077560]].

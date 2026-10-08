@@ -1,0 +1,26 @@
+id: Pfam:PF07011
+pfam_id: PF07011
+name: Early Flowering 4 domain
+short_name: Elf4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07011
+counters:
+  proteins: 2312
+  matches: 2314
+  proteomes: 403
+  taxa: 1138
+  structures: 0
+  alphafold_models: 1854
+  domain_architectures: 41
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009741
+description: This domain forms an alpha-helical homodimer in ELF4 proteins. Protein EARLY FLOWERING 4
+  (Elf4) is a component of the central CCA1/LHY-TOC1 feedback loop in the circadian clock that promotes
+  clock accuracy and is required for sustained rhythms in the absence of daily light/dark cycles [[cite:PUB00084336],[cite:PUB00084337]].

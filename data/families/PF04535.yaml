@@ -1,0 +1,28 @@
+id: Pfam:PF04535
+pfam_id: PF04535
+name: Casparian strip membrane protein domain
+short_name: CASP_dom
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04535
+counters:
+  proteins: 17754
+  matches: 18024
+  proteomes: 388
+  taxa: 1108
+  structures: 0
+  alphafold_models: 14486
+  domain_architectures: 223
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006702
+description: This domain is found mainly in plant proteins known as Casparian strip membrane proteins
+  (CASPs) and CASP-like proteins (CASPLs). CASPs are four-membrane-span proteins that mediate the deposition
+  of Casparian strips in the endodermis by recruiting the lignin polymerization machinery. Interestingly,
+  the CASP first extracellular loop was found conserved in euphyllophytes but absent in plants lacking
+  Casparian strips [[cite:PUB00088572],[cite:PUB00072979]].

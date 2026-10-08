@@ -1,0 +1,27 @@
+id: Pfam:PF01657
+pfam_id: PF01657
+name: Salt stress response/antifungal
+short_name: Stress-antifung
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01657
+counters:
+  proteins: 28393
+  matches: 54024
+  proteomes: 377
+  taxa: 1070
+  structures: 4
+  alphafold_models: 22295
+  domain_architectures: 587
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002902
+description: This domain is often found in association with the kinase domains [pfam:PF00069] or [pfam:PF07714].
+  In many proteins it is duplicated. It contains six conserved cysteines which are involved in disulphide
+  bridges [[cite:PUB00052808]]. It has a role in salt stress response [[cite:PUB00109166]] and has antifungal
+  activity [[cite:PUB00109167]].

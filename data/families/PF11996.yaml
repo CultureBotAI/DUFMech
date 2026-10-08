@@ -1,0 +1,32 @@
+id: Pfam:PF11996
+pfam_id: PF11996
+name: Lymphostatin, delivery I domain
+short_name: Lymphostatin_delI
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11996
+counters:
+  proteins: 44
+  matches: 50
+  proteomes: 19
+  taxa: 75
+  structures: 5
+  alphafold_models: 10
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021882
+description: This entry represents the first region from the so-called delivery domain from Lymphostatin.
+  Lymphostatin is a key virulence factor of enteropathogenic and enterohaemorrhagic Escherichia coli,
+  playing roles in bacterial colonisation of the gut and in the inhibition of lymphocyte proliferation
+  and proinflammatory responses [[cite:PUB00164033]]. Lymphostatin is composed of six distinct domains
+  which enable complex interactions with host cells. These domains include two glycosyltransferase domains,
+  one PaToxP-like protease domain, an ADP-ribosyltransferase domain, a vertex domain and a delivery domain
+  [[cite:PUB00164033]]. The delvery domain is involved in the receptor binding and translocation. It is
+  an evolutionary conserved translocation and delivery apparatus in LCT-like toxins [[cite:PUB00164033]].
+  The delivery domain shows some flexibility and can adopt different conformations.

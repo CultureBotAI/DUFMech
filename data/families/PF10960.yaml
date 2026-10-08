@@ -1,0 +1,31 @@
+id: Pfam:PF10960
+pfam_id: PF10960
+name: BhlA holin family
+short_name: Holin_BhlA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10960
+counters:
+  proteins: 464
+  matches: 465
+  proteomes: 329
+  taxa: 625
+  structures: 0
+  alphafold_models: 280
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024405
+description: 'The Phage_holin_BhlA family is a family of holin-like proteins from both bacteriophages
+  and bacterial chromosomes. In bacteriophage, holins are small membrane proteins that accumulate and
+  oligomerise to form non-specific lesions in the cytoplasmic membrane allowing the release of the second
+  protein, endolysins, to access the peptidoglycan [[cite:PUB00110260]]. Most holins share common structural
+  features: two or three transmembrane domains separated by a beta-turn, a short hydrophilic N-terminus,
+  a highly charged C-terminus and a dual translational start motif. The BhlA holin of Bacillus is found
+  to be toxic to the host cell where the site of action of is on the cell membrane and causes bacterial
+  death by cell membrane disruption [[cite:PUB00110261]].'

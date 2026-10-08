@@ -1,0 +1,28 @@
+id: Pfam:PF15074
+pfam_id: PF15074
+name: Cilia and flagella associated protein 90
+short_name: CFAP90
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15074
+counters:
+  proteins: 741
+  matches: 745
+  proteomes: 616
+  taxa: 2233
+  structures: 8
+  alphafold_models: 624
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027901
+description: This family represents the homologues of Cilia and flagella associated protein 90 (CFAP90,
+  also known as C5orf49). CFAP90 is a microtubule inner protein (MIP) part of the doublet microtubules
+  (DMTs) in cilia and sperm axoneme [[cite:PUB00103594],[cite:PUB00151496]]. It belongs to the core-MIPs
+  and binds to protofilament B09 in the sperm DMTs. Members of this family contain a conserved KLHRDDR
+  sequence motif.

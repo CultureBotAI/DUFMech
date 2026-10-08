@@ -1,0 +1,29 @@
+id: Pfam:PF10034
+pfam_id: PF10034
+name: Q-cell neuroblast polarisation
+short_name: Dpy19
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10034
+counters:
+  proteins: 4728
+  matches: 5527
+  proteomes: 1248
+  taxa: 3917
+  structures: 4
+  alphafold_models: 4145
+  domain_architectures: 53
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018732
+description: 'Dyp-19, formerly known as DUF2211, is a transmembrane domain family that is required to
+  orient the neuroblast cells, QR and QL accurately on the anterior-posterior axis: QL and QR are born
+  in the same anterior-posterior position, but polarise and migrate left-right asymmetrically, QL migrating
+  towards the posterior and QR migrating towards the anterior. It is also required, with unc-40, to express
+  mab-5 correctly in the Q cell descendants [[cite:PUB00044879]]. The Dpy-19 protein derives from the
+  C. elegans DUMPY mutant, [swissprot:P34413].'

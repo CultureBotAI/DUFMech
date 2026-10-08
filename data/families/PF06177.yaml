@@ -1,0 +1,27 @@
+id: Pfam:PF06177
+pfam_id: PF06177
+name: QueT transporter
+short_name: QueT
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06177
+counters:
+  proteins: 2203
+  matches: 2204
+  proteomes: 1934
+  taxa: 3144
+  structures: 0
+  alphafold_models: 1505
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010387
+description: This family includes the queT gene encoding a hypothetical integral membrane protein with
+  5 predicted transmembrane regions. The queT genes in Firmicutes are often preceded by the PreQ1 (7-aminomethyl-7-deazaguanine)
+  riboswitches of two distinct classes [[cite:PUB00044767],[cite:PUB00044768]], suggesting involvement
+  of the QueT transporters in uptake of a queuosine biosynthetic intermediate.

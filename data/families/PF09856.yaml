@@ -1,0 +1,38 @@
+id: Pfam:PF09856
+pfam_id: PF09856
+name: Short-chain fatty acyl coenzyme A regulator, C-terminal
+short_name: ScfRs
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09856
+counters:
+  proteins: 5479
+  matches: 5482
+  proteomes: 3503
+  taxa: 4680
+  structures: 4
+  alphafold_models: 3623
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018653
+description: This entry includes short-chain fatty acid regulators such as RAMB (regulator of acetate
+  metabolism B), PCCR (Propionyl-CoA carboxylase regulator), PrpR (Propionate regulator). RamB is a negative
+  transcriptional regulator of genes involved in acetate metabolism of C. glutamicum. It is responsible
+  for expression control of the AK, PTA, ICL, and MS genes and, thus, for the proper adaptation to acetate
+  as carbon and energy source. Nucleotide sequence analysis indicate the RamB protein consists of 469
+  aa with a putative HTH motif at the N terminus [[cite:PUB00074928]]. PCCR prevents the accumulation
+  of propionyl-CoA by controlling expression of the gene encoding propionyl-CoA carboxylase, which is
+  responsible for propionyl-CoA consumption by Rhodobacter sphaeroides. Many other Proteobacteria and
+  Actinomycetales contain one or several PccR homologs that group into distinct clades on the basis of
+  the pathway of acyl-CoA metabolism that they control [[cite:PUB00076849]]. PrpR is a transcriptional
+  activator controlling prpDBC2 operon which encodes enzymes 2-methylcitrate dehydratase (PrpD2), 2-methylisocitrate
+  lyase (PrpB2) and 2-methylcitrate synthase (PrpC2). They are essential for growth with propionate as
+  carbon source. The regulatory protein belongs to the HTH_XRE regulator family. It has a length of 441
+  amino acids and an N-terminal lamda repressor-like DNA-binding domain [[cite:PUB00106935]]. This is
+  the C-terminal domain, which is likely an iron sensor domain that adopts a GAF-like fold [[cite:PUB00100702]].

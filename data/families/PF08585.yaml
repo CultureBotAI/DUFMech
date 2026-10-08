@@ -1,0 +1,26 @@
+id: Pfam:PF08585
+pfam_id: PF08585
+name: RMI1, N-terminal OB-fold domain
+short_name: RMI1_N_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08585
+counters:
+  proteins: 5910
+  matches: 5960
+  proteomes: 3268
+  taxa: 8697
+  structures: 15
+  alphafold_models: 5082
+  domain_architectures: 106
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013894
+description: This is the OB-fold domain found at the N-terminal of RecQ-mediated genome instability protein
+  1 (RMI1), which forms a stable complex with Bloom syndrome protein BLM and DNA topoisomerase 3-alpha
+  [[cite:PUB00075424],[cite:PUB00075425],[cite:PUB00058799]].

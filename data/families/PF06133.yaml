@@ -1,0 +1,32 @@
+id: Pfam:PF06133
+pfam_id: PF06133
+name: Control of competence regulator ComK, YlbF/YmcA
+short_name: Com_YlbF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06133
+counters:
+  proteins: 6153
+  matches: 6154
+  proteomes: 2937
+  taxa: 4407
+  structures: 6
+  alphafold_models: 4127
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010368
+description: YlbF Is a family of short Gram-positive and archaeal proteins that includes both YlbF and
+  YmcA which may interact synergistically. The family is necessary for correct biofilm formation, as null
+  mutants of ymcA and ylbF fail to form pellicles at air-liquid interfaces and grow on solid media as
+  smooth, undifferentiated colonies. During development, YmcA, YlbF and YaaT, family PSPI, [pfam:PF04468],
+  interact directly with one another forming a stable ternary complex, in vitro. All three proteins are
+  required for competence, sporulation and the formation of biofilms. The YmcA-YlbF-YaaT complex affects
+  the phosphotransfer between Spo0F and Spo0B, thus accelerating the production of Spo0A~P. The three
+  processes of biofilm formation, mature spore formation and competence all require the active, phosphorylated
+  form of Spo0A, as Spo0A-P [[cite:PUB00075458],[cite:PUB00075459]].

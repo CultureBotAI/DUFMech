@@ -1,0 +1,30 @@
+id: Pfam:PF06568
+pfam_id: PF06568
+name: YjiS-like domain
+short_name: YjiS-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06568
+counters:
+  proteins: 9243
+  matches: 9266
+  proteomes: 2798
+  taxa: 3798
+  structures: 0
+  alphafold_models: 5914
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009506
+description: This arginine rich domain is found at the C-terminal end of YjiS from Salmonella Typhimurium
+  and similar short sequences from proteobacteria. YjiS, an inner membrane-associated small protein, acts
+  as as a suppressor of flagella production, leading to pathogen escape from infected host cells [[cite:PUB00160930]].
+  In the plant pathogen Agrobacterium tumefaciens, some small proteins that contain this domain are involved
+  in nutrient acquisition and central carbon metabolism [[cite:PUB00160928]]. CcaF1 from Rhodobacter sphaeroides
+  is an RNA binding protein that has a role in the oxidative stress defence [[cite:PUB00160929]]. In some
+  uncharacterised proteins, this domain, previously known as DUF1127, covers the whole sequence.

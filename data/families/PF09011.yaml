@@ -1,0 +1,28 @@
+id: Pfam:PF09011
+pfam_id: PF09011
+name: HMG-box domain
+short_name: HMG_box_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09011
+counters:
+  proteins: 11264
+  matches: 11403
+  proteomes: 2442
+  taxa: 7266
+  structures: 45
+  alphafold_models: 9007
+  domain_architectures: 287
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009071
+description: 'This short 71 residue domain is an HMG-box domain. HMG-box domains mediate re-modelling
+  of chromatin-structure. Mammalian HMG-box proteins are of two types: those that are non-sequence-specific
+  DNA-binding proteins with two HMG-box domains and a long highly acidic C-tail; and a diverse group of
+  sequence-specific transcription factor-proteins with either a single HMG-box or up to six copies, and
+  no acidic C-tail [[cite:PUB00109134]].'

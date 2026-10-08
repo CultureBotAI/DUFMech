@@ -1,0 +1,30 @@
+id: Pfam:PF04378
+pfam_id: PF04378
+name: Ribosomal RNA large subunit methyltransferase D, RlmJ
+short_name: RsmJ
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04378
+counters:
+  proteins: 5989
+  matches: 6029
+  proteomes: 5836
+  taxa: 7838
+  structures: 10
+  alphafold_models: 3804
+  domain_architectures: 52
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007473
+description: RlmJ is ribosomal RNA large subunit methyltransferase J is required for full methylation
+  of 23S ribosomal RNA (rRNA) during ribosome biogenesis. The ribosomal RNA of E. coli carries 24 residues
+  that require methylation, and this methyltransferase is the last to be described, that modifies A2030
+  [[cite:PUB00068648]]. RlmJ displays a variant of the Rossmann-like methyltransferase (MTase) fold with
+  an inserted helical subdomain. On binding cofactor and substrate a large shift of the N-terminal motif
+  X tail is induced in order to make it cover the cofactor-binding site and to trigger active-site changes
+  in motifs IV and VIII [[cite:PUB00068650]].

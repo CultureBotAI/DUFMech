@@ -1,0 +1,26 @@
+id: Pfam:PF06979
+pfam_id: PF06979
+name: TMEM70/TMEM186/TMEM223 protein family
+short_name: TMEM70
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06979
+counters:
+  proteins: 3944
+  matches: 3963
+  proteomes: 1899
+  taxa: 5985
+  structures: 0
+  alphafold_models: 3504
+  domain_architectures: 57
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045325
+description: This entry represents the TMEM70/TMEM186/TMEM223 protein family. TMEM70 is a family of proteins
+  essential for assembly of the mitochondrial proton-transporting ATP synthase complex within the inner
+  mitochondrial membrane. TMEM70 functions in the assembly of complexes I and V [[cite:PUB00098577]].

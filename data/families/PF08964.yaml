@@ -1,0 +1,26 @@
+id: Pfam:PF08964
+pfam_id: PF08964
+name: Beta/Gamma crystallin
+short_name: Crystall_3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08964
+counters:
+  proteins: 211
+  matches: 213
+  proteomes: 174
+  taxa: 455
+  structures: 8
+  alphafold_models: 140
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015059
+description: This family of beta/gamma crystallins includes the N-terminal domain of Dictyostelium discoideum
+  Calcium-dependent cell adhesion molecule 1 ([swissprot:P54657]), which mediates cell-cell adhesion through
+  homophilic interactions [[cite:PUB00038511]].

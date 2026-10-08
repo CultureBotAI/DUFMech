@@ -1,0 +1,26 @@
+id: Pfam:PF12400
+pfam_id: PF12400
+name: STIMATE family
+short_name: STIMATE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12400
+counters:
+  proteins: 4107
+  matches: 4139
+  proteomes: 2598
+  taxa: 6732
+  structures: 0
+  alphafold_models: 3588
+  domain_architectures: 63
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022127
+description: STIMATE is a ER-resident multi-transmembrane protein that serves as a positive regulator
+  of Ca(2+) influx in vertebrates. It interacts with ER-resident Ca2+ sensor protein STIM1 to promote
+  STIM1 conformational switch [[cite:PUB00076888]]. This entry also includes budding yeast YPL162C.

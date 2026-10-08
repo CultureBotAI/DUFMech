@@ -1,0 +1,26 @@
+id: Pfam:PF06877
+pfam_id: PF06877
+name: Regulator of ribonuclease activity B
+short_name: RraB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06877
+counters:
+  proteins: 3489
+  matches: 3495
+  proteomes: 2934
+  taxa: 4224
+  structures: 1
+  alphafold_models: 2177
+  domain_architectures: 20
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009671
+description: This family of proteins regulate mRNA abundance by binding to RNaseE and inhibiting its endonucleolytic
+  activity [[cite:PUB00035720],[cite:PUB00056807]]. A subset of these proteins are predicted to function
+  as immunity proteins [[cite:PUB00066726]].

@@ -1,0 +1,26 @@
+id: Pfam:PF15375
+pfam_id: PF15375
+name: 40S small subunit processome assembly factor 1
+short_name: FSAF1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15375
+counters:
+  proteins: 2507
+  matches: 2511
+  proteomes: 2101
+  taxa: 6054
+  structures: 2
+  alphafold_models: 2129
+  domain_architectures: 45
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027973
+description: This entry represents human 40S small subunit processome assembly factor 1 (FSAF1) and similar
+  proteins mainly found in animals. FSAF1 is part of the small subunit (SSU) processome, the first precursor
+  of the small eukaryotic ribosomal subunit [[cite:PUB00151110]].

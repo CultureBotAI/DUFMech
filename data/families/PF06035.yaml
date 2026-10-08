@@ -1,0 +1,27 @@
+id: Pfam:PF06035
+pfam_id: PF06035
+name: Bacterial transglutaminase-like cysteine proteinase BTLCP
+short_name: Peptidase_C93
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06035
+counters:
+  proteins: 4890
+  matches: 4890
+  proteomes: 2871
+  taxa: 3942
+  structures: 4
+  alphafold_models: 3019
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010319
+description: Members of this family are predicted to be bacterial transglutaminase-like cysteine proteinases.
+  They contain a conserved Cys-His-Asp catalytic triad. Their structure is predicted to be similar to
+  that of Salmonella typhimurium N-hydroxyarylamine O-acetyltransferase [swissprot:Q00267], in [pfam:PF00797],
+  however they lack the sub-domain which is important for arylamine recognition [[cite:PUB00015047]].

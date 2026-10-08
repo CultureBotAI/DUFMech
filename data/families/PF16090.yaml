@@ -1,0 +1,27 @@
+id: Pfam:PF16090
+pfam_id: PF16090
+name: Protein capicua homolog-like domain
+short_name: Cic
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16090
+counters:
+  proteins: 1545
+  matches: 1549
+  proteomes: 802
+  taxa: 2815
+  structures: 0
+  alphafold_models: 277
+  domain_architectures: 28
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032147
+description: This domain is found in protein capicua homolog (Cic) and similar animal proteins. Cic is
+  a transcriptional repressor which plays a role in the development of the central nervous system (CNS).
+  In concert with ATXN1 and ATXN1L, it is involved in brain development [[cite:PUB00148730],[cite:PUB00053281],[cite:PUB00148732]].
+  This domain is predicted to adopt a mainly beta-configuration.

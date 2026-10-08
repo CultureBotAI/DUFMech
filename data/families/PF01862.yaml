@@ -1,0 +1,38 @@
+id: Pfam:PF01862
+pfam_id: PF01862
+name: Pyruvoyl-dependent arginine decarboxylase (PvlArgDC)
+short_name: PvlArgDC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01862
+counters:
+  proteins: 1021
+  matches: 1055
+  proteomes: 944
+  taxa: 1963
+  structures: 5
+  alphafold_models: 877
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002724
+description: Methanococcus jannaschii contains homologues of most genes required for spermidine polyamine
+  biosynthesis. Yet genomes from neither this organism nor any other euryarchaeon have orthologues of
+  the pyridoxal 5'-phosphate- dependent ornithine or arginine decarboxylase genes, required to produce
+  putrescine. Instead,these organisms have a new class of arginine decarboxylase (PvlArgDC) formed by
+  the self-cleavage of a proenzyme into a 5-kDa subunit and a 12-kDa subunit that contains a reactive
+  pyruvoyl group. Although this extremely thermostable enzyme has no significant sequence similarity to
+  previously characterised proteins, conserved active site residues are similar to those of the pyruvoyl-dependent
+  histidine decarboxylase enzyme, and its subunits form a similar (alpha-beta)(3) complex. Homologues
+  of PvlArgDC are found in several bacterial genomes, including those of Chlamydia spp., which have no
+  agmatine ureohydrolase enzyme to convert agmatine (decarboxylated arginine) into putrescine. In these
+  intracellular pathogens, PvlArgDC may function analogously to pyruvoyl-dependent histidine decarboxylase;
+  the cells are proposed to import arginine and export agmatine, increasing the pH and affecting the host
+  cell's metabolism. Phylogenetic analysis of Pvl- ArgDC proteins suggests that this gene has been recruited
+  from the euryarchaeal polyamine biosynthetic pathway to function as a degradative enzyme in bacteria
+  [[cite:PUB00027451]].

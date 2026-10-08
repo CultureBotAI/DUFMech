@@ -1,0 +1,27 @@
+id: Pfam:PF12074
+pfam_id: PF12074
+name: Generalcontrol nonderepressible 1 (Gcn1) N-terminal
+short_name: Gcn1_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12074
+counters:
+  proteins: 1481
+  matches: 1535
+  proteomes: 1427
+  taxa: 2988
+  structures: 15
+  alphafold_models: 37
+  domain_architectures: 138
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022716
+description: This entry represents a set of three HEAT repeats found towards the N-terminal region of
+  Gcn1 protein, which acts as a translation activator that mediates translational control by regulating
+  Gcn2 kinase activity [[cite:PUB00042775]]. It is a ribosome collision sensor that activates a translation
+  quality control pathway when a ribosome has stalled during translation [[cite:PUB00159899]].

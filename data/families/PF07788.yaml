@@ -1,0 +1,30 @@
+id: Pfam:PF07788
+pfam_id: PF07788
+name: PD-(D/E)XK nuclease superfamily
+short_name: PDDEXK_10
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07788
+counters:
+  proteins: 249
+  matches: 249
+  proteomes: 109
+  taxa: 379
+  structures: 0
+  alphafold_models: 211
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012431
+description: This family is found to carry modified motifs characteristic of PD-(D/E)XK endonuclease superfamily.
+  These are the conserved Glu of motif I, the Asp surreounded by hydrophobics of motif II, EIKS of motif
+  III, and the lysine of mmotif IV has migrated to an alpha-helix following the third core beta-strand.
+  The conserved patch of positively charged lysine and arginine residues in the motif IV apha-helix might
+  be involved in substrate-binding or be contributing to active site formation [[cite:PUB00044133]]. Members
+  with an additional N-terminal coi9led-coil domain, are annotated as tropomyosin, coiled-coil or microtubule
+  binding proteins [[cite:PUB00016549],[cite:PUB00044133]].

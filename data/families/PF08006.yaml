@@ -1,0 +1,25 @@
+id: Pfam:PF08006
+pfam_id: PF08006
+name: HAAS transmembrane region
+short_name: HAAS_TM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08006
+counters:
+  proteins: 258
+  matches: 258
+  proteomes: 226
+  taxa: 332
+  structures: 0
+  alphafold_models: 138
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012963
+description: This entry represents the transmembrane region fused to HAAS (HTH-associated alpha-helical
+  signaling) domain (Preprint https://doi.org/10.1101/2020.09.24.301986).

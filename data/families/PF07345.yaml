@@ -1,0 +1,27 @@
+id: Pfam:PF07345
+pfam_id: PF07345
+name: ATPase inhibitor subunit zeta
+short_name: ATPaseInh_sub_z
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07345
+counters:
+  proteins: 2369
+  matches: 2369
+  proteomes: 2104
+  taxa: 2861
+  structures: 5
+  alphafold_models: 1600
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009945
+description: This entry represents zeta-subunits, which are found in alpha-proteobacterial F1F0-ATPase
+  regulatory proteins. The zeta subunit is a potent inhibitor of the alpha-proteobacterial F1FO-ATPase.
+  The inhibitory region resides in the first 14 N-terminal residues of the protein, which protrude from
+  the 4-alpha-helix bundle structure of the isolated zeta subunit [[cite:PUB00091055],[cite:PUB00091056],[cite:PUB00091057]].

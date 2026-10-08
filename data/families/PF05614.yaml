@@ -1,0 +1,26 @@
+id: Pfam:PF05614
+pfam_id: PF05614
+name: Circovirus ORF3
+short_name: Circovir_ORF3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05614
+counters:
+  proteins: 66
+  matches: 66
+  proteomes: 1
+  taxa: 17
+  structures: 0
+  alphafold_models: 2
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008500
+description: This family consists porcine circovirus ORF3 protein which plays a role in modulating host
+  cell signalling by binding to and degrading host RGS16 [[cite:PUB00097772]]. This protein is not necessary
+  for virus replication [[cite:PUB00097771]].

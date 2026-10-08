@@ -1,0 +1,27 @@
+id: Pfam:PF18897
+pfam_id: PF18897
+name: Recombination directionality factor-like
+short_name: Gp3-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18897
+counters:
+  proteins: 1020
+  matches: 1020
+  proteomes: 815
+  taxa: 1430
+  structures: 6
+  alphafold_models: 583
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043991
+description: This entry includes Gp3 from Streptomyces phage phiC31. Gp3 is a recombination directionality
+  factor that interacts directly with the integrase tetramer to activate excision and inhibit integration
+  [[cite:PUB00094660]]. The characteristics of the protein distribution suggest prophage matches in addition
+  to the phage matches.

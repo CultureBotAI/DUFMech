@@ -1,0 +1,33 @@
+id: Pfam:PF05092
+pfam_id: PF05092
+name: Per os infectivity
+short_name: PIF
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05092
+counters:
+  proteins: 174
+  matches: 174
+  proteomes: 133
+  taxa: 352
+  structures: 0
+  alphafold_models: 163
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007784
+description: This is a family of dsDNA Baculovirus proteins. It is required for the infectivity of the
+  OBs or occlusion bodies. It is a structural protein of the ODV envelope required only in the first steps
+  of per os larva infection, as viruses being produced in cells expressing the gene for this protein but
+  not containing it in their genomes are able to produce successful infections. Baculoviruses are large
+  DNA viruses that infect arthropods, mainly members of the order Lepidoptera. In their life cycle, they
+  produce two kinds of particles, a budded, non-occluded virus (BV), which buds out of the infected cell
+  and is responsible for the cell-to-cell transmission of the virus, and an occluded form, the occlusion
+  body (OB), which is responsible for protecting the virus between encounters with larvae. A variable
+  number of virions are included in the para-crystalline structure of the OB, mainly constituted by the
+  virus-encoded polyhedrin protein; these virions are called occlusion body-derived virions or ODVs.

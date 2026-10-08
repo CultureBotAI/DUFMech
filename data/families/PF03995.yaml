@@ -1,0 +1,28 @@
+id: Pfam:PF03995
+pfam_id: PF03995
+name: Peptidase inhibitor family I36
+short_name: Inhibitor_I36
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03995
+counters:
+  proteins: 5144
+  matches: 5220
+  proteomes: 1963
+  taxa: 2813
+  structures: 8
+  alphafold_models: 2664
+  domain_architectures: 91
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: This domain is currently only found in a small set of S. coelicolor secreted proteins. There
+  are four conserved cysteines that probably form two disulphide bonds. Proteins 2SCK31.15C ([swissprot:Q9ADK5])
+  and SCO3675 ([swissprot:Q9X8V7]) also have probable beta-propellers at their C-termini. This family
+  includes [swissprot:P01077] a known peptidase inhibitor of known structure. This protein has a crystallin
+  like fold [pfam:PF00030] and is distantly related by sequence. It is not known whether other members
+  of this family are peptidase inhibitors.

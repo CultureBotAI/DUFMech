@@ -1,0 +1,26 @@
+id: Pfam:PF10081
+pfam_id: PF10081
+name: Alpha/beta-hydrolase family
+short_name: Abhydrolase_9
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10081
+counters:
+  proteins: 2620
+  matches: 2824
+  proteomes: 1905
+  taxa: 2636
+  structures: 0
+  alphafold_models: 1620
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027787
+description: This is a family of alpha/beta hydrolases which may function as lipases. This domain is the
+  catalytic domain and includes the catalytic triad and the GXSXG sequence motif which is a characteristic
+  of these enzymes [[cite:PUB00066711]].

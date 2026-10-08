@@ -1,0 +1,25 @@
+id: Pfam:PF11887
+pfam_id: PF11887
+name: Cholesterol uptake porter CUP1 of Mce4, putative
+short_name: Mce4_CUP1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11887
+counters:
+  proteins: 25778
+  matches: 25785
+  proteomes: 1604
+  taxa: 1980
+  structures: 3
+  alphafold_models: 16154
+  domain_architectures: 12
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024516
+description: Mce4_CUP1 is a family of putative Mce4 transporters of cholesterol. The domain is found associated
+  with [pfam:PF02470]. The full TCDB classification for this family in conjunction with PF02470 is TC:3.A.1.27.4.

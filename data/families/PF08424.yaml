@@ -1,0 +1,32 @@
+id: Pfam:PF08424
+pfam_id: PF08424
+name: NRDE-2, necessary for RNA interference
+short_name: NRDE-2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08424
+counters:
+  proteins: 3235
+  matches: 3289
+  proteomes: 2637
+  taxa: 7112
+  structures: 0
+  alphafold_models: 2523
+  domain_architectures: 63
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013633
+description: This is a family of eukaryotic proteins. Eukaryotic cells express a wide variety of endogenous
+  small regulatory RNAs that regulate heterochromatin formation, developmental timing, defence against
+  parasitic nucleic acids, and genome rearrangement. Many small regulatory RNAs are thought to function
+  in nuclei, and in plants and fungi small interfering (si)RNAs associate with nascent transcripts and
+  direct chromatin and/or DNA modifications. This family protein, NRDE-2, is required for small interfering
+  (si)RNA-mediated silencing in nuclei. NRDE-2 associates with the Argonaute protein NRDE-3 within nuclei
+  and is recruited by NRDE-3/siRNA complexes to nascent transcripts that have been targeted by RNA interference,
+  RNAi, the process whereby double-stranded RNA (dsRNA) directs the sequence-specific degradation of mRNA
+  [[cite:PUB00057435]].

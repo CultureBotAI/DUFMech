@@ -1,0 +1,27 @@
+id: Pfam:PF11251
+pfam_id: PF11251
+name: HamA Heme-Oxygenase-like enzyme family
+short_name: HamA_HO-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11251
+counters:
+  proteins: 1871
+  matches: 1873
+  proteomes: 1805
+  taxa: 2600
+  structures: 1
+  alphafold_models: 1169
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024423
+description: This entry, previously known as DUF3050, represents HamA, the key enzyme responsible for
+  forming the nitrogen-nitrogen bond in the diazeniumdiolate moiety of fungicide fragin [[cite:PUB00163876]].
+  HamA adopts a heme oxygenase-like fold, forming a hydrophobic cavity within a helical bundle that likely
+  accommodates the substrate [[cite:PUB00163876]].

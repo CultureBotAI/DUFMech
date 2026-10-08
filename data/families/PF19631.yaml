@@ -1,0 +1,29 @@
+id: Pfam:PF19631
+pfam_id: PF19631
+name: Trypsin-co-occurring domain 2
+short_name: Trypco2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19631
+counters:
+  proteins: 1203
+  matches: 1208
+  proteomes: 901
+  taxa: 1361
+  structures: 0
+  alphafold_models: 563
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045608
+description: Trypsin-like peptidase effector in the classical NTP-dependent ternary system (vWA-MoxR-VMAP)
+  frequently co-occurs with one of two proteins (Trypco1 or Trypco2) which are mostly mutually exclusively
+  [[cite:PUB00098776]]. This entry also includes a member of a biosynthetic gene cluster (BGC). This BGC
+  (BGC0000949) is described by MIBiG as an example of the following biosynthetic class, NRP (non-ribosomal
+  peptide). It includes a member from the A-500359 A biosynthetic gene cluster from Streptomyces griseus
+  and appears to be predominantly found in bacteria [[cite:PUB00098866]].

@@ -1,0 +1,26 @@
+id: Pfam:PF09882
+pfam_id: PF09882
+name: EhaC-like
+short_name: EhaC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09882
+counters:
+  proteins: 139
+  matches: 139
+  proteomes: 90
+  taxa: 162
+  structures: 0
+  alphafold_models: 119
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019214
+description: This entry represents a group of archaeal proteins, including small membrane proteins that
+  are predicted to be EhaC transmembrane subunits of multisubunit membrane-bound [NiFe]-hydrogenase Eha
+  complexes [[cite:PUB00096941],[cite:PUB00161043]]. This group was previously known as DUF2109.

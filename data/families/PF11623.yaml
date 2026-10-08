@@ -1,0 +1,35 @@
+id: Pfam:PF11623
+pfam_id: PF11623
+name: NAD(P)H dehydrogenase subunit S
+short_name: NdhS
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11623
+counters:
+  proteins: 721
+  matches: 721
+  proteomes: 581
+  taxa: 1686
+  structures: 12
+  alphafold_models: 546
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021659
+description: This family is found in Bacteria and Streptophyta includes members such as NdhS (NAD(P)H-quinone
+  oxidoreductase subunit S). NdhS, also known as CRR31 (chlororespiratory reduction 31), is a subunit
+  of the chloroplast NADH dehydrogenase-like (NDH) complex [[cite:PUB00083363]]. It is also a subunit
+  of the cyanobacterial NDH-1 complex [[cite:PUB00083366]] [[cite:PUB00083365]]. NAD(P)H-oxidizing subunits
+  have not been found in chloroplasts or cyanobacteria, where ferredoxin is probably the electron donor.
+  NdhS contributes to the formation of a ferredoxin binding site of NDH [[cite:PUB00083363]] and is necessary
+  for high affinity binding of ferredoxin [[cite:PUB00083368]]. The cyanobacterial NDH-1 complex, also
+  known as NADPH:plastoquinone oxidoreductase or type I NAD(P)H dehydrogenase, is involved in plastoquinone
+  reduction and cyclic electron transfer (CET) around photosystem I. The chloroplast NDH is more similar
+  to cyanobacterial NDH-1, which is believed to be the origin of chloroplast NDH, than to mitochondrial
+  NADH dehydrogenase present in the same species [[cite:PUB00083364]] [[cite:PUB00083367]]. The NDH complexes
+  of chloroplasts, however, contain many subunits that are absent from cyanobacterial NDH-1 complexes.

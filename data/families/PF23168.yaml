@@ -1,0 +1,27 @@
+id: Pfam:PF23168
+pfam_id: PF23168
+name: CUL7/CUL9, N-terminal beta-barrel domain
+short_name: CUL7_CUL9_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23168
+counters:
+  proteins: 1406
+  matches: 1406
+  proteomes: 574
+  taxa: 1850
+  structures: 4
+  alphafold_models: 347
+  domain_architectures: 77
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055486
+description: This domain is found N-terminal in the homologues of human Cullin-7 (CUL7) and Cullin-9 (CUL9).
+  It adopts a beta-barrel structure with some similarity to chromodomains and is known as a small beta-domain
+  (SBD) [[cite:PUB00156050],[cite:PUB00155195]]. In both CUL7 and CUL9, this domain is usually followed
+  by an ARM-like domain.

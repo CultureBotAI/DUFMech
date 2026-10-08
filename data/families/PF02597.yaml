@@ -1,0 +1,29 @@
+id: Pfam:PF02597
+pfam_id: PF02597
+name: ThiS family
+short_name: ThiS
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02597
+counters:
+  proteins: 36990
+  matches: 36990
+  proteomes: 17893
+  taxa: 28116
+  structures: 39
+  alphafold_models: 24446
+  domain_architectures: 112
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003749
+description: ThiS (thiaminS) is a 66 aa protein involved in sulphur transfer [swissprot:O32583]. ThiS
+  is coded in the thiCEFSGH operon in E. coli. This family of proteins have two conserved Glycines at
+  the COOH terminus. Thiocarboxylate is formed at the last G in the activation process. Sulphur is transferred
+  from ThiI to ThiS in a reaction catalysed by IscS [[cite:PUB00007564]]. MoaD, [swissprot:P30748] a protein
+  involved sulphur transfer in molybdopterin synthesis, is about the same length and shows limited sequence
+  similarity to ThiS. Both have the conserved GG at the COOH end.

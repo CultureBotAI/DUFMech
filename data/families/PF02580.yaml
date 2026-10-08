@@ -1,0 +1,35 @@
+id: Pfam:PF02580
+pfam_id: PF02580
+name: D-Tyr-tRNA(Tyr) deacylase
+short_name: Tyr_Deacylase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02580
+counters:
+  proteins: 19377
+  matches: 19510
+  proteomes: 17291
+  taxa: 28568
+  structures: 22
+  alphafold_models: 13734
+  domain_architectures: 110
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003732
+description: This family comprises of several D-Tyr-tRNA(Tyr) deacylase proteins. Cell growth inhibition
+  by several d-amino acids can be explained by an in vivo production of d-aminoacyl-tRNA molecules. Escherichia
+  coli and yeast cells express an enzyme, d-Tyr-tRNA(Tyr) deacylase, capable of recycling such d-aminoacyl-tRNA
+  molecules into free tRNA and d-amino acid. Accordingly, upon inactivation of the genes of the above
+  deacylases, the toxicity of d-amino acids increases. Orthologues of the deacylase are found in many
+  cells [[cite:PUB00017393]].The D-aminoacyl-tRNA deacylase (DTD) enzyme is homodimeric with two active
+  sites located at the dimeric interface. Each active site carries an invariant Gly-cisPro dipeptide motif
+  in each monomer. The interaction between the dipeptide motifs from each monomer ensures substrate stereospecificity.
+  This family also includes a subclass of DTDs which is present in Chordata and harbors a Gly-transPro
+  motif. The cis to trans switch is the key to Animal DTDs (ATD) gaining of L-chiral selectivity. This
+  'gain of function' through relaxation of substrate chiral specificity underlies ATD's capability of
+  correcting the error in tRNA selection [[cite:PUB00109228]].

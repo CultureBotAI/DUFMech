@@ -1,0 +1,28 @@
+id: Pfam:PF11175
+pfam_id: PF11175
+name: GH172 second beta-sandwich domain
+short_name: GH172_2nd
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11175
+counters:
+  proteins: 2808
+  matches: 2840
+  proteomes: 1816
+  taxa: 3198
+  structures: 6
+  alphafold_models: 1820
+  domain_architectures: 40
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021345
+description: This entry represents a domain found in GH172 family of enzymes including DFA I synthase/hydrolase
+  from Bifidobacterium dentium, Exo-alpha-D-arabinofuranosidase from Microbacterium arabinogalactanolyticum
+  and related proteins [[cite:PUB00161976],[cite:PUB00161977],[cite:PUB00161978]]. These proteins contain
+  a pair of homologous structurally similar domains which adopt jelly-roll beta-sandwich. They assemble
+  into trimeric structure that can form other higher order assemblies.

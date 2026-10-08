@@ -1,0 +1,30 @@
+id: Pfam:PF15093
+pfam_id: PF15093
+name: Sperm-associated microtubule inner protein 4
+short_name: SPMIP4-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15093
+counters:
+  proteins: 575
+  matches: 610
+  proteomes: 397
+  taxa: 1493
+  structures: 3
+  alphafold_models: 487
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027886
+description: This family (previously DUF4555) includes the homologs of human sperm-associated microtubule
+  inner protein 4 (SPMIP4) that is found predominantly in testis [[cite:PUB00151495]]. SPMIP4 is a microtubule
+  inner protein (MIP) part of the axonemal dynein-decorated doublet microtubules (DMTs). Members of this
+  family adopt rather extended conformation and contain a single or multiple Mn motifs. Each Mn motif
+  consists of a 5- to 6-residue helix flanked by a Tyr/Phe residue on one end and by a Ser/Thr on the
+  other that binds the shoulder of the alpha-tubulin S9/S10 loop [[cite:PUB00151502]]. Members of this
+  family are likely to stabilise the microtubule structure in the sperm flagella [[cite:PUB00151496]].

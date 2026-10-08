@@ -1,0 +1,27 @@
+id: Pfam:PF08873
+pfam_id: PF08873
+name: Bacteriophage Mu, Gp37
+short_name: Phage_Mu_Gp37
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08873
+counters:
+  proteins: 290
+  matches: 290
+  proteomes: 258
+  taxa: 630
+  structures: 2
+  alphafold_models: 203
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014972
+description: This family is represented by Bacteriophage Mu, Gp37 (also known as Probable tail terminator
+  protein) which may stop tail tube polymerization by capping the rapidly polymerising tail tube once
+  it has reached its requisite length and prevent its depolymerization [[cite:PUB00052083]]. This family
+  also has prophages matches, such as the Gp37 protein from the FluMu prophage.

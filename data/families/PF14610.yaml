@@ -1,0 +1,29 @@
+id: Pfam:PF14610
+pfam_id: PF14610
+name: Ykl077w/Psg1 (Pma1 Stabilization in Golgi)
+short_name: Psg1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14610
+counters:
+  proteins: 1115
+  matches: 1122
+  proteomes: 805
+  taxa: 1646
+  structures: 0
+  alphafold_models: 929
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR028000
+description: Ykl077w/Psg1 (Pma1 Stabilization in the Golgi) physically interacts with Exp1 (for ER eXport
+  of Pma1). Psg1 can be found in the Golgi and coat protein I (COPI) vesicles but does not directly bind
+  Pma1. Loss of Psg1 causes enhanced degradation of Pma1 in the vacuole. Psg1 is 392aa protein with a
+  predicted signal sequence at its N-terminus and a single TMD near the C-terminus. The short cytosolic
+  region bears 2 putative retrieval motifs KRR and KKxxKxx. It was previously shown to be cleaved by the
+  Ca+ dependent serine protease, Kex2 [[cite:PUB00093685]].

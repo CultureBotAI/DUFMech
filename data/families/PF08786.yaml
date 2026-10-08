@@ -1,0 +1,26 @@
+id: Pfam:PF08786
+pfam_id: PF08786
+name: DcrB
+short_name: DcrB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08786
+counters:
+  proteins: 1636
+  matches: 1636
+  proteomes: 924
+  taxa: 1415
+  structures: 8
+  alphafold_models: 953
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014894
+description: DcrB is a bacterial protein required for phages C1 and C6 adsorption [[cite:PUB00063631],[cite:PUB00063632]].
+  It may be involved in the opening or formation of diffusion channels in the outer membrane [[cite:PUB00063632]].
+  Structurally, it consist of an antiparallel beta sheet with some alpha helical regions.

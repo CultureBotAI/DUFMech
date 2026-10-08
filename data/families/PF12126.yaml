@@ -1,0 +1,30 @@
+id: Pfam:PF12126
+pfam_id: PF12126
+name: PML-like, coiled-coil
+short_name: PML_CC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12126
+counters:
+  proteins: 1276
+  matches: 1358
+  proteomes: 427
+  taxa: 1440
+  structures: 11
+  alphafold_models: 1093
+  domain_architectures: 72
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021978
+description: This is the coiled-coil region of PML, also known as TRIM19. PML acts in association with
+  PML-nuclear bodies (PML-NBs) in a wide range of important cellular processes, such as tumour, suppression,
+  transcriptional regulation, apoptosis, senescence, DNA damage response, and viral defense mechanisms.
+  PML is defined by the TRIM/RBCC motif which consists of an N-terminal RING zinc finger, two BBox type
+  zinc fingers followed by a coiled-coil region [[cite:PUB00102048]]. This coiled-coil region is thought
+  to mediate interactions with cytomegalovirus IE1 protein and/or other partners [[cite:PUB00102048]].
+  This entry also includes RNF207, which has a similar organisation.

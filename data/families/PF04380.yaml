@@ -1,0 +1,28 @@
+id: Pfam:PF04380
+pfam_id: PF04380
+name: Membrane fusogenic activity
+short_name: BMFP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04380
+counters:
+  proteins: 6218
+  matches: 6218
+  proteomes: 6209
+  taxa: 8371
+  structures: 0
+  alphafold_models: 4101
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007475
+description: BMFP consists of two structural domains, a coiled-coil C-terminal domain via which the protein
+  self-associates as a trimer, and an N-terminal domain disordered at neutral pH but adopting an amphipathic
+  alpha-helical structure in the presence of phospholipid vesicles, high ionic strength, acidic pH or
+  SDS. BMFP interacts with phospholipid vesicles though the predicted amphipathic alpha-helix induced
+  in the N-terminal half of the protein and promotes aggregation and fusion of vesicles in vitro.

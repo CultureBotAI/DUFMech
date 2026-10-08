@@ -1,0 +1,31 @@
+id: Pfam:PF08683
+pfam_id: PF08683
+name: Microtubule-binding calmodulin-regulated spectrin-associated
+short_name: CAMSAP_CKK
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08683
+counters:
+  proteins: 6495
+  matches: 6511
+  proteomes: 1366
+  taxa: 4439
+  structures: 9
+  alphafold_models: 1174
+  domain_architectures: 57
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014797
+description: This is the C-terminal domain of a family of eumetazoan proteins collectively defined as
+  calmodulin-regulated spectrin-associated, or CAMSAP, proteins. CAMSAP proteins carry an N-terminal region
+  that includes the CH domain, a central region including a predicted coiled-coil and this C-terminal,
+  or CKK, domain - defined as being present in CAMSAP, KIAA1078 and KIAA1543, The C-terminal domain is
+  the part of the CAMSAP proteins that binds to microtubules. The domain appears to act by producing inhibition
+  of neurite extension, probably by blocking microtubule function. CKK represents a domain that has evolved
+  with the metazoa. The structure of a murine hypothetical protein from RIKEN cDNA has shown the domain
+  to adopt a mainly beta barrel structure with an associated alpha-helical hairpin.

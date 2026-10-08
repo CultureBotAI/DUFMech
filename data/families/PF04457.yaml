@@ -1,0 +1,25 @@
+id: Pfam:PF04457
+pfam_id: PF04457
+name: MJ1316 RNA cyclic group end recognition domain
+short_name: MJ1316
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04457
+counters:
+  proteins: 2167
+  matches: 2167
+  proteomes: 1884
+  taxa: 4633
+  structures: 0
+  alphafold_models: 1646
+  domain_architectures: 106
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040459
+description: RNA repair domain predicted to be involved specifically in the recognition of RNA 3' ends
+  with 2'-3' cyclic phosphate groups [[cite:PUB00091037]].

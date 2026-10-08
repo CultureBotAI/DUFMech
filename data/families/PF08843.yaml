@@ -1,0 +1,31 @@
+id: Pfam:PF08843
+pfam_id: PF08843
+name: Nucleotidyl transferase AbiEii toxin, Type IV TA system
+short_name: AbiEii
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08843
+counters:
+  proteins: 11071
+  matches: 11148
+  proteomes: 6740
+  taxa: 10976
+  structures: 19
+  alphafold_models: 7331
+  domain_architectures: 35
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014942
+description: This family was recently identified as belonging to the nucleotidyltransferase superfamily
+  [[cite:PUB00066751]]. AbiEii is the cognate toxin of the type IV toxin-antitoxin 'innate immunity' bacterial
+  abortive infection (Abi) system that protects bacteria from the spread of a phage infection. The Abi
+  system is activated upon infection with phage to abort the cell thus preventing the spread of phage
+  through viral replication. There are some 20 or more Abis, and they are predominantly plasmid-encoded
+  lactococcal systems. TA, toxin-antitoxin, systems on plasmids function by killing cells that lose the
+  plasmid upon division. AbiE phage resistance systems function as novel Type IV TAs and are widespread
+  in bacteria and archaea. The cognate antitoxin is [pfam:PF13338] [[cite:PUB00075538]].

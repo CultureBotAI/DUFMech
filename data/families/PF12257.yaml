@@ -1,0 +1,29 @@
+id: Pfam:PF12257
+pfam_id: PF12257
+name: Vacuolar membrane-associated protein Iml1, vWA-like domain
+short_name: vWA_IML1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12257
+counters:
+  proteins: 4843
+  matches: 4910
+  proteomes: 2798
+  taxa: 7363
+  structures: 15
+  alphafold_models: 619
+  domain_architectures: 128
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR048255
+description: Proteins in this entry contain a DEP domain, which is a globular domain of about 80 residues.
+  This entry includes vacuolar membrane-associated protein Iml1 and DEP domain-containing protein 5/DDB_G0279099.
+  In Saccharomyces cerevisiae, Iml1 is a subunit of both the SEA (Seh1-associated) and Iml1 complexes
+  (Iml1-Npr2-Npr3). SEA complex is associates dynamically with the vacuole and is involved in autophagy
+  [[cite:PUB00063317],[cite:PUB00063319]]. Iml1 complex is required for non-nitrogen-starvation (NNS)-induced
+  autophagy [[cite:PUB00063318]]. This is a vWA-like domain.

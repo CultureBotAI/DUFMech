@@ -1,0 +1,29 @@
+id: Pfam:PF05640
+pfam_id: PF05640
+name: Na,K-Atpase Interacting protein
+short_name: NKAIN
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05640
+counters:
+  proteins: 4409
+  matches: 4615
+  proteomes: 1178
+  taxa: 3872
+  structures: 0
+  alphafold_models: 3933
+  domain_architectures: 22
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008516
+description: NKAIN (Na,K-Atpase INteracting) proteins are a family of evolutionary conserved transmembrane
+  proteins that localise to neurons, that are critical for neuronal function, and that interact with the
+  beta subunits, beta1 in vertebrates and beta in Drosophila, of Na,K-ATPase. NKAINs have highly conserved
+  trans-membrane domains but otherwise no other characterised domains. NKAINs may function as subunits
+  of pore or channel structures in neurons or they may affect the function of other membrane proteins.
+  They are likely to function within the membrane bilayer [[cite:PUB00044756]].

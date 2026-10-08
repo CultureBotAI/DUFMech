@@ -1,0 +1,27 @@
+id: Pfam:PF08522
+pfam_id: PF08522
+name: BT_3987-like, N-terminal domain
+short_name: BT_3987-like_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08522
+counters:
+  proteins: 1935
+  matches: 2082
+  proteomes: 711
+  taxa: 1049
+  structures: 12
+  alphafold_models: 1291
+  domain_architectures: 41
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013728
+description: This domain, previously known as DUF1735, is found in a number of proteins mainly found in
+  firmicutes, including BT_3987 from Bacteroides thetaiotaomicron, which displays hydrolytic activity
+  against Hy-type N-glycans, probably initiating the degradation of this type of glycan in the human gut
+  [[cite:PUB00152803]]. This domain adopts a beta-sandwich fold.

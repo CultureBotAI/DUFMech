@@ -1,0 +1,27 @@
+id: Pfam:PF02363
+pfam_id: PF02363
+name: Cysteine rich repeat
+short_name: C_tripleX
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02363
+counters:
+  proteins: 644
+  matches: 1933
+  proteomes: 88
+  taxa: 333
+  structures: 0
+  alphafold_models: 596
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003341
+description: This Cysteine repeat C-X3-C-X3-C is repeated in sequences of this family, 34 times in [swissprot:O17970].
+  The function of these repeats is unknown as is the function of the proteins in which they occur. Most
+  of the sequences in this family are from C. elegans. This motif forms an alpha helix and two tandem
+  copies of this repeat associate and likely form a disulphide bonded bihelical structure.

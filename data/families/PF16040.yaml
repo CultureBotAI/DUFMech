@@ -1,0 +1,27 @@
+id: Pfam:PF16040
+pfam_id: PF16040
+name: E3 ubiquitin-protein ligase APD1-4, N-terminal
+short_name: APD1-4_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16040
+counters:
+  proteins: 1739
+  matches: 1747
+  proteomes: 618
+  taxa: 2038
+  structures: 0
+  alphafold_models: 1379
+  domain_architectures: 51
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032008
+description: This entry includes E3 ubiquitin-protein ligase APD1 to 4 from Arabidopsis. They are involved
+  in pollen mitosis II (PMII) regulation during male gametogenesis [[cite:PUB00096500]]. This entry represents
+  a functionally uncharacterised domain found towards the N-terminal of APD1-4 and in uncharacterised
+  sequences, mainly from arthropods.

@@ -1,0 +1,28 @@
+id: Pfam:PF03194
+pfam_id: PF03194
+name: LUC7 N_terminus
+short_name: LUC7
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03194
+counters:
+  proteins: 9105
+  matches: 10102
+  proteomes: 3381
+  taxa: 8996
+  structures: 7
+  alphafold_models: 7758
+  domain_architectures: 119
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004882
+description: This family contains the N terminal region of several LUC7 protein homologues and only contains
+  eukaryotic proteins. LUC7 has been shown to be a U1 snRNA associated protein [[cite:PUB00016924]] with
+  a role in splice site recognition [[cite:PUB00016923]]. The family also contains human and mouse LUC7
+  like (LUC7L) proteins [[cite:PUB00016922]] and human cisplatin resistance-associated overexpressed protein
+  (CROP) [[cite:PUB00016921]].

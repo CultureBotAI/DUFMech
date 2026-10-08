@@ -1,0 +1,24 @@
+id: Pfam:PF09976
+pfam_id: PF09976
+name: Tetratricopeptide repeat-like domain
+short_name: TPR_21
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09976
+counters:
+  proteins: 7916
+  matches: 7947
+  proteomes: 7511
+  taxa: 11074
+  structures: 0
+  alphafold_models: 5190
+  domain_architectures: 531
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018704
+description: This family resembles a single unit of a TPR repeat.

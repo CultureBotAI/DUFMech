@@ -1,0 +1,31 @@
+id: Pfam:PF06716
+pfam_id: PF06716
+name: Movement protein p6
+short_name: MP_p6
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06716
+counters:
+  proteins: 8
+  matches: 8
+  proteomes: 6
+  taxa: 63
+  structures: 0
+  alphafold_models: 4
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009591
+description: This entry represents the movement protein 6 (p6) from Beet yellows virus and related Closterovirus
+  proteins. Movement proteins (MPs) encoded by many virus genera are specialised proteins essential for
+  plant viral genomes or virions transport within and between cells. P6 is a small protein (6kDa) localised
+  in the endoplasmic reticulum. It has a single-span N-terminal transmembrane domain and a C-terminal
+  hydrophilic domain which faces the cytosol. It is involved, together with Hsp70h, CP, CPm, and P64,
+  in cell to cell movement of the viral genome without any budding, being essential for this process.
+  The mechanism of action of this protein is not clear. It is suggested that it also plays a role in virion
+  formation [[cite:PUB00094403]].

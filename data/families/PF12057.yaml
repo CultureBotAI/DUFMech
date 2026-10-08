@@ -1,0 +1,29 @@
+id: Pfam:PF12057
+pfam_id: PF12057
+name: BCL2-associated athanogene 6
+short_name: BAG6
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12057
+counters:
+  proteins: 2436
+  matches: 2442
+  proteomes: 725
+  taxa: 2709
+  structures: 0
+  alphafold_models: 1779
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021925
+description: This domain is found in large proline-rich protein BAG6 protein. It has a conserved SDL sequence
+  motif. Human BAG6 is an ATP-independent molecular chaperone preventing the aggregation of misfolded
+  and hydrophobic patches-containing proteins [[cite:PUB00086005]]. It functions as part of a cytosolic
+  protein quality control complex, the BAG6/BAT3 complex, which maintains these client proteins in a soluble
+  state and participates to their proper delivery to the endoplasmic reticulum or alternatively can promote
+  their sorting to the proteasome where they undergo degradation [[cite:PUB00086005],[cite:PUB00086006],[cite:PUB00086007],[cite:PUB00086008]].

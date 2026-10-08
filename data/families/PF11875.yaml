@@ -1,0 +1,30 @@
+id: Pfam:PF11875
+pfam_id: PF11875
+name: DnaJ-like protein C11, C-terminal
+short_name: DnaJ-like_C11_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11875
+counters:
+  proteins: 3832
+  matches: 3859
+  proteomes: 2671
+  taxa: 7433
+  structures: 0
+  alphafold_models: 3336
+  domain_architectures: 71
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024586
+description: This is the C-terminal domain found in DnaJ-like proteins, including DnaJ homolog subfamily
+  C member 11 (DNAJC11) from mammals and Chaperone protein dnaJ 13 from Arabidopsis. DNAJC11 is a mitochondrial
+  outer membrane protein involved in mitochondrial biogenesis and in the response to microenvironment
+  changes and requirements. The J-domain is mediated its mitochondrial localization, while this domain
+  is critical for protein-protein interactions [[cite:PUB00098186]]. This domain adopts a SUEL/RBL-like
+  fold and contains the conserved motif FxDPCxxxxxK [[cite:PUB00152793]] in common with the carbohydrate-binding
+  loop of the SUEL/RBL lectin domain ([pfam:PF02140]) [[cite:PUB00152793]].

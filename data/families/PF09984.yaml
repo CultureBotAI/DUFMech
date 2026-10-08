@@ -1,0 +1,26 @@
+id: Pfam:PF09984
+pfam_id: PF09984
+name: Single cache domain 4
+short_name: sCache_4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09984
+counters:
+  proteins: 2306
+  matches: 2306
+  proteomes: 1866
+  taxa: 2524
+  structures: 1
+  alphafold_models: 1278
+  domain_architectures: 32
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019247
+description: Members of this family of domains are found in various BarA-like signal transduction histidine
+  kinases, which are involved in the regulation of carbon metabolism via the csrA/csrB regulatory system.
+  The role of this domain has not, as yet, been established.

@@ -1,0 +1,25 @@
+id: Pfam:PF09227
+pfam_id: PF09227
+name: Bubble protein
+short_name: Bubble
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09227
+counters:
+  proteins: 112
+  matches: 112
+  proteomes: 98
+  taxa: 188
+  structures: 2
+  alphafold_models: 89
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015308
+description: Members of this family of fungal domains are functionally uncharacterised. They may act as
+  toxins [[cite:PUB00031842]].

@@ -1,0 +1,27 @@
+id: Pfam:PF01983
+pfam_id: PF01983
+name: Guanylyl transferase CofC like
+short_name: CofC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01983
+counters:
+  proteins: 3120
+  matches: 3136
+  proteomes: 3017
+  taxa: 4189
+  structures: 4
+  alphafold_models: 1969
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002835
+description: Coenzyme F420 is a hydride carrier cofactor that functions during methanogenesis. This family
+  of proteins represents CofC, a nucleotidyl transferase that is involved in coenzyme F420 biosynthesis.
+  CofC has been shown to catalyse the formation of lactyl-2-diphospho-5'-guanosine from 2-phospho-L-lactate
+  and GTP [[cite:PUB00045885]].

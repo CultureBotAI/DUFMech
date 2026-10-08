@@ -1,0 +1,26 @@
+id: Pfam:PF13076
+pfam_id: PF13076
+name: Fur-regulated basic protein A
+short_name: Fur_reg_FbpA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13076
+counters:
+  proteins: 730
+  matches: 730
+  proteomes: 435
+  taxa: 591
+  structures: 0
+  alphafold_models: 402
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025072
+description: This family of proteins is regulated by the ferric uptake regulator protein Fur [[cite:PUB00075677]].
+  This family does not regulate the lutABC operon encoding iron sulfur-containing enzymes necessary for
+  growth on lactate [[cite:PUB00075678]].

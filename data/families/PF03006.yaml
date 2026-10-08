@@ -1,0 +1,32 @@
+id: Pfam:PF03006
+pfam_id: PF03006
+name: Haemolysin-III related
+short_name: HlyIII
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03006
+counters:
+  proteins: 35375
+  matches: 35934
+  proteomes: 15659
+  taxa: 25660
+  structures: 11
+  alphafold_models: 27402
+  domain_architectures: 242
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004254
+description: Members of this family are integral membrane proteins. This family includes a protein with
+  hemolytic activity from Bacillus cereus [[cite:PUB00019707]]. It has been proposed that YOL002c encodes
+  a Saccharomyces cerevisiae protein that plays a key role in metabolic pathways that regulate lipid and
+  phosphate metabolism [[cite:PUB00019708]]. In eukaryotes, members are seven-transmembrane pass molecules
+  found to encode functional receptors with a broad range of apparent ligand specificities, including
+  progestin and adipoQ receptors, and hence have been named PAQR proteins [[cite:PUB00071573]]. The mammalian
+  members include progesterone binding proteins [[cite:PUB00071574]]. Unlike the case with GPCR receptor
+  proteins, the evolutionary ancestry of the members of this family can be traced back to the Archaea.
+  This family belongs to the CREST superfamily [[cite:PUB00085069]], which are distantly related to GPCRs.

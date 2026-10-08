@@ -1,0 +1,25 @@
+id: Pfam:PF18965
+pfam_id: PF18965
+name: Outer capsid protein VP3-like
+short_name: VP3-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18965
+counters:
+  proteins: 12
+  matches: 15
+  proteomes: 8
+  taxa: 33
+  structures: 0
+  alphafold_models: 9
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR045917
+description: This entry represents a group of Reoviridae proteins, including outer capsid protein VP3
+  from Cryphonectria parasitica mycoreovirus 1 [[cite:PUB00099534],[cite:PUB00099533]].

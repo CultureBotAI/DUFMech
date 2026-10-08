@@ -1,0 +1,29 @@
+id: Pfam:PF13959
+pfam_id: PF13959
+name: ATP-dependent rRNA helicase SPB4-like, C-terminal extension
+short_name: CTE_SPB4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13959
+counters:
+  proteins: 15982
+  matches: 15992
+  proteomes: 3488
+  taxa: 9181
+  structures: 50
+  alphafold_models: 13653
+  domain_architectures: 216
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025313
+description: 'This short domain is found at the C-terminus of many helicase proteins, including ATP-dependent
+  rRNA helicase SPB4 from Saccharomyces cerevisiae, which is involved in the biogenesis of 60S ribosomal
+  subunits. SPB4 is organised into four domains: dual RecA domains ([pfam:PF00270] and [pfam:PF00271]),
+  a C-terminal extension (CTE, represented by this entry) and a C-terminal tail ([pfam:PF23681]). This
+  domain packs closely onto the catalytic core and engages the four nucleotides immediately 5'' to those
+  within the RNA binding pocket. It shows a mainly alpha- helical structure [[cite:PUB00153742]].'

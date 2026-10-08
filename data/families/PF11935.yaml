@@ -1,0 +1,32 @@
+id: Pfam:PF11935
+pfam_id: PF11935
+name: Symplekin/PTA1 N-terminal
+short_name: SYMPK_PTA1_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11935
+counters:
+  proteins: 4626
+  matches: 4686
+  proteomes: 2872
+  taxa: 7645
+  structures: 18
+  alphafold_models: 3038
+  domain_architectures: 70
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032460
+description: This is the N-terminal domain found in the symplekin protein from animals and PTA1 protein
+  from budding yeasts and is typically between 239 to 261 amino acids in length. Symplekin is a scaffold
+  protein that functions as a component of a multimolecular complex involved in histone mRNA 3'-end processing
+  [[cite:PUB00068954],[cite:PUB00068955]]. PTA1 is involved in pre-tRNA processing. PTA1 is a subunit
+  of the cleavage and polyadenylation factor (CPF), which plays a key role in polyadenylation-dependent
+  pre-mRNA 3'-end formation and cooperates with cleavage factors including the CFIA complex and NAB4/CFIB
+  [[cite:PUB00070276]]. This domain has the ARM or HEAT fold, with seven pairs of antiparallel alpha-helices
+  arranged in the shape of an arc. It is important for interaction with Ssu72 and stimulates Ssu72 C-terminal
+  domain phosphatase activity in vitro [[cite:PUB00065426]].

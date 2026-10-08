@@ -1,0 +1,25 @@
+id: Pfam:PF15718
+pfam_id: PF15718
+name: Protein moonraker
+short_name: MNR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15718
+counters:
+  proteins: 1161
+  matches: 1712
+  proteomes: 726
+  taxa: 2368
+  structures: 0
+  alphafold_models: 992
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031447
+description: Protein moonraker is a centriolar satellite component involved in centriole duplication.
+  It promotes centriole duplication by localizing WDR62 to the centrosome [[cite:PUB00076882]].

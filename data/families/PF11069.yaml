@@ -1,0 +1,28 @@
+id: Pfam:PF11069
+pfam_id: PF11069
+name: Cilia- and flagella-associated protein 298
+short_name: CFAP298
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11069
+counters:
+  proteins: 1901
+  matches: 1910
+  proteomes: 1452
+  taxa: 4738
+  structures: 1
+  alphafold_models: 1654
+  domain_architectures: 26
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021298
+description: This is a eukaryotic family of proteins which includes a group of cilia- and flagella-associated
+  protein, including Kur from zebrafish and C21orf59 from humans. Kur has been shown to play a dual role
+  in cilia motility and polarization [[cite:PUB00089805]]. Primary ciliary dyskinesia (PCD) is caused
+  when defects of motile cilia lead to chronic airway infections, male infertility, and situs abnormalities.
+  Mutations in the C21orf59 gene cause ciliary dyskinesia, primary, 26 (CILD26) [[cite:PUB00089729]].

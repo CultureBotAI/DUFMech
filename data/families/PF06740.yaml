@@ -1,0 +1,29 @@
+id: Pfam:PF06740
+pfam_id: PF06740
+name: Microtubule associated protein Futsch
+short_name: MAP_Futsch
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06740
+counters:
+  proteins: 44
+  matches: 1209
+  proteomes: 33
+  taxa: 156
+  structures: 0
+  alphafold_models: 3
+  domain_architectures: 32
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009603
+description: The Drosophila protein Futsch has homology to MAP1B and controls synaptic growth at the Drosophila
+  neuromuscular junction through the regulation of the synaptic microtubule cytoskeleton. Ftusch protein
+  colocalises with microtubules and identifies cytoskeletal loops that traverse the lateral margin of
+  select synaptic boutons. Futsch mutations disrupt synaptic microtubule organisation. The N- and C-terminal
+  domains of Futsch are homologous to the vertebrate MAP1B microtubule-associated protein. The central
+  domain of Futsch is highly repetitive and it is represented in this entry [[cite:PUB00059957]].

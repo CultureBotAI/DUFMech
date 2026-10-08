@@ -1,0 +1,24 @@
+id: Pfam:PF04362
+pfam_id: PF04362
+name: Bacterial Fe(2+) trafficking
+short_name: Iron_traffic
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04362
+counters:
+  proteins: 4556
+  matches: 4562
+  proteomes: 4418
+  taxa: 6189
+  structures: 4
+  alphafold_models: 3087
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007457
+description: This is a family of bacterial Fe(2+) trafficking proteins.

@@ -1,0 +1,27 @@
+id: Pfam:PF02575
+pfam_id: PF02575
+name: YbaB/EbfC DNA-binding family
+short_name: YbaB_DNA_bd
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02575
+counters:
+  proteins: 24833
+  matches: 24868
+  proteomes: 16421
+  taxa: 24300
+  structures: 5
+  alphafold_models: 16239
+  domain_architectures: 33
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR004401
+description: This is a family of DNA-binding proteins. Members of this family form homodimers which bind
+  DNA via a tweezer-like structure [[cite:PUB00026293],[cite:PUB00057452],[cite:PUB00057453]]. The conformation
+  of the DNA is changed when bound to these proteins [[cite:PUB00057453]]. In bacteria, these proteins
+  may play a role in DNA replication-recovery following DNA damage [[cite:PUB00026293]].

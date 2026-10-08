@@ -1,0 +1,30 @@
+id: Pfam:PF09992
+pfam_id: PF09992
+name: Phosphodiester glycosidase
+short_name: NAGPA
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09992
+counters:
+  proteins: 11558
+  matches: 11569
+  proteomes: 7460
+  taxa: 12626
+  structures: 9
+  alphafold_models: 7114
+  domain_architectures: 247
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018711
+description: This is a family conserved from bacteria to humans. The structure of a member from Bacteroides
+  has been crystallised and modelled onto the luminal region of the human member of the family, the transmembrane
+  glycoprotein N-acetylglucosamine-1-phosphodiester alpha-N-acetylglucosaminidase. There is some conservation
+  of potentially functional residues, implying that in the bacterial members this family acts in some
+  way as a phosphodiester glycosidase [[cite:PUB00078675]]. The human protein is also present, so the
+  eukaryotic members are likely to be catalysing the second step in the formation of the mannose 6-phosphate
+  targeting signal on lysosomal enzyme oligosaccharides [[cite:PUB00108993]].

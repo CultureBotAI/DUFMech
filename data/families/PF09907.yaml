@@ -1,0 +1,27 @@
+id: Pfam:PF09907
+pfam_id: PF09907
+name: HigB_toxin, RelE-like toxic component of a toxin-antitoxin system
+short_name: HigB_toxin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09907
+counters:
+  proteins: 3199
+  matches: 3200
+  proteomes: 2308
+  taxa: 4015
+  structures: 4
+  alphafold_models: 2061
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018669
+description: HigB_toxin is a family of RelE-like prokaryotic proteins that function as mRNA interferases.
+  HigB cleaves translated mRNA only, and cleavage depended on translation of the target RNAs. HigB belongs
+  to the RelE super-family of RNases. The toxin-antitoxin gene-pair is induced by environmental stress
+  factors.

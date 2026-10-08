@@ -1,0 +1,27 @@
+id: Pfam:PF13274
+pfam_id: PF13274
+name: Antitoxin SocA-like, Panacea domain
+short_name: SocA_Panacea
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13274
+counters:
+  proteins: 3435
+  matches: 3436
+  proteomes: 2742
+  taxa: 5284
+  structures: 0
+  alphafold_models: 2264
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025272
+description: This domain is found in Antitoxin SocA from Caulobacter vibrioides and in similar proteins
+  widespread across bacteria, archaea and tailed bacteriophages. SocA is the antitoxin component of an
+  atypical type II toxin-antitoxin (TA) system which neutralises the toxic activity of toxin SocB by acting
+  as an adapter to promote its degradation by the protease ClpXP [[cite:PUB00100422],[cite:PUB00100160]].

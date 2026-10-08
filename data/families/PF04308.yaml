@@ -1,0 +1,27 @@
+id: Pfam:PF04308
+pfam_id: PF04308
+name: Ribonuclease H-like
+short_name: RNaseH_like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04308
+counters:
+  proteins: 1335
+  matches: 1336
+  proteomes: 1273
+  taxa: 1920
+  structures: 0
+  alphafold_models: 906
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007405
+description: RNaseH_like is a family of uncharacterised eubacterial proteins that are distant homologues
+  of Ribonuclease H-like. The family maintains all the core secondary structure elements of the RNase
+  H-like fold and shares several conserved, presumably active site residues with RNase HI. This finding
+  suggests that it functions as a nuclease [[cite:PUB00020735]].

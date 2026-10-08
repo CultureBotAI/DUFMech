@@ -1,0 +1,28 @@
+id: Pfam:PF06417
+pfam_id: PF06417
+name: ER membrane protein complex subunit 4
+short_name: EMC4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06417
+counters:
+  proteins: 3905
+  matches: 3918
+  proteomes: 3220
+  taxa: 8600
+  structures: 12
+  alphafold_models: 3351
+  domain_architectures: 81
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009445
+description: This entry includes ER membrane protein complex subunit 4 (EMC4 also known as TMEM85 in mammals)
+  from animals and its orthologue Emc4 from budding yeasts. They inhibit hydrogen peroxide mediated cell
+  death in yeast [[cite:PUB00086405]]. Emc4 is part of the ER membrane complex (EMC) that enables the
+  energy-independent insertion into endoplasmic reticulum membranes of newly synthesized membrane proteins
+  [[cite:PUB00067575],[cite:PUB00096682],[cite:PUB00096681]].

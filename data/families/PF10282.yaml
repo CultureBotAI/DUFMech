@@ -1,0 +1,28 @@
+id: Pfam:PF10282
+pfam_id: PF10282
+name: Lactonase, 7-bladed beta-propeller
+short_name: Lactonase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10282
+counters:
+  proteins: 20552
+  matches: 22059
+  proteomes: 10997
+  taxa: 16490
+  structures: 10
+  alphafold_models: 13530
+  domain_architectures: 523
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019405
+description: This entry contains bacterial 6-phosphogluconolactonases (6PGL)YbhE-type ([ec:3.1.1.31])
+  which hydrolyse 6-phosphogluconolactone to 6-phosphogluconate. The entry also contains the fungal muconate
+  lactonising enzyme carboxy-cis,cis-muconate cyclase ([ec:5.5.1.5]) and muconate cycloisomerase ([ec:5.5.1.1]),
+  which convert cis,cis-muconates to muconolactones and vice versa as part of the microbial beta-ketoadipate
+  pathway. Structures of proteins in this family have revealed a 7-bladed beta-propeller fold [[cite:PUB00037024]].

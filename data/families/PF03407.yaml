@@ -1,0 +1,24 @@
+id: Pfam:PF03407
+pfam_id: PF03407
+name: Nucleotide-diphospho-sugar transferase
+short_name: Nucleotid_trans
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03407
+counters:
+  proteins: 10821
+  matches: 11102
+  proteomes: 1296
+  taxa: 3434
+  structures: 0
+  alphafold_models: 8926
+  domain_architectures: 286
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005069
+description: Proteins in this family have been been predicted to be nucleotide-diphospho-sugar transferases.

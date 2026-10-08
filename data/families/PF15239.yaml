@@ -1,0 +1,27 @@
+id: Pfam:PF15239
+pfam_id: PF15239
+name: Cilia-and flagella-associated protein 96
+short_name: CFAP96-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15239
+counters:
+  proteins: 1331
+  matches: 1376
+  proteomes: 907
+  taxa: 3017
+  structures: 9
+  alphafold_models: 1169
+  domain_architectures: 21
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR029358
+description: This family (previously DUF4586) represents Cilia- and flagella-associated protein 96 (CFAP96,
+  also known as C4orf47). CFAP96 is an axonemal microtubule-associated protein (MAP). The EM structure
+  of sperm DMTs shows that CFAP96 binds to tubulin and, similarly to other axonemal wedge-MAPs, binds
+  deeper into the inter-protofilament cleft making extensive contacts with flanking protofilaments [[cite:PUB00151496]].

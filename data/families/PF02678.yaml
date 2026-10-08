@@ -1,0 +1,31 @@
+id: Pfam:PF02678
+pfam_id: PF02678
+name: Pirin
+short_name: Pirin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02678
+counters:
+  proteins: 36769
+  matches: 36808
+  proteomes: 15924
+  taxa: 24583
+  structures: 22
+  alphafold_models: 23663
+  domain_architectures: 112
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003829
+description: This family consists of Pirin proteins from both eukaryotes and prokaryotes. The function
+  of Pirin is unknown but the gene coding for this protein is known to be expressed in all tissues in
+  the human body although it is expressed most strongly in the liver and heart. Pirin is known to be a
+  nuclear protein, exclusively localised within the nucleoplasma and predominantly concentrated within
+  dot-like subnuclear structures [[cite:PUB00016051]]. A tomato homologue of human Pirin has been found
+  to be induced during programmed cell death [[cite:PUB00020125]]. Human Pirin interacts with Bcl-3 and
+  NFI [[cite:PUB00020126]] and hence is probably involved in the regulation of DNA transcription and replication.
+  It appears to be an Fe(II)-containing member of the Cupin superfamily.

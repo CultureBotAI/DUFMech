@@ -1,0 +1,26 @@
+id: Pfam:PF07077
+pfam_id: PF07077
+name: Virulence factor BPSS1818
+short_name: BPSS1818
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07077
+counters:
+  proteins: 4176
+  matches: 4178
+  proteomes: 3794
+  taxa: 5000
+  structures: 0
+  alphafold_models: 2549
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009781
+description: This entry (ex DUF1345) represents BPSS1818, a virulence factor required for full Burkholderia
+  pseudomallei pathogenesis in vivo. BPSS1818 is involved in indirect modulation of mammalian host cell
+  tubulin, probably in concert with other bacterial components [[cite:PUB00159059]].

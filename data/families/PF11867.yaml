@@ -1,0 +1,27 @@
+id: Pfam:PF11867
+pfam_id: PF11867
+name: Type I restriction enzyme HindI endonuclease subunit-like, C-terminal
+short_name: T1RH-like_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11867
+counters:
+  proteins: 4176
+  matches: 4181
+  proteomes: 3576
+  taxa: 6761
+  structures: 0
+  alphafold_models: 2822
+  domain_architectures: 31
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021810
+description: This domain is found at the C-terminal of Type I restriction enzyme HindI endonuclease subunit
+  (also known as R protein) from Haemophilus influenzae related sequences from bacteria and archaea [[cite:PUB00099965]].
+  This domain is typically between 255 to 340 amino acids in length and its function is unknown. This
+  domain is found associated with [pfam:PF04851], [pfam:PF04313].

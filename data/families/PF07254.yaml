@@ -1,0 +1,38 @@
+id: Pfam:PF07254
+pfam_id: PF07254
+name: Membrane-bound toxin component of toxin-antitoxin system
+short_name: Cpta_toxin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07254
+counters:
+  proteins: 1964
+  matches: 1965
+  proteomes: 1959
+  taxa: 2784
+  structures: 0
+  alphafold_models: 1173
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009883
+description: CptA is a family of bacterial proteins named for the member of this family, YGFX_ECOLI, Swissprot:Q46824.
+  YgfX was previously thought to be the toxic part of a toxin-antitoxin module [[cite:PUB00075551]] along
+  with the antitoxin, [pfam:PF03937] Sdh5. However, studies have shown that, YgfX interferes with correct
+  cell division and morphology. Furthermore, the function of YgfX-SdhE as a TA system could not be demonstrated
+  in either E. coli or Serratia sp. ATCC 39006. YgfX is predicted to have a short N-terminal cytoplasmic
+  domain followed by two transmembrane helices (TMHs) separated by a short periplasmic loop and finally,
+  a larger C-terminal cytoplasmic domain. The TMHs of YgfX are required for activity, but the sequence
+  of the cytoplasmic 13 N-terminal amino acids is not essential. Furthermore, the amino acids W34 and
+  D117 are not required for localization but are necessary for YgfX multimerization, interaction with
+  SdhE, and YgfX activity. It is proposed that the formation of YgfX multimeric membrane-bound proteins
+  are required to enable the interaction with the cytoplasmic SDH assembly factor SdhE [[cite:PUB00083888]].
+  Another study has demonstrated that sdhEygfX (bicistronic operon) affects pig biosynthesis, directly
+  or indirectly, at the level of transcription of the biosynthetic operon (pigA-O) [[cite:PUB00066693]].
+  It has also been suggested that, in addition to indirect transcriptional activation of pigA-O, YgfX
+  might facilitate the formation of a terminal pig biosynthetic complex consisting of PigB and PigC [[cite:PUB00083888]].

@@ -1,0 +1,25 @@
+id: Pfam:PF15767
+pfam_id: PF15767
+name: Armadillo-like helical domain-containing protein 4
+short_name: ARMH4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15767
+counters:
+  proteins: 638
+  matches: 685
+  proteomes: 507
+  taxa: 1488
+  structures: 0
+  alphafold_models: 565
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031524
+description: This family represents the Armadillo-like helical domain-containing protein 4, whose function
+  is not clear.

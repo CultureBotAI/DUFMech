@@ -1,0 +1,28 @@
+id: Pfam:PF05082
+pfam_id: PF05082
+name: Rop-like
+short_name: Rop-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05082
+counters:
+  proteins: 795
+  matches: 795
+  proteomes: 758
+  taxa: 1429
+  structures: 2
+  alphafold_models: 520
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007774
+description: This family contains several uncharacterised bacterial proteins. These proteins are found
+  in nitrogen fixation operons so are likely to play some role in this process. They consist of two alpha
+  helices which are joined by a four residue linker. The helices form an antiparallel bundle and cross
+  towards their termini. They are likely to form a rod-like dimer [[cite:PUB00052824]]. They have structural
+  similarity to the regulatory protein Rop, [pfam:PF01815].

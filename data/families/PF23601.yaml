@@ -1,0 +1,28 @@
+id: Pfam:PF23601
+pfam_id: PF23601
+name: Cell division protein A, C-terminal domain
+short_name: CdpA_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF23601
+counters:
+  proteins: 261
+  matches: 261
+  proteomes: 260
+  taxa: 407
+  structures: 0
+  alphafold_models: 250
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055564
+description: This entry represents a likely zinc-binding domain found at the C-terminus of a set of archaebacterial
+  proteins, including CdpA (Cell division protein A, HVO_0739) from Haloferax volcanii, a a ring assembly
+  and anchor protein that forms part of an anchor complex linked to FtsZ2 and other cell division proteins.
+  This domain plays a significant role in cell division but its specific function is currently unknown
+  [[cite:PUB00161026]]. AlphaFold prediction show a structure forming 2-3 beta strands.

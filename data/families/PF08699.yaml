@@ -1,0 +1,28 @@
+id: Pfam:PF08699
+pfam_id: PF08699
+name: Argonaute linker 1 domain
+short_name: ArgoL1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08699
+counters:
+  proteins: 21447
+  matches: 21522
+  proteomes: 3107
+  taxa: 8566
+  structures: 74
+  alphafold_models: 18036
+  domain_architectures: 419
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014811
+description: ArgoL1 is a region found in argonaute [[cite:PUB00035384]] proteins. It normally co-occurs
+  with [pfam:PF02179] and [pfam:PF02171]. It is a linker region between the N-terminal and the PAZ domains.
+  It contains an alpha-helix packed against a three-stranded antiparallel beta-sheet with two long beta-strands
+  (beta8 and beta9) of the sheet spanning one face of the adjacent N and PAZ domains. L1 together with
+  linker 2, L2, PAZ and ArgoN forms a compact global fold [[cite:PUB00038652]].

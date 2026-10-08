@@ -1,0 +1,26 @@
+id: Pfam:PF06262
+pfam_id: PF06262
+name: Zincin-like metallopeptidase
+short_name: Zincin_1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06262
+counters:
+  proteins: 9259
+  matches: 9264
+  proteomes: 6080
+  taxa: 7900
+  structures: 2
+  alphafold_models: 5582
+  domain_architectures: 25
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010428
+description: This family of proteins has a conserved HEXXH motif, suggesting they are putative peptidases
+  of zincin fold [[cite:PUB00075429]]. The structure of this family is a minimal version of the metalloprotease
+  fold (PDB:3E11).

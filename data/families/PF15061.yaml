@@ -1,0 +1,36 @@
+id: Pfam:PF15061
+pfam_id: PF15061
+name: MITRAC7/Phoenixin family
+short_name: MITRAC7_Phoenixin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15061
+counters:
+  proteins: 807
+  matches: 807
+  proteomes: 648
+  taxa: 2471
+  structures: 0
+  alphafold_models: 717
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR027917
+description: This entry represents the Small Integral Membrane Protein 20/Phoenixin family, which contains
+  proteins with dual functions. The full-length protein (SMIM20/MITRAC7) is a mitochondrial inner membrane
+  protein that acts as a component of the MITRAC (mitochondrial translation regulation assembly intermediate
+  of cytochrome c oxidase) complex, regulating cytochrome c oxidase assembly. It functions as a chaperone-like
+  assembly factor required to stabilize newly synthesized MT-CO1/COX1 and prevent its premature turnover.
+  The C-terminal region of this protein is also processed to produce bioactive peptides known as phoenixin-14
+  and phoenixin-20, which were first identified through a bioinformatic approach. These secreted peptides
+  are involved in multiple physiological functions. They act as ligands for the G protein-coupled receptor
+  GPR173. Phoenixin peptides regulate gonadotropin-releasing hormone (GnRH) signaling in the hypothalamus
+  and pituitary, augmenting luteinizing hormone release. They delay the appearance of estrus when reduced
+  in vivo and modulate GnRH receptor expression. Additionally, phoenixin peptides regulate vasopressin
+  secretion by hypothalamic neurons and have roles in memory retention, anxiety reduction, food intake
+  regulation, granulosa cell proliferation, heart function, and islet cell proliferation.

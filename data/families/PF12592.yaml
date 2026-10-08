@@ -1,0 +1,27 @@
+id: Pfam:PF12592
+pfam_id: PF12592
+name: ATPase, RavA, C-terminal
+short_name: ATPase_RavA_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12592
+counters:
+  proteins: 746
+  matches: 746
+  proteomes: 714
+  taxa: 999
+  structures: 6
+  alphafold_models: 455
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022547
+description: This domain is found at the C-terminal of bacterial regulatory ATPase RavA (Regulatory ATPase
+  variant A) [[cite:PUB00091615],[cite:PUB00097491]] and is the second subdomain that forms the discontinuous
+  triple helical domain [[cite:PUB00091615]]. RavA forms an hexamer in which the triple helical domain
+  mediates the lateral interactions between neighbouring RavA monomers [[cite:PUB00097491]].

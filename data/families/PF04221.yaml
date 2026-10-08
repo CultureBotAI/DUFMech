@@ -1,0 +1,26 @@
+id: Pfam:PF04221
+pfam_id: PF04221
+name: RelB antitoxin
+short_name: RelB
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04221
+counters:
+  proteins: 5136
+  matches: 5146
+  proteomes: 2954
+  taxa: 5105
+  structures: 6
+  alphafold_models: 3438
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007337
+description: RelE and RelB form a toxin-antitoxin system. RelE represses translation, probably through
+  binding ribosomes ([[cite:PUB00009906]], [[cite:PUB00009907]]). RelB stably binds RelE, presumably deactivating
+  it.

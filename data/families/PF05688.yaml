@@ -1,0 +1,35 @@
+id: Pfam:PF05688
+pfam_id: PF05688
+name: Bacterial Immunoglobulin-like 21
+short_name: BIg21
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05688
+counters:
+  proteins: 128
+  matches: 334
+  proteomes: 72
+  taxa: 122
+  structures: 1
+  alphafold_models: 49
+  domain_architectures: 29
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008542
+description: This entry represents BIg21(Bacterial Immunoglobulin-like 21) found in InvasinE (InvE). Invasins
+  are members of the inverse autotransporter (IAT) family also referred to as type Ve secretion system.
+  In general, they consist of an N-terminal beta-barrel-like domain, which is responsible for attachment
+  of invasin to the outer membrane region of bacteria, repetitive Immunoglobuli-like (Ig) domains, which
+  vary significantly in number among all the invasins, and the C-terminal domain/adhesion domain (AD)
+  [pfam:PF05689], which provides invasins with the specificity to bind to its host target molecules. The
+  overall structure of InvE shows that it comprises of three domain architecture in which the domains
+  BIg20 (Bacterial Immunoglobulin-like 20) and BIg21 adopt two layer beta-sandwich fold resembling eukaryotic
+  members of Immunoglobulin-superfamily (IgSF), while the AD is a globular, alpha/beta-domain. The structure
+  of BIg21 belongs to the I2 set of IgSF with a unique modification in the C-E interstrand loop, important
+  for its interaction with AD. BIg21 and AD form a functional super-domain as well, necessary to target
+  the host receptor [[cite:PUB00101290]].

@@ -1,0 +1,30 @@
+id: Pfam:PF05054
+pfam_id: PF05054
+name: Autographa californica nuclear polyhedrosis virus (AcMNPV) protein
+short_name: AcMNPV_Ac109
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05054
+counters:
+  proteins: 100
+  matches: 157
+  proteomes: 100
+  taxa: 203
+  structures: 6
+  alphafold_models: 92
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007748
+description: This domain family is found in viral proteins such as Ac109 from Autographa californica nuclear
+  polyhedrosis virus (AcMNPV). The gene (Orf1090) is essential and transcribed late in virus assembly,
+  and protein AC109 has been shown to be important for the transport of the budded virion to the host
+  nucleus. In mutants lacking the AC109 gene, virions are unable to enter the nucleus and remain in the
+  cytoplasm. Although addition of AC109 allowed virions to enter the nucleus, the occlusion bodies were
+  empty, indicating that AC109 is also important for the production of infectious budded virus [[cite:PUB00082303]]
+  [[cite:PUB00082304]]. The exact function of this domain family remains unknown.

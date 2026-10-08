@@ -1,0 +1,28 @@
+id: Pfam:PF04461
+pfam_id: PF04461
+name: Nucleotide-binding protein YajQ-like
+short_name: YajQ
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04461
+counters:
+  proteins: 9934
+  matches: 9934
+  proteomes: 9737
+  taxa: 13203
+  structures: 4
+  alphafold_models: 6295
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007551
+description: This family includes Nucleotide-binding protein YajQ and similar sequences mainly found in
+  bacteria. YajQ was characterised as a putative nucleic acid-binding protein based on the similarity
+  of its (ferredoxin-like) three-dimensional topology with that of RNP-like RNA-binding domains. In Pseudomonas
+  syringae, YajQ functions as a host protein involved in the temporal control of bacteriophage Phi6 gene
+  transcription. This protein shows two domains each of which has the same topology [[cite:PUB00036972],[cite:PUB00079423],[cite:PUB00161038],[cite:PUB00079422]].

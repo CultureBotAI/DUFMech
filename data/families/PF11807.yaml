@@ -1,0 +1,27 @@
+id: Pfam:PF11807
+pfam_id: PF11807
+name: Mycotoxin biosynthesis protein UstYa
+short_name: UstYa
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11807
+counters:
+  proteins: 13931
+  matches: 14079
+  proteomes: 1032
+  taxa: 2132
+  structures: 0
+  alphafold_models: 11959
+  domain_architectures: 154
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021765
+description: Oxidase ustYa is involved in the production of ustiloxins, toxic cyclic peptides, in fungi.
+  Ustiloxins were found to be the first example of cyclic peptidyl secondary metabolites that are ribosomally
+  synthesized in filamentous fungi. The homologous genes ustYa and ustYb (which are found in the gene
+  cluster for ustiloxins) have been shown to be involved in cyclization of the peptide.

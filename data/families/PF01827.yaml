@@ -1,0 +1,26 @@
+id: Pfam:PF01827
+pfam_id: PF01827
+name: FTH domain
+short_name: FTH
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01827
+counters:
+  proteins: 2413
+  matches: 2783
+  proteomes: 11
+  taxa: 27
+  structures: 0
+  alphafold_models: 2339
+  domain_architectures: 123
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002900
+description: This presumed domain is likely to be a protein-protein interaction module. It is found in
+  many proteins from C. elegans. The domain is found associated with the F-box [pfam:PF00646]. This domain
+  is named FTH after FOG-2 homology domain [[cite:PUB00101027]].

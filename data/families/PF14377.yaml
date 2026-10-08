@@ -1,0 +1,28 @@
+id: Pfam:PF14377
+pfam_id: PF14377
+name: Ubiquitin binding region
+short_name: UBM
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14377
+counters:
+  proteins: 8833
+  matches: 22640
+  proteomes: 3156
+  taxa: 8298
+  structures: 23
+  alphafold_models: 2922
+  domain_architectures: 363
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025527
+description: This family contains repetitive element (RE) from a subgroup of HECT E3 ubiquitin ligases
+  and the Y-family translesion polymerases, including human HUWE1 and Arabidopsis UPL1. Each of these
+  repetitive elements are approximately 20 amino acids in length and contain two predicted helical segments
+  separated by a Leu-Pro motif. The REs from the Y-family polymerases were shown to bind ubiquitin and
+  were the basis for a novel ubiquitin-binding domain called the ubiquitin-binding motif (UBM) [[cite:PUB00091009]].

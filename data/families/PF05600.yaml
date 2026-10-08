@@ -1,0 +1,29 @@
+id: Pfam:PF05600
+pfam_id: PF05600
+name: CDK5 regulatory subunit-associated protein 3
+short_name: CDK5RAP3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05600
+counters:
+  proteins: 2603
+  matches: 2827
+  proteomes: 1694
+  taxa: 5363
+  structures: 5
+  alphafold_models: 2226
+  domain_architectures: 39
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008491
+description: This family contains several eukaryotic sequences such as CDK5RAP3 (also known as C53 or
+  LZAP) which serves as a probable tumour suppressor. Initially identified as a CDK5R1 interactor controlling
+  cell proliferation [[cite:PUB00086010],[cite:PUB00086014]]. It negatively regulates NF-kappa-B-mediated
+  gene transcription through the control of RELA phosphorylation [[cite:PUB00043152],[cite:PUB00086011]].
+  It also regulates mitotic G2/M transition checkpoint and mitotic G2 DNA damage checkpoint [[cite:PUB00086012],[cite:PUB00086013]].
+  It has been shown to bind Wip1 and stimulates its phosphatase activity [[cite:PUB00086015]].

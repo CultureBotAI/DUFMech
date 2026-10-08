@@ -1,0 +1,30 @@
+id: Pfam:PF11919
+pfam_id: PF11919
+name: Proteasome activator complex subunit 4-like, C-terminal
+short_name: PSME4_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11919
+counters:
+  proteins: 4775
+  matches: 4782
+  proteomes: 3014
+  taxa: 7986
+  structures: 9
+  alphafold_models: 412
+  domain_architectures: 74
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021843
+description: This domain is found at the C-terminal end of human Proteasome activator complex subunit
+  4 (PSME4) and similar sequences from eukaryotes. PSME4 is an associated component of the proteasome
+  that specifically recognises acetylated histones and promotes ATP- and ubiquitin -independent degradation
+  of core histones during spermatogenesis and DNA damage response. This protein adopts a dome-like structure
+  composed of HEAT repeat-like modules and a C-terminal domain that contains a hydrophobic -tyrosine-other
+  motif (this entry). This domain, which adopts an all-alpha structure, is responsible for the interaction
+  with the alpha-ring surface of the 20S [[cite:PUB00155659]].

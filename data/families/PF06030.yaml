@@ -1,0 +1,32 @@
+id: Pfam:PF06030
+pfam_id: PF06030
+name: WxL Interacting Protein, peptidoglycan binding domain
+short_name: WxLIP_PGBD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06030
+counters:
+  proteins: 2046
+  matches: 2047
+  proteomes: 599
+  taxa: 1011
+  structures: 2
+  alphafold_models: 1299
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010317
+description: 'This domain (previously known as DUF916) is found in WxL interacting proteins (WxLIP) which
+  play a role in virulence and are widely distributed in firmicutes. The WxL proteins usually occur within
+  a gene cluster that contains two WxL proteins and a WxL interacting protein composed of three domains:
+  peptidoglycan binding domain (PGBD), host binding domain (HBD), and transmembrane helix (TMH). The domain
+  represented by this entry is involved in binding to peptidoglycan and to WxL, and anchoring the protein
+  cluster onto the bacterial surface. This PGBD domain is frequently found in combination with HBD domain
+  ([pfam:PF11797]) and both were shown to function synergistically as a single unit that binds to the
+  peptidoglycan and interacts with the eukaryotic host [[cite:PUB00154331]]. The PGBD domain is predicted
+  to adopt a beta-sandwich with an Ig-like topology.'

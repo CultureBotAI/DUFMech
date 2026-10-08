@@ -1,0 +1,28 @@
+id: Pfam:PF07366
+pfam_id: PF07366
+name: SnoaL-like polyketide cyclase
+short_name: SnoaL
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07366
+counters:
+  proteins: 14779
+  matches: 15446
+  proteomes: 7283
+  taxa: 11082
+  structures: 19
+  alphafold_models: 9298
+  domain_architectures: 124
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009959
+description: This family includes SnoaL [[cite:PUB00021066]] a polyketide cyclase involved in nogalamycin
+  biosynthesis. This family was formerly known as DUF1486. The proteins in this family adopt a distorted
+  alpha-beta barrel fold [[cite:PUB00021066]]. Structural data together with site-directed mutagenesis
+  experiments have shown that SnoaL has a different mechanism to that of the classical aldolase for catalysing
+  intramolecular aldol condensation [[cite:PUB00021066]].

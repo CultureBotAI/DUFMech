@@ -1,0 +1,28 @@
+id: Pfam:PF08512
+pfam_id: PF08512
+name: Histone chaperone Rttp106-like, middle domain
+short_name: Rttp106-like_middle
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08512
+counters:
+  proteins: 10226
+  matches: 10251
+  proteomes: 3420
+  taxa: 9039
+  structures: 36
+  alphafold_models: 8633
+  domain_architectures: 244
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013719
+description: This Pleckstrin homology (PH) domain is found in the middle region of Rttp106, a histone
+  chaperone involved in heterochromatin-mediated silencing [[cite:PUB00033392]]. It is also found in the
+  final part of the middle domain of various FACT (facilitates chromatin transactions) complex subunits,
+  such as Spt16 and either Pob3 (yeast) or the related SSRP1 (higher eukaryotes). This domain plays a
+  role in DNA binding [[cite:PUB00101033],[cite:PUB00101035],[cite:PUB00101032]].

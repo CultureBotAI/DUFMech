@@ -1,0 +1,25 @@
+id: Pfam:PF20834
+pfam_id: PF20834
+name: Dot/Icm T4SS effector Lem25 domain
+short_name: Lem25
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20834
+counters:
+  proteins: 4
+  matches: 11
+  proteomes: 4
+  taxa: 16
+  structures: 1
+  alphafold_models: 4
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049292
+description: This domain is found in Dot/Icm T4SS effector Lem25 from Legionella pneumophila. It adopts
+  an helical bundle fold. Its function is unknown.

@@ -1,0 +1,27 @@
+id: Pfam:PF04188
+pfam_id: PF04188
+name: Mannosyltransferase (PIG-V)
+short_name: Mannosyl_trans2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04188
+counters:
+  proteins: 5112
+  matches: 5488
+  proteomes: 4116
+  taxa: 9984
+  structures: 0
+  alphafold_models: 3994
+  domain_architectures: 67
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007315
+description: This is a family of eukaryotic ER membrane proteins that are involved in the synthesis of
+  glycosylphosphatidylinositol (GPI), a glycolipid that anchors many proteins to the eukaryotic cell surface.
+  Proteins in this family are involved in transferring the second mannose in the biosynthetic pathway
+  of GPI [[cite:PUB00019834]] [[cite:PUB00019835]].

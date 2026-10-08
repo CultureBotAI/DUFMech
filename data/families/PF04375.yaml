@@ -1,0 +1,28 @@
+id: Pfam:PF04375
+pfam_id: PF04375
+name: HemX, putative uroporphyrinogen-III C-methyltransferase
+short_name: HemX
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04375
+counters:
+  proteins: 3821
+  matches: 3875
+  proteomes: 3792
+  taxa: 5052
+  structures: 0
+  alphafold_models: 2341
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007470
+description: This is a family of bacterial putative uroporphyrinogen-III C-methyltransferase proteins.
+  It forms one of the members of a complex of proteins involved in the biogenesis of the inner membrane
+  in E.coli. Uroporphorphyrin-III C-methyltransferase (HemX) is a single spanning inner membrane protein
+  that regulates the activity of NAD(P)H:glutamyl-tRNA reductase (HemA) in the tetrapyrrole biosynthesis
+  pathway [[cite:PUB00009969],[cite:PUB00054976]].

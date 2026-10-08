@@ -1,0 +1,25 @@
+id: Pfam:PF06296
+pfam_id: PF06296
+name: RelE toxin of RelE / RelB toxin-antitoxin system
+short_name: RelE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06296
+counters:
+  proteins: 2447
+  matches: 2447
+  proteomes: 1915
+  taxa: 3533
+  structures: 6
+  alphafold_models: 1581
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009387
+description: RelE is a family of Gram-negative bacterial antitoxins of the RelE/RelB toxin-antitoxin system.
+  Its cognate antitoxin is family RelB, [pfam:PF04221].

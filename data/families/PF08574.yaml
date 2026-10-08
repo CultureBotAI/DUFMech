@@ -1,0 +1,26 @@
+id: Pfam:PF08574
+pfam_id: PF08574
+name: Transcription factor Iwr1
+short_name: Iwr1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08574
+counters:
+  proteins: 3272
+  matches: 3273
+  proteomes: 2883
+  taxa: 7650
+  structures: 0
+  alphafold_models: 2793
+  domain_architectures: 40
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013883
+description: Iwr1 is involved in transcription from polymerase II promoters; it interacts with with most
+  of the polymerase II subunits [[cite:PUB00054162]]. Deletion of this protein results in hypersensitivity
+  to the K1 killer toxin [[cite:PUB00033286]].

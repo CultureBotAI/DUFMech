@@ -1,0 +1,28 @@
+id: Pfam:PF08845
+pfam_id: PF08845
+name: Toxin SymE, type I toxin-antitoxin system
+short_name: SymE_toxin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08845
+counters:
+  proteins: 2175
+  matches: 2175
+  proteomes: 892
+  taxa: 1422
+  structures: 0
+  alphafold_models: 1246
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR014944
+description: SymE (SOS-induced yjiW gene with similarity to MazE ) is an SOS-induced toxin. It inhibits
+  cell growth, decreases protein synthesis and increases RNA degradation. It may play a role in the recycling
+  of RNAs damaged under SOS response-inducing conditions. It is predicted to have an AbrB fold, similar
+  to that of the antitoxin MazE. Its translation is repressed by the antisense RNA SymR, which acts as
+  an antitoxin [[cite:PUB00064452],[cite:PUB00053151]].

@@ -1,0 +1,30 @@
+id: Pfam:PF14113
+pfam_id: PF14113
+name: Type VI secretion system (T6SS), amidase effector protein 4
+short_name: Tae4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF14113
+counters:
+  proteins: 965
+  matches: 969
+  proteomes: 728
+  taxa: 1386
+  structures: 10
+  alphafold_models: 549
+  domain_architectures: 23
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025562
+description: Tae4 is a new form of toxin-antitoxin system protein for a type VI secretion system, T6SS.
+  T6SS has roles in interspecies interactions, as well as higher order host-infection, by injecting effector
+  proteins into the periplasmic compartment of the recipient cells of closely related species. Pseudomonas
+  aeruginosa produces at least three effector proteins to other cells and thus has three specific cognate
+  immunity proteins to protect itself. Tae4, or type VI amidase effector 4, in Enterobacter cloacae has
+  a cognate Tai4 or type VI amidase immunity 4 protein [[cite:PUB00075621]]. The immunity protein is Tai4,
+  [pfam:PF16695].

@@ -1,0 +1,29 @@
+id: Pfam:PF11615
+pfam_id: PF11615
+name: CCR4-associated factor 4
+short_name: Caf4
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11615
+counters:
+  proteins: 17
+  matches: 17
+  proteomes: 15
+  taxa: 51
+  structures: 1
+  alphafold_models: 14
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021653
+description: Caf4 is a WD40 repeats containing protein involved in mitochondrial fission. It displays
+  physical interactions with CCR4-NOT complex [[cite:PUB00053527]]. It has a paralogue, Mdv1. Both Caf4
+  and Mdv1 act as adapter proteins, binding to Fis1 on the mitochondrial outer membrane and recruiting
+  the dynamin-like GTPase Dnm1 to form mitochondrial fission complexes [[cite:PUB00053320]]. However,
+  Fis1 and Caf4, but not Mdv1, determine the polar localization of Dnm1 clusters on the mitochondrial
+  surface [[cite:PUB00074937]].

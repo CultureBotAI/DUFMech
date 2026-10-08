@@ -1,0 +1,26 @@
+id: Pfam:PF01549
+pfam_id: PF01549
+name: ShK domain-like
+short_name: ShK
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01549
+counters:
+  proteins: 12913
+  matches: 26330
+  proteomes: 1018
+  taxa: 3324
+  structures: 10
+  alphafold_models: 11217
+  domain_architectures: 1059
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003582
+description: This domain of is found in several C. elegans proteins. The domain is 30 amino acids long
+  and rich in cysteine residues. There are 6 conserved cysteine positions in the domain that form three
+  disulphide bridges. The domain is found in the potassium channel inhibitor ShK in sea anemone [[cite:PUB00030746]][[cite:PUB00033687]].

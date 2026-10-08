@@ -1,0 +1,31 @@
+id: Pfam:PF04641
+pfam_id: PF04641
+name: Rtf2 RING-finger
+short_name: Rtf2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04641
+counters:
+  proteins: 5475
+  matches: 5538
+  proteomes: 3338
+  taxa: 8851
+  structures: 0
+  alphafold_models: 4684
+  domain_architectures: 92
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+description: It is vital for effective cell-replication that replication is not stalled at any point by,
+  for instance, damaged bases. Replication termination factor 2 (Rtf2) stabilizes the replication fork
+  stalled at the site-specific replication barrier RTS1 by preventing replication restart until completion
+  of DNA synthesis by a converging replication fork initiated at a flanking origin. The RTS1 element terminates
+  replication forks that are moving in the cen2-distal direction while allowing forks moving in the cen2-proximal
+  direction to pass through the region. Rtf2 contains a C2HC2 motif related to the C3HC4 RING-finger motif,
+  and would appear to fold up, creating a RING finger-like structure but forming only one functional Zn2+
+  ion-binding site [[cite:PUB00066779]]. This domain is also found at the N-terminus of peptidyl-prolyl
+  cis-trans isomerase 4, a divergent cyclophilin family [[cite:PUB00062056]].

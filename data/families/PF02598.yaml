@@ -1,0 +1,26 @@
+id: Pfam:PF02598
+pfam_id: PF02598
+name: Putative RNA methyltransferase
+short_name: Methyltrn_RNA_3
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02598
+counters:
+  proteins: 3935
+  matches: 4061
+  proteomes: 3194
+  taxa: 8305
+  structures: 5
+  alphafold_models: 3423
+  domain_architectures: 71
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR003750
+description: This family has a TIM barrel-like fold with a deep C-terminal trefoil knot. The arrangement
+  of its hydrophilic and hydrophobic surfaces are opposite to that of the classic TIM barrel proteins.
+  It is likely to bind RNA [[cite:PUB00021971]], and may function as a methyltransferase [[cite:PUB00044735],[cite:PUB00057459]].

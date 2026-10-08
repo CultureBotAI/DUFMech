@@ -1,0 +1,28 @@
+id: Pfam:PF15771
+pfam_id: PF15771
+name: Interactor of HORMAD1 protein 1
+short_name: IHO1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15771
+counters:
+  proteins: 713
+  matches: 748
+  proteomes: 630
+  taxa: 1947
+  structures: 0
+  alphafold_models: 652
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031529
+description: Interactor of HORMAD1 protein 1 (IHO1, previously known as coiled-coil domain-containing
+  protein 36 or DUF4700) is required for DNA double-strand breaks (DSBs) formation in unsynapsed regions
+  during meiotic recombination. It is thought to function, in collaboration with SPO11-auxiliary proteins
+  MEI4 and REC114, through the formation of DSB-promoting recombinosomes on chromatin at the onset of
+  meiosis [[cite:PUB00083216]].

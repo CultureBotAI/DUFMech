@@ -1,0 +1,27 @@
+id: Pfam:PF18099
+pfam_id: PF18099
+name: Carbohydrate binding module (family 35)
+short_name: CBM_35_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18099
+counters:
+  proteins: 443
+  matches: 475
+  proteomes: 385
+  taxa: 791
+  structures: 0
+  alphafold_models: 248
+  domain_architectures: 149
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR041342
+description: This is a delta4,5-anhydrogalacturonic acid-specific carbohydrate-binding module family 35,
+  which is found in several prokaryotic proteins. Its crystal structure shows a jelly roll/beta-sandwich
+  fold with 2 antiparallel sheets made of 4 and 5 antiparallel beta-strands [[cite:PUB00054441]]. It is
+  also found at the end of a family of putative glycosyl hydrolases.

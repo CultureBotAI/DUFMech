@@ -1,0 +1,25 @@
+id: Pfam:PF13554
+pfam_id: PF13554
+name: Phage tail terminator protein
+short_name: Phage_tail_terminator_5
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13554
+counters:
+  proteins: 903
+  matches: 903
+  proteomes: 859
+  taxa: 1765
+  structures: 4
+  alphafold_models: 288
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025395
+description: The three-dimensional structure of NP_888769.1, PDB:2L25, reveals a tail terminator protein
+  gpU fold, which suggests that the protein could have a bacteriophage origin.

@@ -1,0 +1,30 @@
+id: Pfam:PF11870
+pfam_id: PF11870
+name: Lactate utilisation protein B, C-terminal
+short_name: LutB_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11870
+counters:
+  proteins: 5783
+  matches: 5783
+  proteomes: 5267
+  taxa: 7254
+  structures: 0
+  alphafold_models: 3480
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR024569
+description: This domain is functionally uncharacterised. This domain is found at the C-terminal of a
+  family of 4Fe-4S, iron-sulphur cluster binding proteins, including Lactate utilisation protein B (LutB).
+  These proteins have a perfect 4Fe-4S binding motif C-x(2)-C-x(2)-C-x(3)-CP followed by either a perfect
+  or imperfect (the first Cys replaced by Ser) second copy. Members probably bind two 4Fe-4S iron-sulphur
+  clusters. This domain is found in LutB proteins in association with the LUD domain ([pfam:PF02589])
+  and usually Fer4_8 ([pfam:PF13183]). The LutABC operon is involved in lactate-utilisation and is essential
+  [[cite:PUB00076952],[cite:PUB00053899]].

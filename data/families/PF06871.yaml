@@ -1,0 +1,26 @@
+id: Pfam:PF06871
+pfam_id: PF06871
+name: TraH_2
+short_name: TraH_2
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06871
+counters:
+  proteins: 251
+  matches: 251
+  proteomes: 168
+  taxa: 265
+  structures: 0
+  alphafold_models: 162
+  domain_architectures: 2
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010680
+description: This family consists of several TraH proteins which seem to be specific to Agrobacterium
+  and Rhizobium species. This protein is thought to be involved in conjugal transfer but its function
+  is unknown. This family does not appear to be related to [pfam:PF06122].

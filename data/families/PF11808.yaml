@@ -1,0 +1,28 @@
+id: Pfam:PF11808
+pfam_id: PF11808
+name: Phosphate regulon sensor protein PhoR
+short_name: PhoR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11808
+counters:
+  proteins: 3648
+  matches: 3648
+  proteomes: 3614
+  taxa: 4812
+  structures: 0
+  alphafold_models: 2271
+  domain_architectures: 13
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021766
+description: This family is only found in bacteria. Family members include PhoR. A member of the two-component
+  regulatory system PhoR/PhoB involved in the phosphate regulon genes expression. PhoR is the bifunctional
+  histidine autokinase/phospho-PhoB phosphatase that donates a phosphoryl group to PhoB when environmental
+  Pi is limiting and removes the phosphoryl group from phosphorylated PhoB (PhoB-P) when environmental
+  Pi is abundant [[cite:PUB00076908]].

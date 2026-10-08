@@ -1,0 +1,32 @@
+id: Pfam:PF08213
+pfam_id: PF08213
+name: Mitochondrial mRNA-processing protein COX24, C-terminal
+short_name: COX24_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08213
+counters:
+  proteins: 5909
+  matches: 5909
+  proteomes: 5491
+  taxa: 10507
+  structures: 142
+  alphafold_models: 4194
+  domain_architectures: 38
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR013177
+description: This domain of unknown function is found at the C terminal end of Mitochondrial small ribosomal
+  subunit protein mS38, also known as Mitochondrial mRNA-processing protein COX24 in yeast which is involved
+  in the splicing of the COX1 mRNA [[cite:PUB00076420]]. COX24 is a component of the mitochondrial ribosome
+  (mitoribosome), responsible for the synthesis of mitochondrial genome-encoded proteins, including at
+  least some of the essential transmembrane subunits of the mitochondrial respiratory chain. The mitoribosomes
+  are attached to the mitochondrial inner membrane and translation products are cotranslationally integrated
+  into the membrane [[cite:PUB00089004],[cite:PUB00098057]]. This domain is also found in COX24 mammalian
+  homologue Aurora kinase A-interacting protein [[cite:PUB00078824]]. This entry also includes uncharacterised
+  proteins from bacteria.

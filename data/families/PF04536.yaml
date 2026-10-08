@@ -1,0 +1,27 @@
+id: Pfam:PF04536
+pfam_id: PF04536
+name: TPM domain
+short_name: TPM_phosphatase
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04536
+counters:
+  proteins: 17406
+  matches: 17474
+  proteomes: 9807
+  taxa: 14697
+  structures: 12
+  alphafold_models: 11136
+  domain_architectures: 53
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007621
+description: 'This family was first named TPM domain after its founding proteins: TLP18.3, Psb32 and MOLO-1.
+  In Arabidopsis, this domain is called the thylakoid acid phosphatase -TAP - domain and has a Rossmann-like
+  fold [[cite:PUB00056969]]. In plants, the family resides in the thylakoid lumen attached to the outer
+  membrane of the chloroplast/plastid. It is active in the photosystem II [[cite:PUB00057495],[cite:PUB00078747]].'

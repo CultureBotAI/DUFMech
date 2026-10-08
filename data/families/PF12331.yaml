@@ -1,0 +1,27 @@
+id: Pfam:PF12331
+pfam_id: PF12331
+name: Rad26-like, helical repeats
+short_name: Rad26-like_helical_rpts
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12331
+counters:
+  proteins: 886
+  matches: 896
+  proteomes: 870
+  taxa: 1710
+  structures: 1
+  alphafold_models: 727
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR022093
+description: This domain is found in Rad26 from Myceliophthora thermophila ([swissprot:G2QDY6]) and similar
+  fungal proteins. Rad26 is a functional subunit of the Rad3-Rad26 complex that is responsible for bringing
+  the kinase to sites of DNA damage. The central region of Rad26 is formed by five helical repeats forming
+  an alpha-solenoid arrangement [[cite:PUB00100970]].

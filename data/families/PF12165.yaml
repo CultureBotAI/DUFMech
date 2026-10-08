@@ -1,0 +1,26 @@
+id: Pfam:PF12165
+pfam_id: PF12165
+name: Alfin
+short_name: Alfin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12165
+counters:
+  proteins: 5069
+  matches: 5186
+  proteomes: 432
+  taxa: 1220
+  structures: 5
+  alphafold_models: 4174
+  domain_architectures: 107
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021998
+description: The Alfin family includes PHD finger protein Alfin1 and Alfin1-like proteins. Alfin1 is a
+  histone-binding component that specifically recognises H3 tails trimethylated on 'Lys-4' (H3K4me3),
+  which marks transcription start sites of virtually all active genes [[cite:PUB00066381],[cite:PUB00066382]].

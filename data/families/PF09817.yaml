@@ -1,0 +1,26 @@
+id: Pfam:PF09817
+pfam_id: PF09817
+name: RZZ complex, subunit zwilch
+short_name: Zwilch
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09817
+counters:
+  proteins: 1533
+  matches: 1618
+  proteomes: 1131
+  taxa: 3705
+  structures: 2
+  alphafold_models: 1347
+  domain_architectures: 30
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018630
+description: The protein Zwilch is an essential component of the mitotic checkpoint, which prevents cells
+  from prematurely exiting mitosis. It is required for the assembly of the dynein-dynactin, Mad2 complexes
+  and spindly/CG15415 onto kinetochores [[cite:PUB00054075],[cite:PUB00054076],[cite:PUB00044111]].

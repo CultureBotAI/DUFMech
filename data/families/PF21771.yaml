@@ -1,0 +1,28 @@
+id: Pfam:PF21771
+pfam_id: PF21771
+name: CFAP58 central coiled coil
+short_name: CFAP58_CC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21771
+counters:
+  proteins: 1966
+  matches: 1999
+  proteomes: 1289
+  taxa: 4183
+  structures: 5
+  alphafold_models: 1726
+  domain_architectures: 41
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR049270
+description: This domain is found in Cilia- and flagella-associated protein 58 (CFAP58) and related eukaryotic
+  proteins. The human CFAP58 protein has an essential role in the assembly and organisation of the sperm
+  flagellar axoneme [[cite:PUB00151877]]. This domain forms a parallel coiled coil that in the C. reinhardtii
+  axonemal structure lays on the doublet microtubule surface and interacts with the N terminus of the
+  MIA coiled coil [[cite:PUB00152767]].

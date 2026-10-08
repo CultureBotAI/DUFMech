@@ -1,0 +1,36 @@
+id: Pfam:PF05689
+pfam_id: PF05689
+name: Adhesion domain
+short_name: InvE_AD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05689
+counters:
+  proteins: 199
+  matches: 412
+  proteomes: 130
+  taxa: 225
+  structures: 1
+  alphafold_models: 86
+  domain_architectures: 51
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008541
+description: This entry represents the Adhesion domain found in InvasinE (invE). Invasins are members
+  of the inverse autotransporter (IAT) family also referred to as type Ve secretion system. In general,
+  they consist of an N-terminal beta-barrel-like domain, which is responsible for attachment of invasin
+  to the outer membrane region of bacteria, repetitive Immunoglobulin-like (Ig) domains, which vary significantly
+  in number among all the invasins, and the C-terminal domain/adhesion domain (AD), which provides invasins
+  with the specificity to bind to its host target molecules. InvE-AD adopts a C-type lectin-like domain
+  (CTLD)fold with unique modifications. The core structure of the adhesion domain (AD) is made up of a
+  globular alpha/beta fold and can be divided into three sub-sections. The first is a lasso-shaped loop
+  structure termed the "adaptor ring" since it forms a ring-shaped platform that connects BIg21 [pfam:PF05688]
+  with the two residual sub-sections in the AD. These two residual subsections are the "C-type lectin-like
+  domain" and the "wedge module". InvE-CTLD lacks the ability to coordinate Ca2+, and motifs such as EPN,
+  QPD, and WND that are responsible for the specificity of carbohydrate recognition are also absent, giving
+  rise to the notion that the InvE-CTLD is not a carbohydrate binding domain [[cite:PUB00101290]].

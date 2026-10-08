@@ -1,0 +1,30 @@
+id: Pfam:PF07510
+pfam_id: PF07510
+name: GmrSD restriction endonucleases, C-terminal domain
+short_name: GmrSD_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07510
+counters:
+  proteins: 13168
+  matches: 13171
+  proteomes: 7699
+  taxa: 11960
+  structures: 7
+  alphafold_models: 7977
+  domain_architectures: 95
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011089
+description: This entry (previously known as DUF1524) represents a domain found C-terminal in the GmrSD
+  family of modification-dependent restriction endonucleases including SspE proteins [[cite:PUB00155638]].
+  SspE is a dual-function protein that exerts both N-terminal NTPase and C-terminal DNA nicking nuclease
+  activities to defend against phage infection [[cite:PUB00155272]]. SspE has a phosphorothioate (PT)
+  modification-binding preference and utilises epigenetic PT modification to accomplish self-nonself discrimination
+  and to coordinate its NTPase and DNA nicking activities to fight against phages. The domain represented
+  in this entry has a DNA nicking nuclease activity and belongs to HNH nuclease superfamily.

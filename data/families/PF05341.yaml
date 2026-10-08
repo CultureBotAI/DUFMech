@@ -1,0 +1,31 @@
+id: Pfam:PF05341
+pfam_id: PF05341
+name: Per os infectivity factor 6
+short_name: PIF6
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05341
+counters:
+  proteins: 103
+  matches: 103
+  proteomes: 100
+  taxa: 204
+  structures: 0
+  alphafold_models: 92
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008005
+description: Family members include Autographa californica nuclear polyhedrosis virus (AcMNPV) Orf68 (also
+  known as per os infectivity factor 6, PIF6 or ac68). PIF6 is present in both the budded virus (BV) and
+  the occluded-derived virus (ODV). The ac68 gene overlaps the lef3 gene which encodes the single-stranded
+  DNA binding protein, and knockout experiments of ac68 have to ensure that a functional lef3 gene is
+  present. In ac68KO experiments, viral DNA replication and BV levels were unaffected as were mortality
+  rates if caterpillars were injected with BV directly into the hemolymph bypassing the gut. However,
+  in oral bioassays the ac68KO occlusion bodies failed to kill larvae, indicating that PIF6 is a per os
+  infectivity factor [[cite:PUB00082605]].

@@ -1,0 +1,30 @@
+id: Pfam:PF11307
+pfam_id: PF11307
+name: Rv0495c-like
+short_name: Rv0495c
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11307
+counters:
+  proteins: 4347
+  matches: 4353
+  proteomes: 4310
+  taxa: 5507
+  structures: 0
+  alphafold_models: 2666
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021458
+description: This entry, previously known as DUF3109, represents a bacterial family of probable redox
+  regulatory proteins. A member of this family, Rv0495c, from Mycobacterium tuberculosis is essential
+  for maintaining intracellular redox homeostasis [[cite:PUB00161582]]. Deletion of the Rv0495c gene (delta
+  Rv0495c) results in increased levels of reactive oxygen species and a higher NAD+/NADH ratio, leading
+  to a highly oxidised intracellular state [[cite:PUB00161582]]. Despite showing a growth defect in macrophages,
+  the absence of Rv0495c increases M. tuberculosis pathogenicity in vivo, enhancing the bacterium's ability
+  to proliferate inside the host.

@@ -1,0 +1,28 @@
+id: Pfam:PF24517
+pfam_id: PF24517
+name: Carbohydrate-binding module family 96
+short_name: CBM96
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF24517
+counters:
+  proteins: 4201
+  matches: 4769
+  proteomes: 2332
+  taxa: 3943
+  structures: 2
+  alphafold_models: 2117
+  domain_architectures: 1047
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR055372
+description: This entry represents a CBM domain, a member of CBM96 family, found in functionally diverse
+  multi-domain proteins including tRNA nuclease WapA, alginate lyase from Defluviitalea phaphyphila and
+  chondroitinase from Dysgonomonas sp. The CBM96 domain from the latter proteins, has been structurally
+  characterised. It fold into a beta-sandwich with significant structural similarity to nucleoplasmin
+  (PDB:8WAB, PDB:7VBO) [[cite:PUB00159883]].

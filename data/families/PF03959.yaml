@@ -1,0 +1,24 @@
+id: Pfam:PF03959
+pfam_id: PF03959
+name: Serine hydrolase (FSH1)
+short_name: FSH1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03959
+counters:
+  proteins: 12327
+  matches: 12619
+  proteomes: 3521
+  taxa: 9325
+  structures: 1
+  alphafold_models: 10109
+  domain_architectures: 361
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR005645
+description: This is a family of serine hydrolases [[cite:PUB00021049]].

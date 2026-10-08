@@ -1,0 +1,28 @@
+id: Pfam:PF07332
+pfam_id: PF07332
+name: Putative Actinobacterial Holin-X, holin superfamily III
+short_name: Phage_holin_3_6
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07332
+counters:
+  proteins: 12683
+  matches: 12685
+  proteomes: 8591
+  taxa: 11222
+  structures: 0
+  alphafold_models: 7594
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009937
+description: Phage_holin_3_6 is a family of small hydrophobic proteins with two or three transmembrane
+  domains of the Hol-X family. Holin proteins are produced by double-stranded DNA bacteriophages that
+  use an endolysin-holin strategy to achieve lysis of their hosts. The endolysins are peptidoglycan-degrading
+  enzymes that are usually accumulated in the cytosol until access to the cell wall substrate is provided
+  by the holin membrane lesion.

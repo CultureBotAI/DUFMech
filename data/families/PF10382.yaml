@@ -1,0 +1,30 @@
+id: Pfam:PF10382
+pfam_id: PF10382
+name: DNA helicase ZGRF1-like, N-terminal domain
+short_name: ZGRF1-like_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10382
+counters:
+  proteins: 2701
+  matches: 3579
+  proteomes: 2096
+  taxa: 5362
+  structures: 0
+  alphafold_models: 1903
+  domain_architectures: 60
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018838
+description: This domain can be found in human 5'-3' DNA helicase ZGRF1 and similar eukaryotic proteins.
+  ZGRF1 promotes repair of replication -blocking DNA lesions through stimulation of homologous recombination
+  (HR) [[cite:PUB00098331],[cite:PUB00153163]]. This domain can also be found in Mte1 (Mph1-associated
+  telomere maintenance protein 1) from Saccharomyces cerevisiae, which is involved in telomere maintenance
+  [[cite:PUB00044234]] and in and fission yeast Dbl2, involved in meiotic chromosome segregation. However,
+  there is no evidence to suggest that this domain, which is predicted to adopt an all-beta structure,
+  is implicated in DNA damage resistance or nuclear focus formation [[cite:PUB00044235],[cite:PUB00089971],[cite:PUB00101196],[cite:PUB00101195]].

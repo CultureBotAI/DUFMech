@@ -1,0 +1,28 @@
+id: Pfam:PF11839
+pfam_id: PF11839
+name: Alanine-zipper, major outer membrane lipoprotein
+short_name: Alanine_zipper
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11839
+counters:
+  proteins: 1196
+  matches: 1208
+  proteomes: 1070
+  taxa: 2055
+  structures: 0
+  alphafold_models: 790
+  domain_architectures: 56
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021793
+description: This is a family of a major outer membrane lipoprotein, OprL that is an alanine-zipper. Zipper
+  motifs are a seven-repeat motif where the first and fourth positions are occupied by an aliphatic residue,
+  usually a leucine. These residues are positioned on the outside of the coil such as to bind firmly to
+  one or more monomers of the protein to create a triple or five-helical coiled-coil that probably forms
+  a seam in a membrane.

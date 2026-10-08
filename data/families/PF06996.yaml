@@ -1,0 +1,27 @@
+id: Pfam:PF06996
+pfam_id: PF06996
+name: Type VI secretion, TssG
+short_name: T6SS_TssG
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06996
+counters:
+  proteins: 5045
+  matches: 5058
+  proteomes: 3407
+  taxa: 4857
+  structures: 4
+  alphafold_models: 3019
+  domain_architectures: 10
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010732
+description: This is a family of Gram-negative bacterial proteins that form part of the type VI pathogenicity
+  secretion system (T6SS), including TssG. TssG is homologues to phage tail proteins and is required for
+  proper assembly of the Hcp tube in bacteria [[cite:PUB00077772]].One other member in this family, SciB
+  (Q93IT4) from Salmonella enterica, is thought to be involved in virulence [[cite:PUB00011185]].

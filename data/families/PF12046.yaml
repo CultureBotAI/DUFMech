@@ -1,0 +1,26 @@
+id: Pfam:PF12046
+pfam_id: PF12046
+name: Cofactor assembly of complex C subunit B
+short_name: CCB1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12046
+counters:
+  proteins: 830
+  matches: 833
+  proteomes: 699
+  taxa: 1959
+  structures: 0
+  alphafold_models: 634
+  domain_architectures: 16
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021919
+description: Cofactor maturation pathways such as the CCB system (system IV) for cytochrome c-heme attachment
+  are conserved in all organisms performing oxygenic photosynthesis [[cite:PUB00075312]]. The CCB system
+  consists of four protein, CCB1-4. The four CCBs are well conserved between green algae and plants [[cite:PUB00075315]].

@@ -1,0 +1,32 @@
+id: Pfam:PF07100
+pfam_id: PF07100
+name: Anabaena sensory rhodopsin transducer
+short_name: ASRT
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07100
+counters:
+  proteins: 831
+  matches: 833
+  proteomes: 700
+  taxa: 1314
+  structures: 5
+  alphafold_models: 520
+  domain_architectures: 3
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009794
+description: 'The family of bacterial Anabaena sensory rhodopsin transducers are likely to bind sugars
+  or related metabolites. The entire protein is comprised of a single globular domain with an eight-stranded
+  beta-sandwich fold. There are a few characteristics which define this beta-sandwich fold as being distinct
+  from other so-named folds, and these are: 1) a well conserved tryptophan, usually following a polar
+  residue, present at the start of the first strand; this tryptophan appears to be central to a hydrophobic
+  interaction required to hold the two beta-sheets of the sandwich together, and 2) a nearly absolutely
+  conserved asparagine located at the end of the second beta-strand, that hydrogen bonds with the backbone
+  carbonyls of the residues 2 and 4 positions downstream from it, thereby stabilising the characteristic
+  tight turn between strands 2 and 3 of the structure.'

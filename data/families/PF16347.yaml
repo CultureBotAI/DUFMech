@@ -1,0 +1,28 @@
+id: Pfam:PF16347
+pfam_id: PF16347
+name: N-sulphoglucosamine sulphohydrolase, C-terminal
+short_name: SGSH_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16347
+counters:
+  proteins: 3391
+  matches: 3396
+  proteomes: 1958
+  taxa: 4533
+  structures: 11
+  alphafold_models: 2414
+  domain_architectures: 46
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032506
+description: This domain is found at the C-terminal end of sulfatases and alkaline phosphatases from bacteria,
+  eukaryotes and archaea, including N-sulphoglucosamine sulphohydrolase from humans (SGSH) and Bifunctional
+  sulfatase/alpha-L-rhamnosidase from Formosa agariphila (P36_S1_25). It shows a four-stranded antiparallel
+  beta-sheet, with four surrounding alpha-helices, followed by a C-terminal extension consisting of a
+  small two-stranded antiparallel beta-sheet [[cite:PUB00093668],[cite:PUB00100986]].

@@ -1,0 +1,27 @@
+id: Pfam:PF09100
+pfam_id: PF09100
+name: Quinohemoprotein amine dehydrogenase, alpha subunit domain IV
+short_name: Qn_am_d_aIV
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09100
+counters:
+  proteins: 357
+  matches: 357
+  proteomes: 321
+  taxa: 524
+  structures: 4
+  alphafold_models: 213
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015184
+description: Members of this family, which are predominantly found in the prokaryotic protein quinohemoprotein
+  amine dehydrogenase, adopt an immunoglobulin-like beta-sandwich fold, with seven strands arranged into
+  two beta sheets; the fold is possibly related to the immunoglobulin and/or fibronectin type III superfamilies.
+  The precise function of this domain has not, as yet, been defined [[cite:PUB00022422],[cite:PUB00013277]].

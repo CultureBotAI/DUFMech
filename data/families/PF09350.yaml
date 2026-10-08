@@ -1,0 +1,27 @@
+id: Pfam:PF09350
+pfam_id: PF09350
+name: DnaJ homologue, subfamily C, member 28, conserved domain
+short_name: DJC28_CD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09350
+counters:
+  proteins: 7470
+  matches: 7471
+  proteomes: 6988
+  taxa: 12966
+  structures: 0
+  alphafold_models: 5165
+  domain_architectures: 69
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR018961
+description: This domain is found in proteins that may have a role in protein folding or as a chaperone,
+  including DnaJ homolog subfamily C member 28. DnaJ is a member of the J-protein family (also known as
+  HSP40), which are defined by the presence of a J domain that regulate the activity of 70kDa heat-shock
+  proteins [[cite:PUB00109020]]. The function of this domain is not yet known.

@@ -1,0 +1,27 @@
+id: Pfam:PF15673
+pfam_id: PF15673
+name: Circadian-associated transcriptional repressor
+short_name: Ciart
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF15673
+counters:
+  proteins: 916
+  matches: 924
+  proteomes: 403
+  taxa: 1380
+  structures: 0
+  alphafold_models: 775
+  domain_architectures: 15
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR031373
+description: Circadian-associated transcriptional repressor (Ciart or Chrono) is a negative regulatory
+  component of the circadian clock. It functions as a transcriptional repressor, modulating BMAL1-CLOCK
+  activity. It also regulates metabolic pathways such as the glucocorticoid response triggered by behavioral
+  stress [[cite:PUB00075744],[cite:PUB00075743],[cite:PUB00075745]].

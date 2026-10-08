@@ -1,0 +1,27 @@
+id: Pfam:PF06416
+pfam_id: PF06416
+name: Effector protein NleG
+short_name: T3SS_NleG
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06416
+counters:
+  proteins: 39
+  matches: 39
+  proteomes: 13
+  taxa: 49
+  structures: 3
+  alphafold_models: 28
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010489
+description: Many bacterial pathogens deliver effector proteins into host cells via a type III secretion
+  system. These effector proteins then alter the host cell's biology in ways that are advantageous to
+  the pathogen. The NleG protein and its homologues form the largest family of effector proteins in the
+  enterohemorrhagic Escherichia coli O157:H7, with 14 members identified in the Sakai strain alone [[cite:PUB00056590]].

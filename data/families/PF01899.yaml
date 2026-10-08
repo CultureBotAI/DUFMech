@@ -1,0 +1,24 @@
+id: Pfam:PF01899
+pfam_id: PF01899
+name: Na+/H+ ion antiporter subunit
+short_name: MNHE
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01899
+counters:
+  proteins: 10765
+  matches: 10765
+  proteomes: 8482
+  taxa: 12249
+  structures: 5
+  alphafold_models: 7110
+  domain_architectures: 9
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR002758
+description: Subunit of a Na+/H+ Prokaryotic antiporter complex ([[cite:PUB00010583]],[[cite:PUB00010603]]).

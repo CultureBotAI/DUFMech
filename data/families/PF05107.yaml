@@ -1,0 +1,26 @@
+id: Pfam:PF05107
+pfam_id: PF05107
+name: CRISPR-associated protein Cas7
+short_name: Cas_Cas7
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05107
+counters:
+  proteins: 2347
+  matches: 2373
+  proteomes: 2167
+  taxa: 4427
+  structures: 16
+  alphafold_models: 1652
+  domain_architectures: 5
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR006482
+description: CRISPR-associated protein Cas7 is one of the components of the type I-B cascade-like antiviral
+  defence complex. In Haloferax volcanii, Cas5, Cas6 and Cas7 form a small complex that aids the stability
+  of CRISPR-derived RNA [[cite:PUB00071890]].

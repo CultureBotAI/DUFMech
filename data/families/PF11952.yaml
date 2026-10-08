@@ -1,0 +1,26 @@
+id: Pfam:PF11952
+pfam_id: PF11952
+name: XRN-Two Binding Domain, XTBD
+short_name: XTBD
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11952
+counters:
+  proteins: 2436
+  matches: 2439
+  proteomes: 1174
+  taxa: 3853
+  structures: 1
+  alphafold_models: 2113
+  domain_architectures: 58
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021859
+description: XTBD is a family of eukaryotic proteins that act as an XRN2-binding module. XRN2 is an essential
+  exoribonuclease in eukaryotes that processes and degrades a number of different substrates. XTBD is
+  found on a number of different proteins to link them to XRN, such as PAXT-1 [[cite:PUB00075685]].

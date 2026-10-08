@@ -1,0 +1,27 @@
+id: Pfam:PF11256
+pfam_id: PF11256
+name: SAV0927-like
+short_name: SAV0927-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11256
+counters:
+  proteins: 1274
+  matches: 1274
+  proteomes: 919
+  taxa: 1133
+  structures: 2
+  alphafold_models: 812
+  domain_architectures: 1
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021415
+description: This family of proteins includes SAV0927 from Staphylococcus aureus and similar proteins
+  predominantly found in Firmicutes. This protein forms a structure that contains five dimers. Each protomer
+  shows an anti-parallel five-stranded beta-sheet, with one strand from the other subunit in the dimer,
+  and three alpha- helices at the C-terminal end. Its function is unknown [[cite:PUB00100982]].

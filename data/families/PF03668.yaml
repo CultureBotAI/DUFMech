@@ -1,0 +1,26 @@
+id: Pfam:PF03668
+pfam_id: PF03668
+name: RapZ-like N-terminal domain
+short_name: RapZ-like_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF03668
+counters:
+  proteins: 13324
+  matches: 13329
+  proteomes: 13052
+  taxa: 18078
+  structures: 6
+  alphafold_models: 8655
+  domain_architectures: 17
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR053930
+description: This entry represents the N-terminal P-loop kinase domain of RNase adapter protein RapZ and
+  related proteins. RapZ plays a central role in RNA-mediated regulation of amino-sugar metabolism [[cite:PUB00075613],[cite:PUB00150969],[cite:PUB00153826]].
+  It is a RNA-binding protein that recruits the major endoribonuclease RNase E to sRNAs GlmZ [[cite:PUB00075613],[cite:PUB00150969]].

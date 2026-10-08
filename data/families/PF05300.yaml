@@ -1,0 +1,28 @@
+id: Pfam:PF05300
+pfam_id: PF05300
+name: MICOS complex subunit MIC19/MIC25
+short_name: MIC19_MIC25
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05300
+counters:
+  proteins: 2697
+  matches: 2774
+  proteomes: 724
+  taxa: 2240
+  structures: 0
+  alphafold_models: 2422
+  domain_architectures: 18
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007964
+description: MIC19 (also known as ChChd3) and MIC25 (also known as ChChd6) are components of the MICOS
+  complex, a large protein complex of the mitochondrial inner membrane that plays crucial roles in the
+  maintenance of crista junctions, inner membrane architecture, and formation of contact sites to the
+  outer membrane [[cite:PUB00086469],[cite:PUB00086470],[cite:PUB00093460]]. MIC19 plays an important
+  role in the maintenance of the MICOS complex stability and the mitochondrial cristae morphology [[cite:PUB00086469]].

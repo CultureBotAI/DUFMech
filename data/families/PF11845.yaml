@@ -1,0 +1,27 @@
+id: Pfam:PF11845
+pfam_id: PF11845
+name: Tll0287
+short_name: Tll0287-like
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11845
+counters:
+  proteins: 4037
+  matches: 4044
+  proteomes: 2584
+  taxa: 4658
+  structures: 1
+  alphafold_models: 2860
+  domain_architectures: 213
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021796
+description: This entry includes Tll0287 protein from Thermosynechococcus vestitus ([swissprot:Q8DM36])
+  and similar bacterial proteins. Tll0287 is a c-type heme protein that shows a beta-sheet with four antiparallel
+  beta-strands surrounded by five alpha-helices. This structure is similar to some kinases and sensor
+  proteins, but its specific function is unknown [[cite:PUB00100684]].

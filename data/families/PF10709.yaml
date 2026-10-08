@@ -1,0 +1,31 @@
+id: Pfam:PF10709
+pfam_id: PF10709
+name: Protein YebY
+short_name: YebY
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10709
+counters:
+  proteins: 647
+  matches: 649
+  proteomes: 626
+  taxa: 1011
+  structures: 3
+  alphafold_models: 385
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR019648
+description: This protein family includes Protein YebY from Escherichia coli and similar proteins predominantly
+  found in Gammaproteobacteria. YebY is a component of the AZY copper uptake system, where it functions
+  as a negative regulator of the copper importer YebZ [[cite:PUB00163268]]. At high copper concentrations,
+  YebY may act as a safety valve, preventing toxic copper overload by inhibiting the import activity of
+  YebZ and YobA [[cite:PUB00163268]]. The reduced form of YebY binds Cu(+) and Cu(2+) with low affinity
+  and shows low specificity, also binding Co(2+), Ni(2+), and Ag(+) [[cite:PUB00100157]]. However, the
+  low affinity of copper binding, together with the stabilisation imparted by a disulphide bond, suggests
+  that this metal binding is likely not physiologically relevant [[cite:PUB00100157]].

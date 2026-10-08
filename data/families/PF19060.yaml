@@ -1,0 +1,26 @@
+id: Pfam:PF19060
+pfam_id: PF19060
+name: DVNP family
+short_name: DVNP
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF19060
+counters:
+  proteins: 218
+  matches: 220
+  proteomes: 24
+  taxa: 103
+  structures: 0
+  alphafold_models: 160
+  domain_architectures: 20
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043928
+description: Dinoflagellate viral nucleoprotein (DVNPs) are known to function in DNA packaging in Dinoflagellate
+  as a histone replacement. It displaces nucleosomes when expressed in yeast [[cite:PUB00095059]]. This
+  family is predominantly found in Phycodnaviridae.

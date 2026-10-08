@@ -1,0 +1,27 @@
+id: Pfam:PF16335
+pfam_id: PF16335
+name: Glutaminase A six helical-hairpin domain
+short_name: GtaA_6_Hairpin
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF16335
+counters:
+  proteins: 4215
+  matches: 5628
+  proteomes: 1856
+  taxa: 3600
+  structures: 0
+  alphafold_models: 3216
+  domain_architectures: 90
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR032514
+description: This entry represents the six helical-hairpin domain found in homologues of Glutaminase A
+  from Aspergillus oryzae. Glutaminase catalyzes the hydrolysis of glutamine to glutamic acid and plays
+  a key role in nitrogen metabolism. It catalyzes the hydrolysis not only of L-glutamine but also of D-glutamine
+  [[cite:PUB00035385]]. This domain share similarity with six-hairpin glycosidases.

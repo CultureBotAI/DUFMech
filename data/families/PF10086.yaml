@@ -1,0 +1,31 @@
+id: Pfam:PF10086
+pfam_id: PF10086
+name: YhfC intramembrane metalloprotease
+short_name: YhfC
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF10086
+counters:
+  proteins: 814
+  matches: 897
+  proteomes: 763
+  taxa: 1273
+  structures: 0
+  alphafold_models: 511
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR011397
+description: This family includes proteins that are mainly from Firmicutes and Proteobacteria. Family
+  members bear the consensus signature of 'EExxR' the second motif 'HxxxE' and the third motif 'H/Qxxxs'.
+  The fourth motif, 'HxxxB', is shared by the PrsW proteases [pfam:PF13367] and the CPBP [pfam:PF02517],
+  and APH-1 families. There are currently no experimental functional data for members of this group, however,
+  they are predicted to be integral membrane proteins with several transmembrane segments and hypothesized
+  metalloprotease function. YhfC intramembrane metalloprotease, CPBP family (type II CAAX Proteases and
+  Bacteriocin Processing enzymes), PrsW proteases and APH-1 are distantly related. They share four predicted
+  core transmembrane segments and possess similar, yet distinct sets of sequence motifs [[cite:PUB00091031]].

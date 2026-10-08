@@ -1,0 +1,28 @@
+id: Pfam:PF06242
+pfam_id: PF06242
+name: Transcriptional cell cycle regulator TrcR
+short_name: TrcR
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06242
+counters:
+  proteins: 2557
+  matches: 2557
+  proteomes: 2549
+  taxa: 3635
+  structures: 0
+  alphafold_models: 1747
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR010421
+description: This family represents a transcriptional cell cycle regulator (TrcR) found in Proteobacteria,
+  mainly Alphaproteobacteria. It has been shown to associate with promoters and coding sequences in vivo
+  in a rifampicin-dependent manner and to interact physically and genetically with RNA polymerase, resulting
+  in the integration of cell cycle and antibiotic stress control with the general transcriptional machinery
+  [[cite:PUB00098048]].

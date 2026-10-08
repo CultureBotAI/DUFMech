@@ -1,0 +1,35 @@
+id: Pfam:PF09118
+pfam_id: PF09118
+name: Galactose oxidase-like, Early set domain
+short_name: GO-like_E_set
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09118
+counters:
+  proteins: 11271
+  matches: 11312
+  proteomes: 3086
+  taxa: 5834
+  structures: 32
+  alphafold_models: 8352
+  domain_architectures: 394
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015202
+description: E or 'early' set domains are associated with the catalytic domain of galactose oxidase at
+  the C-terminal end. Galactose oxidase is an extracellular monomeric enzyme which catalyzes the stereospecific
+  oxidation of a broad range of primary alcohol substrates, and possesses a unique mononuclear copper
+  site essential for catalysing a two-electron transfer reaction during the oxidation of primary alcohols
+  to corresponding aldehydes. The second redox active centre necessary for the reaction was found to be
+  situated at a tyrosine residue. The C-terminal domain of galactose oxidase may be related to the immunoglobulin
+  and/or fibronectin type III superfamilies. These domains are associated with different types of catalytic
+  domains at either the N-terminal or C-terminal end, and may be involved in homodimeric/tetrameric/dodecameric
+  interactions. Members of this family adopt a secondary structure consisting of a bundle of seven, mostly
+  antiparallel, beta-strands surrounding a hydrophobic core. The 7 strands are arranged in 2 sheets, in
+  a Greek-key topology [[cite:PUB00014151]]. This domain is found in sugar-utilising enzymes, such as
+  galactose oxidase or chitinase [[cite:PUB00028414],[cite:PUB00044942],[cite:PUB00080765],[cite:PUB00080766],[cite:PUB00003324]].

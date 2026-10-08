@@ -1,0 +1,33 @@
+id: Pfam:PF11896
+pfam_id: PF11896
+name: Alpha-1,4-glucan:maltose-1-phosphate maltosyltransferase, domain N/S
+short_name: GlgE_dom_N_S
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF11896
+counters:
+  proteins: 5826
+  matches: 5835
+  proteomes: 5370
+  taxa: 6993
+  structures: 25
+  alphafold_models: 3347
+  domain_architectures: 14
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR021828
+description: This entry represents domain N and S of GlgE. GlgE is a homodimer and a member of the GH13_3
+  CAZy subfamily. Each subunit of GlgE is composed of five domains, domain A is a (beta/alpha)8 barrel,
+  typical of the catalytic domain of this family of enzymes, that forms part of the dimer interface. Domain
+  B corresponds to an insertion after the third beta-strand of domain A [[cite:PUB00017702]]. In GlgE,
+  domain B is fairly typical for a GH13 enzyme [[cite:PUB00060751]] in having a pair of anti-parallel
+  strands and one short helix. The C-terminal domain C has a beta-sandwich fold. The N-terminal domain
+  N, which also consists of a beta-sandwich fold, forms the core of the dimer interface. The final domain
+  arises from an insertion within domain N and forms a four-helix bundle where the last helix is discontinuous
+  and slightly kinked. This domain, which will henceforth be referred to as domain S, participates in
+  the dimer interface and interacts directly with domain B of the neighbouring subunit [[cite:PUB00060749]].

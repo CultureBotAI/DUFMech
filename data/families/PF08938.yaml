@@ -1,0 +1,25 @@
+id: Pfam:PF08938
+pfam_id: PF08938
+name: HBS1 N-terminus
+short_name: HBS1_N
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08938
+counters:
+  proteins: 3204
+  matches: 3205
+  proteomes: 2256
+  taxa: 5967
+  structures: 10
+  alphafold_models: 2775
+  domain_architectures: 38
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015033
+description: This domain is found at the N-terminus of HBS1 proteins. It interacts with the ribosomal
+  protein rpS3 at the mRNA entry site [[cite:PUB00066737]].

@@ -1,0 +1,34 @@
+id: Pfam:PF05913
+pfam_id: PF05913
+name: 6-phospho-N-acetylmuramidase, C-terminal
+short_name: MupG_C
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05913
+counters:
+  proteins: 2025
+  matches: 2025
+  proteomes: 1279
+  taxa: 2033
+  structures: 2
+  alphafold_models: 1344
+  domain_architectures: 6
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR043894
+description: This entry represents the C-terminal domain of 6-phospho-N-acetylmuramidase (MupG) found
+  in bacteria. It characterises putative phospho sugar glycosidases found in Gram-negative and -positive
+  species, but mainly in firmicutes. MupG from Staphylococcus aureus [[cite:PUB00097906]], specifically
+  cleaves MurNAc 6P-GlcNAc, a product of cell wall turnover, into the sugars MurNAc 6P and GlcNAc, being
+  involved in cell wall turnover and recycling. Since some species, for example Lactobacillus plantarum,
+  possess several putative paralogs, the substrate specificity of these proteins may not be limited to
+  cell wall sugars, but may include phosphorylated disaccharides in general. Most proteins containing
+  this domain appear to consist of two structural subdomains, as it can be seen in the two available crystal
+  structures of Enterococcus faecalis (PDB:2p0o) and Bacillus cereus (PDB:1X7F). The larger N-terminal
+  domain constitutes a TIM-barrel like structure and the C-terminal domain (this entry) is similar to
+  the cyclophilin family. It should be noted that some proteins lack this domain.

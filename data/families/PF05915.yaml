@@ -1,0 +1,26 @@
+id: Pfam:PF05915
+pfam_id: PF05915
+name: Transmembrane proteins 230/134
+short_name: TMEM_230_134
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF05915
+counters:
+  proteins: 4000
+  matches: 4059
+  proteomes: 1707
+  taxa: 5383
+  structures: 0
+  alphafold_models: 3434
+  domain_architectures: 49
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR008590
+description: This family consists of the eukaryotic transmembrane proteins 230 and 134 (TMEM230 and 134).
+  TMEM134 function is unknown, but it has been shown to interact with E virus ORF2 [[cite:PUB00090009]].
+  TMEM 230 is involved in trafficking and recycling of synaptic vesicles [[cite:PUB00095530]].

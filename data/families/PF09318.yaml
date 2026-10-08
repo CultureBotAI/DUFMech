@@ -1,0 +1,28 @@
+id: Pfam:PF09318
+pfam_id: PF09318
+name: Glycosyl transferase 1 domain A
+short_name: Glyco_trans_A_1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF09318
+counters:
+  proteins: 67
+  matches: 67
+  proteomes: 64
+  taxa: 123
+  structures: 0
+  alphafold_models: 39
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR015397
+description: Glyco_trans_A_1 is family of found predominantly at the N-terminus of various prokaryotic
+  alpha-glucosyltransferases. According to whether the domain exists as a whole molecule or as a half
+  molecule determines the number of sugar residues that the molecule transfers. Two-domain proteins are
+  processive in that they transfer more than one sugar residue, processively; single domain proteins transfer
+  just one sugar moiety [[cite:PUB00075675],[cite:PUB00064844]].

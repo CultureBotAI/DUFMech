@@ -1,0 +1,31 @@
+id: Pfam:PF13157
+pfam_id: PF13157
+name: Endospore appendages
+short_name: Enas
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF13157
+counters:
+  proteins: 398
+  matches: 398
+  proteomes: 183
+  taxa: 298
+  structures: 4
+  alphafold_models: 244
+  domain_architectures: 7
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR025055
+description: The surface of Bacillus and Clostridium endospores is decorated with long filamentous endospores
+  appendages that resemble pili from Gram- negative and Gram-positive bacteria. They show two morphologies,
+  the main or Staggered-type (S-Ena) which accounts for 90% of the fibres, and the Ladder-like (L-Ena)
+  which is smaller and less abundant. They are a novel class of Gram-positive pili, consisting in single
+  domain subunits with a jellyroll topology comprised by two juxtaposed beta-sheets. This domain represents
+  the S-Ena core. Disulfide bonding through the N-terminal connector peptide that precedes this domain
+  stabilizes longitudinally the fibres, bridging the helical turns. This results in flexible pili, highly
+  resistant to environmental harsh such as heat, drought, and chemical damage [[cite:PUB00098173]].

@@ -1,0 +1,24 @@
+id: Pfam:PF07791
+pfam_id: PF07791
+name: Immunity protein family (Imm11)
+short_name: Imm11
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF07791
+counters:
+  proteins: 2390
+  matches: 2393
+  proteomes: 1068
+  taxa: 1957
+  structures: 1
+  alphafold_models: 1374
+  domain_architectures: 8
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR012433
+description: This family formerly known as DUF1629 was identified to be an immunity protein [[cite:PUB00066726]].

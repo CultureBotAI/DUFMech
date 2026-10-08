@@ -1,0 +1,25 @@
+id: Pfam:PF04949
+pfam_id: PF04949
+name: Transcriptional activator
+short_name: Transcrip_act
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04949
+counters:
+  proteins: 2624
+  matches: 2644
+  proteomes: 904
+  taxa: 2851
+  structures: 0
+  alphafold_models: 2125
+  domain_architectures: 34
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007033
+description: This family of proteins may act as a transcriptional activator. It plays a role in stress
+  response in plants [[cite:PUB00066760]].

@@ -1,0 +1,26 @@
+id: Pfam:PF04148
+pfam_id: PF04148
+name: Transmembrane adaptor Erv26
+short_name: Erv26
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04148
+counters:
+  proteins: 2714
+  matches: 2749
+  proteomes: 2414
+  taxa: 6591
+  structures: 0
+  alphafold_models: 2316
+  domain_architectures: 36
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR007277
+description: Erv26 is an integral membrane protein that is packed into COPII vesicles and cycles between
+  the ER and Golgi compartments. It directs pro-alkaline phosphatase into endoplasmic reticulum-derived
+  COPII transport vesicles [[cite:PUB00044739]].

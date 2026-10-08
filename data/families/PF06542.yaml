@@ -1,0 +1,27 @@
+id: Pfam:PF06542
+pfam_id: PF06542
+name: Regulator protein PHA-1
+short_name: PHA-1
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06542
+counters:
+  proteins: 186
+  matches: 191
+  proteomes: 12
+  taxa: 28
+  structures: 0
+  alphafold_models: 182
+  domain_architectures: 4
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  path: data/worklists/interpro-pfam-duf-2026-10-08.json
+  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  generated_at: '2026-10-08T02:48:09.822970Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR009497
+description: This family represents the protein product of the gene pha-1 which coordinates with lin-35
+  Rb during animal development. The protein is expressed during embryonic development and functions in
+  the cytoplasm. PHA-1 acts in a parallel pathway with UBC-18 to regulate the activity of a common cellular
+  target [[cite:PUB00053702]].
