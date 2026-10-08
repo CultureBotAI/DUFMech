@@ -36,12 +36,38 @@ UNKNOWN_FUNCTION_RE = re.compile(
 
 UNKNOWN_CANDIDATE = "UNKNOWN_CANDIDATE"
 KNOWN_HISTORICAL_DUF = "KNOWN_HISTORICAL_DUF"
+# A family Pfam renamed away from a DUF/UPF name; the evidence is Pfam's own
+# previous-identifier history, not the current name or description text.
+EX_DUF = "EX_DUF"
 FALSE_POSITIVE_TEXT_HIT = "FALSE_POSITIVE_TEXT_HIT"
+
+# Set only by EX_DUF migration (dufmech.exduf); text reclassification preserves it.
+PREVIOUS_UNKNOWN_NAME_REASON = "pfam_previous_unknown_name"
+
+# EX_DUF migration provenance identity, shared by the writer (dufmech.exduf) and the
+# verified-input loader (dufmech.score_inputs).
+MIGRATED_SOURCE = "EX_DUF migration of frozen InterPro Pfam metadata"
+MIGRATION_PROFILE = "exduf-migration-v1"
+MIGRATION_NOTE = (
+    "Existing families keep their frozen names, descriptions, identifiers and counters; "
+    "only seed status and candidate reasons change. Added and carried families are "
+    "fetched from the InterPro Pfam entry API."
+)
+MIGRATION_REFRESH_NOTE = (
+    "Rows come from a fresh InterPro DUF search; refreshed_pfam_ids lists families whose "
+    "metadata changed from the parent, live_new_pfam_ids families new to the search, and "
+    "carried or added families are fetched from the InterPro Pfam entry API."
+)
+MIGRATION_POLICY = (
+    "EX_DUF: Pfam previous identifiers include a DUF/UPF name and the current Pfam short "
+    "name is no longer one. Naming history, not experimental evidence."
+)
 
 STATUS_ORDER = {
     UNKNOWN_CANDIDATE: 0,
     KNOWN_HISTORICAL_DUF: 1,
-    FALSE_POSITIVE_TEXT_HIT: 2,
+    EX_DUF: 2,
+    FALSE_POSITIVE_TEXT_HIT: 3,
 }
 
 TSV_FIELDNAMES = [
@@ -232,13 +258,52 @@ def load_interpro_fixture(payload: object) -> list[Mapping[str, Any]]:
 
 
 def reclassify_worklist(rows: Iterable[DufFamilyRow]) -> list[DufFamilyRow]:
-    """Recompute only seed classifications, retaining every family and its metadata."""
+    """Recompute only seed classifications, retaining every family and its metadata.
+
+    Text reasons are recomputed; the EX_DUF migration reason is history, not text, so
+    it is carried over unchanged and keeps the family EX_DUF.
+    """
 
     result = []
     for row in rows:
         reasons = _candidate_reasons(row.short_name, row.name, row.description)
+        if PREVIOUS_UNKNOWN_NAME_REASON in row.candidate_reasons:
+            reasons = (*reasons, PREVIOUS_UNKNOWN_NAME_REASON)
         result.append(replace(row, candidate_reasons=reasons, unknown_status=_unknown_status(reasons)))
     return sorted(result, key=_sort_key)
+
+
+def mark_ex_duf(row: DufFamilyRow) -> DufFamilyRow:
+    """Return ``row`` classified EX_DUF, keeping its text reasons for context."""
+
+    reasons = tuple(
+        dict.fromkeys((*row.candidate_reasons, PREVIOUS_UNKNOWN_NAME_REASON))
+    )
+    return replace(row, candidate_reasons=reasons, unknown_status=EX_DUF)
+
+
+def entry_from_interpro_detail(payload: Mapping[str, Any]) -> dict[str, Any]:
+    """Adapt a single-entry ``entry/pfam/<ID>/`` response to the search-item shape.
+
+    The single-entry API nests counters and description under ``metadata`` and makes
+    ``name`` an object; :func:`row_from_interpro_entry` reads search items.
+    """
+
+    metadata = _mapping(payload.get("metadata"))
+    name = metadata.get("name")
+    names = _mapping(name) if isinstance(name, Mapping) else {"name": name}
+    return {
+        "metadata": {
+            "accession": metadata.get("accession"),
+            "name": names.get("name"),
+            "integrated": metadata.get("integrated"),
+        },
+        "extra_fields": {
+            "short_name": names.get("short"),
+            "description": metadata.get("description"),
+            "counters": metadata.get("counters"),
+        },
+    }
 
 
 def render_tsv(rows: Iterable[DufFamilyRow]) -> str:
@@ -291,6 +356,8 @@ def _candidate_reasons(
 
 
 def _unknown_status(candidate_reasons: tuple[str, ...]) -> str:
+    if PREVIOUS_UNKNOWN_NAME_REASON in candidate_reasons:
+        return EX_DUF
     if not candidate_reasons:
         return FALSE_POSITIVE_TEXT_HIT
     if any(reason.endswith("unknown_function") for reason in candidate_reasons):

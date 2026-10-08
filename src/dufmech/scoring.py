@@ -10,7 +10,7 @@ from collections.abc import Iterable, Mapping
 from dataclasses import asdict, dataclass
 from typing import Any
 
-from dufmech.worklist import KNOWN_HISTORICAL_DUF, UNKNOWN_CANDIDATE
+from dufmech.worklist import EX_DUF, KNOWN_HISTORICAL_DUF, UNKNOWN_CANDIDATE
 
 PARTIALLY_CHARACTERIZED = "PARTIALLY_CHARACTERIZED"
 EXPERIMENTAL_GO_EVIDENCE = {
@@ -343,6 +343,8 @@ def _score_family(
     reasons: list[str] = []
     if seed_status == KNOWN_HISTORICAL_DUF:
         reasons.append("historical_interpro_annotation")
+    if seed_status == EX_DUF:
+        reasons.append("pfam_renamed_from_unknown_name")
     if rhea_reaction_count:
         reasons.append("has_rhea_reaction")
     if experimental_go_mf_count:
@@ -354,7 +356,9 @@ def _score_family(
     if eggnog_function_count:
         reasons.append("has_eggnog_function")
 
-    if seed_status == KNOWN_HISTORICAL_DUF or known_count:
+    # Pfam's rename of an EX_DUF family records past characterization, like a
+    # historical DUF; neither is experimental evidence for every member.
+    if seed_status in {KNOWN_HISTORICAL_DUF, EX_DUF} or known_count:
         characterization_status = KNOWN_HISTORICAL_DUF
     elif partial_count:
         characterization_status = PARTIALLY_CHARACTERIZED

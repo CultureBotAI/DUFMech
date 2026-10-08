@@ -662,6 +662,7 @@
       "enum": [
         "UNKNOWN_CANDIDATE",
         "KNOWN_HISTORICAL_DUF",
+        "EX_DUF",
         "FALSE_POSITIVE_TEXT_HIT"
       ],
       "title": "SeedStatus",
