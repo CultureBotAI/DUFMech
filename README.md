@@ -98,12 +98,14 @@ Freeze a new InterPro/Pfam seed worklist with a matching manifest (today's UTC d
 just freeze-duf-puf-worklist
 ```
 
-The original seed worklist was frozen on 2026-10-01. The current seed worklist
-is a versioned classification correction of that metadata, not a newer
-InterPro fetch. It retains all 6,532 families
-and source counters; 1,621 historical seed labels were corrected to unknown
-candidates. See the [correction audit](docs/provenance/seed-classification-correction-2026-10-05.md)
-for the classification policy, parent hashes, and limitations.
+The original seed worklist was frozen on 2026-10-01. On 2026-10-05 a versioned
+classification correction kept all 6,532 families and source counters and
+corrected 1,621 historical seed labels to unknown candidates (see the
+[correction audit](docs/provenance/seed-classification-correction-2026-10-05.md)).
+The current worklist, `interpro-pfam-duf-2026-10-08`, is the EX_DUF migration of
+that snapshot: 32 families Pfam renamed away from DUF/UPF names became `EX_DUF`, and
+1,763 renamed families were added from the InterPro entry API, for 8,295 families
+(see the [migration record](docs/provenance/exduf-migration-2026-10-08.md)).
 
 Reclassify verified frozen metadata into a new snapshot without contacting InterPro:
 
@@ -260,8 +262,12 @@ snapshot date or a separate output directory for another run. Both the report an
 dashboard require cross-Mech evidence to match the selected worklist; a historical
 report can select matching `--cross-mech-json` and `--worklist-json` inputs. Dashboard Mech counts
 represent distinct source records, with trait-record availability shown separately.
-The current cross-Mech snapshot derives from the original scan by applying the
-corrected worklist's seed labels; see the [offline derivation record](docs/provenance/cross-mech-worklist-2026-10-06.md).
+The current cross-Mech snapshot, `cross-mech-duf-examples-2026-10-08`, derives offline
+from the October 5 scan by applying the EX_DUF worklist's seed labels and resolving
+former DUF names through Pfam previous identifiers; its manifest records which
+worklist families the scan never searched, and the site marks them as not covered
+(see the [migration record](docs/provenance/exduf-migration-2026-10-08.md) and the
+earlier [offline derivation record](docs/provenance/cross-mech-worklist-2026-10-06.md)).
 
 Freeze the Pfam families that were renamed from DUF/UPF names, using the previous
 identifiers (`#=GF PI`) in a pinned Pfam release's seed file:

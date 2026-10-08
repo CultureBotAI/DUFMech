@@ -25,13 +25,21 @@ was found.
 | **Families** | **6,532** | **8,295** |
 
 - **32 existing families became EX_DUF** (27 from UNKNOWN_CANDIDATE and 5 from
-  KNOWN_HISTORICAL_DUF). Pfam renamed these away from a DUF/UPF name, although a
-  DUF number can remain in their descriptive names (e.g. "Cupin superfamily (DUF985)").
+  KNOWN_HISTORICAL_DUF). Pfam renamed their short names away from a DUF/UPF name.
   Their names, descriptions, identifiers and counters are unchanged.
+- **Some EX_DUF families still say "unknown function".** For 27 of the 32, the current
+  Pfam name or description still says so (e.g. PF01865, "Protein of unknown function
+  DUF47"). Across all 1,795 EX_DUF families, 88 do (29 by name). These rows keep their
+  text candidate reasons, and scoring does not treat them as characterized: they get
+  characterization `UNKNOWN_CANDIDATE` with reason `pfam_metadata_still_says_unknown_function`.
 - **1,763 families were added as EX_DUF**, with metadata from the InterPro entry API.
   Of the 1,795 EX_DUF families, 1,777 are integrated into an InterPro entry.
-- Two still DUF/UPF-named families with a former DUF name (PF18141 UPF1_1B_dom and
-  PF21084 WHD_DUF4423_like) are not ex-DUFs, so they are not added.
+- **Two families with a former DUF name were not added**, because the previous-names
+  snapshot marks their current short names as unknown-function names:
+  - PF21084 (WHD_DUF4423_like) correctly.
+  - PF18141 (UPF1_1B_dom, formerly DUF5599) by mistake: the name pattern treats the
+    UPF1 gene name like a UniProt UPF family. The pattern fix, a follow-up freeze and a
+    migration are tracked in issue #165.
 
 The manifest records both parents with file hashes, every status change, the added
 families, and the live fetch. The verified-input loader accepts it as lineage profile
@@ -42,12 +50,24 @@ families, and the live fetch. The verified-input loader accepts it as lineage pr
 - `data/families/` now holds 8,295 projections (`just records --apply`), all SEEDED.
 - `conf/id_labels/` was regenerated with the pinned CLAW OAK runtime: 8,295 `OK_CANONICAL`.
 - KGX/SSSOM exports: 16,532 nodes and 8,237 InterPro mappings.
-- `cross-mech-duf-examples-2026-10-08` relabels the 10-06 snapshot's seed statuses from
-  this worklist with `python -m dufmech.cross_mech_snapshot`. This is offline, with no
-  new scan or UniProt retrieval; 190 rows changed. Source Mech commits and lookup times
-  remain those of the October 5 acquisition. Unmatched-name rows (e.g. DUF1998) keep
-  `NOT_IN_WORKLIST`, because resolving them would mean a new scan of a source that is
-  still `BLOCKED`. The report maps them through Pfam previous identifiers instead.
+- `cross-mech-duf-examples-2026-10-08` is derived offline from the 10-06 snapshot with
+  `python -m dufmech.cross_mech_snapshot ... --previous-names-json`. There was no new
+  scan or UniProt retrieval; source Mech commits and lookup times remain those of the
+  October 5 acquisition. 201 rows take their family's seed label from this worklist:
+  - **190 rows** keep their family and change seed status.
+  - **11 rows resolved through former names.** They cited a former DUF name (DUF1814,
+    DUF1998, DUF262, DUF4201, DUF4263, DUF4297, DUF4338 and DUF4393) and are resolved
+    through the frozen Pfam previous identifiers to their now-EX_DUF families, with
+    link basis `record_mentions_previous_pfam_name`. 11 rows that cite UniProt UPF
+    names stay `NOT_IN_WORKLIST`.
+  - **Coverage.** The October 5 scan searched only the 6,532 families of
+    `interpro-pfam-duf-2026-10-05`. The 1,763 added families were never searched. The
+    manifest lists them in `coverage.unscanned_pfam_ids`, and the site and report mark
+    them "not covered by the cross-Mech scan". Missing links for these families are not
+    evidence of absence. That includes ProteinTraitsMech trait records, which do exist
+    for them at the recorded commit. A new scan waits on the cross-Mech licensing review.
+  - **Backfill.** Relabeled legacy rows carry an empty `cited_uniprot_accession`,
+    meaning "not recorded"; the manifest records this backfill.
 - The `pfam-uniprot-uniref90-2026-10-07` member snapshot, seeded on 10-05, still
   applies. The site now accepts members seeded on a metadata-preserving ancestor (text
   reclassification, or a migration without a live refresh), provided every member
@@ -60,4 +80,5 @@ families, and the live fetch. The verified-input loader accepts it as lineage pr
 EX_DUF records Pfam naming history. A rename usually follows published work on some
 members, but it is not experimental evidence of function for every member, and the
 added families have not been individually reviewed. Scoring treats an EX_DUF seed like a
-historical DUF (`KNOWN_HISTORICAL_DUF`, reason `pfam_renamed_from_unknown_name`).
+historical DUF (`KNOWN_HISTORICAL_DUF`, reason `pfam_renamed_from_unknown_name`), except
+where the current Pfam metadata still says the function is unknown (see above).

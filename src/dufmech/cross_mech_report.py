@@ -53,11 +53,32 @@ def render_cross_mech_report(
     if derivation:
         derivation_note = [
             (f"Derived offline from `{derivation['source_snapshot_id']}`: "
-             f"{derivation['rows_with_changed_seed_status']:,} rows received corrected seed labels. "
-             "Source records, proteins, source commits, and UniProt lookup dates are unchanged; "
-             "no new Mech scan or UniProt retrieval was performed."),
+             f"{derivation['rows_with_changed_seed_status']:,} rows received the selected "
+             "worklist's seed labels. Source records, proteins, source commits, and UniProt "
+             "lookup dates are unchanged; no new Mech scan or UniProt retrieval was performed."),
             "",
         ]
+        coverage = derivation.get("coverage") or {}
+        unscanned = coverage.get("unscanned_pfam_ids") or []
+        if unscanned:
+            derivation_note += [
+                (f"Coverage: the scan searched the {coverage.get('scanned_families', 0):,} "
+                 f"families of `{coverage.get('scanned_worklist_snapshot_id')}`. "
+                 f"{len(unscanned):,} worklist families joined later and were never searched, "
+                 "so their missing links (including ProteinTraitsMech trait records) are not "
+                 "evidence of absence."),
+                "",
+            ]
+        resolved = derivation.get("resolved_previous_names") or {}
+        if resolved:
+            pairs = ", ".join(f"{name} → {pfam}" for name, pfam in resolved.items())
+            derivation_note += [
+                (f"{derivation.get('rows_resolved_by_previous_name', 0):,} rows citing a former "
+                 f"DUF/UPF name were resolved offline through "
+                 f"`{derivation.get('previous_names_snapshot_id')}` "
+                 f"(link basis `record_mentions_previous_pfam_name`): {pairs}."),
+                "",
+            ]
 
     lines = [
         f"# DUF/PUF examples across Mechs ({snapshot['date']})",

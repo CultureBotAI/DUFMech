@@ -54,7 +54,10 @@ evidence is Pfam's own previous-identifier history (`#=GF PI`, frozen as
 `pfam-previous-unknown-names-*`), not the current name or description, so text
 reclassification never undoes it. Candidate reason `pfam_previous_unknown_name` marks
 these rows. Scoring treats an EX_DUF seed like a historical DUF: characterization
-`KNOWN_HISTORICAL_DUF` with reason `pfam_renamed_from_unknown_name`. A rename usually
+`KNOWN_HISTORICAL_DUF` with reason `pfam_renamed_from_unknown_name`, unless the current
+Pfam name or description still says the function is unknown (any `*_unknown_function`
+candidate reason). Those stay EX_DUF but are scored `UNKNOWN_CANDIDATE` with the extra
+reason `pfam_metadata_still_says_unknown_function`. A rename usually
 follows published work on some members; it is not experimental evidence for every member.
 
 `just migrate-exduf` derives a new worklist snapshot (dry run unless `--apply`):

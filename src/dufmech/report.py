@@ -2,10 +2,11 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from collections import Counter
-from collections.abc import Iterable, Mapping
+from collections.abc import Iterable, Iterator, Mapping
 from datetime import date
 from pathlib import Path
 from typing import Any
@@ -90,33 +91,49 @@ def load_latest_rows(
     return (worklist_rows, score_rows, input_ids)
 
 
-def metadata_preserving_ancestors(worklists_dir: Path, worklist_id: str) -> list[str]:
-    """Return verified parent worklists whose family metadata ``worklist_id`` kept unchanged.
+def iter_metadata_preserving_ancestors(worklists_dir: Path, worklist_id: str) -> Iterator[str]:
+    """Yield verified parent worklists whose family metadata ``worklist_id`` kept unchanged.
 
     Follows ``snapshot.input_snapshot_ids.worklist`` through text reclassifications
     (v1 ``reclassification`` or ``reclassify_saved_worklist``) and EX_DUF migrations
     without a live refresh. Those derivations change only seed status and candidate
     reasons of existing families, so evidence seeded on an ancestor still applies to
-    the families it names. A live refresh may change metadata, so the walk stops there.
+    the families it names. A live refresh (or any refresh marker) may change metadata,
+    so the walk stops there. Each step checks that the child's recorded parent JSON hash
+    matches the parent file. Lazy: callers can stop once they find what they need.
     """
 
-    ancestors: list[str] = []
+    seen = {worklist_id}
     current = worklist_id
     while True:
         manifest = verified_manifest(worklists_dir / f"{current}.json")
-        snapshot = manifest["snapshot"]
-        parents = _mapping(snapshot.get("input_snapshot_ids"))
+        parents = _mapping(manifest["snapshot"].get("input_snapshot_ids"))
         parent = parents.get("worklist")
-        if not isinstance(parent, str) or "live_worklist" in parents:
-            return ancestors
         derivation = _mapping(manifest.get("derivation"))
-        preserving = "reclassification" in manifest or derivation.get("method") in {
-            "reclassify_saved_worklist", "exduf_migration",
-        }
-        if not preserving or parent in ancestors or parent == worklist_id:
-            return ancestors
-        ancestors.append(parent)
+        refresh = "live_worklist" in parents or "live_worklist_files" in derivation or bool(
+            derivation.get("refreshed_pfam_ids") or derivation.get("live_new_pfam_ids")
+        )
+        if not isinstance(parent, str) or refresh or parent in seen:
+            return
+        if "reclassification" in manifest:
+            recorded = _mapping(manifest["reclassification"]).get("source_sha256")
+        elif derivation.get("method") in {"reclassify_saved_worklist", "exduf_migration"}:
+            recorded = _mapping(_mapping(derivation.get("input_files")).get("json")).get("sha256")
+        else:
+            return
+        parent_json = worklists_dir / f"{parent}.json"
+        verified_manifest(parent_json)
+        if recorded != hashlib.sha256(parent_json.read_bytes()).hexdigest():
+            raise ReportError(f"{current}: recorded parent hash does not match {parent_json.name}")
+        seen.add(parent)
+        yield parent
         current = parent
+
+
+def metadata_preserving_ancestors(worklists_dir: Path, worklist_id: str) -> list[str]:
+    """All metadata-preserving ancestors of ``worklist_id``, nearest first."""
+
+    return list(iter_metadata_preserving_ancestors(worklists_dir, worklist_id))
 
 
 def verified_manifest(path: Path) -> dict[str, Any]:

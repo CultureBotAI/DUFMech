@@ -8,237 +8,6 @@
     "pfam_id": "",
     "protein_label": "",
     "reviewed": null,
-    "short_name": "DUF1814",
-    "source_category": "genomics",
-    "source_mech": "TraitMech",
-    "source_path": "data/traits/genomics/abie_system.yaml",
-    "source_record_id": "traitmech:000227",
-    "source_record_label": "AbiE system",
-    "source_section": "record_text",
-    "taxon_id": "",
-    "taxon_label": "",
-    "uniprot_accession": "",
-    "unknown_status": "NOT_IN_WORKLIST"
-  },
-  {
-    "cited_uniprot_accession": "",
-    "family_mentioned_in_record": null,
-    "link_basis": [
-      "record_mentions_unlisted_short_name"
-    ],
-    "pfam_id": "",
-    "protein_label": "",
-    "reviewed": null,
-    "short_name": "DUF1998",
-    "source_category": "genomics",
-    "source_mech": "TraitMech",
-    "source_path": "data/traits/genomics/disarm_system.yaml",
-    "source_record_id": "traitmech:000211",
-    "source_record_label": "DISARM system",
-    "source_section": "record_text",
-    "taxon_id": "",
-    "taxon_label": "",
-    "uniprot_accession": "",
-    "unknown_status": "NOT_IN_WORKLIST"
-  },
-  {
-    "cited_uniprot_accession": "",
-    "family_mentioned_in_record": null,
-    "link_basis": [
-      "record_mentions_unlisted_short_name"
-    ],
-    "pfam_id": "",
-    "protein_label": "",
-    "reviewed": null,
-    "short_name": "DUF262",
-    "source_category": "bacteria",
-    "source_mech": "TaxonMech",
-    "source_path": "data/taxa/bacteria/sinorhizobium_xinjiangense.yaml",
-    "source_record_id": "NCBITaxon:28106",
-    "source_record_label": "Sinorhizobium xinjiangense",
-    "source_section": "record_text",
-    "taxon_id": "",
-    "taxon_label": "",
-    "uniprot_accession": "",
-    "unknown_status": "NOT_IN_WORKLIST"
-  },
-  {
-    "cited_uniprot_accession": "",
-    "family_mentioned_in_record": null,
-    "link_basis": [
-      "record_mentions_unlisted_short_name"
-    ],
-    "pfam_id": "",
-    "protein_label": "",
-    "reviewed": null,
-    "short_name": "DUF262",
-    "source_category": "genomics",
-    "source_mech": "TraitMech",
-    "source_path": "data/traits/genomics/duf262_schlafen_system.yaml",
-    "source_record_id": "traitmech:000530",
-    "source_record_label": "DUF262 Schlafen system",
-    "source_section": "record_text",
-    "taxon_id": "",
-    "taxon_label": "",
-    "uniprot_accession": "",
-    "unknown_status": "NOT_IN_WORKLIST"
-  },
-  {
-    "cited_uniprot_accession": "",
-    "family_mentioned_in_record": null,
-    "link_basis": [
-      "record_mentions_unlisted_short_name"
-    ],
-    "pfam_id": "",
-    "protein_label": "",
-    "reviewed": null,
-    "short_name": "DUF4201",
-    "source_category": "physiology",
-    "source_mech": "TraitMech",
-    "source_path": "data/traits/physiology/gravitaxis.yaml",
-    "source_record_id": "traitmech:000584",
-    "source_record_label": "gravitaxis",
-    "source_section": "record_text",
-    "taxon_id": "",
-    "taxon_label": "",
-    "uniprot_accession": "",
-    "unknown_status": "NOT_IN_WORKLIST"
-  },
-  {
-    "cited_uniprot_accession": "",
-    "family_mentioned_in_record": null,
-    "link_basis": [
-      "record_mentions_unlisted_short_name"
-    ],
-    "pfam_id": "",
-    "protein_label": "",
-    "reviewed": null,
-    "short_name": "DUF4263",
-    "source_category": "genomics",
-    "source_mech": "TraitMech",
-    "source_path": "data/traits/genomics/pd_t4_8_system.yaml",
-    "source_record_id": "traitmech:000393",
-    "source_record_label": "PD-T4-8 system",
-    "source_section": "record_text",
-    "taxon_id": "",
-    "taxon_label": "",
-    "uniprot_accession": "",
-    "unknown_status": "NOT_IN_WORKLIST"
-  },
-  {
-    "cited_uniprot_accession": "",
-    "family_mentioned_in_record": null,
-    "link_basis": [
-      "record_mentions_unlisted_short_name"
-    ],
-    "pfam_id": "",
-    "protein_label": "",
-    "reviewed": null,
-    "short_name": "DUF4297",
-    "source_category": "genomics",
-    "source_mech": "TraitMech",
-    "source_path": "data/traits/genomics/gao_her_duf_system.yaml",
-    "source_record_id": "traitmech:000361",
-    "source_record_label": "Gao-Her-DUF system",
-    "source_section": "record_text",
-    "taxon_id": "",
-    "taxon_label": "",
-    "uniprot_accession": "",
-    "unknown_status": "NOT_IN_WORKLIST"
-  },
-  {
-    "cited_uniprot_accession": "",
-    "family_mentioned_in_record": null,
-    "link_basis": [
-      "record_mentions_unlisted_short_name"
-    ],
-    "pfam_id": "",
-    "protein_label": "",
-    "reviewed": null,
-    "short_name": "DUF4297",
-    "source_category": "genomics",
-    "source_mech": "TraitMech",
-    "source_path": "data/traits/genomics/gao_her_system.yaml",
-    "source_record_id": "traitmech:000409",
-    "source_record_label": "Gao-Her system",
-    "source_section": "record_text",
-    "taxon_id": "",
-    "taxon_label": "",
-    "uniprot_accession": "",
-    "unknown_status": "NOT_IN_WORKLIST"
-  },
-  {
-    "cited_uniprot_accession": "",
-    "family_mentioned_in_record": null,
-    "link_basis": [
-      "record_mentions_unlisted_short_name"
-    ],
-    "pfam_id": "",
-    "protein_label": "",
-    "reviewed": null,
-    "short_name": "DUF4338",
-    "source_category": "genomics",
-    "source_mech": "TraitMech",
-    "source_path": "data/traits/genomics/druantia_system.yaml",
-    "source_record_id": "traitmech:000234",
-    "source_record_label": "Druantia system",
-    "source_section": "record_text",
-    "taxon_id": "",
-    "taxon_label": "",
-    "uniprot_accession": "",
-    "unknown_status": "NOT_IN_WORKLIST"
-  },
-  {
-    "cited_uniprot_accession": "",
-    "family_mentioned_in_record": null,
-    "link_basis": [
-      "record_mentions_unlisted_short_name"
-    ],
-    "pfam_id": "",
-    "protein_label": "",
-    "reviewed": null,
-    "short_name": "DUF4338",
-    "source_category": "genomics",
-    "source_mech": "TraitMech",
-    "source_path": "data/traits/genomics/druantia_type_i_system.yaml",
-    "source_record_id": "traitmech:000578",
-    "source_record_label": "Druantia type I system",
-    "source_section": "record_text",
-    "taxon_id": "",
-    "taxon_label": "",
-    "uniprot_accession": "",
-    "unknown_status": "NOT_IN_WORKLIST"
-  },
-  {
-    "cited_uniprot_accession": "",
-    "family_mentioned_in_record": null,
-    "link_basis": [
-      "record_mentions_unlisted_short_name"
-    ],
-    "pfam_id": "",
-    "protein_label": "",
-    "reviewed": null,
-    "short_name": "DUF4393",
-    "source_category": "genomics",
-    "source_mech": "TraitMech",
-    "source_path": "data/traits/genomics/abialpha_system.yaml",
-    "source_record_id": "traitmech:000322",
-    "source_record_label": "AbiAlpha system",
-    "source_section": "record_text",
-    "taxon_id": "",
-    "taxon_label": "",
-    "uniprot_accession": "",
-    "unknown_status": "NOT_IN_WORKLIST"
-  },
-  {
-    "cited_uniprot_accession": "",
-    "family_mentioned_in_record": null,
-    "link_basis": [
-      "record_mentions_unlisted_short_name"
-    ],
-    "pfam_id": "",
-    "protein_label": "",
-    "reviewed": null,
     "short_name": "UPF0014",
     "source_category": "bacteria",
     "source_mech": "TaxonMech",
@@ -7894,6 +7663,48 @@
     "taxon_label": "",
     "uniprot_accession": "",
     "unknown_status": "UNKNOWN_CANDIDATE"
+  },
+  {
+    "cited_uniprot_accession": "",
+    "family_mentioned_in_record": null,
+    "link_basis": [
+      "record_mentions_previous_pfam_name"
+    ],
+    "pfam_id": "PF03235",
+    "protein_label": "",
+    "reviewed": null,
+    "short_name": "GmrSD_N",
+    "source_category": "bacteria",
+    "source_mech": "TaxonMech",
+    "source_path": "data/taxa/bacteria/sinorhizobium_xinjiangense.yaml",
+    "source_record_id": "NCBITaxon:28106",
+    "source_record_label": "Sinorhizobium xinjiangense",
+    "source_section": "record_text",
+    "taxon_id": "",
+    "taxon_label": "",
+    "uniprot_accession": "",
+    "unknown_status": "EX_DUF"
+  },
+  {
+    "cited_uniprot_accession": "",
+    "family_mentioned_in_record": null,
+    "link_basis": [
+      "record_mentions_previous_pfam_name"
+    ],
+    "pfam_id": "PF03235",
+    "protein_label": "",
+    "reviewed": null,
+    "short_name": "GmrSD_N",
+    "source_category": "genomics",
+    "source_mech": "TraitMech",
+    "source_path": "data/traits/genomics/duf262_schlafen_system.yaml",
+    "source_record_id": "traitmech:000530",
+    "source_record_label": "DUF262 Schlafen system",
+    "source_section": "record_text",
+    "taxon_id": "",
+    "taxon_label": "",
+    "uniprot_accession": "",
+    "unknown_status": "EX_DUF"
   },
   {
     "cited_uniprot_accession": "",
@@ -63762,6 +63573,27 @@
     "cited_uniprot_accession": "",
     "family_mentioned_in_record": null,
     "link_basis": [
+      "record_mentions_previous_pfam_name"
+    ],
+    "pfam_id": "PF08843",
+    "protein_label": "",
+    "reviewed": null,
+    "short_name": "AbiEii",
+    "source_category": "genomics",
+    "source_mech": "TraitMech",
+    "source_path": "data/traits/genomics/abie_system.yaml",
+    "source_record_id": "traitmech:000227",
+    "source_record_label": "AbiE system",
+    "source_section": "record_text",
+    "taxon_id": "",
+    "taxon_label": "",
+    "uniprot_accession": "",
+    "unknown_status": "EX_DUF"
+  },
+  {
+    "cited_uniprot_accession": "",
+    "family_mentioned_in_record": null,
+    "link_basis": [
       "trait_identifier"
     ],
     "pfam_id": "PF08844",
@@ -71905,6 +71737,27 @@
     "taxon_label": "",
     "uniprot_accession": "",
     "unknown_status": "UNKNOWN_CANDIDATE"
+  },
+  {
+    "cited_uniprot_accession": "",
+    "family_mentioned_in_record": null,
+    "link_basis": [
+      "record_mentions_previous_pfam_name"
+    ],
+    "pfam_id": "PF09369",
+    "protein_label": "",
+    "reviewed": null,
+    "short_name": "MZB",
+    "source_category": "genomics",
+    "source_mech": "TraitMech",
+    "source_path": "data/traits/genomics/disarm_system.yaml",
+    "source_record_id": "traitmech:000211",
+    "source_record_label": "DISARM system",
+    "source_section": "record_text",
+    "taxon_id": "",
+    "taxon_label": "",
+    "uniprot_accession": "",
+    "unknown_status": "EX_DUF"
   },
   {
     "cited_uniprot_accession": "",
@@ -158494,6 +158347,27 @@
     "cited_uniprot_accession": "",
     "family_mentioned_in_record": null,
     "link_basis": [
+      "record_mentions_previous_pfam_name"
+    ],
+    "pfam_id": "PF13870",
+    "protein_label": "",
+    "reviewed": null,
+    "short_name": "CCDC113_CCDC96_CC",
+    "source_category": "physiology",
+    "source_mech": "TraitMech",
+    "source_path": "data/traits/physiology/gravitaxis.yaml",
+    "source_record_id": "traitmech:000584",
+    "source_record_label": "gravitaxis",
+    "source_section": "record_text",
+    "taxon_id": "",
+    "taxon_label": "",
+    "uniprot_accession": "",
+    "unknown_status": "EX_DUF"
+  },
+  {
+    "cited_uniprot_accession": "",
+    "family_mentioned_in_record": null,
+    "link_basis": [
       "trait_identifier"
     ],
     "pfam_id": "PF13875",
@@ -160760,6 +160634,27 @@
   },
   {
     "cited_uniprot_accession": "",
+    "family_mentioned_in_record": null,
+    "link_basis": [
+      "record_mentions_previous_pfam_name"
+    ],
+    "pfam_id": "PF14082",
+    "protein_label": "",
+    "reviewed": null,
+    "short_name": "SduA_C",
+    "source_category": "genomics",
+    "source_mech": "TraitMech",
+    "source_path": "data/traits/genomics/pd_t4_8_system.yaml",
+    "source_record_id": "traitmech:000393",
+    "source_record_label": "PD-T4-8 system",
+    "source_section": "record_text",
+    "taxon_id": "",
+    "taxon_label": "",
+    "uniprot_accession": "",
+    "unknown_status": "EX_DUF"
+  },
+  {
+    "cited_uniprot_accession": "",
     "family_mentioned_in_record": true,
     "link_basis": [
       "canonical_example_family_classification"
@@ -161555,6 +161450,48 @@
     "taxon_label": "",
     "uniprot_accession": "",
     "unknown_status": "UNKNOWN_CANDIDATE"
+  },
+  {
+    "cited_uniprot_accession": "",
+    "family_mentioned_in_record": null,
+    "link_basis": [
+      "record_mentions_previous_pfam_name"
+    ],
+    "pfam_id": "PF14130",
+    "protein_label": "",
+    "reviewed": null,
+    "short_name": "Cap4_nuclease",
+    "source_category": "genomics",
+    "source_mech": "TraitMech",
+    "source_path": "data/traits/genomics/gao_her_duf_system.yaml",
+    "source_record_id": "traitmech:000361",
+    "source_record_label": "Gao-Her-DUF system",
+    "source_section": "record_text",
+    "taxon_id": "",
+    "taxon_label": "",
+    "uniprot_accession": "",
+    "unknown_status": "EX_DUF"
+  },
+  {
+    "cited_uniprot_accession": "",
+    "family_mentioned_in_record": null,
+    "link_basis": [
+      "record_mentions_previous_pfam_name"
+    ],
+    "pfam_id": "PF14130",
+    "protein_label": "",
+    "reviewed": null,
+    "short_name": "Cap4_nuclease",
+    "source_category": "genomics",
+    "source_mech": "TraitMech",
+    "source_path": "data/traits/genomics/gao_her_system.yaml",
+    "source_record_id": "traitmech:000409",
+    "source_record_label": "Gao-Her system",
+    "source_section": "record_text",
+    "taxon_id": "",
+    "taxon_label": "",
+    "uniprot_accession": "",
+    "unknown_status": "EX_DUF"
   },
   {
     "cited_uniprot_accession": "",
@@ -162857,6 +162794,48 @@
     "taxon_label": "",
     "uniprot_accession": "",
     "unknown_status": "UNKNOWN_CANDIDATE"
+  },
+  {
+    "cited_uniprot_accession": "",
+    "family_mentioned_in_record": null,
+    "link_basis": [
+      "record_mentions_previous_pfam_name"
+    ],
+    "pfam_id": "PF14236",
+    "protein_label": "",
+    "reviewed": null,
+    "short_name": "DruA",
+    "source_category": "genomics",
+    "source_mech": "TraitMech",
+    "source_path": "data/traits/genomics/druantia_system.yaml",
+    "source_record_id": "traitmech:000234",
+    "source_record_label": "Druantia system",
+    "source_section": "record_text",
+    "taxon_id": "",
+    "taxon_label": "",
+    "uniprot_accession": "",
+    "unknown_status": "EX_DUF"
+  },
+  {
+    "cited_uniprot_accession": "",
+    "family_mentioned_in_record": null,
+    "link_basis": [
+      "record_mentions_previous_pfam_name"
+    ],
+    "pfam_id": "PF14236",
+    "protein_label": "",
+    "reviewed": null,
+    "short_name": "DruA",
+    "source_category": "genomics",
+    "source_mech": "TraitMech",
+    "source_path": "data/traits/genomics/druantia_type_i_system.yaml",
+    "source_record_id": "traitmech:000578",
+    "source_record_label": "Druantia type I system",
+    "source_section": "record_text",
+    "taxon_id": "",
+    "taxon_label": "",
+    "uniprot_accession": "",
+    "unknown_status": "EX_DUF"
   },
   {
     "cited_uniprot_accession": "",
@@ -165062,6 +165041,27 @@
     "taxon_label": "",
     "uniprot_accession": "",
     "unknown_status": "UNKNOWN_CANDIDATE"
+  },
+  {
+    "cited_uniprot_accession": "",
+    "family_mentioned_in_record": null,
+    "link_basis": [
+      "record_mentions_previous_pfam_name"
+    ],
+    "pfam_id": "PF14337",
+    "protein_label": "",
+    "reviewed": null,
+    "short_name": "Abi_alpha",
+    "source_category": "genomics",
+    "source_mech": "TraitMech",
+    "source_path": "data/traits/genomics/abialpha_system.yaml",
+    "source_record_id": "traitmech:000322",
+    "source_record_label": "AbiAlpha system",
+    "source_section": "record_text",
+    "taxon_id": "",
+    "taxon_label": "",
+    "uniprot_accession": "",
+    "unknown_status": "EX_DUF"
   },
   {
     "cited_uniprot_accession": "",

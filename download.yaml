@@ -11,7 +11,7 @@
   license_verified_on: "2026-10-07"
   license_note: "InterPro and Pfam downloadable data are CC0; this does not license other member database collections."
   access: "API"
-  access_note: "Public InterPro Pfam entry API (search, and per-accession entries for EX_DUF migration); record query and extra_fields in each manifest."
+  access_note: "Public InterPro Pfam entry API: search manifests record query and extra_fields; EX_DUF migration manifests record the per-accession entry endpoint, parents and added families."
   implementation: "IMPLEMENTED"
   reviewed_on: "2026-10-08"
   review_basis: "docs/provenance/exduf-migration-2026-10-08.md"

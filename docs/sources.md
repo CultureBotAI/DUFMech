@@ -2,7 +2,8 @@
 
 `download.yaml` inventories the 20 implemented source pipelines. It was reviewed
 against every existing source-freeze module, the source roadmap, the October 1
-pilot reports, and the retained manifests on **2026-10-07**. The derived score
+pilot reports, and the retained manifests on **2026-10-07**; the InterPro/Pfam and
+cross-Mech entries were updated on **2026-10-08** for the EX_DUF migration. The derived score
 writer is covered by the writer audit; it is not a twenty-first upstream source.
 No provider data is fetched by the governance checker.
 
@@ -64,7 +65,7 @@ retained manifests (October 5, 6 and 8; the latter two are offline relabels). It
 | UniParc | UniProt ID mapping | External pilot: 12 identity rows; no direct characterization score input |
 | Pfam previous identifiers | Pinned Pfam 38.2 `Pfam-A.seed.gz` headers | October 7 freeze: 1,834 families with a former DUF/UPF name; ADOPTED as reference |
 | UniProtKB example candidates | Per-family UniProtKB search by Pfam cross-reference | October 7 freeze for TraitMech and ProteinTraitsMech DUF gaps; ADOPTED as reference candidates |
-| Cross-Mech | Pinned sibling git records and UniProt cache | October 5 scan and October 6 offline derivation retained; combined terms unverified |
+| Cross-Mech | Pinned sibling git records and UniProt cache | October 5 scan with October 6 and October 8 offline derivations retained (October 8 records unscanned EX_DUF families); combined terms unverified |
 
 Pilot counts above come from
 [the expanded freeze report](provenance/expanded-first-pass-freeze-2026-10-01.md),

@@ -6,7 +6,11 @@ Snapshot `cross-mech-duf-examples-2026-10-08` against worklist `interpro-pfam-du
 
 Link bases: `record_mentions_*` means the record text names the family; `uniprot_pfam_xref` means a UniProtKB accession cited by the record carries the family in UniProtKB; `canonical_example_family_classification` and `trait_identifier` come from ProteinTraitsMech's structured fields. A text mention says the family is discussed, not that a specific protein was curated.
 
-Derived offline from `cross-mech-duf-examples-2026-10-06`: 190 rows received corrected seed labels. Source records, proteins, source commits, and UniProt lookup dates are unchanged; no new Mech scan or UniProt retrieval was performed.
+Derived offline from `cross-mech-duf-examples-2026-10-06`: 201 rows received the selected worklist's seed labels. Source records, proteins, source commits, and UniProt lookup dates are unchanged; no new Mech scan or UniProt retrieval was performed.
+
+Coverage: the scan searched the 6,532 families of `interpro-pfam-duf-2026-10-05`. 1,763 worklist families joined later and were never searched, so their missing links (including ProteinTraitsMech trait records) are not evidence of absence.
+
+11 rows citing a former DUF/UPF name were resolved offline through `pfam-previous-unknown-names-2026-10-07` (link basis `record_mentions_previous_pfam_name`): DUF1814 → PF08843, DUF1998 → PF09369, DUF262 → PF03235, DUF4201 → PF13870, DUF4263 → PF14082, DUF4297 → PF14130, DUF4338 → PF14236, DUF4393 → PF14337.
 
 ## Coverage by Mech
 
@@ -30,17 +34,6 @@ These records are now carried in DUFMech's cross-Mech snapshot and dashboard.
 
 | Family | Status | Mech | Record | Protein | Basis |
 |---|---|---|---|---|---|
-| DUF1814 | NOT_IN_WORKLIST | TraitMech | AbiE system |  | record_mentions_unlisted_short_name |
-| DUF1998 | NOT_IN_WORKLIST | TraitMech | DISARM system |  | record_mentions_unlisted_short_name |
-| DUF262 | NOT_IN_WORKLIST | TaxonMech | Sinorhizobium xinjiangense |  | record_mentions_unlisted_short_name |
-| DUF262 | NOT_IN_WORKLIST | TraitMech | DUF262 Schlafen system |  | record_mentions_unlisted_short_name |
-| DUF4201 | NOT_IN_WORKLIST | TraitMech | gravitaxis |  | record_mentions_unlisted_short_name |
-| DUF4263 | NOT_IN_WORKLIST | TraitMech | PD-T4-8 system |  | record_mentions_unlisted_short_name |
-| DUF4297 | NOT_IN_WORKLIST | TraitMech | Gao-Her-DUF system |  | record_mentions_unlisted_short_name |
-| DUF4297 | NOT_IN_WORKLIST | TraitMech | Gao-Her system |  | record_mentions_unlisted_short_name |
-| DUF4338 | NOT_IN_WORKLIST | TraitMech | Druantia system |  | record_mentions_unlisted_short_name |
-| DUF4338 | NOT_IN_WORKLIST | TraitMech | Druantia type I system |  | record_mentions_unlisted_short_name |
-| DUF4393 | NOT_IN_WORKLIST | TraitMech | AbiAlpha system |  | record_mentions_unlisted_short_name |
 | UPF0014 | NOT_IN_WORKLIST | TaxonMech | Lactobacillus delbrueckii |  | record_mentions_unlisted_short_name |
 | UPF0014 | NOT_IN_WORKLIST | TaxonMech | Lactobacillus delbrueckii subsp. lactis |  | record_mentions_unlisted_short_name |
 | UPF0014 | NOT_IN_WORKLIST | TaxonMech | Lactobacillus leichmannii |  | record_mentions_unlisted_short_name |
@@ -52,6 +45,8 @@ These records are now carried in DUFMech's cross-Mech snapshot and dashboard.
 | UPF0037 | NOT_IN_WORKLIST | TaxonMech | Lactobacillus leichmannii |  | record_mentions_unlisted_short_name |
 | UPF0265 | NOT_IN_WORKLIST | CellStructureMech | H-body |  | record_mentions_unlisted_short_name |
 | UPF0265 | NOT_IN_WORKLIST | CellStructureMech | TmaR condensate |  | record_mentions_unlisted_short_name |
+| GmrSD_N (PF03235) | EX_DUF | TaxonMech | Sinorhizobium xinjiangense |  | record_mentions_previous_pfam_name |
+| GmrSD_N (PF03235) | EX_DUF | TraitMech | DUF262 Schlafen system |  | record_mentions_previous_pfam_name |
 | DUF348 (PF03990) | KNOWN_HISTORICAL_DUF | TraitMech | dormancy | P9WG29 Resuscitation-promoting factor RpfB | uniprot_pfam_xref |
 | DUF496 (PF04363) | UNKNOWN_CANDIDATE | CellStructureMech | H-body |  | record_mentions_interpro_id, record_mentions_short_name |
 | DUF496 (PF04363) | UNKNOWN_CANDIDATE | CellStructureMech | H-body | P0A8M6 Pole-localizer protein TmaR | uniprot_pfam_xref |
@@ -61,7 +56,9 @@ These records are now carried in DUFMech's cross-Mech snapshot and dashboard.
 | DUF1674 (PF07896) | UNKNOWN_CANDIDATE | AntibioticMech | fluconazole | A0A1D8PGP5 Succinate dehydrogenase assembly factor 4, mitochondrial | uniprot_pfam_xref |
 | DUF1690 (PF07956) | UNKNOWN_CANDIDATE | CellStructureMech | Mic60-Mic19 complex |  | record_mentions_interpro_id, record_mentions_pfam_id, record_mentions_short_name |
 | DUF1720 (PF08226) | UNKNOWN_CANDIDATE | AntibioticMech | fluconazole | Q5ALV2 Actin cytoskeleton-regulatory complex protein SLA1 | uniprot_pfam_xref |
+| AbiEii (PF08843) | EX_DUF | TraitMech | AbiE system |  | record_mentions_previous_pfam_name |
 | DUF1829 (PF08862) | UNKNOWN_CANDIDATE | TraitMech | DS-6 system |  | record_mentions_short_name |
+| MZB (PF09369) | EX_DUF | TraitMech | DISARM system |  | record_mentions_previous_pfam_name |
 | DUF2290 (PF10053) | KNOWN_HISTORICAL_DUF | TraitMech | Rst_HelicaseDUF2290 system |  | record_mentions_pfam_id, record_mentions_short_name |
 | DUF2290 (PF10053) | KNOWN_HISTORICAL_DUF | TraitMech | Rst_Hydrolase-3Tm system |  | record_mentions_short_name |
 | DUF2326 (PF10088) | KNOWN_HISTORICAL_DUF | TraitMech | DS-30 system |  | record_mentions_short_name |
@@ -73,7 +70,14 @@ These records are now carried in DUFMech's cross-Mech snapshot and dashboard.
 | DUF3459 (PF11941) | UNKNOWN_CANDIDATE | PathwayMech | Mycobacterium tuberculosis trehalose biosynthesis | P9WQ23 Malto-oligosyltrehalose trehalohydrolase | uniprot_pfam_xref |
 | DUF3696 (PF12476) | UNKNOWN_CANDIDATE | TraitMech | DS-16 system |  | record_mentions_short_name |
 | DUF4145 (PF13643) | UNKNOWN_CANDIDATE | TraitMech | PD-T7-4 system |  | record_mentions_pfam_id |
+| CCDC113_CCDC96_CC (PF13870) | EX_DUF | TraitMech | gravitaxis |  | record_mentions_previous_pfam_name |
 | DUF4238 (PF14022) | UNKNOWN_CANDIDATE | TraitMech | Rst_DUF4238 system |  | record_mentions_short_name |
+| SduA_C (PF14082) | EX_DUF | TraitMech | PD-T4-8 system |  | record_mentions_previous_pfam_name |
+| Cap4_nuclease (PF14130) | EX_DUF | TraitMech | Gao-Her-DUF system |  | record_mentions_previous_pfam_name |
+| Cap4_nuclease (PF14130) | EX_DUF | TraitMech | Gao-Her system |  | record_mentions_previous_pfam_name |
+| DruA (PF14236) | EX_DUF | TraitMech | Druantia system |  | record_mentions_previous_pfam_name |
+| DruA (PF14236) | EX_DUF | TraitMech | Druantia type I system |  | record_mentions_previous_pfam_name |
+| Abi_alpha (PF14337) | EX_DUF | TraitMech | AbiAlpha system |  | record_mentions_previous_pfam_name |
 | DUF5677 (PF18928) | UNKNOWN_CANDIDATE | TraitMech | Resolvase DUF5677 system |  | record_mentions_short_name |
 | DUF5830 (PF19148) | UNKNOWN_CANDIDATE | TraitMech | DS-5 system |  | record_mentions_short_name |
 | DUF5838 (PF19156) | UNKNOWN_CANDIDATE | NaturalProductMech | muscoride A | A0A5Q0TWZ6 MusF1 | uniprot_pfam_xref |
@@ -86,20 +90,12 @@ These records are now carried in DUFMech's cross-Mech snapshot and dashboard.
 | DUF6988 (PF22491) | UNKNOWN_CANDIDATE | TraitMech | DS-15 system |  | record_mentions_short_name |
 | DUF8724 (PF30764) | UNKNOWN_CANDIDATE | TraitMech | DISARM system | P0DW06 DISARM protein DrmB | uniprot_pfam_xref |
 
-12 names do not match a current worklist short name: DUF1814, DUF1998, DUF262, DUF4201, DUF4263, DUF4297, DUF4338, DUF4393, UPF0014, UPF0018, UPF0037, UPF0265. DUF names here are usually families Pfam renamed after characterization; UPF names are UniProt nomenclature, which the Pfam-derived worklist never carries. Both need a Pfam ID before DUFMech can score them.
+4 names do not match a current worklist short name: UPF0014, UPF0018, UPF0037, UPF0265. DUF names here are usually families Pfam renamed after characterization; UPF names are UniProt nomenclature, which the Pfam-derived worklist never carries. Both need a Pfam ID before DUFMech can score them.
 
-Pfam previous identifiers (`pfam-previous-unknown-names-2026-10-07`) map 8 of 12 names to current families. A former DUF/UPF name records Pfam history; it is not by itself evidence of characterization.
+Pfam previous identifiers (`pfam-previous-unknown-names-2026-10-07`) map 0 of 4 names to current families. A former DUF/UPF name records Pfam history; it is not by itself evidence of characterization.
 
 | Name | Cited in | Current Pfam family | Description | In worklist |
 |---|---|---|---|---|
-| DUF1814 | TraitMech | PF08843 AbiEii | Nucleotidyl transferase AbiEii toxin, Type IV TA system | yes |
-| DUF1998 | TraitMech | PF09369 MZB | MrfA Zn-binding domain | yes |
-| DUF262 | TaxonMech, TraitMech | PF03235 GmrSD_N | GmrSD restriction endonuclease, N-terminal domain | yes |
-| DUF4201 | TraitMech | PF13870 CCDC113_CCDC96_CC | CCDC113/CCDC96, coiled-coil | yes |
-| DUF4263 | TraitMech | PF14082 SduA_C | Shedu protein SduA, C-terminal | yes |
-| DUF4297 | TraitMech | PF14130 Cap4_nuclease | Cap4, dsDNA endonuclease domain | yes |
-| DUF4338 | TraitMech | PF14236 DruA | Druantia protein DruA | yes |
-| DUF4393 | TraitMech | PF14337 Abi_alpha | Abortive infection alpha | yes |
 | UPF0014 | TaxonMech | not found in these Pfam previous identifiers | | |
 | UPF0018 | TaxonMech | not found in these Pfam previous identifiers | | |
 | UPF0037 | TaxonMech | not found in these Pfam previous identifiers | | |
@@ -107,7 +103,7 @@ Pfam previous identifiers (`pfam-previous-unknown-names-2026-10-07`) map 8 of 12
 
 ## ProteinTraitsMech
 
-- 6,532 of 6,532 linked families have a ProteinTraitsMech trait record.
+- 6,532 of 6,540 linked families have a ProteinTraitsMech trait record.
 - 1,746 of those trait records list a canonical example that carries the family; 4,786 do not.
 - 6,879 canonical-example rows place 3,529 DUF-carrying proteins under 1,747 families.
 - 918 of those rows sit under functional traits (398 proteins, 264 families).
@@ -128,7 +124,10 @@ Families named in TraitMech records, with proteins that could supply an example:
 
 | Family | TraitMech proteins | ProteinTraitsMech example proteins |
 |---|---|---|
+| PF03235 |  | none; needs a DUFMech member example |
+| PF08843 |  | none; needs a DUFMech member example |
 | PF08862 |  | none; needs a DUFMech member example |
+| PF09369 |  | none; needs a DUFMech member example |
 | PF10053 |  | none; needs a DUFMech member example |
 | PF10088 |  | Q45598 |
 | PF11185 |  | none; needs a DUFMech member example |
@@ -138,7 +137,12 @@ Families named in TraitMech records, with proteins that could supply an example:
 | PF11828 |  | none; needs a DUFMech member example |
 | PF12476 |  | none; needs a DUFMech member example |
 | PF13643 |  | none; needs a DUFMech member example |
+| PF13870 |  | none; needs a DUFMech member example |
 | PF14022 |  | none; needs a DUFMech member example |
+| PF14082 |  | none; needs a DUFMech member example |
+| PF14130 |  | none; needs a DUFMech member example |
+| PF14236 |  | none; needs a DUFMech member example |
+| PF14337 |  | none; needs a DUFMech member example |
 | PF18928 |  | none; needs a DUFMech member example |
 | PF19148 |  | none; needs a DUFMech member example |
 | PF20385 |  | none; needs a DUFMech member example |

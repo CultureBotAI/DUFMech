@@ -343,8 +343,15 @@ def _score_family(
     reasons: list[str] = []
     if seed_status == KNOWN_HISTORICAL_DUF:
         reasons.append("historical_interpro_annotation")
+    # An EX_DUF family whose current Pfam name or description still says the function is
+    # unknown keeps the category but is not treated as characterized.
+    ex_duf_still_unknown = seed_status == EX_DUF and any(
+        str(reason).endswith("unknown_function") for reason in family.get("candidate_reasons") or ()
+    )
     if seed_status == EX_DUF:
         reasons.append("pfam_renamed_from_unknown_name")
+    if ex_duf_still_unknown:
+        reasons.append("pfam_metadata_still_says_unknown_function")
     if rhea_reaction_count:
         reasons.append("has_rhea_reaction")
     if experimental_go_mf_count:
@@ -358,7 +365,8 @@ def _score_family(
 
     # Pfam's rename of an EX_DUF family records past characterization, like a
     # historical DUF; neither is experimental evidence for every member.
-    if seed_status in {KNOWN_HISTORICAL_DUF, EX_DUF} or known_count:
+    if (seed_status == KNOWN_HISTORICAL_DUF or known_count
+            or (seed_status == EX_DUF and not ex_duf_still_unknown)):
         characterization_status = KNOWN_HISTORICAL_DUF
     elif partial_count:
         characterization_status = PARTIALLY_CHARACTERIZED
