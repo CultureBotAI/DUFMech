@@ -43,6 +43,7 @@
     ['proteins', 'structures', 'alphafold_models'].forEach(key => textCell(tr, count(row[key]), 'num'));
     const others = Object.entries(row.cross_mech.records_by_mech).map(([name, n]) => name + ': ' + n);
     if (row.cross_mech.protein_traits_record) others.push('ProteinTraitsMech trait record');
+    if (row.cross_mech.scanned === false) others.push('not covered by the cross-Mech scan');
     textCell(tr, others.join('; '));
     textCell(tr, human(row.curation_status));
     return tr;
