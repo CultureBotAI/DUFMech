@@ -145,3 +145,10 @@ def test_malformed_parent_metadata_returns_validation_errors(tmp_path, section, 
             manifest["snapshot"][section] = value
     _rewrite(child, mutate=mutate)
     _reject(child, "snapshot|parent")
+
+
+@pytest.mark.parametrize("value", [{}, [], None, True, 1])
+def test_malformed_derivation_method_returns_validation_errors(tmp_path, value):
+    _, child = _derived(tmp_path, "migration")
+    _rewrite(child, mutate=lambda m: m["derivation"].update(method=value))
+    _reject(child, "method|reclassification")

@@ -90,8 +90,12 @@ def verify_worklist_parent_rows(
     snapshot = manifest.get("snapshot", {})
     if (not isinstance(snapshot, Mapping)
             or not str(snapshot.get("id", "")).startswith("interpro-pfam-duf-")
-            or not isinstance(info, Mapping)
-            or info.get("method") not in {"reclassify_saved_worklist", "exduf_migration"}):
+            or not isinstance(info, Mapping)):
+        return
+    method = info.get("method")
+    if not isinstance(method, str):
+        raise ValueError("worklist derivation method must be a string")  # noqa: TRY004
+    if method not in {"reclassify_saved_worklist", "exduf_migration"}:
         return
     inputs = snapshot.get("input_snapshot_ids", {})
     if not isinstance(inputs, Mapping):
