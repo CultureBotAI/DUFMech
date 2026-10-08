@@ -75,10 +75,20 @@ just migrate-exduf --parent-json data/worklists/interpro-pfam-duf-<date>.json \
   other departure stops the migration and names the family, so nothing is dropped
   silently.
 
-The manifest records both (or all three) parents with file hashes, every status change,
-added, carried and not-found families, and whether anything was fetched live. The
-verified-input loader accepts it as lineage profile `exduf-migration-v1` and checks that
-every `EX_DUF` row, and only those, carries the migration reason.
+The manifest records both (or all three) parents with file hashes. Every status or
+reason change is logged against the parent row; a family new to a live search is logged
+as `ABSENT -> <status>`. Added, carried, retained `EX_DUF`, refreshed (metadata changed
+in the live search), live-new and not-found families are listed, and `fetched_live`
+records whether InterPro lookups were made. The output date must be later than the parent
+and any live worklist, and not earlier than the previous-names snapshot, so it is always
+the newest worklist.
+
+The verified-input loader accepts it as lineage profile `exduf-migration-v1`. It requires
+the migration source identity and the live parent's file provenance when present, rejects
+malformed change entries, and checks that the `EX_DUF` rows are exactly those logged as
+changed to `EX_DUF` plus the added, carried and retained families, each carrying the
+migration reason. A later text reclassification of a migrated worklist (`derivation-v2`)
+remains loadable and keeps `EX_DUF`.
 
 ## Evidence Contract
 

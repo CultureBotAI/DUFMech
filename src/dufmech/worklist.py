@@ -53,6 +53,11 @@ MIGRATION_NOTE = (
     "only seed status and candidate reasons change. Added and carried families are "
     "fetched from the InterPro Pfam entry API."
 )
+MIGRATION_REFRESH_NOTE = (
+    "Rows come from a fresh InterPro DUF search; refreshed_pfam_ids lists families whose "
+    "metadata changed from the parent, live_new_pfam_ids families new to the search, and "
+    "carried or added families are fetched from the InterPro Pfam entry API."
+)
 MIGRATION_POLICY = (
     "EX_DUF: Pfam previous identifiers include a DUF/UPF name and the current Pfam short "
     "name is no longer one. Naming history, not experimental evidence."

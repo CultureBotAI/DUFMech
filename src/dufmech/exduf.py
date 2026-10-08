@@ -31,7 +31,7 @@ import sys
 import time
 from collections import Counter
 from collections.abc import Callable, Iterable, Mapping, Sequence
-from dataclasses import dataclass, field, fields
+from dataclasses import asdict, dataclass, field, fields
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -49,6 +49,7 @@ from dufmech.worklist import (
     MIGRATION_NOTE,
     MIGRATION_POLICY,
     MIGRATION_PROFILE,
+    MIGRATION_REFRESH_NOTE,
     PFAM_RE,
     STATUS_ORDER,
     DufFamilyRow,
@@ -72,14 +73,22 @@ class MigrationPlan:
     """The migrated rows and an auditable account of every change."""
 
     rows: list[DufFamilyRow]
+    # Status/reason changes; ``before`` is the parent row's value, or ``ABSENT`` for a
+    # family that is new in a live refresh.
     reclassified: list[dict[str, Any]] = field(default_factory=list)
     added: list[str] = field(default_factory=list)
     carried: list[str] = field(default_factory=list)
+    retained_ex_duf: list[str] = field(default_factory=list)
+    refreshed: list[str] = field(default_factory=list)
+    live_new: list[str] = field(default_factory=list)
     not_found: list[str] = field(default_factory=list)
     # Families a dry run would fetch from InterPro (only set when ``fetch`` is None).
     to_fetch: list[str] = field(default_factory=list)
+    fetched: bool = False
 
 
+ABSENT = "ABSENT"
+CLASSIFICATION_FIELDS = ("unknown_status", "candidate_reasons")
 Fetcher = Callable[[Sequence[str]], Mapping[str, Mapping[str, Any] | None]]
 
 
@@ -93,7 +102,8 @@ def plan_migration(
     """Apply the EX_DUF rules; ``fetch`` returns InterPro entry payloads by Pfam ID.
 
     With ``fetch=None`` (a dry run) nothing is fetched; ``to_fetch`` lists the
-    families that would be added or carried.
+    families that would be added or carried. Every change is logged against the
+    parent row, so a live refresh cannot hide status or metadata changes.
     """
 
     renamed = {
@@ -101,11 +111,13 @@ def plan_migration(
         for row in previous_names
         if row.get("previous_unknown_names") and not row.get("currently_unknown_name")
     }
+    parents = {row.pfam_id: row for row in parent_rows}
+    if len(parents) != len(parent_rows):
+        raise MigrationError("parent worklist rows repeat a Pfam ID")
     base = list(live_rows) if live_rows is not None else list(parent_rows)
     by_id = {row.pfam_id: row for row in base}
     if len(by_id) != len(base):
         raise MigrationError("worklist rows repeat a Pfam ID")
-    parent_status = {row.pfam_id: row for row in parent_rows}
 
     carry: list[str] = []
     if live_rows is not None:
@@ -123,25 +135,38 @@ def plan_migration(
 
     plan = MigrationPlan(rows=[])
     for pfam_id, row in sorted(by_id.items()):
-        was_ex = parent_status.get(pfam_id) is not None and parent_status[pfam_id].unknown_status == EX_DUF
-        if pfam_id in renamed or was_ex or row.unknown_status == EX_DUF:
-            migrated = mark_ex_duf(row)
-            if migrated != row:
-                plan.reclassified.append({
-                    "pfam_id": pfam_id,
-                    "before": row.unknown_status,
-                    "after": migrated.unknown_status,
-                    "before_reasons": list(row.candidate_reasons),
-                    "after_reasons": list(migrated.candidate_reasons),
-                })
-            row = migrated
+        parent = parents.get(pfam_id)
+        if pfam_id in renamed or row.unknown_status == EX_DUF or (
+            parent is not None and parent.unknown_status == EX_DUF
+        ):
+            row = mark_ex_duf(row)
         plan.rows.append(row)
+        if parent is None:
+            plan.live_new.append(pfam_id)
+        elif live_rows is not None and _metadata(parent) != _metadata(row):
+            plan.refreshed.append(pfam_id)
+        before_status = parent.unknown_status if parent is not None else ABSENT
+        before_reasons = list(parent.candidate_reasons) if parent is not None else []
+        if before_status != row.unknown_status or before_reasons != list(row.candidate_reasons):
+            plan.reclassified.append({
+                "pfam_id": pfam_id,
+                "before": before_status,
+                "after": row.unknown_status,
+                "before_reasons": before_reasons,
+                "after_reasons": list(row.candidate_reasons),
+            })
+        elif row.unknown_status == EX_DUF:
+            plan.retained_ex_duf.append(pfam_id)
 
     wanted = sorted({*carry, *(renamed - by_id.keys())})
     if fetch is None:
         plan.to_fetch = wanted
         return plan
-    payloads = fetch(wanted) if wanted else {}
+    if wanted:
+        payloads = fetch(wanted)
+        plan.fetched = True
+    else:
+        payloads = {}
     for pfam_id in wanted:
         payload = payloads.get(pfam_id)
         row = row_from_interpro_entry(entry_from_interpro_detail(payload)) if payload else None
@@ -154,6 +179,13 @@ def plan_migration(
         missing = sorted(set(carry) & set(plan.not_found))
         raise MigrationError(f"carried families missing from InterPro: {', '.join(missing)}")
     return plan
+
+
+def _metadata(row: DufFamilyRow) -> dict[str, Any]:
+    values = asdict(row)
+    for key in CLASSIFICATION_FIELDS:
+        values.pop(key)
+    return values
 
 
 class InterProEntryClient:
@@ -194,7 +226,9 @@ class InterProEntryClient:
         for attempt in range(self.retries + 1):
             try:
                 response = client.get(url)
-                if response.status_code in {404, 204}:
+                if response.status_code in {404, 204} or (
+                    response.status_code == 200 and not response.content.strip()
+                ):
                     return None
                 if response.status_code in {408, 429, 500, 502, 503, 504} and attempt < self.retries:
                     self.sleep(self.backoff * 2**attempt)
@@ -247,6 +281,12 @@ def prepare_migration(
         live, live_manifest, live_files = _verified(live_json, WORKLIST_STEM)
         live_rows = _worklist_rows(live)
         live_id = live_manifest["snapshot"]["id"]
+        # The output must be the newest worklist, or latest-snapshot selection would
+        # pick the raw live search (no EX_DUF, families dropped).
+        if day <= date.fromisoformat(live_manifest["snapshot"]["date"]):
+            raise MigrationError("migration needs a snapshot date later than the live worklist")
+    if day < date.fromisoformat(names_manifest["snapshot"]["date"]):
+        raise MigrationError("migration date cannot precede the previous-names snapshot")
     previous = json.loads(previous_names_json.read_bytes())
     fetched_at = generated_at or datetime.now(timezone.utc)
     plan = plan_migration(parent_rows, previous, fetch=fetch, live_rows=live_rows)
@@ -272,7 +312,7 @@ def prepare_migration(
         "name": MIGRATED_SOURCE,
         "url": INTERPRO_PFAM_URL,
         "entry_url": f"{INTERPRO_PFAM_URL}<PFAM_ID>/",
-        "note": MIGRATION_NOTE,
+        "note": MIGRATION_REFRESH_NOTE if live_id else MIGRATION_NOTE,
         "original_generated_at": parent_source.get("original_generated_at")
         or parent_manifest["snapshot"]["generated_at"],
     }
@@ -300,9 +340,12 @@ def prepare_migration(
         "changes": plan.reclassified,
         "added_pfam_ids": sorted(plan.added),
         "carried_pfam_ids": sorted(plan.carried),
+        "retained_ex_duf_pfam_ids": sorted(plan.retained_ex_duf),
+        "refreshed_pfam_ids": sorted(plan.refreshed),
+        "live_new_pfam_ids": sorted(plan.live_new),
         "not_found_in_interpro": sorted(plan.not_found),
-        "fetched_live": bool(plan.added or plan.carried),
-        "fetched_at": _datetime_text(fetched_at) if (plan.added or plan.carried) else None,
+        "fetched_live": plan.fetched,
+        "fetched_at": _datetime_text(fetched_at) if plan.fetched else None,
     }
     texts[f"{snapshot_id}.manifest.json"] = json.dumps(manifest, indent=2, sort_keys=True) + "\n"
     return PreparedMigration(manifest, texts, plan)

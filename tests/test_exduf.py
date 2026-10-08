@@ -225,3 +225,143 @@ def test_ex_duf_seed_scores_as_historically_characterized() -> None:
     scored = score_families([row])[0]
     assert scored.characterization_status == KNOWN_HISTORICAL_DUF
     assert "pfam_renamed_from_unknown_name" in scored.demotion_reasons
+
+
+def _write(out: Path, artifacts: dict[str, str]) -> Path:
+    out.mkdir(parents=True, exist_ok=True)
+    for name, text in artifacts.items():
+        (out / name).write_text(text, encoding="utf-8")
+    return out / next(name for name in artifacts if name.endswith(".json") and "manifest" not in name)
+
+
+def _rewrite(json_path: Path, *, rows=None, mutate=None) -> None:
+    """Rewrite a snapshot with consistent file hashes so only lineage checks can fail."""
+    import hashlib
+
+    from dufmech.worklist import DufFamilyRow, render_json, render_tsv
+
+    manifest_path = json_path.with_suffix(".manifest.json")
+    manifest = json.loads(manifest_path.read_text("utf-8"))
+    rows = rows if rows is not None else json.loads(json_path.read_text("utf-8"))
+    objs = [DufFamilyRow(**{k: (tuple(v) if k == "candidate_reasons" else v)
+                            for k, v in row.items() if k != "source_url"}) for row in rows]
+    for kind, text in (("json", render_json(objs) + "\n"), ("tsv", render_tsv(objs) + "\n")):
+        json_path.with_suffix(f".{kind}").write_text(text, encoding="utf-8")
+        manifest["files"][kind] = {"path": json_path.with_suffix(f".{kind}").name,
+                                   "bytes": len(text.encode()),
+                                   "sha256": hashlib.sha256(text.encode()).hexdigest()}
+    if mutate:
+        mutate(manifest)
+    manifest_path.write_text(json.dumps(manifest), "utf-8")
+
+
+def _migrated(tmp_path: Path) -> Path:
+    parent, previous = _inputs(tmp_path)
+    prepared = prepare_migration(
+        parent, previous, snapshot_date="2026-10-08", fetch=_fetch,
+        generated_at=datetime(2026, 10, 8, tzinfo=timezone.utc),
+    )
+    return _write(tmp_path / "migrated", prepared.artifacts)
+
+
+def test_reclassifying_a_migrated_worklist_stays_loadable(tmp_path: Path) -> None:
+    from dufmech.reclassify import reclassify_snapshot
+
+    migrated = _migrated(tmp_path)
+    out = tmp_path / "reclassified"
+    reclassify_snapshot(migrated, out, snapshot_date="2026-10-09",
+                        generated_at=datetime(2026, 10, 9, tzinfo=timezone.utc))
+    loaded = load_score_input(out / "interpro-pfam-duf-2026-10-09.json", "worklist")
+    assert {row["unknown_status"] for row in loaded.rows} >= {EX_DUF}
+
+
+def test_refresh_logs_against_parent_and_records_metadata_changes(tmp_path: Path) -> None:
+    parent = [*PARENT, mark_ex_duf(_row("PF14337", "Abi_alpha", "Abortive infection alpha"))]
+    live = [
+        _row("PF01519", "DUF16", "Protein of unknown function DUF16", proteins=77),
+        _row("PF14337", "Abi_alpha", "Abortive infection alpha"),  # still in search
+        _row("PF55555", "DUF555", "Domain of unknown function DUF555"),  # new to search
+    ]
+    fetched = {"PF06172": _detail("PF06172", "Cupin_8", "Cupin superfamily")}
+    plan = plan_migration(parent, PREVIOUS[:1], fetch=lambda ids: {i: fetched.get(i) for i in ids},
+                          live_rows=live)
+    assert plan.retained_ex_duf == ["PF14337"]
+    assert plan.refreshed == ["PF01519"]
+    assert plan.live_new == ["PF55555"]
+    assert plan.carried == ["PF06172"]
+    changes = {change["pfam_id"]: change for change in plan.reclassified}
+    assert changes["PF55555"]["before"] == "ABSENT"
+    assert "PF14337" not in changes  # was EX_DUF in the parent; not a change
+
+
+def test_migration_orders_live_and_previous_name_dates(tmp_path: Path) -> None:
+    parent, previous = _inputs(tmp_path)
+    live_dir = tmp_path / "live"
+    write_worklist_snapshot(PARENT, live_dir, snapshot_date="2026-10-09", generated_at=T0)
+    live = live_dir / "interpro-pfam-duf-2026-10-09.json"
+    with pytest.raises(MigrationError, match="later than the live worklist"):
+        prepare_migration(parent, previous, snapshot_date="2026-10-09", fetch=None, live_json=live)
+    with pytest.raises(MigrationError, match="precede the previous-names"):
+        prepare_migration(parent, previous, snapshot_date="2026-10-06", fetch=None)
+
+
+def test_fetched_live_reflects_lookups_even_when_nothing_is_found(tmp_path: Path) -> None:
+    parent, previous = _inputs(tmp_path)
+    prepared = prepare_migration(parent, previous, snapshot_date="2026-10-08",
+                                 fetch=lambda ids: {i: None for i in ids})
+    derivation = prepared.manifest["derivation"]
+    assert derivation["fetched_live"] is True
+    assert derivation["added_pfam_ids"] == []
+    assert derivation["not_found_in_interpro"] == ["PF14337", "PF99990"]
+    load_score_input(_write(tmp_path / "nf", prepared.artifacts), "worklist")
+
+
+def _unlogged_ex_duf(manifest):
+    return None
+
+
+@pytest.mark.parametrize(
+    "case",
+    ["unlogged_ex_duf", "missing_before", "plain_source", "live_parent_without_files"],
+)
+def test_loader_rejects_inconsistent_migrations(tmp_path: Path, case: str) -> None:
+    migrated = _migrated(tmp_path)
+    rows = json.loads(migrated.read_text("utf-8"))
+    mutate = None
+    if case == "unlogged_ex_duf":
+        target = next(row for row in rows if row["unknown_status"] != EX_DUF)
+        target["unknown_status"] = EX_DUF
+        target["candidate_reasons"] = [*target["candidate_reasons"], PREVIOUS_UNKNOWN_NAME_REASON]
+    elif case == "missing_before":
+        mutate = lambda m: m["derivation"]["changes"][0].pop("before")
+    elif case == "plain_source":
+        def mutate(m):
+            m["source"]["name"] = "InterPro Pfam API"
+    else:
+        mutate = lambda m: m["snapshot"]["input_snapshot_ids"].update(
+            live_worklist="interpro-pfam-duf-2026-10-06")
+
+    def full(m):
+        if mutate:
+            mutate(m)
+        m["rows"]["by_unknown_status"] = dict(
+            Counter(row["unknown_status"] for row in rows))
+    from collections import Counter
+
+    _rewrite(migrated, rows=rows, mutate=full)
+    expected = {
+        "unlogged_ex_duf": "not all accounted for",
+        "missing_before": "change does not match",
+        "plain_source": "requires the migration source identity",
+        "live_parent_without_files": "live_worklist_files",
+    }[case]
+    with pytest.raises(ScoreInputError, match=expected):
+        load_score_input(migrated, "worklist")
+
+
+def test_interpro_client_treats_empty_body_as_not_found() -> None:
+    client = InterProEntryClient(
+        transport=httpx.MockTransport(lambda _: httpx.Response(200, content=b"")),
+        sleep=lambda _: pytest.fail("must not retry"),
+    )
+    assert client(["PF00001"]) == {"PF00001": None}
