@@ -1,9 +1,9 @@
 # Source Catalogue, Queue And Writer Audit
 
-`download.yaml` inventories the 18 implemented source pipelines. It was reviewed
+`download.yaml` inventories the 19 implemented source pipelines. It was reviewed
 against every existing source-freeze module, the source roadmap, the October 1
 pilot reports, and the retained manifests on **2026-10-07**. The derived score
-writer is covered by the writer audit; it is not a nineteenth upstream source.
+writer is covered by the writer audit; it is not a twentieth upstream source.
 No provider data is fetched by the governance checker.
 
 ## Status And Provenance
@@ -30,8 +30,8 @@ semicolon-separated manifest paths and is empty when none are retained.
 
 `IMPLEMENTED` means code exists, not that source data was adopted. `ADOPTED`
 requires verified redistribution terms, a verification date, a working script,
-retained artifacts, and review provenance. InterPro/Pfam and the bounded
-UniProtKB/UniRef domain-view example currently make that claim. `EVALUATING` retains actual external-pilot history without presenting
+retained artifacts, and review provenance. InterPro/Pfam, the Pfam previous-identifier
+table, and the bounded UniProtKB/UniRef domain-view example currently make that claim. `EVALUATING` retains actual external-pilot history without presenting
 those results as a committed evidence release. `CANDIDATE` covers saved-table
 pipelines still awaiting inputs. Queue priority 1 is highest, 5 lowest.
 
@@ -61,6 +61,7 @@ manifests. It does not remove, relicense, redownload, or redate historical data.
 | QuickGO | Molecular-function annotation API | External pilot: four GO:0003677 rows; annotation contributor terms unverified |
 | STRING | Pinned v12.0 API | External pilot: four partners; unsupported taxon was recorded, not treated as absence |
 | UniParc | UniProt ID mapping | External pilot: 12 identity rows; no direct characterization score input |
+| Pfam previous identifiers | Pinned Pfam 38.2 `Pfam-A.seed.gz` headers | October 7 freeze: 1,834 families with a former DUF/UPF name; ADOPTED as reference |
 | Cross-Mech | Pinned sibling git records and UniProt cache | October 5 scan and October 6 offline derivation retained; combined terms unverified |
 
 Pilot counts above come from

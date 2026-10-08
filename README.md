@@ -258,6 +258,20 @@ represent distinct source records, with trait-record availability shown separate
 The current cross-Mech snapshot derives from the original scan by applying the
 corrected worklist's seed labels; see the [offline derivation record](docs/provenance/cross-mech-worklist-2026-10-06.md).
 
+Freeze the Pfam families that were renamed from DUF/UPF names, using the previous
+identifiers (`#=GF PI`) in a pinned Pfam release's seed file:
+
+```bash
+just freeze-pfam-previous-names --pfam-release 38.2 --snapshot-date 2026-10-07
+```
+
+The download streams `Pfam-A.seed.gz` and keeps only family headers; alignments are
+never retained. The manifest records the release, `Last-Modified`, byte count and
+SHA-256 of the file read. `just cross-mech-report` uses the latest snapshot to resolve
+unmatched DUF names cited by sibling Mechs to their current Pfam families. A former
+DUF name is Pfam history, not evidence of characterization. See the
+[provenance record](docs/provenance/pfam-previous-unknown-names-2026-10-07.md).
+
 Render and verify the DUFMech family website:
 
 ```bash

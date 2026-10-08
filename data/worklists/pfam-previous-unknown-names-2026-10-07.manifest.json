@@ -1,0 +1,50 @@
+{
+  "files": {
+    "json": {
+      "bytes": 670864,
+      "path": "pfam-previous-unknown-names-2026-10-07.json",
+      "sha256": "70ae05ac5e8ae061cb80391ea0e50cd6a56b52e35a86952851e1d78bcc0278a2"
+    },
+    "tsv": {
+      "bytes": 250303,
+      "path": "pfam-previous-unknown-names-2026-10-07.tsv",
+      "sha256": "38132bab6cbd63cc01e888dee485b4c060a72691590be97a93e583116cc0ede2"
+    }
+  },
+  "rows": {
+    "currently_unknown_name": 39,
+    "renamed_away_from_unknown": 1795,
+    "total": 1834,
+    "unique_previous_unknown_names": 1845
+  },
+  "schema": {
+    "tsv_fieldnames": [
+      "pfam_id",
+      "pfam_version",
+      "short_name",
+      "description",
+      "previous_unknown_names",
+      "previous_ids",
+      "currently_unknown_name",
+      "source_url"
+    ]
+  },
+  "snapshot": {
+    "date": "2026-10-07",
+    "generated_at": "2026-10-07T20:53:08.203950Z",
+    "id": "pfam-previous-unknown-names-2026-10-07"
+  },
+  "source": {
+    "compressed_bytes": 194369799,
+    "compressed_sha256": "c53a1397f6741c3501f21db2179ad7810d98ddf9f3b3172257bd71ca07ba8c3b",
+    "families_scanned": 30134,
+    "families_with_previous_ids": 4687,
+    "input_mode": "download",
+    "last_modified": "Thu, 22 Jan 2026 16:03:00 GMT",
+    "local_path": "",
+    "name": "Pfam-A.seed (Pfam release 38.2)",
+    "release": "38.2",
+    "selection": "families whose #=GF PI previous identifiers include a DUF/UPF name; alignments are not retained",
+    "url": "https://ftp.ebi.ac.uk/pub/databases/Pfam/releases/Pfam38.2/Pfam-A.seed.gz"
+  }
+}
