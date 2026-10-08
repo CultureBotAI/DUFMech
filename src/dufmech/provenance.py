@@ -12,6 +12,8 @@ from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 
+from dufmech.worklist_lineage import verify_worklist_parent_rows
+
 SHA256_RE = re.compile(r"[0-9a-f]{64}")
 
 
@@ -199,6 +201,8 @@ def _check_rows(
                 issues.append(_issue(manifest_path, "TSV row width differs from schema.tsv_fieldnames"))
             if count != total:
                 issues.append(_issue(manifest_path, "TSV row count differs from rows.total"))
+        if not issues:
+            verify_worklist_parent_rows(manifest_path, payload, rows)
     except (OSError, ValueError, UnicodeError, csv.Error) as exc:
         issues.append(_issue(manifest_path, f"could not parse snapshot rows: {exc}"))
     return issues

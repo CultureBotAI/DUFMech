@@ -380,6 +380,16 @@ def test_current_native_derivation_requires_its_declared_provenance(tmp_path, ch
         inputs.load_score_input(path, "worklist", allow_ad_hoc=True)
 
 
+@pytest.mark.parametrize("policy", inputs.CLASSIFIER_POLICIES)
+def test_versioned_classifier_derivations_stay_loadable(tmp_path, policy):
+    parent = frozen_seed(tmp_path)
+    manifest = reclassify_snapshot(
+        parent, tmp_path, snapshot_date="2026-10-05", classifier_policy=policy,
+    )
+    loaded = inputs.load_score_input(tmp_path / manifest["files"]["json"]["path"], "worklist")
+    assert loaded.provenance["worklist_reclassification"]["policy"] == policy
+
+
 def test_retained_october_worklist_and_live_members_score_with_verified_provenance(tmp_path):
     retained = Path(__file__).resolve().parents[1] / "data" / "worklists"
     worklist = retained / "interpro-pfam-duf-2026-10-05.json"

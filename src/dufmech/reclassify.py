@@ -37,6 +37,7 @@ def prepare_reclassification(
     *,
     snapshot_date: str,
     generated_at: datetime | None = None,
+    classifier_policy: str = CLASSIFIER_POLICY,
 ) -> PreparedReclassification:
     """Validate frozen input and prepare complete correction provenance without writing."""
 
@@ -79,7 +80,7 @@ def prepare_reclassification(
         if row["source_url"] != normalized.source_url:
             raise ReportError(f"{row['pfam_id']}: cannot preserve a noncanonical source_url")
         rows.append(normalized)
-    corrected = reclassify_worklist(rows)
+    corrected = reclassify_worklist(rows, classifier_policy=classifier_policy)
     snapshot_id = f"{WORKLIST_STEM}-{day.isoformat()}"
     texts = {
         f"{snapshot_id}.json": render_json(corrected) + "\n",
@@ -105,7 +106,7 @@ def prepare_reclassification(
     manifest["snapshot"]["input_snapshot_ids"] = {"worklist": parent["snapshot"]["id"]}
     manifest["derivation"] = {
         "method": "reclassify_saved_worklist",
-        "classifier_policy": CLASSIFIER_POLICY,
+        "classifier_policy": classifier_policy,
         "input_snapshot_generated_at": parent["snapshot"]["generated_at"],
         "input_files": {
             **parent["files"],
@@ -139,7 +140,7 @@ def prepare_reclassification(
     summary = {
         "source_snapshot": parent["snapshot"]["id"],
         "source_sha256": parent["files"]["json"]["sha256"],
-        "policy": CLASSIFIER_POLICY,
+        "policy": classifier_policy,
         "rows": len(corrected),
         "changed_statuses": sum(transitions.values()),
         "by_unknown_status": manifest["rows"]["by_unknown_status"],
@@ -155,11 +156,13 @@ def reclassify_snapshot(
     *,
     snapshot_date: str,
     generated_at: datetime | None = None,
+    classifier_policy: str = CLASSIFIER_POLICY,
 ) -> dict[str, Any]:
     """Create a new, non-overwriting JSON/TSV/manifest snapshot without fetching data."""
 
     prepared = prepare_reclassification(
-        input_json, snapshot_date=snapshot_date, generated_at=generated_at
+        input_json, snapshot_date=snapshot_date, generated_at=generated_at,
+        classifier_policy=classifier_policy,
     )
     write_snapshot_artifacts(out_dir, prepared.artifacts)
     return prepared.manifest

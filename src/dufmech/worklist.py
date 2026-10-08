@@ -25,12 +25,34 @@ EXTRA_FIELDS = "entry_id,short_name,description,counters"
 
 PFAM_RE = re.compile(r"^PF\d{5}$")
 DUF_SHORT_NAME_RE = re.compile(r"\bDUF\d+\b", re.IGNORECASE)
-CLASSIFIER_POLICY = "unknown-function-metadata-v2"
+LEGACY_CLASSIFIER_POLICY = "unknown-function-metadata-v2"
+CLASSIFIER_POLICY = "unknown-function-metadata-v3"
+CLASSIFIER_POLICIES = (LEGACY_CLASSIFIER_POLICY, CLASSIFIER_POLICY)
 UNKNOWN_FUNCTION_NAME_RE = re.compile(r"\bunknown[\s-]+function\b", re.IGNORECASE)
 UNKNOWN_FUNCTION_RE = re.compile(
     r"\b(?:domains?|proteins?|famil(?:y|ies))\s+of\s+unknown[\s-]+function\b|"
     r"\bfunction\s+of\s+(?:this|the)\s+(?:domain|protein|family)\s+is\s+unknown\b|"
     r"\bfunction\s+is\s+unknown\b",
+    re.IGNORECASE,
+)
+# Match explicit former numbered labels, not whole sentences: a following claim
+# that the function is still unknown must survive the removal of naming history.
+_UNKNOWN_LABEL = r"(?:domains?|proteins?|famil(?:y|ies))\s+of\s+unknown[\s-]+function"
+_UNKNOWN_IDENTIFIER = r"(?:DUF\d+|UPF\d{4})(?:[_-][A-Za-z0-9]+)*(?![\w-])"
+HISTORICAL_UNKNOWN_NAME_RE = re.compile(
+    r"\b(?:"
+    r"(?:previously|formerly|originally)\s+"
+    r"(?:annotated|known|described|designated|classified|named)\s+as\s+"
+    r"|(?:was|were)\s+(?:(?:an?|the)\s+)?"
+    r"(?:(?-i:(?:[A-Z]\.|[A-Z][a-z]+)\s+[a-z]+)\s+)?"
+    r")"
+    rf"(?:{_UNKNOWN_IDENTIFIER}(?:\s*\(\s*{_UNKNOWN_LABEL}(?:\s+\d+)?\s*\))?"
+    rf"|{_UNKNOWN_LABEL}\s*(?:\d+\s*)?\(\s*{_UNKNOWN_IDENTIFIER}\s*\))",
+    re.IGNORECASE,
+)
+STILL_UNKNOWN_FUNCTION_RE = re.compile(
+    r"\bfunction\s+(?:of\s+(?:this|the)\s+(?:domain|protein|family)\s+)?"
+    r"(?:is\s+still|remains)\s+unknown\b",
     re.IGNORECASE,
 )
 
@@ -257,16 +279,22 @@ def load_interpro_fixture(payload: object) -> list[Mapping[str, Any]]:
     raise ValueError("expected an InterPro page object, page list, or result list")
 
 
-def reclassify_worklist(rows: Iterable[DufFamilyRow]) -> list[DufFamilyRow]:
+def reclassify_worklist(
+    rows: Iterable[DufFamilyRow], *, classifier_policy: str = CLASSIFIER_POLICY,
+) -> list[DufFamilyRow]:
     """Recompute only seed classifications, retaining every family and its metadata.
 
     Text reasons are recomputed; the EX_DUF migration reason is history, not text, so
     it is carried over unchanged and keeps the family EX_DUF.
     """
 
+    if classifier_policy not in CLASSIFIER_POLICIES:
+        raise ValueError(f"unsupported classifier policy: {classifier_policy}")
     result = []
     for row in rows:
-        reasons = _candidate_reasons(row.short_name, row.name, row.description)
+        reasons = _candidate_reasons(
+            row.short_name, row.name, row.description, classifier_policy=classifier_policy,
+        )
         if PREVIOUS_UNKNOWN_NAME_REASON in row.candidate_reasons:
             reasons = (*reasons, PREVIOUS_UNKNOWN_NAME_REASON)
         result.append(replace(row, candidate_reasons=reasons, unknown_status=_unknown_status(reasons)))
@@ -336,19 +364,31 @@ def _candidate_reasons(
     short_name: str,
     name: str,
     description: str,
+    *,
+    classifier_policy: str = CLASSIFIER_POLICY,
 ) -> tuple[str, ...]:
     # Names directly label the family; descriptions can mention unrelated unknown proteins.
     name = _description_text(name)
     description = _description_text(description)
-    haystack = f"{short_name}\n{name}\n{description}"
     reasons: list[str] = []
+    if classifier_policy == CLASSIFIER_POLICY:
+        name, historical_name = HISTORICAL_UNKNOWN_NAME_RE.subn(" ", name)
+        description, historical_description = HISTORICAL_UNKNOWN_NAME_RE.subn(" ", description)
+        if historical_name:
+            reasons.append("name_mentions_previous_unknown_name")
+        if historical_description:
+            reasons.append("description_mentions_previous_unknown_name")
+    haystack = f"{short_name}\n{name}\n{description}"
     if DUF_SHORT_NAME_RE.search(short_name):
         reasons.append("short_name_matches_duf")
     if DUF_SHORT_NAME_RE.search(name) and "short_name_matches_duf" not in reasons:
         reasons.append("name_matches_duf")
-    if UNKNOWN_FUNCTION_NAME_RE.search(name) or UNKNOWN_FUNCTION_RE.search(name):
+    if (UNKNOWN_FUNCTION_NAME_RE.search(name) or UNKNOWN_FUNCTION_RE.search(name)
+            or (classifier_policy == CLASSIFIER_POLICY and STILL_UNKNOWN_FUNCTION_RE.search(name))):
         reasons.append("name_says_unknown_function")
-    if UNKNOWN_FUNCTION_RE.search(description):
+    if (UNKNOWN_FUNCTION_RE.search(description)
+            or (classifier_policy == CLASSIFIER_POLICY
+                and STILL_UNKNOWN_FUNCTION_RE.search(description))):
         reasons.append("description_says_unknown_function")
     if "domain of unknown function" in haystack.lower():
         reasons.append("domain_of_unknown_function")

@@ -8,12 +8,16 @@ import httpx
 import pytest
 
 from dufmech.worklist import (
+    EX_DUF,
     FALSE_POSITIVE_TEXT_HIT,
     KNOWN_HISTORICAL_DUF,
+    LEGACY_CLASSIFIER_POLICY,
     UNKNOWN_CANDIDATE,
     InterProPfamClient,
     collect_worklist,
     load_interpro_fixture,
+    mark_ex_duf,
+    reclassify_worklist,
     render_json,
     render_tsv,
     row_from_interpro_entry,
@@ -149,6 +153,85 @@ def test_broad_unknown_function_mentions_in_description_do_not_assign_function()
         description="Nearby loci include repeats with unknown function.",
     ))
     assert row.unknown_status == KNOWN_HISTORICAL_DUF
+
+
+@pytest.mark.parametrize("description", [
+    "This domain was previously annotated as DUF4374 (domain of unknown function 4374).",
+    "This family was formerly known as domain of unknown function 2662 (DUF2662).",
+    "This family contains the repeat that was the C. elegans protein of unknown function (DUF801).",
+    "This family was originally designated as UPF0265 (protein of unknown function).",
+    "This was the Caenorhabditis elegans protein of unknown function (DUF801).",
+    "This was formerly known as <b>DUF4374 (domain of unknown function 4374)</b>.",
+])
+def test_former_numbered_names_do_not_claim_current_unknown_function(description) -> None:
+    from dufmech.scoring import score_families
+
+    row = row_from_interpro_entry(interpro_result(
+        short_name="Renamed", name="Renamed family", description=description,
+    ))
+    assert row.unknown_status == KNOWN_HISTORICAL_DUF
+    assert row.candidate_reasons == ("description_mentions_previous_unknown_name",)
+    migrated = mark_ex_duf(row)
+    score = score_families(json.loads(render_json([migrated])))[0]
+    assert score.seed_unknown_status == EX_DUF
+    assert score.characterization_status == KNOWN_HISTORICAL_DUF
+    assert score.known_evidence_count == 0
+
+
+@pytest.mark.parametrize("current", [
+    "The function of this family is unknown.",
+    "The function of this family is still unknown.",
+    "Its function remains unknown.",
+    "However, this protein is a protein of unknown function.",
+    "It contains a second domain of unknown function (DUF9999).",
+])
+def test_historical_label_does_not_mask_a_separate_current_unknown_statement(current) -> None:
+    from dufmech.scoring import score_families
+
+    row = row_from_interpro_entry(interpro_result(
+        short_name="Renamed", name="Renamed family",
+        description="Previously annotated as DUF4374 (domain of unknown function 4374), " + current,
+    ))
+    assert row.unknown_status == UNKNOWN_CANDIDATE
+    assert "description_says_unknown_function" in row.candidate_reasons
+    assert score_families(json.loads(render_json([mark_ex_duf(row)])))[0].characterization_status == (
+        UNKNOWN_CANDIDATE
+    )
+
+
+def test_current_name_is_not_overridden_by_historical_description() -> None:
+    row = row_from_interpro_entry(interpro_result(
+        name="Domain of unknown function (DUF4374)",
+        description="Previously annotated as DUF4374 (domain of unknown function 4374).",
+    ))
+    assert row.unknown_status == UNKNOWN_CANDIDATE
+    assert "name_says_unknown_function" in row.candidate_reasons
+    assert "description_says_unknown_function" not in row.candidate_reasons
+
+
+@pytest.mark.parametrize("description", [
+    "This domain of unknown function (DUF4374) is present in many taxa.",
+    "Previous experiments did not establish the function of this domain of unknown function.",
+    "Previously annotated as XusB, this is now a domain of unknown function.",
+])
+def test_only_explicit_former_numbered_labels_are_ignored(description) -> None:
+    row = row_from_interpro_entry(interpro_result(
+        short_name="Renamed", name="Renamed family", description=description,
+    ))
+    assert row.unknown_status == UNKNOWN_CANDIDATE
+    assert "description_mentions_previous_unknown_name" not in row.candidate_reasons
+
+
+def test_legacy_classifier_can_be_replayed_without_changing_current_policy() -> None:
+    row = row_from_interpro_entry(interpro_result(
+        short_name="Renamed", name="Renamed family",
+        description="Previously annotated as DUF4374 (domain of unknown function 4374).",
+    ))
+    legacy = reclassify_worklist([row], classifier_policy=LEGACY_CLASSIFIER_POLICY)[0]
+    assert legacy.unknown_status == UNKNOWN_CANDIDATE
+    assert reclassify_worklist([legacy])[0] == row
+    with pytest.raises(ValueError, match="unsupported classifier policy"):
+        reclassify_worklist([], classifier_policy="invented")
 
 
 

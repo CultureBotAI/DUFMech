@@ -8,6 +8,7 @@ import json
 import re
 from collections import Counter
 from collections.abc import Mapping, Sequence
+from dataclasses import asdict
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -43,6 +44,7 @@ def load_cross_mech_snapshot(
             f"not {worklist_snapshot_id}; regenerate the cross-Mech snapshot"
         )
     rows = [dict(row) for row in load_json_rows(path)]
+    _previous_name_sources(manifest["snapshot"].get("derivation") or {}, rows)
     families = {row["pfam_id"]: row for row in worklist_rows}
     extra = {row["pfam_id"] for row in rows if row["pfam_id"]} - families.keys()
     if extra:
@@ -173,6 +175,68 @@ UNLISTED_BASIS = "record_mentions_unlisted_short_name"
 PREVIOUS_NAME_BASIS = "record_mentions_previous_pfam_name"
 
 
+def _previous_name_sources(info: Mapping, rows: Sequence[Mapping]) -> list[dict[str, Any]]:
+    """Normalize legacy provenance without losing the release that resolved each alias."""
+    sources = info.get("previous_name_sources")
+    if sources is None:
+        sources = []
+        if info.get("previous_names_snapshot_id"):
+            sources.append({
+                "snapshot_id": info["previous_names_snapshot_id"],
+                "json_sha256": info.get("previous_names_json_sha256"),
+                "resolved_previous_names": info.get("resolved_previous_names", {}),
+                "ambiguous_previous_names": info.get("ambiguous_previous_names", []),
+            })
+    if not isinstance(sources, list):
+        raise ReportError("previous-name sources must be a list")
+    normalized = []
+    resolved: dict[str, str] = {}
+    seen = set()
+    for source in sources:
+        if not isinstance(source, Mapping):
+            raise ReportError("invalid previous-name source")
+        snapshot_id = source.get("snapshot_id")
+        digest = source.get("json_sha256")
+        names = source.get("resolved_previous_names")
+        ambiguous = source.get("ambiguous_previous_names")
+        if (not isinstance(snapshot_id, str) or not re.fullmatch(
+                r"pfam-previous-unknown-names-[0-9]{4}-[0-9]{2}-[0-9]{2}", snapshot_id)
+                or snapshot_id in seen or not isinstance(digest, str)
+                or not re.fullmatch(r"[0-9a-f]{64}", digest)
+                or not isinstance(names, dict)
+                or any(not isinstance(name, str) or not name or not isinstance(pfam, str)
+                       or not re.fullmatch(r"PF[0-9]{5}", pfam) for name, pfam in names.items())
+                or not isinstance(ambiguous, list)
+                or any(not isinstance(name, str) or not name for name in ambiguous)):
+            raise ReportError("invalid or duplicate previous-name source provenance")
+        seen.add(snapshot_id)
+        try:
+            date.fromisoformat(snapshot_id[-10:])
+        except ValueError as exc:
+            raise ReportError("invalid previous-name source date") from exc
+        for name, pfam in names.items():
+            if name in resolved and resolved[name] != pfam:
+                raise ReportError(f"conflicting previous-name mapping for {name}")
+            resolved[name] = pfam
+        normalized.append({**source, "resolved_previous_names": dict(names),
+                           "ambiguous_previous_names": list(ambiguous)})
+    resolved_rows = [row for row in rows if PREVIOUS_NAME_BASIS in row.get("link_basis", ())]
+    if (resolved != info.get("resolved_previous_names", {})
+            or set(resolved.values()) != {row["pfam_id"] for row in resolved_rows}
+            or type(info.get("rows_resolved_by_previous_name", 0)) is not int
+            or info.get("rows_resolved_by_previous_name", 0) != len(resolved_rows)):
+        raise ReportError("previous-name mappings/count do not account for resolved rows")
+    if "previous_name_sources" in info and len(normalized) == 1:
+        if (info.get("previous_names_snapshot_id") != normalized[0]["snapshot_id"]
+                or info.get("previous_names_json_sha256") != normalized[0]["json_sha256"]):
+            raise ReportError("previous-name source summary differs from its provenance")
+    elif len(normalized) > 1 and (
+        "previous_names_snapshot_id" in info or "previous_names_json_sha256" in info
+    ):
+        raise ReportError("multiple previous-name sources cannot claim one source summary")
+    return normalized
+
+
 def cross_mech_unscanned(manifest: Mapping[str, Any]) -> set[str]:
     """Worklist families a cross-Mech snapshot's scan never searched (derivations only).
 
@@ -237,24 +301,31 @@ def derive_cross_mech_snapshot(
     )
 
     index: dict[str, list[str]] = {}
-    previous_provenance: dict[str, Any] = {}
+    source_rows = load_json_rows(source_json)
+    previous_sources = _previous_name_sources(source_derivation, source_rows)
+    current_source = None
     if previous_names_json is not None:
         previous_manifest = verified_manifest(previous_names_json)
         for item in load_json_rows(previous_names_json):
             for name in item.get("previous_unknown_names") or ():
                 index.setdefault(name, []).append(item["pfam_id"])
-        previous_provenance = {
-            "previous_names_snapshot_id": previous_manifest["snapshot"]["id"],
-            "previous_names_json_sha256": hashlib.sha256(
-                previous_names_json.read_bytes()).hexdigest(),
-        }
+        previous_id = previous_manifest["snapshot"]["id"]
+        previous_hash = hashlib.sha256(previous_names_json.read_bytes()).hexdigest()
+        current_source = next((s for s in previous_sources if s["snapshot_id"] == previous_id), None)
+        if current_source is not None:
+            if current_source["json_sha256"] != previous_hash:
+                raise ReportError(f"previous-name source {previous_id} changed its recorded hash")
+        else:
+            current_source = {"snapshot_id": previous_id, "json_sha256": previous_hash,
+                              "resolved_previous_names": {}, "ambiguous_previous_names": []}
+            previous_sources.append(current_source)
 
     rows: list[CrossMechRow] = []
     changed = 0
-    resolved: dict[str, str] = {}
-    ambiguous: set[str] = set()
+    resolved = dict(source_derivation.get("resolved_previous_names") or {})
+    ambiguous = set(source_derivation.get("ambiguous_previous_names") or ())
     backfilled = False
-    for item in load_json_rows(source_json):
+    for item in source_rows:
         values = {**item, "link_basis": tuple(item.get("link_basis") or ())}
         if "cited_uniprot_accession" not in values:
             values["cited_uniprot_accession"] = ""
@@ -262,7 +333,11 @@ def derive_cross_mech_snapshot(
         if not values["pfam_id"] and UNLISTED_BASIS in values["link_basis"] and index:
             targets = sorted({pfam for pfam in index.get(values["short_name"], ()) if pfam in families})
             if len(targets) == 1:
-                resolved[values["short_name"]] = targets[0]
+                name = values["short_name"]
+                if name in resolved and resolved[name] != targets[0]:
+                    raise ReportError(f"conflicting previous-name mapping for {name}")
+                resolved[name] = targets[0]
+                current_source["resolved_previous_names"][name] = targets[0]
                 values["pfam_id"] = targets[0]
                 values["short_name"] = families[targets[0]]["short_name"]
                 values["link_basis"] = tuple(sorted(
@@ -270,6 +345,9 @@ def derive_cross_mech_snapshot(
                 ))
             elif len(targets) > 1:
                 ambiguous.add(values["short_name"])
+                current_source["ambiguous_previous_names"] = sorted(
+                    set(current_source["ambiguous_previous_names"]) | {values["short_name"]}
+                )
         if values["pfam_id"]:
             family = families.get(values["pfam_id"])
             if family is None:
@@ -307,17 +385,23 @@ def derive_cross_mech_snapshot(
             "unscanned_pfam_ids": unscanned,
         },
     }
-    if previous_provenance:
-        derivation.update(previous_provenance)
+    if previous_sources:
+        derivation["previous_name_sources"] = previous_sources
+        if len(previous_sources) == 1:
+            derivation["previous_names_snapshot_id"] = previous_sources[0]["snapshot_id"]
+            derivation["previous_names_json_sha256"] = previous_sources[0]["json_sha256"]
         derivation["resolved_previous_names"] = dict(sorted(resolved.items()))
         derivation["rows_resolved_by_previous_name"] = sum(
             PREVIOUS_NAME_BASIS in row.link_basis for row in rows
         )
-        derivation["ambiguous_previous_names"] = sorted(ambiguous)
+        derivation["ambiguous_previous_names"] = sorted(
+            ambiguous & {row.short_name for row in rows if not row.pfam_id}
+        )
     if backfilled:
         derivation["backfilled_fields"] = {
             "cited_uniprot_accession": "empty: not recorded by the source scan"
         }
+    _previous_name_sources(derivation, [asdict(row) for row in rows])
     return write_cross_mech_snapshot(
         result,
         out_dir,

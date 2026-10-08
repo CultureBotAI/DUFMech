@@ -61,6 +61,41 @@ other known or partial evidence, score `UNKNOWN_CANDIDATE`, with the extra reaso
 `pfam_metadata_still_says_unknown_function`. A rename usually
 follows published work on some members; it is not experimental evidence for every member.
 
+Classifier policy `unknown-function-metadata-v3` distinguishes explicit former
+numbered DUF/UPF labels from current unknown-function statements. For example,
+"previously annotated as DUF4374 (domain of unknown function 4374)" is naming
+history, while a separate "function is still unknown" remains an unknown signal.
+The original description is preserved; only candidate reasons are recomputed.
+The v2 policy remains available to the Python reclassification API for exact
+historical replay, and verified-input loading accepts both versions.
+
+Pfam previous-name parsing also distinguishes four-digit UPF family labels from
+UPF1/UPF2 gene names. A family such as PF18141 (`UPF1_1B_dom`, formerly DUF5599)
+is eligible for EX_DUF migration after a new previous-names freeze. These are
+metadata corrections, not newly curated functional evidence.
+
+### Adopting Classifier Corrections
+
+Code changes do not rewrite existing snapshots, projections, scores or Pages.
+For the corrections tracked in issues #165 and #173:
+
+1. Freeze the pinned Pfam seed again with the corrected UPF-name parser, under
+   a new previous-names snapshot ID; retain the old files and manifests.
+2. Run a follow-up EX_DUF migration with that snapshot, to include PF18141 using
+   fetched InterPro metadata. Verify its planned additions before applying it.
+3. Reclassify the migrated worklist with the default v3 policy, so previously
+   frozen descriptions also receive corrected candidate reasons. Migration
+   preserves existing rows and does not itself reclassify all their text.
+4. Derive compatible cross-Mech artifacts, verify score inputs, then regenerate
+   records, reports and Pages with valid published source pins. Only adopted,
+   appropriately scoped evidence may contribute to scientific assertions.
+
+Each worklist derivation requires a date later than its parent. Do not overwrite
+an existing date's snapshot, fabricate future acquisition dates, or score an old
+worklist as though its candidate reasons had already been updated. These steps
+remain required for the retained October 8, 2026 corpus; an in-memory classifier
+test is not a published migration or scored release.
+
 `just migrate-exduf` derives a new worklist snapshot (dry run unless `--apply`):
 
 ```bash
@@ -93,6 +128,23 @@ malformed change entries, and checks that the `EX_DUF` rows are exactly those lo
 changed to `EX_DUF` plus the added, carried and retained families, each carrying the
 migration reason. A later text reclassification of a migrated worklist (`derivation-v2`)
 remains loadable and keeps `EX_DUF`.
+
+Both scoring and report loaders compare `derivation-v2` and `exduf-migration-v1`
+rows with co-located parent JSON when available. They verify the recorded parent
+hash and byte size, retained family membership and metadata, and classification
+change bookkeeping. Refresh migrations compare against the live worklist as well;
+carried families have explicitly re-fetched metadata. Symlink and non-regular
+parent files are rejected. Detached artifact sets remain portable, but an absent
+parent cannot be content-compared. These checks read only direct parents, not the
+entire ancestry, and do not certify scientific classification.
+
+Cross-Mech derivations retain former-name mappings and their original Pfam
+snapshot IDs and hashes through subsequent derivations, even without another
+`--previous-names-json` input. `previous_name_sources` records mappings separately
+when several snapshots contribute; the aggregate map and resolved-row count remain
+available. A chain with missing mapping provenance or inconsistent counts is
+rejected rather than propagating that loss. Neither this bookkeeping nor an
+offline name resolution constitutes a new Mech scan or functional evidence.
 
 ## Evidence Contract
 

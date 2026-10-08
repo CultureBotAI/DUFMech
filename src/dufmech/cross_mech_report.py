@@ -77,10 +77,15 @@ def render_cross_mech_report(
         resolved = derivation.get("resolved_previous_names") or {}
         if resolved:
             pairs = ", ".join(f"{name} → {pfam}" for name, pfam in resolved.items())
+            name_sources = derivation.get("previous_name_sources")
+            source_labels = ", ".join(f"`{source['snapshot_id']}`" for source in name_sources
+                                      if source["resolved_previous_names"]) if name_sources else (
+                f"`{derivation.get('previous_names_snapshot_id')}`"
+            )
             derivation_note += [
                 (f"{derivation.get('rows_resolved_by_previous_name', 0):,} rows citing a former "
                  f"DUF/UPF name were resolved offline through "
-                 f"`{derivation.get('previous_names_snapshot_id')}` "
+                 f"{source_labels} "
                  f"(link basis `record_mentions_previous_pfam_name`): {pairs}."),
                 "",
             ]
