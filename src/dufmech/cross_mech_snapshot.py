@@ -261,10 +261,10 @@ def derive_cross_mech_snapshot(
     previous_names_json: Path | None = None,
     generated_at: datetime | None = None,
 ) -> dict[str, Any]:
-    """Relabel a cross-Mech snapshot's seed statuses from a newer verified worklist.
+    """Relabel a cross-Mech snapshot's family names and seed statuses from a newer worklist.
 
     Every row keeps its source record, protein, link bases and biological metadata;
-    ``unknown_status`` of resolved rows is replaced from the target worklist. Evidence
+    ``short_name`` and ``unknown_status`` of resolved rows follow the target worklist. Evidence
     acquisition dates, Mech commits and UniProt lookup provenance remain those of the
     source snapshot. Rows naming a family the worklist lacks are an error: relabeling
     never drops evidence.
@@ -322,6 +322,7 @@ def derive_cross_mech_snapshot(
 
     rows: list[CrossMechRow] = []
     changed = 0
+    renamed = 0
     resolved = dict(source_derivation.get("resolved_previous_names") or {})
     ambiguous = set(source_derivation.get("ambiguous_previous_names") or ())
     backfilled = False
@@ -354,6 +355,9 @@ def derive_cross_mech_snapshot(
                 raise ReportError(f"{values['pfam_id']} is absent from {worklist_json.name}")
             if family["unknown_status"] != values["unknown_status"]:
                 changed += 1
+            if item["pfam_id"] and family["short_name"] != values["short_name"]:
+                renamed += 1
+            values["short_name"] = family["short_name"]
             values["unknown_status"] = family["unknown_status"]
         rows.append(CrossMechRow(**values))
     keys = [row.sort_key() for row in rows]
@@ -371,6 +375,7 @@ def derive_cross_mech_snapshot(
     derivation = {
         "method": DERIVATION_METHOD,
         "rows_with_changed_seed_status": changed,
+        "rows_with_changed_family_name": renamed,
         "source_git_commit": source_git_commit,
         "source_json_sha256": hashlib.sha256(source_json.read_bytes()).hexdigest(),
         "source_manifest_sha256": hashlib.sha256(

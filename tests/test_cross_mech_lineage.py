@@ -161,3 +161,46 @@ def test_conflicting_alias_resolution_stops_before_writing(tmp_path):
                                    snapshot_date="2026-10-09", source_git_commit="b" * 40,
                                    generated_at=T)
     assert not (tmp_path / "rejected").exists()
+
+
+@pytest.mark.parametrize("pfam", ["PF14337", "PF06172"])
+def test_chained_derivation_tracks_current_family_name_without_losing_aliases(tmp_path, pfam):
+    from dataclasses import replace
+
+    from dufmech.exduf import prepare_migration
+    from dufmech.snapshot import write_worklist_snapshot
+    from dufmech.worklist import DufFamilyRow
+    from tests.test_exduf import _fetch, _write
+
+    worklist, names, source, original = _first(tmp_path)
+    live_rows = [DufFamilyRow(**{key: tuple(value) if key == "candidate_reasons" else value
+                                for key, value in row.items() if key != "source_url"})
+                 for row in json.loads(worklist.read_text())]
+    live_rows = [replace(row, short_name="Renamed_family") if row.pfam_id == pfam else row
+                 for row in live_rows]
+    write_worklist_snapshot(live_rows, worklist.parent, snapshot_date="2026-10-09", generated_at=T)
+    live = worklist.parent / "interpro-pfam-duf-2026-10-09.json"
+    prepared = prepare_migration(worklist, names, snapshot_date="2026-10-10",
+                                 live_json=live, fetch=_fetch, generated_at=T)
+    target = _write(worklist.parent, prepared.artifacts)
+    manifest = derive_cross_mech_snapshot(
+        source, target, tmp_path / "renamed", snapshot_date="2026-10-11",
+        source_git_commit="b" * 40, generated_at=T,
+    )
+    derived = tmp_path / "renamed/cross-mech-duf-examples-2026-10-11.json"
+    rows, _ = load_cross_mech_snapshot(derived, worklist_rows=json.loads(target.read_text()),
+                                      worklist_snapshot_id=target.stem)
+    assert next(row for row in rows if row["pfam_id"] == pfam)["short_name"] == "Renamed_family"
+    info = manifest["snapshot"]["derivation"]
+    assert info["resolved_previous_names"] == original["resolved_previous_names"]
+    assert info["previous_name_sources"] == original["previous_name_sources"]
+    assert info["rows_with_changed_family_name"] == 1
+    old_rows = {row["pfam_id"]: row for row in json.loads(source.read_text())}
+    for row in rows:
+        assert {key for key, value in row.items() if old_rows[row["pfam_id"]][key] != value} <= {
+            "short_name", "unknown_status",
+        }
+    from dufmech.cross_mech_report import render_cross_mech_report
+
+    assert "1 already-resolved rows updated their current Pfam short name" in render_cross_mech_report(
+        rows, manifest)

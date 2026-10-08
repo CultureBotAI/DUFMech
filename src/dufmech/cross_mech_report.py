@@ -63,6 +63,14 @@ def render_cross_mech_report(
              "Mech scan or UniProt retrieval was performed."),
             "",
         ]
+        renamed = derivation.get("rows_with_changed_family_name", 0)
+        if renamed:
+            derivation_note += [
+                (f"{renamed:,} already-resolved rows updated their current Pfam short name "
+                 "from the selected worklist. Original source rows and former-name mappings "
+                 "remain retained in the derivation provenance."),
+                "",
+            ]
         coverage = derivation.get("coverage") or {}
         unscanned_ids = coverage.get("unscanned_pfam_ids") or []
         if unscanned_ids:

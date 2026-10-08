@@ -145,6 +145,9 @@ when several snapshots contribute; the aggregate map and resolved-row count rema
 available. A chain with missing mapping provenance or inconsistent counts is
 rejected rather than propagating that loss. Neither this bookkeeping nor an
 offline name resolution constitutes a new Mech scan or functional evidence.
+Already-resolved rows follow the selected worklist's current Pfam short name as
+well as its seed status; name changes are counted separately in the derivation.
+The source rows and cited former-name mappings remain retained.
 
 ## Evidence Contract
 
