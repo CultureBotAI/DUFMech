@@ -20,7 +20,7 @@ model availability, or a seed category alone do not justify biological merging.
 Distinguish source snapshots and predictions from primary experimental evidence.
 Search ignored and hidden files before asserting evidence or records are absent.
 
-Supply actual text for every category section, including selection/membership,
+Supply common assessments retaining the category rubric, including selection/membership,
 lump/split reasoning, findings, recommended edits, follow-ups, and flexible notes.
 Retain exactly one completed scoped category report using `dufmech-review save
 --content PATH`, then run `dufmech-review check` and verify the artifact is not
@@ -32,3 +32,23 @@ require each member's passing retained record review and linked canonical histor
 event for its unchanged content. Review-driven curation or publication follows
 the user's authorized scope. Report the retained artifact and remaining work;
 append a new report for later corrections rather than changing the old one.
+
+## Structured Review Output
+
+Follow [docs/record-reviews.md](../../../docs/record-reviews.md) and the
+[DUFMech profile](../../../docs/record-review-profile.md) for every new review.
+Use the native inspection's `structured.source` and `structured.targets`;
+author the common schema with actual checks, evidence-linked domain assessments,
+findings/actions, coverage and limits, then run `just review save --content PATH`.
+New output is `reviews/structured/<timestamp>-<slug>/review.yaml` plus its
+derived `review.md`. Link both; run `just reviews-check`. Historical reports
+remain read-only. Preserve the scientific-review flag, native verdict,
+snapshot identity, exact row selector and named semantic digest.
+Map seed-only, follow-up, blocked, failing and passing native verdicts using
+the profile. Never label an inspection, deterministic scan, provider draft
+or seed metadata as a completed scientific review. Native status and history
+requirements still apply independently of common schema validity.
+
+Declare the population denominator, sampling method/seed/strata, reviewed
+members and exclusions. Use `kind: category` with explicit boundary
+decisions for a coherent cohort, or `kind: batch` for a sample.

@@ -8,7 +8,7 @@ from pathlib import Path
 
 import pytest
 import yaml
-from test_reviews import make_root, review_payload
+from test_reviews import legacy_review_fixture, make_root, review_payload
 
 from dufmech import history, reviews
 from dufmech.snapshot import write_worklist_snapshot
@@ -247,11 +247,11 @@ def test_completed_review_gate_binds_event_report_and_current_record(root):
     target.parent.mkdir()
     target.write_text(yaml.safe_dump(record))
     payload = review_payload(root)
-    seed = reviews.save_review(root, payload)
+    seed = legacy_review_fixture(root, payload)
     with pytest.raises(ValueError, match="PASS"):
         reviews.require_completed_review(root, "PF04149", seed.relative_to(root).as_posix(), record)
     payload["verdict"] = "PASS"
-    report = reviews.save_review(root, payload)
+    report = legacy_review_fixture(root, payload)
     review_id = report.relative_to(root).as_posix()
     with pytest.raises(ValueError, match="canonical REVIEW event"):
         reviews.require_completed_review(root, "PF04149", review_id, record)
@@ -328,7 +328,7 @@ def test_effective_family_record_progress_review_and_history_integration(root):
     write_records(root, progress, apply=True)
     payload = review_payload(root)
     payload["verdict"] = "PASS"
-    path = reviews.save_review(root, payload)
+    path = legacy_review_fixture(root, payload)
     review_id = path.relative_to(root).as_posix()
     # A pointer while IN_PROGRESS is allowed and is not a completed-review claim.
     curated["review_id"] = review_id
@@ -458,7 +458,7 @@ def captured_review_fixture(root):
     target.write_text(yaml.safe_dump(record))
     payload = review_payload(root)
     payload["verdict"] = "PASS"
-    report_path = reviews.save_review(root, payload)
+    report_path = legacy_review_fixture(root, payload)
     review_id = report_path.relative_to(root).as_posix()
     history_path = save_event(
         root, event="REVIEW", outcome="no_change", target_path="data/families/PF04149.yaml",

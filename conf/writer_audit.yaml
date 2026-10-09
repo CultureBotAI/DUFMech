@@ -204,10 +204,16 @@ helpers:
     required_calls: [link, fsync]
   save_review:
     path: "src/dufmech/reviews.py"
-    formats: ["markdown"]
-    policy: "validated-append"
-    tests: ["tests/test_reviews.py"]
-    required_calls: [_validate_content, append_document]
+    formats: ["yaml", "markdown"]
+    policy: "shared-validated-append"
+    tests: ["tests/test_structured_reviews.py"]
+    required_calls: [save]
+  save:
+    path: "src/dufmech/structured_reviews.py"
+    formats: ["yaml", "markdown"]
+    policy: "native-context-checked-shared-append"
+    tests: ["tests/test_structured_reviews.py"]
+    required_calls: [metadata, inspect_review, common, save_review]
   new_history:
     path: "src/dufmech/history.py"
     formats: ["yaml"]

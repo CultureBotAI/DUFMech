@@ -1,0 +1,17 @@
+version: 1
+repository: CultureBotAI/DUFMech
+skills:
+  - .claude/skills/review-yaml-record/SKILL.md
+  - .claude/skills/review-yaml-category/SKILL.md
+  - .claude/skills/review-repo/SKILL.md
+  - .claude/skills/curate-yaml-record/SKILL.md
+  - .agents/skills/review-yaml-record/SKILL.md
+  - .agents/skills/review-yaml-category/SKILL.md
+  - .agents/skills/review-repo/SKILL.md
+  - .agents/skills/curate-yaml-record/SKILL.md
+rubrics:
+  - docs/records.md
+  - docs/reviews.md
+  - docs/history.md
+  - docs/sources.md
+  - .claude/skills/curate-yaml-record/references/review-checklist.md

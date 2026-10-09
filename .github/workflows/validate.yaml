@@ -21,18 +21,20 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     env:
+      RECORD_REVIEW_BASE: ${{ github.event.pull_request.base.sha || github.event.merge_group.base_sha || github.event.before || (github.event_name == 'workflow_dispatch' && 'HEAD') }}
       CLAW_SRC: ${{ github.workspace }}/.claw/src
       CLAW_ROOT: ${{ github.workspace }}/.claw
     steps:
       - name: Check out source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
+          fetch-depth: 0
           persist-credentials: false
       - name: Check out published shared adapter runtime
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           repository: CultureBotAI/culturebotai-claw
-          ref: b81580f150d5334841f3eb16434575701607bc81
+          ref: adce6ce0d1720635f11268465003cf78f35b2acf
           path: .claw
           persist-credentials: false
       - name: Set up uv and Python
@@ -44,6 +46,8 @@ jobs:
         run: uv sync --locked --extra dev
       - name: Install separate locked OAK runtime
         run: env -u VIRTUAL_ENV -u UV_PROJECT_ENVIRONMENT -u PYTHONPATH -u PYTHONHOME uv sync --project "$CLAW_ROOT" --locked
+      - name: Validate structured review contract
+        run: uv run --locked --extra dev pytest -q tests/test_record_review_contract.py
       - name: Verify published CLAW artifacts
         run: bash scripts/check_vendored_sync.sh
       - name: Set up Node for browser regression tests

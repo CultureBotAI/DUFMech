@@ -18,6 +18,7 @@ LEDGER = Path("conf/site_source_pins.json")
 SOURCE_ROOTS = (
     "data/worklists", "data/cross_mech", "data/families", "curation/families", "history",
     "reports/yaml_record_review", "reports/yaml_category_review", "reports/repo_review",
+    "reviews/structured",
     "src/dufmech/schema",
 )
 

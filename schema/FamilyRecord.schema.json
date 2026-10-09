@@ -451,7 +451,7 @@
           "type": "string"
         },
         "review_id": {
-          "pattern": "^reports/yaml_record_review/[A-Za-z0-9_.-]+[.]md$",
+          "pattern": "^(reports/yaml_record_review/[A-Za-z0-9_.-]+[.]md|reviews/structured/[A-Za-z0-9][A-Za-z0-9._-]{0,159}/review[.]yaml)$",
           "type": "string"
         }
       },
@@ -535,7 +535,7 @@
         },
         "review_id": {
           "description": "Retained completed record report; required with matching content and history for REVIEWED.",
-          "pattern": "^reports/yaml_record_review/[A-Za-z0-9_.-]+[.]md$",
+          "pattern": "^(reports/yaml_record_review/[A-Za-z0-9_.-]+[.]md|reviews/structured/[A-Za-z0-9][A-Za-z0-9._-]{0,159}/review[.]yaml)$",
           "type": "string"
         },
         "score_provenance": {
@@ -827,7 +827,7 @@
     },
     "review_id": {
       "description": "Retained completed record report; required with matching content and history for REVIEWED.",
-      "pattern": "^reports/yaml_record_review/[A-Za-z0-9_.-]+[.]md$",
+      "pattern": "^(reports/yaml_record_review/[A-Za-z0-9_.-]+[.]md|reviews/structured/[A-Za-z0-9][A-Za-z0-9._-]{0,159}/review[.]yaml)$",
       "type": "string"
     },
     "score_provenance": {
