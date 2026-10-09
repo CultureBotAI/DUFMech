@@ -6,6 +6,9 @@ from pathlib import Path
 import pytest
 import yaml
 
+from dufmech.structured_reviews import common
+from tests.test_site_sources import git
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -63,6 +66,30 @@ def test_source_retention_gate_is_required_before_qc_and_pages(name, job, instal
         assert steps[index]["if"] == "steps.current.outputs.publish == 'true'"
     assert next(i for i, step in enumerate(steps) if step.get("run") == install) < index
     assert index < next(i for i, step in enumerate(steps) if step.get("run") == boundary)
+
+
+def test_pages_fetches_retained_history_for_structured_reviews():
+    checkout = next(step for step in workflow("pages.yaml")["jobs"]["build"]["steps"]
+                    if step.get("uses", "").startswith("actions/checkout@"))
+    assert checkout["with"]["fetch-depth"] == 0
+
+
+def test_squashed_review_base_requires_tag_history_not_a_shallow_main_checkout(tmp_path):
+    upstream = tmp_path / "upstream"
+    upstream.mkdir()
+    git(upstream, "init", "-q", "--initial-branch=review-base")
+    git(upstream, "commit", "--allow-empty", "-qm", "Reviewed checkpoint")
+    checkpoint = git(upstream, "rev-parse", "HEAD")
+    git(upstream, "tag", "-a", "source/dufmech-review", "-m", "Retained review base")
+    git(upstream, "checkout", "--orphan", "main")
+    git(upstream, "commit", "--allow-empty", "-qm", "Squash merge")
+    review = {"source": {"git_revision": checkpoint, "state": "working_tree"}}
+    shallow = tmp_path / "shallow"
+    full = tmp_path / "full"
+    git(tmp_path, "clone", "--depth=1", "--branch=main", upstream.as_uri(), str(shallow))
+    assert common().source_provenance(shallow, review)["status"] == "unverified"
+    git(tmp_path, "clone", "--branch=main", upstream.as_uri(), str(full))
+    assert common().source_provenance(full, review)["status"] == "working_tree_attestation"
 
 
 def test_pages_uses_successful_main_validation_and_serialized_current_main_guards():

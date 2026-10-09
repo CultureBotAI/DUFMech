@@ -368,6 +368,8 @@ and member-dataset downloads remain available. Rendering never generates a ledge
 
 The required `qc` CI job separately runs an explicit **online** retention gate;
 Pages repeats it before building. Run the same gate with `just site-sources-published`.
+The Pages checkout includes full history and tags so retained structured reviews
+can validate their pre-squash Git bases as well as their source-file hashes.
 It fetches canonical `CultureBotAI/DUFMech` main and `source/dufmech-*` tags into
 a temporary bare repository, independent of checkout remotes, shallow history,
 local tags and Git URL rewrites. The pinned commit must be an ancestor of canonical
