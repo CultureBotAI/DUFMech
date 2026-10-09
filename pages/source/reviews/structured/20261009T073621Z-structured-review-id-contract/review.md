@@ -1,0 +1,270 @@
+# PR 185 final compatibility audit: structured review identifiers
+
+- Review: 20261009T073621Z-structured-review-id-contract
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-09T07:35:53Z
+- Finished UTC: 2026-10-09T07:36:21Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass
+- Scientific review: false
+
+## Summary
+
+Follow-up to issue 187 and the previous publication audit. Four additional valid shared review identifiers exposed an over-restrictive suffix pattern. Commit 80996c57e aligns the download allowlist with the shared 160-character Token and timestamp-prefix contract. All six identifier cases render twice with exact owned copies; the 94-test focused suite passes. Earlier reports remain unchanged.
+
+## Scope And Provenance
+
+Compare only structured-review ID rules and their writer integration across the four captured files. The vendored schema and helper are read-only contract evidence, not a new audit of all shared behavior. Assess the two changed files and the exact contract sections they implement.
+
+Selection: site_files.GENERATED, its full-renderer regression, shared Token definition, and shared review_id timestamp-prefix validation.
+Coverage: full; 4 reviewed / 4 in the declared population.
+Source: working_tree at Git base 80996c57e4721f284ceaae7829c3c78c3990833f.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| schema/record_review.yaml | schema/record_review.yaml | source | schema/record_review.yaml |
+| scripts/record_review.py | scripts/record_review.py | source | scripts/record_review.py |
+| src/dufmech/site_files.py | src/dufmech/site_files.py | source | src/dufmech/site_files.py |
+| tests/test_structured_reviews.py | tests/test_structured_reviews.py | source | tests/test_structured_reviews.py |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full renderer and writer regressions | passed | True | schema/record_review.yaml, scripts/record_review.py, src/dufmech/site_files.py, tests/test_structured_reviews.py | 94 tests passed. The six real validated review IDs cover ordinary, underscore-leading, hyphen-leading, dot-leading, empty and maximum-length suffixes. Four cases failed at the writer before correction and now pass. Existing invalid-path and source-overlap cases remain passing. |
+| Changed-file Ruff | passed | True | schema/record_review.yaml, scripts/record_review.py, src/dufmech/site_files.py, tests/test_structured_reviews.py | Ruff passed for both changed files. |
+
+## Scientific And Domain Assessments
+
+### Shared identifier compatibility without broadening filesystem paths
+
+consistency: supported. Targets: schema/record_review.yaml, scripts/record_review.py, src/dufmech/site_files.py, tests/test_structured_reviews.py.
+
+The writer now accepts the full tested identifier domain of the existing shared schema, including the four formerly rejected valid cases. The fixed timestamp prefix prevents special dot-only directory components, and the suffix alphabet excludes path separators. The two exact download leaf names and all existing writer guards remain enforced.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| shared-contract | schema/record_review.yaml; Token type and RecordReview.review_id; scripts/record_review.py validate_review timestamp-prefix check | supports | The shared Token permits ASCII alphanumerics, dot, underscore and hyphen up to 160 total characters. The semantic validator requires the 16-character finished timestamp plus a hyphen, but does not require an alphanumeric or nonempty suffix. |
+| implementation | src/dufmech/site_files.py; GENERATED structured-review alternative | supports | The fixed pattern keeps the timestamp prefix and only permits zero to 143 suffix characters from the shared Token alphabet, followed by the exact review.yaml or review.md leaf. It introduces no slash in the identifier and preserves traversal, symlink and ownership guards. |
+| regressions | tests/test_structured_reviews.py; test_validated_structured_review_is_published_by_full_renderer | supports | Every ID is first accepted by the actual native/shared saver, then rendered through the full loader/writer twice. Both downloads are compared against their authoritative bytes and ownership hashes, and site contracts are checked. |
+
+## Limits And Additional Notes
+
+- Same-agent audit of identifier compatibility only; no scientific assertions or family records were changed.
+- The preceding full local QC passed 1,275 tests plus six browser tests, and GitHub run 37898979645 passed for 60e2d1a3. Those runs predate the five added parameter cases and do not certify the upcoming release head.
+- This additional immutable review requires a new retained checkpoint and rendered source links. Fresh exact-head CI and merge-queue QC must pass before publication.
+- This is an additional scoped observation, not an overwrite of the original audit or the publication addendum.
+- The boundary finding belongs to existing issue 187. No new speculative ticket or shared-schema change was introduced.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+kind: repository
+repository: CultureBotAI/DUFMech
+source:
+  git_revision: 80996c57e4721f284ceaae7829c3c78c3990833f
+  inputs:
+  - path: data/worklists/interpro-pfam-duf-2026-10-08.json
+    role: context
+    sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  - path: data/worklists/interpro-pfam-duf-2026-10-08.manifest.json
+    role: context
+    sha256: 5929010740007a44480dac1fe804840b5885e131bceccc3043dbcb9146e991d5
+  - path: data/worklists/interpro-pfam-duf-2026-10-08.tsv
+    role: context
+    sha256: 3d873968fcb87babafe59c01722c0d914f4ddc45de28cb8de4595477c353f91b
+  - path: schema/record_review.yaml
+    role: target
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+  - path: scripts/record_review.py
+    role: target
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+  - path: src/dufmech/site_files.py
+    role: target
+    sha256: 20f2f3a03407b1923fe101e554f32249cb04948c674dd6cac9d5bef4e1a20644
+  - path: tests/test_structured_reviews.py
+    role: target
+    sha256: eedb4ca57d2740d42469bf96e1abf1080b7c832c93db3b0af8aa251436dc8e58
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  state: working_tree
+targets:
+- kind: source
+  label: schema/record_review.yaml
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: schema/record_review.yaml
+  target_id: schema/record_review.yaml
+- kind: source
+  label: scripts/record_review.py
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: scripts/record_review.py
+  target_id: scripts/record_review.py
+- kind: source
+  label: src/dufmech/site_files.py
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: src/dufmech/site_files.py
+  target_id: src/dufmech/site_files.py
+- kind: source
+  label: tests/test_structured_reviews.py
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: tests/test_structured_reviews.py
+  target_id: tests/test_structured_reviews.py
+schema_version: 1.0.0
+review_id: 20261009T073621Z-structured-review-id-contract
+title: 'PR 185 final compatibility audit: structured review identifiers'
+started_at: '2026-10-09T07:35:53Z'
+finished_at: '2026-10-09T07:36:21Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: The implementing agent compared the writer pattern with the
+    actual shared schema and validator and executed real validated-bundle tests; no
+    independent approval is claimed.
+skill: .claude/skills/review-repo/SKILL.md
+completion: completed
+verdict: pass
+native_verdict: PASS
+scientific_review: false
+summary: Follow-up to issue 187 and the previous publication audit. Four additional
+  valid shared review identifiers exposed an over-restrictive suffix pattern. Commit
+  80996c57e aligns the download allowlist with the shared 160-character Token and
+  timestamp-prefix contract. All six identifier cases render twice with exact owned
+  copies; the 94-test focused suite passes. Earlier reports remain unchanged.
+scope:
+  description: Compare only structured-review ID rules and their writer integration
+    across the four captured files. The vendored schema and helper are read-only contract
+    evidence, not a new audit of all shared behavior. Assess the two changed files
+    and the exact contract sections they implement.
+  selection: site_files.GENERATED, its full-renderer regression, shared Token definition,
+    and shared review_id timestamp-prefix validation.
+  coverage: full
+  population_size: 4
+  reviewed_target_ids:
+  - schema/record_review.yaml
+  - scripts/record_review.py
+  - src/dufmech/site_files.py
+  - tests/test_structured_reviews.py
+checks:
+- check_id: boundary-suite
+  name: Full renderer and writer regressions
+  status: passed
+  required: true
+  target_ids:
+  - schema/record_review.yaml
+  - scripts/record_review.py
+  - src/dufmech/site_files.py
+  - tests/test_structured_reviews.py
+  command: .venv/bin/python -m pytest tests/test_structured_reviews.py tests/test_site_writes.py
+    tests/test_pages.py -q
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 94 tests passed. The six real validated review IDs cover ordinary, underscore-leading,
+    hyphen-leading, dot-leading, empty and maximum-length suffixes. Four cases failed
+    at the writer before correction and now pass. Existing invalid-path and source-overlap
+    cases remain passing.
+  evidence_ids:
+  - regressions
+- check_id: lint
+  name: Changed-file Ruff
+  status: passed
+  required: true
+  target_ids:
+  - schema/record_review.yaml
+  - scripts/record_review.py
+  - src/dufmech/site_files.py
+  - tests/test_structured_reviews.py
+  command: .venv/bin/ruff check src/dufmech/site_files.py tests/test_structured_reviews.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Ruff passed for both changed files.
+  evidence_ids:
+  - implementation
+evidence:
+- evidence_id: shared-contract
+  kind: record_content
+  reference: schema/record_review.yaml
+  locator: Token type and RecordReview.review_id; scripts/record_review.py validate_review
+    timestamp-prefix check
+  accessed_at: '2026-10-09T07:36:21Z'
+  support: supports
+  summary: The shared Token permits ASCII alphanumerics, dot, underscore and hyphen
+    up to 160 total characters. The semantic validator requires the 16-character finished
+    timestamp plus a hyphen, but does not require an alphanumeric or nonempty suffix.
+- evidence_id: implementation
+  kind: record_content
+  reference: src/dufmech/site_files.py
+  locator: GENERATED structured-review alternative
+  accessed_at: '2026-10-09T07:36:21Z'
+  support: supports
+  summary: The fixed pattern keeps the timestamp prefix and only permits zero to 143
+    suffix characters from the shared Token alphabet, followed by the exact review.yaml
+    or review.md leaf. It introduces no slash in the identifier and preserves traversal,
+    symlink and ownership guards.
+- evidence_id: regressions
+  kind: validation
+  reference: tests/test_structured_reviews.py
+  locator: test_validated_structured_review_is_published_by_full_renderer
+  accessed_at: '2026-10-09T07:36:21Z'
+  support: supports
+  summary: Every ID is first accepted by the actual native/shared saver, then rendered
+    through the full loader/writer twice. Both downloads are compared against their
+    authoritative bytes and ownership hashes, and site contracts are checked.
+assessments:
+- assessment_id: contract-equivalence
+  area: consistency
+  topic: Shared identifier compatibility without broadening filesystem paths
+  outcome: supported
+  summary: The writer now accepts the full tested identifier domain of the existing
+    shared schema, including the four formerly rejected valid cases. The fixed timestamp
+    prefix prevents special dot-only directory components, and the suffix alphabet
+    excludes path separators. The two exact download leaf names and all existing writer
+    guards remain enforced.
+  target_ids:
+  - schema/record_review.yaml
+  - scripts/record_review.py
+  - src/dufmech/site_files.py
+  - tests/test_structured_reviews.py
+  evidence_ids:
+  - shared-contract
+  - implementation
+  - regressions
+findings: []
+actions: []
+limitations:
+- Same-agent audit of identifier compatibility only; no scientific assertions or family
+  records were changed.
+- The preceding full local QC passed 1,275 tests plus six browser tests, and GitHub
+  run 37898979645 passed for 60e2d1a3. Those runs predate the five added parameter
+  cases and do not certify the upcoming release head.
+- This additional immutable review requires a new retained checkpoint and rendered
+  source links. Fresh exact-head CI and merge-queue QC must pass before publication.
+notes:
+- This is an additional scoped observation, not an overwrite of the original audit
+  or the publication addendum.
+- The boundary finding belongs to existing issue 187. No new speculative ticket or
+  shared-schema change was introduced.
+links:
+- https://github.com/CultureBotAI/DUFMech/pull/185
+- https://github.com/CultureBotAI/DUFMech/issues/187
+- https://github.com/CultureBotAI/DUFMech/actions/runs/37898979645
+tags:
+- pages
+- reviews
+- compatibility
+```
