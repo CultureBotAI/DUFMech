@@ -46,6 +46,25 @@ def test_required_qc_checks_canonical_artifacts_before_browser_setup():
     assert install < index < browser
 
 
+@pytest.mark.parametrize("name,job,install,boundary", [
+    ("validate.yaml", "qc", "uv sync --locked --extra dev", "just qc"),
+    ("pages.yaml", "build", "uv sync --locked", 'just render --out "$RUNNER_TEMP/dufmech-site"'),
+])
+def test_source_retention_gate_is_required_before_qc_and_pages(name, job, install, boundary):
+    steps = workflow(name)["jobs"][job]["steps"]
+    command = "uv run --locked python -m dufmech.site_source_publication"
+    checks = [index for index, step in enumerate(steps) if step.get("run") == command]
+    assert len(checks) == 1
+    index = checks[0]
+    assert not steps[index].get("continue-on-error")
+    if job == "qc":
+        assert set(steps[index]) == {"name", "run"}
+    else:
+        assert steps[index]["if"] == "steps.current.outputs.publish == 'true'"
+    assert next(i for i, step in enumerate(steps) if step.get("run") == install) < index
+    assert index < next(i for i, step in enumerate(steps) if step.get("run") == boundary)
+
+
 def test_pages_uses_successful_main_validation_and_serialized_current_main_guards():
     document = workflow("pages.yaml")
     events = document.get("on", document.get(True))

@@ -44,6 +44,8 @@ jobs:
           python-version: "3.13"
       - name: Install locked dependencies
         run: uv sync --locked --extra dev
+      - name: Verify published source checkpoint retention
+        run: uv run --locked python -m dufmech.site_source_publication
       - name: Install separate locked OAK runtime
         run: env -u VIRTUAL_ENV -u UV_PROJECT_ENVIRONMENT -u PYTHONPATH -u PYTHONHOME uv sync --project "$CLAW_ROOT" --locked
       - name: Validate structured review contract
