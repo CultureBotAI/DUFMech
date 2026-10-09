@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           repository: CultureBotAI/culturebotai-claw
-          ref: b81580f150d5334841f3eb16434575701607bc81
+          ref: adce6ce0d1720635f11268465003cf78f35b2acf
           path: .claw
           persist-credentials: false
       - name: Set up uv and Python

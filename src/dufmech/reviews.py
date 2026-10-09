@@ -488,7 +488,7 @@ def read_review(
         provenance = common().source_provenance(root, review)
         if provenance["status"] in {"invalid", "unverified"}:
             raise ValueError(f"source provenance {provenance['status']}: {provenance['reason']}")
-        payload = metadata(review)
+        payload = metadata(root, review)
         if source_bytes is not None:
             source_bytes.update({relative: raw, markdown_path: markdown})
         return payload

@@ -45,6 +45,18 @@ and derived Markdown pair. Historical Git inputs must match the retained commit;
 working-tree snapshots must retain their input hashes and a verifiable base.
 This proves what was inspected, not the scientific correctness of its claims.
 
+Native `save` also retains the byte-exact inspected family projection as
+context-only evidence with locator `dufmech-reviewed-projection-v1`. Ingestion,
+status validation and Pages verify those bytes against the source-input SHA-256,
+then recompute the native semantic digest. This preserves legitimate status,
+review-pointer and audit-index bookkeeping without accepting new scientific
+content. Keep using the native save command above. A common-saved bundle without
+this retained proof can qualify only while the current projection file or a
+regular Git blob at the declared revision matches its original input hash.
+A matching current semantic digest alone is never proof of what was reviewed.
+If the reviewed bytes are unavailable, qualification fails closed; perform a
+fresh review instead of rewriting the old bundle.
+
 The historical Markdown directories `reports/yaml_record_review/`,
 `reports/yaml_category_review/` and `reports/repo_review/` remain read-only
 inputs. Their existing strict frontmatter/body, path, digest and status semantics
