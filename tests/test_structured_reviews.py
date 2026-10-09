@@ -14,8 +14,9 @@ import yaml
 from test_history import save_event
 from test_reviews import legacy_review_fixture, make_root, review_payload
 
-from dufmech import history, records, reviews, structured_reviews
+from dufmech import history, pages, records, reviews, structured_reviews
 from dufmech.report import ReportError
+from dufmech.site_contract import check_site
 from dufmech.site_metadata import load_review_site_metadata, load_site_metadata
 from dufmech.site_sources import source_path
 
@@ -103,6 +104,24 @@ def pin_bytes(captured):
     return {path: {"repository": "https://github.com/CultureBotAI/DUFMech", "commit": "a" * 40,
                    "path": path, "sha256": hashlib.sha256(raw).hexdigest()}
             for path, raw in captured.items()}
+
+
+def test_validated_structured_review_is_published_by_full_renderer(root, monkeypatch):
+    path = reviews.save_review(root, payload(root))
+    monkeypatch.setattr(pages, "REPO_ROOT", root)
+    out = root / "site"
+    for _ in range(2):
+        pages.render_from_paths(out_dir=out, worklists_dir=root / "data/worklists",
+                                cross_mech_dir=root / "data/cross_mech")
+        ownership = json.loads((out / "site-files.json").read_text())
+        for source in (path, path.with_name("review.md")):
+            relative = "source/" + source.relative_to(root).as_posix()
+            assert (out / relative).read_bytes() == source.read_bytes()
+            assert ownership[relative] == hashlib.sha256(source.read_bytes()).hexdigest()
+        errors, _ = check_site(
+            out, json.loads((structured_reviews.ROOT / "conf/pages_budgets.json").read_text()),
+        )
+        assert not errors
 
 
 @pytest.mark.parametrize("kind", ["record", "category", "repo", "batch"])
