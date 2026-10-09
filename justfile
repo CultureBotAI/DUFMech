@@ -105,6 +105,11 @@ record-reviews-check:
 site-check *args="":
     uv run --locked python -m dufmech.site_contract {{args}}
 
+# Explicit online publication gate; offline QC and rendering never fetch refs.
+[positional-arguments]
+site-sources-published *args:
+    uv run --locked python -m dufmech.site_source_publication "$@"
+
 # Playwright interaction and mobile/desktop regression suite.
 browser-test:
     npm run test:browser

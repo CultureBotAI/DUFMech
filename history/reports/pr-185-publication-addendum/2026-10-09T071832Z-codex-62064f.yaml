@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: report
+  slug: pr-185-publication-addendum
+  path: reviews/structured/20261009T071906Z-structured-review-publication/review.yaml
+session:
+  id: 2026-10-09T071832Z-codex-62064f
+  timestamp: '2026-10-09T07:18:32Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Retain the structured-review publication follow-up audit
+  details: Publication after the first PR 185 audit exposed issue 187. The site writer
+    now allows only canonical structured review.yaml and review.md downloads; explicit
+    and inferred metadata inputs are protected from overlapping output directories.
+    Seven pre-fix regressions failed, then 89 focused tests passed and the real full
+    corpus rendered successfully. Both review downloads match their authoritative
+    source bytes. The earlier report and source checkpoint tag are unchanged. This
+    addendum precedes a new retained checkpoint, final rendering and fresh full QC/CI.
+    No scientific curation or new ingest.
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/187
+  prs:
+  - https://github.com/CultureBotAI/DUFMech/pull/185
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261009T071906Z-structured-review-publication/review.yaml

@@ -366,6 +366,37 @@ the output. Changed or newly consumed sources require an updated checkpoint and 
 Unpinned preview builds make no immutable own-source claim; local record/review/schema
 and member-dataset downloads remain available. Rendering never generates a ledger.
 
+The required `qc` CI job separately runs an explicit **online** retention gate;
+Pages repeats it before building. Run the same gate with `just site-sources-published`.
+The Pages checkout includes full history and tags so retained structured reviews
+can validate their pre-squash Git bases as well as their source-file hashes.
+It fetches canonical `CultureBotAI/DUFMech` main and `source/dufmech-*` tags into
+a temporary bare repository, independent of checkout remotes, shallow history,
+local tags and Git URL rewrites. The pinned commit must be an ancestor of canonical
+main or the direct commit target of a published **annotated** source tag. Every
+pinned file must match the checkpoint's actual Git blob; local content hashes alone
+do not establish that the supplied commit contains those bytes. Network failures,
+missing refs and mismatches fail closed. Local `just qc`, capture, hash checks and
+rendering remain offline. See Git's [fetch refspec documentation](https://git-scm.com/docs/git-fetch)
+and [tree object inspection](https://git-scm.com/docs/git-ls-tree).
+
+For a squash-merged PR, publish a checkpoint tag before capture, for example:
+
+```bash
+git tag -a source/dufmech-pr-N FULL_SOURCE_SHA -m 'Retained website source checkpoint for PR N'
+git push origin refs/tags/source/dufmech-pr-N
+uv run python -m dufmech.site_sources capture --commit FULL_SOURCE_SHA
+just site-sources-published
+just render
+```
+
+Keep the annotated tag after deleting the PR branch; never move it to a later
+commit. Ordinary feature branches, lightweight tags, local-only tags and tags on
+other repositories do not satisfy this gate. The check observes current canonical
+retention, not permanent tag protection; maintainers must preserve the tag. It
+does not create refs, publish data, rewrite source pins after merge or change any
+scientific evidence.
+
 `just render` serializes writers using a destination-adjacent `.NAME.dufmech-render.lock`
 file, independent of `TMPDIR`. Descriptor-relative writes reject symlink traversal.
 It stages generated artifacts before replacing them and preserves unrelated files.

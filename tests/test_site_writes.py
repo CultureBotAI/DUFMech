@@ -36,6 +36,31 @@ def assert_manifest_matches(out):
                for name, digest in manifest.items())
 
 
+@pytest.mark.parametrize("explicit_root", [False, True])
+@pytest.mark.parametrize("output", ["reviews", "reviews/structured", "reviews/structured/nested"])
+def test_structured_review_inputs_cannot_be_site_destinations(tmp_path, monkeypatch,
+                                                            explicit_root, output):
+    monkeypatch.setattr(pages, "REPO_ROOT", tmp_path)
+    monkeypatch.setattr(pages, "load_latest_rows",
+                        lambda *a, **kw: pytest.fail("read inputs before detecting output overlap"))
+    with pytest.raises(ReportError, match="overlaps snapshot inputs"):
+        pages.render_from_paths(out_dir=tmp_path / output,
+                                worklists_dir=tmp_path / "data/worklists",
+                                records_root=tmp_path if explicit_root else None)
+
+
+@pytest.mark.parametrize("relative", [
+    "source/reviews/structured/fixture/review.yaml",
+    "source/reviews/structured/20261009T010000Z-fixture/extra.md",
+    "source/reviews/structured/20261009T010000Z-fixture/review.yml",
+    "source/reviews/structured/20261009T010000Z-fixture/nested/review.yaml",
+    "source/reviews/structured/../20261009T010000Z-fixture/review.yaml",
+])
+def test_structured_review_download_paths_remain_narrow(tmp_path, relative):
+    with pytest.raises(ReportError, match="unsafe generated site artifact"):
+        prepare_files({relative: "invalid path"}, tmp_path / "site")
+
+
 def test_concurrent_render_waits_for_full_ownership_and_cleanup_transaction(tmp_path, monkeypatch):
     out = tmp_path / "site"
     render(out, 2)

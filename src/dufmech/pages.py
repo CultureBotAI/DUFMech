@@ -127,8 +127,12 @@ def render_from_paths(
     Only the default native corpus discovers its latest default-UniRef member snapshot;
     explicit worklist/score selections and custom directories require ``members_json``.
     """
-    record_inputs = (() if records_root is None else tuple(
-        records_root / part for part in ("data/families", "curation/families", "history", "reports")
+    default_corpus = (worklist_json is None and score_json is None
+                      and worklists_dir.resolve() == (REPO_ROOT / WORKLISTS_DIR).resolve())
+    metadata_root = records_root or (REPO_ROOT if default_corpus else None)
+    record_inputs = (() if metadata_root is None else tuple(
+        metadata_root / part
+        for part in ("data/families", "curation/families", "history", "reports", "reviews")
     ))
     for input_path in (worklists_dir, worklist_json, score_json, cross_mech_dir,
                        members_json, *record_inputs):
@@ -161,8 +165,6 @@ def render_from_paths(
         unscanned = cross_mech_unscanned(manifest)
         provenance["cross_mech"] = tracked_source(cross_mech_path, REPO_ROOT, pins=source_pins)
     metadata, extra_artifacts = {}, {}
-    default_corpus = (worklist_json is None and score_json is None
-                      and worklists_dir.resolve() == (REPO_ROOT / WORKLISTS_DIR).resolve())
     if records_root is None and default_corpus:
         if (REPO_ROOT / "data/families").is_dir():
             records_root = REPO_ROOT
