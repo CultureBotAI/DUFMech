@@ -1,0 +1,390 @@
+kind: repository
+repository: CultureBotAI/DUFMech
+source:
+  git_revision: 14b806047b4c5da3c2196aafebdb9238842f2685
+  inputs:
+  - path: .github/workflows/pages.yaml
+    role: target
+    sha256: abd8c5a36587b45062f37ebeaf1934b76bf5f8d8cd7c720387d74256b1d8f4e1
+  - path: .github/workflows/validate.yaml
+    role: target
+    sha256: 88da10d07212b66c1882b077cd02847037ecc88042432ebbae928356d4c9c4e5
+  - path: README.md
+    role: target
+    sha256: 0c20e11a494d1f419182988c4206b84c8847db2e9d1f1ed51327ef98190c41fb
+  - path: data/worklists/interpro-pfam-duf-2026-10-08.json
+    role: context
+    sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  - path: data/worklists/interpro-pfam-duf-2026-10-08.manifest.json
+    role: context
+    sha256: 5929010740007a44480dac1fe804840b5885e131bceccc3043dbcb9146e991d5
+  - path: data/worklists/interpro-pfam-duf-2026-10-08.tsv
+    role: context
+    sha256: 3d873968fcb87babafe59c01722c0d914f4ddc45de28cb8de4595477c353f91b
+  - path: justfile
+    role: target
+    sha256: 5db0b67bc5585aa5394a81d1a4b1bf946a25bfa292229f1c7b63f0627e457de8
+  - path: src/dufmech/site_source_publication.py
+    role: target
+    sha256: 401f34614494bb898c21b61d5085038bd71c898cd10017b7c1655ae51118aa6e
+  - path: tests/test_site_source_publication.py
+    role: target
+    sha256: 9eb3c35ade2d5f7b7323d280da6682f4a45ea827940c12fa0ca9e36e79226c9d
+  - path: tests/test_workflows.py
+    role: target
+    sha256: 30d0e352ae08fbdd3bc22f26a5f1e566b05ffd30cd66273f0495a7fe84765da2
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  state: working_tree
+targets:
+- kind: source
+  label: .github/workflows/pages.yaml
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: .github/workflows/pages.yaml
+  target_id: .github/workflows/pages.yaml
+- kind: source
+  label: .github/workflows/validate.yaml
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: .github/workflows/validate.yaml
+  target_id: .github/workflows/validate.yaml
+- kind: source
+  label: README.md
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: README.md
+  target_id: README.md
+- kind: source
+  label: justfile
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: justfile
+  target_id: justfile
+- kind: source
+  label: src/dufmech/site_source_publication.py
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: src/dufmech/site_source_publication.py
+  target_id: src/dufmech/site_source_publication.py
+- kind: source
+  label: tests/test_site_source_publication.py
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: tests/test_site_source_publication.py
+  target_id: tests/test_site_source_publication.py
+- kind: source
+  label: tests/test_workflows.py
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: tests/test_workflows.py
+  target_id: tests/test_workflows.py
+schema_version: 1.0.0
+review_id: 20261009T071002Z-site-source-retention
+title: PR 185 canonical source retention and Pages provenance audit
+started_at: '2026-10-09T06:53:48Z'
+finished_at: '2026-10-09T07:10:02Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: The implementing agent performed a separate adversarial pass
+    over the diff and real Git regression fixtures; no independent reviewer or approving
+    identity is claimed.
+skill: .claude/skills/review-repo/SKILL.md
+completion: completed
+verdict: pass
+native_verdict: PASS
+scientific_review: false
+summary: The scoped implementation enforces canonical checkpoint retention and verifies
+  actual pinned Git blobs without trusting checkout refs. Adversarial review identified
+  the shallow Pages checkout defect tracked in issue 186; the full-history fix and
+  regression now pass. Issue 179's current broken ledger was reproduced locally and
+  in draft-PR CI. Final checkpoint publication and exact-head CI remain publication
+  steps after this code audit.
+scope:
+  description: Review the seven changed source-retention, workflow, test and documentation
+    files, limited to the PR 185 diff. Assess canonical repository identity, actual
+    blob correspondence, fail-closed behavior, isolation from local Git configuration,
+    squash/tag lifecycle, offline/online separation, and Pages review-base availability.
+    No functional assertions, taxonomy, source licensing or whole-repository scientific
+    completeness are assessed.
+  selection: All seven maintained files changed by implementation commits 5c1220217
+    and 14b806047.
+  coverage: full
+  population_size: 7
+  reviewed_target_ids:
+  - .github/workflows/pages.yaml
+  - .github/workflows/validate.yaml
+  - README.md
+  - justfile
+  - src/dufmech/site_source_publication.py
+  - tests/test_site_source_publication.py
+  - tests/test_workflows.py
+  exclusions:
+  - target: Frozen scientific corpus and external research providers
+    reason: No data acquisition, functional curation, or family classification change
+      was requested for this implementation.
+  - target: Final checkpoint, rendered artifacts and merge queue
+    reason: These publication steps follow the retained review; fresh checks must
+      pass before merge.
+checks:
+- check_id: focused
+  name: Publication and workflow regressions
+  status: passed
+  required: true
+  target_ids:
+  - .github/workflows/pages.yaml
+  - .github/workflows/validate.yaml
+  - README.md
+  - justfile
+  - src/dufmech/site_source_publication.py
+  - tests/test_site_source_publication.py
+  - tests/test_workflows.py
+  command: .venv/bin/python -m pytest tests/test_site_source_publication.py tests/test_site_sources.py
+    tests/test_workflows.py -q
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 38 tests passed, including real local Git remotes, tag deletion, branch-only
+    and lightweight-tag rejection, wrong published blobs, missing files, symlink blobs,
+    inherited configuration poisoning, archive-only inputs, network failures, and
+    the shallow-versus-full review-base regression.
+  evidence_ids:
+  - tests
+  - workflow-regression
+- check_id: qc
+  name: Full native QC
+  status: passed
+  required: true
+  target_ids:
+  - .github/workflows/pages.yaml
+  - .github/workflows/validate.yaml
+  - README.md
+  - justfile
+  - src/dufmech/site_source_publication.py
+  - tests/test_site_source_publication.py
+  - tests/test_workflows.py
+  command: env UV_CACHE_DIR=/private/tmp/dufmech-uv-cache CLAW_SRC=/private/tmp/dufmech-classification-claw/src
+    CLAW_ROOT=/private/tmp/dufmech-classification-claw PLAYWRIGHT_BROWSERS_PATH=/private/tmp/dufmech-playwright-browsers
+    DUFMECH_SCREENSHOT_DIR=/private/tmp/dufmech-source-retention-browser-screenshots
+    just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'All local gates passed: 1,261 Python tests, three existing skips, six
+    browser tests, nine snapshot manifests, 8,295 valid records with zero drift, current
+    exports, 8,295 OK_CANONICAL OAK correspondences, eight historical reports, three
+    history records, current Pages and zero site-contract errors. The two workflow
+    regressions added after full-suite collection are included in the separate 38-test
+    result. Source governance retains 15 pre-existing warnings; one upstream SSSOM/LinkML
+    deprecation warning remains.'
+  evidence_ids:
+  - qc
+- check_id: oak
+  name: Isolated real OAK rejection cases
+  status: passed
+  required: true
+  target_ids:
+  - .github/workflows/pages.yaml
+  - .github/workflows/validate.yaml
+  - README.md
+  - justfile
+  - src/dufmech/site_source_publication.py
+  - tests/test_site_source_publication.py
+  - tests/test_workflows.py
+  command: env UV_CACHE_DIR=/private/tmp/dufmech-uv-cache CLAW_ROOT=/private/tmp/dufmech-classification-claw
+    just id-labels-oak-test
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Full corpus and actual empty, missing, mismatched and unknown-prefix rejection
+    cases passed in the locked CLAW runtime at adce6ce0d1720635f11268465003cf78f35b2acf
+    with network denied.
+  evidence_ids:
+  - qc
+- check_id: governance
+  name: Canonical artifact integrity
+  status: passed
+  required: true
+  target_ids:
+  - .github/workflows/pages.yaml
+  - .github/workflows/validate.yaml
+  - README.md
+  - justfile
+  - src/dufmech/site_source_publication.py
+  - tests/test_site_source_publication.py
+  - tests/test_workflows.py
+  command: python3 -I scripts/check_vendored_sync.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All 18 governed artifacts match the pinned published CLAW revision; no
+    vendored payload was edited.
+  evidence_ids:
+  - qc
+- check_id: negative-control
+  name: Live unretained-checkpoint rejection
+  status: passed
+  required: true
+  target_ids:
+  - .github/workflows/pages.yaml
+  - .github/workflows/validate.yaml
+  - README.md
+  - justfile
+  - src/dufmech/site_source_publication.py
+  - tests/test_site_source_publication.py
+  - tests/test_workflows.py
+  command: .venv/bin/python -m dufmech.site_source_publication
+  exit_code: 1
+  expected_exit_code: 1
+  summary: The existing ledger checkpoint 8b15f7263aa693612e1d41fecc790d00cbfa06f1
+    was rejected locally and in draft-PR run 37896730830. This is the expected negative
+    control for issue 179, not a passing release check.
+  evidence_ids:
+  - live-negative
+- check_id: lint
+  name: Scoped lint and patch integrity
+  status: passed
+  required: true
+  target_ids:
+  - .github/workflows/pages.yaml
+  - .github/workflows/validate.yaml
+  - README.md
+  - justfile
+  - src/dufmech/site_source_publication.py
+  - tests/test_site_source_publication.py
+  - tests/test_workflows.py
+  command: .venv/bin/ruff check src/dufmech/site_source_publication.py tests/test_site_source_publication.py
+    tests/test_workflows.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Ruff passed after the Pages fix; git diff --check also passed. Module and
+    just-wrapper --help both completed successfully.
+  evidence_ids:
+  - tests
+evidence:
+- evidence_id: implementation
+  kind: record_content
+  reference: src/dufmech/site_source_publication.py
+  accessed_at: '2026-10-09T07:10:02Z'
+  support: supports
+  summary: 'Read the full gate: validated ledger, fixed canonical repository URL,
+    sanitized Git environment, temporary bare repository, explicit main/tag refspecs,
+    direct annotated-tag or main-ancestry requirement, and regular-file blob correspondence.
+    It never changes checkout refs or invokes research providers.'
+- evidence_id: tests
+  kind: validation
+  reference: tests/test_site_source_publication.py
+  accessed_at: '2026-10-09T07:10:02Z'
+  support: supports
+  summary: Read and executed real Git regression tests and both CLI help routes; no
+    new correctness issue remains in the gate implementation.
+- evidence_id: workflow-regression
+  kind: validation
+  reference: https://github.com/CultureBotAI/DUFMech/issues/186
+  accessed_at: '2026-10-09T07:10:02Z'
+  support: supports
+  summary: 'Reproduced the workflow''s missing fetch-depth with a failing assertion.
+    A real depth-1 clone cannot verify the annotated-tag-retained pre-squash review
+    base, while a full clone can. Added fetch-depth: 0 to Pages and reran both tests
+    successfully.'
+- evidence_id: live-negative
+  kind: validation
+  reference: https://github.com/CultureBotAI/DUFMech/actions/runs/37896730830
+  accessed_at: '2026-10-09T07:10:02Z'
+  support: supports
+  summary: GitHub's required qc job failed specifically at the new retention gate
+    on the existing branch-only pin, demonstrating enforcement before expensive offline
+    gates.
+- evidence_id: live-positive
+  kind: validation
+  reference: https://github.com/CultureBotAI/DUFMech/commit/c82e824c3fb6b8a0f4e4b3999a741235908a6a3e
+  accessed_at: '2026-10-09T07:10:02Z'
+  support: supports
+  summary: A read-only positive probe supplied canonical main in memory for the existing
+    ledger entries, without editing local files. The actual online checker accepted
+    canonical main and verified all 8,337 pinned source blobs.
+- evidence_id: qc
+  kind: validation
+  reference: https://github.com/CultureBotAI/DUFMech/pull/185
+  accessed_at: '2026-10-09T07:10:02Z'
+  support: supports
+  summary: Observed the full local gate and separate real offline OAK regression exit
+    successfully. Frozen data/worklists, data/families, data/cross_mech, curation
+    and exports have no tracked diff from origin/main.
+- evidence_id: docs
+  kind: record_content
+  reference: README.md
+  accessed_at: '2026-10-09T07:10:02Z'
+  support: supports
+  summary: Read the changed publication instructions and justfile wrapper. They distinguish
+    explicit online retention checks from offline rendering/QC, require keeping annotated
+    checkpoint tags after branch deletion, and describe current-retention limitations.
+assessments:
+- assessment_id: canonical-proof
+  area: provenance
+  topic: Canonical retention and pinned-byte proof
+  outcome: supported
+  summary: The checker cannot accept a merely local or feature-branch ref, a lightweight
+    tag, an indirectly tagged ancestor, or a main commit containing different pinned
+    bytes. Real remote fixtures and live positive/negative probes support both acceptance
+    paths.
+  target_ids:
+  - src/dufmech/site_source_publication.py
+  - tests/test_site_source_publication.py
+  evidence_ids:
+  - implementation
+  - tests
+  - live-negative
+  - live-positive
+- assessment_id: workflow-enforcement
+  area: consistency
+  topic: Required CI and deploy-time verification
+  outcome: supported
+  summary: The required qc job runs the online gate unconditionally and Pages repeats
+    it before rendering. Existing validated-SHA/current-main guards and read-only
+    credentials remain intact. The issue 186 fix makes tagged historical review bases
+    available to Pages without weakening review validation.
+  target_ids:
+  - .github/workflows/validate.yaml
+  - .github/workflows/pages.yaml
+  - tests/test_workflows.py
+  evidence_ids:
+  - workflow-regression
+  - live-negative
+  - qc
+- assessment_id: operator-contract
+  area: scope
+  topic: Explicit publication workflow and scope limits
+  outcome: supported
+  summary: The command and documentation make network access explicit, preserve offline
+    generation, and identify annotated tags as retained checkpoints across squash
+    merges. They do not claim permanent tag protection, independent approval, new
+    ingest, or scientific characterization.
+  target_ids:
+  - README.md
+  - justfile
+  evidence_ids:
+  - docs
+  - implementation
+  - tests
+findings: []
+actions: []
+limitations:
+- Same-agent adversarial review, not an independent approving identity.
+- The selected diff is an infrastructure audit. The corpus remains 8,295 SEEDED/UNSCORED
+  records; functional evidence and unresolved source licenses were not reassessed.
+- Retention is observed at check time. Maintainers can still delete or move tags afterward;
+  no repository tag-protection setting was changed.
+- The new retained report, canonical history, checkpoint tag, pin ledger and generated
+  site still require publication and fresh exact-head CI before merge. This report
+  does not assert those later steps have already passed.
+notes:
+- Issue 186 was opened during this audit and fixed before completion; no unresolved
+  finding remains in the selected code diff. There is no earlier structured observation
+  to supersede.
+- The new gate itself reproduced existing issue 179 after merged PR 184. The final
+  publication will repair the current ledger by retaining a new checkpoint, not by
+  rewriting immutable snapshots.
+- Absence searches for a pre-existing publication checker used rg --no-ignore --hidden
+  within source, tests, workflows, docs, conf and README, excluding only unrelated
+  generated ID-label content and Python bytecode. Git ref checks used canonical fetches,
+  not filesystem search assumptions.
+links:
+- https://github.com/CultureBotAI/DUFMech/pull/185
+- https://github.com/CultureBotAI/DUFMech/issues/179
+- https://github.com/CultureBotAI/DUFMech/issues/186
+tags:
+- provenance
+- ci
+- pages
