@@ -93,8 +93,13 @@ new-history *args:
 history-check:
     uv run --locked python -m dufmech.history check
 
-reviews-check:
+reviews-check: record-reviews-check
     uv run --locked python -m dufmech.reviews check
+
+# Validate the shared profile, immutable bundles, and synthetic saver roundtrip.
+record-reviews-check:
+    uv run --locked --extra dev pytest -q tests/test_record_review_contract.py
+    uv run --locked python scripts/record_review.py check
 
 # Check generated HTML links, accessibility tokens and repository-selected budgets.
 site-check *args="":

@@ -1,68 +1,61 @@
 # Retained Reviews
 
-Reviews are append-only Markdown artifacts under `reports/yaml_record_review/`,
-`reports/yaml_category_review/`, and `reports/repo_review/`. The fleet-compatible
-`yaml` directory names also support a Pfam row in a verified frozen JSON snapshot
-when its family projection is not present. These Markdown paths are not excluded
-by the repository's `reports/*.tsv` and `reports/*.json` ignore rules.
+New reviews use the common YAML and derived Markdown contract in
+[record-reviews.md](record-reviews.md), with DUF-specific commands and rubrics in
+[record-review-profile.md](record-review-profile.md). The authoritative path is
+`reviews/structured/<timestamp>-<slug>/review.yaml`; the sibling `review.md`
+is generated, never an independently editable verdict.
 
 ## Inspect, Review, Save
 
-Run commands from the repository root with `uv run dufmech-review`, or use
-`uv run python -m dufmech.reviews`. The optional global `--repo-root PATH` precedes
-the subcommand.
-
 ```bash
-uv run dufmech-review inspect record PF04149
-uv run dufmech-review inspect category two-seeds --members PF04149 PF19054 --selection 'Explicit two-family metadata audit.'
-uv run dufmech-review inspect repo dufmech --scope-path src/dufmech/reviews.py --scope-path src/dufmech/history.py
-uv run dufmech-review save --content /absolute/path/to/completed-review.yaml
-uv run dufmech-review check
-uv run dufmech-review list --pfam-id PF04149
+uv run --locked dufmech-review inspect record PF04149
+uv run --locked dufmech-review inspect category two-seeds --members PF04149 PF19054 --selection 'Explicit two-family metadata audit.'
+uv run --locked dufmech-review inspect repo dufmech --scope-path src/dufmech/reviews.py
+uv run --locked dufmech-review save --content /absolute/session/completed-review.yaml
+just reviews-check
+uv run --locked dufmech-review list --pfam-id PF04149
 ```
 
-`inspect` returns deterministic JSON containing `status: inspection_only`, an
-exact `context`, available snapshot/projection/curation data, and required section
-headings. It neither writes a report nor performs scientific review. An optional
-`--snapshot-id interpro-pfam-duf-YYYY-MM-DD` pins the inspected snapshot; otherwise
-the latest snapshot is selected and verified through the existing manifest gate.
+The optional global `--repo-root PATH` precedes the subcommand. Inspection returns
+`status: inspection_only`, native context and available records, rubric headings,
+and `structured` source/target fields. `--snapshot-id` pins a verified frozen
+snapshot; otherwise the latest is verified. Inspection neither saves a review
+nor performs science. Read the actual evidence and complete the common schema,
+preserving these captured fields, native verdict, scope and scientific-review
+boolean. Keep experimental, computational, contextual and seed evidence separate.
 
-Perform the review before constructing a YAML or JSON content mapping. Supply:
+`save` (alias `finalize`) accepts only the new common document. It recomputes the
+native frozen snapshot/projection context and semantic digest, then uses the
+shared validator and atomic saver. Changed inputs require fresh inspection and
+reassessment. No auto-conversion invents evidence, check results or assessments
+from the old prose envelope. Categories and batches retain exact Pfam selection;
+repository inspection maps native `repo` to common `repository`.
 
-- `context`: the complete unmodified object returned by inspection.
-- `started_utc`, `finished_utc`: quoted UTC ISO-8601 strings; end must not precede start.
-- `reviewer`: the actual reviewing person or agent, including model when known.
-- `review_scope`: what was assessed and its limits.
-- `scientific_review`: an explicit boolean, usually `false` for seed/infrastructure audits.
-- `verdict`: `SEED_ONLY`, `NEEDS_FOLLOWUP`, `BLOCKED`, `FAIL`, or `PASS`.
-- `sections`: a mapping from every returned section heading to actual review prose.
+A passing common verdict requires a positive, evidence-linked assessment for
+every reviewed target; passing checks or an empty findings list are insufficient.
+Plain `pass` cannot retain unknown or concerning assessments. Terminal findings
+must concern targets actually reviewed and assessed, with nonfailed completion.
+Preserve all affected targets of each superseded finding, even when recording
+a partial observation. A terminal finding is not automatically current: use the
+shared currentness/planning views and retain their stale or unverified warnings.
 
-`save` (alias `finalize`) refuses missing, empty, or known scaffold content. Notes
-can contain arbitrary prose and level-three subheadings. Explain why a check is
-unavailable instead of inserting an empty field. Input context is recomputed at
-save time, so changed source files or a changed base Git revision require a fresh
-inspection and reassessment. The command prints the appended absolute path.
+The native reader verifies retained source Git provenance as well as the YAML
+and derived Markdown pair. Historical Git inputs must match the retained commit;
+working-tree snapshots must retain their input hashes and a verifiable base.
+This proves what was inspected, not the scientific correctness of its claims.
 
-Each artifact contains machine-readable YAML frontmatter and the shared fleet
-sections: target, validation, identity/grounding, evidence, completeness, findings,
-recommended edits, follow-up checks, and additional notes. Categories additionally
-retain their selection rule, exact members, and lump/split reasoning. Repository
-reviews retain their selected source paths and scope.
+The historical Markdown directories `reports/yaml_record_review/`,
+`reports/yaml_category_review/` and `reports/repo_review/` remain read-only
+inputs. Their existing strict frontmatter/body, path, digest and status semantics
+remain supported; current records and history need no migration. Both formats
+are checked, including ignored/hidden files. Shared checks reject modification or
+deletion of previously committed structured bundles against `RECORD_REVIEW_BASE`
+(HEAD locally; trusted event base in PR/merge-group/push CI).
 
-`source_revision` is the real Git HEAD at inspection, not a claim that uncommitted
-work was already published. `source_state: working_tree` and exact source SHA-256
-hashes describe the inspected input bytes, including overlays. Snapshot ID and
-record locators distinguish a YAML projection from a JSON row. Report timestamps
-are supplied once and preserved; no generation-time clock enters family records.
-
-Reports use `<finished-UTC>-<slug>.md`, with `-02`, `-03`, and subsequent suffixes
-on collisions. Publication is exclusive and atomic. There is no overwrite option;
-corrections require a new report referencing the previous artifact in its notes.
-Paths cannot escape the repository or traverse symlinks. `check` includes ignored
-and hidden reports and verifies metadata, sections, timestamps, filenames, and
-internal paths. It does not repeat biological research or invalidate an old review
-merely because its source content has since changed. Exit 0 means the requested
-operation succeeded; content/validation/I/O failures return 1, argparse errors 2.
+Exit 0 means the requested command succeeded, not that science was established.
+Validation/I/O failures return 1 and argparse errors 2. Correct a saved observation
+with a new review that cites its predecessor; never rewrite retained evidence.
 
 ## The REVIEWED Contract
 
@@ -75,7 +68,9 @@ The curation overlay's `review_id` is the repository-relative retained report pa
 `reviews.require_completed_review(root, pfam_id, review_id, record)` must succeed
 after the overlay is merged into the effective `FamilyRecord`. The helper checks:
 
-1. A saved per-record `PASS` report for exactly this Pfam accession.
+1. A saved per-record `PASS` report for exactly this Pfam accession. For new
+   bundles this also requires explicit native `PASS`, common `pass`, completed
+   status, full scope and the named `dufmech-record-content-v1` digest.
 2. A SHA-256 digest matching the current record's content, excluding only
    `curation_status`, `review_id`, and the generated-only `curation_events` audit
    index to avoid circular bookkeeping. The stable `curation_history` pointer
@@ -99,7 +94,7 @@ reviews and `SEED_ONLY`/`NEEDS_FOLLOWUP` verdicts cannot promote a record.
 ## Pages Integration
 
 `reviews.load_review_metadata(root, pfam_id=None)` returns sorted validated
-metadata, including `path`, `href`, `context`, `finished_utc`, `verdict`,
+metadata for both formats, including `path`, `href`, `context`, `finished_utc`, `verdict`,
 `review_scope`, and `scientific_review`. With a Pfam argument it includes its record
 and category reports. Load all reports once per site render and index membership
 in memory; do not run a repository scan for every generated family page.
@@ -116,3 +111,8 @@ finalized report. No invented event or generation-time clock enters either index
 Repository skills live in `.claude/skills/review-yaml-record/`,
 `.claude/skills/review-yaml-category/`, and `.claude/skills/review-repo/`.
 The matching `.agents/skills/` entries point to those maintained instructions.
+
+For structured bundles `path` is the authoritative YAML pointer and
+`markdown_path` identifies the derived report. The optional `source_bytes`
+sink captures both validated byte strings. Pages copies and pins both without
+reopening either pathname; the status predicate uses that same validated capture.

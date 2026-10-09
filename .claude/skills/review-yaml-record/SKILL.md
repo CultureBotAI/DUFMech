@@ -19,8 +19,8 @@ their results; unavailable checks remain unavailable. Absence claims require a
 search that includes ignored/hidden files.
 
 Retain exactly one report for the completed review session with the inspection's
-context, real UTC start/end, actual reviewer, explicit scientific-review boolean,
-verdict, and substantive text for every required fleet section. Use `SEED_ONLY`
+source and targets, real UTC start/end, actual reviewer, explicit scientific-review boolean,
+native/common verdicts, and substantive domain assessments. Use `SEED_ONLY`
 or `NEEDS_FOLLOWUP` when appropriate. Scope-limited audits are useful results;
 their completion does not establish scientific characterization.
 
@@ -36,3 +36,19 @@ passing-report/current-content-digest/linked-history gate in the contract. Recor
 actual history with [the history command](../../../docs/history.md), preserving
 the distinction between a scoped audit and scientific evidence review. Do not
 add fake history events or change a status simply to make coverage look complete.
+
+## Structured Review Output
+
+Follow [docs/record-reviews.md](../../../docs/record-reviews.md) and the
+[DUFMech profile](../../../docs/record-review-profile.md) for every new review.
+Use the native inspection's `structured.source` and `structured.targets`;
+author the common schema with actual checks, evidence-linked domain assessments,
+findings/actions, coverage and limits, then run `just review save --content PATH`.
+New output is `reviews/structured/<timestamp>-<slug>/review.yaml` plus its
+derived `review.md`. Link both; run `just reviews-check`. Historical reports
+remain read-only. Preserve the scientific-review flag, native verdict,
+snapshot identity, exact row selector and named semantic digest.
+Map seed-only, follow-up, blocked, failing and passing native verdicts using
+the profile. Never label an inspection, deterministic scan, provider draft
+or seed metadata as a completed scientific review. Native status and history
+requirements still apply independently of common schema validity.

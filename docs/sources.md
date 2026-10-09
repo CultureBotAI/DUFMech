@@ -162,7 +162,8 @@ validation calls in the implementation are not attributed to its wrapper.
 for schema artifacts, not an independent curation guard.
 
 Bohr confirmed `reviews.append_document` as the shared exclusive append
-publisher, `reviews.save_review` as the validated Markdown review writer, and
+publisher, `reviews.save_review` as the adapter to the shared validated YAML/Markdown
+bundle writer, and
 `history.new_history` as the canonical-schema-validated YAML event writer.
 Neither review nor history writers replace existing events. Required function
 calls, dry-run defaults, real helper definitions, and test-file provenance are

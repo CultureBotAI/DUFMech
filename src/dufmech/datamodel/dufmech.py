@@ -1092,7 +1092,7 @@ slots.familyRecord__curation_status = Slot(uri=DUFMECH.curation_status, name="fa
 
 slots.familyRecord__review_id = Slot(uri=DUFMECH.review_id, name="familyRecord__review_id", curie=DUFMECH.curie('review_id'),
                    model_uri=DUFMECH.familyRecord__review_id, domain=None, range=Optional[str],
-                   pattern=re.compile(r'^reports/yaml_record_review/[A-Za-z0-9_.-]+[.]md$'))
+                   pattern=re.compile(r'^(reports/yaml_record_review/[A-Za-z0-9_.-]+[.]md|reviews/structured/[A-Za-z0-9][A-Za-z0-9._-]{0,159}/review[.]yaml)$'))
 
 slots.familyRecord__curation_history = Slot(uri=DUFMECH.curation_history, name="familyRecord__curation_history", curie=DUFMECH.curie('curation_history'),
                    model_uri=DUFMECH.familyRecord__curation_history, domain=None, range=Optional[str],
@@ -1137,7 +1137,7 @@ slots.familyCuration__curation_status = Slot(uri=DUFMECH.curation_status, name="
 
 slots.familyCuration__review_id = Slot(uri=DUFMECH.review_id, name="familyCuration__review_id", curie=DUFMECH.curie('review_id'),
                    model_uri=DUFMECH.familyCuration__review_id, domain=None, range=Optional[str],
-                   pattern=re.compile(r'^reports/yaml_record_review/[A-Za-z0-9_.-]+[.]md$'))
+                   pattern=re.compile(r'^(reports/yaml_record_review/[A-Za-z0-9_.-]+[.]md|reviews/structured/[A-Za-z0-9][A-Za-z0-9._-]{0,159}/review[.]yaml)$'))
 
 slots.familyCuration__curation_history = Slot(uri=DUFMECH.curation_history, name="familyCuration__curation_history", curie=DUFMECH.curie('curation_history'),
                    model_uri=DUFMECH.familyCuration__curation_history, domain=None, range=Optional[str],

@@ -341,8 +341,11 @@ def inspect_review(
         "scope_paths": sorted(t["locator"] for t in targets) if kind == "repo" else [],
         "record_digests": record_digests,
     }
+    from dufmech.structured_reviews import inspected_fields
+
     return {"status": "inspection_only", "context": context,
-            "required_sections": list(SECTIONS[kind]), "records": records}
+            "required_sections": list(SECTIONS[kind]), "records": records,
+            "structured": inspected_fields(context)}
 
 
 def _validate_context(root: Path, context: Any) -> None:
@@ -464,26 +467,10 @@ def _render_report(payload: dict[str, Any]) -> str:
 
 
 def save_review(root: Path, payload: dict[str, Any]) -> Path:
-    """Save explicit content only if its inspected input context is still current."""
-    _validate_content(root, payload)
-    context = payload["context"]
-    current = inspect_review(
-        root, context["kind"], context["slug"], members=context["members"],
-        selection=context["selection"], snapshot_id=context["snapshot_id"],
-        scope_paths=context["scope_paths"],
-    )["context"]
-    if context != current:
-        raise ValueError("review input context changed; inspect again and reassess before saving")
-    metadata = {k: payload[k] for k in (
-        "context", "started_utc", "finished_utc", "verdict", "reviewer", "review_scope",
-        "scientific_review", "sections",
-    )}
-    metadata.update({"review_version": 1, "status": "saved"})
-    timestamp = utc_timestamp(payload["finished_utc"]).strftime("%Y%m%dT%H%M%SZ")
-    return append_document(
-        root, REPORT_DIRS[context["kind"]], f"{timestamp}-{context['slug']}", ".md",
-        lambda _: _render_report(metadata),
-    )
+    """Save new common bundles; legacy Markdown is supported only for reading."""
+    from dufmech.structured_reviews import save
+
+    return save(root, payload)
 
 
 def read_review(
@@ -492,6 +479,19 @@ def read_review(
     """Validate a captured report; optionally retain those exact bytes in an output sink."""
     relative = path.relative_to(root.absolute()).as_posix()
     raw = read_source_bytes(root, relative)
+    if relative.startswith("reviews/structured/"):
+        from dufmech.structured_reviews import common, metadata
+
+        markdown_path = path.with_name("review.md").relative_to(root.absolute()).as_posix()
+        markdown = read_source_bytes(root, markdown_path)
+        review = common().parse_review_bundle(relative, raw, markdown)
+        provenance = common().source_provenance(root, review)
+        if provenance["status"] in {"invalid", "unverified"}:
+            raise ValueError(f"source provenance {provenance['status']}: {provenance['reason']}")
+        payload = metadata(review)
+        if source_bytes is not None:
+            source_bytes.update({relative: raw, markdown_path: markdown})
+        return payload
     text = raw.decode("utf-8")
     if not text.startswith("---\n") or "\n---\n" not in text[4:]:
         raise ValueError(f"{relative}: missing review metadata")
@@ -532,8 +532,12 @@ def load_review_metadata(
     """
     root = root.absolute()
     result = []
-    for directory in REPORT_DIRS.values():
-        for path in artifact_paths(root, directory, {".md"}):
+    from dufmech.structured_reviews import common
+
+    groups = [artifact_paths(root, directory, {".md"}) for directory in REPORT_DIRS.values()]
+    groups.append([root / name for name in common().review_paths(root)])
+    for paths in groups:
+        for path in paths:
             captured = {} if source_bytes is not None else None
             review = read_review(root, path, source_bytes=captured)
             if pfam_id is not None and pfam_id not in review["context"]["members"]:
@@ -541,6 +545,8 @@ def load_review_metadata(
             item = {k: v for k, v in review.items() if k != "sections"}
             item["path"] = path.relative_to(root).as_posix()
             item["href"] = internal_href(root, item["path"])
+            if item["review_version"] == 2:
+                item["markdown_path"] = path.with_name("review.md").relative_to(root).as_posix()
             result.append(item)
             if source_bytes is not None:
                 source_bytes.update(captured)
@@ -589,6 +595,11 @@ def _require_completed_review_from_metadata(
     if (context["kind"] != "record" or context["members"] != [pfam_id]
             or review["verdict"] != "PASS"):
         raise ValueError("REVIEWED requires an explicit PASS per-record review")
+    if review.get("review_version") == 2 and (
+        review["native_verdict"] != "PASS" or review["common_verdict"] != "pass"
+        or review["completion"] != "completed" or review["coverage"] != "full"
+    ):
+        raise ValueError("REVIEWED requires a completed full-scope structured PASS")
     if context["record_digests"].get(pfam_id) != record_content_digest(record):
         raise ValueError("reviewed record content changed or no projection was reviewed")
     expected_url = review_report_url(review_id)
@@ -636,7 +647,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         elif args.command in {"save", "finalize"}:
             if args.content.is_symlink():
                 raise ValueError("content input must not be a symlink")
-            print(save_review(args.repo_root, read_yaml(args.content.read_text())))
+            from dufmech.structured_reviews import common
+
+            print(save_review(args.repo_root, common().load_document(args.content.read_bytes())))
         else:
             records = load_review_metadata(args.repo_root, getattr(args, "pfam_id", None))
             print(json.dumps(records if args.command == "list" else {"valid_reports": len(records)},

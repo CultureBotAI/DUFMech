@@ -69,6 +69,12 @@ def _review_site_metadata(
             raise ReportError(f"duplicate captured review: {path}")
         content, pinned = _captured_source(path, source_bytes.get(path), source_pins)
         copies[f"source/{path}"] = content
+        markdown_path = review.get("markdown_path")
+        if markdown_path:
+            markdown, _ = _captured_source(
+                markdown_path, source_bytes.get(markdown_path), source_pins,
+            )
+            copies[f"source/{markdown_path}"] = markdown
         reference = {
             "url": source_link(pinned.get("repository", REPOSITORY), pinned.get("commit", ""), path),
             "local_source": f"source/{path}",

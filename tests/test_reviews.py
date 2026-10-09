@@ -1,3 +1,8 @@
+"""Historical Markdown compatibility and shared native artifact primitives.
+
+New saver/CLI behavior is exercised in test_structured_reviews.py.
+"""
+
 from __future__ import annotations
 
 import copy
@@ -30,6 +35,25 @@ def make_root(root: Path) -> Path:
     (root / "README.md").write_text("# DUFMech\n")
     (root / "pyproject.toml").write_text('[project]\nname = "dufmech"\n')
     return root
+
+
+def legacy_review_fixture(root: Path, payload: dict) -> Path:
+    """Construct historical v1 test input; never a supported production save route."""
+    reviews._validate_content(root, payload)
+    context = payload["context"]
+    current = reviews.inspect_review(
+        root, context["kind"], context["slug"], members=context["members"],
+        selection=context["selection"], snapshot_id=context["snapshot_id"],
+        scope_paths=context["scope_paths"],
+    )["context"]
+    if context != current:
+        raise ValueError("review input context changed")
+    value = {**payload, "review_version": 1, "status": "saved"}
+    stamp = reviews.utc_timestamp(payload["finished_utc"]).strftime("%Y%m%dT%H%M%SZ")
+    return reviews.append_document(
+        root, reviews.REPORT_DIRS[context["kind"]], f"{stamp}-{context['slug']}", ".md",
+        lambda _: reviews._render_report(value),
+    )
 
 
 def review_payload(root: Path, kind: str = "record") -> dict:
@@ -74,9 +98,9 @@ def test_inspection_fails_on_checksum_mismatch(root):
 @pytest.mark.parametrize("kind", ["record", "category", "repo"])
 def test_real_report_structure_timestamps_and_append_only_collision(root, kind):
     payload = review_payload(root, kind)
-    first = reviews.save_review(root, payload)
+    first = legacy_review_fixture(root, payload)
     original = first.read_bytes()
-    second = reviews.save_review(root, payload)
+    second = legacy_review_fixture(root, payload)
     assert second.stem == first.stem + "-02"
     assert first.read_bytes() == original
     loaded = reviews.read_review(root, first)
@@ -96,7 +120,7 @@ def test_real_report_structure_timestamps_and_append_only_collision(root, kind):
 def test_concurrent_saves_never_clobber_or_leave_partial_files(root):
     payload = review_payload(root)
     with ThreadPoolExecutor(max_workers=4) as pool:
-        paths = list(pool.map(lambda _: reviews.save_review(root, payload), range(8)))
+        paths = list(pool.map(lambda _: legacy_review_fixture(root, payload), range(8)))
     assert len(set(paths)) == 8
     assert len(reviews.load_review_metadata(root)) == 8
     assert not list((root / "reports").rglob(".append-*"))
@@ -111,7 +135,7 @@ def test_scaffold_or_invalid_content_never_creates_report(root, field, value):
     payload = review_payload(root)
     payload[field] = value
     with pytest.raises((ValueError, TypeError)):
-        reviews.save_review(root, payload)
+        legacy_review_fixture(root, payload)
     assert not (root / "reports").exists()
 
 
@@ -119,10 +143,10 @@ def test_missing_or_placeholder_section_is_not_a_review(root):
     payload = review_payload(root)
     payload["sections"]["Evidence"] = "TODO: investigate"
     with pytest.raises(ValueError, match="actual"):
-        reviews.save_review(root, payload)
+        legacy_review_fixture(root, payload)
     del payload["sections"]["Evidence"]
     with pytest.raises(ValueError, match="sections must be exactly"):
-        reviews.save_review(root, payload)
+        legacy_review_fixture(root, payload)
 
 
 def test_substantive_review_can_quote_scaffold_markers_and_source_fields(root):
@@ -131,7 +155,7 @@ def test_substantive_review_can_quote_scaffold_markers_and_source_fields(root):
         "The source retains a TODO marker and placeholder label in <protein_id>; "
         "this audit records that concrete gap rather than treating it as functional evidence."
     )
-    saved = reviews.save_review(root, payload)
+    saved = legacy_review_fixture(root, payload)
     assert payload["sections"]["Findings"] in saved.read_text()
     assert reviews.load_review_metadata(root)[0]["verdict"] == payload["verdict"]
 
@@ -144,7 +168,7 @@ def test_multiline_scaffold_only_sections_remain_invalid(root, scaffold):
     payload = review_payload(root)
     payload["sections"]["Findings"] = scaffold
     with pytest.raises(ValueError, match="actual"):
-        reviews.save_review(root, payload)
+        legacy_review_fixture(root, payload)
     assert not (root / "reports").exists()
 
 
@@ -158,7 +182,7 @@ def test_projection_and_overlay_changes_invalidate_unsaved_context(root):
     overlay.parent.mkdir(parents=True)
     overlay.write_text("pfam_id: PF04149\ncuration_status: IN_PROGRESS\n")
     with pytest.raises(ValueError, match="context changed"):
-        reviews.save_review(root, payload)
+        legacy_review_fixture(root, payload)
 
 
 @pytest.mark.parametrize("bad", ["../evil", "/tmp/evil", "..", "x/y", "x\\y", "x#y"])
@@ -174,7 +198,7 @@ def test_symlink_output_ancestor_is_refused(root, path, tmp_path_factory):
     link.parent.mkdir(parents=True, exist_ok=True)
     link.symlink_to(destination, target_is_directory=True)
     with pytest.raises((ValueError, OSError)):
-        reviews.save_review(root, review_payload(root))
+        legacy_review_fixture(root, review_payload(root))
     assert not list(destination.iterdir())
 
 
@@ -184,7 +208,7 @@ def test_exact_output_symlink_collision_is_refused(root):
     output.parent.mkdir(parents=True)
     output.symlink_to(root / "README.md")
     with pytest.raises(ValueError, match="not a regular file"):
-        reviews.save_review(root, payload)
+        legacy_review_fixture(root, payload)
     assert (root / "README.md").read_text() == "# DUFMech\n"
 
 
@@ -197,7 +221,7 @@ def test_snapshot_and_projection_symlinks_are_refused(root):
 
 
 def test_loaders_refuse_tampered_headers_or_unsafe_context_links(root):
-    path = reviews.save_review(root, review_payload(root))
+    path = legacy_review_fixture(root, review_payload(root))
     source = path.read_text()
     path.write_text(source.replace("- Verdict: SEED_ONLY", "- Verdict: PASS"))
     with pytest.raises(ValueError, match="disagree"):
@@ -208,7 +232,7 @@ def test_loaders_refuse_tampered_headers_or_unsafe_context_links(root):
 
 
 def test_hidden_invalid_report_is_checked(root):
-    path = reviews.save_review(root, review_payload(root))
+    path = legacy_review_fixture(root, review_payload(root))
     (path.parent / ".ignored.md").write_text("# An unfilled report\n")
     with pytest.raises(ValueError, match="missing review metadata"):
         reviews.load_review_metadata(root)
@@ -220,8 +244,9 @@ def test_cli_inspect_save_check_list(root, capsys):
     assert json.loads(capsys.readouterr().out)["status"] == "inspection_only"
     content = root / "review-input.yaml"
     content.write_text(yaml.safe_dump(review_payload(root)))
-    assert reviews.main([*args, "finalize", "--content", str(content)]) == 0
-    capsys.readouterr()
+    assert reviews.main([*args, "finalize", "--content", str(content)]) == 1
+    assert "structured contract" in capsys.readouterr().err
+    legacy_review_fixture(root, review_payload(root))
     assert reviews.main([*args, "check"]) == 0
     assert json.loads(capsys.readouterr().out) == {"valid_reports": 1}
     assert reviews.main([*args, "list", "--pfam-id", "PF19054"]) == 0
@@ -242,7 +267,7 @@ def test_record_digest_excludes_only_bookkeeping_and_derived_events():
 
 
 def test_review_source_sink_preserves_validated_bytes_after_path_replacement(root, monkeypatch):
-    path = reviews.save_review(root, review_payload(root))
+    path = legacy_review_fixture(root, review_payload(root))
     relative = path.relative_to(root).as_posix()
     original = path.read_bytes()
     capture = reviews.read_source_bytes
@@ -270,8 +295,8 @@ def test_review_source_sink_preserves_validated_bytes_after_path_replacement(roo
 
 
 def test_review_source_sink_only_contains_selected_validated_reports(root):
-    selected = reviews.save_review(root, review_payload(root))
-    reviews.save_review(root, review_payload(root, "repo"))
+    selected = legacy_review_fixture(root, review_payload(root))
+    legacy_review_fixture(root, review_payload(root, "repo"))
     captured = {}
     metadata = reviews.load_review_metadata(root, "PF04149", source_bytes=captured)
     assert [item["path"] for item in metadata] == [selected.relative_to(root).as_posix()]
@@ -354,11 +379,11 @@ def test_duplicate_yaml_key_and_header_injection_are_rejected(root):
     payload = review_payload(root)
     payload["reviewer"] = "reviewer\n## Evidence\nAn injected section"
     with pytest.raises(ValueError, match="single line"):
-        reviews.save_review(root, payload)
+        legacy_review_fixture(root, payload)
 
 
 def test_invalid_context_reports_validation_error_without_crashing(root):
     payload = review_payload(root)
     del payload["context"]["scope_paths"]
     with pytest.raises(ValueError, match="context fields"):
-        reviews.save_review(root, payload)
+        legacy_review_fixture(root, payload)

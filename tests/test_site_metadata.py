@@ -18,7 +18,7 @@ from dufmech.site_data import source_link
 from dufmech.site_metadata import load_review_site_metadata, load_site_metadata
 from dufmech.site_sources import REPOSITORY
 from tests.test_report import worklist_row
-from tests.test_reviews import make_root, review_payload
+from tests.test_reviews import legacy_review_fixture, make_root, review_payload
 
 
 @pytest.fixture
@@ -244,7 +244,7 @@ def publication_source(root, kind):
         )
         records.write_records(root, records.build_records(root), apply=True)
     elif kind == "review":
-        path = reviews.save_review(root, review_payload(root))
+        path = legacy_review_fixture(root, review_payload(root))
     else:
         path = root / "data/families/PF04149.yaml"
     return path.relative_to(root).as_posix()
@@ -400,7 +400,7 @@ def reviewed_publication(progress_publication):
     root = progress_publication
     payload = review_payload(root)
     payload["verdict"] = "PASS"
-    report = reviews.save_review(root, payload)
+    report = legacy_review_fixture(root, payload)
     review_id = report.relative_to(root).as_posix()
     overlay = root / "curation/families/PF04149.yaml"
     curated = yaml.safe_load(overlay.read_text())

@@ -17,7 +17,7 @@ curation. They are not interchangeable review states.
   `just new-history`; the generator does not invent actors or events.
 - `evidence/*.txt` contains appropriately licensed, minimal source extracts for
   assertion quotation checks. Never commit restricted full-text publications.
-- Timestamped review Markdown and canonical history YAML remain separate retained
+- Timestamped structured review bundles and canonical history YAML remain separate retained
   artifacts; a source freeze or regeneration is not a scientific review.
 - `curation_events` is a generated, read-only index of actual canonical sidecar
   events. Each entry identifies its source file and zero-based event index.

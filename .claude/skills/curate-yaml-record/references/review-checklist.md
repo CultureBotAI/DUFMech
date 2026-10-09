@@ -3,8 +3,8 @@
 Use this checklist for the requested record or category scope. A review records
 findings; it does not authorize scientific edits, source downloads, status promotion,
 or outbound publication. The native review command retains the timestamped report
-and exact source context under `reports/yaml_record_review/` or
-`reports/yaml_category_review/`. An inspection alone is not a saved review.
+and exact source context as a common YAML/derived Markdown bundle under
+`reviews/structured/<timestamp>-<slug>/`; follow `docs/record-reviews.md`. An inspection alone is not a saved review.
 
 ## Identity and Ownership
 

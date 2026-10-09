@@ -60,11 +60,11 @@ by a request to curate a record.
 
 ## Review and Publication
 
-A completed review is a separate append-only Markdown report, not an implicit
-effect of editing or regeneration. Follow the
+A completed review is a separate append-only structured YAML/Markdown bundle,
+not an implicit effect of editing or regeneration. Follow the
 [retained-review contract](../../../docs/reviews.md) and record-review skill:
 inspect the effective projection, perform the stated review, supply its unchanged
-context and real UTC start/end, then save the completed content through
+source and targets and real UTC start/end, then save the completed content through
 `just review save --content PATH`. Verify the saved path with `just reviews-check`.
 
 Do not promote a seed because schema checks passed. `REVIEWED` requires a retained
@@ -85,3 +85,22 @@ step instead of committing or pushing to make a gate pass.
 
 Report the changed authoring inputs, generated outputs, actual history/report paths,
 checks run, supported conclusions, and unresolved or genuinely unknown findings.
+
+## Structured Review Output
+
+Follow [docs/record-reviews.md](../../../docs/record-reviews.md) and the
+[DUFMech profile](../../../docs/record-review-profile.md) for every new review.
+Use the native inspection's `structured.source` and `structured.targets`;
+author the common schema with actual checks, evidence-linked domain assessments,
+findings/actions, coverage and limits, then run `just review save --content PATH`.
+New output is `reviews/structured/<timestamp>-<slug>/review.yaml` plus its
+derived `review.md`. Link both; run `just reviews-check`. Historical reports
+remain read-only. Preserve the scientific-review flag, native verdict,
+snapshot identity, exact row selector and named semantic digest.
+Map seed-only, follow-up, blocked, failing and passing native verdicts using
+the profile. Never label an inspection, deterministic scan, provider draft
+or seed metadata as a completed scientific review. Native status and history
+requirements still apply independently of common schema validity.
+
+For an audit-only request, use this same structured output route without
+editing the overlay, regenerating records or appending curation history.
