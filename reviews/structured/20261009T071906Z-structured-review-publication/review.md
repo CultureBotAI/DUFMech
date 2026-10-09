@@ -1,0 +1,311 @@
+# PR 185 addendum: structured review rendering and source boundaries
+
+- Review: 20261009T071906Z-structured-review-publication
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-09T07:18:32Z
+- Finished UTC: 2026-10-09T07:19:06Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass
+- Scientific review: false
+
+## Summary
+
+Final publication of PR 185 exercised the first real structured review bundle and exposed issue 187: the guarded writer omitted canonical review downloads and source-overlap checks omitted review directories. The narrowly scoped fix now passes the real corpus render and 89 focused review/writer/renderer tests. This addendum extends, and does not rewrite, the earlier seven-file source-retention audit.
+
+## Scope And Provenance
+
+Inspect four maintained files changed in d719a3a74: canonical structured-review download allowlisting, source-directory protection in explicit and inferred native builds, and end-to-end rendering/security regression coverage. No new functional evidence or scientific corpus curation.
+
+Selection: All four files in the issue 187 fix.
+Coverage: full; 4 reviewed / 4 in the declared population.
+Source: working_tree at Git base d719a3a748a2f26020bdeee06ea3a147eac3814a.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| src/dufmech/pages.py | src/dufmech/pages.py | source | src/dufmech/pages.py |
+| src/dufmech/site_files.py | src/dufmech/site_files.py | source | src/dufmech/site_files.py |
+| tests/test_site_writes.py | tests/test_site_writes.py | source | tests/test_site_writes.py |
+| tests/test_structured_reviews.py | tests/test_structured_reviews.py | source | tests/test_structured_reviews.py |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Review, writer and renderer tests | passed | True | src/dufmech/pages.py, src/dufmech/site_files.py, tests/test_site_writes.py, tests/test_structured_reviews.py | 89 tests passed. Seven pre-fix regressions established the actual failure: one full renderer using a validated native structured review and six explicit/inferred review-directory overlap cases. Five malformed download paths remain rejected. |
+| Actual full-corpus publication | passed | True | src/dufmech/pages.py, src/dufmech/site_files.py, tests/test_site_writes.py, tests/test_structured_reviews.py | The actual corpus now renders successfully using the 8,340-file ledger at retained checkpoint 4c21ce91. Both published review.yaml and review.md compare byte-for-byte with the authoritative source bundle. Adding this addendum will require another checkpoint and render. |
+| Scoped Ruff and patch integrity | passed | True | src/dufmech/pages.py, src/dufmech/site_files.py, tests/test_site_writes.py, tests/test_structured_reviews.py | Scoped Ruff and git diff --check passed. |
+
+## Scientific And Domain Assessments
+
+### Exact owned structured-review downloads
+
+provenance: supported. Targets: src/dufmech/site_files.py, tests/test_structured_reviews.py.
+
+The writer now accepts the validated bundle's canonical two paths and rejects unrelated filenames, noncanonical IDs, nested paths and traversal. Rendering preserves exact source bytes and ownership hashes; existing shared writer protections remain unchanged.
+
+### Separate review sources from generated output
+
+ownership: supported. Targets: src/dufmech/pages.py, tests/test_site_writes.py.
+
+The metadata root is resolved before output-overlap checks. Explicit record roots and inferred native roots both protect reviews plus the existing metadata source directories before any loader runs.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| code | src/dufmech/site_files.py | supports | Inspected the narrow timestamped review-ID allowlist permitting only review.yaml and review.md. Existing fullmatch, traversal, descriptor-relative symlink, ownership, staging and recovery guards remain active. |
+| regressions | https://github.com/CultureBotAI/DUFMech/issues/187 | supports | Observed the production render failure, seven failing tests before the fix, and 89 passing focused tests afterward. The end-to-end fixture loads a real native validated review, renders twice, checks owned copy hashes and checks site links/budgets. The boundary tests reject output into review source trees before reading inputs. |
+| publication | pages/source/reviews/structured/20261009T071002Z-site-source-retention/review.yaml | supports | Observed successful full-corpus native rendering. cmp completed with exit 0 for both generated structured-review downloads versus the retained authoritative pair. |
+
+## Limits And Additional Notes
+
+- Same-agent scoped follow-up audit, not independent approval or biological review.
+- The first audit and published source/dufmech-pr-185 tag remain immutable; this addendum needs a new retained checkpoint tag.
+- Fresh full QC and exact-head CI/merge-queue checks are required after the addendum, final ledger and regenerated pages. The earlier full QC preceded this four-file fix and is not substituted for that final gate.
+- Issue 187 was discovered during the publication steps explicitly left pending by the first audit and was fixed before this scoped reinspection. No unresolved finding remains in these four files.
+- The earlier seven-file audit is retained at reviews/structured/20261009T071002Z-site-source-retention/review.yaml. This addendum adds newly exercised publication coverage; it does not alter that historical observation.
+- Searches for structured review handling in site modules and tests included ignored/hidden files with rg --no-ignore --hidden, excluding Python bytecode.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+kind: repository
+repository: CultureBotAI/DUFMech
+source:
+  git_revision: d719a3a748a2f26020bdeee06ea3a147eac3814a
+  inputs:
+  - path: data/worklists/interpro-pfam-duf-2026-10-08.json
+    role: context
+    sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
+  - path: data/worklists/interpro-pfam-duf-2026-10-08.manifest.json
+    role: context
+    sha256: 5929010740007a44480dac1fe804840b5885e131bceccc3043dbcb9146e991d5
+  - path: data/worklists/interpro-pfam-duf-2026-10-08.tsv
+    role: context
+    sha256: 3d873968fcb87babafe59c01722c0d914f4ddc45de28cb8de4595477c353f91b
+  - path: src/dufmech/pages.py
+    role: target
+    sha256: 3cd297e41b92de3f82f6c9e554a107ca9e23e69a843bf0c026652d0a5a6a5dcb
+  - path: src/dufmech/site_files.py
+    role: target
+    sha256: 4407e73f62b6db3b1afacf644d3582be430ae782ed827a677f5a40e7bfe0cd4f
+  - path: tests/test_site_writes.py
+    role: target
+    sha256: b10c66addedf66166049e1224d55e93d261b3d6e103eea0567785b54ae9ca882
+  - path: tests/test_structured_reviews.py
+    role: target
+    sha256: 204d434c35e0068a68ed2c21f7c66a223c4fd728939a57ebf2dbfb464c85657c
+  snapshot_id: interpro-pfam-duf-2026-10-08
+  state: working_tree
+targets:
+- kind: source
+  label: src/dufmech/pages.py
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: src/dufmech/pages.py
+  target_id: src/dufmech/pages.py
+- kind: source
+  label: src/dufmech/site_files.py
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: src/dufmech/site_files.py
+  target_id: src/dufmech/site_files.py
+- kind: source
+  label: tests/test_site_writes.py
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: tests/test_site_writes.py
+  target_id: tests/test_site_writes.py
+- kind: source
+  label: tests/test_structured_reviews.py
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: tests/test_structured_reviews.py
+  target_id: tests/test_structured_reviews.py
+schema_version: 1.0.0
+review_id: 20261009T071906Z-structured-review-publication
+title: 'PR 185 addendum: structured review rendering and source boundaries'
+started_at: '2026-10-09T07:18:32Z'
+finished_at: '2026-10-09T07:19:06Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: The implementing agent re-inspected the rendering fix and regression
+    evidence. This is not an independent approval.
+skill: .claude/skills/review-repo/SKILL.md
+completion: completed
+verdict: pass
+native_verdict: PASS
+scientific_review: false
+summary: 'Final publication of PR 185 exercised the first real structured review bundle
+  and exposed issue 187: the guarded writer omitted canonical review downloads and
+  source-overlap checks omitted review directories. The narrowly scoped fix now passes
+  the real corpus render and 89 focused review/writer/renderer tests. This addendum
+  extends, and does not rewrite, the earlier seven-file source-retention audit.'
+scope:
+  description: 'Inspect four maintained files changed in d719a3a74: canonical structured-review
+    download allowlisting, source-directory protection in explicit and inferred native
+    builds, and end-to-end rendering/security regression coverage. No new functional
+    evidence or scientific corpus curation.'
+  selection: All four files in the issue 187 fix.
+  coverage: full
+  population_size: 4
+  reviewed_target_ids:
+  - src/dufmech/pages.py
+  - src/dufmech/site_files.py
+  - tests/test_site_writes.py
+  - tests/test_structured_reviews.py
+  exclusions:
+  - target: Earlier source-retention implementation
+    reason: Covered by retained review 20261009T071002Z-site-source-retention; unchanged
+      by this addendum.
+  - target: Final addendum checkpoint and merge
+    reason: Their publication, exact-head QC and merge-queue results must follow this
+      retained audit.
+checks:
+- check_id: render-regressions
+  name: Review, writer and renderer tests
+  status: passed
+  required: true
+  target_ids:
+  - src/dufmech/pages.py
+  - src/dufmech/site_files.py
+  - tests/test_site_writes.py
+  - tests/test_structured_reviews.py
+  command: .venv/bin/python -m pytest tests/test_structured_reviews.py tests/test_site_writes.py
+    tests/test_pages.py -q
+  exit_code: 0
+  expected_exit_code: 0
+  summary: '89 tests passed. Seven pre-fix regressions established the actual failure:
+    one full renderer using a validated native structured review and six explicit/inferred
+    review-directory overlap cases. Five malformed download paths remain rejected.'
+  evidence_ids:
+  - regressions
+- check_id: corpus-render
+  name: Actual full-corpus publication
+  status: passed
+  required: true
+  target_ids:
+  - src/dufmech/pages.py
+  - src/dufmech/site_files.py
+  - tests/test_site_writes.py
+  - tests/test_structured_reviews.py
+  command: env UV_CACHE_DIR=/private/tmp/dufmech-uv-cache just render
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The actual corpus now renders successfully using the 8,340-file ledger
+    at retained checkpoint 4c21ce91. Both published review.yaml and review.md compare
+    byte-for-byte with the authoritative source bundle. Adding this addendum will
+    require another checkpoint and render.
+  evidence_ids:
+  - publication
+- check_id: lint
+  name: Scoped Ruff and patch integrity
+  status: passed
+  required: true
+  target_ids:
+  - src/dufmech/pages.py
+  - src/dufmech/site_files.py
+  - tests/test_site_writes.py
+  - tests/test_structured_reviews.py
+  command: .venv/bin/ruff check src/dufmech/pages.py src/dufmech/site_files.py tests/test_structured_reviews.py
+    tests/test_site_writes.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Scoped Ruff and git diff --check passed.
+  evidence_ids:
+  - code
+evidence:
+- evidence_id: code
+  kind: record_content
+  reference: src/dufmech/site_files.py
+  accessed_at: '2026-10-09T07:19:06Z'
+  support: supports
+  summary: Inspected the narrow timestamped review-ID allowlist permitting only review.yaml
+    and review.md. Existing fullmatch, traversal, descriptor-relative symlink, ownership,
+    staging and recovery guards remain active.
+- evidence_id: regressions
+  kind: validation
+  reference: https://github.com/CultureBotAI/DUFMech/issues/187
+  accessed_at: '2026-10-09T07:19:06Z'
+  support: supports
+  summary: Observed the production render failure, seven failing tests before the
+    fix, and 89 passing focused tests afterward. The end-to-end fixture loads a real
+    native validated review, renders twice, checks owned copy hashes and checks site
+    links/budgets. The boundary tests reject output into review source trees before
+    reading inputs.
+- evidence_id: publication
+  kind: validation
+  reference: pages/source/reviews/structured/20261009T071002Z-site-source-retention/review.yaml
+  accessed_at: '2026-10-09T07:19:06Z'
+  support: supports
+  summary: Observed successful full-corpus native rendering. cmp completed with exit
+    0 for both generated structured-review downloads versus the retained authoritative
+    pair.
+assessments:
+- assessment_id: guarded-downloads
+  area: provenance
+  topic: Exact owned structured-review downloads
+  outcome: supported
+  summary: The writer now accepts the validated bundle's canonical two paths and rejects
+    unrelated filenames, noncanonical IDs, nested paths and traversal. Rendering preserves
+    exact source bytes and ownership hashes; existing shared writer protections remain
+    unchanged.
+  target_ids:
+  - src/dufmech/site_files.py
+  - tests/test_structured_reviews.py
+  evidence_ids:
+  - code
+  - regressions
+  - publication
+- assessment_id: input-boundary
+  area: ownership
+  topic: Separate review sources from generated output
+  outcome: supported
+  summary: The metadata root is resolved before output-overlap checks. Explicit record
+    roots and inferred native roots both protect reviews plus the existing metadata
+    source directories before any loader runs.
+  target_ids:
+  - src/dufmech/pages.py
+  - tests/test_site_writes.py
+  evidence_ids:
+  - code
+  - regressions
+findings: []
+actions: []
+limitations:
+- Same-agent scoped follow-up audit, not independent approval or biological review.
+- The first audit and published source/dufmech-pr-185 tag remain immutable; this addendum
+  needs a new retained checkpoint tag.
+- Fresh full QC and exact-head CI/merge-queue checks are required after the addendum,
+  final ledger and regenerated pages. The earlier full QC preceded this four-file
+  fix and is not substituted for that final gate.
+notes:
+- Issue 187 was discovered during the publication steps explicitly left pending by
+  the first audit and was fixed before this scoped reinspection. No unresolved finding
+  remains in these four files.
+- The earlier seven-file audit is retained at reviews/structured/20261009T071002Z-site-source-retention/review.yaml.
+  This addendum adds newly exercised publication coverage; it does not alter that
+  historical observation.
+- Searches for structured review handling in site modules and tests included ignored/hidden
+  files with rg --no-ignore --hidden, excluding Python bytecode.
+links:
+- https://github.com/CultureBotAI/DUFMech/pull/185
+- https://github.com/CultureBotAI/DUFMech/issues/187
+- https://github.com/CultureBotAI/DUFMech/blob/4c21ce91ae6ca4c0dba6d311535af12cad2b8902/reviews/structured/20261009T071002Z-site-source-retention/review.yaml
+tags:
+- pages
+- reviews
+- provenance
+```
