@@ -106,8 +106,12 @@ def pin_bytes(captured):
             for path, raw in captured.items()}
 
 
-def test_validated_structured_review_is_published_by_full_renderer(root, monkeypatch):
-    path = reviews.save_review(root, payload(root))
+@pytest.mark.parametrize("suffix", ["record-fixture", "_fixture", "-fixture", ".fixture", "",
+                                    "x" * 143])
+def test_validated_structured_review_is_published_by_full_renderer(root, monkeypatch, suffix):
+    content = payload(root)
+    content["review_id"] = "20261007T010400Z-" + suffix
+    path = reviews.save_review(root, content)
     monkeypatch.setattr(pages, "REPO_ROOT", root)
     out = root / "site"
     for _ in range(2):

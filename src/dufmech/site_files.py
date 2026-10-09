@@ -23,7 +23,7 @@ GENERATED = re.compile(
     r"category/[a-z_]+(?:-[0-9]+)?\.html|schema/[a-z_]+\.yaml|"
     r"datasets/[A-Za-z0-9_-]+(?:\.manifest)?\.(?:json|tsv)|"
     r"source/reviews/structured/[0-9]{8}T[0-9]{6}Z-"
-    r"[A-Za-z0-9][A-Za-z0-9._-]{0,142}/review\.(?:yaml|md)|"
+    r"[A-Za-z0-9._-]{0,143}/review\.(?:yaml|md)|"
     r"source/(?:data/families|history|reports)/[A-Za-z0-9_./-]+\.(?:yaml|yml|md))"
 )
 
