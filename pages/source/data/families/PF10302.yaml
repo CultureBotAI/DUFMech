@@ -15,10 +15,10 @@ counters:
   alphafold_models: 1159
   domain_architectures: 26
 provenance:
-  snapshot_id: interpro-pfam-duf-2026-10-08
-  path: data/worklists/interpro-pfam-duf-2026-10-08.json
-  sha256: 9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec
-  generated_at: '2026-10-08T02:48:09.822970Z'
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  path: data/worklists/interpro-pfam-duf-2026-10-10.json
+  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+  generated_at: '2026-10-10T07:44:21.614711Z'
   source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
 interpro_id: InterPro:IPR019413
 description: This is the N-terminal ubiquitin-like domain of DSC E3 ubiquitin ligase complex subunit 3

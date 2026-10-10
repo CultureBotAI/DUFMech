@@ -1,0 +1,31 @@
+id: Pfam:PF18141
+pfam_id: PF18141
+name: RNA helicase UPF1, 1B domain
+short_name: UPF1_1B_dom
+seed_status: EX_DUF
+characterization_status: UNSCORED
+curation_status: SEEDED
+source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF18141
+counters:
+  proteins: 3779
+  matches: 3790
+  proteomes: 2612
+  taxa: 7201
+  structures: 12
+  alphafold_models: 3031
+  domain_architectures: 89
+provenance:
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  path: data/worklists/interpro-pfam-duf-2026-10-10.json
+  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+  generated_at: '2026-10-10T07:44:21.614711Z'
+  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
+interpro_id: InterPro:IPR040812
+description: UPF1 (or regulator of nonsense transcripts 1 homologue) is an essential RNA helicase that
+  detects mRNAs containing premature stop codons and triggers their degradation. Together with UPF2 and
+  UPF3, forms a surveillance complex, in which UPF2 acts as a bridge between UPF1 and UPF3. UPF2 and UPF3
+  are non-enzymatic components of the complex that stimulate the activity of UPF1 [[cite:PUB00050141],[cite:PUB00095891]].
+  UPF1 has a N-terminal cysteine/histidine-rich zinc-binding domain (CH/ZBD), a regulatory 1B domain,
+  followed by a helicase core that belongs to superfamily 1 (SF1). This entry represents 1B domain of
+  UPF1 which has a regulatory role. It suffers conformational changes from an inhibitory state to a transition-state
+  complex that modulate RNA binding [[cite:PUB00050141],[cite:PUB00095891]].
