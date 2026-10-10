@@ -251,18 +251,21 @@ def test_download_rejects_content_encoding_and_requests_identity() -> None:
 
 def test_report_can_pin_a_pfam_snapshot(tmp_path: Path) -> None:
     import shutil
+    from datetime import date, timedelta
 
     from dufmech.cross_mech_report import main as report_main
+    from dufmech.report import latest_snapshot_path, verified_manifest
 
     repo = Path(__file__).resolve().parents[1]
     worklists = tmp_path / "worklists"
     shutil.copytree(repo / "data" / "worklists", worklists)
-    pinned = worklists / "pfam-previous-unknown-names-2026-10-07.json"
+    pinned = latest_snapshot_path(worklists, "pfam-previous-unknown-names")
+    next_day = date.fromisoformat(verified_manifest(pinned)["snapshot"]["date"]) + timedelta(days=1)
     seed = tmp_path / "Pfam-A.seed.gz"
     seed.write_bytes(_gz(SEED))
     write_pfam_previous_names_snapshot(
         read_seed(seed_gz=seed, min_families=1), worklists, release="38.2", source_url="x",
-        snapshot_date="2026-11-01",
+        snapshot_date=next_day,
     )
     common = [
         "--worklists-dir", str(worklists), "--cross-mech-dir", str(repo / "data" / "cross_mech"),

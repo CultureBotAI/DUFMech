@@ -12,9 +12,10 @@ failure, and 2 for invalid CLI arguments. All modes are offline.
 | `exports/kgx/edges.tsv` | One source-backed Pfam-to-InterPro association per recorded integration |
 | `exports/sssom/dufmech.sssom.tsv` | The same associations with standard SSSOM columns and prefix metadata |
 
-The retained corpus has 8,295 SEEDED records (6,532 before the 2026-10-08 EX_DUF
-migration) and zero functional assertions. It produces 16,532 nodes, 8,237 edges and
-8,237 SSSOM rows. The 58 families lacking an InterPro accession remain KGX nodes; they
+The retained corpus has 8,296 SEEDED records (6,532 before the 2026-10-08 EX_DUF
+migration and 8,295 before the October 10 PF18141 addition) and zero functional
+assertions. It produces 16,534 nodes, 8,238 edges and 8,238 SSSOM rows.
+The 58 families lacking an InterPro accession remain KGX nodes; they
 are omitted from SSSOM. Missing integration is not a negative mapping or evidence of nonexistence.
 Output is bounded to identities and explicit native `interpro_id` fields, with
 at most two nodes and one association per family. No provider, similarity search,
@@ -128,12 +129,12 @@ These contracts check interchange shape and identifiers, not biological truth.
 
 ## Retained Artifact Digests
 
-These artifacts derive from `interpro-pfam-duf-2026-10-08`, whose
-JSON SHA-256 is `9f0992961c30c5d92343a92aab000cd20b6c4213952b4c68408c3065779a46ec`.
+These artifacts derive from `interpro-pfam-duf-2026-10-10`, whose
+JSON SHA-256 is `17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383`.
 Counts exclude headers and the SSSOM preamble.
 
 | Artifact | Rows | Bytes | SHA-256 |
 | --- | ---: | ---: | --- |
-| `exports/kgx/nodes.tsv` | 16532 | 7665051 | `00100addd00a6f531cfca864d6c16bdd5fa4ee9616e9920ce1a0b96079a901c7` |
-| `exports/kgx/edges.tsv` | 8237 | 3624450 | `e4ba823f5bac9c732f46413ed17d5381a7675b1dbf48c180cf525bbb8cc6c558` |
-| `exports/sssom/dufmech.sssom.tsv` | 8237 | 6606880 | `00b2e7b88fb6e00790734cd1a4ffd3d0da2925384de68da869fd4255873e4326` |
+| `exports/kgx/nodes.tsv` | 16534 | 7666517 | `d45edebaef2f1d7d9a0505c89cf37cbd64722f25f9a99ae2fb8aad44af64ecfc` |
+| `exports/kgx/edges.tsv` | 8238 | 3624890 | `7c5ac1162eb92d57843e10f05f0ee95dcbd83d93a4ce1478628536f914e74679` |
+| `exports/sssom/dufmech.sssom.tsv` | 8238 | 6607674 | `bcac6604769e2924ba3396d9251ff5ca49ff966cd6187e88a6895fdd9ff1cf59` |

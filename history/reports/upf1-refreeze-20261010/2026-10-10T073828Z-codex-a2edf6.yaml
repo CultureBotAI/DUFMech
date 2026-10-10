@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: report
+  slug: upf1-refreeze-20261010
+  path: docs/provenance/upf1-refreeze-migration-2026-10-10.md
+session:
+  id: 2026-10-10T073828Z-codex-a2edf6
+  timestamp: '2026-10-10T07:38:28Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Refroze pinned Pfam previous names and added PF18141 through a versioned
+    worklist migration.
+  details: The corrected parser changes only PF18141 currently_unknown_name in 1834
+    retained Pfam rows. One InterPro lookup adds PF18141 to 8295 unchanged parent
+    worklist rows, for 8296 SEEDED/UNSCORED families. A compatible offline cross-Mech
+    derivation preserves all 16298 reference rows and marks PF18141 unscanned. Four
+    release-specific regression tests and all 12 snapshot manifests pass. Existing
+    source files remain immutable. Corpus-wide v3 reclassification and public release
+    remain separate; no scientific assertions or source-license upgrades are made.
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/165

@@ -71,13 +71,15 @@ historical replay, and verified-input loading accepts both versions.
 
 Pfam previous-name parsing also distinguishes four-digit UPF family labels from
 UPF1/UPF2 gene names. A family such as PF18141 (`UPF1_1B_dom`, formerly DUF5599)
-is eligible for EX_DUF migration after a new previous-names freeze. These are
+was added as EX_DUF in the October 10 re-freeze and migration. These are
 metadata corrections, not newly curated functional evidence.
 
 ### Adopting Classifier Corrections
 
 Code changes do not rewrite existing snapshots, projections, scores or Pages.
-For the corrections tracked in issues #165 and #173:
+For the corrections tracked in issues #165 and #173, steps 1 and 2 are now
+retained in the [October 10 migration](provenance/upf1-refreeze-migration-2026-10-10.md).
+Step 3 remains separate work; migration preserves the existing rows' reasons:
 
 1. Freeze the pinned Pfam seed again with the corrected UPF-name parser, under
    a new previous-names snapshot ID; retain the old files and manifests.
@@ -93,8 +95,10 @@ For the corrections tracked in issues #165 and #173:
 Each worklist derivation requires a date later than its parent. Do not overwrite
 an existing date's snapshot, fabricate future acquisition dates, or score an old
 worklist as though its candidate reasons had already been updated. These steps
-remain required for the retained October 8, 2026 corpus; an in-memory classifier
-test is not a published migration or scored release.
+are still required when adopting v3 across the retained corpus. The October 10
+migration does not perform that reclassification or create a scored release;
+its successor must use an actual date later than October 10. An in-memory
+classifier test is not a published migration or scored release.
 
 `just migrate-exduf` derives a new worklist snapshot (dry run unless `--apply`):
 
