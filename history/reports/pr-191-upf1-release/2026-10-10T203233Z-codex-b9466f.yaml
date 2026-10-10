@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: report
+  slug: pr-191-upf1-release
+  path: reviews/structured/20261010T205944Z-pr-191-upf1-release/review.yaml
+session:
+  id: 2026-10-10T203233Z-codex-b9466f
+  timestamp: '2026-10-10T20:32:33Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: AUDIT
+  outcome: no_change
+  summary: Audited the retained PF18141 migration and verified the release regression
+    fix.
+  details: 'Same-agent metadata and release-input audit, not scientific curation.
+    Preserved all 8295 parent worklist rows and inherited projection content outside
+    four provenance fields; PF18141 is the sole new family. Issue 190 records the
+    corrected stale-baseline test. All local QC gates passed: 1284 Python tests, three
+    empty-parameter command-frontmatter skips, and six browser tests. Separate offline
+    OAK controls and targeted PF18141 desktop/mobile checks passed. Source governance
+    retains 16 warnings. The final audit-bearing checkpoint, exact-head CI, merge
+    queue and deployment remain publication steps; no family is promoted to REVIEWED.'
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/165
+  - https://github.com/CultureBotAI/DUFMech/issues/190
+  prs:
+  - https://github.com/CultureBotAI/DUFMech/pull/191
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261010T205944Z-pr-191-upf1-release/review.yaml

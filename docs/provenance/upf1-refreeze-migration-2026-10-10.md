@@ -107,16 +107,43 @@ After those corrections, the 95-test parser/migration/lineage/release suite,
 the real-corpus offline export regression, and the actual research-recipe
 regression pass. The revised projection test uses an isolated frozen-input
 build so it does not prevent future curation of the live PF18141 record.
-The initial full run predates these test corrections; no fresh full-green
-suite, browser run or deployment is claimed.
+The initial full run predates these test corrections; at the end of preparation,
+no fresh full-green suite, browser run or deployment was claimed.
 
-Public release is still pending. The old source-pin ledger and generated site
-are intentionally untouched at this stage. The renderer rejects changed source
-bytes until the normal publication workflow retains a new checkpoint, captures
-its pins and regenerates Pages. That check currently prevents a full green QC
-run; it must not be bypassed or represented as passing. Publish and retain the
-checkpoint only within the separately authorized PR/release workflow. The
-historical snapshots, review bundles and checkpoint tags are not rewritten.
+Preparation stopped before public release. The old source-pin ledger and generated
+site were intentionally untouched at that stage. The renderer rejects changed
+source bytes until the publication workflow retains a new checkpoint, captures
+its pins and regenerates Pages. That check prevented a full green QC run; it was
+not bypassed or represented as passing. Historical snapshots, review bundles and
+checkpoint tags are not rewritten.
+
+## Authorized PR Release
+
+The subsequent authorized release is tracked in
+[PR #191](https://github.com/CultureBotAI/DUFMech/pull/191). The data commit
+`2a9a930b2b5b73c88f7d2d570f9f49c45d3f48c2` is retained by the annotated tag
+`source/dufmech-pr-191-data`. A fresh canonical-remote check verified all 8,356
+source files before source-pin capture and Pages regeneration. The initial draft
+CI failure was the expected old-ledger rejection, not a bypassed release gate.
+
+The new focused migration/lineage run passed 112 tests. The complete local
+`just qc` then passed: 1,284 Python tests, three empty-parameter command-frontmatter
+skips, and all six browser tests. Record/schema and export reproduction, all
+12 snapshot manifests, offline OAK, source governance, existing reviews/history,
+the cross-Mech report, generated-site consistency and site contracts passed.
+The 16 source-governance warnings remain disclosed. A separate isolated OAK run
+validated all 8,296 Pfam pairs and seven negative/control cases with networking
+denied. A targeted Chromium check also verified PF18141 catalogue navigation,
+unscanned coverage and its record page at 1,440px and 390px, without overflow.
+
+The same-agent adversarial audit found the stale snapshot-pinning test baseline,
+tracked as [issue #190](https://github.com/CultureBotAI/DUFMech/issues/190), and
+verified its committed fix. No independent approval or scientific review is
+claimed. Saving the audit adds source inputs, so the final release must retain
+the audit-bearing checkpoint, recapture source pins and regenerate Pages again.
+Fresh exact-head CI and merge-queue checks remain mandatory; their final receipts
+and deployment status belong to PR #191. Existing checkpoint tags are retained
+after deleting the feature branch.
 
 ## Terms
 
