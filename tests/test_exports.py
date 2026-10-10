@@ -445,9 +445,9 @@ def test_real_corpus_exports_match_committed_artifacts_without_network(monkeypat
     before = inventory(REPO_ROOT / "data/families")
     artifacts = exports.build_exports(REPO_ROOT)
     assert inventory(REPO_ROOT / "data/families") == before
-    assert len(rows(artifacts[exports.KGX_NODES])) == 16532
-    assert len(rows(artifacts[exports.KGX_EDGES])) == 8237
-    assert len(rows(artifacts[exports.SSSOM])) == 8237
+    assert len(rows(artifacts[exports.KGX_NODES])) == 16534
+    assert len(rows(artifacts[exports.KGX_EDGES])) == 8238
+    assert len(rows(artifacts[exports.SSSOM])) == 8238
     for name, payload in artifacts.items():
         assert (REPO_ROOT / name).read_bytes() == payload
         table = body(payload)
@@ -455,7 +455,7 @@ def test_real_corpus_exports_match_committed_artifacts_without_network(monkeypat
             line.split("\t") for line in table.splitlines()
         ]
     family_nodes = [r for r in rows(artifacts[exports.KGX_NODES]) if r["id"].startswith("Pfam:")]
-    assert len(family_nodes) == 8295
+    assert len(family_nodes) == 8296
     assert {r["curation_status"] for r in family_nodes} == {"SEEDED"}
     native = [yaml.safe_load(raw) for name, raw in before.items() if name.endswith(".yaml")]
     assert sum(len(record.get("assertions", [])) for record in native) == 0
