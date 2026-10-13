@@ -51,7 +51,14 @@ def fixture_rows():
 def built():
     families, candidates, sources, entries = fixture_rows()
     registry = {"P0A8M6": entries["P0A8M6"]}
-    return families, build_rows(families, candidates, sources, entries, registry, {})
+    return families, build_rows(families, candidates, sources, entries, registry, registry_source())
+
+
+def registry_source():
+    return {"commit": "a" * 40, "path": "data/grounding/protein_registry.jsonl",
+            "repository": "https://github.com/test/ptm", "sha256": "b" * 64,
+            "url": "https://github.com/test/ptm/blob/" + "a" * 40
+                   + "/data/grounding/protein_registry.jsonl"}
 
 
 def test_audit_accounts_for_all_families_and_does_not_promote_unmatched_claim():
@@ -83,7 +90,8 @@ def test_missing_and_isoform_ids_never_resolve_by_prefix(accession, reason):
 def test_registry_mismatch_is_not_called_a_mirror():
     families, candidates, sources, entries = fixture_rows()
     old = {**entries["P0A8M6"], "sequence_version": 2}
-    rows = build_rows(families, candidates, sources, entries, {"P0A8M6": old}, {})
+    rows = build_rows(families, candidates, sources, entries, {"P0A8M6": old}, registry_source())
+    validate_rows(rows, families)
     example = next(r for r in rows if r["pfam_id"] == "PF04363")["examples"][0]
     assert example["sequence_origin"] == "UNIPROT_FETCH"
     assert example["registry_status"] == "DIFFERENT_SEQUENCE_OR_VERSION"
@@ -155,6 +163,80 @@ def test_lookup_rejects_release_drift_on_resume(tmp_path):
             lambda request: httpx.Response(200, headers={"x-uniprot-release": "2026_04"},
                                           json={"results": []})))
     assert checkpoint.read_bytes() == before
+
+
+def test_lookup_never_appends_to_frozen_checkpoint(tmp_path):
+    checkpoint = tmp_path / "staging.jsonl"
+    calls = []
+
+    def handler(request):
+        calls.append(request)
+        return httpx.Response(200, headers={"x-uniprot-release": "2026_03"},
+                              json={"results": [entry()]})
+
+    transport = httpx.MockTransport(handler)
+    acquire(["P0A8M6"], checkpoint, transport=transport)
+    families, rows = built()
+    path = write_snapshot(rows, tmp_path / "frozen", families=families,
+                          snapshot_date="2026-10-12", worklist_id="test",
+                          source={"name": "fixture", "url": "https://example.org"},
+                          checkpoint=checkpoint.read_bytes())
+    retained = path.with_suffix(".queries.jsonl")
+    before = retained.read_bytes()
+    assert acquire(["P0A8M6"], retained, offline=True)["P0A8M6"]
+    assert acquire(["P0A8M6"], retained, transport=transport)["P0A8M6"]
+    with pytest.raises(ValueError, match="immutable snapshot"):
+        acquire(["P0A8M6", "P12345"], retained, transport=transport)
+    assert len(calls) == 1
+    assert retained.read_bytes() == before
+    assert load_snapshot(path, families, "test")[0] == rows
+
+
+def test_lookup_rejects_symlinked_parent_before_network(tmp_path):
+    real = tmp_path / "real"
+    real.mkdir()
+    link = tmp_path / "link"
+    link.symlink_to(real, target_is_directory=True)
+    with pytest.raises(ValueError, match="symlinks"):
+        acquire(["P0A8M6"], link / "checkpoint.jsonl", transport=httpx.MockTransport(
+            lambda request: pytest.fail("must not send a request")))
+    assert not list(real.iterdir())
+
+
+@pytest.mark.parametrize("bucket", ["examples", "unresolved"])
+@pytest.mark.parametrize("change", [
+    {"commit": "main"}, {"url": "https://example.org/blob/main/record.yaml"},
+    {"path": "other.yaml"}, {"record_id": ""},
+])
+def test_provenance_validation_rejects_unpinned_or_inconsistent_origins(bucket, change):
+    families, rows = built()
+    candidate = next(r for r in rows if r[bucket])[bucket][0]
+    candidate["origins"][0].update(change)
+    with pytest.raises(ValueError, match="provenance"):
+        validate_rows(rows, families)
+
+
+@pytest.mark.parametrize("change", [
+    {"sequence_origin": "UNVERIFIED"}, {"registry_status": "NOT_IN_REGISTRY"},
+    {"registry_source": None},
+])
+def test_provenance_validation_rejects_unsupported_sequence_origin(change):
+    families, rows = built()
+    next(r for r in rows if r["examples"])["examples"][0].update(change)
+    with pytest.raises((ValueError, TypeError), match="origin|provenance"):
+        validate_rows(rows, families)
+
+
+@pytest.mark.parametrize("change", [
+    {"commit": "main"}, {"sha256": "unknown"}, {"sequence_sha256": "0" * 64},
+    {"sequence_version": True}, {"uniprot_release": "unknown"},
+    {"url": "https://example.org/registry"},
+])
+def test_provenance_validation_rejects_invalid_registry_proof(change):
+    families, rows = built()
+    next(r for r in rows if r["examples"])["examples"][0]["registry_source"].update(change)
+    with pytest.raises(ValueError, match="provenance"):
+        validate_rows(rows, families)
 
 
 def test_snapshot_roundtrip_coverage_tamper_and_exclusive_publish(tmp_path):

@@ -77,8 +77,8 @@ def acquire(accessions: list[str], checkpoint: Path, *, offline: bool = False,
             transport: httpx.BaseTransport | None = None) -> dict[str, dict | None]:
     """Resume exact-primary lookups. Missing/merged/isoform IDs are never substituted."""
     known, releases = {}, set()
-    if checkpoint.is_symlink():
-        raise ValueError("checkpoint must not be a symlink")
+    if any(p.is_symlink() for p in (checkpoint, *checkpoint.absolute().parents)):
+        raise ValueError("checkpoint must not traverse symlinks")
     if checkpoint.exists():
         for line in checkpoint.read_text().splitlines():
             batch = json.loads(line)
@@ -103,6 +103,12 @@ def acquire(accessions: list[str], checkpoint: Path, *, offline: bool = False,
     missing = [a for a in wanted if a not in known and ACCESSION.fullmatch(a)]
     if offline and missing:
         raise ValueError(f"offline checkpoint lacks {len(missing)} accessions")
+    if missing:
+        # A resumable staging cache stops being writable once a manifest owns it.
+        for manifest in checkpoint.parent.glob("*.manifest.json"):
+            files = json.loads(manifest.read_text()).get("files", {})
+            if any(item.get("path") == checkpoint.name for item in files.values()):
+                raise ValueError("checkpoint belongs to an immutable snapshot; use a staging copy")
     with httpx.Client(timeout=60, transport=transport) as client:
         for start in range(0, len(missing), 100):
             batch = missing[start:start + 100]
@@ -318,6 +324,18 @@ def validate_rows(rows: list[dict], families: list[dict]) -> None:
                   "NO_SIBLING_CANDIDATE" if row["discovery_scanned"] else "NOT_SCANNED")
         if row["status"] != status:
             raise ValueError("example coverage status mismatch")
+        for candidate in examples + unresolved:
+            if not candidate.get("origins"):
+                raise ValueError("example lacks sibling provenance")
+            for origin in candidate["origins"]:
+                url = origin.get("url", "")
+                repository, separator, _ = url.partition("/blob/")
+                expected_url = source_link(repository, origin.get("commit", ""),
+                                           origin.get("path", ""))
+                if not separator or not expected_url or url != expected_url:
+                    raise ValueError("sibling origin must have consistent immutable provenance")
+                if any(not origin.get(key) for key in ("mech", "record_id", "section", "link_basis")):
+                    raise ValueError("incomplete sibling provenance")
         for example in examples:
             sequence_valid(example)
             if not ACCESSION.fullmatch(example["uniprot_accession"]):
@@ -326,13 +344,32 @@ def validate_rows(rows: list[dict], families: list[dict]) -> None:
                 raise ValueError("example lacks exact family membership")
             if example["evidence_scope"] != "FAMILY_MEMBERSHIP_NOT_FUNCTION":
                 raise ValueError("unsupported functional promotion")
-            if not example["origins"]:
-                raise ValueError("example lacks sibling provenance")
-            if example["sequence_origin"] == "PTM_REGISTRY_MIRROR":
-                registry = example.get("registry_source", {})
-                if any(registry.get(key) != example[key]
-                       for key in ("sequence_sha256", "sequence_version")):
-                    raise ValueError("mirrored sequence differs from registry provenance")
+            status = example.get("registry_status")
+            expected_origin = {"EXACT_SEQUENCE_VERSION_MATCH": "PTM_REGISTRY_MIRROR",
+                               "DIFFERENT_SEQUENCE_OR_VERSION": "UNIPROT_FETCH",
+                               "NOT_IN_REGISTRY": "UNIPROT_FETCH"}.get(status)
+            if expected_origin is None or example.get("sequence_origin") != expected_origin:
+                raise ValueError("inconsistent sequence origin and registry status")
+            registry = example.get("registry_source")
+            if status == "NOT_IN_REGISTRY":
+                if registry is not None:
+                    raise ValueError("unexpected registry provenance")
+                continue
+            if not isinstance(registry, dict):
+                raise TypeError("missing registry provenance")
+            url = source_link(registry.get("repository", ""), registry.get("commit", ""),
+                              registry.get("path", ""))
+            if (not url or registry.get("url") != url or registry.get("path") != REGISTRY
+                    or not re.fullmatch(r"[0-9a-f]{64}", registry.get("sha256", ""))
+                    or not re.fullmatch(r"[0-9a-f]{64}", registry.get("sequence_sha256", ""))
+                    or type(registry.get("sequence_version")) is not int
+                    or registry["sequence_version"] < 1
+                    or not re.fullmatch(r"\d{4}_\d{2}", registry.get("uniprot_release", ""))):
+                raise ValueError("invalid immutable registry provenance")
+            match = all(registry[key] == example[key]
+                        for key in ("sequence_sha256", "sequence_version"))
+            if match != (status == "EXACT_SEQUENCE_VERSION_MATCH"):
+                raise ValueError("sequence match differs from registry provenance")
 
 
 def coverage_counts(rows: list[dict]) -> dict:
