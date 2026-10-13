@@ -60,6 +60,29 @@ async function firstId(page) {
   return page.locator('#family-table tbody tr').first().getAttribute('id');
 }
 
+test('sequence examples retain provenance and FASTA on desktop and mobile', async () => {
+  for (const width of [1440, 390]) {
+    const context = await browser.newContext({viewport: {width, height: 900}});
+    const page = await context.newPage();
+    await page.goto(origin + '/families/PF00001.html');
+    const section = page.locator('#protein-examples');
+    await section.scrollIntoViewIfNeeded();
+    assert.match(await section.innerText(), /not functional evidence/);
+    await section.locator('summary').first().click();
+    assert.equal(await section.getByText('FixtureMech: fixture:1').isVisible(), true);
+    const download = page.waitForEvent('download');
+    await section.getByRole('link', {name: 'FASTA', exact: true}).click();
+    const result = await download;
+    assert.equal(result.suggestedFilename(), 'PF00001.fasta');
+    assert.match(fs.readFileSync(await result.path(), 'utf8'), /MACDEFGHIK/);
+    await noOverflow(page);
+    await page.screenshot({path: path.join(screenshots, `protein-examples-${width}.png`)});
+    await page.goto(origin + '/families/PF00002.html');
+    assert.match(await page.locator('#protein-examples').innerText(), /No sibling protein candidate/);
+    await context.close();
+  }
+});
+
 test('sorting, full-corpus search, filters, counts, URL state, reload and back', async () => {
   const context = await browser.newContext({viewport: {width: 1440, height: 900}});
   const page = await context.newPage();

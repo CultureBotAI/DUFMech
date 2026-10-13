@@ -304,6 +304,67 @@ Protein metadata and UniRef mappings: the UniProt Consortium,
 The figures render the recorded coordinates without inferring structure or function.</p></section>"""
 
 
+def protein_example_dataset(provenance: dict) -> str:
+    dataset = provenance.get("protein_examples", {})
+    if not dataset:
+        return ""
+    counts = dataset.get("counts", {})
+    return (f'<section><h2>Protein sequence example dataset</h2>'
+            f'<p>{text(dataset.get("snapshot_id", ""))}: {count(counts.get("proteins"))} proteins; '
+            f'{count(counts.get("by_status", {}).get("HAS_SEQUENCE_EXAMPLE"))} families with '
+            f'sequences out of {count(counts.get("total"))} audited families.</p><p>'
+            + artifact_link(dataset, "Frozen examples (JSON)", "") + ' | '
+            + artifact_link({"local_source": dataset.get("local_manifest", "")}, "Manifest", "")
+            + '</p><p>UniProt Consortium, '
+            '<a href="https://rest.uniprot.org/help/license">CC BY 4.0</a>. '
+            'Sequence examples are family-membership references, not functional claims.</p></section>')
+
+
+def protein_examples_section(row: dict | None) -> str:
+    if row is None:
+        return ""
+    examples = row["examples"]
+    if examples:
+        rendered = []
+        for example in examples[:10]:
+            origins = "".join(
+                f'<li>{link(origin["url"], origin["mech"] + ": " + origin["record_id"])}</li>'
+                for origin in example["origins"]
+            )
+            accession = example["uniprot_accession"]
+            rendered.append(
+                f'<tr><td data-label="UniProt">{link(example["source_url"], accession)}</td>'
+                f'<td data-label="Protein / organism">{text(example["protein_name"])}<br>{text(example["organism"])}</td>'
+                f'<td data-label="Sequence">{example["sequence_length"]} aa; version {example["sequence_version"]}'
+                f'<br>UniProt {text(example["uniprot_release"])}</td>'
+                f'<td data-label="Provenance">{human(example["sequence_origin"])}'
+                f'<details><summary>{len(example["origins"])} sibling references</summary>'
+                f'<ul>{origins}</ul></details></td></tr>'
+            )
+        body = (f'<p>{len(examples)} verified sequence {"example" if len(examples) == 1 else "examples"}. '
+                f'<a href="{row["pfam_id"]}.fasta" download>FASTA</a></p>'
+                '<div class="table-wrap"><table class="protein-examples-table"><thead><tr><th>UniProt</th><th>Protein / organism</th>'
+                '<th>Sequence</th><th>Provenance</th></tr></thead><tbody>'
+                + "".join(rendered) + '</tbody></table></div>')
+        if len(examples) > 10:
+            body += '<p>First 10 shown; the FASTA and family JSON contain all examples.</p>'
+    else:
+        body = ('<p>No sibling protein candidate in the scanned commits.</p>'
+                if row["status"] == "NO_SIBLING_CANDIDATE" else
+                '<p>Family not scanned in the discovery snapshot.</p>'
+                if row["status"] == "NOT_SCANNED" else
+                '<p>No candidate passed exact-accession and current Pfam checks.</p>')
+    if row["unresolved"]:
+        body += (f'<details><summary>{len(row["unresolved"])} unresolved candidates</summary><ul>'
+                 + "".join(f'<li>{text(item["uniprot_accession"])}: {human(item["reason"])}</li>'
+                           for item in row["unresolved"]) + '</ul></details>')
+    return ('<section id="protein-examples"><h2>Protein sequence examples</h2>' + body
+            + '<p>Pfam membership is not functional evidence. Whole-protein sequences do not '
+            'establish domain boundaries. A coverage gap here is not absence from UniProt.</p>'
+            '<p>Sequences and metadata: UniProt Consortium, '
+            '<a href="https://rest.uniprot.org/help/license">CC BY 4.0</a>.</p></section>')
+
+
 def record_page(row: dict, metadata: dict, context: dict) -> str:
     pfam = row["pfam_id"]
     interpro = row["interpro_id"]
@@ -373,6 +434,7 @@ def record_page(row: dict, metadata: dict, context: dict) -> str:
 <section><h2>Source description</h2><p class="description">{description or 'No description supplied.'}</p></section>
 <section><h2>Evidence and references</h2>{evidence}</section>
 <section><h2>Curated functional assertions</h2>{curated_assertions(metadata.get('record', {}))}</section>
+{protein_examples_section(context['protein_examples'].get(pfam))}
 <section id="domain-matches"><h2>Domain matches</h2>{domain_visual(context['members'].get(pfam, []), dataset=bool(context['provenance'].get('members')))}</section>
 <section><h2>Snapshot counters</h2><dl class="record-facts">{counters}</dl></section>
 <section><h2>Classification basis</h2><p>{human(seed_reasons) or 'No seed reasons supplied.'}</p>
@@ -389,6 +451,7 @@ def record_page(row: dict, metadata: dict, context: dict) -> str:
 def render_artifacts(
     families: list[dict], report: dict, *, input_ids: dict, cross_rows: list[dict],
     cross_sources: dict, family_metadata: dict | None = None, member_rows: list[dict] | None = None,
+    protein_examples: list[dict] | None = None,
     provenance: dict | None = None,
 ) -> dict[str, str]:
     """Return the complete output tree, without I/O, network access or wall-clock data.
@@ -399,6 +462,10 @@ def render_artifacts(
     objects and schema {url, label}; absent material is explicitly reported as absent.
     """
     metadata = family_metadata or {}
+    if protein_examples is not None:
+        from dufmech.protein_examples import validate_rows
+
+        validate_rows(protein_examples, families)
     extra = metadata.keys() - {row["pfam_id"] for row in families}
     if extra:
         raise ReportError(f"metadata families absent from worklist: {', '.join(sorted(extra))}")
@@ -409,12 +476,14 @@ def render_artifacts(
               "theme.js": Path(__file__).with_name("site_theme.js").read_text()}
     provenance = {**(provenance or {}), "inputs": dict(sorted(input_ids.items()))}
     provenance["renderer_sha256"] = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
-    fingerprint = json_text([families, metadata, member_rows, cross_rows, cross_sources, provenance, assets])
+    fingerprint = json_text([families, metadata, member_rows, protein_examples,
+                             cross_rows, cross_sources, provenance, assets])
     provenance["build_id"] = hashlib.sha256(fingerprint.encode()).hexdigest()[:16]
     cross: dict[str, list[dict]] = defaultdict(list)
     for row in cross_rows:
         cross[row.get("pfam_id", "")].append(row)
     context = {"provenance": provenance, "cross": cross, "cross_sources": cross_sources,
+               "protein_examples": {r["pfam_id"]: r for r in protein_examples or []},
                "labels": {r["pfam_id"]: r["name"] or r["short_name"] for r in families},
                "members": group_members(member_rows or [], {r["pfam_id"] for r in families})}
     artifacts = {".nojekyll": "", **assets}
@@ -489,7 +558,18 @@ def render_artifacts(
         artifacts[f"families/{pfam}.json"] = json_text({"family": row, "metadata": metadata.get(pfam, {}),
                                                        "inputs": provenance["inputs"],
                                                        "members": context["members"].get(pfam, []),
+                                                       "protein_examples": context["protein_examples"].get(pfam),
                                                        "cross_mech": cross.get(pfam, [])})
+        examples = context["protein_examples"].get(pfam, {}).get("examples", [])
+        if examples:
+            fasta = []
+            for example in examples:
+                fasta.append(f'>{example["uniprot_accession"]} {pfam} '
+                             f'UniProt={example["uniprot_release"]} '
+                             f'sequence_version={example["sequence_version"]}')
+                sequence = example["sequence"]
+                fasta.extend(sequence[i:i + 70] for i in range(0, len(sequence), 70))
+            artifacts[f"families/{pfam}.fasta"] = "\n".join(fasta) + "\n"
     schema = provenance.get("schema", {})
     if schema.get("document"):
         schema_html = '<a href="schema.html">LinkML family schema documentation</a>'
@@ -525,6 +605,7 @@ def render_artifacts(
 <p><a href="index.json" download>Complete family index, metadata and provenance (JSON)</a></p>
 <h2>Frozen inputs</h2><ul>{source_items}</ul>
 {member_dataset(provenance)}
+{protein_example_dataset(provenance)}
 <p>Site build {provenance['build_id']}. Source links are pinned to the supplied or verified source commits.
 Input snapshot identifiers are listed in the footer. No live scientific data is fetched by these pages.</p>
 <h2>Retained reviews</h2>{f'<ul>{review_items}</ul>' if review_items else '<p>No retained reviews supplied.</p>'}

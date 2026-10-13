@@ -27,6 +27,15 @@ button { cursor: pointer; }
 button:disabled { color: var(--muted); cursor: default; }
 .table-wrap { overflow: auto; max-height: 65vh; max-width: 100%; border: 1px solid var(--line); background: var(--card); }
 table { width: 100%; min-width: 1000px; border-collapse: collapse; }
+.protein-examples-table { min-width: 660px; }
+@media (max-width: 720px) {
+  .protein-examples-table { min-width: 0; }
+  .protein-examples-table thead { position: absolute; clip-path: inset(50%); width: 1px; height: 1px; overflow: hidden; }
+  .protein-examples-table tbody, .protein-examples-table tr, .protein-examples-table td { display: block; }
+  .protein-examples-table tr { border-bottom: 1px solid var(--line); }
+  .protein-examples-table td { border: 0; overflow-wrap: anywhere; }
+  .protein-examples-table td::before { content: attr(data-label); display: block; font-weight: 600; color: var(--muted); }
+}
 #family-table { min-width: 1720px; }
 #family-table th:nth-child(1) { min-width: 120px; }
 #family-table th:nth-child(2) { min-width: 260px; }

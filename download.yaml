@@ -399,3 +399,23 @@
   writer: "write_example_candidates_snapshot"
   scoring: "NOT_SCORED"
   artifacts: ["data/worklists/uniprot-duf-example-candidates-2026-10-07.manifest.json"]
+
+- source: "uniprot_sequence_examples"
+  name: "UniProtKB sequence examples from sibling Mech references"
+  url: "https://rest.uniprot.org/uniprotkb/search"
+  status: "enrichment"
+  seeder: "freeze_protein_examples.py"
+  license: "CC-BY-4.0"
+  redistribution: "ATTRIBUTION"
+  license_url: "https://rest.uniprot.org/help/license"
+  license_verified_on: "2026-10-12"
+  license_note: "UniProt sequences and metadata retain UniProt Consortium attribution. Sibling retention is limited to factual identifiers, pinned record references and qualification labels; this does not relicense the older combined cross-Mech bundle."
+  access: "API"
+  access_note: "Exact-primary accession batches with Pfam cross-references, sequence versions and release-bound checkpoints; PTM registry sequences are mirrored only on exact hash/version agreement."
+  implementation: "IMPLEMENTED"
+  reviewed_on: "2026-10-12"
+  review_basis: "docs/provenance/protein-examples-2026-10-13.md"
+  adapter: "src/dufmech/protein_examples.py"
+  writer: "write_snapshot"
+  scoring: "NOT_SCORED"
+  artifacts: ["data/protein_examples/duf-protein-examples-2026-10-12.manifest.json", "data/protein_examples/duf-protein-examples-2026-10-13.manifest.json"]

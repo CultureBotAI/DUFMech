@@ -42,6 +42,7 @@ from dufmech.uniref import DEFAULT_UNIREF_TARGET
 
 PAGES_DIR = Path("pages")
 WORKLISTS_DIR = Path("data/worklists")
+PROTEIN_EXAMPLES_DIR = Path("data/protein_examples")
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -66,6 +67,7 @@ def render_site(
     cross_mech_unscanned: set[str] | None = None,
     family_metadata: dict[str, dict[str, Any]] | None = None,
     member_rows: list[dict[str, Any]] | None = None,
+    protein_examples: list[dict[str, Any]] | None = None,
     provenance: dict[str, Any] | None = None,
     extra_artifacts: dict[str, str] | None = None,
 ) -> None:
@@ -89,7 +91,7 @@ def render_site(
     artifacts = render_artifacts(
         families, report, input_ids=input_ids, cross_rows=cross_mech_rows,
         cross_sources=cross_mech_sources or {}, family_metadata=family_metadata,
-        member_rows=member_rows, provenance=provenance,
+        member_rows=member_rows, protein_examples=protein_examples, provenance=provenance,
     )
     for name, content in (extra_artifacts or {}).items():
         relative = Path(name)
@@ -119,6 +121,7 @@ def render_from_paths(
     worklist_json: Path | None = None, score_json: Path | None = None,
     cross_mech_dir: Path = CROSS_MECH_DIR,
     members_json: Path | None = None,
+    protein_examples_json: Path | None = None,
     records_root: Path | None = None,
 ) -> None:
     """Load and validate frozen inputs. This build performs no network requests.
@@ -129,13 +132,18 @@ def render_from_paths(
     """
     default_corpus = (worklist_json is None and score_json is None
                       and worklists_dir.resolve() == (REPO_ROOT / WORKLISTS_DIR).resolve())
+    if protein_examples_json is None and default_corpus:
+        from dufmech.protein_examples import STEM
+
+        protein_examples_json = latest_snapshot_path(
+            REPO_ROOT / PROTEIN_EXAMPLES_DIR, STEM, required=False)
     metadata_root = records_root or (REPO_ROOT if default_corpus else None)
     record_inputs = (() if metadata_root is None else tuple(
         metadata_root / part
         for part in ("data/families", "curation/families", "history", "reports", "reviews")
     ))
     for input_path in (worklists_dir, worklist_json, score_json, cross_mech_dir,
-                       members_json, *record_inputs):
+                       members_json, protein_examples_json, *record_inputs):
         if input_path is not None:
             source, target = input_path.resolve(), out_dir.resolve()
             if source == target or target in source.parents or source in target.parents:
@@ -220,12 +228,32 @@ def render_from_paths(
                 raise ReportError("member TSV manifest path must be a filename")
             provenance["members"]["local_tsv"] = f"datasets/{tsv_name}"
             extra_artifacts[f"datasets/{tsv_name}"] = (members_json.parent / tsv_name).read_bytes().decode("utf-8")
+    protein_examples = None
+    if protein_examples_json is not None:
+        from dufmech.protein_examples import load_snapshot
+
+        protein_examples, manifest = load_snapshot(
+            protein_examples_json, list(worklist_rows), input_ids["worklist"])
+        input_ids["protein_examples"] = manifest["snapshot"]["id"]
+        provenance["protein_examples"] = {
+            **tracked_source(protein_examples_json, REPO_ROOT, pins=source_pins),
+            "snapshot_id": manifest["snapshot"]["id"], "source": manifest["source"],
+            "sha256": manifest["files"]["json"]["sha256"], "counts": manifest["rows"],
+            "local_source": f"datasets/{protein_examples_json.name}",
+            "local_manifest": f"datasets/{protein_examples_json.stem}.manifest.json",
+        }
+        retained = [entry["path"] for entry in manifest["files"].values()]
+        retained.append(f"{protein_examples_json.stem}.manifest.json")
+        for name in retained:
+            source_path = protein_examples_json.parent / name
+            extra_artifacts[f"datasets/{source_path.name}"] = source_path.read_text()
     render_site(
         [dict(row) for row in worklist_rows], [dict(row) for row in score_rows],
         input_ids=input_ids, out_dir=out_dir, cross_mech_rows=cross_mech_rows,
         cross_mech_sources=cross_mech_sources, cross_mech_unscanned=unscanned,
         family_metadata=metadata,
-        member_rows=members, provenance=provenance, extra_artifacts=extra_artifacts,
+        member_rows=members, protein_examples=protein_examples,
+        provenance=provenance, extra_artifacts=extra_artifacts,
     )
 
 
@@ -254,12 +282,15 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--worklist-json", type=Path)
     parser.add_argument("--score-json", type=Path)
     parser.add_argument("--members-json", type=Path, help="optional verified member-range snapshot")
+    parser.add_argument("--protein-examples-json", type=Path,
+                        help="optional verified sequence-example snapshot")
     parser.add_argument("--records-root", type=Path, help="repository with curated family projections")
     parser.add_argument("--check", action="store_true", help="fail if --out is stale")
     args = parser.parse_args(argv)
     inputs = {"worklists_dir": args.worklists_dir, "worklist_json": args.worklist_json,
               "score_json": args.score_json,
-              "members_json": args.members_json, "records_root": args.records_root}
+              "members_json": args.members_json, "records_root": args.records_root,
+              "protein_examples_json": args.protein_examples_json}
     if args.check:
         with tempfile.TemporaryDirectory() as tmp:
             render_from_paths(out_dir=Path(tmp), **inputs)

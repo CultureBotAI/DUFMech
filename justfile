@@ -101,6 +101,11 @@ record-reviews-check:
     uv run --locked --extra dev pytest -q tests/test_record_review_contract.py
     uv run --locked python scripts/record_review.py check
 
+# Explicitly acquire and freeze verified UniProt sequence examples from sibling references.
+[positional-arguments]
+protein-examples *args:
+    uv run --locked python -m dufmech.protein_examples "$@"
+
 # Check generated HTML links, accessibility tokens and repository-selected budgets.
 site-check *args="":
     uv run --locked python -m dufmech.site_contract {{args}}

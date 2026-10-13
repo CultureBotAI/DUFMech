@@ -1,0 +1,295 @@
+{
+  "files": {
+    "json": {
+      "bytes": 28517626,
+      "path": "cross-mech-duf-examples-2026-10-12.json",
+      "sha256": "ff9ea3afb8fc6977a84f3e11aba487d622bd537390e6bd1ef8f12ce885b5b474"
+    },
+    "tsv": {
+      "bytes": 11819538,
+      "path": "cross-mech-duf-examples-2026-10-12.tsv",
+      "sha256": "1a4a2edf6197fb27b8ebd269e688c1cb0b3e5cdbcb1b7bb60d5a49e8ad31b807"
+    }
+  },
+  "rows": {
+    "by_source_mech": {
+      "AntibioticMech": 38,
+      "CellStructureMech": 46,
+      "NaturalProductMech": 123,
+      "PathwayMech": 74,
+      "ProteinTraitsMech": 37567,
+      "TaxonMech": 10,
+      "TraitMech": 46
+    },
+    "by_source_section": {
+      "canonical_examples": 25577,
+      "record_text": 54,
+      "trait_identifier": 11990,
+      "uniprot_accession": 283
+    },
+    "by_unknown_status": {
+      "EX_DUF": 21783,
+      "KNOWN_HISTORICAL_DUF": 1627,
+      "NOT_IN_WORKLIST": 23,
+      "UNKNOWN_CANDIDATE": 14471
+    },
+    "pfam_ids_by_source_mech": {
+      "AntibioticMech": 8,
+      "CellStructureMech": 22,
+      "NaturalProductMech": 28,
+      "PathwayMech": 44,
+      "ProteinTraitsMech": 8296,
+      "TaxonMech": 0,
+      "TraitMech": 31
+    },
+    "total": 37904,
+    "unique_pfam_ids": 8296,
+    "unique_uniprot_accessions": 8745,
+    "unlisted_short_names": 12
+  },
+  "schema": {
+    "tsv_fieldnames": [
+      "pfam_id",
+      "short_name",
+      "unknown_status",
+      "source_mech",
+      "source_category",
+      "source_path",
+      "source_record_id",
+      "source_record_label",
+      "source_section",
+      "link_basis",
+      "uniprot_accession",
+      "protein_label",
+      "reviewed",
+      "taxon_id",
+      "taxon_label",
+      "family_mentioned_in_record",
+      "cited_uniprot_accession"
+    ]
+  },
+  "snapshot": {
+    "date": "2026-10-12",
+    "generated_at": "2026-10-13T00:41:54.124113Z",
+    "id": "cross-mech-duf-examples-2026-10-12",
+    "input_snapshot_ids": {
+      "worklist": "interpro-pfam-duf-2026-10-10"
+    },
+    "source_ref": "origin/main"
+  },
+  "source": {
+    "mechs": {
+      "AntibioticMech": {
+        "commit": "18165f54cc13f9321330e34bdab71fd5bc03b05b",
+        "data_dir": "data/antibiotics",
+        "records_scanned": 2939,
+        "repository": "https://github.com/CultureBotAI/AntibioticMech",
+        "rows_before_uniprot": 0
+      },
+      "CellStructureMech": {
+        "commit": "937ba6254eb987adcbd92e82b21b2ce8651dc5e3",
+        "data_dir": "data/structures",
+        "records_scanned": 909,
+        "repository": "https://github.com/CultureBotAI/CellStructureMech",
+        "rows_before_uniprot": 11
+      },
+      "CommunityMech": {
+        "commit": "88050e999dd5699d08456f7f6495505618d6ead6",
+        "data_dir": "kb/communities",
+        "records_scanned": 458,
+        "repository": "https://github.com/CultureBotAI/CommunityMech",
+        "rows_before_uniprot": 0
+      },
+      "CultureMech": {
+        "commit": "9976e05b88c89c6c6b5a4c1fd60ed0d6a86033a6",
+        "data_dir": "data/normalized_yaml",
+        "records_scanned": 15910,
+        "repository": "https://github.com/CultureBotAI/CultureMech",
+        "rows_before_uniprot": 0
+      },
+      "HabitatMech": {
+        "commit": "679a57e04cd2581aec2cfbd1cdc5a78f09ec8a4a",
+        "data_dir": "data/habitats",
+        "records_scanned": 3208,
+        "repository": "https://github.com/CultureBotAI/HabitatMech",
+        "rows_before_uniprot": 0
+      },
+      "MediaIngredientMech": {
+        "commit": "1742bfd450470f5479720ace96ad2851bf4cd9d0",
+        "data_dir": "data/ingredients",
+        "records_scanned": 2953,
+        "repository": "https://github.com/CultureBotAI/MediaIngredientMech",
+        "rows_before_uniprot": 0
+      },
+      "NaturalProductMech": {
+        "commit": "e66f934111777c4ebfe69475d0520c0cfa074785",
+        "data_dir": "data/natural_products",
+        "records_scanned": 3115,
+        "repository": "https://github.com/CultureBotAI/NaturalProductMech",
+        "rows_before_uniprot": 0
+      },
+      "PathwayMech": {
+        "commit": "e1c66917e753105c4bf5b7b026193fcefa2b000f",
+        "data_dir": "data/pathways",
+        "records_scanned": 233,
+        "repository": "https://github.com/CultureBotAI/PathwayMech",
+        "rows_before_uniprot": 0
+      },
+      "ProteinTraitsMech": {
+        "commit": "70edd6f8458845f7d7783ac4f416df519f5e1de6",
+        "data_dir": "data/traits",
+        "records_scanned": 429293,
+        "repository": "https://github.com/CultureBotAI/proteintraitsmech",
+        "rows_before_uniprot": 37567
+      },
+      "TaxonMech": {
+        "commit": "9e35388d8c663fa8b682551efd5c72cc218011bb",
+        "data_dir": "data/taxa",
+        "records_scanned": 625960,
+        "repository": "https://github.com/CultureBotAI/TaxonMech",
+        "rows_before_uniprot": 10
+      },
+      "TraitMech": {
+        "commit": "62f45e1749fa3d3e5ca8b9a3a4ba5bb0361beb8b",
+        "data_dir": "data/traits",
+        "records_scanned": 1107,
+        "repository": "https://github.com/CultureBotAI/TraitMech",
+        "rows_before_uniprot": 33
+      }
+    },
+    "name": "Curated YAML records in sibling CultureBotAI Mech repositories",
+    "uniprotkb_accessions_requested": 2564,
+    "uniprotkb_accessions_resolved": 2450,
+    "uniprotkb_accessions_unresolved": [
+      "A0A009PCQ5",
+      "A0A009PMS8",
+      "A0A009PXB6",
+      "A0A009QPW9",
+      "A0A010REZ7",
+      "A0A010SCY7",
+      "A0A010SSZ8",
+      "A0A010TBV5",
+      "A0A015YCT3",
+      "A0A015ZKG4",
+      "A0A016EEI2",
+      "A0A016XEK1",
+      "A0A016XIE2",
+      "A0A016XII7",
+      "A0A017H5F8",
+      "A0A022L3Z7",
+      "A0A023H996",
+      "A0A023UGD7",
+      "A0A023WN98",
+      "A0A023WVD3",
+      "A0A023Y3L4",
+      "A0A024E2S9",
+      "A0A024E6S7",
+      "A0A024EG85",
+      "A0A031GJU0",
+      "A0A031JNC1",
+      "A0A031JWX5",
+      "A0A031WCC0",
+      "A0A045J7I4",
+      "A0A059L760",
+      "A0A059L9H0",
+      "A0A059TSE2",
+      "A0A059V4Z9",
+      "A0A060H8L4",
+      "A0A060N640",
+      "A0A060RK42",
+      "A0A061JR98",
+      "A0A061JSS8",
+      "A0A067YD12",
+      "A0A067Z2X2",
+      "A0A067Z5N7",
+      "A0A067Z5Y9",
+      "A0A068T423",
+      "A0A071MK53",
+      "A0A072TFX8",
+      "A0A072TMC1",
+      "A0A073JRC3",
+      "A0A075WCC3",
+      "A0A075WF79",
+      "A0A076EJF0",
+      "A0A081KVG3",
+      "A0A086GXI9",
+      "A0A087CUH4",
+      "A0A088E825",
+      "A0A090IGX8",
+      "A0A090JWT2",
+      "A0A099I9V3",
+      "A0A0A3YNQ7",
+      "A0A0B5ENA7",
+      "A0A0C1K447",
+      "A0A0C1PL72",
+      "A0A0D5N3T8",
+      "A0A0E1R950",
+      "A0A0E2H5I8",
+      "A0A0E3A638",
+      "A0A0G3EZQ9",
+      "A0A0H2VI18",
+      "A0A0H2VI68",
+      "A0A0H3L9R0",
+      "A0A0M6WLJ0",
+      "A0A0N0XA94",
+      "A0A0N1QUA1",
+      "A0A100JQQ1",
+      "A0A100WWV3",
+      "A0A174EJP3",
+      "A0A192C731",
+      "A0A1B1UYY2",
+      "A0A1J0LTK6",
+      "A0A1L9R356",
+      "A0A1S8R940",
+      "A0A2D2D7X6",
+      "A0A2H4T153",
+      "A0A2N9AY16",
+      "A0A2X5A7X5",
+      "A0A3B9B147",
+      "A0A3S9JES8",
+      "A0A415TT77",
+      "A0A4U8YZA6",
+      "A0A656AC42",
+      "A0A6J4ZQS8",
+      "A0A7Y9D8L6",
+      "A0A892RPK7",
+      "A0A9P2M4N5",
+      "A0AA45D9L5",
+      "A3RNR9",
+      "A3RWZ4",
+      "B0VPE1",
+      "B9ZUJ5",
+      "C4PWB1",
+      "C6EF31",
+      "E0J3M3",
+      "E0X6H3",
+      "F8J3D7",
+      "G0HQV3",
+      "H6UZI3",
+      "H6UZI4",
+      "H6UZI5",
+      "Q50JA2",
+      "Q50JA3",
+      "Q50JA4",
+      "Q693B6",
+      "Q9WJQ1",
+      "R4ML78",
+      "R6TBR9"
+    ],
+    "uniprotkb_lookup": {
+      "cache_hit_fetch_times": [
+        "2026-10-13T00:21:27Z"
+      ],
+      "cache_hits": 620,
+      "cache_hits_without_fetch_time": 0,
+      "cache_input_sha256": "5d93697f32d1da428945c44fded0c559731d3f416355330cddb5c0b258e3443c",
+      "cache_path": "dufmech-protein-lookups-20261012.json",
+      "cache_sha256": "fa0a93590cafac1b33acd5475150add987d7183bae3f7b9b6015846563754499",
+      "fetched_accessions": 1944,
+      "fetched_at": "2026-10-13T00:41:35Z",
+      "mode": "cache"
+    },
+    "uniprotkb_url": "https://rest.uniprot.org/uniprotkb/search",
+    "url": "https://github.com/CultureBotAI"
+  }
+}
