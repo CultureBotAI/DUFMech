@@ -306,6 +306,7 @@ def iter_mech_records(
     mech: MechSource,
     *,
     ref: str = "HEAD",
+    paths: set[str] | None = None,
 ) -> tuple[str, Iterator[SourceRecord]]:
     """Return a Mech commit and its tracked YAML records at ``ref``."""
 
@@ -320,7 +321,8 @@ def iter_mech_records(
             continue
         meta, path = entry.split("\t", 1)
         _, kind, sha = meta.split()
-        if kind == "blob" and path.endswith((".yaml", ".yml")):
+        if (kind == "blob" and path.endswith((".yaml", ".yml"))
+                and (paths is None or path in paths)):
             blobs.append((sha, path))
     return commit, _cat_blobs(repo, commit, mech, sorted(blobs, key=lambda item: item[1]))
 

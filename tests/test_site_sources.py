@@ -88,6 +88,31 @@ def test_capture_checks_ignored_files_and_ledger_missing_new_consumed_source(rep
         tracked_source(extra, root)
 
 
+def test_native_protein_examples_require_their_own_published_source_pin(repository, monkeypatch):
+    from dufmech.protein_examples import build_rows, write_snapshot
+    from dufmech.report import load_json_rows
+
+    root, worklist, checkpoint = repository
+    capture_source_pins(root, checkpoint)
+    families = list(load_json_rows(worklist))
+    path = write_snapshot(build_rows(families, [], {}, {}, {}, {}),
+                          root / "data/protein_examples", families=families,
+                          snapshot_date="2026-10-12", worklist_id=worklist.stem,
+                          source={"name": "UniProt fixture", "url": "https://example.org"})
+    monkeypatch.setattr(pages, "REPO_ROOT", root)
+    with pytest.raises(ReportError, match="absent from explicit pin ledger"):
+        pages.render_from_paths(out_dir=root / "pages", worklists_dir=worklist.parent,
+                                cross_mech_dir=root / "data/cross_mech")
+    git(root, "add", "data/protein_examples")
+    git(root, "commit", "-qm", "Sequence example fixture")
+    capture_source_pins(root, git(root, "rev-parse", "HEAD"))
+    pages.render_from_paths(out_dir=root / "pages", worklists_dir=worklist.parent,
+                            cross_mech_dir=root / "data/cross_mech")
+    assert (root / "pages/datasets" / path.name).is_file()
+    assert "Protein sequence examples" in (
+        root / f"pages/families/{families[0]['pfam_id']}.html").read_text()
+
+
 @pytest.mark.parametrize("damage", ["path", "hash", "revision", "symlink", "missing"])
 def test_invalid_source_ledger_never_silently_falls_back(repository, damage):
     root, worklist, checkpoint = repository

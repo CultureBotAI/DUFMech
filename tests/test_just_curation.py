@@ -26,6 +26,7 @@ UV = shutil.which("uv")
     ("research", ["dufmech.research"]),
     ("exports", ["dufmech.exports"]),
     ("id-labels", ["dufmech.id_labels"]),
+    ("protein-examples", ["dufmech.protein_examples"]),
 ])
 @pytest.mark.parametrize("with_prose", [False, True], ids=["no-args", "quoted-prose"])
 def test_curation_recipe_preserves_argument_boundaries(tmp_path, recipe, module_args, with_prose):

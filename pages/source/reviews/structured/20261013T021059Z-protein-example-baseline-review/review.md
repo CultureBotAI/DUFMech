@@ -1,0 +1,399 @@
+# PR 192 historical baseline adversarial findings
+
+- Review: 20261013T021059Z-protein-example-baseline-review
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-13T02:05:23Z
+- Finished UTC: 2026-10-13T02:10:59Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: false
+
+## Summary
+
+Historical review of committed baseline 9053fcf72. Temporary probes and negative cases reproduced mutation of frozen query checkpoints and insufficient origin/registry validation. Issues 193 and 194 require remediation before publication; this report describes the original revision, not the already edited working tree.
+
+## Scope And Provenance
+
+Historical review of the original four committed files at 9053fcf72. The baseline was inspected before fixes and reproduced with temporary probes. Later negative tests were run against that original module loaded from git, not against a claim that those tests existed in the baseline.
+
+Selection: PR 192 sequence-example pipeline and its direct renderer integration; targeted negative tests for ordinary resume and malformed provenance.
+Coverage: full; 4 reviewed / 4 in the declared population.
+Source: git_commit at Git base 9053fcf725d527056db22c676ce84791f705ee6c.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| src/dufmech/pages.py | src/dufmech/pages.py | source | src/dufmech/pages.py |
+| src/dufmech/protein_examples.py | src/dufmech/protein_examples.py | source | src/dufmech/protein_examples.py |
+| src/dufmech/site.py | src/dufmech/site.py | source | src/dufmech/site.py |
+| tests/test_protein_examples.py | tests/test_protein_examples.py | source | tests/test_protein_examples.py |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| New negative cases exercised against the original committed module | passed | True | src/dufmech/protein_examples.py, tests/test_protein_examples.py | Expected failing baseline: 18 failed, 1 passed, 23 deselected. One checksum mismatch case was already rejected. This is red-phase evidence, not a passing baseline implementation. |
+
+## Scientific And Domain Assessments
+
+### Frozen checkpoint mutation guard
+
+ownership: concern. Targets: src/dufmech/protein_examples.py, tests/test_protein_examples.py.
+
+The original acquire function appends to frozen manifest-owned query checkpoints when asked for missing accessions, invalidating retained snapshots. It rejects a leaf symlink but not symlinked parents.
+
+### Immutable origin and registry consistency
+
+provenance: concern. Targets: src/dufmech/protein_examples.py, tests/test_protein_examples.py.
+
+The original validator accepts mutable origin commits and URLs and unsupported sequence-origin values. Merely nonempty origins do not establish the claimed immutable provenance contract.
+
+### Membership references do not promote functional claims
+
+scope: supported. Targets: src/dufmech/pages.py, src/dufmech/site.py.
+
+The inspected baseline renderer keeps full sequences in JSON/FASTA and membership caveats, but its verified presentation depends on the deficient input-validation boundary. Existing tests do not exercise these two failure paths.
+
+## Findings
+
+### checkpoint-mutation: Resuming acquisition could mutate a retained snapshot checkpoint
+
+major / open / confirmed; issue key: DUFMech-193.
+
+The baseline appended new observations to manifest-owned .queries.jsonl files, invalidating historical evidence. Reject such appends before network access and preserve read-only replay.
+
+### unvalidated-provenance: Row validation accepted mutable and unsupported origin provenance
+
+major / open / confirmed; issue key: DUFMech-194.
+
+The baseline only checks nonempty origins and conditionally compares mirror hashes. Enforce consistent immutable origin links and supported acquisition/registry metadata.
+
+## Recommended Actions And Acceptance Checks
+
+### fix-checkpoint-mutation
+
+The baseline appended new observations to manifest-owned .queries.jsonl files, invalidating historical evidence. Reject such appends before network access and preserve read-only replay.
+
+- Manifest-owned query checkpoints stay byte-identical and no request is issued for a rejected append.
+- Complete offline replay succeeds; parent symlinks reject.
+
+### fix-unvalidated-provenance
+
+The baseline only checks nonempty origins and conditionally compares mirror hashes. Enforce consistent immutable origin links and supported acquisition/registry metadata.
+
+- Mutable or inconsistent origin links and unsupported registry/origin combinations reject.
+- Both production frozen snapshots and valid registry mismatch examples validate unchanged.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| checkpoint-probe | https://github.com/CultureBotAI/DUFMech/issues/193; acquire at 9053fcf72 and test_lookup_never_appends_to_frozen_checkpoint | supports | A temporary valid snapshot checkpoint was resumed with a new mocked accession. Its bytes changed and verified_manifest raised byte/checksum mismatches. No production artifact was changed. |
+| origin-probe | https://github.com/CultureBotAI/DUFMech/issues/194; validate_rows at 9053fcf72 and provenance_validation regression cases | supports | A fixture with commit main, blob/main URL and unsupported sequence_origin UNVERIFIED passed the baseline row validator. |
+| regressions | https://github.com/CultureBotAI/DUFMech/issues/193; Original protein_examples module loaded from git into the negative-test harness | supports | 19 added adversarial cases were applied to the original module: 18 failed, 1 passed. Tests were authored after the baseline and are remediation evidence, not claimed baseline test content. |
+| implementation | src/dufmech/site.py; protein_examples_section, render_artifacts and pages.render_from_paths at 9053fcf72 | supports | Initial rendering integration provides bounded tables, full JSON/FASTA and explicit membership-not-function caveats. Native input loading enforces source pins. |
+
+## Limits And Additional Notes
+
+- Historical baseline assessment only; the working tree has subsequent fixes that require a separate disposition review.
+- Same-agent review, no independent approval or scientific functional curation.
+- Negative tests were added as a separate harness; their results assess the original module loaded from git.
+- Full final publication QC and retained source-checkpoint verification are not covered.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261013T021059Z-protein-example-baseline-review
+kind: repository
+repository: CultureBotAI/DUFMech
+title: PR 192 historical baseline adversarial findings
+started_at: '2026-10-13T02:05:23Z'
+finished_at: '2026-10-13T02:10:59Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: The implementing agent challenged checkpoint mutation and provenance
+    validation with baseline reproductions and regression tests. No independent reviewer
+    approval is claimed.
+skill: .claude/skills/review-repo/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: FAIL
+scientific_review: false
+summary: Historical review of committed baseline 9053fcf72. Temporary probes and negative
+  cases reproduced mutation of frozen query checkpoints and insufficient origin/registry
+  validation. Issues 193 and 194 require remediation before publication; this report
+  describes the original revision, not the already edited working tree.
+source:
+  git_revision: 9053fcf725d527056db22c676ce84791f705ee6c
+  state: git_commit
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    role: context
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    role: context
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    role: context
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+  - path: src/dufmech/pages.py
+    role: target
+    sha256: 7911a9a50e741496d90cd89a27d8926a8fe82ca1448888fa9cd7f403be4c0db8
+  - path: src/dufmech/protein_examples.py
+    role: target
+    sha256: 27577103ab603605fa9d5d63733f1c6ca512c78994413b696a5538c0ff94e65d
+  - path: src/dufmech/site.py
+    role: target
+    sha256: 4efdc2e9e8479f56e6daec71834867c98201a8d74957feff5ec42621f0e5a9f1
+  - path: tests/test_protein_examples.py
+    role: target
+    sha256: 5d70789f8d35581c4a0e958ff24974cbe4a001a6f6097fa6a068d652844023be
+targets:
+- kind: source
+  label: src/dufmech/pages.py
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: src/dufmech/pages.py
+  target_id: src/dufmech/pages.py
+- kind: source
+  label: src/dufmech/protein_examples.py
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: src/dufmech/protein_examples.py
+  target_id: src/dufmech/protein_examples.py
+- kind: source
+  label: src/dufmech/site.py
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: src/dufmech/site.py
+  target_id: src/dufmech/site.py
+- kind: source
+  label: tests/test_protein_examples.py
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: tests/test_protein_examples.py
+  target_id: tests/test_protein_examples.py
+scope:
+  description: Historical review of the original four committed files at 9053fcf72.
+    The baseline was inspected before fixes and reproduced with temporary probes.
+    Later negative tests were run against that original module loaded from git, not
+    against a claim that those tests existed in the baseline.
+  selection: PR 192 sequence-example pipeline and its direct renderer integration;
+    targeted negative tests for ordinary resume and malformed provenance.
+  coverage: full
+  population_size: 4
+  reviewed_target_ids:
+  - src/dufmech/pages.py
+  - src/dufmech/protein_examples.py
+  - src/dufmech/site.py
+  - tests/test_protein_examples.py
+  exclusions:
+  - target: Family scientific curation
+    reason: No literature or experimental functional assertions are evaluated or promoted.
+  - target: Separate causal-graph branch and other Mechs
+    reason: Not part of this PR or remediation.
+checks:
+- check_id: baseline-red
+  name: New negative cases exercised against the original committed module
+  status: passed
+  required: true
+  target_ids:
+  - src/dufmech/protein_examples.py
+  - tests/test_protein_examples.py
+  command: env PYTHONPATH=src .venv/bin/python -c 'import subprocess; import dufmech.protein_examples
+    as m; import pytest; exec(compile(subprocess.check_output(["git","show","9053fcf72:src/dufmech/protein_examples.py"]),
+    "baseline-protein-examples.py", "exec"), m.__dict__); raise SystemExit(pytest.main(["tests/test_protein_examples.py",
+    "-q", "--tb=no", "-k", "never_appends or symlinked_parent or provenance_validation"]))'
+  exit_code: 1
+  expected_exit_code: 1
+  summary: 'Expected failing baseline: 18 failed, 1 passed, 23 deselected. One checksum
+    mismatch case was already rejected. This is red-phase evidence, not a passing
+    baseline implementation.'
+  evidence_ids:
+  - regressions
+  - checkpoint-probe
+  - origin-probe
+evidence:
+- evidence_id: checkpoint-probe
+  kind: validation
+  reference: https://github.com/CultureBotAI/DUFMech/issues/193
+  locator: acquire at 9053fcf72 and test_lookup_never_appends_to_frozen_checkpoint
+  accessed_at: '2026-10-13T02:09:23Z'
+  support: supports
+  summary: A temporary valid snapshot checkpoint was resumed with a new mocked accession.
+    Its bytes changed and verified_manifest raised byte/checksum mismatches. No production
+    artifact was changed.
+- evidence_id: origin-probe
+  kind: validation
+  reference: https://github.com/CultureBotAI/DUFMech/issues/194
+  locator: validate_rows at 9053fcf72 and provenance_validation regression cases
+  accessed_at: '2026-10-13T02:09:23Z'
+  support: supports
+  summary: A fixture with commit main, blob/main URL and unsupported sequence_origin
+    UNVERIFIED passed the baseline row validator.
+- evidence_id: regressions
+  kind: validation
+  reference: https://github.com/CultureBotAI/DUFMech/issues/193
+  locator: Original protein_examples module loaded from git into the negative-test
+    harness
+  accessed_at: '2026-10-13T02:10:59Z'
+  support: supports
+  summary: '19 added adversarial cases were applied to the original module: 18 failed,
+    1 passed. Tests were authored after the baseline and are remediation evidence,
+    not claimed baseline test content.'
+- evidence_id: implementation
+  kind: record_content
+  reference: src/dufmech/site.py
+  locator: protein_examples_section, render_artifacts and pages.render_from_paths
+    at 9053fcf72
+  accessed_at: '2026-10-13T02:10:59Z'
+  support: supports
+  summary: Initial rendering integration provides bounded tables, full JSON/FASTA
+    and explicit membership-not-function caveats. Native input loading enforces source
+    pins.
+assessments:
+- assessment_id: retention
+  area: ownership
+  topic: Frozen checkpoint mutation guard
+  outcome: concern
+  summary: The original acquire function appends to frozen manifest-owned query checkpoints
+    when asked for missing accessions, invalidating retained snapshots. It rejects
+    a leaf symlink but not symlinked parents.
+  target_ids:
+  - src/dufmech/protein_examples.py
+  - tests/test_protein_examples.py
+  evidence_ids:
+  - checkpoint-probe
+  - regressions
+- assessment_id: provenance
+  area: provenance
+  topic: Immutable origin and registry consistency
+  outcome: concern
+  summary: The original validator accepts mutable origin commits and URLs and unsupported
+    sequence-origin values. Merely nonempty origins do not establish the claimed immutable
+    provenance contract.
+  target_ids:
+  - src/dufmech/protein_examples.py
+  - tests/test_protein_examples.py
+  evidence_ids:
+  - origin-probe
+  - regressions
+- assessment_id: scope
+  area: scope
+  topic: Membership references do not promote functional claims
+  outcome: supported
+  summary: The inspected baseline renderer keeps full sequences in JSON/FASTA and
+    membership caveats, but its verified presentation depends on the deficient input-validation
+    boundary. Existing tests do not exercise these two failure paths.
+  target_ids:
+  - src/dufmech/pages.py
+  - src/dufmech/site.py
+  evidence_ids:
+  - implementation
+  - regressions
+findings:
+- finding_id: checkpoint-mutation
+  issue_key: DUFMech-193
+  category: ownership
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Resuming acquisition could mutate a retained snapshot checkpoint
+  description: The baseline appended new observations to manifest-owned .queries.jsonl
+    files, invalidating historical evidence. Reject such appends before network access
+    and preserve read-only replay.
+  target_ids:
+  - src/dufmech/protein_examples.py
+  - tests/test_protein_examples.py
+  field_paths:
+  - acquire
+  evidence_ids:
+  - checkpoint-probe
+  - regressions
+  native_severity: high
+  normalization_reason: Mapped to major because an ordinary resume could corrupt retained
+    source evidence.
+  ownership_note: Fix belongs to the native acquisition module and its focused tests,
+    not frozen snapshots.
+  external_issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/193
+- finding_id: unvalidated-provenance
+  issue_key: DUFMech-194
+  category: provenance
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Row validation accepted mutable and unsupported origin provenance
+  description: The baseline only checks nonempty origins and conditionally compares
+    mirror hashes. Enforce consistent immutable origin links and supported acquisition/registry
+    metadata.
+  target_ids:
+  - src/dufmech/protein_examples.py
+  - tests/test_protein_examples.py
+  field_paths:
+  - validate_rows
+  evidence_ids:
+  - origin-probe
+  - regressions
+  native_severity: medium
+  normalization_reason: Mapped to major because accepted imported data is presented
+    as verified, although no current production-row corruption was demonstrated.
+  ownership_note: Fix belongs to the native row validator and regression fixtures;
+    no frozen evidence rewrite is appropriate.
+  external_issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/194
+actions:
+- action_id: fix-checkpoint-mutation
+  description: The baseline appended new observations to manifest-owned .queries.jsonl
+    files, invalidating historical evidence. Reject such appends before network access
+    and preserve read-only replay.
+  finding_ids:
+  - checkpoint-mutation
+  target_ids:
+  - src/dufmech/protein_examples.py
+  - tests/test_protein_examples.py
+  ownership_note: Fix belongs to the native acquisition module and its focused tests,
+    not frozen snapshots.
+  acceptance_checks:
+  - Manifest-owned query checkpoints stay byte-identical and no request is issued
+    for a rejected append.
+  - Complete offline replay succeeds; parent symlinks reject.
+- action_id: fix-unvalidated-provenance
+  description: The baseline only checks nonempty origins and conditionally compares
+    mirror hashes. Enforce consistent immutable origin links and supported acquisition/registry
+    metadata.
+  finding_ids:
+  - unvalidated-provenance
+  target_ids:
+  - src/dufmech/protein_examples.py
+  - tests/test_protein_examples.py
+  ownership_note: Fix belongs to the native row validator and regression fixtures;
+    no frozen evidence rewrite is appropriate.
+  acceptance_checks:
+  - Mutable or inconsistent origin links and unsupported registry/origin combinations
+    reject.
+  - Both production frozen snapshots and valid registry mismatch examples validate
+    unchanged.
+limitations:
+- Historical baseline assessment only; the working tree has subsequent fixes that
+  require a separate disposition review.
+- Same-agent review, no independent approval or scientific functional curation.
+- Negative tests were added as a separate harness; their results assess the original
+  module loaded from git.
+- Full final publication QC and retained source-checkpoint verification are not covered.
+links:
+- https://github.com/CultureBotAI/DUFMech/pull/192
+- https://github.com/CultureBotAI/DUFMech/issues/193
+- https://github.com/CultureBotAI/DUFMech/issues/194
+tags:
+- protein-examples
+- adversarial-review
+- provenance
+```
