@@ -327,10 +327,13 @@ def protein_examples_section(row: dict | None) -> str:
     if examples:
         rendered = []
         for example in examples[:10]:
-            origins = "".join(
-                f'<li>{link(origin["url"], origin["mech"] + ": " + origin["record_id"])}</li>'
-                for origin in example["origins"]
-            )
+            origin_links = []
+            for origin in example["origins"]:
+                label = (f'UniProt family search, rank {origin["rank"]}'
+                         if origin.get("kind") == "UNIPROT_FAMILY_SEARCH"
+                         else origin["mech"] + ": " + origin["record_id"])
+                origin_links.append(f'<li>{link(origin["url"], label)}</li>')
+            origins = "".join(origin_links)
             accession = example["uniprot_accession"]
             rendered.append(
                 f'<tr><td data-label="UniProt">{link(example["source_url"], accession)}</td>'
@@ -338,7 +341,8 @@ def protein_examples_section(row: dict | None) -> str:
                 f'<td data-label="Sequence">{example["sequence_length"]} aa; version {example["sequence_version"]}'
                 f'<br>UniProt {text(example["uniprot_release"])}</td>'
                 f'<td data-label="Provenance">{human(example["sequence_origin"])}'
-                f'<details><summary>{len(example["origins"])} sibling references</summary>'
+                f'<details><summary>{len(example["origins"])} source '
+                f'{"reference" if len(example["origins"]) == 1 else "references"}</summary>'
                 f'<ul>{origins}</ul></details></td></tr>'
             )
         body = (f'<p>{len(examples)} verified sequence {"example" if len(examples) == 1 else "examples"}. '
@@ -353,7 +357,15 @@ def protein_examples_section(row: dict | None) -> str:
                 if row["status"] == "NO_SIBLING_CANDIDATE" else
                 '<p>Family not scanned in the discovery snapshot.</p>'
                 if row["status"] == "NOT_SCANNED" else
+                '<p>The frozen UniProt family search returned zero members.</p>'
+                if row["status"] == "NO_UNIPROT_MEMBERS" else
                 '<p>No candidate passed exact-accession and current Pfam checks.</p>')
+    if "direct_discovery" in row:
+        search = row["direct_discovery"]
+        body += (f'<p>{len(examples)} sampled from {count(search["total"])} UniProt family members; '
+                 f'release {text(search["release"])}. Ranked by annotation score, then accession. '
+                 'This is not a representative or reviewed-only sample. '
+                 f'{link(search["url"], "UniProt family query")}</p>')
     if row["unresolved"]:
         body += (f'<details><summary>{len(row["unresolved"])} unresolved candidates</summary><ul>'
                  + "".join(f'<li>{text(item["uniprot_accession"])}: {human(item["reason"])}</li>'

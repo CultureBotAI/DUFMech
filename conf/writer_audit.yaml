@@ -4,6 +4,18 @@ version: 1
 validators: [validate_record, _validate_record, _validate_content, check_manifest, verified_manifest]
 history_helpers: [new_history]
 helpers:
+  discover:
+    path: "src/dufmech/protein_discovery.py"
+    formats: ["jsonl"]
+    policy: "locked-validated-resumable-release-bound-family-search"
+    tests: ["tests/test_protein_discovery.py"]
+    required_calls: [parse_checkpoint, validate_observation, flock]
+  freeze_discovery:
+    path: "src/dufmech/protein_discovery.py"
+    formats: ["json", "tsv", "manifest.json", "jsonl"]
+    policy: "verified-parent-plus-complete-raw-searches-exclusive-successor"
+    tests: ["tests/test_protein_discovery.py"]
+    required_calls: [load_snapshot, parse_checkpoint, enrich_rows, write_snapshot]
   write_snapshot:
     path: "src/dufmech/protein_examples.py"
     formats: ["json", "tsv", "manifest.json", "jsonl"]

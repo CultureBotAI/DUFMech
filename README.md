@@ -355,6 +355,15 @@ under CC BY 4.0. These are observed sequence ranges, not inferred protein struct
 functional assignments. The corpus chart uses actual protein counts; records without range
 evidence say so explicitly. Builds do not retrieve upstream data.
 
+The [direct UniProt sequence-example successor](docs/provenance/protein-examples-direct-2026-10-13.md)
+queries all 5,190 gaps from the sibling scan. It adds sequences for 5,184 families,
+bringing coverage to 8,290 of 8,296 families and 23,836 distinct proteins. Six
+successful zero-result searches remain explicit. Family pages retain FASTA and
+query provenance; these ranked membership samples do not establish function or
+domain boundaries. Use `just protein-examples-direct --help` for explicit
+acquisition and offline replay. Native publication still requires a new source
+checkpoint and verified pins.
+
 After publishing a source checkpoint containing the frozen inputs, records, curation,
 history, reviews and schema, capture its full immutable SHA offline before final rendering:
 

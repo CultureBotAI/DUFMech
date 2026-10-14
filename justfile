@@ -101,6 +101,11 @@ record-reviews-check:
     uv run --locked --extra dev pytest -q tests/test_record_review_contract.py
     uv run --locked python scripts/record_review.py check
 
+# Explicitly query remaining family gaps and freeze a sequence-bearing successor.
+[positional-arguments]
+protein-examples-direct *args:
+    uv run --locked python -m dufmech.protein_discovery "$@"
+
 # Explicitly acquire and freeze verified UniProt sequence examples from sibling references.
 [positional-arguments]
 protein-examples *args:

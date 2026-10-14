@@ -419,3 +419,23 @@
   writer: "write_snapshot"
   scoring: "NOT_SCORED"
   artifacts: ["data/protein_examples/duf-protein-examples-2026-10-12.manifest.json", "data/protein_examples/duf-protein-examples-2026-10-13.manifest.json"]
+
+- source: "uniprot_direct_sequence_examples"
+  name: "UniProtKB direct Pfam family sequence discovery"
+  url: "https://rest.uniprot.org/uniprotkb/search"
+  status: "enrichment"
+  seeder: "freeze_protein_discovery.py"
+  license: "CC-BY-4.0"
+  redistribution: "ATTRIBUTION"
+  license_url: "https://rest.uniprot.org/help/license"
+  license_verified_on: "2026-10-13"
+  license_note: "Retained UniProt sequences, Pfam cross-references and metadata are attributed to the UniProt Consortium; external patent and other rights are not waived. The unchanged sibling-derived parent retains its own provenance."
+  access: "API"
+  access_note: "All 5,190 sibling-discovery gaps queried in UniProt release 2026_03; top three by annotation score then accession, with full sequences, raw responses, explicit totals and six zero-result searches. No functional or taxonomic representativeness claim."
+  implementation: "IMPLEMENTED"
+  reviewed_on: "2026-10-13"
+  review_basis: "docs/provenance/protein-examples-direct-2026-10-13.md"
+  adapter: "src/dufmech/protein_discovery.py"
+  writer: "freeze_discovery"
+  scoring: "NOT_SCORED"
+  artifacts: ["data/protein_examples/duf-protein-examples-direct-2026-10-13.manifest.json"]
