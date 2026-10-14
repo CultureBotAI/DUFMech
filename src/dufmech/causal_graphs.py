@@ -5,8 +5,11 @@ from __future__ import annotations
 import argparse
 import json
 from collections import Counter
+from contextlib import nullcontext
 from graphlib import CycleError, TopologicalSorter
 from pathlib import Path
+
+INVENTORY_PATH = "reports/causal_graphs/inventory.json"
 
 
 def validate_graphs(graphs: list[dict]) -> None:
@@ -86,17 +89,44 @@ def inventory(records: list[dict]) -> dict:
     }
 
 
+def write_inventory(root: Path, *, apply: bool = False, check: bool = False) -> dict:
+    """Check or explicitly refresh the derived inventory without changing records."""
+    from dufmech.records import _publish_projection, _writer_lock, load_records, safe_path
+
+    if apply and check:
+        raise ValueError("--apply and --check are mutually exclusive")
+    root = root.absolute()
+    with _writer_lock(root) if apply else nullcontext():
+        path = safe_path(root, INVENTORY_PATH)
+        if path.exists() and not path.is_file():
+            raise ValueError("causal inventory must be a regular file")
+        previous = path.read_bytes() if path.exists() else None
+        result = inventory(load_records(root))
+        payload = (json.dumps(result, indent=2, sort_keys=True) + "\n").encode("utf-8")
+        if previous != payload:
+            if check:
+                raise ValueError(f"stale or missing {INVENTORY_PATH}; run just causal-graphs --apply")
+            if apply:
+                _publish_projection(root, path, payload, previous)
+    return result
+
+
 def main(argv: list[str] | None = None) -> int:
-    from dufmech.records import load_records
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path.cwd())
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--check", action="store_true", help="reject retained inventory drift")
+    mode.add_argument("--apply", action="store_true", help="refresh the retained inventory")
     args = parser.parse_args(argv)
     try:
-        result = inventory(load_records(args.root.absolute()))
+        result = write_inventory(args.root, apply=args.apply, check=args.check)
     except (ValueError, OSError) as exc:
         parser.exit(1, f"causal-graphs: {exc}\n")
-    print(json.dumps(result, indent=2, sort_keys=True))
+    if args.check or args.apply:
+        print(f"{'Verified' if args.check else 'Refreshed'} {result['records']} family inventory rows")
+    else:
+        print(json.dumps(result, indent=2, sort_keys=True))
     return 0
 
 

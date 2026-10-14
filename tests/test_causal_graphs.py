@@ -1,13 +1,14 @@
 from __future__ import annotations
 
 import copy
+import json
 
 import pytest
 import yaml
 from bs4 import BeautifulSoup
 from linkml_runtime.dumpers import json_dumper
 
-from dufmech.causal_graphs import inventory
+from dufmech.causal_graphs import INVENTORY_PATH, inventory, main, write_inventory
 from dufmech.records import RecordError, build_records, validate_record, write_records
 from dufmech.reviews import record_content_digest
 from tests import test_records
@@ -200,3 +201,86 @@ def test_context_specific_opposite_edges_and_html_anchors(corpus, overlay):
     assert html.find(id="causal-edge.a.b-c")
     assert len(html.select("tbody tr")) == 2
     assert "Medium one" in html.get_text() and "Medium two" in html.get_text()
+
+
+def test_inventory_cli_defaults_to_read_only_stdout(corpus, monkeypatch, capsys):
+    records = list(build_records(corpus).values())
+    monkeypatch.setattr("dufmech.records.load_records", lambda root: records)
+    before = sorted(corpus.rglob("*"))
+    assert main(["--root", str(corpus)]) == 0
+    assert json.loads(capsys.readouterr().out) == inventory(records)
+    assert sorted(corpus.rglob("*")) == before
+
+
+def test_retained_inventory_rejects_missing_and_stale_without_writing(corpus, monkeypatch):
+    records = list(build_records(corpus).values())
+    monkeypatch.setattr("dufmech.records.load_records", lambda root: records)
+    path = corpus / INVENTORY_PATH
+    with pytest.raises(ValueError, match="stale or missing"):
+        write_inventory(corpus, check=True)
+    assert not path.parent.exists()
+    assert not (corpus / ".dufmech").exists()
+    write_inventory(corpus, apply=True)
+    original = path.read_bytes()
+    assert write_inventory(corpus, check=True) == inventory(records)
+    records[0]["description"] = "Changed scientific content"
+    with pytest.raises(ValueError, match="stale or missing"):
+        write_inventory(corpus, check=True)
+    assert path.read_bytes() == original
+    write_inventory(corpus, apply=True)
+    assert path.read_bytes() != original
+    assert write_inventory(corpus, check=True) == inventory(records)
+    path.write_text("{}\n")
+    with pytest.raises(SystemExit) as exc:
+        main(["--root", str(corpus), "--check"])
+    assert exc.value.code == 1
+    assert path.read_text() == "{}\n"
+
+
+@pytest.mark.parametrize("parent", [False, True])
+@pytest.mark.parametrize("mode", ["check", "apply"])
+def test_inventory_refuses_symlink_destinations(corpus, tmp_path, parent, mode):
+    outside = tmp_path / "outside"
+    outside.mkdir()
+    destination = corpus / INVENTORY_PATH
+    if parent:
+        (corpus / "reports").symlink_to(outside, target_is_directory=True)
+    else:
+        destination.parent.mkdir(parents=True)
+        target = outside / "inventory.json"
+        target.write_text("retain me")
+        destination.symlink_to(target)
+    before = sorted(outside.rglob("*"))
+    with pytest.raises(ValueError, match="symlink"):
+        write_inventory(corpus, **{mode: True})
+    assert sorted(outside.rglob("*")) == before
+    if not parent:
+        assert target.read_text() == "retain me"
+
+
+def test_inventory_rejects_conflicting_modes_and_directories(corpus):
+    with pytest.raises(ValueError, match="mutually exclusive"):
+        write_inventory(corpus, check=True, apply=True)
+    with pytest.raises(SystemExit) as exc:
+        main(["--check", "--apply"])
+    assert exc.value.code == 2
+    (corpus / INVENTORY_PATH).mkdir(parents=True)
+    with pytest.raises(ValueError, match="regular file"):
+        write_inventory(corpus, apply=True)
+
+
+def test_inventory_preserves_concurrent_report_edits(corpus, monkeypatch):
+    records = list(build_records(corpus).values())
+    monkeypatch.setattr("dufmech.records.load_records", lambda root: records)
+    write_inventory(corpus, apply=True)
+    destination = corpus / INVENTORY_PATH
+
+    def edited_during_validation(root):
+        destination.write_text("concurrent edit\n")
+        records[0]["description"] = "New record content"
+        return records
+
+    monkeypatch.setattr("dufmech.records.load_records", edited_during_validation)
+    with pytest.raises(RecordError, match="concurrent edit preserved"):
+        write_inventory(corpus, apply=True)
+    assert destination.read_text() == "concurrent edit\n"

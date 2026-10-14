@@ -61,6 +61,13 @@ both graphless and graph-bearing families. It does not label records reviewed or
 infer scientific completion from the presence of an edge. Retained reports and
 the family's actual reviewed scope remain authoritative for that determination.
 
+After regenerating records, refresh the retained structural report with
+`just causal-graphs --apply`. `just causal-graphs --check` compares every byte,
+including all family semantic digests, and fails on a missing or stale report
+without writing. This check is part of `just qc`. The default command still emits
+JSON to stdout without modifying the repository. Inventory refresh never changes
+family content, history, or scientific review status.
+
 ## Progress
 
 Worktree: `/private/tmp/dufmech-causal-graphs`, branch `feat/duf-causal-graphs`.
