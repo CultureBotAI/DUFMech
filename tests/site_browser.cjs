@@ -136,6 +136,53 @@ test('sorting, full-corpus search, filters, counts, URL state, reload and back',
   await context.close();
 });
 
+test('direct UniProt examples and zero-result queries on desktop and mobile', async () => {
+  const payload = JSON.parse(fs.readFileSync(path.join(realSite, 'index.json'), 'utf8'));
+  const dataset = payload.provenance?.protein_examples;
+  const scenarios = [{prefix: '/', example: 'PF00004', empty: 'PF00003'}];
+  if (dataset?.source?.kind === 'DIRECT_UNIPROT_GAP_DISCOVERY') {
+    const rows = JSON.parse(fs.readFileSync(path.join(realSite, dataset.local_source), 'utf8'));
+    const example = rows.find(row => row.direct_discovery && row.examples.length);
+    const empty = rows.find(row => row.status === 'NO_UNIPROT_MEMBERS');
+    assert.ok(example, 'the retained direct discovery has sequence examples');
+    scenarios.push({prefix: '/real/', example: example.pfam_id, empty: empty?.pfam_id});
+  }
+  for (const width of [1440, 390]) {
+    const context = await browser.newContext({viewport: {width, height: 900}});
+    const page = await context.newPage();
+    for (const scenario of scenarios) {
+      await page.goto(origin + `${scenario.prefix}families/${scenario.example}.html`);
+      const section = page.locator('#protein-examples');
+      await section.scrollIntoViewIfNeeded();
+      assert.match(await section.innerText(), /not a representative or reviewed-only sample/);
+      await section.locator('summary').first().click();
+      const query = section.getByRole('link', {name: 'UniProt family search, rank 1', exact: true});
+      assert.equal(await query.isVisible(), true);
+      assert.equal(new URL(await query.getAttribute('href')).searchParams.get('query'),
+        `xref:pfam-${scenario.example}`);
+      const download = page.waitForEvent('download');
+      await section.getByRole('link', {name: 'FASTA', exact: true}).click();
+      const result = await download;
+      assert.equal(result.suggestedFilename(), `${scenario.example}.fasta`);
+      assert.match(fs.readFileSync(await result.path(), 'utf8'), /sequence_version=/);
+      await noOverflow(page);
+      await section.screenshot({path: path.join(screenshots,
+        `direct-${scenario.example}-${width}.png`)});
+      if (scenario.empty) {
+        await page.goto(origin + `${scenario.prefix}families/${scenario.empty}.html`);
+        const empty = page.locator('#protein-examples');
+        assert.match(await empty.innerText(), /zero members/);
+        assert.equal(await empty.getByRole('link', {name: 'FASTA', exact: true}).count(), 0);
+        assert.equal(await empty.getByRole('link', {name: 'UniProt family query', exact: true}).count(), 1);
+        await noOverflow(page);
+        await empty.screenshot({path: path.join(screenshots,
+          `direct-empty-${scenario.empty}-${width}.png`)});
+      }
+    }
+    await context.close();
+  }
+});
+
 test('actual generated corpus controls restore state and show the first row after pagination', async () => {
   const payload = JSON.parse(fs.readFileSync(path.join(realSite, 'index.json'), 'utf8'));
   const sorted = [...payload.families].sort((a, b) => a.pfam_id.localeCompare(b.pfam_id));

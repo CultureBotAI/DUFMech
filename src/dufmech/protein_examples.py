@@ -19,7 +19,7 @@ import yaml
 
 from dufmech.cross_mech import MechSource, iter_mech_records
 from dufmech.cross_mech_snapshot import cross_mech_unscanned, load_cross_mech_snapshot
-from dufmech.report import ReportError, load_json_rows, verified_manifest
+from dufmech.report import ReportError, latest_snapshot_path, load_json_rows, verified_manifest
 from dufmech.site_data import source_link
 from dufmech.uniprotkb import row_from_uniprotkb_entry
 
@@ -305,6 +305,7 @@ def validate_rows(rows: list[dict], families: list[dict]) -> None:
     expected = {r["pfam_id"]: r["short_name"] for r in families}
     if len(rows) != len(expected) or {r["pfam_id"] for r in rows} != expected.keys():
         raise ValueError("example coverage must account for every worklist family exactly once")
+    sequence_identities = {}
     for row in rows:
         pfam = row["pfam_id"]
         if row["short_name"] != expected[pfam]:
@@ -321,13 +322,22 @@ def validate_rows(rows: list[dict], families: list[dict]) -> None:
             raise ValueError("example count mismatch")
         status = ("HAS_SEQUENCE_EXAMPLE" if examples else
                   "UNRESOLVED_CANDIDATES" if unresolved else
+                  "NO_UNIPROT_MEMBERS" if "direct_discovery" in row else
                   "NO_SIBLING_CANDIDATE" if row["discovery_scanned"] else "NOT_SCANNED")
         if row["status"] != status:
             raise ValueError("example coverage status mismatch")
+        if "direct_discovery" in row:
+            from dufmech.protein_discovery import validate_direct_row
+
+            validate_direct_row(row)
         for candidate in examples + unresolved:
             if not candidate.get("origins"):
                 raise ValueError("example lacks sibling provenance")
             for origin in candidate["origins"]:
+                if "direct_discovery" in row:
+                    continue
+                if origin.get("kind", "SIBLING_RECORD") != "SIBLING_RECORD":
+                    raise ValueError("direct query origin requires direct discovery metadata")
                 url = origin.get("url", "")
                 repository, separator, _ = url.partition("/blob/")
                 expected_url = source_link(repository, origin.get("commit", ""),
@@ -338,6 +348,10 @@ def validate_rows(rows: list[dict], families: list[dict]) -> None:
                     raise ValueError("incomplete sibling provenance")
         for example in examples:
             sequence_valid(example)
+            key = (example["uniprot_accession"], example["uniprot_release"])
+            identity = (example["sequence_sha256"], example["sequence_version"])
+            if sequence_identities.setdefault(key, identity) != identity:
+                raise ValueError(f"conflicting sequence for {key[0]} in UniProt {key[1]}")
             if not ACCESSION.fullmatch(example["uniprot_accession"]):
                 raise ValueError("invalid example accession")
             if pfam not in example["pfam_ids"]:
@@ -347,11 +361,14 @@ def validate_rows(rows: list[dict], families: list[dict]) -> None:
             status = example.get("registry_status")
             expected_origin = {"EXACT_SEQUENCE_VERSION_MATCH": "PTM_REGISTRY_MIRROR",
                                "DIFFERENT_SEQUENCE_OR_VERSION": "UNIPROT_FETCH",
-                               "NOT_IN_REGISTRY": "UNIPROT_FETCH"}.get(status)
+                               "NOT_IN_REGISTRY": "UNIPROT_FETCH",
+                               "NOT_CHECKED": "UNIPROT_FETCH"}.get(status)
             if expected_origin is None or example.get("sequence_origin") != expected_origin:
                 raise ValueError("inconsistent sequence origin and registry status")
             registry = example.get("registry_source")
-            if status == "NOT_IN_REGISTRY":
+            if status == "NOT_CHECKED" and "direct_discovery" not in row:
+                raise ValueError("unchecked registry status requires direct query provenance")
+            if status in {"NOT_IN_REGISTRY", "NOT_CHECKED"}:
                 if registry is not None:
                     raise ValueError("unexpected registry provenance")
                 continue
@@ -380,10 +397,12 @@ def coverage_counts(rows: list[dict]) -> dict:
 
 def write_snapshot(rows: list[dict], out_dir: Path, *, families: list[dict],
                    snapshot_date: str, worklist_id: str, source: dict,
-                   checkpoint: bytes | None = None) -> Path:
+                   checkpoint: bytes | None = None, stem: str = STEM) -> Path:
     validate_rows(rows, families)
     snapshot_date = date.fromisoformat(snapshot_date).isoformat()
-    stem = f"{STEM}-{snapshot_date}"
+    if stem not in {STEM, f"{STEM}-direct"}:
+        raise ValueError("unsupported protein example snapshot stem")
+    stem = f"{stem}-{snapshot_date}"
     if any(p.is_symlink() for p in (out_dir, *out_dir.absolute().parents)):
         raise ValueError("snapshot directory must not traverse symlinks")
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -419,6 +438,7 @@ def write_snapshot(rows: list[dict], out_dir: Path, *, families: list[dict],
                 created.append(paths[ext])
                 handle.write(data)
         verified_manifest(paths["json"])
+        load_snapshot(paths["json"], families, worklist_id)
     except Exception:
         for path in reversed(created):
             path.unlink()
@@ -434,7 +454,22 @@ def load_snapshot(path: Path, families: list[dict], worklist_id: str) -> tuple[l
     validate_rows(rows, families)
     if manifest["rows"] != coverage_counts(rows):
         raise ValueError("protein-example manifest coverage differs from actual rows")
+    from dufmech.protein_discovery import DIRECT_STEM, SOURCE_KIND, verify_derivation
+
+    direct = path.name.startswith(f"{DIRECT_STEM}-")
+    if direct != (manifest["source"].get("kind") == SOURCE_KIND):
+        raise ValueError("direct discovery snapshot namespace differs from source kind")
+    if direct:
+        verify_derivation(path, rows, manifest, families, worklist_id)
+    elif any("direct_discovery" in row for row in rows):
+        raise ValueError("direct query rows require a direct discovery snapshot")
     return rows, manifest
+
+
+def latest_protein_snapshot(directory: Path) -> Path | None:
+    candidates = [path for stem in (STEM, f"{STEM}-direct")
+                  if (path := latest_snapshot_path(directory, stem, required=False)) is not None]
+    return max(candidates, key=lambda p: (p.stem[-10:], "-direct-" in p.name), default=None)
 
 
 def main(argv: list[str] | None = None) -> int:

@@ -133,10 +133,9 @@ def render_from_paths(
     default_corpus = (worklist_json is None and score_json is None
                       and worklists_dir.resolve() == (REPO_ROOT / WORKLISTS_DIR).resolve())
     if protein_examples_json is None and default_corpus:
-        from dufmech.protein_examples import STEM
+        from dufmech.protein_examples import latest_protein_snapshot
 
-        protein_examples_json = latest_snapshot_path(
-            REPO_ROOT / PROTEIN_EXAMPLES_DIR, STEM, required=False)
+        protein_examples_json = latest_protein_snapshot(REPO_ROOT / PROTEIN_EXAMPLES_DIR)
     metadata_root = records_root or (REPO_ROOT if default_corpus else None)
     record_inputs = (() if metadata_root is None else tuple(
         metadata_root / part
@@ -244,6 +243,13 @@ def render_from_paths(
         }
         retained = [entry["path"] for entry in manifest["files"].values()]
         retained.append(f"{protein_examples_json.stem}.manifest.json")
+        if manifest["source"].get("kind") == "DIRECT_UNIPROT_GAP_DISCOVERY":
+            from dufmech.protein_discovery import parent_path
+
+            parent = parent_path(protein_examples_json, manifest["source"])
+            parent_manifest = verified_manifest(parent)
+            retained.extend(entry["path"] for entry in parent_manifest["files"].values())
+            retained.append(f"{parent.stem}.manifest.json")
         for name in retained:
             source_path = protein_examples_json.parent / name
             extra_artifacts[f"datasets/{source_path.name}"] = source_path.read_text()
