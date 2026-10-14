@@ -74,7 +74,9 @@ Worktree: `/private/tmp/dufmech-causal-graphs`, branch `feat/duf-causal-graphs-n
 Starting source revision: `9d7a87f74786813fcdf65801bdf940d79cc7a56e`.
 Initial inventory and implementation began at 2026-10-11T04:00:01Z.
 The initial batch was merged in PR #199. Continuation begins from
-`2da6c366b06615fbb6c34379318771fe09f4cfda`; new local curation is unpublished.
+`2da6c366b06615fbb6c34379318771fe09f4cfda`. PF01972 publication is tracked in
+[PR #200](https://github.com/CultureBotAI/DUFMech/pull/200); earlier local-only
+checkpoints below describe their state at the time, not the current release status.
 
 One hundred and twenty-five families now have 1,600 evidence-linked edge entries in 749
 scoped graphs. Of these, 1,575 are OBSERVED, twenty-one are HYPOTHESIZED,
@@ -5658,3 +5660,27 @@ PF01972 continuation checkpoint (2026-10-14):
   Inspect full methods/figures and exact current domain mappings before combining
   or transferring the archaeal kinase and bacterial glycosylation contexts.
   PF01973 is still SEEDED; all earlier open family follow-ups remain in scope.
+
+PF01972 publication review (PR #200, 2026-10-14):
+
+- The initial source-pin failure was reproduced locally and in CI and tracked
+  in [issue #201](https://github.com/CultureBotAI/DUFMech/issues/201).
+  The published annotated candidate `source/dufmech-pr-200-candidate` retains
+  `b6793ba2005e4429f0cef96a31a328825e655a00`; all 9,098 candidate source pins
+  passed local byte verification and the canonical online retention gate.
+- Fresh integrity checks verify all 8,296 manifest hashes, unchanged imported
+  PF01972 fields, exact overlay/projection and review/inventory agreement, and
+  status-only KGX/SSSOM changes. The other 8,295 projections and all association
+  edges remain unchanged. The focused graph/QC suite passed 52 tests in 19.82s.
+- Native candidate Pages were regenerated and PF01972 passed 1440px/390px
+  browser checks for graph counts, support labels, disclosures and document
+  width, without JavaScript errors. Both screenshots were inspected.
+- The retained repository audit is a same-agent adversarial review, not
+  independent expert approval or a replacement for the partial scientific
+  review. Its own source-bearing checkpoint must be retained and rendered;
+  full local QC and exact-head CI are mandatory before merge. The PR records
+  those subsequent release outcomes. Preserve both annotated source tags
+  when deleting the feature branch.
+- No scientific finding is closed by publication. PF01972 stays IN_PROGRESS;
+  its assay-attribution, triad-validation and broader-context questions remain
+  open alongside the rest of the corpus.
