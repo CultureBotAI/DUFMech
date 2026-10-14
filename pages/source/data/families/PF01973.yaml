@@ -4,7 +4,7 @@ name: 6-hydroxymethylpterin diphosphokinase MptE-like
 short_name: MptE-like
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01973
 counters:
   proteins: 3321
@@ -26,3 +26,592 @@ description: This domain can be found in a group of proteins, including archaeal
   diphosphate (6-HMDP) from 6-HMD and ATP [[cite:PUB00061602]]. 6-HMDP is the precursor of the pterin
   containing moiety of the essential C1-carriers tetrahydrofolate and tetrahydromethanopterin. This entry
   also includes a number of uncharacterised proteins from bacteria.
+curation_history: history/records/PF01973
+discussions:
+- discussion_id: mpte-substrates-and-constructs
+  prompt: Resolve archaeal substrate breadth, constructs and catalytic steps beyond the reported assays.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Purified whole-protein reactions and heterologous rescue establish bounded activities, not
+    a universal PF01973 substrate or native archaeal flux.
+  evidence:
+  - reference: PMID:22931285
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Original Figure 4 and Methods distinguish displayed PF0930 chemistry from reported similar
+      MJ1634 activity and E. coli complementation. The supporting purity gel concerns MJ1634.
+  posed_by: Codex
+  posed_date: '2026-10-14'
+  notes: Trace the cited PF0930 expression protocol and exact constructs, reconcile 70/80 C purification
+    wording, test natural substrate breadth and catalytic residues, and inspect later structural/biochemical
+    work. A monophosphate workup peak is not a demonstrated enzyme step. See evidence/PF01973/crecy-2012-mpte.txt.
+- discussion_id: maf-chemistry-versus-phenotypes
+  prompt: Resolve Maf donor stereochemistry and distinguish residue chemistry from protein stability or
+    expression effects.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Deletion/rescue and E324A/D415A perturbations support cellular effects, but do not by themselves
+    demonstrate donor transfer or acid/base catalysis by isolated PF01973.
+  evidence:
+  - reference: PMID:29076618
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Figures 1/5/S1/S4 and Methods support scoped phenotypes; Figures 4/S7 are structural/docking
+      proposals. Maf abundance/folding controls and a donor-bound Maf structure are not established by
+      those experiments.
+  posed_by: Codex
+  posed_date: '2026-10-14'
+  notes: Preserve the S283A/D318A/N491A condition-specific negative results. The N494A caption conflicts
+    with Figure 5B, Methods, primers and sequence; use N491A for that control, not an invented variant.
+    The paper's structural 273-530 interval differs from the current 259-419 Pfam match. Do not transfer
+    kinase chemistry to Maf or glycosylation to archaeal MptE.
+- discussion_id: additional-maf-member-contexts
+  prompt: Extend PF01973 coverage through individually mapped Maf members and partner-specific experiments.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The founding archaeal and AMB-1 experiments do not exhaust later Maf specificity, glycoengineering
+    and other bacterial contexts.
+  evidence:
+  - reference: doi:10.1002/mbo3.19
+    supports: PARTIAL
+    evidence_source: primary_publication_lead
+    explanation: Aeromonas Maf1 study identified for a separate full-text, construct and domain-mapping
+      assessment; not used as evidence for the current graphs.
+  - reference: https://www.sciencedirect.com/science/article/pii/S0960982224007012
+    supports: PARTIAL
+    evidence_source: primary_publication_lead
+    explanation: The 2024 multicomponent specificity study remains a full-methods/figure and exact-member
+      follow-up; publisher access returned 403 in this session.
+  - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11339370/
+    supports: PARTIAL
+    evidence_source: primary_publication_lead
+    explanation: Clostridium mini-flagellin glycoengineering identified for further assessment; no native-substrate
+      or direct catalytic claim is transferred from search metadata.
+  posed_by: Codex
+  posed_date: '2026-10-14'
+  notes: Continue the explicit evidence/PF01973/coverage-and-exclusions.txt queue, including earlier Aeromonas,
+    Campylobacter, Helicobacter and newer studies. Full family review remains incomplete, and all earlier
+    corpus follow-ups stay open.
+causal_graphs:
+- graph_id: pf0930-pterin-diphosphate-2012
+  title: PF0930 produces pterin diphosphate in a purified-protein assay
+  scope: Recombinant P. furiosus PF0930/MptE, mapped to Q8U2A9; whole-protein biochemical activity, not
+    isolated-domain sufficiency.
+  context: 3.5 ng enzyme with 100 uM 6-HMD and 1 mM ATP in 200 uL containing 8 mM MgCl2, 16 mM DTT and
+    40 mM TES/KCl pH 7.4; argon, 70 C, 10 minutes. Products detected after iodine oxidation.
+  family_mapping: Q8U2A9 sequence 1/entry 94 is the 231-residue PF0930 reference; current InterPro PF01973
+    match is 37-183 inclusive. The study cloned PF0930 into modified pET24d; exact extra construct residues
+    remain unverified. See evidence/PF01973/member-mapping.txt.
+  taxon: NCBITaxon:186497
+  scope_status: MECHANISTIC
+  limitations: Product identity is supported by chromatography, optical spectra and desalted MS, but no
+    atomic mechanism, native flux or isolated Pfam truncation is tested. CTP/UTP/GTP retain activity,
+    so ATP is not an exclusive donor. The monophosphate peak's origin is unresolved.
+  nodes:
+  - node_id: enzyme_substrate_mix
+    label: PF0930 reaction with 6-HMD, ATP and Mg2+
+    node_type: PROCESS
+    grounding:
+    - UniProtKB:Q8U2A9
+  - node_id: pterin_diphosphate
+    label: 6-Hydroxymethyl-7,8-dihydropterin diphosphate
+    node_type: STATE
+  edges:
+  - edge_id: pf0930-produces-diphosphate
+    subject: enzyme_substrate_mix
+    predicate: produces
+    object: pterin_diphosphate
+    mechanism: Purified PF0930 converts the supplied pterin in the joint reaction mixture to the diphosphorylated
+      product. Zero-time, no-enzyme and matched nonexpressing-extract MonoQ controls support enzyme attribution;
+      the source node does not make any single reagent sufficient.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:22931285
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3500442/fullTextXML
+      snippet: catalyze the formation of 6-HMDP
+      explanation: Results, original Figure 4D and Methods 3.8-3.9; oxidized product matched a standard
+        and desalted LC-ESI-MS/MRM. The figure displays PF0930, not a separate MJ1634 trace.
+      cache_path: evidence/PF01973/crecy-2012-mpte.txt
+      cache_sha256: 601d231b6582bd80d75b93e37b0302e9364aacdf550993699782873891ce1492
+- graph_id: mj1634-pterin-diphosphate-2012
+  title: MJ1634 has reported pterin diphosphokinase activity
+  scope: Recombinant M. jannaschii MJ1634/MptE, mapped to Q59028; the study reports similar biochemical
+    results to PF0930 without a separate displayed MJ1634 chromatogram.
+  context: Methods specify MJ1634 as an alternative enzyme in the same 70 C, 10-minute 6-HMD/ATP/Mg2+
+    assay used for PF0930. MJ1634 was expressed using pT7-7 in E. coli BL21-Codon Plus (DE3)-RIL and purified
+    by heat treatment and MonoQ.
+  family_mapping: Q59028 sequence 1/entry 111 is the 241-residue MJ1634 reference, current PF01973 interval
+    32-196. The paper identifies NP_248644.1 and sequenced genomic clones; no isolated profile fragment
+    was tested. See evidence/PF01973/member-mapping.txt.
+  taxon: NCBITaxon:243232
+  scope_status: MECHANISTIC
+  limitations: This is a reported whole-protein biochemical result, not independent inspection of a MJ1634
+    trace, raw kinetics or its own MS series. The original supplementary gel identifies MJ1634 fractions
+    and notes CAT contamination in other lanes. Results and Methods differ on heat-treatment temperature.
+  nodes:
+  - node_id: enzyme_substrate_mix
+    label: MJ1634 reaction with 6-HMD, ATP and Mg2+
+    node_type: PROCESS
+    grounding:
+    - UniProtKB:Q59028
+  - node_id: pterin_diphosphate
+    label: Reported 6-HMD diphosphate product
+    node_type: STATE
+  edges:
+  - edge_id: mj1634-produces-diphosphate
+    subject: enzyme_substrate_mix
+    predicate: produces
+    object: pterin_diphosphate
+    mechanism: The Figure 4D caption explicitly extends the biochemical result to MJ1634 and Methods specify
+      its assay. The edge retains that report without transferring PF0930's displayed conversion percentage
+      or claiming resolved catalytic residues.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:22931285
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3500442/fullTextXML
+      snippet: Similar results were obtained with the MJ1634 protein.
+      explanation: Figure 4D caption and Methods 3.4-3.5/3.8; supplementary Figure 4 independently documents
+        the MJ1634 preparation, not its reaction time course.
+      cache_path: evidence/PF01973/crecy-2012-mpte.txt
+      cache_sha256: 601d231b6582bd80d75b93e37b0302e9364aacdf550993699782873891ce1492
+- graph_id: mj1634-folk-complementation-2012
+  title: MJ1634 restores growth of an E. coli folK deletion strain
+  scope: M. jannaschii MJ1634 expressed in E. coli C600 delta-folK::tetB; heterologous complementation,
+    not a native archaeal deletion phenotype.
+  context: pBAD24-derived MJ1634 plasmid; LB with appropriate antibiotics, with or without thymidine,
+    incubated 48 hours. Rescue is observed without arabinose induction. Empty vector, E. coli folK and
+    thymidine supplementation are controls.
+  family_mapping: The sequenced genomic MJ1634 clone corresponds to Q59028/NP_248644.1; reference protein
+    is 241 residues with PF01973 at 32-196. The experimental host differs from the archaeal reference
+    taxon.
+  scope_status: PHENOTYPIC
+  limitations: Growth rescue is an indirect cellular readout. It does not measure native archaeal flux,
+    cofactor concentrations, expression-normalized enzyme efficiency or the sufficiency of the isolated
+    profile interval.
+  nodes:
+  - node_id: mj1634_expression
+    label: MJ1634 expression in the folK-deficient host
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q59028
+  - node_id: growth_without_thymidine
+    label: Growth on LB without added thymidine
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mj1634-enables-growth
+    subject: mj1634_expression
+    predicate: enables
+    object: growth_without_thymidine
+    mechanism: The archaeal clone restores growth under conditions in which the empty-vector folK deletion
+      strain is thymidine dependent. Normal host partners remain present; the protein alone is not asserted
+      to synthesize the entire cofactor.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:22931285
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3500442/fullTextXML
+      snippet: complemented the dT auxotrophy
+      explanation: Genetic-validation Results, original Figure 4B and complementation Methods; Figure
+        4A concerns the different MJ0408/FolB system and is not this edge.
+      cache_path: evidence/PF01973/crecy-2012-mpte.txt
+      cache_sha256: 601d231b6582bd80d75b93e37b0302e9364aacdf550993699782873891ce1492
+- graph_id: amb0685-deletion-2018
+  title: Maf deletion disrupts flagellin maturation and motility in AMB-1
+  scope: Whole amb0685/maf deletion in Magnetospirillum magneticum AMB-1, currently Paramagnetospirillum
+    magneticum; not a selective PF01973 deletion.
+  context: PCR-checked short-linker gene replacement intended to minimize polar effects; AMB-1 grown/manipulated
+    in MG medium at 30 C under microaerophilic conditions. Wild type and in-trans complementation provide
+    comparisons.
+  family_mapping: Q2W9I6 sequence 1/entry 87, 666 residues, WP_011383128.1; PF01973 at 259-419, with separate
+    PF20157/PF20156 domains. The paper's central structural region is 273-530. See evidence/PF01973/member-mapping.txt.
+  taxon: NCBITaxon:342108
+  scope_status: PHENOTYPIC
+  limitations: Whole-protein deletion does not isolate catalytic-domain sufficiency. Loss of detectable
+    extracellular Fla is not a measured export rate; filament and motility outcomes are not proof of a
+    direct molecular link. The glycan remains pseudaminic acid or a close derivative, not stereochemically
+    resolved.
+  nodes:
+  - node_id: maf_deletion
+    label: amb0685/maf deletion
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2W9I6
+  - node_id: modified_flagellin
+    label: Nonulosonic-acid-modified flagellin
+    node_type: STATE
+  - node_id: extracellular_flagellin
+    label: Detectable extracellular flagellin
+    node_type: PHENOTYPE
+  - node_id: flagellar_filaments
+    label: Visible flagellar filaments
+    node_type: PHENOTYPE
+  - node_id: cell_motility
+    label: Observed cell motility
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: deletion-reduces-modified-flagellin
+    subject: maf_deletion
+    predicate: decreases
+    object: modified_flagellin
+    mechanism: The deletion loses the approximately 70-kDa modified Fla band and detected nonulosonic-acid
+      peptide modifications while approximately 55-kDa intracellular Fla remains. The mutation therefore
+      affects maturation rather than simply abolishing all flagellin production.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:29076618
+      source_url: https://hal.science/hal-01802950v1/file/sulzenbacher-etal-2017-HAL.pdf
+      snippet: flagellin was still produced
+      explanation: Results and original Figure 1G-H plus Figure S4 compare wild type and deletion, including
+        the modified and unmodified peptide spectra. No specific donor stereoisomer is asserted.
+      cache_path: evidence/PF01973/sulzenbacher-2018-maf.txt
+      cache_sha256: d386fe9982f5703ceec75be5306af2e3ddee108f8a9be1fae34bf2b6bc7bb16b
+  - edge_id: deletion-reduces-extracellular-flagellin
+    subject: maf_deletion
+    predicate: decreases
+    object: extracellular_flagellin
+    mechanism: Anti-Fla probing of concentrated culture supernatants detects a wild-type signal but none
+      in the deletion preparation. The edge describes detection in that assay, without resolving export
+      versus extracellular stability or other intermediate causes.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:29076618
+      source_url: https://hal.science/hal-01802950v1/file/sulzenbacher-etal-2017-HAL.pdf
+      snippet: flagellin was still produced
+      explanation: Results on HAL PDF page 9 and original Figure S1A-B on page 36; retained intracellular
+        Fla is the important comparison, not evidence of a measured transport mechanism.
+      cache_path: evidence/PF01973/sulzenbacher-2018-maf.txt
+      cache_sha256: d386fe9982f5703ceec75be5306af2e3ddee108f8a9be1fae34bf2b6bc7bb16b
+  - edge_id: deletion-reduces-filaments
+    subject: maf_deletion
+    predicate: decreases
+    object: flagellar_filaments
+    mechanism: Electron micrographs show a filament in wild type and its absence in the maf deletion comparison.
+      This is a downstream cellular phenotype; no direct assembly reaction is assigned to Maf.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:29076618
+      source_url: https://hal.science/hal-01802950v1/file/sulzenbacher-etal-2017-HAL.pdf
+      snippet: restored the wild type phenotype
+      explanation: Original Figure 1D-E gives the deletion comparison; Figure 1F and Results provide rescue
+        supporting attribution to maf. The edge does not join glycosylation and assembly into an observed
+        molecular chain.
+      cache_path: evidence/PF01973/sulzenbacher-2018-maf.txt
+      cache_sha256: d386fe9982f5703ceec75be5306af2e3ddee108f8a9be1fae34bf2b6bc7bb16b
+  - edge_id: deletion-reduces-motility
+    subject: maf_deletion
+    predicate: decreases
+    object: cell_motility
+    mechanism: The authors report nonmotile deletion cells and recovery after maf complementation. This
+      qualitative observation is not a quantified motility rate or proof that every Maf homolog controls
+      motility.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:29076618
+      source_url: https://hal.science/hal-01802950v1/file/sulzenbacher-etal-2017-HAL.pdf
+      snippet: restored the wild type phenotype
+      explanation: HAL PDF Results pages 8-9 explicitly describe deletion and rescue motility; Figure
+        1 shows associated filament phenotypes, not a direct motility measurement.
+      cache_path: evidence/PF01973/sulzenbacher-2018-maf.txt
+      cache_sha256: d386fe9982f5703ceec75be5306af2e3ddee108f8a9be1fae34bf2b6bc7bb16b
+- graph_id: amb0685-rescue-2018
+  title: Wild-type Maf restores the AMB-1 deletion phenotypes
+  scope: In-trans pAK22-maf complementation of the AMB-1 amb0685 deletion; whole-protein rescue in its
+    cellular background.
+  context: Wild-type maf cloned into replicative pAK22 and introduced by conjugation; MG medium at 30
+    C and microaerophilic conditions. Comparisons are parental AMB-1 and its maf deletion.
+  family_mapping: Q2W9I6/WP_011383128.1 is the 666-residue Maf reference, with current PF01973 259-419
+    and terminal PF20157/PF20156 domains. Complementation is not restricted to the profile match.
+  taxon: NCBITaxon:342108
+  scope_status: PHENOTYPIC
+  limitations: Rescue is conditional on other cellular factors and donor availability. No isolated-domain
+    sufficiency, expression-normalized catalytic rate, supernatant-rescue assay or fully resolved glycan
+    structure is established.
+  nodes:
+  - node_id: wild_type_complement
+    label: Wild-type maf supplied to the deletion strain
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2W9I6
+  - node_id: modified_flagellin
+    label: Approximately 70-kDa modified flagellin band
+    node_type: STATE
+  - node_id: flagellar_filaments
+    label: Visible flagellar filaments
+    node_type: PHENOTYPE
+  - node_id: cell_motility
+    label: Observed cell motility
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: complementation-enables-modified-flagellin
+    subject: wild_type_complement
+    predicate: enables
+    object: modified_flagellin
+    mechanism: Supplying wild-type maf restores the approximately 70-kDa anti-Fla band lost in the deletion.
+      The result supports gene-specific restoration of maturation, not direct observation of the glycosyl-transfer
+      reaction.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:29076618
+      source_url: https://hal.science/hal-01802950v1/file/sulzenbacher-etal-2017-HAL.pdf
+      snippet: restored the wild type phenotype
+      explanation: Results and original Figure 1G-I, especially the complemented protein extract in panel
+        I; Methods describe the wild-type complementation construct.
+      cache_path: evidence/PF01973/sulzenbacher-2018-maf.txt
+      cache_sha256: d386fe9982f5703ceec75be5306af2e3ddee108f8a9be1fae34bf2b6bc7bb16b
+  - edge_id: complementation-enables-filaments
+    subject: wild_type_complement
+    predicate: enables
+    object: flagellar_filaments
+    mechanism: The complemented deletion strain again displays an external flagellar filament. This supports
+      a downstream rescue phenotype without asserting direct assembly by Maf.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:29076618
+      source_url: https://hal.science/hal-01802950v1/file/sulzenbacher-etal-2017-HAL.pdf
+      snippet: restored the wild type phenotype
+      explanation: Original Figure 1D-F compares parental, deletion and complemented cells by electron
+        microscopy.
+      cache_path: evidence/PF01973/sulzenbacher-2018-maf.txt
+      cache_sha256: d386fe9982f5703ceec75be5306af2e3ddee108f8a9be1fae34bf2b6bc7bb16b
+  - edge_id: complementation-enables-motility
+    subject: wild_type_complement
+    predicate: enables
+    object: cell_motility
+    mechanism: The text reports recovery of cell motility following wild-type maf complementation. The
+      causal effect is scoped to the tested deletion background and is not a separately quantified rate.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:29076618
+      source_url: https://hal.science/hal-01802950v1/file/sulzenbacher-etal-2017-HAL.pdf
+      snippet: restored the wild type phenotype
+      explanation: HAL PDF Results page 9 and complementation Methods pages 18-19; no supernatant-export
+        rescue is added from Figure S1, which has only wild type and deletion.
+      cache_path: evidence/PF01973/sulzenbacher-2018-maf.txt
+      cache_sha256: d386fe9982f5703ceec75be5306af2e3ddee108f8a9be1fae34bf2b6bc7bb16b
+- graph_id: amb0685-e324a-2018
+  title: E324A prevents Maf complementation of the tested readouts
+  scope: Single E324A substitution in full-length pAK22-maf expressed in the AMB-1 maf deletion strain;
+    compared with wild-type complementation.
+  context: Sequence-verified mutation plasmid; anti-Fla Western and reported optical-microscope motility
+    readouts. The tested S283A, D318A and N491A constructs retain both readouts under the same study conditions.
+  family_mapping: Native Q2W9I6 residue 324 is E and lies within current PF01973 259-419 and the paper's
+    structural 273-530 region. No isolated domain or E324A/D415A double mutant is implied.
+  taxon: NCBITaxon:342108
+  scope_status: PHENOTYPIC
+  limitations: Loss of complementation can result from catalytic, folding, abundance or localization effects.
+    The mutation experiment does not show matched Maf abundance/folding controls; anti-Fla is not an anti-Maf
+    control. General-base chemistry remains hypothetical.
+  nodes:
+  - node_id: e324a_variant
+    label: E324A Maf complementation construct
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2W9I6
+  - node_id: modified_flagellin
+    label: Approximately 70-kDa anti-Fla band
+    node_type: PHENOTYPE
+  - node_id: restored_motility
+    label: Motility restored by complementation
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: e324a-reduces-flagellin-readout
+    subject: e324a_variant
+    predicate: decreases
+    object: modified_flagellin
+    mechanism: The E324A complement lacks the 70-kDa band obtained with wild-type maf and retained in
+      the S283A/D318A/N491A comparisons. This records the band phenotype, not a measured intrinsic catalytic
+      rate.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:29076618
+      source_url: https://hal.science/hal-01802950v1/file/sulzenbacher-etal-2017-HAL.pdf
+      snippet: bacterial motility was not restored
+      explanation: Original Figure 5B and adjacent Results on HAL page 14 associate E324A with absence
+        of the glycosylated-Fla band as well as the separately reported motility effect.
+      cache_path: evidence/PF01973/sulzenbacher-2018-maf.txt
+      cache_sha256: d386fe9982f5703ceec75be5306af2e3ddee108f8a9be1fae34bf2b6bc7bb16b
+  - edge_id: e324a-reduces-motility-rescue
+    subject: e324a_variant
+    predicate: decreases
+    object: restored_motility
+    mechanism: Unlike wild-type maf, the E324A construct does not restore the reported motility phenotype.
+      This is a downstream cellular effect, not evidence identifying the reaction's catalytic base.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:29076618
+      source_url: https://hal.science/hal-01802950v1/file/sulzenbacher-etal-2017-HAL.pdf
+      snippet: bacterial motility was not restored
+      explanation: Results accompanying Figure 5 explicitly describe the E324A complementation outcome;
+        no quantitative motility measurement or rate is inferred.
+      cache_path: evidence/PF01973/sulzenbacher-2018-maf.txt
+      cache_sha256: d386fe9982f5703ceec75be5306af2e3ddee108f8a9be1fae34bf2b6bc7bb16b
+- graph_id: amb0685-d415a-2018
+  title: D415A prevents Maf complementation of the tested readouts
+  scope: Single D415A substitution in full-length pAK22-maf expressed in the AMB-1 maf deletion strain;
+    distinct from the E324A construct.
+  context: Sequence-verified mutation plasmid, anti-Fla Western and reported optical-microscope motility
+    readouts; wild-type complementation and retained S283A/D318A/N491A responses provide comparisons.
+  family_mapping: Native Q2W9I6 residue 415 is D, within current PF01973 259-419 and structural 273-530.
+    Current profile boundaries are not experimental truncations.
+  taxon: NCBITaxon:342108
+  scope_status: PHENOTYPIC
+  limitations: The observed phenotype does not distinguish donor-pocket geometry, protein stability, abundance
+    or other indirect effects. No Maf donor-binding measurement, matched variant-folding control or isolated-domain
+    assay is shown in this experiment.
+  nodes:
+  - node_id: d415a_variant
+    label: D415A Maf complementation construct
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2W9I6
+  - node_id: modified_flagellin
+    label: Approximately 70-kDa anti-Fla band
+    node_type: PHENOTYPE
+  - node_id: restored_motility
+    label: Motility restored by complementation
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: d415a-reduces-flagellin-readout
+    subject: d415a_variant
+    predicate: decreases
+    object: modified_flagellin
+    mechanism: D415A complementation lacks the 70-kDa anti-Fla band seen with wild-type maf and the study's
+      tolerated substitutions. The experiment does not identify why D415A fails to support this maturation
+      readout.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:29076618
+      source_url: https://hal.science/hal-01802950v1/file/sulzenbacher-etal-2017-HAL.pdf
+      snippet: bacterial motility was not restored
+      explanation: Original Figure 5B, its Results and Table S2 identify the D415A single-mutant construct
+        and its missing band; the shared sentence also describes E324A, not a double mutant.
+      cache_path: evidence/PF01973/sulzenbacher-2018-maf.txt
+      cache_sha256: d386fe9982f5703ceec75be5306af2e3ddee108f8a9be1fae34bf2b6bc7bb16b
+  - edge_id: d415a-reduces-motility-rescue
+    subject: d415a_variant
+    predicate: decreases
+    object: restored_motility
+    mechanism: The D415A construct fails to restore the motility phenotype recovered with wild-type maf.
+      It remains an indirect cellular effect, not a direct donor-contact or transport assay.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:29076618
+      source_url: https://hal.science/hal-01802950v1/file/sulzenbacher-etal-2017-HAL.pdf
+      snippet: bacterial motility was not restored
+      explanation: Results accompanying Figure 5 name D415A among the noncomplementing constructs; Methods
+        identify sequence verification and microscopy-based assessment.
+      cache_path: evidence/PF01973/sulzenbacher-2018-maf.txt
+      cache_sha256: d386fe9982f5703ceec75be5306af2e3ddee108f8a9be1fae34bf2b6bc7bb16b
+- graph_id: amb0685-proposed-residue-roles-2018
+  title: Proposed Maf catalytic and donor-pocket roles remain hypotheses
+  scope: Structural/docking interpretation of AMB-1 Maf Glu324 and Asp415; not experimentally resolved
+    chemical steps or family-wide residue assignments.
+  context: Maf structure 5MU5 compared with C. jejuni Cst-II; CMP-Pse5Ac7Ac is docked, not crystallographically
+    observed in Maf. Whole-protein mutant phenotypes motivate but do not establish the proposed molecular
+    explanation.
+  family_mapping: Q2W9I6 E324/D415 both map within PF01973 259-419. Cst-II and its residue roles are comparison-system
+    evidence, not direct demonstrations for this family.
+  taxon: NCBITaxon:342108
+  scope_status: HYPOTHETICAL
+  limitations: Precise donor stereochemistry, acceptor positioning, catalytic-base identity and donor-pocket
+    contacts remain unresolved. No direct proton-transfer observation or mutant binding/kinetic dissection
+    is available in the inspected study. Retain the observed phenotypes in their separate graphs.
+  nodes:
+  - node_id: proposed_glu324_role
+    label: Proposed Glu324 catalytic-base role in Maf
+    node_type: STATE
+    grounding:
+    - UniProtKB:Q2W9I6
+  - node_id: proposed_transfer
+    label: Proposed nonulosonic-acid transfer to flagellin
+    node_type: ACTIVITY
+  - node_id: proposed_asp415_role
+    label: Proposed Asp415 organization of the donor pocket
+    node_type: STATE
+    grounding:
+    - UniProtKB:Q2W9I6
+  - node_id: proposed_donor_binding
+    label: Proposed accommodation of the donor nucleotide moiety
+    node_type: STATE
+  edges:
+  - edge_id: proposed-glu324-enables-transfer
+    subject: proposed_glu324_role
+    predicate: enables
+    object: proposed_transfer
+    mechanism: The authors propose a catalytic role for Glu324 from its position near the modeled reaction
+      center, comparison with sialyltransferases and loss of mutant complementation. The general-base
+      assignment is explicitly hypothetical.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: COMPUTATIONAL
+    evidence:
+    - reference: PMID:29076618
+      source_url: https://hal.science/hal-01802950v1/file/sulzenbacher-etal-2017-HAL.pdf
+      snippet: putative catalytic base Glu324
+      explanation: Figures 4/S7, docking Methods and Discussion explicitly leave catalytic identity for
+        further testing. Sulfate overlap and a noncomplementing variant are not observation of this chemical
+        step.
+      cache_path: evidence/PF01973/sulzenbacher-2018-maf.txt
+      cache_sha256: d386fe9982f5703ceec75be5306af2e3ddee108f8a9be1fae34bf2b6bc7bb16b
+  - edge_id: proposed-asp415-enables-donor-accommodation
+    subject: proposed_asp415_role
+    predicate: enables
+    object: proposed_donor_binding
+    mechanism: Asp415 is proposed to organize a donor-nucleotide binding loop by analogy to Cst-II Asp154.
+      This is a structure-based causal hypothesis, not a Maf ligand-binding measurement or demonstrated
+      direct contact.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: COMPUTATIONAL
+    evidence:
+    - reference: PMID:29076618
+      source_url: https://hal.science/hal-01802950v1/file/sulzenbacher-etal-2017-HAL.pdf
+      snippet: Asp415 might exercise the same role
+      explanation: HAL PDF Results page 15, adjacent structural comparison and original docking figure;
+        the D415A cellular phenotype cannot discriminate this proposal from destabilization.
+      cache_path: evidence/PF01973/sulzenbacher-2018-maf.txt
+      cache_sha256: d386fe9982f5703ceec75be5306af2e3ddee108f8a9be1fae34bf2b6bc7bb16b
+curation_events:
+- timestamp: '2026-10-14T22:22:20Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate scoped archaeal MptE and AMB-1 Maf causal graphs
+  history_record: history/records/PF01973/2026-10-14T222220Z-codex-7efd01.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-14T22:34:24Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of PF01973 MptE and Maf contexts
+  history_record: history/records/PF01973/2026-10-14T223424Z-codex-efe5ea.yaml
+  event_index: 0
+  llm_assisted: true
