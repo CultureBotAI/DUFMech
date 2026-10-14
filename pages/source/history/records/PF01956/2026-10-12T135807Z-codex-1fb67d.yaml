@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01956
+  path: data/families/PF01956.yaml
+session:
+  id: 2026-10-12T135807Z-codex-1fb67d
+  timestamp: '2026-10-12T13:58:07Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: no_change
+  summary: Retain expanded PF01956 TMCO1 and GEL scientific review
+  details: Retained native report 20261012T140035Z-pf01956-tmco1-gel-and-separated-client-biogenesis-effects
+    for semantic digest 2ffa41da6a1c1b8c02eb1daeed6bd8bc05413b314dd23f2273b8feed723a690a.
+    New primary figures and Methods support fourteen additional unresolved effects
+    in seven graphs; original seven graphs and four ledgers are unchanged. Current
+    record has fourteen graphs, 43 observed experimental edges, seven ledgers and
+    three open discussions. This is partial same-agent scientific review, NEEDS_FOLLOWUP,
+    not independent endorsement or REVIEWED promotion. Channel assays, exact historical
+    constructs, source discrepancies, archaeological and additional member contexts
+    remain open.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T140035Z-pf01956-tmco1-gel-and-separated-client-biogenesis-effects/review.yaml

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01906
+  path: curation/families/PF01906.yaml
+session:
+  id: 2026-10-11T235512Z-codex-448bb5
+  timestamp: '2026-10-11T23:55:12Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate ten scoped YbjQ joint-deletion growth effects and retain unresolved
+    DUF74 mechanisms
+  details: PF01906 remains IN_PROGRESS. One PHENOTYPIC graph retains all ten exact
+    b0866__ybjQ recipient rows in Babu2014 Table S2, six above and four below multiplicative
+    single-mutant growth expectations, with EXPERIMENTAL/OBSERVED/INDIRECT edges.
+    Parsed Tables S1/S2/S16 and visually inspected Protocols S2/S16 preserve Hfr/Keio
+    marker and assay context. Reference sequence/domain mapping is checked; exact
+    historical clones, rescue and raw colony data remain unassessed. Three OPEN discussions
+    retain fusion-construct, biochemical, retron-source, family-coverage and Rv1762c
+    revision/nonsignificance limits. Five minimal evidence ledgers preserve provenance.
+    Baseline validated all 8296 records with zero drift before edits. No heavy-metal,
+    direct assembly, thiamine, encapsulation or oxidative-protection mechanism is
+    invented; frozen worklists and source pins are unchanged. This is partial same-agent
+    curation, not independent endorsement or publication.

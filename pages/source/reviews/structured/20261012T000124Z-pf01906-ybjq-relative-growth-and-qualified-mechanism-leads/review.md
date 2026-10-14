@@ -1,0 +1,667 @@
+# PF01906 YbjQ joint-genotype growth effects and unresolved molecular mechanisms
+
+- Review: 20261012T000124Z-pf01906-ybjq-relative-growth-and-qualified-mechanism-leads
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-12T00:01:09Z
+- Finished UTC: 2026-10-12T00:01:24Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+One PHENOTYPIC graph retains ten OBSERVED, INDIRECT, EXPERIMENTAL edges. Three OPEN discussions preserve clone/control/member gaps, biochemical and retron-source leads, and the Rv1762c revision and nonsignificant pooled result. Five minimal evidence ledgers retain scoped provenance. The graph does not assert heavy-metal binding, native pentamer assembly, thiamine synthesis, direct encapsulation or oxidative protection. Status stays IN_PROGRESS; this is partial same-agent scientific review, not independent expert endorsement or a completed family-wide assessment.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: PF01906 former DUF74; all ten exact YbjQ recipient rows in Babu2014 Table S2, with separately assessed fusion, metal-binding, retron and Rv1762c leads.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01906 | data/families/PF01906.yaml | generated | PF01906 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01906 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01906.
+
+Frozen PF01906 is former DUF74, YbjQ_1/IPR002765, with 9784 proteins. E. coli K-12 YbjQ P0A8C1 sequence version 1 exactly equals NP_415387.1 and AAC73953.1, 107 aa with PF01906 at 1-105. This anchors b0866/JW0850, not independent sequencing of historical assay clones. It is not YjbQ/b4056/PF01894. Mtb H37Rv O06797 sequence version 1 equals NP_216278.1 and CCP44528.1, 262 aa, with partial PF01906 provider matches at 65-123 and 170-244. These intervals are not two complete experimentally characterized domains or evidence that whole-protein effects are domain-specific.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01906.
+
+Joint-genotype perturbation nodes retain the multi-input experiment; there are no gene-to-gene causal arrows or isolated deletion claims. Positive S-scores do not imply WT rescue, greater absolute fitness or direct interaction. Marker, polar and secondary effects remain possible. The 2004 fusion selection lacks recovered YbjQ fragment/control context, and the 2025 poster abstract reports ongoing, not finished, metal assays. Rv1762c co-purification is not direct cargo encapsulation. Peer review documents removal of its uncomplemented individual-mutant result; final Figure 2F is Cfp29 complementation. The published pooled Tn-seq row has log2 FC +0.52, p=0.3979 and adjusted p=1, so no increase edge is added. Nonsignificance is assay-specific, not a universal absence-of-function claim.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01906.
+
+Most 9784 frozen members, exact historical clones, independent alleles, rescue, raw growth images and replicate-level variability remain open. Original fusion clone records were unavailable. Indexed Bomponis retron Figure 19 and Nichols Rv1762c Figure 3.5F were not obtained or visually inspected; neither snippet becomes an observed edge. The related Bobonis2022 primary HTML has no YbjQ occurrence, but its supplements were not exhaustively searched. Structural constructs, finished member-specific metal assays and thiamine nomenclature/sequence discrepancies need follow-up.
+
+## Findings
+
+### additional-contexts: Resolve member-specific mechanisms and extend independently controlled evidence
+
+minor / open / confirmed; issue key: pf01906-causal-context-coverage.
+
+Seek exact YbjQ clones, raw normalized fitness and independent allele/rescue evidence while preserving the multiplicative comparator. Recover the lambda-fusion and retron primary records before adding construct-dependent effects. Inspect finished metal-binding studies with reference/domain mapping and suitable controls. Reassess Rv1762c-specific evidence without transferring DyP/Cfp29 results or ignoring the published revision and nonsignificant pooled screen. Resolve YbjQ/YjbQ nomenclature by sequence, extend remaining member contexts and retain successor review/history.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Seek exact YbjQ clones, raw normalized fitness and independent allele/rescue evidence while preserving the multiplicative comparator. Recover the lambda-fusion and retron primary records before adding construct-dependent effects. Inspect finished metal-binding studies with reference/domain mapping and suitable controls. Reassess Rv1762c-specific evidence without transferring DyP/Cfp29 results or ignoring the published revision and nonsignificant pooled screen. Resolve YbjQ/YjbQ nomenclature by sequence, extend remaining member contexts and retain successor review/history.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/; Main screen Methods/Results, parsed Tables S1/S2/S16 and visually inspected single-page Protocols S2/S16. | supports | Ten joint ybjQ/partner deletion genotypes have normalized colony growth above (six) or below (four) the multiplicative single-mutant expectation. All ten source rows, donor names, scores and polarity match the authored graph in a programmatic comparison. The comparator is not WT or addition of an isolated deletion. Tables S1/S16 and Protocol S16 retain new Hfr Cavalli deletion::Cm donors and Keio F- deletion::Kan recipients; rich LB dual selection, 36 h at 32 C and eight measurements per pair remain explicit. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P0A8C1/; Accession and domain locations; paired UniProt identity facts | supports | Frozen PF01906 is former DUF74, YbjQ_1/IPR002765, with 9784 proteins. E. coli K-12 YbjQ P0A8C1 sequence version 1 exactly equals NP_415387.1 and AAC73953.1, 107 aa with PF01906 at 1-105. This anchors b0866/JW0850, not independent sequencing of historical assay clones. It is not YjbQ/b4056/PF01894. Mtb H37Rv O06797 sequence version 1 equals NP_216278.1 and CCP44528.1, 262 aa, with partial PF01906 provider matches at 65-123 and 170-244. These intervals are not two complete experimentally characterized domains or evidence that whole-protein effects are domain-specific. |
+| ybjq-fusion-context | https://pmc.ncbi.nlm.nih.gov/articles/PMC344411/; Table 1, selected Methods/Results/Discussion and original Figure 1. | supports | YbjQ and YjbQ are separate hits; selection supports potential self-association without recovered exact YbjQ fragment or clone-specific controls, not native pentamer chemistry. |
+| rv1762c-revision-and-pooled-screen | https://pmc.ncbi.nlm.nih.gov/articles/PMC8635971/; Figure 1D, selected Results/Methods, decision letter and response; publisher supplement sheet TnSeq H2O2 low pH, row 1802 and Key. | supports | Co-purification and a removed uncomplemented phenotype do not establish direct protection. The published pooled RVBD_1762c result has adjusted p=1; no observed increase edge is retained. |
+| source-search-and-limits | evidence/PF01906/coverage.txt; Dated identity/primary-source search, structure/metal/retron/nomenclature leads and access limits. | supports | The 2025 poster page reports ongoing assays; inaccessible thesis figures remain leads. Current repository/skill reads work; an external UV cache-write restriction is not a blanket read denial. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01906 | data/families/PF01906.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Visually inspected Babu2014 Protocols S2/S16, Marino-Ramirez2004 Figure 1, Lien2021 Figure 1 and the 2025 showcase PDF page 3. Parsed three Babu spreadsheets and the Lien supplementary Key/exact Rv1762c row. Thesis figures, clone database records, raw colony/WIG files and complete structural constructs were not independently inspected or reconstructed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T000124Z-pf01906-ybjq-relative-growth-and-qualified-mechanism-leads
+title: PF01906 YbjQ joint-genotype growth effects and unresolved molecular mechanisms
+started_at: '2026-10-12T00:01:09Z'
+finished_at: '2026-10-12T00:01:24Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: One PHENOTYPIC graph retains ten OBSERVED, INDIRECT, EXPERIMENTAL edges.
+  Three OPEN discussions preserve clone/control/member gaps, biochemical and retron-source
+  leads, and the Rv1762c revision and nonsignificant pooled result. Five minimal evidence
+  ledgers retain scoped provenance. The graph does not assert heavy-metal binding,
+  native pentamer assembly, thiamine synthesis, direct encapsulation or oxidative
+  protection. Status stays IN_PROGRESS; this is partial same-agent scientific review,
+  not independent expert endorsement or a completed family-wide assessment.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01906.yaml
+    sha256: d83afe7f25aaf3e7fac6bec2deb871335ef1570b030e9068206ff46b30be005c
+    role: context
+  - path: data/families/PF01906.yaml
+    sha256: 491f5486ab6a3d8692b610edef80d2c45ac9475ff9ee32cf919acacec8ef9aff
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01906/babu-2014.txt
+    role: context
+    sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402
+  - path: evidence/PF01906/identity.txt
+    role: context
+    sha256: 634c58dbf70e4bae985e02636ac5cdc8057da03ee48422f77fd3ae4e7fabbc80
+  - path: evidence/PF01906/marino-2004.txt
+    role: context
+    sha256: db144834b9a9dacea9d85a8c4cb8e3bf75325223122f4659b666fa109703ccc0
+  - path: evidence/PF01906/lien-2021.txt
+    role: context
+    sha256: b0ecad6cda35d4daad41f4e3c2f906ca757683a2b684114a5083652bf97e332f
+  - path: evidence/PF01906/coverage.txt
+    role: context
+    sha256: 812a7de53889521a77792cc79613daf5e57dfb3623452956b933004d0d5a8093
+targets:
+- target_id: PF01906
+  path: data/families/PF01906.yaml
+  label: PF01906
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01906.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 9b8b1ff8c2f82f09a230d56cba81231cbfafa75b0705d1eb8dd35c45eb6c3514
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: PF01906 former DUF74; all ten exact YbjQ recipient rows in Babu2014 Table
+    S2, with separately assessed fusion, metal-binding, retron and Rv1762c leads.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01906
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Most 9784 frozen members, exact historical clones, independent alleles,
+      rescue, raw growth images and replicate-level variability remain open. Original
+      fusion clone records were unavailable. Indexed Bomponis retron Figure 19 and
+      Nichols Rv1762c Figure 3.5F were not obtained or visually inspected; neither
+      snippet becomes an observed edge. The related Bobonis2022 primary HTML has no
+      YbjQ occurrence, but its supplements were not exhaustively searched. Structural
+      constructs, finished member-specific metal assays and thiamine nomenclature/sequence
+      discrepancies need follow-up.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01906
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+  locator: Main screen Methods/Results, parsed Tables S1/S2/S16 and visually inspected
+    single-page Protocols S2/S16.
+  accessed_at: '2026-10-12T00:01:24Z'
+  support: supports
+  snapshot_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402
+  summary: Ten joint ybjQ/partner deletion genotypes have normalized colony growth
+    above (six) or below (four) the multiplicative single-mutant expectation. All
+    ten source rows, donor names, scores and polarity match the authored graph in
+    a programmatic comparison. The comparator is not WT or addition of an isolated
+    deletion. Tables S1/S16 and Protocol S16 retain new Hfr Cavalli deletion::Cm donors
+    and Keio F- deletion::Kan recipients; rich LB dual selection, 36 h at 32 C and
+    eight measurements per pair remain explicit.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P0A8C1/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-12T00:01:24Z'
+  support: supports
+  snapshot_sha256: 634c58dbf70e4bae985e02636ac5cdc8057da03ee48422f77fd3ae4e7fabbc80
+  summary: Frozen PF01906 is former DUF74, YbjQ_1/IPR002765, with 9784 proteins. E.
+    coli K-12 YbjQ P0A8C1 sequence version 1 exactly equals NP_415387.1 and AAC73953.1,
+    107 aa with PF01906 at 1-105. This anchors b0866/JW0850, not independent sequencing
+    of historical assay clones. It is not YjbQ/b4056/PF01894. Mtb H37Rv O06797 sequence
+    version 1 equals NP_216278.1 and CCP44528.1, 262 aa, with partial PF01906 provider
+    matches at 65-123 and 170-244. These intervals are not two complete experimentally
+    characterized domains or evidence that whole-protein effects are domain-specific.
+- evidence_id: ybjq-fusion-context
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC344411/
+  locator: Table 1, selected Methods/Results/Discussion and original Figure 1.
+  summary: YbjQ and YjbQ are separate hits; selection supports potential self-association
+    without recovered exact YbjQ fragment or clone-specific controls, not native pentamer
+    chemistry.
+  accessed_at: '2026-10-12T00:01:24Z'
+  support: supports
+  snapshot_sha256: db144834b9a9dacea9d85a8c4cb8e3bf75325223122f4659b666fa109703ccc0
+- evidence_id: rv1762c-revision-and-pooled-screen
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC8635971/
+  locator: Figure 1D, selected Results/Methods, decision letter and response; publisher
+    supplement sheet TnSeq H2O2 low pH, row 1802 and Key.
+  summary: Co-purification and a removed uncomplemented phenotype do not establish
+    direct protection. The published pooled RVBD_1762c result has adjusted p=1; no
+    observed increase edge is retained.
+  accessed_at: '2026-10-12T00:01:24Z'
+  support: supports
+  snapshot_sha256: b0ecad6cda35d4daad41f4e3c2f906ca757683a2b684114a5083652bf97e332f
+- evidence_id: source-search-and-limits
+  kind: search
+  reference: evidence/PF01906/coverage.txt
+  locator: Dated identity/primary-source search, structure/metal/retron/nomenclature
+    leads and access limits.
+  search_scope: Ignored/hidden-inclusive local PF01906/DUF74/IPR002765 search excluding
+    inventory.json; public accession, YbjQ/UPF0145, metal, Rv1762c, self-association,
+    growth and retron queries. Selected primary contexts and reference comparisons,
+    not an exhaustive all-member search.
+  summary: The 2025 poster page reports ongoing assays; inaccessible thesis figures
+    remain leads. Current repository/skill reads work; an external UV cache-write
+    restriction is not a blanket read denial.
+  accessed_at: '2026-10-12T00:01:24Z'
+  support: supports
+  snapshot_sha256: 812a7de53889521a77792cc79613daf5e57dfb3623452956b933004d0d5a8093
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-12T00:01:24Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01906
+  kind: record_content
+  reference: data/families/PF01906.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-12T00:01:24Z'
+  support: context_only
+  snapshot_sha256: 491f5486ab6a3d8692b610edef80d2c45ac9475ff9ee32cf919acacec8ef9aff
+  quote: "id: Pfam:PF01906\npfam_id: PF01906\nname: Putative heavy-metal-binding\n\
+    short_name: YbjQ_1\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status:\
+    \ IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01906\n\
+    counters:\n  proteins: 9784\n  matches: 10265\n  proteomes: 8037\n  taxa: 12745\n\
+    \  structures: 3\n  alphafold_models: 6574\n  domain_architectures: 27\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002765\ndescription: From comparative structural analysis,\
+    \ this family is likely to be a heavy-metal binding domain.\n  The domain oligomerises\
+    \ as a pentamer. The domain is about 100 amino acids long and is found in prokaryotes.\n\
+    curation_history: history/records/PF01906\ndiscussions:\n- discussion_id: duf74-assay-and-member-coverage\n\
+    \  prompt: Validate YbjQ joint-genotype phenotypes and recover the retron-screen\
+    \ primary context.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Ten indirect\
+    \ effects preserve a multiplicative single-mutant comparator. These are not a\n\
+    \    direct molecular network or an isolated YbjQ mechanism.\n  evidence:\n  -\
+    \ reference: PMID:24586182\n    supports: SUPPORT\n    evidence_source: primary_tables_and_screen_protocols\n\
+    \    explanation: All ten exact YbjQ recipient rows are retained with scores and\
+    \ donor context; repeated\n      colony measurements do not exclude every marker,\
+    \ polar or secondary-mutation effect.\n  - reference: https://archiv.ub.uni-heidelberg.de/volltextserver/31572/1/Bomponis_PhD_Thesis.pdf\n\
+    \    supports: PARTIAL\n    evidence_source: uninspected_primary_source_lead\n\
+    \    explanation: Indexed section 2.6/Figure 19 suggests a YbjQ deletion/retron-induction\
+    \ phenotype, but\n      PDF access returned challenge HTML. The figure and complete\
+    \ controls were not inspected, so no observed\n      edge is derived from the\
+    \ snippet.\n  posed_by: Codex\n  posed_date: '2026-10-11'\n  notes: Seek raw normalized\
+    \ fitness, independent alleles, complementation and exact Keio-derived clones.\n\
+    \    Retrieve the retron thesis figure and assess the published supplements; the\
+    \ related Bobonis2022 main\n    HTML has no YbjQ occurrence, not proof that all\
+    \ supplementary data lack it. Most of the 9784 frozen\n    members remain unassessed.\
+    \ Keep IN_PROGRESS and preserve family versus protein versus domain scope.\n-\
+    \ discussion_id: duf74-metal-binding-and-construct-gap\n  prompt: Resolve biochemical\
+    \ function and exact self-association constructs without promoting predictions\n\
+    \    to mechanisms.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: A structural\
+    \ metal-binding label, static pentamers, neighborhood associations and a fusion\n\
+    \    selection do not establish a native YbjQ metal-binding or assembly mechanism.\n\
+    \  evidence:\n  - reference: PMID:14973045\n    supports: PARTIAL\n    evidence_source:\
+    \ primary_fusion_selection\n    explanation: Table 1 includes YbjQ/b0866, but\
+    \ its fragment boundaries and clone-specific insert-dependence\n      controls\
+    \ were not recovered. Selected lambda-repressor fusions can reflect indirect association\n\
+    \      or false positives; native pentamer stoichiometry was not measured by this\
+    \ assay.\n  - reference: https://grs.uncg.edu/wp-content/uploads/2025/03/2025-Showcase-Directory.pdf\n\
+    \    supports: PARTIAL\n    evidence_source: primary_conference_abstract\n   \
+    \ explanation: Page 3, poster 35 reports predictions, expression/purification\
+    \ and ongoing metal-binding\n      assays, not a finished metal-binding result\
+    \ with verified member and construct mapping.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-11'\n  notes: Recover the original fusion clone and controls, inspect\
+    \ member-specific binding/stoichiometry\n    data and map deposited constructs\
+    \ to reference sequences. Do not infer a causal conformational transition\n  \
+    \  from different static structures. Keep YbjQ/b0866 distinct from YjbQ/b4056/PF01894;\
+    \ the Leptospirillum\n    and Sodalis thiamine nomenclature discrepancies need\
+    \ sequence-based resolution before transfer.\n- discussion_id: duf74-rv1762c-revision-and-negative-context\n\
+    \  prompt: Retain the Rv1762c revision and nonsignificant pooled result before\
+    \ adding an oxidative-protection\n    mechanism.\n  kind: CURATION_TODO\n  status:\
+    \ OPEN\n  rationale: Co-purification is not direct encapsulation. An individual-mutant\
+    \ result was removed during\n    review, and the published pooled Tn-seq result\
+    \ is not significant.\n  evidence:\n  - reference: PMID:34751132\n    supports:\
+    \ PARTIAL\n    evidence_source: primary_figure_supplement_and_peer_review\n  \
+    \  explanation: Figure 1D reports MS co-purification. The author response confirms\
+    \ removal of uncomplemented\n      Rv1762c mutant data with an unresolved encapsulation\
+    \ link. Supplement sheet TnSeq H2O2 low pH, row\n      1802 (RVBD_1762c), gives\
+    \ log2 FC +0.52, p=0.3979 and adjusted p=1; it is not an observed increase\n \
+    \     edge.\n  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/O06797/\n\
+    \    supports: SUPPORT\n    evidence_source: current_partial_domain_mapping\n\
+    \    explanation: H37Rv O06797 is 262 aa, equal to NP_216278.1 and CCP44528.1,\
+    \ with partial PF01906 provider\n      matches at 65-123 and 170-244. Whole-protein\
+    \ annotation is not domain-specific functional proof.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-11'\n  notes: Final Figure 2F is Cfp29 complementation, not Rv1762c.\
+    \ Nichols2020 thesis Figure 3.5F was not\n    inspected and is not independent\
+    \ replication. Seek Rv1762c-specific primary controls and direct cargo/function\n\
+    \    evidence; preserve assay-specific nonsignificance without claiming no effect\
+    \ in every condition. Do\n    not transfer DyP/Cfp29 effects to this protein or\
+    \ to all PF01906 members.\ncausal_graphs:\n- graph_id: ybjq-joint-deletion-relative-growth-2014\n\
+    \  title: YbjQ joint deletions alter colony growth relative to multiplicative\
+    \ expectations\n  scope: Babu2014 Table S2; all ten exact b0866__ybjQ recipient\
+    \ rows, each a separate joint genotype.\n  context: Hfr Cavalli donor deletion::Cm\
+    \ transferred into a Keio F- recipient deletion::Kan; rich LB\n    with dual selection,\
+    \ 36 h outgrowth at 32 C. Protocol S2 reports two screens, four biological recipient\n\
+    \    colonies and eight measurements per pair.\n  family_mapping: E. coli K-12\
+    \ YbjQ P0A8C1, sequence version 1, equals NP_415387.1 and AAC73953.1; 107\n  \
+    \  aa with PF01906 at 1-105. b0866/JW0850 reference identity is not independent\
+    \ sequencing of the historical\n    assay clone. YbjQ is distinct from YjbQ/b4056/PF01894.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:83333\n  limitations: Normalized\
+    \ double-mutant colony growth is compared with multiplicative expected fitness\n\
+    \    from the single mutants, not WT or the addition of one deletion. Positive\
+    \ scores are not WT rescue\n    or faster absolute growth. All ten donors are\
+    \ non-essential and labeled This Study in Table S1; Table\n    S16 verifies their\
+    \ Hfr Cavalli deletion::Cm context. Raw colony images, row-specific dispersion,\
+    \ exact\n    clone sequences and allele-specific rescue were not inspected. Marker,\
+    \ polar and secondary-mutation\n    effects remain alternatives; no gene-to-gene\
+    \ interaction mechanism, heavy-metal binding or Fe-S chemistry\n    is inferred.\n\
+    \  nodes:\n  - node_id: ybjq-caic-joint-loss\n    label: Joint ybjQ (b0866) and\
+    \ caiC (b0037) deletion\n    node_type: PERTURBATION\n  - node_id: ybjq-asnb-joint-loss\n\
+    \    label: Joint ybjQ (b0866) and asnB (b0674) deletion\n    node_type: PERTURBATION\n\
+    \  - node_id: ybjq-gsia-joint-loss\n    label: Joint ybjQ (b0866) and gsiA (b0829)\
+    \ deletion\n    node_type: PERTURBATION\n  - node_id: ybjq-ycbx-joint-loss\n \
+    \   label: Joint ybjQ (b0866) and ycbX (b0947) deletion\n    node_type: PERTURBATION\n\
+    \  - node_id: ybjq-yegd-joint-loss\n    label: Joint ybjQ (b0866) and yegD (b2069)\
+    \ deletion\n    node_type: PERTURBATION\n  - node_id: ybjq-ygci-joint-loss\n \
+    \   label: Joint ybjQ (b0866) and ygcI (b2757) deletion\n    node_type: PERTURBATION\n\
+    \  - node_id: ybjq-csde-joint-loss\n    label: Joint ybjQ (b0866) and csdE (b2811)\
+    \ deletion\n    node_type: PERTURBATION\n  - node_id: ybjq-ygdl-joint-loss\n \
+    \   label: Joint ybjQ (b0866) and ygdL (b2812) deletion\n    node_type: PERTURBATION\n\
+    \  - node_id: ybjq-yhft-joint-loss\n    label: Joint ybjQ (b0866) and yhfT (b3377)\
+    \ deletion\n    node_type: PERTURBATION\n  - node_id: ybjq-idnd-joint-loss\n \
+    \   label: Joint ybjQ (b0866) and idnD (b4267) deletion\n    node_type: PERTURBATION\n\
+    \  - node_id: relative-colony-growth\n    label: Normalized colony growth relative\
+    \ to the multiplicative expectation\n    node_type: PHENOTYPE\n  edges:\n  - edge_id:\
+    \ ybjq-caic-increases-relative-growth\n    subject: ybjq-caic-joint-loss\n   \
+    \ predicate: increases\n    object: relative-colony-growth\n    mechanism: The\
+    \ joint ybjQ/caiC deletion has an alleviating S-score of 3.84384, indicating normalized\n\
+    \      colony growth above the multiplicative single-mutant expectation. This\
+    \ is an indirect joint-genotype\n      phenotype, not the isolated effect of either\
+    \ deletion or direct protein interaction.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:24586182\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/\n      snippet:\
+    \ high-confidence epistatic interactions\n      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013,\
+    \ row 681, b0037__caiC donor and b0866__ybjQ\n        recipient, score 3.84384.\
+    \ Parsed Tables S1/S16 establish donor origin; visually inspected Protocols\n\
+    \        S2/S16 and main Methods establish design and baseline. No absolute growth\
+    \ fraction is inferred\n        from the S-score.\n      cache_path: evidence/PF01906/babu-2014.txt\n\
+    \      cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402\n\
+    \  - edge_id: ybjq-asnb-decreases-relative-growth\n    subject: ybjq-asnb-joint-loss\n\
+    \    predicate: decreases\n    object: relative-colony-growth\n    mechanism:\
+    \ The joint ybjQ/asnB deletion has an aggravating S-score of -8.41881, indicating\
+    \ normalized\n      colony growth below the multiplicative single-mutant expectation.\
+    \ This is an indirect joint-genotype\n      phenotype, not the isolated effect\
+    \ of either deletion or direct protein interaction.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24586182\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/\n\
+    \      snippet: high-confidence epistatic interactions\n      explanation: Table\
+    \ S2 sheet WG_GI_Score_Mar_06_2013, row 5329, b0674__asnB donor and b0866__ybjQ\n\
+    \        recipient, score -8.41881. Parsed Tables S1/S16 establish donor origin;\
+    \ visually inspected Protocols\n        S2/S16 and main Methods establish design\
+    \ and baseline. No absolute growth fraction is inferred\n        from the S-score.\n\
+    \      cache_path: evidence/PF01906/babu-2014.txt\n      cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402\n\
+    \  - edge_id: ybjq-gsia-decreases-relative-growth\n    subject: ybjq-gsia-joint-loss\n\
+    \    predicate: decreases\n    object: relative-colony-growth\n    mechanism:\
+    \ The joint ybjQ/gsiA deletion has an aggravating S-score of -5.97168, indicating\
+    \ normalized\n      colony growth below the multiplicative single-mutant expectation.\
+    \ This is an indirect joint-genotype\n      phenotype, not the isolated effect\
+    \ of either deletion or direct protein interaction.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24586182\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/\n\
+    \      snippet: high-confidence epistatic interactions\n      explanation: Table\
+    \ S2 sheet WG_GI_Score_Mar_06_2013, row 5821, b0829__gsiA donor and b0866__ybjQ\n\
+    \        recipient, score -5.97168. Parsed Tables S1/S16 establish donor origin;\
+    \ visually inspected Protocols\n        S2/S16 and main Methods establish design\
+    \ and baseline. No absolute growth fraction is inferred\n        from the S-score.\n\
+    \      cache_path: evidence/PF01906/babu-2014.txt\n      cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402\n\
+    \  - edge_id: ybjq-ycbx-decreases-relative-growth\n    subject: ybjq-ycbx-joint-loss\n\
+    \    predicate: decreases\n    object: relative-colony-growth\n    mechanism:\
+    \ The joint ybjQ/ycbX deletion has an aggravating S-score of -8.63197, indicating\
+    \ normalized\n      colony growth below the multiplicative single-mutant expectation.\
+    \ This is an indirect joint-genotype\n      phenotype, not the isolated effect\
+    \ of either deletion or direct protein interaction.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24586182\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/\n\
+    \      snippet: high-confidence epistatic interactions\n      explanation: Table\
+    \ S2 sheet WG_GI_Score_Mar_06_2013, row 8055, b0947__ycbX donor and b0866__ybjQ\n\
+    \        recipient, score -8.63197. Parsed Tables S1/S16 establish donor origin;\
+    \ visually inspected Protocols\n        S2/S16 and main Methods establish design\
+    \ and baseline. No absolute growth fraction is inferred\n        from the S-score.\n\
+    \      cache_path: evidence/PF01906/babu-2014.txt\n      cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402\n\
+    \  - edge_id: ybjq-yegd-increases-relative-growth\n    subject: ybjq-yegd-joint-loss\n\
+    \    predicate: increases\n    object: relative-colony-growth\n    mechanism:\
+    \ The joint ybjQ/yegD deletion has an alleviating S-score of 3.20893, indicating\
+    \ normalized\n      colony growth above the multiplicative single-mutant expectation.\
+    \ This is an indirect joint-genotype\n      phenotype, not the isolated effect\
+    \ of either deletion or direct protein interaction.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24586182\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/\n\
+    \      snippet: high-confidence epistatic interactions\n      explanation: Table\
+    \ S2 sheet WG_GI_Score_Mar_06_2013, row 18492, b2069__yegD donor and b0866__ybjQ\n\
+    \        recipient, score 3.20893. Parsed Tables S1/S16 establish donor origin;\
+    \ visually inspected Protocols\n        S2/S16 and main Methods establish design\
+    \ and baseline. No absolute growth fraction is inferred\n        from the S-score.\n\
+    \      cache_path: evidence/PF01906/babu-2014.txt\n      cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402\n\
+    \  - edge_id: ybjq-ygci-increases-relative-growth\n    subject: ybjq-ygci-joint-loss\n\
+    \    predicate: increases\n    object: relative-colony-growth\n    mechanism:\
+    \ The joint ybjQ/ygcI deletion has an alleviating S-score of 3.27028, indicating\
+    \ normalized\n      colony growth above the multiplicative single-mutant expectation.\
+    \ This is an indirect joint-genotype\n      phenotype, not the isolated effect\
+    \ of either deletion or direct protein interaction.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24586182\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/\n\
+    \      snippet: high-confidence epistatic interactions\n      explanation: Table\
+    \ S2 sheet WG_GI_Score_Mar_06_2013, row 22658, b2757__ygcI donor and b0866__ybjQ\n\
+    \        recipient, score 3.27028. Parsed Tables S1/S16 establish donor origin;\
+    \ visually inspected Protocols\n        S2/S16 and main Methods establish design\
+    \ and baseline. No absolute growth fraction is inferred\n        from the S-score.\n\
+    \      cache_path: evidence/PF01906/babu-2014.txt\n      cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402\n\
+    \  - edge_id: ybjq-csde-increases-relative-growth\n    subject: ybjq-csde-joint-loss\n\
+    \    predicate: increases\n    object: relative-colony-growth\n    mechanism:\
+    \ The joint ybjQ/csdE deletion has an alleviating S-score of 3.87969, indicating\
+    \ normalized\n      colony growth above the multiplicative single-mutant expectation.\
+    \ This is an indirect joint-genotype\n      phenotype, not the isolated effect\
+    \ of either deletion or direct protein interaction.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24586182\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/\n\
+    \      snippet: high-confidence epistatic interactions\n      explanation: Table\
+    \ S2 sheet WG_GI_Score_Mar_06_2013, row 25004, b2811__csdE donor and b0866__ybjQ\n\
+    \        recipient, score 3.87969. Parsed Tables S1/S16 establish donor origin;\
+    \ visually inspected Protocols\n        S2/S16 and main Methods establish design\
+    \ and baseline. No absolute growth fraction is inferred\n        from the S-score.\n\
+    \      cache_path: evidence/PF01906/babu-2014.txt\n      cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402\n\
+    \  - edge_id: ybjq-ygdl-decreases-relative-growth\n    subject: ybjq-ygdl-joint-loss\n\
+    \    predicate: decreases\n    object: relative-colony-growth\n    mechanism:\
+    \ The joint ybjQ/ygdL deletion has an aggravating S-score of -6.45424, indicating\
+    \ normalized\n      colony growth below the multiplicative single-mutant expectation.\
+    \ This is an indirect joint-genotype\n      phenotype, not the isolated effect\
+    \ of either deletion or direct protein interaction.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24586182\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/\n\
+    \      snippet: high-confidence epistatic interactions\n      explanation: Table\
+    \ S2 sheet WG_GI_Score_Mar_06_2013, row 25461, b2812__ygdL donor and b0866__ybjQ\n\
+    \        recipient, score -6.45424. Parsed Tables S1/S16 establish donor origin;\
+    \ visually inspected Protocols\n        S2/S16 and main Methods establish design\
+    \ and baseline. No absolute growth fraction is inferred\n        from the S-score.\n\
+    \      cache_path: evidence/PF01906/babu-2014.txt\n      cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402\n\
+    \  - edge_id: ybjq-yhft-increases-relative-growth\n    subject: ybjq-yhft-joint-loss\n\
+    \    predicate: increases\n    object: relative-colony-growth\n    mechanism:\
+    \ The joint ybjQ/yhfT deletion has an alleviating S-score of 4.28552, indicating\
+    \ normalized\n      colony growth above the multiplicative single-mutant expectation.\
+    \ This is an indirect joint-genotype\n      phenotype, not the isolated effect\
+    \ of either deletion or direct protein interaction.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24586182\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/\n\
+    \      snippet: high-confidence epistatic interactions\n      explanation: Table\
+    \ S2 sheet WG_GI_Score_Mar_06_2013, row 33485, b3377__yhfT donor and b0866__ybjQ\n\
+    \        recipient, score 4.28552. Parsed Tables S1/S16 establish donor origin;\
+    \ visually inspected Protocols\n        S2/S16 and main Methods establish design\
+    \ and baseline. No absolute growth fraction is inferred\n        from the S-score.\n\
+    \      cache_path: evidence/PF01906/babu-2014.txt\n      cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402\n\
+    \  - edge_id: ybjq-idnd-increases-relative-growth\n    subject: ybjq-idnd-joint-loss\n\
+    \    predicate: increases\n    object: relative-colony-growth\n    mechanism:\
+    \ The joint ybjQ/idnD deletion has an alleviating S-score of 3.61103, indicating\
+    \ normalized\n      colony growth above the multiplicative single-mutant expectation.\
+    \ This is an indirect joint-genotype\n      phenotype, not the isolated effect\
+    \ of either deletion or direct protein interaction.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24586182\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/\n\
+    \      snippet: high-confidence epistatic interactions\n      explanation: Table\
+    \ S2 sheet WG_GI_Score_Mar_06_2013, row 42095, b4267__idnD donor and b0866__ybjQ\n\
+    \        recipient, score 3.61103. Parsed Tables S1/S16 establish donor origin;\
+    \ visually inspected Protocols\n        S2/S16 and main Methods establish design\
+    \ and baseline. No absolute growth fraction is inferred\n        from the S-score.\n\
+    \      cache_path: evidence/PF01906/babu-2014.txt\n      cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402\n\
+    curation_events:\n- timestamp: '2026-10-11T23:55:12Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate ten scoped YbjQ joint-deletion\
+    \ growth effects and retain unresolved DUF74 mechanisms\n  history_record: history/records/PF01906/2026-10-11T235512Z-codex-448bb5.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Frozen PF01906 is former DUF74, YbjQ_1/IPR002765, with 9784 proteins. E.
+    coli K-12 YbjQ P0A8C1 sequence version 1 exactly equals NP_415387.1 and AAC73953.1,
+    107 aa with PF01906 at 1-105. This anchors b0866/JW0850, not independent sequencing
+    of historical assay clones. It is not YjbQ/b4056/PF01894. Mtb H37Rv O06797 sequence
+    version 1 equals NP_216278.1 and CCP44528.1, 262 aa, with partial PF01906 provider
+    matches at 65-123 and 170-244. These intervals are not two complete experimentally
+    characterized domains or evidence that whole-protein effects are domain-specific.
+  target_ids:
+  - PF01906
+  evidence_ids:
+  - identity
+  - primary
+  - ybjq-fusion-context
+  - rv1762c-revision-and-pooled-screen
+  - source-search-and-limits
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Joint-genotype perturbation nodes retain the multi-input experiment; there
+    are no gene-to-gene causal arrows or isolated deletion claims. Positive S-scores
+    do not imply WT rescue, greater absolute fitness or direct interaction. Marker,
+    polar and secondary effects remain possible. The 2004 fusion selection lacks recovered
+    YbjQ fragment/control context, and the 2025 poster abstract reports ongoing, not
+    finished, metal assays. Rv1762c co-purification is not direct cargo encapsulation.
+    Peer review documents removal of its uncomplemented individual-mutant result;
+    final Figure 2F is Cfp29 complementation. The published pooled Tn-seq row has
+    log2 FC +0.52, p=0.3979 and adjusted p=1, so no increase edge is added. Nonsignificance
+    is assay-specific, not a universal absence-of-function claim.
+  target_ids:
+  - PF01906
+  evidence_ids:
+  - primary
+  - native
+  - ybjq-fusion-context
+  - rv1762c-revision-and-pooled-screen
+  - source-search-and-limits
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Most 9784 frozen members, exact historical clones, independent alleles,
+    rescue, raw growth images and replicate-level variability remain open. Original
+    fusion clone records were unavailable. Indexed Bomponis retron Figure 19 and Nichols
+    Rv1762c Figure 3.5F were not obtained or visually inspected; neither snippet becomes
+    an observed edge. The related Bobonis2022 primary HTML has no YbjQ occurrence,
+    but its supplements were not exhaustively searched. Structural constructs, finished
+    member-specific metal assays and thiamine nomenclature/sequence discrepancies
+    need follow-up.
+  target_ids:
+  - PF01906
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01906-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve member-specific mechanisms and extend independently controlled evidence
+  description: Seek exact YbjQ clones, raw normalized fitness and independent allele/rescue
+    evidence while preserving the multiplicative comparator. Recover the lambda-fusion
+    and retron primary records before adding construct-dependent effects. Inspect
+    finished metal-binding studies with reference/domain mapping and suitable controls.
+    Reassess Rv1762c-specific evidence without transferring DyP/Cfp29 results or ignoring
+    the published revision and nonsignificant pooled screen. Resolve YbjQ/YjbQ nomenclature
+    by sequence, extend remaining member contexts and retain successor review/history.
+  target_ids:
+  - PF01906
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - ybjq-fusion-context
+  - rv1762c-revision-and-pooled-screen
+  - source-search-and-limits
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01906.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Seek exact YbjQ clones, raw normalized fitness and independent allele/rescue
+    evidence while preserving the multiplicative comparator. Recover the lambda-fusion
+    and retron primary records before adding construct-dependent effects. Inspect
+    finished metal-binding studies with reference/domain mapping and suitable controls.
+    Reassess Rv1762c-specific evidence without transferring DyP/Cfp29 results or ignoring
+    the published revision and nonsignificant pooled screen. Resolve YbjQ/YjbQ nomenclature
+    by sequence, extend remaining member contexts and retain successor review/history.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01906
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Visually inspected Babu2014 Protocols S2/S16, Marino-Ramirez2004 Figure 1, Lien2021
+  Figure 1 and the 2025 showcase PDF page 3. Parsed three Babu spreadsheets and the
+  Lien supplementary Key/exact Rv1762c row. Thesis figures, clone database records,
+  raw colony/WIG files and complete structural constructs were not independently inspected
+  or reconstructed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

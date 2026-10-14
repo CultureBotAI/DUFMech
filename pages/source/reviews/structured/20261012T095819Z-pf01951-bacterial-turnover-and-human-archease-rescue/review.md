@@ -1,0 +1,1734 @@
+# PF01951: bacterial turnover and human complex, depletion and rescue contexts
+
+- Review: 20261012T095819Z-pf01951-bacterial-turnover-and-human-archease-rescue
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-12T09:55:08Z
+- Finished UTC: 2026-10-12T09:58:19Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+PF01951 now has 32 graphs and 62 OBSERVED edges, 34 DIRECT and 28 UNRESOLVED; 23 MECHANISTIC and 9 PHENOTYPIC graphs. Thirteen added graphs carry 19 edges. All 43 prior edges and their stable IDs are preserved. Four new ledgers supplement nine prior ledgers. IN_PROGRESS, four OPEN discussions and the stable causal-context-coverage finding remain; this is not family-wide or corpus-wide completion.
+
+## Scope And Provenance
+
+Successor partial scientific self-review of 32 graphs and 62 edges, concentrating on 19 new edges and preservation of the 43 prior edges, exact experimental ownership, negative results and mapping limits.
+
+Selection: Continue PF01951 follow-ups while retaining all 8296 records and all earlier open findings in scope.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01951 | data/families/PF01951.yaml | generated | PF01951 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01951 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: concern. Targets: PF01951.
+
+Thermus Q5SHI5 and Q72HV1 sequence version1 both map PF01951 6-139, but the paper does not identify its exact clone or strain; assay nodes remain without candidate accession grounding. Archaeal O59205 v1/PH1536 reference mapping is retained for its His6 derivative, without assigning the bacterial partner an archaeal taxon. Human Q8IWT0 v2 PF01951 31-167 and canonical D39/K144 labels agree with ED4, but FLAG/pDONR and pET28a primers imply different N termini; complete recombinant mutant clones remain unresolved. Human host, yeast RNA transgene, E. coli Archease production and HEK293-purified multiprotein complex are distinct owners.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01951.
+
+Linear bacterial RNA is circularized, not initially cyclic. Thermus rate acceleration and substrate-excess turnover are separate contexts; Thermobifida's 7% decrease and 19% increase are weak reported mean changes without significance claims, not comparable turnover activation. Human initial addition, delayed restart, dose response, protein labeling and joint GTP/Archease product accumulation are separate complex assays. Four mutant/output edges remain molecularly unresolved. HeLa depletion, WT rescue and two mutant rescue defects are extract outcomes; the transgene Northern measures mature tagged yeast RNA in human cells. No Archease-alone ligase, domain-specific catalysis, observed product-release trajectory, evolutionary necessity or untested ATP mechanism is introduced. Earlier 19 graphs compare exactly to the predecessor's embedded projection.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01951.
+
+Adds the inspected Desai2015 branch and principal Popow2014 Archease-specific biochemical and cellular contexts, not exhaustive family coverage. Exact bacterial clones, human mutant constructs, Popow2011 base protocol, DDX1/cofactor/partner depletion controls and ED7-9 images remain unresolved. Other open work includes Jurkin/XBP1, fly allele/rescue/localization, worm/yeast/PYROXD1/zebrafish, additional biochemical contexts and Auxilien image access/preparation discrepancies. All earlier corpus follow-ups remain in scope.
+
+## Findings
+
+### additional-contexts: Resolve remaining Archease construct, partner and cellular contexts
+
+minor / open / confirmed; issue key: pf01951-causal-context-coverage.
+
+Keep pf01951-causal-context-coverage OPEN. Complete missing construct/protocol and DDX1/partner control audits without shifting partner mutations onto Archease, resolve source label/preparation discrepancies, and continue original cellular and other-member evidence. Curate only supported scoped edges with append-only history and successor reviews; no inaccessible source is treated as proof that an experiment does not exist.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Keep pf01951-causal-context-coverage OPEN. Complete missing construct/protocol and DDX1/partner control audits without shifting partner mutations onto Archease, resolve source label/preparation discrepancies, and continue original cellular and other-member evidence. Curate only supported scoped edges with append-only history and successor reviews; no inaccessible source is treated as proof that an experiment does not exist.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://raineslab.com/sites/default/files/labs/raines/pdfs/Desai2015.pdf; Desai2015 Results/Methods and Figures1-4 visually inspected on primary author PDF pages2-5. | supports | Five bacterial effects retain species-matched Thermus rate/turnover, archaeal activation of Thermus RtcB and two small Thermobifida short-assay changes; failure of comparable Thermobifida multiple-turnover conversion remains explicit. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01951/protein/uniprot/Q5SHI5/; Accession and domain locations; paired UniProt identity facts | supports | Thermus Q5SHI5 and Q72HV1 sequence version1 both map PF01951 6-139, but the paper does not identify its exact clone or strain; assay nodes remain without candidate accession grounding. Archaeal O59205 v1/PH1536 reference mapping is retained for its His6 derivative, without assigning the bacterial partner an archaeal taxon. Human Q8IWT0 v2 PF01951 31-167 and canonical D39/K144 labels agree with ED4, but FLAG/pDONR and pET28a primers imply different N termini; complete recombinant mutant clones remain unresolved. Human host, yeast RNA transgene, E. coli Archease production and HEK293-purified multiprotein complex are distinct owners. |
+| human-complex-and-rescue | https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/; Main Methods/Results, Figures1/3/4, ED3/4/5/6/10 images and all Extended Data captions. | supports | Human complex activation, restart, dose/cofactor effects and mutant outputs are separate from HeLa extract depletion/rescue and tagged-tRNA accumulation; stock versus final buffer, clone sequence and uninspected partner controls remain explicit. |
+| incremental-coverage | evidence/PF01951/coverage-turnover-human-20261012.txt; Primary inspection extent, mapping searches, public protocol access limits and remaining contexts. | supports | Newly retained evidence is distinguished from missing protocols, incomplete partner audits and remaining family/corpus coverage. |
+| original-identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01951/protein/uniprot/Q8IWT0/; Original identity ledger, unchanged. | supports | Human long-construct and archaeal reference mappings retain original scope. |
+| methyltransferase-identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01951/protein/uniprot/Q9V105/; First follow-up identity ledger, unchanged. | supports | PAB1946 reference mapping and species-versus-strain distinction preserved. |
+| gerber-2024 | https://pmc.ncbi.nlm.nih.gov/articles/PMC10944509/; Original inspected Figure1/5 and S1/S2 evidence, unchanged. | supports | Purified human 2024 activation, ligation and mutant effects are not replaced by the 2014 complex assay. |
+| desai-2014 | https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/; Original Figure2/3/4 evidence, unchanged. | supports | Archaeal ligation, RNA guanylylation and purine contexts preserved. |
+| desai-2014-mutants | https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/; First follow-up Figures5/6/7 and S4/S5 evidence, unchanged. | supports | Archaeal mutant effects, selective RtcB rescue and negative rescue contexts preserved. |
+| auxilien-2007 | https://www.researchgate.net/publication/6360471_Archease_from_Pyrococcus_abyssi_Improves_Substrate_Specificity_and_Solubility_of_a_tRNA_m5C_Methyltransferase; Previously read author text, Figure5/6/9 captions and Table1; images still uninspected. | supports | Methylation selectivity, affinity and aggregation effects preserved with source discrepancies. |
+| suzuki-2025 | https://www.nature.com/articles/s42003-025-07523-z; Original Figure3/S6/S7 evidence, unchanged. | supports | U2OS day3/day8 population effects retain independent assay limits and no Archease-specific rescue. |
+| original-coverage | evidence/PF01951/coverage.txt; Historical initial coverage ledger, unchanged. | supports | Historical search/inspection scope is preserved, not a current claim that newly inspected sources remain unread. |
+| previous-coverage | evidence/PF01951/coverage-followup-20261012.txt; Historical first follow-up coverage ledger, unchanged. | supports | Earlier mutation/methyltransferase coverage and limits preserved with a new successor ledger. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01951 | data/families/PF01951.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Desai2015 Figures1-4 and Popow2014 main Figures1/3/4 plus ED3/4/5/6/10 images inspected. All Popow Extended Data captions read, but ED7-9 images and the cited Popow2011 supplement not recovered/inspected. Prior nine ledgers preserve their original inspection limits, including Auxilien text-only figures. No raw-data reanalysis or independent expert audit.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+- Successor to reviews/structured/20261012T093010Z-pf01951-archease-mutants-and-methyltransferase-support/review.yaml, semantic digest 5f05696c89ed8cb2208773f9b4e2530c6c3853f09b5fd2b531fb8c27a857bd6c. The same issue key remains OPEN; prior reviews/history/source ledgers are not rewritten.
+- The prior general no-Archease-rescue limitation is updated only for the newly inspected Popow2014 HeLa assay. Suzuki2025 U2OS retains its own no-Archease-rescue and population heterogeneity limits.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T095819Z-pf01951-bacterial-turnover-and-human-archease-rescue
+title: 'PF01951: bacterial turnover and human complex, depletion and rescue contexts'
+started_at: '2026-10-12T09:55:08Z'
+finished_at: '2026-10-12T09:58:19Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: PF01951 now has 32 graphs and 62 OBSERVED edges, 34 DIRECT and 28 UNRESOLVED;
+  23 MECHANISTIC and 9 PHENOTYPIC graphs. Thirteen added graphs carry 19 edges. All
+  43 prior edges and their stable IDs are preserved. Four new ledgers supplement nine
+  prior ledgers. IN_PROGRESS, four OPEN discussions and the stable causal-context-coverage
+  finding remain; this is not family-wide or corpus-wide completion.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01951.yaml
+    sha256: 5f5110e9f2d9114e2d4b64d650bb1940f14954b3c9fe5fa6dc1ac7cd4e96bdf7
+    role: context
+  - path: data/families/PF01951.yaml
+    sha256: b91f7a666010918ff341d40251d51292926b64204dd7a0cc5d194266e2cd5402
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01951/desai-2015-turnover.txt
+    role: context
+    sha256: b6be9da821a36c60ba4801e793b640e2719c3b7c5e2efd9805d733dfeb7e64f2
+  - path: evidence/PF01951/identity-turnover-human-20261012.txt
+    role: context
+    sha256: d9a0dd532c91b8c9d20e772e4438258074375ebac4bf96233df8afa3f4743604
+  - path: evidence/PF01951/popow-2014.txt
+    role: context
+    sha256: 98c0611e55dd7847ff60cbe8cbdc3a24d5201a03ab91d6eeb33d4b1822d7e1ba
+  - path: evidence/PF01951/coverage-turnover-human-20261012.txt
+    role: context
+    sha256: 8d0074b6c260cbbc767d1746c663b30c776eb6e896155ace13678d0bf341c161
+  - path: evidence/PF01951/identity.txt
+    role: context
+    sha256: 71950660fb2ccc6582723b7882aabd6489102ca456f4ff09f626ac24c5a33885
+  - path: evidence/PF01951/identity-followup-20261012.txt
+    role: context
+    sha256: ce46fe2977f573b36533cfcd624eae47a626eab900a55948cc642980b8ed50ed
+  - path: evidence/PF01951/gerber-2024.txt
+    role: context
+    sha256: abc78d8f41d72e2e58ec8cafa48eae844ef07fecee3823abdffd52494890613c
+  - path: evidence/PF01951/desai-2014.txt
+    role: context
+    sha256: 0dd92157e3b40af1071b0efee1e206b8405a38246a5cc756a50f2f80569b128b
+  - path: evidence/PF01951/desai-2014-mutants.txt
+    role: context
+    sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072
+  - path: evidence/PF01951/auxilien-2007.txt
+    role: context
+    sha256: c0983fcb9192200dd217817383b3a3963b0d0dda45534975918e75cfafd3a096
+  - path: evidence/PF01951/suzuki-2025.txt
+    role: context
+    sha256: d3e772eaf174d79f070d0c77f3a15af017a6a108dfc625efc2b0876c5e50cf68
+  - path: evidence/PF01951/coverage.txt
+    role: context
+    sha256: c1a74e6e6601371ff5e7f84f915a7459229ee229fdcf8c37016cfa69d47e0a5c
+  - path: evidence/PF01951/coverage-followup-20261012.txt
+    role: context
+    sha256: ea84d399feeb2f665bbafc3ec18d69a847bde3f89af30b75637035879f0c50bb
+targets:
+- target_id: PF01951
+  path: data/families/PF01951.yaml
+  label: PF01951
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01951.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: ef53bebd575702e02b73438cde815fa2054b3c8f82b3f90127a45588634d79a0
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Successor partial scientific self-review of 32 graphs and 62 edges,
+    concentrating on 19 new edges and preservation of the 43 prior edges, exact experimental
+    ownership, negative results and mapping limits.
+  selection: Continue PF01951 follow-ups while retaining all 8296 records and all
+    earlier open findings in scope.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01951
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Adds the inspected Desai2015 branch and principal Popow2014 Archease-specific
+      biochemical and cellular contexts, not exhaustive family coverage. Exact bacterial
+      clones, human mutant constructs, Popow2011 base protocol, DDX1/cofactor/partner
+      depletion controls and ED7-9 images remain unresolved. Other open work includes
+      Jurkin/XBP1, fly allele/rescue/localization, worm/yeast/PYROXD1/zebrafish, additional
+      biochemical contexts and Auxilien image access/preparation discrepancies. All
+      earlier corpus follow-ups remain in scope.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01951
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://raineslab.com/sites/default/files/labs/raines/pdfs/Desai2015.pdf
+  locator: Desai2015 Results/Methods and Figures1-4 visually inspected on primary
+    author PDF pages2-5.
+  accessed_at: '2026-10-12T09:58:19Z'
+  support: supports
+  snapshot_sha256: b6be9da821a36c60ba4801e793b640e2719c3b7c5e2efd9805d733dfeb7e64f2
+  summary: Five bacterial effects retain species-matched Thermus rate/turnover, archaeal
+    activation of Thermus RtcB and two small Thermobifida short-assay changes; failure
+    of comparable Thermobifida multiple-turnover conversion remains explicit.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01951/protein/uniprot/Q5SHI5/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-12T09:58:19Z'
+  support: supports
+  snapshot_sha256: d9a0dd532c91b8c9d20e772e4438258074375ebac4bf96233df8afa3f4743604
+  summary: Thermus Q5SHI5 and Q72HV1 sequence version1 both map PF01951 6-139, but
+    the paper does not identify its exact clone or strain; assay nodes remain without
+    candidate accession grounding. Archaeal O59205 v1/PH1536 reference mapping is
+    retained for its His6 derivative, without assigning the bacterial partner an archaeal
+    taxon. Human Q8IWT0 v2 PF01951 31-167 and canonical D39/K144 labels agree with
+    ED4, but FLAG/pDONR and pET28a primers imply different N termini; complete recombinant
+    mutant clones remain unresolved. Human host, yeast RNA transgene, E. coli Archease
+    production and HEK293-purified multiprotein complex are distinct owners.
+- evidence_id: human-complex-and-rescue
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/
+  locator: Main Methods/Results, Figures1/3/4, ED3/4/5/6/10 images and all Extended
+    Data captions.
+  summary: Human complex activation, restart, dose/cofactor effects and mutant outputs
+    are separate from HeLa extract depletion/rescue and tagged-tRNA accumulation;
+    stock versus final buffer, clone sequence and uninspected partner controls remain
+    explicit.
+  accessed_at: '2026-10-12T09:58:19Z'
+  support: supports
+  snapshot_sha256: 98c0611e55dd7847ff60cbe8cbdc3a24d5201a03ab91d6eeb33d4b1822d7e1ba
+- evidence_id: incremental-coverage
+  kind: search
+  reference: evidence/PF01951/coverage-turnover-human-20261012.txt
+  locator: Primary inspection extent, mapping searches, public protocol access limits
+    and remaining contexts.
+  search_scope: Targeted primary author PDF and PMC Methods/figures, Thermus UniProt/InterPro
+    accession mapping and exact-title/DOI Popow2011 protocol searches. Local collision
+    search included hidden/ignored files in target evidence, overlay and predecessor
+    review paths.
+  summary: Newly retained evidence is distinguished from missing protocols, incomplete
+    partner audits and remaining family/corpus coverage.
+  accessed_at: '2026-10-12T09:58:19Z'
+  support: supports
+  snapshot_sha256: 8d0074b6c260cbbc767d1746c663b30c776eb6e896155ace13678d0bf341c161
+- evidence_id: original-identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01951/protein/uniprot/Q8IWT0/
+  locator: Original identity ledger, unchanged.
+  summary: Human long-construct and archaeal reference mappings retain original scope.
+  accessed_at: '2026-10-12T09:58:19Z'
+  support: supports
+  snapshot_sha256: 71950660fb2ccc6582723b7882aabd6489102ca456f4ff09f626ac24c5a33885
+- evidence_id: methyltransferase-identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01951/protein/uniprot/Q9V105/
+  locator: First follow-up identity ledger, unchanged.
+  summary: PAB1946 reference mapping and species-versus-strain distinction preserved.
+  accessed_at: '2026-10-12T09:58:19Z'
+  support: supports
+  snapshot_sha256: ce46fe2977f573b36533cfcd624eae47a626eab900a55948cc642980b8ed50ed
+- evidence_id: gerber-2024
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10944509/
+  locator: Original inspected Figure1/5 and S1/S2 evidence, unchanged.
+  summary: Purified human 2024 activation, ligation and mutant effects are not replaced
+    by the 2014 complex assay.
+  accessed_at: '2026-10-12T09:58:19Z'
+  support: supports
+  snapshot_sha256: abc78d8f41d72e2e58ec8cafa48eae844ef07fecee3823abdffd52494890613c
+- evidence_id: desai-2014
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/
+  locator: Original Figure2/3/4 evidence, unchanged.
+  summary: Archaeal ligation, RNA guanylylation and purine contexts preserved.
+  accessed_at: '2026-10-12T09:58:19Z'
+  support: supports
+  snapshot_sha256: 0dd92157e3b40af1071b0efee1e206b8405a38246a5cc756a50f2f80569b128b
+- evidence_id: desai-2014-mutants
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/
+  locator: First follow-up Figures5/6/7 and S4/S5 evidence, unchanged.
+  summary: Archaeal mutant effects, selective RtcB rescue and negative rescue contexts
+    preserved.
+  accessed_at: '2026-10-12T09:58:19Z'
+  support: supports
+  snapshot_sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072
+- evidence_id: auxilien-2007
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/6360471_Archease_from_Pyrococcus_abyssi_Improves_Substrate_Specificity_and_Solubility_of_a_tRNA_m5C_Methyltransferase
+  locator: Previously read author text, Figure5/6/9 captions and Table1; images still
+    uninspected.
+  summary: Methylation selectivity, affinity and aggregation effects preserved with
+    source discrepancies.
+  accessed_at: '2026-10-12T09:58:19Z'
+  support: supports
+  snapshot_sha256: c0983fcb9192200dd217817383b3a3963b0d0dda45534975918e75cfafd3a096
+- evidence_id: suzuki-2025
+  kind: primary_source
+  reference: https://www.nature.com/articles/s42003-025-07523-z
+  locator: Original Figure3/S6/S7 evidence, unchanged.
+  summary: U2OS day3/day8 population effects retain independent assay limits and no
+    Archease-specific rescue.
+  accessed_at: '2026-10-12T09:58:19Z'
+  support: supports
+  snapshot_sha256: d3e772eaf174d79f070d0c77f3a15af017a6a108dfc625efc2b0876c5e50cf68
+- evidence_id: original-coverage
+  kind: search
+  reference: evidence/PF01951/coverage.txt
+  locator: Historical initial coverage ledger, unchanged.
+  search_scope: Previously retained PF01951 identity and primary-literature search;
+    this successor preserves the historical ledger without claiming a repeated exhaustive
+    search.
+  summary: Historical search/inspection scope is preserved, not a current claim that
+    newly inspected sources remain unread.
+  accessed_at: '2026-10-12T09:58:19Z'
+  support: supports
+  snapshot_sha256: c1a74e6e6601371ff5e7f84f915a7459229ee229fdcf8c37016cfa69d47e0a5c
+- evidence_id: previous-coverage
+  kind: search
+  reference: evidence/PF01951/coverage-followup-20261012.txt
+  locator: Historical first follow-up coverage ledger, unchanged.
+  search_scope: Previously retained Desai2014 mutant and Auxilien2007 text/figure-access
+    follow-up; this successor preserves that bounded inspection without claiming new
+    Auxilien image access.
+  summary: Earlier mutation/methyltransferase coverage and limits preserved with a
+    new successor ledger.
+  accessed_at: '2026-10-12T09:58:19Z'
+  support: supports
+  snapshot_sha256: ea84d399feeb2f665bbafc3ec18d69a847bde3f89af30b75637035879f0c50bb
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-12T09:58:19Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01951
+  kind: record_content
+  reference: data/families/PF01951.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-12T09:58:19Z'
+  support: context_only
+  snapshot_sha256: b91f7a666010918ff341d40251d51292926b64204dd7a0cc5d194266e2cd5402
+  quote: "id: Pfam:PF01951\npfam_id: PF01951\nname: Archease protein family (MTH1598/TM1083)\n\
+    short_name: Archease\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01951\n\
+    counters:\n  proteins: 3523\n  matches: 3542\n  proteomes: 2944\n  taxa: 7482\n\
+    \  structures: 9\n  alphafold_models: 2910\n  domain_architectures: 34\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR023572\ndescription: This archease family of proteins\
+    \ [[cite:PUB00109176]], has two SHS2 domains [[cite:PUB00057445]],\n  with one\
+    \ inserted into another. It is predicted to be an enzyme [[cite:PUB00057445]].\
+    \ It is predicted\n  to act as a chaperone in DNA/RNA metabolism [[cite:PUB00109176]].\n\
+    curation_history: history/records/PF01951\ndiscussions:\n- discussion_id: pf01951-other-assay-contexts\n\
+    \  prompt: Extend the remaining Archease biochemical contexts with exact construct\
+    \ mappings.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: The initial human\
+    \ and archaeal assays are not the whole family mechanism.\n  evidence:\n  - reference:\
+    \ PMID:26385509\n    supports: PARTIAL\n    evidence_source: primary_publication\n\
+    \    explanation: Full Results/Methods and Figures1-4 now inspected; scoped Thermus\
+    \ activation/turnover\n      and small Thermobifida short-assay effects are retained.\
+    \ Exact bacterial clone accessions and strains\n      remain unresolved.\n  -\
+    \ reference: PMID:17470432\n    supports: PARTIAL\n    evidence_source: primary_publication\n\
+    \    explanation: Methods/Results and Figure5/6/9 captions now support scoped\
+    \ methylation, affinity and\n      aggregation effects. Images remain uninspected\
+    \ after 403 responses; RNA concentration and fragment-length\n      discrepancies\
+    \ remain explicit.\n  - reference: PMID:24435797\n    supports: PARTIAL\n    evidence_source:\
+    \ primary_publication\n    explanation: Figures5/6/7 and S4/S5 now visually inspected;\
+    \ mutant and selective RtcB-rescue effects\n      are retained. Titration/kinetic\
+    \ contexts and stronger atomic interpretations remain open.\n  posed_by: Codex\n\
+    \  posed_date: '2026-10-12'\n  notes: Follow all three dated coverage ledgers\
+    \ in evidence/PF01951. No universal ATP utilization, oligomeric\n    state, physiological\
+    \ metal or coevolution edge is established by the retained assays.\n- discussion_id:\
+    \ pf01951-cellular-and-regulatory-coverage\n  prompt: Review original human, fly\
+    \ and other cellular Archease evidence before extending phenotype chains.\n  kind:\
+    \ CURATION_TODO\n  status: OPEN\n  rationale: Whole-gene phenotypes and localization\
+    \ changes do not by themselves prove a domain-specific\n    molecular pathway.\n\
+    \  evidence:\n  - reference: PMID:24870230\n    supports: PARTIAL\n    evidence_source:\
+    \ primary_publication\n    explanation: Main Methods/Results, all Extended Data\
+    \ captions and Figures1/3/4 plus ED3/4/5/6/10 images\n      inspected. Human complex\
+    \ assays, HeLa depletion/rescue and tagged-tRNA accumulation retained. DDX1\n\
+    \      controls, ED7-9 images, construct sequence ambiguity and cited base assay\
+    \ protocol remain open.\n  - reference: PMID:25378478\n    supports: PARTIAL\n\
+    \    evidence_source: primary_publication\n    explanation: Jurkin2014 is a follow-up\
+    \ lead, not a reviewed Archease-specific plasma-cell knockout.\n  - reference:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC9641670/\n    supports: PARTIAL\n \
+    \   evidence_source: primary_publication\n    explanation: Drosophila disjointed/CG6353\
+    \ phenotype and rescue caption inspected; allele map and complete\n      experiments\
+    \ remain to review.\n  posed_by: Codex\n  posed_date: '2026-10-12'\n  notes: Keep\
+    \ DDX1/RTCB rescue distinct from Archease rescue, and do not concatenate nuclear\
+    \ localization,\n    tRNA maturation and membrane growth from a proposed model.\n\
+    - discussion_id: pf01951-residue-and-population-limits\n  prompt: Resolve mutant\
+    \ folding controls and heterogeneous cellular disruption before stronger mechanistic\n\
+    \    attribution.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Static\
+    \ contacts support a mechanism model but do not distinguish all consequences of\
+    \ substitution;\n    the U2OS experiment uses sorted transfected populations.\n\
+    \  evidence:\n  - reference: PMID:38493148\n    supports: PARTIAL\n    evidence_source:\
+    \ primary_publication\n    explanation: D51A/K156A inhibit activation and ligation,\
+    \ but S1 is WT purity, not mutant folding verification.\n      Paper positions\
+    \ map to current Q8IWT0 D39/K144.\n  - reference: PMID:24435797\n    supports:\
+    \ PARTIAL\n    evidence_source: primary_publication\n    explanation: S5 verifies\
+    \ purified Archease variants but not native folding or thermal stability. Native\n\
+    \      O59205 E8/H9/D12/K117/D141/I142 mapping is verified.\n  - reference: doi:10.1038/s42003-025-07523-z\n\
+    \    supports: PARTIAL\n    evidence_source: primary_publication\n    explanation:\
+    \ S6 documents majority one-base insertion and reduced protein, not a uniform\
+    \ biallelic\n      clone. S7 retains residual mature tRNA.\n  posed_by: Codex\n\
+    \  posed_date: '2026-10-12'\n  notes: Popow2014 now supplies Archease-specific\
+    \ HeLa rescue, distinct from the U2OS study. No source-independent\n    expert\
+    \ endorsement, isolated-domain test, uniform U2OS clone or observed release trajectory\
+    \ is claimed.\n    Human 2014 recombinant N termini and complete mutant clone\
+    \ sequences remain unresolved.\n- discussion_id: pf01951-pab1946-source-discrepancies\n\
+    \  prompt: Resolve Auxilien2007 RNA preparation discrepancies and complete the\
+    \ figure audit.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Caption and\
+    \ Methods disagreements limit exact reconstruction of the binding assay without\n\
+    \    invalidating its reported within-assay comparisons.\n  evidence:\n  - reference:\
+    \ PMID:17470432\n    supports: PARTIAL\n    evidence_source: primary_publication\n\
+    \    explanation: Figure2D coordinates imply rRNA-IV/II lengths 55/72, whereas\
+    \ Table1 states 72/55. Methods\n      10 fmol/20 ul implies 0.5 nM RNA, while\
+    \ Figure6 says 1 nM. Source labels are preserved without choosing\n      a corrected\
+    \ sequence or concentration.\n  posed_by: Codex\n  posed_date: '2026-10-12'\n\
+    \  notes: Public author text and captions inspected; PDF/figure retrieval403.\
+    \ No visual or raw-data audit,\n    causal mediation by affinity changes, exact\
+    \ oligomeric pathway or all-member chaperone function is\n    claimed.\ncausal_graphs:\n\
+    - graph_id: human-rtcb-activation-2024\n  title: Human Archease enables RTCB guanylylation\n\
+    \  scope: Recombinant human whole-protein Archease and RTCB in a purified activation\
+    \ assay.\n  context: Figure1e; 1 uM each protein, 80 nM alpha-32P-GTP, 0.5 mM\
+    \ MnCl2, 30 C. The four conditions separate\n    Archease and Mn addition.\n \
+    \ family_mapping: Paper A8K0B5 179-aa construct maps to Q8IWT0 v2 with a 12-aa\
+    \ N-terminal extension; canonical\n    PF01951 31-167. Archease expressed in E.\
+    \ coli, RTCB Q9Y3I0 in Sf21. Current isoform naming differs\n    from the paper.\n\
+    \  taxon: NCBITaxon:9606\n  scope_status: MECHANISTIC\n  limitations: Whole protein,\
+    \ not an isolated domain or universal family activity. Tag removal was optional.\n\
+    \    Protein-associated radiolabel is the readout; Methods specify SDS-PAGE while\
+    \ the figure caption says\n    urea-PAGE. No Archease-alone ligase activity or\
+    \ observed dissociation trajectory is asserted.\n  nodes:\n  - node_id: activation\n\
+    \    label: Archease added to RTCB with GTP and Mn\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:Q8IWT0\n    - UniProtKB:Q9Y3I0\n  - node_id:\
+    \ rtcb_gmp\n    label: Covalent RTCB-GMP intermediate\n    node_type: STATE\n\
+    \    grounding:\n    - UniProtKB:Q9Y3I0\n  edges:\n  - edge_id: human-archease-rtcb-gmp\n\
+    \    subject: activation\n    predicate: enables\n    object: rtcb_gmp\n    mechanism:\
+    \ Archease promotes the GTP-dependent labeling of RTCB under the matched Mn-containing\
+    \ conditions;\n      the activated histidine belongs to RTCB.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:38493148\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10944509/\n\
+    \      snippet: promotes guanylylation\n      explanation: Figure1e and activation\
+    \ Methods; Archease-minus and Mn-minus controls, three replicates.\n        Structure\
+    \ alone is not the evidence for this directed biochemical effect.\n      cache_path:\
+    \ evidence/PF01951/gerber-2024.txt\n      cache_sha256: abc78d8f41d72e2e58ec8cafa48eae844ef07fecee3823abdffd52494890613c\n\
+    - graph_id: human-xbp1-fragment-ligation-2024\n  title: Archease supports RTCB\
+    \ ligation of cleaved XBP1 fragments\n  scope: Reconstituted human XBP1 stem-loop\
+    \ ligation, not a cellular stress response.\n  context: IRE1-cleaved RNA 250 nM,\
+    \ RTCB 500 nM, Archease 1 uM, GTP 1 mM, MnCl2 0.5 mM, 30 C; ligation\n    buffer\
+    \ includes 2 mM MgCl2. Figure1b time course.\n  family_mapping: Whole human 179-aa\
+    \ Archease construct; historical A8K0B5 maps to Q8IWT0 v2 plus 12 N-terminal\n\
+    \    residues, canonical PF01951 31-167.\n  taxon: NCBITaxon:9606\n  scope_status:\
+    \ MECHANISTIC\n  limitations: Joint reaction conditions, not Archease alone as\
+    \ a sufficient ligase. Exon and intron products\n    are separate outputs; no\
+    \ product-to-product edge. The marked unknown byproduct is not assigned an\n \
+    \   identity or physiological function.\n  nodes:\n  - node_id: reaction\n   \
+    \ label: Archease with RTCB and cleaved XBP1 substrate\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:Q8IWT0\n    - UniProtKB:Q9Y3I0\n  - node_id:\
+    \ exons\n    label: Ligated XBP1 exon fragment\n    node_type: STATE\n  - node_id:\
+    \ intron\n    label: Circular XBP1 intron from cleaved substrate\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: human-xbp1-exon-ligation\n    subject: reaction\n\
+    \    predicate: produces\n    object: exons\n    mechanism: With Archease, the\
+    \ RTCB-containing reaction accumulates the exon-ligated band absent from\n   \
+    \   the matched Archease-minus reaction.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:38493148\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10944509/\n      snippet:\
+    \ dependent upon addition of Archease\n      explanation: Figure1b visually inspected\
+    \ with substrate and cleavage controls; three replicate reactions.\n        No\
+    \ cellular transcriptional effect is measured here.\n      cache_path: evidence/PF01951/gerber-2024.txt\n\
+    \      cache_sha256: abc78d8f41d72e2e58ec8cafa48eae844ef07fecee3823abdffd52494890613c\n\
+    \  - edge_id: human-xbp1-intron-ligation\n    subject: reaction\n    predicate:\
+    \ produces\n    object: intron\n    mechanism: The same joint reaction generates\
+    \ the faster-migrating intron species assigned as circular\n      RNA, independently\
+    \ of the exon product.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:38493148\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC10944509/\n      snippet: dependent\
+    \ upon addition of Archease\n      explanation: Figure1b lower product band and\
+    \ corresponding Results, not the unidentified asterisk\n        band; subsequent\
+    \ isolated-intron assay provides a separate corroborating context.\n      cache_path:\
+    \ evidence/PF01951/gerber-2024.txt\n      cache_sha256: abc78d8f41d72e2e58ec8cafa48eae844ef07fecee3823abdffd52494890613c\n\
+    - graph_id: human-isolated-intron-2024\n  title: Archease supports isolated XBP1\
+    \ intron circularization\n  scope: Purified human proteins with the isolated 26-nt\
+    \ intron.\n  context: Figure1c/d; 1 uM 5'-OH/3'-P RNA, 250 nM RTCB, 1 uM Archease,\
+    \ 1 mM GTP, 0.5 mM MnCl2, 30 C,\n    ligation buffer with 2 mM MgCl2.\n  family_mapping:\
+    \ Human long Archease construct corresponding to Q8IWT0 v2 plus 12 residues; PF01951\
+    \ 31-167\n    on the 167-aa reference.\n  taxon: NCBITaxon:9606\n  scope_status:\
+    \ MECHANISTIC\n  limitations: Single-substrate assay distinct from cleaved stem-loop\
+    \ ligation and from guanylylation\n    conditions. The apparent rate is not a\
+    \ cellular flux. S2b ATP substitution is negative and is not\n    generalized\
+    \ to archaeal proteins.\n  nodes:\n  - node_id: reaction\n    label: Archease\
+    \ plus RTCB and isolated intron with GTP and Mn\n    node_type: ACTIVITY\n   \
+    \ grounding:\n    - UniProtKB:Q8IWT0\n    - UniProtKB:Q9Y3I0\n  - node_id: circle\n\
+    \    label: Circular 26-nt intron product\n    node_type: STATE\n  edges:\n  -\
+    \ edge_id: human-intron-circle\n    subject: reaction\n    predicate: produces\n\
+    \    object: circle\n    mechanism: Archease enables RTCB-dependent intron circularization\
+    \ with an apparent rate constant of\n      0.015/min; no ligated product is detected\
+    \ without Archease in this assay.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:38493148\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10944509/\n      snippet:\
+    \ dependent upon addition of Archease\n      explanation: Figure1c/d and ligation\
+    \ Methods; three technical replicates and Archease-minus comparison.\n       \
+    \ S2b confirms the tested human ATP-negative condition.\n      cache_path: evidence/PF01951/gerber-2024.txt\n\
+    \      cache_sha256: abc78d8f41d72e2e58ec8cafa48eae844ef07fecee3823abdffd52494890613c\n\
+    - graph_id: human-archease-mutants-2024\n  title: Archease substitutions impair\
+    \ activation and ligation\n  scope: Separate D51A and K156A substitutions in the\
+    \ human long construct, compared with WT.\n  context: Figure5a activation uses\
+    \ 1 uM RTCB/Archease and 80 nM labeled GTP; Figure5b ligation uses 250\n    nM\
+    \ RTCB, 1 uM Archease/RNA and 1 mM GTP. Both 30 C and 0.5 mM MnCl2.\n  family_mapping:\
+    \ Paper D51A/K156A map to canonical Q8IWT0 v2 D39A/K144A, within PF01951 31-167.\
+    \ PDB8BTX\n    entity residues17-183 exactly match the reference, with four tag-derived\
+    \ plus twelve construct-extension\n    residues before it.\n  taxon: NCBITaxon:9606\n\
+    \  scope_status: PHENOTYPIC\n  limitations: S1 is a WT purity gel, not independent\
+    \ mutant-fold verification. Contact geometry supports\n    metal/phosphate roles\
+    \ but substitution effects remain molecularly UNRESOLVED. Activation and ligation\n\
+    \    are separate measurements, not proof of a measured mediation trajectory.\n\
+    \  nodes:\n  - node_id: d51a\n    label: Paper D51A versus WT Archease\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q8IWT0\n  - node_id: k156a\n \
+    \   label: Paper K156A versus WT Archease\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q8IWT0\n  - node_id: activation\n    label: RTCB guanylylation\
+    \ signal\n    node_type: ACTIVITY\n  - node_id: ligation\n    label: Isolated\
+    \ intron circularization\n    node_type: ACTIVITY\n  edges:\n  - edge_id: d51a-activation\n\
+    \    subject: d51a\n    predicate: decreases\n    object: activation\n    mechanism:\
+    \ D51A removes detectable RTCB-associated radiolabel under the matched activation\
+    \ conditions;\n      folding and interaction alternatives are not independently\
+    \ excluded.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:38493148\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC10944509/\n      snippet: Both variants\
+    \ abrogated guanylylation\n      explanation: Figure5a D51A lanes and Methods;\
+    \ exact paper-to-reference offset verified.\n      cache_path: evidence/PF01951/gerber-2024.txt\n\
+    \      cache_sha256: abc78d8f41d72e2e58ec8cafa48eae844ef07fecee3823abdffd52494890613c\n\
+    \  - edge_id: k156a-activation\n    subject: k156a\n    predicate: decreases\n\
+    \    object: activation\n    mechanism: K156A removes detectable RTCB-associated\
+    \ radiolabel compared with WT; the assay does not\n      isolate phosphate contact\
+    \ loss from other mutant effects.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:38493148\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10944509/\n      snippet:\
+    \ Both variants abrogated guanylylation\n      explanation: Figure5a K156A lanes\
+    \ and Methods; no transfer from RTCB active-site mutants.\n      cache_path: evidence/PF01951/gerber-2024.txt\n\
+    \      cache_sha256: abc78d8f41d72e2e58ec8cafa48eae844ef07fecee3823abdffd52494890613c\n\
+    \  - edge_id: d51a-ligation\n    subject: d51a\n    predicate: decreases\n   \
+    \ object: ligation\n    mechanism: No circular intron product is detected with\
+    \ D51A under conditions where WT supports ligation;\n      this is a distinct\
+    \ product assay.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:38493148\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC10944509/\n      snippet: Both variants\
+    \ abrogated guanylylation\n      explanation: Figure5b D51A lanes and accompanying\
+    \ Results directly support the ligation endpoint\n        in addition to the quoted\
+    \ activation effect.\n      cache_path: evidence/PF01951/gerber-2024.txt\n   \
+    \   cache_sha256: abc78d8f41d72e2e58ec8cafa48eae844ef07fecee3823abdffd52494890613c\n\
+    \  - edge_id: k156a-ligation\n    subject: k156a\n    predicate: decreases\n \
+    \   object: ligation\n    mechanism: No circular intron product is detected with\
+    \ K156A relative to WT; neither an isolated-domain\n      mechanism nor a cellular\
+    \ phenotype is measured.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:38493148\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10944509/\n      snippet:\
+    \ Both variants abrogated guanylylation\n      explanation: Figure5b K156A lanes\
+    \ and accompanying Results; activation and ligation effects are\n        retained\
+    \ separately.\n      cache_path: evidence/PF01951/gerber-2024.txt\n      cache_sha256:\
+    \ abc78d8f41d72e2e58ec8cafa48eae844ef07fecee3823abdffd52494890613c\n- graph_id:\
+    \ ph-archease-ligation-2014\n  title: Pyrococcus Archease accelerates RtcB RNA\
+    \ ligation\n  scope: Recombinant P. horikoshii proteins under single-turnover\
+    \ conditions.\n  context: Figure2; 70 C, Bis-Tris pH7.0, NaCl 300 mM, MnCl2 0.25\
+    \ mM, GTP 0.10 mM, RtcB 5 uM, each 10-nt\n    RNA 1 uM, Archease 100 nM versus\
+    \ none.\n  family_mapping: O59205 v1 PH1536, 142 aa, PF01951 4-142; E. coli-produced\
+    \ construct inserts L after\n    initial M, while the paper retains native numbering.\n\
+    \  taxon: NCBITaxon:70601\n  scope_status: MECHANISTIC\n  limitations: Whole-protein\
+    \ activation; Archease alone is not assigned ligase chemistry. Apparent single-turnover\n\
+    \    rate, not kcat or cellular flux; only about half the substrate ligates. Two\
+    \ experiments. Full Methods/Results\n    and Figure2 image inspected; no raw-data\
+    \ reanalysis.\n  nodes:\n  - node_id: addition\n    label: Archease added to PhRtcB\
+    \ GTP ligation reaction\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:O59205\n\
+    \  - node_id: ligation\n    label: Formation rate of the 20-nt ligation product\n\
+    \    node_type: ACTIVITY\n  edges:\n  - edge_id: ph-archease-ligation-rate\n \
+    \   subject: addition\n    predicate: increases\n    object: ligation\n    mechanism:\
+    \ Addition of 100 nM Archease increases apparent ligation kobs from 0.011 to 0.033/min\
+    \ with\n      other reaction components held constant.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24435797\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n\
+    \      snippet: accelerates\n      explanation: Figure2, RNA ligation Methods\
+    \ and corresponding Results; not the later multiple-turnover\n        bacterial\
+    \ assay.\n      cache_path: evidence/PF01951/desai-2014.txt\n      cache_sha256:\
+    \ 0dd92157e3b40af1071b0efee1e206b8405a38246a5cc756a50f2f80569b128b\n- graph_id:\
+    \ ph-archease-rna-guanylylation-2014\n  title: Pyrococcus Archease accelerates\
+    \ RNA 3'-phosphate guanylylation\n  scope: Pre-guanylylated P. horikoshii RtcB\
+    \ and a trapped RNA intermediate assay.\n  context: Figure3a/b; 5 uM preactivated\
+    \ RtcB, 1 uM 2'-F/3'-P RNA, no second RNA fragment, 100 nM Archease\n    versus\
+    \ none; 70 C, GTP 0.10 mM and MnCl2 0.25 mM.\n  family_mapping: P. horikoshii\
+    \ O59205 v1, PF01951 4-142; whole recombinant Archease with the documented\n \
+    \   cloning insertion.\n  taxon: NCBITaxon:70601\n  scope_status: MECHANISTIC\n\
+    \  limitations: Modified substrate traps RNA-ppG and prevents normal intramolecular\
+    \ reaction. This is RNA\n    guanylylation, not the human RTCB labeling assay.\
+    \ Atomic mechanism and physiological RNA substrate\n    remain unmeasured; Figure3\
+    \ visually inspected without raw-data reanalysis.\n  nodes:\n  - node_id: addition\n\
+    \    label: Archease with pre-guanylylated PhRtcB and modified RNA\n    node_type:\
+    \ ACTIVITY\n    grounding:\n    - UniProtKB:O59205\n  - node_id: rnappg\n    label:\
+    \ RNA-ppG intermediate formation rate\n    node_type: ACTIVITY\n  edges:\n  -\
+    \ edge_id: ph-archease-rnappg-rate\n    subject: addition\n    predicate: increases\n\
+    \    object: rnappg\n    mechanism: Archease raises apparent RNA-ppG formation\
+    \ kobs from 0.018 to 0.063/min in the modified-substrate\n      assay, separating\
+    \ this transfer from final ligation.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:24435797\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n      snippet:\
+    \ accelerates\n      explanation: Figure3a/b, RNA guanylylation Methods and Results;\
+    \ two experiments with the 3-prime\n        RNA fragment excluded.\n      cache_path:\
+    \ evidence/PF01951/desai-2014.txt\n      cache_sha256: 0dd92157e3b40af1071b0efee1e206b8405a38246a5cc756a50f2f80569b128b\n\
+    - graph_id: ph-archease-purine-cofactors-2014\n  title: Pyrococcus Archease broadens\
+    \ tested purine cofactor utilization\n  scope: Separate ATP, dGTP and ITP conditions\
+    \ for P. horikoshii RtcB.\n  context: Figure4a/b; 30 min at 70 C, 5 uM RtcB, each\
+    \ RNA half 1 uM, 100 nM Archease, MnCl2 0.25 mM and\n    the specified NTP 0.10\
+    \ mM; matched Archease-minus comparisons.\n  family_mapping: O59205 v1, PH1536,\
+    \ PF01951 4-142; the same whole recombinant protein as the PhRtcB ligation\n \
+    \   assay.\n  taxon: NCBITaxon:70601\n  scope_status: MECHANISTIC\n  limitations:\
+    \ Each edge has its own nucleotide condition; these are not independent sufficient\
+    \ causes\n    without RtcB and substrate. CTP/UTP are negative. ATP kinetics elsewhere\
+    \ use 800 nM Archease. Human\n    and Thermus ATP-negative results limit cross-species\
+    \ transfer. Figure4 visually inspected; no raw-data\n    reanalysis.\n  nodes:\n\
+    \  - node_id: atp\n    label: Archease added to PhRtcB reaction with ATP\n   \
+    \ node_type: ACTIVITY\n    grounding:\n    - UniProtKB:O59205\n  - node_id: dgtp\n\
+    \    label: Archease added to PhRtcB reaction with dGTP\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:O59205\n  - node_id: itp\n    label: Archease\
+    \ added to PhRtcB reaction with ITP\n    node_type: ACTIVITY\n    grounding:\n\
+    \    - UniProtKB:O59205\n  - node_id: atp_product\n    label: Ligated RNA in the\
+    \ ATP condition\n    node_type: STATE\n  - node_id: dgtp_product\n    label: Ligated\
+    \ RNA in the dGTP condition\n    node_type: STATE\n  - node_id: itp_product\n\
+    \    label: Ligated RNA in the ITP condition\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: ph-atp-ligation\n    subject: atp\n    predicate: increases\n  \
+    \  object: atp_product\n    mechanism: Archease enables effective ATP-supported\
+    \ ligation in the tested PhRtcB reaction; this does\n      not establish ATP delivery\
+    \ or binding by Archease.\n    directness: DIRECT\n    support: OBSERVED\n   \
+    \ evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:24435797\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n      snippet:\
+    \ enabled efficient utilization\n      explanation: Figure4a/b ATP comparison\
+    \ at 100 nM Archease, distinct from the 800 nM kinetic experiments.\n      cache_path:\
+    \ evidence/PF01951/desai-2014.txt\n      cache_sha256: 0dd92157e3b40af1071b0efee1e206b8405a38246a5cc756a50f2f80569b128b\n\
+    \  - edge_id: ph-dgtp-ligation\n    subject: dgtp\n    predicate: increases\n\
+    \    object: dgtp_product\n    mechanism: Archease increases the dGTP-supported\
+    \ product yield by approximately tenfold in the 30-minute\n      assay; the measured\
+    \ endpoint is not a binding constant.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:24435797\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n      snippet:\
+    \ enabled efficient utilization\n      explanation: Figure4a/b dGTP lanes and\
+    \ Results; same RNA, Mn and protein concentrations within this\n        comparison.\n\
+    \      cache_path: evidence/PF01951/desai-2014.txt\n      cache_sha256: 0dd92157e3b40af1071b0efee1e206b8405a38246a5cc756a50f2f80569b128b\n\
+    \  - edge_id: ph-itp-ligation\n    subject: itp\n    predicate: increases\n  \
+    \  object: itp_product\n    mechanism: Archease increases ITP-supported product\
+    \ yield by approximately eightfold in the matched\n      30-minute reaction.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:24435797\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n\
+    \      snippet: enabled efficient utilization\n      explanation: Figure4a/b ITP\
+    \ lanes and corresponding Results; does not imply utilization of every\n     \
+    \   purine analogue.\n      cache_path: evidence/PF01951/desai-2014.txt\n    \
+    \  cache_sha256: 0dd92157e3b40af1071b0efee1e206b8405a38246a5cc756a50f2f80569b128b\n\
+    - graph_id: ph-gtp-archease-mutants-2014\n  title: Archease variants reduce GTP-supported\
+    \ ligation\n  scope: Separate substitutions or terminal deletion in purified P.\
+    \ horikoshii Archease, compared with\n    WT.\n  context: Figure6A/C; 70 C, 30\
+    \ min, 50 mM Bis-Tris pH7.0, 300 mM NaCl, 0.25 mM MnCl2, 0.10 mM GTP, 5\n    uM\
+    \ RtcB, 100 nM Archease, each RNA half 1 uM; two experiments.\n  family_mapping:\
+    \ O59205 v1 PH1536, PF01951 4-142; E8/H9/D12/K117/D141/I142 checked against reference.\n\
+    \    Extra L after initial M does not alter the paper's native numbering.\n  taxon:\
+    \ NCBITaxon:70601\n  scope_status: PHENOTYPIC\n  limitations: S5 purity is not\
+    \ mutant-fold verification. These are product-yield effects, not direct\n    measurements\
+    \ of individual metal contacts. E8A has no detrimental GTP effect and is not assigned\
+    \ a\n    decrease edge.\n  nodes:\n  - node_id: h9a\n    label: Archease H9A versus\
+    \ WT\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O59205\n  -\
+    \ node_id: d12a\n    label: Archease D12A versus WT\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:O59205\n  - node_id: k117a\n    label: Archease\
+    \ K117A versus WT\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O59205\n\
+    \  - node_id: d141a\n    label: Archease D141A versus WT\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:O59205\n  - node_id: del_i142\n    label: Archease\
+    \ deltaI142 versus WT\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O59205\n\
+    \  - node_id: product\n    label: GTP-supported 20-nt ligation product\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: ph-h9a-gtp\n    subject: h9a\n    predicate: decreases\n\
+    \    object: product\n    mechanism: H9A yields less ligated RNA than WT Archease;\
+    \ the experiment does not distinguish contact\n      loss from altered folding\
+    \ or partner interaction.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:24435797\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n      snippet:\
+    \ reduced Archease-dependent activation\n      explanation: Figure6A/C H9A GTP\
+    \ comparison and S5 purity image inspected.\n      cache_path: evidence/PF01951/desai-2014-mutants.txt\n\
+    \      cache_sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n\
+    \  - edge_id: ph-d12a-gtp\n    subject: d12a\n    predicate: decreases\n    object:\
+    \ product\n    mechanism: D12A reduces GTP-supported product close to the Archease-minus\
+    \ level; it does not establish\n      a physiological metal identity.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:24435797\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n\
+    \      snippet: reduced Archease-dependent activation\n      explanation: Figure6A/C\
+    \ D12A GTP comparison; native residue identity verified.\n      cache_path: evidence/PF01951/desai-2014-mutants.txt\n\
+    \      cache_sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n\
+    \  - edge_id: ph-k117a-gtp\n    subject: k117a\n    predicate: decreases\n   \
+    \ object: product\n    mechanism: K117A decreases ligation product relative to\
+    \ WT; the readout is not a nucleotide-binding\n      measurement on Archease.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:24435797\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n\
+    \      snippet: reduced Archease-dependent activation\n      explanation: Figure6A/C\
+    \ K117A GTP comparison and Methods.\n      cache_path: evidence/PF01951/desai-2014-mutants.txt\n\
+    \      cache_sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n\
+    \  - edge_id: ph-d141a-gtp\n    subject: d141a\n    predicate: decreases\n   \
+    \ object: product\n    mechanism: D141A diminishes ligation product; the crystal\
+    \ contact model does not exclude other consequences\n      of substitution.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:24435797\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n\
+    \      snippet: reduced Archease-dependent activation\n      explanation: Figure6A/C\
+    \ D141A GTP comparison; Figure5 is structural context only.\n      cache_path:\
+    \ evidence/PF01951/desai-2014-mutants.txt\n      cache_sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n\
+    \  - edge_id: ph-deli142-gtp\n    subject: del_i142\n    predicate: decreases\n\
+    \    object: product\n    mechanism: Deleting terminal I142 lowers product yield\
+    \ relative to WT; terminal carboxylate placement\n      and folding effects are\
+    \ not experimentally separated.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:24435797\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n      snippet:\
+    \ reduced Archease-dependent activation\n      explanation: Figure6A/C deltaI142\
+    \ GTP comparison; this is a deletion, not an I142A substitution.\n      cache_path:\
+    \ evidence/PF01951/desai-2014-mutants.txt\n      cache_sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n\
+    - graph_id: ph-atp-archease-mutants-2014\n  title: Archease variants reduce ATP-supported\
+    \ ligation\n  scope: The six separate P. horikoshii Archease variants in the ATP\
+    \ condition.\n  context: Figure6B/C; 0.10 mM ATP, 70 C, 30 min, 50 mM Bis-Tris\
+    \ pH7.0, 300 mM NaCl, 0.25 mM MnCl2, 5\n    uM RtcB, 100 nM Archease, each RNA\
+    \ half 1 uM; two experiments.\n  family_mapping: O59205 v1, PF01951 4-142; native\
+    \ numbering with verified E8/H9/D12/K117/D141/I142. Whole\n    E. coli-expressed\
+    \ proteins, not isolated domains.\n  taxon: NCBITaxon:70601\n  scope_status: PHENOTYPIC\n\
+    \  limitations: ATP and GTP are not pooled. E8A is specifically detrimental here.\
+    \ S5 purity does not establish\n    native fold; no direct Archease ATP-binding\
+    \ assay or atomic mechanism is claimed.\n  nodes:\n  - node_id: e8a\n    label:\
+    \ Archease E8A versus WT with ATP\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:O59205\n  - node_id: h9a\n    label: Archease H9A versus WT with\
+    \ ATP\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O59205\n \
+    \ - node_id: d12a\n    label: Archease D12A versus WT with ATP\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:O59205\n  - node_id: k117a\n \
+    \   label: Archease K117A versus WT with ATP\n    node_type: PERTURBATION\n  \
+    \  grounding:\n    - UniProtKB:O59205\n  - node_id: d141a\n    label: Archease\
+    \ D141A versus WT with ATP\n    node_type: PERTURBATION\n    grounding:\n    -\
+    \ UniProtKB:O59205\n  - node_id: del_i142\n    label: Archease deltaI142 versus\
+    \ WT with ATP\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O59205\n\
+    \  - node_id: product\n    label: ATP-supported 20-nt ligation product\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: ph-e8a-atp\n    subject: e8a\n    predicate: decreases\n\
+    \    object: product\n    mechanism: E8A decreases ATP-supported ligation relative\
+    \ to WT despite its GTP-negative contrast;\n      this does not prove direct ATP\
+    \ contact by E8.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:24435797\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n      snippet: reduced Archease-dependent\
+    \ activation\n      explanation: Figure6B/C E8A ATP bars and cofactor-specific\
+    \ Results; Figure6A provides the distinct\n        GTP comparison.\n      cache_path:\
+    \ evidence/PF01951/desai-2014-mutants.txt\n      cache_sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n\
+    \  - edge_id: ph-h9a-atp\n    subject: h9a\n    predicate: decreases\n    object:\
+    \ product\n    mechanism: H9A reduces ATP-supported product compared with WT;\
+    \ folding and interaction alternatives\n      remain.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24435797\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n\
+    \      snippet: reduced Archease-dependent activation\n      explanation: Figure6B/C\
+    \ H9A ATP condition, not the GTP bar.\n      cache_path: evidence/PF01951/desai-2014-mutants.txt\n\
+    \      cache_sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n\
+    \  - edge_id: ph-d12a-atp\n    subject: d12a\n    predicate: decreases\n    object:\
+    \ product\n    mechanism: D12A reduces ATP-supported ligation product; no separate\
+    \ atomic metal-transfer event is\n      observed.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24435797\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n\
+    \      snippet: reduced Archease-dependent activation\n      explanation: Figure6B/C\
+    \ D12A ATP condition and matched WT.\n      cache_path: evidence/PF01951/desai-2014-mutants.txt\n\
+    \      cache_sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n\
+    \  - edge_id: ph-k117a-atp\n    subject: k117a\n    predicate: decreases\n   \
+    \ object: product\n    mechanism: K117A diminishes ATP-supported product; causal\
+    \ attribution stops at the tested variant\n      effect.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24435797\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n\
+    \      snippet: reduced Archease-dependent activation\n      explanation: Figure6B/C\
+    \ K117A ATP condition; S5 purity is not folding verification.\n      cache_path:\
+    \ evidence/PF01951/desai-2014-mutants.txt\n      cache_sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n\
+    \  - edge_id: ph-d141a-atp\n    subject: d141a\n    predicate: decreases\n   \
+    \ object: product\n    mechanism: D141A lowers ATP-supported ligation product\
+    \ without identifying which microscopic step\n      is impaired.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:24435797\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n\
+    \      snippet: reduced Archease-dependent activation\n      explanation: Figure6B/C\
+    \ D141A ATP condition and Methods.\n      cache_path: evidence/PF01951/desai-2014-mutants.txt\n\
+    \      cache_sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n\
+    \  - edge_id: ph-deli142-atp\n    subject: del_i142\n    predicate: decreases\n\
+    \    object: product\n    mechanism: Deleting terminal I142 decreases ATP-supported\
+    \ ligation; the assay does not separate terminal\n      geometry from folding\
+    \ or complex formation.\n    directness: UNRESOLVED\n    support: OBSERVED\n \
+    \   evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:24435797\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n      snippet:\
+    \ reduced Archease-dependent activation\n      explanation: Figure6B/C deltaI142\
+    \ ATP condition; native terminal residue verified.\n      cache_path: evidence/PF01951/desai-2014-mutants.txt\n\
+    \      cache_sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n\
+    - graph_id: ph-rtcb-mutant-gtp-rescue-2014\n  title: Archease restores GTP ligation\
+    \ by selected RtcB variants\n  scope: WT P. horikoshii Archease addition to three\
+    \ separately purified RtcB mutant reactions.\n  context: Figure7A/C; 70 C, 30\
+    \ min, 0.10 mM GTP, 5 uM mutant RtcB, 100 nM Archease versus none, each\n    RNA\
+    \ half 1 uM; 50 mM Bis-Tris pH7.0, 300 mM NaCl, 0.25 mM MnCl2.\n  family_mapping:\
+    \ The PF01951 member is O59205 v1 PH1536, mapped 4-142. F204A/E206A/K480A belong\
+    \ to the\n    separate RtcB partner, not to Archease.\n  taxon: NCBITaxon:70601\n\
+    \  scope_status: MECHANISTIC\n  limitations: Direct purified-reaction intervention,\
+    \ not proof that Archease replaces a particular guanine\n    contact. Rescue does\
+    \ not mean WT activity is fully restored. RtcB D65A/D95A/N202A/H203A/H404A do\
+    \ not\n    recover ligation; D95A's RNA-ppG endpoint is separate.\n  nodes:\n\
+    \  - node_id: f204a\n    label: Archease added to RtcB F204A with GTP\n    node_type:\
+    \ ACTIVITY\n    grounding:\n    - UniProtKB:O59205\n  - node_id: e206a\n    label:\
+    \ Archease added to RtcB E206A with GTP\n    node_type: ACTIVITY\n    grounding:\n\
+    \    - UniProtKB:O59205\n  - node_id: k480a\n    label: Archease added to RtcB\
+    \ K480A with GTP\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:O59205\n\
+    \  - node_id: f204a_product\n    label: Ligated RNA in RtcB F204A reaction\n \
+    \   node_type: STATE\n  - node_id: e206a_product\n    label: Ligated RNA in RtcB\
+    \ E206A reaction\n    node_type: STATE\n  - node_id: k480a_product\n    label:\
+    \ Ligated RNA in RtcB K480A reaction\n    node_type: STATE\n  edges:\n  - edge_id:\
+    \ ph-archease-f204a-gtp-rescue\n    subject: f204a\n    predicate: enables\n \
+    \   object: f204a_product\n    mechanism: Adding WT Archease permits detectable\
+    \ GTP-supported RNA ligation by F204A RtcB, unlike\n      the Archease-minus reaction.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:24435797\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n\
+    \      snippet: were rescued\n      explanation: Figure7A/C F204A with/without\
+    \ Archease; small positive rescue is not extrapolated to\n        ATP.\n     \
+    \ cache_path: evidence/PF01951/desai-2014-mutants.txt\n      cache_sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n\
+    \  - edge_id: ph-archease-e206a-gtp-rescue\n    subject: e206a\n    predicate:\
+    \ enables\n    object: e206a_product\n    mechanism: WT Archease addition restores\
+    \ detectable ligation in the otherwise inactive E206A RtcB\n      GTP reaction.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:24435797\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n\
+    \      snippet: were rescued\n      explanation: Figure7A/C E206A GTP paired reactions;\
+    \ RtcB chemistry remains assigned to RtcB.\n      cache_path: evidence/PF01951/desai-2014-mutants.txt\n\
+    \      cache_sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n\
+    \  - edge_id: ph-archease-k480a-gtp-rescue\n    subject: k480a\n    predicate:\
+    \ enables\n    object: k480a_product\n    mechanism: K480A RtcB produces ligated\
+    \ RNA when WT Archease is included in the GTP reaction, but not\n      when it\
+    \ is omitted.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:24435797\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n      snippet: were rescued\n\
+    \      explanation: Figure7A/C K480A GTP condition, not the800 nM ATP kinetics.\n\
+    \      cache_path: evidence/PF01951/desai-2014-mutants.txt\n      cache_sha256:\
+    \ 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n- graph_id:\
+    \ ph-rtcb-mutant-atp-rescue-2014\n  title: Archease enables ATP ligation by E206A\
+    \ and K480A RtcB\n  scope: Separate mutant RtcB reactions with WT P. horikoshii\
+    \ Archease addition.\n  context: Figure7B/C; 70 C, 30 min, 0.10 mM ATP, 5 uM RtcB,\
+    \ 100 nM Archease versus none, each RNA half\n    1 uM; 50 mM Bis-Tris pH7.0,\
+    \ 300 mM NaCl, 0.25 mM MnCl2.\n  family_mapping: O59205 v1 Archease, PF01951 4-142.\
+    \ E206A/K480A are RtcB partner substitutions, not PF01951\n    positions.\n  taxon:\
+    \ NCBITaxon:70601\n  scope_status: MECHANISTIC\n  limitations: F204A RtcB is not\
+    \ rescued with ATP despite GTP rescue. Figure7D-F uses different time or\n   \
+    \ Archease concentration and is not pooled. WT-versus-K480A product differences\
+    \ are not a fold-effect\n    estimate of adding Archease.\n  nodes:\n  - node_id:\
+    \ e206a\n    label: Archease added to RtcB E206A with ATP\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:O59205\n  - node_id: k480a\n    label: Archease\
+    \ added to RtcB K480A with ATP\n    node_type: ACTIVITY\n    grounding:\n    -\
+    \ UniProtKB:O59205\n  - node_id: e206a_product\n    label: ATP-supported RNA ligation\
+    \ by RtcB E206A\n    node_type: STATE\n  - node_id: k480a_product\n    label:\
+    \ ATP-supported RNA ligation by RtcB K480A\n    node_type: STATE\n  edges:\n \
+    \ - edge_id: ph-archease-e206a-atp-rescue\n    subject: e206a\n    predicate:\
+    \ enables\n    object: e206a_product\n    mechanism: WT Archease addition permits\
+    \ detectable ATP-supported ligation by E206A RtcB under the\n      matched endpoint\
+    \ conditions.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:24435797\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n      snippet: were rescued\n\
+    \      explanation: Figure7B/C E206A ATP paired conditions and corresponding Results.\n\
+    \      cache_path: evidence/PF01951/desai-2014-mutants.txt\n      cache_sha256:\
+    \ 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n  - edge_id:\
+    \ ph-archease-k480a-atp-rescue\n    subject: k480a\n    predicate: enables\n \
+    \   object: k480a_product\n    mechanism: K480A RtcB produces ligated RNA with\
+    \ Archease and ATP; the paired reaction lacking Archease\n      does not show\
+    \ this product.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:24435797\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n      snippet: were rescued\n\
+    \      explanation: Figure7B/C K480A ATP comparison at100 nM Archease; separate\
+    \ from800 nM kinetics.\n      cache_path: evidence/PF01951/desai-2014-mutants.txt\n\
+    \      cache_sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n\
+    - graph_id: ph-rtcb-d95a-rna-guanylylation-2014\n  title: Archease restores an\
+    \ RNA intermediate but not D95A RtcB ligation\n  scope: WT Archease added to the\
+    \ P. horikoshii D95A RtcB GTP reaction.\n  context: Figure7A; 70 C, 30 min, 0.10\
+    \ mM GTP, 5 uM D95A RtcB, 100 nM Archease versus none, each RNA\n    half 1 uM;\
+    \ 50 mM Bis-Tris pH7.0, 300 mM NaCl, 0.25 mM MnCl2.\n  family_mapping: O59205\
+    \ v1 Archease, PF01951 4-142; D95A belongs to RtcB. Whole recombinant proteins.\n\
+    \  taxon: NCBITaxon:70601\n  scope_status: MECHANISTIC\n  limitations: The RNA-ppG\
+    \ band is distinct from ligated RNA and from protein guanylylation. D95A does\n\
+    \    not regain ligation; an unmeasured intermediate-to-product edge is not added.\n\
+    \  nodes:\n  - node_id: addition\n    label: Archease added to D95A RtcB with\
+    \ GTP and RNA\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:O59205\n\
+    \  - node_id: intermediate\n    label: Guanylylated RNA-ppG intermediate in D95A\
+    \ reaction\n    node_type: STATE\n  edges:\n  - edge_id: ph-archease-d95a-rna-ppg\n\
+    \    subject: addition\n    predicate: enables\n    object: intermediate\n   \
+    \ mechanism: Archease addition restores the RNA-ppG band in the D95A RtcB reaction\
+    \ without restoring\n      the final ligation product.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24435797\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/\n\
+    \      snippet: were rescued\n      explanation: Figure7A D95A RNA-ppG lanes and\
+    \ explicit Results distinction between rescued guanylylation\n        and absent\
+    \ ligation.\n      cache_path: evidence/PF01951/desai-2014-mutants.txt\n     \
+    \ cache_sha256: 08f2f12105686ae877c36c8ef6ed2848372146f306615affe1d2a4d7ec223072\n\
+    - graph_id: pa-trna-methylation-specificity-2007\n  title: PAB1946 changes PAB1947\
+    \ tRNA methylation selectivity\n  scope: Purified His6-PAB1946 Archease with His6-PAB1947\
+    \ methyltransferase and P. abyssi tRNA-Asp transcript.\n  context: Figure5A; 80\
+    \ C, 10 min, 200 nM PAB1947 and tenfold Archease excess; 25 mM Tris-Cl pH7.5,\
+    \ 50\n    mM KCl, 2 mM DTT, 80 uM AdoMet, 1 mg/ml BSA. Labeled RNA is fragmented\
+    \ with T1 then quantified after\n    P1 digestion/TLC.\n  family_mapping: PAB1946\
+    \ maps to Q9V105 v1, 142 aa, PF01951 4-142; reference GE5/Orsay NCBITaxon272844,\n\
+    \    paper strain not explicitly named. Graph taxon is the species. N-terminal\
+    \ His6 is extra; E. coli is\n    the expression host, not the source organism.\n\
+    \  taxon: NCBITaxon:29292\n  scope_status: MECHANISTIC\n  limitations: Primary\
+    \ text/captions inspected; source images unavailable. The comparison localizes\
+    \ increased\n    modification to the C49-containing ACCCG fragment, not every\
+    \ cytidine individually. PAB1947 performs\n    methyl transfer; no Archease-alone\
+    \ methylation or family-wide specificity rule is claimed.\n  nodes:\n  - node_id:\
+    \ addition\n    label: PAB1946 added to PAB1947 tRNA-Asp methylation reaction\n\
+    \    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q9V105\n  - node_id:\
+    \ c49_region\n    label: Methylation in the ACCCG fragment containing C49\n  \
+    \  node_type: STATE\n  - node_id: other_regions\n    label: Methylation at nonspecific\
+    \ tRNA regions\n    node_type: STATE\n  edges:\n  - edge_id: pa-archease-c49-region\n\
+    \    subject: addition\n    predicate: increases\n    object: c49_region\n   \
+    \ mechanism: Adding PAB1946 increases modification measured in the preferred C49-containing\
+    \ fragment\n      relative to the same PAB1947 reaction without Archease.\n  \
+    \  directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:17470432\n      source_url: https://www.researchgate.net/publication/6360471_Archease_from_Pyrococcus_abyssi_Improves_Substrate_Specificity_and_Solubility_of_a_tRNA_m5C_Methyltransferase\n\
+    \      snippet: reducing modification at unspecific sites\n      explanation:\
+    \ Figure5A-associated Results state the paired increase in ACCCG modification;\
+    \ Methods\n        define the tenfold addition. No numerical effect inferred from\
+    \ an unseen image.\n      cache_path: evidence/PF01951/auxilien-2007.txt\n   \
+    \   cache_sha256: c0983fcb9192200dd217817383b3a3963b0d0dda45534975918e75cfafd3a096\n\
+    \  - edge_id: pa-archease-nonspecific-trna\n    subject: addition\n    predicate:\
+    \ decreases\n    object: other_regions\n    mechanism: PAB1946 addition reduces\
+    \ modification outside preferred sites in the measured tRNA fragments;\n     \
+    \ the exact affected cytidines are not assigned.\n    directness: DIRECT\n   \
+    \ support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:17470432\n      source_url: https://www.researchgate.net/publication/6360471_Archease_from_Pyrococcus_abyssi_Improves_Substrate_Specificity_and_Solubility_of_a_tRNA_m5C_Methyltransferase\n\
+    \      snippet: reducing modification at unspecific sites\n      explanation:\
+    \ Figure5A Results and fragment-quantification Methods; does not imply a decrease\
+    \ in\n        all tRNA methylation.\n      cache_path: evidence/PF01951/auxilien-2007.txt\n\
+    \      cache_sha256: c0983fcb9192200dd217817383b3a3963b0d0dda45534975918e75cfafd3a096\n\
+    - graph_id: pa-polyc-methylation-2007\n  title: PAB1946 suppresses nonspecific\
+    \ poly(C) methylation\n  scope: Separate sixfold and twentyfold Archease additions\
+    \ to PAB1947 reactions on poly(C).\n  context: Figure5B/C; 50 C, 0.3 ug poly(C),\
+    \ 0.67 uM tritiated AdoMet, 200 nM PAB1947, 1.2 or 4 uM Archease;\n    25 mM Tris-Cl\
+    \ pH7.5, 50 mM KCl, 2 mM DTT, 1 mg/ml BSA base buffer.\n  family_mapping: Whole\
+    \ His6-PAB1946, Q9V105 v1, PF01951 4-142; partner PAB1947 is not the PF01951 enzyme.\n\
+    \  taxon: NCBITaxon:29292\n  scope_status: MECHANISTIC\n  limitations: Author\
+    \ text and captions, not visual curve audit. Comparable added BSA is the control.\n\
+    \    Lower temperature protects the tritiated cofactor; these curves are not pooled\
+    \ with the 80 C tRNA\n    endpoint or extrapolated to physiological RNA methylation.\n\
+    \  nodes:\n  - node_id: sixfold\n    label: Sixfold PAB1946 addition to poly(C)\
+    \ reaction\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q9V105\n\
+    \  - node_id: twentyfold\n    label: Twentyfold PAB1946 addition to poly(C) reaction\n\
+    \    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q9V105\n  - node_id:\
+    \ sixfold_product\n    label: Poly(C) methyl incorporation with sixfold Archease\n\
+    \    node_type: STATE\n  - node_id: twentyfold_product\n    label: Poly(C) methyl\
+    \ incorporation with twentyfold Archease\n    node_type: STATE\n  edges:\n  -\
+    \ edge_id: pa-polyc-sixfold\n    subject: sixfold\n    predicate: decreases\n\
+    \    object: sixfold_product\n    mechanism: Sixfold Archease addition lowers\
+    \ PAB1947-mediated methyl incorporation relative to the\n      Archease-minus\
+    \ poly(C) reaction.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:17470432\n      source_url:\
+    \ https://www.researchgate.net/publication/6360471_Archease_from_Pyrococcus_abyssi_Improves_Substrate_Specificity_and_Solubility_of_a_tRNA_m5C_Methyltransferase\n\
+    \      snippet: reducing modification at unspecific sites\n      explanation:\
+    \ Figure5B sixfold time course and Results; Figure5C comparable BSA does not reproduce\n\
+    \        suppression.\n      cache_path: evidence/PF01951/auxilien-2007.txt\n\
+    \      cache_sha256: c0983fcb9192200dd217817383b3a3963b0d0dda45534975918e75cfafd3a096\n\
+    \  - edge_id: pa-polyc-twentyfold\n    subject: twentyfold\n    predicate: decreases\n\
+    \    object: twentyfold_product\n    mechanism: Twentyfold Archease addition suppresses\
+    \ poly(C) methyl incorporation relative to the matched\n      Archease-minus reaction;\
+    \ no numerical fold change is assigned.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:17470432\n\
+    \      source_url: https://www.researchgate.net/publication/6360471_Archease_from_Pyrococcus_abyssi_Improves_Substrate_Specificity_and_Solubility_of_a_tRNA_m5C_Methyltransferase\n\
+    \      snippet: reducing modification at unspecific sites\n      explanation:\
+    \ Figure5B twentyfold condition and Figure5C matched BSA comparison; primary text\
+    \ supports\n        direction.\n      cache_path: evidence/PF01951/auxilien-2007.txt\n\
+    \      cache_sha256: c0983fcb9192200dd217817383b3a3963b0d0dda45534975918e75cfafd3a096\n\
+    - graph_id: pa-rna-affinity-2007\n  title: PAB1946 raises apparent PAB1947 RNA\
+    \ dissociation constants\n  scope: Three separately assayed RNA preparations,\
+    \ preserving the source Table1 substrate labels.\n  context: Figure6/Table1; 25\
+    \ C, 20 min, PAB1947:Archease ratio 1:6, 25 mM Tris-HCl pH7.5, 50 mM NaCl,\n \
+    \   10% glycerol, 0.1 mg/ml BSA, 2 mM DTT. Methods 10 fmol/20 ul implies 0.5 nM\
+    \ RNA; Figure6 caption instead\n    says 1 nM.\n  family_mapping: His6-PAB1946\
+    \ Q9V105 v1, PF01951 4-142; assays involve whole proteins, not isolated domains.\n\
+    \  taxon: NCBITaxon:29292\n  scope_status: MECHANISTIC\n  limitations: Table1\
+    \ assigns rRNA-IV/II lengths 72/55 but Figure2D coordinates imply 55/72. No corrected\n\
+    \    sequence or concentration is invented. Reported within-assay Kd shifts are\
+    \ retained; gel images uninspected.\n    Binding changes alone do not establish\
+    \ activation or mediation of methylation specificity.\n  nodes:\n  - node_id:\
+    \ trna\n    label: PAB1946 added during PAB1947 tRNA-Asp binding\n    node_type:\
+    \ ACTIVITY\n    grounding:\n    - UniProtKB:Q9V105\n  - node_id: rrna_iv\n   \
+    \ label: PAB1946 added with Table1 rRNA-IV preparation\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:Q9V105\n  - node_id: rrna_ii\n    label: PAB1946\
+    \ added with Table1 rRNA-II preparation\n    node_type: ACTIVITY\n    grounding:\n\
+    \    - UniProtKB:Q9V105\n  - node_id: kd_trna\n    label: Apparent Kd for PAB1947\
+    \ tRNA-Asp binding\n    node_type: STATE\n  - node_id: kd_iv\n    label: Apparent\
+    \ Kd for Table1 rRNA-IV preparation\n    node_type: STATE\n  - node_id: kd_ii\n\
+    \    label: Apparent Kd for Table1 rRNA-II preparation\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: pa-archease-trna-kd\n    subject: trna\n    predicate:\
+    \ increases\n    object: kd_trna\n    mechanism: Archease addition raises the\
+    \ reported apparent tRNA-Asp Kd from 1.0+/-0.1 to 2.8+/-0.2\n      uM, indicating\
+    \ reduced apparent affinity under the binding assay conditions.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:17470432\n      source_url: https://www.researchgate.net/publication/6360471_Archease_from_Pyrococcus_abyssi_Improves_Substrate_Specificity_and_Solubility_of_a_tRNA_m5C_Methyltransferase\n\
+    \      snippet: apparent dissociation constant\n      explanation: Figure6/Table1\
+    \ tRNA-Asp row and gel-retardation Methods; RNA concentration discrepancy\n  \
+    \      retained.\n      cache_path: evidence/PF01951/auxilien-2007.txt\n     \
+    \ cache_sha256: c0983fcb9192200dd217817383b3a3963b0d0dda45534975918e75cfafd3a096\n\
+    \  - edge_id: pa-archease-rrna-iv-kd\n    subject: rrna_iv\n    predicate: increases\n\
+    \    object: kd_iv\n    mechanism: The preparation labeled rRNA domain IV has\
+    \ a reported apparent Kd increase from 1.3+/-0.1\n      to 13.3+/-1.5 uM upon\
+    \ Archease addition; its exact fragment assignment remains unresolved.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:17470432\n      source_url: https://www.researchgate.net/publication/6360471_Archease_from_Pyrococcus_abyssi_Improves_Substrate_Specificity_and_Solubility_of_a_tRNA_m5C_Methyltransferase\n\
+    \      snippet: apparent dissociation constant\n      explanation: Table1 rRNA-IV\
+    \ row; label/length inconsistency with Figure2D explicitly preserved.\n      \
+    \  No sequence grounding.\n      cache_path: evidence/PF01951/auxilien-2007.txt\n\
+    \      cache_sha256: c0983fcb9192200dd217817383b3a3963b0d0dda45534975918e75cfafd3a096\n\
+    \  - edge_id: pa-archease-rrna-ii-kd\n    subject: rrna_ii\n    predicate: increases\n\
+    \    object: kd_ii\n    mechanism: The preparation labeled rRNA domain II has\
+    \ a reported apparent Kd increase from 1.7+/-0.2\n      to 16.7+/-2 uM with Archease;\
+    \ no exact substrate sequence is inferred from the conflicting lengths.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:17470432\n      source_url: https://www.researchgate.net/publication/6360471_Archease_from_Pyrococcus_abyssi_Improves_Substrate_Specificity_and_Solubility_of_a_tRNA_m5C_Methyltransferase\n\
+    \      snippet: apparent dissociation constant\n      explanation: Table1 rRNA-II\
+    \ row; direction applies to that labeled preparation, not a silently corrected\n\
+    \        fragment.\n      cache_path: evidence/PF01951/auxilien-2007.txt\n   \
+    \   cache_sha256: c0983fcb9192200dd217817383b3a3963b0d0dda45534975918e75cfafd3a096\n\
+    - graph_id: pa-pab1947-aggregation-70c-2007\n  title: PAB1946 reduces heat-induced\
+    \ PAB1947 aggregation\n  scope: Purified PAB1947 with His6-PAB1946 at 70 C, compared\
+    \ with enzyme alone and added BSA.\n  context: Figure9A-C; 10 min, 0.06 mg/ml\
+    \ PAB1947, 0.18 mg/ml Archease or BSA, 25 mM Tris-Cl pH7.5, 50\n    mM KCl, 2\
+    \ mM DTT; 12,000 g/15 min then supernatant/pellet SDS-PAGE.\n  family_mapping:\
+    \ PAB1946 Q9V105 v1, 142 aa, PF01951 4-142; whole tagged protein. PAB1947 is the\
+    \ aggregation\n    substrate, not an Archease isoform.\n  taxon: NCBITaxon:29292\n\
+    \  scope_status: MECHANISTIC\n  limitations: Text and captions support direction;\
+    \ source gels not visually inspected and no numerical\n    band estimate retained.\
+    \ BSA does not protect at 70 C. No evidence for refolding, catalytic recovery,\n\
+    \    in-cell protection or all-family chaperoning.\n  nodes:\n  - node_id: addition\n\
+    \    label: PAB1946 added to PAB1947 during 70 C incubation\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:Q9V105\n  - node_id: aggregation\n    label:\
+    \ Sedimentable PAB1947 after 70 C incubation\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: pa-archease-aggregation-70c\n    subject: addition\n    predicate:\
+    \ decreases\n    object: aggregation\n    mechanism: Archease addition retains\
+    \ more PAB1947 in the soluble fraction than enzyme alone or BSA,\n      reducing\
+    \ the observed aggregation endpoint.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:17470432\n\
+    \      source_url: https://www.researchgate.net/publication/6360471_Archease_from_Pyrococcus_abyssi_Improves_Substrate_Specificity_and_Solubility_of_a_tRNA_m5C_Methyltransferase\n\
+    \      snippet: prevents aggregation\n      explanation: Figure9A-C-associated\
+    \ Results and aggregation Methods at70 C; no unseen-gel quantification.\n    \
+    \  cache_path: evidence/PF01951/auxilien-2007.txt\n      cache_sha256: c0983fcb9192200dd217817383b3a3963b0d0dda45534975918e75cfafd3a096\n\
+    - graph_id: pa-pab1947-aggregation-4c-2007\n  title: PAB1946 reduces PAB1947 aggregation\
+    \ at 4 C\n  scope: Separate low-temperature incubation of purified PAB1947 with\
+    \ or without His6-PAB1946.\n  context: Figure9D; 4 C, 10 min, 0.06 mg/ml PAB1947,\
+    \ 0.18 mg/ml Archease or BSA, 25 mM Tris-Cl pH7.5,\n    50 mM KCl, 2 mM DTT; 12,000\
+    \ g/15 min and supernatant/pellet SDS-PAGE.\n  family_mapping: Whole PAB1946 Q9V105\
+    \ v1, PF01951 4-142; N-terminal His6 is outside reference numbering.\n  taxon:\
+    \ NCBITaxon:29292\n  scope_status: MECHANISTIC\n  limitations: This is not heat\
+    \ stress or a physiological growth condition for P. abyssi. Primary text\n   \
+    \ and caption inspected, source image not. BSA comparison is negative; no mechanistic\
+    \ mediation through\n    a particular oligomer or RNA interaction is claimed.\n\
+    \  nodes:\n  - node_id: addition\n    label: PAB1946 added to PAB1947 during 4\
+    \ C incubation\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q9V105\n\
+    \  - node_id: aggregation\n    label: Sedimentable PAB1947 after 4 C incubation\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: pa-archease-aggregation-4c\n   \
+    \ subject: addition\n    predicate: decreases\n    object: aggregation\n    mechanism:\
+    \ Archease reduces PAB1947 aggregation during the 4 C incubation, whereas the\
+    \ BSA control\n      does not reproduce protection.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:17470432\n      source_url: https://www.researchgate.net/publication/6360471_Archease_from_Pyrococcus_abyssi_Improves_Substrate_Specificity_and_Solubility_of_a_tRNA_m5C_Methyltransferase\n\
+    \      snippet: prevents aggregation\n      explanation: Figure9D Results/caption\
+    \ and shared aggregation Methods; distinct from the70 C comparison.\n      cache_path:\
+    \ evidence/PF01951/auxilien-2007.txt\n      cache_sha256: c0983fcb9192200dd217817383b3a3963b0d0dda45534975918e75cfafd3a096\n\
+    - graph_id: u2os-archease-disruption-day3-2025\n  title: Archease disruption changes\
+    \ RNA-processing readouts in U2OS cells\n  scope: Sorted human U2OS populations\
+    \ after transient Archease-targeting CRISPR/Cas9 versus control vector.\n  context:\
+    \ Day3 after sorting; Tyr-GTA Northern on 2.5 ug RNA. Separate stress assays use\
+    \ 10 ug/ml tunicamycin\n    for 4 h with GAPDH-normalized qRT-PCR; three independent\
+    \ samples.\n  family_mapping: Whole human Archease locus, represented by Q8IWT0\
+    \ v2 with PF01951 31-167. S6H shows\n    a majority one-base insertion, not a\
+    \ uniform clone. No expressed isoform or isolated domain is selectively\n    assigned.\n\
+    \  taxon: NCBITaxon:9606\n  scope_status: PHENOTYPIC\n  limitations: S6I protein\
+    \ reduction and ACTB controls support disruption; residual protein and population\n\
+    \    heterogeneity remain. No Archease reintroduction rescue or directly measured\
+    \ mediation from ligation\n    to ERDJ4. Day3 mature-tRNA abundance is not claimed\
+    \ to decrease.\n  nodes:\n  - node_id: disruption\n    label: Archease-targeted\
+    \ U2OS population versus control\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q8IWT0\n  - node_id: trna_ratio\n    label: Tyr-GTA intermediate\
+    \ to mature tRNA ratio at day3\n    node_type: PHENOTYPE\n  - node_id: xbp1_ratio\n\
+    \    label: XBP1s to XBP1u ratio after tunicamycin\n    node_type: PHENOTYPE\n\
+    \  - node_id: erdj4\n    label: ERDJ4 RNA induction after tunicamycin\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: u2os-disruption-trna-ratio\n    subject: disruption\n\
+    \    predicate: increases\n    object: trna_ratio\n    mechanism: The targeted\
+    \ population accumulates a higher Tyr-GTA intermediate/mature ratio, consistent\n\
+    \      with impaired processing but not a direct cellular measurement of the biochemical\
+    \ intermediate-transfer\n      mechanism.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.1038/s42003-025-07523-z\n\
+    \      source_url: https://www.nature.com/articles/s42003-025-07523-z\n      snippet:\
+    \ splicing defects\n      explanation: Figure3F/G and S6G-I visually inspected;\
+    \ day3 Northern ratio, not total disappearance\n        of mature RNA.\n     \
+    \ cache_path: evidence/PF01951/suzuki-2025.txt\n      cache_sha256: d3e772eaf174d79f070d0c77f3a15af017a6a108dfc625efc2b0876c5e50cf68\n\
+    \  - edge_id: u2os-disruption-xbp1-ratio\n    subject: disruption\n    predicate:\
+    \ decreases\n    object: xbp1_ratio\n    mechanism: Archease targeting lowers\
+    \ the stress-induced XBP1s/XBP1u RNA ratio under the tested tunicamycin\n    \
+    \  condition; no purified-reaction rate is assigned to this cellular endpoint.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.1038/s42003-025-07523-z\n      source_url:\
+    \ https://www.nature.com/articles/s42003-025-07523-z\n      snippet: splicing\
+    \ defects\n      explanation: Figure3D at 4 h and qRT-PCR Methods; the RTCB and\
+    \ DDX1 interventions remain separate\n        experiments.\n      cache_path:\
+    \ evidence/PF01951/suzuki-2025.txt\n      cache_sha256: d3e772eaf174d79f070d0c77f3a15af017a6a108dfc625efc2b0876c5e50cf68\n\
+    \  - edge_id: u2os-disruption-erdj4\n    subject: disruption\n    predicate: decreases\n\
+    \    object: erdj4\n    mechanism: Targeting Archease reduces ERDJ4 RNA induction\
+    \ after 4 h tunicamycin relative to control;\n      the transcriptional relay\
+    \ is not directly perturbed in this experiment.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: doi:10.1038/s42003-025-07523-z\n      source_url: https://www.nature.com/articles/s42003-025-07523-z\n\
+    \      snippet: splicing defects\n      explanation: Figure3H and Methods; a separately\
+    \ measured output, not an observed XBP1-to-ERDJ4 mediation\n        edge.\n  \
+    \    cache_path: evidence/PF01951/suzuki-2025.txt\n      cache_sha256: d3e772eaf174d79f070d0c77f3a15af017a6a108dfc625efc2b0876c5e50cf68\n\
+    - graph_id: u2os-archease-disruption-day8-2025\n  title: Mature Tyr-GTA tRNA declines\
+    \ later after Archease disruption\n  scope: The same U2OS perturbation design\
+    \ sampled eight days after sorting.\n  context: S7B/D; 2.5 ug total RNA, Tyr-GTA\
+    \ 5'-exon Northern and Archease/ACTB immunoblots. Distinct from\n    the day3\
+    \ ratio comparison.\n  family_mapping: Whole Archease-locus disruption; Q8IWT0\
+    \ v2 reference with PF01951 31-167, not a domain-specific\n    allele or uniform\
+    \ biallelic clone.\n  taxon: NCBITaxon:9606\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ Qualitative band reduction without a reported numerical fold change or panel-specific\
+    \ significance.\n    Residual mature RNA persists; residual protein, RNA turnover\
+    \ and alternative processing remain possible.\n    No universal essentiality or\
+    \ complete RNA loss is inferred.\n  nodes:\n  - node_id: disruption\n    label:\
+    \ Archease-targeted U2OS population at day8\n    node_type: PERTURBATION\n   \
+    \ grounding:\n    - UniProtKB:Q8IWT0\n  - node_id: mature\n    label: Mature Tyr-GTA\
+    \ tRNA band at day8\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: u2os-day8-mature-trna\n\
+    \    subject: disruption\n    predicate: decreases\n    object: mature\n    mechanism:\
+    \ The mature Tyr-GTA band is reduced in the targeted population at the later sampling\
+    \ time,\n      while a residual band remains; the contribution of RNA turnover\
+    \ is not measured.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: doi:10.1038/s42003-025-07523-z\n\
+    \      source_url: https://www.nature.com/articles/s42003-025-07523-z\n      snippet:\
+    \ reduction of the mature tRNA\n      explanation: S7B/D and corresponding Results\
+    \ visually/textually inspected; no numerical effect size\n        is invented\
+    \ from the blot.\n      cache_path: evidence/PF01951/suzuki-2025.txt\n      cache_sha256:\
+    \ d3e772eaf174d79f070d0c77f3a15af017a6a108dfc625efc2b0876c5e50cf68\n- graph_id:\
+    \ tt-archease-ligation-2015\n  title: Thermus Archease accelerates matched RtcB\
+    \ ligation\n  scope: Purified whole-protein T. thermophilus Archease with its\
+    \ species-matched RtcB.\n  context: Figure1; 5 uM RtcB, 1 uM linear 20-nt 5'-OH/3'-P\
+    \ RNA, 2 uM Archease, 0.1 mM GTP, 0.5 mM MnCl2,\n    300 mM NaCl, 50 mM Tris pH7.4,\
+    \ 70 C.\n  family_mapping: Named assay Archease lacks a published clone accession\
+    \ or strain. Candidate Q5SHI5 v1/HB8\n    and Q72HV1 v1/HB27 both map PF01951\
+    \ 6-139, but neither is assigned as the tested clone. Archease has\n    an N-terminal\
+    \ His6 tag; RtcB is untagged.\n  scope_status: MECHANISTIC\n  limitations: Whole-protein\
+    \ biochemical effect, not exact clone or domain proof. Two experiments with\n\
+    \    SD, not a cellular flux. Figure1A one-minute titration and B/C kinetic fits\
+    \ are distinct datasets.\n    ATP substitution is negative (data not shown).\n\
+    \  nodes:\n  - node_id: addition\n    label: Thermus Archease added to RtcB with\
+    \ GTP and Mn\n    node_type: ACTIVITY\n  - node_id: rate\n    label: Apparent\
+    \ RNA circularization rate\n    node_type: ACTIVITY\n  edges:\n  - edge_id: tt-archease-ligation-rate\n\
+    \    subject: addition\n    predicate: increases\n    object: rate\n    mechanism:\
+    \ Adding 2 uM Archease raises the fitted apparent rate from 0.026 +/- 0.003/min\
+    \ to 0.73 +/-\n      0.21/min under matched conditions.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:26385509\n      source_url: https://raineslab.com/sites/default/files/labs/raines/pdfs/Desai2015.pdf\n\
+    \      snippet: multiple turnovers\n      explanation: Figure1B/C and Results\
+    \ support the rate comparison; Figure1A supplies the separate\n        titration,\
+    \ not a fitted-rate prediction of its endpoint. Named-clone mapping remains limited.\n\
+    \      cache_path: evidence/PF01951/desai-2015-turnover.txt\n      cache_sha256:\
+    \ b6be9da821a36c60ba4801e793b640e2719c3b7c5e2efd9805d733dfeb7e64f2\n- graph_id:\
+    \ ph-archease-tt-ligation-2015\n  title: Archaeal Archease activates Thermus RtcB\
+    \ in an interspecies assay\n  scope: P. horikoshii Archease added to purified\
+    \ T. thermophilus RtcB.\n  context: Figure2; 8 uM Archease, 5 uM RtcB, 1 uM linear\
+    \ 20-nt RNA, 0.1 mM GTP, 0.5 mM MnCl2, 300 mM\n    NaCl, 50 mM Tris pH7.4, 70\
+    \ C. Titration endpoint is 10 min; the time course is separate.\n  family_mapping:\
+    \ P. horikoshii Archease derives from the Desai2014 O59205 v1/PH1536 clone with\
+    \ N-terminal\n    His6, reference PF01951 4-142. The bacterial partner's exact\
+    \ clone/strain is unresolved. No single-taxon\n    label is assigned to this mixture.\n\
+    \  scope_status: MECHANISTIC\n  limitations: Does not establish native interspecies\
+    \ cooperation or interchangeability of all family\n    members. The higher Archease\
+    \ concentration differs from the Thermus-protein experiment. ATP does not\n  \
+    \  replace GTP in the reported data-not-shown test.\n  nodes:\n  - node_id: addition\n\
+    \    label: Archaeal Archease added to Thermus RtcB with GTP and Mn\n    node_type:\
+    \ ACTIVITY\n    grounding:\n    - UniProtKB:O59205\n  - node_id: rate\n    label:\
+    \ Thermus RtcB apparent circularization rate\n    node_type: ACTIVITY\n  edges:\n\
+    \  - edge_id: ph-archease-tt-ligation-rate\n    subject: addition\n    predicate:\
+    \ increases\n    object: rate\n    mechanism: With 8 uM P. horikoshii Archease\
+    \ the apparent rate is 0.12 +/- 0.05/min versus 0.026 +/-\n      0.003/min without\
+    \ Archease, approximately 4.6-fold higher.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:26385509\n\
+    \      source_url: https://raineslab.com/sites/default/files/labs/raines/pdfs/Desai2015.pdf\n\
+    \      snippet: multiple turnovers\n      explanation: Figure2B, Figure1B baseline\
+    \ and corresponding Results; two experiments +/- SD. No metal-positioning\n  \
+    \      trajectory is observed.\n      cache_path: evidence/PF01951/desai-2015-turnover.txt\n\
+    \      cache_sha256: b6be9da821a36c60ba4801e793b640e2719c3b7c5e2efd9805d733dfeb7e64f2\n\
+    - graph_id: tt-archease-multiple-turnover-2015\n  title: Thermus Archease supports\
+    \ repeated RtcB ligation\n  scope: Purified T. thermophilus proteins under substrate-excess\
+    \ conditions.\n  context: Figure4A/C; 0.5 uM RtcB, 2 uM linear 20-nt RNA, 2 uM\
+    \ Archease, 0.1 mM GTP, 0.5 mM MnCl2, 300\n    mM NaCl, 50 mM Tris pH7.4, 70 C.\n\
+    \  family_mapping: His6 Thermus assay Archease has unresolved exact clone/strain;\
+    \ Q5SHI5/Q72HV1 v1 PF01951\n    6-139 are candidates, not accession grounding.\
+    \ Purified untagged RtcB is the ligase partner.\n  scope_status: MECHANISTIC\n\
+    \  limitations: Requirement is restricted to these conditions. Four substrate\
+    \ turnovers is an assay endpoint,\n    not an independently measured elementary\
+    \ catalytic mechanism. Thermobifida results are not generalized\n    from this\
+    \ species.\n  nodes:\n  - node_id: addition\n    label: Thermus Archease added\
+    \ to substrate-excess RtcB reaction\n    node_type: ACTIVITY\n  - node_id: turnover\n\
+    \    label: Repeated ligation approaching 2 uM product\n    node_type: PROCESS\n\
+    \  edges:\n  - edge_id: tt-archease-repeated-ligation\n    subject: addition\n\
+    \    predicate: enables\n    object: turnover\n    mechanism: With Archease the\
+    \ 0.5 uM RtcB reaction consumes approximately four equivalents of RNA within\n\
+    \      6 min; without Archease no product is detected through 30 min.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:26385509\n      source_url: https://raineslab.com/sites/default/files/labs/raines/pdfs/Desai2015.pdf\n\
+    \      snippet: multiple turnovers\n      explanation: Figure4A/C gels and curves\
+    \ inspected; two experiments +/- SD. The RNA starts linear,\n        not circular.\
+    \ This is not proof of evolutionary necessity.\n      cache_path: evidence/PF01951/desai-2015-turnover.txt\n\
+    \      cache_sha256: b6be9da821a36c60ba4801e793b640e2719c3b7c5e2efd9805d733dfeb7e64f2\n\
+    - graph_id: tf-archease-short-assay-2015\n  title: Small species-dependent Archease\
+    \ effects on Thermobifida ligation\n  scope: Separate archaeal or Thermus Archease\
+    \ additions to fresh purified T. fusca RtcB.\n  context: Figure3B; 5 uM RtcB,\
+    \ 1 uM linear 20-nt RNA, 8 uM Archease, 0.1 mM GTP, 0.5 mM MnCl2, 300 mM\n   \
+    \ NaCl, 50 mM Tris pH7.4, 45 C, 4.5 min.\n  family_mapping: Archaeal O59205 v1/PH1536\
+    \ reference PF01951 4-142 with N-terminal His6; Thermus Archease\n    accession/strain\
+    \ unresolved, Q5SHI5/Q72HV1 are candidates only. T. fusca His6 RtcB is a separate\
+    \ protein,\n    not an Archease member.\n  scope_status: MECHANISTIC\n  limitations:\
+    \ Reported small mean changes, two experiments +/- SD, no formal significance\
+    \ test. Fresh\n    RtcB required because freezing reduces activity. Figure4D does\
+    \ not show complete substrate conversion\n    with either Archease; small short-assay\
+    \ effects are not comparable turnover activation or physiological\n    mechanisms.\n\
+    \  nodes:\n  - node_id: ph_addition\n    label: P. horikoshii Archease added to\
+    \ Thermobifida reaction\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:O59205\n\
+    \  - node_id: tt_addition\n    label: Thermus Archease added to Thermobifida reaction\n\
+    \    node_type: ACTIVITY\n  - node_id: product\n    label: Short-assay circular\
+    \ RNA product\n    node_type: STATE\n  edges:\n  - edge_id: ph-archease-tf-small-decrease\n\
+    \    subject: ph_addition\n    predicate: decreases\n    object: product\n   \
+    \ mechanism: At 8 uM archaeal Archease the reported mean ligation output is 7%\
+    \ lower than the no-Archease\n      reaction, without a stated significance test.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:26385509\n      source_url: https://raineslab.com/sites/default/files/labs/raines/pdfs/Desai2015.pdf\n\
+    \      snippet: multiple turnovers\n      explanation: Figure3B and Results report\
+    \ this small effect separately from the Figure4 multiple-turnover\n        comparison;\
+    \ direction retained without strengthening confidence.\n      cache_path: evidence/PF01951/desai-2015-turnover.txt\n\
+    \      cache_sha256: b6be9da821a36c60ba4801e793b640e2719c3b7c5e2efd9805d733dfeb7e64f2\n\
+    \  - edge_id: tt-archease-tf-small-increase\n    subject: tt_addition\n    predicate:\
+    \ increases\n    object: product\n    mechanism: At 8 uM Thermus Archease the\
+    \ reported mean ligation output is 19% higher than the no-Archease\n      reaction;\
+    \ this is not the 28-fold Thermus RtcB effect.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:26385509\n\
+    \      source_url: https://raineslab.com/sites/default/files/labs/raines/pdfs/Desai2015.pdf\n\
+    \      snippet: multiple turnovers\n      explanation: Figure3B and Results; two\
+    \ experiments +/- SD, with no physiological inference or claim\n        of exactly\
+    \ zero effect in this species.\n      cache_path: evidence/PF01951/desai-2015-turnover.txt\n\
+    \      cache_sha256: b6be9da821a36c60ba4801e793b640e2719c3b7c5e2efd9805d733dfeb7e64f2\n\
+    - graph_id: human-complex-ligation-2014\n  title: Archease stimulates ligation\
+    \ by the human RTCB complex\n  scope: Recombinant human Archease with a HEK293-purified\
+    \ multiprotein RTCB complex.\n  context: Figure1d; 20 nM FLAG-RTCB complex, 100\
+    \ nM linear intron RNA, 10 uM His6-Archease versus buffer,\n    1 and 10 min.\
+    \ Hybrid pre-tRNA cleavage supplies the intron substrate.\n  family_mapping: Human\
+    \ Q8IWT0 v2 reference PF01951 31-167. Recombinant pET28a primer begins long-isoform\n\
+    \    MKGG..., unlike canonical MAQ... FLAG/pDONR primer; exact full construct\
+    \ is unresolved. Complex contains\n    RTCB and partners, not isolated RTCB.\n\
+    \  taxon: NCBITaxon:9606\n  scope_status: MECHANISTIC\n  limitations: Biochemical\
+    \ complex effect, not Archease-alone ligase or a three-protein reconstitution.\n\
+    \    Base ligation protocol cites Popow2011; complete final buffer details were\
+    \ not recovered. No transfer\n    of 2024 Mn conditions or numerical product yield\
+    \ inferred from gel intensity.\n  nodes:\n  - node_id: addition\n    label: Recombinant\
+    \ Archease added to human RTCB complex\n    node_type: ACTIVITY\n    grounding:\n\
+    \    - UniProtKB:Q8IWT0\n  - node_id: ligation\n    label: Intron ligation products\
+    \ and substrate consumption\n    node_type: PROCESS\n  edges:\n  - edge_id: human-complex-archease-ligation\n\
+    \    subject: addition\n    predicate: increases\n    object: ligation\n    mechanism:\
+    \ Archease addition increases circular and concatemeric ligation products with\
+    \ substantially\n      greater substrate consumption than buffer in the matched\
+    \ complex assay.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:24870230\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/\n      snippet: re-starts\
+    \ stalled ligase reactions\n      explanation: Figure1d gel and accompanying Results\
+    \ directly support initial-addition stimulation;\n        the quoted Figure1e\
+    \ restart is a separate retained context.\n      cache_path: evidence/PF01951/popow-2014.txt\n\
+    \      cache_sha256: 98c0611e55dd7847ff60cbe8cbdc3a24d5201a03ab91d6eeb33d4b1822d7e1ba\n\
+    - graph_id: human-complex-restart-2014\n  title: Delayed Archease addition restarts\
+    \ stalled human ligation\n  scope: A preincubated human FLAG-RTCB complex reaction,\
+    \ not initial activation alone.\n  context: Figure1e; 20 nM complex, 500 nM linear\
+    \ intron RNA; add 10 uM Archease or buffer at 60 min and\n    follow product through\
+    \ 120 min. Three technical replicates +/- SD.\n  family_mapping: Whole human Archease,\
+    \ Q8IWT0 v2 PF01951 31-167 reference; recombinant N-terminal isoform/cloning\n\
+    \    ambiguity retained. RTCB complex purified from HEK293 cells contains other\
+    \ partners.\n  taxon: NCBITaxon:9606\n  scope_status: MECHANISTIC\n  limitations:\
+    \ Quantified Pconcat includes linear and circular concatemers, not circular intron\
+    \ alone\n    or every product. The endpoint does not directly reveal product release\
+    \ or an elementary reaction\n    cycle. Base protocol details remain partially\
+    \ unavailable.\n  nodes:\n  - node_id: delayed_addition\n    label: Archease added\
+    \ after the 60-min plateau\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q8IWT0\n\
+    \  - node_id: restart\n    label: Renewed concatemer product accumulation\n  \
+    \  node_type: PROCESS\n  edges:\n  - edge_id: human-archease-stalled-restart\n\
+    \    subject: delayed_addition\n    predicate: enables\n    object: restart\n\
+    \    mechanism: Product accumulation resumes after Archease addition while the\
+    \ buffer control remains near\n      its initial plateau.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24870230\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/\n\
+    \      snippet: re-starts stalled ligase reactions\n      explanation: Figure1e\
+    \ arrow at 60 min, curve, caption and quantification Methods; timing differs\n\
+    \        from Figure1d.\n      cache_path: evidence/PF01951/popow-2014.txt\n \
+    \     cache_sha256: 98c0611e55dd7847ff60cbe8cbdc3a24d5201a03ab91d6eeb33d4b1822d7e1ba\n\
+    - graph_id: human-complex-dose-response-2014\n  title: Archease concentration\
+    \ changes stalled-complex ligation rate\n  scope: Dose response of a preincubated\
+    \ human RTCB complex under one assay condition.\n  context: ED3b/c; after 90 min\
+    \ at 37 C with 30 nM complex/300 nM RNA, dilution gives 22.5 nM complex/225\n\
+    \    nM RNA. Archease 40 nM-10.25 uM; equilibrate 4 min, sample at 4/5.5/7/8.5\
+    \ min.\n  family_mapping: Recombinant whole human Q8IWT0-associated Archease,\
+    \ canonical reference PF01951 31-167;\n    exact pET28a N-terminal construct unresolved.\
+    \ This is a multiprotein complex assay.\n  taxon: NCBITaxon:9606\n  scope_status:\
+    \ MECHANISTIC\n  limitations: Half-maximal response around 1 uM is not binding\
+    \ Kd or a physiological dose. Highest dose\n    falls below plateau, so no globally\
+    \ monotonic relation is asserted. Preincubation and final concentrations\n   \
+    \ must not be conflated.\n  nodes:\n  - node_id: dose\n    label: Raising Archease\
+    \ from low-nanomolar to micromolar assay range\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q8IWT0\n  - node_id: rate\n    label: Concatemer\
+    \ product formation rate after preincubation\n    node_type: ACTIVITY\n  edges:\n\
+    \  - edge_id: human-archease-dose-rate\n    subject: dose\n    predicate: increases\n\
+    \    object: rate\n    mechanism: Across the rising portion of the dose series,\
+    \ micromolar Archease supports higher product\n      formation rates than low-nanomolar\
+    \ additions, with a response midpoint around 1 uM.\n    directness: DIRECT\n \
+    \   support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:24870230\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/\n\
+    \      snippet: re-starts stalled ligase reactions\n      explanation: ED3b/c\
+    \ dose plot and individual fitted rates visually inspected; three technical replicates.\n\
+    \        The highest-dose downturn is retained as a limit.\n      cache_path:\
+    \ evidence/PF01951/popow-2014.txt\n      cache_sha256: 98c0611e55dd7847ff60cbe8cbdc3a24d5201a03ab91d6eeb33d4b1822d7e1ba\n\
+    - graph_id: human-complex-guanylylation-2014\n  title: Archease enables RTCB guanylylation\
+    \ within the human complex\n  scope: Nucleotidylation of affinity-purified human\
+    \ FLAG-RTCB complexes.\n  context: Figure3c; 10 uM His6-Archease, alpha-32P-GTP,\
+    \ 37 C, 6.5-ul reaction containing 2.5 ul FLAG\n    eluate and 3.25 ul nucleotidylation\
+    \ stock. Duration unspecified in the inspected Methods.\n  family_mapping: Human\
+    \ whole Archease maps Q8IWT0 reference PF01951 31-167; N-terminal recombinant\
+    \ sequence\n    ambiguity retained. Radiolabeled protein is partner RTCB, not\
+    \ Archease.\n  taxon: NCBITaxon:9606\n  scope_status: MECHANISTIC\n  limitations:\
+    \ Stock buffer concentrations are not final reaction concentrations; Mg/salts\
+    \ can also enter\n    with FLAG eluate. No transfer of purified 2024 assay conditions.\
+    \ Alpha-32P-ATP is negative as donor,\n    distinct from ATP's possible DDX1 role.\n\
+    \  nodes:\n  - node_id: addition\n    label: WT Archease added to RTCB complex\
+    \ with labeled GTP\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q8IWT0\n\
+    \  - node_id: rtcb_gmp\n    label: RTCB-associated guanylate radiolabel\n    node_type:\
+    \ STATE\n    grounding:\n    - UniProtKB:Q9Y3I0\n  edges:\n  - edge_id: human-complex-archease-guanylylation\n\
+    \    subject: addition\n    predicate: enables\n    object: rtcb_gmp\n    mechanism:\
+    \ WT Archease enables RTCB labeling from alpha-32P-GTP compared with buffer under\
+    \ the same\n      complex reaction conditions.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:24870230\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/\n      snippet:\
+    \ guanylate RTCB\n      explanation: Figure3c GTP lanes, ATP-negative donor controls\
+    \ and nucleotidylation Methods. No Archease\n        guanylylation or direct active-site\
+    \ motion inferred.\n      cache_path: evidence/PF01951/popow-2014.txt\n      cache_sha256:\
+    \ 98c0611e55dd7847ff60cbe8cbdc3a24d5201a03ab91d6eeb33d4b1822d7e1ba\n- graph_id:\
+    \ human-complex-gtp-archease-2014\n  title: Joint GTP and Archease addition supports\
+    \ continued human ligation\n  scope: Cofactor comparison within the human multiprotein\
+    \ RTCB complex assay.\n  context: Figure3d; 20 nM complex, 500 nM linear intron\
+    \ RNA, 10 uM Archease, with or without 0.5 mM added\n    GTP, 0-60 min; three\
+    \ technical replicates +/- SD.\n  family_mapping: Whole human Archease Q8IWT0\
+    \ reference PF01951 31-167, with recombinant N-terminal ambiguity.\n    HEK293-purified\
+    \ complex is not isolated RTCB.\n  taxon: NCBITaxon:9606\n  scope_status: MECHANISTIC\n\
+    \  limitations: Joint intervention, not independent sufficiency of either addition.\
+    \ Residual product without\n    added GTP can reflect copurified nucleotide; not\
+    \ proof of nucleotide-free chemistry. Pconcat includes\n    circular and linear\
+    \ concatemer, not all ligated products.\n  nodes:\n  - node_id: joint\n    label:\
+    \ Archease plus added GTP in RTCB complex reaction\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:Q8IWT0\n  - node_id: product\n    label: Continued\
+    \ concatemer product accumulation\n    node_type: PROCESS\n  edges:\n  - edge_id:\
+    \ human-joint-gtp-archease-product\n    subject: joint\n    predicate: increases\n\
+    \    object: product\n    mechanism: The joint Archease/GTP condition yields substantially\
+    \ more product than either the Archease-without-added-GTP\n      or GTP-without-Archease\
+    \ comparison.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:24870230\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/\n      snippet: guanylate\
+    \ RTCB\n      explanation: Figure3d four-condition ligation curve directly supports\
+    \ this conjunctive product effect,\n        separately from Figure3c protein labeling.\n\
+    \      cache_path: evidence/PF01951/popow-2014.txt\n      cache_sha256: 98c0611e55dd7847ff60cbe8cbdc3a24d5201a03ab91d6eeb33d4b1822d7e1ba\n\
+    - graph_id: human-complex-archease-mutants-2014\n  title: Named Archease variants\
+    \ impair human complex activation and ligation\n  scope: Separate D39A and K144A\
+    \ recombinant Archease comparisons with WT.\n  context: Figure1f ligation uses\
+    \ 20 nM complex, 1 uM RNA, 10 uM Archease; Figure3c protein labeling uses\n  \
+    \  10 uM Archease and alpha-32P-GTP at 37 C. Assays and outputs remain separate.\n\
+    \  family_mapping: Paper D39A/K144A labels agree with Q8IWT0 v2 canonical ED4\
+    \ positions within PF01951\n    31-167. The pET28a N terminus differs from the\
+    \ FLAG/pDONR primer; complete mutant sequences are not\n    inferred from these\
+    \ labels.\n  taxon: NCBITaxon:9606\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ ED3a confirms purification, not native folding or a unique atomic defect. No\
+    \ elementary\n    mediation chain is inferred between the two measured outputs.\
+    \ These are 2014 complex experiments,\n    distinct from 2024 purified RTCB assays.\n\
+    \  nodes:\n  - node_id: d39a\n    label: Paper D39A Archease versus WT\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q8IWT0\n  - node_id: k144a\n \
+    \   label: Paper K144A Archease versus WT\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q8IWT0\n  - node_id: ligation\n    label: Complex-mediated intron\
+    \ ligation products\n    node_type: ACTIVITY\n  - node_id: activation\n    label:\
+    \ RTCB guanylylation signal in the complex\n    node_type: ACTIVITY\n  edges:\n\
+    \  - edge_id: human-d39a-complex-ligation\n    subject: d39a\n    predicate: decreases\n\
+    \    object: ligation\n    mechanism: The D39A preparation fails to support WT-like\
+    \ RNA product accumulation in the matched complex\n      ligation assay; molecular\
+    \ cause remains unresolved.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:24870230\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/\n      snippet:\
+    \ re-starts stalled ligase reactions\n      explanation: Figure1f D39A time series,\
+    \ ED3a purity and ED4 numbering; purity is not a folding control.\n      cache_path:\
+    \ evidence/PF01951/popow-2014.txt\n      cache_sha256: 98c0611e55dd7847ff60cbe8cbdc3a24d5201a03ab91d6eeb33d4b1822d7e1ba\n\
+    \  - edge_id: human-k144a-complex-ligation\n    subject: k144a\n    predicate:\
+    \ decreases\n    object: ligation\n    mechanism: The K144A preparation fails\
+    \ to support WT-like RNA product accumulation under the same\n      assay conditions.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:24870230\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/\n\
+    \      snippet: re-starts stalled ligase reactions\n      explanation: Figure1f\
+    \ K144A time series, with WT/buffer controls and ED3a purified protein.\n    \
+    \  cache_path: evidence/PF01951/popow-2014.txt\n      cache_sha256: 98c0611e55dd7847ff60cbe8cbdc3a24d5201a03ab91d6eeb33d4b1822d7e1ba\n\
+    \  - edge_id: human-d39a-complex-guanylylation\n    subject: d39a\n    predicate:\
+    \ decreases\n    object: activation\n    mechanism: D39A does not enable the RTCB-associated\
+    \ GTP label detected with WT Archease; the assay\n      does not isolate a specific\
+    \ structural cause.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:24870230\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/\n      snippet: guanylate\
+    \ RTCB\n      explanation: Figure3c D39A lane compared with WT and buffer, with\
+    \ Coomassie loading panel.\n      cache_path: evidence/PF01951/popow-2014.txt\n\
+    \      cache_sha256: 98c0611e55dd7847ff60cbe8cbdc3a24d5201a03ab91d6eeb33d4b1822d7e1ba\n\
+    \  - edge_id: human-k144a-complex-guanylylation\n    subject: k144a\n    predicate:\
+    \ decreases\n    object: activation\n    mechanism: K144A does not enable the\
+    \ RTCB-associated GTP label observed with WT under the matched\n      nucleotidylation\
+    \ conditions.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:24870230\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/\n      snippet: guanylate\
+    \ RTCB\n      explanation: Figure3c K144A lane; effect belongs to the named Archease\
+    \ preparation, not a mutation\n        of RTCB.\n      cache_path: evidence/PF01951/popow-2014.txt\n\
+    \      cache_sha256: 98c0611e55dd7847ff60cbe8cbdc3a24d5201a03ab91d6eeb33d4b1822d7e1ba\n\
+    - graph_id: hela-archease-depletion-extract-2014\n  title: Archease depletion\
+    \ lowers HeLa extract tRNA maturation\n  scope: Extracts from Archease-RNAi-treated\
+    \ HeLa cells versus control cells.\n  context: Figure4a pre-tRNA maturation at\
+    \ 5/10/30/60 min; ED10a mRNA knockdown and ED10b RTCB protein\n    control. RTCB-only\
+    \ and combined depletion are separate source conditions.\n  family_mapping: Human\
+    \ endogenous Archease, Q8IWT0 reference PF01951 31-167; whole-gene RNAi does not\n\
+    \    isolate the domain or endogenous isoform contribution.\n  taxon: NCBITaxon:9606\n\
+    \  scope_status: PHENOTYPIC\n  limitations: Reduced maturation in extract is not\
+    \ direct domain catalysis or complete loss of function.\n    Exact base assay\
+    \ protocol and RNAi timing are not fully recovered. ED10b argues against RTCB\
+    \ protein\n    co-depletion, but does not exclude all indirect effects.\n  nodes:\n\
+    \  - node_id: depletion\n    label: Archease RNAi in HeLa cells\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q8IWT0\n  - node_id: maturation\n\
+    \    label: Mature tRNA production in cell extract\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: hela-archease-depletion-maturation\n    subject: depletion\n\
+    \    predicate: decreases\n    object: maturation\n    mechanism: Extracts from\
+    \ Archease-depleted cells yield less mature tRNA than control extracts in the\n\
+    \      pre-tRNA time course, while RTCB protein is retained.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:24870230\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/\n\
+    \      snippet: tRNA maturation\n      explanation: Figure4a Archease-only RNAi\
+    \ lanes, ED10a/b controls and Results; no quantitative fold\n        change inferred\
+    \ from gel darkness.\n      cache_path: evidence/PF01951/popow-2014.txt\n    \
+    \  cache_sha256: 98c0611e55dd7847ff60cbe8cbdc3a24d5201a03ab91d6eeb33d4b1822d7e1ba\n\
+    - graph_id: hela-archease-rescue-extract-2014\n  title: WT but not named mutant\
+    \ Archease restores extract maturation\n  scope: Complementation of Archease-depleted\
+    \ HeLa cells before extract assays.\n  context: Figure4b/c; empty vector or c-myc-tagged\
+    \ WT, D39A or K144A Archease expressed in RNAi-treated\n    cells; pre-tRNA maturation\
+    \ measured at 15 and 45 min, with expression Western.\n  family_mapping: Q8IWT0\
+    \ v2 canonical D39/K144 lie within PF01951 31-167, matching ED4 labels. Methods\n\
+    \    subclone mutants into a myc vector; exact full mutant clone sequences are\
+    \ not supplied. These are\n    Archease constructs, not DDX1 rescue.\n  taxon:\
+    \ NCBITaxon:9606\n  scope_status: PHENOTYPIC\n  limitations: Archease-specific\
+    \ rescue supports perturbation attribution without proving an isolated-domain\n\
+    \    mechanism. Western confirms expression, not native folding or precise abundance\
+    \ matching. WT-versus-vector\n    and mutant-versus-WT are distinct comparisons.\n\
+    \  nodes:\n  - node_id: wt_rescue\n    label: c-myc WT Archease versus empty vector\
+    \ in depleted cells\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8IWT0\n\
+    \  - node_id: d39a_rescue\n    label: c-myc D39A versus WT in depleted cells\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8IWT0\n  - node_id:\
+    \ k144a_rescue\n    label: c-myc K144A versus WT in depleted cells\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q8IWT0\n  - node_id: maturation\n\
+    \    label: Mature tRNA production in complemented-cell extract\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: hela-wt-archease-rescue\n    subject: wt_rescue\n\
+    \    predicate: increases\n    object: maturation\n    mechanism: WT Archease\
+    \ expression restores extract maturation relative to empty vector in the Archease-depleted\n\
+    \      background.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:24870230\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/\n      snippet: tRNA maturation\n\
+    \      explanation: Figure4b WT versus EV lanes and Figure4c expression control;\
+    \ this rescue is specific\n        to the 2014 HeLa context.\n      cache_path:\
+    \ evidence/PF01951/popow-2014.txt\n      cache_sha256: 98c0611e55dd7847ff60cbe8cbdc3a24d5201a03ab91d6eeb33d4b1822d7e1ba\n\
+    \  - edge_id: hela-d39a-archease-rescue-defect\n    subject: d39a_rescue\n   \
+    \ predicate: decreases\n    object: maturation\n    mechanism: Expressed D39A\
+    \ fails to restore WT-like maturation in the depleted-cell extract, without\n\
+    \      isolating the structural reason for the defect.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24870230\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/\n\
+    \      snippet: tRNA maturation\n      explanation: Figure4b D39A versus WT and\
+    \ Figure4c myc detection; not absence of mutant expression.\n      cache_path:\
+    \ evidence/PF01951/popow-2014.txt\n      cache_sha256: 98c0611e55dd7847ff60cbe8cbdc3a24d5201a03ab91d6eeb33d4b1822d7e1ba\n\
+    \  - edge_id: hela-k144a-archease-rescue-defect\n    subject: k144a_rescue\n \
+    \   predicate: decreases\n    object: maturation\n    mechanism: Expressed K144A\
+    \ fails to restore the maturation activity supported by WT Archease in the\n \
+    \     same depleted background.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:24870230\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/\n      snippet:\
+    \ tRNA maturation\n      explanation: Figure4b K144A versus WT and Figure4c expression\
+    \ control; no exact residue-only causal\n        mechanism is assigned.\n    \
+    \  cache_path: evidence/PF01951/popow-2014.txt\n      cache_sha256: 98c0611e55dd7847ff60cbe8cbdc3a24d5201a03ab91d6eeb33d4b1822d7e1ba\n\
+    - graph_id: hela-archease-tagged-trna-2014\n  title: Archease depletion lowers\
+    \ tagged tRNA accumulation in human cells\n  scope: Doxycycline-induced yeast\
+    \ pre-tRNA transgene in HeLa T-Rex host cells.\n  context: Figure4e; 1 ug/ml doxycycline,\
+    \ tagged S. cerevisiae pre-tRNA3-PheGAA, Northern at 0/24/48 h\n    after induction,\
+    \ 3'-exon probe and U6 loading control, Archease RNAi versus control.\n  family_mapping:\
+    \ Perturbed protein is human Archease, Q8IWT0 reference PF01951 31-167. Human\
+    \ host and\n    yeast RNA substrate are distinct; neither a yeast Archease knockout\
+    \ nor endogenous human tRNA measurement.\n  taxon: NCBITaxon:9606\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: Mature RNA abundance does not separately measure\
+    \ synthesis, processing and stability. No\n    numerical fold change or universal\
+    \ tRNA defect is inferred. ED10d caption cross-reference differs\n    from the\
+    \ main Results and is not silently reassigned.\n  nodes:\n  - node_id: depletion\n\
+    \    label: Archease RNAi in transgene-bearing HeLa T-Rex cells\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q8IWT0\n  - node_id: mature\n\
+    \    label: Mature tagged yeast tRNA abundance in human host\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: hela-archease-tagged-trna-abundance\n    subject: depletion\n\
+    \    predicate: decreases\n    object: mature\n    mechanism: Archease-depleted\
+    \ cells accumulate less mature tagged transgene-derived tRNA than controls\n \
+    \     after induction, with U6 as a loading control.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24870230\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/\n\
+    \      snippet: tRNA maturation\n      explanation: Figure4e Northern and induction/probe\
+    \ Methods; living-cell abundance is not conflated\n        with the Figure4a/b\
+    \ extract maturation assay.\n      cache_path: evidence/PF01951/popow-2014.txt\n\
+    \      cache_sha256: 98c0611e55dd7847ff60cbe8cbdc3a24d5201a03ab91d6eeb33d4b1822d7e1ba\n\
+    curation_events:\n- timestamp: '2026-10-12T08:52:08Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate scoped Archease activation, ligation\
+    \ and RNA-processing graphs\n  history_record: history/records/PF01951/2026-10-12T085208Z-codex-b29ac6.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-12T09:03:30Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Retain\
+    \ partial scientific review of Archease causal graphs\n  history_record: history/records/PF01951/2026-10-12T090330Z-codex-1d461a.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-12T09:18:10Z'\n\
+    \  curator: Codex\n  action: EDIT\n  outcome: changed\n  summary: Extend Archease\
+    \ mutant, RtcB rescue and PAB1946 methyltransferase-support graphs\n  history_record:\
+    \ history/records/PF01951/2026-10-12T091810Z-codex-557925.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-12T09:31:29Z'\n  curator: Codex\n\
+    \  action: REVIEW\n  outcome: needs_followup\n  summary: Retain partial successor\
+    \ review of Archease mutant and methyltransferase-support graphs\n  history_record:\
+    \ history/records/PF01951/2026-10-12T093129Z-codex-ff77c0.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-12T09:54:19Z'\n  curator: Codex\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Add scoped bacterial turnover\
+    \ and human complex, depletion and rescue graphs\n  history_record: history/records/PF01951/2026-10-12T095419Z-codex-81b235.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: concern
+  summary: Thermus Q5SHI5 and Q72HV1 sequence version1 both map PF01951 6-139, but
+    the paper does not identify its exact clone or strain; assay nodes remain without
+    candidate accession grounding. Archaeal O59205 v1/PH1536 reference mapping is
+    retained for its His6 derivative, without assigning the bacterial partner an archaeal
+    taxon. Human Q8IWT0 v2 PF01951 31-167 and canonical D39/K144 labels agree with
+    ED4, but FLAG/pDONR and pET28a primers imply different N termini; complete recombinant
+    mutant clones remain unresolved. Human host, yeast RNA transgene, E. coli Archease
+    production and HEK293-purified multiprotein complex are distinct owners.
+  target_ids:
+  - PF01951
+  evidence_ids:
+  - identity
+  - primary
+  - human-complex-and-rescue
+  - incremental-coverage
+  - original-identity
+  - methyltransferase-identity
+  - gerber-2024
+  - desai-2014
+  - desai-2014-mutants
+  - auxilien-2007
+  - suzuki-2025
+  - original-coverage
+  - previous-coverage
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Linear bacterial RNA is circularized, not initially cyclic. Thermus rate
+    acceleration and substrate-excess turnover are separate contexts; Thermobifida's
+    7% decrease and 19% increase are weak reported mean changes without significance
+    claims, not comparable turnover activation. Human initial addition, delayed restart,
+    dose response, protein labeling and joint GTP/Archease product accumulation are
+    separate complex assays. Four mutant/output edges remain molecularly unresolved.
+    HeLa depletion, WT rescue and two mutant rescue defects are extract outcomes;
+    the transgene Northern measures mature tagged yeast RNA in human cells. No Archease-alone
+    ligase, domain-specific catalysis, observed product-release trajectory, evolutionary
+    necessity or untested ATP mechanism is introduced. Earlier 19 graphs compare exactly
+    to the predecessor's embedded projection.
+  target_ids:
+  - PF01951
+  evidence_ids:
+  - primary
+  - native
+  - human-complex-and-rescue
+  - incremental-coverage
+  - original-identity
+  - methyltransferase-identity
+  - gerber-2024
+  - desai-2014
+  - desai-2014-mutants
+  - auxilien-2007
+  - suzuki-2025
+  - original-coverage
+  - previous-coverage
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Adds the inspected Desai2015 branch and principal Popow2014 Archease-specific
+    biochemical and cellular contexts, not exhaustive family coverage. Exact bacterial
+    clones, human mutant constructs, Popow2011 base protocol, DDX1/cofactor/partner
+    depletion controls and ED7-9 images remain unresolved. Other open work includes
+    Jurkin/XBP1, fly allele/rescue/localization, worm/yeast/PYROXD1/zebrafish, additional
+    biochemical contexts and Auxilien image access/preparation discrepancies. All
+    earlier corpus follow-ups remain in scope.
+  target_ids:
+  - PF01951
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01951-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve remaining Archease construct, partner and cellular contexts
+  description: Keep pf01951-causal-context-coverage OPEN. Complete missing construct/protocol
+    and DDX1/partner control audits without shifting partner mutations onto Archease,
+    resolve source label/preparation discrepancies, and continue original cellular
+    and other-member evidence. Curate only supported scoped edges with append-only
+    history and successor reviews; no inaccessible source is treated as proof that
+    an experiment does not exist.
+  target_ids:
+  - PF01951
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - human-complex-and-rescue
+  - incremental-coverage
+  - original-identity
+  - methyltransferase-identity
+  - gerber-2024
+  - desai-2014
+  - desai-2014-mutants
+  - auxilien-2007
+  - suzuki-2025
+  - original-coverage
+  - previous-coverage
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01951.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Keep pf01951-causal-context-coverage OPEN. Complete missing construct/protocol
+    and DDX1/partner control audits without shifting partner mutations onto Archease,
+    resolve source label/preparation discrepancies, and continue original cellular
+    and other-member evidence. Curate only supported scoped edges with append-only
+    history and successor reviews; no inaccessible source is treated as proof that
+    an experiment does not exist.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01951
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Desai2015 Figures1-4 and Popow2014 main Figures1/3/4 plus ED3/4/5/6/10 images inspected.
+  All Popow Extended Data captions read, but ED7-9 images and the cited Popow2011
+  supplement not recovered/inspected. Prior nine ledgers preserve their original inspection
+  limits, including Auxilien text-only figures. No raw-data reanalysis or independent
+  expert audit.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+- Successor to reviews/structured/20261012T093010Z-pf01951-archease-mutants-and-methyltransferase-support/review.yaml,
+  semantic digest 5f05696c89ed8cb2208773f9b4e2530c6c3853f09b5fd2b531fb8c27a857bd6c.
+  The same issue key remains OPEN; prior reviews/history/source ledgers are not rewritten.
+- The prior general no-Archease-rescue limitation is updated only for the newly inspected
+  Popow2014 HeLa assay. Suzuki2025 U2OS retains its own no-Archease-rescue and population
+  heterogeneity limits.
+```

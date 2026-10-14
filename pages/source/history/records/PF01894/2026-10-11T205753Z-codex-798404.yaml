@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01894
+  path: data/families/PF01894.yaml
+session:
+  id: 2026-10-11T205753Z-codex-798404
+  timestamp: '2026-10-11T20:57:53Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain a partial scientific self-review of YjbQ growth graphs and unresolved
+    mechanisms.
+  details: Reviewed the effective projection and primary evidence for three PHENOTYPIC
+    graphs with five INDIRECT OBSERVED effects. Confirmed exact reference-domain mapping,
+    recovered supplement context, displayed plate and table evidence, construct and
+    antibiotic discrepancies, and the distinction between qualitative rescue and unmeasured
+    chemistry. Saved a digest-bound NEEDS_FOLLOWUP/pass_with_limitations review with
+    open construct, biochemical and family-coverage follow-up. This is same-agent
+    partial review, not independent expert endorsement; retain IN_PROGRESS. Browser
+    and full-corpus reproduction checks follow separately; no publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T205809Z-pf01894-yjbq-growth-rescue-and-construct-limits/review.yaml

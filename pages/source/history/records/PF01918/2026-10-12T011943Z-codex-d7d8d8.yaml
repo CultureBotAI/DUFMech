@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01918
+  path: data/families/PF01918.yaml
+session:
+  id: 2026-10-12T011943Z-codex-d7d8d8
+  timestamp: '2026-10-12T01:19:43Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review scoped Alba graphs and preserve native PTM, construct and family-coverage
+    gaps
+  details: Same-agent partial scientific review of sixteen graphs/fifty-three observed
+    effects, primary figure and source quotation checks, current member/domain mappings,
+    and native projection equivalence. NEEDS_FOLLOWUP with open causal-context coverage;
+    no independent expert endorsement or full-family completion.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T011947Z-pf01918-alba-dna-rna-and-nuclease-assay-contexts/review.yaml

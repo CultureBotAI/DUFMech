@@ -1,0 +1,477 @@
+# PF01954 AF2212 prediction, structure and cross-family causal boundaries
+
+- Review: 20261012T105749Z-pf01954-af2212-prediction-structure-and-cross-family-boundaries
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-12T10:57:38Z
+- Finished UTC: 2026-10-12T10:57:49Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Scoped scientific self-review supports retaining PF01954 without causal edges for the inspected evidence. The two original family references are comparative studies; 2NWT is a tagged structural construct, and a later TA experiment tests four proteins annotated to other Pfam families. Three OPEN discussions preserve functional-evidence, construct/metadata and cross-family-transfer gaps. No exhaustive absence or family completion is claimed.
+
+## Scope And Provenance
+
+Scientific assessment of graphless disposition, verified AF2212 identity, primary comparative/structural contexts, and exclusion of a later experimental cross-family transfer.
+
+Selection: Next uncurated family in the actual retained accession list after PF01951; PF01952 is absent from the corpus, rather than a missing record to create.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01954 | data/families/PF01954.yaml | generated | PF01954 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01954 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01954.
+
+O28071 sequence1 is61aa, AF_2212/vapB21, A. fulgidus VC-16 taxon224325. Current PF01954 interval1-34 differs from RCSB Pfam34.0 interval1-57; whole-protein and profile scopes remain distinct. Twenty reviewed UniProt entries retain possible-antitoxin FUNCTION wording and do not constitute a440-member functional audit.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01954.
+
+No directed PF01954 effect is supported by the inspected material. Leaving causal_graphs absent is preferable to promoting structural assembly, gene adjacency or another family's growth phenotype to an observed edge. This is a scoped evidentiary disposition, not a proof that no causal experiment exists.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01954.
+
+Additional mapped members, original supplementary inventories, later primary full papers and unresolved construct/profile/deposition metadata remain open. All440 frozen proteins and previous curated families retain their coverage requirements; this partial review does not complete the corpus goal.
+
+## Findings
+
+### additional-contexts: PF01954 requires member-specific functional evidence and reconciled construct scope
+
+minor / open / confirmed; issue key: pf01954-causal-context-coverage.
+
+Obtain a verified PF01954 perturbation, biochemical or rescue experiment; inspect source controls and exact constructs; reconcile historical profile intervals and deposition metadata. Do not transfer the Li/Xu2025 cassette effects from PF02697, PF26688 or PF10047. Assess the remaining members and inaccessible or uninspected primary contexts in a successor review.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Obtain a verified PF01954 perturbation, biochemical or rescue experiment; inspect source controls and exact constructs; reconcile historical profile intervals and deposition metadata. Do not transfer the Li/Xu2025 cassette effects from PF02697, PF26688 or PF10047. Assess the remaining members and inaccessible or uninspected primary contexts in a successor review.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://link.springer.com/article/10.1186/1745-6150-4-19; Makarova2009 COG2880 Results, Methods, Table2 and original Figure4C; Pandey2005 publisher Methods and selected Results. | supports | Comparative prediction and an alignment do not establish an AF2212 directed effect. The verified Makarova DOI ends4-19, not InterPro's4-29. Original supplementary inventories remain uninspected. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01954/protein/uniprot/O28071/; Accession and domain locations; paired UniProt identity facts | supports | O28071 sequence1 is61aa, AF_2212/vapB21, A. fulgidus VC-16 taxon224325. Current PF01954 interval1-34 differs from RCSB Pfam34.0 interval1-57; whole-protein and profile scopes remain distinct. Twenty reviewed UniProt entries retain possible-antitoxin FUNCTION wording and do not constitute a440-member functional audit. |
+| structural-context | https://data.rcsb.org/rest/v1/core/polymer_entity/2NWT/1; 2NWT entry/entity1 and BMRB7362 construct, source and sample/conditions fields. | supports | Direct comparison verifies native61 residues plus LEHHHHHH. Twenty NMR conformers are not replicates; source-strain and salt metadata discrepancies remain unresolved. No neutralization or dimerization-requirement assay is supplied. |
+| later-ta-exclusion | https://ndownloader.figshare.com/files/54868517; Li/Xu2025 SupplementFigureS2/caption, TableS1 entries and original PDFpage3; paired exact UniProt locus query. | supports | The four named heterologous antitoxins map to PF02697, PF26688 or PF10047, not PF01954. T. kodakarensis host identity does not establish TK0335 as the tested antitoxin. Main-paper coverage remains limited. |
+| search-coverage | https://rest.uniprot.org/uniprotkb/search?query=xref%3Apfam-PF01954%20AND%20reviewed%3Atrue&amp;format=json&amp;size=500; Twenty-entry annotation screen and dated accession/alias/member research ledger. | supports | Explicitly separates searched evidence, access failures, uninspected later leads and noncausal annotations. No whole-family absence claim or artificial graph is made. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01954 | data/families/PF01954.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Makarova Figure4C and Li/Xu SupplementFigureS2 on PDFpage3 were visually inspected. Other original figures, Pandey TableS2, Makarova supplements and the Li/Xu main text were not comprehensively inspected; browser challenges/HTTP403/HTTP500 are access limits, not negative evidence.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+- Five minimal evidence ledgers are hash-anchored by this retained review; full papers and raw database downloads remain temporary research material.
+- The initial PF01952 next-accession note was incorrect; the actual corpus list identifies PF01954, with PF01955 next after this disposition. No absent accession is added.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T105749Z-pf01954-af2212-prediction-structure-and-cross-family-boundaries
+title: PF01954 AF2212 prediction, structure and cross-family causal boundaries
+started_at: '2026-10-12T10:57:38Z'
+finished_at: '2026-10-12T10:57:49Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Scoped scientific self-review supports retaining PF01954 without causal edges
+  for the inspected evidence. The two original family references are comparative studies;
+  2NWT is a tagged structural construct, and a later TA experiment tests four proteins
+  annotated to other Pfam families. Three OPEN discussions preserve functional-evidence,
+  construct/metadata and cross-family-transfer gaps. No exhaustive absence or family
+  completion is claimed.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01954.yaml
+    sha256: bab2c9a597f71b0fdac2412a077a0266cfb6a21868fb58ee7db678c7a11fffc0
+    role: context
+  - path: data/families/PF01954.yaml
+    sha256: f9995a5902e7aa56d28d400746af98c9921eb72c2907847580869363056f75c5
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01954/primary-contexts-20261012.txt
+    role: context
+    sha256: 46b0cb3747935ff836a4cdfe849fcdbde5cdc9a97032a1c9063b76cab26ad771
+  - path: evidence/PF01954/identity-20261012.txt
+    role: context
+    sha256: 9ea91725d7a04deee888fd3ac910b8de155fde6bea6b132ea441b0f83a48db7a
+  - path: evidence/PF01954/structure-20261012.txt
+    role: context
+    sha256: ddcf4a683ab0fde1fbb86c278f05c174563a14f196c0642a375367e57e7fbcc9
+  - path: evidence/PF01954/later-ta-exclusion-20261012.txt
+    role: context
+    sha256: dcec237b0370b65f99d2ec602d156325d4f82acf64d371a5afe7fdc1d1cd3ba1
+  - path: evidence/PF01954/search-coverage-20261012.txt
+    role: context
+    sha256: ee78c2bde70d58fd94bde36d341b055a7c5da1731ed021eaaf4d73126d9184cc
+targets:
+- target_id: PF01954
+  path: data/families/PF01954.yaml
+  label: PF01954
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01954.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 353d02ad59639beefe3bcb4912cb972259e71204dc3961a15459cae71ed9da48
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of graphless disposition, verified AF2212 identity,
+    primary comparative/structural contexts, and exclusion of a later experimental
+    cross-family transfer.
+  selection: Next uncurated family in the actual retained accession list after PF01951;
+    PF01952 is absent from the corpus, rather than a missing record to create.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01954
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Additional mapped members, original supplementary inventories, later primary
+      full papers and unresolved construct/profile/deposition metadata remain open.
+      All440 frozen proteins and previous curated families retain their coverage requirements;
+      this partial review does not complete the corpus goal.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01954
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://link.springer.com/article/10.1186/1745-6150-4-19
+  locator: Makarova2009 COG2880 Results, Methods, Table2 and original Figure4C; Pandey2005
+    publisher Methods and selected Results.
+  accessed_at: '2026-10-12T10:57:49Z'
+  support: supports
+  snapshot_sha256: 46b0cb3747935ff836a4cdfe849fcdbde5cdc9a97032a1c9063b76cab26ad771
+  summary: Comparative prediction and an alignment do not establish an AF2212 directed
+    effect. The verified Makarova DOI ends4-19, not InterPro's4-29. Original supplementary
+    inventories remain uninspected.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01954/protein/uniprot/O28071/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-12T10:57:49Z'
+  support: supports
+  snapshot_sha256: 9ea91725d7a04deee888fd3ac910b8de155fde6bea6b132ea441b0f83a48db7a
+  summary: O28071 sequence1 is61aa, AF_2212/vapB21, A. fulgidus VC-16 taxon224325.
+    Current PF01954 interval1-34 differs from RCSB Pfam34.0 interval1-57; whole-protein
+    and profile scopes remain distinct. Twenty reviewed UniProt entries retain possible-antitoxin
+    FUNCTION wording and do not constitute a440-member functional audit.
+- evidence_id: structural-context
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/polymer_entity/2NWT/1
+  locator: 2NWT entry/entity1 and BMRB7362 construct, source and sample/conditions
+    fields.
+  summary: Direct comparison verifies native61 residues plus LEHHHHHH. Twenty NMR
+    conformers are not replicates; source-strain and salt metadata discrepancies remain
+    unresolved. No neutralization or dimerization-requirement assay is supplied.
+  accessed_at: '2026-10-12T10:57:49Z'
+  support: supports
+  snapshot_sha256: ddcf4a683ab0fde1fbb86c278f05c174563a14f196c0642a375367e57e7fbcc9
+- evidence_id: later-ta-exclusion
+  kind: primary_source
+  reference: https://ndownloader.figshare.com/files/54868517
+  locator: Li/Xu2025 SupplementFigureS2/caption, TableS1 entries and original PDFpage3;
+    paired exact UniProt locus query.
+  summary: The four named heterologous antitoxins map to PF02697, PF26688 or PF10047,
+    not PF01954. T. kodakarensis host identity does not establish TK0335 as the tested
+    antitoxin. Main-paper coverage remains limited.
+  accessed_at: '2026-10-12T10:57:49Z'
+  support: supports
+  snapshot_sha256: dcec237b0370b65f99d2ec602d156325d4f82acf64d371a5afe7fdc1d1cd3ba1
+- evidence_id: search-coverage
+  kind: search
+  reference: https://rest.uniprot.org/uniprotkb/search?query=xref%3Apfam-PF01954%20AND%20reviewed%3Atrue&format=json&size=500
+  locator: Twenty-entry annotation screen and dated accession/alias/member research
+    ledger.
+  search_scope: Accession PF01954, DUF104, UPF0165, COG2880, AF2212/AF_2212/O28071,
+    vapB21, TK0334/TK0335 and MJ0975 with functional terms; primary citation tracing
+    and later TA supplement member mapping. Not an exhaustive literature or all-member
+    search.
+  summary: Explicitly separates searched evidence, access failures, uninspected later
+    leads and noncausal annotations. No whole-family absence claim or artificial graph
+    is made.
+  accessed_at: '2026-10-12T10:57:49Z'
+  support: supports
+  snapshot_sha256: ee78c2bde70d58fd94bde36d341b055a7c5da1731ed021eaaf4d73126d9184cc
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-12T10:57:49Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01954
+  kind: record_content
+  reference: data/families/PF01954.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-12T10:57:49Z'
+  support: context_only
+  snapshot_sha256: f9995a5902e7aa56d28d400746af98c9921eb72c2907847580869363056f75c5
+  quote: "id: Pfam:PF01954\npfam_id: PF01954\nname: AF2212-like\nshort_name: AF2212-like\n\
+    seed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status: IN_PROGRESS\n\
+    source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01954\ncounters:\n\
+    \  proteins: 440\n  matches: 440\n  proteomes: 202\n  taxa: 642\n  structures:\
+    \ 1\n  alphafold_models: 371\n  domain_architectures: 2\nprovenance:\n  snapshot_id:\
+    \ interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR008203\ndescription: This family includes short bacterial\
+    \ and archaebacterial proteins thought to be antitoxin\n  components of the a\
+    \ type II toxin-antitoxin (TA) system. This entry includes AF2212 from Archaeoglobus\n\
+    \  fulgidus which has sequence similarity with the AbrB superfamily of DNA-binding\
+    \ proteins, identified\n  as antitoxins [[cite:PUB00056596],[cite:PUB00056164]].\
+    \ The secondary structure of AF2212 revealed at\n  least three beta-strands that\
+    \ are most conserved in other AbrB superfamily members [[cite:PUB00056164]].\n\
+    curation_history: history/records/PF01954\ndiscussions:\n- discussion_id: af2212-member-specific-causal-evidence\n\
+    \  prompt: Obtain a mapped PF01954 member-specific perturbation or biochemical\
+    \ assay before adding causal\n    edges.\n  kind: CURATION_TODO\n  status: OPEN\n\
+    \  rationale: The inspected evidence supports a predicted antitoxin role, not\
+    \ observed AF2212-mediated\n    toxin neutralization, transcriptional regulation\
+    \ or RNA protection. Genomic adjacency, an AbrB-related\n    alignment and an\
+    \ NMR structure do not establish a directed biological effect.\n  evidence:\n\
+    \  - reference: PMID:19493340\n    supports: PARTIAL\n    evidence_source: primary_comparative_study\n\
+    \    explanation: Makarova2009 COG2880 Results, Methods, Table2 and original Figure4C\
+    \ were inspected. The\n      alignment and adjacent PIN-domain genes motivate\
+    \ a hypothesis, not an AF2212 functional assay. Publisher\n      DOI10.1186/1745-6150-4-19\
+    \ differs from InterPro PUB00056164's4-29; the frozen description is preserved.\n\
+    \  - reference: PMID:15718296\n    supports: PARTIAL\n    evidence_source: selected_primary_full_text\n\
+    \    explanation: Pandey2005 Methods and selected Results describe a computational\
+    \ genome survey. Its cited\n      E. coli experiments are not AF2212 experiments;\
+    \ TableS2 locus rows remain uninspected. UniProt O28071\n      classifies this\
+    \ reference as possible function.\n  posed_by: Codex\n  posed_date: '2026-10-12'\n\
+    \  notes: No causal edge is supported by the inspected PF01954-specific material,\
+    \ not an exhaustive absence\n    claim. All20 returned reviewed-UniProt FUNCTION\
+    \ comments remain qualified predictions. Additional\n    members, original supplementary\
+    \ mappings and later primary studies remain open. Minimal evidence and\n    search\
+    \ limits are retained under evidence/PF01954; no dummy graph is added.\n- discussion_id:\
+    \ af2212-construct-and-domain-scope\n  prompt: Reconcile AF2212 profile intervals\
+    \ and deposition metadata before domain-specific causal interpretation.\n  kind:\
+    \ CURATION_TODO\n  status: OPEN\n  rationale: O28071 sequence1 is61aa from Archaeoglobus\
+    \ fulgidus VC-16, taxon224325. Current InterPro\n    maps PF01954 to1-34, whereas\
+    \ RCSB's Pfam34.0 annotation maps1-57. Neither interval is an experimentally\n\
+    \    established active domain.\n  evidence:\n  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01954/protein/uniprot/O28071/\n\
+    \    supports: SUPPORT\n    evidence_source: database\n    explanation: The current\
+    \ member-specific match is1-34 inclusive. UniProt entry109 identifies AF_2212/vapB21\n\
+    \      and describes a possible antitoxin with potential VapC21 partner; reviewed\
+    \ annotation is not experimental\n      characterization.\n  - reference: doi:10.2210/pdb2nwt/pdb\n\
+    \    supports: SUPPORT\n    evidence_source: structural_deposition\n    explanation:\
+    \ 2NWT entity1 is exactly O28071 residues1-61 plus LEHHHHHH at62-69, with chainsA/B.\
+    \ Twenty\n      submitted NMR conformers are not biological replicates. The deposition's\
+    \ XL-10 gene-source strain\n      field is not reconciled with the Archaeoglobus\
+    \ reference strain. The structure does not test toxin\n      neutralization or\
+    \ a requirement for dimerization.\n  - reference: https://bmrb.io/data_library/summary/index.php?bmrbId=7362\n\
+    \    supports: PARTIAL\n    evidence_source: structural_deposition\n    explanation:\
+    \ BMRB7362 lists5mMNaCl in the sample but100mM ionic strength in conditions; PDB\
+    \ reports100mMNaCl.\n      These discrepancies remain unresolved. pH5.5 and298K\
+    \ describe an NMR sample, not a functional optimum.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-12'\n  notes: Keep the native61-residue protein, the69-residue tagged\
+    \ construct, versioned profile intervals\n    and source/expression-host identities\
+    \ separate. A residue-level antitoxin mechanism is not demonstrated.\n- discussion_id:\
+    \ af2212-exclude-cross-family-ta-transfers\n  prompt: Keep the2025 Thermococcus\
+    \ cassette experiments separate from PF01954 until an exact tested-member\n  \
+    \  mapping supports transfer.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ Li/Xu2025 SupplementFigureS2 tests heterologous antitoxins PYCH_18830, PYCH_17730,\
+    \ PF0775\n    andPF0838 in T. kodakarensis TS559. The host species does not identify\
+    \ the experimental antitoxin\n    as native TK0335 or AF2212.\n  evidence:\n \
+    \ - reference: PMID:40424603\n    supports: SUPPORT\n    evidence_source: primary_supplement_and_database_mapping\n\
+    \    explanation: Inspected FigureS2/caption, TableS1 entries and the original\
+    \ PDFpage3 image, then resolved\n      the four loci through UniProt. F8AID5 maps\
+    \ PF02697; F8AHX5 andQ8U2Q7 map PF26688; Q8U2J6 maps PF10047.\n      None includes\
+    \ PF01954 in the inspected annotations. The PF0775 panelB pressure comparison\
+    \ is NS.\n      No PF01954 growth or neutralization edge is transferred.\n  posed_by:\
+    \ Codex\n  posed_date: '2026-10-12'\n  notes: Main-text access returned403; the\
+    \ accessible author supplement does not establish complete paper\n    coverage.\
+    \ Follow these experiments in their correctly mapped families with full controls\
+    \ and construct\n    checks. Generic VapB names, STRING associations and vendor\
+    \ protein listings are not substitute evidence.\ncuration_events:\n- timestamp:\
+    \ '2026-10-12T10:54:59Z'\n  curator: Codex\n  action: CREATE\n  outcome: changed\n\
+    \  summary: Retain PF01954 graphless scientific assessment and mapped evidence\
+    \ gaps\n  history_record: history/records/PF01954/2026-10-12T105459Z-codex-493673.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: O28071 sequence1 is61aa, AF_2212/vapB21, A. fulgidus VC-16 taxon224325.
+    Current PF01954 interval1-34 differs from RCSB Pfam34.0 interval1-57; whole-protein
+    and profile scopes remain distinct. Twenty reviewed UniProt entries retain possible-antitoxin
+    FUNCTION wording and do not constitute a440-member functional audit.
+  target_ids:
+  - PF01954
+  evidence_ids:
+  - identity
+  - primary
+  - structural-context
+  - later-ta-exclusion
+  - search-coverage
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: No directed PF01954 effect is supported by the inspected material. Leaving
+    causal_graphs absent is preferable to promoting structural assembly, gene adjacency
+    or another family's growth phenotype to an observed edge. This is a scoped evidentiary
+    disposition, not a proof that no causal experiment exists.
+  target_ids:
+  - PF01954
+  evidence_ids:
+  - primary
+  - native
+  - structural-context
+  - later-ta-exclusion
+  - search-coverage
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Additional mapped members, original supplementary inventories, later primary
+    full papers and unresolved construct/profile/deposition metadata remain open.
+    All440 frozen proteins and previous curated families retain their coverage requirements;
+    this partial review does not complete the corpus goal.
+  target_ids:
+  - PF01954
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01954-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: PF01954 requires member-specific functional evidence and reconciled construct
+    scope
+  description: Obtain a verified PF01954 perturbation, biochemical or rescue experiment;
+    inspect source controls and exact constructs; reconcile historical profile intervals
+    and deposition metadata. Do not transfer the Li/Xu2025 cassette effects from PF02697,
+    PF26688 or PF10047. Assess the remaining members and inaccessible or uninspected
+    primary contexts in a successor review.
+  target_ids:
+  - PF01954
+  field_paths:
+  - discussions
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - structural-context
+  - later-ta-exclusion
+  - search-coverage
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01954.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Obtain a verified PF01954 perturbation, biochemical or rescue experiment;
+    inspect source controls and exact constructs; reconcile historical profile intervals
+    and deposition metadata. Do not transfer the Li/Xu2025 cassette effects from PF02697,
+    PF26688 or PF10047. Assess the remaining members and inaccessible or uninspected
+    primary contexts in a successor review.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01954
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Makarova Figure4C and Li/Xu SupplementFigureS2 on PDFpage3 were visually inspected.
+  Other original figures, Pandey TableS2, Makarova supplements and the Li/Xu main
+  text were not comprehensively inspected; browser challenges/HTTP403/HTTP500 are
+  access limits, not negative evidence.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+- Five minimal evidence ledgers are hash-anchored by this retained review; full papers
+  and raw database downloads remain temporary research material.
+- The initial PF01952 next-accession note was incorrect; the actual corpus list identifies
+  PF01954, with PF01955 next after this disposition. No absent accession is added.
+```

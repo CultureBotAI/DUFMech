@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01914
+  path: curation/families/PF01914.yaml
+session:
+  id: 2026-10-12T003919Z-codex-ec1842
+  timestamp: '2026-10-12T00:39:19Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate PF01914 SnatA, MarC and YchE condition-specific cellular graphs
+  details: Add 13 PHENOTYPIC graphs with 39 OBSERVED INDIRECT experimental effects,
+    eight minimal identity/evidence/coverage ledgers and two OPEN discussions. Resolve
+    exact SnatA and ATCC25922 sequence mappings while retaining clone, assay, background
+    and conflicting antibiotic limits. Keep IN_PROGRESS and frozen imported fields
+    unchanged.

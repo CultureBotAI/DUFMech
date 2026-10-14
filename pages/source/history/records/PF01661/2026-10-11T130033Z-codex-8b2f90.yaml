@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01661
+  path: data/families/PF01661.yaml
+session:
+  id: 2026-10-11T130033Z-codex-8b2f90
+  timestamp: '2026-10-11T13:00:33Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped scientific self-review of Af1521 causal graphs
+  details: Reviewed five graphs/eight observed effects against member identity, primary
+    figures/tables and supplementary assay Methods. Seven direct effects remain distinct
+    from the unwashed-NAD GST assay with unresolved directness. Preserved extra-domain
+    D20/Y176 mapping, source discrepancies, partial signal removal and missing construct/dose/product
+    details. Saved NEEDS_FOLLOWUP partial self-review for semantic digest9bc1bc7f8795dd5ae1dc6241b6b077aaf4b1e774488af855dd2d51efac463637.
+    No independent expert endorsement, family-wide coverage or publication is claimed;
+    status remains IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T130027Z-pf01661-af1521-binding-and-demodification-contexts/review.yaml

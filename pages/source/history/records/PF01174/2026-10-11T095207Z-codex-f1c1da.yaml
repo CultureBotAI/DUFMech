@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01174
+  path: curation/families/PF01174.yaml
+session:
+  id: 2026-10-11T095207Z-codex-f1c1da
+  timestamp: '2026-10-11T09:52:07Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate partner-dependent PdxT reactions and scoped inhibition effects.
+  details: Read Raschle 2005 main paper and appended supplement, visually checked
+    relevant assays/product evidence, and verified strain-168 reference mapping to
+    P37528/PF01174 6-188 with matching primer ends and C79 peptide. Five graphs retain
+    five direct observed effects for coupled glutaminase activation, joint PLP production,
+    ribulose/ammonium dependence and separate acivicin glutaminase/synthesis readouts.
+    Conflicting glutamine concentrations, rate units, acivicin dose lists and mass
+    descriptions remain explicit; no quantitative repair or atomic channeling pathway
+    is invented. Belitsky 2004 SMY experiments were inspected but not transferred
+    to the untagged strain-168 preparations; clone identity and penultimate-residue
+    discrepancy remain follow-ups. Retained minimal evidence and discussion, with
+    IN_PROGRESS status.
+  sections:
+  - causal_graphs

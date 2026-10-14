@@ -4,7 +4,7 @@ name: Archaeal lipoprotein biogenesis component AliA/AliB-like
 short_name: AliA_AliB
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01889
 counters:
   proteins: 866
@@ -25,3 +25,965 @@ description: This entry represents AliA and AliB from Haloferax volcanii and sim
   proteins from archaea. Ali stands for archaeal lipoprotein biogenesis components. These proteins are
   important for lipoprotein lipidation as well as for for the organism's cell shape, growth and motility
   [[cite:PUB00162475]].
+curation_history: history/records/PF01889
+discussions:
+- discussion_id: ali-catalysis-and-substrate-contexts
+  prompt: Resolve AliA catalytic sufficiency and AliB processing chemistry without collapsing substrate-specific
+    observations.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Whole-gene deletions support the retained cellular effects,but do not establish purified
+    lipid-transfer activity,lipid donor identity,AliB peptidase activity or a conserved-residue mechanism.
+    Tagged HVO_1176 and endogenous proteomics disagree; HVO_B0139 misses a stringent proteomic threshold.
+    These contexts cannot be merged into universal lipidation requirements.
+  evidence:
+  - reference: PMID:40998839
+    supports: PARTIAL
+    evidence_source: full_text_and_figures
+    explanation: Original Figures3-5 and Methods establish biogenesis/physiology phenotypes; in-vitro
+      stand-alone activity and residue tests remain future work in the Discussion. Matched and cross-complementation
+      are reported in text,but Supplementary Figure6 was not inspected.
+  - reference: PMID:42641884
+    supports: PARTIAL
+    evidence_source: full_text_and_figures
+    explanation: Original Figures2-5 distinguish broad AliA-associated changes from the narrower AliB
+      response. AliB bulk lipid comparison(p0.077),TX distribution(p0.98) and reported aliA qPCR trend(p0.174)
+      do not justify increase/decrease arrows. Figure3 validation counts depend on filtering and missing
+      data,not direct lipid-peptide sequencing.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Obtain readable supplements,exact inserts and mutant-genome evidence; inspect additional substrate/taxon
+    studies. The primary qPCR control threshold printed as deltaCt<=10 and the prose ordering of WT/aliB
+    medians remain unresolved. The866 proteins counted in the frozen family are not all functionally characterized.
+    Preprints and database echoes are not independent experimental origins.
+- discussion_id: ali-shared-controls-and-name-collision
+  prompt: Preserve the shared lipid-control provenance and distinguish archaeal AliA/AliB from pneumococcal
+    namesakes.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The2026 lipid deposit explicitly links its WT/double-deletion controls to the2025 deposit.
+    Repeated plots must not be counted as independent replication. PF01889 is former DUF63,not pneumococcal
+    PF00496 peptide-binding Ali proteins.
+  evidence:
+  - reference: https://purl.stanford.edu/nk164tn8116
+    supports: SUPPORT
+    evidence_source: primary_data_repository_metadata
+    explanation: The record identifies single-mutant YH_57/aliB and YH_113/aliA data and points H53/double-deletion
+      data to vq241jx8767. Metadata were inspected; raw LC-MS integration was not repeated.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01889/
+    supports: SUPPORT
+    evidence_source: database
+    explanation: Current InterPro and the frozen previous-name TSV identify the archaeal family and historical
+      DUF63 alias. Member-specific APIs verify AliA87-379 and AliB17-263; original FASTAs match the stated
+      UniProt reference versions.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Main PMC articles downloaded successfully despite browser-tool access failures. Attachment URLs
+    returned challenge HTML or403; other official endpoints gave DNS,404 or429 failures. No missing supplement
+    is treated as biological negative evidence. Minimal extracts,identity verification and access/coverage
+    limits are retained under evidence/PF01889. No publication or exhaustive family review is claimed.
+causal_graphs:
+- graph_id: ali-tagged-processing
+  title: Ali deletions alter mature-band output of tagged lipoproteins
+  scope: Hong2025 Figure3c, H. volcanii H53-derived deletions versus H53 with matched plasmid-expressed
+    C-terminal myc-tagged substrates.
+  context: Hv-Cab,45 C;200 ug/ml tryptophan for expression,harvest OD6000.8. Whole-lysate immunoblots
+    with Ponceau controls,representative of at least two experiments. Substrate processing is inferred
+    from band mobility,not sequenced cleavage products.
+  family_mapping: AliA is HVO_2859/D4GXF7 sequenceversion2/ADE04977.2,379 aa,PF01889 at87-379. AliB is
+    HVO_2611/D4GUE1 sequenceversion1/ADE03618.1/WP_004042703.1,269 aa,PF01889 at17-263. Exact reference
+    sequences match; whole-gene deletions do not isolate the domain. H53 assays are distinct from the
+    DS2 reference record.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:2246
+  limitations: Lower mature-band output is not direct proof of a catalytic reaction or cleavage order.
+    Lipobox Cys mutations are in substrates,not AliA/B. HVO_0844 still matures,but its mature signal also
+    decreases with aliA deletion. Main text reports matched complementation and failed cross-complementation;
+    Supplementary Figure6 and exact inserts were not inspected. Tagged HVO_1176 results differ from endogenous2026
+    proteomics.
+  nodes:
+  - node_id: delete-alia
+    label: Delete aliA in the H53 assay background
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+  - node_id: delete-alib
+    label: Delete aliB in the H53 assay background
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GUE1
+  - node_id: delete-both
+    label: Delete both aliA and aliB
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+    - UniProtKB:D4GUE1
+  - node_id: hvo1176-mature
+    label: Mature-mobility HVO_1176-myc band
+    node_type: STATE
+  - node_id: hvob0139-mature
+    label: Mature-mobility HVO_B0139-myc band
+    node_type: STATE
+  - node_id: hvo1705-mature
+    label: Mature-mobility HVO_1705-myc band
+    node_type: STATE
+  edges:
+  - edge_id: alia-lowers-1176-mature
+    subject: delete-alia
+    predicate: decreases
+    object: hvo1176-mature
+    mechanism: The aliA deletion replaces the predominant mature-mobility band with a slower precursor-like
+      band. This reports impaired biogenesis,not an isolated lipid-transfer or cleavage step.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: important for Sec and Tat lipoprotein biogenesis
+      explanation: Original Figure3c HVO_1176 WT versus aliA-deletion lanes,with Ponceau loading comparison
+        and cellular expression Methods.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: alib-lowers-1176-mature
+    subject: delete-alib
+    predicate: decreases
+    object: hvo1176-mature
+    mechanism: The aliB deletion reduces the mature-mobility band and leaves precursor-like HVO_1176.
+      This tagged-overexpression result is not imposed on the endogenous-protein dataset.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: important for Sec and Tat lipoprotein biogenesis
+      explanation: Original Figure3c HVO_1176 WT versus aliB-deletion lanes; Discussion2026 explicitly
+        retains the endogenous/tagged discrepancy.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: double-lowers-1176-mature
+    subject: delete-both
+    predicate: decreases
+    object: hvo1176-mature
+    mechanism: The double mutant has precursor-like rather than mature HVO_1176. The combined intervention
+      does not identify two independently sufficient catalytic contributions.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: important for Sec and Tat lipoprotein biogenesis
+      explanation: Original Figure3c double-deletion lane is compared with its WT substrate control.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: alia-lowers-b0139-mature
+    subject: delete-alia
+    predicate: decreases
+    object: hvob0139-mature
+    mechanism: Mature-mobility HVO_B0139 is lost in favor of precursor-like material. No AliA-specific
+      cleavage chemistry follows from the gel shift.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: important for Sec and Tat lipoprotein biogenesis
+      explanation: Original Figure3c HVO_B0139 aliA comparison; the2026 proteomic validation threshold
+        does not capture every previously studied substrate.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: alib-lowers-b0139-mature
+    subject: delete-alib
+    predicate: decreases
+    object: hvob0139-mature
+    mechanism: Deleting aliB reduces the mature-mobility HVO_B0139 band. The observation supports a biogenesis
+      dependency,not purified AliB signal-peptidase activity.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: important for Sec and Tat lipoprotein biogenesis
+      explanation: Original Figure3c HVO_B0139 aliB-deletion and WT lanes.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: double-lowers-b0139-mature
+    subject: delete-both
+    predicate: decreases
+    object: hvob0139-mature
+    mechanism: The combined deletion leaves precursor-like HVO_B0139 without the WT mature-band pattern.
+      Its scope is the double-mutant cellular preparation.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: important for Sec and Tat lipoprotein biogenesis
+      explanation: Original Figure3c HVO_B0139 double-deletion lane,not an inferred additive effect from
+        two single mutants.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: alia-lowers-1705-mature
+    subject: delete-alia
+    predicate: decreases
+    object: hvo1705-mature
+    mechanism: Mature-mobility HVO_1705 is undetected while slower precursor-like protein remains. Band
+      mobility alone cannot distinguish missing lipidation from processing failure.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: important for Sec and Tat lipoprotein biogenesis
+      explanation: Original Figure3c HVO_1705 WT and aliA-deletion lanes.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: alib-partially-lowers-1705-mature
+    subject: delete-alib
+    predicate: decreases
+    object: hvo1705-mature
+    mechanism: Mature HVO_1705 persists together with a strong precursor-like band in delta-aliB. Processing
+      is partially impaired,not completely abolished or evidence that every substrate requires AliB equally.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: important for Sec and Tat lipoprotein biogenesis
+      explanation: Original Figure3c retains both HVO_1705 bands in the aliB deletion,unlike the aliA-containing
+        deletions.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: double-lowers-1705-mature
+    subject: delete-both
+    predicate: decreases
+    object: hvo1705-mature
+    mechanism: The double deletion removes detectable mature-mobility HVO_1705 in this assay. No serial
+      AliA-to-AliB reaction is inferred from this endpoint.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: important for Sec and Tat lipoprotein biogenesis
+      explanation: Original Figure3c HVO_1705 double-deletion comparison.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+- graph_id: ali-tagged-phase-partition
+  title: Ali deletions shift tagged lipoprotein partitioning toward the aqueous phase
+  scope: Hong2025 Figure3e,H53 derivatives expressing HVO_1176-myc or HVO_1705-myc.
+  context: Hv-Cab45 C,200 ug/ml tryptophan;~500 ug lysate protein with2% Triton X-114,washed AQ/TX phases,matched
+    resuspension volumes and equal-volume immunoblots.
+  family_mapping: HVO_2859/D4GXF7 maps PF01889 at87-379;HVO_2611/D4GUE1 at17-263. Complete chromosomal
+    genes are perturbed; the tagged readout proteins are substrates,not PF01889 members.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:2246
+  limitations: Detergent partitioning is a hydrophobicity proxy,not a site-resolved lipid measurement.
+    Uncleaved signal peptides can retain TX affinity; residual TX bands and the aliB HVO_1705 mixture
+    are explicit. Different gels are separated by dotted lines. Do not generalize the tagged HVO_1176
+    result to the discordant endogenous2026 dataset.
+  nodes:
+  - node_id: delete-alia
+    label: Delete aliA
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+  - node_id: delete-alib
+    label: Delete aliB
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GUE1
+  - node_id: delete-both
+    label: Delete aliA and aliB together
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+    - UniProtKB:D4GUE1
+  - node_id: hvo1176-aq
+    label: Aqueous relative to detergent partitioning of HVO_1176-myc
+    node_type: STATE
+  - node_id: hvo1705-aq
+    label: Aqueous relative to detergent partitioning of HVO_1705-myc
+    node_type: STATE
+  edges:
+  - edge_id: alia-increases-1176-aq
+    subject: delete-alia
+    predicate: increases
+    object: hvo1176-aq
+    mechanism: Predominantly TX-associated mature WT HVO_1176 becomes chiefly AQ-associated precursor-like
+      material after aliA deletion; residual TX precursor remains.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: important for Sec and Tat lipoprotein biogenesis
+      explanation: Original Figure3e matched Pre/TX/AQ lanes for tagged HVO_1176,not a measured covalent
+        modification on each band.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: alib-increases-1176-aq
+    subject: delete-alib
+    predicate: increases
+    object: hvo1176-aq
+    mechanism: Tagged HVO_1176 shifts toward AQ-associated precursor in delta-aliB. This substrate-specific
+      overexpression context differs from the broad endogenous-proteome result.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: important for Sec and Tat lipoprotein biogenesis
+      explanation: Original Figure3e WT versus delta-aliB HVO_1176 phase distribution,with residual TX
+        signal retained.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: double-increases-1176-aq
+    subject: delete-both
+    predicate: increases
+    object: hvo1176-aq
+    mechanism: Combined deletion produces chiefly AQ-associated precursor-like HVO_1176. The result is
+      not an independent test of each gene's biochemical sufficiency.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: important for Sec and Tat lipoprotein biogenesis
+      explanation: Original Figure3e HVO_1176 double-deletion phase comparison.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: alia-increases-1705-aq
+    subject: delete-alia
+    predicate: increases
+    object: hvo1705-aq
+    mechanism: HVO_1705 becomes principally AQ-associated precursor-like protein after aliA deletion.
+      This is a qualitative phase-distribution change,not a calibrated lipid occupancy.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: important for Sec and Tat lipoprotein biogenesis
+      explanation: Original Figure3e HVO_1705 lanes,with suspected degradation bands distinguished from
+        the principal precursor.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: double-increases-1705-aq
+    subject: delete-both
+    predicate: increases
+    object: hvo1705-aq
+    mechanism: The double deletion shifts the principal tagged HVO_1705 species from WT TX-associated
+      mature protein toward AQ-associated precursor. AliB deletion alone retains a different,mixed pattern.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: important for Sec and Tat lipoprotein biogenesis
+      explanation: Original Figure3e double-deletion HVO_1705 phase comparison; no blanket absence of
+        TX affinity is asserted.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+- graph_id: ali-lipid-anchor-readout
+  title: AliA-containing deletions eliminate detectable recovered methylthio-archaeol
+  scope: Hong2025 Figure4 and Hong2026 Figure5,processed bulk TX extracts from H53 and deletion derivatives.
+  context: 80mg starting total protein;TX extraction,methyl iodide and alkaline release,LC-MS m/z683.7/700.8/705.7
+    against a synthetic methylthio-archaeol standard and10-point calibration. Three biological replicates
+    per strain. The2026 deposit identifies new single-mutant samples and reuses the earlier WT/double-mutant
+    dataset.
+  family_mapping: AliA/HVO_2859/D4GXF7 PF01889 at87-379;AliB/HVO_2611/D4GUE1 at17-263. Double deletion
+    is one intervention; both references belong to the same family but have distinct roles.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:2246
+  limitations: This is a cellular genotype-to-processed-lipid readout,not purified enzyme catalysis or
+    a site-resolved substrate bond. Undetected is assay-bounded. Comparable core-archaeol profiles argue
+    against bulk lipid-synthesis loss. AliB single deletion is not significantly increased or decreased
+    versus WT(p0.077). Shared WT/double data are not independent replication across papers; raw integrations
+    were not reanalyzed.
+  nodes:
+  - node_id: delete-alia
+    label: Delete aliA alone
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+  - node_id: delete-both
+    label: Delete aliA and aliB together
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+    - UniProtKB:D4GUE1
+  - node_id: released-lipid
+    label: Recovered methylthio-archaeol per starting protein mass
+    node_type: STATE
+  edges:
+  - edge_id: alia-decreases-lipid-readout
+    subject: delete-alia
+    predicate: decreases
+    object: released-lipid
+    mechanism: AliA deletion gives no detectable methylthio-archaeol after processing,versus WT3.20+/-0.62ng/mg
+      protein. AliB4.51+/-0.33ng/mg is a nonsignificant comparison,not an opposing activation edge.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42641884
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13631571/
+      snippet: complete absence
+      explanation: Original Figure5A/B and lipid Methods; Stanford deposit nk164tn8116 identifies YH_113/aliA
+        single-deletion data and points to the earlier controls.
+      cache_path: evidence/PF01889/alia-lipid-evidence.txt
+      cache_sha256: e68de94ffdfc366b26e7c4e834a835b43e9ddf51deaebeaaf66968bd171a44b5
+  - edge_id: double-decreases-lipid-readout
+    subject: delete-both
+    predicate: decreases
+    object: released-lipid
+    mechanism: The double-deletion extract lacks the WT methylthio-archaeol signal,even with the2025 chromatogram
+      expanded100-fold. The2026 display repeats this comparison and does not create a new independent
+      effect.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: complete absence
+      explanation: Original Figure4c/d gives WT3.20+/-0.62ng/mg and undetected double-mutant output; core-lipid
+        panels4a/b are a control,not proof of direct catalysis.
+      cache_path: evidence/PF01889/alia-lipid-evidence.txt
+      cache_sha256: e68de94ffdfc366b26e7c4e834a835b43e9ddf51deaebeaaf66968bd171a44b5
+- graph_id: ali-hvcab-growth
+  title: Ali deletions modestly reduce exponential-phase growth in Hv-Cab
+  scope: Hong2025 Figure5c,H53 versus three deletion strains in semi-defined medium.
+  context: Hv-Cab45 C,50ug/ml tryptophan/uracil as specified;startOD6000.01,200ul wells,OD600 every30min
+    for~90h with continuous shaking. Four biological replicates per strain.
+  family_mapping: AliA/D4GXF7 PF01889 at87-379 and AliB/D4GUE1 at17-263; entire genes are removed,not
+    isolated-domain variants.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:2246
+  limitations: OD600 is an optical population readout,not viable counts or a measured substrate-transport
+    rate. Curves approach similar late densities; no permanent growth arrest is claimed. Altered cell
+    shape may influence optical readout. Growth rescue and specific nutrient-uptake mediation remain unestablished
+    in the inspected figures.
+  nodes:
+  - node_id: delete-alia
+    label: Delete aliA
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+  - node_id: delete-alib
+    label: Delete aliB
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GUE1
+  - node_id: delete-both
+    label: Delete aliA and aliB
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+    - UniProtKB:D4GUE1
+  - node_id: exponential-od
+    label: OD600 during the exponential-growth interval
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: alia-lowers-hvcab-growth
+    subject: delete-alia
+    predicate: decreases
+    object: exponential-od
+    mechanism: The aliA-deletion curve rises more slowly than WT during exponential growth,but the defect
+      in this medium is modest rather than complete growth loss.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: slower growth
+      explanation: Original Figure5c and growth-curve Methods; curve shape is not a fitted kinetic constant.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: alib-lowers-hvcab-growth
+    subject: delete-alib
+    predicate: decreases
+    object: exponential-od
+    mechanism: The aliB-deletion strain shows delayed OD increase relative to WT in the exponential interval;
+      this does not imply absence of late growth.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: slower growth
+      explanation: Original Figure5c aliB and WT curves under the same semi-defined-medium conditions.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: double-lowers-hvcab-growth
+    subject: delete-both
+    predicate: decreases
+    object: exponential-od
+    mechanism: Combined deletion delays exponential OD increase. This measured combined phenotype is not
+      calculated by adding the two single-mutant effects.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: slower growth
+      explanation: Original Figure5c double-mutant curve,with four biological replicates rather than treating
+        serial readings as independent cultures.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+- graph_id: ali-minimal-growth
+  title: Ali deletions severely impair growth in glucose-alanine minimal medium
+  scope: Hong2025 Figure5d,H53 and matched deletion strains in CDM-based minimal medium.
+  context: 20mM glucose and25mM alanine as sole carbon/nitrogen sources,18% salt-water base and described
+    supplements,45 C. StartOD6000.01,200ul wells,30min readings for~90h,four biological replicates.
+  family_mapping: HVO_2859/D4GXF7 PF01889 at87-379;HVO_2611/D4GUE1 at17-263. Whole-gene phenotypes do
+    not identify a domain-specific transporter or metabolic reaction.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:2246
+  limitations: The experiment measures medium-specific population growth,not direct glucose or alanine
+    uptake. Defects differ from semi-defined Hv-Cab; broad nutrient-transport mediation is proposed,not
+    established. Residual aliB growth and the small aliA/double signals are retained.
+  nodes:
+  - node_id: delete-alia
+    label: Delete aliA in glucose-alanine medium
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+  - node_id: delete-alib
+    label: Delete aliB in glucose-alanine medium
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GUE1
+  - node_id: delete-both
+    label: Delete both genes in glucose-alanine medium
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+    - UniProtKB:D4GUE1
+  - node_id: minimal-growth
+    label: OD600 increase over the minimal-medium growth course
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: alia-decreases-minimal-growth
+    subject: delete-alia
+    predicate: decreases
+    object: minimal-growth
+    mechanism: AliA-deleted cells show minimal OD increase while WT grows substantially. This does not
+      demonstrate that AliA directly transports either supplied nutrient.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: slower growth
+      explanation: Original Figure5d and the specific CDM glucose/alanine Methods,not the adjacent Hv-Cab
+        panel.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: alib-decreases-minimal-growth
+    subject: delete-alib
+    predicate: decreases
+    object: minimal-growth
+    mechanism: AliB deletion strongly reduces the OD rise but retains appreciably more growth than aliA-containing
+      deletions. Neither equivalence of paralogs nor complete arrest is claimed.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: slower growth
+      explanation: Original Figure5d aliB curve and its distinct residual growth.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: double-decreases-minimal-growth
+    subject: delete-both
+    predicate: decreases
+    object: minimal-growth
+    mechanism: The double deletion leaves very little OD increase in this minimal medium. A specific lipidation-to-nutrient-uptake
+      pathway is not directly tested.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: slower growth
+      explanation: Original Figure5d double-deletion course,with the same starting OD and medium as WT.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+- graph_id: ali-cell-shape
+  title: Ali deletions lower early-log cell aspect ratios
+  scope: Hong2025 Figure5e,early-log H53 cultures and deletion derivatives.
+  context: Hv-Cab45 C,harvestOD6000.07;brightfield/DIC microscopy and CellProfiler analysis. Three biological
+    cultures per strain,257 cells per culture. Aspect ratio<2 groups disks with short rods.
+  family_mapping: AliA/D4GXF7 PF01889 at87-379;AliB/D4GUE1 at17-263. These are whole-gene cellular effects,not
+    single-residue or isolated-domain tests.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:2246
+  limitations: A cross-sectional aspect-ratio distribution does not directly measure a temporal rod-to-disk
+    transition or nutrient uptake. Individual cells are not771 independent biological replicates. The
+    biochemical mediator and any shape-to-motility causal step remain unresolved.
+  nodes:
+  - node_id: delete-alia
+    label: Delete aliA
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+  - node_id: delete-alib
+    label: Delete aliB
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GUE1
+  - node_id: delete-both
+    label: Delete both ali genes
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+    - UniProtKB:D4GUE1
+  - node_id: aspect-ratio
+    label: Early-log cell aspect-ratio distribution
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: alia-decreases-aspect-ratio
+    subject: delete-alia
+    predicate: decreases
+    object: aspect-ratio
+    mechanism: AliA-deleted cultures contain a lower aspect-ratio distribution with more disks/short rods
+      than WT under the sampled early-log conditions.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: primarily disk-shaped
+      explanation: Original Figure5e micrographs and aspect-ratio plot,not a time-resolved transition
+        assay.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: alib-decreases-aspect-ratio
+    subject: delete-alib
+    predicate: decreases
+    object: aspect-ratio
+    mechanism: AliB deletion lowers the aspect-ratio distribution compared with WT,but the population
+      retains more elongated cells than aliA-containing deletions.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: primarily disk-shaped
+      explanation: Original Figure5e preserves the unequal single-mutant distributions and common sampling
+        OD.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: double-decreases-aspect-ratio
+    subject: delete-both
+    predicate: decreases
+    object: aspect-ratio
+    mechanism: The double-deletion population has lower aspect ratios than WT. This is not evidence that
+      two distinct molecular shape pathways act additively.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: primarily disk-shaped
+      explanation: Original Figure5e double-mutant distribution and three-culture sampling scheme.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+- graph_id: ali-motility-halos
+  title: Ali deletions reduce soft-agar halo diameter
+  scope: Hong2025 Figure5f,H53 and three deletion backgrounds.
+  context: Stab inoculation into0.35%agar Hv-Cab plates,45 C for three days followed by one day at room
+    temperature before imaging. Five biological replicates; ImageJ diameter measurement and reported one-way
+    ANOVA.
+  family_mapping: AliA/HVO_2859/D4GXF7 PF01889 at87-379 and AliB/HVO_2611/D4GUE1 at17-263. The complete
+    genes,not the conserved putative catalytic residues,are deleted.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:2246
+  limitations: Halo diameter combines population expansion and movement; reduced growth and altered shape
+    are alternative mediators. Neither swimming speed nor an ArlA1-to-motility rescue is measured. The
+    phenotype does not prove direct regulation of the archaellar motor.
+  nodes:
+  - node_id: delete-alia
+    label: Delete aliA
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+  - node_id: delete-alib
+    label: Delete aliB
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GUE1
+  - node_id: delete-both
+    label: Delete aliA and aliB
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+    - UniProtKB:D4GUE1
+  - node_id: halo-diameter
+    label: Soft-agar halo diameter at the specified endpoint
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: alia-decreases-halo
+    subject: delete-alia
+    predicate: decreases
+    object: halo-diameter
+    mechanism: AliA deletion reduces halo diameter relative to WT. The effect remains a plate-assay phenotype
+      with growth and shape confounding unresolved.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: smaller motility halos
+      explanation: Original Figure5f images and five-replicate diameter plot under the stated incubation
+        sequence.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: alib-decreases-halo
+    subject: delete-alib
+    predicate: decreases
+    object: halo-diameter
+    mechanism: AliB-deleted cells form smaller halos than WT,but larger halos than aliA-deleted cells.
+      Distinct magnitudes are retained without assigning different motor chemistry.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: smaller motility halos
+      explanation: Original Figure5f aliB comparison; no universal abolition of movement is claimed.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+  - edge_id: double-decreases-halo
+    subject: delete-both
+    predicate: decreases
+    object: halo-diameter
+    mechanism: Combined deletion reduces halo diameter compared with WT; the remaining halo is not zero
+      and is not a direct measure of individual-cell propulsion.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40998839
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12462473/
+      snippet: smaller motility halos
+      explanation: Original Figure5f double-deletion halo and matched WT plate-assay conditions.
+      cache_path: evidence/PF01889/hong-2025-cellular-assays.txt
+      cache_sha256: 49f25e01c10e2f2a27aeeadcaad2eecf63ee67cb5208431f76020954bffb46be
+- graph_id: ali-proteome-partition
+  title: AliA-containing deletions reduce the lipoprotein TX-enrichment distribution
+  scope: Hong2026 Figure2B,filtered endogenous-protein TX/AQ comparisons in H53 and its deletion derivatives.
+  context: Hv-Cab45 C,harvestOD6000.75-0.85; proteomics starts60mg total protein,50ug digests,three biological
+    replicates. MSstats normalization,conditional imputation and BH-adjusted significance determine inclusion.
+    Only proteins with significant TX/AQ differences appear in the boxplots.
+  family_mapping: D4GXF7/ADE04977.2 maps PF01889 at87-379 and D4GUE1/ADE03618.1/WP_004042703.1 at17-263.
+    The study quantifies endogenous substrate peptides against a2023 reference proteome; it does not isolate
+    AliA catalytic activity.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:2246
+  limitations: The medians summarize differently filtered protein sets,not one protein's fold-change or
+    a catalytic rate. Residual signal-peptide hydrophobicity can retain TX association without lipidation.
+    AliB has no significant global shift(p0.98); inconsistent prose ordering of its median is not silently
+    corrected. Figure3 candidate counts depend on thresholds/missing values and are not a count of directly
+    sequenced lipid attachments.
+  nodes:
+  - node_id: delete-alia
+    label: Delete aliA
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+  - node_id: delete-both
+    label: Delete aliA and aliB together
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+    - UniProtKB:D4GUE1
+  - node_id: median-tx-enrichment
+    label: Median log2 TX/AQ abundance among significantly partitioned predicted lipoproteins
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: alia-decreases-partition-median
+    subject: delete-alia
+    predicate: decreases
+    object: median-tx-enrichment
+    mechanism: The reported median declines from WT5.59 to1.39 in delta-aliA. This distribution change
+      supports reduced lipoprotein hydrophobicity,not direct proof of identical lipidation loss in every
+      member.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42641884
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13631571/
+      snippet: significant decrease in lipoprotein hydrophobicity
+      explanation: Original Figure2B and proteomic Results/Methods; the at-least-two-TM control group
+        lacks a significant analogous shift.
+      cache_path: evidence/PF01889/hong-2026-fractionation.txt
+      cache_sha256: f4c8c88f428ad2b024221390120f82b762e7b3ff85c93512f2c233690f9ee8a5
+  - edge_id: double-decreases-partition-median
+    subject: delete-both
+    predicate: decreases
+    object: median-tx-enrichment
+    mechanism: The double-deletion median is1.37 versus WT5.59. Delta-aliA and double distributions are
+      similar(p0.99); there is no supported additional global decrement attributed to deleting aliB in
+      this background.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42641884
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13631571/
+      snippet: significant decrease in lipoprotein hydrophobicity
+      explanation: Original Figure2B WT,double and single comparisons,with the significance-filtered denominator
+        preserved.
+      cache_path: evidence/PF01889/hong-2026-fractionation.txt
+      cache_sha256: f4c8c88f428ad2b024221390120f82b762e7b3ff85c93512f2c233690f9ee8a5
+- graph_id: ali-hvo1705-cell-fractions
+  title: AliA-containing deletions reduce HVO_1705 abundance and membrane association
+  scope: Hong2026 Figure4A/B,overexpressed myc-tagged HVO_1705 in H53-derived strains.
+  context: Hv-Cab45 C,harvestOD6000.75-0.80; lysate fractionation at231472g for30min at4 C with repeated
+    washing. Equal sample volumes represent matched proportions of starting lysate,not equal post-fractionation
+    protein mass. Two independent experiments reported.
+  family_mapping: AliA/HVO_2859/D4GXF7 PF01889 at87-379;AliB/HVO_2611/D4GUE1 at17-263. HVO_1705 is the
+    tagged downstream readout,not the domain whose gene is deleted. Exact substrate insert sequencing
+    is not independently verified.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:2246
+  limitations: Targeting failure,clearance and altered stability are alternatives; the experiment does
+    not measure any of these rates directly. Precursor remains in the soluble fraction. AliB deletion
+    preserves substantial membrane-associated precursor and mature protein. HVO_0844 membrane localization
+    is retained in the separate control panels. No abundance-to-localization causal order is asserted
+    between the parallel readouts.
+  nodes:
+  - node_id: delete-alia
+    label: Delete aliA
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+  - node_id: delete-both
+    label: Delete aliA and aliB
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GXF7
+    - UniProtKB:D4GUE1
+  - node_id: membrane-association
+    label: Membrane-associated HVO_1705-myc fraction
+    node_type: STATE
+  - node_id: total-hvo1705
+    label: Whole-lysate HVO_1705-myc immunoblot abundance
+    node_type: STATE
+  edges:
+  - edge_id: alia-decreases-membrane-association
+    subject: delete-alia
+    predicate: decreases
+    object: membrane-association
+    mechanism: AliA deletion shifts the prominent HVO_1705 signal away from the membrane-associated WT
+      pattern,toward a soluble precursor-like form. Residual membrane signal is not treated as complete
+      translocation failure.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42641884
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13631571/
+      snippet: predominantly membrane-associated
+      explanation: Original Figure4A/B WT versus delta-aliA fractions and the corresponding Results,with
+        matched starting-lysate proportions.
+      cache_path: evidence/PF01889/hong-2026-fractionation.txt
+      cache_sha256: f4c8c88f428ad2b024221390120f82b762e7b3ff85c93512f2c233690f9ee8a5
+  - edge_id: double-decreases-membrane-association
+    subject: delete-both
+    predicate: decreases
+    object: membrane-association
+    mechanism: The double deletion reduces membrane-associated HVO_1705 relative to WT,with precursor-like
+      signal retained in the soluble fraction. This is not direct evidence that AliA physically targets
+      the substrate.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42641884
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13631571/
+      snippet: predominantly membrane-associated
+      explanation: Original Figure4A matched WT and double-deletion W/M/C lanes; Figure4C supplies the
+        retained HVO_0844 membrane control.
+      cache_path: evidence/PF01889/hong-2026-fractionation.txt
+      cache_sha256: f4c8c88f428ad2b024221390120f82b762e7b3ff85c93512f2c233690f9ee8a5
+  - edge_id: alia-decreases-total-hvo1705
+    subject: delete-alia
+    predicate: decreases
+    object: total-hvo1705
+    mechanism: Whole-lysate HVO_1705-myc signal is reduced in delta-aliA. Reduced abundance does not itself
+      establish degradation,transcriptional suppression or failed translocation as the mechanism.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42641884
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13631571/
+      snippet: reduced overall abundance
+      explanation: Original Figure4A/B whole-lysate lanes and the primary Results interpretation; no raw
+        densitometry or turnover-rate reconstruction was performed.
+      cache_path: evidence/PF01889/hong-2026-fractionation.txt
+      cache_sha256: f4c8c88f428ad2b024221390120f82b762e7b3ff85c93512f2c233690f9ee8a5
+  - edge_id: double-decreases-total-hvo1705
+    subject: delete-both
+    predicate: decreases
+    object: total-hvo1705
+    mechanism: The double deletion reduces whole-lysate HVO_1705-myc signal while a precursor-like form
+      remains detectable. No exactly zero substrate abundance is asserted.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42641884
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13631571/
+      snippet: reduced overall abundance
+      explanation: Original Figure4A WT/double whole-lysate lanes and Results; this is the same fractionation
+        experiment as the localization edge,not independent replication.
+      cache_path: evidence/PF01889/hong-2026-fractionation.txt
+      cache_sha256: f4c8c88f428ad2b024221390120f82b762e7b3ff85c93512f2c233690f9ee8a5
+curation_events:
+- timestamp: '2026-10-11T20:19:24Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate archaeal AliA/AliB condition-specific causal effects with distinct paralog and assay
+    scopes.
+  history_record: history/records/PF01889/2026-10-11T201924Z-codex-2bb069.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T20:32:36Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Partially review AliA/AliB paralog-specific causal effects and shared-control provenance.
+  history_record: history/records/PF01889/2026-10-11T203236Z-codex-1351b1.yaml
+  event_index: 0
+  llm_assisted: true

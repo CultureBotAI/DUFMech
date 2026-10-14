@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01944
+  path: curation/families/PF01944.yaml
+session:
+  id: 2026-10-12T070006Z-codex-986f23
+  timestamp: '2026-10-12T07:00:06Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: needs_followup
+  summary: Curate eight scoped SpoIIM phenotype graphs with ten observed effects.
+  details: Inspected mapped Bacillus primary Results and Methods, Aung Figure 3 and
+    candidate C. difficile Figure 2. Created five evidence ledgers and two open discussions.
+    Separate PspoIID/native-promoter reporters, abundance, targeting and I92T suppressor
+    readouts. Preserve PY79 versus reference-168 scope, source label discrepancies
+    and missing Chastanet figure access. No direct binding, hydrolase activity, candidate
+    Q18B81 Pfam assignment or family-wide function is asserted. Baseline was 8296
+    schema-valid records with zero generated differences. Partial coverage remains
+    IN_PROGRESS; all records and prior follow-ups remain in scope.

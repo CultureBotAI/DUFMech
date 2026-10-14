@@ -1,0 +1,20 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01910
+  path: curation/families/PF01910.yaml
+session:
+  id: 2026-10-12T002126Z-codex-c6b4ae
+  timestamp: '2026-10-12T00:21:26Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate PF01910 bacterial binding and separate fungal phenotype graphs
+  details: Add twelve graphs with twenty-four observed assay effects, exact reference/domain
+    mapping, four evidence ledgers and two open discussions. Preserve unit and strain-table
+    conflicts, hypothetical transport and unassessed family branches; remain IN_PROGRESS.

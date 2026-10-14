@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01941
+  path: curation/families/PF01941.yaml
+session:
+  id: 2026-10-12T063057Z-codex-835899
+  timestamp: '2026-10-12T06:30:57Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: needs_followup
+  summary: Curate PF01941 member-specific MAT and engineered-cascade causal contexts
+  details: Created eight scoped graphs with twelve experimentally observed edges from
+    TkMAT HPLC, MjMAT SAM/urea/double-mutant assays and engineered PC-MjMAT surrogate-product/cap-analog
+    cascades. Retained five evidence ledgers, current domain/construct mappings, TkMAT
+    length conflict, later sequence-accession errors, assay-specific discrepancies
+    and two OPEN follow-ups. Baseline validated all 8296 records with zero generated
+    drift; complete family coverage and independent review remain open.

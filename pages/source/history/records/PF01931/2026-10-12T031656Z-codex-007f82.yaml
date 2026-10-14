@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01931
+  path: curation/families/PF01931.yaml
+session:
+  id: 2026-10-12T031656Z-codex-007f82
+  timestamp: '2026-10-12T03:16:56Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: needs_followup
+  summary: Curate YjjX biochemical and human PRRC1 trafficking contexts for PF01931
+  details: Created eight graphs with20 OBSERVED edges, five evidence ledgers and two
+    OPEN discussions. Primary YjjX study inspected through author thesis republication;
+    human2021/2025 Results, Methods and main figures inspected. Preserved assay, construct
+    and figure-label conflicts; no family-wide mechanism, isolated-domain sufficiency
+    or publication claim. Baseline8296 records had zero drift; new overlay evidence
+    hashes and quotations match. Remaining member and supplementary-method coverage
+    needs follow-up.

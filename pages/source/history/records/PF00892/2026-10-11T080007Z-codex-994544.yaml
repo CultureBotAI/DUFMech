@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF00892
+  path: data/families/PF00892.yaml
+session:
+  id: 2026-10-11T080007Z-codex-994544
+  timestamp: '2026-10-11T08:00:07Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of YdeD peroxide-growth graph
+  details: Saved the native structured review bound to the current semantic digest
+    after checking member identity, three phenotype edges, primary quotations, Figure
+    1 and overlay/projection equality. The report keeps direct transport, construct
+    details and broader EamA coverage open. Same-agent review is not independent endorsement
+    and does not promote IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T075907Z-pf00892-eama-peroxide-growth-causal-effects/review.yaml

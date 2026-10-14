@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01939
+  path: data/families/PF01939.yaml
+session:
+  id: 2026-10-12T055441Z-codex-b73c1e
+  timestamp: '2026-10-12T05:54:41Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial NucS causal-graph scientific review with product and coverage
+    follow-ups
+  details: Same-agent review validates current projection/overlay equivalence,33 scoped
+    observed edges,protein/domain mapping and six evidence ledgers. Retained structured
+    report is pass_with_limitations/native NEEDS_FOLLOWUP,partial scientific scope
+    and semantic digest e67c3c5ef9296a17643e5b08e9184f9ed84c1f23d7a554c83dcd5aa76b06cf9b.
+    Conflicting Cgl product geometry,remaining native repair/member contexts,construct
+    and source limits remain open. Focused256 tests passed. IN_PROGRESS is preserved;
+    no independent endorsement or publication is claimed.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T055417Z-pf01939-nucs-domain-boundaries-and-conflicting-cleavage-contexts/review.yaml

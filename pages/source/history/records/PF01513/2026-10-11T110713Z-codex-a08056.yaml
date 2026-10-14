@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01513
+  path: data/families/PF01513.yaml
+session:
+  id: 2026-10-11T110713Z-codex-a08056
+  timestamp: '2026-10-11T11:07:13Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retained partial NADK donor-specific scientific self-review.
+  details: Assessed the current five-edge projection and visually rechecked donor-specific
+    activity and TLC figures. Verified native projection and overlay agreement. Four
+    coupled-assay effects and a separate qualitative product endpoint remain supported;
+    complete clone identity, displayed kinetic ratios and wider physiological coverage
+    remain open. Saved NEEDS_FOLLOWUP review; no status promotion or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T111011Z-pf01513-nadk-donor-specific-activity-and-product/review.yaml

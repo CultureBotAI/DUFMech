@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01732
+  path: data/families/PF01732.yaml
+session:
+  id: 2026-10-11T143638Z-codex-ebbba7
+  timestamp: '2026-10-11T14:36:38Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of PF01732 causal contexts
+  details: Saved review 20261011T143610Z-pf01732-mib-mip-cleavage-and-cellular-contexts
+    with native NEEDS_FOLLOWUP and common pass_with_limitations. Twenty observed edges,
+    exact member/domain mapping and evidence hashes assessed; historical construct
+    numbering, inaccessible 2021 supplements, protocol discrepancies, other members
+    and ATPase-reset alternatives remain open. Validated effective projection exactly
+    matches the overlay. Record remains IN_PROGRESS; this is not independent expert
+    endorsement or corpus completion.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T143610Z-pf01732-mib-mip-cleavage-and-cellular-contexts/review.yaml

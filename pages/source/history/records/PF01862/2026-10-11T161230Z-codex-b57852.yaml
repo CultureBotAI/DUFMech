@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01862
+  path: curation/families/PF01862.yaml
+session:
+  id: 2026-10-11T161230Z-codex-b57852
+  timestamp: '2026-10-11T16:12:30Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate Mj-PdaD activity effects and a separate maturation hypothesis
+  details: Verified Q57764 against AAB98302.1, PF01862 19-162, mutant primers and
+    deposited construct numbering. Retained three direct observed specific-activity
+    edges and one unresolved hypothetical processing contribution from Soriano 2008;
+    preserved failed processing comparison, residual activity, inaccessible original
+    protocols and Tk-PdaD follow-up. Partial coverage remains IN_PROGRESS.

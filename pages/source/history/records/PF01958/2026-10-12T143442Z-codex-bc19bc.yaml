@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01958
+  path: data/families/PF01958.yaml
+session:
+  id: 2026-10-12T143442Z-codex-bc19bc
+  timestamp: '2026-10-12T14:34:42Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of TM1643 redox and interpreted mechanisms
+  details: Reviewed eight edges in five graphs against full primary text, Methods
+    and current member/domain mapping. Native NEEDS_FOLLOWUP and common pass_with_limitations
+    preserve six observed biochemical effects, inferred iminoaspartate and a hypothetical
+    cellular role. Additional members, direct product data, source figures, 2017 construct/label
+    issues and the human ASPDH preprint remain open. No independent endorsement or
+    family-wide completion; status remains IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T143541Z-pf01958-tm1643-redox-and-separated-interpretations/review.yaml

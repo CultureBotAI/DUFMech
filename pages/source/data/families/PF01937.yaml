@@ -4,7 +4,7 @@ name: Damage-control phosphatase ARMT1-like domain
 short_name: ARMT1-like_dom
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01937
 counters:
   proteins: 9217
@@ -29,3 +29,105 @@ description: This domain is widely distributed in all domains of life and occur 
   Crystal structure of Damage-control phosphatase At2g17340 from Arabidopsis revealed a novel protein
   fold and several conserved residues coordinating a metal ion (probably Mg2+), which exhibits a high
   degree of conservation, suggesting that the metal-binding site is central for the function [[cite:PUB00088733]].
+curation_history: history/records/PF01937
+causal_graphs:
+- graph_id: ymr027w-f1p-hydrolysis
+  title: YMR027W fructose-1-phosphate hydrolysis
+  scope: Recombinant S. cerevisiae YMR027W, mapped to UniProtKB:Q04371; not every DUF89 member.
+  context: Purified enzyme; 0.25 mM fructose-1-phosphate, 0.1 mM Co2+, 30 C.
+  family_mapping: Q04371 sequence version 1 has 470 residues; InterPro maps PF01937 to 19-437. The assay
+    uses the protein, not an isolated 19-437 construct.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:559292
+  limitations: Does not establish the physiological metal or individual catalytic intermediates. Other
+    substrates and subfamilies require separate scope.
+  nodes:
+  - node_id: metal-supported-enzyme
+    label: Purified YMR027W activity with cobalt and substrate
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q04371
+  - node_id: f1p-hydrolysis
+    label: Fructose-1-phosphate dephosphorylation
+    node_type: PROCESS
+  edges:
+  - edge_id: enzyme-enables-hydrolysis
+    subject: metal-supported-enzyme
+    predicate: enables
+    object: f1p-hydrolysis
+    mechanism: The purified protein hydrolyzes this phosphoester; phosphate release is measured.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:27322068
+      source_url: https://escholarship.org/content/qt69w784bv/qt69w784bv.pdf
+      snippet: fructose 1- and 6-phosphates for YMR027W
+      explanation: Results p. 4 and Figure 2e; enzyme-assay methods p. 12 describe Malachite Green detection
+        and replicate assays.
+      cache_path: evidence/PF01937/huang-2016-ymr027w.txt
+      cache_sha256: c82c18e03d76ab968345dd867ad39fc635bfe11cf00b30ab3ec77fe51c912e2e
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q04371/entry/pfam/PF01937/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q04371/entry/pfam/PF01937/
+      snippet: 'entry accession: PF01937'
+      explanation: Member/domain identity and coordinates only; the paired UniProt extraction establishes
+        sequence version, length and locus.
+      cache_path: evidence/PF01937/Q04371-identity.txt
+      cache_sha256: 77738fb3e37e47aa46642f35917d6ff4780ddd822a5d3b13f14235435a508c74
+- graph_id: ymr027w-deletion-f1p
+  title: YMR027W deletion and fructose-1-phosphate abundance
+  scope: S. cerevisiae diploid deletion strain Y30602 versus wild-type BY4743; whole-gene perturbation.
+  context: Supplemented SD with 2% fructose, 30 C, harvested at OD600 0.5.
+  family_mapping: YMR027W maps to reference UniProtKB:Q04371 and PF01937 at 19-437. Reference sequence
+    coordinates are not an isolated-domain experiment in BY4743.
+  scope_status: PHENOTYPIC
+  limitations: No direct intracellular reaction sequence or DNA-damage edge inferred. Rescue was not assessed
+    in this curation; other growth conditions remain separate.
+  nodes:
+  - node_id: ymr027w-deletion
+    label: YMR027W deletion
+    node_type: PERTURBATION
+  - node_id: cellular-f1p
+    label: Cellular fructose-1-phosphate abundance
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: deletion-increases-f1p
+    subject: ymr027w-deletion
+    predicate: increases
+    object: cellular-f1p
+    mechanism: Gene deletion increases the measured metabolite pool relative to the matched wild type.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:27322068
+      source_url: https://escholarship.org/content/qt69w784bv/qt69w784bv.pdf
+      snippet: significant accumulation
+      explanation: Results p. 5 and Figure 4b; GC-MS and growth conditions in methods p. 13. A pool measurement
+        does not itself measure flux.
+      cache_path: evidence/PF01937/huang-2016-ymr027w.txt
+      cache_sha256: c82c18e03d76ab968345dd867ad39fc635bfe11cf00b30ab3ec77fe51c912e2e
+    - reference: https://rest.uniprot.org/uniprotkb/Q04371.json
+      source_url: https://rest.uniprot.org/uniprotkb/Q04371.json
+      snippet: 'orderedLocusNames: YMR027W'
+      explanation: Reference-member mapping only, not independent experimental support or proof of the
+        deletion strain's sequence.
+      cache_path: evidence/PF01937/Q04371-identity.txt
+      cache_sha256: 77738fb3e37e47aa46642f35917d6ff4780ddd822a5d3b13f14235435a508c74
+curation_events:
+- timestamp: '2026-10-11T04:26:58Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate separate YMR027W enzyme and deletion causal graphs
+  history_record: history/records/PF01937/2026-10-11T042658Z-codex-6fb381.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T04:33:18Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain a scoped scientific review of YMR027W causal graphs
+  history_record: history/records/PF01937/2026-10-11T043318Z-codex-1adadd.yaml
+  event_index: 0
+  llm_assisted: true

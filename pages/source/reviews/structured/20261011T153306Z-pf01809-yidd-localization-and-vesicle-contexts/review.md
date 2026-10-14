@@ -1,0 +1,864 @@
+# PF01809 YidD localization and context-specific membrane-biogenesis effects
+
+- Review: 20261011T153306Z-pf01809-yidd-localization-and-vesicle-contexts
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T15:32:39Z
+- Finished UTC: 2026-10-11T15:33:06Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Nine graphs retain twenty-one observed indirect effects from the 2011 E. coli study and the version-qualified 2015 thesis. Processing, membrane abundance, partial-sequence GFP localization, tagged induction, gradient proxies, enzyme readouts and substrate protection remain separate endpoints. YidC compensation restores F0c but not NuoK protection; strain, construct and figure-label discrepancies remain explicit. Partial coverage remains IN_PROGRESS.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Pending PF01809 within all 8296 frozen families; selected E. coli YidD experiments across two primary sources, not family or corpus completion.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01809 | data/families/PF01809.yaml | generated | PF01809 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01809 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01809.
+
+K-12 P0A8C8/b4557/JW3682 is an 85-aa exact match to YP_588472.1, with PF01809 at 10-76. The 2011 H1 fusion contains only residues 1-27, including domain 10-27 and native flank 1-9; primer interpretation supports its boundary. Historical MC4100/BW25113 and complete plasmid sequences were not independently resequenced. The 2015 pEK746 overexpression host is Lemo21 per Methods/figure but BL21 in Results; this remains explicit. DUF37 identity is retained despite the DUF31 caption, and YidC is kept distinct.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01809.
+
+All twenty-one edges are INDIRECT and OBSERVED, with experimental support for the specific genotype or preparation changes, not purified-domain sufficiency. Mature fractions, membrane signals, protected fragments/full-length protein, quenching amplitudes and DCCD-sensitive activity are not conflated. Separate single-background comparisons and YidC compensation prevent a universal YidD requirement for F0c insertion. Reporter localization does not establish direct lipid binding, and proximity/co-purification does not establish recruitment or ribosome tethering. Raw fluorescence polarity is distinguished from gradient-proxy quenching. No linear insertion-to-respiration-to-assembly mechanism is claimed.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01809.
+
+Obtain missing 2011 SI and complete clones/linkers, resolve its caption/fusion wording, and reconcile F0c abundance across strains. For the submitted 2015 thesis, verify any final version, Lemo21/BL21 provenance, Figure 6 E/F versus D/E, inherited vesicle/translation recipe, oxonol dose and antibiotic/solvent controls. Same-gene rescue or purified reconstitution is needed before direct molecular assignment. Other family members, Chlamydia sources, screen measurements and hemolysin-associated annotations remain independent follow-ups.
+
+## Findings
+
+### additional-contexts: Resolve YidD provenance and extend member-specific mechanism coverage
+
+minor / open / confirmed; issue key: pf01809-causal-context-coverage.
+
+Reconcile construct, strain, dose and source-version discrepancies, obtain missing methods/SI, and distinguish gene-deletion polar effects from YidD-specific action with appropriate rescue or reconstitution evidence. Preserve differing F0c contexts and matched YidC-compensation comparisons. Independently map and assess other PF01809 members, without importing YidC or hemolysin mechanisms. Append successor reviews stating actual coverage.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Reconcile construct, strain, dose and source-version discrepancies, obtain missing methods/SI, and distinguish gene-deletion polar effects from YidD-specific action with appropriate rescue or reconstitution evidence. Preserve differing F0c contexts and matched YidC-compensation comparisons. Independently map and assess other PF01809 members, without importing YidC or hemolysin mechanisms. Append successor reviews stating actual coverage.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC3187451/?report=reader; Yu 2011 Methods, Table 1, Results and Discussion; Figures 2, 4 and 5 visually inspected, Figure 3/6 text and captions read. SI unavailable. | supports | MC4100 deletion lowers M13P2 and CyoA processing fractions and F0c membrane abundance, with unchanged displayed YidC/OmpA controls. YidD and its 1-27 segment redirect GFP peripherally. IPTG induction of His-YidD modestly increases PspA without isolating YidD from tag/inducer effects. Arrested-FtsQ cross-linking supports proximity rather than a directed insertion mechanism. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A8C8/entry/pfam/PF01809/; Accession and domain locations; paired UniProt identity facts | supports | K-12 P0A8C8/b4557/JW3682 is an 85-aa exact match to YP_588472.1, with PF01809 at 10-76. The 2011 H1 fusion contains only residues 1-27, including domain 10-27 and native flank 1-9; primer interpretation supports its boundary. Historical MC4100/BW25113 and complete plasmid sequences were not independently resequenced. The 2015 pEK746 overexpression host is Lemo21 per Methods/figure but BL21 in Results; this remains explicit. DUF37 identity is retained despite the DUF31 caption, and YidC is kept distinct. |
+| thesis-vesicle-effects | https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf; Geng 2015 thesis Chapter 4, printed pp.90-109; Figures 2/3/4/6/7 and S1/S2 visually inspected. Chapter marked Submitted, not a verified journal version. | supports | Genotype-derived vesicles show reduced gradient proxies and bioenergetic activities, altered NuoK/YidC/PspA signals and substrate-specific protection effects. Mild YidC expression restores F0c protection but not NuoK protection; pEK746-enriched vesicles increase NuoK protection with unresolved host naming. Direct YidD insertase activity and F1/F0 assembly are not measured. |
+| remaining-family-coverage | https://pubmed.ncbi.nlm.nih.gov/26389954/; Primary abstract and returned Results excerpt; separate ledger labels other studies as uncurated citation leads. | supports | Population PCR and hemolysis observations do not constitute a YidD-specific toxin intervention; no hemolysin edge is adopted. Other taxa and mechanistic hypotheses require member-specific primary evidence. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01809 | data/families/PF01809.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Yu Figures 2/4/5 and thesis Figures 2/3/4/6/7/S1/S2 were visually inspected. Yu Figures 3/6 and thesis Figure 5 were assessed from text/captions, not images. Yu SI was unavailable; raw images, densitometry, statistical estimates, historical clone sequences and inherited translation protocols were not independently reconstructed. No experimental replication or exhaustive family survey.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T153306Z-pf01809-yidd-localization-and-vesicle-contexts
+title: PF01809 YidD localization and context-specific membrane-biogenesis effects
+started_at: '2026-10-11T15:32:39Z'
+finished_at: '2026-10-11T15:33:06Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Nine graphs retain twenty-one observed indirect effects from the 2011 E.
+  coli study and the version-qualified 2015 thesis. Processing, membrane abundance,
+  partial-sequence GFP localization, tagged induction, gradient proxies, enzyme readouts
+  and substrate protection remain separate endpoints. YidC compensation restores F0c
+  but not NuoK protection; strain, construct and figure-label discrepancies remain
+  explicit. Partial coverage remains IN_PROGRESS.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01809.yaml
+    sha256: b4942d84f186a5fa953cad668ea97bb273595d391cba80fff7a517b8dbd3fac7
+    role: context
+  - path: data/families/PF01809.yaml
+    sha256: a4adb69a00f4025be630728a53d6c44e67e33256acc7f8624346208a45650db1
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01809/yu-2011-yidd.txt
+    role: context
+    sha256: 616e57f835417d99b39c99bc13e11fb0c2db88aa6821d62c8804bbfec443dcac
+  - path: evidence/PF01809/YidD-identity.txt
+    role: context
+    sha256: 6b22fbdd62d9bcba9c3fe23a405c9f69f62a8885abc3a3f58860526446424686
+  - path: evidence/PF01809/geng-2015-yidd.txt
+    role: context
+    sha256: 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6
+  - path: evidence/PF01809/yidd-gap-ledger.txt
+    role: context
+    sha256: fa8da9be5c708790891afa0c8f644a14ba1f35d840689f9df21afe0b9fb1909c
+targets:
+- target_id: PF01809
+  path: data/families/PF01809.yaml
+  label: PF01809
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01809.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 9be4e6b119e9d238c075c5662893149a97f2dc4aafd83a48b8e2abaf230c9913
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Pending PF01809 within all 8296 frozen families; selected E. coli YidD
+    experiments across two primary sources, not family or corpus completion.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01809
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Obtain missing 2011 SI and complete clones/linkers, resolve its caption/fusion
+      wording, and reconcile F0c abundance across strains. For the submitted 2015
+      thesis, verify any final version, Lemo21/BL21 provenance, Figure 6 E/F versus
+      D/E, inherited vesicle/translation recipe, oxonol dose and antibiotic/solvent
+      controls. Same-gene rescue or purified reconstitution is needed before direct
+      molecular assignment. Other family members, Chlamydia sources, screen measurements
+      and hemolysin-associated annotations remain independent follow-ups.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01809
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3187451/?report=reader
+  locator: Yu 2011 Methods, Table 1, Results and Discussion; Figures 2, 4 and 5 visually
+    inspected, Figure 3/6 text and captions read. SI unavailable.
+  accessed_at: '2026-10-11T15:33:06Z'
+  support: supports
+  snapshot_sha256: 616e57f835417d99b39c99bc13e11fb0c2db88aa6821d62c8804bbfec443dcac
+  summary: MC4100 deletion lowers M13P2 and CyoA processing fractions and F0c membrane
+    abundance, with unchanged displayed YidC/OmpA controls. YidD and its 1-27 segment
+    redirect GFP peripherally. IPTG induction of His-YidD modestly increases PspA
+    without isolating YidD from tag/inducer effects. Arrested-FtsQ cross-linking supports
+    proximity rather than a directed insertion mechanism.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A8C8/entry/pfam/PF01809/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T15:33:06Z'
+  support: supports
+  snapshot_sha256: 6b22fbdd62d9bcba9c3fe23a405c9f69f62a8885abc3a3f58860526446424686
+  summary: K-12 P0A8C8/b4557/JW3682 is an 85-aa exact match to YP_588472.1, with PF01809
+    at 10-76. The 2011 H1 fusion contains only residues 1-27, including domain 10-27
+    and native flank 1-9; primer interpretation supports its boundary. Historical
+    MC4100/BW25113 and complete plasmid sequences were not independently resequenced.
+    The 2015 pEK746 overexpression host is Lemo21 per Methods/figure but BL21 in Results;
+    this remains explicit. DUF37 identity is retained despite the DUF31 caption, and
+    YidC is kept distinct.
+- evidence_id: thesis-vesicle-effects
+  kind: primary_source
+  reference: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf
+  locator: Geng 2015 thesis Chapter 4, printed pp.90-109; Figures 2/3/4/6/7 and S1/S2
+    visually inspected. Chapter marked Submitted, not a verified journal version.
+  summary: Genotype-derived vesicles show reduced gradient proxies and bioenergetic
+    activities, altered NuoK/YidC/PspA signals and substrate-specific protection effects.
+    Mild YidC expression restores F0c protection but not NuoK protection; pEK746-enriched
+    vesicles increase NuoK protection with unresolved host naming. Direct YidD insertase
+    activity and F1/F0 assembly are not measured.
+  accessed_at: '2026-10-11T15:33:06Z'
+  support: supports
+  snapshot_sha256: 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6
+- evidence_id: remaining-family-coverage
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/26389954/
+  locator: Primary abstract and returned Results excerpt; separate ledger labels other
+    studies as uncurated citation leads.
+  summary: Population PCR and hemolysis observations do not constitute a YidD-specific
+    toxin intervention; no hemolysin edge is adopted. Other taxa and mechanistic hypotheses
+    require member-specific primary evidence.
+  accessed_at: '2026-10-11T15:33:06Z'
+  support: supports
+  snapshot_sha256: fa8da9be5c708790891afa0c8f644a14ba1f35d840689f9df21afe0b9fb1909c
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T15:33:06Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01809
+  kind: record_content
+  reference: data/families/PF01809.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T15:33:06Z'
+  support: context_only
+  snapshot_sha256: a4adb69a00f4025be630728a53d6c44e67e33256acc7f8624346208a45650db1
+  quote: "id: Pfam:PF01809\npfam_id: PF01809\nname: Putative membrane protein insertion\
+    \ efficiency factor\nshort_name: YidD\nseed_status: EX_DUF\ncharacterization_status:\
+    \ UNSCORED\ncuration_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01809\n\
+    counters:\n  proteins: 17388\n  matches: 17388\n  proteomes: 16077\n  taxa: 23500\n\
+    \  structures: 0\n  alphafold_models: 11202\n  domain_architectures: 22\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002696\ndescription: This family consists of membrane\
+    \ insertion efficiency factor proteins. They contain three\n  conserved cysteine\
+    \ residues. Family members such as YidD may be involved in insertion of integral\
+    \ membrane\n  proteins into the membrane by assisting YidC (membrane protein insertase).\
+    \ Some members of the yidD\n  family have been previously thought to posses alpha-hemolysin\
+    \ activity, however no sufficient evidence\n  was found to corroborate this idea.\
+    \ Secondary structure prediction indicated the presence of three alpha-helices\n\
+    \  in YidD. None of the three alpha-helices appeared sufficiently hydrophobic\
+    \ to serve as a transmembrane,\n  suggesting a cytoplasmic localization for YidD.\
+    \ However, a closer examination of the alpha-helical wheel\n  projection of the\
+    \ predicted first alpha-helix in YidD suggested an amphipathic structure in its\
+    \ N-terminal\n  region which might be involved in membrane targeting [[cite:PUB00064882]].\n\
+    curation_history: history/records/PF01809\ndiscussions:\n- discussion_id: yidd-contexts-and-direct-mechanism-gap\n\
+    \  prompt: Resolve strain and preparation differences before assigning a direct\
+    \ YidD insertion mechanism.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ Nine graphs retain twenty-one indirect observed perturbation effects. Processing,\
+    \ membrane\n    abundance, protease protection, gradient proxies and ATPase activity\
+    \ are distinct endpoints. The F0c\n    results differ by background, and YidC\
+    \ compensation rescues F0c but not NuoK protection.\n  evidence:\n  - reference:\
+    \ PMID:21803992\n    supports: PARTIAL\n    evidence_source: inspected_primary_methods_results_discussion_and_figures_2_4_5\n\
+    \    explanation: MC4100 processing, abundance, localization and induced PspA\
+    \ effects are supported with\n      tagged-protein and genotype limitations; cross-linking\
+    \ alone establishes proximity.\n  - reference: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \    supports: PARTIAL\n    evidence_source: inspected_2015_thesis_methods_figures_2_3_4_6_7_s1_s2\n\
+    \    explanation: BW25113 deletion and compensation experiments distinguish NuoK\
+    \ and F0c protection. Thesis\n      version, polar YidC effects, host/panel discrepancies\
+    \ and inherited protocol limits remain explicit.\n  notes: See evidence/PF01809/yu-2011-yidd.txt,\
+    \ geng-2015-yidd.txt and YidD-identity.txt. Resolve Lemo21/BL21,\n    Figure 6\
+    \ E/F versus D/E, exact IMV/translation dose and historical clones; obtain YidD-specific\
+    \ rescue\n    or purified reconstitution. Do not infer a direct proton pump, universal\
+    \ insertase requirement, F1/F0\n    assembly sequence or ribosome-tethering step\
+    \ from the current readouts.\n  posed_by: Codex\n  posed_date: '2026-10-11'\n\
+    - discussion_id: yidd-family-and-alias-coverage\n  prompt: Review other mapped\
+    \ YidD members without importing hemolysin or YidC annotations.\n  kind: CURATION_TODO\n\
+    \  status: OPEN\n  rationale: Selected E. coli experiments do not characterize\
+    \ the complete PF01809 family. The DUF31 caption\n    conflicts with the study's\
+    \ DUF37 identity, and toxin-associated labels are not a functional assay\n   \
+    \ of this family.\n  evidence:\n  - reference: PMID:21803992\n    supports: PARTIAL\n\
+    \    evidence_source: primary_discussion_and_reference_leads\n    explanation:\
+    \ Chlamydia localization, plant/other bacterial members and additional phenotype\
+    \ screens\n      require exact member mapping and independent primary-source review.\n\
+    \  - reference: PMID:26389954\n    supports: PARTIAL\n    evidence_source: primary_abstract_and_returned_results_excerpt\n\
+    \    explanation: Population PCR and hemolysis observations do not isolate hla/yidD\
+    \ as the causal toxin;\n      no hemolysin graph is adopted.\n  notes: See evidence/PF01809/yidd-gap-ledger.txt.\
+    \ Inspect the cited Chlamydia studies, actual Nichols\n    screen measurements\
+    \ and relevant follow-up literature. Resolve 2011 fusion/construct wording and\
+    \ unavailable\n    SI, and verify any final version of the 2015 submitted chapter.\
+    \ Preserve frozen identity and remain\n    IN_PROGRESS with partial scientific\
+    \ self-review.\n  posed_by: Codex\n  posed_date: '2026-10-11'\ncausal_graphs:\n\
+    - graph_id: yidd-mc4100-processing-and-abundance\n  title: YidD deletion changes\
+    \ substrate processing and membrane abundance\n  scope: 'Yu 2011 Figure 5: MC4100(DE3)\
+    \ WT versus almost-complete chromosomal yidD deletion retaining\n    the overlapping\
+    \ rnpA ORF. M13P2 and CyoA-HA processing are separate from F0c membrane abundance.'\n\
+    \  context: LB by default; early-log cells with pCL-M13P2 or pCL-CyoA-HA induced\
+    \ with 100 uM IPTG for 1\n    h. Mature/(mature + precursor) fractions from immunoblots;\
+    \ four biological replicates for processing.\n    F0c is measured separately in\
+    \ isolated inner membrane vesicles, with Lep control. YidC abundance and\n   \
+    \ OmpA processing are similar in the displayed WT/deletion controls.\n  family_mapping:\
+    \ K-12 YidD P0A8C8/b4557/JW3682, 85 aa, matches YP_588472.1; PF01809 10-76. MC4100\
+    \ gene\n    identity and study constructs are linked to this reference, not independently\
+    \ resequenced historical\n    clones. The deletion affects the gene, not an isolated\
+    \ domain. YidC is a different protein.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:83333\n\
+    \  limitations: INDIRECT whole-genotype effects without same-gene rescue. Processing\
+    \ fractions are not\n    insertion-rate constants; F0c abundance is not an insertion\
+    \ or ATP synthase assembly assay. Figure\n    5D lacks a stated replicate/error\
+    \ estimate. The 2015 BW25113 thesis reports little F0c abundance effect\n    in\
+    \ a different background; the context-specific results are both retained. No universal\
+    \ insertion\n    requirement or essentiality claim.\n  nodes:\n  - node_id: delete-yidd-mc4100\n\
+    \    label: Delete yidD in MC4100(DE3)\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:P0A8C8\n  - node_id: mature-m13p2-fraction\n    label: Steady-state\
+    \ mature M13P2 fraction\n    node_type: PHENOTYPE\n  - node_id: mature-cyoa-fraction\n\
+    \    label: Steady-state mature CyoA-HA fraction\n    node_type: PHENOTYPE\n \
+    \ - node_id: membrane-f0c-abundance\n    label: F0c immunoblot signal in inner\
+    \ membrane vesicles\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: deletion-decreases-m13p2-processing\n\
+    \    subject: delete-yidd-mc4100\n    predicate: decreases\n    object: mature-m13p2-fraction\n\
+    \    mechanism: The mature fraction declines from 89 +/- 2.1% in WT to 69 +/-\
+    \ 3.9% in the deletion, with\n      precursor accumulation. The caption does not\
+    \ identify the +/- statistic.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:21803992\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3187451/?report=reader\n\
+    \      snippet: Function of YidD\n      explanation: Figure 5B and Results; four\
+    \ biological replicates, Lep loading comparator, steady-state\n        processing\
+    \ rather than a direct insertion rate.\n      cache_path: evidence/PF01809/yu-2011-yidd.txt\n\
+    \      cache_sha256: 616e57f835417d99b39c99bc13e11fb0c2db88aa6821d62c8804bbfec443dcac\n\
+    \  - edge_id: deletion-decreases-cyoa-processing\n    subject: delete-yidd-mc4100\n\
+    \    predicate: decreases\n    object: mature-cyoa-fraction\n    mechanism: Mature\
+    \ CyoA-HA declines from 43 +/- 2.6% to 26 +/- 3.2%; OmpA processing appears unaffected\n\
+    \      in the same comparison. No direct effect on purified signal peptidase is\
+    \ inferred.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:21803992\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC3187451/?report=reader\n      snippet:\
+    \ Function of YidD\n      explanation: Figure 5C HA and OmpA blots, caption and\
+    \ Results; four biological replicates for processing\n        fractions.\n   \
+    \   cache_path: evidence/PF01809/yu-2011-yidd.txt\n      cache_sha256: 616e57f835417d99b39c99bc13e11fb0c2db88aa6821d62c8804bbfec443dcac\n\
+    \  - edge_id: deletion-decreases-mc4100-f0c-abundance\n    subject: delete-yidd-mc4100\n\
+    \    predicate: decreases\n    object: membrane-f0c-abundance\n    mechanism:\
+    \ The deletion-derived vesicle F0c signal is labeled 48% of WT in Figure 5D. This\
+    \ measures\n      membrane abundance and does not distinguish synthesis, insertion,\
+    \ turnover or assembly.\n    directness: INDIRECT\n    support: OBSERVED\n   \
+    \ evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:21803992\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3187451/?report=reader\n\
+    \      snippet: Function of YidD\n      explanation: Visually inspected Figure\
+    \ 5D with Lep comparator; different BW25113 abundance and insertion\n        results\
+    \ are retained separately.\n      cache_path: evidence/PF01809/yu-2011-yidd.txt\n\
+    \      cache_sha256: 616e57f835417d99b39c99bc13e11fb0c2db88aa6821d62c8804bbfec443dcac\n\
+    - graph_id: yidd-gfp-peripheral-localization\n  title: YidD sequences redirect\
+    \ a GFP reporter toward the cell periphery\n  scope: 'Yu 2011 Figure 4: MC4100-A\
+    \ expressing GFP alone, GFP-YidD or GFP-YidD-H1. Qualitative fusion-localization\n\
+    \    intervention, not membrane insertion of purified YidD.'\n  context: M9, induction\
+    \ at OD660 about 0.3 with 50 uM IPTG for 1 h, fixation and paired phase-contrast/fluorescence\n\
+    \    imaging. Full-length YidD and the first 81 coding bases are distinct GFP\
+    \ fusions.\n  family_mapping: P0A8C8 equals YP_588472.1, 85 aa, PF01809 10-76.\
+    \ H1 is residues 1-27, confirmed by the\n    reported coding length and reverse-primer\
+    \ match at 21-27; it includes only domain residues 10-27 plus\n    native flank\
+    \ 1-9. Table/figure place GFP N-terminally; complete linker sequences are not\
+    \ independently\n    verified.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:83333\n\
+    \  limitations: INDIRECT reporter-localization effects in cells. Peripheral fluorescence\
+    \ is not calibrated\n    membrane affinity, direct lipid binding or transbilayer\
+    \ insertion. This tests sufficiency in a fusion\n    context, not H1 necessity\
+    \ in native YidD or sufficiency of the complete Pfam domain. Expression may\n\
+    \    exceed endogenous levels; no quantitative enrichment estimate is adopted.\n\
+    \  nodes:\n  - node_id: fuse-full-yidd\n    label: Fuse full-length YidD to GFP\
+    \ rather than express GFP alone\n    node_type: PERTURBATION\n  - node_id: fuse-yidd-h1\n\
+    \    label: Fuse YidD residues 1-27 to GFP rather than express GFP alone\n   \
+    \ node_type: PERTURBATION\n  - node_id: peripheral-gfp-enrichment\n    label:\
+    \ Qualitative peripheral enrichment of GFP fluorescence\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: full-yidd-increases-peripheral-gfp\n    subject: fuse-full-yidd\n\
+    \    predicate: increases\n    object: peripheral-gfp-enrichment\n    mechanism:\
+    \ The full-length fusion shows halo-like peripheral signal compared with diffuse\
+    \ GFP-alone\n      fluorescence under the same induction/imaging protocol.\n \
+    \   directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:21803992\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3187451/?report=reader\n\
+    \      snippet: GFP fluorescence microscopy\n      explanation: Figure 4A/B, cloning\
+    \ and microscopy Methods; qualitative localization comparison, not\n        a\
+    \ binding constant.\n      cache_path: evidence/PF01809/yu-2011-yidd.txt\n   \
+    \   cache_sha256: 616e57f835417d99b39c99bc13e11fb0c2db88aa6821d62c8804bbfec443dcac\n\
+    \  - edge_id: h1-increases-peripheral-gfp\n    subject: fuse-yidd-h1\n    predicate:\
+    \ increases\n    object: peripheral-gfp-enrichment\n    mechanism: The 1-27 fusion\
+    \ also shifts GFP toward the cell periphery. A partial-domain segment plus\n \
+    \     native flank is tested, not an isolated complete PF01809 fold.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:21803992\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3187451/?report=reader\n\
+    \      snippet: GFP fluorescence microscopy\n      explanation: Figure 4B H1 versus\
+    \ free GFP; first-81-bases Methods and primer interpretation in the\n        identity\
+    \ ledger.\n      cache_path: evidence/PF01809/yu-2011-yidd.txt\n      cache_sha256:\
+    \ 616e57f835417d99b39c99bc13e11fb0c2db88aa6821d62c8804bbfec443dcac\n- graph_id:\
+    \ yidd-induced-tagged-expression-stress\n  title: Induction of His-YidD is accompanied\
+    \ by a modest PspA increase\n  scope: 'Yu 2011 Figure 2C: induced versus uninduced\
+    \ MC4100-A carrying pEH3His-YidD.'\n  context: LB, OD660 0.3, 1 mM IPTG for 1\
+    \ h; anti-His, PspA and YidC immunoblots. This is distinct from\n    the 50-uM\
+    \ GFP and 100-uM processing/fractionation conditions.\n  family_mapping: Full-length\
+    \ MC4100 YidD maps to 85-aa P0A8C8/YP_588472.1, PF01809 10-76; forward primer\n\
+    \    encodes an N-terminal His6/GS extension. Historical plasmid is not independently\
+    \ resequenced.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:83333\n  limitations:\
+    \ INDIRECT joint IPTG/tagged-expression intervention. No IPTG-only empty-vector\
+    \ control is\n    displayed in this panel, and no PspA transcription or direct\
+    \ regulation is measured. YidC signal is\n    not detectably changed; physiological\
+    \ untagged YidD and an isolated domain are not tested.\n  nodes:\n  - node_id:\
+    \ induce-his-yidd\n    label: Add IPTG to induce His-YidD in the reported strain\n\
+    \    node_type: PERTURBATION\n  - node_id: pspa-immunoblot-signal\n    label:\
+    \ Cellular PspA immunoblot signal\n    node_type: PHENOTYPE\n  edges:\n  - edge_id:\
+    \ induced-preparation-increases-pspa\n    subject: induce-his-yidd\n    predicate:\
+    \ increases\n    object: pspa-immunoblot-signal\n    mechanism: The induced preparation\
+    \ shows a modest PspA increase compared with the uninduced culture;\n      direct\
+    \ YidD activation of the stress-response pathway is not established.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:21803992\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3187451/?report=reader\n\
+    \      snippet: PspA expression\n      explanation: Figure 2C and expression Results,\
+    \ with the tagged-induction and missing empty-vector\n        qualification.\n\
+    \      cache_path: evidence/PF01809/yu-2011-yidd.txt\n      cache_sha256: 616e57f835417d99b39c99bc13e11fb0c2db88aa6821d62c8804bbfec443dcac\n\
+    - graph_id: yidd-bw25113-energized-vesicle-proxies\n  title: YidD deletion reduces\
+    \ energized-vesicle gradient proxies\n  scope: 'Geng 2015 thesis Chapter 4 Figure\
+    \ 2, not a verified journal version: inner membrane vesicles\n    from BW25113\
+    \ WT and Keio yidD::kan cells.'\n  context: 'Buffer A: 50 mM HEPES-KOH pH 8, 50\
+    \ mM KCl, 1 mM DTT, 5 mM MgCl2. ACMA: 12.5 ug/ml IMVs, 1\n    uM dye, 30 C, 0.625\
+    \ mM NADH or 1 mM ATP. Oxonol VI: 100 ug/ml IMVs, 1.25 mM NADH or 1 mM ATP; dye\n\
+    \    concentration not specified in the inspected Methods. Valinomycin/nigericin\
+    \ controls use 1 uM.'\n  family_mapping: K-12 YidD P0A8C8/b4557/JW3682 equals\
+    \ YP_588472.1, 85 aa; PF01809 10-76. BW25113 whole-gene\n    deletion is the intervention,\
+    \ not an isolated domain or purified protein.\n  scope_status: PHENOTYPIC\n  taxon:\
+    \ NCBITaxon:83333\n  limitations: All effects INDIRECT through genotype-derived\
+    \ vesicles; YidC abundance is slightly reduced\n    in this background. Smaller\
+    \ dye quenching is the readout, not calibrated delta-pH or millivolts; larger\n\
+    \    raw fluorescence does not mean a larger gradient. Replicate variance is not\
+    \ established by the displayed\n    traces. No direct proton-pumping or membrane-leak\
+    \ mechanism is assigned to YidD.\n  nodes:\n  - node_id: delete-yidd-vesicles\n\
+    \    label: Prepare vesicles from BW25113 yidD deletion rather than WT\n    node_type:\
+    \ PERTURBATION\n  - node_id: nadh-acma-quenching\n    label: NADH-driven ACMA\
+    \ quenching as a delta-pH proxy\n    node_type: PHENOTYPE\n  - node_id: atp-acma-quenching\n\
+    \    label: ATP-driven ACMA quenching as a delta-pH proxy\n    node_type: PHENOTYPE\n\
+    \  - node_id: nadh-oxonol-quenching\n    label: NADH-driven oxonol VI quenching\
+    \ as a delta-psi proxy\n    node_type: PHENOTYPE\n  - node_id: atp-oxonol-quenching\n\
+    \    label: ATP-driven oxonol VI quenching as a delta-psi proxy\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: deletion-decreases-nadh-acma-quenching\n \
+    \   subject: delete-yidd-vesicles\n    predicate: decreases\n    object: nadh-acma-quenching\n\
+    \    mechanism: Deletion-derived vesicles show less NADH-driven ACMA quenching,\
+    \ including after valinomycin\n      addition; the nigericin collapse supports\
+    \ the gradient interpretation.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      source_url: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      snippet: Proton motive force measurements\n      explanation: Thesis Figure\
+    \ 2A, printed p.97, with primary Methods; fluorescence-proxy polarity rather\n\
+    \        than raw-intensity polarity.\n      cache_path: evidence/PF01809/geng-2015-yidd.txt\n\
+    \      cache_sha256: 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6\n\
+    \  - edge_id: deletion-decreases-atp-acma-quenching\n    subject: delete-yidd-vesicles\n\
+    \    predicate: decreases\n    object: atp-acma-quenching\n    mechanism: ATP-driven\
+    \ ACMA quenching is smaller in deletion-derived vesicles under the separate ATP\n\
+    \      condition; no direct YidD ATPase activity is implied.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      source_url: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      snippet: Proton motive force measurements\n      explanation: Thesis Figure\
+    \ 2B, printed p.97; separate energy-source trace and ionophore controls.\n   \
+    \   cache_path: evidence/PF01809/geng-2015-yidd.txt\n      cache_sha256: 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6\n\
+    \  - edge_id: deletion-decreases-nadh-oxonol-quenching\n    subject: delete-yidd-vesicles\n\
+    \    predicate: decreases\n    object: nadh-oxonol-quenching\n    mechanism: NADH\
+    \ produces less oxonol VI quenching in deletion-derived vesicles; nigericin and\
+    \ valinomycin\n      distinguish this electrical-potential proxy from the ACMA\
+    \ assay.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      source_url: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      snippet: Proton motive force measurements\n      explanation: Thesis Figure\
+    \ 2C, printed p.97, and the separate oxonol/IMV/NADH conditions in Methods.\n\
+    \      cache_path: evidence/PF01809/geng-2015-yidd.txt\n      cache_sha256: 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6\n\
+    \  - edge_id: deletion-decreases-atp-oxonol-quenching\n    subject: delete-yidd-vesicles\n\
+    \    predicate: decreases\n    object: atp-oxonol-quenching\n    mechanism: The\
+    \ ATP-driven oxonol VI quenching response is smaller in deletion-derived vesicles,\
+    \ without\n      assigning the change to a uniquely identified molecular intermediate.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      source_url: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      snippet: Proton motive force measurements\n      explanation: Thesis Figure\
+    \ 2D, printed p.97; qualitative amplitude comparison, not a calibrated\n     \
+    \   voltage determination.\n      cache_path: evidence/PF01809/geng-2015-yidd.txt\n\
+    \      cache_sha256: 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6\n\
+    - graph_id: yidd-bw25113-vesicle-enzyme-readouts\n  title: YidD deletion reduces\
+    \ distinct vesicle enzyme readouts\n  scope: 'Geng 2015 thesis Chapter 4 Figure\
+    \ 3: BW25113 WT versus yidD::kan IMVs; primary thesis experiments,\n    not purified\
+    \ YidD catalysis.'\n  context: 'Ferricyanide assay: 80 ug/ml IMVs, 25 C, phosphate\
+    \ pH 7.5, 1 mM NADH and ferricyanide, A420.\n    Oxygen-linked NADH oxidation:\
+    \ 75 ug/ml IMVs, HEPES pH 7.5, 350 uM NADH, A340. ATP assay: 15 ug/ml\n    IMVs,\
+    \ 37 C, HEPES pH 8, 1 mM ATP, malachite-green phosphate readout; 0.5 mM DCCD defines\
+    \ the sensitive\n    component. Three independent measurements, mean/SD.'\n  family_mapping:\
+    \ P0A8C8/YP_588472.1 YidD, PF01809 10-76 in the 85-aa reference; Keio BW25113\
+    \ gene deletion,\n    with downstream YidC abundance affected. No purified-domain\
+    \ preparation is tested.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:83333\n\
+    \  limitations: INDIRECT genotype-derived preparation effects. Separate ferricyanide,\
+    \ oxygen and ATP endpoints\n    are not one measured reaction chain. DCCD-sensitive\
+    \ ATP hydrolysis is not direct visualization of\n    F1/F0 assembly or a direct\
+    \ YidD enzymatic activity. Exact ATP time-course and DCCD solvent-control\n  \
+    \  details need reconciliation; no independent statistical or densitometric reanalysis.\n\
+    \  nodes:\n  - node_id: delete-yidd-vesicles\n    label: Use BW25113 yidD deletion\
+    \ vesicles rather than WT\n    node_type: PERTURBATION\n  - node_id: ferricyanide-reduction\n\
+    \    label: NADH-dependent ferricyanide reduction per membrane protein\n    node_type:\
+    \ PHENOTYPE\n  - node_id: oxygen-linked-nadh-oxidation\n    label: Oxygen-linked\
+    \ NADH oxidation per membrane protein\n    node_type: PHENOTYPE\n  - node_id:\
+    \ dccd-sensitive-atpase\n    label: DCCD-sensitive phosphate release from ATP\n\
+    \    node_type: PHENOTYPE\n  edges:\n  - edge_id: deletion-decreases-ferricyanide-reduction\n\
+    \    subject: delete-yidd-vesicles\n    predicate: decreases\n    object: ferricyanide-reduction\n\
+    \    mechanism: Deletion-derived vesicles retain about half the WT ferricyanide-reduction\
+    \ activity; this\n      bulk assay does not uniquely identify which assembly or\
+    \ electron-transfer step changed.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      source_url: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      snippet: NADH dehydrogenase activity\n      explanation: Thesis Figure\
+    \ 3A and Results, printed p.98, with ferricyanide-specific Methods.\n      cache_path:\
+    \ evidence/PF01809/geng-2015-yidd.txt\n      cache_sha256: 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6\n\
+    \  - edge_id: deletion-decreases-oxygen-linked-oxidation\n    subject: delete-yidd-vesicles\n\
+    \    predicate: decreases\n    object: oxygen-linked-nadh-oxidation\n    mechanism:\
+    \ The oxygen-linked NADH oxidation readout falls substantially; the Results describe\
+    \ about\n      30% residual activity. This is an integrated respiratory readout,\
+    \ not purified NuoK enzymology.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      source_url: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      snippet: NADH dehydrogenase activity\n      explanation: Thesis Figure\
+    \ 3B, Results and A340 assay Methods; no precise re-fitted effect ratio\n    \
+    \    is claimed.\n      cache_path: evidence/PF01809/geng-2015-yidd.txt\n    \
+    \  cache_sha256: 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6\n\
+    \  - edge_id: deletion-decreases-dccd-sensitive-atpase\n    subject: delete-yidd-vesicles\n\
+    \    predicate: decreases\n    object: dccd-sensitive-atpase\n    mechanism: The\
+    \ difference between uninhibited and DCCD-treated ATP hydrolysis is reduced about\
+    \ 40%,\n      while DCCD-insensitive residual activity is similar in both preparations.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      source_url: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      snippet: ATPase activity\n      explanation: Thesis Figure 3C paired white/gray\
+    \ bars and Results; activity difference is not a directly\n        measured assembly\
+    \ intermediate.\n      cache_path: evidence/PF01809/geng-2015-yidd.txt\n     \
+    \ cache_sha256: 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6\n\
+    - graph_id: yidd-bw25113-membrane-abundance\n  title: YidD deletion changes NuoK,\
+    \ YidC and PspA signals in BW25113 vesicles\n  scope: 'Geng 2015 thesis Chapter\
+    \ 4 Figure 4: WT BW25113 and two independent Keio yidD::kan isolates,\n    distinct\
+    \ from the FTL10 YidC-depletion comparison.'\n  context: Inner membrane vesicles\
+    \ from LB cultures grown at 37 C and harvested at OD600 about 0.6; immunoblots\n\
+    \    for NuoK, YidC, PspA, F0c and LepB. The deletion overnight culture receives\
+    \ kanamycin; complete matched\n    antibiotic exposure is not independently established.\n\
+    \  family_mapping: Whole-gene YidD perturbation; P0A8C8/b4557/JW3682 reference\
+    \ equals YP_588472.1, PF01809\n    10-76. The downstream yidC gene is distinct\
+    \ and potentially affected by a polar effect.\n  scope_status: PHENOTYPIC\n  taxon:\
+    \ NCBITaxon:83333\n  limitations: INDIRECT qualitative membrane-fraction signals,\
+    \ not transcription rates, purified activities\n    or direct interactions. LepB\
+    \ is similar and F0c is reported as little affected, unlike the earlier\n    MC4100\
+    \ result. No same-gene complementation or absolute protein quantitation is adopted.\
+    \ PspA response\n    is not itself proof of membrane rupture.\n  nodes:\n  - node_id:\
+    \ delete-yidd-bw25113\n    label: Delete yidD in BW25113\n    node_type: PERTURBATION\n\
+    \  - node_id: nuok-membrane-signal\n    label: NuoK immunoblot signal in the membrane\
+    \ preparation\n    node_type: PHENOTYPE\n  - node_id: yidc-membrane-signal\n \
+    \   label: YidC immunoblot signal in the membrane preparation\n    node_type:\
+    \ PHENOTYPE\n  - node_id: pspa-membrane-signal\n    label: PspA immunoblot signal\
+    \ in the membrane preparation\n    node_type: PHENOTYPE\n  edges:\n  - edge_id:\
+    \ deletion-decreases-nuok-signal\n    subject: delete-yidd-bw25113\n    predicate:\
+    \ decreases\n    object: nuok-membrane-signal\n    mechanism: Both deletion-isolate\
+    \ lanes show reduced NuoK relative to the WT preparation. The assay\n      alone\
+    \ does not distinguish insertion, turnover or altered production.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      source_url: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      snippet: Deletion of yidD\n      explanation: Thesis Figure 4 lanes 3-5,\
+    \ printed p.99, with LepB and F0c controls; separate FTL10\n        comparison\
+    \ is not substituted.\n      cache_path: evidence/PF01809/geng-2015-yidd.txt\n\
+    \      cache_sha256: 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6\n\
+    \  - edge_id: deletion-decreases-yidc-signal\n    subject: delete-yidd-bw25113\n\
+    \    predicate: decreases\n    object: yidc-membrane-signal\n    mechanism: YidC\
+    \ signal is slightly reduced in this deletion background, exposing a possible\
+    \ downstream-expression\n      confounder rather than proving a YidD-to-YidC biochemical\
+    \ activation step.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      source_url: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      snippet: Deletion of yidD\n      explanation: Thesis Figure 4 YidC lanes\
+    \ 3-5 and Results; Figure S2 separately verifies the compensation\n        design.\n\
+    \      cache_path: evidence/PF01809/geng-2015-yidd.txt\n      cache_sha256: 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6\n\
+    \  - edge_id: deletion-increases-pspa-signal\n    subject: delete-yidd-bw25113\n\
+    \    predicate: increases\n    object: pspa-membrane-signal\n    mechanism: Deletion-derived\
+    \ membrane preparations show a weak PspA signal increase, smaller than the\n \
+    \     distinct YidC-depletion response; no direct transcriptional mechanism is\
+    \ measured.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      source_url: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      snippet: Deletion of yidD\n      explanation: Thesis Figure 4 PspA lanes\
+    \ 3-5 and corresponding Results; qualitative comparison with\n        no re-fitted\
+    \ fold change.\n      cache_path: evidence/PF01809/geng-2015-yidd.txt\n      cache_sha256:\
+    \ 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6\n- graph_id:\
+    \ yidd-bw25113-nuok-protection\n  title: NuoK protection remains reduced after\
+    \ YidC compensation\n  scope: 'Geng 2015 thesis Chapter 4 Figure 6B/C and S2:\
+    \ BW25113 WT versus yidD deletion with matched\n    empty-vector or pTrcyidC backgrounds.'\n\
+    \  context: pTrc99A/pTrcyidC cultures at 30 C with 25 uM IPTG. Coupled T7 transcription/translation\
+    \ in\n    IMVs, HEPES pH 7.6, 37 C for 30 min; sedimentation through 20% sucrose,\
+    \ 0.5 mg/ml proteinase K for\n    30 min on ice, TCA precipitation and tricine\
+    \ SDS-PAGE. Protected N-terminal NuoK fragment quantified;\n    4% synthesis and\
+    \ no-IMV controls; five independent experiments, mean/SD.\n  family_mapping: K-12\
+    \ YidD reference P0A8C8/YP_588472.1, PF01809 10-76; BW25113 whole-gene deletion.\n\
+    \    pTrcyidC expresses the separate downstream insertase, not YidD. Final IMV/translation-extract\
+    \ recipe\n    is inherited from cited methods and not fully reconstructed here.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:83333\n  limitations: INDIRECT\
+    \ genotype-derived vesicle effects despite an in-vitro readout. Protease protection\n\
+    \    supports insertion under this protocol, not absolute native topology or assembled\
+    \ complex activity;\n    no detergent-plus-protease control is displayed. YidC\
+    \ compensation is not same-gene rescue, and remaining\n    preparation changes\
+    \ are not excluded. Thesis version is marked Submitted.\n  nodes:\n  - node_id:\
+    \ delete-yidd-empty-vector\n    label: Delete yidD with pTrc99A relative to matched\
+    \ WT vesicles\n    node_type: PERTURBATION\n  - node_id: delete-yidd-yidc-compensated\n\
+    \    label: Delete yidD with pTrcyidC relative to matched WT vesicles\n    node_type:\
+    \ PERTURBATION\n  - node_id: nuok-protection-empty-vector\n    label: Protected\
+    \ NuoK fragment with empty-vector vesicles\n    node_type: PHENOTYPE\n  - node_id:\
+    \ nuok-protection-yidc-background\n    label: Protected NuoK fragment with pTrcyidC\
+    \ vesicles\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: deletion-decreases-nuok-protection\n\
+    \    subject: delete-yidd-empty-vector\n    predicate: decreases\n    object:\
+    \ nuok-protection-empty-vector\n    mechanism: Deletion-derived empty-vector vesicles\
+    \ give about half the WT protected NuoK signal, with\n      synthesis and no-vesicle\
+    \ controls distinguishing gross production and digestion effects.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      source_url: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      snippet: membrane insertion\n      explanation: Thesis Figure 6B/C empty-vector\
+    \ WT/deletion comparison, printed p.102, Methods and\n        Results.\n     \
+    \ cache_path: evidence/PF01809/geng-2015-yidd.txt\n      cache_sha256: 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6\n\
+    \  - edge_id: deletion-decreases-nuok-protection-with-yidc\n    subject: delete-yidd-yidc-compensated\n\
+    \    predicate: decreases\n    object: nuok-protection-yidc-background\n    mechanism:\
+    \ The NuoK protection deficit persists when YidC abundance is restored, relative\
+    \ to the matched\n      pTrcyidC WT. Restoring this one confounder does not establish\
+    \ a direct YidD insertion reaction.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      source_url: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      snippet: membrane insertion\n      explanation: Thesis Figure 6C bars 3/4,\
+    \ with S2 restoration blot visually inspected; not a YidD\n        complementation\
+    \ experiment.\n      cache_path: evidence/PF01809/geng-2015-yidd.txt\n      cache_sha256:\
+    \ 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6\n- graph_id:\
+    \ yidd-overexpression-nuok-protection\n  title: His-YidD-enriched vesicles increase\
+    \ NuoK protection\n  scope: 'Geng 2015 thesis Figure 6 actual E/F panels, called\
+    \ D/E in its caption: pEK746 His-YidD versus\n    pET15b control vesicles. Lemo21(DE3)\
+    \ per Methods/figure; Results instead says BL21(DE3).'\n  context: 'Reported expression\
+    \ preparation: 30 C growth, OD600 about 0.5, 500 uM IPTG for 2 h. Coupled\n  \
+    \  NuoK synthesis at 37 C for 30 min, pelleting and protease treatment as in the\
+    \ separate BW25113 NuoK\n    assay; no-vesicle and 4% synthesis controls. Five\
+    \ independent experiments, mean/SD per Figure 6 caption.'\n  family_mapping: pEK746\
+    \ N-terminal His-tagged YidD derives from pBAD30YidD; primers agree with the P0A8C8/YP_588472.1\n\
+    \    K-12 reference start, PF01809 10-76. Complete clone sequence and precise\
+    \ Lemo21/BL21 host provenance\n    remain unresolved; neither is silently equated\
+    \ with the BW25113 deletion strain.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:562\n\
+    \  limitations: INDIRECT expression-preparation effect, not purified YidD sufficiency\
+    \ or rescue of the\n    BW25113 deletion. The host and panel-label discrepancies\
+    \ remain open. Results describe about 50% enhancement\n    but the plotted bar\
+    \ is above 150%; only qualitative increase is adopted. Little F0c response to\
+    \ the\n    same overexpression is retained as a substrate-context limit.\n  nodes:\n\
+    \  - node_id: his-yidd-enriched-vesicles\n    label: Use pEK746 His-YidD-enriched\
+    \ rather than pET15b control vesicles\n    node_type: PERTURBATION\n  - node_id:\
+    \ protected-nuok-fragment\n    label: Protease-protected NuoK fragment in the\
+    \ reported overexpression assay\n    node_type: PHENOTYPE\n  edges:\n  - edge_id:\
+    \ enriched-preparation-increases-nuok-protection\n    subject: his-yidd-enriched-vesicles\n\
+    \    predicate: increases\n    object: protected-nuok-fragment\n    mechanism:\
+    \ The His-YidD-enriched vesicle preparation gives more protected NuoK than the\
+    \ vector control.\n      Other composition changes in the preparation and the\
+    \ inconsistent host designation prevent a purified-protein\n      causal interpretation.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      source_url: https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n\
+    \      snippet: membrane insertion\n      explanation: Visually inspected Figure\
+    \ 6 lower E/F panels and Methods, retaining caption D/E and\n        Results BL21\
+    \ discrepancies explicitly.\n      cache_path: evidence/PF01809/geng-2015-yidd.txt\n\
+    \      cache_sha256: 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6\n\
+    - graph_id: yidd-bw25113-f0c-yidc-compensation\n  title: YidC compensation restores\
+    \ c-subunit protection in YidD-deletion vesicles\n  scope: 'Geng 2015 thesis Chapter\
+    \ 4 Figure 7B/C and S2: BW25113 WT and yidD deletion with pTrc99A or\n    pTrcyidC.'\n\
+    \  context: 30 C source cultures with 25 uM IPTG for mild YidC expression; coupled\
+    \ F0c synthesis at 37\n    C for 20 min, then 2.5 mg/ml proteinase K for 20 min\
+    \ at room temperature. Protected full-length F0c\n    measured after TCA precipitation/tricine\
+    \ SDS-PAGE; 3% synthesis and no-IMV controls; three independent\n    experiments,\
+    \ mean/SD.\n  family_mapping: YidD P0A8C8/YP_588472.1, 85 aa, PF01809 10-76. Whole-gene\
+    \ deletion alters the YidD context\n    and slightly lowers YidC; pTrcyidC restores\
+    \ a distinct protein. No isolated YidD domain or same-gene\n    rescue is tested.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:83333\n  limitations: 'INDIRECT\
+    \ genotype/preparation effects. Full-length protease protection is not the 2011\n\
+    \    F0c abundance measurement or the separate DCCD-sensitive ATPase assay. No\
+    \ obligatory YidD-dependent\n    F0c insertion mechanism follows: mild YidC expression\
+    \ compensates for this deficit, while YidD overexpression\n    has little effect\
+    \ in Figure 7D/E. Exact inherited translation recipe remains incomplete.'\n  nodes:\n\
+    \  - node_id: delete-yidd-empty-vector\n    label: Delete yidD with pTrc99A compared\
+    \ with matched WT\n    node_type: PERTURBATION\n  - node_id: restore-yidc-in-deletion\n\
+    \    label: Express pTrcyidC in the deletion compared with its pTrc99A control\n\
+    \    node_type: PERTURBATION\n  - node_id: protected-f0c\n    label: Protease-protected\
+    \ full-length F0c in the vesicle assay\n    node_type: PHENOTYPE\n  edges:\n \
+    \ - edge_id: deletion-decreases-f0c-protection\n    subject: delete-yidd-empty-vector\n\
+    \    predicate: decreases\n    object: protected-f0c\n    mechanism: The empty-vector\
+    \ deletion preparation shows about 20% less protected F0c than WT, a small\n \
+    \     deficit in a background with reduced YidC.\n    directness: INDIRECT\n \
+    \   support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n      source_url:\
+    \ https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n      snippet:\
+    \ membrane insertion\n      explanation: Thesis Figure 7B/C empty-vector WT/deletion\
+    \ comparison, printed p.104, with protease-protection\n        Methods.\n    \
+    \  cache_path: evidence/PF01809/geng-2015-yidd.txt\n      cache_sha256: 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6\n\
+    \  - edge_id: yidc-compensation-increases-f0c-protection\n    subject: restore-yidc-in-deletion\n\
+    \    predicate: increases\n    object: protected-f0c\n    mechanism: Mild YidC\
+    \ expression increases protected F0c in deletion-derived vesicles to approximately\n\
+    \      WT levels. This is compensation by another protein, not YidD rescue or\
+    \ proof of a direct YidD assembly\n      step.\n    directness: INDIRECT\n   \
+    \ support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n      source_url:\
+    \ https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf\n      snippet:\
+    \ membrane insertion\n      explanation: Thesis Figure 7C deletion bars with vector\
+    \ versus pTrcyidC, supported by S2 YidC-expression\n        control; distinct\
+    \ from NuoK's persistent deficit.\n      cache_path: evidence/PF01809/geng-2015-yidd.txt\n\
+    \      cache_sha256: 0855a8f079bd7cbe33fa2ff3cd273746061acd06465059bae9bbd3c340d881b6\n\
+    curation_events:\n- timestamp: '2026-10-11T15:19:41Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate YidD localization and context-specific\
+    \ membrane-biogenesis effects\n  history_record: history/records/PF01809/2026-10-11T151941Z-codex-4f8323.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: K-12 P0A8C8/b4557/JW3682 is an 85-aa exact match to YP_588472.1, with PF01809
+    at 10-76. The 2011 H1 fusion contains only residues 1-27, including domain 10-27
+    and native flank 1-9; primer interpretation supports its boundary. Historical
+    MC4100/BW25113 and complete plasmid sequences were not independently resequenced.
+    The 2015 pEK746 overexpression host is Lemo21 per Methods/figure but BL21 in Results;
+    this remains explicit. DUF37 identity is retained despite the DUF31 caption, and
+    YidC is kept distinct.
+  target_ids:
+  - PF01809
+  evidence_ids:
+  - identity
+  - primary
+  - thesis-vesicle-effects
+  - remaining-family-coverage
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: All twenty-one edges are INDIRECT and OBSERVED, with experimental support
+    for the specific genotype or preparation changes, not purified-domain sufficiency.
+    Mature fractions, membrane signals, protected fragments/full-length protein, quenching
+    amplitudes and DCCD-sensitive activity are not conflated. Separate single-background
+    comparisons and YidC compensation prevent a universal YidD requirement for F0c
+    insertion. Reporter localization does not establish direct lipid binding, and
+    proximity/co-purification does not establish recruitment or ribosome tethering.
+    Raw fluorescence polarity is distinguished from gradient-proxy quenching. No linear
+    insertion-to-respiration-to-assembly mechanism is claimed.
+  target_ids:
+  - PF01809
+  evidence_ids:
+  - primary
+  - native
+  - thesis-vesicle-effects
+  - remaining-family-coverage
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Obtain missing 2011 SI and complete clones/linkers, resolve its caption/fusion
+    wording, and reconcile F0c abundance across strains. For the submitted 2015 thesis,
+    verify any final version, Lemo21/BL21 provenance, Figure 6 E/F versus D/E, inherited
+    vesicle/translation recipe, oxonol dose and antibiotic/solvent controls. Same-gene
+    rescue or purified reconstitution is needed before direct molecular assignment.
+    Other family members, Chlamydia sources, screen measurements and hemolysin-associated
+    annotations remain independent follow-ups.
+  target_ids:
+  - PF01809
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01809-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve YidD provenance and extend member-specific mechanism coverage
+  description: Reconcile construct, strain, dose and source-version discrepancies,
+    obtain missing methods/SI, and distinguish gene-deletion polar effects from YidD-specific
+    action with appropriate rescue or reconstitution evidence. Preserve differing
+    F0c contexts and matched YidC-compensation comparisons. Independently map and
+    assess other PF01809 members, without importing YidC or hemolysin mechanisms.
+    Append successor reviews stating actual coverage.
+  target_ids:
+  - PF01809
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - thesis-vesicle-effects
+  - remaining-family-coverage
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01809.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Reconcile construct, strain, dose and source-version discrepancies,
+    obtain missing methods/SI, and distinguish gene-deletion polar effects from YidD-specific
+    action with appropriate rescue or reconstitution evidence. Preserve differing
+    F0c contexts and matched YidC-compensation comparisons. Independently map and
+    assess other PF01809 members, without importing YidC or hemolysin mechanisms.
+    Append successor reviews stating actual coverage.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01809
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Yu Figures 2/4/5 and thesis Figures 2/3/4/6/7/S1/S2 were visually inspected. Yu
+  Figures 3/6 and thesis Figure 5 were assessed from text/captions, not images. Yu
+  SI was unavailable; raw images, densitometry, statistical estimates, historical
+  clone sequences and inherited translation protocols were not independently reconstructed.
+  No experimental replication or exhaustive family survey.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

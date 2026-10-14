@@ -4,7 +4,7 @@ name: CLIPPER domain
 short_name: CLIPPER
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01345
 counters:
   proteins: 12543
@@ -30,3 +30,195 @@ description: This entry, previously known as DUF11, represents the CLIPPER domai
   from Gram-positive and Gram-negative bacteria. Some have also been identified in multiple cell-surface
   proteins from archaea. In Methanothermobacter sp. CaT2, this domain plays a key role as a membrane-bound
   adhesion protein in the aggregation of CaT2 [[cite:PUB00097782]].
+curation_history: history/records/PF01345
+discussions:
+- discussion_id: clipper-residue-labels-and-native-contexts
+  prompt: Reconcile residue labels and biochemical processing, and test transfer from a purified repeat
+    to native CLIPPER-bearing proteins.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Table S6 and 9IFR resolve the intended fragment, but do not validate the proposed catalytic
+    Asp748 label or every biochemical aliquot. Three measured substitution effects do not establish native
+    adhesion, force response, bond-formation kinetics or a shared function across all repeats.
+  evidence:
+  - reference: PMID:41236442
+    supports: PARTIAL
+    evidence_source: full_text_and_supplement
+    explanation: Figures 5/6/S8 were visually inspected and Table S6 coding sequences translated. K715A
+      is the only encoded protein change; N748/D749 conflicts with the proposed Asp748 label. Raw diffraction
+      and biophysical data were not reanalyzed.
+  - reference: PMID:31189768
+    supports: PARTIAL
+    evidence_source: selected_full_text
+    explanation: Selected CaT2 Results and Discussion distinguish whole MTCT_1020 aggregation from domain-specific
+      DUF11 causality. Other regions or full-protein architecture remain alternative explanations; no
+      archaeal edge is imported here.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Obtain experimental clone/tag records and reconciled residue numbering; examine additional bacterial
+    and archaeal members with their own interventions. Comparative absence of aggregation is not a universal
+    negative. Partial scientific self-review; IN_PROGRESS.
+causal_graphs:
+- graph_id: asilvestris-clipper-k715a-thermal-unfolding
+  title: K715A lowers the CLIPPER fragment's thermal transition temperature
+  scope: Purified synthetic B9T28_05395 residues 708-828 from Acinetobacter silvestris ANC4999 in Costa
+    2025; a single repeat, not the full adhesin or all CLIPPER domains.
+  context: Compare WT with K715A by circular dichroism during heating from 5 to 95 C in 5-C increments.
+    Samples contain 0.36 mg/ml WT or 0.38 mg/ml mutant in 10 mM sodium phosphate, 100 mM sodium fluoride,
+    pH 7.4; 300 ul in a 1-mm cuvette. Spectra span 180-280 nm and average four repeat scans. pOPINF/BL21(DE3)
+    constructs were purified by nickel affinity and SEC; tag removal is explicit for crystallography,
+    not unambiguously for these aliquots.
+  family_mapping: UniProtKB:A0A1Y3CHT7, B9T28_05395, is 2129 aa, sequence version 1. Its sequence matches
+    InterPro; the tested PF01345 match is 712-812 within the 708-828 construct. Table S6 WT DNA translates
+    exactly to that 121-aa segment; mutant DNA differs only at K715A. Deposited 9IFR polymer is GP plus
+    the same WT segment. Other repeats do not inherit the assay.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:1977882
+  limitations: Both starting spectra resemble folded beta-sheet proteins, but the comparison does not
+    isolate a single atomic cause. The source reports a K715-N806 isopeptide bond; local mutation effects
+    and the C818/C821 disulfide are not separately excluded. Main text/Figure 5 say Asp748, whereas both
+    reference and synthetic sequences encode N748/D749. Methods also say K517A in places despite Table
+    S6 confirming K715A. No catalytic microstep, fitted thermodynamic melting constant, force resistance
+    or native adhesion is asserted.
+  nodes:
+  - node_id: clipper-k715a-heating
+    label: K715A rather than WT in the 708-828 CLIPPER fragment during the heating assay
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A1Y3CHT7
+  - node_id: clipper-cd-transition-temperature
+    label: Temperature of the unfolding-associated CD spectral transition
+    node_type: STATE
+  edges:
+  - edge_id: k715a-lowers-cd-transition-temperature
+    subject: clipper-k715a-heating
+    predicate: decreases
+    object: clipper-cd-transition-temperature
+    mechanism: The purified mutant undergoes the spectral transition at lower temperatures than WT in
+      Figure 6a/c. Initial folded-like spectra and similar SEC behavior support a domain-level substitution
+      effect, without establishing that loss of the isopeptide bond is its sole physical cause.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:41236442
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12617251/
+      snippet: comparable
+      explanation: Figure 6a/c, Results 2.4 and Methods 4.10 support the relative transition and initial
+        folding control. Four spectral scans do not establish four independent protein preparations.
+      cache_path: evidence/PF01345/costa-2025-biophysics.txt
+      cache_sha256: dc7d1bc0178d1ffe06307c4102f0ffc8dba496c530efa2d72e92ef98989c95d6
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A1Y3CHT7/entry/pfam/PF01345/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A1Y3CHT7/entry/pfam/PF01345/
+      snippet: 'Pfam:PF01345; tested repeat interval: 712-812, inclusive.'
+      explanation: Exact reference, synthetic coding-sequence and deposited polymer comparisons locate
+        the tested repeat; database mapping alone does not prove stability or adhesion.
+      cache_path: evidence/PF01345/CLIPPER-identity.txt
+      cache_sha256: e00458f43a64ae0fc9c8183e42bdbd37309904318b116396ca62e602885d4683
+- graph_id: asilvestris-clipper-k715a-cooling-recovery
+  title: K715A reduces recovery of the initial CLIPPER CD spectrum after heating
+  scope: The same purified 708-828 A. silvestris construct comparison in Costa 2025, assessed during cooling
+    rather than as a cellular repair process.
+  context: After heating to 95 C, cool to 5 C in 5-C increments. CD uses 10 mM sodium phosphate, 100 mM
+    sodium fluoride, pH 7.4, with WT 0.36 mg/ml and K715A 0.38 mg/ml; four repeat scans per spectrum.
+    The 203-nm trace and full spectra are interpreted relative to each preparation's initial spectrum.
+  family_mapping: A0A1Y3CHT7 reference residues 708-828 contain PF01345 712-812. Table S6 independently
+    identifies K715A as the only protein change; the K517A Methods label is inconsistent with those sequences.
+    The crystal's GP remnant does not establish biochemical tag processing.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:1977882
+  limitations: The mutant's return toward the initial CD spectrum is incomplete, not an absence of every
+    structural recovery. No single-molecule refolding trajectory or exclusive crosslink mechanism follows
+    from these population spectra. Thermal dwell times, independent preparation uncertainty and raw traces
+    remain unverified; the Asp748 versus N748/D749 discrepancy is not resolved by this assay.
+  nodes:
+  - node_id: clipper-k715a-cooling
+    label: K715A rather than WT during cooling after the 95-C excursion
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A1Y3CHT7
+  - node_id: initial-spectrum-recovery
+    label: Return toward the initial folded-like CD spectrum on cooling
+    node_type: STATE
+  edges:
+  - edge_id: k715a-reduces-cd-recovery
+    subject: clipper-k715a-cooling
+    predicate: decreases
+    object: initial-spectrum-recovery
+    mechanism: Figure 6b/c shows less recovery toward the starting spectrum for the mutant than WT, including
+      failure to regain positive ellipticity near 203 nm. This is an observed purified-domain spectral
+      effect, not proof of a uniquely crosslink-driven microscopic refolding pathway.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:41236442
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12617251/
+      snippet: incomplete
+      explanation: Visually inspected cooling spectra and 203-nm traces support reduced recovery. Main
+        experimental Methods provide buffer, temperature range and averaging, but not independent-batch
+        statistics.
+      cache_path: evidence/PF01345/costa-2025-biophysics.txt
+      cache_sha256: dc7d1bc0178d1ffe06307c4102f0ffc8dba496c530efa2d72e92ef98989c95d6
+- graph_id: asilvestris-clipper-k715a-proteolysis
+  title: K715A lowers intact CLIPPER-domain survival during protease treatment
+  scope: Purified WT and K715A A. silvestris B9T28_05395 708-828 fragments in Costa 2025 Figure 6d; not
+    native-cell aggregation or all proteases.
+  context: Mix 10 ul of 1 mg/ml domain preparation with 10 ul of 1 mg/ml Proteinase K in PBS, then incubate
+    1 h at 20, 30, 40 or 50 C before SDS-PAGE. Calculated final concentrations are 0.5 mg/ml each. PBS
+    is 137 mM NaCl, 3 mM KCl, 10 mM Na2HPO4, 1.8 mM KH2PO4, pH 7.4. Compare matched-temperature mutant
+    and WT lanes; separate domain-only and protease-only lanes identify the bands.
+  family_mapping: Reference A0A1Y3CHT7 contains the tested PF01345 repeat at 712-812. The 708-828 synthetic
+    sequences translate exactly to WT or its single K715A substitution. The full-length protein's other
+    repeats and the archaeal MTCT_1020 system are distinct targets.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:1977882
+  limitations: The displayed gel is qualitative; no degradation-rate constant, independent replicate confidence
+    or complete digestion is assigned. Tag status of the biochemical aliquots remains ambiguous. A substitution
+    effect is compatible with crosslink stabilization but does not isolate it from local packing or other
+    covalent features. No adhesion-to-proteolysis causal chain or universal family protection is inferred.
+  nodes:
+  - node_id: clipper-k715a-with-protease
+    label: K715A rather than WT fragment in a matched Proteinase K treatment
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A1Y3CHT7
+  - node_id: intact-clipper-band
+    label: Intact domain band remaining after protease treatment
+    node_type: STATE
+  edges:
+  - edge_id: k715a-decreases-intact-domain-band
+    subject: clipper-k715a-with-protease
+    predicate: decreases
+    object: intact-clipper-band
+    mechanism: Figure 6d shows less intact mutant-domain band than WT after the matched protease incubations.
+      The endpoint directly tests susceptibility of the purified fragment while leaving the exclusive
+      physical contribution of its isopeptide bond unresolved.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:41236442
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12617251/
+      snippet: proteolytic susceptibility
+      explanation: Figure 6d and Methods 4.11 support the direction and matched treatment conditions,
+        including mixing volumes. The image does not supply independently quantified rates.
+      cache_path: evidence/PF01345/costa-2025-biophysics.txt
+      cache_sha256: dc7d1bc0178d1ffe06307c4102f0ffc8dba496c530efa2d72e92ef98989c95d6
+curation_events:
+- timestamp: '2026-10-11T10:41:56Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate CLIPPER K715A thermal and proteolysis effects with sequence-qualified scope
+  history_record: history/records/PF01345/2026-10-11T104156Z-codex-3defc2.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T10:53:19Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial CLIPPER scientific self-review with construct and numbering qualifications
+  history_record: history/records/PF01345/2026-10-11T105319Z-codex-ffc7c3.yaml
+  event_index: 0
+  llm_assisted: true

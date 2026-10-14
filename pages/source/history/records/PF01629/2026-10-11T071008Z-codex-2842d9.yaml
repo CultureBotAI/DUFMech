@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01629
+  path: curation/families/PF01629.yaml
+session:
+  id: 2026-10-11T071008Z-codex-2842d9
+  timestamp: '2026-10-11T07:10:08Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Retain DUF22 identity and causal-evidence gap
+  details: Verified Q58031/MJ0614 sequence identity and PF01629 coordinates; inspected
+    the primary 2009 tributyltin abstract and bounded family/member searches. The
+    ATPase A/B mutations, operon association and dUTPase clan do not support an observed
+    DUF22 effect. Preserved full-text access limits and the 2003 purification lead.
+    Added a native discussion and evidence extracts without a dummy graph. Status
+    remains IN_PROGRESS and scope is partial.
+  sections:
+  - discussions

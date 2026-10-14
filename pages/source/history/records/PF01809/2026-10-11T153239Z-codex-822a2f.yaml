@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01809
+  path: data/families/PF01809.yaml
+session:
+  id: 2026-10-11T153239Z-codex-822a2f
+  timestamp: '2026-10-11T15:32:39Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review YidD localization and context-specific vesicle effects
+  details: Retained a partial scientific self-review of nine graphs and twenty-one
+    observed indirect edges. Verified current projection, overlay equivalence and
+    frozen identity; unresolved clone and source-version provenance, missing methods/SI,
+    polar effects and additional member coverage remain follow-ups. Status remains
+    IN_PROGRESS; no independent endorsement or family-wide mechanism completion.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T153306Z-pf01809-yidd-localization-and-vesicle-contexts/review.yaml

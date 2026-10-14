@@ -1,0 +1,372 @@
+# Scoped scientific self-review of DUF22 identity and causal-evidence gaps
+
+- Review: 20261011T071407Z-pf01629-duf22-causal-evidence-gap
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T07:13:22Z
+- Finished UTC: 2026-10-11T07:14:07Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+No causal graph is supported by the inspected material. MJ0614 identity is verified, while ATPase A/B perturbations, gene neighborhood and dUTPase-clan membership are excluded as directed DUF22 evidence. A native discussion retains the bounded search and access limits; status remains IN_PROGRESS.
+
+## Scope And Provenance
+
+Scientific assessment of the empty graph disposition, verified reference member and excluded-transfer primary abstract; not a complete review of DUF22 biology.
+
+Selection: PF01629 DUF22, using Q58031/MJ0614 identity and family/member searches including ATPase-operon leads.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01629 | data/families/PF01629.yaml | generated | PF01629 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01629 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01629.
+
+Q58031/MJ0614 is a 130-residue JAL-1 reference, taxon 243232, sequence version 1, with PF01629 at 7-110. UniProt and InterPro sequences agree. Its genome-sequencing citation and the current Pfam CL0153 assignment establish identity/classification, not dUTPase catalysis or ATPase assembly.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01629.
+
+Retaining no graph is justified for this inspected evidence set. The native discussion separates reference identity, classification and non-target perturbations; it does not assert a universal absence of function. No hypothesis is mislabeled observed, no dummy edge is added, and plant DUF221/OSCA aliases must not be transferred to PF01629 without exact mapping.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01629.
+
+Bounded DUF22/PF01629/COG1417 and MJ0614/Q58031/MTH952/MTH0952/MMP1047 searches do not exhaust all members or publications. Publisher full text for the 2009 study was unavailable. The 2003 Lingl ATPase-purification paper is an uninspected primary lead after its PDF failed retrieval. A 1999 neighborhood review is not adopted primary causal evidence.
+
+## Findings
+
+### additional-contexts: Obtain member-specific primary causal evidence for DUF22
+
+minor / open / confirmed; issue key: pf01629-causal-context-coverage.
+
+Retrieve and inspect the primary ATPase leads and additional verified members, distinguishing experimental incorporation or perturbation from neighborhood and fold similarity. Add a directed graph only when a relation is supported for an identified DUF22 protein with appropriate controls and context; keep any unsupported disposition scoped and retain a successor review.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Retrieve and inspect the primary ATPase leads and additional verified members, distinguishing experimental incorporation or perturbation from neighborhood and fold similarity. Add a directed graph only when a relation is supported for an identified DUF22 protein with appropriate controls and context; keep any unsupported disposition scoped and retain a successor review.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pubmed.ncbi.nlm.nih.gov/19663915/; Primary abstract only; named substitutions and sequenced operon interval. Full text unavailable. | supports | The 2009 primary abstract reports tributyltin resistance and altered ATP synthesis with substitutions in ATP synthase A/B, plus possible differential-expression contributors. An operon interval beginning at Mth952 is not an isolated Mth952 perturbation and does not support a DUF22 causal edge. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q58031/entry/pfam/PF01629/; Accession and domain locations; paired UniProt identity facts | supports | Q58031/MJ0614 is a 130-residue JAL-1 reference, taxon 243232, sequence version 1, with PF01629 at 7-110. UniProt and InterPro sequences agree. Its genome-sequencing citation and the current Pfam CL0153 assignment establish identity/classification, not dUTPase catalysis or ATPase assembly. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01629 | data/families/PF01629.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- No DUF22 experimental figure was visually inspected. The adopted negative-transfer assessment uses a primary abstract, not full Methods or results. Database identity was checked directly; inaccessible papers, search snippets and unperformed experiments are not counted as negative biological evidence.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T071407Z-pf01629-duf22-causal-evidence-gap
+title: Scoped scientific self-review of DUF22 identity and causal-evidence gaps
+started_at: '2026-10-11T07:13:22Z'
+finished_at: '2026-10-11T07:14:07Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: No causal graph is supported by the inspected material. MJ0614 identity is
+  verified, while ATPase A/B perturbations, gene neighborhood and dUTPase-clan membership
+  are excluded as directed DUF22 evidence. A native discussion retains the bounded
+  search and access limits; status remains IN_PROGRESS.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01629.yaml
+    sha256: 7162d66bdb1ca35edc2e8a09e4cb45d596e5e153a267a08eb8eb373343e6f449
+    role: context
+  - path: data/families/PF01629.yaml
+    sha256: 263cee94e5c21c85d2e632d8af2cb785f124b6621219527b6c8e3529a931cf65
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01629/novakova-2009-excluded-transfer.txt
+    role: context
+    sha256: 2f96337da08fc523a9abdc6059f999fcb23b4765fb2ced520c485ef04217f132
+  - path: evidence/PF01629/MJ0614-identity.txt
+    role: context
+    sha256: 80435fb1f5156a86900c4035ebf949baab0dd943cf2d7b23725cab8262b7c998
+targets:
+- target_id: PF01629
+  path: data/families/PF01629.yaml
+  label: PF01629
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01629.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 8de11ffbe94e5184cdcffa1e938a070e70e3b9b0384af026cbd3d2a97e3fcb8b
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the empty graph disposition, verified reference
+    member and excluded-transfer primary abstract; not a complete review of DUF22
+    biology.
+  selection: PF01629 DUF22, using Q58031/MJ0614 identity and family/member searches
+    including ATPase-operon leads.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01629
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Bounded DUF22/PF01629/COG1417 and MJ0614/Q58031/MTH952/MTH0952/MMP1047
+      searches do not exhaust all members or publications. Publisher full text for
+      the 2009 study was unavailable. The 2003 Lingl ATPase-purification paper is
+      an uninspected primary lead after its PDF failed retrieval. A 1999 neighborhood
+      review is not adopted primary causal evidence.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01629
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/19663915/
+  locator: Primary abstract only; named substitutions and sequenced operon interval.
+    Full text unavailable.
+  accessed_at: '2026-10-11T07:14:07Z'
+  support: supports
+  snapshot_sha256: 2f96337da08fc523a9abdc6059f999fcb23b4765fb2ced520c485ef04217f132
+  summary: The 2009 primary abstract reports tributyltin resistance and altered ATP
+    synthesis with substitutions in ATP synthase A/B, plus possible differential-expression
+    contributors. An operon interval beginning at Mth952 is not an isolated Mth952
+    perturbation and does not support a DUF22 causal edge.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q58031/entry/pfam/PF01629/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T07:14:07Z'
+  support: supports
+  snapshot_sha256: 80435fb1f5156a86900c4035ebf949baab0dd943cf2d7b23725cab8262b7c998
+  summary: Q58031/MJ0614 is a 130-residue JAL-1 reference, taxon 243232, sequence
+    version 1, with PF01629 at 7-110. UniProt and InterPro sequences agree. Its genome-sequencing
+    citation and the current Pfam CL0153 assignment establish identity/classification,
+    not dUTPase catalysis or ATPase assembly.
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T07:14:07Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01629
+  kind: record_content
+  reference: data/families/PF01629.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T07:14:07Z'
+  support: context_only
+  snapshot_sha256: 263cee94e5c21c85d2e632d8af2cb785f124b6621219527b6c8e3529a931cf65
+  quote: "id: Pfam:PF01629\npfam_id: PF01629\nname: Domain of unknown function DUF22\n\
+    short_name: DUF22\nseed_status: UNKNOWN_CANDIDATE\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01629\n\
+    counters:\n  proteins: 83\n  matches: 101\n  proteomes: 72\n  taxa: 153\n  structures:\
+    \ 0\n  alphafold_models: 76\n  domain_architectures: 3\nprovenance:\n  snapshot_id:\
+    \ interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002572\ndescription: This domain is found in 1 to 3 copies\
+    \ in archaebacterial proteins. The function of the domain\n  is unknown. This\
+    \ family appears to be expanded in Archaeoglobus fulgidus.\ncuration_history:\
+    \ history/records/PF01629\ndiscussions:\n- discussion_id: duf22-member-specific-causal-evidence\n\
+    \  prompt: Obtain a verified DUF22 member-specific perturbation or biochemical\
+    \ assay before adding a causal\n    graph.\n  kind: CURATION_TODO\n  status: OPEN\n\
+    \  rationale: The inspected evidence grounds MJ0614 in PF01629 but does not establish\
+    \ a directed biological\n    effect. ATPase gene proximity and dUTPase-clan membership\
+    \ are not functional experiments. The inspected\n    tributyltin study's abstract\
+    \ assigns mutations to ATP synthase A/B subunits, not to an isolated DUF22\n \
+    \   intervention.\n  evidence:\n  - reference: PMID:19663915\n    supports: PARTIAL\n\
+    \    evidence_source: abstract\n    explanation: The sequenced Mth952-Mth961 interval\
+    \ does not make every gene in it causal. Named A/B\n      substitutions and differential\
+    \ protein expression cannot be transferred to PF01629. Publisher full\n      text\
+    \ was unavailable.\n  - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q58031/entry/pfam/PF01629/\n\
+    \    supports: PARTIAL\n    evidence_source: database\n    explanation: Q58031/MJ0614\
+    \ from M. jannaschii JAL-1, taxon 243232, sequence version 1, 130 residues,\n\
+    \      maps to PF01629 at 7-110. Matching UniProt/InterPro reference sequences\
+    \ establish identity, not\n      function.\n  - reference: doi:10.1007/s00792-003-0318-7\n\
+    \    supports: PARTIAL\n    evidence_source: search_lead_only\n    explanation:\
+    \ The primary 2003 ATPase purification paper is a follow-up lead. Its PDF was\
+    \ not retrieved;\n      no full-text or experiment-specific assessment is claimed.\n\
+    \  posed_by: Codex\n  posed_date: '2026-10-11'\n  notes: Bounded searches covered\
+    \ DUF22/PF01629/COG1417 and MJ0614/Q58031/MTH952/MTH0952/MMP1047. No causal\n\
+    \    edge is supported by the inspected material; this is not an exhaustive absence\
+    \ claim. Resolve plant\n    DUF221/OSCA alias collisions before transferring any\
+    \ calcium-channel claim. Minimal identity and excluded-transfer\n    evidence\
+    \ is retained under evidence/PF01629; no dummy graph is added.\ncuration_events:\n\
+    - timestamp: '2026-10-11T07:10:08Z'\n  curator: Codex\n  action: CREATE\n  outcome:\
+    \ changed\n  summary: Retain DUF22 identity and causal-evidence gap\n  history_record:\
+    \ history/records/PF01629/2026-10-11T071008Z-codex-2842d9.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Q58031/MJ0614 is a 130-residue JAL-1 reference, taxon 243232, sequence
+    version 1, with PF01629 at 7-110. UniProt and InterPro sequences agree. Its genome-sequencing
+    citation and the current Pfam CL0153 assignment establish identity/classification,
+    not dUTPase catalysis or ATPase assembly.
+  target_ids:
+  - PF01629
+  evidence_ids:
+  - identity
+  - primary
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Retaining no graph is justified for this inspected evidence set. The native
+    discussion separates reference identity, classification and non-target perturbations;
+    it does not assert a universal absence of function. No hypothesis is mislabeled
+    observed, no dummy edge is added, and plant DUF221/OSCA aliases must not be transferred
+    to PF01629 without exact mapping.
+  target_ids:
+  - PF01629
+  evidence_ids:
+  - primary
+  - native
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Bounded DUF22/PF01629/COG1417 and MJ0614/Q58031/MTH952/MTH0952/MMP1047
+    searches do not exhaust all members or publications. Publisher full text for the
+    2009 study was unavailable. The 2003 Lingl ATPase-purification paper is an uninspected
+    primary lead after its PDF failed retrieval. A 1999 neighborhood review is not
+    adopted primary causal evidence.
+  target_ids:
+  - PF01629
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01629-causal-context-coverage
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Obtain member-specific primary causal evidence for DUF22
+  description: Retrieve and inspect the primary ATPase leads and additional verified
+    members, distinguishing experimental incorporation or perturbation from neighborhood
+    and fold similarity. Add a directed graph only when a relation is supported for
+    an identified DUF22 protein with appropriate controls and context; keep any unsupported
+    disposition scoped and retain a successor review.
+  target_ids:
+  - PF01629
+  field_paths:
+  - discussions
+  evidence_ids:
+  - primary
+  - identity
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01629.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Retrieve and inspect the primary ATPase leads and additional verified
+    members, distinguishing experimental incorporation or perturbation from neighborhood
+    and fold similarity. Add a directed graph only when a relation is supported for
+    an identified DUF22 protein with appropriate controls and context; keep any unsupported
+    disposition scoped and retain a successor review.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01629
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- No DUF22 experimental figure was visually inspected. The adopted negative-transfer
+  assessment uses a primary abstract, not full Methods or results. Database identity
+  was checked directly; inaccessible papers, search snippets and unperformed experiments
+  are not counted as negative biological evidence.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

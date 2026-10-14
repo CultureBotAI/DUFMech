@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01902
+  path: curation/families/PF01902.yaml
+session:
+  id: 2026-10-11T224747Z-codex-9bd8ab
+  timestamp: '2026-10-11T22:47:47Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate PF01902 Dph6 biochemical and cellular contexts with current domain
+    boundaries
+  details: Nine graphs retain twelve observed preparation or cellular effects and
+    two explicitly hypothesized chemical steps. Primary figures and publisher strain/construct
+    tables distinguish PF01902 from PF28410,combined G216N/E220A from single substitutions,and
+    whole-protein effects from isolated-domain chemistry. Source discrepancies,inaccessible
+    supplements and member-coverage limits remain open. No frozen identity,configuration
+    or publication changes.

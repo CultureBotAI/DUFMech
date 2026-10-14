@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01894
+  path: curation/families/PF01894.yaml
+session:
+  id: 2026-10-11T205315Z-codex-11d32a
+  timestamp: '2026-10-11T20:53:15Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Refine YjbQ growth graphs with the recovered original Kim2010 supplement.
+  details: After CREATE 2026-10-11T204334Z-codex-40b020, recovered the official DOC
+    and inspected relevant Methods and TablesI-III/V plus rendered FiguresS1/S4. Added
+    a serine-only context, yielding three PHENOTYPIC graphs with five INDIRECT OBSERVED
+    edges. Confirmed JU283 lineage, vector tags, plate induction, insoluble YjbQ and
+    absent identified YjbQ liquid curves. Retained primer, antibiotic-caption and
+    clone-count discrepancies without correcting the source. No measured enzyme-negative,
+    OHPB production, isolated-domain sufficiency or family-wide transfer is inferred.
+    Status remains IN_PROGRESS; no publication.

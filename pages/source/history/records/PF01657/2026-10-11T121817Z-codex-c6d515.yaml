@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01657
+  path: curation/families/PF01657.yaml
+session:
+  id: 2026-10-11T121817Z-codex-c6d515
+  timestamp: '2026-10-11T12:18:17Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate six Gnk2 causal graphs with residue and assay boundaries
+  details: 'Inspected Miyakawa 2014 full text and Figures 5, 7 and 8 plus UniProt,
+    InterPro and PDB identity records. Added fourteen observed edges: four direct
+    SPR effects and ten indirect yeast/Fusarium phenotypes. Preserved twofold SPR
+    dose discrepancy, residual responses, current versus historical Pfam boundary,
+    extra Met, distinct assay conditions and unavailable supplementary visual controls.
+    Full-family mechanism and later actin work remain incomplete; status IN_PROGRESS.
+    Guarded regeneration and scoped review follow.'

@@ -1,0 +1,650 @@
+# PF01871 AMMECR1 localization development and marker causal contexts
+
+- Review: 20261011T183245Z-pf01871-ammecr1-localization-development-and-marker-contexts
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T18:30:00Z
+- Finished UTC: 2026-10-11T18:32:45Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Six phenotypic graphs retain nine observed indirect effects in human-protein localization, zebrafish splice/rescue and mouse ESC marker experiments. Reference sequences and domain boundaries are verified; whole-protein or transcript perturbations are not isolated-domain mechanisms. Dose/manuscript, rescue-construct and biochemical gaps remain open. Retain IN_PROGRESS.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Andreoletti2016 functional Methods/Results and original Figure2; Moyses-Oliveira2017 later accepted manuscript Methods/Results and original Figure4 with earlier supplementary captions distinguished; Kainov2020 main cell/RNA Methods and original Supplementary Figure7e/f plus reagent/primer tables. Current UniProt/InterPro and versioned GenBank translations establish reference scope.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01871 | data/families/PF01871.yaml | generated | PF01871 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01871 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01871.
+
+Human Q9Y4X0 equals NP_056180.1,333 aa,PF01871 132-301;G177D maps inside and published primer/reference translation confirms c.530G&gt;A. Zebrafish Q6PH60 equals NP_956875.1,309 aa,PF01871 109-277. Mouse Q9JHT5 equals NP_062369.1,344 aa,PF01871 143-312. Whole transcript/protein scope and host species remain explicit. Human rescue insert and assay-batch sequences are not independently verified; current isoforms and AMMECR1L must not be conflated.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01871.
+
+One human localization effect,three distinct zebrafish heart-rate contexts,one tail-shortening effect,one partial tail rescue and three mouse marker effects remain separate. All are PHENOTYPIC,INDIRECT,OBSERVED. Nuclear retention,1.26 versus2.1-ng I2E3 doses,4.2 versus8.4-ng E3I3 comparisons,E1I1 8.2/8.4-ng disagreement and partial rescue are retained. No heart-rate rescue,proteasomal degradation,domain catalysis or SRRT-like RNA-processing activity is invented.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01871.
+
+Recover final zebrafish supplement images,resolve E1I1 dose and exact human rescue insert,verify knockdown specificity and stable-genetic rescue. Review A549 PMID31519561 full Methods/figures,PH0010 biochemical follow-ups and other family members before extending coverage. The frozen7217 proteins remain in scope; three organism contexts do not establish family-wide biochemistry.
+
+## Findings
+
+### additional-contexts: Resolve AMMECR1 construct specificity and extend biochemical member coverage
+
+minor / open / confirmed; issue key: pf01871-causal-context-coverage.
+
+Inspect final supplementary controls and rescue insert sequence,resolve E1I1 dose conflict,review additional genetic and biochemical experiments with exact accession/domain mapping,and recover A549 full text before converting its abstract into edges. Preserve partial tail rescue and marker-expression scope. Computational radical-transfer hypotheses require direct tests.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Inspect final supplementary controls and rescue insert sequence,resolve E1I1 dose conflict,review additional genetic and biochemical experiments with exact accession/domain mapping,and recover A549 full text before converting its abstract into edges. Preserve partial tail rescue and marker-expression scope. Computational radical-transfer hypotheses require direct tests.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC6969169/; Original Supplementary Figure7e/f PDFp13 and captionp14,main cell/RNA Methods,Supplementary Data5 reagent and Data7 primer rows | supports | Mouse Ammecr1 SMARTpool increases Otx2,Col4a1 and Shank1 transcript readouts relative to siCtrl,with Ammecr1 RNA depletion. Krt8,Sox2 and Pecam1 are not significantly changed. The readouts do not establish lineage conversion or direct transcriptional regulation. SRRT antitermination regulates the Ammecr1 transcript and is not attributed to AMMECR1 protein. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01871/protein/uniprot/Q9Y4X0/; Accession and domain locations; paired UniProt identity facts | supports | Human Q9Y4X0 equals NP_056180.1,333 aa,PF01871 132-301;G177D maps inside and published primer/reference translation confirms c.530G&gt;A. Zebrafish Q6PH60 equals NP_956875.1,309 aa,PF01871 109-277. Mouse Q9JHT5 equals NP_062369.1,344 aa,PF01871 143-312. Whole transcript/protein scope and host species remain explicit. Human rescue insert and assay-batch sequences are not independently verified; current isoforms and AMMECR1L must not be conflated. |
+| human-localization | https://pmc.ncbi.nlm.nih.gov/articles/PMC5502304/; Functional Methods/Results/Discussion and original Figure2 | supports | G177D changes nuclear GFP pattern relative to WT in HEK293,HeLa and COS-7 hosts. Both remain nuclear; qualitative microscopy does not prove degradation or loss of nuclear import. Reference numbering is verified separately. |
+| zebrafish-development | https://eprints.soton.ac.uk/416257/1/Moys_s_Oliveira_et_al_2017_Human_Mutation.pdf; Later accepted manuscript Methodspp4-7,Resultspp11-14,original Figure4p23/legendp24;earlier manuscript Methods and supplementary captions | supports | Three dose-specific splice reagents increase heart rate. I2E3 also shortens a curved tail metric;human mRNA partially rescues only that measured endpoint. Morphology,splice quantification and heart-rate doses are not interchangeable. Earlier and later manuscript differences remain explicit. |
+| gaps-and-access | evidence/PF01871/ammecr1-gap-ledger.txt; Bounded source search,manuscript differences,access failures and unreviewed primary leads | supports | No earlier target-specific curation was found within searched owners,including ignored files. Structure,coexpression,clinical association and radical-transfer predictions do not establish biochemical edges. Final zebrafish supplement images and A549 full text remain unreviewed;access failures are not negative functional evidence. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01871 | data/families/PF01871.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Original human Figure2,final zebrafish Figure4 and mouse Supplementary Figure7 were visually inspected. Earlier zebrafish supplementary captions are not supplement images. Correct publisher host delivered valid2020 supplements after initial DNS/HTML failures. A549 publisher full text returned403. No raw-data refit,complete supplementary survey,assay-batch sequencing or experimental replication. Rendered-page checks follow separately.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T183245Z-pf01871-ammecr1-localization-development-and-marker-contexts
+title: PF01871 AMMECR1 localization development and marker causal contexts
+started_at: '2026-10-11T18:30:00Z'
+finished_at: '2026-10-11T18:32:45Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Six phenotypic graphs retain nine observed indirect effects in human-protein
+  localization, zebrafish splice/rescue and mouse ESC marker experiments. Reference
+  sequences and domain boundaries are verified; whole-protein or transcript perturbations
+  are not isolated-domain mechanisms. Dose/manuscript, rescue-construct and biochemical
+  gaps remain open. Retain IN_PROGRESS.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01871.yaml
+    sha256: cdaae0d3100858659113bcf1f44d8a24f30a3e8dacb1bab0d2dd1fcc0237a28b
+    role: context
+  - path: data/families/PF01871.yaml
+    sha256: 2adbc70028af374d47dcd5374ffd9f7925d55dbd86e9ba7b43aba4daf41978f7
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01871/kainov-2020-markers.txt
+    role: context
+    sha256: aefdaf8a3e127ebf565bd400118b9679c4e9802461acdad8d300bfee5bb17ef4
+  - path: evidence/PF01871/ammecr1-identity.txt
+    role: context
+    sha256: 16f49aa9b875d5ab225ed36506240f701a1666a61292f6ab6ed0645b0f5f878f
+  - path: evidence/PF01871/andreoletti-2016-localization.txt
+    role: context
+    sha256: 1309b6525f0d1a411b6ff28b47b9a1991c638049d7cc683652a1a7ba0acb6994
+  - path: evidence/PF01871/moyses-2017-development.txt
+    role: context
+    sha256: 4b8bf65a2861cd9ee00077a0e0ec2f8db483dc65d561338f6c89cb996f5b6508
+  - path: evidence/PF01871/ammecr1-gap-ledger.txt
+    role: context
+    sha256: baaaa19310b163f37b59ff418468feb271840507dd2e8651555ed8731fdd4067
+targets:
+- target_id: PF01871
+  path: data/families/PF01871.yaml
+  label: PF01871
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01871.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: b0bd6733535f50f90510490d4f01352545fd76b6ab89de55933141c14b3908fb
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Andreoletti2016 functional Methods/Results and original Figure2; Moyses-Oliveira2017
+    later accepted manuscript Methods/Results and original Figure4 with earlier supplementary
+    captions distinguished; Kainov2020 main cell/RNA Methods and original Supplementary
+    Figure7e/f plus reagent/primer tables. Current UniProt/InterPro and versioned
+    GenBank translations establish reference scope.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01871
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Recover final zebrafish supplement images,resolve E1I1 dose and exact
+      human rescue insert,verify knockdown specificity and stable-genetic rescue.
+      Review A549 PMID31519561 full Methods/figures,PH0010 biochemical follow-ups
+      and other family members before extending coverage. The frozen7217 proteins
+      remain in scope; three organism contexts do not establish family-wide biochemistry.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01871
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6969169/
+  locator: Original Supplementary Figure7e/f PDFp13 and captionp14,main cell/RNA Methods,Supplementary
+    Data5 reagent and Data7 primer rows
+  accessed_at: '2026-10-11T18:32:45Z'
+  support: supports
+  snapshot_sha256: aefdaf8a3e127ebf565bd400118b9679c4e9802461acdad8d300bfee5bb17ef4
+  summary: Mouse Ammecr1 SMARTpool increases Otx2,Col4a1 and Shank1 transcript readouts
+    relative to siCtrl,with Ammecr1 RNA depletion. Krt8,Sox2 and Pecam1 are not significantly
+    changed. The readouts do not establish lineage conversion or direct transcriptional
+    regulation. SRRT antitermination regulates the Ammecr1 transcript and is not attributed
+    to AMMECR1 protein.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01871/protein/uniprot/Q9Y4X0/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T18:32:45Z'
+  support: supports
+  snapshot_sha256: 16f49aa9b875d5ab225ed36506240f701a1666a61292f6ab6ed0645b0f5f878f
+  summary: Human Q9Y4X0 equals NP_056180.1,333 aa,PF01871 132-301;G177D maps inside
+    and published primer/reference translation confirms c.530G>A. Zebrafish Q6PH60
+    equals NP_956875.1,309 aa,PF01871 109-277. Mouse Q9JHT5 equals NP_062369.1,344
+    aa,PF01871 143-312. Whole transcript/protein scope and host species remain explicit.
+    Human rescue insert and assay-batch sequences are not independently verified;
+    current isoforms and AMMECR1L must not be conflated.
+- evidence_id: human-localization
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5502304/
+  locator: Functional Methods/Results/Discussion and original Figure2
+  summary: G177D changes nuclear GFP pattern relative to WT in HEK293,HeLa and COS-7
+    hosts. Both remain nuclear; qualitative microscopy does not prove degradation
+    or loss of nuclear import. Reference numbering is verified separately.
+  accessed_at: '2026-10-11T18:32:45Z'
+  support: supports
+  snapshot_sha256: 1309b6525f0d1a411b6ff28b47b9a1991c638049d7cc683652a1a7ba0acb6994
+- evidence_id: zebrafish-development
+  kind: primary_source
+  reference: https://eprints.soton.ac.uk/416257/1/Moys_s_Oliveira_et_al_2017_Human_Mutation.pdf
+  locator: Later accepted manuscript Methodspp4-7,Resultspp11-14,original Figure4p23/legendp24;earlier
+    manuscript Methods and supplementary captions
+  summary: Three dose-specific splice reagents increase heart rate. I2E3 also shortens
+    a curved tail metric;human mRNA partially rescues only that measured endpoint.
+    Morphology,splice quantification and heart-rate doses are not interchangeable.
+    Earlier and later manuscript differences remain explicit.
+  accessed_at: '2026-10-11T18:32:45Z'
+  support: supports
+  snapshot_sha256: 4b8bf65a2861cd9ee00077a0e0ec2f8db483dc65d561338f6c89cb996f5b6508
+- evidence_id: gaps-and-access
+  kind: search
+  reference: evidence/PF01871/ammecr1-gap-ledger.txt
+  locator: Bounded source search,manuscript differences,access failures and unreviewed
+    primary leads
+  search_scope: PF01871,AMMECR1,ammecr1,human localization,zebrafish splice/rescue
+    and mouse ESC perturbation;ignored/hidden-inclusive curation,evidence,history/records,reviews/structured,.agents,.claude
+    search on2026-10-11;current reference/domain APIs and versioned GenBank comparisons.
+    Not an exhaustive literature or family search.
+  summary: No earlier target-specific curation was found within searched owners,including
+    ignored files. Structure,coexpression,clinical association and radical-transfer
+    predictions do not establish biochemical edges. Final zebrafish supplement images
+    and A549 full text remain unreviewed;access failures are not negative functional
+    evidence.
+  accessed_at: '2026-10-11T18:32:45Z'
+  support: supports
+  snapshot_sha256: baaaa19310b163f37b59ff418468feb271840507dd2e8651555ed8731fdd4067
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T18:32:45Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01871
+  kind: record_content
+  reference: data/families/PF01871.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T18:32:45Z'
+  support: context_only
+  snapshot_sha256: 2adbc70028af374d47dcd5374ffd9f7925d55dbd86e9ba7b43aba4daf41978f7
+  quote: "id: Pfam:PF01871\npfam_id: PF01871\nname: AMMECR1\nshort_name: AMMECR1\n\
+    seed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status: IN_PROGRESS\n\
+    source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01871\ncounters:\n\
+    \  proteins: 7217\n  matches: 7346\n  proteomes: 5587\n  taxa: 13329\n  structures:\
+    \ 3\n  alphafold_models: 6109\n  domain_architectures: 58\nprovenance:\n  snapshot_id:\
+    \ interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002733\ndescription: This domain is found at the C-terminal\
+    \ of several AMMECR1 proteins. Homologues appear in\n  species ranging from bacteria\
+    \ and archaea to eukaryotes, including Protein PH0010 from Pyrococcus horikoshii\n\
+    \  [[cite:PUB00017067]]. The high level of conservation of the AMMECR1 domain\
+    \ points to a basic cellular\n  function, potentially in either the transcription,\
+    \ replication, repair or translation machinery [[cite:PUB00006433]].\n  The AMMECR1\
+    \ domain consists of two distinct subdomains of different sizes. The large subdomain,\
+    \ which\n  contains both the N- and C-terminal regions, consists of five alpha-helices\
+    \ and five beta-strands. These\n  five beta-strands form an antiparallel beta-sheet.\
+    \ The small subdomain consists of four alpha-helices\n  and three beta-strands,\
+    \ and these beta-strands also form an antiparallel beta-sheet. The conserved 'LRGCIG'\n\
+    \  motif is located at beta(2) and its N-terminal loop, and most of the side chains\
+    \ of these residues point\n  toward the interface of the two subdomains. The two\
+    \ subdomains are connected by only two loops, and\n  the interaction between the\
+    \ two subdomains is not strong. Thus, these subdomains may move dynamically\n\
+    \  when the substrate enters the cleft. The size of the cleft suggests that the\
+    \ substrate is large, e.g.,\n  the substrate may be a nucleic acid or protein.\
+    \ However, the inner side of the cleft is not filled with\n  positively charged\
+    \ residues, and therefore it is unlikely that negatively charged nucleic acids\
+    \ such\n  as DNA or RNA interact at this site [[cite:PUB00017067]]. The contiguous\
+    \ gene deletion syndrome AMME\n  is characterised by Alport syndrome, midface\
+    \ hypoplasia, mental retardation and elliptocytosis and is\n  caused by a deletion\
+    \ in Xq22.3, comprising several genes including COL4A5, FACL4 and AMMECR1 [[cite:PUB00015590]].\n\
+    curation_history: history/records/PF01871\ndiscussions:\n- discussion_id: ammecr1-biochemistry-and-domain-scope\n\
+    \  prompt: Establish a member-specific biochemical mechanism before adding catalytic\
+    \ edges.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Localization,developmental\
+    \ and marker-expression phenotypes do not establish the conserved\n    domain\
+    \ reaction. Radical-transfer/RNA-modification predictions and structural clefts\
+    \ remain hypotheses.\n  evidence:\n  - reference: PMID:31953406\n    supports:\
+    \ PARTIAL\n    evidence_source: primary_methods_and_original_supplementary_figure\n\
+    \    explanation: Supplementary Figure7 supports selected transcript responses;\
+    \ the paper's SRRT/CBC/U1\n      mechanism regulates Ammecr1 RNA and is not an\
+    \ activity of AMMECR1 protein.\n  notes: See evidence/PF01871/ammecr1-identity.txt\
+    \ and ammecr1-gap-ledger.txt. Distinguish isoforms and\n    AMMECR1L,verify isolated-domain\
+    \ function and preserve negative marker comparisons. Family-wide EX_DUF\n    status\
+    \ is not experimental characterization of all7217 proteins.\n  posed_by: Codex\n\
+    \  posed_date: '2026-10-11'\n- discussion_id: ammecr1-constructs-and-coverage\n\
+    \  prompt: Resolve manuscript and construct ambiguities and extend primary member\
+    \ coverage.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Final zebrafish\
+    \ supplement images,rescue-insert sequence and E1I1 dose disagreement remain\n\
+    \    open. Knockdown specificity and stable-genetic rescue need additional evidence.\n\
+    \  evidence:\n  - reference: doi:10.1002/humu.23373\n    supports: PARTIAL\n \
+    \   evidence_source: primary_accepted_manuscript_and_original_main_figure\n  \
+    \  explanation: Original final Figure4 and main Methods were inspected; earlier\
+    \ supplement captions are\n      not full supplementary visual review. Partial\
+    \ tail rescue does not establish cardiac rescue.\n  notes: Retrieve final supplements\
+    \ and A549 PMID31519561 full Methods/figures before adding its abstract-only\n\
+    \    effects. Inspect PH0010 biochemical follow-up and other taxa with exact member\
+    \ mapping. Preserve IN_PROGRESS\n    and partial same-agent review.\n  posed_by:\
+    \ Codex\n  posed_date: '2026-10-11'\ncausal_graphs:\n- graph_id: human-g177d-nuclear-pattern\n\
+    \  title: Human G177D changes the intranuclear fluorescence pattern\n  scope:\
+    \ Andreoletti2016 Figure2, GFP-tagged human AMMECR1 in HEK293, HeLa and COS-7\
+    \ hosts, each compared\n    with WT.\n  context: RG212378/pCMV6-AC-GFP variant1;3\
+    \ ug plasmid/jetPEI per6-well culture,DMEM10% FCS,complex removal4\n    h,fixation24\
+    \ h,fluorescence/DAPI microscopy; reagent-only negative control.\n  family_mapping:\
+    \ Human Q9Y4X0 sequence version1 equals NP_056180.1 from NM_015365.3,333 aa,PF01871\
+    \ 132-301.\n    G177 is inside the match; published primer and reference translation\
+    \ support G177D. Whole tagged protein,not\n    isolated domain. COS-7 is an African\
+    \ green monkey host,not the protein's species.\n  scope_status: PHENOTYPIC\n \
+    \ taxon: NCBITaxon:9606\n  limitations: Both WT and mutant remain nuclear. Qualitative\
+    \ imaging does not measure nuclear-import\n    loss,protein half-life,proteasome\
+    \ recruitment or degradation. Tag,folding,abundance and partner effects\n    remain\
+    \ possible.\n  nodes:\n  - node_id: g177d\n    label: Express GFP-tagged human\
+    \ G177D instead of WT AMMECR1\n    node_type: PERTURBATION\n    grounding:\n \
+    \   - UniProtKB:Q9Y4X0\n  - node_id: patchy-nuclear-signal\n    label: Nonuniform\
+    \ intranuclear GFP pattern\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: g177d-increases-patchy-pattern\n\
+    \    subject: g177d\n    predicate: increases\n    object: patchy-nuclear-signal\n\
+    \    mechanism: The mutant produces a patchy nuclear pattern compared with the\
+    \ more uniform WT pattern\n      in each tested host. This is a mutation-dependent\
+    \ localization readout,not a demonstrated molecular\n      degradation pathway.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:27811305\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5502304/\n\
+    \      snippet: non-uniform GFP expression\n      explanation: Original Figure2\
+    \ and mutagenesis/transfection/imaging Methods; nuclear retention and\n      \
+    \  qualitative cell counts limit mechanistic interpretation.\n      cache_path:\
+    \ evidence/PF01871/andreoletti-2016-localization.txt\n      cache_sha256: 1309b6525f0d1a411b6ff28b47b9a1991c638049d7cc683652a1a7ba0acb6994\n\
+    - graph_id: zebrafish-i2e3-heart-and-tail\n  title: I2E3 splice perturbation changes\
+    \ heart rate and tail length\n  scope: Final author-manuscript Figure4B-D, TU\
+    \ zebrafish at3 dpf, I2E3 morpholino1.26 ng versus matched\n    standard-control\
+    \ morpholino.\n  context: Inject1-2-cell embryos with1-2 nl;27 C,pH7.5. Heart\
+    \ beats/minute and otic-vesicle-to-tail-end\n    distance along curvature are\
+    \ independent readouts.\n  family_mapping: Zebrafish Q6PH60 sequence version1\
+    \ equals NP_956875.1/NM_200581.1,309 aa,PF01871 109-277.\n    The early manuscript\
+    \ alignment names NP_956875.1. Splice perturbation of the endogenous transcript,not\n\
+    \    a purified or isolated domain.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:7955\n\
+    \  limitations: WT-transcript reduction50/72/84% was measured at2.1/4.2/8.4 ng,not1.26\
+    \ ng. Figure4A morphology\n    uses2.1 ng. Do not conflate doses or convert transcript\
+    \ depletion into measured protein depletion.\n    Morphant off-target effects\
+    \ are not absolutely excluded.\n  nodes:\n  - node_id: i2e3-morpholino\n    label:\
+    \ Inject I2E3 morpholino1.26 ng\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q6PH60\n  - node_id: heart-rate\n    label: Heart beats per minute\
+    \ at3 dpf\n    node_type: PHENOTYPE\n  - node_id: curved-tail-length\n    label:\
+    \ Otic-vesicle-to-tail-end distance along curvature\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: i2e3-increases-heart-rate\n    subject: i2e3-morpholino\n\
+    \    predicate: increases\n    object: heart-rate\n    mechanism: I2E3-treated\
+    \ embryos have a higher measured heart rate than embryos receiving the same\n\
+    \      dose of standard morpholino. No intervening molecular mechanism is demonstrated.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.1002/humu.23373\n      source_url: https://eprints.soton.ac.uk/416257/1/Moys_s_Oliveira_et_al_2017_Human_Mutation.pdf\n\
+    \      snippet: heart rate\n      explanation: Original final Figure4B,p23,and\
+    \ Methods; use1.26-ng comparison,not2.1-ng morphology\n        or higher-dose\
+    \ splice quantification.\n      cache_path: evidence/PF01871/moyses-2017-development.txt\n\
+    \      cache_sha256: 4b8bf65a2861cd9ee00077a0e0ec2f8db483dc65d561338f6c89cb996f5b6508\n\
+    \  - edge_id: i2e3-decreases-tail-length\n    subject: i2e3-morpholino\n    predicate:\
+    \ decreases\n    object: curved-tail-length\n    mechanism: I2E3-treated embryos\
+    \ have a shorter measured otic-vesicle-to-tail-end distance than the\n      matched\
+    \ control. This does not establish a direct growth reaction or specify which cells\
+    \ mediate\n      the phenotype.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.1002/humu.23373\n\
+    \      source_url: https://eprints.soton.ac.uk/416257/1/Moys_s_Oliveira_et_al_2017_Human_Mutation.pdf\n\
+    \      snippet: heart rate\n      explanation: Original Figure4C/D,p23,and legendp24\
+    \ specify the curved tail metric. It is not total\n        body length; text and\
+    \ plot significance thresholds differ.\n      cache_path: evidence/PF01871/moyses-2017-development.txt\n\
+    \      cache_sha256: 4b8bf65a2861cd9ee00077a0e0ec2f8db483dc65d561338f6c89cb996f5b6508\n\
+    - graph_id: zebrafish-e3i3-heart-rate\n  title: E3I3 splice perturbation increases\
+    \ heart rate\n  scope: Final Figure4B, TU zebrafish at3 dpf, E3I3 morpholino4.2\
+    \ ng versus standard-control morpholino4.2\n    ng.\n  context: Same1-2-cell injection\
+    \ and27 C protocol; measured heart beats/minute. Different reagent and\n    dose\
+    \ from the I2E3 experiment.\n  family_mapping: Endogenous ammecr1,Q6PH60/NP_956875.1,PF01871\
+    \ 109-277. Whole-transcript splice perturbation,not\n    isolated-domain mutagenesis.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:7955\n  limitations: The reported65%\
+    \ exon3 skipping and25%24-bp deletion were measured at8.4 ng,not this4.2-ng\n\
+    \    heart dose. Two morphological severity classes are not causally assigned\
+    \ to individual splice products.\n    No reagent-specific rescue is shown here.\n\
+    \  nodes:\n  - node_id: e3i3-morpholino\n    label: Inject E3I3 morpholino4.2\
+    \ ng\n    node_type: PERTURBATION\n  - node_id: heart-rate\n    label: Heart beats\
+    \ per minute at3 dpf\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: e3i3-increases-heart-rate\n\
+    \    subject: e3i3-morpholino\n    predicate: increases\n    object: heart-rate\n\
+    \    mechanism: E3I3-treated embryos have increased heart rate relative to the\
+    \ dose-matched standard morpholino.\n      The endpoint is not evidence for a\
+    \ direct AMMECR1 cardiac biochemical activity.\n    directness: INDIRECT\n   \
+    \ support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ doi:10.1002/humu.23373\n      source_url: https://eprints.soton.ac.uk/416257/1/Moys_s_Oliveira_et_al_2017_Human_Mutation.pdf\n\
+    \      snippet: heart rate\n      explanation: Original final Figure4B dose labels\
+    \ and Methods;8.4-ng splice analysis is separate.\n      cache_path: evidence/PF01871/moyses-2017-development.txt\n\
+    \      cache_sha256: 4b8bf65a2861cd9ee00077a0e0ec2f8db483dc65d561338f6c89cb996f5b6508\n\
+    - graph_id: zebrafish-e1i1-heart-rate\n  title: E1I1 splice perturbation increases\
+    \ heart rate\n  scope: Final Figure4B, TU zebrafish at3 dpf, E1I1 morpholino8.4\
+    \ ng versus standard-control morpholino8.4\n    ng.\n  context: Same1-2-cell injection\
+    \ and27 C protocol; hypomorphic splice context with loss of six exon1\n    codons.\n\
+    \  family_mapping: Endogenous ammecr1,Q6PH60/NP_956875.1,PF01871 109-277. The\
+    \ transcript intervention does\n    not isolate or demonstrate necessity of the\
+    \ mapped domain.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:7955\n  limitations:\
+    \ Earlier manuscript Methods says8.2 ng; final Figure4B and Results say8.4 ng.\
+    \ The graph\n    uses the figure dose while retaining the discrepancy. Gross morphological\
+    \ defects were not observed\n    in this hypomorphic context; no full loss-of-function\
+    \ equivalence is implied.\n  nodes:\n  - node_id: e1i1-morpholino\n    label:\
+    \ Inject E1I1 morpholino8.4 ng as labeled in final Figure4B\n    node_type: PERTURBATION\n\
+    \  - node_id: heart-rate\n    label: Heart beats per minute at3 dpf\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: e1i1-increases-heart-rate\n    subject: e1i1-morpholino\n\
+    \    predicate: increases\n    object: heart-rate\n    mechanism: The E1I1 condition\
+    \ increases measured heart rate despite the lack of gross morphological\n    \
+    \  defects. This is not a demonstrated isolated-domain biochemical effect.\n \
+    \   directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.1002/humu.23373\n      source_url: https://eprints.soton.ac.uk/416257/1/Moys_s_Oliveira_et_al_2017_Human_Mutation.pdf\n\
+    \      snippet: heart rate\n      explanation: Original final Figure4B,p23,Results\
+    \ and early supplementary captions; the8.2/8.4-ng\n        discrepancy remains\
+    \ unresolved.\n      cache_path: evidence/PF01871/moyses-2017-development.txt\n\
+    \      cache_sha256: 4b8bf65a2861cd9ee00077a0e0ec2f8db483dc65d561338f6c89cb996f5b6508\n\
+    - graph_id: zebrafish-human-mrna-tail-rescue\n  title: Human AMMECR1 mRNA partially\
+    \ rescues the tail endpoint\n  scope: Final Figure4C/D, TU embryos receiving I2E3\
+    \ morpholino1.26 ng with versus without human AMMECR1\n    mRNA200 pg.\n  context:\
+    \ pCS2+ human AMMECR1,SP6-transcribed and LiCl-purified mRNA,co-injected at1-2-cell\
+    \ stage;3-dpf\n    curved otic-vesicle-to-tail-end distance. Standard morpholino\
+    \ and mRNA-alone controls are included.\n  family_mapping: Recipient ammecr1 maps\
+    \ Q6PH60/NP_956875.1,PF01871 109-277. Human reference Q9Y4X0/NP_056180.1\n   \
+    \ maps132-301; exact pCS2+ rescue insert is not independently sequence-verified.\
+    \ Cross-species whole-protein\n    rescue,not isolated-domain sufficiency.\n \
+    \ scope_status: PHENOTYPIC\n  taxon: NCBITaxon:7955\n  limitations: Rescue is\
+    \ partial and remains below control. No heart-rate rescue is plotted. Caption\
+    \ reports\n    two experiments with one illustrated; text/plot significance thresholds\
+    \ differ. Exact rescue isoform/insert\n    verification remains a follow-up.\n\
+    \  nodes:\n  - node_id: human-mrna-with-i2e3\n    label: Add human AMMECR1 mRNA200\
+    \ pg to I2E3 morpholino1.26 ng\n    node_type: PERTURBATION\n  - node_id: curved-tail-length\n\
+    \    label: Otic-vesicle-to-tail-end distance along curvature\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: human-mrna-increases-tail-length\n    subject:\
+    \ human-mrna-with-i2e3\n    predicate: increases\n    object: curved-tail-length\n\
+    \    mechanism: Human mRNA co-injection increases the tail metric compared with\
+    \ I2E3 alone,without complete\n      normalization. The conjunction defines the\
+    \ rescue context and does not claim that mRNA alone increases\n      normal growth.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.1002/humu.23373\n      source_url: https://eprints.soton.ac.uk/416257/1/Moys_s_Oliveira_et_al_2017_Human_Mutation.pdf\n\
+    \      snippet: heart rate\n      explanation: Original Figure4C/D and rescue\
+    \ Methods; retained evidence distinguishes partial tail\n        rescue from untested\
+    \ rescue of the cardiac endpoint.\n      cache_path: evidence/PF01871/moyses-2017-development.txt\n\
+    \      cache_sha256: 4b8bf65a2861cd9ee00077a0e0ec2f8db483dc65d561338f6c89cb996f5b6508\n\
+    - graph_id: mouse-esc-ammecr1-marker-response\n  title: Mouse Ammecr1 knockdown\
+    \ increases selected transcript markers\n  scope: Kainov2020 Supplementary Figure7e/f,\
+    \ male A2lox mouse embryonic stem cells, siAmmecr1 versus\n    nontargeting siCtrl.\n\
+    \  context: General RNAi method,2e5 cells/gelatinized12-well in1 ml2i medium,50\
+    \ pmol SMARTpool L-059312-01-0005\n    with3 ul Lipofectamine2000/100 ul Opti-MEM,48\
+    \ h; control D-001810-01-20. RT-qPCR normalized to Cnot4,three\n    experiments+/-SD.\n\
+    \  family_mapping: Mouse Q9JHT5 sequence version1 equals NP_062369.1/NM_019496.4,344\
+    \ aa,PF01871 143-312.\n    Endogenous full-length transcript knockdown,not domain-specific\
+    \ mutagenesis or independently resequenced\n    A2lox protein.\n  scope_status:\
+    \ PHENOTYPIC\n  taxon: NCBITaxon:10090\n  limitations: Ammecr1 transcript reduction\
+    \ is measured,not independently verified protein depletion.\n    No Ammecr1-specific\
+    \ rescue or individual-siRNA deconvolution was verified. Sox2/Pecam1 and Krt8\
+    \ are\n    not significantly changed. SRRT-mediated antitermination is not an\
+    \ activity assigned to AMMECR1 protein.\n  nodes:\n  - node_id: siammecr1\n  \
+    \  label: Treat A2lox cells with Ammecr1 SMARTpool\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q9JHT5\n  - node_id: otx2-rna\n    label: Otx2\
+    \ transcript abundance\n    node_type: STATE\n  - node_id: col4a1-rna\n    label:\
+    \ Col4a1 transcript abundance\n    node_type: STATE\n  - node_id: shank1-rna\n\
+    \    label: Shank1 transcript abundance\n    node_type: STATE\n  edges:\n  - edge_id:\
+    \ siammecr1-increases-otx2\n    subject: siammecr1\n    predicate: increases\n\
+    \    object: otx2-rna\n    mechanism: The Ammecr1-targeting pool increases the\
+    \ Otx2 RT-qPCR readout relative to siCtrl. This\n      is an indirect marker response,not\
+    \ observed direct transcriptional regulation or completed lineage\n      conversion.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:31953406\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6969169/\n\
+    \      snippet: siAmmecr1\n      explanation: Original Supplementary Figure7f\
+    \ and legend,cell/RNA Methods,Data5 reagent and Data7\n        primer tables.\
+    \ Distinguish siAmmecr1 from siSrrt bars.\n      cache_path: evidence/PF01871/kainov-2020-markers.txt\n\
+    \      cache_sha256: aefdaf8a3e127ebf565bd400118b9679c4e9802461acdad8d300bfee5bb17ef4\n\
+    \  - edge_id: siammecr1-increases-col4a1\n    subject: siammecr1\n    predicate:\
+    \ increases\n    object: col4a1-rna\n    mechanism: The same knockdown increases\
+    \ the Col4a1 transcript readout. No direct AMMECR1-promoter\n      binding or\
+    \ molecular transcriptional step is inferred.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:31953406\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6969169/\n      snippet:\
+    \ siAmmecr1\n      explanation: Original Supplementary Figure7f has a distinct\
+    \ Col4a1 comparison;3-experiment RT-qPCR\n        measurement,not a protein or\
+    \ lineage-fate assay.\n      cache_path: evidence/PF01871/kainov-2020-markers.txt\n\
+    \      cache_sha256: aefdaf8a3e127ebf565bd400118b9679c4e9802461acdad8d300bfee5bb17ef4\n\
+    \  - edge_id: siammecr1-increases-shank1\n    subject: siammecr1\n    predicate:\
+    \ increases\n    object: shank1-rna\n    mechanism: The Shank1 transcript readout\
+    \ is modestly increased by siAmmecr1 compared with siCtrl.\n      It is not equivalent\
+    \ to the larger siSrrt effect and does not demonstrate neuronal conversion.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:31953406\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6969169/\n\
+    \      snippet: siAmmecr1\n      explanation: Original Supplementary Figure7f;Krt8\
+    \ lacks a significant siAmmecr1 change,p=.13,and\n        is not promoted to a\
+    \ positive edge.\n      cache_path: evidence/PF01871/kainov-2020-markers.txt\n\
+    \      cache_sha256: aefdaf8a3e127ebf565bd400118b9679c4e9802461acdad8d300bfee5bb17ef4\n\
+    curation_events:\n- timestamp: '2026-10-11T18:18:54Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate six AMMECR1 phenotypic causal\
+    \ contexts with nine observed indirect effects\n  history_record: history/records/PF01871/2026-10-11T181854Z-codex-0bb0eb.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Human Q9Y4X0 equals NP_056180.1,333 aa,PF01871 132-301;G177D maps inside
+    and published primer/reference translation confirms c.530G>A. Zebrafish Q6PH60
+    equals NP_956875.1,309 aa,PF01871 109-277. Mouse Q9JHT5 equals NP_062369.1,344
+    aa,PF01871 143-312. Whole transcript/protein scope and host species remain explicit.
+    Human rescue insert and assay-batch sequences are not independently verified;
+    current isoforms and AMMECR1L must not be conflated.
+  target_ids:
+  - PF01871
+  evidence_ids:
+  - identity
+  - primary
+  - human-localization
+  - zebrafish-development
+  - gaps-and-access
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: One human localization effect,three distinct zebrafish heart-rate contexts,one
+    tail-shortening effect,one partial tail rescue and three mouse marker effects
+    remain separate. All are PHENOTYPIC,INDIRECT,OBSERVED. Nuclear retention,1.26
+    versus2.1-ng I2E3 doses,4.2 versus8.4-ng E3I3 comparisons,E1I1 8.2/8.4-ng disagreement
+    and partial rescue are retained. No heart-rate rescue,proteasomal degradation,domain
+    catalysis or SRRT-like RNA-processing activity is invented.
+  target_ids:
+  - PF01871
+  evidence_ids:
+  - primary
+  - native
+  - human-localization
+  - zebrafish-development
+  - gaps-and-access
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Recover final zebrafish supplement images,resolve E1I1 dose and exact human
+    rescue insert,verify knockdown specificity and stable-genetic rescue. Review A549
+    PMID31519561 full Methods/figures,PH0010 biochemical follow-ups and other family
+    members before extending coverage. The frozen7217 proteins remain in scope; three
+    organism contexts do not establish family-wide biochemistry.
+  target_ids:
+  - PF01871
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01871-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve AMMECR1 construct specificity and extend biochemical member coverage
+  description: Inspect final supplementary controls and rescue insert sequence,resolve
+    E1I1 dose conflict,review additional genetic and biochemical experiments with
+    exact accession/domain mapping,and recover A549 full text before converting its
+    abstract into edges. Preserve partial tail rescue and marker-expression scope.
+    Computational radical-transfer hypotheses require direct tests.
+  target_ids:
+  - PF01871
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - human-localization
+  - zebrafish-development
+  - gaps-and-access
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01871.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Inspect final supplementary controls and rescue insert sequence,resolve
+    E1I1 dose conflict,review additional genetic and biochemical experiments with
+    exact accession/domain mapping,and recover A549 full text before converting its
+    abstract into edges. Preserve partial tail rescue and marker-expression scope.
+    Computational radical-transfer hypotheses require direct tests.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01871
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Original human Figure2,final zebrafish Figure4 and mouse Supplementary Figure7 were
+  visually inspected. Earlier zebrafish supplementary captions are not supplement
+  images. Correct publisher host delivered valid2020 supplements after initial DNS/HTML
+  failures. A549 publisher full text returned403. No raw-data refit,complete supplementary
+  survey,assay-batch sequencing or experimental replication. Rendered-page checks
+  follow separately.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01641
+  path: data/families/PF01641.yaml
+session:
+  id: 2026-10-11T123909Z-codex-18842c
+  timestamp: '2026-10-11T12:39:09Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review SelR product assays and conditional yeast-growth effects
+  details: Inspected primary PNAS Methods, Results and Figures 1-4; rechecked Figures
+    2-3 against five graphs and six observed effects. Verified exact fly clone/isoform
+    and qualified projected domain coordinates, mouse U95C rather than native Sec
+    protein, and yeast reference-versus-isolate scope. Native validation and overlay
+    equivalence pass. Saved partial scientific self-review with NEEDS_FOLLOWUP for
+    later JBC results, assay and construct details, and remaining family coverage.
+    No independent endorsement, complete catalytic cycle or universal family mechanism
+    is claimed. Status remains IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T123903Z-pf01641-selr-products-and-conditional-growth/review.yaml

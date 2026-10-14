@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01595
+  path: curation/families/PF01595.yaml
+session:
+  id: 2026-10-11T120009Z-codex-9828d3
+  timestamp: '2026-10-11T12:00:09Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add scoped CorB proteoliposome causal graphs
+  details: Created three graphs with eleven observed direct effects from Chen 2021
+    Figure 6 and Supplementary Figure 8. Verified intact Mt/Tt accessions, sequence
+    equality and domain coordinates. Retained incorporation/SEC controls, residual
+    mutant activity, counterion uncertainty and the Mt detergent discrepancy. Baseline
+    records check passed with 8296 records and no drift. No family-wide completion
+    or publication is claimed.

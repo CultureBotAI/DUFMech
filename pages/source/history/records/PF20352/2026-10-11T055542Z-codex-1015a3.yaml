@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF20352
+  path: data/families/PF20352.yaml
+session:
+  id: 2026-10-11T055542Z-codex-1015a3
+  timestamp: '2026-10-11T05:55:42Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review DUF6647 computational evidence and graphless disposition
+  details: Saved a partial scientific self-review of the computational relationship
+    paper and verified model identity. Figure-caption nomenclature discrepancy is
+    retained; no directed biological effect is established by the inspected evidence.
+    The graphless disposition is scoped, not evidence of absent function or an exhaustive
+    literature review. Native verdict NEEDS_FOLLOWUP; status remains IN_PROGRESS;
+    no publication.
+  sections:
+  - discussions
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T055555Z-pf20352-duf6647-causal-evidence-gap/review.yaml

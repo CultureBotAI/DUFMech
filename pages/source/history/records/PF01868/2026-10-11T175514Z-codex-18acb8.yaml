@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01868
+  path: data/families/PF01868.yaml
+session:
+  id: 2026-10-11T175514Z-codex-18acb8
+  timestamp: '2026-10-11T17:55:14Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped scientific review of Rpp29 causal graphs
+  details: Same-agent partial review verifies twelve direct observed assay/protocol
+    effects and their primary evidence, exact reference mappings, endpoints and limits.
+    Mth printed reverse-primer conflict remains unresolved; exact assay batches and
+    further family contexts require follow-up. Saved native NEEDS_FOLLOWUP/common
+    pass_with_limitations review binds semantic digest b3d596505657b648070c76a5381707669ccf3265c191dc3cec08eb78648da894.
+    No status promotion, independent endorsement or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T175537Z-pf01868-rpp29-binding-processing-and-fidelity-contexts/review.yaml

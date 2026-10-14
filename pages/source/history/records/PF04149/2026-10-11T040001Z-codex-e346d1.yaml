@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF04149
+  path: curation/families/PF04149.yaml
+session:
+  id: 2026-10-11T040001Z-codex-e346d1
+  timestamp: '2026-10-11T04:00:01Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Added a scoped DUF397 Scr2 phenotype graph.
+  details: Created the first PF04149 overlay using the causal-graph skill, primary
+    experimental evidence and verified UniProt identity mapping. Retained minimal
+    attributed extracts. The graph is PHENOTYPIC, not a resolved molecular mechanism;
+    family-wide curation and retained review remain incomplete. No source snapshots
+    or scientific review approvals were changed.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC6262351/
+  - https://rest.uniprot.org/uniprotkb/Q9KZY4.json

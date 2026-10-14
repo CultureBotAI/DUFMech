@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01895
+  path: curation/families/PF01895.yaml
+session:
+  id: 2026-10-11T212221Z-codex-f59a5f
+  timestamp: '2026-10-11T21:22:21Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Clarify retained components versus experimentally tested necessity
+  details: Self-review refined the PhoU1/Pi-to-RegX3 edge to state that SenX3 and
+    ATP remain present in the reaction, not that individual component necessity was
+    separately established. Graph topology and24 observed effects remain unchanged.
+    Focused256-test suite passed before this prose refinement. Regenerate the effective
+    record and retain the scientific self-review; no family-wide completion or publication
+    claimed.

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01937
+  path: curation/families/PF01937.yaml
+session:
+  id: 2026-10-11T042658Z-codex-6fb381
+  timestamp: '2026-10-11T04:26:58Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate separate YMR027W enzyme and deletion causal graphs
+  details: Inspected the primary author manuscript Results and methods, verified Q04371
+    sequence version and PF01937 coordinates with UniProt and InterPro, and retained
+    minimal hash-anchored evidence. One DIRECT MECHANISTIC hydrolysis edge and one
+    INDIRECT PHENOTYPIC metabolite-pool edge preserve their distinct conditions. Atomic
+    intermediates, DNA damage, other DUF89 members and family-wide activity are not
+    inferred. The record remains IN_PROGRESS pending broader scientific coverage.
+  sections:
+  - causal_graphs

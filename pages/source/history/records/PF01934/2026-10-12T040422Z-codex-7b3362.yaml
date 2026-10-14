@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01934
+  path: curation/families/PF01934.yaml
+session:
+  id: 2026-10-12T040422Z-codex-7b3362
+  timestamp: '2026-10-12T04:04:22Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: needs_followup
+  summary: Curate PF01934 HepT and fusion causal contexts with explicit construct
+    mapping.
+  details: Inspected primary2015/2018/2020/2026 results, methods, assay figures and
+    the2026 publisher supplement. Added16 scoped graphs and28 observed effects with
+    six evidence ledgers and two OPEN discussions. Resolved276-aa WP_164925653.1 versus252-aa
+    Q8EGZ7 by exact251-residue comparison; retain24-position shift and start-residue
+    difference. Excluded PF08780 Legionella evidence. Kept protein modification, purified
+    RNA cleavage, gel-state effects and host-specific phenotypes separate; preserved
+    frozen identity, conflicting stoichiometry and source limits. Baseline8296 valid
+    records with0 drift. Further member, cyanobacterial, operon and physiological
+    coverage remains open; no publication authorized.

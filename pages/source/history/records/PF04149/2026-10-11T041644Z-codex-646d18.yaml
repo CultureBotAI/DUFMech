@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF04149
+  path: data/families/PF04149.yaml
+session:
+  id: 2026-10-11T041644Z-codex-646d18
+  timestamp: '2026-10-11T04:16:44Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific reassessment of three PF04149 graphs
+  details: Saved successor 20261011T041734Z-pf04149-causal-contexts with NEEDS_FOLLOWUP
+    and partial coverage. It assesses joint-gene scope, context-specific directions,
+    source discrepancies and the unchanged Scr2 graph; the original coverage issue
+    remains open. Native structure/evidence and 181 focused tests passed. No REVIEWED
+    promotion, family-wide mechanism, independent endorsement or publication is claimed.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T041734Z-pf04149-causal-contexts/review.yaml

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01901
+  path: curation/families/PF01901.yaml
+session:
+  id: 2026-10-11T223101Z-codex-51854f
+  timestamp: '2026-10-11T22:31:01Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Extend PF01901 capsule and phage-complementation contexts and refine strain
+    lineage
+  details: Retained three additional graphs with four indirect observed effects from
+    original2008 Figure3 and2021 Figure4; corrected the ATCC700927/43895relationship
+    using the culture authority. Mapped ATCC43888QDZ55367.1 exactly toQ8X4T7. Preserved
+    previous graph IDs,evidence bytes and historical review. No cross-strain rescue,isolated-domain
+    chemistry or exact historical clone sequence is claimed; source conflicts and
+    access limits remain open.

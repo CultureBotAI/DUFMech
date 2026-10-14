@@ -1,0 +1,478 @@
+# Scoped scientific self-review of DUF16 MPN104 and MPN524 insertion phenotypes
+
+- Review: 20261011T065732Z-pf01519-duf16-causal-phenotypes
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T06:56:44Z
+- Finished UTC: 2026-10-11T06:57:32Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Two separate M129 insertion-mutant graphs retain four indirect observed phenotypes. Reference family mapping is verified, but no isolated-domain mechanism or completed genetic causality test is claimed; status remains IN_PROGRESS.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: MPN104-29 and MPN524-74 in the published M129 transposon study, found by following DUF16/MPN010 structure leads to primary perturbation evidence.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01519 | data/families/PF01519.yaml | generated | PF01519 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01519 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01519.
+
+M129 references P75565/MPN104 and P75254/MPN524, both sequence version 1, map PF01519 at 9-103 and 47-124 respectively. Each UniProt sequence exactly matches InterPro. MPN524's extension is distinct from the domain interval. These are reference mappings, not verified mutant protein sequences, and MPN010 structure evidence is not transferred to either phenotype.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01519.
+
+Both graphs are PHENOTYPIC and all four edges are INDIRECT, OBSERVED and EXPERIMENTAL. Figure 5 uses solid triangles for both loci, indicating predicted absence of polarity rather than a measured control. No complementation from other mutants is borrowed. Gliding frequency uses percent and velocity uses percent WT despite inconsistent HTML table units. No adhesion-to-gliding edge or direct motor mechanism is inferred.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01519.
+
+Genetic complementation, revertants, mutant protein abundance and domain-specific rescue remain unestablished for these targets in the inspected material. Additional DUF16 members and later studies are not exhaustively reviewed. Prior binding-protocol details and raw movies were not independently inspected.
+
+## Findings
+
+### additional-contexts: Resolve genetic specificity and the DUF16 domain contribution
+
+minor / open / confirmed; issue key: pf01519-causal-context-coverage.
+
+Find target-specific rescue or clean perturbation evidence and establish the contributions of DUF16 versus other protein regions. Distinguish predicted polarity from measured controls and determine whether MPN524 attachment changes mediate its gliding phenotype before adding mechanistic edges.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Find target-specific rescue or clean perturbation evidence and establish the contributions of DUF16 versus other protein regions. Distinguish predicted polarity from measured controls and determine whether MPN524 attachment changes mediate its gliding phenotype before adding mechanistic edges.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC1595379/; Methods, Tables 2 and 3 with footnotes, gliding and glass-binding Results, Discussion and visually inspected Figure 5 | supports | MPN104-29 has lower gliding frequency without the significant glass-binding reduction reported for MPN524-74. MPN524-74 has lower gliding frequency, normalized velocity and normalized glass binding. These are insertion-associated cellular outcomes, not DUF16-only perturbations. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/P75565/entry/pfam/PF01519/; Accession and domain locations; paired UniProt identity facts | supports | M129 references P75565/MPN104 and P75254/MPN524, both sequence version 1, map PF01519 at 9-103 and 47-124 respectively. Each UniProt sequence exactly matches InterPro. MPN524's extension is distinct from the domain interval. These are reference mappings, not verified mutant protein sequences, and MPN010 structure evidence is not transferred to either phenotype. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01519 | data/families/PF01519.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Figure 5 was visually inspected and Tables 2/3 plus footnotes were read as structured text. Raw microcinematography and supplemental data were not reanalyzed; the earlier glass-binding protocol was not reconstructed. The MPN010 structure remains contextual evidence only.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T065732Z-pf01519-duf16-causal-phenotypes
+title: Scoped scientific self-review of DUF16 MPN104 and MPN524 insertion phenotypes
+started_at: '2026-10-11T06:56:44Z'
+finished_at: '2026-10-11T06:57:32Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Two separate M129 insertion-mutant graphs retain four indirect observed phenotypes.
+  Reference family mapping is verified, but no isolated-domain mechanism or completed
+  genetic causality test is claimed; status remains IN_PROGRESS.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01519.yaml
+    sha256: 261dcff03a8ddac6cf4b106cf69d9701c18dfd215b046c7937d000664543e8fc
+    role: context
+  - path: data/families/PF01519.yaml
+    sha256: 63c81320e07464924dde596862d5f0f192b0d393efc235acdcff283db5b29805
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01519/hasselbring-2006-duf16.txt
+    role: context
+    sha256: 673835e1c7adc910167ea8210b86d5859862fd9aee3840a45d4ba43ac9e77a60
+  - path: evidence/PF01519/MPN104-MPN524-identity.txt
+    role: context
+    sha256: 979e4dcfcdd63c25c95659d6e9dcd20b1a6f8d53a0ae1d149306e2a00004f271
+targets:
+- target_id: PF01519
+  path: data/families/PF01519.yaml
+  label: PF01519
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01519.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: deaef9d1cb0fdfa6206e49d2f9dff2b05bfd9b3c363e20d16da701f2d23f4ba5
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: MPN104-29 and MPN524-74 in the published M129 transposon study, found
+    by following DUF16/MPN010 structure leads to primary perturbation evidence.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01519
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Genetic complementation, revertants, mutant protein abundance and domain-specific
+      rescue remain unestablished for these targets in the inspected material. Additional
+      DUF16 members and later studies are not exhaustively reviewed. Prior binding-protocol
+      details and raw movies were not independently inspected.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01519
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1595379/
+  locator: Methods, Tables 2 and 3 with footnotes, gliding and glass-binding Results,
+    Discussion and visually inspected Figure 5
+  accessed_at: '2026-10-11T06:57:32Z'
+  support: supports
+  snapshot_sha256: 673835e1c7adc910167ea8210b86d5859862fd9aee3840a45d4ba43ac9e77a60
+  summary: MPN104-29 has lower gliding frequency without the significant glass-binding
+    reduction reported for MPN524-74. MPN524-74 has lower gliding frequency, normalized
+    velocity and normalized glass binding. These are insertion-associated cellular
+    outcomes, not DUF16-only perturbations.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P75565/entry/pfam/PF01519/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T06:57:32Z'
+  support: supports
+  snapshot_sha256: 979e4dcfcdd63c25c95659d6e9dcd20b1a6f8d53a0ae1d149306e2a00004f271
+  summary: M129 references P75565/MPN104 and P75254/MPN524, both sequence version
+    1, map PF01519 at 9-103 and 47-124 respectively. Each UniProt sequence exactly
+    matches InterPro. MPN524's extension is distinct from the domain interval. These
+    are reference mappings, not verified mutant protein sequences, and MPN010 structure
+    evidence is not transferred to either phenotype.
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T06:57:32Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01519
+  kind: record_content
+  reference: data/families/PF01519.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T06:57:32Z'
+  support: context_only
+  snapshot_sha256: 63c81320e07464924dde596862d5f0f192b0d393efc235acdcff283db5b29805
+  quote: "id: Pfam:PF01519\npfam_id: PF01519\nname: Protein of unknown function DUF16\n\
+    short_name: DUF16\nseed_status: UNKNOWN_CANDIDATE\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01519\n\
+    counters:\n  proteins: 26\n  matches: 28\n  proteomes: 1\n  taxa: 10\n  structures:\
+    \ 1\n  alphafold_models: 26\n  domain_architectures: 2\nprovenance:\n  snapshot_id:\
+    \ interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002862\ndescription: The function of this protein is\
+    \ unknown. It appears to only occur in Mycoplasma pneumoniae.\n  The crystal structure\
+    \ revealed that this domain is composed of two separated homotrimeric coiled-coils\n\
+    \  [[cite:PUB00039581]].\ncuration_history: history/records/PF01519\ndiscussions:\n\
+    - discussion_id: duf16-genetic-specificity-and-domain-mechanism\n  prompt: Find\
+    \ target-specific genetic rescue and test which DUF16-containing protein regions\
+    \ account\n    for the MPN104 and MPN524 phenotypes.\n  kind: CURATION_TODO\n\
+    \  status: OPEN\n  rationale: Insertion-associated gliding and adhesion outcomes\
+    \ do not isolate domain function. Predicted\n    absence of polarity is weaker\
+    \ than experimental complementation, and MPN524's non-DUF extension or\n    altered\
+    \ adhesion could contribute to the phenotype.\n  evidence:\n  - reference: PMID:16923901\n\
+    \    supports: PARTIAL\n    evidence_source: full_text\n    explanation: Methods,\
+    \ Tables 2/3, Results, Discussion and Figure 5 were inspected. The paper explicitly\n\
+    \      identifies genetic complementation as follow-up; rescue in other target\
+    \ mutants is not transferred\n      here.\n  - reference: PMID:16522803\n    supports:\
+    \ PARTIAL\n    evidence_source: selected_full_text\n    explanation: The MPN010\
+    \ DUF16 structure is a distinct protein context. Coiled-coil architecture and\n\
+    \      the paper's suggested motility role are not direct MPN010 causal evidence.\n\
+    \  posed_by: Codex\n  posed_date: '2026-10-11'\n  notes: Additional family members,\
+    \ later studies, raw movies and prior assay protocols remain incompletely\n  \
+    \  covered. The inherited unknown-function description and seed classification\
+    \ remain unchanged; these\n    partial graphs do not establish family-wide biochemical\
+    \ characterization.\ncausal_graphs:\n- graph_id: m129-mpn104-insertion-phenotype\n\
+    \  title: MPN104 disruption lowers the fraction of gliding M129 cells\n  scope:\
+    \ M. pneumoniae M129 Tn4001.2065 insertion mutant MPN104-29 and its filter-cloned\
+    \ progeny; not\n    a clean deletion, domain-selective mutation or experiment\
+    \ on MPN010.\n  context: Table 2 maps the insertion at genome position 134672.\
+    \ The screen enriched polystyrene-adherent\n    transformants and selected altered\
+    \ satellite growth. Table 3 compares two filter clones with wild\n    type using\
+    \ microcinematography, typically 30-50 cells per mutant and at least two experiments.\
+    \ Satellite\n    growth conditions are glass, SP-4 plus 3% gelatin, 37 C; gliding\
+    \ analysis refers to the earlier published\n    protocol and ordinarily uses one\
+    \ frame per second.\n  family_mapping: MPN104/MPN_104 is UniProtKB:P75565 (C09_orf104/MP050;\
+    \ NCBIProtein:AAB95698.1), M129\n    reference taxon 272634, sequence version\
+    \ 1, 104 aa. PF01519 maps at 9-103 inclusive. UniProt and InterPro\n    sequences\
+    \ agree; the study independently identifies MPN104 as DUF16-bearing. Reference\
+    \ sequence mapping\n    does not establish the mutant protein product or domain-specific\
+    \ action.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:272634\n  limitations:\
+    \ No MPN104 complementation or excision-revertant confirmation is established\
+    \ here. Figure\n    5 predicts no flanking polar effect, but that is not a measured\
+    \ polarity control. Glass binding and\n    resting-time means are near wild type;\
+    \ no independent adhesion-loss or resolved motor-activation mechanism\n    is\
+    \ asserted. Table 3 unit headings conflict with Results; gliding frequency is\
+    \ retained as percent,\n    not um/s.\n  nodes:\n  - node_id: mpn104-29-insertion\n\
+    \    label: Tn4001.2065 disruption at the MPN104-29 locus\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:P75565\n  - node_id: mpn104-gliding-frequency\n\
+    \    label: Fraction of cells exhibiting gliding in the M129 assay\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: mpn104-insertion-decreases-gliding-frequency\n\
+    \    subject: mpn104-29-insertion\n    predicate: decreases\n    object: mpn104-gliding-frequency\n\
+    \    mechanism: The insertion-mutant clones show mean gliding frequency 12.4 +/-\
+    \ 0.3 percent versus 27.8\n      +/- 0.3 percent in wild type. This is an observed\
+    \ insertion-associated phenotype with unresolved\n      molecular and possible\
+    \ indirect effects, not proof that purified DUF16 activates a motor.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:16923901\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1595379/\n\
+    \      snippet: gliding frequencies were reduced for all mutants\n      explanation:\
+    \ Tables 2/3 and the Results specify MPN104-29, its insertion site and frequency\
+    \ comparison.\n        Figure 5's no-predicted-polar-effect symbol was visually\
+    \ checked; genetic rescue was not reported\n        for this target in the inspected\
+    \ evidence.\n      cache_path: evidence/PF01519/hasselbring-2006-duf16.txt\n \
+    \     cache_sha256: 673835e1c7adc910167ea8210b86d5859862fd9aee3840a45d4ba43ac9e77a60\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P75565/entry/pfam/PF01519/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P75565/entry/pfam/PF01519/\n\
+    \      snippet: 'P75565 Pfam:PF01519 interval: 9-103, inclusive'\n      explanation:\
+    \ Connects the tested locus to this family while keeping reference sequence and\
+    \ mutant\n        product distinct.\n      cache_path: evidence/PF01519/MPN104-MPN524-identity.txt\n\
+    \      cache_sha256: 979e4dcfcdd63c25c95659d6e9dcd20b1a6f8d53a0ae1d149306e2a00004f271\n\
+    - graph_id: m129-mpn524-insertion-phenotypes\n  title: MPN524 disruption reduces\
+    \ gliding and glass binding\n  scope: Separate M. pneumoniae M129 mutant MPN524-74\
+    \ with Tn4001.2065 insertion at genome position 645829;\n    not MPN104, MPN010\
+    \ or isolated DUF16.\n  context: Table 3 means and SEM derive from two filter\
+    \ clones, with microcinematography for typically\n    30-50 cells and at least\
+    \ two experiments. Glass binding uses the same two clones and is normalized\n\
+    \    to wild type. The satellite-growth screen uses glass, SP-4 plus 3% gelatin\
+    \ at 37 C. Exact glass-binding\n    incubation details are referred to a prior\
+    \ protocol and were not reconstructed in this review.\n  family_mapping: MPN524/MPN_524\
+    \ is UniProtKB:P75254 (G12_orf168/MP318; NCBIProtein:AAB95966.1), M129\n    taxon\
+    \ 272634, sequence version 1, 168 aa. PF01519 maps at 47-124 inclusive. Its C-terminal\
+    \ extension\n    is not part of that interval. UniProt and InterPro reference\
+    \ sequences agree; the experimental perturbation\n    is whole-locus insertion,\
+    \ not an isolated-domain assay.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:272634\n\
+    \  limitations: Genetic complementation, an excision revertant and mutant protein\
+    \ abundance are not established\n    for MPN524 in the inspected study. Figure\
+    \ 5 predicts no polar effect but does not experimentally exclude\n    it. Reduced\
+    \ attachment may contribute to altered gliding; no observed adhesion-to-motility\
+    \ causal\n    edge is claimed. Table 3 velocity values are percent of WT despite\
+    \ the um/s heading; no 52.8 um/s\n    absolute velocity is asserted. The DUF16\
+    \ domain cannot be separated from other protein regions by\n    this perturbation.\n\
+    \  nodes:\n  - node_id: mpn524-74-insertion\n    label: Tn4001.2065 disruption\
+    \ at the MPN524-74 locus\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:P75254\n\
+    \  - node_id: mpn524-gliding-frequency\n    label: Fraction of MPN524-mutant cells\
+    \ exhibiting gliding\n    node_type: PHENOTYPE\n  - node_id: mpn524-gliding-velocity\n\
+    \    label: Mean gliding velocity relative to wild type\n    node_type: PHENOTYPE\n\
+    \  - node_id: mpn524-glass-binding\n    label: Glass-binding capability relative\
+    \ to wild type\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: mpn524-insertion-decreases-gliding-frequency\n\
+    \    subject: mpn524-74-insertion\n    predicate: decreases\n    object: mpn524-gliding-frequency\n\
+    \    mechanism: Mean gliding frequency is 12.8 +/- 3.2 percent in MPN524-74 versus\
+    \ 27.8 +/- 0.3 percent\n      in wild type. The intervention is the insertion-mutant\
+    \ context, with an unresolved path from locus\n      disruption to the phenotype.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:16923901\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1595379/\n\
+    \      snippet: gliding frequencies were reduced for all mutants\n      explanation:\
+    \ The specific MPN524-74 row in Table 3 supports this direction and the stated\
+    \ mean/SEM;\n        no complementation is borrowed from other mutants in the\
+    \ paper.\n      cache_path: evidence/PF01519/hasselbring-2006-duf16.txt\n    \
+    \  cache_sha256: 673835e1c7adc910167ea8210b86d5859862fd9aee3840a45d4ba43ac9e77a60\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P75254/entry/pfam/PF01519/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P75254/entry/pfam/PF01519/\n\
+    \      snippet: 'P75254 Pfam:PF01519 interval: 47-124, inclusive'\n      explanation:\
+    \ Provides the separate MPN524 identity/domain mapping, not evidence for a family-wide\n\
+    \        or domain-specific phenotype.\n      cache_path: evidence/PF01519/MPN104-MPN524-identity.txt\n\
+    \      cache_sha256: 979e4dcfcdd63c25c95659d6e9dcd20b1a6f8d53a0ae1d149306e2a00004f271\n\
+    \  - edge_id: mpn524-insertion-decreases-gliding-velocity\n    subject: mpn524-74-insertion\n\
+    \    predicate: decreases\n    object: mpn524-gliding-velocity\n    mechanism:\
+    \ MPN524-74 mean velocity is 52.8 +/- 7.8 percent of the wild-type normalized\
+    \ mean of 100.0\n      +/- 9.4. This is a cellular phenotype, not a measurement\
+    \ of purified motor speed or domain activity.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:16923901\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1595379/\n      snippet:\
+    \ gliding frequencies were reduced for all mutants\n      explanation: Velocity\
+    \ support comes from the distinct velocity column of the MPN524-74 Table 3 row\n\
+    \        and the normalized interpretation in Results, not from treating the adjacent\
+    \ frequency quotation\n        as a velocity measurement. No new significance\
+    \ test is claimed.\n      cache_path: evidence/PF01519/hasselbring-2006-duf16.txt\n\
+    \      cache_sha256: 673835e1c7adc910167ea8210b86d5859862fd9aee3840a45d4ba43ac9e77a60\n\
+    \  - edge_id: mpn524-insertion-decreases-glass-binding\n    subject: mpn524-74-insertion\n\
+    \    predicate: decreases\n    object: mpn524-glass-binding\n    mechanism: MPN524-74\
+    \ glass binding is 68.2 +/- 2.0 percent of wild type, compared with the normalized\n\
+    \      WT mean of 100.0 +/- 3.2. The source reports P < 0.05 for this comparison,\
+    \ without resolving a direct\n      molecular adhesion mechanism.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:16923901\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1595379/\n\
+    \      snippet: Glass binding was reduced with the disruption of MPN524 but not\
+    \ MPN104\n      explanation: Table 3 and glass-binding Results support the outcome\
+    \ and distinguish MPN524 from MPN104.\n        The same phenotype is not transferred\
+    \ to every DUF16 protein or to isolated domains.\n      cache_path: evidence/PF01519/hasselbring-2006-duf16.txt\n\
+    \      cache_sha256: 673835e1c7adc910167ea8210b86d5859862fd9aee3840a45d4ba43ac9e77a60\n\
+    curation_events:\n- timestamp: '2026-10-11T06:53:30Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate separate MPN104 and MPN524 DUF16\
+    \ phenotype graphs\n  history_record: history/records/PF01519/2026-10-11T065330Z-codex-be071e.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: M129 references P75565/MPN104 and P75254/MPN524, both sequence version
+    1, map PF01519 at 9-103 and 47-124 respectively. Each UniProt sequence exactly
+    matches InterPro. MPN524's extension is distinct from the domain interval. These
+    are reference mappings, not verified mutant protein sequences, and MPN010 structure
+    evidence is not transferred to either phenotype.
+  target_ids:
+  - PF01519
+  evidence_ids:
+  - identity
+  - primary
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Both graphs are PHENOTYPIC and all four edges are INDIRECT, OBSERVED and
+    EXPERIMENTAL. Figure 5 uses solid triangles for both loci, indicating predicted
+    absence of polarity rather than a measured control. No complementation from other
+    mutants is borrowed. Gliding frequency uses percent and velocity uses percent
+    WT despite inconsistent HTML table units. No adhesion-to-gliding edge or direct
+    motor mechanism is inferred.
+  target_ids:
+  - PF01519
+  evidence_ids:
+  - primary
+  - native
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Genetic complementation, revertants, mutant protein abundance and domain-specific
+    rescue remain unestablished for these targets in the inspected material. Additional
+    DUF16 members and later studies are not exhaustively reviewed. Prior binding-protocol
+    details and raw movies were not independently inspected.
+  target_ids:
+  - PF01519
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01519-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve genetic specificity and the DUF16 domain contribution
+  description: Find target-specific rescue or clean perturbation evidence and establish
+    the contributions of DUF16 versus other protein regions. Distinguish predicted
+    polarity from measured controls and determine whether MPN524 attachment changes
+    mediate its gliding phenotype before adding mechanistic edges.
+  target_ids:
+  - PF01519
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01519.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Find target-specific rescue or clean perturbation evidence and establish
+    the contributions of DUF16 versus other protein regions. Distinguish predicted
+    polarity from measured controls and determine whether MPN524 attachment changes
+    mediate its gliding phenotype before adding mechanistic edges.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01519
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Figure 5 was visually inspected and Tables 2/3 plus footnotes were read as structured
+  text. Raw microcinematography and supplemental data were not reanalyzed; the earlier
+  glass-binding protocol was not reconstructed. The MPN010 structure remains contextual
+  evidence only.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

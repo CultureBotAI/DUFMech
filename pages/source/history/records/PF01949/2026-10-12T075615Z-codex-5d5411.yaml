@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01949
+  path: curation/families/PF01949.yaml
+session:
+  id: 2026-10-12T075615Z-codex-5d5411
+  timestamp: '2026-10-12T07:56:15Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: needs_followup
+  summary: Curate scoped Endo_dU cleavage, assay perturbation and cellular phenotype
+    graphs.
+  details: 'Inspected Li2024 primary figures, Methods and newly retrieved EuropePMC
+    supplement. Twelve graphs retain nineteen observed effects: seven direct biochemical
+    product edges and twelve unresolved molecular effects. Preserve D10A-H166A versus
+    D10A+H166R conflict, primary-only Halo/Gm profile assignment, partial H26 deletion,
+    TPM versus repair and OD versus viability. Five evidence ledgers and three OPEN
+    discussions retain source, mapping and coverage limits. Baseline8296 schema-valid
+    records with zero drift; full validation and scoped self-review follow. No publication
+    or full-family completion.'
+  sections:
+  - causal_graphs

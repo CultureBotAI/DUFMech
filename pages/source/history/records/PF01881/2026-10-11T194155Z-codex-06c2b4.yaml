@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01881
+  path: curation/families/PF01881.yaml
+session:
+  id: 2026-10-11T194155Z-codex-06c2b4
+  timestamp: '2026-10-11T19:41:55Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate PF01881 Cas6 assay-scoped causal graphs
+  details: Retain sixteen observed purified-assay effects and one explicit wraparound
+    hypothesis across eight contexts; distinguish C-terminal joint glycine-loop substitutions
+    from outside-domain Y31/H46/K52 and preserve protocol, construct and family-transfer
+    limits.
+  sections:
+  - causal_graphs
+  - discussions

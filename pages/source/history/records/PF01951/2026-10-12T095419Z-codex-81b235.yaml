@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01951
+  path: curation/families/PF01951.yaml
+session:
+  id: 2026-10-12T095419Z-codex-81b235
+  timestamp: '2026-10-12T09:54:19Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add scoped bacterial turnover and human complex, depletion and rescue graphs
+  details: Add 13 graphs and 19 evidence-linked OBSERVED edges from Desai2015 and
+    Popow2014; preserve 43 prior edges and nine source ledgers. Retain clone/isoform
+    limits, weak Thermobifida effects, negative assays and remaining partner/cellular
+    contexts. Four new evidence ledgers; IN_PROGRESS and four OPEN discussions remain.

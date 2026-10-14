@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01121
+  path: data/families/PF01121.yaml
+session:
+  id: 2026-10-11T090754Z-codex-5d17d9
+  timestamp: '2026-10-11T09:07:54Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial CoaE review with contested R140A source evidence
+  details: Saved the exact-content scientific self-review for digest 1dfddd560624fec384f797ac8fbb5ddb701e85afc633062ba9acf470ab3b72fb.
+    Three graphs retain five observed effects and one contested R140A loss claim;
+    opposite L114A substrate-series directions and E. coli versus mycobacterial constructs
+    remain separate. Confirmed Table 2 nr means no reaction, conflicting with Figure
+    5A fitted Km. Raw kinetics, primer/clone reconstruction, metadata and wider coverage
+    need follow-up. Same-agent partial review; IN_PROGRESS, not independent expert
+    endorsement.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T090741Z-pf01121-coae-product-and-contested-kinetics/review.yaml

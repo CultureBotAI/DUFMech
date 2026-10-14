@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF20352
+  path: curation/families/PF20352.yaml
+session:
+  id: 2026-10-11T055206Z-codex-5a2681
+  timestamp: '2026-10-11T05:52:06Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Retain DUF6647 computational evidence and causal-graph prerequisite
+  details: Inspected Ponamareva 2024 methods, Section 3.2.1 and Figure 11A; verified
+    model accession A0A2Z2P7G5 maps to PF20352 despite DUF4157 caption wording. Added
+    a native open discussion and minimal primary/identity caches. Similarity, motif
+    and AF2 superposition do not establish a directed biological effect, so the record
+    remains graphless and IN_PROGRESS. Bounded search is not an exhaustive absence
+    claim; no frozen identity changes or publication.
+  sections:
+  - discussions

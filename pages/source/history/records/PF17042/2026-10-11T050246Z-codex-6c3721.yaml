@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF17042
+  path: data/families/PF17042.yaml
+session:
+  id: 2026-10-11T050246Z-codex-6c3721
+  timestamp: '2026-10-11T05:02:46Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped ReDtnK C-terminal mapping review
+  details: Reviewed the projected Q0K4F6 kinase edge against the same primary experiment
+    used for PF07005 and the independently checked C-terminal match. The full-protein
+    evidence is not C-terminal-only catalysis or independent replication. Partial
+    scientific self-review; context coverage remains open.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T050318Z-pf17042-redtnk-causal-graph/review.yaml

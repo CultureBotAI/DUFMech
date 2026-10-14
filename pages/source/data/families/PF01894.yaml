@@ -4,7 +4,7 @@ name: UPF0047 protein YjbQ-like
 short_name: YjbQ
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01894
 counters:
   proteins: 14125
@@ -25,3 +25,281 @@ description: This family includes YjbQ from Escherichia coli, its orthologue fro
   and similar sequences. These proteins have been shown to have sufficient thiamine phosphate synthase
   activity to complement thiE mutants. However, it is presumed that this is a secondary activity, and
   the primary function of the YjbQ family enzyme remains unknown [[cite:PUB00101019],[cite:PUB00101020]].
+curation_history: history/records/PF01894
+discussions:
+- discussion_id: yjbq-reaction-and-assay-gaps
+  prompt: Resolve YjbQ reactions while preserving the distinction between growth rescue and direct biochemical
+    evidence.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Thiamine and vitamin B6 rescue occur in different hosts and pathways. Morett reports in-vitro
+    TPS and mutagenesis, but full assay evidence was not obtained. Kim's proposed pathway2 entry is genetic
+    inference and YjbQ was not assayed for4PE dehydrogenase activity; the broad statement that none of
+    the selected proteins has this activity cannot be used as a measured YjbQ negative.
+  evidence:
+  - reference: PMID:18178222
+    supports: PARTIAL
+    evidence_source: abstract_and_accessible_publisher_excerpts
+    explanation: The primary report supports qualitative thiE rescue and reports biochemical/mutagenesis
+      work; full figures, exact conditions, active-site assignments and other-species constructs remain
+      uninspected.
+  - reference: PMID:21119630
+    supports: PARTIAL
+    evidence_source: full_text_tables_original_schematic_and_publisher_supplement
+    explanation: TableII, supplementary TableIII and Results support genotype/context-specific growth.
+      Supplementary purification Methods confirms insoluble YjbQ. Original Figure1 marks the pathway2
+      precursor unknown; no measured OHPB-production or catalytic microstep is shown for YjbQ.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Obtain readable2008 full text, resolve the2010 printed primer and FigureS1 antibiotic discrepancies,
+    verify actual insert sequences and liquid-growth conditions, and assess purified products and residue
+    controls. The2010 publisher supplement was obtained after the initial CREATE event. Do not convert
+    an unperformed assay or unavailable source into negative evidence. Native physiological function and
+    transfer across14125 frozen family proteins remain open.
+- discussion_id: yjbq-excluded-context-transfers
+  prompt: Distinguish structural and pathway-context leads from demonstrated PF01894 reactions.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: RhiN homology and a proposed dehydration role do not establish its enzymatic reaction. The2024
+    tRNA-selection study cites the existing YjbQ bypass as a reason for double deletion, rather than supplying
+    independent YjbQ replication. ST2072's Zn/sulfate structure does not prove the E. coli enzyme mechanism.
+    Similar gene names must not merge unrelated proteins.
+  evidence:
+  - reference: PMID:20142038
+    supports: PARTIAL
+    evidence_source: selected_full_text
+    explanation: RhiN-related Results and Discussion explicitly leave its function unresolved; RhiG aldolase
+      data and whole-cluster production do not establish individual RhiN chemistry.
+  - reference: doi:10.1093/nar/gkae806
+    supports: PARTIAL
+    evidence_source: selected_full_text
+    explanation: The YjbQ-related selection rationale cites Morett2008 and removes thiE/yjbQ. The discussed
+      ThiN H95 residue is not a YjbQ catalytic residue.
+  - reference: https://www.rcsb.org/structure/1VE0
+    supports: PARTIAL
+    evidence_source: structural_deposition_metadata
+    explanation: The inspected134-residue ST2072 deposition contains Zn/sulfate and a trimeric assembly;
+      the2005 full paper and a residue-level functional assay were not reviewed.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Identity comparisons, source-access outcomes and searched aliases are retained under evidence/PF01894.
+    No frozen identity/counter changes, independent expert endorsement, full-family completion or publication
+    are claimed.
+causal_graphs:
+- graph_id: yjbq-thie-rescue
+  title: Expressed E. coli YjbQ rescues thiamine auxotrophy
+  scope: Morett2008 primary abstract and accessible Introduction/partial Methods; whole E. coli YjbQ expressed
+    in MC1061 delta-thiE.
+  context: Minimal-medium plate complementation is reported. Exact medium recipe, induction, incubation
+    temperature, duration and replicate count were not recovered from the truncated accessible Methods.
+    The reported37 C LB propagation is not assigned to the complementation assay.
+  family_mapping: The K12 reference P0AF48 sequenceversion1 is138 aa and exactly matches NP_418480.1,
+    AAC77026.1, BAE78058.1 and WP_000270375.1. Member-specific InterPro maps PF01894 at6-138. The actual
+    MC1061 plasmid insert was not independently sequenced; this is whole-protein expression, not isolated-domain
+    sufficiency.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: This qualitatively reported genetic effect was not independently inspected in original
+    figures. Reported in-vitro TPS activity, directed evolution and residue tests need full-text assay
+    review before mechanistic edges are added. Rescue does not establish the native physiological role
+    or justify transferring ThiE chemistry to YjbQ. Other-species complementation constructs remain unmapped.
+  nodes:
+  - node_id: express-yjbq
+    label: Overexpress E. coli yjbQ in MC1061 delta-thiE
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AF48
+  - node_id: thiamine-auxotrophy-rescue
+    label: Growth rescue of the thiamine-auxotrophic host
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: yjbq-enables-thie-host-growth
+    subject: express-yjbq
+    predicate: enables
+    object: thiamine-auxotrophy-rescue
+    mechanism: The primary abstract reports that expression of the selected E. coli gene complements loss
+      of thiE. Accessible Introduction identifies MC1061 delta-thiE. This is retained as an indirect cellular
+      effect, not a measured catalytic microstep or constitutive thiamine pathway.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18178222
+      source_url: https://pubmed.ncbi.nlm.nih.gov/18178222/
+      snippet: we selected yjbQ, a gene that complemented a strain deleted
+      explanation: Primary abstract states the expression-to-complementation relation; publisher-accessible
+        Introduction and partial Methods identify the host and plate selection. Full experimental figures
+        and protocol remain uninspected.
+      cache_path: evidence/PF01894/morett-2008-accessible-text.txt
+      cache_sha256: 2dd4b0e5c699674f40243a3eb3b3d6cbbc8473f1d445570219b4dec56ea9e31d
+- graph_id: yjbq-pdxb-colony-rescue
+  title: Expressed YjbQ supports delta-pdxB colony growth
+  scope: Kim2010 TableII, supplementary TableIII and relevant Methods; BW25113-derived delta-pdxB/JU283
+    on M9/glucose at37 C.
+  context: Supplementary TableI identifies JU283 as a selected JWK2317 single colony. M9 contains glucose0.2%
+    and NH4Cl0.1% w/v. ASKA hits were reintroduced and independently cloned in pTrcHisB; confirmation
+    Methods specifies five PBS washes, IPTG0.1 mM, kanamycin20 ug/ml and ampicillin100 ug/ml. TableII
+    compares no supplement and a defined mixture without pyridoxine; TableIII separately tests serine1
+    mM. FigureS1 caption instead names chloramphenicol35 ug/ml with pTrcHisB; that antibiotic discrepancy
+    remains unresolved.
+  family_mapping: Whole E. coli K12 YjbQ b4056/JW4017 corresponds to P0AF48/NP_418480.1 reference138 aa
+    with PF01894 at6-138. Both expression systems add N-terminal His6; ASKA also adds five C-terminal
+    residues. TableV printed pTrcHisB and pET45b forward primers differ in the YjbQ start region. The
+    reference sequence match does not independently establish the experimental insert sequence or isolated-domain
+    sufficiency.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: TablesII/SIII +++ means1 mm colonies after3-5 days, not a directly measured specific growth
+    rate or20% catalytic activity. pdxB complementation is faster at1-2 days. FigureS1 labels YjbQ at4
+    days and vector at7 days, not matched-time growth rates. Failure to rescue separate serC,pdxA,pdxJ,pdxH
+    mutants bounds the effect but is not a matched double-knockout causal chain. Proposed OHPB entry is
+    inferred; YjbQ dehydrogenase activity was not assayed because soluble protein was unavailable. JU283
+    was selected from heterogeneous Keio stocks for its30 C phenotype; transfer to all delta-pdxB isolates
+    is not established.
+  nodes:
+  - node_id: express-yjbq
+    label: Express yjbQ in the delta-pdxB/JU283 host
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AF48
+  - node_id: unsupplemented-colonies
+    label: Colony formation on M9/glucose without the supplement mixture
+    node_type: PHENOTYPE
+  - node_id: supplemented-colonies
+    label: Colony formation with serine and shikimate-pathway supplements
+    node_type: PHENOTYPE
+  - node_id: serine-only-colonies
+    label: Colony formation with serine1 mM alone
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: yjbq-enables-unsupplemented-colonies
+    subject: express-yjbq
+    predicate: enables
+    object: unsupplemented-colonies
+    mechanism: YjbQ expression supports the TableII +++ colony phenotype in a host that does not grow
+      on M9/glucose at37 C without rescue. The intervening reaction sequence and actual YjbQ substrate
+      are unresolved; no direct PLP or OHPB production was measured for this edge.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21119630
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3010111/
+      snippet: enable growth
+      explanation: Results names yjbQ among the three genes with both-medium rescue. HTML TableII yjbQ
+        row gives +++ for delta-pdxB/JU283, and its footnote defines3-5 days to1 mm. Visually inspected
+        FigureS1 shows YjbQ colonies versus vector control at the different labeled times; Methods describes
+        reintroduction controls.
+      cache_path: evidence/PF01894/kim-2010-growth.txt
+      cache_sha256: 4b35609f0d31260f901e82a8524b9d16acc5a0cf84d633e50bbe5d9b4191da66
+  - edge_id: yjbq-enables-supplemented-colonies
+    subject: express-yjbq
+    predicate: enables
+    object: supplemented-colonies
+    mechanism: TableII retains +++ with serine1 mM, phenylalanine/tyrosine/tryptophan0.1 mM each, and
+      p-hydroxybenzoate/p-aminobenzoate/2,3-dihydroxybenzoate1 uM each. This is YjbQ-associated rescue
+      in that context, not an enhancing effect of the supplements; the same ordinal category occurs without
+      them.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21119630
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3010111/
+      snippet: enable growth
+      explanation: HTML TableII yjbQ row, delta-pdxB plus supplements column and footnotes; adjoining
+        Results explicitly says the mixture does not change this complementation. Supplements do not include
+        pyridoxine. The two columns are contexts within one study, not independent replications.
+      cache_path: evidence/PF01894/kim-2010-growth.txt
+      cache_sha256: 4b35609f0d31260f901e82a8524b9d16acc5a0cf84d633e50bbe5d9b4191da66
+  - edge_id: yjbq-enables-serine-only-colonies
+    subject: express-yjbq
+    predicate: enables
+    object: serine-only-colonies
+    mechanism: Supplementary TableIII retains +++ colony growth when pTrcHisB-yjbQ is expressed with serine1
+      mM. This unchanged ordinal outcome is a distinct medium context, not evidence that serine stimulates
+      YjbQ or an independent replication of the unsupplemented result.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21119630
+      source_url: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fmsb.2010.88/MediaObjects/44320_2010_BFMSB201088_MOESM1_ESM.doc
+      snippet: L-Ser (1.0 mM)
+      explanation: Original publisher supplement TableIII, yjbQ row and serine-column header, with +++
+        in both columns. The footnote specifies3-5 days to1 mm at37 C with IPTG0.1 mM and ampicillin100
+        ug/ml. The no-addition column corroborates the existing edge rather than creating a duplicate.
+      cache_path: evidence/PF01894/kim-2010-growth.txt
+      cache_sha256: 4b35609f0d31260f901e82a8524b9d16acc5a0cf84d633e50bbe5d9b4191da66
+- graph_id: yjbq-pdxb-liquid-rescue
+  title: YjbQ expression supports reported liquid-medium rescue
+  scope: Kim2010 Results statement reporting growth of the delta-pdxB host in liquid M9/glucose when yjbQ
+    is overexpressed.
+  context: Same study's E. coli BW25113-derived expression screen and reintroduction framework. Liquid-specific
+    inoculum, inducer dose, incubation details, growth curves and replicate counts were not recovered;
+    plate-method doses and TableII timing are not transferred to this assay. Supplementary Figure4 tests
+    glycolaldehyde/pyridoxine supplementation, not YjbQ expression.
+  family_mapping: Whole K12 YjbQ reference P0AF48 sequenceversion1/NP_418480.1,138 aa, maps PF01894 at6-138.
+    General ASKA/pTrcHisB tags are documented, but experimental insert sequences were not independently
+    reconstructed and the printed forward primers differ. This is not a second protein or isolated-domain
+    assay.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: The qualitative result is explicitly reported in primary text; no YjbQ-specific liquid-growth
+    curve was identified in the inspected supplement text. No quantitative rate, metabolite identity or
+    dehydrogenase reaction is inferred. It shares an experimental source with the colony graph, rather
+    than providing independent replication.
+  nodes:
+  - node_id: express-yjbq-liquid
+    label: Overexpress yjbQ in the liquid-culture delta-pdxB host
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AF48
+  - node_id: liquid-growth
+    label: Growth in liquid M9/glucose
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: yjbq-enables-liquid-growth
+    subject: express-yjbq-liquid
+    predicate: enables
+    object: liquid-growth
+    mechanism: Primary Results distinguishes YjbQ,HisB and Php from the other selected genes by reporting
+      growth rescue in liquid as well as solid medium. The YjbQ molecular route remains unresolved; the
+      experimentally dissected YeaB/LtaE/ThrB pathway is not assigned to it.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21119630
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3010111/
+      snippet: enable growth
+      explanation: Primary Results under overexpression rescue names yjbQ in the three-gene both-medium
+        group. Only this qualitative statement is adopted; the inspected supplement does not supply an
+        identified YjbQ liquid-growth curve or a YjbQ-specific quantitative protocol.
+      cache_path: evidence/PF01894/kim-2010-growth.txt
+      cache_sha256: 4b35609f0d31260f901e82a8524b9d16acc5a0cf84d633e50bbe5d9b4191da66
+curation_events:
+- timestamp: '2026-10-11T20:43:34Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate scoped YjbQ vitamin-auxotrophy rescue graphs with explicit biochemical evidence gaps.
+  history_record: history/records/PF01894/2026-10-11T204334Z-codex-40b020.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T20:53:15Z'
+  curator: Codex
+  action: EDIT
+  outcome: changed
+  summary: Refine YjbQ growth graphs with the recovered original Kim2010 supplement.
+  history_record: history/records/PF01894/2026-10-11T205315Z-codex-11d32a.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T20:57:53Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain a partial scientific self-review of YjbQ growth graphs and unresolved mechanisms.
+  history_record: history/records/PF01894/2026-10-11T205753Z-codex-798404.yaml
+  event_index: 0
+  llm_assisted: true

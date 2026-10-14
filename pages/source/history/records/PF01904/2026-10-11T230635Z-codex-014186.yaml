@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01904
+  path: curation/families/PF01904.yaml
+session:
+  id: 2026-10-11T230635Z-codex-014186
+  timestamp: '2026-10-11T23:06:35Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate YecE joint-genotype phenotypes and a separate Tm1631 computational
+    mechanism
+  details: Added 21 observed indirect growth effects against multiplicative single-mutant
+    expectations and two hypothetical computational cleavage steps. Verified reference
+    sequences/domain mappings, parsed three primary XLS tables and five model coordinate
+    subsets, and visually inspected six main figures and two protocol pages. Supplemental
+    caption resolves model Lys73 as native K72. Preserve clone, raw-data, model and
+    member-coverage gaps; status IN_PROGRESS. Native baseline passed 8296 records
+    with zero drift; focused suite passed 256 tests before this curation.

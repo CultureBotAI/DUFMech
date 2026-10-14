@@ -4,7 +4,7 @@ name: Aspartate dehydrogenase, C-terminal
 short_name: Asp_DH_C
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01958
 counters:
   proteins: 3184
@@ -30,3 +30,345 @@ description: This entry represents the C-terminal domain of aspartate dehydrogen
   including inositol 1-phosphate synthase, dihydrodipicolinate reductase, and ASA-DH [[cite:PUB00014412]].
   It has been proposed that in Thermotoga maritima, TM1643 catalyses the first reaction of de novo biosynthesis
   of NAD from aspartate, and it produces iminoaspartate required for this pathway.
+curation_history: history/records/PF01958
+discussions:
+- discussion_id: pf01958-causal-context-coverage
+  prompt: Extend verified AspDH member contexts and resolve construct, product and source-label uncertainties.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: TM1643 assays support cofactor redox activity, but neither an isolated PF01958 mechanism
+    nor complete family coverage. Other bacterial and archaeal experiments require their own mapping and
+    primary-source assessment.
+  evidence:
+  - reference: PMID:12496312
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Full text/Methods/TableII were inspected; original Figure5 plots were not visually available.
+      Iminoaspartate and cellular NAD synthesis are not directly demonstrated.
+  - reference: PMID:28801651
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Full text and selected original figures expose label/condition conflicts; exact 2017
+      constructs have not been mapped to current Pfam coordinates.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Inspect 2003 original figures/raw data, 2006/2007 archaeal studies, PAO1/JMP1342011, nitrogen-fixer2013
+    and further member experiments. Resolve 2017 Figure1 lane labels, reversed pH and Reu/Bja activity
+    assignments, purified-versus-crude NADH differences and Figure4 sequences. Q0K391 is H16, not JMP134.
+    No family-wide substrate specificity, catalytic His193 proof or NAD-channeling complex is established
+    here. All earlier corpus follow-ups remain open.
+- discussion_id: pf01958-human-aspdh-divergence
+  prompt: Assess the human 2-aminomuconate reductase preprint independently of bacterial aspartate dehydrogenation.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Human ASPDH contains PF01958 but a primary 2026 preprint reports a different substrate and
+    product; conserved domains do not justify transferring the bacterial physiological assignment.
+  evidence:
+  - reference: doi:10.64898/2026.06.05.730449
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: bioRxiv version1 abstract/API metadata were inspected, not full assays, spectra, controls
+      or construct sequence. Published field was NA.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/A6ND91/
+    supports: SUPPORT
+    evidence_source: database
+    explanation: Human reference A6ND91 v2 is 283 aa; PF01958 133-266 and PF03447 13-123.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Obtain accessible full text and supplements; inspect product identification, isotope/stereochemical
+    evidence and exact tested construct before adding a separate human graph. Preprint status remains
+    explicit. Primary article/source requests returned403/429; the related 2026 thesis is embargoed. No
+    access bypass or inferred human AspDH activity.
+causal_graphs:
+- graph_id: thermotoga-tm1643-oxidative-redox-2003
+  title: TM1643 reduces NAD or NADP in separate L-aspartate assays
+  scope: Purified full-length Thermotoga maritima TM1643 with an N-terminal His6 tag, expressed in E.
+    coli BL21(DE3); not an isolated C-terminal domain.
+  context: Yang2003 Enzymatic Studies, Figure5A-C/legend and TableII; 70C, 50mM diethanolamine pH9.8,
+    5mM L-Asp and 1mM NAD+ or NADP+ for the individual-amino-acid assay. Kinetic substrate concentrations
+    are varied separately; A340 increase is the measured redox readout.
+  family_mapping: Q9X1X6 v1 is the 241-aa MSB8 nadX/TM_1643 reference; PF01958 121-234 and PF03447 41-106.
+    Paper structural boundaries 113-241 and 1-105 differ from current Pfam hits. Historical tagged construct
+    sequence was not independently reconstructed.
+  taxon: NCBITaxon:243274
+  scope_status: MECHANISTIC
+  limitations: No activity was reported with D-Asp, L-Glu or Asn in these tests. No direct identification
+    of the immediate iminoaspartate product, isolated-domain sufficiency or cellular flux follows. Figure5
+    text/legend and TableII were read but original plots were not visually inspected. Replicate counts
+    and primary traces remain unreviewed.
+  nodes:
+  - node_id: nad-mix
+    label: Purified TM1643 with L-Asp and NAD+ at pH9.8 and 70C
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9X1X6
+  - node_id: nadh
+    label: NADH accumulation measured by increasing A340
+    node_type: STATE
+  - node_id: nadp-mix
+    label: Purified TM1643 with L-Asp and NADP+ at pH9.8 and 70C
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9X1X6
+  - node_id: nadph
+    label: NADPH accumulation measured by increasing A340
+    node_type: STATE
+  edges:
+  - edge_id: nad-reduction
+    subject: nad-mix
+    predicate: produces
+    object: nadh
+    mechanism: Purified full-protein activity couples L-Asp-dependent oxidation to NAD reduction; the
+      graph claims the cofactor readout, not direct detection of the unstable amino-acid-derived product.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12496312
+      source_url: https://doi.org/10.1074/jbc.M211892200
+      snippet: robust dehydrogenase activity
+      explanation: Enzymatic Studies, Characterization Results, Figure5B/C legend and TableII distinguish
+        the NAD assay and its substrate-dependent kinetics.
+      cache_path: evidence/PF01958/yang-2003-tm1643-assays.txt
+      cache_sha256: c7e0f39a854454c83b9db5359852dfa2679df8d08cc53e78357469f9a6da1ee0
+  - edge_id: nadp-reduction
+    subject: nadp-mix
+    predicate: produces
+    object: nadph
+    mechanism: A separate NADP-containing reaction supports L-Asp-dependent NADPH production; this does
+      not establish the preferred physiological cofactor or an independent domain reaction.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12496312
+      source_url: https://doi.org/10.1074/jbc.M211892200
+      snippet: robust dehydrogenase activity
+      explanation: Enzymatic Studies, Characterization Results, Figure5A/C legend and TableII distinguish
+        NADP-dependent reduction from the NAD condition.
+      cache_path: evidence/PF01958/yang-2003-tm1643-assays.txt
+      cache_sha256: c7e0f39a854454c83b9db5359852dfa2679df8d08cc53e78357469f9a6da1ee0
+- graph_id: thermotoga-tm1643-reverse-redox-2003
+  title: TM1643 reverse-assay mixtures consume NADH or NADPH
+  scope: The same purified full-length N-terminal His6 TM1643 preparation, in separate reductive-direction
+    assays.
+  context: Yang2003 reverse assay at70C; 1ml with 50mM Tris-HCl pH8.0, 100mM ammonium sulfate, 0.1mM EDTA,
+    5mM oxaloacetate and 0.15mM NADH or NADPH; decreasing A340 is monitored. These conditions are distinct
+    from the oxidative pH9.8 assays.
+  family_mapping: Q9X1X6 v1; PF01958 121-234 within the intact 241-aa TM1643 reference, alongside PF03447
+    41-106. No isolated PF01958 reaction or historical tag-sequence reconstruction.
+  taxon: NCBITaxon:243274
+  scope_status: MECHANISTIC
+  limitations: The text reports both donors effective but does not supply a reverse-reaction figure, full
+    kinetic comparison or product-specific L-Asp quantification. No equality of all donor kinetic parameters,
+    individual-reagent sufficiency or physiological reductive flux is claimed.
+  nodes:
+  - node_id: nadh-mix
+    label: TM1643 with oxaloacetate and ammonium sulfate in the NADH assay
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9X1X6
+  - node_id: nadh
+    label: NADH pool measured by A340
+    node_type: STATE
+  - node_id: nadph-mix
+    label: TM1643 with oxaloacetate and ammonium sulfate in the NADPH assay
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9X1X6
+  - node_id: nadph
+    label: NADPH pool measured by A340
+    node_type: STATE
+  edges:
+  - edge_id: nadh-consumption
+    subject: nadh-mix
+    predicate: decreases
+    object: nadh
+    mechanism: The complete purified-enzyme reaction consumes reduced cofactor in the reported reductive-amination
+      assay; its amino-acid product is not separately measured in this graph.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12496312
+      source_url: https://doi.org/10.1074/jbc.M211892200
+      snippet: NADPH and NADH were equally effective as electron donors.
+      explanation: Enzymatic Studies defines the joint reaction mixture and A340 decrease; Characterization
+        Results reports the reverse reaction with NADH.
+      cache_path: evidence/PF01958/yang-2003-tm1643-assays.txt
+      cache_sha256: c7e0f39a854454c83b9db5359852dfa2679df8d08cc53e78357469f9a6da1ee0
+  - edge_id: nadph-consumption
+    subject: nadph-mix
+    predicate: decreases
+    object: nadph
+    mechanism: The separate complete NADPH-containing reaction consumes reduced cofactor; no direct L-Asp
+      yield or cellular reverse-pathway claim is added.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12496312
+      source_url: https://doi.org/10.1074/jbc.M211892200
+      snippet: NADPH and NADH were equally effective as electron donors.
+      explanation: The same Methods and Results explicitly test NADPH as an alternative donor, not simultaneous
+        NADH-plus-NADPH dependence.
+      cache_path: evidence/PF01958/yang-2003-tm1643-assays.txt
+      cache_sha256: c7e0f39a854454c83b9db5359852dfa2679df8d08cc53e78357469f9a6da1ee0
+- graph_id: thermotoga-tm1643-oxidative-inhibition-2003
+  title: L-malate and ammonium reduce TM1643 oxidative activity
+  scope: Purified full-length TM1643 oxidative L-aspartate dehydrogenase assays; inhibitors tested separately.
+  context: Yang2003 Characterization Results reports competitive inhibition by L-malate and ammonium with
+    Ki4.02+/-0.48mM and32.5+/-4.9mM respectively. General oxidative assay conditions are70C/pH9.8; inhibitor-specific
+    donor assignment and complete assay matrices are not supplied in the inspected passage.
+  family_mapping: Intact Q9X1X6/TM1643 reference contains PF01958 121-234 and PF03447 41-106; inhibitor
+    effects are not assigned to an isolated domain or residue.
+  taxon: NCBITaxon:243274
+  scope_status: MECHANISTIC
+  limitations: Purified-enzyme rate effects support biochemical inhibition, but no binding-site occupancy,
+    inhibitor plot, counterion control or cellular effect was inspected. Competitive classification is
+    the authors' reported kinetic interpretation. Ammonium has a different role in the reverse assay;
+    these graphs do not form a feedback cycle.
+  nodes:
+  - node_id: malate
+    label: L-malate added to the purified TM1643 oxidative assay
+    node_type: PERTURBATION
+  - node_id: ammonium
+    label: Ammonium added to the purified TM1643 oxidative assay
+    node_type: PERTURBATION
+  - node_id: rate
+    label: TM1643 L-Asp-dependent oxidative dehydrogenase rate
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9X1X6
+  edges:
+  - edge_id: malate-inhibition
+    subject: malate
+    predicate: decreases
+    object: rate
+    mechanism: L-malate reduces the purified enzyme's measured oxidative activity; direct biochemical
+      inhibition does not establish a particular binding geometry.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12496312
+      source_url: https://doi.org/10.1074/jbc.M211892200
+      snippet: were competitive inhibitors
+      explanation: Characterization Results distinguishes L-malate inhibition from the tested D-malate
+        and other noninhibiting compounds; underlying curves were not inspected.
+      cache_path: evidence/PF01958/yang-2003-tm1643-assays.txt
+      cache_sha256: c7e0f39a854454c83b9db5359852dfa2679df8d08cc53e78357469f9a6da1ee0
+  - edge_id: ammonium-inhibition
+    subject: ammonium
+    predicate: decreases
+    object: rate
+    mechanism: Ammonium reduces oxidative activity under the reported inhibition test; it is not a claim
+      that ammonium blocks all TM1643 reaction conditions.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:12496312
+      source_url: https://doi.org/10.1074/jbc.M211892200
+      snippet: were competitive inhibitors
+      explanation: The same Results passage reports ammonium inhibition and its Ki separately from the
+        reverse reaction containing ammonium sulfate.
+      cache_path: evidence/PF01958/yang-2003-tm1643-assays.txt
+      cache_sha256: c7e0f39a854454c83b9db5359852dfa2679df8d08cc53e78357469f9a6da1ee0
+- graph_id: thermotoga-tm1643-iminoaspartate-interpretation-2003
+  title: Inferred immediate product of TM1643 aspartate oxidation
+  scope: Interpretation of the purified full-length TM1643 oxidative assay, not direct product identification.
+  context: Yang2003 Figure2/legend and Characterization Results. NAD(P)H formation is measured; ammonium
+    and pyruvate are reported from coupled assays with data not shown. Oxaloacetate was not detected atpH9.8/70C.
+  family_mapping: Q9X1X6/TM1643 contains PF01958 121-234 and PF03447 41-106; the inference concerns the
+    intact enzyme only.
+  taxon: NCBITaxon:243274
+  scope_status: HYPOTHETICAL
+  limitations: Iminoaspartate is inferred from redox chemistry and downstream product evidence, not directly
+    measured. Hydrolysis and decarboxylation are not asserted as TM1643-catalyzed steps. No residue-level
+    acid/base sequence or domain sufficiency is demonstrated.
+  nodes:
+  - node_id: oxidation
+    label: TM1643 L-Asp oxidation coupled to NAD(P)+ reduction
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9X1X6
+  - node_id: imine
+    label: Proposed transient iminoaspartate product
+    node_type: STATE
+  edges:
+  - edge_id: inferred-imine
+    subject: oxidation
+    predicate: produces
+    object: imine
+    mechanism: The authors interpret the redox and downstream coupled-assay observations as transient
+      iminoaspartate formation before aqueous decomposition; direct chemical identification remains missing.
+    directness: UNRESOLVED
+    support: INFERRED
+    evidence_kind: CONTEXTUAL
+    evidence:
+    - reference: PMID:12496312
+      source_url: https://doi.org/10.1074/jbc.M211892200
+      snippet: expected to produce iminoaspartate
+      explanation: The Results wording qualifies the immediate product; the abstract alone would overstate
+        the directness of product identification.
+      cache_path: evidence/PF01958/yang-2003-tm1643-assays.txt
+      cache_sha256: c7e0f39a854454c83b9db5359852dfa2679df8d08cc53e78357469f9a6da1ee0
+- graph_id: thermotoga-tm1643-nad-biosynthesis-proposal-2003
+  title: Proposed contribution of TM1643 to cellular NAD biosynthesis
+  scope: A physiological hypothesis for Thermotoga maritima TM1643, separate from purified-enzyme observations
+    and other family members.
+  context: Yang2003 Possible Role discussion combines the enzyme results with predicted nadA/nadC genomic
+    context and the authors' reported absence of an identified NadB homolog. No current exhaustive genome-absence
+    search was performed here.
+  family_mapping: The mapped reference Q9X1X6 contains PF01958 121-234, but physiological assignment belongs
+    to the intact protein and organism. Human ASPDH must be evaluated separately.
+  taxon: NCBITaxon:243274
+  scope_status: HYPOTHETICAL
+  limitations: No in vivo knockout/rescue, flux experiment, NadA-coupled product assay or physical channeling-complex
+    demonstration was inspected. The proposed contribution does not establish essentiality, isolated-domain
+    sufficiency or conservation throughout PF01958.
+  nodes:
+  - node_id: supply
+    label: Proposed TM1643-dependent iminoaspartate supply in the cell
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9X1X6
+  - node_id: pathway
+    label: Downstream NAD biosynthesis through the proposed NadA/NadC pathway
+    node_type: PROCESS
+  edges:
+  - edge_id: proposed-nad-contribution
+    subject: supply
+    predicate: enables
+    object: pathway
+    mechanism: The authors propose that the enzyme provides the unstable substrate for downstream NAD
+      synthesis; this cellular contribution remains a contextual hypothesis, not an observed pathway chain.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: CONTEXTUAL
+    evidence:
+    - reference: PMID:12496312
+      source_url: https://doi.org/10.1074/jbc.M211892200
+      snippet: We propose therefore
+      explanation: Possible Role discussion explicitly proposes the physiological assignment and possible
+        channeling; neither is converted into an observed cellular effect.
+      cache_path: evidence/PF01958/yang-2003-tm1643-assays.txt
+      cache_sha256: c7e0f39a854454c83b9db5359852dfa2679df8d08cc53e78357469f9a6da1ee0
+curation_events:
+- timestamp: '2026-10-12T14:30:32Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate scoped TM1643 redox graphs and distinguish product and physiological interpretations
+  history_record: history/records/PF01958/2026-10-12T143032Z-codex-f1e6ef.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T14:34:42Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of TM1643 redox and interpreted mechanisms
+  history_record: history/records/PF01958/2026-10-12T143442Z-codex-bc19bc.yaml
+  event_index: 0
+  llm_assisted: true

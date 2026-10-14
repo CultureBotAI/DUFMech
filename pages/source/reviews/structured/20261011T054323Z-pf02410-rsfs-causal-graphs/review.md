@@ -1,0 +1,428 @@
+# PF02410 RsfS assembly and media-shift causal graph review
+
+- Review: 20261011T054323Z-pf02410-rsfs-causal-graphs
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T05:43:12Z
+- Finished UTC: 2026-10-11T05:43:23Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Purified RsfS suppresses two measured translation-system endpoints, while a separate whole-gene deletion produces a complementation-supported growth-adaptation defect.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Historical DUF143 family selected for primary subunit-association and gene-perturbation evidence.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF02410 | data/families/PF02410.yaml | generated | PF02410 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF02410 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF02410.
+
+The primary paper explicitly identifies b0637, mapping to P0AAT6, sequence version 1, 105 residues, and PF02410 at 9-104. Purified N-terminal His6 RsfS and the cellular deletion/complementation system are distinct experimental scopes. The current protein-level InterPro cross-reference does not justify changing the frozen family integration field.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF02410.
+
+Two direct biochemical effects share one preassociation perturbation but remain separate measured endpoints; no unmeasured intervening atomic-contact edge is added. The preassembled-ribosome condition is retained as a qualification, not described as mathematically zero inhibition. A second graph records an indirect cellular adaptation phenotype with the successful and unsuccessful complementation contexts distinguished. No direct causal chain is joined across the purified and cellular systems.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF02410.
+
+Human mitochondrial, chloroplast, stationary-phase reporter and competition experiments, RsfS binding-site perturbations, and the later pre-50S biogenesis study require separately scoped review. The current record is not an exhaustive family assessment or an independent expert review.
+
+## Findings
+
+### additional-contexts: Extend RsfS coverage to additional cellular, organelle and biogenesis contexts
+
+minor / open / confirmed; issue key: pf02410-causal-context-coverage.
+
+Inspect relevant primary methods and exact constructs before adopting the remaining RsfS contexts, especially PMID:33639093. Preserve differences between assembly, silencing, reporter expression, organismal growth and physical binding.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Inspect relevant primary methods and exact constructs before adopting the remaining RsfS contexts, especially PMID:33639093. Preserve differences between assembly, silencing, reporter expression, organismal growth and physical binding.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| experiment | https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002815; Results, purification and poly(U)/gradient methods, media-shift and complementation methods; Figures 3B-D and 4A-B visually inspected | supports | Addition of tagged b0637 RsfS before subunit association reduces both 70S fraction and oligo(Phe) output. The separate BW25113 deletion phenotype is rescued by induced tac expression, not by the tested native-promoter construct. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0AAT6/entry/pfam/PF02410/; Accession and domain locations; paired UniProt identity facts | supports | The primary paper explicitly identifies b0637, mapping to P0AAT6, sequence version 1, 105 residues, and PF02410 at 9-104. Purified N-terminal His6 RsfS and the cellular deletion/complementation system are distinct experimental scopes. The current protein-level InterPro cross-reference does not justify changing the frozen family integration field. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf02410 | data/families/PF02410.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Figures 3 and 4 were visually inspected. Other figures and supplements were not visually reviewed, raw data were not reanalyzed, and PMID:33639093 was inspected only as abstract/database context.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T054323Z-pf02410-rsfs-causal-graphs
+title: PF02410 RsfS assembly and media-shift causal graph review
+started_at: '2026-10-11T05:43:12Z'
+finished_at: '2026-10-11T05:43:23Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Purified RsfS suppresses two measured translation-system endpoints, while
+  a separate whole-gene deletion produces a complementation-supported growth-adaptation
+  defect.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF02410.yaml
+    sha256: cc4b3e0ebc269cb760d5b6d3cf289d03a0491d0c4ed27b51810c2ac9d3548ef3
+    role: context
+  - path: data/families/PF02410.yaml
+    sha256: 011535fb212d78f3c36c8c59afc93dcb45766e01563e79e37ccf4152b0d27764
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF02410/hauser-2012-rsfs.txt
+    role: context
+    sha256: 227e2b3da32ac247a2cb804db6768c91b29af5b2e1fb8aad1ad31d91c38e6833
+  - path: evidence/PF02410/P0AAT6-identity.txt
+    role: context
+    sha256: 9e6b9e5426c92b4ac5edc074c2bf03e2c63711e16b60cb34ee0d73e4f1849239
+targets:
+- target_id: PF02410
+  path: data/families/PF02410.yaml
+  label: PF02410
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF02410.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 5327b540bc6bd9cac56a2bf9e6c53049be33e0fafc22f6c80cf432e57c9bb75f
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Historical DUF143 family selected for primary subunit-association and
+    gene-perturbation evidence.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF02410
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Human mitochondrial, chloroplast, stationary-phase reporter and competition
+      experiments, RsfS binding-site perturbations, and the later pre-50S biogenesis
+      study require separately scoped review. The current record is not an exhaustive
+      family assessment or an independent expert review.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF02410
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: experiment
+  kind: primary_source
+  reference: https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002815
+  locator: Results, purification and poly(U)/gradient methods, media-shift and complementation
+    methods; Figures 3B-D and 4A-B visually inspected
+  accessed_at: '2026-10-11T05:43:23Z'
+  support: supports
+  snapshot_sha256: 227e2b3da32ac247a2cb804db6768c91b29af5b2e1fb8aad1ad31d91c38e6833
+  summary: Addition of tagged b0637 RsfS before subunit association reduces both 70S
+    fraction and oligo(Phe) output. The separate BW25113 deletion phenotype is rescued
+    by induced tac expression, not by the tested native-promoter construct.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0AAT6/entry/pfam/PF02410/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T05:43:23Z'
+  support: supports
+  snapshot_sha256: 9e6b9e5426c92b4ac5edc074c2bf03e2c63711e16b60cb34ee0d73e4f1849239
+  summary: The primary paper explicitly identifies b0637, mapping to P0AAT6, sequence
+    version 1, 105 residues, and PF02410 at 9-104. Purified N-terminal His6 RsfS and
+    the cellular deletion/complementation system are distinct experimental scopes.
+    The current protein-level InterPro cross-reference does not justify changing the
+    frozen family integration field.
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T05:43:23Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf02410
+  kind: record_content
+  reference: data/families/PF02410.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T05:43:23Z'
+  support: context_only
+  snapshot_sha256: 011535fb212d78f3c36c8c59afc93dcb45766e01563e79e37ccf4152b0d27764
+  quote: "id: Pfam:PF02410\npfam_id: PF02410\nname: Ribosomal silencing factor during\
+    \ starvation\nshort_name: RsfS\nseed_status: EX_DUF\ncharacterization_status:\
+    \ UNSCORED\ncuration_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02410\n\
+    counters:\n  proteins: 21229\n  matches: 21269\n  proteomes: 20133\n  taxa: 31990\n\
+    \  structures: 56\n  alphafold_models: 14690\n  domain_architectures: 103\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    description: This family is expressed by almost all bacterial and eukaryotic genomes\
+    \ but not by archaea.\n  Its function is to down-regulate protein synthesis under\
+    \ conditions of nutrient shortage, and it does\n  this by binding to protein L14\
+    \ of the large ribosomal subunit, thus acting as a ribosomal silencing\n  factor\
+    \ (RsfS) by blocking the joining of the ribosomal subunits [[cite:PUB00064845]].\
+    \ This family is\n  structurally homologous to nucleotidyltransferases.\ncuration_history:\
+    \ history/records/PF02410\ncausal_graphs:\n- graph_id: ecoli-rsfs-preassociation\n\
+    \  title: E. coli RsfS suppresses ribosome association and oligo(Phe) synthesis\n\
+    \  scope: Purified N-terminal His6-tagged E. coli b0637 RsfS, called RsfA in the\
+    \ paper, expressed in BL21(DE3);\n    E. coli ribosomal subunits and purified\
+    \ translation factors.\n  context: Preincubate 18 pmol 50S with 180 ug poly(U)\
+    \ and with or without 360 pmol RsfS in 90 uL for\n    10 min at 37 C, then 10\
+    \ pmol 30S for 10 min. Buffer contains 20 mM HEPES pH 7.6 at 0 C, 4.5 mM Mg\n\
+    \    acetate, 150 mM K acetate, 4 mM beta-mercaptoethanol, 2 mM spermidine and\
+    \ 0.05 mM spermine. Sister\n    aliquots undergo sucrose gradients or precharged\
+    \ Phe-tRNA/factor-dependent synthesis for 2 min at\n    30 C.\n  family_mapping:\
+    \ b0637 maps to UniProtKB:P0AAT6, sequence version 1, 105 residues; PF02410 spans\
+    \ 9-104.\n    The experiment uses the tagged protein, not an isolated domain interval.\n\
+    \  scope_status: MECHANISTIC\n  taxon: NCBITaxon:83333\n  limitations: The two\
+    \ endpoints are measured separately in sister aliquots, not independent replication.\n\
+    \    Preassembled programmed 70S does not show the same strong suppression; no\
+    \ literally zero effect is\n    claimed. Steric contacts from docking and binding\
+    \ assays are not separate observed causal steps. Human\n    mitochondrial and\
+    \ later pre-50S biogenesis contexts remain separate.\n  nodes:\n  - node_id: rsfs-preincubation\n\
+    \    label: RsfS addition before 30S-50S association\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:P0AAT6\n  - node_id: associated-70s\n    label:\
+    \ Associated 70S ribosome fraction\n    node_type: STATE\n  - node_id: oligo-phe-output\n\
+    \    label: Poly(U)-dependent oligo(Phe) synthesis\n    node_type: PROCESS\n \
+    \ edges:\n  - edge_id: rsfs-decreases-70s-association\n    subject: rsfs-preincubation\n\
+    \    predicate: decreases\n    object: associated-70s\n    mechanism: Adding purified\
+    \ RsfS before subunit association reduces the 70S fraction in the A260 sucrose-gradient\n\
+    \      profile relative to the matched no-RsfS reaction.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:22829778\n      source_url: https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002815\n\
+    \      snippet: significantly reduces the fraction of 70S ribosomes\n      explanation:\
+    \ Figure 4B, its caption and the poly(U)/gradient methods establish a purified-system\n\
+    \        perturbation and measured assembly endpoint; Figure 4 was visually inspected.\n\
+    \      cache_path: evidence/PF02410/hauser-2012-rsfs.txt\n      cache_sha256:\
+    \ 227e2b3da32ac247a2cb804db6768c91b29af5b2e1fb8aad1ad31d91c38e6833\n    - reference:\
+    \ https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0AAT6/entry/pfam/PF02410/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0AAT6/entry/pfam/PF02410/\n\
+    \      snippet: 'entry accession: PF02410'\n      explanation: Current member/domain\
+    \ coordinates with paired UniProt locus and sequence-version facts;\n        identity\
+    \ only, not independent causal evidence.\n      cache_path: evidence/PF02410/P0AAT6-identity.txt\n\
+    \      cache_sha256: 9e6b9e5426c92b4ac5edc074c2bf03e2c63711e16b60cb34ee0d73e4f1849239\n\
+    \  - edge_id: rsfs-decreases-oligo-phe\n    subject: rsfs-preincubation\n    predicate:\
+    \ decreases\n    object: oligo-phe-output\n    mechanism: In the defined subunit-association\
+    \ reaction, RsfS reduces incorporation of radiolabeled\n      phenylalanine into\
+    \ oligo(Phe) to approximately one fifth of the no-RsfS control.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:22829778\n      source_url: https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002815\n\
+    \      snippet: down to about 20%\n      explanation: Figure 4A left and synthesis\
+    \ methods; this endpoint is directly measured rather than\n        inferred from\
+    \ the gradient. EF-Tu, EF-Ts, EF-G, GTP and precharged Phe-tRNA are required assay\n\
+    \        components.\n      cache_path: evidence/PF02410/hauser-2012-rsfs.txt\n\
+    \      cache_sha256: 227e2b3da32ac247a2cb804db6768c91b29af5b2e1fb8aad1ad31d91c38e6833\n\
+    - graph_id: ecoli-rsfs-deletion-media-shift\n  title: RsfS deletion prolongs growth\
+    \ adaptation after an LB-to-M9 shift\n  scope: Whole-gene b0637 deletion in E.\
+    \ coli BW25113 derivatives versus matched wild type; separate cellular\n    phenotype\
+    \ from the purified-subunit experiment.\n  context: Overnight LB cultures diluted\
+    \ to OD600 0.005 in M9, 37 C and 200 rpm; OD600 monitored up to\n    40 h. Complementation\
+    \ uses cassette-excised mutants and tac-driven C-terminal His-tagged RsfS induced\n\
+    \    with 0.2 mM IPTG about 3 h after transfer.\n  family_mapping: The paper identifies\
+    \ the deleted locus as b0637, corresponding to P0AAT6 and PF02410\n    at reference\
+    \ residues 9-104. This is not a domain-specific perturbation or independent resequencing\n\
+    \    of BW25113.\n  scope_status: PHENOTYPIC\n  limitations: The phenotype is\
+    \ a prolonged growth plateau after initial growth, not immediate death or\n  \
+    \  a measured energy deficit. Native-promoter complementation failed under the\
+    \ tested conditions, while\n    induced tac expression rescued; the two are not\
+    \ conflated. No direct metabolic chain from the in-vitro\n    assembly effect\
+    \ is asserted.\n  nodes:\n  - node_id: rsfs-deletion\n    label: Whole-gene rsfS\
+    \ deletion\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:P0AAT6\n\
+    \  - node_id: post-shift-delay\n    label: Prolonged post-shift growth plateau\
+    \ and adaptation delay\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: deletion-increases-adaptation-delay\n\
+    \    subject: rsfs-deletion\n    predicate: increases\n    object: post-shift-delay\n\
+    \    mechanism: The deletion strain shows an extended OD600 plateau after transfer\
+    \ to M9; induced RsfS\n      complementation reduces the defect, supporting a\
+    \ gene-dependent, condition-specific phenotype.\n    directness: INDIRECT\n  \
+    \  support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:22829778\n      source_url: https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002815\n\
+    \      snippet: The forced RsfA expression could heal the mutant phenotype\n \
+    \     explanation: Figure 3B-D and media-shift/cassette-removal methods; the deletion\
+    \ comparison and distinct\n        unsuccessful native-promoter and successful\
+    \ tac complementation were inspected visually and in\n        text.\n      cache_path:\
+    \ evidence/PF02410/hauser-2012-rsfs.txt\n      cache_sha256: 227e2b3da32ac247a2cb804db6768c91b29af5b2e1fb8aad1ad31d91c38e6833\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0AAT6/entry/pfam/PF02410/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0AAT6/entry/pfam/PF02410/\n\
+    \      snippet: 'orderedLocusNames: b0637, JW5090'\n      explanation: Locus-to-family\
+    \ reference mapping, not proof of the cellular causal route.\n      cache_path:\
+    \ evidence/PF02410/P0AAT6-identity.txt\n      cache_sha256: 9e6b9e5426c92b4ac5edc074c2bf03e2c63711e16b60cb34ee0d73e4f1849239\n\
+    curation_events:\n- timestamp: '2026-10-11T05:40:34Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate RsfS subunit-association, synthesis\
+    \ and media-shift effects\n  history_record: history/records/PF02410/2026-10-11T054034Z-codex-d18469.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: The primary paper explicitly identifies b0637, mapping to P0AAT6, sequence
+    version 1, 105 residues, and PF02410 at 9-104. Purified N-terminal His6 RsfS and
+    the cellular deletion/complementation system are distinct experimental scopes.
+    The current protein-level InterPro cross-reference does not justify changing the
+    frozen family integration field.
+  target_ids:
+  - PF02410
+  evidence_ids:
+  - identity
+  - experiment
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Two direct biochemical effects share one preassociation perturbation but
+    remain separate measured endpoints; no unmeasured intervening atomic-contact edge
+    is added. The preassembled-ribosome condition is retained as a qualification,
+    not described as mathematically zero inhibition. A second graph records an indirect
+    cellular adaptation phenotype with the successful and unsuccessful complementation
+    contexts distinguished. No direct causal chain is joined across the purified and
+    cellular systems.
+  target_ids:
+  - PF02410
+  evidence_ids:
+  - experiment
+  - native
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Human mitochondrial, chloroplast, stationary-phase reporter and competition
+    experiments, RsfS binding-site perturbations, and the later pre-50S biogenesis
+    study require separately scoped review. The current record is not an exhaustive
+    family assessment or an independent expert review.
+  target_ids:
+  - PF02410
+  evidence_ids:
+  - experiment
+findings:
+- finding_id: additional-contexts
+  issue_key: pf02410-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Extend RsfS coverage to additional cellular, organelle and biogenesis contexts
+  description: Inspect relevant primary methods and exact constructs before adopting
+    the remaining RsfS contexts, especially PMID:33639093. Preserve differences between
+    assembly, silencing, reporter expression, organismal growth and physical binding.
+  target_ids:
+  - PF02410
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - experiment
+  - identity
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF02410.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Inspect relevant primary methods and exact constructs before adopting
+    the remaining RsfS contexts, especially PMID:33639093. Preserve differences between
+    assembly, silencing, reporter expression, organismal growth and physical binding.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF02410
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Figures 3 and 4 were visually inspected. Other figures and supplements were not
+  visually reviewed, raw data were not reanalyzed, and PMID:33639093 was inspected
+  only as abstract/database context.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

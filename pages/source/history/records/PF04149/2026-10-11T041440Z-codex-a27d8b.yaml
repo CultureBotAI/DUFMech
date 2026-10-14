@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF04149
+  path: curation/families/PF04149.yaml
+session:
+  id: 2026-10-11T041440Z-codex-a27d8b
+  timestamp: '2026-10-11T04:14:40Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: GENERAL
+  outcome: changed
+  summary: Correct the preceding edit session timestamp interpretation
+  details: The 2026-10-11T041100Z-codex-14184f event used a rounded continuation-time
+    estimate, not a clock-confirmed session start. Its substantive edit description
+    remains valid. The overall task session began at the previously recorded 2026-10-11T04:00:01Z;
+    the clock was explicitly read at 2026-10-11T04:14:40Z immediately before this
+    curation edit. This append-only correction preserves the original event and does
+    not claim a second scientific change.
+  sections:
+  - curation_history

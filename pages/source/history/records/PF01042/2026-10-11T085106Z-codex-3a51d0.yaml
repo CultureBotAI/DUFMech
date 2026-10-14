@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01042
+  path: data/families/PF01042.yaml
+session:
+  id: 2026-10-11T085106Z-codex-3a51d0
+  timestamp: '2026-10-11T08:51:06Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of RidA assay graphs
+  details: Saved structured scientific self-review of the exact current digest ef9e3345c2921560496d55c21e56bf2a85969b339304de754475e8a778884287.
+    Nine observed assay effects in five contexts are supported with member mapping,
+    retained evidence and native validation; addition order, endpoint temperature,
+    complete clones and remaining family contexts need follow-up. Same-agent partial
+    assessment, not independent expert endorsement or full-family PASS. Keep IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T085102Z-pf01042-rida-coupled-biochemical-assays/review.yaml

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01955
+  path: data/families/PF01955.yaml
+session:
+  id: 2026-10-12T115630Z-codex-5160e5
+  timestamp: '2026-10-12T11:56:30Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped CbiS conversion and rescue scientific review
+  details: Same-agent partial scientific assessment of all25 retained edges, including17newCbiS
+    effects. Current projection and source hashes validate. Preserve exact member/domain
+    mapping, conditional and joint interventions, C-terminal phosphatase counterevidence,
+    protocol/primer/genotype conflicts and prior8edges. NEEDS_FOLLOWUP; nativeCbiS,
+    historical constructs, bacterial remodeling and further member coverage remain
+    open. This review is not independent endorsement or full-family completion.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T115538Z-pf01955-cbis-domain-scoped-conversion-and-rescue/review.yaml

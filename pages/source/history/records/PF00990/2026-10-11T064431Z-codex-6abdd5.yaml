@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF00990
+  path: data/families/PF00990.yaml
+session:
+  id: 2026-10-11T064431Z-codex-6abdd5
+  timestamp: '2026-10-11T06:44:31Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped scientific self-review of PleD causal feedback
+  details: Saved native review 20261011T064424Z-pf00990-pled-causal-feedback for semantic
+    digest 4754fc24037e924fde7ae61015f4e9f49119958bea445c8a4de31be8a2a772b4. Three
+    biochemical edges and an explicitly scoped negative-feedback cycle are supported.
+    Cloning-template, DivJ-fragment, inaccessible later-fit and family-coverage findings
+    remain open. Same-agent partial review is not independent endorsement; IN_PROGRESS
+    retained. Overlay validation, negative cycle guard, 203 focused tests and schema
+    drift checks passed. Regeneration will project this real event.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T064424Z-pf00990-pled-causal-feedback/review.yaml

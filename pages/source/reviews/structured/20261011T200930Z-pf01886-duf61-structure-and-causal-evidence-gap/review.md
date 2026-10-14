@@ -1,0 +1,457 @@
+# PF01886 DUF61 structural evidence and unresolved causal function
+
+- Review: 20261011T200930Z-pf01886-duf61-structure-and-causal-evidence-gap
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T20:07:15Z
+- Finished UTC: 2026-10-11T20:09:30Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Retain a graphless partial assessment, with two open discussions and IN_PROGRESS status. Exact SSO0941 identity and the tagged structural construct are established. The inspected structural abstract/deposition and computational benchmark do not support a directed biological edge; incomplete full-text access and broader member coverage remain explicit.
+
+## Scope And Provenance
+
+Scientific assessment of whether inspected DUF61 evidence supports any directed biological edge, with exact SSO0941 identity and explicit access and family-coverage limits.
+
+Selection: Zhou2018 abstract and 5VFK entry/entity/assembly metadata; current InterPro and UniProt records; AAK41217.1 and WP_009992374.1 sequence comparison; Wang2024 selected energy/force Results, simulation Methods, data availability, Figure2 caption and original Figure2. Current 196-entry UniProt search and bounded alias/member literature searches are context, not exhaustive function coverage.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01886 | data/families/PF01886.yaml | generated | PF01886 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01886 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01886.
+
+Q97ZH2/SSO0941 sequenceversion1 equals AAK41217.1 and WP_009992374.1 over138 residues. Saccharolobus solfataricus P2 is taxon273057, historically Sulfolobus. PF01886 maps4-123 inclusive; 5VFK entity1 equals the complete reference plus LEHHHHHH. The isolated Pfam interval is not the whole construct. UPF0216 is supported as a family alias through O29789/PF01886/IPR002746, not through numeric resemblance alone.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01886.
+
+Zero graphs and zero edges are appropriate for the inspected evidence. Two open discussions retain the missing member-specific functional prerequisite and exact protein/domain/construct scope. Operon proximity, fold similarity, monomer assignment and AI2BMD energy/force benchmark performance are not promoted to causal RNA-processing arrows. No unsupported dummy graph or functional assertion was added.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01886.
+
+All196 frozen members remain in scope. The2018 full paper, original figures/supplements and accessible NMR data remain incompletely inspected; BMRB30279 access failure does not establish withdrawal. The current196-entry UniProt query has no FUNCTION comments, but missing annotations do not establish absent functional literature. Member-specific primary perturbation/substrate studies and unadopted proteomic leads need follow-up.
+
+## Findings
+
+### additional-contexts: Obtain exact-member functional evidence before adding a DUF61 causal graph
+
+minor / open / confirmed; issue key: pf01886-causal-context-coverage.
+
+Obtain the2018 full paper and supplements, inspect candidate member-specific studies and resolve any relevant experimental construct or domain mapping. Add an edge only when a biological perturbation or biochemical test supports its direction under stated conditions; retain association-only findings, alternative explanations and access limits. The computational benchmark cannot substitute for an RNA-processing or cellular assay.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Obtain the2018 full paper and supplements, inspect candidate member-specific studies and resolve any relevant experimental construct or domain mapping. Add an edge only when a biological perturbation or biochemical test supports its direction under stated conditions; retain association-only findings, alternative explanations and access limits. The computational benchmark cannot substitute for an RNA-processing or cellular assay.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pubmed.ncbi.nlm.nih.gov/29526782/; Abstract; PDB5VFK entry/entity/assembly metadata; full paper and supplements not inspected | supports | Structural observations and operon/fold associations do not establish a directed RNA-binding, processing or cellular effect. The structure has one protein entity and no RNA/DNA entity; this is not an all-ligand negative test. Submitted conformers are not independent biological replicates. Full-text access remains incomplete, not evidence that the paper lacks additional assays. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01886/protein/uniprot/Q97ZH2/; Accession and domain locations; paired UniProt identity facts | supports | Q97ZH2/SSO0941 sequenceversion1 equals AAK41217.1 and WP_009992374.1 over138 residues. Saccharolobus solfataricus P2 is taxon273057, historically Sulfolobus. PF01886 maps4-123 inclusive; 5VFK entity1 equals the complete reference plus LEHHHHHH. The isolated Pfam interval is not the whole construct. UPF0216 is supported as a family alias through O29789/PF01886/IPR002746, not through numeric resemblance alone. |
+| computational-benchmark | https://pmc.ncbi.nlm.nih.gov/articles/PMC11602711/; Selected energy/force Results, simulation Methods, data availability and original Figure2 | supports | SSO0941/5VFK participates in a computational energy/force benchmark. Fragmented-DFT comparison and200 computational samples are not biological mechanism measurements or experimental replicates; multi-protein error averages are not SSO0941-specific values. |
+| search-and-access | evidence/PF01886/duf61-gap-ledger.txt; Bounded search coverage, excluded associations, access limits and next discriminating evidence | supports | No earlier scoped curation was found in the searched owners, including ignored files. Publisher403, metadata-only Elsevier/CAS pages and unresolved BMRB access limit primary coverage. Repository and installed-skill reads succeeded, with no permission changes. Missing evidence is not a biological negative result. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01886 | data/families/PF01886.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Original Wang2024 Figure2 was visually inspected with selected primary text. Zhou2018 was assessed only from its abstract and deposited structural metadata; no uninspected original figure or supplement is claimed as reviewed. No raw-data reanalysis, experimental replication or exhaustive family survey. Rendered-page checks follow separately.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T200930Z-pf01886-duf61-structure-and-causal-evidence-gap
+title: PF01886 DUF61 structural evidence and unresolved causal function
+started_at: '2026-10-11T20:07:15Z'
+finished_at: '2026-10-11T20:09:30Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Retain a graphless partial assessment, with two open discussions and IN_PROGRESS
+  status. Exact SSO0941 identity and the tagged structural construct are established.
+  The inspected structural abstract/deposition and computational benchmark do not
+  support a directed biological edge; incomplete full-text access and broader member
+  coverage remain explicit.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01886.yaml
+    sha256: cac4f224c399838db22980b84ac26c18f71d60540997e06c11473cc78853e472
+    role: context
+  - path: data/families/PF01886.yaml
+    sha256: 3ae658fca839070f84f10c35fa437315fc94fc221d8c7553a767b0e096be877b
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01886/zhou-2018-structure.txt
+    role: context
+    sha256: d7b4992243857c140bb50ddaddbb1c4363ef579379fdfe4fd630e93f1cb0f60b
+  - path: evidence/PF01886/duf61-identity.txt
+    role: context
+    sha256: fa98174d78183f33a7e438f274024b2c5cae033968380f825cc6d44eb3c97cd9
+  - path: evidence/PF01886/wang-2024-computational-context.txt
+    role: context
+    sha256: bebf023387b1c0e412801e0b6fbd550a6c1f171c669c0faa42636ab6b420af43
+  - path: evidence/PF01886/duf61-gap-ledger.txt
+    role: context
+    sha256: bd9f02ed3685b07ca6c60c8e782a6f950d408d7055f7944f28755ff2a9616eea
+targets:
+- target_id: PF01886
+  path: data/families/PF01886.yaml
+  label: PF01886
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01886.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: d5972ae629f7120f60cea139b07367de44ba59099aeb0d723d3c6d62fdcd647b
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of whether inspected DUF61 evidence supports
+    any directed biological edge, with exact SSO0941 identity and explicit access
+    and family-coverage limits.
+  selection: Zhou2018 abstract and 5VFK entry/entity/assembly metadata; current InterPro
+    and UniProt records; AAK41217.1 and WP_009992374.1 sequence comparison; Wang2024
+    selected energy/force Results, simulation Methods, data availability, Figure2
+    caption and original Figure2. Current 196-entry UniProt search and bounded alias/member
+    literature searches are context, not exhaustive function coverage.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01886
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: All196 frozen members remain in scope. The2018 full paper, original figures/supplements
+      and accessible NMR data remain incompletely inspected; BMRB30279 access failure
+      does not establish withdrawal. The current196-entry UniProt query has no FUNCTION
+      comments, but missing annotations do not establish absent functional literature.
+      Member-specific primary perturbation/substrate studies and unadopted proteomic
+      leads need follow-up.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01886
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/29526782/
+  locator: Abstract; PDB5VFK entry/entity/assembly metadata; full paper and supplements
+    not inspected
+  accessed_at: '2026-10-11T20:09:30Z'
+  support: supports
+  snapshot_sha256: d7b4992243857c140bb50ddaddbb1c4363ef579379fdfe4fd630e93f1cb0f60b
+  summary: Structural observations and operon/fold associations do not establish a
+    directed RNA-binding, processing or cellular effect. The structure has one protein
+    entity and no RNA/DNA entity; this is not an all-ligand negative test. Submitted
+    conformers are not independent biological replicates. Full-text access remains
+    incomplete, not evidence that the paper lacks additional assays.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01886/protein/uniprot/Q97ZH2/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T20:09:30Z'
+  support: supports
+  snapshot_sha256: fa98174d78183f33a7e438f274024b2c5cae033968380f825cc6d44eb3c97cd9
+  summary: Q97ZH2/SSO0941 sequenceversion1 equals AAK41217.1 and WP_009992374.1 over138
+    residues. Saccharolobus solfataricus P2 is taxon273057, historically Sulfolobus.
+    PF01886 maps4-123 inclusive; 5VFK entity1 equals the complete reference plus LEHHHHHH.
+    The isolated Pfam interval is not the whole construct. UPF0216 is supported as
+    a family alias through O29789/PF01886/IPR002746, not through numeric resemblance
+    alone.
+- evidence_id: computational-benchmark
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11602711/
+  locator: Selected energy/force Results, simulation Methods, data availability and
+    original Figure2
+  summary: SSO0941/5VFK participates in a computational energy/force benchmark. Fragmented-DFT
+    comparison and200 computational samples are not biological mechanism measurements
+    or experimental replicates; multi-protein error averages are not SSO0941-specific
+    values.
+  accessed_at: '2026-10-11T20:09:30Z'
+  support: supports
+  snapshot_sha256: bebf023387b1c0e412801e0b6fbd550a6c1f171c669c0faa42636ab6b420af43
+- evidence_id: search-and-access
+  kind: search
+  reference: evidence/PF01886/duf61-gap-ledger.txt
+  locator: Bounded search coverage, excluded associations, access limits and next
+    discriminating evidence
+  search_scope: Ignored/hidden-inclusive PF01886/DUF61 search of curation/evidence/history/review
+    owners; primary family/member searches for DUF61,PF01886,UPF0216,SSO0941,Q97ZH2,5VFK,AF_0460,TK1795,MMP1048,PH0358
+    andPF0452 on2026-10-11. Not an exhaustive literature or member survey.
+  summary: No earlier scoped curation was found in the searched owners, including
+    ignored files. Publisher403, metadata-only Elsevier/CAS pages and unresolved BMRB
+    access limit primary coverage. Repository and installed-skill reads succeeded,
+    with no permission changes. Missing evidence is not a biological negative result.
+  accessed_at: '2026-10-11T20:09:30Z'
+  support: supports
+  snapshot_sha256: bd9f02ed3685b07ca6c60c8e782a6f950d408d7055f7944f28755ff2a9616eea
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T20:09:30Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01886
+  kind: record_content
+  reference: data/families/PF01886.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T20:09:30Z'
+  support: context_only
+  snapshot_sha256: 3ae658fca839070f84f10c35fa437315fc94fc221d8c7553a767b0e096be877b
+  quote: "id: Pfam:PF01886\npfam_id: PF01886\nname: Protein of unknown function DUF61\n\
+    short_name: DUF61\nseed_status: UNKNOWN_CANDIDATE\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01886\n\
+    counters:\n  proteins: 196\n  matches: 196\n  proteomes: 193\n  taxa: 381\n  structures:\
+    \ 1\n  alphafold_models: 181\n  domain_architectures: 1\nprovenance:\n  snapshot_id:\
+    \ interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002746\ndescription: This Domain of unknown function\
+    \ 61 (DUF61) family of proteins are widely distributed in archaea.\n  In crenarchaea,\
+    \ the genes of DUF61 proteins are in an operon containing two genes of box C/D\
+    \ RNA protein\n  complexes. The NMR structure of a DUF61 family member from the\
+    \ hyperthermophilic archaeon Sulfolobus\n  solfataricus revealed a rigid core\
+    \ structure and flexible N- and C-terminal regions, including a negatively-charged\n\
+    \  independent C-terminal helix. The core structure consists of N- and C-terminal\
+    \ subdomains, in which\n  the C-terminal subdomain shows significant structural\
+    \ similarity with several nucleic acid binding proteins\n  [[cite:PUB00098020]].\n\
+    curation_history: history/records/PF01886\ndiscussions:\n- discussion_id: duf61-member-specific-causal-evidence\n\
+    \  prompt: Obtain a verified DUF61 member-specific perturbation or substrate assay\
+    \ before adding a causal\n    graph.\n  kind: CURATION_TODO\n  status: OPEN\n\
+    \  rationale: The inspected SSO0941 structural abstract, deposition and later\
+    \ computational benchmark do\n    not establish a directed biological effect.\
+    \ Box C/D RNA operon proximity and nucleic-acid-binding\n    fold similarities\
+    \ motivate research but do not demonstrate RNA binding, processing or a DUF61-dependent\n\
+    \    cellular pathway.\n  evidence:\n  - reference: PMID:29526782\n    supports:\
+    \ PARTIAL\n    evidence_source: abstract_and_structural_deposition\n    explanation:\
+    \ Zhou2018 abstract and PDB5VFK metadata support structural observations for SSO0941.\
+    \ The\n      full paper and supplements were not inspected. Twenty submitted NMR\
+    \ conformers are not twenty biological\n      replicates; the author-defined monomer\
+    \ assignment is not an activity requirement. InterPro and RCSB\n      repetition\
+    \ of this abstract is one evidential origin.\n  - reference: PMID:39506110\n \
+    \   supports: PARTIAL\n    evidence_source: selected_full_text_and_figure\n  \
+    \  explanation: Wang2024 selected Results and simulation Methods plus original\
+    \ Figure2 place SSO0941\n      in an energy/force benchmark. Fragmented-DFT comparison\
+    \ and computational samples are not DUF61\n      biological perturbation data.\
+    \ No RNA-processing edge is supported by the inspected benchmark sections.\n \
+    \ posed_by: Codex\n  posed_date: '2026-10-11'\n  notes: No causal edge is supported\
+    \ by the inspected material; this is not an exhaustive absence claim.\n    The\
+    \ current 196-entry UniProt query returned no FUNCTION comments, which is annotation\
+    \ coverage rather\n    than proof that no functional experiments exist. Full-paper\
+    \ and member-specific functional follow-up\n    remain open. Minimal assessments\
+    \ and access/search limits are retained under evidence/PF01886. No\n    dummy\
+    \ graph is added.\n- discussion_id: duf61-reference-and-construct-scope\n  prompt:\
+    \ Preserve SSO0941 reference, Pfam interval and tagged-construct scope when evaluating\
+    \ functional\n    evidence.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ A protein structure is not an isolated-domain functional test. Q97ZH2 has 138\
+    \ residues, PF01886\n    covers 4-123 inclusive, and PDB5VFK entity1 contains\
+    \ the complete reference plus LEHHHHHH. Any future\n    whole-protein phenotype\
+    \ must not silently become a domain- or residue-specific mechanism.\n  evidence:\n\
+    \  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01886/protein/uniprot/Q97ZH2/\n\
+    \    supports: SUPPORT\n    evidence_source: database\n    explanation: Current\
+    \ member-specific InterPro maps Q97ZH2 to PF01886 at 4-123. UniProt sequence version1,\n\
+    \      entry version93, identifies Saccharolobus solfataricus P2, taxon273057;\
+    \ AAK41217.1 and WP_009992374.1\n      match the reference exactly. Historical\
+    \ Sulfolobus naming is retained as an alias, not a separate\n      tested species.\n\
+    \  - reference: doi:10.2210/pdb5vfk/pdb\n    supports: SUPPORT\n    evidence_source:\
+    \ structural_deposition\n    explanation: PDB5VFK entity1 is exactly the 138-residue\
+    \ reference plus the eight-residue LEHHHHHH\n      suffix. Its one protein entity\
+    \ and lack of an RNA/DNA polymer entity do not test all possible ligands.\n  \
+    \    The deposited pH4.4 and310K describe the NMR sample, not a functional optimum.\n\
+    \  posed_by: Codex\n  posed_date: '2026-10-11'\n  notes: UPF0216 is a verified\
+    \ family alias through O29789/AF_0460 with PF01886 and IPR002746, not functional\n\
+    \    characterization. ScienceDirect access returned403 and Elsevier API supplied\
+    \ metadata only; the CAS\n    entry links the DOI without full text. BMRB30279\
+    \ access was unresolved, not proof of data withdrawal.\n    All196 frozen proteins\
+    \ require member-specific assessment before family-wide transfer.\ncuration_events:\n\
+    - timestamp: '2026-10-11T19:59:08Z'\n  curator: Codex\n  action: CREATE\n  outcome:\
+    \ changed\n  summary: Retain a graphless DUF61 causal-evidence assessment with\
+    \ exact SSO0941 identity.\n  history_record: history/records/PF01886/2026-10-11T195908Z-codex-b913fe.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Q97ZH2/SSO0941 sequenceversion1 equals AAK41217.1 and WP_009992374.1 over138
+    residues. Saccharolobus solfataricus P2 is taxon273057, historically Sulfolobus.
+    PF01886 maps4-123 inclusive; 5VFK entity1 equals the complete reference plus LEHHHHHH.
+    The isolated Pfam interval is not the whole construct. UPF0216 is supported as
+    a family alias through O29789/PF01886/IPR002746, not through numeric resemblance
+    alone.
+  target_ids:
+  - PF01886
+  evidence_ids:
+  - identity
+  - primary
+  - computational-benchmark
+  - search-and-access
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Zero graphs and zero edges are appropriate for the inspected evidence.
+    Two open discussions retain the missing member-specific functional prerequisite
+    and exact protein/domain/construct scope. Operon proximity, fold similarity, monomer
+    assignment and AI2BMD energy/force benchmark performance are not promoted to causal
+    RNA-processing arrows. No unsupported dummy graph or functional assertion was
+    added.
+  target_ids:
+  - PF01886
+  evidence_ids:
+  - primary
+  - native
+  - computational-benchmark
+  - search-and-access
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: All196 frozen members remain in scope. The2018 full paper, original figures/supplements
+    and accessible NMR data remain incompletely inspected; BMRB30279 access failure
+    does not establish withdrawal. The current196-entry UniProt query has no FUNCTION
+    comments, but missing annotations do not establish absent functional literature.
+    Member-specific primary perturbation/substrate studies and unadopted proteomic
+    leads need follow-up.
+  target_ids:
+  - PF01886
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01886-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Obtain exact-member functional evidence before adding a DUF61 causal graph
+  description: Obtain the2018 full paper and supplements, inspect candidate member-specific
+    studies and resolve any relevant experimental construct or domain mapping. Add
+    an edge only when a biological perturbation or biochemical test supports its direction
+    under stated conditions; retain association-only findings, alternative explanations
+    and access limits. The computational benchmark cannot substitute for an RNA-processing
+    or cellular assay.
+  target_ids:
+  - PF01886
+  field_paths:
+  - discussions
+  evidence_ids:
+  - primary
+  - identity
+  - computational-benchmark
+  - search-and-access
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01886.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Obtain the2018 full paper and supplements, inspect candidate member-specific
+    studies and resolve any relevant experimental construct or domain mapping. Add
+    an edge only when a biological perturbation or biochemical test supports its direction
+    under stated conditions; retain association-only findings, alternative explanations
+    and access limits. The computational benchmark cannot substitute for an RNA-processing
+    or cellular assay.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01886
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Original Wang2024 Figure2 was visually inspected with selected primary text. Zhou2018
+  was assessed only from its abstract and deposited structural metadata; no uninspected
+  original figure or supplement is claimed as reviewed. No raw-data reanalysis, experimental
+  replication or exhaustive family survey. Rendered-page checks follow separately.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

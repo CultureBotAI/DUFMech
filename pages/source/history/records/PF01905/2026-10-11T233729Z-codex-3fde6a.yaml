@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01905
+  path: data/families/PF01905.yaml
+session:
+  id: 2026-10-11T233729Z-codex-3fde6a
+  timestamp: '2026-10-11T23:37:29Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of Csa2 and DevR graphs
+  details: Same-agent assessment supports fourteen scoped observed effects with construct,
+    domain, comparator and source limits. Suppressor genetics is not DevR complementation;
+    direct repression and antisense-guided decay remain unproven. Exact alleles, missing
+    supplements and later member contexts remain open. IN_PROGRESS, not exhaustive
+    or independent endorsement.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T233726Z-pf01905-csa2-binding-and-devr-developmental-contexts/review.yaml

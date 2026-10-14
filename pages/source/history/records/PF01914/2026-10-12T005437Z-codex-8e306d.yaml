@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01914
+  path: data/families/PF01914.yaml
+session:
+  id: 2026-10-12T005437Z-codex-8e306d
+  timestamp: '2026-10-12T00:54:37Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review corrected YchE p-value and preserve all PF01914 cellular contexts
+  details: Successor partial same-agent scientific review corrects the YchE Figure1C
+    p-value to 0.38. Earlier review and evidence bytes remain intact. All 13 graphs
+    and 39 observed indirect effects retain direction and context; direct transport
+    mechanisms, member coverage and source discrepancies remain open. Current projection
+    validates and status stays IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T005526Z-pf01914-yche-figure-label-correction-and-cellular-contexts/review.yaml

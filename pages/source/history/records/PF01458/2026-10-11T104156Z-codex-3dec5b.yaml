@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01458
+  path: curation/families/PF01458.yaml
+session:
+  id: 2026-10-11T104156Z-codex-3dec5b
+  timestamp: '2026-10-11T10:41:56Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate separate SufB biochemical and SufD cellular causal effects
+  details: Added five direct observed SufB-complex substitution effects and two indirect
+    observed SufD H360A phenotypes from Yuda 2017. Inspected main methods/results/discussion,
+    supplemental tables, Figure 4 and S2/S3. Verified reference domain intervals and
+    local C254A/C405A primer translations. Retained basal output, residual sulfur,
+    abundance and culture qualifiers; no observed tunnel or atomistic ligand chain.
+    Partial family coverage remains IN_PROGRESS.

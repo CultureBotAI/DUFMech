@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01172
+  path: data/families/PF01172.yaml
+session:
+  id: 2026-10-11T100228Z-codex-35c7ce
+  timestamp: '2026-10-11T10:02:28Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of SBDS release and hydrolysis contexts.
+  details: Review 20261011T100217Z-pf01172-sbds-release-and-hydrolysis-contexts assessed
+    four graphs and seven direct observed whole-protein effects. Reference mapping,
+    mixed-species particle preparations, mutations outside PF01172, joint-factor sufficiency
+    and separate hydrolysis/release assays are retained. Native projection/overlay
+    checks passed during review. Supplementary construct and binding details, domain-specific
+    causal steps and later recycling contexts require follow-up. This is same-agent
+    partial scientific assessment, not independent endorsement or complete family
+    characterization; status remains IN_PROGRESS.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T100217Z-pf01172-sbds-release-and-hydrolysis-contexts/review.yaml

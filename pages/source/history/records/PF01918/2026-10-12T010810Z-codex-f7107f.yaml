@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01918
+  path: curation/families/PF01918.yaml
+session:
+  id: 2026-10-12T010810Z-codex-f7107f
+  timestamp: '2026-10-12T01:08:10Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate Alba DUF78 DNA, RNA and nuclease assay graphs with separate protein
+    and PTM contexts
+  details: Added sixteen scoped graphs with fifty-three observed edges, minimal primary-source
+    ledgers, exact current Pfam mappings, native-PTM counterevidence and open construct/family
+    coverage. Forty-six direct biochemical or physical effects and seven indirect
+    transcription/growth effects; IN_PROGRESS, no native-family-wide mechanism or
+    publication claim.

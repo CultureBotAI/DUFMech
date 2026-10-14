@@ -47,6 +47,7 @@ table { width: 100%; min-width: 1000px; border-collapse: collapse; }
 th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; max-width: 300px; }
 th { position: sticky; top: 0; background: var(--card); color: var(--muted); font-size: .875rem; z-index: 1; }
 td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.causal-relation { white-space: nowrap; }
 .pagination { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 16px; }
 .pagination a { min-width: 36px; padding: 6px; text-align: center; }
 [aria-current="page"] { font-weight: bold; background: var(--track); }

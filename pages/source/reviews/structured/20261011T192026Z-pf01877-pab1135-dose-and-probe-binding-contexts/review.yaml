@@ -1,0 +1,422 @@
+schema_version: 1.0.0
+review_id: 20261011T192026Z-pf01877-pab1135-dose-and-probe-binding-contexts
+title: PF01877 PAB1135 dose and probe binding causal contexts
+started_at: '2026-10-11T19:20:15Z'
+finished_at: '2026-10-11T19:20:26Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Two graphs retain three directly observed preparation-level binding effects.
+  Reference identity is verified, while exact tryptic termini, RNA-conformer interpretation
+  and physiological function remain open. Protein dose and matched-dose probe comparisons
+  are explicit; bound/free ratio is not fractional occupancy or KD. Retain IN_PROGRESS.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01877.yaml
+    sha256: ef4799014585221a421008a609d8fc35ef8e3f2b43cd16c735311afd025e9493
+    role: context
+  - path: data/families/PF01877.yaml
+    sha256: edbf880270c7103cbca8db68aead9b6fa3d67545b19331e4b99b59e701e6bcf1
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01877/luz-2010-binding.txt
+    role: context
+    sha256: 2577d51ca6608bc9edcc5f6b0e087fbd33f920e18045033d8f7ad76fec1094e8
+  - path: evidence/PF01877/pab1135-identity.txt
+    role: context
+    sha256: f6ae35abfe09cf7046396912e667e5d1978211ded04825ad96316a74c9ad4873
+  - path: evidence/PF01877/rao-2008-structural-limits.txt
+    role: context
+    sha256: fcf0ede8957f98526eec3c4e42c8249b129e01f137bcafc34f7d218ea1e15eb8
+  - path: evidence/PF01877/pab1135-gap-ledger.txt
+    role: context
+    sha256: 7629db36bf9852a15f44403fb3c9045cd3501a47b89d24fe87d6aa19be704bdd
+targets:
+- target_id: PF01877
+  path: data/families/PF01877.yaml
+  label: PF01877
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01877.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 33a212b78d1310ab7b7978c7d48a7eb1ddceecd7bd2096f7297b5ac1dc3be991
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Luz2010 Methods and Results with original Figures1-4; Rao2008 production
+    and computational Methods, Surface Analyses, Quaternary Structure and Conclusions,
+    with figure captions only. Current UniProt and member-specific InterPro API, versioned
+    protein FASTA comparison and the relevant Lai2010 genomic-context paragraph were
+    inspected. Miyazono2009 metadata and 3D7A deposition were located; its full text
+    remained inaccessible.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01877
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: All1082 frozen members remain in scope. Resolve tryptic termini and printed
+      trypsin units, obtain orthogonal and replicated binding with saturating titrations,
+      separate RNA sequence from structure, test physiological targets and functional
+      dimer perturbations, and inspect additional member studies plus the inaccessible
+      Miyazono full text. Earlier structural predictions are not negative binding
+      assays and cannot settle family-wide function.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01877
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2872656/
+  locator: RNA binding Methods and original Figure3A/B; Figures1/2 for preparation
+    controls and Figure4 for the untested model
+  accessed_at: '2026-10-11T19:20:26Z'
+  support: supports
+  snapshot_sha256: 2577d51ca6608bc9edcc5f6b0e087fbd33f920e18045033d8f7ad76fec1094e8
+  summary: Increasing processed PAB1135 from50 to400 pmol increases the C8U5G8 bound/free
+    ratio. At matched nominal doses C8U5G8 gives stronger shifts than U8C5A8 or UUA/C,
+    which have weak nonzero signals. Sequence and secondary structure differ jointly.
+    No KD, saturation, replication statistics, catalytic activity or cellular target
+    is established by this assay.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01877/protein/uniprot/Q9UXX8/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T19:20:26Z'
+  support: supports
+  snapshot_sha256: f6ae35abfe09cf7046396912e667e5d1978211ded04825ad96316a74c9ad4873
+  summary: PAB1135/PYRAB17300 Q9UXX8 sequence version1 exactly matches CAB50635.1
+    and WP_010868849.1,154 residues,GE5 taxon272844,PF01877 residues9-132. Genomic-PCR
+    pET28a protein was trypsin-treated; its exact remaining native N-terminal residues
+    are unknown. Reference mapping does not prove an intact isolated domain in the
+    assay. Model-suggested K133 is outside the match; other named basic residues are
+    inside but untested.
+- evidence_id: structural-limits
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2596488/
+  locator: Production/computational Methods, Surface Analyses, Quaternary Structure
+    and Conclusions
+  summary: Structure and electrostatic comparisons prompted an RNA-binding prediction,
+    not a negative PAB1135 assay. Dimer observations do not test functional necessity.
+    Protein identity and deposited structure labels must be resolved before transferring
+    specific interfaces or residue claims.
+  accessed_at: '2026-10-11T19:20:26Z'
+  support: supports
+  snapshot_sha256: fcf0ede8957f98526eec3c4e42c8249b129e01f137bcafc34f7d218ea1e15eb8
+- evidence_id: gaps-and-access
+  kind: search
+  reference: evidence/PF01877/pab1135-gap-ledger.txt
+  locator: Bounded alias searches, public-source access checks and follow-up questions
+  search_scope: PF01877/PAB1135/DUF54/UPF0201/PH1010/MTH689 with RNA binding, mutation
+    and deletion; ignored/hidden-inclusive maintained-owner search; broad and quoted
+    TITLE_ABS EuropePMC searches on2026-10-11. Relevant Lai2010 genomic-context paragraph
+    inspected; the Pyrobaculum2012 lead only received a targeted paragraph search.
+    Not an exhaustive literature review.
+  summary: No prior target-specific curation was found in the searched owners, including
+    ignored files. The publisher access failure limits Miyazono coverage. Genomic
+    context and general proteinase sensitivity do not establish a DUF54-specific RNase
+    P role. Preparation, specificity, dimer-function and member-coverage questions
+    remain open.
+  accessed_at: '2026-10-11T19:20:26Z'
+  support: supports
+  snapshot_sha256: 7629db36bf9852a15f44403fb3c9045cd3501a47b89d24fe87d6aa19be704bdd
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T19:20:26Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01877
+  kind: record_content
+  reference: data/families/PF01877.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T19:20:26Z'
+  support: context_only
+  snapshot_sha256: edbf880270c7103cbca8db68aead9b6fa3d67545b19331e4b99b59e701e6bcf1
+  quote: "id: Pfam:PF01877\npfam_id: PF01877\nname: RNA binding\nshort_name: RNA_binding\n\
+    seed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status: IN_PROGRESS\n\
+    source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01877\ncounters:\n\
+    \  proteins: 1082\n  matches: 1082\n  proteomes: 562\n  taxa: 1009\n  structures:\
+    \ 7\n  alphafold_models: 1034\n  domain_architectures: 2\nprovenance:\n  snapshot_id:\
+    \ interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002739\ndescription: 'PH1010 [swissprot:O58738] is composed\
+    \ of five alpha-helices (1-5) and eight beta-strands\n  (1-8) with the following\
+    \ topology: beta-1, alpha-1, beta-2, beta-3, alpha-2, alpha-3, beta-4, beta-5,\n\
+    \  alpha-4, beta-6, alpha-5, beta-7, beta-8. The first six beta-strands (1-6)\
+    \ form a slightly twisted antiparallel\n  beta-sheet and face five alpha-helices\
+    \ on one side. The last two beta-strands form an antiparallel beta-sheet\n  in\
+    \ the C-terminus. PH1010 forms a characteristic homodimer structure in the crystal.\
+    \ Dimerisation of\n  the molecule is crucial for function. The structure resembles\
+    \ that of some ribosomal proteins such as\n  the 50S ribosomal protein L5 [[cite:PUB00051274]].\
+    \ Although the structure resembles that of the RRM-type\n  RNA-binding domain\
+    \ of the ribosomal L5 protein, the residues involved in RNA-binding in the L5\
+    \ protein\n  are not conserved in this family [[cite:PUB00048377]]. Despite this,\
+    \ these proteins bind to double-stranded\n  RNA in a non-sequence specific manner\
+    \ [[cite:PUB00066786]].'\ncuration_history: history/records/PF01877\ndiscussions:\n\
+    - discussion_id: pab1135-construct-and-specificity\n  prompt: Resolve the assayed\
+    \ protein termini and RNA-recognition determinants.\n  kind: CURATION_TODO\n \
+    \ status: OPEN\n  rationale: Reference identity is exact, but trypsin removes\
+    \ unspecified native residues and its printed\n    concentration is inconsistent.\
+    \ RNA sequence and folding change together in the three-probe comparison.\n  evidence:\n\
+    \  - reference: PMID:20380716\n    supports: PARTIAL\n    evidence_source: primary_methods_and_original_figures\n\
+    \    explanation: Figures1-3 support preparation integrity and probe-dependent\
+    \ binding, without exact termini,\n      a fitted KD, replication statistics or\
+    \ matched sequence/structure controls.\n  notes: Verify cleavage sites and preparation-specific\
+    \ controls; quantify orthogonal binding with saturation\n    and replication.\
+    \ Test model-suggested R11/R13/K65/R106/H127/R129/K131 inside the match separately\n\
+    \    from K133 outside it, while checking folding and oligomerization. None is\
+    \ currently an observed causal\n    residue.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-11'\n- discussion_id: duf54-family-function-and-dimer\n  prompt: Determine\
+    \ physiological targets and whether dimerization is required for function.\n \
+    \ kind: CURATION_TODO\n  status: OPEN\n  rationale: Genomic neighborhood, structural\
+    \ similarity and apparent dimers do not establish RNase P/exosome\n    function\
+    \ or dimer necessity. The frozen family description is not a family-wide experimental\
+    \ conclusion.\n  evidence:\n  - reference: PMID:19079550\n    supports: PARTIAL\n\
+    \    evidence_source: primary_structural_and_computational_analysis\n    explanation:\
+    \ Surface comparisons and dimeric preparations are not negative PAB1135 binding\
+    \ assays\n      or functional dimer-disruption tests.\n  - reference: PMID:20380716\n\
+    \    supports: PARTIAL\n    evidence_source: primary_binding_and_homology_model\n\
+    \    explanation: One processed protein binds synthetic probes; the basic-patch\
+    \ model and physiological\n      RNA targets remain hypotheses.\n  - reference:\
+    \ PMID:21135215\n    supports: PARTIAL\n    evidence_source: primary_genomic_context_paragraph\n\
+    \    explanation: The minimal RNase P study uses DUF54 as an operon marker; general\
+    \ proteinase sensitivity\n      does not identify a DUF54-specific requirement.\n\
+    \  notes: Inspect the currently inaccessible Miyazono2009 full text and later\
+    \ member studies, verify deposited\n    structural identities, and test physiological\
+    \ RNA binding plus functional dimer perturbations. The\n    1082 frozen proteins\
+    \ remain in scope. Do not convert structural predictions into experimentally contested\n\
+    \    edges or assume conserved biochemical function.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-11'\ncausal_graphs:\n- graph_id: pab1135-protein-dose\n  title: Increasing\
+    \ PAB1135 preparation increases the structured-probe binding readout\n  scope:\
+    \ Luz2010 Figure3A lanes7-10 and Figure3B, C8U5G8 probe titration.\n  context:\
+    \ Trypsin-treated GE5 PAB1135, 50-400 pmol protein and 1 pmol labeled RNA in 20\
+    \ ul, 30 min at\n    37 C. Tris-HCl pH8, 20 mM KCl, 5 mM MnCl2, 1 mM DTT, BSA\
+    \ and RNasin; 8% native PAGE. Tris concentration\n    is not stated.\n  family_mapping:\
+    \ Q9UXX8 sequence version1 equals CAB50635.1 and WP_010868849.1, 154 residues;\
+    \ PF01877\n    maps 9-132. GE5 genomic PCR in pET28a, expressed in BL21-CodonPlus(DE3)-RIL.\
+    \ Trypsin removes the His-tag\n    and unspecified native N-terminal residues;\
+    \ the assayed termini are not sequence-verified.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:272844\n  limitations: Preparation-level binding assay, not\
+    \ isolated-domain sufficiency or an RNA-processing reaction.\n    High nominal\
+    \ protein excess, no fitted KD or saturation, and no replicate/error-bar information\
+    \ in\n    Figure3. Native RNA conformers and exact active-protein concentration\
+    \ remain unresolved.\n  nodes:\n  - node_id: increased-protein-dose\n    label:\
+    \ Increase trypsin-treated PAB1135 from 50 to 400 pmol\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q9UXX8\n  - node_id: bound-free-rna-ratio\n \
+    \   label: C8U5G8 protein-bound/free RNA band ratio\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: protein-dose-increases-binding-readout\n    subject: increased-protein-dose\n\
+    \    predicate: increases\n    object: bound-free-rna-ratio\n    mechanism: Increasing\
+    \ nominal protein from 2.5 to 20 uM raises the plotted bound/free ratio from approximately\n\
+    \      0.17 to 0.74 and strengthens shifted bands. The denominator is free RNA,\
+    \ so 0.74 does not mean 74%\n      of RNA is bound. This does not establish catalytic\
+    \ activation, binding stoichiometry or an equilibrium\n      KD.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:20380716\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2872656/\n\
+    \      snippet: ratio of protein-bound RNA over free RNA\n      explanation: Original\
+    \ Figure3A/B and RNA-binding Methods distinguish the nominal protein titration,\n\
+    \        no-protein control and actual plotted denominator. Approximate endpoints\
+    \ are read from the bars,\n        not raw-data fits.\n      cache_path: evidence/PF01877/luz-2010-binding.txt\n\
+    \      cache_sha256: 2577d51ca6608bc9edcc5f6b0e087fbd33f920e18045033d8f7ad76fec1094e8\n\
+    - graph_id: pab1135-probe-comparisons\n  title: Changing the RNA probe changes\
+    \ the PAB1135 binding readout\n  scope: Luz2010 Figure3, matched protein doses\
+    \ across the three synthetic probes.\n  context: Each probe is supplied at 1 pmol\
+    \ with 50, 100, 200 or 400 pmol trypsin-treated PAB1135; 20\n    ul, 30 min at\
+    \ 37 C in the same reported Mn-containing buffer. Compare C8U5G8 separately with\
+    \ U8C5A8\n    and UUA/C.\n  family_mapping: Full-length reference Q9UXX8/CAB50635.1\
+    \ maps PF01877 at 9-132; the experimental preparation\n    is proteolytically\
+    \ processed with unresolved exact termini. No PAB1135 residue mutation or isolated\n\
+    \    Pfam construct is tested.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:272844\n\
+    \  limitations: RNA sequence and predicted secondary structure change together.\
+    \ Reported folding energies\n    are -15.9 versus -1.9 kcal/mol for C8U5G8 versus\
+    \ U8C5A8; these are not measured binding free energies.\n    Three probes do not\
+    \ prove universal sequence independence, and the weaker probes have nonzero shifts.\n\
+    \  nodes:\n  - node_id: replace-uc-probe\n    label: Replace U8C5A8 with C8U5G8\
+    \ at matched protein dose\n    node_type: PERTURBATION\n  - node_id: replace-uua-probe\n\
+    \    label: Replace UUA/C with C8U5G8 at matched protein dose\n    node_type:\
+    \ PERTURBATION\n  - node_id: bound-free-rna-ratio\n    label: Protein-bound/free\
+    \ RNA band ratio for the supplied probe\n    node_type: STATE\n  edges:\n  - edge_id:\
+    \ cg-versus-uc-increases-binding-readout\n    subject: replace-uc-probe\n    predicate:\
+    \ increases\n    object: bound-free-rna-ratio\n    mechanism: C8U5G8 gives a larger\
+    \ shifted/free ratio than U8C5A8 at each plotted protein amount. This\n      supports\
+    \ a probe-dependent association readout, not a clean causal isolation of RNA structure\
+    \ from\n      sequence or a measured affinity constant.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:20380716\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2872656/\n\
+    \      snippet: RNA binding assays\n      explanation: Original Figure3A lanes2-5\
+    \ versus7-10 and Figure3B retain matched nominal dose and\n        weak but nonzero\
+    \ U8C5A8 binding.\n      cache_path: evidence/PF01877/luz-2010-binding.txt\n \
+    \     cache_sha256: 2577d51ca6608bc9edcc5f6b0e087fbd33f920e18045033d8f7ad76fec1094e8\n\
+    \  - edge_id: cg-versus-uua-increases-binding-readout\n    subject: replace-uua-probe\n\
+    \    predicate: increases\n    object: bound-free-rna-ratio\n    mechanism: C8U5G8\
+    \ gives a larger shifted/free ratio than UUA/C under the same nominal doses. The\
+    \ UUA/C\n      signal is weak, not strictly absent. This comparison is part of\
+    \ the same experiment, not independent\n      replication or evidence that every\
+    \ single-stranded RNA is excluded.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:20380716\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2872656/\n      snippet:\
+    \ RNA binding assays\n      explanation: Original Figure3A lanes7-10 versus12-15\
+    \ and Figure3B; preserve the observed weak signal\n        rather than adopting\
+    \ the earlier unpublished no-binding assertion.\n      cache_path: evidence/PF01877/luz-2010-binding.txt\n\
+    \      cache_sha256: 2577d51ca6608bc9edcc5f6b0e087fbd33f920e18045033d8f7ad76fec1094e8\n\
+    curation_events:\n- timestamp: '2026-10-11T19:14:49Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate PAB1135 protein-dose and RNA-probe\
+    \ causal assay effects\n  history_record: history/records/PF01877/2026-10-11T191449Z-codex-53b945.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: PAB1135/PYRAB17300 Q9UXX8 sequence version1 exactly matches CAB50635.1
+    and WP_010868849.1,154 residues,GE5 taxon272844,PF01877 residues9-132. Genomic-PCR
+    pET28a protein was trypsin-treated; its exact remaining native N-terminal residues
+    are unknown. Reference mapping does not prove an intact isolated domain in the
+    assay. Model-suggested K133 is outside the match; other named basic residues are
+    inside but untested.
+  target_ids:
+  - PF01877
+  evidence_ids:
+  - identity
+  - primary
+  - structural-limits
+  - gaps-and-access
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Three direct observed effects are defined at the level actually changed
+    and read out, not as a complete molecular pathway. The first edge is protein-dose
+    versus bound/free ratio; two edges compare distinct RNA probes at matched dose.
+    These share one Figure3 experiment and are not independent replicates. High nominal
+    protein excess, free RNA conformers, proteolytic preparation and confounded sequence/structure
+    changes limit interpretation. No dimer-necessity, universal sequence independence,
+    RNase P/exosome reaction or residue-level mechanism is encoded as observed.
+  target_ids:
+  - PF01877
+  evidence_ids:
+  - primary
+  - native
+  - structural-limits
+  - gaps-and-access
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: All1082 frozen members remain in scope. Resolve tryptic termini and printed
+    trypsin units, obtain orthogonal and replicated binding with saturating titrations,
+    separate RNA sequence from structure, test physiological targets and functional
+    dimer perturbations, and inspect additional member studies plus the inaccessible
+    Miyazono full text. Earlier structural predictions are not negative binding assays
+    and cannot settle family-wide function.
+  target_ids:
+  - PF01877
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01877-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve PAB1135 preparation specificity and physiological function
+  description: Map the assayed termini and verify preparation controls, distinguish
+    bound/free ratio from total occupancy, measure binding with independent methods,
+    and test matched sequence or structure variants. Obtain primary functional evidence
+    for cellular RNA targets and dimer requirements before broader transfer. Preserve
+    the difference between the observed PAB1135 assay and older computational family
+    predictions.
+  target_ids:
+  - PF01877
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - structural-limits
+  - gaps-and-access
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01877.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Map the assayed termini and verify preparation controls, distinguish
+    bound/free ratio from total occupancy, measure binding with independent methods,
+    and test matched sequence or structure variants. Obtain primary functional evidence
+    for cellular RNA targets and dimer requirements before broader transfer. Preserve
+    the difference between the observed PAB1135 assay and older computational family
+    predictions.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01877
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Original Luz2010 Figures1-4 were visually inspected. Rao2008 relevant text and captions
+  were read but original figures were not separately visually inspected. Wiley returned403
+  for Miyazono2009; no full-text or figure review is claimed. No raw-data refit, assay-batch
+  sequence determination, exhaustive family survey or experimental replication. Rendered-page
+  checks follow separately.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01951
+  path: curation/families/PF01951.yaml
+session:
+  id: 2026-10-12T085208Z-codex-b29ac6
+  timestamp: '2026-10-12T08:52:08Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped Archease activation, ligation and RNA-processing graphs
+  details: Inspected human Gerber2024 and Suzuki2025 methods and figures plus archaeal
+    Desai2014 methods/results/captions. Added nine graphs with seventeen observed
+    experimental edges, explicit whole-protein context, mapped human residue-number
+    offset, mutant and heterogeneous-cell limitations, five minimal evidence ledgers
+    and three open follow-ups. Other primary branches and all remaining records remain
+    in scope; IN_PROGRESS, not complete family characterization. No source pins or
+    publication.

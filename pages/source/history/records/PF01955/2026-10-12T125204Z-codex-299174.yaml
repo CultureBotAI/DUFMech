@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01955
+  path: curation/families/PF01955.yaml
+session:
+  id: 2026-10-12T125204Z-codex-299174
+  timestamp: '2026-10-12T12:52:04Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add 2008 donor-specific rescue, AP, induction and extract graphs
+  details: 'PMID18808385 main construction, growth, extract and HPLC Methods and original
+    Figures2-4 inspected. Four new graphs add23 OBSERVED EXPERIMENTAL edges with UNRESOLVED
+    molecular attribution: seven alternative donor rescue arms, seven conditional
+    AP effects, six12h induction comparisons and three mixed-extract products. Three
+    minimal ledgers preserve candidate-only historical clone mappings, whole BtuD-CbiZ
+    scope, antibiotic-unit and reporter-wording conflicts, uninspected supplements
+    and distinct2008 CNCbl activity versus2009 purified negative. Prior16graphs/43edges
+    are unchanged. Six OPEN discussions and IN_PROGRESS remain. Git metadata remains
+    inaccessible; successor review input is pending native retention, not a saved
+    report or REVIEW event. No native pathway, complete family coverage or publication
+    is claimed.'

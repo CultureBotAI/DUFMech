@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01894
+  path: curation/families/PF01894.yaml
+session:
+  id: 2026-10-11T204334Z-codex-40b020
+  timestamp: '2026-10-11T20:43:34Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped YjbQ vitamin-auxotrophy rescue graphs with explicit biochemical
+    evidence gaps.
+  details: Added three PHENOTYPIC graphs with four INDIRECT OBSERVED effects covering
+    reported MC1061 delta-thiE rescue and distinct delta-pdxB colony and liquid contexts.
+    Verified K12 reference sequences and PF01894 at6-138. Retained unassayed dehydrogenase
+    status, conditional nonrescue, inferred pathway entry, incomplete Morett full-text
+    and Kim supplementary access, and excluded RhiN/ThiN/structural transfers. Status
+    remains IN_PROGRESS pending broader primary evidence and retained review; no publication.

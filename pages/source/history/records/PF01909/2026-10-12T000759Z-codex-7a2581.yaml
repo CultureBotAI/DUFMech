@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01909
+  path: curation/families/PF01909.yaml
+session:
+  id: 2026-10-12T000759Z-codex-7a2581
+  timestamp: '2026-10-12T00:07:59Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped GlnD transfer, removal controls and glutamine-response graphs
+  details: Added three graphs with eleven observed biochemical edges from inspected
+    Zhang2010 Methods and Figures 3/4/5/8. Mapped P27249 NT and HD regions, retained
+    mutant/construct/cofactor limits and excluded unverified P05057 PF01909 mapping.
+    Three minimal ledgers and two OPEN discussions preserve source and family coverage
+    gaps. Partial curation remains IN_PROGRESS; no publication or whole-family completion.

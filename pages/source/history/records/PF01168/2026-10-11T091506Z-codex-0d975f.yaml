@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01168
+  path: curation/families/PF01168.yaml
+session:
+  id: 2026-10-11T091506Z-codex-0d975f
+  timestamp: '2026-10-11T09:15:06Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add scoped Alr racemization and cofactor-assay graphs
+  details: Inspected the 1998 primary main text and Methods, with Figures 2-5 and
+    Table I visually checked. Verified P10724, PF01168 12-229, the current 1L6G reference
+    sequence, and the K39A primer local translation. Added seven observed edges in
+    four graphs for separate racemization directions, K39A loss, preincubation, joint
+    reactivation and tritium-release comparisons. Preserve whole-protein scope, distinct
+    reaction vessels, missing enzyme-free methylamine control, concentration discrepancy,
+    sequence history and unobserved atomic chemistry. New overlays, evidence hashes
+    and quotations validate; guarded regeneration and partial scientific review follow.
+    No family-wide or in-vivo regulatory transfer.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pubmed.ncbi.nlm.nih.gov/9832621/
+  - https://www.uniprot.org/uniprotkb/P10724/entry

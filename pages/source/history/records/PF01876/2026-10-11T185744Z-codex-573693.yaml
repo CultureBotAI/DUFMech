@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01876
+  path: curation/families/PF01876.yaml
+session:
+  id: 2026-10-11T185744Z-codex-573693
+  timestamp: '2026-10-11T18:57:44Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate p30 RNA reconstitution mutation and yeast-processing causal contexts
+  details: Fifteen graphs retain twenty-four observed effects across five mapped reference
+    proteins and four primary studies. Protein-pair and buffer interventions remain
+    distinct from p30-specific mutation and whole-gene yeast phenotypes; mixed RNP
+    preparations are not isolated-protein catalysis. Assay discrepancies, missing
+    supplemental controls and broader member coverage remain open. Status remains
+    IN_PROGRESS.

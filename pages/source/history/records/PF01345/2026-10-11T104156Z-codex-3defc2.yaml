@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01345
+  path: curation/families/PF01345.yaml
+session:
+  id: 2026-10-11T104156Z-codex-3defc2
+  timestamp: '2026-10-11T10:41:56Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate CLIPPER K715A thermal and proteolysis effects with sequence-qualified
+    scope
+  details: Added three directly observed purified-domain substitution effects from
+    Costa 2025. Inspected Figures 5/6/S8 and translated Table S6 sequences; retained
+    K517A and Asp748 label discrepancies, biochemical tag ambiguity and native-context
+    limits. Current reference and deposited fragment match. Partial scientific curation
+    remains IN_PROGRESS.

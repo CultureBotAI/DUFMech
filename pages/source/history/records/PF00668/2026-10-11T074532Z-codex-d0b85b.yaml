@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF00668
+  path: data/families/PF00668.yaml
+session:
+  id: 2026-10-11T074532Z-codex-d0b85b
+  timestamp: '2026-10-11T07:45:32Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial TycB1 condensation scientific self-review
+  details: Saved a scoped scientific self-review for digest 62a874f0e0eb4a06d29dbc1da3b1f54bc058f020bb46c8b06558e16c5dd5f0cc.
+    Four observed joint-system and mutation effects pass native validation. Construct/partner
+    identity details, substrate units, source-label inconsistencies and broader family
+    coverage remain open. This is same-agent review, not independent endorsement or
+    a resolved atomic mechanism; status remains IN_PROGRESS.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T074515Z-pf00668-tycb1-condensation-causal-assays/review.yaml

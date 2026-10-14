@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF03883
+  path: data/families/PF03883.yaml
+session:
+  id: 2026-10-11T044840Z-codex-2ba742
+  timestamp: '2026-10-11T04:48:40Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped YaaA causal graph scientific review
+  details: Reviewed the separate unincorporated-iron and radical-signal edges against
+    primary methods, strain controls, Figure 10 image and Figure 9 text/caption, and
+    exact P0A8I3 member mapping. Saved partial scientific self-review 20261011T045004Z-pf03883-yaaa-causal-graphs,
+    with the context-coverage finding open. Status remains IN_PROGRESS; no direct
+    iron-handling or peroxide-scavenging mechanism, family-wide completion or publication
+    is claimed.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T045004Z-pf03883-yaaa-causal-graphs/review.yaml

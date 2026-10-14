@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01875
+  path: curation/families/PF01875.yaml
+session:
+  id: 2026-10-11T183900Z-codex-0fc548
+  timestamp: '2026-10-11T18:39:00Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate Memo1 copper iron and cellular causal contexts with explicit redox
+    conflicts
+  details: Eleven graphs retain sixteen observed effects from four primary studies,
+    six direct preparation-level and ten indirect cellular effects. Verified versioned
+    human reference and deposited4-297 construct; retained assay discrepancies, conditional
+    readouts, redox debate and member-coverage gaps. Status remains IN_PROGRESS.

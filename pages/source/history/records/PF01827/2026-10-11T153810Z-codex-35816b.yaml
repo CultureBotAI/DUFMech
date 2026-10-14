@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01827
+  path: curation/families/PF01827.yaml
+session:
+  id: 2026-10-11T153810Z-codex-35816b
+  timestamp: '2026-10-11T15:38:10Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate FOG-2 construct and germline causal contexts
+  details: Five scoped graphs retain eight observed indirect effects from primary
+    FOG-2 research. Reconstructed the historical 327-aa reference, distinguished current
+    FTH and terminal-tail intervals, retained negative expression results and explicit
+    construct/source discrepancies. Added evidence notes and open follow-ups; no whole-family
+    mechanism completion or direct biochemical chain.

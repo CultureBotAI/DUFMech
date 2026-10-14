@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01757
+  path: curation/families/PF01757.yaml
+session:
+  id: 2026-10-11T144900Z-codex-2e8634
+  timestamp: '2026-10-11T14:49:00Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate SaOatA assay effects and explicitly hypothetical acetyl relay
+  details: Reviewed primary Jones2021 Results Methods Figures1/3/4/5, versioned protein
+    identity and public Figshare search/annotated MS2 deposits. Added five scoped
+    graphs with twenty-two observed effects and two hypothetical relay edges, distinguishing
+    purified preparations, cellular genotypes, extra-domain residues and unresolved
+    acetyl origin/construct provenance. Retained four evidence notes and open family/assay
+    follow-up discussions. Baseline records check:8296 valid and zero drift. Partial
+    family coverage remains IN_PROGRESS; no publication or full-corpus completion.
+links:
+  urls:
+  - https://pubmed.ncbi.nlm.nih.gov/34480000/
+  - https://doi.org/10.6084/m9.figshare.13309463

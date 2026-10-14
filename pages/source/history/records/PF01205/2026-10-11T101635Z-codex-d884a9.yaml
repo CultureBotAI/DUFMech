@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01205
+  path: data/families/PF01205.yaml
+session:
+  id: 2026-10-11T101635Z-codex-d884a9
+  timestamp: '2026-10-11T10:16:35Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of Yih1 phenotypes and domain scope
+  details: Saved native structured review 20261011T101618Z-pf01205-yih1-phenotypes-and-ancient-domain-boundary.
+    Three indirect observed phenotypes pass scoped assessment, with exact ancient-domain/RWD
+    mapping and gene-synonym exclusion. Domain-specific mechanism, source-label wording,
+    historical constructs, plate conditions and additional studies remain follow-ups.
+    Same-agent partial review, native NEEDS_FOLLOWUP; remain IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T101618Z-pf01205-yih1-phenotypes-and-ancient-domain-boundary/review.yaml

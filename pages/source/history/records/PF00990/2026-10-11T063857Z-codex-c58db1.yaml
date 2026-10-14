@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF00990
+  path: curation/families/PF00990.yaml
+session:
+  id: 2026-10-11T063857Z-codex-c58db1
+  timestamp: '2026-10-11T06:38:57Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate PleD synthesis and negative product-feedback graph
+  details: 'Inspected original Paul 2004 Figures 5-7, methods and constructs, with
+    Chan 2004 interpretation limits. Retained three measured biochemical edges: net
+    c-di-GMP synthesis, product inhibition and joint DivJ-plus-ATP stimulation. Verified
+    identical CB15/NA1000 references and PF00990 coordinates while retaining exact-template
+    and fragment-boundary limits. Feedback cycle is explicit and not claimed as cellular
+    dynamics. Native regeneration and scoped self-review follow; IN_PROGRESS retained.'
+  sections:
+  - causal_graphs

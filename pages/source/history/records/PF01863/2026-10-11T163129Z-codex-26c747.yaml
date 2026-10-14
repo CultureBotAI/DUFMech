@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01863
+  path: curation/families/PF01863.yaml
+session:
+  id: 2026-10-11T163129Z-codex-26c747
+  timestamp: '2026-10-11T16:31:29Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate PF01863 YgjP activity, proabylysin thermal effects and two separate
+    latency hypotheses
+  details: Inspected Sevin original Figure 16 and Tables 3/9, Lopez-Pelegrin Methods/activation
+    results/Figure 3, parsed UniProt/InterPro/NCBI/PDB identity, and assessed B80
+    peptide inconsistencies and Lobb computational candidates. Added four scoped graphs
+    with three DIRECT OBSERVED preparation effects and two UNRESOLVED HYPOTHESIZED
+    tail-latency edges, four hash-anchored evidence ledgers and three open discussions.
+    Preserve L2V/K2V discrepancy, out-of-domain tail sites, failed activation, missing
+    YgjP clone/protocol details and no full-family completion. Baseline 8296 records
+    valid with zero drift; initial overlay enum error corrected to native decreases
+    before projection.

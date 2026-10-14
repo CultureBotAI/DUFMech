@@ -4,7 +4,7 @@ name: NYN domain
 short_name: NYN
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01936
 counters:
   proteins: 25419
@@ -30,3 +30,638 @@ description: These domains are found in the eukaryotic proteins typified by the 
   are likely to bind only a single metal ion, unlike the FLAP/5' --> 3' exonuclease superfamily, which
   binds two metal ions. Based on conserved gene neighborhoods Aravind and colleagues infer that the bacterial
   members are likely to be components of the processome/degradsome that process tRNAs or ribosomal RNAs.
+curation_history: history/records/PF01936
+discussions:
+- discussion_id: pf01936-member-mapping-and-native-targets
+  prompt: Resolve native RNA targets and construct-specific effects without transferring historical NYN
+    names across Pfam families.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Human tethering and mouse genotype effects do not directly establish every downstream cleavage
+    step or family-wide substrate specificity.
+  evidence:
+  - reference: PMID:30364987
+    supports: PARTIAL
+    evidence_source: primary_biochemical_and_tethering_assays
+    explanation: Human238-510 cleavage differs from crystallized352-500 and full-protein tethering. Decapping
+      interactions alone do not establish a required catalytic chain.
+  - reference: PMID:30333187
+    supports: PARTIAL
+    evidence_source: primary_assays_and_supplement
+    explanation: Mouse source D272 maps locally to canonical D451; increased mutant protein abundance,
+      expression-host differences and direct-target uncertainty remain material.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: N4BP1/KHNYN map to PF11977 and Rae1/YacP to PF05991 in inspected current records. Preserve frozen
+    description. Inspect later EDC4/P-body studies and sequence-verify whole constructs before extending
+    mappings beyond the local NYN interval.
+- discussion_id: pf01936-other-member-contexts
+  prompt: Extend accession-mapped bacterial, plant and clock-output contexts.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Two mammalian examples do not characterize25419 proteins and329 architectures.
+  evidence:
+  - reference: PMID:38785320
+    supports: PARTIAL
+    evidence_source: primary_text_and_figure_captions
+    explanation: Bacterial CRISPR-associated NYN cleavage is a lead; exact tested accession/Pfam mapping
+      remains unresolved here. Physiological crRNA maturation is not established by free-RNA digestion.
+  - reference: PMID:17210789
+    supports: PARTIAL
+    evidence_source: mapped_member_and_primary_source_lead
+    explanation: LabA clock-output phenotypes need inspection and must not be converted into an assumed
+      RNase mechanism.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Also resolve HspA/HspB and HspA N-terminal sequence caution, Arabidopsis DNE1, other architectures
+    and omitted mammalian contexts. Failed source access is not negative evidence; see coverage ledger.
+causal_graphs:
+- graph_id: human-marf1-fragment-cleavage-2018
+  title: Human MARF1 fragment cleaves U30 RNA
+  scope: Nishimura2018 Figure5B-D; purified WT238-510 and D426A/D427A fragment.
+  context: 1uM protein,10pmol cold and0.1pmol labeled U30 in10uL,3mM MnCl2,20mM HEPES pH7.5,150mM NaCl,10%glycerol,1mM
+    DTT; room temperature,1-60min. GST removed; no-protein controls and5-prime/3-prime labels.
+  family_mapping: Human Q9Y4F3v6,1742aa,PF01936 353-490 inside assayed238-510. D426/D427 are within the
+    match. This is not the352-500 crystallization construct or an assay of full-length MARF1.
+  taxon: NCBITaxon:9606
+  scope_status: MECHANISTIC
+  limitations: Internal cleavage is supported by paired end-label patterns, not resolved atomic chemistry.
+    D426A/D427A is one double-mutant test and retains residual activity. No-added-metal activity is not
+    absent; Mg also supports5B cleavage. Folding and natural-target specificity remain unresolved.
+  nodes:
+  - node_id: reaction
+    label: WT238-510 plus U30 and Mn under assay conditions
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9Y4F3
+  - node_id: products
+    label: Shorter labeled U30 RNA products
+    node_type: STATE
+  - node_id: mutant
+    label: D426A/D427A instead of WT fragment
+    node_type: PERTURBATION
+  - node_id: processing
+    label: U30 processing relative to WT in Mn
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: fragment-rna-cleavage
+    subject: reaction
+    predicate: produces
+    object: products
+    mechanism: The purified fragment-containing reaction cleaves U30 to shorter products; both end-label
+      orientations support endoribonuclease activity.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30364987
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6294520/
+      snippet: strongly reduced as compared to
+      explanation: Figure5B,D and recombinant/ribonuclease Methods; complete protein-substrate-cofactor
+        context retained.
+      cache_path: evidence/PF01936/nishimura-2018.txt
+      cache_sha256: 786f9c70f0e6ccad8a1ba266063a7f8c157e37b8f37fd8bc182eaca5fd5d56f1
+  - edge_id: tandem-mutation-processing-reduction
+    subject: mutant
+    predicate: decreases
+    object: processing
+    mechanism: Joint alanine replacement lowers RNA processing compared with the matched WT preparation
+      without isolating either residue's individual contribution.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30364987
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6294520/
+      snippet: strongly reduced as compared to
+      explanation: Figure5C WT/MUT timecourses;5A purification gel. Residual cleavage is not called complete
+        inactivity.
+      cache_path: evidence/PF01936/nishimura-2018.txt
+      cache_sha256: 786f9c70f0e6ccad8a1ba266063a7f8c157e37b8f37fd8bc182eaca5fd5d56f1
+- graph_id: human-marf1-full-tethering-2018
+  title: Tethered human MARF1 lowers reporter RNA
+  scope: Nishimura2018 Figure3; full-length and deletion constructs in HeLa.
+  context: lambdaN-HA fusions tethered to RL-5BoxB3-primeUTR;24h transfection,firefly normalization,Northern
+    blot and expression controls,at least3 experiments. LacZ and WT are explicitly different comparators.
+  family_mapping: Q9Y4F3v6,1742aa,PF01936 353-490. Full-length and delta-C1-1563 retain the NYN domain;
+    delta-NYN removes it. Exact NYN deletion junction not sequence-verified here.
+  taxon: NCBITaxon:9606
+  scope_status: PHENOTYPIC
+  limitations: RNA abundance is measured, not native target recognition, cleavage position or necessity
+    of decapping partners. Delta-NYN only partially restores levels. Luciferase changes are not recast
+    as translation-specific mechanisms.
+  nodes:
+  - node_id: wt
+    label: Tethered full MARF1 instead of LacZ
+    node_type: PERTURBATION
+  - node_id: dc
+    label: Tethered delta-C MARF1 instead of LacZ
+    node_type: PERTURBATION
+  - node_id: dn
+    label: Delta-NYN instead of tethered WT MARF1
+    node_type: PERTURBATION
+  - node_id: rna
+    label: Normalized RL-5BoxB RNA abundance
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: wt-reporter-reduction
+    subject: wt
+    predicate: decreases
+    object: rna
+    mechanism: Tethering full MARF1 lowers reporter RNA relative to the LacZ fusion control.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30364987
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6294520/
+      snippet: strongly reduced as compared to
+      explanation: Figure3D RNA bars and3E Northern;3C expression controls.
+      cache_path: evidence/PF01936/nishimura-2018.txt
+      cache_sha256: 786f9c70f0e6ccad8a1ba266063a7f8c157e37b8f37fd8bc182eaca5fd5d56f1
+  - edge_id: dc-reporter-reduction
+    subject: dc
+    predicate: decreases
+    object: rna
+    mechanism: The tethered construct lacking the decapping-factor interaction region still lowers reporter
+      RNA relative to LacZ.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30364987
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6294520/
+      snippet: strongly reduced as compared to
+      explanation: Figure3B defines1-1563;3D,E show reduced RNA, arguing against obligatory C-terminal
+        recruitment in this tethering assay.
+      cache_path: evidence/PF01936/nishimura-2018.txt
+      cache_sha256: 786f9c70f0e6ccad8a1ba266063a7f8c157e37b8f37fd8bc182eaca5fd5d56f1
+  - edge_id: nyn-deletion-reporter-increase
+    subject: dn
+    predicate: increases
+    object: rna
+    mechanism: Removing NYN increases steady-state reporter RNA compared with tethered full WT MARF1,
+      without establishing complete restoration to LacZ.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30364987
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6294520/
+      snippet: strongly reduced as compared to
+      explanation: Figure3D,E delta-NYN versus WT, not versus LacZ.
+      cache_path: evidence/PF01936/nishimura-2018.txt
+      cache_sha256: 786f9c70f0e6ccad8a1ba266063a7f8c157e37b8f37fd8bc182eaca5fd5d56f1
+- graph_id: human-marf1-nterm-tethering-2018
+  title: NYN variants impair N-terminal-fragment reporter silencing
+  scope: Nishimura2018 Figure6A-C; tethered human N-terminal fragment, not full-length variants.
+  context: HeLa RL-5BoxB Northern normalized to firefly,24h,at least3 experiments; LacZ fusion and anti-HA/actin
+    expression controls.
+  family_mapping: Human Q9Y4F3v6,PF01936 353-490 retained in WT N-terminal fragment; D426A/D427A is a
+    joint in-domain substitution. Deletion construct boundaries are not sequence-verified in this pass.
+  taxon: NCBITaxon:9606
+  scope_status: PHENOTYPIC
+  limitations: Effects on RNA abundance do not resolve cleavage versus downstream decay or protein-folding
+    alternatives. Do not transfer the N-terminal mutant outcome to an untested full-length variant.
+  nodes:
+  - node_id: wt
+    label: WT N-terminal fragment instead of LacZ
+    node_type: PERTURBATION
+  - node_id: dn
+    label: NYN-deleted instead of WT N-terminal fragment
+    node_type: PERTURBATION
+  - node_id: mut
+    label: D426A/D427A instead of WT N-terminal fragment
+    node_type: PERTURBATION
+  - node_id: rna
+    label: Normalized RL-5BoxB RNA abundance
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: nterm-rna-reduction
+    subject: wt
+    predicate: decreases
+    object: rna
+    mechanism: Tethering the WT N-terminal fragment lowers reporter RNA relative to LacZ.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30364987
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6294520/
+      snippet: strongly reduced as compared to
+      explanation: Figure6B RNA bars,6C Northern,6A expression.
+      cache_path: evidence/PF01936/nishimura-2018.txt
+      cache_sha256: 786f9c70f0e6ccad8a1ba266063a7f8c157e37b8f37fd8bc182eaca5fd5d56f1
+  - edge_id: nterm-deletion-rna-increase
+    subject: dn
+    predicate: increases
+    object: rna
+    mechanism: NYN deletion increases reporter RNA relative to the intact N-terminal fragment under tethering
+      conditions.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30364987
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6294520/
+      snippet: strongly reduced as compared to
+      explanation: Figure6B,C delta-NYN versus N-term WT.
+      cache_path: evidence/PF01936/nishimura-2018.txt
+      cache_sha256: 786f9c70f0e6ccad8a1ba266063a7f8c157e37b8f37fd8bc182eaca5fd5d56f1
+  - edge_id: nterm-tandem-mutation-rna-increase
+    subject: mut
+    predicate: increases
+    object: rna
+    mechanism: Joint D426A/D427A replacement increases reporter RNA relative to the WT N-terminal fragment.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30364987
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6294520/
+      snippet: strongly reduced as compared to
+      explanation: Figure6B,C N-term MUT versus N-term WT; not two single-residue tests.
+      cache_path: evidence/PF01936/nishimura-2018.txt
+      cache_sha256: 786f9c70f0e6ccad8a1ba266063a7f8c157e37b8f37fd8bc182eaca5fd5d56f1
+- graph_id: human-marf1-internal-polya-reporter-2018
+  title: MARF1 lowers an internally polyadenylated reporter RNA
+  scope: Nishimura2018 Figure6D-G; protected-poly(A) reporter in HeLa.
+  context: RL-5BoxB-A114-N40-HHR with self-cleaved ribozyme,lambdaN-HA MARF1 or delta-C,LacZ control,firefly
+    normalization,24h,at least3 experiments.
+  family_mapping: Human Q9Y4F3v6,PF01936 353-490 in full-length and1-1563 delta-C constructs; no mutation-specific
+    comparison in this reporter panel.
+  taxon: NCBITaxon:9606
+  scope_status: PHENOTYPIC
+  limitations: Protected internal poly(A) supports a route not requiring usual terminal deadenylation,
+    not a directly observed complete decay chain. GW182-SD lowers luciferase but does not lower reporter
+    RNA here.
+  nodes:
+  - node_id: wt
+    label: Full MARF1 tethering instead of LacZ
+    node_type: PERTURBATION
+  - node_id: dc
+    label: Delta-C MARF1 tethering instead of LacZ
+    node_type: PERTURBATION
+  - node_id: rna
+    label: Normalized A114-N40-HHR reporter RNA
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: wt-internal-polya-rna-reduction
+    subject: wt
+    predicate: decreases
+    object: rna
+    mechanism: Tethered full MARF1 lowers the reporter with an internal protected poly(A) tract relative
+      to LacZ.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30364987
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6294520/
+      snippet: strongly reduced as compared to
+      explanation: Figure6D reporter design,6F RNA bars,6G Northern and6E expression.
+      cache_path: evidence/PF01936/nishimura-2018.txt
+      cache_sha256: 786f9c70f0e6ccad8a1ba266063a7f8c157e37b8f37fd8bc182eaca5fd5d56f1
+  - edge_id: dc-internal-polya-rna-reduction
+    subject: dc
+    predicate: decreases
+    object: rna
+    mechanism: Delta-C MARF1 retains RNA-lowering activity in the protected-poly(A) context relative to
+      LacZ.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30364987
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6294520/
+      snippet: strongly reduced as compared to
+      explanation: Figure6F,G delta-C versus LacZ, with GW182-SD distinguishing RNA abundance from luciferase
+        activity.
+      cache_path: evidence/PF01936/nishimura-2018.txt
+      cache_sha256: 786f9c70f0e6ccad8a1ba266063a7f8c157e37b8f37fd8bc182eaca5fd5d56f1
+- graph_id: mouse-marf1-fragment-cleavage-2018
+  title: Mouse multidomain MARF1 preparation cleaves H49 RNA
+  scope: Yao2018 Figures1B,C and2D; source158-1381 WT and individual aspartate variants.
+  context: Sf9-expressed purified preparation,20nM49nt H49 RNA,20mM Tris-HCl pH7.5,150mM NaCl,1mM DTT,1mM
+    MgCl2,37C. Standard5min; Figure1B0-1uM and1C0.05uM timecourse; Figure2D enzyme concentration not explicit.
+  family_mapping: Mouse Q8BJ34v3,1730aa,PF01936 352-489. PDB5YAA source158-320 maps to canonical337-499
+    with only two known crystallization substitutions. Source D178/D215/D246/D272 map to D357/D394/D425/D451
+    within PF01936; do not extend the local offset to whole isoforms.
+  taxon: NCBITaxon:10090
+  scope_status: MECHANISTIC
+  limitations: Active source158-1381 includes RRM/LOTUS regions, not isolated NYN or full canonical1730aa.
+    Mutant purification gel does not exclude folding effects; lowered products are not an atomic catalytic
+    model. Main2D is the activity panel despite a Results2C citation; S5 gel is visiblyB despite captionC.
+  nodes:
+  - node_id: reaction
+    label: WT source158-1381 plus H49 and Mg
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8BJ34
+  - node_id: products
+    label: Shorter labeled H49 products
+    node_type: STATE
+  - node_id: d178a
+    label: Source D178A replacing WT in158-1381
+    node_type: PERTURBATION
+  - node_id: d215a
+    label: Source D215A replacing WT in158-1381
+    node_type: PERTURBATION
+  - node_id: d246a
+    label: Source D246A replacing WT in158-1381
+    node_type: PERTURBATION
+  - node_id: d272a
+    label: Source D272A replacing WT in158-1381
+    node_type: PERTURBATION
+  - node_id: processing
+    label: H49 processing relative to WT preparation
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mouse-fragment-rna-cleavage
+    subject: reaction
+    predicate: produces
+    object: products
+    mechanism: The purified multidomain preparation cleaves H49 RNA under the specified Mg-containing
+      conditions.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30333187
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6217404/
+      snippet: D178, D215, D246, and D272
+      explanation: Figure1B,C no-protein,dose and time comparisons; supplement pp3-5 purification and
+        buffer.1E separately supports internal cleavage of circular RNA.
+      cache_path: evidence/PF01936/yao-2018.txt
+      cache_sha256: faafa5f14ac0ec0f9ebfa25438dcd9fc6b03e65566b8d6939233c0805c00a2b6
+  - edge_id: d178a-rna-processing-reduction
+    subject: d178a
+    predicate: decreases
+    object: processing
+    mechanism: Source D178A lowers H49 cleavage relative to WT; local sequence mapping identifies canonical
+      D357.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30333187
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6217404/
+      snippet: D178, D215, D246, and D272
+      explanation: Figure2D D178A versus WT,with purification gel inS5 and mapping in identity ledger.
+      cache_path: evidence/PF01936/yao-2018.txt
+      cache_sha256: faafa5f14ac0ec0f9ebfa25438dcd9fc6b03e65566b8d6939233c0805c00a2b6
+  - edge_id: d215a-rna-processing-reduction
+    subject: d215a
+    predicate: decreases
+    object: processing
+    mechanism: Source D215A lowers H49 cleavage relative to WT; local mapping identifies canonical D394.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30333187
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6217404/
+      snippet: D178, D215, D246, and D272
+      explanation: Figure2D D215A versus WT; purified variant is not proof of equal folding.
+      cache_path: evidence/PF01936/yao-2018.txt
+      cache_sha256: faafa5f14ac0ec0f9ebfa25438dcd9fc6b03e65566b8d6939233c0805c00a2b6
+  - edge_id: d246a-rna-processing-reduction
+    subject: d246a
+    predicate: decreases
+    object: processing
+    mechanism: Source D246A lowers H49 cleavage relative to WT; local mapping identifies canonical D425.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30333187
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6217404/
+      snippet: D178, D215, D246, and D272
+      explanation: Figure2D D246A versus WT under the source nuclease-assay protocol.
+      cache_path: evidence/PF01936/yao-2018.txt
+      cache_sha256: faafa5f14ac0ec0f9ebfa25438dcd9fc6b03e65566b8d6939233c0805c00a2b6
+  - edge_id: d272a-rna-processing-reduction
+    subject: d272a
+    predicate: decreases
+    object: processing
+    mechanism: Source D272A lowers H49 cleavage relative to WT; local mapping identifies canonical D451.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30333187
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6217404/
+      snippet: D178, D215, D246, and D272
+      explanation: Figure2D D272A versus WT; the biochemical fragment is not the mouse knockin genotype.
+      cache_path: evidence/PF01936/yao-2018.txt
+      cache_sha256: faafa5f14ac0ec0f9ebfa25438dcd9fc6b03e65566b8d6939233c0805c00a2b6
+- graph_id: mouse-marf1-lotus-truncation-2018
+  title: A shorter mouse construct has reduced RNA-processing activity
+  scope: Yao2018 Figure1F; source158-690 compared with158-1381.
+  context: Matched0.1/0.5uM preparations,20nM H49,1mM MgCl2,Tris pH7.5,150mM NaCl,1mM DTT,37C5min. Longer
+    fragment from Sf9; shorter fragment from E.coli with His6-SUMO removed.
+  family_mapping: Q8BJ34v3 PF01936 352-489 maps within source158-320 in both constructs. The deleted source691-1381
+    segment includes LOTUS domains and lies outside NYN; whole-construct comparison,not an isolated-domain
+    knockout.
+  taxon: NCBITaxon:10090
+  scope_status: PHENOTYPIC
+  limitations: The experiment supports a preparation-dependent activity difference,not a direct LOTUS-catalysis
+    step. Different expression hosts,folding and RNA recruitment may contribute. Do not contradict human238-510
+    activity by generalizing this negative result.
+  nodes:
+  - node_id: shorter
+    label: Source158-690 instead of158-1381 preparation
+    node_type: PERTURBATION
+  - node_id: processing
+    label: H49 cleavage products at matched protein concentration
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: shortened-preparation-processing-reduction
+    subject: shorter
+    predicate: decreases
+    object: processing
+    mechanism: The shorter preparation yields much less cleaved RNA than the LOTUS-containing preparation
+      at matched protein concentration.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30333187
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6217404/
+      snippet: D178, D215, D246, and D272
+      explanation: Figure1F158-690 versus158-1381 lanes and supplement pp3-5 expression/purification conditions;
+        not LOTUS-only sufficiency.
+      cache_path: evidence/PF01936/yao-2018.txt
+      cache_sha256: faafa5f14ac0ec0f9ebfa25438dcd9fc6b03e65566b8d6939233c0805c00a2b6
+- graph_id: mouse-marf1-oocyte-resupply-2018
+  title: WT Marf1 resupply lowers Ppp2cb RNA in gene-trap oocytes
+  scope: Yao2018 Figure3C; fully-grown GV-stage Marf1GT/GT oocytes.
+  context: Approximately10pL WT Marf1 mRNA at500ng/uL per oocyte;40h culture with5uM milrinone maintaining
+    GV arrest;qRT-PCR,three sample sets. D272A mRNA is a non-rescuing comparison.
+  family_mapping: Mouse Marf1 Q8BJ34v3 carries PF01936 352-489; source D272 maps locally to canonical
+    D451. Whole Marf1 mRNA resupply,not isolated NYN delivery; whole-isoform sequence equivalence remains
+    unchecked.
+  taxon: NCBITaxon:10090
+  scope_status: PHENOTYPIC
+  limitations: Steady-state Ppp2cb RNA reduction is not direct proof of cleavage of that transcript. Native
+    targets and possible transcriptional effects remain unresolved; no edge joins this readout to meiotic
+    rescue under GV-arrest culture.
+  nodes:
+  - node_id: wt
+    label: WT Marf1 mRNA resupply versus untreated gene-trap oocytes
+    node_type: PERTURBATION
+  - node_id: ppp2cb
+    label: Ppp2cb steady-state RNA abundance
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: resupply-ppp2cb-reduction
+    subject: wt
+    predicate: decreases
+    object: ppp2cb
+    mechanism: WT Marf1 resupply lowers the validated Ppp2cb RNA readout relative to untreated gene-trap
+      oocytes; D272A resupply does not reproduce the decrease.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30333187
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6217404/
+      snippet: D178, D215, D246, and D272
+      explanation: Figure3C Ppp2cb bars; supplement pp6-7 mRNA injection,culture and qPCR. RNA-seq population
+        effects are not all treated as direct substrates.
+      cache_path: evidence/PF01936/yao-2018.txt
+      cache_sha256: faafa5f14ac0ec0f9ebfa25438dcd9fc6b03e65566b8d6939233c0805c00a2b6
+- graph_id: mouse-marf1-knockin-phenotypes-2018
+  title: Marf1 D272A knockin changes reproductive and oocyte readouts
+  scope: Yao2018 Figures4,5A-B andS6; homozygous knockin versus WT females.
+  context: B6DBA2-background engineered allele includes two synonymous marker changes. Three females/genotype
+    mated from6weeks to proven-fertile males; main4C8months versus supplement8-10months. Fully-grown GV
+    oocytes for RNA/foci; ovulated complexes for stage assessment.
+  family_mapping: Source Marf1 D272A maps to canonical Q8BJ34v3 D451 within PF01936 352-489 through local
+    PDB5YAA mapping. Whole-animal allele is not purified NYN and is distinct from the crystallographic
+    substitutions.
+  taxon: NCBITaxon:10090
+  scope_status: PHENOTYPIC
+  limitations: These are parallel genotype effects,not a LINE1-to-damage-to-infertility causal chain.
+    MARF1 protein increases despite unchanged Marf1 RNA. Ovulation is not abolished; compound GT/D272A
+    also has the reproductive phenotype but does not exclude every background alternative. GammaH2AX is
+    a marker,not direct transposition measurement.
+  nodes:
+  - node_id: knockin
+    label: Homozygous source D272A knockin instead of WT
+    node_type: PERTURBATION
+  - node_id: offspring
+    label: Offspring production during female mating assay
+    node_type: PHENOTYPE
+  - node_id: maturation
+    label: Meiotic maturation of ovulated oocytes beyond GV
+    node_type: PHENOTYPE
+  - node_id: line1
+    label: Line1 RNA abundance in GV oocytes
+    node_type: PHENOTYPE
+  - node_id: iap
+    label: Iap RNA abundance in GV oocytes
+    node_type: PHENOTYPE
+  - node_id: foci
+    label: GammaH2AX-positive focus counts in GV oocytes
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: knockin-offspring-reduction
+    subject: knockin
+    predicate: decreases
+    object: offspring
+    mechanism: The homozygous knockin females produce no offspring in the tested mating interval; this
+      is a distal organism-level consequence,not direct nuclease chemistry.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30333187
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6217404/
+      snippet: D178, D215, D246, and D272
+      explanation: Figure4C mating outcome and supplement pp2-3; GT/D272A comparator supports locus association
+        without proving all intermediates.
+      cache_path: evidence/PF01936/yao-2018.txt
+      cache_sha256: faafa5f14ac0ec0f9ebfa25438dcd9fc6b03e65566b8d6939233c0805c00a2b6
+  - edge_id: knockin-meiotic-maturation-reduction
+    subject: knockin
+    predicate: decreases
+    object: maturation
+    mechanism: Ovulated knockin oocytes retain immature GV features rather than normal mature features,indicating
+      impaired meiotic progression without an asserted RNA-to-meiosis intermediate.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30333187
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6217404/
+      snippet: D178, D215, D246, and D272
+      explanation: Figure4D-G andS6C histology; ovulation occurs and is not modeled as absent.
+      cache_path: evidence/PF01936/yao-2018.txt
+      cache_sha256: faafa5f14ac0ec0f9ebfa25438dcd9fc6b03e65566b8d6939233c0805c00a2b6
+  - edge_id: knockin-line1-rna-increase
+    subject: knockin
+    predicate: increases
+    object: line1
+    mechanism: The knockin increases steady-state Line1 RNA in sampled GV oocytes without demonstrating
+      direct RNA cleavage or transposition frequency.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30333187
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6217404/
+      snippet: D178, D215, D246, and D272
+      explanation: Figure5A Line1 qRT-PCR,knockin versus WT; supplement p7 sampling.
+      cache_path: evidence/PF01936/yao-2018.txt
+      cache_sha256: faafa5f14ac0ec0f9ebfa25438dcd9fc6b03e65566b8d6939233c0805c00a2b6
+  - edge_id: knockin-iap-rna-increase
+    subject: knockin
+    predicate: increases
+    object: iap
+    mechanism: The knockin increases steady-state Iap RNA in GV oocytes; the causal molecular path remains
+      unresolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30333187
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6217404/
+      snippet: D178, D215, D246, and D272
+      explanation: Figure5A Iap qRT-PCR,knockin versus WT; distinct from the gene-trap comparison.
+      cache_path: evidence/PF01936/yao-2018.txt
+      cache_sha256: faafa5f14ac0ec0f9ebfa25438dcd9fc6b03e65566b8d6939233c0805c00a2b6
+  - edge_id: knockin-gammah2ax-foci-increase
+    subject: knockin
+    predicate: increases
+    object: foci
+    mechanism: Knockin GV oocytes have more gammaH2AX-positive foci under matched imaging conditions;
+      no direct edge from retrotransposon RNA or measured transposition is inferred.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30333187
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6217404/
+      snippet: D178, D215, D246, and D272
+      explanation: Figure5B images/focus-count bins and supplement p7 staining; explicitly a DNA-damage-associated
+        marker.
+      cache_path: evidence/PF01936/yao-2018.txt
+      cache_sha256: faafa5f14ac0ec0f9ebfa25438dcd9fc6b03e65566b8d6939233c0805c00a2b6
+curation_events:
+- timestamp: '2026-10-12T04:50:30Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Add scoped MARF1 causal contexts for PF01936 without historical NYN cross-family transfers.
+  history_record: history/records/PF01936/2026-10-12T045030Z-codex-eba42f.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T05:05:20Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of mapped MARF1 causal contexts for PF01936.
+  history_record: history/records/PF01936/2026-10-12T050520Z-codex-4654b7.yaml
+  event_index: 0
+  llm_assisted: true
