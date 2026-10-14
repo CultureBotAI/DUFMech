@@ -1,0 +1,41 @@
+Rosenthal et al. 2013, PMID23474714, doi:10.1038/nsmb.2521
+https://www.nature.com/articles/nsmb.2521
+Public author manuscript: https://www.biochem-caflisch.uzh.ch/sites/default/files/publist/pdfs/NatureRosenthal2013.pdf
+Publisher supplement: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fnsmb.2521/MediaObjects/41594_2013_BFnsmb2521_MOESM9_ESM.pdf
+Inspected 2026-10-11 UTC: relevant Results, Discussion, Online Methods;
+main Figure1/page503 and Methods visually inspected. Supplementary Figure1c,d
+and complete caption visually inspected on PDF pages3-4 (printed pages2-3).
+The supplement begins with a correction notice for MacroD2 Ile189 in Figure4e;
+that corrected human modeling result is not an Af1521 observed causal step.
+Main PDF SHA256: cf6ca065b80774ab9292be0445cc87fa197dd3378360b02d31d243e511a6f6c2
+Supplement PDF SHA256: 31cfcc3745605d95651758103d4819e3152933e3c9d6b015899f56344bbb6dae
+Copyright2013 Nature. Minimal quotation; remaining content is curator notes.
+
+Results quote: "Af1521 was also active"
+Supplementary Figure1c shows Af1521 addition reducing32P on ARTD10/PARP10
+catalytic domain818-1025, with Coomassie protein bands retained. Control and
+MacroH2A1.1 retain stronger signal; MacroD2 and C6orf130 are separate active
+comparators. No G888W designation is attached to this substrate panel; the
+G888W panel in main Figure1a is not assigned to this Af1521 experiment.
+Main Figure1b shows about45% modification remaining for Af1521, not complete
+removal: n=2 independent experiments, mean+/-range. Main panel1a does not show
+an Af1521 lane. Af1521-specific free-product LC-MS, residue identity and exact
+glycosidic bond assignment are not supplied. Main PAR-negative Figure1c tests
+MacroD1/D2, not Af1521; no Af1521 PAR-hydrolase negative is inferred from it.
+
+The common protocol labels50pmol GST-ARTD10 with100nM32P-NAD,15min30C in
+10mM potassium phosphate pH7.2,10mM MgCl2,1.25mM DTT and1ug/ml each of
+pepstatin/bestatin/leupeptin. G50 filtration stops labeling/removes free NAD
+before treatment. The described15min30C treatment specifies10pmol MacroD2,
+not an independently enumerated Af1521 dose. These are shared procedure
+conditions, not proof of every Af1521-specific reaction parameter.
+Macrodomains were cloned into pET28-GST, expressed in E. coli BL21 and purified
+on Ni Sepharose. Only MacroD2 tag cleavage is explicit. Af1521 tag state, vector
+termini and dose remain unresolved; the 2005 His6-cleavage protocol is not reused.
+
+Supplementary Figure1d retains radiolabeled ARTD10 with immobilized Af1521;
+the figure does not specify which high-/low-salt variant of the common binding
+protocol applies or supply a tag-only lane. This supporting binding result is
+not counted as a separately resolved causal mechanism. No human GSK3 cellular
+phenotype, simulated water trajectory or MacroD2 product identity is transferred
+to the archaeal protein or to all macrodomains.

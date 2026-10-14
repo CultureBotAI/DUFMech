@@ -1,0 +1,46 @@
+Li et al.2024, PMID39426726, inspected 2026-10-12 UTC.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11585767/supplementaryFiles
+Primary Figures4/5/7E and supplementS5/S11 visually inspected with Methods.
+
+Minimal exact Results quotation:
+"D10A-H166A"
+Exact Figure7E label: "D10A+H166R"
+Other evidence snippets use the exact protein-name token "Endo_dU".
+
+Paraphrased assay observations:
+- Figure7E has Blank, WT, D10A and double-mutant lanes. D10A retains
+  cleavage; the double preparation has much less23-nt product. Results
+  and supplementS11 call it D10A-H166A, but Figure7E says D10A+H166R.
+  S11 shows major bands of similar size for WT and mutants, not an assay
+  of native folding, active concentration or correct mutation sequence.
+  Preserve this preparation-level effect with unresolved H166 identity.
+  No H166 single-mutant lane establishes an independent H166 requirement.
+- Figure4 tests5-mM added metal salts and5/10/20/50-mM EDTA with
+  300-nM protein and30-nM dU ssDNA. Zinc conditions lose product;
+  authors report precipitation. This is not proven active-site zinc inhibition.
+  EDTA/no-added-metal activity does not establish an apoenzyme or exclude
+  tightly bound trace metal. No invented no-effect/activation edge for EDTA.
+- Figure5A reaction at65C yields less product than37C for each protein,
+  with little activity at still higher temperatures. These purified recombinant
+  preparations do not prove inactivity of native AfuEndo_dU in its thermophile.
+- Figure5B400-mM versus200-mMNaCl reduces product for both enzymes.
+  Caption/Methods specify50,100,200,400,800,1000mM; first panel label
+  appears5mM. The curated comparison does not depend on that first lane.
+  BufferC lacks salt before addition and has no added magnesium.
+- Figure5C/Methods testpH5-10, although Results/Discussion say4-10.
+  Activity atpH4 is not demonstrated by the inspected panel.
+- SupplementS5B tests65C protein preincubation followed by cleavage at
+  37C60min. Ten-minute preincubation loses product relative to zero-time
+  control. This is distinct from running the reaction itself at65C.
+  Caption lists0,10,20,30,40,50min while panel endpoint says60min;
+  the first post-zero interval is unambiguous within the reported series,
+  but exact later intervals remain discrepant. S5A retains cleavage after
+ 37C preincubation. No direct denaturation/refolding measurement is shown.
+- Except this preincubation assay, condition experiments use30-min
+  reactions with300-nM protein/30-nM substrate; temperature, salt and
+  zinc comparisons are separate controlled experiments, not a joint treatment.
+
+All these effects retain UNRESOLVED molecular directness. Structural analogy,
+motif conservation and predicted uracil pocket are contextual proposals,
+not directly observed binding or a resolved catalytic residue mechanism.

@@ -1,0 +1,282 @@
+pfam_id: PF01128
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01128
+causal_graphs:
+  - graph_id: ecoli-ispd-preparative-cdpme
+    title: Purified E. coli IspD produces CDP-ME
+    scope: Recombinant ygbP from pNCOygbP in XL1-blue, purified in the 1999 study. This is an intact enzyme assay, not an isolated Pfam fragment or a plant pathway experiment.
+    context: 225 ug enzyme, 46 mM each MEP and CTP, 10 mM MgCl2, 100 mM Tris-HCl pH 8, 0.7 ml, 37 C for 1 h; HPLC purification and NMR product identification.
+    family_mapping: Q46893/ISPD_ECOLI, ispD/ygbP/b2747, 236-aa K12 reference, sequence version 3; PF01128 spans 8-229. UniProt and InterPro sequences match. The paper reports initiator-methionine removal and an N-terminal sequence consistent with ygbP. Exact donor strain and complete plasmid sequence are not independently resolved.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:562
+    limitations: NMR supports product identity, not a directly observed transition state. Raw spectra and preparative replicate/control details remain unverified. Partial-preparation nucleotide promiscuity, recombinant coupled-assay signals and plant label incorporation are not equivalent experiments or independently identified products.
+    nodes:
+      - node_id: purified-ispd-with-mep-ctp-magnesium
+        label: Purified IspD with MEP, CTP and magnesium
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:Q46893
+      - node_id: nmr-supported-cdpme
+        label: HPLC-isolated CDP-ME identified by NMR
+        node_type: STATE
+    edges:
+      - edge_id: ispd-system-produces-cdpme
+        subject: purified-ispd-with-mep-ctp-magnesium
+        predicate: produces
+        object: nmr-supported-cdpme
+        mechanism: The joint preparative reaction yields CDP-ME. Its agreement with the independently characterized partial-preparation product supports this chemical endpoint without resolving each phosphate-transfer microstep.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:10518523
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC18359/
+            snippet: NMR analysis confirmed
+            explanation: Preparation Methods, Table 2 and recombinant-product Results establish the adopted endpoint; Figure 4 supports purification scope.
+            cache_path: evidence/PF01128/rohdich-1999-ispd.txt
+            cache_sha256: 30a287239edc75e2aa4838681065664ae9f2cd13ca656befa3454fac25eeeef1
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q46893/entry/pfam/PF01128/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q46893/entry/pfam/PF01128/
+            snippet: 'Q46893 Pfam:PF01128 interval: 8-229, inclusive'
+            explanation: Exact current reference mapping; identity evidence is not an additional causal experiment.
+            cache_path: evidence/PF01128/IspD-identity.txt
+            cache_sha256: a02e6feca30c822186777b5cd6b3419da37fc9dd06539b73be40ce492d523b07
+  - graph_id: ecoli-ispd-ctp-isotope-trapping
+    title: CTP preloading increases early labeled CDP-ME formation
+    scope: Purified, thrombin-cleaved E. coli YgbP in the 2004 primary proof's Figure 3B pulse-chase comparison; not the distinct MEP-pulse experiment.
+    context: Pulse 2 mM labeled CTP with 2.2 mM enzyme, then chase with 10 mM each CTP/MEP, 100 mM Tris pH 8, 10 mM MgCl2, 2 mM DTT and 4.48 U pyrophosphatase. Compare label-in-pulse with label-in-chase control at early sampled times; TLC/phosphorimaging. Methods uses room-temperature preincubation and 5-s sampling.
+    family_mapping: The cited construct-source structure 1I52 entity 1 exactly matches Q46893's 236-aa sequence, including PF01128 at 8-229. pHIS8-ygbP is expressed in BL21(DE3), then tag-cleaved for purified assays. Exact cleavage remnant and every later clone sequence remain unverified.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:562
+    limitations: The inspected copy has lettered proof pages and placeholder publication fields; final tables/figures were not compared. Figure 3's percent-axis scale conflicts with the prose's trapped fraction, so only direction is retained. A 40-s displayed series differs from the 50-s Methods duration. Isotope trapping supports the authors' ordered-binding interpretation but does not directly image binding or prove that MEP can never associate first.
+    nodes:
+      - node_id: labeled-ctp-in-pulse
+        label: Put labeled CTP in the enzyme pulse rather than the chase
+        node_type: PERTURBATION
+      - node_id: early-labeled-cdpme
+        label: Early labeled CDP-ME formation after addition of both substrates
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:Q46893
+    edges:
+      - edge_id: ctp-preloading-increases-early-label
+        subject: labeled-ctp-in-pulse
+        predicate: increases
+        object: early-labeled-cdpme
+        mechanism: The CTP-pulse curve rises ahead of the matched label-in-chase control. This is a controlled isotope-trapping effect, not an exact binding fraction, equilibrium Kd or observed atomic trajectory.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:15379557
+            source_url: https://citeseerx.ist.psu.edu/document?doi=47f611b82af525a30852494febee3418127613b0&repid=rep1&type=pdf
+            snippet: ordered, sequential mechanism
+            explanation: Primary proof pages D/E, Figure 3B and control Methods support the early-product comparison; the quotation is the authors' interpretation, not an additional observed step.
+            cache_path: evidence/PF01128/richard-2004-ispd-proof.txt
+            cache_sha256: b48884494a3641c9bee9e06af20c71df5694405999736b49512da1f06fb4783b
+  - graph_id: ecoli-ispd-purified-ctp-series-mutants
+    title: Purified IspD substitutions lower reported CTP-series turnover
+    scope: K27S, D106E, T140V and R109A versus WT in the 2004 proof's purified, tag-cleaved preparations. Inactive unpurified mutants belong to a separate graph.
+    context: TLC product kinetics at 23 C; 5 ul with 398 nmol Tris-HCl, 40 nmol MgCl2, 79 nmol NaOH and 0.7 U pyrophosphatase; 6/12-min sampling. CTP varies, MEP is fixed separately for each mutant. Table 1 uses a CTP-inhibition fit, plus MEP-unsaturation corrections for T140V/R109A. At least two independent assay sets; variable protein doses keep consumption below 10%.
+    family_mapping: Q46893 and 1I52 canonical sequences match; PF01128 spans 8-229 and contains K27, D106, R109 and T140. The experiments concern full-length enzyme from pHIS8-ygbP, not independent sufficiency of those residues or the isolated domain.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:562
+    limitations: These are reported fitted parameters, not direct binding affinities or observed transition-state stabilization. Final assay pH and complete clones remain unverified. Between-run variation, excluded fit outliers and substrate-inhibition corrections matter. The proof footnote says T104V where the main row says T140V; K27S's corrected MEP and CTP values differ and are not silently averaged. Final publication comparison remains open.
+    nodes:
+      - node_id: k27s-purified
+        label: K27S instead of WT in purified kinetics
+        node_type: PERTURBATION
+      - node_id: d106e-purified
+        label: D106E instead of WT in purified kinetics
+        node_type: PERTURBATION
+      - node_id: t140v-purified
+        label: T140V instead of WT in purified kinetics
+        node_type: PERTURBATION
+      - node_id: r109a-purified
+        label: R109A instead of WT in purified kinetics
+        node_type: PERTURBATION
+      - node_id: reported-ctp-series-turnover
+        label: Reported CTP-series turnover from labeled CDP-ME kinetics
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:Q46893
+    edges:
+      - edge_id: k27s-decreases-ctp-turnover
+        subject: k27s-purified
+        predicate: decreases
+        object: reported-ctp-series-turnover
+        mechanism: Table 1 reports K27S at 2.05 versus WT 54.1 per second in the CTP series. Residual activity is retained; neither absolute inactivity nor a unique lysine chemical role is asserted.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:15379557
+            source_url: https://citeseerx.ist.psu.edu/document?doi=47f611b82af525a30852494febee3418127613b0&repid=rep1&type=pdf
+            snippet: Table 1
+            explanation: Proof page F, K27S and WT CTP columns; purification and kinetic Methods on page D. Figure 5 instead uses the corrected MEP comparison.
+            cache_path: evidence/PF01128/richard-2004-ispd-proof.txt
+            cache_sha256: b48884494a3641c9bee9e06af20c71df5694405999736b49512da1f06fb4783b
+      - edge_id: d106e-decreases-ctp-turnover
+        subject: d106e-purified
+        predicate: decreases
+        object: reported-ctp-series-turnover
+        mechanism: D106E has lower reported CTP-series turnover than WT, 0.93 versus 54.1 per second. This does not directly establish which binding, conformational or chemical step changed.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:15379557
+            source_url: https://citeseerx.ist.psu.edu/document?doi=47f611b82af525a30852494febee3418127613b0&repid=rep1&type=pdf
+            snippet: Table 1
+            explanation: Proof page F, D106E and WT CTP columns; substantial between-run uncertainty is retained in the assessment.
+            cache_path: evidence/PF01128/richard-2004-ispd-proof.txt
+            cache_sha256: b48884494a3641c9bee9e06af20c71df5694405999736b49512da1f06fb4783b
+      - edge_id: t140v-decreases-ctp-turnover
+        subject: t140v-purified
+        predicate: decreases
+        object: reported-ctp-series-turnover
+        mechanism: The T140V row gives corrected CTP-series turnover of 1.8 versus WT 54.1 per second. The additional correction for unsaturating MEP is part of this estimate, not an independently observed catalytic constant.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:15379557
+            source_url: https://citeseerx.ist.psu.edu/document?doi=47f611b82af525a30852494febee3418127613b0&repid=rep1&type=pdf
+            snippet: Table 1
+            explanation: Proof page F, T140V row and footnote c; the separate T104V wording discrepancy remains unresolved.
+            cache_path: evidence/PF01128/richard-2004-ispd-proof.txt
+            cache_sha256: b48884494a3641c9bee9e06af20c71df5694405999736b49512da1f06fb4783b
+      - edge_id: r109a-decreases-ctp-turnover
+        subject: r109a-purified
+        predicate: decreases
+        object: reported-ctp-series-turnover
+        mechanism: Corrected R109A CTP-series turnover is 0.26 versus WT 54.1 per second. The measured product kinetics and model correction support a decrease, not a directly observed hydrogen-bond network or universal binding defect.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:15379557
+            source_url: https://citeseerx.ist.psu.edu/document?doi=47f611b82af525a30852494febee3418127613b0&repid=rep1&type=pdf
+            snippet: Table 1
+            explanation: Proof page F, R109A CTP column and footnote c; distinct from the MEP-series estimate.
+            cache_path: evidence/PF01128/richard-2004-ispd-proof.txt
+            cache_sha256: b48884494a3641c9bee9e06af20c71df5694405999736b49512da1f06fb4783b
+  - graph_id: ecoli-ispd-crude-extract-mutant-effects
+    title: Five IspD substitutions reduce crude-extract CDP-ME production
+    scope: BL21(DE3) extracts expressing D106A, D106N, K213S, K27A or T165V, compared with WT, in the 2004 proof. These variants were not further purified. PHENOTYPIC denotes the biochemical assay effect without a resolved molecular cause.
+    context: 217 nmol labeled MEP, 81.3 nmol CTP, 400 nmol Tris-HCl, 40 nmol MgCl2, 79 nmol NaOH and a nominal 1-ug YgbP-containing crude sample in 5 ul; 23 C, 1/15 h. TLC background from a blank lacking YgbP is subtracted. Exact protein-normalization basis and final assay pH remain unresolved.
+    family_mapping: Intended substitutions map to Q46893's PF01128 interval 8-229; the cited 1I52 reference sequence matches. Unlike purified kinetics, the crude screen precedes His8-tag cleavage. Complete mutant clone sequences are not independently verified.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:562
+    limitations: No activity was detected under the reported screen, not proven chemically impossible under all conditions. Directness is UNRESOLVED because expression, soluble yield, folding and background enzymes can contribute. D106/T165 variants partly form inclusion bodies. The source's sensitivity estimate does not supply independent mutant-specific detection limits or folded-protein controls. Proof-only full-text access remains explicit.
+    nodes:
+      - node_id: d106a-crude
+        label: Express D106A instead of WT
+        node_type: PERTURBATION
+      - node_id: d106n-crude
+        label: Express D106N instead of WT
+        node_type: PERTURBATION
+      - node_id: k213s-crude
+        label: Express K213S instead of WT
+        node_type: PERTURBATION
+      - node_id: k27a-crude
+        label: Express K27A instead of WT
+        node_type: PERTURBATION
+      - node_id: t165v-crude
+        label: Express T165V instead of WT
+        node_type: PERTURBATION
+      - node_id: crude-extract-cdpme-output
+        label: Detected labeled CDP-ME formation in the crude-extract screen
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:Q46893
+    edges:
+      - edge_id: d106a-lowers-crude-output
+        subject: d106a-crude
+        predicate: decreases
+        object: crude-extract-cdpme-output
+        mechanism: D106A gives no detected product activity relative to the active WT screen; this does not isolate an elementary chemical defect.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:15379557
+            source_url: https://citeseerx.ist.psu.edu/document?doi=47f611b82af525a30852494febee3418127613b0&repid=rep1&type=pdf
+            snippet: inactive
+            explanation: Proof page E crude-extract Results and page F Table 1; not a purified D106A kinetic measurement.
+            cache_path: evidence/PF01128/richard-2004-ispd-proof.txt
+            cache_sha256: b48884494a3641c9bee9e06af20c71df5694405999736b49512da1f06fb4783b
+      - edge_id: d106n-lowers-crude-output
+        subject: d106n-crude
+        predicate: decreases
+        object: crude-extract-cdpme-output
+        mechanism: D106N gives no detected product activity in this extract comparison; abundance and folding are not excluded as contributors.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:15379557
+            source_url: https://citeseerx.ist.psu.edu/document?doi=47f611b82af525a30852494febee3418127613b0&repid=rep1&type=pdf
+            snippet: inactive
+            explanation: Proof page E crude-extract Results and page F Table 1; no purified D106N curve is claimed.
+            cache_path: evidence/PF01128/richard-2004-ispd-proof.txt
+            cache_sha256: b48884494a3641c9bee9e06af20c71df5694405999736b49512da1f06fb4783b
+      - edge_id: k213s-lowers-crude-output
+        subject: k213s-crude
+        predicate: decreases
+        object: crude-extract-cdpme-output
+        mechanism: K213S lowers detected extract product formation below the screen's reported activity detection; charge stabilization is an interpretation, not the measured endpoint.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:15379557
+            source_url: https://citeseerx.ist.psu.edu/document?doi=47f611b82af525a30852494febee3418127613b0&repid=rep1&type=pdf
+            snippet: inactive
+            explanation: Proof page E screen and page F Table 1, with the no-further-purification qualification.
+            cache_path: evidence/PF01128/richard-2004-ispd-proof.txt
+            cache_sha256: b48884494a3641c9bee9e06af20c71df5694405999736b49512da1f06fb4783b
+      - edge_id: k27a-lowers-crude-output
+        subject: k27a-crude
+        predicate: decreases
+        object: crude-extract-cdpme-output
+        mechanism: K27A has no detected extract activity in the screen. It is not conflated with K27S, which retains purified activity.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:15379557
+            source_url: https://citeseerx.ist.psu.edu/document?doi=47f611b82af525a30852494febee3418127613b0&repid=rep1&type=pdf
+            snippet: inactive
+            explanation: Proof page E and Table 1 distinguish K27A screening from the separately purified K27S mutant.
+            cache_path: evidence/PF01128/richard-2004-ispd-proof.txt
+            cache_sha256: b48884494a3641c9bee9e06af20c71df5694405999736b49512da1f06fb4783b
+      - edge_id: t165v-lowers-crude-output
+        subject: t165v-crude
+        predicate: decreases
+        object: crude-extract-cdpme-output
+        mechanism: T165V gives no detected extract activity. Its aggregation qualification prevents assigning the entire decrease to a particular substrate contact.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:15379557
+            source_url: https://citeseerx.ist.psu.edu/document?doi=47f611b82af525a30852494febee3418127613b0&repid=rep1&type=pdf
+            snippet: inactive
+            explanation: Proof page E describes inclusion bodies and screen results; Table 1's inactive label is not a purified turnover fit.
+            cache_path: evidence/PF01128/richard-2004-ispd-proof.txt
+            cache_sha256: b48884494a3641c9bee9e06af20c71df5694405999736b49512da1f06fb4783b
+discussions:
+  - discussion_id: ispd-final-publication-and-divergent-members
+    prompt: Resolve proof-version and construct details and extend IspD-family contexts without transferring one member's substrate specificity.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Eleven experimental edges cover E. coli product formation, CTP isotope trapping, purified kinetics and unpurified screens. Molecular interpretations and distinct-function homologs require separate assessment.
+    evidence:
+      - reference: PMID:15379557
+        supports: PARTIAL
+        evidence_source: primary_proof_and_published_abstract
+        explanation: Primary proof Methods, Table 1 and Figures 3-5 were inspected; final publisher full text was inaccessible through the attempted route.
+    notes: Compare the proof with final figures/tables, reconcile isotope-axis and concentration inconsistencies, and establish exact cleavage junctions and clone sequences. Review uncurated inhibition, cellular and other-member experiments, including TarI and human CRPPA candidates only after member mapping. Do not equate a structural contact with observed transition-state chemistry or the plant-label experiment with a resolved bacterial chain. Partial same-agent scientific review; remain IN_PROGRESS.
+    posed_by: Codex
+    posed_date: '2026-10-11'

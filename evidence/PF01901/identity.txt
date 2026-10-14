@@ -1,0 +1,49 @@
+PF01901 / O_anti_polymase / former DUF70 identity ledger
+Inspected 2026-10-11 UTC. Curator-authored factual assessment, not source prose.
+
+Frozen identity: PF01901.22, Putative O-antigen polymerase, EX_DUF,
+InterPro IPR002760. Previous identifier DUF70. Frozen counters are 237 proteins,
+285 matches, 164 proteomes, 385 taxa, zero structures and 186 AlphaFold models.
+Source data/worklists/interpro-pfam-duf-2026-10-10.json, SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+These source bytes and imported identity are unchanged.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01901/
+Current family description remains tentative and archaeal-focused; literature
+is null. Clan CL0499 membership does not imply identical catalytic functions.
+https://rest.uniprot.org/uniprotkb/search?query=xref:pfam-PF01901&format=json&size=500
+The inspected response contains 237 entries: 235 unreviewed and two reviewed;
+136 archaeal, 100 bacterial and one eukaryotic entry by first lineage category.
+No FUNCTION or CATALYTIC ACTIVITY comments occur in this response. This bounded
+annotation query is not an exhaustive literature search or experimental verdict.
+Many submitted/recommended names are inference-only, including ProtNLM names.
+
+Reviewed Q57862/MJ0419 and Q57863/MJ0420 remain uncharacterized. Their sole
+UniProt citation is the 1996 genome sequence, PMID8688087, not a functional assay.
+Current UniProt sequence version1 exactly matches NCBI AAB98417.1 (354 aa) and
+AAB98408.1 (380 aa), respectively. Member-specific InterPro maps PF01901 at
+11-336 (score8.7e-98) and14-363 (score2.1e-65), inclusive, respectively.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01901/protein/uniprot/Q57862/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01901/protein/uniprot/Q57863/
+
+O85335 is O157 C664-1992 Wzy, sequence version1,394 aa; it exactly matches
+AAC32340.1 from AF061251. Its source PMID9673232 names orf2 as wzy by predicted
+topology. PCR specificity in that1998 paper is not a polymerization assay.
+Q8X4T7 is O157:H7 Sakai Wzy/ECs_2844,sequence version1,394 aa; it exactly matches
+BAB36267.1. O85335 and Q8X4T7 are NOT identical: residue234 is G versus S.
+Current InterPro assigns both to PF01901 at8-205,score0.041,nonrepresentative.
+This short, weak reported match is not a validated catalytic-domain boundary.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01901/protein/uniprot/O85335/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01901/protein/uniprot/Q8X4T7/
+
+Sheng2024 cites NZ_CP008957 as its genome-design reference. The inspected
+GenBank CP008957.1 CDS EDL933_3111,old locus Z3203,encodes AIG69277.1,394 aa,
+which exactly matches Q8X4T7. CDS nucleotide coordinates2873619-2874803 on the
+reverse strand are reference metadata, not the insertion junction.
+IMPORTANT: CP008957.1 source is EDL933,taxon155864,culture ATCC:700927,whereas
+the2020/2024 assays name ATCC43895. The study's cited reference supports a
+reference-level family mapping; neither this comparison nor the shared EDL933
+name independently sequences the tested culture or its wzy-Tn5 insertion.
+Do not assert exact mutant/domain boundaries or transfer effects to archaeal
+MJ0419/MJ0420. Q6LY80/MMP1111 carries a submitted modA name but only a genome
+reference in the inspected UniProt entry; no molybdate-transport edge is adopted.

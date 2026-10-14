@@ -1,0 +1,39 @@
+PMID:25707795; DOI:10.1038/nature14237. Accessed 2026-10-11.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4359072/
+Author-manuscript HTML SHA256 76bed3c1a1f6f87f590f9896e2d9d352b72ff2a3f244af76f4b480f63ab6ac09.
+Minimal exact source quotation: Disintegration assays
+
+Curator's assay facts, not a full-text reproduction:
+Donor: MG1655 Cas1/Cas2, purified separately with tags removed by the cited
+2014 procedure. Target pCRISPR: pUC19 plus BL21-AI CRISPR insert. Donor DNA:
+33-bp M13-derived duplex. Buffer:20mM HEPES pH7.5,25mM KCl,10mM MgCl2
+(or MnCl2 where specified),1mM DTT,10%DMSO;37C,1h.
+Radiolabel default:200nM complex,20nM protospacer,approximately5nM target;
+EDTA/SDS/proteinaseK deproteinization. Unlabeled Figure1:75nM proteins,
+50nM protospacer,7.5nM target. Other unlabeled assays normally200nM donor.
+At least three assay repetitions; representative gels, not fitted rates.
+
+Original Figures1,2,3 and ExtendedData2/3 visually inspected.
+Fig1B-E/Fig2B-C: joint WT proteins produce radiolabeled relaxed/linear DNA;
+component-omission and deproteinization controls retained. BandX is not
+radiolabeled integration product. Half-site species predominate; relaxed DNA
+does not uniquely establish full-site integration, and linear DNA can arise
+from independent half-site events. No completed chromosomal repair is inferred.
+Fig1C/E and ED3B/C: Cas1H208A and D221A lower integration; Cas2delta-beta6-beta7
+also loses activity. Cas2E9Q and Cas1K224A retain integration. The latter differs
+from cellular K224A in the 2014 study; do not label it universally inactive.
+ED2B:10mM Mn,0/50/100/200nM proteins. Cas1 alone has low integration and Cas2
+addition raises product. This is enhancement, not an absolute Cas2 requirement.
+Fig3A/B:both3prime ends phosphorylated lose detectable product; either isolated
+single strand also fails relative to the duplex. Single-end capping differs
+from dual capping. 5prime phosphate remains compatible.
+Fig3C:linearized pCRISPR lacks the supercoiled target's integration under this
+IHF-absent protocol. Empty supercoiled pUC19 supports integration. Do not infer
+that CRISPR sequence is required or that linear DNA is universally unusable.
+Fig2G/H:50nM Cas1,5nM synthetic Y-DNA,1h,37C releases33-bp labeled donor;
+Cas1 alone works in Mg and Mn, Cas2 alone fails. Optional Cas2 is not required
+for this assay. Minor smaller bands do not define a unique cleavage mechanism.
+
+ED5 caption/text describe target rejoining, but the linked f0010 image is
+actually the ED6 substrate panel. No ED5 visual verification or separate
+target-rejoining edge is claimed. See the gap ledger for the source mismatch.

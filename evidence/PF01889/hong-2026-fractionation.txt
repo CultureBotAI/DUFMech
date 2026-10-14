@@ -1,0 +1,34 @@
+Hong et al. 2026, PMID42641884, DOI10.1016/j.jbc.2026.113477.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC13631571/
+Accessed 2026-10-11; Results, Discussion and relevant Experimental procedures read.
+Original Figures2-5 visually inspected; supplementary documents not acquired.
+
+Minimal exact primary phrases:
+"significant decrease in lipoprotein hydrophobicity"
+"reduced overall abundance"
+"predominantly membrane-associated"
+
+Figure2: significant TX/AQ abundance differences only in boxplots; WT median
+log2FC5.59, aliA1.39, double1.37. These are filtered protein distributions, not
+the same protein's sixteenfold catalytic change. AliB comparison is nonsignificant
+(p0.98); prose ordering of WT/aliB medians is inconsistent, so no exact aliB
+median or increase edge is adopted. At-least-two-TM controls lack significant
+distribution differences. Retained signal-peptide hydrophobicity can keep a
+non-lipidated protein in TX. WT quantified87 predicted lipoproteins; across-strain
+denominator88. Figure3's54 strict plus7 additional candidates are not63 unique
+proteins; missing values restrict apparent mutant-specific conclusions.
+
+H53 derivatives,Hv-Cab45C. Proteomics Methods specify60mg initial total protein,
+50ug digests and three biological replicates; general extraction/lipid protocol
+uses80mg. MSstats median normalization, conditional imputation and BH correction
+shape the reported estimates; complete absence is not imputed into a measurement.
+Figure4: myc-tagged HVO_1705 has lower whole-lysate and membrane-associated
+signals with aliA/double deletion, with precursor remaining in soluble fraction;
+aliB retains membrane-associated precursor and mature forms. HVO_0844 remains
+membrane-associated. Two independent experiments; matched original-lysate
+fractions, not equal protein mass after fractionation. 231472g,30min,4C with
+repeated washes. Targeting versus degradation/clearance remains unresolved.
+Tagged overexpression HVO_1176 partitioning in2025 differs from endogenous2026
+proteomics; HVO_B0139 also misses the stringent validation threshold. Neither
+is silently converted into an all-substrate lipidation rule. No proteomic
+ArlA1-to-motility or HtpX-to-cleavage causal relay is experimentally established.

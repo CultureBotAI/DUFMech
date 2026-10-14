@@ -1,0 +1,22 @@
+Identity facts, accessed 2026-10-11; not causal evidence.
+https://rest.uniprot.org/uniprotkb/G5ED35.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/G5ED35/entry/pfam/PF01060/
+G5ED35 / TTR52_CAEEL: Caenorhabditis elegans, NCBITaxon:6239;
+ttr-52, F11F1.7; 135 residues, sequence version 1, entry version 59;
+MD5 d25b0c2e2c02bbf4c20f33071f6105d1. UniProt and InterPro sequences
+agree exactly.
+G5ED35 Pfam:PF01060 interval: 28-112, inclusive
+Reference V43, D51, D80 and N85 were checked directly inside that interval.
+The 1-20 secretion signal and C-terminal residues I113/L132 are outside
+the current Pfam match. The full-length secreted protein is not an isolated
+profile fragment; cleavage and fusion junctions require construct-specific
+qualification.
+
+The 2010 primary paper deposits ttr-52 cDNA HM130527 and genomic HM130528.
+https://www.ncbi.nlm.nih.gov/nuccore/HM130527.1
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=HM130527&retmode=xml
+HM130527.1 encodes ADO60153.1; its 135-aa translation was parsed from
+GenBank XML and matches G5ED35 exactly. This links the study's deposited
+sequence to the modern record; it does not independently sequence each
+mutant/transgene. sm211 is V43M, not a deletion. tm2078 in the 2012 study
+is a distinct deletion allele; its exact boundaries are not adopted here.

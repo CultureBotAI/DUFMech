@@ -1,0 +1,39 @@
+PF01865 / PhoU_div / former DUF47 identity assessment
+Inspected 2026-10-11. Factual extraction and curator assessment, not copied prose.
+
+Family source: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01865/
+PF01865 integrates into IPR018445 and retains the historical DUF47 description.
+The frozen October 10 record is preserved; EX_DUF is not experimental evidence
+for every member. PF01895/PhoU is a different family.
+
+Pap sources:
+https://rest.uniprot.org/uniprotkb/O30498.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01865/protein/uniprot/O30498/
+https://www.ncbi.nlm.nih.gov/protein/NP_384293.1
+O30498 sequence version 1, 214 aa, smc02862, Rhizobium/Sinorhizobium meliloti
+1021 (taxon 266834), exactly equals downloaded NP_384293.1. PF01865 spans
+4-212 inclusive. All sites considered here are inside that span. Reference
+residues independently checked: E54,D58,T74,P75,R78,D90,D93,H96,D160,E193,
+D197,D201. These are reference-sequence checks, not sequencing of archived
+experimental clones. Hsieh2017 Table2-4 defines the cloned pap-pit constructs.
+
+PitR sources:
+https://www.ncbi.nlm.nih.gov/nuccore/AP009351.1
+https://rest.uniprot.org/uniparc/search?query=BAF66904.1&format=json
+Newman reference NWMN_0632, BAF66904.1, is 205 aa at AP009351.1 bases
+714592-715209 on the positive strand, immediately before the annotated
+low-affinity phosphate transporter NWMN_0633. Its entire translation exactly
+matches UniParc UPI00000549A3; that sequence's Pfam feature is PF01865 2-202
+inclusive, integrated into IPR018445. Newman taxon 426430 is the tested strain
+named in Vermilya2026. The paper reports sequenced constructs; reference
+matching does not establish whole-genome identity of its laboratory stock.
+The current UniProtKB gene-name queries returned no entry; archive mapping,
+not absence of this protein or a different strain's accession, resolves it.
+
+Primary-study identity bridge: Vermilya2026 supplemental FigureS1 caption,
+PDF page3, explicitly names NWMN_0632 as PitR and NWMN_1296 as PhoU.
+Supplement TablesS2/S3 confirm Newman backgrounds and PitR plasmid design.
+
+PitR/phoU2 names are not proof that the conventional PhoU regulator or NptA's
+PhoU domain belongs to PF01865. Those other perturbations are retained only as
+explicit genetic background where needed, not as additional PF01865 proteins.

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01862
+  path: data/families/PF01862.yaml
+session:
+  id: 2026-10-11T161806Z-codex-6ec47e
+  timestamp: '2026-10-11T16:18:06Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review Mj-PdaD activity and unresolved maturation contribution
+  details: Same-agent partial scientific review retained three observed preparation-level
+    activity effects and one separate hypothetical processing contribution. Verified
+    reference, primers, construct numbering, primary table and figures; recorded inconclusive
+    processing-rate comparison and inaccessible original/Tk contexts. Keep IN_PROGRESS;
+    no independent endorsement or family completion.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T162025Z-pf01862-pvlargdc-activity-and-processing-limits/review.yaml

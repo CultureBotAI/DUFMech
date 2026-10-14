@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01128
+  path: curation/families/PF01128.yaml
+session:
+  id: 2026-10-11T091506Z-codex-f15b16
+  timestamp: '2026-10-11T09:15:06Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add scoped IspD product, isotope-trapping and mutant graphs
+  details: Inspected the 1999 primary article and 2004 primary proof, including Methods,
+    purification, isotope-trapping plots and kinetic table. Verified Q46893, PF01128
+    8-229 and the matching 1I52 reference sequence. Added eleven edges in four graphs,
+    with five crude-extract effects explicitly UNRESOLVED in directness. Retain proof-version,
+    numerical-label, folding and clone limitations; no atomic trajectory or family-wide
+    substrate transfer. New overlays, evidence hashes and quotations validate; guarded
+    regeneration and partial scientific review follow. Preserve frozen identity and
+    worklists.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC18359/
+  - https://pubmed.ncbi.nlm.nih.gov/15379557/

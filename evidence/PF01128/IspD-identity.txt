@@ -1,0 +1,27 @@
+PF01128 member identity, inspected 2026-10-11
+https://rest.uniprot.org/uniprotkb/Q46893.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q46893/entry/pfam/PF01128/
+https://data.rcsb.org/rest/v1/core/polymer_entity/1I52/1
+
+Q46893, ISPD_ECOLI, ispD/ygbP, b2747/JW2717; E. coli K12,
+NCBITaxon:83333. Sequence version 3, entry version 193, length 236.
+Sequence MD5: 3aafe2206d465d52770b771f2cda519c.
+Q46893 Pfam:PF01128 interval: 8-229, inclusive
+UniProt and InterPro sequences match exactly. PDB 1I52 entity 1's
+canonical deposited sequence also matches all 236 residues exactly.
+Direct residue checks: R19, R20, K27, D106, R109, T140, T165, K213.
+This supports reference mapping, not independent sequencing of every clone.
+
+The 1999 primary paper uses pNCOygbP in XL1-blue, reports removal of
+the initiator methionine, and identifies the gene by its N terminus.
+Its Figure 3 E. coli sequence was visually checked, not independently
+transcribed in full. The 2004 study cites the 1I52 structure's construct
+source, uses pHIS8-ygbP in BL21(DE3), and cleaves the tag for purified
+kinetics. Crude-extract mutants were assayed before that purification.
+Exact post-thrombin remnant and complete mutant clones remain unverified.
+The NcoI primer's ATGGCAACCACTCATTTG encodes the reference MATTHL start.
+
+Member-specific activity is not transferred to every PF01128 protein.
+HAMAP MF_02068 also maps ribitol-phosphate cytidylyltransferase TarI to
+PF01128; that rule is a distinct-function research lead, not an adopted
+TarI experiment: https://hamap.expasy.org/rule/MF_02068

@@ -1,0 +1,40 @@
+PF01871 AMMECR1 member identity. Inspected 2026-10-11.
+Frozen October10 source remains unchanged: IPR002733, EX_DUF, UNSCORED;
+7217 proteins,7346 matches,5587 proteomes,13329 taxa,58 architectures.
+Snapshot SHA256 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+Current domain observations are reference mappings, not assay-batch sequencing.
+
+Human Q9Y4X0 sequence version1,333 aa, equals NP_056180.1 translation
+from NM_015365.3. Pfam132-301 includes G177 and motif172-177 LRGCIG.
+SHA256 uppercase unwrapped sequence, no newline:
+7c16fe30b704fa31b641a458cc94a5816d9c7b9c00dee3162c57c882a0bcde81.
+The 2016 primary source names Origene RG212378/pCMV6-AC-GFP variant1.
+Published mutant primer changes CDS c.530G>A; translated reference comparison
+changes only G177D. This supports numbering, not independent sequencing of
+the transfection preparation. PROSITE119-313 and paper122-333 are not the
+same boundary as Pfam132-301. Q9Y4X0-3 lacks159-195; -4 lacks1-123.
+Do not transfer G177 numbering to those isoforms or AMMECR1L.
+https://rest.uniprot.org/uniprotkb/Q9Y4X0.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01871/protein/uniprot/Q9Y4X0/
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NM_015365.3&rettype=gb&retmode=text
+
+Zebrafish Q6PH60 sequence version1,309 aa, equals NP_956875.1 from
+NM_200581.1 and A0A8M1PBG5. Pfam109-277; taxon7955.
+SHA256 7ee70fc4a080416ab827fbc0ad8eb4bdce39af863b26e7ae7d8ceb940418bacd.
+Earlier author-manuscript alignment lists NP_956875.1. Wild-type TU
+embryos were splice-perturbed, not resequenced or domain-deleted.
+Human pCS2+ rescue insert is not independently sequence-verified here;
+NP_056180.1 grounds the human reference, not a verified rescue batch.
+https://rest.uniprot.org/uniprotkb/search?query=(gene_exact:ammecr1)%20AND%20(organism_id:7955)&format=json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01871/protein/uniprot/Q6PH60/
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NM_200581.1&rettype=gb&retmode=text
+
+Mouse Q9JHT5 sequence version1,344 aa, equals NP_062369.1 from
+NM_019496.4. Pfam143-312; taxon10090.
+SHA256 e723af4955adea4a78016bbdc6c066ef97e94f663b9dee132c5360d3b9917737.
+Q8K2F2 is a64-aa search result, not the full-length reference used here.
+A2lox ESC knockdown targets endogenous Ammecr1 transcript; exact siRNA
+sequences and assay-batch genotype were not independently verified.
+https://rest.uniprot.org/uniprotkb/search?query=(gene_exact:Ammecr1)%20AND%20(organism_id:10090)&format=json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01871/protein/uniprot/Q9JHT5/
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NM_019496.4&rettype=gb&retmode=text

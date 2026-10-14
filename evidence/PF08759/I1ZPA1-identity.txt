@@ -1,0 +1,16 @@
+Identity facts inspected 2026-10-11, not experimental mechanism evidence.
+Sources:
+https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-AFJ26875*&format=json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/I1ZPA1/entry/pfam/PF08759/
+
+UniProt accession: I1ZPA1
+Gene: galT1; locus: Spaf_1933; article name: dGT1
+EMBL protein: AFJ26875.1 (the article identifies AFJ26875)
+Organism: Streptococcus parasanguinis FW213
+NCBI taxon: 1114965
+Sequence version: 1; entry version: 60; length: 582 residues
+Sequence MD5: 3A1197E5DFB9E340FCA835B5C8325E01
+entry accession: PF08759
+PF08759 interval: 26-249 inclusive; integrated entry: IPR014869
+The assayed 1-272 construct includes this whole match and flanking residues.
+It is not identical to the modern Pfam boundary or the C-terminal GT-A domain.

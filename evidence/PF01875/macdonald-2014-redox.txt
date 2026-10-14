@@ -1,0 +1,27 @@
+MacDonald et al.2014, PMID24917593, DOI10.1126/scisignal.2004870.
+Inspected2026-10-11 via author thesis reprint,Anna Frei2015,chapter3.3.
+The chapter identifies the Science Signaling paper and permission to reprint.
+Printedpp94-95 Results,pp105-107 purification/assays,Figure4 p119;PDF97-98,
+108-110,122. Figure4 original reprint image visually inspected.
+https://edoc.unibas.ch/server/api/core/bitstreams/c0c17b7d-7fb3-449d-9a5c-4beb4c2168b2/content
+Minimal quotation: "Superoxide detection assays".
+
+Human pOPINF Memo,BL21(DE3),Ni-NTA,3C cleavage,SEC,reported>96% purity.
+Figure4D compares WT and H192A in50 uM CuCl2 with/without4 U SOD.
+H192A lowers the luminol signal but retains substantial response. SOD lowers
+both responses. The protein amount for this unpreloaded panel is not fully
+resolved from the inspected text;do not import the preloading recipe silently.
+Preloading in Methods uses5 uM Memo,50 uM metal,Tris pH6.8,30 min4 C,
+then>=3 h dialysis4 C;this is a separate Figure4E experiment.
+Luminol data were blank-corrected and reported as four independent experiments.
+Retain the observed mutant-dependent assay effect,not unqualified intrinsic
+Cu(II)-reductase catalysis. NMR controls from2024 cannot retrospectively
+establish this2014 mutant batch's folding or metal occupancy.
+
+Older proposed ROS generation contrasts with2022/2023 protection,which used
+different Cu:protein ratios,buffers,preparations and cellular readouts. The
+newer precipitation/free-Cu explanation is plausible,not directly proved for
+the older preparation. Cellular protrusion ROS and total-cell ROS are not
+equivalent endpoints. Figure4F has kcat32 versus8/s but kcat/Km7.6e5 versus
+8.1e5 for WT versus H192A;do not repeat prose implying superior WT efficiency
+from those numbers or treat kinetic Km as an equilibrium binding Kd.

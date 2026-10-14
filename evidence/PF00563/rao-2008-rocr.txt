@@ -1,0 +1,24 @@
+Reference: PMID:18344366; doi:10.1128/JB.00165-08
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC2394985/
+Accessed: 2026-10-11 UTC
+Inspected: methods, Results, Table 1 including footnotes, Figures 3 and 4.
+
+Minimal excerpts (HTML superscripts separated by spaces):
+"RocR readily hydrolyzes cyclic di-GMP"
+"Both mutants showed >10 4 -fold reduction"
+
+Curator transcription of measured facts, not a quotation:
+PAO1 PA3947 was cloned into pET-26(b+) and expressed as His6-tagged
+full-length RocR in E. coli BL21(DE3). Final tagged sequence was not verified.
+HPLC monitored 5'-pGpG formation; MALDI-MS gave product mass 708.108
+(calculated 708.11). Initial-rate measurements kept conversion below 10%.
+Table 1 conditions: 100 mM Tris pH 8.0, 23 C, 20 mM KCl, 25 mM MgCl2.
+WT kcat = 0.67 +/- 0.03 /s; E352Q = (1.1 +/- 0.1) x 10^-5 /s;
+reported decrease 6.1 x 10^4-fold. Higher mutant enzyme concentrations
+permitted quantification. cAMP/cGMP negative substrate tests are reported.
+Figure 4 was visually inspected: WT and E352Q have distinct log-kcat
+axis scales. Figure 3 uses different metal conditions, 20-min endpoints
+and E352A, not E352Q; its bars are not the Table 1 initial rates.
+No obvious aggregation was reported; subtle structural effects remain possible.
+These observations support a reaction and substitution effect, not proof of
+the proposed general-base microstep, phosphorylation or cellular phenotype.

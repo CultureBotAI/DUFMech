@@ -1,0 +1,17 @@
+Retrieved 2026-10-11. Accession facts and curator comparisons, not paper quotations.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01256/
+PF01256 Carb_kinase; InterPro IPR000631. Frozen PF01256.23 history retains UPF0031 and carb_kinase. A historical carbohydrate-kinase label does not establish substrate specificity.
+https://rest.uniprot.org/uniprotkb/P31806.json
+UniProtKB:P31806; NNR_ECOLI; nnr/yjeF; b4167/JW4125. E. coli K12 reference, taxon 83333; 515 aa, sequence version 2, entry version 177; sequence MD5 132ab4cc017bcccd2caabbb854d9d08f.
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P31806/entry/pfam/PF01256/
+P31806 Pfam:PF01256; domain interval: 258-496, inclusive.
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P31806/entry/pfam/PF03853/
+P31806 has a separate PF03853 match at 40-199. The paper's N-terminal structural region 1-245 is not the Pfam interval. Epimerization is not assigned to isolated PF01256.
+https://rest.uniprot.org/uniprotkb/P36059.json
+UniProtKB:P36059; NNRD_YEAST; NNR2/YKL151C/YKL606. S. cerevisiae S288c reference, taxon 559292; 337 aa, sequence version 1, entry version 177; sequence MD5 3c327e3e927e5541ededb89ec01075f2.
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P36059/entry/pfam/PF01256/
+P36059 Pfam:PF01256; domain interval: 35-305, inclusive.
+Both UniProt sequences exactly match their InterPro responses. Translation of the coding parts of Table S1 primers agrees locally with MTDHTMK/ESSNSAP-stop for YjeF and MLAELSHR/VFAKLFG-stop for YKL151C. This checks termini, not the entire historical insert. The study used genomic DNA from boiled cells without specifying template strains and N-terminal His-tagged pET100/D-Topo constructs; exact fusion junctions remain unverified.
+https://www.ncbi.nlm.nih.gov/protein/NP_012771.1
+https://www.ncbi.nlm.nih.gov/protein/NP_418588.1
+The paper's cited RefSeq NP_012771.1 exactly matches P36059; NP_418588.1 exactly matches P31806. NCBI FASTA comparisons were performed on the full sequences, not names alone. Current RefSeq annotations do not independently verify the historical experimental strains.

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF00892
+  path: curation/families/PF00892.yaml
+session:
+  id: 2026-10-11T075200Z-codex-15f104
+  timestamp: '2026-10-11T07:52:00Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate YdeD peroxide-growth deletion and plasmid-expression effects
+  details: Added one PHENOTYPIC graph with three INDIRECT OBSERVED edges for BW25113/JW5250
+    serial-spot comparisons in the 2010 primary paper. Verified P31125 and both PF00892
+    intervals against exact UniProt/InterPro sequence agreement. Figure 1 was visually
+    inspected. Kept the cysteine-shuttle proposal, multi-gene pDES experiments, clone/access
+    limits and family coverage distinct. Status remains IN_PROGRESS; no publication
+    or independent scientific endorsement.

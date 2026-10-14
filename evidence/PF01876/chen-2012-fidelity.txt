@@ -1,0 +1,25 @@
+Chen2012,PMID22298511,DOI10.1093/nar/gks013.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/
+Inspected2026-10-11:Methods/Results/Table2,original Figures1/2;
+earlier2008/2011 Methods checked for protocol context,not new reviewed graphs.
+Minimal quotation: "Data analysis".
+
+Pfu Figure1C:2 nM labeled SynechocystisPCC6803 nonconsensus pre-tRNAGln,
+55 C;RNA-alone15 uM9 h,protein conditions200 nM RNA/2 uM proteins.
+POP5/RPP30 incubates30 min;all4 incubates10 min;buffers separately optimized.
+Correct/(correct+miscleaved) fraction0.11+/-0.03 RNA,0.59+/-0.01 pair,
+0.92+/-0.01 all4. This is not fraction of starting substrate or a rate assay.
+
+Mja cis construct pre-tRNAGln-AAU-RPR,nominal50 nM RNA/500 nM proteins,
+55 C,pH6. RNA-alone favors2.5 M NH4/500 mM Mg;pair/all4 favor0.8 M NH4/
+nominal100 mM Mg. Assembly and cleavage are separate phases;all4 assembly
+uses25 mM Ca. Earlier protocols have mixing/concentration inconsistencies;
+the2012 text refers to Chen et al.ref60 but listed60 is a different paper.
+Do not infer matched final RNA/ion concentrations beyond stated nominal values.
+Table2 RNA/pair/all4 kobs0.004/2.5/10.5 per min and correct fractions
+0.18/0.43/0.84. Total amplitudes93/96/61%,so improved fidelity is not total
+conversion. Separate derived correct/miscleavage rate constants use a parallel
+pathway model,not observed microscopic transitions. Tyr rates in the same
+table are rescaled older data,not independent experiments on the Gln substrate.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2475606/ (2008 Methods)
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3143260/ (2011 Methods)

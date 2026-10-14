@@ -1,0 +1,643 @@
+# Scoped scientific self-review of NADHX repair nucleotide and domain contexts
+
+- Review: 20261011T103421Z-pf01256-nadhx-repair-nucleotide-and-domain-contexts
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T10:34:01Z
+- Finished UTC: 2026-10-11T10:34:21Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Five MECHANISTIC graphs retain five DIRECT OBSERVED net conversions for yeast ATP-dependent NADHX/NADPHX repair and E. coli ADP-dependent NADHX/NADPHX repair. The R-enriched HPLC mixture is handled by intact bifunctional YjeF, not an isolated PF01256 epimerase. Partial scientific self-review; IN_PROGRESS.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: PF01256 Carb_kinase/former UPF0031, next accession-ordered SEEDED family after PF01255, assessed through Marbaix 2011 main and supplemental biochemical experiments with exact reference/domain mapping.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01256 | data/families/PF01256.yaml | generated | PF01256 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01256 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01256.
+
+P31806/nnr/yjeF is 515 aa, sequence version 2, with PF01256 at 258-496 and separate PF03853 at 40-199. P36059/NNR2/YKL151C is 337 aa, sequence version 1, with PF01256 at 35-305. UniProt and InterPro agree, and cited RefSeq proteins match exactly. Table S1 coding termini agree locally with both references, without independently verifying entire historical inserts, template strains or His-tag junctions.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01256.
+
+Each edge describes an observed whole-protein conversion in its own substrate, pH and nucleotide context. R-enriched NADHX is a mixture, so the graph does not claim direct R dehydration or epimerization by isolated PF01256. The pH-7.1 activity series, pH-8 HPLC time course and pH-8 NADPHX traces are not collapsed into one atomic trajectory. Unequal enzyme masses prevent a comparative rate claim, and no cellular/disease chain follows from the purified assays.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01256.
+
+Exact historical insert and fusion sequences, donor strains, some panel-specific buffer/protein doses, raw chromatograms and direct catalytic intermediates remain unverified. Mouse constructs, domain-isolation tests, modern bacterial/human mechanisms and complete cellular pathways remain outside this partial review. The 2018 cellular study was inspected only through its abstract, Introduction and selected early Results/Figure 3 caption; the 2026 Cell study remains an unreviewed search lead.
+
+## Findings
+
+### additional-contexts: Resolve repair constructs and extend independently grounded cellular mechanisms
+
+minor / open / confirmed; issue key: pf01256-causal-context-coverage.
+
+Obtain full inserts and panel-specific conditions; investigate domain-specific chemistry without assigning the N-terminal epimerase to PF01256. Review yeast deletion/rescue, human NAXD and later nutritional/metabolic studies using exact strains and constructs. Keep ATP/ADP, epimer purity and standalone versus bifunctional preparations distinct, and retain evidence-backed successor reviews.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Obtain full inserts and panel-specific conditions; investigate domain-specific chemistry without assigning the N-terminal epimerase to PF01256. Review yeast deletion/rescue, human NAXD and later nutritional/metabolic studies using exact strains and constructs. Keep ATP/ADP, epimer purity and standalone versus bifunctional preparations distinct, and retain evidence-backed successor reviews.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC3308837/; Main Methods/Results/Discussion; supplemental Methods, Tables S1-S3 and captions; Figure 2, Table S1 and Figure S4 visually inspected | supports | Yeast YKL151C/Nnr2 uses ATP and bacterial YjeF uses ADP in the NADHX activity series. Intact YjeF with ADP converts an R-enriched NADHX mixture to HPLC-detected NADH; without ADP it mainly equilibrates epimers. Separate Figure S4A traces show NADPH formation by yeast Nnr2 plus ATP or intact YjeF plus ADP, with unequal protein masses and a no-enzyme control. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/P31806/entry/pfam/PF01256/; Accession and domain locations; paired UniProt identity facts | supports | P31806/nnr/yjeF is 515 aa, sequence version 2, with PF01256 at 258-496 and separate PF03853 at 40-199. P36059/NNR2/YKL151C is 337 aa, sequence version 1, with PF01256 at 35-305. UniProt and InterPro agree, and cited RefSeq proteins match exactly. Table S1 coding termini agree locally with both references, without independently verifying entire historical inserts, template strains or His-tag junctions. |
+| primary-supplement | https://orbilu.uni.lu/bitstream/10993/13754/1/Marbaixetal2011_withSM.pdf; S-2/S-3 Methods, S-4 Table S1, S-5 Table S3 and S-9 Figure S4 | supports | The original supplement establishes His-tagged expression, purification, coding termini and separate NADPHX experiments with different protein doses and ATP/ADP conditions. |
+| separate-epimerase-domain | https://www.ebi.ac.uk/interpro/api/protein/uniprot/P31806/entry/pfam/PF03853/; Current PF03853 interval 40-199, separate from PF01256 258-496 | supports | Full-length YjeF contains a separately annotated N-terminal region; its epimerase function is not evidence for an isolated PF01256 reaction. |
+| yeast-identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/P36059/entry/pfam/PF01256/; Current P36059 interval 35-305 and sequence agreement with cited NP_012771.1 | supports | Identifies the yeast reference and exact current domain interval without assuming the experimental template strain was S288c. |
+| cellular-followup | https://doi.org/10.1111/febs.14631; Abstract, Introduction and selected early Results/Figure 3 caption only | supports | Yeast deletion/rescue and growth-phase dependence, plus human-cell and serine-metabolism contexts, need full experimental assessment before graph extension. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01256 | data/families/PF01256.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Figure 2, Table S1 and Figure S4 were visually inspected. Main biochemical Methods/Results/Discussion and supplemental Methods, Tables S1-S3 and captions were read; other plotted supplement figures and raw data were not independently assessed. HPLC assignments depend on retention/UV comparison with previous work, not new atomic chemistry or raw-data reanalysis.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T103421Z-pf01256-nadhx-repair-nucleotide-and-domain-contexts
+title: Scoped scientific self-review of NADHX repair nucleotide and domain contexts
+started_at: '2026-10-11T10:34:01Z'
+finished_at: '2026-10-11T10:34:21Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Five MECHANISTIC graphs retain five DIRECT OBSERVED net conversions for yeast
+  ATP-dependent NADHX/NADPHX repair and E. coli ADP-dependent NADHX/NADPHX repair.
+  The R-enriched HPLC mixture is handled by intact bifunctional YjeF, not an isolated
+  PF01256 epimerase. Partial scientific self-review; IN_PROGRESS.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01256.yaml
+    sha256: a44fc1fa2fc3b5ac7e0dc5dc63f87e582e4b7a069b7ec626dde6758567226eea
+    role: context
+  - path: data/families/PF01256.yaml
+    sha256: 744a4ce8ab6d11f309cd55f38b5bd14227dd5b5cf13fb37f730ab1647a67c455
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01256/marbaix-2011-repair.txt
+    role: context
+    sha256: a107471725f5e88b8f111144c055c7db313e9d7dee3766001b427ecd7e722a2a
+  - path: evidence/PF01256/NADHX-repair-identity.txt
+    role: context
+    sha256: 061f1ecccc637c23439acd34a95c00b49a79c6995bfcdbbade1b1c5f1026dd84
+  - path: evidence/PF01256/nadhx-2018-coverage-lead.txt
+    role: context
+    sha256: a3c3dd537f70bcc00d7a9e8bab61cc94696785514481234a994bb2aa6762a128
+targets:
+- target_id: PF01256
+  path: data/families/PF01256.yaml
+  label: PF01256
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01256.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 89d14bc8d60c186f0a9c6a43a939b5904114cb4defa6d6c5f7b53aa0b3bdcc50
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: PF01256 Carb_kinase/former UPF0031, next accession-ordered SEEDED family
+    after PF01255, assessed through Marbaix 2011 main and supplemental biochemical
+    experiments with exact reference/domain mapping.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01256
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Exact historical insert and fusion sequences, donor strains, some panel-specific
+      buffer/protein doses, raw chromatograms and direct catalytic intermediates remain
+      unverified. Mouse constructs, domain-isolation tests, modern bacterial/human
+      mechanisms and complete cellular pathways remain outside this partial review.
+      The 2018 cellular study was inspected only through its abstract, Introduction
+      and selected early Results/Figure 3 caption; the 2026 Cell study remains an
+      unreviewed search lead.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01256
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3308837/
+  locator: Main Methods/Results/Discussion; supplemental Methods, Tables S1-S3 and
+    captions; Figure 2, Table S1 and Figure S4 visually inspected
+  accessed_at: '2026-10-11T10:34:21Z'
+  support: supports
+  snapshot_sha256: a107471725f5e88b8f111144c055c7db313e9d7dee3766001b427ecd7e722a2a
+  summary: Yeast YKL151C/Nnr2 uses ATP and bacterial YjeF uses ADP in the NADHX activity
+    series. Intact YjeF with ADP converts an R-enriched NADHX mixture to HPLC-detected
+    NADH; without ADP it mainly equilibrates epimers. Separate Figure S4A traces show
+    NADPH formation by yeast Nnr2 plus ATP or intact YjeF plus ADP, with unequal protein
+    masses and a no-enzyme control.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P31806/entry/pfam/PF01256/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T10:34:21Z'
+  support: supports
+  snapshot_sha256: 061f1ecccc637c23439acd34a95c00b49a79c6995bfcdbbade1b1c5f1026dd84
+  summary: P31806/nnr/yjeF is 515 aa, sequence version 2, with PF01256 at 258-496
+    and separate PF03853 at 40-199. P36059/NNR2/YKL151C is 337 aa, sequence version
+    1, with PF01256 at 35-305. UniProt and InterPro agree, and cited RefSeq proteins
+    match exactly. Table S1 coding termini agree locally with both references, without
+    independently verifying entire historical inserts, template strains or His-tag
+    junctions.
+- evidence_id: primary-supplement
+  kind: primary_source
+  reference: https://orbilu.uni.lu/bitstream/10993/13754/1/Marbaixetal2011_withSM.pdf
+  locator: S-2/S-3 Methods, S-4 Table S1, S-5 Table S3 and S-9 Figure S4
+  summary: The original supplement establishes His-tagged expression, purification,
+    coding termini and separate NADPHX experiments with different protein doses and
+    ATP/ADP conditions.
+  accessed_at: '2026-10-11T10:34:21Z'
+  support: supports
+  snapshot_sha256: a107471725f5e88b8f111144c055c7db313e9d7dee3766001b427ecd7e722a2a
+- evidence_id: separate-epimerase-domain
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P31806/entry/pfam/PF03853/
+  locator: Current PF03853 interval 40-199, separate from PF01256 258-496
+  summary: Full-length YjeF contains a separately annotated N-terminal region; its
+    epimerase function is not evidence for an isolated PF01256 reaction.
+  accessed_at: '2026-10-11T10:34:21Z'
+  support: supports
+  snapshot_sha256: 061f1ecccc637c23439acd34a95c00b49a79c6995bfcdbbade1b1c5f1026dd84
+- evidence_id: yeast-identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P36059/entry/pfam/PF01256/
+  locator: Current P36059 interval 35-305 and sequence agreement with cited NP_012771.1
+  summary: Identifies the yeast reference and exact current domain interval without
+    assuming the experimental template strain was S288c.
+  accessed_at: '2026-10-11T10:34:21Z'
+  support: supports
+  snapshot_sha256: 061f1ecccc637c23439acd34a95c00b49a79c6995bfcdbbade1b1c5f1026dd84
+- evidence_id: cellular-followup
+  kind: primary_source
+  reference: https://doi.org/10.1111/febs.14631
+  locator: Abstract, Introduction and selected early Results/Figure 3 caption only
+  summary: Yeast deletion/rescue and growth-phase dependence, plus human-cell and
+    serine-metabolism contexts, need full experimental assessment before graph extension.
+  accessed_at: '2026-10-11T10:34:21Z'
+  support: supports
+  snapshot_sha256: a3c3dd537f70bcc00d7a9e8bab61cc94696785514481234a994bb2aa6762a128
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T10:34:21Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01256
+  kind: record_content
+  reference: data/families/PF01256.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T10:34:21Z'
+  support: context_only
+  snapshot_sha256: 744a4ce8ab6d11f309cd55f38b5bd14227dd5b5cf13fb37f730ab1647a67c455
+  quote: "id: Pfam:PF01256\npfam_id: PF01256\nname: NAD(P)H-hydrate dehydratase\n\
+    short_name: Carb_kinase\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01256\n\
+    counters:\n  proteins: 22302\n  matches: 22644\n  proteomes: 19898\n  taxa: 32358\n\
+    \  structures: 37\n  alphafold_models: 15274\n  domain_architectures: 88\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR000631\ndescription: Hydration of NAD(P)H to NAD(P)HX,\
+    \ which inhibits several dehydrogenases, is corrected by\n  an ATP-dependent dehydratase\
+    \ and an epimerase. The ATP-dependent dehydratase has been identified as\n  the\
+    \ product of the vertebrate Carkd (carbohydrate kinase domain) gene [[cite:PUB00073185],[cite:PUB00100876]].\n\
+    \  Variants of this enzyme leads to deficient NADHX repair mitochondrial dysfunction\
+    \ in humans, associated\n  with a lethal neurometabolic disorder in early childhood\
+    \ [[cite:PUB00100876]]. In E. coli, it is found\n  as the C-terminal domain of\
+    \ a bifunctional enzyme (YjeF) that also includes the epimerase and uses ADP\n\
+    \  instead of ATP [[cite:PUB00060794]]. These enzymes are widespread in eukaryotes,\
+    \ prokaryotes, and archaea.\ncuration_history: history/records/PF01256\ndiscussions:\n\
+    - discussion_id: nadhx-repair-domain-clone-and-cellular-coverage\n  prompt: Resolve\
+    \ historical constructs and domain-specific chemistry, then extend NAD(P)HX repair\
+    \ graphs\n    into supported cellular contexts.\n  kind: CURATION_TODO\n  status:\
+    \ OPEN\n  rationale: Five purified-protein assay contexts do not cover this widespread\
+    \ family. ATP-dependent yeast\n    Nnr2 and ADP-dependent bifunctional E. coli\
+    \ YjeF remain distinct; neither an N-terminal epimerase\n    nor mouse/human phenotype\
+    \ evidence transfers automatically to isolated PF01256.\n  evidence:\n  - reference:\
+    \ PMID:21994945\n    supports: PARTIAL\n    evidence_source: full_text_and_supplement\n\
+    \    explanation: Main Figure 2 and supplemental Table S1/Figure S4 were visually\
+    \ checked. Complete main\n      and supplemental assay Methods were read; raw\
+    \ chromatograms, exact clone sequences and cellular\n      flux were not independently\
+    \ established. Mouse long/short constructs are explicitly mixed in some\n    \
+    \  experiments and are not adopted here.\n  - reference: PMID:30098110\n    supports:\
+    \ PARTIAL\n    evidence_source: selected_full_text\n    explanation: The 2018\
+    \ abstract, Introduction and selected early Results/Figure 3 caption describe\n\
+    \      yeast deletion/rescue and growth-phase dependence. Full Methods, strain\
+    \ mapping, plotted figures\n      and human-cell experiments remain unreviewed\
+    \ before adding corresponding edges.\n  posed_by: Codex\n  posed_date: '2026-10-11'\n\
+    \  notes: The 2026 Cell vitamin B2/B3 study is an additional search lead whose\
+    \ full text was not inspected.\n    Do not infer a family-wide kinase function,\
+    \ a measured phosphorylated intermediate, isolated-domain\n    epimerization or\
+    \ clinical benefit from the retained 2011 biochemical graphs. Partial scientific\
+    \ self-review;\n    IN_PROGRESS.\ncausal_graphs:\n- graph_id: yeast-nnr2-atp-nadhx-dehydration\n\
+    \  title: ATP supports NADHX-to-NADH conversion by yeast Nnr2\n  scope: Purified\
+    \ N-terminal His-tagged S. cerevisiae YKL151C/Nnr2 in Marbaix 2011 Figure 2C;\
+    \ not every\n    PF01256 member or cellular metabolite repair.\n  context: Spectrophotometric\
+    \ NADH production in the Figure 2C ATP series at pH 7.1 and 30 C with about\n\
+    \    20 uM (S)-NADHX. General assay conditions use 25 mM HEPES, 2 mM MgCl2 and\
+    \ 0.05-0.2 mg/ml BSA; nucleotide\n    concentration is varied as plotted rather\
+    \ than assumed to equal the general 0.2-1 mM range. The corresponding\n    ADP\
+    \ series and zero-nucleotide condition are controls. Exact panel-specific enzyme\
+    \ dose and BSA concentration\n    are not reported.\n  family_mapping: YKL151C/NNR2\
+    \ maps to S288c reference UniProtKB:P36059, 337 aa, sequence version 1; PF01256\n\
+    \    spans 35-305. UniProt and InterPro sequences agree. Table S1 primer coding\
+    \ termini match MLAELSHR\n    and VFAKLFG-stop locally. The pET100/D-Topo insert\
+    \ was sequence-confirmed by the authors, but complete\n    clone sequence, fusion\
+    \ junction and boiled-cell template strain were not independently reconstructed.\n\
+    \    BL21 Star(DE3) is the expression host.\n  scope_status: MECHANISTIC\n  taxon:\
+    \ NCBITaxon:4932\n  limitations: This is an intact recombinant-protein reaction,\
+    \ not isolated-domain sufficiency. Methods\n    permit mixed stocks or 70-85%-pure\
+    \ enriched fractions; Figure 2C does not specify which stock or which\n    spectrophotometric\
+    \ wavelength was used. Spontaneous epimerization and mixed-species expression\
+    \ do\n    not establish intracellular flux. The plotted ATP response and reciprocal\
+    \ ADP result are condition-specific,\n    not a universal nucleotide rule for\
+    \ PF01256. No phosphorylated intermediate or residue-level catalytic\n    trajectory\
+    \ is directly observed.\n  nodes:\n  - node_id: nnr2-atp-s-nadhx-reaction\n  \
+    \  label: His-tagged yeast Nnr2 with ATP and NADHX containing the S epimer in\
+    \ the complete assay\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:P36059\n\
+    \  - node_id: nnr2-nadh-output\n    label: Spectrophotometrically measured NADH\
+    \ formation\n    node_type: STATE\n  edges:\n  - edge_id: nnr2-atp-produces-nadh\n\
+    \    subject: nnr2-atp-s-nadhx-reaction\n    predicate: produces\n    object:\
+    \ nnr2-nadh-output\n    mechanism: Yeast YKL151C produces the NADH-associated\
+    \ optical signal from a preparation containing\n      (S)-NADHX with ATP, with\
+    \ little activity in the zero-nucleotide and reciprocal ADP conditions. This\n\
+    \      supports the scoped biochemical conversion without assigning atomic phosphorylation\
+    \ and elimination\n      steps or an undocumented exact stock composition.\n \
+    \   directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:21994945\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3308837/\n\
+    \      snippet: NADH production\n      explanation: Figure 2C image, caption,\
+    \ main spectrophotometric Methods and Results support ATP-dependent\n        activity\
+    \ of YKL151C. Supplemental Methods and Table S1 define the recombinant preparation.\n\
+    \      cache_path: evidence/PF01256/marbaix-2011-repair.txt\n      cache_sha256:\
+    \ a107471725f5e88b8f111144c055c7db313e9d7dee3766001b427ecd7e722a2a\n    - reference:\
+    \ https://www.ebi.ac.uk/interpro/api/protein/uniprot/P36059/entry/pfam/PF01256/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P36059/entry/pfam/PF01256/\n\
+    \      snippet: 'P36059 Pfam:PF01256; domain interval: 35-305, inclusive.'\n \
+    \     explanation: Grounds the yeast reference and mapped domain while leaving\
+    \ the historical strain and\n        complete fusion sequence unresolved.\n  \
+    \    cache_path: evidence/PF01256/NADHX-repair-identity.txt\n      cache_sha256:\
+    \ 061f1ecccc637c23439acd34a95c00b49a79c6995bfcdbbade1b1c5f1026dd84\n- graph_id:\
+    \ ecoli-yjef-adp-nadhx-dehydration\n  title: ADP supports NADHX-to-NADH conversion\
+    \ by intact E. coli YjeF\n  scope: N-terminal His-tagged E. coli YjeF/Nnr in Marbaix\
+    \ 2011 Figure 2C; separate from the yeast ATP\n    assay and the pH-8 HPLC time\
+    \ course.\n  context: The pH-7.1 ADP series uses about 20 uM (S)-NADHX at 30 C,\
+    \ with general spectrophotometric conditions\n    of 25 mM HEPES, 2 mM MgCl2 and\
+    \ 0.05-0.2 mg/ml BSA. ADP concentration is varied as plotted. ATP and\n    no-nucleotide\
+    \ comparisons are retained; exact YjeF dose and BSA concentration for this panel\
+    \ are unspecified.\n    Purification includes metal affinity, Source 30Q and Superdex\
+    \ 200 after expression in BL21 Star(DE3).\n  family_mapping: UniProtKB:P31806\
+    \ (nnr/yjeF, b4167/JW4125), K12 reference, is 515 aa and sequence version\n  \
+    \  2. PF01256 spans 258-496; a separate PF03853 match at 40-199 belongs to the\
+    \ N-terminal region. UniProt\n    and InterPro agree exactly; Table S1 primer\
+    \ coding termini match MTDHTMK and ESSNSAP-stop locally.\n    The actual genomic\
+    \ template strain and complete His fusion remain unverified.\n  scope_status:\
+    \ MECHANISTIC\n  taxon: NCBITaxon:562\n  limitations: Full-length YjeF contains\
+    \ both repair activities; this assay does not prove isolated PF01256\n    sufficiency\
+    \ or assign its epimerase reaction to that domain. Figure 2C does not distinguish\
+    \ a mixed\n    from an enriched stock or specify which optical wavelength was\
+    \ used. A small ATP-associated signal\n    is not promoted to efficient ATP use,\
+    \ nor is universal ATP inactivity asserted. No ADP-binding geometry,\n    phosphorylated\
+    \ intermediate or physiological repair rate is resolved by this optical assay.\n\
+    \  nodes:\n  - node_id: yjef-adp-s-nadhx-reaction\n    label: Intact His-YjeF\
+    \ with ADP and NADHX containing the S epimer in the complete assay\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:P31806\n  - node_id: yjef-nadh-output\n\
+    \    label: NADH formation measured spectrophotometrically\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: yjef-adp-produces-nadh\n    subject: yjef-adp-s-nadhx-reaction\n\
+    \    predicate: produces\n    object: yjef-nadh-output\n    mechanism: ADP supports\
+    \ measurable NADHX dehydratase activity of intact YjeF in the Figure 2C series.\n\
+    \      The ATP comparison and the source's ATP-regeneration experiment constrain\
+    \ nucleotide interpretation\n      without requiring an unobserved chemical microstep.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:21994945\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3308837/\n\
+    \      snippet: NADH production\n      explanation: Figure 2C and the YjeF Results\
+    \ distinguish its ADP-dependent activity from the eukaryotic\n        ATP-dependent\
+    \ preparations. Figure 2D supplies separate product support but is not represented\n\
+    \        as this assay's conditions.\n      cache_path: evidence/PF01256/marbaix-2011-repair.txt\n\
+    \      cache_sha256: a107471725f5e88b8f111144c055c7db313e9d7dee3766001b427ecd7e722a2a\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P31806/entry/pfam/PF01256/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P31806/entry/pfam/PF01256/\n\
+    \      snippet: 'P31806 Pfam:PF01256; domain interval: 258-496, inclusive.'\n\
+    \      explanation: Maps the tested gene's reference to the C-terminal family\
+    \ interval, without transferring\n        N-terminal epimerase activity to isolated\
+    \ PF01256.\n      cache_path: evidence/PF01256/NADHX-repair-identity.txt\n   \
+    \   cache_sha256: 061f1ecccc637c23439acd34a95c00b49a79c6995bfcdbbade1b1c5f1026dd84\n\
+    - graph_id: ecoli-yjef-r-enriched-nadhx-repair\n  title: Intact YjeF and ADP convert\
+    \ an R-enriched NADHX mixture to NADH\n  scope: The bifunctional E. coli YjeF\
+    \ preparation in Marbaix 2011 Figure 2D; this is a whole-protein\n    net conversion,\
+    \ not an isolated dehydratase acting directly on pure R-NADHX.\n  context: HPLC\
+    \ time course at pH 8 and 30 C with 2.1 ug/ml YjeF, 5 mM KCl and an R-enriched\
+    \ NADHX preparation,\n    with or without 0.1 mM ADP-Mg. Equal-volume 8 M urea/10\
+    \ mM EDTA stops reactions. Figure 2D gives means\n    and SD for three replicates;\
+    \ the caption also reports little change in no-enzyme controls with ADP-Mg.\n\
+    \    HPLC separates epimers and NADH by retention and UV criteria; the full incubation\
+    \ buffer composition\n    is not independently specified for this panel.\n  family_mapping:\
+    \ The 515-aa P31806 reference maps to PF01256 at 258-496 and separate PF03853\
+    \ at 40-199.\n    Both domains remain in the recombinant pET100/D-Topo His fusion;\
+    \ no domain deletion or isolated-domain\n    assay was performed here. Reference/primer\
+    \ matches do not reconstruct every historical clone or template\n    strain.\n\
+    \  scope_status: MECHANISTIC\n  taxon: NCBITaxon:562\n  limitations: The starting\
+    \ fraction contains both epimers, not pure R substrate. Without ADP, YjeF accelerates\n\
+    \    epimer interconversion without comparable NADH formation; with ADP both epimers\
+    \ decline as NADH increases.\n    These observations are not split into independently\
+    \ sufficient domains or atomically tracked molecules.\n    ADP-to-AMP stoichiometry\
+    \ is reported as unshown data and is not added as a separate observed edge.\n\
+    \    Cyclic NADHX repair is not inferred.\n  nodes:\n  - node_id: intact-yjef-adp-r-enriched-mixture\n\
+    \    label: Intact YjeF plus ADP-Mg acting on the R-enriched NADHX mixture\n \
+    \   node_type: PERTURBATION\n    grounding:\n    - UniProtKB:P31806\n  - node_id:\
+    \ hplc-nadh-product\n    label: Increased HPLC-identified NADH with loss of both\
+    \ NADHX epimers\n    node_type: STATE\n  edges:\n  - edge_id: intact-yjef-repairs-mixed-nadhx\n\
+    \    subject: intact-yjef-adp-r-enriched-mixture\n    predicate: produces\n  \
+    \  object: hplc-nadh-product\n    mechanism: In the ADP-containing reaction, intact\
+    \ YjeF converts the epimer mixture to HPLC-detected\n      NADH, whereas the no-ADP\
+    \ reaction primarily equilibrates epimers. The net biochemical effect is\n   \
+    \   observed; the graph does not claim direct R-epimer dehydration by PF01256\
+    \ alone.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:21994945\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3308837/\n\
+    \      snippet: NADH production\n      explanation: Visually inspected Figure\
+    \ 2D, its caption, YjeF Results and supplemental HPLC Methods\n        support\
+    \ the separate epimer and product time courses and required ADP condition.\n \
+    \     cache_path: evidence/PF01256/marbaix-2011-repair.txt\n      cache_sha256:\
+    \ a107471725f5e88b8f111144c055c7db313e9d7dee3766001b427ecd7e722a2a\n- graph_id:\
+    \ yeast-nnr2-nadphx-repair\n  title: Yeast Nnr2 and ATP produce NADPH from a mixed\
+    \ NADPHX preparation\n  scope: His-YKL151C in Marbaix 2011 supplemental Figure\
+    \ S4A; a separate substrate and pH context from\n    its main Figure 2C NADHX\
+    \ assay.\n  context: At 30 C and pH 8, 1.2 ug YKL151C is added to a 1-ml reaction\
+    \ containing 0.5 mM ATP-Mg and about\n    12 uM NADPHX, nominally a 60:40 S/R\
+    \ mixture. NADPH formation is followed at 340 nm against a no-enzyme\n    control.\
+    \ General spectrophotometric Methods give 25 mM Tris-HCl, 2 mM MgCl2 and 0.05-0.2\
+    \ mg/ml BSA;\n    the exact BSA concentration and fusion junction are unspecified.\n\
+    \  family_mapping: NNR2/YKL151C corresponds to reference P36059, PF01256 residues\
+    \ 35-305 of 337. The full\n    N-terminal His-tagged protein was produced in BL21\
+    \ Star(DE3); the paper does not independently establish\n    the source-cell strain\
+    \ as S288c. Locally matching primers are not a full-clone sequence verification\n\
+    \    by this review.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:4932\n \
+    \ limitations: The lower plateau than intact YjeF is consistent with standalone\
+    \ stereospecific dehydratase\n    activity, not proof of complete repair of both\
+    \ epimers by Nnr2. YjeF uses a different enzyme mass\n    and nucleotide, so the\
+    \ curves do not establish a catalytic-rate ranking. Representative traces have\n\
+    \    no displayed replicate uncertainty. No cellular NADPH pool or universal substrate\
+    \ preference is inferred.\n  nodes:\n  - node_id: nnr2-atp-mixed-nadphx\n    label:\
+    \ His-Nnr2 plus ATP-Mg with the mixed NADPHX preparation\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:P36059\n  - node_id: nnr2-nadph-a340\n    label:\
+    \ NADPH-associated increase in A340 after Nnr2 addition\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: nnr2-produces-nadph-from-mixture\n    subject: nnr2-atp-mixed-nadphx\n\
+    \    predicate: produces\n    object: nnr2-nadph-a340\n    mechanism: The Nnr2-plus-ATP\
+    \ trace rises above the no-enzyme control after addition in Figure S4A,\n    \
+    \  supporting NADPH formation in this defined mixture. The adopted edge is the\
+    \ net conversion, not\n      independent epimerization or complete repair of the\
+    \ entire mixed pool.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:21994945\n      source_url:\
+    \ https://orbilu.uni.lu/bitstream/10993/13754/1/Marbaixetal2011_withSM.pdf\n \
+    \     snippet: NADPH formation\n      explanation: Supplemental Figure S4A and\
+    \ its caption were visually inspected on page S-9; main spectrophotometric\n \
+    \       Methods establish the assay basis. The no-enzyme control stays near baseline.\n\
+    \      cache_path: evidence/PF01256/marbaix-2011-repair.txt\n      cache_sha256:\
+    \ a107471725f5e88b8f111144c055c7db313e9d7dee3766001b427ecd7e722a2a\n- graph_id:\
+    \ ecoli-yjef-nadphx-repair\n  title: Intact YjeF and ADP produce NADPH from a\
+    \ mixed NADPHX preparation\n  scope: Full-length His-YjeF in Marbaix 2011 supplemental\
+    \ Figure S4A, with both its N-terminal epimerase\n    region and C-terminal PF01256-containing\
+    \ region retained.\n  context: At 30 C and pH 8, 10.5 ug YjeF is added to a 1-ml\
+    \ reaction containing 0.5 mM ADP-Mg and about\n    12 uM NADPHX in a nominal 60:40\
+    \ S/R mixture. A340 follows NADPH production against a no-enzyme control.\n  \
+    \  General assay Methods specify 25 mM Tris-HCl, 2 mM MgCl2 and a 0.05-0.2 mg/ml\
+    \ BSA range; the exact\n    BSA concentration is not panel-specific. This is not\
+    \ the pH-7.1 kinetic fit in Table S3.\n  family_mapping: P31806 is the sequence-matched\
+    \ 515-aa E. coli reference with PF01256 at 258-496 and\n    separate PF03853 at\
+    \ 40-199. The pET100/D-Topo protein retains both regions and an N-terminal His\
+    \ tag.\n    Full insert sequence and original source strain remain unverified\
+    \ despite local primer agreement and\n    the authors' reported sequencing.\n\
+    \  scope_status: MECHANISTIC\n  taxon: NCBITaxon:562\n  limitations: Intact YjeF's\
+    \ larger conversion extent than the yeast dehydratase does not demonstrate\n \
+    \   isolated PF01256 epimerase activity. Unequal protein masses, different nucleotide\
+    \ cosubstrates and\n    representative traces without replicate uncertainty prevent\
+    \ a rate comparison or exact endpoint stoichiometry\n    from the displayed curves.\
+    \ This graph is not connected to disease, serine synthesis or other cellular\n\
+    \    outcomes by an unmeasured causal chain.\n  nodes:\n  - node_id: yjef-adp-mixed-nadphx\n\
+    \    label: Intact His-YjeF plus ADP-Mg with the mixed NADPHX preparation\n  \
+    \  node_type: PERTURBATION\n    grounding:\n    - UniProtKB:P31806\n  - node_id:\
+    \ yjef-nadph-a340\n    label: NADPH-associated increase in A340 after intact YjeF\
+    \ addition\n    node_type: STATE\n  edges:\n  - edge_id: yjef-produces-nadph-from-mixture\n\
+    \    subject: yjef-adp-mixed-nadphx\n    predicate: produces\n    object: yjef-nadph-a340\n\
+    \    mechanism: YjeF with ADP raises A340 above the matched no-enzyme trace in\
+    \ Figure S4A, supporting NADPH\n      formation from the mixture by the intact\
+    \ bifunctional protein. The net conversion is observed without\n      claiming\
+    \ that a single domain is independently sufficient for both constituent reactions.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:21994945\n      source_url: https://orbilu.uni.lu/bitstream/10993/13754/1/Marbaixetal2011_withSM.pdf\n\
+    \      snippet: NADPH formation\n      explanation: Visually inspected Figure\
+    \ S4A and its caption support the direction, separate ADP condition,\n       \
+    \ enzyme dose and substrate mixture. Main YjeF Results and HPLC experiments contextualize\
+    \ the two-activity\n        interpretation without substituting their conditions\
+    \ here.\n      cache_path: evidence/PF01256/marbaix-2011-repair.txt\n      cache_sha256:\
+    \ a107471725f5e88b8f111144c055c7db313e9d7dee3766001b427ecd7e722a2a\ncuration_events:\n\
+    - timestamp: '2026-10-11T10:22:52Z'\n  curator: Codex\n  action: CREATE\n  outcome:\
+    \ changed\n  summary: Curate separately scoped yeast and bacterial NAD(P)HX repair\
+    \ reactions\n  history_record: history/records/PF01256/2026-10-11T102252Z-codex-2cdcb9.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: P31806/nnr/yjeF is 515 aa, sequence version 2, with PF01256 at 258-496
+    and separate PF03853 at 40-199. P36059/NNR2/YKL151C is 337 aa, sequence version
+    1, with PF01256 at 35-305. UniProt and InterPro agree, and cited RefSeq proteins
+    match exactly. Table S1 coding termini agree locally with both references, without
+    independently verifying entire historical inserts, template strains or His-tag
+    junctions.
+  target_ids:
+  - PF01256
+  evidence_ids:
+  - identity
+  - primary
+  - primary-supplement
+  - separate-epimerase-domain
+  - yeast-identity
+  - cellular-followup
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Each edge describes an observed whole-protein conversion in its own substrate,
+    pH and nucleotide context. R-enriched NADHX is a mixture, so the graph does not
+    claim direct R dehydration or epimerization by isolated PF01256. The pH-7.1 activity
+    series, pH-8 HPLC time course and pH-8 NADPHX traces are not collapsed into one
+    atomic trajectory. Unequal enzyme masses prevent a comparative rate claim, and
+    no cellular/disease chain follows from the purified assays.
+  target_ids:
+  - PF01256
+  evidence_ids:
+  - primary
+  - native
+  - primary-supplement
+  - separate-epimerase-domain
+  - yeast-identity
+  - cellular-followup
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Exact historical insert and fusion sequences, donor strains, some panel-specific
+    buffer/protein doses, raw chromatograms and direct catalytic intermediates remain
+    unverified. Mouse constructs, domain-isolation tests, modern bacterial/human mechanisms
+    and complete cellular pathways remain outside this partial review. The 2018 cellular
+    study was inspected only through its abstract, Introduction and selected early
+    Results/Figure 3 caption; the 2026 Cell study remains an unreviewed search lead.
+  target_ids:
+  - PF01256
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01256-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve repair constructs and extend independently grounded cellular mechanisms
+  description: Obtain full inserts and panel-specific conditions; investigate domain-specific
+    chemistry without assigning the N-terminal epimerase to PF01256. Review yeast
+    deletion/rescue, human NAXD and later nutritional/metabolic studies using exact
+    strains and constructs. Keep ATP/ADP, epimer purity and standalone versus bifunctional
+    preparations distinct, and retain evidence-backed successor reviews.
+  target_ids:
+  - PF01256
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - primary-supplement
+  - separate-epimerase-domain
+  - yeast-identity
+  - cellular-followup
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01256.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Obtain full inserts and panel-specific conditions; investigate domain-specific
+    chemistry without assigning the N-terminal epimerase to PF01256. Review yeast
+    deletion/rescue, human NAXD and later nutritional/metabolic studies using exact
+    strains and constructs. Keep ATP/ADP, epimer purity and standalone versus bifunctional
+    preparations distinct, and retain evidence-backed successor reviews.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01256
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Figure 2, Table S1 and Figure S4 were visually inspected. Main biochemical Methods/Results/Discussion
+  and supplemental Methods, Tables S1-S3 and captions were read; other plotted supplement
+  figures and raw data were not independently assessed. HPLC assignments depend on
+  retention/UV comparison with previous work, not new atomic chemistry or raw-data
+  reanalysis.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

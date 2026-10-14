@@ -1,0 +1,82 @@
+Navarre and Goffeau2000, PMID10835350, doi:10.1093/emboj/19.11.2515
+https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/
+Inspected2026-10-11 UTC: full relevant Results, Discussion and Methods, TableI,
+and all eight figures visually. Source HTML SHA256:
+cc3f792f47bff8880be6a39976dbd750817d26a8f90ac1ee90332e41053b96fc
+Copyright2000 EMBO. Minimal quotations; remaining content is curator notes.
+Quotes: "Relative growth"; "intracellular"; "methylammonium uptake";
+"hygromycin B"; "partially suppressing".
+
+Identity/genetics: TableI distinguishes W303-1B/CN3(pmp3::TRP1), YR93(pmr2
+deletion)/YR93-3(additional pmp3::URA3), YR93-1(additional nha1::LEU2)/YR93-31
+(pmp3 and nha1 deleted), and CY162(trk1/trk2 deleted)/CY162-3(additional
+pmp3::URA3). Gene replacement is PCR checked. No native PMP3 add-back for
+each measured endpoint is shown. RCI2A rescue uses a distinct triple-deletion
+background and cannot serve as endpoint-specific rescue for every other assay.
+YD is2% yeast extract(KAT),2% glucose, not a peptone-containing YPD recipe;
+solid medium adds2% agar. MM is0.7% yeast nitrogen base without amino acids,
+2% glucose and required amino acids, which are not enumerated here.
+
+Figure3: seed10ul saturated culture into3mlYD plus0-1.5M NaCl,15h30C;
+relative OD600 normalized to the same strain in YD without added salt. Three
+repeats gave similar results; plotted error estimates not supplied. Deleting
+PMP3 lowers normalized growth in W303-1B, in the pmr2-deleted YR93 background,
+and with both pmr2/nha1 deleted. Do not compare different backgrounds as if
+they were one paired intervention. Figure2A spot growth at1.3MNaCl supports
+the W303 phenotype, but Figure3 is the retained liquid-growth endpoint.
+
+Figure2B: CN3 accumulates more intracellular Na than W303-1B over30-90min;
+not an initial Na-influx rate or direct voltage measurement. Protocol conflict:
+caption says0.9MNaCl added to exponential YD cells; Results/Methods say1M,
+with Methods describing water preincubation1h4C and challenge in10mMMESpH6,
+50mMglucose at28C. Exact challenge medium/dose remain unresolved. Cells are
+washed in20mMMgCl2/1.5Msorbitol, extracted with2mMCTAB and analyzed by atomic
+emission. No calibrated cell-volume measurement or raw replicate file was
+independently reanalyzed. Sorbitol growth control is data not shown.
+
+Figure5B: washed MM-grown W303-1B/CN3 cells atOD600=5 in10mMMESpH6,50mM
+glucose; after5min add2mM14C-methylammonium,2.5uCi/ml. At10-60min filter
+samples and wash with20mMMgCl2 before scintillation. CN3 retains more label;
+two repeats had similar results. This is uptake/accumulation, not a calibrated
+membrane-potential trace or proof of a Pmp3 proton-conducting pore. Assay
+incubation temperature is not explicitly restated in this uptake Methods.
+Figure5A: tenfold serial spots onYD,2days30C. CN3 grows less at100ug/ml
+hygromycinB and0.7MTMA; TMA retains growth at the most concentrated spot.
+AtpH2.2 CN3 and W303-1B look similar, so acid protection is not a universal
+single-deletion phenotype. Spots are growth endpoints, not quantitative killing.
+
+Figure4A: CY162-3 grows better than CY162 in YD without addedKCl plus1mM
+EGTA over the displayed15-30h. This is not potassium-free medium or a permanent
+yield advantage. Text describes later48h adaptation/suppressors not displayed
+in the30h graph. Replacing1mMEGTA by10mMCaCl2 lowers CY162-3 growth, with
+residual growth visible; this jointly changes calcium and chelation.
+Figure4C: inocula pregrown with100mMKCl;10ul into3mlYD with100mMKCl at
+variedpH,15h30C. Normalize within each strain to pH5.5. CY162-3 has higher
+relative growth atpH3-4 than CY162. Three repeats, not a direct proton-flux assay.
+Figure4D: tenfold spots atpH3 with100mMKCl,2days30C; adding10mMCaCl2
+impairs CY162-3 growth while W303-1B/CN3 remain strong. Separate from liquid
+pH normalization and EGTA/no-added-KCl conditions.
+
+Figure7B:10ul saturated YR93 or YR93-3 into3mlYD,0.2MNaCl,0-10mMCaCl2
+or MgCl2,15h30C. Each series is normalized to its corresponding10mMCaCl2
+culture. In YR93-3, Ca improves growth toward a plateau around7mM; Mg yields
+partial improvement up to10mM. YR93 is near its reference across the range.
+Two repeats had similar results. This does not directly measure NSC1 blockade
+or membrane depolarization. Figure7A also distinguishes EGTA/Ca conditions.
+
+Figure8A: plantRCI2A replaces pmp3::URA3 at the PMP3 locus in YR93-31 under
+PMP3 regulatory regions, not a plasmid copy. In3mlYD salt series seeded with
+10ul saturated culture,15h30C, it increases normalized growth relative to
+YR93-31. The rescued curve approaches but is not identical to YR93-1; no
+exact equivalence test is displayed. Two repeats had similar results.
+Figure8B:100ug/ml hygromycinB,YD,tenfold spots,2days30C; RCI2A improves
+growth but does not restore the complete YR93-1 dilution pattern. Rescue is
+partial and in yeast, not evidence for a plant whole-organism salt mechanism.
+
+Figure6: CN3 and W303 membrane ATPase/MgATP and ACMA-quenching relations
+are broadly similar; triple pmp1/pmp2/pmp3 deletion has lower ATPase activity.
+Do not attribute the triple-mutant effect uniquely to Pmp3 or infer activation
+of Pma1 from the methylammonium phenotype. Authors' proton-leak/NSC1 proposals
+and intracellular-pH/medium-acidification data-not-shown remain model/limits.
+All retained perturbation edges are indirect cellular phenotypes. Neither the
+paper's title nor conservation across homologs proves a direct proton pathway.

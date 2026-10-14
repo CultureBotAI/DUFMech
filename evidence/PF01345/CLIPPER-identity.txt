@@ -1,0 +1,41 @@
+Identity assessment, accessed 2026-10-11 UTC.
+Sources:
+https://rest.uniprot.org/uniprotkb/A0A1Y3CHT7.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A1Y3CHT7/entry/pfam/PF01345/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01345/
+https://www.rcsb.org/fasta/entry/9IFR/display
+https://files.rcsb.org/download/9IFR.cif
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12617251/supplementaryFiles
+Frozen naming history: data/worklists/pfam-previous-unknown-names-2026-10-10.json.
+
+Curator-transcribed database facts, not quotations of experimental results:
+Pfam PF01345.25 was DUF11 and is now CLIPPER; frozen EX_DUF identity is retained.
+UniProtKB:A0A1Y3CHT7; B9T28_05395; Acinetobacter silvestris; NCBITaxon:1977882.
+Protein length 2129 aa; sequence version 1; entry version 31.
+Reference sequence MD5: FD432382836231F060002F698B82B0DB.
+UniProt and InterPro protein sequences match exactly.
+Pfam:PF01345; tested repeat interval: 712-812, inclusive.
+Other current matches: 591-691, 833-933, 954-1053, 1074-1175,
+1196-1296, 1317-1416 and 1544-1663. Those repeats are not tested here.
+The paper's synthetic construct comprises reference residues 708-828, 121 aa.
+The deposited 9IFR polymer sequence is GP followed by that exact reference segment.
+mmCIF aligns polymer positions 3-123 to UniProt positions 708-828, with
+author positions 20-140. Crystal and full-length numbering are not interchangeable.
+Reference K715 and N806 agree with the reported crosslink endpoints; C818/C821
+agree with the reported disulfide motif. However, reference position 748 is N,
+and the adjacent position 749 is D. The paper's proposed Asp748 label is
+therefore not silently adopted or corrected into an observed catalytic step.
+The mmCIF connection table records the C818/C821-equivalent disulfide but does
+not independently document an isopeptide connection; atom coordinates and raw
+diffraction data were not re-refined or used to infer a causal trajectory.
+Main Methods alternate K715A with K517A. Supplemental Table S6 resolves the
+intended mutant: its two 363-nt coding sequences translate to the 121-aa
+reference 708-828 segment, with exactly K715A as their only protein difference.
+Both encode N748/D749. This independently supports the intended mutation, not
+the incorrect K517A/Asp748 prose or sequencing of actual experimental aliquots.
+Table S6 gives the vector-derived MAHHHHHHSSGLEVLFQGP leader and primers.
+Biochemical tag handling remains ambiguous: the crystal's GP remnant is not
+assigned to the biophysical preparations merely because they share a name.
+
+These facts establish a reference-domain mapping, not native-cell adhesion,
+universal isopeptide chemistry or verification of every experimental clone.

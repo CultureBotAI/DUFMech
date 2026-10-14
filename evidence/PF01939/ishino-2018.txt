@@ -1,0 +1,36 @@
+Ishino et al.2018, PMID29846672, doi:10.1093/nar/gky460
+https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/
+Inspected2026-10-12: relevant Results/Methods/Table1; Figures1,3,4
+visually. Minimal quotation: "mutation avoidance".
+
+Curator paraphrase:
+Native strain and nucS source are C.glutamicum ATCC13032, NCgl1168;
+Q8NR49 is the matching reference, not strainR A4QDH7. Biochemical NucS
+is N-terminally His-tagged. The deltaCter construct removes five native
+residues ELTLF226-230, all within current PF01939 110-230.
+
+Figure3: adding cognate beta-clamp increases WT cleavage of G/T duplex;
+clamp alone does not cleave. DeltaCter retains low basal activity but not
+clamp stimulation. Figure3C SPR detects WT-clamp binding while deltaCter
+responses are absent under the tested concentrations. Binding and cleavage
+are different measurements, not two independently established sufficient
+causes. Whole-protein deletion can perturb more than a contact interface.
+
+Figure4: both labeled strands produce products assigned to a five-nucleotide
+5-prime overhang, with and without clamp. Model panelsD/E are homology
+models, not new Cgl co-crystal evidence; their residue numbers refer to the
+Tko template. Default cleavage conditions are30C,pH6.4,2.5mM MnCl2.
+The text reports narrow pH preference and no Mg-supported activity under
+its tested conditions. This conflicts with the other2018 study if promoted
+to a context-free rule; no such universal metal requirement is curated.
+
+Figure1C measures selected-colony mutation FREQUENCIES despite some
+Results wording calling them rates: deletion raises the readout; WT
+plasmid complementation lowers it; five-residue chromosomal truncation
+raises it. Complementation approaches but is not numerically identical to
+WT. Figure1D is transcript abundance, not proof of equal protein abundance.
+Native repair intermediates and individual biochemical mediation steps
+were not measured by the frequency comparison.
+
+Supplementary PPTX has not yet been visually checked; do not claim an
+independent raw-data analysis or all supplementary condition tests verified.

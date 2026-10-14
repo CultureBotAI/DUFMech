@@ -1,0 +1,43 @@
+PF01947 identity ledger, accessed 2026-10-12
+
+Frozen source: interpro-pfam-duf-2026-10-10, SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+PF01947 / Rv2949c-like / IPR002800, former DUF98; EX_DUF and UNSCORED
+remain imported states. Snapshot has 726 proteins, not 726 tested proteins.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01947/
+The current family description cites PMID16210318, PMID24337576 and
+PMID20437231. Its E. coli UbiC example is not a membership assignment.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P9WIC5/
+https://rest.uniprot.org/uniprotkb/search?query=xref:pfam-PF01947%20AND%20reviewed:true&format=json
+P9WIC5, Rv2949c, H37Rv reference, taxon83332, 199 aa, sequence version1,
+PF01947 residues24-173. Stadthagen Methods explicitly identify H37Rv DNA
+for recombinant enzyme production; their whole-cell mutant is instead Mt103.
+Former protein accession O86325 is not a Pfam identifier. No isolated-domain
+assay is inferred and historical expression clones were not resequenced here.
+
+https://rest.uniprot.org/uniprotkb/search?query=gene:ycf21%20AND%20taxonomy_id:1148&format=json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P73322/
+https://rest.kegg.jp/get/syn:sll1797
+Sll1797/ycf21 reference P73322, 139 aa, sequence version1, PF01947 2-130.
+UniProt uses Kazusa reference taxon1111708; KEGG links BAA17351, whereas
+Pfaff cites NP_440671 and uses Pasteur Collection PCC6803 cells. Du uses a
+glucose-tolerant PCC6803 strain from D. Bhaya. Reference identity is not an
+independent sequence check of either historical strain. R30 and E120 occur
+in P73322, but Pfaff proposes them by comparison, not residue mutagenesis.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P26602/
+E. coli K12 UbiC reference P26602 maps PF04345 17-165, NOT PF01947.
+Same reaction name, complementation and structural similarity do not establish
+the same Pfam membership or justify transferring its catalytic residues.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q58217/
+M. jannaschii MJ0807/Q58217, 184 aa, PF01947 34-172, taxon243232.
+The nine reviewed UniProt hits include mycobacterial, archaeal and plastid
+proteins; this filtered query is not a census or experimental-function survey.
+
+https://www.ebi.ac.uk/interpro/api/structure/pdb/entry/pfam/PF01947/
+https://www.rcsb.org/structure/2NWI
+Current structural hit 2NWI is Archaeoglobus fulgidus AF1396/O28875, 2.2-A
+X-ray structure. RCSB primary citation remains 'To be published'. A fold and
+author-assigned dimer are not evidence for substrate conversion or regulation.

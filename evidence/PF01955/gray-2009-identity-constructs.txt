@@ -1,0 +1,50 @@
+PF01955 Rhodobacter CbiZ identity and construct assessment, 2026-10-12 UTC
+Primary: PMID:19889098; DOI:10.1111/j.1365-2958.2009.06928.x
+https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3062942/
+Locators: cbiZ plasmid-construction/purification Methods, Tables2/3, Results.
+Minimal quotation: "identity of the insert was confirmed by sequencing"
+The main text and original Figures1-4 were inspected. The supplement download
+returned a preparation/challenge HTML document, not a PDF; no bypass was used.
+S1/S2 are therefore uninspected. Full source material stays outside the repo.
+
+Current mapping (database identity, not independent functional evidence):
+https://rest.uniprot.org/uniprotkb/Q3J3R7.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01955/protein/uniprot/Q3J3R7/
+Q3J3R7 sequence v1, 219aa, RSP_2406; ABA78567.1; WP_011337466.1.
+UniProt entry v69 lists taxon272943, Cereibacter sphaeroides strain2.4.1
+(common name Rhodobacter sphaeroides). PF01955 spans residues6-208.
+Genomic identity: CP000143.2:1035173..1035832, 660bp including stop; NC_007493.2.
+Public GenPept/CDS and 100bp downstream flank were inspected. Translation with
+the bacterial code and CDS start semantics exactly matches Q3J3R7v1; the native
+GTG initiator encodes Met, not an N-terminal Val substitution.
+https://www.ncbi.nlm.nih.gov/protein/ABA78567.1
+https://www.ncbi.nlm.nih.gov/nuccore/CP000143.2?from=1035173&to=1035932
+
+Table3 forward primers replace the initial GTG with ATG; their 3-prime regions
+match CDS bases2-20 (purification) and2-18 (rescue). Reverse-primer mapping was
+rechecked against the CDS plus downstream sequence, not just the coding region:
+purification AGCTTTGTCGACTCACAGGAGGTCTCAGCCC has a 20nt 3-prime suffix whose
+reverse complement GGGCTGAGACCTCCTGTGAG matches genomic1035826..1035845.
+It spans the native stop and 13bp downstream. Rescue
+AGCGAAGGATCCATGTCAACCCATTGTCCCG has a 22nt suffix whose reverse complement
+CGGGACAATGGGTTGACATGGA matches1035851..1035872, ending40bp after the CDS.
+These exact matches support the RSP_2406 assignment and the reported +40bp
+rescue construct. The earlier CDS-only nonmatch is resolved, not a mutation.
+
+Purification uses pRsCBIZ3 in pKLD66, amplified with KpnI/SalI primers and
+expressed in BL21 (Table2 specifies BL21(DE3)). N-terminal MBP and His6 tags
+remain in the measured enzyme. TEV removal yielded insoluble inactive material;
+the study does not establish equivalent activity of isolated untagged CbiZ.
+Rescue uses pRsCBIZ6 in pRK404, the coding region plus40bp downstream, using
+HindIII/BamHI cloning. Both inserts were reported sequence-confirmed, but full
+historical insert/tag/linker sequences were not retrieved in this assessment.
+Domain coordinates refer to the native parent, not fusion-residue numbering.
+Protein-normalized rates refer to the measured fusion preparation.
+
+The author-manuscript Figure2 caption mentions a fourth column and JE11662,
+but its original image has only columnsA-C. The publisher caption listsA-C.
+No fourth-column/triple-mutant result is invented. Figure4 is a pathway diagram,
+not a new causal experiment; the Discussion reference to Figure4D is inconsistent.
+Exact cbiZ deletion endpoints and prior salvage contexts await the earlier
+2008/2009 primary studies. PF01955's other mapped members remain separate.

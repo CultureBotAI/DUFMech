@@ -1,0 +1,57 @@
+Deschamps et al., 2023. PMID:36963491. DOI:10.1016/j.jbc.2023.104628.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/
+Inspected 2026-10-11: main Results, Discussion and Experimental procedures;
+Tables 1/2; Figures 1-6 visually checked. Figure 7 is a model, not an
+experiment adopted as an observed native transport trajectory.
+Minimal quotations: "lower final intracellular pH"; "larger uptake";
+"faster"; "higher value"; "later recovery".
+
+DML1 expression: pNZ8048, 2.5 ug/liter nisin for 2 h at 28 C. Sensor
+experiments use aerobic induction; normal cultivation is anaerobic.
+Intracellular pH: cells washed in 100 mM KCl, 1 mM EGTA, 1 mM MgCl2,
+20 mM MOPS pH 7.4; OD600 10, 2 ml, 28 C, stirring 300 rpm;
+390/470-nm excitation ratio, 507-nm emission, blank subtraction and
+four-parameter calibration. Figure 1 caption says digitonin, whereas
+calibration Methods and supplement S1 specify 0.5 ug/ml nigericin.
+Do not silently equate the two calibration procedures.
+
+Figure 2 corrects unequal initial intracellular pH by treating the
+sensor-only control with 10 mM HCl, then waiting 4 min. In A, add
+10 mM NaOH to GDT1 cells and 20 mM to control cells: final intracellular
+pH is higher with GDT1. In B, add 50 mM MES pH 6.0 to both: final pH
+is lower with GDT1. N=5-7 biological replicates. The preconditioning
+and additions differ deliberately; no single molecule is followed reversing.
+Discussion retains membrane leakage, endogenous transport and topology
+alternatives. Expression-associated pH effects alone do not isolate Gdt1.
+
+Figure 3: load 10 uM Fura-2/AM with 1.7 mM probenecid, 2 h at 28 C.
+Wash in 100 mM KCl, 1 mM MgCl2, 1 mM EGTA, 50 mM Tris pH 6.8/7.5/8;
+measure in corresponding EGTA-free calcium-sponge-treated buffer.
+25 uM CaCl2 gives a 340/380 ratio; 10 uM MnCl2 quenches the 360-nm
+signal, both with 510-nm emission. pH 8 versus 6.8 increases both
+uptake-associated responses in GDT1 cells, N=3 biological replicates.
+Empty-vector controls lack that pH dependence. Nigericin, 0.5 ug/ml,
+2 min before cation addition, removes significant between-pH differences;
+it does not abolish uptake. Table S1 independently supports both selected
+8-versus-6.8 comparisons. Not every adjacent pH comparison is significant.
+Exact Fura-2 recording temperature is not explicitly supplied here.
+
+Figure 4 uses 100 OD600 units resuspended in 20 ml 1 mM Tris pH 7,
+with stirring and pH-meter measurement. After 2 min baseline, separately
+add 20 mM CaCl2 or MnCl2. Both strains show an initial salt-associated
+pH drop; the 5-10 min recording interval has faster subsequent external
+acidification with GDT1 than empty vector. Slope comparisons N=3-7;
+representative time courses N=3-4. Exact measurement temperature is open.
+These are net whole-cell acidification effects, not simultaneous ion counts
+through an isolated transporter or a measured coupling stoichiometry.
+
+Figure 6: BY4742 WT versus gdt1::KanMX4, low-fluorescence defined medium
+with 50 mM MES pH 5.0. Wash three times and deprive glucose 60 min at
+28 C, record 2 min baseline, re-add 2% glucose, follow 12 min.
+At +120 s, cytosolic pH is lower in the deletion strain (N=3); at
++720 s Golgi pH is higher (N=5). Cytosolic final pH is not different.
+Figure 5 shows no significant GDT1-deletion steady-state pH effect,
+including in the vma13-deleted comparison. Neither steady-state data nor
+the glucose experiment prove the proposed native reverse-transport model.
+Other transporters, calcium signaling and gene-deletion effects remain
+alternatives; target-specific complementation is not shown for Figure 6.

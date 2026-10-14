@@ -1,0 +1,44 @@
+PF01910 identity ledger; accessed 2026-10-12 UTC
+Frozen Thiamine_BP, Thiamine-binding protein, IPR002767, former DUF77;
+EX_DUF/UNSCORED before curation. DUF77 is in both retained 2026-10-07 and
+2026-10-10 Pfam previous-name tables, not inferred from protein function.
+Snapshot interpro-pfam-duf-2026-10-10 SHA256:
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+Frozen counters: 9298 proteins, 9331 matches, 8093 proteomes, 12399 taxa,
+7 structures, 6343 AlphaFold models and 25 architectures.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01910/
+Fresh metadata agrees; no source snapshot refresh is performed.
+
+Thermotoga maritima MSB8 TM0486: UniProt Q9WYV6, taxon 243274, 94 aa,
+sequence version 1, MD5 655BFBA94BDB8080DB045659F66A8BB2.
+AAD35571.1 FASTA is exactly equal to the current UniProt sequence.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q9WYV6/
+PF01910 6-93. Dermoun2010 biochemical construct is N-terminal His-tagged;
+the pMH1 crystallographic construct is distinct. Clone sequencing was not
+independently repeated. Reference equality is not a historical-clone audit.
+
+Saccharomyces cerevisiae ECM15 reference P35195/YBL001C, S288c taxon559292,
+104 aa, sequence version1, MD5 0258FC9925443540A7B61CE9A4251812.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P35195/
+PF01910 8-98. Park2018 tested BY4741, not the S288c reference clone itself;
+reference mapping is qualified. No independent BY4741 clone sequence check.
+
+Cryptococcus neoformans H99 ECM15: J9VTN7/CNAG_06669, taxon235443,
+114 aa, sequence version1, MD5 D459CE7799F9E11964AFC860A05AA143.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/J9VTN7/
+PF01910 9-102. NCBI AFR95954.1 and XP_012050770.1 FASTA sequences both
+equal J9VTN7 exactly. Park2018 Figure S5A's displayed full sequence was
+visually compared with this reference; the D63-A91 cNLS prediction agrees.
+The prediction is not a residue-level functional experiment. Protein-name
+search alone missed this entry; Pfam plus H99 taxon recovered its mapping.
+https://rest.uniprot.org/uniprotkb/search?query=(xref:pfam-PF01910)%20AND%20(organism_id:235443)&format=json
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=AFR95954.1,XP_012050770.1,AAD35571.1&rettype=fasta&retmode=text
+
+Inspected response SHA256 values (temporary downloads, not frozen sources):
+Pfam metadata 013ceec9173f1db021962430214a73dfb85b763aa63a9ee72509320be415ea72
+Reviewed UniProt search dc64561db2040bab84b55b5c5777fb9a3b83320411b1ac0a795b9eda99b2dea4
+H99 UniProt search 1d246f1b852ce3b68c2ed90ec8b4959d7000e99bcfe2627009d17055039c2808
+Q9WYV6 domains 828ba72e6155128258df465a2b4fe250b1f51f183375faf8e82c6bf2e843cdec
+P35195 domains a3b75cd3141c62962a1249eb6e0cd5d33d41976e4594175d3f001da75506cede
+J9VTN7 domains 53ae2918d0e535069f65adc4d63eb24236a8da44f1b37ea9d7144f165ae6ff44
+Three-protein FASTA 511d1c20fa54237879c3e38da5b6edb66130fe83e99acebeabd02984cc83640f

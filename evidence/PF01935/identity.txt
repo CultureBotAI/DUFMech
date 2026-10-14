@@ -1,0 +1,36 @@
+PF01935 identity and experimental-scope ledger
+Accessed 2026-10-12 UTC; Codex. Curator paraphrases except the minimal tokens below.
+
+Frozen family: PF01935 / DUF87 / Helicase HerA, central domain;
+InterPro IPR002789. Snapshot interpro-pfam-duf-2026-10-10, SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+11479 proteins, 87 architectures. Preserve imported metadata, including its
+conflicting generic unknown-function statement. Neither the functional name nor
+the selected experiments characterize every family member.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01935/
+Its literature resolves to PMID14990749, PMID25420454 and PMID25880130.
+
+https://rest.uniprot.org/uniprotkb/Q97WG8
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q97WG8/
+Q97WG8 sequence version1, 500 aa, SSO2251/herA, Saccharolobus solfataricus P2
+(historical Sulfolobus), taxon273057. Current Pfam PF01935 match121-331;
+PF09378 HAS-barrel match3-84. Reference positions checked directly:
+M51/M56/I61/L65/R142/K154/D176/E356/K363/R381/G465/D471.
+R142/K154/D176 are inside PF01935; E356/K363/R381/G465/D471 are outside its
+current sequence match. Structural RecA-like/domain descriptions do not enlarge
+the current Pfam coordinates. The native protein was cloned from P2 genomic DNA.
+2014 activity variants were made from wild-type clones, not the crystallization
+HerAm10 construct. HerAm10 carries10 substitutions; it and the separate SAXS
+M51L/M82L construct are not interchangeable with each functional assay.
+
+https://rest.uniprot.org/uniprotkb/F0NFK8
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/F0NFK8/
+F0NFK8 sequence version1,500 aa,SiRe_0064, Saccharolobus islandicus REY15A,
+taxon930945, RefSeq WP_014513405.1 / EMBL ADX84159.1. PF01935 match121-331;
+PF09378 match3-84. Paper tests REY15A derivative E233S (delta-pyrEF delta-lacS),
+not wild-type REY15A physiology. D176 is inside PF01935; E356 outside.
+Both are full-protein substitutions. The NurA partner is a different protein.
+
+Reviewed-UniProt PF01935 query returned8 proteins, not an exhaustive member set.
+They include bacterial aq_aa31/O66421 and multiple Methanocaldococcus paralogs,
+so the selected archaeal mechanism cannot be assigned to the entire family.

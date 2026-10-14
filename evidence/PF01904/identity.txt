@@ -1,0 +1,36 @@
+PF01904 identity assessment, 2026-10-11 UTC
+Frozen snapshot: interpro-pfam-duf-2026-10-10
+SHA256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+Current InterPro still identifies PF01904 as DUF72, IPR002763.
+Frozen counts: 14646 proteins, 14657 matches, 9981 proteomes, 13949 taxa,
+3 structures, 8861 AlphaFold models and 30 architectures. No imported fact changes.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01904/
+https://rest.uniprot.org/uniprotkb/Q9X1W6.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q9X1W6/
+https://data.rcsb.org/rest/v1/core/polymer_entity/1VPQ/1
+https://files.rcsb.org/download/1VPQ.cif
+https://www.ncbi.nlm.nih.gov/protein/AAD36698.1
+https://www.ncbi.nlm.nih.gov/protein/WP_004082107.1
+Parsed provider JSON, mmCIF and versioned NCBI FASTA:
+Tm1631 Q9X1W6 sequence version 1 exactly equals AAD36698.1 and WP_004082107.1,
+261 aa, Thermotoga maritima MSB8, taxon 243274. PF01904 spans 3-259,
+score 2.3e-63. PDB 1VPQ entity sequence 13-273 exactly matches this reference;
+the preceding 12 residues are the MGSDKIHHHHHH tag. Author numbering retains
+reference N44, Y47, Y48, K72, T73, Q114, R145 and R191. The deposited structure
+has sulfate and water, not a measured DNA or magnesium-bound complex.
+Ogrizek2016 supplemental Figure S2's parsed caption explicitly maps model
+Lys73 to 72:A. Supplemental coordinate subsets use LYS73, ASN45 and GLN115;
+the corresponding reference residues are K72, N44 and Q114. No K73 mutation
+is inferred: native residue 73 is threonine. These are model labels, not assays.
+
+https://rest.uniprot.org/uniprotkb/P37348.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P37348/
+https://www.ncbi.nlm.nih.gov/protein/NP_416382.1
+https://www.ncbi.nlm.nih.gov/protein/AAC74938.1
+https://www.ncbi.nlm.nih.gov/protein/BAA15679.2
+YecE P37348 sequence version 4 exactly equals NP_416382.1, AAC74938.1 and
+BAA15679.2, 272 aa, E. coli K-12, taxon 83333; b1868/JW1857.
+Current PF01904 spans 3-258, score 2.7e-64. Reference equality does not sequence
+the historical Keio recipient or Hfr-derived double mutants. No transfer of
+the Tm1631 computational mechanism to YecE or all DUF72 proteins is justified.

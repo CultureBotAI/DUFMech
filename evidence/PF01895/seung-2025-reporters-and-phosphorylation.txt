@@ -1,0 +1,49 @@
+Seung2025: PMID40588129; doi10.1016/j.jbc.2025.110435
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12301784/
+Inspected 2026-10-11: relevant Results/Discussion, Methods, Table1, original
+Figures6-8 and captions. Minimal exact quotations: "decrease",
+"dephosphorylation". Other figures were not visually audited.
+
+Figure6A/B: delta-pstB/MSMEG_5779 in mc2 155, separately overexpressing
+C-terminal His6 PhoU1/MSMEG_5776 or PhoU2/MSMEG_1605 from pMH201
+derivatives. Each reduces phoA-lacZ and phoU1-lacZ beta-galactosidase relative
+to empty vector, particularly at10mM K2HPO4. MOPS/glucose0.2%,Tween80
+0.02%,pH7.2,37 C/200rpm,OD6000.45-0.5,acetamide0.1%; three biological
+replicates,SD. Original brackets/starred comparisons support high-Pi effects.
+The50uM-Pi response is weaker; no invented significance is assigned to its
+unstarred contrasts. Figure6C expression blots use7H9, not the reporter medium.
+This does not prove direct repression of either promoter by PhoU protein.
+
+Figure7A: purified C-terminal His6 proteins from E. coli BL21(DE3), partner
+SenX3SD1(51-384)46pmol, RegX3150pmol, PhoU1275pmol,+/-Pi500uM.
+RegX3 is already partly phosphorylated; mid-exponential OD0.4 expression
+provides the less-phosphorylated preparation. Buffer300mMTris-HClpH8,
+50mMKCl,10mMMgCl2; ATP1mM initiates30 C, samples0/1/2min.
+PhoU1 together with Pi lowers the net phosphorylated RegX3 readout. Neither
+PhoU1 without Pi nor Pi without PhoU1 produces the corresponding reduction.
+One Results sentence names less-phosphorylated SenX3; Figure7A/caption and
+Methods instead identify RegX3, which is used in the curated scope.
+
+Figure7B: distinct preparation from late-exponential OD1 E. coli, more
+prephosphorylated RegX3144pmol, SenX3SD139pmol,Pi500uM,+/-PhoU1200pmol,
+same buffer/ATP/temp, samples0/1/2/3min. PhoU1 addition decreases P-RegX3
+over time. SenX3 and ATP remain present, so this is a net reaction balance,
+not proof that isolated PhoU is a phosphatase or a measured phosphatase kcat.
+Protein amounts are pmol; reaction volume/concentrations are not invented.
+Phos-tag gels are loaded without boiling to preserve phospho-Asp. Global
+Methods mentions biological replicates, but independent purification counts
+for the pictured gels are not specified.
+
+Figure8: with SenX3SD146pmol, PhoU1275pmol,+/-Pi500uM, ATP1mM,30 C,
+0/1/2min, no reduction in SenX3 autophosphorylation is shown. Thus the
+RegX3 result does not establish autokinase inhibition. Reduced phosphotransfer,
+enhanced SenX3 phosphatase activity, or both remain possible. Figures9/10's
+Pi-binding/conformational model is not a measured Pi Kd or residue-level
+binding site; neither modeled alpha6 motif nor phosphate occupancy becomes
+an observed edge. Redundant-paralog deletion is reported without shown data;
+selection only at low Pi does not identify a toxic molecular intermediate.
+
+Original images SHA256:
+F6 34ea9f6bb0d8be3311eeaae5c5eb3241744317ad73059cf4061ec602b9996d6a
+F7 4b1e04b179777a2ecf2d7011da6d5072766597e327793d4781797999e28897ef
+F8 1212afa0ea1c7bce4667a022aa597da170d5b36e88487cd2aae5403f74cc8215

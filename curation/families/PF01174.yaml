@@ -1,0 +1,191 @@
+pfam_id: PF01174
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01174
+causal_graphs:
+  - graph_id: pdxt-untagged-partner-dependent-glutaminase
+    title: PdxS increases the glutaminase readout of untagged PdxT
+    scope: Purified untagged Bacillus subtilis 168 YaaE/PdxT with YaaD/PdxS in Raschle 2005 supplement S2A and main Results. The bovine reporter enzyme is a separate component.
+    context: 300 ul, 4 uM YaaE, 4 uM YaaD when present, 10 mM glutamine, 50 mM Tris-Cl pH 8.0, 0.5 mM APAD and 7 U bovine glutamate dehydrogenase; 37 C. Measure the increase at 363 nm after glutamine addition.
+    family_mapping: P37528/PDXT_BACSU, 196 aa, sequence version 1, matches InterPro exactly with PF01174 at 6-188. The study cloned strain-168 genomic yaaE, verified constructs by sequencing and purified proteins by N-terminal sequencing. Primer ends match MLTIGVL and EYKQKALV. Untagged activity preparations differ from His6-YaaE used for pull-out assays.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:224308
+    limitations: APAD reduction is a coupled glutamate readout, not direct observation of ammonia channeling. Individual-protein controls remain near background; this is an assay-specific bound, not universal absence of intrinsic activity. The 2004 SMY His6 preparations and their pH/temperature are not transferred.
+    nodes:
+      - node_id: add-yaad-to-yaae-glutamine
+        label: Add 4 uM YaaD to untagged YaaE and glutamine
+        node_type: PERTURBATION
+      - node_id: yaae-coupled-glutaminase-readout
+        label: Glutamate-dependent APAD reduction in the coupled YaaE assay
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P37528
+    edges:
+      - edge_id: partner-increases-yaae-glutaminase-readout
+        subject: add-yaad-to-yaae-glutamine
+        predicate: increases
+        object: yaae-coupled-glutaminase-readout
+        mechanism: The joint YaaD/YaaE preparation shows greater glutamine-dependent reporter turnover than YaaE alone. The causal intervention is partner addition; atomic allostery and ammonia transport are not independently observed here.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:16030023
+            source_url: https://archive-ouverte.unige.ch/unige:89531
+            snippet: glutaminase activity
+            explanation: Supplement S2A/B, main Results on page 32294 and coupled-assay Methods on page 32292, with untagged protein preparation controls.
+            cache_path: evidence/PF01174/raschle-2005-pdxt.txt
+            cache_sha256: d7f446303a58a75715c784a08baf140e0e1544ad165f1c4f7fd2d27873c4b197
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P37528/entry/pfam/PF01174/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P37528/entry/pfam/PF01174/
+            snippet: 'P37528 Pfam:PF01174 interval: 6-188, inclusive.'
+            explanation: Exact reference mapping and strain-168 cloning evidence, not proof of identical SMY or other-species preparations.
+            cache_path: evidence/PF01174/PdxT-identity.txt
+            cache_sha256: 18dba408806b8fe2efcb37eeb790aca7be688125551a2db10ec004b875a94389
+  - graph_id: pdxst-glutamine-dependent-plp-product
+    title: Joint PdxS and PdxT reactions produce PLP
+    scope: Untagged strain-168 YaaD/YaaE with glutamine and phosphorylated carbohydrate substrates. Product identity is supported by orthogonal analyses, not only the Tris-dependent absorbance signal.
+    context: 40 uM each protein, 50 mM Tris-Cl pH 8.0, 37 C, 10 mM glutamine, 0.5 mM ribose 5-phosphate and 0.5 mM dihydroxyacetone phosphate. A414 monitors the product-associated Tris Schiff base; deproteinized product is additionally examined by HPLC, MS, chemical spectral shifts and supplemental 600-MHz NMR.
+    family_mapping: YaaE/PdxT is P37528-associated strain-168 protein, PF01174 6-188; YaaD is the separate synthase. Both whole proteins and all listed substrates form a joint input, not a claim that PdxT alone synthesizes PLP.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:224308
+    limitations: No directly tracked ammonia channel or atomic catalytic sequence is inferred. Figure 1A/B captions say 1 mM glutamine whereas Methods/Results say 10 mM; exact fitted kinetics are not assigned to this graph. Supplemental NMR identifies an unknown 3.75-ppm contaminant. Raw spectra and historical clones were not independently reanalyzed.
+    nodes:
+      - node_id: joint-pdxst-glutamine-carbohydrate-reaction
+        label: Joint YaaD, YaaE, glutamine, ribose 5-phosphate and DHAP reaction
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P37528
+      - node_id: identified-plp-product
+        label: Reaction product identified as pyridoxal 5-phosphate
+        node_type: STATE
+    edges:
+      - edge_id: pdxst-joint-reaction-produces-plp
+        subject: joint-pdxst-glutamine-carbohydrate-reaction
+        predicate: produces
+        object: identified-plp-product
+        mechanism: The reconstituted reaction produces material matching authentic PLP by chromatography, spectral behavior, mass and NMR. This establishes net product formation under joint-input conditions without treating each biochemical intermediate as observed.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:16030023
+            source_url: https://archive-ouverte.unige.ch/unige:89531
+            snippet: pyridoxal
+            explanation: Product Methods and Results on pages 32293-32296, Figure 2 and visually inspected supplemental S3 distinguish PLP from pyridoxine/pyridoxal standards.
+            cache_path: evidence/PF01174/raschle-2005-pdxt.txt
+            cache_sha256: d7f446303a58a75715c784a08baf140e0e1544ad165f1c4f7fd2d27873c4b197
+  - graph_id: pdxt-ribulose-ammonium-dependent-synthase-readout
+    title: PdxT supports the ribulose-phosphate reaction with external ammonium
+    scope: Figure 1C's specific ribulose 5-phosphate comparison with external ammonium sulfate, not a universal requirement for PdxT in ammonia-supported synthesis.
+    context: 20 uM untagged YaaD with or without 20 uM YaaE, 1 mM ribulose 5-phosphate, 2 mM DL-glyceraldehyde 3-phosphate and 10 mM ammonium sulfate; 50 mM Tris-Cl pH 8.0, 37 C; A414 time course. The ribose 5-phosphate condition is a separate specificity control.
+    family_mapping: Strain-168 YaaE/PdxT maps to P37528 and PF01174 6-188. The coupled product readout still requires YaaD and the listed substrates; no isolated-domain claim is made.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:224308
+    limitations: Ribose 5-phosphate supports synthesis without YaaE in the same external-ammonium experiment. A414 is a product-associated readout, not direct identification of an isomerase step. A role in pentulose isomerization is a proposal, not an observed edge.
+    nodes:
+      - node_id: add-yaae-ribulose-ammonium
+        label: Add YaaE to YaaD with ribulose 5-phosphate and ammonium
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P37528
+      - node_id: ribulose-ammonium-a414
+        label: A414 product-associated signal in the ribulose/ammonium reaction
+        node_type: ACTIVITY
+    edges:
+      - edge_id: yaae-increases-ribulose-ammonium-product-signal
+        subject: add-yaae-ribulose-ammonium
+        predicate: increases
+        object: ribulose-ammonium-a414
+        mechanism: Adding YaaE increases the product-associated signal for this substrate combination. Because the ribose comparison works without YaaE, the effect is bounded to the ribulose context and is not explained solely as provision of nitrogen from glutamine.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:16030023
+            source_url: https://archive-ouverte.unige.ch/unige:89531
+            snippet: pyridoxal
+            explanation: Visually inspected Figure 1C with its own 20-uM protocol, and substrate Results on page 32295; distinct from the 40-uM product-preparation assay.
+            cache_path: evidence/PF01174/raschle-2005-pdxt.txt
+            cache_sha256: d7f446303a58a75715c784a08baf140e0e1544ad165f1c4f7fd2d27873c4b197
+  - graph_id: pdxt-acivicin-glutaminase-inhibition
+    title: Acivicin exposure reduces the coupled glutaminase readout
+    scope: Figure 3A's 5-mM acivicin preincubation of untagged YaaD/YaaE, assayed by glutamate-dependent APAD reduction. This is a biochemical treatment, not a cellular antimicrobial effect.
+    context: 4 uM each YaaD/YaaE in the pH-8.0 coupled-assay buffer, 5 mM acivicin at 37 C for the displayed 0-10 min pretreatments; add glutamine to 10 mM and monitor A363. The selected figure protocol is explicit despite the Methods concentration-list discrepancy.
+    family_mapping: YaaE/PdxT corresponds to P37528 with PF01174 6-188. The C79-containing peptide 74-87 matches the reference and is separately assigned as an acivicin target by MS/MS; this does not make every proposed atomic step observed.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:224308
+    limitations: Methods list 1/2/10 mM while Figure 3 uses 5 mM and 2/5/10 mM. Caption s^-1 conflicts with minute-based Results/time axes; no precise inactivation rate is adopted. Raw mass/adduct chemistry and reporter-specific interference controls remain incompletely assessed; covalent-modification evidence supports, but does not replace, assay scope.
+    nodes:
+      - node_id: acivicin-pretreat-glutaminase-mixture
+        label: Increase 5-mM acivicin pretreatment time relative to zero-time control
+        node_type: PERTURBATION
+      - node_id: acivicin-assay-glutaminase-readout
+        label: Residual coupled glutaminase readout of YaaD/YaaE
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P37528
+    edges:
+      - edge_id: acivicin-exposure-decreases-glutaminase-readout
+        subject: acivicin-pretreat-glutaminase-mixture
+        predicate: decreases
+        object: acivicin-assay-glutaminase-readout
+        mechanism: Longer preincubation lowers subsequent APAD-reduction activity relative to zero-time exposure. The directly observed comparison is the treated biochemical mixture; precise inhibition kinetics and a universal drug mechanism are not inferred.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:16030023
+            source_url: https://archive-ouverte.unige.ch/unige:89531
+            snippet: acivicin
+            explanation: Visually inspected Figure 3A and inhibition Methods/Results. Figure 6's peptide assignment is supporting chemical context, not a new assumed intermediate.
+            cache_path: evidence/PF01174/raschle-2005-pdxt.txt
+            cache_sha256: d7f446303a58a75715c784a08baf140e0e1544ad165f1c4f7fd2d27873c4b197
+  - graph_id: pdxst-acivicin-plp-signal-inhibition
+    title: Acivicin exposure reduces the glutamine-supported PLP synthesis signal
+    scope: Figure 3C's separate 40-uM YaaD/YaaE product assay with glutamine as nitrogen donor, not the lower-concentration glutaminase assay or an external-ammonium comparison.
+    context: 40 uM each untagged protein, 0.04-5 mM acivicin in 50 mM Tris-Cl pH 8.0 at 37 C; Methods describe 60 min exposure. Measure A414 synthesis with 0.5 mM ribose 5-phosphate, 0.5 mM DHAP and 10 mM glutamine, relative to untreated activity.
+    family_mapping: Strain-168 YaaE is P37528-associated PdxT, PF01174 6-188. YaaD supplies the separate synthase activity. Both proteins remain in the treated assay mixture.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:224308
+    limitations: The graph does not assign the entire loss specifically to one covalent bond, exclude all effects on YaaD/reporting chemistry, or demonstrate inhibition in cells. The A414 signal is a relative activity readout; product identity is independently supported in the untreated preparative experiment.
+    nodes:
+      - node_id: acivicin-pretreat-plp-mixture
+        label: Expose the YaaD/YaaE synthesis mixture to increasing acivicin
+        node_type: PERTURBATION
+      - node_id: residual-glutamine-plp-signal
+        label: Residual glutamine-supported A414 synthesis activity
+        node_type: ACTIVITY
+    edges:
+      - edge_id: acivicin-decreases-glutamine-plp-signal
+        subject: acivicin-pretreat-plp-mixture
+        predicate: decreases
+        object: residual-glutamine-plp-signal
+        mechanism: Increasing acivicin exposure reduces the normalized product-associated signal in the joint glutamine-supported reaction. It is a separate measured endpoint, not a transitive edge inferred only from glutaminase inhibition.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:16030023
+            source_url: https://archive-ouverte.unige.ch/unige:89531
+            snippet: acivicin
+            explanation: Visually inspected Figure 3C and its distinct 40-uM enzyme and carbohydrate conditions in the inhibition Methods.
+            cache_path: evidence/PF01174/raschle-2005-pdxt.txt
+            cache_sha256: d7f446303a58a75715c784a08baf140e0e1544ad165f1c4f7fd2d27873c4b197
+discussions:
+  - discussion_id: pdxt-kinetic-discrepancies-and-other-contexts
+    prompt: Reconcile source discrepancies and extend PdxT mechanisms with exact constructs and orthogonal controls.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Five direct biochemical effects cover partner-dependent hydrolysis, PLP formation, a ribulose/ammonium context and two inhibitor readouts. They do not establish every atomic step, strain phenotype or family member's function.
+    evidence:
+      - reference: PMID:16030023
+        supports: PARTIAL
+        evidence_source: inspected_primary_full_text_and_supplement
+        explanation: Main paper and appended supplement support the adopted reactions, while conflicting concentrations, rate units and mass descriptions constrain quantitative interpretation.
+      - reference: PMID:14762015
+        supports: PARTIAL
+        evidence_source: inspected_primary_full_text
+        explanation: Earlier SMY growth and His6 biochemical experiments were inspected but are not transferred to the strain-168 untagged preparations.
+    notes: Obtain full historical clones and raw inhibition/MS data, reconcile 1/10-mM glutamine, minute/second rate units, acivicin dose lists and peptide/intact-adduct masses. Inspect reporter controls and later structural/intermediate studies before adding an atomic channeling cycle. Resolve SMY identity and the pBB1181 penultimate-residue discrepancy before adopting its separate genotype/growth context. Review plant, fungal and other microbial members independently. Partial scientific self-review; remain IN_PROGRESS.
+    posed_by: Codex
+    posed_date: '2026-10-11'

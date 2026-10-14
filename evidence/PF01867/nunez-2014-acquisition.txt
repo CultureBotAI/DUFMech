@@ -1,0 +1,29 @@
+PMID:24793649; DOI:10.1038/nsmb.2820. Accessed 2026-10-11.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4075942/
+Author-manuscript HTML SHA256 0970450987b4cc859d73c3bc37bafe165aca672989d955ce8faf63ce1268fbd7.
+Minimal exact source quotation: Spacer acquisition assays
+
+Original Figures1,3,4 and Online Methods inspected.
+MG1655 cas1/cas2 cloned into pCDF-1b; BL21-AI cellular host. LB with50ug/ml
+streptomycin,0.2%arabinose,0.1mM IPTG;20-24h induction. OD600-normalized input,
+CRISPR-I locus PCR and1.5%agarose. At least three assay repetitions.
+Fig1B:joint expression, unlike either alone or empty vector, produces expanded
+locus bands. Clonal sequencing identifies inserted spacers; complete raw
+sequence reanalysis and SupplementaryTable1 inspection are not claimed.
+Fig4C:E141A,H208A,D218A,D221A and K224A separately lack detectable expanded
+bands relative to WT. These cellular endpoints do not isolate chemistry;
+K224A retains integration in the distinct purified 2015 ED3 assay.
+Fig3D:R245D,R252E,R256E separately reduce expansion; corresponding alanine
+substitutions retain it. Fig3C:Cas1delta-P282-S305,I291G,I291R retain expansion;
+Cas2delta-beta6-beta7 does not. No universal tail requirement is assigned.
+Fig3F:R252E reduces co-precipitated Cas2-HA after Cas1-FLAG IP, with expressed
+input controls. Separate lysate assay,400mM KCl washes; not purified binding
+affinity or proof that loss of association is the sole cause of acquisition
+loss. Only R252E among these three charged Cas1 variants was tested here.
+SupplementFig2d is described as WT-like SEC retention of purified R252E;
+original supplementary figure not inspected, so normal folding of all variants
+is not established. Protein abundance, folding and cellular context can matter.
+
+The native PF01867 match includes E141/H208/D218/D221/K224 but excludes
+R245/R252/R256 and the terminal tail. No isolated-domain sufficiency, cellular
+phage resistance or observed association-to-acquisition chain is claimed.

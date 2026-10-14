@@ -1,0 +1,37 @@
+Source: Hauser et al. 2012, PMID:22829778, doi:10.1371/journal.pgen.1002815.
+URL: https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002815
+Full-text XML: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3400551/fullTextXML
+Inspected 2026-10-11: Results; expression, media-shift, complementation and
+poly(U)/gradient methods; Figure 3 and Figure 4 images.
+
+Short quotations:
+Figure 4 caption: "significantly reduces the fraction of 70S ribosomes"
+Results: "down to about 20%"
+Results: "The forced RsfA expression could heal the mutant phenotype"
+
+Curator's assay notes, not quotations:
+E. coli b0637 was expressed with an N-terminal His6 tag in BL21(DE3), purified
+by nickel affinity and anion exchange. RsfA is the paper's name for RsfS/YbeB.
+Preincubation: 18 pmol 50S, 180 ug poly(U), with/without 360 pmol RsfA in 90 uL,
+10 min at 37 C; then 10 pmol 30S for 10 min at 37 C. Binding buffer: 20 mM HEPES
+pH 7.6 at 0 C, 4.5 mM Mg acetate, 150 mM K acetate, 4 mM beta-mercaptoethanol,
+2 mM spermidine, 0.05 mM spermine. Sister aliquots underwent 10-30% sucrose
+gradients/A260 or precharged radiolabeled Phe-tRNA/EF-Tu/EF-Ts/EF-G/GTP-dependent
+oligo(Phe) synthesis, 2 min at 30 C. Both endpoints decrease with RsfA addition.
+Preassembled programmed 70S did not show the same strong inhibition: Figure 4A
+right is modestly below its control, not literally identical. Atomic steric
+contacts were modeled; they are not separate experimentally observed edges.
+
+The whole-gene deletion phenotype uses BW25113 derivatives. Overnight LB cells
+were diluted to OD600 0.005 in M9 and followed at 37 C, 200 rpm, up to 40 h.
+Figure 3B shows a prolonged growth plateau after initial growth, unlike WT.
+For complementation the kanamycin cassette was removed. Native-promoter RsfA-His
+did not rescue under this condition, while tac-driven expression induced with
+0.2 mM IPTG about 3 h after transfer did. This supports a gene-dependent phenotype,
+not a demonstrated direct metabolic route from ribosome inhibition to growth.
+The paper's separate competition, stationary-phase reporter, mitochondrial and
+interaction assays are not substituted for these adopted endpoints.
+
+Additional lead inspected only as abstract/database context: PMID:33639093,
+doi:10.1016/j.molcel.2021.02.006, describes RsfS in a pre-50S biogenesis network.
+No edge from that study is adopted without its methods and relevant assays.

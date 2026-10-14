@@ -1,0 +1,94 @@
+PF01951 / Popow 2014 human Archease experiments
+Inspected 2026-10-12 UTC. PMID:24870230; doi:10.1038/nature13284.
+Primary full text: https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/
+Main Results/Methods and all Extended Data captions read. Figures 1, 3, 4 and
+Extended Data 3, 4, 5, 6, 10 images visually inspected. ED7-9 captions only;
+their partner-mutant controls and discrepant labels need a separate audit.
+Minimal quotations: "re-starts stalled ligase reactions"; "guanylate RTCB";
+"tRNA maturation". Other statements below are factual curator summaries.
+
+Identity and assay ownership:
+Human Q8IWT0 v2 is the 167-aa reference with PF01951 31-167. ED4 uses this
+numbering (D39, K144, T147). FLAG/pDONR forward primer starts MAQ..., whereas
+the recombinant His6 pET28a primer starts MKGG... with an additional initiating
+codon. Do not silently equate the N termini. Mutant names below are the paper's
+D39A/K144A labels; complete recombinant mutant sequences remain unresolved.
+See identity-turnover-human-20261012.txt. WT and mutant purification is shown
+in ED3a, but purity is not native folding or thermal-stability verification.
+
+FLAG-RTCB is an affinity-purified multiprotein complex from HEK293 cells,
+including DDX1 and other partners, not isolated RTCB. Archease is recombinant
+His6 protein from E. coli. Linear RNA is the intron obtained by endonuclease
+cleavage of a hybrid pre-tRNA. Products include linear concatemer, circular
+concatemer and circular intron. Quantified Pconcat includes linear AND circular
+concatemer signals, not every ligated species. The intron preparation is
+dissolved in 10 mM Tris-HCl pH 7.5, 100 mM KOAc, 6 mM Mg(OAc)2 and 150 uM
+spermine; do not assume those are final concentrations in every reaction.
+Base ligation/maturation procedures cite Popow2011 PMID:21311021. Its detailed
+supporting protocol was not recovered from attempted public publisher/MPG
+endpoints in this follow-up. Missing final buffer/timing details are a coverage
+limit, not permission to invent them or import Gerber2024 Mn conditions.
+
+Biochemical edge ledger:
+1. Figure 1d: 20 nM FLAG-RTCB complex, 100 nM RNA, 10 uM Archease versus
+   buffer at 1 and 10 min. Added Archease increases ligated products and
+   substrate consumption. This is joint complex activity, not Archease ligase.
+2. Figure 1e: 20 nM complex, 500 nM RNA; 10 uM Archease added at 60 min
+   restarts Pconcat accumulation through 120 min versus matched buffer.
+   Three technical replicates, mean +/- SD. Separate from initial addition.
+3. ED3b/c: after preincubation of 30 nM complex/300 nM RNA for 90 min at
+   37 C, dilution gives final 22.5 nM complex/225 nM RNA. Archease 40 nM to
+   10.25 uM, 4-min equilibration, samples 4/5.5/7/8.5 min. Formation rate rises
+   around submicromolar/micromolar Archease; half-maximal response around 1 uM.
+   The 10.24 uM point is below the plateau: no globally monotonic dose claim,
+   binding Kd, Hill coefficient or cellular effective concentration inferred.
+4. Figure 3c: 10 uM WT Archease enables RTCB labeling from alpha-32P-GTP
+   compared with buffer; D39A/K144A do not. Alpha-32P-ATP is negative as donor.
+   A 6.5-ul assay at 37 C contains 2.5 ul FLAG eluate, 0.5 ul Archease,
+   3.25 ul nucleotidylation STOCK buffer, 0.25 ul radiolabel. The stock has
+   20 mM Tris pH 7.5, 200 mM KOAc, 12 mM Mg acetate, 300 uM spermine,
+   1 mM DTT, 1 uM each ATP/GTP, 1% Triton and 30% glycerol; these are NOT
+   all final assay concentrations. Incubation duration not specified here.
+5. Figure 3d: 20 nM complex, 500 nM RNA, 10 uM Archease +/- 0.5 mM GTP,
+   0-60 min. Archease plus added GTP gives much greater Pconcat accumulation
+   than Archease without added GTP or GTP without Archease. Three technical
+   replicates +/- SD. Residual initial activity does not prove no nucleotide
+   requirement: co-purified nucleotide is possible.
+6. Figure 1f: 20 nM complex, 1 uM RNA, 10 uM WT or named D39A/K144A.
+   Mutants fail to support WT-like product accumulation. This and Figure 3c
+   are four distinct mutant/output comparisons; molecular reasons remain
+   unresolved. Do not infer that substitution solely removes a metal contact.
+
+Extract and living-cell edge ledger:
+7. Figure 4a: HeLa RNAi targeting Archease lowers in vitro pre-tRNA maturation
+   compared with control (5/10/30/60 min). RTCB-only and double depletion are
+   distinct conditions. ED10a confirms mRNA knockdown; ED10b does not show
+   RTCB protein co-depletion after Archease depletion. No knockdown-to-direct
+   domain catalysis edge, and no newly inferred exact transfection duration.
+8. Figure 4b/c: Archease-depleted HeLa extracts with empty vector, c-myc WT,
+   D39A or K144A expression, assayed at 15 and 45 min. WT restores maturation;
+   each mutant fails to restore WT-like activity. Western verifies expression
+   of each construct, not matched native folding. This is Archease-specific
+   rescue in HeLa, unlike the separate DDX1 rescue in Suzuki2025 U2OS work.
+9. Figure 4e: HeLa T-Rex host cells, doxycycline 1 ug/ml induction of tagged
+   S. cerevisiae pre-tRNA3-PheGAA transgene. Northern at 0/24/48 h after
+   induction shows reduced mature tagged RNA after Archease RNAi, with U6
+   loading control. This is a yeast RNA transgene in human cells, not an
+   endogenous human-tRNA measurement or a yeast knockout. Synthesis/stability
+   and processing alternatives are not fully isolated by this endpoint.
+
+Excluded interpretations and remaining work:
+- ED5c/d: added Archease does not measurably change tested TSEN cleavage;
+  no cleavage-stimulation edge. ED5 binding/crosslinking is not activation.
+- Figure 3a/b and ED6 show transient WT versus persistent mutant RNA adducts;
+  extracted RNA in those adducts is substrate/concatemer, not final circular
+  products. These do NOT directly establish accelerated final-product release.
+- Figure 3e/f and ED7-9 suggest DDX1 nucleotide/ATPase contributions. Partner
+  variants, label discrepancies (E271Q/E371Q, R577K/R557K), and controls remain
+  open before adding residue-specific partner mechanisms. DDX1 is not Archease.
+- Figure 4d plus ED10c include partner knockdowns and co-depletion, especially
+  CGI99/DDX1; do not infer independent direct requirements for each protein.
+- ED10d caption points to Figure 4b although Results cite it with Figure 4e.
+  Do not silently reinterpret the source's cross-reference as exact provenance.
+- No Archease-specific XBP1, neuronal, fly or plasma-cell effects are inferred
+  from these tRNA assays. No independent expert or raw-data audit is claimed.

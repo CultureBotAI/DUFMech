@@ -1,0 +1,47 @@
+PF01931 member identity assessment, 2026-10-12 UTC, Codex.
+
+Frozen record: Protein of unknown function DUF84; NTPase_I-T; EX_DUF;
+InterPro:IPR026533. Preserve all imported labels, counters and source provenance.
+Current InterPro calls PF01931 a domain in clan CL0269; a renamed family does
+not establish every member's activity.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01931/
+
+E.coli K12 YjjX: UniProt P39411, sequence version2,170aa,taxon83333.
+Current PF01931 mapping4-168 (score6.1e-53).
+https://rest.uniprot.org/uniprotkb/P39411.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P39411/entry/pfam/PF01931/
+RCSB1U5W entity1 has184aa: MLI + complete170aa P39411 + SGRVEHHHHHH.
+https://data.rcsb.org/rest/v1/core/polymer_entity/1U5W/1
+Deposited sequence positions therefore differ from the modern canonical sequence.
+The thesis primer additionally suggests an N-terminal MLLI extension, whereas
+the deposited entity has MLI. Do not silently equate these numbering systems.
+The paper used pET21b C-terminal His6 protein expressed in BL21(DE3).
+UniProt separately flags an obsolete extended start and an older partial sequence
+misassigned to Salmonella; those cautions do not invalidate every Salmonella entry.
+
+Human PRRC1: Q96M27, sequence version1,445aa,taxon9606.
+Current PF01931 match260-376 (score9.3e-8); N-terminal proline-rich regions are
+outside that match. Alternative isoforms exist. Whole-protein perturbations
+do not assign trafficking function to isolated PF01931 or prove NTP hydrolysis.
+https://rest.uniprot.org/uniprotkb/search?query=gene%3APrrc1%20AND%20organism_id%3A9606&format=json&size=10
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q96M27/entry/pfam/PF01931/
+The human canonical accession anchors gene identity, not a verified sequence of
+each siRNA, knockout clone, tagged rescue or purified recombinant construct.
+Rat liver cytosol is a mixed-species assay component, not evidence that all
+PRRC1 measured in the 2021 discovery experiment was human Q96M27.
+
+First100 current UniProt Pfam-query results were inspected as an incomplete
+member sample. They include zebrafish Q5XJA3, mouse Q3UPH1, rat Q3T1I4,
+Thermoplasma acidophilum Q9HIY2 and T.volcanium Q97BQ0. Predicted enzyme
+annotations and PPAT fusions are not independent tests of PF01931 chemistry.
+
+Research downloads SHA256 (temporary caches, not adopted frozen inputs):
+PF01931 InterPro ffd2f1b110efef9244f0eb4f2c8c7bbaa460eb9c4145cd94b6545c1185540c65
+P39411 UniProt e9062f526e1b46bd97ea4aa20d61c7f70e5a115196f679cb92373684df5ef24f
+Q96M27 query b13ad180c42f6fa1f66daf2a025628d6d45fff5d29789175389911e337cba316
+P39411 mapping d0cf1b354e89586a4e0b22d9e655a3e5c585a667cec6bfaa6d3b824c4ee3e25d
+Q96M27 mapping 572de5c00f8752639ec5715a3d71a28cc103a39463a413de38eac312f5320ebf
+1U5W entity 4eea9c847dfd0b9c058c472a40c88fdf23161115934f9420dcd314652fecb82d
+Zheng thesis a62831a8bbe755d58f305a2c1677220e47f8b842974576a07eb15c8fb19de753
+Huang HTML e36db6bd9ba3877dd877a98cdf1c7fc36d3ed83400eddd97fadaa0ed6d48ef4e
+Peng HTML 53972956b2430ce949e0ada37ffdcb783f139f78700288693a603d61f1745a8d

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF00924
+  path: curation/families/PF00924.yaml
+session:
+  id: 2026-10-11T080327Z-codex-781890
+  timestamp: '2026-10-11T08:03:27Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate MscS interface, redox-response and crowding-context graphs
+  details: Inspected Koprowski 2011 patch Methods, Results, Discussion and Figures
+    4/6; Rowe 2014 Methods, G168D Results and Figure 4D/E; verified P0C0S1 sequence
+    and PF00924 interval. Three graphs retain six directly observed current or availability
+    effects, with salt bridges, disulfide locking and cage compression kept interpretive.
+    Structural domain boundaries and assay-specific buffers, voltages, genotypes and
+    pressure protocols remain separate. Minimal caches and unresolved coverage accompany
+    an IN_PROGRESS overlay; schema validation passed. Partial curation is not family
+    completion or independent endorsement.

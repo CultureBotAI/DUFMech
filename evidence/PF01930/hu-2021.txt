@@ -1,0 +1,68 @@
+Gsu Cas4/Cas1-Cas2 evidence, inspected 2026-10-12 UTC
+Hu et al. 2021, PMID34588691, DOI10.1038/s41586-021-03951-z.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9164213/
+https://www.nature.com/articles/s41586-021-03951-z
+Relevant Results and Methods read; original Figures1,3,4 and Extended Data4/8
+visually inspected; Extended Data7 caption read. Short verbatim tokens retained:
+"ExoI", "EMSA", "PAM cleavage", "spacer acquisition", "E18Y".
+All remaining text is an authored evidence assessment, not quoted full text.
+
+Object: GSU0057/Q74H36v1 full-length559aa natural Cas4/Cas1 fusion from
+G.sulfurreducens DSM12127, with GSU0058 Cas2. PF01930 matches15-197 only.
+Recombinant proteins are expressed in E.coli, affinity tags cleaved, purified
+by SEC. Methods pET28a versus supplement pET28b naming is unresolved; exact
+residual scar is not claimed. Purified fusion/complex effects are not isolated
+Cas4-domain sufficiency. Neither Cas1 integration nor ExoI trimming is
+misattributed to the Pfam domain's catalytic center.
+
+Figure3f: matched PAM-free, single-PAM and dual-PAM prespacers, EMSA timecourse
+0.5,1,2,5min,2nM DNA/50nM complex at4C;50mM Tris pH8,100mM KCl,
+5mM TCEP,5mM MnCl2,10%glycerol. PAM-bearing substrates favor full shifted
+complex relative to no-PAM control. This is complex assembly, not proof that
+binding alone activates cleavage. Density snapshots do not measure docking rates.
+
+Figure3b andED8a: E.coli ExoI trims the non-PAM overhang to approximately7nt
+in the Cas4/1-2 complex, while PAM-side is protected relative to ExoI alone.
+10nM prespacer,250nM complex,37C preincubation;50mM Tris pH8,100mM KCl,
+10%glycerol,5mM TCEP,5mM MnCl2 plus10mM MgCl2. ExoI titration and time
+controls are shown. Native Gsu processing nuclease identity is not established.
+
+Figure3d andED8b: composite Cas4/1-2, ExoI and supercoiled pCRISPR context
+produces non-PAM-side leader-proximal integration; restriction-release product
+sizes resolve orientation. Controls omit ExoI or target. This is a joint
+reconstitution, not Cas4 alone sufficient for integration. ED7 reports failure
+on tested linear leader-repeat DNA; that conditional result is not universal.
+
+ED8c-e: annealed half-integration mimic compared with free prespacer gives more
+PAM cleavage, with temperature dependence and three independent experiments.
+It is a synthetic mimic, not proof that a preceding integration actually occurred
+in that sample. ED8m supports full integration in the prepared complex, but
+cryo-EM states do not by themselves establish live Cas4 dissociation kinetics.
+Figure4d: shortening repeat from a reach-capable30bp Sub3 to19bp Sub2 reduces
+PAM-cleavage enhancement. Sub3 promotes cleavage despite no full integration;
+longer Sub4 supports integration. Retain measured length/context effects,
+not a resolved allosteric signal or proven K102 side-chain switch.
+
+ED4f: E18Y changes cleavage from PAM-selective to distributive; S191A largely
+retains Gsu specificity with weakened activity. DoubleE18Y/S191A shows partial
+Pfu-like preference on a distributive background. Structure contact predictions
+do not make every contact residue an experimentally established causal step.
+ED4g has a material source conflict: Results says the double mutant does NOT
+support Pfu-PAM spacer integration; the caption says it does. The original gel
+and near-baseline bar agree more closely with Results. The publisher caption
+also contains the affirmative statement. No unqualified cellular PAM-switch
+edge is adopted; exact corrected result remains a follow-up.
+
+Figure1b/c: E.coli BL21-AI containing Gsu module pTU338 and pCRISPR pTU368,
+PCR array expansion and sequencing after supplied prespacer challenge, n3 for
+PCR. Correctly spaced ssPAM supports expansion; noPAM, adjacentPAM anddsPAM
+substrates do not show comparable expansion. Single-PAM inputs bias orientation;
+dualPAM yields mixed orientations. Keep indirect cellular effects separate from
+purified-protein mechanisms and native Gsu function. There is no infection
+challenge or measured increased antiviral fitness in this experiment.
+
+Supplementary Tables PDF inspected as text, pages1-3 of5:
+https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-021-03951-z/MediaObjects/41586_2021_3951_MOESM3_ESM.pdf
+Table1 corroborates pTU338/pTU368/pTU412/pTU413 and tags/vectors; Table2
+maps prespacer pairs and mutant primers. No raw sequencing reanalysis or clone
+resequencing was performed. Full Table2 pages4-5 were not inspected this pass.

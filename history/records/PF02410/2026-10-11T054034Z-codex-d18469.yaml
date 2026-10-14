@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF02410
+  path: curation/families/PF02410.yaml
+session:
+  id: 2026-10-11T054034Z-codex-d18469
+  timestamp: '2026-10-11T05:40:34Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate RsfS subunit-association, synthesis and media-shift effects
+  details: Added two scoped graphs with three primary-evidence edges, exact b0637
+    reference mapping, tagged-protein assay conditions and separate BW25113 whole-gene
+    phenotype. Figures 3 and 4 were visually inspected. Retained the preassembled-ribosome
+    qualification and native-promoter versus tac complementation distinction; later
+    pre-50S and organelle contexts remain follow-up work.
+  sections:
+  - causal_graphs

@@ -1,0 +1,23 @@
+PF01168 member identity, inspected 2026-10-11
+https://rest.uniprot.org/uniprotkb/P10724.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P10724/entry/pfam/PF01168/
+https://data.rcsb.org/rest/v1/core/polymer_entity/1L6G/1
+
+P10724, ALR_GEOSE, alr/dal, Geobacillus stearothermophilus
+(historical Bacillus stearothermophilus), NCBITaxon:1422.
+Sequence version 2, entry version 155, length 388;
+MD5: 884ca0d21aead2503a1bbb7fef560cae.
+P10724 Pfam:PF01168 interval: 12-229, inclusive
+UniProt, InterPro and 1L6G entity 1 canonical sequences match exactly.
+K39 lies in PF01168; Y265 lies outside it. Full-length enzyme was tested,
+not the isolated N-terminal profile. The deposited canonical sequence is
+identity corroboration, not proof of every chemical modification or clone.
+
+The 1998 paper starts from pMDalr3, constructs pAR310/pAR420, verifies
+K39A by sequencing, and expresses mutant pAR310 in E. coli JM109.
+Its mutagenic primer ATTATGGCGGTCGTGGCAGCGAACGCCTATGGA translates
+IMAVVAANAYG, matching current residues 34-44 (IMAVVKANAYG) with K39A.
+This local match does not establish complete clone identity. No affinity
+tag is specified in the inspected protocol. Exact donor strain remains open.
+UniProt retains older sequence conflicts at 37-38, 57-62 and 288-289;
+the current 388-aa reference is not silently equated with every old sequence.

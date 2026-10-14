@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01060
+  path: curation/families/PF01060.yaml
+session:
+  id: 2026-10-11T084450Z-codex-09ecca
+  timestamp: '2026-10-11T08:44:50Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add scoped TTR-52 clearance and lipid-binding causal graphs
+  details: 'Retain four graphs and six observed effects from Wang 2010 and Kang 2012:
+    three indirect cellular effects and three direct lipid-strip substitution effects.
+    HM130527.1 translation matches G5ED35 exactly, with mapped PF01060 boundaries.
+    Keep sm211/V43M and tm2078 distinct, preserve nested microscopy sampling and heat-shock
+    intervention, and exclude ambiguous M5 and double-mutant mechanisms. Overlay validation
+    passes; projection and partial same-agent scientific review follow. IN_PROGRESS;
+    not a full family review or publication.'

@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01638
+  path: curation/families/PF01638.yaml
+session:
+  id: 2026-10-11T120009Z-codex-328cdb
+  timestamp: '2026-10-11T12:00:09Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add scoped HxlR chemical, binding and reporter causal graphs
+  details: Created four graphs with seven observed effects from Zhu 2021 Figure 1
+    and Supplementary Figures 1/2. Verified P42406/Pfam and GSH-plus-reference PDB
+    sequence, extra-domain C11/K13 positions, and BW25113 taxonomy. Retained the formaldehyde-concentration
+    discrepancy, distinct K13A titration range, basal mutant signals and unresolved
+    primer-implied reporter N-terminal difference. Baseline check passed; scientific
+    coverage remains partial.

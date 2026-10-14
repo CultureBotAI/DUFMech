@@ -1,0 +1,28 @@
+PF01954 exclusion of a later experimental TA lead, 2026-10-12
+Li and Xu2025; PMID:40424603; doi:10.1021/acssynbio.5c00086.
+https://pubmed.ncbi.nlm.nih.gov/40424603/
+https://api.figshare.com/v2/articles/29161502
+https://ndownloader.figshare.com/files/54868517
+Inspected abstract, supplement FigureS2/caption, TableS1 strain/plasmid entries
+and original FigureS2 image on PDFpage3. Main paper access returned403.
+Supplement is sb5c00086_si_001.pdf, Figshare CC BY-NC4.0; retained here only
+factual paraphrases. Full PDF remains temporary, not committed evidence.
+
+FigureS2 compares OD600 in Thermococcus kodakarensis TS559 carrying four
+heterologous TA cassettes at0.1 versus30MPa, with two antitoxin-promoter/RBS
+contexts. The named antitoxins are PYCH_18830, PYCH_17730, PF0775 andPF0838,
+not TK0335 or AF2212. The PF0775 comparison in panelB is explicitly NS.
+The figure alone does not resolve a direct molecular neutralization mechanism.
+
+https://rest.uniprot.org/uniprotkb/search?query=%28gene%3APYCH_18830%20OR%20gene%3APYCH_17730%20OR%20gene%3APF0775%20OR%20gene%3APF0838%29&format=json&size=100
+Exact locus matches in the inspected current response:
+PYCH_18830 = F8AID5,78aa, Pyrococcus yayanosii CH1, taxon529709, PF02697.
+PYCH_17730 = F8AHX5,73aa, same reference organism, PF26688.
+PF0775 = Q8U2Q7,107aa, Pyrococcus furiosus DSM3638, taxon186497, PF26688.
+PF0838 = Q8U2J6,83aa, same reference organism, PF10047/DUF2281.
+None of these four current domain annotations includes PF01954. The use of
+T. kodakarensis as host does not make its native DUF104 proteins the tested
+antitoxins. Do not transfer the cassette phenotypes to PF01954.
+Raw member-query SHA256:eb0a0e966ef46aa71f25475b83c27ac9df6a0d5721821d2914e2da0512349e3e
+Follow-up for the appropriate families: inspect the complete paper, controls,
+historical constructs and direct perturbation comparisons before curating edges.

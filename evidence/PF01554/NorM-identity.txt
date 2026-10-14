@@ -1,0 +1,24 @@
+Identity assessment, accessed 2026-10-11; database facts, not causal evidence.
+https://rest.uniprot.org/uniprotkb/Q9KRU4.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9KRU4/entry/pfam/PF01554/
+https://www.ncbi.nlm.nih.gov/protein/AAF94694.1
+Q9KRU4 / NORM_VIBCH, norM/vcmA, VC_1540; taxon 243277, V. cholerae O1 N16961.
+UniProt entry 129, sequence version 2, length 457 aa.
+UniProt and InterPro protein sequences match exactly.
+Sequence MD5: AA26D0D2B0A61CEEE0BA118E784B0D5D.
+Q9KRU4 Pfam:PF01554; repeat intervals: 17-176 and 243-404, inclusive.
+UniProt JSON SHA256: 3a0f836e5e5ea4532e01533b266cbf0b6283bc7e170cd40365c8d00929c814ac
+InterPro JSON SHA256: 62d15659c0d07470efee96e706ec337e94586419332b9c0f13a88d04f053db0a
+AAF94694.1 FASTA SHA256: a8e357bf4cbf9424d4b302c750e2b23edf0aa6dfed73fa5ac437caff621bcc63
+
+The paper's historical reference AAF94694.1 has 461 aa, starts MENSVHRY,
+and the current UniProt sequence starts MHRY. The historical positions 6-461
+match current positions 2-457 exactly. Equivalently, current sequence equals
+M plus historical sequence from position 6. This is not a simple removal of
+the first four residues: historical V5 is not current initiating M1.
+UniProt's AAF94694.1 cross-reference is marked ALT_INIT.
+Paper D36/E255/D371 map to current D32/E251/D367 respectively, with all three
+residues verified and within current PF01554 intervals. The tagged assay
+construct uses paper numbering. Reference-sequence reconciliation does not
+independently resequence that historical plasmid or prove isolated-repeat
+sufficiency. Frozen family metadata remains unchanged.

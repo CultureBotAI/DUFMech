@@ -1,0 +1,21 @@
+Identity retrieval: 2026-10-11.
+UniProt query: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AybgI%20AND%20organism_id%3A83333&format=json
+InterPro: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0AFP6/entry/pfam/PF01784/
+Structured API facts, not experimental evidence:
+primaryAccession: P0AFP6
+geneName: ybgI
+orderedLocusNames: b0710, JW0700
+organism: Escherichia coli (strain K12)
+taxonId: 83333
+entryVersion: 132
+sequenceVersion: 1
+length: 247
+md5: 1F8E5F6CCB931658A7D0407519B276A7
+RefSeq: NP_415238.1; genome NC_000913.3
+EMBL protein: AAC73804.1
+entry accession: PF01784
+fragment: 1-246, CONTINUOUS
+entry_integrated: ipr002678
+The primary paper explicitly identifies E. coli YbgI as P0AFP6 in its structural
+survey and describes its mutant construction in MG1655. The graph is a whole-gene
+phenotype, not an assay of isolated residues 1-246 or a resolved metal substrate.

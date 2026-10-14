@@ -1,0 +1,51 @@
+PF01910 primary evidence; inspected 2026-10-12 UTC
+Dermoun et al. 2010, PMID20471400, DOI10.1016/j.jmb.2010.05.014.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2980899/
+Minimal exact quotation: TM0486 specifically bound thiamin
+Remaining text is an authored evidence assessment, not copied full text.
+Main Methods, Results and Discussion inspected; original Figures2-6
+visually inspected. Figure7 was read through its caption and text only.
+
+Figures2/3: purified N-terminal His-tagged TM0486 produced in E. coli
+without thiamine shows thiamine and TPP binding by WaterLOGSY and HSQC.
+HMP and taurine are negative in the tested NMR conditions. NMR was at47C;
+protein0.1mM, ligand0.5mM, phosphatepH6/NaCl buffer. HSQC line broadening
+does not independently determine assembly stoichiometry. Figure3 ITC
+at25C, protein25uM, gives a reported one-site fit n0.916, Kd1.58uM and
+enthalpy-11kcal/mol. Methods print titrant500mM, inconsistent-looking
+with the plotted molar ratio; retain the fit as reported, do not silently
+replace the concentration with500uM. Dilution controls and duplicate
+experiments are reported. No binding-site mutagenesis establishes a
+residue-level binding relay, and TPP affinity was not quantified here.
+
+Figure4 compares protein produced with and without thiamine in minimal
+expression medium. Supplemented production gives a larger native-PAGE
+species and DLS particle-size distribution. This is a whole-production-
+condition effect, not an isolated acute ligand-addition experiment.
+The larger DLS population does not prove exact tetramer stoichiometry;
+aggregation remains an alternative. Figure5 extracted cofactor proton
+NMR resembles the thiamine reference. Figure6 shows unresolved density
+and docking, not a crystallographically identified thiamine complex.
+PDB1VK8 retains UNL. Docked T44 contacts are not observed causal residue
+effects. Crystallographic oligomers do not establish native cellular
+stoichiometry. The alternate structural preparation/construct is kept
+distinct from the binding experiment.
+
+Expression Results and qPCR Methods: adapted T. maritima cultures show
+approximately11-fold TM0486 transcript increase in anaerobic medium
+without Na2S and approximately12-fold in the oxygenated oxidative
+condition, relative to anaerobic Na2S-supplemented reference cultures.
+Three independent cultures, triplicate measurements, 16S reference.
+The oxygenated treatment is retained as a complete culture condition,
+not an isolated oxygen-only factor comparison. Changes in RNA do not
+show protein abundance, direct promoter activation or stress protection.
+Co-transcription with TM0483-0485 is not a direct transport assay.
+
+Excluded observed claims: thiamine transport, cytoplasmic cargo delivery,
+oxidative-stress protection, family-wide ligand specificity and fungal
+thiamine binding. These require evidence beyond this inspected study.
+Supplementary document retrieval returned challenge HTML; supplement
+images and raw NMR data were not inspected. No negative scientific
+finding is inferred from access failure.
+Inspected HTML SHA256:
+448a678115a4e1911860bcad0317f7d2eb350ff6e35454df56c0f2a66625474b

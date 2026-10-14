@@ -1,0 +1,44 @@
+PF01757 OatA identity and domain scope
+Assessed 2026-10-11 by Codex; database facts, not evidence of catalysis.
+
+Frozen owner: data/families/PF01757.yaml, snapshot
+interpro-pfam-duf-2026-10-10, Acyl_transf_3, Acyltransferase domain,
+IPR002656, EX_DUF. Frozen identity and counters are not rewritten.
+
+Inspected public JSON:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01757/
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q2FV54/entry/pfam/PF01757/
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A0H2XFE4/entry/pfam/PF01757/
+https://rest.uniprot.org/uniprotkb/A0A0H2XFE4.json
+https://rest.uniprot.org/uniprotkb/search?query=%28gene%3AoatA%29%20AND%20%28taxonomy_id%3A1280%29&format=json&size=10
+Versioned sequence independently parsed with Biopython:
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=ABD21303.1&rettype=gb&retmode=text
+
+Q2FV54 is NCTC8325/PS47 OatA, locus SAOUHSC_02885, 603 aa.
+A0A0H2XFE4 is USA300 OatA, locus SAUSA300_2504, 603 aa. Its sequence
+exactly matches Q2FV54 and GenBank ABD21303.1 (CP000255.1, USA300_FPR3757).
+SHA256 of the uppercase unwrapped 603-aa sequence without newline:
+d7597d795a65b0409056cebcb56c87ecffd8c8aa0731361346cf1a1c74a25757
+UniProt's USA300 taxon is 367830; GenBank's FPR3757 taxon is 451515.
+The publication identifies its cellular background as USA300; the graph does
+not silently elevate that to a independently verified FPR3757 clone.
+For both UniProt sequences the current PF01757 interval is 19-344 inclusive.
+Checked residues: R25 H36 R83 R86 Y136 E154 Y206 Y311 E357 S453 K495 K496.
+E357 and S453 are OUTSIDE this current Pfam interval; the paper's larger
+N-terminal functional/topology region is not identical to a Pfam HMM match.
+The isolated OatA C-domain construct 445-601 is outside PF01757. Structures
+6VJP/6WN9 concern this C-terminal partner, not the membrane PF01757 domain.
+
+Jones 2021 main Methods describe full-length 1-603 protein expressed from
+pACCJ2 in E. coli C43(DE3), and cellular pACCJ3 complementation in USA300.
+Its topology library instead explicitly uses ATCC6538 sequence; these are
+not silently merged as the same experimental host or independently sequenced
+clone. The WT deposited PEAKS search uses Q2FV54. Exact historical plasmid
+sequences, termini and clone donor strain need the inaccessible SI/clone
+records; a database search reference is not clone resequencing.
+The MS mutant search reference has additional changes described in the paired
+ms-deposit-caveats.txt. Do not propagate them to all biochemical preparations.
+
+An InterPro USA300/PF01757 search also returns other proteins, including IcaC;
+species and domain alone cannot identify OatA. No all-family function transfer,
+former numbered DUF alias, or isolated-PF01757 sufficiency is established here.

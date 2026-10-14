@@ -1,0 +1,26 @@
+PF01940 / DUF92 identity ledger
+Inspected 2026-10-12 UTC by Codex.
+
+Frozen identity: Integral membrane protein DUF92; InterPro IPR002794.
+Source: interpro-pfam-duf-2026-10-10; imported counters and status preserved.
+Current primary identity resources:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01940/
+https://rest.uniprot.org/uniprotkb/search?query=%28xref%3Apfam-PF01940%29%20AND%20%28reviewed%3Atrue%29&format=json&size=100
+For each accession below, domain locations were inspected at
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/ACCESSION/
+
+Accession    Organism/locus                 Length/version  PF01940 coordinates
+Q9SYM0       A. thaliana VTE6/At1g78620      333/v1          97-316
+Q0WP96       A. thaliana PGR/At5g19930       288/v1          15-276
+Q96HH6       Human TMEM19                   336/v1          60-321
+Q91W52       Mouse Tmem19                   336/v1          60-321
+P73555       Synechocystis PCC6803 sll0875   258/v1          28-245
+Q58343       M. jannaschii MJ0933           238/v1          18-227
+
+Current sequence mappings do not verify every historical clone base. The ten
+reviewed UniProt hits are a filtered sample, not a census. VTE6 and PGR are
+distinct Arabidopsis loci; neither name licenses transfer of its assays to the
+other locus, mammalian TMEM19, microbial members or isolated PF01940 domains.
+Wei 2026 Methods identify a MOUSE TMEM19 expression clone in HUMAN HEK293T
+cells. Endogenous HMC3/MPC experiments concern human TMEM19. Figure 5a is a
+predicted structure, not an experimentally determined fold or ligand site.

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF00563
+  path: data/families/PF00563.yaml
+session:
+  id: 2026-10-11T063146Z-codex-c81a6b
+  timestamp: '2026-10-11T06:31:46Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of RocR causal graph
+  details: 'Saved native structured review 20261011T063139Z-pf00563-rocr-causal-graph
+    for semantic digest a3dabc20a06261524a19eb7095c90d5e647c1fd8f3cecf062541d7c8e55c1ed4.
+    The measured reaction and E352Q effect are supported; clone junctions, atomic
+    catalysis, regulatory and family-wide coverage remain open. Same-agent partial
+    review is not independent endorsement or full-family completion. Focused graph/records/reviews/history
+    contracts: 203 passed; schema generation has zero drift. Record remains IN_PROGRESS;
+    native regeneration will project this actual review event.'
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T063139Z-pf00563-rocr-causal-graph/review.yaml

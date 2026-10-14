@@ -1,0 +1,41 @@
+PF01864 research/coverage ledger, 2026-10-11
+
+Repository search included hidden and ignored files across curation, evidence,
+history, reviews and skill directories before adding this overlay. No existing
+PF01864/CarS curation artifact was found within that searched scope.
+Current Pfam/InterPro, Q9YF05, NCBI BAA79391.1 and 5GUF identity sources were
+checked. Main Ren2017 PMC HTML and published supplements were accessible.
+The first PMC Figure6 JPEG was partly black; a complete publisher Figure6 was
+subsequently retrieved and visually inspected. Do not retain the earlier access
+limitation as a claim that the final figure remains inaccessible.
+Publisher article-PDF requests returned HTML; no full published PDF was read.
+
+Jain2014, PMID25219966, DOI10.1016/j.chembiol.2014.07.022:
+Public author thesis reproduction is accessible at
+https://pure.rug.nl/ws/portalfiles/portal/37823809/Chapter_2.pdf
+Text inspected: PDF pages8-17, including Results and Figures3-5 captions.
+AfCarS shows CDP-archaeol production with CTP and a distinct dCDP product with
+dCTP; tested ATP/GTP/TTP are negative. CarS did not complement E. coli GN80 at
+pH8.5, unlike CdsA. Do not infer archaeal lipid chemistry replaces bacterial
+phosphatidic-acid chemistry or transfer this failure to every cellular context.
+Full methods, original figures, supplementation and exact AfCarS clone/domain
+mapping remain to be reconciled before adding its own graph. This is a follow-up
+lead, not an inaccessible source or a completed 2014 evidence review.
+
+Caforio2017 thesis Chapter3 is a separate 2015 ether-lipid engineering study:
+https://pure.rug.nl/ws/portalfiles/portal/37823811/Chapter_3.pdf
+Selected pathway text names AF1740 in a multi-enzyme reconstitution. Complete
+assays were not reviewed; a multi-gene effect cannot be assigned to CarS alone.
+Chapter5 is a manuscript-in-preparation version, not the final Ren2017 article:
+https://pure.rug.nl/ws/portalfiles/portal/37823815/Chapter_5.pdf
+Its figure numbering differs and it lacks the final Figure6 assay layout.
+Do not substitute its replicate/error conventions for the published figures.
+
+Retained graphs cover ApCarS intact-protein assays and explicitly labeled
+mechanistic models only. Grouped mutation nodes mean each listed single mutant
+was tested separately, never a combined multiple mutant or equal effect sizes.
+Follow-up: independently check mutant folding/abundance and tag accessibility,
+calibrated product/time courses, exact substrate concentration, ITC ion protocol,
+phosphate/PPi chemistry and lipid entry/release dynamics. Extend AfCarS and other
+family members with their own contexts. Bacterial family members and remote
+homologs are not characterized by analogy. IN_PROGRESS remains appropriate.

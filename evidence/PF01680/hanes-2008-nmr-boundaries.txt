@@ -1,0 +1,49 @@
+Inspected 2026-10-11. PMID:18516049; DOI:10.1038/nchembio.93.
+https://www.nature.com/articles/nchembio.93
+Author-hosted published full text, all main text read:
+https://www.chem.tamu.edu/rgroup/begley/Index%20page/selected%20publications/Nature%20Chemical%20Biology%202008%2C%204%287%29%2C%20425.pdf
+Publisher-linked public supplementary information, text read; Figure S5
+visually inspected:
+https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fnchembio.93/MediaObjects/41589_2008_BFnchembio93_MOESM109_ESM.pdf
+Minimal quotation: "not an intermediate on the enzymatic reaction pathway".
+
+This is a follow-up interpretation boundary, not a new canonical graph of
+the entire chemical mechanism. B. subtilis Pdx1 is His-tagged; the original
+construct is cited to Hanes 2008 JACS, PMID:18271580. Its complete clone
+identity/strain was not verified against the Raschle preparation. The main
+paper was initially unavailable on the publisher page, then read successfully
+from the author's public copy. No claim of inaccessible full text remains.
+
+The early R5P-derived Pdx1-Z1 adduct was examined after 7 M urea denaturation.
+NMR chemical shifts support a C2 ketone, not the earlier C2-imine assignment;
+15N protein labeling and decoupling support a C1-N linkage. These observations
+qualify the 2007 structural interpretation without undoing its mass shift or
+K81 peptide localization. Neither paper directly images every catalytic step.
+
+Figure S5 and main Results pp427-428 compare 15N protein/15NH4Cl with
+15N protein/14NH4Cl. The C2-N coupling disappears with 14NH4Cl, supporting
+incorporation of ammonia nitrogen. This is inconsistent with adopting the
+2007 nitrogen-free proposal as settled. It does not by itself verify the
+exact chemical state of every earlier 315-nm sample.
+
+Crucially, Pdx1-Z2 is obtained by 50 mM HCl quenching and 7 M urea
+denaturation of I320. The authors explicitly identify Z2 as an off-pathway
+quench product, not a native enzymatic intermediate. The likely shared
+protein nitrogen linking C1 and C5 is based on narrowband decoupling.
+Do not turn the acid-induced cyclic Z2 structure into an observed native
+catalytic step or call the proposed 1,5 migration a directly tracked movie.
+
+Methods p429 use 12 h at 15 C for labeled-sugar loading, 1 M NH4Cl for
+approximately 1 h at 22-23 C, gel filtration, and 1.5 mM racemic G3P for
+2 h before the distinct Z3 preparation. Z3 is reduced with 50 mM NaBH4
+for 15 min before urea. Supplemental S8 observes conversion of I320 to a
+408-nm species; denaturation liberates PLP. These doses, quenching steps
+and spectra must not be merged with Raschle's 0.4-mM/0.4-uM Figure 2C.
+The full proposed reaction sequence remains a hypothesis-constrained model.
+
+Other follow-ups: PMID:18271580 JACS substrate-specificity study was located
+but its primary full text was not inspected here; do not assert a particular
+DHAP contamination or isomerization mechanism from search leads. PMID:21283685
+second-active-site and PMID:25568319 Geobacillus structural studies remain
+coverage leads, not adopted edges. Later plant/fungal mechanisms need their
+own identity, domain and experimental-context assessment.

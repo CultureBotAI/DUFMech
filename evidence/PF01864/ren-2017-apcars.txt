@@ -1,0 +1,43 @@
+Ren et al. 2017, PMID 28961231, DOI 10.1038/cr.2017.122
+https://pmc.ncbi.nlm.nih.gov/articles/PMC5674157/
+Accessed 2026-10-11. Minimal quotation: "Working model"
+Other text below is factual assay extraction and curator interpretation.
+
+Methods: intact ApCarS-His6, pET21b, E. coli BL21(DE3), membrane extraction in
+1% DDM, Ni-NTA and size exclusion. Activity: 0.5 uM protein, 50 mM Tris pH7.5,
+10 mM MgCl2, 75 mM NaCl, 0.1% DDM, 125 mM imidazole, 5% glycerol, 2 mM CTP,
+synthetic DGGGP. Its concentration is not specified in the 2017 paragraph;
+do not silently borrow a concentration from the 2014 study.
+WT: 1 h at 37, 60 or 90 C; substitutions: 1 h at 90 C. EDTA: 20 mM.
+Figure 1D: product signal increases across those temperatures; EDTA lowers it.
+No-added-CTP and EDTA traces have small residual signal, particularly at 90 C.
+Purified protein carried endogenous CTP. Neither comparator is an absolute null.
+HPLC-MS product assignment: CDP-archaeol [M-H]- m/z1020.55, also Figure S3.
+The endpoint signal is not an initial rate or a separately measured PPi yield.
+
+Figure 4A/B: each N28A, P31A, R51A, D55A, K57A, T58A, D100A, K107A, R108A,
+R114A, D122A and D125A lowers product signal versus WT. P31A retains product
+despite undetected ITC binding; R51A/D55A/R114A also have appreciable residual
+product. Low plotted values are not proof of zero turnover. Two plotted points
+per activity condition do not establish biological replicate independence.
+
+Figure 6C, inspected in complete publisher image:
+https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fcr.2017.122/MediaObjects/41422_2017_Article_BFcr2017122_Fig6_HTML.jpg
+Lipid strips: 0.4 ul of 0.005 mM DGGGP on Hybond-C; 0.08 ug protein overnight
+at 4 C, anti-His and HRP/ECL detection; WT and lipid-alone comparators.
+Buffer: 10 mM Tris pH7.5, 100 mM NaCl, 0.02% DDM, 0.01% Tween20; milk blocking.
+Each D122A/D125A: no detectable strip binding. Each N28A/K57A/D100A: weaker
+signal. Each A29W/L124W/F126A/L156W: no detectable binding. Each Q123A/H157A:
+stronger signal. Intensities are not Kd; protein folding/tag exposure can matter.
+Figure 6D/E: all six tail-site variants have lower product signal than WT,
+including Q123A/H157A. Stronger lipid-strip binding is NOT increased catalysis.
+L156W and L124W retain visible product; do not describe all four as strict nulls.
+
+Discussion and Figure 7 caption: proposed phosphate-head attack on CTP alpha-P,
+with Mg/N28/K57/D100 assistance and putative leaving-group stabilization.
+Another proposed role is TM5 motion allowing lipid entry/product release.
+These are models based on structure, mutagenesis and docking/100-ns MD, not
+observed chemical intermediates or measured release events. Temperature can
+affect diffusion/collisions as well as conformational motion.
+The lipid is modeled, not present in the experimentally solved CTP-bound crystal.
+Figure 7 caption and discussion were read; its original image was not inspected.

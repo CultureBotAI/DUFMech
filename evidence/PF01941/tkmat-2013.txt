@@ -1,0 +1,23 @@
+PF01941 / TkMAT, inspected 2026-10-12 UTC
+PMID:24134203; doi:10.1186/1472-6807-13-22
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3853416/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3853416/fullTextXML
+Minimal quotation: "Activity assay of TkMAT."
+
+Figure 3 HPLC traces show SAM in the complete recombinant TkMAT reaction,
+absent from the no-enzyme control; ATP and SAM references identify peaks.
+Methods: N-terminal His-tagged enzyme expressed in E. coli; 37 C, 3 min,
+100 mM Tris-HCl pH8, 20 mM MgCl2, 200 mM KCl, 10 mM ATP and methionine,
+0.5 mg protein/ml, acid quench and SCX-HPLC. The measured product is SAM;
+Figure 1's triphosphate-hydrolysis scheme is not a TkMAT phosphate assay.
+
+Supplement S3/Table 1: apparent Km(Met)=0.31+/-0.07 mM,
+Km(ATP)=6.54+/-2.49 mM; Vmax=1.95+/-0.26 umol/min/mg. The other substrate
+is held at 10 mM. Different-temperature literature comparators are not a
+controlled enzyme comparison. Figure 3 and supplement page 2/S2-S3 visually
+inspected; supplemental PDF has four pages and all captions were read.
+
+Apo crystallography and cross-protein superpositions suggest active-site
+roles and loop gating; no residue-specific catalytic perturbation is measured
+here. The open helix is resolved, not an observed opening trajectory.
+See identity.txt for exact YP_182958.1/Q5JF22 mapping and gene-length conflict.

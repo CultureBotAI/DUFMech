@@ -1,0 +1,41 @@
+PF01957 identity and domain boundary assessment
+Accessed 2026-10-12. Curator-authored summary; database annotations are not causal experiments.
+
+Sources inspected:
+https://rest.uniprot.org/uniprotkb/P0AAS3.json
+https://rest.uniprot.org/uniprotkb/P54465.json
+https://rest.uniprot.org/uniprotkb/O32077.json
+https://rest.uniprot.org/uniprotkb/O59179.json
+https://rest.uniprot.org/uniprotkb/O58204.json
+The UniProt records were retrieved through the JSON search endpoint using their gene names.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01957/protein/uniprot/P0AAS3/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01957/protein/uniprot/P54465/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/O32077/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/O59179/
+
+Escherichia coli K12 YbbJ is P0AAS3, sequence version 2, 152 aa,
+loci b0488/JW5065; sequence last updated 2007-06-26. PF01957 maps 94-148.
+Chiba2006 cloned from MC4100; this current sequence is an identity reference,
+not a verified reconstruction of its pre-2007 plasmid sequence.
+Bacillus subtilis 168 NfeD1/YqeZ is P54465, version 1, 437 aa,
+locus BSU25390; PF01957 maps 382-435. CU1065 experimental alleles and
+fusion/truncation junctions were not independently sequence-reconstructed.
+These are full-protein or operon experiments, not isolated 54-aa domain tests.
+
+B. subtilis NfeD2/YuaF is O32077 v1, 174 aa, BSU31020. Both current UniProt
+cross-references and the complete two-entry InterPro/Pfam response assign
+PF25842 at 1-101 and PF31148 at 114-168, not PF01957. Its historical generic
+NfeD name does not justify importing FloT recruitment effects into PF01957.
+PF31148 membership does not automatically add a record to the frozen corpus.
+The unrelated B. subtilis gene named ybbJ (Q45583) must not be substituted for
+E. coli YbbJ. Likewise the unrelated E. coli yuaF is not Bacillus NfeD2.
+
+Pyrococcus horikoshii PH1510 is O59179 v1, 441 aa. Current PF01957 377-432
+is separate from PF25145 24-196 and PF24961 238-359. The published isolated
+N-terminal protease construct is not an isolated PF01957 activity experiment.
+PH0471 is O58204 v1, 143 aa with a PF01957 cross-reference; its exact domain
+coordinates and original structural/binding experiments need further review.
+
+The frozen PF01957/InterPro:IPR002810 identity, EX_DUF seed status and counts
+are preserved. Current API coordinates qualify experimental scope without
+replacing the 2026-10-10 source snapshot or establishing universal function.

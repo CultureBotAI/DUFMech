@@ -1,0 +1,24 @@
+PF01513 NAD-kinase identity and construct qualification
+Accessed 2026-10-11 UTC. Curator-authored database facts and sequence checks.
+Sources:
+https://rest.uniprot.org/uniprotkb/P0A7B3.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A7B3/entry/pfam/PF01513/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01513/
+
+P0A7B3 Pfam:PF01513; domain interval: 8-121, inclusive.
+P0A7B3/NADK_ECOLI is nadK/yfjB/yfjE, b2615/JW2596, K12 reference taxon 83333,
+292 aa, sequence version 1 and entry version 147; sequence MD5
+3BAC1BEDFE1FA3F39F582DEF0CA2D035. Its full sequence equals InterPro's sequence.
+Residues 71-75 are GGDGN: the tested N75 is inside the N-terminal Pfam match.
+PF01513 is ATP-NAD kinase N-terminal domain, integrated into IPR064509.
+The rest of the intact enzyme is not assigned to this domain by implication.
+
+Nakamichi 2013 names the inherited pET-14b_ecoNADK plasmid and describes untagged
+WT/N75T expression in BL21(DE3)pLysS, with sequence confirmation by the authors.
+The cited 2001 cloning paper identifies MG1655 as genomic donor. Its printed
+forward primer translates to MDNHFKCIGI, differing at N2/D2 from the current
+reference and 2013 Figure S1's displayed MNNHFKCIGI. The printed reverse primer
+has a locally translated RLVKKLF-stop terminus, whereas the reference ends
+GWSKKLF. These historical-primer discrepancies remain unresolved; a full clone
+sequence is not available in the inspected material. They do not relocate the
+explicitly identified N75 but prevent an unqualified sequence-identical claim.

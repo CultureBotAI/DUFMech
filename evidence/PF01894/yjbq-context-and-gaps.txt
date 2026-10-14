@@ -1,0 +1,73 @@
+PF01894 context and causal-coverage ledger, 2026-10-11.
+
+Local curation/evidence/review/history/report searches included ignored and
+hidden files. No prior scoped PF01894/YjbQ/UPF0047 dossier was found outside
+the structural inventory. Frozen naming and both cited primary studies were
+followed. Web searches covered PF01894,YjbQ,UPF0047,thiamine,vitamin B6,
+Morett,ST2072 and RhiN, including later primary-study leads. This was not an
+exhaustive search of every one of the14125 frozen proteins.
+
+Kim2010: the retained observed edges concern growth, not identified metabolites.
+Its explicit soluble-protein failure prevents a measured-negative YjbQ
+4-phosphoerythronate-dehydrogenase claim. Figure1's proposed pathway2 entry
+does not establish YjbQ directly produces OHPB or shares the characterized
+YeaB/LtaE/ThrB pathway1. Solid and liquid effects are not independent papers.
+TableII's serC,pdxA,pdxJ,pdxH failures and unchanged supplement response are
+conditional comparisons; no loss-of-rescue arrow is invented across unmatched
+mutant backgrounds. Slow30 C growth cannot be substituted for37 C conditions.
+
+Morett2008: thiamine rescue is retained only at the accessible primary-text
+level. Full kinetic, residue, evolved-variant, homolog and construct evidence
+remains a prerequisite for mechanistic extensions. Abstract and database echoes
+are one evidential origin. No biochemical negative is inferred from access failure.
+
+Borisova2010, PMID20142038, doi:10.1016/j.chembiol.2009.11.017:
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2819989/
+Inspected RhiN-related Results/Discussion, not the complete cluster dossier.
+Minimal quotation: "The functions of the proteins RhiK, RhiL, and RhiN are unclear."
+RhiN's UPF0047 homology and proposed dehydration involvement do not establish
+an isolated enzyme reaction. Cluster production is not individual RhiN sufficiency;
+RhiG's measured aldol reaction is not transferred to RhiN.
+
+2024 tRNA-selection study, doi:10.1093/nar/gkae806:
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11551756/
+Inspected YjbQ-related selection-system rationale. The thiE/yjbQ double deletion
+is used to avoid the previously reported bypass, citing Morett2008; this passage
+does not supply a new isolated YjbQ causal comparison or independent replication.
+ThiN H95 is not a YjbQ residue. Other tRNA results were not reviewed here.
+
+ST2072 structural lead:
+https://www.rcsb.org/structure/1VE0
+https://pubmed.ncbi.nlm.nih.gov/16224786/
+Inspected deposition metadata and publication identity, not the2005 full paper.
+The2.0 A entry has a134-residue construct, trimeric assembly and Zn/sulfate
+ligands; these observations alone do not resolve YjbQ chemistry. Its current
+deposition citation still says to be published; this does not nullify the
+separate2005 publication. No residue or catalytic effect is adopted here.
+
+Access ledger: PMC main articles and Figure1 downloaded successfully. Initial
+Kim2010 supplement attempts returned challenge HTML,404, zero-byte timeout or
+DNS failure. The Springer article page subsequently supplied a working
+media.springernature.com link to the original DOC, which downloaded successfully.
+Relevant Methods, TablesI-III/V and FigureS1/S4 were then inspected. Original
+figure and table layouts were visually checked on rendered pages12,15,18,20.
+The source is now available, not an outstanding missing supplement. Morett full
+publisher page returned403 and Elsevier API supplied only metadata. These are
+access outcomes, not missing-publication or filesystem-read findings.
+LibreOffice initially aborted under the sandbox and succeeded on an approved
+render-only retry. Offline uv rendering encountered an explicit read denial for
+its home-directory package cache and succeeded with approved escalation. Neither
+failure demonstrates a DUFMech checkout-read denial; no permissions were changed.
+
+The supplement confirms insoluble/unpurified YjbQ, JU283 selection from
+heterogeneous Keio stocks, vector tags, plate induction and a serine-only context.
+Printed pTrcHisB/pET45b start-region primer strings differ; FigureS1's
+chloramphenicol caption conflicts with the pTrcHisB ampicillin protocol.
+Main text28 colonies and supplementary TableII24 sequenced plasmids differ;
+six yjbQ clones are not six independent biological replicates. None is silently
+corrected. FigureS4 is not a YjbQ liquid-growth curve.
+
+Next: obtain readable2008 full text; verify exact cloned proteins, printed primer
+and antibiotic discrepancies and liquid conditions; inspect mutation controls and product assays;
+resolve physiological substrates and taxon-specific roles with primary evidence.
+All records remain in scope; this family stays IN_PROGRESS with partial self-review.

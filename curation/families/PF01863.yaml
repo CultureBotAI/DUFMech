@@ -1,0 +1,191 @@
+pfam_id: PF01863
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01863
+causal_graphs:
+  - graph_id: ecoli-ygjp-utp-assay
+    title: Purified E. coli YgjP preparation converts UTP to UMP
+    scope: "Sevin 2017 Supplementary Figure 16 and Tables 3/9: intact His6-YgjP preparation, not an isolated domain or in-vivo flux."
+    context: "50 ug/mL purified enzyme with 10 mM UTP; three replicates, mean and SD. Mass-spectrometric UTP and UMP ion traces compared with heat-inactivated YgjP. Selected TALON and anion-exchange fractions are shown in Figure 16b. Assay buffer, temperature and heat-inactivation protocol were not verified."
+    family_mapping: "Table 3 identifies b3085/ygjP. Reference P42597 sequence version 2 exactly equals BAE77135.1 and AAC76120.2, 167 aa; PF01863 94-149. The reference is K-12, but exact historical ASKA clone sequence, donor strain and expression host remain unverified. No residue-specific or isolated-domain attribution."
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:562
+    limitations: "DIRECT means a net purified-preparation effect, not proof of a chemical microstep or exclusion of every copurifying activity. Distinct ion response scales preclude molar stoichiometry or kcat. PPi appears in the reaction scheme, not a separately quantified trace. Main article Methods and full cellular datasets were not inspected."
+    nodes:
+      - node_id: active-ygjp-with-utp
+        label: Purified His6-YgjP preparation incubated with UTP
+        node_type: ACTIVITY
+        grounding: [UniProtKB:P42597]
+      - node_id: ump-product
+        label: UMP product detected in the assay
+        node_type: STATE
+    edges:
+      - edge_id: preparation-produces-ump
+        subject: active-ygjp-with-utp
+        predicate: produces
+        object: ump-product
+        mechanism: "UTP m/z 482.961 declines while UMP m/z 323.029 rises relative to the heat-inactivated comparator. Table 9 reports slow UTP-to-UMP conversion and negative tests with ATP, GTP, CTP, dTTP and ITP; it does not establish physiological specificity or a measured PPi stoichiometry."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:27941785
+            source_url: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fnmeth.4103/MediaObjects/41592_2017_BFnmeth4103_MOESM62_ESM.pdf
+            snippet: Experimental validation of the novel enzyme YgjP (Upp).
+            explanation: Visually inspected Supplementary Figure 16a-c and parsed Table 9 row 10 support the net preparation-level product assignment with a heat-inactivated comparator; exact assay and construct limitations remain explicit.
+            cache_path: evidence/PF01863/sevin-2017-ygjp.txt
+            cache_sha256: 09afed3fab4d86f57dc76c1ec458c3d342996b0c3fd1376681de557f2c04bacf
+  - graph_id: proabylysin-truncation-thermal-transition
+    title: Proabylysin C-terminal deletions lower the reported thermal transition
+    scope: "Lopez-Pelegrin 2013 activation results: two purified deletion preparations compared with the full-length recombinant proabylysin scaffold."
+    context: "Synthetic pCRI7 constructs expressed in E. coli BL21(DE3), without an added tag. Sypro Orange thermofluor on iCycler iQ; deletion preparations were heat-treated at 50-65 C during purification, versus 85 C for full length. Exact dye-assay buffer, ramp, replicate count and uncertainty were not established."
+    family_mapping: "PAB3079 Q9V1Y2 version 1 equals CAB49216.1, 105 aa; Pyrococcus abyssi GE5 reference taxon 272844. PF01863 2-88 excludes the deleted M104/V105 sites. Reference and PDB 4JIU establish L2V in the recombinant scaffold, contradicting the paper's K2V label. Separate deletion sequences were not deposited in the inspected sources."
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:272844
+    limitations: "Preparation-level thermal effects, not isolated-domain sufficiency, quantified unfolding energetics or protease activation. The published WT comparator is the recombinant full-length scaffold. Different purification heat treatments and missing raw thermal curves limit mechanistic attribution; the two deletions do not isolate the contribution of M104 alone."
+    nodes:
+      - node_id: delete-v105
+        label: Remove terminal V105 from the recombinant proabylysin scaffold
+        node_type: PERTURBATION
+      - node_id: delete-m104-v105
+        label: Remove terminal M104 and V105 from the proabylysin scaffold
+        node_type: PERTURBATION
+      - node_id: thermal-transition
+        label: Apparent thermofluor melting temperature
+        node_type: STATE
+    edges:
+      - edge_id: delta-v105-lowers-transition
+        subject: delete-v105
+        predicate: decreases
+        object: thermal-transition
+        mechanism: "The one-residue deletion preparation has reported Tm 85 C versus full-length 95 C. No active protease was obtained; the measurement does not establish a successful removal of inhibitory latency."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:23733187
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3774397/
+            snippet: 85 and 65
+            explanation: Activation-results paragraph reports the one- and two-residue deletion melting temperatures, respectively, with a 95 C full-length comparator; Methods establishes thermofluor and differing purification conditions.
+            cache_path: evidence/PF01863/lopez-pelegrin-2013-minigluzincins.txt
+            cache_sha256: eea4b1c7eb4e4c639aee446f64ec6e79e281cb0b67c0f90f5ce23ac744dae938
+      - edge_id: delta-m104-v105-lowers-transition
+        subject: delete-m104-v105
+        predicate: decreases
+        object: thermal-transition
+        mechanism: "The two-residue deletion preparation has reported Tm 65 C versus full-length 95 C. Larger truncations had expression/solubility problems; their absent purified activity measurements are not treated as catalytic nulls."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:23733187
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3774397/
+            snippet: 85 and 65
+            explanation: Same activation-results comparison, explicitly scoped to purified preparations and a thermal readout, not a rate or physiological phenotype.
+            cache_path: evidence/PF01863/lopez-pelegrin-2013-minigluzincins.txt
+            cache_sha256: eea4b1c7eb4e4c639aee446f64ec6e79e281cb0b67c0f90f5ce23ac744dae938
+  - graph_id: proabylysin-tail-latency-hypothesis
+    title: Proabylysin intramolecular tail may suppress proteolysis
+    scope: "Structural interpretation of recombinant proabylysin 4JIU and Figure 3A, not demonstrated protease activation."
+    context: "A Q101-V105 C-terminal segment occupies the putative substrate cleft in reverse substrate orientation, with V105 carboxylate coordinating Zn. Negative tested-substrate panels and unsuccessful activation trials are retained as limits."
+    family_mapping: "Q9V1Y2/CAB49216.1, native numbering; deposited L2V scaffold, paper K2V discrepancy retained. PF01863 2-88 contains H60/E61/H64 and H72, but not Q101-V105. Whole-protein architecture, not a domain-only mechanism."
+    scope_status: HYPOTHETICAL
+    taxon: NCBITaxon:272844
+    limitations: "Structural occupancy supports a proposed explanation for inactivity, not proof of reversible inhibition or a functional zymogen. No active abylysin was obtained. Tail truncation destabilizes the protein, and an inactive-ancestor interpretation remains possible. No family-wide protease claim."
+    nodes:
+      - node_id: intramolecular-tail-occupancy
+        label: Q101-V105 occupies the cleft and coordinates Zn through V105
+        node_type: STATE
+      - node_id: proposed-proabylysin-proteolysis
+        label: Proposed proteolytic activity of the intact proabylysin scaffold
+        node_type: ACTIVITY
+    edges:
+      - edge_id: tail-may-suppress-proteolysis
+        subject: intramolecular-tail-occupancy
+        predicate: decreases
+        object: proposed-proabylysin-proteolysis
+        mechanism: "The tail could obstruct substrate access and the catalytic metal environment. Its crystallographic placement motivates this model, but failed activation and destabilizing deletion preparations do not demonstrate that tail removal restores proteolysis."
+        directness: UNRESOLVED
+        support: HYPOTHESIZED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:23733187
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3774397/
+            snippet: we failed to obtain active abylysin and jannalysin
+            explanation: Figure 3A and structural interpretation motivate tail-mediated latency; the activation-results paragraph prevents promotion to an observed inhibitory causal step.
+            cache_path: evidence/PF01863/lopez-pelegrin-2013-minigluzincins.txt
+            cache_sha256: eea4b1c7eb4e4c639aee446f64ec6e79e281cb0b67c0f90f5ce23ac744dae938
+  - graph_id: projannalysin-partner-helix-latency-hypothesis
+    title: Projannalysin partner helix may suppress proteolysis
+    scope: "Structural interpretation of the recombinant projannalysin dimer 4JIX and Figure 3B-D, kept distinct from the proabylysin intramolecular model."
+    context: "Partner E102-I110 helix lies across each putative cleft. I110 carboxylate is 4.1-4.2 A from Zn, unlike proabylysin V105 coordination. Purified protein is dimeric by size exclusion; crystallographic geometry alone does not prove intracellular dimerization or catalytic activity."
+    family_mapping: "MJ0123 Q57587 version 1 equals AAB98111.1, 110 aa; JAL-1/DSM 2661 taxon 243232. PF01863 7-95 contains H69/E70/H73 and H81 but excludes E102-I110. PDB 4JIX has K2A plus residual N-terminal GP after His6/TEV cleavage; native numbering, not polymer seq_id, is used."
+    scope_status: HYPOTHETICAL
+    taxon: NCBITaxon:243232
+    limitations: "The proposed trans-blocking mechanism is not directly tested by a folded active product. The five-residue deletion and limited-proteolysis attempts were unsuccessful. Negative assays do not establish inactivity against every possible substrate; the inactive-ancestor alternative remains open."
+    nodes:
+      - node_id: partner-helix-occupancy
+        label: Partner E102-I110 helix occupies the projannalysin cleft
+        node_type: STATE
+      - node_id: proposed-projannalysin-proteolysis
+        label: Proposed proteolytic activity of the projannalysin scaffold
+        node_type: ACTIVITY
+    edges:
+      - edge_id: partner-helix-may-suppress-proteolysis
+        subject: partner-helix-occupancy
+        predicate: decreases
+        object: proposed-projannalysin-proteolysis
+        mechanism: "The swapped terminal helix could restrict substrate access in trans. No active jannalysin was obtained, so this is an experimental-structure-motivated hypothesis, not an observed inhibition/rescue comparison or transfer of proabylysin's Zn-ligand mechanism."
+        directness: UNRESOLVED
+        support: HYPOTHESIZED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:23733187
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3774397/
+            snippet: we failed to obtain active abylysin and jannalysin
+            explanation: Figure 3B-D and the dimer structural analysis support the proposed geometry; negative activation trials and the distinct terminal-carboxylate distance constrain causal interpretation.
+            cache_path: evidence/PF01863/lopez-pelegrin-2013-minigluzincins.txt
+            cache_sha256: eea4b1c7eb4e4c639aee446f64ec6e79e281cb0b67c0f90f5ce23ac744dae938
+discussions:
+  - discussion_id: ygjp-construct-and-assay-context
+    prompt: Resolve the historical YgjP construct and complete the primary assay context.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Public supplements support net UMP production, but reference identity is not exact clone identity and ion counts are not calibrated molar product measurements.
+    evidence:
+      - reference: PMID:27941785
+        supports: PARTIAL
+        evidence_source: primary_supplementary_figure_16_and_tables_3_9
+        explanation: Retain heat-inactivated comparator, missing buffer/temperature, exact-clone uncertainty, PPi measurement limit and tested-substrate negatives.
+    notes: See evidence/PF01863/YgjP-identity.txt and ygjp-gap-ledger.txt. Obtain Methods, clone sequence, calibrated product assays and cellular evidence before adding chemistry or physiological edges.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+  - discussion_id: minigluzincin-activation-and-identity
+    prompt: Distinguish structural latency models from demonstrated protease function.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Archaeal proteins lacked detected activity in tested panels and activation attempts failed. Thermal deletion effects do not prove de-inhibition; manuscript K2V disagrees with reference/deposit L2V.
+    evidence:
+      - reference: PMID:23733187
+        supports: PARTIAL
+        evidence_source: primary_methods_structures_and_activation_results
+        explanation: Separate whole-protein thermal effects, two structural hypotheses, failed activation and inactive-ancestor alternative; C-terminal perturbations lie outside current Pfam spans.
+    notes: Resolve deletion sequences and construct-label discrepancy; test matched folded activation products and controls. Do not import membrane metalloprotease activity by structural similarity.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+  - discussion_id: b80-and-metagenomic-identity-gaps
+    prompt: Verify B80 protein identity and keep remote-homology candidates separate from assays.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: A Pfam-linked publication is not enough to map a purified activity to the family when peptide/reference and coordinate inconsistencies remain. Remote homology and HExxH alone do not establish directed causation.
+    evidence:
+      - reference: PMID:25802851
+        supports: PARTIAL
+        evidence_source: primary_table_2_and_independent_reference_comparison
+        explanation: Some peptide matches support a candidate, but other peptides/coordinates and mass-table entries require resolution before assigning the B80 preparation to PF01863.
+      - reference: PMID:26257768
+        supports: PARTIAL
+        evidence_source: primary_table_4_computational_candidates
+        explanation: Metagenomic ORFan matches to 4JIU/4JIX are predictions awaiting experimental characterization, not measured proteolytic effects.
+    notes: Retain IN_PROGRESS and the scoped gap ledger; neither these partial graphs nor the EX_DUF label constitutes a complete family review.
+    posed_by: Codex
+    posed_date: '2026-10-11'

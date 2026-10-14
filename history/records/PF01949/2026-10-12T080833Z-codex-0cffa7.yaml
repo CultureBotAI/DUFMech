@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01949
+  path: data/families/PF01949.yaml
+session:
+  id: 2026-10-12T080833Z-codex-0cffa7
+  timestamp: '2026-10-12T08:08:33Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial Endo_dU scientific self-review with mutation, mapping and
+    physiological limits.
+  details: Native saver retained the inspected projection at semantic digest a0b9038d11bef272649fabc5b6f97bb83f8137118391b32fafbb1fb03fb31f06.
+    Review ran08:05:29Z-08:08:13Z, pass_with_limitations / NEEDS_FOLLOWUP. Twelve
+    graphs and nineteen observed effects supported within stated contexts. Open pf01949-causal-context-coverage
+    finding retains actual mutation, clone/profile/allele, assay-label, native repair
+    and remaining source/member questions. Same-agent partial scientific review, not
+    independent endorsement or family completion; IN_PROGRESS preserved. No publication.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T080813Z-pf01949-scoped-endodu-cleavage-and-cellular-effects/review.yaml

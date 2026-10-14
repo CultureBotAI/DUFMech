@@ -1,0 +1,26 @@
+Primary evidence, inspected 2026-10-12 UTC
+PMID14990804; DOI10.1073/pnas.0305939101.
+https://www.pnas.org/doi/10.1073/pnas.0305939101
+Locators: Salmonella Results and growth Methods; original Figure3A/B and caption
+visually inspected. Minimal exact quotations: "provided in trans"; "AP was added".
+
+S. enterica JE824(metE205 cobU330), aerobic defined liquid medium at37C,
+dicyanoCbi15nM; OD650 readout. The Methods state DMB3uM and AP10mM additions,
+but Figure3B explicitly separates AP-positive and AP-negative arms.
+The per-arm interpretation is retained rather than assuming AP in every arm.
+
+Figure3A: M. mazei pMmCBIZ2 carrying BOTH cbiZ+ and cobY+ restores robust
+growth, as does S. enterica cobU+ on pJO52. pMmCBIZ1(cbiZ+ alone),
+pCOBY10(cobY+ alone) and pT7-7 vector do not provide comparable rescue.
+The cobY-only curve has a small late rise; no claim of absolute zero growth.
+The joint intervention is represented as one subject, not independently
+sufficient CbiZ and CobY edges. No molecular intermediate was directly assayed.
+
+Figure3B adds cobD1272 to metE205 cobU330. The caption names JE6894,
+whereas Results name JE6984. Retain the genotype and both labels unresolved.
+In this background, pMmCBIZ2(cbiZ+ cobY+) stays low without AP; AP addition
+restores growth. cobU+ rescues with or without AP; vector+AP stays low.
+Thus AP is a conditional rescue with both donor genes and remaining host
+machinery, not AP-alone synthesis and not direct catalysis by CbiZ.
+The exact per-arm recipe and strain name require supporting Table1/Methods.
+No native M. mazei cellular salvage experiment is established by these curves.

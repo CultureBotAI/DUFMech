@@ -1,0 +1,18 @@
+Gdt1 identity assessment, 2026-10-11.
+https://rest.uniprot.org/uniprotkb/P38301.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P38301/entry/pfam/PF01169/
+UniProt P38301/GDT1_YEAST, GDT1/YBR187W/YBR1310, S288c reference,
+280 aa, sequence version 1, entry version 167. UniProt and InterPro
+sequences match exactly, MD5 e5f43167f0e7df8f3e078f212099636a.
+P38301 Pfam:PF01169 intervals: 42-127 and 193-277, inclusive.
+The two reference motifs are EIGDKT at 53-58 and ELGDRS at 204-209.
+These intervals identify repeats, not two independently sufficient transporters.
+
+Deschamps 2023 studies yeast GDT1 in Lactococcus lactis DML1 and
+S. cerevisiae BY4742-derived deletion strains. DML1 is the expression
+host, not the source species of Gdt1. The current reference does not
+independently sequence every historical clone or establish membrane topology.
+The 2023 pNZ8048 GDT1/sfpHluorin operon and GDT1-only plasmid descriptions
+do not supply complete junction/tag sequences. Do not silently transplant
+the explicitly tagged delta23 construct of Colinet 2016 into these graphs.
+The 2023 silent NcoI-site alteration is reported, not independently reconstructed.

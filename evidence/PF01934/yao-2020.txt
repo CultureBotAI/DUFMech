@@ -1,0 +1,40 @@
+Yao et al.2020, PMID:33045733, doi:10.1093/nar/gkaa855
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7641770/
+Inspected 2026-10-12 UTC: Results and purification/enzymatic Methods;
+Figures4,5,7 visually; other figure captions and supporting structural text.
+Minimal extracts: "In vitro enzymatic assays"; "polyadenylylated HepT";
+"HepT is adenylylated".
+
+Figure4A-B: purified MntA, unmodified HepT, ATP and Mg support AMP
+addition. The full condition is one input, not independent sufficient causes.
+MntA carries an extra24 N-terminal residues including His6. Reaction:
+10ug MntA,40ul,20mM Tris,10mM MgCl2,5mM DTT,0-12uM ATP;
+30min room temperature, then20ug HepT,60min37C. The3uM ATP reaction
+was EDTA-stopped; LC-MS resolves one-,two-,three-AMP products. HepT is
+the acceptor, not the transferase. Y104 structural/chemical assignment is
+supported by other Results, not a claimed direct movie of sequential steps.
+
+Figure5A: modified HepT (>90% purity after coexpression and second
+elution) cleaves ompA RNA less than unmodified preparation at0-160nM,
+37C30min. Residual MntA and preparation differences remain qualifications;
+the result is a preparation-specific activity comparison, not zero residual
+activity or proof of the proposed active-cleft occlusion geometry.
+Figure5B-C: in BL21 pET28b constructs, HepT Y104A or partner MntA
+D39E/D41E lowers growth/CFU protection relative to wild-type coexpression.
+The mutant MntA can still bind; binding alone is not sufficient protection.
+Strong HepT-alone versus native-operon RBS differences confound absolute
+toxicity comparisons. MntA helix deletion is a further distinct perturbation.
+
+Figure7B-C: CL1_0071 HepT and CL1_0070 MntA were expressed in E. coli
+BL21, not native T. cleftensis. HepT Y82F and MntA G33A/S34T diminish
+the modified band and PDE-released AMP. The AMP count is not established
+for this archaeal member; do not transfer the Shewanella trimer assignment.
+Figure7D,0.5mM IPTG at OD6000.1,three cultures: HepT reduces CFU,
+MntA coexpression raises them, and either substitution weakens protection.
+Rescue is relative, not necessarily full restoration of vector growth.
+Mutation effects do not exclude changes in protein folding or abundance.
+
+Source conflict: Figure2 caption G27S/S28T versus text G27A/S28T is not
+silently repaired. PDE removal is an experimental treatment, not a discovered
+physiological deAMPylase. Figure6 member survey and native activation,
+substrates, stress/antiviral roles remain separate follow-ups.

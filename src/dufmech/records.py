@@ -26,7 +26,7 @@ SCHEMA = Path(__file__).parent / "schema" / "dufmech.yaml"
 COUNTERS = ("proteins", "matches", "proteomes", "taxa", "structures",
             "alphafold_models", "domain_architectures")
 OVERLAY_FIELDS = ("curation_status", "review_id", "curation_history", "assertions", "discussions", "datasets",
-                  "cross_corpus_links")
+                  "cross_corpus_links", "causal_graphs")
 
 
 class RecordError(ValueError):
@@ -125,7 +125,8 @@ def _validate_family_record(
             except (ValueError, OSError) as exc:
                 raise RecordError(str(exc)) from exc
     curated = record["curation_status"] != "SEEDED" or any(
-        record.get(key) for key in ("assertions", "discussions", "datasets", "cross_corpus_links")
+        record.get(key) for key in ("assertions", "discussions", "datasets", "cross_corpus_links",
+                                   "causal_graphs")
     )
     if target == "FamilyRecord" and (curated or record.get("curation_history")):
         if not record.get("curation_history"):
@@ -143,7 +144,16 @@ def _validate_family_record(
     for assertion in assertions:
         if not assertion["statement"].strip() or not assertion["scope"].strip():
             raise RecordError("assertions require nonempty statement and scope")
-        for evidence in assertion["evidence"]:
+    from dufmech.causal_graphs import validate_graphs
+
+    graphs = record.get("causal_graphs", [])
+    try:
+        validate_graphs(graphs)
+    except ValueError as exc:
+        raise RecordError(str(exc)) from exc
+    claims = [*assertions, *(edge for graph in graphs for edge in graph["edges"])]
+    for claim in claims:
+        for evidence in claim["evidence"]:
             url = urlsplit(evidence["source_url"])
             if url.scheme != "https" or not url.netloc or url.username or url.password:
                 raise RecordError("evidence source_url must be an HTTPS source URL")

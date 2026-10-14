@@ -1,0 +1,45 @@
+Soriano EV, McCloskey DE, Kinsland C, Pegg AE, Ealick SE (2008).
+PMID:18391404; DOI:10.1107/S0907444908000474; PMCID:PMC2467525.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2467525/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2467525/fullTextXML
+Accessed 2026-10-11. Full primary XML and HTML, Tables 1/2, Methods 2.1-2.5,
+Results 3.1-3.3 and Conclusions inspected. Original Figures 3 and 4 viewed.
+Minimal quotation anchors: "PvlArgDC decarboxylation activity";
+"Efforts to measure the rate of autoprocessing were inconclusive".
+
+Experimental facts, paraphrased:
+Intact M. jannaschii pPRDC.19 derivatives E109Q and N47A were expressed in
+E. coli B834(DE3); the N-terminal His tag was cleaved. Purification refers to
+Tolbert 2003, whose full methods were not accessible in this turn.
+Table 2 specific activities (pmol/min/ug): WT 1014 +/-58; E109Q 132 +/-8;
+N47A 2, without stated uncertainty. Neither mutant is an absolute null.
+Methods 2.5: 343 K, 30 min, 50 mM MES/NaOH pH 6.0, 50 mM KCl, 1 mM DTT,
+4 mM L-arginine plus 2 ul radiolabeled L-arginine; HCl termination and
+scintillation measurement of released 14CO2. Protein amount, tracer specific
+activity, blank subtraction, replicate number and uncertainty definition are
+not independently established in this text. These are preparation-level
+specific activities, not intrinsic kcat values normalized to processed sites.
+
+Separate crystallization experiment: 295 K, 1-2 mM arginine, hanging drops,
+17-20% PEG2000, 10% MPD, 2.5% glycerol, 100 mM HEPES pH 6.7-7.3, 0.5 mM
+octylglucoside/EDTA and 10 mM DTT. Both structures are at 2.0 A. E109Q has
+six processed protomers with agmatine. N47A has one clearly processed protomer,
+one mixed site modeled predominantly processed, and four unprocessed protomers;
+agmatine occurs at two sites. Crystal populations do not quantify assay-solution
+processing fractions or rates. Figure 3 shows separated PYR/Ser52 versus
+continuous Ser52/Ser53 density. Figure 4 compares E109Q with WT but N47A with
+S53A, not WT. Loss of Asn47 contacts and altered local conformations motivate
+the proposed processing contribution, not a measured intervening rate.
+
+Relative self-processing rates were not obtained: after 3 h at 338 K mutants
+showed little processing, but the WT failed to dissociate to monomer. Do not
+convert this failed comparison into an observed rate decrease. The authors
+propose incomplete processing plus reduced catalytic activity as contributors
+to N47A's large loss. Glu109 acid/base chemistry remains a proposal despite
+the activity reduction and processed E109Q structure. No cellular experiment
+in this study proves a polyamine, growth or acid-resistance consequence.
+
+Figure sources inspected:
+https://cdn.ncbi.nlm.nih.gov/pmc/blobs/1713/2645720/9f4d687640ad/d-64-00377-fig3.jpg
+https://cdn.ncbi.nlm.nih.gov/pmc/blobs/1713/2645720/84f9d6db10ba/d-64-00377-fig4.jpg
+2645720 is the article-instance asset identifier; XML still names PMC2467525.

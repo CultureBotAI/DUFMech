@@ -1,0 +1,34 @@
+PF01864 / CarS-like / former DUF46 identity assessment
+Accessed 2026-10-11. Facts and curator interpretation, not a sequence experiment.
+
+Frozen family: PF01864, CDP-archaeol synthase, IPR032690, EX_DUF.
+Frozen snapshot input SHA-256:
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+The current InterPro record agrees with the family identity; no frozen data changed.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01864/
+
+ApCarS: Aeropyrum pernix K1, taxon 272557, APE_0433/carS.
+UniProt Q9YF05 sequence version 1 is 174 aa and exactly matches BAA79391.1.
+https://rest.uniprot.org/uniprotkb/Q9YF05.json
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=BAA79391.1&rettype=fasta&retmode=text
+PF01864 maps to residues 12-174, inclusive.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01864/protein/uniprot/Q9YF05/
+Therefore D8 and W9 are outside the current Pfam span; D12 is its boundary.
+All other retained mutant positions are inside that span. These are experiments
+on intact protein, not an isolated-domain construct.
+
+PDB 5GUF polymer is the 174-residue reference plus LEHHHHHH, 182 aa total.
+https://files.rcsb.org/download/5GUF.cif
+The primary Methods identify pET21b and E. coli BL21(DE3) expression. Deposited
+expression-host metadata instead names an E. coli-Pichia shuttle vector and must
+not replace the primary experimental host. Native residue numbering is used.
+One article paragraph says Thr104, whereas the verified sequence has S104;
+no T104-specific mechanistic edge is retained.
+
+AfCarS is a separate tested member: UniProt O28534, AF_1740, 179 aa, A. fulgidus
+VC-16 (taxon 224325). The public 2014 study reproduction identifies DUF46 and
+describes a C-terminal His8 construct, not the ApCarS His6 construct.
+https://rest.uniprot.org/uniprotkb/search?query=gene:AF1740&format=json
+https://pure.rug.nl/ws/portalfiles/portal/37823809/Chapter_2.pdf
+Its reference search result was inspected, but its exact clone/domain mapping
+and complete primary assays remain follow-up; no AfCarS graph is asserted here.

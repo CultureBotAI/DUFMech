@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01935
+  path: curation/families/PF01935.yaml
+session:
+  id: 2026-10-12T042916Z-codex-48cd65
+  timestamp: '2026-10-12T04:29:16Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: needs_followup
+  summary: Curate selected archaeal HerA causal assay contexts with explicit domain
+    and partner boundaries
+  details: Added six graphs with21 observed edges from2014 SSO2251 and2015 E233S experiments,
+    four evidence ledgers and two open discussions. Current PF01935 matches121-331;
+    full-protein variants outside that match stay explicitly scoped. Separated phosphate
+    release, unwinding, triplex displacement, partner-mediated degradation and deletion
+    rescue. Inspected primary methods and figures including2014 S4-S5; preserve source
+    inconsistencies and bacterial/antiviral/other archaeal followups. Same-agent partial
+    curation, IN_PROGRESS; no family-wide characterization, publication or full-QC
+    claim.

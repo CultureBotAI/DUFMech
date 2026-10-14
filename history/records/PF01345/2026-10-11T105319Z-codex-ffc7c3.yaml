@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01345
+  path: data/families/PF01345.yaml
+session:
+  id: 2026-10-11T105319Z-codex-ffc7c3
+  timestamp: '2026-10-11T10:53:19Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial CLIPPER scientific self-review with construct and numbering
+    qualifications
+  details: Saved structured YAML and native-derived Markdown review of three measured
+    fragment-level effects. Exact Table S6 and deposited/reference sequence mapping
+    support intended K715A; biochemical tag processing, catalytic numbering and broader
+    native mechanisms remain open. Review is same-agent, partial and NEEDS_FOLLOWUP;
+    no REVIEWED promotion or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T105305Z-pf01345-clipper-stability-and-residue-numbering/review.yaml

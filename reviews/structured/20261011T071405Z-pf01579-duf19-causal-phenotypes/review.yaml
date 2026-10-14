@@ -1,0 +1,455 @@
+schema_version: 1.0.0
+review_id: 20261011T071405Z-pf01579-duf19-causal-phenotypes
+title: Scoped scientific self-review of EXC-13 and C36C5.5 DUF19 phenotypes
+started_at: '2026-10-11T07:13:22Z'
+finished_at: '2026-10-11T07:14:05Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Four distinct PHENOTYPIC graphs retain four INDIRECT OBSERVED edges for EXC-13
+  canal defects and C36C5.5 reporter-aggregation perturbations. Exact reference-member
+  mapping is verified; neither a shared domain mechanism nor complete family coverage
+  is established. Status remains IN_PROGRESS.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01579.yaml
+    sha256: 4975718de02e947d05a782b28fb6e7f77489c8bd0aff15fd5896f80e48ee9aa3
+    role: context
+  - path: data/families/PF01579.yaml
+    sha256: c1f783fea1e8c9a8585e30d34bfaab7aaecc2744fbe5e630da66f6998f2b17d9
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01579/al-hashimi-2019-exc13.txt
+    role: context
+    sha256: c52f0b27ea198b2d1ff38f1b00e7582f6fd187be6ff91fc4e276c44fdee8403c
+  - path: evidence/PF01579/EXC13-C36C5-5-identity.txt
+    role: context
+    sha256: 80e93919e253f73571106ddc4cb3df25ab3b7eac1cf9b55fa60f8d29c91b5ddd
+  - path: evidence/PF01579/gallotta-2020-c36c5-5.txt
+    role: context
+    sha256: e19e8129c85383279c98d8dd556995f4a57148789d93591e2f5551d1224fea82
+targets:
+- target_id: PF01579
+  path: data/families/PF01579.yaml
+  label: PF01579
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01579.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 561433cf5d56e44ccc15c45655262ddeeea351551262863c23b4680e5bcd562b
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: PF01579 DUF19, following gene-resolved primary EXC-13 and C36C5.5 experiments
+    from the remaining SEEDED family list.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01579
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Resolve the EXC-13 main/supplement discrepancy, RNAi specificity and clean
+      genetic rescue. Nature main text and Methods were paywalled; public captions,
+      Figure 2, source tables and Supplement Table 5 leave exact panel-specific strains
+      and some exposure details unresolved. The distinct day-4 RNAi study, coelomocyte-present
+      Figure 2e arms, infection-response contexts and other family members remain
+      incompletely curated.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01579
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6505153/
+  locator: Methods, Tables 1-2, Results, Figure 4D/D' and Figshare Table S2 Results
+    Summary plus mutation identifiers
+  accessed_at: '2026-10-11T07:14:05Z'
+  support: supports
+  snapshot_sha256: c52f0b27ea198b2d1ff38f1b00e7582f6fd187be6ff91fc4e276c44fdee8403c
+  summary: EXC-13 feeding RNAi in BK540 increases canal abnormalities. Main Table
+    2 gives 79 canals and 19 percent affected, while Supplement S2 gives 75, 15 short
+    and fraction 0.204; no pooling or silent correction is performed. The multi-mutation
+    C44Y background is not isolated causal confirmation.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O01454/entry/pfam/PF01579/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T07:14:05Z'
+  support: supports
+  snapshot_sha256: 80e93919e253f73571106ddc4cb3df25ab3b7eac1cf9b55fa60f8d29c91b5ddd
+  summary: O01454/EXC-13 sequence version 4, 203 residues, maps PF01579 at 33-198.
+    O16405/C36C5.5/exh-1 sequence version 1, 204 residues, maps at 34-198. Both UniProt
+    and InterPro sequences agree exactly. O16406/C36C5.12 is explicitly excluded as
+    the wrong gene. Reference identity is not verification of the RNAi insert, mutant
+    product, tag junction or exact Nature assay strain.
+- evidence_id: aggregation-primary
+  kind: primary_source
+  reference: https://www.nature.com/articles/s41586-020-2461-z/figures/2
+  locator: Public Figures 1k and 2b/e captions, Figure 2 image, source-data workbooks
+    MOESM8/9, Supplementary Table 5 in MOESM1
+  summary: RNAi shifts aggregate categories upward in one experiment. Two separate
+    overexpression contexts show lower reporter aggregation in two independent experiments
+    each. Accessible strain catalog does not uniquely assign every panel; main Methods
+    remain unavailable. Binding is contextual, not direct holdase causality.
+  accessed_at: '2026-10-11T07:14:05Z'
+  support: supports
+  snapshot_sha256: e19e8129c85383279c98d8dd556995f4a57148789d93591e2f5551d1224fea82
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T07:14:05Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01579
+  kind: record_content
+  reference: data/families/PF01579.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T07:14:05Z'
+  support: context_only
+  snapshot_sha256: c1f783fea1e8c9a8585e30d34bfaab7aaecc2744fbe5e630da66f6998f2b17d9
+  quote: "id: Pfam:PF01579\npfam_id: PF01579\nname: Domain of unknown function (DUF19)\n\
+    short_name: DUF19\nseed_status: UNKNOWN_CANDIDATE\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01579\n\
+    counters:\n  proteins: 1028\n  matches: 1261\n  proteomes: 126\n  taxa: 389\n\
+    \  structures: 0\n  alphafold_models: 944\n  domain_architectures: 27\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002542\ndescription: This presumed domain has no known\
+    \ function. It is found in one or two copies in several Caenorhabditis\n  elegans\
+    \ proteins. It is roughly 130 amino acids long. The domain contains 12 conserved\
+    \ cysteines which\n  suggests that the domain is an extracellular domain and that\
+    \ these cysteines form six intradomain disulphide\n  bridges. The GO annotation\
+    \ for this protein indicates that it has a function in nematode larval development\n\
+    \  and has a positive regulation of growth rate.\ncuration_history: history/records/PF01579\n\
+    discussions:\n- discussion_id: duf19-specificity-context-and-mechanism\n  prompt:\
+    \ Resolve EXC-13 sample-count discrepancies and genetic specificity, and establish\
+    \ exact C36C5.5\n    assay strains and molecular mechanism before expanding the\
+    \ graph.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Whole-gene RNAi\
+    \ and tagged overexpression establish scoped reporter or canal phenotypes,\n \
+    \   not isolated DUF19 sufficiency. EXC-13 and C36C5.5 are distinct proteins;\
+    \ no common biochemical mechanism\n    or phenotype-to-phenotype chain is established.\n\
+    \  evidence:\n  - reference: PMID:30885922\n    supports: PARTIAL\n    evidence_source:\
+    \ full_text_and_supplement\n    explanation: Main Table 2 differs from Table S2\
+    \ on canal counts and proportions. VC40373 is a multi-mutation\n      background,\
+    \ not a target-specific rescue or clean C44Y control.\n  - reference: PMID:32641833\n\
+    \    supports: PARTIAL\n    evidence_source: public_figures_and_supplements\n\
+    \    explanation: Public captions, Figure 2, source tables and Supplement Table\
+    \ 5 support the four scoped\n      comparisons across the two papers. The Nature\
+    \ main text and Methods were not accessible; binding\n      is not itself a causal\
+    \ holdase mechanism.\n  posed_by: Codex\n  posed_date: '2026-10-11'\n  notes:\
+    \ The 2020 day-4 RNAi experiment, coelomocyte-present Figure 2e arms, infection-response\
+    \ studies\n    and other family members remain incompletely covered. Primary frozen\
+    \ descriptions and UNKNOWN_CANDIDATE\n    status remain unchanged. Partial scientific\
+    \ self-review does not authorize REVIEWED status or publication.\ncausal_graphs:\n\
+    - graph_id: exc13-rnai-canal-morphology\n  title: EXC-13 RNAi increases abnormal\
+    \ excretory-canal morphology\n  scope: C. elegans BK540 exposed to feeding RNAi\
+    \ targeting exc-13/C03G6.5; not isolated DUF19 or an isogenic\n    C44Y mutant.\n\
+    \  context: BK540 is rrf-3(pk1426) II; qpIs11[unc-119; Pvha-1::gfp] I. L2 parents\
+    \ were exposed and F1 young\n    adults examined on days 4-6, with general culture\
+    \ at 20 C. BK541 sid-1(pk3321) is the RNAi-refractory\n    control; dpy-11, exc-1\
+    \ and erm-1 are induction controls. Supplement Table S2 identifies Ahringer clone\n\
+    \    V-16K12; its exact insert sequence remains unverified.\n  family_mapping:\
+    \ EXC-13/C03G6.5 maps to UniProtKB:O01454, C. elegans reference taxon 6239, sequence\
+    \ version\n    4, 203 residues, PF01579 at 33-198 inclusive. UniProt and InterPro\
+    \ sequences agree. Reference mapping\n    establishes family membership, not the\
+    \ RNAi specificity, mutant product or domain sufficiency.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:6239\n  limitations: No target-specific rescue is established.\
+    \ Table 2 and Supplement Table S2 disagree on sample\n    count and frequency;\
+    \ these are not pooled. The main-table P value is just outside the authors' high-confidence\n\
+    \    cutoff. VC40373 carries other mutations and has a different phenotype, so\
+    \ it is not treated as isolated\n    C44Y causation. No disulfide, secretion or\
+    \ biochemical mechanism is inferred.\n  nodes:\n  - node_id: exc13-rnai\n    label:\
+    \ Feeding RNAi targeting exc-13 in BK540\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:O01454\n  - node_id: canal-defects\n    label: Abnormal excretory\
+    \ canals with focal vesicles and swollen cytoplasm\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: exc13-rnai-increases-canal-defects\n    subject: exc13-rnai\n\
+    \    predicate: increases\n    object: canal-defects\n    mechanism: Table 2 reports\
+    \ 19 percent affected among 79 canals versus 0 percent among 100 BK540 controls.\n\
+    \      Figure 4D illustrates focal basal vesicles/cysts. The affected subset's\
+    \ length score is 3.5 +/-\n      0.32 SD on an ordinal 0-4 scale, not an all-canal\
+    \ mean or micrometre measurement. The length-distribution\n      Fisher 3x2 P=1.2e-6\
+    \ does not separately test each pictured morphology. Supplement S2 instead reports\n\
+    \      75 canals, 15 short canals and fraction 0.204; the disagreement remains\
+    \ unresolved.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:30885922\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC6505153/\n      snippet: vesicles along\
+    \ swollen cytoplasm\n      explanation: Methods, Tables 1-2, Results and visually\
+    \ checked Figure 4D support a whole-gene RNAi-associated\n        phenotype. The\
+    \ separately inspected Table S2 discrepancy and absence of established rescue\
+    \ limit\n        specificity and quantitative interpretation.\n      cache_path:\
+    \ evidence/PF01579/al-hashimi-2019-exc13.txt\n      cache_sha256: c52f0b27ea198b2d1ff38f1b00e7582f6fd187be6ff91fc4e276c44fdee8403c\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O01454/entry/pfam/PF01579/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O01454/entry/pfam/PF01579/\n\
+    \      snippet: 'O01454 Pfam:PF01579 interval: 33-198, inclusive'\n      explanation:\
+    \ Grounds the tested gene's reference protein in this family, without importing\
+    \ another\n        family member's mechanism.\n      cache_path: evidence/PF01579/EXC13-C36C5-5-identity.txt\n\
+    \      cache_sha256: 80e93919e253f73571106ddc4cb3df25ab3b7eac1cf9b55fa60f8d29c91b5ddd\n\
+    - graph_id: c36c5-5-rnai-lbp2-aggregation\n  title: C36C5.5 RNAi shifts the LBP-2\
+    \ aggregation distribution upward\n  scope: C. elegans LBP-2::tagRFP reporter\
+    \ animals in Gallotta et al. Figure 1k, with RNAi against C36C5.5;\n    not EXC-13\
+    \ or a domain-selective perturbation.\n  context: Day 6, 25 C, one independent\
+    \ experiment; L4440 empty vector and rab-5 RNAi are negative and\n    positive\
+    \ controls. Figure 1 source data report counts in zero, 1-10 and greater-than-10\
+    \ aggregate\n    categories. Exact strain, RNAi insert and exposure start were\
+    \ not established from the accessible\n    caption and source sheet; the distinct\
+    \ day-4/from-egg Extended Data 2 experiment is not substituted.\n  family_mapping:\
+    \ C36C5.5, now exh-1, is UniProtKB:O16405, C. elegans N2 reference taxon 6239,\
+    \ sequence\n    version 1, 204 residues, PF01579 at 34-198 inclusive. UniProt\
+    \ and InterPro sequences agree. O16406\n    is C36C5.12 and is not this tested\
+    \ gene.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:6239\n  limitations: Main\
+    \ text and Methods were paywalled; exact panel-specific strain and knockdown specificity\n\
+    \    remain open. One independent experiment is not replicated merely because\
+    \ it contains many animals.\n    The endpoint is reporter aggregation, not a directly\
+    \ measured holdase reaction or family-wide function.\n  nodes:\n  - node_id: c36c5-5-rnai\n\
+    \    label: RNAi targeting C36C5.5 in the Figure 1k reporter assay\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:O16405\n  - node_id: rnai-lbp2-aggregates\n\
+    \    label: LBP-2::tagRFP aggregate-category distribution at day 6\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: c36c5-5-rnai-increases-lbp2-aggregation\n\
+    \    subject: c36c5-5-rnai\n    predicate: increases\n    object: rnai-lbp2-aggregates\n\
+    \    mechanism: C36C5.5 RNAi gives category counts 20/87/45 among 152 animals,\
+    \ versus 50/90/0 among 140\n      L4440 controls, ordered as zero/1-10/greater-than-10\
+    \ aggregates. The source reports an ordinal-logistic\n      coefficient of 2.22946,\
+    \ SE 0.25801 and P<2.2e-16. This is a phenotypic shift with unresolved molecular\n\
+    \      intermediates; no biochemical aggregation-rate constant is claimed.\n \
+    \   directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:32641833\n      source_url: https://www.nature.com/articles/s41586-020-2461-z/figures/1\n\
+    \      snippet: RNAi targeting top 13 ECR candidates\n      explanation: The public\
+    \ caption identifies the assay; the specific C36C5.5 row and its L4440 control\n\
+    \        in Figure 1 source data Panel k support the direction and counts. Figure\
+    \ 1 was not visually checked.\n      cache_path: evidence/PF01579/gallotta-2020-c36c5-5.txt\n\
+    \      cache_sha256: e19e8129c85383279c98d8dd556995f4a57148789d93591e2f5551d1224fea82\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O16405/entry/pfam/PF01579/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O16405/entry/pfam/PF01579/\n\
+    \      snippet: 'O16405 Pfam:PF01579 interval: 34-198, inclusive'\n      explanation:\
+    \ Distinguishes C36C5.5 from the nearby C36C5.12 accession and from EXC-13.\n\
+    \      cache_path: evidence/PF01579/EXC13-C36C5-5-identity.txt\n      cache_sha256:\
+    \ 80e93919e253f73571106ddc4cb3df25ab3b7eac1cf9b55fa60f8d29c91b5ddd\n- graph_id:\
+    \ c36c5-5-overexpression-lbp2-aggregation\n  title: C36C5.5 overexpression reduces\
+    \ LBP-2 reporter aggregation\n  scope: C. elegans transgenic C36C5.5::mVenus::histag\
+    \ overexpression compared with non-overexpressing\n    siblings in Figure 2b.\n\
+    \  context: Day 6, two independent experiments with LBP-2::tagRFP reporter. Supplement\
+    \ Table 5 catalogs\n    pmyo-3-driven C36C5.5 fusions in DCD311 and integrated\
+    \ derivatives, but the inspected figure caption/source\n    table does not uniquely\
+    \ assign the strain. The 25 C stated for Figure 2c is not silently applied to\n\
+    \    panel b.\n  family_mapping: The gene C36C5.5/exh-1 maps to O16405, sequence\
+    \ version 1, 204 residues, PF01579 at\n    34-198 inclusive. The tested protein\
+    \ is tagged and overexpressed, not an isolated 34-198 domain; exact\n    tag junction\
+    \ and clone sequence remain unverified.\n  scope_status: PHENOTYPIC\n  taxon:\
+    \ NCBITaxon:6239\n  limitations: Caption, source data, Figure 2 image and Supplement\
+    \ Table 5 are accessible; main text and\n    Methods were not inspected. Co-purification\
+    \ in panel d supports association but does not resolve the\n    path by which\
+    \ overexpression reduces aggregation. Other extracellular regulators are not treated\
+    \ as\n    DUF19 proteins without separate mapping.\n  nodes:\n  - node_id: c36c5-5-overexpression\n\
+    \    label: C36C5.5::mVenus::histag overexpression in reporter animals\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:O16405\n  - node_id: oe-lbp2-aggregation\n\
+    \    label: LBP-2::tagRFP aggregation at day 6 relative to siblings\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: c36c5-5-overexpression-decreases-aggregation\n\
+    \    subject: c36c5-5-overexpression\n    predicate: decreases\n    object: oe-lbp2-aggregation\n\
+    \    mechanism: In replicate 1, zero/1-10/greater-than-10 aggregate counts are\
+    \ 59/24/0 among 83 overexpressing\n      animals versus 25/60/0 among 85 siblings.\
+    \ Replicate 2 gives 40/13/0 among 53 versus 28/47/2 among\n      77 siblings.\
+    \ Reported Fisher P values are 1e-7 and 1.5e-5. Molecular intermediates remain\
+    \ unresolved;\n      this is not a purified-domain holdase assay.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:32641833\n      source_url: https://www.nature.com/articles/s41586-020-2461-z/figures/2\n\
+    \      snippet: non-overexpressing siblings of ECR transgenics\n      explanation:\
+    \ Public Figure 2b, its caption and both replicates in the source sheet support\
+    \ the comparison.\n        Table 5 supplies construct context without a verified\
+    \ unique panel-to-strain assignment.\n      cache_path: evidence/PF01579/gallotta-2020-c36c5-5.txt\n\
+    \      cache_sha256: e19e8129c85383279c98d8dd556995f4a57148789d93591e2f5551d1224fea82\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O16405/entry/pfam/PF01579/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O16405/entry/pfam/PF01579/\n\
+    \      snippet: 'O16405 Pfam:PF01579 interval: 34-198, inclusive'\n      explanation:\
+    \ Verifies the family mapping of the overexpressed gene's reference protein, not\
+    \ the\n        exact fusion or isolated-domain activity.\n      cache_path: evidence/PF01579/EXC13-C36C5-5-identity.txt\n\
+    \      cache_sha256: 80e93919e253f73571106ddc4cb3df25ab3b7eac1cf9b55fa60f8d29c91b5ddd\n\
+    - graph_id: c36c5-5-overexpression-without-coelomocytes\n  title: C36C5.5 overexpression\
+    \ reduces reporter aggregation without coelomocytes\n  scope: Separate coelomocyte-absent\
+    \ arms in Gallotta et al. Figure 2e; C36C5.5 overexpression compared\n    with\
+    \ secreted-GFP overexpression, not the sibling control from panel b.\n  context:\
+    \ Day 6, two independent experiments with LBP-2::tagRFP reporter and coelomocytes\
+    \ absent. Table\n    5 catalogs DCD387 with unc-119(ed3), cdIs32 coelomocyte ablation,\
+    \ uqIs27 C36C5.5 fusion and uqIs5\n    reporter; a unique panel-to-strain assignment\
+    \ and exact assay temperature remain unverified from the\n    accessible material.\n\
+    \  family_mapping: C36C5.5/exh-1 is O16405, PF01579 at 34-198 in the 204-residue\
+    \ reference. Neither the\n    coelomocyte ablation transgene nor secreted GFP\
+    \ is the DUF19 member; this comparison tests C36C5.5\n    overexpression in a\
+    \ fixed ablation context.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:6239\n\
+    \  limitations: This is not an experiment demonstrating that endogenous C36C5.5\
+    \ acts only independently\n    of coelomocytes. It does not establish direct binding\
+    \ as the causal intermediate or transfer the effect\n    to EXC-13. Main Methods,\
+    \ clone junctions and raw images remain unreviewed.\n  nodes:\n  - node_id: c36c5-5-oe-without-coelomocytes\n\
+    \    label: C36C5.5 overexpression with coelomocytes absent\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:O16405\n  - node_id: ablated-lbp2-aggregation\n\
+    \    label: LBP-2 reporter aggregation relative to secreted-GFP control\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: c36c5-5-oe-decreases-aggregation-without-coelomocytes\n\
+    \    subject: c36c5-5-oe-without-coelomocytes\n    predicate: decreases\n    object:\
+    \ ablated-lbp2-aggregation\n    mechanism: With coelomocytes absent, replicate\
+    \ 1 has zero/1-10/greater-than-10 aggregate counts 52/22/1\n      among 75 C36C5.5-overexpressing\
+    \ animals versus 8/48/26 among 82 secreted-GFP controls. Replicate\n      2 has\
+    \ 46/70/0 among 116 versus 0/95/26 among 121 controls. The source reports chi-square\
+    \ P<1e-8\n      for both comparisons. The fixed ablation background is part of\
+    \ the tested context, not a second\n      independent sufficient cause.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:32641833\n      source_url: https://www.nature.com/articles/s41586-020-2461-z/figures/2\n\
+    \      snippet: ECR C36C5.5 efficiently prevents LBP-2 aggregation\n      explanation:\
+    \ Figure 2e's public caption, visually inspected figure and both source-data replicates\n\
+    \        support the separate coelomocyte-absent comparison with its secreted-GFP\
+    \ control. The word prevents\n        in the caption is not interpreted as zero\
+    \ aggregates in all animals.\n      cache_path: evidence/PF01579/gallotta-2020-c36c5-5.txt\n\
+    \      cache_sha256: e19e8129c85383279c98d8dd556995f4a57148789d93591e2f5551d1224fea82\n\
+    curation_events:\n- timestamp: '2026-10-11T07:10:08Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate four DUF19 member-scoped phenotype\
+    \ graphs\n  history_record: history/records/PF01579/2026-10-11T071008Z-codex-53923d.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: O01454/EXC-13 sequence version 4, 203 residues, maps PF01579 at 33-198.
+    O16405/C36C5.5/exh-1 sequence version 1, 204 residues, maps at 34-198. Both UniProt
+    and InterPro sequences agree exactly. O16406/C36C5.12 is explicitly excluded as
+    the wrong gene. Reference identity is not verification of the RNAi insert, mutant
+    product, tag junction or exact Nature assay strain.
+  target_ids:
+  - PF01579
+  evidence_ids:
+  - identity
+  - primary
+  - aggregation-primary
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: The EXC-13 edge is an RNAi-associated canal phenotype, not a disulfide
+    or domain mechanism; the reported length test is not relabeled as a test of individual
+    pictured features. C36C5.5 RNAi, overexpression versus siblings and overexpression
+    in the coelomocyte-absent secreted-GFP comparison are separate graphs. Source-data
+    aggregate categories and biological replicates are preserved. Co-purification
+    does not become a directed holdase edge, and no EXC-13-to-aggregation transfer
+    is made. All four edges are EXPERIMENTAL, OBSERVED and INDIRECT within PHENOTYPIC
+    scopes.
+  target_ids:
+  - PF01579
+  evidence_ids:
+  - primary
+  - native
+  - aggregation-primary
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Resolve the EXC-13 main/supplement discrepancy, RNAi specificity and clean
+    genetic rescue. Nature main text and Methods were paywalled; public captions,
+    Figure 2, source tables and Supplement Table 5 leave exact panel-specific strains
+    and some exposure details unresolved. The distinct day-4 RNAi study, coelomocyte-present
+    Figure 2e arms, infection-response contexts and other family members remain incompletely
+    curated.
+  target_ids:
+  - PF01579
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01579-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve DUF19 experimental specificity and extend mechanistic coverage
+  description: Reconcile EXC-13 quantitative source differences without rewriting
+    prior evidence, establish target-specific rescue and RNAi constructs, and obtain
+    accessible C36C5.5 Methods/strain assignments. Add molecular edges only from direct
+    causal evidence, keeping paralogs and biological contexts separate; retain successor
+    reviews for the expanded scope.
+  target_ids:
+  - PF01579
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - aggregation-primary
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01579.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Reconcile EXC-13 quantitative source differences without rewriting
+    prior evidence, establish target-specific rescue and RNAi constructs, and obtain
+    accessible C36C5.5 Methods/strain assignments. Add molecular edges only from direct
+    causal evidence, keeping paralogs and biological contexts separate; retain successor
+    reviews for the expanded scope.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01579
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- EXC-13 Figure 4 and Gallotta Figure 2 were visually inspected. Gallotta Figure 1k
+  was assessed from public caption and source-data sheet, not its image. Supplement
+  Table 5 was extracted as text; raw microscopy, uncropped blots and statistical fits
+  were not independently reanalyzed. Nature full-text Methods were not accessed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.

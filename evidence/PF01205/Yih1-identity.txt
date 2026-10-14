@@ -1,0 +1,19 @@
+Retrieved 2026-10-11 UTC. Identity facts, not experimental mechanism evidence.
+https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AYIH1%20AND%20organism_id%3A559292&format=json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P25637/entry/pfam/PF01205/
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P25637/entry/pfam/PF05773/
+https://www.ncbi.nlm.nih.gov/protein/NP_009985.1
+P25637/YIH1_YEAST is YCR059C, 258 aa, sequence version 1, entry version 176.
+The paper's GI 6319904 resolves to NP_009985.1; its FASTA, UniProt and InterPro
+sequences agree exactly. Sequence MD5: 39c549d7f7b1550746b130d23c445108.
+P25637 Pfam:PF01205 interval: 144-251, inclusive.
+The separate PF05773 RWD match is 6-108. Despite the preserved Impact_N label,
+PF01205 maps to the C-terminal ancient domain in this member, not its N-terminal
+RWD. The paper's model uses 125-258 for the ancient domain, a different boundary.
+The 2-258 fusion retains PF01205; 2-132 does not. The 133-258 fragment retains
+PF01205 but lacks the RWD and does not reproduce full-protein inhibition.
+The alternative YIH1 synonym P40512 belongs to PCI8/CSN11/YIL071C, not this gene.
+Reference strain is S288c, taxon 559292; experimental hosts H1511 and ESY11001b
+are separately specified. Current sequence agreement does not sequence every
+historical fusion junction or establish identical strain genomes.
+Frozen previous-name snapshot: PF01205.26, previous name UPF0029.

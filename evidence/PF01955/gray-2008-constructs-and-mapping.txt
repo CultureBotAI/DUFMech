@@ -1,0 +1,65 @@
+PF01955 2008 donor constructs and mapping assessment, 2026-10-12 UTC
+Primary PMID:18808385; DOI:10.1111/j.1365-2958.2008.06437.x
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2602876/
+https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+Locators: construction Methods, growth Methods, Figures2-4 and Discussion.
+Minimal quotation: "confirmed by sequencing"
+
+Main construction Methods state that all cloned cbiZ inserts were sequenced
+with pBAD5prime/pBAD3prime. Actual historical sequences, donor-strain TableS3
+and primer TableS4 were not retrieved. PMC's downloaded HTML does not contain
+those supplement files; current web PMC access returned a browser challenge.
+The publisher main text was accessible once through the web reader; direct
+download returned403 and the supplement endpoint was inaccessible. No bypass.
+Original Figures2-4 were visually inspected. Figure2 is phylogeny, not an
+additional perturbation or proof that all93 searched homologs function alike.
+
+All seven positive constructs use pBAD24, with alternative donor inserts,
+not joint expression of seven genes. Rs has the R.sphaeroides coding sequence
+plus3bp5prime and15bp3prime, cloned EcoRI/XbaI. Rr uses EcoRI/PstI; Bh is a
+whole B.halodurans BtuD-CbiZ fusion, also EcoRI/PstI. Mm uses NcoI/SphI;
+Pf uses KpnI/HindIII; Mj uses NcoI/HindIII; Fa uses KpnI/HindIII. The extract
+is not the MBP/His6-tagged preparation of the later2009 remodeling paper.
+
+Current UniProt query: xref:pfam-PF01955 AND (organism_name:rubrum OR
+organism_name:halodurans OR organism_name:acidarmanus OR organism_name:furiosus
+OR organism_name:jannaschii OR organism_name:pernix OR organism_name:coelicolor
+OR gene:DET0242). Thirteen results included unrelated organisms sharing
+rubrum/halodurans epithets; those were excluded by full organism identity.
+API: https://rest.uniprot.org/uniprotkb/search
+Specific current candidates and separately verified InterPro intervals:
+Rr: Q2RX48v1,250aa,Rru_A0492,ABC21297.1,CP000230,strainS1,taxon269796,
+PF01955 30-244.
+Bh: Q9KCI4v1,491aa,BH1587,BAB05306.1,BA000004,strainC-125,taxon272558,
+current name Halalkalibacterium halodurans; PF01955 268-487,PF00005 19-168.
+Mj: Q59008v1,255aa,MJ1613,AAB99633.1,L77117,strainJAL-1,taxon243232,
+PF01955 16-253.
+Pf: Q8U3Z5v1,193aa,PF0305,AAL80429.1,AE009950,strainVc1,taxon186497,
+PF01955 6-190.
+Fa: S0ASV7v1,229aa,FACI_IFERC00001G1896,AGO61872.1,CP004145,Fer1,
+taxon333146,PF01955 43-222. This accession first appeared in2013, so it
+cannot by itself identify the2008 clone; historical sequence linkage is open.
+The earlier ledgers retain RsQ3J3R7v1/PF01955 6-208 and
+MmQ8Q0G3v1/PF01955 15-198. These are current parent mappings, not independent
+verification of the2008 inserts or their exact junctions/donor strains.
+No candidate accession is silently asserted to be the sequenced historical
+clone. The graphs identify the tested donor plasmids and source organisms;
+current candidate mappings remain explicitly qualified.
+
+Domain API URLs:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01955/protein/uniprot/Q2RX48/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01955/protein/uniprot/Q9KCI4/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00005/protein/uniprot/Q9KCI4/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01955/protein/uniprot/Q59008/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01955/protein/uniprot/Q8U3Z5/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01955/protein/uniprot/S0ASV7/
+
+Three noncomplementing constructs are reported as data not shown:
+S.coelicolor cbiZ, D.etheneogenes DET0242 cbiZ and A.pernix cbiS.
+Current DET0242 mapsQ3Z9V9v1,259aa,AAW40452.1,CP000027,taxon243164;
+current S.coelicolor candidateQ9L129v1 isSCO7430,228aa,CAB76349.1;
+A.pernix candidateQ9YAA7v2 isAPE_2032.1,357aa,BAA81042.2.
+Failed heterologous rescue does not establish pseudogenization or native
+inactivity; expression, folding and substrate context remain alternatives.
+The proposed missing-Asn explanation and Btu association are hypotheses,
+not residue-specific catalysis or measured transporter interaction.

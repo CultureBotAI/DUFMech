@@ -1,0 +1,37 @@
+Ren et al.2009, PMID19609302, doi:10.1038/emboj.2009.192
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/
+Inspected 2026-10-12: Results sections9-11, nuclease/EMSA Methods,
+Figures4 and5 visually. Minimal quotation: "cleavage at the junction".
+
+Curator paraphrase:
+P.abyssi PAB2263 full protein, reference Q9V2E8, cleaves labeled model
+5-prime and3-prime flap substrates. Figure5A/B gives approximately25-nt
+and22-nt junction-associated products, respectively, and additional short
+products at high protein amounts. Native protein concentrations are given
+as monomers. Methods allow46 or56C,10min,5mM MgCl2; the specific
+temperature for each Figure5 panel is not resolved by the inspected caption.
+Do not silently choose one. These are in-vitro model substrates.
+
+End-bound streptavidin on biotinylated model substrates suppresses detectable
+cleavage (Figure5A/B). This supports an accessibility requirement, but the
+proposed sliding/threading trajectory was not imaged directly. Caption5A
+calls a3-prime biotin while the diagram shows the blocked flap end; retain
+this labeling limitation rather than assigning unverified attachment chemistry.
+
+Figure5C compares ssDNA and splayed DNA. The R42A/W75S double mutant
+loses the discrete splayed-junction product but retains a short-product
+smear. It is not completely catalytically inactive. Both substitutions are
+outside PF01939, in the separate N-terminal PF21003 match. Figure4C
+also shows concentration-dependent residual binding of individual variants;
+do not generalize complete binding abolition across all concentrations.
+
+Figure5D: PCNA raises the junction-product yield relative to the no-PCNA
+reaction, with BSA control and three measurements. The Results attribute
+this to reduced nonspecific cleavage. No modulation was detected on the
+other5-prime strand under the reported conditions. This is not a universal
+increase in all NucS nuclease activity or demonstrated recruitment in cells.
+No observed Hef-to-repair chain follows from co-precipitation.
+
+Supplementary S5/S6 were not obtained as readable primary PDFs in this
+session. Y191 mutant details and the detailed PCNA strand comparison
+remain follow-ups; no new Y191 edge is asserted from an unread figure.

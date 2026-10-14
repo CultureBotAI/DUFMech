@@ -1,0 +1,35 @@
+PF01938 causal review coverage; 2026-10-12 UTC.
+The current pass supports accession-mapped MMP0076 graphs, not all TRAMs.
+Pre-edit local search included ignored/hidden files in curation,evidence,
+history,reviews/structured for PF01938,DUF90,TRAM,TRAM3066,Mpsy_3066,Ctr3;
+no matches in those text paths. inputs/ and JSON were excluded, so this
+was not a whole-filesystem or full retained-input absence claim.
+
+Primary studies actually read: Li2019 PMID31404065 full text and selected
+figures/supplement; Zhang2017 PMID28878753 relevant text/captions. Source
+downloads remain temporary; only minimal attributed extracts and curator
+interpretation are retained here. Frozen identity and scores are unchanged.
+
+Remaining source branches:
+- Map the four R15 proteins and inspect2017 figures/supplement; preserve
+  induction-dependent reporter effects and RNase contamination, not an
+  unconditional conflict or an inferred intrinsic RNase.
+- Ctr3 from M. burtonii: PMID26769275, primary abstract lead; RNA-binding
+  targets alone do not prove directed RNA remodeling.
+- P. yayanosii A1: PMID40325874,doi10.1111/1462-2920.70105,2025.
+  Abstract inspected; attempted Wiley full text redirected to abstract.
+  Resolve PyTRAM accession and supplementary assays before native graphs.
+  PYCH_0765 denotes the separate PyCsp; do not transfer its transcriptome
+  effect to PyTRAM. No claim that inaccessible full text lacks evidence.
+- Multidomain TRAM proteins: MiaB,RimO,RumA/RlmD,RlmCD,Trm2,CDKAL1,
+  CDK5RAP1 and others need domain-specific perturbation and primary mapping.
+  Leads include PMC2538847,PMC2528175,PMC5614603; a TRAM annotation in
+  an enzyme does not make isolated TRAM its catalytic domain.
+- Native RNA substrates and direct molecular mechanism remain open:
+  DNA-beacon fluorescence,RL211 growth,UTR-mCherry fluorescence,RNA-seq
+  and RIP are distinct readouts. No complete transcription-to-growth
+  chain or automatic feedback edge is established. Other transcriptome
+  responses and member contexts are not yet exhaustively curated.
+
+No independent expert review, experimental replication, full-corpus
+completion, source adoption, publication or publication-QC pass is claimed.

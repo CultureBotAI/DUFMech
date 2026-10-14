@@ -1,0 +1,36 @@
+Source: Reed et al. 2021, PMID:34572495, doi:10.3390/biom11091282.
+URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC8469502/
+Full-text XML: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8469502/fullTextXML
+Inspected 2026-10-11: Methods 2.7-2.9, Results 3.9, conclusions, Figure 8 image.
+
+Short quotations from Results 3.9:
+"grew at a slower rate than the folE single mutant"
+"better growth of the double mutant on dT"
+
+Curator's notes, not quotations:
+Keio ybgI deletion and the preexisting folE deletion were transferred into
+E. coli K-12 MG1655 by P1 transduction. The ybgI resistance cassette was removed
+before making the double mutant; mutations were checked by internal/external PCR.
+Liquid growth used LB with 0.3 mM deoxythymidine, starting OD600 0.1, 37 C,
+40 h, five replicates. Figure 8b shows lower OD600 of the double mutant than
+the folE-only mutant during approximately 5-15 h. This is the adopted conditional
+phenotype, not an estimate of an enzymatic rate, survival or final biomass yield.
+The article later describes better double-mutant growth on dT without clearly
+resolving the liquid-versus-plate context. That wording is not reconciled by
+inventing an experiment; the graph is restricted to the visually checked curve.
+No added defect is claimed for ybgI deletion in a folE-positive background.
+
+In plate complementation, pBAD24-ybgI did not replace folE, whereas pBAD24-folE
+supported dT-independent growth in the folE-deficient backgrounds. This does not
+prove zero YbgI enzymatic activity in every condition or refute all HP0959 assays.
+Plate methods say 10 h; Figure 8 caption says images at 20 h. Neither time is
+used to define the liquid-growth edge. Supplement download returned HTML instead
+of a ZIP; the publisher supplement route returned 403, so Table S2 was not read.
+The exact derivative strain identifiers and primers remain a coverage gap.
+No ybgI-rescue experiment for the liquid-growth curve was established here.
+
+Metal insertion is a proposed general role, not a demonstrated molecular edge
+from this experiment. Primary HcgD studies (doi:10.1016/j.febslet.2014.05.059;
+doi:10.1111/1574-6968.12141) and HP0959 (doi:10.1371/journal.pone.0066605) are
+identified leads, not reviewed experiments in this record. PMID:29625546 was
+inspected as an abstract only; its cell-wall suggestion is not an adopted edge.

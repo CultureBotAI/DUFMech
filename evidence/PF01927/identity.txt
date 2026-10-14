@@ -1,0 +1,36 @@
+PF01927 identity and experimental mapping
+Inspected UTC 2026-10-12; curator Codex. Identity facts are not causal evidence.
+Frozen interpro-pfam-duf-2026-10-10: PF01927 Mut7-C, IPR002782, EX_DUF,
+UNSCORED; 5065 proteins. Frozen previous-name source: PF01927.23, DUF82.
+No imported name, description, counter, worklist or source pin was changed.
+
+CeMUT-7: P34607 sequence version 1, 910 aa, mut-7/ZK1098.8,
+Caenorhabditis elegans taxon 6239. Current PF01927 match is 666-779.
+https://rest.uniprot.org/uniprotkb/P34607.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01927/protein/uniprot/P34607/
+HsEXD3: Q8N9H8 sequence version 3, 876 aa, EXD3/HBE269,
+Homo sapiens taxon 9606. Current PF01927 match is 631-734.
+https://rest.uniprot.org/uniprotkb/Q8N9H8.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01927/protein/uniprot/Q8N9H8/
+The paper explicitly identifies these two accessions and lengths. It also
+names CeMUT-8 Q19672 and CeMUT-16 O62011 as partners. MUT-16 nomenclature uses
+the longer B0379.3a.1 isoform, not Q9U3S5's four-residue-shorter numbering.
+
+The paper's structural/experimental CTD is wider than the current Pfam match:
+Ce CTD 633-910 (crystallized 633-899), NTD-EXO 1-625; Hs CTD 624-876,
+NTD-EXO 1-582. Removing the CTD removes more than the matched Pfam interval.
+Ce R853 and T855, catalytic D435, and human D399 are OUTSIDE PF01927.
+Ce CTD-C 773-910 overlaps only the end of the matched interval. Reference
+sequence inspection confirms D435, I453, R853 and T855 in P34607, and D399
+in Q8N9H8. The paper's Results D453A conflicts with Figure 5 and Table S1
+D435A; the retained record reports that discrepancy, not a new allele.
+Deposited structure 8Q66 and author-designated constructs are not independent
+sequencing of every experimental plasmid or genotype.
+
+Thermococcus eurythermalis A0A097QWN3 v1 (153 aa, TEU_11320, taxon1505907)
+has a PF01927 cross-reference, but its RNA complex in this study is predicted,
+not an experimental RNA-binding measurement. Drosophila Nibbler lacks this
+CTD in the study's analysis; its activity is not an isolated PF01927 assay.
+The imported PIN/RNAse description remains source metadata. Busetto2024's
+structure comparison instead finds a TOPRIM-like resemblance and only distant
+PIN similarity; neither resemblance establishes intrinsic CTD nuclease activity.

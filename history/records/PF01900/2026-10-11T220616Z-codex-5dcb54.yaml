@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01900
+  path: data/families/PF01900.yaml
+session:
+  id: 2026-10-11T220616Z-codex-5dcb54
+  timestamp: '2026-10-11T22:06:16Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of Pop5 and Rpp14 causal graphs
+  details: Reviewed nineteen scoped graphs and thirty-five observed effects against
+    primary methods, original figures, recovered supplements and six sequence/domain
+    mappings. Saved the native structured NEEDS_FOLLOWUP review for semantic digest
+    ebb83480db23e6496c1105dccf1b2bb13efac5401a187cde487575d11225bc77. Preserve missing
+    historical mutation methods, human construct limits, preparation-level catalytic
+    attribution, replication discrepancies and incomplete family coverage; IN_PROGRESS
+    is not promoted. Review input was corrected to use the native search-evidence
+    kind with explicit bounded scope before any retained report was written.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T220937Z-pf01900-pop5-rpp14-context-specific-rna-effects/review.yaml

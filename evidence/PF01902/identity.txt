@@ -1,0 +1,34 @@
+PF01902 identity and domain-boundary assessment,2026-10-11 UTC
+Frozen snapshot: interpro-pfam-duf-2026-10-10
+SHA256:17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+PF01902 is former DUF71/ATP_bind_4, now Diphthami_syn_2_N, IPR060003.
+Frozen counts:6563 proteins,6660 matches,5387 proteomes,11776 taxa,
+4 structures,5074 AlphaFold models,91 architectures. Imported facts unchanged.
+Historical DUF71/IPR002761 boundaries are not current PF01902 boundaries.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01902/
+https://rest.uniprot.org/uniprotkb/Q12429.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q12429/
+https://rest.uniprot.org/uniprotkb/Q7L8W6.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q7L8W6/
+https://www.ncbi.nlm.nih.gov/protein/NP_013244.1
+https://www.ncbi.nlm.nih.gov/protein/NP_542381.1
+
+Parsed current provider responses and versioned NCBI FASTA comparisons:
+Q12429=NP_013244.1,685aa,sequence version1; S.cerevisiae S288c,taxon559292.
+InterPro sequence exactly agrees with UniProt. PF01902 spans1-135,score7.1e-13;
+PF28410 spans171-231,score2.6e-8; PF01042 spans332-416,score2.3e-6.
+G216 and E220 lie in PF28410, not PF01902. SGGKDS starts at8 in PF01902.
+UniProt flags historical CAA62663.1 as a frameshift; it is not substituted.
+Q7L8W6=NP_542381.1,267aa,sequence version3; human,taxon9606.
+PF01902 spans1-136,score1.8e-13; PF28410 spans146-232,score1.6e-14.
+Human complementation in yeast does not test an isolated PF01902 domain.
+Reference equality does not independently sequence the historical plasmids.
+
+Uthman2013 Methods and parsed TableS3 establish G216N/E220A as a DOUBLE mutant;
+pMS61/62 are independent clones, not separate single-residue tests. Figure7's
+endpoint686 conflicts with reference685 and Methods codons335-685. Current
+UniProt single-position mutation annotations must not become independent edges.
+Parsed TableS2 identifies Y04100 as BY4741 dph6 deletion for Figures3/6 and
+SUY4 as a distinct tagged-eEF2 preparation background for Figure4.
+Hawer2018 parsed TableS1 identifies HH7 dph6,HH14 eft2 and HH33 double mutant.

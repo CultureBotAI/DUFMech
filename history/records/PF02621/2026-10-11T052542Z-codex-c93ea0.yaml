@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF02621
+  path: curation/families/PF02621.yaml
+session:
+  id: 2026-10-11T052542Z-codex-c93ea0
+  timestamp: '2026-10-11T05:25:42Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Retain MqnD construct-identity gap without an unsupported graph
+  details: Inspected the 2021 MqnD manuscript, supplementary methods, Figure 4 and
+    Figure S41. Reaction chemistry is supported, but the inspected primary text does
+    not identify the exact clone locus or accession. Q9K9F8 is a candidate reference
+    only. Added an open native discussion and source extracts; no causal edge or claim
+    of absent biochemical evidence is introduced.
+  sections:
+  - discussions

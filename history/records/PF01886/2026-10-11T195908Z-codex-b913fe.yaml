@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01886
+  path: curation/families/PF01886.yaml
+session:
+  id: 2026-10-11T195908Z-codex-b913fe
+  timestamp: '2026-10-11T19:59:08Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Retain a graphless DUF61 causal-evidence assessment with exact SSO0941
+    identity.
+  details: Researched PF01886/DUF61/UPF0216 and member-specific sources; compared
+    Q97ZH2, AAK41217.1, WP_009992374.1 and the tagged 5VFK entity. Retained minimal
+    evidence for the structural abstract/deposition, selected AI2BMD sections and
+    original Figure2, bounded searches and unresolved access. The inspected material
+    supports no directed biological edge; full 2018 paper and broader member coverage
+    remain incomplete. Added two open discussions, kept IN_PROGRESS, and preserved
+    frozen metadata. No causal graph, functional assertion, publication or exhaustive
+    family completion is claimed.
+  sections:
+  - discussions

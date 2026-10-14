@@ -1,0 +1,92 @@
+PF01641 / SelR discovery experiments
+Accessed 2026-10-11 UTC; Codex.
+PMID:11929995; doi:10.1073/pnas.072603099; PMCID:PMC123633.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC123633/
+Kryukov and colleagues, PNAS 99 (2002), 4245-4250.
+Copyright 2002 National Academy of Sciences. Minimal quotation fragments and
+curator-authored factual notes; no full text or figures retained in repository.
+
+Minimal verbatim fragments:
+Biochemical Results: "reduced a dabsyl derivative"
+Yeast Results: "double knockout strain grew slower"
+Yeast Results: "single mutant strains"
+Figure 2 caption: "0.5 mM"
+
+Read primary Methods, Results, Discussion and captions. Figures 1-4 were visually
+inspected; Figure 1 is a sequence alignment and Figure 4 is a pathway model, not
+additional causal assays. Figure 2 contains liquid growth curves and plate spots;
+Figure 3 contains HPLC chromatograms. No original chromatographic data or
+statistical reanalysis was obtained. The article refers to an earlier assay
+protocol instead of restating all enzyme/substrate/DTT doses and reaction times.
+
+Drosophila SelR: experimental cDNA AF486578, protein AAM10931.1, 155 residues.
+The paper explicitly distinguishes this clone from a predicted 166-aa ORF with
+an extra internal 11 residues, used in the alignment. Express N-terminal
+His6-tagged protein from pET28a in E. coli BL21(DE3), Talon affinity purification.
+Figure 3B compares separate R and S dabsyl-L-methionine-sulfoxide substrates
+with and without SelR. An extra dabsyl-methionine product peak appears with the
+R substrate, not S, detected at 436 nm. DTT is the reducing assay context, not
+an established physiological electron donor here. The 1.5-min peak is identified
+as dabsyl-chloride impurity, not product. Dabsylated substrate is a proxy, not an
+intact oxidized protein or a demonstrated free-methionine utilization mechanism.
+
+Mouse SelR: full coding region of a Cys-for-Sec mutant cloned into pET21d(+),
+expressed in BL21(DE3), purified with DEAE flow-through and heparin HPLC.
+Figure 3A shows dabsyl-methionine product with the R substrate and no corresponding
+product with S. A matched mouse R-substrate/no-enzyme trace is not displayed in
+panel A (the fly controls are separate panel B). The natural Sec-containing
+mouse protein was not the tested purified construct, and a mutant-versus-native
+activity ratio is not measured. Vector-derived terminal residues were not
+independently determined; do not call this a verified tag-free native sequence.
+The primary PCR primers match the current reference's terminal coding sequence.
+
+Yeast genetics: purchased BY4741 WT and isogenic SelR::KAN-R / YCL033C mutant;
+MsrA deletion GY4 and double deletion GY5 made by URA3 replacement, PCR checked.
+Methods prints MAT-alpha for BY4741 with his3D1/leu2D0/met15D0/ura3D0; this
+historical mating-type notation is retained as unresolved rather than silently
+corrected or used to identify a different strain. Reference P25566 is S288c,
+not a resequenced BY4741 experimental isolate. No SelR genetic rescue is shown.
+
+Figure 2A-C: stationary overnight cultures diluted to OD600 0.05 in supplemented
+YNB, 30 C, 250 rpm, followed for about 14 h. Exact supplement composition is
+not enumerated in the figure caption. Zero peroxide, 2 mM peroxide and 0.5 mM
+peroxide are distinct assays. At zero peroxide, SelR-only deletion tracks WT,
+whereas the double deletion accumulates biomass more slowly than WT and the
+MsrA-only mutant. At 2 mM, SelR-only deletion delays early/mid growth relative
+to WT but approaches the final WT OD; the double mutant has no substantial
+increase during the displayed interval, unlike MsrA-only deletion. At 0.5 mM,
+single mutants largely track WT, while the double mutant grows very poorly.
+These are conditional biomass phenotypes, not measured intracellular repair
+fluxes or proof that cells cannot grow at any later time. There are no plotted
+replicate/error bars or quantified growth-rate fits.
+
+Figure 2D: separate 3-day plate spots, 30 C, 0.7 mM peroxide and 0.14 mM
+methionine or R, S or mixed sulfoxides; four inoculum dilutions from OD600 0.2
+to 0.0002, 10 ul spots. Both gene deletions affect utilization of both isomers
+in the authors' interpretation, with the MsrA effect stronger. These growth
+results do not overturn purified stereospecificity or prove direct reduction
+of free R substrate by MsrA. Qualitative spot effects are retained as context,
+not quantified into extra edges or blended with the liquid assays.
+
+Metal analysis: mouse mutant has 1.08 Zn equivalents as isolated; a separate
+preparation after dialysis has 0.33 without EDTA or 0.42 with EDTA; fly protein
+has 0.82. Corresponding buffer controls lack detected zinc. Different preparation
+and dialysis conditions do not by themselves prove a catalytic zinc requirement.
+No causal zinc-removal/activity edge is inferred from Table 2. Native selenium
+is part of selenocysteine, not an independently measured bound selenium ligand.
+
+Follow-up access: PMID:12145281, doi:10.1074/jbc.M203496200, Kumar 2002 JBC.
+The abstract, introduction, Methods and beginning of Results were accessible
+through indexed institutional PDF text. Subsequent PDF fetches and publisher
+routes failed; remaining results/figures were not inspected. Methods itself
+mentions 10 mM DTT then lists 20 mM in the recipe; do not retrofit these values
+into the earlier PNAS experiment. Proposed C124-sulfenic acid/C69-disulfide steps,
+zinc-site mutants and yeast rescue remain specific follow-up targets, not
+adopted experimental edges on the strength of an abstract. Publisher API reports
+open access but returned metadata only; full-view request required authorization.
+
+Temporary retrieval SHA256:
+PNAS HTML 66b4f109bdc83d9a33f1a6053a9089799e2060a285f7cd92c99e85978859e8e7
+Figure1 6e85d57b7d08f19d9a0651b2347b019fe7fee74fb8eea2820a45b4d2323bceb6
+Figure2 72bb6332c7d4c232d58ee661a3b17d88599648e00924d911031516234ab3a749
+Figure3 dd60fe744234017371ef790407ac67371ee5673a37ea0f226442e7bd0cb21486

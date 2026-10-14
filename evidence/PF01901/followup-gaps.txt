@@ -1,0 +1,31 @@
+PF01901 follow-up coverage and access ledger,2026-10-11 UTC
+
+The prior goal turn made verified progress with four phenotype graphs.
+Current baseline again validates8296records with zero generated drift.
+Ignored/hidden-inclusive search in curation,evidence,history,reviews,reports
+(exceptinventory.json) forQDZ55367,SK2526,BECP10 andderived700927/43895 found
+only the preceding follow-up leads before these additions. Existing ledgers
+and the20261011T222500Zreview are preserved,not overwritten.
+
+Queries covered ATCC43895/700927lineage,ATCC43888genome/wzy,exact2004DOI/title,
+2008capsule title and2021BECP10title. Official ATCC identifies the derivative
+relationship; GenBank CP041623.1 provides the matched43888reference. The
+2008PMCfull text,previously challenged,became readable on a normal retry.
+Original2008Figure3 and2021Figure4 were inspected. These gains do not establish
+exhaustive family coverage or exact experimental-stock sequences.
+
+Access limits:2008HarvardPDF returned405; Surreyredirect yielded HTML,not aPDF.
+Its PMC supplement yielded a download challenge; EuropePMC supplement endpoint
+explicitly says the article is outside its open-access subset. No challenge
+was solved or bypassed. The2021PMC supplement also yielded a challenge; the
+EuropePMC archive request terminated after60s with507020partial bytes. That
+partial archive was not treated as a complete or inspected supplement.
+2004Crossref identified publisherPII S0021925818361805; JBCPDF returned403 and
+ElsevierXML returned429. The2004full paper remains uninspected,not negative.
+
+Open:exact old/new allele junctions and plasmid sequences,short score0.041
+domain reassessment,assay-matched controls,2008temperature/species wording,
+2021caption-panel ordering and2024glucose/duration discrepancies. Distinct
+mutants,backgrounds and readouts must not become one universally rescued
+pathway. Further2004evidence,otherO157contexts,archaeal members andFPC840mapping
+remain follow-ups. No independent expert approval or all237-member audit.

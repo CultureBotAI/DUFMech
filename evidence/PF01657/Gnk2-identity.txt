@@ -1,0 +1,36 @@
+PF01657 / Gnk2 member and residue mapping
+Accessed: 2026-10-11 UTC; structured JSON inspected by Codex.
+https://rest.uniprot.org/uniprotkb/A4ZDL6.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/A4ZDL6/entry/pfam/PF01657/
+https://data.rcsb.org/rest/v1/core/polymer_entity/4XRE/1
+https://data.rcsb.org/rest/v1/core/entry/4XRE
+
+Identity fact extract:
+A4ZDL6 Pfam:PF01657; interval 36-131 inclusive.
+UniProt GNK2_GINBI, Ginkgo biloba, NCBITaxon:3311; 134 aa, sequence version 1,
+last sequence change 2007-05-29; entry version 57, annotation 2026-09-02.
+UniProt chain 27-134 is 108 aa; predicted signal sequence 1-26.
+UniProt and InterPro protein sequences match exactly. Protein sequence MD5:
+50CC307C9708DD3285CA4002E7C9A647.
+Current PF01657 maps to mature residues 10-105, not the historical 56-108
+domain boundary discussed in Miyakawa 2014. Mature N11/R93/E104 map to precursor
+N37/R119/E130, respectively, all inside the current Pfam interval. The tested
+108-aa mature protein plus added Met is not an isolated Pfam-interval construct.
+Do not change the frozen family snapshot to reflect these current member facts.
+
+PDB 4XRE entity 1, chains A/B/C/D, 109-aa deposited sequence, matches exactly
+one Met plus A4ZDL6 residues 27-134. Entry primary citation is PMID:25139159;
+deposited 2015-01-21, released 2015-02-25. This supports the reference mapping
+and additional Met, not independently resequenced assay/mutant stocks.
+The paper names 3W9Q, which did not resolve through the tried RCSB entry route.
+4XRE has matching primary citation and construct; a formal 3W9Q-to-4XRE
+supersession was not verified and is not asserted.
+UniProt records sequence conflicts for an alternative ACP27608 sequence at
+precursor 30/59; the sequence-matched 4XRE construct supports the selected
+A4ZDL6 reference rather than adopting those variants.
+
+Retrieved-source SHA256 values:
+UniProt JSON 01ce53f2d5feb999d831bf6cd2c4be5d3121889a0552b69d0a78b8fe90829d9e
+InterPro JSON da6b15b0dddd8129598f192e5e30b7e044c5d0a239fc41cb6142b82d29092014
+4XRE entity JSON 3f7fc60a46fa574691cd2dc1d8b07fe3932a04ebb58c91ec68df92b48c50f38b
+4XRE entry JSON ad594e3caa84d09ba78606908df8020c356a4db8c8e934ba7e6427baf75abb98

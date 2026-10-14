@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01867
+  path: curation/families/PF01867.yaml
+session:
+  id: 2026-10-11T172820Z-codex-466ad8
+  timestamp: '2026-10-11T17:28:20Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add scoped Cas1 integration and cellular causal graphs
+  details: Retain eight graphs and fourteen observed effects from inspected 2014/2015
+    primary methods and original figures. Exact Q46896/NP_417235.1/4P6I identity and
+    narrow PF01867 match are verified. Keep cellular versus purified K224A, Mn partner
+    enhancement, IHF-absent topology, half-site products, outside-match substitutions
+    and the ED5 image mismatch explicit. Later IHF/structural evidence and other members
+    remain follow-up; IN_PROGRESS, no publication.

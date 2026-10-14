@@ -1,0 +1,25 @@
+Chen2010,PMID20705647,DOI10.1093/nar/gkq668.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3001054/
+https://research.cbc.osu.edu/gopalan.5/wp-content/uploads/Publications/RNaseP/Chen_NAR_2010_SI.zip
+Inspected2026-10-11:Methods/Results/Table1,original Figures3/4/7;
+supplement pp2-8,13-14,20-23,including cloning,locus table and kinetic controls.
+Minimal quotation: "Single-turnover kinetic studies".
+
+Mth RPR trans-cleavage,~2 nM internally labeled E.coli pre-tRNATyr,55 C,
+pH5.8,proteins twice RNA molarity. RNA-alone0.3-20 uM,2 M NH4/500 mM Mg;
+POP5/RPP30 condition1-10 uM RPR,0.8 M NH4/120 mM Mg. Fitted maximal
+kobs0.13+/-0.01 versus7.9+/-1 per min. Composite optimized protocols,not
+matched-buffer protein-only effect. KM(STO)21.3 versus11.8 uM is not an
+independently measured Kd; rapid-dissociation control was not established for
+the faster POP5/RPP30 reaction. ES-to-ES-star stabilization is a hypothesis.
+
+Mja Figure3:10 nM RPR+100 nM POP5/RPP30,500 nM E.coli pre-tRNATyr,
+30 min55 C,50 mM Tris7.5/100 mM NH4/120 mM Mg. Cleavage products appear.
+RNA-alone control is assayed in four-protein buffer800 mM NH4/30 mM Mg,
+not matched ionic conditions; proteins without RNA do not yield products.
+Figure4:500 nM RPR deltaS or112-nt deltaS-Min,1 uM proteins,1 uM substrate,
+15 min55 C,50 mM Tris7.5/400 mM NH4; pair120 mM Mg versus control30 mM.
+Both truncated RNAs support cleavage with POP5/RPP30. RPP21/RPP29 alone
+does not activate them; all four further enhance products under lower Mg.
+No Rpp30-alone sufficiency. Tag-free Mth/Mja constructs,pair coexpression,
+PEI/ammonium-sulfate/SP-Sepharose purification retained from supplement.

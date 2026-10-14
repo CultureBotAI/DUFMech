@@ -1,0 +1,366 @@
+# PF08759 DUF1792 causal graph review
+
+- Review: 20261011T050315Z-pf08759-duf1792-causal-graph
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T05:02:46Z
+- Finished UTC: 2026-10-11T05:03:15Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The isolated N-terminal construct's glucose-transfer reaction is supported with its donor, acceptor and metal context; mature Fap1 synthesis is not assigned to this construct alone.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Former DUF1792 family selected for an experimentally isolated domain-containing construct and biochemical controls.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF08759 | data/families/PF08759.yaml | generated | PF08759 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF08759 | Current projection validates and preserves the authored graphs exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF08759.
+
+The paper's AFJ26875 maps to FW213 I1ZPA1, galT1/Spaf_1933, renamed dGT1 in the paper. The assayed 1-272 construct includes the current PF08759 interval 26-249 plus flanking residues; the remaining GT-A-like region is not substituted for this construct.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF08759.
+
+The radiotracer transfer assay and Figure 2 controls support a direct biochemical edge with jointly required reactants. Metal comparisons are retained as conditions rather than a false claim that only manganese can support activity. No mature-glycan sufficiency, universal acceptor specificity or unreviewed residue mechanism is inferred.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF08759.
+
+Native complementation, residue substitutions, glycan structure details, homologs and later C-terminal function studies need additional primary assessment.
+
+## Findings
+
+### additional-contexts: Other DUF1792 contexts and member functions require review
+
+minor / open / confirmed; issue key: pf08759-causal-context-coverage.
+
+Assess additional native-host, mutational and homolog experiments with their controls, including the later bifunctional dGT1 study, before extending beyond the selected transfer reaction.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Assess additional native-host, mutational and homolog experiments with their controls, including the later bifunctional dGT1 study, before extending beyond the selected transfer reaction.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| experiment | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4352575/fullTextXML; Figure 2 image and caption; Results; construct purification and in-vitro glycosyltransferase methods | supports | The N-terminal construct transfers labeled glucose to Gtf1/2/3-premodified Fap1; GST, C-terminal, heat-inactivated and metal-omission controls constrain the relation. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/I1ZPA1/entry/pfam/PF08759/; Accession and domain locations; paired UniProt identity facts | supports | The paper's AFJ26875 maps to FW213 I1ZPA1, galT1/Spaf_1933, renamed dGT1 in the paper. The assayed 1-272 construct includes the current PF08759 interval 26-249 plus flanking residues; the remaining GT-A-like region is not substituted for this construct. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, graph endpoints, evidence quotations and hashes, and canonical history pass; scientific validity is assessed separately. |
+| duf-projection-pf08759 | data/families/PF08759.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Figure 2 was visually inspected. Other plots, glycan spectra and raw or supplemental data were not independently visually reviewed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T050315Z-pf08759-duf1792-causal-graph
+title: PF08759 DUF1792 causal graph review
+started_at: '2026-10-11T05:02:46Z'
+finished_at: '2026-10-11T05:03:15Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: The isolated N-terminal construct's glucose-transfer reaction is supported
+  with its donor, acceptor and metal context; mature Fap1 synthesis is not assigned
+  to this construct alone.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF08759.yaml
+    sha256: 72aad36d6a77bdca23309142a53c574984590205b0184dbc0a99afc9b81d7d4c
+    role: context
+  - path: data/families/PF08759.yaml
+    sha256: 0e7182b7a2103a97667aca6b9bb1babb270aea79c1f4e1576a55200e6a2da6f7
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF08759/zhang-2014-duf1792.txt
+    role: context
+    sha256: 1904f31d487ec20e4f72d879a5abe19e4becf1cdb28c8745d24814d6604ba359
+  - path: evidence/PF08759/I1ZPA1-identity.txt
+    role: context
+    sha256: 9e74856e647251dd0e2d322cba869cc54ad8ddd7193d78d44758e7e183150d55
+targets:
+- target_id: PF08759
+  path: data/families/PF08759.yaml
+  label: PF08759
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF08759.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 13f53e1bfc6f9ac1811130d837031ab211cdb2d7edf39d1ecc805b5277bf0031
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Former DUF1792 family selected for an experimentally isolated domain-containing
+    construct and biochemical controls.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF08759
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Native complementation, residue substitutions, glycan structure details,
+      homologs and later C-terminal function studies need additional primary assessment.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection causal_graphs == overlay
+    causal_graphs
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graphs exactly.
+  target_ids:
+  - PF08759
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: experiment
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4352575/fullTextXML
+  locator: Figure 2 image and caption; Results; construct purification and in-vitro
+    glycosyltransferase methods
+  accessed_at: '2026-10-11T05:03:15Z'
+  support: supports
+  snapshot_sha256: 1904f31d487ec20e4f72d879a5abe19e4becf1cdb28c8745d24814d6604ba359
+  summary: The N-terminal construct transfers labeled glucose to Gtf1/2/3-premodified
+    Fap1; GST, C-terminal, heat-inactivated and metal-omission controls constrain
+    the relation.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/I1ZPA1/entry/pfam/PF08759/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T05:03:15Z'
+  support: supports
+  snapshot_sha256: 9e74856e647251dd0e2d322cba869cc54ad8ddd7193d78d44758e7e183150d55
+  summary: The paper's AFJ26875 maps to FW213 I1ZPA1, galT1/Spaf_1933, renamed dGT1
+    in the paper. The assayed 1-272 construct includes the current PF08759 interval
+    26-249 plus flanking residues; the remaining GT-A-like region is not substituted
+    for this construct.
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T05:03:15Z'
+  support: supports
+  summary: Closed schema, graph endpoints, evidence quotations and hashes, and canonical
+    history pass; scientific validity is assessed separately.
+- evidence_id: duf-projection-pf08759
+  kind: record_content
+  reference: data/families/PF08759.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T05:03:15Z'
+  support: context_only
+  snapshot_sha256: 0e7182b7a2103a97667aca6b9bb1babb270aea79c1f4e1576a55200e6a2da6f7
+  quote: "id: Pfam:PF08759\npfam_id: PF08759\nname: Glycosyltransferase GT-D fold\n\
+    short_name: GT-D\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status:\
+    \ IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08759\n\
+    counters:\n  proteins: 343\n  matches: 343\n  proteomes: 310\n  taxa: 665\n  structures:\
+    \ 4\n  alphafold_models: 198\n  domain_architectures: 21\nprovenance:\n  snapshot_id:\
+    \ interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR014869\ndescription: This domain is found at the C terminus\
+    \ of proteins such as the probable glycosyltransferase\n  Gly ([swissprot:Q9AEU2])\
+    \ that also contain the glycosyl transferase domain at the N terminus. It is\n\
+    \  also found N-terminal in numerous putative glycosyltransferases such as GalT1.\
+    \ GalT1 has been shown\n  to catalyse the third step of Fap1 glycosylation [[cite:PUB00081880]].\
+    \ This domain is structurally distinct\n  from all known GT folds of glycosyltransferases\
+    \ and contains a metal binding site. This new glycosyltransferase\n  fold has\
+    \ been named GT-D [[cite:PUB00081880]].\ncuration_history: history/records/PF08759\n\
+    causal_graphs:\n- graph_id: dgt1-n-terminal-glucose-transfer\n  title: DUF1792\
+    \ construct transfers glucose to premodified Fap1\n  scope: Streptococcus parasanguinis\
+    \ FW213 dGT1 N-terminal construct, residues 1-272 of AFJ26875; recombinant\n \
+    \   in-vitro assay.\n  context: UDP-glucose donor, Gtf1/2/3-premodified Fap1 acceptor\
+    \ and MnCl2 in Hepes pH 7.0; 37 C for one\n    hour.\n  family_mapping: AFJ26875.1\
+    \ maps to I1ZPA1, sequence version 1, 582 residues. PF08759 spans 26-249, fully\n\
+    \    included with flanking residues in the assayed 1-272 construct.\n  scope_status:\
+    \ MECHANISTIC\n  taxon: NCBITaxon:1114965\n  limitations: This transfer step does\
+    \ not produce mature Fap1 by itself. Construct boundaries exceed\n    the current\
+    \ Pfam match. Other acceptors, homologs, individual residues and later C-terminal\
+    \ functions\n    need separate assessment.\n  nodes:\n  - node_id: duf1792-transfer-system\n\
+    \    label: dGT1 1-272, UDP-glucose, Mn and premodified Fap1\n    node_type: STATE\n\
+    \    grounding:\n    - UniProtKB:I1ZPA1\n  - node_id: glucose-transfer-to-fap1\n\
+    \    label: Glucose incorporation into the premodified Fap1 acceptor\n    node_type:\
+    \ PROCESS\n  edges:\n  - edge_id: duf1792-enables-glucose-transfer\n    subject:\
+    \ duf1792-transfer-system\n    predicate: enables\n    object: glucose-transfer-to-fap1\n\
+    \    mechanism: The N-terminal construct transfers labeled glucose from UDP-glucose\
+    \ to the washed Fap1\n      acceptor; GST, C-terminal and heat-inactivated controls\
+    \ constrain the assignment.\n    directness: DIRECT\n    support: OBSERVED\n \
+    \   evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25023666\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4352575/fullTextXML\n\
+    \      snippet: catalyzes the third step of Fap1 glycosylation\n      explanation:\
+    \ Figure 2 image/caption, Results and glycosyltransferase methods identify the\
+    \ active\n        construct and required assay components; this is not a mature-glycan\
+    \ sufficiency claim.\n      cache_path: evidence/PF08759/zhang-2014-duf1792.txt\n\
+    \      cache_sha256: 1904f31d487ec20e4f72d879a5abe19e4becf1cdb28c8745d24814d6604ba359\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/I1ZPA1/entry/pfam/PF08759/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/I1ZPA1/entry/pfam/PF08759/\n\
+    \      snippet: 'entry accession: PF08759'\n      explanation: The article accession\
+    \ resolves to the FW213 GalT1/dGT1 reference and its N-terminal\n        Pfam\
+    \ match.\n      cache_path: evidence/PF08759/I1ZPA1-identity.txt\n      cache_sha256:\
+    \ 9e74856e647251dd0e2d322cba869cc54ad8ddd7193d78d44758e7e183150d55\ncuration_events:\n\
+    - timestamp: '2026-10-11T04:59:21Z'\n  curator: Codex\n  action: CREATE\n  outcome:\
+    \ changed\n  summary: Curate DUF1792 construct-dependent glucose transfer\n  history_record:\
+    \ history/records/PF08759/2026-10-11T045921Z-codex-06d482.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: The paper's AFJ26875 maps to FW213 I1ZPA1, galT1/Spaf_1933, renamed dGT1
+    in the paper. The assayed 1-272 construct includes the current PF08759 interval
+    26-249 plus flanking residues; the remaining GT-A-like region is not substituted
+    for this construct.
+  target_ids:
+  - PF08759
+  evidence_ids:
+  - identity
+  - experiment
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: The radiotracer transfer assay and Figure 2 controls support a direct biochemical
+    edge with jointly required reactants. Metal comparisons are retained as conditions
+    rather than a false claim that only manganese can support activity. No mature-glycan
+    sufficiency, universal acceptor specificity or unreviewed residue mechanism is
+    inferred.
+  target_ids:
+  - PF08759
+  evidence_ids:
+  - experiment
+  - native
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Native complementation, residue substitutions, glycan structure details,
+    homologs and later C-terminal function studies need additional primary assessment.
+  target_ids:
+  - PF08759
+  evidence_ids:
+  - experiment
+findings:
+- finding_id: additional-contexts
+  issue_key: pf08759-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Other DUF1792 contexts and member functions require review
+  description: Assess additional native-host, mutational and homolog experiments with
+    their controls, including the later bifunctional dGT1 study, before extending
+    beyond the selected transfer reaction.
+  target_ids:
+  - PF08759
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - experiment
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF08759.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Assess additional native-host, mutational and homolog experiments with
+    their controls, including the later bifunctional dGT1 study, before extending
+    beyond the selected transfer reaction.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF08759
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Figure 2 was visually inspected. Other plots, glycan spectra and raw or supplemental
+  data were not independently visually reviewed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

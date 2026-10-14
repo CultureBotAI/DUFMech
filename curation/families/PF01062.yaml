@@ -1,0 +1,255 @@
+pfam_id: PF01062
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01062
+causal_graphs:
+  - graph_id: best1-bilateral-egta-current-loss
+    title: Bilateral calcium chelation decreases purified chicken BEST1 current
+    scope: Chicken BEST1 encoded residues 1-405 plus C-terminal EGEEF, expressed in Pichia and reconstituted in planar bilayers. Not the full 762-aa protein, human retinal cells or bacterial KpBest.
+    context: 2016 Figure 1B-D representative same-bilayer comparison. Symmetric 30 mM KCl, 20 mM HEPES-NaOH pH 7.6, 0.21 mM EGTA and 0.19 mM CaCl2 initially give about 300 nM free calcium; 3:1 wt/wt POPE/POPG, 22-24 C. Add 10 mM EGTA to both sides. Currents at +100 mV are averaged over the final 200 ms of a 2-s pulse; empty-bilayer currents are subtracted.
+    family_mapping: Historical E1C3A0 is deleted, but its archived sequence and current A0A8V0ZZU7 match exactly at 1-405; PF01062 spans 1-324 inclusive. Five full-length differences lie beyond 405. PDB 4RDQ entity 1 exactly matches current residues 2-405 plus EGEEF, consistent with the cited purification's MS/Edman-confirmed Thr2 start. Other mutant clone sequences are not independently reconstructed.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:9031
+    limitations: This is a direct current endpoint after chelation, not an observed atomic gate-closing trajectory. Both channel orientations are present; bilateral chelation is not interchangeable with one-sided treatment. The construct extends beyond the Pfam profile and does not prove isolated-domain sufficiency or a universal family calcium threshold.
+    nodes:
+      - node_id: bilateral-egta-in-wt-bilayer
+        label: Add 10 mM EGTA to both sides of the WT BEST1 bilayer
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:A0A8V0ZZU7
+      - node_id: wt-current-at-plus100
+        label: WT BEST1 current at +100 mV
+        node_type: ACTIVITY
+    edges:
+      - edge_id: bilateral-egta-decreases-current
+        subject: bilateral-egta-in-wt-bilayer
+        predicate: decreases
+        object: wt-current-at-plus100
+        mechanism: Chelating calcium on both sides strongly reduces the current under the same bilayer and voltage conditions. The effect supports calcium-dependent activity without directly resolving calcium-binding or neck-motion microsteps.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:27821745
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5127342/
+            snippet: almost completely abolishes
+            explanation: Figure 1B-D and the electrophysiology Methods support the bilateral EGTA comparison. These displayed traces are from one representative bilayer, not separate independent replicates.
+            cache_path: evidence/PF01062/vaisey-2016-best1.txt
+            cache_sha256: f446cd14aa5658586dcbc19cc76d553cf6cdd53ea41c0325d4db265b4d072f7c
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A8V0ZZU7/entry/pfam/PF01062/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A8V0ZZU7/entry/pfam/PF01062/
+            snippet: 'A0A8V0ZZU7 Pfam:PF01062 interval: 1-324, inclusive'
+            explanation: Archived sequence, current mapping and deposited construct agree over the tested region; their full-length sequences are not identical. This is identity support, not an additional causal experiment.
+            cache_path: evidence/PF01062/BEST1-identity.txt
+            cache_sha256: 41bc863be952a331935e10eab2083ba61dbfbece35e4feb7a0e602027912b234
+  - graph_id: best1-trans-calcium-reactivation
+    title: Trans-side calcium restores BEST1 current after orientation-selective silencing
+    scope: Purified tagged chicken BEST1 1-405 in the 2016 Figure 1E/F bilayer protocol. The cis-side population remains silenced during trans perfusion.
+    context: Symmetric 30 mM KCl, POPE/POPG 3:1, pH 7.6, 22-24 C. After adding 10 mM EGTA to cis, trans solutions use 1 mM EGTA/calcium-EGTA mixtures to vary free calcium from near zero to 350 nM. Current magnitude at -100 mV is normalized to the 350-nM response. Three separate bilayers, SEM; two-second pulses and final 200-ms averaging.
+    family_mapping: E1C3A0 archived 1-405 matches current A0A8V0ZZU7 exactly; PF01062 is 1-324. The purified construct includes the EGEEF tag and processing to Thr2 established in the cited original method; it is not full-length BEST1 or an isolated Pfam fragment.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:9031
+    limitations: The fitted half-response concentration of 17 +/- 3 nM is assay-specific and is not a directly measured calcium-binding Kd. Increasing current magnitude at a fixed negative voltage does not imply a universal direction of chloride flow. No atomic motion, stoichiometric binding event or human disease mechanism is directly tracked.
+    nodes:
+      - node_id: trans-calcium-increase-with-cis-egta
+        label: Increase trans free calcium while cis remains chelated
+        node_type: PERTURBATION
+      - node_id: normalized-current-magnitude-minus100
+        label: Normalized BEST1 current magnitude at -100 mV
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:A0A8V0ZZU7
+    edges:
+      - edge_id: trans-calcium-increases-current-magnitude
+        subject: trans-calcium-increase-with-cis-egta
+        predicate: increases
+        object: normalized-current-magnitude-minus100
+        mechanism: Increasing free calcium on the trans side restores current magnitude in the accessible channel orientation, while the cis-facing population remains silenced. The normalized electrophysiological response is not an independently measured binding isotherm.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:27821745
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5127342/
+            snippet: dose-dependent manner
+            explanation: Figure 1E/F and trans-perfusion Methods support reactivation with the stated orientation and normalization controls.
+            cache_path: evidence/PF01062/vaisey-2016-best1.txt
+            cache_sha256: f446cd14aa5658586dcbc19cc76d553cf6cdd53ea41c0325d4db265b4d072f7c
+  - graph_id: best1-dids-current-inhibition
+    title: DIDS decreases purified BEST1 current in the bilayer assay
+    scope: Tagged chicken BEST1 1-405 in the 2016 Figure 1I/J planar bilayer experiment, not drug treatment of retinal cells.
+    context: Standard symmetric 30 mM KCl solutions with about 300 nM free calcium, 20 mM HEPES-NaOH pH 7.6, POPE/POPG 3:1 and 22-24 C. DIDS is added to both sides through 1 mM with one minute mixing. Current magnitude at -100 mV is normalized to no DIDS. Three experiments; up to 2% DMSO vehicle does not noticeably alter current.
+    family_mapping: The E1C3A0 experimental region 1-405 exactly matches A0A8V0ZZU7 and contains PF01062 at 1-324. The EGEEF-tagged, processed construct is distinguished from the full-length reference and other bestrophins.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:9031
+    limitations: Current inhibition does not identify a DIDS binding site, unique gating mechanism or therapeutic effect. Dose-response fits depend on this preparation and are not family-wide constants. No precise drug affinity is assigned.
+    nodes:
+      - node_id: bilateral-dids-addition
+        label: DIDS added to both sides of the calcium-containing BEST1 bilayer
+        node_type: PERTURBATION
+      - node_id: dids-normalized-current-magnitude
+        label: BEST1 current magnitude relative to the no-DIDS condition
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:A0A8V0ZZU7
+    edges:
+      - edge_id: dids-decreases-best1-current
+        subject: bilateral-dids-addition
+        predicate: decreases
+        object: dids-normalized-current-magnitude
+        mechanism: DIDS lowers the measured current magnitude in a concentration-dependent comparison, with the solvent control retained. No specific molecular binding or pore-blocking geometry is directly established.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:27821745
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5127342/
+            snippet: inhibited by DIDS
+            explanation: Figure 1I/J and DIDS Methods support the dose-dependent current decrease and vehicle qualification.
+            cache_path: evidence/PF01062/vaisey-2016-best1.txt
+            cache_sha256: f446cd14aa5658586dcbc19cc76d553cf6cdd53ea41c0325d4db265b4d072f7c
+  - graph_id: best1-neck-mutations-retained-current
+    title: Neck substitutions increase the current fraction retained after calcium chelation
+    scope: Individual F80A/F80N and joint I76A/F80A/F84A TripleA constructs of tagged chicken BEST1 1-405, compared with WT in 2016 Figure 3C.
+    context: Symmetric 30 mM KCl bilayers, POPE/POPG 3:1, pH 7.6, 22-24 C, initially about 300 nM free calcium. Add 10 mM EGTA to both sides and stir four minutes. Current at +100 mV after chelation is normalized to each construct's calcium-present current. Three separate bilayers per comparison, SEM.
+    family_mapping: I76, F80 and F84 are verified in the identical historical/current 1-405 region of E1C3A0/A0A8V0ZZU7 and within PF01062 residues 1-324. TripleA is one joint perturbation, not three independently sufficient mutations.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:9031
+    limitations: Normalized retained fraction is not absolute current, single-channel conductance or open probability; precise incorporation is unknown. F80I is described as nearly WT-like in calcium dependence relative to the larger mutant effects and is not assigned an all-or-none independence edge. Neck mutations do not substantially switch anion/cation selectivity. Structural gate and quadrupole models are interpretations, not directly observed trajectories.
+    nodes:
+      - node_id: triplea-neck-substitution
+        label: Joint I76A/F80A/F84A TripleA instead of WT
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:A0A8V0ZZU7
+      - node_id: f80a-neck-substitution
+        label: F80A instead of WT
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:A0A8V0ZZU7
+      - node_id: f80n-neck-substitution
+        label: F80N instead of WT
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:A0A8V0ZZU7
+      - node_id: current-fraction-after-egta
+        label: Fraction of calcium-present current retained after EGTA
+        node_type: ACTIVITY
+    edges:
+      - edge_id: triplea-increases-retained-current-fraction
+        subject: triplea-neck-substitution
+        predicate: increases
+        object: current-fraction-after-egta
+        mechanism: The joint TripleA construct retains nearly all of its calcium-present current after chelation, unlike WT. This measures reduced calcium dependence without proving each individual substitution independently causes the joint phenotype.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:27821745
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5127342/
+            snippet: fraction of current remaining
+            explanation: Figure 3C TripleA versus WT normalized fractions, corroborated by Figure 3A/B I-V curves, support the directed comparison.
+            cache_path: evidence/PF01062/vaisey-2016-best1.txt
+            cache_sha256: f446cd14aa5658586dcbc19cc76d553cf6cdd53ea41c0325d4db265b4d072f7c
+      - edge_id: f80a-increases-retained-current-fraction
+        subject: f80a-neck-substitution
+        predicate: increases
+        object: current-fraction-after-egta
+        mechanism: F80A retains a larger fraction of its own calcium-present current than WT after chelation. Partial retention is not complete calcium independence or proof of an increased absolute transport rate.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:27821745
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5127342/
+            snippet: fraction of current remaining
+            explanation: Figure 3C F80A and WT bars support the normalized retained-fraction increase under matched protocols.
+            cache_path: evidence/PF01062/vaisey-2016-best1.txt
+            cache_sha256: f446cd14aa5658586dcbc19cc76d553cf6cdd53ea41c0325d4db265b4d072f7c
+      - edge_id: f80n-increases-retained-current-fraction
+        subject: f80n-neck-substitution
+        predicate: increases
+        object: current-fraction-after-egta
+        mechanism: F80N retains a greater fraction of current than WT after calcium chelation. A hydrophilic substitution effect supports altered regulation but does not directly observe pore wetting or a particular structural motion.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:27821745
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5127342/
+            snippet: fraction of current remaining
+            explanation: Figure 3C F80N versus WT is the adopted comparison, not a simulated wetting trajectory.
+            cache_path: evidence/PF01062/vaisey-2016-best1.txt
+            cache_sha256: f446cd14aa5658586dcbc19cc76d553cf6cdd53ea41c0325d4db265b4d072f7c
+  - graph_id: best1-clasp-mutation-and-neck-rescue-flux
+    title: Clasp substitutions reduce coupled chloride flux and TripleA restores it
+    scope: D301A/D304A compared with WT, and the joint TripleA/D301A/D304A construct compared with D301A/D304A, in 2016 Figure 4A/C/D proteoliposomes. Only the external 2-uM-calcium condition is adopted here.
+    context: 0.1 mg/ml protein and 10 mg/ml POPE/POPG before 100-fold dilution; internal 100 mM Na2SO4, 10 mM HEPES pH 8.2, 1 mM EGTA. External 125 mM NaCl and calcium-EGTA give about 2 uM free calcium. CCCP initiates ACMA quench coupled to anion influx. The cited 2014 method supplies 2 uM ACMA, 1 uM CCCP, 0.5 mg/ml BSA and external pH 8.1. Comparisons were purified/reconstituted in parallel and assayed on the same day.
+    family_mapping: D301/D304 and I76/F80/F84 lie within A0A8V0ZZU7 PF01062 residues 1-324 and the experimentally mapped 1-405 construct. The 2014 purification confirms Thr2 processing and the deposited sequence matches residues 2-405 plus EGEEF. Complete 2016 mutant clone sequences remain unverified.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:9031
+    limitations: ACMA reports coupled acidification, not direct chloride concentration or a tracked molecular gate. The 2016 traces do not specify exact replicate count or recording temperature; bilayer temperature is not borrowed. Empty vesicles were prepared but are not displayed in Figure 4. Size-exclusion similarity does not eliminate every folding/incorporation alternative. Outside-only calcium activates only the appropriate orientation; this can affect WT/mutant flux comparisons.
+    nodes:
+      - node_id: d301a-d304a-clasp-substitution
+        label: Joint D301A/D304A instead of WT
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:A0A8V0ZZU7
+      - node_id: triplea-added-to-clasp-mutant
+        label: Add joint I76A/F80A/F84A to the D301A/D304A background
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:A0A8V0ZZU7
+      - node_id: chloride-associated-acma-quench
+        label: Chloride-flux-associated ACMA fluorescence quench
+        node_type: ACTIVITY
+    edges:
+      - edge_id: clasp-substitution-decreases-coupled-flux
+        subject: d301a-d304a-clasp-substitution
+        predicate: decreases
+        object: chloride-associated-acma-quench
+        mechanism: The joint clasp substitution reduces the quench observed under externally supplied calcium relative to WT. This is a measured coupled flux effect, not direct proof that a particular calcium-coordination bond was broken.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:27821745
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5127342/
+            snippet: did not observe
+            explanation: Figure 4A/C calcium-present traces show the WT versus clasp-mutant flux-associated signal difference. The small residual drift is not claimed to be an independently resolved zero flux.
+            cache_path: evidence/PF01062/vaisey-2016-best1.txt
+            cache_sha256: f446cd14aa5658586dcbc19cc76d553cf6cdd53ea41c0325d4db265b4d072f7c
+          - reference: PMID:25337878
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4454446/
+            snippet: flux assay was based
+            explanation: The original method cited by the 2016 paper supplies dye/ionophore details and the coupled nature of the fluorescence readout, not a new 2016 control or an independent replicate.
+            cache_path: evidence/PF01062/dickson-2014-flux-method.txt
+            cache_sha256: f19cfc71cfa0e1d30e7f5b2f4ab21b1b38744b42a169016d80dc60932851b8b6
+      - edge_id: triplea-restores-clasp-mutant-coupled-flux
+        subject: triplea-added-to-clasp-mutant
+        predicate: increases
+        object: chloride-associated-acma-quench
+        mechanism: Adding the joint TripleA substitution to the clasp-mutant background restores strong quench under the adopted calcium-present condition. Genetic coupling of these regions is supported without a directly observed sequence of conformational movements or independent sufficiency of each substitution.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:27821745
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5127342/
+            snippet: restore activity
+            explanation: Figure 4C/D compares the double mutant with the combined five-site mutant. Calcium-free traces are additional context, not silently merged into this condition.
+            cache_path: evidence/PF01062/vaisey-2016-best1.txt
+            cache_sha256: f446cd14aa5658586dcbc19cc76d553cf6cdd53ea41c0325d4db265b4d072f7c
+discussions:
+  - discussion_id: best1-gating-constructs-and-additional-contexts
+    prompt: Extend BEST1 gating and permeability contexts while preserving construct, orientation and assay differences.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Purified current and coupled-flux effects do not directly resolve every gating microstep or establish a universal family mechanism. The tested truncated region maps exactly despite full-length differences between historical and current references.
+    evidence:
+      - reference: PMID:27821745
+        supports: PARTIAL
+        evidence_source: selected_full_text
+        explanation: Selected primary Methods, Results and Figures 1/3/4 support eight edges. Aperture selectivity, remaining substitutions and precise single-channel mechanisms need separately scoped assessment.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: Resolve exact mutant clones, flux replicate/temperature details and incorporation controls. Assess later inactivation (PMID:30237227), cryo-EM gating (PMID:30628889) and GABA activation (PMID:40249777) as additional primary contexts, not already reviewed edges. Do not transfer KpBest cation selectivity, human I205 numbering or structural-model trajectories. Partial same-agent scientific review; remain IN_PROGRESS.

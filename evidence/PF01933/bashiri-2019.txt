@@ -1,0 +1,21 @@
+PF01933 paired-enzyme biochemistry
+Accessed 2026-10-12; PMID30952857; doi:10.1038/s41467-019-09534-x
+https://pmc.ncbi.nlm.nih.gov/articles/PMC6450877/
+HTML SHA256 e93aeef3dd921a973440b1f1059d8fc7f769527dd073c9617ea906777f95e6ce.
+Inspected Results, protein purification and HPLC/LC-MS Methods; Figure2
+visually inspected, including paired chromatograms and product fragmentation.
+Minimal quotation: "Tandem mass spectral identification"
+
+The two separate systems combine M.tuberculosis FbiA with either its FbiD
+or M.jannaschii CofC. PEP/GTP/Fo reactions yield dehydro-F420-0; 2-PL does
+not give the corresponding product in these pairings. MS/MS supports the
+product assignment. FbiA is a synthetic N-His6 construct purified from
+M.smegmatis by affinity and size exclusion, not an isolated Pfam fragment.
+Assay context: HEPESpH7.5,Mg,37C; both enzyme partners required by the setup.
+The FbiA reference mapping is P9WP81v1; exact synthesized insert not audited.
+
+Curator boundary: the composite reaction supports product formation, not
+FbiA-alone sufficiency or independently observed EPPG channeling. CofC/FbiD
+substrate recognition and FbiB reduction are different proteins. Hasan2022
+shows why these pairings do not establish that all archaeal CofC rejects2-PL.
+Retain the tested reaction without adopting the paper's family-wide inference.

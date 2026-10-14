@@ -1,0 +1,55 @@
+PF01934 identity and construct audit, 2026-10-12 UTC
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01934/
+https://rest.uniprot.org/uniprotkb/search?query=xref:pfam-PF01934
+
+Frozen Ribonuclease HepT-like/HepT-like, IPR008201, EX_DUF, UNSCORED,
+7949 proteins remains unchanged. Snapshot interpro-pfam-duf-2026-10-10,
+SHA256 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+Yao2020 Results and family-distribution Methods explicitly identify DUF86
+as PF01934. A HEPN superfamily name alone does not identify this Pfam.
+
+Current public UniProt and InterPro protein/entry JSONs inspected:
+Q8ECH6, SO_3166/HepT, S. oneidensis MR-1, taxon211586, 133 aa,
+sequence version1 (2003-03-01), PF01934 residues12-130.
+I3ZRF2, CL1_0071/HepT, T. cleftensis CL1, taxon163003, 110 aa,
+sequence version1 (2012-09-05), PF01934 residues12-107.
+A0A0B0QJR1, OA07_26455, Aphanizomenon flos-aquae 2012/KM1/D3,
+taxon1532906, 147 aa, sequence version2 (2021-04-07), PF01934 17-134.
+Its N-terminal revision matters for the Songailiene2020 constructs.
+These are reference mappings, not independent resequencing of clones.
+The reviewed-member query returned15 entries, not all frozen members.
+
+Fusion mapping, resolved using Yao2026 TableS3 and FigureS1:
+https://www.ncbi.nlm.nih.gov/protein/WP_164925653.1
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q8EGZ7/
+TableS3 names WP_164925653.1 for MR-1 SO_1440/FhepTA, 276 aa.
+The current Q8EGZ7 sequence version1 (2003-03-01) is252 aa, taxon211586.
+Structured RefSeq XML comparison proves WP positions26-276 equal Q8EGZ7
+positions2-252 exactly. WP position25 is L, versus Q8EGZ7 initial M;
+WP positions1-24 are an additional biological sequence, not a His-tag.
+The source's N-terminal primer and FigureS1 agree with the longer sequence.
+Current Q8EGZ7 PF01934 match144-234 therefore projects to WP168-258
+over the identical segment; this is a coordinate projection, not a new HMM run.
+PF18765, not PF01909, maps Q8EGZ7 positions2-85 at the N terminus.
+The experimental HEPN fragment WP136-276 corresponds to Q8EGZ7 112-252
+and is larger than the current PF01934 match. Paper Y240 is Q8EGZ7 Y216;
+paper C163/C270 are Q8EGZ7 C139/C246, both outside the matched PF core.
+Paper D41/D43 are Q8EGZ7 D17/D19 in the other domain. All fusion graph
+numbering is explicitly WP/source numbering; whole-fragment effects are not
+isolated Pfam-core effects. TableS3 fixes the tested strain even though the
+nonredundant WP record itself names the species, taxon70863.
+
+Exclusion and unresolved comparator:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q5ZRG2/
+Jin2024 lpg2920/Q5ZRG2 (139 aa, sequencev1, taxon272624) has PF08780
+10-133 and no PF01934 in the complete one-entry Pfam response. Its
+metal-dependent assays are not PF01934 edges.
+Yao2026 TableS3 identifies the W3-18-1 comparator as WP_041408189.1,
+142 aa, taxon351745. Its RefSeq COG2445 annotation is contextual; queried
+UniProt accession and taxon/Pfam searches returned no results. Exact current
+Pfam mapping remains open, not an assertion that it lacks this domain.
+
+The frozen description calls this typeII and reverses the primary
+HepT:MntA stoichiometry (2:6 versus6:2). Later covalent-neutralization
+studies use typeVII. Preserve source metadata, with the discrepancy visible
+in the overlay; do not silently rewrite the frozen description.

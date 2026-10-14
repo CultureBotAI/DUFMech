@@ -1,0 +1,36 @@
+Source: Ponamareva et al., Bioinformatics Advances 4, vbae132 (2024).
+PMID:39399373; doi:10.1093/bioadv/vbae132
+URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11467057/
+Full-text source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11467057/fullTextXML
+License: CC BY 4.0; authors and source attributed above.
+Inspected 2026-10-11: Methods 2.1-2.2 and 2.4, Results 3.2.1 and 3.3,
+Figure 11A caption and image. Minimal quotations and curator-authored notes.
+
+Section 3.2.1 quotation:
+"DUF6647 has a score of 6.81 against DUF4157"
+Figure 11A caption fragments:
+"DUF4157 domain-containing protein"
+"UniProtKB:A0A2Z2P7G5, Pfam: PF20352"
+
+Assessment: ProtCNNSim computes normalized embedding similarity using Pfam 35
+and ProtENN2. The DUF6647/DUF4157 score, conserved HEXXH motif and comparison
+with mini-zincin structures support a proposed relationship to clan CL0126.
+The benchmark uses predicted structures and TM-align, not activity measurements.
+Figure 11A overlays an AF2 model with collagenase T (4ar9); the image labels the
+model PF20352 DUF6647, despite the caption's DUF4157 wording. The accession's
+current Pfam match independently supports PF20352. Preserve this naming
+discrepancy; do not silently reassign the model to PF13699 or declare an erratum.
+
+No member-specific substrate cleavage, metal-loading perturbation or biological
+phenotype is measured for PF20352 in this study. A drawn zinc and aligned side
+chains are not observed metal binding or catalysis by the modeled protein.
+Neither the paper's metallopeptidase analogy nor InterPro's YbeY-like fold
+description demonstrates RNA versus protein substrate specificity. No causal
+edge is warranted from these sources alone; this is not evidence of inactivity.
+
+Bounded search: DUF6647 and PF20352 with function/characterization terms;
+Lokhon_01595 as one verified member alias. Results included this computational
+paper and sequence annotations, but did not supply an inspected causal assay.
+NCBI WP_074836199.1 and KEGG annotation results remain leads, not experiments.
+Not an exhaustive all-member or all-language literature search. No model
+reanalysis or independent benchmark execution was performed.

@@ -1,0 +1,26 @@
+Primary reference: PMID:24865553; doi:10.1128/mbio.01041-14
+Source URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC4045070/
+Accessed: 2026-10-11
+Inspected: Dde_3007 results, strains/media, pooled-fitness and genetic-complementation methods; Figure 4 image inspected.
+
+Minimal attributed extracts:
+"we complemented the methionine auxotrophy"
+"the addition of methionine or homocysteine also rescued"
+
+Curator notes (paraphrase):
+Figure 4C compares D. alaskensis G20, JK00771 (Dde_3007::Tn5), mutant with
+empty pMO9075, and mutant with pJK2 carrying Dde_3007. Mutant/empty-vector
+growth is deficient; pJK2 restores visible growth. Figure 4D shows nutritional
+rescue by homocysteine. This is not a biochemical conversion measurement.
+Important source discrepancy: plate images say MOLS4; their caption says LS4D.
+Both recipes occur in methods, but the exact plate formulation cannot be chosen
+from this material. General culture conditions are anaerobic 30 C; plate assay
+duration and homocysteine concentration remain unverified. Figure 4B's separate
+pooled assay uses 1 uM methionine, not the 2018 study's millimolar doses.
+pJK2 uses a revised start at genomic position 2993462 and was sequence-verified
+by the authors. It must not be described as the unchanged 421-residue reference.
+Supplement Table S1 and Data Set S1 returned HTML from PMC and HTTP 403 from
+ASM; exact insertion position and complete plasmid junctions were not inspected.
+The proposed O-phosphohomoserine route in Figure 4E is not an observed reaction.
+Later work questions homoserine participation; this does not negate the plate
+phenotype. No raw growth or fitness data were reanalyzed.

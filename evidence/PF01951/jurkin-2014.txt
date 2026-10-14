@@ -1,0 +1,102 @@
+PF01951 / Jurkin2014 XBP1 and tRNA contexts, 2026-10-12 UTC
+PMID:25378478; doi:10.15252/embj.201490332; CC BY 4.0.
+https://link.springer.com/article/10.15252/embj.201490332
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4282640/fullTextXML
+Main Archease-relevant Results/Methods and Figure1/2 captions read; Figure1/2
+and S1/S2/S3 images inspected. All three supplement-legend pages read.
+Mouse genetic Methods and relevant Results read to exclude RTCB-only transfer;
+mouse Figure3-5 and S4-S6 images not audited for this PF01951 curation.
+Minimal quotations: "ligation activity"; "XBP1s expression";
+"splicing-dependent tRNAs". Other entries are factual curator summaries.
+
+Ownership: endogenous human Archease, reference Q8IWT0 v2 PF01951 31-167;
+whole-gene knockdown is not a domain-only or isoform-specific intervention.
+Recombinant preparations cite Popow2014, retaining its N-terminal/complete
+mutant sequence limits. D39A/K144A are paper Archease labels, not RTCB residues.
+HeLa siRNA extracts, Tet-ON HeLa shRNA cells and Rtcb-knockout mouse B cells
+are distinct systems. No Archease-specific XBP1 rescue was shown here.
+
+Figure1C: cells harvested 3 days after control siGFP, Archease, RTCB or joint
+siRNA transfection. A 3'-labeled, LNA-stabilized XBP1 RNA fragment pre-cleaved
+by IRE1 is incubated with extract for 15 min. Archease-only and joint depletion
+both reduce the spliced product relative to siGFP. Standard Methods specify
+0.1 uM RNA, 5-min IRE1 precleavage and 2 ug/ul extract; assay temperature is
+not unambiguously specified in the inspected protocol. RTCB-only reduction
+is a comparator, not an Archease knockout. No numeric yield inferred from gel.
+
+S1D: lanes labeled Buffer, Archease WT, D39A, K144A and BSA, 2/5/10/30 min.
+WT treatment increases the spliced product; both mutant preparations fail
+to reach WT output. Reported 30-min normalized signals: WT 7.01, buffer 1.64,
+D39A 1.51, K144A 1.08, BSA 1.71, all normalized to BUFFER AT TWO MINUTES.
+This is not a sevenfold WT-versus-buffer comparison at 30 min. Replicate
+number/statistical test is not supplied for this panel. Main Results/Methods
+describe recombinant Archease addition (0.2 ug/ul final when added), whereas
+the S1D caption describes lysates of cells overexpressing WT or mutant forms.
+Both descriptions are retained: preparation-associated effects are UNRESOLVED,
+not an unambiguous purified-protein mechanism or cellular rescue experiment.
+S1E FLAG-Archease IP lacks detectable ligation unlike FLAG-RTCB/FLAG-DDX1;
+no intrinsic Archease ligase activity is established.
+
+Figure2A/B and S2A/B: Tet-ON HeLa, 1 ug/ml doxycycline for six days, then
+300 nM thapsigargin (Tg), 0/2/4/8/16/24 h. Single Archease shRNA lowers
+late-stress XBP1s protein signal in the representative Western. The mean
+spliced RNA fraction trends lower, especially at 16-24 h, but S2B labels
+the overall comparison NONSIGNIFICANT (N=3, SEM). Retain the trend in this
+ledger, not as a directed causal edge or absence of all XBP1s. The fraction
+is XBP1s/(XBP1s+XBP1u), not the XBP1s/XBP1u ratio or absolute abundance.
+RTCB-alone shRNA preserves much XBP1s induction; its co-depletion of DDX1
+and FAM98B (S2A) prevents treating it as a clean single-protein mechanism.
+
+Figure2C-I/S2C: combined Archease+RTCB shRNAs versus TWO control shRNAs,
+same six-day Dox and 24-h Tg regimen. XBP1s protein is strongly reduced;
+do not claim absolute absence from every lane. Spliced RNA fraction is lower
+in the aggregate time course (S2C, N=5, SEM, P<0.001), especially 2-16 h.
+The representative Figure2D 24-h fraction does not follow the same ordering;
+no every-time-point assertion. RT-qPCR is ACTB- and untreated-control-normalized:
+XBP1s RNA induction is lower (Figure2E, P<0.05), total XBP1 RNA accumulation
+lower (F, P<0.0001), EDEM1 induction lower (H, P<0.01), and DNAJB9 induction
+lower (I, P<0.01), N=5, SEM, two-way ANOVA. These are separate joint-perturbation
+outcomes, not an experimentally isolated feedback/mediation chain. Figure2G
+XBP1u and S2D/E HSPA5/CHOP differences are NONSIGNIFICANT and remain controls,
+not supported specific downstream causal requirements. S2F/G RIDD-target
+BLOS1/PDGFRB responses are also nonsignificant between the depleted/control
+groups; this does not directly assay IRE1 cleavage kinetics or prove all RIDD
+targets unaffected. No apoptosis phenotype is inferred from CHOP expression.
+
+S3A/B: after six-day Dox induction WITHOUT the Tg time course, Northern blots
+show lower mature Ile and Arg tRNA signals with single Archease shRNA and with
+joint Archease/RTCB shRNAs, compared with their respective one-/two-vector
+controls. N=3, U6 loading control; no numeric fold or panel-specific significance
+invented. Methionine tRNA is the splicing-independent comparison. S3C/D metabolic
+labeling after Met/Cys starvation, then one hour 35S-Met/Cys, does not show a
+global protein-synthesis decrease (N=2). S3D Archease-only lane also has reduced
+RTCB protein, unlike the strong RTCB retention in S2A; do not assert universal
+absence of partner co-depletion. Mature RNA levels do not isolate production
+from turnover, and these assays do not prove a tRNA-to-XBP1 mediation chain.
+
+Protocol/source-discrepancy ledger:
+- Main Methods label a ligation buffer as 1x with 400 mM KCl, 125 mM spermidine,
+  20 mM ATP, 20 mM GTP, 10 mM DTT and 25 mM MgCl2. No verified stock/dilution
+  clarification was found in the inspected supplement; do not silently scale it.
+- RNAi buffer lists 5 uM MgCl2 and 0.5 uM DTT, whereas extract lysis buffer
+  has 5 mM and 0.5 mM respectively. Their actual preparation remains unresolved.
+- The sentence assigning spliced/unspliced templates to genomic DNA/cDNA has
+  an apparent ordering problem; the verified gel product assignments are used,
+  not an invented corrected template sequence.
+- HSPA5 forward and reverse primers are printed identically; no exact HSPA5
+  amplicon or mechanism is inferred without resolving the protocol.
+- S1D overexpression-lysate caption versus recombinant-addition Methods/Results
+  remains explicit. This is not treated as a proven knockdown rescue.
+
+Excluded transfers: mouse Rtcbfl/fl Cd23-Cre experiments target RTCB, not
+Archease. Their antibody secretion, ER morphology, B-cell differentiation and
+mouse tRNA phenotypes are not added as PF01951 perturbations. Cytoplasmic/ER
+proximity in Figure1D/E, stable after Tg, does not prove direct IRE1 binding,
+stimulus-induced recruitment or observed subcellular shuttling. General disease
+and physiological-mechanism interpretations are not native observed edges.
+
+Access: PMC browser returned a challenge; Europe PMC XML and the publisher's
+individual figure/TIFF/legend files were accessible. A Europe PMC ZIP timed out
+at 416,996 bytes and is incomplete; it was not treated as a valid evidence
+package. The successful publisher TIFFs were converted to PNG for
+viewing, not used for new densitometric quantification.

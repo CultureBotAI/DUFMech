@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01554
+  path: data/families/PF01554.yaml
+session:
+  id: 2026-10-11T115025Z-codex-5d42c5
+  timestamp: '2026-10-11T11:50:25Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of scoped causal effects and unresolved
+    mechanism coverage.
+  details: The evidence-backed overlay and generated projection were assessed against
+    primary assays and exact reference mapping. Saved NEEDS_FOLLOWUP review reviews/structured/20261011T114941Z-pf01554-norm-binding-and-cellular-contexts/review.yaml
+    preserves open coverage and access limits; no independent review or status promotion
+    is claimed.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T114941Z-pf01554-norm-binding-and-cellular-contexts/review.yaml

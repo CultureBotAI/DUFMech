@@ -1,0 +1,722 @@
+# PF01947: scoped lyase chemistry and Sll1797 phenotype effects
+
+- Review: 20261012T073748Z-pf01947-scoped-lyase-and-sll1797-phenotype-effects
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-12T07:37:29Z
+- Finished UTC: 2026-10-12T07:37:48Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Nine graphs retain fourteen OBSERVED experimental effects, five DIRECT biochemical product edges and nine UNRESOLVED effects. Three graphs are MECHANISTIC and six PHENOTYPIC. Five evidence ledgers and two OPEN discussions preserve assay, identity, source and coverage limits. Partial same-agent scientific review remains NEEDS_FOLLOWUP and the record IN_PROGRESS.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Ascending uncurated family after PF01944; all8296 records and earlier follow-ups remain in scope.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01947 | data/families/PF01947.yaml | generated | PF01947 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01947 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: concern. Targets: PF01947.
+
+Frozen PF01947/former DUF98, IPR002800, EX_DUF and UNSCORED remain unchanged. P9WIC5 v1 maps24-173 and the enzyme Methods identify H37Rv as source, distinct from whole-cell Mt103. Sll1797/ycf21 P73322 v1 maps2-130, but Kazusa reference and the two tested PCC6803 backgrounds are not independently clone-sequence verified. E. coli UbiC P26602 maps PF04345 17-165; same reaction/complementation cannot transfer its residue mechanism into this family. Archaeal AF1396 structure and MJ0807 mapping establish context, not enzymatic function.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01947.
+
+Two Rv2949c tag/host preparations retain separate paired4HB/pyruvate products; coupled detection is distinguished from the underlying direct conversion. Product inhibition is only a reduced assay readout with unresolved binding/coupling-interference detail. Sll1797 has a4HB edge, not an unmeasured pyruvate edge. Host complementation is not direct UQ synthesis. Native growth rescue is chemical, not genetic, and does not establish PQ rescue. OD-normalized PQ and chlorophyll-normalized oxygen are separate outcomes with unit/supplement uncertainty. Du provides independent markerless deletion/rescue in another background, not duplicate Pfaff evidence. Negative and association-only observations are not manufactured as causal edges.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01947.
+
+Historical clones, domain-only activity, residue mutations, GST-only controls, inhibition-preparation assignment, Table1 supplement history/units and unavailable Stadthagen/Du figure images remain open. Hashimi2010 was inspected at abstract level; source-protein mapping and full evidence remain unresolved. Later PlqC/HMM and whole-pathway studies, archaeal MJ0807/AF1396 and plastid Ycf21 require further primary review. Structural or annotation presence is not a catalytic assay; nine reviewed UniProt hits are not a census. No family-wide completeness or universal essentiality is established.
+
+## Findings
+
+### additional-contexts: Resolve assay/source discrepancies and extend member-specific coverage
+
+minor / open / confirmed; issue key: pf01947-causal-context-coverage.
+
+Inspect missing original figures and supplement/clone details; resolve Pfaff M56/M59, Table1 units and4HB culture history, Du Figure2E/F versus Results D/E and light units, and product-inhibition preparation/coupling controls. Trace imported Hashimi citation to its actual tested ubiC protein before mapping it to PF01947. Assess remaining PlqC contexts and archaeal/plastid members without transferring E. coli UbiC/PF04345 residues or whole-pathway outcomes. Curate supported successor evidence and keep the partial pass IN_PROGRESS until full review requirements are met.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Inspect missing original figures and supplement/clone details; resolve Pfaff M56/M59, Table1 units and4HB culture history, Du Figure2E/F versus Results D/E and light units, and product-inhibition preparation/coupling controls. Trace imported Hashimi citation to its actual tested ubiC protein before mapping it to PF01947. Assess remaining PlqC contexts and archaeal/plastid members without transferring E. coli UbiC/PF04345 residues or whole-pathway outcomes. Curate supported successor evidence and keep the partial pass IN_PROGRESS until full review requirements are met.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC3908401/; Lyase, complementation, native growth, lipid and oxygen Methods/Results; visually inspected Figures4/5/6/9 and HTML Table1. | supports | Sll1797 cell-free4HB production, E. coli complementation, native insertional disruption and chemical growth rescue are separately scoped; PQ, oxygen and growth are not joined as a directly observed pathway chain. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01947/; Accession and domain locations; paired UniProt identity facts | supports | Frozen PF01947/former DUF98, IPR002800, EX_DUF and UNSCORED remain unchanged. P9WIC5 v1 maps24-173 and the enzyme Methods identify H37Rv as source, distinct from whole-cell Mt103. Sll1797/ycf21 P73322 v1 maps2-130, but Kazusa reference and the two tested PCC6803 backgrounds are not independently clone-sequence verified. E. coli UbiC P26602 maps PF04345 17-165; same reaction/complementation cannot transfer its residue mechanism into this family. Archaeal AF1396 structure and MJ0807 mapping establish context, not enzymatic function. |
+| rv2949c-chemistry | https://www.researchgate.net/publication/7555918_p-Hydroxybenzoic_Acid_Synthesis_in_Mycobacterium_tuberculosis; H37Rv construct identity, lyase-assay Methods, enzyme Results and Figure5/6 captions. | supports | Two purified preparations form4HB and pyruvate; product inhibition remains an assay observation rather than a proven binding mechanism. Cell-free findings only, no pathogen-engineering protocols. |
+| independent-deletion | https://pmc.ncbi.nlm.nih.gov/articles/PMC11808434/; Primary XML essential-gene Results, Figure2 caption and strain/growth Methods. | supports | Markerless Sll1797 deletion has reported4HB-dependent plate growth in a glucose-tolerant PCC6803 background; image, panel-label and unit limitations retained. |
+| source-coverage | evidence/PF01947/coverage.txt; Scoped searches, candidate contexts, access outcomes and current structure metadata. | supports | Uncurated family branches and source discrepancies remain explicit, including later paper locus/Plq nomenclature conflicts and the imported Hashimi citation ambiguity. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01947 | data/families/PF01947.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Pfaff Figures4/5/6/9 visually inspected; Table1 HTML and pertinent primary Methods/Results read. Stadthagen full primary author-uploaded browser text/captions read, images unavailable; publisher/direct downloads403. Du primary XML Methods/Results/caption read, image unavailable after page challenge and403 figure/PDF responses. Later PlqC selected XML paragraphs and RCSB metadata inspected; no raw-data replication or expert-independent review.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T073748Z-pf01947-scoped-lyase-and-sll1797-phenotype-effects
+title: 'PF01947: scoped lyase chemistry and Sll1797 phenotype effects'
+started_at: '2026-10-12T07:37:29Z'
+finished_at: '2026-10-12T07:37:48Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Nine graphs retain fourteen OBSERVED experimental effects, five DIRECT biochemical
+  product edges and nine UNRESOLVED effects. Three graphs are MECHANISTIC and six
+  PHENOTYPIC. Five evidence ledgers and two OPEN discussions preserve assay, identity,
+  source and coverage limits. Partial same-agent scientific review remains NEEDS_FOLLOWUP
+  and the record IN_PROGRESS.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01947.yaml
+    sha256: 8e26f3820f2af5f3450573f3860d95c40355b733185b845a886df5dd8bd6061c
+    role: context
+  - path: data/families/PF01947.yaml
+    sha256: 898a3b0599f6c7c9aede656c4d8bd3cbacde082c1e71dbb777b486e5195b41e7
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01947/pfaff-2014.txt
+    role: context
+    sha256: e38c94ae440ac7787de55bb391b78667eaf749846c41dda44059ebbc6e0b0440
+  - path: evidence/PF01947/identity.txt
+    role: context
+    sha256: b530ddefc5a0f128c7807925418b39f97e23f3a73abb5dc5683be90940242b6e
+  - path: evidence/PF01947/stadthagen-2005.txt
+    role: context
+    sha256: a376403b7c1e2db50662df1e73ee4021bd4515ea2b79c3c1fefe9c49c8a0c3c5
+  - path: evidence/PF01947/du-2025.txt
+    role: context
+    sha256: ed357a94a63daa897a113a0dc350b3cb5274558621dcfeec39718978469d276a
+  - path: evidence/PF01947/coverage.txt
+    role: context
+    sha256: 2bef566b1a308266e602efd811739a9a7c4934705ab19751dc214bd0bf8bb949
+targets:
+- target_id: PF01947
+  path: data/families/PF01947.yaml
+  label: PF01947
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01947.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 89760744789491d34689bc0fed02126c015f1e6b5cb85ca14658c6c4f1cfc566
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Ascending uncurated family after PF01944; all8296 records and earlier
+    follow-ups remain in scope.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01947
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Historical clones, domain-only activity, residue mutations, GST-only controls,
+      inhibition-preparation assignment, Table1 supplement history/units and unavailable
+      Stadthagen/Du figure images remain open. Hashimi2010 was inspected at abstract
+      level; source-protein mapping and full evidence remain unresolved. Later PlqC/HMM
+      and whole-pathway studies, archaeal MJ0807/AF1396 and plastid Ycf21 require
+      further primary review. Structural or annotation presence is not a catalytic
+      assay; nine reviewed UniProt hits are not a census. No family-wide completeness
+      or universal essentiality is established.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01947
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3908401/
+  locator: Lyase, complementation, native growth, lipid and oxygen Methods/Results;
+    visually inspected Figures4/5/6/9 and HTML Table1.
+  accessed_at: '2026-10-12T07:37:48Z'
+  support: supports
+  snapshot_sha256: e38c94ae440ac7787de55bb391b78667eaf749846c41dda44059ebbc6e0b0440
+  summary: Sll1797 cell-free4HB production, E. coli complementation, native insertional
+    disruption and chemical growth rescue are separately scoped; PQ, oxygen and growth
+    are not joined as a directly observed pathway chain.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01947/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-12T07:37:48Z'
+  support: supports
+  snapshot_sha256: b530ddefc5a0f128c7807925418b39f97e23f3a73abb5dc5683be90940242b6e
+  summary: Frozen PF01947/former DUF98, IPR002800, EX_DUF and UNSCORED remain unchanged.
+    P9WIC5 v1 maps24-173 and the enzyme Methods identify H37Rv as source, distinct
+    from whole-cell Mt103. Sll1797/ycf21 P73322 v1 maps2-130, but Kazusa reference
+    and the two tested PCC6803 backgrounds are not independently clone-sequence verified.
+    E. coli UbiC P26602 maps PF04345 17-165; same reaction/complementation cannot
+    transfer its residue mechanism into this family. Archaeal AF1396 structure and
+    MJ0807 mapping establish context, not enzymatic function.
+- evidence_id: rv2949c-chemistry
+  kind: primary_source
+  reference: https://www.researchgate.net/publication/7555918_p-Hydroxybenzoic_Acid_Synthesis_in_Mycobacterium_tuberculosis
+  locator: H37Rv construct identity, lyase-assay Methods, enzyme Results and Figure5/6
+    captions.
+  summary: Two purified preparations form4HB and pyruvate; product inhibition remains
+    an assay observation rather than a proven binding mechanism. Cell-free findings
+    only, no pathogen-engineering protocols.
+  accessed_at: '2026-10-12T07:37:48Z'
+  support: supports
+  snapshot_sha256: a376403b7c1e2db50662df1e73ee4021bd4515ea2b79c3c1fefe9c49c8a0c3c5
+- evidence_id: independent-deletion
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11808434/
+  locator: Primary XML essential-gene Results, Figure2 caption and strain/growth Methods.
+  summary: Markerless Sll1797 deletion has reported4HB-dependent plate growth in a
+    glucose-tolerant PCC6803 background; image, panel-label and unit limitations retained.
+  accessed_at: '2026-10-12T07:37:48Z'
+  support: supports
+  snapshot_sha256: ed357a94a63daa897a113a0dc350b3cb5274558621dcfeec39718978469d276a
+- evidence_id: source-coverage
+  kind: search
+  reference: evidence/PF01947/coverage.txt
+  locator: Scoped searches, candidate contexts, access outcomes and current structure
+    metadata.
+  search_scope: PF01947, DUF98, Rv2949c, Sll1797/ycf21/PlqC, MJ0807/Q58217 and AF1396/O28875;
+    ignored/hidden local text included in named authoring/review directories, excluding
+    JSON.
+  summary: Uncurated family branches and source discrepancies remain explicit, including
+    later paper locus/Plq nomenclature conflicts and the imported Hashimi citation
+    ambiguity.
+  accessed_at: '2026-10-12T07:37:48Z'
+  support: supports
+  snapshot_sha256: 2bef566b1a308266e602efd811739a9a7c4934705ab19751dc214bd0bf8bb949
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-12T07:37:48Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01947
+  kind: record_content
+  reference: data/families/PF01947.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-12T07:37:48Z'
+  support: context_only
+  snapshot_sha256: 898a3b0599f6c7c9aede656c4d8bd3cbacde082c1e71dbb777b486e5195b41e7
+  quote: "id: Pfam:PF01947\npfam_id: PF01947\nname: Chorismate pyruvate-lyase Rv2949c-like\n\
+    short_name: Rv2949c-like\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01947\n\
+    counters:\n  proteins: 726\n  matches: 741\n  proteomes: 660\n  taxa: 1609\n \
+    \ structures: 1\n  alphafold_models: 531\n  domain_architectures: 7\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002800\ndescription: This domain is found in chorismate\
+    \ pyruvate-lyases ([ec:4.1.3.40], also known as 4-HB synthase\n  and p-hydroxybenzoic\
+    \ acid synthase) such as those found in Mycobacterium tuberculosis where it removes\n\
+    \  the pyruvyl group from chorismate to provide 4-hydroxybenzoate (4HB) [[cite:PUB00086017]].\
+    \ The chorismate\n  pyruvate-lyase encoded by sll1797 in cyanobacteria Synechocystis\
+    \ sp. , has been shown to catalyse the\n  initial and essential step in plastoquinone\
+    \ biosynthesis [[cite:PUB00097745]]. In E. coli, the chorismate\n  lyase (UbiC)\
+    \ catalyses the conversion of chorismate to p-hydroxybenzoate and pyruvate in\
+    \ the biosynthesis\n  of ubiquinone as well [[cite:PUB00097746]].\ncuration_history:\
+    \ history/records/PF01947\ndiscussions:\n- discussion_id: pf01947-assay-and-source-limits\n\
+    \  prompt: Resolve construct, source-panel and normalization limits before extending\
+    \ molecular claims.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Whole-protein\
+    \ assays do not isolate the domain or establish proposed catalytic residues;\n\
+    \    genetic phenotypes do not resolve intermediate mechanisms.\n  evidence:\n\
+    \  - reference: PMID:24337576\n    supports: PARTIAL\n    evidence_source: primary_publication\n\
+    \    explanation: Figures4/5/6/9 were inspected, but M56/M59 labels, Table1 units\
+    \ and lipid-culture supplement\n      history remain unresolved.\n  - reference:\
+    \ PMID:39702692\n    supports: PARTIAL\n    evidence_source: primary_publication\n\
+    \    explanation: Independent deletion/rescue is reported; Figure2 caption says\
+    \ E/F for genotype/growth\n      while Results cite D/E. Image unavailable.\n\
+    \  posed_by: Codex\n  posed_date: '2026-10-12'\n  notes: Check historical strain/clone\
+    \ sequences, GST-only controls, coupled-readout interference and\n    uninspected\
+    \ figure images. R30/E120 remain proposed rather than experimentally established\
+    \ catalytic\n    residues. See evidence/PF01947/coverage.txt.\n- discussion_id:\
+    \ pf01947-family-transfer-and-coverage\n  prompt: Extend member coverage without\
+    \ transferring same-name UbiC or whole-pathway claims into PF01947.\n  kind: CURATION_TODO\n\
+    \  status: OPEN\n  rationale: E. coli P26602 maps PF04345, while Sll1797 maps\
+    \ PF01947; shared reaction and complementation\n    are not shared family membership.\n\
+    \  evidence:\n  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P26602/\n\
+    \    supports: SUPPORT\n    evidence_source: database\n    explanation: Current\
+    \ P26602 mapping is PF04345 residues17-165; its structure/residue mechanism is\n\
+    \      not automatically PF01947 evidence.\n  - reference: PMID:20437231\n   \
+    \ supports: PARTIAL\n    evidence_source: primary_publication\n    explanation:\
+    \ The imported citation concerns X. albilineans benzoate metabolism; exact ubiC\
+    \ membership\n      and full-text evidence still need review.\n  posed_by: Codex\n\
+    \  posed_date: '2026-10-12'\n  notes: Inspect archaeal MJ0807/AF1396 and plastid\
+    \ Ycf21 primary evidence, remaining PlqC literature\n    and supplements. 2NWI\
+    \ structure and HMM distributions are not catalytic assays. Preserve frozen description\n\
+    \    and counters. All records and prior follow-ups remain in scope.\ncausal_graphs:\n\
+    - graph_id: rv2949c-c-his-products-2005\n  title: Purified C-His Rv2949c forms\
+    \ two chorismate products\n  scope: Stadthagen2005 enzyme Results and Figure6A\
+    \ context, not whole-cell Mt103 experiments.\n  context: Cell-free H37Rv Rv2949c\
+    \ with a C-terminal His tag, purified from nonpathogenic M. smegmatis;\n    chorismate\
+    \ substrate, HPLC4HB and coupled LDH/NADH pyruvate readouts.\n  family_mapping:\
+    \ H37Rv reference P9WIC5 v1, 199 aa, PF01947 24-173. Source strain is explicit\
+    \ in recombinant-enzyme\n    Methods. Whole protein, not isolated domain; historical\
+    \ clone not independently sequenced here.\n  taxon: NCBITaxon:83332\n  scope_status:\
+    \ MECHANISTIC\n  limitations: Figure images and raw data unavailable; nonenzymatic\
+    \ controls and HPLC confirmation partly\n    reported as data not shown. Two expression\
+    \ preparations do not isolate host or tag effects. No pathogen\n    engineering\
+    \ or virulence mechanism is asserted.\n  nodes:\n  - node_id: enzyme-substrate\n\
+    \    label: Purified C-His Rv2949c with chorismate\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:P9WIC5\n  - node_id: hb\n    label: 4-hydroxybenzoate\
+    \ formation by HPLC\n    node_type: STATE\n  - node_id: pyruvate\n    label: Pyruvate\
+    \ formation measured by coupled assay\n    node_type: STATE\n  edges:\n  - edge_id:\
+    \ c-his-4hb\n    subject: enzyme-substrate\n    predicate: produces\n    object:\
+    \ hb\n    mechanism: Purified enzyme converts chorismate to HPLC-detected4HB;\
+    \ chemical product formation, not\n      an inferred cellular pathway.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:16210318\n      source_url: https://www.researchgate.net/publication/7555918_p-Hydroxybenzoic_Acid_Synthesis_in_Mycobacterium_tuberculosis\n\
+    \      snippet: 4-HB formation was also directly detected by HPLC.\n      explanation:\
+    \ Lyase Methods and enzyme Results distinguish HPLC product detection from the\
+    \ pyruvate\n        reporter; Figure6A caption read, image unavailable.\n    \
+    \  cache_path: evidence/PF01947/stadthagen-2005.txt\n      cache_sha256: a376403b7c1e2db50662df1e73ee4021bd4515ea2b79c3c1fefe9c49c8a0c3c5\n\
+    \  - edge_id: c-his-pyruvate\n    subject: enzyme-substrate\n    predicate: produces\n\
+    \    object: pyruvate\n    mechanism: The same reaction releases pyruvate, detected\
+    \ indirectly by LDH-coupled NADH oxidation;\n      DIRECT denotes the biochemical\
+    \ conversion, not the detection method.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:16210318\n\
+    \      source_url: https://www.researchgate.net/publication/7555918_p-Hydroxybenzoic_Acid_Synthesis_in_Mycobacterium_tuberculosis\n\
+    \      snippet: 4-HB formation was also directly detected by HPLC.\n      explanation:\
+    \ Enzyme Results report both products for each purified preparation; coupled-assay\
+    \ Methods\n        and Figure6A context inspected.\n      cache_path: evidence/PF01947/stadthagen-2005.txt\n\
+    \      cache_sha256: a376403b7c1e2db50662df1e73ee4021bd4515ea2b79c3c1fefe9c49c8a0c3c5\n\
+    - graph_id: rv2949c-n-his-products-2005\n  title: Purified N-His Rv2949c forms\
+    \ two chorismate products\n  scope: Stadthagen2005 enzyme Results and Figure6B\
+    \ context.\n  context: Cell-free H37Rv Rv2949c with an N-terminal His tag, purified\
+    \ from E. coli; chorismate substrate\n    and paired HPLC/coupled-product assays.\n\
+    \  family_mapping: P9WIC5 v1 reference, PF01947 24-173. Heterologous host does\
+    \ not change the protein's\n    source taxon; this is not E. coli UbiC/PF04345.\n\
+    \  taxon: NCBITaxon:83332\n  scope_status: MECHANISTIC\n  limitations: Whole-protein\
+    \ construct, no domain isolation or residue-resolved catalysis. Host and tag\n\
+    \    differ together from the other preparation; no causal host comparison. Images/raw\
+    \ data not inspected.\n  nodes:\n  - node_id: enzyme-substrate\n    label: Purified\
+    \ N-His Rv2949c with chorismate\n    node_type: ACTIVITY\n    grounding:\n   \
+    \ - UniProtKB:P9WIC5\n  - node_id: hb\n    label: HPLC-detected 4-hydroxybenzoate\
+    \ formation\n    node_type: STATE\n  - node_id: pyruvate\n    label: Coupled-assay\
+    \ pyruvate formation\n    node_type: STATE\n  edges:\n  - edge_id: n-his-4hb\n\
+    \    subject: enzyme-substrate\n    predicate: produces\n    object: hb\n    mechanism:\
+    \ The separately purified N-terminally tagged preparation forms4HB from chorismate.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:16210318\n      source_url: https://www.researchgate.net/publication/7555918_p-Hydroxybenzoic_Acid_Synthesis_in_Mycobacterium_tuberculosis\n\
+    \      snippet: 4-HB formation was also directly detected by HPLC.\n      explanation:\
+    \ Methods, enzyme Results and Figure6B caption distinguish this preparation from\
+    \ the\n        C-His enzyme.\n      cache_path: evidence/PF01947/stadthagen-2005.txt\n\
+    \      cache_sha256: a376403b7c1e2db50662df1e73ee4021bd4515ea2b79c3c1fefe9c49c8a0c3c5\n\
+    \  - edge_id: n-his-pyruvate\n    subject: enzyme-substrate\n    predicate: produces\n\
+    \    object: pyruvate\n    mechanism: Pyruvate released during this conversion\
+    \ is quantified with the LDH/NADH coupled readout,\n      not direct pyruvate\
+    \ chromatography.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:16210318\n      source_url:\
+    \ https://www.researchgate.net/publication/7555918_p-Hydroxybenzoic_Acid_Synthesis_in_Mycobacterium_tuberculosis\n\
+    \      snippet: 4-HB formation was also directly detected by HPLC.\n      explanation:\
+    \ Primary enzyme Results state both products with either purified enzyme; the\
+    \ assay reporter\n        is retained explicitly.\n      cache_path: evidence/PF01947/stadthagen-2005.txt\n\
+    \      cache_sha256: a376403b7c1e2db50662df1e73ee4021bd4515ea2b79c3c1fefe9c49c8a0c3c5\n\
+    - graph_id: rv2949c-product-inhibition-2005\n  title: Added4HB reduces the Rv2949c\
+    \ coupled activity readout\n  scope: Stadthagen2005 product-inhibition paragraph,\
+    \ purified enzyme assays.\n  context: Added4HB compared with the corresponding\
+    \ no-added-product chorismate assay; preparation/tag\n    assignment is not explicit\
+    \ for every inhibition measurement.\n  family_mapping: Rv2949c source/reference\
+    \ P9WIC5 v1, PF01947 24-173; biochemical whole-protein assay,\n    not native\
+    \ pathogen regulation.\n  taxon: NCBITaxon:83332\n  scope_status: PHENOTYPIC\n\
+    \  limitations: Competitive inhibition is the authors' interpretation, not an\
+    \ observed binding mode. A4HB-specific\n    coupling-enzyme interference control\
+    \ was not located in inspected Methods. No cellular feedback loop\n    or altered\
+    \ virulence is inferred.\n  nodes:\n  - node_id: added-hb\n    label: Added4HB\
+    \ in the purified Rv2949c assay\n    node_type: PERTURBATION\n  - node_id: readout\n\
+    \    label: Coupled pyruvate-formation readout\n    node_type: ACTIVITY\n    grounding:\n\
+    \    - UniProtKB:P9WIC5\n  edges:\n  - edge_id: hb-reduces-readout\n    subject:\
+    \ added-hb\n    predicate: decreases\n    object: readout\n    mechanism: Added\
+    \ reaction product lowers the reported coupled activity readout; the exact inhibitory\n\
+    \      molecular step remains unresolved.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:16210318\n\
+    \      source_url: https://www.researchgate.net/publication/7555918_p-Hydroxybenzoic_Acid_Synthesis_in_Mycobacterium_tuberculosis\n\
+    \      snippet: 4-HB formation was also directly detected by HPLC.\n      explanation:\
+    \ Enzyme Results product-inhibition paragraph and coupled-assay Methods; this\
+    \ edge does\n        not assert an independently demonstrated binding interaction.\n\
+    \      cache_path: evidence/PF01947/stadthagen-2005.txt\n      cache_sha256: a376403b7c1e2db50662df1e73ee4021bd4515ea2b79c3c1fefe9c49c8a0c3c5\n\
+    - graph_id: sll1797-cell-free-4hb-2014\n  title: Sll1797-containing preparations\
+    \ form4HB from chorismate\n  scope: Pfaff2014 Enzyme Properties, Lyase Assays\
+    \ and Figure6.\n  context: Crude extracts and purified GST-Sll1797 from E. coli;\
+    \ HPLC product assay with nonenzymatic\n    chorismate breakdown subtracted. Standard450-uM\
+    \ substrate and Figure6 substrate series are distinct\n    conditions.\n  family_mapping:\
+    \ Sll1797/ycf21 reference P73322 v1, 139 aa, PF01947 2-130; Kazusa reference taxon1111708,\n\
+    \    tested gene identified as PCC6803/NP_440671. Whole protein, not isolated\
+    \ domain.\n  taxon: NCBITaxon:1148\n  scope_status: MECHANISTIC\n  limitations:\
+    \ Figure6 curves do not fully specify each preparation; GST-only/purity controls\
+    \ remain unresolved.\n    No independent pyruvate assay or R30/E120 mutagenesis\
+    \ is shown. Heterologous membrane enrichment in\n    Figure5 is not native localization\
+    \ or causal substrate channeling.\n  nodes:\n  - node_id: enzyme-substrate\n \
+    \   label: Sll1797-containing preparation with chorismate\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:P73322\n  - node_id: hb\n    label: Background-corrected\
+    \ HPLC4HB formation\n    node_type: STATE\n  edges:\n  - edge_id: sll1797-4hb\n\
+    \    subject: enzyme-substrate\n    predicate: produces\n    object: hb\n    mechanism:\
+    \ The cell-free reaction forms4HB from chorismate in crude and purified-fusion\
+    \ experiments,\n      with correction for spontaneous substrate breakdown.\n \
+    \   directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:24337576\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3908401/\n\
+    \      snippet: Sll1797 produced 4-hydroxybenzoate\n      explanation: Lyase Methods\
+    \ and Enzyme Properties Results; Figure6 visually inspected, preparation-specific\n\
+    \        limits retained.\n      cache_path: evidence/PF01947/pfaff-2014.txt\n\
+    \      cache_sha256: e38c94ae440ac7787de55bb391b78667eaf749846c41dda44059ebbc6e0b0440\n\
+    - graph_id: sll1797-ecoli-complementation-2014\n  title: Sll1797 restores two\
+    \ phenotypes in E. coli delta-ubiC\n  scope: Pfaff2014 Figure4A/B, matched empty-vector\
+    \ comparisons.\n  context: E. coli BW25113-derived delta-ubiC expressing sll1797;\
+    \ succinate growth and HPLC UQ8 assays.\n    Growth medium is M56 in Methods and\
+    \ M59 in caption; UQ extraction uses a separately described induction\n    protocol.\n\
+    \  family_mapping: Introduced Sll1797 reference P73322 v1 maps PF01947 2-130.\
+    \ Missing host UbiC reference\n    P26602 belongs to PF04345, not this family.\
+    \ Taxon denotes the assay host.\n  taxon: NCBITaxon:562\n  scope_status: PHENOTYPIC\n\
+    \  limitations: Cellular outcomes do not show direct UQ8 synthesis by Sll1797;\
+    \ host partners remain required.\n    Growth and UQ8 are separate observations,\
+    \ not a demonstrated mediator chain. Results panel cross-references\n    conflict\
+    \ with caption/image; A/B are used.\n  nodes:\n  - node_id: complement\n    label:\
+    \ Sll1797 expression in E. coli delta-ubiC\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:P73322\n  - node_id: growth\n    label: Succinate-supported culture\
+    \ growth\n    node_type: PHENOTYPE\n  - node_id: uq\n    label: Cellular ubiquinone8\
+    \ abundance\n    node_type: STATE\n  edges:\n  - edge_id: sll1797-growth-complement\n\
+    \    subject: complement\n    predicate: increases\n    object: growth\n    mechanism:\
+    \ Expression improves the growth curve relative to delta-ubiC with empty vector\
+    \ under the\n      Figure4A succinate comparison.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:24337576\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3908401/\n\
+    \      snippet: Sll1797 produced 4-hydroxybenzoate\n      explanation: Visually\
+    \ inspected Figure4A, complementation Methods and Results; not direct growth\n\
+    \        catalysis.\n      cache_path: evidence/PF01947/pfaff-2014.txt\n     \
+    \ cache_sha256: e38c94ae440ac7787de55bb391b78667eaf749846c41dda44059ebbc6e0b0440\n\
+    \  - edge_id: sll1797-uq-complement\n    subject: complement\n    predicate: increases\n\
+    \    object: uq\n    mechanism: Expression restores UQ8 toward WT in the Figure4B\
+    \ host comparison; native cyanobacterial\n      PQ is not the measured product.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:24337576\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3908401/\n\
+    \      snippet: Sll1797 produced 4-hydroxybenzoate\n      explanation: Figure4B\
+    \ visually inspected with caption and HPLC ubiquinone Methods; three independent\n\
+    \        sets are reported.\n      cache_path: evidence/PF01947/pfaff-2014.txt\n\
+    \      cache_sha256: e38c94ae440ac7787de55bb391b78667eaf749846c41dda44059ebbc6e0b0440\n\
+    - graph_id: sll1797-native-growth-rescue-2014\n  title: Sll1797 disruption impairs\
+    \ growth and4HB supplementation rescues it\n  scope: Pfaff2014 Figure9A liquid-culture\
+    \ comparisons; Figure9B supports the growth deficit on washed-cell\n    plates.\n\
+    \  context: Pasteur Collection Synechocystis PCC6803, sll1797::aph versus parental\
+    \ WT; BG11,30C,16-h light/8-h\n    dark. Added100-uM4HB compared with unsupplemented\
+    \ mutant liquid culture.\n  family_mapping: P73322 v1 reference, PF01947 2-130.\
+    \ Whole-protein insertional disruption; tested PCC6803\n    strain is not independently\
+    \ shown sequence-identical to the Kazusa reference.\n  taxon: NCBITaxon:1148\n\
+    \  scope_status: PHENOTYPIC\n  limitations: Preculture supplementation/carryover\
+    \ and general developmental effects are not fully excluded;\n    liquid washing\
+    \ is less explicit than plate washing. Chemical rescue is not genetic complementation\n\
+    \    or proof of a direct growth mechanism.\n  nodes:\n  - node_id: loss\n   \
+    \ label: sll1797::aph without added4HB\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:P73322\n  - node_id: rescue\n    label: Added100-uM4HB to sll1797::aph\
+    \ culture\n    node_type: PERTURBATION\n  - node_id: growth\n    label: BG11 liquid-culture\
+    \ growth\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: insertion-growth-loss\n\
+    \    subject: loss\n    predicate: decreases\n    object: growth\n    mechanism:\
+    \ The disrupted strain grows poorly relative to WT under the unsupplemented Figure9A\
+    \ comparison.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:24337576\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC3908401/\n      snippet: Sll1797 produced\
+    \ 4-hydroxybenzoate\n      explanation: Figure9A/B visually inspected with growth\
+    \ Methods; PCR segregation was reported and\n        Figure8 transcript context\
+    \ was read.\n      cache_path: evidence/PF01947/pfaff-2014.txt\n      cache_sha256:\
+    \ e38c94ae440ac7787de55bb391b78667eaf749846c41dda44059ebbc6e0b0440\n  - edge_id:\
+    \ hb-growth-rescue\n    subject: rescue\n    predicate: increases\n    object:\
+    \ growth\n    mechanism: Added4HB rescues growth of the disrupted strain in its\
+    \ matched liquid-culture comparison;\n      no measured PQ restoration is asserted\
+    \ from this rescue.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:24337576\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC3908401/\n      snippet: Sll1797 produced\
+    \ 4-hydroxybenzoate\n      explanation: Figure9A supplemented versus unsupplemented\
+    \ mutant curves visually inspected; two independent\n        sets reported.\n\
+    \      cache_path: evidence/PF01947/pfaff-2014.txt\n      cache_sha256: e38c94ae440ac7787de55bb391b78667eaf749846c41dda44059ebbc6e0b0440\n\
+    - graph_id: sll1797-native-pq-2014\n  title: Sll1797 disruption lowers OD-normalized\
+    \ plastoquinone\n  scope: Pfaff2014 Table1, sll1797::aph versus WT HPLC lipid\
+    \ comparison.\n  context: PCC6803 liquid cultures; prenyllipid Methods include\
+    \ radiolabeled4HB feeding before extraction.\n    Exact Table1 supplementation\
+    \ history remains unresolved; values are normalized to A730.\n  family_mapping:\
+    \ Sll1797 reference P73322 v1, PF01947 2-130; whole-protein aph disruption in\
+    \ Pasteur\n    PCC6803, not an isolated-domain perturbation.\n  taxon: NCBITaxon:1148\n\
+    \  scope_status: PHENOTYPIC\n  limitations: Cell counts per A730 differ, so this\
+    \ is not a per-cell comparison. Printed units need independent\n    checking.\
+    \ Phylloquinone is not similarly reduced. No direct Sll1797-to-PQ conversion,\
+    \ PQ rescue or\n    universality is claimed.\n  nodes:\n  - node_id: loss\n  \
+    \  label: sll1797::aph in Table1 lipid cultures\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:P73322\n  - node_id: pq\n    label: Plastoquinone\
+    \ content per A730\n    node_type: STATE\n  edges:\n  - edge_id: insertion-pq-loss\n\
+    \    subject: loss\n    predicate: decreases\n    object: pq\n    mechanism: Table1\
+    \ reports markedly lower OD-normalized PQ in the disrupted strain; the underlying\n\
+    \      multienzyme pathway is not represented as one direct step.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:24337576\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3908401/\n\
+    \      snippet: Sll1797 produced 4-hydroxybenzoate\n      explanation: Table1\
+    \ HTML, Results and prenyllipid Methods inspected; at least four independent sets,\n\
+    \        supplement and unit limits retained.\n      cache_path: evidence/PF01947/pfaff-2014.txt\n\
+    \      cache_sha256: e38c94ae440ac7787de55bb391b78667eaf749846c41dda44059ebbc6e0b0440\n\
+    - graph_id: sll1797-native-oxygen-2014\n  title: Sll1797 disruption lowers chlorophyll-normalized\
+    \ oxygen evolution\n  scope: Pfaff2014 Table1 photosynthesis readout, not directly\
+    \ measured electron flux.\n  context: PCC6803 sll1797::aph versus WT; harvested\
+    \ cells resuspended in BG11 at equal chlorophyll, oxygen\n    electrode at30C\
+    \ under white light.\n  family_mapping: Sll1797 reference P73322 v1, PF01947 2-130;\
+    \ insertional whole-protein loss in Pasteur\n    PCC6803.\n  taxon: NCBITaxon:1148\n\
+    \  scope_status: PHENOTYPIC\n  limitations: General physiological impairment and\
+    \ intervening mechanisms remain unresolved. Oxygen,\n    PQ and growth are separate\
+    \ outcomes; no transitive causal chain is asserted. Printed rate units require\n\
+    \    independent checking.\n  nodes:\n  - node_id: loss\n    label: sll1797::aph\
+    \ in the oxygen assay\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:P73322\n\
+    \  - node_id: oxygen\n    label: Oxygen evolution per chlorophyll\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: insertion-oxygen-loss\n    subject: loss\n\
+    \    predicate: decreases\n    object: oxygen\n    mechanism: Table1 reports reduced\
+    \ chlorophyll-normalized oxygen evolution in the disrupted strain\n      under\
+    \ the specified illumination assay.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:24337576\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3908401/\n      snippet:\
+    \ Sll1797 produced 4-hydroxybenzoate\n      explanation: Table1 and Oxygen Measurement\
+    \ Methods inspected; the electrode measures oxygen evolution,\n        not an\
+    \ isolated Sll1797 electron-transfer activity.\n      cache_path: evidence/PF01947/pfaff-2014.txt\n\
+    \      cache_sha256: e38c94ae440ac7787de55bb391b78667eaf749846c41dda44059ebbc6e0b0440\n\
+    - graph_id: sll1797-markerless-growth-rescue-2025\n  title: Independent Sll1797\
+    \ deletion shows4HB-dependent plate growth\n  scope: Du2025 Figure2F caption and\
+    \ essential-gene deletion Results.\n  context: Glucose-tolerant PCC6803 from D.\
+    \ Bhaya, markerless delta-sll1797 versus WT; BG11 plates with\n    or without0.1mM4HB.\
+    \ General Methods specify buffered BG11,30C and continuous white light.\n  family_mapping:\
+    \ Locus Sll1797, reference P73322 v1 PF01947 2-130. PCR-complete segregation is\
+    \ reported;\n    exact sequence equivalence to Kazusa reference is not independently\
+    \ verified.\n  taxon: NCBITaxon:1148\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ Figure image unavailable; caption assigns genotype/growth to2E/2F while Results\
+    \ cite2D/2E.\n    No native genetic complementation or PQ/oxygen assay in this\
+    \ comparison. Rendered Methods light unit\n    is ambiguous. Distinct strain/deletion\
+    \ from Pfaff2014.\n  nodes:\n  - node_id: loss\n    label: Markerless delta-sll1797\
+    \ without4HB\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:P73322\n\
+    \  - node_id: rescue\n    label: Added0.1mM4HB to delta-sll1797 plates\n    node_type:\
+    \ PERTURBATION\n  - node_id: growth\n    label: Growth on BG11 plates\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: deletion-plate-growth-loss\n    subject: loss\n\
+    \    predicate: decreases\n    object: growth\n    mechanism: The independent\
+    \ deletion shows reported plate-growth loss without4HB relative to the WT\n  \
+    \    comparison.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:39702692\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC11808434/\n      snippet: Growth of\
+    \ the wild type\n      explanation: Primary XML Results, Figure2F caption and\
+    \ strain/growth Methods; image and exact historical\n        sequence not inspected.\n\
+    \      cache_path: evidence/PF01947/du-2025.txt\n      cache_sha256: ed357a94a63daa897a113a0dc350b3cb5274558621dcfeec39718978469d276a\n\
+    \  - edge_id: hb-plate-growth-rescue\n    subject: rescue\n    predicate: increases\n\
+    \    object: growth\n    mechanism: Added4HB supports growth of the deletion strain\
+    \ on BG11 plates; it is a chemical rescue,\n      not demonstration of all pathway\
+    \ intermediates.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:39702692\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC11808434/\n      snippet: Growth of\
+    \ the wild type\n      explanation: Matched with/without4HB comparison described\
+    \ in Results and Figure2F caption; caption/Results\n        panel discrepancy\
+    \ remains explicit.\n      cache_path: evidence/PF01947/du-2025.txt\n      cache_sha256:\
+    \ ed357a94a63daa897a113a0dc350b3cb5274558621dcfeec39718978469d276a\ncuration_events:\n\
+    - timestamp: '2026-10-12T07:28:14Z'\n  curator: Codex\n  action: CREATE\n  outcome:\
+    \ needs_followup\n  summary: Curate scoped PF01947 enzyme and Sll1797 phenotype\
+    \ graphs\n  history_record: history/records/PF01947/2026-10-12T072814Z-codex-c15c30.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: concern
+  summary: Frozen PF01947/former DUF98, IPR002800, EX_DUF and UNSCORED remain unchanged.
+    P9WIC5 v1 maps24-173 and the enzyme Methods identify H37Rv as source, distinct
+    from whole-cell Mt103. Sll1797/ycf21 P73322 v1 maps2-130, but Kazusa reference
+    and the two tested PCC6803 backgrounds are not independently clone-sequence verified.
+    E. coli UbiC P26602 maps PF04345 17-165; same reaction/complementation cannot
+    transfer its residue mechanism into this family. Archaeal AF1396 structure and
+    MJ0807 mapping establish context, not enzymatic function.
+  target_ids:
+  - PF01947
+  evidence_ids:
+  - identity
+  - primary
+  - rv2949c-chemistry
+  - independent-deletion
+  - source-coverage
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Two Rv2949c tag/host preparations retain separate paired4HB/pyruvate products;
+    coupled detection is distinguished from the underlying direct conversion. Product
+    inhibition is only a reduced assay readout with unresolved binding/coupling-interference
+    detail. Sll1797 has a4HB edge, not an unmeasured pyruvate edge. Host complementation
+    is not direct UQ synthesis. Native growth rescue is chemical, not genetic, and
+    does not establish PQ rescue. OD-normalized PQ and chlorophyll-normalized oxygen
+    are separate outcomes with unit/supplement uncertainty. Du provides independent
+    markerless deletion/rescue in another background, not duplicate Pfaff evidence.
+    Negative and association-only observations are not manufactured as causal edges.
+  target_ids:
+  - PF01947
+  evidence_ids:
+  - primary
+  - native
+  - rv2949c-chemistry
+  - independent-deletion
+  - source-coverage
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Historical clones, domain-only activity, residue mutations, GST-only controls,
+    inhibition-preparation assignment, Table1 supplement history/units and unavailable
+    Stadthagen/Du figure images remain open. Hashimi2010 was inspected at abstract
+    level; source-protein mapping and full evidence remain unresolved. Later PlqC/HMM
+    and whole-pathway studies, archaeal MJ0807/AF1396 and plastid Ycf21 require further
+    primary review. Structural or annotation presence is not a catalytic assay; nine
+    reviewed UniProt hits are not a census. No family-wide completeness or universal
+    essentiality is established.
+  target_ids:
+  - PF01947
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01947-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve assay/source discrepancies and extend member-specific coverage
+  description: Inspect missing original figures and supplement/clone details; resolve
+    Pfaff M56/M59, Table1 units and4HB culture history, Du Figure2E/F versus Results
+    D/E and light units, and product-inhibition preparation/coupling controls. Trace
+    imported Hashimi citation to its actual tested ubiC protein before mapping it
+    to PF01947. Assess remaining PlqC contexts and archaeal/plastid members without
+    transferring E. coli UbiC/PF04345 residues or whole-pathway outcomes. Curate supported
+    successor evidence and keep the partial pass IN_PROGRESS until full review requirements
+    are met.
+  target_ids:
+  - PF01947
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - rv2949c-chemistry
+  - independent-deletion
+  - source-coverage
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01947.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Inspect missing original figures and supplement/clone details; resolve
+    Pfaff M56/M59, Table1 units and4HB culture history, Du Figure2E/F versus Results
+    D/E and light units, and product-inhibition preparation/coupling controls. Trace
+    imported Hashimi citation to its actual tested ubiC protein before mapping it
+    to PF01947. Assess remaining PlqC contexts and archaeal/plastid members without
+    transferring E. coli UbiC/PF04345 residues or whole-pathway outcomes. Curate supported
+    successor evidence and keep the partial pass IN_PROGRESS until full review requirements
+    are met.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01947
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Pfaff Figures4/5/6/9 visually inspected; Table1 HTML and pertinent primary Methods/Results
+  read. Stadthagen full primary author-uploaded browser text/captions read, images
+  unavailable; publisher/direct downloads403. Du primary XML Methods/Results/caption
+  read, image unavailable after page challenge and403 figure/PDF responses. Later
+  PlqC selected XML paragraphs and RCSB metadata inspected; no raw-data replication
+  or expert-independent review.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

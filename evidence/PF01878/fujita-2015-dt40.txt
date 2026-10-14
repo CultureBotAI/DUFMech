@@ -1,0 +1,27 @@
+PF01878 / EVE. Inspected 2026-10-11.
+Fujita et al., PMID:25607658, doi:10.1371/journal.pone.0116579.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4301804/
+Methods and Results; original Figures6-8, S1/S2 and TableS2 inspected.
+Minimal quotations: "shRNA-mediated knocking-down"; "RNAi rescue experiment";
+"Interaction of MYH9 with the Pax5 1A promoter region."
+
+Factual assay ledger:
+DT40 chicken B-cell derivatives, stable pSUPER-Neo shRNA Seq3/Seq4,
+two clones each versus shGFP controls. RT-PCR readouts normalized to GAPDH,
+mean/SEM,n=3. Fig6D/E: Pax5 protein and total/1A/1B transcripts decrease,
+but remain nonzero. S1A: AID mRNA decreases; S1B: surface IgM retained.
+Rescue uses DT40-derived full-length cDNA, N-terminal3xFLAG, Seq3-resistant
+silent substitutions, not an EVE fragment. Fig6F/G: two expressing rescue
+clones recover Pax5 protein/transcripts toward control. S2: two clones with
+undetected rescue protein fail to recover; some lanes reused in Fig6F.
+Fig7B anti-MYH9 ChIP: Seq3#2 reduces upstream Pax5-locus enrichment;
+rescue#2 increases it, especially-3.3/-1.3/-0.5kb, not a uniform effect
+at all six amplicons. Percent input,n=3. Rescue not uniformly complete.
+Fig7C/D: two shMYH9 clones lower Pax5 protein/total/1A/1B transcripts.
+Fig8: reciprocal transcript measurements do not show corresponding Thy28
+or MYH9 depletion. Anti-FLAG coIP/MS supports association, not purified
+binary binding or direct transcriptional catalysis. No MYH9 rescue reported.
+TableS2 primers27165/27166 target full-length cThy28 termini; silent-mutant
+primers27205/27206. Exact DT40 insert sequence is not deposited here.
+Fig9's transcription-machine and chromosomal-contact routes are proposals,
+not observed edges. ChIP enrichment is not proof of direct DNA binding.

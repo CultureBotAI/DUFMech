@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF17042
+  path: curation/families/PF17042.yaml
+session:
+  id: 2026-10-11T045921Z-codex-747a47
+  timestamp: '2026-10-11T04:59:21Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate intact ReDtnK activity with its C-terminal domain mapping
+  details: Retain the same Q0K4F6 D-threonate kinase experiment as PF07005 with an
+    explicit PF17042 mapping. Primary kinetic results concern intact DtnK; the isolated
+    C-terminal domain was not shown sufficient. Shared evidence is not independent
+    experimental replication.
+  sections:
+  - causal_graphs

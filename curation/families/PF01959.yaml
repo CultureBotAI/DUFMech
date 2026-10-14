@@ -1,0 +1,79 @@
+pfam_id: PF01959
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01959
+discussions:
+- discussion_id: pf01959-causal-context-coverage
+  prompt: Reconcile the reported joint-assay yields and extend independently mapped member contexts.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Purified MJ0400 plus MJ1249 supports product formation, but the reported quantitative yields conflict with the stated substrate amounts and do not resolve an isolated PF01959 mechanism.
+  evidence:
+  - {reference: 'PMID:15182204', supports: PARTIAL, evidence_source: primary_publication, explanation: 'Methods, Figure3 and Table2 were inspected, including original PDF pages3/7/9. Rows9/10 report330nmol although stated inputs contain200nmol ASA and275nmol DKFP; the air/argon descriptions also conflict.'}
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Resolve concentration, volume and product-quantitation discrepancies before using absolute yields or stoichiometry. Obtain raw traces, replicate details and construct sequences; inspect additional members and GriH full experiments. Retain joint-protein scope, buffer/readout differences and unmeasured microsteps. All earlier corpus follow-ups remain open.
+- discussion_id: pf01959-cellular-negative-and-grih-divergence
+  prompt: Keep the MMP0006 negative phenotype and bacterial GriH chemistry separate from archaeal joint-enzyme assays.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: A mapped archaeal AroB' disruption does not require aromatic amino acids or PABA under the tested growth conditions; bacterial GriH has a distinct product and reported cofactor context.
+  evidence:
+  - {reference: 'PMID:17010158', supports: SUPPORT, evidence_source: primary_publication, explanation: 'S140 disrupts MMP0006/aroB prime and grows in acetate-containing minimal medium. AroA prime deletion/rescue strains S170/S176 target another gene; their phenotypes cannot be assigned here.'}
+  - {reference: 'PMID:17003031', supports: PARTIAL, evidence_source: primary_publication, explanation: 'Only the primary abstract was inspected for GriH 3-amino-4-hydroxybenzoate formation. Full assays and construct boundaries remain unreviewed; no observed GriH edge is added.'}
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Q6M1B0/MMP0006 has PF01959 1-173 and PF26558 187-361. S140 fractional labeling is not absolute pathway flux, and no replacement enzyme is identified. A0JC76/GriH has PF01959 30-208 and PF26558 221-396; its current sequence matches B1VTI7, not an independent experiment. Retrieve full GriH paper and controls. No universal essentiality, dispensability or NAD dependence is inferred.
+causal_graphs:
+- graph_id: methanocaldococcus-joint-phosphate-assay-2004
+  title: MJ0400 and MJ1249 jointly generate the measured DHQ-related product pool
+  scope: Purified full-length Methanocaldococcus jannaschii MJ0400 and MJ1249 expressed separately in E. coli BL21-CodonPlus(DE3)-RIL; the causal source is the complete two-enzyme assay, not an isolated domain.
+  context: White2004 Table2 rows1-3 and Methods p7620; 12.8ug MJ0400 plus35.7ug MJ1249, DKFP1.9mM and ASA1.4mM in145ul phosphate9.7mM pH7.2,30min60C under argon. Single-enzyme controls are each below0.012nmol; the pair reports7nmol summed DHQ and DHB by derivative GC-MS with quinic-acid internal standard.
+  family_mapping: The paper identifies MJ1249 as Q58646; current v1 reference is361aa with PF01959 1-173 and PF26558 187-361, strain JAL-1/DSM2661/ATCC43067. MJ0400/Q57843 is a separate required assay partner; no PF01959 assignment is made for its activity. Historical plasmid sequences were not independently reconstructed.
+  taxon: NCBITaxon:243232
+  scope_status: MECHANISTIC
+  limitations: The output sums DHQ and its reported downstream DHB readout, not a pure DHQ yield. No isolated-domain sufficiency, cellular essentiality, residue-level chemistry or direct observation of every intermediate is established. MJ0400 preparation contained a small chloramphenicol-acetyltransferase contaminant. No replicate/error estimates or raw chromatograms were reviewed.
+  nodes:
+  - {node_id: joint-mix, label: MJ0400 plus MJ1249 with DKFP and ASA in the phosphate assay, node_type: ACTIVITY, grounding: ['UniProtKB:Q58646', 'UniProtKB:Q57843']}
+  - {node_id: product-pool, label: Measured combined DHQ and DHB product pool, node_type: STATE}
+  edges:
+  - edge_id: joint-product-formation
+    subject: joint-mix
+    predicate: produces
+    object: product-pool
+    mechanism: The reconstituted pair generates a product signal above both single-enzyme controls. DIRECT describes the measured biochemical reaction of the complete mixture, not an elementary MJ1249-only reaction or isolated N-terminal domain catalysis.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:15182204', source_url: 'https://doi.org/10.1021/bi0495127', snippet: Quantitation of DHQ Generated with Purified Recombinant Enzymes Incubated with Precursors, explanation: 'Table2 rows1-3 with footnote and Methods p7620 define the single-enzyme controls, joint assay and combined-product readout; original table was visually inspected.', cache_path: evidence/PF01959/white-2004-joint-enzyme-assays.txt, cache_sha256: da40baca40eff0bc28e659668f17453d7587803d11071c84c379daccda76a114}]
+- graph_id: methanocaldococcus-joint-pyridine-assays-2004
+  title: Separate NAD and NADP joint assays produce the DHQ-derived readout
+  scope: Full-length MJ0400 plus MJ1249 preparations assayed together with alternative added pyridine nucleotides; not independently sufficient MJ1249, NAD or NADP.
+  context: White2004 Table2 rows10/11,125ul with Tris28mM pH7.5, MgCl2 5.6mM, ASA1.6mM and DKFP2.2mM,30min60C. The same12.8ug MJ0400 and35.7ug MJ1249 are used. Postreaction NaBH4 converts DHQ to quinic acid, assayed by GC-MS with shikimate internal standard. NAD and NADP are tested separately; their individual concentrations are not specified in Table2.
+  family_mapping: Intact MJ1249/Q58646 v1 contains PF01959 1-173 and PF26558 187-361; MJ0400/Q57843 supplies a separate upstream activity. Full-protein and multienzyme context are not transferred to the isolated domain or to bacterial GriH.
+  taxon: NCBITaxon:243232
+  scope_status: MECHANISTIC
+  limitations: Qualitative product formation only. The paper reports330nmol for the NAD condition and150nmol for NADP, but330nmol exceeds the stated200nmol ASA and275nmol DKFP inputs; absolute yield and stoichiometry remain unresolved. The footnote says both in air and all samples under argon. Buffer and readout differ from rows1-3, so no clean cofactor fold-stimulation is inferred. NADH formation, transient intermediates and catalytic residues are not directly measured here.
+  nodes:
+  - {node_id: nad-mix, label: MJ0400 plus MJ1249 with DKFP and ASA in the NAD-containing assay, node_type: ACTIVITY, grounding: ['UniProtKB:Q58646', 'UniProtKB:Q57843']}
+  - {node_id: nad-product, label: DHQ-derived quinic-acid readout after the NAD assay, node_type: STATE}
+  - {node_id: nadp-mix, label: MJ0400 plus MJ1249 with DKFP and ASA in the NADP-containing assay, node_type: ACTIVITY, grounding: ['UniProtKB:Q58646', 'UniProtKB:Q57843']}
+  - {node_id: nadp-product, label: DHQ-derived quinic-acid readout after the NADP assay, node_type: STATE}
+  edges:
+  - edge_id: nad-assay-product
+    subject: nad-mix
+    predicate: produces
+    object: nad-product
+    mechanism: The complete NAD-containing reaction yields the product-associated GC-MS signal after chemical reduction. The edge retains the reported qualitative observation, not the inconsistent absolute amount, an enzyme-catalyzed quinic-acid reaction or an isolated MJ1249 microstep.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:15182204', source_url: 'https://doi.org/10.1021/bi0495127', snippet: the amount of quinic acid observed., explanation: 'Table2 row10, footnote and recombinant-assay Methods specify the chemically converted readout; reported yield and oxygen-condition conflicts are retained in limitations.', cache_path: evidence/PF01959/white-2004-joint-enzyme-assays.txt, cache_sha256: da40baca40eff0bc28e659668f17453d7587803d11071c84c379daccda76a114}]
+  - edge_id: nadp-assay-product
+    subject: nadp-mix
+    predicate: produces
+    object: nadp-product
+    mechanism: The separate NADP-containing joint reaction yields the product-associated signal after chemical reduction. This is not simultaneous NAD-plus-NADP dependence, a cofactor-preference kinetic measurement or a family-wide specificity assignment.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:15182204', source_url: 'https://doi.org/10.1021/bi0495127', snippet: the amount of quinic acid observed., explanation: 'Table2 row11 and footnote distinguish NADP from NAD and define the postreaction GC-MS readout; alternative cofactor conditions are kept separate.', cache_path: evidence/PF01959/white-2004-joint-enzyme-assays.txt, cache_sha256: da40baca40eff0bc28e659668f17453d7587803d11071c84c379daccda76a114}]

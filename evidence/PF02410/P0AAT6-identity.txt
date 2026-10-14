@@ -1,0 +1,23 @@
+Identity retrieval: 2026-10-11.
+UniProt query: https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ArsfS%20AND%20organism_id%3A83333&format=json
+InterPro: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0AAT6/entry/pfam/PF02410/
+Structured API facts, not experimental evidence:
+primaryAccession: P0AAT6
+geneName: rsfS
+synonyms: rsfA, slm3, ybeB
+orderedLocusNames: b0637, JW5090
+organism: Escherichia coli (strain K12)
+taxonId: 83333
+entryVersion: 135
+sequenceVersion: 1
+length: 105
+md5: 6721040D4F79D96C0E941789ABF8C5BF
+RefSeq: NP_415170.4; genome NC_000913.3
+entry accession: PF02410
+fragment: 9-104, CONTINUOUS
+current entry_integrated: null
+UniProt separately lists IPR004394. Do not alter the frozen record's absent
+InterPro integration from this protein-level cross-reference.
+The paper identifies the expressed gene and the deletion locus as b0637.
+Reference coordinates are not a claim that residues 9-104 were isolated or that
+the BW25113 experimental strain was independently resequenced in this curation.

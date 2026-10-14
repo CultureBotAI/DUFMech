@@ -1,0 +1,52 @@
+PF01882 / Slr2013 primary-evidence extract, inspected 2026-10-11
+Kufryk and Vermaas (2003), PMID:14594835.
+doi:10.1128/jb.185.22.6615-6623.2003
+https://pmc.ncbi.nlm.nih.gov/articles/PMC262095/
+Locations: growth, mapping and oxygen-evolution Methods; Table 2;
+Results on Rg2 mapping, deletion attempts and alternate D2 backgrounds;
+Discussion; Figures 1 and 7 visually inspected.
+Minimal quotations:
+Mapping Results: "complemented the original T192H mutant to photoautotrophic growth"
+Abstract: "Truncation of Slr2013 by itself does not affect photosynthetic activity"
+
+Curator's factual notes, not a transcription:
+The PCC 6803 T192H parent carries the D2 mutation in psbDI and lacks psbDII.
+The Rg2 suppressor retains those changes and has slr2013 Y294Stop
+(UAU to UAA). Genomic-fragment mapping and PCR-amplified mutant-region
+transfer restored photoautotrophic growth to T192H. The mapped region
+includes slr2011/slr2012/slr2013/sll1924; possible cotranscription is noted.
+This is not an independently recreated single-base allele with reciprocal
+full-length Slr2013 rescue, nor a measured purified-domain reaction.
+
+PS I-retaining cells were grown in BG-11 at 30 C, 40 umol photons m^-2 s^-1,
+120 rpm in liquid culture; photomixotrophic conditions include 5 mM glucose.
+Selection of Rg2 used glucose-free BG-11 plates. Solid medium includes
+1.5% agar, 0.3% sodium thiosulfate and 10 mM TES-NaOH pH 8.2.
+The parental T192H maintenance plates include kanamycin, spectinomycin and
+atrazine; atrazine is not silently transferred to the oxygen assay.
+Table 2 reports means +/- SD from three independent experiments:
+                        photoautotrophic doubling (h)   O2 evolution
+wild type                       12.8 +/- 0.4             256 +/- 28
+T192H                           no growth                 0
+Rg2                             13.3 +/- 0.5             275 +/- 35
+T192T/Y294Stop                   13.4 +/- 0.7             248 +/- 32
+O2 units: umol O2 per mg chlorophyll per hour, not per cell or per protein.
+O2 assay: intact cells, Clark electrode, 5 ug chlorophyll/mL, 0.1 mM
+2,5-dimethyl-p-benzoquinone and 0.5 mM potassium ferricyanide; illumination
+above 580 nm at 1 mmol photons m^-2 s^-1. Assay temperature is not explicitly
+specified in this method; the growth temperature is not substituted.
+
+Figure 1: 77 K fluorescence, 435-nm excitation, normalized at 725 nm;
+Rg2 restores the 695-nm feature absent in T192H. This supports the cellular
+PS II interpretation, not a direct Slr2013 folding or protease mechanism.
+Figure 7 shows the 435-residue Slr2013 reference and Y294 stop position.
+An expected 293-residue product is inferred from the codon, not verified by
+a direct measurement of mutant protein length or abundance here.
+WT-D2 restoration in Rg2 gives T192T/Y294Stop with near-WT growth/O2.
+The slr2013 mutant PCR did not restore photoautotrophy to E69Q or
+V247M/A249T D2 mutants. The suppressor is condition-specific.
+Deletion constructs failed complete segregation; this is not a measured
+viable null-mutant phenotype or proof of a specific essential chemistry.
+PS I-less fluorescence/EPR comparisons also change the D2 background and
+are not assigned solely to Slr2013. Chaperone and protease roles remain
+alternative interpretations. Raw traces, microscopy and fits were not reanalyzed.

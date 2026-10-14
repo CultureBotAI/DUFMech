@@ -1,0 +1,57 @@
+PF01865 causal-graph evidence and gap ledger, 2026-10-11.
+Bounded research: Pfam/InterPro/UniProt reference and alias searches, Hsieh2017
+primary thesis methods/results/tables and selected original figures,
+Vermilya2026 final article methods/results and original Figures2/3, and the
+published supplement FigureS1 caption and TablesS2-S4. Repository absence
+searches included ignored and hidden curation/evidence/history/review files.
+No earlier PF01865 curation artifact was found in that scoped search.
+
+Pap: keep conditional-host uptake, operon restoration and high-copy E.coli
+experiments separate. Deletion polarity and translation coupling are unresolved.
+Positive R78A and D90A/H96Y uptake values contradict no-uptake prose. P75A
+eventually grows; do not call it a growth null. Table2-4 P75mis and other P75fs
+labels need exact allele verification. D160A protein-band prose and caption
+conflict. Bacteroides/Shewanella PapPit constructs and kinetic constants need
+member mapping and original Table3-25 review: the abstract and Results assign
+the reported affinity values inconsistently. These are not evidence-free
+members, but their incomplete review is not a completed causal assessment.
+
+PitR: the final2026 publication supersedes the2025 preprint. UniParc resolves
+the exact reference even though current UniProtKB gene-name queries returned
+no result. An InterPro filtered request failed on an HTTP header; this is not
+an absent-domain result. The first EuropePMC transfer timed out and produced
+an invalid ZIP; the second completed and its ZIP integrity was checked.
+Complete ZIP SHA-256:
+16d150e11206c5bc9876c16666ae5eddb22bd46e3848e45ebee99f338519d371
+Extracted supplement PDF SHA-256:
+71ec7c53085218dfb65f2193c886ed74be2dbf3364866f806371ed641dcbf275
+Preserve reporter/uptake/free-Pi/polyP-readout distinctions and both genetic
+background and pH. Main-text mM/uM typos do not override original figure axes.
+No direct PitR-PitA-PhoPR physical or catalytic chain is demonstrated by these
+retained whole-cell comparisons. Supplement TableS2 names phoU::erm even for
+the nominal single delta-phoU; do not infer a clean-deletion genotype from label.
+
+Additional primary leads, not completed reviews:
+- PMID9696772, DOI10.1128/jb.180.16.4219-4226.1998, S.meliloti pap/pit
+  context; PMID8013901 older ndvF genetic observations. Full assay review pending.
+- Hui Zhao2013 McMaster Pap-Pit thesis, cited by Hsieh; exact constructs and
+  primary figures not inspected here.
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC7326077/ (Shang2020), USA5002395
+  PhoU2. Selected deletion and metabolic-results sections read. Complementation
+  vector pRB473 in Methods conflicts with Figure3 pCN51 labeling; gene identity,
+  original figures and readout-specific rescue need verification. Do not merge
+  its polyP/ATP results with Newman's exopolyphosphatase-treated lysate assay.
+- DOI10.1128/msystems.01393-21 (Sulaiman2022): evolved isolates share ptr
+  E149K but also carry another mutation. These multi-mutation outcomes cannot
+  be assigned to E149K alone; transcriptional knockdown is a separate experiment.
+- PMID39660905, DOI10.1128/spectrum.02067-24: PitR/PhoU dimerization lead,
+  abstract inspected, full assay review pending. Binding is not transport causality.
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC5686610/ S.epidermidis PhoU2,
+  and 2016 Mechler pitA/pitR-dependence work remain member-specific leads.
+
+Remaining direct-mechanism gaps: exact native protein abundance and folding,
+transport reconstitution, separation of signaling from transport and growth,
+and direct tests of the thesis ligand/dimerization model. Do not invent edges
+from association or relabel these partial studies as family-wide characterization.
+Retain IN_PROGRESS and an open follow-up finding. No full-corpus completion,
+independent expert review, raw-data reanalysis or publication is claimed.

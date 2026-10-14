@@ -1,0 +1,25 @@
+Primary reference: PMID:18048925; doi:10.1099/mic.0.2007/011742-0
+Source URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC3019219/
+Published: December 2007; PMC availability is not the publication date.
+Accessed: 2026-10-11
+Inspected: main methods, Table 1, results and Figure 2; Figure 2 image visually inspected.
+
+Minimal attributed extracts:
+"the copZA promoter was expressed constitutively"
+"restored wild type regulation"
+
+Curator assay notes (paraphrase):
+CU1065 is a B. subtilis W168 attSPbeta trpC2 derivative. The reporter is
+SPbeta(PcopZA-cat-lacZ): HB7358 control, HB7352 csoR::spc and HB7356
+csoR::spc amyE::csoR-cat complemented strain. Null alleles use replacement.
+Overnight cultures were diluted 1:100 in LB, with or without 0.5 mM CuSO4,
+and sampled at mid-exponential growth. General growth conditions are 37 C,
+225 rpm. Figure 2A reports beta-galactosidase activity; its caption specifies
+three experiments and total N=7, not seven independent biological experiments.
+Without added copper, null-mutant reporter output exceeds control; ectopic
+csoR restores regulation. The graph retains this genetic reporter effect,
+not direct polymerase exclusion or measured native transcript abundance.
+The authors correct their earlier YhdQ/CueR claim: the wrong reporter had
+been transduced. New yhdQ nulls retain copper inducibility. This is a source
+correction, not evidence against CsoR. Figure 2B's growth phenotype is separate
+and not an adopted edge. Raw data were not reanalyzed.

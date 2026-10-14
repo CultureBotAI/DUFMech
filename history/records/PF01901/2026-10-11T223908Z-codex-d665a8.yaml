@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01901
+  path: data/families/PF01901.yaml
+session:
+  id: 2026-10-11T223908Z-codex-d665a8
+  timestamp: '2026-10-11T22:39:08Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain successor PF01901 strain-lineage and primary-context review
+  details: Saved partial scientific self-review with digest18b72f171e4f8e5944b53ffa944d5adcf36a77d2763d96b13a4ee0e9372ec331.
+    Official authority resolves ATCC700927 derivation from43895; exact historical
+    alleles and partial domain attribution remain unresolved. Seven graphs retain
+    eight indirect observed effects in separate contexts. The preceding review and
+    evidence are preserved; the same coverage issue remains open. No independent endorsement,
+    exhaustive family coverage or publication is claimed.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T224118Z-pf01901-strain-lineage-capsule-and-phage-context-followup/review.yaml

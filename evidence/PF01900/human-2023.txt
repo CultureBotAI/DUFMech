@@ -1,0 +1,61 @@
+Human RNase P study, PMID37831743, DOI10.1073/pnas.2307185120.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10589621/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10589621/supplementaryFiles
+Inspected2026-10-11:Results/Discussion,original Figures3-7; recovered complete
+supplement ZIP, PDFMethodspp1-6, originalFigS2p8 and captionspp11-12.
+Minimal quotation: "Substrate cleavage assays".
+
+F14 is HEK293 S100/tRNAArg gradient material (Fig2); F39 is HeLa
+S100/tRNATyr gel-filtration material (Fig1). They are not interchangeable.
+Fig2B recombinant Rpp14 alone does not degrade precursor/leader with Mg.
+F14 transcription complexes plus recombinant histidine-tagged Rpp14 yield
+larger early excised-leader signals (1-10min) and larger mononucleotide
+signals (5-40min) than fraction alone (Fig3). Substrate is internally labeled
+S.pombe pre-tRNASer pSupS1,110nt,28nt leader,with excess cold substrate.
+37C,MRP/TNET,Methodsdefault15mM MgCl2 (later passage10-20mM),150ng cold
+substrate,0.3U rRNasin,10mM DTT. Exact protein dose and full buffer composition
+defer to earlier methods and are not silently supplied. At least3 independent
+experiments. This is a fraction-plus-preparation effect, not demonstrated
+Rpp14 catalytic-site chemistry. Proximity in cryoEM is not catalysis proof.
+
+F39 plus recombinant Pop5 has reduced intact-precursor signal and lower
+excised-leader signal (Fig4A/B); Pop5 alone in this Mg-containing assay gives
+little mononucleotide signal. Crucially Fig4C at40min shows pair about0.95
+versus fraction alone1.0, NOT increased mononucleotide output. Do not copy
+the broad Results claim into an increasing40min edge. No quantitative rate
+of precursor loss is established.
+
+Fig5 omission of Rpp14 from freshly reconstituted H1RNA plus eight proteins
+lowers tRNA and leader product bands relative to the complete assembly.
+It retains activity; it is not an absolute requirement or autonomous nuclease.
+Reconstituted/purified RNase P does not degrade the excised leader in the
+Mg-containing condition. The other seven proteins remain; exact doses/time
+are not independently established in the inspected text.
+
+SupplementFigS2C, lanes8/12, shows decreased intact precursor and a Mono band
+with Rpp14-enriched or Pop5-enriched recombinant preparations without added
+divalent ions. Exo buffer50mM KCl,15mM Na2HPO4,20mM Tris8.0,
+100-300ng cold pre-tRNASer,0.3U rRNasin,10mM DTT. Refolding on Ni resin,
+400/500mM imidazole eluates,roughly95%purity by stained SDS-PAGE.
+Rpp20/Rpp25 controls do not reproduce this. Exact dose/time/tag termini
+unresolved; residual nuclease contamination is not excluded by95%purity.
+Retain preparation-specific effects with UNRESOLVED directness, not direct
+phosphorolysis, directionality or an identified active site.
+
+Fig6,HeLa myc-Rpp14 overexpression42h: S100 tRNAArg transcription complexes
+shift active fractions toward20-24 rather than14-20 in untransfected controls.
+Leader accumulation is not greater mononucleotide formation. This is ex-vivo
+sedimentation, not demonstrated intracellular aggregation.
+Figure heading15-40% glycerol conflicts with text/Methods15-35%; retain both.
+At least3 assays; exact myc-cDNA insert sequence not verified.
+
+Fig7,HEK293 RPP14 shRNAsA/Bcoding,C3UTR,24/48/72h. Controls PEI alone,
+not non-targeting shRNA. S20 tRNAArg transcription shows higher precursor
+and lower mature-tRNA bands at24/48h with recovery toward72h.
+RPP14 mRNA declines; protein knockdown was NOT established by western.
+Transcription persists,not proof of unchanged transcription rate.
+Endogenous precursor readouts vary by target/shRNA/time; do not assert every
+shRNA increases every precursor or that all tRNA species are affected.
+No shRNA-resistant RPP14 rescue shown. Lys/His and initiator-Met data remain
+contextual; no broad universal processing edge. Failure to propagate CRISPR
+clones is not a quantified viability phenotype.

@@ -1,0 +1,27 @@
+PF01724 / DUF29 primary thesis assessment, inspected 2026-10-11
+Morne Graham Du Plessis (2007), Mining a Chinese hyperthermophilic metagenome,
+PhD thesis, University of the Western Cape.
+https://hdl.handle.net/10566/13510
+https://uwcscholar.uwc.ac.za/bitstreams/cf0d3cd6-b333-44aa-b798-2017bd380e80/download
+Selected PDF pages 131, 156, 159-161, 199 (printed 111, 136, 139-141, 179).
+Figure 5.12 on printed page 141 was visually inspected. Not a full-thesis review.
+Minimal quotation, printed page 179: "could only be achieved with low confidence"
+
+Curator assessment: Table 5.1 maps metagenomic ORF1 to DUF29 at 9-109 by
+MOTIF/Pfam, score 85.4, E=4.7e-24. The functional discussion and Figure 5.12
+combine sequence/structure prediction, gene-neighborhood analysis and PFP
+predictions to suggest nucleotide interaction or regulation. Their arrows are
+an inference workflow, not measured biological state transitions. The selected
+conclusion retains low confidence and only a broad predicted binding class.
+No demonstrated DUF29 substrate reaction or directed perturbation effect is
+provided in these inspected sections. The separate TC11pol enzyme experiments
+must not be transferred to ORF1; ORF2/Usp is also a different sequence.
+ORF1 was not mapped here to a modern exact protein accession or taxon.
+The thesis's neighborhood organism labels are not independently verified.
+
+Bounded searches: DUF29/PF01724 with function, mutant, knockout,
+characterization and activity; Q2RPE2/Rru_A3208; sll0742/sll0743/slr0416.
+Structural deposit, computational predictions, expression/neighborhood and
+mutant-library availability were leads, not identified causal assays in the
+inspected material. A Dolichospermum population-genomics paper remains an
+uninspected lead. This is not an exhaustive claim that function is absent.

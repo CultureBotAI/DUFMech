@@ -1,0 +1,25 @@
+Primary reference: PMID:29324779; doi:10.1371/journal.pgen.1007147
+Source URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC5764234/
+Accessed: 2026-10-11
+Inspected: Methionine synthesis in Desulfovibrio vulgaris, Figure 3 (image inspected), Table 2, strains/media and mutant-fitness methods.
+
+Minimal attributed extracts:
+"were important for growth in minimal media"
+"mutants in these genes were rescued by added methionine"
+
+Curator notes (paraphrase):
+The focal locus is DvMF_1464 in D. vulgaris Miyazaki F, not Hildenborough.
+Figure 3 measures pooled transposon-mutant relative fitness by barcode abundance,
+not a clean deletion, purified reaction or individual growth curve. Minimal
+lactate/sulfate conditions give negative fitness; adding L-methionine rescues it.
+The caption specifies 1 or 10 mM methionine. D,L-cysteine at 1 mM gives partial
+rescue; the reported mean -1.0 pools three genes, not just DvMF_1464.
+General fitness methods recover pools in rich medium, transfer at OD600 0.02,
+and compare barcode abundance before growth and at saturation by sequencing.
+Miyazaki-specific methods specify anaerobic, unshaken 10-mL Hungate cultures
+with 1 mM sulfide; generic fitness methods say 5 mL. Exact Figure 3 volume,
+temperature, insertion-level contributions and incubation duration remain open.
+Nutritional rescue is not gene complementation. Cross-feeding and insertion
+polarity are not excluded. Cofitness with other pathway genes does not establish
+direct physical partners or a resolved catalytic route. The homoserine-bypass
+argument involves another locus and is not an observed DvMF_1464 reaction.

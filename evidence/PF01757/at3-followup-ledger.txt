@@ -1,0 +1,44 @@
+PF01757 remaining coverage ledger, 2026-10-11, Codex
+This is a partial search/assessment record, not a family-wide negative result.
+Hidden/ignored curation, history, evidence and review paths were included in
+the pre-curation PF01757/OatA/Acyl_transf_3 search; no earlier hits were found.
+
+Searches included OatA AT3 Jones2021, newer OatA structural work, and Listeria
+OatA21844299; live InterPro PF01757 references were also inspected as leads.
+Only selected SaOatA2021 experiments have been curated in this increment.
+
+Primary computational study:
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9833829/
+https://elifesciences.org/articles/81547
+doi:10.7554/eLife.81547
+Search-retrieved full passages for the donor-entry/MD sections and Ideas and
+speculation were inspected; publisher/PMC direct opens gave challenges.
+OafB A0A0H2WM30 structural models, steered/equilibrium MD and energy analyses
+support candidate donor entry and domain motions, not experimentally observed
+bond/proton transfer. They do not validate a SaOatA atomic catalytic triad.
+Residue correspondences, model Glu334 versus OatA E357, and the distinct
+OatA E154 proposal require care; no cross-protein residue substitution or
+universal topology is adopted here. Assess the experimental OafA/OafB studies
+and sequence mapping separately before adding their graphs.
+
+Primary uncurated member leads:
+PMID21844299, https://pmc.ncbi.nlm.nih.gov/articles/PMC3156107/
+Listeria EGDe lmo1291/OatA: retrieved abstract/results overview concerns PG
+acetylation, lysozyme susceptibility, macrophage and animal phenotypes. No
+constructs, figures, domain mapping or per-experiment causality audited yet.
+PMID32350117: SaOatA C-terminal structural/enzymatic study, outside the current
+PF01757 interval; contextual partner evidence, not standalone AT3 catalysis.
+PMID16980385 RHY1 hypoxia regulation and PMID16118202 NRF6 fluoxetine phenotype:
+InterPro-linked leads only, not inspected experiments or new family mechanisms.
+OpgC/IcaC and other acyl donor/acceptor types need separate curation. Do not
+turn SaOatA acetyl-CoA usage into a universal PF01757 specificity rule.
+The 2026 search hit PMID41917001 concerns CASD1/SLC33A1, not new SaOatA
+structural proof; membership and experimental scope remain unassessed.
+
+SaOatA follow-up: obtain SI Methods/TablesS2-S4 and raw/clone provenance;
+resolve MS lysine-mutant reference and untreatedY206 modification, Figure3D
+R25A/R25K caption, pH/donor/time/solvent discrepancies, topology strain versus
+purified clone identity, and exact detergent/tag recipes. Inspect remaining
+35-variant cellular contexts, unreviewed supplements and earlier/later member
+studies. Validate any relay with a method distinguishing newly transferred
+acetyl from expression-host/preloaded modification. Retain IN_PROGRESS.

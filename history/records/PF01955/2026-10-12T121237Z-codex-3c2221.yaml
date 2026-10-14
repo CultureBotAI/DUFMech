@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01955
+  path: curation/families/PF01955.yaml
+session:
+  id: 2026-10-12T121237Z-codex-3c2221
+  timestamp: '2026-10-12T12:12:37Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add scoped Rhodobacter CbiZ conversion, condition, growth and corrinoid-profile
+    graphs
+  details: Added four graphs and thirteen experimental edges from Gray2009 main text,
+    Tables1-3 and original Figures1-4. Preserved the previous ten graphs and twenty-five
+    edges exactly. Three minimal evidence ledgers retain Q3J3R7v1/RSP_2406 mapping,
+    resolved CDS-plus-flank reverse primers, retained MBP/His6 tags, cyano-product
+    interpretation, pH-buffer confounding, assay negatives, separate acetate growth
+    and succinate profiles, and inaccessible supplements. Added an OPEN construct/control
+    discussion and updated remodeling progress. Whole family, earlier studies, historical
+    clones and all prior follow-ups remain incomplete; IN_PROGRESS retained. Overlay
+    schema and evidence checks passed; full projection and successor review follow.

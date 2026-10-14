@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01933
+  path: data/families/PF01933.yaml
+session:
+  id: 2026-10-12T034847Z-codex-eee6a1
+  timestamp: '2026-10-12T03:48:47Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of PF01933 causal contexts
+  details: Saved native structured review 20261012T035103Z-pf01933-cofd-fbia-and-glmr-separated-causal-contexts
+    for digest286191fbde6eec7333c8ad9a6a603b6690c5492cb2ac27d8cf30c56aabbc6cc1. Same-agent
+    assessment of seven graphs and ten observed effects; evidence hashes and primary
+    quotations verified. Construct numbering, source units, missing supplements, uridyltransferase
+    and additional member coverage remain open. Native NEEDS_FOLLOWUP; IN_PROGRESS,
+    no independent endorsement or full scientific/publication completion.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T035103Z-pf01933-cofd-fbia-and-glmr-separated-causal-contexts/review.yaml

@@ -1,0 +1,63 @@
+Yang et al. 2003, PMID:12496312; doi:10.1074/jbc.M211892200.
+Inspected 2026-10-12 by Codex.
+Canonical reference: https://pubmed.ncbi.nlm.nih.gov/12496312/
+Author-uploaded full text and PDF text inspected at:
+https://www.researchgate.net/publication/6147125_Aspartate_Dehydrogenase_a_Novel_Enzyme_Identified_from_Structural_and_Functional_Studies_of_TM1643
+https://www.researchgate.net/profile/Alexander-Yakunin/publication/6147125_Aspartate_Dehydrogenase_a_Novel_Enzyme_Identified_from_Structural_and_Functional_Studies_of_TM1643/links/02e7e529f864d5bda1000000/Aspartate-Dehydrogenase-a-Novel-Enzyme-Identified-from-Structural-and-Functional-Studies-of-TM1643.pdf
+Publisher PDF/HTML requests returned 403; author PDF text was accessible
+through web retrieval, but screenshots timed out and direct download returned
+403. Figure5 legend/text and TableII were read; no original plot was visually
+inspected. No access-control bypass or numerical extraction from images.
+
+Minimal verbatim extracts (23 words total):
+"robust dehydrogenase activity"
+"NADPH and NADH were equally effective as electron donors."
+"were competitive inhibitors"
+"expected to produce iminoaspartate"
+"We propose therefore"
+
+Paraphrased assay ledger, pp8804-8807, Expression and Purification,
+Enzymatic Studies, Characterization of the TM1643 Dehydrogenase,
+Figure5A-C/legend and TableII:
+Full-length N-terminal His6 TM1643 was affinity purified after E. coli
+expression. The amino-acid assay monitored A340 increase at 70C using
+50 mM diethanolamine pH9.8, 5 mM amino acid and 1 mM NAD+ or NADP+.
+L-Asp supported cofactor reduction; D-Asp, L-Glu and Asn did not.
+The screen used amino-acid, organic-acid and alcohol pools; specific positives
+are not evidence of exhaustive substrate specificity across the family.
+Figure5 and TableII separately report NAD- and NADP-dependent kinetics.
+TableII L-Asp Km values are 0.067+/-0.008 mM with NAD and
+1.20+/-0.05 mM with NADP. These conditional values do not prove the
+physiological cofactor, domain sufficiency or a cellular NAD-production flux.
+
+The reverse assay monitored A340 decrease at 70C in a 1-ml reaction:
+50 mM Tris-HCl pH8.0, 100 mM ammonium sulfate, 0.1 mM EDTA,
+0.15 mM NADH or NADPH, 5 mM oxaloacetate and enzyme. The paper reports
+both donors active. This is NOT 100 mM NH4Cl and is not the oxidative
+pH9.8 assay. No direct product-specific L-Asp quantification is reported
+for this reverse reaction in the inspected text; retain the redox readout.
+
+L-malate and ammonium are reported as competitive inhibitors of oxidative
+activity, Ki 4.02+/-0.48 and 32.5+/-4.9 mM respectively. No inhibitor
+curve, matching counterion control, exact inhibitor-specific donor assignment,
+or binding experiment was inspected. L-Glu, succinate, fumarate, pyruvate,
+tartrate and D-malate did not affect the activity under the reported tests.
+These are scoped biochemical rate effects, not cellular inhibition claims
+or direct visualization of substrate-site occupancy. Ammonium inhibition
+in this direction must not erase its use in the different reverse assay.
+
+Product/interpretation boundary, pp8805 and8807, Figure2/legend and
+Possible Role for TM1643 in NAD Biosynthesis:
+The immediate iminoaspartate product is inferred, not directly identified.
+Ammonium was detected near-equimolar to NADH via a coupled enzyme assay;
+pyruvate was detected by two coupled assays (data not shown). Oxaloacetate
+was NOT detected. The authors infer unstable-imine hydrolysis followed by
+oxaloacetate decarboxylation under pH9.8/70C conditions. Do not represent
+TM1643 itself as an observed pyruvate-producing decarboxylase.
+The NAD-biosynthetic assignment relies on biochemistry and genomic context.
+A TM1643-NadA channeling complex is proposed, not demonstrated here.
+His193 general acid/base catalysis, a mobile 212-219 loop and substrate-induced
+closure are structural proposals without residue perturbation proof here.
+Asp oxidase, ASA-DH, homoserine dehydrogenase and inositol-phosphate synthase
+tests were negative in the stated source scope; several underlying data were
+not shown. No gene knockout/rescue or family-wide functional census was read.

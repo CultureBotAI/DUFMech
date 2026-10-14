@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01535
+  path: curation/families/PF01535.yaml
+session:
+  id: 2026-10-11T112157Z-codex-4fa265
+  timestamp: '2026-10-11T11:21:57Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curated HCF152 mini-PPR binding losses and partial rescues.
+  details: Added four observed biochemical-assay effects in two graphs after inspecting
+    primary Methods, Results, Discussion and Figures 2/3. Mapped K426 inside current
+    PF01535 and N464 outside it; retained fusion, missing-supplement, apparent-affinity
+    and Pet309 mapping limits. No family-wide or cellular mechanism and no REVIEWED
+    promotion.

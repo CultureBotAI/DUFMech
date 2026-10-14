@@ -1,0 +1,18 @@
+Sources:
+https://rest.uniprot.org/uniprotkb/search?query=%28gene%3AyaaA%29%20AND%20%28organism_id%3A83333%29&format=json&size=10
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A8I3/entry/pfam/PF03883/
+Accessed: 2026-10-11 UTC. Selected public annotation facts, not full responses.
+
+primaryAccession: P0A8I3
+geneName: yaaA
+orderedLocusNames: b0006, JW0005
+organism: Escherichia coli K12; taxonId: 83333
+sequenceVersion: 1; entryVersion: 127; length: 258
+sequence md5: 3918EEA8540AB18805C356C3E3096954
+entry accession: PF03883
+entry_protein_locations: start 1, end 243, CONTINUOUS
+entry_integrated: ipr005583
+
+The query also returns P0CF71 because insE6 has the synonym yaaA; it belongs to
+PF01527 and is not the tested peroxide-stress protein. Reference mapping does
+not replace experimental evidence or sequencing of each derivative strain.

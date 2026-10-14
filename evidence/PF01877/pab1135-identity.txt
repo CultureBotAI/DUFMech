@@ -1,0 +1,25 @@
+PF01877 identity assessment, inspected 2026-10-11.
+Frozen family: RNA_binding, historical DUF54/UPF0201, IPR002739;
+1082 proteins remain in scope, not all experimentally characterized.
+https://rest.uniprot.org/uniprotkb/Q9UXX8.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01877/protein/uniprot/Q9UXX8/
+Q9UXX8, sequence version 1, PAB1135/PYRAB17300, Pyrococcus abyssi
+GE5/Orsay, NCBITaxon:272844, 154 residues. PF01877 maps 9-132.
+Exact parsed FASTA comparisons match CAB50635.1 and WP_010868849.1.
+SHA256 of the unspaced amino-acid sequence:
+f7b0f6514ea78f7ee670809064c93f45abd030883ede735226d81b20d6c5c485
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=CAB50635.1,WP_010868849.1&rettype=fasta&retmode=text
+
+Luz2010 used GE5 genomic PCR, pET28a BamHI/XhoI, BL21-CodonPlus(DE3)-RIL,
+Ni-NTA purification and trypsin treatment. Figure1 reports removal of the
+His-tag plus a few N-terminal residues, but does not establish exact termini.
+Reference identity is verified; full retention of match 9-132 in the assayed
+proteolytic preparation is not independently sequence-verified.
+Reference residues R11/R13/K65/R106/H127/R129/K131 are inside the match;
+K133 is outside. These are model-suggested contacts, not tested causal residues.
+Figure4A includes the PAB1135 alignment; Figures4B/C are homology models,
+not an experimentally determined PAB1135-RNA complex.
+
+O58738/PH1010 is a distinct P. horikoshii protein. Structural similarity,
+genomic proximity to Rpp30 and database family naming do not establish
+PAB1135 membership in RNase P or exosome activity.

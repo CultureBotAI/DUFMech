@@ -1,0 +1,62 @@
+Chen YS et al. Crystal structure of an archaeal CorB magnesium transporter.
+Nature Communications 12:4028 (2021). PMID:34188059.
+DOI:10.1038/s41467-021-24282-7
+https://www.nature.com/articles/s41467-021-24282-7
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8242095/fullTextXML
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8242095/supplementaryFiles
+Accessed 2026-10-11. CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+Minimal quotation and curator paraphrase, not an unmodified full-text copy.
+Inspected transport Results, cloning/purification/reconstitution Methods,
+Figure 6 visually, Supplementary Figure 8 visually and its full caption,
+and Supplementary Table 1. Original XML SHA256:
+7e92cf5b19dc71e674fc2f768ffaf2b19333b3a2cf9e6b17e7ea9ad02b425369
+Supplementary PDF SHA256:
+f7e0606eba3cc439b2977ef09327df300657a24c121ba3bef54120c7a7325299
+
+Exact Results quotation: "increased transport activity"
+
+Figure 6a compares intact MtCorB and TtCorB, each at protein/lipid 1:30
+wt/wt, with empty liposomes. After a one-minute baseline, 5 mM external
+MgCl2 produces intravesicular magnesium accumulation in both protein samples,
+with substantially less accumulation for MtCorB in this lipid mixture.
+This difference is not a measurement of intrinsic turnover or native direction.
+Tt means Tepidiphilus thermophilus; Mt means Methanoculleus thermophilus.
+Cloning names MtCorB 1-426 and TtCorB 1-445, pET29a C-terminal His6 constructs.
+The shorter MtCorB delta-C crystallization construct is not the full-length
+construct named in Figure 6. Neither isolated transmembrane domain was tested.
+
+Methods: POPE/POPG 3:1, initially 5 mg/ml in 20 mM HEPES-KOH pH 7.5,
+100 mM KCl, 50 mM NaCl, 0.5 mM EDTA and 35 mM CHAPS. Mix protein with
+0.5 mg lipid for 20 min at room temperature, remove detergent with Sephadex
+G-50, load 50 uM mag-fura-2 using one freeze/thaw and 0.8-um extrusion,
+then remove external dye. Dilute 10 ul vesicles into 190 ul buffer without
+EDTA at 25 C. Read excitation 330/369 nm and emission 509 nm every 6 s
+for 10 min after addition, calibrating with 0.1% Triton and 12.5 mM EDTA.
+Empty controls receive matched HPLC buffer containing 0.05% UDM.
+The reconstitution Methods call both CorBs UDM-purified, whereas purification
+specifies DDM for MtCorB and UDM for TtCorB; the Mt detergent discrepancy
+remains unresolved. Figure captions specify three independent measurements,
+not explicitly three independent purifications or reconstitutions.
+
+Figure 6d: S26A, S30A and N76A increase magnesium accumulation versus WT.
+E33A and N80A are described as near WT; no zero-effect claim is adopted.
+Figure 6e: S117A, E118A, P121G and K122A decrease accumulation versus WT,
+but each retains signal above empty liposomes. These are not null proteins.
+Supplementary Figure 8c shows earlier/broadened size-exclusion peaks for
+several variants, particularly S26A, S30A and N76A. Figure 8d shows strong
+approximately 50-kDa bands for all reconstituted mutants. These controls
+support incorporation and purity, not identical folding, oligomeric state,
+orientation or active fraction. Do not infer an elementary coordination or
+helix-motion step from a substitution's net transport effect.
+
+Supplementary Figure 8a: with 5 mM external MgCl2, increasing TtCorB loading
+from 1:810 through 1:270 and 1:90 to 1:30 raises accumulation. Figure 8b:
+external MgCl2 of 0.75, 1.5, 3 and 5 mM gives increasing accumulation in
+the separate substrate series. Neither series establishes a Michaelis constant.
+Figure 6b: valinomycin under an outward K gradient increases the TmCorA
+control response but not TtCorB. Electroneutral exchange is an interpretation;
+counterion identity and stoichiometry were not measured. Figure 8e uses
+different ion concentrations and dye affinities, not directly comparable
+absolute selectivities. Structural models and simulations are not observed
+atomic transport trajectories. Other CNNM/CorC members, cellular assays and
+isolated CBS-domain ATP binding do not inherit these domain-level claims.

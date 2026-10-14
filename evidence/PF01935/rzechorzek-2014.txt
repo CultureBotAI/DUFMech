@@ -1,0 +1,55 @@
+PF01935 / SSO2251 assay ledger; accessed2026-10-12 UTC, Codex
+PMID25420454; DOI10.1038/ncomms6506; PMC4376295.
+https://www.nature.com/articles/ncomms6506
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4376295/
+Supplement: https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fncomms6506/MediaObjects/41467_2014_BFncomms6506_MOESM914_ESM.pdf
+Minimal source token: K154A
+Everything else below is curator paraphrase and assessment.
+
+Inspected publisher full text, primary XML, main PDF and supplement text.
+Visually inspected Figure4A-D and supplement FiguresS4-S5. Not raw-data reanalysis.
+Untagged HerA and NurA, native expression clones; functional variants generated
+from wild type. All graph claims concern full proteins and their complexes.
+
+Figure4A: phosphate-release ATPase assay with D58A nuclease-inactivated NurA.
+Supplement pp13-14:200ul,20mM Tris-HCl pH8,100mM NaCl,5percent glycerol,
+5mM MgCl2,400uM ATP,400nM DNA when supplied,30nM complex (HerA6:NurA2).
+Preassembly20min60C. Blunt or15nt 5'/3' overhang duplex substrates; three repeats.
+K154A and R142A/R381A lower release to undetectable levels. R381A reduces it,
+not completely for blunt DNA. R142A,K363A,D471A increase it for tested duplexes.
+Graphs select the5' overhang comparison so different substrates are not pooled.
+Increased turnover is not evidence of increased translocation or repair.
+The R142A/D471A no-DNA result and other double mutants remain uncurated followups.
+
+Figure4B and S4: intact5.3kb PCR DNA decreases over0,5,10,20,40min with complete
+WT HerA/WT NurA/ATP reaction. Quantified triplicates and S4 controls support
+activity of the joint preparation, not HerA-intrinsic nuclease chemistry.
+K154A,K363A,D471A reduce processing. R381A delays early processing, with the
+40min endpoint approaching WT; do not describe it as complete nuclease loss.
+Supplement p12 specifies5mM MnCl2,3mM ATP,20mM Tris pH8,100mM NaCl,1mM DTT,
+5percent glycerol,BSA,60C and1.25nM final DNA. Figure/S4 report2uM complex;
+Methods use2.5uM preassembly followed by dilution into40ul. Main Methods say
+5.5kb, but Figure/S4/primer-based supplement say5.3kb. Preserve those discrepancies
+instead of inventing one reconciled concentration. Only directional claims made.
+
+Figure4C/S5: native full HerA with D58A NurA unwinds54bp duplex plus25nt5' tail.
+Boiled and no-protein controls,30min60C,10nM DNA; caption0.46uM complex,
+Methods0.5uM. Supplement p12 includes3mM ATP,10mM magnesium acetate plus
+5mM MgCl2,Tris acetate,potassium acetate,NaCl,DTT,glycerol,BSA.
+K154A and R381A strongly reduce unwound product; K363A reduces it modestly.
+D471A is NOT an unwinding-loss result here: plotted product is above WT despite
+lower triplex displacement and destruction. R142A also increases unwinding.
+Do not collapse these distinct readouts into one generic helicase-activity edge.
+
+Figure4D: K154A,D471A,G465STOP lower released triplex-forming oligonucleotide
+compared with WT HerA/D58A NurA. 5nM triplex,25mM MES pH5.5,50mM NaCl,
+10mM MgCl2,0.5mM spermidine,3mM ATP; preassemble30min60C,assay50C.
+Methods use SwaI-linearized7500bp pLKS5 and22nt TFO; figure cartoon describes
+approximately5kb duplex. No quantitative translocation speed is assigned.
+
+Mutation effects are observed; their direct molecular explanations are unresolved.
+Static AMP-PNP-bound HerAm10 structure plus these assays suggest, but do not
+directly film, a brace/arginine/pore-loop chemo-mechanical cycle or its ordering.
+Supplement primer heading K142A conflicts with R142 in sequence/results;
+S6 demonstrates mosaic rings using G465 truncation, not directly K154A doping.
+These caveats constrain later doping/structure graphs. No such graph added now.

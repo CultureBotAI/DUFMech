@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01207
+  path: data/families/PF01207.yaml
+session:
+  id: 2026-10-11T101635Z-codex-2f844a
+  timestamp: '2026-10-11T10:16:35Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of separate Dus2 biochemical assays
+  details: Saved native structured review 20261011T101620Z-pf01207-dus2-separated-redox-and-product-assays.
+    Five direct observed redox/product effects are supported at their individual assay
+    scopes. No C117-specific edge is adopted because primers disagree at H120/Q120
+    and key mutant comparisons use different temperatures. Concentration, RNA template,
+    clone and site-localization gaps remain open. Same-agent partial review, native
+    NEEDS_FOLLOWUP; remain IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T101620Z-pf01207-dus2-separated-redox-and-product-assays/review.yaml

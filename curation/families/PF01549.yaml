@@ -1,0 +1,90 @@
+pfam_id: PF01549
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01549
+causal_graphs:
+  - graph_id: shk-recombinant-mouse-kv13-current
+    title: Recombinant mature ShK decreases mouse Kv1.3 current
+    scope: Enterokinase-cleaved recombinant Stichodactyla helianthus ShK tested on mouse Kv1.3 stably expressed in L929 fibroblasts, Chang 2012 Figure 6A/C; not every ShKT-containing protein.
+    context: Refolded recombinant peptide is cleaved from thioredoxin and purified by RP-HPLC, leaving no extra N-terminal residue. Whole-cell patch clamp at room temperature uses 200-ms pulses from -80 to +40 mV every 30 s. Pipette solution contains 145 mM KF, 10 mM HEPES, 10 mM EGTA and 2 mM MgCl2, pH 7.2, 290 mOsm; bath contains 160 mM NaCl, 4.5 mM KCl, 2 mM CaCl2, 1 mM MgCl2 and 10 mM HEPES, pH 7.2, 300 mOsm. Figure 6C's caption reports 3-5 determinations per point.
+    family_mapping: P29187 / K1A_STIHL is the 35-aa mature peptide, sequence version 1, from taxon 6123. The published primers overlap by 21 bases and encode DDDDK followed by exact P29187 and a stop codon; this verifies the printed design, not independent clone resequencing. Current PF01549's curated description explicitly includes ShK; integrated IPR003582 maps P29187 residues 3-35 and includes the PF01549 signature. However, P29187 has no current UniProt Pfam cross-reference or direct PF01549 hit and is absent from the inspected PF01549.30 seed. This is curated-family plus integrated-domain association, not a verified current Pfam HMM interval. Mouse channel assay host is taxon 10090; exact channel clone sequence was not independently verified.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:6123
+    limitations: The functional Hill-fit midpoint is not an independently measured physical binding constant. Current reduction establishes a scoped channel-blocking response, not atomic pore contacts or a complete immunosuppression pathway. Full text and captions were read, but figure images, raw currents and supplementary NMR data were not visually inspected. Other family members, channel paralogs and independent peptide batches remain unassessed.
+    nodes:
+      - node_id: recombinant-mature-shk-kv13
+        label: Apply purified recombinant mature ShK to mouse Kv1.3-expressing L929 cells
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P29187
+      - node_id: mouse-kv13-peak-current
+        label: Mouse Kv1.3 peak current at +40 mV
+        node_type: ACTIVITY
+    edges:
+      - edge_id: recombinant-shk-decreases-kv13-current
+        subject: recombinant-mature-shk-kv13
+        predicate: decreases
+        object: mouse-kv13-peak-current
+        mechanism: Recombinant ShK produces concentration-dependent inhibition of peak current in the Kv1.3-expressing line. The reported functional midpoint is 25 +/- 10 pM; synthetic ShK provides a comparator without a statistically significant potency difference. No residue-specific contact is directly measured here.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22659540
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3411878/
+            snippet: reduction of peak current
+            explanation: Methods 2.8-2.9, Results 3.4 and Figure 6A/C's caption support the recombinant-peptide current response. This claim uses inspected text/captions, not a claimed visual review of the inaccessible figure.
+            cache_path: evidence/PF01549/chang-2012-current-block.txt
+            cache_sha256: dc27f03c06d2f5423bf0ff85455061edfc4f7ed2df2bbf707fb23c7550a8660f
+          - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003582/protein/uniprot/P29187/
+            source_url: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003582/protein/uniprot/P29187/
+            snippet: 'P29187 InterPro:IPR003582; integrated-domain interval: 3-35, inclusive.'
+            explanation: Current integrated-domain mapping and the separately inspected PF01549 description establish the qualified family association, while the missing direct Pfam hit and seed membership remain explicit.
+            cache_path: evidence/PF01549/ShK-identity.txt
+            cache_sha256: 471fde410c626362c42a3d450f81c5abf74095ad9152de83e0cc8ee86081aca2
+  - graph_id: shk-recombinant-mouse-kv11-current
+    title: Recombinant mature ShK decreases mouse Kv1.1 current
+    scope: The separate mouse Kv1.1-expressing L929 line in Chang 2012 Figure 6C; the example trace in Figure 6B uses synthetic ShK and is not misattributed to recombinant peptide.
+    context: RP-HPLC-purified, enterokinase-cleaved recombinant ShK is applied during room-temperature whole-cell recording. Pulses run from -80 to +40 mV for 200 ms every 30 s. Pipette solution is 145 mM KF, 10 mM HEPES, 10 mM EGTA, 2 mM MgCl2, pH 7.2, 290 mOsm; bath is 160 mM NaCl, 4.5 mM KCl, 2 mM CaCl2, 1 mM MgCl2, 10 mM HEPES, pH 7.2, 300 mOsm. Dose-response values use peak current at +40 mV and 3-5 determinations per point according to the caption.
+    family_mapping: Tested mature ShK corresponds to sequence-version-1 P29187, 35 aa from Stichodactyla helianthus; the printed overlapping primers encode that exact mature sequence after DDDDK. PF01549's curated family description includes this peptide and its integrated IPR003582 interval is 3-35. That interval is not a current PF01549 HMM hit; the current direct Pfam query is empty and the entire inspected PF01549.30 seed lacks P29187. The mouse channel and host are separate assay entities, not sea-anemone gene products.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:6123
+    limitations: The 15 +/- 5 pM functional inhibition midpoint does not prove physical affinity, absolute selectivity, a Lys22 pore-plug geometry or activity of all family proteins. Figure 6C's caption/Results were inspected but its image and raw recordings were unavailable. Exact channel clones, independent purification batches, other channel classes and native-organism function require separate evidence.
+    nodes:
+      - node_id: recombinant-mature-shk-kv11
+        label: Apply purified recombinant mature ShK to mouse Kv1.1-expressing L929 cells
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P29187
+      - node_id: mouse-kv11-peak-current
+        label: Mouse Kv1.1 peak current at +40 mV
+        node_type: ACTIVITY
+    edges:
+      - edge_id: recombinant-shk-decreases-kv11-current
+        subject: recombinant-mature-shk-kv11
+        predicate: decreases
+        object: mouse-kv11-peak-current
+        mechanism: Recombinant ShK reduces peak current in the separate Kv1.1-expressing line with a reported functional midpoint of 15 +/- 5 pM. The study finds no significant difference from synthetic-peptide potency. This response is retained separately from the Kv1.3 experiment and from T-cell proliferation assays.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22659540
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3411878/
+            snippet: reduction of peak current
+            explanation: Methods 2.8-2.9, Results 3.4 and Figure 6C's recombinant dose-response caption support this direction. Figure 6B's synthetic-peptide trace is excluded from recombinant-specific evidence.
+            cache_path: evidence/PF01549/chang-2012-current-block.txt
+            cache_sha256: dc27f03c06d2f5423bf0ff85455061edfc4f7ed2df2bbf707fb23c7550a8660f
+discussions:
+  - discussion_id: shk-family-mapping-and-channel-mechanism-limits
+    prompt: Reconcile current Pfam membership and inspect assay figures before extending ShK-family mechanisms.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Curated eponymous-family association supports retaining these peptide-specific functional assays, but it is not current Pfam HMM membership or evidence that nematode multidomain proteins are channel blockers.
+    evidence:
+      - reference: PMID:22659540
+        supports: PARTIAL
+        evidence_source: full_text_and_figure_captions
+        explanation: Purification, mass/NMR descriptions and patch-clamp Methods/Results support the tested mature recombinant peptide. Figure images, supplementary NMR data, raw currents and complete channel clones remain uninspected. T-cell assays use distinct human/rat contexts and do not by themselves join channel block to a uniquely established cellular causal chain.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: Retain the explicit distinction between integrated IPR003582 3-35 and absent current PF01549 hit/seed membership. Inspect original native-toxin and mutagenesis studies, additional mapped family members and raw assay images before adopting residue-contact mechanisms or family-wide transfers. Partial scientific self-review; IN_PROGRESS.

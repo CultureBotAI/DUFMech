@@ -1,0 +1,23 @@
+Source: Kobayashi et al., Nucleic Acids Research 40:2712-2723 (2012; online 2011).
+PMID:22127869; DOI:10.1093/nar/gkr1084; PMCID:PMC3315335.
+URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC3315335/
+Retrieved: 2026-10-11. CC BY-NC 3.0; minimal quotation and curator notes only.
+XML SHA256: a6607038568056a7a7ff4f3e2ebaca0cd845449bff5be851c78203c6617f223d.
+Inspected: production, probe and gel-shift Methods; relevant Results and Discussion;
+Figures 2 and 3 visually, including Figure 3B's numerical table.
+Quotation: "partially recovered"
+Curator interpretation: Mutant 5-K12N and mutant 6-N12R each have apparent
+50%-binding concentrations above 2500 nM, versus 9.7 nM for HCF/5&6.
+Adding 6-N12K to 5-K12N gives 384.6 nM; adding 5-K12M to 6-N12R gives
+454.5 nM. Both are partial recoveries, not WT restoration. K12H is 27.0 nM,
+not literally equal to WT. Multiple gel-shift species make these operational
+apparent values, not microscopic equilibrium constants. The text's description
+of a reduced K_D accompanying reduced affinity has the direction reversed;
+the adopted effects follow the figure and assay definition.
+The tested mini-proteins retain N-terminal thioredoxin and C-terminal six-His.
+Supplement Table S1 and Figures S1/S3/S4 could not be inspected: archive requests
+timed out or failed, and PMC returned challenge HTML. Partial archives were not
+used. Complete construct boundaries, purification replicates and folding controls
+remain unresolved. No atomic RNA contact or in-vivo mechanism is established.
+Figure 2 SHA256: 7e7110c84ef53dcf98f98f37bc4d8284577571c0ae76528b34977399e7a96d75.
+Figure 3 SHA256: c8f5eb18ce3abf4cc7630acf46c8d4d5e3b2d5973929d6b921eac52ccda7d369.

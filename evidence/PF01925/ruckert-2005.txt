@@ -1,0 +1,34 @@
+Ruckert et al.2005, PMID16159395, DOI10.1186/1471-2164-6-121.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC1266029/
+Inspected UTC2026-10-12: relevant Results, Methods, Tables1-4 and Figure3.
+Figure3 original image visually inspected. Minimal exact quotations:
+"unable to grow"
+"was indistinguishable from that of the wild-type"
+"growth is gradually restored"
+"CysZ acts as the high-affinity sulphate transporter"
+
+Authored evidence assessment:
+CR018 deletes cg3112/cysZ in C.glutamicum ATCC13032. Table2 scores no growth
+after48h on solid MMS with2mM sulfur as sulfate or sulfite; WT grows. CR018
+retains growth with thiosulfate,sulfide and cysteine. The complementation
+paragraph reports WT-like growth when each missing gene is supplied in trans,
+including pCR018e/cysZ, supporting gene-level effects rather than a polar-only
+explanation; the rescue itself is text-only, not a displayed quantitative panel.
+The Methods specify agarose16g/L,5%glucose,MMS with only trace sulfur.
+Table4 names pEC-XK99E as the pCR018e backbone, whereas the cloning Methods
+name pZ8-1. Preserve this discrepancy; exact primer-defined deletion endpoints
+remain unresolved. A guessed PDF endpoint returned404; the actual linked EPS
+supplement returned challenge HTML and was not inspected as a primer table.
+
+Table3 liquid cultures use MMES,2.5%glucose,30C,initial OD6000.01,100uL/well
+and15-min orbital-shaking cycles. At2mM sulfur, CR018 does not yield sulfate/
+sulfite generation or lag times; WT generation times are2.1/2.2h. The same
+mutant retains thiosulfate/sulfide growth; their lag values are not identical
+to WT and are not blanket no-phenotype proof.
+Figure3 compares CR018 at10,15,20,30,40mM sulfate with WT at5mM, not matched
+dose controls. Increasing mutant sulfate restores turbidity;10mM still shows
+limited output,20mM remains lower and30/40mM approaches WT5mM. Each time point
+is18measurements from3independent cultivations with6parallels, not18biological
+replicates. No transport rate,Km,ion coupling or purified-protein assay was
+measured. High-affinity uptake is the authors' supported hypothesis, not an
+observed biochemical edge. Numeric growth thresholds do not measure affinity.

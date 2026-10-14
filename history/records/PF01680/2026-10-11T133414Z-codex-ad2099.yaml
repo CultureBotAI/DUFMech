@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01680
+  path: curation/families/PF01680.yaml
+session:
+  id: 2026-10-11T133414Z-codex-ad2099
+  timestamp: '2026-10-11T13:34:14Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate eight PdxS causal graphs with eleven assay-scoped effects
+  details: Added the PF01680 human-owned overlay and identity, 2007 reaction, and
+    2008 NMR interpretation ledgers. Reused retained 2005 primary evidence without
+    counting cross-family projections as independent experiments. Verified the initiator-methionine
+    sequence-history difference, K81 peptide numbering and current PF01680 interval.
+    Kept tagged and untagged preparations, partner mutation, optical endpoints and
+    dose/pH discrepancies distinct; rejected the earlier settled-imine and nitrogen-free-intermediate
+    interpretations. Overlay schema/evidence checks pass; native projection, retained
+    review and broader regression verification follow. This is partial family curation,
+    not publication or expert endorsement.
+links:
+  urls:
+  - https://archive-ouverte.unige.ch/unige:89518
+  - https://doi.org/10.1038/nchembio.93

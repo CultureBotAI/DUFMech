@@ -1,0 +1,46 @@
+PF01956 identity and experimental boundaries; inspected 2026-10-12.
+Frozen identity remains EMC3_TMCO1, EX_DUF, InterPro IPR002809. Historical
+DUF106 is a family-name lead, not evidence that all members share an activity.
+Current database sources:
+https://rest.uniprot.org/uniprotkb/Q9P0I2.json
+https://rest.uniprot.org/uniprotkb/P36039.json
+https://rest.uniprot.org/uniprotkb/Q9UM00.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01956/protein/uniprot/Q9P0I2/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01956/protein/uniprot/P36039/
+
+Human EMC3/TMEM111 is Q9P0I2, sequence version 3, 261 aa; PF01956 is 5-191.
+The reference has R31, R180 and M101/M106/M110/M111, matching Pleiner2020
+mutant numbering. M198/M199/M203/M208/M210 are beyond this Pfam interval.
+The latter loop's negative assay is not isolated-domain evidence. These current
+references do not independently verify historical expression-plasmid sequences.
+Yeast EMC3/AIM27/YKL207W is P36039, sequence version 3, 253 aa, S288c
+reference; PF01956 is 2-197 and position 26 is K. Bai2020 cellular experiments
+use BY4741; structural purification starts from W303-1a with Emc5-3xFLAG.
+Do not merge those backgrounds or claim that the S288c record is the tested clone.
+Human TMCO1 Q9UM00 is currently 239 aa, sequence version 2 (updated 2019),
+so old TMCO1 numbering needs explicit isoform/sequence reconciliation before
+curation. No EMC3 mutation result establishes TMCO1 calcium-channel activity.
+
+Primary studies inspected:
+PMID29242231 / DOI10.1126/science.aao3099: main text, Figure4 image, author
+PDF including selected supplementary Methods pp2-6 and S18/S19 text/images. Intact human EMC
+is purified through C-terminally 3xFLAG-tagged EMC5, not isolated EMC3.
+PMID32439656 / DOI10.1126/science.abb5008: main text, Figure3 image, Caltech
+supplement Methods pp2,4-7 and S9/S13 images and legends pp26,30-31.
+Cellular EMC3 constructs carry C-terminal TagBFP-3xFLAG and are lentivirally
+expressed in HEK293 reporter cells. No endogenous EMC3 deletion is described
+for these assays. The fluorescence ratio is a stability/abundance proxy.
+PMID32494008 / DOI10.1038/s41586-020-2389-3: main text/Methods, Figures1/3
+images and Extended Data9 legend. BY4741 K26L and deletion effects are not
+measurements of purified substrate insertion or isolated-domain catalysis.
+
+Uncurated leads: PMID27212239 (TMCO1 calcium study, abstract inspected only),
+PMID26256539 (archaeal Ylp1 structure), PMID19325107 (original EMC genetics),
+Anghel2017 evolutionary/biogenesis study, later TMCO1 multipass translocon,
+EMC topogenesis, client-specific, native and holo-insertase experiments.
+The calcium-channel versus biogenesis interpretations require direct comparison
+of exact constructs, systems and assays; neither is silently overridden here.
+The EMC3-SEC61beta crosslink establishes proximity in detergent, not a directed
+insertion step. Membrane thinning, loop capture, gating and energetic lowering
+remain mechanistic proposals rather than observed sequential intermediates.
+No all-member or full-family coverage is claimed.

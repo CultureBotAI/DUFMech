@@ -1,0 +1,60 @@
+PF01904 experimental-context assessment, 2026-10-11 UTC
+Babu2014, PMID:24586182, doi:10.1371/journal.pgen.1004120
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+Publisher supplements use https://journals.plos.org/plosgenetics/article/file
+with id=10.1371/journal.pgen.1004120.sNNN and type=supplementary.
+S022 = Table S1; S023 = Table S2; S037 = Table S16;
+S007 = Protocol S2; S021 = Protocol S16.
+Main screen design/results read. Both single-page protocols were text-extracted,
+rendered and visually inspected. Three XLS workbooks were converted to XLSX
+with LibreOffice and parsed through standard ZIP/XML, preserving sheet/row IDs.
+Minimal quotation: "high-confidence epistatic interactions".
+
+Table S2, sheet WG_GI_Score_Mar_06_2013, columns A donor, B recipient, C GI score:
+All 21 exact b1868__yecE recipient rows in that table were retained below.
+Row | donor | recipient | reported S-score
+770 | b0037__caiC | b1868__yecE | 3.37006
+2485 | b0161__degP | b1868__yecE | -5.62642
+5426 | b0674__asnB | b1868__yecE | 4.08422
+8381 | b0947__ycbX | b1868__yecE | -4.66203
+9826 | b1000__cbpA | b1868__yecE | -5.59002
+10464 | b1097__yceG | b1868__yecE | -3.49669
+12254 | b1303__pspF | b1868__yecE | -7.56451
+12789 | b1304__pspA | b1868__yecE | 4.29089
+15375 | b1654__grxD | b1868__yecE | -3.97002
+17866 | b1823__cspC | b1868__yecE | -3.83624
+19366 | b2258__yfbJ | b1868__yecE | -4.12818
+24559 | b2810__csdA | b1868__yecE | 5.14678
+26960 | b2859__ygeO | b1868__yecE | -4.1279
+28298 | b2898__ygfZ | b1868__yecE | -13.2114
+29267 | b2968__yghD | b1868__yecE | -9.47303
+30395 | b3006__exbB | b1868__yecE | -8.29434
+31057 | b3062__ttdB | b1868__yecE | -3.844
+32697 | b3212__gltB | b1868__yecE | -3.71264
+32995 | b3213__gltD | b1868__yecE | 4.00211
+39573 | b4053__alr | b1868__yecE | -12.8803
+42250 | b4267__idnD | b1868__yecE | -8.24387
+
+Table S1 identifies all 21 donors as non-essential and from This Study;
+Table S16 identifies their deletion::Cm alleles in Hfr Cavalli. Protocol S16
+identifies the recipient deletion collection as Keio, with Kan markers.
+Reference b1868/JW1857 maps to YecE P37348, but exact historical recipient
+clone sequences and all donor junctions were not independently sequenced here.
+The main screen used rich LB with dual selection and 36 h outgrowth at 32 C.
+Protocol S2 specifies two screens, four biological recipient colonies, eight
+measurements per pair, averaged GI scores, and exclusion within 10 kb of donors.
+The full dataset also combines 39 earlier screens; these 21 donors are explicitly
+identified as new in Table S1 and are not called independent repeated studies.
+Protocol S2 gives thresholds <=-3.3 and >=3.1 after Z-score filtering;
+main prose simplifies this to magnitude >=3. All 21 rows meet both criteria.
+
+The comparison is normalized double-mutant colony growth versus a multiplicative
+expectation from individual-mutant fitness, NOT growth versus WT or a measured
+change after adding just one deletion. Sixteen pairs aggravate and five alleviate.
+Positive S-scores do not mean WT rescue, faster absolute growth or binding.
+Each pair is one joint perturbation; there are no gene-to-gene causal arrows.
+No row-specific replicate dispersion, raw colony images, exact fitness fractions,
+allele-specific rescue or independent growth validation was inspected for YecE.
+Potential marker, polar and secondary-mutation effects remain. These cellular
+effects do not demonstrate nuclease chemistry, a specific biochemical pathway,
+or a common mechanism shared by all partner genes or all DUF72 members.

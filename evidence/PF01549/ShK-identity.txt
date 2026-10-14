@@ -1,0 +1,22 @@
+Retrieved and inspected: 2026-10-11.
+URLs:
+https://rest.uniprot.org/uniprotkb/P29187.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01549/
+https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003582/protein/uniprot/P29187/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01549/?annotation=alignment:seed
+Parsed database facts:
+P29187 / K1A_STIHL; Stichodactyla helianthus, taxon 6123; 35 aa mature peptide;
+sequence version 1, entry version 122; MD5 D90137DDD41588A94FDD66632C08CF27.
+Sequence: RSCIDTIPKSRCTAFQCKHSMKYRLSFCRKTCGTC.
+P29187 InterPro:IPR003582; integrated-domain interval: 3-35, inclusive.
+IPR003582 includes Pfam PF01549, SMART SM00254 and PROSITE PS51670 signatures.
+The current PF01549 curated description explicitly includes sea-anemone ShK
+and cites its original experimental characterization. The verified seed header
+is PF01549.30 with previous identifiers DUF18;ShTK; and 136 sequences.
+Neither P29187 nor K1A_STIHL occurs anywhere in that entire decompressed seed.
+Current UniProt has no Pfam cross-reference for this peptide, and its direct
+PF01549 API request returned HTTP 204. Residues 3-35 are an integrated InterPro
+match, NOT an observed current Pfam HMM hit. Family association therefore rests
+on curated family identity plus the integrated-domain assignment, not a claimed
+Pfam interval or seed membership. Transfer to other ShKT-containing proteins,
+including nematode multidomain enzymes, is not established by these assays.

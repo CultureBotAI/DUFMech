@@ -1,0 +1,30 @@
+Hamasaki et al.,online2015/volume2016,PMID26152732,DOI10.1093/jb/mvv067.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4882637/
+Inspected2026-10-11:Methods,Results,Discussion,TablesI/II,original Figures2/5.
+Minimal quotations: "Biosensor experiments"; "Assay for pre-tRNA cleavage activity".
+
+Pho O59543/PH1877:SPR25 C,20 mM phosphate7.2/500 mM NH4Cl/0.05%Tween20,
+immobilized Ta-SL3 RNA,4.8 nM-3 uM sequential injections,double reference.
+Pop5/Rpp30 complex fitted KD2.27 nM versus Pop5-alone2410 nM. Complex
+uses kinetic Langmuir fit,Pop5 steady-state fit;Rmax differs. Published fold
+claims830/19200 do not reproduce from TableI values; no exact fold adopted.
+No specific binding in the high-Mg cleavage buffer,per Discussion. Binding
+does not establish activation or observe a chaperone trajectory.
+
+TableII reconstituted Pho RNA with five proteins:5 pmol each,pre-tRNATyr
+1.88-19.4 ug,15 min;50 mM Tris7.6/50 mM MgCl2/600 mM NH4OAc/60 mM NH4Cl.
+R107A kcat0.46 versusWT1.11 per min;KM4.99+/-2.69 versus5.03+/-2.13 uM.
+Residual activity and unchanged nominal KM retained;no mutant folding,
+assembly or active-enzyme-fraction control independently verified.
+Kinetic temperature/volume refer to older protocols;75 C is explicit for
+the separate stoichiometry assay,not independently confirmed for TableII.
+Other variants do not uniformly lower kcat. HTML K196A specificity cell0
+conflicts with1.03/11.01;no zero-activity edge is drawn.
+
+Figure5:10 pmol RNA and other three proteins each10 pmol,vary Pop5/Rpp30
+pair,15 min75 C. Product fraction rises with reported5-30-pmol protein
+amount,plateau about70-75%,not complete cleavage. Text calls20 pmol full;
+activity titration is not direct molecular stoichiometry or in-vivo dimer proof.
+Supplement unavailable:EuropePMC reports not-OA,PMC file returned HTML,
+publisher403. No SupplementS3 curve/folding inspection claimed. Retain only
+minimal excerpts and factual assessment,not restricted full text.

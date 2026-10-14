@@ -1,0 +1,41 @@
+PF01862 member identity and construct mapping
+Accessed and assessed 2026-10-11; Codex. Database facts are not causal evidence.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01862/
+PF01862 PvlArgDC, Pyruvoyl-dependent arginine decarboxylase; IPR002724.
+Frozen identity is EX_DUF. This name does not characterize every member.
+
+https://rest.uniprot.org/uniprotkb/Q57764.json
+Q57764 sequence version 1, 165 aa, pdaD/MJ0316; Methanocaldococcus jannaschii
+JAL-1 / DSM 2661 / ATCC 43067, taxon 243232. The publications use the former
+genus Methanococcus. Genome protein AAB98302.1 was independently fetched from
+NCBI efetch and is exactly equal to this sequence, not just an accession link.
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=AAB98302.1&rettype=fasta&retmode=text
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01862/protein/uniprot/Q57764/
+Pfam match 19-162 of 165. Reference N47, S52, S53, I54 and E109 all lie inside
+the match. The experiments use intact recombinant protein, not isolated 19-162.
+
+Primary Soriano 2008 Methods 2.1 primers translated in all frames/orientations:
+E109QF frame +1 gives SLCGLIMQYEGKC, exactly mutant reference 102-114.
+N47AF frame +0 gives AGIGNVALIRISSIM, exactly mutant reference 41-54.
+The paper reports clone sequencing; our mapping is not independent resequencing.
+https://files.rcsb.org/download/2QQC.cif
+https://files.rcsb.org/download/2QQD.cif
+Parsed mmCIF with Biopython. 2QQC is E109Q; 2QQD is N47A. Both have an extra
+N-terminal His at author position 0 after tag removal; published residue numbers
+refer to native Q57764, not the tag-inclusive index. 2QQC beta chains contain
+His0 plus 1-52, alpha chains PYR53 plus 54-165 with E109Q. 2QQD beta A/D contain
+His0 plus 1-52 with N47A; alpha B/E align to 54-165, and unprocessed C/F/G/H
+contain His0 plus 1-165 with N47A. PYR representation differs between deposits;
+an alignment starting at 54 is not biological absence of the Ser53-derived group.
+The 2QQC sequence-difference table calls PYR53 an expression tag; this metadata
+label must not override the primary paper's chemical identity and cleavage site.
+
+Tk-PdaD lead only: Q5JFI4 sequence version 1, 157 aa, TK0149, KOD1 taxon 69014,
+cross-reference BAD84338.1. UniProt's processing features are HAMAP predictions,
+not independently inspected Tk experiments. No Tk graph is authored this turn.
+
+Scope limit: primary 2008 experimental clone strain is resolved through its
+published predecessor and deposited Q57764 structures; no fresh clone sequence,
+raw diffraction re-refinement, isolated-domain sufficiency or family-wide
+residue essentiality is asserted.

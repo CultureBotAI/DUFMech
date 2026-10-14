@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01709
+  path: curation/families/PF01709.yaml
+session:
+  id: 2026-10-11T141617Z-codex-a4b823
+  timestamp: '2026-10-11T14:16:17Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate five TACO1 mouse and human causal contexts with fourteen observed
+    effects.
+  details: Retain four direct biochemical preparation effects and ten indirect genotype/profiling
+    effects. Verify versioned protein references and current PF01709 boundaries, preserve
+    grouped substitutions and all assay limits, distinguish translation from the frozen
+    transcription wording, and retain newer structural/bacterial/plant evidence as
+    partial follow-up.
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC4915168/
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC11381339/

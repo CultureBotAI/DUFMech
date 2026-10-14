@@ -1,0 +1,24 @@
+PF01951 human-partner identity follow-up, 2026-10-12 UTC
+https://rest.uniprot.org/uniprotkb/Q92499.json
+DDX1 Q92499 sequence version 2, Homo sapiens NCBITaxon9606, 740 aa.
+Current residues checked directly: K52, H271, E371, N557, R577 and H601.
+Pfam cross-references are PF00270, PF00271 and PF00622, not PF01951.
+K52N and E371Q in Popow2014 main Figure3 match this reference numbering;
+historical FLAG-clone resequencing is not supplied. ED8 caption E271Q conflicts
+with its E371Q panels/table and the main figure. ED7/ED8 R557K conflicts with
+ED8 gel/ED9 table R577K; the reference has N557 and R577. No exact Arg-mutant
+assignment or corresponding residue-specific edge is made from presumed typos.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/
+https://link.springer.com/article/10.15252/embj.201490332
+Archease remains human Q8IWT0 v2 reference, PF01951 31-167. Previous identity
+ledgers preserve the canonical MAQ versus recombinant MKGG N-terminal issue
+and D39/K144 paper labels; no new full-clone resolution is claimed. Jurkin2014
+protein preparation explicitly cites Popow2014. Whole-gene siRNA/shRNA and
+whole-protein preparation effects are not isolated-domain causality.
+
+HEK293 is the source of FLAG-purified human ligase complexes; HeLa extracts
+and Tet-ON HeLa cells are different assay contexts. RTCB and DDX1 mutations or
+depletions are explicitly named partner interventions; joint Archease/RTCB
+effects do not establish independent sufficiency/necessity of each input.
+Jurkin2014 Rtcbfl/fl Cd23-Cre mouse B cells are NOT Archease knockouts.

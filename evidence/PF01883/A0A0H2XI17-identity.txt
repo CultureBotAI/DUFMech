@@ -1,0 +1,19 @@
+Sources:
+https://rest.uniprot.org/uniprotkb/search?query=gene%3ASAUSA300_0875&format=json&size=5
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A0H2XI17/entry/pfam/PF01883/
+Accessed: 2026-10-11 UTC. Selected public annotation facts, not full responses.
+
+primaryAccession: A0A0H2XI17
+geneName: sufT
+orderedLocusNames: SAUSA300_0875
+protein: ABD22304.1
+organism: Staphylococcus aureus USA300; taxonId: 367830
+sequenceVersion: 1; entryVersion: 28; length: 88
+sequence md5: 6E61FA23ADBB9B1F6764AA9848640BEB
+entry accession: PF01883
+entry_protein_locations: start 2, end 66, CONTINUOUS
+entry_integrated: ipr002744
+
+The primary paper identifies this locus but uses USA300 LAC derivatives;
+reference coordinates do not certify every derivative's sequence. Whole-gene
+experiments do not isolate the current 2-66 domain boundary.

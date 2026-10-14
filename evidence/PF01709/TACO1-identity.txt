@@ -1,0 +1,44 @@
+PF01709 / TACO1-YebC identity assessment, 2026-10-11 UTC
+
+Frozen owner: data/worklists/interpro-pfam-duf-2026-10-10.json, row PF01709.
+The row is EX_DUF, TACO1/YebC second and third domain, short_name
+Transcrip_reg, IPR048300. Candidate reason is pfam_previous_unknown_name;
+the row itself does not enumerate DUF28. Richman 2016 explicitly identifies
+the historical DUF28 relationship in its structural-comparison section.
+Current domain assignment must not be replaced with the old whole-protein
+DUF label. Frozen mammalian description says transcription; the inspected
+experimental studies concern translation. Preserve the frozen description
+and state this correction in the maintained discussion.
+
+https://rest.uniprot.org/uniprotkb/Q8K0Z7.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q8K0Z7/entry/pfam/PF01709/
+Mouse TACO1, Q8K0Z7, Mus musculus 10090, 294 aa, sequence version1,
+sequence date2002-10-01, entry142 updated2026-09-02. Current InterPro sequence
+is identical and PF01709 spans134-293 (1-based inclusive).
+Sequence SHA256: 6a4fc8457b6030b3c85cfdce96d0fed3801608336245c0ffed61c5adb0b63332
+Versioned RefSeq NP_081622.1, fetched through NCBI EFetch and parsed as
+GenBank with Biopython, is an exact sequence match. Richman 2016 explicitly
+specifies NP_081622.1 aa27-294 for the recombinant mature-protein construct.
+Programmatic residue checks confirm R74/S75/R76/S79/K80, K112/N113/K116/S117,
+K162/Y163/I164/K167. Only the third substitution group and I164 lie inside
+current PF01709. The first two groups are N-terminal to its boundary.
+The recombinant protein is not an isolated PF01709 domain. Its His/GST
+fusion is described for binding; tag cleavage is specified for crystallization.
+No independent resequencing of historical clones was performed.
+
+https://rest.uniprot.org/uniprotkb/Q9BSH4.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9BSH4/entry/pfam/PF01709/
+Human TACO1, Q9BSH4, Homo sapiens 9606, 297 aa, sequence version1,
+sequence date2001-06-01, entry175 updated2026-09-02. Current InterPro sequence
+is identical and PF01709 spans136-296. RefSeq NP_057444.2 is an exact match
+by the same structured comparison; it is also cited in Richman 2016's alignment.
+Sequence SHA256: 57a176b7d7e4dbc38cee984aa6939488a71c6877a4f2be4cb056454e9d3dc5ed
+Brischigliaro 2024 uses human HEK293T and an OriGene TACO1 ORF. The current
+reference grounds the gene, not the full historical clone or the precise
+exon1 CRISPR lesions. The paper describes tagged/untagged and full/truncated
+CMV6 constructs; Figures1/2 identify TACO1 rescue without complete per-panel
+sequence/promoter specification. Do not silently assume every variant is identical.
+
+Both proteins also have an N-terminal domain outside current PF01709.
+These member assays neither establish isolated-domain sufficiency nor transfer
+mitochondrial RNA/translation specificity to every bacterial YebC protein.

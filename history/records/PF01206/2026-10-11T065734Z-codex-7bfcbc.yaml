@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01206
+  path: data/families/PF01206.yaml
+session:
+  id: 2026-10-11T065734Z-codex-7bfcbc
+  timestamp: '2026-10-11T06:57:34Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of TusA assay graphs
+  details: Reviewed the current two-graph projection, exact reference mapping and
+    primary figures. The report preserves clone/protocol gaps and unreviewed sulfur-relay
+    contexts, and distinguishes an observed optical outcome from a proposed molecular
+    mechanism. Same-agent assessment, not independent approval; IN_PROGRESS retained.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T065730Z-pf01206-tusa-causal-assays/review.yaml

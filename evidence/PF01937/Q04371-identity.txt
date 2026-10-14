@@ -1,0 +1,26 @@
+Sources:
+https://rest.uniprot.org/uniprotkb/Q04371.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q04371/entry/pfam/PF01937/
+Attribution: UniProt Consortium and InterPro.
+Accessed: 2026-10-11 UTC.
+Minimal factual fields transcribed from the public APIs; not a full snapshot.
+
+UniProt:
+primaryAccession: Q04371
+entryVersion: 157
+sequenceVersion: 1
+orderedLocusNames: YMR027W
+organism: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+taxonId: 559292
+sequence.length: 470
+sequence.md5: 375355477D47A0026D299FE62BE84294
+Pfam cross-reference: PF01937, ARMT1-like_dom
+
+InterPro:
+protein accession: Q04371
+entry accession: PF01937
+entry_integrated: ipr002791
+entry_protein_locations.fragments: start: 19; end: 437; CONTINUOUS
+protein_length: 470
+
+Identity and domain-mapping evidence only; the primary experiment supports causality.

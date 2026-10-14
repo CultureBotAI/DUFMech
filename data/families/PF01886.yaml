@@ -4,7 +4,7 @@ name: Protein of unknown function DUF61
 short_name: DUF61
 seed_status: UNKNOWN_CANDIDATE
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01886
 counters:
   proteins: 196
@@ -28,3 +28,80 @@ description: This Domain of unknown function 61 (DUF61) family of proteins are w
   independent C-terminal helix. The core structure consists of N- and C-terminal subdomains, in which
   the C-terminal subdomain shows significant structural similarity with several nucleic acid binding proteins
   [[cite:PUB00098020]].
+curation_history: history/records/PF01886
+discussions:
+- discussion_id: duf61-member-specific-causal-evidence
+  prompt: Obtain a verified DUF61 member-specific perturbation or substrate assay before adding a causal
+    graph.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The inspected SSO0941 structural abstract, deposition and later computational benchmark do
+    not establish a directed biological effect. Box C/D RNA operon proximity and nucleic-acid-binding
+    fold similarities motivate research but do not demonstrate RNA binding, processing or a DUF61-dependent
+    cellular pathway.
+  evidence:
+  - reference: PMID:29526782
+    supports: PARTIAL
+    evidence_source: abstract_and_structural_deposition
+    explanation: Zhou2018 abstract and PDB5VFK metadata support structural observations for SSO0941. The
+      full paper and supplements were not inspected. Twenty submitted NMR conformers are not twenty biological
+      replicates; the author-defined monomer assignment is not an activity requirement. InterPro and RCSB
+      repetition of this abstract is one evidential origin.
+  - reference: PMID:39506110
+    supports: PARTIAL
+    evidence_source: selected_full_text_and_figure
+    explanation: Wang2024 selected Results and simulation Methods plus original Figure2 place SSO0941
+      in an energy/force benchmark. Fragmented-DFT comparison and computational samples are not DUF61
+      biological perturbation data. No RNA-processing edge is supported by the inspected benchmark sections.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: No causal edge is supported by the inspected material; this is not an exhaustive absence claim.
+    The current 196-entry UniProt query returned no FUNCTION comments, which is annotation coverage rather
+    than proof that no functional experiments exist. Full-paper and member-specific functional follow-up
+    remain open. Minimal assessments and access/search limits are retained under evidence/PF01886. No
+    dummy graph is added.
+- discussion_id: duf61-reference-and-construct-scope
+  prompt: Preserve SSO0941 reference, Pfam interval and tagged-construct scope when evaluating functional
+    evidence.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: A protein structure is not an isolated-domain functional test. Q97ZH2 has 138 residues, PF01886
+    covers 4-123 inclusive, and PDB5VFK entity1 contains the complete reference plus LEHHHHHH. Any future
+    whole-protein phenotype must not silently become a domain- or residue-specific mechanism.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01886/protein/uniprot/Q97ZH2/
+    supports: SUPPORT
+    evidence_source: database
+    explanation: Current member-specific InterPro maps Q97ZH2 to PF01886 at 4-123. UniProt sequence version1,
+      entry version93, identifies Saccharolobus solfataricus P2, taxon273057; AAK41217.1 and WP_009992374.1
+      match the reference exactly. Historical Sulfolobus naming is retained as an alias, not a separate
+      tested species.
+  - reference: doi:10.2210/pdb5vfk/pdb
+    supports: SUPPORT
+    evidence_source: structural_deposition
+    explanation: PDB5VFK entity1 is exactly the 138-residue reference plus the eight-residue LEHHHHHH
+      suffix. Its one protein entity and lack of an RNA/DNA polymer entity do not test all possible ligands.
+      The deposited pH4.4 and310K describe the NMR sample, not a functional optimum.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: UPF0216 is a verified family alias through O29789/AF_0460 with PF01886 and IPR002746, not functional
+    characterization. ScienceDirect access returned403 and Elsevier API supplied metadata only; the CAS
+    entry links the DOI without full text. BMRB30279 access was unresolved, not proof of data withdrawal.
+    All196 frozen proteins require member-specific assessment before family-wide transfer.
+curation_events:
+- timestamp: '2026-10-11T19:59:08Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Retain a graphless DUF61 causal-evidence assessment with exact SSO0941 identity.
+  history_record: history/records/PF01886/2026-10-11T195908Z-codex-b913fe.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T20:07:15Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Partially review DUF61 structural evidence and the missing causal-function prerequisite.
+  history_record: history/records/PF01886/2026-10-11T200715Z-codex-d5a457.yaml
+  event_index: 0
+  llm_assisted: true

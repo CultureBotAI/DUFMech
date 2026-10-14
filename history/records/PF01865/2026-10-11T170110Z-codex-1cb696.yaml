@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01865
+  path: curation/families/PF01865.yaml
+session:
+  id: 2026-10-11T170110Z-codex-1cb696
+  timestamp: '2026-10-11T17:01:10Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate Pap and PitR assay-specific causal graphs for PF01865
+  details: Reviewed Hsieh2017 thesis primary methods, original figures and quantitative
+    tables, and Vermilya2026 final article Figures2/3 and methods. Verified Pap reference
+    and domain mapping plus exact Newman BAF66904.1-UniParc identity and PF01865 span.
+    Added eight phenotypic graphs with seventeen indirect observed effects, retaining
+    operon polarity, protein-state alternatives, nonzero mutant residuals, combined
+    genotype scope and exopolyphosphatase readout limits. Baseline 8296 records valid
+    with zero drift. Remaining member and context evidence is follow-up; retain IN_PROGRESS.
+    No publication authorized.

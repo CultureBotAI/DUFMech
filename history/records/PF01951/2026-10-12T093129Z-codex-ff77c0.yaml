@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01951
+  path: data/families/PF01951.yaml
+session:
+  id: 2026-10-12T093129Z-codex-ff77c0
+  timestamp: '2026-10-12T09:31:29Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial successor review of Archease mutant and methyltransferase-support
+    graphs
+  details: Same-agent scientific review from09:29:13Z to09:30:10Z retains19 graphs/43
+    OBSERVED edges,24 DIRECT and19 UNRESOLVED. Native projection and preservation
+    of all9 prior graphs/17 edges and5 original evidence hashes verified. Species-level
+    P.abyssi taxon used because assay strain is not explicit. Source figure access,
+    RNA preparation discrepancies and other family contexts remain open under the
+    original coverage issue key. Focused256 graph/record/review/history tests passed.
+    Status remains IN_PROGRESS; no independent endorsement or publication claim.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T093010Z-pf01951-archease-mutants-and-methyltransferase-support/review.yaml

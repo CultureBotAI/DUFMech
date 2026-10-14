@@ -1,0 +1,56 @@
+PF01863 / former DUF45: member and construct identity
+Research date: 2026-10-11. Curator: Codex. Database facts are not assay evidence.
+
+Frozen family: YgjP-like, metallopeptidase domain; IPR002725; EX_DUF,
+UNSCORED. Snapshot interpro-pfam-duf-2026-10-10, SHA-256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01863/
+
+Reference sequences independently compared with NCBI protein FASTA:
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=BAE77135.1,AAC76120.2,CAB49216.1,AAB98111.1,WP_016112858.1&rettype=fasta&retmode=text
+
+E. coli YgjP: P42597 sequence version 2, 167 aa; b3085/JW5514.
+https://rest.uniprot.org/uniprotkb/P42597.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01863/protein/uniprot/P42597/
+P42597 exactly equals W3110 BAE77135.1 and MG1655 AAC76120.2.
+Current Pfam coordinates: 94-149, inclusive, in this 167-aa reference.
+Sevin Supplementary Table 3 identifies b3085/ygjP, and Figure 16 labels
+His6-tagged YgjP, expected 21.0 kDa. Neither proves the exact tested clone
+sequence, donor strain or expression host. P42597's sequence changed in 2007;
+an ASKA library label alone does not resolve historical alternative initiation.
+Reference taxon 83333 is K-12, not proof of the assay strain. No residue-level
+YgjP mutagenesis or isolated PF01863-domain activity is claimed.
+
+Proabylysin: Q9V1Y2 sequence version 1, exactly CAB49216.1, 105 aa;
+PAB3079, Pyrococcus abyssi GE5/Orsay reference taxon 272844.
+https://rest.uniprot.org/uniprotkb/Q9V1Y2.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01863/protein/uniprot/Q9V1Y2/
+Current Pfam coordinates: 2-88. Native reference residue 2 is L, not K.
+Reference C terminus: Q101-R102-N103-M104-V105. Deletions of V105 and
+M104/V105 are outside the mapped domain, and do not test isolated-domain
+sufficiency. H60/E61/H64 and H72 lie within the domain.
+https://files.rcsb.org/download/4JIU.cif
+Parsed entity sequence and struct_ref_seq_dif identify L2V, with no added tag.
+The article's Methods calls the cloning substitution K2V; this conflicts with
+both reference and deposit. Use L2V for the deposited scaffold, while retaining
+the published-label discrepancy and lack of separately deposited deletion
+construct sequences. The article's WT comparator is a recombinant scaffold,
+not a demonstrated unmodified native preparation.
+
+Projannalysin: Q57587 sequence version 1, exactly AAB98111.1, 110 aa;
+MJ0123, Methanocaldococcus jannaschii JAL-1/DSM 2661 taxon 243232.
+https://rest.uniprot.org/uniprotkb/Q57587.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01863/protein/uniprot/Q57587/
+Current Pfam coordinates: 7-95. H69/E70/H73 and H81 are within this span;
+E102-I110 is outside it. https://files.rcsb.org/download/4JIX.cif
+Parsed deposit contains GP before native M1, plus K2A. Polymer seq_id 4 is
+native residue 2, not native residue 4. The paper uses native numbering.
+Structures do not demonstrate physiological protease activity or activation.
+
+Candidate from Bacillus B80 paper: WP_016112858.1 is a 235-aa MULTISPECIES
+Bacillus reference, not a sequenced B80 isolate gene. The Table 2 peptide
+assigned to positions 1-23 differs from reference MIHTYSGKTINFHINYKKKKSVR.
+Its 61-73 interval is KEMKERVLGPQEK, not the paper's shorter peptide string.
+The 187-206 peptide does match. Mixed matches do not independently establish
+the purified B80 protein's sequence, family assignment or purity. No B80
+causal edge is transferred to PF01863 on this evidence alone.

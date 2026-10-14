@@ -1,0 +1,47 @@
+PF01955 CbiS corrinoid assays; inspected 2026-10-12 UTC
+PMID16740929; DOI10.1128/JB.00227-06.
+https://journals.asm.org/doi/10.1128/jb.00227-06
+Locators: amidohydrolase/analysis Methods, CbiS-dependent conversion Results,
+original Figures4A/B,5A,6A-D and captions, Discussion.
+Minimal exact quotations: "Cby was clearly detectable";
+"no product was detected"; "highest level of activity".
+
+Whole CbiS fusion purified after tag cleavage, not isolated PF01955 fragment.
+Printed baseline:40ul,0.9mgprotein,360uMcorrinoid,1.5MKPi,pH9,90C,anoxic,
+dim light,1h. Stock0.23mg/ml cannot supply0.9mg in40ul. Total substrate14.4nmol
+is incompatible with extrapolating18nmol/min/mg*0.9mg across60min, despite
+text saying rates remain constant for1h. Units/timing need reconciliation.
+No silent mg-to-ug correction or validated absolute kinetic rate is curated.
+
+Figure4A enzyme-minus retainsCbi21.2min;4B whole-enzyme reaction addsCby14.7min.
+Figure5A isolated-productMALDI932.6 is ligand-freeCby, not intactAdoCby.
+Figure4 axis365nm versus caption367nm is an unresolved reporting discrepancy.
+Analytical processing follows2004 methods; no released side-chain coproduct
+was separately quantified. Figure6D displays Cby formation for dicyanoCbi,
+AdoCbi,dicyanoCbi-P,dicyanoCbi-GDP and cyanocobalamin(CNB12). All product
+mass checks are reported as932.6, but individual spectra are not displayed.
+Text rates are18+/-0.7 for baseline,20+/-2 forAdoCbi,27+/-1.8 forCbi-P,
+9+/-1.1 forCbi-GDP,9+/-0.3 forCNB12, inprintednmol/min/mg. These are
+source values, not reconciled kinetics; graphs retain qualitative conversion.
+No pseudoCbl substrate assay occurs here; later opposite-specificity speculation
+is not evidence of a negative test. No native intracellular products are measured.
+
+Figure6A: at90C,1.5MKPi, activity rises frompH6 to9, then falls at9.5.
+Figure6B: atpH9, activity rises from70 to90C;90/100C are similar within
+displayed variation. Neither profile proves a universal optimum or stability.
+Figure6C: pH8,50mMHEPES with10mMMgCl2 exceedsHEPESalone; replacingHEPES
+with1.5MKPi also increases activity. These are different buffer compositions,
+not an isolated phosphate-binding or magnesium-binding mechanism. KPi50mM
+is low; text identifies500mM as the peak and1.5M is lower. The two internal
+bar concentrations are not both printed; no unverified intermediate is assigned.
+Figure6 error bars are shown but replicate count/error definition is unspecified.
+Graphs make directional assay comparisons, not significance or precise folds.
+
+AtmosphericO2 reduces the reported amidohydrolase activity below0.1nmol/min/mg;
+this arm and failure of10mMDTT to restore it are text-reported, data not shown.
+AddingMg toKPi or190uMalphaRP toKPi/HEPES+Mg reportedly has no significant
+effect (data not shown). No causal enhancement edges are made for these negatives.
+O2 sensitivity, ion effects and pH effects do not identify catalytic residues,
+protein folding, redox chemistry or substrate binding. The Discussion's6.4pmol/
+min/mg quotation of2004 differs from that paper's6.4umol/min/mg; it is not
+used for a cross-enzyme rate comparison. Fusion thermostability is a hypothesis.

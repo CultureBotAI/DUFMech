@@ -1,0 +1,75 @@
+Wolfe et al.2026, PMID42647608, DOI10.1126/sciadv.aeh6867.
+https://doi.org/10.1126/sciadv.aeh6867
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13510736/fullTextXML
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13510736/supplementaryFiles
+Inspected 2026-10-12: full JATS Results, Discussion and Methods; original
+Figures2,3,4; supplement text and TableS1 PDF pages7-9 visually. The retried
+supplement ZIP passed complete CRC verification. Earlier partial ZIP and
+failed PDF/figure requests are not the inspected sources. No raw replicate
+data or cryo-EM reconstruction was independently reanalyzed.
+
+Minimal exact quotations (23 words total):
+"substantial loss of LarA"
+"markedly reduced activity"
+"dramatically reduced enzymatic activity"
+"direct evidence for this mechanism is currently lacking"
+"Relative D-lactate (%)"
+
+Curator paraphrases and source facts:
+The functional assay coexpresses LarCMt WT or variant with LarALp-StrepII,
+LarBLp and LarELp in E. coli BL21(DE3); it purifies LarA, not each mutant
+LarC. TableS1 p7 confirms pRSFDuet carries LarE plus LarC, agreeing with
+Expression Methods rather than the Constructs paragraph's LarA plus LarC.
+The separate pETDuet carries LarA plus LarB. Growth includes1mM NiCl2,
+37C toOD1, then18C/IPTG1mM about14h. StrepTactin-purified LarA is desalted
+to remove sulfite/biotin, then1pmol assayed with L-lactate5-400mM in
+HEPES100mM pH7 at35C for1-12min; heat95C/10min, Neogen D-lactate assay.
+Exact substrate/time for each plotted variant comparison is not specified
+in the inspected text. Figures2B/3D/4B state n3 technical assay replicates,
+not three independent cultures/preparations. No mutant-specific LarC
+abundance, folding or metal-occupancy controls are established here.
+
+Figure2B original bars: H53A,H116A,H226A yield about60% WT; H108A,H118A,
+H160A below10%. H72A is about138%, not an unchanged negative result.
+H70 is named in the prose/structural patch but H70A is absent from the
+plotted variants and TableS1 primers. Do not invent its observed edge.
+The effects are indirect LarC-variant-to-purified-LarA reporter changes;
+they do not prove histidine coordination or direct LarC lactate racemization.
+
+Figure3D: D15A,R71A,E104A,E119A,D124A,D128A,E187A reduce reporter output.
+R71 is basic, despite the prose grouping these as acidic residues. Y180A,
+N238A,Q241A are below20%; Q325A about65%. H53A/H226A are repeated from
+the other plotted context and are not counted as independent new edges.
+E243A is about130%, E300A about90%, R323A about110%; the plot marks these
+different from WT although the prose describes retention of full activity.
+Retain the small plotted directions, not a claim that these positions are
+essential or that their changes resolve intermediate transport. The figure
+contains21 unique alanine variants across2B/3D whereas TableS1 says20;
+its primers are incomplete. Exact full clone records remain a follow-up.
+
+Figure4B shows four separately tested linker constructs below10% WT.
+Wild-type236-248 is EINSGQLEGEESS. Deletion, a shortened linker, a nominal
+rigid replacement and a nominal flexible alternative are separately scoped.
+Main text says shortening13 to7; Figure4B spells EINSEESS (8), whereas
+TableS1 fw_truncate-linker encodes EINEESS (7). Main/figure label the
+flexible alternative GGGGSGGGGS; translating the in-frame TableS1 gene
+fragment between matching LALG and LVI flanks gives GGGSGGGGSS. The rigid
+replacement is described as EAAAKEAAAK. No final sequenced clones were
+provided for reconciliation. Retain author-named construct effects without
+claiming exact resolved sequences or generic flexibility as sufficient.
+
+Structural context: full-length hexamer, three LarC1 positional conformations,
+linker236-248 and spatially separated LarC2/cleft/LarC1 sites. No discernible
+nickel density despite nickel addition. P2TCD in the LarC1 pocket is a Chai-1
+prediction, not a natural-intermediate structure. P2TAD is an AMP analog;
+extra cleft density is weak and cannot fix a precise ligand pose. The three
+observed conformations do not bring the candidate sites together and are
+not proven consecutive catalytic states. TableS2 lists12BI/12BJ/12BK/12BL.
+
+Figure4C/Discussion proposes P2TCD transfer from LarC2 through the cleft to
+LarC1. Figure4D proposes E104 addition/deprotonation and a carbanion placed
+near histidine-associated nickel for Ni-C bond formation. These are four
+explicitly HYPOTHESIZED contextual edges, separate from observed reporter
+changes and the2022 MS feature. Hydrolysis timing, ligand routing, direct
+E104 adduct and nickel coordination remain unobserved. No family-wide,
+isolated-domain or native-cell mechanism is inferred from the mutant assays.

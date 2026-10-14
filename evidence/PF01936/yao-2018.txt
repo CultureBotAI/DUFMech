@@ -1,0 +1,63 @@
+Mouse MARF1 primary evidence; accessed2026-10-12 UTC
+PMID30333187; DOI10.1073/pnas.1809744115
+https://pmc.ncbi.nlm.nih.gov/articles/PMC6217404/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6217404/fullTextXML
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6217404/supplementaryFiles
+Temporary XML SHA256:
+c79b7fddd91a52543dabbc03cea1ec7504cd24248a3d10a483bb590bc158929b
+Supplement PDF SHA256:
+5b28eacdb3ddb65f80dc7f171f2ff2c7ed2e85b5663187bb96e7b9135d207b2d
+Relevant primary Results/Methods, supplement pp2-7 and Figures1-5,S5,S6
+were inspected; primary figures and S5/S6 were visually checked.
+Minimal source quotation: "D178, D215, D246, and D272"
+
+Constructs use SOURCE numbering. Local NYN mapping through PDB5YAA is
+documented in identity.txt. Do not silently replace source D272 by canonical
+D451 or assume a constant offset throughout every MARF1 isoform.
+Functional158-1381 was expressed in Sf9, affinity/size-exclusion purified;
+shorter158-320/158-407/158-690 constructs were expressed in E.coli BL21(DE3)
+with cleaved His6-SUMO tags. Expression-host differences are a potential
+alternative in comparisons of these preparations, not proof of LOTUS-only
+chemistry. Figure1F158-690 gives much less RNA cleavage than158-1381 at
+matched0.1/0.5uM. Purified isolated NYN is therefore not interchangeable
+with the active multidomain mouse preparation or human238-510 assays.
+
+Figure1B,C,E:20nM49nt H49 RNA,20mM Tris-HCl pH7.5,150mM NaCl,1mM DTT,
+1mM MgCl2,37C. Standard5min; dose0-1uM in1B,timecourse0.05uM in1C,
+linear/circular comparison0.1uM in1E. Smaller RNA products establish
+cleavage by the tested preparation; circular cleavage supports an internal
+cut but not a particular natural target or catalytic metal stoichiometry.
+Figure2D: each D178A,D215A,D246A,D272A lowers H49 cleavage relative to WT.
+The panel lacks an explicit enzyme concentration, so none is invented.
+S5 gel confirms purified variant preparations, not identical folding.
+S5 printed caption calls the gel C while the visible panel is B; Figure2
+Results also points to2C where the actual activity panel is2D. Cite the
+visible gel location, not an unexamined caption label.
+
+Figure3C: in Marf1GT/GT fully-grown GV oocytes, microinjected WT Marf1
+mRNA lowers Ppp2cb steady-state RNA versus untreated gene-trap cells;
+D272A mRNA does not reproduce that reduction. Supplement p6: approximately
+10pL at500ng/uL per oocyte,40h culture with5uM milrinone to retain GV arrest.
+Three qPCR sample sets; RNA-seq has four80-oocyte sets. Restrict the graph
+to the validated Ppp2cb readout. Decreased RNA abundance is not direct proof
+that MARF1 cleaves that transcript in cells; the paper itself leaves direct
+targets unresolved and does not completely exclude transcriptional effects.
+
+Figures4,S6: B6DBA2-background D272A knockin has two additional synonymous
+marker mutations. S6 sequencing supports the engineered allele. Female
+homozygotes produce no offspring in the mating assay and ovulated oocytes
+retain GV-stage features rather than WT mature features. Main Figure4C says
+8months; supplemental methods specify8-10months,three females/genotype
+starting6weeks,proven-fertile B6D2F1 males. Compound GT/D272A females share
+the phenotype, reducing but not eliminating genetic-background/off-target
+alternatives. Ovulation and follicle development are not reported abolished.
+Mutant MARF1 protein abundance increases despite unchanged Marf1 RNA;
+do not model a simple protein-abundance-loss mechanism.
+
+Figure5A: Line1 and Iap RNA levels rise in knockin GV oocytes versus WT.
+Figure5B: gammaH2AX-positive focus counts rise; this is a DNA-damage marker,
+not a direct count of transposition events or chemically measured DNA breaks.
+These observations are parallel genotype effects, not a demonstrated chain
+from LINE1 mobilization through damage to meiotic arrest and infertility.
+TUT4/7 transcript-set overlap is not a demonstrated ordered catalytic pathway.
+No raw RNA-seq reanalysis, clone resequencing, or experimental replication.

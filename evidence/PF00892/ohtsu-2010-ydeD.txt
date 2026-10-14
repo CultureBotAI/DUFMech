@@ -1,0 +1,26 @@
+Source: Ohtsu et al., J Biol Chem (2010), PMID:20351115
+DOI: 10.1074/jbc.M109.081356
+URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC2878512/
+Inspected: 2026-10-11; Methods, Table 1, Results, Discussion and Figure 1 image.
+
+Minimal quotations (formula typography normalized):
+"The ydeD deletion mutant cells displayed increased H2O2 sensitivity"
+"both wild-type cells and"
+"higher levels of H2O2 tolerance"
+
+Figure 1A facts: BW25113 and its JW5250 ydeD::KmR derivative; empty
+pSTV29 versus pYdeD (1.5-kb ydeD insert, lac promoter). Overnight-culture
+dilutions spotted onto LB agar, 30 C, 24 h, without or with 0.5 mM H2O2.
+Deletion lowers growth under peroxide; plasmid YdeD improves growth in both
+backgrounds. No peroxide pretreatment is specified for panel A; panel B is
+a separate experiment. The image labels the control LB and the stress
+0.5 mM H2O2; the HTML caption's malformed "0 10 mM" is not adopted.
+
+Curation interpretation: whole-cell phenotype and rescue, not a purified
+transport assay or proof that either EamA repeat independently scavenges
+peroxide. Serial spots are not an independently quantified survival rate.
+The proposed cysteine/cystine shuttle and assays using multi-gene pDES
+are not transferred as directly observed YdeD reaction steps. Exact insert
+junctions, panel-specific induction and independent replicate count remain
+unverified. The 2009 construct-method source is subscription-only in the
+inspected route. Raw colony measurements and supplements were not reviewed.

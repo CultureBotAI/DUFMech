@@ -1,0 +1,32 @@
+PF01902 coverage and alternatives,2026-10-11 UTC
+Baseline8296records valid,zero drift. Ignored/hidden-inclusive local searches
+ofcuration,evidence,history,reviews,reports(exceptinventory.json) forPF01902,
+DUF71,DPH6 andQ12429 found no retained family curation before this turn.
+Public queries coveredPF01902,DUF71,ATPBD4,DPH6,MJ0570,structure,biochemistry,
+B12salvage and later translational/growth work. This is not an exhaustive audit
+of6563members. Specific two-protein domain responses have no further pages.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3541065/
+deCrecy-Lagard2012,doi10.1186/1745-6150-7-32: selected primary paragraphs
+describe historical ATP_bind_4/DUF71,PF0828 docking and a proposed B12-salvage
+subfamily. Docking,cofitness,genomic neighbors and ligand-bound structures
+do not establish observed hydrolysis or amidation. PF0828 is a locus,not
+PfamPF00828. Do not transfer Dph6 function across the whole historical family.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4015618/
+Lin2014,PMID24739148,doi10.1021/ja5009272: selected full text and original
+Figure2 inspected. Dph7 pretreatment makes deletion-derived eEF2 suitable
+for the Dph6 assay even after Dph7 removal. Later methylesterase evidence
+qualifies earlier Dph7-scaffold/displacement models. Dph7 perturbations are
+context here,not independent PF01902 enzyme experiments. Its supplement
+returned download-challenge HTML and was not inspected.
+
+Su2012 supplement: PMC returned challenge HTML,publisher returned403,
+EuropePMC explicitly excludes this article from its open-access subset.
+No challenge was bypassed; these are coverage limits,not negative evidence.
+PLOS2013TablesS2/S3 and2018TableS1 were retrieved from publisher and parsed.
+Further supplements,archaeal enzyme/PH1257 mapping,B12-related members,
+native-human physiology,exact old clones and current family split history
+remain follow-ups. Historical toxin expression methods are not reproduced.
+Sandbox DNS failed for several initial public downloads; scoped approved
+retrievals succeeded. Repo/skill reads were not denied; no settings changed.

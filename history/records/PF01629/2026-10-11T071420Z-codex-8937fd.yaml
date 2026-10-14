@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01629
+  path: data/families/PF01629.yaml
+session:
+  id: 2026-10-11T071420Z-codex-8937fd
+  timestamp: '2026-10-11T07:14:20Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of the DUF22 graphless disposition
+  details: Native structured review 20261011T071407Z-pf01629-duf22-causal-evidence-gap
+    validates reference member mapping and assesses why inspected ATPase/classification
+    evidence does not justify a directed DUF22 graph. Open finding requires additional
+    primary evidence and full-text access; no exhaustive negative claim is made. Same-agent
+    pass_with_limitations / NEEDS_FOLLOWUP leaves status IN_PROGRESS. Focused suite
+    passed 203 tests; no publication or independent scientific approval is claimed.
+  sections:
+  - discussions
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T071407Z-pf01629-duf22-causal-evidence-gap/review.yaml

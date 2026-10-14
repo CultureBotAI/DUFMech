@@ -1,0 +1,55 @@
+Hosaka et al.2013, PMID:23913423, doi:10.1128/AEM.01600-13.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3811363/
+Inspected2026-10-12: full relevant Methods, Results and Discussion;
+original Figures3,4,5,7 visually inspected at the linked PMC CDN images.
+
+Minimal quotations, from Results/Discussion:
+"essential for citrate uptake"
+"no TPA uptake activity"
+"restored the activity"
+"significantly retarded"
+"Only when both"
+"grow on TPA and IPA"
+"approximately 54%"
+
+Comamonas sp.E6 tctA insertion EME018 (not a clean domain deletion)
+loses citrate-dependent growth (Fig3B) and the induced 14C-citrate
+retention increase (3C); TPA uptake remains similar to WT (3A).
+There is nonzero background signal: no absolute zero-radioactivity claim.
+Main text reports kan insertion and Southern verification; supplement
+details were not retrieved as a valid PDF. No TctA rescue was inspected.
+
+E6 tpiA insertion EME019 has little 14C-TPA accumulation (5A);
+pJBtpiA restores it. Citrate uptake rate is about54% of WT (5C),
+not absent. Growth is lost on TPA/IPA (4A/B), delayed on OPA/PCA/citrate
+(4C/D/E); delayed cultures ultimately grow. The graph represents
+increased time to growth for those three conditions, not reduced final
+yield or demonstrated transport of each unmeasured substrate. Main text
+reports only partial growth rescue in FigS3; no S3-derived edge is added.
+
+Uptake: succinate pregrowth,4h with10mM succinate plus inducing TPA or
+citrate; washed cells OD600=2,20uM carboxy-14C-TPA or1,5-14C-citrate,
+50mM Tris-MES pH7.5,30C,10-180s,filter/wash/scintillation. Rates use
+10-60s and normalize to cell protein. Cell-associated radiolabel does
+not identify intact intracellular substrate or isolated permease flux.
+Growth: Wx with10mM indicated sole carbon source,30C,initialOD0.1.
+These figures report means and SD from three independent experiments.
+
+P.putida PpY1100 is a non-PCA-growing resting-cell host, not a growth
+rescue assay. Fig7 compares constructs with/without tphCII, tpiBA and
+tphA2IIA3IIBIIA1II. Only their joint pJCBAtG construct substantially
+lowers extracellular TPA. TpiA does not chemically degrade TPA itself.
+Induction:1mM m-toluate,10h30C; assayOD20,1mM TPA,50mM Tris-HClpH7.5,
+30C shaking. Methods describe60min; original plotted endpoints stop
+at48min. HPLC measures remaining TPA, three independent experiments.
+Control constructs remove transport partners or catabolic enzymes;
+main-text extract results support the separation of entry and chemistry.
+
+Remaining alternatives: insertion polarity, expression/folding effects,
+unmeasured membrane interactions, identity of bound/retained metabolites.
+The coexistence of residual citrate uptake in EME019 but its near-loss
+in EME018 is unresolved, not proof of two independent sufficient routes.
+CCCP sensitivity is whole-cell energy dependence, not measured proton
+stoichiometry. Competition is not direct physical partner recognition.
+Supplement requests returned EuropePMC non-open-access XML and PMC HTML,
+not inspected experimental figures. Full construct/supplement audit open.

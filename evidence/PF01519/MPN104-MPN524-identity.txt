@@ -1,0 +1,25 @@
+Accessed 2026-10-11; accession/domain facts, not functional proof.
+https://rest.uniprot.org/uniprotkb/P75565.json
+https://rest.uniprot.org/uniprotkb/P75254.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P75565/entry/pfam/PF01519/
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P75254/entry/pfam/PF01519/
+Both references: Mycoplasmoides pneumoniae M129/ATCC29342/Subtype1,
+NCBITaxon:272634; historical experimental name Mycoplasma pneumoniae M129.
+
+UniProtKB:P75565; MPN_104, C09_orf104, MP050; NCBIProtein:AAB95698.1.
+Sequence version 1; entry version 92; 104 residues.
+Sequence MD5: AB48AC551DF3A83D933370D7DE65F88E.
+MVELDGKFATKADLKRVEDKVDVLFELQKTQGEQIKVQGKQIEQLTETVQKQGEQIKELQVQVKAQGEEIKEIKVEQKAQGQTLQLILKALEGINKRLDNLESK
+P75565 Pfam:PF01519 interval: 9-103, inclusive; InterPro:IPR002862.
+
+UniProtKB:P75254; MPN_524, G12_orf168, MP318; NCBIProtein:AAB95966.1.
+Sequence version 1; entry version 91; 168 residues.
+Sequence MD5: 176D3DCDE974377675B615B8023E07FA.
+MKEKISEKEYKALIRKIGKEHFDGEKEEYGDGTVGVWTYELRKYKLKPPVKVKYVTQEQFQEYKDSNNQRLIKIETTLAAQGEQIRIQVEQIKELQIEQKAQGETLKLILQTLQKMSDRLDKMEVKMDKMEEKMDKMEGKIDKIENRMDKMEVKMDKMEKRIDKLESK
+P75254 Pfam:PF01519 interval: 47-124, inclusive; InterPro:IPR002862.
+UniProt and InterPro sequences agree exactly for each reference. These are
+wild-type reference sequences, not sequence-verified mutant protein products.
+The 2006 mutagenesis paper identifies both genes as DUF16-bearing. Its Fig. 5
+predicts no polar effect, but the insertions do not isolate domain function.
+The distinct MPN010 structure 2BA2 (PMID:16522803) cannot substitute for a
+motility experiment on MPN010 or a domain-specific rescue of these mutants.

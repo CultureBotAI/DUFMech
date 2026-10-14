@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01910
+  path: data/families/PF01910.yaml
+session:
+  id: 2026-10-12T003314Z-codex-930687
+  timestamp: '2026-10-12T00:33:14Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review PF01910 member-specific binding and phenotype graphs
+  details: Partial same-agent scientific review retains twenty-four observed effects
+    with exact mapping, distinct assay contexts, source discrepancies and open family
+    coverage. Native validation passes; IN_PROGRESS remains. No independent expert
+    endorsement, full-family completion or publication is claimed.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T003323Z-pf01910-thiamine-binding-and-separated-ecm15-phenotypes/review.yaml

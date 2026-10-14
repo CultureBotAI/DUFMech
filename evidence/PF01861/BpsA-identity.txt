@@ -1,0 +1,42 @@
+PF01861 identity and construct audit, 2026-10-11
+
+Frozen family: PF01861, BpsA_C, former DUF43, IPR002723. Imported
+identity, counters and snapshot remain unchanged. This is not indigoidine NRPS BpsA.
+
+Primary database endpoints inspected:
+https://rest.uniprot.org/uniprotkb/Q5JIZ3.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01861/protein/uniprot/Q5JIZ3/
+https://rest.uniprot.org/uniprotkb/Q72L89.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01861/protein/uniprot/Q72L89/
+https://data.rcsb.org/rest/v1/core/polymer_entity/6J26/1
+https://data.rcsb.org/rest/v1/core/polymer_entity/6J27/1
+https://data.rcsb.org/rest/v1/core/polymer_entity/6J28/1
+NCBI protein efetch for BAD85880.1 and AAS80519.1, independently parsed as FASTA.
+
+Q5JIZ3 sequence version 1, 351 aa, TK1691/bpsA, T. kodakarensis KOD1,
+taxon 69014, exactly equals BAD85880.1. PF01861 spans 106-350 inclusive.
+6J26 contains the complete reference plus N-terminal MGSSHHHHHHSSGLVPRGSH
+(371 aa total). No isolated-domain experiment is established by this mapping.
+Reference residues D126, D159, D160, D179, E228, E259, Y295, Y316 and T350
+agree with 2017 labels. The terminal peptide is 331-GFEDEITVGQELYDDEESSTT-351.
+
+2019 Table 4 primer translation, aligned to Q5JIZ3, exposes an internal
+numbering discrepancy. Published E339Q-Fw translates ITVGQQLYDDE, uniquely
+matching reference 336-346 except E341Q. D342N-Fw translates QELYNDEESS,
+matching 340-349 except D344N. D343N-Fw translates QELYDNEESSTT, matching
+340-351 except D345N. The quadruple primer translates ELYNNQQSSTT (then stop),
+matching 341-351 except D344N/D345N/E346Q/E347Q. Thus retain published mutant
+labels, paired with primer-supported reference coordinates, not silently relabelled
+as independently resequenced clones. The five claimed acidic sites map to
+E341/D344/D345/E346/E347, not literal E339/D342/D343/E344/E345 in this reference.
+The paper's 343-YDDEESSTT tail numbering does agree with the reference.
+
+Q72L89 sequence version 1, 353 aa, TT_C0171, T. thermophilus HB27,
+taxon 262724, exactly equals AAS80519.1. PF01861 spans 115-351 inclusive.
+6J27 is 374 aa: the same 20-aa tag, followed by MV and reference residues 2-353.
+This differs from the reference's initial M, consistent with the cloned GTG
+after the NdeI initiation codon. 6J28 is 375 aa and retains this N terminus,
+replacing reference 346-353 QDEEATTY with YDDEESSTT. The replacement overlaps
+PF01861 but extends beyond its endpoint; it is not an isolated-domain exchange.
+Deposited sequence comparisons establish construct sequence correspondence,
+not independent sequencing of the historical enzyme assay aliquots.

@@ -1,0 +1,36 @@
+Carte et al. 2010; PMID:20884784; DOI:10.1261/rna.2230110
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2957057/
+Accessed 2026-10-11. Full Methods/Results/Discussion and original Figures2-5
+and Tables1/2 inspected. Minimal quotation: "RNA binding and cleavage reactions".
+
+PF1131 N-terminal His6 preparations: WT, separately Y31A, H46A, K52A.
+QuikChange DNA sequences were confirmed by the authors. Figure3B shows
+purified proteins by Coomassie SDS-PAGE, not a native-fold/stability control.
+Figure3A uses 10,50,500 nM protein, 50 fmol uniformly labeled T7-transcribed
+repeat substrate, 20 mM HEPES pH7, 500 mM KCl, 20 mM EDTA, 65-70 C,
+30 min. Do not substitute the 2008 lower-salt/Mg recipe. Tables1/2 distinguish
+T7 template oligos7+8 from synthetic 30-nt RNA oligo9; do not silently use the
+synthetic sequence for every uniformly labeled assay. Reaction volume is not
+explicitly repeated in the brief 2010 Methods; the protocol refers to 2008.
+
+Y31A and H46A have no detectable cleavage; K52A has greatly reduced but
+nonzero output, reported about 40-fold lower at 500 nM. This is an endpoint
+yield comparison, not kcat. Figure4 doses are 1,50,200,500 nM. All mutants
+retain stable shifted RNP; K52A has somewhat reduced binding. WT reactions
+can bind products. Y31/H46/K52 map outside PF01881, in PF21350.
+Their acid/base/transition-state roles are proposed, not experimentally assigned.
+The Discussion's alternative sentence repeats the same acid/base assignments;
+no opposite assignment is inferred from that wording.
+
+Figure2: 0.1 pmol synthetic end-labeled repeat preincubated with 0.001,0.05,
+0.2,1 uM Cas6 for 30 min at 65-70 C, in 20 mM HEPES pH7/500 mM KCl.
+Pb(II) acetate 15 mM then 10 min room temperature, quenched with 20 mM EDTA;
+or RNase A 10 pg then 15 min at 37 C. Strong protection from Pb cleavage
+at nt2-8, and from RNase A at U3/C5/U8. Cas6's own cleavage products remain
+visible. Absence of detected protection elsewhere is not proof of no contact.
+
+Figure5A: anti-Cas6 immune resin, unlike preimmune resin, carries repeat-cleaving
+activity; possible copurifying enzymes are not excluded by the IP. Figure5B
+coIP/Northern associates Cas6 with 1x/2x processing intermediates, whereas Cmr2
+recovers mature species. Association is not a causal stability/retention assay
+or proof that Cas6 performs the later trimming step. No such graph edge added.

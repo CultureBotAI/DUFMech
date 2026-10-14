@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01918
+  path: data/families/PF01918.yaml
+session:
+  id: 2026-10-12T012921Z-codex-691a7b
+  timestamp: '2026-10-12T01:29:21Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain successor Alba review with assay-specific DNA-binding quotations
+  details: Rechecked five Bell2002 Figure3 DNA-binding quotations against the primary
+    PDF and retained the successor partial scientific self-review. All sixteen graphs
+    and fifty-three OBSERVED effects remain unchanged; the original review and original
+    transcription evidence remain intact. Native projection and overlay validation
+    passed. Exact native PTM, historical constructs, source-unit discrepancies and
+    additional member contexts remain open. Status remains IN_PROGRESS; this is same-agent
+    review, not independent expert endorsement or full-family completion.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T012924Z-pf01918-assay-specific-dna-evidence-and-alba-contexts/review.yaml

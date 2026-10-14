@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01931
+  path: data/families/PF01931.yaml
+session:
+  id: 2026-10-12T033028Z-codex-1ed0ad
+  timestamp: '2026-10-12T03:30:28Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped scientific review of YjjX and PRRC1 causal contexts
+  details: Reviewed current projection identity, eight graphs/twenty observed effects,
+    primary evidence and context limits. Saved structured same-agent partial review
+    with semantic digest e5a01b035c3c2b918f684a6f4958819131d401acd03d34427c0cb49ea70e90b4
+    and open source/construct/member finding. Native projection and overlay equality
+    verified. Gene-level human effects do not establish isolated-domain chemistry;
+    exact constructs, missing supplements, source discrepancies and additional member
+    experiments remain open. IN_PROGRESS retained; no independent endorsement or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T033054Z-pf01931-yjjx-biochemistry-and-prrc1-trafficking-contexts/review.yaml

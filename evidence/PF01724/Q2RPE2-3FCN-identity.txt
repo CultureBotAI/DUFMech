@@ -1,0 +1,24 @@
+PF01724 / DUF29 identity and structural deposition, inspected 2026-10-11
+https://rest.uniprot.org/uniprotkb/Q2RPE2.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q2RPE2/entry/pfam/PF01724/
+Q2RPE2 = Rru_A3208, Rhodospirillum rubrum ATCC 11170 / S1,
+NCBITaxon:269796; NCBIProtein:ABC24003.1, historical YP_428290.1.
+163 residues; sequence version 1; entry version 84.
+Sequence MD5: 0838ccd0c09b7af33bd7dc27169bfee3
+UniProt and InterPro reference sequences agree exactly.
+Q2RPE2 Pfam:PF01724 interval: 8-150, inclusive
+
+Primary structural deposit: doi:10.2210/pdb3fcn/pdb
+https://www.rcsb.org/structure/3FCN
+https://data.rcsb.org/rest/v1/core/entry/3FCN
+https://data.rcsb.org/rest/v1/core/polymer_entity/3FCN/1
+JCSG deposit, released 2008-12-09; 1.45 A X-ray structure.
+Primary citation field is To be published, not a verified journal paper.
+One polymer entity, chain A, 164-residue sample sequence with selenomethionine.
+Its canonical sequence is one leading G plus the complete 163-residue Q2RPE2
+reference; exact comparison verified. SIFTS maps entity positions 2-164 to
+reference 1-163. Canonical M conversion does not mean no chemical modification.
+Structure and reference-member identity do not establish DNA helicase activity,
+protein-mediated activation or a directed nucleotide reaction. Deposited
+coordinates/structure factors were not independently reprocessed, and a
+crystallographic assembly is not by itself a causal dimerization mechanism.

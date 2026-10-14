@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01868
+  path: curation/families/PF01868.yaml
+session:
+  id: 2026-10-11T174202Z-codex-e0097c
+  timestamp: '2026-10-11T17:42:02Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate Rpp29 preparation-specific binding, processing and fidelity graphs
+  details: Added seven graphs with twelve observed purified-assay or composite-protocol
+    effects from Chen2010/2011/2012. Verified three reference/domain mappings, Pfu
+    deposited sequence, truncation primers, original assay plots and2010 supplement.
+    Preserve MTH11 terminal-primer conflict, outside-domain deletions, pH normalization,
+    dose/salt/time differences, residual activity and limited amplitudes. Keep IN_PROGRESS;
+    eukaryotic and further archaeal contexts remain unreviewed. Baseline:8296 schema-valid
+    records with zero generated drift.

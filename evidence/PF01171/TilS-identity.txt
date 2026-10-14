@@ -1,0 +1,28 @@
+TilS identity assessment, 2026-10-11.
+https://rest.uniprot.org/uniprotkb/P52097.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P52097/entry/pfam/PF01171/
+https://www.ebi.ac.uk/ena/browser/view/Z50870
+UniProt P52097/TILS_ECOLI, tilS/mesJ/yaeN/b0188/JW0183, E. coli K12,
+432 aa, sequence version 1, entry version 178. Current UniProt,
+InterPro and the cited Z50870.1 translation CAA90751.1 match exactly;
+sequence MD5 7e96182a6a7bd0ee063ff97c2ae41716.
+P52097 Pfam:PF01171 interval: 10-197, inclusive.
+The protein also has C-terminal TilS domains; the whole-protein assays
+do not establish independent PP-loop sufficiency.
+
+Z50870 CDS is 991-2289 inclusive. The published forward-primer coding
+sequence matches MTLTLNR at the reference start. The reverse primer's
+18-base annealing segment matches the terminal WQKTLS coding sequence,
+omitting the native TAA stop. Thus the primer does not contradict the
+reported C-terminal His6 fusion. Exact vector scar and full experimental
+clone sequence remain unverified; sequencing and intact mass were reported.
+The neighboring rof annotation must not be mistaken for a TilS cell-cycle
+function (NCBI Gene 944889 explicitly flags that historical confusion).
+
+Partner: https://rest.uniprot.org/uniprotkb/Q45477.json
+Q45477/SYI_BACSU is B. subtilis 168 IleRS, ileS/BSU15430, 921 aa,
+current sequence version 3 (updated 2009-06-16). This is the accession
+cited for the N-terminal FLAG-IleRS construct, not a PF01171 member.
+The 2009 experimental clone is not independently reconstructed from the
+later current sequence. E. coli S100 aminoacylation is a mixed extract,
+not purified E. coli IleRS or MetRS.

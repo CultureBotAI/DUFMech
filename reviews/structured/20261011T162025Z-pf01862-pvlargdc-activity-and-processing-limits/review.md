@@ -1,0 +1,504 @@
+# PF01862 Mj-PdaD activity effects and unresolved processing contribution
+
+- Review: 20261011T162025Z-pf01862-pvlargdc-activity-and-processing-limits
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T16:18:06Z
+- Finished UTC: 2026-10-11T16:20:25Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Three preparation-level observed decarboxylation effects and one separately labeled maturation hypothesis are supported at the stated scope. Exact reference, mutant positions and domain mapping are verified. Failed processing comparisons, residual activity, structural comparator differences and inaccessible original protocols prevent stronger conclusions. Keep IN_PROGRESS.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Intact M. jannaschii WT, E109Q and N47A preparations from Soriano 2008; original processing and Tk-PdaD cellular studies retained only as follow-up leads.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01862 | data/families/PF01862.yaml | generated | PF01862 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01862 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01862.
+
+Q57764 sequence version 1 exactly matches independently fetched AAB98302.1, 165 aa; MJ0316/pdaD JAL-1 reference taxon 243232. PF01862 19-162 includes N47, S52/S53 and E109. Both published primers translate to the intended substitutions in the proper frame. Parsed 2QQC/2QQD distinguish native numbering from His0 and PYR53 representation. Intact protein is not isolated-domain sufficiency.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01862.
+
+One MECHANISTIC graph contains three DIRECT OBSERVED effects, while a distinct HYPOTHETICAL graph has one UNRESOLVED HYPOTHESIZED processing contribution. Specific activity is not kcat, N47A uncertainty is not invented, E109Q is not called inactive, and failed processing comparisons are not converted to observed rates. N47A-versus-S53A structural comparison is distinguished from E109Q-versus-WT. No physiological or family-wide chemistry transfer.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01862.
+
+Original Graham 2002 and Tolbert 2003 fulltext/protocols were unavailable; Fukuda 2008 Tk-PdaD growth work was inspected only at abstract level. Other members, exact assay-solution processed fractions, matched maturation kinetics, folding effects, and Glu109 chemical roles remain unresolved.
+
+## Findings
+
+### additional-contexts: Resolve processing mediation and inspect other primary member contexts
+
+minor / open / confirmed; issue key: pf01862-causal-context-coverage.
+
+Obtain valid WT/mutant processing time courses, assay-solution processed fractions and normalized active-site turnover; inspect original 2002/2003 protocols and the full TK0149 study before adding processing, chemical or growth edges. Preserve strain, medium, dose and alternative agmatine uses. Do not label these partial graphs a complete family review.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Obtain valid WT/mutant processing time courses, assay-solution processed fractions and normalized active-site turnover; inspect original 2002/2003 protocols and the full TK0149 study before adding processing, chemical or growth edges. Preserve strain, medium, dose and alternative agmatine uses. Do not label these partial graphs a complete family review.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC2467525/; Methods 2.1-2.5, Table 2, Results 3.1-3.3, Conclusions and visually inspected original Figures 3/4 | supports | WT 1014 +/-58, E109Q 132 +/-8 and N47A 2 pmol/min/ug support a CO2-production edge and two mutant-specific decreases. Mutants retain activity. Crystal processing states are not solution rates; relative self-processing kinetics were explicitly inconclusive. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01862/protein/uniprot/Q57764/; Accession and domain locations; paired UniProt identity facts | supports | Q57764 sequence version 1 exactly matches independently fetched AAB98302.1, 165 aa; MJ0316/pdaD JAL-1 reference taxon 243232. PF01862 19-162 includes N47, S52/S53 and E109. Both published primers translate to the intended substitutions in the proper frame. Parsed 2QQC/2QQD distinguish native numbering from His0 and PYR53 representation. Intact protein is not isolated-domain sufficiency. |
+| coverage-ledger | evidence/PF01862/pvlargdc-gap-ledger.txt; Named search coverage, inaccessible protocols and discriminating follow-ups | supports | Access limits are recorded, not treated as absence of evidence. Abstract-only bacterial and Tk claims remain uncurated leads. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01862 | data/families/PF01862.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Original Figures 3/4 were inspected with captions and XML Tables 1/2. No raw diffraction re-refinement, kinetic replication, inaccessible publisher PDFs or full original 2002/2003/Tk protocols were claimed inspected. Rendered-page validation is reported separately after generation, not certified by this scientific self-review.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T162025Z-pf01862-pvlargdc-activity-and-processing-limits
+title: PF01862 Mj-PdaD activity effects and unresolved processing contribution
+started_at: '2026-10-11T16:18:06Z'
+finished_at: '2026-10-11T16:20:25Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Three preparation-level observed decarboxylation effects and one separately
+  labeled maturation hypothesis are supported at the stated scope. Exact reference,
+  mutant positions and domain mapping are verified. Failed processing comparisons,
+  residual activity, structural comparator differences and inaccessible original protocols
+  prevent stronger conclusions. Keep IN_PROGRESS.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01862.yaml
+    sha256: 7fe5f4e76fd1007ee511c79d1c0ccc2d0f9496289f72ae25e008c363925beb1f
+    role: context
+  - path: data/families/PF01862.yaml
+    sha256: 89bb8417e50c7321f9a242a8857928fa19a4d62f650264344c886b8fe9aab476
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01862/soriano-2008-pvlargdc.txt
+    role: context
+    sha256: 49f5fe1c11257acd2a765d4ac07c2a3eccb4fbcd765ec904a45992cb3567fffb
+  - path: evidence/PF01862/PvlArgDC-identity.txt
+    role: context
+    sha256: caee9f44af3b47a720b49739f96b31d1a2afc7191fe0abca32e26a301ba01480
+  - path: evidence/PF01862/pvlargdc-gap-ledger.txt
+    role: context
+    sha256: 7aba2e90ab98f7800b8672933171dbda18f30a73d7db5b5953fb5793ecec0cf1
+targets:
+- target_id: PF01862
+  path: data/families/PF01862.yaml
+  label: PF01862
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01862.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 75c7334f5634df397f2b248f0ccff5ba9b84d2322c1f63d1e2fab361d359f046
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Intact M. jannaschii WT, E109Q and N47A preparations from Soriano 2008;
+    original processing and Tk-PdaD cellular studies retained only as follow-up leads.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01862
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Original Graham 2002 and Tolbert 2003 fulltext/protocols were unavailable;
+      Fukuda 2008 Tk-PdaD growth work was inspected only at abstract level. Other
+      members, exact assay-solution processed fractions, matched maturation kinetics,
+      folding effects, and Glu109 chemical roles remain unresolved.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01862
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2467525/
+  locator: Methods 2.1-2.5, Table 2, Results 3.1-3.3, Conclusions and visually inspected
+    original Figures 3/4
+  accessed_at: '2026-10-11T16:20:25Z'
+  support: supports
+  snapshot_sha256: 49f5fe1c11257acd2a765d4ac07c2a3eccb4fbcd765ec904a45992cb3567fffb
+  summary: WT 1014 +/-58, E109Q 132 +/-8 and N47A 2 pmol/min/ug support a CO2-production
+    edge and two mutant-specific decreases. Mutants retain activity. Crystal processing
+    states are not solution rates; relative self-processing kinetics were explicitly
+    inconclusive.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01862/protein/uniprot/Q57764/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T16:20:25Z'
+  support: supports
+  snapshot_sha256: caee9f44af3b47a720b49739f96b31d1a2afc7191fe0abca32e26a301ba01480
+  summary: Q57764 sequence version 1 exactly matches independently fetched AAB98302.1,
+    165 aa; MJ0316/pdaD JAL-1 reference taxon 243232. PF01862 19-162 includes N47,
+    S52/S53 and E109. Both published primers translate to the intended substitutions
+    in the proper frame. Parsed 2QQC/2QQD distinguish native numbering from His0 and
+    PYR53 representation. Intact protein is not isolated-domain sufficiency.
+- evidence_id: coverage-ledger
+  kind: search
+  reference: evidence/PF01862/pvlargdc-gap-ledger.txt
+  locator: Named search coverage, inaccessible protocols and discriminating follow-ups
+  search_scope: PF01862/PvlArgDC identity and MJ0316/TK0149 leads; PubMed/Europe PMC
+    abstracts for PMID11980912, PMID12623016 and PMID18702616, Soriano 2008 fulltext,
+    UniProt/InterPro/PDB identity, and named JBC/Cell/Wiley/Oxford access attempts
+    on 2026-10-11. Not an exhaustive family literature search.
+  summary: Access limits are recorded, not treated as absence of evidence. Abstract-only
+    bacterial and Tk claims remain uncurated leads.
+  accessed_at: '2026-10-11T16:20:25Z'
+  support: supports
+  snapshot_sha256: 7aba2e90ab98f7800b8672933171dbda18f30a73d7db5b5953fb5793ecec0cf1
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T16:20:25Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01862
+  kind: record_content
+  reference: data/families/PF01862.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T16:20:25Z'
+  support: context_only
+  snapshot_sha256: 89bb8417e50c7321f9a242a8857928fa19a4d62f650264344c886b8fe9aab476
+  quote: "id: Pfam:PF01862\npfam_id: PF01862\nname: Pyruvoyl-dependent arginine decarboxylase\
+    \ (PvlArgDC)\nshort_name: PvlArgDC\nseed_status: EX_DUF\ncharacterization_status:\
+    \ UNSCORED\ncuration_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01862\n\
+    counters:\n  proteins: 1021\n  matches: 1055\n  proteomes: 944\n  taxa: 1963\n\
+    \  structures: 5\n  alphafold_models: 877\n  domain_architectures: 8\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002724\ndescription: Methanococcus jannaschii contains\
+    \ homologues of most genes required for spermidine polyamine\n  biosynthesis.\
+    \ Yet genomes from neither this organism nor any other euryarchaeon have orthologues\
+    \ of\n  the pyridoxal 5'-phosphate- dependent ornithine or arginine decarboxylase\
+    \ genes, required to produce\n  putrescine. Instead,these organisms have a new\
+    \ class of arginine decarboxylase (PvlArgDC) formed by\n  the self-cleavage of\
+    \ a proenzyme into a 5-kDa subunit and a 12-kDa subunit that contains a reactive\n\
+    \  pyruvoyl group. Although this extremely thermostable enzyme has no significant\
+    \ sequence similarity to\n  previously characterised proteins, conserved active\
+    \ site residues are similar to those of the pyruvoyl-dependent\n  histidine decarboxylase\
+    \ enzyme, and its subunits form a similar (alpha-beta)(3) complex. Homologues\n\
+    \  of PvlArgDC are found in several bacterial genomes, including those of Chlamydia\
+    \ spp., which have no\n  agmatine ureohydrolase enzyme to convert agmatine (decarboxylated\
+    \ arginine) into putrescine. In these\n  intracellular pathogens, PvlArgDC may\
+    \ function analogously to pyruvoyl-dependent histidine decarboxylase;\n  the cells\
+    \ are proposed to import arginine and export agmatine, increasing the pH and affecting\
+    \ the host\n  cell's metabolism. Phylogenetic analysis of Pvl- ArgDC proteins\
+    \ suggests that this gene has been recruited\n  from the euryarchaeal polyamine\
+    \ biosynthetic pathway to function as a degradative enzyme in bacteria\n  [[cite:PUB00027451]].\n\
+    curation_history: history/records/PF01862\ndiscussions:\n- discussion_id: pvlargdc-processing-and-activity-separation\n\
+    \  prompt: Quantify maturation separately from catalytic activity of processed\
+    \ sites.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Mutant preparation\
+    \ activities and crystal states support distinct observations. The published\n\
+    \    failed processing-rate comparison cannot establish relative maturation kinetics\
+    \ or mediation of N47A\n    activity loss.\n  evidence:\n  - reference: PMID:18391404\n\
+    \    supports: PARTIAL\n    evidence_source: primary_methods_table_2_and_figures_3_4\n\
+    \    explanation: E109Q retains activity and fully processed crystal protomers;\
+    \ N47A retains low activity\n      with mixed processing states. Neither establishes\
+    \ a unique catalytic chemical step.\n  notes: See evidence/PF01862/PvlArgDC-identity.txt\
+    \ and pvlargdc-gap-ledger.txt. Obtain matched assay-solution\n    processing fractions,\
+    \ valid WT processing controls, activity per processed site and folding controls.\n\
+    \    Do not treat PYR53 deposit metadata labeled expression tag as biological\
+    \ identity.\n  posed_by: Codex\n  posed_date: '2026-10-11'\n- discussion_id: pvlargdc-primary-protocols-and-member-coverage\n\
+    \  prompt: Inspect original processing protocols and Tk-PdaD growth experiments\
+    \ before extending the graphs.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ Original 2002/2003 full protocols and Fukuda 2008 fulltext were inaccessible\
+    \ in this turn.\n    Abstracts and database summaries are discovery leads, not\
+    \ grounds for importing unverified conditions\n    or family-wide functions.\n\
+    \  evidence:\n  - reference: PMID:11980912\n    supports: PARTIAL\n    evidence_source:\
+    \ primary_abstract_only\n    explanation: Original biochemical characterization\
+    \ and proposed bacterial host effects need separate\n      primary assessment;\
+    \ no host-pH edge adopted.\n  - reference: PMID:18702616\n    supports: PARTIAL\n\
+    \    evidence_source: primary_abstract_only\n    explanation: TK0149 activity\
+    \ and agmatine-dependent deletion growth are leads; exact strain, dose,\n    \
+    \  medium and rescue context remain unverified.\n  notes: Keep IN_PROGRESS. Do\
+    \ not transfer PLP-dependent ADC mechanisms, BpsA phenotypes or whole-family\n\
+    \    essentiality. Graph count is not completion and the hypothetical processing\
+    \ contribution is not an\n    observed biochemical step.\n  posed_by: Codex\n\
+    \  posed_date: '2026-10-11'\ncausal_graphs:\n- graph_id: mjpdad-radiolabeled-decarboxylation\n\
+    \  title: Mj-PdaD decarboxylates arginine with reduced activity in two mutants\n\
+    \  scope: 'Soriano 2008 Table 2 and Methods 2.5: intact recombinant M. jannaschii\
+    \ PdaD preparations, WT,\n    E109Q and N47A.'\n  context: 'pPRDC.19 mutant derivatives\
+    \ expressed in E. coli B834(DE3), N-terminal His tag removed. Assay\n    at 343\
+    \ K for 30 min: 50 mM MES/NaOH pH 6.0, 50 mM KCl, 1 mM DTT, 4 mM L-arginine plus\
+    \ 2 ul radiolabeled\n    L-arginine; HCl termination and 14CO2 scintillation measurement.'\n\
+    \  family_mapping: MJ0316/pdaD, Q57764 sequence version 1 exactly equals AAB98302.1,\
+    \ 165 aa; JAL-1/DSM\n    2661 reference taxon 243232. PF01862 19-162 includes\
+    \ N47 and E109. Published primers and PDB 2QQC/2QQD\n    confirm the substitutions;\
+    \ residual His0 is not included in native numbering. No isolated-domain sufficiency.\n\
+    \  scope_status: MECHANISTIC\n  taxon: NCBITaxon:243232\n  limitations: DIRECT\
+    \ denotes net purified-preparation effects, not proton transfer or a measured\
+    \ self-processing\n    rate. Specific activity per protein mass is not kcat per\
+    \ processed site. WT assay-preparation details,\n    replicate count, uncertainty\
+    \ definition, blank subtraction and tracer specific activity were not independently\n\
+    \    established. Mutant processing/folding differences can contribute; neither\
+    \ mutant is inactive.\n  nodes:\n  - node_id: wt-arginine-assay\n    label: WT\
+    \ intact Mj-PdaD with radiolabeled L-arginine\n    node_type: ACTIVITY\n    grounding:\n\
+    \    - UniProtKB:Q57764\n  - node_id: e109q-preparation\n    label: Replace WT\
+    \ preparation with E109Q Mj-PdaD\n    node_type: PERTURBATION\n  - node_id: n47a-preparation\n\
+    \    label: Replace WT preparation with N47A Mj-PdaD\n    node_type: PERTURBATION\n\
+    \  - node_id: radiolabeled-co2-output\n    label: Radiolabeled carbon dioxide\
+    \ released from L-arginine\n    node_type: STATE\n  - node_id: preparation-specific-activity\n\
+    \    label: Decarboxylation specific activity per microgram of preparation\n \
+    \   node_type: ACTIVITY\n  edges:\n  - edge_id: wt-produces-radiolabeled-co2\n\
+    \    subject: wt-arginine-assay\n    predicate: produces\n    object: radiolabeled-co2-output\n\
+    \    mechanism: The enzyme/substrate preparation releases 14CO2; the WT comparator\
+    \ has reported specific\n      activity 1014 +/-58 pmol/min/ug. This readout is\
+    \ not direct measurement of every intermediate or\n      an intracellular flux.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:18391404\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2467525/\n\
+    \      snippet: PvlArgDC decarboxylation activity\n      explanation: Table 2\
+    \ WT row and Methods 2.5 define the measured CO2 endpoint; source and preparation\n\
+    \        limitations are retained.\n      cache_path: evidence/PF01862/soriano-2008-pvlargdc.txt\n\
+    \      cache_sha256: 49f5fe1c11257acd2a765d4ac07c2a3eccb4fbcd765ec904a45992cb3567fffb\n\
+    \  - edge_id: e109q-decreases-specific-activity\n    subject: e109q-preparation\n\
+    \    predicate: decreases\n    object: preparation-specific-activity\n    mechanism:\
+    \ E109Q gives 132 +/-8 versus WT 1014 +/-58 pmol/min/ug, approximately 7.7-fold\
+    \ lower with\n      about 13% residual activity. Separate E109Q crystals are fully\
+    \ processed and contain agmatine; the\n      mutation is not a processing or catalytic\
+    \ null.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:18391404\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2467525/\n\
+    \      snippet: PvlArgDC decarboxylation activity\n      explanation: Table 2\
+    \ and Results 3.1/3.3 support the preparation-level decrease, not direct proof\n\
+    \        of Glu109 proton donation or a measured processing rate.\n      cache_path:\
+    \ evidence/PF01862/soriano-2008-pvlargdc.txt\n      cache_sha256: 49f5fe1c11257acd2a765d4ac07c2a3eccb4fbcd765ec904a45992cb3567fffb\n\
+    \  - edge_id: n47a-decreases-specific-activity\n    subject: n47a-preparation\n\
+    \    predicate: decreases\n    object: preparation-specific-activity\n    mechanism:\
+    \ N47A gives 2 versus WT 1014 +/-58 pmol/min/ug, roughly 500-fold lower. Table\
+    \ 2 supplies\n      no N47A uncertainty. The measured decrease does not distinguish\
+    \ impaired catalytic chemistry from\n      altered maturation or active-site abundance.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:18391404\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2467525/\n\
+    \      snippet: PvlArgDC decarboxylation activity\n      explanation: Table 2\
+    \ and Results 3.3; nonzero residual activity and unresolved processing contribution\n\
+    \        qualify the effect.\n      cache_path: evidence/PF01862/soriano-2008-pvlargdc.txt\n\
+    \      cache_sha256: 49f5fe1c11257acd2a765d4ac07c2a3eccb4fbcd765ec904a45992cb3567fffb\n\
+    - graph_id: mjpdad-processing-contribution-hypothesis\n  title: Incomplete N47A\
+    \ maturation may contribute to its activity loss\n  scope: 'Soriano 2008 Results\
+    \ 3.1-3.3 and Conclusions: proposed interpretation of N47A crystal states\n  \
+    \  and separate specific-activity measurements.'\n  context: Crystals grown at\
+    \ 295 K with 1-2 mM arginine in PEG2000/MPD/glycerol and HEPES pH 6.7-7.3;\n \
+    \   assay instead at 343 K and pH 6.0. A failed processing comparison at 338 K\
+    \ for 3 h supplied no relative\n    WT/mutant rate.\n  family_mapping: Intact\
+    \ Q57764/AAB98302.1 N47A, PF01862 19-162; cleavage is between native S52 and S53,\n\
+    \    yielding the S53-derived pyruvoyl group. PDB 2QQD includes processed and\
+    \ unprocessed chains plus residual\n    His0. This is not a claim for all PF01862\
+    \ members.\n  scope_status: HYPOTHETICAL\n  taxon: NCBITaxon:243232\n  limitations:\
+    \ Crystal populations are not assay-solution processing fractions. One N47A site\
+    \ is mixed\n    and modeled predominantly processed; four are unprocessed and\
+    \ one clearly processed. N47A local structural\n    comparison uses S53A, not\
+    \ WT. Processing-rate comparison was inconclusive, and neither molecular mediation\n\
+    \    nor its quantitative contribution was established.\n  nodes:\n  - node_id:\
+    \ reduced-mature-active-fraction\n    label: Proposed reduced mature pyruvoyl-bearing\
+    \ fraction in N47A assay solution\n    node_type: STATE\n  - node_id: n47a-preparation-activity\n\
+    \    label: N47A decarboxylation activity per unit total protein\n    node_type:\
+    \ ACTIVITY\n  edges:\n  - edge_id: incomplete-maturation-may-decrease-activity\n\
+    \    subject: reduced-mature-active-fraction\n    predicate: decreases\n    object:\
+    \ n47a-preparation-activity\n    mechanism: An unprocessed fraction could reduce\
+    \ the abundance of catalytically mature sites per unit\n      protein and contribute\
+    \ to the observed activity loss. Mixed crystal states and altered local contacts\n\
+    \      motivate this explanation; they do not demonstrate the intervening change\
+    \ in assay solution or exclude\n      impaired turnover of the processed fraction.\n\
+    \    directness: UNRESOLVED\n    support: HYPOTHESIZED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:18391404\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2467525/\n\
+    \      snippet: Efforts to measure the rate of autoprocessing were inconclusive\n\
+    \      explanation: Methods 2.5, Results 3.1-3.3, Conclusions and inspected Figures\
+    \ 3/4 support a stated\n        mechanistic hypothesis; no observed rate or quantitative\
+    \ mediation is assigned.\n      cache_path: evidence/PF01862/soriano-2008-pvlargdc.txt\n\
+    \      cache_sha256: 49f5fe1c11257acd2a765d4ac07c2a3eccb4fbcd765ec904a45992cb3567fffb\n\
+    curation_events:\n- timestamp: '2026-10-11T16:12:30Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate Mj-PdaD activity effects and a\
+    \ separate maturation hypothesis\n  history_record: history/records/PF01862/2026-10-11T161230Z-codex-b57852.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Q57764 sequence version 1 exactly matches independently fetched AAB98302.1,
+    165 aa; MJ0316/pdaD JAL-1 reference taxon 243232. PF01862 19-162 includes N47,
+    S52/S53 and E109. Both published primers translate to the intended substitutions
+    in the proper frame. Parsed 2QQC/2QQD distinguish native numbering from His0 and
+    PYR53 representation. Intact protein is not isolated-domain sufficiency.
+  target_ids:
+  - PF01862
+  evidence_ids:
+  - identity
+  - primary
+  - coverage-ledger
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: One MECHANISTIC graph contains three DIRECT OBSERVED effects, while a distinct
+    HYPOTHETICAL graph has one UNRESOLVED HYPOTHESIZED processing contribution. Specific
+    activity is not kcat, N47A uncertainty is not invented, E109Q is not called inactive,
+    and failed processing comparisons are not converted to observed rates. N47A-versus-S53A
+    structural comparison is distinguished from E109Q-versus-WT. No physiological
+    or family-wide chemistry transfer.
+  target_ids:
+  - PF01862
+  evidence_ids:
+  - primary
+  - native
+  - coverage-ledger
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Original Graham 2002 and Tolbert 2003 fulltext/protocols were unavailable;
+    Fukuda 2008 Tk-PdaD growth work was inspected only at abstract level. Other members,
+    exact assay-solution processed fractions, matched maturation kinetics, folding
+    effects, and Glu109 chemical roles remain unresolved.
+  target_ids:
+  - PF01862
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01862-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve processing mediation and inspect other primary member contexts
+  description: Obtain valid WT/mutant processing time courses, assay-solution processed
+    fractions and normalized active-site turnover; inspect original 2002/2003 protocols
+    and the full TK0149 study before adding processing, chemical or growth edges.
+    Preserve strain, medium, dose and alternative agmatine uses. Do not label these
+    partial graphs a complete family review.
+  target_ids:
+  - PF01862
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - coverage-ledger
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01862.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Obtain valid WT/mutant processing time courses, assay-solution processed
+    fractions and normalized active-site turnover; inspect original 2002/2003 protocols
+    and the full TK0149 study before adding processing, chemical or growth edges.
+    Preserve strain, medium, dose and alternative agmatine uses. Do not label these
+    partial graphs a complete family review.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01862
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Original Figures 3/4 were inspected with captions and XML Tables 1/2. No raw diffraction
+  re-refinement, kinetic replication, inaccessible publisher PDFs or full original
+  2002/2003/Tk protocols were claimed inspected. Rendered-page validation is reported
+  separately after generation, not certified by this scientific self-review.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

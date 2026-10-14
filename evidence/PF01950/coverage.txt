@@ -1,0 +1,37 @@
+PF01950 source coverage; research began2026-10-12T08:17:30Z.
+Searches: PF01950, FBPase_3, previous DUF100, exact biochemical/genetic
+paper titles, nature08884/nature10457/nature10458 and assayed accessions.
+Ignored/hidden files were included in the pre-edit search of curation,
+evidence, history and reviews/structured; no existing PF01950 artifact was
+found in those paths. This is not an exhaustive whole-filesystem search.
+
+Public InterPro family/member JSON and a reviewed UniProt query returned11
+members. The filtered query is not a census or11 independent experiments.
+Q8NKR9/KOD1 experiments in Sato2004 were read in full PMC HTML with visual
+inspection of Figures2-4. Native inference, assay controls and condition
+distinctions are retained in the paired ledgers. Family imported status,
+scores, source snapshots and counters remain unchanged.
+
+Access outcomes: browser PMC open gave a challenge, but the normal public
+PMC HTML download succeeded. EuropePMC fullTextXML returned500; CiteSeer
+Sato copy404. Rashid2002 publisher PDF403, SemanticScholar copy empty;
+Kyoto repository returned its JS shell, not the paper. Main Nature pages
+expose abstracts and supplement links, not full Methods. Both public Nature
+supplements downloaded successfully. No access control was bypassed.
+Downloaded full articles/supplements remain temporary, not evidence files.
+
+Still to inspect: Rashid2002 PMID12065581 exact biochemical conditions;
+Nishimasu2004 PMID15274916 structural/mutant work; complete Say2010,
+Fushinobu2011 and Du2011 experiments; Thermococcus onnurineus B6YTP6
+PMID21221938; later member-specific studies and cited QM/MM PMID24798757.
+The latter is computational, not experimental observation.
+Reviewed annotation leads include A0RV30, A4YIZ5, A8A9E4, D9PUH5, Q2RG86,
+Q72K02, B1YAL1, F9VMT6, Q8NKR9, B6YTP6 and Q57747. Do not silently equate
+database citation lists with all members being assayed in a cited paper.
+
+This pass retains five Thermococcus graphs/eight observed experimental
+effects, one direct chemical product edge and seven unresolved phenotype
+effects. The bifunctional mechanism, selective-activity rescue, exact
+regulator, domain-specific causation and family-wide coverage remain open.
+All8296 records and all earlier follow-ups remain in scope. This is partial
+same-agent work, not a completed family review or publication.

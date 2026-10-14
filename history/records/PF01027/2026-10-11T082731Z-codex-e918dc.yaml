@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01027
+  path: curation/families/PF01027.yaml
+session:
+  id: 2026-10-11T082731Z-codex-e918dc
+  timestamp: '2026-10-11T08:27:31Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate two observed YetJ proteoliposome calcium-flux effects
+  details: Inspected 2020 primary main Results/Discussion and Figure 5C visually,
+    and verified O31539/PF01027 sequence mapping including D171. Retained lower-pH
+    and D171N decreases without a purified-protein sufficiency edge or observed gating/protonation
+    model. Supplementary methods remain inaccessible and missing lipids/doses/construct
+    controls are explicit. Earlier and later experiments remain separate follow-up
+    contexts. Baseline records check passed; guarded projection, validation and partial
+    same-agent review follow. IN_PROGRESS, no publication.

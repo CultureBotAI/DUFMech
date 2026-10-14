@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF04149
+  path: data/families/PF04149.yaml
+session:
+  id: 2026-10-11T041008Z-codex-e653c2
+  timestamp: '2026-10-11T04:10:08Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Reviewed the first PF04149 graph with explicit limits.
+  details: 'Retained a same-agent scientific review of the pilot edge, its identity
+    mapping and later contextual literature. Verdict NEEDS_FOLLOWUP: additional DUF397
+    systems remain uncurated. The overlay remains IN_PROGRESS; this event does not
+    promote it or claim completion of the 8296-family goal.'
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T040849Z-pf04149-causal-pilot/review.yaml

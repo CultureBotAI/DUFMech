@@ -1,0 +1,83 @@
+PF01657 / Gnk2 primary-source assessment
+Accessed: 2026-10-11 UTC; Codex.
+PMID:25139159; doi:10.1104/pp.114.242636; PMCID:PMC4213107.
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC4213107/
+Miyakawa and colleagues, Plant Physiology 166 (2014), 766-778.
+Copyright 2014 American Society of Plant Biologists. Minimal quotations and
+curator-authored factual notes only; full paper and figures are not retained here.
+
+Verbatim fragments (23 words total):
+SPR Results: "markedly decreased compared with the wild-type protein"
+SPR Results: "dose-dependent"
+Discussion, Mode of Action: "Gnk2 prolonged the lag phase of yeast growth"
+Figure 8 caption: "Growth-inhibitory ratio"
+Fungal Results: "R93A mutant did not inhibit"
+
+Inspected: full-text Results, Discussion and Methods; Figures 5, 7 and 8 were
+visually inspected. NMR and structural findings below are text/caption evidence,
+not independently reanalyzed spectra or coordinates. Supplementary S5/S6/S7
+images were not retrieved: the linked DOC returned HTML and publisher access
+was restricted. Statements about those controls are the authors' reports.
+
+Construct: Ginkgo biloba mature Gnk2 Ala1-Phe108, expressed periplasmically with
+pET26b and pDsbABCD1 in E. coli BL21(DE3). Methods explicitly retain an extra
+N-terminal Met. The C-terminal Leu-Glu-His6 fusion is used for NMR interaction
+screening; it is not assumed for the untagged purified SPR/growth preparations.
+Untagged protein uses SP Sepharose, Mono S and Superdex 75 purification.
+
+SPR: WT/N11A/R93A/E104A immobilized from 50 ug/ml acetate pH6 onto a
+noncarbohydrate GLH surface by amine coupling, approximately 10000 RU. Running
+buffer: 10 mM HEPES pH7, 150 mM NaCl, ProteOn XPR36. Analyte is alpha1,2-
+mannobiose, not monomeric mannose (insufficient SPR sensitivity). Methods list
+1.25/2.50/5/10/20 mM; Figure 5 labels 0.625/1.25/2.5/5/10 mM. This unresolved
+twofold discrepancy prevents a precise independently verified affinity claim.
+Figure 5 shows dose-ordered WT responses and smaller responses in all three
+mutants; N11A retains visibly nonzero responses. Text reports WT KD 5.9+/-0.2
+mM from steady-state fitting, triplicate assays; mutant affinities were not
+fittable. No zero KD, infinite KD or complete absence of binding is established.
+Text reports similar CD spectra for all three mutants (S5), and WT-like R93A
+thermal stability (S6). Neither controls equal active immobilized fractions.
+
+Yeast: S. cerevisiae BY4741 (MATa his3delta1 leu2delta0 met15delta0 ura3delta0),
+with a separately supplied delta-mnn2 variant. Potato dextrose broth, 25 C;
+pre-culture OD600 1, inoculate fresh cultures at OD600 0.01, add 2 uM WT or
+R93A. Turbidity monitored up to OD600 2.55; assays repeated twice. Figure 7A
+shows a large WT growth delay, a much smaller R93A delay, and strong attenuation
+of WT delay by 0.5% w/v yeast mannan. Adding 50 mM D-mannose changes the WT
+response little. Soluble-saccharide-only controls are not displayed. These data
+do not uniquely prove competitive sequestration or measured cell-wall damage.
+Discussion identifies lag extension, not a log-phase growth-rate decrease.
+No measured spore-germination or viability endpoint is adopted.
+Figure 7B's delta-mnn2 treatment curve retains a small delay relative to its
+untreated control, far smaller than the BY4741 treatment delay. Text's strong
+no-effect wording is qualified accordingly. MNN2 loss alters N-linked alpha1,2
+mannosylation; this is not deletion of all mannan. No genetic rescue is shown.
+Delta-och1 was too growth impaired to assay (unshown), not proven resistant.
+
+Filamentous fungi: F. oxysporum IAM5009 and F. culmorum IFM50210. On potato
+dextrose agar at 25 C, 6-mm discs placed 5 mm from a roughly 30-mm colony carry
+30 ul of 10 mg/ml WT/R93A (300 ug), or 10 mM Tris pH7 buffer. Figure 8A/B
+visually shows local growth exclusion around WT discs and much less around
+R93A/control. Methods score 3 days after disc placement; caption says 8 days
+after seeding. These are different timing origins, not a proven contradiction.
+No zone diameter, fungicidal activity or unique wall-disruption step is measured.
+Liquid F. culmorum: potato dextrose broth, initial OD600 0.005, 25 C, 2 or 10 uM
+WT/R93A. OD600 measured after 36 h; endpoint inhibition is not a time-resolved
+specific growth rate. Figure 8C means and SD, n=3; WT inhibition 22.1% at 2 uM
+and 68.2% at 10 uM, R93A 7.6% at 10 uM. R93A is not completely inactive.
+
+Scope/gaps: NMR text also reports glucose and N-acetylglucosamine binding, not
+exclusive mannose monosaccharide recognition. The mannan screen does not prove
+universal glycan specificity. Mannobiose docking is a model, not a bound crystal
+structure. Static mannose contacts do not directly measure a causal trajectory.
+N11A/E104A growth phenotypes were not measured in this study. Binding assays,
+yeast lag, Fusarium disc responses and liquid OD endpoints stay separate.
+Cell-wall disruption, biofilm prevention and plant protection remain unmeasured
+here. Kinase-containing CRKs/PDLPs are not automatically Gnk2-like lectins.
+PMID:26315821 is a later actin-remodeling lead, not independently reviewed here.
+
+Local retrieval hashes (temporary research files, not repository dependencies):
+HTML SHA256 6a2ea4112f5ede5b0598882d95b553145a9b610709577168c934109e3590aad9
+Figure5 SHA256 77b92747da253dfc697cd2ce4a5f1e0ce305aeaf2107c293276d280093db8185
+Figure7 SHA256 2e522c90c6f6dbde28c729b458738ae6394da251ecf312549a2093f79993fbfc
+Figure8 SHA256 f6d000c1e88bb1cf802c73fe2fc549a1ee7765f8875a9df3e41dfc0bc61fcb1a

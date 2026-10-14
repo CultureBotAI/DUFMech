@@ -1,0 +1,25 @@
+Curator identity reconciliation, accessed and verified 2026-10-11.
+https://rest.uniprot.org/uniprotkb/A0A0K6IWT9.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A0K6IWT9/entry/pfam/PF01595/
+https://rest.uniprot.org/uniprotkb/A0A1G8XA46.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A1G8XA46/entry/pfam/PF01595/
+
+A0A0K6IWT9 Pfam:PF01595; interval 19-189 inclusive.
+Tepidiphilus thermophilus, NCBITaxon:876478; CorB, full length 445 aa.
+UniProt sequence version 1, entry version 38.
+Sequence MD5 8915FC27311329E98F92CCE813FA3573.
+Current UniProt and InterPro sequences exactly match (programmatically checked).
+Reference residues S26, S30, E33, N76, N80, S117, E118, P121 and K122 verified;
+all fall inside the current Pfam interval. The primary paper explicitly names
+this accession and full-length construct. TtCorB is not Thermus thermophilus.
+
+A0A1G8XA46 Pfam:PF01595; interval 13-187 inclusive.
+Methanoculleus thermophilus, NCBITaxon:2200; CorB, full length 426 aa.
+UniProt sequence version 1, entry version 36.
+Sequence MD5 E191FAEB5CA674CDB1AC9000852DF2D1.
+Current UniProt and InterPro sequences exactly match (programmatically checked).
+The primary paper explicitly distinguishes full-length MtCorB 1-426 from
+MtCorB delta-C 1-322 and isolated CBS 199-322. The Pfam interval is not
+identical to the crystallographic transmembrane segment and extends into
+the adjacent region. Full protein, not isolated PF01595, supports transport.
+No evidence is transferred from these constructs to all human CNNM proteins.

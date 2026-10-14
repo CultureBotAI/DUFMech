@@ -1,0 +1,54 @@
+PF01899 / MNHE / former DUF68 identity audit
+Accessed 2026-10-11. Curator-authored facts, not a copied database record.
+
+Frozen family: interpro-pfam-duf-2026-10-10, SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+The naming-history row identifies DUF68, not DUF69. PF01899 is EX_DUF,
+UNSCORED and integrates into IPR002758; 10765 frozen proteins are not all tested.
+Current family/member endpoints:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01899/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01899/protein/uniprot/Q9RGZ1/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01899/protein/uniprot/Q7WY60/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01899/protein/uniprot/B7GL97/
+https://rest.uniprot.org/uniprotkb/Q9RGZ1.json
+https://rest.uniprot.org/uniprotkb/Q7WY60.json
+https://rest.uniprot.org/uniprotkb/B7GL97.json
+
+OF4 MrpE: Q9RGZ1, mrpE/BpOF4_13190, 158 aa, sequence version1,
+NCBITaxon398511. Paper name Bacillus pseudofirmus OF4; current UniProt name
+Alkalihalophilus pseudofirmus. Current PF01899 match spans residues8-156.
+Biopython parsed and compared the NCBI FASTA proteins AAF21816.1,
+ADC50689.1 and WP_012958052.1: all equal Q9RGZ1 over158 aa.
+The actual tagged-operon deposition EF468713.1 has MrpE CDS ABS70477.1,
+also identical over158 aa. T113,P114,H131 are inside the mapped domain.
+EF468713.1 annotates MrpA-T7,MrpB-FLAG,MrpC-c-myc,MrpD-His7,MrpG-S;
+MrpE and MrpF are untagged. This verifies the deposited parent construct,
+not an independent resequencing of every mutant plasmid.
+https://www.ncbi.nlm.nih.gov/nuccore/EF468713.1
+https://www.ncbi.nlm.nih.gov/protein/ABS70477.1
+The 2008 antibody peptide printed as C+AVPTKLKDWELS omits one T relative to
+reference92-104 AVPTKLKTDWELS. The epitope discrepancy is not resolved here.
+
+B. subtilis reference Q7WY60, mrpE/BSU31640, 158 aa, sequence version2,
+NCBITaxon224308 (168), PF01899 residues8-156. Sequence changed2009-07-07,
+after the2007 study. CAE01465.2,YP_054591.2,WP_003244015.1 match current
+Q7WY60 exactly. Historical CAE01465.1 and YP_054591.1 match each other but
+not that current sequence. UOT1285/TY5/KY11 were not independently sequenced;
+the reference supplies family identity, not proof of the exact experimental
+insert or a residue-level transfer. Retain species-level B. subtilis scope.
+
+A. flavithermus WK1 reference B7GL97/mrpE/Aflv_1948,158 aa,taxon491915,
+PF01899 residues8-156, anchors the2020 structural/negative-control context.
+L41W is not transferred to OF4. Exact AF_Mrp insert identity was not independently
+resequenced by this curation; the paper reports sequencing its mutant plasmids.
+
+https://data.rcsb.org/rest/v1/core/polymer_entity/7QRU/5
+7QRU entity5 is MrpE, chains E/e, SIFTS-linked to Q9RGZ1 with full coverage.
+Its deposited158-aa sequence differs from Q9RGZ1 at I54V,S62V,K158N.
+The2022 Methods acknowledges cloned-operon sequence discrepancies. Do not
+equate this structure's entire construct with the2008 parent simply because
+the accession or organism matches. T113/P114/H131 remain unchanged.
+
+These are whole-protein/whole-complex experiments. No isolated PF01899 domain
+activity, family-wide essentiality, direct sodium-binding constant, or universal
+subunit stoichiometry is established by a rename or sequence match.

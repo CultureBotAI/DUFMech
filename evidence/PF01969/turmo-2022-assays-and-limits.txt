@@ -1,0 +1,67 @@
+Turmo, Hu and Hausinger2022, PMID35225337, DOI10.1093/mtomcs/mfac014.
+https://academic.oup.com/metallomics/article/14/3/mfac014/6539348
+Full publisher HTML retrieved from
+https://oup.silverchair-cdn.com/article-minimal/6539348
+Inspected 2026-10-12: relevant complete Methods, Results, conclusions and
+original Figure2,3,4,6 images. Supplement/PDF access failed; an HTML challenge
+saved under a PDF filename is not a read supplement. No raw-data inspection.
+
+Minimal exact quotations (20 words total):
+"not formed in the absence of CTP."
+"full activity was restored"
+"insignificant levels of the intermediate"
+"without supplemental nickel addition"
+
+Curator paraphrases and measured facts:
+Full-length LarCMt was expressed as a synthetic N-terminal His6-TEV pLW01
+construct in E. coli BL21(DE3). Autoinduction at20C normally included1mM
+NiCl2 after4h, harvest around20h. His60 Ni Superflow purification applies
+also to the preparation from culture without added nickel. That preparation
+is not proven apoprotein or nickel-free; both medium and resin can supply
+nickel. Actual occupancy was not established by the inspected experiment.
+
+Methods synthesize P2TMN using NaAD0.2mM,LarBLp10uM,LarELp200uM,
+bicarbonate50mM,ATP2mM,MgCl2 20mM,Tris100mM pH7,1h room temperature.
+An aliquot is mixed with an equal volume of CTP0.2mM,MgCl2 10mM,
+beta-mercaptoethanol10mM,LarCMt2.5uM,MES100mM pH6,room temperature.
+These are reported recipe concentrations, not independently resolved final
+postmix concentrations. Results/Figure6 say Mn-CTP whereas Methods say
+MgCl2; the specific metal recipe needs reconciliation. Standard30min or
+specified time courses end by95C/10min heating. The downstream5ul aliquot
+assay uses LarATt0.8uM,L-lactate45mM,HEPES100mM pH7,5min50C, followed
+by95C/10min and commercial D-lactate quantitation. Default P2TMN preparation
+contains upstream LarB/LarE; some experiments use Q-Sepharose purification.
+LarATt racemization is a downstream reporter, not LarC racemase activity.
+
+Figure2: added10mM PPi decreases the coupled D-lactate readout;2units PPase
+with PPi restores it. PPase alone does not increase control activity.
+Two biological replicates use separate enzyme preparations. No isolated
+LarC-binding, metal-chelation, residual-upstream-enzyme or reporter-specific
+control resolves the molecular inhibition target. Rescue does not show
+that accumulated PPi explains the apparent single turnover.
+
+Figure3 timecourse0,1,3,5,10,30,60min: substrate MS feature declines, a new
+m/z715.02 feature appears, and downstream LarATt activity rises. The new
+feature is absent at0 and withoutCTP; Figure4 MS/MS and isotope pattern
+support CMP-P2TMN with a phosphoanhydride and two sulfur atoms. Representative
+single experiment, same trends in a second preparation. Relative peak
+intensity is not molar amount; no P2TMN standard, NPN signal too weak for
+quantitation. Retain whole-reaction scope, not an observed elementary
+nickel-transfer sequence or a resolved site-to-site transport mechanism.
+
+Figure6 at30/60min: D256A,E261A and D256A/E261A reduce the downstream
+reporter; E364A is near wild type, especially at60min. All four variants
+have little715.02 signal. Low accumulated intermediate therefore does not
+prove abolished synthesis or necessity of any one residue for chemistry.
+Folding, metal occupancy, intermediate consumption and expression effects
+remain alternatives. Caption gives MS n2 technical and activity n1 despite
+visible activity error bars. Caption normalization to zero-time P2TMN does
+not explain all separately scaled panels; do not infer absolute amounts,
+stoichiometry, rates or significance from those bar heights. The2022 text
+also alternates D387A/E387A for an L. plantarum comparator, which is not
+silently reassigned to M. thermoacetica.
+
+The no-added-nickel-growth preparation remains active and yields more715.02
+signal than the nickel-supplemented preparation. This supports a preparation-
+condition effect on the measured feature, not proof of a nickel-free enzyme,
+the intracellular nickel source, or direct inhibition of CMPylation by nickel.

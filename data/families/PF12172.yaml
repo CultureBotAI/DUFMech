@@ -4,7 +4,7 @@ name: ChsH2, rubredoxin-like zinc ribbon domain
 short_name: zf-ChsH2
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12172
 counters:
   proteins: 12165
@@ -30,3 +30,71 @@ description: 'This domain is found at the C-terminal end of the probable enoyl -
   solfataricus reveals two long N-terminal helices followed by a rubredoxin -like zinc ribbon domain represented
   in this family and a C-terminal OB fold domain [[cite:PUB00097287]]. Zinc is chelated by the four conserved
   cysteines in the alignment.'
+curation_history: history/records/PF12172
+causal_graphs:
+- graph_id: tc-duf35-addition-aldolase
+  title: T. curvata DUF35 addition increases Ltp2 activity
+  scope: Purified Tcur3479 Ltp2 and Tcur3482 ChsH2 C-terminal construct from Thermomonospora curvata DSM
+    43183; in-vitro mixing experiment.
+  context: Ten-minute incubation at Ltp2:DUF35 ratio 1:5; activity toward 21 uM 17-HOPC-CoA measured at
+    25 C in 100 mM HEPES pH 7.5 with 200 uM NADH and 16 uM TTHB247.
+  family_mapping: D1AB77, sequence version 1, 319 residues; PF12172 spans 199-234. Deposited 6OK1 entity
+    2 is initiator M plus reference 188-319 and also includes PF01796 at 237-298.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:471852
+  limitations: The tested construct includes both domains; their individual contributions are unresolved.
+    Ltp2 alone retains weak activity and DUF35 alone is inactive. The same experiment is retained in PF01796,
+    not independent replication. The M. tuberculosis experiment is excluded because its protein lacks
+    a current PF12172 match; zinc binding is not itself evidence of catalytic causation.
+  nodes:
+  - node_id: tc-duf35-addition
+    label: Addition of the ChsH2 C-terminal construct to Ltp2 at 1:5
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D1AB77
+  - node_id: tc-ltp2-aldolase-activity
+    label: Ltp2 aldolase specific activity toward 17-HOPC-CoA
+    node_type: ACTIVITY
+  edges:
+  - edge_id: tc-duf35-increases-ltp2-activity
+    subject: tc-duf35-addition
+    predicate: increases
+    object: tc-ltp2-aldolase-activity
+    mechanism: Mixing the purified partner construct with Ltp2 raises measured specific activity from
+      about 0.00042 to 0.14 umol/min/mg in the coupled assay; this does not demonstrate isolated zinc-ribbon
+      catalysis or a zinc-dependent activation mechanism.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31209106
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6682727/
+      snippet: After a 10-min incubation of a 1:5 ratio of Ltp2/ChsH2
+      explanation: The substrate-specific mixing experiment supports the full construct's effect, not
+        necessity or sufficiency of this domain alone.
+      cache_path: evidence/PF01796/aggett-2019-duf35.txt
+      cache_sha256: 17e6f814c55be438f3008b4384c628f6dbb4df4a90e64a7de236ce779c82d639
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/D1AB77/entry/pfam/PF12172/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/D1AB77/entry/pfam/PF12172/
+      snippet: 'entry accession: PF12172'
+      explanation: This exact current match lies inside the deposited, sequence-resolved construct, alongside
+        PF01796.
+      cache_path: evidence/PF01796/D1AB77-identity.txt
+      cache_sha256: 1bde4b540c77e0adebf14a10536c0d2d50580e2862c7a8868ffb11a9dc76a2b2
+curation_events:
+- timestamp: '2026-10-11T05:25:42Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Add sequence-resolved T. curvata DUF35 activity-increase graph
+  history_record: history/records/PF12172/2026-10-11T052542Z-codex-f129b0.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T05:30:47Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of zinc-ribbon-containing DUF35 construct
+  history_record: history/records/PF12172/2026-10-11T053047Z-codex-0f5956.yaml
+  event_index: 0
+  llm_assisted: true

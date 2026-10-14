@@ -1,0 +1,34 @@
+PF01877 research, 2026-10-11. All 1082 frozen members remain in scope.
+Ignored/hidden-inclusive search of curation,evidence,history/records,
+reviews/structured,.agents,.claude for PF01877/PAB1135/DUF54/UPF0201/PH1010
+found no earlier target-specific curation or retained evidence before edits.
+
+Web searches used those aliases, RNA binding, mutation, deletion and MTH689.
+EuropePMC broad alias search returned 36 hits, many incidental references;
+quoted TITLE_ABS alias search returned four primary article records, not an
+exhaustive census of later member-specific experiments.
+https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE_ABS%3A%28%22DUF54%22%20OR%20%22UPF0201%22%20OR%20%22PAB1135%22%29&format=json&pageSize=100
+Miyazono2009 PMID18831045 / DOI10.1002/prot.22255 was located through
+InterPro, PubMed/EuropePMC metadata and the primary 3D7A deposition.
+Publisher full-text retrieval returned403. Its figures and full experimental
+methods were not independently inspected; search excerpts are not causal proof.
+https://www.rcsb.org/structure/3D7A
+The source annotation's dimer-necessity language is not established by the
+inspected PAB1135 data. Follow up with functional interface perturbations.
+
+The relevant paragraph in Lai2010 minimal RNase P study uses DUF54/COG1325
+as a genomic-neighborhood clue to candidate Rpp30/Pop5 genes, not a specific
+DUF54 perturbation. Do not attribute loss after general proteinase treatment
+to this family.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3012483/
+The 2012 Pyrobaculum RNA article was a search lead; a targeted paragraph
+search yielded no family alias. It was not exhaustively reviewed.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3388794/
+
+Follow up exact tryptic termini, preparation-specific controls, orthogonal
+binding, saturating titrations and replication; compare structure-matched
+sequence variants and sequence-matched folding changes. Resolve the printed
+trypsin concentration, RNA conformers, physiological targets and temperature
+dependence. Dimer necessity, individual residue effects, RNase P/exosome roles
+and general family function remain unproven by this scoped assessment.
+No access failure or bounded search supports a claim that no function exists.

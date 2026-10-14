@@ -1,0 +1,19 @@
+Database identity facts inspected 2026-10-11.
+https://rest.uniprot.org/uniprotkb/P0C0S1.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0C0S1/entry/pfam/PF00924/
+P0C0S1 Pfam:PF00924 interval: 114-180, inclusive
+UniProtKB:P0C0S1 / MSCS_ECOLI; mscS/yggB, b2924/JW2891.
+K-12 reference taxon NCBITaxon:83333, 286 residues, sequence version 1,
+entry version 157. UniProt and InterPro sequences agree exactly.
+Sequence MD5: 3f5066a57f5874d23b5e7683e1774555.
+Reference positions 117=N, 167=N, 168=G, all within the current Pfam interval.
+InterPro integration IPR006685; reference AAC75961.1/NP_417399.1.
+InterPro raw response SHA256:
+3b2a2dd90be6d26d8cf09189e5570dfc8a1efa1280e26259edb7cda6658bbbca
+Paired UniProt tatC/mscS reviewed K-12 search response SHA256:
+f12ccecc4942b3472837068e3e7986faa92c53a4f6a646ef24d7afcfd51e162c
+The current HMM interval is not an independently tested fragment. N117 is
+structurally TM3b while G168 is beta-domain in the 2011 description (128-181).
+Full-length-channel effects do not establish isolated-domain sufficiency.
+Complete pTRCMscS/pB10b experimental clone sequences were not independently
+reconstructed; named mutations and strain backgrounds anchor the comparison.

@@ -1,0 +1,277 @@
+pfam_id: PF01871
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01871
+causal_graphs:
+  - graph_id: human-g177d-nuclear-pattern
+    title: Human G177D changes the intranuclear fluorescence pattern
+    scope: Andreoletti2016 Figure2, GFP-tagged human AMMECR1 in HEK293, HeLa and COS-7 hosts, each compared with WT.
+    context: RG212378/pCMV6-AC-GFP variant1;3 ug plasmid/jetPEI per6-well culture,DMEM10% FCS,complex removal4 h,fixation24 h,fluorescence/DAPI microscopy; reagent-only negative control.
+    family_mapping: Human Q9Y4X0 sequence version1 equals NP_056180.1 from NM_015365.3,333 aa,PF01871 132-301. G177 is inside the match; published primer and reference translation support G177D. Whole tagged protein,not isolated domain. COS-7 is an African green monkey host,not the protein's species.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:9606
+    limitations: Both WT and mutant remain nuclear. Qualitative imaging does not measure nuclear-import loss,protein half-life,proteasome recruitment or degradation. Tag,folding,abundance and partner effects remain possible.
+    nodes:
+      - node_id: g177d
+        label: Express GFP-tagged human G177D instead of WT AMMECR1
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:Q9Y4X0
+      - node_id: patchy-nuclear-signal
+        label: Nonuniform intranuclear GFP pattern
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: g177d-increases-patchy-pattern
+        subject: g177d
+        predicate: increases
+        object: patchy-nuclear-signal
+        mechanism: The mutant produces a patchy nuclear pattern compared with the more uniform WT pattern in each tested host. This is a mutation-dependent localization readout,not a demonstrated molecular degradation pathway.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:27811305
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5502304/
+            snippet: non-uniform GFP expression
+            explanation: Original Figure2 and mutagenesis/transfection/imaging Methods; nuclear retention and qualitative cell counts limit mechanistic interpretation.
+            cache_path: evidence/PF01871/andreoletti-2016-localization.txt
+            cache_sha256: 1309b6525f0d1a411b6ff28b47b9a1991c638049d7cc683652a1a7ba0acb6994
+  - graph_id: zebrafish-i2e3-heart-and-tail
+    title: I2E3 splice perturbation changes heart rate and tail length
+    scope: Final author-manuscript Figure4B-D, TU zebrafish at3 dpf, I2E3 morpholino1.26 ng versus matched standard-control morpholino.
+    context: Inject1-2-cell embryos with1-2 nl;27 C,pH7.5. Heart beats/minute and otic-vesicle-to-tail-end distance along curvature are independent readouts.
+    family_mapping: Zebrafish Q6PH60 sequence version1 equals NP_956875.1/NM_200581.1,309 aa,PF01871 109-277. The early manuscript alignment names NP_956875.1. Splice perturbation of the endogenous transcript,not a purified or isolated domain.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:7955
+    limitations: WT-transcript reduction50/72/84% was measured at2.1/4.2/8.4 ng,not1.26 ng. Figure4A morphology uses2.1 ng. Do not conflate doses or convert transcript depletion into measured protein depletion. Morphant off-target effects are not absolutely excluded.
+    nodes:
+      - node_id: i2e3-morpholino
+        label: Inject I2E3 morpholino1.26 ng
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:Q6PH60
+      - node_id: heart-rate
+        label: Heart beats per minute at3 dpf
+        node_type: PHENOTYPE
+      - node_id: curved-tail-length
+        label: Otic-vesicle-to-tail-end distance along curvature
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: i2e3-increases-heart-rate
+        subject: i2e3-morpholino
+        predicate: increases
+        object: heart-rate
+        mechanism: I2E3-treated embryos have a higher measured heart rate than embryos receiving the same dose of standard morpholino. No intervening molecular mechanism is demonstrated.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.1002/humu.23373
+            source_url: https://eprints.soton.ac.uk/416257/1/Moys_s_Oliveira_et_al_2017_Human_Mutation.pdf
+            snippet: heart rate
+            explanation: Original final Figure4B,p23,and Methods; use1.26-ng comparison,not2.1-ng morphology or higher-dose splice quantification.
+            cache_path: evidence/PF01871/moyses-2017-development.txt
+            cache_sha256: 4b8bf65a2861cd9ee00077a0e0ec2f8db483dc65d561338f6c89cb996f5b6508
+      - edge_id: i2e3-decreases-tail-length
+        subject: i2e3-morpholino
+        predicate: decreases
+        object: curved-tail-length
+        mechanism: I2E3-treated embryos have a shorter measured otic-vesicle-to-tail-end distance than the matched control. This does not establish a direct growth reaction or specify which cells mediate the phenotype.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.1002/humu.23373
+            source_url: https://eprints.soton.ac.uk/416257/1/Moys_s_Oliveira_et_al_2017_Human_Mutation.pdf
+            snippet: heart rate
+            explanation: Original Figure4C/D,p23,and legendp24 specify the curved tail metric. It is not total body length; text and plot significance thresholds differ.
+            cache_path: evidence/PF01871/moyses-2017-development.txt
+            cache_sha256: 4b8bf65a2861cd9ee00077a0e0ec2f8db483dc65d561338f6c89cb996f5b6508
+  - graph_id: zebrafish-e3i3-heart-rate
+    title: E3I3 splice perturbation increases heart rate
+    scope: Final Figure4B, TU zebrafish at3 dpf, E3I3 morpholino4.2 ng versus standard-control morpholino4.2 ng.
+    context: Same1-2-cell injection and27 C protocol; measured heart beats/minute. Different reagent and dose from the I2E3 experiment.
+    family_mapping: Endogenous ammecr1,Q6PH60/NP_956875.1,PF01871 109-277. Whole-transcript splice perturbation,not isolated-domain mutagenesis.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:7955
+    limitations: The reported65% exon3 skipping and25%24-bp deletion were measured at8.4 ng,not this4.2-ng heart dose. Two morphological severity classes are not causally assigned to individual splice products. No reagent-specific rescue is shown here.
+    nodes:
+      - node_id: e3i3-morpholino
+        label: Inject E3I3 morpholino4.2 ng
+        node_type: PERTURBATION
+      - node_id: heart-rate
+        label: Heart beats per minute at3 dpf
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: e3i3-increases-heart-rate
+        subject: e3i3-morpholino
+        predicate: increases
+        object: heart-rate
+        mechanism: E3I3-treated embryos have increased heart rate relative to the dose-matched standard morpholino. The endpoint is not evidence for a direct AMMECR1 cardiac biochemical activity.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.1002/humu.23373
+            source_url: https://eprints.soton.ac.uk/416257/1/Moys_s_Oliveira_et_al_2017_Human_Mutation.pdf
+            snippet: heart rate
+            explanation: Original final Figure4B dose labels and Methods;8.4-ng splice analysis is separate.
+            cache_path: evidence/PF01871/moyses-2017-development.txt
+            cache_sha256: 4b8bf65a2861cd9ee00077a0e0ec2f8db483dc65d561338f6c89cb996f5b6508
+  - graph_id: zebrafish-e1i1-heart-rate
+    title: E1I1 splice perturbation increases heart rate
+    scope: Final Figure4B, TU zebrafish at3 dpf, E1I1 morpholino8.4 ng versus standard-control morpholino8.4 ng.
+    context: Same1-2-cell injection and27 C protocol; hypomorphic splice context with loss of six exon1 codons.
+    family_mapping: Endogenous ammecr1,Q6PH60/NP_956875.1,PF01871 109-277. The transcript intervention does not isolate or demonstrate necessity of the mapped domain.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:7955
+    limitations: Earlier manuscript Methods says8.2 ng; final Figure4B and Results say8.4 ng. The graph uses the figure dose while retaining the discrepancy. Gross morphological defects were not observed in this hypomorphic context; no full loss-of-function equivalence is implied.
+    nodes:
+      - node_id: e1i1-morpholino
+        label: Inject E1I1 morpholino8.4 ng as labeled in final Figure4B
+        node_type: PERTURBATION
+      - node_id: heart-rate
+        label: Heart beats per minute at3 dpf
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: e1i1-increases-heart-rate
+        subject: e1i1-morpholino
+        predicate: increases
+        object: heart-rate
+        mechanism: The E1I1 condition increases measured heart rate despite the lack of gross morphological defects. This is not a demonstrated isolated-domain biochemical effect.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.1002/humu.23373
+            source_url: https://eprints.soton.ac.uk/416257/1/Moys_s_Oliveira_et_al_2017_Human_Mutation.pdf
+            snippet: heart rate
+            explanation: Original final Figure4B,p23,Results and early supplementary captions; the8.2/8.4-ng discrepancy remains unresolved.
+            cache_path: evidence/PF01871/moyses-2017-development.txt
+            cache_sha256: 4b8bf65a2861cd9ee00077a0e0ec2f8db483dc65d561338f6c89cb996f5b6508
+  - graph_id: zebrafish-human-mrna-tail-rescue
+    title: Human AMMECR1 mRNA partially rescues the tail endpoint
+    scope: Final Figure4C/D, TU embryos receiving I2E3 morpholino1.26 ng with versus without human AMMECR1 mRNA200 pg.
+    context: pCS2+ human AMMECR1,SP6-transcribed and LiCl-purified mRNA,co-injected at1-2-cell stage;3-dpf curved otic-vesicle-to-tail-end distance. Standard morpholino and mRNA-alone controls are included.
+    family_mapping: Recipient ammecr1 maps Q6PH60/NP_956875.1,PF01871 109-277. Human reference Q9Y4X0/NP_056180.1 maps132-301; exact pCS2+ rescue insert is not independently sequence-verified. Cross-species whole-protein rescue,not isolated-domain sufficiency.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:7955
+    limitations: Rescue is partial and remains below control. No heart-rate rescue is plotted. Caption reports two experiments with one illustrated; text/plot significance thresholds differ. Exact rescue isoform/insert verification remains a follow-up.
+    nodes:
+      - node_id: human-mrna-with-i2e3
+        label: Add human AMMECR1 mRNA200 pg to I2E3 morpholino1.26 ng
+        node_type: PERTURBATION
+      - node_id: curved-tail-length
+        label: Otic-vesicle-to-tail-end distance along curvature
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: human-mrna-increases-tail-length
+        subject: human-mrna-with-i2e3
+        predicate: increases
+        object: curved-tail-length
+        mechanism: Human mRNA co-injection increases the tail metric compared with I2E3 alone,without complete normalization. The conjunction defines the rescue context and does not claim that mRNA alone increases normal growth.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.1002/humu.23373
+            source_url: https://eprints.soton.ac.uk/416257/1/Moys_s_Oliveira_et_al_2017_Human_Mutation.pdf
+            snippet: heart rate
+            explanation: Original Figure4C/D and rescue Methods; retained evidence distinguishes partial tail rescue from untested rescue of the cardiac endpoint.
+            cache_path: evidence/PF01871/moyses-2017-development.txt
+            cache_sha256: 4b8bf65a2861cd9ee00077a0e0ec2f8db483dc65d561338f6c89cb996f5b6508
+  - graph_id: mouse-esc-ammecr1-marker-response
+    title: Mouse Ammecr1 knockdown increases selected transcript markers
+    scope: Kainov2020 Supplementary Figure7e/f, male A2lox mouse embryonic stem cells, siAmmecr1 versus nontargeting siCtrl.
+    context: General RNAi method,2e5 cells/gelatinized12-well in1 ml2i medium,50 pmol SMARTpool L-059312-01-0005 with3 ul Lipofectamine2000/100 ul Opti-MEM,48 h; control D-001810-01-20. RT-qPCR normalized to Cnot4,three experiments+/-SD.
+    family_mapping: Mouse Q9JHT5 sequence version1 equals NP_062369.1/NM_019496.4,344 aa,PF01871 143-312. Endogenous full-length transcript knockdown,not domain-specific mutagenesis or independently resequenced A2lox protein.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:10090
+    limitations: Ammecr1 transcript reduction is measured,not independently verified protein depletion. No Ammecr1-specific rescue or individual-siRNA deconvolution was verified. Sox2/Pecam1 and Krt8 are not significantly changed. SRRT-mediated antitermination is not an activity assigned to AMMECR1 protein.
+    nodes:
+      - node_id: siammecr1
+        label: Treat A2lox cells with Ammecr1 SMARTpool
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:Q9JHT5
+      - node_id: otx2-rna
+        label: Otx2 transcript abundance
+        node_type: STATE
+      - node_id: col4a1-rna
+        label: Col4a1 transcript abundance
+        node_type: STATE
+      - node_id: shank1-rna
+        label: Shank1 transcript abundance
+        node_type: STATE
+    edges:
+      - edge_id: siammecr1-increases-otx2
+        subject: siammecr1
+        predicate: increases
+        object: otx2-rna
+        mechanism: The Ammecr1-targeting pool increases the Otx2 RT-qPCR readout relative to siCtrl. This is an indirect marker response,not observed direct transcriptional regulation or completed lineage conversion.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:31953406
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6969169/
+            snippet: siAmmecr1
+            explanation: Original Supplementary Figure7f and legend,cell/RNA Methods,Data5 reagent and Data7 primer tables. Distinguish siAmmecr1 from siSrrt bars.
+            cache_path: evidence/PF01871/kainov-2020-markers.txt
+            cache_sha256: aefdaf8a3e127ebf565bd400118b9679c4e9802461acdad8d300bfee5bb17ef4
+      - edge_id: siammecr1-increases-col4a1
+        subject: siammecr1
+        predicate: increases
+        object: col4a1-rna
+        mechanism: The same knockdown increases the Col4a1 transcript readout. No direct AMMECR1-promoter binding or molecular transcriptional step is inferred.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:31953406
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6969169/
+            snippet: siAmmecr1
+            explanation: Original Supplementary Figure7f has a distinct Col4a1 comparison;3-experiment RT-qPCR measurement,not a protein or lineage-fate assay.
+            cache_path: evidence/PF01871/kainov-2020-markers.txt
+            cache_sha256: aefdaf8a3e127ebf565bd400118b9679c4e9802461acdad8d300bfee5bb17ef4
+      - edge_id: siammecr1-increases-shank1
+        subject: siammecr1
+        predicate: increases
+        object: shank1-rna
+        mechanism: The Shank1 transcript readout is modestly increased by siAmmecr1 compared with siCtrl. It is not equivalent to the larger siSrrt effect and does not demonstrate neuronal conversion.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:31953406
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6969169/
+            snippet: siAmmecr1
+            explanation: Original Supplementary Figure7f;Krt8 lacks a significant siAmmecr1 change,p=.13,and is not promoted to a positive edge.
+            cache_path: evidence/PF01871/kainov-2020-markers.txt
+            cache_sha256: aefdaf8a3e127ebf565bd400118b9679c4e9802461acdad8d300bfee5bb17ef4
+discussions:
+  - discussion_id: ammecr1-biochemistry-and-domain-scope
+    prompt: Establish a member-specific biochemical mechanism before adding catalytic edges.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Localization,developmental and marker-expression phenotypes do not establish the conserved domain reaction. Radical-transfer/RNA-modification predictions and structural clefts remain hypotheses.
+    evidence:
+      - reference: PMID:31953406
+        supports: PARTIAL
+        evidence_source: primary_methods_and_original_supplementary_figure
+        explanation: Supplementary Figure7 supports selected transcript responses; the paper's SRRT/CBC/U1 mechanism regulates Ammecr1 RNA and is not an activity of AMMECR1 protein.
+    notes: See evidence/PF01871/ammecr1-identity.txt and ammecr1-gap-ledger.txt. Distinguish isoforms and AMMECR1L,verify isolated-domain function and preserve negative marker comparisons. Family-wide EX_DUF status is not experimental characterization of all7217 proteins.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+  - discussion_id: ammecr1-constructs-and-coverage
+    prompt: Resolve manuscript and construct ambiguities and extend primary member coverage.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Final zebrafish supplement images,rescue-insert sequence and E1I1 dose disagreement remain open. Knockdown specificity and stable-genetic rescue need additional evidence.
+    evidence:
+      - reference: doi:10.1002/humu.23373
+        supports: PARTIAL
+        evidence_source: primary_accepted_manuscript_and_original_main_figure
+        explanation: Original final Figure4 and main Methods were inspected; earlier supplement captions are not full supplementary visual review. Partial tail rescue does not establish cardiac rescue.
+    notes: Retrieve final supplements and A549 PMID31519561 full Methods/figures before adding its abstract-only effects. Inspect PH0010 biochemical follow-up and other taxa with exact member mapping. Preserve IN_PROGRESS and partial same-agent review.
+    posed_by: Codex
+    posed_date: '2026-10-11'

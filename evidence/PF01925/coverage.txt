@@ -1,0 +1,31 @@
+PF01925 coverage and access ledger, UTC2026-10-12; same-agent partial assessment.
+Repository search included ignored/hidden files in curation,evidence,history,
+structured reviews and graph reports. PF01925 occurred only in the initial
+inventory before this curation. This is a scoped repository search, not proof
+that every external dataset lacks annotations.
+
+Bounded web queries included PF01925,DUF81,TauE,SafE,TSUP,YfcA,CysZ,MamO,PmpC,
+their experimentally named organisms, transport/mutant terms and2024-2026
+update terms. Database and review hits supplied leads, not causal support.
+Primary edges use Ruckert2005,Gristwood2011,Hershey2016. Their experimental
+contexts and three exact sequence mappings were checked. Weinitschke2007,
+Krejcik2008,Mampel2004,Favier2012 and Xin2020 were inspected for specific
+transport-assignment limits; Quinlan2011 was read for the older MamO claim.
+No exhaustive all-member or all-paper coverage is claimed.
+
+Remaining contexts: Yang2010 MSR-1 MamO truncation experiments; Desulfovibrio
+magneticus RS-1 genetics in PMID25569806/PMC4287615 (identity verified in
+PubMed, full study still to inspect); later MamE/MamO localization and proteolysis studies;
+H16 homotaurine/cysteate,IsfE and other proposed sulfur-transport contexts;
+BigR-linked systems,keratin degradation,plant/algal/archaeal members and
+genome-wide fitness screens. These leads are not incorporated as observed
+edges and are not declared causally empty. Exact historical constructs,
+CysZ complementation-vector discrepancy and inaccessible primer supplement,
+PmpC coexpression abundance and physiological transported substrates remain open.
+
+Public PMC web snapshots sometimes returned reCAPTCHA. Ordinary curl failed
+DNS; approved public-URL curl succeeded. The source DOCX tables were parsed
+with ZIP/XML, not treated as PDFs. The CysZ EPS link returned challenge HTML;
+no primer-table inspection is claimed. No permission policy was changed.
+Raw papers and temporary renderings stay outside the repository. Retained
+ledgers contain authored assessments and only minimal permitted quotations.

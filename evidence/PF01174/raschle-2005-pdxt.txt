@@ -1,0 +1,56 @@
+Inspected 2026-10-11. PMID:16030023; DOI:10.1074/jbc.M501356200.
+Author-deposited published article and appended supplement:
+https://access.archive-ouverte.unige.ch/access/metadata/c66582c3-73ec-4477-9a53-cfbe4f2f0f2c/download
+https://archive-ouverte.unige.ch/unige:89531
+All main text and supplemental captions read; Figures 1-4, 6/7, S2/S3 and
+cloning methods visually checked. Minimal quotations:
+"glutaminase activity"
+"pyridoxal"
+"acivicin"
+
+Strain-168 yaaD/yaaE were cloned from genomic DNA; constructs were sequenced.
+Untagged proteins were expressed in E. coli BL21(DE3), 0.5 mM IPTG, 3 h at
+37 C. YaaD purification used DEAE and phenyl-Sepharose; YaaE used DEAE and
+hydroxyapatite. N-terminal sequencing and >95% SDS-PAGE purity are reported.
+The His6-tagged YaaE preparation is reserved for the pull-out experiment.
+
+Supplement S2A and main Results: 4 uM untagged YaaE with 4 uM YaaD produces
+more coupled glutaminase signal than YaaE alone. Assay: 300 ul, 50 mM Tris-Cl
+pH 8.0, 0.5 mM APAD, 7 U bovine glutamate dehydrogenase, 10 mM glutamine,
+37 C; APAD reduction measured at 363 nm. Individual proteins stay near
+background. The readout tracks glutamate through the reporter enzyme, not
+directly imaged ammonia transfer or an isolated active-site conformation.
+S2B shows partner-ratio dependence; no new universal optimum is inferred.
+
+Product assays: 50 mM Tris-Cl pH 8.0, 37 C, 40 uM each untagged YaaD/YaaE,
+10 mM glutamine, 0.5 mM ribose 5-phosphate and 0.5 mM dihydroxyacetone
+phosphate. The A414 product readout is a Tris Schiff-base signal. Product
+identity is additionally supported by deproteinized HPLC coelution with PLP,
+chemical spectral shifts, electrospray MS and S3 600-MHz 1H NMR in D2O.
+S3 identifies an unknown contaminant at 3.75 ppm. No raw spectra were reprocessed.
+Figure 1C separately tests 20 uM YaaD, 20 uM YaaE when present, 10 mM
+ammonium sulfate, 1 mM ribulose or ribose 5-phosphate and 2 mM DL-G3P.
+Adding YaaE increases A414 formation with ribulose 5-phosphate, even with
+external ammonium. Ribose 5-phosphate works without YaaE; that condition
+prevents a universal requirement claim. A proposed isomerase role is not shown.
+
+Figure 3A: 4 uM each YaaD/YaaE preincubated with 5 mM acivicin at 37 C
+for displayed 0-10 min intervals, then assayed with glutamine. Longer exposure
+reduces coupled glutaminase activity. Figure 3C separately exposes 40 uM each
+enzyme to 0.04-5 mM acivicin, 60 min per Methods, and measures A414 synthesis
+with 0.5 mM ribose 5-phosphate, 0.5 mM DHAP and 10 mM glutamine. Increasing
+inhibitor reduces this signal. These are biochemical, not cellular drug effects.
+Figure 6 assigns an acivicin-associated peptide to C79. Figure 7 supports
+changed association using tagged pull-out and untagged native-PAGE methods;
+neither is adopted as a time-resolved native dissociation cycle in this graph.
+
+Unresolved source discrepancies: Figure 1A/B caption says 1 mM glutamine,
+whereas Methods and Results say 10 mM; do not attach exact fitted kinetics to
+the chosen 10 mM product graph. Figure 3B caption labels rates s^-1 whereas
+Results and the time axis use minutes. Inhibition Methods list 1/2/10 mM,
+but Figure 3A/B report 5 mM and 2/5/10 mM. Figure 4 caption says kDa for
+values whose main text says Da, and Methods versus Figure 4C differ on 1/2 mM
+acivicin. Intact-protein and peptide-adduct mass differences also require raw
+data/chemical reconciliation before claiming a precise adduct formula.
+The graphs retain observed directions, not resolved kinetic constants, atomic
+intermediates, ammonia-channel geometry or general antimicrobial efficacy.

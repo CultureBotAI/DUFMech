@@ -1,0 +1,59 @@
+Banerjee et al. 2023, Cell Reports, PMID:36947546,
+doi:10.1016/j.celrep.2023.112292.
+Primary publisher: https://www.sciencedirect.com/science/article/pii/S2211124723003030
+Published PDF inspected from:
+https://media.malariaworld.org/Nuclease_activity_of_Plasmodium_falciparum_Alba_family_protein_Pf_Alba3_bd5d2f0bd4.pdf
+Supplement inspected:
+https://ars.els-cdn.com/content/image/1-s2.0-S2211124723003030-mmc1.pdf
+Minimal quotation: "PfAlba3 exhibits hydrolytic cleavage mechanism"
+
+Paraphrased assay ledger:
+Whole untagged 3D7 PfAlba3 PF3D7_1006200,107aa, reference Q8IJX8v1.
+pET11a clone from parasite cDNA; identity sequence-verified by authors.
+PF01918 current match14-83; K22/K23/K32 lie within it. Assays do not
+establish isolated14-83 sufficiency or particular catalytic lysine chemistry.
+Figures1A/B and4C/D:79bp biotin-TARE6 SPR,20mM Tris pH7.5/100mM NaCl,
+WT apparent Kd304.9nM/Hill1.79; doubleK22/23R821.22nM/Hill0.98.
+Figure4B compares5ug protein with0.5ugpBR322:singleK22R,singleK23R and
+doubleK22/23R all reduce extensive degradation; residual nicked/linear
+species are not total absence of cleavage. Supplement TableS2 confirms
+the distinct constructs. Standard DNase buffer10mM Tris pH7.5,2.5mM MgCl2,
+0.5mM CaCl2,37 C/1h. Figure2F gel-excised/refolded protein retains activity,
+a contamination control, not independent replication.
+Figures4E-G:0.1pmol labeled AP28 or THF28+5ugPfAlba3 in20ul standard
+buffer37 C/1h produces shorter DNA, with major product matching EndoIV;
+C28 without abasic modification is not cleaved. Minor AP28 products remain.
+Figure5F doubleK22/23R has reduced THF28 processing, including matched
+5ug and higher doses; not separate single-mutant THF experiments.
+EndoIII and EndoIV use their own supplied buffers, not identical assay
+conditions. Hydrolytic cleavage is supported without a Schiff-base relay.
+SupplementS4 methoxyamine inhibits pBR processing, NCA does not, and no
+NaBH3CN-trapped protein-DNA adduct is shown. AP28/C28 SPR affinities are
+69.11/97.92nM, not a strong AP-specific-binding selectivity claim.
+
+Figure6 MS and S5D:in-vitro archaean SSO2813 Pat plus acetyl-CoA yields
+K23-only,K32-only and double-acetylated PfAlba3 peptides. Protocol20ug
+PfAlba3,5ugPat,20ul10mM Tris pH8/150mM NaCl,65 C/1h.
+S5C original autoradiogram:acetylated preparation reduces AP28 cleavage.
+Mixed-site treatment cannot isolate a K23-only causal effect, nor prove
+native parasite acetyltransferase identity.
+Figure7C/D:PfSir2a treatment lowers anti-K23-acetylated-PfAlba3 signal.
+Methods:10ug each protein,50ul,50mM Tris pH8,4mM MgCl2,0.2mM DTT,
+37 C/2h. The published PDF visibly prints500mM NAD+; retained as a
+source-unit uncertainty, not silently converted to500uM.
+No direct recovery-of-nuclease assay after deacetylation is encoded.
+Nuclear colocalization is not proof of an intracellular causal interaction;
+authors explicitly request IP validation and note deacetylation limits.
+
+Cross-species nuclease assays in Figure3/S3 are leads for separate mapped
+construct curation:His-Sso10b AAK41236,His-LdAlba XP_003864400,
+partially purified GST-TbAlba3 XP_011772781 and tag-cleaved OsAlba1
+XP_015646669. AAK41236.1 is ALT_INIT relative to current97aaP60849.
+The PfAlba3 author-named core construct boundary is not resolved in this
+pass; S3H alone does not prove an exact14-83 isolated-domain assay.
+No native BER role, parasite-survival effect or clinical drug-target claim
+is established. Human Rpp25 belongs to PF01918, so broad family absence
+in humans must not be inferred from the paper's parasite-specific wording.
+TableS1 has inconsistent U28 length notation; original figures use the
+author-labeled28mer. Raw oligo/clone provenance remains a follow-up.
+Access/review date: 2026-10-12.

@@ -1,0 +1,36 @@
+PF01661 / Af1521 identity and coordinate assessment
+Inspected 2026-10-11 UTC. Database facts and curator comparisons, not assay evidence.
+
+https://rest.uniprot.org/uniprotkb/O28751.json
+Retrieved JSON SHA256: 4365164ebee6c597cfefbeb1c1f2bae8f1cc684b71ec0087a6d3c0e7da33d74f
+O28751 / Y1521_ARCFU, gene AF_1521, 192 aa. Entry version 133 (2026-09-02),
+sequence version 2 (2002-04-16). Reference organism is Archaeoglobus fulgidus
+VC-16 / ATCC 49558 / DSM 4304 / JCM 9628 / NBRC 100126, taxon 224325.
+
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/O28751/entry/pfam/PF01661/
+Retrieved JSON SHA256: 3d07a6714ea9b2532c89c1e629cca1dfadb5a7d1f02d3236bd7034c3caf0c04a
+O28751 Pfam:PF01661; interval 30-155 inclusive.
+The 192-aa InterPro sequence exactly matches the UniProt sequence. D20 and Y176
+are outside this current Pfam interval; N34 is inside. The broader structural
+macro module and UniProt PROSITE 1-192 annotation are not the Pfam interval.
+
+https://data.rcsb.org/rest/v1/core/polymer_entity/2BFQ/1
+Retrieved JSON SHA256: f39a29fcc238c5917d5655e3f156f0f9a95d7ed0a85bb4803d0472c2987ba3d4
+PDB 2BFQ entity1 canonical sequence exactly matches O28751 over all 192 residues,
+with zero reported sequence mutations/deletions. The deposited chemical sequence
+has FME at residue 1, normalized to M in the canonical sequence. This does not
+prove that every biochemical preparation was N-formylated. PDB source organism
+is species-level A. fulgidus, taxon2234; the strain annotation above is reference
+grounding, not an independently resequenced experimental stock. The structural
+deposit's C41/BL21(DE3) host and PBE plasmid are not automatically transferred to
+all functional constructs in the 2005 and 2013 papers.
+
+Karras2005 describes thrombin cleavage of His6-Af1521 and refers to Allen2003,
+PMID12842467, for expression details. That earlier paper's complete Methods
+were not retrieved; exact vector-derived terminal residues remain unresolved.
+Jankevicius2013 explicitly uses GST-AF1521 from Dani2009, PMID19246377,
+doi:10.1073/pnas.0900066106; its complete construct supplement was inaccessible.
+Rosenthal2013 describes pET28-GST-derived macrodomains, but explicitly describes
+tag cleavage for MacroD2 only. Do not call either 2013 Af1521 preparation tag-free
+or sequence-verified from the 2005 structure. All current graph mappings use the
+Af1521 native reference with these construct qualifications.

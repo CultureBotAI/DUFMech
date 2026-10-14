@@ -1,0 +1,51 @@
+Karras et al. 2005, PMID15902274, doi:10.1038/sj.emboj.7600664
+https://pmc.ncbi.nlm.nih.gov/articles/PMC1142602/
+Inspected 2026-10-11 UTC: Results, Discussion, Methods, Tables I-II and III;
+Figures 1,2,3,6,7 visually inspected. Figure5 was downloaded but not visually
+assessed; Figure4 was not downloaded. Structural contacts are not causal movies.
+Retrieved HTML SHA256: 885145e456bb2dfcfad512a3493527df4f1877cfb7f0fc1cc22e132afd950001
+Copyright2005 EMBO. Minimal quotations; the remaining content is curator notes.
+
+Figure1 quote: "Thin-layer chromatography assays"
+TLC: 2mM Appr>P plus6ug CPDase in9ul generates Appr1-phosphate; add1ul Af1521
+(6ug), incubate12h30C. CPDase remains in the coupled preparation. Lane3 product
+co-migrates with ADPr in the matched CPDase/Af1521 buffer (lane4), distinct from
+lane2 intermediate and ADP/AMP controls. ADPr without Af1521 is lane5; free
+standards6-8 use different enzyme content. This is chromatographic assignment,
+not an Af1521 product MS/NMR determination. Supporting phosphate result4nmol
+input to2.9nmol Pi and yeast YBR022W activity are text-only, data not shown.
+TLC sample2ul plus1ul100mM tetrabutylammonium; Nano-SIL CN/UV254,1.5M LiCl,
+20% ethanol, UV254 detection. Neither physiological substrate nor turnover
+cycle follows from this long endpoint assay.
+
+Tables I-II quote: "Equilibrium values for binding"
+ITC25C,50mM potassium phosphate pH6.5,10-50uM Af1521,150-750uM nucleotide
+(8-15-fold excess in syringe). First small injection excluded from analysis.
+WT ADPr Kd126+/-21nM in text,0.13+/-0.02uM in TableI. Stoichiometry differs:
+text N=0.91+/-0.01; TableI N=0.93+/-0.01. Retain this discrepancy.
+TableII ADPr Kd, uM: WT0.13+/-0.02, D20A11.7+/-2.1, N34A0.39+/-0.05,
+Y176L0.23+/-0.05. All retain measurable binding. Replicate count and definition
+of uncertainty are not supplied here; no mutant folding/active-fraction control
+is displayed. These are binding effects, not demonstrated catalytic mutations.
+TableI other ligand Kd,uM: ADP5.63+/-0.76, AMP38+/-4, ATP18.7+/-4.1.
+Adenosine/NAD/GDP weak, unfittable, estimated Kd>100uM, not proven zero binding.
+N34A/ADP unchanged binding is a text-only result, data not shown.
+
+Figure7 quote: "poly-ADP-ribosylated PARP1"
+Nitrocellulose-bound Af1521 retains32P-labeled PARP1 conjugate, strong at200pmol,
+weak at20pmol; BSA/lysozyme at200/400pmol are low controls. H2A and BAL/PARP9
+are other binding comparators, not Af1521 orthologs. Polymer was generated using
+0.4U bovinePARP1,6ug/ml activated calf-thymus DNA,150uM NAD plus tracer,25mM
+Tris pH8,10mM MgCl2,0.1M NaCl,0.5mM DTT,1h25C. Dilute to10mlTBS-T;
+bind1h25C, extensive washes including1M NaCl. Loading stain is reported but
+not displayed. NAD-only and freed-PAR controls are data not shown. The displayed
+experiment does not resolve free-PAR versus PARP1-conjugate binding, polymer
+end versus internal binding, polymer cleavage, or recruitment in living cells.
+
+Figure6 image/caption panel labels disagree: image B is the bead-retention
+barplot and C the alignment; caption calls B alignment and C pulldown. Af1521
+retains about60-65% ADPr, with GST/TAF250 controls near baseline. Exact Af1521
+fusion/matrix assignment and error estimates are not supplied; this supporting
+binding observation is not entered as a second independent ITC measurement.
+No cross-member conservation, structural water activation or complete cellular
+ADP-ribose pathway is established by these scoped Af1521 assays.

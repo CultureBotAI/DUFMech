@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01458
+  path: data/families/PF01458.yaml
+session:
+  id: 2026-10-11T105319Z-codex-6e054a
+  timestamp: '2026-10-11T10:53:19Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial SufBD scientific self-review with separate biochemical and
+    cellular scope
+  details: Saved structured YAML and native-derived Markdown review of five direct
+    SufB-complex effects and two indirect SufD phenotypes. Distinct domain intervals,
+    assays, strains, residual output and abundance controls remain explicit; exact
+    chemistry and broader member coverage are open. Review is same-agent, partial
+    and NEEDS_FOLLOWUP; no REVIEWED promotion or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T105307Z-pf01458-sufbd-biochemical-and-cellular-contexts/review.yaml

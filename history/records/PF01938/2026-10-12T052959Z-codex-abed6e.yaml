@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01938
+  path: data/families/PF01938.yaml
+session:
+  id: 2026-10-12T052959Z-codex-abed6e
+  timestamp: '2026-10-12T05:29:59Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped PF01938 TRAM0076 causal review
+  details: Same-agent partial scientific assessment of ten graphs and32 effects. Native
+    projection validates and matches the overlay; exact protein/domain mapping,primary
+    figures,assay chemistry and variant/host/induction caveats checked. Saved pass_with_limitations
+    and NEEDS_FOLLOWUP; one open coverage finding,two open discussions. Status remains
+    IN_PROGRESS. No independent endorsement,full family completion or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T052935Z-pf01938-tram0076-dna-beacons-and-separated-rna-growth-contexts/review.yaml

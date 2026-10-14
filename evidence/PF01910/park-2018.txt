@@ -1,0 +1,75 @@
+PF01910 fungal evidence; inspected 2026-10-12 UTC
+Park et al. 2018, PMID30563896, DOI10.1128/mBio.02353-18.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/
+Minimal exact quotation: ECM15 transcripts compared with the wild type
+This text occurs within the Results discussion of the VAD1 deletion
+comparison; all following prose is an authored assay assessment.
+Main ECM15 Results/Discussion and Methods, original Figures4/5, FigureS5
+and TableS5A visually inspected. TableS5B/C text parsed, not independently
+validated against clone sequences. Other supplementary PDFs downloaded
+in the archive but not inspected. No full-study replication is claimed.
+
+Figure5A: BY4741 S. cerevisiae ecm15 deletion lowers spot growth on
+calcofluor-white plates relative to WT; C. neoformans ECM15 expression
+restores growth toward WT. YPD comparison is similar among strains.
+The assay is qualitative, not a growth-rate measurement or direct cell-
+wall chemistry. TableS5A lists deletionYP738 and heterologous rescueYP744;
+an empty-vector strainYP745 is listed but not displayed in Figure5A.
+
+Figure4B: tagged Ecm15-mCherry is nuclear-enriched with Cac2-GFP in YPD;
+starvation and rapamycin treatment reduce nuclear enrichment. Starvation
+also weakens visible signal, so abundance/fluorescence changes remain
+an alternative to movement alone. Figure4D: ECM15 deletion lowers
+Cac2-GFP/DAPI PCC from0.77 to0.57 under nutrient-rich conditions.
+Residual nuclear association remains. Methods calculate PCC from at
+least20cells, not necessarily20independent cultures. Direct physical
+binding and an Ecm15-mediated Cac2 transport step are not demonstrated
+by colocalization. FigureS5A predicts D63-A91 NLS; no mutant test validates
+that segment. Do not attach the Figure1 STL1 rapamycin dose/time to
+Figure4 without an explicit source link.
+
+Figure4C: ecm15 deletion increases apparent capsule under glucose-free
+ASN relative to H99; own-gene complementation lowers it toward WT.
+The retained graph concerns qualitative India-ink morphology, not an
+absolute synthesis rate. Methods state complementation retains the
+original deletion. TableS5A identifies ecm15 deletionYP573 and own-gene
+complementYP612. Its ecm15-deletion-plus-CAC2 row instead prints a cac2
+deletion genotype andYP617, also used for cac2 own-gene complement.
+This conflict is not silently repaired. CAC2 cross-rescue epistasis is
+excluded from exact-clone causal edges pending resolution.
+
+Figure5B: ecm15 deletion reduces norepinephrine-dependent pigmentation
+and mating-associated filaments relative to WT; own-gene complement
+restores both qualitative outcomes. Pigmentation is not a direct laccase
+activity assay, and filaments are not a complete mating mechanism.
+The caption's printed100mg/ml norepinephrine is suspicious; no corrected
+unit is asserted. Figure5C deletion lowers spot growth on SDS and ASN
+without glucose; complementation restores it. RichYPD is a comparison,
+and spots do not resolve death from slower growth. SDS concentration
+was not specified in the inspected Figure5/Methods; do not invent it.
+
+Figure5D left: deletion prolongs mouse time to the moribund endpoint;
+own-gene complementation shortens it relative to deletion. Right:
+ECM15 overexpression also prolongs this endpoint relative to its matched
+WT/empty-vector control. These separate experiments use different
+inocula and cannot be pooled as one dose-response or a monotonic
+ECM15-to-virulence relationship. Ten animals per group are reported.
+This is an assay-level endpoint, not a human clinical survival claim or
+a new instruction for pathogen manipulation. STL1 patient associations
+elsewhere in the paper are not transferred to ECM15.
+
+Figure5F: VAD1 deletion increases ECM15/ACT1 steady-state RNA under
+starvation relative to WT, with three independent experiments and
+reportedP<0.05. Figure5E RNA immunoprecipitation is supportive association,
+not by itself proof of a causal RNA degradation reaction. No direct
+transcriptional activation is encoded; RNA stability can change.
+
+Authoritative molecular mapping is in identity.txt. The H99 sequence
+displayed in FigureS5 matches J9VTN7/AFR95954.1/XP_012050770.1; the Sc
+reference mapping remains qualified to the BY4741 experimental system.
+No fungal thiamine-binding assay or thiamine-to-TOR chain is established.
+HTML SHA256 f4743b9d0fe8bbd8c935e6d96a355b2b2b1f944ba080bb1d20829101a6463129
+Supplement API (the inline-image default yielded an unhelpful small ZIP):
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6299223/supplementaryFiles?includeInlineImage=false
+Archive SHA256 7beaeb45b3025e4f77e7c3f9dd3c5308cd6221dfac74c1073c6ff31730508c02
+Inspected members mbo006184232sf5.pdf and mbo006184232st5.pdf.

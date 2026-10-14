@@ -1,0 +1,55 @@
+PF01955 native Rhodobacter deletion assessment, 2026-10-12 UTC
+Primary: PMID:19376876; DOI:10.1128/JB.00230-09
+https://journals.asm.org/doi/10.1128/jb.00230-09
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2698395/
+Supplement: https://journals.asm.org/doi/suppl/10.1128/jb.00230-09/suppl_file/jb00230_09sm.pdf
+Locators: deletion Methods, Table1; supplement TableS1 p2 and TableS2 p3.
+Minimal quotation: "41-amino-acid"
+Main text and Table1 were read in publisher and PMC copies. The supplement
+PDF text was accessible through the web reader; its images were not returned
+for visual inspection. Direct PDF download returned403. No bypass was used.
+
+The paper explicitly assigns cbiZ to RSP_2406, independently corroborating
+the later remodeling-study primer mapping. Current parent Q3J3R7v1/ABA78567.1
+is219aa, PF01955 6-208, in strain2.4.1 (current taxon272943). Previously
+retained public CP000143.2:1035173..1035832 CDS is660bp including stop and
+translates exactly to the native parent using bacterial CDS start semantics.
+Current database mapping is detailed in gray-2009-identity-constructs.txt.
+
+Printed construction: pRsCBIZ4 contains1500bp upstream and69bp from the5prime
+coding end; pRsCBIZ5 adds a reported48bp3prime coding segment and1503bp
+downstream. Methods call the deletion70..610, introduce6bpXbaI and describe
+a41aa hypothetical product. Historical amplicon sequencing is reported; the
+actual clone sequence and residual peptide expression were not retrieved.
+
+SupplementTableS1 internal deletion primers, copied without spacing:
+Rs_delta-cbiZ_XbaI_3prime CTAGTCTAGAGCTCAGCACCCGCATCGG
+Rs_delta-cbiZ_XbaI_5prime CTAGTCTAGAAGCCGGATCTGGATGCAG
+Compute the annealing tails AFTER the engineered TCTAGA site; a longest-suffix
+match can accidentally include a coincidentally matching engineered-site base.
+Left reverse tail GCTCAGCACCCGCATCGG reverse-complements to
+CCGATGCGGGTGCTGAGC, matching CDS52..69. Right forward tail
+AGCCGGATCTGGATGCAG matches CDS610..627. The predicted ligated coding region is
+CDS1..69 + TCTAGA + CDS610..660:69+6+51=126nt including the stop.
+Translation with table11,cds=True gives41aa:
+MIEVALERPWLVARLPGPMRVLSSRSRIWMQERRAQAGRAG
+Thus the primer-implied deletion is70..609, not inclusive70..610; the right
+retained native segment is51nt including stop, not48nt. The41aa prediction
+agrees with the paper's peptide length. Native residues1..23 and204..219
+remain around a two-residue SR junction; the intact PF01955 domain does not.
+This is a reconstruction from printed primers and the deposited parent, NOT
+proof of the historical clone sequence, expressed peptide or selective-domain
+perturbation. Do not silently correct the source's endpoint/length statements.
+
+Table1 separates parent and plasmid-bearing derivatives: JE10756 is the
+delta-cobBdelta-cbiZdelta-cobP parent; vector derivative isJE10780, whereas
+Figure4 caption printsJE10708. CobY derivativeJE10785 is consistent.
+JE11844 is the delta-cobBdelta-cobDdelta-cobP parent; Figure5/Table1 use
+JE11906 for its pCOBY47 derivative. This parent/derivative distinction resolves
+the apparentJE11844/JE11906 label concern without inventing a genotype.
+JE11902/JE11903 are delta-cobBdelta-cobP carrying vector/pCOBY47 respectively;
+JE10755 is delta-cobBdelta-cbiZ andJE11769 additionally has cobD::aadA.
+CobD here isRSP_0430,AdoCbi-P synthetase, not Salmonella's CobD decarboxylase.
+Other printed construction issues include a cobB-named primer in cobD Methods
+and cobP fragment arithmetic1545 versus42+1543. Full partner clone sequences
+and allele endpoints are not considered verified by this CbiZ reconstruction.

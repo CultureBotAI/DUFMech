@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01885
+  path: curation/families/PF01885.yaml
+session:
+  id: 2026-10-11T051311Z-codex-bbd7f2
+  timestamp: '2026-10-11T05:13:11Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add scoped CthTpt1 terminal RNA phosphate-removal graph
+  details: Inspected Munir 2019 Results, methods and Figure 1 plus 2018 construct
+    methods; mapped ABN54255.1 to A3DJX6 and PF01885. Retained two substrate-specific
+    direct experimental endpoint edges with NAD dependence, stoichiometric-reaction
+    caveat, negative homolog results and no family-wide transfer. Overlay validation
+    passed; guarded projection and partial scientific review follow.
+  sections:
+  - causal_graphs

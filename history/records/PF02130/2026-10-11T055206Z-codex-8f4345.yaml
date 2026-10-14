@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF02130
+  path: curation/families/PF02130.yaml
+session:
+  id: 2026-10-11T055206Z-codex-8f4345
+  timestamp: '2026-10-11T05:52:06Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate YbeY model-RNA and joint-enzyme rRNA degradation graphs
+  details: Inspected Jacob 2013 main methods and Figures 1 and 3; resolved historical
+    P77385 demerger to E. coli P0A898. Added two scoped graphs with three observed
+    edges, minimal hashed evidence and an open discussion. Kept YbeY plus RNase R
+    conjunctive and distinguished deletion-derived from kasugamycin-derived 70S. Extended
+    supplement, construct details and other family contexts remain unresolved; no
+    status promotion or publication.
+  sections:
+  - causal_graphs
+  - discussions

@@ -1,0 +1,29 @@
+PF01944 primary evidence, inspected 2026-10-12 UTC, Codex
+PMID:17824930; doi:10.1111/j.1365-2958.2007.05887.x
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2885130/
+Minimal exact locator quotation: "Fig. 3."
+
+Read Results on localization, fusion rescue and secondary pathways, Table 1,
+growth and microscopy Methods, and Figure 3 caption; Figure 3 JPG visually
+inspected. All strains are PY79 derivatives. GFP imaging uses resuspension
+sporulation at 37 C; Figure 3 is t1.75 h. GFP constructs are driven by PspoIID
+at amyE and replace the corresponding native protein function.
+
+Panel H versus E: spoIIM::Tn917 in GFP-SpoIIP cells reduces septal targeting.
+Table 1: KP776 versus KP722; both carry spoIIP::tet and the GFP-SpoIIP fusion.
+Panel B versus A: spoIIB::erm reduces GFP-SpoIIM septal targeting, KP762
+versus KP721; both carry spoIIM::Tn917 and GFP-SpoIIM.
+Panels C and D versus A: spoIID298 or spoIIP::tet restricts GFP-SpoIIM to
+the septal midpoint rather than the advancing membrane edge. Table 1 gives
+KP763 and KP764. Panel D's caption instead says KP722, which Table 1 assigns
+to GFP-SpoIIP. Retain this discrepancy and describe the genotype, not a
+silently repaired strain label. These are separate partner perturbations.
+
+The GFP fusions are partly functional and cause synergistic engulfment
+defects in spoIIB backgrounds. Native SpoIIP coexpression rescues a fusion
+defect, not a spoIIM deletion. Arrest and altered abundance can contribute
+to localization readouts; direct binding or a catalytic microstep is not
+resolved. SpoIIB-mCherry edge migration persists without SpoIIM (Figure 2
+text/caption, image not inspected). Coimmunoprecipitation of D and P is not
+direct M binding. Secondary Q/AH/IVFAB pathways and joint mutants remain
+distinct from isolated SpoIIM effects. No hydrolase activity assigned to M.

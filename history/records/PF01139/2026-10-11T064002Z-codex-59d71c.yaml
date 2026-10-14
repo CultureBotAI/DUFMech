@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01139
+  path: curation/families/PF01139.yaml
+session:
+  id: 2026-10-11T064002Z-codex-59d71c
+  timestamp: '2026-10-11T06:40:02Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate distinct RtcB protein-adduct, RNA-processing and ligation graphs
+  details: Inspected 2012 PNAS and NAR methods, figures and source inconsistencies,
+    plus cited 2011 tag-removal protocols. Matched reference P46850 sequence and experimental
+    peptide to PF01139. Added three graphs with three observed edges and one explicitly
+    inferred RNA 3-guanylylation assignment. Blocked and ligatable RNA substrates
+    remain separate; caption discrepancies, reference-versus-template identity and
+    enzyme-excess limits are preserved. Native regeneration and scoped self-review
+    follow; IN_PROGRESS retained.
+  sections:
+  - causal_graphs

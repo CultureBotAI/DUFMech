@@ -1,0 +1,314 @@
+pfam_id: PF01933
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01933
+discussions:
+- discussion_id: pf01933-construct-and-assay-conflicts
+  prompt: Resolve construct identities, conflicting residue numbering and inaccessible supplementary controls.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Reference-sequence mapping supports scoped protein effects without proving every clone or elementary catalytic step.
+  evidence:
+  - reference: PMID:32994436
+    supports: PARTIAL
+    evidence_source: primary_results_and_methods
+    explanation: Results Y265A/R301A conflict with Methods Y264A/R300A and His264; current O06974 agrees with Results but does not verify the clone.
+  - reference: PMID:35038903
+    supports: PARTIAL
+    evidence_source: primary_assay_and_figure
+    explanation: Relative product fractions are supported; accession supplement and reported0.14nM Fo remain unresolved.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Retain current domain boundaries, especially R301 outside7-292; do not repair primary-source numbering silently. Foulquier HPAEC-PAD supplementary chromatogram and Hasan TableS3 were inaccessible challenge responses.
+- discussion_id: pf01933-functional-branches-and-coverage
+  prompt: Extend CofD and GlmR primary coverage without transferring activities across all family members.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Cofactor synthesis, GlmS regulation and accessory uridyltransferase evidence describe distinct experimental contexts.
+  evidence:
+  - reference: PMID:18252724
+    supports: PARTIAL
+    evidence_source: primary_source_followup
+    explanation: Earlier CofD mutation and binding studies need exact construct and assay reconciliation.
+  - reference: PMID:36939339
+    supports: PARTIAL
+    evidence_source: primary_biochemical_results
+    explanation: GlmR uridyltransferase Results were inspected but construct, figure and member-specific curation remains open.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: See coverage ledger for Graupner2002, Braga2019, other Hasan pairs, earlier Bacillus phenotypes, Enterococcus, Salmonella,2026 GlmR modifications, YbhK and CuvA. No exhaustive family characterization or graphless-member negative is claimed.
+causal_graphs:
+- graph_id: mtb-fbia-fbid-product-2019
+  title: Paired M.tuberculosis enzymes produce dehydro-F420-0
+  scope: Bashiri2019 Figure2b-c; purified FbiA and FbiD, not FbiA alone.
+  context: Synthetic N-His6 FbiA expressed in M.smegmatis; purified partners with PEP,GTP,Fo and Mg in HEPESpH7.5 at37C.
+  family_mapping: Rv3261/FbiA reference P9WP81 sequencev1,331aa,taxon83332; PF01933 matches3-294. Exact synthetic insert not audited; FbiD is a separate enzyme.
+  taxon: NCBITaxon:83332
+  scope_status: MECHANISTIC
+  limitations: Composite product formation does not observe EPPG channeling or assign FbiD/FbiB chemistry to PF01933. The2-PL negative is pairing-specific; mature reduced F420 is not the measured product.
+  nodes:
+  - node_id: paired-reaction
+    label: FbiA plus FbiD with PEP,GTP,Fo and Mg
+    node_type: STATE
+    grounding: [UniProtKB:P9WP81]
+  - node_id: product
+    label: MS/MS-supported dehydro-F420-0
+    node_type: STATE
+  edges:
+  - edge_id: paired-product
+    subject: paired-reaction
+    predicate: produces
+    object: product
+    mechanism: The complete purified-enzyme reaction yields the identified dehydro cofactor intermediate; the two proteins form one tested input condition.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30952857
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6450877/
+      snippet: Tandem mass spectral identification
+      explanation: Figure2b FbiD reaction and Figure2c product fragmentation, with HPLC/LC-MS Methods.
+      cache_path: evidence/PF01933/bashiri-2019.txt
+      cache_sha256: 783504f269f3ececbea762a21a1788bf75600311aaba01f37894252ca59dc4ee
+- graph_id: mtb-fbia-mjan-cofc-product-2019
+  title: A mixed-species enzyme pair produces dehydro-F420-0
+  scope: Bashiri2019 Figure2b-c; M.tuberculosis FbiA with M.jannaschii CofC/MJ0887.
+  context: Purified N-His6 proteins with PEP,GTP,Fo and Mg in HEPESpH7.5 at37C; synthetic constructs expressed in different hosts.
+  family_mapping: The PF01933 component is Rv3261/FbiA reference P9WP81v1,331aa,match3-294. M.jannaschii CofC is not CofD/Q58653. Exact synthetic inserts not sequence-audited.
+  scope_status: MECHANISTIC
+  limitations: This mixed-species reaction is not an archaeal native pathway. Its2-PL negative cannot establish universal archaeal substrate exclusion; Hasan2022 resolves a partner-selection confound.
+  nodes:
+  - node_id: mixed-reaction
+    label: Mtb FbiA plus Mjan CofC with PEP,GTP,Fo and Mg
+    node_type: STATE
+    grounding: [UniProtKB:P9WP81]
+  - node_id: product
+    label: MS/MS-supported dehydro-F420-0
+    node_type: STATE
+  edges:
+  - edge_id: mixed-product
+    subject: mixed-reaction
+    predicate: produces
+    object: product
+    mechanism: The specified cross-species enzyme pair produces the dehydro intermediate under the tested reaction conditions.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30952857
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6450877/
+      snippet: Tandem mass spectral identification
+      explanation: Figure2b CofC reaction and Figure2c product identification; each assay still contains Mtb FbiA.
+      cache_path: evidence/PF01933/bashiri-2019.txt
+      cache_sha256: 783504f269f3ececbea762a21a1788bf75600311aaba01f37894252ca59dc4ee
+- graph_id: msmeg-fbia-deletion-cofactor-2020
+  title: fbiA deletion reduces detectable mature cofactor
+  scope: Grinter2020 Figure2B; M.smegmatis mc2 155 whole-gene deletion versus wild type.
+  context: Stationary-phase LBT cultures; extracted lysates analyzed by LC-MS. Otherwise-isogenic deletion verified by whole-genome sequencing.
+  family_mapping: MSMEG_1830/FbiA reference A0QTG2v1,327aa,taxon246196; PF01933 matches3-291. Whole-gene perturbation, not isolated-domain sufficiency.
+  taxon: NCBITaxon:246196
+  scope_status: PHENOTYPIC
+  limitations: No fbiA rescue shown in this experiment. Mature cofactor accumulation is downstream of multiple enzymes; absence of a detectable peak is not a quantitative zero or direct reduction chemistry.
+  nodes:
+  - node_id: deletion
+    label: fbiA deletion
+    node_type: PERTURBATION
+    grounding: [UniProtKB:A0QTG2]
+  - node_id: cofactor
+    label: Detectable mature F420 species in cell extracts
+    node_type: STATE
+  edges:
+  - edge_id: cofactor-loss
+    subject: deletion
+    predicate: decreases
+    object: cofactor
+    mechanism: Removing fbiA lowers mature cofactor signals below detection in the tested extracts while wild type retains them.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:32430409
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7253369/
+      snippet: Mutagenic dissection
+      explanation: Figure2B fbiA versus wild-type LC-MS peaks, deletion validation and extract Methods.
+      cache_path: evidence/PF01933/grinter-2020.txt
+      cache_sha256: 56115db21eb8d911caa959cabcced91a2d00a18820793df642369d4dd8bc2194
+- graph_id: msmeg-partner-product-fractions-2022
+  title: FbiA partner exchange changes relative product fractions
+  scope: Hasan2022 Figure6C; fixed M.smegmatis FbiD with Mjan CofD or Msmeg FbiA.
+  context: Purified N-His6 pairs, competing PEP/2-PL/3-PG substrates,GTP,Mg,Fo and HEPESpH7.4; LC-MS relative product formation.
+  family_mapping: Reference anchors A0QTG2v1,327aa,match3-291 and Q58653v1,311aa,match5-275. TableS3 unavailable; exact synthetic accessions, strain and clone versions unresolved, not asserted from reference maps.
+  scope_status: PHENOTYPIC
+  limitations: Relative fractions do not establish absolute catalytic rates. Methods0.14nM Fo remains unresolved. Proposed intermediate channeling and a specific residue mechanism were not observed.
+  nodes:
+  - node_id: partner-exchange
+    label: Replace Mjan CofD with Msmeg FbiA in the fixed-FbiD assay
+    node_type: PERTURBATION
+  - node_id: pep-fraction
+    label: Relative PEP-derived product fraction
+    node_type: STATE
+  - node_id: lactate-fraction
+    label: Relative2-PL-derived product fraction
+    node_type: STATE
+  edges:
+  - edge_id: pep-fraction-increase
+    subject: partner-exchange
+    predicate: increases
+    object: pep-fraction
+    mechanism: Partner replacement shifts the measured product distribution toward the PEP-derived species in the competitive assay.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Role of CofD in substrate specificity
+      explanation: Figure6C PEP bars and relative LC-MS assay Methods; not an absolute rate comparison.
+      cache_path: evidence/PF01933/hasan-2022.txt
+      cache_sha256: 057f3404a419d50c6311f9ac1fc763b6e99dd952713d2330c0da409b58495282
+  - edge_id: lactate-fraction-decrease
+    subject: partner-exchange
+    predicate: decreases
+    object: lactate-fraction
+    mechanism: The same partner exchange reduces the2-PL-derived fraction; this is a second readout of the shared distribution, not an independent rate measurement.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Role of CofD in substrate specificity
+      explanation: Figure6C2-PL bars with the competing-substrate assay, not a CofC-alone substrate exclusion.
+      cache_path: evidence/PF01933/hasan-2022.txt
+      cache_sha256: 057f3404a419d50c6311f9ac1fc763b6e99dd952713d2330c0da409b58495282
+- graph_id: bsub-glmr-glms-assay-2020
+  title: GlmR and UDP-GlcNAc modulate the GlmS assay
+  scope: Foulquier2020 Figure1; purified B.subtilis168 proteins with separate GlmR and UDP-GlcNAc titrations.
+  context: His-tagged GlmR and GlmS; F6P,Gln,GNA-1,acetyl-CoA and DTNB coupled assay,pH7.4,37C; no-GlmS blanks subtracted.
+  family_mapping: GlmR/YvcK/BSU34760 reference O06974v1,317aa,taxon224308; PF01933 matches7-292. Whole recombinant protein; GlmS is the separate partner enzyme.
+  taxon: NCBITaxon:224308
+  scope_status: MECHANISTIC
+  limitations: Purified-assay regulation is not isolated-domain catalysis or proof of an in-cell feedback chain. Supplementary HPAEC-PAD confirmation is reported by the authors but was inaccessible for independent inspection.
+  nodes:
+  - node_id: glmr-addition
+    label: GlmR addition to the GlmS reaction
+    node_type: PERTURBATION
+    grounding: [UniProtKB:O06974]
+  - node_id: activity
+    label: Background-corrected GlmS-dependent reaction signal
+    node_type: ACTIVITY
+  - node_id: sugar-addition
+    label: UDP-GlcNAc addition with GlmR present
+    node_type: PERTURBATION
+  edges:
+  - edge_id: reaction-stimulation
+    subject: glmr-addition
+    predicate: increases
+    object: activity
+    mechanism: Added GlmR stimulates the purified GlmS-dependent assay above its no-GlmR control.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:32994436
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7525490/
+      snippet: GlmS activity is directly stimulated by GlmR
+      explanation: Figure1A-B, coupled-assay Methods and no-GlmS blank control.
+      cache_path: evidence/PF01933/foulquier-2020.txt
+      cache_sha256: 8ffd6fe3ff1c4ef4f63e49cb68d776de8faa14f4d16151c73782f36503763685
+  - edge_id: stimulation-attenuation
+    subject: sugar-addition
+    predicate: decreases
+    object: activity
+    mechanism: UDP-GlcNAc attenuates the GlmR-stimulated signal; the edge is conditional on GlmR and does not identify a binding site by itself.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:32994436
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7525490/
+      snippet: GlmS activity is directly stimulated by GlmR
+      explanation: Figure1B-C compares UDP-GlcNAc titration with and without GlmR.
+      cache_path: evidence/PF01933/foulquier-2020.txt
+      cache_sha256: 8ffd6fe3ff1c4ef4f63e49cb68d776de8faa14f4d16151c73782f36503763685
+- graph_id: bsub-glmr-competence-2020
+  title: Two GlmR variants reduce transformation frequency
+  scope: Foulquier2020 Table1; B.subtilis168-background variants, using Results residue labels.
+  context: Chromosomal-DNA transformation assay; frequency normalized by viable-cell count. T14A control not reduced; equal abundance cited from earlier work.
+  family_mapping: O06974v1,317aa,PF01933 7-292; current Y265/R301 agree with Results. Methods Y264A/R300A and His264 conflict. R301 outside the match; exact clone numbering unresolved.
+  taxon: NCBITaxon:224308
+  scope_status: PHENOTYPIC
+  limitations: Neither isolated-domain specificity nor mediation by GlmR-YvcJ binding is established. Reported abundance control does not prove unchanged folding or all other activities.
+  nodes:
+  - node_id: y265a
+    label: Source-labeled GlmR Y265A variant
+    node_type: PERTURBATION
+    grounding: [UniProtKB:O06974]
+  - node_id: r301a
+    label: Source-labeled GlmR R301A variant
+    node_type: PERTURBATION
+  - node_id: transformation
+    label: Transformation frequency relative to wild type
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: y265a-frequency
+    subject: y265a
+    predicate: decreases
+    object: transformation
+    mechanism: The source-labeled Y265A strain has a lower measured transformation frequency than its wild-type comparator.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:32994436
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7525490/
+      snippet: Preventing the interaction GlmR-YvcJ affects competence efficiency
+      explanation: Table1 SG522 versus168 and transformation Methods; retain numbering conflict rather than claim a resolved residue mechanism.
+      cache_path: evidence/PF01933/foulquier-2020.txt
+      cache_sha256: 8ffd6fe3ff1c4ef4f63e49cb68d776de8faa14f4d16151c73782f36503763685
+  - edge_id: r301a-frequency
+    subject: r301a
+    predicate: decreases
+    object: transformation
+    mechanism: The source-labeled R301A strain has a lower measured transformation frequency; its residue is outside the current Pfam match.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:32994436
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7525490/
+      snippet: Preventing the interaction GlmR-YvcJ affects competence efficiency
+      explanation: Table1 SG523 versus168 and transformation Methods, with domain-boundary and construct-numbering limits.
+      cache_path: evidence/PF01933/foulquier-2020.txt
+      cache_sha256: 8ffd6fe3ff1c4ef4f63e49cb68d776de8faa14f4d16151c73782f36503763685
+- graph_id: bsub-glmr-yvcj-scattering-2020
+  title: GlmR reduces large-particle scattering in a YvcJ mixture
+  scope: Foulquier2020 Figure4; purified-protein mixture, not a cellular competence experiment.
+  context: YvcJ with0.4mM UDP-GlcNAc, with or without7uM GlmR; dynamic light scattering at25C in Tris/NaCl/glycerol.
+  family_mapping: GlmR reference O06974v1,317aa,PF01933 7-292. YvcJ is a separate partner; assay uses full-length proteins rather than an isolated PF01933 fragment.
+  taxon: NCBITaxon:224308
+  scope_status: PHENOTYPIC
+  limitations: Mixed-particle hydrodynamic sizes do not independently resolve oligomer stoichiometry, assign every particle to YvcJ or show YvcJ enzymatic activation. No causal link to transformation frequency is demonstrated here.
+  nodes:
+  - node_id: addition
+    label: GlmR addition to YvcJ plus UDP-GlcNAc
+    node_type: PERTURBATION
+    grounding: [UniProtKB:O06974]
+  - node_id: large-particles
+    label: Large-particle component of the scattering distribution
+    node_type: STATE
+  edges:
+  - edge_id: large-particle-reduction
+    subject: addition
+    predicate: decreases
+    object: large-particles
+    mechanism: Adding GlmR reduces the large-size component observed in the mixture; the molecular identity and dissolution mechanism remain unresolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:32994436
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7525490/
+      snippet: GlmR stabilizes YvcJ
+      explanation: Figure4A size distribution and4B correlation curves, with DLS Methods; not a direct YvcJ activation assay.
+      cache_path: evidence/PF01933/foulquier-2020.txt
+      cache_sha256: 8ffd6fe3ff1c4ef4f63e49cb68d776de8faa14f4d16151c73782f36503763685

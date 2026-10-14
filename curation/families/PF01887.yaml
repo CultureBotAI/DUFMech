@@ -1,0 +1,43 @@
+pfam_id: PF01887
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01887
+causal_graphs:
+  - graph_id: saduf62-sam-hydrolysis
+    title: SaDUF62-dependent adenosine formation from SAM
+    scope: Purified, tag-cleaved Sare_1364 from Salinispora arenicola CNS-205; intact protein.
+    context: Commercial SAM in 50 mM phosphate pH 7.9 at 37 C; HPLC and LC/MS product identification.
+    family_mapping: A8M783, sequence version 1, 261 residues; current PF01887 spans 7-151. The tested protein also contains a C-terminal domain.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:391037
+    limitations: The 2008 assay does not resolve SAM sulfur stereochemistry, isolated-domain sufficiency or intracellular homeostasis. Later S. tropica stereoselectivity is not transferred to this member; chloride inhibits the assay.
+    nodes:
+      - node_id: saduf62-sam-system
+        label: Purified SaDUF62 with commercial SAM in aqueous buffer
+        node_type: STATE
+        grounding:
+          - UniProtKB:A8M783
+      - node_id: adenosine-formation
+        label: Adenosine formation
+        node_type: PROCESS
+    edges:
+      - edge_id: saduf62-enables-adenosine-formation
+        subject: saduf62-sam-system
+        predicate: enables
+        object: adenosine-formation
+        mechanism: The intact enzyme catalyzes hydrolysis of the supplied SAM; the adenosine product was identified against standards and by mass spectrometry.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:18720493
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2692205/
+            snippet: formation (optimum at pH 8) of adenosine
+            explanation: Results, Scheme 1 image and activity methods establish the biochemical reaction, not a cellular role or a specific SAM isomer.
+            cache_path: evidence/PF01887/eustaquio-2008-saduf62.txt
+            cache_sha256: 3e37906becfa90eea8ecf5b4c063dab4c6dd83684c6127669b1bb4acb921d0fc
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A8M783/entry/pfam/PF01887/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A8M783/entry/pfam/PF01887/
+            snippet: 'entry accession: PF01887'
+            explanation: Grounding of the tested locus and current N-terminal match; not proof that the isolated domain performs the reaction.
+            cache_path: evidence/PF01887/A8M783-identity.txt
+            cache_sha256: 3b8e9df25d2d554cb9ed08d7c4beac9c1ecadfa6b0858a5052e10e51d773067e

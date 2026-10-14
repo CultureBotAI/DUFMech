@@ -1,0 +1,33 @@
+PF01878 / EVE / former DUF55 / InterPro IPR002740. Retrieved2026-10-11.
+Frozen DUFMech family:11128 proteins,11187 matches; EX_DUF is naming history.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01878/protein/uniprot/Q91YJ3/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01878/protein/uniprot/Q90679/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01878/protein/uniprot/Q9P016/
+https://rest.uniprot.org/uniprotkb/search?query=%28xref%3Apfam-PF01878%29&format=json&size=30
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=BAC21100.1,NP_653126.1&rettype=fasta&retmode=text
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=AAA75591.1,NP_989618.2&rettype=fasta&retmode=text
+
+Mouse Q91YJ3 sequenceversion1:226aa; exact BAC21100.1/NP_653126.1;
+taxon10090, PF01878 inclusive56-219. Sequence SHA256:
+664880e098088b69a8f78ece612fe80aec3ee1b0d06574bfab1e1c5d199f5f47.
+Toyota2012 mouse host is certain; species/sequence of Thy28-V5 insert is
+not independently verified. pEF1/V5-HisC does not identify the insert.
+
+Chicken Q90679 sequenceversion1:242aa; exact AAA75591.1 (U34350),
+taxon9031, PF01878 inclusive73-235. Sequence SHA256:
+c475a5481833f174674599f56227459d6032898bb31f47a793142e94739188f4.
+NP_989618.2 is NOT identical: W51 versus L51 in Q90679, outside EVE.
+Fujita2015 DT40 cDNA/primer identity supports cThy28 assignment but not
+either reference's exact internal sequence in the tested batch.
+Human Q9P016:225aa,taxon9606, PF01878 inclusive56-218. Used only to
+contextualize human negative experiments, not an assayed-sequence claim.
+
+VcaM4I caution: Pastor2021 PMID33450012 describes WP_010645282 and
+structure6YEX. RCSB links A0ABY5IHE6, but its309aa sequence differs from
+6YEXentity1 at13 positions:28,53,73,77,80,84,89,163,167,172,201,274,309.
+https://data.rcsb.org/rest/v1/core/polymer_entity/6YEX/1
+https://rest.uniprot.org/uniprotkb/A0ABY5IHE6.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/A0ABY5IHE6/
+The current all-Pfam response has only PF13391 at209-261. This is NOT
+a verified PF01878 mapping for the paper's exact construct. Structural
+EVE homology is broader evidence, not a reason to invent Pfam coordinates.

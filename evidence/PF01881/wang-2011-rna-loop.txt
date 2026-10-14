@@ -1,0 +1,43 @@
+Wang et al. 2011; PMID:21300293; DOI:10.1016/j.str.2010.11.014
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3154685/
+Accessed 2026-10-11. Full Methods/Results/Discussion and original Figures2/5
+inspected. Supplement DOC endpoint returned a browser challenge HTML, not the
+document; S1-S3 and other original main-figure images remain uninspected.
+Minimal quotations: "RNA-binding and cleavage reactions"; "hypothetical path".
+
+Same P. furiosus PF1131 preparation lineage as Carte2008. Figure2C glycine-loop
+mutant is G223A/G225A/G231A/G233A jointly, all within PF01881 121-237.
+At 0.5,1,10 uM mutant no cleavage is detected; weak RNA binding remains.
+WT is a positive lane; its specific Figure2C dose is not independently stated
+in the caption (standard Methods says 1 uM). These data do not isolate any
+single glycine or exclude mutant misfolding/stability effects.
+
+Figure5 reactions use 1 uM enzyme and 50 fmol 5'-labeled RNA in 20 ul,
+20 mM HEPES pH7, 250 mM KCl, 1.5 mM MgCl2, 5 ug E. coli tRNA,
+10% glycerol, 70 C. Printed DTT is 0.075 M (75 mM), versus 0.75 mM in
+2008; discrepancy unresolved. Incubation duration is not stated in 2011 Methods.
+Binding/cleavage use 10% native/15% denaturing PAGE. Do not import a time
+or silently repair DTT. WT repeat is GUUACAAUAAGACUAAAAUAGAAUUGAAAG.
+
+Figure5A/B G: U2/U3-to-AA; H: C5/A6/A7-to-GUU. Each loses detectable
+binding and cleavage compared with WT. K (delete1-3) also loses both; I/J
+(delete1 or1-2) retain them. Do not infer individually necessary bases from
+these combined changes. B (2'-deoxy A22/A23) binds but is not cleaved.
+D (delete25-30) binds but is not cleaved; C (delete27-30) retains cleavage,
+so U25/G26 or their structural context matter without individual isolation.
+Figure5A/C M/N delete respectively five/six linker residues and lose cleavage.
+Their retained binding is reported without shown gels. E/L/O shorter linker
+deletions and F two-base insertion retain processing. The corrected linker
+interpretation supersedes the 2008 nt9-12 claim, not the underlying assays.
+
+Figure5D Q (A23U) shifts the 5' product from22 to21 nt; P (A23U+dA22)
+also yields21; R (A23U+dG21) restores22. Deoxy modification therefore can
+reroute rather than universally abolish cleavage. MALDI confirms WT22 and
+A23U21 product masses, consistent with cyclic-phosphate ends; no rate is derived.
+
+RNA-bound structure resolves only nt2-10; the cleavage-site segment is not
+observed. C-domain K188/K190/R191 contacts are structural, not mutational
+causal tests. The positive-surface/G-loop wraparound path and its proposed
+alignment of the scissile bond are hypotheses. Functional dimer necessity,
+order of repeat processing, exact catalytic acid/base roles and conserved
+family-wide chemistry are not established by these inspected experiments.

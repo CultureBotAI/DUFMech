@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01864
+  path: data/families/PF01864.yaml
+session:
+  id: 2026-10-11T165424Z-codex-282736
+  timestamp: '2026-10-11T16:54:24Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped ApCarS scientific self-review with open family coverage
+  details: Native saved report assesses eight graphs with nineteen observed assay
+    effects and two hypotheses. Exact member/domain mapping, CTP carryover, separate
+    ITC/strip/product contexts, single-mutant grouping and incomplete AfCarS coverage
+    were assessed. Verdict NEEDS_FOLLOWUP; IN_PROGRESS unchanged. Same-agent partial
+    assessment, not independent endorsement. Focused 256 tests passed; rendering/export
+    and final corpus checks follow separately.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T165542Z-pf01864-apcars-product-binding-and-qualified-catalytic-models/review.yaml

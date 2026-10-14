@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01837
+  path: data/families/PF01837.yaml
+session:
+  id: 2026-10-11T061518Z-codex-3ea165
+  timestamp: '2026-10-11T06:15:18Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of DUF39 bacterial causal contexts
+  details: Three supported phenotype edges, exact archival member mapping, corrected
+    G20 construct start, medium discrepancies and unresolved biochemical coverage
+    assessed in same-agent review; remains IN_PROGRESS.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T061700Z-pf01837-duf39-causal-graphs/review.yaml

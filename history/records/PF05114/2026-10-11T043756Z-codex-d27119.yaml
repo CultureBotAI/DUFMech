@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF05114
+  path: data/families/PF05114.yaml
+session:
+  id: 2026-10-11T043756Z-codex-d27119
+  timestamp: '2026-10-11T04:37:56Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain the scoped MbnBC causal graph review
+  details: Saved reviews/structured/20261011T043811Z-pf05114-causal-graph/review.yaml
+    and derived Markdown with scientific_review true, self_review independence and
+    partial scope. The purified-complex edge is supported; partner necessity is qualified
+    and other PF05114 members remain open under pf05114-causal-member-coverage. Closed-schema,
+    graph, evidence and canonical history checks passed; status remains IN_PROGRESS.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T043811Z-pf05114-causal-graph/review.yaml

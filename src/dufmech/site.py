@@ -100,6 +100,52 @@ def curated_assertions(record: dict) -> str:
     return "".join(assertions) or "<p>No curated functional assertions supplied.</p>"
 
 
+def curated_graphs(record: dict) -> str:
+    graphs = []
+    for graph in record.get("causal_graphs", []):
+        labels = {node["node_id"]: node["label"] for node in graph["nodes"]}
+        rows = []
+        for edge in graph["edges"]:
+            evidence = "".join(
+                f'<li>{link(ref["source_url"], ref["reference"])}'
+                f'<blockquote>{text(ref["snippet"])}</blockquote>'
+                f'<p>{text(ref["explanation"])}</p></li>' for ref in edge["evidence"]
+            )
+            rows.append(
+                f'<tr id="causal-edge.{text(graph["graph_id"])}.{text(edge["edge_id"])}">'
+                f'<td><code>{text(edge["subject"])}</code>: {text(labels[edge["subject"]])}</td>'
+                f'<td class="causal-relation">{human(edge["predicate"])}</td>'
+                f'<td><code>{text(edge["object"])}</code>: '
+                f'{text(labels[edge["object"]])}</td>'
+                f'<td>{human(edge["support"])} / {human(edge["directness"])} / '
+                f'{human(edge["evidence_kind"])}</td><td><details>'
+                f'<summary>Evidence ({len(edge["evidence"])})</summary>'
+                f'<p>{text(edge["mechanism"])}</p><ul>{evidence}</ul></details></td></tr>'
+            )
+        nodes = "".join(
+            f'<li><code>{text(node["node_id"])}</code>: {text(node["label"])}; '
+            f'{human(node["node_type"])}; {text(", ".join(node.get("grounding", [])) or "Ungrounded")}'
+            '</li>' for node in graph["nodes"]
+        )
+        feedback = (f'<p>Feedback: {text(graph["feedback_explanation"])}</p>'
+                    if graph.get("feedback_explanation") else "")
+        graphs.append(
+            f'<h3 id="causal-graph-{text(graph["graph_id"])}">{text(graph["title"])}</h3>'
+            f'<p>{human(graph["scope_status"])}</p>'
+            f'<dl class="record-facts"><dt>Scope</dt><dd>{text(graph["scope"])}</dd>'
+            f'<dt>Context</dt><dd>{text(graph["context"])}</dd>'
+            f'<dt>Family mapping</dt><dd>{text(graph["family_mapping"])}</dd>'
+            f'<dt>Limitations</dt><dd>{text(graph["limitations"])}</dd></dl>'
+            f'<ul>{nodes}</ul>{feedback}'
+            '<div class="table-wrap" tabindex="0" role="region" aria-label="Causal edges">'
+            '<table><caption>Directed causal edges</caption><thead><tr>'
+            '<th scope="col">Source</th><th scope="col">Relation</th><th scope="col">Target</th>'
+            '<th scope="col">Support</th><th scope="col">Mechanism and evidence</th>'
+            f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
+        )
+    return "".join(graphs) or "<p>No curated causal graph supplied. This is not evidence of absence.</p>"
+
+
 def structured_content(value: Any) -> str:
     """Keep optional governed curation fields visible without inventing their semantics."""
     if isinstance(value, dict):
@@ -373,6 +419,7 @@ def record_page(row: dict, metadata: dict, context: dict) -> str:
 <section><h2>Source description</h2><p class="description">{description or 'No description supplied.'}</p></section>
 <section><h2>Evidence and references</h2>{evidence}</section>
 <section><h2>Curated functional assertions</h2>{curated_assertions(metadata.get('record', {}))}</section>
+<section id="causal-graphs"><h2>Causal graphs</h2>{curated_graphs(metadata.get('record', {}))}</section>
 <section id="domain-matches"><h2>Domain matches</h2>{domain_visual(context['members'].get(pfam, []), dataset=bool(context['provenance'].get('members')))}</section>
 <section><h2>Snapshot counters</h2><dl class="record-facts">{counters}</dl></section>
 <section><h2>Classification basis</h2><p>{human(seed_reasons) or 'No seed reasons supplied.'}</p>

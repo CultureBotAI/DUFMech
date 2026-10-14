@@ -1,0 +1,28 @@
+Database facts retrieved 2026-10-11; these are not experimental results.
+Sources:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20352/
+https://rest.uniprot.org/uniprotkb/A0A2Z2P7G5.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A2Z2P7G5/entry/pfam/PF20352/
+https://rest.uniprot.org/uniprotkb/A0A017HEP9.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A017HEP9/entry/pfam/PF20352/
+
+Family PF20352, DUF6647; integrated InterPro IPR046589.
+Current family description mentions a metzincin-like fold related to YbeY.
+No change is made to the frozen family identity or source counters.
+
+Protein named in Figure 11A of PMID:39399373:
+UniProt A0A2Z2P7G5, unreviewed; Granulosicoccus antarcticus IMCC3135.
+NCBITaxon:1192854; locus IMCC3135_28660; RefSeq WP_088920642.1.
+Entry version 15; sequence version 1; 167 residues.
+sequence MD5: A075B34DD1AB7A7F8082D7FCED37DF51
+entry accession: PF20352
+Pfam interval: 31-143 inclusive; integrated IPR046589; match score 1.4e-14.
+This identity resolves the figure's accession, not an experimentally tested clone.
+
+Additional checked member, not claimed as the paper's modeled or tested protein:
+UniProt A0A017HEP9, unreviewed; Limimaricola hongkongensis DSM 17492.
+NCBITaxon:1122180; locus Lokhon_01595; RefSeq WP_017929072.1.
+Entry version 25; sequence version 1; 142 residues.
+sequence MD5: 7255AFAA52FB700905C7446ADC6F3FFE
+PF20352 interval: 4-120 inclusive; integrated IPR046589.
+An annotated member and an AlphaFold model do not demonstrate a causal mechanism.

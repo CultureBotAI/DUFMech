@@ -1,0 +1,23 @@
+PF01941 / MjMAT, inspected 2026-10-12 UTC
+PMID:19348969; doi:10.1016/j.bbapap.2009.03.018
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2704562/
+Minimal quotation: "Denaturation followed by MAT activity"
+
+Methods 2.3-2.6 and Results: recombinant MJ1208 from E. coli BL21(DE3).
+Radioactive methyl-L-methionine plus ATP assays measure SAM at 55 C.
+Urea samples equilibrate overnight at 23 C in 50 mM Tris-HCl pH8,
+50 mM KCl, 10 mM MgSO4; denaturant remains during activity assays.
+Figure 3: 0.05 mg/ml protein, triplicate activity measurements; two declining
+transitions, midpoints 2.01+/-0.13 and 5.79+/-0.07 M urea.
+Figure 4: sedimentation at 188000 g/18 C (0.3-0.4 mg/ml) shifts toward
+monomer-like species; gel filtration retains dimer-like size to about 3 M
+and indicates aggregation later. This discrepancy prevents a uniquely
+observed dissociation-causes-inactivation chain. Figure 2/far-UV CD shows
+partial secondary-structure retention even at 8 M urea.
+
+Table 3 kcat, s^-1: WT 1.46+/-0.05; W387F 1.85+/-0.08;
+W387F-Y226W 5.08+/-0.06; W387F-Y233W 7.24+/-0.08.
+These are double mutants, not Y226W or Y233W alone. Similar sedimentation
+and far-UV CD constrain gross assembly/folding changes, not microscopic
+mechanisms. Residues map to Q58605 in identity.txt. Figures 3/4 visually
+inspected; Tables 1-6 read. The 2009 homology model is not crystallography.

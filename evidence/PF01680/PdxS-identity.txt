@@ -1,0 +1,43 @@
+Inspected 2026-10-11. Identity and numbering ledger, not causal evidence.
+https://rest.uniprot.org/uniprotkb/P37527.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P37527/entry/pfam/PF01680/
+P37527/PDXS_BACSU is Bacillus subtilis strain 168, NCBITaxon:224308,
+gene pdxS/yaaD, also called Pdx1 in the experimental literature.
+UniProt entry 179, updated 2026-09-02; sequence version 3, last changed
+2007-01-23, 294 aa. InterPro sequence equals the UniProt sequence exactly.
+P37527 Pfam:PF01680 interval: 7-212, inclusive.
+This is a domain interval within the whole protein, not an isolated construct.
+Current residues D24, K81 and K149 lie within that interval; residues 213-294
+and any expression tags lie outside it. The frozen family is SOR/SNZ,
+IPR033755, former UPF0019, EX_DUF; its immutable identity is preserved.
+
+https://rest.uniprot.org/unisave/P37527?format=txt&versions=56,57
+SwissProt entries parsed using Bio.SeqIO: archived entry 56 is 293 aa and
+equals the current sequence with only the first methionine removed. Entry
+57 equals the current 294-aa sequence. This is not a shifted catalytic lysine
+assignment: the 2007 reported peptide MADPTIVEEVMNAVSIPVMAKAR matches
+current residues 61-83 exactly, including K81. Do not subtract one from
+the paper's residue numbers merely because the old database lacked the M.
+
+Raschle 2005, PMID:16030023, cloned strain-168 genomic yaaD, sequenced the
+construct and reported N-terminal protein sequencing. Its forward primer's
+NcoI-containing start translates to MAQTGTE, matching the reference. The
+activity preparations are untagged, unlike the tagged pull-out partner.
+Raschle 2007, PMID:17189272, explicitly uses Pdx1-His6 and its K81R/K149R
+derivatives, referring to the 2006 construct paper PMID:17159152. Its free
+Pdx1 preparation is cleared with DL-G3P/ammonium sulfate and dialyzed.
+
+https://data.rcsb.org/rest/v1/core/polymer_entity/2NV1/1
+The deposited 2006 Pdx1 construct is 305 aa, exactly MAS + current P37527
+sequence + LEHHHHHH. This supports the reference association and explains
+why recombinant masses need not equal the native 31.6-kDa protein. It does
+not independently prove the full sequence of every 2007 assay vial. The
+2006 main-paper construct paragraphs were inspected; the attempted PMC
+supplement download returned HTML, not a readable PDF. Complete historical
+clone sequences remain a limitation. Native numbering is used throughout.
+
+Hanes 2008 DOI:10.1038/nchembio.93 identifies B. subtilis Pdx1 and uses a
+His-tagged preparation with a separate expression/purification citation.
+Its whole construct/strain equivalence to the Raschle preparation has NOT
+been independently established here. Use its NMR results to qualify the
+earlier structural interpretation, not to splice experimental preparations.

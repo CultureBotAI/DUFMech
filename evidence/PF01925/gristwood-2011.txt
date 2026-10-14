@@ -1,0 +1,28 @@
+Gristwood et al.2011, PMID21183667, DOI10.1128/JB.00352-10.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3067589/
+Inspected UTC2026-10-12: PmpABC Results, expression Methods, Table1, Figure6
+and model limitations. Original Figure6 visually inspected. Minimal quotations:
+"caused an increase in Pig production"
+"partially attenuated the hyperpigmentation"
+
+Authored evidence assessment:
+Figure6C tests LacA, the EMS-derived Lac-minus parent called WT, and HSPIG26,
+a pigS::mini-Tn5lacZ1 derivative. LB at30C,12h,0.1mM IPTG; three independent
+experiments, mean+/-SD. Pig is normalized A534/OD600, not total pigment mass.
+pTA157(pmpC) and pTA132(pmpABC) increase pigment relative to vector in each
+background. pTA159(pmpAC),pTA156(pmpBC) and pTA132(pmpABC) produce less than
+pTA157 alone. The coexpression comparisons do not demonstrate physical
+inhibition or unchanged PmpC abundance. Figure6 growth circles and the text's
+PmpA/PmpB/PmpAB-only negatives are retained as controls, not transporter assays.
+Exact bars were inspected but no invented significance or digitized values are
+reported. Figure6A's blhA-orfY effects concern a different joint intervention.
+
+Table1/plasmid-construction Methods identify each insert and primer MMO69 for
+pmpC. Sequence deposition supports E7BBJ3/CBY83979.1. Tagged PmpC could not be
+detected despite attempted expression; the demonstrated membrane fractionation
+is PmpB, not PmpC. Physiological substrates and membrane flux remain unknown.
+The proposed exported sulfur-containing product z is unidentified. Neither
+direct prodigiosin export nor direct PigS binding by PmpC was measured. The
+paper's Discussion once says PigC where the preceding experiment concerns
+PmpC; retain the Figure6/Table1 identities. Antibiotic Methods print mg/ml
+units; these are not silently corrected or used as verified assay doses.

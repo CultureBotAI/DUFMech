@@ -1,0 +1,96 @@
+Jones, Anderson and Clarke 2021. PMID:34480000.
+doi:10.1073/pnas.2103602118
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+https://pubmed.ncbi.nlm.nih.gov/34480000/
+Accessed 2026-10-11 by Codex. Minimal extract and factual curation notes;
+no restricted full text or figures retained in the repository.
+Exact short heading: "In vitro studies."
+Exact short figure phrase: "Postulated mechanism"
+Exact short product heading: "OatA Utilizes Acetyl-CoA for PG O-Acetylation."
+Exact short cellular phrases: "PG O-acetylation levels" and
+"Lysozyme resistance was restored".
+
+Inspected main Results, Discussion, selected Methods and figure captions.
+Figures 1, 3, 4 and 5 visually inspected from PMC image files. Supplementary
+Methods, strain/plasmid/primer Tables S2-S4 and Figures S1/S2/S4/S7/S9/S11/S12
+were not visually inspected. PMC supplement endpoints returned HTML rather
+than PDF and publisher supplement requests returned HTTP403. Descriptions of
+unseen SI below are attributed to the main text, not independent inspection.
+
+Product assay (Figure 1D/E): full-length recombinant SaOatA, 5 uM, plus 1 mM
+acetyl-CoA and either 1 mM pentaacetyl-chitopentaose (G5) or 10 ug/ml
+semisynthetic GM-pentapeptide oligomers; 50 mM sodium phosphate pH6.5, 18 h,
+QTOF-MS. Oligomers span 4-10 repeats; products are mutanolysin-digested before
+GM-penta analysis. G5 peaks include substrate1034.41 and acetyl-product1076.42
+[M+H]+ (also1098.40 sodium adduct); GM-penta967.4 becomes1009.4. Enzyme-free
+controls lack these product peaks. Published S453A preparations lack product
+in both panels. The isolated C-domain negative comparator is plotted in E,
+not D; the Results also describe a G5 C-domain negative experiment. Graph
+edges use the displayed controls. No isotope-resolved flux, atomic transition
+state or isolated-PF01757 catalysis follows from these net product assays.
+The MS-search construct caveat in ms-deposit-caveats.txt is retained for the
+published S453A comparator, without asserting that all preparations shared
+the extra substitutions. Exact detergent recipe is not established here.
+
+CoASH and G5 assays (Figure 3C and in-vitro Results): relative esterase rates
+with acetyl-CoA donor, WT100%; R25A18.4%; R25K178%; H36A0.64%; R86A22.1%;
+Y136A155%; E154A4.76%; Y206A no detectable activity. WT specific rate is
+28.8 +/-0.20 nmol/min/mg; Y136A44.6 +/-0.48 (not +/-0.038). G5 transfer is
+positive for WT,R25A,R25K,R86A,E154A; negative for H36A,Y136A,Y206A. Residual
+G5 product in R25A/R86A/E154A is described as low in Results/S7, but the
+unseen S7 spectra are not quantitatively reanalyzed. H36A retains detectable
+CoASH release despite no G5 product; Y136A increases that release while losing
+G5 product. These assays must not be collapsed into a single activity value.
+Figure3C: 50 mM sodium phosphate pH7, 5% DMSO,25 C,0.1 mM acetyl-CoA and
+0.2 mM DTDP; transfer assays include1 mM G5. This caption differs from
+Figure1D/E's pH6.5/1 mM donor recipe. The Figure3C transfer endpoint time and
+the exact application of the DTDP mixture remain uncertain without SI.
+S453A has5.4% relative release but was assayed in5% ethanol instead of DMSO;
+it is not used as a solvent-matched rate edge. Figure3D labels R25A in the
+caption while the Results and kinetic values describe R25K; do not assign
+that fitted kinetic curve to R25A. Y136A was not saturated with donor.
+Purified variants were produced in C43(DE3) and isolated by IMAC with fresh
+resin for each. Apparent purity is stated; FigureS2 gels remain uninspected.
+Rate differences alone do not resolve folding versus catalytic chemistry.
+
+Cellular PG (Figure1B, Results and PG-isolation Methods): base-labile acetyl
+groups normalized to muramic acid in purified PG, three replicates and SD.
+USA300 WT about40%; markerless oatA deletion undetectable; deletion carrying
+WT pACCJ3 about35%. H36A complementation has no detectable PG acetylation;
+Y206A about1.3%; R83A about29%. The graph keeps deletion/rescue and H36A/Y206A
+effects separate from purified-protein results. Figure3A membrane anti-His
+blots show roughly comparable detected expression of selected impaired
+variants, not proof of identical folding, trafficking or stability. Do not
+apply the tunicamycin growth recipe to PG isolation without further evidence.
+
+Growth (Figure1A, lysozyme Results and in-situ Methods): USA300 deletion
+versus WT, and deletion plus WT pACCJ3 complementation, with0.4 ug/ml
+tunicamycin and0.25-4 mg/ml hen egg-white lysozyme, TSB,37 C,1% DMSO.
+Plotted endpoint12 h relative delta-OD600, n3 with SD; Methods monitor20 h
+at20-min intervals with double-orbital shaking, not an18-h viability assay.
+Deletion has no OD increase at1 mg/ml and higher; WT/complement retain
+substantial growth even at4 mg/ml. Without tunicamycin the main text describes
+a growth lag, not complete death (S1 not inspected). Figure1A gray empty-vector
+caption names USA300+pALC2073 whereas Results describe deletion+empty vector.
+Edges use the unambiguous WT/deletion/complement curves, not a silently
+corrected gray-curve genotype. No bactericidal endpoint or direct
+PG-acetylation-to-growth mediation experiment is claimed.
+
+Mechanism (Figure5, Discussion, trapping Results and Figure4): the authors
+propose H36/E154-assisted Tyr206 acylation and a Tyr206-to-Ser453 acetyl relay.
+Both steps remain HYPOTHESIZED in the native graph. Purified preparation
+product/rate effects do not directly observe these intramolecular transfers.
+Intact-protein LC-MS failed to resolve treated adducts. MALDI signals were
+broad, displaced by about4000Da, with mean treatment shift124.9Da; this is not
+a reliable count of three acetyl groups. Peptide acetylation atY206 andS453
+is relevant but not a treatment-specific flux measurement; deposited Y206
+control and construct differences are documented separately. Figure5A uses
+an acetyl-CoA conformation from a different enzyme, not an OatA complex.
+Topology combines fusion readouts with predictions, not an atomic structure.
+
+Figure4E isolated445-601 C-domain accepts O-acetyl-Tyr ethyl ester as donor
+for G5, whereas O-acetyl-Ser is negative, under the displayed assay. This
+partner-only assay is contextual evidence for, not observation of, the
+full-length intramolecular relay. Figure4E caption18 h versus Results2 h
+remains unresolved. DMSO levels differ across peptide, kinetic and transfer
+assays (35%,44%,4%). No synthetic-donor activity is assigned to PF01757.

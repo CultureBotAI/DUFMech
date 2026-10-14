@@ -1,0 +1,52 @@
+PF01955 2008 heterologous rescue and induction, 2026-10-12 UTC
+Primary PMID:18808385; DOI:10.1111/j.1365-2958.2008.06437.x
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2602876/
+https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+Locators: complementation Results, growth Methods, originalFigures3/4.
+Minimal quotations: "supported growth"; "growth was restored"
+
+Both figures were visually inspected, with each donor row kept separate.
+Black curves are0mM arabinose; gray curves are2.5mM. Triplicate OD650
+time courses run24h at37C, oxic NCE,22mM glycerol,1mM MgSO4,trace minerals,
+15nM indicated cyano-corrinoid. Overnight NB starters inoculate at5percent;
+microplate wells are200ul. Methods antibiotics are100ug/ml ampicillin and
+50ug/ml kanamycin, while captions print ug/ul, a1000fold unit conflict.
+No exact growth rate, significance or protein abundance is inferred from plots.
+
+Figure3 host JE8312 is a TR6583-derived metE205 ara-9 cob1315(delta-cobU)
+ycfN112(delta-ycfN) strain carrying pCOBY38 (M.mazei cobY). Donor pBAD24
+plasmids are pCbiZRs,Rr,Bh,Mm,Fa,Pf,Mj, in that displayed row order after vector.
+Five donors support robust Cbi-dependent growth without added arabinose:
+Rs,Bh,Fa,Pf,Mj. Rr andMm require2.5mM arabinose for robust complementation.
+Each donor comparison uses the vector at the SAME arabinose condition, with
+CobY and host downstream functions already present. No CbiZ-alone sufficiency.
+Vector Cby/Cbl arms grow, while vector Cbi and no-corrinoid arms remain low.
+The observed phenotype is host optical density, not directly detected
+intracellular Cby/Cbl, CbiZ expression level or Cbi kinase activity.
+
+Figure3 induction comparisons within the same donor and substrate:
+Rr andMm induction increase Cbi-supported growth relative to no inducer.
+Rs andBh induction reduce or delay Cbi- and Cby-supported growth across the
+displayed time course; their24h Cbi endpoints can approach the uninduced
+plateau, especially Rs. Thus these are time-course suppression/delay effects,
+NOT necessarily lower final biomass. Cbl curves are largely preserved.
+The six curated induction contrasts use OD650 near the12h midpoint, not a
+fitted growth rate, exact digitized value or the possibly convergent24h endpoint.
+No-corrinoid controls do not show a general arabinose-fed growth effect.
+Higher protein abundance is not measured; intermediate hydrolysis or host
+interference is a proposed explanation, not an observed downstream mechanism.
+Fa/Pf show altered time-course shape with induction; no precise rate is assigned.
+
+Figure4 host JE7864 is metE205 ara-9 cbiP236::Tn10d(tet)
+cobD1302::Tn10d(cat) cobU330 with pCOBY38. Actual perturbation is cobD,
+encoding Salmonella threonine-phosphate decarboxylase, NOT a cbiB deletion.
+CbiB-dependent pathway placement is the authors' interpretation of AP rescue.
+Compare15nM Cbi plus10mM1-amino-2-propanol with Cbi alone in each donor row:
+Rs,Bh,Fa,Pf,Mj at0mM arabinose; Rr,Mm at2.5mM arabinose. AddedAP supports
+robust growth conditional on donor,CobY and the remaining host machinery.
+Vector plusAP does not restore robust growth; Cbl supports all rows.
+Some Cbi-alone arms drift upward late; they are not asserted to have zero growth.
+The figure does not directly measure AP phosphorylation, CbiB catalysis,
+amidohydrolase activity of isolated domains or all intracellular intermediates.
+The three negative donor constructs are text-reported,data not shown, as
+retained in the construct ledger. No universal loss of native function is inferred.

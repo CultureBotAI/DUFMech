@@ -1,0 +1,49 @@
+Primary evidence assessment, 2026-10-11 UTC
+Richman et al., PMID27319982, DOI10.1038/ncomms11884.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4915168/
+Read primary XML/HTML selected Results, Methods, Discussion and captions.
+Visually inspected main Figures2,3,6. Publisher supplement PDF text was
+surveyed, not its complete figures or raw blots independently reviewed.
+
+Minimal quotation anchors: "RNA-protein complex"; "mt-Co1 probe B";
+"Protein synthesis". These labels occur in Figures3/6 and the Figure2 caption.
+
+Figures3A and6C: mature mouse TACO1 aa27-294 NP_081622.1 was expressed as
+N-terminal His/GST fusion in E. coli ER2566, nickel-purified and gel-filtered.
+Protein was measured by BCA. The RNA-binding protocol does not describe tag
+removal; TEV cleavage and heparin chromatography are explicit additional steps
+for crystallization only. Do not borrow the crystal construct's tag state.
+
+RNA EMSA uses ATTO680 RNA at100ng/ul, equimolar through eightfold excess
+protein,30min room temperature,10mM HEPES pH8,1mM EDTA,50mM KCl,2mM DTT,
+0.1mg/ml fatty-acid-free BSA and0.02% Tween20, then10% PAGE in TAE.
+Figure3A maps probeB to mouse mtDNA5446-5632; its RNA/protein complex appears
+with increasing TACO1. Other overlapping mt-Co1 probes have different binding
+patterns; mt-Atp8/6 and mt-Co2 controls show no comparable shift. No universal
+exclusive RNA specificity or translation activity follows from this assay.
+
+Figure6C explicitly labels probeB in WT and all three grouped substitutions.
+R74A/S75A/R76A/S79A/K80A sharply reduces binding. K112A/N113A/K116A/S117A
+and K162A/Y163A/K167A give smaller reductions relative to WT at the displayed
+concentrations. Do not split a grouped perturbation into individual-residue
+causal claims. Mutant folding/active fraction and a tag-only binding control
+are not established by these displayed gels. Results are qualitative, without
+a fitted dissociation constant or displayed replicate uncertainty.
+
+Figure2D: mitochondria isolated from adult male C57BL/6J-background mice,
+30weeks, homozygous ENU Taco1 T491A/I164N versus age/littermate-matched WT.
+The allele was backcrossed8-10generations. COXI pulse-label signal is reduced
+in both liver and heart; Coomassie staining shows equal50ug protein loading.
+Caption reports three independent biological experiments. Methods use500ug
+mitochondria in750ul respiration-compatible buffer,150uCi35S-methionine,
+60min37C. Figure caption/Results mention methionine and cysteine whereas
+Methods specify methionine alone; retain this discrepancy rather than alter units.
+Figure2B steady transcript abundance is largely unchanged; this is not an RNA
+half-life measurement. Figure1 text reports TACO1 loss, but Figure1 was not
+visually assessed in this pass. No mouse genetic rescue is adopted.
+
+These genotype-to-pulse effects are INDIRECT: they do not demonstrate an
+isolated PF01709 catalytic reaction or assign initiation versus elongation.
+The older initiation proposal is qualified by the2024 elongation evidence.
+Figure5's caption says Leu164 while Results and verified sequence say Ile164;
+the curated allele follows the sequence/Results, not that inconsistent caption.

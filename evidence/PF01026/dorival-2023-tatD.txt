@@ -1,0 +1,42 @@
+Dorival and Eichman, Human and bacterial TatD enzymes exhibit
+apurinic/apyrimidinic (AP) endonuclease activity.
+PMID:36881763; doi:10.1093/nar/gkad133
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10085689/
+Published full text inspected through:
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10085689/fullTextXML
+Author manuscript plus supplement:
+https://structbio.vanderbilt.edu/eichman/pdf/Dorival_manuscript.pdf
+Accessed 2026-10-11. Published article CC-BY 4.0. Minimal quotation from
+the bacterial Results: "robust AP endo activity on dsDNA"
+Published purification, nuclease Methods, bacterial Results and Discussion
+read. Manuscript Figure 6 (PDF page 29) and Table S1 (page 31) visually
+inspected. Manuscript is not silently represented as the publisher PDF.
+
+EcTatD was untagged: synthetic gene in modified pET-21, BL21(DE3),
+0.1 mM IPTG, 15 C for 12-18 h; PEI, ammonium sulfate, phenyl-Sepharose,
+Q-Sepharose and size-exclusion purification. The His-SUMO construct and
+tag-cleavage procedure described for other proteins do not apply to TatD.
+
+Figure 6 TatD lanes: 10 uM protein, 100 nM DNA, 20 mM EPPS pH 8.0,
+50 mM NaCl, 2.5% glycerol, 37 C. THF-containing duplex uses 5 mM CaCl2;
+ssDNA and undamaged duplex comparisons use 10 mM MgCl2. The gel labels
+1, 30 and 120 min. In the THF/Ca series a discrete shorter labeled product
+accumulates, supporting incision of the internal AP-site analogue. The
+adopted edge does not assume a matched no-enzyme/mock-purification control:
+none is labeled for these bacterial lanes in Figure 6. Published methods
+state triplicate experiments; raw replicate gels were not reanalyzed.
+
+Table S1 substrate: ss5THF = FAM-CGTCTCCTGAAC/(THF)/GTGCTATCGCTC;
+complement = GAGCGATAGCACAGTTCAGGAGACG. There are 12 bases before THF
+(position 13 by counting), whereas the manuscript Figure 5 caption says
+position 12. Retain the actual sequence and this discrepancy. ss5 without
+THF is FAM-CGTCTCCTGAACTGTGCTATCGCTC. No numerical incision rate is
+estimated from the displayed bacterial gel.
+
+THF is an AP-site analogue, not natural AP DNA. Natural-AP and BH110
+contamination-control experiments inspected in this paper concern human
+proteins, not automatically EcTatD. Cofactor and substrate both differ
+between the exonuclease/AP panels; do not claim calcium alone switches
+function. Do not transfer human two-metal structural proposals to an
+observed EcTatD catalytic microstep. YcfH/YjjV and the MC4100 triple-knockout
+experiment need their own mapping and context before curation.

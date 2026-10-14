@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01899
+  path: data/families/PF01899.yaml
+session:
+  id: 2026-10-11T214705Z-codex-4dd871
+  timestamp: '2026-10-11T21:47:05Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of MrpE context-specific causal graphs
+  details: Saved the structured PF01899 review for current semantic digest b3abd4ca3fcd6539dc777991398362bf70f848550675f5d068dd920da198e5d0.
+    Nine graphs and twelve indirect observed edges retain exact tested contexts and
+    source-linked limitations. Construct identity, apparent-kinetic versus binding
+    interpretation, T113Y pH dependence, negative substitutions, reused-row discrepancies
+    and structural hypotheses were assessed. The open coverage finding requires supplements,
+    ambiguity resolution and additional homolog research. Native projection validation
+    and the 256-test focused suite passed. This is same-agent partial scientific review,
+    not independent endorsement, promotion to REVIEWED, whole-corpus completion or
+    publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T214656Z-pf01899-mrpe-context-specific-transport-and-growth/review.yaml

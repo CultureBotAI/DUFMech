@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01895
+  path: curation/families/PF01895.yaml
+session:
+  id: 2026-10-11T211514Z-codex-cebbb2
+  timestamp: '2026-10-11T21:15:14Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add twelve assay-scoped PhoU causal graphs from four primary studies
+  details: Curated24 observed edges for E. coli PhoU and M. smegmatis PhoU1/PhoU2
+    after exact reference/domain mapping and visual inspection of11 original figures.
+    Four direct purified-system readouts and20 indirect cellular effects retain compound
+    interventions, unequal probe doses, copy/context dependence, negative autokinase
+    evidence and unresolved atomic mechanisms. Added five evidence ledgers and two
+    open discussions. Family status IN_PROGRESS; regeneration and retained self-review
+    follow. No publication or whole-family completion claimed.

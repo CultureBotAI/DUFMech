@@ -4,7 +4,7 @@ name: Impact N-terminal domain
 short_name: Impact_N
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01205
 counters:
   proteins: 18592
@@ -26,3 +26,184 @@ description: This entry represents the N-terminal domain of the Impact proteins.
   It acts by interacting with Gcn1/Gcn1L1, thereby preventing activation of Gcn2 protein kinases (EIF2AK1
   to 4) and subsequent down-regulation of protein synthesis [[cite:PUB00161305],[cite:PUB00158485]]. It
   is evolutionary conserved from eukaryotes to archaea [[cite:PUB00046141]].
+curation_history: history/records/PF01205
+discussions:
+- discussion_id: impact-ancient-domain-mechanism-and-name-boundary
+  prompt: Resolve the ancient-domain mechanism separately from RWD-driven Yih1 phenotypes.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: PF01205 maps to C-terminal residues 144-251 despite the frozen Impact_N name. Three whole-protein
+    phenotypes do not establish this domain's isolated mechanism.
+  evidence:
+  - reference: PMID:21239490
+    supports: PARTIAL
+    evidence_source: inspected_primary_methods_and_results
+    explanation: RWD-only fragments inhibit without PF01205, while the ancient-domain fragment is insufficient.
+      Binding alone and modeled actin switching are not directed causal proof.
+  - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4503747/
+    supports: PARTIAL
+    evidence_source: primary_abstract_only
+    explanation: A later study reports Gcn1/Gcn2-independent cell-cycle effects requiring separate full-text
+      and construct review.
+  notes: Preserve frozen identity metadata but investigate its N-terminal wording in the source-maintained
+    workflow. Obtain exact fusion/host sequences and plate conditions; review 2004 competition, 2015 cell-cycle
+    and mammalian studies separately. Do not generalize to bacterial YigZ or archaea. The PCI8/CSN11 YIH1
+    synonym is excluded. Partial same-agent scientific assessment; remain IN_PROGRESS.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+causal_graphs:
+- graph_id: yih1-h1511-starvation-phosphorylation
+  title: GST-Yih1 overexpression lowers starvation-induced eIF2alpha phosphorylation
+  scope: Saccharomyces cerevisiae H1511 expressing N-terminal GST-Yih1(2-258) from pES187-B1 versus GST
+    alone in Sattlegger 2011 Figure 5C/D. This is a whole-protein overexpression phenotype.
+  context: Galactose-induced exponential cultures are treated with 10 mM 3AT for 1 h before harvesting.
+    Immunoblots measure Ser51-phosphorylated eIF2alpha relative to total eIF2alpha; at least two independent
+    transformants and SE are reported. Plate-growth conditions are separate.
+  family_mapping: P25637/YIH1_YEAST is YCR059C, 258 aa, sequence version 1; the cited GI 6319904 resolves
+    to matching NP_009985.1. PF01205 maps to 144-251 in the C-terminal ancient domain, despite the preserved
+    Impact_N label. PF05773 RWD is separately at 6-108. The 2-258 fusion retains both; exact historical
+    junctions remain unverified. P40512/PCI8 is an unrelated YIH1 synonym.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:4932
+  limitations: Figure 2 confirms overexpression, not physiological dosage. RWD-only 2-132 lacks PF01205
+    yet inhibits, whereas 133-258 retains PF01205 but has little effect. This does not establish isolated
+    PF01205 inhibition, direct eIF2alpha dephosphorylation or increased total translation. Binding and
+    modeled actin switching are not an observed causal chain.
+  nodes:
+  - node_id: overexpress-gst-yih1-h1511
+    label: Express GST-Yih1(2-258) instead of GST alone in H1511
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P25637
+  - node_id: starvation-eif2alpha-phosphorylation
+    label: Ser51-phosphorylated eIF2alpha relative to total eIF2alpha after 3AT
+    node_type: STATE
+  edges:
+  - edge_id: yih1-overexpression-decreases-eif2alpha-phosphorylation
+    subject: overexpress-gst-yih1-h1511
+    predicate: decreases
+    object: starvation-eif2alpha-phosphorylation
+    mechanism: The overexpressed multidomain fusion decreases the normalized phosphorylation signal under
+      the specified starvation treatment. Gcn2 regulation is the mechanistic interpretation, not a directly
+      measured isolated-domain reaction in this assay.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21239490
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3060488/
+      snippet: phosphorylation
+      explanation: Visually inspected Figures 2 and 5C/D, main Methods and fragment Results; GST and total-eIF2alpha
+        controls constrain the endpoint.
+      cache_path: evidence/PF01205/sattlegger-2011-yih1.txt
+      cache_sha256: f776cf4550f706bfd69a326ac6302e924bae946d206ea3b7f1b7bbfb405e918e
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P25637/entry/pfam/PF01205/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P25637/entry/pfam/PF01205/
+      snippet: 'P25637 Pfam:PF01205 interval: 144-251, inclusive.'
+      explanation: Exact reference mapping places this family in the ancient domain, not in the separate
+        N-terminal RWD. Whole-protein effects cannot be assigned to PF01205 alone.
+      cache_path: evidence/PF01205/Yih1-identity.txt
+      cache_sha256: e71f725f87e8872f3b3b88a93451dcee7bbcc721ad28b04032060d51a3e2f59d
+- graph_id: yih1-h1511-starvation-growth
+  title: GST-Yih1 overexpression reduces H1511 growth under 3AT starvation
+  scope: H1511 with endogenous YIH1 and plasmid-borne GST-Yih1(2-258) versus GST-only control in Figure
+    5A.
+  context: Spot 5 ul of tenfold serial dilutions of overnight cultures on synthetic minimal galactose
+    medium with or without 3AT. The inspected 2011 caption does not specify plate 3AT concentration, incubation
+    temperature or duration; the liquid 10-mM/1-h protocol is not transferred.
+  family_mapping: The YCR059C fusion maps to P25637 with PF01205 at 144-251 and separate RWD at 6-108.
+    Endogenous Yih1 remains present in this host. Current reference identity does not reconstruct every
+    historical host or plasmid sequence.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:4932
+  limitations: Growth is an indirect integrated phenotype, not direct kinase activity, viability loss
+    or a quantified growth rate. Nonstarved plates constrain starvation specificity. This is not a normal-expression
+    loss-of-function assay or an isolated ancient-domain effect.
+  nodes:
+  - node_id: overexpress-yih1-wt-background
+    label: Overexpress GST-Yih1(2-258) versus GST alone in H1511
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P25637
+  - node_id: h1511-3at-plate-growth
+    label: H1511 dilution-series growth on galactose plus 3AT
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: overexpression-decreases-h1511-starvation-growth
+    subject: overexpress-yih1-wt-background
+    predicate: decreases
+    object: h1511-3at-plate-growth
+    mechanism: The full multidomain fusion reduces colony growth under the starvation challenge compared
+      with GST alone. The effect is consistent with impaired starvation adaptation, without assigning
+      direct toxicity or domain-local catalysis.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21239490
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3060488/
+      snippet: 3AT
+      explanation: Visually inspected Figure 5A with its nonstarved control, Figure 2 expression analysis,
+        Methods/Table 1 and corresponding Results.
+      cache_path: evidence/PF01205/sattlegger-2011-yih1.txt
+      cache_sha256: f776cf4550f706bfd69a326ac6302e924bae946d206ea3b7f1b7bbfb405e918e
+- graph_id: yih1-deletion-background-starvation-growth
+  title: GST-Yih1 expression reduces starvation growth without endogenous Yih1
+  scope: ESY11001b, the H1511-derived yih1 deletion strain, expressing GST-Yih1(2-258) versus GST alone
+    in Figure 5B.
+  context: The same 5-ul tenfold dilution plate assay uses galactose minimal medium with or without 3AT.
+    Plate dose, time and temperature remain unverified; the deletion background is not combined with the
+    H1511 phosphorylation assay.
+  family_mapping: The expressed P25637-mapped 2-258 fusion contains PF01205 144-251 and RWD 6-108. Endogenous
+    YIH1 is deleted by the reported PCR-based construction; exact deletion junctions and fusion scars
+    were not reconstructed.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:4932
+  limitations: This comparison shows that the overexpression-associated growth effect does not require
+    endogenous Yih1. It is not rescue of a deletion defect. Figure 5B's truncated-construct labels differ
+    from Table 1, but its adopted 2-258 row is unambiguous; those truncated rows are not new edges.
+  nodes:
+  - node_id: express-yih1-in-deletion-background
+    label: Express GST-Yih1(2-258) versus GST in ESY11001b
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P25637
+  - node_id: esy11001b-3at-plate-growth
+    label: ESY11001b dilution-series growth on galactose plus 3AT
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: fusion-decreases-deletion-background-starvation-growth
+    subject: express-yih1-in-deletion-background
+    predicate: decreases
+    object: esy11001b-3at-plate-growth
+    mechanism: Expressing the multidomain fusion reduces the starvation-growth endpoint even when endogenous
+      Yih1 is absent. This limits an endogenous-protein bridging explanation for this phenotype, but does
+      not resolve the biochemical role of PF01205.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21239490
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3060488/
+      snippet: 3AT
+      explanation: Figure 5B was visually inspected separately from panel A; Methods identify ESY11001b
+        as the H1511-derived yih1 deletion strain.
+      cache_path: evidence/PF01205/sattlegger-2011-yih1.txt
+      cache_sha256: f776cf4550f706bfd69a326ac6302e924bae946d206ea3b7f1b7bbfb405e918e
+curation_events:
+- timestamp: '2026-10-11T10:08:17Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate three scoped Yih1 overexpression phenotypes with ancient-domain mapping
+  history_record: history/records/PF01205/2026-10-11T100817Z-codex-2487b9.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T10:16:35Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of Yih1 phenotypes and domain scope
+  history_record: history/records/PF01205/2026-10-11T101635Z-codex-d884a9.yaml
+  event_index: 0
+  llm_assisted: true

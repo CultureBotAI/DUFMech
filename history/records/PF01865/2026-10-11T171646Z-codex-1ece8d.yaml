@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01865
+  path: data/families/PF01865.yaml
+session:
+  id: 2026-10-11T171646Z-codex-1ece8d
+  timestamp: '2026-10-11T17:16:46Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped scientific review of PF01865 Pap and PitR causal effects
+  details: Completed same-agent scientific assessment of eight phenotypic graphs and
+    seventeen indirect observed edges against thesis methods and original figures,
+    final2026 article Figures2/3, exact Pap/Newman reference mappings and published
+    supplementary strain/plasmid/locus context. Retained open attribution and member/context
+    coverage findings; native verdict NEEDS_FOLLOWUP, partial scope and IN_PROGRESS.
+    Reviewed semantic digest d2cc534853f5e0376a3661b1bdfd59c952ff5f84033d3192b08b299a4fb84c51.
+    Independent expert review, complete family coverage and publication are not claimed.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T171710Z-pf01865-pap-operon-and-pitr-condition-specific-effects/review.yaml

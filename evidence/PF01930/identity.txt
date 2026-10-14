@@ -1,0 +1,35 @@
+PF01930 identity and attribution ledger
+Inspected 2026-10-12 UTC by Codex. Database facts, not experimental proof.
+
+Frozen data/families/PF01930.yaml preserves Cas_Cas4, Domain of unknown
+function DUF83, EX_DUF, UNSCORED and InterPro:IPR022765. Its imported
+4690 proteins and 45 architectures are not a list of characterized members.
+Source: data/worklists/interpro-pfam-duf-2026-10-10.json, SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+The frozen description's unknown-function statement is retained unchanged.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01930/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01930/protein/uniprot/A3MTK6/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01930/protein/uniprot/Q74H36/
+Live responses inspected: Pcal_0546 A3MTK6, 213 aa, sequence version 1,
+Pyrobaculum calidifontis VA1/DSM21063/JCM11548, taxon410359, match57-210;
+GSU0057 Q74H36, 559 aa, sequence version 1, Geobacter sulfurreducens
+PCA/DSM12127, taxon243231, match15-197, plus a separate PF01867 Cas1 domain.
+These coordinates are current matches, not experimental construct boundaries.
+UniProt records: https://rest.uniprot.org/uniprotkb/A3MTK6.json and
+https://rest.uniprot.org/uniprotkb/Q74H36.json; first100 results of the
+xref:pfam-PF01930 query were inspected, not a complete member census.
+Pcal residue numbering agrees with C64,D123,E136,Q149,Y153,Y166,C200,C203,C209.
+Gsu E18 and S191 are inside the match; R14 is outside. Whole fusion effects
+cannot establish isolated PF01930 sufficiency or direct Cas4 integrase activity.
+
+SSO0001 Q97TX9 currently cross-references PF12705, not PF01930, despite the
+2013/2014 papers' historical DUF83 wording. Do not adopt its decameric assembly,
+cluster-dependent inactivation or cleavage assays into this accession merely
+because it is called Cas4. SSO1391 is the papers' DUF911 comparator; its
+bidirectional cleavage and mutant effects are not Pcal_0546 observations.
+The first100 current matches also contain multidomain DNA2 proteins. The
+Cas4-centered curation does not characterize the DNA2 branch or all PF01930.
+
+Matching accession facts are supported by downloaded JSON; no clone was
+resequenced here and no source snapshot, scoring rule or frozen label changed.

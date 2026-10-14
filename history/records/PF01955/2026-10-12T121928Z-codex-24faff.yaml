@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01955
+  path: data/families/PF01955.yaml
+session:
+  id: 2026-10-12T121928Z-codex-24faff
+  timestamp: '2026-10-12T12:19:28Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped review of Rhodobacter CbiZ conversion and cellular contexts
+  details: Saved same-agent scientific successor review 20261012T121906Z-pf01955-rhodobacter-conversion-and-cellular-contexts
+    with NEEDS_FOLLOWUP/pass_with_limitations for current semantic digest f9cadfe5805a8942b44daa6250d02c57c0dfa78eda805c7a7ec738739038e7f8.
+    Fourteen graphs and thirty-eight experimental edges retain eleven direct conversions
+    and twenty-seven unresolved effects; previous twenty-five edges preserved. Five
+    OPEN discussions and twelve evidence ledgers preserve full-family, source, construct
+    and control limits. No independent endorsement, REVIEWED promotion or publication
+    is claimed. Next project this actual history and verify corpus reproducibility,
+    tests and local rendering.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T121906Z-pf01955-rhodobacter-conversion-and-cellular-contexts/review.yaml

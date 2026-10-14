@@ -1,0 +1,52 @@
+Chen et al., Structure and function of TatD exonuclease in DNA repair.
+PMID:25114049; doi:10.1093/nar/gku732
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4176340/
+Accessed 2026-10-11. CC-BY article; minimal quotation and curator's factual
+assay extraction. Methods, relevant Results and mechanism Discussion read;
+Figures 2, 3 and 5 visually inspected. No raw-data reanalysis.
+Minimal quotations from figure captions:
+Figure 2B: "cleaved DNA most efficiently"
+Figure 5C: "significant reduced exonuclease activity"; "lost their exonuclease activity"
+Figure 3B: "The TatD-knockout strain was sensitive"
+
+Preparation: full-length K-12 tatD PCR product, NdeI/XhoI into pET22b,
+C-terminal His tag; BL21-CodonPlus-RIPL production, Ni-NTA then Q-Sepharose
+purification. QuikChange point mutants used the same purification workflow.
+The native 260-aa sequence is not the complete tagged experimental sequence.
+
+Figure 2B: 40 nM 5'-32P-labeled 20-nt ssDNA, TatD concentration series
+0-0.5 uM, 37 C for 1 h. General reaction buffer is 3 mM MOPS, 75 mM NaCl,
+pH 7.2, 10 uL. DNA sequence: CAAACTCTCTCTCTCTCAAC (20 bases).
+Mg2+ or Mn2+ at 2 mM supports digestion; no added metal, 1 mM Ca2+ and
+100 uM Zn2+ lack detected digestion under this particular comparison.
+The graph adopts the Mg-containing joint reaction producing shorter DNA.
+Figure 2C compares 5'- and 3'-labeling, supporting 3'-5' exonucleolysis;
+2D blocks the 3' end with biotin/streptavidin. These support direction but
+are not additional quantified graph edges. Neither establishes rejection
+of all duplex substrates or an absence of AP endonuclease activity.
+
+Figure 5C: WT and H62A/H64A/H127A/H152A in the upper gel; WT and
+E91A/E201A/D203A in the lower gel. H62A reduces 20-nt ssDNA digestion;
+the acidic substitutions give little residual activity. H64A/H127A/H152A
+retain digestion. Lanes show a 0.5/1/2 series but the figure and caption
+do not give its units. The general assay method gives 37 C and 1 or 2 h,
+but does not resolve this panel's exact duration, metal concentration or
+DNA dose. Do not borrow Figure 2B's values to fill these gaps.
+Mutant effects do not establish a unique catalytic base, metal stoichiometry,
+or intact folding of every preparation. Discussion explicitly leaves the
+two-/three-metal mechanism and possible cofactors unresolved.
+
+Figure 3B: WT and DeltaTatD K-12 cells from the Keio collection; serial
+spots under chronic 1 mM H2O2, overnight at 37 C. Deletion reduces colony
+growth relative to WT; drug-free controls are shown. Separate MMS 3 mM,
+MMC 120 nM and UV-C comparisons do not show the same defect. This is a
+whole-gene phenotype, not direct measurement of a DNA-repair reaction.
+No genetic rescue is shown for the adopted comparison. The exact deletion
+strain identifier and basal spot-medium composition are not resolved here.
+Acute peroxide outgrowth in panel C is a different protocol, not this edge.
+
+Figure 3D's resistant 3'-terminal abasic substrate is not the internal THF
+duplex tested in 2023. The two results are not a direct contradiction.
+The general method prints a protease-K quench concentration of 20 mM;
+this questionable unit is retained as unresolved, not silently corrected.
+Supplemental and complete clone details remain follow-up work.

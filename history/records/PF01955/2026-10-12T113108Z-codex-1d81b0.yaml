@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01955
+  path: curation/families/PF01955.yaml
+session:
+  id: 2026-10-12T113108Z-codex-1d81b0
+  timestamp: '2026-10-12T11:31:08Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Clarify the CbiZ amide-bond hydrolysis mechanism
+  details: Visual scientific inspection identified ambiguous wording suggesting removal
+    of an amide group. Correct the edge to hydrolysis of the amide bond linking aminopropanol
+    to the corrin side chain, leaving the Cby carboxyl group. No edge count, experimental
+    scope, control or uncertainty changes. The previous retained review remains immutable;
+    a successor is required for the changed digest.

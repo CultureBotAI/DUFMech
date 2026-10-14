@@ -1,0 +1,48 @@
+PF01970 identity and experimental scope, inspected 2026-10-12.
+
+Frozen record: Pfam:PF01970, TctA, former DUF112, EX_DUF;
+InterPro:IPR002823. Snapshot interpro-pfam-duf-2026-10-10,
+SHA256 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+Imported identity, counters and characterization status are not changed.
+
+Primary sequence deposits:
+https://www.ebi.ac.uk/ena/browser/api/embl/AB822590?download=false
+AB822590.1, Comamonas sp. E6, taxon364029, tctA CDS3648-5165,
+protein BAN66712.1, 505aa; deposited InterPro cross-reference IPR002823.
+https://www.ebi.ac.uk/ena/browser/api/embl/AB822591?download=false
+AB822591.1, same strain/taxon, tpiA CDS2015-3526, BAN66716.1,
+503aa, IPR002823. TpiA is not the triosephosphate-isomerase gene that
+also uses the tpiA symbol. TctA and TpiA are distinct E6 paralogs.
+
+https://rest.uniprot.org/uniparc/UPI000384591D.json
+Exact archived BAN66712 v1 sequence:505aa; PF01970 feature20-440.
+https://rest.uniprot.org/uniparc/UPI0001DA6AF2.json
+Exact archived BAN66716 v1 sequence:503aa; PF01970 feature20-441.
+Coordinates are UniParc's retained Pfam features, not a new profile scan
+or an experimentally isolated domain. Both archive records retain E6.
+Current UniProt S6BR91 and S6BBY9 API responses say Inactive/DELETED,
+reason Redundant sequence. Active sequence-identical entries in another
+Comamonas species do not relabel the tested E6 strain. Failed InterPro
+requests did not establish current expanded domain boundaries.
+
+https://rest.kegg.jp/get/cgb:cg3125
+https://rest.uniprot.org/uniparc/UPI0000165E70.json
+Corynebacterium glutamicum ATCC13032, taxon196627, cg3125=TctA;
+CAF20846 v1,510aa, archived PF01970 feature20-443. KEGG locus and
+archive agree on length and protein ID; the archive retains inactive
+historical Q6M234 v1, not a current reviewed entry. Brocker2009 Table3
+maps cg3125 to NCgl2724. TctB/cg3126 and TctC/cg3127 are partners;
+CitH/cg0088 is a separate CitMHS transporter, not assigned to PF01970.
+
+All graphs concern full genes/proteins, operons or their measured
+cellular outcomes. No isolated-domain sufficiency, invariant substrate,
+ion stoichiometry, experimentally proven helix count or family-wide
+mechanism is asserted. Exact final plasmid sequences remain unverified.
+
+Excluded lead: Batista-Garcia2014, doi:10.1002/prot.24529, retrieved at
+https://ruja.ujaen.es/server/api/core/bitstreams/dc16acf0-381d-45c4-9d16-b821316c090f/content
+PDF text pages1-5 inspected, not original figures. KF570143 is a
+metagenomic clone selected for esterase-related activity; transporter
+models/docking do not establish measured citrate transport by TctA_ar.
+The reported1311bp/463aa discrepancy and unknown source organism need
+resolution. No observed transport edge is drawn from that modeling study.

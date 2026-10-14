@@ -1,0 +1,78 @@
+PF01956 TMCO1/OPTI dependence and assay-specific client effects
+Accessed 2026-10-12. Curator-authored facts and assessment; minimal quotations.
+Primary source: PMID36261522, DOI10.1038/s41586-022-05330-8.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9630114/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9630114/fullTextXML
+Main Results and relevant Methods were read. Original Figures1/4 and Extended
+Data1/5 were visually inspected using image URLs in the PMC article HTML.
+Raw Supplementary Figure1 gels and statistical spreadsheets remain uninspected.
+
+Minimal quotations: "mutually dependent" (Main, GEL subunits);
+"around 40%" (Main, protected-fragment decrease);
+"glycosylation defects" (Main, cellular YIPF1);
+"fluorescence ratio" (Main, client reporter assay).
+
+GEL partner abundance:
+Figure1c compares whole-cell WT and knockout HEK293 lysates. TMCO1 knockout
+strongly reduces C20orf24/OPTI signal, while other complexes remain substantially
+detectable. Extended Data1a independently shows reciprocal depletion effects:
+TMCO1 siRNA reduces OPTI, and OPTI siRNA reduces TMCO1, versus non-targeting
+control; tubulin is the loading control. ED1a was repeated twice; Figure1c was
+partially replicated rather than formally repeated as a full experiment.
+These are steady-state protein dependencies, not measured degradation rates,
+direct binding kinetics or proof of which partner stabilizes the other first.
+The exact ED1a depletion duration is not separately specified; do not silently
+copy the fluorescent-reporter timing into this whole-cell immunoblot assay.
+
+Cell-free YIPF1 glycosylation:
+Figures4d/e use N-terminal HA-YIPF1 translated in RRL with WT or knockout
+HEK293-derived rough microsomes, 50 min at 32 C. The glycosylated fraction
+decreases with TMCO1 knockout and with joint TMCO1/Nicalin or TMCO1/CCDC47
+knockout versus WT. Quantification has three biological replicates, mean/SD,
+ordinary one-way ANOVA/Dunnett comparison to WT. No exact P value is invented.
+ASGR1 glycosylation and TMED2 signal-peptide processing remain substantially
+preserved. ED5a/b shows that higher microsome amounts do not normalize YIPF1.
+In the separate Flag-YIPF1 experiment, Figure4b carbonate-resistant recovery is
+comparable while glycosylation falls. This is inconsistent with claiming simple
+loss of all membrane insertion. Figure4a N297A removes the glycan site and
+supports band assignment; it is not a TMCO1 mutation.
+
+Cell-free protection endpoint:
+Figure4c uses radiolabeled C-terminal YIPF1-HA, not N-terminal HA-YIPF1.
+Default IVT is 45 min at 32 C; isolated membranes are treated with proteinase K
+0.5 mg/ml on ice for 45 min, quenched with PMSF and analysed with HA IP.
+The recovered protected-fragment signal is about 60% of WT in TMCO1-knockout
+microsomes. No-microsome and no-PK conditions support interpretation. Five
+repeats are reported. This is a topology-sensitive proxy in a complex membrane
+preparation, not a directly measured TMCO1 insertion rate or purified sufficiency.
+Loss of TMCO1 also affects OPTI and recruitment of other multipass components.
+
+Cellular glycosylation:
+Figures4f/g use transient N-terminal Flag-YIPF1 in WT and single-knockout cells,
+not the in vitro double-knockout series. After transfection, 1 ng/ml doxycycline
+induces expression for 12 h. TMCO1 knockout lowers glycosylated fraction in five
+biological replicates. These data do not measure ion conduction, client transport
+activity or the rate of any individual insertion step.
+
+Reporter effects:
+Figures4i/j: TMCO1 siRNA lowers the YIPF1, EAAT1 and AGTR2 client/control
+fluorescence ratios compared with non-targeting siRNA. YIPF1 is GFP-P2A-RFP-YIPF1
+(RFP/GFP), whereas EAAT1 and AGTR2 carry client-GFP-P2A-RFP (GFP/RFP).
+ASGR1 is the largely preserved single-pass control. The stable Flp-In T-REx
+293 reporter cells receive two siRNA treatments, 48 h then about 24 h, followed
+by 1000 ng/ml doxycycline for 6 h. Two repeats of Figures4i/j are reported;
+the displayed histograms do not establish an exact turnover constant.
+TMCO1 siRNA is s29085; OPTI siRNA is s31821; control is 4390843. ED5e checks
+target/partner depletion. No rescue or independent second TMCO1 siRNA is shown
+in these selected experiments. The flow Methods describe gating on soluble
+reporter levels but then name GFP-positive EAAT1/AGTR2 and RFP-positive
+ASGR1/YIPF1 populations, which are the client-linked colors in the constructs.
+This wording mismatch is retained, not silently repaired or used to invent
+unreported gates. Culture antibiotic values also need stock/final clarification.
+
+All retained perturbation effects have unresolved molecular mediation. The
+glycosylation/protection controls support a topology interpretation, but do not
+isolate TMCO1 from the rest of GEL or the multipass machinery. No phenotype-to-
+phenotype causal chain is inferred across the cell-free and cellular assays.
+Earlier intermediates, substrate-driven recruitment variants, accompanying
+structural studies, complete clone sequences and later contexts remain open.

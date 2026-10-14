@@ -1,0 +1,25 @@
+Retrieved and inspected: 2026-10-11.
+URLs:
+https://rest.uniprot.org/uniprotkb/Q9SF38.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9SF38/entry/pfam/PF01535/
+Parsed database facts:
+Q9SF38 / PP222_ARATH; HCF152 / At3g09650; Arabidopsis thaliana, taxon 3702.
+Sequence version 1, entry version 123, 778 aa; sequence MD5
+7FEABA671363EBE9F5762A59BBFB5B58. UniProt and InterPro sequences agree exactly.
+Q9SF38 Pfam:PF01535; repeat intervals: 416-442 and 559-585, inclusive.
+Curator mapping: Figure 2C's selected motif-5 and motif-6 residues align to
+Q9SF38 segments starting at R415 (RIYTTLMKGYMKNGR...) and V453
+(VTYTTVVSAFVNAG...). Their position-12 residues are K426 and N464.
+K426 lies in current PF01535 416-442; N464 is outside either current hit.
+The paper's older repeat definition and intervening loop lengths must not be
+replaced by the current hit boundaries. Whole mini-protein endpoints and fusion
+linkers remain unverified without supplementary primers. This maps the local
+mutation identities, not a completely sequence-verified historical clone.
+Separate rejected transfer:
+https://rest.uniprot.org/uniprotkb/P32522.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P32522/
+Current P32522 (S288c Pet309) has PF23276, not PF01535, in both inspected Pfam
+cross-references and all-Pfam response. Its repeat annotations are not current
+PF01535 calls. Zamudio-Ochoa 2014, PMID:25181249, studied D273-10B derivatives;
+its deletion phenotypes were not adopted as PF01535-domain-specific effects.
+This discrepancy is not evidence that Pet309 lacks PPR biology.

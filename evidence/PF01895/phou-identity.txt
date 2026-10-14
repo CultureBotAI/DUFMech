@@ -1,0 +1,66 @@
+PF01895 / PhoU / former DUF65: member and research-scope audit
+Accessed and inspected 2026-10-11 by Codex.
+
+Frozen data/families/PF01895.yaml and naming row PF01895.25 retain PhoU,
+historical DUF65, IPR026022, EX_DUF and 24850 proteins. Naming is not a
+family-wide experimental conclusion. PF01865/PhoU_div/PitR is distinct.
+Ignored/hidden-inclusive searches of curation, evidence, history, reviews and
+reports (excluding the generated inventory) found related PF01865 material,
+not an existing PF01895 overlay. Frozen source bytes were not edited.
+
+Member-specific sources:
+https://rest.uniprot.org/uniprotkb/P0A9K7.json
+https://rest.uniprot.org/uniprotkb/A0R4B7.json
+https://rest.uniprot.org/uniprotkb/A0QSU6.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01895/protein/uniprot/P0A9K7/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01895/protein/uniprot/A0R4B7/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01895/protein/uniprot/A0QSU6/
+NCBI EFetch FASTA references were parsed with Biopython and compared by exact
+whole-sequence equality, not by names alone.
+
+E. coli K12 P0A9K7: phoU/nmpA, b3724/JW3702, 241 aa, sequence version1,
+entry version131, sequence date1988-04-01, annotation date2026-09-02.
+Exact matches: NP_418180.1, AAC76747.1, BAE77564.1.
+PF01895: 26-112 and129-212, taxon83333.
+Checked native positions include D58,N62,E100,R101,V126,A147,R148,D150,
+F194,E200,R201,D204. Quad E100A/R101A/E200A/R201A spans BOTH repeats.
+A147,R148,D150,F194 lie in the second match. E121 from the2015 docking
+discussion is outside either match. These are full-protein constructs.
+The2014/2015 p116U2 is the WT-sequence vector. The2009 random-mutagenesis
+p116phoU vector has V126A; this is not a universal background substitution.
+The experimental BW25113-derived genomes/inserts were not independently
+sequenced here. Primary papers report sequence confirmation of mutants.
+
+Mycolicibacterium smegmatis mc2 155 (paper: Mycobacterium smegmatis),
+taxon246196. Primary2025 Table1 resolves the two paralogs despite the current
+UniProt gene-name label phoU on both entries.
+PhoU1: A0R4B7, MSMEG_5776,222 aa, sequence version1/entry113;
+exact ABK71681.1 and WP_003897196.1; PF01895 at18-103 and122-204.
+PhoU2: A0QSU6, MSMEG_1605,219 aa, sequence version1/entry116;
+exact ABK73564.1 and WP_011727768.1; PF01895 at17-103 and123-204.
+Both sequence dates2007-01-09 and annotation dates2026-09-02.
+The2025 experiments use C-terminal His6 proteins, not isolated repeats.
+SenX3SD1 is partner residues51-384, retaining PAS but lacking the membrane
+segment; it is not a PhoU domain deletion. RegX3 is MSMEG_0937.
+
+Coverage limits and leads, not additional curated edges:
+Thermotoga structural iron-cluster study PMID15716271/doi10.1074/jbc.M414117200
+underlies the imported family description; it is not direct E. coli iron data.
+Salmonella2025 doi10.71150/jm.2505013 was inspected as an abstract lead only.
+M. smegmatis2017 doi10.3389/fmicb.2017.02523 needs full primary review.
+S. aureus2024/2025 PMID39660905 and final2026 PMID42017666 remain leads for
+conventional PhoU. The latter replaces preprint PMC12439885; shared experiments
+are not independent replications. Related PF01865 curation concerns PitR,
+not automatic transfer to conventional PhoU/NWMN_1296 or its phoU::erm allele.
+Other structural homologs, persistence/virulence contexts, and remaining
+members are not scientifically reviewed by these graphs.
+
+Access audit: cached original article HTML and eleven original figure images
+were read; the figures were visually inspected singly after a prior multi-image
+tool response overflowed. A new web-tool open returned a browser challenge,
+not new full-text evidence. Europe PMC supplementaryFiles returned XML saying
+PMC3993317 is not in its open-access set, despite HTTP success; it was NOT a
+ZIP and no2014 supplement was inspected. Ordinary repository/skill reads worked.
+Sandboxed UV cache access failed; the approved offline Biopython invocation
+succeeded without a permission/configuration change. DNS and browser-challenge
+failures are not filesystem denials.

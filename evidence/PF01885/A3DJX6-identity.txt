@@ -1,0 +1,14 @@
+Identity facts inspected 2026-10-11; database grounding, not causal evidence.
+Sources:
+https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-ABN54255&format=json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/A3DJX6/entry/pfam/PF01885/
+
+UniProtKB: A3DJX6; entry version 89; sequence version 1; 182 residues.
+Sequence MD5: 3B99D7E437CE3017762D5A4FBDC050BB
+Gene kptA; locus Cthe_3059; EMBL translation ABN54255.1.
+Organism: Acetivibrio thermocellus ATCC 27405; NCBITaxon:203119.
+Article name: Clostridium thermocellum, CthTpt1.
+entry accession: PF01885
+Current Pfam match: residues 8-172, continuous; integrated IPR002745.
+The primary construct uses the complete ORF plus His6 tag; these coordinates
+refer to the untagged reference, not an isolated domain experiment.

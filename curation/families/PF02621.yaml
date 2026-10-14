@@ -1,0 +1,21 @@
+pfam_id: PF02621
+curation_status: IN_PROGRESS
+curation_history: history/records/PF02621
+discussions:
+  - discussion_id: mqnd-experimental-clone-identity
+    prompt: Resolve the exact accession or sequence of the Bacillus halodurans MqnD construct used in PMID:34143602 before adopting its reaction as a protein-grounded causal graph.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: The paper and inspected supplement support reaction chemistry but do not identify the MqnD clone by locus or accession. Q9K9F8/BH2689 matches this family and species but remains a candidate, so no canonical edge is added from that identity assumption.
+    evidence:
+      - reference: PMID:34143602
+        supports: PARTIAL
+        evidence_source: full_text_and_supplement
+        explanation: Product and trapping experiments are informative; the remaining prerequisite is exact construct-to-family grounding, not absence of biochemical evidence.
+      - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9K9F8/entry/pfam/PF02621/
+        supports: PARTIAL
+        evidence_source: database
+        explanation: Establishes the candidate reference's PF02621 interval, not the experimental clone's sequence.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: Inspected-source extracts and candidate identity facts are retained under evidence/PF02621. No graph is hidden in this discussion; MqnA and other MqnD members still need separate review.

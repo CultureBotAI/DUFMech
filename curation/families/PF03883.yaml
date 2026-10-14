@@ -1,0 +1,80 @@
+pfam_id: PF03883
+curation_status: IN_PROGRESS
+curation_history: history/records/PF03883
+causal_graphs:
+  - graph_id: yaaa-deletion-unincorporated-iron
+    title: YaaA deletion and intracellular unincorporated iron
+    scope: MG1655-derived E. coli SB53 versus LC106; whole-gene deletion in a catalase/peroxidase-deficient background.
+    context: Aerobic LB, 37 C, OD600 0.2; whole-cell EPR after chelator treatment.
+    family_mapping: Reference YaaA is P0A8I3, b0006, sequence version 1, 258 residues; PF03883 spans 1-243. This is not an isolated-domain perturbation.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:83333
+    limitations: Does not establish direct iron binding or transport. The same iron phenotype was not found in unstressed scavenging-proficient cells or defined medium.
+    nodes:
+      - node_id: yaaa-deletion
+        label: yaaA deletion in the Hpx-deficient background
+        node_type: PERTURBATION
+        grounding: [UniProtKB:P0A8I3]
+      - node_id: unincorporated-iron
+        label: Intracellular unincorporated iron pool
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: deletion-increases-iron
+        subject: yaaa-deletion
+        predicate: increases
+        object: unincorporated-iron
+        mechanism: The deletion increases measured iron; plasmid complementation reverses the effect.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:21378183
+            source_url: https://journals.asm.org/doi/10.1128/jb.00001-11
+            snippet: 2-fold-higher levels of unincorporated iron
+            explanation: Figure 10A-B image and Results; matched parent, empty-vector and complementation controls. At least three independent experiments.
+            cache_path: evidence/PF03883/liu-2011-yaaa.txt
+            cache_sha256: f71cf378a1ef7793bc8720e3fcf83752362f884317c174a2dc1889189069ae4c
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A8I3/entry/pfam/PF03883/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A8I3/entry/pfam/PF03883/
+            snippet: 'entry accession: PF03883'
+            explanation: Reference identity and domain boundaries only; excludes the unrelated insE6 alias yaaA.
+            cache_path: evidence/PF03883/P0A8I3-identity.txt
+            cache_sha256: 072fad4c13d426d241d362e82b20940b5f4a17db37301aa1b311912516a9c3bc
+  - graph_id: yaaa-deletion-radical-signal
+    title: YaaA deletion and hydroxyl-radical signal
+    scope: SB53 versus LC106; the same whole-gene perturbation, with a separate radical assay.
+    context: Cells grown in aerobic LB to OD600 0.2; washed cells challenged with 1 mM H2O2 during ethanol/POBN spin trapping.
+    family_mapping: b0006 maps to P0A8I3 and PF03883 at 1-243; reference sequence version 1. No domain-specific construct tested.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:83333
+    limitations: A trapped-radical signal is not direct observation of YaaA catalysis. This assay cannot be silently joined to the iron assay as an observed molecular sequence.
+    nodes:
+      - node_id: yaaa-deletion
+        label: yaaA deletion in the Hpx-deficient background
+        node_type: PERTURBATION
+        grounding: [UniProtKB:P0A8I3]
+      - node_id: radical-signal
+        label: Trapped hydroxyl-radical EPR signal
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: deletion-increases-radical-signal
+        subject: yaaa-deletion
+        predicate: increases
+        object: radical-signal
+        mechanism: Deletion increases the signal at matched final cell density.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:21378183
+            source_url: https://journals.asm.org/doi/10.1128/jb.00001-11
+            snippet: about twice that of the
+            explanation: Figure 9 caption, associated Results and spin-trapping methods; iron-chelator pretreatment removes the signal.
+            cache_path: evidence/PF03883/liu-2011-yaaa.txt
+            cache_sha256: f71cf378a1ef7793bc8720e3fcf83752362f884317c174a2dc1889189069ae4c
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A8I3/entry/pfam/PF03883/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A8I3/entry/pfam/PF03883/
+            snippet: 'entry accession: PF03883'
+            explanation: Reference-member mapping only, not causal evidence.
+            cache_path: evidence/PF03883/P0A8I3-identity.txt
+            cache_sha256: 072fad4c13d426d241d362e82b20940b5f4a17db37301aa1b311912516a9c3bc

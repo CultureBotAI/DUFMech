@@ -1,0 +1,26 @@
+Johnson2001 PMID11160088 DOI10.1128/JB.183.5.1577-1584.2001.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC95042/
+Inspected Methods, Table1, Results and original Figures2/3/5, 2026-10-12.
+Minimal quotations:
+"encodes a protein with ATP:cob(I)alamin adenosyltransferase activity."
+"optimal growth of S. enterica on 1,2-propanediol required a functional pduO gene."
+Paraphrased evidence: LT2 delta-pduO651 removes nucleotides19-981;
+cobA366::Tn10dCam is a separate allele. Figure2: minimal NCE0.4%
+1,2-propanediol at37C, IPTG0.02mM for plasmids. Generation times:
+WT/cobA about8.4h, pduO12.2h; double mutant fails. pDP1 rescues
+the double mutant (about5.8h) and accelerates WT growth. Vector does not.
+Figure3: added AdoCbl partially bypasses the double-mutant defect;
+generation time23h versus WT8.5h. Caption concentrations use ug/mL,
+prose uM, and one caption entry says g/mL; exact doses remain unresolved.
+Separate MacConkey/aldehyde indicators support propanediol degradation,
+but their cyanocobalamin units also disagree. Not direct intracellular
+AdoCbl measurements or proof of a complete molecular pathway.
+Figure5: inclusion-body-enriched PduO, ATP, chemically reduced cob(I)alamin
+and Mg-containing buffer produce AdoCbl-like spectra; photolysis supports
+identification. Empty-vector material and omitted ATP/substrate/reductant/
+enzyme are negative controls. Standard anoxic37C assay: Tris200mM pH8,
+ATP0.4mM, MgCl2 2.8mM, phosphate1.6mM, HOCbl50uM, Ti(III)citrate1mM.
+Full-length protein, not isolated Pfam domain. Original sequence AF026270
+was corrected; historical clone identity is not independently resequenced.
+The proposed C-terminal reductase and genome-neighbor functions are not
+measured causal edges in this study.

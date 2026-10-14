@@ -1,0 +1,40 @@
+PF01914 primary assessment; inspected 2026-10-12 UTC
+Bubnov et al.2025, PMID40248429, DOI10.3389/fmicb.2025.1579813.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12003319/
+Minimal exact quotation: marC V145E
+Remaining text is an authored assessment, not copied full text.
+MarC/YchE Results, Methods2.1/2.2/2.4/2.5/2.6 and Tables1-3 read;
+original Figures1/2 visually inspected. K-12 reference P0AEY1 maps
+PF01914 5-217 and YchE P25743 maps9-210; see identity.txt.
+
+B1950 is MG1655 delta-thrBC,delta-sstT,delta-tdcBCDE::neo,delta-thrP,
+delta-brnQ,delta-livKHMGF,delta-yjeM,delta-sdaC,delta-ydgI,delta-ychE.
+Selected clones: B2058 MarC S140SS (serine insertion, not a point
+substitution); B2059 V145E plus ydbD I155I and cryptic insO R20W;
+B2063 L10Q; B2068 G11E. Table3 coordinates use U00096.3 and common
+mutations were filtered. There is no inspected isogenic allele-swap
+rescue establishing that each MarC variant alone causes its clone's
+entire phenotype. Edges therefore name whole selected clones.
+Figure2A: each clone improves spot growth at0.4/0.8mM L-threonine
+relative to B1950;4mM is a permissive comparison.
+Figure2B: each clone has higher one-minute cellular14C-threonine uptake
+at2.5mM substrate,37C,normalized to dry cell weight. Three biological
+replicates with SD and two-sided unequal-variance t-tests. No numerical
+bar estimates are converted to exact measurements here.
+
+B1895 lacks thrBC,sstT,tdcBCDE,thrP,brnQ,livKHMGF; it is NOT B1950.
+Figure1A pBRychE improves B1895 growth versus empty pBR322 at1.25mM
+threonine. Table2 genomic insert1297744-1301027/U00096.3 includes
+ychE plus flanking sequence, not an isolated Pfam-domain construct.
+The uptake host B2394 is prototrophic and has a different deletion
+background. Figure1C pBRychE at800uM threonine has no statistically
+significant increase (reported p0.387). The growth rescue is not an
+observed YchE transport edge in that other assay. Combined deletion
+effects are not assigned to YchE alone.
+Methods print0.2% glucose in2.2/2.6 but0.2g/L in selection/growth
+descriptions2.1/2.5; this discrepancy is retained, not silently repaired.
+No purified MarC transport, binding pocket, coupling stoichiometry or
+wild-type physiological substrate preference is measured. AlphaFold
+images are predictions, not experimentally solved atomic structures.
+HTML SHA256:
+b7d6222c1b0d00509791cdf5b532f29d6506e62fc15a9097e5bd4971031c9219

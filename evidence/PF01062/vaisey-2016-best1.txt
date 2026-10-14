@@ -1,0 +1,61 @@
+Vaisey, Miller and Long, Distinct regions that control ion selectivity and
+calcium-dependent activation in the bestrophin ion channel.
+PMID:27821745; doi:10.1073/pnas.1614688113
+https://pmc.ncbi.nlm.nih.gov/articles/PMC5127342/
+Accessed 2026-10-11. Main electrophysiology, neck and calcium Results,
+relevant Discussion and Methods read. Figures 1, 3 and 4 visually inspected.
+Minimal quotations:
+"almost completely abolishes"
+"dose-dependent manner"
+"inhibited by DIDS"
+"fraction of current remaining"
+"did not observe"
+"restore activity"
+The following is a curator's factual ledger, not reproduced article text.
+
+Chicken E1C3A0 BEST1 residues 1-405 plus EGEEF tag, expressed in Pichia;
+TripleA means the joint I76A/F80A/F84A construct. Reconstituted into 3:1
+wt/wt POPE/POPG, with 0.2-1 mg/ml protein and 10 mg/ml lipid for bilayers.
+Electrical recordings use 20 mM HEPES-NaOH pH 7.6, 0.21 mM EGTA,
+0.19 mM CaCl2 (about 300 nM free calcium), 22-24 C. Symmetric conditions
+are 30 mM KCl on both sides. Channels insert in both orientations.
+Pulses span -100 to +100 mV for 2 s, from a 0-mV holding potential;
+steady currents are averaged over the final 200 ms. Empty-bilayer currents
+are subtracted. Error bars use at least three separate bilayer experiments.
+
+Figure 1B-D: adding 10 mM EGTA to both sides strongly decreases WT current.
+The displayed B-D traces are from the same representative bilayer.
+Figure 1E/F: after cis-side 10 mM EGTA silences that orientation, trans
+perfusion varies free calcium from near zero to 350 nM. Calcium increases
+current magnitude at -100 mV; n=3, SEM. The fitted K1/2 of 17 +/- 3 nM
+is assay-specific, not an independently measured calcium-binding Kd.
+Figure 1I/J: DIDS added to both sides decreases current magnitude at
+-100 mV, dose series through 1 mM, n=3. Up to 2% DMSO control had no
+noticeable effect. This does not identify a binding site or clinical effect.
+
+Figure 3C: TripleA, F80A and F80N each retain more current at +100 mV
+after bilateral 10 mM EGTA than WT, normalized to their own calcium-present
+current. Three independent bilayers, SEM. This is a retained fraction,
+not absolute conductance or single-channel open probability. F80I retains
+much stronger calcium dependence than TripleA; the paper describes it as
+nearly WT-like. Macroscopic protein incorporation is not precisely known.
+
+Figure 4A/C/D: D301A/D304A decreases the chloride-flux-associated ACMA
+quench under 2 uM external free calcium, compared with WT; adding TripleA
+to that double-mutant background restores quench. Protein 0.1 mg/ml and
+lipid 10 mg/ml before 100-fold assay dilution. Reconstitution uses
+100 mM Na2SO4, 10 mM HEPES pH 8.2, 1 mM EGTA; assay uses 125 mM NaCl
+and 1 mM EGTA or calcium-EGTA. CCCP initiates the coupled proton/anion
+readout. Preparations and comparisons are performed in parallel on one day.
+Exact replicate count and recording temperature for these traces are not
+specified. Empty vesicles were prepared; Figure 4 does not display them.
+The cited 2014 protocol supplies dye/ionophore details, not a new 2016
+empty-control trace. Sensor-facing orientation limits WT reactivation.
+Size-exclusion similarity argues against gross misassembly but does not
+independently rule out every folding or incorporation difference.
+
+Neck substitutions do not substantially switch anion/cation selectivity.
+Open probability and conductance cannot be separated by these measurements.
+Proposed quadrupole interactions and gating movements are not directly
+tracked microsteps. Aperture V205, later inactivation, cryo-EM and GABA
+experiments remain additional contexts, not adopted edges in this review.

@@ -1,0 +1,46 @@
+Gardner2015: PMID25953406; doi10.1186/1471-2156-16-S2-S2
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4423584/
+Inspected 2026-10-11: Methods, Results/discussion, original Figures2-5 and
+their captions. Minimal exact quotations: "Signaling necessity", "Growth yield",
+"A147E", "A147K", "R148A", "R148E", "PhoU/PhoR".
+
+Figure2: BW26337 delta-pstSCABphoU with joint p48SCAB and p116U2 has lower
+AP than empty vectors; either component alone does not reconstitute the
+repression. This is one combined intervention, not PhoU sufficiency alone.
+Caption says LB; signaling Methods says MOPS2mMPi/glucose0.06%,37 C
+overnight. The discrepancy is retained, not silently reconciled. Plot's
+WT label BW25113 agrees with caption. Residual AP remains with joint rescue.
+
+Figure3: STACdelta-phoU+p116U2 WT or A147E has greater overnight OD600 than
+the pKG116 control. Methods specifies LB/IPTG100uM,triplicate,1:5 dilution
+corrected to culture OD. This is biomass yield, not a specific growth rate.
+Significance symbol compares deletion/vector with parental STAC; mutant-versus-
+WT equivalence and a significance test against vector are not invented.
+
+Figure4: in STACdelta-phoU with p116U2 derivatives, separate A147E,A147K,
+R148A,R148E substitutions increase AP versus WT plasmid (reportedp<0.001).
+D150A retains repression. Caption specifies LB; general AP Methods specifies
+overnight37 C,triplicate. Mutations are individual constructs, not a joint
+quadruple mutant. Residual AP repression differs from the2014 assay context.
+
+Figure5A: all four variants lower PhoU/PhoR BACTH beta-galactosidase output
+versus WT (p<0.01); D150A retains signal. Figure5B displays retained PstB
+interaction reporter ONLY for A147E,A147K,R148A, not R148E or D150A.
+The reporter is a cellular adenylate-cyclase complementation readout, not a
+purified binding Kd or mapped contact. Triplicates are specified for2015;
+the cited2014 assay uses BTH101, LB/antibiotics/IPTG,30 C overnight and ONPG.
+The2015 Methods focuses on PhoR-PAS paired scans; exact orientation/dose of
+every Figure5 PhoU fusion needs supplement verification. Do not transfer the
+2014 quadruplicate count into2015. Mutant expression/folding remains a caveat.
+
+DCA/docking across196 gamma-proteobacterial sequences proposes a contact
+surface, not observed atomic contacts or a PhoR catalytic transition. E121
+is outside the current PF01895 intervals. Apparent A47E/A148A textual typos
+are not new variants; plots and described constructs identify A147E/R148A.
+Other PhoR-PAS paired substitutions are not PhoU residue-level interventions.
+
+Original images SHA256:
+F2 a2ca0d41c04ee441df9ee5e19d03386765d2e2e6d640e65c93ad5deb93006127
+F3 11462617f1071b034e7a3dbde91d83933091effdc95ed34c5cc06a5c70c3f674
+F4 a8c3735845def57042353ddbf17801e1cb2b87ac60b645990a15eb935291ff69
+F5 100533fe22e61175b78c4212f0e399f8a408e6c92d6f549f138729ff4e7b43f0

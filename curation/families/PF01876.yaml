@@ -1,0 +1,664 @@
+pfam_id: PF01876
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01876
+causal_graphs:
+  - graph_id: mth-optimized-cleavage-rate
+    title: The POP5-RPP30 protocol increases the fitted maximal cleavage rate
+    scope: Chen2010 Table1 and Figure7, Mth RNA alone versus RNA with the cognate protein pair.
+    context: Approximately2 nM E.coli pre-tRNATyr,55 C,pH5.8. RNA alone0.3-20 uM in2 M NH4/500 mM Mg; pair condition1-10 uM RNA in0.8 M NH4/120 mM Mg,proteins twice RNA molarity.
+    family_mapping: MTH688 O26784 equals AAB85193.1,245 aa,PF01876 10-232. Tag-free full-protein cloning and POP5 coexpression in BL21(DE3),not an isolated p30 domain.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:187420
+    limitations: Optimized protein/buffer protocols differ. Fitted maximal kobs is not an independently isolated chemical rate constant; the proposed ES-to-ES-star stabilization is not directly observed.
+    nodes:
+      - node_id: pair-protocol
+        label: Use the POP5-RPP30-containing optimized RNA protocol
+        node_type: PERTURBATION
+        grounding: [UniProtKB:O26784]
+      - node_id: maximal-kobs
+        label: Fitted maximal pre-tRNA cleavage kobs
+        node_type: PROCESS
+    edges:
+      - edge_id: pair-protocol-increases-maximal-kobs
+        subject: pair-protocol
+        predicate: increases
+        object: maximal-kobs
+        mechanism: The fitted maximum rises from0.13 +/-0.01 to7.9 +/-1 per min. The comparison includes changed ions and both proteins; it does not establish Rpp30-alone catalysis. KM(STO) is not a measured binding Kd.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:20705647
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3001054/
+            snippet: Single-turnover kinetic studies
+            explanation: Table1,original Figure7 and supplementary kinetic controls distinguish optimized protocols and fitted parameters.
+            cache_path: evidence/PF01876/chen-2010-reconstitution.txt
+            cache_sha256: 6d5205a18821029b23b745b445c8819bfe9b28fc050995cc6bbf2a85588432d4
+  - graph_id: mja-full-rna-reconstitution
+    title: The RNA and POP5-RPP30 preparation produces pre-tRNA cleavage products
+    scope: Chen2010 Figure3 upper panel, full-length Mja RPR.
+    context: 10 nM RNA,100 nM proteins,500 nM E.coli pre-tRNATyr,30 min55 C; pair buffer50 mM Tris7.5/100 mM NH4/120 mM Mg. RNA-alone control uses800 mM NH4/30 mM Mg.
+    family_mapping: MJ1139 Q58539 equals WP_010870650.1,232 aa,PF01876 7-212. Tag-free full Rpp30 coexpressed with POP5; catalytic RNA is required in this preparation.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:243232
+    limitations: This is a composite reconstitution/ionic-condition comparison,not a matched-buffer test of Rpp30 alone. RPP21-RPP29 alone does not activate this type-M RNA under the tested protocol.
+    nodes:
+      - node_id: pair-rna-protocol
+        label: Reconstitute full Mja RNA with POP5-RPP30 in the pair buffer
+        node_type: PERTURBATION
+      - node_id: cleavage-products
+        label: Mature-tRNA-sized and 5-prime-leader products
+        node_type: STATE
+    edges:
+      - edge_id: reconstitution-increases-products
+        subject: pair-rna-protocol
+        predicate: increases
+        object: cleavage-products
+        mechanism: Products appear with RNA plus the pair compared with the published RNA-only and protein-only controls. This does not make either protein independently sufficient or imply a natural cellular stoichiometry.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:20705647
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3001054/
+            snippet: Single-turnover kinetic studies
+            explanation: The retained extract also records Figure3 and the distinct multiple-turnover buffers; the original lanes3-5 were inspected.
+            cache_path: evidence/PF01876/chen-2010-reconstitution.txt
+            cache_sha256: 6d5205a18821029b23b745b445c8819bfe9b28fc050995cc6bbf2a85588432d4
+  - graph_id: mja-truncated-rna-reconstitution
+    title: POP5-RPP30 protocols support cleavage by two truncated catalytic RNAs
+    scope: Chen2010 Figure4B, separate Mja deltaS and112-nt deltaS-Min transcripts.
+    context: 500 nM RNA,1 uM proteins,1 uM pre-tRNATyr,15 min55 C;50 mM Tris7.5/400 mM NH4,120 mM Mg for pair versus30 mM for RNA-only control.
+    family_mapping: Full MJ1139/Q58539 Rpp30,PF01876 7-212; deletions are in the catalytic RNA,not the p30 protein. POP5 is jointly supplied.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:243232
+    limitations: Separate engineered RNAs and optimized ions; no protein-only rescue of an isolated p30 domain. Further enhancement by all four proteins does not identify the molecular intermediate.
+    nodes:
+      - node_id: deltas-pair-protocol
+        label: Use the deltaS RNA with POP5-RPP30 protocol
+        node_type: PERTURBATION
+      - node_id: deltas-min-pair-protocol
+        label: Use the112-nt deltaS-Min RNA with POP5-RPP30 protocol
+        node_type: PERTURBATION
+      - node_id: cleavage-products
+        label: Pre-tRNATyr cleavage products in the corresponding assay
+        node_type: STATE
+    edges:
+      - edge_id: deltas-pair-increases-products
+        subject: deltas-pair-protocol
+        predicate: increases
+        object: cleavage-products
+        mechanism: The deltaS preparation produces mature-tRNA-sized and leader bands compared with its published RNA-only control; both protein pair and ionic conditions are part of the intervention.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:20705647
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3001054/
+            snippet: Single-turnover kinetic studies
+            explanation: Original Figure4B upper panel and separate truncated-RNA assay Methods,not the single-turnover rate protocol.
+            cache_path: evidence/PF01876/chen-2010-reconstitution.txt
+            cache_sha256: 6d5205a18821029b23b745b445c8819bfe9b28fc050995cc6bbf2a85588432d4
+      - edge_id: deltas-min-pair-increases-products
+        subject: deltas-min-pair-protocol
+        predicate: increases
+        object: cleavage-products
+        mechanism: The112-nt RNA also gives cleavage products with the pair protocol. This is a minimal engineered RNP under high salt,not evidence that p30 supplies all catalytic groups.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:20705647
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3001054/
+            snippet: Single-turnover kinetic studies
+            explanation: Original Figure4B lower panel and supplemental RNA-cloning Methods establish the distinct minimal transcript.
+            cache_path: evidence/PF01876/chen-2010-reconstitution.txt
+            cache_sha256: 6d5205a18821029b23b745b445c8819bfe9b28fc050995cc6bbf2a85588432d4
+  - graph_id: pfu-nonconsensus-fidelity
+    title: Protein-containing Pfu protocols increase the correctly cleaved product fraction
+    scope: Chen2012 Figure1C, nonconsensus SynechocystisPCC6803 pre-tRNAGln.
+    context: 2 nM labeled substrate,55 C. RNA alone15 uM9 h; protein-containing reactions200 nM RNA/2 uM proteins,30 min with POP5-RPP30 or10 min with all four,using separately optimized buffers.
+    family_mapping: PF1914 Q8TZS0 equals WP_011013054.1,214 aa,PF01876 59-211. Whole protein in recombinant complexes; exact assay tag and batch sequence not independently verified.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:186497
+    limitations: RNA dose,time and buffer differ. FC0 means correct/(correct+miscleaved) product,not total substrate conversion or a rate. Neither condition isolates Rpp30 from its partner.
+    nodes:
+      - node_id: pair-protocol
+        label: Use the RNA plus POP5-RPP30 protocol
+        node_type: PERTURBATION
+      - node_id: four-protein-protocol
+        label: Use the RNA plus all-four-protein protocol
+        node_type: PERTURBATION
+      - node_id: correct-fraction
+        label: Correctly cleaved fraction among products
+        node_type: STATE
+    edges:
+      - edge_id: pair-protocol-increases-correct-fraction
+        subject: pair-protocol
+        predicate: increases
+        object: correct-fraction
+        mechanism: FC0 rises from0.11 +/-0.03 in the RNA-only protocol to0.59 +/-0.01 with the pair protocol; protocol differences prevent a protein-only causal attribution.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22298511
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/
+            snippet: Data analysis
+            explanation: Original Figure1C lanes2/4 and Results; preserve the actual product-ratio denominator.
+            cache_path: evidence/PF01876/chen-2012-fidelity.txt
+            cache_sha256: c68f4c212e38991b9b58de6054a6efbded483d35baec71a2c767d96c7bc5384a
+      - edge_id: four-protein-protocol-increases-correct-fraction
+        subject: four-protein-protocol
+        predicate: increases
+        object: correct-fraction
+        mechanism: The full four-protein protocol gives FC0 0.92 +/-0.01 versus0.11 +/-0.03 for RNA alone. This is not independent replication of the pair result or isolated p30 sufficiency.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22298511
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/
+            snippet: Data analysis
+            explanation: Original Figure1C lanes2/5 and Methods retain the9-hour versus10-minute comparison.
+            cache_path: evidence/PF01876/chen-2012-fidelity.txt
+            cache_sha256: c68f4c212e38991b9b58de6054a6efbded483d35baec71a2c767d96c7bc5384a
+  - graph_id: mja-cis-cleavage-protocols
+    title: Mja protein-containing protocols change cis cleavage rate and fidelity
+    scope: Chen2012 Figure2 and Table2, pre-tRNAGln-AAU-Mja-RPR conjugate.
+    context: Nominal50 nM RNA/500 nM proteins,55 C,pH6. RNA-alone favors2.5 M NH4/500 mM Mg; protein conditions0.8 M NH4/nominal100 mM Mg. Assembly and cleavage phases differ; all-four assembly uses25 mM Ca.
+    family_mapping: MJ1139 Q58539/WP_010870650.1,PF01876 7-212,whole recombinant protein paired with POP5 and optionally RPP21-RPP29. The substrate is covalently linked to catalytic RNA.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:243232
+    limitations: Composite optimized protocols with unresolved earlier-method mixing/reference discrepancies. FC0 excludes uncleaved RNA; total amplitudes are93% RNA,96% pair,61% all-four. Model-derived component rates are not observed microscopic steps.
+    nodes:
+      - node_id: pair-protocol
+        label: Use the cis-RNA plus POP5-RPP30 protocol
+        node_type: PERTURBATION
+      - node_id: four-protein-protocol
+        label: Use the cis-RNA plus all-four-protein protocol
+        node_type: PERTURBATION
+      - node_id: fitted-kobs
+        label: Fitted overall cis-cleavage kobs
+        node_type: PROCESS
+      - node_id: correct-fraction
+        label: Correctly cleaved fraction among products
+        node_type: STATE
+    edges:
+      - edge_id: pair-protocol-increases-kobs
+        subject: pair-protocol
+        predicate: increases
+        object: fitted-kobs
+        mechanism: Fitted kobs rises from0.004 +/-0.0004 to2.5 +/-0.1 per min across the respective optimized protocols. RNA catalysis and the paired intervention remain explicit.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22298511
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/
+            snippet: Data analysis
+            explanation: Table2 and original Figure2 upper-left/lower-left; these are Gln measurements,not rescaled older Tyr data.
+            cache_path: evidence/PF01876/chen-2012-fidelity.txt
+            cache_sha256: c68f4c212e38991b9b58de6054a6efbded483d35baec71a2c767d96c7bc5384a
+      - edge_id: pair-protocol-increases-correct-fraction
+        subject: pair-protocol
+        predicate: increases
+        object: correct-fraction
+        mechanism: FC0 rises from0.18 +/-0.01 to0.43 +/-0.01. Miscleavage remains the larger product fraction with the pair; improved fidelity is not complete correction.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22298511
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/
+            snippet: Data analysis
+            explanation: Table2 and original Figure2 preserve the residual majority miscleavage and product-ratio definition.
+            cache_path: evidence/PF01876/chen-2012-fidelity.txt
+            cache_sha256: c68f4c212e38991b9b58de6054a6efbded483d35baec71a2c767d96c7bc5384a
+      - edge_id: four-protein-protocol-increases-kobs
+        subject: four-protein-protocol
+        predicate: increases
+        object: fitted-kobs
+        mechanism: The four-protein protocol yields10.5 +/-0.8 per min versus0.004 +/-0.0004 for RNA alone,without isolating a p30-specific elementary reaction.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22298511
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/
+            snippet: Data analysis
+            explanation: Original Figure2 lower-right and Table2; the amplitude loss is separate from the rate increase.
+            cache_path: evidence/PF01876/chen-2012-fidelity.txt
+            cache_sha256: c68f4c212e38991b9b58de6054a6efbded483d35baec71a2c767d96c7bc5384a
+      - edge_id: four-protein-protocol-increases-correct-fraction
+        subject: four-protein-protocol
+        predicate: increases
+        object: correct-fraction
+        mechanism: FC0 is0.84 +/-0.03 versus0.18 +/-0.01 for RNA alone,but the overall product amplitude is only61% rather than93%. Neither quantity means complete conversion to mature tRNA.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22298511
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/
+            snippet: Data analysis
+            explanation: Table2,original Figure2 and amplitude analysis distinguish fidelity from substrate yield.
+            cache_path: evidence/PF01876/chen-2012-fidelity.txt
+            cache_sha256: c68f4c212e38991b9b58de6054a6efbded483d35baec71a2c767d96c7bc5384a
+  - graph_id: pho-pair-sl3-binding
+    title: The Pho protein complex has a lower fitted Ta-SL3 dissociation constant
+    scope: Hamasaki2015/2016 Figure2 and TableI, POP5 alone versus POP5-RPP30 complex.
+    context: SPR25 C,20 mM phosphate7.2/500 mM NH4Cl/0.05%Tween20; immobilized Ta-SL3,4.8 nM-3 uM sequential protein injections,double referencing.
+    family_mapping: PH1877 O59543 equals WP_010885939.1,212 aa,PF01876 50-209. Full proteins; exact preparation tag/insert referred to older protocols,not independently verified.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:70601
+    limitations: Complex kinetic-Langmuir and POP5 steady-state fits have different Rmax. No specific binding was observed in the cleavage buffer. Published fold arithmetic differs from TableI; no exact fold enhancement or chaperone trajectory is asserted.
+    nodes:
+      - node_id: protein-complex
+        label: Use POP5-RPP30 complex instead of POP5 alone
+        node_type: PERTURBATION
+      - node_id: fitted-kd
+        label: Fitted Ta-SL3 dissociation constant
+        node_type: STATE
+    edges:
+      - edge_id: complex-decreases-fitted-kd
+        subject: protein-complex
+        predicate: decreases
+        object: fitted-kd
+        mechanism: Reported apparent KD is2.27 nM for the complex versus2410 nM for POP5 alone under this SPR protocol. Distinct fitting models and surface behavior limit interpretation as a microscopic binding change.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:26152732
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4882637/
+            snippet: Biosensor experiments
+            explanation: Original Figure2,TableI and Discussion; binding is not automatically catalytic activation.
+            cache_path: evidence/PF01876/hamasaki-2015-p30.txt
+            cache_sha256: 4fc37bc3c0bc02e5aa74e51d6c189f0ef21a23b955f9a52fe7df6ae1a2061df9
+  - graph_id: pho-r107a-turnover
+    title: R107A lowers the reported turnover of the reconstituted Pho complex
+    scope: Hamasaki2015/2016 TableII, R107A versus WT Rpp30.
+    context: 5 pmol RNA and each of five proteins,pre-tRNATyr1.88-19.4 ug,15 min;50 mM Tris7.6/50 mM MgCl2/600 mM NH4OAc/60 mM NH4Cl. Kinetic volume/temperature are not independently resolved from the cited earlier protocol.
+    family_mapping: O59543/WP_010885939.1,PF01876 50-209; R107 is verified inside the match. Full Rpp30 in an RNA-containing five-protein complex,not isolated-domain catalysis.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:70601
+    limitations: No independent mutant folding,assembly or active-enzyme-fraction control verified. SupplementS3 remains uninspected. The75 C temperature is explicit for the separate dose assay,not silently assigned here.
+    nodes:
+      - node_id: r107a
+        label: Replace WT Rpp30 with R107A
+        node_type: PERTURBATION
+      - node_id: turnover
+        label: Reported reconstituted-complex kcat
+        node_type: PROCESS
+    edges:
+      - edge_id: r107a-decreases-turnover
+        subject: r107a
+        predicate: decreases
+        object: turnover
+        mechanism: Reported kcat decreases from1.11 to0.46 per min while nominal KM remains4.99 versus5.03 uM. Substantial activity remains; the data do not identify R107 as a chemical catalytic residue.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:26152732
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4882637/
+            snippet: Assay for pre-tRNA cleavage activity
+            explanation: Original TableII and main Methods; no zero-activity claim is taken from the inconsistent K196A table cell.
+            cache_path: evidence/PF01876/hamasaki-2015-p30.txt
+            cache_sha256: 4fc37bc3c0bc02e5aa74e51d6c189f0ef21a23b955f9a52fe7df6ae1a2061df9
+  - graph_id: pho-pair-dose-response
+    title: Increasing the Pho protein-pair dose increases cleavage fraction
+    scope: Hamasaki2015/2016 Figure5 open circles.
+    context: 10 pmol Pho RNA and other three proteins each10 pmol; vary POP5-RPP30 amounts,15 min75 C in the reconstitution buffer. Contrast the reported5-30-pmol protein range.
+    family_mapping: Full PH1877/O59543 Rpp30,PF01876 50-209,jointly varied with POP5; not an independent p30 titration.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:70601
+    limitations: Product fraction plateaus around70-75%,not100%. The text's20-pmol full-activity wording is approximate. Activity titration does not directly measure molecular stoichiometry or establish an in-vivo dimer.
+    nodes:
+      - node_id: increase-pair-dose
+        label: Increase the jointly supplied POP5-RPP30 dose
+        node_type: PERTURBATION
+      - node_id: cleavage-fraction
+        label: Pre-tRNATyr cleavage fraction after15 minutes
+        node_type: STATE
+    edges:
+      - edge_id: pair-dose-increases-cleavage
+        subject: increase-pair-dose
+        predicate: increases
+        object: cleavage-fraction
+        mechanism: Increasing pair dose raises the product fraction over the specified range before a plateau. It is not equivalent to a measured increase in an elementary cleavage rate or a proof of2:1 stoichiometry.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:26152732
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4882637/
+            snippet: Assay for pre-tRNA cleavage activity
+            explanation: Original Figure5 and its explicit75 C protocol; three replicate means and the incomplete plateau are retained.
+            cache_path: evidence/PF01876/hamasaki-2015-p30.txt
+            cache_sha256: 4fc37bc3c0bc02e5aa74e51d6c189f0ef21a23b955f9a52fe7df6ae1a2061df9
+  - graph_id: yeast-deletion-and-complementation
+    title: RPP1 disruption prevents haploid outgrowth and tagged Rpp1 complements it
+    scope: Stolc1997 Figures1B/2A and strain construction, JN161-derived yeast strains.
+    context: VS161 heterozygous diploid sporulation,20 tetrads;65% coding replacement with LEU2. Low-copy pRS316 three-myc-RPP1 supports deletion spores VS162B/D;5-FOA plasmid-loss selection tests dependence.
+    family_mapping: YHR062C P38786 equals AAB96559.1/NP_011929.1,293 aa,PF01876 1-241. Reference S288c is not an independently sequenced VS strain; three myc epitopes follow initiator methionine.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:4932
+    limitations: Whole-gene disruption and full-protein complementation,not domain-only necessity or sufficiency. Colony viability does not prove correction of every RNA-processing phenotype.
+    nodes:
+      - node_id: rpp1-disruption
+        label: Inherit the rpp1::LEU2 disruption without complementation
+        node_type: PERTURBATION
+      - node_id: tagged-complement
+        label: Retain low-copy three-myc-RPP1 in the disrupted haploid
+        node_type: PERTURBATION
+      - node_id: haploid-outgrowth
+        label: Viable haploid colony outgrowth
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: disruption-decreases-outgrowth
+        subject: rpp1-disruption
+        predicate: decreases
+        object: haploid-outgrowth
+        mechanism: Tetrads segregate2:2 viable spores,with survivors lacking the LEU2 disruption marker. The result supports essentiality in this strain and culture context without identifying a lethal molecular intermediate.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9353260
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC316654/
+            snippet: Gene disruption
+            explanation: Original Figure1B,20-tetrad analysis and genotype Methods.
+            cache_path: evidence/PF01876/stolc-1997-yeast.txt
+            cache_sha256: dc04c2148820b58c1336b437b5d67a25e99be059993c7b32eea209d78645b6ba
+      - edge_id: complement-increases-outgrowth
+        subject: tagged-complement
+        predicate: increases
+        object: haploid-outgrowth
+        mechanism: Disrupted haploids survive with the tagged full-protein plasmid but fail plasmid-loss selection. Tagged-protein detection and comparable reported growth support this construct's function,not isolated p30-domain sufficiency.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9353260
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC316654/
+            snippet: Gene disruption
+            explanation: Original Figure2A/B and strain construction distinguish complemented deletion spores from WT controls.
+            cache_path: evidence/PF01876/stolc-1997-yeast.txt
+            cache_sha256: dc04c2148820b58c1336b437b5d67a25e99be059993c7b32eea209d78645b6ba
+  - graph_id: yeast-glucose-shift-growth
+    title: Repressing GAL-driven RPP1 reduces growth after the glucose shift
+    scope: Stolc1997 Figure5A, VS164 versus isogenic VS165.
+    context: Galactose-to-glucose shift with repeated dilution to avoid starvation; GAL10-RPP1 supplies disrupted VS164,WT RPP1 plus empty vector in VS165. Follow OD600 through30 h.
+    family_mapping: Whole YHR062C/RPP1 expression perturbation; P38786/AAB96559.1 reference,PF01876 1-241,not domain-specific intervention.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:4932
+    limitations: Growth is a downstream phenotype. No independent protein-depletion time course or time-matched rescue was verified; glucose controls do not resolve every metabolic consequence.
+    nodes:
+      - node_id: repress-rpp1
+        label: Repress the GAL-driven RPP1 copy in glucose
+        node_type: PERTURBATION
+      - node_id: growth
+        label: OD600 growth trajectory after12-16 hours
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: repression-decreases-growth
+        subject: repress-rpp1
+        predicate: decreases
+        object: growth
+        mechanism: The conditional strain approaches a growth plateau while WT continues growing in glucose. The causal scope is the promoter/genotype intervention,not an observed direct link from any one RNA defect to death.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9353260
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC316654/
+            snippet: RNA analysis
+            explanation: Original Figure5A and conditional-allele Results establish the growth comparison separately from the RNA panels.
+            cache_path: evidence/PF01876/stolc-1997-yeast.txt
+            cache_sha256: dc04c2148820b58c1336b437b5d67a25e99be059993c7b32eea209d78645b6ba
+  - graph_id: yeast-pretrna-processing
+    title: RPP1 repression changes pre-tRNALeu3 intermediate abundance
+    scope: Stolc1997 Figure5C, conditional VS164 glucose time course with WT controls.
+    context: Total RNA,Northern hybridization with mature-tRNALeu probe;0/4/7/12/16/21/30 h,WT0/30 h. Transcript species distinguished by termini and intron status.
+    family_mapping: Full YHR062C/RPP1 depletion context,P38786/AAB96559.1 reference,PF01876 1-241. No isolated-domain or purified-protein experiment.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:4932
+    limitations: Steady-state intermediates,not directly measured processing rate constants. Growth slows and both RNaseP/MRP functions may change; no direct Rpp1 cleavage chemistry is inferred.
+    nodes:
+      - node_id: repress-rpp1
+        label: Repress GAL-driven RPP1 in glucose
+        node_type: PERTURBATION
+      - node_id: unprocessed-ends
+        label: End-unprocessed pre-tRNALeu3 species
+        node_type: STATE
+      - node_id: ends-processed-ivs
+        label: Ends-processed intron-containing tRNALeu3 intermediate
+        node_type: STATE
+    edges:
+      - edge_id: repression-increases-unprocessed-ends
+        subject: repress-rpp1
+        predicate: increases
+        object: unprocessed-ends
+        mechanism: Primary transcript and spliced but end-unprocessed species accumulate during repression. Grouped endpoint names retain the distinct bands,not a proven sequential reaction chain.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9353260
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC316654/
+            snippet: RNA analysis
+            explanation: Original Figure5C PT and5-prime/3-prime bands; unshown leader/intron-probe data are not claimed visually inspected.
+            cache_path: evidence/PF01876/stolc-1997-yeast.txt
+            cache_sha256: dc04c2148820b58c1336b437b5d67a25e99be059993c7b32eea209d78645b6ba
+      - edge_id: repression-decreases-processed-ivs
+        subject: repress-rpp1
+        predicate: decreases
+        object: ends-processed-ivs
+        mechanism: The end-processed but intron-containing intermediate declines as end-unprocessed species accumulate. This does not identify Rpp1 as a splicing enzyme.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9353260
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC316654/
+            snippet: RNA analysis
+            explanation: Original Figure5C IVS band and accompanying interpretation distinguish end processing from intron removal.
+            cache_path: evidence/PF01876/stolc-1997-yeast.txt
+            cache_sha256: dc04c2148820b58c1336b437b5d67a25e99be059993c7b32eea209d78645b6ba
+  - graph_id: yeast-ribonuclease-rna-abundance
+    title: RPP1 repression lowers mature RPR1 and NME1 RNA signals
+    scope: Stolc1997 Figure5D, conditional VS164 glucose time course.
+    context: Northern analysis through30 h after shift,with U6 internal RNA control; compare the mature RPR1 band separately from its persistent precursor.
+    family_mapping: YHR062C/P38786 Rpp1 whole-gene context,PF01876 1-241. RPR1 and NME1 are RNA components,not p30 protein paralogs.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:4932
+    limitations: Steady-state abundance is not a direct RNA stability or maturation-rate assay. This panel lacks a complete time-matched WT series; do not assign all change to direct protein protection from degradation.
+    nodes:
+      - node_id: repress-rpp1
+        label: Repress GAL-driven RPP1 in glucose
+        node_type: PERTURBATION
+      - node_id: mature-rpr1
+        label: Mature RPR1 Northern signal relative to U6
+        node_type: STATE
+      - node_id: nme1
+        label: NME1 Northern signal relative to U6
+        node_type: STATE
+    edges:
+      - edge_id: repression-decreases-rpr1
+        subject: repress-rpp1
+        predicate: decreases
+        object: mature-rpr1
+        mechanism: Mature RPR1 signal declines strongly by21 h while the precursor band persists. No measured RNA half-life or direct assembly-to-stability pathway is claimed.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9353260
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC316654/
+            snippet: RNA analysis
+            explanation: Original Figure5D separates mature/precursor RPR1 with U6 loading context.
+            cache_path: evidence/PF01876/stolc-1997-yeast.txt
+            cache_sha256: dc04c2148820b58c1336b437b5d67a25e99be059993c7b32eea209d78645b6ba
+      - edge_id: repression-decreases-nme1
+        subject: repress-rpp1
+        predicate: decreases
+        object: nme1
+        mechanism: NME1 also declines in the repression series. Shared Rpp1 membership in RNaseP/MRP does not make this a uniquely RNaseP-mediated effect.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9353260
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC316654/
+            snippet: RNA analysis
+            explanation: Original Figure5D NME1/U6 panels; direction is retained without inventing a decay mechanism.
+            cache_path: evidence/PF01876/stolc-1997-yeast.txt
+            cache_sha256: dc04c2148820b58c1336b437b5d67a25e99be059993c7b32eea209d78645b6ba
+  - graph_id: yeast-ribosomal-rna-processing
+    title: RPP1 repression shifts ribosomal-RNA precursor patterns
+    scope: Stolc1997 Figures5B/6, conditional VS164 with VS165 controls in Figure6.
+    context: Glucose-shift time course,ethidium-stained gels and Northern probes across ITS1/ITS2; interpretation of long and short5.8S forms kept separate from abnormal precursor bands.
+    family_mapping: Whole YHR062C/RPP1 intervention,P38786/AAB96559.1 reference,PF01876 1-241. RNaseP/MRP and secondary growth effects are not separated by the genotype.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:4932
+    limitations: Mature18S/25S remain broadly unchanged. Precursor boundary assignments partly rely on probe hybridization and inference; no claim that Rpp1 directly cleaves each proposed site.
+    nodes:
+      - node_id: repress-rpp1
+        label: Repress GAL-driven RPP1 in glucose
+        node_type: PERTURBATION
+      - node_id: long-short-ratio
+        label: Long-to-short5.8S RNA ratio
+        node_type: STATE
+      - node_id: abnormal-precursors
+        label: Abnormal24S and21S precursor signals
+        node_type: STATE
+    edges:
+      - edge_id: repression-increases-long-short-ratio
+        subject: repress-rpp1
+        predicate: increases
+        object: long-short-ratio
+        mechanism: The short5.8S form declines relative to the long form during repression. This is a processing-pattern change,not direct proof of a particular p30-catalyzed cut.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9353260
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC316654/
+            snippet: RNA analysis
+            explanation: Original Figure5B and associated Results retain the ratio endpoint.
+            cache_path: evidence/PF01876/stolc-1997-yeast.txt
+            cache_sha256: dc04c2148820b58c1336b437b5d67a25e99be059993c7b32eea209d78645b6ba
+      - edge_id: repression-increases-abnormal-precursors
+        subject: repress-rpp1
+        predicate: increases
+        object: abnormal-precursors
+        mechanism: Bands assigned to24S and21S species accumulate in the conditional strain. Their accumulation does not demonstrate the order or direct enzyme responsible for all inferred processing failures.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9353260
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC316654/
+            snippet: RNA analysis
+            explanation: Original Figure6C/D and probe table; mature18S/25S controls prevent a general loss-of-rRNA claim.
+            cache_path: evidence/PF01876/stolc-1997-yeast.txt
+            cache_sha256: dc04c2148820b58c1336b437b5d67a25e99be059993c7b32eea209d78645b6ba
+  - graph_id: yeast-immunoprecipitate-pretrna
+    title: Tagged-Rpp1 immunoprecipitates produce pre-tRNASer cleavage products
+    scope: Stolc1997 Figure4, tagged VS162B/D versus untagged VS162A-prime/C-prime controls.
+    context: Anti-myc9E10/IgG-agarose preparations,0.5 nM labeled pre-tRNASer,30 min37 C,10 mM HEPES8/400 mM NH4OAc/10 mM Mg acetate/5%glycerol. Figure4 points to IP600-washed material; assay Methods says IP150.
+    family_mapping: Full three-myc-YHR062C Rpp1,P38786/AAB96559.1 reference,PF01876 1-241; native RNA/protein co-precipitates,not purified Rpp1 alone.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:4932
+    limitations: Wash-salt discrepancy remains unresolved. The preparation contains catalytic RNA and associated proteins; it does not establish intrinsic Rpp1 nuclease activity or domain-only sufficiency.
+    nodes:
+      - node_id: tagged-ip
+        label: Use tagged-Rpp1 immunoprecipitate instead of untagged control beads
+        node_type: PERTURBATION
+      - node_id: cleavage-products
+        label: Mature-tRNA-sized and5-prime-leader products
+        node_type: STATE
+    edges:
+      - edge_id: tagged-ip-increases-cleavage
+        subject: tagged-ip
+        predicate: increases
+        object: cleavage-products
+        mechanism: Tagged preparations produce the expected two bands while untagged controls largely retain precursor. Activity belongs to the captured RNP preparation,not proven isolated p30 chemistry.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9353260
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC316654/
+            snippet: Immunoprecipitation
+            explanation: Original Figure4 lanes2-5,caption and assay Methods retain the IP150/IP600 ambiguity.
+            cache_path: evidence/PF01876/stolc-1997-yeast.txt
+            cache_sha256: dc04c2148820b58c1336b437b5d67a25e99be059993c7b32eea209d78645b6ba
+  - graph_id: yeast-immunoprecipitate-its141
+    title: Mixed Rpp1 immunoprecipitates increase ITS141 cleavage products
+    scope: Stolc1997 Figure7, tagged versus untagged yeast preparations.
+    context: IP150-washed anti-myc beads,3.2 nM ITS141,2 h37 C;20 mM Tris8/10 mM MgCl2/1 mM EDTA/50 mM KCl,RNasin and BSA. Printed BSA50 mg/ml remains unresolved.
+    family_mapping: Three-myc full Rpp1,P38786/AAB96559.1,PF01876 1-241. Both RPR1 and NME1 RNA associate with the captured preparation.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:4932
+    limitations: Background bands occur in controls; approximate A3-region product assignment does not uniquely identify RNaseP versus RNaseMRP. High-salt loss of this activity is data not shown,not a visually verified edge.
+    nodes:
+      - node_id: tagged-ip
+        label: Use tagged-Rpp1 mixed-RNP immunoprecipitate
+        node_type: PERTURBATION
+      - node_id: its141-products
+        label: ITS141 products near the expected A3-region size
+        node_type: STATE
+    edges:
+      - edge_id: tagged-ip-increases-its141-products
+        subject: tagged-ip
+        predicate: increases
+        object: its141-products
+        mechanism: Tagged preparations yield stronger principal ITS141 cleavage products than untagged controls. This supports preparation-associated processing,not a unique p30 reaction or exclusive RNaseP pathway.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9353260
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC316654/
+            snippet: Immunoprecipitation
+            explanation: Original Figure7B lanes1-4 and Methods; retain mixed RNAs,background products and uncertain printed BSA unit.
+            cache_path: evidence/PF01876/stolc-1997-yeast.txt
+            cache_sha256: dc04c2148820b58c1336b437b5d67a25e99be059993c7b32eea209d78645b6ba
+discussions:
+  - discussion_id: p30-molecular-attribution
+    prompt: Resolve how p30 contributes to catalytic RNA assembly and activity.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Pair effects,optimized buffers and mixed RNP preparations do not isolate a p30 molecular step. R107A has residual activity and unverified folding/assembly controls.
+    evidence:
+      - reference: PMID:20705647
+        supports: PARTIAL
+        evidence_source: primary_kinetics_and_supplement
+        explanation: ES-to-ES-star stabilization is a mechanistic proposal,not an observed transition.
+      - reference: PMID:26152732
+        supports: PARTIAL
+        evidence_source: primary_methods_tables_and_figures
+        explanation: Affinity fits,mutation kinetics and activity titration support assay effects,not a uniquely proven chaperone trajectory or cellular dimer.
+    notes: Obtain orthogonal folding,assembly,active-fraction and matched-buffer controls. Resolve Pho fold arithmetic,K196A table cell and kinetic conditions. Inspect missing SupplementS3 and2019/2026 structural-functional follow-ups.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+  - discussion_id: p30-coverage-and-protocol-gaps
+    prompt: Extend member coverage and resolve assay provenance before generalization.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Five reference proteins and selected experiments do not establish a conserved mechanism across4590 frozen family members.
+    evidence:
+      - reference: PMID:9353260
+        supports: PARTIAL
+        evidence_source: primary_strain_methods_and_original_figures
+        explanation: Whole-gene yeast phenotypes and mixed immunoprecipitates cannot uniquely separate RNaseP,RNaseMRP and secondary growth effects.
+      - reference: PMID:22298511
+        supports: PARTIAL
+        evidence_source: primary_fidelity_methods_and_tables
+        explanation: Composite protocols,nominal concentrations and model-derived quantities require careful comparison.
+    notes: See evidence/PF01876/rpp30-gap-ledger.txt. Recover exact tags,strain/clone sequences,IP150/IP600 and BSA units,2012 mixing/reference discrepancies,and missing supplements. Assess human,plant,fly and additional archaeal contexts with exact mapping. Keep IN_PROGRESS and partial same-agent review.
+    posed_by: Codex
+    posed_date: '2026-10-11'

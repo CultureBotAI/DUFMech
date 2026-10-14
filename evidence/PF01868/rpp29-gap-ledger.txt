@@ -1,0 +1,52 @@
+PF01868 causal coverage and conflicting-source ledger,2026-10-11
+
+Inspected scope: three archaeal references,2010 kinetic controls and complete
+supplement text,2011 binding/activity truncations,2012 fidelity protocols,
+2009 expression methods and supplement alignment identities, deposited2KI7
+and1OQK construct sequences. Original2010 Figure7/S4/S5/S6 and primer table,
+2011 Figures4/6/7,2012 Figures1/2 were visually inspected. This is not a
+complete family or literature review, independent review, or raw-data refit.
+Ignored/hidden-inclusive search of curation,evidence,history/records,
+reviews/structured,.agents,.claude found no existing PF01868/Rpp29 overlay
+or retained graph evidence before this addition.
+
+1. Resolve the Mth TableS1 terminal-W versus reference-terminal-P conflict
+with deposited clone sequence or author clarification. Do not assert actual
+P93W mutant production solely from the printed primer; do not assert exact
+canonical WT either. PDB1OQK has additional N-terminal sequence and is not
+the 2010 untagged biochemical batch. Preserve these separate identities.
+2. Pfu delta17/24/31 remove residues outside PF01868; the retained core is
+not the entire protein interaction surface. RNA-dependent rescue is a
+proposed explanation of activity, not a directly observed assembly trajectory.
+Rpp21 affinity-tag removal/residual residues and exact 2011 batch sequences
+remain to be verified. Small delta24 NMR shifts and residual activity are
+positive observations, not reasons to force zero binding/activity.
+3. Salt/dose/time changes and pH normalization remain in the intervention
+nodes/context. Matched-condition protein titrations would discriminate
+individual partner contributions. Fitted KM(STO), fraction correct and kobs
+are different endpoints. Improved fidelity need not mean faster cleavage.
+4. Figure4's2011 caption pairs disagree with image panel labels. Use the
+actual image identities; delta24 ITC is text-only, not an inspected trace.
+2010 S6 fit shows slope1.1 at20 mM Mg; published correction uses2.5 for
+the0.4pH shift in30 mM assays. No new error correction is imposed.
+5. Review 2011 Mja deltaU rescue separately after protocol ambiguities;
+2009 footprinting and interface variants,2006 Pfu reconstitution,
+2011 minimal/model substrates, other archaeal members and five-RPP/L7Ae
+systems are follow-ups, not missing results proven absent.
+6. Eukaryotic RNaseP/MRP remains uncovered: human hPop4 PMID10352175,
+Rpp29/H3.3 PMID26842893 and PMID29921582 are primary leads. The latter
+two were located via search/abstract, not fully curated. Exact human POP4,
+not the unrelated PRR29 gene, must be mapped before transferring effects.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4814222/
+https://pmc.ncbi.nlm.nih.gov/articles/PMC6093239/
+New human MRP structures alone cannot establish causal edges or family-wide
+sufficiency. Searches were bounded by PF01868/Rpp29/RNase_P-MRP_p29,
+the named archaeal members, primary paper titles and construct references.
+
+Access: direct PMC2010 supplement returned HTML, EuropePMC supplementary
+archive returned HTTP500, guessed author PDF path404. The author's own
+publication index supplied a working ZIP; integrity and contained PDF were
+verified. These retrieval failures are resolved for2010, not evidence absence.
+https://research.cbc.osu.edu/gopalan.5/publications/
+The local skill and repo reads succeeded; network/PDF-cache escalation is
+separate from filesystem readability. No full-text publication is committed.

@@ -1,0 +1,55 @@
+pfam_id: PF01954
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01954
+discussions:
+  - discussion_id: af2212-member-specific-causal-evidence
+    prompt: Obtain a mapped PF01954 member-specific perturbation or biochemical assay before adding causal edges.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: The inspected evidence supports a predicted antitoxin role, not observed AF2212-mediated toxin neutralization, transcriptional regulation or RNA protection. Genomic adjacency, an AbrB-related alignment and an NMR structure do not establish a directed biological effect.
+    evidence:
+      - reference: PMID:19493340
+        supports: PARTIAL
+        evidence_source: primary_comparative_study
+        explanation: Makarova2009 COG2880 Results, Methods, Table2 and original Figure4C were inspected. The alignment and adjacent PIN-domain genes motivate a hypothesis, not an AF2212 functional assay. Publisher DOI10.1186/1745-6150-4-19 differs from InterPro PUB00056164's4-29; the frozen description is preserved.
+      - reference: PMID:15718296
+        supports: PARTIAL
+        evidence_source: selected_primary_full_text
+        explanation: Pandey2005 Methods and selected Results describe a computational genome survey. Its cited E. coli experiments are not AF2212 experiments; TableS2 locus rows remain uninspected. UniProt O28071 classifies this reference as possible function.
+    posed_by: Codex
+    posed_date: '2026-10-12'
+    notes: No causal edge is supported by the inspected PF01954-specific material, not an exhaustive absence claim. All20 returned reviewed-UniProt FUNCTION comments remain qualified predictions. Additional members, original supplementary mappings and later primary studies remain open. Minimal evidence and search limits are retained under evidence/PF01954; no dummy graph is added.
+  - discussion_id: af2212-construct-and-domain-scope
+    prompt: Reconcile AF2212 profile intervals and deposition metadata before domain-specific causal interpretation.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: O28071 sequence1 is61aa from Archaeoglobus fulgidus VC-16, taxon224325. Current InterPro maps PF01954 to1-34, whereas RCSB's Pfam34.0 annotation maps1-57. Neither interval is an experimentally established active domain.
+    evidence:
+      - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01954/protein/uniprot/O28071/
+        supports: SUPPORT
+        evidence_source: database
+        explanation: The current member-specific match is1-34 inclusive. UniProt entry109 identifies AF_2212/vapB21 and describes a possible antitoxin with potential VapC21 partner; reviewed annotation is not experimental characterization.
+      - reference: doi:10.2210/pdb2nwt/pdb
+        supports: SUPPORT
+        evidence_source: structural_deposition
+        explanation: 2NWT entity1 is exactly O28071 residues1-61 plus LEHHHHHH at62-69, with chainsA/B. Twenty submitted NMR conformers are not biological replicates. The deposition's XL-10 gene-source strain field is not reconciled with the Archaeoglobus reference strain. The structure does not test toxin neutralization or a requirement for dimerization.
+      - reference: https://bmrb.io/data_library/summary/index.php?bmrbId=7362
+        supports: PARTIAL
+        evidence_source: structural_deposition
+        explanation: BMRB7362 lists5mMNaCl in the sample but100mM ionic strength in conditions; PDB reports100mMNaCl. These discrepancies remain unresolved. pH5.5 and298K describe an NMR sample, not a functional optimum.
+    posed_by: Codex
+    posed_date: '2026-10-12'
+    notes: Keep the native61-residue protein, the69-residue tagged construct, versioned profile intervals and source/expression-host identities separate. A residue-level antitoxin mechanism is not demonstrated.
+  - discussion_id: af2212-exclude-cross-family-ta-transfers
+    prompt: Keep the2025 Thermococcus cassette experiments separate from PF01954 until an exact tested-member mapping supports transfer.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Li/Xu2025 SupplementFigureS2 tests heterologous antitoxins PYCH_18830, PYCH_17730, PF0775 andPF0838 in T. kodakarensis TS559. The host species does not identify the experimental antitoxin as native TK0335 or AF2212.
+    evidence:
+      - reference: PMID:40424603
+        supports: SUPPORT
+        evidence_source: primary_supplement_and_database_mapping
+        explanation: Inspected FigureS2/caption, TableS1 entries and the original PDFpage3 image, then resolved the four loci through UniProt. F8AID5 maps PF02697; F8AHX5 andQ8U2Q7 map PF26688; Q8U2J6 maps PF10047. None includes PF01954 in the inspected annotations. The PF0775 panelB pressure comparison is NS. No PF01954 growth or neutralization edge is transferred.
+    posed_by: Codex
+    posed_date: '2026-10-12'
+    notes: Main-text access returned403; the accessible author supplement does not establish complete paper coverage. Follow these experiments in their correctly mapped families with full controls and construct checks. Generic VapB names, STRING associations and vendor protein listings are not substitute evidence.

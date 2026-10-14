@@ -1,0 +1,29 @@
+PF01875 Memo-like identity; inspected 2026-10-11, research start18:39:00Z.
+Frozen October10: IPR002737, EX_DUF, UNSCORED;6407 proteins,6527 matches,
+5074 proteomes,12387 taxa,85 architectures. Do not overwrite source metadata.
+Snapshot SHA256 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+
+Human Q9Y316 sequence version1,297 aa, equals NP_057039.1 translated from
+NM_015955.5. Pfam maps8-291; H49,H81,H131,D189,H192,C244 are inside.
+SHA256 uppercase unwrapped sequence without newline:
+1a91bf6ee41b1f925b5092fcc98dcd6cef694ea4e78c72b8b8698f6fa4eed1c0.
+https://rest.uniprot.org/uniprotkb/search?query=(gene_exact:MEMO1)%20AND%20(organism_id:9606)&format=json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01875/protein/uniprot/Q9Y316/
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NM_015955.5&rettype=gb&retmode=text
+
+2024 structure7KQ8 polymer entity1 has294 residues, exactly canonical4-297;
+SIFTS maps entity1 position1 to reference4. This is a deposited-sequence
+deletion of MSN, not just absent coordinates. Native residue labels are used.
+https://data.rcsb.org/rest/v1/core/polymer_entity/7KQ8/1
+2024 protein: codon-optimized synthetic DNA,pTYB12 chitin/intein fusion,
+BL21(DE3),self-cleavage and SEC. Main Methods do not independently establish
+every assay batch's exact N terminus; retain deposited4-297 mapping explicitly.
+2022 protein: pET28a,BL21(DE3),anion exchange,His affinity and SEC; identity
+confirmed by Western blot. No tag cleavage or insert sequence is described
+in the inspected supplement. Do not equate this preparation with2024 protein.
+2014: human cDNA,pOPINF,Ni-NTA,3C cleavage and SEC; exact residual tag and
+assay-batch insert were not independently verified. H192 numbering matches
+the human reference, not proof of equivalent folding in every assay.
+2022/2023 siRNA and2024 CRISPR experiments perturb endogenous whole MEMO1
+in human MDA-MB-231 cells, not an isolated domain. Do not conflate isoforms,
+the297-aa reference with shorter search hits,or other family members.

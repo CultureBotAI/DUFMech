@@ -1,0 +1,218 @@
+pfam_id: PF01168
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01168
+causal_graphs:
+  - graph_id: geobacillus-alr-racemization-and-k39a
+    title: Intact alanine racemase interconverts alanine enantiomers
+    scope: Purified B. stearothermophilus (now Geobacillus) alanine racemase and K39A in the 1998 study. The two substrate directions are separate assays, not a tracked molecular cycle.
+    context: 1 ml with 100 umol CHES pH 9 and 30 umol D- or L-alanine, 37 C; stop at 100 C for 10 min. L-product is measured using alanine dehydrogenase/NAD+, D-product using DAAT/lactate dehydrogenase/NADH. Figure 3A varies pH in specified buffers. Exact reaction duration and enzyme amount per comparison remain unresolved.
+    family_mapping: P10724/ALR_GEOSE, alr/dal, 388-aa reference sequence version 2, matches InterPro and 1L6G's canonical sequence. PF01168 spans 12-229 and includes K39, but excludes Y265 in the other domain. The 1998 mutagenic primer matches residues 34-44 with K39A; complete clones and donor strain are not independently resolved.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:1422
+    limitations: These are intact-enzyme product assays. Neither the isolated N-terminal domain's sufficiency nor every proton-transfer step is observed. K39A's activity loss does not by itself prove one unique chemical role; its reported absorption similarity is not a complete folding control. Older sequence conflicts and unspecified detection limits/replicates remain explicit. Coupling enzymes measure quenched products, not live-cell peptidoglycan flux.
+    nodes:
+      - node_id: holo-alr-with-d-alanine
+        label: Intact holo-Alr with D-alanine
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P10724
+      - node_id: l-alanine-product
+        label: L-alanine detected by the product assay
+        node_type: STATE
+      - node_id: holo-alr-with-l-alanine
+        label: Intact holo-Alr with L-alanine
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P10724
+      - node_id: d-alanine-product
+        label: D-alanine detected by the product assay
+        node_type: STATE
+      - node_id: k39a-racemase-substitution
+        label: K39A instead of WT without exogenous alkylamine
+        node_type: PERTURBATION
+      - node_id: detectable-racemase-activity
+        label: Detectable alanine-racemization activity
+        node_type: ACTIVITY
+    edges:
+      - edge_id: alr-d-substrate-produces-l-alanine
+        subject: holo-alr-with-d-alanine
+        predicate: produces
+        object: l-alanine-product
+        mechanism: Quenched D-alanine reactions yield L-alanine measured by the stereospecific reporter assay. The assay establishes net conversion, not the proposed sequence of catalytic intermediates.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9832621
+            source_url: https://www.jstage.jst.go.jp/article/biochemistry1922/124/6/124_6_1163/_pdf
+            snippet: racemase reaction
+            explanation: Printed page 1165 Enzyme Assay and visually inspected Figure 3A support the D-to-L direction.
+            cache_path: evidence/PF01168/kurokawa-1998-alr.txt
+            cache_sha256: e9e2d711fb79aefad7bbfb0887c4ccfd4265728fb77db7c3a650aacabcdb477f
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P10724/entry/pfam/PF01168/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P10724/entry/pfam/PF01168/
+            snippet: 'P10724 Pfam:PF01168 interval: 12-229, inclusive'
+            explanation: Whole-protein identity and profile interval, with current sequence and historical clone qualifications retained.
+            cache_path: evidence/PF01168/Alr-identity.txt
+            cache_sha256: 6a24bab0fadaf1eb4d06d6b960d57ba87d2caec93455d04efb747756ab73e7aa
+      - edge_id: alr-l-substrate-produces-d-alanine
+        subject: holo-alr-with-l-alanine
+        predicate: produces
+        object: d-alanine-product
+        mechanism: The separate L-alanine reaction yields D-alanine detected by DAAT and lactate dehydrogenase after quenching. No cellular consequence or automatic family-wide transfer is attached.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9832621
+            source_url: https://www.jstage.jst.go.jp/article/biochemistry1922/124/6/124_6_1163/_pdf
+            snippet: racemase reaction
+            explanation: Page 1165's separate product assay and Figure 3A's L-to-D curve; not a continuation of the other reaction vessel.
+            cache_path: evidence/PF01168/kurokawa-1998-alr.txt
+            cache_sha256: e9e2d711fb79aefad7bbfb0887c4ccfd4265728fb77db7c3a650aacabcdb477f
+      - edge_id: k39a-decreases-detectable-racemization
+        subject: k39a-racemase-substitution
+        predicate: decreases
+        object: detectable-racemase-activity
+        mechanism: The purified K39A preparation lacks detected racemase activity in the reported comparison. This is a qualitative loss under the tested conditions, not a numerical zero under every possible assay.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9832621
+            source_url: https://www.jstage.jst.go.jp/article/biochemistry1922/124/6/124_6_1163/_pdf
+            snippet: no racemase activity
+            explanation: Page 1166, Role of the Active-Site Lysyl Residue, with mutant preparation and assay Methods on pages 1164-1165.
+            cache_path: evidence/PF01168/kurokawa-1998-alr.txt
+            cache_sha256: e9e2d711fb79aefad7bbfb0887c4ccfd4265728fb77db7c3a650aacabcdb477f
+  - graph_id: geobacillus-alr-alanine-preincubation-loss
+    title: D-alanine preincubation at pH 7 lowers retained Alr activity
+    scope: WT holoenzyme in Table I's 1998 inactivation experiment, distinct from the pH-9 racemization assay and the pH-7.2 spectral time course.
+    context: 10 ug holoenzyme, 0.5 umol D-alanine, 10 umol potassium phosphate pH 7, 0.01% 2-mercaptoethanol, 100 ul; 25 C for 12 h. Remaining D-to-L racemase activity is assayed afterward.
+    family_mapping: Intact P10724-associated recombinant Alr; PF01168 12-229 maps within the whole enzyme. This experiment does not selectively perturb or isolate that domain.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:1422
+    limitations: Table I reports activity loss, while separate spectra support a PLP/PMP interpretation. This is not an observed intracellular regulatory switch or proof that physiological D-alanine always inhibits Alr. No independently reconstructed raw kinetics or exact detection threshold is available.
+    nodes:
+      - node_id: d-alanine-preincubation-ph7
+        label: Preincubate WT holo-Alr with D-alanine at pH 7 for 12 h
+        node_type: PERTURBATION
+      - node_id: retained-d-to-l-racemase
+        label: Retained D-to-L racemase activity
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P10724
+    edges:
+      - edge_id: d-alanine-preincubation-decreases-retained-activity
+        subject: d-alanine-preincubation-ph7
+        predicate: decreases
+        object: retained-d-to-l-racemase
+        mechanism: D-alanine preincubation lowers the subsequent activity readout. The coupled assay endpoint is retained separately from the proposed transamination microsteps.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9832621
+            source_url: https://www.jstage.jst.go.jp/article/biochemistry1922/124/6/124_6_1163/_pdf
+            snippet: inactivated
+            explanation: Visually inspected Table I's D-alanine row and footnote a; Figure 2 is supporting spectral evidence under different pH/dose conditions.
+            cache_path: evidence/PF01168/kurokawa-1998-alr.txt
+            cache_sha256: e9e2d711fb79aefad7bbfb0887c4ccfd4265728fb77db7c3a650aacabcdb477f
+  - graph_id: geobacillus-alr-pmp-pyruvate-reactivation
+    title: Joint PMP and pyruvate treatment restores racemase activity
+    scope: WT apoenzyme in Table I's distinct reactivation experiment. This is not a time-resolved reversal in the same molecules used for D-alanine inactivation.
+    context: 50 ug apoenzyme, 1 umol PMP, 2.5 umol pyruvate, 10 umol K2HPO4-KOH pH 10 and 0.01% 2-mercaptoethanol in 100 ul; 25 C for 12 h. Recovered activity is measured with D-alanine.
+    family_mapping: Full P10724-associated Alr, containing PF01168 at 12-229 plus its C-terminal region. Apoenzyme preparation is by hydroxylamine treatment/dialysis, not a gene deletion or isolated-domain preparation.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:1422
+    limitations: PMP, pyruvate, enzyme and alkaline conditions are a joint intervention; none is represented as independently sufficient. Activity recovery and spectral changes do not directly identify each proton-transfer step. The separate mutant methylamine experiment has different conditions.
+    nodes:
+      - node_id: apo-alr-pmp-pyruvate-treatment
+        label: Incubate WT apo-Alr jointly with PMP and pyruvate at pH 10
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P10724
+      - node_id: recovered-d-to-l-racemase
+        label: Recovered D-to-L racemase activity
+        node_type: ACTIVITY
+    edges:
+      - edge_id: pmp-pyruvate-treatment-increases-racemase-activity
+        subject: apo-alr-pmp-pyruvate-treatment
+        predicate: increases
+        object: recovered-d-to-l-racemase
+        mechanism: The joint treatment restores detectable racemization to the apoenzyme preparation. It does not establish that pyruvate alone repairs every inactivated form or that a physiological feedback cycle has been tracked.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9832621
+            source_url: https://www.jstage.jst.go.jp/article/biochemistry1922/124/6/124_6_1163/_pdf
+            snippet: recovered
+            explanation: Table I, pyruvate row and footnote b, with apoenzyme Methods; separate Figure 4A supports the cofactor-state interpretation.
+            cache_path: evidence/PF01168/kurokawa-1998-alr.txt
+            cache_sha256: e9e2d711fb79aefad7bbfb0887c4ccfd4265728fb77db7c3a650aacabcdb477f
+  - graph_id: geobacillus-alr-k39a-tritium-rescue
+    title: K39A reduces tritium release and methylamine increases it
+    scope: WT and K39A apo-Alr in the 1998 Figure 5 labeled-PMP experiment. The adopted rescue is tritium release, not a quantified return of normal alanine-racemization turnover.
+    context: 100 ul, 10 umol CHES pH 9, 8.7 nmol enzyme, 8 nmol randomly labeled [4'-3H]PMP and 8.5 umol pyruvate, 30 C. Add 50 umol methylamine hydrochloride for the rescue arm, giving 0.5 M. Acid-quenched aliquots are dried and remaining radioactivity measured; volatile release is calculated. Figure 5 displays up to 8 h.
+    family_mapping: K39 is within P10724's PF01168 12-229 interval; the mutagenic primer locally matches K39A. Full-length enzyme is expressed through pAR310 in JM109. Exact complete clones and affinity-free preparation details remain scoped to the inspected protocol.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:1422
+    limitations: Tritium release is not directly equated with product concentration or racemase turnover. WT and methylamine-rescued mutant reach different plateaus; an enzyme-free methylamine control is not displayed in Figure 5. Formaldehyde in the proposed recycling scheme was not identified. Figure 4's methylamine caption implies 0.1 M while its prose says 0.5 M; Figure 5's separate Methods supplies the adopted 0.5 M. The opposite PLP-to-PMP mutant reaction was not rescued under the tested conditions. Replication and complete folding controls remain limited.
+    nodes:
+      - node_id: k39a-labeled-pmp-assay
+        label: K39A instead of WT in the labeled-PMP/pyruvate assay
+        node_type: PERTURBATION
+      - node_id: methylamine-added-to-k39a
+        label: Add 0.5 M methylamine to K39A with PMP and pyruvate
+        node_type: PERTURBATION
+      - node_id: volatile-tritium-release
+        label: Volatile tritium release from labeled PMP
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P10724
+    edges:
+      - edge_id: k39a-decreases-tritium-release
+        subject: k39a-labeled-pmp-assay
+        predicate: decreases
+        object: volatile-tritium-release
+        mechanism: The K39A trace remains near baseline while WT releases label. The assay supports a residue-dependent effect without directly observing the proposed hydrogen-transfer intermediates.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9832621
+            source_url: https://www.jstage.jst.go.jp/article/biochemistry1922/124/6/124_6_1163/_pdf
+            snippet: no tritium was released
+            explanation: Figure 5 WT/K39A comparison, page 1165 Methods and page 1168 Results; the result is bounded to the stated preparation and readout.
+            cache_path: evidence/PF01168/kurokawa-1998-alr.txt
+            cache_sha256: e9e2d711fb79aefad7bbfb0887c4ccfd4265728fb77db7c3a650aacabcdb477f
+      - edge_id: methylamine-increases-k39a-tritium-release
+        subject: methylamine-added-to-k39a
+        predicate: increases
+        object: volatile-tritium-release
+        mechanism: Methylamine increases label release from the otherwise weak K39A preparation. Its higher final release than WT is not interpreted as greater native catalytic activity or proof of the unmeasured formaldehyde pathway.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9832621
+            source_url: https://www.jstage.jst.go.jp/article/biochemistry1922/124/6/124_6_1163/_pdf
+            snippet: tritium was released
+            explanation: Figure 5 K39A plus/minus methylamine and the independently specified 100-ul assay conditions; not the conflicting Figure 4 concentration.
+            cache_path: evidence/PF01168/kurokawa-1998-alr.txt
+            cache_sha256: e9e2d711fb79aefad7bbfb0887c4ccfd4265728fb77db7c3a650aacabcdb477f
+discussions:
+  - discussion_id: alr-residue-chemistry-and-family-coverage
+    prompt: Extend alanine-racemase contexts while resolving clone, assay and chemical-rescue limits.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Seven experimental effects concern one intact enzyme and K39A. They do not establish isolated PF01168 activity, all family substrates, physiological regulation or a fully observed catalytic trajectory.
+    evidence:
+      - reference: PMID:9832621
+        supports: PARTIAL
+        evidence_source: inspected_primary_full_text
+        explanation: Main Methods, Results, Table I and Figures 2-5 support the scoped assays; atomic schemes remain interpretations.
+    notes: Establish complete historical clones and per-assay doses, times, detection limits and replication. Resolve the Figure 4 0.1/0.5 M methylamine discrepancy without changing Figure 5's independent conditions. The 1999 chemical-rescue paper PMID:9933615 was accessible only at abstract level in attempted publisher routes; its indexed erratum concerns the author's name. Tyr265, other-substrate and other-member studies need separate review and mapping. Structural similarity to YggS/PLPBP alone is not evidence of racemase activity or of current PF01168 membership. Partial same-agent scientific review; remain IN_PROGRESS.
+    posed_by: Codex
+    posed_date: '2026-10-11'

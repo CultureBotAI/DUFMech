@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01697
+  path: curation/families/PF01697.yaml
+session:
+  id: 2026-10-11T135353Z-codex-ae67e3
+  timestamp: '2026-10-11T13:53:53Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped GALT-1 biochemical, developmental and glycan effects
+  details: Created eight graphs with fifteen observed edges, ten direct preparation-level
+    biochemical effects and five indirect genotype effects. Verified O16374/NP_504545.2
+    reference and PF01697 189-394 mapping. Retained primary evidence and explicit
+    crude-extract, unit, joint-rescue, genotype and selected-glycan boundaries. Native
+    overlay validation passes; formal projection review and broader family coverage
+    remain pending. Imported snapshot identity is unchanged.
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
+  - https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1000717

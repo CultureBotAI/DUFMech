@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF06568
+  path: data/families/PF06568.yaml
+session:
+  id: 2026-10-11T044840Z-codex-4917b0
+  timestamp: '2026-10-11T04:48:40Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped CcaF1 causal graph scientific review
+  details: Reviewed CcsR1 and UpsM half-life edges against primary full-text methods
+    and Figure 8 text/caption, with reference Q3J4N6 and DUF1127 domain mapping. The
+    plotted figure was not visually inspected. Saved partial scientific self-review
+    20261011T045006Z-pf06568-ccaf1-causal-graph with the context-coverage finding
+    open. Status remains IN_PROGRESS; intrinsic nuclease activity, family-wide completion
+    and publication are not claimed.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T045006Z-pf06568-ccaf1-causal-graph/review.yaml

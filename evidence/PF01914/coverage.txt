@@ -1,0 +1,38 @@
+PF01914 discovery and remaining coverage; 2026-10-12 UTC
+Former UPF0056, not DUF78/PF01918. Ignored/hidden-inclusive local
+searches for PF01914 and UPF0056/P0AEY1/P25743/SnatA across curation,
+evidence,history,reviews,reports (excluding generated inventory) found
+no prior authoritative family overlay or evidence before this addition.
+Public searches covered PF01914,UPF0056,MarC,YchE,SnatA and selected
+functional leads. Reviewed UniProt family inventory returns45 entries;
+that inventory and six selected primary papers are not exhaustive
+inspection of all15684 frozen proteins or every published experiment.
+
+Selected graphs: exact KS-1 SnatA heterologous construct/uptake/
+competition/growth; K-12 MarC selected-clone threonine uptake and growth;
+YchE genomic-insert growth; MarC antibiotic-exposure RNA; qualified
+EcNR1/EcHW24 solvent phenotypes; TOP10 donor-allele MIC; MG1655 solvent
+growth. All are OBSERVED/EXPERIMENTAL, INDIRECT, PHENOTYPIC whole-cell
+or clone comparisons, not a purified causal transport cycle.
+No observed binding-site residues, family-wide substrate assignment,
+H+:substrate stoichiometry, dimer necessity, direct efflux, transcription
+factor function, or direct promoter induction is supported.
+Other archaeal PH0214/PH0760/PAB0863/PAB2220/MJ0972/MJ1677, YhgN,
+B. subtilis YvbG and other reviewed members remain uncurated.
+Mammalian MTARC names and unrelated same-name proteins are excluded.
+
+Priority follow-ups: independently reconstruct MarC variants, including
+B2059 passenger mutations; resolve 2025 glucose units; establish YchE
+flux separately from growth rescue; resolve 2011 MutS background;
+recover 2018 original enrichment boundaries and raw MIC uncertainty;
+compare antibiotic effects under matched allele/host/vector conditions.
+Extend SnatA weak-competition and native archaeal context only with
+appropriate scope. Purified transport/reconstitution and independent
+clone/protein verification are needed for direct molecular edges.
+2011 Figure9 and many supplements/raw datasets remain unassessed.
+Q8J305 retirement and unsuccessful direct InterPro requests are access/
+record-lifecycle issues, not biological absence. ENA ignored the requested
+CP009072 region and supplied the full chromosome, parsed only after
+download completion; an earlier incomplete parse is not evidence loss.
+Partial same-agent scientific self-review is required; retain
+IN_PROGRESS and explicit OPEN discussions, not full-family REVIEWED.

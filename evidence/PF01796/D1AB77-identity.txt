@@ -1,0 +1,18 @@
+Identity facts inspected 2026-10-11; not causal evidence.
+https://rest.uniprot.org/uniprotkb/search?query=gene%3ATcur_3482&format=json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/D1AB77/entry/pfam/PF01796/
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/D1AB77/entry/pfam/PF12172/
+https://data.rcsb.org/rest/v1/core/polymer_entity/6OK1/2
+UniProtKB: D1AB77; chsH2/Tcur_3482; translation ACY99020.1.
+T. curvata DSM 43183; NCBITaxon:471852.
+Entry version 67; sequence version 1; 319 residues.
+Sequence MD5: 5C49F633858F8A5E33B6C0BF98AAA33D
+entry accession: PF01796
+Current interval: 237-298; integrated IPR002878.
+entry accession: PF12172
+Current interval: 199-234; integrated IPR022002.
+6OK1 entity 2 contains 133 residues: initiator M plus reference 188-319.
+SIFTS alignment: entity position 2, reference position 188, length 132;
+no sequence conflicts. Both Pfam intervals fall inside this construct.
+The same addition experiment is associated with both mapped families, not
+independent replication or proof that either domain works alone.

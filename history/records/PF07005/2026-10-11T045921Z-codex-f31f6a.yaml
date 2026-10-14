@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF07005
+  path: curation/families/PF07005.yaml
+session:
+  id: 2026-10-11T045921Z-codex-f31f6a
+  timestamp: '2026-10-11T04:59:21Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate intact ReDtnK activity with its N-terminal domain mapping
+  details: Retain the Q0K4F6 D-threonate kinase experiment, primary kinetic table
+    and assay methods. Map PF07005 within the intact enzyme and distinguish it from
+    PF17042. Do not imply isolated-domain sufficiency or independent replication of
+    the same experiment in the sibling domain record.
+  sections:
+  - causal_graphs

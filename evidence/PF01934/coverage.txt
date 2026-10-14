@@ -1,0 +1,47 @@
+PF01934 research and coverage ledger, 2026-10-12 UTC
+
+Ignored/hidden-inclusive search of curation, evidence, history and structured
+reviews found no existing PF01934 overlay; PF01909 retains a MntA follow-up.
+Read the frozen record, current InterPro family/individual maps, UniProt
+reviewed members and selected unreviewed entries, primary references and
+RefSeq sequences. Search terms included PF01934,DUF86,HepT,MntA,SO_3166,
+SO_1440,FhepTA,HEPN-MNT and the exact2020/2026 DOIs. Earlier DUF91
+was a discarded search guess, never adopted as this family's alias.
+
+Curated branches: SO_3166 host-specific induced CFU effects and mutations,
+purified ompA cleavage, partner-dependent AMP transfer and modified
+preparation comparison; Thermococcus proteins tested heterologously;
+the separately mapped MR-1 fusion, its fragments, modification mutants,
+linker changes and redox-conditioned biochemical/cellular effects.
+
+Remaining primary follow-ups, not negative results:
+- Songailiene2020, PMID:33290744,doi:10.1016/j.molcel.2020.11.034,
+  https://pubmed.ncbi.nlm.nih.gov/33290744/ . Abstract and UniProt metadata
+  support a tRNA/diAMPylation lead, not completed edge curation. Primary
+  publisher access returned403; DESY repository PDF returned challenge HTML.
+  RCSB7AE9 confirms a mutated structure, not the complete functional assay.
+  Resolve the revised A0A0B0QJR1 N terminus and primary figures/controls.
+- W3-18-1 WP_041408189.1: full RefSeq retrieved, but current UniProt/Pfam
+  mapping unresolved and source Y136 versus reference Y106 conflicts.
+  Do not silently combine with the verified MR-1 fusion or SO_3166.
+-2015 operon promoter, plasmid maintenance, swimming and other mutations;
+  2018 MntA helix variants;2020 broader homolog screen need scoped graphs.
+-2026 protein stability/protease assays, native degradation products, other
+  truncations and mutant activity mediation need further assessment. Reviewed
+  diagrams do not establish physiological activation or ATP sensing.
+-Bacillus YutE/O32126, other archaeal members, unpublished structural
+  branches and the2026 DtCmr-associated HEPN study require family mapping
+  and primary assay review. Sacsin/Cas13/Csm6 structural superfamily membership
+  alone cannot transfer their functions into PF01934.
+
+Jin2024 PMID:39582057,doi:10.1038/s41467-024-54551-0 was excluded:
+lpg2920/Q5ZRG2 maps PF08780, not PF01934. Its metal-dependent RNA
+assays (many using Q64A) remain evidence for that separate family.
+
+Access accounting:2015/2018/2020 and2026 main HTML and selected figures
+were readable. The2026 PMC supplement returned challenge HTML, but its
+normal publisher link supplied the DOCX and raw-data ZIP. The first EBI
+EMBL sequence request returned HTML, not sequence; structured NCBI XML
+subsequently resolved the fusion reference. No challenge response is evidence
+of absence. Raw replicate data, clone resequencing and all7949 frozen
+proteins remain outside this partial pass. Keep IN_PROGRESS and open findings.

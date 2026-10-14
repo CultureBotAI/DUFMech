@@ -1,0 +1,34 @@
+PF01876 / RNase_P_p30 / InterPro IPR002738, checked 2026-10-11.
+Frozen EX_DUF family:4590 proteins; no whole-family function is inferred.
+UniProt public PF01876 search, InterPro protein-specific locations and NCBI
+versioned protein FASTA were inspected and compared as exact sequences.
+https://rest.uniprot.org/uniprotkb/search?query=(xref:pfam-PF01876)&format=json&size=30
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01876/protein/uniprot/P38786/
+Corresponding location requests used O26784,Q58539,Q8TZS0,O59543.
+NCBI efetch protein IDs below, rettype=fasta,retmode=text.
+
+P38786 / YHR062C / yeast RPP1,293 aa,sequence version1,PF01876 1-241.
+Exactly equals NP_011929.1 and paper-associated AAB96559.1 (U95757).
+SHA256 uppercase unwrapped sequence without newline:
+75c1bd4a7f08032e53b21d6b2bdc4c1745215c89702365986ffa0f80cfdd9312
+Current reference taxon559292 is S288c; the1997 assays use JN161-derived
+VS strains,not independently sequenced S288c clones. Use species4932 scope.
+RPP1 is not ribosomal RPP1A/RPP1B. Paper Figure1 sequence and tagged/full
+gene constructs are consistent; the65%-coding deletion is not domain-only.
+Three myc epitopes follow the initiating methionine in the rescue/IP construct.
+
+O26784 / MTH688,245 aa,v1,taxon187420,PF01876 10-232;
+exact AAB85193.1;SHA256 9af2c7c01bf1a27b8ef6ccec6c504fb524b7d800f5a408101c95321090c417da.
+Q58539 / MJ1139,232 aa,v1,taxon243232,PF01876 7-212;
+exact WP_010870650.1;SHA256 3f07771a2e31f0c5db90f7d2e28f3efd001fbe9538f0f1f016f3789fc4f7053a.
+Q8TZS0 / PF1914,214 aa,v1,taxon186497,PF01876 59-211;
+exact WP_011013054.1;SHA256 bbeeb932fe3267f85db6ff6a71ae5eb45731a8e0a56d1592d44526ed436062fb.
+Chen2010 supplement TableS2 confirms all three loci. Mth/Mja cloning is
+described as tag-free,coexpressed with POP5 in BL21(DE3); no independent
+batch sequencing. Pfu2012 cites earlier preparations; exact assay tag not verified.
+
+O59543 / PH1877,212 aa,v1,taxon70601,PF01876 50-209;
+exact WP_010885939.1;SHA256 20712718b9395a27d170896a963f3324007d5e8792b144e4064c9abdfb1a6def.
+R90,R107,K123,R176,D180,K196 verified inside domain. Hamasaki2015/2016
+preparations reference older protocols; exact insert/tag and mutant folding
+not independently verified. All assays use whole proteins plus RNA/partners.

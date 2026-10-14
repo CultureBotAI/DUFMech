@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01697
+  path: data/families/PF01697.yaml
+session:
+  id: 2026-10-11T140145Z-codex-383347
+  timestamp: '2026-10-11T14:01:45Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of GALT-1 causal contexts
+  details: Reviewed all eight graphs and fifteen edges against inspected primary figures,
+    Methods, selected glycan supplement and reference/domain mapping. Native projection
+    equals the overlay and validates. Saved structured YAML/Markdown with semantic
+    digest ee81c6933043eb67382d4909f7c279ff6886272441bcffe144d8723c25077bc9 and an
+    open context-coverage finding. Crude extract, unresolved units, joint rescue and
+    indirect genotype boundaries remain explicit. Partial self-review is not independent
+    expert endorsement or family completion; status remains IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T140125Z-pf01697-galt1-extract-and-genotype-contexts/review.yaml

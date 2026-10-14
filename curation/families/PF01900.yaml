@@ -1,0 +1,1119 @@
+pfam_id: "PF01900"
+curation_status: "IN_PROGRESS"
+curation_history: "history/records/PF01900"
+causal_graphs:
+  -
+    graph_id: "mth-pop5-pair-optimized-rate"
+    title: "Mth Pop5/Rpp30 protocol increases fitted cleavage rate"
+    scope: "Chen2010 Table1/Figure7; M. thermautotrophicus DeltaH RNase P trans-cleavage."
+    context: "55 C,pH5.8,about2 nM E. coli pre-tRNATyr. RNA-alone0.3-20 uM at2 M NH4/500 mM Mg; pair1-10 uM RNA,2-fold protein excess,0.8 M NH4/120 mM Mg."
+    family_mapping: "O26783/MTH_687 reference equals AAB85192.1,124 aa,PF01900 13-116. Chen2010 supplement TableS2 identifies MTH687 as Pop5, not adjacent Rpp30/MTH688; tag-free, sequence-checked full-length cloning."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:187420"
+    limitations: "The intervention includes both proteins and changed ionic conditions. This is not a matched-buffer Pop5-only effect, measured Kd, or observation of ES-to-ES-star motion. Maximal kobs is fitted; rapid-dissociation controls do not cover the faster pair reaction."
+    nodes:
+      -
+        node_id: "pair-protocol"
+        label: "Add Pop5/Rpp30 and switch to its optimized ionic protocol"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:O26783"
+      -
+        node_id: "maximal-kobs"
+        label: "Fitted maximal pre-tRNA cleavage kobs"
+        node_type: "ACTIVITY"
+    edges:
+      -
+        edge_id: "pair-protocol-increases-maximal-kobs"
+        subject: "pair-protocol"
+        predicate: "increases"
+        object: "maximal-kobs"
+        mechanism: "The composite protocol raises maximal kobs from0.13+/-0.01 to7.9+/-1 per min. It does not isolate the contribution of Pop5 from Rpp30 or salts."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:20705647"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3001054/"
+            snippet: "Single-turnover kinetic studies"
+            explanation: "Table1 and original Figure7; supplementary cloning/TableS2 and pulse-chase qualification."
+            cache_path: "evidence/PF01876/chen-2010-reconstitution.txt"
+            cache_sha256: "6d5205a18821029b23b745b445c8819bfe9b28fc050995cc6bbf2a85588432d4"
+  -
+    graph_id: "mja-pop5-full-rna"
+    title: "Pop5/Rpp30 supports Mja full-length RNA cleavage"
+    scope: "Chen2010; full-length Mja RPR."
+    context: "10 nM RNA,100 nM each protein,500 nM E. coli pre-tRNATyr,30min55 C,Tris7.5/100 mM NH4/120 mM Mg; RNA control800 mM NH4/30 mM Mg."
+    family_mapping: "Q57917/MJ0494 reference equals AAB98484.1,134 aa,PF01900 17-111. Chen2010 supplement TableS2 and cloning methods identify the tag-free Pop5 member. RNA truncations are not deletions of the protein domain."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:243232"
+    limitations: "RNA-alone control has different salts. Pop5/Rpp30 without RNA is negative; Rpp21/Rpp29 alone does not activate the displayed RNA. This is joint reconstitution, not Pop5-alone cleavage or isolated-domain sufficiency."
+    nodes:
+      -
+        node_id: "pair-reconstitution"
+        label: "Combine the specified Mja RNA with Pop5/Rpp30 and its assay buffer"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:Q57917"
+      -
+        node_id: "cleavage-products"
+        label: "Detected mature-tRNA and leader products"
+        node_type: "ACTIVITY"
+    edges:
+      -
+        edge_id: "pair-reconstitution-enables-cleavage-products"
+        subject: "pair-reconstitution"
+        predicate: "enables"
+        object: "cleavage-products"
+        mechanism: "The specified RNA/protein/buffer combination gives the displayed products. RNA and both proteins remain a conjunction; the experiment does not identify a protein catalytic residue."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:20705647"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3001054/"
+            snippet: "Single-turnover kinetic studies"
+            explanation: "Figure3 upper panel, lanes3-7 and Methods/supplement."
+            cache_path: "evidence/PF01876/chen-2010-reconstitution.txt"
+            cache_sha256: "6d5205a18821029b23b745b445c8819bfe9b28fc050995cc6bbf2a85588432d4"
+  -
+    graph_id: "mja-pop5-delta-s"
+    title: "Pop5/Rpp30 supports Mja delta-S RNA cleavage"
+    scope: "Chen2010; Mja RPR delta-S lacking nts67-192."
+    context: "500 nM RNA,1 uM proteins,1 uM substrate,15min55 C,Tris7.5/400 mM NH4; pair120 mM Mg versus RNA control30 mM."
+    family_mapping: "Q57917/MJ0494 reference equals AAB98484.1,134 aa,PF01900 17-111. Chen2010 supplement TableS2 and cloning methods identify the tag-free Pop5 member. RNA truncations are not deletions of the protein domain."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:243232"
+    limitations: "RNA-alone control has different salts. Pop5/Rpp30 without RNA is negative; Rpp21/Rpp29 alone does not activate the displayed RNA. This is joint reconstitution, not Pop5-alone cleavage or isolated-domain sufficiency."
+    nodes:
+      -
+        node_id: "pair-reconstitution"
+        label: "Combine the specified Mja RNA with Pop5/Rpp30 and its assay buffer"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:Q57917"
+      -
+        node_id: "cleavage-products"
+        label: "Detected mature-tRNA and leader products"
+        node_type: "ACTIVITY"
+    edges:
+      -
+        edge_id: "pair-reconstitution-enables-cleavage-products"
+        subject: "pair-reconstitution"
+        predicate: "enables"
+        object: "cleavage-products"
+        mechanism: "The specified RNA/protein/buffer combination gives the displayed products. RNA and both proteins remain a conjunction; the experiment does not identify a protein catalytic residue."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:20705647"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3001054/"
+            snippet: "Single-turnover kinetic studies"
+            explanation: "Figure4 upper panel, lanes3-7 and Methods/supplement."
+            cache_path: "evidence/PF01876/chen-2010-reconstitution.txt"
+            cache_sha256: "6d5205a18821029b23b745b445c8819bfe9b28fc050995cc6bbf2a85588432d4"
+  -
+    graph_id: "mja-pop5-minimal-rna"
+    title: "Pop5/Rpp30 supports the minimal Mja RNA"
+    scope: "Chen2010; 112nt Mja RPR delta-S-Min."
+    context: "500 nM RNA,1 uM proteins,1 uM substrate,15min55 C,Tris7.5/400 mM NH4; pair120 mM Mg versus RNA control30 mM."
+    family_mapping: "Q57917/MJ0494 reference equals AAB98484.1,134 aa,PF01900 17-111. Chen2010 supplement TableS2 and cloning methods identify the tag-free Pop5 member. RNA truncations are not deletions of the protein domain."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:243232"
+    limitations: "RNA-alone control has different salts. Pop5/Rpp30 without RNA is negative; Rpp21/Rpp29 alone does not activate the displayed RNA. This is joint reconstitution, not Pop5-alone cleavage or isolated-domain sufficiency."
+    nodes:
+      -
+        node_id: "pair-reconstitution"
+        label: "Combine the specified Mja RNA with Pop5/Rpp30 and its assay buffer"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:Q57917"
+      -
+        node_id: "cleavage-products"
+        label: "Detected mature-tRNA and leader products"
+        node_type: "ACTIVITY"
+    edges:
+      -
+        edge_id: "pair-reconstitution-enables-cleavage-products"
+        subject: "pair-reconstitution"
+        predicate: "enables"
+        object: "cleavage-products"
+        mechanism: "The specified RNA/protein/buffer combination gives the displayed products. RNA and both proteins remain a conjunction; the experiment does not identify a protein catalytic residue."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:20705647"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3001054/"
+            snippet: "Single-turnover kinetic studies"
+            explanation: "Figure4 lower panel, lanes3-7 and Methods/supplement."
+            cache_path: "evidence/PF01876/chen-2010-reconstitution.txt"
+            cache_sha256: "6d5205a18821029b23b745b445c8819bfe9b28fc050995cc6bbf2a85588432d4"
+  -
+    graph_id: "pfu-pop5-gln-fidelity"
+    title: "Pfu Pop5/Rpp30 protocol favors the correct cleavage site"
+    scope: "Chen2012 Figure1C; P. furiosus RNase P with nonconsensus Synechocystis PCC6803 pre-tRNAGln."
+    context: "55 C,2 nM labeled substrate. RNA alone15 uM for9h; pair200 nM RNA/2 uM proteins for30min. Ionic protocols separately optimized."
+    family_mapping: "Q8U151/PF1378 reference equals AAL81502.1,120 aa,PF01900 17-113. Supplement TableS2 identifies this Pop5 locus. Exact2012 assay aliquot sequence was not independently established."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:186497"
+    limitations: "Different RNA doses, durations and buffers prevent a protein-only rate comparison. The endpoint is correct/(correct+miscleaved), not fraction of starting substrate or total conversion. Four-protein value0.92 is a distinct condition."
+    nodes:
+      -
+        node_id: "pair-protocol"
+        label: "Use the Pfu RNA plus Pop5/Rpp30 cleavage protocol"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:Q8U151"
+      -
+        node_id: "correct-fraction"
+        label: "Correct-site fraction among cleavage products"
+        node_type: "ACTIVITY"
+    edges:
+      -
+        edge_id: "pair-protocol-increases-correct-fraction"
+        subject: "pair-protocol"
+        predicate: "increases"
+        object: "correct-fraction"
+        mechanism: "The displayed fraction rises from0.11+/-0.03 to0.59+/-0.01. This is a composite-protocol fidelity endpoint, not evidence of a directly observed substrate-docking transition."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:22298511"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/"
+            snippet: "Data analysis"
+            explanation: "Original Figure1C lanes2/4, Results and assay Methods."
+            cache_path: "evidence/PF01876/chen-2012-fidelity.txt"
+            cache_sha256: "c68f4c212e38991b9b58de6054a6efbded483d35baec71a2c767d96c7bc5384a"
+  -
+    graph_id: "mja-pop5-gln-cis"
+    title: "Mja Pop5/Rpp30 protocol changes cis-cleavage rate and fidelity"
+    scope: "Chen2012 Table2/Figure2; pre-tRNAGln-AAU-MjaRPR self-cleaving construct."
+    context: "55 C,pH6,nominal50 nM RNA/500 nM proteins; separate assembly/cleavage phases. RNA-alone2.5 M NH4/500 mM Mg versus pair0.8 M NH4/nominal100 mM Mg."
+    family_mapping: "Q57917/MJ0494 reference equals AAB98484.1,134 aa,PF01900 17-111. Chen2010 supplement TableS2 and cloning methods identify the tag-free Pop5 member. RNA truncations are not deletions of the protein domain."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:243232"
+    limitations: "Older protocol mixing and reference-number inconsistencies remain unresolved; do not assert matched final conditions. Tethered substrate is not trans cleavage. Derived parallel-pathway constants and older rescaled Tyr rates are not new observed microsteps."
+    nodes:
+      -
+        node_id: "pair-protocol"
+        label: "Assemble the cis construct with Pop5/Rpp30 under its optimized protocol"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:Q57917"
+      -
+        node_id: "cis-kobs"
+        label: "Fitted total cis-cleavage kobs"
+        node_type: "ACTIVITY"
+      -
+        node_id: "correct-fraction"
+        label: "Correct-site fraction of cis-cleavage products"
+        node_type: "ACTIVITY"
+    edges:
+      -
+        edge_id: "pair-protocol-increases-cis-kobs"
+        subject: "pair-protocol"
+        predicate: "increases"
+        object: "cis-kobs"
+        mechanism: "Table2 gives0.004+/-0.0004 to2.5+/-0.1 per min. Both correct and incorrect products contribute; no autonomous Pop5 nuclease is implied."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:22298511"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/"
+            snippet: "Data analysis"
+            explanation: "Table2, original Figure2 and Methods."
+            cache_path: "evidence/PF01876/chen-2012-fidelity.txt"
+            cache_sha256: "c68f4c212e38991b9b58de6054a6efbded483d35baec71a2c767d96c7bc5384a"
+      -
+        edge_id: "pair-protocol-increases-correct-fraction"
+        subject: "pair-protocol"
+        predicate: "increases"
+        object: "correct-fraction"
+        mechanism: "The fitted fraction rises from0.18+/-0.01 to0.43+/-0.01. Total amplitudes93% and96% are different quantities; the four-protein61% amplitude is not complete conversion."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:22298511"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/"
+            snippet: "Data analysis"
+            explanation: "Table2 and original Figure2; retained2012 protocol ledger."
+            cache_path: "evidence/PF01876/chen-2012-fidelity.txt"
+            cache_sha256: "c68f4c212e38991b9b58de6054a6efbded483d35baec71a2c767d96c7bc5384a"
+  -
+    graph_id: "pho-pop5-sl3-affinity"
+    title: "Pop5 partnership and C-terminal deletion change apparent SL3 affinity"
+    scope: "Hamasaki2015 TableI/Figure2; P. horikoshii Pop5 and Ta-SL3 SPR."
+    context: "25 C,20 mM phosphate7.2,500 mM NH4Cl,0.05%Tween20,immobilized Ta-SL3; sequential4.8 nM-3 uM analyte."
+    family_mapping: "O59150/PH1481 reference equals BAA30588.1,120 aa,PF01900 17-113. Delta14C removes reference107-120, overlapping the domain at107-113; DeltaL43-48 is internal. Rpp30 R107A is not a Pop5 mutation."
+    scope_status: "MECHANISTIC"
+    taxon: "NCBITaxon:70601"
+    limitations: "Different steady-state and Langmuir fits and Rmax values limit numerical fold comparisons. Specific binding is not seen in high-Mg cleavage buffer. DeltaL43-48 retains specific binding atKd6.52 nM. Delta14C supplemental sensorgrams were not visually inspected; its TableI result was."
+    nodes:
+      -
+        node_id: "pair-vs-pop5"
+        label: "Use Pop5/Rpp30 instead of Pop5 alone"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:O59150"
+      -
+        node_id: "delta14c"
+        label: "Replace Pop5 with its C-terminal14-residue deletion in the pair"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:O59150"
+      -
+        node_id: "sl3-affinity"
+        label: "Apparent Ta-SL3 affinity"
+        node_type: "ACTIVITY"
+      -
+        node_id: "mutant-sl3-affinity"
+        label: "Apparent Ta-SL3 affinity of the Pop5/Rpp30 preparation"
+        node_type: "ACTIVITY"
+    edges:
+      -
+        edge_id: "pair-vs-pop5-increases-sl3-affinity"
+        subject: "pair-vs-pop5"
+        predicate: "increases"
+        object: "sl3-affinity"
+        mechanism: "The pair has fitted Kd2.27 nM versus2410 nM for Pop5 alone. Binding improvement is measured, but binding does not itself establish full-RNA activation."
+        directness: "DIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:26152732"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4882637/"
+            snippet: "Kinetic constants"
+            explanation: "TableI and original Figure2; printed830-fold claim is not adopted."
+            cache_path: "evidence/PF01900/hamasaki-2015-pop5.txt"
+            cache_sha256: "f1bdd22119e3805dac8355bc6efd3623921a1a2395fe86464afad3ec8039d87f"
+      -
+        edge_id: "delta14c-decreases-mutant-sl3-affinity"
+        subject: "delta14c"
+        predicate: "decreases"
+        object: "mutant-sl3-affinity"
+        mechanism: "Replacing Pop5 with Delta14C gives Kd1770 nM versus2.27 nM for the WT pair. It weakens but does not abolish pair binding; folding and complex stability are not excluded explanations."
+        directness: "DIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:26152732"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4882637/"
+            snippet: "Kinetic constants"
+            explanation: "TableI and C-terminal-mutant Results; supplementary curve unavailable."
+            cache_path: "evidence/PF01900/hamasaki-2015-pop5.txt"
+            cache_sha256: "f1bdd22119e3805dac8355bc6efd3623921a1a2395fe86464afad3ec8039d87f"
+  -
+    graph_id: "pho-pop5-pair-dose"
+    title: "Joint Pop5/Rpp30 dose increases reconstituted cleavage"
+    scope: "Hamasaki2015 original Figure5 open-circle series; P. horikoshii RNase P."
+    context: "5-to30 pmol each Pop5/Rpp30,10 pmol RNA and each Rpp21/Rpp29/Rpp38;15min75 C,50 mM Tris7.6,50 mM MgCl2,600 mM NH4OAc,60 mM NH4Cl."
+    family_mapping: "O59150/PH1481 reference equals BAA30588.1,120 aa,PF01900 17-113. Delta14C removes reference107-120, overlapping the domain at107-113; DeltaL43-48 is internal. Rpp30 R107A is not a Pop5 mutation."
+    scope_status: "MECHANISTIC"
+    taxon: "NCBITaxon:70601"
+    limitations: "The measured endpoint plateaus near70-75%,not100%. Both proteins are titrated; this does not establish Pop5-alone sufficiency or directly measure molecular stoichiometry. Triplicate assays."
+    nodes:
+      -
+        node_id: "increase-pair-dose"
+        label: "Increase Pop5 and Rpp30 together from5 to30 pmol"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:O59150"
+      -
+        node_id: "cleavage-endpoint"
+        label: "Pre-tRNATyr cleavage fraction after15 minutes"
+        node_type: "ACTIVITY"
+    edges:
+      -
+        edge_id: "increase-pair-dose-increases-cleavage-endpoint"
+        subject: "increase-pair-dose"
+        predicate: "increases"
+        object: "cleavage-endpoint"
+        mechanism: "The open-circle series rises from roughly23% to70% over this range with the other components fixed. This is a direct effect in the assembled biochemical assay, not an intracellular assembly sequence."
+        directness: "DIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:26152732"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4882637/"
+            snippet: "Kinetic constants"
+            explanation: "Original Figure5 and pre-tRNA cleavage Methods."
+            cache_path: "evidence/PF01900/hamasaki-2015-pop5.txt"
+            cache_sha256: "f1bdd22119e3805dac8355bc6efd3623921a1a2395fe86464afad3ec8039d87f"
+  -
+    graph_id: "human-rpp14-f14"
+    title: "Rpp14 addition changes HEK293 fraction-associated RNA products"
+    scope: "2023 Figure3; F14 from HEK293 S100/tRNAArg transcription complexes."
+    context: "Gradient-isolated F14 with or without recombinant His-Rpp14; internally labeled S. pombe pre-tRNASer plus excess cold precursor;37 C,MRP/TNET with nominal15 mM Mg,10 mM DTT,rRNasin."
+    family_mapping: "Human RPP14 reference O95059 equals NP_008973.1,124 aa,sequence version3,PF01900 35-108. This is gene-to-family mapping; exact experimental cDNA, tag termini and allele sequences are not independently verified."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:9606"
+    limitations: "Exact protein dose and full buffer composition are unresolved. Fractions contain other proteins; Rpp14 alone is negative in the Mg-containing Figure2 assay. These are preparation-dependent signals, not direct Rpp14 phosphorolysis or catalytic-site assignments."
+    nodes:
+      -
+        node_id: "add-rpp14"
+        label: "Add the recombinant Rpp14 preparation to F14"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:O95059"
+      -
+        node_id: "early-leader"
+        label: "Excised28nt leader signal at1-10 minutes"
+        node_type: "STATE"
+      -
+        node_id: "mononucleotide"
+        label: "Mononucleotide signal at5-40 minutes"
+        node_type: "STATE"
+    edges:
+      -
+        edge_id: "add-rpp14-increases-early-leader"
+        subject: "add-rpp14"
+        predicate: "increases"
+        object: "early-leader"
+        mechanism: "Rpp14 addition raises the transient early leader signal, but both conditions lose most leader later. Accumulation reflects formation and removal, not an independently measured endonuclease rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:37831743"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10589621/"
+            snippet: "Substrate cleavage assays"
+            explanation: "Original Figure3A/B and supplementary Methodspp2-6; at least3 independent experiments."
+            cache_path: "evidence/PF01900/human-2023.txt"
+            cache_sha256: "bd2e70bfac8e3e11d6e7e1fdc688e6dd71ed0f76bcd5eedc7e3796d1690ba0dc"
+      -
+        edge_id: "add-rpp14-increases-mononucleotide"
+        subject: "add-rpp14"
+        predicate: "increases"
+        object: "mononucleotide"
+        mechanism: "The supplemented fraction has greater mononucleotide signal over the displayed times. This supports an effect of added preparation in the fraction, not proof that Rpp14 alone supplies the catalytic chemistry."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:37831743"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10589621/"
+            snippet: "Substrate cleavage assays"
+            explanation: "Original Figure3A/C, with the Figure2 Rpp14-alone negative control retained."
+            cache_path: "evidence/PF01900/human-2023.txt"
+            cache_sha256: "bd2e70bfac8e3e11d6e7e1fdc688e6dd71ed0f76bcd5eedc7e3796d1690ba0dc"
+  -
+    graph_id: "human-pop5-f39"
+    title: "Pop5 addition reduces precursor signal in the HeLa F39 assay"
+    scope: "2023 Figure4; F39 from HeLa S100/tRNATyr complexes purified by gel filtration."
+    context: "F39 with/without recombinant His-Pop5,0-40min37 C; internally labeled pre-tRNASer,excess cold substrate,Mg-containing MRP/TNET."
+    family_mapping: "Human POP5 reference Q969H6 equals NP_057002.2,163 aa,sequence version1,PF01900 7-115. POP5 and RPP14 are distinct members; exact experimental insert or edited alleles are not independently sequenced."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:9606"
+    limitations: "Figure4C40-minute mononucleotide signals are approximately comparable, not increased by Pop5. Leader signal is lower; do not equate it to a higher cleavage rate. Exact dose unresolved; fraction and residual preparation components can mediate the result."
+    nodes:
+      -
+        node_id: "add-pop5"
+        label: "Add the recombinant Pop5 preparation to F39"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:Q969H6"
+      -
+        node_id: "intact-precursor"
+        label: "Intact pre-tRNASer signal during the time course"
+        node_type: "STATE"
+    edges:
+      -
+        edge_id: "add-pop5-decreases-intact-precursor"
+        subject: "add-pop5"
+        predicate: "decreases"
+        object: "intact-precursor"
+        mechanism: "The fraction-plus-Pop5 lanes show precursor loss relative to fraction alone, as reported with the original gel. No quantitative turnover constant or autonomous Pop5 exonuclease is inferred."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:37831743"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10589621/"
+            snippet: "Substrate cleavage assays"
+            explanation: "Original Figure4A lanes4-8 versus14-18; B/C constrain interpretation."
+            cache_path: "evidence/PF01900/human-2023.txt"
+            cache_sha256: "bd2e70bfac8e3e11d6e7e1fdc688e6dd71ed0f76bcd5eedc7e3796d1690ba0dc"
+  -
+    graph_id: "human-rpp14-reconstitution-omission"
+    title: "Omitting Rpp14 lowers products in H1-RNA reconstitution"
+    scope: "2023 Figure5; H1 RNA plus fresh recombinant Rpp14,20,21,25,29,30,40 and Pop5."
+    context: "Compare complete assembly with Rpp14 omission while the other seven proteins remain, in the Mg-containing assay."
+    family_mapping: "Human RPP14 reference O95059 equals NP_008973.1,124 aa,sequence version3,PF01900 35-108. This is gene-to-family mapping; exact experimental cDNA, tag termini and allele sequences are not independently verified."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:9606"
+    limitations: "Omission retains cleavage, so Rpp14 is not absolutely required under these conditions. Exact protein doses and figure-specific reaction time remain unresolved. Reconstituted RNase P does not degrade excised leader; this is not the fraction-associated exonuclease context."
+    nodes:
+      -
+        node_id: "omit-rpp14"
+        label: "Omit Rpp14 from the eight-protein H1-RNA assembly"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:O95059"
+      -
+        node_id: "trna-product"
+        label: "tRNA product band intensity"
+        node_type: "STATE"
+      -
+        node_id: "leader-product"
+        label: "Excised leader band intensity"
+        node_type: "STATE"
+    edges:
+      -
+        edge_id: "omit-rpp14-decreases-trna-product"
+        subject: "omit-rpp14"
+        predicate: "decreases"
+        object: "trna-product"
+        mechanism: "Figure5B shows lower product after Rpp14 omission than complete reconstitution. Partner proteins and catalytic RNA remain present; the mediating molecular step is unresolved."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:37831743"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10589621/"
+            snippet: "Substrate cleavage assays"
+            explanation: "Original Figure5A lane11 versus5 and Figure5B."
+            cache_path: "evidence/PF01900/human-2023.txt"
+            cache_sha256: "bd2e70bfac8e3e11d6e7e1fdc688e6dd71ed0f76bcd5eedc7e3796d1690ba0dc"
+      -
+        edge_id: "omit-rpp14-decreases-leader-product"
+        subject: "omit-rpp14"
+        predicate: "decreases"
+        object: "leader-product"
+        mechanism: "Figure5C reports less leader after Rpp14 omission, but a residual band remains. This is not complete loss of cleavage or proof of a Rpp14 catalytic residue."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:37831743"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10589621/"
+            snippet: "Substrate cleavage assays"
+            explanation: "Original Figure5A/C; fresh-protein and storage limitations in supplement."
+            cache_path: "evidence/PF01900/human-2023.txt"
+            cache_sha256: "bd2e70bfac8e3e11d6e7e1fdc688e6dd71ed0f76bcd5eedc7e3796d1690ba0dc"
+  -
+    graph_id: "human-rpp14-mg-free"
+    title: "Rpp14-enriched preparation depletes precursor without added divalent ions"
+    scope: "2023 SupplementFigureS2C lane8; recombinant human Rpp14."
+    context: "Exo buffer50 mM KCl,15 mM Na2HPO4,20 mM Tris8.0,100-300 ng cold pre-tRNASer,rRNasin,10 mM DTT; Ni-affinity refolded preparation."
+    family_mapping: "Human RPP14 reference O95059 equals NP_008973.1,124 aa,sequence version3,PF01900 35-108. This is gene-to-family mapping; exact experimental cDNA, tag termini and allele sequences are not independently verified."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:9606"
+    limitations: "Approximately95% purity by stained gel does not exclude residual nuclease contamination. Exact assay dose/time and tag termini unresolved. No chemical-active-site, reaction-direction or intrinsic phosphorolysis claim; Mg-containing protein-alone assays differ."
+    nodes:
+      -
+        node_id: "add-preparation"
+        label: "Add the Rpp14-enriched recombinant preparation"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:O95059"
+      -
+        node_id: "intact-precursor"
+        label: "Intact labeled pre-tRNASer signal"
+        node_type: "STATE"
+    edges:
+      -
+        edge_id: "add-preparation-decreases-intact-precursor"
+        subject: "add-preparation"
+        predicate: "decreases"
+        object: "intact-precursor"
+        mechanism: "The indicated lane shows precursor depletion and a mononucleotide band, unlike Rpp20/Rpp25 controls. Causality is scoped to the preparation and buffer, not proven assignment of catalytic chemistry to the isolated family domain."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:37831743"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10589621/"
+            snippet: "Substrate cleavage assays"
+            explanation: "Visually inspected SupplementFigureS2C lane8; Methodspp5-6 and legendspp11-12."
+            cache_path: "evidence/PF01900/human-2023.txt"
+            cache_sha256: "bd2e70bfac8e3e11d6e7e1fdc688e6dd71ed0f76bcd5eedc7e3796d1690ba0dc"
+  -
+    graph_id: "human-pop5-mg-free"
+    title: "Pop5-enriched preparation depletes precursor without added divalent ions"
+    scope: "2023 SupplementFigureS2C lane12; recombinant human Pop5."
+    context: "Exo buffer50 mM KCl,15 mM Na2HPO4,20 mM Tris8.0,100-300 ng cold pre-tRNASer,rRNasin,10 mM DTT; Ni-affinity refolded preparation."
+    family_mapping: "Human POP5 reference Q969H6 equals NP_057002.2,163 aa,sequence version1,PF01900 7-115. POP5 and RPP14 are distinct members; exact experimental insert or edited alleles are not independently sequenced."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:9606"
+    limitations: "Approximately95% purity by stained gel does not exclude residual nuclease contamination. Exact assay dose/time and tag termini unresolved. No chemical-active-site, reaction-direction or intrinsic phosphorolysis claim; Mg-containing protein-alone assays differ."
+    nodes:
+      -
+        node_id: "add-preparation"
+        label: "Add the Pop5-enriched recombinant preparation"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:Q969H6"
+      -
+        node_id: "intact-precursor"
+        label: "Intact labeled pre-tRNASer signal"
+        node_type: "STATE"
+    edges:
+      -
+        edge_id: "add-preparation-decreases-intact-precursor"
+        subject: "add-preparation"
+        predicate: "decreases"
+        object: "intact-precursor"
+        mechanism: "The indicated lane shows precursor depletion and a mononucleotide band, unlike Rpp20/Rpp25 controls. Causality is scoped to the preparation and buffer, not proven assignment of catalytic chemistry to the isolated family domain."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:37831743"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10589621/"
+            snippet: "Substrate cleavage assays"
+            explanation: "Visually inspected SupplementFigureS2C lane12; Methodspp5-6 and legendspp11-12."
+            cache_path: "evidence/PF01900/human-2023.txt"
+            cache_sha256: "bd2e70bfac8e3e11d6e7e1fdc688e6dd71ed0f76bcd5eedc7e3796d1690ba0dc"
+  -
+    graph_id: "human-rpp14-overexpression-sedimentation"
+    title: "Myc-Rpp14 overexpression shifts active gradient fractions"
+    scope: "2023 Figure6; HeLa cells transiently expressing myc-Rpp14 for42h."
+    context: "S100 tRNAArg transcription complexes,velocity sedimentation,ex-vivo pre-tRNASer processing; comparison with untransfected controls."
+    family_mapping: "Human RPP14 reference O95059 equals NP_008973.1,124 aa,sequence version3,PF01900 35-108. This is gene-to-family mapping; exact experimental cDNA, tag termini and allele sequences are not independently verified."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:9606"
+    limitations: "Figure heading15-40% glycerol conflicts with text/Methods15-35%. Sedimentation is not a direct measurement of intracellular aggregation. Larger leader accumulation is not increased mononucleotide output; exact myc-cDNA sequence unverified."
+    nodes:
+      -
+        node_id: "express-myc-rpp14"
+        label: "Overexpress myc-Rpp14 before extract preparation"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:O95059"
+      -
+        node_id: "sedimentation"
+        label: "Sedimentation of fractions retaining RNase-P-associated activity"
+        node_type: "PHENOTYPE"
+    edges:
+      -
+        edge_id: "express-myc-rpp14-increases-sedimentation"
+        subject: "express-myc-rpp14"
+        predicate: "increases"
+        object: "sedimentation"
+        mechanism: "Activity shifts toward later fractions20-24 compared with control14-20. The measured difference is extract-complex fractionation, not an observed aggregation-to-processing molecular chain."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:37831743"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10589621/"
+            snippet: "Substrate cleavage assays"
+            explanation: "Original Figure6A-D, Results and velocity-sedimentation Methods; at least3 assays."
+            cache_path: "evidence/PF01900/human-2023.txt"
+            cache_sha256: "bd2e70bfac8e3e11d6e7e1fdc688e6dd71ed0f76bcd5eedc7e3796d1690ba0dc"
+  -
+    graph_id: "human-rpp14-shrna-arg-processing"
+    title: "RPP14 shRNAs impair Arg-tRNA processing in HEK293 extracts"
+    scope: "2023 Figure7D/H/I; three RPP14-targeting shRNAs in HEK293."
+    context: "Transient shRNAsA/Bcoding,C3UTR; S20 extracts24/48h used for tRNAArg transcription/processing, with PEI-only controls."
+    family_mapping: "Human RPP14 reference O95059 equals NP_008973.1,124 aa,sequence version3,PF01900 35-108. This is gene-to-family mapping; exact experimental cDNA, tag termini and allele sequences are not independently verified."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:9606"
+    limitations: "RPP14 mRNA decreases but protein depletion was not established by western. No non-targeting shRNA or target-resistant rescue shown. Recovery at72h and variation among other tRNA endpoints prevent universal tRNA or permanent-loss claims."
+    nodes:
+      -
+        node_id: "rpp14-shrna"
+        label: "Express the RPP14-targeting shRNAs"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:O95059"
+      -
+        node_id: "arg-precursor"
+        label: "Precursor-tRNAArg band signal at24/48 hours"
+        node_type: "STATE"
+      -
+        node_id: "arg-mature"
+        label: "Mature-tRNAArg band signal at24/48 hours"
+        node_type: "STATE"
+    edges:
+      -
+        edge_id: "rpp14-shrna-increases-arg-precursor"
+        subject: "rpp14-shrna"
+        predicate: "increases"
+        object: "arg-precursor"
+        mechanism: "Targeting conditions accumulate precursor during extract transcription; persistent transcription does not prove an unchanged transcription rate."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:37831743"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10589621/"
+            snippet: "Substrate cleavage assays"
+            explanation: "Original Figure7D/H and supplement knockdown Methodspp1-2."
+            cache_path: "evidence/PF01900/human-2023.txt"
+            cache_sha256: "bd2e70bfac8e3e11d6e7e1fdc688e6dd71ed0f76bcd5eedc7e3796d1690ba0dc"
+      -
+        edge_id: "rpp14-shrna-decreases-arg-mature"
+        subject: "rpp14-shrna"
+        predicate: "decreases"
+        object: "arg-mature"
+        mechanism: "Mature-product signal is reduced in the targeting conditions, with recovery toward72h. This is a whole-gene extract phenotype, not isolated-domain catalysis."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:37831743"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10589621/"
+            snippet: "Substrate cleavage assays"
+            explanation: "Original Figure7D/I; mRNA engagement and unsuccessful protein western explicitly retained."
+            cache_path: "evidence/PF01900/human-2023.txt"
+            cache_sha256: "bd2e70bfac8e3e11d6e7e1fdc688e6dd71ed0f76bcd5eedc7e3796d1690ba0dc"
+  -
+    graph_id: "human-rpp14-cas9-rna-processing"
+    title: "RPP14 targeting changes catalytic-RNA levels and precursor accumulation"
+    scope: "Panah2026 Figure2c-e/o/s; RPP14-targeted HeLa Mirror populations."
+    context: "HeLa Mirror reporter populations,lentiviralCas9/sgRNA,72h then4days blasticidin,FACS sorting,3h before total-RNA extraction;37 C DMEM10%FBS,RT-qPCR delta-deltaCt.18S rRNA normalization."
+    family_mapping: "Human RPP14 reference O95059 equals NP_008973.1,124 aa,sequence version3,PF01900 35-108. This is gene-to-family mapping; exact experimental cDNA, tag termini and allele sequences are not independently verified."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:9606"
+    limitations: "Not fully genotyped null clones; residual RPP14 mRNA is about35%. Figure caption and Methods disagree on biological replicate counts; Methods permits at least1 biological x4 technical for these KO assays. Steady-state and junction signals are not direct turnover or RNA-decay rates."
+    nodes:
+      -
+        node_id: "rpp14-targeting"
+        label: "Target RPP14 with pAVA3507 Cas9/sgRNA"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:O95059"
+      -
+        node_id: "h1-rna"
+        label: "Steady-state H1 RNA signal"
+        node_type: "STATE"
+      -
+        node_id: "mrp-rna"
+        label: "Steady-state MRP RNA signal"
+        node_type: "STATE"
+      -
+        node_id: "malat1-junction"
+        label: "Unprocessed MALAT1-mascRNA junction signal"
+        node_type: "STATE"
+      -
+        node_id: "menbeta-junction"
+        label: "Unprocessed MEN-beta-menRNA junction signal"
+        node_type: "STATE"
+      -
+        node_id: "its1-site2"
+        label: "Unprocessed pre-rRNA ITS1 site2 signal"
+        node_type: "STATE"
+    edges:
+      -
+        edge_id: "rpp14-targeting-decreases-h1-rna"
+        subject: "rpp14-targeting"
+        predicate: "decreases"
+        object: "h1-rna"
+        mechanism: "The paper reports9.1-fold lower H1 RNA. This does not distinguish RNA synthesis, processing or stability intermediates."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:42277007"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13408128/"
+            snippet: "Gene rescue"
+            explanation: "Figure2c; supplement2a target engagement."
+            cache_path: "evidence/PF01900/human-2026.txt"
+            cache_sha256: "4cf799887d0f8f998bb4f261d08f4f5998c12aff9e4e512680424f3e37d118eb"
+      -
+        edge_id: "rpp14-targeting-decreases-mrp-rna"
+        subject: "rpp14-targeting"
+        predicate: "decreases"
+        object: "mrp-rna"
+        mechanism: "The reported4.5-fold reduction is a cell-level dependency, not a measured decay constant or direct Pop5/Rpp14 stabilization mechanism."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:42277007"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13408128/"
+            snippet: "Gene rescue"
+            explanation: "Figure2o and Methods."
+            cache_path: "evidence/PF01900/human-2026.txt"
+            cache_sha256: "4cf799887d0f8f998bb4f261d08f4f5998c12aff9e4e512680424f3e37d118eb"
+      -
+        edge_id: "rpp14-targeting-increases-malat1-junction"
+        subject: "rpp14-targeting"
+        predicate: "increases"
+        object: "malat1-junction"
+        mechanism: "RPP14 targeting increases RNA spanning the RNase P cleavage site. The endpoint is precursor accumulation, not a direct enzymatic velocity."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:42277007"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13408128/"
+            snippet: "Gene rescue"
+            explanation: "Figure2d,nestedRT-qPCR Methods."
+            cache_path: "evidence/PF01900/human-2026.txt"
+            cache_sha256: "4cf799887d0f8f998bb4f261d08f4f5998c12aff9e4e512680424f3e37d118eb"
+      -
+        edge_id: "rpp14-targeting-increases-menbeta-junction"
+        subject: "rpp14-targeting"
+        predicate: "increases"
+        object: "menbeta-junction"
+        mechanism: "The cleavage-junction signal increases relative to negative controls, within the targeted cell population."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:42277007"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13408128/"
+            snippet: "Gene rescue"
+            explanation: "Figure2e,nestedRT-qPCR Methods."
+            cache_path: "evidence/PF01900/human-2026.txt"
+            cache_sha256: "4cf799887d0f8f998bb4f261d08f4f5998c12aff9e4e512680424f3e37d118eb"
+      -
+        edge_id: "rpp14-targeting-increases-its1-site2"
+        subject: "rpp14-targeting"
+        predicate: "increases"
+        object: "its1-site2"
+        mechanism: "The uncleaved-site qPCR signal is elevated; the data do not resolve a direct Rpp14 cleavage reaction."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:42277007"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13408128/"
+            snippet: "Gene rescue"
+            explanation: "Figure2s and endogenous-substrate Methods."
+            cache_path: "evidence/PF01900/human-2026.txt"
+            cache_sha256: "4cf799887d0f8f998bb4f261d08f4f5998c12aff9e4e512680424f3e37d118eb"
+  -
+    graph_id: "human-pop5-cas9-catalytic-rnas"
+    title: "POP5 targeting lowers H1 and MRP RNA levels"
+    scope: "Panah2026 SupplementFigure2d/e; POP5-targeted HeLa Mirror populations."
+    context: "HeLa Mirror reporter populations,lentiviralCas9/sgRNA,72h then4days blasticidin,FACS sorting,3h before total-RNA extraction;37 C DMEM10%FBS,RT-qPCR delta-deltaCt.28S rRNA normalization."
+    family_mapping: "Human POP5 reference Q969H6 equals NP_057002.2,163 aa,sequence version1,PF01900 7-115. POP5 and RPP14 are distinct members; exact experimental insert or edited alleles are not independently sequenced."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:9606"
+    limitations: "Supplement reports at least1 biological x4 technical replicate. The exact edited alleles and protein depletion are not established here. These are steady-state signals, not RNA half-lives or family-wide catalytic effects."
+    nodes:
+      -
+        node_id: "pop5-targeting"
+        label: "Target POP5 with pAVA3498 Cas9/sgRNA"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:Q969H6"
+      -
+        node_id: "h1-rna"
+        label: "28S-normalized H1 RNA signal"
+        node_type: "STATE"
+      -
+        node_id: "mrp-rna"
+        label: "28S-normalized MRP RNA signal"
+        node_type: "STATE"
+    edges:
+      -
+        edge_id: "pop5-targeting-decreases-h1-rna"
+        subject: "pop5-targeting"
+        predicate: "decreases"
+        object: "h1-rna"
+        mechanism: "POP5-targeted cells have lower signal than the displayed controls. No molecular stabilization intermediate was experimentally resolved."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:42277007"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13408128/"
+            snippet: "Gene rescue"
+            explanation: "Visually inspected SupplementFigure2d; Data2 specifies the POP5 guide."
+            cache_path: "evidence/PF01900/human-2026.txt"
+            cache_sha256: "4cf799887d0f8f998bb4f261d08f4f5998c12aff9e4e512680424f3e37d118eb"
+      -
+        edge_id: "pop5-targeting-decreases-mrp-rna"
+        subject: "pop5-targeting"
+        predicate: "decreases"
+        object: "mrp-rna"
+        mechanism: "POP5 targeting lowers MRP RNA signal in the same population-level assay. This does not imply a direct RNA-degradation pathway."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:42277007"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13408128/"
+            snippet: "Gene rescue"
+            explanation: "Visually inspected SupplementFigure2e and its replicate/normalization caption."
+            cache_path: "evidence/PF01900/human-2026.txt"
+            cache_sha256: "4cf799887d0f8f998bb4f261d08f4f5998c12aff9e4e512680424f3e37d118eb"
+  -
+    graph_id: "human-rpp14-rescue-trnau1ap"
+    title: "RPP14 cDNA suppresses RNA defects after TRNAU1AP targeting"
+    scope: "Panah2026 Figure2j-l/r; TRNAU1AP-targeted HeLa Mirror population."
+    context: "Sorted cells at30%confluence,10h before3ug pAVA3915/GenScriptOHu15516D intronlessRPP14 transfection,media24h,TRIlysis48h; vectorpAVA1221 comparator,18S-normalizedRT-qPCR."
+    family_mapping: "Human RPP14 reference O95059 equals NP_008973.1,124 aa,sequence version3,PF01900 35-108. This is gene-to-family mapping; exact experimental cDNA, tag termini and allele sequences are not independently verified."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:9606"
+    limitations: "Suppression of an upstream-knockout background, not direct RPP14-knockout complementation. Exact RPP14 transgene sequence/tag unverified. Two biological xatleast3technical replicates; caption/Methods differ on statistical test. These panels do not establish pre-tRNA or pre-rRNA rescue."
+    nodes:
+      -
+        node_id: "rpp14-cdna"
+        label: "Express intronless RPP14 in the TRNAU1AP-targeted population"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:O95059"
+      -
+        node_id: "h1-rna"
+        label: "H1 RNA steady-state signal"
+        node_type: "STATE"
+      -
+        node_id: "mrp-rna"
+        label: "MRP RNA steady-state signal"
+        node_type: "STATE"
+      -
+        node_id: "malat1-junction"
+        label: "Unprocessed MALAT1-mascRNA junction signal"
+        node_type: "STATE"
+      -
+        node_id: "menbeta-junction"
+        label: "Unprocessed MEN-beta-menRNA junction signal"
+        node_type: "STATE"
+    edges:
+      -
+        edge_id: "rpp14-cdna-increases-h1-rna"
+        subject: "rpp14-cdna"
+        predicate: "increases"
+        object: "h1-rna"
+        mechanism: "RPP14 cDNA raises H1 RNA toward the control level in this background. This supports conditional suppression, not direct measurement of RNA stabilization."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:42277007"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13408128/"
+            snippet: "Gene rescue"
+            explanation: "Figure2j and rescue Methods."
+            cache_path: "evidence/PF01900/human-2026.txt"
+            cache_sha256: "4cf799887d0f8f998bb4f261d08f4f5998c12aff9e4e512680424f3e37d118eb"
+      -
+        edge_id: "rpp14-cdna-increases-mrp-rna"
+        subject: "rpp14-cdna"
+        predicate: "increases"
+        object: "mrp-rna"
+        mechanism: "RPP14 cDNA raises MRP RNA toward controls; the upstream perturbation remains. Do not infer that all effects of TRNAU1AP are RPP14-dependent."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:42277007"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13408128/"
+            snippet: "Gene rescue"
+            explanation: "Figure2r and rescue Methods."
+            cache_path: "evidence/PF01900/human-2026.txt"
+            cache_sha256: "4cf799887d0f8f998bb4f261d08f4f5998c12aff9e4e512680424f3e37d118eb"
+      -
+        edge_id: "rpp14-cdna-decreases-malat1-junction"
+        subject: "rpp14-cdna"
+        predicate: "decreases"
+        object: "malat1-junction"
+        mechanism: "The RPP14-expressing population has lower unprocessed-junction signal than its vector comparison. No serial molecular pathway is directly tracked."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:42277007"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13408128/"
+            snippet: "Gene rescue"
+            explanation: "Figure2k and Supplement2b."
+            cache_path: "evidence/PF01900/human-2026.txt"
+            cache_sha256: "4cf799887d0f8f998bb4f261d08f4f5998c12aff9e4e512680424f3e37d118eb"
+      -
+        edge_id: "rpp14-cdna-decreases-menbeta-junction"
+        subject: "rpp14-cdna"
+        predicate: "decreases"
+        object: "menbeta-junction"
+        mechanism: "The unprocessed MEN-beta-menRNA signal falls after RPP14 expression in this specific upstream background."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:42277007"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13408128/"
+            snippet: "Gene rescue"
+            explanation: "Figure2l and Supplement2b."
+            cache_path: "evidence/PF01900/human-2026.txt"
+            cache_sha256: "4cf799887d0f8f998bb4f261d08f4f5998c12aff9e4e512680424f3e37d118eb"
+  -
+    graph_id: "human-rpp14-rescue-prpf39"
+    title: "RPP14 cDNA suppresses RNA defects after PRPF39 targeting"
+    scope: "Panah2026 Figure2j-l/r; PRPF39-targeted HeLa Mirror population."
+    context: "Sorted cells at30%confluence,10h before3ug pAVA3915/GenScriptOHu15516D intronlessRPP14 transfection,media24h,TRIlysis48h; vectorpAVA1221 comparator,18S-normalizedRT-qPCR."
+    family_mapping: "Human RPP14 reference O95059 equals NP_008973.1,124 aa,sequence version3,PF01900 35-108. This is gene-to-family mapping; exact experimental cDNA, tag termini and allele sequences are not independently verified."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:9606"
+    limitations: "Suppression of an upstream-knockout background, not direct RPP14-knockout complementation. Exact RPP14 transgene sequence/tag unverified. Two biological xatleast3technical replicates; caption/Methods differ on statistical test. These panels do not establish pre-tRNA or pre-rRNA rescue."
+    nodes:
+      -
+        node_id: "rpp14-cdna"
+        label: "Express intronless RPP14 in the PRPF39-targeted population"
+        node_type: "PERTURBATION"
+        grounding:
+          - "UniProtKB:O95059"
+      -
+        node_id: "h1-rna"
+        label: "H1 RNA steady-state signal"
+        node_type: "STATE"
+      -
+        node_id: "mrp-rna"
+        label: "MRP RNA steady-state signal"
+        node_type: "STATE"
+      -
+        node_id: "malat1-junction"
+        label: "Unprocessed MALAT1-mascRNA junction signal"
+        node_type: "STATE"
+      -
+        node_id: "menbeta-junction"
+        label: "Unprocessed MEN-beta-menRNA junction signal"
+        node_type: "STATE"
+    edges:
+      -
+        edge_id: "rpp14-cdna-increases-h1-rna"
+        subject: "rpp14-cdna"
+        predicate: "increases"
+        object: "h1-rna"
+        mechanism: "RPP14 cDNA raises H1 RNA toward the control level in this background. This supports conditional suppression, not direct measurement of RNA stabilization."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:42277007"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13408128/"
+            snippet: "Gene rescue"
+            explanation: "Figure2j and rescue Methods."
+            cache_path: "evidence/PF01900/human-2026.txt"
+            cache_sha256: "4cf799887d0f8f998bb4f261d08f4f5998c12aff9e4e512680424f3e37d118eb"
+      -
+        edge_id: "rpp14-cdna-increases-mrp-rna"
+        subject: "rpp14-cdna"
+        predicate: "increases"
+        object: "mrp-rna"
+        mechanism: "RPP14 cDNA raises MRP RNA toward controls; the upstream perturbation remains. Do not infer that all effects of PRPF39 are RPP14-dependent."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:42277007"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13408128/"
+            snippet: "Gene rescue"
+            explanation: "Figure2r and rescue Methods."
+            cache_path: "evidence/PF01900/human-2026.txt"
+            cache_sha256: "4cf799887d0f8f998bb4f261d08f4f5998c12aff9e4e512680424f3e37d118eb"
+      -
+        edge_id: "rpp14-cdna-decreases-malat1-junction"
+        subject: "rpp14-cdna"
+        predicate: "decreases"
+        object: "malat1-junction"
+        mechanism: "The RPP14-expressing population has lower unprocessed-junction signal than its vector comparison. No serial molecular pathway is directly tracked."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:42277007"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13408128/"
+            snippet: "Gene rescue"
+            explanation: "Figure2k and Supplement2b."
+            cache_path: "evidence/PF01900/human-2026.txt"
+            cache_sha256: "4cf799887d0f8f998bb4f261d08f4f5998c12aff9e4e512680424f3e37d118eb"
+      -
+        edge_id: "rpp14-cdna-decreases-menbeta-junction"
+        subject: "rpp14-cdna"
+        predicate: "decreases"
+        object: "menbeta-junction"
+        mechanism: "The unprocessed MEN-beta-menRNA signal falls after RPP14 expression in this specific upstream background."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:42277007"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13408128/"
+            snippet: "Gene rescue"
+            explanation: "Figure2l and Supplement2b."
+            cache_path: "evidence/PF01900/human-2026.txt"
+            cache_sha256: "4cf799887d0f8f998bb4f261d08f4f5998c12aff9e4e512680424f3e37d118eb"
+discussions:
+  -
+    discussion_id: "pop5-catalytic-attribution-and-methods"
+    prompt: "Resolve preparation, construct and assay discrepancies before assigning direct Pop5/Rpp14 chemistry."
+    kind: "CURATION_TODO"
+    status: "OPEN"
+    rationale: "Observed fraction and cell-level effects do not prove an isolated-domain nuclease, RNA stability mechanism or universal catalytic requirement."
+    evidence:
+      -
+        reference: "PMID:37831743"
+        supports: "PARTIAL"
+        evidence_source: "primary_figures_and_recovered_supplement"
+        explanation: "Figure4C lacks enhanced40minMono; Mg-free preparations are about95% pure; RNAi protein depletion failed; Figure6 gradient labels conflict."
+      -
+        reference: "PMID:42277007"
+        supports: "PARTIAL"
+        evidence_source: "primary_methods_figures_supplement_and_oligo_table"
+        explanation: "Residual RPP14 mRNA, replicate/test discrepancies and upstream-suppression rather than RPP14-null rescue remain material."
+      -
+        reference: "PMID:26152732"
+        supports: "PARTIAL"
+        evidence_source: "primary_table_methods_and_original_figures"
+        explanation: "Different SPR fits, unavailable mutant sensorgrams and cleavage-dose versus molecular-stoichiometry distinction remain explicit."
+    posed_by: "Codex"
+    posed_date: "2026-10-11"
+    notes: "Obtain exact transgene sequences/doses, matched-buffer biochemical tests, catalytic-site controls and endpoint-specific rescue. Hash-anchored ledgers are under evidence/PF01900; reused archaeal ledgers under PF01876."
+  -
+    discussion_id: "pop5-family-and-historical-coverage"
+    prompt: "Extend primary causal review to additional Pop5/Rpp14 homologs and historical mutation studies."
+    kind: "CURATION_TODO"
+    status: "OPEN"
+    rationale: "Six reference mappings and selected archaeal/human assays do not characterize all5287 frozen proteins. Renaming DUF69 does not establish family-wide function."
+    evidence:
+      -
+        reference: "PMID:16430919"
+        supports: "PARTIAL"
+        evidence_source: "primary_abstract_only"
+        explanation: "Loop-deletion dimerization and reconstitution lead; full original methods/figures still needed."
+      -
+        reference: "PMID:24120499"
+        supports: "PARTIAL"
+        evidence_source: "primary_abstract_only"
+        explanation: "C-terminal helix deletion/FRET lead; complete original conditions and control data still needed."
+      -
+        reference: "PMID:20705647"
+        supports: "PARTIAL"
+        evidence_source: "primary_methods_figures_and_supplement"
+        explanation: "Pair reconstitution and locus table are inspected; other homologs and heterologous RNA contexts remain outside these retained graphs."
+    posed_by: "Codex"
+    posed_date: "2026-10-11"
+    notes: "Review2008Mja cis-Tyr,2011assembly,2012annealing,2018yeast,2022Mja,1999/2002human discovery/catalysis,2024POP5telomere and metazoanMRP leads. No unsupported edge fills a coverage gap; partial self-review leaves IN_PROGRESS."

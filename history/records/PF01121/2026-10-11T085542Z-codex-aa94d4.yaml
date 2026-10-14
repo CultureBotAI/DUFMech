@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01121
+  path: curation/families/PF01121.yaml
+session:
+  id: 2026-10-11T085542Z-codex-aa94d4
+  timestamp: '2026-10-11T08:55:42Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add CoaE product and condition-specific kinetic graphs with contested R140A
+  details: 'Retain three graphs and six edges: five observed biochemical effects and
+    one explicitly contested R140A activity-loss claim. Preserve E. coli engineered-Ala
+    CoA production and separate mycobacterial DCoA/ATP series; L114A directions differ
+    between them. P63826 archived sequence matches both strain-specific successors;
+    full clone/primer discrepancy remains open. R140A Figure 5 versus Table 2 conflict
+    and other kinetic inconsistencies are not silently repaired. Native overlay and
+    primary-quotation checks pass; projection and partial same-agent scientific review
+    follow. Keep IN_PROGRESS.'

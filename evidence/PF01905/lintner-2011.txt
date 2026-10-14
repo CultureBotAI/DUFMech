@@ -1,0 +1,45 @@
+PF01905 primary biochemical assessment, 2026-10-11 UTC
+Lintner2011, PMID:21507944, doi:10.1074/jbc.M111.238485
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3122221/
+https://ars.els-cdn.com/content/image/1-s2.0-S0021925819490443-mmc1.pdf
+Main Methods/selected Results and original Figures 3/4 inspected.
+The 13-page publisher supplement was text-extracted; pages 2, 9 and 11
+were rendered and visually inspected, including S1, Table S3 and constructs.
+Minimal quotation: "crRNA".
+
+Figure 3B: isolated SSO1442 Csa2 and coexpressed SSO1442/SSO1441 Csa2/Cas5a
+each shift radiolabeled crRNA-A1, compared with RNA alone. Protein series
+0.25, 0.5, 1, 2, 3, 5, 7 uM; RNA 100 nM. Similar-looking curves are not
+a precise equivalence test or separate quantitative Kd estimates.
+Binding Methods: 20 mM MES pH 6.0, 50 mM potassium glutamate, 0.5 mM DTT,
+5 mM EDTA, 5% glycerol, 55 C for 10 min, then native 10% PAGE.
+Supplement pages 10-11 identify sequenced dual-expression constructs with
+native Csa2 and His/TEV-tagged Cas5a. Do not silently apply the structural
+Csa2 tag or cellular tandem Strep/His8 tag to every recombinant preparation.
+
+Figure 3C: with the recombinant complex and Target-A1f ssDNA, adding cognate
+unlabeled crRNA-A1 increases the protein-bound DNA band relative to no crRNA.
+Replacing Target-A1f with reverse-complement Target-A1r under crRNA-positive
+conditions removes the strong bound-DNA signal. The free RNA-DNA hybrid is
+distinct from the more slowly migrating protein-bound species. Protein
+titrations are matched qualitatively; exact Figure 3C protein/crRNA doses
+were not established beyond the general Methods and displayed titration.
+Table S3 supplies all three named oligonucleotides and strand identity.
+Neither binding result proves dsDNA targeting, cleavage or cellular immunity.
+PAM-independent binding is mentioned as data not shown; it is not a displayed
+experimental graph or proof that a complete effector ignores PAMs.
+
+Figure 4E: the H160A Csa2 preparation has less shifted crRNA than WT across
+the displayed 0.25, 0.5, 1, 2, 3 uM series. Signal remains at higher doses;
+do not call complete loss. No fitted affinity change, separate mutant-folding
+measurement, direct H160/RNA contact or catalytic proton-transfer event was
+established. H160 lies within current PF01905 5-273, but whole 321-aa protein
+was tested. Crystal 3PS0 contains no RNA and resolves H160 only in A/C.
+
+S1 shows RNA retention under RNase treatment in a heterogeneous cellular
+aCASCADE preparation, without a matched unbound-RNA arm establishing a
+unique Csa2 protection effect. Co-purification, helical appearance, flexible
+loops and modeled hexamers remain context. Cas6 cleavage in Figure 2 is not
+Csa2 catalysis. Reported purification-force differences are not assay outputs.
+No raw gels, densitometric reanalysis, exact mutant sequencing or 3-D dynamics
+were reproduced. 2011 and 2013 assays use different probes and temperatures.

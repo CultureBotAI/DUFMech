@@ -1,0 +1,34 @@
+Arfi et al. 2016. PMID:27114507; doi:10.1073/pnas.1600546113.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4868467/
+Inspected 2026-10-11 by Codex: Results, relevant Methods and inline SI;
+Figures 2, 3, 4 and S5 visually inspected. S4/S7 captions, not images.
+Minimal source quotations: "Ig Cleavage Assay"; "VSSAST"; "Ser727Ala".
+The last label is normalized plain-text notation of the printed mutant label.
+
+Evidence assessment (not a verbatim extract):
+Figure 2C compares purified goat IgG with recombinant MIP r-0582 plus MIB
+r-0583, MIP without MIB, and r-0582A plus MIB. The joint WT preparation
+generates an approximately 44-kDa heavy-chain fragment; the omission and
+mutant lanes retain intact heavy chain without that product. Nonspecific
+MIB detection is explicitly explained by antibody binding, not IgG cleavage.
+Figure 3B separately shows heavy-chain cleavage products from Fab and
+F(ab')2 in joint reactions. Figure 3C reports Edman product sequence VSSAST.
+
+Both recombinant proteins replace the N-terminal transmembrane segment
+with a His tag and are expressed in E. coli. PBS pH 7.4; MIP added last.
+Main Methods give 30 C; SI gives room temperature. Figure 2B is specifically
+15 min at 30 C, but numeric doses/time for Figure 2C are not established.
+Do not borrow the distinct 2021 protocol. Exact 2016 clone termini remain open.
+
+Interpretation limits: direct net biochemical preparation effects, not an
+isolated-domain assay or catalytic rate. The 2016 S727A label conflicts with
+Y727/S759 in the full-length ACU78687.1 reference and S759A in 2021. Retain
+the published r-0582A label without assigning an independently verified
+canonical mutation. No folding/abundance control establishes its atomic role.
+2016 CH-domain numbering differs from standard VH-CH1 terminology; do not
+propagate VH-CH3 or specify a universal exact cleavage bond. The 2021 bond
+label and 2016 Edman sequence still need antibody-reference reconciliation.
+SPR supports conditional assembly but WT/mutant method labels differ; no
+kinetic or catalytic activation edge is adopted. SI's KD formula is inverted
+relative to its rate numbers. Inhibitor observations and other-host substrates
+remain follow-ups until the corresponding images/conditions are inspected.

@@ -1,0 +1,45 @@
+Zhang, Guo and Huang 2020, NAR, PMID:32761152,
+doi:10.1093/nar/gkaa656. This is Zhang2020, not Cao2020.
+Primary: https://pmc.ncbi.nlm.nih.gov/articles/PMC7498313/
+Inspected Methods/Results and original Figures 1,3,4,5.
+Minimal quotation: "Sis10b is capable of RNA unfolding/unwinding and strand exchange"
+
+Paraphrased assay ledger:
+Sis10b from S. islandicus REY15A, pET30a constructs sequence-verified by
+authors; purification refers to an earlier method. Current F0NHH1 is97aa,
+PF01918 10-72. DeltaN12 deletes1-12, not an isolated Pfam interval.
+M20E/L24E/L27E/F60E is one quadruple mutant, not four single-mutant assays.
+Figure1 EMSA:44-bp dsRNA or44-nt ssRNA,55 C for30min, gels55 C.
+WT apparent Kd dsRNA29.4nM,ssRNA5.3nM. K16A dsRNA59.3nM;
+K17A dsRNA47.3nM,ssRNA53.4nM; K17R28.2/6.2nM.
+K17A loses high-temperature ssRNA preference but retains RNA binding.
+Other double/triple mutations reduce binding more; Figure1C crosslinking
+of deltaN12 and the quadruple mutant differs from WT, a folding/assembly
+qualification rather than a resolved atomic mechanism.
+Figure3 molecular beacon:forked partial40nt duplex,20uM protein,
+0.1uM probe,30min,200mM Tris pH7.4/10mM MgCl2.
+WT normalized fluorescence35% at37 C and71% at55 C; annealed controls
+15/16%, heat-denatured100%; K17A17/25%. DeltaN12 and quadruple mutant
+remain near annealed baseline. Fluorescence is an unwinding proxy, not
+fractional RNA product yield. K16A/K17R retain substantial unwinding.
+Figure4 strand exchange:400pM labeled duplex,20nM unlabeled SA,
+37 C,30min dose series0/0.25/1/4/15/60/120uM protein, and1uM protein
+time course0-120min. Released labeled SA is resolved by native PAGE.
+K17A apparent exchange rate is about6.6-fold lower than WT; deltaN12
+and quadruple mutant nearly inactive. K16A/K17R retain much greater
+activity. Rate-constant text units are not reinterpreted as new kinetics;
+Methods prints50mg/ml BSA, not silently changed to a presumed lower unit.
+Figure5:E234-derived NZ1 replaces chromosomal sis10b promoter with
+arabinose-inducible promoter; slow growth in ACVy with arabinose.
+WT pSeSD-sis10b rescue restores OD600 toward parentalE234.
+K17A,deltaN12 and quadruple-mutant complementation give lower OD600
+than WT-complementedNZ1; do not call every mutant complete non-rescue.
+Total Sis10b immunoblots include residual chromosomal and plasmid protein.
+Similar/higher abundance does not prove identical folding or activity.
+K16A/K17R provide substantial rescue; double mutants partially rescue;
+triple-mutant transformants were not obtained, not a measured growth curve.
+Native growth effects are INDIRECT and are not joined to in-vitro unwinding
+as a demonstrated causal chain. E. coli RL211 chloramphenicol reporter
+supports a separate heterologous phenotype, not directly observed RNA
+unfolding or a native intracellular substrate. Not encoded in this pass.
+Access/review date: 2026-10-12.

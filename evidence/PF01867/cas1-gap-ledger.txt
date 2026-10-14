@@ -1,0 +1,48 @@
+PF01867 research boundaries and later-evidence checks, 2026-10-11.
+Ignored/hidden-inclusive search of curation,evidence,history/records,
+reviews/structured,.agents,.claude found no earlier PF01867/Cas_Cas1 assessment
+before these additions. Frozen identity is preserved, not newly classified.
+
+Queries included PF01867/Cas_Cas1, E.coli Cas1 integration/disintegration,
+CRISPR Immunological Memory Requires a Host Factor for Specificity, and later
+Cas1 structures. These are bounded searches, not exhaustive family coverage.
+
+PMID:27211867, DOI:10.1016/j.molcel.2016.04.027.
+https://pubmed.ncbi.nlm.nih.gov/27211867/
+Eutils abstract XML SHA256 0ed48497394a78233575703d57860a18bb76dadcf89f0fca835b4e4c879d8ee3.
+Primary abstract inspected: IHF permits linear-target integration and directs
+the first attack to the leader-repeat border. Publisher fulltext/PDF returned
+403. This bounds the older IHF-absent result, but is not a fully checked new
+IHF graph. Nuñez2016 dissertation https://escholarship.org/uc/item/26n3b6f5
+is a further primary-source access route; body not yet inspected.
+
+PMID:28729350, DOI:10.1126/science.aao0679.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC5748385/
+HTML SHA256 ffc1a26a94a02ce56aa873c71db427ed4c1152b3840f46b6d70545f06967c193.
+Selected primary Results and Figures5/6 captions read, not original images or
+supplement: IHF bends the leader; upstream-sequence/target-dose comparisons
+alter integration specificity and rates. Contacts and structural snapshots
+alone are not observed temporal microsteps. Residue and DNA-variant effects
+need full method/figure review before native graph addition. The older 2015
+leader-distal-first model is not adopted as universal event order.
+
+Source-image mismatch in PMC4359072: HTML F10 is captioned ED5 disintegration,
+but https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ba72/4359072/fdf0fc38f793/nihms-656540-f0010.jpg
+(SHA256 0d585ad3da3201181520a52ede4b51e412739cba7e1b8964f190406d015eb131)
+visually shows ED6 length/overhang/prenicked/vector panels. F11's linked
+https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ba72/4359072/4b6ac2683078/nihms-656540-f0011.jpg
+(SHA256 a1cba3bb2dbf8c69935d4ccf8a410625f59d85d06c0e62c0c4219925ed5b23b2)
+shows ED7 tyrosine mutants, although captioned ED6. F9 is correctly ED4.
+Publisher figure access redirected to inaccessible authentication. Resolve ED5
+against an authoritative reproduction before claiming original-image review.
+The retained disintegration edge uses the correctly matched main Figure2H.
+
+Open coverage:2015 capture structures (PMC4662619);2017 alternative IHF study
+(PMC5224486);2011 E.coli DNA-repair/nuclease work(PMID21219465);2017 typeI-F
+Cas1-Cas2-3(PMC5495228);2019 typeV-C mini-integrase(PMC6386590); other bacterial
+and archaeal members and casposases. These are leads, not completed reviews.
+PMID34435949/PMC8390005/DOI10.7554/eLife.65763 primary abstract inspected:
+2021 disintegration study uses Streptococcus pyogenes, not the E.coli member.
+Do not merge its results with the E.coli reactions without identity/assay review.
+No family-wide Cas2 requirement, universal supercoiling requirement, unique
+integration order, or complete in-vivo immunity mechanism is asserted.

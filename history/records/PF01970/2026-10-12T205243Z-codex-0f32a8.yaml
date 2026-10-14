@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01970
+  path: curation/families/PF01970.yaml
+session:
+  id: 2026-10-12T205243Z-codex-0f32a8
+  timestamp: '2026-10-12T20:52:43Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate six PF01970 cellular causal graphs with sixteen observed effects
+  details: Separate E6 TctA and TpiA insertion, rescue and growth-delay contexts;
+    retain joint heterologous conversion, cation-dependent whole-operon growth including
+    strontium improvement, and CitAB-deletion transcript effects. Preserve archived
+    protein mapping, inactive UniProt IDs, unavailable supplement, host discrepancy
+    and unresolved molecular mechanism.

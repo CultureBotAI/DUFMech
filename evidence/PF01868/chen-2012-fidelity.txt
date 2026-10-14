@@ -1,0 +1,30 @@
+PMID:22298511; DOI:10.1093/nar/gks013
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/
+Inspected 2026-10-11: Methods, Results, Table2 and original Figures1/2.
+Minimal verbatim quotation: "Data analysis"
+
+Curator evidence summary:
+Substrate is nonconsensus SynechocystisPCC6803 pre-tRNAGln with A-1 and
+U+1/A+72. FC0 is correct/(correct+miscleaved) products, not fraction of all
+starting substrate. Figure1C Pfu reactions use2 nM5prime-labeled substrate,
+55 C,15 uM RPR alone or200 nM RPR+2 uM proteins, with respective optimized
+buffers. RNA-only and RPP21/RPP29 incubate9 h; POP5/RPP30 30 min; all4 10 min.
+Reported FC0 is0.11 +/-0.03 (RNA),0.57 +/-0.03 (+21/29),0.59 +/-0.01
+(+POP5/30),0.92 +/-0.01 (all4). These composite protocol contrasts do not
+isolate the proteins from RNA dose/time/buffer or establish a rate effect.
+
+Mja Figure2/Table2 uses pre-tRNAGln-AAU-RPR cis transcript,50 nM RNA and
+500 nM proteins,55 C,pH6. RNA-only optimized buffer is2.5 M NH4/500 mM Mg;
+RPP21/RPP29 uses0.8 M NH4/200 mM Mg. Four-RPP assembly uses25 mM Ca and
+cleavage nominal100 mM Mg/0.8 M NH4. Conditions are deliberately unequal.
+FC0 rises0.18 +/-0.01 to0.47 +/-0.02 with the pair and0.84 +/-0.03 with
+all4. Pair kobs remains0.004/min, versus2.5 with POP5/30 and10.5 with all4.
+Total amplitudes93/86/96/61% respectively prevent equating fidelity with
+complete yield. Correct/miscleavage rate components are derived using a
+parallel-pathway model, not independently observed microscopic transitions.
+Earlier-method concentration/mixing ambiguities remain unresolved; do not
+silently use them to create matched-buffer protein-only comparisons.
+
+Plant nuclear RNase P is partially purified with unresolved subunit identity;
+it is not an individually mapped Rpp29 experiment. No eukaryotic edge added.
+Raw HTML SHA256:76bb8d2ac2f94324212ca99a43b4565c590d53986a4e4c28f1527adbc8221e43

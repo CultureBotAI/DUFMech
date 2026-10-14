@@ -4,7 +4,7 @@ name: HAMP domain
 short_name: HAMP
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00672
 counters:
   proteins: 257581
@@ -21,3 +21,200 @@ provenance:
   generated_at: '2026-10-10T07:44:21.614711Z'
   source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
 interpro_id: InterPro:IPR003660
+curation_history: history/records/PF00672
+discussions:
+- discussion_id: tsr-hamp-molecular-output-and-context-coverage
+  prompt: Resolve HAMP molecular output states and extend beyond the three scoped Tsr mutant phenotypes.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Motor rotation and soft-agar chemotaxis are different cellular readouts. Neither establishes
+    a specific HAMP packing geometry, direct phosphorylation step or universal need for HAMP in kinase
+    activation. Host adaptation state materially changes WT output.
+  evidence:
+  - reference: PMID:18621896
+    supports: PARTIAL
+    evidence_source: full_text
+    explanation: Methods, Table 1, Figures 2/4 and relevant Results support the three scoped effects.
+      Coding-sequence checks and abundance controls do not eliminate local structural or complex-assembly
+      alternatives; tethering conditions and broader mutant coverage remain incomplete.
+  - reference: PMID:24205875
+    supports: PARTIAL
+    evidence_source: selected_full_text
+    explanation: The later Tsr deletion study distinguishes physiological and nonphysiological output
+      states and discusses competing structural interpretations. Its deletion results are not transferred
+      to G235 substitutions, and no packing-model arrow is promoted to an observed mechanism.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Retrieve exact tethering conditions and independent rescue or direct kinase/assembly measurements
+    for these variants. Curate other Tsr mutants, HAMP-containing proteins and deletion contexts separately
+    with primary evidence. The 2002 cited behavioral weighting method was inspected; unrelated crosslinking
+    conditions were not borrowed. Raw movies and later-study figures/supplements were not reanalyzed.
+    Family status remains IN_PROGRESS.
+causal_graphs:
+- graph_id: tsr-g235e-adaptation-proficient-rotation
+  title: Tsr G235E increases clockwise rotation in adaptation-proficient cells
+  scope: Full-length pRR53 Tsr-G235E compared with WT pRR53 Tsr in E. coli K-12 RP437-derived UU1250,
+    lacking all five MCP receptors but retaining CheR/CheB. Not an isolated HAMP-domain or purified kinase
+    assay.
+  context: Antibody-tethered cells under unstimulated steady-state conditions; Figure 4 displays 100 cells
+    per strain and mutant. The five rotation categories are converted to an estimated fraction of CW time
+    using weights 0, 0.25, 0.5, 0.75 and 1. This is not simply a percentage of CW cells. pRR53 is IPTG-controlled;
+    exact tethering induction, temperature and buffer are not restated in the 2008 Methods, and soft-agar
+    conditions are not transferred.
+  family_mapping: UniProtKB:P02942, tsr/cheD, b4355/JW4318, is a 551-residue K-12 reference, taxon 83333,
+    sequence version 2. UniProt and InterPro sequences agree exactly; PF00672 maps at 217-263 inclusive,
+    containing G235. The study sequenced the entire mutant tsr coding region. Reference mapping does not
+    imply the RP437-derived assay hosts are MG1655 or that the complete plasmid junctions were independently
+    verified.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: The CW-locked class is a cellular reporter category, not direct measurement of CheA phosphorylation
+    or a particular HAMP packing state. The greater-than-75% threshold is not an exact G235E value. Protein
+    abundance of at least 50% WT was established in UU1535 for the relevant mutant set, not as a folding
+    assay in UU1250. No raw movies, independent-replicate count or clean restoration of this endpoint
+    is established here.
+  nodes:
+  - node_id: g235e-in-uu1250
+    label: Tsr G235E expressed in adaptation-proficient UU1250
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P02942
+  - node_id: uu1250-cw-time
+    label: Estimated clockwise rotation time fraction in UU1250
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: g235e-increases-uu1250-cw-time
+    subject: g235e-in-uu1250
+    predicate: increases
+    object: uu1250-cw-time
+    mechanism: G235E is CW locked, defined as greater than 75% CW time in UU1250, compared with approximately
+      25% for WT Tsr. Figure 4 shows the corresponding shift in rotation categories. The molecular path
+      through receptor assembly, kinase signaling and the motor is not directly resolved by this assay.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18621896
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2566183/
+      snippet: under unstimulated, steady-state conditions
+      explanation: Table 1 assigns G235E to CW locked, Methods defines its host-specific thresholds, and
+        Figure 4 directly displays G235E and WT profiles. The comparison is restricted to adaptation-proficient
+        UU1250.
+      cache_path: evidence/PF00672/ames-2008-tsr.txt
+      cache_sha256: c82e2399d5e794ca71f7a5c9280bc60d47969bc211065970129b793e09cb7bff
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P02942/entry/pfam/PF00672/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P02942/entry/pfam/PF00672/
+      snippet: 'P02942 Pfam:PF00672 interval: 217-263, inclusive'
+      explanation: Grounds the altered G235 residue in the HAMP interval of full-length Tsr without generalizing
+        to other HAMP proteins.
+      cache_path: evidence/PF00672/Tsr-identity.txt
+      cache_sha256: 46620a9b2bca73a9da6efbd86c947f6cadfbdd9c0f7c304dfb5f3c093e2d2ec7
+- graph_id: tsr-g235c-adaptation-defective-rotation
+  title: Tsr G235C reduces clockwise rotation in adaptation-defective cells
+  scope: Full-length pRR53 Tsr-G235C compared with WT Tsr in RP437-derived UU1535, which lacks the MCP
+    receptors and the CheR/CheB adaptation enzymes. This is distinct from the UU1250 G235E comparison.
+  context: Unstimulated antibody-tethered cells with unmodified Tsr retaining the QEQE major-site pattern.
+    Figure 4 scores 100 cells into five rotation categories; the CW-time estimate is a weighted sum, not
+    a direct kinase measurement. Exact tethering induction, temperature and buffer remain unspecified
+    in the inspected 2008 Methods.
+  family_mapping: P02942 Tsr, K-12 reference taxon 83333, 551 residues, sequence version 2, has PF00672
+    at 217-263. Reference G235 matches the mutated connector position. Current UniProt and InterPro sequences
+    agree; exact complete experimental plasmid sequence was not independently reconstructed.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: CCW is the default motor direction, so low CW output may reflect defective receptor-complex
+    assembly rather than a specific native kinase-off conformation. The at-most-15% classification is
+    not an exact per-mutant estimate or a universal zero. Expression controls do not prove local folding,
+    and dominant heterodimer behavior is not a rescue of this rotation endpoint.
+  nodes:
+  - node_id: g235c-in-uu1535
+    label: Tsr G235C expressed in CheR/CheB-deficient UU1535
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P02942
+  - node_id: uu1535-cw-time
+    label: Estimated clockwise rotation time fraction in UU1535
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: g235c-decreases-uu1535-cw-time
+    subject: g235c-in-uu1535
+    predicate: decreases
+    object: uu1535-cw-time
+    mechanism: G235C is CCW locked, at most 15% CW time in UU1535, whereas WT Tsr gives above 80% CW under
+      this adaptation-defective condition. Figure 4 shows the contrasting rotation profiles. Neither direct
+      kinase inhibition nor a particular molecular HAMP state is established.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18621896
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2566183/
+      snippet: under unstimulated, steady-state conditions
+      explanation: Methods, Table 1 and Figure 4 support the G235C comparison in UU1535. The paper explicitly
+        distinguishes low CW output from proven assembly of a kinase-off signaling complex.
+      cache_path: evidence/PF00672/ames-2008-tsr.txt
+      cache_sha256: c82e2399d5e794ca71f7a5c9280bc60d47969bc211065970129b793e09cb7bff
+- graph_id: tsr-g235p-soft-agar-chemotaxis
+  title: Tsr G235P loses the WT soft-agar chemotactic response
+  scope: pRR53 Tsr-G235P versus WT pRR53 and pRR48 vector control in adaptation-proficient UU1250. The
+    soft-agar response is a separate experiment from tethered-cell rotation.
+  context: Fresh transformant colonies toothpick-inoculated on tryptone soft agar containing 50 ug/mL
+    ampicillin, incubated at 32.5 C for 8 h, as in Figure 2. pRR53 is IPTG-inducible and 100 uM is the
+    reported optimal WT screening level; the photographed plate caption does not independently specify
+    its IPTG dose.
+  family_mapping: Full-length Tsr corresponds to P02942, sequence version 2, 551 residues, with G235 inside
+    PF00672 at 217-263. The study verifies mutant coding sequences; the native strain background and the
+    current K-12 reference are kept distinct.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Colony morphology and expansion are a chemotaxis readout, not a purified serine-binding
+    measurement or a measured growth rate. G235P retains approximately WT steady-state rotation and spreads
+    more than the nonreversing vector control. Thus loss of this response does not establish immobility
+    or a simple lack of kinase activity. No exact colony radius or statistical effect size is inferred
+    from the image.
+  nodes:
+  - node_id: g235p-in-uu1250
+    label: Tsr G235P expressed in UU1250 on tryptone soft agar
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P02942
+  - node_id: soft-agar-chemotactic-response
+    label: WT-like serine-ring morphology and chemotactic colony expansion
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: g235p-decreases-soft-agar-response
+    subject: g235p-in-uu1250
+    predicate: decreases
+    object: soft-agar-chemotactic-response
+    mechanism: G235P has the study's null chemotaxis phenotype with reduced expansion and loss of the
+      WT outer serine-ring morphology, despite approximately WT rotation output in the separate tethered-cell
+      assay. The molecular cause of deficient stimulus-dependent signaling remains unresolved.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18621896
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2566183/
+      snippet: this mutant receptor did not mediate chemotaxis
+      explanation: Results explicitly identifies G235P, and the visually inspected Figure 2 compares its
+        colony with WT and vector. Figure 4's approximately WT rotation pattern prevents relabeling the
+        chemotaxis defect as loss of all motor function.
+      cache_path: evidence/PF00672/ames-2008-tsr.txt
+      cache_sha256: c82e2399d5e794ca71f7a5c9280bc60d47969bc211065970129b793e09cb7bff
+curation_events:
+- timestamp: '2026-10-11T07:40:11Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Add host-specific Tsr HAMP rotation and chemotaxis phenotypes
+  history_record: history/records/PF00672/2026-10-11T074011Z-codex-211b3b.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T07:45:32Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial Tsr HAMP scientific phenotype self-review
+  history_record: history/records/PF00672/2026-10-11T074532Z-codex-4823ac.yaml
+  event_index: 0
+  llm_assisted: true

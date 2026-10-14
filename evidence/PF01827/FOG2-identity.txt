@@ -1,0 +1,48 @@
+PF01827 identity and construct mapping, 2026-10-11 UTC, Codex.
+Frozen entry: FTH, EX_DUF, InterPro IPR002900; historical DUF38.
+Imported snapshot fields are unchanged.
+
+https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Afog-2%20AND%20organism_id%3A6239&format=json
+Q2YS43, fog-2/Y113G7B.5b/WBGene00001482, C. elegans taxon 6239,
+327 aa, exactly matches independently parsed CAJ43447.1 (Bristol N2).
+Protein SHA-256, unwrapped sequence without trailing newline:
+7dcbb46a50838b3458e37dff371e3edc2a1cee7a65fc311ec0d7994b0a35732f
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=CAJ43447.1&rettype=gb&retmode=text
+Clifford 2000 cites AL110477.1 and experimentally supported splice
+coordinates. Independently fetched this exact nucleotide version, joined
+1-based inclusive 11662-11702, 11834-11911, 11959-12598, 12649-12873,
+and translated the resulting 984 nt. The 327-aa protein plus stop exactly
+matches Q2YS43. Thus the historical 327-aa reference, not merely its
+gene name or length, is mapped. This does not independently resequence
+each tagged historical clone or engineered chimera.
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=AL110477.1&rettype=gb&retmode=text
+The shorter G5EEX5/Y113G7B.5a entry has 312 aa and a different terminal
+sequence; do not silently use its coordinates for the 327-aa experiments.
+The primary paper explicitly distinguishes the longer cDNA from the
+shorter predicted/EST transcript. Reference residues 148/219/271 are W/G/G.
+
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q2YS43/entry/pfam/PF01827/
+Current PF01827 is 144-271 inclusive; separate PF00646 F-box is 20-59:
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q2YS43/entry/pfam/PF00646/
+The legacy FTH schematics are broader than this current HMM assignment.
+The 318-aa and 299-aa constructs remove only native tail outside 144-271;
+263-aa and 251-aa constructs remove domain 264-271 or 252-271 as well
+as tail. Exon-4 transfer, shown as residues 254-327 in Figure 4B, includes
+domain 254-271 plus tail 272-327, not an isolated full FTH domain.
+The 251-aa deletion is not exactly complementary to 254-327; the
+historical junction must be resolved before a nucleotide-exact clone claim.
+
+https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Aftr-1%20AND%20organism_id%3A6239&format=json
+G5EC06, ftr-1/Y113G7B.4/WBGene00013756, 314 aa, exactly matches
+independently parsed CAB54326.1. SHA-256 of its unwrapped sequence:
+5db345b53cfc204ab4ae1f6393f53ca668ccecae1e05d223103e494edbcc50a3
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=CAB54326.1&rettype=gb&retmode=text
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/G5EC06/entry/pfam/PF01827/
+FTR-1 PF01827 is 146-283. Figure 4 shows 314 aa; Methods says 318.
+Do not claim that independently validating the reference resolves this
+experimental-clone discrepancy. Other natural-isolate FTR/FOG sequences
+returned by UniProt are not interchangeable experimental reagents.
+
+FOG-2, FTR-1, GLD-1, SKR-1 and TRA-2 are distinct proteins. GLD-1/SKR-1
+are interaction comparators, and modified TRA-2 is a genetic suppressor,
+not an additional PF01827 enzyme. No family-wide function is inferred.

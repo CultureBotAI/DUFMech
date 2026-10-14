@@ -1,0 +1,32 @@
+PF01955 CbiS domain-attribution controls; inspected 2026-10-12 UTC
+PMID16740929; DOI10.1128/JB.00227-06.
+https://journals.asm.org/doi/10.1128/jb.00227-06
+Locators: phosphatase Methods/Results, originalFigures3C/D,4C/D,5B,
+Table1 and Discussion. Minimal exact quotation: "two distinct, separable activities".
+
+WholeCbiS and C-terminalpMkCBIS7 rescueJE2192cobCcobT with10nMCbi and
+300uMDMB; N-terminalpMkCBIS6 does not exceedbackground. WholeCbiS without
+DMB stayslow. InJE2119cobC with10nMCby, whole/C-terminal constructs rescue;
+N-terminal/vector show residual lateOD, not absolutelethality. cobCpositive
+controls grow. Caption identifiesJE2192 in3C, whereas Results switches to
+JE6984. Table1 hasJE2192cobC1175::Tn10d(Tet)cobT109::MudJ and
+JE2119cobC1175::Tn10d(Tet). Exact strains/clone boundaries remain unresolved.
+The C-terminal intended208-357 segment containsPF04608 257-353, not
+PF01955 8-205. These controls oppose assigning the phosphatase effect toDUF105.
+
+Purified wholefusion:50ul,1.1ug,50mMHEPESpH8,10mMMg,190uMalphaRP,
+anoxic90C1h. Figure4C/D: substrate14.3min, productalphaR34.4min;
+enzyme-minus lacks product. Figure5B:279.6 positive-ion mass, consistent
+with protonatedalphaR; fragment185.4. Figure4Dcaption incorrectly calls
+the productalphaRP; plot/Results/mass supportalphaR. No PF01955 catalysis
+is inferred from wholefusion activity when its other domain provides rescue.
+
+Text phosphatase rate28+/-1.1nmol/min/mg; KPi substitution or Mg omission
+gives no observed product with printedlimit1.3pmol/min/mg. AtmosphericO2
+reduces activity to8+/-1.2nmol/min/mg; Cbi5/340uMhas no reported effect.
+These source values preserve the unit transition but are notPF01955graphedges.
+Retained phosphatase underO2 is not a direct folding assay. N-terminalCys
+function, loop-independent binding and fusion-mediated thermostability remain
+unproved; split fragments were tested at37C, not90-100C. Discussion mentions
+alphaAMP, but its separate quantitative assay is unresolved. Neither native
+lower-ligand identity nor a coupled hydrolysis-to-phosphatase chain is established.

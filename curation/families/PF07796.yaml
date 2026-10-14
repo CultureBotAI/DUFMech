@@ -1,0 +1,85 @@
+pfam_id: PF07796
+curation_status: IN_PROGRESS
+curation_history: history/records/PF07796
+causal_graphs:
+  - graph_id: pinhibens-duf1638-pooled-fitness
+    title: PGA1_c13340 insertion-mutant fitness depends on the supplied nutrients
+    scope: Pooled barcoded transposon mutants of Phaeobacter inhibens DSM 17395/BS107, focusing on the PGA1_c13340 row in Figure 4B; not an individual deletion, purified reaction or demonstrated B12-reactivation mechanism.
+    context: The retained comparison is between the figure's ammonium-plus-sucrose and methionine-plus-sucrose conditions. The caption describes varied carbon and nitrogen sources; methods omit ammonium for nitrogen-source tests. This is not assumed to be methionine added to an otherwise identical ammonium-containing medium. General fitness methods recover pools in rich medium, transfer at OD600 0.02 into 5 mL and sequence barcodes before growth and at saturation. P. inhibens is grown aerobically with shaking; exact plotted nutrient doses, temperature and duration remain unverified.
+    family_mapping: PGA1_c13340 is NCBIProtein:AFO91049.1 on the reverse strand of CP002976.1 at 1377532-1378257, with a 241-aa sequence identical to UniParc UPI0001632E23. UniParc maps PF07796 at 72-230. NCBI's CDD-based interval ends at 231; these are not silently treated as identical annotations. Historical UniProt entries are inactive, but the sequence/locus identity is retained. The experiment concerns a bacterial member, not only the archaeal members emphasized in the frozen family description.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:391619
+    limitations: Relative fitness is normalized mutant abundance during pooled growth, not an absolute growth rate or direct methionine flux. No clean deletion or gene complementation is established here. Operon-terminal placement argues against polarity but is not a direct polarity control; cross-feeding and insertion-level effects remain possible. Cofitness and phylogenetic co-occurrence with RamA-like proteins do not prove interaction or electron transfer. The source's B12-reactivation figure heading is broader than its explicit uncertainty about the DUF1638 molecular function.
+    nodes:
+      - node_id: pga1-c13340-insertions
+        label: Transposon disruption of PGA1_c13340 in the P. inhibens pool
+        node_type: PERTURBATION
+        grounding:
+          - NCBIProtein:AFO91049.1
+      - node_id: methionine-sucrose-condition
+        label: Methionine/sucrose condition instead of ammonium/sucrose
+        node_type: PERTURBATION
+      - node_id: pga1-c13340-relative-fitness
+        label: Relative fitness of PGA1_c13340 insertion mutants during pooled growth
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: insertions-decrease-ammonium-sucrose-fitness
+        subject: pga1-c13340-insertions
+        predicate: decreases
+        object: pga1-c13340-relative-fitness
+        mechanism: In the ammonium/sucrose condition, PGA1_c13340 insertion strains have negative normalized gene fitness, reflecting loss of relative abundance during pool growth. The phenotype is conditional on the tested medium and comparison baseline.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:29324779
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5764234/
+            snippet: rescued by added methionine
+            explanation: Visually inspected Figure 4B establishes the negative ammonium/sucrose fitness values for the identified DUF1638 row; the quoted rescue result supplies adjacent perturbation context, not a direct catalytic measurement.
+            cache_path: evidence/PF07796/price-2018-duf1638.txt
+            cache_sha256: 554b459470b3aa5e2180e27be9d1acfbfbbf6f4b88d8abd7ae1f51fe3ac648b7
+          - reference: https://rest.uniprot.org/uniparc/UPI0001632E23.json
+            source_url: https://rest.uniprot.org/uniparc/UPI0001632E23.json
+            snippet: 'database: Pfam; databaseId: PF07796; locations: 72-230, inclusive'
+            explanation: Sequence-verified locus-to-family mapping paired with NCBI AFO91049.1; not experimental evidence for growth or an isolated-domain construct.
+            cache_path: evidence/PF07796/PGA1c13340-identity.txt
+            cache_sha256: 292f2715a2cb7dc650e05e1fac3ea33cf118543c92c72dded7c22f266f361b06
+      - edge_id: methionine-sucrose-increases-mutant-fitness
+        subject: methionine-sucrose-condition
+        predicate: increases
+        object: pga1-c13340-relative-fitness
+        mechanism: PGA1_c13340 mutant fitness is relieved in the plotted methionine/sucrose condition relative to ammonium/sucrose. The full nutrient-condition comparison is the intervention; no independently sufficient methionine-to-cobalamin chemical step is asserted.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:29324779
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5764234/
+            snippet: rescued by added methionine
+            explanation: Figure 4B labels and the RamA-like-protein results support the nutritional fitness comparison. Exact doses and matched experiment identifiers remain open, and the generic supplementation wording is not used to erase the figure's nitrogen-source distinction.
+            cache_path: evidence/PF07796/price-2018-duf1638.txt
+            cache_sha256: 554b459470b3aa5e2180e27be9d1acfbfbbf6f4b88d8abd7ae1f51fe3ac648b7
+          - reference: https://rest.uniprot.org/uniparc/UPI0001632E23.json
+            source_url: https://rest.uniprot.org/uniparc/UPI0001632E23.json
+            snippet: 'locus_tag: PGA1_c13340'
+            explanation: Resolves the tested strain/locus and family membership only; inactive archive accessions are not treated as absent biological evidence.
+            cache_path: evidence/PF07796/PGA1c13340-identity.txt
+            cache_sha256: 292f2715a2cb7dc650e05e1fac3ea33cf118543c92c72dded7c22f266f361b06
+discussions:
+  - discussion_id: duf1638-fitness-versus-reactivation
+    prompt: Retrieve experiment-level nutrient and insertion metadata and test the proposed DUF1638 biochemical role independently of its fitness association.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: The retained evidence supports conditional pooled fitness, while B12 reactivation remains a proposed molecular interpretation for this protein. Gene-specific rescue, exact nutrient comparisons, additional member contexts and biochemical assays require separate evidence.
+    evidence:
+      - reference: PMID:29324779
+        supports: PARTIAL
+        evidence_source: full_text
+        explanation: Figure 4 was visually inspected. The authors explicitly leave the specific DUF1638 function unresolved; operon position and phylogenetic co-occurrence are not biochemical demonstrations.
+      - reference: PMID:40956897
+        supports: PARTIAL
+        evidence_source: selected_full_text
+        explanation: The 2025 main text reports greater SPO2162 abundance during N-osmolyte growth and a proposed cobalamin-reactivation role. Its inspected knockout/complementation experiments concern MtgC/MtgD, not DUF1638; the SPO2162 mapping and underlying data were not independently curated here.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: Do not transfer a neighboring protein's complementation or biochemical activity to DUF1638, or interpret a frozen archaeal-focused description as excluding this verified bacterial member. No family-wide negative conclusion follows from the bounded search.

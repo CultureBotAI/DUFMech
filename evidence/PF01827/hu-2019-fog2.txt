@@ -1,0 +1,66 @@
+PF01827 FOG-2 genetic contexts and negative molecular readouts
+Assessed 2026-10-11 UTC by Codex.
+PMID:30599151; DOI:10.1016/j.ydbio.2018.11.024.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9200065/?report=reader
+Primary HTML Methods, Results, Tables 1-3 and Discussion read. Figures
+3 and 6 visually inspected. Other figure captions read, not their images.
+The XML endpoint returned HTTP 500; HTML retrieval succeeded.
+
+Minimal verbatim anchors: "presence of oocytes"; "35% (N=40)".
+Remaining text is curator paraphrase and assessment.
+
+Table 2: families with tra-2(e2020); fem-3(q95), segregating fog-2(q71),
+are shifted as embryos from permissive propagation at 15 C to 25 C and
+grown to adulthood. Compound microscopy scores oocyte presence.
+The full scored population is 85 Mog and 24 Fog (109 total). A selected
+subset is recovered for PCR/Sanger genotyping: of nine Mog, four are
+fog-2(+/+), five q71/+ and zero q71/q71; of twelve Fog, zero are +/+,
+one is q71/+ and eleven q71/q71. Fog explicitly includes self-fertile
+animals. Do not call all 11 mutants sperm-free, or use 11/11 as an
+unbiased population penetrance estimate: sampling followed phenotyping.
+The retained effect is increased oocyte-producing/feminized outcome in
+this sensitized genotype, not a direct repression-rate measurement.
+Methods briefly places fem-3(q95) on I; the detailed crosses and strain
+list place the linked unc-24/fem-3/dpy-20 interval on IV. Retain the latter
+with the source inconsistency noted. Marker/background effects and direct
+FOG-2 biochemical steps were not isolated by this segregating-family test.
+
+Results near Figure 3: the endogenous tra-2(nm75) allele inserts a
+nine-residue HA tag four residues before TRA-2's stop. In fog-2(q71)
+XX animals the homozygous tag yields 35% self-fertility (N=40), compared
+with the reported sperm-deficient q71 baseline. Exact denominator for a
+contemporaneous untagged comparator is not supplied. This is partial
+genetic suppression by altered TRA-2, not FOG-2 complementation.
+CP153 is derived by crossing JK574 males to CP139/CP141; q71 and nm75
+are confirmed by sequencing/PCR. Default culture is 20 C on NGM;
+the precise scoring day and replicate breakdown of the 40 are not given.
+The tagged allele is therefore not a neutral reporter of wild-type biology.
+Figure 3B image says nmIs4 where Methods/caption identify nm75; Figure 6
+uses nm75. This image-label discrepancy remains unresolved.
+
+Figures 3C and 6A: neither whole-worm anti-HA blots nor germline imaging
+shows a clear TRA-2 increase in q71. L3 gonads, n=12 per genotype,
+have mean intensity 41.17 versus 41.2 (P=0.99). This does not prove
+identical translation rates or absence of a smaller undetectable effect.
+The positive gld-1 loss effect is a different perturbation and must not
+be assigned to FOG-2. OMA-1:GFP remains absent from the distal germline
+in both fog-2 backgrounds (Figure 6B); there is no universal target
+derepression claim. Somatic staining and detection limits matter.
+
+RNAseq compares first-day gravid N2 adults with successfully mated q71
+XX adults, three samples of 100 animals per condition. tra-2 abundance
+is similar (mean FPKM 48.9/49.6); most GLD-1 targets are unchanged.
+Mating/sperm composition differs, and active XX spermatogenesis is absent
+at collection. Reduced sperm-transcript signals are not direct FTH-mediated
+transcriptional repression. Raw GEO GSE110998 data and supplemental tables
+were not reanalyzed. Text says 304 shared targets while Figure 2 says 302;
+the random-primed 81/<10000 transcript result is mislabeled 0.08%.
+
+tra-2(e2020) removes 108 nt of the 3-prime UTR and abolishes known
+GLD-1 binding in prior in-vitro assays. The phenotype does not prove
+no binding anywhere in vivo, a particular alternative RNA target,
+GLD-1 independence or direct ubiquitination of nascent TRA-2.
+The Table 1 quantitative model uses assumed parameters, not measured
+repression constants. Table 3 RNAi percentages also need caution:
+19/179 is about 10.6%, and 32/75 about 42.7%, rather than transferring
+all narrative percentages literally. No such percentage is a new edge.

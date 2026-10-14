@@ -1,0 +1,45 @@
+Human MARF1 primary evidence; accessed2026-10-12 UTC
+PMID30364987; DOI10.1093/nar/gky1011
+https://pmc.ncbi.nlm.nih.gov/articles/PMC6294520/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6294520/fullTextXML
+Temporary XML SHA256:
+c9dcfcaaa343a207e59abd219887f0bd90f38f3c75e598b49d88d1ec081ca165
+Relevant primary Results/Methods and Figures3,5,6 were read/visually inspected.
+Minimal source quotation: "strongly reduced as compared to"
+
+Figure5: purified human238-510 includes PF01936; it is NOT the352-500
+crystallization construct. WT protein with U30 and Mn yields shorter labeled
+RNA products. The paired5-prime/3-prime label patterns support internal
+cleavage without identifying physiological targets or an atomic catalytic
+trajectory. GST was removed. Assay1uM protein,10pmol unlabeled plus0.1pmol
+labeled U30 in10uL,20mM HEPES pH7.5,150mM NaCl,10%glycerol,1mM DTT,
+3mM MnCl2 (or MgCl2 in5B),room temperature,up to60min. No-protein and
+no-added-metal lanes are shown. No-added-metal retains partial activity;
+do not say metal-free catalysis is absolutely absent. WT and mutant purity
+appear in5A. D426A/D427A jointly lowers5-prime-U30 processing in5C, but
+residual products remain; this is not complete abolition or direct proof
+of a particular metal/water coordination scheme. Protein folding is not
+independently excluded as an alternative mechanism of the mutation effect.
+
+Figure3: lambdaN-HA tethering in HeLa reduces RL-5BoxB RNA with full MARF1
+or its1-1563 delta-C-terminal construct versus LacZ. Removing NYN raises
+RNA relative to WT but does not restore every readout fully to LacZ.
+Figure3C checks fusion-protein expression. Northern RNA is normalized to
+firefly control; luciferase activity is a separate readout, not proof of
+translation repression independent of RNA loss. Measurements at24h,
+minimum3 experiments. Artificial tethering is not native target recognition.
+
+Figure6A-C: WT N-terminal fragment lowers reporter RNA versus LacZ;
+NYN deletion and D426A/D427A each raise RNA relative to that WT fragment.
+Do not relabel these as full-length mutant tests. Expression controls are
+shown; the exact deletion junction is not sequence-verified here.
+Figure6D-G: full MARF1 and delta-C-terminal construct lower RNA from the
+internally polyadenylated A114-N40-HHR reporter versus LacZ. GW182-SD lowers
+luciferase without lowering RNA in this comparison. The protected internal
+poly(A) context supports bypass of usual terminal deadenylation but does
+not directly measure MARF1 cut sites or every downstream decay enzyme.
+
+Figure7 is a model, not a measured chain of RRM recognition, NYN cleavage,
+DCP1:DCP2 decapping and XRN1 destruction. Co-IP/BioID establish association,
+not necessity of the C-terminal interaction for tethered RNA loss: delta-C
+remains active. Do not transfer fly MARF1 biology, which lacks NYN, to DUF88.

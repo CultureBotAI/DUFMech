@@ -12,9 +12,32 @@ failure, and 2 for invalid CLI arguments. All modes are offline.
 | `exports/kgx/edges.tsv` | One source-backed Pfam-to-InterPro association per recorded integration |
 | `exports/sssom/dufmech.sssom.tsv` | The same associations with standard SSSOM columns and prefix metadata |
 
-The retained corpus has 8,296 SEEDED records (6,532 before the 2026-10-08 EX_DUF
-migration and 8,295 before the October 10 PF18141 addition) and zero functional
-assertions. It produces 16,534 nodes, 8,238 edges and 8,238 SSSOM rows.
+The retained corpus has 8,296 records (6,532 before the 2026-10-08 EX_DUF
+migration and 8,295 before the October 10 PF18141 addition): 8,172 are SEEDED
+and 124 are IN_PROGRESS. PF00563, PF00668, PF00672, PF00892, PF00893,
+PF00902, PF00924, PF00990, PF01026, PF01027, PF01042, PF01060, PF01062, PF01121,
+PF01128, PF01139, PF01168, PF01169, PF01171, PF01172, PF01174,
+PF01205, PF01206, PF01207, PF01255, PF01256, PF01345, PF01458, PF01493, PF01513,
+PF01519, PF01535, PF01549, PF01554, PF01579, PF01594, PF01595, PF01638, PF01641, PF01657, PF01661, PF01679, PF01680, PF01697, PF01709, PF01732, PF01757, PF01784, PF01795, PF01796, PF01837, PF01882,
+PF01809, PF01827, PF01861, PF01862, PF01863, PF01864, PF01865, PF01867, PF01868, PF01870, PF01871, PF01875, PF01876, PF01877, PF01878, PF01881, PF01883, PF01885, PF01887, PF01889, PF01894, PF01895, PF01899, PF01900, PF01901, PF01902, PF01904, PF01905, PF01906, PF01909, PF01910, PF01914, PF01937,
+PF01918, PF01923, PF01925, PF01927, PF01930, PF01931, PF01933, PF01934, PF01935, PF01936, PF01938, PF01939, PF01940, PF01941, PF01944, PF01947, PF01949, PF01950, PF01951, PF01996, PF02130, PF02410, PF02583, PF03883, PF04149, PF05114, PF06568, PF07005, PF07796,
+PF01955, PF08759, PF12172 and PF17042 have scoped causal graphs. PF02621 has a graphless scientific
+review and discussion retaining an unresolved experimental-clone identity
+prerequisite. PF20352 has a graphless assessment of computational relationship
+evidence that does not establish a directed biological effect.
+PF01629 retains a graphless assessment distinguishing DUF22 identity and
+classification from experimentally unsupported ATPase-function transfers.
+PF01724 retains a graphless DUF29 assessment separating structure and function
+predictions from causal assays; the thesis's separate polymerase is not adopted.
+PF01886 retains a graphless DUF61 assessment with exact SSO0941 reference/domain
+mapping and explicit functional-evidence and access gaps. Structural, operon and
+computational benchmark observations are not converted into biological causal edges.
+PF01954 retains a graphless AF2212 assessment separating comparative predictions
+and tagged structural evidence from functional assays. Profile/deposition
+discrepancies and the exclusion of other families' TA cassette effects remain
+explicit; additional mapped-member research is still needed.
+There are zero functional assertions. The identity exports contain 16,534 nodes,
+8,238 edges and 8,238 SSSOM rows.
 The 58 families lacking an InterPro accession remain KGX nodes; they
 are omitted from SSSOM. Missing integration is not a negative mapping or evidence of nonexistence.
 Output is bounded to identities and explicit native `interpro_id` fields, with
@@ -41,8 +64,9 @@ matching procedure or confidence. Accordingly:
 - Pfam labels and descriptions come from validated native records. Descriptions,
   seed classifications and automated characterization statuses are attributes,
   not scientific assertions. InterPro nodes have no borrowed Pfam labels or
-  curation statuses. Curated assertions, discussions, datasets and cross-corpus
-  links are validated but are outside this export's scope.
+  curation statuses. Curated assertions, causal graphs, discussions, datasets and
+  cross-corpus links are validated but are outside this export's scope. Causal
+  edges are not exported as Pfam-to-InterPro identity associations.
 
 KGX records the provider URL, upstream URL, snapshot ID, repository-relative
 snapshot path, exact JSON SHA-256 and snapshot timestamp. Edges also name the
@@ -135,6 +159,6 @@ Counts exclude headers and the SSSOM preamble.
 
 | Artifact | Rows | Bytes | SHA-256 |
 | --- | ---: | ---: | --- |
-| `exports/kgx/nodes.tsv` | 16534 | 7666517 | `d45edebaef2f1d7d9a0505c89cf37cbd64722f25f9a99ae2fb8aad44af64ecfc` |
+| `exports/kgx/nodes.tsv` | 16534 | 7667137 | `32ae06da32b795ef3e8d02ba0bb578240f433644dc4b0361a9bb7d5d3f66834f` |
 | `exports/kgx/edges.tsv` | 8238 | 3624890 | `7c5ac1162eb92d57843e10f05f0ee95dcbd83d93a4ce1478628536f914e74679` |
-| `exports/sssom/dufmech.sssom.tsv` | 8238 | 6607674 | `bcac6604769e2924ba3396d9251ff5ca49ff966cd6187e88a6895fdd9ff1cf59` |
+| `exports/sssom/dufmech.sssom.tsv` | 8238 | 6608289 | `383cc103967ab7052964751b82105ccdc81d60c7e8e64d79622182262df48289` |

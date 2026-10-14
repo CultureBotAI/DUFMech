@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01795
+  path: data/families/PF01795.yaml
+session:
+  id: 2026-10-11T151331Z-codex-5ed9a7
+  timestamp: '2026-10-11T15:13:31Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of RsmH causal contexts
+  details: Reviewed seventeen observed edges across four graphs, exact reference/domain
+    mapping, preparation and genotype boundaries, direction conflicts and later-source
+    versions. Native and common review retain open provenance and member-coverage
+    follow-ups; no independent endorsement or family-complete status.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T151345Z-pf01795-rsmh-methylation-and-genotype-contexts/review.yaml

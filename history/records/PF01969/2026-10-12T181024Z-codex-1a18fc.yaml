@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01969
+  path: curation/families/PF01969.yaml
+session:
+  id: 2026-10-12T181024Z-codex-1a18fc
+  timestamp: '2026-10-12T18:10:24Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped LarC reaction and reporter graphs with separated transfer
+    and chemistry hypotheses
+  details: Created PF01969 overlay and three minimal evidence ledgers from Turmo2022
+    and Wolfe2026 primary methods, figures and2026 TableS1. Nine graphs retain38 observed
+    readout effects and4 hypothesized steps. Original figures correct H72A and small
+    cleft-variant directions; H70A is not plotted. Preserve linker-sequence conflicts,
+    Mg/Mn recipe and normalization limits, nickel-affinity preparation confounding,
+    exact protein/domain scope and further-member follow-ups. Status remains IN_PROGRESS;
+    no publication.

@@ -4,7 +4,7 @@ name: HxlR-like helix-turn-helix
 short_name: HxlR
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01638
 counters:
   proteins: 69591
@@ -23,3 +23,312 @@ provenance:
 interpro_id: InterPro:IPR002577
 description: HxlR, a member of this family, is a DNA-binding protein that acts as a positive regulator
   of the formaldehyde-inducible hxlAB operon in Bacillus subtilis.
+curation_history: history/records/PF01638
+discussions:
+- discussion_id: hxlr-native-regulation-and-construct-questions
+  prompt: Resolve the pBAD N-terminal sequence and EMSA formaldehyde concentrations, then extend native-regulation
+    and family-member coverage using separately verified experiments.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Seven observed assay effects do not directly establish the complete allosteric trajectory,
+    native hxlAB regulation in B. subtilis, chemical reversibility or a shared ligand mechanism across
+    PF01638.
+  evidence:
+  - reference: PMID:33495458
+    supports: PARTIAL
+    evidence_source: full_text_figure_1_supplementary_figures_1_2_table_2
+    explanation: Preserve the 1-versus-0.6-mM EMSA discrepancy, lower K13A protein range, primer-implied
+      S2G possibility, GSH extension and C11/K13 positions outside the current Pfam interval. C11A peptide
+      loses both plus-12 and plus-30 products, whereas K13A retains plus-30; neither peptide is an isolated
+      Pfam domain.
+  - reference: doi:10.1111/j.1365-2958.2005.04702.x
+    supports: PARTIAL
+    evidence_source: citation_lead_only
+    explanation: The 2005 native-regulation study is cited by Zhu but was not independently retrieved
+      and reviewed here; no native knockout/rescue edges are inferred from that citation.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: FAsor fusion engineering, methylglyoxal responses, HypR/YodB/QsrR and structural-motion interpretations
+    require separate scope. Partial scientific self-review; IN_PROGRESS.
+causal_graphs:
+- graph_id: hxlr-formaldehyde-intact-mass-product
+  title: Formaldehyde produces a plus-12-Da species of purified intact HxlR
+  scope: Purified B. subtilis 168 HxlR expressed from pET28a in E. coli BL21(DE3), Zhu 2021 Supplementary
+    Figure 1c; not the synthetic peptide, cellular MS/MS or FAsor fusion assay.
+  context: Incubate 100 uM HxlR with 1 mM formaldehyde in 20 mM HEPES pH 7.5 and 300 mM NaCl for 1 h at
+    37 C; desalt by Micro Bio-Spin 6 and analyze by Bruker Solarix XR FT-MS. Purification removes the
+    N-terminal His tag with thrombin, followed by DTT treatment and SEC. The structural preparation retains
+    a GSH cleavage extension.
+  family_mapping: P42406 sequence version 3 is 120 aa; UniProt/InterPro sequences match, with PF01638
+    at 19-107. PDB 7BZD entity 1 is exactly GSH plus this reference. C11 and K13 are outside the current
+    Pfam interval. The experiment therefore concerns an intact domain-bearing protein, not chemistry by
+    the isolated Pfam domain.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:224308
+  limitations: Intact-mass spectra establish new plus-12-Da species, not their unique chemical topology
+    alone. Separate crystal density, cellular tryptic MS/MS and synthetic-peptide substitutions support
+    the C11/K13 methylene assignment. Those samples are not one time-resolved reaction trajectory. Unmodified
+    and sodium-adduct species persist; no quantitative yield, chemical reversibility or obligatory sequential
+    intermediate is asserted.
+  nodes:
+  - node_id: formaldehyde-purified-hxlr
+    label: Treat purified intact HxlR with 1 mM formaldehyde
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P42406
+  - node_id: plus12-hxlr-species
+    label: HxlR species with a plus-12-Da intact mass shift
+    node_type: STATE
+  edges:
+  - edge_id: formaldehyde-produces-plus12-species
+    subject: formaldehyde-purified-hxlr
+    predicate: produces
+    object: plus12-hxlr-species
+    mechanism: Formaldehyde treatment produces new intact-protein mass peaks displaced by 12 Da relative
+      to untreated HxlR. Cross-assay evidence supports a C11/K13 methylene bridge, but the directly observed
+      edge is the chemical-product mass response, not every proposed bond-forming microstep.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33495458
+      source_url: https://www.nature.com/articles/s41467-020-20754-4
+      snippet: FA-treated sample
+      explanation: Supplementary Figure 1c was visually inspected with FT-MS Methods; Figure 1a/c/d and
+        Supplementary Note 3 provide separate chemical-assignment evidence and its limits.
+      cache_path: evidence/PF01638/zhu-2021-hxlr.txt
+      cache_sha256: 8ebaa26b6aa89c3d88b3e554a878cdc725c5c7693b62e90887e1f4069f9f217f
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P42406/entry/pfam/PF01638/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P42406/entry/pfam/PF01638/
+      snippet: P42406 Pfam:PF01638; interval 19-107 inclusive.
+      explanation: Exact reference/PDB sequence checks establish intact-protein scope and show that C11/K13
+        are outside the current Pfam boundary.
+      cache_path: evidence/PF01638/HxlR-identity.txt
+      cache_sha256: e23663acf3d3adc46689dc129df8ef6a933a50eee26871320360a8d3da8994da
+- graph_id: hxlr-wt-c11a-dna-binding-response
+  title: Formaldehyde enhances WT HxlR DNA binding, with little enhancement in C11A
+  scope: Purified pET28a-derived WT and C11A HxlR, Zhu 2021 Figure 1e; separate from cellular reporter
+    and K13A titrations.
+  context: EMSA Methods pretreat 100 uM protein with or without 1 mM formaldehyde for 1-2 h at 37 C in
+    20 mM HEPES pH 7.5 and 300 mM NaCl. Figure 1e instead labels 0.6 mM formaldehyde; this discrepancy
+    remains unresolved. Final WT/C11A protein is 0.2, 0.4 or 0.6 uM in 20 ul with 50 nM 50-bp BRH duplex,
+    20 mM HEPES pH 7.0, 50 mM KCl, 5 mM MgCl2 and 10% glycerol. Table 2 specifies BRH-F/R, not the optimized
+    20-bp crystallization duplex. Representative gels from three independent experiments.
+  family_mapping: P42406 / B. subtilis 168 reference 1-120 contains PF01638 19-107; C11 is outside that
+    interval. The N-terminal His tag is thrombin-cleaved, with GSH retained in the sequence-verified structural
+    preparation. Neither C11A nor WT is an isolated Pfam-domain construct.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:224308
+  limitations: Gel-shift enhancement is a direct biochemical binding response, not a measured transcription
+    rate or fitted KD. C11A retains basal binding; lack of enhancement is not complete loss of DNA binding.
+    Equal mutant folding and active fraction are not established by these gels. The formaldehyde concentration
+    discrepancy is not resolved by assumed dilution, and static structural differences do not directly
+    observe helix flipping.
+  nodes:
+  - node_id: formaldehyde-wt-binding
+    label: Formaldehyde pretreatment of WT HxlR
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P42406
+  - node_id: shifted-brh-dna
+    label: BRH DNA in the shifted HxlR-DNA complex
+    node_type: STATE
+  - node_id: c11a-binding
+    label: C11A instead of WT HxlR
+    node_type: PERTURBATION
+  - node_id: fa-binding-enhancement
+    label: Formaldehyde-dependent enhancement of the DNA gel shift
+    node_type: ACTIVITY
+  edges:
+  - edge_id: formaldehyde-increases-wt-dna-shift
+    subject: formaldehyde-wt-binding
+    predicate: increases
+    object: shifted-brh-dna
+    mechanism: At matched WT protein concentrations, formaldehyde-treated samples shift more BRH DNA than
+      untreated samples. This records the direct binding response without assigning an observed allosteric
+      trajectory or native operon output.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33495458
+      source_url: https://www.nature.com/articles/s41467-020-20754-4
+      snippet: enhance its DNA affinity
+      explanation: Figure 1e was visually inspected with EMSA Methods and Table 2. Protein concentration,
+        DNA identity and conflicting formaldehyde labels are explicit.
+      cache_path: evidence/PF01638/zhu-2021-hxlr.txt
+      cache_sha256: 8ebaa26b6aa89c3d88b3e554a878cdc725c5c7693b62e90887e1f4069f9f217f
+  - edge_id: c11a-decreases-fa-binding-response
+    subject: c11a-binding
+    predicate: decreases
+    object: fa-binding-enhancement
+    mechanism: C11A shows little additional shift after formaldehyde treatment compared with WT's positive
+      response over the matched 0.2-0.6-uM series. Its residual basal binding prevents calling the protein
+      binding-null, and the mutation does not isolate the contribution of the Pfam domain.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33495458
+      source_url: https://www.nature.com/articles/s41467-020-20754-4
+      snippet: enhance its DNA affinity
+      explanation: The WT/C11A paired treatment lanes in Figure 1e and Results establish the response
+        difference, with nonzero C11A binding retained.
+      cache_path: evidence/PF01638/zhu-2021-hxlr.txt
+      cache_sha256: 8ebaa26b6aa89c3d88b3e554a878cdc725c5c7693b62e90887e1f4069f9f217f
+- graph_id: hxlr-k13a-dna-binding-response
+  title: K13A HxlR binds DNA but lacks the WT formaldehyde enhancement
+  scope: Purified K13A HxlR in Zhu 2021 Supplementary Figure 2d; its titration range differs from WT/C11A
+    Figure 1e.
+  context: Supplementary Figure 2d uses 0.05, 0.1, 0.15 and 0.2 uM K13A, with or without treatment labeled
+    0.6 mM formaldehyde. Shared EMSA Methods specify 1 mM pretreatment of 100 uM protein for 1-2 h at
+    37 C, followed by dilution into 50 nM BRH duplex with HEPES pH 7.0, KCl, MgCl2 and glycerol. The formaldehyde
+    discrepancy is unresolved. Representative gel from three independent experiments; the WT positive
+    response is from the separate Figure 1e range.
+  family_mapping: K13 is verified in P42406 and lies outside PF01638 19-107. The intact pET28a-derived
+    HxlR mutant is tested, not the isolated HxlR-like domain. The 7BZD sequence check concerns WT structural
+    protein, not an independently resequenced K13A assay stock.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:224308
+  limitations: The edge denotes loss of the WT treatment response, not lower absolute DNA binding at identical
+    WT/K13A concentrations. K13A retains strong basal shifts and the authors describe higher basal binding.
+    Different concentration ranges do not establish a quantitative affinity ratio. Directness is confined
+    to the biochemical response; a unique structural intermediate or conformational trajectory is not
+    demonstrated.
+  nodes:
+  - node_id: k13a-binding
+    label: K13A HxlR in its separate low-concentration titration
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P42406
+  - node_id: k13a-fa-binding-response
+    label: WT-like formaldehyde-dependent enhancement of BRH DNA binding
+    node_type: ACTIVITY
+  edges:
+  - edge_id: k13a-decreases-fa-binding-response
+    subject: k13a-binding
+    predicate: decreases
+    object: k13a-fa-binding-response
+    mechanism: Unlike the WT positive response, K13A shows little treatment-dependent enhancement across
+      its tested 0.05-0.2-uM range while retaining DNA binding. The net loss of responsiveness is observed;
+      loss of all binding or equal-concentration affinity comparisons are not asserted.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33495458
+      source_url: https://www.nature.com/articles/s41467-020-20754-4
+      snippet: the K13A mutant (HxlR-K13A) also remained insensitive to FA
+      explanation: Supplementary Figure 2d and its caption were visually inspected, with the lower protein
+        range and retained basal binding explicitly separated from Figure 1e.
+      cache_path: evidence/PF01638/zhu-2021-hxlr.txt
+      cache_sha256: 8ebaa26b6aa89c3d88b3e554a878cdc725c5c7693b62e90887e1f4069f9f217f
+- graph_id: hxlr-heterologous-gfp-response
+  title: HxlR substitutions reduce the formaldehyde-induced GFP reporter response in E. coli
+  scope: E. coli BW25113 carrying pBAD-HxlR constructs labeled WT, C11A or K13A and a B. subtilis 168
+    hxlAB-promoter GFP reporter, Zhu 2021 Figure 1f and Supplementary Figure 2e.
+  context: Dilute overnight cultures 1:100 into LB, grow to OD600 0.6, induce HxlR with 4 mM L-arabinose
+    for 1 h, then treat with or without 600 uM formaldehyde for 40 min. Measure GFP by flow cytometry
+    at 488-nm excitation and 530/30BP emission. Supplementary Figure 2b/c provides colony-count viability
+    controls and scatter gating. These are not the purified pET28a constructs or native B. subtilis cultures.
+  family_mapping: The source gene is P42406 from B. subtilis 168, with current PF01638 19-107; C11 and
+    K13 are outside that interval. Supplementary Table 2's pBAD forward primer is compatible with an MGRM
+    start instead of reference MSRM if translated from its apparent start, but Methods describe Gibson
+    assembly. A primer-implied S2G possibility remains unresolved; author WT/C11A/K13A labels do not prove
+    exact native N-terminal sequence.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:679895
+  limitations: GFP distributions are indirect reporter phenotypes, not direct transcription-rate, formaldehyde-detoxification
+    or native-operon measurements. C11A has lower basal reporter signal, whereas K13A has higher basal
+    signal and little further induction. Viability/gating controls do not establish equal mutant protein
+    abundance, folding or localization. The pBAD sequence discrepancy is preserved rather than claiming
+    a resequenced WT plasmid. Separate biochemical and cellular assays are not joined into one observed
+    trajectory.
+  nodes:
+  - node_id: formaldehyde-wt-reporter
+    label: Add 600 uM formaldehyde to the WT-labeled HxlR reporter strain
+    node_type: PERTURBATION
+  - node_id: gfp-fluorescence
+    label: Cellular GFP reporter fluorescence distribution
+    node_type: PHENOTYPE
+  - node_id: c11a-reporter
+    label: C11A instead of WT-labeled pBAD-HxlR
+    node_type: PERTURBATION
+  - node_id: k13a-reporter
+    label: K13A instead of WT-labeled pBAD-HxlR
+    node_type: PERTURBATION
+  - node_id: fa-gfp-induction
+    label: Formaldehyde-dependent GFP reporter induction
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: formaldehyde-increases-wt-gfp
+    subject: formaldehyde-wt-reporter
+    predicate: increases
+    object: gfp-fluorescence
+    mechanism: Formaldehyde shifts the WT-labeled reporter strain's GFP distribution toward greater fluorescence.
+      The measured cellular endpoint is consistent with HxlR-dependent promoter activation but does not
+      directly measure RNA synthesis or formaldehyde clearance.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33495458
+      source_url: https://www.nature.com/articles/s41467-020-20754-4
+      snippet: HxlR
+      explanation: Figure 1f and Supplementary Figure 2e WT controls, flow-cytometry Methods and the separate
+        viability/gating panels establish the scoped fluorescence increase.
+      cache_path: evidence/PF01638/zhu-2021-hxlr.txt
+      cache_sha256: 8ebaa26b6aa89c3d88b3e554a878cdc725c5c7693b62e90887e1f4069f9f217f
+  - edge_id: c11a-decreases-gfp-induction
+    subject: c11a-reporter
+    predicate: decreases
+    object: fa-gfp-induction
+    mechanism: The C11A reporter strain shows little formaldehyde-dependent GFP induction relative to
+      the WT-labeled strain. Its lower basal signal is retained as a distinct observation, not evidence
+      that only a single chemical step changed.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33495458
+      source_url: https://www.nature.com/articles/s41467-020-20754-4
+      snippet: HxlR
+      explanation: Figure 1f paired WT/C11A treatment distributions and Methods support decreased reporter
+        responsiveness, not isolated-domain chemistry.
+      cache_path: evidence/PF01638/zhu-2021-hxlr.txt
+      cache_sha256: 8ebaa26b6aa89c3d88b3e554a878cdc725c5c7693b62e90887e1f4069f9f217f
+  - edge_id: k13a-decreases-gfp-induction
+    subject: k13a-reporter
+    predicate: decreases
+    object: fa-gfp-induction
+    mechanism: K13A has high basal GFP signal but little additional formaldehyde-dependent induction compared
+      with the WT-labeled strain. This is a loss of responsiveness, not a globally inactive transcriptional
+      regulator or a GFP-null phenotype.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33495458
+      source_url: https://www.nature.com/articles/s41467-020-20754-4
+      snippet: the K13A mutant (HxlR-K13A) also remained insensitive to FA
+      explanation: Supplementary Figure 2e was visually inspected with its caption and Results; both high
+        basal signal and the weak treatment response are retained.
+      cache_path: evidence/PF01638/zhu-2021-hxlr.txt
+      cache_sha256: 8ebaa26b6aa89c3d88b3e554a878cdc725c5c7693b62e90887e1f4069f9f217f
+curation_events:
+- timestamp: '2026-10-11T12:00:09Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Add scoped HxlR chemical, binding and reporter causal graphs
+  history_record: history/records/PF01638/2026-10-11T120009Z-codex-328cdb.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T12:09:23Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific causal-graph self-review for PF01638
+  history_record: history/records/PF01638/2026-10-11T120923Z-codex-690454.yaml
+  event_index: 0
+  llm_assisted: true

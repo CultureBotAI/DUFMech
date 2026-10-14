@@ -1,0 +1,38 @@
+PF01905 identity assessment, 2026-10-11 UTC
+Frozen/current PF01905: DevR, CRISPR-associated negative auto-regulator
+DevR/Csa2; former DUF73; InterPro IPR010154; 771 frozen proteins.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01905/
+Snapshot interpro-pfam-duf-2026-10-10, sha256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+Provider naming and generic CRISPR prose do not establish the same mechanism
+in every member, nor transfer Cas5, Cas6 or Cas3 nuclease chemistry to Cas7.
+
+https://rest.uniprot.org/uniprotkb/Q97Y91.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q97Y91/
+Csa2b/Cas7b, SSO1442, Saccharolobus solfataricus P2, taxon 273057.
+Q97Y91 sequence version 1, 321 aa, exactly equals AAK41675.1 and
+WP_010923407.1 in fetched NCBI FASTA parsed with Bio.SeqIO.
+Current PF01905 match 5-273, score 5.4e-80; native residue 160 is H.
+https://files.rcsb.org/download/3PS0.cif
+Parsed mmCIF entity sequence has 328 residues: initial MHHHHHH plus the exact
+321-aa Q97Y91 sequence. Author-numbered H160 is resolved in chains A/C and
+lies in a disordered region in B/D, consistent with the main paper. Entities
+are Csa2 and water, not a bound-RNA complex. Sequence matching does not itself
+verify the historical H160A clone, its folding, or every assay preparation.
+The coexpressed 2011 complex has native-form Csa2 and N-terminal His/TEV Cas5a;
+the separate crystallographic Csa2 construct has a noncleavable His tag.
+
+https://rest.uniprot.org/uniprotkb/Q07765.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q07765/
+https://www.ncbi.nlm.nih.gov/gene/41364428
+DevR/Cas7, historical MXAN_7262, current MXAN_RS35145/cas7i,
+Myxococcus xanthus DK1622, taxon 246197. Q07765 sequence version 1, 302 aa,
+exactly equals AAA16134.1, ABF86719.1 and WP_011557181.1 by Bio.SeqIO.
+Current PF01905 match is only 19-176, score 0.00022, not the whole protein.
+This provider match is retained as given, not relabeled as a strong full-length
+domain match. The 2015 paper specifies an in-frame devR deletion, but exact
+codons and strain-catalog identifier remain unverified without Table S1.
+Neither this deletion nor reference matching establishes isolated-domain action.
+Taxon-34-only UniProt queries missed the strain-specific record; the exact
+MXAN_7262 query resolved it. Empty initial queries were not biological negatives.
+Do not confuse this DevR with the unrelated mycobacterial DevR/DosR regulator.

@@ -1,0 +1,16 @@
+Retrieved 2026-10-11 UTC. Identity facts, not experimental mechanism evidence.
+https://rest.uniprot.org/uniprotkb/P53720.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P53720/entry/pfam/PF01207/
+P53720/DUS2_YEAST is SMM1/DUS2/YNR015W, 384 aa, sequence version 1,
+entry version 178; reference S288c taxon 559292. UniProt and InterPro agree
+exactly, sequence MD5 b00cdeb0bf67ea9609b763adfa22f8dd.
+P53720 Pfam:PF01207 interval: 32-352, inclusive.
+C117 is inside this interval. The 2009 paper identifies yeast DUS2,
+YNR015w-deletion-derived RNA, and the pEfx-4b expression plasmid supplied by
+the original authors. Current mapping does not independently sequence that clone.
+The printed forward mutagenic primer locally encodes INAGAPKQF, whereas the
+reverse-complement primer locally encodes AGAPKHFS.
+The current reference has INAGCPKHF at 113-121: the forward primer's CAG for
+Q120 disagrees with the reverse primer's CAC for H120. Do not silently correct
+the oligos or assert a verified C117A-only construct; no mutant edge is adopted.
+Frozen previous-name snapshot: PF01207.24, previous name UPF0034.

@@ -1,0 +1,48 @@
+PF01827 FOG-2 deletion and chimera evidence
+Assessed 2026-10-11 UTC by Codex.
+PMID:15630478; DOI:10.1371/journal.pbio.0030006.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC539060/
+Primary XML Results and Methods read; Figure 4 visually inspected from
+https://journals.plos.org/plosbiology/article/figure/image?size=large&id=10.1371/journal.pbio.0030006.g004
+Issue year 2005; electronic publication 2004-12-28.
+
+Minimal verbatim anchor: "Constructs and transformation"
+Remaining text is curator paraphrase and assessment.
+
+Figure 4D retains ordinal yeast two-hybrid outputs, not affinity constants.
+Full-length FOG-2 (327 aa) gives ++++ with GLD-1. Truncation to 318 aa
+gives ++, to 299 aa gives +/-, and to 263 or 251 aa gives no detected
+interaction. Every displayed construct remains ++++ with SKR-1, a positive
+F-box interaction control. The 314-aa FTR-1 comparator is negative for
+GLD-1, whereas the 327-aa FTR-1/FOG-2 exon-4 chimera gives +++.
+Thus transfer confers a reporter interaction but does not fully match
+the ++++ FOG-2 score, and does not establish an isolated peptide's sufficiency.
+
+Methods place GLD-1 in pAS1 (DNA-binding fusion), FOG-2 derivatives in
+pACTII (activation fusion), with 20 mM 3-amino-triazole and sequencing
+of constructs. FOG-2 autoactivation in pAS1 motivated this single assay
+orientation. Figure 4D instead labels the depicted derivatives "Bait";
+the Methods orientation is retained with this discrepancy explicit.
+The inherited Clifford 2000 protocol used Y190 yeast, histidine selection
+and beta-galactosidase filter-lift readouts, with 25 mM 3-amino-triazole
+in that original screen. Do not substitute 25 mM for the 2005 modification.
+The 2005 article does not independently enumerate every earlier reporter
+step or define quantitative calibration of the plus signs. No replicate
+count, binding constant or purified-protein concentration is adopted.
+
+Figure 4B shows FOG-2 residues 254-327 (74 aa) as exon 4, and FTR-1
+as 314 aa. Methods instead calls full-length FTR-1 318 aa and its
+251-aa FOG-2 truncation an exon-4 removal (76 aa deleted). These
+discrepancies are not silently resolved into a fabricated clone junction.
+The current PF01827 interval in 327-aa FOG-2 is 144-271; the 318/299
+truncations delete only sequence after that interval. The 263 construct
+removes domain 264-271 and the tail; the 251 construct removes domain
+252-271 and the tail. FTR-1's independently mapped interval is 146-283.
+Legacy schematic shading is not the current Pfam interval. Whole-construct
+effects can involve folding, expression or geometry as well as interface
+contacts; retained SKR-1 activity does not prove a correctly folded FTH.
+
+Phylogeny and sequence divergence are context, not a causal sexual-fate
+experiment in other family members. The separate C. briggsae gld-1 RNAi
+experiment is not a PF01827 perturbation. Supplemental alignments and
+raw yeast growth/reporter measurements were not independently reanalyzed.

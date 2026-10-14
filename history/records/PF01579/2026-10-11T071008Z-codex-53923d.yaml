@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01579
+  path: curation/families/PF01579.yaml
+session:
+  id: 2026-10-11T071008Z-codex-53923d
+  timestamp: '2026-10-11T07:10:08Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate four DUF19 member-scoped phenotype graphs
+  details: Inspected EXC-13 primary text, Figure 4 and Table S2; C36C5.5 public captions,
+    Figure 2, source-data sheets and supplementary strain catalog. Retained RNAi and
+    separate overexpression contexts with four INDIRECT OBSERVED edges; mapped O01454/O16405
+    exactly to PF01579. Preserved EXC-13 numerical discrepancies, unresolved genetic
+    specificity, panel-specific strain and Nature Methods access limits. Added minimal
+    hash-anchored evidence and a follow-up discussion. Status remains IN_PROGRESS;
+    no domain mechanism, independent review or publication is claimed.
+  sections:
+  - causal_graphs

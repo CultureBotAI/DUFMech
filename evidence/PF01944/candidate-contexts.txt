@@ -1,0 +1,39 @@
+PF01944 candidate homolog contexts, 2026-10-12 UTC, Codex
+
+PMID:30066347; doi:10.1111/mmi.14090
+https://pmc.ncbi.nlm.nih.gov/articles/PMC6311989/
+Ribis 2018 Results, Figure 1B and Figure 2, strain/growth, plate/liquid
+sporulation and heat-resistance Methods read. Figure 2 visually inspected.
+Clean spoIIM/CD1221 deletion was constructed in 630DeltaermDeltapyrE and
+pyrE restored. Plate cultures use 70:30 medium. Heat resistance at 20-24 h
+is 0.34 +/-0.06 relative to WT 1.0 +/-0.6, p<0.005, minimum three biological
+replicates. This is a modest decrease, not failure of engulfment or spore
+formation. Microscopy is 17 h, not the heat assay time. No rescue for this
+contrast was verified. Supplemental per-replicate Table S3 was not retrieved;
+its PDF endpoint returned HTML and Europe PMC returned an error document.
+
+PMID:30066424; doi:10.1111/mmi.14091
+https://pmc.ncbi.nlm.nih.gov/articles/PMC6221140/
+Dembek 2018 primary XML Results, Figures 2-4 captions and selected Methods
+read; figure images and full supplements not inspected. Clean deletions use
+the 630DeltaermDeltapyrE background with pyrE restored. Figure 2 follows BHIS
+stationary-phase cultures for 0-120 h with 70 C/30-min heat challenge,
+triplicate cultures and a 50 CFU detection limit. DeltaM has no significant
+sporulation deficit. Figure 3 at 14 h on SM likewise has no significant M
+engulfment defect. Early Q/AH localization persists in M mutants.
+Do not collapse these conditions with Ribis plate assays or call their
+different outcomes contradictory measurements of an identical experiment.
+No invented no_effect edge or unqualified family-wide requirement is added.
+
+CD1221 is Q18B81 by locus mapping, but current Pfam coordinates are unresolved
+(identity.txt). These are candidate homolog findings, not canonical PF01944
+edges until membership and construct mapping are adequately established.
+
+PMID:23906710; doi:10.1016/j.jbiosc.2013.06.023
+https://pubmed.ncbi.nlm.nih.gov/23906710/
+Mu 2014 primary abstract only: lcyD disruption retains intracellular mature,
+active leucocyclicin Q; heterologous lcyD expression confers resistance and
+release/binding assays support export. Exact member mapping, constructs,
+controls, figures and Methods remain to be retrieved. This does not show
+LcyD catalyzing peptide cyclization. Do not turn cluster membership into an
+enzymatic edge. The institutional Pure page also exposes only the abstract.

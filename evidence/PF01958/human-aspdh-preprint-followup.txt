@@ -1,0 +1,34 @@
+Human ASPDH divergent-function lead; inspected 2026-10-12 by Codex.
+Primary bioRxiv API:
+https://api.biorxiv.org/details/biorxiv/10.64898/2026.06.05.730449
+Primary article:
+https://www.biorxiv.org/content/10.64898/2026.06.05.730449v1
+Sassi et al.; DOI10.64898/2026.06.05.730449, version1,2026-06-09.
+API published field was NA. Treat as a preprint, not peer-reviewed evidence.
+Minimal verbatim extract: "2-AM reductase"
+
+API abstract reports human ASPDH NAD(P)H-dependent 2-aminomuconate
+reduction to L-2-aminohex-3-enedioic acid, with isotope-NMR/structural
+analysis, rather than simple transfer of bacterial aspartate oxidation.
+Only primary abstract/metadata were inspected. The article request returned
+403; the API-provided source.xml URL returned429. Full assays, controls,
+construct sequence, spectra and structural mechanism remain uninspected.
+No observed human product graph is curated from an abstract alone here.
+
+An institutional primary thesis abstract was inspected at:
+https://air.unipr.it/handle/1889/6528
+Sassi2026, Unveiling a Lost Link in Human Tryptophan Metabolism through
+Comparative Genomics and Enzymatic Characterisation. It also describes a
+novel amino-acid product rather than the formerly expected2-oxoadipate.
+The deposited thesis is embargoed until2028-03-01; no bypass attempted.
+Dembech2023 thesis is a further primary lead, not a substitute for the
+uninspected2026 product data:
+https://air.unipr.it/retrieve/859d852a-e582-481b-8752-2a145efa2cc1/DembechElena_XXXV_Thesis.pdf
+Its search excerpt was encountered but the original thesis was not read.
+
+Next: obtain openly accessible primary full text and supplements, verify
+A6ND91 construct/version and PF01958/PF03447 boundaries, assess substrate
+generation, isotope evidence, product stereochemistry and controls, and
+curate a separate human graph with explicit preprint status if warranted.
+Do not join prokaryotic NAD synthesis to a human tryptophan-catabolic chain
+or invent a database identifier for the proposed novel product.

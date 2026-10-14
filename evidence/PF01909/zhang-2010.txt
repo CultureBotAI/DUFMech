@@ -1,0 +1,62 @@
+PF01909 evidence ledger; accessed 2026-10-12 UTC
+Primary source: Zhang et al., J Bacteriol 192:2711-2721 (2010).
+PMID:20363937; doi:10.1128/JB.01674-09
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2876476/
+Minimal quotation: "GlnD-N showed substantial UTase activity in both conditions"
+All remaining text is curator-authored assay context, not a copied article.
+
+Inspected main Methods, Results and Discussion, Table 1, figure captions,
+and original Figure 3, 4, 5 and 8 images. Figure 3 defines E. coli His-tagged
+full-length GlnD (890 aa), GlnD-N (1-371), deltaNT (329-890), G93L/V,
+G94L/D, D107A/V/Y and HD-AA (H514A/D515A) or HD-QN (H514Q/D515N).
+The study's NT domain drawing is 74-169; current PF01909 coordinates are
+85-144. Neither is the complete 1-371 experimental N-terminal construct.
+Most purified proteins were at least 90% pure; historical clones were not
+independently sequenced or tested for equal folding by this curation.
+
+Methods UTase endpoint: 50 ul, 100 mM Tris pH 7.5, 100 mM KCl,
+25 mM MgCl2, 1 mM DTT, 0.3 mg/ml BSA, 1 mM ATP, 10 mM alpha-KG,
+60 uM E. coli GlnB; preincubate 2 min at 30 C, start with 1 ul of
+50 mM UTP, incubate 60 min, stop with EDTA. The paired Mg/Mn condition
+adds 1 mM MnCl2. Native PAGE resolves GlnB trimers with 0-3 modified
+subunits and yields an average UMP count, not an initial reaction rate.
+Figure 5 includes enzyme-free controls and concentration series from
+0.025 to 2 uM as plotted. Full-length and 1-371 constructs increase
+modification above the enzyme-free background in both conditions;
+1-371 is less effective than full-length in Mg alone. DeltaNT, G93L,
+G93V and G94D give lower modification than full-length, close to the
+background. G94L is an important exception to a blanket glycine-mutant
+loss claim. No precise bar-derived numerical effect or error estimate
+is asserted. Residue changes need not identify the chemical transition
+state or rule out folding/abundance effects.
+
+Figure 4 separately tests loss of UMP from fully modified GlnB, without
+UTP. Its inverted y-axis is remaining modification, not removal rate.
+HD-AA and HD-QN greatly reduce removal relative to full-length under
+both plotted protocols (0.1, 0.5 and 2 uM enzyme). Figure 5 shows that
+these variants retain transfer activity, a useful functional control.
+Mg-UR: 50 mM MgCl2, 0.5 mM ATP, 0.5 mM alpha-KG, 2.5 mM glutamine,
+40 uM GlnB-UMP, 30 C/60 min. Mn-UR: 1 mM MnCl2, 10 mM glutamine,
+omit MgCl2, ATP and alpha-KG; other common buffer components as Methods.
+This is a comparison of complete assay protocols, not an isolated
+Mg-to-Mn substitution experiment. UR effects belong to the HD region,
+outside PF01909. DeltaNT retains substantial Mn-supported removal.
+
+Figure 8A: with Mg only and 2 uM enzyme, 10 mM glutamine reduces the
+modification endpoint for full-length, HD-AA and HD-QN versus their
+matched no-glutamine controls; 1-371 lacks this visible inhibitory
+response. Figure 4's UR-deficient HD variants help separate inhibited
+transfer from competing removal. Figure 8B is a distinct Mg/Mn context:
+glutamine decreases the full-length endpoint, especially at 2 uM, but
+not the UR-deficient variants comparably. Competing removal can explain
+that result; do not encode it as directly observed NT inhibition.
+ACT-dependent glutamine binding, metal occupancy, allosteric structures
+and physiological futile cycling are models, not directly measured
+steps in the retained graphs. No universal family/species transfer.
+
+Source byte hashes (temporary downloads, not committed full-text caches):
+HTML d4cb7d61ec22b7b30fa361ed98c46c4a7ca59afbe7a835e86ce3cb49f2db60f6
+Fig3 29de1070758625b3f18c906724acc16f45b217423857a7e734f504b09d40dad6
+Fig4 ffd82c2d1e252de331d26aefff149940f011c0acecbea37a8a0b075d26487fb9
+Fig5 6b48fc5d4983df80514d54b52310df43d591bf89363ead85c43d74819289ad4a
+Fig8 823013395544c4e536d67fe2cea3f16a7105249ae9d796a4e8abff81747bc6c7

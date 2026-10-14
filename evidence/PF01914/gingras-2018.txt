@@ -1,0 +1,39 @@
+PF01914 primary assessment; inspected 2026-10-12 UTC
+Gingras et al.2018, PMID29319470, DOI10.1099/mgen.0.000148.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC5857375/
+Minimal exact quotation: marC
+Remaining text is an authored assessment, not copied full text.
+MarC Results/Discussion, functional-validation Methods, Tables1/2 and
+supplement TableS2 primers/TableS3 loci inspected as text/tables.
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5857375/supplementaryFiles?includeInlineImage=false
+Supplement member mgen-4-148-s001.pdf pages4/5 read; not all nine pages
+or underlying isolate sequence reads were reviewed.
+
+PCR donor ATCC25922 marC/DR76_3329 in pZErO-2, recipient TOP10.
+Exact donor AIL17056.1 equals UniParc UPI00000DEBB0, PF01914 5-217,
+and differs from K-12 P0AEY1 by N36S; see identity.txt.
+Supplement primer mapping to CP009072.1 predicts877bp genomic insert
+3541797-3542673 including the whole CDS and upstream sequence.
+This independently explains that the validation clone can carry MarC
+despite the original enrichment interval3540651-3542008 ending at its
+start. The latter interval conflict remains unresolved, not silently
+extended. No original enrichment-fragment causal edge is asserted.
+Table2 MIC ug/ml, TOP10/pFF6 versus TOP10/pZErO-2-marC:
+ceftriaxone0.13->0.25;gentamicin0.50->1.00;levofloxacin0.016->0.031;
+tetracycline1.00->2.00;trimethoprim0.25->0.50.
+pFF6 contains an unrelated functional insert because empty pZErO-2 is
+suicidal; it is not an identical empty-vector control. Antisense-marC
+controls remain at baseline and support an orientation-dependent
+effect. Triplicate MIC measurements are reported; each change is
+about one twofold dilution, potentially within technical variation as
+the authors discuss. No clinical breakpoint or resistant-status claim
+is assigned. Donor/recipient ATCC25922 validation has no ceftriaxone
+increase (Table1), so the result is host dependent.
+The 2008 AG100 negative study is retained rather than overwritten.
+Neither source directly measures MarC efflux. An imprecise prose
+reference to transcription factors does not make MarC a proven
+transcription factor. TOP10 effects are not extended to all PF01914.
+HTML SHA256:
+8070cd7c63f55f4e2d15dcba408f27e3b63c0c1971b1244e47a2bb7f9939d72d
+Supplement archive SHA256:
+efc4cada7522d3582573b6793828e43f3665c577fcf88c90ba326e9d0e61f58d

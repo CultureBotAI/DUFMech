@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01809
+  path: curation/families/PF01809.yaml
+session:
+  id: 2026-10-11T151941Z-codex-4f8323
+  timestamp: '2026-10-11T15:19:41Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate YidD localization and context-specific membrane-biogenesis effects
+  details: Nine graphs retain twenty-one indirect observed effects from the 2011 E.
+    coli paper and version-qualified 2015 thesis. Keep processing, abundance, insertion
+    proxies and bioenergetic assays distinct, preserve YidC compensation and strain
+    discrepancies, and do not infer purified insertase activity.
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC3187451/

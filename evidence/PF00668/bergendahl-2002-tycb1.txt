@@ -1,0 +1,51 @@
+PF00668 primary-evidence assessment, inspected 2026-10-11
+Bergendahl, Linne and Marahiel (2002), Mutational analysis of the C-domain
+in nonribosomal peptide synthesis. doi:10.1046/j.0014-2956.2001.02691.x
+https://febs.onlinelibrary.wiley.com/doi/10.1046/j.0014-2956.2001.02691.x
+Inspected publisher full-text Methods, Results, Discussion, Table 1 and
+Figures 1-5 captions through the web reader. Figure images were not retrieved:
+publisher HTML and Figure 4 downloads via curl returned HTTP 403. The 1998
+JBC precursor PDF also returned 403; it is not a completed full-text review.
+Minimal quotations:
+Results: "no DKP at all could be detected"
+Discussion: "while being still active in adenylation and thiolation activities"
+
+Curator's factual notes, not a transcription:
+The minimal system combines recombinant holo-GrsA Phe-ATE and the first
+TycB Pro-CAT module, not TycB alone or an isolated condensation domain.
+TycB1 variants have C-terminal His6 tags, are expressed with gsp for
+phosphopantetheinylation, and are purified by nickel affinity chromatography.
+Exact complete clone boundaries and tag junctions were not reconstructed.
+Table 1 OP1 suggests a cloning-associated N-terminal change, not proof that
+the complete expressed sequence is identical to the current reference.
+
+The DKP assay separately preincubates 1 uM of each enzyme with 2 mM ATP
+and its substrate for 3 min at 37 C, then mixes equal volumes and incubates
+45 min at 37 C. Assay buffer is 50 mM HEPES pH 8.0, 100 mM NaCl,
+10 mM MgCl2 and 1 mM EDTA; purification/dialysis also specifies reductant.
+The HTML reports 0.5 M phenylalanine versus 0.5 mM proline in the separate
+preincubations. The phenylalanine unit remains unresolved; it is not silently
+converted to mM. Extraction uses butanol/chloroform and HPLC-MS analysis.
+
+WT joint preparations yield d-Phe-l-Pro diketopiperazine (DKP).
+R62A, H147R and H147V TycB1 substitutions give no detected DKP in the
+reported assay. These soluble variants retain adenylation and thiolation;
+those controls do not independently prove local C-domain folding.
+The orthogonal acid-stable radiolabel assay includes a no-TycB1 control
+and supports loss of dipeptide formation for these variants. The HPLC-MS
+endpoint is an indirect readout of condensation followed by product release;
+neither every intermediate nor a histidine proton-transfer step was tracked.
+Figure 4 normalizes WT DKP to 100% and uses three consecutive experiments
+from the same protein batch, not three independent purifications. Values
+are normalized for thiolation activity; raw counts were not reanalyzed.
+No universal detection limit or absolute catalytic rate is established here.
+
+The main text usually names D151N, but one product-results sentence says
+D151A. It similarly has Y151F/Y166F inconsistencies. Figure 1 caption says
+TycB1 derives from tycA, inconsistent with the main text and operon identity.
+These are retained source discrepancies, not alternative adopted mappings.
+No D151 edge is curated until the labeling discrepancy is resolved.
+R67A/H146A/W202L were insoluble or broadly impaired and cannot demonstrate
+isolated loss of condensation chemistry. Inhibitor targets were not identified.
+Coupled adenylation, loading, epimerization, condensation and cyclization
+prevent assigning an observed elementary catalytic mechanism from DKP alone.

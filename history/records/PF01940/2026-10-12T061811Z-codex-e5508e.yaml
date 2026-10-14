@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01940
+  path: data/families/PF01940.yaml
+session:
+  id: 2026-10-12T061811Z-codex-e5508e
+  timestamp: '2026-10-12T06:18:11Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial DUF92 scientific self-review
+  details: Reviewed the current native projection, 13 graphs, 33 evidence-linked relations,
+    protein/domain mappings and inspected primary figures. Report is pass_with_limitations
+    with native NEEDS_FOLLOWUP, same-agent review and explicit remaining member/assay
+    coverage. No status promotion, expert endorsement or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T061754Z-pf01940-duf92-separated-plant-and-mammalian-causal-contexts/review.yaml

@@ -1,0 +1,31 @@
+Yao et al.2015, PMID:26112399, doi:10.1111/1751-7915.12294
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4621449/
+Inspected 2026-10-12 UTC: Results, strain/construct Table1, purification,
+mutagenesis, plasmid-stability and swimming Methods. Figures1 and5 visually
+inspected; other phenotype captions/text read, not independently quantified.
+Minimal source extracts: "SO_3166 is a potent toxin"; "R97G".
+
+Figure1A-C: pCA24N SO_3166 expression in E. coli BW25113 reduces growth
+and recoverable CFU versus vector. Coexpressed SO_3165-3166 restores CFU
+relative to SO_3166 alone. LB, 37C, 1mM IPTG at OD600 about0.1; two
+independent cultures. Figure1D-F separately tests MR-1 with pHGE, at30C
+in the strain Methods and with1mM IPTG. Its CFU loss and coexpression
+rescue are not the same experiment as the E. coli result. These are induced
+whole-protein effects, not basal physiological killing or direct RNA assays.
+
+Figure5A tests pCA24N constructs in DH5alpha, not BW25113. R97G and
+H102A relieve induced growth inhibition; Y104A retains toxicity. Clones
+were sequence-verified. Protein folding/abundance was not established by
+this plate comparison, so substitutions do not by themselves prove catalytic
+roles. Figure5C also shows C15R,H56P,R70H,V94G,L107H,H118P and the
+combined N98T/Y104C variant. Do not attribute the double mutant to N98 alone.
+
+Source conflict: Figure1 caption gives chloramphenicol30ug/ul, while Methods
+give30ug/ml; retain this discrepancy rather than silently normalizing units.
+Table1 has a SO_3166 construct-description typo. Later MntA modification
+evidence revises a binding-only neutralization explanation.
+
+Uncurated branches: whole-operon deletion changes promoter reporter and
+swimming; the two-gene cassette improves plasmid retention. These are not
+HepT-alone biochemical effects. Stress negatives reported without shown
+data do not establish universal absence of function or essentiality.

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01882
+  path: curation/families/PF01882.yaml
+session:
+  id: 2026-10-11T072330Z-codex-110607
+  timestamp: '2026-10-11T07:23:30Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add conditional Slr2013 DUF58 suppressor phenotypes
+  details: Retain one PHENOTYPIC graph with two INDIRECT OBSERVED edges for Rg2 growth
+    and oxygen recovery in the D2-T192H background, using primary Table 2, methods,
+    mapping results and reference-domain identity. Preserve allele-specificity, truncation,
+    negative-control and domain-mechanism limits. Minimal evidence caches were begun
+    at this session timestamp and the overlay completed after continuation. Status
+    remains IN_PROGRESS with partial family coverage.
+  sections:
+  - causal_graphs

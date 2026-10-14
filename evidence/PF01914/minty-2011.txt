@@ -1,0 +1,35 @@
+PF01914 primary assessment; inspected 2026-10-12 UTC
+Minty et al.2011, PMID21435272, DOI10.1186/1475-2859-10-18.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3071312/
+Minimal exact quotation: approximated the effect of transposon insertions by knocking out
+Remaining text is an authored assessment, not copied full text.
+Selected MarC Results/Discussion, Table3, base-strain, phenotype and
+recombination Methods read. Table3 parsed as structured HTML; its image
+was not separately inspected. Figure9 epistasis/raw data are not curated.
+
+Table3 marC::kan reconstruction compared with EcNR1:
+xylose0% isobutanol: growthrate-5.0+/-0.5%,maximumOD-2.4+/-0.1%;
+xylose0.5%(w/v): growthrate+39+/-2%,maximumOD+7.6+/-0.5%;
+glucose0%: growthrate-3.2+/-0.2%,maximumOD-7.8+/-0.3%;
+glucose0.5%(w/v): growthrate+20+/-5%,maximumOD+40+/-10%.
+These are reported percent differences, not measured absolute rates or
+clinical resistance. Uncertainty type and row-level significance are
+not independently resolved here; do not assign unreported SD or p-values.
+Microplate OD600 every10min48h at30C; blank-subtracted log-linear
+maximum growth rate. NG50/NX50 minimal medium50g/L glucose/xylose and
+0.25mg/L biotin.
+
+Important source ambiguity: Table3 caption calls reconstructed mutants
+EcNR1-derived, but main Results and knockout Methods use EcHW24 or
+progeny. EcHW24 is an EcNR1 MutS-negative derivative with two premature
+stop-generating SNPs; EcNR1 itself has modified lambda at bioA/bioB.
+The explicit comparator is EcNR1. Thus graphs name the reported
+marC::kan reconstruction versus EcNR1 and do not assert a clean
+marC-only isogenic causal effect. No inspected mutS repair resolves
+this discrepancy. A knockout approximates evolved IS1/IS5 insertion,
+not the exact same allele or proven equivalent local regulatory effect.
+Adjacent marRAB regulation and general membrane changes are alternatives;
+MarC transport of isobutanol was not directly measured. acrAB efflux
+assays and mdh enzyme assays cannot be borrowed as MarC mechanisms.
+HTML SHA256:
+9fb05038eb40ca2cff78476f4c364340743daecdd13c13911dc4613f962b1e5c

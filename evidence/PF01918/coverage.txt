@@ -1,0 +1,37 @@
+PF01918 causal-graph research coverage,2026-10-12.
+A scoped scientific curation, not exhaustive characterization of8285 proteins.
+Checked frozen identity and previous names, current InterPro/UniProt protein
+mappings, and selected primary Bell2002,Marsh2005,Laurens2012,
+Hands-Taylor2010,Goyal2012,Zhang2020,Banerjee2023 main sources plus
+Banerjee2023supplement. Cao2018 is abstract-level counterevidence only.
+
+Graph boundaries:
+Keep Sso DNA mechanics, biochemical Pat acetylation, coupled transcription,
+Sis10b RNA assays and growth, human Rpp25 complex assembly, and parasite
+PfAlba3 binding/nuclease/acetylation contexts separate.
+Do not infer family-wide function from EX_DUF naming or a domain match.
+RNA binding does not establish RNaseP/MRP cleavage; nuclease assays do not
+establish parasite BER, survival or drug targeting.
+An author-proposed allosteric or residue relay is not an observed edge.
+
+Open work:
+Reassess native archaeal K16 PTMs from Cao2018 full figures/raw spectra;
+preserve native counterevidence without denying Marsh2005 in-vitro reaction.
+Resolve historical constructs/tags and alternative AAK41236 initiation.
+Map and curate Banerjee cross-species proteins and exact author-core fragment.
+Inspect additional primary archaeal DNA topology/RNA and eukaryotic Alba
+branches, including yeast Pop6 and other parasite, plant and animal proteins.
+Complete Goyal2012supplement-level transcription, chemical-acetylation and MS
+checks; retain peptide/whole-protein assay distinction and K22/K23 preference.
+Resolve Banerjee NAD units and U28 notation before quantitative reuse.
+Characterize source-condition negatives and cellular mechanisms without
+joining separately measured in-vitro and growth effects into an observed chain.
+
+Access limits:
+General web fetches of PMC returned challenge pages and ScienceDirect returned403.
+Previously fetched valid primary HTML/PDFs and public CDN figure/supplement files
+were inspected locally. Wiley2018full PDF remained inaccessible.
+Normal sandbox curl DNS resolution failed; narrowly approved public requests
+succeeded. This is not a filesystem read denial or evidence absence.
+No paid research provider, source-freeze replacement, GitHub publication,
+independent expert review or full publication-QC pass was performed.

@@ -1,0 +1,26 @@
+PF01954 structural context, 2026-10-12
+https://data.rcsb.org/rest/v1/core/entry/2NWT
+https://data.rcsb.org/rest/v1/core/polymer_entity/2NWT/1
+https://bmrb.io/data_library/summary/index.php?bmrbId=7362
+Reference: doi:10.2210/pdb2nwt/pdb; BMRB7362; NESG targetGR83.
+
+Inspected entry/entity JSON and BMRB source, sequence, sample and conditions.
+2NWT is a solution-NMR deposition with20 submitted conformers selected from100
+calculated structures; these are not biological replicates. One protein entity
+has chainsA/B and69 residues. Direct sequence comparison verifies native
+O28071 residues1-61 plus LEHHHHHH at62-69. SIFTS maps1-61 to O28071.
+Primary citation is still listed as To be Published. No toxin or nucleic-acid
+polymer is part of the inspected entity record. This neither demonstrates
+neutralization/DNA regulation nor excludes untested binding partners.
+
+PDB source species taxon2234 and expression host Escherichia coli taxon562 are
+separate. The raw gene_src_strain field says XL-10, conflicting with the
+reference strain context; do not reinterpret this as an A. fulgidus strain.
+PDB conditions are pH5.5,298K,ambient pressure,100mMNaCl. BMRB sample lists
+5mMNaCl while its conditions list100mM ionic strength. Preserve the discrepancy;
+neither specifies a functional optimum. The assembly is structural evidence,
+not a perturbation showing that dimerization causes antitoxin activity.
+
+Raw entry SHA256:49cee1fecfa3a386f05a1da519687d6dfe5873f3cd6a5f142c86ee4db8a168f1
+Raw entity SHA256:b536ef981c5f4beddbca7d05e0d37afd928f9fca6dcbb02baa9f863f85a03d6d
+Disposition: retain structural grounding and unresolved metadata; no causal edge.

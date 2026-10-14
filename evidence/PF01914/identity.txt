@@ -1,0 +1,56 @@
+PF01914 identity and mapping assessment; inspected 2026-10-12 UTC
+Frozen PF01914 MarC / IPR002771, formerly UPF0056, EX_DUF/UNSCORED.
+Snapshot interpro-pfam-duf-2026-10-10; SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+15684 proteins,15727 matches,10592 proteomes,14991 taxa,0 structures,
+10306 AlphaFold models,8 architectures. Imported fields are unchanged.
+Fresh InterPro family and reviewed UniProt queries are mapping context,
+not experimental proof or replacement snapshots.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01914/
+https://rest.uniprot.org/uniprotkb/search?query=(xref:pfam-PF01914)%20AND%20(reviewed:true)&format=json&size=500
+
+K-12 MarC P0AEY1/b1529/JW1522, sequence version1,221aa, PF01914 5-217.
+Sequence MD5 35B1C7934308C66F9597DC4890CA4134.
+K-12 YchE P25743/b1242/JW1229, sequence version2,215aa, PF01914 9-210.
+Sequence MD5 DD86265DA8CBBBA869608551E89CF8E6.
+Domain mappings from InterPro entry/pfam/protein/uniprot/P0AEY1/ and
+P25743/. Reference mapping does not independently sequence assay clones.
+The K-12 MarC reference has L10,G11,M35,S140,V145.
+
+Exact SnatA deposit AB093585.1 CDS1071-1721, BAC53669.1,216aa,
+Thermococcus sp. JCM11816/KS-1, taxon1295125. Translation exactly equals
+UniParc UPI0000062A6D; MD5 E2A4DF5DD5501A1C9CF924BBC069DB89.
+UniParc sequenceFeatures maps PfamPF01914 9-214; TIGR00427 7-210.
+https://www.ebi.ac.uk/ena/browser/api/embl/AB093585?download=false
+https://rest.uniprot.org/uniparc/UPI0000062A6D.json
+Q8J305 is inactive/deleted because it is not part of a reference proteome.
+Its retirement is not absence of the sequence or a biological negative.
+UniParc retains BAC53669.1 and WP_113708152.1 as active crossreferences.
+The neighboring ORF224 is not SnatA.
+
+ATCC25922 donor DR76_3329 is AIL17056.1, CP009072.1 CDS3542008-3542673
+on the plus strand,221aa. It equals UniParc UPI00000DEBB0, with PfamPF01914
+5-217. MD5 35F5E821175F376D28960DC764BDABD1.
+https://www.ebi.ac.uk/ena/browser/api/embl/CP009072?download=false
+https://rest.uniprot.org/uniparc/search?query=AIL17056&format=json&size=10
+It differs from K-12 P0AEY1 at position36: K-12 N versus ATCC S.
+Do not silently substitute P0AEY1 as the exact 2018 donor allele.
+TableS2 2018 primers map a predicted877bp genomic insert3541797-3542673:
+FW longest exact 3-prime match is30nt, with CACGGATCCA cloning tail;
+RV reverse complement maps3542640-3542673. This spans the full MarC CDS
+plus upstream DNA. It is a primer/reference mapping, not resequencing of
+the historical plasmid. Original enrichment interval3540651-3542008
+ends at the MarC start; that separate reported interval remains unresolved.
+Whole proteins, genomic inserts, tagged/selected clones and Pfam intervals
+are distinct scopes; domain sufficiency is not established.
+
+Inspected payload SHA256 values:
+interpro.json d0f522c6c37194cdd7b8c6312c657a0634a614cb921a64271829878c79eb10c6
+reviewed.json 702c45ef61e5fece652a5b2609a2677dc3158775a36ac6f7c36ff8f1fc35cf10
+P0AEY1-domains.json a1e048517b847f0dd2847c7da97cda03816316838973f012c9ed9734ccc9023a
+P25743-domains.json 206b30f5d7143e3826b5abf865a4c046db98a331c2ca7e09dbda974681b9bcd0
+Q8J305.json b5be8031c78bffab9de708f1afc55c306c804787934a3f590bbf1c898744f926
+snat-genbank.txt e8b4ee2a21234c76f0b180690473c77dc001566710b79a1e6205371795fbef5e
+SnatA-uniparc.json cc5095bae47b07b71be7a584e37d6988a539a1420685553f17c0adb768726157
+atcc-region.embl ba191fc02e02dd6eba5afbf871192f6e4b18c9a2a1a3480d4b142e4ba46b333c
+ATCC-uniparc.json d7bfaf589f24c5b9d7ede8c3bc4c62fff9a4be1e2ab01f84721d00ebe0c9a43e

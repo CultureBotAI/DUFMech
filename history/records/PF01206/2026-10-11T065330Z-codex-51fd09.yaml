@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01206
+  path: curation/families/PF01206.yaml
+session:
+  id: 2026-10-11T065330Z-codex-51fd09
+  timestamp: '2026-10-11T06:53:30Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate two scoped E. coli TusA causal assay graphs
+  details: Inspected the 2024 primary study, Figure 1 and Figure 5 images, methods
+    and reference identity. Added observed IscS sulfide-production stimulation and
+    a separately scoped concentration-dependent Fe-S assembly optical phenotype. Retained
+    clone, assay and sulfur-diversion uncertainties. Status remains IN_PROGRESS; no
+    publication or complete-family review.
+  sections:
+  - causal_graphs

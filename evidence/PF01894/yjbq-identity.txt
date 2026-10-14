@@ -1,0 +1,44 @@
+PF01894 / YjbQ / historical UPF0047 identity, checked 2026-10-11.
+Sources:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01894/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01894/protein/uniprot/P0AF48/
+https://rest.uniprot.org/uniprotkb/P0AF48.json
+https://www.ncbi.nlm.nih.gov/protein/NP_418480.1
+Frozen owner: data/worklists/pfam-previous-unknown-names-2026-10-10.tsv.
+
+The frozen PF01894.24 row names YjbQ, with previous UPF0047 and YjbQ-like
+identifiers. No DUF number is assigned here. InterPro integration is IPR001602;
+PUB00101020 resolves to PMID18178222 and PUB00101019 to PMID21119630.
+The frozen family has 14125 proteins, 14162 matches, 12151 proteomes, 20399
+taxa, 9 structures, 9964 AlphaFold models and 83 domain architectures.
+
+P0AF48 is E. coli K12 YjbQ, b4056/JW4017, 138 aa, sequence version1,
+entry version113, sequence date2005-12-20, annotation date2026-06-10.
+Its retired/secondary accessions include P32698 and Q2M6P8. Member-specific
+InterPro maps PF01894 to6-138 inclusive, score2.4e-35.
+Biopython FASTA comparison found exact full-sequence equality with NP_418480.1,
+AAC77026.1, BAE78058.1 and WP_000270375.1. This establishes the K12 reference,
+not independent reconstruction of the experimental plasmids or MC1061 genome.
+
+Kim2010 Methods names BW25113-derived Keio mutants, the ASKA pCA24N library
+and reintroduction using both library plasmids and independently cloned
+pTrcHisB genes. TableII identifies JU283 as its delta-pdxB host. Morett2008
+accessible Introduction/Methods names MC1061 delta-thiE. These are separate
+experimental backgrounds, not the MG1655 reference strain. All graphs concern
+whole expressed YjbQ, not isolated PF01894 sufficiency. Broad family transfer,
+independently verified clone sequences remain open. The subsequently retrieved
+official Kim2010 supplement confirms N-terminal His6 tags in both systems and
+five extra C-terminal residues for ASKA only. Its TableI identifies JU283 as
+a selected BW25113/JWK2317 single colony, not an independently sequenced genome.
+
+Original Supplementary TableV prints these forward primers:
+pTrcHisB-YjbQ: TCA ATT GGA TCC ATG GTA TCA AAA GAC GCT CAC
+pET45b-YjbQ: ATT CGG TAC CAT GTG GTA TCA AAA GAC GC
+The start-region strings differ: ATGGTAT... versus ATGTGGTAT... after the
+respective restriction sites. Do not silently repair the printed sequence,
+claim the pTrcHisB insert exactly matches P0AF48, or infer an expressed reading
+frame without vector-junction and actual clone-sequence evidence. This does not
+negate the authors' reported yjbQ identification and reintroduction result.
+
+The Bacillus cpaA/yjbQ name and E. coli YjbR are not identity synonyms for
+this E. coli UPF0047 member; their search hits are not functional evidence here.

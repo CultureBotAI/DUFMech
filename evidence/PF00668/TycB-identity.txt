@@ -1,0 +1,29 @@
+PF00668 / TycB identity, inspected 2026-10-11
+https://rest.uniprot.org/uniprotkb/O30408.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/O30408/entry/pfam/PF00668/
+O30408 = tycB / NCBIProtein:AAC45929.1, nucleotide AF004835.
+Current organism: Brevibacillus parabrevis, NCBITaxon:54914.
+3587 residues; sequence version 1; entry version 122.
+Sequence MD5: 71aee01e4dbd5d040625f754ff9ed764
+UniProt and InterPro sequences agree exactly.
+O30408 first Pfam:PF00668 interval: 9-454, inclusive
+Other PF00668 intervals: 1060-1493, 2095-2530 and 3123-3575.
+Only the first module is the adopted TycB1 experimental context; the
+other matches, including the terminal epimerization region, are not assigned
+the same condensation-substrate or mutant effects.
+Reference residues match the paper's Q19/R62/R67/H146/H147/D151/C154/
+Y166/W202/R284 numbering. Reference N terminus is MSVFSKEQVQ.
+
+The sequence-linked primary operon paper PMID:9352938, abstract inspected,
+identifies historical Bacillus brevis ATCC 8185 and its tycA/tycB/tycC operon.
+https://pubmed.ncbi.nlm.nih.gov/9352938/
+The tested first-module identity is supported by gene/module context and
+consistent residue mapping; complete construct boundaries and junctions
+remain unverified, so this is not a byte-exact reagent sequence assertion.
+The 2002 Figure 1 tycA wording is not used to rename TycB1.
+
+Required GrsA partner accession is not uniquely assigned. Reviewed GrsA
+search returns P0C061 (A. migulanus, taxon 47500) and P0C062 (B. brevis,
+taxon 1393), both 1098 residues with different sequences. Neither is silently
+adopted as the exact 2002 experimental partner. The joint graph names the
+paper's GrsA Phe-ATE preparation and preserves this mapping limit.

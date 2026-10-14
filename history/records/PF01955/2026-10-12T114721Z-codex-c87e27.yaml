@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01955
+  path: curation/families/PF01955.yaml
+session:
+  id: 2026-10-12T114721Z-codex-c87e27
+  timestamp: '2026-10-12T11:47:21Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add scoped CbiS corrinoid and joint-rescue causal contexts
+  details: 'Add four graphs and seventeen experimental edges for mapped MK1672 CbiS:
+    five purified substrate conversions, eight separate assay-condition effects, two
+    joint CobY rescue comparisons and two conditional AP/fragment comparisons. Retain
+    four new evidence ledgers, exact PF01955/PF04608 boundaries, deposited CDS and
+    primer checks, source-unit/genotype/clone discrepancies and phosphatase counterevidence
+    without transferring it to PF01955. Preserve all eight prior edges and historical
+    evidence. Ten graphs and twenty-five edges total; seven DIRECT and eighteen UNRESOLVED.
+    IN_PROGRESS; native roles, exact constructs, bacterial remodeling and earlier
+    family follow-ups remain open.'

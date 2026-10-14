@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01871
+  path: data/families/PF01871.yaml
+session:
+  id: 2026-10-11T183000Z-codex-383676
+  timestamp: '2026-10-11T18:30:00Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial same-agent AMMECR1 causal review with construct and biochemical
+    follow-ups
+  details: Saved six-graph nine-edge assessment after inspecting primary figures,
+    methods and versioned member mappings. Corrected quotation wording before retaining
+    the review. All edges remain indirect phenotypic observations; additional members,
+    supplement controls, rescue insert and biochemical function remain open.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T183245Z-pf01871-ammecr1-localization-development-and-marker-contexts/review.yaml

@@ -1,0 +1,12 @@
+Candidate identity facts inspected 2026-10-11; not a verified experimental clone.
+https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AmqnD%20AND%20organism_name%3A%22Bacillus%20halodurans%22&format=json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9K9F8/entry/pfam/PF02621/
+UniProtKB: Q9K9F8; mqnD/BH2689; translation BAB06408.1.
+Halalkalibacterium halodurans C-125; NCBITaxon:272558.
+Entry version 95; sequence version 1; 279 residues.
+Sequence MD5: C9D76A2B91A6A13C7446BF6C2E9858CB
+entry accession: PF02621
+Current interval: 1-264; integrated IPR003773.
+The inspected UniProt record's cited publication is the genome paper
+PMID:11058132, not the 2021 experiment. Matching species and enzyme name alone
+does not confirm that its sequence is the exact experimental construct.

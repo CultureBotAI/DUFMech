@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01925
+  path: curation/families/PF01925.yaml
+session:
+  id: 2026-10-12T021339Z-codex-4744a4
+  timestamp: '2026-10-12T02:13:39Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped CysZ, PmpC and MamO causal contexts with qualified transport
+    hypotheses
+  details: Added nine graphs with36 observed indirect cellular effects and one explicitly
+    hypothetical CysZ uptake edge. Seven evidence ledgers retain primary figure/table
+    checks, exact member/domain mapping, conditional negatives and source/access limits.
+    Imported PF01925 identity and snapshots remain unchanged. Native overlay/evidence/graph
+    checks and37 primary quotation checks pass. Family remains IN_PROGRESS with uncurated
+    contexts and unresolved historical constructs; no publication or full-family completion.

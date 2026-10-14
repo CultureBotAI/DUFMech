@@ -1,0 +1,40 @@
+PF01933 identity and scope ledger
+Accessed 2026-10-12. Frozen identity is Pfam:PF01933, CofD,
+InterPro:IPR002882, EX_DUF. Preserve the imported name, description and counters.
+Frozen worklist SHA256:
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+
+Current public family record:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01933/
+Raw JSON SHA256 fb61cff56f1736b08655d30297ae4bb01f153604c44d921b226a2b27cd7c464d.
+Current member maps use
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/ACCESSION/entry/pfam/PF01933/
+O06974: Bacillus subtilis168, taxon224308,317aa,PF01933 7-292.
+P9WP81: Mycobacterium tuberculosis H37Rv,taxon83332,331aa,PF01933 3-294.
+A0QTG2: Mycolicibacterium smegmatis mc2 155,taxon246196,327aa,PF01933 3-291.
+Q58653: Methanocaldococcus jannaschii JAL-1,taxon243232,311aa,PF01933 5-275.
+Q8PVT6: Methanosarcina mazei Go1,taxon192952,303aa,PF01933 2-266.
+All five have UniProt sequence version1 in the inspected reviewed-member query.
+O06974 is mgfK/yvcK/BSU34760, called GlmR in the primary literature.
+P9WP81 is fbiA/Rv3261; A0QTG2 is fbiA/MSMEG_1830.
+Q58653 is cofD/MJ1256; Q8PVT6 is cofD/MM_1874.
+
+Map SHA256 values in the same accession order:
+585a5b3496434ac57edf232df2cd2d1aa885191582125adfbe027e5f87139796
+727e4f8df972da2bf961b78139c78edd81c12f4880dd1dcd927e51c7f9d6fd58
+69de0c4e4d592bd3cb8f589785592821845b367f803778952463c5c8ae657041
+a8509b8e75ab752718b7ab05fa20450b8e0708c82bbb29a973005b68c0061b14
+10024ac8b3756329e640a4d2e35e31a4a5d0bcff2f74c3c46754cedfff452c8f
+Reviewed-member query: https://rest.uniprot.org/uniprotkb/search?query=xref%3Apfam-PF01933%20AND%20reviewed%3Atrue&format=json&size=100
+Returned71 entries; not a survey of all14174 frozen proteins.
+Raw query SHA256 23771bec531ed6dcb2d41bb2ca676da255b8c4098727f3fc2f1d95ae39b162c0.
+
+These are reference-sequence maps, not verification of every experimental clone.
+O06974 positions14,265,301 are T,Y,R; positions264,300 are K,I.
+Thus the Results labels Y265A/R301A agree with current sequence numbering;
+Foulquier2020 Methods instead give Y264A/R300A and once His264. Retain this
+conflict rather than silently correcting the source. R301 lies outside the
+current7-292 Pfam match: its phenotype is whole-protein evidence, not proof of
+an isolated PF01933 residue mechanism. CofC/FbiD and GlmS/YvcJ are partners,
+not automatically PF01933 enzymes. The representative structure2Q7X is not
+proof that every family member performs CofD chemistry.

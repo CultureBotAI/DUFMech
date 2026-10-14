@@ -4,7 +4,7 @@ name: Endoribonuclease L-PSP
 short_name: Ribonuc_L-PSP
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01042
 counters:
   proteins: 74014
@@ -27,3 +27,370 @@ description: Endoribonuclease active on single-stranded mRNA. Inhibits protein s
   (renamed RidA) family members are enamine/imine deaminases. They hydrolyze reactive intermediates released
   by PLP-dependent enzymes, including threonine dehydratase [[cite:PUB00064878]]. YjgF also prevents inhibition
   of transaminase B (IlvE) in Salmonella [[cite:PUB00109184]].
+curation_history: history/records/PF01042
+discussions:
+- discussion_id: rida-addition-order-chemistry-and-family-coverage
+  prompt: Resolve RidA construct and addition-order details, then extend member-specific chemical and
+    cellular contexts.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Coupled biochemical endpoints and substitutions support directed effects without directly
+    resolving every enamine/imine hydrolysis microstep. The IlvE assay has an addition-order discrepancy,
+    and the imported RNase label is not a Salmonella experiment.
+  evidence:
+  - reference: PMID:22094463
+    supports: PARTIAL
+    evidence_source: selected_full_text
+    explanation: Methods, Results, Discussion and Figures 2/4/6/7 support the retained comparisons. Additional
+      homologs, cellular complementation and complete clone history are not independently curated.
+  - reference: PMID:23386433
+    supports: PARTIAL
+    evidence_source: selected_full_text
+    explanation: Figure 1B supports retained IlvE activity; caption/Methods order and unlocalized adduct
+      chemistry limit stronger repair and atomic-mechanism claims.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Retrieve complete clones and earlier purification details; resolve addition order and endpoint
+    temperature; assess adduct evidence and separately map other homologs and cellular phenotypes. Preserve
+    frozen seed labels and do not transfer mammalian RNase activity. Partial same-agent scientific review;
+    remain IN_PROGRESS.
+causal_graphs:
+- graph_id: rida-ilva-threonine-product-rate
+  title: RidA increases 2-ketobutyrate formation in the coupled IlvA assay
+  scope: Intact Salmonella RidA/YjgF and IlvA with C-terminal His6 tags, not isolated PF01042 or a mammalian
+    L-PSP RNase assay.
+  context: Figure 2B of the 2012 study; 0.9 uM IlvA, 1.6 uM RidA when present, 10 uM PLP, threonine series,
+    50 mM each TAPS/CHES/CAPS at pH 9.5, 200 uL, 22 C. A230 initial rates use 30-60 s at this pH. Doses
+    are monomer-based. Two replicates with SE, representative of more than five independent experiments.
+  family_mapping: LT2 reference UniProtKB:Q7CP78, ridA/yjgF/STM4458, 128 residues, sequence version 1,
+    agrees exactly with InterPro; PF01042 spans 7-126 inclusive. Production in E. coli BL21AI does not
+    change the Salmonella donor identity. Complete clone junctions remain unverified.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:99287
+  limitations: Directness describes a measured coupled biochemical output. RidA alone is not asserted
+    to dehydrate threonine. Separate TLC/MS support product identity, not direct visualization of an enamine,
+    imine, water-positioning or proton-transfer trajectory. Frozen family labels do not assign this protein
+    RNase activity or establish a universal family function.
+  nodes:
+  - node_id: rida-added-to-ilva-threonine
+    label: RidA added to the IlvA, threonine and PLP assay
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q7CP78
+    - UniProtKB:P20506
+  - node_id: two-ketobutyrate-initial-rate
+    label: Initial rate of 2-ketobutyrate formation
+    node_type: ACTIVITY
+  edges:
+  - edge_id: rida-increases-threonine-product-rate
+    subject: rida-added-to-ilva-threonine
+    predicate: increases
+    object: two-ketobutyrate-initial-rate
+    mechanism: Adding RidA increases the measured keto-acid production rate relative to IlvA without RidA
+      across the tested substrate series. IlvA, substrate and assay cofactors remain explicit joint conditions;
+      this is not a RidA-only reaction or an elementary chemical step.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:22094463
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3270999/
+      snippet: significantly increased the rate
+      explanation: Figure 2B and the kinetic Methods support the added-RidA comparison at pH 9.5. The
+        high-pH rate window is 30-60 s, not the initial burst.
+      cache_path: evidence/PF01042/lambrecht-2012-ridA.txt
+      cache_sha256: 44bebd6b53abf4bf626d60cecda72c21923d7b23dec4a7096b29a11034c9a50c
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q7CP78/entry/pfam/PF01042/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q7CP78/entry/pfam/PF01042/
+      snippet: 'Q7CP78 Pfam:PF01042 interval: 7-126, inclusive'
+      explanation: Maps the Salmonella reference to PF01042; identity evidence is not a separate causal
+        experiment or proof of every experimental clone sequence.
+      cache_path: evidence/PF01042/RidA-identity.txt
+      cache_sha256: b481b4fe96410b0c8aa9f8f5c96fec413a3a7655cbdd1050140c65ceebcd60b3
+- graph_id: rida-ferricyanide-partition-endpoint
+  title: RidA changes ferricyanide reduction and keto-acid yield in a trapping assay
+  scope: The tagged Salmonella RidA/IlvA preparation in the 2012 Figure 4B two-hour endpoint, separate
+    from the initial-rate assay.
+  context: 10 mM threonine, 5 mM ferricyanide, 0.9 uM IlvA, 10 uM PLP, 1.6 uM RidA when present, 50 mM
+    each TAPS/CHES/CAPS pH 9.5. Reduced ferricyanide is measured by A420 and 2-ketobutyrate by DNPH derivatization.
+    Two replicates with SD, representative of four independent endpoint experiments. Dedicated endpoint-method
+    temperature is not specified.
+  family_mapping: Intact LT2 RidA Q7CP78, sequence version 1, contains PF01042 at 7-126; IlvA maps to
+    P20506. Tags and reference mapping are established, but complete clone junctions remain unverified.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:99287
+  limitations: Two outputs from one experiment are not independent replication or a serial observed pathway.
+    Ferricyanide trapping supports accessible reactive intermediates but does not directly resolve their
+    structure or RidA catalytic microsteps. DNPH avoids ferricyanide interference at A230. Temperatures
+    of other assays are not silently transferred to this endpoint.
+  nodes:
+  - node_id: rida-in-ferricyanide-assay
+    label: RidA added to IlvA, threonine, PLP and ferricyanide
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q7CP78
+    - UniProtKB:P20506
+  - node_id: ferricyanide-reduced-at-two-hours
+    label: Amount of ferricyanide reduced at two hours
+    node_type: STATE
+  - node_id: two-ketobutyrate-at-two-hours
+    label: Yield of 2-ketobutyrate at two hours
+    node_type: STATE
+  edges:
+  - edge_id: rida-decreases-ferricyanide-reduction
+    subject: rida-in-ferricyanide-assay
+    predicate: decreases
+    object: ferricyanide-reduced-at-two-hours
+    mechanism: The RidA-containing reaction reduces less ferricyanide than the matched reaction lacking
+      RidA at the two-hour endpoint. Intermediate removal is an interpretation of this trapping result,
+      not a directly imaged molecular trajectory.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:22094463
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3270999/
+      snippet: dramatically decreased
+      explanation: Figure 4B rightmost pair and accompanying Results show less ferricyanide reduction
+        with RidA at 5 mM ferricyanide; no exact value was digitized.
+      cache_path: evidence/PF01042/lambrecht-2012-ridA.txt
+      cache_sha256: 44bebd6b53abf4bf626d60cecda72c21923d7b23dec4a7096b29a11034c9a50c
+  - edge_id: rida-increases-trapping-assay-product-yield
+    subject: rida-in-ferricyanide-assay
+    predicate: increases
+    object: two-ketobutyrate-at-two-hours
+    mechanism: Under the same trapping conditions, adding RidA increases the keto-acid endpoint yield.
+      This measured product redistribution is not presented as independent evidence that each proposed
+      hydrolytic microstep was observed.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:22094463
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3270999/
+      snippet: converted to 2-ketobutyrate
+      explanation: Figure 4B product bars and the right-pair Results comparison support higher product
+        yield with RidA, with DNPH rather than A230 quantitation.
+      cache_path: evidence/PF01042/lambrecht-2012-ridA.txt
+      cache_sha256: 44bebd6b53abf4bf626d60cecda72c21923d7b23dec4a7096b29a11034c9a50c
+- graph_id: rida-substitutions-reduce-coupled-rate-enhancement
+  title: Y17F, R105A, E120K and E120A reduce RidA-dependent rate enhancement
+  scope: Individually purified tagged Salmonella RidA variants compared with WT in the 2012 Figure 6 pH
+    9.5 panel.
+  context: 15 mM threonine, 0.9 uM IlvA, 1.6 uM WT or variant RidA, 50 mM CHES pH 9.5. General kinetic
+    conditions include 10 uM PLP, 200 uL, 22 C and the 30-60 s rate window. Output is the fold increase
+    over IlvA alone. Three replicates with SD, representative of three independent experiments. The separate
+    pH 8 HEPES bars are not merged into this context.
+  family_mapping: Q7CP78 sequence version 1 contains Y17, R105 and E120 within PF01042 residues 7-126.
+    Intact C-terminally His6-tagged QuikChange variants use the same purification approach as WT; exact
+    clones remain unsequenced in this assessment.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:99287
+  limitations: Each substitution reduces, but does not eliminate, measured enhancement. Activity changes
+    do not uniquely resolve water positioning, an essential acid/base residue or an isolated-domain mechanism.
+    Purification and reported stability do not independently establish identical folding or active-protein
+    fraction. R105A retains burst kinetics and has the lowest enhancement.
+  nodes:
+  - node_id: y17f-in-coupled-assay
+    label: RidA Y17F substituted for WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q7CP78
+  - node_id: r105a-in-coupled-assay
+    label: RidA R105A substituted for WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q7CP78
+  - node_id: e120k-in-coupled-assay
+    label: RidA E120K substituted for WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q7CP78
+  - node_id: e120a-in-coupled-assay
+    label: RidA E120A substituted for WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q7CP78
+  - node_id: product-rate-fold-enhancement
+    label: Fold enhancement of 2-ketobutyrate initial rate over IlvA alone
+    node_type: ACTIVITY
+  edges:
+  - edge_id: y17f-decreases-rate-enhancement
+    subject: y17f-in-coupled-assay
+    predicate: decreases
+    object: product-rate-fold-enhancement
+    mechanism: Y17F gives less coupled product-rate enhancement than WT at equal nominal monomer concentration,
+      without abolishing the enhancement or establishing a unique residue-level chemical role.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:22094463
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3270999/
+      snippet: all four variants were defective
+      explanation: Figure 6 gray Y17F and WT bars support this substitution-specific comparison at pH
+        9.5; no atomic model is adopted as observed evidence.
+      cache_path: evidence/PF01042/lambrecht-2012-ridA.txt
+      cache_sha256: 44bebd6b53abf4bf626d60cecda72c21923d7b23dec4a7096b29a11034c9a50c
+  - edge_id: r105a-decreases-rate-enhancement
+    subject: r105a-in-coupled-assay
+    predicate: decreases
+    object: product-rate-fold-enhancement
+    mechanism: R105A gives less coupled product-rate enhancement than WT and is the lowest of the tested
+      variants. This does not make all residual activity zero or directly demonstrate an imine-binding
+      pose.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:22094463
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3270999/
+      snippet: all four variants were defective
+      explanation: Figure 6 gray R105A and WT bars support the decrease. The source notes residual enhancement
+        and burst kinetics, which qualify an essential-catalyst interpretation.
+      cache_path: evidence/PF01042/lambrecht-2012-ridA.txt
+      cache_sha256: 44bebd6b53abf4bf626d60cecda72c21923d7b23dec4a7096b29a11034c9a50c
+  - edge_id: e120k-decreases-rate-enhancement
+    subject: e120k-in-coupled-assay
+    predicate: decreases
+    object: product-rate-fold-enhancement
+    mechanism: E120K lowers the enhancement relative to WT at pH 9.5 while retaining activity. The perturbation
+      effect does not directly identify general acid/base chemistry or water orientation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:22094463
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3270999/
+      snippet: all four variants were defective
+      explanation: Figure 6 gray E120K and WT bars are the adopted comparison; distinct pH 8 measurements
+        remain separate.
+      cache_path: evidence/PF01042/lambrecht-2012-ridA.txt
+      cache_sha256: 44bebd6b53abf4bf626d60cecda72c21923d7b23dec4a7096b29a11034c9a50c
+  - edge_id: e120a-decreases-rate-enhancement
+    subject: e120a-in-coupled-assay
+    predicate: decreases
+    object: product-rate-fold-enhancement
+    mechanism: E120A lowers the enhancement relative to WT at pH 9.5 but remains above IlvA alone. A measured
+      substitution effect is not a direct view of an elementary catalytic step.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:22094463
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3270999/
+      snippet: all four variants were defective
+      explanation: Figure 6 gray E120A and WT bars support this decrease with retained activity.
+      cache_path: evidence/PF01042/lambrecht-2012-ridA.txt
+      cache_sha256: 44bebd6b53abf4bf626d60cecda72c21923d7b23dec4a7096b29a11034c9a50c
+- graph_id: rida-ilva-serine-product-rate
+  title: RidA increases pyruvate formation in the coupled IlvA and serine assay
+  scope: Tagged Salmonella RidA/IlvA in the 2012 Figure 7 serine-substrate experiment, not the threonine
+    assay or a stand-alone RidA dehydratase.
+  context: Serine concentration series at pH 9.5, 0.9 uM IlvA, 1.6 uM RidA when present, 10 uM PLP, 50
+    mM each TAPS/CHES/CAPS, 200 uL, 22 C. A230 rates use 30-60 s. Two replicates with SE, representative
+    of three independent experiments. No precise plotted rate was digitized.
+  family_mapping: LT2 reference RidA Q7CP78 sequence version 1 contains PF01042 at 7-126, with exact UniProt/InterPro
+    sequence agreement. The intact protein and IlvA P20506 are the mapped coupled system; full clone junctions
+    remain unverified.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:99287
+  limitations: The endpoint supports enhanced product formation in a coupled assay. The corresponding
+    reactive metabolite, hydrolysis sequence and proposed catalytic water geometry are not directly observed
+    by A230. Results are not transferred to all family members or mammalian RNase function.
+  nodes:
+  - node_id: rida-added-to-ilva-serine
+    label: RidA added to IlvA, serine and PLP
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q7CP78
+    - UniProtKB:P20506
+  - node_id: pyruvate-initial-rate
+    label: Initial rate of pyruvate formation
+    node_type: ACTIVITY
+  edges:
+  - edge_id: rida-increases-serine-product-rate
+    subject: rida-added-to-ilva-serine
+    predicate: increases
+    object: pyruvate-initial-rate
+    mechanism: Adding RidA increases pyruvate production rate across the measured serine series compared
+      with IlvA without RidA. This observed coupled output does not independently make RidA sufficient
+      for serine dehydration.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:22094463
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3270999/
+      snippet: rate of pyruvate formation was 2.2-fold faster
+      explanation: Figure 7 and the serine Results support the direction. The quoted prose includes a
+        particular comparison, but the graph does not digitize rates or impose that fold change across
+        concentrations.
+      cache_path: evidence/PF01042/lambrecht-2012-ridA.txt
+      cache_sha256: 44bebd6b53abf4bf626d60cecda72c21923d7b23dec4a7096b29a11034c9a50c
+- graph_id: rida-retained-ilve-activity
+  title: RidA increases retained IlvE activity in an IlvA and serine mixture
+  scope: The Salmonella RidA comparison in the 2013 Figure 1B radioactive IlvE assay. Other species' homologs
+    and cellular extracts are not this graph.
+  context: 50 mM potassium phosphate pH 9, 50 uM PLP, 12.5 mM 2-ketoglutarate, 0.75 ug IlvE, 10 ug IlvA,
+    50 mM serine and 16 ug RidA where indicated. Methods list these mixtures preincubated 2 h at 37 C,
+    then 5 mM radiolabeled isoleucine (20 nCi) for 15 min at 37 C. TLC-resolved 2-keto-3-methylvalerate
+    reports IlvE specific activity. Two replicates with ranges, independently repeated at least twice.
+  family_mapping: Intact LT2 RidA Q7CP78 sequence version 1 contains PF01042 residues 7-126. IlvA P20506
+    and IlvE P0A1A5 are LT2 reference mappings. IlvE carries a C-terminal His6 tag and was produced in
+    SB300A1-derived Salmonella strains; RidA/IlvA purification cites earlier procedures. Complete clones
+    remain unverified.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:99287
+  limitations: Figure 1B caption wording places RidA addition after preincubation, whereas Methods include
+    it in the preincubation mixture and Results interpret protection. The graph adopts the endpoint comparison,
+    not reversal of pre-existing damage. The separate 3-chloroalanine assay is not an identical control.
+    Adduct identity, nucleophilic site and raw MS were not independently resolved.
+  nodes:
+  - node_id: rida-in-ilve-ilva-serine-assay
+    label: Salmonella RidA included in the IlvE, IlvA and serine condition
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q7CP78
+    - UniProtKB:P20506
+    - UniProtKB:P0A1A5
+  - node_id: retained-ilve-specific-activity
+    label: Retained IlvE specific activity measured by radiolabeled keto-acid formation
+    node_type: ACTIVITY
+  edges:
+  - edge_id: rida-increases-retained-ilve-activity
+    subject: rida-in-ilve-ilva-serine-assay
+    predicate: increases
+    object: retained-ilve-specific-activity
+    mechanism: The RidA-containing IlvA/serine mixture retains more IlvE activity than the matched inhibited
+      mixture without RidA. This does not uniquely distinguish prevention from reversal given the source's
+      addition-order ambiguity, or directly observe an adduct-removal mechanism.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:23386433
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3565831/
+      snippet: dramatically decreased the negative effect
+      explanation: Figure 1B Salmonella bar, Results and radioactive Methods establish the retained-activity
+        comparison. The caption/Methods order discrepancy is explicitly retained rather than interpreted
+        as proven repair.
+      cache_path: evidence/PF01042/lambrecht-2013-ridA.txt
+      cache_sha256: 7a4b26847f592333f017c826611c5e001984b6b5ab591d2ed4a0516ab20c80c2
+curation_events:
+- timestamp: '2026-10-11T08:44:50Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Add scoped RidA coupled-biochemical causal graphs
+  history_record: history/records/PF01042/2026-10-11T084450Z-codex-599147.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T08:51:06Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of RidA assay graphs
+  history_record: history/records/PF01042/2026-10-11T085106Z-codex-3a51d0.yaml
+  event_index: 0
+  llm_assisted: true

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01513
+  path: curation/families/PF01513.yaml
+session:
+  id: 2026-10-11T105840Z-codex-094c80
+  timestamp: '2026-10-11T10:58:40Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curated donor-specific NADK N75T graphs for PF01513.
+  details: Read Nakamichi 2013 with supplement and selected Kawai 2001 construct/assay
+    context. Visually inspected Figures 2/3 and S1-S4. Verified P0A7B3 reference mapping
+    and N75 within domain 8-121; retained terminal-primer uncertainty. Added four
+    direct donor-specific coupled-assay effects and a separate qualitative TLC product
+    effect, not universal polyphosphate use or an atomic binding mechanism. Retained
+    tripolyphosphate exception, residual WT output, heterogeneous donors, assay gaps
+    and unresolved kinetic-table ratios. IN_PROGRESS; no publication.

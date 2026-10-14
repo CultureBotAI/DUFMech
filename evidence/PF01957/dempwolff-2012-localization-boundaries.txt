@@ -1,0 +1,25 @@
+Dempwolff2012: localization evidence and family exclusions
+PMID:22753055; DOI:10.1128/JB.00910-12
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3415494/
+https://journals.asm.org/doi/10.1128/jb.00910-12
+Accessed 2026-10-12. Relevant Results, Methods, Table1 and original Figures4/6
+inspected. PMC HTML downloaded; EuropePMC XML twice returned500. Movies and
+supplementary PDF were not inspected.
+
+The NfeD2/YuaF-FloT recruitment and altered foci observations involve O32077,
+currently PF31148/PF25842, and are excluded from PF01957 graphs. For the mapped
+PF01957 member NfeD1b/YqeZ, the paper reports no visually discernible dependence
+of localization on FloA/FloT/YqfB or vice versa under tested conditions. These
+qualitative negatives do not establish independence under every stress.
+
+Source labeling needs care: original Figure4 image labels N as NfeD2 loss,
+R as NfeD1b loss, O as FloA truncation, and P as YqfB depletion. Main text and
+parts of the caption swap some of those panel references. Original Figure6
+image contains A-I, including YuaI panels C/D and YqeZ panels E-I, whereas
+the accompanying caption describes only A-G. Do not silently map the caption's
+NfeD1b labels onto the YuaI images or assign a molecular effect from those errors.
+
+YqeZ loss used internal-plasmid truncation with a xylose promoter for downstream
+genes; it was not an isolated PF01957 deletion. PY79/DML1541 derivatives and
+rich/minimal media are distinct contexts. No new causal edge is supported by
+the inspected PF01957-specific localization comparisons.

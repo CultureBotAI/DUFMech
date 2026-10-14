@@ -1,0 +1,49 @@
+PF01905 search and coverage ledger, 2026-10-11 UTC
+Native baseline: all 8296 records schema-valid, zero generated drift.
+Ignored/hidden-inclusive curation/evidence/history/reviews/reports searches
+(excluding structural inventory.json) for PF01905, DUF73 and IPR010154 found
+no earlier local family curation. New paths had no collisions or symlinks and
+were not gitignored. Frozen identities and source pins remain unchanged.
+
+Public searches covered PF01905, DUF73, DevR, Csa2, Cas7, SSO1442,
+MXAN_7262, developmental autoregulation, binding mutations, later structures
+and CRISPR complexes. Name-only hits for mycobacterial DevR/DosR are excluded.
+Most 771 frozen members and many primary contexts remain unassessed.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC206890/
+1993 DevRS transposon/rescue study: abstract-level lead only in this pass.
+7.8-kb rescue and polar insertions are not isolated DevR protein experiments.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC1913320/
+2007 operon work: selected indexed context, not full figure/supplement audit;
+DevS reporter and translation data are not automatically DevR perturbations.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8730458/
+Later review points to the 2017 primary work but describes antisense-guided
+regulation more strongly; retain primary-source uncertainty and unpublished-data
+status instead of adopting review prose as an experimental demonstration.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9357151/
+https://www.rcsb.org/structure/7TR8
+Hu2022, PMID:35835111, doi:10.1016/j.molcel.2022.06.007 is an important
+P. furiosus complex-level follow-up. Deposited Cas7a is PF0642/Q8U333; the PDB
+summary names it and PF01905 annotations provide a mapping lead. No exact
+sequence/construct mapping or full-paper assay audit was completed here.
+PMC returned a browser challenge and Europe PMC fullTextXML returned 500
+on two attempts. No challenge was bypassed. Abstract/structure information
+does not become a retained nuclease edge or isolated Cas7 catalytic function.
+
+https://www.rcsb.org/structure/9cp1
+https://www.ebi.ac.uk/emdb/EMD-45796
+2025-released post-targeting Csa2 structures map SSO1442/Q97Y91. The current
+deposition labels its associated Gentry/Findlay/Lawrence manuscript To Be
+Published. A bounded title/author search found structural repositories, not
+an inspected full primary paper; this is not proof that no manuscript exists.
+No causal disassembly sequence is inferred solely from static particles.
+
+Lintner2011 PMC main HTML and original CDN figures were obtained normally;
+the PMC supplement response was HTML, while the publisher PDF succeeded.
+2015 supplementary PMC routes returned HTML/404, publisher returned 403,
+Europe PMC fullTextXML returned 500, and attempted OA utility route returned
+404. These are access limits, not scientific negatives. Reeks2013 supplementary
+sequences and remaining plots were not inspected. Repo/skill reads, direct
+project-Python PDF extraction and standalone offline UV/Biopython/Pillow
+worked. No permission/configuration change, source import or publication.

@@ -1,0 +1,47 @@
+Ren 2017 published supplementary data, accessed 2026-10-11.
+Publisher base URL:
+https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fcr.2017.122/MediaObjects/
+Files named 41422_2017_BFcr2017122_MOESM<N>_ESM.pdf.
+Minimal quotations: "Supplementary information"; "not detect".
+The following are numerical facts and curator interpretation, not copied prose.
+
+N=65, Figure S3: chromatogram and spectrum visually inspected. Product extracted
+at m/z1020.54-1020.56, retention time28.46 min, spectrum1020.55. No independent
+PPi measurement is established by this product-ion assignment.
+
+N=66, Figure S4: visually inspected. Ion additions 10 mM each. Adding KCl or
+LiCl enhances the Mg-containing reaction versus Mg alone; NaCl does not show
+similar enhancement. Mn supports activity, but monovalent ions do not enhance
+it similarly. Ca has low residual signal, Zn near baseline; avoid literal-zero
+claims. The plotted signal is DDM-normalized product ion counts. CTP series
+with Mg plus K gives reported Km1.28 mM and Vmax2.1 umol/min/mg, but 1-hour
+endpoint Methods do not independently verify an initial-rate regime.
+
+N=67, Figure S5: visually inspected. D41A and G54A, as well as R51A/D55A, have
+lower product output than WT. R51A output differs numerically from Figure4;
+do not pool separate panels or calculate cross-panel fold changes.
+
+N=69, Figure S7: visually inspected. Each D8A/W9A/D12A/E16A/N82A/Y139A has
+lower product signal than WT; W9A retains substantial output. D8/W9 are outside
+Pfam12-174. These are whole-protein perturbation effects, not evidence that the
+DUF domain itself contains those sites or that every site is chemically catalytic.
+
+N=74, Table S2: text and original table image inspected. Kd in uM:
+WT+Mg 0.2 +/-0.02; WT-Mg 1.6 +/-0.18.
+N28A, P31A, K57A, D100A, K107A, D125A: n.d.
+D41A 2.1 +/-0.16; R51A 3.4 +/-0.34; G54A 1.05 +/-0.11;
+D55A 0.76 +/-0.07; T58A 8.85 +/-1.41; R108A 1.95 +/-0.25;
+R114A 4.6 +/-3.39; D122A 1.4 +/-0.07.
+Table reports representative parameters from three technical replicates, not
+three independent protein preparations. Error statistic is not independently
+established. n.d. is an assay detection result, not infinite Kd or zero binding.
+WT fitted sites N=0.36/+Mg and0.31/-Mg; endogenous CTP co-purification explains
+substoichiometric values. Do not infer occupancy or protein stoichiometry from N.
+Main Figure1 caption has a concentration-unit typo; use TableS2 uM, not M.
+Main prose rounds WT-Mg differently (1.67 versus table1.6).
+
+ITC Methods: 25 C; 20 mM Tris pH7.5,100 mM NaCl,0.02% DDM; approximately
+0.15 mM protein,0.5 mM CTP titrant; 0.5-ul initial and2-ul later injections;
+750rpm, one-site fit. Mg concentration not specified in this paragraph.
+Do not equate binding at25 C with product formation at90 C.
+N=70 FigureS8 text was read, but full raw-thermogram images were not audited.

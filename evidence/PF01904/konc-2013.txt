@@ -1,0 +1,24 @@
+PF01904 computational-source assessment, 2026-10-11 UTC
+Konc2013, PMID:24244144, doi:10.1371/journal.pcbi.1003341
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3828134/
+https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1003341.s001&type=supplementary
+Selected Results/Discussion/Methods read; original Figure 5 visually inspected.
+Publisher DOC supplement converted to DOCX for paragraph/XML inspection;
+the conversion omitted images, so supplement figures were NOT visually checked.
+Minimal quotation: "theoretical experiment".
+
+ProBiS binding-site comparison generated a proposed DNA complex from 1VPQ
+and endonuclease IV structure 2NQJ. No experimental Tm1631 DNA-binding or
+cleavage assay is reported. Modeled Y47/Y48 interactions and an unpaired base
+are not mutagenesis or demonstrated lesion specificity. The controls are
+simulations of unbound Tm1631 and the endonuclease IV complex.
+Methods describe 90/60/15 ns simulations at 310 K, not native high-temperature
+activity. The last 20 ns supplied MM/GBSA estimates with entropy omitted under
+an equal-entropy assumption; these are not measured affinities.
+Supplement methods explicitly describe temporary base-pair restraints at
+21 and 43 ns. A later illustrative active-site model additionally forced the
+phosphate toward R145/R191 before restraint removal. Alternative poses had
+clashes. These assumptions limit treating trajectory stability as validation.
+The beta-clamp connection is motif-based inference, not a demonstrated DUF72
+catalytic pathway. The 2016 work extends this same modeled system, not an
+independent experimental replication. Other family members remain unassessed.

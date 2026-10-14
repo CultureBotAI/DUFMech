@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01951
+  path: data/families/PF01951.yaml
+session:
+  id: 2026-10-12T095845Z-codex-e088b4
+  timestamp: '2026-10-12T09:58:45Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of bacterial turnover and human Archease
+    rescue
+  details: Same-agent review 20261012T095819Z covers the current 32 graphs and 62
+    OBSERVED edges, including 19 additions and preservation of 43 earlier edges. Exact
+    construct/protocol, DDX1 partner controls, source discrepancies and other member
+    contexts remain open. Semantic digest ef53bebd575702e02b73438cde815fa2054b3c8f82b3f90127a45588634d79a0;
+    IN_PROGRESS, not independent endorsement or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T095819Z-pf01951-bacterial-turnover-and-human-archease-rescue/review.yaml

@@ -4,7 +4,7 @@ name: Sulfurtransferase TusA
 short_name: TusA
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01206
 counters:
   proteins: 18434
@@ -22,3 +22,156 @@ provenance:
   source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
 interpro_id: InterPro:IPR001455
 description: This family includes the TusA sulfurtransferases [[cite:PUB00043028]].
+curation_history: history/records/PF01206
+discussions:
+- discussion_id: tusa-sulfur-relay-and-clone-coverage
+  prompt: Resolve the experimental clone sequence and extend primary-evidence coverage to TusA sulfur
+    relay, tRNA thiolation and Moco contexts.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Two 2024 assay contexts do not cover the full TusA mechanism or its paralogs. Direct sulfur-transfer
+    chemistry needs its own inspected primary evidence; protein binding and reduced assembly signal alone
+    do not establish that chain.
+  evidence:
+  - reference: PMID:38980029
+    supports: PARTIAL
+    evidence_source: full_text
+    explanation: Figures 1 and 5 were visually inspected. Native MS supports mixed complexes, while intracellular
+      concentrations and sulfur partitioning remain proposed explanations.
+  - reference: PMID:23281480
+    supports: PARTIAL
+    evidence_source: selected_full_text
+    explanation: The cited 2013 Table 1 establishes the pJD34 expression-vector lead, not the complete
+      2024 clone sequence. Its cellular phenotypes were not independently adopted in this graph batch.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: The 2006 sulfur-relay study PMID:16387657 and additional 2024 TusA/Fur and CyaY studies remain
+    research leads, not inspected edge evidence here. Status remains IN_PROGRESS.
+causal_graphs:
+- graph_id: ecoli-tusa-desulfurase-assay
+  title: TusA increases purified IscS sulfide-production activity
+  scope: Recombinant E. coli TusA and IscS in the 2024 purified-protein assay; not all PF01206 members,
+    an isolated domain or intracellular sulfur flux.
+  context: Figure 1 uses gel-filtered precomplexes formed at a 1:3 IscS-to-partner ratio for 20 min at
+    30 C in 50 mM Tris-HCl, 200 mM NaCl, pH 8. Activity is measured over 10 min at 30 C with 1 mM DTT
+    and 1 mM L-cysteine by methylene-blue sulfide quantification against Na2S standards. IscS alone and
+    TusA alone are controls. The paper reports BL21(DE3) expression and untagged TusA/IscS for interaction
+    studies; exact Figure 1 protein doses and complete clone sequences remain unverified.
+  family_mapping: E. coli K12 reference UniProtKB:P0A890 (tusA/sirA/yhhP, b3470/JW3435), sequence version
+    1, 81 aa, maps to PF01206 at 10-79 inclusive. InterPro and UniProt sequences agree. The cited 2013
+    protocol lists pJD34, tusA in pET11b; the 2024 cloning template strain is not independently verified.
+    BL21 is the expression host, not an inferred template identity.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:562
+  limitations: The readout is sulfide release in a reducing biochemical assay. It does not resolve allosteric
+    activation versus sulfur-acceptor turnover, a specific residue's chemistry, intracellular sulfur partitioning
+    or tRNA/Moco synthesis. TusA alone has no detected assay activity. Mixed IscS2/IscU/TusA complexes
+    occur in the study, so mutually exclusive occupancy of an entire IscS dimer is not assumed.
+  nodes:
+  - node_id: tusa-present-with-iscs
+    label: Purified TusA present with IscS in the cysteine/DTT assay
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A890
+  - node_id: iscs-sulfide-production
+    label: IscS sulfide-production activity measured by methylene blue
+    node_type: ACTIVITY
+  edges:
+  - edge_id: tusa-increases-iscs-assay-activity
+    subject: tusa-present-with-iscs
+    predicate: increases
+    object: iscs-sulfide-production
+    mechanism: The purified IscS-TusA preparation produces sulfide at about three times the activity of
+      IscS alone under the stated conditions. This is a directly tested protein-dependent biochemical
+      effect, without assigning an elementary catalytic or cellular regulatory mechanism.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38980029
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11302665/
+      snippet: increase in the IscS activity by a factor of about 3
+      explanation: Figure 1 image, caption, Results and desulfurase Methods support the direction and
+        purified assay scope. TusA-only and IscS-only controls are retained; the optical assay does not
+        trace sulfur to a cellular product.
+      cache_path: evidence/PF01206/olivieri-2024-tusa.txt
+      cache_sha256: b124297078a284b15112757262281fe7e0edd4cdbc2a60fdd2f07dd1dc14e4ba
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A890/entry/pfam/PF01206/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A890/entry/pfam/PF01206/
+      snippet: 'Pfam:PF01206; domain interval: 10-79, inclusive'
+      explanation: Resolves the reference protein to this family; the mapping is not separate proof of
+        the activity or a sequence-verified experimental clone.
+      cache_path: evidence/PF01206/TusA-identity.txt
+      cache_sha256: 4e512da52d9b77d458bcf81b447c01eee49eb768089e8010c7d2a75c68abcc32
+- graph_id: ecoli-tusa-fes-assembly-readout
+  title: Equimolar TusA reduces the IscU Fe-S assembly-associated optical signal
+  scope: Concentration-dependent effect of E. coli TusA in the reconstituted IscS/IscU system, retaining
+    the observed optical outcome separately from the proposed sulfur-diversion mechanism.
+  context: Figure 5A/D compares 0, 1, 5, 10 and 50 uM TusA with 50 uM IscU, 25 uM Fe2+, 1 uM IscS and
+    250 uM L-cysteine in anaerobic 50 mM Tris-HCl, 100 mM NaCl, pH 8. Reductants are either 2 mM DTT or
+    the conjunction of 1 uM Fdx, 1 uM Fpr and 100 uM NADPH. Following 30 min preincubation, IscS and cysteine
+    initiate the reaction. A456 is recorded every 5 min for 40 min in independent triplicates; assay temperature
+    is not specified in the inspected caption.
+  family_mapping: TusA is mapped to the 81-aa E. coli K12 reference P0A890, PF01206 residues 10-79, not
+    to all TusA-like paralogs. Full experimental clone sequence and template strain remain unverified.
+    IscU was His6-tagged then thrombin-cleaved according to the 2024 Methods.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:562
+  limitations: A456 is a biochemical assembly readout, not direct atom tracing or identification of a
+    inhibited elementary reaction. Lower TusA doses do not show the same clear reduction. Protein competition
+    and sulfur diversion are explanatory models, not additional observed edges. The B/E spectral caption's
+    yellow-line reference is inconsistent with the no-TusA red-line key; only the A/D concentration time
+    courses are adopted.
+  nodes:
+  - node_id: tusa-50um-assembly-condition
+    label: 50 uM TusA added to the complete IscS/IscU assembly reaction
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A890
+  - node_id: assembly-associated-a456
+    label: Fe-S assembly-associated absorbance at 456 nm over time
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: equimolar-tusa-decreases-assembly-signal
+    subject: tusa-50um-assembly-condition
+    predicate: decreases
+    object: assembly-associated-a456
+    mechanism: At 50 uM TusA, equimolar with IscU, the A456 time course is lower than the no-TusA control
+      with either reductant system. The observed reduction is retained without converting it into a directly
+      demonstrated sulfur-transfer or binding-competition step.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38980029
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11302665/
+      snippet: it did significantly impact Fe-S cluster assembly
+      explanation: Visually inspected Figure 5A/D provides the downward direction at 50 uM; the Results
+        and caption establish the dose dependence, reducing systems and matched no-TusA comparison. The
+        source's assembly interpretation is scoped to the optical readout.
+      cache_path: evidence/PF01206/olivieri-2024-tusa.txt
+      cache_sha256: b124297078a284b15112757262281fe7e0edd4cdbc2a60fdd2f07dd1dc14e4ba
+    - reference: https://rest.uniprot.org/uniprotkb/P0A890.json
+      source_url: https://rest.uniprot.org/uniprotkb/P0A890.json
+      snippet: UniProtKB:P0A890; TUSA_ECOLI; tusA, sirA, yhhP; b3470, JW3435.
+      explanation: Keeps the E. coli reference identity explicit without treating family membership as
+        evidence for the concentration-dependent effect.
+      cache_path: evidence/PF01206/TusA-identity.txt
+      cache_sha256: 4e512da52d9b77d458bcf81b447c01eee49eb768089e8010c7d2a75c68abcc32
+curation_events:
+- timestamp: '2026-10-11T06:53:30Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate two scoped E. coli TusA causal assay graphs
+  history_record: history/records/PF01206/2026-10-11T065330Z-codex-51fd09.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T06:57:34Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of TusA assay graphs
+  history_record: history/records/PF01206/2026-10-11T065734Z-codex-7bfcbc.yaml
+  event_index: 0
+  llm_assisted: true

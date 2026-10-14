@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF02583
+  path: data/families/PF02583.yaml
+session:
+  id: 2026-10-11T060649Z-codex-211874
+  timestamp: '2026-10-11T06:06:49Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of CsoR causal contexts
+  details: 'Two supported edges remain separate: purified Cu-dependent operator-binding
+    decrease and complemented whole-gene reporter derepression. Exact construct, structural
+    steps and additional members remain open; review does not promote IN_PROGRESS
+    or claim independent endorsement.'
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T060730Z-pf02583-csor-causal-graphs/review.yaml

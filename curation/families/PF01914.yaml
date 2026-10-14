@@ -1,0 +1,1078 @@
+pfam_id: "PF01914"
+curation_status: "IN_PROGRESS"
+curation_history: "history/records/PF01914"
+causal_graphs:
+  -
+    graph_id: "snata-expression-uptake-2003"
+    title: "SnatA genomic constructs restore heterologous glycine uptake"
+    scope: "Akahane2003 KS-1 snatA genomic inserts expressed in E. coli AK430 cycA::kan, not native archaeal membranes."
+    context: "Figure 4A pSA28 versus empty pUC119; Figure 2A qualitative pSA17 construct comparison. Washed-cell radioglycine filtration at 37 C, HEPES/Tris pH 7.4, MgSO4 and Tris-lactate."
+    family_mapping: "Thermococcus sp. KS-1/JCM11816 SnatA BAC53669.1 from AB093585.1 equals UniParc UPI0000062A6D, 216 aa, PF01914 9-214. Q8J305 is retired, not biologically absent. Genomic constructs contain full SnatA plus flanking DNA; no isolated-domain sufficiency."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:1295125"
+    limitations: "pSA28 contains about 2.8 kb and pSA17 is a smaller genomic insert; pSA17 is not tested by the Figure 4 time course. Whole-cell uptake and apparent Kt 24 uM do not establish purified binding affinity, oligomer requirement, H+:glycine stoichiometry or an atomic transport cycle."
+    nodes:
+      -
+        node_id: "psa28"
+        label: "AK430 expressing pSA28 relative to empty pUC119"
+        node_type: "PERTURBATION"
+      -
+        node_id: "psa17"
+        label: "AK430 expressing positive pSA17 derivative"
+        node_type: "PERTURBATION"
+      -
+        node_id: "glycine-uptake"
+        label: "Cell-associated radiolabeled glycine uptake"
+        node_type: "PROCESS"
+    edges:
+      -
+        edge_id: "psa28-increases-uptake"
+        subject: "psa28"
+        predicate: "increases"
+        object: "glycine-uptake"
+        mechanism: "The SnatA-containing pSA28 construct increases cellular glycine accumulation over the empty-vector background; intermediates and flanking-sequence effects are not isolated."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "doi:10.1093/jb/mvg021"
+            source_url: "https://doi.org/10.1093/jb/mvg021"
+            snippet: "a protein of 216 amino acid residues"
+            explanation: "Figure 4A original plot and glycine-transport Methods; pUC119 control."
+            cache_path: "evidence/PF01914/akahane-2003.txt"
+            cache_sha256: "576f405a8e8066e4323ddbf9d30f8ce3f2cb3a8f7d5221e42657942c712c7cce"
+      -
+        edge_id: "psa17-enables-uptake"
+        subject: "psa17"
+        predicate: "enables"
+        object: "glycine-uptake"
+        mechanism: "The smaller pSA17 genomic construct retains the positive qualitative uptake score; this is not a separately measured purified transporter rate."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "doi:10.1093/jb/mvg021"
+            source_url: "https://doi.org/10.1093/jb/mvg021"
+            snippet: "a protein of 216 amino acid residues"
+            explanation: "Figure 2A construct map and primary-structure Results, pSA17 positive score versus negative derivatives."
+            cache_path: "evidence/PF01914/akahane-2003.txt"
+            cache_sha256: "576f405a8e8066e4323ddbf9d30f8ce3f2cb3a8f7d5221e42657942c712c7cce"
+  -
+    graph_id: "snata-upstream-construct-2003"
+    title: "Upstream truncation reduces SnatA-construct phenotypes"
+    scope: "pSA14 versus positive pSA17 in heterologous E. coli AK430; full SnatA coding sequence remains present."
+    context: "Figure 2A qualitative glycine uptake and D-alanine colony formation. pSA14 starts 97 bp upstream of snatA; colony selection uses 5 mg/ml D-alanine minimal medium, 37 C, about one week."
+    family_mapping: "Thermococcus sp. KS-1/JCM11816 SnatA BAC53669.1 from AB093585.1 equals UniParc UPI0000062A6D, 216 aa, PF01914 9-214. Q8J305 is retired, not biologically absent. Genomic constructs contain full SnatA plus flanking DNA; no isolated-domain sufficiency."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:1295125"
+    limitations: "Upstream DNA loss is not a SnatA residue deletion. A needed expression-control region is suggested, but direct promoter binding, transcript abundance, exact native archaeal regulation and equal construct protein abundance are unmeasured."
+    nodes:
+      -
+        node_id: "upstream-truncation"
+        label: "pSA14 upstream-truncated construct relative to pSA17"
+        node_type: "PERTURBATION"
+      -
+        node_id: "glycine-uptake"
+        label: "Qualitative glycine uptake"
+        node_type: "PROCESS"
+      -
+        node_id: "d-alanine-colonies"
+        label: "D-alanine-supported colony formation"
+        node_type: "PHENOTYPE"
+    edges:
+      -
+        edge_id: "truncation-decreases-uptake"
+        subject: "upstream-truncation"
+        predicate: "decreases"
+        object: "glycine-uptake"
+        mechanism: "The upstream-truncated construct loses the uptake score despite retaining the full snatA ORF; this is an expression-construct effect."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "doi:10.1093/jb/mvg021"
+            source_url: "https://doi.org/10.1093/jb/mvg021"
+            snippet: "a protein of 216 amino acid residues"
+            explanation: "Figure 2A and primary-structure Results, full-ORF pSA14 negative versus pSA17 positive."
+            cache_path: "evidence/PF01914/akahane-2003.txt"
+            cache_sha256: "576f405a8e8066e4323ddbf9d30f8ce3f2cb3a8f7d5221e42657942c712c7cce"
+      -
+        edge_id: "truncation-decreases-colonies"
+        subject: "upstream-truncation"
+        predicate: "decreases"
+        object: "d-alanine-colonies"
+        mechanism: "pSA14 loses D-alanine colony formation relative to pSA17 in the specified selection; direct D-alanine transport is not quantified."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "doi:10.1093/jb/mvg021"
+            source_url: "https://doi.org/10.1093/jb/mvg021"
+            snippet: "a protein of 216 amino acid residues"
+            explanation: "Figure 2A construct scores and functional-cloning Methods."
+            cache_path: "evidence/PF01914/akahane-2003.txt"
+            cache_sha256: "576f405a8e8066e4323ddbf9d30f8ce3f2cb3a8f7d5221e42657942c712c7cce"
+  -
+    graph_id: "snata-energetic-perturbations-2003"
+    title: "Energy-disrupting treatments reduce SnatA-associated cellular uptake"
+    scope: "AK430 carrying pSA28, with inhibitor treatment compared with the same construct without inhibitor."
+    context: "Figure 4 whole-cell radioglycine uptake at 37 C. FCCP 10 ug/ml is separate from the valinomycin-plus-nigericin condition."
+    family_mapping: "Thermococcus sp. KS-1/JCM11816 SnatA BAC53669.1 from AB093585.1 equals UniParc UPI0000062A6D, 216 aa, PF01914 9-214. Q8J305 is retired, not biologically absent. Genomic constructs contain full SnatA plus flanking DNA; no isolated-domain sufficiency."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:1295125"
+    limitations: "Valinomycin alone does not inhibit in this assay. General energetic or viability effects are not excluded. Proton-motive-force coupling is a model consistent with the data, not measured proton stoichiometry or inhibitor binding to SnatA; Na/K results are data not shown."
+    nodes:
+      -
+        node_id: "fccp"
+        label: "FCCP 10 ug/ml in AK430/pSA28"
+        node_type: "PERTURBATION"
+      -
+        node_id: "ionophore-pair"
+        label: "Valinomycin plus nigericin in AK430/pSA28"
+        node_type: "PERTURBATION"
+      -
+        node_id: "uptake"
+        label: "Cell-associated radioglycine uptake"
+        node_type: "PROCESS"
+    edges:
+      -
+        edge_id: "fccp-reduces-uptake"
+        subject: "fccp"
+        predicate: "decreases"
+        object: "uptake"
+        mechanism: "FCCP reduces cellular glycine accumulation; the experiment perturbs whole-cell energization, not only the SnatA molecule."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "doi:10.1093/jb/mvg021"
+            source_url: "https://doi.org/10.1093/jb/mvg021"
+            snippet: "a protein of 216 amino acid residues"
+            explanation: "Figure 4A original plot, treated pSA28 versus untreated pSA28."
+            cache_path: "evidence/PF01914/akahane-2003.txt"
+            cache_sha256: "576f405a8e8066e4323ddbf9d30f8ce3f2cb3a8f7d5221e42657942c712c7cce"
+      -
+        edge_id: "ionophore-pair-reduces-uptake"
+        subject: "ionophore-pair"
+        predicate: "decreases"
+        object: "uptake"
+        mechanism: "The combined ionophores reduce uptake; the pair is one joint perturbation and neither component is represented as independently sufficient."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "doi:10.1093/jb/mvg021"
+            source_url: "https://doi.org/10.1093/jb/mvg021"
+            snippet: "a protein of 216 amino acid residues"
+            explanation: "Figure 4B original plot; valinomycin alone is the separate noninhibitory comparison."
+            cache_path: "evidence/PF01914/akahane-2003.txt"
+            cache_sha256: "576f405a8e8066e4323ddbf9d30f8ce3f2cb3a8f7d5221e42657942c712c7cce"
+  -
+    graph_id: "snata-strong-competition-2003"
+    title: "Six amino acids strongly reduce SnatA-associated radioglycine uptake"
+    scope: "Selected strong competition assays in AK430/pSA28, not independently measured uptake of each competitor."
+    context: "Table 2: 4 uM radioglycine, 830 uM competitor, 60 minutes; inhibition percentages are normalized as reported against the glycine competitor effect."
+    family_mapping: "Thermococcus sp. KS-1/JCM11816 SnatA BAC53669.1 from AB093585.1 equals UniParc UPI0000062A6D, 216 aa, PF01914 9-214. Q8J305 is retired, not biologically absent. Genomic constructs contain full SnatA plus flanking DNA; no isolated-domain sufficiency."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:1295125"
+    limitations: "Competition alone does not establish that every competitor crosses the membrane, direct binding residues or a universal specificity order. Weaker and zero effects are retained in the evidence ledger; CycA/ACP assays use different times and concentrations."
+    nodes:
+      -
+        node_id: "ala"
+        label: "L-alanine competitor at 830 uM"
+        node_type: "PERTURBATION"
+      -
+        node_id: "cys"
+        label: "L-cysteine competitor at 830 uM"
+        node_type: "PERTURBATION"
+      -
+        node_id: "thr"
+        label: "L-threonine competitor at 830 uM"
+        node_type: "PERTURBATION"
+      -
+        node_id: "ser"
+        label: "L-serine competitor at 830 uM"
+        node_type: "PERTURBATION"
+      -
+        node_id: "met"
+        label: "L-methionine competitor at 830 uM"
+        node_type: "PERTURBATION"
+      -
+        node_id: "trp"
+        label: "L-tryptophan competitor at 830 uM"
+        node_type: "PERTURBATION"
+      -
+        node_id: "glycine-uptake"
+        label: "Radioglycine uptake in AK430/pSA28"
+        node_type: "PROCESS"
+    edges:
+      -
+        edge_id: "ala-reduces-glycine-uptake"
+        subject: "ala"
+        predicate: "decreases"
+        object: "glycine-uptake"
+        mechanism: "L-alanine gives 84% reported normalized inhibition in this competition assay; no separate direct flux of this amino acid is asserted."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "doi:10.1093/jb/mvg021"
+            source_url: "https://doi.org/10.1093/jb/mvg021"
+            snippet: "a protein of 216 amino acid residues"
+            explanation: "Table 2 original image, SnatA column and L-alanine row; caption defines assay timing and normalization."
+            cache_path: "evidence/PF01914/akahane-2003.txt"
+            cache_sha256: "576f405a8e8066e4323ddbf9d30f8ce3f2cb3a8f7d5221e42657942c712c7cce"
+      -
+        edge_id: "cys-reduces-glycine-uptake"
+        subject: "cys"
+        predicate: "decreases"
+        object: "glycine-uptake"
+        mechanism: "L-cysteine gives 95% reported normalized inhibition in this competition assay; no separate direct flux of this amino acid is asserted."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "doi:10.1093/jb/mvg021"
+            source_url: "https://doi.org/10.1093/jb/mvg021"
+            snippet: "a protein of 216 amino acid residues"
+            explanation: "Table 2 original image, SnatA column and L-cysteine row; caption defines assay timing and normalization."
+            cache_path: "evidence/PF01914/akahane-2003.txt"
+            cache_sha256: "576f405a8e8066e4323ddbf9d30f8ce3f2cb3a8f7d5221e42657942c712c7cce"
+      -
+        edge_id: "thr-reduces-glycine-uptake"
+        subject: "thr"
+        predicate: "decreases"
+        object: "glycine-uptake"
+        mechanism: "L-threonine gives 100% reported normalized inhibition in this competition assay; no separate direct flux of this amino acid is asserted."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "doi:10.1093/jb/mvg021"
+            source_url: "https://doi.org/10.1093/jb/mvg021"
+            snippet: "a protein of 216 amino acid residues"
+            explanation: "Table 2 original image, SnatA column and L-threonine row; caption defines assay timing and normalization."
+            cache_path: "evidence/PF01914/akahane-2003.txt"
+            cache_sha256: "576f405a8e8066e4323ddbf9d30f8ce3f2cb3a8f7d5221e42657942c712c7cce"
+      -
+        edge_id: "ser-reduces-glycine-uptake"
+        subject: "ser"
+        predicate: "decreases"
+        object: "glycine-uptake"
+        mechanism: "L-serine gives 90% reported normalized inhibition in this competition assay; no separate direct flux of this amino acid is asserted."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "doi:10.1093/jb/mvg021"
+            source_url: "https://doi.org/10.1093/jb/mvg021"
+            snippet: "a protein of 216 amino acid residues"
+            explanation: "Table 2 original image, SnatA column and L-serine row; caption defines assay timing and normalization."
+            cache_path: "evidence/PF01914/akahane-2003.txt"
+            cache_sha256: "576f405a8e8066e4323ddbf9d30f8ce3f2cb3a8f7d5221e42657942c712c7cce"
+      -
+        edge_id: "met-reduces-glycine-uptake"
+        subject: "met"
+        predicate: "decreases"
+        object: "glycine-uptake"
+        mechanism: "L-methionine gives 65% reported normalized inhibition in this competition assay; no separate direct flux of this amino acid is asserted."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "doi:10.1093/jb/mvg021"
+            source_url: "https://doi.org/10.1093/jb/mvg021"
+            snippet: "a protein of 216 amino acid residues"
+            explanation: "Table 2 original image, SnatA column and L-methionine row; caption defines assay timing and normalization."
+            cache_path: "evidence/PF01914/akahane-2003.txt"
+            cache_sha256: "576f405a8e8066e4323ddbf9d30f8ce3f2cb3a8f7d5221e42657942c712c7cce"
+      -
+        edge_id: "trp-reduces-glycine-uptake"
+        subject: "trp"
+        predicate: "decreases"
+        object: "glycine-uptake"
+        mechanism: "L-tryptophan gives 60% reported normalized inhibition in this competition assay; no separate direct flux of this amino acid is asserted."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "doi:10.1093/jb/mvg021"
+            source_url: "https://doi.org/10.1093/jb/mvg021"
+            snippet: "a protein of 216 amino acid residues"
+            explanation: "Table 2 original image, SnatA column and L-tryptophan row; caption defines assay timing and normalization."
+            cache_path: "evidence/PF01914/akahane-2003.txt"
+            cache_sha256: "576f405a8e8066e4323ddbf9d30f8ce3f2cb3a8f7d5221e42657942c712c7cce"
+  -
+    graph_id: "snata-serine-growth-2003"
+    title: "SnatA construct suppresses WAT9 growth on serine"
+    scope: "WAT9 sstT-defective E. coli expressing pSA28 versus empty pUC119; not AK430 or native KS-1."
+    context: "Table 3: minimal agar, L-serine 5 mg/ml, 24 hours at 37 C. Both constructs grow with lactose 40 mM."
+    family_mapping: "Thermococcus sp. KS-1/JCM11816 SnatA BAC53669.1 from AB093585.1 equals UniParc UPI0000062A6D, 216 aa, PF01914 9-214. Q8J305 is retired, not biologically absent. Genomic constructs contain full SnatA plus flanking DNA; no isolated-domain sufficiency."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:1295125"
+    limitations: "Qualitative colony growth is not a direct serine-flux measurement or proof of the proposed feedback-inhibition relay. W3133-2 and WAT9 expressing sstT are separate controls; lactose growth limits a nonspecific growth-defect explanation."
+    nodes:
+      -
+        node_id: "snata-expression"
+        label: "WAT9 carrying pSA28 relative to empty pUC119"
+        node_type: "PERTURBATION"
+      -
+        node_id: "serine-growth"
+        label: "Colony growth on L-serine medium"
+        node_type: "PHENOTYPE"
+    edges:
+      -
+        edge_id: "snata-reduces-serine-growth"
+        subject: "snata-expression"
+        predicate: "decreases"
+        object: "serine-growth"
+        mechanism: "The genomic snatA construct changes the serine-medium score from growth to no growth; biochemical accumulation and downstream feedback are not directly measured."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "doi:10.1093/jb/mvg021"
+            source_url: "https://doi.org/10.1093/jb/mvg021"
+            snippet: "a protein of 216 amino acid residues"
+            explanation: "Table 3 original image, WAT9/pUC119 and WAT9/pSA28 rows, serine and lactose controls."
+            cache_path: "evidence/PF01914/akahane-2003.txt"
+            cache_sha256: "576f405a8e8066e4323ddbf9d30f8ce3f2cb3a8f7d5221e42657942c712c7cce"
+  -
+    graph_id: "marc-selected-clone-growth-2025"
+    title: "Selected MarC-variant clones improve limiting-threonine growth"
+    scope: "Bubnov2025 four independently selected B1950-derived clones, not each purified variant or a family-wide allele effect."
+    context: "B1950 is MG1655 delta-thrBC/delta-sstT/delta-tdcBCDE::neo/delta-thrP/delta-brnQ/delta-livKHMGF/delta-yjeM/delta-sdaC/delta-ydgI/delta-ychE; clones are compared with this parental background. Figure 2A spot growth at 0.4/0.8 mM threonine, with 4 mM as permissive comparison."
+    family_mapping: "E. coli K-12 MarC P0AEY1/b1529/JW1522 sequence version 1, 221 aa, PF01914 5-217. This is reference mapping, not independent sequencing of historical strains or proof of isolated-domain function."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:83333"
+    limitations: "Selected clones are not independently reconstructed single-allele replacements. B2059 also carries ydbD I155I and insO R20W; common mutations were filtered in variant calling. S140SS is a serine insertion, not a substitution. No purified transport, residue-level binding mechanism or WT physiological specificity is established. Printed glucose units differ between Methods (0.2% versus 0.2 g/L)."
+    nodes:
+      -
+        node_id: "b2058"
+        label: "B2058 MarC S140SS serine insertion relative to B1950"
+        node_type: "PERTURBATION"
+      -
+        node_id: "b2059"
+        label: "B2059 MarC V145E plus ydbD I155I and insO R20W relative to B1950"
+        node_type: "PERTURBATION"
+      -
+        node_id: "b2063"
+        label: "B2063 MarC L10Q relative to B1950"
+        node_type: "PERTURBATION"
+      -
+        node_id: "b2068"
+        label: "B2068 MarC G11E relative to B1950"
+        node_type: "PERTURBATION"
+      -
+        node_id: "growth"
+        label: "Spot growth at limiting threonine"
+        node_type: "PHENOTYPE"
+    edges:
+      -
+        edge_id: "b2058-increases-growth"
+        subject: "b2058"
+        predicate: "increases"
+        object: "growth"
+        mechanism: "B2058 MarC S140SS serine insertion shows improved spot growth versus B1950 under the limiting-threonine conditions; the whole selected clone is the supported perturbation."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:40248429"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12003319/"
+            snippet: "marC V145E"
+            explanation: "Figure 2A original spots and Tables 1/3 for clone genotypes; no isogenic allele-swap rescue assumed."
+            cache_path: "evidence/PF01914/bubnov-2025-figure1-corrected.txt"
+            cache_sha256: "2f2f41f6b16aa17eea7dd32a2fb38bf239350955318992f62832b8371f48e348"
+      -
+        edge_id: "b2059-increases-growth"
+        subject: "b2059"
+        predicate: "increases"
+        object: "growth"
+        mechanism: "B2059 MarC V145E plus ydbD I155I and insO R20W shows improved spot growth versus B1950 under the limiting-threonine conditions; the whole selected clone is the supported perturbation."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:40248429"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12003319/"
+            snippet: "marC V145E"
+            explanation: "Figure 2A original spots and Tables 1/3 for clone genotypes; no isogenic allele-swap rescue assumed."
+            cache_path: "evidence/PF01914/bubnov-2025-figure1-corrected.txt"
+            cache_sha256: "2f2f41f6b16aa17eea7dd32a2fb38bf239350955318992f62832b8371f48e348"
+      -
+        edge_id: "b2063-increases-growth"
+        subject: "b2063"
+        predicate: "increases"
+        object: "growth"
+        mechanism: "B2063 MarC L10Q shows improved spot growth versus B1950 under the limiting-threonine conditions; the whole selected clone is the supported perturbation."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:40248429"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12003319/"
+            snippet: "marC V145E"
+            explanation: "Figure 2A original spots and Tables 1/3 for clone genotypes; no isogenic allele-swap rescue assumed."
+            cache_path: "evidence/PF01914/bubnov-2025-figure1-corrected.txt"
+            cache_sha256: "2f2f41f6b16aa17eea7dd32a2fb38bf239350955318992f62832b8371f48e348"
+      -
+        edge_id: "b2068-increases-growth"
+        subject: "b2068"
+        predicate: "increases"
+        object: "growth"
+        mechanism: "B2068 MarC G11E shows improved spot growth versus B1950 under the limiting-threonine conditions; the whole selected clone is the supported perturbation."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:40248429"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12003319/"
+            snippet: "marC V145E"
+            explanation: "Figure 2A original spots and Tables 1/3 for clone genotypes; no isogenic allele-swap rescue assumed."
+            cache_path: "evidence/PF01914/bubnov-2025-figure1-corrected.txt"
+            cache_sha256: "2f2f41f6b16aa17eea7dd32a2fb38bf239350955318992f62832b8371f48e348"
+  -
+    graph_id: "marc-selected-clone-uptake-2025"
+    title: "Selected MarC-variant clones increase cellular threonine uptake"
+    scope: "Bubnov2025 cellular uptake in four B1950-derived selected clones, separate from the growth assay."
+    context: "B1950 is MG1655 delta-thrBC/delta-sstT/delta-tdcBCDE::neo/delta-thrP/delta-brnQ/delta-livKHMGF/delta-yjeM/delta-sdaC/delta-ydgI/delta-ychE; clones are compared with this parental background. Figure 2B: 2.5 mM 14C-threonine, one minute, 37 C, dry-cell-weight normalization, three biological replicates with SD."
+    family_mapping: "E. coli K-12 MarC P0AEY1/b1529/JW1522 sequence version 1, 221 aa, PF01914 5-217. This is reference mapping, not independent sequencing of historical strains or proof of isolated-domain function."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:83333"
+    limitations: "Selected clones are not independently reconstructed single-allele replacements. B2059 also carries ydbD I155I and insO R20W; common mutations were filtered in variant calling. S140SS is a serine insertion, not a substitution. No purified transport, residue-level binding mechanism or WT physiological specificity is established. Printed glucose units differ between Methods (0.2% versus 0.2 g/L). Figure 2B uses unequal-variance two-sided t-tests; no exact bar-height values are invented."
+    nodes:
+      -
+        node_id: "b2058"
+        label: "B2058 MarC S140SS serine insertion relative to B1950"
+        node_type: "PERTURBATION"
+      -
+        node_id: "b2059"
+        label: "B2059 MarC V145E plus ydbD I155I and insO R20W relative to B1950"
+        node_type: "PERTURBATION"
+      -
+        node_id: "b2063"
+        label: "B2063 MarC L10Q relative to B1950"
+        node_type: "PERTURBATION"
+      -
+        node_id: "b2068"
+        label: "B2068 MarC G11E relative to B1950"
+        node_type: "PERTURBATION"
+      -
+        node_id: "uptake"
+        label: "One-minute cellular 14C-threonine uptake"
+        node_type: "PROCESS"
+    edges:
+      -
+        edge_id: "b2058-increases-uptake"
+        subject: "b2058"
+        predicate: "increases"
+        object: "uptake"
+        mechanism: "B2058 MarC S140SS serine insertion has a higher measured uptake rate than B1950. Clone-level uptake does not by itself isolate the altered residue's transport chemistry."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:40248429"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12003319/"
+            snippet: "marC V145E"
+            explanation: "Figure 2B original plot, uptake Methods 2.6 and Table 3; all four MarC clone comparisons retain their reported direction."
+            cache_path: "evidence/PF01914/bubnov-2025-figure1-corrected.txt"
+            cache_sha256: "2f2f41f6b16aa17eea7dd32a2fb38bf239350955318992f62832b8371f48e348"
+      -
+        edge_id: "b2059-increases-uptake"
+        subject: "b2059"
+        predicate: "increases"
+        object: "uptake"
+        mechanism: "B2059 MarC V145E plus ydbD I155I and insO R20W has a higher measured uptake rate than B1950. Clone-level uptake does not by itself isolate the altered residue's transport chemistry."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:40248429"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12003319/"
+            snippet: "marC V145E"
+            explanation: "Figure 2B original plot, uptake Methods 2.6 and Table 3; all four MarC clone comparisons retain their reported direction."
+            cache_path: "evidence/PF01914/bubnov-2025-figure1-corrected.txt"
+            cache_sha256: "2f2f41f6b16aa17eea7dd32a2fb38bf239350955318992f62832b8371f48e348"
+      -
+        edge_id: "b2063-increases-uptake"
+        subject: "b2063"
+        predicate: "increases"
+        object: "uptake"
+        mechanism: "B2063 MarC L10Q has a higher measured uptake rate than B1950. Clone-level uptake does not by itself isolate the altered residue's transport chemistry."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:40248429"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12003319/"
+            snippet: "marC V145E"
+            explanation: "Figure 2B original plot, uptake Methods 2.6 and Table 3; all four MarC clone comparisons retain their reported direction."
+            cache_path: "evidence/PF01914/bubnov-2025-figure1-corrected.txt"
+            cache_sha256: "2f2f41f6b16aa17eea7dd32a2fb38bf239350955318992f62832b8371f48e348"
+      -
+        edge_id: "b2068-increases-uptake"
+        subject: "b2068"
+        predicate: "increases"
+        object: "uptake"
+        mechanism: "B2068 MarC G11E has a higher measured uptake rate than B1950. Clone-level uptake does not by itself isolate the altered residue's transport chemistry."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:40248429"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12003319/"
+            snippet: "marC V145E"
+            explanation: "Figure 2B original plot, uptake Methods 2.6 and Table 3; all four MarC clone comparisons retain their reported direction."
+            cache_path: "evidence/PF01914/bubnov-2025-figure1-corrected.txt"
+            cache_sha256: "2f2f41f6b16aa17eea7dd32a2fb38bf239350955318992f62832b8371f48e348"
+  -
+    graph_id: "yche-genomic-insert-growth-2025"
+    title: "YchE-containing genomic insert improves B1895 growth"
+    scope: "Bubnov2025 pBRychE versus empty pBR322 in auxotrophic B1895, not the B1950 clone background."
+    context: "B1895 MG1655 delta-thrBC/delta-sstT/delta-tdcBCDE::neo/delta-thrP/delta-brnQ/delta-livKHMGF::cat. Figure 1A spots at 1.25 mM threonine."
+    family_mapping: "K-12 YchE P25743/b1242/JW1229 sequence version 2, 215 aa, PF01914 9-210. Table 2 pBRychE insert U00096.3 1297744-1301027 contains genomic flanks, not only the isolated domain."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:83333"
+    limitations: "Figure 1C uptake in a different prototrophic host B2394 at 800 uM threonine is not significantly increased (p=0.38). Growth rescue is not an observed YchE transport edge. The shared glucose-unit discrepancy remains open; combined deletion effects are not assigned to YchE alone."
+    nodes:
+      -
+        node_id: "pbr-yche"
+        label: "B1895 carrying pBRychE relative to empty pBR322"
+        node_type: "PERTURBATION"
+      -
+        node_id: "growth"
+        label: "Spot growth at 1.25 mM threonine"
+        node_type: "PHENOTYPE"
+    edges:
+      -
+        edge_id: "yche-insert-increases-growth"
+        subject: "pbr-yche"
+        predicate: "increases"
+        object: "growth"
+        mechanism: "The genomic insert improves growth in this auxotrophic host; indirect metabolic and flanking-sequence effects are not excluded."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:40248429"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12003319/"
+            snippet: "marC V145E"
+            explanation: "Figure 1A original spots and Table 2 insert; Figure 1C different-host nonsignificant uptake is retained as a limit."
+            cache_path: "evidence/PF01914/bubnov-2025-figure1-corrected.txt"
+            cache_sha256: "2f2f41f6b16aa17eea7dd32a2fb38bf239350955318992f62832b8371f48e348"
+  -
+    graph_id: "marc-reconstruction-glucose-2011"
+    title: "Reported marC reconstruction has condition-dependent glucose growth effects"
+    scope: "Minty2011 reported marC::kan reconstruction versus EcNR1; genotype ambiguity is part of the scope, not an assumed clean isogenic deletion."
+    context: "NG50 minimal medium with glucose 50 g/L and biotin 0.25 mg/L, 30 C. Separately 0% and 0.5% (w/v) isobutanol; OD600 time courses over 48 hours."
+    family_mapping: "E. coli K-12 MarC P0AEY1/b1529/JW1522 sequence version 1, 221 aa, PF01914 5-217. This is reference mapping, not independent sequencing of historical strains or proof of isolated-domain function."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:83333"
+    limitations: "Table 3 caption calls the reconstruction EcNR1-derived, but Results/Methods construct it in EcHW24 or progeny, an EcNR1 MutS-negative derivative. The comparator is EcNR1, so a MutS/background confound remains. Uncertainty type and row-level significance are unresolved. Deletion only approximates IS1/IS5 insertions; adjacent marRAB changes and direct solvent transport are unmeasured."
+    nodes:
+      -
+        node_id: "no-solvent"
+        label: "Reported marC::kan strain versus EcNR1 in glucose, 0% isobutanol"
+        node_type: "PERTURBATION"
+      -
+        node_id: "isobutanol"
+        label: "Reported marC::kan strain versus EcNR1 in glucose, 0.5% isobutanol"
+        node_type: "PERTURBATION"
+      -
+        node_id: "no-solvent-growth-value"
+        label: "0% isobutanol maximum specific growth rate"
+        node_type: "PHENOTYPE"
+      -
+        node_id: "no-solvent-maximum-od-value"
+        label: "0% isobutanol maximum OD600"
+        node_type: "PHENOTYPE"
+      -
+        node_id: "isobutanol-growth-value"
+        label: "0.5% isobutanol maximum specific growth rate"
+        node_type: "PHENOTYPE"
+      -
+        node_id: "isobutanol-maximum-od-value"
+        label: "0.5% isobutanol maximum OD600"
+        node_type: "PHENOTYPE"
+    edges:
+      -
+        edge_id: "no-solvent-growth"
+        subject: "no-solvent"
+        predicate: "decreases"
+        object: "no-solvent-growth-value"
+        mechanism: "The reported marC::kan reconstruction shows -3.2% maximum specific growth-rate change versus EcNR1 in glucose medium without isobutanol; possible background differences prevent assigning this solely to MarC loss."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:21435272"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3071312/"
+            snippet: "approximated the effect of transposon insertions by knocking out"
+            explanation: "Table 3 marC::kan glucose row, 0% isobutanol column; phenotype, base-strain and knockout Methods."
+            cache_path: "evidence/PF01914/minty-2011.txt"
+            cache_sha256: "21198e46f0dad3f70e389e7c57e35cff40a36df16da5084d45f1e97df78ba854"
+      -
+        edge_id: "no-solvent-maximum-od"
+        subject: "no-solvent"
+        predicate: "decreases"
+        object: "no-solvent-maximum-od-value"
+        mechanism: "The reported marC::kan reconstruction shows -7.8% maximum OD600 change versus EcNR1 in glucose medium without isobutanol; possible background differences prevent assigning this solely to MarC loss."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:21435272"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3071312/"
+            snippet: "approximated the effect of transposon insertions by knocking out"
+            explanation: "Table 3 marC::kan glucose row, 0% isobutanol column; phenotype, base-strain and knockout Methods."
+            cache_path: "evidence/PF01914/minty-2011.txt"
+            cache_sha256: "21198e46f0dad3f70e389e7c57e35cff40a36df16da5084d45f1e97df78ba854"
+      -
+        edge_id: "isobutanol-growth"
+        subject: "isobutanol"
+        predicate: "increases"
+        object: "isobutanol-growth-value"
+        mechanism: "The reported marC::kan reconstruction shows +20% maximum specific growth-rate change versus EcNR1 in glucose medium with 0.5% (w/v) isobutanol; possible background differences prevent assigning this solely to MarC loss."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:21435272"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3071312/"
+            snippet: "approximated the effect of transposon insertions by knocking out"
+            explanation: "Table 3 marC::kan glucose row, 0.5% isobutanol column; phenotype, base-strain and knockout Methods."
+            cache_path: "evidence/PF01914/minty-2011.txt"
+            cache_sha256: "21198e46f0dad3f70e389e7c57e35cff40a36df16da5084d45f1e97df78ba854"
+      -
+        edge_id: "isobutanol-maximum-od"
+        subject: "isobutanol"
+        predicate: "increases"
+        object: "isobutanol-maximum-od-value"
+        mechanism: "The reported marC::kan reconstruction shows +40% maximum OD600 change versus EcNR1 in glucose medium with 0.5% (w/v) isobutanol; possible background differences prevent assigning this solely to MarC loss."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:21435272"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3071312/"
+            snippet: "approximated the effect of transposon insertions by knocking out"
+            explanation: "Table 3 marC::kan glucose row, 0.5% isobutanol column; phenotype, base-strain and knockout Methods."
+            cache_path: "evidence/PF01914/minty-2011.txt"
+            cache_sha256: "21198e46f0dad3f70e389e7c57e35cff40a36df16da5084d45f1e97df78ba854"
+  -
+    graph_id: "marc-reconstruction-xylose-2011"
+    title: "Reported marC reconstruction has condition-dependent xylose growth effects"
+    scope: "Minty2011 reported marC::kan reconstruction versus EcNR1; genotype ambiguity is part of the scope, not an assumed clean isogenic deletion."
+    context: "NX50 minimal medium with xylose 50 g/L and biotin 0.25 mg/L, 30 C. Separately 0% and 0.5% (w/v) isobutanol; OD600 time courses over 48 hours."
+    family_mapping: "E. coli K-12 MarC P0AEY1/b1529/JW1522 sequence version 1, 221 aa, PF01914 5-217. This is reference mapping, not independent sequencing of historical strains or proof of isolated-domain function."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:83333"
+    limitations: "Table 3 caption calls the reconstruction EcNR1-derived, but Results/Methods construct it in EcHW24 or progeny, an EcNR1 MutS-negative derivative. The comparator is EcNR1, so a MutS/background confound remains. Uncertainty type and row-level significance are unresolved. Deletion only approximates IS1/IS5 insertions; adjacent marRAB changes and direct solvent transport are unmeasured."
+    nodes:
+      -
+        node_id: "no-solvent"
+        label: "Reported marC::kan strain versus EcNR1 in xylose, 0% isobutanol"
+        node_type: "PERTURBATION"
+      -
+        node_id: "isobutanol"
+        label: "Reported marC::kan strain versus EcNR1 in xylose, 0.5% isobutanol"
+        node_type: "PERTURBATION"
+      -
+        node_id: "no-solvent-growth-value"
+        label: "0% isobutanol maximum specific growth rate"
+        node_type: "PHENOTYPE"
+      -
+        node_id: "no-solvent-maximum-od-value"
+        label: "0% isobutanol maximum OD600"
+        node_type: "PHENOTYPE"
+      -
+        node_id: "isobutanol-growth-value"
+        label: "0.5% isobutanol maximum specific growth rate"
+        node_type: "PHENOTYPE"
+      -
+        node_id: "isobutanol-maximum-od-value"
+        label: "0.5% isobutanol maximum OD600"
+        node_type: "PHENOTYPE"
+    edges:
+      -
+        edge_id: "no-solvent-growth"
+        subject: "no-solvent"
+        predicate: "decreases"
+        object: "no-solvent-growth-value"
+        mechanism: "The reported marC::kan reconstruction shows -5% maximum specific growth-rate change versus EcNR1 in xylose medium without isobutanol; possible background differences prevent assigning this solely to MarC loss."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:21435272"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3071312/"
+            snippet: "approximated the effect of transposon insertions by knocking out"
+            explanation: "Table 3 marC::kan xylose row, 0% isobutanol column; phenotype, base-strain and knockout Methods."
+            cache_path: "evidence/PF01914/minty-2011.txt"
+            cache_sha256: "21198e46f0dad3f70e389e7c57e35cff40a36df16da5084d45f1e97df78ba854"
+      -
+        edge_id: "no-solvent-maximum-od"
+        subject: "no-solvent"
+        predicate: "decreases"
+        object: "no-solvent-maximum-od-value"
+        mechanism: "The reported marC::kan reconstruction shows -2.4% maximum OD600 change versus EcNR1 in xylose medium without isobutanol; possible background differences prevent assigning this solely to MarC loss."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:21435272"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3071312/"
+            snippet: "approximated the effect of transposon insertions by knocking out"
+            explanation: "Table 3 marC::kan xylose row, 0% isobutanol column; phenotype, base-strain and knockout Methods."
+            cache_path: "evidence/PF01914/minty-2011.txt"
+            cache_sha256: "21198e46f0dad3f70e389e7c57e35cff40a36df16da5084d45f1e97df78ba854"
+      -
+        edge_id: "isobutanol-growth"
+        subject: "isobutanol"
+        predicate: "increases"
+        object: "isobutanol-growth-value"
+        mechanism: "The reported marC::kan reconstruction shows +39% maximum specific growth-rate change versus EcNR1 in xylose medium with 0.5% (w/v) isobutanol; possible background differences prevent assigning this solely to MarC loss."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:21435272"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3071312/"
+            snippet: "approximated the effect of transposon insertions by knocking out"
+            explanation: "Table 3 marC::kan xylose row, 0.5% isobutanol column; phenotype, base-strain and knockout Methods."
+            cache_path: "evidence/PF01914/minty-2011.txt"
+            cache_sha256: "21198e46f0dad3f70e389e7c57e35cff40a36df16da5084d45f1e97df78ba854"
+      -
+        edge_id: "isobutanol-maximum-od"
+        subject: "isobutanol"
+        predicate: "increases"
+        object: "isobutanol-maximum-od-value"
+        mechanism: "The reported marC::kan reconstruction shows +7.6% maximum OD600 change versus EcNR1 in xylose medium with 0.5% (w/v) isobutanol; possible background differences prevent assigning this solely to MarC loss."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:21435272"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3071312/"
+            snippet: "approximated the effect of transposon insertions by knocking out"
+            explanation: "Table 3 marC::kan xylose row, 0.5% isobutanol column; phenotype, base-strain and knockout Methods."
+            cache_path: "evidence/PF01914/minty-2011.txt"
+            cache_sha256: "21198e46f0dad3f70e389e7c57e35cff40a36df16da5084d45f1e97df78ba854"
+  -
+    graph_id: "marc-solvent-growth-2020"
+    title: "MarC deletion improves growth under two solvent challenges"
+    scope: "Babel2020 MG1655-derived deletion background compared with the study's initial MG1655; not all evolved mutations or a direct efflux assay."
+    context: "Figures 4/5, 37 C, M9 glucose 5 g/L. Isoprenol 50 mM and butanol 5 g/L are separate conditions; relative fitness is growth rate divided by the reference rate in that condition."
+    family_mapping: "E. coli K-12 MarC P0AEY1/b1529/JW1522 sequence version 1, 221 aa, PF01914 5-217. This is reference mapping, not independent sequencing of historical strains or proof of isolated-domain function. The CGSC6300-derived experimental stock has restored gatC, functional glrR and REP321j variation; it is not assumed identical to the canonical reference."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:83333"
+    limitations: "Strain 953 is delta-marC750::kanR; 960 expresses the M35stop fragment and 1087 carries empty vector in the deletion background. Fragment expression adds no significant benefit and is not wild-type complementation. Three biological replicates/SD; no exact bar estimates. Vanillin does not show a strong benefit. Transport chemistry and domain/residue sufficiency remain unresolved."
+    nodes:
+      -
+        node_id: "deletion-isoprenol"
+        label: "MarC deletion background under 50 mM isoprenol"
+        node_type: "PERTURBATION"
+      -
+        node_id: "deletion-butanol"
+        label: "MarC deletion under 5 g/L butanol"
+        node_type: "PERTURBATION"
+      -
+        node_id: "isoprenol-growth"
+        label: "Relative growth rate under isoprenol"
+        node_type: "PHENOTYPE"
+      -
+        node_id: "butanol-growth"
+        label: "Relative growth rate under butanol"
+        node_type: "PHENOTYPE"
+    edges:
+      -
+        edge_id: "deletion-improves-isoprenol-growth"
+        subject: "deletion-isoprenol"
+        predicate: "increases"
+        object: "isoprenol-growth"
+        mechanism: "The deletion condition has greater relative growth than the initial MG1655 reference under isoprenol; the truncated-protein comparison does not demonstrate a native rescue."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:33292484"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7653855/"
+            snippet: "did not significantly change the fitness compared to the knock-out"
+            explanation: "Figure 4 original plot, MarC Results and strain Table 4; M35stop versus deletion remains a non-additive comparison."
+            cache_path: "evidence/PF01914/babel-2020.txt"
+            cache_sha256: "64ef3a358507e182807f7b1bdc126b1f7f45eacf3b77d91a4f9ed50e169a1536"
+      -
+        edge_id: "deletion-improves-butanol-growth"
+        subject: "deletion-butanol"
+        predicate: "increases"
+        object: "butanol-growth"
+        mechanism: "The deletion strain has improved relative growth under butanol; the result is not generalized to every solvent or to direct transport."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:33292484"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7653855/"
+            snippet: "did not significantly change the fitness compared to the knock-out"
+            explanation: "Figure 5 original plot, butanol condition and growth Methods."
+            cache_path: "evidence/PF01914/babel-2020.txt"
+            cache_sha256: "64ef3a358507e182807f7b1bdc126b1f7f45eacf3b77d91a4f9ed50e169a1536"
+  -
+    graph_id: "marc-top10-mic-2018"
+    title: "ATCC25922 MarC construct modestly increases TOP10 MICs"
+    scope: "Gingras2018 PCR-subcloned ATCC25922 marC genomic insert expressed in TOP10, compared with TOP10/pFF6; not the original enrichment fragment."
+    context: "Table 2 triplicate MIC measurements, ug/ml. pFF6 is a nonsuicidal unrelated-insert control because empty pZErO-2 is suicidal; antisense-marC controls remain at baseline."
+    family_mapping: "ATCC25922 DR76_3329/AIL17056.1 equals UniParc UPI00000DEBB0, 221 aa, PF01914 5-217; N36S relative to K-12 P0AEY1. Table S2 primer mapping predicts CP009072.1 insert 3541797-3542673 including the full CDS and upstream DNA, not independent sequencing of the historical plasmid."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:562"
+    limitations: "Changes are about one twofold dilution and may lie within technical variability; not clinical resistance or direct efflux. pFF6 is not an identical empty vector. ATCC25922 recipient has no ceftriaxone increase and McDermott2008 AG100 tests were negative. Original enrichment interval 3540651-3542008 ends at the MarC start and remains unresolved; no enrichment-fragment edge is asserted."
+    nodes:
+      -
+        node_id: "marc-construct"
+        label: "TOP10/pZErO-2-marC relative to TOP10/pFF6"
+        node_type: "PERTURBATION"
+      -
+        node_id: "cro"
+        label: "Ceftriaxone MIC in TOP10"
+        node_type: "PHENOTYPE"
+      -
+        node_id: "gen"
+        label: "Gentamicin MIC in TOP10"
+        node_type: "PHENOTYPE"
+      -
+        node_id: "lev"
+        label: "Levofloxacin MIC in TOP10"
+        node_type: "PHENOTYPE"
+      -
+        node_id: "tet"
+        label: "Tetracycline MIC in TOP10"
+        node_type: "PHENOTYPE"
+      -
+        node_id: "tmp"
+        label: "Trimethoprim MIC in TOP10"
+        node_type: "PHENOTYPE"
+    edges:
+      -
+        edge_id: "cro-mic-increase"
+        subject: "marc-construct"
+        predicate: "increases"
+        object: "cro"
+        mechanism: "Ceftriaxone MIC is reported as 0.13 to 0.25 ug/ml in this construct/host comparison; the modest shift is not an independently established clinical resistance category."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:29319470"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5857375/"
+            snippet: "marC"
+            explanation: "Table 2 TOP10/pFF6 and marC rows, Ceftriaxone column; antisense control and validation Methods; Table S2 clone primers."
+            cache_path: "evidence/PF01914/gingras-2018.txt"
+            cache_sha256: "77a82410ca3790377b21059eadeb40eba8a319afc681c1c7d4b438535c9eeaa2"
+      -
+        edge_id: "gen-mic-increase"
+        subject: "marc-construct"
+        predicate: "increases"
+        object: "gen"
+        mechanism: "Gentamicin MIC is reported as 0.50 to 1.00 ug/ml in this construct/host comparison; the modest shift is not an independently established clinical resistance category."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:29319470"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5857375/"
+            snippet: "marC"
+            explanation: "Table 2 TOP10/pFF6 and marC rows, Gentamicin column; antisense control and validation Methods; Table S2 clone primers."
+            cache_path: "evidence/PF01914/gingras-2018.txt"
+            cache_sha256: "77a82410ca3790377b21059eadeb40eba8a319afc681c1c7d4b438535c9eeaa2"
+      -
+        edge_id: "lev-mic-increase"
+        subject: "marc-construct"
+        predicate: "increases"
+        object: "lev"
+        mechanism: "Levofloxacin MIC is reported as 0.016 to 0.031 ug/ml in this construct/host comparison; the modest shift is not an independently established clinical resistance category."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:29319470"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5857375/"
+            snippet: "marC"
+            explanation: "Table 2 TOP10/pFF6 and marC rows, Levofloxacin column; antisense control and validation Methods; Table S2 clone primers."
+            cache_path: "evidence/PF01914/gingras-2018.txt"
+            cache_sha256: "77a82410ca3790377b21059eadeb40eba8a319afc681c1c7d4b438535c9eeaa2"
+      -
+        edge_id: "tet-mic-increase"
+        subject: "marc-construct"
+        predicate: "increases"
+        object: "tet"
+        mechanism: "Tetracycline MIC is reported as 1.00 to 2.00 ug/ml in this construct/host comparison; the modest shift is not an independently established clinical resistance category."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:29319470"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5857375/"
+            snippet: "marC"
+            explanation: "Table 2 TOP10/pFF6 and marC rows, Tetracycline column; antisense control and validation Methods; Table S2 clone primers."
+            cache_path: "evidence/PF01914/gingras-2018.txt"
+            cache_sha256: "77a82410ca3790377b21059eadeb40eba8a319afc681c1c7d4b438535c9eeaa2"
+      -
+        edge_id: "tmp-mic-increase"
+        subject: "marc-construct"
+        predicate: "increases"
+        object: "tmp"
+        mechanism: "Trimethoprim MIC is reported as 0.25 to 0.50 ug/ml in this construct/host comparison; the modest shift is not an independently established clinical resistance category."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:29319470"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5857375/"
+            snippet: "marC"
+            explanation: "Table 2 TOP10/pFF6 and marC rows, Trimethoprim column; antisense control and validation Methods; Table S2 clone primers."
+            cache_path: "evidence/PF01914/gingras-2018.txt"
+            cache_sha256: "77a82410ca3790377b21059eadeb40eba8a319afc681c1c7d4b438535c9eeaa2"
+  -
+    graph_id: "marc-antibiotic-rna-2008"
+    title: "Antibiotic exposure raises steady-state marC RNA"
+    scope: "McDermott2008 AG100 drug-exposed versus untreated cultures, not a MarC efflux or direct transcription assay."
+    context: "Original Figure 1 Northern blot: mid-exponential LB cultures, 30 C, one-hour exposure. Separate tetracycline and chloramphenicol 5 ug/ml conditions."
+    family_mapping: "E. coli K-12 MarC P0AEY1/b1529/JW1522 sequence version 1, 221 aa, PF01914 5-217. This is reference mapping, not independent sequencing of historical strains or proof of isolated-domain function."
+    scope_status: "PHENOTYPIC"
+    taxon: "NCBITaxon:562"
+    limitations: "The stronger blot signal is not quantified as a fold-change or significance estimate. The authors favor mRNA stabilization over true induction; MarR binding and direct transcription are not established. Salicylate and marR-inactive comparison are negative in the inspected conditions. Susceptibility negatives are retained separately from RNA effects."
+    nodes:
+      -
+        node_id: "tetracycline"
+        label: "AG100 exposed to tetracycline 5 ug/ml for one hour"
+        node_type: "PERTURBATION"
+      -
+        node_id: "chloramphenicol"
+        label: "AG100 exposed to chloramphenicol 5 ug/ml for one hour"
+        node_type: "PERTURBATION"
+      -
+        node_id: "marc-rna"
+        label: "Steady-state marC RNA signal"
+        node_type: "STATE"
+        grounding:
+          - "UniProtKB:P0AEY1"
+    edges:
+      -
+        edge_id: "tet-increases-rna"
+        subject: "tetracycline"
+        predicate: "increases"
+        object: "marc-rna"
+        mechanism: "The treated culture has a stronger marC Northern signal than untreated cells; changes in RNA synthesis versus degradation are unresolved."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:17954692"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2223875/"
+            snippet: "likely reflects stabilization of mRNA rather than true induction"
+            explanation: "Figure 1 original image, lane 6 versus lane 1; caption and RNA-stabilization discussion."
+            cache_path: "evidence/PF01914/mcdermott-2008.txt"
+            cache_sha256: "8f0f64d47bff41d3986fa3c0a9fe0019601dc706de6e901503673a35a742e4e0"
+      -
+        edge_id: "cam-increases-rna"
+        subject: "chloramphenicol"
+        predicate: "increases"
+        object: "marc-rna"
+        mechanism: "Chloramphenicol exposure increases steady-state RNA signal, without establishing direct activation of the marC promoter."
+        directness: "INDIRECT"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          -
+            reference: "PMID:17954692"
+            source_url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2223875/"
+            snippet: "likely reflects stabilization of mRNA rather than true induction"
+            explanation: "Figure 1 original image, lane 4 versus lane 1; caption and RNA-stabilization discussion."
+            cache_path: "evidence/PF01914/mcdermott-2008.txt"
+            cache_sha256: "8f0f64d47bff41d3986fa3c0a9fe0019601dc706de6e901503673a35a742e4e0"
+discussions:
+  -
+    discussion_id: "upf0056-member-and-mechanism-coverage"
+    prompt: "Extend verified family branches and distinguish cellular phenotypes from a direct transport cycle."
+    kind: "CURATION_TODO"
+    status: "OPEN"
+    rationale: "Selected SnatA, MarC and YchE experiments do not characterize all 15684 frozen proteins or every PF01914 domain."
+    evidence:
+      -
+        reference: "doi:10.1093/jb/mvg021"
+        supports: "PARTIAL"
+        evidence_source: "heterologous_primary_assays"
+        explanation: "SnatA construct effects and competition are supported, but purified transport, coupling stoichiometry, dimer necessity and native archaeal function remain untested."
+      -
+        reference: "PMID:40248429"
+        supports: "PARTIAL"
+        evidence_source: "selected_clone_primary_assays"
+        explanation: "MarC selected clones increase uptake/growth; YchE growth rescue does not yield significant uptake in the other tested host."
+    posed_by: "Codex"
+    posed_date: "2026-10-12"
+    notes: "Investigate mapped YhgN, YvbG, PH0214/PH0760/PAB0863/PAB2220/MJ0972/MJ1677 independently. Reconstruct variants and B2059 passenger mutations; verify protein abundance and clone sequences. Do not convert AlphaFold or family naming into causal residue evidence. Retain IN_PROGRESS and partial coverage."
+  -
+    discussion_id: "marc-source-and-strain-discrepancies"
+    prompt: "Resolve host, allele and source discrepancies before making universal MarC claims."
+    kind: "CURATION_TODO"
+    status: "OPEN"
+    rationale: "Different strains, controls and endpoints produce different directions; source inconsistencies cannot be silently corrected."
+    evidence:
+      -
+        reference: "PMID:21435272"
+        supports: "PARTIAL"
+        evidence_source: "reconstruction_background_check"
+        explanation: "Table 3 compares with EcNR1 but construction uses MutS-negative EcHW24 or progeny."
+      -
+        reference: "PMID:29319470"
+        supports: "PARTIAL"
+        evidence_source: "mic_and_primer_check"
+        explanation: "TOP10 MIC increases are small and host dependent; primer mapping supports the validation insert but not the reported enrichment boundaries."
+      -
+        reference: "PMID:17954692"
+        supports: "PARTIAL"
+        evidence_source: "negative_susceptibility_context"
+        explanation: "AG100 antibiotic-susceptibility negatives and RNA stabilization qualify later resistance interpretations."
+    posed_by: "Codex"
+    posed_date: "2026-10-12"
+    notes: "Resolve 2011 MutS background and uncertainty type, 2018 enrichment interval/raw MIC variation, 2025 glucose units and YchE flux, and historical clone sequences. M35stop is not wild-type complementation. Compare matching allele/recipient/vector/assay conditions before reconciliation. Retain negative and unassessed branches in evidence/PF01914; any additional edges require a successor review."

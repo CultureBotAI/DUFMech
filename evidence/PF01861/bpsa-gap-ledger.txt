@@ -1,0 +1,35 @@
+PF01861 gap and alternative ledger, 2026-10-11
+
+Scope: two mapped BpsA proteins and selected biochemical/physiological tests,
+not the full family. Search terms included PF01861, TK1691, BpsA_C, BpsA,
+branched-chain polyamine synthase and exact paper titles. Hidden/ignored files
+were included in the pre-curation repository search; no prior PF01861 overlay,
+evidence or retained review was found in the searched native owners.
+
+Resolve the 2019 acidic-residue numbering using historical clones/raw spectra.
+Primer-supported coordinates are strong mapping evidence, not clone resequencing.
+An observed +114.118-Da terminal species is not unique site occupancy or a
+demonstrated productive on-pathway intermediate. Test donor-free and isotope-
+labeled controls, ester chemistry and transfer from preloaded enzyme to acceptor.
+The older Asp159-carrier hypothesis is not retained as an observed reaction;
+later data favor terminal carriers without proving the complete chemical sequence.
+
+Obtain 2017 supplementary primers/figure images, 2019 original figures and raw
+MS/kinetics, resolve the C9 spermidine arithmetic inconsistency, and assess the
+remaining substitutions/substrates without treating Km as a binding constant.
+The 2019 WT comparator is reused from 2017, not independent concurrent replication.
+Thermus construct contains an additional N-terminal residue relative to reference.
+
+Review 2014 and 2025 strain provenance and perform matched bpsA restoration
+to separate pdaD relocation from BpsA loss. Resolve supplementary cold CFUs,
+replicates and normalization; KPS is an independently constructed replacement,
+not a repaired DBP1 clone. Do not infer a serial DNA/RNA/membrane chain from
+correlated polyamine distribution, reporter or growth outcomes.
+
+Additional source leads remain uncurated: transcriptome/proteome work, RNA
+polymerase stabilization, polyamine-DNA experiments, surfactant responses,
+other thermophilic bacterial/archaeal members and uncharacterized PF01861 proteins.
+The 2026 review (PMID:41784802) is a discovery lead, not primary edge evidence.
+Neither a Pfam rename nor membership guarantees branched-polyamine chemistry.
+Keep IN_PROGRESS and partial scientific self-review; no corpus completion,
+independent expert endorsement or website publication is claimed.

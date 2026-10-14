@@ -1,0 +1,43 @@
+PF01933 partial causal-coverage ledger, 2026-10-12
+
+Local search included ignored and hidden files in curation,evidence,history
+and reviews/structured for PF01933,UPF0052,CofD and GlmR; no existing native
+curation there before this pass. The initial DUF86 query was a discarded lead,
+not an adopted alias. Frozen EX_DUF metadata does not itself expose an exact
+previous-name string. Preserve UPF0052 as a historical discovery term pending
+retention of the naming-history authority.
+
+Seven graphs represent10 observed effects in separate contexts. They do not
+characterize all members or all reported activities of the mapped proteins.
+
+Primary follow-ups, not evidence of absence:
+- Graupner2002,PMID11888293,doi:10.1021/bi011937v: M.jannaschii CofD
+  biochemistry. Abstract inspected; full Methods and controls remain needed.
+- Forouhar2008,PMID18252724,https://pmc.ncbi.nlm.nih.gov/articles/PMC2431047/:
+  Results and selected Methods read, not all figures/construct details. Raw HTML
+  SHA25646f7d92539e159c0e6d164b22921c0e75025ab48877f5da5824ef053c0d4f686.
+  Resolve M.mazei-equivalent Asp46 versus actual M.jannaschii residue; activity
+  assay includes PEP for regeneration and names CofC MJ1117, unlike the later
+  MJ0887 assignment. Do not transfer structural metal proposals as observed
+  catalysis. Binding results and non-F420 homolog negatives remain contextual.
+- Braga2019,doi:10.1021/acschembio.9b00605: 3PG-F420 branch; primary follow-up.
+- Hasan2022 other pairs and inaccessible accession supplement; maintain
+  partner-specific interpretation and unresolved Fo unit.
+- Foulquier2020 supplement and residue-numbering conflict; earlier B.subtilis
+  growth/morphogenesis papers PMID16272399/21320184 and Patel2018,
+  doi:10.1371/journal.pgen.1007689 require separate primary curation.
+- Pensinger2023,PMID36939339,https://pmc.ncbi.nlm.nih.gov/articles/PMC10128056/:
+  biochemical Results and captions read; figures and construct methods not yet
+  fully audited. HTML SHA256f548431f24ef766cf21f8599f6e93bd5a49c31c712417f55055db6d468b668e2.
+  Accessory uridyltransferase evidence and cross-species interaction differences
+  require their own accession-mapped graphs, not automatic extension of GlmS
+  regulation. Avoid merging binding, enzymatic and cellular outcomes.
+- Enterococcus2024 doi:10.1371/journal.pgen.1011215, Salmonella2022
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC8964723/ and B.subtilis2026
+  PMID41911237 were discovery leads; full primary context remains open.
+- E.coli YbhK, M.tuberculosis CuvA/Rv1422 and other family branches remain
+  distinct from FbiA/Rv3261. Protein-treatment, drug-response and infection
+  associations are not inferred from a cofactor synthesis graph.
+
+No isolated-domain sufficiency, exact clone-wide sequence audit, exhaustive
+family survey, raw-data reanalysis or independent expert review is claimed.

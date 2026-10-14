@@ -1,0 +1,17 @@
+Identity facts inspected 2026-10-11; database grounding, not causal evidence.
+Sources:
+https://rest.uniprot.org/uniprotkb/O28028.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/O28028/entry/pfam/PF01996/
+https://data.rcsb.org/rest/v1/core/polymer_entity/7ULF/1
+
+UniProtKB: O28028; entry version 121; sequence version 1; 249 residues.
+Sequence MD5: 79470B9B6A2E60DA592F115CF6719FEF
+Gene cofE; locus AF_2256.
+Organism: Archaeoglobus fulgidus DSM 4304 / VC-16; NCBITaxon:224325.
+entry accession: PF01996
+Current Pfam match: residues 11-220, continuous; integrated IPR002847.
+The paper's deposited construct 7ULF entity 1 maps to O28028 with full
+reference coverage and no sequence conflict. Its 251-residue deposited
+sequence is GA followed by the 249-residue reference sequence.
+The assay methods describe an intact codon-optimized ORF with His6 removed
+by rTEV. A Pfam match within it does not establish domain-only sufficiency.

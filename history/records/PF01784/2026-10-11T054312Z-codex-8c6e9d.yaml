@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01784
+  path: data/families/PF01784.yaml
+session:
+  id: 2026-10-11T054312Z-codex-8c6e9d
+  timestamp: '2026-10-11T05:43:12Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review YbgI conditional phenotype and retained source discrepancies
+  details: Saved a partial scientific self-review for the exact current projection.
+    The graph is restricted to the observed early liquid-growth comparison in a folE-deficient
+    background. Conflicting broader prose, inaccessible strain supplement, absent
+    established endpoint rescue and unreviewed member-specific molecular studies remain
+    open. No universal function or REVIEWED promotion.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T054325Z-pf01784-ybgi-causal-context/review.yaml

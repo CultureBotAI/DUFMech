@@ -1,0 +1,39 @@
+PF01901 search,access and causal gaps,2026-10-11 UTC
+
+Ignored/hidden-inclusive local search in curation,evidence,history,reviews,
+reports(excluding inventory.json) for PF01901,DUF70,MJ0419,MJ0420 and
+FPC840_340035 returned no preexisting evidence file before this curation.
+This is a bounded local absence statement,including ignored files,not proof
+of no functional literature. Current UniProt237-result response and exact
+member mappings are described in identity.txt.
+
+Public searches included PF01901/DUF70function/polymerase,MJ0419function,
+MJ0420glycosylation,FPC840_340035mutant,O85335,Q6LY80modA,Methanococcus
+maripaludis modA,O157wzymutant/complementation/in-vitro,exact1998title and
+the2004core-oligosaccharide study. NCBICOG1822 supplied a predicted archaeal
+polysaccharide role lead,not a primary perturbation. Irrelevant name matches
+and no FUNCTION comments are not experimental absence evidence.
+
+Follow-ups remain: sequence-verified43895wzy allele/insertion,downstream
+expression and Wzy-specific rescue; resolve reference ATCC700927versusassay
+43895; reassess the short InterPro8-205 score0.041 match with current family
+models before any domain-wide transfer. Resolve2024glucose/time discrepancies
+and obtain assay-matched biomass/growth controls. Distinguish repeated use of
+the same2020mutant from independently reconstructed alleles. Preserve retained
+curli,flagellin,motility and invasion readouts; loss is endpoint-specific.
+
+2004doi:10.1074/jbc.M401879200,2008PMC2447026capsule study and2021BECP10phage
+study were identified as O157 follow-up leads; full experimental evidence was
+not inspected for this retained review. PMC2447026 returned a browser challenge,
+EuropePMCfullTextXML returned500twice,and its HTML returned403. DOI2004open
+failed. MDPI2024HTML returned403,but EuropePMCXML and PMCHTML/figures succeeded.
+These are access limitations,not negative scientific findings. The2026Wzy
+structure-clustering preprint and2016/2017B.anthracisclan lead were not inspected.
+FPC840_340035currentsequence and later perturbations remain unresolved.
+No exhaustive237-member or primary-literature coverage is claimed.
+
+Repository and installed skill reads succeeded; baseline8296records validated
+without generated drift. OfflineUV/Biopython also succeeded normally this turn.
+An earlier renderer's UVcache error was command-specific and handled by a
+scoped approved retry; neither this success nor that failure proves a global
+filesystem-permission change. No permission config was modified.

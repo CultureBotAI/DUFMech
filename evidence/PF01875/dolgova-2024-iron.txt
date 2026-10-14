@@ -1,0 +1,39 @@
+Dolgova et al.2024, PMID38640016, DOI10.7554/eLife.86354.
+Inspected2026-10-11: relevant Results and protein/ITC/CRISPR/ICP-MS/MDA/
+cytotoxicity/imaging Methods,original Figures4/5 and Figure5 supplement1.
+Minimal quotations: "Isothermal titration calorimetry"; "ICP-MS measurements";
+"MDA assay"; "Cytotoxicity assay"; "Immunofluorescence microscopy".
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11081632/
+
+Purified pTYB12 intein-cleaved human MEMO1;7KQ8 deposited4-297 reference
+mapping retained separately. ITC25 C,25 uM protein,0.5 mM FeSO4 titrant,
+50 mM HEPES pH7.4,150 mM NaCl,9.5 mM GSH/0.5 mM GSSG under argon;
+1.5-2.5 ul injections300 s apart,dilution-heat control. H49A and C244S
+lose the WT-like iron-binding heat response. NMR spectra support folded
+variants,not identical local geometry. H192A/D189N retain binding; the paper
+does not find a significant affinity difference. Apparent WT Kd5.0+/-2.6 uM
+is conditional on glutathione competition,not intrinsic free-iron affinity.
+Structures support H49/H81/C244 coordination; no physiological enzymatic
+substrate or reaction is established. Copper stoichiometry/affinity differ
+from2022 under different buffers/preparations; do not collapse them.
+
+MDA-MB-231 parental versus clonal M67-9 MEMO1 KO;M67-2 is a separate KD.
+CRISPR crRNAs target exons4-6,limiting dilution,Western validation;DMEM10%FBS.
+Exact clonal allele sequences and complementation were not independently
+verified. Figure4A/B: KO lowers iron per protein in cytosolic and crude
+mitochondrial fractions. ICP-MS uses6 biological replicates in Methods;
+not a direct iron-transport assay or proof of purified mitochondrial material.
+Figure4F: KO increases basal MDA per protein,despite lower iron and greater
+RSL3 tolerance. KD is stronger;do not invert this result to fit a simple chain.
+MDA assay:80%-confluent60-mm cultures,PBS harvest,Abcam kit,protein normalization.
+
+Figure4E: M67-9 retains higher normalized resazurin signal than parental
+cells at intermediate RSL3 doses,not every dose.1000 cells/well,next-day
+RSL3,48 h exposure,then88 uM resazurin overnight,540/590-nm fluorescence.
+Normalized metabolic viability is not a direct death-rate or ferroptosis assay.
+Basal MDA and RSL3 experiments are distinct; no iron-to-MDA-to-death chain is
+directly tracked. A-375 effects are smaller and are not transferred to MDA cells.
+Figure4D:1 uM deferoxamine overnight induces perinuclear mitochondrial
+clustering in M67-9 but not parental cells;basal patterns appear normal.
+GRP75 immunostaining and live MitoTracker imaging agree. No direct transport,
+respiration measurement or quantitative rescue is inferred from the images.

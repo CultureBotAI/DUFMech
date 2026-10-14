@@ -1,0 +1,53 @@
+PF01579 / C36C5.5 primary-evidence extract
+Inspected 2026-10-11. Gallotta et al. (2020), PMID:32641833.
+doi:10.1038/s41586-020-2461-z
+https://www.nature.com/articles/s41586-020-2461-z
+Public figure captions, Figure 2 image, source-data sheets and supplementary
+PDF were inspected. Main text and Methods were paywalled and NOT inspected.
+Minimal public-caption quotations:
+Figure 1k: "RNAi targeting top 13 ECR candidates"
+Figure 2b: "non-overexpressing siblings of ECR transgenics"
+Figure 2e: "ECR C36C5.5 efficiently prevents LBP-2 aggregation"
+
+Figure 1k: RNAi of C36C5.5, day 6, 25 C, one independent experiment.
+Source Data Figure 1 (MOESM8_ESM.xlsx), Panel k:
+groups                  n     zero     1-10     >10 aggregates
+L4440 negative control 140       50       90       0
+C36C5.5 RNAi           152       20       87      45
+rab-5 positive control 158        4       74      80
+Reported ordinal-logistic coefficient 2.22946, SE 0.25801, P<2.2e-16.
+This measures the aggregate-category distribution, not a biochemical rate.
+Exact strain/clone and RNAi start for this panel remain unverified; the
+from-egg/nonsterile/day-4 setup in Extended Data 2 is not transferred here.
+
+Figure 2b, day 6, two independent experiments. Source Data Figure 2
+(MOESM9_ESM.xlsx), Panel b; rows give zero, 1-10, >10 aggregate counts:
+Replicate 1: sibling control n85: 25,60,0; C36C5.5 OE n83: 59,24,0.
+Replicate 2: sibling control n77: 28,47,2; C36C5.5 OE n53: 40,13,0.
+Reported two-sided Fisher P=1e-7 and 1.5e-5 respectively.
+Figure 2e, day 6, two independent experiments, coelomocytes absent:
+Replicate 1: secreted GFP OE n82: 8,48,26; C36C5.5 OE n75: 52,22,1.
+Replicate 2: secreted GFP OE n121: 0,95,26; C36C5.5 OE n116: 46,70,0.
+Reported chi-square P<1e-8 for both comparisons. Coelomocyte-present arms
+also occur in this panel; they are not counted as a separate graph here.
+Figure 2 was visually checked. Figure 1k was assessed from caption and source
+table only. No new statistical analysis or raw-image processing was performed.
+
+Supplementary PDF MOESM1_ESM.pdf, Table 5 (PDF page 6): DCD311 carries
+uqEx53[pmyo-3::C36C5.5::mVenus::histag]; uqIs5[plbp-2::lbp-2::tagrfp].
+DCD363 carries uqIs27 and uqIs5; DCD362 adds fer-15/fem-1 sterility alleles.
+DCD387 lists unc-119(ed3), cdIs32 coelomocyte-ablation transgene, uqIs27,
+and uqIs5. This catalog establishes construct contexts, but the inspected
+caption/source tables do not uniquely assign each strain to each panel.
+Do not silently select a strain, temperature, tag junction or clone sequence.
+Figure 2d copurification is binding evidence, not a directly measured holdase
+reaction. The separate overexpression and RNAi outcomes are PHENOTYPIC, with
+INDIRECT molecular interpretation, not evidence for isolated DUF19 sufficiency,
+EXC-13 chaperoning, a pathogen-response chain or family-wide function.
+
+Public URLs:
+https://www.nature.com/articles/s41586-020-2461-z/figures/1
+https://www.nature.com/articles/s41586-020-2461-z/figures/2
+https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-020-2461-z/MediaObjects/41586_2020_2461_MOESM8_ESM.xlsx
+https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-020-2461-z/MediaObjects/41586_2020_2461_MOESM9_ESM.xlsx
+https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-020-2461-z/MediaObjects/41586_2020_2461_MOESM1_ESM.pdf

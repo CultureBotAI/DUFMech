@@ -1,0 +1,44 @@
+PF01955 CbiS identity and construct assessment; 2026-10-12 UTC
+Primary: PMID16740929; DOI10.1128/JB.00227-06; PMC1482944.
+https://journals.asm.org/doi/10.1128/jb.00227-06
+Locators: Plasmid constructions, protein preparation, first Results and Table1.
+Main HTML and original Figures3-6 inspected. Publisher PDF returned403;
+Figure1/2 pathway/operon images are not claimed as visually inspected.
+
+UniProt Q8TUT1 sequence version1, 357aa, pgpA/MK1672, AAM02885.1,
+M. kandleri AV19, taxon190192; unreviewed database entry, not experimental
+proof by itself. Accession/locus/species match the paper's donor.
+https://rest.uniprot.org/uniprotkb/Q8TUT1.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01955/protein/uniprot/Q8TUT1/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04608/protein/uniprot/Q8TUT1/
+Current profile intervals: PF01955 8-205; PF04608 257-353. The paper's
+CbiZ-like1-207 and CobZ-like208-357 segment labels are not profile endpoints.
+No current counts or annotations replace the frozen PF01955 snapshot.
+
+https://www.ncbi.nlm.nih.gov/protein/AAM02885.1
+NCBI GenPept CDS: complement(AE009439.1:1672455..1673528). The1074bp
+interval includes aTGAstop; Biopython translation with table11 and cds=True
+exactly matches Q8TUT1v1. NativeGTG is an alternative initiator; non-CDS
+translation would misleadingly produce a leadingV instead of initiatorM.
+
+Whole-protein expression usespMkCBIS4. Purified material usespMkCBIS3,
+C-terminal chitin-binding fusion inE.coliER2566, tag cleaved, purity95%
+reported without a gel. Stock0.23mg/ml,30%glycerol. Exact junction/scar
+and historical clone sequence remain unresolved.
+The shared forward primer replacesGTG withATG but still encodesMEFFHVI.
+pMkCBIS6 contains the first621bp andTGA, intending residues1-207. Its
+reverse-primer coding tail isGERAG-stop, matching native203-207. However,
+the printedGTCGAG is not the stated canonicalSalI recognition siteGTCGAC.
+pMkCBIS7 uses the last453bp, including150nativecodons plusstop, and an
+introducedATG. Its published forward coding segment translatesMSSPTRS;
+native208-213 isYSPTRS. TCT versus nativeTAT predictsY208S plus initiatorM
+if the printed primer was used. This is NOT a verified historical mutation.
+The Results'208-250 label also conflicts with208-357 and the stated length.
+Purification reverse primer has only12nt exact3prime suffix match within
+the CDS; the full-gene reverse primer may anneal downstream. Neither verifies
+the complete fusion junction. Do not silently repair primers or clone labels.
+Partner pCOBY38 supplies M.mazeiCobY, not another PF01955 protein.
+
+Raw APIs, GenPept XML, CDS FASTA and original figures remain temporary assets;
+this minimal ledger is the maintained mapping assessment. Exact plasmids,
+protein abundance/folding and native M.kandleri perturbations remain open.

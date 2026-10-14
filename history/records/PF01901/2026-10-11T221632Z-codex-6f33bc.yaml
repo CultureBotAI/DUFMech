@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01901
+  path: curation/families/PF01901.yaml
+session:
+  id: 2026-10-11T221632Z-codex-6f33bc
+  timestamp: '2026-10-11T22:16:32Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate four O157 wzy insertion phenotype graphs with reference-level PF01901
+    mapping
+  details: Inspected2020 Figure1 and2024 Figures1,2,4,5 with primary text and versioned
+    reference sequences. Retained indirect decreases in tube staining,long-O-antigen
+    signal,microtiter staining and motility halo; kept residual and negative readouts,weak
+    partial domain hit,culture-label discrepancy,missing allele-specific rescue and
+    source reporting conflicts. Other Wzy families and association-only evidence are
+    excluded. Family remains IN_PROGRESS; no publication or exhaustive coverage claim.

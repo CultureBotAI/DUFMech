@@ -1,0 +1,33 @@
+PF01906 identity and member mapping, accessed 2026-10-11 UTC
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01906/
+https://rest.uniprot.org/uniprotkb/P0A8C1.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P0A8C1/
+https://rest.uniprot.org/uniprotkb/O06797.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/O06797/
+NCBI protein FASTA accessions were parsed with Bio.SeqIO and compared exactly
+with current UniProt sequence strings; no hand-transcribed alignment was used.
+
+Frozen PF01906, former DUF74, is YbjQ_1/IPR002765, EX_DUF and UNSCORED.
+Snapshot interpro-pfam-duf-2026-10-10:
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+Counts: 9784 proteins, 10265 matches, 8037 proteomes, 12745 taxa,
+3 structures, 6574 AlphaFold models and 27 domain architectures.
+Current family metadata agrees with the frozen identity. The heavy-metal
+label comes from comparative structural inference, not demonstrated binding
+by every family member. Frozen identity/counters/scoring remain unchanged.
+
+E. coli K-12 YbjQ P0A8C1, sequence version 1, b0866/JW0850,
+NCBITaxon:83333, 107 aa, exactly equals NP_415387.1 and AAC73953.1.
+InterPro PF01906 interval 1-105, provider score 8.9e-35.
+This anchors Babu2014's b0866 recipient, not independent sequencing of the
+historical Keio-derived strain, donor alleles or deletion junctions.
+YbjQ/b0866 is distinct from YjbQ/b4056/PF01894. A similarly spelled name is
+not evidence for thiamine synthesis by PF01906.
+
+M. tuberculosis H37Rv Rv1762c O06797, sequence version 1, NCBITaxon:83332,
+262 aa, exactly equals NP_216278.1 and CCP44528.1. Current PF01906 matches
+are partial intervals 65-123 (5.7e-05) and 170-244 (4.2e-05).
+These provider matches do not establish two complete experimentally solved
+domains or assign all whole-protein effects to either interval. UniProt's
+PMID:34751132 reference concerns MS identification/location; tentative cargo
+or oxidative-protection wording is not an independently measured mechanism.

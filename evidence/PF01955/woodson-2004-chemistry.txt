@@ -1,0 +1,40 @@
+Primary evidence, inspected 2026-10-12 UTC
+PMID14990804; DOI10.1073/pnas.0305939101; PMC373507.
+https://www.pnas.org/doi/10.1073/pnas.0305939101
+Locators: protein purification, activity assay and corrinoid-analysis Methods;
+last two Results subsections; original Figures4,5,6 visually inspected.
+Minimal exact quotations: "Cby was a product"; "Cby synthesis".
+
+M. mazei Mm0173 CbiZ was expressed in E. coli. Purified material used
+pMmCBIZ5 in ER2566; the C-terminal chitin-binding tag was cleaved on beads.
+Purity above95% by SDS/PAGE is reported without its image. Exact scar unresolved.
+The assay specifies 100ul, 4ug enzyme, 150uM AdoCbi, 50mM Na-HEPES pH7.5,
+5mM DTT, 37C for2h in dim light. Preheating enzyme at65C for20min is negative.
+Figure5A contains the Cby-assigned14.8min and residual Cbi21.1min peaks;
+Figure5B retains Cbi without the Cby peak. Before HPLC the reaction is treated
+with KCN in light: chromatograms measure cyano derivatives, not intact AdoCby.
+The isolated peak yields MALDI-TOF m/z932.4 (Figure6), consistent with ligand-free
+Cby932.0. Standards, spectra and a reported peak bioassay support product identity.
+The detached aminopropanol coproduct is not separately measured.
+
+The Results also report activity using dicyanoCbi substrate. Printed specific
+activities are6.4umol/min/mg for AdoCbi and2.1umol/min/mg for dicyanoCbi.
+KCN supplementation reportedly does not explain the difference (data not shown).
+These are source values, not corrected units. Under the stated endpoint protocol,
+150uM*100ul is15nmol whereas4ug*6.4umol/min/mg is25.6nmol/min; that rate cannot
+be extrapolated throughout2h. Initial-rate timing or a unit/protocol correction
+needs source reconciliation. Graphs retain qualitative substrate conversion,
+not a validated kinetic rate or a fold-change estimate. Dicyano-substrate
+conversion is reported in text, without its separate chromatogram.
+
+Separate enriched-extract experiment: pMmCBIZ1 in BL21(lambdaDE3)-RIL,
+65ug extract, 30uM AdoCbi, otherwise the above100ul/37C/2h buffer protocol.
+Five ul of a1:10 deproteinated reaction dilution is spotted onto JE824
+(metE205 cobU330) carrying pCOBY10(cobY+), aerobic37C for24h. Figure4 shows
+growth for authentic Cby(spot2) and active CbiZ extract(spot5), not authentic
+Cbi(spot1), vector pT7-7 extract(spot3), or preheated CbiZ extract(spot4).
+The graph records reporter growth, not purified-enzyme chemistry from this
+extract alone. Reporter growth also requires the indicator's remaining enzymes.
+
+The paper does not establish isolated PF01955-domain catalysis, catalytic
+residues, the cellular timing of adenosylation, or all steps in its pathway model.

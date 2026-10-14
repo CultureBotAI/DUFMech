@@ -1,0 +1,40 @@
+Li et al.2024, PMID39426726, inspected 2026-10-12 UTC.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11585767/supplementaryFiles
+Primary Figure8, native-expression Results, Discussion, cellular Methods;
+supplementS11/S12/S13 and TableS1 read, S12/S13 visually inspected.
+
+Minimal exact Discussion quotation: "the transcription level of the UDG gene"
+Minimal growth quotation: "cell density in the stationary phase"
+
+Paraphrased findings and limits:
+- H. volcanii H26 delta-pyrE2 is the experimental background. The
+  mutant removes an internal part of Endo_dU, retaining upstream promoter
+  and gene fragments. Source labels it delta-Endo_dU, not a documented
+  full-gene null. S12 sequencing figure supports locus identity/partial
+  deletion. Methods refers toS11 for this validation; S11 is actually the
+  protein gel. FigureS12 termini/neighborhood support HVO_0443 mapping
+  described in identity.txt; full allele reconstruction remains open.
+- Cultures received0/0.1/0.5-mM sodium bisulfite (SB) atOD600 about0.5;
+  RNA was collected48h later,45C Hv-YPC. Reads were mapped toDS2;
+  Figure8B reports normalized TPM, not absolute transcription rate or
+  UDG protein level/activity. BioProject PRJNA1072706 is given as the
+  raw-read deposit, not reanalyzed here.
+- Figure8B mutant UDG TPM at0.5mMSB exceeds WT at the same dose.
+  Within the mutant,0.5mMSB also raises UDG TPM relative to noSB.
+  These are two distinct controlled contrasts, not proof that UDG induction
+  mediates restored repair. Replicate number and error-bar definition for
+  RNA-seq are not established by the main caption/Methods read here.
+- FigureS13 plots OD600 versus time for0/0.1/0.5mMSB, with three
+  biological replicates andSEM. SB addition is at20h in this figure.
+  At105h, the no-SB mutant has lower OD600 than no-SB WT. This is
+  an optical-density phenotype, not separately measured viable cell count,
+  generation time or DNA repair flux. Both strains grow more slowly with
+  0.5mMSB and converge near similar late OD; do not claim mutant-specific
+  SB hypersensitivity from a basal growth deficit. No genetic rescue shown.
+- Adjacent UDG24bp downstream and alteredTPM suggest physiological
+  cooperation, but do not establish an operon, direct protein interaction,
+  a complete compensatory pathway or absence of polar effects.
+- Afu/Halo purified assays do not demonstrate H. volcanii substrate specificity
+  or its cellular intermediates. Do not join different species into an
+  experimentally proven DNA-repair chain.

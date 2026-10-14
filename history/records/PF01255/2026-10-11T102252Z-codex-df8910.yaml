@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01255
+  path: curation/families/PF01255.yaml
+session:
+  id: 2026-10-11T102252Z-codex-df8910
+  timestamp: '2026-10-11T10:22:52Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate UppS product formation and separately qualified coupled-assay effects
+  details: Resolved historical Q47675 by archived sequence identity to P60472/PF01255
+    24-244. Read Apfel 1999 biochemical methods/results and visually inspected Figure
+    6; retained one DIRECT product edge and two UNRESOLVED coupled-signal edges with
+    residual-output, clone and product limits. Retained minimal primary extracts and
+    separate Micrococcus and Bos-12 follow-up leads. Baseline 8296 records validated
+    without drift; scientific coverage remains partial and IN_PROGRESS.

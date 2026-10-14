@@ -1,0 +1,21 @@
+Accessed: 2026-10-11 UTC
+Sources:
+https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ApleD%20AND%20organism_name%3ACaulobacter%20AND%20reviewed%3Atrue&format=json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9A5I5/entry/pfam/PF00990/
+https://data.rcsb.org/rest/v1/core/polymer_entity/1W25/1
+
+Structured facts and exact sequence comparisons:
+Q9A5I5: Caulobacter vibrioides CB15, formerly C. crescentus; CC_2462;
+NCBITaxon:190650; sequence version 1; entry version 140; 454 residues.
+B8GZM2: NA1000/CB15N; CCNA_02546; NCBITaxon:565050; sequence version 1;
+entry version 96. The two native amino-acid sequences are identical.
+Native sequence MD5: 594CF74DBB0F8CD76F60CDC8F88ED76F.
+Q9A5I5 Pfam interval: PF00990 at 289-447, inclusive.
+1W25 entity sequence equals native residues 2-454 followed by HHHHHH.
+Its deposited source taxonomy is CB15 but SIFTS maps to B8GZM2/NA1000.
+Sequence identity explains the mapping; it does not identify the exact cloning
+template of pCC2 or establish a second independent strain experiment.
+The original assay paper uses CB15N backgrounds for cellular work, and Table 2
+identifies pCC2 as the full-length C-terminal His6 expression construct.
+Graph taxonomy is retained at species NCBITaxon:155892; both reference strain
+identities and the template uncertainty are explicit. No isolated GGDEF assay.

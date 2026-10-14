@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01882
+  path: data/families/PF01882.yaml
+session:
+  id: 2026-10-11T073056Z-codex-0f7efa
+  timestamp: '2026-10-11T07:30:56Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped Slr2013 DUF58 phenotype self-review
+  details: Saved the partial scientific self-review against semantic digest 5ed26d6bc6bfd9dfb82518523e734b93b2ebf10e8c3e025192ffa026a5b5170e.
+    Two INDIRECT OBSERVED effects remain conditional on the Rg2 D2-T192H suppressor
+    context. Region-level allele specificity, protein product, molecular mechanism
+    and broader family coverage remain open. Native projection/evidence checks passed;
+    this is not independent endorsement or full-family completion, and status stays
+    IN_PROGRESS.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T073050Z-pf01882-duf58-causal-phenotypes/review.yaml

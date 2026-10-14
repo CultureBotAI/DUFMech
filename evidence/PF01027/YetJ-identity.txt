@@ -1,0 +1,18 @@
+Identity assessment, accessed 2026-10-11; not causal evidence.
+Sources:
+https://rest.uniprot.org/uniprotkb/O31539.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/O31539/entry/pfam/PF01027/
+O31539 / CALJ_BACSU: Bacillus subtilis strain 168, NCBITaxon:224308;
+gene calJ, alias yetJ, locus BSU07200; 214 residues, sequence version 1,
+entry version 118. Sequence MD5: 8b2858117a0b0a711c6a664c7d96df47.
+The independently retrieved UniProt and InterPro sequences agree exactly.
+O31539 Pfam:PF01027 interval: 10-210, inclusive
+Reference residues E49, R60, D171, D195 and R205 checked directly;
+each is within the domain interval. PF01027 integrates with IPR006214.
+The published BsYetJ/D171N labels map to this reference; this is not
+independent sequencing of the experimental plasmid. The 2020 supplement
+was inaccessible, leaving exact tag, clone junctions, any background
+substitutions and production host unverified. A 2019 crystallographic
+Delta5 construct is not automatically the 2020 transport construct.
+Frozen family label Bax1-I is retained; neither that label nor the family
+mapping proves a bacterial apoptosis mechanism or isolated-domain activity.

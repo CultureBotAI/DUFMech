@@ -1,0 +1,33 @@
+PF01910 scoped discovery and gaps; 2026-10-12 UTC
+Ignored/hidden-inclusive search for PF01910, DUF77, IPR002767, TM0486 and
+MTH1187 in curation, evidence, history, reviews and reports excluding
+inventory.json found no existing family-specific curation before these
+files. This is not an absence claim about frozen worklists or all papers.
+
+https://rest.uniprot.org/uniprotkb/search?query=(xref:pfam-PF01910)%20AND%20(reviewed:true)&format=json&size=500
+Twelve reviewed entries returned: P35195, Q9WYV6, O27255, P54499,
+P67120, P9WFQ0, Q56200, P72699, Q58452, P9WFQ1, Q46213 and Q8J1F7.
+The curated branches are TM0486 and selected fungal ECM15 experiments,
+not all9298 frozen proteins. Archaeal MTH1187/MJ1052 structures and
+other bacterial proteins remain separate targets. Tao2003 PMID12866058
+is a structural lead whose full text was not recovered here. DglA
+PMID7592379 needs primary inspection: a neighboring glucokinase study
+cannot be assigned to DglA itself. YqgV has a sequence-history warning.
+Related YkoF binding paper PMC2792028 is not imported without verifying
+exact PF01910 membership; related fold is insufficient.
+
+Retain family-wide mechanism, bacterial transport/protection, fungal
+ligand chemistry, residue-level binding/NLS mechanism, exact assembly,
+historical clone sequence, raw replicate uncertainty and cross-rescue
+strain identity as open questions. No graph joins the bacterial binding
+and fungal regulatory contexts into one experimentally observed chain.
+Own complementation is evidence for a phenotype effect, not proof of
+direct physical or biochemical mechanism.
+
+Access investigation: repository and installed skill reads succeed.
+Some curl calls need a narrow network escalation; PMC supplement URLs
+may return HTTP-success challenge HTML instead of documents. Inspect
+payload type/content. Europe PMC includeInlineImage=false recovered
+the Park archive. Dermoun supplement remains inaccessible; do not call
+it absent. These failures are not a blanket filesystem-read denial.
+No permission settings or sandbox restrictions were weakened.

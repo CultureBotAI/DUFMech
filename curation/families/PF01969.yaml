@@ -1,0 +1,544 @@
+pfam_id: PF01969
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01969
+discussions:
+- discussion_id: pf01969-causal-context-coverage
+  prompt: Extend primary LarC experiments without transferring full-protein effects to every PF01969 member.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The curated2022 biochemical and2026 coexpression assays concern full-length Moorella LarC and distinct downstream reporters; the family includes other member and construct contexts.
+  evidence:
+  - {reference: 'PMID:35225337', supports: SUPPORT, evidence_source: primary_publication, explanation: 'Methods and original Figures2/3/4/6 support scoped reaction-feature and reporter effects, not a fully observed atomic nickel-insertion pathway.'}
+  - {reference: 'PMID:42647608', supports: SUPPORT, evidence_source: primary_publication, explanation: 'Full text, original Figures2/3/4 and TableS1 were inspected. Full-length structures supersede the older structural gap but do not directly observe nickel, natural-intermediate transfer or E104 chemistry.'}
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Inspect full2014/2016/2018 L. plantarum genetics, frameshift and engineered-fusion experiments,2024 analog chemistry,2025 expression studies and other mapped members. F9UST1 v2 is420aa with PF01969 4-406, distinct from LarC1 or LarC2 alone. No family-wide nickel occupancy, universal substrate specificity or native-cell mechanism is inferred. All earlier corpus follow-ups remain open.
+- discussion_id: pf01969-source-and-construct-reconciliation
+  prompt: Resolve linker sequences, variant coverage and assay-recipe discrepancies before assigning exact atomic mechanisms.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Figure-level evidence changes several directions implied by simplified prose, and sequence and protocol descriptions are not fully consistent.
+  evidence:
+  - {reference: 'PMID:42647608', supports: SUPPORT, evidence_source: primary_publication, explanation: 'Figure2B shows H72A above WT and no H70A; Figure3D shows small E243A/E300A/R323A changes despite full-activity prose. Figure4B and TableS1 disagree on shortened and flexible-linker sequences; TableS1 confirms LarE plus LarC plasmid content.'}
+  - {reference: 'PMID:35225337', supports: SUPPORT, evidence_source: primary_publication, explanation: 'Methods specify MgCl2 while Results/Figure6 say Mn-CTP; Figure6 normalization and activity n1/error bars need clarification. No-added-nickel-growth protein was purified on nickel-affinity resin.'}
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Obtain final plasmid sequences and raw biological replicates, reconcile21 plotted alanine variants with TableS1 count20, and clarify negative-control identities and fixed substrate/time. Resolve EINSEESS figure versus EINEESS primer and GGGGSGGGGS label versus GGGSGGGGSS fragment. Check2022 clone sequences, final mixture concentrations, metal recipe and normalization. Retain E364A near-WT activity, PPase-alone nonenhancement and metal-source uncertainty; do not call the no-added-nickel preparation nickel-free.
+causal_graphs:
+- graph_id: moorella-larc-reaction-features-2022
+  title: Full LarC reaction changes substrate and CMP-linked MS features and downstream LarA output
+  scope: Purified synthetic full-length LarCMt His6-TEV construct expressed in E. coli BL21(DE3), with enzymatically prepared substrate and the specified cofactors; not an isolated PF01969 subdomain.
+  context: Turmo2022 Figures3/4 and Methods. P2TMN is generated with LarBLp and LarELp; LarCMt plus CTP and divalent metal is followed for0-60min at room temperature. Methods report MgCl2 but Results say Mn-CTP. Heat-stopped aliquots activate LarATt assayed with45mM L-lactate,HEPES100mM pH7,5min50C. Recipe concentrations before versus after equal-volume mixing are unresolved.
+  family_mapping: LarCMt maps to Q2RFJ5 v1/Moth_2512 in M. thermoacetica ATCC39073/JCM9320,396aa with PF01969 4-383 spanning both structural regions. The2022 full plasmid sequence was not independently reconstructed; reported mutated native residues agree with the reference. LarA/B/E are distinct assay partners.
+  taxon: NCBITaxon:264732
+  scope_status: MECHANISTIC
+  limitations: DIRECT applies to measured MS features in the complete reaction, not an elementary residue-level step. MS/MS supports CMP-P2TMN but relative peak intensity is not concentration or stoichiometry; NPN was too weak for quantitation. Representative experiment with trends confirmed in a second preparation. Residual upstream enzymes, exact metal recipe and clone sequence remain unresolved.
+  nodes:
+  - {node_id: complete-reaction, label: Full LarCMt reaction with prepared P2TMN and CTP plus divalent metal, node_type: ACTIVITY, grounding: ['UniProtKB:Q2RFJ5']}
+  - {node_id: substrate-feature, label: Relative P2TMN MS peak signal, node_type: STATE}
+  - {node_id: cmp-feature, label: m/z715.02 feature supported as CMP-P2TMN by MS/MS, node_type: STATE}
+  - {node_id: lara-readout, label: D-lactate output from downstream LarATt, node_type: PHENOTYPE}
+  edges:
+  - edge_id: substrate-feature-depletion
+    subject: complete-reaction
+    predicate: decreases
+    object: substrate-feature
+    mechanism: The timecourse shows loss of the substrate-associated feature during the complete reaction; the edge does not assign this loss to an isolated domain or equate MS intensity with molar turnover.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:35225337', source_url: 'https://doi.org/10.1093/mtomcs/mfac014', snippet: not formed in the absence of CTP., explanation: 'Figure3A original image and associated Results show substrate-feature decline during the reaction; Figure4 and CTP omission separately identify the emerging intermediate feature.', cache_path: evidence/PF01969/turmo-2022-assays-and-limits.txt, cache_sha256: 5ec05acc3c4997caa8c9a03c290fa3806c3619fff72bfe5692d760d61db964de}]
+  - edge_id: cmp-feature-formation
+    subject: complete-reaction
+    predicate: produces
+    object: cmp-feature
+    mechanism: The reaction generates the715.02 feature absent at zero time and without CTP; isotope and fragmentation evidence support a CMP-P2TMN phosphoanhydride. Atomic linkage formation, location and nickel-transfer sequence are not directly visualized.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:35225337', source_url: 'https://doi.org/10.1093/mtomcs/mfac014', snippet: not formed in the absence of CTP., explanation: 'Original Figures3A/B and4, MS/MS Methods and intermediate Results support the observed feature and structural interpretation, with relative rather than absolute quantitation.', cache_path: evidence/PF01969/turmo-2022-assays-and-limits.txt, cache_sha256: 5ec05acc3c4997caa8c9a03c290fa3806c3619fff72bfe5692d760d61db964de}]
+  - edge_id: downstream-lara-output
+    subject: complete-reaction
+    predicate: increases
+    object: lara-readout
+    mechanism: Later reaction aliquots give higher activity in the separate LarATt assay, supporting production of an activating product. This is an indirect reporter and not lactate racemization by LarC or direct quantitative NPN identification.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:35225337', source_url: 'https://doi.org/10.1093/mtomcs/mfac014', snippet: not formed in the absence of CTP., explanation: 'Figure3A line and Methods distinguish LarATt reporter activity from the two MS traces and from unquantifiable NPN signal.', cache_path: evidence/PF01969/turmo-2022-assays-and-limits.txt, cache_sha256: 5ec05acc3c4997caa8c9a03c290fa3806c3619fff72bfe5692d760d61db964de}]
+- graph_id: moorella-ppi-coupled-readout-2022
+  title: Added pyrophosphate suppresses the coupled readout and pyrophosphatase rescues it
+  scope: Complete LarCMt substrate-preparation and downstream LarATt assay, not isolated LarC binding or a cellular phenotype.
+  context: Turmo2022 Figure2;10mM PPi,2units PPase, or both added to the coupled assay, compared with control. P2TMN comes from LarBLp/LarELp; the reaction contains CTP and divalent metal and ends in D-lactate quantitation. Two biological replicates use separate enzyme preparations.
+  family_mapping: Full-length LarCMt corresponds to Q2RFJ5/Moth_2512,PF01969 4-383 in the396aa reference; partner enzyme and reporter effects cannot be localized to the Pfam segment.
+  taxon: NCBITaxon:264732
+  scope_status: PHENOTYPIC
+  limitations: Phenotype here means the measured assay output. PPi effects on metal availability, upstream components or reporter are not excluded. PPase alone does not enhance control activity; no proof that PPi accumulation causes apparent single-turnover behavior or directly inhibits the LarC active site.
+  nodes:
+  - {node_id: added-ppi, label: Addition of10mM PPi to the coupled assay, node_type: PERTURBATION}
+  - {node_id: ppase-with-ppi, label: Addition of2units PPase with10mM PPi, node_type: PERTURBATION}
+  - {node_id: reporter, label: Coupled LarATt D-lactate readout, node_type: PHENOTYPE}
+  edges:
+  - edge_id: ppi-reduces-readout
+    subject: added-ppi
+    predicate: decreases
+    object: reporter
+    mechanism: Added PPi lowers the final D-lactate signal versus no-added-PPi control; the molecular target within the multicomponent workflow remains unresolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:35225337', source_url: 'https://doi.org/10.1093/mtomcs/mfac014', snippet: full activity was restored, explanation: 'Original Figure2 compares control, PPi, PPi plus PPase and PPase alone; rescue is conditional and does not localize the inhibition target.', cache_path: evidence/PF01969/turmo-2022-assays-and-limits.txt, cache_sha256: 5ec05acc3c4997caa8c9a03c290fa3806c3619fff72bfe5692d760d61db964de}]
+  - edge_id: ppase-rescues-ppi-readout
+    subject: ppase-with-ppi
+    predicate: increases
+    object: reporter
+    mechanism: PPase restores the readout relative to PPi alone. This source node includes PPi and is not an assertion that PPase independently stimulates the unperturbed reaction.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:35225337', source_url: 'https://doi.org/10.1093/mtomcs/mfac014', snippet: full activity was restored, explanation: 'Figure2 original bars and Results support rescue against PPi alone and no enhancement by PPase alone.', cache_path: evidence/PF01969/turmo-2022-assays-and-limits.txt, cache_sha256: 5ec05acc3c4997caa8c9a03c290fa3806c3619fff72bfe5692d760d61db964de}]
+- graph_id: moorella-ctp-region-variants-2022
+  title: LarC variants change the downstream reporter and accumulated intermediate differently
+  scope: Separate full-length LarCMt D256A,E261A,E364A and D256A/E261A preparations, not a common mutant or isolated domain.
+  context: Turmo2022 Figure6 at30/60min; enzymatically generated P2TMN, CTP and divalent metal, followed by MS and LarATt reporter assays. Standard growth includes1mM NiCl2. Caption says Mn-CTP but Methods list MgCl2. MS n2 technical; activity n1 stated despite plotted error bars.
+  family_mapping: Q2RFJ5 v1/Moth_2512,396aa,PF01969 4-383; current reference matches D256,E261,E364. Exact original clone sequences await independent confirmation. L. plantarum comparison residues are not transferred as equivalent experiments.
+  taxon: NCBITaxon:264732
+  scope_status: PHENOTYPIC
+  limitations: Readout effects only; abundance, folding, occupancy and intermediate formation versus consumption are unresolved. E364A retains near-WT reporter activity despite low intermediate. Panel normalization is not resolved, so no absolute yield, rate, molar ratio or significance is inferred. The L. plantarum D387A/E387A wording conflict is retained separately.
+  nodes:
+  - {node_id: d256a, label: Full LarCMt D256A preparation, node_type: PERTURBATION, grounding: ['UniProtKB:Q2RFJ5']}
+  - {node_id: e261a, label: Full LarCMt E261A preparation, node_type: PERTURBATION, grounding: ['UniProtKB:Q2RFJ5']}
+  - {node_id: e364a, label: Full LarCMt E364A preparation, node_type: PERTURBATION, grounding: ['UniProtKB:Q2RFJ5']}
+  - {node_id: double, label: Full LarCMt D256A/E261A preparation, node_type: PERTURBATION, grounding: ['UniProtKB:Q2RFJ5']}
+  - {node_id: reporter, label: Downstream LarATt activity relative to WT preparation, node_type: PHENOTYPE}
+  - {node_id: cmp-feature, label: Accumulated715.02 CMP-P2TMN MS feature relative to WT preparation, node_type: STATE}
+  edges:
+  - edge_id: d256a-reporter
+    subject: d256a
+    predicate: decreases
+    object: reporter
+    mechanism: D256A gives a lower downstream signal at the plotted endpoints; the assay does not determine an elementary Asp-mediated chemical step.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:35225337', source_url: 'https://doi.org/10.1093/mtomcs/mfac014', snippet: insignificant levels of the intermediate, explanation: 'Original Figure6A separates D256A reporter reduction from its Figure6C low intermediate; Methods and caption define the paired readouts and replication limits.', cache_path: evidence/PF01969/turmo-2022-assays-and-limits.txt, cache_sha256: 5ec05acc3c4997caa8c9a03c290fa3806c3619fff72bfe5692d760d61db964de}]
+  - edge_id: e261a-reporter
+    subject: e261a
+    predicate: decreases
+    object: reporter
+    mechanism: E261A reduces the downstream reporter relative to WT under the plotted conditions without proving a direct hydrolysis defect.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:35225337', source_url: 'https://doi.org/10.1093/mtomcs/mfac014', snippet: insignificant levels of the intermediate, explanation: 'Figure6A E261A bars are below WT at30/60min; the Figure6C signal is a separate outcome, not a measured rate constant.', cache_path: evidence/PF01969/turmo-2022-assays-and-limits.txt, cache_sha256: 5ec05acc3c4997caa8c9a03c290fa3806c3619fff72bfe5692d760d61db964de}]
+  - edge_id: double-reporter
+    subject: double
+    predicate: decreases
+    object: reporter
+    mechanism: The double-variant preparation lowers the reporter relative to WT; this does not by itself prove independent or additive residue-level chemistry.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:35225337', source_url: 'https://doi.org/10.1093/mtomcs/mfac014', snippet: insignificant levels of the intermediate, explanation: 'Figure6A double-variant bars support decreased reporter output; source uncertainty prevents an exact interaction or rate interpretation.', cache_path: evidence/PF01969/turmo-2022-assays-and-limits.txt, cache_sha256: 5ec05acc3c4997caa8c9a03c290fa3806c3619fff72bfe5692d760d61db964de}]
+  - edge_id: d256a-intermediate
+    subject: d256a
+    predicate: decreases
+    object: cmp-feature
+    mechanism: D256A has less accumulated715.02 signal than WT; a low pool does not independently distinguish slower formation from faster consumption.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:35225337', source_url: 'https://doi.org/10.1093/mtomcs/mfac014', snippet: insignificant levels of the intermediate, explanation: 'Original Figure6C and variant Results support the D256A feature comparison; normalization and kinetic interpretations remain limited.', cache_path: evidence/PF01969/turmo-2022-assays-and-limits.txt, cache_sha256: 5ec05acc3c4997caa8c9a03c290fa3806c3619fff72bfe5692d760d61db964de}]
+  - edge_id: e261a-intermediate
+    subject: e261a
+    predicate: decreases
+    object: cmp-feature
+    mechanism: E261A has less accumulated715.02 signal than WT, without establishing direct Glu261 involvement in the bond-forming step.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:35225337', source_url: 'https://doi.org/10.1093/mtomcs/mfac014', snippet: insignificant levels of the intermediate, explanation: 'Figure6C E261A feature comparison and paired Figure6A reporter are distinct endpoints.', cache_path: evidence/PF01969/turmo-2022-assays-and-limits.txt, cache_sha256: 5ec05acc3c4997caa8c9a03c290fa3806c3619fff72bfe5692d760d61db964de}]
+  - edge_id: e364a-intermediate
+    subject: e364a
+    predicate: decreases
+    object: cmp-feature
+    mechanism: E364A yields little accumulated intermediate despite retaining near-WT downstream activity. The observation is not an inactive-enzyme or obligatory catalytic-residue claim.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:35225337', source_url: 'https://doi.org/10.1093/mtomcs/mfac014', snippet: insignificant levels of the intermediate, explanation: 'Figure6C supports the decreased feature while Figure6A and Results explicitly retain E364A near-WT activity, especially60min.', cache_path: evidence/PF01969/turmo-2022-assays-and-limits.txt, cache_sha256: 5ec05acc3c4997caa8c9a03c290fa3806c3619fff72bfe5692d760d61db964de}]
+  - edge_id: double-intermediate
+    subject: double
+    predicate: decreases
+    object: cmp-feature
+    mechanism: The double variant has little accumulated715.02 signal; no absolute absence of all pathway flux is inferred.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:35225337', source_url: 'https://doi.org/10.1093/mtomcs/mfac014', snippet: insignificant levels of the intermediate, explanation: 'Figure6C double-variant comparison supports a decreased intermediate feature, alongside residual reporter activity in6A.', cache_path: evidence/PF01969/turmo-2022-assays-and-limits.txt, cache_sha256: 5ec05acc3c4997caa8c9a03c290fa3806c3619fff72bfe5692d760d61db964de}]
+- graph_id: moorella-growth-nickel-preparation-2022
+  title: No-added-nickel growth preparation accumulates more of the CMP-linked feature
+  scope: WT full-length LarCMt purified from differently supplemented E. coli cultures; the intervention is the preparation condition, not verified metal-free LarC.
+  context: Turmo2022 Figure6C compares culture without added nickel to the standard1mM NiCl2 culture; both proteins undergo His60 nickel-affinity purification. The complete P2TMN/CTP reaction is measured at30/60min with the source metal-recipe and normalization limits retained.
+  family_mapping: LarCMt/Q2RFJ5 reference396aa with PF01969 4-383; whole-protein preparation, not isolated domain or native Moorella nickel starvation.
+  taxon: NCBITaxon:264732
+  scope_status: PHENOTYPIC
+  limitations: No demonstrated apoprotein or measured occupancy. Medium and purification resin can supply nickel; the preparation remains reporter-active. No direct nickel inhibition of CMPylation, absolute intermediate yield or intracellular nickel-source assignment is established.
+  nodes:
+  - {node_id: no-added-ni-growth, label: LarCMt preparation from culture without added nickel followed by nickel-affinity purification, node_type: PERTURBATION}
+  - {node_id: intermediate-feature, label: Accumulated715.02 feature relative to nickel-supplemented-growth preparation, node_type: STATE}
+  edges:
+  - edge_id: preparation-increases-feature
+    subject: no-added-ni-growth
+    predicate: increases
+    object: intermediate-feature
+    mechanism: The preparation condition is associated with a higher measured intermediate pool in the controlled assay comparison. Direct metal occupancy and the proposed ordering of nickel insertion are not observed by this comparison.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:35225337', source_url: 'https://doi.org/10.1093/mtomcs/mfac014', snippet: without supplemental nickel addition, explanation: 'Figure6C original comparison and final Results paragraph support the preparation effect; purification Methods preclude labeling it nickel-free.', cache_path: evidence/PF01969/turmo-2022-assays-and-limits.txt, cache_sha256: 5ec05acc3c4997caa8c9a03c290fa3806c3619fff72bfe5692d760d61db964de}]
+- graph_id: moorella-histidine-variant-reporters-2026
+  title: Histidine substitutions alter a downstream coexpressed LarA reporter
+  scope: Separate full-length LarCMt variants coexpressed with LarALp-StrepII,LarBLp and LarELp in E. coli BL21(DE3); the purified assayed enzyme is LarA, not LarC.
+  context: Wolfe2026 Figure2B, Methods and TableS1. LarE/LarC are on pRSFDuet and LarA/LarB on pETDuet. Growth includes1mM NiCl2,18C/IPTG induction. Desalted Strep-purified LarA1pmol is assayed at35C with L-lactate; Methods give5-400mM and1-12min ranges, not a fixed per-plot recipe. n3 technical replicates.
+  family_mapping: M. thermoacetica Q2RFJ5 v1/Moth_2512,396aa,PF01969 4-383; native residue letters match the reference and full-length2026 structures. Final mutant plasmid sequences and the incomplete TableS1 primer list are not a complete independent clone audit.
+  taxon: NCBITaxon:264732
+  scope_status: PHENOTYPIC
+  limitations: Indirect pathway reporting, not direct nickel coordination or LarC racemization. No nickel density is observed; mutant expression, folding and occupancy are not resolved. H70A is not plotted and has no observed edge. H72A increases the plotted signal and must not be called an unchanged negative control. H53A/H226A reappear in Figure3D but are not duplicate independent edges.
+  nodes:
+  - {node_id: h53a, label: Coexpression with full LarCMt H53A, node_type: PERTURBATION}
+  - {node_id: h72a, label: Coexpression with full LarCMt H72A, node_type: PERTURBATION}
+  - {node_id: h108a, label: Coexpression with full LarCMt H108A, node_type: PERTURBATION}
+  - {node_id: h116a, label: Coexpression with full LarCMt H116A, node_type: PERTURBATION}
+  - {node_id: h118a, label: Coexpression with full LarCMt H118A, node_type: PERTURBATION}
+  - {node_id: h160a, label: Coexpression with full LarCMt H160A, node_type: PERTURBATION}
+  - {node_id: h226a, label: Coexpression with full LarCMt H226A, node_type: PERTURBATION}
+  - {node_id: lara-output, label: Purified LarALp relative D-lactate output versus WT LarC coexpression, node_type: PHENOTYPE}
+  edges:
+  - edge_id: h53a-output
+    subject: h53a
+    predicate: decreases
+    object: lara-output
+    mechanism: H53A coexpression gives about60% WT downstream output; no direct histidine-metal coordination is measured.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: substantial loss of LarA, explanation: 'Original Figure2B H53A bar, Methods and TableS1 establish the coexpression-to-purified-LarA comparison.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: h72a-output
+    subject: h72a
+    predicate: increases
+    object: lara-output
+    mechanism: H72A has an approximately138% WT plotted reporter signal. This is an indirect gain in this assay, not proof that His72 normally inhibits catalysis or nickel binding.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: Relative D-lactate (%), explanation: 'Visually inspected Figure2B shows H72A above WT with the reported significance mark; the prose only exempts it from the loss-of-activity group.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: h108a-output
+    subject: h108a
+    predicate: decreases
+    object: lara-output
+    mechanism: H108A coexpression yields below10% WT reporter output; active-site chemistry versus assembly or abundance effects remains unresolved.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: substantial loss of LarA, explanation: 'Figure2B H108A and the corresponding Results support a strong decrease in downstream LarA output.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: h116a-output
+    subject: h116a
+    predicate: decreases
+    object: lara-output
+    mechanism: H116A coexpression gives roughly60% WT reporter output; the result is not a direct nickel-occupancy measurement.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: substantial loss of LarA, explanation: 'Figure2B H116A and Results describe a moderate downstream activity decrease.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: h118a-output
+    subject: h118a
+    predicate: decreases
+    object: lara-output
+    mechanism: H118A coexpression yields below10% WT reporter output, without resolving the intervening molecular defect.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: substantial loss of LarA, explanation: 'Figure2B H118A original bar and Results support the decrease, with three technical assay replicates.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: h160a-output
+    subject: h160a
+    predicate: decreases
+    object: lara-output
+    mechanism: H160A coexpression yields below10% WT reporter output; nickel binding is a candidate explanation, not an observed edge.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: substantial loss of LarA, explanation: 'Figure2B H160A and Results support the downstream activity decrease but report no resolved nickel density.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: h226a-output
+    subject: h226a
+    predicate: decreases
+    object: lara-output
+    mechanism: H226A coexpression gives about60% WT reporter output. The repeated Figure3D presentation is not a second independent causal observation here.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: substantial loss of LarA, explanation: 'Figure2B H226A, corresponding Results and Figure3D repeat are deduplicated into this one scoped edge.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+- graph_id: moorella-pocket-cleft-variant-reporters-2026
+  title: Pocket and cleft substitutions change the coexpressed LarA reporter
+  scope: Separately tested full-length LarCMt variants coexpressed with LarALp,LarBLp and LarELp; these are changes to a downstream product readout, not direct isolated-residue reactions.
+  context: Wolfe2026 Figure3D and Methods; E. coli BL21(DE3) coexpression with1mM NiCl2, Strep-purified/desalted LarALp1pmol, HEPES100mM pH7,35C and commercial D-lactate assay. The5-400mM L-lactate and1-12min Methods ranges do not identify one fixed recipe for each bar. n3 technical replicates.
+  family_mapping: Q2RFJ5 v1/Moth_2512,396aa,PF01969 4-383 spans the LarC1 and LarC2 structural regions. Current residue identities match; complete historical mutant sequences remain unverified. R71 is not an acidic residue despite the source's prose grouping.
+  taxon: NCBITaxon:264732
+  scope_status: PHENOTYPIC
+  limitations: No direct intermediate-routing, binding-energy or carbanion mechanism is measured. Mutant expression, folding, assembly and occupancy remain alternatives. H53A/H226A are retained only in the histidine graph. E243A/E300A/R323A retain substantial activity but show small plotted changes; the source full-activity wording is not silently converted to no effect. TableS1 variant counts and primer coverage are incomplete.
+  nodes:
+  - {node_id: d15a, label: Coexpression with full LarCMt D15A, node_type: PERTURBATION}
+  - {node_id: r71a, label: Coexpression with full LarCMt R71A, node_type: PERTURBATION}
+  - {node_id: e104a, label: Coexpression with full LarCMt E104A, node_type: PERTURBATION}
+  - {node_id: e119a, label: Coexpression with full LarCMt E119A, node_type: PERTURBATION}
+  - {node_id: d124a, label: Coexpression with full LarCMt D124A, node_type: PERTURBATION}
+  - {node_id: d128a, label: Coexpression with full LarCMt D128A, node_type: PERTURBATION}
+  - {node_id: e187a, label: Coexpression with full LarCMt E187A, node_type: PERTURBATION}
+  - {node_id: y180a, label: Coexpression with full LarCMt Y180A, node_type: PERTURBATION}
+  - {node_id: n238a, label: Coexpression with full LarCMt N238A, node_type: PERTURBATION}
+  - {node_id: q241a, label: Coexpression with full LarCMt Q241A, node_type: PERTURBATION}
+  - {node_id: q325a, label: Coexpression with full LarCMt Q325A, node_type: PERTURBATION}
+  - {node_id: e243a, label: Coexpression with full LarCMt E243A, node_type: PERTURBATION}
+  - {node_id: e300a, label: Coexpression with full LarCMt E300A, node_type: PERTURBATION}
+  - {node_id: r323a, label: Coexpression with full LarCMt R323A, node_type: PERTURBATION}
+  - {node_id: reporter, label: Purified LarALp relative D-lactate output versus WT LarC coexpression, node_type: PHENOTYPE}
+  edges:
+  - edge_id: d15a-output
+    subject: d15a
+    predicate: decreases
+    object: reporter
+    mechanism: D15A coexpression strongly lowers the downstream reporter; Asp15 chemistry is not directly resolved.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: markedly reduced activity, explanation: 'Figure3D D15A bar and corresponding pocket-variant Results, with coexpression Methods.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: r71a-output
+    subject: r71a
+    predicate: decreases
+    object: reporter
+    mechanism: R71A coexpression reduces reporter output; it is not evidence for an acidic side chain or a specific Arg-mediated chemical step.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: markedly reduced activity, explanation: 'Figure3D R71A shows the reduction; the basic residue is retained accurately despite its prose grouping.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: e104a-output
+    subject: e104a
+    predicate: decreases
+    object: reporter
+    mechanism: E104A lowers the downstream reporter; a covalent Glu104-substrate adduct is proposed separately and is not observed by this assay.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: markedly reduced activity, explanation: 'Figure3D E104A and Results support the reporter reduction, distinct from Figure4D hypothetical chemistry.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: e119a-output
+    subject: e119a
+    predicate: decreases
+    object: reporter
+    mechanism: E119A coexpression reduces the downstream reporter without isolating the molecular cause.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: markedly reduced activity, explanation: 'Original Figure3D E119A and the full-protein coexpression Methods.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: d124a-output
+    subject: d124a
+    predicate: decreases
+    object: reporter
+    mechanism: D124A coexpression reduces the reporter; effects on structure or biosynthetic assembly are not excluded.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: markedly reduced activity, explanation: 'Figure3D D124A and pocket-variant Results support this direction only for the reported assay.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: d128a-output
+    subject: d128a
+    predicate: decreases
+    object: reporter
+    mechanism: D128A coexpression lowers reporter output, not a directly observed Asp-mediated nickel insertion step.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: markedly reduced activity, explanation: 'Original Figure3D D128A, corresponding Results and Methods.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: e187a-output
+    subject: e187a
+    predicate: decreases
+    object: reporter
+    mechanism: E187A coexpression lowers reporter output; the assay does not assign a direct catalytic role to Glu187.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: markedly reduced activity, explanation: 'Original Figure3D E187A and pocket-variant Results.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: y180a-output
+    subject: y180a
+    predicate: decreases
+    object: reporter
+    mechanism: Y180A coexpression gives below20% WT reporter output, without directly demonstrating loss of intermediate passage through the cleft.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: Relative D-lactate (%), explanation: 'Figure3D Y180A and cleft Results separate the observed reporter effect from the proposed ligand-routing model.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: n238a-output
+    subject: n238a
+    predicate: decreases
+    object: reporter
+    mechanism: N238A coexpression gives below20% WT reporter output; its influence on linker conformation or protein abundance is not distinguished.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: Relative D-lactate (%), explanation: 'Figure3D N238A and Results, with technical-replicate and clone limits retained.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: q241a-output
+    subject: q241a
+    predicate: decreases
+    object: reporter
+    mechanism: Q241A coexpression gives below20% WT reporter output, not direct proof of Gln-mediated intermediate binding or transfer.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: Relative D-lactate (%), explanation: 'Figure3D Q241A bar and Results support a downstream reduction while exact complete plasmid verification remains open.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: q325a-output
+    subject: q325a
+    predicate: decreases
+    object: reporter
+    mechanism: Q325A coexpression moderately lowers reporter output, approximately65% in the plotted comparison; no essentiality claim follows.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: Relative D-lactate (%), explanation: 'Original Figure3D Q325A and Results show a moderate reporter decrease, not complete inactivity.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: e243a-output
+    subject: e243a
+    predicate: increases
+    object: reporter
+    mechanism: E243A is plotted near130% WT despite prose describing retained full activity. The scoped reporter increase does not establish normal Glu243 inhibition of LarC.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: Relative D-lactate (%), explanation: 'Figure3D E243A original bar and significance mark take precedence over interpreting the full-activity wording as exact equality; the wording difference is retained.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: e300a-output
+    subject: e300a
+    predicate: decreases
+    object: reporter
+    mechanism: E300A is plotted near90% WT with a small decrease while retaining substantial activity. This is not a severe catalytic defect or proof that Glu300 is essential.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: Relative D-lactate (%), explanation: 'Original Figure3D E300A has a small decrease and single-star mark; source prose says full activity, retained as a wording/quantitation limit.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: r323a-output
+    subject: r323a
+    predicate: increases
+    object: reporter
+    mechanism: R323A is plotted near110% WT with a small reporter increase; no direct inhibitory role for native Arg323 is asserted.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: Relative D-lactate (%), explanation: 'Original Figure3D R323A has a modest increase and single-star mark while source prose describes retained full activity.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+- graph_id: moorella-linker-construct-reporters-2026
+  title: Four author-named linker perturbations reduce downstream LarA output
+  scope: Separate full-length LarCMt linker constructs in the LarALp/LarBLp/LarELp coexpression system; shortened and alternative-linker exact sequences remain conflicted.
+  context: Wolfe2026 Figure4B, Methods and TableS1 PDF pages8/9. WT236-248 is EINSGQLEGEESS. Separate deletion, shortened, nominal rigid EAAAKEAAAK and nominal flexible replacement constructs are compared with WT. Strep-purified LarA is assayed at35C; n3 technical replicates, not independent cultures.
+  family_mapping: Q2RFJ5 v1/Moth_2512,PF01969 4-383 in396aa; the linker lies within this family match. Figure4B shortened EINSEESS has8 residues, whereas the TableS1 primer encodes EINEESS with7. The alternative GGGGSGGGGS label differs from in-frame fragment GGGSGGGGSS. No final sequenced allele is chosen between conflicting descriptions.
+  taxon: NCBITaxon:264732
+  scope_status: PHENOTYPIC
+  limitations: Edges use author-named plotted constructs rather than falsely resolved exact alleles. All effects are downstream coexpression readouts; altered folding, abundance or assembly may contribute. A nominal flexible replacement also loses activity, so generic flexibility is not sufficient. Observed conformations are not a proven ordered catalytic cycle.
+  nodes:
+  - {node_id: deletion, label: Author-named linker-deletion construct, node_type: PERTURBATION}
+  - {node_id: shortened, label: Author-named shortened-linker construct with unresolved7-versus8-residue identity, node_type: PERTURBATION}
+  - {node_id: rigid, label: Author-named rigid-linker replacement construct, node_type: PERTURBATION}
+  - {node_id: alternative, label: Author-named alternative flexible-linker construct with sequence discrepancy, node_type: PERTURBATION}
+  - {node_id: reporter, label: Purified LarALp relative D-lactate output versus WT LarC coexpression, node_type: PHENOTYPE}
+  edges:
+  - edge_id: deletion-output
+    subject: deletion
+    predicate: decreases
+    object: reporter
+    mechanism: The linker-deletion construct gives below10% WT reporter output, without proving that a particular conformational transition is the missing step.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: dramatically reduced enzymatic activity, explanation: 'Original Figure4B deletion bar, Methods and TableS1 deletion primers identify the scoped construct effect.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: shortened-output
+    subject: shortened
+    predicate: decreases
+    object: reporter
+    mechanism: The author-named shortened construct gives below10% WT reporter output. Its exact7-versus8-residue identity is unresolved and not silently selected.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: dramatically reduced enzymatic activity, explanation: 'Figure4B shortened bar supports the readout effect; its displayed EINSEESS conflicts with the TableS1 primer encoding EINEESS and the main-text length7.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: rigid-output
+    subject: rigid
+    predicate: decreases
+    object: reporter
+    mechanism: The author-named rigid replacement gives below10% WT reporter output; rigidity alone is not isolated from sequence or length changes.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: dramatically reduced enzymatic activity, explanation: 'Original Figure4B rigid bar and nominal EAAAKEAAAK replacement, with TableS1 construct context.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: alternative-output
+    subject: alternative
+    predicate: decreases
+    object: reporter
+    mechanism: The nominal flexible alternative gives below10% WT reporter output. This preserves the counterexample to flexibility-alone sufficiency without inventing a reconciled replacement sequence.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: dramatically reduced enzymatic activity, explanation: 'Figure4B alternative bar supports the observation; GGGGSGGGGS text/label differs from TableS1 in-frame GGGSGGGGSS fragment.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+- graph_id: moorella-proposed-intermediate-transfer-2026
+  title: Proposed routing of the CMP-linked intermediate between LarC regions
+  scope: Authors' working model for full-length LarCMt, not directly observed movement of natural substrate or intermediate.
+  context: Wolfe2026 Figure4C and Discussion integrate full-length structures, weak P2TAD analog-associated cleft density, computational P2TCD placement and indirect variant readouts. LarC2, cleft and LarC1 candidate sites remain spatially separated in the observed structures.
+  family_mapping: Q2RFJ5/Moth_2512,PF01969 4-383; LarC1 and LarC2 are structural regions within the full-protein family match. The proposed route is not established across all family members.
+  taxon: NCBITaxon:264732
+  scope_status: HYPOTHETICAL
+  limitations: No natural P2TCD-bound transfer trajectory, resolved nickel site or demonstrated order of the three conformations. Binding of an AMP analog and mutation phenotypes do not observe translocation. Required cofactors and intact assembly are assumed by this candidate model, not independent sufficient causes.
+  nodes:
+  - {node_id: larc2-intermediate, label: Proposed P2TCD state following activation at LarC2, node_type: STATE}
+  - {node_id: cleft-intermediate, label: Proposed transient P2TCD engagement in the interdomain cleft, node_type: STATE}
+  - {node_id: larc1-intermediate, label: Proposed P2TCD repositioning into a LarC1 pocket, node_type: STATE}
+  edges:
+  - edge_id: larc2-to-cleft
+    subject: larc2-intermediate
+    predicate: enables
+    object: cleft-intermediate
+    mechanism: The authors propose transient engagement of the activated intermediate in the cleft as part of transfer between catalytic regions. The direction is a model, not a measured transport event.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: CONTEXTUAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: direct evidence for this mechanism is currently lacking, explanation: 'Figure4C proposed arrows and Discussion explicitly distinguish conformational-transfer speculation from observed structural heterogeneity.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: cleft-to-larc1
+    subject: cleft-intermediate
+    predicate: enables
+    object: larc1-intermediate
+    mechanism: The proposed intermediate proceeds to a LarC1 pocket, possibly the proximal protomer. Neither the identity of that receiving protomer nor the motion is directly established.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: CONTEXTUAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: direct evidence for this mechanism is currently lacking, explanation: 'Figure4C and Discussion propose subsequent pocket engagement while natural-substrate structures and ordered conformational transitions remain future tests.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+- graph_id: moorella-proposed-e104-nickel-chemistry-2026
+  title: Proposed Glu104-assisted activation and nickel-carbon bond formation
+  scope: Hypothetical residue-level chemistry within intact LarCMt under the authors' working model, not a reaction resolved by alanine mutagenesis.
+  context: Wolfe2026 Figure4D and Discussion propose a Glu104-assisted substrate adduct/deprotonation and nearby histidine-associated nickel. The natural intermediate pose is predicted and nickel was not discerned in the cryo-EM structures.
+  family_mapping: E104 is the verified residue in Q2RFJ5 v1/Moth_2512 with PF01969 4-383; homologous residue numbering and chemistry are not automatically transferred to F9UST1 or other members.
+  taxon: NCBITaxon:264732
+  scope_status: HYPOTHETICAL
+  limitations: No observed Glu104 adduct, carbanion, nickel coordination or elementary rate. Hydrolysis timing remains unresolved. Nodes include the proposed substrate and metal context so that a single residue or metal ion is not presented as independently sufficient.
+  nodes:
+  - {node_id: proposed-pocket-reactants, label: Proposed pocket-associated P2TCD with suitably positioned Glu104 and nickel-bearing assembly, node_type: STATE}
+  - {node_id: proposed-carbanion, label: Proposed Glu104-assisted substrate adduct and carbanion near coordinated nickel, node_type: STATE}
+  - {node_id: proposed-ni-c-product, label: Proposed nickel-carbon-bonded cofactor product after further unresolved steps, node_type: STATE}
+  edges:
+  - edge_id: e104-assisted-activation
+    subject: proposed-pocket-reactants
+    predicate: enables
+    object: proposed-carbanion
+    mechanism: The model proposes Glu104 nucleophilic addition and C4 deprotonation that makes a carbanion available near nickel. The reduced E104A reporter supports functional relevance but does not observe this chemistry.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: CONTEXTUAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: direct evidence for this mechanism is currently lacking, explanation: 'Figure4D and final Discussion propose the chemical sequence and explicitly call for direct evidence; no observed adduct is reported.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
+  - edge_id: proposed-nickel-carbon-formation
+    subject: proposed-carbanion
+    predicate: enables
+    object: proposed-ni-c-product
+    mechanism: The authors propose Ni-C formation followed by Glu104 displacement and sulfur coordination; the edge summarizes this unobserved sequence, without resolving the timing of phosphoanhydride hydrolysis.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: CONTEXTUAL
+    evidence: [{reference: 'PMID:42647608', source_url: 'https://doi.org/10.1126/sciadv.aeh6867', snippet: direct evidence for this mechanism is currently lacking, explanation: 'Figure4D proposed product pathway and Discussion retain unresolved hydrolysis, natural-substrate positioning and nickel coordination.', cache_path: evidence/PF01969/wolfe-2026-perturbations-and-hypotheses.txt, cache_sha256: 5b9faaf8f321d6a64ce2873dd5756cdded11ea2ef57bc062079e03b2403b0291}]
