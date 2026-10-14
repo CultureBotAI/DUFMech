@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01883
+  path: data/families/PF01883.yaml
+session:
+  id: 2026-10-11T044840Z-codex-02b3e2
+  timestamp: '2026-10-11T04:48:40Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped SufT causal graph scientific review
+  details: Reviewed the normalized AcnA activity edge against the primary Figure 3C
+    image, methods, abundance controls, complementation and exact reference-member
+    mapping. Saved partial scientific self-review 20261011T045001Z-pf01883-suft-causal-graph,
+    with the family context-coverage finding open. Status remains IN_PROGRESS; no
+    direct cluster-transfer mechanism, family-wide completion or publication is claimed.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T045001Z-pf01883-suft-causal-graph/review.yaml

@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01863
+  path: data/families/PF01863.yaml
+session:
+  id: 2026-10-11T163651Z-codex-d124ff
+  timestamp: '2026-10-11T16:36:51Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of PF01863 scoped effects and latency
+    hypotheses
+  details: 'Saved native structured review of exact current projection: three observed
+    preparation effects and two hypothetical structural latency edges, with explicit
+    reference-versus-clone identity limits, K2V/L2V discrepancy, out-of-domain tails,
+    unverified YgjP methods, failed activation, B80 identification inconsistencies
+    and remote-homology exclusions. Native overlay/projection validation passed. NEEDS_FOLLOWUP
+    and IN_PROGRESS remain appropriate; no independent endorsement, full-family completion
+    or publication is claimed.'
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T163659Z-pf01863-ygjp-products-thermal-effects-and-latency-hypotheses/review.yaml

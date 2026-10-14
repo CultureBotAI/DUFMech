@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01549
+  path: curation/families/PF01549.yaml
+session:
+  id: 2026-10-11T112157Z-codex-01e710
+  timestamp: '2026-10-11T11:21:57Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curated recombinant mature ShK inhibition of mouse Kv1.3 and Kv1.1 currents.
+  details: Added two separate observed functional-assay graphs from primary full text
+    and Figure 6 captions. Distinguished recombinant from synthetic peptide, current-inhibition
+    midpoint from binding affinity, and curated/integrated family association from
+    an absent current Pfam hit. Images and raw data remain uninspected; no residue-contact
+    or family-wide transfer and no REVIEWED promotion.

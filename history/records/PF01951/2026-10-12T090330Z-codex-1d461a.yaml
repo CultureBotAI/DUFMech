@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01951
+  path: data/families/PF01951.yaml
+session:
+  id: 2026-10-12T090330Z-codex-1d461a
+  timestamp: '2026-10-12T09:03:30Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of Archease causal graphs
+  details: 'Same-agent review of nine graphs and seventeen observed edges: nine direct
+    biochemical effects and eight molecularly unresolved mutant/cellular effects.
+    Verified exact human 12-residue offset and Ph domain mapping; inspected primary
+    human, archaeal and U2OS methods and retained assay figures. Native projection
+    validates and equals the overlay. Report is NEEDS_FOLLOWUP/pass_with_limitations,
+    not independent endorsement or full family completion. Remaining Thermus identity,
+    methyltransferase support, original human/fly contexts and earlier family follow-ups
+    remain open.'
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T090304Z-pf01951-archease-scoped-activation-and-rna-processing/review.yaml

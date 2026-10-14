@@ -96,6 +96,13 @@ def test_qc_full_oak_gate_requires_explicit_isolated_runtime(monkeypatch, tmp_pa
     assert not list(tmp_path.iterdir())
 
 
+def test_qc_checks_retained_causal_inventory():
+    command = adapter_command("dufmech.causal_graphs")
+    assert command.command[-1] == "--check"
+    names = [item.name for item in COMMANDS]
+    assert names.index("family records and schema") < names.index(command.name)
+
+
 def test_adapter_writer_declarations_match_real_helpers():
     rows, findings = source_governance.writer_inventory(ROOT)
     assert not [finding for finding in findings if finding.severity == "error"]

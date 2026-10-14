@@ -4,7 +4,7 @@ name: Domain of unknown function (DUF6647)
 short_name: DUF6647
 seed_status: UNKNOWN_CANDIDATE
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF20352
 counters:
   proteins: 187
@@ -25,3 +25,48 @@ description: This family of proteins is functionally uncharacterised. This famil
   in bacteria. Proteins in this family are typically between 158 and 180 amino acids in length. Proteins
   in this family have a metzincin-like fold and are most closely related to the structure of the YbeY
   endoribonuclease proteins.
+curation_history: history/records/PF20352
+discussions:
+- discussion_id: duf6647-directed-effect-evidence
+  prompt: Establish a member-specific biological effect or substrate reaction before adding a DUF6647
+    causal graph.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The inspected primary study supports a computational relationship to metallopeptidase families,
+    not a directed biological effect. YbeY-like structure does not establish RNA cleavage, and a mini-zincin
+    analogy does not identify a protein substrate or metal-dependent catalytic step.
+  evidence:
+  - reference: PMID:39399373
+    supports: PARTIAL
+    evidence_source: full_text
+    explanation: Methods, Section 3.2.1 and visually inspected Figure 11A provide embedding similarity,
+      motif and model-superposition evidence. These are not experiments measuring DUF6647 substrate cleavage
+      or a perturbation phenotype.
+  - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A2Z2P7G5/entry/pfam/PF20352/
+    supports: PARTIAL
+    evidence_source: database
+    explanation: The modeled Granulosicoccus antarcticus IMCC3135 protein is A0A2Z2P7G5, sequence version
+      1, 167 residues, PF20352 at 31-143. This validates model identity, not experimental function.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: The Figure 11A caption says DUF4157, but its accession and the image label support PF20352 DUF6647.
+    Preserve this discrepancy without silently changing the paper or frozen family metadata. Minimal primary
+    and identity extracts are retained under evidence/PF20352. The bounded family/member search is not
+    an exhaustive absence claim; no dummy or hidden graph is added.
+curation_events:
+- timestamp: '2026-10-11T05:52:06Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Retain DUF6647 computational evidence and causal-graph prerequisite
+  history_record: history/records/PF20352/2026-10-11T055206Z-codex-5a2681.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T05:55:42Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Review DUF6647 computational evidence and graphless disposition
+  history_record: history/records/PF20352/2026-10-11T055542Z-codex-1015a3.yaml
+  event_index: 0
+  llm_assisted: true

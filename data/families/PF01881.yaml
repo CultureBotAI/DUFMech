@@ -4,7 +4,7 @@ name: CRISPR associated protein Cas6, C-terminal
 short_name: Cas_Cas6_C
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01881
 counters:
   proteins: 1831
@@ -36,3 +36,566 @@ description: 'This group of families is one of several protein families that are
   generates functional CRISPR-derived RNAs by site-specific cleavage of repeat sequences in precursor
   transcripts. The structure of Cas6 [[cite:PUB00098896]] showed it adopts a tandem ferredoxin/RRM fold.
   This entry represents the C-terminal domain.'
+curation_history: history/records/PF01881
+discussions:
+- discussion_id: cas6-domain-residue-and-protocol-limits
+  prompt: Resolve individual C-terminal contributions and the exact assay recipes.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: PF01881 is121-237, whereas Y31/H46/K52 lie in the N-terminal domain. The C-terminal glycine-loop
+    intervention changes four residues together, and the2011 DTT concentration differs100-fold from2008.
+  evidence:
+  - reference: PMID:20884784
+    supports: PARTIAL
+    evidence_source: primary_mutant_assays_and_domain_mapping
+    explanation: Original Figures3/4 and Tables1/2 show whole-protein mutant effects and retained binding;
+      they do not assign C-terminal catalytic residues or exact chemical roles.
+  - reference: PMID:21300293
+    supports: PARTIAL
+    evidence_source: primary_structure_and_original_mutant_figures
+    explanation: Figure2C tests a joint four-glycine mutant; K188/K190/R191 contacts are structural observations,
+      not causal substitution tests. Missing RNA coordinates leave the path hypothetical.
+  notes: Test individual glycines with expression/folding/binding controls; resolve printed75 versus0.75
+    mM DTT,2011 incubation duration and Figure2C WT dose. Inspect missing original figures and supplements.
+    The2010 synthetic oligo and transcribed template must remain distinct, and K52A residual output must
+    not become a zero-activity claim.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+- discussion_id: cas6-family-and-cellular-transfer
+  prompt: Extend exact-member coverage without turning association or a rename into a universal mechanism.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: PF1131 purified assays do not establish PF0393 paralog activity, mature crRNA production
+    or cellular antiviral effects across1831 frozen family proteins. The broad imported description also
+    mentions distinct Cas5/Cas3 systems.
+  evidence:
+  - reference: PMID:19141480
+    supports: PARTIAL
+    evidence_source: primary_purified_rna_processing
+    explanation: Figure1C establishes repeat cleavage, not final crRNA maturation or resistance in cells.
+      Figure7 supports cleavage without added magnesium and in EDTA under the tested assay.
+  - reference: PMID:20884784
+    supports: PARTIAL
+    evidence_source: primary_immunoprecipitation_and_northern
+    explanation: Figure5 immune resin carries cleavage activity and Cas6 associates with intermediates;
+      coIP does not measure direct retention, stability or the later trimming reaction.
+  - reference: PMID:21300293
+    supports: PARTIAL
+    evidence_source: primary_substrate_variants
+    explanation: Smaller linker edits retain cleavage and A23U/deoxy variants redirect its position. The2011
+      Results revise the earlier nt9-12 interpretation while preserving its underlying assays.
+  notes: PF0393/Q8U3R3/3UFC is a distinct paralog; PMID22447673 metadata has been checked but primary
+    functional data remain uninspected. Investigate other archaeal members and cellular processing with
+    exact PF01881 mapping, including positive and negative contexts. No negative edge is adopted from
+    a secondary noncatalytic label. Coverage remains partial and IN_PROGRESS.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+causal_graphs:
+- graph_id: pfu-cas6-repeat-cleavage
+  title: Purified Pfu Cas6 produces CRISPR-repeat cleavage products
+  scope: Carte2008 Figure1C, repeat-only and repeat-guide-repeat substrates tested separately.
+  context: 500 nM N-terminal His6 PF1131,50 fmol RNA in20 ul,20 mM HEPES pH7,250 mM KCl,0.75 mM DTT,1.5
+    mM MgCl2,5 ug E. coli tRNA,10% glycerol,70 C30 min; denaturing PAGE after deproteinization.
+  family_mapping: P. furiosus DSM3638 PF1131/Q8U1S4 sequence version1,264 aa,equals AAL81255.1 and WP_011012271.1.
+    PF01881 maps121-237; N-terminal PF21350 maps17-117. Intact His6 protein, not isolated PF01881.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:186497
+  limitations: Figure3A separately maps the synthetic-repeat cut after A22; uniformly transcribed substrates
+    can contain extra bases. Guide-containing products are processing intermediates, not mature crRNAs.
+    No cellular antiviral effect or family-wide sufficiency is demonstrated.
+  nodes:
+  - node_id: cas6-plus-rna
+    label: Add purified PF1131 to the specified repeat-containing RNA reaction
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8U1S4
+  - node_id: cleavage-products
+    label: Repeat-containing RNA cleavage products
+    node_type: STATE
+  edges:
+  - edge_id: cas6-produces-products
+    subject: cas6-plus-rna
+    predicate: produces
+    object: cleavage-products
+    mechanism: Cleavage products appear with the purified protein and are absent from matched no-protein
+      reactions for each substrate. The assay establishes whole-protein endoribonuclease activity, without
+      assigning isolated-domain sufficiency or later trimming.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19141480
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2607076/
+      snippet: Cas6 is an endoribonuclease
+      explanation: Original Figures1C and3A with protein and reaction Methods; substrate-labeling differences
+        and no-protein controls are retained.
+      cache_path: evidence/PF01881/carte-2008-cleavage.txt
+      cache_sha256: 9d6347acce6bbe0480c81ef28719967e9fd05e13715fb13e84beba43a7aebe3d
+- graph_id: pfu-cas6-n-terminal-substitutions
+  title: N-terminal substitutions reduce whole-protein Cas6 cleavage
+  scope: Carte2010 Figures3/4, three separately tested single substitutions outside PF01881.
+  context: WT or single mutant10,50,500 nM;50 fmol uniformly labeled T7 repeat RNA,20 mM HEPES pH7,500
+    mM KCl,20 mM EDTA,65-70 C30 min. Cleavage15% denaturing PAGE; separate binding doses1,50,200,500 nM
+    and8% native PAGE.
+  family_mapping: PF1131/Q8U1S4/AAL81255.1,PF01881 121-237. Y31/H46/K52 are outside PF01881 in PF21350
+    17-117. N-terminal His6 pET24d proteins expressed in E. coli; mutant DNA sequencing reported.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:186497
+  limitations: These are not PF01881 catalytic residues. SDS-PAGE purity is not a folding control. All
+    variants retain shifted RNP, with somewhat reduced K52A binding; WT can bind cleavage product. T7
+    template oligos7+8 differ from synthetic RNA oligo9. Endpoint losses do not assign acid/base chemistry.
+  nodes:
+  - node_id: y31a
+    label: Substitute Y31A in intact PF1131
+    node_type: PERTURBATION
+  - node_id: h46a
+    label: Substitute H46A in intact PF1131
+    node_type: PERTURBATION
+  - node_id: k52a
+    label: Substitute K52A in intact PF1131
+    node_type: PERTURBATION
+  - node_id: product-yield
+    label: Repeat-RNA cleavage product yield
+    node_type: ACTIVITY
+  edges:
+  - edge_id: y31a-decreases-cleavage
+    subject: y31a
+    predicate: decreases
+    object: product-yield
+    mechanism: Y31A eliminates detectable cleavage over the tested enzyme range while retaining a stable
+      RNA-containing complex. The result does not resolve a chemical role or exclude all conformational
+      effects.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20884784
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2957057/
+      snippet: RNA binding and cleavage reactions
+      explanation: Original Figure3A Y31A lanes, Figure3B purity, Figure4 binding and Tables1/2; comparison
+        is with WT in the2010 EDTA/high-salt assay.
+      cache_path: evidence/PF01881/carte-2010-mutants-footprints.txt
+      cache_sha256: 4dc975f398e2be0bdce71c0c4ea75487d99e38d32e4b1a4bc4c6aaad3703c51d
+  - edge_id: h46a-decreases-cleavage
+    subject: h46a
+    predicate: decreases
+    object: product-yield
+    mechanism: H46A eliminates detectable cleavage in this assay while retaining shifted RNP. Loss of
+      the endpoint is not direct observation of proton donation by H46.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20884784
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2957057/
+      snippet: RNA binding and cleavage reactions
+      explanation: Original Figures3/4 and mutant Methods; this substitution is separately assayed and
+        outside the curated C-terminal domain.
+      cache_path: evidence/PF01881/carte-2010-mutants-footprints.txt
+      cache_sha256: 4dc975f398e2be0bdce71c0c4ea75487d99e38d32e4b1a4bc4c6aaad3703c51d
+  - edge_id: k52a-decreases-cleavage
+    subject: k52a
+    predicate: decreases
+    object: product-yield
+    mechanism: K52A lowers cleavage yield, with residual output and an approximately40-fold endpoint reduction
+      at500 nM reported by the authors. This is not a40-fold kcat change or a complete loss of binding.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20884784
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2957057/
+      snippet: RNA binding and cleavage reactions
+      explanation: Original Figure3A residual K52A bands, Figure4 somewhat reduced binding and Results
+        quantitation; no fitted kinetic rate is adopted.
+      cache_path: evidence/PF01881/carte-2010-mutants-footprints.txt
+      cache_sha256: 4dc975f398e2be0bdce71c0c4ea75487d99e38d32e4b1a4bc4c6aaad3703c51d
+- graph_id: pfu-cas6-c-terminal-glycine-loop
+  title: Joint C-terminal glycine-loop substitutions reduce Cas6 cleavage
+  scope: Wang2011 Figure2C, one four-site mutant in full-length Cas6.
+  context: G223A/G225A/G231A/G233A mutant0.5,1,10 uM versus WT positive lane. Standard reaction uses50
+    fmol RNA/20 ul,20 mM HEPES pH7,250 mM KCl,1.5 mM MgCl2,5 ug E. coli tRNA,10% glycerol,70 C. Printed
+    DTT75 mM differs from2008 0.75 mM; duration and Figure2C-specific WT dose remain unresolved.
+  family_mapping: PF1131/Q8U1S4/AAL81255.1,PF01881 121-237; G223/G225/G231/G233 all lie inside PF01881.
+    This is a joint mutant of intact His-tagged protein, not four independently tested glycines or a domain-only
+    preparation.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:186497
+  limitations: Weak RNA binding remains. No independent folding/stability assay is shown for the joint
+    mutant. Loss of cleavage does not prove a glycine-specific chemical catalytic role or an observed
+    RNA trajectory.
+  nodes:
+  - node_id: four-glycine-mutant
+    label: Jointly substitute G223A/G225A/G231A/G233A in PF1131
+    node_type: PERTURBATION
+  - node_id: cleavage-signal
+    label: Cas6-dependent repeat-RNA cleavage signal
+    node_type: ACTIVITY
+  edges:
+  - edge_id: four-glycine-mutant-decreases-cleavage
+    subject: four-glycine-mutant
+    predicate: decreases
+    object: cleavage-signal
+    mechanism: The four-site mutant has no detectable cleavage at the tested doses relative to the WT
+      positive lane. Retained weak binding separates complete loss of detectable binding from the cleavage
+      defect, without identifying which glycine or structural property matters.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21300293
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3154685/
+      snippet: RNA-binding and cleavage reactions
+      explanation: Original Figure2C cleavage and binding panels, mutant description and Methods; four
+        substitutions are one intervention and assay-recipe uncertainties remain visible.
+      cache_path: evidence/PF01881/wang-2011-rna-loop.txt
+      cache_sha256: e90cc6af9ddcbefccd0efbd7ec7c947313dd9f29cb0e668adc4b04449dc6c7ba
+- graph_id: pfu-cas6-rna-protection
+  title: Cas6 occupancy protects the repeat recognition region from probes
+  scope: Carte2010 Figure2, separate Pb(II) and RNase A footprinting reactions.
+  context: 0.1 pmol end-labeled synthetic repeat,0.001-1 uM Cas6,20 mM HEPES pH7/500 mM KCl,65-70 C30
+    min preincubation. Then15 mM Pb(II),room temperature10 min,or10 pg RNase A,37 C15 min; denaturing
+    PAGE after deproteinization.
+  family_mapping: Intact PF1131/Q8U1S4,PF01881 121-237 plus PF21350 17-117. The footprint localizes protected
+    RNA, not independent C-domain sufficiency or a causal role for individual contacting residues.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:186497
+  limitations: Cas6's own cleavage occurs during the preparation. Probe protection does not establish
+    a physiological RNA-stability mechanism. No protection detected elsewhere does not exclude contacts;2011
+    structure resolves RNA2-10.
+  nodes:
+  - node_id: cas6-preincubation
+    label: Preincubate repeat RNA with increasing Cas6
+    node_type: PERTURBATION
+  - node_id: lead-fragments
+    label: Pb-induced cleavage signals across RNA nucleotides2-8
+    node_type: STATE
+  - node_id: rnase-a-fragments
+    label: RNase A cleavage signals at U3/C5/U8
+    node_type: STATE
+  edges:
+  - edge_id: cas6-decreases-lead-probe-cleavage
+    subject: cas6-preincubation
+    predicate: decreases
+    object: lead-fragments
+    mechanism: Added Cas6 reduces the mapped Pb-sensitive bands in the recognition region compared with
+      the protein-free probe reaction. This is a direct reconstituted protection readout, not a claim
+      that Cas6 chemically inhibits lead.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20884784
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2957057/
+      snippet: RNA binding and cleavage reactions
+      explanation: Original Figure2A/B right panels and2C map, footprinting Methods and free-RNA controls;
+        Pb quench uses20 mM EDTA after the probe incubation.
+      cache_path: evidence/PF01881/carte-2010-mutants-footprints.txt
+      cache_sha256: 4dc975f398e2be0bdce71c0c4ea75487d99e38d32e4b1a4bc4c6aaad3703c51d
+  - edge_id: cas6-decreases-rnase-a-probe-cleavage
+    subject: cas6-preincubation
+    predicate: decreases
+    object: rnase-a-fragments
+    mechanism: Cas6 lowers RNase A-generated band intensities at U3,C5,U8 under the separately specified
+      probe conditions. The graph does not connect footprint protection to an unmeasured cellular half-life.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20884784
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2957057/
+      snippet: RNA binding and cleavage reactions
+      explanation: Original Figure2A/B left panels and2C map plus footprinting Methods; RNase A and Pb
+        assays are separate interventions, not sequential steps.
+      cache_path: evidence/PF01881/carte-2010-mutants-footprints.txt
+      cache_sha256: 4dc975f398e2be0bdce71c0c4ea75487d99e38d32e4b1a4bc4c6aaad3703c51d
+- graph_id: pfu-cas6-recognition-sequence-variants
+  title: Repeat recognition-region substitutions reduce binding and cleavage
+  scope: Wang2011 Figure5A/B variants G and H, each tested separately against WT repeat A.
+  context: 1 uM Cas6,50 fmol5'-labeled RNA in20 ul,20 mM HEPES pH7,250 mM KCl,1.5 mM MgCl2,5 ug E. coli
+    tRNA,10% glycerol,70 C;10% native and15% denaturing PAGE. Printed DTT75 mM and unstated incubation
+    duration remain unresolved.
+  family_mapping: PF1131/Q8U1S4,PF01881 121-237. Perturbations are in synthetic RNA, not protein residues.
+    WT RNA is GUUACAAUAAGACUAAAAUAGAAUUGAAAG; variant G changes U2/U3 to AA, variant H changes C5/A6/A7
+    to GUU.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:186497
+  limitations: Multi-base changes do not establish the necessity of each nucleotide independently. Binding
+    and cleavage are parallel measured endpoints, not an observed binding-to-cleavage causal relay; sequence
+    and local folding can both change.
+  nodes:
+  - node_id: u2-u3-aa
+    label: Change RNA U2/U3 to AA
+    node_type: PERTURBATION
+  - node_id: c5-a6-a7-guu
+    label: Change RNA C5/A6/A7 to GUU
+    node_type: PERTURBATION
+  - node_id: shifted-rnp
+    label: Shifted RNA-protein complex signal
+    node_type: STATE
+  - node_id: cleaved-rna
+    label: RNA cleavage product signal
+    node_type: STATE
+  edges:
+  - edge_id: u2-u3-change-decreases-binding
+    subject: u2-u3-aa
+    predicate: decreases
+    object: shifted-rnp
+    mechanism: Variant G has no detectable shifted complex in the shown protein-containing reaction, unlike
+      WT. This is a combined two-base sequence intervention, not two separately resolved recognition contacts.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21300293
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3154685/
+      snippet: RNA-binding and cleavage reactions
+      explanation: Original Figure5A G sequence and5B lower G lanes compared with WT A, including protein-minus
+        controls.
+      cache_path: evidence/PF01881/wang-2011-rna-loop.txt
+      cache_sha256: e90cc6af9ddcbefccd0efbd7ec7c947313dd9f29cb0e668adc4b04449dc6c7ba
+  - edge_id: u2-u3-change-decreases-cleavage
+    subject: u2-u3-aa
+    predicate: decreases
+    object: cleaved-rna
+    mechanism: Variant G also lacks detectable cleavage product in the corresponding denaturing gel. The
+      endpoint alone does not separate deficient recognition from a subsequent catalytic effect.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21300293
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3154685/
+      snippet: RNA-binding and cleavage reactions
+      explanation: Original Figure5A G and5B upper cleavage panel; measured separately from the native
+        binding readout.
+      cache_path: evidence/PF01881/wang-2011-rna-loop.txt
+      cache_sha256: e90cc6af9ddcbefccd0efbd7ec7c947313dd9f29cb0e668adc4b04449dc6c7ba
+  - edge_id: c5-a6-a7-change-decreases-binding
+    subject: c5-a6-a7-guu
+    predicate: decreases
+    object: shifted-rnp
+    mechanism: Variant H loses detectable shifted-complex signal in the shown assay. Three bases change
+      together and individual base contributions remain unresolved.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21300293
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3154685/
+      snippet: RNA-binding and cleavage reactions
+      explanation: Original Figure5A H and5B lower binding panel with matched protein-minus and WT lanes.
+      cache_path: evidence/PF01881/wang-2011-rna-loop.txt
+      cache_sha256: e90cc6af9ddcbefccd0efbd7ec7c947313dd9f29cb0e668adc4b04449dc6c7ba
+  - edge_id: c5-a6-a7-change-decreases-cleavage
+    subject: c5-a6-a7-guu
+    predicate: decreases
+    object: cleaved-rna
+    mechanism: Variant H lacks detectable cleavage product relative to WT A. This does not prove that
+      any one altered base directly participates in chemical catalysis.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21300293
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3154685/
+      snippet: RNA-binding and cleavage reactions
+      explanation: Original Figure5A H and5B upper cleavage panel; no mechanistic arrow is inferred between
+        the separately measured binding and cleavage endpoints.
+      cache_path: evidence/PF01881/wang-2011-rna-loop.txt
+      cache_sha256: e90cc6af9ddcbefccd0efbd7ec7c947313dd9f29cb0e668adc4b04449dc6c7ba
+- graph_id: pfu-cas6-linker-and-distal-rna
+  title: Long linker deletions and distal truncation reduce repeat cleavage
+  scope: Wang2011 Figure5A-C variants D,M,N; each RNA variant assayed separately.
+  context: 1 uM Cas6 and2.5 nM5'-labeled RNA,70 C,2011 buffer with printed75 mM DTT; incubation duration
+    unstated. Native binding and denaturing cleavage readouts use separate gel aliquots.
+  family_mapping: Intact PF1131/Q8U1S4,PF01881 121-237. Variant D removes RNA25-30; M/N remove five/six
+    bases in the intervening linker. These are substrate edits, not PF01881 deletions.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:186497
+  limitations: D retains shown binding; M/N binding is reported without shown data. Smaller two-to-four-base
+    linker deletions and a two-base insertion retain cleavage. The earlier nt9-12 experiment also changed
+    recognition bases A9/A10 and does not establish a universal four-base length threshold.
+  nodes:
+  - node_id: delete25-30
+    label: Remove repeat RNA nucleotides25-30
+    node_type: PERTURBATION
+  - node_id: five-base-linker-deletion
+    label: Use five-base linker deletion RNA M
+    node_type: PERTURBATION
+  - node_id: six-base-linker-deletion
+    label: Use six-base linker deletion RNA N
+    node_type: PERTURBATION
+  - node_id: cleavage-output
+    label: Repeat-RNA cleavage output
+    node_type: ACTIVITY
+  edges:
+  - edge_id: distal-deletion-decreases-cleavage
+    subject: delete25-30
+    predicate: decreases
+    object: cleavage-output
+    mechanism: Variant D has no detectable cleavage despite retained binding. Deleting only27-30 in variant
+      C retains cleavage, implicating U25/G26 or their context without isolating either nucleotide's necessity.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21300293
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3154685/
+      snippet: RNA-binding and cleavage reactions
+      explanation: Original Figure5A sequences and5B C/D cleavage and binding lanes; qualitative plus/minus
+        summary is not a kinetic rate.
+      cache_path: evidence/PF01881/wang-2011-rna-loop.txt
+      cache_sha256: e90cc6af9ddcbefccd0efbd7ec7c947313dd9f29cb0e668adc4b04449dc6c7ba
+  - edge_id: five-base-deletion-decreases-cleavage
+    subject: five-base-linker-deletion
+    predicate: decreases
+    object: cleavage-output
+    mechanism: Variant M loses detectable cleavage compared with WT and shorter linker-deletion controls.
+      Binding retention is an author-reported unshown result, not a newly inspected binding gel.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21300293
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3154685/
+      snippet: RNA-binding and cleavage reactions
+      explanation: Original Figure5A M and5C protein-minus/plus lanes; the revised linker interpretation
+        is in the Results.
+      cache_path: evidence/PF01881/wang-2011-rna-loop.txt
+      cache_sha256: e90cc6af9ddcbefccd0efbd7ec7c947313dd9f29cb0e668adc4b04449dc6c7ba
+  - edge_id: six-base-deletion-decreases-cleavage
+    subject: six-base-linker-deletion
+    predicate: decreases
+    object: cleavage-output
+    mechanism: Variant N likewise loses detectable cleavage, with WT and shorter-deletion reactions retaining
+      product. The result supports a condition-specific substrate constraint, not a universal Cas6 molecular
+      ruler.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21300293
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3154685/
+      snippet: RNA-binding and cleavage reactions
+      explanation: Original Figure5A N and5C matched cleavage lanes; no unobserved binding-to-positioning
+        intermediate is added.
+      cache_path: evidence/PF01881/wang-2011-rna-loop.txt
+      cache_sha256: e90cc6af9ddcbefccd0efbd7ec7c947313dd9f29cb0e668adc4b04449dc6c7ba
+- graph_id: pfu-cas6-rna-cleavage-site-selection
+  title: Substrate base and ribose changes redirect the Cas6 cleavage site
+  scope: Wang2011 Figure5D, WT A and variants P,Q,R with cleavage-site mapping.
+  context: 1 uM Cas6,5'-labeled synthetic repeat in the2011 70 C assay with unresolved printed DTT/time.
+    Denaturing PAGE; recovered WT and A23U products additionally analyzed by MALDI-TOF.
+  family_mapping: Intact PF1131/Q8U1S4,PF01881 121-237. A23U and2'-deoxy substitutions refer to RNA bases/riboses,
+    not protein residues.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:186497
+  limitations: This is altered product-site selection, not a measured change in catalytic rate. A23U+dA22
+    still yields21 nt; deoxy substitution can reroute cleavage rather than eliminate all activity. Site
+    plasticity does not establish the complete wraparound trajectory.
+  nodes:
+  - node_id: a23u
+    label: Change repeat A23 to U in the Cas6 reaction
+    node_type: PERTURBATION
+  - node_id: dg21-on-a23u
+    label: Add2'-deoxy G21 to the A23U repeat
+    node_type: PERTURBATION
+  - node_id: product21
+    label: 21-nt5' cleavage product
+    node_type: STATE
+  - node_id: product22
+    label: 22-nt5' cleavage product
+    node_type: STATE
+  edges:
+  - edge_id: a23u-increases-product21
+    subject: a23u
+    predicate: increases
+    object: product21
+    mechanism: Variant Q shifts the major5' product from22 to21 nt compared with WT A, supported by gel
+      and product-mass analysis. The intervention changes cleavage position in a complete enzyme-substrate
+      reaction.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21300293
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3154685/
+      snippet: RNA-binding and cleavage reactions
+      explanation: Original Figure5A Q and5D gel/MALDI panel; WT22 and A23U21 masses are consistent with
+        cyclic-phosphate products, without claiming kinetic constants.
+      cache_path: evidence/PF01881/wang-2011-rna-loop.txt
+      cache_sha256: e90cc6af9ddcbefccd0efbd7ec7c947313dd9f29cb0e668adc4b04449dc6c7ba
+  - edge_id: dg21-restores-product22
+    subject: dg21-on-a23u
+    predicate: increases
+    object: product22
+    mechanism: In the A23U background, replacing G21's2'-OH with H redirects the detected cleavage back
+      after position22. The A23U+dA22 comparison still cuts after21; the conditional substrate context
+      is essential.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21300293
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3154685/
+      snippet: RNA-binding and cleavage reactions
+      explanation: Original Figure5A P/Q/R sequences and5D gel; no independent deoxy-G21 WT-substrate
+        result or universal loss-of-cleavage rule is inferred.
+      cache_path: evidence/PF01881/wang-2011-rna-loop.txt
+      cache_sha256: e90cc6af9ddcbefccd0efbd7ec7c947313dd9f29cb0e668adc4b04449dc6c7ba
+- graph_id: pfu-cas6-hypothetical-wraparound-alignment
+  title: HYPOTHETICAL RNA wraparound alignment across the Cas6 glycine loop
+  scope: Wang2011 Figure2B/5E model and Results interpretation, not an observed full RNA path.
+  context: RNA-bound structure resolves nucleotides2-10; the cleavage-site segment is disordered. The
+    model combines structural surface geometry, a joint glycine-loop mutant and RNA linker/site perturbations.
+  family_mapping: PF1131/Q8U1S4,PF01881 121-237 contains the tested glycine loop and K188/K190/R191 structural
+    contacts. N-terminal putative catalytic residues Y31/H46/K52 are in PF21350, not PF01881.
+  scope_status: HYPOTHETICAL
+  taxon: NCBITaxon:186497
+  limitations: RNA positioning over this surface is not directly observed. Joint mutant effects can include
+    conformational changes; no single-glycine causal assignment, obligatory dimer or processing order
+    is established. Acid/base roles remain separately unresolved.
+  nodes:
+  - node_id: proposed-wraparound-context
+    label: Proposed RNA recognition plus linker passage over the intact glycine-loop surface
+    node_type: STATE
+  - node_id: proposed-scissile-alignment
+    label: Proposed positioning of the scissile bond near the catalytic region
+    node_type: STATE
+  edges:
+  - edge_id: wraparound-may-enable-alignment
+    subject: proposed-wraparound-context
+    predicate: enables
+    object: proposed-scissile-alignment
+    mechanism: The authors propose that the bound5' recognition segment tethers downstream RNA along the
+      positive surface and across the glycine loop toward the opposite-face cleavage region. This explains
+      several perturbations but does not observe the missing segment or exclude other conformational routes.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21300293
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3154685/
+      snippet: hypothetical path
+      explanation: Original Figure2B dashed path and5E schematic with structural/mutational Results; experimental
+        constraints motivate a model, not an experimentally demonstrated alignment step.
+      cache_path: evidence/PF01881/wang-2011-rna-loop.txt
+      cache_sha256: e90cc6af9ddcbefccd0efbd7ec7c947313dd9f29cb0e668adc4b04449dc6c7ba
+curation_events:
+- timestamp: '2026-10-11T19:41:55Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate PF01881 Cas6 assay-scoped causal graphs
+  history_record: history/records/PF01881/2026-10-11T194155Z-codex-06c2b4.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T19:52:44Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of PF01881 Cas6 causal contexts
+  history_record: history/records/PF01881/2026-10-11T195244Z-codex-639f8b.yaml
+  event_index: 0
+  llm_assisted: true

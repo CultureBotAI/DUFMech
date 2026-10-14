@@ -1,0 +1,72 @@
+Yuda et al. 2017, Mapping the key residues of SufB and SufD essential for
+biosynthesis of iron-sulfur clusters. PMID:28839209; DOI:10.1038/s41598-017-09846-2.
+Accessed 2026-10-11 UTC. Open-access article, CC BY 4.0.
+https://www.nature.com/articles/s41598-017-09846-2
+https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41598-017-09846-2/MediaObjects/41598_2017_9846_MOESM1_ESM.pdf
+Read main Results, Discussion and Methods plus supplemental tables/captions.
+Figure 4 and supplemental Figures S2/S3 were visually inspected. Other figures,
+raw gels, full clone sequences and underlying kinetic measurements were not
+independently analyzed; reading a caption is not image inspection.
+
+Minimal verbatim anchors:
+"no enhancement was observed"
+"modest increase"
+"abolished the sulfur transfer"
+"decidedly less"
+"slightly lower"
+"did not complement"
+"maturation failure"
+
+Curator interpretation and factual assay metadata:
+Purified SufBCD variants come from pGSO164-derived constructs expressed in
+YT2512 (MG1655 delta-sufABCDSE), purified with Phenyl FF, Q XL and Sephacryl S-200.
+SufS is separately purified, and SufE is expressed without His tag in
+HMS174(DE3) from pET21a-sufE. No isolated PF01458 preparation was assayed.
+Supplemental S3 shows similar complex elution and constituent protein bands;
+the authors assign the normal SufB:SufC:SufD ratio of 1:2:1. These controls do
+not resolve subtle folding changes or exact catalytic intermediates.
+
+Figure 4a: 0.5 uM SufS, 2 uM SufE, 2 mM L-cysteine, 2 mM DTT, varying SufBCD;
+25 mM Tris-HCl pH 7.8, 150 mM NaCl, 30 C, 10 min. Methylene-blue detection
+measures released sulfide and the plotted activity is normalized per mg SufS.
+SufB C254A abolishes added-complex stimulation, but basal SufSE output persists;
+Q285A and W287A lower stimulation without eliminating it. Other tested variants,
+including C405A, retain roughly WT stimulation. Each panel has its own plotted
+concentration series and WT comparison; the retained comparisons use 3 uM
+SufBCD, which is present in all three selected panels. Means/SD reflect at least
+three measurements; independent protein preparations are not specified.
+Figure 4b shows SufB variants co-purifying with SufE-His in separately prepared
+cell extracts. The interaction control is not itself a directed catalytic edge.
+
+Figure 4c: 10 uM SufBCD, 0.5 uM each SufS/SufE, 2 mM L-cysteine, 50 mM
+Tris-HCl pH 7.8, 150 mM NaCl; 125 ul, 30 C, 3 h without DTT. Pre-existing
+DTT is removed from protein preparations before the reaction. The complex is
+retained with a 100-kDa ultrafilter, separated from smaller components, and
+normalized by A280 using epsilon 130 mM-1 cm-1. Bound sulfur is released using
+2 mM DTT, then quantified as methylene blue at 670 nm after 20 min development
+and precipitate removal. Reported retained sulfur per complex: WT 4.8 +/- 0.9;
+C254A none detected; C405A 1.0 +/- 0.1; SufD C358A 4.6 +/- 1.0. The detection
+limit and raw measurements are not given. This endpoint does not localize each
+retained sulfur atom, prove a C254-to-C405 transfer trajectory or measure Fe-S
+cluster formation. At least three measurements underpin means/SD.
+
+SufD H360A, supplemental S2: UT109 (MG1655 delta-iscUA-hscBA delta-sufABCDSE)
+harbors pUMV22 Sp-r and the complementary pRK-sufABC-SE/pBBR-sufD pair.
+H360A does not restore WT-SufD-supported plate growth without mevalonate (MVA)
+at 37 C, 24 h on LB. The figure includes WT, vector and other SufD substitutions.
+This is failed complementation in a bypass-dependent background, not universal
+lethality. The general method discusses MVA/glucose supplementation; the
+S2 plate caption does not separately resolve glucose supplementation there.
+The Fdx/protein panels instead use liquid Superbroth with glucose and MVA,
+37 C, early stationary phase. General supplemented medium uses 0.4% glucose
+and 200 uM racemic mevalonolactone. Lysates normalized by cell density are
+analyzed by native PAGE and anti-Fdx immunoblot. H360A has less detected holo-Fdx
+than WT; undetected apo-Fdx does not quantify all cellular Fe-S clusters.
+SDS-PAGE/Western controls show somewhat lower H360A SufD abundance, retained
+as an alternative contribution rather than equal-expression proof.
+
+The proposed internal sulfur tunnel, exact Fe/S ligands, FADH2 mechanism and
+ATP-driven structural sequence are interpretations or other-study hypotheses,
+not observed microsteps added from these experiments. Cellular and purified
+results remain distinct. Other mutants, organisms, proteins and source studies
+remain incompletely curated, so family status stays IN_PROGRESS.

@@ -1,0 +1,36 @@
+PF01944 causal-graph coverage, 2026-10-12 UTC, Codex
+
+One partial family pass, not completed family or corpus coverage. Search
+terms included PF01944, DUF95, SpoIIM, spoIIM, CD1221, CD630_12210, LcyD,
+leucocyclicin Q, Chastanet, Aung, Dembek and Ribis. Primary public full text,
+Methods, database JSON and available figures were inspected as detailed in
+the paired ledgers. Literature/database assertions are not interchangeable.
+
+Before edits, rg --no-ignore --hidden in curation, evidence, history and
+reviews/structured found no PF01944/SpoIIM/spoIIM text matches, excluding
+JSON. Ignored and hidden files were included in those named paths; this is
+not a claim about the whole filesystem. Native baseline: 8296 schema-valid
+records, zero generated differences.
+
+Retain B. subtilis reference mapping versus PY79 assay scope, fusion/promoter
+differences, the Figure 3D Aung strain discrepancy, Chastanet I92T/I82T and
+Abs292/Abs216 discrepancies, and C. difficile's unresolved Pfam mapping.
+Do not equate localization, binding, protein stability and PG chemistry.
+
+Open work: retrieve Chastanet figures and supplement Tables S3/S4, verify
+historical suppressor constructs and remaining Q75R/S76R/K107R alleles;
+review early gene-disruption/engulfment papers and later motility, secondary
+targeting and SpoIIQ-immobilization contexts. PMC3901584 full HTML was
+downloaded but its Results/Methods remain unreviewed. Compound DMP/AH
+perturbations cannot be attributed to M alone. No saved paper is counted
+as reviewed merely because downloading succeeded.
+
+Resolve Q18B81 profile/domain mapping, compare C. difficile culture and heat
+assay contexts, and retrieve raw supplemental contrasts. Review primary
+LcyD Methods and member accessions. PMC5695211 pumilarin genome-mining XML
+was inspected only for headings/references; clustering is not mechanism.
+Archaeal MJ0706/MJ0793 and other bacterial family members remain open.
+Public-access failures, empty API bodies and limited search coverage are
+not negative biological results. All 8296 records and prior open follow-ups
+remain in scope; no publication, independent review or complete family
+characterization is claimed.

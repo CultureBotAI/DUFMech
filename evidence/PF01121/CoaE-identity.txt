@@ -1,0 +1,32 @@
+Identity facts, accessed 2026-10-11; not causal evidence.
+https://rest.uniprot.org/uniprotkb/P0A6I9.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A6I9/entry/pfam/PF01121/
+P0A6I9 COAE_ECOLI, coaE/yacE/b0103/JW0100, E. coli K-12,
+NCBITaxon:83333, 206 aa, sequence version 1, entry version 148,
+MD5 a298a24b75c6cca43bd5aa7079e218e8. UniProt and InterPro sequences
+agree exactly. The modern record cites the 2001 identification paper.
+P0A6I9 Pfam:PF01121 interval: 3-177, inclusive
+The 2001 donor is W3110; BL21(DE3) is the expression host. The clone
+adds an alanine after the start codon for NcoI; measured N-terminal
+ARYIVALTGGIG matches Ala plus native residues 2-12 after initiator removal.
+It is not a native full-sequence identity claim or a His6 preparation.
+
+https://rest.uniprot.org/uniprotkb/P63826.json
+https://rest.uniprot.org/uniparc/UPI0000127CE6.json
+https://rest.uniprot.org/uniprotkb/P9WPA3.json
+https://rest.uniprot.org/uniprotkb/P9WPA2.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P9WPA3/entry/pfam/PF01121/
+The 2011 paper cites P63826, now DEMERGED to P9WPA3 (H37Rv/Rv1631,
+NCBITaxon:83332) and P9WPA2 (CDC1551/MT1667, NCBITaxon:83331).
+Both successor sequences exactly match the archived UPI0000127CE6:
+407 aa, MD5 c87baa6c899e3c0d46d1973a6407a980, sequence version 1.
+P9WPA3 entry version 52; P9WPA2 entry version 49.
+P9WPA3 Pfam:PF01121 interval: 4-178, inclusive
+The protein also contains the separate PF04229/GrpB domain. Checked
+G8/K14/D30/D32/L114/R140 directly within the kinase match. UniProt and
+InterPro P9WPA3 sequences agree exactly. The 2009 paper names Rv1631 but
+does not explicitly identify the genomic donor strain in the inspected
+cloning paragraph. Full-length hexahistidine-tagged protein is assayed,
+not isolated PF01121. Complete experimental clone sequences are not
+available; the published forward-primer sequence has an N-terminal mismatch
+to this reference, retained as an unresolved source discrepancy.

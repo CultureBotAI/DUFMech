@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01941
+  path: data/families/PF01941.yaml
+session:
+  id: 2026-10-12T064422Z-codex-c2a818
+  timestamp: '2026-10-12T06:44:22Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial PF01941 MAT causal-context scientific self-review
+  details: Saved a same-agent scientific review of eight graphs and twelve observed
+    edges with exact current-content digest. Checked protein/domain and deposited
+    double-mutant mapping, primary assays, support/directness, joint substrates, helper
+    enzymes, surrogate-product kinetics, source discrepancies and incomplete member
+    coverage. Native projection validation and overlay equivalence passed; family
+    remains IN_PROGRESS and source/member follow-ups remain open.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T064400Z-pf01941-mat-separated-enzyme-denaturation-and-cascade-contexts/review.yaml

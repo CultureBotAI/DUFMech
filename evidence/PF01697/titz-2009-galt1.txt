@@ -1,0 +1,83 @@
+Titz et al., 2009, GALT-1 biochemical and rescue assessment
+PMID:19858195; doi:10.1074/jbc.M109.058354
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2794738/
+Inspected 2026-10-11 by Codex: primary HTML Methods, Results, Discussion;
+Figures 2-6 visually inspected. This is an analytical digest, not full text.
+Minimal source quotations: "postnuclear supernatant"; "donor specificity";
+"acceptor specificity"; "co-factor dependence"; "rescue of CGL2 sensitivity".
+
+Construct and assay boundary (Methods, expression and transferase assays):
+Full coding cDNA from Bristol N2 was expressed untagged in baculovirus Sf9;
+an N-terminal FLAG version served expression detection and reportedly gave
+similar activity (comparison not shown). Cells incubated 72 h at 28 C were
+lysed in TBS pH7.4 / 2% Triton X-100, EDTA-free protease inhibitors, 15 min
+at 4 C, then clarified at 2000g for 5 min. All activity work used raw
+supernatant, not purified GALT-1. Standard reaction: 0.5 ul extract in
+2.5 ul, 1 mM UDP-Gal, 40 uM acceptor, 2 h at room temperature, MES pH6.5.
+HTML prints MES 40 uM and MnCl2 10 uM. These unusual units remain unresolved;
+do not silently change them to mM. Kinetics alone used 0.1 ul extract.
+Donors were exchanged equimolarly. Metal chlorides or Na2EDTA REPLACED
+MnCl2 at equal nominal concentration; EDTA was not added on top of MnCl2.
+
+Figure 2: dabsyl-GEN[GnGnF6]R parent m/z2207 becomes m/z2369 with GALT-1
+extract and UDP-Gal, a +162-Da product. Empty-vector extract with donor and
+GALT-1 extract without donor lack that product. Product MS/MS m/z1273
+supports a Hex-dHex-HexNAc glycopeptide fragment. Aspergillus beta-galactosidase
+returns the parent mass. Its digestion protocol is 27 mU, citrate 50 mM,
+pH4.5, 2 days at 37 C, not the GALT-1 reaction temperature. Figure 2B's
+caption reverses the displayed order: the upper panel is parent2207 and
+the lower is parent2369. Assign by precursor mass, not the caption's order.
+Laser fragmentation and residual Sf9 hexosaminidase peaks are annotated.
+The authors' exact beta1,4 assignment also uses permethylation MS/MS in
+supplement S3, which was not retrieved/inspected. Retain the measured
+core-fucose-associated beta-galactosylated product without claiming a new
+independent determination of the 4-position or elementary chemistry.
+
+Figure 3A: dansyl-N[GnGnF6]ST HPLC substrate at 9.09 min shifts to a product
+at 8.06 min with UDP-Gal. Substituting UDP-Glc yields a minor (<10%) peak
+at that retention time; UDP-GlcNAc and UDP-GalNAc do not show the product
+peak. These comparisons support lower product-associated signal, not a
+universal exclusive donor rule. The small UDP-Glc peak is not chemically
+identified and may reflect contamination or extract-mediated conversion.
+The apparent 84-uM UDP-Gal Km derives from two crude-extract datasets; it
+is neither a binding Kd nor purified-enzyme catalytic efficiency. Negative
+free-fucose/pNP-fucoside tests are reported without displayed data.
+
+Figure 4: GnGnF6 glycopeptide shows product2369 without visible parent2207.
+Removing antenna GlcNAcs (MMF6) leaves both parent1801 and product1963;
+MMF3, with alpha1,3 instead of alpha1,6 core fucose, retains parent1801
+without the +162 product. These are qualitative product/parent patterns,
+not absolute rates or equal MALDI response factors. Nonreducing GlcNAcs
+are not strictly required since MMF6 retains measurable conversion.
+
+Figure 5: free GnGnF6 glycan, not glycopeptide, and radiolabeled UDP-Gal.
+12-h TLC separates product32mm from donor60mm and hydrolysis-related78mm;
+the product peak is absent with vector extract. Metal comparisons use a
+2-h incubation and neutral-fraction scintillation after anion exchange,
+3-7 independent experiments, mean +/- SD, normalized to maximal average.
+Mn/Fe/Co each produce more counts than the water-added extract with
+residual cofactors. EDTA replacing Mn gives counts near vector baseline,
+not literally zero. Co/Fe/Mn error bars overlap; no significant ranking,
+pure-enzyme binding constant, metal-free control, DXD coordination geometry
+or exclusive Mn requirement follows. Some hydrolysis background can remain.
+
+Figure 6A / Methods: 50-100 newly hatched L1, fraction reaching L4 after
+72 h on BL21(DE3) CGL2 lawns, NGM with 1 mM IPTG and 50 ug/ml kanamycin;
+three replicates, SD. The stated overnight37C is plate preparation, not
+a measured worm incubation temperature. The unc-119(ed3);galt-1(op497)
+double mutant has a much greater L4 fraction than unc-119 alone. Integrated
+opIs444 and opIs445 lower it again, with opIs444 incompletely restored.
+pAB15 contains genomic galt-1 (1843bp upstream, coding region without stop)
+fused to mCherry/let-858 AND the unc-119 transformation marker; selection
+rescues the unc-119 dauer defect. Therefore the intervention is the joint
+construct, not an isolated single-gene rescue. The unc-119 single mutant
+is itself CGL2 sensitive, an informative comparison but not a reason to
+hide marker co-rescue. This is developmental sensitivity, not a direct
+measurement of death, receptor occupancy or every glycosylation step.
+Figure 6B shows intestine/coelomocyte expression, not marker-verified Golgi
+localization. No observed arrow connects all assay contexts into one chain.
+
+Access limits: PMC HTML and main figure images accessible. PMC PDF returned
+HTML, publisher full text returned403, legacy supplemental link inaccessible;
+ETH author-repository request returned429. Do not treat those as absence of
+evidence. Main Figure8/2009 supplement S1-S3 not independently inspected.

@@ -1,0 +1,483 @@
+pfam_id: PF01878
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01878
+causal_graphs:
+  - graph_id: thy28-wehi-membrane-readouts
+    title: Thy28-V5 expression partially reduces challenged WEHI-231 membrane phenotypes
+    scope: Toyota2012 Figure2A/B, stable Thy28-V5 versus vector control in mouse WEHI-231.
+    context: Anti-IgM10 ug/ml; RPMI1640 with10%FBS,50 uM mercaptoethanol and100 ug/ml kanamycin,37 C/5%CO2. DiOC6 staining40 nM and annexinV/7-AAD flow cytometry; at least10000 events. Figure2B uses clones3/6.
+    family_mapping: Mouse Thy28 reference Q91YJ3 equals BAC21100.1/NP_653126.1,226 aa,PF01878 at56-219. Human THYN1 Q9P016 also maps56-218. The Thy28-V5 insert sequence/species is unresolved; mouse host identity does not verify the insert. No isolated EVE domain is tested.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:10090
+    limitations: Stable overexpression is not physiological necessity. Figure1 confirms Thy28-V5 expression and similar IgM/MHCI surface signals. Clone selection, tag effects and indirect signaling remain possible. Protection is partial, time- and clone-dependent; no uniform reduction of every death quadrant is claimed.
+    nodes:
+      - node_id: thy28-v5-expression
+        label: Stable Thy28-V5 expression under anti-IgM challenge
+        node_type: PERTURBATION
+      - node_id: dioc6-low-cells
+        label: Fraction of cells with low DiOC6 signal
+        node_type: PHENOTYPE
+      - node_id: early-annexin-cells
+        label: AnnexinV-positive 7-AAD-negative fraction at24 h
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: expression-reduces-potential-loss
+        subject: thy28-v5-expression
+        predicate: decreases
+        object: dioc6-low-cells
+        mechanism: Thy28-V5 cells have fewer low-potential cells over12-48 h; the representative48 h values are75.6% vector versus59.9% Thy28. This is a partial cellular protection phenotype, not direct control of a mitochondrial channel.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22139584
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6275998/
+            snippet: Data represent one of three independent experiments.
+            explanation: Original Figure2A and flow Methods distinguish DiOC6 loss from a measured molecular death mechanism; substantial loss remains.
+            cache_path: evidence/PF01878/toyota-2012-assays.txt
+            cache_sha256: 0c5633d14e0ff634ec33baa4ceb1aa9969700b3d40008b3c9925d7b3dfcda85e
+      - edge_id: expression-reduces-early-annexin-fraction
+        subject: thy28-v5-expression
+        predicate: decreases
+        object: early-annexin-cells
+        mechanism: At24 h the lower-right annexinV/7-AAD quadrant is33.3% in vector versus15.8% and3.8% in clones3/6. At48 h clone3 approaches control,54.2% versus56.6%; clone6 remains38.1%. Clone6 secondary-necrotic24 h cells are15.3% versus12.8% vector, so an all-quadrant protection claim is unsupported.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22139584
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6275998/
+            snippet: Data represent one of three independent experiments.
+            explanation: Original Figure2B quadrant labels provide clone- and time-specific values, rather than a generic anti-apoptotic effect in every comparison.
+            cache_path: evidence/PF01878/toyota-2012-assays.txt
+            cache_sha256: 0c5633d14e0ff634ec33baa4ceb1aa9969700b3d40008b3c9925d7b3dfcda85e
+  - graph_id: thy28-wehi-dna-content
+    title: Thy28-V5 clones alter the anti-IgM DNA-content distribution
+    scope: Toyota2012 Figure3A, WEHI-231 Thy28-V5 clones3/6/13 versus vector.
+    context: Anti-IgM10 ug/ml and50 ug/ml propidium iodide DNA-content flow cytometry. The panel does not specify exposure duration; do not borrow the12/24 h times from the separate p27 blot.
+    family_mapping: Thy28 family reference Q91YJ3/BAC21100.1,PF01878 at56-219; exact tagged insert not sequence-verified. The assay changes whole-protein expression, not the domain independently.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:10090
+    limitations: SubG1 and G1 percentages are compositional readouts, not independent cell counts or a measured transition rate. Clone6 already has a higher baseline G1 fraction. No p27-necessity or direct cell-cycle mechanism was tested.
+    nodes:
+      - node_id: thy28-v5-expression
+        label: Stable Thy28-V5 expression with anti-IgM
+        node_type: PERTURBATION
+      - node_id: subg1-fraction
+        label: SubG1 DNA-content fraction
+        node_type: PHENOTYPE
+      - node_id: g1-fraction
+        label: G1 DNA-content fraction
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: expression-reduces-subg1
+        subject: thy28-v5-expression
+        predicate: decreases
+        object: subg1-fraction
+        mechanism: Challenged vector shows59.4% subG1 versus37.8/14.2/31.8% in clones3/6/13. This retains an observed distribution shift without asserting prevention of all DNA fragmentation.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22139584
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6275998/
+            snippet: Data represent one of three independent experiments.
+            explanation: Original Figure3A shows representative PI distributions; the unspecified stimulation duration remains explicit.
+            cache_path: evidence/PF01878/toyota-2012-assays.txt
+            cache_sha256: 0c5633d14e0ff634ec33baa4ceb1aa9969700b3d40008b3c9925d7b3dfcda85e
+      - edge_id: expression-increases-g1-fraction
+        subject: thy28-v5-expression
+        predicate: increases
+        object: g1-fraction
+        mechanism: Challenged G1 fractions are32.1% vector versus48.6/80.5/57.8% clones3/6/13. These are the same distributions as the subG1 observation, not independent confirmation of a kinetic arrest mechanism.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22139584
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6275998/
+            snippet: Data represent one of three independent experiments.
+            explanation: Original Figure3A supplies matched control and clone distributions, including non-identical unstimulated baselines.
+            cache_path: evidence/PF01878/toyota-2012-assays.txt
+            cache_sha256: 0c5633d14e0ff634ec33baa4ceb1aa9969700b3d40008b3c9925d7b3dfcda85e
+  - graph_id: thy28-wehi-p27
+    title: Thy28-V5 clone6 has a higher p27 immunoblot signal
+    scope: Toyota2012 Figure3B, clone6 versus vector, not the pooled-clone Figure5 experiment.
+    context: Anti-IgM10 ug/ml,12/24 h, with unstimulated control; p27Kip1 and actin immunoblots.
+    family_mapping: Reference mouse Thy28 Q91YJ3 carries PF01878 at56-219. The exact Thy28-V5 insert remains unverified; no domain or residue perturbation is performed.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:10090
+    limitations: Basal p27 is also higher. Protein abundance is not direct transcription, translation or degradation-rate evidence; no p27 depletion/rescue establishes mediation of the DNA-content phenotype.
+    nodes:
+      - node_id: clone6-expression
+        label: Thy28-V5 clone6 under anti-IgM challenge
+        node_type: PERTURBATION
+      - node_id: p27-band
+        label: p27Kip1 immunoblot signal
+        node_type: STATE
+    edges:
+      - edge_id: expression-increases-p27-band
+        subject: clone6-expression
+        predicate: increases
+        object: p27-band
+        mechanism: Clone6 has stronger p27 bands at12/24 h and at baseline than vector, with actin controls. The edge records the cellular expression-associated effect; it does not establish p27 as the causal bridge to G1 accumulation.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22139584
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6275998/
+            snippet: Data represent one of three independent experiments.
+            explanation: Figure3B and its legend restrict the p27 assay to clone6 and expose the baseline difference.
+            cache_path: evidence/PF01878/toyota-2012-assays.txt
+            cache_sha256: 0c5633d14e0ff634ec33baa4ceb1aa9969700b3d40008b3c9925d7b3dfcda85e
+  - graph_id: thy28-wehi-oxidation-readout
+    title: Thy28-V5 clones reduce the live-gated oxidation-probe readout
+    scope: Toyota2012 Figure4, clones3/6 versus vector.
+    context: Anti-IgM10 ug/ml for24/36/48 h;1 uM H2DCFDA staining30 min at37 C; FSC/SSC viable gate with7-AAD viability confirmation. Medium-only48 h provides the unstimulated comparison.
+    family_mapping: Reference Q91YJ3/NP_653126.1 maps PF01878 at56-219; tagged construct sequence unresolved. This is a cellular whole-protein intervention.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:10090
+    limitations: H2DCFDA fluorescence is not specific H2O2 quantitation or mitochondrial source localization. Baselines differ and gating selects surviving cells; probe handling, redox state and survival can influence the signal. The unpublished12 h observation is not adopted as a measured edge.
+    nodes:
+      - node_id: thy28-v5-expression
+        label: Thy28-V5 expression in clones3/6 under anti-IgM
+        node_type: PERTURBATION
+      - node_id: oxidation-fluorescence
+        label: Live-gated H2DCFDA geometric mean fluorescence
+        node_type: STATE
+    edges:
+      - edge_id: expression-reduces-oxidation-readout
+        subject: thy28-v5-expression
+        predicate: decreases
+        object: oxidation-fluorescence
+        mechanism: At24 h the geometric means are251.2 vector versus96.4/120.1 in clones3/6;36/48 h signals also remain lower. Unstimulated values83.8 versus59.8/50.7 are already different. No direct peroxide scavenging or JNK-to-ROS causality is demonstrated.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22139584
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6275998/
+            snippet: Geometric mean channel
+            explanation: Original Figure4 includes24 h despite Results emphasizing36-48 h; the histogram labels identify an intensity, not a percentage of peroxide-producing cells.
+            cache_path: evidence/PF01878/toyota-2012-assays.txt
+            cache_sha256: 0c5633d14e0ff634ec33baa4ceb1aa9969700b3d40008b3c9925d7b3dfcda85e
+  - graph_id: thy28-wehi-signaling-blots
+    title: Pooled Thy28-V5 clones reduce challenged phospho-JNK and caspase-cleavage readouts
+    scope: Toyota2012 Figure5, mixture of clones3/6/13 versus vector.
+    context: Anti-IgM10 ug/ml; JNK1 immunoprecipitation and phospho-JNK blot at12/24 h; cleaved-caspase3 blot at24/48 h. Actin and total-protein controls are shown; plotted folds use unstimulated vector as reference.
+    family_mapping: Mouse reference Q91YJ3 PF01878 at56-219 contextualizes Thy28, but the tagged insert sequence/species is unresolved. Pooled clones are not separate independent molecular perturbations.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:10090
+    limitations: Phosphorylation and cleavage bands are not kinase/caspase catalytic-rate assays. Baseline signals differ. Parallel changes do not establish their causal order, a direct Thy28 substrate, or a JNK-H2O2 feedback mechanism.
+    nodes:
+      - node_id: pooled-expression
+        label: Pooled Thy28-V5 clones under anti-IgM challenge
+        node_type: PERTURBATION
+      - node_id: phospho-jnk-signal
+        label: Phospho-JNK immunoblot signal at12/24 h
+        node_type: STATE
+      - node_id: cleaved-caspase3-signal
+        label: Cleaved-caspase3 immunoblot signal at24/48 h
+        node_type: STATE
+    edges:
+      - edge_id: expression-reduces-phospho-jnk
+        subject: pooled-expression
+        predicate: decreases
+        object: phospho-jnk-signal
+        mechanism: Normalized pJNK values at12/24 h are1.8/1.2 for vector and0.8/0.6 for Thy28; baseline1.0 versus0.7. This is an indirect cellular phosphorylation readout, not direct inhibition of JNK catalysis by EVE.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22139584
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6275998/
+            snippet: mixture of clones #3, #6, and #13
+            explanation: Original Figure5A and immunoprecipitation Methods identify the pool, time points and phospho/total-JNK controls.
+            cache_path: evidence/PF01878/toyota-2012-assays.txt
+            cache_sha256: 0c5633d14e0ff634ec33baa4ceb1aa9969700b3d40008b3c9925d7b3dfcda85e
+      - edge_id: expression-reduces-caspase-cleavage
+        subject: pooled-expression
+        predicate: decreases
+        object: cleaved-caspase3-signal
+        mechanism: Normalized cleavage signals at24/48 h are2.6/3.0 vector versus1.3/1.8 Thy28, not abolition. This supports a downstream cellular effect without demonstrating direct caspase inhibition or mediation by the separately measured JNK change.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:22139584
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6275998/
+            snippet: mixture of clones #3, #6, and #13
+            explanation: Original Figure5B and the caspase-assay Methods specify an immunoblot rather than an enzymatic substrate assay.
+            cache_path: evidence/PF01878/toyota-2012-assays.txt
+            cache_sha256: 0c5633d14e0ff634ec33baa4ceb1aa9969700b3d40008b3c9925d7b3dfcda85e
+  - graph_id: cthy28-dt40-knockdown
+    title: Chicken Thy28 knockdown lowers selected DT40 expression readouts
+    scope: Fujita2015 Figure6D/E and SupplementS1, two clones each for Seq3/Seq4 versus shGFP controls.
+    context: Stable pSUPER-Neo shRNAs in chicken DT40 B cells, G4181.5 mg/ml selection. RT-PCR normalized to GAPDH,mean/SEM,n=3; immunoblot with beta-tubulin loading control. No anti-IgM challenge is applied in this experiment.
+    family_mapping: cThy28 reference Q90679 sequenceversion1 equals AAA75591.1,242 aa,PF01878 at73-235. NP_989618.2 differs at51 outside EVE. DT40 cDNA and TableS2 terminal primers support gene assignment, not exact internal sequence; no isolated domain is tested.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:9031
+    limitations: Whole-transcript knockdown cannot identify a DUF residue mechanism. Pax5 transcripts remain nonzero. Retained IgM argues against wholesale loss of B-cell phenotype but is not exhaustive identity profiling. AID need not be directly regulated by Thy28.
+    nodes:
+      - node_id: cthy28-knockdown
+        label: Stable chicken Thy28 knockdown with Seq3 or Seq4
+        node_type: PERTURBATION
+        grounding: [UniProtKB:Q90679]
+      - node_id: pax5-rna
+        label: GAPDH-normalized Pax5 total and1A/1B transcripts
+        node_type: STATE
+      - node_id: pax5-protein
+        label: Pax5 immunoblot abundance
+        node_type: STATE
+      - node_id: aid-rna
+        label: GAPDH-normalized AID transcript abundance
+        node_type: STATE
+    edges:
+      - edge_id: knockdown-reduces-pax5-rna
+        subject: cthy28-knockdown
+        predicate: decreases
+        object: pax5-rna
+        mechanism: Both shRNA sequences reduce total Pax5 and the1A/1B transcript readouts relative to shGFP. Steady-state RNA measurements do not distinguish transcription from RNA turnover, and the residual signal precludes an absolute requirement for every Pax5 transcript.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:25607658
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4301804/
+            snippet: shRNA-mediated knocking-down
+            explanation: Original Figure6E shows all four knockdown clones and two shGFP controls with total and alternative-first-exon readouts.
+            cache_path: evidence/PF01878/fujita-2015-dt40.txt
+            cache_sha256: f61693f99f1bd21db179449aa4124b0bdd6f0b1866aa63ff798a0aae0c56a080
+      - edge_id: knockdown-reduces-pax5-protein
+        subject: cthy28-knockdown
+        predicate: decreases
+        object: pax5-protein
+        mechanism: Pax5 protein bands decrease with Thy28 knockdown in the four clones. This supports the cellular effect and complements the RNA measurements, without proving direct promoter binding or a protein-degradation mechanism.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:25607658
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4301804/
+            snippet: shRNA-mediated knocking-down
+            explanation: Original Figure6D retains Thy28 and beta-tubulin controls for the Pax5 blot.
+            cache_path: evidence/PF01878/fujita-2015-dt40.txt
+            cache_sha256: f61693f99f1bd21db179449aa4124b0bdd6f0b1866aa63ff798a0aae0c56a080
+      - edge_id: knockdown-reduces-aid-rna
+        subject: cthy28-knockdown
+        predicate: decreases
+        object: aid-rna
+        mechanism: AID RNA is lower in Seq3/Seq4 clones, whereas surface IgM is retained. The experiment does not isolate whether AID reduction is mediated by Pax5 or another consequence of Thy28 depletion.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:25607658
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4301804/
+            snippet: shRNA-mediated knocking-down
+            explanation: Original SupplementS1A/B and its Methods distinguish AID RT-PCR from the unchanged surface-IgM readout; no numerical significance threshold is inferred from the inconsistent asterisk legend.
+            cache_path: evidence/PF01878/fujita-2015-dt40.txt
+            cache_sha256: f61693f99f1bd21db179449aa4124b0bdd6f0b1866aa63ff798a0aae0c56a080
+  - graph_id: cthy28-dt40-rescue
+    title: Expressed RNAi-resistant chicken Thy28 restores DT40 Pax5 readouts
+    scope: Fujita2015 Figure6F/G and SupplementS2, Seq3 knockdown with expressed3xFLAG-cThy28 silent mutant.
+    context: Full-length DT40 cDNA, N-terminal3xFLAG, synonymous changes at the Seq3 target; pcDNA-Hyg-3xFL-cThy28-mut co-transfected with shRNA. Two expressing rescue clones; RNA normalized to GAPDH,n=3. S2 includes two nonexpressing rescue clones.
+    family_mapping: Chicken Q90679/AAA75591.1 maps PF01878 at73-235. RefSeq NP_989618.2 has W51 rather than L51 outside that match; the internal DT40 insert sequence is not independently verified. Silent RNAi-resistance substitutions do not test protein residues.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:9031
+    limitations: Rescue supports an on-target contribution but cannot isolate the EVE domain or direct molecular action. Figure6F and SupplementS2 reuse some lanes, not independent replication. Nonexpressing rescue clones fail to restore Pax5.
+    nodes:
+      - node_id: resistant-cthy28-expression
+        label: Express RNAi-resistant3xFLAG-cThy28 during Seq3 knockdown
+        node_type: PERTURBATION
+        grounding: [UniProtKB:Q90679]
+      - node_id: pax5-rna
+        label: Pax5 total and1A/1B transcript readouts
+        node_type: STATE
+      - node_id: pax5-protein
+        label: Pax5 protein abundance
+        node_type: STATE
+    edges:
+      - edge_id: rescue-increases-pax5-rna
+        subject: resistant-cthy28-expression
+        predicate: increases
+        object: pax5-rna
+        mechanism: Expressing rescue clones recover total and1A/1B transcript levels toward shGFP controls relative to depleted cells. The comparison is a whole-protein complementation result, not proof of a conserved biochemical transcription reaction.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:25607658
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4301804/
+            snippet: RNAi rescue experiment
+            explanation: Figure6G compared with Figure6E and the explicitly described Seq3-resistant construct supports complementation; not every clone has a quantified knockdown-only paired measurement.
+            cache_path: evidence/PF01878/fujita-2015-dt40.txt
+            cache_sha256: f61693f99f1bd21db179449aa4124b0bdd6f0b1866aa63ff798a0aae0c56a080
+      - edge_id: rescue-increases-pax5-protein
+        subject: resistant-cthy28-expression
+        predicate: increases
+        object: pax5-protein
+        mechanism: Pax5 bands return toward control in the two clones expressing3xFLAG-cThy28, whereas S2 clones3/4 without detectable tagged rescue protein remain low. This distinguishes delivered construct from successful protein expression.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:25607658
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4301804/
+            snippet: RNAi rescue experiment
+            explanation: Original Figure6F and complete SupplementS2 blot/legend show expression-dependent rescue and the reused lanes.
+            cache_path: evidence/PF01878/fujita-2015-dt40.txt
+            cache_sha256: f61693f99f1bd21db179449aa4124b0bdd6f0b1866aa63ff798a0aae0c56a080
+  - graph_id: cthy28-dt40-myh9-enrichment
+    title: Thy28 perturbation changes upstream Pax5-locus MYH9 ChIP enrichment
+    scope: Fujita2015 Figure7B, shGFP#1,Thy28-Seq3#2 and expressing rescue#2.
+    context: Anti-MYH9 ChIP measured as percent input,n=3; compare upstream-3.3/-1.3/-0.5 kb amplicons separately from TSS and downstream amplicons. Stable DT40 derivatives, not purified binding proteins.
+    family_mapping: Full-length cThy28 maps to the Q90679/AAA75591.1 reference, PF01878 at73-235; no domain-specific intervention. Exact internal sequence of the DT40-derived tagged rescue is unresolved.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:9031
+    limitations: ChIP recovery is an occupancy-associated cellular readout, not direct DNA contact or purified recruitment kinetics. MYH9 transcript levels are not comparably depleted in Figure8A, but protein-level abundance/localization alternatives are not fully resolved. Restoration is not uniform at all amplicons.
+    nodes:
+      - node_id: cthy28-knockdown
+        label: Thy28 Seq3#2 knockdown versus shGFP#1
+        node_type: PERTURBATION
+        grounding: [UniProtKB:Q90679]
+      - node_id: resistant-cthy28-expression
+        label: Express RNAi-resistant3xFLAG-cThy28 rescue#2
+        node_type: PERTURBATION
+        grounding: [UniProtKB:Q90679]
+      - node_id: upstream-myh9-enrichment
+        label: MYH9 ChIP enrichment at upstream Pax5 amplicons
+        node_type: STATE
+    edges:
+      - edge_id: knockdown-reduces-myh9-enrichment
+        subject: cthy28-knockdown
+        predicate: decreases
+        object: upstream-myh9-enrichment
+        mechanism: Thy28 depletion reduces upstream MYH9 ChIP recovery, particularly-3.3/-1.3/-0.5 kb. This supports a cellular Thy28 contribution to locus association, without proving direct Thy28-MYH9 binding or identifying an RNA/DNA bridge.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:25607658
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4301804/
+            snippet: Interaction of MYH9 with the Pax5 1A promoter region.
+            explanation: Original Figure7B and ChIP Methods retain exact clones and percent-input readout; Figure7A coIP/MS is association evidence only.
+            cache_path: evidence/PF01878/fujita-2015-dt40.txt
+            cache_sha256: f61693f99f1bd21db179449aa4124b0bdd6f0b1866aa63ff798a0aae0c56a080
+      - edge_id: rescue-increases-myh9-enrichment
+        subject: resistant-cthy28-expression
+        predicate: increases
+        object: upstream-myh9-enrichment
+        mechanism: Expressing rescue#2 increases upstream ChIP signal relative to Seq3#2, with incomplete recovery at some sites. A single rescued clone and selected amplicons do not establish universal recruitment or direct activation of transcription machinery.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:25607658
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4301804/
+            snippet: Interaction of MYH9 with the Pax5 1A promoter region.
+            explanation: Figure7B rescue and knockdown bars support locus-specific complementation without joining ChIP occupancy to a measured transcriptional intermediate.
+            cache_path: evidence/PF01878/fujita-2015-dt40.txt
+            cache_sha256: f61693f99f1bd21db179449aa4124b0bdd6f0b1866aa63ff798a0aae0c56a080
+  - graph_id: cthy28-dt40-myh9-knockdown
+    title: MYH9 knockdown lowers Pax5 expression in the DT40 Thy28-associated system
+    scope: Fujita2015 Figure7C/D, two shMYH9 clones versus shGFP#1.
+    context: Stable DT40 derivatives; Pax5/MYH9 immunoblots with CBB loading control and GAPDH-normalized Pax5 RT-PCR,mean/SEM,n=3. Figure8B separately measures Thy28 RNA.
+    family_mapping: PF01878 belongs to the associated cThy28 Q90679/AAA75591.1 at73-235, not to MYH9. This partner perturbation contextualizes the Thy28 system; it does not test an EVE residue or prove every MYH9 effect is mediated through Thy28.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:9031
+    limitations: One MYH9 shRNA sequence with two clones; no MYH9 rescue is reported. Thy28 transcript retention is not a protein-level control. Effects on transcription machinery or chromosomal contacts remain untested alternatives, not an observed causal relay from Thy28.
+    nodes:
+      - node_id: myh9-knockdown
+        label: Stable MYH9 knockdown in DT40
+        node_type: PERTURBATION
+      - node_id: pax5-rna
+        label: Pax5 total and1A/1B transcript readouts
+        node_type: STATE
+      - node_id: pax5-protein
+        label: Pax5 immunoblot abundance
+        node_type: STATE
+    edges:
+      - edge_id: myh9-knockdown-reduces-pax5-rna
+        subject: myh9-knockdown
+        predicate: decreases
+        object: pax5-rna
+        mechanism: Both shMYH9 clones have reduced but nonzero total and1A/1B Pax5 RNA. The result is consistent with a partner contribution to expression, but does not isolate RNA synthesis from stability or show that Thy28 acts exclusively through MYH9.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:25607658
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4301804/
+            snippet: shRNA-mediated knocking-down
+            explanation: Original Figure7D and Figure8B separate the Pax5 response from preserved Thy28 RNA, without claiming a MYH9 rescue or direct molecular step.
+            cache_path: evidence/PF01878/fujita-2015-dt40.txt
+            cache_sha256: f61693f99f1bd21db179449aa4124b0bdd6f0b1866aa63ff798a0aae0c56a080
+      - edge_id: myh9-knockdown-reduces-pax5-protein
+        subject: myh9-knockdown
+        predicate: decreases
+        object: pax5-protein
+        mechanism: Pax5 protein bands decrease alongside MYH9 knockdown. No EVE-domain sufficiency, direct MYH9 promoter catalysis or absolute Pax5-expression requirement is established.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:25607658
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4301804/
+            snippet: shRNA-mediated knocking-down
+            explanation: Original Figure7C includes two MYH9-knockdown clones, shGFP and CBB controls; this protein readout is distinct from the RT-PCR result.
+            cache_path: evidence/PF01878/fujita-2015-dt40.txt
+            cache_sha256: f61693f99f1bd21db179449aa4124b0bdd6f0b1866aa63ff798a0aae0c56a080
+discussions:
+  - discussion_id: thy28-species-and-context-limits
+    prompt: Explain why DT40 Pax5 dependence is not reproduced in tested mammalian contexts.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Kitaura2019 mouse exons3-7 knockout retains splenic Pax5 and B-cell counts; human Nalm-6 knockdown and Raji CRISPR mutants retain Pax5. These context-specific negatives restrict transfer of the chicken result without disproving challenged WEHI-231 phenotypes.
+    evidence:
+      - reference: PMID:31329649
+        supports: PARTIAL
+        evidence_source: primary_methods_figures_and_supplement
+        explanation: Figures3/5/7 and S2 were inspected;7-week splenic Pax5 MFI280/285/280 and Pax5-positive95.6/94.7/95.6% for WT/het/KO. B-cell counts across8.1-38.7-week mice show no significant difference, not statistical equivalence. Raji uses CRISPR despite main-text knockdown wording.
+      - reference: PMID:25607658
+        supports: PARTIAL
+        evidence_source: primary_knockdown_and_rescue
+        explanation: DT40 depletion/rescue supports a local contribution; it does not establish a universal vertebrate requirement or direct promoter binding.
+    notes: Separate species from lineage state, transformed-cell context, acute versus stable perturbation and compensatory adaptation. Inspect the unreviewed2019 S1 image before relying on its LN/spleen-discrepant caption. No negative edge was invented for unchanged readouts. Test matched systems and quantitative power before universal claims.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+  - discussion_id: thy28-construct-and-molecular-mechanism
+    prompt: Resolve construct sequences and the molecular contribution of EVE.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: WEHI-231 insert sequence/species is unresolved; DT40 cDNA is not batch-sequenced here and chicken references differ at51 outside EVE. All retained effects are indirect whole-cell observations, not residue-level mechanisms.
+    evidence:
+      - reference: PMID:22139584
+        supports: PARTIAL
+        evidence_source: primary_methods_and_original_figures
+        explanation: Stable overexpression changes multiple readouts with baseline differences; the construct citation is incongruous and Figure3A timing is unspecified. No p27/JNK/ROS mediation experiment is supplied.
+      - reference: PMID:25607658
+        supports: PARTIAL
+        evidence_source: primary_methods_original_figures_and_table_s2
+        explanation: Rescue and ChIP support system-level effects, while direct DNA/RNA contacts, domain necessity and Fig9 molecular routes remain untested.
+    notes: Verify tagged insert sequences, expression/folding/localization controls and domain-specific perturbations. Measure direct binding or biochemical action; use mediation experiments rather than joining parallel cellular readouts. H2DCFDA is not specific H2O2 concentration and phospho/cleavage blots are not catalytic-rate assays. Preserve reused rescue lanes and nonexpressing controls.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+  - discussion_id: eve-family-and-restriction-enzyme-mapping
+    prompt: Extend EVE coverage with exact member mapping before transferring restriction or modified-base mechanisms.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: All11128 frozen proteins remain in scope. VcaM4I's structural EVE assignment does not supply a verified PF01878 match; RCSB-linked A0ABY5IHE6 differs at13 positions from6YEXentity1 and its current Pfam response reports only HNH_2.
+    evidence:
+      - reference: PMID:33450012
+        supports: PARTIAL
+        evidence_source: primary_methods_and_structural_classification
+        explanation: Pastor2021 describes WP_010645282 and structural EVE homology. Exact sequence-family assignment and original causal figures still need review before importing its modification-dependent restriction mechanism.
+      - reference: PMID:23434322
+        supports: PARTIAL
+        evidence_source: primary_metadata_and_abstract_only
+        explanation: Spruijt2013 modified-base proteomics is a follow-up lead; the member-specific data and assay conditions were not inspected and support no retained edge yet.
+    notes: Inspect Spruijt full text and supplemental member tables,5J3E construct/ligand evidence,SmMcrB primary figures/mapping,Lutz2019 architecture-screen results and Bell2020 computational family boundaries. Resolve exact WP_010645282 sequence and Pfam support; absent annotation in a different homolog is not proof that the paper's enzyme is outside PF01878. No whole-family biochemical characterization is claimed.
+    posed_by: Codex
+    posed_date: '2026-10-11'

@@ -1,0 +1,191 @@
+pfam_id: PF01207
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01207
+causal_graphs:
+  - graph_id: dus2-nadph-flavin-reduction
+    title: NADPH reduces the flavin of purified yeast Dus2
+    scope: Recombinant WT Saccharomyces cerevisiae Dus2 in Rider 2009 Figure 2 and reductive-half-reaction Results. This is an anaerobic purified-protein assay, not cellular RNA modification.
+    context: Mix 15 uM oxidized enzyme with anaerobic NADPH concentration series at 4 C in 100 mM HEPES pH 7.5, 100 mM NaCl, 10 mM MgCl2 and 10% glycerol. Stopped-flow absorbance at 450 nm measures flavin reduction. DTT is removed immediately before assays.
+    family_mapping: P53720/DUS2_YEAST is SMM1/DUS2/YNR015W, 384 aa, sequence version 1, with PF01207 at 32-352. UniProt and InterPro sequences agree. The study uses the supplied pEfx-4b yeast DUS2 plasmid and BL21(DE3) expression, cobalt-affinity and DEAE purification. Exact historical tag junctions and clone sequence remain unverified.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:4932
+    limitations: Minor slower spectral phases may reflect damaged protein. The observed reduction does not independently establish the proposed NADP dissociation rate or every hydride-transfer microstep. FMN in this preparation is not a claim that all family members have identical cofactor or substrate behavior.
+    nodes:
+      - node_id: add-nadph-to-oxidized-dus2
+        label: Mix NADPH with anaerobic oxidized WT Dus2
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P53720
+      - node_id: dus2-reduced-flavin
+        label: Reduced enzyme-bound flavin measured by A450 loss
+        node_type: STATE
+    edges:
+      - edge_id: nadph-produces-reduced-dus2-flavin
+        subject: add-nadph-to-oxidized-dus2
+        predicate: produces
+        object: dus2-reduced-flavin
+        mechanism: NADPH addition produces a concentration-dependent major decrease in oxidized-flavin absorbance. The edge records the experimentally observed redox conversion, not a complete catalytic cycle or inferred product-release trajectory.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:19139092
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2667719/
+            snippet: flavin reduction
+            explanation: Figure 2 was visually inspected with the reductive-half-reaction Results and anaerobic kinetics Methods; small secondary phases remain qualified.
+            cache_path: evidence/PF01207/rider-2009-dus2.txt
+            cache_sha256: c01a2e7cbc35858ec094ea5adfc89d1b3aa0bbf0d0c3456f354a7e696149de3a
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P53720/entry/pfam/PF01207/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P53720/entry/pfam/PF01207/
+            snippet: 'P53720 Pfam:PF01207 interval: 32-352, inclusive.'
+            explanation: Current exact reference/domain mapping supports member scope without independently reconstructing the historical expression clone.
+            cache_path: evidence/PF01207/Dus2-identity.txt
+            cache_sha256: 6c4f5beb1289f972df2ac118c61096353c79904fee209b8bd7b153b6ee0845ef
+  - graph_id: dus2-synthetic-trna-dihydrouridine
+    title: Prereduced Dus2 forms dihydrouridine in a synthetic tRNA preparation
+    scope: WT yeast Dus2 acting on the reported synthetic pre-tRNA-Leu preparation in Figure 3 and oxidative-half-reaction Results. No nucleotide position is independently assigned by this endpoint.
+    context: Dithionite-prereduced enzyme reacts anaerobically at 25 C in the pH-7.5 HEPES/NaCl/MgCl2/glycerol buffer. Results give 60 uM enzyme and 700 uM RNA, whereas the caption gives 35 uM enzyme. Flavin reoxidation is followed over hours; a separate alkaline-ring-opening A550 colorimetric assay measures dihydrouridine against a standard curve.
+    family_mapping: Intact yeast Dus2 maps to P53720 and PF01207 32-352. The published pre/intronless template strings differ by a promoter-containing prefix rather than an evident intron, so the exact assayed RNA sequence is not reconstructed from those strings.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:4932
+    limitations: The enzyme concentration and 450/457-nm reporting differ between caption and Results. Product colorimetry supports dihydrouridine formation but is not site-resolved sequencing or mass spectrometry. Exact RNA sequence, matched no-enzyme raw data and stoichiometry were not independently verified; no precise kinetic constant or C117 proton-transfer edge is adopted.
+    nodes:
+      - node_id: prereduced-dus2-synthetic-trna
+        label: React prereduced WT Dus2 with reported synthetic pre-tRNA-Leu
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P53720
+      - node_id: synthetic-trna-dihydrouridine-product
+        label: Colorimetrically detected dihydrouridine product
+        node_type: STATE
+    edges:
+      - edge_id: dus2-produces-synthetic-trna-dihydrouridine
+        subject: prereduced-dus2-synthetic-trna
+        predicate: produces
+        object: synthetic-trna-dihydrouridine-product
+        mechanism: Reaction of the reduced enzyme with the reported RNA preparation yields dihydrouridine alongside flavin oxidation. The evidence supports net product formation, not the exact order of binding, proton transfer and release.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:19139092
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2667719/
+            snippet: dihydrouridine
+            explanation: Figure 3 spectra were visually inspected; adjacent product-analysis Results and colorimetric Methods establish the separate chemical endpoint and its limitations.
+            cache_path: evidence/PF01207/rider-2009-dus2.txt
+            cache_sha256: c01a2e7cbc35858ec094ea5adfc89d1b3aa0bbf0d0c3456f354a7e696149de3a
+  - graph_id: dus2-knockout-derived-trna-flavin-oxidation
+    title: Knockout-derived tRNA-Leu reoxidizes reduced WT Dus2
+    scope: WT yeast Dus2 with affinity-purified tRNA-Leu from a YNR015w knockout in Figure 4. The RNA is partially matured, not an unmodified in-vitro transcript.
+    context: Anaerobic 20 uM Dus2 is reduced with dithionite and mixed with RNA at 4 C in 100 mM HEPES pH 7.5, 100 mM NaCl, 10 mM MgCl2 and 10% glycerol. A450 increases in stopped-flow experiments. The caption gives RNA up to 800 uM; the plotted concentration axis says mM.
+    family_mapping: The protein is the same P53720-mapped WT yeast Dus2 preparation, PF01207 32-352. The RNA source is specified by YNR015w deletion, but its exact strain identifier, full modification inventory and oligonucleotide sequence were not independently established.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:4932
+    limitations: This edge records flavin oxidation, not an independently localized D20 product. The substrate-preparation comparison to synthetic RNA and the C117A comparison use different temperatures. Neither an exact fold improvement nor a specific required prior modification is asserted. The caption/image concentration discrepancy remains open.
+    nodes:
+      - node_id: add-knockout-derived-trna-to-dus2
+        label: Add knockout-derived tRNA-Leu to prereduced WT Dus2
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P53720
+      - node_id: native-trna-oxidized-dus2-flavin
+        label: Reoxidized enzyme-bound flavin measured by A450 increase
+        node_type: STATE
+    edges:
+      - edge_id: knockout-derived-trna-produces-oxidized-dus2-flavin
+        subject: add-knockout-derived-trna-to-dus2
+        predicate: produces
+        object: native-trna-oxidized-dus2-flavin
+        mechanism: The purified knockout-derived RNA preparation oxidizes the prereduced flavin in the WT enzyme. Separate preparation and temperature effects are not collapsed into an isolated modification-specific causal claim.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:19139092
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2667719/
+            snippet: dihydrouridine
+            explanation: Visually inspected Figure 4 and read native-RNA purification and kinetics Methods; Figure 5's different mutant conditions constrain, rather than extend, this edge.
+            cache_path: evidence/PF01207/rider-2009-dus2.txt
+            cache_sha256: c01a2e7cbc35858ec094ea5adfc89d1b3aa0bbf0d0c3456f354a7e696149de3a
+  - graph_id: dus2-ecoli-trna-aerobic-dihydrouridine-loss
+    title: Aerobic yeast Dus2 treatment lowers dihydrouridine in bulk bacterial tRNA
+    scope: Recombinant yeast Dus2 with bulk E. coli tRNA in the 18-h reverse-reaction experiment. This is a mixed-species in-vitro endpoint.
+    context: Treat 90 uM bulk E. coli tRNA with 40 uM Dus2 aerobically for 18 h and assay dihydrouridine content. General kinetics default to 4 C, but the endpoint paragraph does not explicitly restate temperature. Do not borrow the anaerobic stopped-flow conditions as an exact endpoint recipe.
+    family_mapping: The enzyme maps to P53720 with PF01207 32-352; the bacterial RNA mixture is a separate substrate whose strain and individual tRNA composition are not resolved. It is not a pure yeast physiological system.
+    scope_status: MECHANISTIC
+    limitations: The measured content decreases but is not eliminated. The assay does not identify each affected tRNA or nucleotide, measure cellular reverse flux, or independently characterize every oxidation product. Oxygen-supported endpoint turnover is distinct from the short anaerobic spectral assay.
+    nodes:
+      - node_id: aerobic-dus2-treatment-ecoli-trna
+        label: Treat bulk E. coli tRNA with yeast Dus2 aerobically for 18 h
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P53720
+      - node_id: bulk-ecoli-trna-dihydrouridine-content
+        label: Colorimetric dihydrouridine content of the bulk bacterial tRNA
+        node_type: STATE
+    edges:
+      - edge_id: aerobic-dus2-treatment-decreases-bulk-dihydrouridine
+        subject: aerobic-dus2-treatment-ecoli-trna
+        predicate: decreases
+        object: bulk-ecoli-trna-dihydrouridine-content
+        mechanism: The aerobic enzyme treatment reduces the measured dihydrouridine content of the RNA mixture, supporting reverse biochemical activity in this context. It does not establish which yeast RNA sites would undergo a reverse reaction in cells.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:19139092
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2667719/
+            snippet: dihydrouridine
+            explanation: Reverse-reaction Results and colorimetric Methods were inspected; this reported endpoint is separate from the visually inspected Figure 8 spectral trace.
+            cache_path: evidence/PF01207/rider-2009-dus2.txt
+            cache_sha256: c01a2e7cbc35858ec094ea5adfc89d1b3aa0bbf0d0c3456f354a7e696149de3a
+  - graph_id: dus2-ecoli-trna-anaerobic-flavin-reduction
+    title: Bulk bacterial tRNA reduces the flavin of yeast Dus2 anaerobically
+    scope: Oxidized WT yeast Dus2 with bulk E. coli tRNA in Rider 2009 Figure 8, distinct from the aerobic 18-h content assay.
+    context: Mix anaerobic enzyme and RNA at 4 C in 100 mM HEPES pH 7.5, 100 mM NaCl, 10 mM MgCl2 and 10% glycerol. Dus2 is 20 uM after mixing; stopped-flow A450 decrease is fitted with two phases.
+    family_mapping: P53720 yeast Dus2 contains PF01207 32-352; the bacterial tRNA is a heterogeneous substrate pool. The shared enzyme identity does not make these mixed-species half-reactions a directly tracked native cycle.
+    scope_status: MECHANISTIC
+    limitations: RNA composition and individual reaction sites are unresolved. Fitted mixture rate constants are not intrinsic constants for a single yeast tRNA. The smaller spectral phase and potential damaged enzyme are not extra molecular intermediates.
+    nodes:
+      - node_id: add-bulk-ecoli-trna-to-oxidized-dus2
+        label: Mix bulk E. coli tRNA with anaerobic oxidized yeast Dus2
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P53720
+      - node_id: bacterial-trna-reduced-dus2-flavin
+        label: Reduced enzyme-bound flavin measured by A450 loss
+        node_type: STATE
+    edges:
+      - edge_id: bacterial-trna-produces-reduced-dus2-flavin
+        subject: add-bulk-ecoli-trna-to-oxidized-dus2
+        predicate: produces
+        object: bacterial-trna-reduced-dus2-flavin
+        mechanism: The bacterial RNA mixture reduces the enzyme-bound flavin under anaerobic conditions. Together with the separately measured aerobic content loss this supports biochemical reversibility, but the assays are not represented as one observed molecular trajectory.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:19139092
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2667719/
+            snippet: flavin reduction
+            explanation: Figure 8 was visually inspected with its caption and reverse-reaction Results; the paper explicitly warns against assigning mixture kinetics to a pure yeast system.
+            cache_path: evidence/PF01207/rider-2009-dus2.txt
+            cache_sha256: c01a2e7cbc35858ec094ea5adfc89d1b3aa0bbf0d0c3456f354a7e696149de3a
+discussions:
+  - discussion_id: dus2-clone-substrate-and-half-reaction-limits
+    prompt: Resolve Dus2 construct and substrate discrepancies before adding residue-specific microsteps.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Five direct redox/product effects do not establish a fully observed catalytic cycle, a specific prior modification or every Dus member's physiological role.
+    evidence:
+      - reference: PMID:19139092
+        supports: PARTIAL
+        evidence_source: inspected_primary_methods_results_and_figures
+        explanation: Separate half-reactions support net redox/product effects. The C117A primer pair disagrees at H120/Q120, and mutant/native-RNA comparisons use different temperatures.
+      - reference: doi:10.1093/nar/gkag432
+        supports: PARTIAL
+        evidence_source: primary_abstract_only
+        explanation: A 2026 E. coli DusA study reports distinct binding and translation contexts requiring separate member-specific review.
+    notes: Obtain pEfx-4b and mutant sequences, exact tRNA templates and modification inventories. Reconcile 35/60-uM enzyme, 450/457-nm readout and Figure 4 mM/uM labels. No mutant-specific edge is adopted; C117A-only identity and a C117 proton-transfer step remain unverified. Inspect 2002/2004 yeast specificity and newer bacterial, human and RNA-class studies independently; do not transfer FAD stimulation in earlier assays to an identical FMN preparation. Raw spectra and unshown NMR were not reanalyzed. Partial scientific self-review; remain IN_PROGRESS.
+    posed_by: Codex
+    posed_date: '2026-10-11'

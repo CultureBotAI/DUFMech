@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01724
+  path: data/families/PF01724.yaml
+session:
+  id: 2026-10-11T073056Z-codex-eeef53
+  timestamp: '2026-10-11T07:30:56Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped DUF29 scientific evidence-gap self-review
+  details: Saved the partial scientific self-review against semantic digest eab9f4eca1570d04093d321eb8070d43ce6e9c90d337dbb8277b506825b52a23.
+    Reference identity and structure are verified, but inspected predictions and separate
+    TC11pol experiments do not support a directed DUF29 edge. Exact ORF1 identity
+    and additional primary coverage remain open. This is not independent endorsement
+    or full-family completion; status stays IN_PROGRESS.
+  sections:
+  - discussions
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T073048Z-pf01724-duf29-causal-evidence-gap/review.yaml

@@ -1,0 +1,32 @@
+PF01959 additional contexts and exclusions, 2026-10-12, Codex
+
+Porat2006 PMID17010158; DOI10.1111/j.1365-2958.2006.05426.x.
+https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2006.05426.x
+Primary full-text Results, Figure4/5 legends and extract-assay Methods read.
+Original growth-plot images and Southern blots were not visually inspected;
+the article describes the Southern data as not shown.
+Verbatim excerpt: "S140 did not require either AroAAs or PABA for growth"
+
+S140 is M. maripaludis S2 with a 0.5kb internal MMP0006/aroB' segment
+replaced by a 1.3kb pac cassette. Reported EcoRI Southern fragment changes
+3.8kb to4.6kb. Growth resembled wild type in McNA minimal medium with
+acetate. Extract shikimate/dihydroshikimate labeling was reported as96%,
+versus about90% wild type. Fractional labeling is not absolute flux.
+The extract assay uses labeled glucose6P, homoserine, NAD/NADP,30min37C
+under argon and derivative GC-MS. No essentiality edge is warranted in
+this tested context; neither universal dispensability nor an identified
+replacement enzyme is established. AroA' deletion/rescue strains S170/S176
+target MMP0686, not PF01959 MMP0006. Do not transfer their positive
+phenotypes to the AroB' record. No invented null-effect graph predicate.
+
+Suzuki2006 PMID17003031; DOI10.1074/jbc.M608103200.
+https://pubmed.ncbi.nlm.nih.gov/17003031/
+Primary abstract only: GriI/GriH jointly produce 3-amino-4-hydroxybenzoic
+acid; GriH acts downstream of GriI on a phosphorylated amino-sugar
+substrate, with Mn and no external redox cofactor. This is different from
+the archaeal DHQ/NAD assignment. The current A0JC76 domain mapping is
+retained separately; database activity annotations are leads, not new
+experimental evidence. JBC PDF request returned403; full assays, controls,
+product identification and historical construct boundaries remain open.
+No observed GriH edge is added from abstract-only coverage. Access failure
+is not a negative biological result or a filesystem-read denial.

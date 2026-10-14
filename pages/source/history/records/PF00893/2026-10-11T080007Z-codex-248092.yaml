@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF00893
+  path: data/families/PF00893.yaml
+session:
+  id: 2026-10-11T080007Z-codex-248092
+  timestamp: '2026-10-11T08:00:07Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of EmrE proton-flux graphs
+  details: Saved the native structured review bound to the current semantic digest
+    after checking P23895/E14 mapping, five observed proton-flux effects, condition
+    separation, primary quotations, Figure 7 and cited construct protocol. Supplementary
+    details, microscopic coupling and broader SMR coverage remain open. Same-agent
+    scientific assessment is partial; status stays IN_PROGRESS and no publication
+    is claimed.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T075909Z-pf00893-emre-condition-specific-proton-flux/review.yaml

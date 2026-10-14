@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01172
+  path: curation/families/PF01172.yaml
+session:
+  id: 2026-10-11T095207Z-codex-c7bbeb
+  timestamp: '2026-10-11T09:52:07Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped whole-SBDS release and hydrolysis graphs for PF01172.
+  details: Inspected Finch 2011 biochemical Results, main Methods and Discussion and
+    visually checked Figures 3/6. Verified exact current Q9Y3A5/NP_057122.2/InterPro
+    sequence agreement and PF01172 14-100 mapping. Four graphs retain seven observed
+    direct effects across separate mouse pre-60S release and rabbit-60S hydrolysis/truncated-eIF6
+    assays. R126T and K151N lie outside the N-terminal domain; no isolated-domain
+    mechanism, directly filmed cycle or disease-treatment claim is inferred. Supplement
+    retrieval failed through Europe PMC and the publisher, so full tag/scar and binding
+    details remain unresolved. The 2022 recycling abstract is a follow-up lead only.
+    Minimal evidence, explicit limits and an open curation discussion are retained;
+    status IN_PROGRESS.
+  sections:
+  - causal_graphs

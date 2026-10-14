@@ -63,6 +63,11 @@ records *args="":
 records-check:
     uv run --locked python -m dufmech.records --check
 
+# Whole-corpus structural inventory; does not claim scientific review.
+[positional-arguments]
+causal-graphs *args:
+    uv run --locked python -m dufmech.causal_graphs "$@"
+
 # Shared fleet interfaces backed by the native closed-schema pipeline.
 validate-data: records-check
 

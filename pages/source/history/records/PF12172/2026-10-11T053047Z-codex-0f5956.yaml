@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF12172
+  path: data/families/PF12172.yaml
+session:
+  id: 2026-10-11T053047Z-codex-0f5956
+  timestamp: '2026-10-11T05:30:47Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of zinc-ribbon-containing DUF35 construct
+  details: Current projection validates and matches the overlay. T. curvata construct
+    inclusion and the addition effect are supported, while isolated-domain and zinc-dependent
+    mechanisms remain unresolved under pf12172-causal-context-coverage. H37Rv evidence
+    is excluded from this family. The shared PF01796 experiment is not independent
+    replication; same-agent review and IN_PROGRESS status retained.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T053103Z-pf12172-duf35-causal-graph/review.yaml

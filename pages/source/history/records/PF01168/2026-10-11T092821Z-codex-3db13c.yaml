@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01168
+  path: data/families/PF01168.yaml
+session:
+  id: 2026-10-11T092821Z-codex-3db13c
+  timestamp: '2026-10-11T09:28:21Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of Alr cofactor assays
+  details: Saved the native structured review against the current semantic digest
+    and retained primary/identity source hashes. Seven DIRECT OBSERVED effects in
+    four graphs preserve intact-enzyme scope, distinct reaction vessels, K39A local
+    mapping and assay-specific concentrations. Methylamine-dependent tritium release
+    is not quantified restoration of normal racemase turnover; the missing displayed
+    enzyme-free control, unmeasured formaldehyde, Figure 4 concentration conflict
+    and complete-clone limits remain explicit. Native projection and overlay validation
+    passed. This is same-agent partial scientific review, not independent endorsement;
+    NEEDS_FOLLOWUP and IN_PROGRESS remain. Final audit-index regeneration and all-corpus
+    validation follow.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T092801Z-pf01168-alr-racemization-and-cofactor-assays/review.yaml

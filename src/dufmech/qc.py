@@ -53,6 +53,11 @@ COMMANDS = (
         "Closed schemas, frozen identity/labels, evidence quotes and projections must agree.",
     ),
     QualityCommand(
+        "causal graph inventory",
+        (sys.executable, "-m", "dufmech.causal_graphs", "--check"),
+        "Retained structural coverage and semantic digests must match every current family.",
+    ),
+    QualityCommand(
         "offline research profile",
         (sys.executable, "-m", "dufmech.research", "check"),
         "Validate the shared planning profile; no provider availability or execution is claimed.",

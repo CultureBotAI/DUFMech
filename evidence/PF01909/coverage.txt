@@ -1,0 +1,45 @@
+PF01909 coverage ledger; researched 2026-10-12 UTC
+Ignored/hidden-inclusive local PF01909/DUF76/IPR002934 search in curation,
+evidence, history, reviews and reports (excluding inventory.json) found
+no pre-existing per-family curation before this addition. This was not
+an assertion that the family was absent from frozen source worklists.
+
+UniProt reviewed PF01909 search returned 235 entries in one response
+(requested size 500), spanning GlnD, CCA enzymes, OAS, DNA synthesis,
+antibiotic adenylyltransferases, cyclic nucleotide synthesis and MntA.
+Response SHA256:
+92f35d2d81193c1eb48803cadd15b008b0b850d41b582c791e9809331a09691f
+This is a dated discovery sample, not exhaustive experimental coverage.
+
+Primary follow-up leads, not evidence for additional observed edges:
+PMID:17337583, R. rubrum GlnD/PII regulation. Species and assay differences
+matter; the 2010 study did not recover in vitro UR activity for its
+R. rubrum preparations. Its Table 1 nitrogenase effects are indirect,
+not direct evidence for the E. coli graph's chemistry.
+PMID:33045733, MntA/HepT protein adenylylation. Resolve exact tested
+species/accessions and each domain mapping before transferring results
+from S. oneidensis to PF01909 homologs or the HI0073 prototype.
+PMID:30787435 and PMID:37604815, CdnE cyclic-nucleotide synthesis.
+PMID:12866049, archaeal CCA addition; distinguish direct experiments
+from by-similarity annotations for repeated CCA addition.
+PMID:40306316, Hailong defense; exact construct identity and the source
+of Tyr219/polymerization annotations need separate verification.
+OAS, TdT, AadA/ANT9 and other NTase branches remain uncurated here.
+
+ANT(4') papers: PMID:38250052 / doi:10.1021/acscatal.9b05201
+(actual article 2020; PMC deposit 2024) and Chen-Goodspeed et al. 1999.
+Selected text was inspected; not all PDF pages or figures were examined.
+T130K, D80Y and WT constructs differ; a related-fold structure is not
+proof of membership. Current P05057 Pfam responses do not map PF01909,
+so no ANT(4') edge was retained. See identity.txt for precise boundary.
+
+Residual limits: no raw gels or replicate-level statistical reanalysis,
+independent construct sequencing, isolated-Pfam-domain assay, atomic
+transition-state demonstration or complete family literature search.
+Main E. coli 2010 figures 3/4/5/8 were visually inspected; other figures
+were read through captions/text only. No unseen figure claim is added.
+
+Filesystem retry: repository and installed causal skill reads succeeded.
+Earlier UV cache error concerned create/write on an external cache .git
+marker, not a blanket denial of filesystem reads. No permissions were
+broadened and no frozen source/configuration bytes were modified.

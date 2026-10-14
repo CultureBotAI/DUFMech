@@ -1,0 +1,37 @@
+PF01732 / former DUF31: member and domain identity
+Inspected: 2026-10-11. Curator: Codex. Database facts, not functional proof.
+Sources:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01732/
+https://www.ncbi.nlm.nih.gov/protein/ACU78687.1
+https://www.ncbi.nlm.nih.gov/protein/ACU78312.1
+https://rest.uniprot.org/uniparc/UPI0001793D5F.json
+https://rest.uniprot.org/uniparc/search?query=ACU78312.1&format=json
+https://data.rcsb.org/rest/v1/core/polymer_entity/7ADK/2
+
+Frozen PF01732 is Myco_protease, Mycoplasma immunoglobulin protease,
+InterPro IPR022382, EX_DUF. Do not rewrite imported identity or counters.
+The 2016 primary study identifies DUF31 in MMCAP2_0582 (MIP82/r-0582).
+Versioned GenBank ACU78687.1 has 861 aa, gene MMCAP2_0582, GM12,
+NCBITaxon:436113, complement(CP001668.1:712279..714864), translation table 4.
+The source genome is labelled deltatypeIIIres/transgenic, not an independently
+sequenced historical expression plasmid. MIB83 is ACU78312.1, 750 aa,
+MMCAP2_0583, complement(CP001668.1:714887..717139).
+
+The complete ACU78687.1 sequence exactly matches UniParc UPI0001793D5F and
+the reference polymer sequence in PDB 7ADK entity 2. Sequence SHA-256:
+ca14a76a06bd2860db613b988492102f770b4f283b2349b4af0e51bcdf211c37
+UniParc explicitly retains active EMBL ACU78687 version 1 and maps PF01732
+to residues 290-776 inclusive. Full-length positions: H450, D539, Y727, S759.
+These are member-reference facts, not proof of the deposited mutant construct.
+The 2021 study describes MIP lacking residues 1-33 and MIB lacking 1-35,
+with N-terminal His tags; 2016 reports TM replacement but not the exact clone.
+Do not independently certify a historical r-0582A sequence from this reference.
+
+C7LKT2 is retired. 7ADK's reference A0A446C0V0 is also retired and maps to
+UPI00101941AD, which has X810 rather than GM12 L810. It is not the exact
+whole GM12 sequence, although the PF01732 interval matches. Use the exact
+ACU/UPI0001793D5F mapping above instead. PDB sequence/mutation metadata do
+not resolve the published inactive-protein construct by themselves.
+MIB's exact-sequence archive UPI0001793D5E has other Pfam domains, not MIP's
+PF01732. MIB, Protein M and MIP must not be conflated. Whole MIP, paired
+systems and cellular phenotypes do not prove isolated PF01732 sufficiency.

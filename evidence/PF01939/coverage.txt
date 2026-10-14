@@ -1,0 +1,56 @@
+PF01939 coverage and open work, 2026-10-12 UTC
+
+Pre-edit local text search included ignored and hidden files in curation,
+evidence, history and reviews/structured; excluded inputs and JSON. Exact
+family/name search found no pre-existing PF01939 overlay/graph there.
+DUF911 in PF01930 is a different family; a PF01934 coverage mention of
+DUF91 is not a NucS dossier. This is not an exhaustive filesystem absence.
+External searches included PF01939, DUF91, NucS, EndoMS, NCgl1168,
+Q8NR49, primary titles and later repair work. The reviewed UniProt query
+returned56 entries, not all5060 family proteins or24 architectures.
+
+Retained graphs concern P.abyssi, T.kodakarensis and C.glutamicum
+ATCC13032. No complete family-wide mechanism is asserted.
+Open discrepancy: two2018 primary Cgl studies use the same strain but
+different constructs, substrates, tags, salt, temperature and metal/pH
+conditions, and report3-versus5-nucleotide overhangs. These differences
+are possible explanatory variables, not proof of the cause. Examine
+original product assignments, supplements and later primary work.
+
+Additional primary leads and actual inspected extent:
+PMID22431731/PMC3346078, Creze2012, PCNA modulation. Earlier abstract
+and captions were inspected; this session's PMC HTML was a reCAPTCHA
+page and EuropePMC fullTextXML returned500, not an absence of evidence.
+PMC4239081,2014 single-molecule flap kinetics: title/search lead only.
+PMID27773688,2016 Tko complex structures: abstract lead; full structural
+constructs and dynamics need review, not inferred observed conformational
+trajectories from static structures.
+PMID28128207/PMC5290159,2017 mycobacterial/streptomycete repair:
+primary text available; full relevant figures, constructs and mapping not
+yet curated. A negative purified M.smegmatis mismatch-cleavage assay
+does not negate its native role or prove a universal absence of activity.
+PMC7736090/PMID33335523,2020 S.islandicus REY15A: primary full text
+available; exact member mapping and figures still require curation.
+2019 T.gammatolerans deaminated-base processing: source lead only.
+
+PMID39417425/PMC11551767 and PMID38747340/PMC11551744,2024
+M.smegmatis: abstracts and relevant Results text inspected; figure pixels
+and all controls not yet reviewed. These studies favor short-range repair
+and report HR/NHEJ independence in their assays. They do NOT establish
+that native NucS necessarily makes a DSB rather than a nick. The former
+paper also retains a5-prime flap-endonuclease alternative to exonuclease
+processing. Do not draw a universal NucS -> DSB -> homologous recombination
+chain from the older biochemical/model work. Exact repair intermediates,
+protein partners and transfer across species remain open.
+
+PMC12649562,2025 expression-regulation study: prior abstract lead only.
+PMID41427728/doi:10.1128/mbio.03310-25 is a2025-online/2026-issue
+pathogen-focused study found in the update search; no experimental
+optimization, resistance-enhancing variant design or pathogen-manipulation
+instructions are incorporated into these graphs. Any follow-up is a
+non-operational evidence assessment with distinct strain scope.
+
+No restricted full texts copied to this repository; ledgers paraphrase
+facts and retain short source phrases. No external publication, source
+adoption, full-corpus completion or independent expert review is claimed.
+All8296 records and all previously open follow-ups remain in goal scope.

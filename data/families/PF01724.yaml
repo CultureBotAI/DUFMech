@@ -4,7 +4,7 @@ name: Domain of unknown function DUF29
 short_name: DUF29
 seed_status: UNKNOWN_CANDIDATE
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01724
 counters:
   proteins: 4280
@@ -30,3 +30,59 @@ description: This family consists of various hypothetical proteins from cyanobac
   DNA helicase activity (hypothetical). Dali hits have low Z and high rmsd, suggesting probably only topological
   similarities (not functional relevance) (details derived from TOPSAN). The family has several highly
   conserved sequence motifs, including YD/ExD, DxxNVxEEIE, and CPY/F/W, as well as conserved tryptophans.
+curation_history: history/records/PF01724
+discussions:
+- discussion_id: duf29-member-specific-causal-evidence
+  prompt: Obtain a verified DUF29 member-specific perturbation or substrate assay before adding a causal
+    graph.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The inspected primary structural deposit and metagenomic thesis do not establish a directed
+    DUF29 effect. All-alpha structure, DnaB fusion, predicted nucleotide binding and gene neighborhood
+    are hypotheses or identity context, not causal experiments. The thesis Figure 5.12 depicts a function-prediction
+    workflow, not a biological causal pathway.
+  evidence:
+  - reference: https://hdl.handle.net/10566/13510
+    supports: PARTIAL
+    evidence_source: selected_full_text
+    explanation: Du Plessis (2007), selected PDF pages 131, 156, 159-161 and 199, maps metagenomic ORF1
+      to DUF29 at 9-109 and explicitly retains low-confidence functional inference. Figure 5.12 was visually
+      inspected. Separate ORF2/Usp and Chapter 6 TC11pol enzyme experiments are not evidence for ORF1
+      activity; its modern exact accession and taxon remain unresolved.
+  - reference: doi:10.2210/pdb3fcn/pdb
+    supports: PARTIAL
+    evidence_source: structural_deposition
+    explanation: PDB 3FCN is a 1.45 A structure of Rru_A3208/Q2RPE2. Its canonical 164-residue entity
+      sequence is one leading G plus the 163-residue reference; the sample contains selenomethionine.
+      The primary citation remains To be published. Structure and assembly assignment alone do not demonstrate
+      helicase, nucleotide-modification or dimerization-mediated causality.
+  - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q2RPE2/entry/pfam/PF01724/
+    supports: PARTIAL
+    evidence_source: database
+    explanation: Q2RPE2/Rru_A3208 from R. rubrum ATCC 11170/S1, taxon 269796, sequence version 1, maps
+      to PF01724 at 8-150 inclusive. Exact UniProt/InterPro sequence agreement grounds this reference
+      member but does not identify the metagenomic ORF1 clone.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Bounded searches covered DUF29/PF01724 with function, mutant, knockout, characterization and
+    activity, plus Q2RPE2/Rru_A3208 and sll0742/sll0743/slr0416. No causal edge is supported by the inspected
+    material; this is not an exhaustive absence claim. Mutant-library availability and a still-uninspected
+    population-genomics lead are not causal phenotype evidence. Minimal source and identity assessments
+    are retained under evidence/PF01724; no dummy graph is added.
+curation_events:
+- timestamp: '2026-10-11T07:23:30Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Retain DUF29 identity and scoped causal-evidence gap
+  history_record: history/records/PF01724/2026-10-11T072330Z-codex-42b484.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T07:30:56Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped DUF29 scientific evidence-gap self-review
+  history_record: history/records/PF01724/2026-10-11T073056Z-codex-eeef53.yaml
+  event_index: 0
+  llm_assisted: true

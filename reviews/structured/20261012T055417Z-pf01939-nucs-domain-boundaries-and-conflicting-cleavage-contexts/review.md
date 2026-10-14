@@ -1,0 +1,896 @@
+# PF01939: NucS domain boundaries and separated cleavage/repair contexts
+
+- Review: 20261012T055417Z-pf01939-nucs-domain-boundaries-and-conflicting-cleavage-contexts
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-12T05:54:12Z
+- Finished UTC: 2026-10-12T05:54:17Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Nine graphs retain33 OBSERVED effects,15 DIRECT,7 INDIRECT and11 UNRESOLVED across7 MECHANISTIC and2 PHENOTYPIC contexts. Six ledgers and two OPEN discussions retain domain boundaries,concentration dependence,frequency/rate distinctions and conflicting product assignments. Partial same-agent scientific review; IN_PROGRESS,not complete family coverage or publication.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Ascending uncurated family after PF01938; all8296 records and all prior follow-ups remain in scope.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01939 | data/families/PF01939.yaml | generated | PF01939 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01939 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01939.
+
+Frozen NucS_C/formerDUF91,IPR048301,EX_DUF and UNSCORED metadata remains unchanged. Current domain intervals distinguish PF01939 from PF21003 for Q9V2E8,Q5JER9 and Q8NR49. NCBI Gene1019198 directly confirms NCgl1168/currentCGL_RS06055,WP_011014205.1 and Q8NR49. Both2018 studies use ATCC13032,not strainR. Tko248-252 tail is outside PF01939; PabR42/W75 are in PF21003. Cgl five-residue and two-residue truncations differ. Reference residues match; complete assay-clone/tag sequences were not independently verified.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01939.
+
+Joint protein/substrate/cofactor contexts prevent clamp-alone causality. Flap blockade does not directly observe threading; PabR42A/W75S retains heterogeneous cleavage and is not nuclease-dead. Tko low-dose specificity and high-dose nonspecific effects are separate. Equal mutant recovery is not proof of folding equivalence. Cgl native mutation-frequency and fluctuation-rate graphs remain separate from purified reactions. The two primary reports assign five- versus three-nucleotide overhangs in the same strain under differing constructs and conditions; neither is silently corrected or generalized. No universal Mn-only requirement or biochemical-cleavage-to-native-HR chain is created.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01939.
+
+Pab2012/2014 kinetics,2009 supplements,Tko co-complex structures,S.islandicus REY15A,T.gammatolerans and M.smegmatis/streptomycete native contexts require further evidence/construct review.2024 M.smegmatis text indicates short-range repair and HR/NHEJ independence but does not settle nick versus DSB or exonuclease versus flap processing. The cause of the Cgl product discrepancy remains open.56 reviewed UniProt entries are not exhaustive coverage of5060 proteins and24 architectures.
+
+## Findings
+
+### additional-contexts: Resolve conflicting product assignments and extend native repair/member coverage
+
+minor / open / confirmed; issue key: pf01939-causal-context-coverage.
+
+Compare original Cgl product-sizing data,supplements and later studies while preserving same-strain identity and different assay constructs. Retain the three/five-nucleotide reports as scoped observations until resolved. Extend verified member-specific native repair graphs only after inspecting relevant figures,controls and domain mapping; do not infer a universal DSB-to-HR pathway. Verify remaining construct termini and Pab temperature/biotin-label ambiguities. Keep all previous follow-ups open and status IN_PROGRESS.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Compare original Cgl product-sizing data,supplements and later studies while preserving same-strain identity and different assay constructs. Retain the three/five-nucleotide reports as scoped observations until resolved. Extend verified member-specific native repair graphs only after inspecting relevant figures,controls and domain mapping; do not infer a universal DSB-to-HR pathway. Verify remaining construct termini and Pab temperature/biotin-label ambiguities. Keep all previous follow-ups open and status IN_PROGRESS.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/; Figures2,3,6,8 and supplementary PDF page12/FigureS6 visually inspected; relevant Results/Methods and selected supplementary captions read. | supports | Purified TK1898 mismatch cleavage,individual D165A/E179A/K181A effects,PCNA-dependent stimulation and distinct high-concentration non-mismatch processing are supported. The deltaPIP tail lies outside the current PF01939 match; it retains basal activity. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q5JER9/; Accession and domain locations; paired UniProt identity facts | supports | Frozen NucS_C/formerDUF91,IPR048301,EX_DUF and UNSCORED metadata remains unchanged. Current domain intervals distinguish PF01939 from PF21003 for Q9V2E8,Q5JER9 and Q8NR49. NCBI Gene1019198 directly confirms NCgl1168/currentCGL_RS06055,WP_011014205.1 and Q8NR49. Both2018 studies use ATCC13032,not strainR. Tko248-252 tail is outside PF01939; PabR42/W75 are in PF21003. Cgl five-residue and two-residue truncations differ. Reference residues match; complete assay-clone/tag sequences were not independently verified. |
+| pab-cleavage | https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/; Results sections9-11,nuclease/EMSA Methods and Figures4/5. | supports | Pab flap-cleavage and splayed-junction effects are qualified by end accessibility,N-terminal substitutions and assay-specific PCNA response. |
+| cgl-mn-frequency | https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/; Relevant Results/Methods,Table1 and Figures1/3/4. | supports | ATCC13032 Mn-assay five-nucleotide product report,five-residue truncation and native mutation-frequency comparisons. |
+| cgl-mg-rate | https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/; Relevant Results/Methods and Figures1/2/S3/S4. | supports | Same-strain Mg-assay three-nucleotide product report,two-residue truncation and native fluctuation-rate comparisons; contradictory context remains visible. |
+| source-coverage | evidence/PF01939/coverage.txt; Scoped local search,current identity queries and primary-source follow-up ledger. | supports | Family and native repair coverage remains partial; access failures are not negative findings and later short-patch results limit universal repair models. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01939 | data/families/PF01939.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Pab Figures4/5,Tko Figures2/3/6/8/S6,IshinoCgl Figures1/3/4,TakemotoCgl Figures1/2/S3/S4 visually checked. Other supplements and raw data were not fully inspected.2012 full text attempts returned500 or reCAPTCHA; not a negative biological result.2024 primary text was read without full figure/control review. No experimental replication,clone resequencing,independent expert review or complete member census.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T055417Z-pf01939-nucs-domain-boundaries-and-conflicting-cleavage-contexts
+title: 'PF01939: NucS domain boundaries and separated cleavage/repair contexts'
+started_at: '2026-10-12T05:54:12Z'
+finished_at: '2026-10-12T05:54:17Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Nine graphs retain33 OBSERVED effects,15 DIRECT,7 INDIRECT and11 UNRESOLVED
+  across7 MECHANISTIC and2 PHENOTYPIC contexts. Six ledgers and two OPEN discussions
+  retain domain boundaries,concentration dependence,frequency/rate distinctions and
+  conflicting product assignments. Partial same-agent scientific review; IN_PROGRESS,not
+  complete family coverage or publication.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01939.yaml
+    sha256: bd5f95401d245b5a2265248cc5bc5d045ecf655a268c8cb86b65a83d3fc5f09e
+    role: context
+  - path: data/families/PF01939.yaml
+    sha256: 654331270e9cc38f28d607ceed4e52759c22b724d4e30e6de0aa107027fba9cf
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01939/ishino-2016.txt
+    role: context
+    sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50
+  - path: evidence/PF01939/identity.txt
+    role: context
+    sha256: a8395b2d5f8e70a157634a1666c11d736358eed061d62874407e923c61f7c241
+  - path: evidence/PF01939/ren-2009.txt
+    role: context
+    sha256: c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da
+  - path: evidence/PF01939/ishino-2018.txt
+    role: context
+    sha256: c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5
+  - path: evidence/PF01939/takemoto-2018.txt
+    role: context
+    sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e
+  - path: evidence/PF01939/coverage.txt
+    role: context
+    sha256: dc935eae942ad35d29bf31f6229ed0a20f185beae0e46b01caf4d23954dbcedf
+targets:
+- target_id: PF01939
+  path: data/families/PF01939.yaml
+  label: PF01939
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01939.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: e67c3c5ef9296a17643e5b08e9184f9ed84c1f23d7a554c83dcd5aa76b06cf9b
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Ascending uncurated family after PF01938; all8296 records and all prior
+    follow-ups remain in scope.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01939
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Pab2012/2014 kinetics,2009 supplements,Tko co-complex structures,S.islandicus
+      REY15A,T.gammatolerans and M.smegmatis/streptomycete native contexts require
+      further evidence/construct review.2024 M.smegmatis text indicates short-range
+      repair and HR/NHEJ independence but does not settle nick versus DSB or exonuclease
+      versus flap processing. The cause of the Cgl product discrepancy remains open.56
+      reviewed UniProt entries are not exhaustive coverage of5060 proteins and24 architectures.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01939
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/
+  locator: Figures2,3,6,8 and supplementary PDF page12/FigureS6 visually inspected;
+    relevant Results/Methods and selected supplementary captions read.
+  accessed_at: '2026-10-12T05:54:17Z'
+  support: supports
+  snapshot_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50
+  summary: Purified TK1898 mismatch cleavage,individual D165A/E179A/K181A effects,PCNA-dependent
+    stimulation and distinct high-concentration non-mismatch processing are supported.
+    The deltaPIP tail lies outside the current PF01939 match; it retains basal activity.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q5JER9/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-12T05:54:17Z'
+  support: supports
+  snapshot_sha256: a8395b2d5f8e70a157634a1666c11d736358eed061d62874407e923c61f7c241
+  summary: Frozen NucS_C/formerDUF91,IPR048301,EX_DUF and UNSCORED metadata remains
+    unchanged. Current domain intervals distinguish PF01939 from PF21003 for Q9V2E8,Q5JER9
+    and Q8NR49. NCBI Gene1019198 directly confirms NCgl1168/currentCGL_RS06055,WP_011014205.1
+    and Q8NR49. Both2018 studies use ATCC13032,not strainR. Tko248-252 tail is outside
+    PF01939; PabR42/W75 are in PF21003. Cgl five-residue and two-residue truncations
+    differ. Reference residues match; complete assay-clone/tag sequences were not
+    independently verified.
+- evidence_id: pab-cleavage
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/
+  locator: Results sections9-11,nuclease/EMSA Methods and Figures4/5.
+  summary: Pab flap-cleavage and splayed-junction effects are qualified by end accessibility,N-terminal
+    substitutions and assay-specific PCNA response.
+  accessed_at: '2026-10-12T05:54:17Z'
+  support: supports
+  snapshot_sha256: c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da
+- evidence_id: cgl-mn-frequency
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/
+  locator: Relevant Results/Methods,Table1 and Figures1/3/4.
+  summary: ATCC13032 Mn-assay five-nucleotide product report,five-residue truncation
+    and native mutation-frequency comparisons.
+  accessed_at: '2026-10-12T05:54:17Z'
+  support: supports
+  snapshot_sha256: c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5
+- evidence_id: cgl-mg-rate
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/
+  locator: Relevant Results/Methods and Figures1/2/S3/S4.
+  summary: Same-strain Mg-assay three-nucleotide product report,two-residue truncation
+    and native fluctuation-rate comparisons; contradictory context remains visible.
+  accessed_at: '2026-10-12T05:54:17Z'
+  support: supports
+  snapshot_sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e
+- evidence_id: source-coverage
+  kind: search
+  reference: evidence/PF01939/coverage.txt
+  locator: Scoped local search,current identity queries and primary-source follow-up
+    ledger.
+  search_scope: PF01939,DUF91,NucS,EndoMS,verified members,primary titles and later
+    repair studies; ignored/hidden local text included but inputs/JSON excluded.
+  summary: Family and native repair coverage remains partial; access failures are
+    not negative findings and later short-patch results limit universal repair models.
+  accessed_at: '2026-10-12T05:54:17Z'
+  support: supports
+  snapshot_sha256: dc935eae942ad35d29bf31f6229ed0a20f185beae0e46b01caf4d23954dbcedf
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-12T05:54:17Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01939
+  kind: record_content
+  reference: data/families/PF01939.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-12T05:54:17Z'
+  support: context_only
+  snapshot_sha256: 654331270e9cc38f28d607ceed4e52759c22b724d4e30e6de0aa107027fba9cf
+  quote: "id: Pfam:PF01939\npfam_id: PF01939\nname: Endonuclease NucS C-terminal domain\n\
+    short_name: NucS_C\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status:\
+    \ IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01939\n\
+    counters:\n  proteins: 5060\n  matches: 5068\n  proteomes: 4806\n  taxa: 6631\n\
+    \  structures: 7\n  alphafold_models: 3150\n  domain_architectures: 24\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR048301\ndescription: Endonuclease NucS cleaves both 3'\
+    \ and 5' ssDNA extremities of branched DNA structures and\n  it binds to ssDNA\
+    \ [[cite:PUB00060574],[cite:PUB00052724]]. This entry represents the C-terminal\
+    \ domain\n  of NucS.\ncuration_history: history/records/PF01939\ndiscussions:\n\
+    - discussion_id: pf01939-cleavage-geometry\n  prompt: Reconcile the two C. glutamicum\
+    \ cleavage-product reports without erasing their different assay\n    contexts.\n\
+    \  kind: CURATION_TODO\n  status: OPEN\n  rationale: Both studies use ATCC13032\
+    \ yet report three- versus five-nucleotide overhangs; their metal,\n    pH, substrate,\
+    \ tag and truncation contexts differ.\n  evidence:\n  - reference: PMID:29878158\n\
+    \    supports: PARTIAL\n    evidence_source: primary_publication\n    explanation:\
+    \ Compare original product assignments and later primary evidence. Differences\
+    \ are possible\n      explanatory variables, not an established cause. Ishino\
+    \ deltaCter removes five residues; Takemoto\n      Cdel removes two.\n  posed_by:\
+    \ Codex\n  posed_date: '2026-10-12'\n  notes: See evidence/PF01939/coverage.txt;\
+    \ partial scientific curation, not family-wide completion.\n- discussion_id: pf01939-native-repair-and-coverage\n\
+    \  prompt: Extend accession-mapped native repair and other-member graphs without\
+    \ assuming a universal DSB-to-HR\n    pathway.\n  kind: CURATION_TODO\n  status:\
+    \ OPEN\n  rationale: Biochemical cleavage and cellular mutation readouts do not\
+    \ establish the complete intervening\n    pathway; later M. smegmatis work favors\
+    \ short-range repair.\n  evidence:\n  - reference: PMID:39417425\n    supports:\
+    \ PARTIAL\n    evidence_source: primary_publication\n    explanation: Inspect\
+    \ all remaining relevant figures, supplements and exact constructs, including\
+    \ P.abyssi2012/2014,\n      Tko structures, S.islandicus, T.gammatolerans and\
+    \ M.smegmatis. Preserve nick-versus-DSB and exonuclease-versus-flap\n      alternatives.\
+    \ All family members and previous follow-ups remain in scope.\n  posed_by: Codex\n\
+    \  posed_date: '2026-10-12'\n  notes: See evidence/PF01939/coverage.txt; partial\
+    \ scientific curation, not family-wide completion.\ncausal_graphs:\n- graph_id:\
+    \ pab-flap-cleavage-2009\n  title: P. abyssi NucS cleaves accessible model DNA\
+    \ flaps\n  scope: Ren2009 Figure5A/B purified-protein reactions.\n  context: Labeled5-prime\
+    \ or3-prime flap substrates; Mg-containing10-min assays. Methods specify46 or56C\n\
+    \    without resolving the temperature of each panel. End-bound streptavidin contrasts\
+    \ are separate substrate\n    treatments.\n  family_mapping: Q9V2E8 v1,251 aa,PAB2263/PYRAB01260,PF01939\
+    \ 126-244 and separate PF21003 28-120. Full-protein\n    preparation,not isolated\
+    \ PF01939.\n  taxon: NCBITaxon:272844\n  scope_status: MECHANISTIC\n  limitations:\
+    \ High protein amounts produce additional short products. The blocked-end result\
+    \ supports\n    accessibility,not direct visualization of sliding. Caption5A and\
+    \ diagram do not unambiguously agree\n    on biotin attachment wording.\n  nodes:\n\
+    \  - node_id: flap5\n    label: WT NucS added to accessible5-prime flap\n    node_type:\
+    \ ACTIVITY\n    grounding:\n    - UniProtKB:Q9V2E8\n  - node_id: flap3\n    label:\
+    \ WT NucS added to accessible3-prime flap\n    node_type: ACTIVITY\n  - node_id:\
+    \ block5\n    label: Streptavidin-bound5-prime flap substrate\n    node_type:\
+    \ PERTURBATION\n  - node_id: block3\n    label: Streptavidin-bound3-prime flap\
+    \ substrate\n    node_type: PERTURBATION\n  - node_id: cut5\n    label: 5-prime\
+    \ flap junction-associated products\n    node_type: STATE\n  - node_id: cut3\n\
+    \    label: 3-prime flap junction-associated products\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: five-prime-flap-cleavage\n    subject: flap5\n    predicate:\
+    \ produces\n    object: cut5\n    mechanism: Purified WT protein generates junction-associated\
+    \ products from the accessible5-prime model\n      flap.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:19609302\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/\n\
+    \      snippet: cleavage at the junction\n      explanation: Figure5A visual gel\
+    \ comparison and nuclease Methods; approximately25-nt discrete product.\n    \
+    \  cache_path: evidence/PF01939/ren-2009.txt\n      cache_sha256: c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da\n\
+    \  - edge_id: three-prime-flap-cleavage\n    subject: flap3\n    predicate: produces\n\
+    \    object: cut3\n    mechanism: Purified WT protein generates junction-associated\
+    \ products from the accessible3-prime model\n      flap.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:19609302\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/\n\
+    \      snippet: cleavage at the junction\n      explanation: Figure5B visual gel\
+    \ comparison; approximately22-nt discrete product.\n      cache_path: evidence/PF01939/ren-2009.txt\n\
+    \      cache_sha256: c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da\n\
+    \  - edge_id: blocked-five-prime-cleavage-reduction\n    subject: block5\n   \
+    \ predicate: decreases\n    object: cut5\n    mechanism: End-bound streptavidin\
+    \ suppresses detectable cleavage relative to the accessible model\n      substrate;\
+    \ steric restriction is consistent with but does not prove threading.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:19609302\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/\n\
+    \      snippet: cleavage at the junction\n      explanation: Figure5A paired gels\
+    \ and Results; biotin-attachment wording remains qualified.\n      cache_path:\
+    \ evidence/PF01939/ren-2009.txt\n      cache_sha256: c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da\n\
+    \  - edge_id: blocked-three-prime-cleavage-reduction\n    subject: block3\n  \
+    \  predicate: decreases\n    object: cut3\n    mechanism: End-bound streptavidin\
+    \ suppresses detectable cleavage of the3-prime flap in the matched\n      reaction.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:19609302\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/\n\
+    \      snippet: cleavage at the junction\n      explanation: Figure5B paired gels;\
+    \ not a directly observed protein translocation trajectory.\n      cache_path:\
+    \ evidence/PF01939/ren-2009.txt\n      cache_sha256: c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da\n\
+    - graph_id: pab-splayed-specificity-2009\n  title: N-terminal substitutions and\
+    \ PCNA alter P. abyssi junction products\n  scope: Ren2009 Figure5C/D,distinct\
+    \ perturbations of splayed-substrate assays.\n  context: Whole WT or R42A/W75S\
+    \ protein; labeled splayed DNA. PCNA addition compared with no-PCNA/BSA\n    control,three\
+    \ measurements. No equivalent effect is asserted for the other5-prime strand.\n\
+    \  family_mapping: Q9V2E8 v1,251 aa,PAB2263/PYRAB01260,PF01939 126-244 and separate\
+    \ PF21003 28-120. Full-protein\n    preparation,not isolated PF01939. R42 and\
+    \ W75 map to PF21003,not PF01939.\n  taxon: NCBITaxon:272844\n  scope_status:\
+    \ MECHANISTIC\n  limitations: The double mutant retains short-product smear,so\
+    \ it is not globally nuclease-dead. PCNA-associated\n    specificity changes do\
+    \ not establish native recruitment or all downstream repair steps.\n  nodes:\n\
+    \  - node_id: double\n    label: R42A/W75S instead of WT NucS\n    node_type:\
+    \ PERTURBATION\n  - node_id: clamp\n    label: PCNA added to WT NucS and splayed\
+    \ DNA\n    node_type: ACTIVITY\n  - node_id: junction\n    label: Discrete splayed-junction\
+    \ cleavage product\n    node_type: STATE\n  edges:\n  - edge_id: double-mutant-junction-reduction\n\
+    \    subject: double\n    predicate: decreases\n    object: junction\n    mechanism:\
+    \ The double substitution reduces the discrete junction product while heterogeneous\
+    \ short\n      products remain.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:19609302\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/\n      snippet:\
+    \ cleavage at the junction\n      explanation: Figure5C middle/right gels; substitutions\
+    \ are outside PF01939 and may affect substrate\n        handling.\n      cache_path:\
+    \ evidence/PF01939/ren-2009.txt\n      cache_sha256: c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da\n\
+    \  - edge_id: pcna-junction-product-increase\n    subject: clamp\n    predicate:\
+    \ increases\n    object: junction\n    mechanism: PCNA increases the measured\
+    \ junction-product yield under these conditions; the authors\n      associate\
+    \ this with suppression of nonspecific processing.\n    directness: DIRECT\n \
+    \   support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:19609302\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2735178/\n\
+    \      snippet: cleavage at the junction\n      explanation: Figure5D quantified\
+    \ biochemical comparison; not an inference from binding alone.\n      cache_path:\
+    \ evidence/PF01939/ren-2009.txt\n      cache_sha256: c02aea3ef9f1a3c9466798e1b67d33c290c472d66da26f8c62b3121f4f9760da\n\
+    - graph_id: tko-mismatch-cleavage-2016\n  title: TkoEndoMS cleaves mismatched\
+    \ duplex and requires intact tested residues\n  scope: Ishino2016 Figures2/3 and\
+    \ SupplementS6.\n  context: Purified TK1898 with G/T45-bp duplex at55C in Mg-containing\
+    \ buffer. Figure3 uses50nM dimer;\n    S6 compares100nM WT or mutant dimer with5nM\
+    \ DNA.\n  family_mapping: Q5JER9 v1,252 aa,TK1898,PF01939 131-245 and separate\
+    \ PF21003 29-125. Full-protein preparation,not\n    isolated PF01939. D165,E179,K181\
+    \ are in PF01939; N76D is a separate N-terminal control.\n  taxon: NCBITaxon:69014\n\
+    \  scope_status: MECHANISTIC\n  limitations: SDS-PAGE confirms recovered mutant\
+    \ protein,not identical folding. Cleavage of two strands\n    in vitro does not\
+    \ prove a native DSB-to-recombination repair chain. Low-dose normal duplex/ssDNA\
+    \ negatives\n    differ from the high-dose graph.\n  nodes:\n  - node_id: reaction\n\
+    \    label: WT TkoEndoMS plus G/T duplex and Mg\n    node_type: ACTIVITY\n   \
+    \ grounding:\n    - UniProtKB:Q5JER9\n  - node_id: d165a\n    label: D165A instead\
+    \ of WT TkoEndoMS\n    node_type: PERTURBATION\n  - node_id: e179a\n    label:\
+    \ E179A instead of WT TkoEndoMS\n    node_type: PERTURBATION\n  - node_id: k181a\n\
+    \    label: K181A instead of WT TkoEndoMS\n    node_type: PERTURBATION\n  - node_id:\
+    \ products\n    label: Mismatch-cleaved duplex with5-nt5-prime overhang\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: mismatch-duplex-cleavage\n    subject: reaction\n\
+    \    predicate: produces\n    object: products\n    mechanism: Strand-specific\
+    \ product sizing assigns cuts on both strands and a five-nucleotide5-prime\n \
+    \     overhang.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:27001046\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/\n      snippet: Mutational\
+    \ analysis\n      explanation: Figures2/3 and Methods; both labeled strands and\
+    \ size-marker controls.\n      cache_path: evidence/PF01939/ishino-2016.txt\n\
+    \      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50\n\
+    \  - edge_id: d165a-cleavage-reduction\n    subject: d165a\n    predicate: decreases\n\
+    \    object: products\n    mechanism: D165A reduces detectable G/T-cleavage products\
+    \ relative to WT at matched concentration.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:27001046\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/\n      snippet:\
+    \ Mutational analysis\n      explanation: SupplementS6A/B,page12,visually inspected;\
+    \ no independent folding-equivalence measurement.\n      cache_path: evidence/PF01939/ishino-2016.txt\n\
+    \      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50\n\
+    \  - edge_id: e179a-cleavage-reduction\n    subject: e179a\n    predicate: decreases\n\
+    \    object: products\n    mechanism: E179A reduces detectable G/T-cleavage products\
+    \ relative to WT.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:27001046\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/\n      snippet: Mutational\
+    \ analysis\n      explanation: SupplementS6A/B,page12; distinct individual mutant,not\
+    \ a combined substitution.\n      cache_path: evidence/PF01939/ishino-2016.txt\n\
+    \      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50\n\
+    \  - edge_id: k181a-cleavage-reduction\n    subject: k181a\n    predicate: decreases\n\
+    \    object: products\n    mechanism: K181A reduces detectable G/T-cleavage products\
+    \ relative to WT.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:27001046\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/\n      snippet: Mutational\
+    \ analysis\n      explanation: SupplementS6A/B,page12; N76D retains activity and\
+    \ is not included among the loss variants.\n      cache_path: evidence/PF01939/ishino-2016.txt\n\
+    \      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50\n\
+    - graph_id: tko-pcna-stimulation-2016\n  title: PCNA stimulation depends on the\
+    \ tested TkoEndoMS terminal tail\n  scope: Ishino2016 Figure8.\n  context: 4nM\
+    \ WT or deltaPIP dimer,5nM G/T DNA,PCNA titration in the reported mismatch-cleavage\
+    \ assay;\n    four independent measurements.\n  family_mapping: Q5JER9 v1,252\
+    \ aa,TK1898,PF01939 131-245 and separate PF21003 29-125. Full-protein preparation,not\n\
+    \    isolated PF01939. DeltaPIP removes QKTLF248-252,OUTSIDE current PF01939 131-245.\n\
+    \  taxon: NCBITaxon:69014\n  scope_status: MECHANISTIC\n  limitations: The truncation\
+    \ retains basal cleavage; it is not total catalytic inactivation. Tail dependence\n\
+    \    is a whole-protein property,not proof of a PF01939-local clamp site or isolated-domain\
+    \ sufficiency.\n  nodes:\n  - node_id: clamp\n    label: PCNA added to WT TkoEndoMS\
+    \ and G/T DNA\n    node_type: ACTIVITY\n  - node_id: tail\n    label: DeltaPIP\
+    \ instead of WT TkoEndoMS with PCNA\n    node_type: PERTURBATION\n  - node_id:\
+    \ cleavage\n    label: G/T duplex cleavage in the PCNA-containing assay\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: pcna-cleavage-increase\n    subject: clamp\n \
+    \   predicate: increases\n    object: cleavage\n    mechanism: Cognate PCNA increases\
+    \ the product fraction for WT over the tested concentration range.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:27001046\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/\n\
+    \      snippet: Mutational analysis\n      explanation: Figure8B/C matched gel\
+    \ and four-experiment quantification; binding alone is not used\n        as evidence.\n\
+    \      cache_path: evidence/PF01939/ishino-2016.txt\n      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50\n\
+    \  - edge_id: tail-deletion-stimulation-loss\n    subject: tail\n    predicate:\
+    \ decreases\n    object: cleavage\n    mechanism: Deleting the five terminal residues\
+    \ removes the PCNA-dependent increase while basal product\n      formation remains.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:27001046\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/\n\
+    \      snippet: Mutational analysis\n      explanation: Figure8 WT/deltaPIP comparison;\
+    \ deleted residues are outside the current Pfam match.\n      cache_path: evidence/PF01939/ishino-2016.txt\n\
+    \      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50\n\
+    - graph_id: tko-high-concentration-substrates-2016\n  title: High-concentration\
+    \ TkoEndoMS also processes non-mismatch model DNAs\n  scope: Ishino2016 Figure6A-C.\n\
+    \  context: 50nM DNA,WT dimer concentration series up to400nM,55C10min; matched\
+    \ D165A negative control\n    and G/T positive control.\n  family_mapping: Q5JER9\
+    \ v1,252 aa,TK1898,PF01939 131-245 and separate PF21003 29-125. Full-protein preparation,not\n\
+    \    isolated PF01939.\n  taxon: NCBITaxon:69014\n  scope_status: MECHANISTIC\n\
+    \  limitations: These weak,heterogeneous high-concentration effects do not establish\
+    \ native branched-DNA\n    or nonspecific-DNA repair pathways. Protein:DNA ratios\
+    \ differ from the low-concentration mismatch-specificity\n    assays.\n  nodes:\n\
+    \  - node_id: flap3\n    label: High-concentration WT TkoEndoMS plus 3-prime flap\
+    \ DNA\n    node_type: ACTIVITY\n  - node_id: flap3-products\n    label: Heterogeneous\
+    \ 3-prime flap DNA cleavage products\n    node_type: STATE\n  - node_id: flap5\n\
+    \    label: High-concentration WT TkoEndoMS plus 5-prime flap DNA\n    node_type:\
+    \ ACTIVITY\n  - node_id: flap5-products\n    label: Heterogeneous 5-prime flap\
+    \ DNA cleavage products\n    node_type: STATE\n  - node_id: splay3\n    label:\
+    \ High-concentration WT TkoEndoMS plus 3-prime splayed DNA\n    node_type: ACTIVITY\n\
+    \  - node_id: splay3-products\n    label: Heterogeneous 3-prime splayed DNA cleavage\
+    \ products\n    node_type: STATE\n  - node_id: splay5\n    label: High-concentration\
+    \ WT TkoEndoMS plus 5-prime splayed DNA\n    node_type: ACTIVITY\n  - node_id:\
+    \ splay5-products\n    label: Heterogeneous 5-prime splayed DNA cleavage products\n\
+    \    node_type: STATE\n  - node_id: duplex\n    label: High-concentration WT TkoEndoMS\
+    \ plus normal duplex DNA\n    node_type: ACTIVITY\n  - node_id: duplex-products\n\
+    \    label: Heterogeneous normal duplex DNA cleavage products\n    node_type:\
+    \ STATE\n  - node_id: single\n    label: High-concentration WT TkoEndoMS plus\
+    \ single-stranded DNA\n    node_type: ACTIVITY\n  - node_id: single-products\n\
+    \    label: Heterogeneous single-stranded DNA cleavage products\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: flap3-high-dose-cleavage\n    subject: flap3\n\
+    \    predicate: produces\n    object: flap3-products\n    mechanism: WT TkoEndoMS\
+    \ generates heterogeneous products from 3-prime flap DNA in this high-concentration\n\
+    \      assay; this is not a claim of physiological substrate preference.\n   \
+    \ directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:27001046\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/\n\
+    \      snippet: Mutational analysis\n      explanation: Figure6 visual gels,50nM\
+    \ substrate,WT concentration series and D165A controls; distinct\n        from\
+    \ low-dose Figure2 negatives.\n      cache_path: evidence/PF01939/ishino-2016.txt\n\
+    \      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50\n\
+    \  - edge_id: flap5-high-dose-cleavage\n    subject: flap5\n    predicate: produces\n\
+    \    object: flap5-products\n    mechanism: WT TkoEndoMS generates heterogeneous\
+    \ products from 5-prime flap DNA in this high-concentration\n      assay; this\
+    \ is not a claim of physiological substrate preference.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:27001046\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/\n\
+    \      snippet: Mutational analysis\n      explanation: Figure6 visual gels,50nM\
+    \ substrate,WT concentration series and D165A controls; distinct\n        from\
+    \ low-dose Figure2 negatives.\n      cache_path: evidence/PF01939/ishino-2016.txt\n\
+    \      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50\n\
+    \  - edge_id: splay3-high-dose-cleavage\n    subject: splay3\n    predicate: produces\n\
+    \    object: splay3-products\n    mechanism: WT TkoEndoMS generates heterogeneous\
+    \ products from 3-prime splayed DNA in this high-concentration\n      assay; this\
+    \ is not a claim of physiological substrate preference.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:27001046\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/\n\
+    \      snippet: Mutational analysis\n      explanation: Figure6 visual gels,50nM\
+    \ substrate,WT concentration series and D165A controls; distinct\n        from\
+    \ low-dose Figure2 negatives.\n      cache_path: evidence/PF01939/ishino-2016.txt\n\
+    \      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50\n\
+    \  - edge_id: splay5-high-dose-cleavage\n    subject: splay5\n    predicate: produces\n\
+    \    object: splay5-products\n    mechanism: WT TkoEndoMS generates heterogeneous\
+    \ products from 5-prime splayed DNA in this high-concentration\n      assay; this\
+    \ is not a claim of physiological substrate preference.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:27001046\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/\n\
+    \      snippet: Mutational analysis\n      explanation: Figure6 visual gels,50nM\
+    \ substrate,WT concentration series and D165A controls; distinct\n        from\
+    \ low-dose Figure2 negatives.\n      cache_path: evidence/PF01939/ishino-2016.txt\n\
+    \      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50\n\
+    \  - edge_id: duplex-high-dose-cleavage\n    subject: duplex\n    predicate: produces\n\
+    \    object: duplex-products\n    mechanism: WT TkoEndoMS generates heterogeneous\
+    \ products from normal duplex DNA in this high-concentration\n      assay; this\
+    \ is not a claim of physiological substrate preference.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:27001046\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/\n\
+    \      snippet: Mutational analysis\n      explanation: Figure6 visual gels,50nM\
+    \ substrate,WT concentration series and D165A controls; distinct\n        from\
+    \ low-dose Figure2 negatives.\n      cache_path: evidence/PF01939/ishino-2016.txt\n\
+    \      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50\n\
+    \  - edge_id: single-high-dose-cleavage\n    subject: single\n    predicate: produces\n\
+    \    object: single-products\n    mechanism: WT TkoEndoMS generates heterogeneous\
+    \ products from single-stranded DNA in this high-concentration\n      assay; this\
+    \ is not a claim of physiological substrate preference.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:27001046\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/\n\
+    \      snippet: Mutational analysis\n      explanation: Figure6 visual gels,50nM\
+    \ substrate,WT concentration series and D165A controls; distinct\n        from\
+    \ low-dose Figure2 negatives.\n      cache_path: evidence/PF01939/ishino-2016.txt\n\
+    \      cache_sha256: 3e4e70c4b5400132389e889304cf396dc18d28cd02354b8d6af468167d108b50\n\
+    - graph_id: cgl-mn-cleavage-and-clamp-2018\n  title: CglEndoMS cleavage and clamp\
+    \ effects in the Mn assay\n  scope: Ishino2018 Figures3/4 and Table1.\n  context:\
+    \ N-terminally His-tagged CglEndoMS; default30C,pH6.4,2.5mM MnCl2,45-bp G/T duplex.\
+    \ Cognate beta-clamp\n    addition and separate SPR binding assay.\n  family_mapping:\
+    \ ATCC13032 NCgl1168/CGL_RS06055 maps via NCBI Gene1019198 and WP_011014205.1\
+    \ to Q8NR49\n    v1,230 aa. PF01939 110-230; PF21003 2-103. Not strainR A4QDH7.\
+    \ DeltaCter removes ELTLF226-230 within\n    PF01939.\n  taxon: NCBITaxon:196627\n\
+    \  scope_status: MECHANISTIC\n  limitations: Five-nucleotide product assignment\
+    \ conflicts with Takemoto2018's three-nucleotide report\n    under different conditions.\
+    \ No universal Mn-only requirement is asserted. Homology-model residue numbering\n\
+    \    is not Cgl numbering; mutant folding is not independently established.\n\
+    \  nodes:\n  - node_id: reaction\n    label: CglEndoMS plus G/T DNA in Mn assay\n\
+    \    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q8NR49\n  - node_id:\
+    \ clamp\n    label: Beta-clamp added to WT CglEndoMS reaction\n    node_type:\
+    \ ACTIVITY\n  - node_id: trunc\n    label: Five-residue deltaCter instead of WT\
+    \ CglEndoMS\n    node_type: PERTURBATION\n  - node_id: products\n    label: Reported5-nt-overhang\
+    \ G/T cleavage products\n    node_type: STATE\n  - node_id: binding\n    label:\
+    \ Measured CglEndoMS-beta-clamp SPR interaction\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: mn-assay-duplex-cleavage\n    subject: reaction\n    predicate:\
+    \ produces\n    object: products\n    mechanism: Strand-labeled products are assigned\
+    \ to a five-nucleotide5-prime overhang with or without\n      clamp in this study.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:29846672\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/\n\
+    \      snippet: mutation avoidance\n      explanation: Figure4A-C visual product\
+    \ ladders; model panelsD/E are not the product evidence.\n      cache_path: evidence/PF01939/ishino-2018.txt\n\
+    \      cache_sha256: c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5\n\
+    \  - edge_id: beta-clamp-cleavage-increase\n    subject: clamp\n    predicate:\
+    \ increases\n    object: products\n    mechanism: Adding cognate clamp increases\
+    \ WT product formation relative to the no-clamp reaction.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:29846672\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/\n\
+    \      snippet: mutation avoidance\n      explanation: Figure3A/B; clamp-alone\
+    \ and no-protein controls,three measurements.\n      cache_path: evidence/PF01939/ishino-2018.txt\n\
+    \      cache_sha256: c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5\n\
+    \  - edge_id: five-residue-truncation-stimulation-loss\n    subject: trunc\n \
+    \   predicate: decreases\n    object: products\n    mechanism: DeltaCter loses\
+    \ the clamp-dependent increase compared with WT in the clamp-containing assay\n\
+    \      while retaining low basal cleavage.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29846672\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/\n      snippet:\
+    \ mutation avoidance\n      explanation: Figure3A/B; this is a five-residue deletion,not\
+    \ Takemoto's two-residue Cdel.\n      cache_path: evidence/PF01939/ishino-2018.txt\n\
+    \      cache_sha256: c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5\n\
+    \  - edge_id: five-residue-truncation-binding-loss\n    subject: trunc\n    predicate:\
+    \ decreases\n    object: binding\n    mechanism: DeltaCter reduces the detectable\
+    \ interaction with immobilized clamp relative to WT under\n      the reported\
+    \ SPR conditions.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:29846672\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/\n      snippet: mutation avoidance\n\
+    \      explanation: Figure3C sensorgrams; binding is a separate readout,not sufficient\
+    \ evidence of downstream\n        activation.\n      cache_path: evidence/PF01939/ishino-2018.txt\n\
+    \      cache_sha256: c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5\n\
+    - graph_id: cgl-mutation-frequency-2018\n  title: CglEndoMS perturbations alter\
+    \ native mutation frequency\n  scope: Ishino2018 Figure1C/D; ATCC13032-derived\
+    \ strains.\n  context: Selected-colony mutation-frequency assay with native deletion,five-residue\
+    \ chromosomal truncation,WT\n    plasmid rescue and empty-vector controls; four\
+    \ biological replicates.\n  family_mapping: ATCC13032 NCgl1168/CGL_RS06055 maps\
+    \ via NCBI Gene1019198 and WP_011014205.1 to Q8NR49\n    v1,230 aa. PF01939 110-230;\
+    \ PF21003 2-103. Not strainR A4QDH7. The chromosomal deltaCter removes226-230.\n\
+    \  taxon: NCBITaxon:196627\n  scope_status: PHENOTYPIC\n  limitations: Figure1C\
+    \ is mutation FREQUENCY,not Takemoto's fluctuation-derived rate. Figure1D measures\n\
+    \    RNA,not equal protein abundance. WT complementation approaches but is not\
+    \ numerically identical to\n    parental frequency; intermediates are unresolved.\n\
+    \  nodes:\n  - node_id: deletion\n    label: Native nucS deletion instead of WT\n\
+    \    node_type: PERTURBATION\n  - node_id: rescue\n    label: WT nucS supplied\
+    \ to deletion strain\n    node_type: PERTURBATION\n  - node_id: tail\n    label:\
+    \ Native five-residue terminal truncation instead of WT\n    node_type: PERTURBATION\n\
+    \  - node_id: frequency\n    label: Measured spontaneous mutation frequency\n\
+    \    node_type: PHENOTYPE\n  edges:\n  - edge_id: deletion-frequency-increase\n\
+    \    subject: deletion\n    predicate: increases\n    object: frequency\n    mechanism:\
+    \ Deleting nucS increases the selected-colony mutation-frequency readout relative\
+    \ to parental\n      ATCC13032.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29846672\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/\n      snippet:\
+    \ mutation avoidance\n      explanation: Figure1C; retain frequency-versus-rate\
+    \ distinction despite mixed Results terminology.\n      cache_path: evidence/PF01939/ishino-2018.txt\n\
+    \      cache_sha256: c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5\n\
+    \  - edge_id: rescue-frequency-reduction\n    subject: rescue\n    predicate:\
+    \ decreases\n    object: frequency\n    mechanism: WT nucS complementation lowers\
+    \ the deletion-strain frequency relative to the empty-vector\n      control.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:29846672\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/\n\
+    \      snippet: mutation avoidance\n      explanation: Figure1C/D; locus-specific\
+    \ rescue does not identify every biochemical intermediate.\n      cache_path:\
+    \ evidence/PF01939/ishino-2018.txt\n      cache_sha256: c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5\n\
+    \  - edge_id: five-residue-tail-frequency-increase\n    subject: tail\n    predicate:\
+    \ increases\n    object: frequency\n    mechanism: The five-residue chromosomal\
+    \ truncation increases measured mutation frequency despite detectable\n      nucS\
+    \ transcript.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:29846672\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC6159515/\n      snippet: mutation avoidance\n\
+    \      explanation: Figure1C/D; transcript abundance does not certify protein\
+    \ folding or equal abundance.\n      cache_path: evidence/PF01939/ishino-2018.txt\n\
+    \      cache_sha256: c0a2cfcd1ae1c3c80f1eb8e0859d33609756bb32030ba7f9477b9e7cb9717de5\n\
+    - graph_id: cgl-mg-cleavage-and-clamp-2018\n  title: CglEndoMS cleavage and clamp\
+    \ effects in the Mg assay\n  scope: Takemoto2018 Figures1B/C and2D/E.\n  context:\
+    \ Tag-free pColdIV EndoMS with His-DnaN; default37C,pH8,10mM magnesium acetate,100mM\
+    \ potassium\n    acetate,60min.100-bp G/T substrate for activity;40-bp strand-labeled\
+    \ substrate for product assignment.\n  family_mapping: ATCC13032 NCgl1168/CGL_RS06055\
+    \ maps via NCBI Gene1019198 and WP_011014205.1 to Q8NR49\n    v1,230 aa. PF01939\
+    \ 110-230; PF21003 2-103. Not strainR A4QDH7. D144 is in PF01939. Cdel removes\
+    \ only\n    L229/F230,leaving228 residues.\n  taxon: NCBITaxon:196627\n  scope_status:\
+    \ MECHANISTIC\n  limitations: The reported THREE-nucleotide overhang differs from\
+    \ Ishino2018's FIVE-nucleotide assignment\n    in the same strain. Neither discrepancy\
+    \ is silently corrected. Clamp effects are concentration-dependent;\n    excess-clamp\
+    \ inhibition and rapid DNA dissociation remain separate limits.\n  nodes:\n  -\
+    \ node_id: reaction\n    label: WT CglEndoMS plus G/T DNA in Mg assay\n    node_type:\
+    \ ACTIVITY\n    grounding:\n    - UniProtKB:Q8NR49\n  - node_id: d144a\n    label:\
+    \ D144A instead of WT CglEndoMS\n    node_type: PERTURBATION\n  - node_id: clamp\n\
+    \    label: Cognate DnaN added to WT EndoMS reaction\n    node_type: ACTIVITY\n\
+    \  - node_id: tail\n    label: Two-residue Cdel instead of WT with DnaN\n    node_type:\
+    \ PERTURBATION\n  - node_id: products\n    label: G/T duplex cleavage products\
+    \ in the Mg assay\n    node_type: STATE\n  edges:\n  - edge_id: mg-assay-duplex-cleavage\n\
+    \    subject: reaction\n    predicate: produces\n    object: products\n    mechanism:\
+    \ WT cleaves mismatched DNA,and the separately sized products are assigned to\
+    \ a three-nucleotide5-prime\n      overhang.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29878158\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/\n      snippet:\
+    \ three-nucleotide long\n      explanation: Figure1B/C visual gels and strand-specific\
+    \ size markers; reported geometry remains\n        qualified by the other study.\n\
+    \      cache_path: evidence/PF01939/takemoto-2018.txt\n      cache_sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e\n\
+    \  - edge_id: d144a-cleavage-reduction\n    subject: d144a\n    predicate: decreases\n\
+    \    object: products\n    mechanism: D144A reduces detectable G/T-cleavage products\
+    \ under the matched purified-protein comparison.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:29878158\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/\n\
+    \      snippet: three-nucleotide long\n      explanation: Figure1B,WT versus D144A\
+    \ and normal-duplex controls; activity loss alone does not exclude\n        structural\
+    \ effects.\n      cache_path: evidence/PF01939/takemoto-2018.txt\n      cache_sha256:\
+    \ 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e\n  - edge_id:\
+    \ dnan-cleavage-increase\n    subject: clamp\n    predicate: increases\n    object:\
+    \ products\n    mechanism: Cognate DnaN increases WT cleavage in the tested concentration\
+    \ range.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:29878158\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/\n\
+    \      snippet: three-nucleotide long\n      explanation: Figure2D/E; measured\
+    \ cleavage effect,not inferred from co-IP alone.\n      cache_path: evidence/PF01939/takemoto-2018.txt\n\
+    \      cache_sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e\n\
+    \  - edge_id: two-residue-tail-stimulation-loss\n    subject: tail\n    predicate:\
+    \ decreases\n    object: products\n    mechanism: Deleting L229/F230 removes the\
+    \ DnaN-dependent stimulation while basal cleavage remains.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:29878158\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/\n\
+    \      snippet: three-nucleotide long\n      explanation: Figure2A/D; distinct\
+    \ two-residue construct,not the five-residue deltaCter from Ishino2018.\n    \
+    \  cache_path: evidence/PF01939/takemoto-2018.txt\n      cache_sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e\n\
+    - graph_id: cgl-mutation-rate-2018\n  title: CglEndoMS perturbations alter native\
+    \ fluctuation-derived mutation rate\n  scope: Takemoto2018 Figures1A and2C; ATCC13032-derived\
+    \ strains.\n  context: Native deletion and two-residue terminal truncation; WT\
+    \ or D144A complementation in the deletion\n    background. Fluctuation analysis\
+    \ with20 cultures and confidence intervals.\n  family_mapping: ATCC13032 NCgl1168/CGL_RS06055\
+    \ maps via NCBI Gene1019198 and WP_011014205.1 to Q8NR49\n    v1,230 aa. PF01939\
+    \ 110-230; PF21003 2-103. Not strainR A4QDH7. D144 and L229/F230 are within PF01939.\n\
+    \  taxon: NCBITaxon:196627\n  scope_status: PHENOTYPIC\n  limitations: Native\
+    \ mutation RATE is not Ishino's frequency. Similar protein abundance supports\
+    \ interpretation\n    but does not establish identical folding. Direct repair\
+    \ intermediates and the biochemical-to-cellular\n    causal chain remain unresolved.\n\
+    \  nodes:\n  - node_id: deletion\n    label: Native endoMS deletion instead of\
+    \ WT\n    node_type: PERTURBATION\n  - node_id: rescue\n    label: WT endoMS supplied\
+    \ to deletion strain\n    node_type: PERTURBATION\n  - node_id: mutant\n    label:\
+    \ D144A instead of WT complementation\n    node_type: PERTURBATION\n  - node_id:\
+    \ tail\n    label: Native two-residue Cdel instead of WT\n    node_type: PERTURBATION\n\
+    \  - node_id: rate\n    label: Fluctuation-derived spontaneous mutation rate\n\
+    \    node_type: PHENOTYPE\n  edges:\n  - edge_id: deletion-rate-increase\n   \
+    \ subject: deletion\n    predicate: increases\n    object: rate\n    mechanism:\
+    \ Deleting endoMS raises the estimated mutation rate relative to parental ATCC13032.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:29878158\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/\n\
+    \      snippet: three-nucleotide long\n      explanation: Figure1A WT/deletion\
+    \ controls; rate is derived from fluctuation analysis.\n      cache_path: evidence/PF01939/takemoto-2018.txt\n\
+    \      cache_sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e\n\
+    \  - edge_id: rescue-rate-reduction\n    subject: rescue\n    predicate: decreases\n\
+    \    object: rate\n    mechanism: WT complementation reduces the mutation rate\
+    \ relative to the deletion empty-vector control.\n    directness: INDIRECT\n \
+    \   support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:29878158\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/\n\
+    \      snippet: three-nucleotide long\n      explanation: Figure1A native Cgl\
+    \ WT construct,not cross-species complementation.\n      cache_path: evidence/PF01939/takemoto-2018.txt\n\
+    \      cache_sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e\n\
+    \  - edge_id: d144a-rescue-defect\n    subject: mutant\n    predicate: increases\n\
+    \    object: rate\n    mechanism: D144A complementation leaves a higher mutation\
+    \ rate than WT complementation in the same\n      deletion background.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:29878158\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/\n\
+    \      snippet: three-nucleotide long\n      explanation: Figure1A and SupplementS4\
+    \ abundance control; not a direct observation of cleavage inside\n        cells.\n\
+    \      cache_path: evidence/PF01939/takemoto-2018.txt\n      cache_sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e\n\
+    \  - edge_id: two-residue-tail-rate-increase\n    subject: tail\n    predicate:\
+    \ increases\n    object: rate\n    mechanism: The chromosomal two-residue Cdel\
+    \ raises the estimated rate relative to WT.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29878158\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/\n      snippet:\
+    \ three-nucleotide long\n      explanation: Figure2A/C; do not equate this construct\
+    \ with Ishino's five-residue truncation.\n      cache_path: evidence/PF01939/takemoto-2018.txt\n\
+    \      cache_sha256: 64dd2f9a707044655b1053a21f5f4a2ae25946eb5ac9c81da58ea61b41d2f41e\n\
+    curation_events:\n- timestamp: '2026-10-12T05:43:00Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: needs_followup\n  summary: Curate scoped NucS cleavage, clamp\
+    \ and native mutation graphs with domain and assay limits\n  history_record: history/records/PF01939/2026-10-12T054300Z-codex-7ca2fe.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Frozen NucS_C/formerDUF91,IPR048301,EX_DUF and UNSCORED metadata remains
+    unchanged. Current domain intervals distinguish PF01939 from PF21003 for Q9V2E8,Q5JER9
+    and Q8NR49. NCBI Gene1019198 directly confirms NCgl1168/currentCGL_RS06055,WP_011014205.1
+    and Q8NR49. Both2018 studies use ATCC13032,not strainR. Tko248-252 tail is outside
+    PF01939; PabR42/W75 are in PF21003. Cgl five-residue and two-residue truncations
+    differ. Reference residues match; complete assay-clone/tag sequences were not
+    independently verified.
+  target_ids:
+  - PF01939
+  evidence_ids:
+  - identity
+  - primary
+  - pab-cleavage
+  - cgl-mn-frequency
+  - cgl-mg-rate
+  - source-coverage
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Joint protein/substrate/cofactor contexts prevent clamp-alone causality.
+    Flap blockade does not directly observe threading; PabR42A/W75S retains heterogeneous
+    cleavage and is not nuclease-dead. Tko low-dose specificity and high-dose nonspecific
+    effects are separate. Equal mutant recovery is not proof of folding equivalence.
+    Cgl native mutation-frequency and fluctuation-rate graphs remain separate from
+    purified reactions. The two primary reports assign five- versus three-nucleotide
+    overhangs in the same strain under differing constructs and conditions; neither
+    is silently corrected or generalized. No universal Mn-only requirement or biochemical-cleavage-to-native-HR
+    chain is created.
+  target_ids:
+  - PF01939
+  evidence_ids:
+  - primary
+  - native
+  - pab-cleavage
+  - cgl-mn-frequency
+  - cgl-mg-rate
+  - source-coverage
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Pab2012/2014 kinetics,2009 supplements,Tko co-complex structures,S.islandicus
+    REY15A,T.gammatolerans and M.smegmatis/streptomycete native contexts require further
+    evidence/construct review.2024 M.smegmatis text indicates short-range repair and
+    HR/NHEJ independence but does not settle nick versus DSB or exonuclease versus
+    flap processing. The cause of the Cgl product discrepancy remains open.56 reviewed
+    UniProt entries are not exhaustive coverage of5060 proteins and24 architectures.
+  target_ids:
+  - PF01939
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01939-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve conflicting product assignments and extend native repair/member coverage
+  description: Compare original Cgl product-sizing data,supplements and later studies
+    while preserving same-strain identity and different assay constructs. Retain the
+    three/five-nucleotide reports as scoped observations until resolved. Extend verified
+    member-specific native repair graphs only after inspecting relevant figures,controls
+    and domain mapping; do not infer a universal DSB-to-HR pathway. Verify remaining
+    construct termini and Pab temperature/biotin-label ambiguities. Keep all previous
+    follow-ups open and status IN_PROGRESS.
+  target_ids:
+  - PF01939
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - pab-cleavage
+  - cgl-mn-frequency
+  - cgl-mg-rate
+  - source-coverage
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01939.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Compare original Cgl product-sizing data,supplements and later studies
+    while preserving same-strain identity and different assay constructs. Retain the
+    three/five-nucleotide reports as scoped observations until resolved. Extend verified
+    member-specific native repair graphs only after inspecting relevant figures,controls
+    and domain mapping; do not infer a universal DSB-to-HR pathway. Verify remaining
+    construct termini and Pab temperature/biotin-label ambiguities. Keep all previous
+    follow-ups open and status IN_PROGRESS.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01939
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Pab Figures4/5,Tko Figures2/3/6/8/S6,IshinoCgl Figures1/3/4,TakemotoCgl Figures1/2/S3/S4
+  visually checked. Other supplements and raw data were not fully inspected.2012 full
+  text attempts returned500 or reCAPTCHA; not a negative biological result.2024 primary
+  text was read without full figure/control review. No experimental replication,clone
+  resequencing,independent expert review or complete member census.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

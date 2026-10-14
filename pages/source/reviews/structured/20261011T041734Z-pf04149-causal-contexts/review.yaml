@@ -1,0 +1,349 @@
+schema_version: 1.0.0
+review_id: 20261011T041734Z-pf04149-causal-contexts
+kind: record
+repository: CultureBotAI/DUFMech
+title: PF04149 context-specific causal graph follow-up
+started_at: '2026-10-11T04:16:44Z'
+finished_at: '2026-10-11T04:17:34Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent as the curation and pilot review; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Three scoped phenotype graphs retain experimental context and causal limits.
+  The new context coverage is useful but does not complete this family's scientific
+  review; status remains IN_PROGRESS.
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF04149.yaml
+    role: context
+    sha256: f322a7e6cbade4df00b29cef7217feed2acbbafb6a9c0de5ee21254103dadc2e
+  - path: data/families/PF04149.yaml
+    role: target
+    sha256: 3d920eaa635f2885671c226f7d3c87ddb1c5a30ffe51dd87aacef9f366d5aded
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    role: context
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    role: context
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    role: context
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+  - path: evidence/PF04149/riascos-2023-sco7615-7616.txt
+    role: context
+    sha256: 6bb60a3bfd0ef6ca08c86664ee1f71d14cdcd279fb9a03a17c2adfccc3dd3357
+  - path: evidence/PF04149/uniprot-Q9F3E1-identity.txt
+    role: context
+    sha256: b611e4b689c0905e1fda9a47069640bbba1c3538f4b27f32afbbd4bc2d97966d
+  - path: evidence/PF04149/santamaria-2018-scr2.txt
+    role: context
+    sha256: c97531aa06048cb9f369adde23d447f188da91fa169d533ecce0a5d7be0bb1a5
+  - path: evidence/PF04149/uniprot-Q9KZY4-identity.txt
+    role: context
+    sha256: 30972462904744d03cccc74c036a9dfc1c2e10ff1a91674bb4062aa2e8d5177f
+targets:
+- kind: generated
+  label: PF04149
+  path: data/families/PF04149.yaml
+  record_class: FamilyRecord
+  target_id: PF04149
+  owner_paths:
+  - path: curation/families/PF04149.yaml
+    repository: CultureBotAI/DUFMech
+    role: Maintained scientific overlay; create only with authorized curation.
+  - path: src/dufmech/records.py
+    repository: CultureBotAI/DUFMech
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+    sha256: be7a84285e00270018cec8178b354004cd7a5767496e1f0437b542cdbb357d40
+scope:
+  description: Scoped reassessment of the three curated graphs, especially distinct
+    experimental contexts, combined perturbation and source inconsistencies; not exhaustive
+    family biology.
+  selection: Follow-up to the pilot's pf04149-causal-context-coverage finding.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF04149
+  exclusions:
+  - target: Remaining DUF397 systems and contexts
+    reason: Not individually curated or exhaustively assessed in this review.
+checks:
+- check_id: native-projection
+  name: Validate current projection and scoped rendering
+  command: validate_record(load_yaml(data/families/PF04149.yaml), repo_root), then
+    render_site for PF04149
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All three graphs pass closed-schema, endpoint, evidence and history checks;
+    local rendering succeeds.
+  target_ids:
+  - PF04149
+  evidence_ids:
+  - native-checks
+- check_id: focused-regressions
+  name: Native graph, record, site and review regression suite
+  command: PYTHONPATH=src:/private/tmp/dufmech-classification-claw/src python -m pytest
+    tests/test_causal_graphs.py tests/test_records.py tests/test_site.py tests/test_history.py
+    tests/test_record_review_contract.py -q
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 181 tests passed, including opposite effects in separate contexts and collision-free
+    HTML anchors.
+  target_ids:
+  - PF04149
+  evidence_ids:
+  - native-checks
+evidence:
+- evidence_id: context-experiments
+  kind: primary_source
+  reference: https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1217350/full
+  locator: Deletion Results; Figure 5E image; Figure 6C caption; Table 2
+  accessed_at: '2026-10-11T04:14:40Z'
+  support: supports
+  summary: The actual image and Results support the scoped arrows; caption inconsistencies
+    are retained, not silently propagated.
+  snapshot_sha256: 6bb60a3bfd0ef6ca08c86664ee1f71d14cdcd279fb9a03a17c2adfccc3dd3357
+- evidence_id: member-identity
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/Q9F3E1.json
+  locator: Accession, locus, taxon, sequenceVersion and Pfam feature
+  accessed_at: '2026-10-11T04:14:40Z'
+  support: supports
+  summary: The current annotation verifies the member-family mapping; the overlay
+    preserves its difference from the paper's historical coordinates. Annotation alone
+    does not establish causality.
+  snapshot_sha256: b611e4b689c0905e1fda9a47069640bbba1c3538f4b27f32afbbd4bc2d97966d
+- evidence_id: pilot
+  kind: prior_review
+  reference: reviews/structured/20261011T040849Z-pf04149-causal-pilot/review.yaml
+  locator: edge-scope assessment and additional-systems finding
+  accessed_at: '2026-10-11T04:16:44Z'
+  support: context_only
+  summary: The Scr2 graph and its source extracts are unchanged. Its molecular and
+    family-wide limitations remain applicable; additional-system coverage was explicitly
+    left open.
+- evidence_id: native-checks
+  kind: validation
+  reference: tests/test_causal_graphs.py
+  locator: 181-test focused run, actual overlay/projection validation and guarded
+    full-corpus regeneration
+  accessed_at: '2026-10-11T04:17:34Z'
+  support: supports
+  summary: Structural checks pass and unrelated family projections are unchanged.
+    These checks are not scientific evidence for the arrows.
+- evidence_id: duf-projection-pf04149
+  kind: record_content
+  reference: data/families/PF04149.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T04:17:34Z'
+  support: context_only
+  snapshot_sha256: 3d920eaa635f2885671c226f7d3c87ddb1c5a30ffe51dd87aacef9f366d5aded
+  quote: "id: Pfam:PF04149\npfam_id: PF04149\nname: Domain of unknown function (DUF397)\n\
+    short_name: DUF397\nseed_status: UNKNOWN_CANDIDATE\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04149\n\
+    counters:\n  proteins: 37657\n  matches: 40691\n  proteomes: 1831\n  taxa: 2162\n\
+    \  structures: 0\n  alphafold_models: 19000\n  domain_architectures: 25\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR007278\ndescription: The function of this family is unknown.\n\
+    curation_history: history/records/PF04149\ncausal_graphs:\n- graph_id: scr2-act-induction\n\
+    \  title: Scr2-dependent actinorhodin induction\n  scope: Scr2 (SCO4442; UniProtKB:Q9KZY4),\
+    \ not all DUF397 proteins or an isolated domain.\n  context: S. coelicolor M145\
+    \ and scr2-deletion derivatives, Scr1 overexpression, liquid YES plus xylose,\n\
+    \    eight days.\n  family_mapping: UniProt Q9KZY4 sequence version 1 is 63 residues;\
+    \ its Pfam PF04149 annotation spans\n    residues 10-62. The experiment perturbs\
+    \ the whole gene.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:100226\n  limitations:\
+    \ No direct Scr1-Scr2 binding or catalytic mechanism established here; no family-wide\
+    \ transfer.\n    Other media, times and paralogs require separate graphs.\n  nodes:\n\
+    \  - node_id: scr2-present\n    label: Scr2 present in a Scr1-overexpression background\n\
+    \    node_type: STATE\n    grounding:\n    - UniProtKB:Q9KZY4\n  - node_id: induced-act\n\
+    \    label: Scr1-induced actinorhodin production\n    node_type: PHENOTYPE\n \
+    \ edges:\n  - edge_id: scr2-required-for-act\n    subject: scr2-present\n    predicate:\
+    \ required_for\n    object: induced-act\n    mechanism: Loss of scr2 prevents\
+    \ induction by Scr1 alone; joint expression restores it. This is a\n      conditional\
+    \ requirement, not sufficiency of Scr2.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30524403\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6262351/\n      snippet:\
+    \ these two genes must act in conjunction\n      explanation: Figure 3A-B compares\
+    \ deletion strains and expression constructs, with empty-vector\n        controls\
+    \ and three independent experiments; supports the scoped phenotype dependency.\n\
+    \      cache_path: evidence/PF04149/santamaria-2018-scr2.txt\n      cache_sha256:\
+    \ c97531aa06048cb9f369adde23d447f188da91fa169d533ecce0a5d7be0bb1a5\n    - reference:\
+    \ https://rest.uniprot.org/uniprotkb/Q9KZY4.json\n      source_url: https://rest.uniprot.org/uniprotkb/Q9KZY4.json\n\
+    \      snippet: 'orderedLocusNames: SCO4442'\n      explanation: Identity/domain\
+    \ mapping only; the causal evidence comes from the primary experiment,\n     \
+    \   not this automated annotation.\n      cache_path: evidence/PF04149/uniprot-Q9KZY4-identity.txt\n\
+    \      cache_sha256: 30972462904744d03cccc74c036a9dfc1c2e10ff1a91674bb4062aa2e8d5177f\n\
+    - graph_id: sco7615-7616-deletion-r2ye\n  title: SCO7615/SCO7616 deletion on R2YE\n\
+    \  scope: Joint-gene perturbation in S. coelicolor M145, not isolated SCO7616\
+    \ activity.\n  context: Solid R2YE, day 7; wild-type M145 comparator.\n  family_mapping:\
+    \ SCO7616 is UniProtKB:Q9F3E1, sequence version 1, 89 residues; current Pfam PF04149\
+    \ feature\n    spans 27-73. The study's Table 2 instead reports 27-63.\n  scope_status:\
+    \ PHENOTYPIC\n  taxon: NCBITaxon:100226\n  limitations: Qualitative pigmentation\
+    \ phenotype; neither individual-gene contributions nor biochemical\n    mechanism\
+    \ resolved. NMMP has the opposite direction.\n  nodes:\n  - node_id: pair-deletion\n\
+    \    label: Joint SCO7615/SCO7616 deletion\n    node_type: PERTURBATION\n  - node_id:\
+    \ act-production\n    label: Actinorhodin production\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: pair-deletion-decreases-act\n    subject: pair-deletion\n\
+    \    predicate: decreases\n    object: act-production\n    mechanism: Double deletion\
+    \ reduces the phenotype; joint complementation supports locus-level causality.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:37492264\n      source_url: https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1217350/full\n\
+    \      snippet: little or no ACT production\n      explanation: Results and Figure\
+    \ 5E image; Figure 6C includes joint complementation and empty-vector\n      \
+    \  controls. The Figure 5 caption mislabels panels.\n      cache_path: evidence/PF04149/riascos-2023-sco7615-7616.txt\n\
+    \      cache_sha256: 6bb60a3bfd0ef6ca08c86664ee1f71d14cdcd279fb9a03a17c2adfccc3dd3357\n\
+    \    - reference: https://rest.uniprot.org/uniprotkb/Q9F3E1.json\n      source_url:\
+    \ https://rest.uniprot.org/uniprotkb/Q9F3E1.json\n      snippet: 'orderedLocusNames:\
+    \ SCO7616'\n      explanation: Identity and current domain coordinates only, not\
+    \ causal evidence.\n      cache_path: evidence/PF04149/uniprot-Q9F3E1-identity.txt\n\
+    \      cache_sha256: b611e4b689c0905e1fda9a47069640bbba1c3538f4b27f32afbbd4bc2d97966d\n\
+    - graph_id: sco7615-7616-deletion-nmmp\n  title: SCO7615/SCO7616 deletion on NMMP\n\
+    \  scope: Joint-gene perturbation in S. coelicolor M145, not isolated SCO7616\
+    \ activity.\n  context: Solid NMMP, day 7; wild-type M145 comparator.\n  family_mapping:\
+    \ SCO7616 is UniProtKB:Q9F3E1, sequence version 1, 89 residues; current Pfam PF04149\
+    \ feature\n    spans 27-73. The study's Table 2 instead reports 27-63.\n  scope_status:\
+    \ PHENOTYPIC\n  taxon: NCBITaxon:100226\n  limitations: Qualitative pigmentation\
+    \ phenotype; no NMMP rescue demonstrated here. R2YE rescue cannot\n    establish\
+    \ medium-independent direction or a domain-specific mechanism.\n  nodes:\n  -\
+    \ node_id: pair-deletion\n    label: Joint SCO7615/SCO7616 deletion\n    node_type:\
+    \ PERTURBATION\n  - node_id: act-production\n    label: Actinorhodin production\n\
+    \    node_type: PHENOTYPE\n  edges:\n  - edge_id: pair-deletion-increases-act\n\
+    \    subject: pair-deletion\n    predicate: increases\n    object: act-production\n\
+    \    mechanism: Double deletion increases the phenotype in this medium.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:37492264\n      source_url: https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1217350/full\n\
+    \      snippet: a greater amount of ACT\n      explanation: Results and Figure\
+    \ 5E image, NMMP column, day 7.\n      cache_path: evidence/PF04149/riascos-2023-sco7615-7616.txt\n\
+    \      cache_sha256: 6bb60a3bfd0ef6ca08c86664ee1f71d14cdcd279fb9a03a17c2adfccc3dd3357\n\
+    \    - reference: https://rest.uniprot.org/uniprotkb/Q9F3E1.json\n      source_url:\
+    \ https://rest.uniprot.org/uniprotkb/Q9F3E1.json\n      snippet: 'orderedLocusNames:\
+    \ SCO7616'\n      explanation: Identity and current domain coordinates only, not\
+    \ causal evidence.\n      cache_path: evidence/PF04149/uniprot-Q9F3E1-identity.txt\n\
+    \      cache_sha256: b611e4b689c0905e1fda9a47069640bbba1c3538f4b27f32afbbd4bc2d97966d\n\
+    curation_events:\n- timestamp: '2026-10-07T12:26:02Z'\n  curator: Codex\n  action:\
+    \ REVIEW\n  outcome: no_change\n  summary: Completed a scoped PF04149 frozen-seed\
+    \ and native audit integration review; biological content\n    unchanged.\n  history_record:\
+    \ history/records/PF04149/2026-10-07T122602Z-codex-3e2c16.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-11T04:00:01Z'\n  curator: Codex\n\
+    \  action: CREATE\n  outcome: changed\n  summary: Added a scoped DUF397 Scr2 phenotype\
+    \ graph.\n  history_record: history/records/PF04149/2026-10-11T040001Z-codex-e346d1.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-11T04:10:08Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Reviewed\
+    \ the first PF04149 graph with explicit limits.\n  history_record: history/records/PF04149/2026-10-11T041008Z-codex-e653c2.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-11T04:11:00Z'\n\
+    \  curator: Codex\n  action: EDIT\n  outcome: changed\n  summary: Separate medium-specific\
+    \ SCO7615/SCO7616 deletion phenotypes\n  history_record: history/records/PF04149/2026-10-11T041100Z-codex-14184f.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-11T04:14:40Z'\n\
+    \  curator: Codex\n  action: GENERAL\n  outcome: changed\n  summary: Correct the\
+    \ preceding edit session timestamp interpretation\n  history_record: history/records/PF04149/2026-10-11T041440Z-codex-a27d8b.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: identity-and-context
+  area: identity
+  topic: Member identity and explicit experimental scope
+  outcome: supported
+  summary: Current accession grounding is distinct from experimental support; joint-gene
+    effects are not attributed solely to the DUF protein.
+  target_ids:
+  - PF04149
+  evidence_ids:
+  - member-identity
+  - context-experiments
+- assessment_id: direction
+  area: graph
+  topic: Direction, context separation and mechanistic uncertainty
+  outcome: supported
+  summary: Context-specific graphs preserve distinct effects, maintain INDIRECT/PHENOTYPIC
+    labels and avoid unsupported domain-level or biochemical steps.
+  target_ids:
+  - PF04149
+  evidence_ids:
+  - context-experiments
+  - pilot
+  - native-checks
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Partial progress on the pilot follow-up
+  outcome: concern
+  summary: Two contexts are newly curated, but the original breadth finding remains
+    open; neither this family nor the full corpus is completely reviewed.
+  target_ids:
+  - PF04149
+  evidence_ids:
+  - context-experiments
+  - pilot
+findings:
+- finding_id: additional-systems
+  issue_key: pf04149-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Remaining DUF397 contexts still require individual assessment
+  description: Partial progress does not close the coverage finding. Investigate further
+    members and contexts without transferring a joint perturbation to an isolated
+    protein or domain.
+  target_ids:
+  - PF04149
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - context-experiments
+  - pilot
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF04149.yaml
+    role: Human-owned scientific overlay
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261011T040849Z-pf04149-causal-pilot
+    finding_id: additional-systems
+actions:
+- action_id: remaining-systems
+  description: Continue system-by-system primary-evidence assessment and preserve
+    unresolved or unsupported transfers.
+  finding_ids:
+  - additional-systems
+  target_ids:
+  - PF04149
+  ownership_note: Edit the overlay and evidence extracts, record actual history, regenerate
+    and save a successor review.
+  acceptance_checks:
+  - New edges have exact object identity, context and directed primary evidence.
+  - Contradictions and source discrepancies are retained rather than hidden.
+  - Native graph checks and a successor scientific review state actual coverage.
+limitations:
+- Same-agent assessment, not independent expert review or experimental replication.
+- Molecular intermediates and isolated-domain effects remain unresolved; source inconsistencies
+  are documented rather than experimentally settled.
+- The remaining 8295 families have not received scientific causal review.
+- Full publication QC, source checkpoint capture and canonical site regeneration are
+  not claimed; no status promotion or GitHub publication is authorized by this review.
+notes:
+- This successor preserves the original finding's target and issue key; it does not
+  rewrite or silently close the pilot report.
+- The canonical history includes an explicit append-only correction of the edit's
+  rounded continuation timestamp; the scientific content of that edit is unchanged.

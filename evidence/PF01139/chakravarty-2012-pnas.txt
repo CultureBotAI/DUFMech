@@ -1,0 +1,18 @@
+Reference: PMID:22474365; doi:10.1073/pnas.1201207109
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC3341019/
+Accessed: 2026-10-11 UTC
+Inspected: methods, Results, Figures 2 and 4 visually; MS/MS interpretation text.
+
+Minimal excerpt: "form an SDS-resistant 45-kDa"
+
+Curator assay facts:
+Figure 4B: 10 uL, 50 mM Tris pH 8.0, 2 mM MnCl2, 10 uM alpha-32P-GTP,
+5 uM RtcB, 37 C, 1 min. SDS-PAGE/autoradiography detects WT RtcB-GMP;
+H337A/N/Q proteins lack the labeled adduct. Figure 4A shows protein loading.
+Peptide 325-341 is GLGNEESFCSCSHGAGR; H337 is the candidate P-N-linked site,
+supported by peptide/MS-MS interpretation and loss-of-function substitutions.
+The Figure 2 image and Results show m/z about 723.93; its HTML caption
+instead says 732.92-732.94. This discrepancy is retained, not silently fixed.
+The graph adopts adduct formation, not an independently reprocessed spectrum
+or an observed transition state. Full RNA end-joining and DNA 3'-guanylylation
+experiments in this paper are distinct substrates and are not conflated.

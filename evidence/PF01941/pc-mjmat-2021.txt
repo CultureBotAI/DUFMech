@@ -1,0 +1,25 @@
+PF01941 / engineered PC-MjMAT, inspected 2026-10-12 UTC
+PMID:34606675; doi:10.1002/cbic.202100437
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9298006/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9298006/fullTextXML
+Minimal quotation: "Temperature profile and kinetic studies of PC-MjMAT"
+The quoted heading is normalized to ASCII hyphens.
+
+Peters et al., online 2021/issue 2022. PC-MjMAT is L147A/I351A, not
+either single mutant; positions match Q58605 (identity.txt).
+Figure 3C/S10 and supplement PDF p3: 50 uM WT or PC enzyme, 5 mM
+D/L-ONB-Hcy and ATP, 50 mM HEPES pH7.4, 10 mM MgCl2, 5 mM KCl,
+65 C for 1 h. ONB-TA HPLC peak is about 308-fold higher for PC-MjMAT.
+This is a degradation-product endpoint comparison, not measured kcat/Km.
+Figure 3B/S8-S9: 10 uM PC enzyme, 10 mM ATP, variable ONB-Hcy,
+80 C/3 min; ONB-TA is produced after AdoONB heat degradation.
+Calibration assumes full conversion after 2 h and half the racemate is L.
+
+Figure 1C-D/S3-S4: complete PC-MjMAT/Ecm1/MTAN plus ATP/GpppA reactions
+at 37 C/90 min yield N7 methyl (100%), ONB (97%), DMNB (28%) or pBrONB
+(56%) cap analogs. Supplement p3: 50 uM PC-MjMAT, 50-100 uM Ecm1,
+5 uM MTAN, 300 uM GpppA, 2.5 mM ATP, 5 mM donor. These are joint
+reactions, not direct RNA methylation by MAT. Buffer and protein preparation
+partly refer to prior work. Figures 1/3 and supplement p7/S8-S11 visually
+inspected; relevant supplemental Methods read. Low product inhibition is
+an interpretation, not a directly determined inhibitor constant here.

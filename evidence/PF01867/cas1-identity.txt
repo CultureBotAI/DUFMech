@@ -1,0 +1,30 @@
+PF01867 Cas_Cas1 identity assessment, 2026-10-11.
+Frozen identity: Pfam:PF01867, InterPro:IPR002729, EX_DUF; October10 snapshot
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+No imported name, counter or characterization status is changed.
+
+https://rest.uniprot.org/uniprotkb/Q46896.json
+Downloaded JSON SHA256 4958f3c701586aee3c6b7975a868bbedf5c3430ac3cb574b855a1b33565db95d.
+Q46896, Cas1/ygbT/b2755/JW2725; sequence version1, 305 aa, taxon83333 K12.
+The 2014/2015 primary Methods identify the cloned donor as K12 MG1655.
+Experimental cellular host BL21-AI is distinct from the donor reference.
+
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=NP_417235.1&rettype=fasta&retmode=text
+FASTA SHA256 7296af835549f37ef2c4f73ac0e074bcb1b673e298df2236f9097912f06158f1.
+Biopython SeqIO comparison establishes exact 305-aa equality with Q46896.
+https://data.rcsb.org/rest/v1/core/polymer_entity/4P6I/2
+JSON SHA256 f71806c19ac841085216da518b69ab5197b1784cbd48a4592357148e80fe9103.
+Deposited Cas1 entity2, chainsC/D/E/F, also equals the reference exactly.
+Entity1 is Cas2/P45956, not Cas1; its deposition includes a residual tag tail.
+The purified proteins had MBP affinity tags removed with TEV. Reference/deposit
+identity is not independent resequencing of every biochemical or cellular clone.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01867/protein/uniprot/Q46896/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q46896/
+All-Pfam JSON SHA256 e0d0a721dda62693d8e3f89e54be04e0b7b23cd2438f6c4b0cbc964660f193b8.
+The actual entries response has count1, next:null, PF01867 residues131-226,
+continuous, score6.5e-06, representative:false. Do not substitute the full
+305-aa protein or a structural-domain boundary for this current model match.
+Verified reference residues: E141,H208,D218,D221,K224 are within that match;
+R245,R252,R256 and the P282-S305 tail are outside it. Outside-match phenotypes
+remain whole-protein observations, not isolated PF01867 effects.

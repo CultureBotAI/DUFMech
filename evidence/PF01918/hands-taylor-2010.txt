@@ -1,0 +1,28 @@
+Hands-Taylor et al. 2010, NAR, PMID:20215441,
+doi:10.1093/nar/gkq141.
+Primary: https://pmc.ncbi.nlm.nih.gov/articles/PMC2896528/
+Inspected cloning, purification, RNA preparation, ITC, Results, Table2
+and original Figure5.
+Minimal quotation: "each Rpp20/Rpp25 heterodimer binds to one molecule of 50 nt P3 RNA"
+
+Human Rpp25 full1-199, truncated25-170; Rpp20 full1-140, truncated35-140.
+Rpp25 Q9BUL9 is PF01918 at37-100; the partner Rpp20 O75817 is PF12328.
+Do not describe Rpp20 as another PF01918 protein merely from the broad
+Alba-superfamily designation. Both Rpp25 constructs exceed the Pfam match.
+His tags removed by TEV except Rpp20(35-140), which retains its tag.
+Some Rpp20 preparations required refolding; CD and coexpression controls
+are described. Historical clone sequencing was performed by authors,
+not independently repeated here.
+ITC in bufferA:10mM phosphate,2.7mM KCl,137mM NaCl,pH7,1mM DTE,
+25 C. Table2 averages three measurements, reported errors<5%.
+Protein association Kb (M^-1):full5.3e7;double truncation4.9e7.
+Full preassembled complex/P3 RNA Kb1.3e7;double-truncated complex6.3e6.
+Single Rpp20 has no detectable P3 binding; Rpp25 alone is weak under
+these conditions. These are target- and assay-specific negatives, not
+universal RNA-binding inability.
+Figure5 and Table2 support RNA complex assembly, not RNA cleavage,
+RNaseP/MRP catalysis, or an obligatory physiological assembly sequence.
+Binding constants are association constants, not dissociation constants.
+RNA titrant concentration differs slightly between Methods170uM and
+Figure5caption180uM; no silent harmonization is made.
+Access/review date: 2026-10-12.

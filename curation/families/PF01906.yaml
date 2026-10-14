@@ -1,0 +1,249 @@
+pfam_id: PF01906
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01906
+causal_graphs:
+  - graph_id: ybjq-joint-deletion-relative-growth-2014
+    title: YbjQ joint deletions alter colony growth relative to multiplicative expectations
+    scope: Babu2014 Table S2; all ten exact b0866__ybjQ recipient rows, each a separate joint genotype.
+    context: Hfr Cavalli donor deletion::Cm transferred into a Keio F- recipient deletion::Kan; rich LB with dual selection, 36 h outgrowth at 32 C. Protocol S2 reports two screens, four biological recipient colonies and eight measurements per pair.
+    family_mapping: E. coli K-12 YbjQ P0A8C1, sequence version 1, equals NP_415387.1 and AAC73953.1; 107 aa with PF01906 at 1-105. b0866/JW0850 reference identity is not independent sequencing of the historical assay clone. YbjQ is distinct from YjbQ/b4056/PF01894.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:83333
+    limitations: Normalized double-mutant colony growth is compared with multiplicative expected fitness from the single mutants, not WT or the addition of one deletion. Positive scores are not WT rescue or faster absolute growth. All ten donors are non-essential and labeled This Study in Table S1; Table S16 verifies their Hfr Cavalli deletion::Cm context. Raw colony images, row-specific dispersion, exact clone sequences and allele-specific rescue were not inspected. Marker, polar and secondary-mutation effects remain alternatives; no gene-to-gene interaction mechanism, heavy-metal binding or Fe-S chemistry is inferred.
+    nodes:
+      - node_id: ybjq-caic-joint-loss
+        label: "Joint ybjQ (b0866) and caiC (b0037) deletion"
+        node_type: PERTURBATION
+      - node_id: ybjq-asnb-joint-loss
+        label: "Joint ybjQ (b0866) and asnB (b0674) deletion"
+        node_type: PERTURBATION
+      - node_id: ybjq-gsia-joint-loss
+        label: "Joint ybjQ (b0866) and gsiA (b0829) deletion"
+        node_type: PERTURBATION
+      - node_id: ybjq-ycbx-joint-loss
+        label: "Joint ybjQ (b0866) and ycbX (b0947) deletion"
+        node_type: PERTURBATION
+      - node_id: ybjq-yegd-joint-loss
+        label: "Joint ybjQ (b0866) and yegD (b2069) deletion"
+        node_type: PERTURBATION
+      - node_id: ybjq-ygci-joint-loss
+        label: "Joint ybjQ (b0866) and ygcI (b2757) deletion"
+        node_type: PERTURBATION
+      - node_id: ybjq-csde-joint-loss
+        label: "Joint ybjQ (b0866) and csdE (b2811) deletion"
+        node_type: PERTURBATION
+      - node_id: ybjq-ygdl-joint-loss
+        label: "Joint ybjQ (b0866) and ygdL (b2812) deletion"
+        node_type: PERTURBATION
+      - node_id: ybjq-yhft-joint-loss
+        label: "Joint ybjQ (b0866) and yhfT (b3377) deletion"
+        node_type: PERTURBATION
+      - node_id: ybjq-idnd-joint-loss
+        label: "Joint ybjQ (b0866) and idnD (b4267) deletion"
+        node_type: PERTURBATION
+      - node_id: relative-colony-growth
+        label: Normalized colony growth relative to the multiplicative expectation
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: ybjq-caic-increases-relative-growth
+        subject: ybjq-caic-joint-loss
+        predicate: increases
+        object: relative-colony-growth
+        mechanism: "The joint ybjQ/caiC deletion has an alleviating S-score of 3.84384, indicating normalized colony growth above the multiplicative single-mutant expectation. This is an indirect joint-genotype phenotype, not the isolated effect of either deletion or direct protein interaction."
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:24586182
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+            snippet: high-confidence epistatic interactions
+            explanation: "Table S2 sheet WG_GI_Score_Mar_06_2013, row 681, b0037__caiC donor and b0866__ybjQ recipient, score 3.84384. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred from the S-score."
+            cache_path: evidence/PF01906/babu-2014.txt
+            cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402
+      - edge_id: ybjq-asnb-decreases-relative-growth
+        subject: ybjq-asnb-joint-loss
+        predicate: decreases
+        object: relative-colony-growth
+        mechanism: "The joint ybjQ/asnB deletion has an aggravating S-score of -8.41881, indicating normalized colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype phenotype, not the isolated effect of either deletion or direct protein interaction."
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:24586182
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+            snippet: high-confidence epistatic interactions
+            explanation: "Table S2 sheet WG_GI_Score_Mar_06_2013, row 5329, b0674__asnB donor and b0866__ybjQ recipient, score -8.41881. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred from the S-score."
+            cache_path: evidence/PF01906/babu-2014.txt
+            cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402
+      - edge_id: ybjq-gsia-decreases-relative-growth
+        subject: ybjq-gsia-joint-loss
+        predicate: decreases
+        object: relative-colony-growth
+        mechanism: "The joint ybjQ/gsiA deletion has an aggravating S-score of -5.97168, indicating normalized colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype phenotype, not the isolated effect of either deletion or direct protein interaction."
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:24586182
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+            snippet: high-confidence epistatic interactions
+            explanation: "Table S2 sheet WG_GI_Score_Mar_06_2013, row 5821, b0829__gsiA donor and b0866__ybjQ recipient, score -5.97168. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred from the S-score."
+            cache_path: evidence/PF01906/babu-2014.txt
+            cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402
+      - edge_id: ybjq-ycbx-decreases-relative-growth
+        subject: ybjq-ycbx-joint-loss
+        predicate: decreases
+        object: relative-colony-growth
+        mechanism: "The joint ybjQ/ycbX deletion has an aggravating S-score of -8.63197, indicating normalized colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype phenotype, not the isolated effect of either deletion or direct protein interaction."
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:24586182
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+            snippet: high-confidence epistatic interactions
+            explanation: "Table S2 sheet WG_GI_Score_Mar_06_2013, row 8055, b0947__ycbX donor and b0866__ybjQ recipient, score -8.63197. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred from the S-score."
+            cache_path: evidence/PF01906/babu-2014.txt
+            cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402
+      - edge_id: ybjq-yegd-increases-relative-growth
+        subject: ybjq-yegd-joint-loss
+        predicate: increases
+        object: relative-colony-growth
+        mechanism: "The joint ybjQ/yegD deletion has an alleviating S-score of 3.20893, indicating normalized colony growth above the multiplicative single-mutant expectation. This is an indirect joint-genotype phenotype, not the isolated effect of either deletion or direct protein interaction."
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:24586182
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+            snippet: high-confidence epistatic interactions
+            explanation: "Table S2 sheet WG_GI_Score_Mar_06_2013, row 18492, b2069__yegD donor and b0866__ybjQ recipient, score 3.20893. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred from the S-score."
+            cache_path: evidence/PF01906/babu-2014.txt
+            cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402
+      - edge_id: ybjq-ygci-increases-relative-growth
+        subject: ybjq-ygci-joint-loss
+        predicate: increases
+        object: relative-colony-growth
+        mechanism: "The joint ybjQ/ygcI deletion has an alleviating S-score of 3.27028, indicating normalized colony growth above the multiplicative single-mutant expectation. This is an indirect joint-genotype phenotype, not the isolated effect of either deletion or direct protein interaction."
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:24586182
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+            snippet: high-confidence epistatic interactions
+            explanation: "Table S2 sheet WG_GI_Score_Mar_06_2013, row 22658, b2757__ygcI donor and b0866__ybjQ recipient, score 3.27028. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred from the S-score."
+            cache_path: evidence/PF01906/babu-2014.txt
+            cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402
+      - edge_id: ybjq-csde-increases-relative-growth
+        subject: ybjq-csde-joint-loss
+        predicate: increases
+        object: relative-colony-growth
+        mechanism: "The joint ybjQ/csdE deletion has an alleviating S-score of 3.87969, indicating normalized colony growth above the multiplicative single-mutant expectation. This is an indirect joint-genotype phenotype, not the isolated effect of either deletion or direct protein interaction."
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:24586182
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+            snippet: high-confidence epistatic interactions
+            explanation: "Table S2 sheet WG_GI_Score_Mar_06_2013, row 25004, b2811__csdE donor and b0866__ybjQ recipient, score 3.87969. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred from the S-score."
+            cache_path: evidence/PF01906/babu-2014.txt
+            cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402
+      - edge_id: ybjq-ygdl-decreases-relative-growth
+        subject: ybjq-ygdl-joint-loss
+        predicate: decreases
+        object: relative-colony-growth
+        mechanism: "The joint ybjQ/ygdL deletion has an aggravating S-score of -6.45424, indicating normalized colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype phenotype, not the isolated effect of either deletion or direct protein interaction."
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:24586182
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+            snippet: high-confidence epistatic interactions
+            explanation: "Table S2 sheet WG_GI_Score_Mar_06_2013, row 25461, b2812__ygdL donor and b0866__ybjQ recipient, score -6.45424. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred from the S-score."
+            cache_path: evidence/PF01906/babu-2014.txt
+            cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402
+      - edge_id: ybjq-yhft-increases-relative-growth
+        subject: ybjq-yhft-joint-loss
+        predicate: increases
+        object: relative-colony-growth
+        mechanism: "The joint ybjQ/yhfT deletion has an alleviating S-score of 4.28552, indicating normalized colony growth above the multiplicative single-mutant expectation. This is an indirect joint-genotype phenotype, not the isolated effect of either deletion or direct protein interaction."
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:24586182
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+            snippet: high-confidence epistatic interactions
+            explanation: "Table S2 sheet WG_GI_Score_Mar_06_2013, row 33485, b3377__yhfT donor and b0866__ybjQ recipient, score 4.28552. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred from the S-score."
+            cache_path: evidence/PF01906/babu-2014.txt
+            cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402
+      - edge_id: ybjq-idnd-increases-relative-growth
+        subject: ybjq-idnd-joint-loss
+        predicate: increases
+        object: relative-colony-growth
+        mechanism: "The joint ybjQ/idnD deletion has an alleviating S-score of 3.61103, indicating normalized colony growth above the multiplicative single-mutant expectation. This is an indirect joint-genotype phenotype, not the isolated effect of either deletion or direct protein interaction."
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:24586182
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+            snippet: high-confidence epistatic interactions
+            explanation: "Table S2 sheet WG_GI_Score_Mar_06_2013, row 42095, b4267__idnD donor and b0866__ybjQ recipient, score 3.61103. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred from the S-score."
+            cache_path: evidence/PF01906/babu-2014.txt
+            cache_sha256: 6332bb61d065eda1276649d6e0c0b6a5df24827261d1f44ee2133e17ba8dd402
+discussions:
+  - discussion_id: duf74-assay-and-member-coverage
+    prompt: Validate YbjQ joint-genotype phenotypes and recover the retron-screen primary context.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Ten indirect effects preserve a multiplicative single-mutant comparator. These are not a direct molecular network or an isolated YbjQ mechanism.
+    evidence:
+      - reference: PMID:24586182
+        supports: SUPPORT
+        evidence_source: primary_tables_and_screen_protocols
+        explanation: All ten exact YbjQ recipient rows are retained with scores and donor context; repeated colony measurements do not exclude every marker, polar or secondary-mutation effect.
+      - reference: https://archiv.ub.uni-heidelberg.de/volltextserver/31572/1/Bomponis_PhD_Thesis.pdf
+        supports: PARTIAL
+        evidence_source: uninspected_primary_source_lead
+        explanation: Indexed section 2.6/Figure 19 suggests a YbjQ deletion/retron-induction phenotype, but PDF access returned challenge HTML. The figure and complete controls were not inspected, so no observed edge is derived from the snippet.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: Seek raw normalized fitness, independent alleles, complementation and exact Keio-derived clones. Retrieve the retron thesis figure and assess the published supplements; the related Bobonis2022 main HTML has no YbjQ occurrence, not proof that all supplementary data lack it. Most of the 9784 frozen members remain unassessed. Keep IN_PROGRESS and preserve family versus protein versus domain scope.
+  - discussion_id: duf74-metal-binding-and-construct-gap
+    prompt: Resolve biochemical function and exact self-association constructs without promoting predictions to mechanisms.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: A structural metal-binding label, static pentamers, neighborhood associations and a fusion selection do not establish a native YbjQ metal-binding or assembly mechanism.
+    evidence:
+      - reference: PMID:14973045
+        supports: PARTIAL
+        evidence_source: primary_fusion_selection
+        explanation: Table 1 includes YbjQ/b0866, but its fragment boundaries and clone-specific insert-dependence controls were not recovered. Selected lambda-repressor fusions can reflect indirect association or false positives; native pentamer stoichiometry was not measured by this assay.
+      - reference: https://grs.uncg.edu/wp-content/uploads/2025/03/2025-Showcase-Directory.pdf
+        supports: PARTIAL
+        evidence_source: primary_conference_abstract
+        explanation: Page 3, poster 35 reports predictions, expression/purification and ongoing metal-binding assays, not a finished metal-binding result with verified member and construct mapping.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: Recover the original fusion clone and controls, inspect member-specific binding/stoichiometry data and map deposited constructs to reference sequences. Do not infer a causal conformational transition from different static structures. Keep YbjQ/b0866 distinct from YjbQ/b4056/PF01894; the Leptospirillum and Sodalis thiamine nomenclature discrepancies need sequence-based resolution before transfer.
+  - discussion_id: duf74-rv1762c-revision-and-negative-context
+    prompt: Retain the Rv1762c revision and nonsignificant pooled result before adding an oxidative-protection mechanism.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Co-purification is not direct encapsulation. An individual-mutant result was removed during review, and the published pooled Tn-seq result is not significant.
+    evidence:
+      - reference: PMID:34751132
+        supports: PARTIAL
+        evidence_source: primary_figure_supplement_and_peer_review
+        explanation: Figure 1D reports MS co-purification. The author response confirms removal of uncomplemented Rv1762c mutant data with an unresolved encapsulation link. Supplement sheet TnSeq H2O2 low pH, row 1802 (RVBD_1762c), gives log2 FC +0.52, p=0.3979 and adjusted p=1; it is not an observed increase edge.
+      - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/O06797/
+        supports: SUPPORT
+        evidence_source: current_partial_domain_mapping
+        explanation: H37Rv O06797 is 262 aa, equal to NP_216278.1 and CCP44528.1, with partial PF01906 provider matches at 65-123 and 170-244. Whole-protein annotation is not domain-specific functional proof.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: Final Figure 2F is Cfp29 complementation, not Rv1762c. Nichols2020 thesis Figure 3.5F was not inspected and is not independent replication. Seek Rv1762c-specific primary controls and direct cargo/function evidence; preserve assay-specific nonsignificance without claiming no effect in every condition. Do not transfer DyP/Cfp29 effects to this protein or to all PF01906 members.

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01174
+  path: data/families/PF01174.yaml
+session:
+  id: 2026-10-11T100228Z-codex-196448
+  timestamp: '2026-10-11T10:02:28Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of PdxT partner and substrate contexts.
+  details: Review 20261011T100219Z-pf01174-pdxt-partner-and-substrate-contexts assessed
+    five graphs and five direct observed biochemical effects. Strain-168 mapping,
+    untagged/tagged distinction, joint product inputs, alternative nitrogen/substrate
+    controls and separate inhibitor readouts remain explicit. Native projection/overlay
+    checks passed during review. Concentration/rate/mass discrepancies, raw spectra,
+    reporter controls, historical clones and distinct SMY/other-member experiments
+    need follow-up. This is same-agent partial scientific assessment, not independent
+    endorsement or complete family characterization; status remains IN_PROGRESS.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T100219Z-pf01174-pdxt-partner-and-substrate-contexts/review.yaml

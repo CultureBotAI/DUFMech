@@ -4,7 +4,7 @@ name: Domain of unknown function DUF22
 short_name: DUF22
 seed_status: UNKNOWN_CANDIDATE
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01629
 counters:
   proteins: 83
@@ -23,3 +23,55 @@ provenance:
 interpro_id: InterPro:IPR002572
 description: This domain is found in 1 to 3 copies in archaebacterial proteins. The function of the domain
   is unknown. This family appears to be expanded in Archaeoglobus fulgidus.
+curation_history: history/records/PF01629
+discussions:
+- discussion_id: duf22-member-specific-causal-evidence
+  prompt: Obtain a verified DUF22 member-specific perturbation or biochemical assay before adding a causal
+    graph.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The inspected evidence grounds MJ0614 in PF01629 but does not establish a directed biological
+    effect. ATPase gene proximity and dUTPase-clan membership are not functional experiments. The inspected
+    tributyltin study's abstract assigns mutations to ATP synthase A/B subunits, not to an isolated DUF22
+    intervention.
+  evidence:
+  - reference: PMID:19663915
+    supports: PARTIAL
+    evidence_source: abstract
+    explanation: The sequenced Mth952-Mth961 interval does not make every gene in it causal. Named A/B
+      substitutions and differential protein expression cannot be transferred to PF01629. Publisher full
+      text was unavailable.
+  - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q58031/entry/pfam/PF01629/
+    supports: PARTIAL
+    evidence_source: database
+    explanation: Q58031/MJ0614 from M. jannaschii JAL-1, taxon 243232, sequence version 1, 130 residues,
+      maps to PF01629 at 7-110. Matching UniProt/InterPro reference sequences establish identity, not
+      function.
+  - reference: doi:10.1007/s00792-003-0318-7
+    supports: PARTIAL
+    evidence_source: search_lead_only
+    explanation: The primary 2003 ATPase purification paper is a follow-up lead. Its PDF was not retrieved;
+      no full-text or experiment-specific assessment is claimed.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Bounded searches covered DUF22/PF01629/COG1417 and MJ0614/Q58031/MTH952/MTH0952/MMP1047. No causal
+    edge is supported by the inspected material; this is not an exhaustive absence claim. Resolve plant
+    DUF221/OSCA alias collisions before transferring any calcium-channel claim. Minimal identity and excluded-transfer
+    evidence is retained under evidence/PF01629; no dummy graph is added.
+curation_events:
+- timestamp: '2026-10-11T07:10:08Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Retain DUF22 identity and causal-evidence gap
+  history_record: history/records/PF01629/2026-10-11T071008Z-codex-2842d9.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T07:14:20Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of the DUF22 graphless disposition
+  history_record: history/records/PF01629/2026-10-11T071420Z-codex-8937fd.yaml
+  event_index: 0
+  llm_assisted: true

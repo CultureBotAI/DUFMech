@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01927
+  path: curation/families/PF01927.yaml
+session:
+  id: 2026-10-12T022834Z-codex-012b27
+  timestamp: '2026-10-12T02:28:34Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate PF01927 MUT-7 and EXD3 binding, cleavage, assembly and cellular
+    contexts.
+  details: 'Busetto2024 PMID39188014 and its publisher supplement support 14 scoped
+    graphs with 24 OBSERVED edges: 19 DIRECT physical/biochemical effects, 3 INDIRECT
+    cellular effects and 2 UNRESOLVED coexpression recovery effects. Four evidence
+    ledgers preserve exact reference/Pfam boundaries, wider experimental CTDs, extra-domain
+    substitutions, affinity and mutant-numbering discrepancies, tag/solubility controls,
+    conditional negatives and unreviewed member contexts. Primary figures1-7 and selected
+    supplement figures/tables were inspected. Imported snapshot identity and counters
+    remain unchanged; status IN_PROGRESS with two OPEN discussions. Baseline 8296
+    records had zero generated drift. Native regeneration and retained review follow;
+    no publication or independent endorsement.'

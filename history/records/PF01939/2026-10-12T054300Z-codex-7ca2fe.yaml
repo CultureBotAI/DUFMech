@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01939
+  path: curation/families/PF01939.yaml
+session:
+  id: 2026-10-12T054300Z-codex-7ca2fe
+  timestamp: '2026-10-12T05:43:00Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: needs_followup
+  summary: Curate scoped NucS cleavage, clamp and native mutation graphs with domain
+    and assay limits
+  details: Added nine graphs and33 observed edges for P.abyssi,T.kodakarensis and
+    C.glutamicum ATCC13032 using inspected primary text,figures and selected supplements.
+    Six hash-bound ledgers and two OPEN discussions retain current N/C-terminal family
+    boundaries,tail-deletion differences,mutation frequency versus rate,and conflicting3/5-nt
+    product assignments. Baseline8296 records had zero drift. Partial coverage remains
+    IN_PROGRESS; no universal DSB-to-HR chain,publication or family-wide completion
+    is claimed.

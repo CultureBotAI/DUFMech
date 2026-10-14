@@ -1,0 +1,45 @@
+PF01906 primary evidence assessment, 2026-10-11 UTC
+Babu2014, PMID:24586182, DOI:10.1371/journal.pgen.1004120
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+Publisher supplements: https://journals.plos.org/plosgenetics/article/file
+with id=10.1371/journal.pgen.1004120.sNNN and type=supplementary.
+S022 Table S1; S023 Table S2; S037 Table S16; S007 Protocol S2;
+S021 Protocol S16. Main screen Results/Methods read; both protocol pages
+visually inspected. Previously converted primary XLS tables were reread as
+XLSX using standard ZIP/XML; conversion was not repeated for this family.
+Minimal quotation: "high-confidence epistatic interactions".
+
+Table S2, sheet WG_GI_Score_Mar_06_2013, columns A donor, B recipient, C score.
+All ten exact b0866__ybjQ recipient rows:
+Row | donor | recipient | S-score
+681 | b0037__caiC | b0866__ybjQ | 3.84384
+5329 | b0674__asnB | b0866__ybjQ | -8.41881
+5821 | b0829__gsiA | b0866__ybjQ | -5.97168
+8055 | b0947__ycbX | b0866__ybjQ | -8.63197
+18492 | b2069__yegD | b0866__ybjQ | 3.20893
+22658 | b2757__ygcI | b0866__ybjQ | 3.27028
+25004 | b2811__csdE | b0866__ybjQ | 3.87969
+25461 | b2812__ygdL | b0866__ybjQ | -6.45424
+33485 | b3377__yhfT | b0866__ybjQ | 4.28552
+42095 | b4267__idnD | b0866__ybjQ | 3.61103
+
+Table S1 rows 6,47,53,70,82,92,101,109,139,151 identify the ten donors as
+non-essential, This Study. Table S16 rows 12,15,23,49,62,133,142,151,154,163
+identify their Hfr Cavalli deletion::Cm strains. Protocol S16 specifies Keio
+F- deletion::Kan recipients. Main Methods specify rich LB dual selection,
+36 h outgrowth at 32 C. Protocol S2 specifies two screens, four biological
+recipient colonies, eight measurements per pair and exclusion within 10 kb
+of donors. Thresholds after Z filtering are <=-3.3 and >=3.1; all ten qualify.
+The full dataset also incorporates 39 earlier screens; these ten donors are
+explicitly new, not ten independently replicated publications.
+
+The comparator is multiplicative expected fitness from the single mutants,
+not WT or addition of an isolated deletion. Six alleviating scores indicate
+above-expected normalized double-mutant growth; four aggravating scores
+indicate below-expected growth. Positive scores are not WT rescue or faster
+absolute growth. Each pair is one joint perturbation, not a gene-to-gene arrow.
+No YbjQ-specific raw colony images, replicate dispersion, exact fitness
+fractions, allele rescue, historical clone sequencing or independent screen
+validation was inspected. Marker, polar and secondary-mutation effects remain.
+These phenotypes do not establish metal binding, Fe-S chemistry, a biochemical
+pathway or a common mechanism for all partner genes or all PF01906 members.

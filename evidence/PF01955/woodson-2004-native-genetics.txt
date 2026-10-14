@@ -1,0 +1,31 @@
+Primary evidence, inspected 2026-10-12 UTC
+PMID14990804; DOI10.1073/pnas.0305939101.
+https://www.pnas.org/doi/10.1073/pnas.0305939101
+Locators: first three genetic Results subsections; growth Methods; original
+Figure2A/B and caption visually inspected.
+Minimal exact quotation: "block in Cbi salvaging".
+
+Halobacterium sp. NRC-1-derived strains, defined liquid medium at37C,
+corrinoids100pM supplied as cyano forms; readout absorbance650nm over~170h.
+With Cbi, JE6812(delta-cbiP delta-cbiZ) has much lower OD than JE6738
+(delta-cbiP cbiZ+). The double mutant's late residual OD rise is visible;
+do not translate the author's growth-negative interpretation into zero cells
+or lethality. Both lack substantial growth without exogenous corrinoids.
+In JE6812, adding Cby gives robust growth in Figure2A (reported27h doubling).
+Cbi-GDP and Cbl rescue are described but not plotted.
+
+JE7210(delta-cbiP delta-cbiZ ura3::cbiZ+) regains Cbi-supported growth
+(Figure2B, reported22h doubling), compared with JE6812; without corrinoid
+the same restored strain stays low. The result is sufficiency within the
+remaining salvage machinery and supplied precursor, not CbiZ-only synthesis.
+JE7002(delta-cbiP delta-cbiZ ura3::cbiP+) grows without supplied corrinoid;
+this restores cbiP, not cbiZ, and is a pathway-control result.
+JE6811(delta-cbiZ, cbiP+) and wild type grow similarly without corrinoids
+(reported30h and34h doubling). The experiment does not support general
+CbiZ essentiality or a requirement for de novo synthesis under those conditions.
+
+No intracellular corrinoid time course or direct native-enzyme reaction was
+measured here. Whole-gene phenotypes are not isolated-domain activities.
+Deletion endpoint/polarity details require the original supporting constructs;
+chromosomal cbiZ restoration substantially supports the gene-specific effect.
+Replicate counts/error bars are not stated for these plotted curves.

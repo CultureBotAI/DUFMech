@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01914
+  path: curation/families/PF01914.yaml
+session:
+  id: 2026-10-12T005333Z-codex-52f262
+  timestamp: '2026-10-12T00:53:33Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Correct YchE Figure1C p-value transcription without changing graph direction
+  details: Enlarged original Figure1C confirms p=0.38 for YchE, while p=0.87 labels
+    YjeM. Replace mistaken p=0.387 in graph limits and redirect nine source references
+    to a corrected evidence ledger. Preserve prior report and evidence bytes. The
+    nonsignificant conclusion, all 39 effect directions and IN_PROGRESS status remain
+    unchanged.

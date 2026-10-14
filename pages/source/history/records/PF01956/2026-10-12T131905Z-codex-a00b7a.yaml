@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01956
+  path: curation/families/PF01956.yaml
+session:
+  id: 2026-10-12T131905Z-codex-a00b7a
+  timestamp: '2026-10-12T13:19:05Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped EMC reconstitution and EMC3 variant phenotypes
+  details: 'Inspected Guna2018, Pleiner2020 and Bai2020 primary experiments, selected
+    supplements and current human/yeast domain mappings. Added seven graphs with 29
+    observed experimental edges: two whole-complex direct insertion effects and 27
+    unresolved perturbation effects. Preserved tagged exogenous construct scope, client-specific
+    K/E comparisons, joint methionine mutant attribution, Hxt3 RNA confounding, yeast
+    strain distinctions and source protocol limits. Four minimal evidence ledgers
+    and two open discussions retain TMCO1, archaeal and additional EMC coverage. Records
+    baseline passed 8296 with zero drift; no completion or publication claim.'
+  sections:
+  - causal_graphs
+  - discussions

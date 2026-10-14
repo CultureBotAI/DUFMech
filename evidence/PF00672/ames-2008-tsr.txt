@@ -1,0 +1,52 @@
+PF00672 primary-evidence assessment, inspected 2026-10-11
+Ames et al. (2008), PMID:18621896, doi:10.1128/jb.00750-08
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2566183/
+Inspected Methods, connector-mutant Results, Table 1, Discussion and
+Figures 2/4 visually. No raw movies or replicate-level data were reanalyzed.
+Minimal quotations:
+Results: "under unstimulated, steady-state conditions"
+Results: "this mutant receptor did not mediate chemotaxis"
+
+Curator's factual notes, not a transcription:
+Mutant pRR53 plasmids express full-length Tsr under IPTG control. The
+complete mutant tsr coding regions were sequenced in the study. All hosts
+derive from E. coli K-12 RP437. UU1250 lacks aer, tsr, tar/tap and trg and
+retains CheR/CheB adaptation. UU1535 has aer, tsr and trg deletions plus
+the tar-cheB deletion and lacks CheR/CheB. They are not interchangeable.
+The screen uses optimal WT induction, 100 uM IPTG for pRR53, but exact
+tethered-cell induction, temperature and buffer are not restated in the
+2008 rotation Methods. Soft-agar conditions are not transferred to tethering.
+
+Figure 4 uses 100 tethered cells per strain/panel, scored into five classes.
+Rotation output is a category-weighted estimate of time spent clockwise,
+not simply the percentage of cells rotating clockwise. The cited primary
+protocol (Ames et al. 2002, PMID:11983857, doi:10.1073/pnas.092071899,
+https://pmc.ncbi.nlm.nih.gov/articles/PMC124528/, Behavioral Assays inspected)
+uses weights 0, 0.25, 0.5, 0.75 and 1 from exclusively CCW to exclusively CW.
+Other 2002 crosslinking conditions are not transferred to this assay.
+
+WT Tsr gives about 25% CW time in adaptation-proficient UU1250 and above
+80% in adaptation-defective UU1535. Table 1 classifies G235E as CW locked:
+above 75% CW in UU1250, at least 70% in UU1535. Figure 4 displays G235E.
+G235C is CCW locked: at most 15% CW in both hosts; Figure 4 displays G235C.
+The adopted contrasts are G235E versus WT in UU1250 (increase) and G235C
+versus WT in UU1535 (decrease). Classification thresholds are not reported
+as exact per-mutant numeric estimates. No independent-replicate count is
+inferred from the 100-cell display.
+
+G235P retains approximately WT rotation behavior but is chemotaxis-null.
+Figure 2 compares its pRR53 derivative with WT and pRR48 vector in UU1250
+on tryptone soft agar with 50 ug/mL ampicillin, 32.5 C, 8 h. G235P lacks
+the WT serine-ring pattern and has reduced colony expansion, but still
+spreads more than the vector because cells can reverse rotation. This is
+not a measured growth defect or absence of motility. The caption does not
+state an exact IPTG dose for this photographed plate.
+
+Except D236H, screened mutants had at least 50% WT steady-state Tsr
+abundance in UU1535; that does not prove local folding or normal assembly.
+G235C does not function in either tested heterodimer configuration, whereas
+G235E partially complements the binding-site testers. These are not clean
+restoration experiments for each adopted endpoint. CCW-only behavior can
+reflect defective signaling-complex assembly as well as a particular output
+state. Rotation is a cellular reporter, not a direct CheA phosphorylation
+or isolated HAMP-conformation measurement. No packing-model edge is adopted.

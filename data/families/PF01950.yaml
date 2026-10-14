@@ -4,7 +4,7 @@ name: Fructose-1,6-bisphosphatase
 short_name: FBPase_3
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01950
 counters:
   proteins: 507
@@ -24,3 +24,344 @@ interpro_id: InterPro:IPR002803
 description: This is a family of bacterial and archaeal fructose-1,6-bisphosphatases (FBPases). FBPase
   catalyses the hydrolysis of D-fructose-1,6-bisphosphate (FBP) to D-fructose-6-phosphate (F6P) and orthophosphate
   and is an essential regulatory enzyme in the glyconeogenic pathway.
+curation_history: history/records/PF01950
+discussions:
+- discussion_id: pf01950-bifunctional-mechanism
+  prompt: Complete member-specific aldolase/phosphatase and residue-level evidence before extending the
+    chemical graph.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The retained Thermococcus hydrolysis experiment does not describe the later-discovered dual
+    reaction or prove a family-wide mechanism.
+  evidence:
+  - reference: PMID:21983966
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Public abstract and supplementary S2-S8 inspected; main Methods and mutant experiments
+      remain unreviewed. Static structures are not an observed switching trajectory.
+  - reference: PMID:20348906
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Abstract and selected supplement sections inspected; assay identities, conditions and
+      controls need full review.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: ST0318 PDB3R1M has one extra initial methionine versus F9VMT6 v1; paper Lys232/Tyr229 map to
+    UniProt Lys231/Tyr228. Verify each construct separately. See evidence/PF01950/bifunctionality-followup.txt.
+- discussion_id: pf01950-cellular-causation
+  prompt: Resolve which Fbp activity supports the conditional growth phenotype and identify the carbon-response
+    mechanism.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Whole-gene deletion removes both potential activities; rich-medium extracts and synthetic-medium
+    growth were measured in different experiments.
+  evidence:
+  - reference: PMID:15317785
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Deletion validation, growth, extract activity and Northern experiments inspected. No
+      fbp reintroduction or selective-activity rescue was found in the full paper.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Monocistronic RNA reduces but does not exhaustively exclude polarity. Test selective catalytic
+    mutants with protein/folding controls and rescue; separate RNA abundance from initiation rate and
+    direct inhibition from carbon-regimen responses.
+- discussion_id: pf01950-remaining-evidence
+  prompt: Extend primary coverage beyond the scoped KOD1-derived experiments.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: A Pfam rename, reviewed database annotation and homolog alignment are not experiments on
+    every family member.
+  evidence:
+  - reference: PMID:12065581
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Earlier Fbp assay referenced by Sato2004; exact buffer, metal concentration and historical
+      recombinant construct remain to be independently checked.
+  - reference: PMID:15274916
+    supports: PARTIAL
+    evidence_source: database
+    explanation: Imported family citation and UniProt mutant annotations are leads; full structural paper
+      was not inspected.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Inspect Du2011, the Thermococcus onnurineus study, other tested members and subsequent literature.
+    Keep computational mechanisms distinct. See evidence/PF01950/coverage.txt; all records and earlier
+    follow-ups remain in scope.
+causal_graphs:
+- graph_id: tk-fbp-hydrolysis-2004
+  title: Purified Thermococcus Fbp converts FBP to F6P
+  scope: Whole-protein Fbp from Thermococcus kodakarensis KOD1, expressed in E. coli.
+  context: Sato2004 Table2; purified preparation with 2 mM FBP at 85 C; F6P detected by coupled glucose-6-phosphate
+    isomerase/dehydrogenase assay. FBP-minus and thermal-decomposition corrections were applied.
+  family_mapping: Q8NKR9 v1, 375 aa, fbp/TK2164; historical AB081839.1/BAC10571.1 and genome BAD86353.1;
+    PF01950 residues 6-372. Historical recombinant clone was not independently resequenced.
+  taxon: NCBITaxon:69014
+  scope_status: MECHANISTIC
+  limitations: Whole protein, not isolated-domain catalysis. Exact assay buffer and metal concentration
+    refer to uninspected Rashid2002 methods. The 95 C kinetic constants are not the 85 C activity endpoint.
+    No aldolase, residue chemistry or universal family activity is inferred from this experiment.
+  nodes:
+  - node_id: reaction
+    label: Purified KOD1 Fbp with FBP under assay conditions
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8NKR9
+  - node_id: f6p
+    label: F6P product detected by coupled assay
+    node_type: STATE
+  edges:
+  - edge_id: tk-fbp-f6p
+    subject: reaction
+    predicate: produces
+    object: f6p
+    mechanism: The purified whole-protein preparation hydrolyzes FBP at its 1-phosphate position; the
+      coupled F6P readout gives 18.9 +/- 0.7 U/mg at 85 C.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15317785
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC516828/
+      snippet: generate F6P
+      explanation: First Results subsection and Table2/footnotes; three independent activity experiments
+        and FBP assay controls. Product detection is coupled, not direct mass spectrometry.
+      cache_path: evidence/PF01950/sato-2004-biochemistry.txt
+      cache_sha256: 92dd51159f203bb71a87d5732105de6eea4ef9f202afd618afe1a9be5fb9b770
+- graph_id: kw128-fbp-deletion-growth-2004
+  title: Fbp deletion reduces growth in defined gluconeogenic media
+  scope: KOD1-derived KW128 compared with delta-fbp-8J, not wild-type KOD1 versus a domain mutant.
+  context: Anaerobic 85 C; rich-medium preculture followed by synthetic ASW-AA with 20 amino acids and
+    sulfur, with or without 5 g/L sodium pyruvate. Starch supplementation is a separate positive growth
+    condition.
+  family_mapping: Entire 1128-bp fbp/TK2164 CDS replaced with trpE; PCR, sequencing and Southern validation
+    reported. Reference Q8NKR9 v1, PF01950 6-372; KW128 is delta-pyrF delta-trpE::pyrF.
+  taxon: NCBITaxon:69014
+  scope_status: PHENOTYPIC
+  limitations: OD660 is not viability. Amino-acid-only growth result is reported without its curve. No
+    fbp reintroduction rescue; the monocistronic transcript does not exhaustively exclude polarity. Loss
+    of a bifunctional protein does not identify which activity limits growth or demonstrate universal
+    essentiality.
+  nodes:
+  - node_id: deletion
+    label: Delta-fbp-8J whole-gene replacement versus KW128
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NKR9
+  - node_id: pyruvate_growth
+    label: OD660 growth in ASW-AA plus pyruvate
+    node_type: PHENOTYPE
+  - node_id: amino_acid_growth
+    label: Growth in ASW-AA without added pyruvate
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: deletion-pyruvate-growth
+    subject: deletion
+    predicate: decreases
+    object: pyruvate_growth
+    mechanism: The deletion strain lacks the OD increase seen in KW128 and delta-imp-2A under the matched
+      pyruvate condition; the missing intracellular reaction is not selectively tested.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15317785
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC516828/
+      snippet: was not able to grow
+      explanation: Growth Methods/Results, Table1 and visually inspected Figure3; starch-supported growth
+        limits the essentiality claim.
+      cache_path: evidence/PF01950/sato-2004-genetics.txt
+      cache_sha256: e3ae36fb3efddb71d32ec281b61b9311662127ef60194bcfd616dd3acf6715b7
+  - edge_id: deletion-amino-acid-growth
+    subject: deletion
+    predicate: decreases
+    object: amino_acid_growth
+    mechanism: The authors report the same conditional growth defect when amino acids supply gluconeogenic
+      carbon without added pyruvate; this is not a separately plotted quantitative effect.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15317785
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC516828/
+      snippet: The same results
+      explanation: Growth Results explicitly extend the comparison to ASW-AA without pyruvate; underlying
+        curve and numerical replication for that condition are not shown.
+      cache_path: evidence/PF01950/sato-2004-genetics.txt
+      cache_sha256: e3ae36fb3efddb71d32ec281b61b9311662127ef60194bcfd616dd3acf6715b7
+- graph_id: kw128-fbp-deletion-extract-2004
+  title: Fbp deletion reduces extract FBPase activity
+  scope: Rich-medium KW128 versus delta-fbp-8J cell extracts.
+  context: ASW-YT plus 5 g/L sodium pyruvate, anaerobic 85 C for 15 h, early stationary phase. FBPase
+    measured by the coupled F6P assay, not by in vivo flux analysis.
+  family_mapping: The delta-fbp-8J entire-CDS replacement targets fbp/TK2164; Q8NKR9 v1 maps PF01950 6-372.
+    Whole-gene effect in an engineered KOD1-derived background.
+  taxon: NCBITaxon:69014
+  scope_status: PHENOTYPIC
+  limitations: Rich ASW-YT supports mutant growth; this is not the synthetic-medium growth experiment.
+    No direct intracellular flux, individual aldolase contribution, fbp rescue or domain-only perturbation
+    is established. Other activities below assay detection are not proven absent.
+  nodes:
+  - node_id: deletion
+    label: Delta-fbp-8J versus KW128 in rich pyruvate medium
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NKR9
+  - node_id: activity
+    label: FBPase activity in early-stationary cell extracts
+    node_type: ACTIVITY
+  edges:
+  - edge_id: deletion-extract-fbpase
+    subject: deletion
+    predicate: decreases
+    object: activity
+    mechanism: Extract activity detected in KW128 is undetectable in delta-fbp-8J under matched rich-medium
+      conditions; no measured cellular intermediate links this result to the separate growth assay.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15317785
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC516828/
+      snippet: activity could not be detected
+      explanation: 'Cell-extract Methods/Results: KW128 0.37 +/- 0.02 U/mg, delta-imp-2A 0.34 +/- 0.01;
+        delta-fbp-8J undetected. Assay detection context and rich-medium growth retained.'
+      cache_path: evidence/PF01950/sato-2004-genetics.txt
+      cache_sha256: e3ae36fb3efddb71d32ec281b61b9311662127ef60194bcfd616dd3acf6715b7
+- graph_id: kw128-carbon-regimen-2004
+  title: Carbon regimen changes Fbp transcript and extract activity in KW128
+  scope: Starch-versus-pyruvate supplementation within KW128 only.
+  context: Rich ASW-YT with 5 g/L starch versus 5 g/L sodium pyruvate, anaerobic 85 C. RNA sampled early
+    exponential phase, 30 ug per Northern lane; extract activity sampled after 15 h at early stationary
+    phase.
+  family_mapping: Intact fbp/TK2164 in KOD1-derived KW128; Q8NKR9 v1 PF01950 6-372. The probe detects
+    the fbp transcript, not a distinct class-IV imp transcript.
+  taxon: NCBITaxon:69014
+  scope_status: PHENOTYPIC
+  limitations: Regimen substitution, not addition of starch to fixed pyruvate or direct enzyme inhibition.
+    Northern signal measures RNA abundance rather than initiation rate. Different sampling phases preclude
+    an observed RNA-to-activity edge; carbon sensing, RNA stability and protein abundance are unresolved.
+  nodes:
+  - node_id: regimen
+    label: Starch instead of pyruvate supplementation in KW128
+    node_type: PERTURBATION
+  - node_id: transcript
+    label: Fbp Northern signal in early-exponential KW128
+    node_type: STATE
+    grounding:
+    - UniProtKB:Q8NKR9
+  - node_id: activity
+    label: FBPase activity in early-stationary KW128 extract
+    node_type: ACTIVITY
+  edges:
+  - edge_id: kw128-regimen-transcript
+    subject: regimen
+    predicate: decreases
+    object: transcript
+    mechanism: The fbp-probe signal is weaker under starch supplementation; the regulator and contribution
+      of RNA turnover are not measured.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15317785
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC516828/
+      snippet: highly reduced
+      explanation: Figure4B KW128 P/S lanes visually inspected; equal RNA loading and delta-fbp probe-negative
+        comparison, without a quantified fold change.
+      cache_path: evidence/PF01950/sato-2004-carbon-response.txt
+      cache_sha256: 68616fcd5fa2fd30a3af366cfaeddba886d43bdfb572c891ce98e56696874477
+  - edge_id: kw128-regimen-activity
+    subject: regimen
+    predicate: decreases
+    object: activity
+    mechanism: Starch-grown KW128 extracts have activity below 0.01 U/mg versus 0.37 +/- 0.02 U/mg after
+      pyruvate growth; this does not demonstrate direct starch inhibition of purified Fbp.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15317785
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC516828/
+      snippet: no detectable FBPase activity
+      explanation: Cell-extract Results and paired carbon-regimen Methods; the strain-specific activity
+        values support this edge independently of the Northern result.
+      cache_path: evidence/PF01950/sato-2004-carbon-response.txt
+      cache_sha256: 68616fcd5fa2fd30a3af366cfaeddba886d43bdfb572c891ce98e56696874477
+- graph_id: deltaimp-carbon-regimen-2004
+  title: Carbon regimen changes Fbp transcript and extract activity in delta-imp-2A
+  scope: Starch-versus-pyruvate supplementation within delta-imp-2A, not an effect of imp deletion.
+  context: Rich ASW-YT with 5 g/L starch versus 5 g/L sodium pyruvate, anaerobic 85 C. Early-exponential
+    RNA and 15 h early-stationary extracts were sampled separately.
+  family_mapping: Intact fbp/TK2164 (Q8NKR9 v1, PF01950 6-372) in the imp-disrupted KOD1-derived strain.
+    The imp gene is a different family and not a second PF01950 paralog.
+  taxon: NCBITaxon:69014
+  scope_status: PHENOTYPIC
+  limitations: No direct carbon-binding or regulatory mechanism. Transcript and extract measurements do
+    not form a demonstrated mediation chain. The imp and fbp blot panels have different development times
+    and cannot quantify cross-gene abundance. This graph does not infer a causal effect from the near-equal
+    KW128 and delta-imp activities.
+  nodes:
+  - node_id: regimen
+    label: Starch instead of pyruvate in delta-imp-2A
+    node_type: PERTURBATION
+  - node_id: transcript
+    label: Fbp Northern signal in early-exponential delta-imp-2A
+    node_type: STATE
+    grounding:
+    - UniProtKB:Q8NKR9
+  - node_id: activity
+    label: FBPase activity in early-stationary delta-imp-2A extract
+    node_type: ACTIVITY
+  edges:
+  - edge_id: deltaimp-regimen-transcript
+    subject: regimen
+    predicate: decreases
+    object: transcript
+    mechanism: Figure4B shows reduced fbp transcript signal under starch relative to pyruvate within delta-imp-2A;
+      the molecular carbon-response pathway remains unresolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15317785
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC516828/
+      snippet: highly reduced
+      explanation: Figure4B delta-imp-2A P/S lanes and transcription Results; no independent regulator
+        perturbation or quantitative RNA fold change.
+      cache_path: evidence/PF01950/sato-2004-carbon-response.txt
+      cache_sha256: 68616fcd5fa2fd30a3af366cfaeddba886d43bdfb572c891ce98e56696874477
+  - edge_id: deltaimp-regimen-activity
+    subject: regimen
+    predicate: decreases
+    object: activity
+    mechanism: Extract activity is undetectable with starch rather than the 0.34 +/- 0.01 U/mg measured
+      after pyruvate growth; direct enzyme inhibition is not established.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15317785
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC516828/
+      snippet: no detectable FBPase activity
+      explanation: Cell-extract Results specify undetectable activity in both disruptants with starch,
+        versus the strain-specific pyruvate activity; this is separate from the Northern observation.
+      cache_path: evidence/PF01950/sato-2004-carbon-response.txt
+      cache_sha256: 68616fcd5fa2fd30a3af366cfaeddba886d43bdfb572c891ce98e56696874477
+curation_events:
+- timestamp: '2026-10-12T08:17:30Z'
+  curator: Codex
+  action: CREATE
+  outcome: needs_followup
+  summary: Curate scoped PF01950 Thermococcus hydrolysis and conditional cellular effects
+  history_record: history/records/PF01950/2026-10-12T081730Z-codex-0a2935.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T08:34:13Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial PF01950 scientific self-review of eight scoped experimental effects
+  history_record: history/records/PF01950/2026-10-12T083413Z-codex-3a7b55.yaml
+  event_index: 0
+  llm_assisted: true

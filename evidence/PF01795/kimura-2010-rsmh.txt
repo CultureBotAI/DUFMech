@@ -1,0 +1,106 @@
+PF01795 scoped primary-evidence ledger
+Assessed: 2026-10-11 UTC. Curator: Codex.
+Reference: PMID:19965768; DOI:10.1093/nar/gkp1073; PMC2831307.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2831307/?report=reader
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2831307/fullTextXML
+Full HTML and XML retrieved. Methods, Results and Discussion inspected;
+Figures 2, 3 and 4 visually inspected. Figures 1 and 5 and the external
+supplement were not visually reviewed. Publisher supplement access failed;
+no primer table or complete reporter sequence was independently checked.
+
+Minimal verbatim anchors used by the graph evidence:
+"In vitro reconstitution"
+"N4-methylation"
+"relative F/R value"
+"Doubling times"
+All remaining text is curator paraphrase and assessment, not quotation.
+
+Identity and constructs
+BW25113 is the cellular parent. The rsmH::kan strain is from the Keio
+collection; rsmI::Cm was constructed by one-step deletion and P1-transduced
+into rsmH::kan to make the double knockout. No genetic complementation is
+presented in the experiments adopted here. Whole-gene perturbations can
+have indirect/polar effects; these are not isolated-domain perturbations.
+Recombinant RsmH and RsmI came from ASKA pCA24N constructs with N-terminal
+His tags, induction with 0.1 mM IPTG and nickel-affinity purification.
+They were treated with 2 mM AdoHcy for 1 h at 37 C and dialyzed to remove
+endogenous SAM before reconstitution. Figure 3A shows Coomassie-stained
+preparations, not a quantitative guarantee of absolute purity.
+
+Figure 3 and reconstitution Methods
+Substrates were isolated from the double deletion strain. The reaction
+was 100 ul, 37 C for 1 h, 100 mM NH4Cl, 20 mM HEPES-KOH pH 7.6,
+10 mM magnesium acetate, 6 mM beta-mercaptoethanol, 1 mM SAM when supplied.
+The Methods specify 10 pmol recombinant proteins, RsmH and/or RsmI;
+do not infer an independently verified total dosage for the mixed sample.
+Substrate amounts differ: 5 pmol 30S or tightly coupled 70S versus
+2.5 pmol naked 16S RNA. After extraction, RNase T1 digestion and LC/MS
+detected the C1402-containing tetramer.
+
+RsmH plus SAM and 30S gives the N4-methyl product m4CCCGp at m/z 645.1,
+with low apparent efficiency. RsmI alone gives the isomeric CmCCGp.
+Both enzymes with SAM and 30S give m4CmCCGp at m/z 652.1, alongside a
+substantial monomethylated signal. The displayed joint-enzyme assay lacks
+detectable methylated product when SAM is omitted, 70S replaces 30S, or
+half as much naked 16S replaces 30S. The last comparison changes both
+substrate state and nominal amount; no equal-dose specificity inference.
+The negative traces do not establish universal inactivity, an absolute
+detection limit, separate tests for every enzyme/substrate combination,
+or an experimentally observed order of the two methylations.
+DIRECT here means the net purified-preparation assay effect, not observed
+atomic transfer, isolated PF01795 sufficiency or absence of contaminants.
+
+Figure 2 and cellular methylation Results
+Total RNA analysis and an excised 16S fragment spanning 1378-1426, with
+RNase T1/RNase A digestion and collision-induced dissociation, support
+assignment at C1402. WT carries m4Cm. Deleting rsmH removes the N4 mark
+while retaining the 2'-O mark (Cm). The dimethyl and monomethyl tetramers
+give 652.1 and 645.1 respectively. The RNase A fragment changes from
+Gm4CmCp 1000.2 to GCmCp 986.2. In the rsmI-only deletion, nucleoside m4C
+overlaps the m5C1407 contribution and is not a uniquely separated peak.
+The curated cellular edge concerns loss of the N4 modification, not loss
+of both marks or a directly isolated methylation-to-fitness mechanism.
+
+Figure 4 and luciferase Methods/Results
+Renilla/Firefly constructs measure Fluc/Rluc (F/R), normalized separately
+to WT for each construct. Initiation reporters use AUG-driven Renilla
+and a Firefly start codon on the same transcript. AAA is the negligible
+negative comparator. Readthrough/frameshift reporters instead contain
+a short window between the two luciferase coding sequences.
+Cells grow at 37 C in LB with 100 ug/ml ampicillin and are harvested at
+A600 0.5. Freeze/thaw lysates are clarified and assayed with the dual
+luciferase system. Full window/primer sequences need the unavailable SI.
+Figure 4's caption does not establish the replicate count or definition
+of its error bars; do not borrow n=3 from the growth table.
+
+Single rsmH deletion versus WT: AUU reporter approximately 1.8-fold,
+UGA approximately 0.5, UAG approximately 0.8, +1 frame approximately 0.9,
+and -1 frame approximately 1.2. Double rsmH/rsmI deletion: AUU about 1.8,
+UUG about 0.8, GUG about 0.9, UGA about 0.5. These are normalized reporter
+ratios, not measured molecular rate constants. Single rsmH deletion does
+not justify a claim that every non-AUG start is increased. RsmI-only UGA
+increases about 1.3-fold, so it cannot be substituted for the RsmH result.
+
+Important internal contradiction: Figure 4B and the Results show UGA
+reporter reduction after rsmH deletion, whereas the Discussion says
+UGA readthrough increases when the N4 mark is absent. The curated edge
+uses Figure 4B plus Results and retains this unresolved textual conflict.
+No edge asserts that the reporter measures RF2 affinity, direct P-site
+geometry changes, IF3 feedback or a complete modification-to-growth chain.
+
+Table 1 and growth Methods
+LB 1-ml cultures in 96-well format, OD600 every 15 min. Three independent
+experiments; reported mean +/- SD in minutes. At 37 C: WT 20.4 +/- 0.3,
+rsmH deletion 23.5 +/- 0.8, rsmI deletion 22.9 +/- 0.6, double deletion
+26.3 +/- 2.5. The curated edges therefore increase doubling time, not
+growth rate. RsmH's increase is about 15%, not the 12% for RsmI.
+At 33 C the corresponding four values are 30.5, 34.5, 31.4, 36.5;
+at 42 C they are 20.9, 22.7, 22.9, 26.8. Only the 37 C effects are graphed.
+No cell-division-specific lesion, killing or essentiality is established.
+
+Discussion-only models and limits
+The authors propose a late 30S assembly intermediate and changes to
+P-site interactions; these were not directly tested in the retained
+assays. No mechanistic arrows are added for those models. This ledger
+is a partial assessment of one member and selected contexts, not an
+exhaustive PF01795 dossier or experimental replication.

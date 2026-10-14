@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF02410
+  path: data/families/PF02410.yaml
+session:
+  id: 2026-10-11T054312Z-codex-62c707
+  timestamp: '2026-10-11T05:43:12Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review scoped RsfS biochemical and adaptation graphs
+  details: Saved a partial scientific self-review for the exact current projection.
+    Confirmed b0637/P0AAT6 mapping, two separate biochemical readouts and a distinct
+    complementation-supported growth phenotype. Remaining organelle, reporter, competition
+    and later biogenesis contexts are open; no REVIEWED promotion or publication.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T054323Z-pf02410-rsfs-causal-graphs/review.yaml

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01709
+  path: data/families/PF01709.yaml
+session:
+  id: 2026-10-11T141910Z-codex-55ffa0
+  timestamp: '2026-10-11T14:19:10Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial TACO1 causal evidence self-review with follow-up requirements.
+  details: Five graphs and fourteen observed effects pass scoped scientific and native
+    assessment. Four direct preparation-level binding effects and ten indirect genotype/profiling
+    effects preserve verified domain mapping and assay/construct limits. Coverage
+    remains partial; no independent expert endorsement, family completion, GTPase
+    or atomic elongation pathway is claimed.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T141903Z-pf01709-taco1-binding-and-translation-contexts/review.yaml

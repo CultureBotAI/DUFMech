@@ -1,0 +1,40 @@
+Richard et al., 2004. PMID:15379557. DOI:10.1021/bi0487241
+Published abstract: https://pubmed.ncbi.nlm.nih.gov/15379557/
+Inspected primary proof copy:
+https://citeseerx.ist.psu.edu/document?doi=47f611b82af525a30852494febee3418127613b0&repid=rep1&type=pdf
+Read 2026-10-11: pages A-H; pages E/F visually inspected (Figures 3-5,
+Table 1). The copy has placeholder publication fields and lettered pages.
+Final publisher full text returned 403; final tables were not compared.
+
+Minimal quotations: "ordered, sequential mechanism"; "inactive";
+"Table 1"; "not further purified".
+
+Assay facts: pHIS8-ygbP, BL21(DE3); purified kinetic preparations undergo
+thrombin cleavage. TLC/phosphorimaging measures labeled CDP-ME.
+Kinetics: 23 C, 5 ul, 398 nmol Tris-HCl, 40 nmol MgCl2, 79 nmol NaOH,
+0.7 U pyrophosphatase; 6/12-min samples. Substrates vary across nine
+concentrations; cosubstrate amounts differ by mutant. CTP-series turnover
+per second: WT 54.1, K27S 2.05, D106E 0.93; T140V 1.8 and R109A 0.26
+include the source's MEP-unsaturation correction. Independent assay sets
+number at least two; individual fits and between-run variability differ.
+The assay's final pH is not independently established from these amounts.
+
+Crude screen: 217 nmol labeled MEP, 81.3 nmol CTP, 400 nmol Tris-HCl,
+40 nmol MgCl2, 79 nmol NaOH, nominal 1 ug YgbP-containing crude sample,
+5 ul; 23 C, 1/15 h. The exact protein-normalization basis is unclear.
+D106A, D106N, K213S, K27A, T165V gave no detected activity and were
+not purified. Blank lacking YgbP and calibrated TLC are described.
+Expression, aggregation and folding remain alternative contributors.
+
+Pulse-chase facts: labeled CTP preincubation versus label-in-chase control;
+2 mM CTP/2.2 mM enzyme pulse; chase 10 mM each CTP/MEP, 100 mM Tris
+pH 8, 10 mM MgCl2, 2 mM DTT, 4.48 U pyrophosphatase; 5-s sampling.
+Early labeled product is higher after preloading CTP; MEP does not show
+that separation. Figure 3's percent axis and prose >70% are inconsistent;
+do not adopt an exact trapped fraction. Its displayed series ends at 40 s,
+while Methods describes 50 s. The MEP-pulse concentration/mass pair is
+also inconsistent with a 25.7-kDa reference. These do not establish a
+literal atomic binding trajectory or a universal absence of MEP binding.
+Table footnote T104V differs from T140V elsewhere. K27S corrected MEP
+and CTP turnover values differ materially; do not silently average them.
+The manuscript expressly leaves CTP inhibition's physiological role open.

@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01679
+  path: data/families/PF01679.yaml
+session:
+  id: 2026-10-11T132012Z-codex-ae48e7
+  timestamp: '2026-10-11T13:20:12Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of Pmp3 phenotype graphs
+  details: Reviewed the twelve generated graphs and fifteen observed indirect effects
+    against Navarre 2000 primary figures, genotype and assay Methods, exact W303-1B
+    and plant coding-sequence mappings, and retained evidence hashes. The saved review
+    binds current semantic digest e293f0f4adbea29e6a65b3960a6ddda61c8ad5f2e5e26ab23b67607250fca046
+    and records NEEDS_FOLLOWUP with one open member/mechanism-coverage finding. Preserved
+    sodium-protocol discrepancy, joint EGTA/calcium comparison, assay-specific normalizations
+    and partial RCI2A rescue. De Block 2015 remains a partially inspected follow-up.
+    Same-agent assessment is not independent endorsement; IN_PROGRESS remains unchanged.
+    Full family coverage and publication are not claimed.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T131924Z-pf01679-pmp3-strain-and-medium-specific-phenotypes/review.yaml

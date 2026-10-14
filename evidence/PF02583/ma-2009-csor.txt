@@ -1,0 +1,24 @@
+Primary reference: PMID:19249860; doi:10.1021/bi900115w
+Source URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC2728441/
+Accessed: 2026-10-11
+Inspected: main methods, DNA-binding results, Table 2 and Figure 7; Figure 7 image visually inspected.
+
+Minimal attributed extracts:
+"greatly reduced affinities"
+"The second binding event was not observed"
+
+Curator assay notes (paraphrase):
+B. subtilis CsoR from Helmann's pET16b plasmid was expressed in E. coli BL21(DE3).
+Exact final tag/construct sequence is not established by the inspected text.
+Fluorescence anisotropy compared apo and Cu(I)-loaded protein on 4 nM labeled
+30-bp copZA operator DNA, in 10 mM MES, 0.4 M NaCl, 2 mM DTT, pH 6.5, 25 C.
+Five readings per addition were averaged, not five independent experiments.
+Figure 7A shows weaker occupancy for Cu-loaded wild type. Fits assume two
+nondissociable tetramers per DNA. The unsaturated Cu curve uses apo maximum
+anisotropy; the second binding constant is an upper bound. Individual step
+constants are inversely correlated and not uniquely resolved.
+Figure 7B's E90A control loses negative regulation. This supports coupling,
+not an observed atom-by-atom allosteric path. Low-micromolar tetramers do not
+exclude different nanomolar assembly. Ni/Zn coupling is weak, not strictly zero.
+No transcription assay, family-wide metal specificity or cellular copper flux
+is inferred from this purified-protein comparison. Raw data were not reanalyzed.

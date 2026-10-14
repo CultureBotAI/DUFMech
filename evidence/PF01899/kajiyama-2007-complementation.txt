@@ -1,0 +1,29 @@
+Kajiyama et al.2007, PMID17693497, doi:10.1128/JB.00968-07
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2168430/
+Accessed2026-10-11. Curator paraphrase; minimal quotation: "complemented".
+Read all three experimental sections, Table1 and captions. Original Figure1
+was visually inspected; Figures2/3 were read as text, not visually inspected.
+
+UOT1285 is trpC2 lys1 aprE-delta3 nprE18 nprR2. TY5 deletes mrpE/shaE.
+KY11 is TY5 with aprE::Pspac-mrpE-His6 spc. Integration was PCR-confirmed.
+The construct includes an engineered ribosome-binding region and a C-terminal
+six-histidine tag; it is not a scarless native-locus repair.
+
+Figure1A: on LB agar with0.2M NaCl, WT grows and the TY5 sector lacks comparable
+growth. Figure1B: KY11 grows on LB agar with1M NaCl and1mM IPTG. Each strain's
+missing subunit is complemented separately. Do not convert the different salt
+conditions into a quantitative rescue ratio. No explicit empty-aprE vector
+control, growth-rate fit or figure-specific replicate count was located.
+The37C late-exponential conditions in the following Methods refer to membrane
+preparation; do not silently assign them to the plate photographs.
+
+The native host retains the other Mrp components. These genetic effects support
+MrpE's contribution to salt-tolerant growth, not isolated MrpE sufficiency for
+Na/H exchange or a residue-level sodium-binding mechanism.
+
+Later sections report co-purification with His-tagged partners and co-migration
+near410kDa on blue-native gels. Those are association/assembly evidence, not
+direct activation edges. Detergent/lipid contributions and uncertain stoichiometry
+are explicitly discussed. The synonymous mrpA-G9C expression correction is in
+MrpA, not an MrpE mutation. Current Q7WY60 is a reference with a later sequence
+revision; see mrpe-identity.txt before transferring any exact residue claim.

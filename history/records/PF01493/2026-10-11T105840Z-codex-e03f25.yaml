@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01493
+  path: curation/families/PF01493.yaml
+session:
+  id: 2026-10-11T105840Z-codex-e03f25
+  timestamp: '2026-10-11T10:58:40Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curated scoped GltS assembly and truncation graphs for PF01493.
+  details: Read Cottevieille 2008 main and supplemental evidence; inspected DLS Figure
+    S3, kinetic Table 2 and construction pages. Mapped the exact deposited mature
+    sequence to Q05755, resolving the 36-residue offset and partial-domain delta40
+    deletion. Retained two direct salt/particle-size effects and one indirect reported
+    expression phenotype; no isolated-domain sufficiency or direct folding claim.
+    Complete clones, nucleotide-coordinate prose and physiological contexts remain
+    unresolved. IN_PROGRESS; no publication.

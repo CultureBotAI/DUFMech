@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01955
+  path: data/families/PF01955.yaml
+session:
+  id: 2026-10-12T112414Z-codex-89cddd
+  timestamp: '2026-10-12T11:24:14Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of scoped CbiZ causal evidence
+  details: Saved native structured self-review 20261012T112351Z-pf01955-cbiz-chemistry-and-conditional-salvage
+    for exact digest b49dd33b990eeef60efaae3d9f4e7829a193975e7dec273a360f5fe08d21642a.
+    Six graphs/eight observed experimental edges retain two direct chemistry and six
+    unresolved phenotype effects with verified member mapping and primary Figures2-6.
+    NEEDS_FOLLOWUP/pass_with_limitations; original supplements, protocol/strain conflicts,
+    fusion/remodeling and remaining members remain OPEN. Status remains IN_PROGRESS;
+    no independent endorsement or full family completion.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T112351Z-pf01955-cbiz-chemistry-and-conditional-salvage/review.yaml

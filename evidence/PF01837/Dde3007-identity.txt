@@ -1,0 +1,27 @@
+Identity sources accessed: 2026-10-11
+https://rest.uniprot.org/uniprotkb/search?query=gene_exact:Dde_3007&format=json&size=5
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q30WZ5/entry/pfam/PF01837/
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=ABB39801.1&rettype=gb&retmode=xml
+
+Selected structured facts:
+primary accession: Q30WZ5; entry name: Q30WZ5_OLEA2
+organism: Oleidesulfovibrio alaskensis (strain ATCC BAA-1058 / DSM 17464 / G20)
+historical organism name: Desulfovibrio alaskensis; taxon: 207559
+ordered locus: Dde_3007
+reference sequence version: 1; entry version: 72
+reference length: 421 residues
+reference sequence MD5: 466B12B3581B595B5B24A206C0A37B13
+NCBI protein accession/version: ABB39801.1
+coded_by: CP000112.1:2993369..2994634
+entry accession: PF01837; family interval: 53-411, inclusive
+integrated entry: IPR002708
+
+Construct distinction:
+The paper states that pJK2 starts at genomic position 2993462. Relative to
+the annotated 2993369 start, the offset is 93 nucleotides (31 residues),
+corresponding to reference residue 32. Assuming the same stop, the predicted
+product is 390 residues with mapped PF01837 interval 22-380. These offsets are
+curator calculations, not an independently retrieved pJK2 sequence or a new
+database annotation. Exact clone junctions and mutant insertion position remain
+unverified because the relevant supplements were inaccessible. Family identity
+is established at the named locus, not by treating pJK2 as the 421-aa reference.

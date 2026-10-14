@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01889
+  path: data/families/PF01889.yaml
+session:
+  id: 2026-10-11T203236Z-codex-1351b1
+  timestamp: '2026-10-11T20:32:36Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Partially review AliA/AliB paralog-specific causal effects and shared-control
+    provenance.
+  details: Retained partial same-agent scientific review of nine PHENOTYPIC graphs
+    and34 INDIRECT OBSERVED edges. Verified current projection/overlay equivalence,
+    reference sequences and PF01889 intervals; inspected Hong2025 Figures2-5 and Hong2026
+    Figures2-5 with relevant text and Methods. Preserved tagged/endogenous HVO_1176
+    disagreement, nonsignificant AliB comparisons, residual activity/readouts and
+    reused WT/double lipid controls identified by Stanford metadata. Supplements,
+    exact constructs/genomes, purified catalysis and broader member coverage remain
+    incomplete. Native NEEDS_FOLLOWUP/common pass_with_limitations; IN_PROGRESS retained.
+    No independent endorsement, exhaustive family completion or publication.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T203315Z-pf01889-alia-alib-paralog-and-assay-contexts/review.yaml

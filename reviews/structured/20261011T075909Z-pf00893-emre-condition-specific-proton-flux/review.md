@@ -1,0 +1,542 @@
+# Scoped scientific self-review of EmrE proton-flux direction and E14Q controls
+
+- Review: 20261011T075909Z-pf00893-emre-condition-specific-proton-flux
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T07:58:58Z
+- Finished UTC: 2026-10-11T07:59:09Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Three MECHANISTIC graphs retain five DIRECT OBSERVED edges for proton efflux under a pH gradient, efflux with positive-inside potential, influx with negative-inside potential and the two corresponding E14Q losses. Drug microsteps and unique stoichiometric routes are not labeled observed. Member mapping and the cited GS-remnant protocol are verified within their stated limits; status remains IN_PROGRESS.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: PF00893 SMR, the next accession-ordered SEEDED family, following the 2017 EmrE reconstituted transport experiments.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF00893 | data/families/PF00893.yaml | generated | PF00893 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF00893 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF00893.
+
+P23895 emrE/b0543/JW0531 is a 110-residue K-12 reference, sequence version 1. Exact UniProt/InterPro agreement places PF00893 at 3-94 and confirms E14. The 2017 paper names BL21(DE3) expression and the Chang plasmid and cites the protocol with N-terminal His6 cleavage leaving GS; exact complete later clone sequences were not independently verified. Native residue numbering excludes the scar, and reference taxon is not the expression-host label.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF00893.
+
+Each joint condition retains its own direction and controls, without turning a membrane potential or an isolated domain into an independently sufficient cause. E14Q decreases the magnitude of the corresponding flux; it is not assigned a folding-independent atomic defect. Proton movements are observed, while exact drug coupling, simulated TPP uptake and a unique symport cycle are excluded from observed edges. No universal strict 2:1 mechanism is asserted.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF00893.
+
+The supplemental PDF route returned HTML, and the linked publisher supplement was inaccessible. Panel-specific ethidium dose for F/G, temperature, exact F/G protein-to-lipid ratio and complete construct sequence remain open. Raw traces, NMR datasets, other substrates, cellular resistance and other SMR members are not fully curated. A 2026 proton-hopping study is an unadopted follow-up lead after full-text access failed in the attempted routes.
+
+## Findings
+
+### additional-contexts: Resolve EmrE microscopic coupling and expand SMR assay coverage
+
+minor / open / confirmed; issue key: pf00893-causal-context-coverage.
+
+Retrieve exact construct and supplemental assay details and curate independent drug-movement and stoichiometry measurements before extending microscopic pathways. Evaluate later primary evidence and other SMR proteins separately, preserving directional conditions, controls, competing interpretations and a successor retained review.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Retrieve exact construct and supplemental assay details and curate independent drug-movement and stoichiometry measurements before extending microscopic pathways. Evaluate later primary evidence and other SMR proteins separately, preserving directional conditions, controls, competing interpretations and a successor retained review.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC5703289/; Transport Results and Methods; Figure 7 visually inspected, panels D/F/G/H adopted | supports | External-pH measurements distinguish proton efflux under pH-gradient and positive-inside conditions from net influx under negative-inside potential. Empty-liposome, DCCD, protein-density, E14Q and protonophore controls support the appropriate assay comparisons. Figure 7H reports n=3 and SD. The microscopic drug pathway is not measured directly by the pH trace, and mixed-stoichiometry alternatives remain explicit. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/P23895/entry/pfam/PF00893/; Accession and domain locations; paired UniProt identity facts | supports | P23895 emrE/b0543/JW0531 is a 110-residue K-12 reference, sequence version 1. Exact UniProt/InterPro agreement places PF00893 at 3-94 and confirms E14. The 2017 paper names BL21(DE3) expression and the Chang plasmid and cites the protocol with N-terminal His6 cleavage leaving GS; exact complete later clone sequences were not independently verified. Native residue numbering excludes the scar, and reference taxon is not the expression-host label. |
+| cited-construct-method | https://pmc.ncbi.nlm.nih.gov/articles/PMC3253143/; Expression and purification sections of the method cited by the 2017 study | supports | Chang pET15b EmrE is produced with an N-terminal His6 tag, removed by thrombin leaving GS. This traceable method is not independent sequencing of the complete 2017 transport-assay constructs or adoption of the earlier structural experiments. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf00893 | data/families/PF00893.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Figure 7 was visually inspected and transport Methods/Results were read. Its cartoons and Figure 6 simulations are not treated as experimentally tracked molecular routes. The cited earlier method was inspected only for construct/purification context; raw traces, supplementary tables and later structural or proton-hopping datasets were not reanalyzed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T075909Z-pf00893-emre-condition-specific-proton-flux
+title: Scoped scientific self-review of EmrE proton-flux direction and E14Q controls
+started_at: '2026-10-11T07:58:58Z'
+finished_at: '2026-10-11T07:59:09Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Three MECHANISTIC graphs retain five DIRECT OBSERVED edges for proton efflux
+  under a pH gradient, efflux with positive-inside potential, influx with negative-inside
+  potential and the two corresponding E14Q losses. Drug microsteps and unique stoichiometric
+  routes are not labeled observed. Member mapping and the cited GS-remnant protocol
+  are verified within their stated limits; status remains IN_PROGRESS.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF00893.yaml
+    sha256: 55efd8dba062690d196746002ab1b08d1d822b8ab3ac5661e21dc48acb6223e1
+    role: context
+  - path: data/families/PF00893.yaml
+    sha256: 8df4d83090496ac180af7e2b7ae9a8f422cd6ad72b5f85cbf5a0c491953955f2
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF00893/robinson-2017-emrE.txt
+    role: context
+    sha256: 2bba299a8099dc22d646ff46c3333bd412cb270d77c54408dc24ce1bcc935ecb
+  - path: evidence/PF00893/EmrE-identity.txt
+    role: context
+    sha256: 60f575e332c9d645bb1c75488db1e0749d29006461ad2bcbb390c2bf84f373ac
+  - path: evidence/PF00893/morrison-2011-construct.txt
+    role: context
+    sha256: 4f7ba7f26f8d57deb1ebf0af093eb4853122cf59442848d81677176b841970cd
+targets:
+- target_id: PF00893
+  path: data/families/PF00893.yaml
+  label: PF00893
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF00893.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: b737ca1cc77f75fd1580ad98dc8c180f8c876b276ed5d48fbc63e450cea3630f
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: PF00893 SMR, the next accession-ordered SEEDED family, following the
+    2017 EmrE reconstituted transport experiments.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF00893
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: The supplemental PDF route returned HTML, and the linked publisher supplement
+      was inaccessible. Panel-specific ethidium dose for F/G, temperature, exact F/G
+      protein-to-lipid ratio and complete construct sequence remain open. Raw traces,
+      NMR datasets, other substrates, cellular resistance and other SMR members are
+      not fully curated. A 2026 proton-hopping study is an unadopted follow-up lead
+      after full-text access failed in the attempted routes.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF00893
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5703289/
+  locator: Transport Results and Methods; Figure 7 visually inspected, panels D/F/G/H
+    adopted
+  accessed_at: '2026-10-11T07:59:09Z'
+  support: supports
+  snapshot_sha256: 2bba299a8099dc22d646ff46c3333bd412cb270d77c54408dc24ce1bcc935ecb
+  summary: External-pH measurements distinguish proton efflux under pH-gradient and
+    positive-inside conditions from net influx under negative-inside potential. Empty-liposome,
+    DCCD, protein-density, E14Q and protonophore controls support the appropriate
+    assay comparisons. Figure 7H reports n=3 and SD. The microscopic drug pathway
+    is not measured directly by the pH trace, and mixed-stoichiometry alternatives
+    remain explicit.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P23895/entry/pfam/PF00893/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T07:59:09Z'
+  support: supports
+  snapshot_sha256: 60f575e332c9d645bb1c75488db1e0749d29006461ad2bcbb390c2bf84f373ac
+  summary: P23895 emrE/b0543/JW0531 is a 110-residue K-12 reference, sequence version
+    1. Exact UniProt/InterPro agreement places PF00893 at 3-94 and confirms E14. The
+    2017 paper names BL21(DE3) expression and the Chang plasmid and cites the protocol
+    with N-terminal His6 cleavage leaving GS; exact complete later clone sequences
+    were not independently verified. Native residue numbering excludes the scar, and
+    reference taxon is not the expression-host label.
+- evidence_id: cited-construct-method
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3253143/
+  locator: Expression and purification sections of the method cited by the 2017 study
+  summary: Chang pET15b EmrE is produced with an N-terminal His6 tag, removed by thrombin
+    leaving GS. This traceable method is not independent sequencing of the complete
+    2017 transport-assay constructs or adoption of the earlier structural experiments.
+  accessed_at: '2026-10-11T07:59:09Z'
+  support: supports
+  snapshot_sha256: 4f7ba7f26f8d57deb1ebf0af093eb4853122cf59442848d81677176b841970cd
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T07:59:09Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf00893
+  kind: record_content
+  reference: data/families/PF00893.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T07:59:09Z'
+  support: context_only
+  snapshot_sha256: 8df4d83090496ac180af7e2b7ae9a8f422cd6ad72b5f85cbf5a0c491953955f2
+  quote: "id: Pfam:PF00893\npfam_id: PF00893\nname: Small Multidrug Resistance protein\n\
+    short_name: Multi_Drug_Res\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00893\n\
+    counters:\n  proteins: 28663\n  matches: 28666\n  proteomes: 13207\n  taxa: 18029\n\
+    \  structures: 20\n  alphafold_models: 17571\n  domain_architectures: 11\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR045324\ndescription: This family is the Small Multidrug\
+    \ Resistance (SMR) family. Several members have been shown\n  to export a range\
+    \ of toxins, including ethidium bromide ([[cite:PUB00019898]] and quaternary ammonium\n\
+    \  compounds [[cite:PUB00002174]], through coupling with proton influx [[cite:PUB00019899]].\n\
+    curation_history: history/records/PF00893\ndiscussions:\n- discussion_id: emre-microscopic-coupling-and-family-coverage\n\
+    \  prompt: Resolve microscopic proton/drug coupling and extend beyond the three\
+    \ reconstituted EmrE contexts.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ Direct proton-flux measurements do not independently identify every transported\
+    \ drug molecule,\n    transient binding state or unique stoichiometric pathway.\
+    \ Neither a universal strict antiport cycle\n    nor a rapid proton leak follows\
+    \ from these observations.\n  evidence:\n  - reference: PMID:29114048\n    supports:\
+    \ PARTIAL\n    evidence_source: full_text\n    explanation: Figure 7 and Results\
+    \ support three condition-specific proton responses and E14Q controls.\n     \
+    \ Figure 6 is simulation, and the negative-potential discussion retains competing\
+    \ microscopic routes.\n      The supplemental PDF route returned HTML; its additional\
+    \ tables and traces were not inspected.\n  - reference: PMID:22178925\n    supports:\
+    \ PARTIAL\n    evidence_source: selected_full_text\n    explanation: The cited\
+    \ expression method specifies Chang pET15b, N-terminal His6 cleavage and a GS\n\
+    \      remnant. Only relevant construct/purification sections were adopted, not\
+    \ an independent curation\n      of its NMR or structural graphs.\n  posed_by:\
+    \ Codex\n  posed_date: '2026-10-11'\n  notes: Obtain the supplement, exact later\
+    \ clone and assay conditions; test drug movement and microscopic\n    alternatives\
+    \ with independent primary measurements. The 2026 proton-hopping study is a follow-up\
+    \ lead\n    whose full text was inaccessible in the attempted routes, not adopted\
+    \ evidence. Other SMR members,\n    substrates, mutation contexts and cellular\
+    \ resistance remain incompletely reviewed. Status remains\n    IN_PROGRESS.\n\
+    causal_graphs:\n- graph_id: emre-ph-gradient-proton-efflux\n  title: Ethidium\
+    \ addition drives EmrE-dependent proton release under a pH gradient\n  scope:\
+    \ Reconstituted E. coli EmrE in 3:1 POPC/POPG liposomes, Figure 7D. This is an\
+    \ intact-protein membrane\n    assay, not an isolated Pfam interval or a cellular\
+    \ drug-resistance assay.\n  context: Interior 100 mM MES at pH 6; exterior 0.5\
+    \ mM MOPS adjusted to about pH 8; 100 mM KCl on both\n    sides. External ethidium\
+    \ is 50 uM. The experiment compares 1:500 and 1:1000 EmrE-to-lipid molar ratios\n\
+    \    at fixed liposome amount, empty liposomes and DCCD-inactivated EmrE. A microelectrode\
+    \ follows external\n    pH; calibrated base additions quantify release. Subsequent\
+    \ valinomycin and protonophore additions\n    are controls, not requirements for\
+    \ the initial release.\n  family_mapping: UniProtKB:P23895, emrE/b0543/JW0531,\
+    \ is a 110-residue K-12 reference, sequence version\n    1, with exact UniProt/InterPro\
+    \ sequence agreement and PF00893 at 3-94 inclusive. Reference E14 is\n    within\
+    \ that interval. The paper names E. coli EmrE expressed in BL21(DE3) and cites\
+    \ the Chang pET15b\n    protocol with N-terminal His6 removal leaving GS. Complete\
+    \ 2017 plasmid sequences were not independently\n    verified; reference numbering\
+    \ excludes the GS remnant and K-12 is not the expression-host identity.\n  scope_status:\
+    \ MECHANISTIC\n  taxon: NCBITaxon:83333\n  limitations: Proton release is directly\
+    \ measured, whereas drug accumulation and exact microscopic coupling\n    ratios\
+    \ are not independently read out by this pH trace. Similar release at two protein\
+    \ densities argues\n    against binding-only release but does not establish a\
+    \ unique transport cycle. Assay temperature remains\n    unresolved; the unavailable\
+    \ supplement and raw traces were not reanalyzed. This result does not imply\n\
+    \    universal strict 2H-per-drug antiport.\n  nodes:\n  - node_id: ph-gradient-emre-ethidium-system\n\
+    \    label: WT EmrE proteoliposomes plus external ethidium with acidic interior\n\
+    \    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:P23895\n  - node_id:\
+    \ outward-proton-flux\n    label: Proton release from liposome interior to external\
+    \ solution\n    node_type: PROCESS\n  edges:\n  - edge_id: ph-gradient-system-produces-proton-efflux\n\
+    \    subject: ph-gradient-emre-ethidium-system\n    predicate: produces\n    object:\
+    \ outward-proton-flux\n    mechanism: Ethidium addition to the joint gradient-plus-EmrE\
+    \ system produces external acidification\n      consistent with proton efflux.\
+    \ Empty-liposome and DCCD controls lack the WT response; protein-density\n   \
+    \   controls distinguish transport-associated release from simple binding-related\
+    \ deprotonation.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:29114048\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC5703289/\n      snippet: Proton release\
+    \ is EmrE-dependent\n      explanation: Figure 7D/H and transport Results directly\
+    \ compare the WT, empty-liposome and inactivated\n        preparations. The graph\
+    \ adopts observed proton flux, not the simulated TPP uptake in Figure 6\n    \
+    \    or a fixed microscopic stoichiometry.\n      cache_path: evidence/PF00893/robinson-2017-emrE.txt\n\
+    \      cache_sha256: 2bba299a8099dc22d646ff46c3333bd412cb270d77c54408dc24ce1bcc935ecb\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P23895/entry/pfam/PF00893/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P23895/entry/pfam/PF00893/\n\
+    \      snippet: 'P23895 Pfam:PF00893 interval: 3-94, inclusive'\n      explanation:\
+    \ Maps the native reference and E14 to the family without asserting that the truncated\n\
+    \        Pfam interval or a monomer alone suffices for transport.\n      cache_path:\
+    \ evidence/PF00893/EmrE-identity.txt\n      cache_sha256: 60f575e332c9d645bb1c75488db1e0749d29006461ad2bcbb390c2bf84f373ac\n\
+    - graph_id: emre-positive-potential-proton-efflux\n  title: Positive-inside potential\
+    \ supports outward proton flux through EmrE\n  scope: Figure 7F WT versus E14Q\
+    \ E. coli EmrE proteoliposomes after valinomycin then ethidium addition;\n   \
+    \ neutral-potassium WT preparation is a separate comparator within the assay.\n\
+    \  context: 3:1 POPC/POPG; pH about 7.5 on both sides, 50 mM MOPS inside and 0.05\
+    \ mM outside. Inside contains\n    1 mM KCl and 99 mM NaCl; outside contains 100\
+    \ mM KCl. Valinomycin at 1 ug/mL generates positive-inside\n    potential. External\
+    \ pH is measured by microelectrode and acid/base calibration. Figure 7H reports\n\
+    \    SD and n=3; the main text does not resolve panel-specific ethidium dose,\
+    \ temperature or protein-to-lipid\n    ratio within its overall 1:400-1:1000 range.\n\
+    \  family_mapping: P23895 full-length reference has PF00893 at 3-94; E14Q changes\
+    \ the mapped glutamate.\n    The 2017 experiment cites the pET15b/His6-cleavage\
+    \ protocol leaving GS at the N terminus. Purification-host\n    BL21(DE3) and\
+    \ K-12 reference identity remain distinct; complete later construct sequences\
+    \ are not\n    established here.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:83333\n\
+    \  limitations: The observed variable is proton movement. Its compatibility with\
+    \ electrogenic antiport\n    does not independently fix every drug/proton stoichiometry\
+    \ or prove an elementary proton-transfer\n    role for E14. E14Q is a functional\
+    \ control, not a folding-rescue experiment. The figure does not show\n    rapid\
+    \ drug-free leakage when potential is applied.\n  nodes:\n  - node_id: positive-inside-wt-system\n\
+    \    label: WT EmrE with positive-inside potential and external ethidium\n   \
+    \ node_type: ACTIVITY\n    grounding:\n    - UniProtKB:P23895\n  - node_id: positive-inside-e14q-system\n\
+    \    label: E14Q replacing WT EmrE in the positive-inside assay\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:P23895\n  - node_id: positive-assay-proton-release\n\
+    \    label: Outward proton flux in the positive-inside assay\n    node_type: PROCESS\n\
+    \  edges:\n  - edge_id: positive-wt-system-produces-proton-efflux\n    subject:\
+    \ positive-inside-wt-system\n    predicate: produces\n    object: positive-assay-proton-release\n\
+    \    mechanism: External ethidium triggers proton efflux in the positive-inside\
+    \ WT preparation. The response\n      exceeds the neutral-potassium WT comparator;\
+    \ all inputs and the intact membrane preparation are\n      part of the adopted\
+    \ cause.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:29114048\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5703289/\n\
+    \      snippet: results in proton release from positive inside EmrE proteoliposomes\n\
+    \      explanation: Figure 7F compares blue WT, gray neutral and black E14Q traces\
+    \ with timed additions.\n        The edge retains the measured outward proton\
+    \ response, without an observed drug-translocation\n        microstep.\n     \
+    \ cache_path: evidence/PF00893/robinson-2017-emrE.txt\n      cache_sha256: 2bba299a8099dc22d646ff46c3333bd412cb270d77c54408dc24ce1bcc935ecb\n\
+    \  - edge_id: e14q-decreases-positive-proton-efflux\n    subject: positive-inside-e14q-system\n\
+    \    predicate: decreases\n    object: positive-assay-proton-release\n    mechanism:\
+    \ Replacing WT with E14Q removes the detected ethidium-triggered proton efflux\
+    \ under the\n      positive-inside condition. This is an assay-specific loss of\
+    \ function, not an absolute zero transport\n      rate or proof of the unique\
+    \ molecular reason for loss.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29114048\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5703289/\n      snippet:\
+    \ no proton flux\n      explanation: Figure 7F's inactive E14Q control lacks the\
+    \ WT response; protonophore addition confirms\n        the retained driving potential.\
+    \ Reference residue mapping places E14 within PF00893.\n      cache_path: evidence/PF00893/robinson-2017-emrE.txt\n\
+    \      cache_sha256: 2bba299a8099dc22d646ff46c3333bd412cb270d77c54408dc24ce1bcc935ecb\n\
+    - graph_id: emre-negative-potential-proton-influx\n  title: Negative-inside potential\
+    \ reverses the net EmrE proton response\n  scope: Figure 7G WT and E14Q proteoliposomes\
+    \ with valinomycin added before ethidium. The reversed order-of-addition\n   \
+    \ trace is a separate interpretive control, not the same time course.\n  context:\
+    \ 3:1 POPC/POPG at pH about 7.5, with 50 mM MOPS inside and 0.05 mM outside. Inside\
+    \ has 100 mM\n    KCl; outside has 1 mM KCl and 99 mM NaCl. Valinomycin at 1 ug/mL\
+    \ establishes negative-inside potential\n    before ethidium addition. A calibrated\
+    \ external-pH microelectrode reports net proton uptake. Exact\n    panel-specific\
+    \ ethidium dose, temperature and protein-to-lipid ratio remain unresolved from\
+    \ the main\n    text.\n  family_mapping: E. coli EmrE P23895, 110 native residues,\
+    \ sequence version 1; PF00893 interval 3-94\n    contains native E14. This is\
+    \ an intact reconstituted protein from the cited expression/purification\n   \
+    \ workflow, not an isolated-domain assay or direct measurement in the K-12 reference\
+    \ strain.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:83333\n  limitations:\
+    \ Proton influx is observed, but a unique simultaneous proton/drug symport path\
+    \ is not. The\n    source discusses mixed import/export stoichiometries as an\
+    \ alternative and acknowledges that the assay\n    cannot definitively distinguish\
+    \ them. Raw traces, supplementary quantitation, folding controls and\n    complete\
+    \ mutant clone sequence were not independently assessed. No universal proton leak\
+    \ or all-SMR\n    mechanism is assigned.\n  nodes:\n  - node_id: negative-inside-wt-system\n\
+    \    label: WT EmrE with negative-inside potential and external ethidium\n   \
+    \ node_type: ACTIVITY\n    grounding:\n    - UniProtKB:P23895\n  - node_id: negative-inside-e14q-system\n\
+    \    label: E14Q replacing WT EmrE in the negative-inside assay\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:P23895\n  - node_id: negative-assay-proton-uptake\n\
+    \    label: Net inward proton flux into negative-inside liposomes\n    node_type:\
+    \ PROCESS\n  edges:\n  - edge_id: negative-wt-system-produces-proton-influx\n\
+    \    subject: negative-inside-wt-system\n    predicate: produces\n    object:\
+    \ negative-assay-proton-uptake\n    mechanism: Following ethidium addition to\
+    \ negative-inside WT proteoliposomes, external pH rises as\n      protons enter\
+    \ the liposomes. The measured direction is retained separately from the positive-inside\n\
+    \      efflux experiment and from modeled microscopic pathways.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:29114048\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5703289/\n\
+    \      snippet: results in proton uptake\n      explanation: Figure 7G/H red traces/bars\
+    \ and Results establish the net inward proton response. The\n        alternative\
+    \ pink order-of-addition trace and mechanistic discussion prevent presenting one\
+    \ unique\n        symport cycle as directly observed.\n      cache_path: evidence/PF00893/robinson-2017-emrE.txt\n\
+    \      cache_sha256: 2bba299a8099dc22d646ff46c3333bd412cb270d77c54408dc24ce1bcc935ecb\n\
+    \  - edge_id: e14q-decreases-negative-proton-influx\n    subject: negative-inside-e14q-system\n\
+    \    predicate: decreases\n    object: negative-assay-proton-uptake\n    mechanism:\
+    \ E14Q lacks the detected WT inward proton response in this condition. The decrease\
+    \ refers\n      to the magnitude of inward flux, not a switch to outward flux\
+    \ or a demonstrated folding-independent\n      catalytic defect.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:29114048\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5703289/\n\
+    \      snippet: no proton flux\n      explanation: Figure 7G black E14Q control\
+    \ and the corresponding Results lack WT proton uptake; the\n        terminal protonophore\
+    \ response verifies that a driving potential persists.\n      cache_path: evidence/PF00893/robinson-2017-emrE.txt\n\
+    \      cache_sha256: 2bba299a8099dc22d646ff46c3333bd412cb270d77c54408dc24ce1bcc935ecb\n\
+    curation_events:\n- timestamp: '2026-10-11T07:52:00Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate condition-specific EmrE proton\
+    \ flux and E14Q controls\n  history_record: history/records/PF00893/2026-10-11T075200Z-codex-c37f88.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: P23895 emrE/b0543/JW0531 is a 110-residue K-12 reference, sequence version
+    1. Exact UniProt/InterPro agreement places PF00893 at 3-94 and confirms E14. The
+    2017 paper names BL21(DE3) expression and the Chang plasmid and cites the protocol
+    with N-terminal His6 cleavage leaving GS; exact complete later clone sequences
+    were not independently verified. Native residue numbering excludes the scar, and
+    reference taxon is not the expression-host label.
+  target_ids:
+  - PF00893
+  evidence_ids:
+  - identity
+  - primary
+  - cited-construct-method
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Each joint condition retains its own direction and controls, without turning
+    a membrane potential or an isolated domain into an independently sufficient cause.
+    E14Q decreases the magnitude of the corresponding flux; it is not assigned a folding-independent
+    atomic defect. Proton movements are observed, while exact drug coupling, simulated
+    TPP uptake and a unique symport cycle are excluded from observed edges. No universal
+    strict 2:1 mechanism is asserted.
+  target_ids:
+  - PF00893
+  evidence_ids:
+  - primary
+  - native
+  - cited-construct-method
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: The supplemental PDF route returned HTML, and the linked publisher supplement
+    was inaccessible. Panel-specific ethidium dose for F/G, temperature, exact F/G
+    protein-to-lipid ratio and complete construct sequence remain open. Raw traces,
+    NMR datasets, other substrates, cellular resistance and other SMR members are
+    not fully curated. A 2026 proton-hopping study is an unadopted follow-up lead
+    after full-text access failed in the attempted routes.
+  target_ids:
+  - PF00893
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf00893-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve EmrE microscopic coupling and expand SMR assay coverage
+  description: Retrieve exact construct and supplemental assay details and curate
+    independent drug-movement and stoichiometry measurements before extending microscopic
+    pathways. Evaluate later primary evidence and other SMR proteins separately, preserving
+    directional conditions, controls, competing interpretations and a successor retained
+    review.
+  target_ids:
+  - PF00893
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - cited-construct-method
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF00893.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Retrieve exact construct and supplemental assay details and curate
+    independent drug-movement and stoichiometry measurements before extending microscopic
+    pathways. Evaluate later primary evidence and other SMR proteins separately, preserving
+    directional conditions, controls, competing interpretations and a successor retained
+    review.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF00893
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Figure 7 was visually inspected and transport Methods/Results were read. Its cartoons
+  and Figure 6 simulations are not treated as experimentally tracked molecular routes.
+  The cited earlier method was inspected only for construct/purification context;
+  raw traces, supplementary tables and later structural or proton-hopping datasets
+  were not reanalyzed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

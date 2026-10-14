@@ -1,0 +1,40 @@
+PF01954 primary-source assessment, 2026-10-12
+Curator: Codex. Factual paraphrases, not a copy of either publication.
+
+Makarova, Wolf and Koonin 2009; PMID:19493340;
+doi:10.1186/1745-6150-4-19; PMC2701414.
+https://link.springer.com/article/10.1186/1745-6150-4-19
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2701414/fullTextXML
+Inspected: COG2880 Results, Methods, Table2 and original Figure4 image.
+The study predicts toxin-antitoxin families by paralog distribution, adjacent
+genes, iterative sequence searches and structural comparisons. For AF2212,
+PSI-BLAST found an AbrB-related match in iteration4 (E approximately0.071,
+inclusion threshold0.1); VAST/DALI did not find a high-confidence neighbor.
+Figure4C is a sequence/secondary-structure alignment, including the AF2212
+2NWT segment at positions2-33. It is not a toxin inhibition or DNA-binding
+experiment. Three conserved beta strands and adjacent PIN-domain genes support
+a proposed antitoxin role, not an observed neutralization mechanism.
+Supplements1/10/14 are described as computational inventories; their contents
+were not inspected. Other families' experimentally established antitoxin
+activities must not be transferred to COG2880.
+Minimal quotation, Figure4 caption: "Predicted new families of antitoxins."
+InterPro's PUB00056164 metadata instead prints DOI10.1186/1745-6150-4-29.
+The publisher and Europe PMC identify this paper as4-19. The frozen source is
+not modified; use the verified primary DOI for this assessment.
+
+Pandey and Gerdes 2005; PMID:15718296; doi:10.1093/nar/gki201.
+https://academic.oup.com/nar/article/33/3/966/1064021
+Inspected: publisher Abstract, Introduction, Methods and selected Results.
+BLASTP/TBLASTN analysis covers126 genomes, comprising110 bacteria and16 archaea,
+downloaded as of2003-08-01. The paper catalogs671 complete TA loci and37
+solitary toxin genes. TableS2 is described as the locus/coordinate inventory;
+its individual rows were not inspected. Cited E. coli RelE/MazF experiments
+are not AF2212 experiments. UniProt assigns this citation to O28071 as possible
+function, not direct characterization. Neither the inspected sections nor
+that annotation supplies an AF2212-specific directed effect.
+Europe PMC XML retrieval returned HTTP500; PMC browser access was challenged.
+The independently accessible publisher text was used, without bypassing access
+controls. Supplement-level verification remains open.
+
+Disposition: no causal edge from these inspected contexts. This is a scoped
+evidence assessment, not proof that PF01954 has never been experimentally studied.

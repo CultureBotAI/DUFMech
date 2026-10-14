@@ -1,0 +1,43 @@
+OatA peptide-search deposits: evidence and limits, inspected2026-10-11 by Codex
+Linked primary paper PMID:34480000, doi:10.1073/pnas.2103602118.
+https://api.figshare.com/v2/articles/13309463
+https://doi.org/10.6084/m9.figshare.13309463
+https://api.figshare.com/v2/articles/13309505
+https://doi.org/10.6084/m9.figshare.13309505
+
+Downloaded PEAKS search archives: S453A+AcCoA file25643276; S453A untreated
+control file25643279; WT+AcCoA file27738306. Parsed protein.html tables with
+BeautifulSoup directly from ZIPs. These are deposited search outputs, not a
+new raw-spectra search. WT untreated archive and raw MS were not reanalyzed.
+The two mutant search summaries use the database label
+protein1|FLSaOatA_S453A_lysinemutant_AcCoA, including the control archive.
+The treated coverage image img/cov_7.png was visually inspected. Relative to
+the603-aa Q2FV54/A0A0H2XFE4 reference, its615-aa search sequence displays
+S453A, K495A, K496A and a C-terminal LE+His10 extension. The WT search instead
+names Q2FV54 and its coverage image displays the603-aa database reference.
+These are SEARCH REFERENCES, not proof of the complete expressed sequences.
+Do not silently call the MS construct single-S453A, nor assert without SI
+that every biochemical S453A preparation had the extra lysine replacements.
+
+Both treated and untreated S453A protein.html contain peptide205-232 with
+Tyr206+42.01 and Gln214+0.98 modifications. Treated row: PEAKS score39.84,
+precursor3238.7498,0.0ppm, peptide RT40.63, scan7916, Ascore1000 forY2 andQ10.
+Untreated row: score73.28, same precursor,4.3ppm,RT40.64,scan7851,Ascore1000.
+Untreated also has an acetylated205-233 peptide, score42.74. No numerical
+treatment-enrichment claim is made: the independent search settings/thresholds
+differ and feature areas are not normalized biological-replicate quantitation.
+The treated row reports area0; untreated205-232 reports3.6031E4. This does not
+establish a treatment-driven decrease either.
+
+Annotated MS2 tables file25643399 (treated) and25643405 (untreated control1)
+were visually inspected; both annotateY+42.01 in the corresponding peptide.
+Other deposited table/spectrum panels and raw MS have not been independently
+reviewed. This supports identification of a modified residue in these samples
+without proving its acetyl group was acquired during the added-AcCoA step.
+Host preloading, construct details and preparation/search provenance need
+resolution. The main paper itself reports WT controlS453 acetylation and
+suggests expression-host acetyl-CoA as a possible origin.
+
+Disposition: retain the authors' relay as hypothesis, not an observed
+AcCoA-to-Y206 or Y206-to-S453 arrow. The deposited control is a limitation on
+causal attribution, not proof against all possible relay mechanisms.

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01936
+  path: curation/families/PF01936.yaml
+session:
+  id: 2026-10-12T045030Z-codex-eba42f
+  timestamp: '2026-10-12T04:50:30Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add scoped MARF1 causal contexts for PF01936 without historical NYN cross-family
+    transfers.
+  details: Researched current family/member maps, primary human and mouse MARF1 assays
+    and mouse supplement. Authored8 graphs/22 OBSERVED edges:2 DIRECT,2 INDIRECT,18
+    UNRESOLVED,with four minimal evidence ledgers and two OPEN discussions. Human238-510
+    is not crystallized352-500; mouse local PDB5YAA mapping resolves source D272 to
+    canonical D451. N4BP1/KHNYN PF11977 and Rae1 PF05991 excluded. Bacterial/plant/clock-output
+    and later MARF1 contexts remain open. Baseline8296 records passed before edits;
+    record stays IN_PROGRESS and no publication is authorized.

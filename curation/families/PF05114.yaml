@@ -1,0 +1,52 @@
+pfam_id: PF05114
+curation_status: IN_PROGRESS
+curation_history: history/records/PF05114
+causal_graphs:
+  - graph_id: ob3b-mbnbc-mbna-modification
+    title: MbnBC-catalyzed MbnA modification
+    scope: Purified Methylosinus trichosporium OB3b MbnBC complex, not MbnB alone or all former DUF692 proteins.
+    context: Ascorbate-reduced MbnBC with oxygen and MbnA; stopped-flow assay at 5 C, final 150 uM complex and 300 uM substrate, MOPS pH 7.2.
+    family_mapping: Reference MbnB is UniProtKB:A0A2D2D5M1, sequence version 1, 276 residues, PF05114 at 15-248. The tested tagged complex is not an isolated domain; reference MbnC and MbnA map to A0A2D2CY73 and E3YBA4.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:595536
+    limitations: No MbnB-alone sufficiency, atomic reaction sequence or family-wide transfer asserted. The mbnC-deficient cellular study limits universal partner-necessity claims; engineered construct coordinates are not transferred to reference residues.
+    nodes:
+      - node_id: reduced-complex-with-inputs
+        label: Reduced iron-containing MbnBC with oxygen and MbnA
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:A0A2D2D5M1
+          - UniProtKB:A0A2D2CY73
+      - node_id: mbna-oxidative-modification
+        label: Oxidative MbnA modification
+        node_type: PROCESS
+        grounding:
+          - UniProtKB:E3YBA4
+    edges:
+      - edge_id: complex-enables-modification
+        subject: reduced-complex-with-inputs
+        predicate: enables
+        object: mbna-oxidative-modification
+        mechanism: Optical product formation is observed; separate low-iron-complex MS/MS assays support oxazolone/thioamide product identity.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:35320042
+            source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9060507/fullTextXML
+            snippet: modification of both cysteine residues
+            explanation: Figure 3 and activity methods support the reaction; Figure 7 and MS results characterize a separately prepared product. These assays do not assign every intermediate.
+            cache_path: evidence/PF05114/park-2022-mbnbc.txt
+            cache_sha256: 30d5d506196970552c0c2fa8018c9ee0f0d63239758c55efed493f0d9426552d
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A2D2D5M1/entry/pfam/PF05114/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A2D2D5M1/entry/pfam/PF05114/
+            snippet: 'entry accession: PF05114'
+            explanation: Domain mapping only; paired UniProt facts ground the reference members without proving the complete engineered-construct sequence.
+            cache_path: evidence/PF05114/ob3b-identities.txt
+            cache_sha256: 9174bc6fac24ec8497095ed26b8c658c13302d18d7527c05eec273863649ca17
+          - reference: doi:10.1128/AEM.01841-21
+            source_url: https://push-zb.helmholtz-munich.de/deliver.php?id=33331
+            snippet: MbnC is not required for the formation of the N-terminal oxazolone group
+            explanation: Scope-limiting cellular evidence, not additional support for purified-complex kinetics. The mbnABCMN-deleted strain carries mbnABMN on pWG104; N-terminal ring retention precludes asserting universal MbnC necessity.
+            cache_path: evidence/PF05114/dershwitz-2022-mbnc.txt
+            cache_sha256: 4aeb65fe5eb58b8d1e7eb4de029c9e0265d3411a51b41401e41308750c25044b

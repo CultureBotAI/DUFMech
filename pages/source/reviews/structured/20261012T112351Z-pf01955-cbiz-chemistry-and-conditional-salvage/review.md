@@ -1,0 +1,643 @@
+# PF01955 CbiZ chemistry and conditional salvage contexts
+
+- Review: 20261012T112351Z-pf01955-cbiz-chemistry-and-conditional-salvage
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-12T11:23:49Z
+- Finished UTC: 2026-10-12T11:23:51Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Scoped scientific self-review retains six graphs and eight experimental edges from Woodson2004, separating two purified substrate tests, an extract reporter assay, native deletion/restoration and Cby bypass, joint donor-gene complementation and conditional AP rescue. Three OPEN discussions preserve source discrepancies and later fusion/remodeling/member coverage. This is partial curation, not a complete family review or universal DUF105 mechanism.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Next uncurated accession in the actual frozen record membership after PF01954, with earlier open follow-ups retained in scope.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01955 | data/families/PF01955.yaml | generated | PF01955 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01955 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01955.
+
+Frozen previous-ID row verifies DUF105. Q8Q0G3 v1 maps PF01955 15-198 of200aa in M. mazei Go1 taxon192952; Q9HPK9 v1 maps14-208 of231aa in H. salinarum NRC-1 taxon64091. Historical loci and primary functional references agree, but clone sequence, scar and deletion endpoints remain incompletely verified. The three reviewed database entries are not an exhaustive member audit.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01955.
+
+All eight edges are OBSERVED and EXPERIMENTAL; two DIRECT chemistry edges and six UNRESOLVED phenotype edges across one MECHANISTIC and five PHENOTYPIC graphs. Joint cbiZ/cobY provision remains one intervention. AP rescue remains conditional. Native restoration is not standalone B12 synthesis, and low residual OD is not lethality. No CobZ-half phosphatase or CbiR/CobS effect is transferred to PF01955.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01955.
+
+Woodson2004 supplements, exact constructs and per-arm recipes/rates remain unresolved. CbiS2006 and R. sphaeroides2009 publisher text is accessible and partially inspected, but original figures, mappings and complete experiments remain to curate. Earlier dual-salvage studies, later bacterial remodeling and all remaining frozen members stay in scope, alongside previous-family follow-ups.
+
+## Findings
+
+### additional-contexts: Extend mapped fusion and remodeling evidence and resolve source discrepancies
+
+minor / open / confirmed; issue key: pf01955-causal-context-coverage.
+
+Reconcile Woodson2004 JE6894/JE6984, AP arm recipes, clone/deletion details and rate context; inspect CbiS split constructs and purified assays with exact Pfam mapping; assess R. sphaeroides growth, cellular corrinoid profiles and specificity experiments as distinct contexts. Retain contradictory labels, controls and negative results; extend additional-member literature and save a successor scoped review.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Reconcile Woodson2004 JE6894/JE6984, AP arm recipes, clone/deletion details and rate context; inspect CbiS split constructs and purified assays with exact Pfam mapping; assess R. sphaeroides growth, cellular corrinoid profiles and specificity experiments as distinct contexts. Retain contradictory labels, controls and negative results; extend additional-member literature and save a successor scoped review.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://www.pnas.org/doi/10.1073/pnas.0305939101; Purification, activity, detection and analytical Methods; extract/purified Results; original Figures4-6. | supports | Purified M. mazei CbiZ yields a Cby-assigned product; chromatograms follow cyanide derivatization and MALDI detects a ligand-free species. DicyanoCbi utilization is text-reported. The extract bioassay is a separate reporter phenotype; quantitative rate reconciliation remains open. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01955/protein/uniprot/Q8Q0G3/; Accession and domain locations; paired UniProt identity facts | supports | Frozen previous-ID row verifies DUF105. Q8Q0G3 v1 maps PF01955 15-198 of200aa in M. mazei Go1 taxon192952; Q9HPK9 v1 maps14-208 of231aa in H. salinarum NRC-1 taxon64091. Historical loci and primary functional references agree, but clone sequence, scar and deletion endpoints remain incompletely verified. The three reviewed database entries are not an exhaustive member audit. |
+| native-genetics | https://www.pnas.org/doi/10.1073/pnas.0305939101; Native genetic Results, growth Methods and original Figure2A/B. | supports | Delta-cbiP-matched deletion and ura3::cbiZ restoration support conditional growth effects; Cby bypass and cbiP restoration are distinct. Delta-cbiZ with intact cbiP grows without supplied corrinoid, limiting essentiality claims. |
+| heterologous-genetics | https://www.pnas.org/doi/10.1073/pnas.0305939101; Salmonella Results, growth Methods and original Figure3A/B. | supports | Joint cbiZ+cobY rescue and AP-dependent rescue in cobD1272 remain separate. Single-gene/vector controls, source strain discrepancy and AP recipe conflict are retained. |
+| coverage | https://journals.asm.org/doi/10.1128/jb.00227-06; Dated search ledger, primary follow-ups, inspected extent and access outcomes. | supports | Later publisher texts are accessible; selected CbiS Methods/Results and Rhodobacter cellular Results expose mapping, assay and condition distinctions still needing complete assessment. No dummy edges or broad negative claims replace missing research. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01955 | data/families/PF01955.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Original Woodson2004 Figures2-6 were visually inspected. Supporting Methods/Table1/Figure8 and later-study original figures/supplements were not inspected. HTTP403/500 and browser challenges are access limits rather than evidence absence; later publisher main-text access now succeeds.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+- Five minimal evidence ledgers retained; full primary images and raw database responses remain temporary research assets.
+- Same-agent source assessment, not independent expert review. IN_PROGRESS and all earlier follow-ups remain unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T112351Z-pf01955-cbiz-chemistry-and-conditional-salvage
+title: PF01955 CbiZ chemistry and conditional salvage contexts
+started_at: '2026-10-12T11:23:49Z'
+finished_at: '2026-10-12T11:23:51Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Scoped scientific self-review retains six graphs and eight experimental edges
+  from Woodson2004, separating two purified substrate tests, an extract reporter assay,
+  native deletion/restoration and Cby bypass, joint donor-gene complementation and
+  conditional AP rescue. Three OPEN discussions preserve source discrepancies and
+  later fusion/remodeling/member coverage. This is partial curation, not a complete
+  family review or universal DUF105 mechanism.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01955.yaml
+    sha256: 87061e36bb51402d69a4fe090a536aba3a7fed54e73d4432a84435910459598b
+    role: context
+  - path: data/families/PF01955.yaml
+    sha256: eaf2b5fef0446444cdd0b81391e80ecbea736bf22e324c624fb03bfa077e16aa
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01955/woodson-2004-chemistry.txt
+    role: context
+    sha256: 06cdccd3ca4e6b0d34d1966513f6c5fd8044167874ecab606f41f7dc5bea17eb
+  - path: evidence/PF01955/identity-20261012.txt
+    role: context
+    sha256: 8ef46dd5a3f08a6a0af2b6dd5f5a493b036ce9218a74d60a2d423d48dfdcee5f
+  - path: evidence/PF01955/woodson-2004-native-genetics.txt
+    role: context
+    sha256: a69158dd90a979081df32a8c6eff1f04e6b057b30f945b88c8c11a69cfadd69a
+  - path: evidence/PF01955/woodson-2004-heterologous.txt
+    role: context
+    sha256: 27566345fa70fc3e7e8c77a13faa9b2b77ab81167609905af7051ed7a07d718d
+  - path: evidence/PF01955/coverage-20261012.txt
+    role: context
+    sha256: 9036c258de98ff7d7bfe096456b8fe4f97dc3569c0de0a5907b7ba1e30d9c6bb
+targets:
+- target_id: PF01955
+  path: data/families/PF01955.yaml
+  label: PF01955
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01955.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: b49dd33b990eeef60efaae3d9f4e7829a193975e7dec273a360f5fe08d21642a
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Next uncurated accession in the actual frozen record membership after
+    PF01954, with earlier open follow-ups retained in scope.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01955
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Woodson2004 supplements, exact constructs and per-arm recipes/rates remain
+      unresolved. CbiS2006 and R. sphaeroides2009 publisher text is accessible and
+      partially inspected, but original figures, mappings and complete experiments
+      remain to curate. Earlier dual-salvage studies, later bacterial remodeling and
+      all remaining frozen members stay in scope, alongside previous-family follow-ups.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01955
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://www.pnas.org/doi/10.1073/pnas.0305939101
+  locator: Purification, activity, detection and analytical Methods; extract/purified
+    Results; original Figures4-6.
+  accessed_at: '2026-10-12T11:23:51Z'
+  support: supports
+  snapshot_sha256: 06cdccd3ca4e6b0d34d1966513f6c5fd8044167874ecab606f41f7dc5bea17eb
+  summary: Purified M. mazei CbiZ yields a Cby-assigned product; chromatograms follow
+    cyanide derivatization and MALDI detects a ligand-free species. DicyanoCbi utilization
+    is text-reported. The extract bioassay is a separate reporter phenotype; quantitative
+    rate reconciliation remains open.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01955/protein/uniprot/Q8Q0G3/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-12T11:23:51Z'
+  support: supports
+  snapshot_sha256: 8ef46dd5a3f08a6a0af2b6dd5f5a493b036ce9218a74d60a2d423d48dfdcee5f
+  summary: Frozen previous-ID row verifies DUF105. Q8Q0G3 v1 maps PF01955 15-198 of200aa
+    in M. mazei Go1 taxon192952; Q9HPK9 v1 maps14-208 of231aa in H. salinarum NRC-1
+    taxon64091. Historical loci and primary functional references agree, but clone
+    sequence, scar and deletion endpoints remain incompletely verified. The three
+    reviewed database entries are not an exhaustive member audit.
+- evidence_id: native-genetics
+  kind: primary_source
+  reference: https://www.pnas.org/doi/10.1073/pnas.0305939101
+  locator: Native genetic Results, growth Methods and original Figure2A/B.
+  summary: Delta-cbiP-matched deletion and ura3::cbiZ restoration support conditional
+    growth effects; Cby bypass and cbiP restoration are distinct. Delta-cbiZ with
+    intact cbiP grows without supplied corrinoid, limiting essentiality claims.
+  accessed_at: '2026-10-12T11:23:51Z'
+  support: supports
+  snapshot_sha256: a69158dd90a979081df32a8c6eff1f04e6b057b30f945b88c8c11a69cfadd69a
+- evidence_id: heterologous-genetics
+  kind: primary_source
+  reference: https://www.pnas.org/doi/10.1073/pnas.0305939101
+  locator: Salmonella Results, growth Methods and original Figure3A/B.
+  summary: Joint cbiZ+cobY rescue and AP-dependent rescue in cobD1272 remain separate.
+    Single-gene/vector controls, source strain discrepancy and AP recipe conflict
+    are retained.
+  accessed_at: '2026-10-12T11:23:51Z'
+  support: supports
+  snapshot_sha256: 27566345fa70fc3e7e8c77a13faa9b2b77ab81167609905af7051ed7a07d718d
+- evidence_id: coverage
+  kind: search
+  reference: https://journals.asm.org/doi/10.1128/jb.00227-06
+  locator: Dated search ledger, primary follow-ups, inspected extent and access outcomes.
+  search_scope: PF01955/DUF105/CbiZ identity and reviewed-member screening; cbiS Methanopyrus2006;
+    CbiZ cobinamide mechanism/structure and recent-year terms; primary citation and
+    author-index tracing. Partial literature and member coverage.
+  summary: Later publisher texts are accessible; selected CbiS Methods/Results and
+    Rhodobacter cellular Results expose mapping, assay and condition distinctions
+    still needing complete assessment. No dummy edges or broad negative claims replace
+    missing research.
+  accessed_at: '2026-10-12T11:23:51Z'
+  support: supports
+  snapshot_sha256: 9036c258de98ff7d7bfe096456b8fe4f97dc3569c0de0a5907b7ba1e30d9c6bb
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-12T11:23:51Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01955
+  kind: record_content
+  reference: data/families/PF01955.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-12T11:23:51Z'
+  support: context_only
+  snapshot_sha256: eaf2b5fef0446444cdd0b81391e80ecbea736bf22e324c624fb03bfa077e16aa
+  quote: "id: Pfam:PF01955\npfam_id: PF01955\nname: Adenosylcobinamide amidohydrolase\n\
+    short_name: CbiZ\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status:\
+    \ IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01955\n\
+    counters:\n  proteins: 2665\n  matches: 2701\n  proteomes: 2525\n  taxa: 3886\n\
+    \  structures: 0\n  alphafold_models: 1772\n  domain_architectures: 14\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002808\ndescription: This prokaryotic protein family\
+    \ includes CbiZ which converts adenosylcobinamide (AdoCbi)\n  to adenosylcobyric\
+    \ acid (AdoCby), an intermediate of the de novo coenzyme B12 biosynthetic route\
+    \ [[cite:PUB00019258]].\ncuration_history: history/records/PF01955\ndiscussions:\n\
+    - discussion_id: pf01955-constructs-and-protocols\n  prompt: Resolve the historical\
+    \ constructs, strain labels and quantitative assay protocol.\n  kind: CURATION_TODO\n\
+    \  status: OPEN\n  rationale: Current domain mapping does not verify historical\
+    \ clone sequence, and the source has unresolved\n    strain and rate-context discrepancies.\n\
+    \  evidence:\n  - reference: PMID:14990804\n    supports: PARTIAL\n    evidence_source:\
+    \ primary_publication\n    explanation: Main Methods/Results and original Figures2-6\
+    \ inspected; supporting methods and Table1\n      remain inaccessible through\
+    \ the attempted public routes.\n  posed_by: Codex\n  posed_date: '2026-10-12'\n\
+    \  notes: Reconcile JE6894 versus JE6984, AP-positive/negative recipes, tag-cleavage\
+    \ scar and deletion\n    endpoints. Printed 6.4/2.1 umol/min/mg activities cannot\
+    \ be extrapolated through the stated 2h endpoint;\n    do not silently repair\
+    \ units. See the three Woodson2004 evidence ledgers.\n- discussion_id: pf01955-fusion-and-remodeling\n\
+    \  prompt: Curate the CbiS fusion and bacterial CbiZ remodeling experiments with\
+    \ exact member and domain\n    mapping.\n  kind: CURATION_TODO\n  status: OPEN\n\
+    \  rationale: CbiZ-associated chemistry, a fused CobZ phosphatase and host-specific\
+    \ corrinoid remodeling\n    must not be treated as one universal DUF105 pathway.\n\
+    \  evidence:\n  - reference: PMID:16740929\n    supports: PARTIAL\n    evidence_source:\
+    \ primary_publication\n    explanation: Publisher Methods and selected Results\
+    \ inspected; MK1672 split constructs, current mapping,\n      original figures\
+    \ and source discrepancies still require review.\n  - reference: PMID:19889098\n\
+    \    supports: PARTIAL\n    evidence_source: primary_publication\n    explanation:\
+    \ Selected cellular Results/Table1 inspected; acetate growth and succinate corrinoid\
+    \ profiles\n      must remain separate from purified specificity assays.\n  posed_by:\
+    \ Codex\n  posed_date: '2026-10-12'\n  notes: Both publisher main texts are now\
+    \ accessible. Resolve CbiS 208-250 versus 208-357, JE2192/JE6984\n    and 0.9mg/40ul\
+    \ versus stock concentration. Inspect later full Results, figures and supplements;\
+    \ CobZ-half\n    phosphatase is not a PF01955-domain function. See evidence/PF01955/coverage-20261012.txt.\n\
+    - discussion_id: pf01955-family-coverage\n  prompt: Extend the scoped assessment\
+    \ to other tested members and the remaining primary literature.\n  kind: CURATION_TODO\n\
+    \  status: OPEN\n  rationale: Two mapped archaeal proteins and three reviewed\
+    \ database entries do not establish the functions\n    of all 2665 frozen family\
+    \ proteins.\n  evidence:\n  - reference: PMID:18808385\n    supports: PARTIAL\n\
+    \    evidence_source: primary_publication\n    explanation: Dual salvage-system\
+    \ and homolog-complementation study identified; primary experiments\n      not\
+    \ yet fully reviewed.\n  - reference: doi:10.1128/JB.00230-09\n    supports: PARTIAL\n\
+    \    evidence_source: primary_publication\n    explanation: In-vivo Rhodobacter\
+    \ salvage study is a pending primary lead, not a negative result.\n  posed_by:\
+    \ Codex\n  posed_date: '2026-10-12'\n  notes: Include later bacterial remodeling,\
+    \ Dehalococcoides and substrate-specificity work, exact taxonomic\n    aliases\
+    \ and native catalytic mechanisms. Do not transfer CbiR/CobS effects. This record\
+    \ and earlier\n    open follow-ups remain in the corpus-wide goal.\ncausal_graphs:\n\
+    - graph_id: mma-cbiz-purified-conversion-2004\n  title: Purified M. mazei CbiZ\
+    \ produces a Cby-assigned corrinoid\n  scope: Whole-protein Mm0173 CbiZ expressed\
+    \ in E. coli ER2566, not an isolated PF01955 fragment.\n  context: Woodson2004\
+    \ Methods and Figures5-6; pMmCBIZ5 C-terminal chitin-binding tag cleaved before\
+    \ assay.\n    AdoCbi reaction uses 4ug enzyme, 150uM substrate, 100ul, 50mM Na-HEPES\
+    \ pH7.5, 5mM DTT, 37C for2h in\n    dim light. DicyanoCbi is a separate reported\
+    \ substrate test.\n  family_mapping: Q8Q0G3 v1, 200aa, MM_0173/cbiZ, AAM29869.1;\
+    \ PF01955 residues15-198. Source M. mazei\n    Go1/Goe1, taxon192952. Exact historical\
+    \ tag-cleavage scar and clone sequence remain unresolved.\n  taxon: NCBITaxon:192952\n\
+    \  scope_status: MECHANISTIC\n  limitations: HPLC follows cyanide derivatization;\
+    \ MALDI measures a ligand-free species, not intact AdoCby.\n    Aminopropanol\
+    \ coproduct was not separately measured. Dicyano-substrate activity is text-reported\
+    \ without\n    a separate chromatogram. Printed kinetic rates need protocol reconciliation;\
+    \ no residue-level mechanism\n    or family-wide specificity is claimed.\n  nodes:\n\
+    \  - node_id: ado_reaction\n    label: Purified Mm0173 CbiZ with AdoCbi under\
+    \ assay conditions\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q8Q0G3\n\
+    \  - node_id: cyano_reaction\n    label: Purified Mm0173 CbiZ with dicyanoCbi\
+    \ in the reported substrate test\n    node_type: ACTIVITY\n    grounding:\n  \
+    \  - UniProtKB:Q8Q0G3\n  - node_id: cby\n    label: Cby-assigned corrinoid product\
+    \ after analytical processing\n    node_type: STATE\n  edges:\n  - edge_id: ado-substrate-cby\n\
+    \    subject: ado_reaction\n    predicate: produces\n    object: cby\n    mechanism:\
+    \ The purified enzyme removes the aminopropanol-linked amide from the substrate;\
+    \ cyano-HPLC\n      product at14.8min and isolated-product m/z932.4 support Cby\
+    \ formation. Preheated enzyme lacks the\n      product peak.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:14990804\n      source_url: https://www.pnas.org/doi/10.1073/pnas.0305939101\n\
+    \      snippet: Cby was a product\n      explanation: Purification/activity/analysis\
+    \ Methods and final Results; original Figures5-6 visually\n        inspected.\
+    \ Analytical derivatives are distinguished from the original reaction species.\n\
+    \      cache_path: evidence/PF01955/woodson-2004-chemistry.txt\n      cache_sha256:\
+    \ 06cdccd3ca4e6b0d34d1966513f6c5fd8044167874ecab606f41f7dc5bea17eb\n  - edge_id:\
+    \ cyano-substrate-cby\n    subject: cyano_reaction\n    predicate: produces\n\
+    \    object: cby\n    mechanism: The Results report amidohydrolase activity with\
+    \ dicyanoCbi as an alternative substrate;\n      adenosylation is therefore not\
+    \ an absolute in-vitro requirement for this preparation. No quantitative\n   \
+    \   rate or in-vivo adenosylation order is inferred.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:14990804\n      source_url: https://www.pnas.org/doi/10.1073/pnas.0305939101\n\
+    \      snippet: Cby was a product\n      explanation: Final Results and Discussion\
+    \ explicitly describe dicyanoCbi utilization and a lower\n        printed activity.\
+    \ This arm is text-reported; Figures5-6 do not independently display its chromatogram.\n\
+    \      cache_path: evidence/PF01955/woodson-2004-chemistry.txt\n      cache_sha256:\
+    \ 06cdccd3ca4e6b0d34d1966513f6c5fd8044167874ecab606f41f7dc5bea17eb\n- graph_id:\
+    \ mma-cbiz-extract-bioassay-2004\n  title: CbiZ-enriched extract reaction supports\
+    \ indicator growth\n  scope: E. coli BL21(lambdaDE3)-RIL extract enriched for\
+    \ M. mazei CbiZ, followed by a separate Salmonella\n    indicator bioassay.\n\
+    \  context: pMmCBIZ1; 65ug extract with30uM AdoCbi in100ul, 50mM Na-HEPES pH7.5,\
+    \ 5mM DTT, 37C for2h. Five\n    ul of1:10 deproteinated reaction dilution spotted\
+    \ onto JE824 metE205 cobU330 carrying pCOBY10(cobY+);\n    aerobic37C for24h.\n\
+    \  family_mapping: Donor Mm0173 maps Q8Q0G3 v1, PF01955 15-198 of200aa. Whole-protein\
+    \ enrichment, not isolated-domain\n    expression or a native M. mazei growth\
+    \ test.\n  scope_status: PHENOTYPIC\n  limitations: Reporter growth is a Cby-responsive\
+    \ proxy, not chemical identification by itself. Extract\n    components and the\
+    \ indicator's remaining salvage enzymes contribute; purified-enzyme evidence is\
+    \ retained\n    in a separate graph. No physiological growth rate is extracted\
+    \ from spot size.\n  nodes:\n  - node_id: active_extract\n    label: Active CbiZ-enriched\
+    \ extract plus AdoCbi reaction versus negative controls\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q8Q0G3\n  - node_id: reporter_growth\n    label:\
+    \ JE824 cobY-positive indicator growth around applied reaction sample\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: extract-reporter-growth\n    subject: active_extract\n\
+    \    predicate: increases\n    object: reporter_growth\n    mechanism: Active\
+    \ enriched-extract reaction supplies a growth-supporting corrinoid to the indicator.\n\
+    \      Authentic Cby is positive; authentic Cbi, vector extract and preheated\
+    \ CbiZ extract are negative\n      in the displayed bioassay.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:14990804\n      source_url: https://www.pnas.org/doi/10.1073/pnas.0305939101\n\
+    \      snippet: Cby synthesis\n      explanation: Extract and detection Methods;\
+    \ original Figure4 spots1-5 visually inspected. The measured\n        endpoint\
+    \ is indicator growth, with product interpretation supported separately.\n   \
+    \   cache_path: evidence/PF01955/woodson-2004-chemistry.txt\n      cache_sha256:\
+    \ 06cdccd3ca4e6b0d34d1966513f6c5fd8044167874ecab606f41f7dc5bea17eb\n- graph_id:\
+    \ halo-cbiz-deletion-rescue-2004\n  title: Native cbiZ deletion and restoration\
+    \ change Cbi-supported growth\n  scope: H. salinarum NRC-1-derived delta-cbiP\
+    \ strains differing in native cbiZ function.\n  context: Defined liquid medium37C\
+    \ with100pM dicyanoCbi; OD650 time courses in Figure2A/B. Compare JE6812\n   \
+    \ delta-cbiP delta-cbiZ with JE6738 delta-cbiP cbiZ+; rescue JE7210 delta-cbiP\
+    \ delta-cbiZ ura3::cbiZ+\n    versus JE6812.\n  family_mapping: VNG_1583C/cbiZ,\
+    \ Q9HPK9 v1, 231aa, AAG19858.1; PF01955 14-208. Gene-level deletion/restoration;\n\
+    \    exact allele endpoints await supporting Methods/Table1.\n  taxon: NCBITaxon:64091\n\
+    \  scope_status: PHENOTYPIC\n  limitations: OD650 is not viability or a direct\
+    \ corrinoid measurement. Residual late OD in JE6812 is\n    not zero growth. Restoration\
+    \ requires supplied Cbi and remaining pathway enzymes; no universal essentiality\n\
+    \    or isolated-domain mechanism. Replication/error bars are unspecified for\
+    \ these curves.\n  nodes:\n  - node_id: deletion\n    label: JE6812 cbiZ deletion\
+    \ versus JE6738 in the delta-cbiP background\n    node_type: PERTURBATION\n  \
+    \  grounding:\n    - UniProtKB:Q9HPK9\n  - node_id: restoration\n    label: JE7210\
+    \ ura3-integrated cbiZ restoration versus JE6812\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q9HPK9\n  - node_id: growth\n    label: Cbi-supported\
+    \ OD650 growth in the delta-cbiP background\n    node_type: PHENOTYPE\n  edges:\n\
+    \  - edge_id: native-deletion-growth\n    subject: deletion\n    predicate: decreases\n\
+    \    object: growth\n    mechanism: Removing cbiZ from the delta-cbiP strain strongly\
+    \ reduces Cbi-supported OD increase. The\n      intracellular intermediates between\
+    \ gene loss and growth are not directly measured.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:14990804\n      source_url: https://www.pnas.org/doi/10.1073/pnas.0305939101\n\
+    \      snippet: block in Cbi salvaging\n      explanation: Native genetic Results\
+    \ and visually inspected Figure2A, open-circle versus open-diamond\n        curves;\
+    \ both strains require exogenous precursor in this background.\n      cache_path:\
+    \ evidence/PF01955/woodson-2004-native-genetics.txt\n      cache_sha256: a69158dd90a979081df32a8c6eff1f04e6b057b30f945b88c8c11a69cfadd69a\n\
+    \  - edge_id: native-restoration-growth\n    subject: restoration\n    predicate:\
+    \ increases\n    object: growth\n    mechanism: Reintroducing cbiZ at ura3 restores\
+    \ growth with supplied Cbi in the double mutant. The\n      same restored strain\
+    \ remains low without exogenous corrinoid, limiting the sufficiency claim to\n\
+    \      this salvage context.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:14990804\n\
+    \      source_url: https://www.pnas.org/doi/10.1073/pnas.0305939101\n      snippet:\
+    \ block in Cbi salvaging\n      explanation: Restoration Results and original\
+    \ Figure2B open-square rescue versus double mutant;\n        ura3::cbiP is a different\
+    \ control, not cbiZ restoration.\n      cache_path: evidence/PF01955/woodson-2004-native-genetics.txt\n\
+    \      cache_sha256: a69158dd90a979081df32a8c6eff1f04e6b057b30f945b88c8c11a69cfadd69a\n\
+    - graph_id: halo-cby-bypass-2004\n  title: Supplied Cby bypasses the cbiZ-deficient\
+    \ growth block\n  scope: JE6812 delta-cbiP delta-cbiZ in the NRC-1 genetic background.\n\
+    \  context: Defined liquid medium37C; add100pM dicyanoCby versus no corrinoid.\
+    \ Figure2A shows Cby-supported\n    OD650 increase while dicyanoCbi gives only\
+    \ a small late rise.\n  family_mapping: Missing native cbiZ is VNG_1583C/Q9HPK9\
+    \ v1, PF01955 14-208 of231aa. This is a metabolite\n    bypass in a whole-gene-deficient\
+    \ background.\n  taxon: NCBITaxon:64091\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ Cby bypass supports pathway placement but does not itself demonstrate native\
+    \ CbiZ chemistry\n    or transport. Cbi-GDP/Cbl rescue is text-reported without\
+    \ curves and retained as control context,\n    not extra graph edges. Other salvage\
+    \ machinery remains present.\n  nodes:\n  - node_id: cby_added\n    label: Addition\
+    \ of100pM dicyanoCby to JE6812\n    node_type: PERTURBATION\n  - node_id: growth\n\
+    \    label: JE6812 OD650 growth in defined medium\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: cby-bypass-growth\n    subject: cby_added\n    predicate:\
+    \ increases\n    object: growth\n    mechanism: Exogenous Cby permits robust growth\
+    \ despite loss of cbiP and cbiZ, consistent with entry\n      downstream of the\
+    \ CbiZ-associated requirement without identifying every intervening reaction.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:14990804\n      source_url: https://www.pnas.org/doi/10.1073/pnas.0305939101\n\
+    \      snippet: block in Cbi salvaging\n      explanation: First native genetic\
+    \ Results and original Figure2A, Cby triangle curve versus no-corrinoid\n    \
+    \    double mutant; this is a bypass experiment, not a direct substrate-product\
+    \ measurement.\n      cache_path: evidence/PF01955/woodson-2004-native-genetics.txt\n\
+    \      cache_sha256: a69158dd90a979081df32a8c6eff1f04e6b057b30f945b88c8c11a69cfadd69a\n\
+    - graph_id: salmonella-joint-cbiz-coby-2004\n  title: Joint archaeal cbiZ and\
+    \ cobY provision rescues Salmonella\n  scope: Heterologous M. mazei genes in S.\
+    \ enterica JE824 metE205 cobU330.\n  context: pMmCBIZ2 carries BOTH cbiZ+ and\
+    \ cobY+; aerobic defined liquid medium37C, dicyanoCbi15nM; Figure3A\n    OD650.\
+    \ Methods state DMB3uM and AP10mM supplementation; per-arm AP details await supporting\
+    \ methods.\n  family_mapping: Donor cbiZ is MM_0173/Q8Q0G3 v1, PF01955 15-198\
+    \ of200aa. CobY is a partner enzyme, not\n    assigned to PF01955; whole-protein\
+    \ coexpression, not isolated-domain testing.\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ The intervention is joint cbiZ plus cobY provision, not independent sufficiency\
+    \ of either\n    gene. pMmCBIZ1 alone, pCOBY10 alone and vector lack comparable\
+    \ rescue; cobU+ is positive. Host enzymes\n    remain necessary; no native M.\
+    \ mazei growth or direct molecular intermediate is established.\n  nodes:\n  -\
+    \ node_id: joint_genes\n    label: Joint cbiZ+ and cobY+ on pMmCBIZ2 versus control\
+    \ plasmids\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8Q0G3\n\
+    \  - node_id: growth\n    label: Cbi-supported JE824 OD650 growth\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: joint-genes-growth\n    subject: joint_genes\n\
+    \    predicate: increases\n    object: growth\n    mechanism: Co-provision of\
+    \ the archaeal salvage functions restores robust growth in the cobU-deficient\n\
+    \      host, which retains the rest of the required synthesis and methionine-use\
+    \ machinery.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:14990804\n      source_url:\
+    \ https://www.pnas.org/doi/10.1073/pnas.0305939101\n      snippet: provided in\
+    \ trans\n      explanation: Heterologous-complementation Results and original\
+    \ Figure3A; single-gene and vector\n        curves prevent splitting the joint\
+    \ intervention into sufficient single-gene claims.\n      cache_path: evidence/PF01955/woodson-2004-heterologous.txt\n\
+    \      cache_sha256: 27566345fa70fc3e7e8c77a13faa9b2b77ab81167609905af7051ed7a07d718d\n\
+    - graph_id: salmonella-ap-rescue-2004\n  title: AP supplementation restores growth\
+    \ with joint cbiZ and cobY in a cobD mutant\n  scope: S. enterica metE205 cobU330\
+    \ cobD1272 carrying pMmCBIZ2(cbiZ+ cobY+).\n  context: Figure3B AP-positive versus\
+    \ AP-negative arms, aerobic defined liquid medium37C, dicyanoCbi15nM,\n    OD650.\
+    \ General Methods give AP10mM; Figure3B labels explicitly distinguish its addition.\n\
+    \  family_mapping: M. mazei donor CbiZ Q8Q0G3 v1, PF01955 15-198; host strain\
+    \ named JE6894 in caption but\n    JE6984 in Results. Exact host label and per-arm\
+    \ recipe remain unresolved.\n  scope_status: PHENOTYPIC\n  limitations: Conditional\
+    \ AP rescue requires both donor genes and other host machinery, not AP alone.\n\
+    \    General Methods supplementation and AP-negative arms require reconciliation.\
+    \ This does not directly\n    show CbiZ catalysis, CobD chemistry or individual\
+    \ intracellular intermediates.\n  nodes:\n  - node_id: ap_added\n    label: AP\
+    \ addition with joint cbiZ+ cobY+ in the cobU cobD host\n    node_type: PERTURBATION\n\
+    \  - node_id: growth\n    label: Cbi-supported OD650 growth of the triple-mutant\
+    \ host\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: ap-conditional-growth\n\
+    \    subject: ap_added\n    predicate: increases\n    object: growth\n    mechanism:\
+    \ AP addition allows growth when pMmCBIZ2 alone does not rescue this cobD-deficient\
+    \ background.\n      Vector plus AP stays low, while cobU+ rescues with or without\
+    \ AP; the rescue is conditional, not\n      an independently sufficient nutrient\
+    \ effect.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:14990804\n      source_url:\
+    \ https://www.pnas.org/doi/10.1073/pnas.0305939101\n      snippet: AP was added\n\
+    \      explanation: Alternative-pathway Results and original Figure3B visually\
+    \ inspected, circles versus\n        squares with matched joint donor genes. Caption/Results\
+    \ strain conflict remains explicit.\n      cache_path: evidence/PF01955/woodson-2004-heterologous.txt\n\
+    \      cache_sha256: 27566345fa70fc3e7e8c77a13faa9b2b77ab81167609905af7051ed7a07d718d\n\
+    curation_events:\n- timestamp: '2026-10-12T11:15:31Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate scoped CbiZ chemistry and cellular\
+    \ rescue graphs\n  history_record: history/records/PF01955/2026-10-12T111531Z-codex-255f1c.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Frozen previous-ID row verifies DUF105. Q8Q0G3 v1 maps PF01955 15-198 of200aa
+    in M. mazei Go1 taxon192952; Q9HPK9 v1 maps14-208 of231aa in H. salinarum NRC-1
+    taxon64091. Historical loci and primary functional references agree, but clone
+    sequence, scar and deletion endpoints remain incompletely verified. The three
+    reviewed database entries are not an exhaustive member audit.
+  target_ids:
+  - PF01955
+  evidence_ids:
+  - identity
+  - primary
+  - native-genetics
+  - heterologous-genetics
+  - coverage
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: All eight edges are OBSERVED and EXPERIMENTAL; two DIRECT chemistry edges
+    and six UNRESOLVED phenotype edges across one MECHANISTIC and five PHENOTYPIC
+    graphs. Joint cbiZ/cobY provision remains one intervention. AP rescue remains
+    conditional. Native restoration is not standalone B12 synthesis, and low residual
+    OD is not lethality. No CobZ-half phosphatase or CbiR/CobS effect is transferred
+    to PF01955.
+  target_ids:
+  - PF01955
+  evidence_ids:
+  - primary
+  - native
+  - native-genetics
+  - heterologous-genetics
+  - coverage
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Woodson2004 supplements, exact constructs and per-arm recipes/rates remain
+    unresolved. CbiS2006 and R. sphaeroides2009 publisher text is accessible and partially
+    inspected, but original figures, mappings and complete experiments remain to curate.
+    Earlier dual-salvage studies, later bacterial remodeling and all remaining frozen
+    members stay in scope, alongside previous-family follow-ups.
+  target_ids:
+  - PF01955
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01955-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Extend mapped fusion and remodeling evidence and resolve source discrepancies
+  description: Reconcile Woodson2004 JE6894/JE6984, AP arm recipes, clone/deletion
+    details and rate context; inspect CbiS split constructs and purified assays with
+    exact Pfam mapping; assess R. sphaeroides growth, cellular corrinoid profiles
+    and specificity experiments as distinct contexts. Retain contradictory labels,
+    controls and negative results; extend additional-member literature and save a
+    successor scoped review.
+  target_ids:
+  - PF01955
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - primary
+  - identity
+  - native-genetics
+  - heterologous-genetics
+  - coverage
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01955.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Reconcile Woodson2004 JE6894/JE6984, AP arm recipes, clone/deletion
+    details and rate context; inspect CbiS split constructs and purified assays with
+    exact Pfam mapping; assess R. sphaeroides growth, cellular corrinoid profiles
+    and specificity experiments as distinct contexts. Retain contradictory labels,
+    controls and negative results; extend additional-member literature and save a
+    successor scoped review.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01955
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Original Woodson2004 Figures2-6 were visually inspected. Supporting Methods/Table1/Figure8
+  and later-study original figures/supplements were not inspected. HTTP403/500 and
+  browser challenges are access limits rather than evidence absence; later publisher
+  main-text access now succeeds.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+- Five minimal evidence ledgers retained; full primary images and raw database responses
+  remain temporary research assets.
+- Same-agent source assessment, not independent expert review. IN_PROGRESS and all
+  earlier follow-ups remain unchanged.
+```

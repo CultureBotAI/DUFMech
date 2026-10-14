@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF00668
+  path: curation/families/PF00668.yaml
+session:
+  id: 2026-10-11T074011Z-codex-bfa3d1
+  timestamp: '2026-10-11T07:40:11Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add scoped TycB1 condensation-system and mutation effects
+  details: Retain one MECHANISTIC graph with four DIRECT OBSERVED edges for joint
+    TycB1-GrsA DKP output and R62A/H147R/H147V effects. Verify the first TycB PF00668
+    mapping and preserve exact construct/partner, substrate-unit and source-label
+    uncertainties. No elementary histidine mechanism or isolated-domain sufficiency
+    is asserted. Partial research and curation began with the evidence-cache session
+    at this timestamp; status remains IN_PROGRESS.
+  sections:
+  - causal_graphs

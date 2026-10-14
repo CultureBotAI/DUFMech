@@ -1,0 +1,854 @@
+# PF01910 TM0486 binding and independently scoped fungal ECM15 effects
+
+- Review: 20261012T003323Z-pf01910-thiamine-binding-and-separated-ecm15-phenotypes
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-12T00:33:14Z
+- Finished UTC: 2026-10-12T00:33:23Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Twelve graphs retain24 OBSERVED/EXPERIMENTAL effects: two DIRECT binding edges and22 INDIRECT assembly, RNA or phenotype edges. One graph is MECHANISTIC and11 are PHENOTYPIC. Four minimal ledgers and two OPEN discussions preserve boundaries and source inconsistencies. Partial same-agent scientific self-review yields NEEDS_FOLLOWUP; IN_PROGRESS is retained, not full family characterization or approval.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Former DUF77; selected TM0486 binding/assembly/RNA and Park2018 fungal phenotype assays, not all Pfam members or all study results.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01910 | data/families/PF01910.yaml | generated | PF01910 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01910 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01910.
+
+Frozen PF01910 Thiamine_BP/IPR002767/former DUF77 has 9298 proteins. Q9WYV6 equals AAD35571.1, PF01910 6-93 of 94 aa. H99 J9VTN7/CNAG_06669 equals AFR95954.1 and XP_012050770.1, PF01910 9-102 of 114 aa; the displayed Figure S5A sequence agrees. Reference sequence versions are1. Sc P35195 maps PF01910 8-98 of104 aa, but the experimental strain is BY4741 rather than independently sequenced S288c. Reference equality is not independent sequencing of the historical tagged assay clones. Imported identity/counters and frozen snapshot are unchanged.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01910.
+
+The bacterial and fungal experiments are not joined into one pathway. Whole-gene deletion/rescue supports scoped morphology, spot growth, pigmentation, mating and host endpoints, not isolated-domain chemistry. Fluorescence is not direct physical binding or Cac2 transport, and weakened starvation signal is a confound. Predicted NLS remains untested. Cac2 PCC decreases from0.77 to0.57, not complete loss. Pigment is not direct laccase activity. The two mouse comparisons use different inocula and controls; both deletion and elevated expression prolong the endpoint in their own experiments, not a monotonic effect. VAD1 deletion changes ECM15 steady-state RNA, not demonstrated direct transcription. Exact-clone CAC2 cross-rescue is excluded because the supplement has a contradictory genotype and duplicated YP617.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01910.
+
+Only two member branches are curated. Archaeal and other bacterial members, other fungal transcript changes and raw replicate uncertainty remain unassessed. Dermoun supplement access failed; other Park supplement PDFs were downloaded but not inspected. Historical clones, precise assembly, binding residues, fungal ligand chemistry, physical transport mechanisms, strain-table conflict and printed assay units remain open. No whole-family or clinical inference is supported.
+
+## Findings
+
+### additional-contexts: Resolve assay-source discrepancies and extend mapped family branches
+
+minor / open / confirmed; issue key: pf01910-causal-context-coverage.
+
+Resolve the ITC titrant and pigmentation units without silent correction, the cross-rescue genotype/YP617 collision, and missing condition details. Recover raw data and clone mapping where available. Extend verified MTH1187/MJ1052, DglA, YqgV and other family branches from primary assays; do not borrow neighboring-gene phenotypes or related-fold chemistry. New edges need native history and an evidence-backed successor review.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Resolve the ITC titrant and pigmentation units without silent correction, the cross-rescue genotype/YP617 collision, and missing condition details. Recover raw data and clone mapping where available. Extend verified MTH1187/MJ1052, DglA, YqgV and other family branches from primary assays; do not borrow neighboring-gene phenotypes or related-fold chemistry. New edges need native history and an evidence-backed successor review.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC2980899/; Main Methods/Results/Discussion; original Figures 2-6 visually inspected, expression results and Figure 7 caption read without inspecting that image. | supports | Purified TM0486 binds thiamine and TPP. Supplemented production shifts apparent assembly, and oxidative culture conditions increase RNA. Binding, whole-production effects and cellular expression are separate experiments; neither native transport nor stress protection is proven. HMP/taurine negatives, UNL, assembly ambiguity and the printed ITC concentration discrepancy remain visible. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01910/; Accession and domain locations; paired UniProt identity facts | supports | Frozen PF01910 Thiamine_BP/IPR002767/former DUF77 has 9298 proteins. Q9WYV6 equals AAD35571.1, PF01910 6-93 of 94 aa. H99 J9VTN7/CNAG_06669 equals AFR95954.1 and XP_012050770.1, PF01910 9-102 of 114 aa; the displayed Figure S5A sequence agrees. Reference sequence versions are1. Sc P35195 maps PF01910 8-98 of104 aa, but the experimental strain is BY4741 rather than independently sequenced S288c. Reference equality is not independent sequencing of the historical tagged assay clones. Imported identity/counters and frozen snapshot are unchanged. |
+| fungal-primary-and-supplements | https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/; ECM15 Results/Discussion, Methods, original Figures4/5, FigureS5A and TableS5A; Europe PMC supplementary archive. | supports | Fungal sequence mapping and selected deletion/rescue, localization, morphology, growth, pigmentation, mating, host endpoint and RNA comparisons are retained with exact context. The duplicated strain identifier and discrepant cross-rescue genotype remain unresolved. |
+| discovery-and-remaining-coverage | evidence/PF01910/coverage.txt; Ignored/hidden-inclusive local search, reviewed UniProt inventory, related-fold exclusion and source-access limits. | supports | Two selected experimental branches, not all9298 proteins; other member leads and inaccessible content are explicitly unassessed. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01910 | data/families/PF01910.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Dermoun Figures2-6 and Park Figures4/5, FigureS5A sequence and TableS5A strain table were visually inspected. Dermoun Figure7 image/supplement, most Park supplements, raw data and historical clone sequences were not independently inspected. Known source inconsistencies were retained instead of guessed corrections.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T003323Z-pf01910-thiamine-binding-and-separated-ecm15-phenotypes
+title: PF01910 TM0486 binding and independently scoped fungal ECM15 effects
+started_at: '2026-10-12T00:33:14Z'
+finished_at: '2026-10-12T00:33:23Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Twelve graphs retain24 OBSERVED/EXPERIMENTAL effects: two DIRECT binding
+  edges and22 INDIRECT assembly, RNA or phenotype edges. One graph is MECHANISTIC
+  and11 are PHENOTYPIC. Four minimal ledgers and two OPEN discussions preserve boundaries
+  and source inconsistencies. Partial same-agent scientific self-review yields NEEDS_FOLLOWUP;
+  IN_PROGRESS is retained, not full family characterization or approval.'
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01910.yaml
+    sha256: d30eb1a401c3e991f42293c33092de8dcb84f28b7c702201de3ce5acd795a725
+    role: context
+  - path: data/families/PF01910.yaml
+    sha256: a7f0c0330dcb856fe44729cfc284f0be1cbfacae8626625acb0b0bd57a31de4b
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01910/dermoun-2010.txt
+    role: context
+    sha256: 70685a6d0362c99b29ffd7ea21b9c5279b486bde81af8fe8f6ef6b3cf4aaaa3e
+  - path: evidence/PF01910/identity.txt
+    role: context
+    sha256: e2ce4c62c8d24f42717cfd4f3d77479e200873ae053410c16b147d664b006283
+  - path: evidence/PF01910/park-2018.txt
+    role: context
+    sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71
+  - path: evidence/PF01910/coverage.txt
+    role: context
+    sha256: ce7c887193a01511ecc3590c48d8f2484b04724b7313099a608f39aacb489cca
+targets:
+- target_id: PF01910
+  path: data/families/PF01910.yaml
+  label: PF01910
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01910.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 192b833dade91c9422dcc1442bb60ecea900a2598ba426e8399dd4f5e26d536a
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Former DUF77; selected TM0486 binding/assembly/RNA and Park2018 fungal
+    phenotype assays, not all Pfam members or all study results.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01910
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Only two member branches are curated. Archaeal and other bacterial members,
+      other fungal transcript changes and raw replicate uncertainty remain unassessed.
+      Dermoun supplement access failed; other Park supplement PDFs were downloaded
+      but not inspected. Historical clones, precise assembly, binding residues, fungal
+      ligand chemistry, physical transport mechanisms, strain-table conflict and printed
+      assay units remain open. No whole-family or clinical inference is supported.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01910
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2980899/
+  locator: Main Methods/Results/Discussion; original Figures 2-6 visually inspected,
+    expression results and Figure 7 caption read without inspecting that image.
+  accessed_at: '2026-10-12T00:33:23Z'
+  support: supports
+  snapshot_sha256: 70685a6d0362c99b29ffd7ea21b9c5279b486bde81af8fe8f6ef6b3cf4aaaa3e
+  summary: Purified TM0486 binds thiamine and TPP. Supplemented production shifts
+    apparent assembly, and oxidative culture conditions increase RNA. Binding, whole-production
+    effects and cellular expression are separate experiments; neither native transport
+    nor stress protection is proven. HMP/taurine negatives, UNL, assembly ambiguity
+    and the printed ITC concentration discrepancy remain visible.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01910/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-12T00:33:23Z'
+  support: supports
+  snapshot_sha256: e2ce4c62c8d24f42717cfd4f3d77479e200873ae053410c16b147d664b006283
+  summary: Frozen PF01910 Thiamine_BP/IPR002767/former DUF77 has 9298 proteins. Q9WYV6
+    equals AAD35571.1, PF01910 6-93 of 94 aa. H99 J9VTN7/CNAG_06669 equals AFR95954.1
+    and XP_012050770.1, PF01910 9-102 of 114 aa; the displayed Figure S5A sequence
+    agrees. Reference sequence versions are1. Sc P35195 maps PF01910 8-98 of104 aa,
+    but the experimental strain is BY4741 rather than independently sequenced S288c.
+    Reference equality is not independent sequencing of the historical tagged assay
+    clones. Imported identity/counters and frozen snapshot are unchanged.
+- evidence_id: fungal-primary-and-supplements
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/
+  locator: ECM15 Results/Discussion, Methods, original Figures4/5, FigureS5A and TableS5A;
+    Europe PMC supplementary archive.
+  summary: Fungal sequence mapping and selected deletion/rescue, localization, morphology,
+    growth, pigmentation, mating, host endpoint and RNA comparisons are retained with
+    exact context. The duplicated strain identifier and discrepant cross-rescue genotype
+    remain unresolved.
+  accessed_at: '2026-10-12T00:33:23Z'
+  support: supports
+  snapshot_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71
+- evidence_id: discovery-and-remaining-coverage
+  kind: search
+  reference: evidence/PF01910/coverage.txt
+  locator: Ignored/hidden-inclusive local search, reviewed UniProt inventory, related-fold
+    exclusion and source-access limits.
+  search_scope: PF01910/DUF77/IPR002767/TM0486/MTH1187 in local curation/evidence/history/reviews/reports
+    excluding inventory; public family and reviewed-member searches.
+  summary: Two selected experimental branches, not all9298 proteins; other member
+    leads and inaccessible content are explicitly unassessed.
+  accessed_at: '2026-10-12T00:33:23Z'
+  support: supports
+  snapshot_sha256: ce7c887193a01511ecc3590c48d8f2484b04724b7313099a608f39aacb489cca
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-12T00:33:23Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01910
+  kind: record_content
+  reference: data/families/PF01910.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-12T00:33:23Z'
+  support: context_only
+  snapshot_sha256: a7f0c0330dcb856fe44729cfc284f0be1cbfacae8626625acb0b0bd57a31de4b
+  quote: "id: Pfam:PF01910\npfam_id: PF01910\nname: Thiamine-binding protein\nshort_name:\
+    \ Thiamine_BP\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status:\
+    \ IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01910\n\
+    counters:\n  proteins: 9298\n  matches: 9331\n  proteomes: 8093\n  taxa: 12399\n\
+    \  structures: 7\n  alphafold_models: 6343\n  domain_architectures: 25\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002767\ndescription: The crystal structure of two of\
+    \ these members shows that this domain has a ferredoxin like\n  fold and is likely\
+    \ to exists as at least homodimers. Sulphate ions are are located at the dimer\
+    \ interfaces,\n  which are thought to confer additional stability. Although the\
+    \ function of this domain remains to be\n  identified, its structure suggests\
+    \ a role in protein-protein interactions possibly regulated by the\n  binding\
+    \ of small-molecule ligands [[cite:PUB00019479]]. Solution of the structure of\
+    \ the hyperthermophilic\n  anaerobic Thermotoga maritima sequence, UniProtKB:Q9WYV6,\
+    \ shows that this has a beta-alpha-beta-beta-alpha-beta\n  ferredoxin-like fold\
+    \ and assembles as a homotetramer. It was possible to identify a pocket in each\
+    \ monmer\n  that bound an unidentified ligand. It was also found that it bound\
+    \ charged thiamine though not hydroxymethyl\n  pyrimidine. It is proposed that\
+    \ it is transporting charged thiamine around the cytoplasm. Under oxidative\n\
+    \  conditions this bacterium is under stress, and the transcriiptional unit within\
+    \ which this protein is\n  expressed is up-regulated in these conditions, suggesting\
+    \ that the chelation of cytoplasmic thaimine\n  is part of the response mechanism\
+    \ to such oxidatvie stress, which is mediated by this family [[cite:PUB00055842]].\n\
+    curation_history: history/records/PF01910\ndiscussions:\n- discussion_id: duf77-family-and-ligand-coverage\n\
+    \  prompt: Extend PF01910 branches without transferring bacterial ligand chemistry\
+    \ to fungal phenotypes.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Two\
+    \ experimentally scoped branches are not all 9298 frozen proteins or one conserved\
+    \ molecular\n    mechanism.\n  evidence:\n  - reference: PMID:20471400\n    supports:\
+    \ SUPPORT\n    evidence_source: primary_binding_assays\n    explanation: TM0486\
+    \ binding is supported, but transport, protection, exact assembly and a causal\
+    \ T44\n      relay are unresolved.\n  - reference: PMID:12866058\n    supports:\
+    \ PARTIAL\n    evidence_source: uncurated_structural_lead\n    explanation: MTH1187/MJ1052\
+    \ structural contexts need primary inspection; related folds are not causal\n\
+    \      evidence.\n  posed_by: Codex\n  posed_date: '2026-10-12'\n  notes: Investigate\
+    \ DglA, YqgV and other verified members separately. Retain the 500 mM ITC unit\
+    \ discrepancy,\n    inaccessible Dermoun supplement, negative HMP/taurine tests,\
+    \ UNL ligand and qualified historical-clone\n    mapping. Keep imported metadata\
+    \ unchanged and IN_PROGRESS.\n- discussion_id: ecm15-construct-and-mechanism-limits\n\
+    \  prompt: Resolve fungal strain-table conflicts and assay limitations before\
+    \ adding a mechanistic relay.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ Whole-gene phenotype rescue and fluorescence colocalization do not establish\
+    \ an isolated-domain\n    biochemical activity.\n  evidence:\n  - reference: PMID:30563896\n\
+    \    supports: PARTIAL\n    evidence_source: primary_figures_and_supplements\n\
+    \    explanation: Figures 4/5 and S5 plus Table S5A establish selected phenotypes\
+    \ but leave the cross-rescue\n      genotype inconsistent and predicted NLS untested.\n\
+    \  posed_by: Codex\n  posed_date: '2026-10-12'\n  notes: Resolve duplicate YP617\
+    \ and the CAC2 cross-rescue genotype; do not silently repair. Check printed\n\
+    \    pigment units and missing SDS/localization conditions, raw replicates, clone\
+    \ sequences, fluorescence\n    abundance effects and independent physical interaction\
+    \ evidence. Do not infer direct Cac2 transport,\n    fungal thiamine binding,\
+    \ direct laccase activity or ECM15 patient associations. Separate the different\n\
+    \    mouse experiments; retain only their reported outcome scope. A successor\
+    \ review is needed for added\n    evidence.\ncausal_graphs:\n- graph_id: tm0486-ligand-binding-2010\n\
+    \  title: Purified TM0486 binds thiamine and thiamine pyrophosphate\n  scope:\
+    \ Dermoun2010 purified full-length His-tagged TM0486 produced without thiamine;\
+    \ two ligand tests,\n    not a family-wide specificity claim.\n  context: NMR\
+    \ at 47 C with protein 0.1 mM and ligand 0.5 mM in phosphate pH 6/NaCl buffer;\
+    \ thiamine ITC\n    is a separate 25 C experiment with 25 uM protein.\n  family_mapping:\
+    \ T. maritima MSB8 Q9WYV6 sequence version 1, 94 aa, equals AAD35571.1; PF01910\
+    \ 6-93.\n    Recombinant N-terminal His tag and historical clone context are not\
+    \ independent sequencing of the\n    assay preparation.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:243274\n  limitations: HMP and taurine were negative in these\
+    \ NMR conditions. ITC reports Kd 1.58 uM and n 0.916;\n    Methods print 500 mM\
+    \ titrant, an unresolved unit discrepancy, not silently corrected. TPP affinity,\n\
+    \    atomic binding residues, native transport and stress protection are not established.\
+    \ PDB 1VK8 contains\n    UNL, not confirmed bound thiamine.\n  nodes:\n  - node_id:\
+    \ protein-thiamine\n    label: Purified TM0486 plus thiamine\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:Q9WYV6\n  - node_id: protein-tpp\n    label:\
+    \ Purified TM0486 plus thiamine pyrophosphate\n    node_type: ACTIVITY\n    grounding:\n\
+    \    - UniProtKB:Q9WYV6\n  - node_id: thiamine-complex\n    label: TM0486-thiamine\
+    \ binding complex\n    node_type: STATE\n  - node_id: tpp-complex\n    label:\
+    \ TM0486-TPP binding complex\n    node_type: STATE\n  edges:\n  - edge_id: thiamine-binding\n\
+    \    subject: protein-thiamine\n    predicate: produces\n    object: thiamine-complex\n\
+    \    mechanism: WaterLOGSY and HSQC support ligand association with purified protein;\
+    \ ITC independently\n      supports saturable thiamine binding. This is complex\
+    \ formation, not transport.\n    directness: DIRECT\n    support: OBSERVED\n \
+    \   evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:20471400\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2980899/\n      snippet:\
+    \ TM0486 specifically bound thiamin\n      explanation: Figures 2A/B and 3, NMR\
+    \ and calorimetry Methods; original plots inspected.\n      cache_path: evidence/PF01910/dermoun-2010.txt\n\
+    \      cache_sha256: 70685a6d0362c99b29ffd7ea21b9c5279b486bde81af8fe8f6ef6b3cf4aaaa3e\n\
+    \  - edge_id: tpp-binding\n    subject: protein-tpp\n    predicate: produces\n\
+    \    object: tpp-complex\n    mechanism: TPP produces the NMR binding response.\
+    \ The experiment does not establish an equal affinity\n      to thiamine or an\
+    \ in-cell cargo route.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:20471400\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC2980899/\n      snippet: TM0486 specifically\
+    \ bound thiamin\n      explanation: Figure 2A/B TPP compared with thiamine, HMP\
+    \ and taurine; no TPP ITC affinity is assigned.\n      cache_path: evidence/PF01910/dermoun-2010.txt\n\
+    \      cache_sha256: 70685a6d0362c99b29ffd7ea21b9c5279b486bde81af8fe8f6ef6b3cf4aaaa3e\n\
+    - graph_id: tm0486-production-assembly-2010\n  title: Thiamine-supplemented production\
+    \ shifts apparent TM0486 assembly\n  scope: Recombinant protein produced in matched\
+    \ minimal expression media with or without thiamine.\n  context: Figure 4 compares\
+    \ production with 1 mM thiamine versus no thiamine using native-PAGE and DLS;\n\
+    \    a whole production condition, not acute addition to a purified preparation.\n\
+    \  family_mapping: T. maritima MSB8 Q9WYV6 sequence version 1, 94 aa, equals AAD35571.1;\
+    \ PF01910 6-93.\n    Recombinant N-terminal His tag and historical clone context\
+    \ are not independent sequencing of the\n    assay preparation.\n  scope_status:\
+    \ PHENOTYPIC\n  taxon: NCBITaxon:243274\n  limitations: The larger DLS population\
+    \ can include aggregation and does not prove exact tetramer stoichiometry.\n \
+    \   Rich-medium results have additional compositional differences. Binding is\
+    \ measured separately; no\n    observed direct binding-to-tetramer relay is asserted.\n\
+    \  nodes:\n  - node_id: production-thiamine\n    label: Thiamine supplementation\
+    \ during TM0486 production\n    node_type: PERTURBATION\n  - node_id: apparent-assembly\n\
+    \    label: Larger apparent TM0486 assemblies\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: production-increases-size\n    subject: production-thiamine\n  \
+    \  predicate: increases\n    object: apparent-assembly\n    mechanism: The supplemented\
+    \ production condition yields a larger native-gel species and particle-size\n\
+    \      distribution than unsupplemented production; intervening effects are unresolved.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:20471400\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2980899/\n\
+    \      snippet: TM0486 specifically bound thiamin\n      explanation: Figure 4A/B\
+    \ original native-PAGE and DLS panels; Figure 5 cofactor NMR is supportive\n \
+    \       context, not assembly stoichiometry.\n      cache_path: evidence/PF01910/dermoun-2010.txt\n\
+    \      cache_sha256: 70685a6d0362c99b29ffd7ea21b9c5279b486bde81af8fe8f6ef6b3cf4aaaa3e\n\
+    - graph_id: tm0486-oxidative-rna-2010\n  title: Oxidative culture conditions increase\
+    \ TM0486 transcript abundance\n  scope: Native T. maritima MSB8 culture comparisons,\
+    \ not a TM0486 deletion or protection assay.\n  context: Adapted cultures compared\
+    \ with anaerobic Na2S-supplemented reference cultures; separately anaerobic\n\
+    \    without Na2S and the oxygenated oxidative culture condition. qPCR normalized\
+    \ to 16S, three cultures\n    and technical triplicates.\n  family_mapping: T.\
+    \ maritima MSB8 Q9WYV6 sequence version 1, 94 aa, equals AAD35571.1; PF01910 6-93.\n\
+    \    Recombinant N-terminal His tag and historical clone context are not independent\
+    \ sequencing of the\n    assay preparation.\n  scope_status: PHENOTYPIC\n  taxon:\
+    \ NCBITaxon:243274\n  limitations: Oxygenated cultures are a complete treatment\
+    \ condition, not proven to differ only in oxygen.\n    RNA abundance is not protein\
+    \ activity or direct promoter activation. Co-transcription with transporter\n\
+    \    genes does not demonstrate TM0486 transport.\n  nodes:\n  - node_id: no-reductant\n\
+    \    label: Anaerobic culture without Na2S relative to supplemented reference\n\
+    \    node_type: PERTURBATION\n  - node_id: oxidative-culture\n    label: Oxygenated\
+    \ oxidative culture relative to anaerobic supplemented reference\n    node_type:\
+    \ PERTURBATION\n  - node_id: tm-rna\n    label: TM0486 steady-state transcript\
+    \ abundance\n    node_type: STATE\n    grounding:\n    - UniProtKB:Q9WYV6\n  edges:\n\
+    \  - edge_id: no-reductant-increases-rna\n    subject: no-reductant\n    predicate:\
+    \ increases\n    object: tm-rna\n    mechanism: The no-Na2S condition shows approximately\
+    \ elevenfold higher TM0486 RNA than the reference\n      culture; direct sensing\
+    \ and physiological benefit remain unresolved.\n    directness: INDIRECT\n   \
+    \ support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:20471400\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2980899/\n\
+    \      snippet: TM0486 specifically bound thiamin\n      explanation: Expression\
+    \ Results and qPCR Methods; the Figure 7 image itself was not inspected.\n   \
+    \   cache_path: evidence/PF01910/dermoun-2010.txt\n      cache_sha256: 70685a6d0362c99b29ffd7ea21b9c5279b486bde81af8fe8f6ef6b3cf4aaaa3e\n\
+    \  - edge_id: oxidative-increases-rna\n    subject: oxidative-culture\n    predicate:\
+    \ increases\n    object: tm-rna\n    mechanism: The reported oxidative culture\
+    \ condition shows approximately twelvefold higher TM0486 RNA\n      than the reference;\
+    \ this is not an isolated oxygen-only causal factor.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:20471400\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2980899/\n\
+    \      snippet: TM0486 specifically bound thiamin\n      explanation: Expression\
+    \ Results and qPCR Methods distinguish complete culture treatments.\n      cache_path:\
+    \ evidence/PF01910/dermoun-2010.txt\n      cache_sha256: 70685a6d0362c99b29ffd7ea21b9c5279b486bde81af8fe8f6ef6b3cf4aaaa3e\n\
+    - graph_id: ecm15-yeast-cfw-2018\n  title: ECM15 deletion and heterologous rescue\
+    \ alter yeast calcofluor growth\n  scope: Park2018 S. cerevisiae BY4741 WT, ecm15\
+    \ deletion and deletion expressing C. neoformans ECM15.\n  context: Figure 5A\
+    \ qualitative spot growth on calcofluor white versus YPD; comparison is within\
+    \ the\n    BY4741 background. Table S5A lists deletion YP738 and heterologous\
+    \ rescue YP744.\n  family_mapping: Sc reference P35195/YBL001C sequence version\
+    \ 1, 104 aa, PF01910 8-98, is S288c rather\n    than an independently sequenced\
+    \ BY4741 clone. Heterologous H99 J9VTN7 equals AFR95954.1/XP_012050770.1\n   \
+    \ and maps PF01910 9-102; Figure S5A agrees.\n  scope_status: PHENOTYPIC\n  taxon:\
+    \ NCBITaxon:4932\n  limitations: Whole-gene perturbations do not establish isolated-domain\
+    \ sufficiency or wall chemistry.\n    The empty-vector strain listed in Table\
+    \ S5A is not displayed in Figure 5A. Growth is qualitative,\n    not a precise\
+    \ rate; no fungal thiamine binding is measured.\n  nodes:\n  - node_id: sc-deletion\n\
+    \    label: ECM15 deletion in BY4741\n    node_type: PERTURBATION\n  - node_id:\
+    \ cn-rescue\n    label: C. neoformans ECM15 expression in the yeast deletion background\n\
+    \    node_type: PERTURBATION\n  - node_id: cfw-growth\n    label: Calcofluor-white\
+    \ plate growth\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: deletion-lowers-cfw-growth\n\
+    \    subject: sc-deletion\n    predicate: decreases\n    object: cfw-growth\n\
+    \    mechanism: Deletion gives less spot growth under calcofluor challenge than\
+    \ WT; the YPD comparison\n      is broadly similar.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:30563896\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n\
+    \      snippet: ECM15 transcripts compared with the wild type\n      explanation:\
+    \ Figure 5A original spots and caption, Table S5A strain identities.\n      cache_path:\
+    \ evidence/PF01910/park-2018.txt\n      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    \  - edge_id: heterologous-restores-cfw-growth\n    subject: cn-rescue\n    predicate:\
+    \ increases\n    object: cfw-growth\n    mechanism: The heterologous ECM15 condition\
+    \ restores growth toward WT relative to deletion alone.\n      This supports functional\
+    \ complementation of this phenotype, not identical biochemical function.\n   \
+    \ directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:30563896\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n\
+    \      snippet: ECM15 transcripts compared with the wild type\n      explanation:\
+    \ Figure 5A rescue row compared with the deletion row; no unseen empty-vector\
+    \ control\n        is claimed.\n      cache_path: evidence/PF01910/park-2018.txt\n\
+    \      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    - graph_id: ecm15-fungal-localization-2018\n  title: Culture condition and ECM15\
+    \ loss alter nuclear fluorescence association\n  scope: H99-background Ecm15-mCherry\
+    \ and Cac2-GFP localization comparisons in Park2018 Figures 4B/D.\n  context:\
+    \ Nutrient-rich YPD compared with ASN without glucose or YPD plus rapamycin for\
+    \ Ecm15; separate\n    WT versus ecm15 deletion in YPD for Cac2-GFP/DAPI correlation.\n\
+    \  family_mapping: H99 ECM15 J9VTN7/CNAG_06669 sequence version 1, 114 aa, equals\
+    \ AFR95954.1 and XP_012050770.1;\n    PF01910 9-102. Figure S5A's sequence agrees.\
+    \ Whole-protein perturbations do not isolate the Pfam domain.\n  scope_status:\
+    \ PHENOTYPIC\n  taxon: NCBITaxon:235443\n  limitations: Colocalization is not\
+    \ direct physical binding or a transport reaction. Starvation reduces\n    visible\
+    \ Ecm15 signal, confounding movement with abundance/fluorescence. Figure 4 dose/time\
+    \ details\n    are not borrowed from Figure 1. Predicted D63-A91 NLS is untested.\
+    \ The Cac2 PCC remains 0.57 after\n    deletion, not zero.\n  nodes:\n  - node_id:\
+    \ starvation\n    label: Shift tagged Ecm15 cells from YPD to glucose-free ASN\n\
+    \    node_type: PERTURBATION\n  - node_id: rapamycin\n    label: Rapamycin treatment\
+    \ of tagged Ecm15 cells in YPD\n    node_type: PERTURBATION\n  - node_id: ecm-deletion\n\
+    \    label: ECM15 deletion in the Cac2-GFP localization assay\n    node_type:\
+    \ PERTURBATION\n  - node_id: ecm-nuclear\n    label: Visible Ecm15 nuclear enrichment\n\
+    \    node_type: STATE\n    grounding:\n    - UniProtKB:J9VTN7\n  - node_id: cac-dapi\n\
+    \    label: Cac2-GFP and nuclear DAPI spatial correlation\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: starvation-lowers-ecm-nuclear\n    subject: starvation\n\
+    \    predicate: decreases\n    object: ecm-nuclear\n    mechanism: The starvation\
+    \ condition reduces visible nuclear Ecm15 enrichment relative to nutrient-rich\n\
+    \      cells; redistribution and altered signal intensity are not resolved independently.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:30563896\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n\
+    \      snippet: ECM15 transcripts compared with the wild type\n      explanation:\
+    \ Figure 4B original fluorescence panels and localization Results.\n      cache_path:\
+    \ evidence/PF01910/park-2018.txt\n      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    \  - edge_id: rapamycin-lowers-ecm-nuclear\n    subject: rapamycin\n    predicate:\
+    \ decreases\n    object: ecm-nuclear\n    mechanism: Rapamycin-treated cells show\
+    \ reduced nuclear enrichment and cytoplasmic signal relative\n      to untreated\
+    \ nutrient-rich cells. This does not by itself establish a direct TOR-Ecm15 molecular\n\
+    \      interaction.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:30563896\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n      snippet: ECM15 transcripts\
+    \ compared with the wild type\n      explanation: Figure 4B rapamycin versus YPD\
+    \ panels; Methods describe tagged proteins.\n      cache_path: evidence/PF01910/park-2018.txt\n\
+    \      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    \  - edge_id: deletion-lowers-cac-correlation\n    subject: ecm-deletion\n   \
+    \ predicate: decreases\n    object: cac-dapi\n    mechanism: Deletion lowers Cac2-GFP/DAPI\
+    \ PCC from 0.77 to 0.57 under nutrient-rich conditions, supporting\n      a localization\
+    \ phenotype without resolving a transport mechanism.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:30563896\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n\
+    \      snippet: ECM15 transcripts compared with the wild type\n      explanation:\
+    \ Figure 4D and numeric Results; Methods use at least 20 cells, not necessarily\
+    \ independent\n        cultures.\n      cache_path: evidence/PF01910/park-2018.txt\n\
+    \      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    - graph_id: ecm15-fungal-capsule-2018\n  title: ECM15 loss and own-gene complementation\
+    \ alter capsule morphology\n  scope: H99, ecm15 deletion YP573 and own-gene complement\
+    \ YP612; disputed CAC2 cross-rescue clone excluded.\n  context: Figure 4C India-ink\
+    \ images under glucose-free ASN; effects are relative to matched WT or deletion\n\
+    \    controls.\n  family_mapping: H99 ECM15 J9VTN7/CNAG_06669 sequence version\
+    \ 1, 114 aa, equals AFR95954.1 and XP_012050770.1;\n    PF01910 9-102. Figure\
+    \ S5A's sequence agrees. Whole-protein perturbations do not isolate the Pfam domain.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:235443\n  limitations: Qualitative\
+    \ capsule morphology is not an absolute synthesis rate. Complementation retains\n\
+    \    the deletion construct. Table S5A assigns a contradictory cac2 genotype and\
+    \ duplicate YP617 to the\n    ECM15-deletion/CAC2 cross-rescue row; no exact-clone\
+    \ epistasis edge is imported.\n  nodes:\n  - node_id: deletion\n    label: ECM15\
+    \ deletion relative to H99\n    node_type: PERTURBATION\n  - node_id: own-complement\n\
+    \    label: Own-gene ECM15 complementation relative to deletion\n    node_type:\
+    \ PERTURBATION\n  - node_id: capsule\n    label: Apparent capsule size under glucose-free\
+    \ conditions\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: deletion-increases-capsule\n\
+    \    subject: deletion\n    predicate: increases\n    object: capsule\n    mechanism:\
+    \ The deletion strain has a larger apparent capsule than WT in the displayed glucose-free\n\
+    \      condition; the biochemical synthesis pathway is unresolved.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:30563896\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n\
+    \      snippet: ECM15 transcripts compared with the wild type\n      explanation:\
+    \ Figure 4C glucose-free India-ink panels, Table S5A own-gene strains.\n     \
+    \ cache_path: evidence/PF01910/park-2018.txt\n      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    \  - edge_id: complement-lowers-capsule\n    subject: own-complement\n    predicate:\
+    \ decreases\n    object: capsule\n    mechanism: Own-gene complementation shifts\
+    \ capsule morphology toward WT relative to deletion alone,\n      without establishing\
+    \ a direct Ecm15-Cac2 pathway.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30563896\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n      snippet:\
+    \ ECM15 transcripts compared with the wild type\n      explanation: Figure 4C\
+    \ ecm15 deletion plus ECM15 panel; Methods retain the original deletion.\n   \
+    \   cache_path: evidence/PF01910/park-2018.txt\n      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    - graph_id: ecm15-fungal-growth-2018\n  title: ECM15 perturbations alter stress\
+    \ and nutrient-limited spot growth\n  scope: H99, ecm15 deletion and own-gene\
+    \ complement in Figure 5C.\n  context: Separate SDS-containing YPD and glucose-free\
+    \ ASN comparisons; rich YPD provides a growth control.\n  family_mapping: H99\
+    \ ECM15 J9VTN7/CNAG_06669 sequence version 1, 114 aa, equals AFR95954.1 and XP_012050770.1;\n\
+    \    PF01910 9-102. Figure S5A's sequence agrees. Whole-protein perturbations\
+    \ do not isolate the Pfam domain.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:235443\n\
+    \  limitations: Spot growth is not a death fraction or precise growth rate. SDS\
+    \ concentration is not specified\n    in inspected Figure 5/Methods. Complementation\
+    \ retains the deletion; no direct membrane repair or\n    nutrient-transport mechanism\
+    \ is established.\n  nodes:\n  - node_id: deletion\n    label: ECM15 deletion\
+    \ relative to H99\n    node_type: PERTURBATION\n  - node_id: complement\n    label:\
+    \ Own-gene ECM15 complementation relative to deletion\n    node_type: PERTURBATION\n\
+    \  - node_id: sds-growth\n    label: Spot growth under SDS challenge\n    node_type:\
+    \ PHENOTYPE\n  - node_id: asn-growth\n    label: Spot growth on glucose-free ASN\n\
+    \    node_type: PHENOTYPE\n  edges:\n  - edge_id: deletion-lowers-sds-growth\n\
+    \    subject: deletion\n    predicate: decreases\n    object: sds-growth\n   \
+    \ mechanism: Deletion shows poorer growth under SDS challenge than WT; rich-medium\
+    \ similarity limits\n      but does not eliminate general fitness confounding.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:30563896\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n\
+    \      snippet: ECM15 transcripts compared with the wild type\n      explanation:\
+    \ Figure 5C SDS and YPD original spot panels.\n      cache_path: evidence/PF01910/park-2018.txt\n\
+    \      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    \  - edge_id: complement-restores-sds-growth\n    subject: complement\n    predicate:\
+    \ increases\n    object: sds-growth\n    mechanism: Own-gene complementation restores\
+    \ the SDS spot-growth phenotype toward WT relative to deletion.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:30563896\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n\
+    \      snippet: ECM15 transcripts compared with the wild type\n      explanation:\
+    \ Figure 5C SDS complement and deletion rows.\n      cache_path: evidence/PF01910/park-2018.txt\n\
+    \      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    \  - edge_id: deletion-lowers-asn-growth\n    subject: deletion\n    predicate:\
+    \ decreases\n    object: asn-growth\n    mechanism: Deletion reduces spot growth\
+    \ under the tested nutrient-limited condition relative to WT;\n      no substrate-specific\
+    \ transport reaction is measured.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30563896\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n      snippet:\
+    \ ECM15 transcripts compared with the wild type\n      explanation: Figure 5C\
+    \ ASN original spot panel.\n      cache_path: evidence/PF01910/park-2018.txt\n\
+    \      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    \  - edge_id: complement-restores-asn-growth\n    subject: complement\n    predicate:\
+    \ increases\n    object: asn-growth\n    mechanism: Own-gene complementation restores\
+    \ nutrient-limited spot growth toward WT relative to deletion.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:30563896\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n\
+    \      snippet: ECM15 transcripts compared with the wild type\n      explanation:\
+    \ Figure 5C ASN complement and deletion rows.\n      cache_path: evidence/PF01910/park-2018.txt\n\
+    \      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    - graph_id: ecm15-fungal-mating-2018\n  title: ECM15 perturbations change mating-associated\
+    \ filament formation\n  scope: H99-background MATalpha strains compared with their\
+    \ deletion and own-gene complement.\n  context: Figure 5B mating-mixture edge\
+    \ images with a common KN99 MATa partner on V8 medium.\n  family_mapping: H99\
+    \ ECM15 J9VTN7/CNAG_06669 sequence version 1, 114 aa, equals AFR95954.1 and XP_012050770.1;\n\
+    \    PF01910 9-102. Figure S5A's sequence agrees. Whole-protein perturbations\
+    \ do not isolate the Pfam domain.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:235443\n\
+    \  limitations: Qualitative filament morphology does not isolate cell fusion,\
+    \ meiosis, spore yield or a\n    direct signaling reaction. Growth can contribute.\
+    \ The graph does not transfer this phenotype to other\n    fungi.\n  nodes:\n\
+    \  - node_id: deletion\n    label: ECM15 deletion relative to H99\n    node_type:\
+    \ PERTURBATION\n  - node_id: complement\n    label: Own-gene ECM15 complementation\
+    \ relative to deletion\n    node_type: PERTURBATION\n  - node_id: filaments\n\
+    \    label: Mating-associated filament formation\n    node_type: PHENOTYPE\n \
+    \ edges:\n  - edge_id: deletion-lowers-filaments\n    subject: deletion\n    predicate:\
+    \ decreases\n    object: filaments\n    mechanism: Deletion reduces the displayed\
+    \ mating-associated filaments compared with WT in the same\n      partner context.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:30563896\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n\
+    \      snippet: ECM15 transcripts compared with the wild type\n      explanation:\
+    \ Figure 5B lower original micrographs and caption.\n      cache_path: evidence/PF01910/park-2018.txt\n\
+    \      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    \  - edge_id: complement-restores-filaments\n    subject: complement\n    predicate:\
+    \ increases\n    object: filaments\n    mechanism: Own-gene complementation restores\
+    \ the displayed filament phenotype relative to deletion.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:30563896\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n\
+    \      snippet: ECM15 transcripts compared with the wild type\n      explanation:\
+    \ Figure 5B lower complement and deletion micrographs.\n      cache_path: evidence/PF01910/park-2018.txt\n\
+    \      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    - graph_id: ecm15-fungal-pigment-2018\n  title: ECM15 perturbations change norepinephrine-dependent\
+    \ pigmentation\n  scope: H99, ecm15 deletion and own-gene complement in Figure\
+    \ 5B.\n  context: Qualitative pigment comparison on the paper's norepinephrine-containing\
+    \ assay medium.\n  family_mapping: H99 ECM15 J9VTN7/CNAG_06669 sequence version\
+    \ 1, 114 aa, equals AFR95954.1 and XP_012050770.1;\n    PF01910 9-102. Figure\
+    \ S5A's sequence agrees. Whole-protein perturbations do not isolate the Pfam domain.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:235443\n  limitations: This is\
+    \ pigmentation, not direct laccase activity or a catalytic mechanism. The printed\n\
+    \    100 mg/ml norepinephrine unit is unresolved and not silently corrected. Growth,\
+    \ substrate access and\n    other processes may influence pigmentation.\n  nodes:\n\
+    \  - node_id: deletion\n    label: ECM15 deletion relative to H99\n    node_type:\
+    \ PERTURBATION\n  - node_id: complement\n    label: Own-gene ECM15 complementation\
+    \ relative to deletion\n    node_type: PERTURBATION\n  - node_id: pigment\n  \
+    \  label: Visible norepinephrine-dependent pigmentation\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: deletion-lowers-pigment\n    subject: deletion\n    predicate:\
+    \ decreases\n    object: pigment\n    mechanism: Deletion produces less visible\
+    \ pigment than WT in the displayed assay; a direct enzyme\n      effect is not\
+    \ resolved.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:30563896\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n      snippet: ECM15 transcripts\
+    \ compared with the wild type\n      explanation: Figure 5B upper original pigment\
+    \ panel and caption.\n      cache_path: evidence/PF01910/park-2018.txt\n     \
+    \ cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    \  - edge_id: complement-restores-pigment\n    subject: complement\n    predicate:\
+    \ increases\n    object: pigment\n    mechanism: Own-gene complementation restores\
+    \ pigmentation relative to the deletion strain.\n    directness: INDIRECT\n  \
+    \  support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:30563896\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n\
+    \      snippet: ECM15 transcripts compared with the wild type\n      explanation:\
+    \ Figure 5B upper complement versus deletion comparison.\n      cache_path: evidence/PF01910/park-2018.txt\n\
+    \      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    - graph_id: ecm15-fungal-host-endpoint-2018\n  title: ECM15 deletion and complementation\
+    \ alter a mouse survival endpoint\n  scope: Published H99 versus ecm15 deletion\
+    \ and own-gene-complement comparison, Figure 5D left only.\n  context: Reported\
+    \ mouse study, ten animals per group; follow-up to the moribund endpoint. Retained\
+    \ as\n    a literature outcome, not an infection or engineering protocol.\n  family_mapping:\
+    \ H99 ECM15 J9VTN7/CNAG_06669 sequence version 1, 114 aa, equals AFR95954.1 and\
+    \ XP_012050770.1;\n    PF01910 9-102. Figure S5A's sequence agrees. Whole-protein\
+    \ perturbations do not isolate the Pfam domain.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:235443\n  limitations: The endpoint is not natural death or\
+    \ human clinical survival. Left and right panels use\n    different inocula and\
+    \ cannot be pooled. No mechanism, enhancement strategy or patient-level ECM15\n\
+    \    association is inferred.\n  nodes:\n  - node_id: deletion\n    label: ECM15\
+    \ deletion strain in the published comparison\n    node_type: PERTURBATION\n \
+    \ - node_id: complement\n    label: Own-gene-complement strain relative to deletion\n\
+    \    node_type: PERTURBATION\n  - node_id: host-survival\n    label: Mouse time\
+    \ to moribund endpoint\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: deletion-prolongs-host-survival\n\
+    \    subject: deletion\n    predicate: increases\n    object: host-survival\n\
+    \    mechanism: The deletion group reaches the moribund endpoint later than WT\
+    \ in the reported assay. This\n      is a host-level phenotype with unresolved\
+    \ intermediates.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:30563896\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n      snippet: ECM15 transcripts\
+    \ compared with the wild type\n      explanation: Figure 5D left original survival\
+    \ curves and caption; not the separate right-hand experiment.\n      cache_path:\
+    \ evidence/PF01910/park-2018.txt\n      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    \  - edge_id: complement-shortens-host-survival\n    subject: complement\n   \
+    \ predicate: decreases\n    object: host-survival\n    mechanism: The own-gene-complement\
+    \ group reaches the endpoint earlier than the deletion group, toward\n      the\
+    \ WT course.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:30563896\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n      snippet: ECM15 transcripts\
+    \ compared with the wild type\n      explanation: Figure 5D left complement versus\
+    \ deletion curves; no quantitative hazard estimate reconstructed.\n      cache_path:\
+    \ evidence/PF01910/park-2018.txt\n      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    - graph_id: ecm15-fungal-expression-host-endpoint-2018\n  title: Elevated ECM15\
+    \ expression also changes the reported host endpoint\n  scope: Separate Figure\
+    \ 5D right expression-condition comparison with its WT/empty-vector control.\n\
+    \  context: A distinct published mouse experiment from Figure 5D left, with a\
+    \ different inoculum; ten animals\n    per group.\n  family_mapping: H99 ECM15\
+    \ J9VTN7/CNAG_06669 sequence version 1, 114 aa, equals AFR95954.1 and XP_012050770.1;\n\
+    \    PF01910 9-102. Figure S5A's sequence agrees. Whole-protein perturbations\
+    \ do not isolate the Pfam domain.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:235443\n\
+    \  limitations: Both deletion and elevated expression prolong the endpoint in\
+    \ different experiments, so\n    the data do not establish a monotonic dose-response.\
+    \ No cross-panel quantitative comparison, human\n    transfer, or experimental\
+    \ manipulation instructions are supplied.\n  nodes:\n  - node_id: elevated-expression\n\
+    \    label: Published elevated-ECM15-expression condition\n    node_type: PERTURBATION\n\
+    \  - node_id: host-survival\n    label: Mouse time to moribund endpoint in the\
+    \ matched expression experiment\n    node_type: PHENOTYPE\n  edges:\n  - edge_id:\
+    \ expression-prolongs-host-survival\n    subject: elevated-expression\n    predicate:\
+    \ increases\n    object: host-survival\n    mechanism: The elevated-expression\
+    \ group reaches the endpoint later than its matched empty-vector\n      control;\
+    \ this observation is retained separately from deletion/complementation.\n   \
+    \ directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:30563896\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n\
+    \      snippet: ECM15 transcripts compared with the wild type\n      explanation:\
+    \ Figure 5D right original curves and corresponding Results; separate comparator\
+    \ and\n        experimental context.\n      cache_path: evidence/PF01910/park-2018.txt\n\
+    \      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    - graph_id: vad1-ecm15-rna-2018\n  title: VAD1 deletion increases ECM15 steady-state\
+    \ RNA during starvation\n  scope: Park2018 H99 versus vad1 deletion; ECM15 is\
+    \ the measured transcript, not the deleted gene.\n  context: Figure 5F ECM15/ACT1\
+    \ RNA in ASN without glucose, with rich YPD as a separate comparison; three\n\
+    \    independent experiments.\n  family_mapping: H99 ECM15 J9VTN7/CNAG_06669 sequence\
+    \ version 1, 114 aa, equals AFR95954.1 and XP_012050770.1;\n    PF01910 9-102.\
+    \ Figure S5A's sequence agrees. Whole-protein perturbations do not isolate the\
+    \ Pfam domain.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:235443\n  limitations:\
+    \ RNA abundance does not distinguish synthesis from decay. Figure 5E RNA association\
+    \ is not\n    proof of direct degradation. This graph does not claim direct transcriptional\
+    \ activation, thiamine\n    sensing or a complete TOR pathway.\n  nodes:\n  -\
+    \ node_id: vad1-deletion\n    label: VAD1 deletion under starvation relative to\
+    \ WT\n    node_type: PERTURBATION\n  - node_id: ecm-rna\n    label: ECM15/ACT1\
+    \ steady-state RNA\n    node_type: STATE\n    grounding:\n    - UniProtKB:J9VTN7\n\
+    \  edges:\n  - edge_id: vad1-loss-increases-ecm-rna\n    subject: vad1-deletion\n\
+    \    predicate: increases\n    object: ecm-rna\n    mechanism: The deletion condition\
+    \ increases ECM15 RNA under starvation relative to WT; directness\n      of the\
+    \ intervening regulatory process is unresolved.\n    directness: INDIRECT\n  \
+    \  support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:30563896\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6299223/\n\
+    \      snippet: ECM15 transcripts compared with the wild type\n      explanation:\
+    \ Figure 5F starvation bars and Results, reported P < 0.05; Figure 5E is supportive\
+    \ association\n        only.\n      cache_path: evidence/PF01910/park-2018.txt\n\
+    \      cache_sha256: 7a4e99de3aca1c3639281a4a8c23a4e921ca4e3a9263a46689c121fdb1603a71\n\
+    curation_events:\n- timestamp: '2026-10-12T00:21:26Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate PF01910 bacterial binding and\
+    \ separate fungal phenotype graphs\n  history_record: history/records/PF01910/2026-10-12T002126Z-codex-c6b4ae.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Frozen PF01910 Thiamine_BP/IPR002767/former DUF77 has 9298 proteins. Q9WYV6
+    equals AAD35571.1, PF01910 6-93 of 94 aa. H99 J9VTN7/CNAG_06669 equals AFR95954.1
+    and XP_012050770.1, PF01910 9-102 of 114 aa; the displayed Figure S5A sequence
+    agrees. Reference sequence versions are1. Sc P35195 maps PF01910 8-98 of104 aa,
+    but the experimental strain is BY4741 rather than independently sequenced S288c.
+    Reference equality is not independent sequencing of the historical tagged assay
+    clones. Imported identity/counters and frozen snapshot are unchanged.
+  target_ids:
+  - PF01910
+  evidence_ids:
+  - identity
+  - primary
+  - fungal-primary-and-supplements
+  - discovery-and-remaining-coverage
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: The bacterial and fungal experiments are not joined into one pathway. Whole-gene
+    deletion/rescue supports scoped morphology, spot growth, pigmentation, mating
+    and host endpoints, not isolated-domain chemistry. Fluorescence is not direct
+    physical binding or Cac2 transport, and weakened starvation signal is a confound.
+    Predicted NLS remains untested. Cac2 PCC decreases from0.77 to0.57, not complete
+    loss. Pigment is not direct laccase activity. The two mouse comparisons use different
+    inocula and controls; both deletion and elevated expression prolong the endpoint
+    in their own experiments, not a monotonic effect. VAD1 deletion changes ECM15
+    steady-state RNA, not demonstrated direct transcription. Exact-clone CAC2 cross-rescue
+    is excluded because the supplement has a contradictory genotype and duplicated
+    YP617.
+  target_ids:
+  - PF01910
+  evidence_ids:
+  - primary
+  - native
+  - fungal-primary-and-supplements
+  - discovery-and-remaining-coverage
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Only two member branches are curated. Archaeal and other bacterial members,
+    other fungal transcript changes and raw replicate uncertainty remain unassessed.
+    Dermoun supplement access failed; other Park supplement PDFs were downloaded but
+    not inspected. Historical clones, precise assembly, binding residues, fungal ligand
+    chemistry, physical transport mechanisms, strain-table conflict and printed assay
+    units remain open. No whole-family or clinical inference is supported.
+  target_ids:
+  - PF01910
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01910-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve assay-source discrepancies and extend mapped family branches
+  description: Resolve the ITC titrant and pigmentation units without silent correction,
+    the cross-rescue genotype/YP617 collision, and missing condition details. Recover
+    raw data and clone mapping where available. Extend verified MTH1187/MJ1052, DglA,
+    YqgV and other family branches from primary assays; do not borrow neighboring-gene
+    phenotypes or related-fold chemistry. New edges need native history and an evidence-backed
+    successor review.
+  target_ids:
+  - PF01910
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - fungal-primary-and-supplements
+  - discovery-and-remaining-coverage
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01910.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Resolve the ITC titrant and pigmentation units without silent correction,
+    the cross-rescue genotype/YP617 collision, and missing condition details. Recover
+    raw data and clone mapping where available. Extend verified MTH1187/MJ1052, DglA,
+    YqgV and other family branches from primary assays; do not borrow neighboring-gene
+    phenotypes or related-fold chemistry. New edges need native history and an evidence-backed
+    successor review.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01910
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Dermoun Figures2-6 and Park Figures4/5, FigureS5A sequence and TableS5A strain table
+  were visually inspected. Dermoun Figure7 image/supplement, most Park supplements,
+  raw data and historical clone sequences were not independently inspected. Known
+  source inconsistencies were retained instead of guessed corrections.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

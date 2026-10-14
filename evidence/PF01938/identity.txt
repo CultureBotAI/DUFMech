@@ -1,0 +1,39 @@
+PF01938 identity and member mapping; inspected 2026-10-12 UTC.
+Sources:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01938/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01938/protein/uniprot/Q6M142/
+https://rest.uniprot.org/uniprotkb/Q6M142.json
+https://data.rcsb.org/rest/v1/core/polymer_entity/1YVC/1
+Frozen previous-name source: data/worklists/pfam-previous-unknown-names-2026-10-10.json.
+
+Family facts: PF01938.27, TRAM, former DUF90, integrated IPR002792.
+Frozen seed EX_DUF and characterization UNSCORED are unchanged. The imported
+unknown-function description is dated source metadata, not a scientific veto
+on member-specific experiments. Neither the rename nor this curation proves
+function for all 35071 proteins or 123 architectures.
+
+UniProt Q6M142, MMP0076, sequence version 1, 69 aa, reference strain S2/LL,
+taxon 267377. InterPro maps PF01938 to residues 13-67. Native experiments use
+M. maripaludis S0001, not an automatically equivalent S2 wild-type culture.
+Li2019 Figure4B agrees with the canonical sequence and reported numbering:
+MAFGKPAMKNVPVEAGKEYEVTIEDMGKGGDGIARIDGFVVFVPNAEKGSVINVKVTAVKEKFAFAERV
+D25,K28,G30,G32,I33,R35,F39,F42,K62,F63,F65 all match the reference and lie
+within PF01938. The alanine variants are separate single-site constructs.
+
+PDB1YVC entity1 has the same first69 residues plus a terminal L; deposited
+SIFTS alignment maps entity1-69 to Q6M142 1-69. This structure is not the
+His6-tagged biochemical construct. S2 Table P11/P12 and Methods describe
+NcoI/XhoI pET28a cloning; complete vector-derived termini were not sequence-
+verified. Do not claim the assayed purified preparation is exactly the PDB
+construct or an isolated 13-67 domain. Cell assays use pINIII or pMEV2 clones.
+S2 Table repeats D25A in multiple mutation-primer purpose cells; use Figure4,
+S1 Table and canonical residue checks, not those repeated labels as proof
+that every clone was D25A. This pass did not resequence experimental clones.
+
+A reviewed-UniProt PF01938 query returned one capped page of500 entries,
+not a complete member census. Examples include Q5VV42 human CDKAL1,
+Q96SZ6 human CDK5RAP1, P0AEI1 E. coli MiaB, P55135 E. coli RlmD,
+P33753 yeast Trm2 and O31503 B. subtilis RlmCD. Enzymatic activities of
+these multidomain proteins cannot be assigned to their TRAM domain alone.
+The exact-locus query for MMP0076 and four Mpsy loci returned only Q6M142;
+that query result is not evidence that the R15 proteins lack TRAM domains.

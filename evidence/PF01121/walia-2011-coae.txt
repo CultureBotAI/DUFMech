@@ -1,0 +1,47 @@
+Walia, Gajendar and Surolia, Identification of Critical Residues of the
+Mycobacterial Dephosphocoenzyme A Kinase by Site-Directed Mutagenesis.
+PMID:21264299; doi:10.1371/journal.pone.0015228
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3019153/
+Accessed 2026-10-11. Relevant Results, Table 2 and coupled-assay/ITC,
+mutagenesis and expression Methods read; Figure 5 visually inspected.
+Minimal quotations: "completely abolishes kinetic activity";
+"dramatic loss of catalytic activity"; "Kcat dropped drastically";
+"increasing the enzymatic turnover"; "Table 2".
+
+Full-length tagged mycobacterial CoaE derives from the 2009 pET28a+
+construct. Mutants were sequenced by the authors; production in BL21(DE3),
+0.4 mM IPTG, about 12 h at 18 C. Exact experimental clone bytes were
+not independently reconstructed. Reference P63826 is now strain-split.
+
+Single-coupled alpha-ketoglutarate-dehydrogenase assays at 25 C follow
+A340 for five minutes, with no-DCoA blanks subtracted. Base conditions:
+50 mM Tris pH 8, 10 mM ATP, 0.5 mM DCoA, 10 mM MgCl2, 20 mM KCl,
+2 U coupling enzyme, 2 mM alpha-ketoglutarate, 0.3 mM NADP and 0.3 mM
+the pyrophosphate cofactor (the source calls it thymine pyrophosphate).
+Substrate series vary DCoA or ATP; fitted parameters are not binding Kd.
+Exact CoaE dose for each spectrophotometric series is not stated.
+Figure 5 caption reports two independent experiments performed in duplicate.
+ITC kinetic assays at 20 C are a separate corroborating method, not the
+same incubation: 1 uM protein preloaded with DCoA, 10 mM Tris pH 7.8,
+150 mM NaCl, 10 mM MgCl2, 20 mM KCl, 5% glycerol.
+
+Table 2 DCoA-varied kcat, min^-1: WT 1.758; R140K 0.453; D32A 0.1026;
+L114A 3.414. These support lower apparent turnover for R140K/D32A and
+higher apparent turnover for L114A in that series. ATP-varied kcat is
+WT 2.886 versus L114A 1.152, the opposite L114A direction. Do not join
+these conditions into a universal activation or inhibition claim.
+Table 2 marks R140A nr and the text says activity abolished; Figure 5A
+nevertheless plots R140A Km=240 uM. This is a CONTESTED activity-loss
+claim, not an unqualified observed zero. Table 2 gives D32A ATP Km=57.5
+uM but Figure 5B labels 575; G8A Km values also differ. R140K prose says
+518-fold Km increase while the table gives 181 versus 34.9 uM. D32A's
+printed DCoA kcat/Km ratio does not equal its displayed kcat divided by Km.
+These conflicts are retained, not silently corrected or used for affinity.
+
+CD/fluorescence and proteolysis were used as structural controls, but K14A
+has an approximately 18% secondary-structure change and D32E altered
+fluorescence. They do not prove every mutant is identically folded. Neither
+the docking model nor altered kinetics directly observes a catalytic base,
+phosphoryl-transfer geometry or transition-state stabilization. Magnesium-
+omission results have unresolved buffer/reporter-control details and are
+not adopted as a residue-specific metal-coordination graph.

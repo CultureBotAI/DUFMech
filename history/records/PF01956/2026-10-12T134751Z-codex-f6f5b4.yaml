@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01956
+  path: curation/families/PF01956.yaml
+session:
+  id: 2026-10-12T134751Z-codex-f6f5b4
+  timestamp: '2026-10-12T13:47:51Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Extend PF01956 with scoped TMCO1 and GEL client effects
+  details: Inspected McGilvray2020 Figure5 and supplement1, Sundaram2022 Figures1/4
+    and Extended Data1/5 with relevant Methods, current TMCO1 isoform/domain mapping,
+    and selected Anghel2017 methods. Added seven phenotypic graphs with fourteen observed
+    experimental edges of unresolved molecular directness, preserving the prior seven
+    graphs. Kept endogenous abundance, reciprocal partner dependence, cell-free glycosylation/protection,
+    cellular glycosylation and fluorescent reporters distinct. Retained joint-genotype
+    scope, tag/ratio differences, partner effects, gating wording and inaccessible
+    2016 channel/2017 supplement limits. Three new evidence ledgers and a third open
+    discussion; status remains IN_PROGRESS. Baseline 8296 records validated with zero
+    drift; no publication or family completion claim.
+  sections:
+  - causal_graphs
+  - discussions

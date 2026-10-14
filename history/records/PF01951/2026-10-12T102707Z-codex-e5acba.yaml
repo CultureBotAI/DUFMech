@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01951
+  path: curation/families/PF01951.yaml
+session:
+  id: 2026-10-12T102707Z-codex-e5acba
+  timestamp: '2026-10-12T10:27:07Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add scoped DDX1-partner and human XBP1/tRNA causal contexts
+  details: Adds ten graphs with 28 assay-specific edges from Popow2014 and Jurkin2014;
+    preserves 32 prior graphs and 62 edges. Adds four hash-anchored ledgers and a
+    fifth OPEN discussion for source discrepancies. DDX1 mutations remain partner
+    interventions; nonsignificant single-Archease RNA trend and RTCB-only mouse phenotypes
+    remain excluded. Exact constructs, protocols and wider family coverage remain
+    unresolved. IN_PROGRESS; no publication or source-pin changes.

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF07005
+  path: data/families/PF07005.yaml
+session:
+  id: 2026-10-11T050246Z-codex-76bb11
+  timestamp: '2026-10-11T05:02:46Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped ReDtnK N-terminal mapping review
+  details: Reviewed the projected Q0K4F6 kinase edge against Table 1, biochemical
+    Results, kinetic methods and the current N-terminal match. The same experiment
+    also maps to PF17042 without implying independent replication or isolated-domain
+    sufficiency. Partial scientific self-review; context coverage remains open.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T050313Z-pf07005-redtnk-causal-graph/review.yaml

@@ -1,0 +1,39 @@
+Vermilya et al. 2026, PMID42017666, DOI10.1128/mbio.00203-26.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC13170248/
+Inspected 2026-10-11. Final journal version, not the 2025 preprint.
+Minimal quotation: "Phosphate accumulation assays"
+Remaining content is factual extraction and curator interpretation.
+
+Original Figures2/3 visually inspected together with Results and Methods.
+S.aureus Newman delta-pitR is an engineered deletion. Low-copy pKK30 PitR
+complementation includes its native upstream intergenic sequence. Paper states
+constructs were sequenced. The double mutant designated delta-pitR delta-phoU
+was made using phoU::erm; it is not a second clean unmarked deletion.
+
+Figure2: PFM9 pH7.4, 37 C, reporter fluorescence normalized to OD600 after
+8 h, at least three biological replicates, SEM, ANOVA/Tukey. At 5 mM Pi,
+delta-pitR increases PpstS-yfp and PnptA-yfp relative to WT. PitR plasmid
+complementation decreases both relative to the empty-vector mutant (2D/2E).
+At 500 uM Pi, delta-pitR increases PnptA-yfp; PitR complementation reduces
+it (2B/2C). These effects do not imply direct promoter binding, phosphorylation
+of PhoPR or physical inhibition of PitA. At 500 uM the pst reporter is similar
+in WT and the single mutant; at 50 uM the single-mutant responses are largely
+similar to WT. Multi-mutant comparisons must retain their separate background.
+
+Figure3: double delta-pitR phoU::erm and the triple background have delayed
+OD600 growth in PFM9 at 5 mM and 500 uM Pi, but reach approximately WT final
+OD. PitR complementation restores the double-mutant growth trajectory in
+each tested concentration (3C/3D); PhoU complementation is less complete.
+The single delta-pitR is not sufficient for the double-mutant phenotype.
+At 5 mM Pi the double and triple have a higher protein-normalized phosphate
+readout than WT (3G); single delta-pitR does not. At 500 uM the strains have
+similar values. At least five biological replicates, SEM, ANOVA/Tukey.
+Methods measures lysate phosphate AFTER yeast exopolyphosphatase treatment
+and normalizes by BCA protein. This includes polyphosphate-derived Pi and is
+not a measurement of free cytosolic Pi or phosphate uptake velocity.
+Figure axes and Methods establish 500 uM, not the 500 mM typo in Results;
+the analogous 158 mM prose label conflicts with 158 uM in Methods.
+
+Environmental, cognate-transporter, higher-order mutant and infection results
+were not comprehensively reviewed here. NptA residues450-534 are a different
+protein/domain perturbation and are not assigned to PF01865 by name alone.

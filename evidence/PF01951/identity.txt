@@ -1,0 +1,40 @@
+PF01951 identity and construct ledger. Inspected 2026-10-12 UTC.
+Frozen identity: Archease, former DUF101, IPR023572, EX_DUF, UNSCORED.
+Snapshot interpro-pfam-duf-2026-10-10; SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+Imported descriptions and counters are preserved, not treated as experiments.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01951/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01951/protein/uniprot/Q8IWT0/
+https://rest.uniprot.org/uniprotkb/A8K0B5.json
+Human Q8IWT0 sequence version 2: 167 aa; PF01951 residues 31-167.
+A8K0B5 resolves to Q8IWT0 and remains a secondary accession. Current
+Q8IWT0-3 replaces initial M with MKGGSRVSNPAVM, a 12-aa extension.
+Gerber2024 calls this 179-aa construct isoform 1. That historical naming is
+not the current UniProt isoform numbering. ZBTB8OS/ARCH names refer to the
+human Archease gene; the U2OS disruption is not isoform-selective evidence.
+
+https://data.rcsb.org/rest/v1/core/polymer_entity/8BTX/1
+8BTX entity 1: 183 aa, GSHM plus the 179-aa Archease construct. SIFTS maps
+entity residues 17-183 exactly to Q8IWT0 residues 1-167. Paper D51/K156
+map to Q8IWT0 D39/K144; paper S147/D178/I179 map to S135/D166/I167.
+This mapping separates paper, reference and deposited entity coordinates.
+It does not prove every biochemical preparation retained the same tag.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01951/protein/uniprot/O59205/
+Reviewed UniProt O59205 version 1: PH1536, 142 aa, Pyrococcus horikoshii
+OT-3, NCBITaxon:70601; PF01951 residues 4-142. Desai2014 names O59205
+and inserts leucine after the initiating methionine for cloning. The paper
+explicitly retains native residue numbering, not shifted construct indices.
+Desai2015 uses an N-terminal His6-tagged version; do not equate preparations.
+
+Reviewed UniProt query (40 entries, not a family or experimental census):
+https://rest.uniprot.org/uniprotkb/search?query=(xref:pfam-PF01951)%20AND%20(reviewed:true)&format=json&size=100
+Q9V105 version 1 is PAB1946/PYRAB06240, 142 aa, P. abyssi GE5,
+NCBITaxon:272844. Desai2015's T. thermophilus Archease clone accession,
+strain and sequence are not specified in the inspected Methods. Neither
+these nor a strain-specific domain map are invented from a species name.
+
+Full proteins were tested. None of the retained experiments isolates the
+Pfam domain from the remaining sequence. No universal family function,
+species-wide essentiality or identity between different assay constructs.

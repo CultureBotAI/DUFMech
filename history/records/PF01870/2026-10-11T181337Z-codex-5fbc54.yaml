@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01870
+  path: data/families/PF01870.yaml
+session:
+  id: 2026-10-11T181337Z-codex-5fbc54
+  timestamp: '2026-10-11T18:13:37Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of Hjc causal contexts.
+  details: Saved same-agent review of the exact projection digest54f6a5cedb7a6928adcddb82d351704d92283158e2e9ea7ac68f1971c26c8a21.
+    Sixteen observed edges retain thirteen direct preparation-level and three indirect
+    extract/cellular effects. Sequence and Pfam mapping, original figures and reaction
+    conditions checked. Unretrieved2019 supplements and primers, unresolved Figure2
+    kinase dose, Pfu mutagenesis and Hje contexts remain open. Review is NEEDS_FOLLOWUP
+    and IN_PROGRESS remains unchanged; no independent endorsement or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T181351Z-pf01870-hjc-processing-substitution-and-tolerance-contexts/review.yaml

@@ -1,0 +1,507 @@
+# Scoped scientific self-review of TycB1 condensation-system effects
+
+- Review: 20261011T074515Z-pf00668-tycb1-condensation-causal-assays
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T07:43:09Z
+- Finished UTC: 2026-10-11T07:45:15Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+One MECHANISTIC graph retains four DIRECT OBSERVED edges for the joint TycB1-GrsA DKP output and separate R62A/H147R/H147V substitutions. The first TycB domain and relevant residues are mapped, while exact fusion/partner identity, substrate units and source-label discrepancies remain open. No elementary histidine mechanism or complete family coverage is claimed; status remains IN_PROGRESS.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: PF00668 Condensation, the first remaining accession-ordered SEEDED record, following the primary TycB1 mutagenesis model system.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF00668 | data/families/PF00668.yaml | generated | PF00668 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF00668 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF00668.
+
+O30408/tycB, NCBIProtein AAC45929.1 and nucleotide AF004835, is a 3587-residue reference with sequence version 1 and exact UniProt/InterPro agreement. The first PF00668 interval is 9-454 and matches all ten paper residue positions. The sequence-linked operon abstract identifies historical B. brevis ATCC 8185; the current reference is B. parabrevis. Complete TycB1 cloning junctions and the exact GrsA partner accession remain unverified, not silently equated with complete reference reagents. Other PF00668 matches, including an epimerization region, are excluded from this reaction transfer.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF00668.
+
+All four effects are scoped to the combined purified-system preparations. The WT product edge does not split the required components into independently sufficient enzymes. Mutation edges record observed product loss, not a direct atomic role for Arg62 or His147. DKP is an endpoint of coupled steps, and local C-domain folding is not established by other-domain controls. D151 is deliberately not curated because the source alternates N/A labels. No structural cartoon or general-base proposal is promoted to observed causality.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF00668.
+
+Exact full constructs, GrsA mapping, phenylalanine units and source D151N/D151A, Y166F/Y151F and Figure 1 tycA/tycB labels require follow-up. Direct publisher figure downloads and the 1998 precursor PDF returned 403. Other condensation/epimerization/cyclization contexts, substrate specificity and later primary studies remain incompletely reviewed. Raw chromatograms and normalization were not reanalyzed.
+
+## Findings
+
+### additional-contexts: Resolve TycB1 assay details and expand condensation-domain mechanisms
+
+minor / open / confirmed; issue key: pf00668-causal-context-coverage.
+
+Obtain original figures and clone descriptions, resolve the phenylalanine unit and mutant-label inconsistencies, and identify the GrsA partner without conflating current accessions. Use independent primary experiments for additional domain contexts and elementary mechanisms; retain the joint-system and folding qualifications and save a successor review.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Obtain original figures and clone descriptions, resolve the phenylalanine unit and mutant-label inconsistencies, and identify the GrsA partner without conflating current accessions. Use independent primary experiments for additional domain contexts and elementary mechanisms; retain the joint-system and folding qualifications and save a successor review.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://febs.onlinelibrary.wiley.com/doi/10.1046/j.0014-2956.2001.02691.x; Publisher full-text Methods, product and mutant Results, Discussion, Table 1 and Figures 1-5 captions; plotted images unavailable | supports | The joint holo-TycB1 Pro-CAT/GrsA Phe-ATE system produces DKP. R62A, H147R and H147V variants yield no detected product while retaining adenylation/thiolation, supported also by the radiolabel comparison. HPLC-MS uses a 45-min 37 C incubation after separate preloading and normalizes to thiolation. Three consecutive experiments share one protein batch. The reported phenylalanine concentration unit is unresolved, and no universal detection limit is assigned. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/O30408/entry/pfam/PF00668/; Accession and domain locations; paired UniProt identity facts | supports | O30408/tycB, NCBIProtein AAC45929.1 and nucleotide AF004835, is a 3587-residue reference with sequence version 1 and exact UniProt/InterPro agreement. The first PF00668 interval is 9-454 and matches all ten paper residue positions. The sequence-linked operon abstract identifies historical B. brevis ATCC 8185; the current reference is B. parabrevis. Complete TycB1 cloning junctions and the exact GrsA partner accession remain unverified, not silently equated with complete reference reagents. Other PF00668 matches, including an epimerization region, are excluded from this reaction transfer. |
+| later-mechanism-qualification | https://pubmed.ncbi.nlm.nih.gov/17637339/; Primary abstract via Europe PMC core record; separate TycC modules 5/6 PCP-C system | supports | The later study favors an electrostatic interpretation over a general acid/base mechanism. Its distinct construct and abstract-only inspection limit transfer; no TycC assay edge is added. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf00668 | data/families/PF00668.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- The 2002 primary full text and figure captions were inspected through the web reader, not the plotted images or raw HPLC-MS traces. The 1997 identity and 2007 mechanistic qualifications are abstract-level assessments, not full curations of those experiments. No hidden figure measurement or independent statistical reanalysis is claimed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T074515Z-pf00668-tycb1-condensation-causal-assays
+title: Scoped scientific self-review of TycB1 condensation-system effects
+started_at: '2026-10-11T07:43:09Z'
+finished_at: '2026-10-11T07:45:15Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: One MECHANISTIC graph retains four DIRECT OBSERVED edges for the joint TycB1-GrsA
+  DKP output and separate R62A/H147R/H147V substitutions. The first TycB domain and
+  relevant residues are mapped, while exact fusion/partner identity, substrate units
+  and source-label discrepancies remain open. No elementary histidine mechanism or
+  complete family coverage is claimed; status remains IN_PROGRESS.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF00668.yaml
+    sha256: a51b576b995e3fb1592a4f50092d6ebeed6ba7bbe1d4aea63f4ab2d603cadbf0
+    role: context
+  - path: data/families/PF00668.yaml
+    sha256: fa84f53bffc2ca38f6eb87cd1c38a04f561a7b36c3c71c06d2658cd1f6fc59f5
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF00668/bergendahl-2002-tycb1.txt
+    role: context
+    sha256: afdb1d419f9f5c4e907a75daecd5cfa600f31adbdb2485456db793b87cbc9237
+  - path: evidence/PF00668/TycB-identity.txt
+    role: context
+    sha256: d7a690117a33be42f9d4a97cec54bdf5e596aaec3cab3195e453513592cb58bd
+  - path: evidence/PF00668/samel-2007-mechanism-limit.txt
+    role: context
+    sha256: 7a0640c79a1c007d2313087223e1eee72a4dd0db46251b38ac6e670b601b69c1
+targets:
+- target_id: PF00668
+  path: data/families/PF00668.yaml
+  label: PF00668
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF00668.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 62a874f0e0eb4a06d29dbc1da3b1f54bc058f020bb46c8b06558e16c5dd5f0cc
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: PF00668 Condensation, the first remaining accession-ordered SEEDED record,
+    following the primary TycB1 mutagenesis model system.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF00668
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Exact full constructs, GrsA mapping, phenylalanine units and source D151N/D151A,
+      Y166F/Y151F and Figure 1 tycA/tycB labels require follow-up. Direct publisher
+      figure downloads and the 1998 precursor PDF returned 403. Other condensation/epimerization/cyclization
+      contexts, substrate specificity and later primary studies remain incompletely
+      reviewed. Raw chromatograms and normalization were not reanalyzed.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF00668
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://febs.onlinelibrary.wiley.com/doi/10.1046/j.0014-2956.2001.02691.x
+  locator: Publisher full-text Methods, product and mutant Results, Discussion, Table
+    1 and Figures 1-5 captions; plotted images unavailable
+  accessed_at: '2026-10-11T07:45:15Z'
+  support: supports
+  snapshot_sha256: afdb1d419f9f5c4e907a75daecd5cfa600f31adbdb2485456db793b87cbc9237
+  summary: The joint holo-TycB1 Pro-CAT/GrsA Phe-ATE system produces DKP. R62A, H147R
+    and H147V variants yield no detected product while retaining adenylation/thiolation,
+    supported also by the radiolabel comparison. HPLC-MS uses a 45-min 37 C incubation
+    after separate preloading and normalizes to thiolation. Three consecutive experiments
+    share one protein batch. The reported phenylalanine concentration unit is unresolved,
+    and no universal detection limit is assigned.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O30408/entry/pfam/PF00668/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T07:45:15Z'
+  support: supports
+  snapshot_sha256: d7a690117a33be42f9d4a97cec54bdf5e596aaec3cab3195e453513592cb58bd
+  summary: O30408/tycB, NCBIProtein AAC45929.1 and nucleotide AF004835, is a 3587-residue
+    reference with sequence version 1 and exact UniProt/InterPro agreement. The first
+    PF00668 interval is 9-454 and matches all ten paper residue positions. The sequence-linked
+    operon abstract identifies historical B. brevis ATCC 8185; the current reference
+    is B. parabrevis. Complete TycB1 cloning junctions and the exact GrsA partner
+    accession remain unverified, not silently equated with complete reference reagents.
+    Other PF00668 matches, including an epimerization region, are excluded from this
+    reaction transfer.
+- evidence_id: later-mechanism-qualification
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/17637339/
+  locator: Primary abstract via Europe PMC core record; separate TycC modules 5/6
+    PCP-C system
+  summary: The later study favors an electrostatic interpretation over a general acid/base
+    mechanism. Its distinct construct and abstract-only inspection limit transfer;
+    no TycC assay edge is added.
+  accessed_at: '2026-10-11T07:45:15Z'
+  support: supports
+  snapshot_sha256: 7a0640c79a1c007d2313087223e1eee72a4dd0db46251b38ac6e670b601b69c1
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T07:45:15Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf00668
+  kind: record_content
+  reference: data/families/PF00668.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T07:45:15Z'
+  support: context_only
+  snapshot_sha256: fa84f53bffc2ca38f6eb87cd1c38a04f561a7b36c3c71c06d2658cd1f6fc59f5
+  quote: "id: Pfam:PF00668\npfam_id: PF00668\nname: Condensation domain\nshort_name:\
+    \ Condensation\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status:\
+    \ IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00668\n\
+    counters:\n  proteins: 68562\n  matches: 149357\n  proteomes: 8647\n  taxa: 14069\n\
+    \  structures: 107\n  alphafold_models: 14105\n  domain_architectures: 7481\n\
+    provenance:\n  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR001242\ndescription: This domain is found in many multi-domain\
+    \ enzymes which synthesise peptide antibiotics. This\n  domain catalyses a condensation\
+    \ reaction to form peptide bonds in non- ribosomal peptide biosynthesis.\n  It\
+    \ is usually found to the carboxy side of a phosphopantetheine binding domain\
+    \ ([pfam:PF00550]). It\n  has been shown that mutations in the HHXXXDG motif abolish\
+    \ activity suggesting this is part of the active\n  site [[cite:PUB00007135]].\n\
+    curation_history: history/records/PF00668\ndiscussions:\n- discussion_id: tycb1-constructs-units-and-catalytic-mechanism\n\
+    \  prompt: Resolve TycB1 construct and assay ambiguities before assigning an elementary\
+    \ condensation mechanism.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ Coupled reaction output and domain-localized mutations support a scoped biochemical\
+    \ graph,\n    but not a universal histidine proton-transfer step. Exact fusion\
+    \ sequences, GrsA accession, phenylalanine\n    units and inconsistent D151 labels\
+    \ remain unresolved.\n  evidence:\n  - reference: doi:10.1046/j.0014-2956.2001.02691.x\n\
+    \    supports: PARTIAL\n    evidence_source: full_text\n    explanation: Publisher\
+    \ text and captions support the reaction and three unambiguous mutant effects.\n\
+    \      D151N/D151A and Y166F/Y151F inconsistencies and the Figure 1 tycA label\
+    \ are retained. Neither insoluble\n      mutants nor inhibitor sensitivity identifies\
+    \ a specific catalytic residue mechanism.\n  - reference: PMID:17637339\n    supports:\
+    \ PARTIAL\n    evidence_source: abstract\n    explanation: The separate TycC PCP-C\
+    \ study favors an electrostatic interpretation over general acid/base\n      catalysis.\
+    \ Its abstract is a qualification and follow-up lead, not a complete review of\
+    \ the TycC\n      assays or evidence transferred to TycB1.\n  posed_by: Codex\n\
+    \  posed_date: '2026-10-11'\n  notes: Obtain accessible original figures, full\
+    \ clone descriptions and raw product/normalization evidence;\n    expand other\
+    \ family contexts separately. The 1998 JBC PDF and direct publisher figure downloads\
+    \ were\n    unavailable. Other substrates, epimerization/cyclization subfamilies\
+    \ and later studies remain incompletely\n    covered. Imported identity and classification\
+    \ are unchanged.\ncausal_graphs:\n- graph_id: tycb1-grsa-dkp-production\n  title:\
+    \ Joint TycB1 and GrsA preparations produce a cyclic dipeptide\n  scope: Reconstituted\
+    \ recombinant holo-TycB1 Pro-CAT first module and GrsA Phe-ATE, with separately\
+    \ tested\n    TycB1 R62A, H147R and H147V substitutions. This is neither full\
+    \ tyrocidine biosynthesis nor an isolated\n    condensation-domain sufficiency\
+    \ assay.\n  context: C-terminal His6-tagged TycB1 variants were produced with\
+    \ gsp phosphopantetheinyl-transferase\n    expression and nickel-affinity purification.\
+    \ The DKP assay separately preincubates each enzyme at\n    1 uM with 2 mM ATP\
+    \ and its amino-acid substrate for 3 min at 37 C, mixes equal volumes, and incubates\n\
+    \    45 min at 37 C before extraction and HPLC-MS. Assay buffer contains 50 mM\
+    \ HEPES pH 8.0, 100 mM NaCl,\n    10 mM MgCl2 and 1 mM EDTA. The HTML gives 0.5\
+    \ M phenylalanine and 0.5 mM proline before mixing; the\n    phenylalanine unit\
+    \ remains unresolved rather than being silently corrected. Figure 4 uses three\
+    \ consecutive\n    experiments from the same protein batch and thiolation normalization.\n\
+    \  family_mapping: TycB is UniProtKB:O30408, NCBIProtein:AAC45929.1, nucleotide\
+    \ AF004835, 3587 residues,\n    sequence version 1. Current reference taxon is\
+    \ Brevibacillus parabrevis 54914; the sequence-linked\n    primary operon study\
+    \ names historical Bacillus brevis ATCC 8185. Exact UniProt/InterPro sequence\
+    \ agreement\n    places the first PF00668 interval at 9-454, containing R62 and\
+    \ H147. The other three PF00668 matches,\n    including the terminal epimerization\
+    \ region, are not assigned this reaction. Complete construct boundaries\n    and\
+    \ cloning junctions were not independently reconstructed. The paper's GrsA partner\
+    \ is named but\n    not assigned an unverified accession from the two current\
+    \ reviewed GrsA references.\n  scope_status: MECHANISTIC\n  limitations: DKP is\
+    \ an observed product of the joint coupled system; it is an indirect readout of\
+    \ peptide\n    condensation followed by release/cyclization. No elementary proton\
+    \ transfer, isolated-domain reaction\n    or family-wide substrate specificity\
+    \ is established. Retained adenylation and thiolation do not prove\n    unchanged\
+    \ local C-domain folding. Absolute detection limits and independent-purification\
+    \ replication\n    are not reported here. Source D151N/D151A, Y166F/Y151F and\
+    \ Figure 1 tycB/tycA inconsistencies remain\n    open; no ambiguous D151 edge\
+    \ is adopted. Figure captions and text were inspected, not the unavailable\n \
+    \   plotted images or raw chromatograms.\n  nodes:\n  - node_id: joint-holo-tycb1-grsa-system\n\
+    \    label: Joint holo-TycB1 and GrsA with ATP, phenylalanine and proline\n  \
+    \  node_type: ACTIVITY\n    grounding:\n    - UniProtKB:O30408\n  - node_id: d-phe-l-pro-dkp\n\
+    \    label: HPLC-MS-detected d-Phe-l-Pro diketopiperazine output\n    node_type:\
+    \ STATE\n  - node_id: tycb1-r62a-joint-system\n    label: TycB1 R62A replacing\
+    \ WT TycB1 in the joint GrsA reaction\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:O30408\n  - node_id: tycb1-h147r-joint-system\n    label: TycB1\
+    \ H147R replacing WT TycB1 in the joint GrsA reaction\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:O30408\n  - node_id: tycb1-h147v-joint-system\n\
+    \    label: TycB1 H147V replacing WT TycB1 in the joint GrsA reaction\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:O30408\n  edges:\n  - edge_id:\
+    \ joint-system-produces-dkp\n    subject: joint-holo-tycb1-grsa-system\n    predicate:\
+    \ produces\n    object: d-phe-l-pro-dkp\n    mechanism: The WT joint preparation\
+    \ generates the d-Phe-l-Pro DKP product used as the HPLC-MS reference.\n     \
+    \ This is a directly observed reconstituted-system output requiring the combined\
+    \ preparations and\n      supplied substrates, not proof that TycB1 alone generates\
+    \ the product or that the C domain catalyzes\n      the final cyclization.\n \
+    \   directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.1046/j.0014-2956.2001.02691.x\n      source_url:\
+    \ https://febs.onlinelibrary.wiley.com/doi/10.1046/j.0014-2956.2001.02691.x\n\
+    \      snippet: no DKP at all could be detected\n      explanation: The quotation\
+    \ locates the mutant-versus-WT comparison, not the WT outcome by itself.\n   \
+    \     The product Results and Figure 4 caption establish WT joint-system DKP as\
+    \ the normalized 100%\n        comparator; the Methods specify the coupled assay.\
+    \ The orthogonal radiolabel assay includes a\n        no-TycB1 control, which\
+    \ is not relabeled as an HPLC blank.\n      cache_path: evidence/PF00668/bergendahl-2002-tycb1.txt\n\
+    \      cache_sha256: afdb1d419f9f5c4e907a75daecd5cfa600f31adbdb2485456db793b87cbc9237\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O30408/entry/pfam/PF00668/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O30408/entry/pfam/PF00668/\n\
+    \      snippet: 'O30408 first Pfam:PF00668 interval: 9-454, inclusive'\n     \
+    \ explanation: Grounds the first TycB module and residue numbering without transferring\
+    \ the result\n        to its other PF00668 domains or inventing the GrsA accession.\n\
+    \      cache_path: evidence/PF00668/TycB-identity.txt\n      cache_sha256: d7a690117a33be42f9d4a97cec54bdf5e596aaec3cab3195e453513592cb58bd\n\
+    \  - edge_id: r62a-decreases-dkp-output\n    subject: tycb1-r62a-joint-system\n\
+    \    predicate: decreases\n    object: d-phe-l-pro-dkp\n    mechanism: Replacing\
+    \ WT TycB1 with its soluble R62A variant yields no detected DKP under the reported\n\
+    \      assay, despite retained adenylation and thiolation. The radiolabel assay\
+    \ also lacks the WT increase\n      attributed to dipeptide formation. This establishes\
+    \ a reaction-output effect, not a directly observed\n      structural role or\
+    \ proton-transfer step for Arg62.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.1046/j.0014-2956.2001.02691.x\n\
+    \      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1046/j.0014-2956.2001.02691.x\n\
+    \      snippet: no DKP at all could be detected\n      explanation: Product Results\
+    \ identifies R62A in the no-detected-DKP group; Figure 3 uses R62A as\n      \
+    \  the representative impaired radiolabel trace. Solubility and other-domain controls\
+    \ limit, but\n        do not eliminate, folding alternatives.\n      cache_path:\
+    \ evidence/PF00668/bergendahl-2002-tycb1.txt\n      cache_sha256: afdb1d419f9f5c4e907a75daecd5cfa600f31adbdb2485456db793b87cbc9237\n\
+    \  - edge_id: h147r-decreases-dkp-output\n    subject: tycb1-h147r-joint-system\n\
+    \    predicate: decreases\n    object: d-phe-l-pro-dkp\n    mechanism: The soluble\
+    \ H147R TycB1 variant gives no detected DKP in the joint GrsA assay while retaining\n\
+    \      adenylation and thiolation. This measured loss is not a proof that His147\
+    \ normally acts as a general\n      base; coupled reactions and possible local\
+    \ structural effects remain unresolved.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.1046/j.0014-2956.2001.02691.x\n\
+    \      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1046/j.0014-2956.2001.02691.x\n\
+    \      snippet: while being still active in adenylation and thiolation activities\n\
+    \      explanation: The H147R-specific membership of the no-DKP group is reported\
+    \ in Results and interpreted\n        with the other-domain controls in Discussion.\
+    \ No atomic mechanism is inferred from the His-to-Arg\n        substitution.\n\
+    \      cache_path: evidence/PF00668/bergendahl-2002-tycb1.txt\n      cache_sha256:\
+    \ afdb1d419f9f5c4e907a75daecd5cfa600f31adbdb2485456db793b87cbc9237\n  - edge_id:\
+    \ h147v-decreases-dkp-output\n    subject: tycb1-h147v-joint-system\n    predicate:\
+    \ decreases\n    object: d-phe-l-pro-dkp\n    mechanism: The separately assayed\
+    \ H147V TycB1 variant also gives no detected DKP with the same GrsA\n      partner\
+    \ while retaining other-domain activities. The 2002 experiment is the adopted\
+    \ evidence; the\n      inaccessible 1998 precursor is not counted as an independently\
+    \ reviewed replication.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: doi:10.1046/j.0014-2956.2001.02691.x\n\
+    \      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1046/j.0014-2956.2001.02691.x\n\
+    \      snippet: no DKP at all could be detected\n      explanation: H147V is explicitly\
+    \ included in the 2002 soluble-mutant and product-results groups.\n        The\
+    \ absence of detectable endpoint product is kept assay-specific, not a universal\
+    \ zero-activity\n        claim.\n      cache_path: evidence/PF00668/bergendahl-2002-tycb1.txt\n\
+    \      cache_sha256: afdb1d419f9f5c4e907a75daecd5cfa600f31adbdb2485456db793b87cbc9237\n\
+    curation_events:\n- timestamp: '2026-10-11T07:40:11Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Add scoped TycB1 condensation-system\
+    \ and mutation effects\n  history_record: history/records/PF00668/2026-10-11T074011Z-codex-bfa3d1.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: O30408/tycB, NCBIProtein AAC45929.1 and nucleotide AF004835, is a 3587-residue
+    reference with sequence version 1 and exact UniProt/InterPro agreement. The first
+    PF00668 interval is 9-454 and matches all ten paper residue positions. The sequence-linked
+    operon abstract identifies historical B. brevis ATCC 8185; the current reference
+    is B. parabrevis. Complete TycB1 cloning junctions and the exact GrsA partner
+    accession remain unverified, not silently equated with complete reference reagents.
+    Other PF00668 matches, including an epimerization region, are excluded from this
+    reaction transfer.
+  target_ids:
+  - PF00668
+  evidence_ids:
+  - identity
+  - primary
+  - later-mechanism-qualification
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: All four effects are scoped to the combined purified-system preparations.
+    The WT product edge does not split the required components into independently
+    sufficient enzymes. Mutation edges record observed product loss, not a direct
+    atomic role for Arg62 or His147. DKP is an endpoint of coupled steps, and local
+    C-domain folding is not established by other-domain controls. D151 is deliberately
+    not curated because the source alternates N/A labels. No structural cartoon or
+    general-base proposal is promoted to observed causality.
+  target_ids:
+  - PF00668
+  evidence_ids:
+  - primary
+  - native
+  - later-mechanism-qualification
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Exact full constructs, GrsA mapping, phenylalanine units and source D151N/D151A,
+    Y166F/Y151F and Figure 1 tycA/tycB labels require follow-up. Direct publisher
+    figure downloads and the 1998 precursor PDF returned 403. Other condensation/epimerization/cyclization
+    contexts, substrate specificity and later primary studies remain incompletely
+    reviewed. Raw chromatograms and normalization were not reanalyzed.
+  target_ids:
+  - PF00668
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf00668-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve TycB1 assay details and expand condensation-domain mechanisms
+  description: Obtain original figures and clone descriptions, resolve the phenylalanine
+    unit and mutant-label inconsistencies, and identify the GrsA partner without conflating
+    current accessions. Use independent primary experiments for additional domain
+    contexts and elementary mechanisms; retain the joint-system and folding qualifications
+    and save a successor review.
+  target_ids:
+  - PF00668
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - later-mechanism-qualification
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF00668.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Obtain original figures and clone descriptions, resolve the phenylalanine
+    unit and mutant-label inconsistencies, and identify the GrsA partner without conflating
+    current accessions. Use independent primary experiments for additional domain
+    contexts and elementary mechanisms; retain the joint-system and folding qualifications
+    and save a successor review.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF00668
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- The 2002 primary full text and figure captions were inspected through the web reader,
+  not the plotted images or raw HPLC-MS traces. The 1997 identity and 2007 mechanistic
+  qualifications are abstract-level assessments, not full curations of those experiments.
+  No hidden figure measurement or independent statistical reanalysis is claimed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF06568
+  path: curation/families/PF06568.yaml
+session:
+  id: 2026-10-11T044626Z-codex-299cb5
+  timestamp: '2026-10-11T04:46:26Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate CcaF1 overexpression effects on two RNA half-lives
+  details: Added independently supported CcsR1 and UpsM half-life edges from primary
+    Results, methods and Figure 8 caption. Retained the reference protein, strain
+    taxonomy and domain mapping. Overexpression is not native-dose necessity, and
+    RNA binding is not intrinsic nuclease activity. Figure image and raw blot data
+    were not independently inspected. Guarded projection and retained scientific review
+    follow.
+  sections:
+  - causal_graphs

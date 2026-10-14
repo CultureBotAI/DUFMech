@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01901
+  path: data/families/PF01901.yaml
+session:
+  id: 2026-10-11T222325Z-codex-d48ef3
+  timestamp: '2026-10-11T22:23:25Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of PF01901 O157 phenotype graphs
+  details: Saved the actual structured YAML/Markdown review with digest5e426dd11dd4188aad4bf639eae76e14d76358ee04b5d7984c7c3dbedc950516.
+    Four indirect observed phenotype edges preserve source and family-mapping limitations.
+    Exact assay culture/insertion and weak partial domain mapping,missing Wzy rescue,source
+    discrepancies and further primary/member coverage remain open. Same-agent partial
+    review is not independent approval or full family characterization.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T222500Z-pf01901-o157-wzy-insertion-phenotypes-and-mapping-limits/review.yaml

@@ -1,0 +1,41 @@
+Source: Raturi et al. 2021, PMID:33976372, DOI:10.1038/s42003-021-02081-6.
+URL: https://www.nature.com/articles/s42003-021-02081-6
+Accessed: 2026-10-11. CC BY 4.0; minimal quotation and curator paraphrase.
+Full-text XML SHA256: 5788d3972631813f4dcfa39dbcdbc0df6aab6267f68717e761b11c3425e0f41c
+Figure 2 PNG SHA256: b82b0de02c6aee8cced9dbd7903508009f833f0ad295ff248bcdff2d8e54c05a
+Figure 4 PNG SHA256: 46b37012a68875d942cd9832653fc87eda9a5cfa940a5e8cf24df2a028549838
+Exact short source term: "ethidium"
+
+Curator assessment of Results on ion availability and biochemical binding,
+Figures 2A and 4A/B (visually inspected), and Methods on expression,
+purification, transport, binding and statistics:
+L. lactis NZ9000 lacking lmrA/lmrCD expresses N-terminal His10-tagged NorM-VC.
+De-energized cells are washed, loaded with 2 uM ethidium and glucose-energized.
+At pH 7 in 50 mM KPi/5 mM MgSO4, 1 mM added Na+ lowers the 400-s fluorescence
+endpoint compared with no added Na+; nonexpressing controls do not show the
+same sodium response. Measurements use three independent cell preparations.
+Methods specify 12.5 mM glucose; Figure 2 caption specifies 20 mM. Preserve
+this discrepancy rather than select a concentration. This fluorescence assay
+supports enhanced efflux-associated output, not a resolved ionic microstep.
+
+Purified protein in 0.05% DDM is titrated against 2 uM ethidium in 50 mM KPi
+pH 7 with 0.2 mM KCl. Final protein spans 0.036-1 uM; 0.5 mM Na2SO4 supplies
+1 mM Na+. Anisotropy uses 500/580-nm excitation/emission and about two minutes
+equilibration, with matched elution-buffer baseline. Figure 4A shows sodium
+enhancement at low WT protein concentrations, not a uniform increase at the
+highest concentration. The two-component fit is an interpretation of binding,
+not a physical count of binding sites. Li+, Cs+ and Rb+ do not reproduce the
+sodium response. D36N, E255Q and D371N each lose the WT sodium enhancement;
+residual binding remains, so these are not total binding-null claims.
+At 0.2 uM WT protein without added sodium, raising pH 6-9 increases anisotropy
+in Figure 4B. Apparent transition midpoints are 6.9 and 8.0; assignment to
+specific protonated residues is interpretive. Three independently prepared
+protein batches, mean +/- SEM, are reported. Mutant-fold equivalence and the
+complete ion-translocation route are not directly proved by these assays.
+
+The Discussion's two pathways and ion stoichiometries combine functional
+interpretation with structural/MD models; no atomic trajectory is adopted here.
+Supplement download failed DNS resolution during this session; supplementary
+expression blots/primers were not inspected. The 2014 precursor's retrieved
+XML contains only front matter/abstract and its PDF was inaccessible; it is a
+follow-up lead, not a fully inspected source for these retained edges.

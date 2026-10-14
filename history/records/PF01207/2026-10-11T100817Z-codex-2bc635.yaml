@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01207
+  path: curation/families/PF01207.yaml
+session:
+  id: 2026-10-11T100817Z-codex-2bc635
+  timestamp: '2026-10-11T10:08:17Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate five scoped Dus2 redox and product-formation effects
+  details: Read Rider 2009 Methods, Results and Discussion and visually inspected
+    Figures 2-5 and 8. Verified P53720/PF01207 reference mapping, retained five direct
+    observed effects in separate NADPH, synthetic-RNA, knockout-derived-RNA and bacterial-RNA
+    contexts, and recorded source concentration/template/primer discrepancies. Excluded
+    mutant-specific causal edges because printed primers disagree at H120/Q120 and
+    the oxidative comparison uses different temperatures. Added a later DusA abstract
+    lead, minimal evidence and open follow-up; IN_PROGRESS, no publication.

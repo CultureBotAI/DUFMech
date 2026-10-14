@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01955
+  path: data/families/PF01955.yaml
+session:
+  id: 2026-10-12T130510Z-codex-92da4b
+  timestamp: '2026-10-12T13:05:10Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial review of native salvage and 2008 donor contexts
+  details: Native saver succeeded after filesystem access returned, retaining20261012T130529Z
+    with digest8ee5b149867883b62b293434857bcd66fb53a9be96dd66c847d3e60438b7d526. The
+    report covers20graphs/66edges with scientific limits, but inherited stale access-blocked
+    prose from its prepared input. A successor review at20261012T130729Z corrects
+    that review context and binds all17ledgers without changing scientific content.
+    Original report remains immutable. Same-agent partial scientific review; NEEDS_FOLLOWUP
+    andIN_PROGRESS,not expert endorsement or completion.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T130529Z-pf01955-2008-donor-rescue-and-extract-contexts/review.yaml

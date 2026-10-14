@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01796
+  path: curation/families/PF01796.yaml
+session:
+  id: 2026-10-11T052542Z-codex-cb614c
+  timestamp: '2026-10-11T05:25:42Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add two member-specific DUF35 causal contexts
+  details: Inspected Gilbert 2018 kinetic evidence and Figure 5, plus Aggett 2019
+    mixing experiment and methods. Resolved H37Rv I6YGF8 and T. curvata D1AB77 mappings,
+    retaining two direct observed edges. Construct, readout, residual activity and
+    isolated-domain limits remain explicit; the T. curvata experiment is shared with
+    PF12172, while the M. tuberculosis experiment is excluded from that family.
+  sections:
+  - causal_graphs

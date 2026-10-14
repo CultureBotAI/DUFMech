@@ -1,0 +1,45 @@
+Inspected 2026-10-11. PMID:21536732; DOI:10.1101/gad.623011.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/
+Selected biochemical Results, structural/mobility Results, Discussion and main
+Materials and methods read; Figures 3 and 6 visually inspected. Minimal quotes:
+"eIF6 release"
+"GTP hydrolysis"
+
+Figure 3B/C: recombinant human SBDS and EFL1 together with GTP redistribute
+eIF6 from bound to free fractions of pre-60S particles from Sbds-deleted mouse
+liver. Individual-factor controls do not release eIF6; Ebp1/Nmd3 stay bound.
+GDP/no nucleotide fail, GDPNP permits marginal release. No precise release
+fraction or temporal ordering of molecular conformations is measured.
+Release assay: 100 ul; about 0.5-1 pmol mouse pre-60S, 5 pmol each SBDS/EFL1,
+100 uM nucleotide; 10 mM Tris-HCl pH 7.4, 75 mM KCl, 1.5 mM MgCl2,
+protease/RNase inhibitors; 10 min at 37 C. A 30% sucrose cushion separates
+free/bound fractions for immunoblotting after centrifugation at 4 C.
+Figure 3D is a separate system: 5 pmol salt-washed rabbit reticulocyte 60S,
+preloaded 20 min on ice with excess recombinant human eIF6(1-225), with free
+eIF6 removed through a 100-kDa filter. SBDS/EFL1/GTP release this truncation;
+Rpl28 remains bound, GDP is ineffective and EDTA is a positive control.
+The result excludes a requirement for the omitted S235 in this assay, not all
+phosphorylation-dependent regulation or a direct measurement of 80S assembly.
+
+Figure 6B: 50 ul with 5 nmol gamma-32P-GTP, 5 pmol rabbit 60S, 6.3 pmol
+SBDS and 40 pmol EFL1; 50 mM Tris pH 7.4, 2 mM MgCl2, 150 mM NaCl,
+2 mM DTT; 30 min at 37 C. Charcoal separation and scintillation measure Pi.
+WT SBDS increases 60S-dependent EFL1 turnover versus no SBDS. R126T gives
+less stimulation than WT. K151N still increases turnover versus no SBDS;
+its nonsignificant difference from WT is not proof of kinetic equivalence.
+Three experiments with mean/SD are reported for bars; the concentration series
+inset uses duplicates. SBDS without 60S does not significantly stimulate EFL1;
+EFL1 H96A limits attribution to an unrelated contaminating GTPase.
+Figure 6C: R126T and K151N each reduce eIF6 release relative to WT in the
+mouse-particle assay. Main-text HSQC evidence describes preserved overall fold
+with local R126T perturbation. Supplement S7 binding evidence was not inspected.
+Hydrolysis and release use different particles/buffers and separate vessels;
+their comparison supports uncoupling, not a single directly filmed reaction.
+
+Main methods identify E. coli expression of SBDS/eIF6 and yeast expression of
+EFL1, with Ni-NTA and gel filtration. Tag termini/removal are not specified here.
+Europe PMC supplementaryFiles returned an XML non-open-access error, not a ZIP;
+the publisher supplement landing page returned HTTP 403. No claim to have read
+that supplement is made. The model in Figure 7 and proposed clinical outcomes
+are not adopted as observed causal edges. Raw blots and full clone sequences
+were not reanalyzed; coverage is partial, not an exhaustive family assessment.

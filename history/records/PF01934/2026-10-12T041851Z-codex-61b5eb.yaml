@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01934
+  path: curation/families/PF01934.yaml
+session:
+  id: 2026-10-12T041851Z-codex-61b5eb
+  timestamp: '2026-10-12T04:18:51Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Correct fusion mass-difference interpretation before retaining the scientific
+    review.
+  details: Same-agent evidence audit identified that the2026 three-AMP assignment
+    cannot be read as the raw WT versus D41E/D43E peak difference. The ledger now
+    gives32628.89Da and31669.31Da peaks and explicitly accounts for the approximately28Da
+    sequence-mass change from two D-to-E substitutions. Updated all11 references to
+    the corrected ledger hash; graph count, edge count and supported directions are
+    unchanged. This corrects the evidence interpretation associated with CREATE2026-10-12T040422Z-codex-7b3362;
+    no prior retained review was amended. Regeneration and review verification follow.

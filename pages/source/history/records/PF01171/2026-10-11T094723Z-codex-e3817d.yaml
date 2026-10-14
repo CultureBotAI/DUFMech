@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01171
+  path: data/families/PF01171.yaml
+session:
+  id: 2026-10-11T094723Z-codex-e3817d
+  timestamp: '2026-10-11T09:47:23Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of TilS products and aminoacylation
+    effects.
+  details: Saved review 20261011T094436Z-pf01171-tils-modification-and-aminoacylation
+    assesses three graphs and eight direct observed effects in defined biochemical
+    preparations. Exact P52097 and cited Z50870 mapping, stop-omitting primer design,
+    whole-protein scope, intact-mass localization limits, unrepurified preparations,
+    separate S100 and purified B. subtilis IleRS contexts, normalization and contamination
+    limits remain explicit. Native projection validation passed during review; this
+    is same-agent partial scientific assessment, not independent endorsement or complete
+    family characterization. Exact clone scars, carryover controls, uncertainty, original
+    intermediate studies and later ortholog evidence remain follow-up work. Status
+    remains IN_PROGRESS.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T094436Z-pf01171-tils-modification-and-aminoacylation/review.yaml

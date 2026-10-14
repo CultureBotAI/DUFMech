@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01955
+  path: data/families/PF01955.yaml
+session:
+  id: 2026-10-12T130719Z-codex-69e11f
+  timestamp: '2026-10-12T13:07:19Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain corrected PF01955 review with restored Git provenance
+  details: Retained20261012T130729Z successor corrects stale access-limit prose in20261012T130529Z
+    and explicitly binds all17minimal ledgers. Both have current semanticdigest8ee5b149867883b62b293434857bcd66fb53a9be96dd66c847d3e60438b7d526.
+    Scope includes20graphs/66experimental edges,65OBSERVED and1INFERRED,11DIRECT and55UNRESOLVED;
+    prior16graphs unchanged. Historical donor clones, supplemental traces, source
+    discrepancies, native mechanisms and further members remain open. Git status andHEAD
+    access now succeed; cause of the earlier denial is unknown. Native checks validate148reports.
+    Same-agent partial scientificreview,NEEDS_FOLLOWUP,IN_PROGRESS; no publication
+    or fullcoverage claim.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T130729Z-pf01955-2008-contexts-and-restored-provenance/review.yaml

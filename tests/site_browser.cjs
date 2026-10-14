@@ -406,3 +406,41 @@ test('denied local storage does not break themes or search', async () => {
   assert.deepEqual(errors, []);
   await context.close();
 });
+
+test('causal graphs preserve scoped evidence alongside protein examples on desktop and mobile', async () => {
+  const index = JSON.parse(fs.readFileSync(path.join(realSite, 'index.json'), 'utf8'));
+  for (const width of [1440, 390]) {
+    const context = await browser.newContext({viewport: {width, height: 900}});
+    const page = await context.newPage();
+    const errors = [];
+    page.on('pageerror', error => errors.push(error.message));
+    for (const pfam of ['PF01951', 'PF01969', 'PF01972']) {
+      await page.goto(origin + `/real/families/${pfam}.html`);
+      const graphs = index.metadata[pfam].record.causal_graphs || [];
+      const section = page.locator('#causal-graphs');
+      assert.equal(await section.locator('tbody tr').count(), graphs.reduce((n, g) => n + g.edges.length, 0));
+      assert.equal(await page.locator('#protein-examples').count(), 1);
+      const ids = await page.locator('[id]').evaluateAll(nodes => nodes.map(node => node.id));
+      assert.equal(new Set(ids).size, ids.length);
+      if (graphs.length) {
+        const graph = graphs[0], edge = graph.edges[0];
+        const row = section.locator(`[id="causal-edge.${graph.graph_id}.${edge.edge_id}"]`);
+        assert.equal(await row.locator('.causal-relation').innerText(), edge.predicate.replaceAll('_', ' '));
+        assert.ok((await row.innerText()).includes(edge.support));
+        await row.locator('summary').click();
+        assert.equal(await row.locator('details').getAttribute('open'), '');
+        assert.ok((await row.innerText()).includes(edge.evidence[0].snippet));
+        await row.locator('summary').click();
+        assert.equal(await row.locator('details').getAttribute('open'), null);
+        assert.ok((await section.innerText()).includes(graph.limitations));
+        await section.scrollIntoViewIfNeeded();
+        await page.screenshot({path: path.join(screenshots, `causal-${pfam}-${width}.png`)});
+      } else {
+        assert.match(await section.innerText(), /not evidence of absence/);
+      }
+      await noOverflow(page);
+    }
+    assert.deepEqual(errors, []);
+    await context.close();
+  }
+});

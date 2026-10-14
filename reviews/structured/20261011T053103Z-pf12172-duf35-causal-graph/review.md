@@ -1,0 +1,390 @@
+# PF12172 zinc-ribbon-containing DUF35 causal graph review
+
+- Review: 20261011T053103Z-pf12172-duf35-causal-graph
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T05:30:47Z
+- Finished UTC: 2026-10-11T05:31:03Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The T. curvata construct-addition effect is supported and correctly mapped; zinc-ribbon-specific activity and the M. tuberculosis experiment are not adopted.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: DUF35-derived zinc-ribbon family assessed separately to prevent transfer from a protein lacking its current match.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF12172 | data/families/PF12172.yaml | generated | PF12172 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF12172 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF12172.
+
+D1AB77/Tcur3482 from DSM 43183 contains PF12172 at 199-234 and PF01796 at 237-298, both inside the 6OK1 construct covering reference 188-319 plus an initiator M. H37Rv I6YGF8 has only PF01796 and PF13452 in the complete current Pfam response, so its experiment does not ground this record.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF12172.
+
+A measured increase in Ltp2 activity follows addition of the full DUF35 construct; residual activity without the partner prevents an absolute requirement claim. Neither the zinc-ribbon alone nor zinc binding is shown to cause catalysis. This is the same experiment retained under PF01796, not a second independent experiment.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF12172.
+
+Isolated-domain contributions, zinc dependence, other organisms and native-host physiology remain unresolved. Structural similarity and zinc coordination are not used as substitutes for causal perturbations.
+
+## Findings
+
+### additional-contexts: Zinc-ribbon-specific contributions and further members need assessment
+
+minor / open / confirmed; issue key: pf12172-causal-context-coverage.
+
+Seek domain-specific and zinc-site perturbations with folding controls before assigning a zinc-dependent molecular role; review additional exact members separately.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Seek domain-specific and zinc-site perturbations with folding controls before assigning a zinc-dependent molecular role; review additional exact members separately.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| experiment | https://pmc.ncbi.nlm.nih.gov/articles/PMC6682727/; Results mixing experiment, Tables 1 and 3, cloning and kinetic methods | supports | The T. curvata Ltp2/DUF35 mixing experiment measures increased substrate-specific aldolase activity while preserving negative and residual-activity controls. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/D1AB77/entry/pfam/PF12172/; Accession and domain locations; paired UniProt identity facts | supports | D1AB77/Tcur3482 from DSM 43183 contains PF12172 at 199-234 and PF01796 at 237-298, both inside the 6OK1 construct covering reference 188-319 plus an initiator M. H37Rv I6YGF8 has only PF01796 and PF13452 in the complete current Pfam response, so its experiment does not ground this record. |
+| excluded-mtb-identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/I6YGF8/; Complete two-entry Pfam response | supports | No PF12172 match is present for the H37Rv protein; that experiment is excluded from this family record. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf12172 | data/families/PF12172.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Tables and primary text were inspected; structural images and raw data were not independently visually reviewed or reanalyzed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T053103Z-pf12172-duf35-causal-graph
+title: PF12172 zinc-ribbon-containing DUF35 causal graph review
+started_at: '2026-10-11T05:30:47Z'
+finished_at: '2026-10-11T05:31:03Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: The T. curvata construct-addition effect is supported and correctly mapped;
+  zinc-ribbon-specific activity and the M. tuberculosis experiment are not adopted.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF12172.yaml
+    sha256: c9a5f47d254e3ddfea4db184fa2bafef7e8358efca09abc33aa1f2926be30896
+    role: context
+  - path: data/families/PF12172.yaml
+    sha256: 648759f8780b1812f0bbeaefa33d130e7bf3fe221dcdedfdd1396e6068ee6c49
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01796/aggett-2019-duf35.txt
+    role: context
+    sha256: 17e6f814c55be438f3008b4384c628f6dbb4df4a90e64a7de236ce779c82d639
+  - path: evidence/PF01796/D1AB77-identity.txt
+    role: context
+    sha256: 1bde4b540c77e0adebf14a10536c0d2d50580e2862c7a8868ffb11a9dc76a2b2
+  - path: evidence/PF01796/I6YGF8-identity.txt
+    role: context
+    sha256: f9622f563a63bc27a7409f0938efab3a1717140f0a17d307ea05bd4bf78428ad
+targets:
+- target_id: PF12172
+  path: data/families/PF12172.yaml
+  label: PF12172
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF12172.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: a4c64353dced43d2d8427a20023607017b648ce627b7326dee65ad1d6e57e871
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: DUF35-derived zinc-ribbon family assessed separately to prevent transfer
+    from a protein lacking its current match.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF12172
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Isolated-domain contributions, zinc dependence, other organisms and native-host
+      physiology remain unresolved. Structural similarity and zinc coordination are
+      not used as substitutes for causal perturbations.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF12172
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: experiment
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6682727/
+  locator: Results mixing experiment, Tables 1 and 3, cloning and kinetic methods
+  accessed_at: '2026-10-11T05:31:03Z'
+  support: supports
+  snapshot_sha256: 17e6f814c55be438f3008b4384c628f6dbb4df4a90e64a7de236ce779c82d639
+  summary: The T. curvata Ltp2/DUF35 mixing experiment measures increased substrate-specific
+    aldolase activity while preserving negative and residual-activity controls.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/D1AB77/entry/pfam/PF12172/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T05:31:03Z'
+  support: supports
+  snapshot_sha256: 1bde4b540c77e0adebf14a10536c0d2d50580e2862c7a8868ffb11a9dc76a2b2
+  summary: D1AB77/Tcur3482 from DSM 43183 contains PF12172 at 199-234 and PF01796
+    at 237-298, both inside the 6OK1 construct covering reference 188-319 plus an
+    initiator M. H37Rv I6YGF8 has only PF01796 and PF13452 in the complete current
+    Pfam response, so its experiment does not ground this record.
+- evidence_id: excluded-mtb-identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/I6YGF8/
+  locator: Complete two-entry Pfam response
+  summary: No PF12172 match is present for the H37Rv protein; that experiment is excluded
+    from this family record.
+  accessed_at: '2026-10-11T05:31:03Z'
+  support: supports
+  snapshot_sha256: f9622f563a63bc27a7409f0938efab3a1717140f0a17d307ea05bd4bf78428ad
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T05:31:03Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf12172
+  kind: record_content
+  reference: data/families/PF12172.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T05:31:03Z'
+  support: context_only
+  snapshot_sha256: 648759f8780b1812f0bbeaefa33d130e7bf3fe221dcdedfdd1396e6068ee6c49
+  quote: "id: Pfam:PF12172\npfam_id: PF12172\nname: ChsH2, rubredoxin-like zinc ribbon\
+    \ domain\nshort_name: zf-ChsH2\nseed_status: EX_DUF\ncharacterization_status:\
+    \ UNSCORED\ncuration_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF12172\n\
+    counters:\n  proteins: 12165\n  matches: 12166\n  proteomes: 4066\n  taxa: 5926\n\
+    \  structures: 15\n  alphafold_models: 7456\n  domain_architectures: 44\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR022002\ndescription: 'This domain is found at the C-terminal\
+    \ end of the probable enoyl -CoA hydratase alpha subunit\n  from Thermomonospora\
+    \ curvata (ChsH2) and similar archaeal and bacterial proteins. ChsH2 is likely\
+    \ to\n  be involved in bile acid degradation. The C-terminal region of this protein\
+    \ is organised into two domains:\n  an N-terminal zinc finger domain with a three-stranded\
+    \ antiparallel beta-sheet and an N-terminal alpha-helix\n  (this entry) and a\
+    \ OB-fold domain ([pfam:PF01796]) [[cite:PUB00155451]]. The domain is duplicated\
+    \ in\n  some members like [swissprot:O53566] from M.tuberculosis. The structure\
+    \ of [swissprot:Q97WQ4] from Saccharolobus\n  solfataricus reveals two long N-terminal\
+    \ helices followed by a rubredoxin -like zinc ribbon domain represented\n  in\
+    \ this family and a C-terminal OB fold domain [[cite:PUB00097287]]. Zinc is chelated\
+    \ by the four conserved\n  cysteines in the alignment.'\ncuration_history: history/records/PF12172\n\
+    causal_graphs:\n- graph_id: tc-duf35-addition-aldolase\n  title: T. curvata DUF35\
+    \ addition increases Ltp2 activity\n  scope: Purified Tcur3479 Ltp2 and Tcur3482\
+    \ ChsH2 C-terminal construct from Thermomonospora curvata DSM\n    43183; in-vitro\
+    \ mixing experiment.\n  context: Ten-minute incubation at Ltp2:DUF35 ratio 1:5;\
+    \ activity toward 21 uM 17-HOPC-CoA measured at\n    25 C in 100 mM HEPES pH 7.5\
+    \ with 200 uM NADH and 16 uM TTHB247.\n  family_mapping: D1AB77, sequence version\
+    \ 1, 319 residues; PF12172 spans 199-234. Deposited 6OK1 entity\n    2 is initiator\
+    \ M plus reference 188-319 and also includes PF01796 at 237-298.\n  scope_status:\
+    \ MECHANISTIC\n  taxon: NCBITaxon:471852\n  limitations: The tested construct\
+    \ includes both domains; their individual contributions are unresolved.\n    Ltp2\
+    \ alone retains weak activity and DUF35 alone is inactive. The same experiment\
+    \ is retained in PF01796,\n    not independent replication. The M. tuberculosis\
+    \ experiment is excluded because its protein lacks\n    a current PF12172 match;\
+    \ zinc binding is not itself evidence of catalytic causation.\n  nodes:\n  - node_id:\
+    \ tc-duf35-addition\n    label: Addition of the ChsH2 C-terminal construct to\
+    \ Ltp2 at 1:5\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:D1AB77\n\
+    \  - node_id: tc-ltp2-aldolase-activity\n    label: Ltp2 aldolase specific activity\
+    \ toward 17-HOPC-CoA\n    node_type: ACTIVITY\n  edges:\n  - edge_id: tc-duf35-increases-ltp2-activity\n\
+    \    subject: tc-duf35-addition\n    predicate: increases\n    object: tc-ltp2-aldolase-activity\n\
+    \    mechanism: Mixing the purified partner construct with Ltp2 raises measured\
+    \ specific activity from\n      about 0.00042 to 0.14 umol/min/mg in the coupled\
+    \ assay; this does not demonstrate isolated zinc-ribbon\n      catalysis or a\
+    \ zinc-dependent activation mechanism.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:31209106\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6682727/\n      snippet:\
+    \ After a 10-min incubation of a 1:5 ratio of Ltp2/ChsH2\n      explanation: The\
+    \ substrate-specific mixing experiment supports the full construct's effect, not\n\
+    \        necessity or sufficiency of this domain alone.\n      cache_path: evidence/PF01796/aggett-2019-duf35.txt\n\
+    \      cache_sha256: 17e6f814c55be438f3008b4384c628f6dbb4df4a90e64a7de236ce779c82d639\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/D1AB77/entry/pfam/PF12172/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/D1AB77/entry/pfam/PF12172/\n\
+    \      snippet: 'entry accession: PF12172'\n      explanation: This exact current\
+    \ match lies inside the deposited, sequence-resolved construct, alongside\n  \
+    \      PF01796.\n      cache_path: evidence/PF01796/D1AB77-identity.txt\n    \
+    \  cache_sha256: 1bde4b540c77e0adebf14a10536c0d2d50580e2862c7a8868ffb11a9dc76a2b2\n\
+    curation_events:\n- timestamp: '2026-10-11T05:25:42Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Add sequence-resolved T. curvata DUF35\
+    \ activity-increase graph\n  history_record: history/records/PF12172/2026-10-11T052542Z-codex-f129b0.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: D1AB77/Tcur3482 from DSM 43183 contains PF12172 at 199-234 and PF01796
+    at 237-298, both inside the 6OK1 construct covering reference 188-319 plus an
+    initiator M. H37Rv I6YGF8 has only PF01796 and PF13452 in the complete current
+    Pfam response, so its experiment does not ground this record.
+  target_ids:
+  - PF12172
+  evidence_ids:
+  - identity
+  - experiment
+  - excluded-mtb-identity
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: A measured increase in Ltp2 activity follows addition of the full DUF35
+    construct; residual activity without the partner prevents an absolute requirement
+    claim. Neither the zinc-ribbon alone nor zinc binding is shown to cause catalysis.
+    This is the same experiment retained under PF01796, not a second independent experiment.
+  target_ids:
+  - PF12172
+  evidence_ids:
+  - experiment
+  - native
+  - excluded-mtb-identity
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Isolated-domain contributions, zinc dependence, other organisms and native-host
+    physiology remain unresolved. Structural similarity and zinc coordination are
+    not used as substitutes for causal perturbations.
+  target_ids:
+  - PF12172
+  evidence_ids:
+  - experiment
+findings:
+- finding_id: additional-contexts
+  issue_key: pf12172-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Zinc-ribbon-specific contributions and further members need assessment
+  description: Seek domain-specific and zinc-site perturbations with folding controls
+    before assigning a zinc-dependent molecular role; review additional exact members
+    separately.
+  target_ids:
+  - PF12172
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - experiment
+  - identity
+  - excluded-mtb-identity
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF12172.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Seek domain-specific and zinc-site perturbations with folding controls
+    before assigning a zinc-dependent molecular role; review additional exact members
+    separately.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF12172
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Tables and primary text were inspected; structural images and raw data were not
+  independently visually reviewed or reanalyzed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

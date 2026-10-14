@@ -1,0 +1,26 @@
+Source: Chang et al., Toxicon 60:840-850 (2012).
+PMID:22659540; DOI:10.1016/j.toxicon.2012.05.017; PMCID:PMC3411878.
+URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC3411878/
+Retrieved: 2026-10-11 through NCBI efetch PMC XML.
+Copyright Elsevier; minimal quotation and curator notes, not full text.
+XML SHA256: 942f097e12767c458f6661dac01929d01513f8c04e17999b318253950d82b032.
+Inspected: Methods 2.1-2.10, Results 3.1-3.4, Discussion, Figure 6 caption.
+Quotation: "reduction of peak current"
+Curator interpretation: Enterokinase-cleaved, RP-HPLC-purified recombinant ShK
+reduces mouse Kv1.3 and Kv1.1 peak currents in separate stably transfected L929
+lines. Functional Hill-fit midpoints are 25 +/- 10 pM and 15 +/- 5 pM,
+respectively. The article calls these Kd values, but the measurement is current
+inhibition, not an independent physical binding assay. Figure 6C reports 3-5
+determinations per point; 6B's example trace is synthetic peptide, not recombinant.
+Synthetic-peptide comparisons give no statistically significant potency difference.
+Mass and NMR comparisons support the recombinant preparation's identity/fold;
+enterokinase leaves no extra N-terminal residue. Exact channel clone sequences,
+independent peptide batches and underlying current data were not reanalyzed.
+Curator sequence check: the two printed primers overlap exactly by 21 bases.
+Their assembled coding translation contains DDDDK followed by the exact 35-aa
+P29187 sequence and a stop codon. This verifies the printed design, not an
+independent resequencing of the historical experimental clone.
+Figure captions were read but images and supplement were not visually inspected:
+PMC/PubMed curl returned challenge HTML and Europe PMC media/PDF requests failed.
+No atomically resolved pore contact, T-cell mediation chain or family-wide
+channel-blocking activity is inferred.

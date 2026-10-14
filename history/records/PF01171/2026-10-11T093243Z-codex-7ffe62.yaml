@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01171
+  path: curation/families/PF01171.yaml
+session:
+  id: 2026-10-11T093243Z-codex-7ffe62
+  timestamp: '2026-10-11T09:32:43Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add scoped TilS modification and aminoacylation graphs
+  details: Inspected Salowe 2009 Methods, Results, Discussion and Tables 1-5, with
+    product gel Figure 2 visually checked. Verified P52097, its PF01171 interval,
+    exact cited Z50870 translation and both primer ends; identified the separately
+    tagged B. subtilis IleRS partner. Added eight DIRECT OBSERVED effects in three
+    graphs for lysine/ethanolamine products and separate E. coli S100 and B. subtilis
+    aminoacylation comparisons. Preserve intact-RNA localization limits, unrepurified
+    preparation carryover, distinct normalization, clone/replicate uncertainty and
+    contaminated analog negatives. Later 2025 selected Results are a coverage lead,
+    not new edges. Schema and hash/quotation checks pass; native regeneration and
+    partial review follow.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC2665086/

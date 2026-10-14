@@ -1,0 +1,19 @@
+Source: https://rest.uniprot.org/uniprotkb/Q9F3E1.json
+Accessed: 2026-10-11 UTC.
+Attribution: UniProt Consortium; CC BY 4.0.
+Selected structured fields transcribed from the public API, not a full snapshot.
+
+primaryAccession: Q9F3E1
+entryType: UniProtKB unreviewed (TrEMBL)
+entryVersion: 87
+sequenceVersion: 1
+lastSequenceUpdateDate: 2001-03-01
+orderedLocusNames: SCO7616
+organism: Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)
+taxonId: 100226
+sequence.length: 89
+sequence.md5: BD431C9112D2B4E6FC48D8E1419DD7A7
+feature: Domain; description: DUF397; start: 27; end: 73
+feature.evidence: ECO:0000259; source: Pfam; id: PF04149
+
+This is protein/domain identity evidence, not causal experimental evidence.

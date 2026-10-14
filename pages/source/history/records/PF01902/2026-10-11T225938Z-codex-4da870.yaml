@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01902
+  path: data/families/PF01902.yaml
+session:
+  id: 2026-10-11T225938Z-codex-4da870
+  timestamp: '2026-10-11T22:59:38Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review PF01902 Dph6 contexts, domain attribution and proposed chemistry
+  details: Partial same-agent scientific review of nine graphs with twelve OBSERVED
+    effects and two HYPOTHESIZED steps. Current yeast and human reference mappings,
+    eight inspected original figures and three parsed publisher tables preserve whole-protein
+    scope, the combined distal G216N/E220A mutation, distinct strain/readout contexts
+    and source discrepancies. The projection validates and exactly preserves the overlay.
+    Historical constructs, matched abundance/folding controls, inaccessible supplements,
+    archaeal and native-human contexts and wider member coverage remain open. Status
+    stays IN_PROGRESS; this is not independent endorsement, full-family completion
+    or publication QC.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T225946Z-pf01902-dph6-domain-split-assays-and-hypothetical-chemistry/review.yaml

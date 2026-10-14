@@ -1,0 +1,25 @@
+Identity sources accessed: 2026-10-11
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=AFO91049.1&rettype=gb&retmode=xml
+https://rest.uniprot.org/uniparc/UPI0001632E23.json
+https://rest.kegg.jp/get/pga:PGA1_c13340
+
+Selected structured facts:
+NCBI protein accession/version: AFO91049.1
+locus_tag: PGA1_c13340
+coded_by: complement(CP002976.1:1377532..1378257)
+organism: Phaeobacter inhibens DSM 17395; taxon: 391619
+length: 241 residues
+sequence MD5: 301C8F25950D9391EAE066ED27C98D0F
+UniParc: UPI0001632E23
+database: Pfam; databaseId: PF07796; locations: 72-230, inclusive
+InterPro: IPR012437
+
+Mapping assessment:
+The NCBI and UniParc sequences match exactly. UniParc maps AFO91049 version 1
+and PGA1_c13340/taxon 391619 to this sequence. Historical UniProt accessions
+A9FLA7, I7DZY1 and A0AA85Z9Q3 are inactive in the archive; their inactivity is
+not a missing protein identity or an experimental negative. NCBI's CDD-derived
+pfam07796 region ends at 231, whereas UniParc's Pfam interval ends at 230; the
+graph explicitly uses the latter interval. The paper's strain/locus matches.
+This is a bacterial whole-gene phenotype, despite the frozen family description
+emphasizing archaeal members; it does not test an isolated 72-230 construct.

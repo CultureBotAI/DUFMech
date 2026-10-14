@@ -1,0 +1,16 @@
+Database identity facts inspected 2026-10-11.
+https://rest.uniprot.org/uniprotkb/P69423.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P69423/entry/pfam/PF00902/
+P69423 Pfam:PF00902 interval: 12-221, inclusive
+UniProtKB:P69423 / TATC_ECOLI; tatC, mttB/yigU/yigV; b3839/JW3815.
+K-12 reference taxon NCBITaxon:83333, 258 residues, sequence version 2,
+entry version 150. UniProt and InterPro sequences agree exactly.
+Sequence MD5: d13b96f277bdc0e5fde0c1cb180b1c95.
+InterPro integration: IPR002033. Reference accessions AAC76842.1/NP_418282.1.
+InterPro raw response SHA256:
+46161af69eaeef994935a4696d88f9cb050f7625e1f2ce23b26de60d16d320a5
+Paired UniProt tatC/mscS reviewed K-12 search response SHA256:
+f12ccecc4942b3472837068e3e7986faa92c53a4f6a646ef24d7afcfd51e162c
+Reference mapping does not verify every experimental plasmid junction or make
+the isolated profile interval sufficient for transport. The pFAT588 lineage
+uses MC4100 DNA; BL21(DE3) DeltaTat is the 2012 vesicle-production host.

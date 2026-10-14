@@ -1,0 +1,45 @@
+PF01955 2008 Rhodobacter-donor extract assays, 2026-10-12 UTC
+Primary PMID:18808385; DOI:10.1111/j.1365-2958.2008.06437.x
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2602876/
+https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+Locators: CbiZ-extract Results, extract preparation, amidohydrolase andHPLC Methods.
+Minimal quotation: "protein extract enriched with CbiZ"
+
+Donor pCbiZRs in Salmonella JE8268 delta-cobUdelta-ycfN; Results name its
+plasmid derivativeJE10789. pBAD24 vector extracts were prepared as a negative
+control, but their actual chromatograms and quantitative output were not
+retrieved. CbiZ abundance was too low for detection on stained SDS-PAGE,
+data not shown. This is a mixed cell extract, NOT purified CbiZ and not the
+later MBP/His6 preparation. No purified-domain activity is established here.
+
+Induction1.5mM arabinose,6h37C; harvested cold, sonicated in50mMHEPESpH7.5,
+100mMNaCl,5mMDTT; clarified, dialyzed, final10percent glycerol,stored-80C.
+Reactions:50ug TOTAL extract protein,200ul,50mMHEPESpH7.5,5mMDTT,
+30uM corrinoid,30C15min dark. Stop80C20min,remove precipitate; add0.1MKCN,
+strong light10min,0.2umfilter,HPLC. Product analytical processing removes
+native upper-ligand identity; no intactAdoCby measurement is claimed.
+
+Reported Cby-forming specific activities (pmol per mg extract protein per min):
+AdoCbi880+/-63; dicyanoCbi120+/-16; CNCbl15+/-2. The reported +/- values
+are retained without inventing N or an SD/SEM definition. AdoCbl hydrolysis
+was not detectable. The HPLC method gives1pmol dicyanoCbi detection limit;
+this is not automatically a calibrated detection limit for every substrate.
+At50ug and15min, the printed rates imply660,90 and11.25pmol Cby respectively,
+below the6000pmol starting substrate; this arithmetic is not new measurement.
+
+The authors assign Cby by5.2min retention and UV-vis comparison to authentic
+Cby, with product-bioassay confirmation stated as data not shown. Supplement
+FigureS2 traces were not retrieved or visually verified. Main text also refers
+toFigureS2 for plasmid constructs, so its actual scope remains unresolved.
+HPLC Methods describe JE8312 reporter capabilities inconsistently with the
+genotype and complementation Results: printed Cbi/Cby use is reversed from
+the earlier pathway description. Do not silently correct this paragraph or
+treat it as sufficient independent product identification. Retention/UV-vis
+assignment is retained as a text-reported, not visually verified, observation.
+
+The low CNCbl activity in this extract is distinct from the later2009 tagged,
+purified-enzyme CNCbl negative at another buffer,pH,temperature and preparation.
+Neither establishes universal Cbl use or nonuse. Direct attribution toCbiZ
+alone, individual catalytic residues, native flux and transporter coupling
+remain unresolved. CobP kinase/guanylyltransferase assays are separate partner
+experiments, not PF01955 catalytic edges.

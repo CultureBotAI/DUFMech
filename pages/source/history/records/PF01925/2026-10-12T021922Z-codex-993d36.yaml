@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01925
+  path: data/families/PF01925.yaml
+session:
+  id: 2026-10-12T021922Z-codex-993d36
+  timestamp: '2026-10-12T02:19:22Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Reviewed PF01925 CysZ, PmpC and MamO graph contexts with unresolved transport
+    mechanisms.
+  details: Retained same-agent partial scientific review reviews/structured/20261012T021931Z-pf01925-cysz-pmpc-mamo-effects-and-transport-boundaries/review.yaml
+    binds semantic digest 6f3b654ccf5faeddba666071806e79e48d6343e4b0e0cc7d482972eb937e837f.
+    Nine graphs contain 36 OBSERVED/INDIRECT phenotype effects and one HYPOTHESIZED/UNRESOLVED
+    uptake proposal. Seven evidence ledgers retain exact member/domain mappings, source-specific
+    assay conditions, conditional negatives, construct discrepancies and unreviewed
+    contexts. Native initial projection validation passed; corpus, export and browser
+    checks follow separately. Native verdict NEEDS_FOLLOWUP; status remains IN_PROGRESS.
+    No independent endorsement or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T021931Z-pf01925-cysz-pmpc-mamo-effects-and-transport-boundaries/review.yaml

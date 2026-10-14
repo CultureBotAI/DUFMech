@@ -1,0 +1,28 @@
+PF01901 excluded transfers and contextual leads,2026-10-11 UTC
+Curator-authored assessment; not a claim of absence across the literature.
+
+Wang/Reeves1998,PMID9673232,doi:10.1128/iai.66.8.3545-3551.1998
+https://pmc.ncbi.nlm.nih.gov/articles/PMC108385/
+Selected orf2/wzy Results and PCR section inspected. Predicted membrane
+topology motivates the gene name; PCR tests serogroup discrimination. Neither
+is a direct assay of polymerization. O85335 and SakaiQ8X4T7 differ at234.
+
+Rochat2017,PMID28955320,doi:10.3389/fmicb.2017.01752
+https://pmc.ncbi.nlm.nih.gov/articles/PMC5601056/
+Selected comparative-genomics,multiplex-PCR sections and Table3 inspected.
+FPC840_340035 has a reported HHpredPF01901 hit24-415,E9.1e-14; the same table
+reports no InterProScan hit. This is not a current sequence-verified family
+assignment. Analogous locus occupancy,serotype/host association and diagnostic
+PCR are not a targeted gene perturbation. FI056_50102 and DK002_320117 relate
+to other Pfam families; their effects cannot be silently pooled withPF01901.
+Original images and supplements were not inspected in this scoped assessment.
+
+2014 O-antigen Polymerase Adopts a Distributive Mechanism for
+Lipopolysaccharide Biosynthesis
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3989392/
+Main text,Methods and captions inspected. The tested protein is E.coliO86,
+notO157; the paper assigns it toPF14296 and cites optimized geneAB863203.
+Its purified-protein polymerization and distributive interpretation are NOT
+retained as PF01901 causal evidence. No claim about current O86 reassignment
+is made. Likewise,CL0499membership alone cannot transfer other Wzy-family
+substrates,active-site residues or processivity toPF01901 archaeal proteins.

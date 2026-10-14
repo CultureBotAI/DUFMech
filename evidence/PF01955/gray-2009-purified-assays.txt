@@ -1,0 +1,45 @@
+PF01955 Rhodobacter tagged-CbiZ assays, 2026-10-12 UTC
+Primary: PMID:19889098; DOI:10.1111/j.1365-2958.2009.06928.x
+https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3062942/
+Locators: purified-CbiZ Results, activity/HPLC Methods, original Figure3A-D.
+Minimal quotation: "product formation"
+Original Figures1-4 were visually inspected, including all Figure3 panels.
+
+The whole RSP_2406 protein retains N-terminal MBP/His6 tags; mapping and clone
+limits are in gray-2009-identity-constructs.txt. Activity is not assigned to a
+purified PF01955 fragment or specific catalytic residue. No MBP-only or
+enzyme-minus chromatogram was identified in the inspected main assay report.
+Substrate comparison: 200ul, 2ug fusion, 30uM corrinoid, 50mM CHES pH10,
+1mM DTT, 50C, dim light, 10min. Heat stop95C10min; then0.1M KCN and bright
+light15min. Product assignment uses cyano-derivatized HPLC, not intact AdoCby
+mass or measurement of the released aminopropanol/nucleotide-loop coproduct.
+Reported standard retention times: Cby8.8min, Cbi21.8, pseudoCbl17.8, Cbl31.5.
+The HPLC Methods state a1pmol Cbi detection limit, not an AdoCbl-specific limit.
+
+Figure3D and Results give Cby-assigned conversion with all four of:
+AdoCbi (20+/-2), dicyanoCbi (2.4+/-0.6), AdopseudoCbl (70+/-4), and
+CNpseudoCbl (4+/-0.6), in printed nmol/min/mg fusion protein. AdoCbl and
+CNCbl have no observed hydrolysis in this assay; this is a condition-specific
+negative, not a family-wide exclusion or a native in-vivo specificity rule.
+Do not claim that CbiZ alone converts pseudoCbl directly into Cbl.
+
+Figure3A: pH7-9 use50mM Tris, pH10 uses50mM CHES, pH11 uses50mM CAPS,
+at30C. The mean rises from Tris pH7 to CHES pH10 and falls at CAPS pH11.
+These endpoint comparisons change buffer identity as well as pH. They do not
+isolate proton effects or identify a catalytic pKa. No exact bar heights or
+statistical significance are reconstructed from the image.
+Figure3B: atpH10 the mean rises from25C to50C and falls at60C. This is
+an activity-assay temperature effect, not a protein melting/folding assay.
+Figure3 caption defaults to15min; panelD explicitly uses10min. PanelC shows
+1/2ug time courses approximately linear through15min and3ug slowing after10min.
+Use separate panel contexts rather than silently assigning10min to all assays.
+Error bars are identified as SD; the main enzyme-assay caption does not state N.
+The Results separately report output below0.1nmol/min/mg without1mM DTT,
+with no corresponding displayed data. This omission effect does not prove a
+cysteine/redox mechanism or establish its exact omitted-reagent time course.
+
+No structural binding, catalytic-residue or native pathway-order edge is added.
+The Discussion prediction that CbiS excludes pseudoCbl is not measured here.
+Original FigS2 purity gel remains uninspected; main-text purification is not a
+substitute for checking that image. Historical full-fusion junction is open.

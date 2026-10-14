@@ -1,0 +1,96 @@
+pfam_id: PF00990
+curation_status: IN_PROGRESS
+curation_history: history/records/PF00990
+causal_graphs:
+  - graph_id: pled-purified-cyclase-feedback
+    title: Purified PleD synthesis, product inhibition and joint DivJ-ATP stimulation
+    scope: Full-length C. crescentus PleD with a C-terminal His6 tag from pCC2; purified-protein assays, not isolated GGDEF sufficiency or a measured cellular feedback loop.
+    context: The 2004 Genes & Development TLC assays use 50 uL, 75 mM Tris pH 7.8, 250 mM NaCl, 25 mM KCl, 10 mM MgCl2 and 100 uM GTP. Figure 5B uses 50 ug PleD; Figures 6A and 7A use 25 ug. The TLC assay temperature is not specified in the inspected methods; the separate HPLC protocol is 90 min at 25 C. GTP and magnesium are joint reaction inputs.
+    family_mapping: PleD references Q9A5I5 (CB15, CC_2462) and B8GZM2 (NA1000/CB15N, CCNA_02546) have identical 454-aa sequences, both version 1. Q9A5I5 maps to PF00990 at 289-447. Deposited 1W25 matches native residues 2-454 plus His6, with CB15 source taxonomy but a SIFTS B8GZM2 mapping. The exact pCC2 cloning template remains unverified; species-level taxonomy avoids conflating the two reference strains.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:155892
+    limitations: Separate compatible biochemical assays support the graph, not a single measured feedback trajectory. Product inhibition is qualitative here; the later PNAS noncompetitive interpretation supersedes the earlier competitive-binding suggestion, but its supplementary fit was not inspected. DivJ-plus-ATP stimulation does not itself resolve phosphorylation, dimerization and domain-motion microsteps. The exact DivJ fragment boundaries and pCC2 template sequence remain unverified. No family-wide catalytic competence or cell-cycle phenotype is inferred.
+    feedback_explanation: PleD makes c-di-GMP, and added c-di-GMP decreases PleD's initial product-formation rate in a separate assay. These experimentally supported directions define negative product feedback under the stated in-vitro conditions; they do not establish a cellular steady state or measured oscillation.
+    nodes:
+      - node_id: pled-dgc-activity
+        label: Purified full-length PleD cyclase activity with GTP and Mg2+
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:Q9A5I5
+          - UniProtKB:B8GZM2
+      - node_id: cyclic-digmp
+        label: c-di-GMP in the purified reaction
+        node_type: STATE
+      - node_id: divj-atp-addition
+        label: Joint addition of soluble DivJ fragment and ATP
+        node_type: PERTURBATION
+    edges:
+      - edge_id: pled-produces-cyclic-digmp
+        subject: pled-dgc-activity
+        predicate: produces
+        object: cyclic-digmp
+        mechanism: Purified PleD converts GTP into a product identified as c-di-GMP by TLC, HPLC and the product mass spectrum. The graph records net catalysis, not an atomistic condensation trajectory.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:15075296
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC387245/
+            snippet: Cyclic-di-GMP is produced by purified PleD protein.
+            explanation: Visually inspected Figure 5B-C includes the no-protein control and product spectrum; the purified-protein result is distinct from Figure 5A cell extracts. Table 2 identifies pCC2.
+            cache_path: evidence/PF00990/paul-2004-pled.txt
+            cache_sha256: dc615254f97a7f3ab148bdf391bd613eccf1b6aba34b28ca0e73944b02f198bb
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9A5I5/entry/pfam/PF00990/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9A5I5/entry/pfam/PF00990/
+            snippet: 'Q9A5I5 Pfam interval: PF00990 at 289-447, inclusive.'
+            explanation: Exact reference-sequence comparison supports the family mapping; source-strain ambiguity is retained rather than counted as two experiments.
+            cache_path: evidence/PF00990/PleD-identity.txt
+            cache_sha256: f12f692547af59e8e3fcb27049bf14650693ffe6f30111280845cd24cc03889d
+      - edge_id: cyclic-digmp-decreases-pled-activity
+        subject: cyclic-digmp
+        predicate: decreases
+        object: pled-dgc-activity
+        mechanism: Adding chemically synthesized c-di-GMP at 10 or 100 uM reduces the initial labeled-product formation rate with 100 uM GTP. This establishes product inhibition without assigning a competitive active-site mechanism.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:15075296
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC387245/
+            snippet: strong inhibition was observed
+            explanation: Visually inspected Figure 6A compares added c-di-GMP with the no-added-nucleotide condition. Unlabeled GTP bars also involve tracer dilution and are not used to infer this edge. The later allosteric interpretation is retained separately.
+            cache_path: evidence/PF00990/paul-2004-pled.txt
+            cache_sha256: dc615254f97a7f3ab148bdf391bd613eccf1b6aba34b28ca0e73944b02f198bb
+      - edge_id: divj-plus-atp-increases-pled-activity
+        subject: divj-atp-addition
+        predicate: increases
+        object: pled-dgc-activity
+        mechanism: Joint addition of 12.5 ug soluble DivJ and 200 uM ATP increases the WT PleD initial rate. Single-addition controls and D53N PleD do not show this stimulation; the inputs are not represented as independently sufficient causes.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:15075296
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC387245/
+            snippet: was significantly stimulated
+            explanation: Visually inspected Figure 7A and its caption support the combined-treatment effect and D53N control. This is the measured activity response, not direct visualization of the proposed domain rearrangement or a cellular phosphorelay.
+            cache_path: evidence/PF00990/paul-2004-pled.txt
+            cache_sha256: dc615254f97a7f3ab148bdf391bd613eccf1b6aba34b28ca0e73944b02f198bb
+discussions:
+  - discussion_id: pled-member-and-regulatory-coverage
+    prompt: Resolve the exact cloning templates and fragment boundaries, then assess additional GGDEF members and regulatory contexts.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: A scoped PleD product-feedback graph is not a complete family mechanism. Protein activation, structural rearrangements, cell-cycle outputs and degenerate GGDEF members require their own primary evidence.
+    evidence:
+      - reference: PMID:15075296
+        supports: PARTIAL
+        evidence_source: full_text
+        explanation: Figures 5-7 and methods support the retained net reaction, inhibition and joint-treatment stimulation. Cellular and isolated-domain claims are not transferred from these assays.
+      - reference: PMID:15569936
+        supports: PARTIAL
+        evidence_source: full_text
+        explanation: The later main text reports noncompetitive inhibition and proposes domain immobilization. Supporting Figure 6 remains inaccessible in this session; no new fit or structural microstep is adopted.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: The source-interpretation change and access limits are retained in evidence/PF00990/chan-2004-pled-limits.txt. The 2007 activation studies are uncurated leads. No relation to RocR is inferred simply because both records involve c-di-GMP.

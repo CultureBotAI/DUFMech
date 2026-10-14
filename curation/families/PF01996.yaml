@@ -1,0 +1,43 @@
+pfam_id: PF01996
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01996
+causal_graphs:
+  - graph_id: afcofe-f420-1-glutamylation
+    title: Af-CofE-dependent F420-2 formation
+    scope: Purified intact, tag-cleaved CofE from Archaeoglobus fulgidus DSM 4304, recombinantly expressed in E. coli.
+    context: 50 uM F420-1, 2 mM L-glutamate, 2 mM GTP, 20 mM Tris-HCl pH 8.5 at 37 C; shared FbiB/CofE methods list 50 mM KCl/NaCl and 2 mM MgCl2/MnCl2.
+    family_mapping: O28028, cofE/AF_2256, sequence version 1, 249 residues; PF01996 spans 11-220. The study's 7ULF construct maps to the complete reference with an additional N-terminal GA.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:224325
+    limitations: The shared assay methods do not separately resolve the slash-separated salts, incubation duration or enzyme-omission control here. F420-2 is predominant, not an exclusive endpoint. No isolated-domain sufficiency, cellular role, directly observed acyl intermediate or universal processivity is claimed.
+    nodes:
+      - node_id: afcofe-glutamylation-system
+        label: Intact Af-CofE with F420-1, L-glutamate, GTP and assay salts
+        node_type: STATE
+        grounding:
+          - UniProtKB:O28028
+      - node_id: f420-2-formation
+        label: F420-2 formation by addition of L-glutamate
+        node_type: PROCESS
+    edges:
+      - edge_id: afcofe-enables-f420-2-formation
+        subject: afcofe-glutamylation-system
+        predicate: enables
+        object: f420-2-formation
+        mechanism: The purified intact enzyme supports addition of a glutamate to F420-1 in the GTP-containing reaction, yielding a predominant product identified as F420-2 by LC-MS.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:38346985
+            source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10861534/fullTextXML
+            snippet: F420-2 (the predominant product)
+            explanation: Figure 2 image and biochemical methods support the product endpoint; structural binding and proposed catalytic microsteps are not substituted for the assay.
+            cache_path: evidence/PF01996/bashiri-2024-cofe.txt
+            cache_sha256: e7cc24ba42029d6b78c5f45344d54c7eff9fd3e62ce961f28c5ff29ce11fa703
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O28028/entry/pfam/PF01996/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O28028/entry/pfam/PF01996/
+            snippet: 'entry accession: PF01996'
+            explanation: UniProt, InterPro and the study's deposited construct resolve the intact protein, strain and domain interval. The interval is not an isolated-domain assay.
+            cache_path: evidence/PF01996/O28028-identity.txt
+            cache_sha256: db3a90a8d517b55bae6169e67dc9dda1c95583715b09561ee65f5aadcc4678e2

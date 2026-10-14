@@ -1,0 +1,848 @@
+# PF01905 Csa2 binding and conditional DevR developmental effects
+
+- Review: 20261011T233726Z-pf01905-csa2-binding-and-devr-developmental-contexts
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T23:34:52Z
+- Finished UTC: 2026-10-11T23:37:26Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Eleven graphs retain fourteen OBSERVED/EXPERIMENTAL effects: six DIRECT biochemical binding effects and eight INDIRECT phenotypes in separate Csa2 and DevR systems. Eight main figures and three supplement pages were visually inspected. Two open discussions preserve molecular, construct, source and member gaps. Status remains IN_PROGRESS; this is partial same-agent scientific assessment, not independent family endorsement.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: PF01905 former DUF73; Csa2 binding in Lintner2011 and Reeks2013, and DevR deletion/suppression in Rajagopalan2015 qualified by the 2017 reassessment.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01905 | data/families/PF01905.yaml | generated | PF01905 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01905 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01905.
+
+Frozen PF01905 DevR/Csa2 is former DUF73/IPR010154 with 771 proteins. Q97Y91 sequence version 1 equals AAK41675.1/WP_010923407.1, 321 aa, PF01905 5-273, score 5.4e-80. PDB 3PS0 has MHHHHHH plus this sequence; native H160 is resolved in chains A/C, disordered B/D, without bound RNA. Q07765 version 1 equals AAA16134.1/ABF86719.1/WP_011557181.1, 302 aa, historical MXAN_7262 and current MXAN_RS35145/cas7i. Its PF01905 match is only 19-176, score 0.00022, not a strong full-length assignment. Reference equality does not sequence historical assay clones. Exact devR deletion codons/catalog ID remain unverified without Table S1. Whole proteins or genes, not isolated PF01905 domains, were tested.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01905.
+
+Each edge retains its perturbation, joint inputs and comparator. Csa2 binding is not cleavage; H160A retains residual signal without folding controls. The 2013 Cas5/Cas7 Kd is 1.38 +/- 0.14 uM with curve-fit error, distinct from plotted triplicate SEM and not a Cas7-alone measurement. P1 spacer-26 at room temperature is separate from P2 spacer-1 at 55 C. DevR deletion lowers composite mature-spore CFU at 72 h, qualitative ovoid appearance at 48 h and darkening at 96 h, and raises dev RNA at 24 h roughly tenfold. Adding promoter or devI deletion restores CFU and darkening at 72 h without restoring DevR, so these are suppressors rather than complementation. RNA abundance is not a transcription rate or DevI protein measurement. Mounds and residual sporulation remain explicit. The 2017 reconstructed devT results qualify the older distinct-role claim; the antisense-guided DevTRS model remains unproven, with unpublished antisense observations. No direct repression or decay edge was added.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01905.
+
+Most frozen members, exact deleted codons/strain catalog IDs, independently sequenced historical constructs, H160A folding and direct DevR rescue remain unassessed. The 2015 supplement was unavailable through attempted routes, and Reeks2013 Table S1 was not inspected. Hu2022/7TR8 is a P. furiosus Cas7a lead without completed full-text/construct audit; later Q97Y91 structures have an uninspected associated manuscript, not a demonstrated disassembly trajectory. No absence of evidence from failed access is treated as a biological negative. Earlier studies were only partially screened; this is not exhaustive all-member coverage.
+
+## Findings
+
+### additional-contexts: Resolve molecular attribution, allele identity and additional member contexts
+
+minor / open / confirmed; issue key: pf01905-causal-context-coverage.
+
+Obtain missing supplements and verify exact devR/devI alleles and assay constructs. Test DevR/DevTRS binding, transcription versus turnover and DevI protein with matched abundance, folding and rescue controls. Extend Hu2022 Cas7a and later structural primary contexts only after exact member mapping and primary assay inspection. Preserve suppression versus complementation and 2017 strain-background corrections. Add only supported context-specific edges with actual history, guarded regeneration and a successor partial review; do not imply a complete family mechanism.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Obtain missing supplements and verify exact devR/devI alleles and assay constructs. Test DevR/DevTRS binding, transcription versus turnover and DevI protein with matched abundance, folding and rescue controls. Extend Hu2022 Cas7a and later structural primary contexts only after exact member mapping and primary assay inspection. Preserve suppression versus complementation and 2017 strain-background corrections. Add only supported context-specific edges with actual history, guarded regeneration and a successor partial review; do not imply a complete family mechanism.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC3122221/; Main Methods/selected Results, original Figures 3/4, thirteen supplement pages text-extracted and pages 2/9/11 visually inspected. | supports | Csa2 alone and Csa2/Cas5a each shift crRNA; guide addition and target-strand replacement alter complex-bound ssDNA; H160A reduces binding with residual signal. Protein and RNA conditions remain separate from the 2013 assay. No nuclease, dsDNA targeting, atomic H160 contact, unique RNase protection or universal PAM-independent immunity was inferred. The dual-expression construct and structural/cellular tags are distinguished. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q97Y91/; Accession and domain locations; paired UniProt identity facts | supports | Frozen PF01905 DevR/Csa2 is former DUF73/IPR010154 with 771 proteins. Q97Y91 sequence version 1 equals AAK41675.1/WP_010923407.1, 321 aa, PF01905 5-273, score 5.4e-80. PDB 3PS0 has MHHHHHH plus this sequence; native H160 is resolved in chains A/C, disordered B/D, without bound RNA. Q07765 version 1 equals AAA16134.1/ABF86719.1/WP_011557181.1, 302 aa, historical MXAN_7262 and current MXAN_RS35145/cas7i. Its PF01905 match is only 19-176, score 0.00022, not a strong full-length assignment. Reference equality does not sequence historical assay clones. Exact devR deletion codons/catalog ID remain unverified without Table S1. Whole proteins or genes, not isolated PF01905 domains, were tested. |
+| independent-binding-context | https://pmc.ncbi.nlm.nih.gov/articles/PMC3737334/; Main binding Methods/Results and original Figure 2. | supports | Separate fluorescence-anisotropy binding assay; retain probe/temperature, fit error versus SEM and Cas5/Cas7 joint preparation. Negative Csa5 panels do not prove universal dispensability. |
+| devr-developmental-assays | https://pmc.ncbi.nlm.nih.gov/articles/PMC4352663/; Selected Methods/Results/Discussion and original Figures 2/3/4. | supports | Eight indirect devR deletion/suppressor effects with separate endpoints and exact comparators; in-frame deletion specified, precise codons/catalog ID unresolved. Composite CFU and RNA-abundance limits remain explicit. |
+| devt-reassessment-and-regulatory-model | https://pmc.ncbi.nlm.nih.gov/articles/PMC5405206/; Selected Results/Discussion, parsed Table 1 and original Figures 2/8. | supports | Reconstructed devT strains qualify the earlier distinct-role inference; proposed antisense DevTRS repression/decay is not observed chemistry, and antisense transcript evidence is unpublished. |
+| source-search-and-limits | evidence/PF01905/coverage.txt; Dated source/member and access ledger. | supports | Primary access failures and incomplete later leads are explicit; no challenge bypass, global permission change, raw source ingestion or biological absence inferred from failed retrieval. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01905 | data/families/PF01905.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Visually inspected Lintner2011 Figures 3/4, Reeks2013 Figure 2, Rajagopalan2015 Figures 2/3/4 and Rajagopalan2017 Figures 2/8. All thirteen Lintner supplement pages were text-extracted, but only pages 2/9/11 were visually inspected. No raw-gel/CFU reproduction, complete later-source coverage, exact historical clone sequencing or full publication-QC pass.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T233726Z-pf01905-csa2-binding-and-devr-developmental-contexts
+title: PF01905 Csa2 binding and conditional DevR developmental effects
+started_at: '2026-10-11T23:34:52Z'
+finished_at: '2026-10-11T23:37:26Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Eleven graphs retain fourteen OBSERVED/EXPERIMENTAL effects: six DIRECT
+  biochemical binding effects and eight INDIRECT phenotypes in separate Csa2 and DevR
+  systems. Eight main figures and three supplement pages were visually inspected.
+  Two open discussions preserve molecular, construct, source and member gaps. Status
+  remains IN_PROGRESS; this is partial same-agent scientific assessment, not independent
+  family endorsement.'
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01905.yaml
+    sha256: 3ade01ea5b781b1acd4e251695269a672d5f2542a86552733497d8a8f2a21606
+    role: context
+  - path: data/families/PF01905.yaml
+    sha256: 3bafb475ca1565f104ca5000c6b45fd65bb71ca1ec560042fde2d81a373fea95
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01905/lintner-2011.txt
+    role: context
+    sha256: 1e5a7d6926495391c23d8ac280165f168ddf4af2b90d2b733a523b7a15a6f786
+  - path: evidence/PF01905/identity.txt
+    role: context
+    sha256: cd1a351abc4a0f44fa19b65c8bce6d5cc7d2640b4a021dbe94e3d8765e9d15bd
+  - path: evidence/PF01905/reeks-2013.txt
+    role: context
+    sha256: 410a9ba254a1af5a40bc73ab03d6f66f55fc7351633db20b85d910a55d759807
+  - path: evidence/PF01905/rajagopalan-2015.txt
+    role: context
+    sha256: f481152feb6ac0ab4a273e5a61868523f1277fa336ca6cb5f8777e323dd14825
+  - path: evidence/PF01905/rajagopalan-2017.txt
+    role: context
+    sha256: 99a986a98b08162367ca4a2e0fc8777f1aba2bb16b4eed6b998a111550478d06
+  - path: evidence/PF01905/coverage.txt
+    role: context
+    sha256: b07bf709d72804e34ea8c18b3624033f6df24eb37ecc099cf754c9141e92fde2
+targets:
+- target_id: PF01905
+  path: data/families/PF01905.yaml
+  label: PF01905
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01905.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: da5bd67ca8bdd47baa6a425e27619c9fa9fa475581fea6a915b12b7afdb5244e
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: PF01905 former DUF73; Csa2 binding in Lintner2011 and Reeks2013, and
+    DevR deletion/suppression in Rajagopalan2015 qualified by the 2017 reassessment.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01905
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Most frozen members, exact deleted codons/strain catalog IDs, independently
+      sequenced historical constructs, H160A folding and direct DevR rescue remain
+      unassessed. The 2015 supplement was unavailable through attempted routes, and
+      Reeks2013 Table S1 was not inspected. Hu2022/7TR8 is a P. furiosus Cas7a lead
+      without completed full-text/construct audit; later Q97Y91 structures have an
+      uninspected associated manuscript, not a demonstrated disassembly trajectory.
+      No absence of evidence from failed access is treated as a biological negative.
+      Earlier studies were only partially screened; this is not exhaustive all-member
+      coverage.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01905
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3122221/
+  locator: Main Methods/selected Results, original Figures 3/4, thirteen supplement
+    pages text-extracted and pages 2/9/11 visually inspected.
+  accessed_at: '2026-10-11T23:37:26Z'
+  support: supports
+  snapshot_sha256: 1e5a7d6926495391c23d8ac280165f168ddf4af2b90d2b733a523b7a15a6f786
+  summary: Csa2 alone and Csa2/Cas5a each shift crRNA; guide addition and target-strand
+    replacement alter complex-bound ssDNA; H160A reduces binding with residual signal.
+    Protein and RNA conditions remain separate from the 2013 assay. No nuclease, dsDNA
+    targeting, atomic H160 contact, unique RNase protection or universal PAM-independent
+    immunity was inferred. The dual-expression construct and structural/cellular tags
+    are distinguished.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q97Y91/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T23:37:26Z'
+  support: supports
+  snapshot_sha256: cd1a351abc4a0f44fa19b65c8bce6d5cc7d2640b4a021dbe94e3d8765e9d15bd
+  summary: Frozen PF01905 DevR/Csa2 is former DUF73/IPR010154 with 771 proteins. Q97Y91
+    sequence version 1 equals AAK41675.1/WP_010923407.1, 321 aa, PF01905 5-273, score
+    5.4e-80. PDB 3PS0 has MHHHHHH plus this sequence; native H160 is resolved in chains
+    A/C, disordered B/D, without bound RNA. Q07765 version 1 equals AAA16134.1/ABF86719.1/WP_011557181.1,
+    302 aa, historical MXAN_7262 and current MXAN_RS35145/cas7i. Its PF01905 match
+    is only 19-176, score 0.00022, not a strong full-length assignment. Reference
+    equality does not sequence historical assay clones. Exact devR deletion codons/catalog
+    ID remain unverified without Table S1. Whole proteins or genes, not isolated PF01905
+    domains, were tested.
+- evidence_id: independent-binding-context
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3737334/
+  locator: Main binding Methods/Results and original Figure 2.
+  summary: Separate fluorescence-anisotropy binding assay; retain probe/temperature,
+    fit error versus SEM and Cas5/Cas7 joint preparation. Negative Csa5 panels do
+    not prove universal dispensability.
+  accessed_at: '2026-10-11T23:37:26Z'
+  support: supports
+  snapshot_sha256: 410a9ba254a1af5a40bc73ab03d6f66f55fc7351633db20b85d910a55d759807
+- evidence_id: devr-developmental-assays
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4352663/
+  locator: Selected Methods/Results/Discussion and original Figures 2/3/4.
+  summary: Eight indirect devR deletion/suppressor effects with separate endpoints
+    and exact comparators; in-frame deletion specified, precise codons/catalog ID
+    unresolved. Composite CFU and RNA-abundance limits remain explicit.
+  accessed_at: '2026-10-11T23:37:26Z'
+  support: supports
+  snapshot_sha256: f481152feb6ac0ab4a273e5a61868523f1277fa336ca6cb5f8777e323dd14825
+- evidence_id: devt-reassessment-and-regulatory-model
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5405206/
+  locator: Selected Results/Discussion, parsed Table 1 and original Figures 2/8.
+  summary: Reconstructed devT strains qualify the earlier distinct-role inference;
+    proposed antisense DevTRS repression/decay is not observed chemistry, and antisense
+    transcript evidence is unpublished.
+  accessed_at: '2026-10-11T23:37:26Z'
+  support: supports
+  snapshot_sha256: 99a986a98b08162367ca4a2e0fc8777f1aba2bb16b4eed6b998a111550478d06
+- evidence_id: source-search-and-limits
+  kind: search
+  reference: evidence/PF01905/coverage.txt
+  locator: Dated source/member and access ledger.
+  search_scope: Ignored/hidden-inclusive local curation/evidence/history/review/report
+    search excluding inventory.json for PF01905/DUF73/IPR010154; public accession,
+    Csa2/Cas7/DevR, binding, sporulation, repression, later structure and author/title
+    queries. Current sequence/domain and deposited-reference comparisons, not an exhaustive
+    all-member search.
+  summary: Primary access failures and incomplete later leads are explicit; no challenge
+    bypass, global permission change, raw source ingestion or biological absence inferred
+    from failed retrieval.
+  accessed_at: '2026-10-11T23:37:26Z'
+  support: supports
+  snapshot_sha256: b07bf709d72804e34ea8c18b3624033f6df24eb37ecc099cf754c9141e92fde2
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T23:37:26Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01905
+  kind: record_content
+  reference: data/families/PF01905.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T23:37:26Z'
+  support: context_only
+  snapshot_sha256: 3bafb475ca1565f104ca5000c6b45fd65bb71ca1ec560042fde2d81a373fea95
+  quote: "id: Pfam:PF01905\npfam_id: PF01905\nname: CRISPR-associated negative auto-regulator\
+    \ DevR/Csa2\nshort_name: DevR\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01905\n\
+    counters:\n  proteins: 771\n  matches: 773\n  proteomes: 699\n  taxa: 1783\n \
+    \ structures: 14\n  alphafold_models: 609\n  domain_architectures: 2\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR010154\ndescription: 'This group of families is one of\
+    \ several protein families that are always found associated\n  with prokaryotic\
+    \ CRISPRs, themselves a family of clustered regularly interspaced short palindromic\
+    \ repeats,\n  DNA repeats found in nearly half of all bacterial and archaeal genomes.\
+    \ These DNA repeat regions have\n  a remarkably regular structure: unique sequences\
+    \ of constant size, called spacers, sit between each\n  pair of repeats [[cite:PUB00020781]].\
+    \ It has been shown that the CRISPRs are virus-derived sequences\n  acquired by\
+    \ the host to enable them to resist viral infection. The Cas proteins from the\
+    \ host use the\n  CRISPRs to mediate an antiviral response. After transcription\
+    \ of the CRISPR, a complex of Cas proteins\n  termed Cascade cleaves a CRISPR\
+    \ RNA precursor in each repeat and retains the cleavage products containing\n\
+    \  the virus-derived sequence. Assisted by the helicase Cas3, these mature CRISPR\
+    \ RNAs then serve as small\n  guide RNAs that enable Cascade to interfere with\
+    \ virus proliferation [[cite:PUB00106643]]. Cas5 contains\n  an endonuclease motif,\
+    \ whose inactivation leads to loss of resistance, even in the presence of phage-derived\n\
+    \  spacers [[cite:PUB00109113]]. This family used to be known as DUF73. DevR appears\
+    \ to be negative auto-regulator\n  within the system [[cite:PUB00020781]].'\n\
+    curation_history: history/records/PF01905\ndiscussions:\n- discussion_id: duf73-molecular-and-regulatory-attribution\n\
+    \  prompt: Resolve direct RNA contacts and the molecular basis of DevR-dependent\
+    \ dev RNA regulation.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Six\
+    \ direct binding effects and eight indirect developmental/transcript effects do\
+    \ not establish\n    a continuous Csa2-to-DevR pathway, a Cas7 nuclease or direct\
+    \ DevR repression. The systems differ in\n    protein, species, construct and\
+    \ assay.\n  evidence:\n  - reference: PMID:21507944\n    supports: PARTIAL\n \
+    \   evidence_source: primary_figures_methods_and_supplement\n    explanation:\
+    \ H160A retains residual binding without independent folding or bound-RNA contact\
+    \ evidence;\n      cellular RNase retention lacks a matched arm isolating Csa2\
+    \ protection. Cas6 cleavage is not Csa2\n      catalysis.\n  - reference: PMID:28264995\n\
+    \    supports: PARTIAL\n    evidence_source: primary_results_table_and_figures\n\
+    \    explanation: Reconstructed devT mutants revise the older distinct-role inference\
+    \ and support a second-site\n      explanation for the old strain. Figure 8 is\
+    \ a proposed regulatory model; antisense transcript evidence\n      is explicitly\
+    \ unpublished, not an observed DevTRS repression or decay mechanism.\n  posed_by:\
+    \ Codex\n  posed_date: '2026-10-11'\n  notes: Test RNA binding and turnover with\
+    \ purified verified DevR/DevTRS constructs, distinguish transcription\n    from\
+    \ RNA stability, measure DevI protein, and verify matched abundance/folding and\
+    \ allele-specific\n    rescue. Keep suppressors distinct from DevR complementation.\
+    \ Do not use later review wording to promote\n    conditional primary hypotheses\
+    \ to observed edges.\n- discussion_id: duf73-member-construct-and-source-coverage\n\
+    \  prompt: Extend member-specific evidence and resolve incomplete construct and\
+    \ supplement coverage.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Eleven\
+    \ graphs and fourteen observed edges cover selected Csa2 and DevR contexts, not\
+    \ all\n    771 frozen family proteins. Current DevR PF01905 coverage is partial\
+    \ with provider score 0.00022;\n    whole-gene phenotypes do not prove domain-specific\
+    \ activity.\n  evidence:\n  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q07765/\n\
+    \    supports: SUPPORT\n    evidence_source: current_domain_mapping_and_reference_sequences\n\
+    \    explanation: PF01905 19-176 in the 302-aa DevR reference; exact equality\
+    \ with AAA16134.1/ABF86719.1/WP_011557181.1\n      does not independently verify\
+    \ the historical deletion clone or removed codons.\n  - reference: PMID:35835111\n\
+    \    supports: PARTIAL\n    evidence_source: primary_abstract_and_structure_lead\n\
+    \    explanation: Hu2022 and PDB 7TR8 identify a P. furiosus Cas7a lead, but full-text\
+    \ access and exact\n      construct mapping were not completed; no cleavage edge\
+    \ was added from the abstract.\n  - reference: https://www.rcsb.org/structure/9cp1\n\
+    \    supports: PARTIAL\n    evidence_source: released_structure_metadata\n   \
+    \ explanation: Later Q97Y91 structures are a lead; the inspected associated manuscript\
+    \ metadata says\n      To Be Published. No full paper or causal disassembly trajectory\
+    \ was verified, and the bounded search\n      is not proof that no paper exists.\n\
+    \  posed_by: Codex\n  posed_date: '2026-10-11'\n  notes: Obtain the 2015 Table\
+    \ S1 and Reeks2013 supplement, verify deletion codons/catalog IDs and H160A\n\
+    \    folding/clone identity, and inspect earlier/later primary assays and archaeal\
+    \ members. Eight main\n    figures and three pages of the 13-page Lintner supplement\
+    \ were visually inspected; no exhaustive family\n    search, raw-data reproduction\
+    \ or independent scientific endorsement. Keep IN_PROGRESS.\ncausal_graphs:\n-\
+    \ graph_id: csa2-alone-crrna-binding-2011\n  title: Purified Csa2 increases bound\
+    \ crRNA in a gel-shift assay\n  scope: Lintner2011 Figure 3B; isolated SSO1442\
+    \ protein and crRNA-A1.\n  context: 100 nM radiolabeled P2 CRISPR A spacer-1 crRNA;\
+    \ Csa2 0.25-7 uM; 20 mM MES pH 6.0, 50 mM potassium\n    glutamate, 0.5 mM DTT,\
+    \ 5 mM EDTA, 5% glycerol; 55 C for 10 min, native 10% PAGE.\n  family_mapping:\
+    \ Csa2b/Cas7b Q97Y91 sequence version 1 equals AAK41675.1 and WP_010923407.1;\
+    \ 321 aa with\n    PF01905 at 5-273. Whole protein, not an isolated domain, was\
+    \ tested. PDB 3PS0 has MHHHHHH followed\n    by the exact reference sequence;\
+    \ that structural tag is not assigned to every assay preparation.\n  scope_status:\
+    \ MECHANISTIC\n  taxon: NCBITaxon:273057\n  limitations: Binding is not cleavage,\
+    \ immunity or an atomic RNA-contact mechanism. Similar-looking isolated-protein\n\
+    \    and complex curves do not establish exact affinity equivalence. Reference\
+    \ sequence equality does not\n    sequence the historical assay clone; no independent\
+    \ raw-gel analysis was performed.\n  nodes:\n  - node_id: csa2-added\n    label:\
+    \ Increasing isolated Csa2 in the crRNA assay\n    node_type: PERTURBATION\n \
+    \ - node_id: bound-crrna\n    label: Gel-shifted crRNA fraction\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: csa2-increases-bound-crrna\n    subject: csa2-added\n\
+    \    predicate: increases\n    object: bound-crrna\n    mechanism: Adding purified\
+    \ Csa2 produces increasing shifted crRNA relative to RNA alone, supporting\n \
+    \     direct binding in this preparation without assigning a catalytic activity\
+    \ or family-wide affinity.\n    directness: DIRECT\n    support: OBSERVED\n  \
+    \  evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:21507944\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3122221/\n      snippet:\
+    \ crRNA\n      explanation: Original Figure 3B and binding Methods; isolated Csa2\
+    \ series includes 0.25, 0.5, 1,\n        2, 3, 5 and 7 uM. Supplement Table S3\
+    \ identifies the probe. No Kd was inferred from these displayed\n        gels.\n\
+    \      cache_path: evidence/PF01905/lintner-2011.txt\n      cache_sha256: 1e5a7d6926495391c23d8ac280165f168ddf4af2b90d2b733a523b7a15a6f786\n\
+    - graph_id: csa2-cas5a-crrna-binding-2011\n  title: The Csa2/Cas5a preparation\
+    \ increases bound crRNA\n  scope: Lintner2011 Figure 3B; coexpressed SSO1442/SSO1441\
+    \ preparation, separate from Csa2 alone.\n  context: 100 nM radiolabeled crRNA-A1;\
+    \ complex titration 0.25-7 uM; MES pH 6.0 binding buffer, 55 C\n    for 10 min,\
+    \ native PAGE. Supplement describes native-form Csa2 with N-terminal His/TEV-tagged\
+    \ Cas5a.\n  family_mapping: PF01905-bearing Csa2 is Q97Y91/AAK41675.1, 321 aa,\
+    \ match 5-273. Cas5a is a joint assay\n    partner, not an additional PF01905\
+    \ member; the complex result is not a Cas5a-alone experiment.\n  scope_status:\
+    \ MECHANISTIC\n  taxon: NCBITaxon:273057\n  limitations: Complex binding does\
+    \ not isolate Cas5a's contribution, establish stoichiometry or prove\n    equal\
+    \ affinity to Csa2 alone. The cellular tandem-tag purification and crystallographic\
+    \ Csa2 construct\n    are distinct contexts.\n  nodes:\n  - node_id: complex-added\n\
+    \    label: Increasing Csa2/Cas5a preparation in the crRNA assay\n    node_type:\
+    \ PERTURBATION\n  - node_id: bound-crrna\n    label: Gel-shifted crRNA fraction\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: complex-increases-bound-crrna\n\
+    \    subject: complex-added\n    predicate: increases\n    object: bound-crrna\n\
+    \    mechanism: Titrating the coexpressed Csa2/Cas5a preparation increases shifted\
+    \ crRNA relative to RNA\n      alone; the effect belongs to the joint preparation.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:21507944\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3122221/\n\
+    \      snippet: crRNA\n      explanation: Original Figure 3B, binding Methods\
+    \ and supplement construct description on pages 10-11;\n        sequence-verified\
+    \ dual expression is reported, not an independent resequencing of the historical\n\
+    \        assay material.\n      cache_path: evidence/PF01905/lintner-2011.txt\n\
+    \      cache_sha256: 1e5a7d6926495391c23d8ac280165f168ddf4af2b90d2b733a523b7a15a6f786\n\
+    - graph_id: csa2-cas5a-guide-dependent-ssdna-binding-2011\n  title: Guide addition\
+    \ and target-strand replacement alter protein-bound ssDNA\n  scope: Lintner2011\
+    \ Figure 3C; recombinant Csa2/Cas5a with crRNA-A1 and the named Target-A1 oligonucleotides.\n\
+    \  context: Radiolabeled Target-A1f or reverse-complement Target-A1r under displayed\
+    \ protein titrations;\n    general binding Methods use 55 C for 10 min. Exact\
+    \ Figure 3C protein and guide doses were not established\n    beyond the general\
+    \ Methods and displayed series.\n  family_mapping: Joint preparation contains\
+    \ Q97Y91 Csa2, PF01905 5-273 within 321 aa, with Cas5a. Protein-bound\n    DNA\
+    \ is not an isolated Csa2 catalytic measurement.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:273057\n  limitations: The slow protein-bound species is distinct\
+    \ from the free RNA-DNA heteroduplex. These results\n    do not establish dsDNA\
+    \ targeting, DNA cleavage, cellular immunity or universal PAM independence; the\n\
+    \    PAM statement is data not shown. Different perturbations share an endpoint\
+    \ but are not a temporal\n    reaction chain.\n  nodes:\n  - node_id: guide-added-to-forward-target\n\
+    \    label: Add cognate crRNA to complex plus Target-A1f\n    node_type: PERTURBATION\n\
+    \  - node_id: target-reversed-with-guide\n    label: Replace Target-A1f with Target-A1r\
+    \ in the guide-positive assay\n    node_type: PERTURBATION\n  - node_id: protein-bound-dna\n\
+    \    label: Slowly migrating protein-bound DNA signal\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: guide-increases-protein-bound-dna\n    subject: guide-added-to-forward-target\n\
+    \    predicate: increases\n    object: protein-bound-dna\n    mechanism: Adding\
+    \ cognate crRNA to the complex and complementary Target-A1f increases the protein-bound\n\
+    \      DNA band compared with the no-guide condition. All other joint components\
+    \ remain required assay\n      context.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:21507944\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3122221/\n      snippet:\
+    \ crRNA\n      explanation: Original Figure 3C distinguishes the protein-bound\
+    \ species from unbound hybrid; visually\n        inspected supplement Table S3\
+    \ resolves crRNA-A1 and target identities. No quantitative affinity\n        or\
+    \ cleavage endpoint is inferred.\n      cache_path: evidence/PF01905/lintner-2011.txt\n\
+    \      cache_sha256: 1e5a7d6926495391c23d8ac280165f168ddf4af2b90d2b733a523b7a15a6f786\n\
+    \  - edge_id: reverse-target-decreases-protein-bound-dna\n    subject: target-reversed-with-guide\n\
+    \    predicate: decreases\n    object: protein-bound-dna\n    mechanism: Substituting\
+    \ the reverse-complement Target-A1r for Target-A1f in the guide-positive complex\n\
+    \      assay removes the strong bound-DNA signal, supporting strand/complementarity-dependent\
+    \ binding in\n      the displayed comparison.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:21507944\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3122221/\n      snippet:\
+    \ crRNA\n      explanation: Original Figure 3C forward/reverse target panels and\
+    \ supplement Table S3; protein series\n        are qualitatively matched. This\
+    \ is not a demonstration of cleavage or a precisely measured universal\n     \
+    \   absence of binding.\n      cache_path: evidence/PF01905/lintner-2011.txt\n\
+    \      cache_sha256: 1e5a7d6926495391c23d8ac280165f168ddf4af2b90d2b733a523b7a15a6f786\n\
+    - graph_id: csa2-h160a-crrna-binding-2011\n  title: H160A reduces but does not\
+    \ abolish Csa2 crRNA gel shift\n  scope: Lintner2011 Figure 4E; H160A versus WT\
+    \ Csa2 preparations.\n  context: Displayed protein series 0.25, 0.5, 1, 2 and\
+    \ 3 uM in the crRNA-A1 binding assay; general Methods\n    use 100 nM RNA and\
+    \ 55 C for 10 min.\n  family_mapping: Native H160 in Q97Y91/AAK41675.1 lies within\
+    \ PF01905 5-273. PDB 3PS0 entity equals MHHHHHH\n    plus the 321-aa reference;\
+    \ author H160 is resolved in chains A/C and disordered in B/D. The whole\n   \
+    \ protein was tested, not the isolated domain.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:273057\n  limitations: Residual binding remains at higher\
+    \ doses. No mutant folding measurement, exact historical\n    clone sequence,\
+    \ fitted affinity change, direct H160-RNA contact or catalytic proton transfer\
+    \ was established.\n    An RNA-free crystal is not a bound-RNA structure.\n  nodes:\n\
+    \  - node_id: h160a-substitution\n    label: H160A instead of WT Csa2 in the binding\
+    \ assay\n    node_type: PERTURBATION\n  - node_id: bound-crrna\n    label: Gel-shifted\
+    \ crRNA fraction\n    node_type: STATE\n  edges:\n  - edge_id: h160a-decreases-bound-crrna\n\
+    \    subject: h160a-substitution\n    predicate: decreases\n    object: bound-crrna\n\
+    \    mechanism: The H160A preparation yields less shifted crRNA than WT across\
+    \ the displayed protein series\n      while retaining residual binding. This is\
+    \ a direct biochemical assay effect, not proof of a specific\n      atomic contact\
+    \ or absence of folding effects.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:21507944\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3122221/\n      snippet:\
+    \ crRNA\n      explanation: Original Figure 4E was visually inspected, including\
+    \ higher-dose residual signal; Figure\n        4 structure and current sequence\
+    \ mapping locate H160 without turning the substitution into a catalytic\n    \
+    \    assignment.\n      cache_path: evidence/PF01905/lintner-2011.txt\n      cache_sha256:\
+    \ 1e5a7d6926495391c23d8ac280165f168ddf4af2b90d2b733a523b7a15a6f786\n- graph_id:\
+    \ cas5-cas7-crrna-anisotropy-2013\n  title: Cas5/Cas7 titration increases fluorescent\
+    \ crRNA anisotropy\n  scope: Reeks2013 Figure 2A; recombinant Sso1441/Sso1442\
+    \ preparation.\n  context: 20 nM fluorescent P1 CRISPR A spacer-26 crRNA, 20 mM\
+    \ Tris pH 7.5, 150 mM NaCl, 5% glycerol,\n    1 mM EDTA, room temperature; excitation/emission\
+    \ 490/535 nm. General titration range 0.04-11 uM, displayed\n    Figure 2A axis\
+    \ about 8 uM; incubation time not established.\n  family_mapping: Sso1442 Cas7/Csa2\
+    \ Q97Y91 is the PF01905 member, match 5-273; Sso1441 Cas5 is a joint\n    partner.\
+    \ P2 protein reference, P1 probe and P1 cellular co-IP context must not be conflated.\n\
+    \  scope_status: MECHANISTIC\n  taxon: NCBITaxon:273057\n  limitations: Fitted\
+    \ Kd 1.38 +/- 0.14 uM belongs to the Cas5/Cas7 preparation, not Cas7 alone. The\
+    \ +/-\n    value is curve-fit error; plotted bars are SEM of triplicates with\
+    \ unspecified replicate independence.\n    Different probe and temperature preclude\
+    \ a direct quantitative comparison with the 2011 EMSA. Supplement\n    Table S1\
+    \ was not inspected.\n  nodes:\n  - node_id: cas5-cas7-titration\n    label: Increasing\
+    \ Cas5/Cas7 in the fluorescent crRNA assay\n    node_type: PERTURBATION\n  - node_id:\
+    \ crrna-anisotropy\n    label: Fluorescent crRNA anisotropy\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: complex-increases-crrna-anisotropy\n    subject: cas5-cas7-titration\n\
+    \    predicate: increases\n    object: crrna-anisotropy\n    mechanism: Titrating\
+    \ the joint Cas5/Cas7 preparation raises fluorescent crRNA anisotropy, supporting\n\
+    \      binding under these conditions. The fit does not isolate the contribution\
+    \ or affinity of either\n      component.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:23846216\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3737334/\n      snippet:\
+    \ anisotropy\n      explanation: Original Figure 2A and binding Methods; fitted\
+    \ Kd 1.38 +/- 0.14 uM with curve-fit error,\n        not the plotted triplicate\
+    \ SEM. Csa5-negative panels and cellular co-IP are not added as a direct\n   \
+    \     RNA-guided mechanism.\n      cache_path: evidence/PF01905/reeks-2013.txt\n\
+    \      cache_sha256: 410a9ba254a1af5a40bc73ab03d6f66f55fc7351633db20b85d910a55d759807\n\
+    - graph_id: devr-deletion-mature-spore-cfu-2015\n  title: The devR deletion lowers\
+    \ mature-spore CFU at 72 hours\n  scope: Rajagopalan2015 Figure 2C; DK1622-derived\
+    \ in-frame devR deletion versus WT.\n  context: Submerged starvation in MC7, 10\
+    \ mM MOPS pH 7.0 and 1 mM CaCl2, 32 C; 72 h endpoint. Heat and\n    sonication\
+    \ treatment followed by germination and colony formation; log10 CFU/ml with SD\
+    \ from at least\n    three biological replicates.\n  family_mapping: DevR Q07765\
+    \ sequence version 1 equals AAA16134.1, ABF86719.1 and WP_011557181.1; historical\n\
+    \    MXAN_7262, current MXAN_RS35145/cas7i. PF01905 is 19-176 within 302 aa, provider\
+    \ score 0.00022; not\n    a strong full-length match or isolated-domain perturbation.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:246197\n  limitations: Mature-spore\
+    \ CFU is a composite resistance, germination and colony-formation outcome, not\n\
+    \    total spore counts or pure viability. Nonzero residual output remains. Exact\
+    \ removed codons and Table\n    S1 strain identifier were unavailable; reference\
+    \ matching does not sequence the assay clone. Polar\n    and secondary effects\
+    \ remain alternatives; suppressor genetics is not DevR complementation.\n  nodes:\n\
+    \  - node_id: devr-deletion\n    label: In-frame devR deletion versus WT\n   \
+    \ node_type: PERTURBATION\n  - node_id: mature-spore-cfu\n    label: Mature-spore\
+    \ CFU per ml at 72 h\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: devr-deletion-decreases-spore-cfu\n\
+    \    subject: devr-deletion\n    predicate: decreases\n    object: mature-spore-cfu\n\
+    \    mechanism: The devR deletion strain yields substantially fewer mature-spore\
+    \ CFU than DK1622 under\n      these starvation conditions. The intermediate mechanism\
+    \ is unresolved and the requirement depends\n      on genotype.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:25645563\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4352663/\n\
+    \      snippet: devR\n      explanation: Original Figure 2C and spore assay Methods;\
+    \ the Discussion explicitly specifies an\n        in-frame deletion. No bar-height\
+    \ digitization, universal fold loss or zero-spore claim was made.\n      cache_path:\
+    \ evidence/PF01905/rajagopalan-2015.txt\n      cache_sha256: f481152feb6ac0ab4a273e5a61868523f1277fa336ca6cb5f8777e323dd14825\n\
+    - graph_id: devr-deletion-cell-shape-2015\n  title: The devR deletion reduces\
+    \ ovoid-cell appearance at 48 hours\n  scope: Rajagopalan2015 Figure 2B; qualitative\
+    \ cell-shape comparison with DK1622.\n  context: Submerged MC7 starvation at 32\
+    \ C; gently dispersed aggregates allowed to settle before imaging,\n    48 h endpoint;\
+    \ at least two biological replicates.\n  family_mapping: DK1622 DevR Q07765/AAA16134.1,\
+    \ PF01905 19-176 within 302 aa, provider score 0.00022;\n    whole-gene in-frame\
+    \ deletion. Exact codons and assay clone sequence remain unverified without Table\n\
+    \    S1.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:246197\n  limitations:\
+    \ Qualitative morphology is not an exact cell count, direct biochemical mechanism\
+    \ or mature-spore\n    viability measurement. Residual shape change at 72/96 h\
+    \ argues against a permanent absolute block.\n    Sampling of settled aggregates\
+    \ and polar/secondary effects remain limits.\n  nodes:\n  - node_id: devr-deletion\n\
+    \    label: In-frame devR deletion versus WT\n    node_type: PERTURBATION\n  -\
+    \ node_id: ovoid-cell-appearance\n    label: Qualitative ovoid-cell appearance\
+    \ at 48 h\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: devr-deletion-decreases-ovoid-appearance\n\
+    \    subject: devr-deletion\n    predicate: decreases\n    object: ovoid-cell-appearance\n\
+    \    mechanism: The devR deletion sample has fewer visibly ovoid cells than WT\
+    \ at 48 h, an indirect developmental\n      phenotype without a measured molecular\
+    \ intermediate or exact delay duration.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25645563\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4352663/\n      snippet:\
+    \ devR\n      explanation: Original Figure 2B images and caption; later 72/96\
+    \ h observations retain partial shape\n        change. This qualitative comparison\
+    \ is kept separate from the 72 h CFU assay.\n      cache_path: evidence/PF01905/rajagopalan-2015.txt\n\
+    \      cache_sha256: f481152feb6ac0ab4a273e5a61868523f1277fa336ca6cb5f8777e323dd14825\n\
+    - graph_id: devr-deletion-fruiting-body-darkening-2015\n  title: The devR deletion\
+    \ reduces fruiting-body darkening at 96 hours\n  scope: Rajagopalan2015 Figure\
+    \ 2A; DK1622 and the in-frame devR deletion.\n  context: Submerged MC7 starvation,\
+    \ 32 C; representative 96 h images, at least two biological replicates.\n  family_mapping:\
+    \ Q07765 DevR, MXAN_7262/MXAN_RS35145, PF01905 19-176 within 302 aa; provider\
+    \ score 0.00022.\n    Whole-gene loss, not domain-specific perturbation; exact\
+    \ deleted codons remain unverified.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:246197\n\
+    \  limitations: The mutant forms mounds, so this is not complete loss of aggregation.\
+    \ Qualitative darkening\n    is not an independent spore count or direct molecular\
+    \ assay. The 72 h suppressor panel is a different\n    timepoint; clone, polarity\
+    \ and secondary effects remain limits.\n  nodes:\n  - node_id: devr-deletion\n\
+    \    label: In-frame devR deletion versus WT\n    node_type: PERTURBATION\n  -\
+    \ node_id: darkened-fruiting-bodies\n    label: Darkened fruiting-body appearance\
+    \ at 96 h\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: devr-deletion-decreases-darkening\n\
+    \    subject: devr-deletion\n    predicate: decreases\n    object: darkened-fruiting-bodies\n\
+    \    mechanism: The devR mutant forms mounds but lacks the WT-like darkened fruiting-body\
+    \ appearance at\n      96 h, supporting an indirect maturation phenotype under\
+    \ this condition.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25645563\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC4352663/\n      snippet: devR\n   \
+    \   explanation: Original Figure 2A and selected Results distinguish mound formation\
+    \ from subsequent\n        darkening. No quantitative pigmentation scale or complete\
+    \ aggregation block is inferred.\n      cache_path: evidence/PF01905/rajagopalan-2015.txt\n\
+    \      cache_sha256: f481152feb6ac0ab4a273e5a61868523f1277fa336ca6cb5f8777e323dd14825\n\
+    - graph_id: devr-deletion-dev-rna-abundance-2015\n  title: The devR deletion increases\
+    \ normalized dev RNA abundance at 24 hours\n  scope: Rajagopalan2015 Figure 4B;\
+    \ devR deletion versus WT qRT-PCR.\n  context: DK1622-derived cells under submerged\
+    \ MC7 starvation at 32 C, 24 h. PdevF-2/PdevR-3 spans +237\n    to +440; 16S rRNA\
+    \ and WT normalization, standard curves and no-RT controls; three technical replicates\n\
+    \    for at least three biological replicates, SD bars.\n  family_mapping: DevR\
+    \ Q07765/ABF86719.1, PF01905 19-176 within 302 aa, provider score 0.00022; whole-gene\n\
+    \    in-frame deletion rather than an isolated PF01905 domain assay. Exact allele\
+    \ codons remain unresolved.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:246197\n\
+    \  limitations: Steady-state RNA abundance does not distinguish transcription\
+    \ initiation, elongation, termination\n    or stability and does not measure DevI\
+    \ protein. This is the Figure 4B probe, not the Figure 4A junction\n    probe.\
+    \ Direct promoter repression, antisense targeting and RNA decay by DevR are not\
+    \ demonstrated;\n    polar/secondary effects remain possible.\n  nodes:\n  - node_id:\
+    \ devr-deletion\n    label: In-frame devR deletion versus WT\n    node_type: PERTURBATION\n\
+    \  - node_id: dev-rna-abundance\n    label: Normalized dev RNA abundance at 24\
+    \ h\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: devr-deletion-increases-dev-rna\n\
+    \    subject: devr-deletion\n    predicate: increases\n    object: dev-rna-abundance\n\
+    \    mechanism: The devR deletion raises the measured normalized dev transcript\
+    \ signal roughly tenfold.\n      The genetic effect is indirect and does not establish\
+    \ whether DevR acts on synthesis or RNA turnover.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:25645563\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4352663/\n\
+    \      snippet: devR\n      explanation: Original Figure 4B, qRT-PCR Methods and\
+    \ selected Results; the approximately tenfold\n        statement is retained as\
+    \ reported, not independently quantified. No direct DNA binding or DevI-protein\n\
+    \        edge is inferred.\n      cache_path: evidence/PF01905/rajagopalan-2015.txt\n\
+    \      cache_sha256: f481152feb6ac0ab4a273e5a61868523f1277fa336ca6cb5f8777e323dd14825\n\
+    - graph_id: devr-background-spore-cfu-suppression-2015\n  title: Promoter or devI\
+    \ deletion suppresses low spore CFU in the devR background\n  scope: Rajagopalan2015\
+    \ Figure 2C; two separate double-mutant comparisons against the devR single mutant.\n\
+    \  context: DK1622-derived submerged MC7 starvation, 32 C, 72 h; mature-spore\
+    \ CFU/ml after heat/sonication\n    and germination, at least three biological\
+    \ replicates, SD. Promoter deletion spans -38 to +19 relative\n    to the dev\
+    \ start; devI deletion is in-frame.\n  family_mapping: The shared background lacks\
+    \ DevR Q07765, 302 aa, PF01905 19-176 with provider score\n    0.00022. Promoter\
+    \ and devI perturbations are suppressors in this background, not PF01905 domain\
+    \ mutations\n    or restoration of DevR.\n  scope_status: PHENOTYPIC\n  taxon:\
+    \ NCBITaxon:246197\n  limitations: These are suppressor genetics, not DevR complementation\
+    \ or proof of an obligatory molecular\n    relay. CFU combines resistance, germination\
+    \ and colony formation. Exact devR/devI codons and strain\n    identifiers remain\
+    \ unverified without Table S1; regulatory/polar and secondary effects remain possible.\n\
+    \  nodes:\n  - node_id: promoter-deletion-in-devr\n    label: Add dev promoter\
+    \ deletion in the devR deletion background\n    node_type: PERTURBATION\n  - node_id:\
+    \ devi-deletion-in-devr\n    label: Add devI deletion in the devR deletion background\n\
+    \    node_type: PERTURBATION\n  - node_id: mature-spore-cfu\n    label: Mature-spore\
+    \ CFU per ml at 72 h\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: promoter-deletion-increases-spore-cfu\n\
+    \    subject: promoter-deletion-in-devr\n    predicate: increases\n    object:\
+    \ mature-spore-cfu\n    mechanism: Adding the dev promoter deletion in the devR\
+    \ mutant restores high mature-spore CFU relative\n      to the devR single mutant,\
+    \ showing a conditionally suppressible phenotype rather than absolute DevR\n \
+    \     indispensability.\n    directness: INDIRECT\n    support: OBSERVED\n   \
+    \ evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25645563\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4352663/\n      snippet:\
+    \ devR\n      explanation: Original Figure 2C promoter/devR double-mutant comparison\
+    \ and selected Results; the\n        comparator remains the devR single mutant,\
+    \ not an imagined DevR re-expression construct.\n      cache_path: evidence/PF01905/rajagopalan-2015.txt\n\
+    \      cache_sha256: f481152feb6ac0ab4a273e5a61868523f1277fa336ca6cb5f8777e323dd14825\n\
+    \  - edge_id: devi-deletion-increases-spore-cfu\n    subject: devi-deletion-in-devr\n\
+    \    predicate: increases\n    object: mature-spore-cfu\n    mechanism: Adding\
+    \ the in-frame devI deletion in the devR mutant restores high mature-spore CFU\
+    \ relative\n      to the devR single mutant. Suppression does not establish direct\
+    \ DevR repression of DevI protein\n      or a unique intervening mechanism.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:25645563\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4352663/\n\
+    \      snippet: devR\n      explanation: Original Figure 2C devI/devR double-mutant\
+    \ comparison; separate DevI complementation\n        and premature-stop experiments\
+    \ in devS backgrounds are not transferred to this genotype.\n      cache_path:\
+    \ evidence/PF01905/rajagopalan-2015.txt\n      cache_sha256: f481152feb6ac0ab4a273e5a61868523f1277fa336ca6cb5f8777e323dd14825\n\
+    - graph_id: devr-background-fruiting-body-suppression-2015\n  title: Promoter\
+    \ or devI deletion restores darkened fruiting bodies at 72 hours\n  scope: Rajagopalan2015\
+    \ Figure 3; devR-background suppressors, distinct from the 96 h deletion panel.\n\
+    \  context: DK1622-derived submerged MC7 starvation, 32 C, 72 h. Each double mutant\
+    \ is compared with the\n    devR single mutant; promoter deletion -38 to +19,\
+    \ devI in-frame deletion; qualitative images.\n  family_mapping: DevR Q07765/MXAN_7262\
+    \ is absent in the shared background; PF01905 match 19-176 in 302\n    aa, provider\
+    \ score 0.00022. These conditional genetic interactions do not isolate the domain\
+    \ or restore\n    DevR protein.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:246197\n\
+    \  limitations: Suppressor morphology is not DevR complementation, a quantitative\
+    \ spore count or evidence\n    for direct protein-protein interaction. Exact devR/devI\
+    \ alleles remain incompletely resolved without\n    the supplement. The 2017 revision\
+    \ of an old devT mutant cautions against universal inference from\n    unverified\
+    \ strain backgrounds.\n  nodes:\n  - node_id: promoter-deletion-in-devr\n    label:\
+    \ Add dev promoter deletion in the devR deletion background\n    node_type: PERTURBATION\n\
+    \  - node_id: devi-deletion-in-devr\n    label: Add devI deletion in the devR\
+    \ deletion background\n    node_type: PERTURBATION\n  - node_id: darkened-fruiting-bodies\n\
+    \    label: Darkened fruiting-body appearance at 72 h\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: promoter-deletion-increases-darkening\n    subject: promoter-deletion-in-devr\n\
+    \    predicate: increases\n    object: darkened-fruiting-bodies\n    mechanism:\
+    \ The promoter/devR double mutant regains darkened fruiting bodies relative to\
+    \ the devR single\n      mutant at 72 h, an indirect suppressor phenotype in this\
+    \ genotype and environment.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25645563\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4352663/\n      snippet:\
+    \ devR\n      explanation: Original Figure 3 and selected Results; retain the\
+    \ 72 h endpoint rather than importing\n        the 96 h timing from Figure 2A.\
+    \ Promoter deletion is not restoration of the DevR coding sequence.\n      cache_path:\
+    \ evidence/PF01905/rajagopalan-2015.txt\n      cache_sha256: f481152feb6ac0ab4a273e5a61868523f1277fa336ca6cb5f8777e323dd14825\n\
+    \  - edge_id: devi-deletion-increases-darkening\n    subject: devi-deletion-in-devr\n\
+    \    predicate: increases\n    object: darkened-fruiting-bodies\n    mechanism:\
+    \ The devI/devR double mutant regains darkened fruiting bodies relative to the\
+    \ devR single\n      mutant at 72 h. The result supports conditional suppression\
+    \ without identifying a direct regulatory\n      mechanism.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:25645563\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4352663/\n\
+    \      snippet: devR\n      explanation: Original Figure 3 devI/devR comparison;\
+    \ DevI loss is not DevR complementation and is\n        not a measured DevR-to-DevI\
+    \ protein interaction.\n      cache_path: evidence/PF01905/rajagopalan-2015.txt\n\
+    \      cache_sha256: f481152feb6ac0ab4a273e5a61868523f1277fa336ca6cb5f8777e323dd14825\n\
+    curation_events:\n- timestamp: '2026-10-11T23:25:04Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Add scoped Csa2 binding and DevR developmental\
+    \ causal graphs\n  history_record: history/records/PF01905/2026-10-11T232504Z-codex-556ae7.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Frozen PF01905 DevR/Csa2 is former DUF73/IPR010154 with 771 proteins. Q97Y91
+    sequence version 1 equals AAK41675.1/WP_010923407.1, 321 aa, PF01905 5-273, score
+    5.4e-80. PDB 3PS0 has MHHHHHH plus this sequence; native H160 is resolved in chains
+    A/C, disordered B/D, without bound RNA. Q07765 version 1 equals AAA16134.1/ABF86719.1/WP_011557181.1,
+    302 aa, historical MXAN_7262 and current MXAN_RS35145/cas7i. Its PF01905 match
+    is only 19-176, score 0.00022, not a strong full-length assignment. Reference
+    equality does not sequence historical assay clones. Exact devR deletion codons/catalog
+    ID remain unverified without Table S1. Whole proteins or genes, not isolated PF01905
+    domains, were tested.
+  target_ids:
+  - PF01905
+  evidence_ids:
+  - identity
+  - primary
+  - independent-binding-context
+  - devr-developmental-assays
+  - devt-reassessment-and-regulatory-model
+  - source-search-and-limits
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Each edge retains its perturbation, joint inputs and comparator. Csa2 binding
+    is not cleavage; H160A retains residual signal without folding controls. The 2013
+    Cas5/Cas7 Kd is 1.38 +/- 0.14 uM with curve-fit error, distinct from plotted triplicate
+    SEM and not a Cas7-alone measurement. P1 spacer-26 at room temperature is separate
+    from P2 spacer-1 at 55 C. DevR deletion lowers composite mature-spore CFU at 72
+    h, qualitative ovoid appearance at 48 h and darkening at 96 h, and raises dev
+    RNA at 24 h roughly tenfold. Adding promoter or devI deletion restores CFU and
+    darkening at 72 h without restoring DevR, so these are suppressors rather than
+    complementation. RNA abundance is not a transcription rate or DevI protein measurement.
+    Mounds and residual sporulation remain explicit. The 2017 reconstructed devT results
+    qualify the older distinct-role claim; the antisense-guided DevTRS model remains
+    unproven, with unpublished antisense observations. No direct repression or decay
+    edge was added.
+  target_ids:
+  - PF01905
+  evidence_ids:
+  - primary
+  - native
+  - independent-binding-context
+  - devr-developmental-assays
+  - devt-reassessment-and-regulatory-model
+  - source-search-and-limits
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Most frozen members, exact deleted codons/strain catalog IDs, independently
+    sequenced historical constructs, H160A folding and direct DevR rescue remain unassessed.
+    The 2015 supplement was unavailable through attempted routes, and Reeks2013 Table
+    S1 was not inspected. Hu2022/7TR8 is a P. furiosus Cas7a lead without completed
+    full-text/construct audit; later Q97Y91 structures have an uninspected associated
+    manuscript, not a demonstrated disassembly trajectory. No absence of evidence
+    from failed access is treated as a biological negative. Earlier studies were only
+    partially screened; this is not exhaustive all-member coverage.
+  target_ids:
+  - PF01905
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01905-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve molecular attribution, allele identity and additional member contexts
+  description: Obtain missing supplements and verify exact devR/devI alleles and assay
+    constructs. Test DevR/DevTRS binding, transcription versus turnover and DevI protein
+    with matched abundance, folding and rescue controls. Extend Hu2022 Cas7a and later
+    structural primary contexts only after exact member mapping and primary assay
+    inspection. Preserve suppression versus complementation and 2017 strain-background
+    corrections. Add only supported context-specific edges with actual history, guarded
+    regeneration and a successor partial review; do not imply a complete family mechanism.
+  target_ids:
+  - PF01905
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - independent-binding-context
+  - devr-developmental-assays
+  - devt-reassessment-and-regulatory-model
+  - source-search-and-limits
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01905.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Obtain missing supplements and verify exact devR/devI alleles and assay
+    constructs. Test DevR/DevTRS binding, transcription versus turnover and DevI protein
+    with matched abundance, folding and rescue controls. Extend Hu2022 Cas7a and later
+    structural primary contexts only after exact member mapping and primary assay
+    inspection. Preserve suppression versus complementation and 2017 strain-background
+    corrections. Add only supported context-specific edges with actual history, guarded
+    regeneration and a successor partial review; do not imply a complete family mechanism.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01905
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Visually inspected Lintner2011 Figures 3/4, Reeks2013 Figure 2, Rajagopalan2015
+  Figures 2/3/4 and Rajagopalan2017 Figures 2/8. All thirteen Lintner supplement pages
+  were text-extracted, but only pages 2/9/11 were visually inspected. No raw-gel/CFU
+  reproduction, complete later-source coverage, exact historical clone sequencing
+  or full publication-QC pass.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

@@ -1,0 +1,21 @@
+Gilbert S, Hood L, Seah SYK. J Bacteriol (2018), 200:e00512-17.
+Online 2017; PMID:29109182; doi:10.1128/JB.00512-17
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC5738731/
+Inspected 2026-10-11: Results, methods, Figure 5 image, Figure 3 caption.
+
+Minimal quotation:
+"The purified Ltp2-DUF35 complex also possessed aldolase activity"
+
+Curator interpretation:
+The copurified M. tuberculosis H37Rv Ltp2-ChsH2 C-terminal DUF35 complex
+turns over 17-HOPC-CoA in a TTHB247/NADH-coupled assay. Figure 5 and methods
+use 100 mM sodium HEPES pH 7.5, 16 uM TTHB247, 200 uM NADH,
+2.5-30 uM substrate, 25 C, 1 mL, at least triplicate measurements.
+The substrate preparation also contains 3-OPDC-CoA; no detectable spontaneous
+hydration occurs during the 5-15 minute kinetic assays. DUF35 alone is inactive;
+Ltp2 alone has low activity and possible folding/stability limitations.
+Product LC-MS belongs to a separate larger-complex assay, not this kinetic
+experiment. No isolated-OB-fold catalysis or host virulence effect is inferred.
+Exact C-terminal construct boundaries were not recovered from the supplement:
+its PMC download returned HTML rather than a PDF. Do not substitute Pfam
+coordinates for experimentally verified truncation boundaries.

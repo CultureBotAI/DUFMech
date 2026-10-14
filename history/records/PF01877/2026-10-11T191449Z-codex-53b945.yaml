@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01877
+  path: curation/families/PF01877.yaml
+session:
+  id: 2026-10-11T191449Z-codex-53b945
+  timestamp: '2026-10-11T19:14:49Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate PAB1135 protein-dose and RNA-probe causal assay effects
+  details: Two graphs retain three directly observed preparation-level binding effects
+    from the primary PAB1135 study. Exact reference mapping is retained separately
+    from unresolved tryptic termini. Bound/free readouts are not fractional occupancy
+    or KD; sequence and structure changes remain confounded. Physiological targets,
+    dimer necessity, family transfer and missing full-text coverage remain open. Status
+    remains IN_PROGRESS.

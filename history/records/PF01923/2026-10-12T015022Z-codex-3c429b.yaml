@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01923
+  path: curation/families/PF01923.yaml
+session:
+  id: 2026-10-12T015022Z-codex-3c429b
+  timestamp: '2026-10-12T01:50:22Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped PduO, EutT and MMAB causal assay graphs for PF01923
+  details: Inspected eight primary full-text studies and original figures, plus Listeria
+    and human publisher supplements; verified current member/domain mappings and minimal
+    source quotations. Added27 graphs with77 OBSERVED assay effects, preserving joint
+    inputs, whole-protein versus domain boundaries, biochemical versus growth contexts,
+    source discrepancies and open branches. Baseline8296 records valid with0 drift.
+    Status IN_PROGRESS; no family completion, independent expert review or publication
+    is claimed. Native regeneration and retained scientific review follow.

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01026
+  path: curation/families/PF01026.yaml
+session:
+  id: 2026-10-11T082731Z-codex-4b2dfa
+  timestamp: '2026-10-11T08:27:31Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate four scoped TatD graphs with seven observed biochemical or growth
+    effects
+  details: Inspected Chen 2014 main methods and Figures 2, 3 and 5, Dorival 2023 published
+    methods/Results/Discussion and author-manuscript Figure 6/Table S1, and exact
+    P27859/PF01026 mapping. Retained Mg/ssDNA digestion, four residue-substitution
+    effects, internal-THF duplex incision and a separate chronic-peroxide deletion
+    phenotype. Missing panel metadata, construct details, source unit/site-number
+    discrepancies, controls and broader coverage remain explicit. Pre-edit full-corpus
+    records check passed 8296 records with zero drift; projection and scientific self-review
+    follow. No status promotion or publication.

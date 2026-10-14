@@ -1,0 +1,41 @@
+PF01941 partial causal review coverage, 2026-10-12 UTC
+
+Searched PF01941, DUF93, AdoMet_Synthase, MJ1208/MjMAT, TkMAT and mapped
+UniProt accessions. Local pre-edit rg --no-ignore --hidden search included
+curation, evidence, history and reviews/structured, excluding JSON; no matching
+retained text in those paths. This was not an exhaustive whole-filesystem search.
+Current InterPro family/member mappings and the 57 reviewed UniProt hits were
+inspected; these do not cover the complete frozen family or bacterial members.
+
+Retained primary contexts: TkMAT SAM HPLC (PMID:24134203), MjMAT SAM assays,
+urea perturbation and selected double mutants (PMID:19348969), engineered
+L147A/I351A surrogate-product and cap-analog cascades (PMID:34606675).
+Paper/supplement scope and visual checks are recorded in the paired ledgers.
+Joint substrates, helper enzymes, temperatures, endpoint versus initial-rate
+assays, assay-specific quaternary-structure conflicts and construct limits remain
+explicit. No independent expert endorsement, universal MAT pathway, isolated
+PF01941 sufficiency, cellular phenotype or complete family review is claimed.
+
+Open primary branches and access limits:
+- PMID:10660563 / doi:10.1074/jbc.275.6.4055 identifies MJ1208 by native
+  purification/peptide mapping; abstract read, full Methods not retained.
+- PMID:11872742 / doi:10.1074/jbc.M110456200 describes MjMAT kinetics,
+  nucleotide tolerance and phosphate products. Abstract only; JBC PDF 403 and
+  DOI HTML unavailable. Do not turn abstract release-order inference into
+  observed sequential molecular events.
+- PMID:24649856 / doi:10.1111/febs.12784: S. solfataricus MAT analog chemistry
+  and ligand structures. Abstract/intro leads only; EuropePMC XML500 and PMC
+  download challenge. Reinspect Methods/figures before member-specific edges.
+- PMID:25932775 / doi:10.1080/21655979.2015.1045170: P. furiosus MAT
+  biotechnological synthesis lead, not yet full-text reviewed.
+- PMID:34655277 / doi:10.1002/2211-5463.13312: comparative structures and
+  reconstructed ancestral enzymes. Relevant sequence-collection paragraph read;
+  Q58868/Q58605 organism/protein misassignments independently verified in
+  identity.txt. Recheck sequences and ancestor constructs before transfer.
+- Remaining MjMAT mutants/denaturation intermediates, TkMAT thermal behavior,
+  PC-MjMAT DNA restriction/photolysis, structural hypotheses, prior construct
+  methods, later analog-engineering studies and bacterial members remain open.
+
+Access/query failures are not negative biological findings. Snapshot metadata,
+source pins and automated scores are unchanged. All 8296 records and earlier
+follow-ups remain in scope; this family stays IN_PROGRESS.

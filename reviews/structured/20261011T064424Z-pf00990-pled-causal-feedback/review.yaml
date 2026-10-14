@@ -1,0 +1,370 @@
+schema_version: 1.0.0
+review_id: 20261011T064424Z-pf00990-pled-causal-feedback
+title: Scoped scientific assessment of PleD causal feedback
+started_at: '2026-10-11T06:42:47Z'
+finished_at: '2026-10-11T06:44:24Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Retain three direct experimental edges for purified PleD synthesis, negative
+  product feedback and joint DivJ-plus-ATP stimulation. The cycle has explicit biochemical
+  scope; source-strain ambiguity, later interpretation changes and incomplete family
+  coverage remain open.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF00990.yaml
+    sha256: 0232e20875da91f8afbc83330aab5084383dbc0ca2b30c65073e4403e6c073d1
+    role: context
+  - path: data/families/PF00990.yaml
+    sha256: 80c8ed0f573ba139aa6a99ef8d4fb5d8e2299afbe948e1dfca1b6787b68f4b8e
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF00990/paul-2004-pled.txt
+    role: context
+    sha256: dc615254f97a7f3ab148bdf391bd613eccf1b6aba34b28ca0e73944b02f198bb
+  - path: evidence/PF00990/PleD-identity.txt
+    role: context
+    sha256: f12f692547af59e8e3fcb27049bf14650693ffe6f30111280845cd24cc03889d
+  - path: evidence/PF00990/chan-2004-pled-limits.txt
+    role: context
+    sha256: fdc59cf8ae687f0c6eaf8c327e5c41c9d25b60573a300b2ce6f98d8708ca707f
+targets:
+- target_id: PF00990
+  path: data/families/PF00990.yaml
+  label: PF00990
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF00990.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 4754fc24037e924fde7ae61015f4e9f49119958bea445c8a4de31be8a2a772b4
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: PF00990 GGDEF; full-length C-terminal His6 PleD, pCC2, in the Paul 2004
+    biochemical assays, with Chan 2004 interpretation limits.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF00990
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Only one protein and selected biochemical contexts are covered. Exact
+      pCC2 template, DivJ fragment boundaries, TLC temperature, later activation studies,
+      cellular consequences and other active or degenerate GGDEF proteins need further
+      work. The PNAS supplementary inhibition plot and raw fits were not inspected.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF00990
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC387245/
+  locator: Purification and assay methods, Table 2, Results and visually inspected
+    Figures 5-7
+  accessed_at: '2026-10-11T06:44:24Z'
+  support: supports
+  snapshot_sha256: dc615254f97a7f3ab148bdf391bd613eccf1b6aba34b28ca0e73944b02f198bb
+  summary: Purified PleD produces the identified c-di-GMP product; adding c-di-GMP
+    reduces initial product formation; joint soluble DivJ plus ATP stimulates WT but
+    not D53N. Single-input controls do not establish independently sufficient causes.
+    TLC and HPLC conditions remain distinct.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9A5I5/entry/pfam/PF00990/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T06:44:24Z'
+  support: supports
+  snapshot_sha256: f12f692547af59e8e3fcb27049bf14650693ffe6f30111280845cd24cc03889d
+  summary: Native Q9A5I5/CB15 and B8GZM2/NA1000 sequences are identical at 454 residues,
+    version 1. PF00990 is 289-447 in the verified reference. Deposited 1W25 equals
+    residues 2-454 plus His6, with CB15 source metadata but a B8GZM2 SIFTS mapping.
+    This does not identify the exact pCC2 cloning template or create independent strain
+    evidence. The graph uses species-level taxonomy and retains full-length construct
+    scope.
+- evidence_id: later-interpretation
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC535365/
+  locator: Main enzymatic methods, allosteric-site Results and mechanistic-model Discussion
+  summary: Later noncompetitive product inhibition replaces the initial competitive-site
+    suggestion. Domain immobilization is a model; the supplementary fit and a cellular
+    feedback trajectory are not independently verified here.
+  accessed_at: '2026-10-11T06:44:24Z'
+  support: supports
+  snapshot_sha256: fdc59cf8ae687f0c6eaf8c327e5c41c9d25b60573a300b2ce6f98d8708ca707f
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T06:44:24Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf00990
+  kind: record_content
+  reference: data/families/PF00990.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T06:44:24Z'
+  support: context_only
+  snapshot_sha256: 80c8ed0f573ba139aa6a99ef8d4fb5d8e2299afbe948e1dfca1b6787b68f4b8e
+  quote: "id: Pfam:PF00990\npfam_id: PF00990\nname: Diguanylate cyclase, GGDEF domain\n\
+    short_name: GGDEF\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status:\
+    \ IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00990\n\
+    counters:\n  proteins: 238353\n  matches: 240443\n  proteomes: 13288\n  taxa:\
+    \ 19352\n  structures: 70\n  alphafold_models: 144091\n  domain_architectures:\
+    \ 6727\nprovenance:\n  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR000160\ndescription: This domain is found linked to a\
+    \ wide range of non-homologous domains in a variety of bacteria.\n  It has been\
+    \ shown to be homologous to the adenylyl cyclase catalytic domain [[cite:PUB00007061]]\
+    \ and\n  has diguanylate cyclase activity [[cite:PUB00016966]]. This observation\
+    \ correlates with the functional\n  information available on two GGDEF-containing\
+    \ proteins, namely diguanylate cyclase and phosphodiesterase\n  A of Acetobacter\
+    \ xylinum, both of which regulate the turnover of cyclic diguanosine monophosphate.\
+    \ In\n  the WspR protein of Pseudomonas aeruginosa, the GGDEF domain acts as a\
+    \ diguanylate cyclase, PDB:3bre,\n  when the whole molecule appears to form a\
+    \ tetramer consisting of two symmetrically-related dimers representing\n  a biological\
+    \ unit. The active site is the GGD/EF motif, buried in the structure, and the\
+    \ cyclic dimeric\n  guanosine monophosphate (c-di-GMP) bind to the inhibitory-motif\
+    \ RxxD on the surface. The enzyme thus\n  catalyses the cyclisation of two guanosine\
+    \ triphosphate (GTP) molecules to one c-di-GMP molecule [[cite:PUB00016971],[cite:PUB00109145],[cite:PUB00050740]].\n\
+    curation_history: history/records/PF00990\ndiscussions:\n- discussion_id: pled-member-and-regulatory-coverage\n\
+    \  prompt: Resolve the exact cloning templates and fragment boundaries, then assess\
+    \ additional GGDEF members\n    and regulatory contexts.\n  kind: CURATION_TODO\n\
+    \  status: OPEN\n  rationale: A scoped PleD product-feedback graph is not a complete\
+    \ family mechanism. Protein activation,\n    structural rearrangements, cell-cycle\
+    \ outputs and degenerate GGDEF members require their own primary\n    evidence.\n\
+    \  evidence:\n  - reference: PMID:15075296\n    supports: PARTIAL\n    evidence_source:\
+    \ full_text\n    explanation: Figures 5-7 and methods support the retained net\
+    \ reaction, inhibition and joint-treatment\n      stimulation. Cellular and isolated-domain\
+    \ claims are not transferred from these assays.\n  - reference: PMID:15569936\n\
+    \    supports: PARTIAL\n    evidence_source: full_text\n    explanation: The later\
+    \ main text reports noncompetitive inhibition and proposes domain immobilization.\n\
+    \      Supporting Figure 6 remains inaccessible in this session; no new fit or\
+    \ structural microstep is\n      adopted.\n  posed_by: Codex\n  posed_date: '2026-10-11'\n\
+    \  notes: The source-interpretation change and access limits are retained in evidence/PF00990/chan-2004-pled-limits.txt.\n\
+    \    The 2007 activation studies are uncurated leads. No relation to RocR is inferred\
+    \ simply because both\n    records involve c-di-GMP.\ncausal_graphs:\n- graph_id:\
+    \ pled-purified-cyclase-feedback\n  title: Purified PleD synthesis, product inhibition\
+    \ and joint DivJ-ATP stimulation\n  scope: Full-length C. crescentus PleD with\
+    \ a C-terminal His6 tag from pCC2; purified-protein assays,\n    not isolated\
+    \ GGDEF sufficiency or a measured cellular feedback loop.\n  context: The 2004\
+    \ Genes & Development TLC assays use 50 uL, 75 mM Tris pH 7.8, 250 mM NaCl, 25\
+    \ mM KCl,\n    10 mM MgCl2 and 100 uM GTP. Figure 5B uses 50 ug PleD; Figures\
+    \ 6A and 7A use 25 ug. The TLC assay\n    temperature is not specified in the\
+    \ inspected methods; the separate HPLC protocol is 90 min at 25\n    C. GTP and\
+    \ magnesium are joint reaction inputs.\n  family_mapping: PleD references Q9A5I5\
+    \ (CB15, CC_2462) and B8GZM2 (NA1000/CB15N, CCNA_02546) have identical\n    454-aa\
+    \ sequences, both version 1. Q9A5I5 maps to PF00990 at 289-447. Deposited 1W25\
+    \ matches native\n    residues 2-454 plus His6, with CB15 source taxonomy but\
+    \ a SIFTS B8GZM2 mapping. The exact pCC2 cloning\n    template remains unverified;\
+    \ species-level taxonomy avoids conflating the two reference strains.\n  scope_status:\
+    \ MECHANISTIC\n  taxon: NCBITaxon:155892\n  limitations: Separate compatible biochemical\
+    \ assays support the graph, not a single measured feedback\n    trajectory. Product\
+    \ inhibition is qualitative here; the later PNAS noncompetitive interpretation\
+    \ supersedes\n    the earlier competitive-binding suggestion, but its supplementary\
+    \ fit was not inspected. DivJ-plus-ATP\n    stimulation does not itself resolve\
+    \ phosphorylation, dimerization and domain-motion microsteps. The\n    exact DivJ\
+    \ fragment boundaries and pCC2 template sequence remain unverified. No family-wide\
+    \ catalytic\n    competence or cell-cycle phenotype is inferred.\n  feedback_explanation:\
+    \ PleD makes c-di-GMP, and added c-di-GMP decreases PleD's initial product-formation\n\
+    \    rate in a separate assay. These experimentally supported directions define\
+    \ negative product feedback\n    under the stated in-vitro conditions; they do\
+    \ not establish a cellular steady state or measured oscillation.\n  nodes:\n \
+    \ - node_id: pled-dgc-activity\n    label: Purified full-length PleD cyclase activity\
+    \ with GTP and Mg2+\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q9A5I5\n\
+    \    - UniProtKB:B8GZM2\n  - node_id: cyclic-digmp\n    label: c-di-GMP in the\
+    \ purified reaction\n    node_type: STATE\n  - node_id: divj-atp-addition\n  \
+    \  label: Joint addition of soluble DivJ fragment and ATP\n    node_type: PERTURBATION\n\
+    \  edges:\n  - edge_id: pled-produces-cyclic-digmp\n    subject: pled-dgc-activity\n\
+    \    predicate: produces\n    object: cyclic-digmp\n    mechanism: Purified PleD\
+    \ converts GTP into a product identified as c-di-GMP by TLC, HPLC and the product\n\
+    \      mass spectrum. The graph records net catalysis, not an atomistic condensation\
+    \ trajectory.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:15075296\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC387245/\n      snippet: Cyclic-di-GMP\
+    \ is produced by purified PleD protein.\n      explanation: Visually inspected\
+    \ Figure 5B-C includes the no-protein control and product spectrum;\n        the\
+    \ purified-protein result is distinct from Figure 5A cell extracts. Table 2 identifies\
+    \ pCC2.\n      cache_path: evidence/PF00990/paul-2004-pled.txt\n      cache_sha256:\
+    \ dc615254f97a7f3ab148bdf391bd613eccf1b6aba34b28ca0e73944b02f198bb\n    - reference:\
+    \ https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9A5I5/entry/pfam/PF00990/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9A5I5/entry/pfam/PF00990/\n\
+    \      snippet: 'Q9A5I5 Pfam interval: PF00990 at 289-447, inclusive.'\n     \
+    \ explanation: Exact reference-sequence comparison supports the family mapping;\
+    \ source-strain ambiguity\n        is retained rather than counted as two experiments.\n\
+    \      cache_path: evidence/PF00990/PleD-identity.txt\n      cache_sha256: f12f692547af59e8e3fcb27049bf14650693ffe6f30111280845cd24cc03889d\n\
+    \  - edge_id: cyclic-digmp-decreases-pled-activity\n    subject: cyclic-digmp\n\
+    \    predicate: decreases\n    object: pled-dgc-activity\n    mechanism: Adding\
+    \ chemically synthesized c-di-GMP at 10 or 100 uM reduces the initial labeled-product\n\
+    \      formation rate with 100 uM GTP. This establishes product inhibition without\
+    \ assigning a competitive\n      active-site mechanism.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:15075296\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC387245/\n\
+    \      snippet: strong inhibition was observed\n      explanation: Visually inspected\
+    \ Figure 6A compares added c-di-GMP with the no-added-nucleotide condition.\n\
+    \        Unlabeled GTP bars also involve tracer dilution and are not used to infer\
+    \ this edge. The later\n        allosteric interpretation is retained separately.\n\
+    \      cache_path: evidence/PF00990/paul-2004-pled.txt\n      cache_sha256: dc615254f97a7f3ab148bdf391bd613eccf1b6aba34b28ca0e73944b02f198bb\n\
+    \  - edge_id: divj-plus-atp-increases-pled-activity\n    subject: divj-atp-addition\n\
+    \    predicate: increases\n    object: pled-dgc-activity\n    mechanism: Joint\
+    \ addition of 12.5 ug soluble DivJ and 200 uM ATP increases the WT PleD initial\
+    \ rate.\n      Single-addition controls and D53N PleD do not show this stimulation;\
+    \ the inputs are not represented\n      as independently sufficient causes.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:15075296\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC387245/\n\
+    \      snippet: was significantly stimulated\n      explanation: Visually inspected\
+    \ Figure 7A and its caption support the combined-treatment effect\n        and\
+    \ D53N control. This is the measured activity response, not direct visualization\
+    \ of the proposed\n        domain rearrangement or a cellular phosphorelay.\n\
+    \      cache_path: evidence/PF00990/paul-2004-pled.txt\n      cache_sha256: dc615254f97a7f3ab148bdf391bd613eccf1b6aba34b28ca0e73944b02f198bb\n\
+    curation_events:\n- timestamp: '2026-10-11T06:38:57Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate PleD synthesis and negative product-feedback\
+    \ graph\n  history_record: history/records/PF00990/2026-10-11T063857Z-codex-c58db1.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Native Q9A5I5/CB15 and B8GZM2/NA1000 sequences are identical at 454 residues,
+    version 1. PF00990 is 289-447 in the verified reference. Deposited 1W25 equals
+    residues 2-454 plus His6, with CB15 source metadata but a B8GZM2 SIFTS mapping.
+    This does not identify the exact pCC2 cloning template or create independent strain
+    evidence. The graph uses species-level taxonomy and retains full-length construct
+    scope.
+  target_ids:
+  - PF00990
+  evidence_ids:
+  - identity
+  - primary
+  - later-interpretation
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Three DIRECT OBSERVED EXPERIMENTAL edges have supported polarity. The synthesis/inhibition
+    cycle is intentional negative product feedback from separate compatible assays,
+    not an observed cellular trajectory. DivJ and ATP are one joint perturbation,
+    with D53N and single-addition controls retained. The later noncompetitive interpretation
+    is recorded without promoting a structural domain-motion model to an observed
+    microstep. Native cycle validation also rejects a copy with its feedback explanation
+    removed.
+  target_ids:
+  - PF00990
+  evidence_ids:
+  - primary
+  - native
+  - later-interpretation
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Only one protein and selected biochemical contexts are covered. Exact pCC2
+    template, DivJ fragment boundaries, TLC temperature, later activation studies,
+    cellular consequences and other active or degenerate GGDEF proteins need further
+    work. The PNAS supplementary inhibition plot and raw fits were not inspected.
+  target_ids:
+  - PF00990
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf00990-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Extend GGDEF context coverage and resolve construct provenance
+  description: Resolve pCC2 cloning-template and DivJ fragment details, retrieve the
+    later inhibition plot and assess other member-specific activation or phenotype
+    experiments. Preserve the corrected competitive-versus-noncompetitive interpretation
+    and do not turn structural models into observed edges. Curate supported additions
+    with actual history and a successor review; leave incomplete coverage IN_PROGRESS.
+  target_ids:
+  - PF00990
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - later-interpretation
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF00990.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Resolve pCC2 cloning-template and DivJ fragment details, retrieve the
+    later inhibition plot and assess other member-specific activation or phenotype
+    experiments. Preserve the corrected competitive-versus-noncompetitive interpretation
+    and do not turn structural models into observed edges. Curate supported additions
+    with actual history and a successor review; leave incomplete coverage IN_PROGRESS.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF00990
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Original Genes & Development Figures 5-7 were visually inspected. The later PNAS
+  main text was read but its supporting Figure 6 was inaccessible; PMC returned HTML
+  instead of the PDF, Europe PMC XML returned HTTP 500, and the thesis URL returned
+  an HTML item page. No raw chromatograms or kinetic fits were reanalyzed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.

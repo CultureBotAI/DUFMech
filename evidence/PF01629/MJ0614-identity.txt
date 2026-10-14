@@ -1,0 +1,15 @@
+PF01629 / DUF22 member identity, inspected 2026-10-11
+https://rest.uniprot.org/uniprotkb/Q58031.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q58031/entry/pfam/PF01629/
+Q58031 = MJ0614, Methanocaldococcus jannaschii JAL-1 reference,
+NCBITaxon:243232 (historically Methanococcus jannaschii).
+130 residues; sequence version 1; entry version 77.
+UniProt and InterPro sequences agree exactly.
+Sequence MD5: 1436e22f5cbfe540e703057cea79ab01
+Q58031 Pfam:PF01629 interval: 7-110, inclusive
+The inspected UniProt entry's reference is genome sequencing PMID:8688087,
+not a member-specific causal function experiment.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01629/
+Current Pfam entry integrates to IPR002572 and belongs to CL0153 (dUTPase).
+This is a classification relationship, not demonstrated dUTP hydrolysis.
+No causal graph is justified by sequence identity, neighborhood or clan alone.

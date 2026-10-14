@@ -1,0 +1,49 @@
+Huang et al. 2019; PMID31214148; DOI10.3389/fmicb.2019.01214.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC6555300/
+https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2019.01214/full
+Accessed 2026-10-11. Main Methods,Results,Discussion and original Figures1,2,3,5
+inspected. Minimal quotations: "In vitro Kinase Assay";
+"HJ DNA Cleavage Assay of Hjc"; "DNA Damaging Agent Sensitivity Assay".
+Remaining text is a curator's paraphrase.
+
+Figure2: tag-free SiRe_1431 Hjc or variant5 uM with the indicated kinase,
+65 C30 min,25 mM Tris pH8,10 mM NaCl,5 mM MgCl2,2 mM DTT,50 uM ATP plus
+8.3 nM gamma-32P ATP. Methods allow1 or2 uM kinase as specified, Figure1 uses
+2 uM; Figure2 does not independently label its kinase concentration. Avoid
+inventing a uniquely resolved Figure2 dose. SDS-PAGE/radiolabel comparisons:
+S34A reduces Hjc labeling by SiRe_0171; S9A reduces it with SiRe_2030;
+T138A reduces it separately with SiRe_2030 and SiRe_2056KD. KD is a kinase
+domain construct, not full-length SiRe_2056. Residual labeling remains.
+These mutation-dependent readouts are not mass-spectrometric site localization,
+in vivo occupancy measurements or proof of site-exclusive kinase specificity.
+S136A is weaker than T138A; other mutants retain substantial label. Figure1
+shows three active kinase preparations, but kinase-alone/kinase-dead details
+in supplementS1 were not visually verified; no extra addition-sufficiency edges
+are inferred here from that uninspected control.
+
+Figure3: 10 nM Hjc or each indicated variant with1 nM radiolabeled junction,
+25 mM Tris pH8,25 mM NaCl,5 mM MgCl2,1 mM DTT,0.01% BSA,65 C30 min.
+Denaturing PAGE compares WT,D42N,S9E,S9A,S34A,S34E,T138A,T138E, with no-protein
+and boiled-substrate controls. S9E reduces cleavage; S34E and D42N leave very
+little/undetectable product. WT is about70% cleaved and S9E about20% by displayed
+bars, not an exact kinetic fold-change. S34A remains appreciably active, while
+T138A/E are WT-like. S9E/S34E are phosphomimetic substitutions, not purified
+proteins with chemically verified phosphoserine. Similar gel-filtration elution
+and no precipitation do not prove identical folding. Actual kinase-treated Hjc
+cleavage in supplementS5 was reported in main text but not independently
+inspected here, so no corresponding direct phosphorylation-to-inhibition edge.
+
+Figure5: chromosomal Hjc substitutions in E233S (REY15A delta-pyrEF delta-lacS)
+with Hje intact. Early-log OD6000.2-0.3 cultures, tenfold dilution series,
+10 ul spots,75 C7-10 days. S34E supports greater spot outgrowth at25 J/m2 UV
+and15 ug/ml cisplatin, not an apparent increase at15 J/m2 UV or10 ug/ml cisplatin.
+No analogous benefit under3/4 mM MMS or2/3 mM HU. This measures growth/tolerance
+after damage, not direct repair kinetics, viable-cell percentages or a general
+growth-rate increase. Methods say at least three trials; caption says2-3.
+
+S34E was not recovered twice in delta-hje background, but no universally lethal
+allele claim follows. SiRe_0171 deletion may affect other substrates; it is not
+Hjc-specific epistasis. Figure4 Mg-coordination effects are homology-model
+hypotheses. Figure7 pathway switching is a proposed model, not observed fork
+trajectories or demonstrated stimulation of repair. Main Discussion notes that
+these phosphorylation positions are not conserved across archaeal Hjc proteins.

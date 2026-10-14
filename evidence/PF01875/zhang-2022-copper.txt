@@ -1,0 +1,39 @@
+Zhang et al.2022, PMID36067318, DOI10.1073/pnas.2206905119.
+Inspected2026-10-11: main Results,original Figures1/2; supplementary Methods
+pp2-7 and original FigureS1 p8. Minimal quotations: "Ascorbate oxidation assay";
+"BCA competition assay"; "Wound healing assay"; "Amplex".
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9477392/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9477392/supplementaryFiles
+Archive member pnas.2206905119.sapp.pdf is a valid21-page PDF.
+
+BCA competition,Figure1C/D: adding Memo1 decreases Cu(I)-BCA2 A562.
+Anaerobic N2 glovebox stocks; CuCl stock0.5 mM with1 mM ascorbate;
+BCA:Cu=2.5. Main figure says10 uM Cu,whereas supplement p4 says20 uM
+Cu/50 uM BCA for Memo1. Do not silently resolve this concentration mismatch.
+Two independent equal-affinity sites fit better than one/three;4e-15 M is
+a model-dependent estimate,not proven equal microscopic affinities.
+Reverse competition and ICP-MS support binding,not a catalytic reaction.
+
+Figure2A:8 uM Memo1,35 uM ascorbate,4 or8 uM Cu(II),25 mM HEPES pH7.4,
+200 mM NaCl,room temperature,air; A265 every2 min through20 min. Memo1
+reduces ascorbate consumption relative to copper-containing no-protein samples.
+Figure2B:8 uM Memo1,50 uM ascorbate,50 uM Amplex Red,3.55 U/ml HRP,
+4 or8 uM Cu(II),100 ul; fluorescence trace through60 min. Signal is lower
+with Memo1,near the protein-only background,not literally zero fluorescence.
+Main legend gives571/585-nm wavelengths; supplement gives544/590 nm.
+The discrepancy remains open. No independent assay-interference control was
+verified; the orthogonal ascorbate assay supports a redox-protection effect.
+Higher Cu:protein ratios precipitate. Neither readout establishes universal
+antioxidant action or disproves all older experiments under different conditions.
+
+S1: MDA-MB-231 in DMEM10% heat-inactivated FBS,37 C5% CO2; pooled four
+Qiagen MEMO1 siRNAs versus AllStars control,RNAiMAX; Western/actin control.
+1e5 cells/24-well;siRNA24 h after seeding,scratch24 h later;ImageJ area.
+At24 h after scratching the knockdown has less wound closure. No independent
+proliferation block or rescue verified. Methods lists8/12/24 h,caption8/24 h,
+plot8/24/48 h;retain only the common24-h comparison,not an invented time course.
+
+SPR/SEC/BCA transfer experiments and cell proximity were read as context:
+Atox1-to-Memo1 exchange is supported,but reverse physiological flux is proposed,
+not directly shown by those experiments. SEC Memo1 dose is20 uM in Figure3
+and25 uM in Methods; do not convert proximity into directed intracellular flux.

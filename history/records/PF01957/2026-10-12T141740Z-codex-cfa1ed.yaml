@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01957
+  path: data/families/PF01957.yaml
+session:
+  id: 2026-10-12T141740Z-codex-cfa1ed
+  timestamp: '2026-10-12T14:17:40Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: no_change
+  summary: Retain partial PF01957 scientific review and causal boundaries
+  details: Completed same-agent partial scientific assessment of three phenotypic
+    graphs, four observed experimental edges and five hash-anchored evidence ledgers.
+    Current projection matches its overlay and validates. Retained review 20261012T141835Z-pf01957-ybbj-growth-and-yqez-operon-contexts
+    has native NEEDS_FOLLOWUP and common pass_with_limitations; the context-coverage
+    finding remains open. Original 2006 images, historical alleles, full 2024 structural
+    perturbation experiments and archaeal contexts remain unreviewed. Cross-family
+    NfeD2 and N-terminal protease transfers are excluded. Status remains IN_PROGRESS;
+    no independent endorsement, whole-family completion or publication is claimed.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T141835Z-pf01957-ybbj-growth-and-yqez-operon-contexts/review.yaml

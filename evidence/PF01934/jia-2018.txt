@@ -1,0 +1,26 @@
+Jia et al.2018, PMID:29555683, doi:10.1074/jbc.RA118.002421
+https://pmc.ncbi.nlm.nih.gov/articles/PMC5936836/
+Inspected 2026-10-12 UTC: Results, construct/RNA/CD/toxicity Methods,
+Figure1 visually; structural and helix-deletion Results/captions as text.
+Minimal source extract: "mRNA cleavage assay".
+
+Figure1A: purified SO_3166 produces shorter products from ompA RNA
+1-306nt; RNA-only and heat-inactivated controls retain intact substrate.
+Methods:8ul,0.5ug RNA,2ug protein,20mM Tris pH8,300mM NaCl,
+25mM EDTA,60mM KCl,30mM MgCl2,37C,20/40min. The co-purified
+SO_3165/3166 complex is less active, but this does not isolate noncovalent
+binding as sufficient inhibition: Yao2020 identifies covalent modification.
+The EDTA-containing assay also contains excess Mg; it is not a clean
+demonstration of metal independence. Its roughly16.6uM protein condition
+must not be quantitatively pooled with the2020 0-160nM assay.
+
+Figure1B gives an assay-specific total-tRNA negative. Figure1C compares
+rRNA isolated from MR-1 after expression, not purified rRNA in the same
+in-vitro assay. Neither establishes family-wide RNA substrate exclusion.
+The complex structure, SEC and SAXS support6 HepT:2 MntA, contrary to
+the frozen description's reversed order. Proposed RNA-path occlusion is
+structural interpretation, not observed substrate occupancy.
+
+Helix-deletion growth phenotypes and reported similar CD spectra need a
+separate construct/figure review before curation; the2018 binding-only
+interpretation must be reconciled with the2020 AMPylation experiments.

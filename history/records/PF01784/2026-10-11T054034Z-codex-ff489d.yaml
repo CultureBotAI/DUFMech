@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01784
+  path: curation/families/PF01784.yaml
+session:
+  id: 2026-10-11T054034Z-codex-ff489d
+  timestamp: '2026-10-11T05:40:34Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate the conditional YbgI folE liquid-growth phenotype
+  details: Added one phenotypic edge restricted to the MG1655-derived double-mutant
+    versus folE-only OD600 comparison in deoxythymidine-supplemented LB, with P0AFP6
+    domain mapping. Figure 8 was visually inspected. A native discussion retains conflicting
+    growth prose, plate-time disagreement, missing supplement access, lack of an established
+    liquid-endpoint rescue, and unreviewed member-specific molecular leads. No general
+    metal-insertase or cyclohydrolase function is asserted.
+  sections:
+  - causal_graphs
+  - discussions

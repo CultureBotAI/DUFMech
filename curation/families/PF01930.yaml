@@ -1,0 +1,535 @@
+pfam_id: PF01930
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01930
+discussions:
+- discussion_id: pf01930-source-and-construct-conflicts
+  prompt: Resolve assay-metal, vector and cellular-PAM-switch discrepancies against primary material.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Conditional experimental effects are supported, but conflicting source statements cannot be silently normalized.
+  evidence:
+  - reference: PMID:25200083
+    supports: PARTIAL
+    evidence_source: primary_methods_results_and_figures
+    explanation: Pcal endonuclease Methods lists Mg while Results describes Mn; the exact panel assignment needs clarification.
+  - reference: PMID:34588691
+    supports: PARTIAL
+    evidence_source: primary_results_extended_data_and_construct_table
+    explanation: ED4g caption contradicts Results on Pfu-PAM integration; Table1 and Methods also differ on pET28 vector naming.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Preserve ED4g contradiction, pET28a/b discrepancy, unresolved tag scars and inaccessible Pcal supplement. No successful cellular PAM-switch edge or exclusive metal requirement is adopted.
+- discussion_id: pf01930-member-and-native-function-coverage
+  prompt: Extend accession-mapped primary review to remaining Cas4 and DNA2 members and native biological contexts.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Two characterized members do not establish the mechanism of all4690 frozen proteins or isolated PF01930 sufficiency.
+  evidence:
+  - reference: PMID:25200083
+    supports: PARTIAL
+    evidence_source: primary_discussion
+    explanation: Native Pcal partners and CRISPR versus non-CRISPR role are unresolved.
+  - reference: PMID:34588691
+    supports: PARTIAL
+    evidence_source: primary_reconstitution_and_surrogate_cell_assays
+    explanation: Gsu fusion/Cas2 and E.coli ExoI reconstitution does not identify the native Gsu trimming nuclease.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: See evidence/PF01930/coverage.txt for B.halodurans mapping, Thermoproteus paralogs, Pyrococcus, Synechocystis, MbCas4/1, DNA2 and later studies. SSO0001 now maps PF12705; SSO1391 is a distinct comparator, not Pcal evidence.
+causal_graphs:
+- graph_id: pcal-linear-cleavage-2014
+  title: Pcal_0546 cleaves linear single-stranded DNA
+  scope: Lemak2014 full-length 6His-tagged Pcal_0546; Figure2A end-labeled substrates.
+  context: 0.1uM DNA,0.12-2.5uM protein,15min45C,50mM Tris pH8,5mM MgCl2,1mM DTT; protein-free laneC.
+  family_mapping: A3MTK6 sequencev1,213aa,taxon410359; current PF01930 matches57-210. Full protein was tested, not isolated matched domain.
+  taxon: NCBITaxon:410359
+  scope_status: MECHANISTIC
+  limitations: End-label product patterns support5'-to-3' exonucleolysis; no separate translocation step, native substrate or family-wide directionality is measured.
+  nodes:
+  - node_id: reaction
+    label: Pcal_0546 plus linear ssDNA and Mg
+    node_type: STATE
+    grounding: [UniProtKB:A3MTK6]
+  - node_id: fragments
+    label: Shorter end-labeled DNA products
+    node_type: STATE
+  edges:
+  - edge_id: cleavage
+    subject: reaction
+    predicate: produces
+    object: fragments
+    mechanism: Purified Pcal converts the linear substrate into shorter products above protein-free control; opposite end labels yield different ladders.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25200083
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4176176/
+      snippet: ssDNA
+      explanation: Figure2A and assay Methods; observed cleavage, with directional interpretation retained as a limit.
+      cache_path: evidence/PF01930/lemak-2014.txt
+      cache_sha256: cb226d277a37848ec689f9a50da9de3a7f96b0601039a0e640475947a7cde1bd
+- graph_id: pcal-circular-cleavage-2014
+  title: Pcal_0546 processes circular single-stranded DNA
+  scope: Lemak2014 full-length Pcal_0546 and M13mp18 ssDNA, Figure2C.
+  context: 5nM circular substrate,0.9-4.6uM protein,45C; agarose/SYBR products and no-protein control. Methods Mg and Results Mn assignments differ.
+  family_mapping: A3MTK6 sequencev1,213aa; PF01930 matches57-210. Purified full-protein assay.
+  taxon: NCBITaxon:410359
+  scope_status: MECHANISTIC
+  limitations: Circular-substrate processing supports endonucleolysis, not sequence specificity, physiological targeting or an exclusive metal requirement.
+  nodes:
+  - node_id: reaction
+    label: Pcal_0546 with circular M13 ssDNA and divalent metal
+    node_type: STATE
+    grounding: [UniProtKB:A3MTK6]
+  - node_id: fragments
+    label: Shorter circular-substrate processing products
+    node_type: STATE
+  edges:
+  - edge_id: processing
+    subject: reaction
+    predicate: produces
+    object: fragments
+    mechanism: The circular substrate is fragmented upon adding Pcal under the reported assay conditions.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25200083
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4176176/
+      snippet: ssDNA
+      explanation: Figure2C dose series and control; metal-label ambiguity remains explicit.
+      cache_path: evidence/PF01930/lemak-2014.txt
+      cache_sha256: cb226d277a37848ec689f9a50da9de3a7f96b0601039a0e640475947a7cde1bd
+- graph_id: pcal-splayed-processing-2014
+  title: Pcal_0546 processes splayed-arm substrates
+  scope: Lemak2014 Figure3A, full-length Pcal with the two illustrated3'-labeled splayed-arm substrates.
+  context: 21bp duplex and21/22nt overhang models;0.25-9.8uM protein,45min45C, default Tris/Mg buffer; protein-free laneC.
+  family_mapping: A3MTK6 sequencev1,213aa; PF01930 matches57-210. Whole-protein processing cannot prove isolated-domain unwinding.
+  taxon: NCBITaxon:410359
+  scope_status: MECHANISTIC
+  limitations: Net cleavage extends into the duplex region; no independent helicase/translocation measurement. ATP comparisons in inaccessible S3 are not newly curated edges.
+  nodes:
+  - node_id: reaction
+    label: Pcal_0546 with splayed-arm DNA
+    node_type: STATE
+    grounding: [UniProtKB:A3MTK6]
+  - node_id: products
+    label: Short splayed-arm processing products
+    node_type: STATE
+  edges:
+  - edge_id: processing
+    subject: reaction
+    predicate: produces
+    object: products
+    mechanism: Adding purified protein yields shorter labeled products, consistent with coupled strand exposure and cleavage but not resolving their elementary order.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25200083
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4176176/
+      snippet: ssDNA
+      explanation: Figure3A substrate diagrams, dose lanes and no-protein control, read with Results.
+      cache_path: evidence/PF01930/lemak-2014.txt
+      cache_sha256: cb226d277a37848ec689f9a50da9de3a7f96b0601039a0e640475947a7cde1bd
+- graph_id: pcal-product-chemistry-2014
+  title: Pcal_0546 produces phosphate-bearing dC10 cleavage products
+  scope: Lemak2014 Figure2E LC-MS assay, distinct from the low-concentration gel assay.
+  context: 55uM Pcal and10ug poly-dC10 under reported optimal conditions; dC anddCMP standards compared with reaction products.
+  family_mapping: Full A3MTK6 sequencev1,213aa; PF01930 matches57-210. No isolated-domain product assay.
+  taxon: NCBITaxon:410359
+  scope_status: MECHANISTIC
+  limitations: Authors assign3'-phosphate/5'-hydroxyl ends; do not call these3'-OH integration-ready prespacers or join this reaction directly to Gsu integration.
+  nodes:
+  - node_id: reaction
+    label: Pcal_0546 with poly-dC10
+    node_type: STATE
+    grounding: [UniProtKB:A3MTK6]
+  - node_id: products
+    label: LC-MS-detected phosphate-bearing cleavage products
+    node_type: STATE
+  edges:
+  - edge_id: products
+    subject: reaction
+    predicate: produces
+    object: products
+    mechanism: Product mass and retention profiles against standards support nucleotide-phosphate products from the purified-enzyme reaction.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25200083
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4176176/
+      snippet: LC-MS
+      explanation: Figure2E Pcal panel, Results product assignment and separate LC-MS Methods.
+      cache_path: evidence/PF01930/lemak-2014.txt
+      cache_sha256: cb226d277a37848ec689f9a50da9de3a7f96b0601039a0e640475947a7cde1bd
+- graph_id: pcal-motif-substitutions-2014
+  title: Individual Pcal substitutions reduce two nuclease readouts
+  scope: Separate D123A,E136A,Q149A,Y153A,Y166A full-length proteins versusWT, not a combined five-residue mutant.
+  context: Figure5A246nM protein15min; Figure5C2.2uM protein10min45C; no-protein andWT controls. These variants lie inside current Pfam57-210.
+  family_mapping: A3MTK6 sequencev1,213aa; D123,E136,Q149,Y153,Y166 are within PF01930. Substitution effects do not by themselves resolve catalytic chemistry versus folding.
+  taxon: NCBITaxon:410359
+  scope_status: PHENOTYPIC
+  limitations: Directness remains unresolved for mutation-to-activity effects. Higher-load splayed-arm assays retain some activity; K138A/H146A were insoluble, not purified inactive controls.
+  nodes:
+  - node_id: substitutions
+    label: Each tested motif or Y166 substitution versus WT
+    node_type: PERTURBATION
+    grounding: [UniProtKB:A3MTK6]
+  - node_id: exonuclease
+    label: Linear ssDNA cleavage
+    node_type: ACTIVITY
+  - node_id: endonuclease
+    label: Circular ssDNA processing
+    node_type: ACTIVITY
+  edges:
+  - edge_id: linear-reduction
+    subject: substitutions
+    predicate: decreases
+    object: exonuclease
+    mechanism: The individual purified variants retain more starting substrate thanWT at the matched low-load assay, without proving a unique elementary catalytic defect.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25200083
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4176176/
+      snippet: ssDNA
+      explanation: Figure5A individual mutant lanes and Results; residual high-load activity is not suppressed from the interpretation.
+      cache_path: evidence/PF01930/lemak-2014.txt
+      cache_sha256: cb226d277a37848ec689f9a50da9de3a7f96b0601039a0e640475947a7cde1bd
+  - edge_id: circular-reduction
+    subject: substitutions
+    predicate: decreases
+    object: endonuclease
+    mechanism: These separately substituted proteins process the circular substrate poorly relative toWT under the tested conditions.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25200083
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4176176/
+      snippet: ssDNA
+      explanation: Figure5C individual mutant lanes; no unmeasured folding equivalence is assumed.
+      cache_path: evidence/PF01930/lemak-2014.txt
+      cache_sha256: cb226d277a37848ec689f9a50da9de3a7f96b0601039a0e640475947a7cde1bd
+- graph_id: pcal-cysteine-contexts-2014
+  title: Pcal cysteine variants lose cluster signal but retain DNA cleavage
+  scope: Individual C64A,C200A,C203A,C209A full-length variants; separate spectroscopy and nuclease contexts.
+  context: Results reports color/320-550nm absorbance loss; Figure5A246nM15min linear substrate,5C1.1uM Cys variants10min45C circular substrate,5E1.9uM45min splayed arms.
+  family_mapping: A3MTK6 sequencev1,213aa; all four listed cysteines are within PF01930 match57-210. No isolated-domain or cellular-cluster experiment.
+  taxon: NCBITaxon:410359
+  scope_status: MECHANISTIC
+  limitations: Retained cleavage is not identical rate or general Fe-S dispensability. Circular Cys-mutant loading differs fromWT; no observed beta-sheet stabilization rescue is claimed.
+  nodes:
+  - node_id: variants
+    label: Each cluster-coordinating Cys-to-Ala variant versus WT
+    node_type: PERTURBATION
+    grounding: [UniProtKB:A3MTK6]
+  - node_id: signal
+    label: Visible cluster-associated absorbance
+    node_type: STATE
+  - node_id: reaction
+    label: Individual Cys variant with DNA and assay cofactors
+    node_type: STATE
+  - node_id: products
+    label: Retained DNA cleavage products
+    node_type: STATE
+  edges:
+  - edge_id: cluster-signal-loss
+    subject: variants
+    predicate: decreases
+    object: signal
+    mechanism: Purified individual variants lose the reported visible cluster-associated signal; exact folding and occupancy effects are not independently resolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25200083
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4176176/
+      snippet: colorless
+      explanation: Mutagenesis Results report color and absorbance loss, interpreted as absent assembled cluster.
+      cache_path: evidence/PF01930/lemak-2014.txt
+      cache_sha256: cb226d277a37848ec689f9a50da9de3a7f96b0601039a0e640475947a7cde1bd
+  - edge_id: retained-cleavage
+    subject: reaction
+    predicate: produces
+    object: products
+    mechanism: The cluster-signal-deficient preparations still cleave the tested DNA substrates; this is activity in the variant reaction, not activation caused by cysteine removal.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25200083
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4176176/
+      snippet: ssDNA
+      explanation: Figure5A/C/E Cys-variant product lanes, with assay-specific protein loads and variable patterns retained.
+      cache_path: evidence/PF01930/lemak-2014.txt
+      cache_sha256: cb226d277a37848ec689f9a50da9de3a7f96b0601039a0e640475947a7cde1bd
+- graph_id: gsu-pam-assembly-2021
+  title: PAM-bearing prespacers favor full Gsu complex assembly
+  scope: Hu2021 Figure3f purified full Cas4/Cas1 fusion with Cas2; matched prespacer classes.
+  context: 2nM DNA,50nM complex,0.5-5min4C; Tris pH8,100mM KCl,5mM MnCl2,5mM TCEP,10%glycerol; noPAM versus single/dualPAM.
+  family_mapping: GSU0057 Q74H36 sequencev1,559aa,taxon243231; PF01930 matches15-197 and PF01867 marks the Cas1 portion. Assays require the multidomain fusion and GSU0058 Cas2.
+  taxon: NCBITaxon:243231
+  scope_status: MECHANISTIC
+  limitations: EMSA reports complex occupancy, not an assembly rate constant, isolated-domain affinity or binding-induced activation. Tag/vector details remain qualified.
+  nodes:
+  - node_id: pam
+    label: PAM-bearing versus no-PAM DNA with Cas4/1 and Cas2
+    node_type: PERTURBATION
+    grounding: [UniProtKB:Q74H36]
+  - node_id: complex
+    label: Fully shifted prespacer complex
+    node_type: STATE
+  edges:
+  - edge_id: full-complex
+    subject: pam
+    predicate: increases
+    object: complex
+    mechanism: PAM-containing substrates favor the full shifted species over the subcomplex under matched protein and time conditions.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34588691
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9164213/
+      snippet: EMSA
+      explanation: Figure3f matched timecourse and EMSA Methods, distinct from structural docking models.
+      cache_path: evidence/PF01930/hu-2021.txt
+      cache_sha256: d4f8035a0c337dff01f1bf436e182e026ed917fd5cb82af022d02a01ed770aa7
+- graph_id: gsu-exoi-trimming-2021
+  title: The joint Gsu complex permits asymmetric ExoI processing
+  scope: Hu2021 Figure3b andED8a, purified fusion/Cas2 with E.coli ExoI and a single-PAM prespacer.
+  context: 10nM DNA,250nM complex,37C,Tris pH8,100mM KCl,5mM Mn plus10mM Mg,5mM TCEP,10%glycerol; ExoI titration and timed reactions.
+  family_mapping: Q74H36 sequencev1,559aa,PF01930 15-197; full fusion/Cas2 complex is required context. E.coli ExoI is a supplied separate enzyme, not the Cas4 domain.
+  taxon: NCBITaxon:243231
+  scope_status: MECHANISTIC
+  limitations: Native Gsu host-nuclease identity is not established. Footprint-based protection and cleavage cannot be assigned to isolated PF01930 sufficiency.
+  nodes:
+  - node_id: reaction
+    label: Single-PAM complex plus E.coli ExoI
+    node_type: STATE
+    grounding: [UniProtKB:Q74H36]
+  - node_id: trimmed
+    label: Non-PAM overhang trimmed to about7nt
+    node_type: STATE
+  - node_id: binding
+    label: Cas4/1-Cas2 occupancy versus ExoI alone
+    node_type: PERTURBATION
+  - node_id: pam-cleavage
+    label: ExoI digestion of the PAM-side overhang
+    node_type: ACTIVITY
+  edges:
+  - edge_id: nonpam-trimming
+    subject: reaction
+    predicate: produces
+    object: trimmed
+    mechanism: ExoI trims the exposed non-PAM overhang in the joint complex to the integration-compatible length range.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34588691
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9164213/
+      snippet: ExoI
+      explanation: Figure3b andED8a separate fluorescent channels resolve asymmetric trimming.
+      cache_path: evidence/PF01930/hu-2021.txt
+      cache_sha256: d4f8035a0c337dff01f1bf436e182e026ed917fd5cb82af022d02a01ed770aa7
+  - edge_id: pam-protection
+    subject: binding
+    predicate: decreases
+    object: pam-cleavage
+    mechanism: The assembled complex protects the PAM-containing overhang against ExoI relative to the enzyme-only control in the same assay.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34588691
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9164213/
+      snippet: ExoI
+      explanation: Figure3b PAM-channel control and complex lanes; protection is not absolute immunity to all nucleases.
+      cache_path: evidence/PF01930/hu-2021.txt
+      cache_sha256: d4f8035a0c337dff01f1bf436e182e026ed917fd5cb82af022d02a01ed770aa7
+- graph_id: gsu-directional-integration-2021
+  title: Composite trimming and integration favors the non-PAM leader-side product
+  scope: Hu2021 Figure3d/ED8b purified fusion-Cas2, ExoI, single-PAM prespacer and supercoiled pCRISPR.
+  context: Joint reconstitution at37C with Mn/Mg; pCRISPR about5nM; EcoRI/XhoI release followed by fluorescent denaturing PAGE distinguishes product orientation.
+  family_mapping: Q74H36 sequencev1,559aa,PF01930 15-197; Cas1 fusion portion and Cas2 provide integration machinery. No isolated Cas4-integrase claim.
+  taxon: NCBITaxon:243231
+  scope_status: MECHANISTIC
+  limitations: This is a conjunctive cause, not independent sufficiency of ExoI, Cas4 or Cas2. Tested linear targets failed; native cellular integration and host nuclease are separate questions.
+  nodes:
+  - node_id: joint
+    label: Cas4/1-Cas2 plus ExoI, single-PAM DNA and supercoiled target
+    node_type: STATE
+    grounding: [UniProtKB:Q74H36]
+  - node_id: integrated
+    label: Non-PAM-side leader-proximal integration product
+    node_type: STATE
+  edges:
+  - edge_id: directed-product
+    subject: joint
+    predicate: produces
+    object: integrated
+    mechanism: Coupling exposed-end trimming with the complete integration machinery yields the orientation-resolved leader-side product.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34588691
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9164213/
+      snippet: ExoI
+      explanation: Figure3d andED8b compare omitted components and resolve integration product sizes; ED7 caption limits target form.
+      cache_path: evidence/PF01930/hu-2021.txt
+      cache_sha256: d4f8035a0c337dff01f1bf436e182e026ed917fd5cb82af022d02a01ed770aa7
+- graph_id: gsu-half-mimic-cleavage-2021
+  title: A half-integration mimic enhances PAM cleavage
+  scope: Hu2021 ED8c-e annealed half-integration mimic versus free prespacer, with purified fusion/Cas2.
+  context: Temperature series and matched50C comparison; n3 independent measurements of processed fraction. Synthetic programmed substrate, not an observed prior integration event.
+  family_mapping: Q74H36 sequencev1,559aa,PF01930 15-197; full fusion/Cas2 substrate complex is tested.
+  taxon: NCBITaxon:243231
+  scope_status: MECHANISTIC
+  limitations: Enhanced cleavage does not establish a specific K102 switch, allosteric pathway or real-time Cas4 dissociation. Static cryo-EM states are supporting models, not kinetic trajectories.
+  nodes:
+  - node_id: mimic
+    label: Half-integration mimic versus free prespacer
+    node_type: PERTURBATION
+  - node_id: cleavage
+    label: PAM-overhang cleavage in the joint complex
+    node_type: ACTIVITY
+    grounding: [UniProtKB:Q74H36]
+  edges:
+  - edge_id: enhanced-cleavage
+    subject: mimic
+    predicate: increases
+    object: cleavage
+    mechanism: The programmed leader-repeat/prespacer geometry gives greater PAM processing than free prespacer at matched conditions.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34588691
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9164213/
+      snippet: PAM cleavage
+      explanation: ED8c-e original gel panels and quantification; Results describes how the mimic was assembled.
+      cache_path: evidence/PF01930/hu-2021.txt
+      cache_sha256: d4f8035a0c337dff01f1bf436e182e026ed917fd5cb82af022d02a01ed770aa7
+- graph_id: gsu-repeat-length-2021
+  title: Reach-capable leader-repeat substrate enhances PAM processing
+  scope: Hu2021 Figure4d Sub3 versusSub2 annealed substrates with the purified fusion/Cas2 complex.
+  context: Matched10,20,30min comparisons; Sub2 has19bp repeat,Sub3 has30bp repeat; Sub1 free prespacer and longerSub4 are controls; n3 quantification.
+  family_mapping: Q74H36 sequencev1,559aa,PF01930 15-197; assay perturbs substrate geometry within the entire complex, not an isolated domain.
+  taxon: NCBITaxon:243231
+  scope_status: MECHANISTIC
+  limitations: Sub3 stimulates cleavage without full integration. A length effect supports contact-dependent models but does not independently prove the exact activating protein contact or exclude all allostery.
+  nodes:
+  - node_id: length
+    label: 30bp Sub3 repeat versus19bp Sub2 repeat
+    node_type: PERTURBATION
+  - node_id: cleavage
+    label: PAM-overhang cleavage products
+    node_type: STATE
+    grounding: [UniProtKB:Q74H36]
+  edges:
+  - edge_id: length-enhancement
+    subject: length
+    predicate: increases
+    object: cleavage
+    mechanism: Increasing the repeat length to the reach-capable substrate enhances cleavage even while it remains too short for the full-integration product.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34588691
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9164213/
+      snippet: PAM cleavage
+      explanation: Figure4d substrate models, product bands and quantified comparisons; contact mechanism is qualified.
+      cache_path: evidence/PF01930/hu-2021.txt
+      cache_sha256: d4f8035a0c337dff01f1bf436e182e026ed917fd5cb82af022d02a01ed770aa7
+- graph_id: gsu-e18y-cleavage-2021
+  title: E18Y reduces sequence-selective cleavage behavior
+  scope: Hu2021 ED4f individual E18Y full fusion versusWT in the Cas2-containing assay.
+  context: Purified-protein prespacer cleavage assay with Gsu andPfu PAM contexts; matched gel lanes, distinct from the disputed ED4g cellular result.
+  family_mapping: Q74H36 sequencev1,559aa; E18 is within PF01930 15-197. Whole fusion is tested; S191A and double substitution have separate profiles.
+  taxon: NCBITaxon:243231
+  scope_status: PHENOTYPIC
+  limitations: Distributive products remain; loss of selectivity is not total loss of cleavage. Folding/complex occupancy alternatives remain. No successful cellular PAM switch is asserted.
+  nodes:
+  - node_id: substitution
+    label: E18Y fusion versus WT fusion
+    node_type: PERTURBATION
+    grounding: [UniProtKB:Q74H36]
+  - node_id: selectivity
+    label: PAM-specific cleavage pattern
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: selectivity-loss
+    subject: substitution
+    predicate: decreases
+    object: selectivity
+    mechanism: The substitution changes the cleavage pattern toward distributive products, supporting a residue-dependent specificity effect without resolving its exclusive molecular cause.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34588691
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9164213/
+      snippet: E18Y
+      explanation: ED4f original gel and Results; ED4g text/caption contradiction is retained outside this biochemical edge.
+      cache_path: evidence/PF01930/hu-2021.txt
+      cache_sha256: d4f8035a0c337dff01f1bf436e182e026ed917fd5cb82af022d02a01ed770aa7
+- graph_id: gsu-surrogate-cell-acquisition-2021
+  title: Prespacer PAM context changes acquisition in surrogate cells
+  scope: Hu2021 Figure1b/c E.coli BL21-AI with Gsu pTU338 Cas4/1-Cas2 and pTU368 CRISPR reporter.
+  context: Supplied prespacer inputs after module induction; PCR expansion n3 and sequencing of expanded arrays. NoPAM, adjacentPAM, dsPAM, singlePAM and dualPAM comparisons.
+  family_mapping: Gsu Q74H36 sequencev1,559aa,PF01930 15-197; module originates from taxon243231 but measurements occur in E.coli surrogate cells. No native-Gsu or isolated-domain phenotype claim.
+  scope_status: PHENOTYPIC
+  limitations: Cellular effects are INDIRECT; supplied DNA geometry, expression and host factors contribute. There is no infection challenge, antiviral-fitness measurement or successful mutant cellular-PAM-switch claim.
+  nodes:
+  - node_id: compatible
+    label: Correctly spaced ssPAM versus noncompatible prespacer controls
+    node_type: PERTURBATION
+    grounding: [UniProtKB:Q74H36]
+  - node_id: expansion
+    label: Reporter CRISPR array expansion
+    node_type: PHENOTYPE
+  - node_id: single
+    label: Single-PAM versus dual-PAM input
+    node_type: PERTURBATION
+  - node_id: orientation
+    label: Bias toward one spacer orientation
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: array-expansion
+    subject: compatible
+    predicate: increases
+    object: expansion
+    mechanism: Correctly spaced ssPAM inputs yield detectable expansion relative to noPAM or incompatible placement in cells bearing the joint module.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34588691
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9164213/
+      snippet: spacer acquisition
+      explanation: Figure1b substrate diagrams and PCR controls; Table1 and Methods identify the surrogate system.
+      cache_path: evidence/PF01930/hu-2021.txt
+      cache_sha256: d4f8035a0c337dff01f1bf436e182e026ed917fd5cb82af022d02a01ed770aa7
+  - edge_id: orientation-bias
+    subject: single
+    predicate: increases
+    object: orientation
+    mechanism: Sequenced spacers from single-PAM inputs favor one orientation, while the dual-PAM input produces both orientations.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34588691
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9164213/
+      snippet: spacer acquisition
+      explanation: Figure1c input5/6/12 versus7 orientation bars; direction labels are not generalized beyond the tested constructs.
+      cache_path: evidence/PF01930/hu-2021.txt
+      cache_sha256: d4f8035a0c337dff01f1bf436e182e026ed917fd5cb82af022d02a01ed770aa7

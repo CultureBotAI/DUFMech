@@ -1,0 +1,36 @@
+PF01881 / historical DUF57 / Cas_Cas6_C identity assessment
+Accessed 2026-10-11; research began 2026-10-11T19:41:55Z.
+
+Frozen data/worklists/pfam-previous-unknown-names-2026-10-10.tsv maps
+PF01881.22 to previous names DUF57;Cas_Cas6. The frozen projection is EX_DUF,
+UNSCORED, with 1831 proteins. Naming history is not family-wide characterization.
+The present family is specifically the Cas6 C-terminal domain, not all Cas6.
+
+https://rest.uniprot.org/uniprotkb/search?query=%28xref%3Apfam-PF01881%29%20AND%20%28organism_id%3A186497%29&format=json
+Q8U1S4, PF1131/cas6, Pyrococcus furiosus DSM 3638 (NCBITaxon:186497),
+264 aa, sequence version 1. Downloaded AAL81255.1 and WP_011012271.1
+FASTA sequences both match Q8U1S4 exactly over all 264 residues.
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=AAL81255.1,WP_011012271.1&rettype=fasta&retmode=text
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01881/protein/uniprot/Q8U1S4/
+Member-specific PF01881 match: residues 121-237, integrated IPR049435.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF21350/protein/uniprot/Q8U1S4/
+The N-terminal PF21350 match is 17-117. Y31/H46/K52 and R64 are outside
+PF01881. K188/K190/R191 and G223/G225/G231/G233 are inside PF01881;
+the reference sequence has the stated residue at every checked position.
+
+https://data.rcsb.org/rest/v1/core/polymer_entity/3I4H/1
+Deposited protein entity is exactly MAHHHHHHGS plus native residues 2-264
+(273 aa). This confirms a tagged structural construct, not the exact sequence
+of every assay batch. Primary studies identify N-terminal His6 PF1131 from
+pET24d expressed in E. coli BL21 codon+(DE3); the 2010 substitutions were
+DNA-sequence confirmed by the authors. No isolated PF01881 domain was assayed.
+Paper and current deposition resolutions differ (2008 1.8 versus current
+3I4H 2.25 A; 2011 3.2 versus current 3PKM 3.10 A). Do not combine these
+as if one contemporaneous metadata record.
+
+The same UniProt query also returns Q8U3R3/PF0393 (241 aa; 3UFC), a distinct
+paralog. PMID:22447673 / DOI:10.1002/prot.24061 identifies its structural
+paper, but fetched PubMed XML has no abstract. Its primary functional assays
+were not inspected; secondary noncatalytic descriptions are leads, not adopted
+negative edges. Do not merge PF0393 with PF1131 or generalize to all 1831 proteins.

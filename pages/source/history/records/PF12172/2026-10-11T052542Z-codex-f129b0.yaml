@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF12172
+  path: curation/families/PF12172.yaml
+session:
+  id: 2026-10-11T052542Z-codex-f129b0
+  timestamp: '2026-10-11T05:25:42Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add sequence-resolved T. curvata DUF35 activity-increase graph
+  details: The 6OK1 construct contains current PF12172 and PF01796 intervals. Added
+    the Aggett 2019 protein-addition effect with explicit partner/substrate context,
+    no isolated zinc-ribbon sufficiency and no zinc-causation inference. The same
+    experiment in PF01796 is not independent replication. Overlay validates; family
+    coverage remains incomplete.
+  sections:
+  - causal_graphs

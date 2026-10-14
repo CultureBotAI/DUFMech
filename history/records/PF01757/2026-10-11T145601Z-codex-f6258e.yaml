@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01757
+  path: data/families/PF01757.yaml
+session:
+  id: 2026-10-11T145601Z-codex-f6258e
+  timestamp: '2026-10-11T14:56:01Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of SaOatA causal effects and proposed
+    relay
+  details: Saved scoped same-agent scientific NEEDS_FOLLOWUP review of semantic digest47f77427f0187aa58815badf72fbc4ea9ec77c3582fde9e1d5600f2d2f8565a8.
+    Five graphs have22 observed effects and2 hypotheses; direct preparation effects,
+    indirect cell phenotypes and unresolved proposed chemistry remain distinct. Deposited
+    control acetylation, MS reference genotype, domain/clone identity and assay discrepancies
+    remain open along with other-member coverage. Native projection/evidence validation
+    passed; focused256-test suite passed. Record stays IN_PROGRESS with no publication
+    or full-family completion.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T145601Z-pf01757-oata-assay-effects-and-hypothetical-relay/review.yaml

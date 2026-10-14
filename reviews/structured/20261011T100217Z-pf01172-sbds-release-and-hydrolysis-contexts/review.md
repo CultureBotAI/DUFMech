@@ -1,0 +1,577 @@
+# Scoped scientific self-review of SBDS release and hydrolysis effects
+
+- Review: 20261011T100217Z-pf01172-sbds-release-and-hydrolysis-contexts
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T09:59:48Z
+- Finished UTC: 2026-10-11T10:02:17Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Four MECHANISTIC graphs retain seven DIRECT OBSERVED whole-protein effects in distinct mouse-pre60S and rabbit-60S assays. Current reference mapping, mixed-species preparations, outside-domain mutations and incomplete construct details are explicit. Hydrolysis stimulation is not equated with sufficient eIF6 release. Partial same-agent scientific review; IN_PROGRESS.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: PF01172 SBDS_N, the next accession-ordered SEEDED family, using Finch 2011 biochemical experiments with current protein/domain mapping and a later recycling abstract as a follow-up lead.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01172 | data/families/PF01172.yaml | generated | PF01172 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01172 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01172.
+
+Q9Y3A5/SBDS_HUMAN, 250 aa and sequence version 4, matches current NP_057122.2 and InterPro exactly, with PF01172 at 14-100. The study cites unversioned NP_057122; current agreement does not independently sequence its clone. The structural domain-I definition 2-96 is not identical to the Pfam boundary. R126 and K151 are outside this N-terminal domain, so their whole-protein effects cannot establish a domain-local catalytic site. Human factors and mouse/rabbit particles are mixed-species systems.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01172.
+
+Joint-factor inputs prevent assigning independent sufficiency to SBDS. Mature rabbit particles with eIF6(1-225), native mouse precursors and rabbit-particle hydrolysis are separate graphs. The S235 exclusion is restricted to the truncation experiment. K151N is compared with no SBDS for retained hydrolysis stimulation, not declared equivalent to WT from a nonsignificant contrast. Separate vessels and differing buffers are retained; no transitive atomic cycle, clinical outcome or isolated-domain sufficiency is invented.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01172.
+
+Full purification tags/scars and supplementary S7 binding data were not obtained. Europe PMC returned a non-open-access XML error and the publisher supplement route returned HTTP 403. Raw blots, complete clone sequences, domain-specific functional perturbations and additional species remain unreviewed. The 2015 structural study is a discovered lead and the 2022 recycling study was read only at abstract level; neither contributes new edges.
+
+## Findings
+
+### additional-contexts: Resolve SBDS construct and domain-specific causal coverage
+
+minor / open / confirmed; issue key: pf01172-causal-context-coverage.
+
+Obtain the 2011 supplement and exact clones, assess binding/folding controls at their actual scope, and review domain-specific perturbations and later structural/recycling studies. Keep human-factor and particle-species boundaries explicit, distinguish static structural contacts from causal transitions, and retain a successor review before strengthening or extending claims.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Obtain the 2011 supplement and exact clones, assess binding/folding controls at their actual scope, and review domain-specific perturbations and later structural/recycling studies. Keep human-factor and particle-species boundaries explicit, distinguish static structural contacts from causal transitions, and retain a successor review before strengthening or extending claims.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/; Selected biochemical/structural Results, Discussion, main Methods and visually inspected Figures 3 and 6 | supports | Joint human SBDS/EFL1/GTP releases eIF6 from mouse pre-60S and truncated eIF6 from rabbit mature 60S. WT SBDS and K151N each stimulate the separate rabbit-60S GTPase readout versus no SBDS, while R126T gives less stimulation than WT. Both variants reduce release in the mouse-particle assay. Nucleotide, individual-factor and particle-protein controls constrain interpretation. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9Y3A5/entry/pfam/PF01172/; Accession and domain locations; paired UniProt identity facts | supports | Q9Y3A5/SBDS_HUMAN, 250 aa and sequence version 4, matches current NP_057122.2 and InterPro exactly, with PF01172 at 14-100. The study cites unversioned NP_057122; current agreement does not independently sequence its clone. The structural domain-I definition 2-96 is not identical to the Pfam boundary. R126 and K151 are outside this N-terminal domain, so their whole-protein effects cannot establish a domain-local catalytic site. Human factors and mouse/rabbit particles are mixed-species systems. |
+| cited-refseq-boundary | https://www.ncbi.nlm.nih.gov/protein/NP_057122.2; Full current FASTA compared with Q9Y3A5 and InterPro; R126/K151 positions | supports | Exact current sequence agreement supports reference identity but not an independently reconstructed historical clone or an N-terminal location for the tested mutations. |
+| later-recycling-lead | https://pmc.ncbi.nlm.nih.gov/articles/PMC8943182/; Abstract only | supports | Reports additional eIF6 rebinding and mature-ribosome recycling contexts requiring separate full-text, method and member assessment; no adopted graph edge is derived from this abstract. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01172 | data/families/PF01172.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Figures 3 and 6 were visually inspected and relevant main Methods, biochemical/structural Results and Discussion read. The full 2011 supplement, raw blots, structure coordinates and all cellular/genetic experiments were not assessed. The 2022 abstract is a coverage lead, not a full-study review. Figure 7's proposed cycle is not adopted as an observed trajectory.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T100217Z-pf01172-sbds-release-and-hydrolysis-contexts
+title: Scoped scientific self-review of SBDS release and hydrolysis effects
+started_at: '2026-10-11T09:59:48Z'
+finished_at: '2026-10-11T10:02:17Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Four MECHANISTIC graphs retain seven DIRECT OBSERVED whole-protein effects
+  in distinct mouse-pre60S and rabbit-60S assays. Current reference mapping, mixed-species
+  preparations, outside-domain mutations and incomplete construct details are explicit.
+  Hydrolysis stimulation is not equated with sufficient eIF6 release. Partial same-agent
+  scientific review; IN_PROGRESS.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01172.yaml
+    sha256: c11337c2b66d9f0fc060e8ed0bae3789d8d72882ad271cb54821fa7cbdb81b5f
+    role: context
+  - path: data/families/PF01172.yaml
+    sha256: 5d4a7b105d0aa97e7b04a9e1f9de1226394c2e96f9341a24eb88b569e7c2dac0
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01172/finch-2011-sbds.txt
+    role: context
+    sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5
+  - path: evidence/PF01172/SBDS-identity.txt
+    role: context
+    sha256: 310d70c64af2514b1d769b877d83765895e3cba9fe12bb8b686d8bb15a387615
+  - path: evidence/PF01172/sbds-2022-coverage-lead.txt
+    role: context
+    sha256: fe4589ee151ca21e4e8536f5dc560e7e5b869bf7b3d9964a723b08e79a63314d
+targets:
+- target_id: PF01172
+  path: data/families/PF01172.yaml
+  label: PF01172
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01172.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: f4866f75fc82ca60a0f2cdb8537cbfd4af060d13e36275c3e052d086f45e7ae3
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: PF01172 SBDS_N, the next accession-ordered SEEDED family, using Finch
+    2011 biochemical experiments with current protein/domain mapping and a later recycling
+    abstract as a follow-up lead.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01172
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Full purification tags/scars and supplementary S7 binding data were not
+      obtained. Europe PMC returned a non-open-access XML error and the publisher
+      supplement route returned HTTP 403. Raw blots, complete clone sequences, domain-specific
+      functional perturbations and additional species remain unreviewed. The 2015
+      structural study is a discovered lead and the 2022 recycling study was read
+      only at abstract level; neither contributes new edges.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01172
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/
+  locator: Selected biochemical/structural Results, Discussion, main Methods and visually
+    inspected Figures 3 and 6
+  accessed_at: '2026-10-11T10:02:17Z'
+  support: supports
+  snapshot_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5
+  summary: Joint human SBDS/EFL1/GTP releases eIF6 from mouse pre-60S and truncated
+    eIF6 from rabbit mature 60S. WT SBDS and K151N each stimulate the separate rabbit-60S
+    GTPase readout versus no SBDS, while R126T gives less stimulation than WT. Both
+    variants reduce release in the mouse-particle assay. Nucleotide, individual-factor
+    and particle-protein controls constrain interpretation.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9Y3A5/entry/pfam/PF01172/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T10:02:17Z'
+  support: supports
+  snapshot_sha256: 310d70c64af2514b1d769b877d83765895e3cba9fe12bb8b686d8bb15a387615
+  summary: Q9Y3A5/SBDS_HUMAN, 250 aa and sequence version 4, matches current NP_057122.2
+    and InterPro exactly, with PF01172 at 14-100. The study cites unversioned NP_057122;
+    current agreement does not independently sequence its clone. The structural domain-I
+    definition 2-96 is not identical to the Pfam boundary. R126 and K151 are outside
+    this N-terminal domain, so their whole-protein effects cannot establish a domain-local
+    catalytic site. Human factors and mouse/rabbit particles are mixed-species systems.
+- evidence_id: cited-refseq-boundary
+  kind: database
+  reference: https://www.ncbi.nlm.nih.gov/protein/NP_057122.2
+  locator: Full current FASTA compared with Q9Y3A5 and InterPro; R126/K151 positions
+  summary: Exact current sequence agreement supports reference identity but not an
+    independently reconstructed historical clone or an N-terminal location for the
+    tested mutations.
+  accessed_at: '2026-10-11T10:02:17Z'
+  support: supports
+  snapshot_sha256: 310d70c64af2514b1d769b877d83765895e3cba9fe12bb8b686d8bb15a387615
+- evidence_id: later-recycling-lead
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC8943182/
+  locator: Abstract only
+  summary: Reports additional eIF6 rebinding and mature-ribosome recycling contexts
+    requiring separate full-text, method and member assessment; no adopted graph edge
+    is derived from this abstract.
+  accessed_at: '2026-10-11T10:02:17Z'
+  support: supports
+  snapshot_sha256: fe4589ee151ca21e4e8536f5dc560e7e5b869bf7b3d9964a723b08e79a63314d
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T10:02:17Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01172
+  kind: record_content
+  reference: data/families/PF01172.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T10:02:17Z'
+  support: context_only
+  snapshot_sha256: 5d4a7b105d0aa97e7b04a9e1f9de1226394c2e96f9341a24eb88b569e7c2dac0
+  quote: "id: Pfam:PF01172\npfam_id: PF01172\nname: Shwachman-Bodian-Diamond syndrome\
+    \ (SBDS) N-terminal domain\nshort_name: SBDS_N\nseed_status: EX_DUF\ncharacterization_status:\
+    \ UNSCORED\ncuration_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01172\n\
+    counters:\n  proteins: 5765\n  matches: 5781\n  proteomes: 3701\n  taxa: 9360\n\
+    \  structures: 14\n  alphafold_models: 4925\n  domain_architectures: 73\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR019783\ndescription: This entry represents the N-terminal\
+    \ domain of proteins that are highly conserved in species\n  ranging from archaea\
+    \ to vertebrates and plants [[cite:PUB00020303]], including several Shwachman-Bodian-Diamond\n\
+    \  syndrome (SBDS) proteins from both mouse and humans. Shwachman-Diamond syndrome\
+    \ is an autosomal recessive\n  disorder with clinical features that include pancreatic\
+    \ exocrine insufficiency, haematological dysfunction\n  and skeletal abnormalities.\
+    \ It is characterised by bone marrow failure and leukemia predisposition.\n  Members\
+    \ of this entry play a role in RNA metabolism [[cite:PUB00020304]][[cite:PUB00020305]].\
+    \ In yeast\n  these proteins have been shown to be critical for the release and\
+    \ recycling of the nucleolar shuttling\n  factor Tif6 from pre-60S ribosomes,\
+    \ a key step in 60S maturation and translational activation of ribosomes\n  [[cite:PUB00045126]].\
+    \ This data links defective late 60S subunit maturation to an inherited bone marrow\n\
+    \  failure syndrome associated with leukemia predisposition [[cite:PUB00045126]].\n\
+    curation_history: history/records/PF01172\ndiscussions:\n- discussion_id: sbds-domain-specific-mechanism-and-constructs\n\
+    \  prompt: Resolve SBDS construct details and domain-specific causal evidence\
+    \ before extending the release\n    cycle.\n  kind: CURATION_TODO\n  status: OPEN\n\
+    \  rationale: Seven observed whole-protein biochemical effects do not establish\
+    \ isolated N-terminal-domain\n    sufficiency, a directly tracked conformational\
+    \ cycle or all member functions.\n  evidence:\n  - reference: PMID:21536732\n\
+    \    supports: PARTIAL\n    evidence_source: inspected_primary_biochemical_results_and_methods\n\
+    \    explanation: Figures 3/6 and main Methods support separate release and hydrolysis\
+    \ effects. Supplement\n      access failed; R126T/K151N are outside PF01172.\n\
+    \  - reference: doi:10.1038/s41467-022-29214-7\n    supports: PARTIAL\n    evidence_source:\
+    \ primary_abstract_only\n    explanation: The 2022 abstract identifies mature-ribosome\
+    \ recycling contexts requiring full Methods,\n      figure and construct assessment.\n\
+    \  notes: Obtain 2011 supplementary purification and binding protocols and exact\
+    \ clone sequences. Review\n    the 2015 structural and 2022 recycling studies\
+    \ with domain-specific perturbations; separate physical\n    contacts and static\
+    \ structures from directed causal steps. Do not transfer yeast genetics, mouse\
+    \ pathology,\n    treatment implications or predicted rotations into observed\
+    \ human-domain edges. Partial same-agent\n    scientific assessment; remain IN_PROGRESS.\n\
+    \  posed_by: Codex\n  posed_date: '2026-10-11'\ncausal_graphs:\n- graph_id: sbds-efl1-mouse-pre60s-release\n\
+    \  title: Joint SBDS, EFL1 and GTP release eIF6 from mouse pre-60S particles\n\
+    \  scope: Recombinant human SBDS and EFL1 acting on eIF6-loaded pre-60S particles\
+    \ isolated from Sbds-deleted\n    mouse liver in Finch 2011 Figure 3B/C. This\
+    \ is a mixed-species, whole-protein reconstitution.\n  context: 100 ul with about\
+    \ 0.5-1 pmol pre-60S, 5 pmol each SBDS/EFL1, 100 uM GTP, 10 mM Tris-HCl pH\n \
+    \   7.4, 75 mM KCl, 1.5 mM MgCl2 and protease/RNase inhibitors; 10 min at 37 C.\
+    \ Sucrose-cushion centrifugation\n    and immunoblotting distinguish free and\
+    \ bound eIF6.\n  family_mapping: Q9Y3A5/SBDS_HUMAN is 250 aa, sequence version\
+    \ 4, matching current NP_057122.2 and InterPro\n    exactly. PF01172 spans 14-100;\
+    \ the paper's structural domain I spans 2-96. The paper cites unversioned\n  \
+    \  NP_057122. The intact protein includes other domains, and complete experimental\
+    \ tags/scars remain\n    unresolved.\n  scope_status: MECHANISTIC\n  limitations:\
+    \ SBDS alone is not sufficient. GDP/no nucleotide fail and GDPNP gives marginal\
+    \ release;\n    these do not quantify a complete kinetic cycle. Ebp1/Nmd3 retention\
+    \ constrains specificity. The supplement\n    was inaccessible, so full construct\
+    \ details and raw blots are unverified. Neither isolated SBDS_N\n    activity\
+    \ nor direct 80S assembly is measured.\n  nodes:\n  - node_id: joint-sbds-efl1-gtp-mouse-pre60s\n\
+    \    label: Add human SBDS and EFL1 with GTP to mouse pre-60S particles\n    node_type:\
+    \ ACTIVITY\n    grounding:\n    - UniProtKB:Q9Y3A5\n  - node_id: mouse-pre60s-eif6-release\n\
+    \    label: eIF6 redistribution from particle-bound to free fraction\n    node_type:\
+    \ PROCESS\n  edges:\n  - edge_id: joint-factors-enable-mouse-eif6-release\n  \
+    \  subject: joint-sbds-efl1-gtp-mouse-pre60s\n    predicate: enables\n    object:\
+    \ mouse-pre60s-eif6-release\n    mechanism: The joint factor/GTP condition releases\
+    \ eIF6 while individual-factor controls do not. This\n      is a directly observed\
+    \ biochemical release effect; no independent sufficient cause is assigned to\n\
+    \      either protein alone.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:21536732\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/\n      snippet:\
+    \ eIF6 release\n      explanation: Visually inspected Figure 3B/C and main release-assay\
+    \ Methods; Ebp1/Nmd3 and nucleotide\n        controls remain part of the scope.\n\
+    \      cache_path: evidence/PF01172/finch-2011-sbds.txt\n      cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9Y3A5/entry/pfam/PF01172/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9Y3A5/entry/pfam/PF01172/\n\
+    \      snippet: 'Q9Y3A5 Pfam:PF01172 interval: 14-100, inclusive.'\n      explanation:\
+    \ Current exact reference mapping, distinct from a claim that this domain alone\
+    \ performs\n        the whole-protein reaction.\n      cache_path: evidence/PF01172/SBDS-identity.txt\n\
+    \      cache_sha256: 310d70c64af2514b1d769b877d83765895e3cba9fe12bb8b686d8bb15a387615\n\
+    - graph_id: sbds-efl1-rabbit-truncated-eif6-release\n  title: SBDS and EFL1 release\
+    \ truncated eIF6 from rabbit 60S particles\n  scope: Human SBDS/EFL1 and recombinant\
+    \ human eIF6(1-225) on salt-washed rabbit reticulocyte 60S subunits\n    in Figure\
+    \ 3D. This mature-particle preparation is separate from mouse pre-60S.\n  context:\
+    \ Preload 5 pmol rabbit 60S with excess eIF6(1-225) for 20 min on ice, remove\
+    \ free factor with\n    a 100-kDa filter, and perform the 100-ul release assay\
+    \ with 5 pmol each SBDS/EFL1 and 100 uM GTP for\n    10 min at 37 C in the pH-7.4\
+    \ release buffer. Compare bound/free immunoblots after sucrose pelleting.\n  family_mapping:\
+    \ Human whole SBDS maps to Q9Y3A5 and PF01172 14-100; the rabbit particle and\
+    \ truncated\n    eIF6 are separate components. The SBDS and EFL1 tag states cannot\
+    \ be reconstructed from the accessible\n    main Methods alone.\n  scope_status:\
+    \ MECHANISTIC\n  limitations: Rpl28 retention and EDTA release controls are retained.\
+    \ The eIF6 truncation excludes S235,\n    but this does not exclude every phosphorylation\
+    \ mechanism in cells. Mature rabbit particles are not\n    treated as equivalent\
+    \ to mouse precursors or a wholly human system.\n  nodes:\n  - node_id: joint-factors-rabbit-truncated-eif6\n\
+    \    label: Add human SBDS, EFL1 and GTP to eIF6(1-225)-loaded rabbit 60S\n  \
+    \  node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q9Y3A5\n  - node_id: truncated-eif6-release\n\
+    \    label: Release of eIF6(1-225) into the free fraction\n    node_type: PROCESS\n\
+    \  edges:\n  - edge_id: joint-factors-enable-truncated-eif6-release\n    subject:\
+    \ joint-factors-rabbit-truncated-eif6\n    predicate: enables\n    object: truncated-eif6-release\n\
+    \    mechanism: The joint protein/GTP condition promotes release of the prebound\
+    \ truncation lacking S235;\n      single factors or GDP do not reproduce the effect.\
+    \ The observation concerns net release, not a directly\n      observed domain-rotation\
+    \ trajectory.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:21536732\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/\n      snippet: eIF6 release\n\
+    \      explanation: Figure 3D, mature-particle loading protocol and main Results\
+    \ distinguish this truncation\n        experiment from the native mouse-particle\
+    \ assay.\n      cache_path: evidence/PF01172/finch-2011-sbds.txt\n      cache_sha256:\
+    \ 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5\n- graph_id:\
+    \ sbds-variants-rabbit-60s-gtp-hydrolysis\n  title: SBDS preparations alter 60S-dependent\
+    \ EFL1 GTP hydrolysis\n  scope: WT, R126T and K151N human SBDS preparations in\
+    \ the separate rabbit-60S phosphate-release assay\n    of Figure 6B. R126T and\
+    \ K151N are outside PF01172.\n  context: 50 ul containing 5 nmol gamma-32P-GTP,\
+    \ 5 pmol rabbit 60S, 6.3 pmol SBDS when present and 40\n    pmol EFL1; 50 mM Tris\
+    \ pH 7.4, 2 mM MgCl2, 150 mM NaCl and 2 mM DTT; 30 min at 37 C. Charcoal separation\n\
+    \    and scintillation quantify Pi; bars report three experiments with SD.\n \
+    \ family_mapping: Q9Y3A5 has R126 and K151 outside its PF01172 14-100 match, within\
+    \ the full multidomain\n    SBDS molecule. These are whole-protein context effects,\
+    \ not mapped N-terminal catalytic residues.\n  scope_status: MECHANISTIC\n  limitations:\
+    \ SBDS alone without 60S does not significantly activate EFL1. H96A EFL1 is a\
+    \ catalytic control.\n    Hydrolysis and eIF6 release use different buffers and\
+    \ particles in separate vessels. K151N's nonsignificant\n    difference from WT\
+    \ does not establish kinetic equivalence; no universal rate or stoichiometry is\
+    \ inferred.\n  nodes:\n  - node_id: add-wt-sbds-rabbit-60s\n    label: Add WT\
+    \ SBDS rather than no SBDS to EFL1 and rabbit 60S\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q9Y3A5\n  - node_id: replace-wt-sbds-r126t\n\
+    \    label: Replace WT SBDS with R126T in the hydrolysis assay\n    node_type:\
+    \ PERTURBATION\n  - node_id: add-k151n-sbds-rabbit-60s\n    label: Add K151N SBDS\
+    \ rather than no SBDS to EFL1 and rabbit 60S\n    node_type: PERTURBATION\n  -\
+    \ node_id: efl1-pi-release\n    label: 60S-dependent EFL1 phosphate-release readout\n\
+    \    node_type: ACTIVITY\n  edges:\n  - edge_id: wt-sbds-increases-efl1-pi-release\n\
+    \    subject: add-wt-sbds-rabbit-60s\n    predicate: increases\n    object: efl1-pi-release\n\
+    \    mechanism: WT SBDS increases the EFL1/60S-dependent Pi signal relative to\
+    \ no SBDS. This is an observed\n      turnover effect, not direct visualization\
+    \ of an allosteric contact or a sufficient cause of eIF6\n      release by itself.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:21536732\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/\n\
+    \      snippet: GTP hydrolysis\n      explanation: Figure 6B lanes 5/7, catalytic\
+    \ and no-particle controls, and the separate phosphate-assay\n        Methods.\n\
+    \      cache_path: evidence/PF01172/finch-2011-sbds.txt\n      cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5\n\
+    \  - edge_id: r126t-decreases-efl1-pi-release\n    subject: replace-wt-sbds-r126t\n\
+    \    predicate: decreases\n    object: efl1-pi-release\n    mechanism: The R126T\
+    \ preparation stimulates less Pi release than WT in the matched biochemical system.\n\
+    \      Main-text NMR analysis reports local perturbation with preserved overall\
+    \ fold; detailed binding\n      evidence in supplement S7 was not inspected.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:21536732\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/\n\
+    \      snippet: GTP hydrolysis\n      explanation: Figure 6B lanes 7/8 and the\
+    \ mutant Results. The mutation is not in the N-terminal Pfam\n        domain.\n\
+    \      cache_path: evidence/PF01172/finch-2011-sbds.txt\n      cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5\n\
+    \  - edge_id: k151n-increases-efl1-pi-release-over-no-sbds\n    subject: add-k151n-sbds-rabbit-60s\n\
+    \    predicate: increases\n    object: efl1-pi-release\n    mechanism: K151N retains\
+    \ stimulation relative to the no-SBDS baseline despite its impaired release\n\
+    \      phenotype in a different assay. This is not an assertion that K151N and\
+    \ WT have identical kinetics.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:21536732\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/\n      snippet:\
+    \ GTP hydrolysis\n      explanation: Figure 6B lanes 5/9 and the reported significance\
+    \ versus baseline, not a claim based\n        on nonsignificance versus WT.\n\
+    \      cache_path: evidence/PF01172/finch-2011-sbds.txt\n      cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5\n\
+    - graph_id: sbds-variants-mouse-pre60s-release\n  title: R126T and K151N SBDS\
+    \ preparations reduce eIF6 release\n  scope: Figure 6C compares human WT and mutant\
+    \ SBDS with EFL1/GTP on Sbds-deleted mouse-liver pre-60S\n    particles. Neither\
+    \ mutant lies inside PF01172.\n  context: The 100-ul mouse-particle release assay\
+    \ uses about 0.5-1 pmol pre-60S, 5 pmol SBDS, 5 pmol\n    EFL1 and 100 uM GTP\
+    \ in 10 mM Tris-HCl pH 7.4, 75 mM KCl and 1.5 mM MgCl2 with inhibitors; 10 min\
+    \ at\n    37 C, sucrose pelleting and bound/free immunoblots.\n  family_mapping:\
+    \ The tested multidomain protein corresponds to Q9Y3A5, PF01172 14-100; R126T\
+    \ and K151N\n    alter another domain. Reference agreement does not substitute\
+    \ for sequencing the experimental variants\n    or assign their effect to SBDS_N\
+    \ alone.\n  scope_status: MECHANISTIC\n  limitations: Ebp1 is retained as a particle\
+    \ control. The figure does not supply a precise release fraction\n    or a complete\
+    \ kinetic analysis. Main-text NMR supports retained fold, but the supplementary\
+    \ binding\n    assay and detailed constructs remain uninspected. Disease etiology\
+    \ and universal family behavior are\n    not graph outputs.\n  nodes:\n  - node_id:\
+    \ r126t-in-mouse-release-assay\n    label: Replace WT SBDS with R126T in the mouse-particle\
+    \ assay\n    node_type: PERTURBATION\n  - node_id: k151n-in-mouse-release-assay\n\
+    \    label: Replace WT SBDS with K151N in the mouse-particle assay\n    node_type:\
+    \ PERTURBATION\n  - node_id: mutant-assay-eif6-release\n    label: eIF6 release\
+    \ from mouse pre-60S particles\n    node_type: PROCESS\n  edges:\n  - edge_id:\
+    \ r126t-decreases-mouse-eif6-release\n    subject: r126t-in-mouse-release-assay\n\
+    \    predicate: decreases\n    object: mutant-assay-eif6-release\n    mechanism:\
+    \ The R126T preparation gives less free eIF6 and more bound eIF6 than WT under\
+    \ the joint\n      EFL1/GTP condition. The direct biochemical effect does not\
+    \ establish a specific N-terminal contact.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:21536732\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/\n      snippet:\
+    \ eIF6 release\n      explanation: Visually inspected Figure 6C WT/R126T lanes\
+    \ and mutant Results, distinct from the phosphate\n        assay.\n      cache_path:\
+    \ evidence/PF01172/finch-2011-sbds.txt\n      cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5\n\
+    \  - edge_id: k151n-decreases-mouse-eif6-release\n    subject: k151n-in-mouse-release-assay\n\
+    \    predicate: decreases\n    object: mutant-assay-eif6-release\n    mechanism:\
+    \ K151N reduces eIF6 release relative to WT despite retaining stimulation in the\
+    \ separate\n      GTP-hydrolysis assay. This preserves the experimentally important\
+    \ uncoupling without joining separate\n      assays into one directly observed\
+    \ temporal chain.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:21536732\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC3084026/\n      snippet: eIF6 release\n\
+    \      explanation: Figure 6C WT/K151N lanes and contrast with Figure 6B, retaining\
+    \ the differing particle\n        and buffer contexts.\n      cache_path: evidence/PF01172/finch-2011-sbds.txt\n\
+    \      cache_sha256: 0d56ee0dd618c81142fd366253d3c8b39e79ca0a37c0d014fd4608869e9e47d5\n\
+    curation_events:\n- timestamp: '2026-10-11T09:52:07Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate scoped whole-SBDS release and\
+    \ hydrolysis graphs for PF01172.\n  history_record: history/records/PF01172/2026-10-11T095207Z-codex-c7bbeb.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Q9Y3A5/SBDS_HUMAN, 250 aa and sequence version 4, matches current NP_057122.2
+    and InterPro exactly, with PF01172 at 14-100. The study cites unversioned NP_057122;
+    current agreement does not independently sequence its clone. The structural domain-I
+    definition 2-96 is not identical to the Pfam boundary. R126 and K151 are outside
+    this N-terminal domain, so their whole-protein effects cannot establish a domain-local
+    catalytic site. Human factors and mouse/rabbit particles are mixed-species systems.
+  target_ids:
+  - PF01172
+  evidence_ids:
+  - identity
+  - primary
+  - cited-refseq-boundary
+  - later-recycling-lead
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Joint-factor inputs prevent assigning independent sufficiency to SBDS.
+    Mature rabbit particles with eIF6(1-225), native mouse precursors and rabbit-particle
+    hydrolysis are separate graphs. The S235 exclusion is restricted to the truncation
+    experiment. K151N is compared with no SBDS for retained hydrolysis stimulation,
+    not declared equivalent to WT from a nonsignificant contrast. Separate vessels
+    and differing buffers are retained; no transitive atomic cycle, clinical outcome
+    or isolated-domain sufficiency is invented.
+  target_ids:
+  - PF01172
+  evidence_ids:
+  - primary
+  - native
+  - cited-refseq-boundary
+  - later-recycling-lead
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Full purification tags/scars and supplementary S7 binding data were not
+    obtained. Europe PMC returned a non-open-access XML error and the publisher supplement
+    route returned HTTP 403. Raw blots, complete clone sequences, domain-specific
+    functional perturbations and additional species remain unreviewed. The 2015 structural
+    study is a discovered lead and the 2022 recycling study was read only at abstract
+    level; neither contributes new edges.
+  target_ids:
+  - PF01172
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01172-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve SBDS construct and domain-specific causal coverage
+  description: Obtain the 2011 supplement and exact clones, assess binding/folding
+    controls at their actual scope, and review domain-specific perturbations and later
+    structural/recycling studies. Keep human-factor and particle-species boundaries
+    explicit, distinguish static structural contacts from causal transitions, and
+    retain a successor review before strengthening or extending claims.
+  target_ids:
+  - PF01172
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - cited-refseq-boundary
+  - later-recycling-lead
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01172.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Obtain the 2011 supplement and exact clones, assess binding/folding
+    controls at their actual scope, and review domain-specific perturbations and later
+    structural/recycling studies. Keep human-factor and particle-species boundaries
+    explicit, distinguish static structural contacts from causal transitions, and
+    retain a successor review before strengthening or extending claims.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01172
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Figures 3 and 6 were visually inspected and relevant main Methods, biochemical/structural
+  Results and Discussion read. The full 2011 supplement, raw blots, structure coordinates
+  and all cellular/genetic experiments were not assessed. The 2022 abstract is a coverage
+  lead, not a full-study review. Figure 7's proposed cycle is not adopted as an observed
+  trajectory.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF00893
+  path: curation/families/PF00893.yaml
+session:
+  id: 2026-10-11T075200Z-codex-c37f88
+  timestamp: '2026-10-11T07:52:00Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate condition-specific EmrE proton flux and E14Q controls
+  details: Added three MECHANISTIC graphs with five DIRECT OBSERVED edges for pH-gradient
+    and opposite-potential EmrE proteoliposome assays from the 2017 primary paper.
+    Figure 7 was visually inspected; P23895 reference, PF00893 interval and E14 mapping
+    were verified, and the cited GS-remnant purification protocol was inspected. Drug-translocation
+    microsteps, unique symport stoichiometry and modeled flux are not labeled observed.
+    Supplementary methods and broad SMR coverage remain open; status IN_PROGRESS,
+    local only.

@@ -1,0 +1,460 @@
+# PF01549 recombinant ShK current inhibition with qualified family association
+
+- Review: 20261011T112953Z-pf01549-shk-current-inhibition-and-family-association
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T11:29:38Z
+- Finished UTC: 2026-10-11T11:29:53Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Two observed functional-assay effects are supported for mature recombinant ShK in separate mouse Kv1.3- and Kv1.1-expressing L929 lines. Family association is curated and integrated-domain based, not a current direct Pfam hit; images and raw currents remain uninspected.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Pending PF01549 selected during accession-ordered review of all 8296 frozen families; the eponymous ShK peptide is assessed under explicitly qualified current mapping.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01549 | data/families/PF01549.yaml | generated | PF01549 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01549 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: concern. Targets: PF01549.
+
+P29187 sequence version 1 is the 35-aa Stichodactyla helianthus mature peptide. The printed primers overlap by 21 bases and translate to DDDDK followed by exact P29187 and a stop codon; this verifies the printed design, not independently resequenced clones. PF01549's curated description includes ShK, and IPR003582 maps residues 3-35 while integrating PF01549, SMART and PROSITE signatures. Current direct Pfam lookup is empty, UniProt lacks a Pfam cross-reference and the entire PF01549.30 seed lacks P29187. The graph states this qualified association and does not call 3-35 a Pfam HMM hit or claim family-wide activity.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01549.
+
+Both DIRECT OBSERVED edges are functional channel-current inhibition under explicit voltage and solution conditions, without an atomic pore-contact mechanism. Recombinant and synthetic controls, mouse channel/host versus sea-anemone peptide, and the separate T-cell assay contexts remain distinct. Current suppression is not joined into a proven immunosuppression chain.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01549.
+
+Current Pfam membership discrepancy, figure images, supplementary NMR material, raw currents, channel clone sequences and independent peptide preparations remain unresolved. Other ShKT proteins and primary native-toxin or residue-mutagenesis experiments have not received equivalent assessment.
+
+## Findings
+
+### additional-contexts: Resolve Pfam membership discrepancy and inspect primary assay images
+
+minor / open / confirmed; issue key: pf01549-causal-context-coverage.
+
+Reconcile the curated PF01549 description and integrated-domain association with absent current direct Pfam and seed matches. Obtain Figure 6 and supporting purification/NMR images, verify channel clones and assess independently mapped family members before extending residue-level or family-wide mechanisms.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Reconcile the curated PF01549 description and integrated-domain association with absent current direct Pfam and seed matches. Obtain Figure 6 and supporting purification/NMR images, verify channel clones and assess independently mapped family members before extending residue-level or family-wide mechanisms.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC3411878/; NCBI efetch full text, Methods 2.1-2.10, Results 3.1-3.4, Discussion and Figure 6 captions; no visual figure inspection. | supports | Enterokinase-cleaved and RP-HPLC-purified recombinant ShK inhibits the two mouse-channel currents in separate transfected cell lines. Hill-fit current-block midpoints are not independent binding measurements; Figure 6B's trace is synthetic peptide and Figure 6C contains the recombinant dose responses. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003582/protein/uniprot/P29187/; Accession and domain locations; paired UniProt identity facts | supports | P29187 sequence version 1 is the 35-aa Stichodactyla helianthus mature peptide. The printed primers overlap by 21 bases and translate to DDDDK followed by exact P29187 and a stop codon; this verifies the printed design, not independently resequenced clones. PF01549's curated description includes ShK, and IPR003582 maps residues 3-35 while integrating PF01549, SMART and PROSITE signatures. Current direct Pfam lookup is empty, UniProt lacks a Pfam cross-reference and the entire PF01549.30 seed lacks P29187. The graph states this qualified association and does not call 3-35 a Pfam HMM hit or claim family-wide activity. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01549 | data/families/PF01549.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Main Methods, Results, Discussion and figure captions were read from NCBI XML. Images and supplement were not visually inspected because accessible routes returned challenges or failures; no raw-data reanalysis or independent experimental replication is claimed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T112953Z-pf01549-shk-current-inhibition-and-family-association
+title: PF01549 recombinant ShK current inhibition with qualified family association
+started_at: '2026-10-11T11:29:38Z'
+finished_at: '2026-10-11T11:29:53Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Two observed functional-assay effects are supported for mature recombinant
+  ShK in separate mouse Kv1.3- and Kv1.1-expressing L929 lines. Family association
+  is curated and integrated-domain based, not a current direct Pfam hit; images and
+  raw currents remain uninspected.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01549.yaml
+    sha256: f05b8a4807fdc6519a3eb1d9958458484ceb825cdf5d9cfa9a37cb1e0f394757
+    role: context
+  - path: data/families/PF01549.yaml
+    sha256: 978783743657e91d732f0d4385ae6f91a77ac2cbef1050b6bc64deed97104a32
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01549/chang-2012-current-block.txt
+    role: context
+    sha256: dc27f03c06d2f5423bf0ff85455061edfc4f7ed2df2bbf707fb23c7550a8660f
+  - path: evidence/PF01549/ShK-identity.txt
+    role: context
+    sha256: 471fde410c626362c42a3d450f81c5abf74095ad9152de83e0cc8ee86081aca2
+targets:
+- target_id: PF01549
+  path: data/families/PF01549.yaml
+  label: PF01549
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01549.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 32819fb8d8e1c2b24c44ee448049baeb60c48e4659a223960cbd06815adca09e
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Pending PF01549 selected during accession-ordered review of all 8296
+    frozen families; the eponymous ShK peptide is assessed under explicitly qualified
+    current mapping.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01549
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Current Pfam membership discrepancy, figure images, supplementary NMR
+      material, raw currents, channel clone sequences and independent peptide preparations
+      remain unresolved. Other ShKT proteins and primary native-toxin or residue-mutagenesis
+      experiments have not received equivalent assessment.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01549
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3411878/
+  locator: NCBI efetch full text, Methods 2.1-2.10, Results 3.1-3.4, Discussion and
+    Figure 6 captions; no visual figure inspection.
+  accessed_at: '2026-10-11T11:29:53Z'
+  support: supports
+  snapshot_sha256: dc27f03c06d2f5423bf0ff85455061edfc4f7ed2df2bbf707fb23c7550a8660f
+  summary: Enterokinase-cleaved and RP-HPLC-purified recombinant ShK inhibits the
+    two mouse-channel currents in separate transfected cell lines. Hill-fit current-block
+    midpoints are not independent binding measurements; Figure 6B's trace is synthetic
+    peptide and Figure 6C contains the recombinant dose responses.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003582/protein/uniprot/P29187/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T11:29:53Z'
+  support: supports
+  snapshot_sha256: 471fde410c626362c42a3d450f81c5abf74095ad9152de83e0cc8ee86081aca2
+  summary: P29187 sequence version 1 is the 35-aa Stichodactyla helianthus mature
+    peptide. The printed primers overlap by 21 bases and translate to DDDDK followed
+    by exact P29187 and a stop codon; this verifies the printed design, not independently
+    resequenced clones. PF01549's curated description includes ShK, and IPR003582
+    maps residues 3-35 while integrating PF01549, SMART and PROSITE signatures. Current
+    direct Pfam lookup is empty, UniProt lacks a Pfam cross-reference and the entire
+    PF01549.30 seed lacks P29187. The graph states this qualified association and
+    does not call 3-35 a Pfam HMM hit or claim family-wide activity.
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T11:29:53Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01549
+  kind: record_content
+  reference: data/families/PF01549.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T11:29:53Z'
+  support: context_only
+  snapshot_sha256: 978783743657e91d732f0d4385ae6f91a77ac2cbef1050b6bc64deed97104a32
+  quote: "id: Pfam:PF01549\npfam_id: PF01549\nname: ShK domain-like\nshort_name: ShK\n\
+    seed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status: IN_PROGRESS\n\
+    source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01549\ncounters:\n\
+    \  proteins: 12913\n  matches: 26330\n  proteomes: 1018\n  taxa: 3324\n  structures:\
+    \ 10\n  alphafold_models: 11217\n  domain_architectures: 1059\nprovenance:\n \
+    \ snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR003582\ndescription: This domain of is found in several\
+    \ C. elegans proteins. The domain is 30 amino acids long\n  and rich in cysteine\
+    \ residues. There are 6 conserved cysteine positions in the domain that form three\n\
+    \  disulphide bridges. The domain is found in the potassium channel inhibitor\
+    \ ShK in sea anemone [[cite:PUB00030746]][[cite:PUB00033687]].\ncuration_history:\
+    \ history/records/PF01549\ndiscussions:\n- discussion_id: shk-family-mapping-and-channel-mechanism-limits\n\
+    \  prompt: Reconcile current Pfam membership and inspect assay figures before\
+    \ extending ShK-family mechanisms.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ Curated eponymous-family association supports retaining these peptide-specific\
+    \ functional\n    assays, but it is not current Pfam HMM membership or evidence\
+    \ that nematode multidomain proteins are\n    channel blockers.\n  evidence:\n\
+    \  - reference: PMID:22659540\n    supports: PARTIAL\n    evidence_source: full_text_and_figure_captions\n\
+    \    explanation: Purification, mass/NMR descriptions and patch-clamp Methods/Results\
+    \ support the tested\n      mature recombinant peptide. Figure images, supplementary\
+    \ NMR data, raw currents and complete channel\n      clones remain uninspected.\
+    \ T-cell assays use distinct human/rat contexts and do not by themselves\n   \
+    \   join channel block to a uniquely established cellular causal chain.\n  posed_by:\
+    \ Codex\n  posed_date: '2026-10-11'\n  notes: Retain the explicit distinction\
+    \ between integrated IPR003582 3-35 and absent current PF01549\n    hit/seed membership.\
+    \ Inspect original native-toxin and mutagenesis studies, additional mapped family\n\
+    \    members and raw assay images before adopting residue-contact mechanisms or\
+    \ family-wide transfers.\n    Partial scientific self-review; IN_PROGRESS.\ncausal_graphs:\n\
+    - graph_id: shk-recombinant-mouse-kv13-current\n  title: Recombinant mature ShK\
+    \ decreases mouse Kv1.3 current\n  scope: Enterokinase-cleaved recombinant Stichodactyla\
+    \ helianthus ShK tested on mouse Kv1.3 stably expressed\n    in L929 fibroblasts,\
+    \ Chang 2012 Figure 6A/C; not every ShKT-containing protein.\n  context: Refolded\
+    \ recombinant peptide is cleaved from thioredoxin and purified by RP-HPLC, leaving\
+    \ no\n    extra N-terminal residue. Whole-cell patch clamp at room temperature\
+    \ uses 200-ms pulses from -80 to\n    +40 mV every 30 s. Pipette solution contains\
+    \ 145 mM KF, 10 mM HEPES, 10 mM EGTA and 2 mM MgCl2, pH\n    7.2, 290 mOsm; bath\
+    \ contains 160 mM NaCl, 4.5 mM KCl, 2 mM CaCl2, 1 mM MgCl2 and 10 mM HEPES, pH\
+    \ 7.2,\n    300 mOsm. Figure 6C's caption reports 3-5 determinations per point.\n\
+    \  family_mapping: P29187 / K1A_STIHL is the 35-aa mature peptide, sequence version\
+    \ 1, from taxon 6123.\n    The published primers overlap by 21 bases and encode\
+    \ DDDDK followed by exact P29187 and a stop codon;\n    this verifies the printed\
+    \ design, not independent clone resequencing. Current PF01549's curated description\n\
+    \    explicitly includes ShK; integrated IPR003582 maps P29187 residues 3-35 and\
+    \ includes the PF01549 signature.\n    However, P29187 has no current UniProt\
+    \ Pfam cross-reference or direct PF01549 hit and is absent from\n    the inspected\
+    \ PF01549.30 seed. This is curated-family plus integrated-domain association,\
+    \ not a verified\n    current Pfam HMM interval. Mouse channel assay host is taxon\
+    \ 10090; exact channel clone sequence was\n    not independently verified.\n \
+    \ scope_status: MECHANISTIC\n  taxon: NCBITaxon:6123\n  limitations: The functional\
+    \ Hill-fit midpoint is not an independently measured physical binding constant.\n\
+    \    Current reduction establishes a scoped channel-blocking response, not atomic\
+    \ pore contacts or a complete\n    immunosuppression pathway. Full text and captions\
+    \ were read, but figure images, raw currents and supplementary\n    NMR data were\
+    \ not visually inspected. Other family members, channel paralogs and independent\
+    \ peptide\n    batches remain unassessed.\n  nodes:\n  - node_id: recombinant-mature-shk-kv13\n\
+    \    label: Apply purified recombinant mature ShK to mouse Kv1.3-expressing L929\
+    \ cells\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:P29187\n\
+    \  - node_id: mouse-kv13-peak-current\n    label: Mouse Kv1.3 peak current at\
+    \ +40 mV\n    node_type: ACTIVITY\n  edges:\n  - edge_id: recombinant-shk-decreases-kv13-current\n\
+    \    subject: recombinant-mature-shk-kv13\n    predicate: decreases\n    object:\
+    \ mouse-kv13-peak-current\n    mechanism: Recombinant ShK produces concentration-dependent\
+    \ inhibition of peak current in the Kv1.3-expressing\n      line. The reported\
+    \ functional midpoint is 25 +/- 10 pM; synthetic ShK provides a comparator without\n\
+    \      a statistically significant potency difference. No residue-specific contact\
+    \ is directly measured\n      here.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:22659540\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3411878/\n      snippet:\
+    \ reduction of peak current\n      explanation: Methods 2.8-2.9, Results 3.4 and\
+    \ Figure 6A/C's caption support the recombinant-peptide\n        current response.\
+    \ This claim uses inspected text/captions, not a claimed visual review of the\n\
+    \        inaccessible figure.\n      cache_path: evidence/PF01549/chang-2012-current-block.txt\n\
+    \      cache_sha256: dc27f03c06d2f5423bf0ff85455061edfc4f7ed2df2bbf707fb23c7550a8660f\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003582/protein/uniprot/P29187/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR003582/protein/uniprot/P29187/\n\
+    \      snippet: 'P29187 InterPro:IPR003582; integrated-domain interval: 3-35,\
+    \ inclusive.'\n      explanation: Current integrated-domain mapping and the separately\
+    \ inspected PF01549 description\n        establish the qualified family association,\
+    \ while the missing direct Pfam hit and seed membership\n        remain explicit.\n\
+    \      cache_path: evidence/PF01549/ShK-identity.txt\n      cache_sha256: 471fde410c626362c42a3d450f81c5abf74095ad9152de83e0cc8ee86081aca2\n\
+    - graph_id: shk-recombinant-mouse-kv11-current\n  title: Recombinant mature ShK\
+    \ decreases mouse Kv1.1 current\n  scope: The separate mouse Kv1.1-expressing\
+    \ L929 line in Chang 2012 Figure 6C; the example trace in Figure\n    6B uses\
+    \ synthetic ShK and is not misattributed to recombinant peptide.\n  context: RP-HPLC-purified,\
+    \ enterokinase-cleaved recombinant ShK is applied during room-temperature whole-cell\n\
+    \    recording. Pulses run from -80 to +40 mV for 200 ms every 30 s. Pipette solution\
+    \ is 145 mM KF, 10\n    mM HEPES, 10 mM EGTA, 2 mM MgCl2, pH 7.2, 290 mOsm; bath\
+    \ is 160 mM NaCl, 4.5 mM KCl, 2 mM CaCl2, 1\n    mM MgCl2, 10 mM HEPES, pH 7.2,\
+    \ 300 mOsm. Dose-response values use peak current at +40 mV and 3-5 determinations\n\
+    \    per point according to the caption.\n  family_mapping: Tested mature ShK\
+    \ corresponds to sequence-version-1 P29187, 35 aa from Stichodactyla\n    helianthus;\
+    \ the printed overlapping primers encode that exact mature sequence after DDDDK.\
+    \ PF01549's\n    curated family description includes this peptide and its integrated\
+    \ IPR003582 interval is 3-35. That\n    interval is not a current PF01549 HMM\
+    \ hit; the current direct Pfam query is empty and the entire inspected\n    PF01549.30\
+    \ seed lacks P29187. The mouse channel and host are separate assay entities, not\
+    \ sea-anemone\n    gene products.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:6123\n\
+    \  limitations: The 15 +/- 5 pM functional inhibition midpoint does not prove\
+    \ physical affinity, absolute\n    selectivity, a Lys22 pore-plug geometry or\
+    \ activity of all family proteins. Figure 6C's caption/Results\n    were inspected\
+    \ but its image and raw recordings were unavailable. Exact channel clones, independent\n\
+    \    purification batches, other channel classes and native-organism function\
+    \ require separate evidence.\n  nodes:\n  - node_id: recombinant-mature-shk-kv11\n\
+    \    label: Apply purified recombinant mature ShK to mouse Kv1.1-expressing L929\
+    \ cells\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:P29187\n\
+    \  - node_id: mouse-kv11-peak-current\n    label: Mouse Kv1.1 peak current at\
+    \ +40 mV\n    node_type: ACTIVITY\n  edges:\n  - edge_id: recombinant-shk-decreases-kv11-current\n\
+    \    subject: recombinant-mature-shk-kv11\n    predicate: decreases\n    object:\
+    \ mouse-kv11-peak-current\n    mechanism: Recombinant ShK reduces peak current\
+    \ in the separate Kv1.1-expressing line with a reported\n      functional midpoint\
+    \ of 15 +/- 5 pM. The study finds no significant difference from synthetic-peptide\n\
+    \      potency. This response is retained separately from the Kv1.3 experiment\
+    \ and from T-cell proliferation\n      assays.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:22659540\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3411878/\n      snippet:\
+    \ reduction of peak current\n      explanation: Methods 2.8-2.9, Results 3.4 and\
+    \ Figure 6C's recombinant dose-response caption support\n        this direction.\
+    \ Figure 6B's synthetic-peptide trace is excluded from recombinant-specific evidence.\n\
+    \      cache_path: evidence/PF01549/chang-2012-current-block.txt\n      cache_sha256:\
+    \ dc27f03c06d2f5423bf0ff85455061edfc4f7ed2df2bbf707fb23c7550a8660f\ncuration_events:\n\
+    - timestamp: '2026-10-11T11:21:57Z'\n  curator: Codex\n  action: CREATE\n  outcome:\
+    \ changed\n  summary: Curated recombinant mature ShK inhibition of mouse Kv1.3\
+    \ and Kv1.1 currents.\n  history_record: history/records/PF01549/2026-10-11T112157Z-codex-01e710.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: concern
+  summary: P29187 sequence version 1 is the 35-aa Stichodactyla helianthus mature
+    peptide. The printed primers overlap by 21 bases and translate to DDDDK followed
+    by exact P29187 and a stop codon; this verifies the printed design, not independently
+    resequenced clones. PF01549's curated description includes ShK, and IPR003582
+    maps residues 3-35 while integrating PF01549, SMART and PROSITE signatures. Current
+    direct Pfam lookup is empty, UniProt lacks a Pfam cross-reference and the entire
+    PF01549.30 seed lacks P29187. The graph states this qualified association and
+    does not call 3-35 a Pfam HMM hit or claim family-wide activity.
+  target_ids:
+  - PF01549
+  evidence_ids:
+  - identity
+  - primary
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Both DIRECT OBSERVED edges are functional channel-current inhibition under
+    explicit voltage and solution conditions, without an atomic pore-contact mechanism.
+    Recombinant and synthetic controls, mouse channel/host versus sea-anemone peptide,
+    and the separate T-cell assay contexts remain distinct. Current suppression is
+    not joined into a proven immunosuppression chain.
+  target_ids:
+  - PF01549
+  evidence_ids:
+  - primary
+  - native
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Current Pfam membership discrepancy, figure images, supplementary NMR material,
+    raw currents, channel clone sequences and independent peptide preparations remain
+    unresolved. Other ShKT proteins and primary native-toxin or residue-mutagenesis
+    experiments have not received equivalent assessment.
+  target_ids:
+  - PF01549
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01549-causal-context-coverage
+  category: identity
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve Pfam membership discrepancy and inspect primary assay images
+  description: Reconcile the curated PF01549 description and integrated-domain association
+    with absent current direct Pfam and seed matches. Obtain Figure 6 and supporting
+    purification/NMR images, verify channel clones and assess independently mapped
+    family members before extending residue-level or family-wide mechanisms.
+  target_ids:
+  - PF01549
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01549.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Reconcile the curated PF01549 description and integrated-domain association
+    with absent current direct Pfam and seed matches. Obtain Figure 6 and supporting
+    purification/NMR images, verify channel clones and assess independently mapped
+    family members before extending residue-level or family-wide mechanisms.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01549
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Main Methods, Results, Discussion and figure captions were read from NCBI XML. Images
+  and supplement were not visually inspected because accessible routes returned challenges
+  or failures; no raw-data reanalysis or independent experimental replication is claimed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

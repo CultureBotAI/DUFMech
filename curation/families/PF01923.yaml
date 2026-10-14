@@ -1,0 +1,1981 @@
+pfam_id: PF01923
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01923
+causal_graphs:
+- graph_id: sepduo-product-2001
+  title: Salmonella PduO supports AdoCbl formation
+  scope: Johnson2001 inclusion-body-enriched recombinant PduO from the LT2 gene.
+  context: Anoxic37C; Tris200mM pH8, ATP0.4mM, MgCl2 2.8mM, phosphate1.6mM, HOCbl50uM and Ti(III)citrate1mM.
+    Reductant supplies cob(I)alamin before enzymatic transfer.
+  family_mapping: SeLT2 STM2050 PduO Q8ZNR5 sequence v1, 336 aa; PF01923 3-166 and separate PF03928 201-328.
+    Tested full-length protein unless a construct is named. Current reference mapping, not independent
+    historical clone resequencing.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:99287
+  limitations: This is joint-input biochemical activity, not direct reduction of cyanocobalamin by PduO
+    or isolated-domain sufficiency. Partially purified preparation; empty-vector and omission controls
+    are retained.
+  nodes:
+  - node_id: reaction
+    label: PduO with ATP, reduced cob(I)alamin and assay buffer
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8ZNR5
+  - node_id: product
+    label: AdoCbl product
+    node_type: STATE
+  edges:
+  - edge_id: reaction-produces-product
+    subject: reaction
+    predicate: produces
+    object: product
+    mechanism: Adding the PduO preparation yields the product spectrum; photolysis and ATP/substrate/reductant/enzyme
+      omission controls support adenosyltransferase activity.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:11160088
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC95042/
+      snippet: encodes a protein with ATP:cob(I)alamin adenosyltransferase activity.
+      explanation: Figure5 and enzyme-assay Results/Methods; photolysis occurs in the presence of Ti(III),
+        not the later EutT assay.
+      cache_path: evidence/PF01923/johnson-2001.txt
+      cache_sha256: d9b8342021f75f547d0659325e60c0041bee21f254e6c896fb518359f7ba10a5
+- graph_id: sepduo-growth-2001
+  title: PduO genotype alters propanediol growth
+  scope: Johnson2001 LT2 whole-gene perturbations and pDP1 complementation.
+  context: NCE0.4% 1,2-propanediol with cyanocobalamin,37C, OD600; plasmids induced with0.02mM IPTG. delta-pduO651
+    removes nt19-981; cobA366::Tn10dCam is distinct.
+  family_mapping: SeLT2 STM2050 PduO Q8ZNR5 sequence v1, 336 aa; PF01923 3-166 and separate PF03928 201-328.
+    Tested full-length protein unless a construct is named. Current reference mapping, not independent
+    historical clone resequencing.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:99287
+  limitations: Growth is INDIRECT. The cobA single mutant resembles WT under these conditions; no claim
+    that PduO is the only ACAT or that the double mutant lacks every ACAT. Vector does not rescue.
+  nodes:
+  - node_id: pduo
+    label: delta-pduO651 in the cobA-positive host
+    node_type: PERTURBATION
+  - node_id: double
+    label: Combined pduO/cobA lesions
+    node_type: PERTURBATION
+  - node_id: rescue
+    label: pDP1 expressing PduO in the double mutant
+    node_type: PERTURBATION
+  - node_id: overexpression
+    label: pDP1 expressing PduO in WT
+    node_type: PERTURBATION
+  - node_id: growth
+    label: Growth on 1,2-propanediol
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: pduo-decreases-growth
+    subject: pduo
+    predicate: decreases
+    object: growth
+    mechanism: Generation time rises from about8.4h WT to12.2h.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:11160088
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC95042/
+      snippet: optimal growth of S. enterica on 1,2-propanediol required a functional pduO gene.
+      explanation: Figure2, matched strain growth curves.
+      cache_path: evidence/PF01923/johnson-2001.txt
+      cache_sha256: d9b8342021f75f547d0659325e60c0041bee21f254e6c896fb518359f7ba10a5
+  - edge_id: double-decreases-growth
+    subject: double
+    predicate: decreases
+    object: growth
+    mechanism: The double mutant fails to grow in this medium, unlike either single-mutant comparison.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:11160088
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC95042/
+      snippet: optimal growth of S. enterica on 1,2-propanediol required a functional pduO gene.
+      explanation: Figure2 and Table1 strain genotypes.
+      cache_path: evidence/PF01923/johnson-2001.txt
+      cache_sha256: d9b8342021f75f547d0659325e60c0041bee21f254e6c896fb518359f7ba10a5
+  - edge_id: rescue-increases-growth
+    subject: rescue
+    predicate: increases
+    object: growth
+    mechanism: pDP1 restores growth, with reported generation time about5.8h.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:11160088
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC95042/
+      snippet: optimal growth of S. enterica on 1,2-propanediol required a functional pduO gene.
+      explanation: Figure2, BE114 complementation and vector-control Results.
+      cache_path: evidence/PF01923/johnson-2001.txt
+      cache_sha256: d9b8342021f75f547d0659325e60c0041bee21f254e6c896fb518359f7ba10a5
+  - edge_id: overexpression-increases-growth
+    subject: overexpression
+    predicate: increases
+    object: growth
+    mechanism: pDP1 accelerates growth of the WT background in the same experiment.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:11160088
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC95042/
+      snippet: optimal growth of S. enterica on 1,2-propanediol required a functional pduO gene.
+      explanation: Figure2, BE122 versus WT.
+      cache_path: evidence/PF01923/johnson-2001.txt
+      cache_sha256: d9b8342021f75f547d0659325e60c0041bee21f254e6c896fb518359f7ba10a5
+- graph_id: sepduo-cofactor-bypass-2001
+  title: Supplied AdoCbl partially bypasses the double-mutant defect
+  scope: Johnson2001 external-cofactor bypass in the pduO/cobA double mutant.
+  context: Figure3 minimal1,2-propanediol medium; cyanocobalamin and AdoCbl supplements compared.
+  family_mapping: SeLT2 STM2050 PduO Q8ZNR5 sequence v1, 336 aa; PF01923 3-166 and separate PF03928 201-328.
+    Tested full-length protein unless a construct is named. Current reference mapping, not independent
+    historical clone resequencing.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:99287
+  limitations: Dose units conflict between prose and caption (uM versus ug/mL, with one g/mL entry). No
+    exact dose-response conversion or full rescue claim. Intracellular accumulation explanations remain
+    hypotheses.
+  nodes:
+  - node_id: adocbl
+    label: Supply AdoCbl to the pduO/cobA double mutant
+    node_type: PERTURBATION
+  - node_id: growth
+    label: Growth on 1,2-propanediol
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: adocbl-increases-growth
+    subject: adocbl
+    predicate: increases
+    object: growth
+    mechanism: AdoCbl permits slow growth where cyanocobalamin does not; reported generation time23h versus
+      WT8.5h.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:11160088
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC95042/
+      snippet: optimal growth of S. enterica on 1,2-propanediol required a functional pduO gene.
+      explanation: Figure3 and accompanying bypass Results.
+      cache_path: evidence/PF01923/johnson-2001.txt
+      cache_sha256: d9b8342021f75f547d0659325e60c0041bee21f254e6c896fb518359f7ba10a5
+- graph_id: sepduo-truncation-activity-2004
+  title: N-terminal PduO constructs retain transferase activity
+  scope: Johnson2004 untagged purified full-length and1-90/1-185/1-230/1-293 constructs.
+  context: Table2; anoxic37C Tris200mM pH8, KCl5mM, MgCl2 2.5mM, ATP0.5mM, HOCbl50uM, Ti(III)citrate1mM.
+  family_mapping: SeLT2 STM2050 PduO Q8ZNR5 sequence v1, 336 aa; PF01923 3-166 and separate PF03928 201-328.
+    Tested full-length protein unless a construct is named. Current reference mapping, not independent
+    historical clone resequencing.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:99287
+  limitations: The shortest active1-185 construct extends beyond PF01923 3-166. Inactive1-90 is not proof
+    that every missing residue is catalytic. One prose1-193 label conflicts with1-293 in construct/table/primer
+    descriptions.
+  nodes:
+  - node_id: c185
+    label: PduO1-185 with ATP and reduced substrate
+    node_type: ACTIVITY
+  - node_id: c230
+    label: PduO1-230 with ATP and reduced substrate
+    node_type: ACTIVITY
+  - node_id: c293
+    label: PduO1-293 with ATP and reduced substrate
+    node_type: ACTIVITY
+  - node_id: c90
+    label: Replace full PduO with1-90
+    node_type: PERTURBATION
+  - node_id: product
+    label: AdoCbl formation
+    node_type: STATE
+  edges:
+  - edge_id: c185-produces-product
+    subject: c185
+    predicate: produces
+    object: product
+    mechanism: Reported specific activity433nmol/min/mg, compared with full-length262; different molecular
+      masses prevent equating this to the same change in kcat.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: associated with its N-terminal domain.
+      explanation: Table2; Figure2 construct sizes; standard biochemical assay.
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+  - edge_id: c230-produces-product
+    subject: c230
+    predicate: produces
+    object: product
+    mechanism: Reported specific activity366nmol/min/mg, compared with full-length262; different molecular
+      masses prevent equating this to the same change in kcat.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: associated with its N-terminal domain.
+      explanation: Table2; Figure2 construct sizes; standard biochemical assay.
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+  - edge_id: c293-produces-product
+    subject: c293
+    predicate: produces
+    object: product
+    mechanism: Reported specific activity284nmol/min/mg, compared with full-length262; different molecular
+      masses prevent equating this to the same change in kcat.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: associated with its N-terminal domain.
+      explanation: Table2; Figure2 construct sizes; standard biochemical assay.
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+  - edge_id: c90-decreases-product
+    subject: c90
+    predicate: decreases
+    object: product
+    mechanism: Activity is not detected for1-90 under the assay used for active longer constructs.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: associated with its N-terminal domain.
+      explanation: Table2 negative construct result.
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+- graph_id: sepduo-triphosphate-2004
+  title: PduO reaction releases triphosphate
+  scope: Johnson2004 full-length purified PduO reaction product analysis.
+  context: 31P NMR after2h37C, ATP/HOCbl2mM, Ti(III)citrate5mM; EDTA added for analysis.
+  family_mapping: SeLT2 STM2050 PduO Q8ZNR5 sequence v1, 336 aa; PF01923 3-166 and separate PF03928 201-328.
+    Tested full-length protein unless a construct is named. Current reference mapping, not independent
+    historical clone resequencing.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:99287
+  limitations: NMR identifies a phosphate product, not an observed atomic reaction trajectory or whether
+    substrate binding is ordered.
+  nodes:
+  - node_id: reaction
+    label: PduO, ATP and chemically reduced corrinoid reaction
+    node_type: ACTIVITY
+  - node_id: pppi
+    label: Triphosphate reaction product
+    node_type: STATE
+  edges:
+  - edge_id: reaction-produces-pppi
+    subject: reaction
+    predicate: produces
+    object: pppi
+    mechanism: The product phosphorus spectrum matches the triphosphate standard rather than pyrophosphate.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: triphosphate was a product
+      explanation: Figure3 and phosphorus-NMR Methods.
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+- graph_id: sepduo-inhibition-2004
+  title: ADP and phosphate products inhibit PduO in vitro
+  scope: Johnson2004 additions to the full-length PduO enzyme assay.
+  context: ADP100uM with ATP50uM; separate PPi/PPPi4mM additions. Matched no-addition assays are comparators.
+  family_mapping: SeLT2 STM2050 PduO Q8ZNR5 sequence v1, 336 aa; PF01923 3-166 and separate PF03928 201-328.
+    Tested full-length protein unless a construct is named. Current reference mapping, not independent
+    historical clone resequencing.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:99287
+  limitations: ADP inhibition is condition-specific, not proven cellular feedback. Pi has no comparable
+    effect. Reported PPPi71% and165/222 rates disagree numerically; retain only partial inhibition.
+  nodes:
+  - node_id: adp
+    label: Add100uM ADP at50uM ATP
+    node_type: PERTURBATION
+  - node_id: ppi
+    label: Add4mM pyrophosphate
+    node_type: PERTURBATION
+  - node_id: pppi
+    label: Add4mM triphosphate
+    node_type: PERTURBATION
+  - node_id: activity
+    label: AdoCbl-forming activity
+    node_type: STATE
+  edges:
+  - edge_id: adp-decreases-activity
+    subject: adp
+    predicate: decreases
+    object: activity
+    mechanism: About10% activity remains; reported Ki4.9uM derives from experiments not plotted.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: only 10% activity remained
+      explanation: Figure4 and nucleotide-inhibition Results.
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+  - edge_id: ppi-decreases-activity
+    subject: ppi
+    predicate: decreases
+    object: activity
+    mechanism: Activity falls to29% of the no-addition control.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: pyrophosphate or triphosphate
+      explanation: 'Results: phosphate and pyrophosphate additions.'
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+  - edge_id: pppi-decreases-activity
+    subject: pppi
+    predicate: decreases
+    object: activity
+    mechanism: Triphosphate partially inhibits activity; exact percentage remains qualified by inconsistent
+      reported numbers.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: pyrophosphate or triphosphate
+      explanation: 'Results: phosphate-product inhibition.'
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+- graph_id: sepduo-metal-additions-2004
+  title: Divalent metals change PduO assay activity
+  scope: Johnson2004 full-length PduO with added divalent salts.
+  context: Standard biochemical assay except Mg is omitted or replaced with a2.5mM test metal; compare
+    no-added-metal rate91nmol/min/mg.
+  family_mapping: SeLT2 STM2050 PduO Q8ZNR5 sequence v1, 336 aa; PF01923 3-166 and separate PF03928 201-328.
+    Tested full-length protein unless a construct is named. Current reference mapping, not independent
+    historical clone resequencing.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:99287
+  limitations: No-added-metal preparation retains32% of Mg-supported activity; this does not prove metal-free
+    protein. Ca has little effect. High-concentration inhibition does not establish physiological toxicity
+    or exact metal binding.
+  nodes:
+  - node_id: mg
+    label: Add2.5mM Mg(II)
+    node_type: PERTURBATION
+  - node_id: mn
+    label: Add2.5mM Mn(II)
+    node_type: PERTURBATION
+  - node_id: co
+    label: Add2.5mM Co(II)
+    node_type: PERTURBATION
+  - node_id: cd
+    label: Add2.5mM Cd(II)
+    node_type: PERTURBATION
+  - node_id: zn
+    label: Add2.5mM Zn(II)
+    node_type: PERTURBATION
+  - node_id: ni
+    label: Add2.5mM Ni(II)
+    node_type: PERTURBATION
+  - node_id: cu
+    label: Add2.5mM Cu(II)
+    node_type: PERTURBATION
+  - node_id: activity
+    label: AdoCbl-forming activity
+    node_type: STATE
+  edges:
+  - edge_id: mg-increases-activity
+    subject: mg
+    predicate: increases
+    object: activity
+    mechanism: Reported rate285nmol/min/mg versus91 without added divalent metal.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: highest activities
+      explanation: Divalent-metal Results; matched metal-replacement assays.
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+  - edge_id: mn-increases-activity
+    subject: mn
+    predicate: increases
+    object: activity
+    mechanism: Reported rate277nmol/min/mg versus91 without added divalent metal.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: highest activities
+      explanation: Divalent-metal Results; matched metal-replacement assays.
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+  - edge_id: co-increases-activity
+    subject: co
+    predicate: increases
+    object: activity
+    mechanism: Reported rate266nmol/min/mg versus91 without added divalent metal.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: highest activities
+      explanation: Divalent-metal Results; matched metal-replacement assays.
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+  - edge_id: cd-decreases-activity
+    subject: cd
+    predicate: decreases
+    object: activity
+    mechanism: The added metal reduces activity below detection under these assay conditions.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: abolished measurable activity
+      explanation: Divalent-metal Results; activity not detected.
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+  - edge_id: zn-decreases-activity
+    subject: zn
+    predicate: decreases
+    object: activity
+    mechanism: The added metal reduces activity below detection under these assay conditions.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: abolished measurable activity
+      explanation: Divalent-metal Results; activity not detected.
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+  - edge_id: ni-decreases-activity
+    subject: ni
+    predicate: decreases
+    object: activity
+    mechanism: The added metal reduces activity below detection under these assay conditions.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: abolished measurable activity
+      explanation: Divalent-metal Results; activity not detected.
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+  - edge_id: cu-decreases-activity
+    subject: cu
+    predicate: decreases
+    object: activity
+    mechanism: The added metal reduces activity below detection under these assay conditions.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: abolished measurable activity
+      explanation: Divalent-metal Results; activity not detected.
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+- graph_id: sepduo-truncation-complementation-2004
+  title: Longer N-terminal constructs restore degradation
+  scope: Johnson2004 BE121 cobA/pduO double mutant with pLAC22 constructs.
+  context: Reported1,2-propanediol degradation complementation by1-185/1-230/1-293 compared with1-90.
+  family_mapping: SeLT2 STM2050 PduO Q8ZNR5 sequence v1, 336 aa; PF01923 3-166 and separate PF03928 201-328.
+    Tested full-length protein unless a construct is named. Current reference mapping, not independent
+    historical clone resequencing.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:99287
+  limitations: Phenotypic results are reported in text without a plotted growth series. Do not assign
+    numerical growth rescue, intracellular AdoCbl levels or isolated3-166 sufficiency.
+  nodes:
+  - node_id: c185
+    label: Express PduO1-185 in BE121
+    node_type: PERTURBATION
+  - node_id: c230
+    label: Express PduO1-230 in BE121
+    node_type: PERTURBATION
+  - node_id: c293
+    label: Express PduO1-293 in BE121
+    node_type: PERTURBATION
+  - node_id: degradation
+    label: 1,2-propanediol degradation phenotype
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: c185-increases-degradation
+    subject: c185
+    predicate: increases
+    object: degradation
+    mechanism: The construct restores the degradation phenotype;1-90 fails in the reported comparison.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: associated with its N-terminal domain.
+      explanation: Truncated-protein complementation Results; no displayed quantitative growth data.
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+  - edge_id: c230-increases-degradation
+    subject: c230
+    predicate: increases
+    object: degradation
+    mechanism: The construct restores the degradation phenotype;1-90 fails in the reported comparison.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: associated with its N-terminal domain.
+      explanation: Truncated-protein complementation Results; no displayed quantitative growth data.
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+  - edge_id: c293-increases-degradation
+    subject: c293
+    predicate: increases
+    object: degradation
+    mechanism: The construct restores the degradation phenotype;1-90 fails in the reported comparison.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15547259
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC529089/
+      snippet: associated with its N-terminal domain.
+      explanation: Truncated-protein complementation Results; no displayed quantitative growth data.
+      cache_path: evidence/PF01923/johnson-2004.txt
+      cache_sha256: 7b06b92e2b8c68157e60eddd1c39aad86cc667758c588d712ddccb635c6defb7
+- graph_id: lrpduo-complementation-2007
+  title: LrPduO supports heterologous cofactor-dependent growth
+  scope: StMaurice2007 LrPduO expressed in a Salmonella LT2 metE/cobA host.
+  context: metE205 ara-9 cobA366::Tn10dCat; NCE22mM glycerol,0.2uM dicyanocobinamide,37C; OD650.
+  family_mapping: L. reuteri CRL1098 LrPduO from AY780645/AAX14514.1; current Q50EJ2 sequence v1 (gene
+    label cobA), 188 aa, PF01923 3-169. PDB3CI1 maps reference2-188 to entity8-194 with a nonidentical
+    N terminus. F112/F163 are inside PF01923; F187 and tail183-188 are outside. TEV-cleaved preparation
+    is not an isolated domain.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:99287
+  limitations: Figure caption calls cobA a deletion but the strain table records an insertion. This is
+    heterologous growth, not native LrPduO necessity or direct cellular cofactor quantification.
+  nodes:
+  - node_id: plasmid
+    label: Express LrPduO in the Salmonella test host
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q50EJ2
+  - node_id: growth
+    label: Cofactor-dependent growth
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: plasmid-increases-growth
+    subject: plasmid
+    predicate: increases
+    object: growth
+    mechanism: Growth rate0.105+/-0.009 OD/h versus vector0.001; Salmonella CobA positive control0.11+/-0.006.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:17121823
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6574208/
+      snippet: demanded adenosylation of the precursor cobinamide prior to its conversion to AdoCbl.
+      explanation: Original Figure1, Methods and strain table.
+      cache_path: evidence/PF01923/stmaurice-2007.txt
+      cache_sha256: dc1cf8546b6eaa853b460b85f1c327e5a03d15f5516b1af88ce833b9a546429b
+- graph_id: lrpduo-variant-coordination-2009
+  title: Variant complexes contain different cobalt ligands
+  scope: Mera2009 crystallized LrPduO F112A and F112H complexes.
+  context: Anoxic ATP/corrinoid crystallization with reduced-flavin system; F112A and F112H use different
+    crystallization buffers. Ligand assignments compared with WT structure.
+  family_mapping: L. reuteri CRL1098 LrPduO from AY780645/AAX14514.1; current Q50EJ2 sequence v1 (gene
+    label cobA), 188 aa, PF01923 3-169. PDB3CI1 maps reference2-188 to entity8-194 with a nonidentical
+    N terminus. F112/F163 are inside PF01923; F187 and tail183-188 are outside. TEV-cleaved preparation
+    is not an isolated domain.
+  scope_status: MECHANISTIC
+  limitations: These are observed prepared-complex structures, not a time-resolved displacement movie
+    or a fully controlled single-variable crystallization comparison.
+  nodes:
+  - node_id: f112a
+    label: Crystallize F112A with ATP and cob(II)alamin
+    node_type: ACTIVITY
+  - node_id: f112h
+    label: Crystallize F112H with ATP and cob(II)alamin
+    node_type: ACTIVITY
+  - node_id: dmb
+    label: Five-coordinate DMB-on corrinoid complex
+    node_type: STATE
+  - node_id: his
+    label: Five-coordinate His-on corrinoid complex
+    node_type: STATE
+  edges:
+  - edge_id: f112a-produces-dmb
+    subject: f112a
+    predicate: produces
+    object: dmb
+    mechanism: The variant complex retains DMB as the fifth ligand, unlike the four-coordinate WT comparison.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19236001
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2666787/
+      snippet: a five-coordinate species
+      explanation: Figure1 and structural Results; X-ray ligand assignment.
+      cache_path: evidence/PF01923/mera-2009.txt
+      cache_sha256: 8e210da8e829587bb250ad7b21ed9a09cffaff9f23eea34d48e9316fa3929ba5
+  - edge_id: f112h-produces-his
+    subject: f112h
+    predicate: produces
+    object: his
+    mechanism: The complex uses His112 as the fifth ligand with DMB displaced.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19236001
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2666787/
+      snippet: a five-coordinate species
+      explanation: Figure2 and structural Results.
+      cache_path: evidence/PF01923/mera-2009.txt
+      cache_sha256: 8e210da8e829587bb250ad7b21ed9a09cffaff9f23eea34d48e9316fa3929ba5
+- graph_id: lrpduo-cobi-kinetics-2009
+  title: F112 substitutions lower activity with pre-reduced substrate
+  scope: Mera2009 LrPduO substitutions tested in the cob(I)alamin assay.
+  context: Ti(III)citrate supplies cob(I)alamin; anoxic37C; Table3 substrate-varied kinetic fits.
+  family_mapping: L. reuteri CRL1098 LrPduO from AY780645/AAX14514.1; current Q50EJ2 sequence v1 (gene
+    label cobA), 188 aa, PF01923 3-169. PDB3CI1 maps reference2-188 to entity8-194 with a nonidentical
+    N terminus. F112/F163 are inside PF01923; F187 and tail183-188 are outside. TEV-cleaved preparation
+    is not an isolated domain.
+  scope_status: MECHANISTIC
+  limitations: These kcat changes are not the same experiment as the Fpr/FldA reduction-coupled assay.
+    Residual activity is retained; mutation effects do not uniquely identify product release.
+  nodes:
+  - node_id: f112a
+    label: F112A substitution in LrPduO
+    node_type: PERTURBATION
+  - node_id: f112h
+    label: F112H substitution in LrPduO
+    node_type: PERTURBATION
+  - node_id: f112y
+    label: F112Y substitution in LrPduO
+    node_type: PERTURBATION
+  - node_id: f112w
+    label: F112W substitution in LrPduO
+    node_type: PERTURBATION
+  - node_id: turnover
+    label: Cob(I)alamin-dependent turnover
+    node_type: STATE
+  edges:
+  - edge_id: f112a-decreases-turnover
+    subject: f112a
+    predicate: decreases
+    object: turnover
+    mechanism: kcat0.0066/s versus WT0.024/s under substrate variation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19236001
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2666787/
+      snippet: was catalytically competent
+      explanation: Table3, Co(I) assay Methods; comparison within the same assay.
+      cache_path: evidence/PF01923/mera-2009.txt
+      cache_sha256: 8e210da8e829587bb250ad7b21ed9a09cffaff9f23eea34d48e9316fa3929ba5
+  - edge_id: f112h-decreases-turnover
+    subject: f112h
+    predicate: decreases
+    object: turnover
+    mechanism: kcat0.00042/s versus WT0.024/s under substrate variation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19236001
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2666787/
+      snippet: was catalytically competent
+      explanation: Table3, Co(I) assay Methods; comparison within the same assay.
+      cache_path: evidence/PF01923/mera-2009.txt
+      cache_sha256: 8e210da8e829587bb250ad7b21ed9a09cffaff9f23eea34d48e9316fa3929ba5
+  - edge_id: f112y-decreases-turnover
+    subject: f112y
+    predicate: decreases
+    object: turnover
+    mechanism: kcat0.0017/s versus WT0.024/s under substrate variation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19236001
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2666787/
+      snippet: was catalytically competent
+      explanation: Table3, Co(I) assay Methods; comparison within the same assay.
+      cache_path: evidence/PF01923/mera-2009.txt
+      cache_sha256: 8e210da8e829587bb250ad7b21ed9a09cffaff9f23eea34d48e9316fa3929ba5
+  - edge_id: f112w-decreases-turnover
+    subject: f112w
+    predicate: decreases
+    object: turnover
+    mechanism: kcat0.0020/s versus WT0.024/s under substrate variation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19236001
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2666787/
+      snippet: was catalytically competent
+      explanation: Table3, Co(I) assay Methods; comparison within the same assay.
+      cache_path: evidence/PF01923/mera-2009.txt
+      cache_sha256: 8e210da8e829587bb250ad7b21ed9a09cffaff9f23eea34d48e9316fa3929ba5
+- graph_id: lrpduo-cobii-kinetics-2009
+  title: F112 and F163 substitutions alter the coupled assay
+  scope: Mera2009 LrPduO variants in the cob(II)alamin reduction/adenosylation assay.
+  context: Anoxic37C; Tris200mM pH8, KCl0.1M, MgCl2 1.5mM, Fpr73ug/mL, FldA0.6mg/mL, NADPH1mM;525nm initial-rate
+    readout.
+  family_mapping: L. reuteri CRL1098 LrPduO from AY780645/AAX14514.1; current Q50EJ2 sequence v1 (gene
+    label cobA), 188 aa, PF01923 3-169. PDB3CI1 maps reference2-188 to entity8-194 with a nonidentical
+    N terminus. F112/F163 are inside PF01923; F187 and tail183-188 are outside. TEV-cleaved preparation
+    is not an isolated domain.
+  scope_status: MECHANISTIC
+  limitations: F112A is very low, not proven zero. Apparent Km is not Kd; reductant coupling and mutation-induced
+    structural changes remain possible contributors. Do not join crystal structures to an observed atomic
+    reaction chain.
+  nodes:
+  - node_id: f112a
+    label: F112A substitution in LrPduO
+    node_type: PERTURBATION
+  - node_id: f112h
+    label: F112H substitution in LrPduO
+    node_type: PERTURBATION
+  - node_id: f112y
+    label: F112Y substitution in LrPduO
+    node_type: PERTURBATION
+  - node_id: f112w
+    label: F112W substitution in LrPduO
+    node_type: PERTURBATION
+  - node_id: f163a
+    label: F163A substitution
+    node_type: PERTURBATION
+  - node_id: activity
+    label: Coupled AdoCbl-forming activity
+    node_type: STATE
+  - node_id: km
+    label: Apparent cob(II)alamin Km
+    node_type: STATE
+  edges:
+  - edge_id: f112a-decreases-activity
+    subject: f112a
+    predicate: decreases
+    object: activity
+    mechanism: Activity is extremely low and kinetic constants were not determined.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19236001
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2666787/
+      snippet: extremely low activity
+      explanation: Table2 and F112A Results.
+      cache_path: evidence/PF01923/mera-2009.txt
+      cache_sha256: 8e210da8e829587bb250ad7b21ed9a09cffaff9f23eea34d48e9316fa3929ba5
+  - edge_id: f112h-decreases-activity
+    subject: f112h
+    predicate: decreases
+    object: activity
+    mechanism: kcat0.00067/s versus WT0.038/s.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19236001
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2666787/
+      snippet: extremely low activity
+      explanation: Table2, coupled-assay kinetic parameters.
+      cache_path: evidence/PF01923/mera-2009.txt
+      cache_sha256: 8e210da8e829587bb250ad7b21ed9a09cffaff9f23eea34d48e9316fa3929ba5
+  - edge_id: f112y-decreases-activity
+    subject: f112y
+    predicate: decreases
+    object: activity
+    mechanism: kcat0.0027/s versus WT0.038/s.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19236001
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2666787/
+      snippet: extremely low activity
+      explanation: Table2, coupled-assay kinetic parameters.
+      cache_path: evidence/PF01923/mera-2009.txt
+      cache_sha256: 8e210da8e829587bb250ad7b21ed9a09cffaff9f23eea34d48e9316fa3929ba5
+  - edge_id: f112w-decreases-activity
+    subject: f112w
+    predicate: decreases
+    object: activity
+    mechanism: kcat0.0032/s versus WT0.038/s.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19236001
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2666787/
+      snippet: extremely low activity
+      explanation: Table2, coupled-assay kinetic parameters.
+      cache_path: evidence/PF01923/mera-2009.txt
+      cache_sha256: 8e210da8e829587bb250ad7b21ed9a09cffaff9f23eea34d48e9316fa3929ba5
+  - edge_id: f163a-increases-km
+    subject: f163a
+    predicate: increases
+    object: km
+    mechanism: Apparent Km rises to134+/-13uM from7.8+/-1.1uM WT; this is not a directly measured binding
+      affinity.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19236001
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2666787/
+      snippet: was catalytically competent
+      explanation: Table2; F163A ATP kinetics additionally use subsaturating corrinoid.
+      cache_path: evidence/PF01923/mera-2009.txt
+      cache_sha256: 8e210da8e829587bb250ad7b21ed9a09cffaff9f23eea34d48e9316fa3929ba5
+- graph_id: lrpduo-variant-growth-2009
+  title: Tested LrPduO variants fail growth complementation
+  scope: Mera2009 individual F112A/H/Y/W, F163A, F187A and deletion183-188 constructs.
+  context: Heterologous Salmonella cobA host,30mM glycerol/150nM dicyanocobinamide; compare WT LrPduO
+    complementation.
+  family_mapping: L. reuteri CRL1098 LrPduO from AY780645/AAX14514.1; current Q50EJ2 sequence v1 (gene
+    label cobA), 188 aa, PF01923 3-169. PDB3CI1 maps reference2-188 to entity8-194 with a nonidentical
+    N terminus. F112/F163 are inside PF01923; F187 and tail183-188 are outside. TEV-cleaved preparation
+    is not an isolated domain.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:99287
+  limitations: The paper reports this result without showing raw growth data. F187 and the six-residue
+    tail lie outside PF01923; deletion183-188 is not a single S183 deletion. In-vitro activity retained
+    by some variants does not guarantee this growth phenotype.
+  nodes:
+  - node_id: variants
+    label: Replace WT LrPduO with an individually tested variant
+    node_type: PERTURBATION
+  - node_id: growth
+    label: Heterologous growth complementation
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: variants-decreases-growth
+    subject: variants
+    predicate: decreases
+    object: growth
+    mechanism: None of the tested variants supports the reported growth rescue, despite several retaining
+      substantial biochemical activity.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19236001
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2666787/
+      snippet: none of the variant enzymes analyzed in this work
+      explanation: In-vivo analysis Methods and Results; data not shown.
+      cache_path: evidence/PF01923/mera-2009.txt
+      cache_sha256: 8e210da8e829587bb250ad7b21ed9a09cffaff9f23eea34d48e9316fa3929ba5
+- graph_id: lr-free-flavin-2010
+  title: LrPduO uses supplied reduced flavins in vitro
+  scope: Mera2010 separate recombinant LrPduO preparation; TEV-cleaved.
+  context: Anoxic37C MgATP assay; FMNH2/FADH2 generated with NADH before the reaction. Fre can regenerate
+    donor but pre-reduced flavin also works without it.
+  family_mapping: L. reuteri CRL1098 LrPduO from AY780645/AAX14514.1; current Q50EJ2 sequence v1 (gene
+    label cobA), 188 aa, PF01923 3-169. PDB3CI1 maps reference2-188 to entity8-194 with a nonidentical
+    N terminus. F112/F163 are inside PF01923; F187 and tail183-188 are outside. TEV-cleaved preparation
+    is not an isolated domain.
+  scope_status: MECHANISTIC
+  limitations: This does not establish a unique physiological donor or an autonomous reductase. Free corrinoid
+    and LrF112A negatives are reported without displayed traces; Fig4 and Table1 donor ratios differ.
+  nodes:
+  - node_id: fmnh2
+    label: LrPduO, MgATP, cob(II)alamin and FMNH2
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q50EJ2
+  - node_id: fadh2
+    label: LrPduO, MgATP, cob(II)alamin and FADH2
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q50EJ2
+  - node_id: product
+    label: AdoCbl product
+    node_type: STATE
+  edges:
+  - edge_id: fmnh2-produces-product
+    subject: fmnh2
+    predicate: produces
+    object: product
+    mechanism: The complete donor/enzyme reaction forms AdoCbl; enzyme/ATP/donor omissions prevent product.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19933577
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2823439/
+      snippet: presence of free dihydroflavins
+      explanation: Figures2-4; spectral, photolysis and product-bioassay controls.
+      cache_path: evidence/PF01923/mera-2010.txt
+      cache_sha256: 5d961468bf6c2c201f8f2d6910725189a1d947b02eee0b2761f586c545b6a482
+  - edge_id: fadh2-produces-product
+    subject: fadh2
+    predicate: produces
+    object: product
+    mechanism: Reduced FAD likewise supports the coupled reduction/adenosylation reaction in this preparation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19933577
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2823439/
+      snippet: presence of free dihydroflavins
+      explanation: 'Results: FMNH2 and FADH2 donor comparison; conditions not an in-vivo donor assignment.'
+      cache_path: evidence/PF01923/mera-2010.txt
+      cache_sha256: 5d961468bf6c2c201f8f2d6910725189a1d947b02eee0b2761f586c545b6a482
+- graph_id: hu-free-flavin-2010
+  title: human ATR uses supplied reduced flavins in vitro
+  scope: Mera2010 separate recombinant human ATR preparation; TEV-cleaved.
+  context: Anoxic37C MgATP assay; FMNH2/FADH2 generated with NADH before the reaction. Fre can regenerate
+    donor but pre-reduced flavin also works without it.
+  family_mapping: Human MMAB Q96EY8 sequence v1, 250 aa, PF01923 58-227. F170/R186/R190/E193 verified
+    in the reference. Exact assay-specific recombinant endpoints remain unresolved; cited purification
+    methods include full-length and deltaN18 constructs with cleaved His tags. Reference mapping is not
+    proof of an isolated-domain effect.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:9606
+  limitations: This does not establish a unique physiological donor or an autonomous reductase. Free corrinoid
+    and LrF112A negatives are reported without displayed traces; Fig4 and Table1 donor ratios differ.
+  nodes:
+  - node_id: fmnh2
+    label: human ATR, MgATP, cob(II)alamin and FMNH2
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q96EY8
+  - node_id: fadh2
+    label: human ATR, MgATP, cob(II)alamin and FADH2
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q96EY8
+  - node_id: product
+    label: AdoCbl product
+    node_type: STATE
+  edges:
+  - edge_id: fmnh2-produces-product
+    subject: fmnh2
+    predicate: produces
+    object: product
+    mechanism: The complete donor/enzyme reaction forms AdoCbl; enzyme/ATP/donor omissions prevent product.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19933577
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2823439/
+      snippet: dihydroflavins quantitatively drove the adenosylation of cob(II)alamin by the human adenosyltransferase
+        enzyme
+      explanation: Figures2-4; spectral, photolysis and product-bioassay controls.
+      cache_path: evidence/PF01923/mera-2010.txt
+      cache_sha256: 5d961468bf6c2c201f8f2d6910725189a1d947b02eee0b2761f586c545b6a482
+  - edge_id: fadh2-produces-product
+    subject: fadh2
+    predicate: produces
+    object: product
+    mechanism: Reduced FAD likewise supports the coupled reduction/adenosylation reaction in this preparation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19933577
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2823439/
+      snippet: dihydroflavins quantitatively drove the adenosylation of cob(II)alamin by the human adenosyltransferase
+        enzyme
+      explanation: 'Results: FMNH2 and FADH2 donor comparison; conditions not an in-vivo donor assignment.'
+      cache_path: evidence/PF01923/mera-2010.txt
+      cache_sha256: 5d961468bf6c2c201f8f2d6910725189a1d947b02eee0b2761f586c545b6a482
+- graph_id: seeutt-product-2014
+  title: EutT forms AdoCbl in a coupled flavin assay
+  scope: Moore2014 purified LT2 EutT.
+  context: Anoxic37C PIPES50mM pH7; MgATP1mM,FADH2 20uM,Fre0.005mg/mL,NADH1mM;15-20min corrinoid pre-reduction.
+  family_mapping: SeLT2 STM2467 EutT Q9ZFV4 sequence v1, 267 aa, PF01923 92-246. H67/C79/C80/C83 are verified
+    reference residues OUTSIDE the domain. Purified protein retains GT before M1; whole-protein effects
+    cannot be attributed to isolated PF01923.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:99287
+  limitations: Reaction requires the combined enzyme, substrates and reducing system. This is not direct
+    ATP-independent conversion of cyanocobalamin. Printed extinction-coefficient units are unresolved.
+  nodes:
+  - node_id: reaction
+    label: EutT, MgATP, cob(II)alamin and reduced-flavin system
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9ZFV4
+  - node_id: product
+    label: AdoCbl product
+    node_type: STATE
+  edges:
+  - edge_id: reaction-produces-product
+    subject: reaction
+    predicate: produces
+    object: product
+    mechanism: Product has a525nm absorbance maximum and photolyzes to the cob(II)alamin spectrum.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24336938
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3911174/
+      snippet: free dihydroflavins drive the adenosylation
+      explanation: Figure2 and modified Co(II) assay Methods.
+      cache_path: evidence/PF01923/moore-2014.txt
+      cache_sha256: ba545296384ec0ed7f90c7eb0c3ce04a7a3228355db1b5ea068b9a8c4abe6ed4
+- graph_id: seeutt-metal-oxygen-2014
+  title: Metalation changes EutT activity and oxygen sensitivity
+  scope: Moore2014 demetalated and reconstituted purified EutT.
+  context: EDTA demetalation followed by buffer exchange and Fe(II) or Zn(II) reconstitution; Figure3
+    anoxic/oxic assays. Separate0.3% H2O2 challenge followed by catalase.
+  family_mapping: SeLT2 STM2467 EutT Q9ZFV4 sequence v1, 267 aa, PF01923 92-246. H67/C79/C80/C83 are verified
+    reference residues OUTSIDE the domain. Purified protein retains GT before M1; whole-protein effects
+    cannot be attributed to isolated PF01923.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:99287
+  limitations: The text's fold-excess label disagrees with stated reconstitution concentrations. Zn-supported
+    activity survives the tested oxidation conditions, so universal oxygen lability is unsupported. Native
+    metal occupancy is not directly established.
+  nodes:
+  - node_id: fe
+    label: Fe(II) reconstitution of the demetalated preparation
+    node_type: PERTURBATION
+  - node_id: zn
+    label: Zn(II) reconstitution of the demetalated preparation
+    node_type: PERTURBATION
+  - node_id: air
+    label: Expose Fe-loaded EutT to air
+    node_type: PERTURBATION
+  - node_id: peroxide
+    label: Expose Fe-loaded EutT to H2O2
+    node_type: PERTURBATION
+  - node_id: activity
+    label: Coupled AdoCbl-forming activity
+    node_type: STATE
+  edges:
+  - edge_id: fe-increases-activity
+    subject: fe
+    predicate: increases
+    object: activity
+    mechanism: Ferrous reconstitution gives the highest measured activity compared with the water/no-metal
+      treatment.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24336938
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3911174/
+      snippet: metalation with ferrous ions
+      explanation: Figure3 and metal-reconstitution Results.
+      cache_path: evidence/PF01923/moore-2014.txt
+      cache_sha256: ba545296384ec0ed7f90c7eb0c3ce04a7a3228355db1b5ea068b9a8c4abe6ed4
+  - edge_id: zn-increases-activity
+    subject: zn
+    predicate: increases
+    object: activity
+    mechanism: Zinc reconstitution restores substantial activity compared with demetalated material.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24336938
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3911174/
+      snippet: metalation with ferrous ions
+      explanation: Figure3 oxic and anoxic comparisons.
+      cache_path: evidence/PF01923/moore-2014.txt
+      cache_sha256: ba545296384ec0ed7f90c7eb0c3ce04a7a3228355db1b5ea068b9a8c4abe6ed4
+  - edge_id: air-decreases-activity
+    subject: air
+    predicate: decreases
+    object: activity
+    mechanism: Air exposure abolishes measurable activity of the Fe-loaded preparation, unlike Zn-loaded
+      material.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24336938
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3911174/
+      snippet: metalation with ferrous ions
+      explanation: Figure3 and oxidation Results.
+      cache_path: evidence/PF01923/moore-2014.txt
+      cache_sha256: ba545296384ec0ed7f90c7eb0c3ce04a7a3228355db1b5ea068b9a8c4abe6ed4
+  - edge_id: peroxide-decreases-activity
+    subject: peroxide
+    predicate: decreases
+    object: activity
+    mechanism: The peroxide challenge abolishes Fe-loaded activity; Zn-loaded activity remains, under
+      the reported treatment.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24336938
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3911174/
+      snippet: metalation with ferrous ions
+      explanation: Oxidant-treatment Methods and Results; peroxide comparison described in text.
+      cache_path: evidence/PF01923/moore-2014.txt
+      cache_sha256: ba545296384ec0ed7f90c7eb0c3ce04a7a3228355db1b5ea068b9a8c4abe6ed4
+- graph_id: seeutt-variant-activity-2014
+  title: EutT motif substitutions lower biochemical activity
+  scope: Moore2014 individual H67A/C79A/C80A/C83A variants of whole EutT.
+  context: Fe-reconstituted proteins in the Table2 FADH2-supported cob(II)alamin assay.
+  family_mapping: SeLT2 STM2467 EutT Q9ZFV4 sequence v1, 267 aa, PF01923 92-246. H67/C79/C80/C83 are verified
+    reference residues OUTSIDE the domain. Purified protein retains GT before M1; whole-protein effects
+    cannot be attributed to isolated PF01923.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:99287
+  limitations: All four positions are outside PF01923. H67A changes oligomer distribution; neither the
+    activity effect nor elemental analysis alone proves exact metal-ligand chemistry. Table1 C83A zinc
+    value conflicts with prose saying undetectable.
+  nodes:
+  - node_id: h67a
+    label: H67A substitution in full EutT
+    node_type: PERTURBATION
+  - node_id: c79a
+    label: C79A substitution in full EutT
+    node_type: PERTURBATION
+  - node_id: c80a
+    label: C80A substitution in full EutT
+    node_type: PERTURBATION
+  - node_id: c83a
+    label: C83A substitution in full EutT
+    node_type: PERTURBATION
+  - node_id: activity
+    label: Coupled AdoCbl-forming activity
+    node_type: STATE
+  edges:
+  - edge_id: h67a-decreases-activity
+    subject: h67a
+    predicate: decreases
+    object: activity
+    mechanism: kcat0.0083/s versus WT0.022/s; altered assembly remains an alternative contributor.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24336938
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3911174/
+      snippet: kinetic parameters of EutT variants
+      explanation: Table2 and native-PAGE discussion.
+      cache_path: evidence/PF01923/moore-2014.txt
+      cache_sha256: ba545296384ec0ed7f90c7eb0c3ce04a7a3228355db1b5ea068b9a8c4abe6ed4
+  - edge_id: c79a-decreases-activity
+    subject: c79a
+    predicate: decreases
+    object: activity
+    mechanism: kcat0.0042/s versus WT0.022/s, despite near-WT growth rescue in a different assay.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24336938
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3911174/
+      snippet: kinetic parameters of EutT variants
+      explanation: Table2, not a growth measurement.
+      cache_path: evidence/PF01923/moore-2014.txt
+      cache_sha256: ba545296384ec0ed7f90c7eb0c3ce04a7a3228355db1b5ea068b9a8c4abe6ed4
+  - edge_id: c80a-decreases-activity
+    subject: c80a
+    predicate: decreases
+    object: activity
+    mechanism: Activity is not detected in the reconstituted preparation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24336938
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3911174/
+      snippet: kinetic parameters of EutT variants
+      explanation: Table2 and variant Results.
+      cache_path: evidence/PF01923/moore-2014.txt
+      cache_sha256: ba545296384ec0ed7f90c7eb0c3ce04a7a3228355db1b5ea068b9a8c4abe6ed4
+  - edge_id: c83a-decreases-activity
+    subject: c83a
+    predicate: decreases
+    object: activity
+    mechanism: kcat0.0022/s versus WT0.022/s, with residual activity retained.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24336938
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3911174/
+      snippet: kinetic parameters of EutT variants
+      explanation: Table2.
+      cache_path: evidence/PF01923/moore-2014.txt
+      cache_sha256: ba545296384ec0ed7f90c7eb0c3ce04a7a3228355db1b5ea068b9a8c4abe6ed4
+- graph_id: seeutt-complementation-2014
+  title: EutT variants differ in ethanolamine-growth rescue
+  scope: Moore2014 JE13176 cobA343::MudJ delta-eut114 delta-pduO523.
+  context: pBAD24 alleles,90mM ethanolamine carbon plus HOCbl; Methods supplements include methionine0.5mM
+    and glycerol0.5mM.
+  family_mapping: SeLT2 STM2467 EutT Q9ZFV4 sequence v1, 267 aa, PF01923 92-246. H67/C79/C80/C83 are verified
+    reference residues OUTSIDE the domain. Purified protein retains GT before M1; whole-protein effects
+    cannot be attributed to isolated PF01923.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:99287
+  limitations: Methods print500mM arabinose; do not silently correct it or invent an HOCbl dose. No intracellular
+    AdoCbl measurement. Mutant effects are whole-protein and indirect.
+  nodes:
+  - node_id: wt
+    label: Express WT EutT in JE13176
+    node_type: PERTURBATION
+  - node_id: c79a
+    label: Express C79A EutT in JE13176
+    node_type: PERTURBATION
+  - node_id: h67a
+    label: Replace WT with H67A EutT
+    node_type: PERTURBATION
+  - node_id: c80a
+    label: Replace WT with C80A EutT
+    node_type: PERTURBATION
+  - node_id: c83a
+    label: Replace WT with C83A EutT
+    node_type: PERTURBATION
+  - node_id: growth
+    label: Growth on ethanolamine
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: wt-increases-growth
+    subject: wt
+    predicate: increases
+    object: growth
+    mechanism: WT plasmid restores growth relative to the empty vector.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24336938
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3911174/
+      snippet: complemented almost as well
+      explanation: Original Figure5; plasmid and genotype Methods.
+      cache_path: evidence/PF01923/moore-2014.txt
+      cache_sha256: ba545296384ec0ed7f90c7eb0c3ce04a7a3228355db1b5ea068b9a8c4abe6ed4
+  - edge_id: c79a-increases-growth
+    subject: c79a
+    predicate: increases
+    object: growth
+    mechanism: C79A complements nearly as well as WT despite reduced in-vitro kcat.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24336938
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3911174/
+      snippet: complemented almost as well
+      explanation: Original Figure5.
+      cache_path: evidence/PF01923/moore-2014.txt
+      cache_sha256: ba545296384ec0ed7f90c7eb0c3ce04a7a3228355db1b5ea068b9a8c4abe6ed4
+  - edge_id: h67a-decreases-growth
+    subject: h67a
+    predicate: decreases
+    object: growth
+    mechanism: The variant fails to restore the WT-plasmid growth phenotype under these conditions.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24336938
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3911174/
+      snippet: did not restore growth
+      explanation: Original Figure5; direct observation is growth, not its proposed cofactor explanation.
+      cache_path: evidence/PF01923/moore-2014.txt
+      cache_sha256: ba545296384ec0ed7f90c7eb0c3ce04a7a3228355db1b5ea068b9a8c4abe6ed4
+  - edge_id: c80a-decreases-growth
+    subject: c80a
+    predicate: decreases
+    object: growth
+    mechanism: The variant fails to restore the WT-plasmid growth phenotype under these conditions.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24336938
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3911174/
+      snippet: did not restore growth
+      explanation: Original Figure5; direct observation is growth, not its proposed cofactor explanation.
+      cache_path: evidence/PF01923/moore-2014.txt
+      cache_sha256: ba545296384ec0ed7f90c7eb0c3ce04a7a3228355db1b5ea068b9a8c4abe6ed4
+  - edge_id: c83a-decreases-growth
+    subject: c83a
+    predicate: decreases
+    object: growth
+    mechanism: The variant fails to restore the WT-plasmid growth phenotype under these conditions.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24336938
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3911174/
+      snippet: did not restore growth
+      explanation: Original Figure5; direct observation is growth, not its proposed cofactor explanation.
+      cache_path: evidence/PF01923/moore-2014.txt
+      cache_sha256: ba545296384ec0ed7f90c7eb0c3ce04a7a3228355db1b5ea068b9a8c4abe6ed4
+- graph_id: lmeutt-product-2018
+  title: Listeria EutT activity depends on corrinoid reduction state
+  scope: Costa2018 TEV-cleaved LmEutT from10403S, about90% pure.
+  context: 'Figure6/S6 MgATP assays: Ti(III)citrate supplies cob(I) substrates, whereas Fre/FAD or FldA/Fpr
+    supplies the cob(II) reduction-coupled systems. Figure5 independently checks product bioactivity/photolysis.'
+  family_mapping: L. monocytogenes10403S EutT maps to A0A0H3GFM5 sequence v1, LMRG_00627/AEO06164.1, 251
+    aa, PF01923 83-242. Costa2018 Figure2/S3 and terminal primers support the strain-matched reference;
+    no independent full clone sequence/tag-remnant verification. This is not EGD-e or either of the other10403S
+    PF01923 proteins.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:393133
+  limitations: Cob(II)inamide is negative with both tested biological reducing systems while CobA positive
+    control works; cob(I)inamide is a substrate. 'Metal-less' excludes a required transition-metal cofactor,
+    not assay Mg. No-added-ATP Figure5 reaction has residual bioactivity.
+  nodes:
+  - node_id: cobi
+    label: LmEutT, MgATP and chemically reduced cob(I)alamin
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:A0A0H3GFM5
+  - node_id: cobii-fre
+    label: LmEutT, MgATP, cob(II)alamin and Fre/FAD system
+    node_type: ACTIVITY
+  - node_id: cobii-flda
+    label: LmEutT, MgATP, cob(II)alamin and FldA/Fpr system
+    node_type: ACTIVITY
+  - node_id: cbii
+    label: LmEutT, MgATP and chemically reduced cob(I)inamide
+    node_type: ACTIVITY
+  - node_id: adocbl
+    label: AdoCbl formation
+    node_type: STATE
+  - node_id: adocbi
+    label: Adenosylcobinamide formation
+    node_type: STATE
+  edges:
+  - edge_id: cobi-produces-adocbl
+    subject: cobi
+    predicate: produces
+    object: adocbl
+    mechanism: The complete reaction produces the cobalamin adenosylation readout; spectra and appropriate
+      no-protein controls support product assignment.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30071718
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6113058/
+      snippet: adenosylated cobalamin
+      explanation: Figure6 and original supplementFigureS6; Figure5 product validation.
+      cache_path: evidence/PF01923/costa-2018.txt
+      cache_sha256: b4a6fe709c16af5345a5fdb3e7ff0aad52b57029cb08992856c294d41eff54ff
+  - edge_id: cobii-fre-produces-adocbl
+    subject: cobii-fre
+    predicate: produces
+    object: adocbl
+    mechanism: The complete reaction produces the cobalamin adenosylation readout; spectra and appropriate
+      no-protein controls support product assignment.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30071718
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6113058/
+      snippet: adenosylated cobalamin
+      explanation: Figure6 and original supplementFigureS6; Figure5 product validation.
+      cache_path: evidence/PF01923/costa-2018.txt
+      cache_sha256: b4a6fe709c16af5345a5fdb3e7ff0aad52b57029cb08992856c294d41eff54ff
+  - edge_id: cobii-flda-produces-adocbl
+    subject: cobii-flda
+    predicate: produces
+    object: adocbl
+    mechanism: The complete reaction produces the cobalamin adenosylation readout; spectra and appropriate
+      no-protein controls support product assignment.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30071718
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6113058/
+      snippet: adenosylated cobalamin
+      explanation: Figure6 and original supplementFigureS6; Figure5 product validation.
+      cache_path: evidence/PF01923/costa-2018.txt
+      cache_sha256: b4a6fe709c16af5345a5fdb3e7ff0aad52b57029cb08992856c294d41eff54ff
+  - edge_id: cbii-produces-adocbi
+    subject: cbii
+    predicate: produces
+    object: adocbi
+    mechanism: Chemically pre-reduced cob(I)inamide is adenosylated, unlike the cob(II)inamide tests.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30071718
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6113058/
+      snippet: adenosylated cobalamin
+      explanation: Figure6 right panel and original supplementFigureS6 bottom-right.
+      cache_path: evidence/PF01923/costa-2018.txt
+      cache_sha256: b4a6fe709c16af5345a5fdb3e7ff0aad52b57029cb08992856c294d41eff54ff
+- graph_id: lmeutt-triphosphate-2018
+  title: Listeria EutT releases triphosphate
+  scope: Costa2018 LmEutT reaction followed by31P NMR.
+  context: Tris100mM pH7.5 at37C,KCl500mM,MgCl2 2mM,Ti(III)1mM,HOCbl100uM,ATP3mM,enzyme20ug/mL;5h in light
+    to recycle corrinoid.
+  family_mapping: L. monocytogenes10403S EutT maps to A0A0H3GFM5 sequence v1, LMRG_00627/AEO06164.1, 251
+    aa, PF01923 83-242. Costa2018 Figure2/S3 and terminal primers support the strain-matched reference;
+    no independent full clone sequence/tag-remnant verification. This is not EGD-e or either of the other10403S
+    PF01923 proteins.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:393133
+  limitations: Light recycling differs from the dark product bioassay. Product identity does not establish
+    that every EutT homolog releases the same phosphate products.
+  nodes:
+  - node_id: reaction
+    label: LmEutT, ATP and reduced-corrinoid cycling reaction
+    node_type: ACTIVITY
+  - node_id: pppi
+    label: Triphosphate product
+    node_type: STATE
+  edges:
+  - edge_id: reaction-produces-pppi
+    subject: reaction
+    predicate: produces
+    object: pppi
+    mechanism: Phosphorus signals match PPPi standards; no-cobalamin control lacks those product signals.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30071718
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6113058/
+      snippet: triphosphate was the by-product of the reaction
+      explanation: Original Figure7 and NMR Methods.
+      cache_path: evidence/PF01923/costa-2018.txt
+      cache_sha256: b4a6fe709c16af5345a5fdb3e7ff0aad52b57029cb08992856c294d41eff54ff
+- graph_id: lmeutt-carbon-growth-2018
+  title: Listeria EutT supports ethanolamine-carbon growth
+  scope: Costa2018 heterologous Salmonella JE23613 delta-pduO522 delta-cobA1465 delta-eutT1141.
+  context: 90mM ethanolamine as carbon/energy source; cyanocobalamin200nM,IPTG100uM,37C, OD630; pTAC85
+    alleles in TableS3.
+  family_mapping: L. monocytogenes10403S EutT maps to A0A0H3GFM5 sequence v1, LMRG_00627/AEO06164.1, 251
+    aa, PF01923 83-242. Costa2018 Figure2/S3 and terminal primers support the strain-matched reference;
+    no independent full clone sequence/tag-remnant verification. This is not EGD-e or either of the other10403S
+    PF01923 proteins.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:99287
+  limitations: Host is Salmonella, not native Listeria. Codon optimization can change expression; growth
+    alone does not measure enzyme-specific flux or intracellular cofactor concentrations.
+  nodes:
+  - node_id: native
+    label: Express native LmEutT coding sequence
+    node_type: PERTURBATION
+  - node_id: optimized
+    label: Express codon-optimized LmEutT coding sequence
+    node_type: PERTURBATION
+  - node_id: growth
+    label: Growth with ethanolamine as carbon source
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: native-increases-growth
+    subject: native
+    predicate: increases
+    object: growth
+    mechanism: Native Lm allele gives weak delayed rescue; codon optimization improves yield but retains
+      about10h lag and does not reach SeEutT performance.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30071718
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6113058/
+      snippet: restored growth with ethanolamine
+      explanation: Original Figure3A, growth Methods and supplementTableS3.
+      cache_path: evidence/PF01923/costa-2018.txt
+      cache_sha256: b4a6fe709c16af5345a5fdb3e7ff0aad52b57029cb08992856c294d41eff54ff
+  - edge_id: optimized-increases-growth
+    subject: optimized
+    predicate: increases
+    object: growth
+    mechanism: Native Lm allele gives weak delayed rescue; codon optimization improves yield but retains
+      about10h lag and does not reach SeEutT performance.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30071718
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6113058/
+      snippet: restored growth with ethanolamine
+      explanation: Original Figure3A, growth Methods and supplementTableS3.
+      cache_path: evidence/PF01923/costa-2018.txt
+      cache_sha256: b4a6fe709c16af5345a5fdb3e7ff0aad52b57029cb08992856c294d41eff54ff
+- graph_id: lmeutt-nitrogen-growth-2018
+  title: Listeria EutT supports ethanolamine-nitrogen growth
+  scope: Costa2018 heterologous Salmonella JE23613 delta-pduO522 delta-cobA1465 delta-eutT1141.
+  context: 22mM glycerol carbon plus30mM ethanolamine nitrogen; cyanocobalamin200nM,IPTG100uM,37C, OD630;
+    pTAC85 alleles in TableS3.
+  family_mapping: L. monocytogenes10403S EutT maps to A0A0H3GFM5 sequence v1, LMRG_00627/AEO06164.1, 251
+    aa, PF01923 83-242. Costa2018 Figure2/S3 and terminal primers support the strain-matched reference;
+    no independent full clone sequence/tag-remnant verification. This is not EGD-e or either of the other10403S
+    PF01923 proteins.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:99287
+  limitations: Host is Salmonella, not native Listeria. Codon optimization can change expression; growth
+    alone does not measure enzyme-specific flux or intracellular cofactor concentrations.
+  nodes:
+  - node_id: native
+    label: Express native LmEutT coding sequence
+    node_type: PERTURBATION
+  - node_id: optimized
+    label: Express codon-optimized LmEutT coding sequence
+    node_type: PERTURBATION
+  - node_id: growth
+    label: Growth with ethanolamine as nitrogen source
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: native-increases-growth
+    subject: native
+    predicate: increases
+    object: growth
+    mechanism: Both Lm alleles restore growth; delayed onset remains, with the native allele about8h behind
+      the SeEutT comparison.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30071718
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6113058/
+      snippet: restored growth with ethanolamine
+      explanation: Original Figure3B, growth Methods and supplementTableS3.
+      cache_path: evidence/PF01923/costa-2018.txt
+      cache_sha256: b4a6fe709c16af5345a5fdb3e7ff0aad52b57029cb08992856c294d41eff54ff
+  - edge_id: optimized-increases-growth
+    subject: optimized
+    predicate: increases
+    object: growth
+    mechanism: Both Lm alleles restore growth; delayed onset remains, with the native allele about8h behind
+      the SeEutT comparison.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30071718
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6113058/
+      snippet: restored growth with ethanolamine
+      explanation: Original Figure3B, growth Methods and supplementTableS3.
+      cache_path: evidence/PF01923/costa-2018.txt
+      cache_sha256: b4a6fe709c16af5345a5fdb3e7ff0aad52b57029cb08992856c294d41eff54ff
+- graph_id: lmeutt-reporter-growth-2018
+  title: Listeria EutT enables a cofactor-dependent reporter phenotype
+  scope: Costa2018 JE22174 ACAT-deficient Salmonella with eutE::MudJ lacZ reporter.
+  context: Lactose29mM,ethanolamine1mM,cyanocobalamin50nM,IPTG10uM,37C; native or codon-optimized Lm allele.
+  family_mapping: L. monocytogenes10403S EutT maps to A0A0H3GFM5 sequence v1, LMRG_00627/AEO06164.1, 251
+    aa, PF01923 83-242. Costa2018 Figure2/S3 and terminal primers support the strain-matched reference;
+    no independent full clone sequence/tag-remnant verification. This is not EGD-e or either of the other10403S
+    PF01923 proteins.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:99287
+  limitations: The measured endpoint is lactose growth driven by a transcriptional reporter, not direct
+    EutR binding, transcription quantification or intracellular AdoCbl concentration.
+  nodes:
+  - node_id: native
+    label: Express native LmEutT in the reporter host
+    node_type: PERTURBATION
+  - node_id: optimized
+    label: Express codon-optimized LmEutT in the reporter host
+    node_type: PERTURBATION
+  - node_id: growth
+    label: Lactose reporter growth
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: native-increases-growth
+    subject: native
+    predicate: increases
+    object: growth
+    mechanism: The expressed allele enables robust reporter growth relative to the ACAT-deficient vector
+      control.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30071718
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6113058/
+      snippet: supported robust growth with lactose
+      explanation: Original Figure4 and reporter-assay Methods.
+      cache_path: evidence/PF01923/costa-2018.txt
+      cache_sha256: b4a6fe709c16af5345a5fdb3e7ff0aad52b57029cb08992856c294d41eff54ff
+  - edge_id: optimized-increases-growth
+    subject: optimized
+    predicate: increases
+    object: growth
+    mechanism: The expressed allele enables robust reporter growth relative to the ACAT-deficient vector
+      control.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30071718
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6113058/
+      snippet: supported robust growth with lactose
+      explanation: Original Figure4 and reporter-assay Methods.
+      cache_path: evidence/PF01923/costa-2018.txt
+      cache_sha256: b4a6fe709c16af5345a5fdb3e7ff0aad52b57029cb08992856c294d41eff54ff
+- graph_id: mmab-fdx1-coupled-2023
+  title: Human MMAB supports FDX1-dependent AdoCbl synthesis
+  scope: Gouda2023 recombinant human MMAB and individual R186Q/R190H/R190C/E193K variants.
+  context: Anoxic25C BufferA:HEPES50mM pH7.5,KCl150mM,MgCl2 2mM,glycerol5%; ATP1mM,Cbl40uM,FDXR4uM,NADPH500uM,variableFDX1;
+    WT MMAB1uM trimer and mutants1-5uM.
+  family_mapping: Human MMAB Q96EY8 sequence v1, 250 aa, PF01923 58-227. F170/R186/R190/E193 verified
+    in the reference. Exact assay-specific recombinant endpoints remain unresolved; cited purification
+    methods include full-length and deltaN18 constructs with cleaved His tags. Reference mapping is not
+    proof of an isolated-domain effect.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:9606
+  limitations: FDX1 lacks61N-terminal residues and retains His6; FDXR lacks4-33 and has a C-terminal tag.
+    Donor cofactor occupancies are partial. These coupled rates do not identify the exclusive physiological
+    donor, elementary electron-transfer rates or patient outcomes.
+  nodes:
+  - node_id: reaction
+    label: MMAB, MgATP, cob(II)alamin, FDX1, FDXR and NADPH
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q96EY8
+  - node_id: product
+    label: AdoCbl production
+    node_type: STATE
+  - node_id: no-fdx1
+    label: Omit FDX1 from the complete assay
+    node_type: PERTURBATION
+  - node_id: no-fdxr
+    label: Omit FDXR from the complete assay
+    node_type: PERTURBATION
+  - node_id: r186q
+    label: Replace WT MMAB with R186Q
+    node_type: PERTURBATION
+  - node_id: r190h
+    label: Replace WT MMAB with R190H
+    node_type: PERTURBATION
+  - node_id: r190c
+    label: Replace WT MMAB with R190C
+    node_type: PERTURBATION
+  - node_id: e193k
+    label: Replace WT MMAB with E193K
+    node_type: PERTURBATION
+  edges:
+  - edge_id: reaction-produces-product
+    subject: reaction
+    predicate: produces
+    object: product
+    mechanism: The complete system supports AdoCbl synthesis; WT kcat4.66+/-0.48/min and apparent FDX1
+      Km135+/-24nM.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:37526260
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10507449/
+      snippet: FDX1 supports NADPH-dependent AdoCbl synthesis by MMAB.
+      explanation: Original Figure3A/C and supplementS2-S6.
+      cache_path: evidence/PF01923/gouda-2023.txt
+      cache_sha256: cbf3e47671a1f40f8c1ebfb7f6246f6d824a015b32d258864c8e84890d150bf3
+  - edge_id: no-fdx1-decreases-product
+    subject: no-fdx1
+    predicate: decreases
+    object: product
+    mechanism: Product is not detected after omission of the indicated electron-transfer component.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:37526260
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10507449/
+      snippet: FDX1 supports NADPH-dependent AdoCbl synthesis by MMAB.
+      explanation: Main-text omission controls following Figure3 discussion.
+      cache_path: evidence/PF01923/gouda-2023.txt
+      cache_sha256: cbf3e47671a1f40f8c1ebfb7f6246f6d824a015b32d258864c8e84890d150bf3
+  - edge_id: no-fdxr-decreases-product
+    subject: no-fdxr
+    predicate: decreases
+    object: product
+    mechanism: Product is not detected after omission of the indicated electron-transfer component.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:37526260
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10507449/
+      snippet: FDX1 supports NADPH-dependent AdoCbl synthesis by MMAB.
+      explanation: Main-text omission controls following Figure3 discussion.
+      cache_path: evidence/PF01923/gouda-2023.txt
+      cache_sha256: cbf3e47671a1f40f8c1ebfb7f6246f6d824a015b32d258864c8e84890d150bf3
+  - edge_id: r186q-decreases-product
+    subject: r186q
+    predicate: decreases
+    object: product
+    mechanism: AdoCbl formation is not detectable in the coupled assay.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:37526260
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10507449/
+      snippet: FDX1 supports NADPH-dependent AdoCbl synthesis by MMAB.
+      explanation: Original Figure3C; lower rates retain assay-specific interpretation.
+      cache_path: evidence/PF01923/gouda-2023.txt
+      cache_sha256: cbf3e47671a1f40f8c1ebfb7f6246f6d824a015b32d258864c8e84890d150bf3
+  - edge_id: r190h-decreases-product
+    subject: r190h
+    predicate: decreases
+    object: product
+    mechanism: kcat0.02+/-0.01/min versus WT4.66+/-0.48/min.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:37526260
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10507449/
+      snippet: FDX1 supports NADPH-dependent AdoCbl synthesis by MMAB.
+      explanation: Original Figure3C; lower rates retain assay-specific interpretation.
+      cache_path: evidence/PF01923/gouda-2023.txt
+      cache_sha256: cbf3e47671a1f40f8c1ebfb7f6246f6d824a015b32d258864c8e84890d150bf3
+  - edge_id: r190c-decreases-product
+    subject: r190c
+    predicate: decreases
+    object: product
+    mechanism: kcat0.03+/-0.02/min versus WT4.66+/-0.48/min.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:37526260
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10507449/
+      snippet: FDX1 supports NADPH-dependent AdoCbl synthesis by MMAB.
+      explanation: Original Figure3C; lower rates retain assay-specific interpretation.
+      cache_path: evidence/PF01923/gouda-2023.txt
+      cache_sha256: cbf3e47671a1f40f8c1ebfb7f6246f6d824a015b32d258864c8e84890d150bf3
+  - edge_id: e193k-decreases-product
+    subject: e193k
+    predicate: decreases
+    object: product
+    mechanism: AdoCbl formation is not detectable in the coupled assay.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:37526260
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10507449/
+      snippet: FDX1 supports NADPH-dependent AdoCbl synthesis by MMAB.
+      explanation: Original Figure3C; lower rates retain assay-specific interpretation.
+      cache_path: evidence/PF01923/gouda-2023.txt
+      cache_sha256: cbf3e47671a1f40f8c1ebfb7f6246f6d824a015b32d258864c8e84890d150bf3
+- graph_id: mmab-corrinoid-coordination-2023
+  title: MMAB complexes contain four-coordinate cob(II)alamin
+  scope: Gouda2023 separately prepared WT and R190H human MMAB complexes.
+  context: 'EPR: WT100uM trimer/Cbl100uM/ATP5mM or R190H1mM/Cbl250uM/ATP20mM, HEPES50mM pH7.5,KCl150mM,Mg2mM,TCEP2mM,glycerol15%;
+    samples frozen and measured80K.'
+  family_mapping: Human MMAB Q96EY8 sequence v1, 250 aa, PF01923 58-227. F170/R186/R190/E193 verified
+    in the reference. Exact assay-specific recombinant endpoints remain unresolved; cited purification
+    methods include full-length and deltaN18 constructs with cleaved His tags. Reference mapping is not
+    proof of an isolated-domain effect.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:9606
+  limitations: Different concentrations and ATP are used here, not the ADP redox-titration mixture. EPR
+    and spectra report coordination state, not an experimentally observed F170 displacement trajectory
+    or an isolated-domain effect.
+  nodes:
+  - node_id: wt
+    label: Prepare WT MMAB with ATP and cob(II)alamin
+    node_type: ACTIVITY
+  - node_id: r190h
+    label: Prepare R190H MMAB with ATP and cob(II)alamin
+    node_type: ACTIVITY
+  - node_id: four
+    label: Four-coordinate enzyme-bound corrinoid state
+    node_type: STATE
+  edges:
+  - edge_id: wt-produces-four
+    subject: wt
+    predicate: produces
+    object: four
+    mechanism: The prepared complex has the EPR signature assigned to four-coordinate cob(II)alamin, distinct
+      from the water-liganded control.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:37526260
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10507449/
+      snippet: 4-c state
+      explanation: Main Figure2B and supplementMethodsS5/FigureS2.
+      cache_path: evidence/PF01923/gouda-2023.txt
+      cache_sha256: cbf3e47671a1f40f8c1ebfb7f6246f6d824a015b32d258864c8e84890d150bf3
+  - edge_id: r190h-produces-four
+    subject: r190h
+    predicate: produces
+    object: four
+    mechanism: The prepared complex has the EPR signature assigned to four-coordinate cob(II)alamin, distinct
+      from the water-liganded control.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:37526260
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10507449/
+      snippet: 4-c state
+      explanation: Main Figure2B and supplementMethodsS5/FigureS2.
+      cache_path: evidence/PF01923/gouda-2023.txt
+      cache_sha256: cbf3e47671a1f40f8c1ebfb7f6246f6d824a015b32d258864c8e84890d150bf3
+- graph_id: mmab-r190h-redox-2023
+  title: Reduced donors generate cob(I)alamin in R190H complexes
+  scope: Gouda2023 R190H-bound corrinoid, not a direct WT redox-potential measurement.
+  context: Anoxic25C BufferA; R190H600uM,Cbl40uM,ADP5mM. Ti(III)citrate200uM gives reference spectra;
+    reduced benzyl viologen is titrated in separate reactions.
+  family_mapping: Human MMAB Q96EY8 sequence v1, 250 aa, PF01923 58-227. F170/R186/R190/E193 verified
+    in the reference. Exact assay-specific recombinant endpoints remain unresolved; cited purification
+    methods include full-length and deltaN18 constructs with cleaved His tags. Reference mapping is not
+    proof of an isolated-domain effect.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:9606
+  limitations: Main Figure2C caption says ATP; supplementS4 explicitly specifies ADP twice and governs
+    this context. No AdoCbl detected by post-titration HPLC. The measured potential cannot be silently
+    assigned to all WT/family proteins.
+  nodes:
+  - node_id: ti
+    label: Add Ti(III)citrate to the R190H-ADP corrinoid complex
+    node_type: PERTURBATION
+  - node_id: bv
+    label: Titrate reduced benzyl viologen into that complex
+    node_type: PERTURBATION
+  - node_id: cobi
+    label: Enzyme-bound cob(I)alamin accumulation
+    node_type: STATE
+  edges:
+  - edge_id: ti-produces-cobi
+    subject: ti
+    predicate: produces
+    object: cobi
+    mechanism: The spectrum shifts from the cob(II) complex to the reference cob(I)alamin spectrum.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:37526260
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10507449/
+      snippet: cob(I)alamin accumulation is observed
+      explanation: Original Figure2A and supplementS4 reference-spectrum Methods.
+      cache_path: evidence/PF01923/gouda-2023.txt
+      cache_sha256: cbf3e47671a1f40f8c1ebfb7f6246f6d824a015b32d258864c8e84890d150bf3
+  - edge_id: bv-produces-cobi
+    subject: bv
+    predicate: produces
+    object: cobi
+    mechanism: Redox titration populates cob(I)alamin; the Nernst analysis yields -325+/-9mV for this
+      prepared R190H complex.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:37526260
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10507449/
+      snippet: cob(I)alamin accumulation is observed
+      explanation: Original Figure2C/D and supplementS4-S5/S4 HPLC control.
+      cache_path: evidence/PF01923/gouda-2023.txt
+      cache_sha256: cbf3e47671a1f40f8c1ebfb7f6246f6d824a015b32d258864c8e84890d150bf3
+discussions:
+- discussion_id: pf01923-domain-and-assay-boundaries
+  prompt: Resolve exact constructs and source discrepancies before extending mechanistic attribution.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Whole proteins, Pfam intervals, different reduction states and coupled versus pre-reduced
+    assays support different claims.
+  evidence:
+  - reference: PMID:24336938
+    supports: PARTIAL
+    evidence_source: primary_mutation_and_metal_assays
+    explanation: SeEutT metal-motif residues lie outside PF01923; assembly changes and source inconsistencies
+      remain.
+  - reference: PMID:30071718
+    supports: PARTIAL
+    evidence_source: primary_oxidation_state_and_growth_controls
+    explanation: LmEutT accepts cob(I)inamide but not cob(II)inamide in the tested biological reducing
+      systems; transition-metal independence does not exclude MgATP.
+  - reference: PMID:37526260
+    supports: PARTIAL
+    evidence_source: primary_text_and_publisher_supplement
+    explanation: ADP redox Methods conflict with the ATP figure caption; donor truncations and exact MMAB
+      construct assignment matter.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: PF01923 is former DUF80, currently Cob_adeno_trans/IPR016030. Separate PduO, EutT and MMAB experimental
+    systems must not be joined into one observed chain. The active SePduO1-185 construct includes flanking
+    sequence; SeEutT H67/C79/C80/C83 and LrPduO F187/tail183-188 fall outside their PF01923 matches. Historical
+    tags and clone endpoints remain qualified. No-added-metal SePduO retains activity; Zn-loaded SeEutT
+    resists the oxidation that disables Fe-loaded protein; LmEutT has no demonstrated transition-metal
+    requirement but still uses MgATP. LmEutT accepts cob(I)inamide but not cob(II)inamide with the tested
+    biological reducing systems. Human MMAB ADP supports bound product in FigureS1 without sustained release;
+    AMP spectra cannot distinguish absent binding from unchanged coordination. These negatives do not
+    generalize across all members. Retain Johnson2001 dose-unit conflicts; Johnson2004 1-193/1-293 label
+    and PPPi percentage discrepancy; Mera2009 reduction versus adenosylation-lag wording; Moore2014 C83A
+    zinc, extinction units, reconstitution ratio and arabinose concentration conflicts; Costa2018 supplement
+    numbering and catalytic-efficiency arithmetic; Gouda2023 ATP-caption versus ADP-methods discrepancy.
+    No silent source corrections. Gouda2023 ADP single-turnover spectra are retained in the ledger; the
+    specific panel's reductant details require further verification before a graph is added.
+- discussion_id: pf01923-remaining-causal-contexts
+  prompt: Extend uncurated member-specific pathways and inspect remaining primary mechanistic studies.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The selected PduO/EutT/MMAB assays do not characterize all15667 frozen proteins or complete
+    their catalytic and chaperone cycles.
+  evidence:
+  - reference: PMID:19236001
+    supports: PARTIAL
+    evidence_source: primary_structures_and_kinetics
+    explanation: F112 effects do not directly resolve product-release chemistry; outside-domain tail substitutions
+      and data-not-shown complementation are qualified.
+  - reference: PMID:34757128
+    supports: PARTIAL
+    evidence_source: purification_methods_only
+    explanation: 2021 human MMAB paper was inspected for cited construct preparation, not fully reviewed
+      for its catalytic/chaperone claims.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: 'The current graphs retain measured assay effects, not a complete atomic catalytic cycle, native
+    exclusive electron-donor network or clinical mechanism. MMAB product transfer/sequestration/repair,
+    exact assay constructs, EutT spectroscopy/product variants, other primary mutant studies and unexamined
+    family members remain follow-up work. Source and access ledger: evidence/PF01923/coverage.txt. No
+    unexamined branch is declared causally empty. Same-agent scientific curation is partial and remains
+    IN_PROGRESS. Native validation establishes schema/evidence integrity, not independent expert endorsement,
+    full-family experimental proof, website publication or whole-corpus completion.'

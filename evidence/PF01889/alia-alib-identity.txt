@@ -1,0 +1,29 @@
+PF01889 / AliA_AliB identity assessment, accessed 2026-10-11.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01889/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01889/protein/uniprot/D4GXF7/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01889/protein/uniprot/D4GUE1/
+https://rest.uniprot.org/uniprotkb/search?query=%28gene%3AHVO_2859%20OR%20gene%3AHVO_2611%29&format=json&size=10
+https://rest.uniprot.org/taxonomy/309800
+
+Frozen previous-name TSV maps PF01889.23 to former DUF63, now archaeal
+lipoprotein biogenesis component AliA/AliB-like; integration IPR002749.
+This is NOT the pneumococcal Ami/AliA/AliB oligopeptide-binding family PF00496.
+The initial name-only search retrieved those unrelated proteins; none is adopted.
+
+HVO_2859/AliA: D4GXF7, sequence version2, entry version62, 379 residues;
+last sequence update 2016-11-30. Downloaded ADE04977.2 matches exactly.
+Member-specific PF01889 interval is 87-379 inclusive, score7.9e-31.
+HVO_2611/AliB: D4GUE1, sequence version1, entry version63, 269 residues;
+last sequence update 2010-05-18. ADE03618.1 and WP_004042703.1 match exactly.
+Member-specific PF01889 interval is 17-263 inclusive, score1.8e-15.
+Both current UniProt annotation dates are 2026-09-02. References are H. volcanii
+DS2, taxon309800; its verified species parent is taxon2246. Experiments use H53
+and its deletion derivatives, not a newly sequence-verified DS2 culture.
+Paper2025 identifies HVO_2859/arCOG02177 as AliA and HVO_2611/arCOG02178 as AliB.
+Whole-gene deletions do not isolate the Pfam interval or test a catalytic residue.
+The lipobox Cys-to-Ser substitutions concern substrate proteins, not AliA/AliB.
+Original Hong2025 Figure2b was visually inspected: AliA R138/R370 and AliB
+H56/H260 label predicted models, not mutagenesis results or experimental structures.
+Exact tagged substrate inserts and the reported mutant genome sequencing were
+not independently reconstructed. HVO_1176, HVO_B0139, HVO_1705 and HVO_0844
+are experimental locus labels; no unverified modern accession is invented.

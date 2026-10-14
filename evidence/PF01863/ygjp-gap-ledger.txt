@@ -1,0 +1,49 @@
+PF01863 partial research coverage and rejected transfers, 2026-10-11.
+This is an open gap ledger, not an exhaustive family review.
+
+Coverage: frozen family identity and four InterPro-linked papers; primary
+2013 fulltext/Figure 3; 2017 publisher Figure 16 and Tables 3/9; 2015 B80
+Methods 2.6, Results 3.4/3.6 and Tables 1-3; 2015 Lobb primary fulltext
+section Targeted discovery of ORFan metalloproteases and Table 4.
+Searches included PF01863, DUF45, YgjP, ASKA, proabylysin and projannalysin.
+Ignored/hidden-inclusive repository search found no pre-existing PF01863
+overlay/evidence/review in curation, evidence, history, reviews, .agents or
+.claude before this addition. Inaccessibility is not evidence of absence.
+
+Access limits: Nature main article provided preview/abstract, not verified
+full Methods. Public supplements were downloaded and read. ETH publication
+metadata was accessible; thesis PDF attempts returned 403/429. An indexed
+thesis extract is not an inspected full protocol. Do not invent assay buffer,
+temperature, exact clone sequence or host from ASKA conventions. Tables 10/11
+and full supplementary metabolomics datasets were not inspected; no in-vivo
+UTP homeostasis or growth edge is retained.
+
+Saxena and Singh (2015), PMID:25802851, DOI:10.1155/2015/527015:
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4352737/
+Primary XML inspected. A purified 26-kDa B80 preparation is reported, with
+MALDI attribution to WP_016112858.1. Table 2 has peptide/reference and
+coordinate inconsistencies (independent comparison in identity ledger).
+For example, reported precursor/matched masses in its first row are
+2704.8679/2761.3123 despite a stated 50-ppm precursor tolerance. The table
+does not establish an exact B80 gene sequence. Raw spectra, corrected table,
+sequence-verified expression and matched activity controls would discriminate
+misidentification, reporting errors and genuine homologous enzyme activity.
+No blanket claim that all findings are false; no fibrinolysis edge transferred.
+
+Lobb et al. (2015), PMID:26257768, DOI:10.3389/fgene.2015.00234:
+https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2015.00234/full
+Table 4 lists 11 GOS clusters remotely matching 4JIU, plus 4JIX matches.
+Homology and HExxH motifs are computational candidates, not observed
+proteolysis. The paper calls for experimental characterization. No directed
+causal edge is inferred from these matches or gene-neighbor enrichment.
+
+Discriminating follow-ups:
+- Resolve the exact historical His6-YgjP construct and primary assay Methods;
+  quantify UMP and PPi with calibrated standards and blanks, mutant controls,
+  and matched purification; distinguish physiological from promiscuous activity.
+- Resolve proabylysin K2V/L2V manuscript discrepancy and deletion sequences;
+  replicate thermal comparisons with matched purification and uncertainties.
+- Obtain folded activation products, suitable substrates and intact controls
+  before converting structural tail-latency hypotheses to observed mechanisms.
+- Expand member-specific primary research without importing integral membrane
+  metalloprotease activities, B80 phenotypes or sequence predictions by analogy.

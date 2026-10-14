@@ -1,0 +1,26 @@
+Vermilya2026 supplement, inspected 2026-10-11.
+https://pmc.ncbi.nlm.nih.gov/articles/instance/13170248/bin/mbio.00203-26-s0002.pdf
+Retrieved from the public EuropePMC supplementaryFiles ZIP after the direct
+PMC response returned HTML and the publisher URL returned HTTP403.
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13170248/supplementaryFiles
+ZIP SHA-256 is recorded in the companion gap ledger. PDF has 27 pages.
+
+Page3, FigureS1 caption explicitly identifies PitR as NWMN_0632 and PhoU as
+NWMN_1296. This supplies a primary-study bridge to the independently mapped
+Newman BAF66904.1/UniParc UPI00000549A3 reference sequence.
+
+Pages22-24, TableS2 lists Newman strain backgrounds and reporter/vector
+combinations. Even the strain labeled delta-phoU is described as phoU::erm,
+as is the combined delta-pitR delta-phoU background. Main Methods describes
+construction of a phoU deletion vector as well; the table and combined-mutant
+Methods support keeping the insertion allele explicit, not treating every
+delta label as an unmarked deletion. One triple-mutant PnptA row describes
+PpstS instead; it is outside the retained single-mutant reporter comparisons.
+
+Page25, TableS3 confirms pAH5/pAH5E reporter backbone labels, pKK30 empty
+complementation vector and native-promoter PitR complementation. Page26,
+TableS4 supplies construct primers, but no clone resequencing reads were
+independently checked. Gene identity and stated plasmid design are supported;
+complete laboratory-strain sequence identity is not claimed.
+Original page22 strain table and page25 plasmid table were also visually
+inspected. Remaining tables were text-parsed; no original raw data were reanalyzed.

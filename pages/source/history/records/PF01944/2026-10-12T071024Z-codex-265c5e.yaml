@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01944
+  path: data/families/PF01944.yaml
+session:
+  id: 2026-10-12T071024Z-codex-265c5e
+  timestamp: '2026-10-12T07:10:24Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of PF01944 causal graphs.
+  details: Reviewed eight phenotype-level contexts and ten observed effects against
+    primary Results, Methods, available figures and member mappings. Native projection,
+    overlay equality and evidence hashes pass. Retained NEEDS_FOLLOWUP/pass_with_limitations
+    review binds semantic digest 37d4fb0a0ef816380b811698df31f1d623fc175549eb7a60ccf99d073bb1b2da
+    and documents uninspected Chastanet figures, source-label discrepancies, historical
+    construct limits, Q18B81 mapping and remaining member contexts. Status remains
+    IN_PROGRESS with two OPEN discussions. Same-agent review, not independent endorsement,
+    complete family coverage or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T071012Z-pf01944-spoiim-scoped-localization-and-suppressor-effects/review.yaml

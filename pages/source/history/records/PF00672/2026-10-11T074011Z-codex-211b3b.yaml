@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF00672
+  path: curation/families/PF00672.yaml
+session:
+  id: 2026-10-11T074011Z-codex-211b3b
+  timestamp: '2026-10-11T07:40:11Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add host-specific Tsr HAMP rotation and chemotaxis phenotypes
+  details: Retain three PHENOTYPIC graphs with three INDIRECT OBSERVED edges for G235E
+    in UU1250, G235C in UU1535 and a distinct G235P soft-agar response. Verify Tsr
+    reference mapping and preserve weighted-reporter, adaptation-background, assay-condition
+    and molecular-interpretation limits. Partial research and curation began with
+    the evidence-cache session at this timestamp; no direct kinase or packing mechanism
+    is asserted and status remains IN_PROGRESS.
+  sections:
+  - causal_graphs

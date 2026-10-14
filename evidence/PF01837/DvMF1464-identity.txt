@@ -1,0 +1,26 @@
+Identity sources accessed: 2026-10-11
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=ACL08412.1&rettype=gb&retmode=xml
+https://rest.uniprot.org/uniparc/UPI00018940C6.json
+https://rest.uniprot.org/uniprotkb/B8DLN6.json
+https://rest.kegg.jp/get/dvm:DvMF_1464
+
+Selected structured facts:
+NCBI protein accession/version: ACL08412.1
+locus_tag: DvMF_1464
+coded_by: CP001197.1:1794909..1796081
+organism: Desulfovibrio vulgaris str. Miyazaki F; taxon: 883
+current archive name: Nitratidesulfovibrio vulgaris (strain DSM 19637 / Miyazaki F)
+length: 390 residues
+sequence MD5: E2556A0515B095C87E17E65F2F681B96
+UniParc: UPI00018940C6
+database: Pfam; databaseId: PF01837; locations: 22-380, inclusive
+InterPro: IPR002708
+
+Mapping assessment:
+NCBI and UniParc sequences were compared and match exactly. UniParc explicitly
+maps ACL08412 version 1 and DvMF_1464/taxon 883 to this sequence. B8DLN6 is
+inactive: UniProtKB reports deletion because it is not in a reference proteome.
+The archival B8DLN6 sequence version is 1. This is not a missing protein or
+evidence of absent function. Shared-sequence entries from other taxa are not
+substituted for the studied Miyazaki strain. The primary paper names the same
+locus and strain. Whole-gene insertions do not test isolated residues 22-380.

@@ -1,0 +1,27 @@
+Moore2014 PMID24336938 DOI10.1128/JB.01304-13.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3911174/
+Inspected Methods, Tables1/2, Results, original Figures2/3/5.
+Minimal quotations: "metalation with ferrous ions";
+"free dihydroflavins drive the adenosylation";
+"kinetic parameters of EutT variants";
+"did not restore growth"; "complemented almost as well".
+Paraphrase: purified SeLT2 EutT with GT remnant, MgATP1mM, PIPES50mM
+pH7,37C anoxic, FADH2 20uM, Fre0.005mg/mL and NADH1mM. Figure2
+product spectrum and photolysis support AdoCbl. Figure3 demetalation/
+reconstitution: Fe(II) highest activity; Zn(II) also restores activity.
+Air or0.3% H2O2 abolishes Fe-loaded activity, while Zn-loaded activity
+persists. Results depend on metalation; EutT is not invariably O2-labile.
+Table2 Fe-reconstituted kcat/s: WT0.022,H67A0.0083,C79A0.0042,
+C83A0.0022,C80A undetectable. H67A alters oligomer distribution,
+so mutation effects do not prove individual metal-ligand chemistry.
+Table1 C83A Zn1+/-0.4uM conflicts with prose calling it undetectable.
+Figure5: JE13176 cobA343::MudJ delta-eut114 delta-pduO523,
+90mM ethanolamine carbon plus HOCbl. WT/C79A plasmids rescue;
+H67A/C80A/C83A do not. This is a growth endpoint, not measured
+intracellular cofactor concentration. Methods print500mM arabinose;
+do not silently normalize that concentration. Printed extinction-coefficient
+units and reconstitution fold excess also require clarification.
+MgATP preserves activity during storage but does not change the SEC dimer
+assignment. Supplementary graphs were not retrieved from PMC/EuropePMC;
+their described controls remain text-only. H67/C79/C80/C83 lie outside
+the mapped PF01923 domain; no isolated-domain or family-wide metal claim.

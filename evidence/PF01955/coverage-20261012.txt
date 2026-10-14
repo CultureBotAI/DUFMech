@@ -1,0 +1,58 @@
+PF01955 causal research coverage; 2026-10-12 UTC
+
+Ignored/hidden-inclusive checkout filename search found the frozen projection
+and existing Pages copies, but no PF01955 overlay, evidence or native review
+before this curation. Baseline:8296 valid current projections, zero drift.
+Frozen Pfam previous-ID row verifies DUF105; current member APIs verify
+Q8Q0G3 and Q9HPK9 domain intervals. The reviewed-only UniProt search has
+three entries and is not an exhaustive functional inventory.
+
+Searches: CbiZ/DUF105; CbiZ cobinamide Gray Escalante 2024/2025 mechanism
+structure; cbiS Methanopyrus2006; primary citation tracing and author lab index
+https://www.escalab.com/pubs.php . Broad CbiZ queries also returned an unrelated
+company; those results were excluded. This is a partial literature search.
+
+Woodson2004 PMID14990804 DOI10.1073/pnas.0305939101 main text, Methods,
+Results and original Figures2-6 inspected. Its supporting methods/table URLs
+returned HTTP403 in the current approved public fetch; earlier browser routes
+also failed. Figure8 and exact plasmid/allele sequences remain uninspected.
+No challenge was bypassed. Earlier EuropePMC fullTextXML HTTP500 is not
+evidence of unavailable biology. Primary figure assets were retrieved normally.
+
+Later primary follow-ups are NOT negative evidence and are not incorporated
+as demonstrated edges in this checkpoint:
+
+PMID16740929, DOI10.1128/JB.00227-06, PMC1482944:
+https://journals.asm.org/doi/10.1128/jb.00227-06
+Publisher main Methods and selected Results through amidohydrolase conditions
+are now accessible and inspected. M. kandleri MK1672 CbiS has CbiZ-like1-207
+and CobZ-like208-357 segments; pMkCBIS6 encodes the first621bp, whereas
+pMkCBIS7 uses the last453bp. The Results'208-250 label conflicts with this
+description. Text switches JE2192 to JE6984 in the phosphatase section.
+The amidohydrolase protocol prints0.9mg in40ul despite0.23mg/ml stock;
+this needs original-figure/table/PDF reconciliation, not silent unit repair.
+Exact accession/profile mapping, Table1, originalFigures3-6, later Results
+and supplementary details remain to inspect. Do not transfer CobZ-half
+phosphatase activity to the PF01955 domain. No native M. kandleri experiment
+follows from heterologous complementation alone.
+
+PMID19889098, DOI10.1111/j.1365-2958.2009.06928.x, PMC3062942:
+https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+Publisher Results through cellular corrinoid analysis, Table1 and start of
+Experimental Procedures are accessible and inspected. R. sphaeroides2.4.1
+acetate-growth assays and succinate-grown corrinoid profiles are distinct
+conditions. PseudoCbl specificity, purified constructs, original figures,
+supplements and protein/domain mapping still need full assessment. The
+discussion's opposite-specificity proposal for M. kandleri is a prediction.
+
+PMID18808385/PMC2602876, DOI10.1111/j.1365-2958.2008.06437.x:
+dual R. sphaeroides salvage systems and homolog tests; abstract/lead only.
+PMC2698395, DOI10.1128/JB.00230-09: in-vivo R. sphaeroides salvage;
+lead only. Native pathways, taxonomic aliases and exact member accessions
+must be verified rather than inferred across papers.
+
+Further leads: Dehalococcoides remodeling, bacterial CbiZ substrate-specificity
+theses and 2024 literature. DOI10.1128/jb.00286-24 is a review, a source of
+leads rather than an independent experiment. CbiR and CobS remodeling enzymes
+must not be substituted for CbiZ. Remaining frozen members, catalytic residues,
+construct controls and broader primary coverage remain in the active goal.

@@ -1,0 +1,545 @@
+pfam_id: PF01757
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01757
+causal_graphs:
+  - graph_id: saoata-acetylcoa-glycan-products
+    title: Full-length SaOatA produces acetylated glycans with acetyl-CoA
+    scope: "Jones 2021 Figure 1D/E: purified full-length SaOatA versus enzyme-free, published S453A and isolated C-domain preparations."
+    context: "5 uM enzyme, 1 mM acetyl-CoA, 50 mM sodium phosphate pH 6.5, 18 h; either 1 mM G5 or 10 ug/ml semisynthetic GM-pentapeptide oligomers of 4-10 repeats. GM products are mutanolysin-digested for QTOF-MS. Recombinant full-length protein is expressed in E. coli C43(DE3); exact detergent recipe remains unavailable."
+    family_mapping: "603-aa Q2FV54/NCTC8325 and A0A0H2XFE4/USA300 references are identical to versioned ABD21303.1; PF01757 19-344. WT MS searches use Q2FV54, not a resequenced clone. S453 and the isolated C-domain 445-601 are outside current PF01757. Full-length clone donor strain/termini require SI verification."
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:1280
+    limitations: "DIRECT describes net purified-preparation effects, not isolated-domain sufficiency. The MS S453A search reference also has K495A/K496A and LE+His10; whether the Figure1 preparation shared those changes is unresolved. Treat it as the published S453A preparation, not an independently verified single mutant. The C-domain negative comparator is plotted only for GM-penta. No atomic relay, exact acceptor bond or calibrated product yield is inferred from these spectra."
+    nodes:
+      - node_id: wt-g5-reaction
+        label: Full-length WT SaOatA plus acetyl-CoA and G5
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:Q2FV54
+      - node_id: wt-gm-reaction
+        label: Full-length WT SaOatA plus acetyl-CoA and GM oligomers
+        node_type: ACTIVITY
+      - node_id: substitute-s453a-g5
+        label: Substitute the published S453A preparation in the G5 assay
+        node_type: PERTURBATION
+      - node_id: substitute-s453a-gm
+        label: Substitute the published S453A preparation in the GM assay
+        node_type: PERTURBATION
+      - node_id: substitute-c-domain-gm
+        label: Substitute isolated C-domain in the GM assay
+        node_type: PERTURBATION
+      - node_id: acetyl-g5-product
+        label: Detected acetyl-G5 product
+        node_type: STATE
+      - node_id: acetyl-gm-product
+        label: Detected acetyl-GM-penta product after digestion
+        node_type: STATE
+    edges:
+      - edge_id: wt-produces-acetyl-g5
+        subject: wt-g5-reaction
+        predicate: produces
+        object: acetyl-g5-product
+        mechanism: "Joint enzyme/donor/acceptor incubation produces the 1076.42 [M+H]+ and 1098.40 sodium-adduct peaks absent from the enzyme-free control."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: OatA Utilizes Acetyl-CoA for PG O-Acetylation.
+            explanation: Figure1D visually inspected; Results and caption distinguish substrate and acetylated product. SupplementS4 confirmation is reported but not independently inspected.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: wt-produces-acetyl-gm
+        subject: wt-gm-reaction
+        predicate: produces
+        object: acetyl-gm-product
+        mechanism: "Joint incubation yields the 1009.4 acetyl-GM-penta signal after digestion, compared with substrate 967.4 and the enzyme-free control."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: OatA Utilizes Acetyl-CoA for PG O-Acetylation.
+            explanation: Figure1E product and control spectra, Results and main transferase Methods.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: s453a-preparation-decreases-g5-product
+        subject: substitute-s453a-g5
+        predicate: decreases
+        object: acetyl-g5-product
+        mechanism: "The published S453A preparation lacks the acetyl-G5 product detected with WT; complete construct equivalence except S453A is not independently established."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: OatA Utilizes Acetyl-CoA for PG O-Acetylation.
+            explanation: Figure1D WT versus published S453A spectra; separate deposit caveats prevent a verified single-lesion claim.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: s453a-preparation-decreases-gm-product
+        subject: substitute-s453a-gm
+        predicate: decreases
+        object: acetyl-gm-product
+        mechanism: "Replacing WT with the published S453A preparation removes detectable acetyl-GM-penta under this assay, not proof of an isolated PF01757 catalytic residue."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: OatA Utilizes Acetyl-CoA for PG O-Acetylation.
+            explanation: Figure1E WT/S453A spectra and construct limitations.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: isolated-c-domain-decreases-gm-product
+        subject: substitute-c-domain-gm
+        predicate: decreases
+        object: acetyl-gm-product
+        mechanism: "The isolated C-domain does not produce the acetyl-GM-penta signal from acetyl-CoA seen with full-length protein. This is donor- and preparation-specific, not inactivity with all donors."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: OatA Utilizes Acetyl-CoA for PG O-Acetylation.
+            explanation: Figure1E C-domain negative comparator; Figure4 synthetic-donor activity prevents an unconditional inactivity claim.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+  - graph_id: saoata-substitution-assays
+    title: SaOatA substitutions distinguish CoASH release from glycan transfer
+    scope: "Jones 2021 Figure3C: full-length recombinant WT and selected R25A/R25K/H36A/R86A/Y136A/E154A/Y206A preparations. Separate CoASH-release and G5-transfer measurements."
+    context: "C43(DE3) expression, fresh-resin IMAC per preparation. Figure3C specifies 50 mM sodium phosphate pH 7, 5% DMSO, 25 C, 0.1 mM acetyl-CoA and 0.2 mM DTDP; transfer assays include 1 mM G5. This differs from Figure1's pH 6.5/1 mM donor/18 h recipe; transfer endpoint time and exact DTDP use need SI reconciliation."
+    family_mapping: "Full-length reference Q2FV54 equals A0A0H2XFE4 and ABD21303.1; PF01757 19-344 includes all seven selected substitution sites. The experimental object still includes the distinct C-terminal domain; clone sequence and tag details are not independently verified."
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:1280
+    limitations: "DIRECT concerns net preparation effects. Comparable expression/purity is not proof of unchanged folding or a particular proton-transfer role. CoASH release is not synonymous with productive glycan transfer. S453A's 5.4% rate uses ethanol rather than DMSO and is excluded from matched-rate edges. Figure3D's R25A caption conflicts with R25K Results; no R25A fitted kinetics are adopted. Remaining variants and quantitative G5 yields are unassessed."
+    nodes:
+      - node_id: wt-acetylcoa-reaction
+        label: Full-length WT SaOatA with acetyl-CoA
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:Q2FV54
+      - node_id: r25a-preparation
+        label: Substitute R25A for WT in the matched assay
+        node_type: PERTURBATION
+      - node_id: r25k-preparation
+        label: Substitute R25K for WT in the matched assay
+        node_type: PERTURBATION
+      - node_id: h36a-preparation
+        label: Substitute H36A for WT in the matched assay
+        node_type: PERTURBATION
+      - node_id: r86a-preparation
+        label: Substitute R86A for WT in the matched assay
+        node_type: PERTURBATION
+      - node_id: y136a-preparation
+        label: Substitute Y136A for WT in the matched assay
+        node_type: PERTURBATION
+      - node_id: e154a-preparation
+        label: Substitute E154A for WT in the matched assay
+        node_type: PERTURBATION
+      - node_id: y206a-preparation
+        label: Substitute Y206A for WT in the matched assay
+        node_type: PERTURBATION
+      - node_id: coash-release
+        label: DTDP-detected CoASH release from acetyl-CoA
+        node_type: PROCESS
+      - node_id: g5-acetyl-product
+        label: Acetyl-G5 detected in the separate transfer assay
+        node_type: STATE
+    edges:
+      - edge_id: wt-produces-coash
+        subject: wt-acetylcoa-reaction
+        predicate: produces
+        object: coash-release
+        mechanism: "WT preparation releases CoASH, reported specific activity 28.8 +/-0.20 nmol/min/mg, establishing the comparator without proving a particular protein-acetyl intermediate."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: In vitro studies.
+            explanation: Figure3C WT row and esterase Methods; Figure1C separate donor-titration corroboration.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: r25a-decreases-coash
+        subject: r25a-preparation
+        predicate: decreases
+        object: coash-release
+        mechanism: "R25A retains 18.4% of WT release; its separate G5-transfer result remains positive."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: In vitro studies.
+            explanation: Figure3C R25A versus WT, not the inconsistently labeled Figure3D kinetics.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: r25k-increases-coash
+        subject: r25k-preparation
+        predicate: increases
+        object: coash-release
+        mechanism: "R25K gives 178% of WT release in this assay and retains detected G5 transfer; no universal gain-of-function or binding-affinity claim."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: In vitro studies.
+            explanation: Figure3C R25K row and in-vitro Results.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: h36a-decreases-coash
+        subject: h36a-preparation
+        predicate: decreases
+        object: coash-release
+        mechanism: "H36A retains 0.64% apparent release, a large reduction but not complete absence."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: In vitro studies.
+            explanation: Figure3C H36A relative and specific activity entries.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: h36a-decreases-g5-product
+        subject: h36a-preparation
+        predicate: decreases
+        object: g5-acetyl-product
+        mechanism: "No G5 acetyl-product is detected with H36A compared with WT, despite residual CoASH release in the separate assay."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: In vitro studies.
+            explanation: Figure3C H36A transferase-negative entry and Results; S7 raw spectra uninspected.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: r86a-decreases-coash
+        subject: r86a-preparation
+        predicate: decreases
+        object: coash-release
+        mechanism: "R86A retains 22.1% of WT release; the separate G5-transfer assay remains positive."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: In vitro studies.
+            explanation: Figure3C R86A row and in-vitro Results.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: y136a-increases-coash
+        subject: y136a-preparation
+        predicate: increases
+        object: coash-release
+        mechanism: "Y136A gives 155% of WT release at the specified donor concentration. This is not increased glycan acetylation."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: In vitro studies.
+            explanation: Figure3C Y136A rate44.6 +/-0.48 nmol/min/mg and relative155%.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: y136a-decreases-g5-product
+        subject: y136a-preparation
+        predicate: decreases
+        object: g5-acetyl-product
+        mechanism: "Y136A removes detectable G5 acetylation compared with WT, in contrast to its higher CoASH-release rate. The molecular reason for this divergence is unresolved."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: In vitro studies.
+            explanation: Figure3C Y136A transferase-negative entry and Results.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: e154a-decreases-coash
+        subject: e154a-preparation
+        predicate: decreases
+        object: coash-release
+        mechanism: "E154A retains 4.76% of WT release and remains positive for G5 transfer; the assay does not establish its proposed acid-base role."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: In vitro studies.
+            explanation: Figure3C E154A row and Results.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: y206a-decreases-coash
+        subject: y206a-preparation
+        predicate: decreases
+        object: coash-release
+        mechanism: "Y206A has no detectable release compared with WT; this supports preparation-level dependence, not direct observation of Tyr206 attacking acetyl-CoA."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: In vitro studies.
+            explanation: Figure3C Y206A N.D. entry and in-vitro Results.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: y206a-decreases-g5-product
+        subject: y206a-preparation
+        predicate: decreases
+        object: g5-acetyl-product
+        mechanism: "Y206A lacks the G5 acetyl-product detected with WT in the separate transfer assay."
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: In vitro studies.
+            explanation: Figure3C Y206A transferase-negative entry and Results.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+  - graph_id: usa300-oata-pg-acetylation
+    title: USA300 oatA genotype changes cellular PG acetylation
+    scope: "Jones 2021 Figure1B: USA300 WT, markerless oatA deletion, and deletion complemented with WT, H36A or Y206A pACCJ3."
+    context: "Base-labile acetyl groups normalized to muramic acid in isolated PG; three replicates with SD. Constitutive His-tagged complementation. PG-isolation conditions are not assumed identical to the tunicamycin growth assay."
+    family_mapping: "USA300 reference SAUSA300_2504/A0A0H2XFE4 equals ABD21303.1 and Q2FV54, PF01757 19-344. H36 and Y206 are inside that interval, but these are whole-gene/whole-protein cellular interventions. Exact experimental clone strain and supplementary plasmid sequences are not independently verified."
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:367830
+    limitations: "INDIRECT cellular genotype effects, not isolated-domain chemistry. Membrane anti-His detection in Figure3A supports expression of impaired variants but does not exclude folding/localization effects. Other variants, including residual R83A activity, remain contextual. No measured mediation from this endpoint to the separate growth experiment."
+    nodes:
+      - node_id: delete-oata
+        label: Delete oatA relative to USA300 WT
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:A0A0H2XFE4
+      - node_id: complement-wt
+        label: Add WT pACCJ3 to the oatA deletion strain
+        node_type: PERTURBATION
+      - node_id: complement-h36a
+        label: Replace WT complement with H36A pACCJ3
+        node_type: PERTURBATION
+      - node_id: complement-y206a
+        label: Replace WT complement with Y206A pACCJ3
+        node_type: PERTURBATION
+      - node_id: pg-acetyl-fraction
+        label: PG base-labile acetyl groups per muramic acid
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: deletion-decreases-pg-acetylation
+        subject: delete-oata
+        predicate: decreases
+        object: pg-acetyl-fraction
+        mechanism: "Deletion reduces the measured fraction from about 40% in WT to undetectable levels."
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: PG O-acetylation levels
+            explanation: Figure1B WT/deletion bars and cellular PG Results.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: wt-complement-increases-pg-acetylation
+        subject: complement-wt
+        predicate: increases
+        object: pg-acetyl-fraction
+        mechanism: "WT complementation restores measurable PG acetylation to about 35%, without claiming exact equality to WT."
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: PG O-acetylation levels
+            explanation: Figure1B deletion versus WT-pACCJ3 complemented deletion and cellular PG Results.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: h36a-complement-decreases-pg-acetylation
+        subject: complement-h36a
+        predicate: decreases
+        object: pg-acetyl-fraction
+        mechanism: "H36A complementation leaves no detectable PG acetylation compared with the WT complement."
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: PG O-acetylation levels
+            explanation: Figure1B H36A bar and in-situ variant Results; Figure3A expression-control context.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: y206a-complement-decreases-pg-acetylation
+        subject: complement-y206a
+        predicate: decreases
+        object: pg-acetyl-fraction
+        mechanism: "Y206A complementation leaves about 1.3% PG acetylation, markedly below WT complement but not an absolute zero."
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: PG O-acetylation levels
+            explanation: Figure1B Y206A bar and in-situ variant Results; residual level retained.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+  - graph_id: usa300-oata-tunicamycin-lysozyme-growth
+    title: oatA deletion and complementation alter growth with lysozyme and tunicamycin
+    scope: "Jones 2021 Figure1A: USA300 WT, oatA deletion and deletion complemented with WT pACCJ3; unambiguous blue, green and orange curves."
+    context: "TSB, 37 C, 0.4 ug/ml tunicamycin, 1% DMSO and 0.25-4 mg/ml hen egg-white lysozyme. Figure1A plots 12-h relative delta-OD600, n=3 with SD; Methods monitor 20 h at 20-min intervals. Compare matched lysozyme doses, particularly 1-4 mg/ml."
+    family_mapping: "USA300 OatA reference A0A0H2XFE4/ABD21303.1, PF01757 19-344; gene deletion and full-length trans complementation, not isolated-domain interventions."
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:367830
+    limitations: "INDIRECT conditional growth effects, not death or a directly observed PG-to-growth chain. The no-tunicamycin assay instead shows a lag in the main-text description. Figure1A's gray empty-vector caption names WT+pALC2073 whereas Results describe deletion+empty vector; those ambiguous gray comparisons are not encoded. Exact clone background requires SI."
+    nodes:
+      - node_id: delete-oata
+        label: Delete oatA relative to WT under matched exposure
+        node_type: PERTURBATION
+      - node_id: restore-wt-oata
+        label: Complement the deletion with WT pACCJ3
+        node_type: PERTURBATION
+      - node_id: twelve-hour-growth
+        label: Relative delta-OD600 after 12 h with lysozyme and tunicamycin
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: deletion-decreases-conditional-growth
+        subject: delete-oata
+        predicate: decreases
+        object: twelve-hour-growth
+        mechanism: "Deletion removes the OD increase at 1 mg/ml lysozyme and above while WT retains growth, conditional on the tunicamycin-containing assay."
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: Lysozyme resistance was restored
+            explanation: Figure1A green versus blue curves and cellular lysozyme Results/Methods; no killing measurement.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+      - edge_id: complementation-increases-conditional-growth
+        subject: restore-wt-oata
+        predicate: increases
+        object: twelve-hour-growth
+        mechanism: "WT trans complementation restores substantial OD increase at the same lysozyme doses, including 4 mg/ml, compared with the deletion."
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: Lysozyme resistance was restored
+            explanation: Figure1A orange versus green curves, not the ambiguous empty-vector gray curve.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+  - graph_id: saoata-proposed-acetyl-relay
+    title: Hypothesized Tyr206-to-Ser453 acetyl relay in full-length SaOatA
+    scope: "Jones 2021 Figure5 and Discussion proposal for full-length SaOatA; not a directly observed sequence of intermediates or a family-wide mechanism."
+    context: "Proposed membrane-associated donor acquisition from acetyl-CoA, followed by intramolecular transfer from an acetylated Tyr206 to the cognate C-terminal Ser453. Full-length OatA supplies both sites; these are joint protein/substrate states, not independently sufficient residues."
+    family_mapping: "PF01757 19-344 in the matched Q2FV54/A0A0H2XFE4/ABD21303.1 references includes H36,E154,Y206 but excludes S453 and the isolated445-601 partner. E357 is also outside current PF01757 and must not be confused with proposed E154. Topology-library ATCC6538 and purified-clone provenance remain distinct."
+    scope_status: HYPOTHETICAL
+    taxon: NCBITaxon:1280
+    limitations: "Both edges are HYPOTHESIZED and directness UNRESOLVED. Deposited treated and untreated S453A samples both contain acetylated Tyr206; the search reference includes K495A/K496A. This is not treatment-specific flux proof. Synthetic acetyl-Tyr donor use by isolated C-domain does not observe an intramolecular relay. No atomic OatA structure or proton-transfer trajectory is established by Figure5; OafB modelling is not SaOatA experimental validation."
+    nodes:
+      - node_id: donor-and-unmodified-oata
+        label: Acetyl-CoA with full-length OatA carrying unacetylated Tyr206
+        node_type: STATE
+      - node_id: tyr206-acetylated-oata
+        label: Full-length OatA carrying O-acetyl-Tyr206 and available Ser453
+        node_type: STATE
+      - node_id: ser453-acetylated-oata
+        label: OatA carrying acetyl-Ser453 after release of the Tyr206 acetyl group
+        node_type: STATE
+    edges:
+      - edge_id: proposed-donor-to-tyr206
+        subject: donor-and-unmodified-oata
+        predicate: produces
+        object: tyr206-acetylated-oata
+        mechanism: "The authors propose H36/E154-assisted activation of Tyr206 to acquire acetyl from acetyl-CoA. Mutation phenotypes and modified peptides motivate this hypothesis but do not observe its acid-base steps or identify the origin of each detected acetyl group."
+        directness: UNRESOLVED
+        support: HYPOTHESIZED
+        evidence_kind: CONTEXTUAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: Postulated mechanism
+            explanation: Figure5B and Discussion explicitly propose the catalytic triad; MS deposit limitations are retained in the paired evidence ledger.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+          - reference: doi:10.6084/m9.figshare.13309463
+            source_url: https://api.figshare.com/v2/articles/13309463
+            snippet: protein1|FLSaOatA_S453A_lysinemutant_AcCoA
+            explanation: Limitation on causal attribution, not positive relay proof; both treated and untreated search outputs identify acetylated Tyr206, and the search reference includes additional lysine substitutions.
+            cache_path: evidence/PF01757/ms-deposit-caveats.txt
+            cache_sha256: e8337d46b96315e7081c8cc488478899d6cf3d487a30283756cb12505bbca956
+      - edge_id: proposed-tyr206-to-ser453
+        subject: tyr206-acetylated-oata
+        predicate: converts_to
+        object: ser453-acetylated-oata
+        mechanism: "The proposed intramolecular relay passes acetyl from Tyr206 to C-domain Ser453. Separate acetyl-peptide detections and synthetic-donor assays are compatible with this model but do not directly track this transfer or exclude alternative paths."
+        directness: UNRESOLVED
+        support: HYPOTHESIZED
+        evidence_kind: CONTEXTUAL
+        evidence:
+          - reference: PMID:34480000
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8433495/?report=reader
+            snippet: Postulated mechanism
+            explanation: Trapping Results, Figure4 partner-domain assay and Discussion; Figure4E caption18 h versus Results2 h remains unresolved.
+            cache_path: evidence/PF01757/jones-2021-oata.txt
+            cache_sha256: 6948fedc8e2be5e1ca67e38d33c5b538595efe1054f31c167182d570808f6ac0
+discussions:
+  - discussion_id: oata-construct-and-acetyl-origin
+    prompt: Resolve MS construct provenance and distinguish modified-residue detection from acetyl flux.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: The deposited mutant search includes extra lysine replacements and detects acetylated Tyr206 in both treated and untreated samples. These observations limit a treatment-specific causal claim without disproving every possible acetyl-relay mechanism.
+    evidence:
+      - reference: doi:10.6084/m9.figshare.13309463
+        supports: PARTIAL
+        evidence_source: inspected_deposited_peptide_search_tables_and_coverage_image
+        explanation: Parsed treated/control protein.html and visually inspected treated coverage image; search reference S453A/K495A/K496A with LE+His10 is not clone resequencing. No normalized treatment-enrichment analysis or new raw-data search.
+      - reference: doi:10.6084/m9.figshare.13309505
+        supports: PARTIAL
+        evidence_source: inspected_treated_and_control_annotated_ms2_tables
+        explanation: Both selected ion tables annotate Tyr206 acetylation; its acquisition during the added-donor step remains unproven.
+    notes: See evidence/PF01757/ms-deposit-caveats.txt and OatA-identity.txt. Verify supplemental clone/strain records and experimental material provenance before applying the MS genotype to Figure1 S453A preparations. Distinguish USA300 cells, ATCC6538 topology library and Q2FV54 search reference. Preserve PF01757 19-344 and extra-domain S453/E357 boundaries.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+  - discussion_id: oata-assay-and-family-coverage
+    prompt: Reconcile assay discrepancies and assess remaining PF01757 member mechanisms.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Twenty-two observed effects in four assay-context graphs and two hypothetical relay edges provide partial SaOatA coverage. They do not characterize all Acyl_transf_3 members or establish the proposed chemical relay.
+    evidence:
+      - reference: PMID:34480000
+        supports: PARTIAL
+        evidence_source: inspected_main_methods_results_and_figures
+        explanation: Full-length glycan product, divergent esterase/transferase variant behavior, PG acetylation and conditional growth are supported. Supplementary recipes, clone details, remaining variants and raw MS remain incomplete.
+      - reference: doi:10.7554/eLife.81547
+        supports: PARTIAL
+        evidence_source: primary_computational_article_retrieved_passages
+        explanation: OafB structural/MD work supplies mechanistic hypotheses, not directly measured SaOatA chemistry or proof of conserved topology.
+    notes: See evidence/PF01757/at3-followup-ledger.txt. Resolve pH/donor/time/solvent differences, Figure3D R25A/R25K and Figure1A empty-vector labels; obtain inaccessible SI. Inspect Listeria OatA, OafA/OafB, OpgC/IcaC, RHY1/NRF6 and other mapped family members independently. Preserve negative and residual results and distinct donor/acceptor specificity. Remain IN_PROGRESS with partial scientific self-review.
+    posed_by: Codex
+    posed_date: '2026-10-11'

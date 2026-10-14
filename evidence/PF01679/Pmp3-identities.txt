@@ -1,0 +1,48 @@
+PF01679 / yeast Pmp3 and plant RCI2A identity assessment
+Inspected 2026-10-11 UTC. Database facts and curator sequence comparisons.
+
+https://rest.uniprot.org/uniprotkb/P87284.json
+JSON SHA256: d18339ddef81d6ef12d1332624ae07169793a70e364db3200cf1b54f42b76838
+P87284/PMP3_YEAST, YDR276C, 55 aa, sequenceversion1 (1997-07-01), entry161
+(2026-01-28). Canonical organism is S288c taxon559292, not all tested strains.
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P87284/entry/pfam/PF01679/
+JSON SHA256: 78a78c218f43ae60eda24e92a4ee8c8bb5fa5755e8719989e496b9500355eb7f
+P87284 Pfam:PF01679 interval 5-52 inclusive.
+InterPro and UniProt sequences match exactly over55 residues.
+
+https://www.ncbi.nlm.nih.gov/nuccore/X91499.1
+https://www.ncbi.nlm.nih.gov/nuccore/T20621.1
+Combined efetch GenBank XML SHA256:
+889ca1a9f2b696f2e577c170f1048906a6d9d6dacf849d4ac377204b8977f5eb
+X91499.1 CDS1..168 encodes CAA62799.1, exactly matching55-aa P87284.
+The deposited source is W303-1B, species taxon4932, with PMID10835350 linked.
+Biopython translation independently agrees with the deposited peptide. The
+2000 paper sequenced genomic clones from W303-1B and the first25 protein
+residues; Figure1 supports retention of the initial methionine. Its stated
+Mr6109 differs from today's database mass6138, but the complete deposited
+peptide and reference sequence agree. No sequence variant is invented from
+that mass discrepancy. YR93 and CY162 backgrounds were not independently
+resequenced; their deleted PMP3 locus is reference-grounded, not certified
+identical over each entire experimental genome.
+
+https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ARCI2A%20AND%20organism_id%3A3702&format=json&size=10
+Search JSON SHA256: 33cca20d26dd2c13d94a4795f162c09e2b73c42dd6596b01e30061c66299fac3
+Q9ZNQ7/RCI2A_ARATH,54 aa, sequenceversion1 (1999-05-01), entry124
+(2026-09-02). Plant species taxon3702.
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9ZNQ7/entry/pfam/PF01679/
+JSON SHA256: 5574b7493570a147510772b1472797ca9c38b42199464c385e96445b5670efeb
+Q9ZNQ7 Pfam:PF01679 interval 6-52 inclusive.
+InterPro and UniProt sequences match exactly. T20621.1 is a400-nt EST from
+Columbia cDNA clone88O14T7, the exact clone named in the 2000 Methods. Its
+reverse-strand ORF complement(172..336), including stop, translates exactly to
+all54 residues of Q9ZNQ7; coding amino acids occupy complement(175..336).
+This was checked with all-six-frame Biopython translation. Ambiguous EST bases
+lie outside the matched coding segment. It is a computed ORF match, not an
+existing CDS annotation or sequencing of the final integrated yeast strain.
+The figure1 alignment agrees with the matched plant reference.
+
+Native whole-gene deletions and plant-gene replacement do not test isolated
+Pfam intervals. RCI2A is expressed from PMP3 regulatory sequences at the yeast
+PMP3 locus after replacing the URA3 disruption; PCR checks integration. Neither
+tagged protein nor a domain-only rescue construct is reported. Complete
+integrated flanks and expression abundance were not independently established.

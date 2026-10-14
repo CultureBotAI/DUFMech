@@ -1,0 +1,19 @@
+Identity facts inspected 2026-10-11, not experimental mechanism evidence.
+Sources:
+https://rest.uniprot.org/uniprotkb/Q0K4F6.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q0K4F6/entry/pfam/PF07005/
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q0K4F6/entry/pfam/PF17042/
+
+UniProt accession: Q0K4F6
+Gene: dtnK; locus: H16_B0318; EMBL protein: CAJ95118.1
+Current organism: Cupriavidus necator H16 / DSM 428
+Article organism: Ralstonia eutropha H16
+NCBI taxon: 381666
+Sequence version: 1; entry version: 91; length: 415 residues
+Sequence MD5: AA27795AD95E40FD6E297EBAE1C75612
+entry accession: PF07005
+PF07005 interval: 4-223 inclusive; integrated entry: IPR010737
+entry accession: PF17042
+PF17042 interval: 246-400 inclusive; integrated entry: IPR031475
+Both records describe domains in the same tested protein. Storing the intact
+protein experiment with both mappings is not two independent experiments.

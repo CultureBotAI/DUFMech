@@ -1,0 +1,45 @@
+PF01935 / REY15A-derived E233S assay ledger; accessed2026-10-12 UTC, Codex
+PMID25880130; DOI10.1186/s12867-015-0030-z; PMC4351679.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4351679/
+https://link.springer.com/article/10.1186/s12867-015-0030-z
+Minimal source token: D176E
+Remaining text is curator paraphrase and assessment.
+
+Inspected primary XML, publisher text/PDF, visually Figures2,4,5.
+Supplemental files not independently inspected in this pass; their descriptions
+in main text are leads/limitations, not a claim of supplemental verification.
+
+Figure2A-B: pMID-herA-T E233S derivative transformed with pSSR vectors and
+12uM simvastatin selection, then5-FOA/uracil/simvastatin counterselection.
+E233S is REY15A delta-pyrEF delta-lacS, cultured75C. WT herA and D176E plasmids
+permit recovery of chromosomal herA deletions, confirmed by flanking PCR and
+plasmid sequencing. Empty vector survivors instead retain the chromosomal gene
+and show marker escape. The two positive rescue edges are indirect cellular
+effects under this scheme, not direct proof of a particular repair intermediate.
+Other five mutant transformants were not obtained in the initial transformation:
+their failure is not a clean comparison among established deletion strains.
+Overexpression/dominant-negative alternatives and selection context matter.
+
+Figure2C-D: WT HerA alone has basal ATPase activity, DNA increases it, NurA does
+not further stimulate it under these conditions. D176E and E356D retain reduced
+ATPase activity, but only D176E yielded the successful deletion-complementation
+outcome. Therefore residual ATPase alone does not predict the cellular result.
+Do not import the S. solfataricus NurA-dependence to this species unqualified.
+
+Figure4B-C and Figure5A: in a34/84nt3'-overhang DNA assay, D176E/NurA produces
+more exonuclease-class products than WT, whereas E356D/NurA produces fewer.
+E356D retains endonuclease-class activity; it is not a complete nuclease-null.
+Figure5B blunt34/34 substrate gives D176E approximatelyWT exonuclease activity;
+do not transfer the overhang increase to blunt DNA. Figures4 and5 separate native
+gel products and denaturing controls supporting the product assignments.
+Methods:20ul,50mM Tris-HCl pH8,50mM NaCl,10mM MgCl2,1mM DTT,1mM ATP,
+0.001percent BSA,1nM radiolabeled DNA,65C30min (timecourse up to30min).
+Figure4 caption27.8nM HerA hexamer plus83.4nM NurA dimer. This is a mixture
+in excess NurA, not evidence of a6:6 complex stoichiometry.
+
+Whole-protein biochemistry and complementation are separate graphs: no observed
+edge directly links one in-vitro product fraction to cell viability. Folding,
+assembly and cellular protein amounts are not resolved for every variant.
+Main text reports no detectable unwinding with HerA alone or D58A NurA; this
+differs from the solfataricus assay. It is an assay-specific negative, not proof
+that all PF01935 domains lack unwinding capacity.

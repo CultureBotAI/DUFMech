@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01875
+  path: data/families/PF01875.yaml
+session:
+  id: 2026-10-11T185106Z-codex-5de1fa
+  timestamp: '2026-10-11T18:51:06Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review Memo metal binding redox and cellular causal contexts
+  details: Scoped same-agent scientific review retains eleven graphs and sixteen observed
+    effects with verified reference/domain mapping, primary Methods and original figures.
+    Direct preparation-level and indirect cellular effects remain separate. Construct
+    specificity, assay discrepancies, disputed redox interpretation and further family
+    coverage require follow-up. Status remains IN_PROGRESS; no independent endorsement
+    or complete family mechanism is claimed.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T185212Z-pf01875-memo-metal-binding-redox-and-cellular-contexts/review.yaml

@@ -1,0 +1,101 @@
+pfam_id: PF00892
+curation_status: IN_PROGRESS
+curation_history: history/records/PF00892
+causal_graphs:
+  - graph_id: yded-peroxide-growth-and-rescue
+    title: YdeD deletion and plasmid expression alter peroxide-stressed growth
+    scope: Whole-gene ydeD perturbations in E. coli BW25113 and its JW5250 ydeD::KmR derivative. Comparisons use pSTV29 or pYdeD; neither isolated EamA repeat is tested.
+    context: Figure 1A serial dilutions of overnight cultures on LB agar with 0.5 mM H2O2, incubated at 30 C for 24 h, with peroxide-free LB controls. pYdeD carries a 1.5-kb ydeD fragment in the lac-promoter pSTV29 vector. Panel A does not specify peroxide pretreatment or an IPTG dose; panel B pretreatment is not transferred. The malformed HTML control-concentration text is resolved only to the image's LB control, not an invented 10 mM condition.
+    family_mapping: UniProtKB:P31125, eamA/ydeD, b1533/JW5250, is a 299-residue K-12 reference with sequence version 2. UniProt and InterPro sequences agree exactly; PF00892 maps at 7-130 and 143-286 inclusive. The matching JW5250 locus grounds the deletion, but the assay host is BW25113 and the complete pYdeD insert sequence was not independently reconstructed. No independent function is assigned to either repeat.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:83333
+    limitations: Colony growth in serial spots is not a calibrated survival rate, purified cysteine flux or a resolved peroxide-scavenging reaction. Plasmid rescue supports gene involvement but does not exclude every dosage or secondary effect. Exact insert junctions, induction, dilution factors and independent replicate count remain unresolved. The pDES multi-gene experiments and proposed FliY recycling chain are not folded into this graph.
+    nodes:
+      - node_id: yded-deletion-vector
+        label: JW5250 ydeD::KmR carrying pSTV29
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P31125
+      - node_id: yded-plasmid-in-deletion
+        label: pYdeD expression in JW5250 ydeD::KmR
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P31125
+      - node_id: yded-plasmid-in-wt
+        label: pYdeD expression in BW25113
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P31125
+      - node_id: peroxide-stressed-spot-growth
+        label: Colony growth across serial spots on 0.5 mM H2O2 LB agar
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: yded-deletion-decreases-growth
+        subject: yded-deletion-vector
+        predicate: decreases
+        object: peroxide-stressed-spot-growth
+        mechanism: The deletion/vector strain grows less under peroxide than BW25113/vector. The observed consequence is stress-sensitive growth; the intermediate transport and redox steps are not directly measured by this comparison.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:20351115
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2878512/
+            snippet: The ydeD deletion mutant cells displayed increased H2O2 sensitivity
+            explanation: Results and visually inspected Figure 1A compare the deletion and WT with matched empty vector, alongside peroxide-free growth controls. Formula subscripts are normalized in the retained quotation.
+            cache_path: evidence/PF00892/ohtsu-2010-ydeD.txt
+            cache_sha256: 7d16e7a250a0af9da3868347d615d892b027f22f2961290258b2d20e2500e7d5
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P31125/entry/pfam/PF00892/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P31125/entry/pfam/PF00892/
+            snippet: 'P31125 Pfam:PF00892 intervals: 7-130 and 143-286, inclusive'
+            explanation: The reference contains two family repeats; the experimental deletion affects the whole gene rather than identifying a sufficient isolated repeat.
+            cache_path: evidence/PF00892/EamA-identity.txt
+            cache_sha256: 5c7525c6b91669661958d673be4415fb8d06724bd3304cd3f2d4e2d53eeb02f9
+      - edge_id: yded-plasmid-restores-deletion-growth
+        subject: yded-plasmid-in-deletion
+        predicate: increases
+        object: peroxide-stressed-spot-growth
+        mechanism: pYdeD improves peroxide-stressed growth of the deletion strain compared with pSTV29, providing plasmid complementation of the adopted phenotype. Expression is not calibrated to the endogenous WT level.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:20351115
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2878512/
+            snippet: higher levels of H2O2 tolerance
+            explanation: Figure 1A directly displays JW5250 with pYdeD and with pSTV29. The comparison supports rescue of growth, not restoration of a measured molecular transport rate.
+            cache_path: evidence/PF00892/ohtsu-2010-ydeD.txt
+            cache_sha256: 7d16e7a250a0af9da3868347d615d892b027f22f2961290258b2d20e2500e7d5
+      - edge_id: yded-plasmid-increases-wt-growth
+        subject: yded-plasmid-in-wt
+        predicate: increases
+        object: peroxide-stressed-spot-growth
+        mechanism: BW25113 carrying pYdeD grows better under the peroxide challenge than BW25113 carrying empty vector. This dosage-associated cellular phenotype is distinct from complementation in the deletion background.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:20351115
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2878512/
+            snippet: both wild-type cells and
+            explanation: Results describes improvement in both backgrounds; Figure 1A separately displays the WT/vector and WT/pYdeD comparison. The truncated quotation is a locator, with the relation established by the inspected result and image.
+            cache_path: evidence/PF00892/ohtsu-2010-ydeD.txt
+            cache_sha256: 7d16e7a250a0af9da3868347d615d892b027f22f2961290258b2d20e2500e7d5
+discussions:
+  - discussion_id: eama-transport-mechanism-and-repeat-scope
+    prompt: Resolve YdeD transport chemistry and repeat-specific roles beyond the peroxide-growth phenotype.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Deletion, complementation and overexpression support whole-gene involvement. They do not directly demonstrate the complete cysteine/cystine shuttle, proton coupling or independent activity of either EamA repeat.
+    evidence:
+      - reference: PMID:20351115
+        supports: PARTIAL
+        evidence_source: full_text
+        explanation: Figure 1A and Methods establish the adopted growth comparisons. Multi-gene pDES and FliY experiments have different interventions, while Figure 7 is a proposed model. The transcription results also have differing 20/30-min and 0.88/1-mM descriptions and are not added as a resolved induction graph.
+      - reference: PMID:18828007
+        supports: PARTIAL
+        evidence_source: abstract
+        explanation: The cited pYdeD construction source is accessible only as a subscription preview in this assessment; its TolC results are not transferred to YdeD or either repeat.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: Retrieve original insert and assay details and inspect direct transport evidence, including the 2000 source and newer production studies. Extend to other EamA proteins only with their own mappings and assays. Figure 1 was visually inspected; raw colony data and supplements were not reanalyzed. Family coverage remains partial and IN_PROGRESS.

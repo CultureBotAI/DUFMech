@@ -1,0 +1,58 @@
+PF01641 / SelR exact-member identity assessment
+Accessed 2026-10-11 UTC; Codex. Structured JSON/XML and sequence comparisons.
+
+Drosophila:
+https://rest.uniprot.org/uniprotkb/Q8INK9.json
+https://rest.uniprot.org/uniprotkb/Q8INK9-2.fasta
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q8INK9/entry/pfam/PF01641/
+https://www.ncbi.nlm.nih.gov/nuccore/AF486578.1
+AF486578.1 CDS245..712 encodes AAM10931.1, exactly matching 155-aa Q8INK9-2
+(isoform A/I), the experimental SelR clone of PMID11929995.
+Q8INK9 canonical version3 has 208 aa, last sequence change 2007-01-23.
+UniProt and InterPro canonical sequences match. InterPro maps PF01641 at61-186.
+Isoform A removes canonical1-42 and134-144; applying those annotated deletions
+reproduces the experimental sequence exactly. Projecting the canonical domain
+through that correspondence gives isoform19-133. This is coordinate transfer,
+not a fresh isoform-specific HMM hit. The 166-aa predicted sequence shown in the
+2002 alignment is not the 155-aa assay clone.
+Isoform C51/C54/C69/C101/C104/H107/H110/C124/S127 map respectively to canonical
+C93/C96/C111/C154/C157/H160/H163/C177/S180. These checks do not adopt the later
+mutagenesis paper's uninspected mechanistic claims. N-terminal His6/vector residues
+are outside this native-sequence mapping; the protein was not an isolated domain.
+Organism Drosophila melanogaster, NCBITaxon:7227; gene SelR/CG6584.
+
+Mouse:
+https://rest.uniprot.org/uniprotkb/Q9JLC3.json
+https://rest.uniprot.org/unisave/Q9JLC3?format=txt&versions=8
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9JLC3/entry/pfam/PF01641/
+Q9JLC3 Pfam:PF01641; interval 12-105 inclusive.
+Mus musculus, NCBITaxon:10090; current sequence version3, 116 aa, Sec95.
+UniProt and InterPro sequences match. Archived entry8 (2001, sequence version2)
+uses a C character at95 but explicitly annotates SE_CYS95; it is not evidence
+that native mouse SelR is a cysteine enzyme. Its sequence equals the current
+reference with U95 represented as C. Native sequence versus tested U95C must
+remain distinct. The paper's terminal PCR sequences are consistent with the
+reference. Complete vector-derived tails were not independently resolved.
+BioPython's SwissProt parser rejected the old GN syntax; that metadata line was
+omitted only in memory before parsing and the source file was not changed.
+
+Yeast:
+https://rest.uniprot.org/uniprotkb/P25566.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P25566/entry/pfam/PF01641/
+P25566 Pfam:PF01641; interval 47-166 inclusive.
+MXR2_YEAST, MXR2/MSRB/YCL033C; 168 aa, sequence version1 since1992-05-01.
+UniProt/InterPro sequences match; reference taxon559292 is S. cerevisiae S288c.
+The PNAS knockout identifies YCL033C in BY4741 derivatives; P25566 is reference
+grounding, not a separately confirmed experimental-isolate sequence. Whole-gene
+deletion does not isolate the contribution of domain47-166.
+
+Temporary retrieval SHA256:
+Fly UniProt search bef07865dcf28ce083fa24f8d5f1733fee45f8f2451ae2eb21aa9dde6b104cf4
+Fly isoform FASTA fbde621576469d2780c67a7a99903ef96a8c44301452ab5ff7b61bf5b520626a
+Clone XML 4cdabcae7948c73046aaccdada77675adcb935a7b802152815d19f3deee52b08
+Fly InterPro 58203303b24a34df2dfa04a93a03604b13a95e04a8f9d1e07b4ead7598d44e81
+Mouse UniProt search 969b9eb2f6ae07c142e4bd656ddc8424f6ea15787951fba0e146956c4d95c74d
+Mouse InterPro 3ee6e93fb2b802704bf0b89ff724e932b7eadd3baa84f9ded7219fc572539368
+Mouse archive 7b17bb8549bac092101f1878aaf25cb03d4d0986df40ed093f4222901881e6da
+Yeast UniProt search eb31b8c3f3081f73fa4e1e26573e1807863b9abf954e9a5d0281508a86e2d960
+Yeast InterPro 229110712c6daf2e37e29f8ff1c231d0e7551e8d2a09ca4ef0e18ff0dccd576d

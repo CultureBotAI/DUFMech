@@ -1,0 +1,18 @@
+Identity assessment, accessed 2026-10-11; not causal evidence.
+Sources:
+https://rest.uniprot.org/uniprotkb/P27859.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P27859/entry/pfam/PF01026/
+UniProt entry P27859 / TATD_ECOLI: E. coli K-12, NCBITaxon:83333;
+tatD, aliases mttC/yigW/yigX, loci b4483/JW5931; 260 residues;
+sequence version 3, entry version 189. Sequence MD5:
+bc62515b3acdc2240a05383f5c222af8. The independently retrieved UniProt
+and InterPro sequences agree exactly.
+P27859 Pfam:PF01026 interval: 2-257, inclusive
+Residues checked directly in that sequence: H62, H64, E91, H127, H152,
+E201 and D203. All lie inside the profile interval.
+This maps the reference protein, not an independently sequenced experimental
+clone. Chen 2014 used K-12 DNA and a retained C-terminal His tag expressed
+in BL21-CodonPlus-RIPL. Dorival 2023 used a synthetic E. coli tatD gene in
+modified pET-21 to produce untagged protein in BL21(DE3). Native reference,
+DNA donor and expression host are not interchangeable. Complete cloning
+junctions and the 2023 synthetic sequence/version remain unverified.

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01256
+  path: curation/families/PF01256.yaml
+session:
+  id: 2026-10-11T102252Z-codex-2cdcb9
+  timestamp: '2026-10-11T10:22:52Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate separately scoped yeast and bacterial NAD(P)HX repair reactions
+  details: Mapped P36059 and P31806 to exact PF01256 intervals and distinguished YjeF
+    PF03853. Read Marbaix 2011 main and supplemental assay methods/results; visually
+    inspected Figure 2, Table S1 and Figure S4. Added five DIRECT OBSERVED net-reaction
+    edges, preserving ATP versus ADP, substrate/pH contexts, intact-protein scope
+    and incomplete clone identity. Retained a separately qualified 2018 cellular follow-up
+    lead. Baseline 8296 records validated without drift; family coverage remains partial
+    and IN_PROGRESS.

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01927
+  path: curation/families/PF01927.yaml
+session:
+  id: 2026-10-12T024132Z-codex-9f0324
+  timestamp: '2026-10-12T02:41:32Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Verify the PF01927 imaging reagent catalog discrepancy.
+  details: 'Inspected the manufacturer certificate for A11029 lot2306579 dated18-Feb-2021:
+    it identifies Alexa Fluor488, whereas Busetto2024 Methods says Alexa Fluor555.
+    Added the source and qualified mismatch to the evidence ledger and graph limitation,
+    refreshing edge evidence hashes. This does not establish which reagent or lot
+    the experiment actually used; no biological edge or status was strengthened. All24
+    edge quotations match the inspected primary HTML; native regeneration and retained
+    partial review follow.'

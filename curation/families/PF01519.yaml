@@ -1,0 +1,136 @@
+pfam_id: PF01519
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01519
+causal_graphs:
+  - graph_id: m129-mpn104-insertion-phenotype
+    title: MPN104 disruption lowers the fraction of gliding M129 cells
+    scope: M. pneumoniae M129 Tn4001.2065 insertion mutant MPN104-29 and its filter-cloned progeny; not a clean deletion, domain-selective mutation or experiment on MPN010.
+    context: Table 2 maps the insertion at genome position 134672. The screen enriched polystyrene-adherent transformants and selected altered satellite growth. Table 3 compares two filter clones with wild type using microcinematography, typically 30-50 cells per mutant and at least two experiments. Satellite growth conditions are glass, SP-4 plus 3% gelatin, 37 C; gliding analysis refers to the earlier published protocol and ordinarily uses one frame per second.
+    family_mapping: MPN104/MPN_104 is UniProtKB:P75565 (C09_orf104/MP050; NCBIProtein:AAB95698.1), M129 reference taxon 272634, sequence version 1, 104 aa. PF01519 maps at 9-103 inclusive. UniProt and InterPro sequences agree; the study independently identifies MPN104 as DUF16-bearing. Reference sequence mapping does not establish the mutant protein product or domain-specific action.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:272634
+    limitations: No MPN104 complementation or excision-revertant confirmation is established here. Figure 5 predicts no flanking polar effect, but that is not a measured polarity control. Glass binding and resting-time means are near wild type; no independent adhesion-loss or resolved motor-activation mechanism is asserted. Table 3 unit headings conflict with Results; gliding frequency is retained as percent, not um/s.
+    nodes:
+      - node_id: mpn104-29-insertion
+        label: Tn4001.2065 disruption at the MPN104-29 locus
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P75565
+      - node_id: mpn104-gliding-frequency
+        label: Fraction of cells exhibiting gliding in the M129 assay
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: mpn104-insertion-decreases-gliding-frequency
+        subject: mpn104-29-insertion
+        predicate: decreases
+        object: mpn104-gliding-frequency
+        mechanism: The insertion-mutant clones show mean gliding frequency 12.4 +/- 0.3 percent versus 27.8 +/- 0.3 percent in wild type. This is an observed insertion-associated phenotype with unresolved molecular and possible indirect effects, not proof that purified DUF16 activates a motor.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:16923901
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1595379/
+            snippet: gliding frequencies were reduced for all mutants
+            explanation: Tables 2/3 and the Results specify MPN104-29, its insertion site and frequency comparison. Figure 5's no-predicted-polar-effect symbol was visually checked; genetic rescue was not reported for this target in the inspected evidence.
+            cache_path: evidence/PF01519/hasselbring-2006-duf16.txt
+            cache_sha256: 673835e1c7adc910167ea8210b86d5859862fd9aee3840a45d4ba43ac9e77a60
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P75565/entry/pfam/PF01519/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P75565/entry/pfam/PF01519/
+            snippet: 'P75565 Pfam:PF01519 interval: 9-103, inclusive'
+            explanation: Connects the tested locus to this family while keeping reference sequence and mutant product distinct.
+            cache_path: evidence/PF01519/MPN104-MPN524-identity.txt
+            cache_sha256: 979e4dcfcdd63c25c95659d6e9dcd20b1a6f8d53a0ae1d149306e2a00004f271
+  - graph_id: m129-mpn524-insertion-phenotypes
+    title: MPN524 disruption reduces gliding and glass binding
+    scope: Separate M. pneumoniae M129 mutant MPN524-74 with Tn4001.2065 insertion at genome position 645829; not MPN104, MPN010 or isolated DUF16.
+    context: Table 3 means and SEM derive from two filter clones, with microcinematography for typically 30-50 cells and at least two experiments. Glass binding uses the same two clones and is normalized to wild type. The satellite-growth screen uses glass, SP-4 plus 3% gelatin at 37 C. Exact glass-binding incubation details are referred to a prior protocol and were not reconstructed in this review.
+    family_mapping: MPN524/MPN_524 is UniProtKB:P75254 (G12_orf168/MP318; NCBIProtein:AAB95966.1), M129 taxon 272634, sequence version 1, 168 aa. PF01519 maps at 47-124 inclusive. Its C-terminal extension is not part of that interval. UniProt and InterPro reference sequences agree; the experimental perturbation is whole-locus insertion, not an isolated-domain assay.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:272634
+    limitations: Genetic complementation, an excision revertant and mutant protein abundance are not established for MPN524 in the inspected study. Figure 5 predicts no polar effect but does not experimentally exclude it. Reduced attachment may contribute to altered gliding; no observed adhesion-to-motility causal edge is claimed. Table 3 velocity values are percent of WT despite the um/s heading; no 52.8 um/s absolute velocity is asserted. The DUF16 domain cannot be separated from other protein regions by this perturbation.
+    nodes:
+      - node_id: mpn524-74-insertion
+        label: Tn4001.2065 disruption at the MPN524-74 locus
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P75254
+      - node_id: mpn524-gliding-frequency
+        label: Fraction of MPN524-mutant cells exhibiting gliding
+        node_type: PHENOTYPE
+      - node_id: mpn524-gliding-velocity
+        label: Mean gliding velocity relative to wild type
+        node_type: PHENOTYPE
+      - node_id: mpn524-glass-binding
+        label: Glass-binding capability relative to wild type
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: mpn524-insertion-decreases-gliding-frequency
+        subject: mpn524-74-insertion
+        predicate: decreases
+        object: mpn524-gliding-frequency
+        mechanism: Mean gliding frequency is 12.8 +/- 3.2 percent in MPN524-74 versus 27.8 +/- 0.3 percent in wild type. The intervention is the insertion-mutant context, with an unresolved path from locus disruption to the phenotype.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:16923901
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1595379/
+            snippet: gliding frequencies were reduced for all mutants
+            explanation: The specific MPN524-74 row in Table 3 supports this direction and the stated mean/SEM; no complementation is borrowed from other mutants in the paper.
+            cache_path: evidence/PF01519/hasselbring-2006-duf16.txt
+            cache_sha256: 673835e1c7adc910167ea8210b86d5859862fd9aee3840a45d4ba43ac9e77a60
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P75254/entry/pfam/PF01519/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P75254/entry/pfam/PF01519/
+            snippet: 'P75254 Pfam:PF01519 interval: 47-124, inclusive'
+            explanation: Provides the separate MPN524 identity/domain mapping, not evidence for a family-wide or domain-specific phenotype.
+            cache_path: evidence/PF01519/MPN104-MPN524-identity.txt
+            cache_sha256: 979e4dcfcdd63c25c95659d6e9dcd20b1a6f8d53a0ae1d149306e2a00004f271
+      - edge_id: mpn524-insertion-decreases-gliding-velocity
+        subject: mpn524-74-insertion
+        predicate: decreases
+        object: mpn524-gliding-velocity
+        mechanism: MPN524-74 mean velocity is 52.8 +/- 7.8 percent of the wild-type normalized mean of 100.0 +/- 9.4. This is a cellular phenotype, not a measurement of purified motor speed or domain activity.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:16923901
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1595379/
+            snippet: gliding frequencies were reduced for all mutants
+            explanation: Velocity support comes from the distinct velocity column of the MPN524-74 Table 3 row and the normalized interpretation in Results, not from treating the adjacent frequency quotation as a velocity measurement. No new significance test is claimed.
+            cache_path: evidence/PF01519/hasselbring-2006-duf16.txt
+            cache_sha256: 673835e1c7adc910167ea8210b86d5859862fd9aee3840a45d4ba43ac9e77a60
+      - edge_id: mpn524-insertion-decreases-glass-binding
+        subject: mpn524-74-insertion
+        predicate: decreases
+        object: mpn524-glass-binding
+        mechanism: MPN524-74 glass binding is 68.2 +/- 2.0 percent of wild type, compared with the normalized WT mean of 100.0 +/- 3.2. The source reports P < 0.05 for this comparison, without resolving a direct molecular adhesion mechanism.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:16923901
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1595379/
+            snippet: Glass binding was reduced with the disruption of MPN524 but not MPN104
+            explanation: Table 3 and glass-binding Results support the outcome and distinguish MPN524 from MPN104. The same phenotype is not transferred to every DUF16 protein or to isolated domains.
+            cache_path: evidence/PF01519/hasselbring-2006-duf16.txt
+            cache_sha256: 673835e1c7adc910167ea8210b86d5859862fd9aee3840a45d4ba43ac9e77a60
+discussions:
+  - discussion_id: duf16-genetic-specificity-and-domain-mechanism
+    prompt: Find target-specific genetic rescue and test which DUF16-containing protein regions account for the MPN104 and MPN524 phenotypes.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Insertion-associated gliding and adhesion outcomes do not isolate domain function. Predicted absence of polarity is weaker than experimental complementation, and MPN524's non-DUF extension or altered adhesion could contribute to the phenotype.
+    evidence:
+      - reference: PMID:16923901
+        supports: PARTIAL
+        evidence_source: full_text
+        explanation: Methods, Tables 2/3, Results, Discussion and Figure 5 were inspected. The paper explicitly identifies genetic complementation as follow-up; rescue in other target mutants is not transferred here.
+      - reference: PMID:16522803
+        supports: PARTIAL
+        evidence_source: selected_full_text
+        explanation: The MPN010 DUF16 structure is a distinct protein context. Coiled-coil architecture and the paper's suggested motility role are not direct MPN010 causal evidence.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: Additional family members, later studies, raw movies and prior assay protocols remain incompletely covered. The inherited unknown-function description and seed classification remain unchanged; these partial graphs do not establish family-wide biochemical characterization.

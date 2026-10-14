@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01927
+  path: data/families/PF01927.yaml
+session:
+  id: 2026-10-12T024223Z-codex-0ae9df
+  timestamp: '2026-10-12T02:42:23Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial PF01927 causal evidence self-review.
+  details: Completed same-agent scientific assessment of14 graphs and24 OBSERVED edges,
+    exact member/domain mapping, source quotations, constructs, directness and unresolved
+    contexts. Native structured report 20261012T024436Z-pf01927-mut7-exd3-biochemical-assembly-and-cellular-contexts
+    binds digest d80fa2a64f79c51ab5ddc709411da9e59260107bbd6fd09c976dc489bd7ef839.
+    Verdict NEEDS_FOLLOWUP/pass_with_limitations, partial coverage, IN_PROGRESS. The
+    primary paper figures/supplement and manufacturer catalog discrepancy were inspected
+    as scoped in the report. Full member coverage, actual reagent, source conflicts
+    and native substrates remain open. No independent endorsement or publication is
+    implied; final corpus and browser verification follow.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T024436Z-pf01927-mut7-exd3-biochemical-assembly-and-cellular-contexts/review.yaml

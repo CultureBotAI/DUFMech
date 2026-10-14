@@ -1,0 +1,36 @@
+PF01904 computational-source assessment, 2026-10-11 UTC
+Ogrizek2016, PMID:27398092, doi:10.1186/s13065-016-0188-6
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4939058/
+https://link.springer.com/article/10.1186/s13065-016-0188-6
+https://media.springernature.com/original/springer-static/esm/art%3A10.1186%2Fs13065-016-0188-6/MediaObjects/13065_2016_188_MOESM1_ESM.doc
+https://media.springernature.com/original/springer-static/esm/art%3A10.1186%2Fs13065-016-0188-6/MediaObjects/13065_2016_188_MOESM3_ESM.zip
+Main Methods/Results/Conclusion read; original Figures 1-5 visually inspected.
+Publisher supplement tables/captions parsed after DOC-to-DOCX conversion;
+converted files omit images, so supplementary plots were not visually checked.
+The downloaded ZIP contains 48 coordinate subsets; five representative files
+were parsed with Bio.PDB, not rerun as quantum calculations or full trajectories.
+Minimal quotations: "pentacovalent intermediate";
+"Lys73 (here numbered as 72:A)" from the Figure S2 caption.
+
+The starting protein-DNA pose comes from the 2013 simulation. Two waters were
+replaced with Mg2+ and a preorganized 42-atom QM region was treated using
+B3LYP/6-31G* within CHARMM36. Sixteen interpolated replicas link constructed
+reactant/product endpoints. The reported path is a potential-energy profile,
+not a measured rate or calculated activation free energy with complete sampling.
+Figure 1 proposes nucleophilic attack on DNA phosphate, a pentacovalent state,
+then P-O3' cleavage. Figure 3 places replica 5 at a modeled energy minimum;
+this is not experimental intermediate trapping. Figure 4 removes the ions;
+Figure 5 removes the wider environment and uses a pure-QM setup according to
+Methods, despite its QM/MM caption. The latter is not an isolated protein-only
+deletion. Each plot uses a relative energy scale. Authors report a 17 kcal/mol
+internal barrier without ions and noise below 3 kcal/mol with ions; neither
+quantity is adopted as an experimental kinetic parameter or absolute rate gain.
+Initial neutral-lysine chemistry, ion count/type and hydroxide generation
+remain assumptions or future work. Predicted pKa 9.55 does not establish the
+actual protonation population without pH/context or an experimental measurement.
+The main-text Lys73 corresponds to native K72 by the explicit supplemental
+caption; the PDB/reference has T73. Tables use ASN45/GLN115, consistent with
+model numbering shifted from reference N44/Q114. No residue-specific mutation
+experiment, physical DNA binding, biological DNA repair or family-wide nuclease
+activity was established in this theoretical work. Two hypothetical graph steps
+retain the proposed chemistry without adopting the paper's stronger conclusion.

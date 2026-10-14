@@ -1,0 +1,71 @@
+Zhu R et al. Genetically encoded formaldehyde sensors inspired by a protein
+intra-helical crosslinking reaction. Nature Communications 12:581 (2021).
+PMID:33495458. DOI:10.1038/s41467-020-20754-4
+https://www.nature.com/articles/s41467-020-20754-4
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7835342/fullTextXML
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7835342/supplementaryFiles
+Accessed 2026-10-11. CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+Minimal quotation and curator paraphrase, not a full-text copy.
+Inspected HxlR Results, Methods for cloning/purification, MS, EMSA, flow
+cytometry and crystallization; Figure 1 visually; Supplementary Figures 1
+and 2 visually with complete captions; Notes 2-4 and Table 2 relevant rows.
+Original XML SHA256:
+b40274a38fb62debe2528a2e3623d3a5e1699d4417dd49ae13d1ba0799591870
+Supplementary PDF SHA256:
+64853cd8b590a1983c20117388aafc5e3a1e0a9c13ed19ca6afdbfafb75ad4b7
+
+Exact Results quotation: "the K13A mutant (HxlR-K13A) also remained insensitive to FA"
+Additional short Results quotations: "FA-treated sample"; "enhance its DNA affinity".
+
+Purified intact HxlR: 100 uM protein, 1 mM formaldehyde, 20 mM HEPES pH 7.5,
+300 mM NaCl, 1 h at 37 C, desalted before FT-MS. Supplementary Figure 1c
+shows new +12-Da protein peaks after treatment, alongside remaining unmodified
+and sodium-adduct species. This is an observed chemical-product response.
+The C11/K13 methylene assignment uses additional crystallographic density,
+MS/MS and synthetic peptide experiments, not the intact mass shift alone.
+Cellular MS/MS uses BL21(DE3) HxlR expressors exposed to 0.6 mM formaldehyde
+for 1 h before harvest, followed by HisTrap purification and tryptic digest.
+The F9-K23 peptide localizes the mass change. Synthetic Ac-FNCEKEL-NH2,
+treated with 1 mM formaldehyde for 1 h at 37 C, gains +12 and +30 species.
+C11A loses both; K13A loses +12 but retains +30. These isolated N-terminal
+peptides lie outside the current Pfam interval. The sequential reaction
+scheme is a proposal, not a directly time-resolved trajectory.
+
+EMSA Methods: pretreat 100 uM HxlR +/- 1 mM formaldehyde, 1-2 h, 37 C,
+20 mM HEPES pH 7.5, 300 mM NaCl. Dilute into 20 ul containing 50 nM
+annealed DNA, 20 mM HEPES pH 7.0, 50 mM KCl, 5 mM MgCl2, 10% glycerol.
+The Figure 1e gel and captions instead label 0.6 mM formaldehyde; this
+1-versus-0.6-mM difference is unresolved, not reconciled by invented dilution.
+Figure 1e compares WT and C11A at 0.2/0.4/0.6 uM protein: WT shifts more
+DNA after treatment; C11A has little treatment response but retains binding.
+Supplementary Figure 2d uses a different K13A range, 0.05/0.1/0.15/0.2 uM,
+and shows binding with little change on treatment. Do not mistake K13A for
+a binding-null mutant or compare absolute WT/K13A affinities from unmatched
+concentrations. No fitted KD is adopted. Captions report three independent
+experiments with representative gels.
+Table 2 gives BRH-F CCTCACAGTATCCTCCAAGTAACTTGTTGACTTCAAAGTGCCTACTTCTC
+and its reverse complement for EMSA; this 50-bp probe is not the optimized
+palindromic 20-bp crystallization DNA.
+
+Cellular reporter: E. coli BW25113, pBAD-HxlR and a B. subtilis 168
+hxlAB-promoter GFP reporter, overnight diluted 1:100 in LB to OD600 0.6;
+4 mM arabinose for 1 h, then +/- 600 uM formaldehyde for 40 min.
+Flow cytometry excitation 488 nm, emission 530/30BP. Figure 1f shows a
+WT fluorescence shift and little C11A response; C11A also has lower basal
+signal. Supplementary Figure 2e shows higher K13A basal signal and little
+additional formaldehyde response. Supplementary 2b/c retain colony-count
+viability checks and gating, not proof of equal mutant abundance or folding.
+This reporter endpoint is not a direct transcription-rate or detoxification
+measurement and is not a native B. subtilis cellular experiment.
+
+Purified pET28a protein has an N-terminal His tag removed with thrombin,
+followed by DTT treatment and SEC; PDB 7BZD retains GSH before native sequence.
+The pBAD reporter is a different construct. Table 2 pBAD-HxlR-F includes
+CCATGGGCCGGATG, compatible with MGRM rather than reference MSRM if translated
+from that ATG; Methods instead describe Gibson assembly. Thus a primer-implied
+S2G possibility, not a verified plasmid mutation, remains unresolved. Figure
+labels WT/C11A/K13A are retained as the authors' construct labels.
+Static structures differ in both formaldehyde and DNA conditions; a full
+helix-flipping causal trajectory is not adopted as directly observed. FAsor
+fusions, methylglyoxal responses, reversibility, other DUF24 members and
+the 2005 native-operon study require separate scoped research.

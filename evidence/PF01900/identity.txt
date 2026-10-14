@@ -1,0 +1,45 @@
+PF01900 identity and experimental mapping, inspected 2026-10-11.
+Frozen family is Rpp14/Pop5 family, RNase_P_Rpp14, EX_DUF, IPR002759.
+Frozen naming history identifies former DUF69, not PF01899/DUF68.
+Current InterPro family response agrees; clan CL0734 and representative 2CZV
+are identity/structure annotations, not evidence of directed causation.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01900/
+https://rest.uniprot.org/uniprotkb/search?query=xref:pfam-PF01900&format=json
+
+Six current UniProt reference sequences were compared with NCBI FASTA using
+Biopython SeqIO; each is identical over its full length:
+human RPP14 O95059 = NP_008973.1, 124 aa, sequence version3 (2007-01-23);
+human POP5 Q969H6 = NP_057002.2, 163 aa, sequence version1 (2001-12-01);
+M. jannaschii Q57917/MJ0494 = AAB98484.1, 134 aa, version1 (1996-11-01);
+P. furiosus Q8U151/PF1378 = AAL81502.1, 120 aa, version1 (2002-06-01);
+P. horikoshii O59150/PH1481 = BAA30588.1, 120 aa, version1 (1998-08-01);
+M. thermautotrophicus O26783/MTH_687 = AAB85192.1,124 aa,version1(1998-01-01).
+Taxa respectively9606,9606,243232,186497,70601,187420.
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=NP_008973.1,NP_057002.2,AAB98484.1,AAL81502.1,BAA30588.1,AAB85192.1&rettype=fasta&retmode=text
+
+InterPro member responses give PF01900 intervals, 1-based inclusive:
+O95059 35-108; Q969H6 7-115; Q57917 17-111; Q8U151 17-113;
+O59150 17-113; O26783 13-116.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01900/protein/uniprot/O95059/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01900/protein/uniprot/Q969H6/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01900/protein/uniprot/Q57917/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01900/protein/uniprot/Q8U151/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01900/protein/uniprot/O59150/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01900/protein/uniprot/O26783/
+
+Chen2010 supplementary TableS2 (PDFp14, visually inspected) maps POP5 loci
+MTH687,MJ0494,PF1378; MTH688 is the RPP30 partner, not this family.
+Supplement pp4-8 verifies tag-free, sequence-checked Mth/Mja cloning and
+coexpression. References are not independently sequenced assay aliquots.
+Hamasaki2015 Delta14C deletes the last14 of120 residues (107-120), overlapping
+PF01900 at107-113; DeltaL43-48 is internal to the reference domain.
+Do not transfer Rpp30 R107A to Pop5.
+
+Human 2023 proteins are histidine-tagged and refolded on Ni resin; exact inserts,
+tag termini, concentrations and an exact O95059 sequence-version match were not
+established. Myc-Rpp14 is an OriGene cDNA, not a verified canonical-sequence
+clone. The 320/321bp RT-PCR product is an amplicon, not proof of a107aa protein.
+2026 rescue uses pAVA3915/GenScript OHu15516D, intronless RPP14. The inspected
+SupplementData3 sequences cover other plasmids, not proof of this insert.
+O95059 is a gene-mapped reference, not a claim of exact transgene sequence.
+Human POP5 and RPP14 are distinct members, not interchangeable aliases.

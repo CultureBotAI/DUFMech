@@ -1,0 +1,47 @@
+PF01955 Rhodobacter cellular contexts, 2026-10-12 UTC
+Primary: PMID:19889098; DOI:10.1111/j.1365-2958.2009.06928.x
+https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3062942/
+Locators: first cellular Results, Table1, growth/extraction/analysis Methods,
+Tables2/3, original Figure2A-C (visually inspected).
+Minimal quotations: "cells grew"; "elution profile"
+
+Acetate growth: strain2.4.1 derivatives, oxic30C48h, mSistrom with30mM acetate,
+15nM cyano-corrinoid and1ug/ml tetracycline; triplicate OD650, SD bars.
+Starters: two days on30mM succinate with1nM CNCbl, washed twice, 5% inoculum.
+Figure2A delta-cobB/pRK404 versus2B delta-cobBdelta-cbiZ/pRK404 has reduced,
+not absent, growth with CNpseudoCbl (row4). pRsCBIZ6 restores robust growth
+in the double mutant (open triangles versus vector squares). The same
+deletion/rescue relationships persist with DMB (row5); DMB alone does not
+restore the cbiZ-deficient strain. Its concentration is not resolved here.
+Table2 identifies vector derivatives JE10778 and JE10779, and rescue JE10781;
+their parent strains are JE10754 and JE10755. Exact deletion endpoints await
+the earlier salvage study; plasmid parent and domain mapping are verified
+separately. These are whole-gene effects, not isolated-domain perturbations.
+Rows2/3/6 show Cbi/Cbl-supported double-mutant growth, so cbiZ is not universally
+required for all corrinoid-supported growth. No-corrinoid arms stay low.
+Figure2C bluB controls: DMB or pBLUB19 restores Cbi/pseudoCbl-supported growth,
+and Cbl supports growth. They constrain interpretation but are not PF01955
+catalytic edges. Neither OD nor gene rescue measures intracellular chemistry.
+The author-manuscript caption's fourth-column mention has no displayed data;
+no triple-mutant graph is made. Native uptake, mutase specificity and a full
+acetate-catabolism mechanism are not established by these interventions alone.
+
+Separate cellular-corrinoid experiment: oxic three-day cultures on30mM succinate,
+50nM added corrinoid, methanol extraction55C2h, cyano derivatization10mM KCN
+bright light30min; HPLC2min fractions quantified with Salmonella JE8248 cobS
+bioassay and normalized toCFU. Pigments mask the direct chromatographic peaks.
+With CNpseudoCbl, delta-cobB has about420molecules/CFU and a Cbl-like profile,
+including63% in the30min fraction. delta-cobBdelta-cbiZ has about200molecules/CFU,
+all detected activity in the24min fraction, like the pseudoCbl standard.
+Table1 standards: CNCbl61% at30min and a broad26-34min profile; CNpseudoCbl95%
+at24min. The genotype effect is a shift in bioassay-detected fraction profiles,
+not direct observation of intact intracellular AdoCbl or every remodeling step.
+The null's pseudoCbl-like material argues against complete uptake failure; it
+does not establish a CbiZ transporter interaction. No profile-rescue arm is
+reported in Table1. Growth rescue must not be transferred to this experiment.
+Additional controls: delta-cobB+Cbi about670molecules/CFU,60% at30min;
+delta-cobBbluB::aadA+Cbi about30molecules/CFU,84% at24min.
+Bioassay calibration is25-250pM in Methods versus50-250pM in Results; retain
+this discrepancy. The reported bioassay detection limit is5fmol. FigS1 is
+uninspected, so its raw traces/replicate details are not claimed verified.

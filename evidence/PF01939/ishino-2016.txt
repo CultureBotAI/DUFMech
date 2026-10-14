@@ -1,0 +1,37 @@
+Ishino et al.2016, PMID27001046, doi:10.1093/nar/gkw153
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4838380/
+Inspected2026-10-12: relevant Results/Methods; Figures2,3,6,8 visually;
+supplement PDF page12/FigureS6 visually and its caption; sequence tables
+and selected supplementary captions. Minimal quotation: "Mutational analysis".
+
+Curator paraphrase:
+The discovery library used P.furiosus PF0012; the detailed purified-protein
+experiments here use T.kodakarensis TK1898/Q5JER9, not that library member.
+At55C in Mg-containing reactions, TkoEndoMS cleaves both strands of
+G/T-containing45-bp duplexes, yielding a five-nucleotide5-prime overhang
+(Figure3). Normal duplex and ssDNA controls are negative at the low
+enzyme concentrations of Figure2. Do not transfer that negative to Figure6.
+
+FigureS6 uses equal100nM dimer protein with5nM G/T duplex. Purified
+D165A, E179A and K181A proteins show loss of detectable product versus
+WT. SDS-PAGE demonstrates recovered protein; it does not independently
+establish intact folding. N76D retains activity in this assay. All three
+loss substitutions map within PF01939; N76 is in PF21003.
+
+Figure8: adding cognate PCNA raises cleavage by4nM WT dimer, with5nM
+G/T substrate. The deltaPIP construct retains baseline cleavage but lacks
+the PCNA-dependent increase. The deleted QKTLF248-252 sequence is beyond
+the current PF01939 endpoint245. This is not isolated-domain sufficiency
+or complete loss of catalysis. PCNA alone is not the nuclease.
+
+Figure6 uses50nM substrate,0-400nM dimer protein,55C10min and D165A
+negative controls. Higher concentrations produce cleavage of3-prime/5-prime
+flaps,3-prime/5-prime splayed substrates, ordinary duplex and ssDNA.
+Patterns are heterogeneous and inefficient compared with mismatch cleavage;
+the graph must not turn these high-concentration effects into native
+substrate preferences. The same DNA is not claimed to be both uncleavable
+and cleavable without retaining the concentration difference.
+
+Mismatch preferences and flanking-base effects are assay-specific. The paper
+does not establish a complete native repair chain or universal recombination
+requirement. Its2016 repair model is distinct from later cellular findings.

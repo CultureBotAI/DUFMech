@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01900
+  path: curation/families/PF01900.yaml
+session:
+  id: 2026-10-11T215850Z-codex-2868bb
+  timestamp: '2026-10-11T21:58:50Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped Pop5 and Rpp14 causal assays for former DUF69
+  details: 'Add nineteen graphs with thirty-five observed edges across six mapped
+    reference proteins: three direct, fourteen unresolved and eighteen indirect. Retain
+    joint protein and buffer interventions, apparent affinity versus catalytic activation,
+    human fraction and preparation effects, RNAi and Cas9 limitations, and separate
+    upstream-knockout rescue. Inspect original figures and recovered supplementary
+    methods; preserve source discrepancies and incomplete family coverage. Reuse validated
+    archaeal evidence from PF01876 without counting it as new replication. Status
+    IN_PROGRESS; no publication or full scientific completion.'

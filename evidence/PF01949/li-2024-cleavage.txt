@@ -1,0 +1,39 @@
+Li et al., JBC300(11):107901, PMID39426726, doi:10.1016/j.jbc.2024.107901.
+Inspected 2026-10-12 UTC. Primary HTML Methods/Results/Discussion and
+Figures2/3/6/7, supplementS3/S4/S6/S9 and TableS1 inspected.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11585767/supplementaryFiles
+
+Minimal exact Discussion quotation: "forming a 23-nt product."
+
+Paraphrased observations and limits:
+- Five separate His-tagged proteins were expressed in E. coli BL21 and
+  purified: Afu/WP_010878930.1, Halo/WP_009487363.1, Gm/TLY50285.1,
+  Loki/TFG01626.1 and Thor/TFG14500.1. Identity boundaries are in identity.txt.
+- Figure2 and supplementS3 show a fluorescent product comigrating with a
+  23-nt marker from 5'-FAM ssDNA with dU at position23. Main Methods use
+  300-nM protein, 30-nM substrate, 37C30min; bufferA contains150-mMNaCl,
+  5-mMMgCl2, Tris pH7.4, DTT and glycerol. FigureS3 caption specifies
+  substrate/time/temperature and relies on main Methods for protein level.
+- The alternative A, dI and AP substrates lack the analogous product in
+  those gels. S3 does not include an enzyme-minus dU lane. Figure3 provides
+  such controls for Afu/Halo, plus time courses and35/50/58-nt substrates.
+  The35-nt substrate is visibly cleaved despite text saying longer than35.
+- The product length supports a cut immediately3' of dU, not glycosylase
+  excision of free uracil. Terminal phosphate/hydroxyl chemistry is not
+  independently measured. No complete cellular repair sequence is observed.
+- Figure6A shows Afu/Halo cutting the lesion strand of dU/G duplexes;
+  5'-FAM label is on dU in panelA, on the opposite G strand in panelB.
+  The latter has no corresponding cleavage. Conditions are37C60min,
+  not the standard30min. Multiple upper bands are attributed by authors
+  to incomplete denaturation; they are not independently mapped extra cuts.
+- SupplementS6 includes dU positive and enzyme-minus controls, with no
+  analogous product for the eight tested ordinary mismatches. S4 shows
+  no product from the tested ssRNA after60min with any of the five proteins.
+  Negative assays are condition-specific, not edges claiming universal absence.
+- Assays were reported repeated at least three times; displayed gels are
+  representative. No raw gel reanalysis, kinetic model, domain-only assay
+  or independent replication by another group was performed in this review.
+- S9 visually supports related full-length sequences for all five tested
+  proteins. It labels the bacterial sequence GbEndo_dU where other sections
+  use GmEndo_dU; accessionTLY50285.1 is the maintained identity anchor.

@@ -4,7 +4,7 @@ name: RNA 2'-phosphotransferase, Tpt1 / KptA family
 short_name: PTS_2-RNA
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01885
 counters:
   proteins: 8160
@@ -26,3 +26,103 @@ description: Tpt1 catalyses the last step of tRNA splicing in yeast. It transfer
   to be followed by a transesterification step to release the RNA. The first step of this reaction is
   similar to that catalysed by some bacterial toxins. E. coli KptA and mouse Tpt1 are likely to use the
   same reaction mechanism [[cite:PUB00008050]].
+curation_history: history/records/PF01885
+causal_graphs:
+- graph_id: cthtpt1-terminal-phosphate-removal
+  title: CthTpt1-dependent RNA terminal phosphate removal
+  scope: Purified full-length His6-CthTpt1 (ABN54255.1) from Clostridium thermocellum ATCC 27405, expressed
+    in E. coli.
+  context: Separate 10-mer AUCACGCUUA substrates bearing a terminal 2'- or 3'-phosphate; 0.2 uM RNA, 0.5
+    uM enzyme, 1 mM NAD+, 100 mM Tris-HCl pH 7.5, 37 C, 30 minutes.
+  family_mapping: A3DJX6, kptA/Cthe_3059, sequence version 1, 182 residues; PF01885 spans reference residues
+    8-172. Current species name is Acetivibrio thermocellus.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:203119
+  limitations: Terminal removal is approximately stoichiometric under these conditions, not demonstrated
+    multiple-turnover catalysis. PAGE product assignment uses T4 Pnkp and CIP controls. Intermediate chemistry,
+    endogenous substrates and domain-only sufficiency are not established here; tested Runella and human
+    homologs lack equivalent terminal activity.
+  nodes:
+  - node_id: cthtpt1-2p-system
+    label: His6-CthTpt1 with NAD+ and terminal 2'-phosphate RNA
+    node_type: STATE
+    grounding:
+    - UniProtKB:A3DJX6
+  - node_id: terminal-2p-removal
+    label: RNA terminal 2'-phosphate removal to 2'-OH
+    node_type: PROCESS
+  - node_id: cthtpt1-3p-system
+    label: His6-CthTpt1 with NAD+ and terminal 3'-phosphate RNA
+    node_type: STATE
+    grounding:
+    - UniProtKB:A3DJX6
+  - node_id: terminal-3p-removal
+    label: RNA terminal 3'-phosphate removal to 3'-OH
+    node_type: PROCESS
+  edges:
+  - edge_id: cthtpt1-enables-terminal-2p-removal
+    subject: cthtpt1-2p-system
+    predicate: enables
+    object: terminal-2p-removal
+    mechanism: The purified protein and NAD+ support loss of the terminal 2'-phosphate; the RNA product
+      comigrates with the T4 Pnkp-generated hydroxyl-ended control on denaturing PAGE.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31019096
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6573784/fullTextXML
+      snippet: Removal of the 2'-PO4 and 3'-PO4 groups by CthTpt1 depended on NAD+.
+      explanation: Figure 1 image, Results and assay methods support this biochemical endpoint, with no-enzyme
+        and no-NAD+ controls. The full intermediate pathway is not asserted.
+      cache_path: evidence/PF01885/munir-2019-cthtpt1.txt
+      cache_sha256: 45ced6b757bc0663a6f3c749c5c8a0e9556f5f3609028c8e5850a0ca1e4b075f
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A3DJX6/entry/pfam/PF01885/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A3DJX6/entry/pfam/PF01885/
+      snippet: 'entry accession: PF01885'
+      explanation: The experimental accession maps to this reference protein and its Pfam interval, not
+        an independently tested isolated domain.
+      cache_path: evidence/PF01885/A3DJX6-identity.txt
+      cache_sha256: 1fb0a274815b0e373d3abb22d0588ac41986a6814a023b084049845f02ee9b04
+  - edge_id: cthtpt1-enables-terminal-3p-removal
+    subject: cthtpt1-3p-system
+    predicate: enables
+    object: terminal-3p-removal
+    mechanism: In a separate substrate assay, the purified protein and NAD+ support formation of hydroxyl-ended
+      RNA from the terminal 3'-phosphate substrate; PAGE and phosphatase challenges constrain product
+      assignment.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31019096
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6573784/fullTextXML
+      snippet: Removal of the 2'-PO4 and 3'-PO4 groups by CthTpt1 depended on NAD+.
+      explanation: Figure 1 image and Results distinguish this slower terminal 3'-phosphate reaction from
+        the 2'-phosphate assay; a putative intermediate is not a separate observed edge.
+      cache_path: evidence/PF01885/munir-2019-cthtpt1.txt
+      cache_sha256: 45ced6b757bc0663a6f3c749c5c8a0e9556f5f3609028c8e5850a0ca1e4b075f
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A3DJX6/entry/pfam/PF01885/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A3DJX6/entry/pfam/PF01885/
+      snippet: 'entry accession: PF01885'
+      explanation: The mapping anchors the full-length construct to this family without transferring activity
+        to all homologs.
+      cache_path: evidence/PF01885/A3DJX6-identity.txt
+      cache_sha256: 1fb0a274815b0e373d3abb22d0588ac41986a6814a023b084049845f02ee9b04
+curation_events:
+- timestamp: '2026-10-11T05:13:11Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Add scoped CthTpt1 terminal RNA phosphate-removal graph
+  history_record: history/records/PF01885/2026-10-11T051311Z-codex-bbd7f2.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T05:15:58Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of CthTpt1 terminal reactions
+  history_record: history/records/PF01885/2026-10-11T051558Z-codex-2bfa80.yaml
+  event_index: 0
+  llm_assisted: true

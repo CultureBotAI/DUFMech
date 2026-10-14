@@ -1,0 +1,30 @@
+PF01901 reference and strain-lineage follow-up,2026-10-11 UTC
+This dated assessment supplements identity.txt without changing its historical
+bytes or the preceding review. Newly inspected authority and sequence facts:
+
+https://www.atcc.org/products/700927
+https://genomes.atcc.org/genomes/40201578f7274d67
+ATCC identifies700927 as a derivative of43895 and as the Wisconsin genome
+project culture. Thus the lineage relationship is documented,not unexplained.
+This does not establish the sequence of a particular experimental stock or
+its transposon allele. CP008957.1/AIG69277.1 still exactly matches Q8X4T7 as
+previously compared. Retain experimental-stock uncertainty,not a suggestion
+that these culture accessions have no known relationship.
+
+https://www.ncbi.nlm.nih.gov/nuccore/CP041623.1
+Parsed GenBank source explicitly identifies ATCC43888,serotypeO157:H7,
+taxon83334,Stx-minus. CDS FNZ21_14180 encodes QDZ55367.1,394 aa,exactly equal
+to current Q8X4T7/BAB36267.1. Its positive-strand start2969732 matches the
+first cluster coordinate printed in Park2021 Figure4A. This sequence/strain
+comparison supports reference-level mapping of the ATCC43888 study; neither
+reference coordinates nor the gene diagram independently sequence its mutant
+or complementation plasmid. The current InterPro match remains PF01901 8-205,
+score0.041; the partial domain assignment is not a validated catalytic boundary.
+
+Shifrin2008 Table1 defines SK2526 as the TUV93-0 wzy insertion mutant and
+B12-D5 as its Sakai-derived allele source. TUV93-0 is an EDL933 derivative
+lacking stx1/stx2. Current Sakai Q8X4T7/BAB36267.1 and EDL933 AIG69277.1 match,
+but the historical transferred allele and experimental stocks were not
+independently sequenced here. The caption's generic EPEC wording conflicts
+with its EHEC heading,anti-O157 assay and Results; do not transfer these data
+to O127 or silently merge SK2526,ATCC43888 andATCC43895.

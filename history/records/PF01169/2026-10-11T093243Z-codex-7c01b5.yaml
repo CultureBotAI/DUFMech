@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01169
+  path: curation/families/PF01169.yaml
+session:
+  id: 2026-10-11T093243Z-codex-7c01b5
+  timestamp: '2026-10-11T09:32:43Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add scoped Gdt1 transport-readout and yeast pH graphs
+  details: 'Inspected Deschamps 2023 main text and supplement, visually checked Figures
+    1-6 and supplemental calibration/statistics, and verified both PF01169 repeats
+    in P38301. Compared 2016 construct and 2020 sensor Methods without transferring
+    their different conditions. Added eight OBSERVED effects in six graphs: two DIRECT
+    gradient-to-uptake effects, four expression-associated pH effects with UNRESOLVED
+    directness and two INDIRECT glucose-pulse phenotypes. Preserve clone, calibration,
+    topology, leakage, stoichiometry and native reverse-transport limitations. Overlay
+    schema and evidence integrity pass; guarded regeneration and partial same-agent
+    review follow. Frozen identity and worklists are unchanged.'
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC10148156/

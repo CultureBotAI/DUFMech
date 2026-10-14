@@ -1,0 +1,82 @@
+pfam_id: PF01796
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01796
+causal_graphs:
+  - graph_id: mtb-ltp2-duf35-aldolase
+    title: M. tuberculosis Ltp2-DUF35 aldolase activity
+    scope: Copurified H37Rv His-tagged Ltp2 with the untagged ChsH2 C-terminal DUF35 construct, expressed in Rhodococcus jostii RHA1.
+    context: 2.5-30 uM 17-HOPC-CoA in a preparation containing 3-OPDC-CoA; 100 mM sodium HEPES pH 7.5, 16 uM TTHB247, 200 uM NADH, 25 C, 1 mL, 5-15 minute kinetic assays.
+    family_mapping: ChsH2/Rv3542c is I6YGF8, sequence version 1, 311 residues; PF01796 spans 234-295. The paper identifies the C-terminal construct as DUF35/PF01796; exact truncation boundaries remain unverified.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:83332
+    limitations: The coupled NADH readout reports propionyl-CoA formation; direct product MS used a different, larger complex. DUF35 alone is inactive, while Ltp2 alone retains low activity with possible folding/stability limitations. No isolated-OB-fold catalysis, PF12172 assignment or virulence effect is inferred.
+    nodes:
+      - node_id: mtb-ltp2-duf35-system
+        label: Copurified Ltp2-DUF35 with 17-HOPC-CoA assay substrate
+        node_type: STATE
+        grounding:
+          - UniProtKB:I6YGF8
+      - node_id: mtb-propionyl-coa-formation
+        label: Aldolase-dependent propionyl-CoA formation
+        node_type: PROCESS
+    edges:
+      - edge_id: mtb-complex-enables-aldolase-reaction
+        subject: mtb-ltp2-duf35-system
+        predicate: enables
+        object: mtb-propionyl-coa-formation
+        mechanism: The copurified complex cleaves the steroid side chain; propionyl-CoA formation is measured through TTHB247-coupled NADH oxidation, with substrate-dependent kinetics.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:29109182
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5738731/
+            snippet: The purified Ltp2-DUF35 complex also possessed aldolase activity
+            explanation: Results, Figure 5 image and kinetic methods support the complex reaction, not a reaction catalyzed by DUF35 alone.
+            cache_path: evidence/PF01796/gilbert-2018-duf35.txt
+            cache_sha256: fd63bfcc1438d7a4e4c2e8e67455777f512f5300a67b32b8edd841031bc369b9
+          - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/I6YGF8/
+            source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/I6YGF8/
+            snippet: 'entry accession: PF01796'
+            explanation: The paper's Rv3542c locus maps to the reference and OB-fold interval; no current PF12172 match is present in the complete response.
+            cache_path: evidence/PF01796/I6YGF8-identity.txt
+            cache_sha256: f9622f563a63bc27a7409f0938efab3a1717140f0a17d307ea05bd4bf78428ad
+  - graph_id: tc-duf35-addition-aldolase
+    title: T. curvata DUF35 addition increases Ltp2 activity
+    scope: Purified Tcur3479 Ltp2 and Tcur3482 ChsH2 C-terminal construct from Thermomonospora curvata DSM 43183; in-vitro mixing experiment.
+    context: Ten-minute incubation at Ltp2:DUF35 ratio 1:5; activity toward 21 uM 17-HOPC-CoA measured at 25 C in 100 mM HEPES pH 7.5 with 200 uM NADH and 16 uM TTHB247.
+    family_mapping: D1AB77, sequence version 1, 319 residues; PF01796 spans 237-298. Deposited 6OK1 entity 2 is initiator M plus reference 188-319 and includes PF12172 at 199-234.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:471852
+    limitations: The tested construct includes both domains; their individual contributions are unresolved. Ltp2 alone retains weak activity and DUF35 alone is inactive. The same experiment is retained in PF12172, not independent replication. Allostery, folding assistance and bile-acid physiology are not established by this assay.
+    nodes:
+      - node_id: tc-duf35-addition
+        label: Addition of the ChsH2 C-terminal construct to Ltp2 at 1:5
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:D1AB77
+      - node_id: tc-ltp2-aldolase-activity
+        label: Ltp2 aldolase specific activity toward 17-HOPC-CoA
+        node_type: ACTIVITY
+    edges:
+      - edge_id: tc-duf35-increases-ltp2-activity
+        subject: tc-duf35-addition
+        predicate: increases
+        object: tc-ltp2-aldolase-activity
+        mechanism: Mixing the purified partner construct with Ltp2 raises measured specific activity from about 0.00042 to 0.14 umol/min/mg in the coupled assay; this is a measured biochemical effect, not proof of an allosteric molecular mechanism.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:31209106
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6682727/
+            snippet: After a 10-min incubation of a 1:5 ratio of Ltp2/ChsH2
+            explanation: The Results mixing experiment and kinetic methods establish increased activity, while residual Ltp2 activity rules out an absolute-requirement claim.
+            cache_path: evidence/PF01796/aggett-2019-duf35.txt
+            cache_sha256: 17e6f814c55be438f3008b4384c628f6dbb4df4a90e64a7de236ce779c82d639
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/D1AB77/entry/pfam/PF01796/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/D1AB77/entry/pfam/PF01796/
+            snippet: 'entry accession: PF01796'
+            explanation: Current coordinates and the deposited construct establish inclusion of the OB fold; neither mapped domain was tested separately.
+            cache_path: evidence/PF01796/D1AB77-identity.txt
+            cache_sha256: 1bde4b540c77e0adebf14a10536c0d2d50580e2862c7a8868ffb11a9dc76a2b2

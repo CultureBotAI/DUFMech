@@ -1,0 +1,45 @@
+PF01901 evidence assessment: Sheng et al.,2024
+PMID39273173;doi:10.3390/ijms25179224
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11394844/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11394844/fullTextXML
+Inspected2026-10-11 UTC: Results,Methods,Table1/2 and captions; original
+Figures1,2,4,5 visually inspected. No supplementary material is listed.
+Minimal quotations: "single O-antigen unit"; "impaired motility".
+
+Figure1B compares silver-stained LPS from parental ATCC43895 and wzy-Tn5.
+Long-O-antigen signal is reduced and a lower band assigned to one O unit
+remains. Figure1A is an expected-structure schematic,not direct chemical
+determination of every linkage. Its delta-wzy label must not overwrite the
+actual Tn5 genotype named in1B,Table1 and the text. LPS gel migration supports
+a whole-cell assembly phenotype,not purified Wzy catalytic chemistry.
+
+Figure2B shows reduced retained crystal-violet signal for wzy-Tn5 versus WT
+at37 C in the24h microtiter assay. It is NOT complete loss:2A retains a visible,
+weaker tube ring. Caption2B gives six assays/strain,mean/SD,one-wayANOVA with
+Dunnett comparison and one-star p<0.01 for wzy. Do not assign an exact raw
+mean from the plotted bar. Results says WT0.54,whereas the bar appears nearer
+0.57; the directional comparison is retained without numerical overprecision.
+SOURCE DISCREPANCIES: Methods says MSM with0.04%glucose while caption2B says
+4%; tube Methods says overnight whereas2A caption/Results say48h. Do not silently
+choose either as an exact matched protocol or compare its magnitude with2020.
+The2024growth curves(Figure3) are for core mutants,not a wzy-specific matched
+growth control for crystal-violet biomass. Biomass,attachment,dye retention
+and envelope changes remain possible contributors; no direct assembly pathway
+from the altered O-antigen band to this phenotype is established.
+
+Figure4 shows a smaller but nonzero wzy-Tn5 motility halo,roughly33mm versus
+WT57mm by visual reading,with a one-star difference. Caption gives three
+repeats,mean/SD,two-tailed unpaired t-test,p<0.01. Methods/caption report40h,
+Results says48h. The wzy lane retains a flagellin immunoblot band: the mutation
+does not establish absence of flagella or direct inhibition of flagellar
+biogenesis. Halo spread is a population phenotype,not single-cell motor speed.
+Figure5 retains red Congo-red binding in wzy-Tn5. This does not prove every
+curli property is unchanged, but rejects a claim of complete curli loss.
+
+The2020wzy-Tn5 strain is reused. Wzy-specific rescue,exact insertion site,
+mutant sequence and downstream expression controls are not established here.
+No wzy invasion-reduction edge is adopted: the current invasion experiments
+test core/flagella mutants and cite2020 for the retained O-antigen-mutant
+invasion. Core-mutant effects do not transfer to Wzy. Family membership uses
+the paper-cited reference sequence with the culture-collection discrepancy in
+identity.txt. The three adopted effects are OBSERVED,INDIRECT,PHENOTYPIC.

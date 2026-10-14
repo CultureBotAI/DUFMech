@@ -1,0 +1,407 @@
+schema_version: 1.0.0
+review_id: 20261011T074517Z-pf00672-tsr-hamp-causal-phenotypes
+title: Scoped scientific self-review of Tsr HAMP rotation and chemotaxis effects
+started_at: '2026-10-11T07:43:09Z'
+finished_at: '2026-10-11T07:45:17Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Three PHENOTYPIC graphs retain three INDIRECT OBSERVED edges for G235E rotation
+  in UU1250, G235C rotation in UU1535 and a separate G235P soft-agar response. The
+  HAMP residue mapping is verified and the host/assay contexts remain distinct. These
+  reporters do not resolve direct kinase or packing mechanisms; status remains IN_PROGRESS
+  with partial family coverage.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF00672.yaml
+    sha256: c0c87742b2640e3dacca0d81489236c9b7703948021d67dd92b61d6144f30644
+    role: context
+  - path: data/families/PF00672.yaml
+    sha256: c2d9ed2cd345fbd0b10bf982139d0d70d09a2fc165bd3473c2ae90f42397ee9c
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF00672/ames-2008-tsr.txt
+    role: context
+    sha256: c82e2399d5e794ca71f7a5c9280bc60d47969bc211065970129b793e09cb7bff
+  - path: evidence/PF00672/Tsr-identity.txt
+    role: context
+    sha256: 46620a9b2bca73a9da6efbd86c947f6cadfbdd9c0f7c304dfb5f3c093e2d2ec7
+  - path: evidence/PF00672/ames-2014-hamp-context.txt
+    role: context
+    sha256: cf9a6c52f7b0a9cd85aa1372131a37311017d670d655d2931ba48f39ace22734
+targets:
+- target_id: PF00672
+  path: data/families/PF00672.yaml
+  label: PF00672
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF00672.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: a58af93f57493926ddd658072ed4e49a9449926a70343b7a4195a139d8174a3c
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: PF00672 HAMP, the next accession-ordered SEEDED record, using the 2008
+    Tsr connector-mutagenesis experiments and later interpretive qualifications.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF00672
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Exact tethering conditions, independent restoration of the adopted endpoints,
+      direct kinase/assembly measurements and complete clone sequences remain unresolved.
+      The 2008 abundance controls do not prove folding. Other connector mutants, later
+      deletion experiments, additional HAMP transducers and raw movies remain incompletely
+      curated. The 2014 study's figures and supplements were not visually inspected.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF00672
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2566183/
+  locator: Methods, Table 1, connector-mutant Results and Discussion; Figures 2/4
+    visually inspected; cited 2002 Behavioral Assays weighting method
+  accessed_at: '2026-10-11T07:45:17Z'
+  support: supports
+  snapshot_sha256: c82e2399d5e794ca71f7a5c9280bc60d47969bc211065970129b793e09cb7bff
+  summary: G235E is CW locked in UU1250, above 75% estimated CW time versus about
+    25% WT. G235C is CCW locked in UU1535, at most 15% versus above 80% WT. Figure
+    4 shows 100-cell profiles, not independent replicate experiments or exact category-threshold
+    values. Figure 2 shows G235P chemotaxis loss despite roughly WT rotation output;
+    soft-agar growth and tethered-cell measurements are not merged.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P02942/entry/pfam/PF00672/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T07:45:17Z'
+  support: supports
+  snapshot_sha256: 46620a9b2bca73a9da6efbd86c947f6cadfbdd9c0f7c304dfb5f3c093e2d2ec7
+  summary: P02942/tsr/cheD, b4355/JW4318, is a 551-residue K-12 reference, taxon 83333,
+    sequence version 2. UniProt and InterPro sequences match, with PF00672 at 217-263
+    and G235 in the connector. The study reports full mutant coding-region sequencing,
+    but complete plasmid junctions were not independently reconstructed and the RP437-derived
+    hosts are not relabeled MG1655.
+- evidence_id: later-hamp-context
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4154141/
+  locator: Discussion on signaling states, structural control and adaptation; rotation
+    Methods
+  summary: Later deletion work distinguishes adaptable and nonphysiological locked
+    outputs and competing structural interpretations. These limits prevent a universal
+    HAMP-required-for-kinase or directly observed packing claim; separate deletion
+    experiments are not curated as G235 effects.
+  accessed_at: '2026-10-11T07:45:17Z'
+  support: supports
+  snapshot_sha256: cf9a6c52f7b0a9cd85aa1372131a37311017d670d655d2931ba48f39ace22734
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T07:45:17Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf00672
+  kind: record_content
+  reference: data/families/PF00672.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T07:45:17Z'
+  support: context_only
+  snapshot_sha256: c2d9ed2cd345fbd0b10bf982139d0d70d09a2fc165bd3473c2ae90f42397ee9c
+  quote: "id: Pfam:PF00672\npfam_id: PF00672\nname: HAMP domain\nshort_name: HAMP\n\
+    seed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status: IN_PROGRESS\n\
+    source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00672\ncounters:\n\
+    \  proteins: 257581\n  matches: 287608\n  proteomes: 18718\n  taxa: 27652\n  structures:\
+    \ 46\n  alphafold_models: 151473\n  domain_architectures: 3947\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR003660\ncuration_history: history/records/PF00672\ndiscussions:\n\
+    - discussion_id: tsr-hamp-molecular-output-and-context-coverage\n  prompt: Resolve\
+    \ HAMP molecular output states and extend beyond the three scoped Tsr mutant phenotypes.\n\
+    \  kind: CURATION_TODO\n  status: OPEN\n  rationale: Motor rotation and soft-agar\
+    \ chemotaxis are different cellular readouts. Neither establishes\n    a specific\
+    \ HAMP packing geometry, direct phosphorylation step or universal need for HAMP\
+    \ in kinase\n    activation. Host adaptation state materially changes WT output.\n\
+    \  evidence:\n  - reference: PMID:18621896\n    supports: PARTIAL\n    evidence_source:\
+    \ full_text\n    explanation: Methods, Table 1, Figures 2/4 and relevant Results\
+    \ support the three scoped effects.\n      Coding-sequence checks and abundance\
+    \ controls do not eliminate local structural or complex-assembly\n      alternatives;\
+    \ tethering conditions and broader mutant coverage remain incomplete.\n  - reference:\
+    \ PMID:24205875\n    supports: PARTIAL\n    evidence_source: selected_full_text\n\
+    \    explanation: The later Tsr deletion study distinguishes physiological and\
+    \ nonphysiological output\n      states and discusses competing structural interpretations.\
+    \ Its deletion results are not transferred\n      to G235 substitutions, and no\
+    \ packing-model arrow is promoted to an observed mechanism.\n  posed_by: Codex\n\
+    \  posed_date: '2026-10-11'\n  notes: Retrieve exact tethering conditions and\
+    \ independent rescue or direct kinase/assembly measurements\n    for these variants.\
+    \ Curate other Tsr mutants, HAMP-containing proteins and deletion contexts separately\n\
+    \    with primary evidence. The 2002 cited behavioral weighting method was inspected;\
+    \ unrelated crosslinking\n    conditions were not borrowed. Raw movies and later-study\
+    \ figures/supplements were not reanalyzed.\n    Family status remains IN_PROGRESS.\n\
+    causal_graphs:\n- graph_id: tsr-g235e-adaptation-proficient-rotation\n  title:\
+    \ Tsr G235E increases clockwise rotation in adaptation-proficient cells\n  scope:\
+    \ Full-length pRR53 Tsr-G235E compared with WT pRR53 Tsr in E. coli K-12 RP437-derived\
+    \ UU1250,\n    lacking all five MCP receptors but retaining CheR/CheB. Not an\
+    \ isolated HAMP-domain or purified kinase\n    assay.\n  context: Antibody-tethered\
+    \ cells under unstimulated steady-state conditions; Figure 4 displays 100 cells\n\
+    \    per strain and mutant. The five rotation categories are converted to an estimated\
+    \ fraction of CW time\n    using weights 0, 0.25, 0.5, 0.75 and 1. This is not\
+    \ simply a percentage of CW cells. pRR53 is IPTG-controlled;\n    exact tethering\
+    \ induction, temperature and buffer are not restated in the 2008 Methods, and\
+    \ soft-agar\n    conditions are not transferred.\n  family_mapping: UniProtKB:P02942,\
+    \ tsr/cheD, b4355/JW4318, is a 551-residue K-12 reference, taxon 83333,\n    sequence\
+    \ version 2. UniProt and InterPro sequences agree exactly; PF00672 maps at 217-263\
+    \ inclusive,\n    containing G235. The study sequenced the entire mutant tsr coding\
+    \ region. Reference mapping does not\n    imply the RP437-derived assay hosts\
+    \ are MG1655 or that the complete plasmid junctions were independently\n    verified.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:83333\n  limitations: The CW-locked\
+    \ class is a cellular reporter category, not direct measurement of CheA phosphorylation\n\
+    \    or a particular HAMP packing state. The greater-than-75% threshold is not\
+    \ an exact G235E value. Protein\n    abundance of at least 50% WT was established\
+    \ in UU1535 for the relevant mutant set, not as a folding\n    assay in UU1250.\
+    \ No raw movies, independent-replicate count or clean restoration of this endpoint\n\
+    \    is established here.\n  nodes:\n  - node_id: g235e-in-uu1250\n    label:\
+    \ Tsr G235E expressed in adaptation-proficient UU1250\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:P02942\n  - node_id: uu1250-cw-time\n    label:\
+    \ Estimated clockwise rotation time fraction in UU1250\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: g235e-increases-uu1250-cw-time\n    subject: g235e-in-uu1250\n\
+    \    predicate: increases\n    object: uu1250-cw-time\n    mechanism: G235E is\
+    \ CW locked, defined as greater than 75% CW time in UU1250, compared with approximately\n\
+    \      25% for WT Tsr. Figure 4 shows the corresponding shift in rotation categories.\
+    \ The molecular path\n      through receptor assembly, kinase signaling and the\
+    \ motor is not directly resolved by this assay.\n    directness: INDIRECT\n  \
+    \  support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:18621896\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2566183/\n\
+    \      snippet: under unstimulated, steady-state conditions\n      explanation:\
+    \ Table 1 assigns G235E to CW locked, Methods defines its host-specific thresholds,\
+    \ and\n        Figure 4 directly displays G235E and WT profiles. The comparison\
+    \ is restricted to adaptation-proficient\n        UU1250.\n      cache_path: evidence/PF00672/ames-2008-tsr.txt\n\
+    \      cache_sha256: c82e2399d5e794ca71f7a5c9280bc60d47969bc211065970129b793e09cb7bff\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P02942/entry/pfam/PF00672/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P02942/entry/pfam/PF00672/\n\
+    \      snippet: 'P02942 Pfam:PF00672 interval: 217-263, inclusive'\n      explanation:\
+    \ Grounds the altered G235 residue in the HAMP interval of full-length Tsr without\
+    \ generalizing\n        to other HAMP proteins.\n      cache_path: evidence/PF00672/Tsr-identity.txt\n\
+    \      cache_sha256: 46620a9b2bca73a9da6efbd86c947f6cadfbdd9c0f7c304dfb5f3c093e2d2ec7\n\
+    - graph_id: tsr-g235c-adaptation-defective-rotation\n  title: Tsr G235C reduces\
+    \ clockwise rotation in adaptation-defective cells\n  scope: Full-length pRR53\
+    \ Tsr-G235C compared with WT Tsr in RP437-derived UU1535, which lacks the MCP\n\
+    \    receptors and the CheR/CheB adaptation enzymes. This is distinct from the\
+    \ UU1250 G235E comparison.\n  context: Unstimulated antibody-tethered cells with\
+    \ unmodified Tsr retaining the QEQE major-site pattern.\n    Figure 4 scores 100\
+    \ cells into five rotation categories; the CW-time estimate is a weighted sum,\
+    \ not\n    a direct kinase measurement. Exact tethering induction, temperature\
+    \ and buffer remain unspecified\n    in the inspected 2008 Methods.\n  family_mapping:\
+    \ P02942 Tsr, K-12 reference taxon 83333, 551 residues, sequence version 2, has\
+    \ PF00672\n    at 217-263. Reference G235 matches the mutated connector position.\
+    \ Current UniProt and InterPro sequences\n    agree; exact complete experimental\
+    \ plasmid sequence was not independently reconstructed.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:83333\n  limitations: CCW is the default motor direction,\
+    \ so low CW output may reflect defective receptor-complex\n    assembly rather\
+    \ than a specific native kinase-off conformation. The at-most-15% classification\
+    \ is\n    not an exact per-mutant estimate or a universal zero. Expression controls\
+    \ do not prove local folding,\n    and dominant heterodimer behavior is not a\
+    \ rescue of this rotation endpoint.\n  nodes:\n  - node_id: g235c-in-uu1535\n\
+    \    label: Tsr G235C expressed in CheR/CheB-deficient UU1535\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:P02942\n  - node_id: uu1535-cw-time\n\
+    \    label: Estimated clockwise rotation time fraction in UU1535\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: g235c-decreases-uu1535-cw-time\n    subject:\
+    \ g235c-in-uu1535\n    predicate: decreases\n    object: uu1535-cw-time\n    mechanism:\
+    \ G235C is CCW locked, at most 15% CW time in UU1535, whereas WT Tsr gives above\
+    \ 80% CW under\n      this adaptation-defective condition. Figure 4 shows the\
+    \ contrasting rotation profiles. Neither direct\n      kinase inhibition nor a\
+    \ particular molecular HAMP state is established.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:18621896\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2566183/\n\
+    \      snippet: under unstimulated, steady-state conditions\n      explanation:\
+    \ Methods, Table 1 and Figure 4 support the G235C comparison in UU1535. The paper\
+    \ explicitly\n        distinguishes low CW output from proven assembly of a kinase-off\
+    \ signaling complex.\n      cache_path: evidence/PF00672/ames-2008-tsr.txt\n \
+    \     cache_sha256: c82e2399d5e794ca71f7a5c9280bc60d47969bc211065970129b793e09cb7bff\n\
+    - graph_id: tsr-g235p-soft-agar-chemotaxis\n  title: Tsr G235P loses the WT soft-agar\
+    \ chemotactic response\n  scope: pRR53 Tsr-G235P versus WT pRR53 and pRR48 vector\
+    \ control in adaptation-proficient UU1250. The\n    soft-agar response is a separate\
+    \ experiment from tethered-cell rotation.\n  context: Fresh transformant colonies\
+    \ toothpick-inoculated on tryptone soft agar containing 50 ug/mL\n    ampicillin,\
+    \ incubated at 32.5 C for 8 h, as in Figure 2. pRR53 is IPTG-inducible and 100\
+    \ uM is the\n    reported optimal WT screening level; the photographed plate caption\
+    \ does not independently specify\n    its IPTG dose.\n  family_mapping: Full-length\
+    \ Tsr corresponds to P02942, sequence version 2, 551 residues, with G235 inside\n\
+    \    PF00672 at 217-263. The study verifies mutant coding sequences; the native\
+    \ strain background and the\n    current K-12 reference are kept distinct.\n \
+    \ scope_status: PHENOTYPIC\n  taxon: NCBITaxon:83333\n  limitations: Colony morphology\
+    \ and expansion are a chemotaxis readout, not a purified serine-binding\n    measurement\
+    \ or a measured growth rate. G235P retains approximately WT steady-state rotation\
+    \ and spreads\n    more than the nonreversing vector control. Thus loss of this\
+    \ response does not establish immobility\n    or a simple lack of kinase activity.\
+    \ No exact colony radius or statistical effect size is inferred\n    from the\
+    \ image.\n  nodes:\n  - node_id: g235p-in-uu1250\n    label: Tsr G235P expressed\
+    \ in UU1250 on tryptone soft agar\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:P02942\n  - node_id: soft-agar-chemotactic-response\n    label:\
+    \ WT-like serine-ring morphology and chemotactic colony expansion\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: g235p-decreases-soft-agar-response\n    subject:\
+    \ g235p-in-uu1250\n    predicate: decreases\n    object: soft-agar-chemotactic-response\n\
+    \    mechanism: G235P has the study's null chemotaxis phenotype with reduced expansion\
+    \ and loss of the\n      WT outer serine-ring morphology, despite approximately\
+    \ WT rotation output in the separate tethered-cell\n      assay. The molecular\
+    \ cause of deficient stimulus-dependent signaling remains unresolved.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:18621896\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2566183/\n\
+    \      snippet: this mutant receptor did not mediate chemotaxis\n      explanation:\
+    \ Results explicitly identifies G235P, and the visually inspected Figure 2 compares\
+    \ its\n        colony with WT and vector. Figure 4's approximately WT rotation\
+    \ pattern prevents relabeling the\n        chemotaxis defect as loss of all motor\
+    \ function.\n      cache_path: evidence/PF00672/ames-2008-tsr.txt\n      cache_sha256:\
+    \ c82e2399d5e794ca71f7a5c9280bc60d47969bc211065970129b793e09cb7bff\ncuration_events:\n\
+    - timestamp: '2026-10-11T07:40:11Z'\n  curator: Codex\n  action: CREATE\n  outcome:\
+    \ changed\n  summary: Add host-specific Tsr HAMP rotation and chemotaxis phenotypes\n\
+    \  history_record: history/records/PF00672/2026-10-11T074011Z-codex-211b3b.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: P02942/tsr/cheD, b4355/JW4318, is a 551-residue K-12 reference, taxon 83333,
+    sequence version 2. UniProt and InterPro sequences match, with PF00672 at 217-263
+    and G235 in the connector. The study reports full mutant coding-region sequencing,
+    but complete plasmid junctions were not independently reconstructed and the RP437-derived
+    hosts are not relabeled MG1655.
+  target_ids:
+  - PF00672
+  evidence_ids:
+  - identity
+  - primary
+  - later-hamp-context
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Each graph retains its specific host and assay. CW time is a weighted estimate
+    from five cell classes, not simply the fraction of CW cells or a direct CheA assay.
+    Adaptation-proficient UU1250 and CheR/CheB-deficient UU1535 have different WT
+    baselines. G235P loss of soft-agar response is not loss of motility or evidence
+    for a growth defect. Low CW output can reflect assembly failure; neither the discrete-state
+    nor dynamic-bundle model is drawn as an observed molecular pathway.
+  target_ids:
+  - PF00672
+  evidence_ids:
+  - primary
+  - native
+  - later-hamp-context
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Exact tethering conditions, independent restoration of the adopted endpoints,
+    direct kinase/assembly measurements and complete clone sequences remain unresolved.
+    The 2008 abundance controls do not prove folding. Other connector mutants, later
+    deletion experiments, additional HAMP transducers and raw movies remain incompletely
+    curated. The 2014 study's figures and supplements were not visually inspected.
+  target_ids:
+  - PF00672
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf00672-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve Tsr HAMP molecular output and broaden member-specific coverage
+  description: Retrieve exact assay conditions and examine rescue, direct kinase and
+    assembly evidence for the adopted G235 variants. Extend to other mutants or proteins
+    only with their own primary conditions and mappings, keeping reporter outputs
+    and structural hypotheses separate. Retain a successor review for any expanded
+    graph scope.
+  target_ids:
+  - PF00672
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - later-hamp-context
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF00672.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Retrieve exact assay conditions and examine rescue, direct kinase and
+    assembly evidence for the adopted G235 variants. Extend to other mutants or proteins
+    only with their own primary conditions and mappings, keeping reporter outputs
+    and structural hypotheses separate. Retain a successor review for any expanded
+    graph scope.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF00672
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- The 2008 Figures 2 and 4 were visually inspected, with Table 1 and Methods read
+  as text. Colony radii, exact mutant percentages and raw movie traces were not digitized.
+  The 2002 cited weighting method and selected later Discussion/Methods were inspected;
+  unrelated crosslinking protocols and unreviewed later figures were not transferred.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.

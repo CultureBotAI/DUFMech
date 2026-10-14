@@ -1,0 +1,50 @@
+PF01939 identity and member mapping, inspected 2026-10-12 UTC
+
+Frozen interpro-pfam-duf-2026-10-10: PF01939, NucS_C, Endonuclease
+NucS C-terminal domain, IPR048301, EX_DUF, UNSCORED. Previous-name
+snapshot retains DUF91 and NucS. Imported identity and counters are unchanged.
+Source SHA256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+
+Live identity sources:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01939/
+https://rest.uniprot.org/uniprotkb/search?query=%28xref%3Apfam-PF01939%29%20AND%20%28reviewed%3Atrue%29&format=json&size=100
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q9V2E8/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q5JER9/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q8NR49/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/A4QDH7/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/A0R1Z0/
+
+Curator-paraphrased facts; intervals are inclusive native-sequence positions:
+Q9V2E8 v1, 251 aa, Pyrococcus abyssi GE5/Orsay, taxon272844,
+nucS/PYRAB01260, historical PAB2263. PF01939 126-244; PF21003 28-120.
+R42/W75 are in the separate N-terminal family. Y191 is in PF01939.
+PDB2VLD is a structural lead, not independent proof of a dynamic pathway.
+
+Q5JER9 v1, 252 aa, Thermococcus kodakarensis KOD1, taxon69014,
+TK1898. PF01939 131-245; PF21003 29-125. D165/E179/K181 are in
+PF01939; N76 is in PF21003. The five-residue QKTLF tail at248-252
+removed in the2016 deltaPIP construct is OUTSIDE the current PF01939 match.
+Loss of clamp stimulation is therefore a whole-protein tail effect, not
+evidence that these five residues are part of PF01939.
+
+Q8NR49 v1, 230 aa, Corynebacterium glutamicum ATCC13032, taxon196627,
+Cgl1215/cg1371. Papers identify the gene as NCgl1168. UniProt links
+GeneID1019198, RefSeq WP_011014205.1, BAB98608.1 and CAF19919.1.
+NCBI Gene1019198 XML confirms old_locus_tag NCgl1168, current locus
+CGL_RS06055, WP_011014205.1 and the Q8NR49 link:
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=gene&id=1019198&retmode=xml
+PF01939 110-230; PF21003 2-103. D144 and ELTLF226-230 match the
+reference sequence. Both2018 studies use ATCC13032, not strainR.
+Ishino deltaCter removes226-230; Takemoto Cdel removes only L229/F230
+(Figure2A), leaving228 residues. Those constructs are not interchangeable.
+A4QDH7 is the distinct strainR protein; do not substitute it for Q8NR49.
+Experimental clone/tag sequences were not independently resequenced.
+
+A0R1Z0 v1, 224 aa, Mycolicibacterium smegmatis mc2 155, taxon246196,
+MSMEG_4923/MSMEI_4796. PF01939 104-224; PF21003 2-97. This is a
+separate member for follow-up, not a biochemical surrogate for the above.
+The reviewed UniProt query returned56 entries, not a census of5060 proteins.
+
+Reference-sequence checks performed: Q9V2E8 R42/W75/Y191;
+Q5JER9 N76/D165/E179/K181; Q8NR49 D144 and E226/L227/T228/L229/F230.
+Current family/domain matches do not prove isolated-domain sufficiency.

@@ -1,0 +1,50 @@
+Salowe et al., 2009. PMID:19233850. DOI:10.1074/jbc.M809013200.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2665086/
+Inspected 2026-10-11: Experimental procedures, Results, Discussion,
+Tables 1-5. Figure 2 product gel visually inspected. Raw MS spectra
+were not supplied for independent reanalysis; Figure 3 is a model.
+Minimal quotations: "modified tRNA products"; "aminoacylation";
+"low level lysine contamination".
+
+E. coli K12 tilS from Z50870 was cloned in pET26B+, expressed as a
+C-terminal His6 fusion in BL21(DE3), purified by Ni-NTA and Superdex
+200. The paper reports clone sequencing and intact-protein MS.
+The E. coli tRNAIle2 transcript is made by T7 transcription, purified
+with phenol/chloroform and Superdex 75, and checked by PAGE and MS.
+
+Preparative modification: 75 ul, 50 mM TAPS pH 8.5, 3 mM MgCl2,
+0.5 mM TCEP, 0.1 mg/ml BSA, 20 uM tRNAIle2, 100 uM ATP,
+500 nM TilS, 37 C for 4 h. Table 4 reaction B uses 0.1 mM lysine;
+reaction H uses 20 mM ethanolamine. Control A has no amine.
+Reported observed intact-RNA masses: A 24669.4, B 24795.3, H 24710.0 Da,
+consistent with corresponding predicted products within reported mass error.
+Figure 2 shows shifted B/H bands; residual unmodified substrate is
+estimated by a subsequent radiolysine assay. Intact-RNA mass and migration
+alone do not independently map the modification or every atomic step.
+
+The reaction mixtures were frozen without further workup. For subsequent
+aminoacylation they were diluted to 100 nM tRNA in 30 ul with 50 mM
+HEPES pH 7.3, 10 mM Mg(OAc)2, 100 mM KCl, 0.5 mM TCEP,
+0.1 mg/ml BSA, 100 uM ATP and 100 nM tritiated amino acid. Use
+40 ug/ml E. coli BL21(DE3)-derived S100 fraction or, separately,
+0.1 nM N-terminal FLAG-tagged B. subtilis 168 IleRS purified by
+M2-FLAG/Superdex 200. Incubate 2 h at room temperature; acid SPA
+capture measures coupled amino acid in tRNA. Replicate counts, error
+estimates, matched carryover controls and complete clone scars remain open.
+
+Table 5 relative endpoints (A control, B lysine, H ethanolamine):
+E. coli MetRS activity in S100: 23, 0, 0 percent of tRNAMet reference;
+E. coli IleRS activity in S100: 2, 100, 123 percent of B reference;
+B. subtilis purified IleRS: 0, 100, 99 percent of B reference.
+The respective 100% signals are 3240, 2210 and 4600 net cpm.
+Columns are not one shared absolute scale. Enzyme concentrations were
+chosen in the assay's linear-response range, not saturating substrate kinetics.
+The graph retains B/H versus A directions, not a statistically established
+23% ethanolamine improvement over lysine or a universal numerical zero.
+
+Other amines were tested. N-alpha-methyllysine and ornithine products
+instead matched the lysine product, attributed to about 0.1% lysine
+contamination. These are not adopted as successful alternative substrates.
+Lysine's apparent inhibition in the radiolabel assay is isotope dilution;
+alternative incorporation is not proof of a dead-end inhibitor or an affinity Kd.
+No in-vivo decoding, drug efficacy or family-wide substrate rule is inferred.

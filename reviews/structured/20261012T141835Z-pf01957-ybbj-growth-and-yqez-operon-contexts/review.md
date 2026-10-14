@@ -1,0 +1,570 @@
+# PF01957 YbbJ growth and YqeZ operon effects with domain boundaries
+
+- Review: 20261012T141835Z-pf01957-ybbj-growth-and-yqez-operon-contexts
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-12T14:17:40Z
+- Finished UTC: 2026-10-12T14:18:35Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Partial same-agent scientific review of three phenotypic graphs and four observed experimental edges; molecular directness remains unresolved and no family-wide protease or partner-recruitment mechanism is claimed.
+
+## Scope And Provenance
+
+Assess the four curated cellular effects from inspected primary text, legends and relevant Methods; verify present-day member/domain mapping and review negative, cross-family and access boundaries. Original 2006 figure images were not inspected, and the 2024 structural study is abstract/deposition-only coverage.
+
+Selection: Next ascending uncurated PF01957 record after PF01956; exact frozen identity retained, with targeted research of mapped bacterial members and archaeal/structural leads.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01957 | data/families/PF01957.yaml | generated | PF01957 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01957 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01957.
+
+P0AAS3 v2 is the current 152-aa E. coli YbbJ reference with PF01957 94-148; its 2007 sequence update means the 2006 clone is not sequence-verified by this mapping. YqeZ P54465 v1 is 437 aa with PF01957 382-435, but the tested CU1065 alleles are not reconstructed. O32077 Bacillus NfeD2/YuaF maps to PF31148/PF25842, excluding its positive FloT effects. PH1510 O59179 places PF01957 at 377-432 outside the N-terminal protease construct. Frozen identity and counters remain unchanged.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01957.
+
+All four edges retain measured cellular directions with OBSERVED/EXPERIMENTAL support and UNRESOLVED directness. E. coli plate and liquid growth are separate endpoints under joint expression, not a sequential mechanism. Bacillus whole-operon deletion and sigW-background complementation are separate graphs, preserving matched xylose, SPbeta immunity and producer controls; neither establishes isolated YqeZ or PF01957 sufficiency. No proteolysis, direct chaperoning, structural-contact-to-function or cross-family transfer is introduced.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01957.
+
+Historical clone sequences, original 2006 images/supplements, quantitative replication, the 2024 complex truncation experiments, PH0471/PH1510 biochemical contexts and further bacterial members remain unreviewed. Inspected Dempwolff2012 figures expose panel-label inconsistencies and qualitative YqeZ localization negatives. The all-record corpus goal and earlier open follow-ups remain incomplete.
+
+## Findings
+
+### additional-contexts: Extend construct-specific NfeD evidence and resolve source-access and domain boundaries
+
+minor / open / confirmed; issue key: pf01957-causal-context-coverage.
+
+Inspect original Chiba2006 Figure2 and Butcher2006 Figure4/supplements, verify historical alleles and expression controls, and research the full 2024 QmcA-YbbJ and archaeal experiments. Reconcile Dempwolff2012 image/text labels. Add causal steps only for mapped constructs and supported directions; do not import O32077 NfeD2 effects from PF31148 or assign N-terminal PH1510 activity to PF01957. Preserve joint-operon and matched-xylose limitations.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Inspect original Chiba2006 Figure2 and Butcher2006 Figure4/supplements, verify historical alleles and expression controls, and research the full 2024 QmcA-YbbJ and archaeal experiments. Reconcile Dempwolff2012 image/text labels. Add causal steps only for mapped constructs and supported directions; do not import O32077 NfeD2 effects from PF31148 or assign N-terminal PH1510 activity to PF01957. Preserve joint-operon and matched-xylose limitations.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2006.05104.x; Chiba2006 Functional interaction Results, Figure2A/B legend, strain and plasmid Methods; not original image inspection | supports | Joint qmcA-ybbJ expression improves reported growth relative to qmcA-only expression in the ftsH/htpX-defective sfhC21 background, in separate plate and liquid assays; YbbJ alone does not suppress and similar QmcA abundance is reported as data not shown. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01957/protein/uniprot/P0AAS3/; Accession and domain locations; paired UniProt identity facts | supports | P0AAS3 v2 is the current 152-aa E. coli YbbJ reference with PF01957 94-148; its 2007 sequence update means the 2006 clone is not sequence-verified by this mapping. YqeZ P54465 v1 is 437 aa with PF01957 382-435, but the tested CU1065 alleles are not reconstructed. O32077 Bacillus NfeD2/YuaF maps to PF31148/PF25842, excluding its positive FloT effects. PH1510 O59179 places PF01957 at 377-432 outside the N-terminal protease construct. Frozen identity and counters remain unchanged. |
+| operon-resistance | https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2006.05131.x; Butcher2006 Figure4A/B text and legends, Table3, spot-on-lawn and complementation Methods | supports | Whole yqeZyqfAB deletion increases inhibition in CU1065; full-operon expression improves sigW-mutant resistance under matched xylose. Partial-operon constructs fail to complement, but no isolated-domain or peptide-cleavage assay follows. |
+| localization-boundaries | https://pmc.ncbi.nlm.nih.gov/articles/PMC3415494/; Dempwolff2012 relevant Results/Methods/Table1 and original Figures4/6 images | supports | Mapped NfeD1b/YqeZ localization comparisons are qualitative negatives; positive NfeD2-FloT effects belong to a currently distinct Pfam member. Figure4 panel references and Figure6 A-I image versus A-G legend conflict, so labels cannot be silently normalized. |
+| structural-leads | https://www.rcsb.org/structure/8Z5G; Tan2024 abstract and 8Z5G/EMD-39773 deposition metadata; archaeal access-attempt ledger | supports | The structural complex is a physical-assembly lead, not a validated causal explanation for growth rescue. Full truncation assays, maps, archaeal experiments and inaccessible supplements remain open. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01957 | data/families/PF01957.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Dempwolff2012 original Figures4/6 were visually inspected, revealing panel-label inconsistencies. Chiba2006 and Butcher2006 figure text/legends and relevant Methods were inspected, but original figures/PDFs were unavailable at attempted endpoints. Tan2024 abstract/deposition metadata were read, not full structural data, truncation figures or supplements. No experimental replication or exhaustive family search.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+- Ignored and hidden curation, evidence, history and structured-review files were included in the pre-addition PF01957 collision search; only the existing worklist checkpoint mentioned the family.
+- Publisher primary text was available through web retrieval despite direct HTML/PDF403 responses. No challenge bypass was attempted. Access limits do not establish missing experiments or absent biological function.
+- Current UniProt data were retrieved through structured gene-search JSON, then accession-specific InterPro mappings were checked. The historical experimental alleles are explicitly not equated with present-day references.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T141835Z-pf01957-ybbj-growth-and-yqez-operon-contexts
+title: PF01957 YbbJ growth and YqeZ operon effects with domain boundaries
+started_at: '2026-10-12T14:17:40Z'
+finished_at: '2026-10-12T14:18:35Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Partial same-agent scientific review of three phenotypic graphs and four
+  observed experimental edges; molecular directness remains unresolved and no family-wide
+  protease or partner-recruitment mechanism is claimed.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01957.yaml
+    sha256: eb122fdf9777f3958dfc664adfbab70547cdc87b4bb09cce6b9f5fd29aaca51f
+    role: context
+  - path: data/families/PF01957.yaml
+    sha256: 82de2f0ae747aae222f75e6c2ae2c9717911daae9701e846f004d72778e43c2f
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01957/chiba-2006-ybbj-growth.txt
+    role: context
+    sha256: eaac6e10c7bd3c34762336b024d0e46d1b01cca4a71695179c290c87fc5f238a
+  - path: evidence/PF01957/identity-and-domain-boundaries.txt
+    role: context
+    sha256: cb9ebcb9ade539df49a77b538ec4019b96ae0f009d4cc0b82e8a42ef52764a4f
+  - path: evidence/PF01957/butcher-2006-operon-resistance.txt
+    role: context
+    sha256: dbe96f4f6d5842c32a398ede4f6a737339309d4df79feb2f98df027724f46a97
+  - path: evidence/PF01957/dempwolff-2012-localization-boundaries.txt
+    role: context
+    sha256: 842a2f3f030e02fd99c069c925753a49a970b9cbdd3e227ddb8dea520a646e69
+  - path: evidence/PF01957/structural-and-archaeal-followups.txt
+    role: context
+    sha256: 946d68bfd8f81b6ef9c8c27c6e98ee8bf576c06115cfea4493e483b1ab263b57
+targets:
+- target_id: PF01957
+  path: data/families/PF01957.yaml
+  label: PF01957
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01957.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 9ff215eee0e884ed3286e127c8ecaae2ede84c9814bf26eb36296d2f6deb8fce
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Assess the four curated cellular effects from inspected primary text,
+    legends and relevant Methods; verify present-day member/domain mapping and review
+    negative, cross-family and access boundaries. Original 2006 figure images were
+    not inspected, and the 2024 structural study is abstract/deposition-only coverage.
+  selection: Next ascending uncurated PF01957 record after PF01956; exact frozen identity
+    retained, with targeted research of mapped bacterial members and archaeal/structural
+    leads.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01957
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Historical clone sequences, original 2006 images/supplements, quantitative
+      replication, the 2024 complex truncation experiments, PH0471/PH1510 biochemical
+      contexts and further bacterial members remain unreviewed. Inspected Dempwolff2012
+      figures expose panel-label inconsistencies and qualitative YqeZ localization
+      negatives. The all-record corpus goal and earlier open follow-ups remain incomplete.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01957
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2006.05104.x
+  locator: Chiba2006 Functional interaction Results, Figure2A/B legend, strain and
+    plasmid Methods; not original image inspection
+  accessed_at: '2026-10-12T14:18:35Z'
+  support: supports
+  snapshot_sha256: eaac6e10c7bd3c34762336b024d0e46d1b01cca4a71695179c290c87fc5f238a
+  summary: Joint qmcA-ybbJ expression improves reported growth relative to qmcA-only
+    expression in the ftsH/htpX-defective sfhC21 background, in separate plate and
+    liquid assays; YbbJ alone does not suppress and similar QmcA abundance is reported
+    as data not shown.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01957/protein/uniprot/P0AAS3/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-12T14:18:35Z'
+  support: supports
+  snapshot_sha256: cb9ebcb9ade539df49a77b538ec4019b96ae0f009d4cc0b82e8a42ef52764a4f
+  summary: P0AAS3 v2 is the current 152-aa E. coli YbbJ reference with PF01957 94-148;
+    its 2007 sequence update means the 2006 clone is not sequence-verified by this
+    mapping. YqeZ P54465 v1 is 437 aa with PF01957 382-435, but the tested CU1065
+    alleles are not reconstructed. O32077 Bacillus NfeD2/YuaF maps to PF31148/PF25842,
+    excluding its positive FloT effects. PH1510 O59179 places PF01957 at 377-432 outside
+    the N-terminal protease construct. Frozen identity and counters remain unchanged.
+- evidence_id: operon-resistance
+  kind: primary_source
+  reference: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2006.05131.x
+  locator: Butcher2006 Figure4A/B text and legends, Table3, spot-on-lawn and complementation
+    Methods
+  summary: Whole yqeZyqfAB deletion increases inhibition in CU1065; full-operon expression
+    improves sigW-mutant resistance under matched xylose. Partial-operon constructs
+    fail to complement, but no isolated-domain or peptide-cleavage assay follows.
+  accessed_at: '2026-10-12T14:18:35Z'
+  support: supports
+  snapshot_sha256: dbe96f4f6d5842c32a398ede4f6a737339309d4df79feb2f98df027724f46a97
+- evidence_id: localization-boundaries
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3415494/
+  locator: Dempwolff2012 relevant Results/Methods/Table1 and original Figures4/6 images
+  summary: Mapped NfeD1b/YqeZ localization comparisons are qualitative negatives;
+    positive NfeD2-FloT effects belong to a currently distinct Pfam member. Figure4
+    panel references and Figure6 A-I image versus A-G legend conflict, so labels cannot
+    be silently normalized.
+  accessed_at: '2026-10-12T14:18:35Z'
+  support: supports
+  snapshot_sha256: 842a2f3f030e02fd99c069c925753a49a970b9cbdd3e227ddb8dea520a646e69
+- evidence_id: structural-leads
+  kind: primary_source
+  reference: https://www.rcsb.org/structure/8Z5G
+  locator: Tan2024 abstract and 8Z5G/EMD-39773 deposition metadata; archaeal access-attempt
+    ledger
+  summary: The structural complex is a physical-assembly lead, not a validated causal
+    explanation for growth rescue. Full truncation assays, maps, archaeal experiments
+    and inaccessible supplements remain open.
+  accessed_at: '2026-10-12T14:18:35Z'
+  support: supports
+  snapshot_sha256: 946d68bfd8f81b6ef9c8c27c6e98ee8bf576c06115cfea4493e483b1ab263b57
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-12T14:18:35Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01957
+  kind: record_content
+  reference: data/families/PF01957.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-12T14:18:35Z'
+  support: context_only
+  snapshot_sha256: 82de2f0ae747aae222f75e6c2ae2c9717911daae9701e846f004d72778e43c2f
+  quote: "id: Pfam:PF01957\npfam_id: PF01957\nname: NfeD-like C-terminal, partner-binding\
+    \ domain\nshort_name: NfeD\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01957\n\
+    counters:\n  proteins: 15192\n  matches: 15193\n  proteomes: 12513\n  taxa: 17949\n\
+    \  structures: 5\n  alphafold_models: 9701\n  domain_architectures: 22\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002810\ndescription: 'NfeD-like proteins are widely distributed\
+    \ throughout prokaryotes and are frequently associated\n  with genes encoding\
+    \ stomatin-like proteins (slipins). There appear to be three major groups: an\
+    \ ancestral\n  group with only an N-terminal serine protease domain and this C-terminal\
+    \ beta sheet-rich domain which\n  is structurally very similar to the OB-fold\
+    \ domain, associated with its neighbouring slipin cluster;\n  a second major group\
+    \ with an additional middle, membrane-spanning domain, associated in some species\n\
+    \  with eoslipin and in others with yqfA; a final ''artificial'' group which unites\
+    \ truncated forms lacking\n  the protease region and associated with their ancestral\
+    \ gene partner, either yqfA or eoslipin. This\n  NefD, C-terminal, domain appears\
+    \ to be the major one for relating to the associated protein. NfeD homologues\n\
+    \  are clearly reliant on their conserved gene neighbour which is assumed to be\
+    \ necessary for function,\n  either through direct physical interaction or by\
+    \ functioning in the same pathway, possibly involve with\n  lipid-rafts [[cite:PUB00064250]].'\n\
+    curation_history: history/records/PF01957\ndiscussions:\n- discussion_id: pf01957-causal-context-coverage\n\
+    \  prompt: Resolve further NfeD member mechanisms without transferring cross-family\
+    \ or whole-operon effects\n    to PF01957 alone.\n  kind: CURATION_TODO\n  status:\
+    \ OPEN\n  rationale: Current graphs retain conditional cellular endpoints for\
+    \ YbbJ and a YqeZ-containing operon,\n    not an isolated domain mechanism or\
+    \ complete family coverage.\n  evidence:\n  - reference: PMID:16573693\n    supports:\
+    \ PARTIAL\n    evidence_source: primary_publication\n    explanation: Figure2\
+    \ text and legend support conditional growth enhancement; original image and historical\n\
+    \      clone sequence remain uninspected.\n  - reference: PMID:16629676\n    supports:\
+    \ PARTIAL\n    evidence_source: primary_publication\n    explanation: Figure4\
+    \ text/legend, Table3 and Methods distinguish whole-operon perturbations, xylose\n\
+    \      controls and failed partial-operon complementation.\n  - reference: PMID:39181124\n\
+    \    supports: PARTIAL\n    evidence_source: primary_publication\n    explanation:\
+    \ Abstract and 8Z5G/EMD-39773 metadata establish a structural lead; full truncation\
+    \ assays\n      and map analysis remain unreviewed.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-12'\n  notes: Inspect original 2006 figures/supplements, the 2024 QmcA-YbbJ\
+    \ experiments, archaeal PH0471/PH1510\n    and further YqiJ/bacterial contexts.\
+    \ Source access limits are retained in evidence/PF01957/structural-and-archaeal-followups.txt.\n\
+    \    All earlier corpus follow-ups remain open.\n- discussion_id: pf01957-domain-and-paralog-boundaries\n\
+    \  prompt: Preserve current Pfam boundaries and reconcile historical protein and\
+    \ figure labels before mechanistic\n    transfer.\n  kind: CURATION_TODO\n  status:\
+    \ OPEN\n  rationale: Generic NfeD names span different Pfam families and multidomain\
+    \ proteins. A tested N-terminal\n    protease construct does not necessarily contain\
+    \ PF01957.\n  evidence:\n  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/O32077/\n\
+    \    supports: SUPPORT\n    evidence_source: database\n    explanation: Complete\
+    \ current Pfam response maps Bacillus NfeD2/YuaF to PF25842/PF31148, not PF01957.\n\
+    \  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/O59179/\n\
+    \    supports: SUPPORT\n    evidence_source: database\n    explanation: PH1510\
+    \ PF01957 377-432 is separate from N-terminal PF25145 and the membrane domain.\n\
+    \  - reference: PMID:22753055\n    supports: PARTIAL\n    evidence_source: primary_publication\n\
+    \    explanation: Original Figures4/6 expose text/legend panel mismatches; mapped\
+    \ YqeZ comparisons are\n      qualitative negatives, not observed recruitment\
+    \ edges.\n  posed_by: Codex\n  posed_date: '2026-10-12'\n  notes: Verify pre-2007\
+    \ MC4100 YbbJ sequence, CU1065 YqeZ and partner alleles, and all truncation/fusion\n\
+    \    junctions. Figure6 image A-I differs from its A-G caption, and Figure4 panel\
+    \ references conflict.\n    Do not import NfeD2-FloT effects, infer oligosaccharide\
+    \ binding from an OB fold, or assign YqeZ peptide\n    degradation without a direct\
+    \ assay.\ncausal_graphs:\n- graph_id: ecoli-ybbj-qmca-growth-rescue-2006\n  title:\
+    \ YbbJ coexpression enhances QmcA-assisted conditional growth rescue\n  scope:\
+    \ E. coli AD1762 ftsH/htpX-disrupted cells with sfhC21; pSTD622 qmcA-ybbJ versus\
+    \ pSTD620 qmcA alone.\n  context: Chiba2006 Figure2A/B text and legend. L medium\
+    \ with 1mM IPTG; 3-ul serial-dilution plate spots\n    at 42C for 24h, and a separate\
+    \ liquid-growth time course shifted from 30C to 42C. Plate comparisons\n    at\
+    \ 30C for 17h and with 0.4% glucose provide conditional controls.\n  family_mapping:\
+    \ MC4100-derived YbbJ clone; current reference P0AAS3 v2 is 152 aa with PF01957\
+    \ 94-148.\n    The reference sequence changed in 2007 and is not a verified historical\
+    \ plasmid sequence. QmcA is\n    a required coexpressed partner, not a second\
+    \ PF01957 protein.\n  taxon: NCBITaxon:562\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ YbbJ alone did not suppress. Similar QmcA abundance was reported without shown\
+    \ data. No\n    isolated PF01957 activity, direct chaperoning, proteolysis or\
+    \ FtsH activation is established. The\n    source images, replicate counts and\
+    \ exact effect sizes remain uninspected; graphs retain text-supported\n    direction\
+    \ only. Liquid and plate readouts are not sequential steps.\n  nodes:\n  - node_id:\
+    \ pair\n    label: qmcA-ybbJ coexpression versus qmcA alone in the same sensitized\
+    \ strain\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:P0AAS3\n\
+    \  - node_id: plate\n    label: Colony growth in serial-dilution spots at 42C\n\
+    \    node_type: PHENOTYPE\n  - node_id: liquid\n    label: Liquid-culture growth\
+    \ after the shift to 42C\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: ybbj-plate-growth\n\
+    \    subject: pair\n    predicate: increases\n    object: plate\n    mechanism:\
+    \ Adding ybbJ to the QmcA expression construct improves the reported colony-growth\
+    \ suppression\n      of the ftsH/htpX defect under induction; the cellular mediator\
+    \ is unresolved.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:16573693\n      source_url:\
+    \ https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2006.05104.x\n\
+    \      snippet: stronger suppressor activity\n      explanation: Functional interaction\
+    \ Results, Figure2A legend and strain/plasmid Methods; text-supported\n      \
+    \  direction, not a visually quantified image or YbbJ-only rescue.\n      cache_path:\
+    \ evidence/PF01957/chiba-2006-ybbj-growth.txt\n      cache_sha256: eaac6e10c7bd3c34762336b024d0e46d1b01cca4a71695179c290c87fc5f238a\n\
+    \  - edge_id: ybbj-liquid-growth\n    subject: pair\n    predicate: increases\n\
+    \    object: liquid\n    mechanism: The joint expression construct improves reported\
+    \ liquid growth relative to qmcA-only cells\n      following the temperature shift,\
+    \ without identifying a direct protein-quality-control reaction.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:16573693\n      source_url: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2006.05104.x\n\
+    \      snippet: stronger suppressor activity\n      explanation: Figure2B legend\
+    \ and corresponding Results; same AD1762/sfhC21 background, pSTD622 versus\n \
+    \       pSTD620, not ordinary wild-type thermotolerance.\n      cache_path: evidence/PF01957/chiba-2006-ybbj-growth.txt\n\
+    \      cache_sha256: eaac6e10c7bd3c34762336b024d0e46d1b01cca4a71695179c290c87fc5f238a\n\
+    - graph_id: bacillus-yqez-operon-deletion-2006\n  title: Deleting the YqeZ-containing\
+    \ operon increases sublancin-associated inhibition\n  scope: B. subtilis CU1065\
+    \ without SPbeta immunity; HB5331 yqeZyqfAB::kan versus the parent lawn, exposed\n\
+    \    to JH642 producer.\n  context: Butcher2006 Figure4A text and legend, Table3\
+    \ and spot-on-lawn Methods; 0.7% LB agar, 100ul\n    lawn OD600 0.4 in 2ml agar,\
+    \ 2ul producer OD600 0.6, overnight37C.\n  family_mapping: The jointly deleted\
+    \ operon contains YqeZ/NfeD1, current B. subtilis 168 reference P54465\n    v1,\
+    \ 437 aa, PF01957 382-435. CU1065 is the experimental strain, not the reference\
+    \ accession's exact\n    verified allele. YqfA and YqfB are not independently\
+    \ attributed to PF01957.\n  taxon: NCBITaxon:1423\n  scope_status: PHENOTYPIC\n\
+    \  limitations: Whole-operon perturbation cannot isolate YqeZ or its domain. YqfB-only\
+    \ deletion is similarly\n    sensitive. Producer sunA deletion and SPbeta restoration\
+    \ remove inhibition, but no purified-peptide\n    MIC or degradation assay was\
+    \ performed in this comparison. Original Figure4/supplements and quantitative\n\
+    \    replication remain uninspected; only the text-supported qualitative direction\
+    \ is retained.\n  nodes:\n  - node_id: operon_loss\n    label: Joint yqeZyqfAB\
+    \ deletion versus CU1065 parent\n    node_type: PERTURBATION\n  - node_id: inhibition\n\
+    \    label: Sublancin-associated lawn inhibition by JH642\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: operon-loss-inhibition\n    subject: operon_loss\n   \
+    \ predicate: increases\n    object: inhibition\n    mechanism: Removing the three-gene\
+    \ locus increases the reported growth-inhibition zone in this immunity-deficient\n\
+    \      lawn; the responsible molecular contribution of YqeZ is not isolated.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:16629676\n      source_url: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2006.05131.x\n\
+    \      snippet: yqeZyqfAB\n      explanation: Figure4A column4 and associated\
+    \ Results; the ledger records the native whole-operon\n        genotype and matched\
+    \ controls, not a single-domain intervention.\n      cache_path: evidence/PF01957/butcher-2006-operon-resistance.txt\n\
+    \      cache_sha256: dbe96f4f6d5842c32a398ede4f6a737339309d4df79feb2f98df027724f46a97\n\
+    - graph_id: bacillus-yqez-operon-complementation-2006\n  title: Induced YqeZ-containing\
+    \ operon reduces inhibition in a sigW mutant\n  scope: CU1065 sigW::kan HB6161\
+    \ with integrated Pxyl-yqeZyqfAB compared with the sigW mutant under matched\n\
+    \    xylose conditions.\n  context: Butcher2006 Figure4B column3 and Methods;\
+    \ 20mM xylose induction, 0.7% LB agar, JH642 producer,\n    overnight37C. pSG1\
+    \ single-crossover integration was PCR-confirmed; this is not deletion/rescue\
+    \ in\n    HB5331.\n  family_mapping: The entire operon includes YqeZ, reference\
+    \ P54465 v1 with PF01957 382-435. Neither isolated\n    YqeZ nor its PF01957 domain\
+    \ was shown sufficient. The study reports a YqfB V65E reference difference\n \
+    \   in CU1065/JH642, not a YqeZ mutation.\n  taxon: NCBITaxon:1423\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: Xylose itself reduces inhibition zones, so unmatched\
+    \ induced/uninduced comparisons would\n    confound the effect. Partial yqfAB\
+    \ or yqfB constructs failed to complement but do not demonstrate\n    YqeZ-only\
+    \ sufficiency. No direct peptide cleavage, independent domain action or complete\
+    \ restoration\n    magnitude is assigned; original figures/supplements remain\
+    \ uninspected.\n  nodes:\n  - node_id: induced_operon\n    label: Induced yqeZyqfAB\
+    \ in sigW mutant versus matched sigW control\n    node_type: PERTURBATION\n  -\
+    \ node_id: inhibition\n    label: Sublancin-associated inhibition zone under matched\
+    \ xylose\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: operon-expression-inhibition\n\
+    \    subject: induced_operon\n    predicate: decreases\n    object: inhibition\n\
+    \    mechanism: Expression of the complete operon bypasses part of the missing\
+    \ sigma-factor-dependent resistance\n      in the reported assay; it does not\
+    \ resolve which biochemical activity mediates protection.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:16629676\n      source_url: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2006.05131.x\n\
+    \      snippet: complemented a sigW mutant\n      explanation: Figure4B legend/Results\
+    \ and complementation Methods; whole-operon expression, matched20mM\n        xylose\
+    \ and separate sigW background.\n      cache_path: evidence/PF01957/butcher-2006-operon-resistance.txt\n\
+    \      cache_sha256: dbe96f4f6d5842c32a398ede4f6a737339309d4df79feb2f98df027724f46a97\n\
+    curation_events:\n- timestamp: '2026-10-12T14:13:37Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate scoped YbbJ growth and YqeZ operon\
+    \ resistance effects\n  history_record: history/records/PF01957/2026-10-12T141337Z-codex-cfe501.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: P0AAS3 v2 is the current 152-aa E. coli YbbJ reference with PF01957 94-148;
+    its 2007 sequence update means the 2006 clone is not sequence-verified by this
+    mapping. YqeZ P54465 v1 is 437 aa with PF01957 382-435, but the tested CU1065
+    alleles are not reconstructed. O32077 Bacillus NfeD2/YuaF maps to PF31148/PF25842,
+    excluding its positive FloT effects. PH1510 O59179 places PF01957 at 377-432 outside
+    the N-terminal protease construct. Frozen identity and counters remain unchanged.
+  target_ids:
+  - PF01957
+  evidence_ids:
+  - identity
+  - primary
+  - operon-resistance
+  - localization-boundaries
+  - structural-leads
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: All four edges retain measured cellular directions with OBSERVED/EXPERIMENTAL
+    support and UNRESOLVED directness. E. coli plate and liquid growth are separate
+    endpoints under joint expression, not a sequential mechanism. Bacillus whole-operon
+    deletion and sigW-background complementation are separate graphs, preserving matched
+    xylose, SPbeta immunity and producer controls; neither establishes isolated YqeZ
+    or PF01957 sufficiency. No proteolysis, direct chaperoning, structural-contact-to-function
+    or cross-family transfer is introduced.
+  target_ids:
+  - PF01957
+  evidence_ids:
+  - primary
+  - native
+  - operon-resistance
+  - localization-boundaries
+  - structural-leads
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Historical clone sequences, original 2006 images/supplements, quantitative
+    replication, the 2024 complex truncation experiments, PH0471/PH1510 biochemical
+    contexts and further bacterial members remain unreviewed. Inspected Dempwolff2012
+    figures expose panel-label inconsistencies and qualitative YqeZ localization negatives.
+    The all-record corpus goal and earlier open follow-ups remain incomplete.
+  target_ids:
+  - PF01957
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01957-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Extend construct-specific NfeD evidence and resolve source-access and domain
+    boundaries
+  description: Inspect original Chiba2006 Figure2 and Butcher2006 Figure4/supplements,
+    verify historical alleles and expression controls, and research the full 2024
+    QmcA-YbbJ and archaeal experiments. Reconcile Dempwolff2012 image/text labels.
+    Add causal steps only for mapped constructs and supported directions; do not import
+    O32077 NfeD2 effects from PF31148 or assign N-terminal PH1510 activity to PF01957.
+    Preserve joint-operon and matched-xylose limitations.
+  target_ids:
+  - PF01957
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - operon-resistance
+  - localization-boundaries
+  - structural-leads
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01957.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Inspect original Chiba2006 Figure2 and Butcher2006 Figure4/supplements,
+    verify historical alleles and expression controls, and research the full 2024
+    QmcA-YbbJ and archaeal experiments. Reconcile Dempwolff2012 image/text labels.
+    Add causal steps only for mapped constructs and supported directions; do not import
+    O32077 NfeD2 effects from PF31148 or assign N-terminal PH1510 activity to PF01957.
+    Preserve joint-operon and matched-xylose limitations.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01957
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Dempwolff2012 original Figures4/6 were visually inspected, revealing panel-label
+  inconsistencies. Chiba2006 and Butcher2006 figure text/legends and relevant Methods
+  were inspected, but original figures/PDFs were unavailable at attempted endpoints.
+  Tan2024 abstract/deposition metadata were read, not full structural data, truncation
+  figures or supplements. No experimental replication or exhaustive family search.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+- Ignored and hidden curation, evidence, history and structured-review files were
+  included in the pre-addition PF01957 collision search; only the existing worklist
+  checkpoint mentioned the family.
+- Publisher primary text was available through web retrieval despite direct HTML/PDF403
+  responses. No challenge bypass was attempted. Access limits do not establish missing
+  experiments or absent biological function.
+- Current UniProt data were retrieved through structured gene-search JSON, then accession-specific
+  InterPro mappings were checked. The historical experimental alleles are explicitly
+  not equated with present-day references.
+```

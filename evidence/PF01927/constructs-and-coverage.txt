@@ -1,0 +1,57 @@
+PF01927 construct, search and coverage ledger
+Inspected UTC2026-10-12; same-agent partial research, not an exhaustive review.
+Busetto2024 doi:10.1093/nar/gkae610, supplement PDF21pages, TablesS1-S4.
+Publisher article: https://academic.oup.com/nar/article/52/15/9076/7718444
+Supplement location (public signed link from article was downloaded):
+https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/nar/52/15/10.1093_nar_gkae610/1/gkae610_supplemental_file.pdf
+
+S1:Ce255 FL1-910 has cleaved N-His10-MBP; Ce409 FL1-910 has cleaved
+N-MBP and retained C-His10. Both are listed for ribonuclease assays, but
+only Ce409 explicitly for anisotropy; exact FL clone in each cleavage panel
+is not assigned. Ce3331-625 andCe285633-910 have cleaved N-His10-MBP.
+Ce333 is used in FP Figure7A despite its S1 use column listing only RNase.
+Ce255/Ce15 FL complex starts with N-His10-MBP/N-His6-Trx,then3C cleavage.
+Ce256/Ce286 D435A/CTD inactive complex has cleaved N-His10-MBP tags.
+Ce373633-899/Ce374322-567 is the crystallography pair,not the longer pair.
+Hs871-876,Hs881-582,Hs89624-876,Hs90FL-D399A,Hs91NTD-EXO-D399A
+have N-His10-MBP followed by3C cleavage. S1/S2 identify boundary/tag
+architecture,not every vector backbone or any residual nonnative scar sequence.
+GST-MUT-16 Ce298584-724 retains GST for pulldown; its phase-separation
+preparation includes3C removal of GST but retains C-His10. Do not call it
+wholly untagged. CeMUT-8 numbering and the longer MUT-16 isoform are explicit.
+
+All original main figures1-7 were visually inspected. Supplement S2,S3,S5,S8
+and TablesS1/S2/S4 were rendered and inspected; S3 crystallographic statistics
+were read as text. Whole raw spectra,sequence archives and replicate images
+were not independently reanalyzed. Main-text Method/Result controls and
+source disagreements remain in the two assay ledgers. The full publication
+is not retained in the repository; only minimal quotations and factual notes.
+
+Searches: PF01927,DUF82,MUT7-C,MUT-7/EXD3,CTD,RDE-2/MUT-8,
+2025/2026 updates; ignored/hidden-inclusive local curation/evidence/history/
+review searches found no existing PF01927 curation before this pass.
+The 2024 primary paper and its supplement supply these graph edges.
+Tops2005 PMID15653635 doi:10.1093/nar/gki183: metadata/abstract and selected
+web-exposed Results/figure context inspected; complete original study and
+yeast/cellular constructs not independently reviewed for graph adoption.
+Ketting1999 PMID10535732: abstract-level discovery lead, not new graph evidence.
+Hsu2021 PMID33646120 doi:10.7554/eLife.62449: abstract/selected Results lead
+for neuronal/22G contexts; full assays,control strains and supplements remain
+follow-ups, not imported causal chains. Human WRN homology is not EXD3 identity.
+Gaurav2025 PMID40781776 doi:10.1016/j.bpj.2025.08.001: published update to
+the 2024-preprint citation; abstract shows MUT-16/MUT-8 simulations plus
+in-vitro tests. Full paper not independently assessed here and no simulated
+contact is represented as a directly observed PF01927 interaction.
+Mori2020 doi:10.3389/fmicb.2020.00292: bacterial Rv0579 functional-context
+lead; no resistance-engineering procedure or mutation design is curated.
+Arabidopsis WEX,other animal/plant members,archaeal/bacterial biochemical
+function,native RNA targets and exact role in small-RNA production remain open.
+
+Access/tool limits: direct PMC supplement returned challenge HTML; OA lookup
+returned404; Europe PMC XML timed out with no bytes. Publisher's unsigned URL
+returned403 but its supplied public signed URL returned the actual supplement.
+Initial PDF rendering lacked Pillow; offline UV/Pillow retry was denied at
+/Users/marcin/.cache/uv/sdists-v9/.git and a narrowly approved retry succeeded.
+Repository and installed-skill reads worked. No global permission repair or
+configuration change is claimed. No source freeze,import,publication or
+exhaustive family characterization was performed.

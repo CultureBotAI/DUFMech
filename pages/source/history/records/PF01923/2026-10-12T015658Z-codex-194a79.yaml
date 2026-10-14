@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01923
+  path: data/families/PF01923.yaml
+session:
+  id: 2026-10-12T015658Z-codex-194a79
+  timestamp: '2026-10-12T01:56:58Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of PF01923 causal assay graphs
+  details: Saved self-review reviews/structured/20261012T015942Z-pf01923-pduo-eutt-mmab-assay-and-domain-contexts/review.yaml
+    and derived Markdown, digest372e2ff334863e6ab220755ad6cb31f3ff13807e29193bd0c40fd34689bfdc63.27
+    graphs77 OBSERVED effects:56 DIRECT,21 INDIRECT;18 MECHANISTIC,9 PHENOTYPIC. Source
+    quotations, member/domain boundaries, joint inputs and condition-specific evidence
+    checked. Exact constructs, source discrepancies and additional transfer/repair/member
+    contexts remain open under pf01923-causal-context-coverage. Same-agent partial
+    review, not independent expert endorsement or full-family completion; status remains
+    IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T015942Z-pf01923-pduo-eutt-mmab-assay-and-domain-contexts/review.yaml

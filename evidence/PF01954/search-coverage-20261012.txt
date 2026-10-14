@@ -1,0 +1,44 @@
+PF01954 causal-evidence search coverage, 2026-10-12
+Curator: Codex. Scoped scientific self-assessment, not an independent review.
+
+Local hidden/ignored-inclusive filename search found the generated record,
+retained Pages source and HTML/JSON, but no PF01954-named overlay or dossier.
+This filename search is not an exhaustive absence claim for unnamed evidence.
+Native baseline:8296 schema-valid projections, zero generated drift.
+Native schema and builder support causal graphs in both overlay and projection.
+
+Web queries included PF01954, DUF104, UPF0165, COG2880, AF2212, AF_2212,
+O28071, vapB21, TK0334/TK0335 and MJ0975 with function, experiment,
+neutralization, ribonuclease and antitoxin terms. Followed the two family-cited
+primary papers, O28071 and20 reviewed annotations, PDB2NWT/BMRB7362, and the
+2025 promoter-RBS/TA experiment through its accessible original supplement and
+four exact UniProt locus mappings. NCBI CDD/COG descriptions are predictions,
+not additional independent assays. Generic STRING links and recombinant-protein
+vendor listings were excluded as causal evidence. AF2212/97 strain search hits
+do not identify the Archaeoglobus AF_2212 protein; shared VapB numbering is not
+proof of protein identity across species.
+
+Coverage limitations and next actions:
+- Pandey2005 TableS2 and Makarova2009 supplementary inventories remain
+  uninspected. Verify exact historical locus/sequence mappings if used.
+- Chopra2013, PMID24265503, doi10.1093/gbe/evt175, was located as a later MazF
+  comparative-study lead. PMC access was challenged; this pass does not claim
+  full-text or figure inspection. Verify any member-specific evidence before
+  transferring its broad antitoxin discussion to PF01954.
+- Li/Xu2025 main text was inaccessible at the attempted ACS endpoints.
+  The independently available author supplement excludes its four named
+  antitoxins from PF01954 using current annotations; it is not an exhaustive
+  audit of every construct or statement in that paper.
+- Structure-classification and thermostability-prediction leads do not by
+  themselves support biological activity; uninspected full sources remain
+  leads, not negative experimental findings.
+- The20-entry reviewed-UniProt response is not all440 frozen proteins, and
+  publication indexing may lag. Search additional mapped members and inspect
+  any direct toxin inhibition, transcription, growth/rescue or substrate assay.
+- Resolve profile intervals1-34 versus1-57 and the deposition strain/salt
+  discrepancies before making construct- or residue-specific interpretations.
+
+No directed effect is supported by the inspected PF01954-specific material.
+No placeholder/hypothetical graph is inserted solely for coverage. This is not
+a family-wide assertion that function is unknown or that experiments do not
+exist. Status remains IN_PROGRESS; all existing family follow-ups remain open.

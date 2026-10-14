@@ -1,0 +1,19 @@
+Sources:
+https://rest.uniprot.org/uniprotkb/search?query=gene%3ARSP_6037&format=json&size=5
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q3J4N6/entry/pfam/PF06568/
+Accessed: 2026-10-11 UTC. Selected public annotation facts, not full responses.
+
+primaryAccession: Q3J4N6
+orfNames: RSP_6037
+protein: ABA78248.1
+organism: Cereibacter sphaeroides strain 2.4.1; commonName: Rhodobacter sphaeroides
+taxonId: 272943
+sequenceVersion: 1; entryVersion: 70; length: 71
+sequence md5: B890634F533238C1E306C82F06331F1B
+entry accession: PF06568
+entry_protein_locations: start 28, end 60, CONTINUOUS
+entry_integrated: ipr009506
+
+Current taxonomy and historical paper naming refer to the same strain. The
+71-residue reference is distinct from the paper's 50-residue KD131 protein.
+Neither reference annotation nor RNA binding proves an RNA-cleavage reaction.

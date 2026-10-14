@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01883
+  path: curation/families/PF01883.yaml
+session:
+  id: 2026-10-11T044626Z-codex-d1bf16
+  timestamp: '2026-10-11T04:46:26Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate the SufT deletion effect on normalized AcnA activity
+  details: Added a scoped USA300 LAC phenotype graph with primary Results, methods
+    and visually inspected Figure 3C evidence, including complementation and protein-abundance
+    normalization. Reference mapping remains distinct from derivative sequencing.
+    No purified FeS transfer or family-wide mechanism is inferred. Guarded projection
+    and retained scientific review follow.
+  sections:
+  - causal_graphs

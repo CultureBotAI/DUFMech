@@ -70,6 +70,10 @@ classes:
         range: FunctionalAssertion
         multivalued: true
         inlined_as_list: true
+      causal_graphs:
+        range: CausalGraph
+        multivalued: true
+        inlined_as_list: true
       discussions:
         range: Discussion
         multivalued: true
@@ -97,6 +101,10 @@ classes:
         pattern: '^history/records/PF[0-9]{5}$'
       assertions:
         range: FunctionalAssertion
+        multivalued: true
+        inlined_as_list: true
+      causal_graphs:
+        range: CausalGraph
         multivalued: true
         inlined_as_list: true
       discussions:
@@ -198,6 +206,92 @@ classes:
         multivalued: true
         inlined_as_list: true
         minimum_cardinality: 1
+  CausalGraph:
+    description: A scoped directed mechanism or phenotype graph, not family-wide functional proof.
+    attributes:
+      graph_id:
+        required: true
+        pattern: '^[A-Za-z0-9_-]+$'
+      title:
+        required: true
+      scope:
+        description: Exact tested protein or construct and limits of generalization.
+        required: true
+      context:
+        description: Organism, strain, perturbation, conditions and necessary cofactors or partners.
+        required: true
+      family_mapping:
+        description: Evidence mapping the tested object to this Pfam domain, with coordinate limits.
+        required: true
+      scope_status:
+        range: CausalScope
+        required: true
+      taxon:
+        pattern: '^NCBITaxon:[0-9]+$'
+      limitations:
+        description: Unresolved steps, alternative explanations and unsupported transfers.
+        required: true
+      feedback_explanation:
+        description: Required when directed cycles or self-edges represent actual feedback.
+      nodes:
+        range: CausalNode
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        minimum_cardinality: 1
+      edges:
+        range: CausalEdge
+        required: true
+        multivalued: true
+        inlined_as_list: true
+        minimum_cardinality: 1
+  CausalNode:
+    attributes:
+      node_id:
+        required: true
+        pattern: '^[A-Za-z0-9_-]+$'
+      label:
+        required: true
+      node_type:
+        range: CausalNodeType
+        required: true
+      grounding:
+        description: Verified entity CURIEs; absence means ungrounded, not a fabricated identifier.
+        multivalued: true
+        pattern: '^[A-Za-z][A-Za-z0-9_.-]*:\S+$'
+  CausalEdge:
+    description: Evidence for a directed relation, rather than citations only establishing the endpoints.
+    attributes:
+      edge_id:
+        required: true
+        pattern: '^[A-Za-z0-9_-]+$'
+      subject:
+        required: true
+        pattern: '^[A-Za-z0-9_-]+$'
+      predicate:
+        required: true
+        range: CausalPredicate
+      object:
+        required: true
+        pattern: '^[A-Za-z0-9_-]+$'
+      mechanism:
+        description: What the evidence supports about this directed step and its conditions.
+        required: true
+      directness:
+        required: true
+        range: CausalDirectness
+      support:
+        required: true
+        range: CausalSupport
+      evidence_kind:
+        required: true
+        range: EvidenceKind
+      evidence:
+        required: true
+        range: ClaimEvidence
+        multivalued: true
+        inlined_as_list: true
+        minimum_cardinality: 1
   ClaimEvidence:
     description: A primary-source quotation retained locally for an independently checkable claim.
     attributes:
@@ -218,6 +312,41 @@ classes:
         required: true
         pattern: '^[a-f0-9]{64}$'
 enums:
+  CausalScope:
+    permissible_values:
+      MECHANISTIC:
+        description: Includes at least one directly observed experimental mechanism step.
+      PHENOTYPIC:
+        description: Includes an experimentally observed effect without claiming a resolved molecular mechanism.
+      HYPOTHETICAL:
+        description: Proposed directed explanations, not observed causal effects.
+  CausalNodeType:
+    permissible_values:
+      STATE:
+      ACTIVITY:
+      PROCESS:
+      PERTURBATION:
+      PHENOTYPE:
+  CausalPredicate:
+    permissible_values:
+      increases:
+      decreases:
+      required_for:
+      enables:
+      produces:
+      degrades:
+      converts_to:
+  CausalDirectness:
+    permissible_values:
+      DIRECT:
+      INDIRECT:
+      UNRESOLVED:
+  CausalSupport:
+    permissible_values:
+      OBSERVED:
+      INFERRED:
+      HYPOTHESIZED:
+      CONTESTED:
   SeedStatus:
     permissible_values:
       UNKNOWN_CANDIDATE:

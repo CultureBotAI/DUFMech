@@ -1,0 +1,63 @@
+PF01951 coverage ledger. Research date 2026-10-12 UTC.
+All 8296 records and earlier scientific follow-ups remain in scope.
+This entry is IN_PROGRESS; the next scientific work includes its remaining
+branches, not an assertion that the family has been completely reviewed.
+
+Searches: PF01951, Archease, DUF101, member accessions, exact paper titles,
+2026 update scan, author-publication links and cited primary studies.
+Pre-edit search of curation/evidence/history/reviews included hidden and
+ignored files, excluded JSON, and returned no PF01951/name matches.
+Search results and reviewed annotations are discovery leads, not experiments.
+
+Reviewed for the initial native graphs: Gerber2024 human biochemical assays;
+Desai2014 P. horikoshii Methods/Results/captions; Suzuki2025 U2OS assays.
+Human figure and supplement images inspected. Archaeal Figures 2/3/4 were
+visually checked using Desai2014a.pdf from the author's publication page;
+the supplement was obtained but not yet inspected. The 2024/2025 supplements were successfully
+retrieved from the publisher media host after earlier failures. A failed
+download and a curl exit 0 for HTML were never treated as a valid PDF.
+
+Desai2015 PMID:26385509, doi:10.1261/rna.052639.115:
+https://raineslab.com/sites/default/files/labs/raines/pdfs/Desai2015.pdf
+Full Results/Methods read, PDF pages 2-6; figures rendered but not yet
+visually reviewed. T. thermophilus Archease stimulates its RtcB and enables
+four turnovers; P. horikoshii protein stimulates T. thermophilus RtcB.
+T. fusca is not converted to a multiple-turnover enzyme. Those assays have
+different temperatures and tagged constructs. T. thermophilus clone strain,
+accession and exact sequence remain unresolved in the inspected Methods.
+The general coevolution account is an interpretation, not an observed edge.
+
+Auxilien2007 PMID:17470432, doi:10.1074/jbc.M607459200:
+https://www.researchgate.net/publication/6360471_Archease_from_Pyrococcus_abyssi_Improves_Substrate_Specificity_and_Solubility_of_a_tRNA_m5C_Methyltransferase
+Public author copy: selected Methods/Results/Table2 and figure captions
+read; not the full method/figure audit. PAB1946/Q9V105 N-His6 from E. coli;
+PAB1947 partner is the methyltransferase, not Archease. Aggregation,
+specificity and RNA affinity experiments require separate graphs after
+buffer/temperature/control and Figure5/6/8/9 verification. Do not equate
+binding to activation or assign methyltransferase chemistry to Archease.
+Publisher robots denial and direct author-copy 403/404 are access outcomes,
+not evidence absence; web-visible author text was available.
+
+Popow2014 PMID:24870230, doi:10.1038/nature13284:
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/
+Full public HTML obtained; Methods and Extended Data await full review.
+Jurkin2014 PMID:25378478, doi:10.15252/embj.201490332:
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4282640/
+Cellular RNA ligation/plasma-cell work is a lead; RTCB deletion must not
+be silently attributed to Archease. Also inspect the 2017 yeast HAC1
+complementation paper https://pmc.ncbi.nlm.nih.gov/articles/PMC5333776/.
+
+Francis2022: https://pmc.ncbi.nlm.nih.gov/articles/PMC9641670/
+Public HTML obtained, abstract/Figure3 caption inspected. Drosophila
+disjointed/CG6353 is Archease; terminal-cell defects and WT-cDNA rescue
+are real leads. This is NOT the previously suspected C. elegans study.
+Need exact allele/residue map, Methods, images and mTOR-vATPase perturbations.
+Do not concatenate nuclear localization, tRNA maturation and membrane
+growth into an observed chain from author interpretation alone.
+Song2015 PMID:25961792, doi:10.1038/nn.4019: axon regeneration lead.
+
+Further leads not yet reviewed: human structure PMID:32234548;
+XBP1 RNA zipper PMID:26483401; 2025 PYROXD1 protection PMC12263435;
+Danio tRNA ligase PMID:40220997; additional bacterial and archaeal members.
+No exhaustive negative literature claim, independent expert endorsement,
+raw-data reanalysis, sequence resequencing or publication claim.

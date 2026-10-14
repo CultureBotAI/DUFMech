@@ -1,0 +1,77 @@
+PF01927 complex and cellular assay ledger
+Busetto et al. 2024, PMID:39188014, doi:10.1093/nar/gkae610.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11347159/
+Inspected2026-10-12: relevant Methods/Results, original Figures1-4/6;
+supplement S2,S3,S5 and TablesS1/S2/S4 text and rendered pages.
+
+Minimal attributed excerpts, counted jointly with the biochemical ledger:
+"heterodimer"
+"co-precipitated"
+"failed to co-precipitate"
+"co-precipitated poorly"
+"formed droplets"
+"RNAi-resistant animals"
+"no longer localizes"
+
+Figure1 and S2A: CeMUT-7 CTD633-910 plus CeMUT-8 CTD322-578 form an
+isolable complex after coexpression,tag cleavage and chromatography.
+SEC-MALS gives about60kDa versus components32/29kDa; 8Q66 resolves the
+slightly trimmed633-899/322-567 pair. S2 SEC-MALS:5.4mg/ml,20mM Tris
+pH7.5,150mM NaCl,2mM DTT. This supports a direct physical assembly,
+not an association constant or a native intracellular reaction rate.
+Structural contacts are not automatically catalytic microsteps. The main
+text's cross-link residue wording differs from the S2E table; no individual
+cross-link is promoted to a causal edge.
+
+Figure4C: double substitution R853E/T855E within Ce CTD633-910 decreases
+recovered MUT-8 CTD in MBP coexpression pulldown versus WT CTD. S3H:
+CTD-C773-910 yields poorer coprecipitation than633-910. TableS2 defines
+Ce285/Ce302/Ce349 and Ce299. Lysate,supernatant,eluate and prey-only lanes
+are present. MUT-8 solubility depends on its partner. These are observed
+assay effects with UNRESOLVED directness: not measured binding affinities
+or proof that the substitutions affect only a contact and not folding or
+coexpression solubility. Both substitutions are outside current PF01927.
+Human/zebrafish CTDs do not solubilize MUT-8 CTD in Figure6C; insolubility
+limits the negative binding interpretation. No all-species nonbinding claim.
+
+Figure3B/S5: purified full-length MUT-7/MUT-8 associates with GST-MUT-16
+584-724, whereas MUT-7 alone and the two-CTD complex do not. Beads without
+bait are negative controls.5uM proteins,20mM HEPES pH7.5,150mM NaCl,
+10%glycerol,0.05%IGEPAL,2mM DTT;30min preincubation and1-2h resin
+incubation at4C. Record the joint complex, not direct MUT-7/MUT-16 binding.
+MUT-8 NTD1-235 directly binds the MUT-16 fragment, supported by SEC and ITC
+(S5D12.5+/-1.67uM); this partner-only assay is context, not a PF01927 edge.
+
+Figure3F: jointly adding MUT-16 584-724 and FL MUT-7/MUT-8 produces visible
+droplets at10uM proteins,20mM Tris pH7.5,150mM NaCl,2mM DTT,5%PEG6000,
+100min incubation. Fragment alone,FL pair alone and MUT-8 NTD/MUT-16
+fragment lack comparable droplets. This is a crowded in-vitro assembly
+phenomenon, not proof that any component alone is sufficient or that the
+observed droplets establish all liquid-liquid-phase-separation criteria.
+
+Figure4D and S4: untagged RFK1714 mut-7(xf367[R853E,T855E]) and RFK502
+pk204 have increased progeny hatching under pos-1 RNAi compared with N2.
+The measured endpoint is viable progeny,not22G abundance or target-mRNA
+cleavage. Empty-vector controls retain genotype-dependent baseline hatch
+rates. Figure4D counts for pos-1: N2 1/1300,RFK1714 327/352,pk204 319/491;
+empty-vector:815/880,239/287,360/560. Bars are replicate means with SD,
+not necessarily these pooled ratios. Methods:20C,L1 exposure after24h M9
+synchronization,continuous RNAi through adulthood,first24h laid eggs scored,
+about15-20 parent worms per strain. Egg counts are not independent parent
+replicate counts. pk204 W812stop is outside current Pfam and truncates the
+larger CTD; neither allele proves the matched interval's isolated function.
+
+Figure4E/F and S4: tagged RFK1754 HA-MUT-7 versus RFK1755 HA doublemutant
+in late-L4 hermaphrodite dissected mitotic germline. Mutant loses focal HA
+signal; Western blot shows similar abundance with histoneH3 loading control.
+N2 serves as antibody-negative control; images represent three independent
+replicates. Tag plus(GGGGS)x3 linker is N-terminal. Methods secondary reagent
+description says Alexa Fluor555 but lists A11029. Manufacturer certificate
+for A11029 lot2306579 (18-Feb-2021), inspected2026-10-12, identifies Alexa
+Fluor488. This verifies the catalog mismatch, not the actual reagent/lot used:
+https://documents.thermofisher.com/TFS-Assets/BID/certificate/Certificates-of-Analysis/A11029%20Lot%202306579%20CofA.pdf
+Retain the experimental reagent uncertainty; do not silently choose either dye.
+S5E shows Mutator foci persist in RFK1716 using MUT-16::GFP, compared with
+RFK1713. Loss of MUT-7 localization is not loss of all foci. RNAi,IF,and
+live-imaging strains differ; do not join the panels into a directly observed
+molecular chain or claim that localization exclusively mediates RNAi output.

@@ -1,0 +1,35 @@
+PF01955 CbiS heterologous rescue; inspected 2026-10-12 UTC
+PMID16740929; DOI10.1128/JB.00227-06.
+https://journals.asm.org/doi/10.1128/jb.00227-06
+Locators: growth/plasmid Methods, salvage Results, Table1, original Figure3A/B.
+Minimal exact quotation: "Cbi-dependent growth was observed".
+
+S.enterica serovarTyphimuriumLT2-derived strains; aerobic defined liquid
+medium37C,10nM cyano-corrinoids,OD650 time courses to9h. Growth protocol
+refers to2004. AP is explicitly varied in3B but its exact per-arm concentration
+is not restated in2006. Do not infer a matched N-terminal-minus-AP arm.
+Replication and error bars are not specified for these curves.
+
+Figure3A JE824: wholecbiS(pMkCBIS4)+cobY(pCOBY38) and N-terminalcbiS
+(pMkCBIS6)+cobY restore robustCbi-supported growth. WholecbiSalone remainslow;
+cobYalone has a smaller lateincrease, notzero. C-terminalcbiS(pMkCBIS7)+cobY
+stayslow; cobU(pJO52) is positive. Joint provision is one intervention and
+requires remaining host enzymes, not independent sufficiency of either gene.
+The N-terminal fragment spans thePF01955 profile but is not a purified-domain
+catalysis experiment. Folding/expression of the negative fragment is not shown.
+
+Figure3B JE6984cobUcobD: wholecbiS+cobY supports robust growth withAP but
+not withoutAP. N-terminalcbiS+cobY+AP also rescues compared with
+C-terminalcbiS+cobY+AP. The latter contrast changes the fragment, notAP alone.
+cobU is positive. No nativeM.kandleri growth or intracellular product assay.
+
+Source genotype discrepancies are retained, not repaired. Figure3/main text:
+JE824metE205cobU330; JE6984metE205cobU330cobD1272. Table1 instead lists
+JE824cbiP236::Tn10d(Tet)cobU330 and JE6984cbiP236::Tn10d(Tet)
+cobD1230::Tn10d(Chl)cobU330. TR6583 ismetE250ara-9, but the footnote only
+establishesLT2derivation, not every strain's complete inherited genotype.
+Do not transfer these2006 labels retroactively into the2004 experiments.
+
+Figure3C/D C-terminal rescue and whole-fusion phosphatase chemistry are
+retained in the domain-boundaries ledger as counterevidence to PF01955
+attribution. They are not added as PF01955 phosphatase causal edges.

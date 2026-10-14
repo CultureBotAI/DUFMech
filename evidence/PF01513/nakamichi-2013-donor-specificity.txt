@@ -1,0 +1,40 @@
+Nakamichi et al. 2013, PMID:24022322, DOI:10.1038/srep02632
+https://www.nature.com/articles/srep02632
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3769651/fullTextXML
+https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fsrep02632/MediaObjects/41598_2013_BFsrep02632_MOESM1_ESM.pdf
+Accessed 2026-10-11 UTC. Article states CC BY-NC-SA 3.0. Only minimal quotation
+anchors and curator-authored factual assessment retained, not the full publication.
+Read main Methods/Results/Discussion and supplemental captions/table. Visually
+inspected Figures 2/3 and supplemental S1-S4. No raw kinetics or full clones
+reanalyzed; S4 is an expression-extract gel, not a purified-protein purity gel.
+
+Minimal verbatim anchors:
+"specific activity"
+"larger quantity"
+
+Figure 2 compares purified, untagged E. coli NADK and N75T using a G6PD-coupled
+assay at 37 C: 5 mM NAD+, 5 mM MgCl2, 100 mM Tris-HCl pH 7.5, 5 mM glucose
+6-phosphate, 0.5 U glucose-6-phosphate dehydrogenase. ATP or tetrapolyphosphate
+is 5 mM; hexametaphosphate or metaphosphate is 1 mg/ml. The latter two are
+heterogeneous chain-length mixtures, not equivalent molar substrates.
+ATP-associated specific activity falls with N75T; poly(P)4, hexameta(P)n and
+meta(P)n activities rise. WT activity with these donors is small but nonzero.
+Tripolyphosphate does not share the increase. Means/SD are reported for three
+independent experiments; independent purification batches are not established.
+Specific assay enzyme doses, reaction volume and initial-rate window are not
+fully specified in the inspected 2013 main protocol.
+
+Figure 3 supplies separate product support: 5-ul reactions, 37 C, 10 h, 5 mM
+NAD+, 5 mM MgCl2, 100 mM Tris-HCl pH 7.5, 1 mg/ml meta(P)n and 0.43 ug/ml
+enzyme. N75T yields a stronger NADP+-comigrating TLC spot than WT. No-enzyme
+and nucleotide standards are displayed. The plate uses isobutyrate/500 mM NH4OH
+5:3 and UV254 detection. This is qualitative endpoint evidence, not a fitted
+rate, exact product mass/structure, complete conversion or all-donor activity.
+
+The 2013 HTML/XML Table 2 contains internally inconsistent displayed kcat/Km
+ratios; exact repaired kinetic parameters are not adopted from it. Supplement
+S2/S3 corroborate directional specific-activity changes without independently
+repairing the table. Neither mutant folding/oligomerization equivalence nor a
+polyphosphate-binding atomic mechanism is established. Other proteins, crude
+mutant screens, immobilized-cell yields and proposed evolutionary paths are not
+transferred to this E. coli N75T graph.

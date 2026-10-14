@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01909
+  path: data/families/PF01909.yaml
+session:
+  id: 2026-10-12T001534Z-codex-860829
+  timestamp: '2026-10-12T00:15:34Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of GlnD assay and mapping boundaries
+  details: Reviewed eleven observed edges against Zhang2010 Methods and original Figures
+    3/4/5/8, current P27249 domain mapping and the excluded P05057 lead. Semantic
+    digest 5d41ffb4b03a984dac3a3fd2250d5601e2e1cb724b4f634bba8f2c0c7aba6aa4. Native
+    NEEDS_FOLLOWUP and partial self-review preserve construct, raw-data, cofactor
+    and other NTase-branch gaps. No independent expert endorsement, full-family completion
+    or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T001545Z-pf01909-glnd-domain-and-cofactor-specific-biochemistry/review.yaml

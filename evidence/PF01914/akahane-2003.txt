@@ -1,0 +1,48 @@
+PF01914 primary assessment; inspected 2026-10-12 UTC
+Akahane et al.2003, DOI10.1093/jb/mvg021.
+https://doi.org/10.1093/jb/mvg021
+Minimal exact quotation: a protein of 216 amino acid residues
+Remaining text is an authored assessment, not copied full text.
+Main pages173-178 and original page175-178 Figures2-4 and Tables1-3
+inspected. Deposit AB093585.1/BAC53669.1 maps exact KS-1 SnatA to
+PF01914 9-214 via UniParc UPI0000062A6D; see identity.txt.
+
+Expression experiments are in heterologous E. coli, not native archaeal
+membranes. AK430 is K-12 cycA::kan. pSA28 carries about2.8kb genomic DNA;
+pSA17 is a smaller positive derivative containing full snatA. Figure2A
+scores glycine uptake and D-alanine colony formation in deletion
+constructs; pSA14 retains the full ORF but only97bp upstream and loses
+both readouts. Its contrast with pSA17 localizes a needed upstream region
+in this plasmid system, not a tested SnatA amino-acid deletion or direct
+promoter binding. Figure4A compares pSA28 with empty pUC119; Figure2A
+provides the qualitative pSA17 result. These are distinct controls, not
+a pSA17 time-course experiment invented from Figure4.
+Selection: 5mg/ml D-alanine minimal medium,37C,aboutoneweek.
+Uptake: washed cells,37C,HEPES/TrispH7.4,MgSO4,Tris-lactate and
+chloramphenicol; cell-associated radiolabeled glycine by filtration.
+Figure4A FCCP10ug/ml lowers uptake. Figure4B valinomycin plus nigericin
+lowers it; valinomycin alone is not inhibitory. No inhibitor-specific
+cell viability or purified SnatA reconstitution is shown. Proton-motive
+force dependence is a supported model, not measured H+:glycine coupling
+stoichiometry. Na/K independence is reported as data not shown.
+Table1 reports apparent whole-cell Kt24uM by Lineweaver-Burk from30s
+uptake; do not label this a purified binding Kd.
+
+Table2 uses pSA28/AK430,4uM radioglycine,830uM competitor,60min.
+Strong competitors: L-Ala84%,L-Cys95%,L-Thr100%,L-Ser90%,L-Met65%,
+L-Trp60% inhibition, normalized as the source specifies to the glycine
+competitor effect. Six selected strong-competition edges are retained.
+Competition is not independent demonstration of transport of every
+competitor or a mapped binding residue. Weaker reported effects are
+D-Ala15%,Phe37%,Pro24%,Leu35%,Ile20%,Val18%,Tyr22%,Asn20%,His14%.
+Gln,Asp,Glu,Lys,Arg are0 under these conditions. They are retained here,
+not labeled universal nonsubstrates or silently promoted to strong
+competition edges. CycA/ACP use different concentrations/times.
+Table3: WAT9 sstT-defective host+pSA28 loses colony growth relative to
+empty pUC119 on5mg/ml L-serine minimal agar24h37C; both grow on40mM
+lactose. Native W3133-2 and WAT9+pMST321(sstT) are separate controls.
+No direct serine flux or intracellular serine assay supports the proposed
+feedback relay; that explanation and SnatA dimerization remain models.
+No inference to all archaeal or bacterial PF01914 proteins is made.
+PDF SHA256:
+bc2b449934fedfad73b78b766574ae1d8171cbd2dbca3dbc6a9b1c49ca0eff66

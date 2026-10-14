@@ -1,0 +1,17 @@
+Wang et al. 2024, PMID39506110, DOI10.1038/s41586-024-08127-z.
+Accessed 2026-10-11.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11602711/
+https://www.nature.com/articles/s41586-024-08127-z
+Selected energy/force Results, simulation Methods, data availability and Figure2
+caption read; original Figure2 visually inspected. Not an all-figure/supplement audit.
+
+SSO0941/5VFK is one of nine computational benchmark proteins. Figure2c/e compare
+energy and force errors for the larger proteins against fragmented DFT. These
+are model-performance readouts, not measured DUF61 biological function.
+Twenty starting conformations and ten simulation steps yield 200 computational
+samples, not 200 experimental replicates. Reported error averages across four
+large proteins cannot be assigned solely to SSO0941. Temperature sampling and
+simulation conditions do not establish a physiological thermal response.
+No RNA-processing or cellular-phenotype edge follows from these inspected
+SSO0941 benchmark sections. The study is retained as computational context,
+not an independent confirmation of the structural paper's functional suggestions.

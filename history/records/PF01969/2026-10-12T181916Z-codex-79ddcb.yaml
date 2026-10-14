@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01969
+  path: data/families/PF01969.yaml
+session:
+  id: 2026-10-12T181916Z-codex-79ddcb
+  timestamp: '2026-10-12T18:19:16Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial LarC scientific self-review with source and construct follow-ups
+  details: Reviewed the current nine-graph42-edge projection against2022 biochemical
+    readouts and2026 primary figures and TableS1. Native validation and explicit polarity,
+    duplicate, hypothesis and evidence-hash checks pass. Retained NEEDS_FOLLOWUP/pass_with_limitations
+    review with unresolved linker sequences, protocol/replicate discrepancies, exact
+    clones and other-member contexts. H72A and small cleft changes follow original
+    plots; no H70A effect or direct nickel/E104 chemistry is invented. Same-agent
+    review, not independent endorsement or family completion.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T181928Z-pf01969-larc-readouts-linker-conflicts-and-hypotheses/review.yaml

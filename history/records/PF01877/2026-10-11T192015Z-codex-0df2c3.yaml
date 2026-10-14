@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01877
+  path: data/families/PF01877.yaml
+session:
+  id: 2026-10-11T192015Z-codex-0df2c3
+  timestamp: '2026-10-11T19:20:15Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review PAB1135 assay scope and family-transfer limits
+  details: Partial same-agent scientific review supports three observed binding-readout
+    effects in two graphs. Exact reference mapping and original assay figures were
+    checked. Tryptic termini, paired sequence/structure changes, bound/free denominator,
+    missing quantitative controls and broader biological function remain explicit.
+    The older structural prediction is not an experimentally negative binding assay.
+    Additional member coverage and inaccessible full text remain follow-ups; no REVIEWED
+    promotion.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T192026Z-pf01877-pab1135-dose-and-probe-binding-contexts/review.yaml

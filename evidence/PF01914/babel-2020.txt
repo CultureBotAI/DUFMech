@@ -1,0 +1,29 @@
+PF01914 primary assessment; inspected 2026-10-12 UTC
+Babel et al.2020, PMID33292484, DOI10.1186/s13068-020-01825-6.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7653855/
+Minimal exact quotation: did not significantly change the fitness compared to the knock-out
+Remaining text is an authored assessment, not copied full text.
+MarC Results/Discussion, strain and growth Methods, Tables3/4 and
+original Figures4/5 inspected. Supplements/raw replicates unreviewed.
+MG1655 CGSC6300-derived stock has restored gatC, functional glrR and
+REP321j variation; do not assume it equals the canonical reference.
+MarC reference P0AEY1 maps PF01914 5-217, not an independently
+sequenced clone. Strain953 delta-marC750::kanR,960 deletion plus
+IPTG-inducible M35stop fragment,1087 deletion plus empty vector.
+Figure4 deletion condition improves relative growth at50mM isoprenol;
+Figure5 deletion improves relative growth at5g/L butanol. Fitness is
+growth rate divided by the study's initial MG1655 rate in the same
+condition. Three biological replicates, mean and SD,37C,M9 glucose5g/L.
+No exact values are inferred from bar heights. Vanillin1.5g/L does not
+show a strong corresponding benefit; no general solvent claim.
+Expression of the M35stop fragment does not add significant fitness
+relative to deletion, across the tested IPTG conditions. This is not
+wild-type rescue or proof of the fragment's normal activity. The
+paper's wording about the35th methionine is not taken literally;
+M35 is the reference residue position. The frameshift/truncation and
+a complete deletion are different alleles, not proof of identical
+molecular effects. No measured isoprenol/butanol transport or direct
+lipid mechanism. Rob/YghB and evolved multi-mutation phenotypes are
+not transferred to MarC alone.
+HTML SHA256:
+1ca151c6610ed553c57aaa4d1f28d493e428589bbc5dfaef8200b84e7139f058

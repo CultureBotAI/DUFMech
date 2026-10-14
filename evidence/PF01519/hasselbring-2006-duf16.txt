@@ -1,0 +1,37 @@
+Inspected 2026-10-11. Hasselbring et al., Journal of Bacteriology 2006.
+PMID:16923901; doi:10.1128/JB.00698-06.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC1595379/
+Minimal quotations:
+"gliding frequencies were reduced for all mutants"
+"Glass binding was reduced with the disruption of MPN524 but not MPN104"
+
+Curator paraphrase and extracted experimental facts:
+M. pneumoniae M129 transformed with Tn4001.2065, enriched for polystyrene
+adherence, filter cloned and screened for altered satellite growth. This is
+not a clean deletion or isolated-domain perturbation.
+Table 2: MPN104-29 insertion at genome position 134672; MPN524-74 at 645829.
+Table 3: means +/- SEM, two filter clones, typically 30-50 cells per mutant.
+                        WT           MPN104-29       MPN524-74
+Gliding frequency (%)   27.8+/-0.3    12.4+/-0.3      12.8+/-3.2
+Velocity (% WT)         100.0+/-9.4   87.2+/-5.0      52.8+/-7.8
+Time resting (%)        29.5+/-0.5    31.0+/-5.3      49.1+/-4.9
+Glass binding (% WT)    100.0+/-3.2   93.7+/-5.4      68.2+/-2.0
+The HTML Table 3 frequency and velocity headers both say um/s, inconsistent
+with Results and normalized values. Frequency is a percentage and velocity is
+relative to WT in the retained interpretation; 52.8 is NOT an absolute um/s rate.
+Results explicitly call reduced MPN524 glass binding significant (P < 0.05),
+not MPN104. No new statistical test or significant MPN104 velocity claim is made.
+
+Methods: satellite growth on glass in SP-4 plus 3% gelatin at 37 C, imaging
+every 12 h. Individual gliding measured by microcinematography in at least
+two experiments; resting means no movement above 1 pixel (0.0645 um) between
+frames, usually 1 s. Binding assay refers to the earlier published protocol;
+its full incubation timing is not reconstructed here.
+Figure 5 visually inspected: both target insertions are solid triangles,
+meaning no predicted flanking polar effect. This is a prediction, not a
+complementation, revertant or measured transcript/protein control. The paper
+explicitly leaves such genetic confirmation for follow-up. MPN524 adherence
+loss could contribute to its gliding phenotype; no edge between these outcomes
+is established. No mutant MPN104/MPN524 protein abundance or domain-specific
+rescue was established. Methods, Tables 2/3, Results, Discussion and Figure 5
+were inspected; underlying movies and supplemental material were not inspected.

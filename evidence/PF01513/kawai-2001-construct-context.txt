@@ -1,0 +1,19 @@
+Kawai et al. 2001, PMID:11488932, DOI:10.1046/j.1432-1327.2001.02358.x
+https://febs.onlinelibrary.wiley.com/doi/10.1046/j.1432-1327.2001.02358.x
+Accessed 2026-10-11 UTC. Selected Methods, identity Results and donor-specificity
+table read in publisher HTML. Curator-authored factual qualification, no direct
+quotation. Figures/raw data were not visually inspected for this older paper.
+
+MG1655 supplied genomic yfjB to pET-14b/pSK67; expression used BL21(DE3)pLysS.
+Recombinant purification employed ammonium-sulfate fractionation, DEAE and Butyl
+Toyopearl. The forward cloning primer encodes MDNHFKCIGI, whereas current P0A7B3
+and the 2013 alignment begin MNNHFKCIGI. The reverse primer locally encodes
+RLVKKLF-stop rather than reference GWSKKLF. Full historical sequences remain
+unverified; the 2013 reused-plasmid statement alone cannot resolve these differences.
+
+The 2001 protocol used a stopped assay with isocitrate-dehydrogenase detection,
+pH 7.0, and a unit defined in nmol/min, unlike 2013's G6PD/umol-min assay. Its
+undetected polyphosphate activity is not a universal zero or a contradiction
+automatically invalidating 2013's small WT signal. 2013 calls its revised buffer
+KNDE; 2001 already lists EDTA in KND. No buffer-name harmonization is invented.
+This source supports construct and assay qualifications, not additional edges.

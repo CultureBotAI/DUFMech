@@ -1,0 +1,19 @@
+Retrieved 2026-10-11. Identity facts, not experimental proof.
+https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ASBDS%20AND%20organism_id%3A9606%20AND%20reviewed%3Atrue&format=json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9Y3A5/entry/pfam/PF01172/
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=NP_057122.2&rettype=fasta&retmode=text
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01172/
+
+Q9Y3A5/SBDS_HUMAN is the 250-aa human reference, sequence version 4,
+entry version 218. UniProt, InterPro and NP_057122.2 sequences match exactly;
+sequence MD5 fd60946584dbee5f1a35e907321c7242. Finch 2011 cites NP_057122
+without a version. Current agreement is not independent sequencing of its clone.
+Q9Y3A5 Pfam:PF01172 interval: 14-100, inclusive.
+The frozen previous-name snapshot records UPF0023 and SBDS. Current SBDS_N
+integrates with IPR019783. PF09377 and PF20268 are other domains of SBDS.
+The paper's structural domain I (2-96) and the Pfam match are different boundary
+definitions. R126 and K151 are present in the reference but outside PF01172;
+C84 is inside. R126T/K151N experiments cannot localize function to SBDS_N.
+Human SBDS/EFL1 with mouse pre-60S or rabbit mature 60S particles are explicitly
+mixed-species preparations, not wholly human reconstitutions. Full tag/scar and
+clone sequences remain unverified because supplementary methods were not obtained.

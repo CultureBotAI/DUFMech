@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01679
+  path: curation/families/PF01679.yaml
+session:
+  id: 2026-10-11T131331Z-codex-cfc9c2
+  timestamp: '2026-10-11T13:13:31Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate Pmp3 and RCI2A yeast phenotype causal graphs
+  details: Added twelve graphs with fifteen observed indirect cellular effects from
+    Navarre and Goffeau 2000, retaining separate W303-1B, YR93 and CY162 backgrounds,
+    sodium-protocol conflict, assay-specific controls, joint EGTA/calcium substitution
+    and partial plant RCI2A rescue. Retained sequence evidence matches W303-1B X91499.1
+    to P87284 and the T20621.1 reverse-strand ORF to Q9ZNQ7, with distinct PF01679
+    coordinates. Later De Block 2015 work remains a partially inspected follow-up,
+    not edge evidence. Baseline 8296 records validated with no drift. Overlay remains
+    IN_PROGRESS; regeneration and scoped self-review follow, with no direct proton-pathway,
+    family-wide mechanism or publication claim.
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/

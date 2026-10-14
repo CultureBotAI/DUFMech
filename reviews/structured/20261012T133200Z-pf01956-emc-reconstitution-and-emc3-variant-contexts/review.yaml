@@ -1,0 +1,728 @@
+schema_version: 1.0.0
+review_id: 20261012T133200Z-pf01956-emc-reconstitution-and-emc3-variant-contexts
+title: PF01956 complex insertion and distinct human/yeast EMC3 effects
+started_at: '2026-10-12T13:31:32Z'
+finished_at: '2026-10-12T13:32:00Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Scientific self-review of seven graphs and 29 observed experimental edges.
+  Two direct effects belong to purified assembled EMC, not EMC3 alone. The remaining
+  27 effects retain unresolved molecular mediation: protease pretreatment, tagged
+  exogenous human variants, and yeast growth/client reporter contexts. Four evidence
+  ledgers and two open discussions retain construct, assay and remaining-member limits.
+  Status stays IN_PROGRESS.'
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01956.yaml
+    sha256: 7f5cf7abbdfb215284ee4f348d67a99167b46d0a6c1e90f038dad8be0225acbf
+    role: context
+  - path: data/families/PF01956.yaml
+    sha256: abc344c7327fb499796aa4aa7f554c4b3e6383feb6492b64d9a3661ce4586405
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01956/pleiner-2020-emc3-variants.txt
+    role: context
+    sha256: 0b8c0126f629dce4ce37e6f957f7e775d56a3fb483bc293c1286aefdfabb417f
+  - path: evidence/PF01956/identity-and-boundaries.txt
+    role: context
+    sha256: 4dde1cd75bda311153795366df70dd0708f73c4952cb701e652ad25dde18e0ac
+  - path: evidence/PF01956/guna-2018-reconstitution.txt
+    role: context
+    sha256: bedd3a05f58fb02d6841638c08b25ceaa3586d3ae8a3994afdb30f544b424079
+  - path: evidence/PF01956/bai-2020-yeast-emc3.txt
+    role: context
+    sha256: b298b570d28fb443ac0c8b2cf781dbbef7c54ab4a521f9e2c66a7be64fbb9526
+targets:
+- target_id: PF01956
+  path: data/families/PF01956.yaml
+  label: PF01956
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01956.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 8f0001e203869e12c577d44395beb6c60a0dd9b7b1500f16dd7781d8ed0a481d
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: First scoped PF01956 assessment in the ascending corpus workflow, covering
+    inspected Guna2018, Pleiner2020 and Bai2020 experiments without dropping other
+    family members or earlier corpus follow-ups.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01956
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Only selected EMC3-containing complex and human/yeast EMC3 experiments
+      are curated. TMCO1 full studies, archaeal Ylp1 evidence, original EMC genetics,
+      later topogenesis and holo-insertase work, native clients and additional taxa
+      remain open. Historical constructs, precise trypsin recipe, vesicle lane preparation,
+      RRL assay timing and supplementary raw yeast gels/tables need follow-up. The
+      source's UGA/amber wording is an unresolved method inconsistency, not silently
+      fixed.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01956
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC7547852/
+  locator: Main Figure3, supplement Methods pp5-6 and S13 pp30-31; S9 p26 as excluded
+    proximity evidence.
+  accessed_at: '2026-10-12T13:32:00Z'
+  support: supports
+  snapshot_sha256: 0b8c0126f629dce4ce37e6f957f7e775d56a3fb483bc293c1286aefdfabb417f
+  summary: Human R31/R180 and joint four-methionine variants change client fluorescence
+    ratios; glutamate/lysine contrasts are client specific, with no R31K OPRK1 rescue.
+    Variants are tagged and expressed exogenously, not endogenous knock-ins. Co-IP
+    constrains gross assembly loss but not every folding or abundance alternative.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01956/protein/uniprot/Q9P0I2/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-12T13:32:00Z'
+  support: supports
+  snapshot_sha256: 4dde1cd75bda311153795366df70dd0708f73c4952cb701e652ad25dde18e0ac
+  summary: Q9P0I2 v3 maps PF01956 5-191, encompassing R31/R180 and M101/M106/M110/M111;
+    the second methionine loop lies outside. Yeast P36039 v3 maps 2-197 and has K26.
+    BY4741 cellular and W303-1a purification contexts are distinguished from S288c
+    reference identity. Historical plasmid sequences, exact allele junctions and TMCO1
+    isoform numbering remain unresolved; no cloned sequence is fabricated.
+- evidence_id: purified-complex
+  kind: primary_source
+  reference: https://www2.mrc-lmb.cam.ac.uk/groups/hegde/download/Science_2017c.pdf
+  locator: Main Figure4C/D; supplement Methods pp2,5-6 and S18/S19.
+  summary: Purified EMC supports protected SQS reporter product from separate RRL
+    and defined CaM preparations; active orientation, empty-vesicle controls and proteolysis
+    effects do not establish isolated EMC3 sufficiency.
+  accessed_at: '2026-10-12T13:32:00Z'
+  support: supports
+  snapshot_sha256: bedd3a05f58fb02d6841638c08b25ceaa3586d3ae8a3994afdb30f544b424079
+- evidence_id: yeast-phenotypes
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC7442705/
+  locator: Main Methods and original Figures1b,d,e and 3e-g; Extended Data9 legend.
+  summary: EMC3 deletion and K26L affect conditional colony growth and separately
+    membrane-associated client signals; qPCR and mutant-complex purification qualify
+    mechanisms without proving direct insertion or a mediation chain.
+  accessed_at: '2026-10-12T13:32:00Z'
+  support: supports
+  snapshot_sha256: b298b570d28fb443ac0c8b2cf781dbbef7c54ab4a521f9e2c66a7be64fbb9526
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-12T13:32:00Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01956
+  kind: record_content
+  reference: data/families/PF01956.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-12T13:32:00Z'
+  support: context_only
+  snapshot_sha256: abc344c7327fb499796aa4aa7f554c4b3e6383feb6492b64d9a3661ce4586405
+  quote: "id: Pfam:PF01956\npfam_id: PF01956\nname: Integral membrane protein EMC3/TMCO1-like\n\
+    short_name: EMC3_TMCO1\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01956\n\
+    counters:\n  proteins: 7263\n  matches: 7342\n  proteomes: 3937\n  taxa: 9997\n\
+    \  structures: 16\n  alphafold_models: 6324\n  domain_architectures: 89\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002809\ndescription: This entry represents a group of\
+    \ eukaryotic and archaeal proteins. Eukaryotic members include\n  EMC3, a subunit\
+    \ of the ER membrane protein complex (EMC) required for protein folding [[cite:PUB00061987]],\n\
+    \  and TMCO1, a ER calcium load-activated calcium channel [[cite:PUB00081416]].\
+    \ Archaeal members may function\n  as insertases of the archaeal plasma membrane\
+    \ [[cite:PUB00086930]].\ncuration_history: history/records/PF01956\ndiscussions:\n\
+    - discussion_id: pf01956-member-and-context-coverage\n  prompt: Extend primary\
+    \ coverage to TMCO1, archaeal Ylp1 and remaining EMC3 systems without transferring\n\
+    \    mechanisms between them.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ The retained experiments concern assembled human EMC and selected human/yeast\
+    \ EMC3 perturbations,\n    not every member of this former DUF106 family.\n  evidence:\n\
+    \  - reference: PMID:27212239\n    supports: PARTIAL\n    evidence_source: primary_publication\n\
+    \    explanation: TMCO1 calcium-channel abstract inspected; full constructs, electrophysiology\
+    \ and cellular\n      controls remain unreviewed.\n  - reference: PMID:26256539\n\
+    \    supports: PARTIAL\n    evidence_source: database\n    explanation: Archaeal\
+    \ Ylp1 structural study is an imported citation lead, not yet an inspected insertion\n\
+    \      assay.\n  posed_by: Codex\n  posed_date: '2026-10-12'\n  notes: Current\
+    \ TMCO1 Q9UM00 v2 is 239 aa and postdates the 2016 study; reconcile isoforms before\
+    \ residue\n    mapping. Review later multipass translocon, topogenesis, native-client,\
+    \ holo-insertase and original\n    genetics experiments. See evidence/PF01956/identity-and-boundaries.txt.\
+    \ All earlier corpus follow-ups\n    remain open.\n- discussion_id: pf01956-insertion-mechanism-and-constructs\n\
+    \  prompt: Resolve exact historical constructs and directly test the proposed\
+    \ insertion intermediates.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ Reconstitution establishes whole-complex activity; cellular fluorescence, growth\
+    \ and localization\n    do not identify each molecular step or isolated EMC3 sufficiency.\n\
+    \  evidence:\n  - reference: PMID:32439656\n    supports: PARTIAL\n    evidence_source:\
+    \ primary_publication\n    explanation: Figure3 and S13 support variant-specific\
+    \ reporter effects; S9 is proximity evidence and\n      the loop/thinning mechanism\
+    \ is a model.\n  - reference: PMID:32494008\n    supports: PARTIAL\n    evidence_source:\
+    \ primary_publication\n    explanation: Figures1/3 support yeast phenotypes; Hxt3\
+    \ RNA decreases and gross complex assembly controls\n      do not exhaust alternatives.\n\
+    \  - reference: PMID:29242231\n    supports: PARTIAL\n    evidence_source: primary_publication\n\
+    \    explanation: Figure4 and supplementary Methods support mixed-orientation\
+    \ EMC reconstitution; Figure4C\n      timing, vesicle preparation assignment and\
+    \ trypsin protocol remain qualified.\n  posed_by: Codex\n  posed_date: '2026-10-12'\n\
+    \  notes: Verify variant plasmid sequences/junctions, endogenous-versus-exogenous\
+    \ stoichiometry and yeast\n    alleles; inspect raw gels and unreviewed supplements.\
+    \ Pleiner supplement calls an amber codon UGA.\n    Do not silently repair the\
+    \ source or turn crosslinking, membrane thinning or putative gating into\n   \
+    \ observed sequential edges.\ncausal_graphs:\n- graph_id: human-emc-reconstituted-insertion-2018\n\
+    \  title: Purified human EMC supports SQS reporter insertion into vesicles\n \
+    \ scope: Intact human EMC purified via EMC5-3xFLAG from T-Rex HEK293 cells, not\
+    \ isolated EMC3.\n  context: Guna2018 Figure4C/D; matched empty versus EMC proteoliposomes.\
+    \ Separate native-RRL and isolated\n    PURE-derived CaM-SQS preparations; protected\
+    \ C-terminal 3F4 fragment measured by autoradiography.\n    Defined-complex assay\
+    \ uses 0.5 mM EGTA, 32 C for 20 min, then proteinase K and fragment IP; four experiments\n\
+    \    per graph, mean +/- SD.\n  family_mapping: The complex contains human EMC3,\
+    \ current reference Q9P0I2 v3, 261 aa, PF01956 5-191.\n    The tag is on EMC5.\
+    \ Historical EMC3 sequence is not independently verified, and EMC3 is only one\
+    \ required\n    complex component.\n  taxon: NCBITaxon:9606\n  scope_status: MECHANISTIC\n\
+    \  limitations: Whole-complex assay sufficiency only. About one-third of reconstituted\
+    \ EMC is productively\n    oriented. Fresh vesicles or once-frozen cholesterol-containing\
+    \ vesicles were used; specific lane assignment\n    is not resolved. Figure4C\
+    \ timing is not explicitly separated from the general 15-min RRL protocol.\n \
+    \   Protected product is not native SQS catalytic activity; VAMP2 is a poorly\
+    \ inserted comparison substrate,\n    not proof of universal specificity.\n  nodes:\n\
+    \  - node_id: rrl_emc\n    label: EMC versus empty vesicles with native-RRL SQS\
+    \ reporter\n    node_type: ACTIVITY\n  - node_id: rrl_product\n    label: Protected\
+    \ inserted SQS reporter fragment from RRL substrate\n    node_type: STATE\n  -\
+    \ node_id: cam_emc\n    label: EMC versus empty vesicles with isolated CaM-SQS\
+    \ and EGTA\n    node_type: ACTIVITY\n  - node_id: cam_product\n    label: Protected\
+    \ inserted SQS fragment from the defined CaM complex\n    node_type: STATE\n \
+    \ edges:\n  - edge_id: rrl-insertion\n    subject: rrl_emc\n    predicate: increases\n\
+    \    object: rrl_product\n    mechanism: Reconstituted assembled EMC increases\
+    \ the membrane-protected SQS reporter product relative\n      to empty vesicles\
+    \ in Figure4C; the molecular catalyst is the complex, not an isolated Pfam domain.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:29242231\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5788257/\n\
+    \      snippet: supported insertion\n      explanation: Figure4C original image\
+    \ and main Results; empty/no-membrane, WT and EMC6-deficient\n        microsome\
+    \ controls; native-RRL substrate.\n      cache_path: evidence/PF01956/guna-2018-reconstitution.txt\n\
+    \      cache_sha256: bedd3a05f58fb02d6841638c08b25ceaa3586d3ae8a3994afdb30f544b424079\n\
+    \  - edge_id: cam-insertion\n    subject: cam_emc\n    predicate: increases\n\
+    \    object: cam_product\n    mechanism: Purified assembled EMC supports SQS reporter\
+    \ insertion from an isolated CaM-bound substrate\n      after EGTA-triggered release;\
+    \ increasing EMC at fixed lipid increases protected product over empty\n     \
+    \ vesicles.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:29242231\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC5788257/\n      snippet: supported\
+    \ insertion\n      explanation: Figure4D original image, supplementary Methods\
+    \ pp5-6 and S18 orientation text; four\n        experiments and active-orientation\
+    \ normalization, not EMC3-only sufficiency.\n      cache_path: evidence/PF01956/guna-2018-reconstitution.txt\n\
+    \      cache_sha256: bedd3a05f58fb02d6841638c08b25ceaa3586d3ae8a3994afdb30f544b424079\n\
+    - graph_id: human-emc-proteolysis-context-2018\n  title: Protease pretreatment\
+    \ reduces EMC-vesicle insertion activity\n  scope: Trypsin treatment of the assembled\
+    \ human EMC in proteoliposomes.\n  context: Guna2018 FigureS19; pretreated versus\
+    \ untreated vesicles assayed with PURE-derived CaM-SQS\n    using the C-terminal\
+    \ protease-protected fragment assay. Empty vesicles and WT/EMC6-deficient microsomes\n\
+    \    are comparison arms.\n  family_mapping: EMC3 Q9P0I2 v3, PF01956 5-191, is\
+    \ present in the EMC5-tagged complex; no selective EMC3\n    cleavage or residue\
+    \ perturbation was performed.\n  taxon: NCBITaxon:9606\n  scope_status: PHENOTYPIC\n\
+    \  limitations: The necessary trypsin-sensitive component is not isolated; dose/duration\
+    \ were not established\n    from the inspected Methods. Loss of protected product\
+    \ is not direct proof of a specific EMC3 domain\n    mechanism. S19 image and\
+    \ legend were inspected without assigning an exact effect size.\n  nodes:\n  -\
+    \ node_id: trypsin\n    label: Trypsin pretreatment versus untreated EMC vesicles\n\
+    \    node_type: PERTURBATION\n  - node_id: insertion\n    label: Protected SQS\
+    \ reporter product\n    node_type: STATE\n  edges:\n  - edge_id: pretreatment-insertion\n\
+    \    subject: trypsin\n    predicate: decreases\n    object: insertion\n    mechanism:\
+    \ Shaving accessible protein regions reduces insertion activity of EMC vesicles\
+    \ under the\n      reported assay, without resolving which subunit or conformational\
+    \ change mediates the effect.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29242231\n\
+    \      source_url: https://www2.mrc-lmb.cam.ac.uk/groups/hegde/download/Science_2017c.pdf\n\
+    \      snippet: trypsin sensitive\n      explanation: Supplement S19 legend, combined\
+    \ author PDF p32; conditional biochemical perturbation\n        of the entire\
+    \ EMC preparation, not selective EMC3 deletion.\n      cache_path: evidence/PF01956/guna-2018-reconstitution.txt\n\
+    \      cache_sha256: bedd3a05f58fb02d6841638c08b25ceaa3586d3ae8a3994afdb30f544b424079\n\
+    - graph_id: human-emc3-alanine-and-loop-reporters-2020\n  title: EMC3 alanine\
+    \ and four-methionine variants reduce client reporter ratios\n  scope: Exogenous\
+    \ EMC3-TagBFP-3xFLAG variants in stable HEK293 reporter cells; not endogenous\
+    \ mutant\n    knock-ins or EMC3-null rescue.\n  context: Pleiner2020 Figure3C/D\
+    \ and S13C; lentiviral pHAGE2/CMV WT versus variants, BFP-positive cells.\n  \
+    \  RFP-SQS uses RFP:GFP; OPRK1-GFP uses GFP:RFP. At least three independent experiments\
+    \ for R31/R180/MCyt-1-S,\n    representative histograms. VAMP2/TRAM2 are matched\
+    \ EMC-independent controls.\n  family_mapping: Human Q9P0I2 v3, 261 aa, PF01956\
+    \ 5-191. R31/R180 and M101/M106/M110/M111 lie within\n    the interval; MCyt-1-S\
+    \ changes all four methionines jointly. Historical plasmid sequence remains unverified;\n\
+    \    the C-terminal fluorescent/epitope tag is retained.\n  taxon: NCBITaxon:9606\n\
+    \  scope_status: PHENOTYPIC\n  limitations: Fluorescence is a relative abundance/stability\
+    \ proxy, not a directly measured insertion\n    rate. EMC2/EMC4 co-IP limits gross\
+    \ assembly loss but does not establish equal abundance, folding or\n    stoichiometry.\
+    \ No single-methionine effect or direct loop-capture trajectory is established.\
+    \ F173A\n    and the outside-domain MCyt-2-S loop show no appreciable defect in\
+    \ the reported assays.\n  nodes:\n  - node_id: r31a\n    label: EMC3 R31A versus\
+    \ tagged WT\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q9P0I2\n\
+    \  - node_id: r180a\n    label: EMC3 R180A versus tagged WT\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q9P0I2\n  - node_id: met4s\n    label: Joint\
+    \ M101S/M106S/M110S/M111S versus tagged WT\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q9P0I2\n  - node_id: sqs\n    label: RFP-SQS to GFP fluorescence\
+    \ ratio\n    node_type: PHENOTYPE\n  - node_id: oprk1\n    label: OPRK1-GFP to\
+    \ RFP fluorescence ratio\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: r31a-sqs\n\
+    \    subject: r31a\n    predicate: decreases\n    object: sqs\n    mechanism:\
+    \ R31A shifts the SQS reporter distribution below the WT comparison, with the\
+    \ VAMP2 control\n      largely preserved; exact molecular mediation remains unresolved.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:32439656\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7547852/\n\
+    \      snippet: destabilized\n      explanation: Main Results and original S13C\
+    \ SQS histogram, paired S13A assembly control and supplementary\n        pp5-6.\n\
+    \      cache_path: evidence/PF01956/pleiner-2020-emc3-variants.txt\n      cache_sha256:\
+    \ 0b8c0126f629dce4ce37e6f957f7e775d56a3fb483bc293c1286aefdfabb417f\n  - edge_id:\
+    \ r31a-oprk1\n    subject: r31a\n    predicate: decreases\n    object: oprk1\n\
+    \    mechanism: R31A reduces the OPRK1 reporter ratio; the TRAM2 control limits\
+    \ a general reporter-expression\n      effect but does not directly measure substrate\
+    \ insertion.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:32439656\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC7547852/\n      snippet: destabilized\n\
+    \      explanation: Original S13C OPRK1 and TRAM2 panels; main Results and reporter\
+    \ Methods.\n      cache_path: evidence/PF01956/pleiner-2020-emc3-variants.txt\n\
+    \      cache_sha256: 0b8c0126f629dce4ce37e6f957f7e775d56a3fb483bc293c1286aefdfabb417f\n\
+    \  - edge_id: r180a-sqs\n    subject: r180a\n    predicate: decreases\n    object:\
+    \ sqs\n    mechanism: R180A lowers the SQS reporter ratio relative to tagged WT\
+    \ EMC3 in the displayed cell assay.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:32439656\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7547852/\n      snippet:\
+    \ destabilized\n      explanation: Original Figure3C and S13A; matched VAMP2 control\
+    \ and retained variant tag.\n      cache_path: evidence/PF01956/pleiner-2020-emc3-variants.txt\n\
+    \      cache_sha256: 0b8c0126f629dce4ce37e6f957f7e775d56a3fb483bc293c1286aefdfabb417f\n\
+    \  - edge_id: r180a-oprk1\n    subject: r180a\n    predicate: decreases\n    object:\
+    \ oprk1\n    mechanism: R180A lowers the OPRK1 ratio relative to tagged WT; the\
+    \ shift is qualitative and not assigned\n      an exact effect size or insertion\
+    \ rate.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:32439656\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC7547852/\n      snippet: destabilized\n\
+    \      explanation: Original Figure3D and S13B with TRAM2 control; main Results\
+    \ identify this variant-specific\n        client effect.\n      cache_path: evidence/PF01956/pleiner-2020-emc3-variants.txt\n\
+    \      cache_sha256: 0b8c0126f629dce4ce37e6f957f7e775d56a3fb483bc293c1286aefdfabb417f\n\
+    \  - edge_id: met4s-sqs\n    subject: met4s\n    predicate: decreases\n    object:\
+    \ sqs\n    mechanism: The joint four-methionine-to-serine construct reduces SQS\
+    \ reporter abundance; no individual\n      methionine is established as independently\
+    \ causal.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:32439656\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC7547852/\n      snippet: disrupted\
+    \ biogenesis\n      explanation: Original Figure3C orange MCyt-1-S histogram;\
+    \ S13 legend defines all four substitutions\n        and S13A shows complex incorporation.\n\
+    \      cache_path: evidence/PF01956/pleiner-2020-emc3-variants.txt\n      cache_sha256:\
+    \ 0b8c0126f629dce4ce37e6f957f7e775d56a3fb483bc293c1286aefdfabb417f\n  - edge_id:\
+    \ met4s-oprk1\n    subject: met4s\n    predicate: decreases\n    object: oprk1\n\
+    \    mechanism: The same fourfold mutant reduces the OPRK1 ratio without a corresponding\
+    \ TRAM2 shift; substrate\n      capture by the loop is a proposed explanation\
+    \ rather than a measured intermediate.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:32439656\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7547852/\n      snippet:\
+    \ disrupted biogenesis\n      explanation: Original Figure3D and supplementary\
+    \ pp5-6/31, distinct co-translational reporter assay.\n      cache_path: evidence/PF01956/pleiner-2020-emc3-variants.txt\n\
+    \      cache_sha256: 0b8c0126f629dce4ce37e6f957f7e775d56a3fb483bc293c1286aefdfabb417f\n\
+    - graph_id: human-emc3-charge-substitution-reporters-2020\n  title: Charge substitutions\
+    \ have client-specific reporter effects\n  scope: Alternative R31/R180 glutamate\
+    \ or lysine constructs, not simultaneous mutations or rescue by\n    adding free\
+    \ lysine.\n  context: Same tagged exogenous HEK293 reporter system as Figure3E\
+    \ and S13B/C. Glutamate variants compare\n    with WT; lysine variants compare\
+    \ with glutamate at the same site. SQS and OPRK1 fluorescence ratios\n    are\
+    \ separately measured endpoints.\n  family_mapping: Q9P0I2 v3 R31 and R180 lie\
+    \ within PF01956 5-191; all constructs retain C-terminal TagBFP-3xFLAG\n    and\
+    \ other endogenous EMC components.\n  taxon: NCBITaxon:9606\n  scope_status: PHENOTYPIC\n\
+    \  limitations: Positive-charge substitution improves some client outcomes, not\
+    \ every client or all WT\n    properties. R31K does not restore OPRK1 in S13C.\
+    \ K versus E changes more than electrostatic sign;\n    folding/abundance and\
+    \ endogenous competition are not exhaustively excluded. No direct charge-to-translocation\n\
+    \    energetic pathway is observed.\n  nodes:\n  - node_id: r31e\n    label: R31E\
+    \ versus tagged WT EMC3\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q9P0I2\n\
+    \  - node_id: r180e\n    label: R180E versus tagged WT EMC3\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q9P0I2\n  - node_id: r31k_vs_e\n    label: R31K\
+    \ instead of R31E EMC3\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q9P0I2\n\
+    \  - node_id: r180k_vs_e\n    label: R180K instead of R180E EMC3\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q9P0I2\n  - node_id: sqs\n   \
+    \ label: SQS reporter RFP:GFP ratio\n    node_type: PHENOTYPE\n  - node_id: oprk1\n\
+    \    label: OPRK1 reporter GFP:RFP ratio\n    node_type: PHENOTYPE\n  edges:\n\
+    \  - edge_id: r31e-sqs\n    subject: r31e\n    predicate: decreases\n    object:\
+    \ sqs\n    mechanism: The R31E distribution shifts below the WT SQS reporter comparison;\
+    \ this is not a direct\n      insertion assay.\n    directness: UNRESOLVED\n \
+    \   support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:32439656\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7547852/\n\
+    \      snippet: insertion defect\n      explanation: S13C original SQS/VAMP2 panels\
+    \ and main positive-patch Results.\n      cache_path: evidence/PF01956/pleiner-2020-emc3-variants.txt\n\
+    \      cache_sha256: 0b8c0126f629dce4ce37e6f957f7e775d56a3fb483bc293c1286aefdfabb417f\n\
+    \  - edge_id: r31e-oprk1\n    subject: r31e\n    predicate: decreases\n    object:\
+    \ oprk1\n    mechanism: R31E reduces the OPRK1 ratio relative to WT; retaining\
+    \ a grossly assembled EMC does not\n      identify the intervening molecular defect.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:32439656\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7547852/\n\
+    \      snippet: insertion defect\n      explanation: S13C original OPRK1/TRAM2\
+    \ panels and S13A assembly control.\n      cache_path: evidence/PF01956/pleiner-2020-emc3-variants.txt\n\
+    \      cache_sha256: 0b8c0126f629dce4ce37e6f957f7e775d56a3fb483bc293c1286aefdfabb417f\n\
+    \  - edge_id: r180e-sqs\n    subject: r180e\n    predicate: decreases\n    object:\
+    \ sqs\n    mechanism: R180E reduces the SQS fluorescence ratio relative to WT\
+    \ EMC3 under matched reporter conditions.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:32439656\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7547852/\n      snippet:\
+    \ insertion defect\n      explanation: Original Figure3E SQS and VAMP2 histograms,\
+    \ not a whole-cell viability or calcium readout.\n      cache_path: evidence/PF01956/pleiner-2020-emc3-variants.txt\n\
+    \      cache_sha256: 0b8c0126f629dce4ce37e6f957f7e775d56a3fb483bc293c1286aefdfabb417f\n\
+    \  - edge_id: r180e-oprk1\n    subject: r180e\n    predicate: decreases\n    object:\
+    \ oprk1\n    mechanism: R180E shifts the OPRK1 distribution below the WT comparison;\
+    \ exact fold change is not digitized.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:32439656\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7547852/\n      snippet:\
+    \ insertion defect\n      explanation: Original S13B OPRK1/TRAM2 panels; Methods\
+    \ identify the tagged exogenous variants.\n      cache_path: evidence/PF01956/pleiner-2020-emc3-variants.txt\n\
+    \      cache_sha256: 0b8c0126f629dce4ce37e6f957f7e775d56a3fb483bc293c1286aefdfabb417f\n\
+    \  - edge_id: r31k-vs-e-sqs\n    subject: r31k_vs_e\n    predicate: increases\n\
+    \    object: sqs\n    mechanism: The R31K SQS distribution is higher than R31E,\
+    \ a client-specific improvement; no corresponding\n      OPRK1 rescue is asserted.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:32439656\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7547852/\n\
+    \      snippet: rescued\n      explanation: Original S13C K/E comparison; OPRK1\
+    \ remains impaired in the same figure and constrains\n        generalization.\n\
+    \      cache_path: evidence/PF01956/pleiner-2020-emc3-variants.txt\n      cache_sha256:\
+    \ 0b8c0126f629dce4ce37e6f957f7e775d56a3fb483bc293c1286aefdfabb417f\n  - edge_id:\
+    \ r180k-vs-e-sqs\n    subject: r180k_vs_e\n    predicate: increases\n    object:\
+    \ sqs\n    mechanism: R180K improves the SQS ratio relative to the glutamate variant\
+    \ in Figure3E, without establishing\n      universal substrate rescue.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:32439656\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7547852/\n\
+    \      snippet: rescued\n      explanation: Original Figure3E K/E histograms with\
+    \ WT and VAMP2 controls.\n      cache_path: evidence/PF01956/pleiner-2020-emc3-variants.txt\n\
+    \      cache_sha256: 0b8c0126f629dce4ce37e6f957f7e775d56a3fb483bc293c1286aefdfabb417f\n\
+    \  - edge_id: r180k-vs-e-oprk1\n    subject: r180k_vs_e\n    predicate: increases\n\
+    \    object: oprk1\n    mechanism: R180K improves the OPRK1 ratio relative to\
+    \ R180E; residual difference from WT remains and\n      complete normalization\
+    \ is not claimed.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:32439656\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC7547852/\n      snippet: rescued\n\
+    \      explanation: Original S13B K/E comparison; qualitative partial restoration,\
+    \ not independent lysine\n        sufficiency.\n      cache_path: evidence/PF01956/pleiner-2020-emc3-variants.txt\n\
+    \      cache_sha256: 0b8c0126f629dce4ce37e6f957f7e775d56a3fb483bc293c1286aefdfabb417f\n\
+    - graph_id: yeast-emc3-deletion-growth-2020\n  title: EMC3 deletion impairs yeast\
+    \ colony growth at elevated temperature\n  scope: BY4741 EMC3 deletion versus\
+    \ WT, not deletion of the whole EMC or the PF01956 interval alone.\n  context:\
+    \ Bai2020 Figure1b; equal starting OD, 7 ul tenfold serial dilutions on YPD, 37\
+    \ C for two days.\n    The separate 30 C arm is permissive; three repeats reported.\n\
+    \  family_mapping: EMC3/YKL207W corresponds to S288c reference P36039 v3, 253\
+    \ aa, PF01956 2-197. BY4741\n    is the actual cellular background; exact historical\
+    \ deletion junctions remain unverified.\n  taxon: NCBITaxon:4932\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: Colony growth is not direct viability, liquid growth\
+    \ rate or universal essentiality. No\n    reintroduction rescue is shown for this\
+    \ selected assay; loss of a complex subunit may affect many\n    clients. W303-1a\
+    \ structural purification is not this strain comparison.\n  nodes:\n  - node_id:\
+    \ deletion\n    label: BY4741 EMC3 deletion versus WT\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:P36039\n  - node_id: growth\n    label: YPD colony\
+    \ growth after two days at 37 C\n    node_type: PHENOTYPE\n  edges:\n  - edge_id:\
+    \ deletion-37c-growth\n    subject: deletion\n    predicate: decreases\n    object:\
+    \ growth\n    mechanism: The EMC3-deleted row grows less well at restrictive temperature\
+    \ than WT, without identifying\n      a single client-mediated growth mechanism.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:32494008\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7442705/\n\
+    \      snippet: growth defect\n      explanation: Original Figure1b EMC3 deletion\
+    \ row, WT and 30 C comparisons; colony-growth Methods.\n      cache_path: evidence/PF01956/bai-2020-yeast-emc3.txt\n\
+    \      cache_sha256: b298b570d28fb443ac0c8b2cf781dbbef7c54ab4a521f9e2c66a7be64fbb9526\n\
+    - graph_id: yeast-emc3-deletion-client-signals-2020\n  title: EMC3 deletion reduces\
+    \ membrane-associated signals of nine yeast reporters\n  scope: Nine separate\
+    \ C-terminal EGFP reporter strains in BY4741 EMC3-deleted versus WT backgrounds,\n\
+    \    not simultaneous measurement of one nine-protein pathway.\n  context: Bai2020\
+    \ Figure1d/e and microscopy Methods; equal image adjustments, water wash and imaging\n\
+    \    in water at room temperature. Three repeats reported. ACT1-normalized client\
+    \ mRNA comparisons qualify\n    abundance effects; image culture time/temperature\
+    \ are not explicitly resolved.\n  family_mapping: Whole EMC3/YKL207W deletion;\
+    \ current reference P36039 v3, PF01956 2-197. Reporter labels\n    identify tested\
+    \ proteins, not verified accession-grounded historical constructs.\n  taxon: NCBITaxon:4932\n\
+    \  scope_status: PHENOTYPIC\n  limitations: Microscopy combines abundance and\
+    \ localization and does not directly measure insertion,\n    folding or transporter\
+    \ activity. Hxt3 mRNA falls about half, so its protein effect is not exclusively\n\
+    \    post-translational. No localization-to-growth mediation chain, exact fluorescence\
+    \ fold changes or\n    family-wide clients are inferred. Raw supplementary proteomics\
+    \ and gels remain unreviewed.\n  nodes:\n  - node_id: deletion\n    label: EMC3\
+    \ deletion versus WT in each reporter strain\n    node_type: PERTURBATION\n  \
+    \  grounding:\n    - UniProtKB:P36039\n  - node_id: fet3\n    label: Membrane-associated\
+    \ Fet3-EGFP signal\n    node_type: PHENOTYPE\n  - node_id: mrh1\n    label: Membrane-associated\
+    \ Mrh1-EGFP signal\n    node_type: PHENOTYPE\n  - node_id: pdr5\n    label: Membrane-associated\
+    \ Pdr5-EGFP signal\n    node_type: PHENOTYPE\n  - node_id: ftr1\n    label: Membrane-associated\
+    \ Ftr1-EGFP signal\n    node_type: PHENOTYPE\n  - node_id: hxt3\n    label: Membrane-associated\
+    \ Hxt3-EGFP signal\n    node_type: PHENOTYPE\n  - node_id: ena1\n    label: Membrane-associated\
+    \ Ena1-EGFP signal\n    node_type: PHENOTYPE\n  - node_id: dip5\n    label: Membrane-associated\
+    \ Dip5-EGFP signal\n    node_type: PHENOTYPE\n  - node_id: fet4\n    label: Membrane-associated\
+    \ Fet4-EGFP signal\n    node_type: PHENOTYPE\n  - node_id: pma1\n    label: Membrane-associated\
+    \ Pma1-EGFP signal\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: deletion-fet3\n\
+    \    subject: deletion\n    predicate: decreases\n    object: fet3\n    mechanism:\
+    \ The Fet3 reporter loses membrane-associated signal in the deletion comparison;\
+    \ insertion\n      versus subsequent turnover is not resolved.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:32494008\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7442705/\n\
+    \      snippet: markedly downregulated\n      explanation: Original Figure1d Fet3\
+    \ WT/E3KO row and paired qPCR panel; no flux measurement.\n      cache_path: evidence/PF01956/bai-2020-yeast-emc3.txt\n\
+    \      cache_sha256: b298b570d28fb443ac0c8b2cf781dbbef7c54ab4a521f9e2c66a7be64fbb9526\n\
+    \  - edge_id: deletion-mrh1\n    subject: deletion\n    predicate: decreases\n\
+    \    object: mrh1\n    mechanism: Membrane-associated Mrh1-EGFP is reduced in\
+    \ EMC3-deleted cells relative to WT, with unresolved\n      molecular mediation.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:32494008\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7442705/\n\
+    \      snippet: markedly downregulated\n      explanation: Original Figure1d Mrh1\
+    \ row; microscopy Methods and Figure1e.\n      cache_path: evidence/PF01956/bai-2020-yeast-emc3.txt\n\
+    \      cache_sha256: b298b570d28fb443ac0c8b2cf781dbbef7c54ab4a521f9e2c66a7be64fbb9526\n\
+    \  - edge_id: deletion-pdr5\n    subject: deletion\n    predicate: decreases\n\
+    \    object: pdr5\n    mechanism: Pdr5 reporter membrane-associated signal is\
+    \ reduced and redistributed; this does not directly\n      measure drug efflux.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:32494008\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7442705/\n\
+    \      snippet: markedly downregulated\n      explanation: Original Figure1d Pdr5\
+    \ WT/E3KO row; residual intracellular fluorescence remains visible.\n      cache_path:\
+    \ evidence/PF01956/bai-2020-yeast-emc3.txt\n      cache_sha256: b298b570d28fb443ac0c8b2cf781dbbef7c54ab4a521f9e2c66a7be64fbb9526\n\
+    \  - edge_id: deletion-ftr1\n    subject: deletion\n    predicate: decreases\n\
+    \    object: ftr1\n    mechanism: Ftr1 reporter signal at membranes falls in the\
+    \ whole-gene deletion background without isolating\n      a direct insertion defect.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:32494008\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7442705/\n\
+    \      snippet: markedly downregulated\n      explanation: Original Figure1d Ftr1\
+    \ row and paired Figure1e, not the pooled proteomics alone.\n      cache_path:\
+    \ evidence/PF01956/bai-2020-yeast-emc3.txt\n      cache_sha256: b298b570d28fb443ac0c8b2cf781dbbef7c54ab4a521f9e2c66a7be64fbb9526\n\
+    \  - edge_id: deletion-hxt3\n    subject: deletion\n    predicate: decreases\n\
+    \    object: hxt3\n    mechanism: Hxt3-EGFP membrane-associated signal falls;\
+    \ its approximately halved RNA abundance may\n      contribute and is not ruled\
+    \ out as a mediator.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:32494008\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC7442705/\n      snippet: markedly downregulated\n\
+    \      explanation: Original Figure1d Hxt3 row and Figure1e RNA decrease; no exclusive\
+    \ post-translational\n        claim.\n      cache_path: evidence/PF01956/bai-2020-yeast-emc3.txt\n\
+    \      cache_sha256: b298b570d28fb443ac0c8b2cf781dbbef7c54ab4a521f9e2c66a7be64fbb9526\n\
+    \  - edge_id: deletion-ena1\n    subject: deletion\n    predicate: decreases\n\
+    \    object: ena1\n    mechanism: Ena1-EGFP membrane-associated signal is reduced\
+    \ in the EMC3 deletion context; ion-pumping\n      activity was not the measured\
+    \ endpoint.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:32494008\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC7442705/\n      snippet: markedly downregulated\n\
+    \      explanation: Original Figure1d Ena1 row with WT comparison and matched\
+    \ imaging adjustments.\n      cache_path: evidence/PF01956/bai-2020-yeast-emc3.txt\n\
+    \      cache_sha256: b298b570d28fb443ac0c8b2cf781dbbef7c54ab4a521f9e2c66a7be64fbb9526\n\
+    \  - edge_id: deletion-dip5\n    subject: deletion\n    predicate: decreases\n\
+    \    object: dip5\n    mechanism: Dip5-EGFP membrane-associated fluorescence decreases;\
+    \ transporter flux and the exact biogenesis\n      step remain unmeasured.\n \
+    \   directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:32494008\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7442705/\n\
+    \      snippet: markedly downregulated\n      explanation: Original Figure1d Dip5\
+    \ row and client-specific qPCR comparison.\n      cache_path: evidence/PF01956/bai-2020-yeast-emc3.txt\n\
+    \      cache_sha256: b298b570d28fb443ac0c8b2cf781dbbef7c54ab4a521f9e2c66a7be64fbb9526\n\
+    \  - edge_id: deletion-fet4\n    subject: deletion\n    predicate: decreases\n\
+    \    object: fet4\n    mechanism: Fet4-EGFP membrane-associated signal decreases\
+    \ despite the paired RNA comparison not showing\n      a matching reduction; no\
+    \ direct insertion rate is inferred.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:32494008\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7442705/\n      snippet:\
+    \ markedly downregulated\n      explanation: Original Figure1d Fet4 row and Figure1e;\
+    \ protein and RNA are distinct endpoints.\n      cache_path: evidence/PF01956/bai-2020-yeast-emc3.txt\n\
+    \      cache_sha256: b298b570d28fb443ac0c8b2cf781dbbef7c54ab4a521f9e2c66a7be64fbb9526\n\
+    \  - edge_id: deletion-pma1\n    subject: deletion\n    predicate: decreases\n\
+    \    object: pma1\n    mechanism: Pma1-EGFP membrane-associated fluorescence is\
+    \ strongly reduced in the deletion background,\n      not a direct measurement\
+    \ of proton transport or cellular death.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:32494008\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7442705/\n      snippet:\
+    \ markedly downregulated\n      explanation: Original Figure1d Pma1 row and paired\
+    \ Figure1e, three repeated experiments reported.\n      cache_path: evidence/PF01956/bai-2020-yeast-emc3.txt\n\
+    \      cache_sha256: b298b570d28fb443ac0c8b2cf781dbbef7c54ab4a521f9e2c66a7be64fbb9526\n\
+    - graph_id: yeast-emc3-k26l-phenotypes-2020\n  title: Emc3 K26L affects conditional\
+    \ growth and two client reporters\n  scope: BY4741 Emc3 K26L versus WT in separate\
+    \ colony and reporter experiments.\n  context: Bai2020 Figure3e-g; YPD 37 C two-day\
+    \ serial spots with 30 C comparison, and separately C-terminal\n    EGFP-tagged\
+    \ Mrh1/Fet3 microscopy. Three repeats reported; microscopy culture time/temperature\
+    \ is not\n    established as the spot-assay condition.\n  family_mapping: P36039\
+    \ v3 reference, PF01956 2-197, includes K26. Tested K26L is a whole-protein variant\n\
+    \    introduced using pFA6a-His3; no isolated-domain construct. W303-1a complex\
+    \ purification and BY4741\n    cellular assays are distinct backgrounds.\n  taxon:\
+    \ NCBITaxon:4932\n  scope_status: PHENOTYPIC\n  limitations: Purification of an\
+    \ intact mutant complex limits gross assembly failure, not all folding,\n    abundance\
+    \ or stoichiometry effects. K-to-L changes charge and hydrophobicity. No growth-localization\n\
+    \    mediation chain or independent charge-only mechanism is shown; exact historical\
+    \ clones and raw gels\n    remain follow-up.\n  nodes:\n  - node_id: k26l\n  \
+    \  label: Whole-protein Emc3 K26L versus WT\n    node_type: PERTURBATION\n   \
+    \ grounding:\n    - UniProtKB:P36039\n  - node_id: growth\n    label: Colony growth\
+    \ on YPD at 37 C\n    node_type: PHENOTYPE\n  - node_id: mrh1\n    label: Membrane-associated\
+    \ Mrh1-EGFP signal\n    node_type: PHENOTYPE\n  - node_id: fet3\n    label: Membrane-associated\
+    \ Fet3-EGFP signal\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: k26l-37c-growth\n\
+    \    subject: k26l\n    predicate: decreases\n    object: growth\n    mechanism:\
+    \ K26L impairs colony growth at restrictive temperature while the permissive comparison\
+    \ retains\n      growth; no specific limiting client is established.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:32494008\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7442705/\n\
+    \      snippet: growth defect\n      explanation: Original Figure3e and colony\
+    \ Methods; separate WT/K26L comparison, not deletion equivalence.\n      cache_path:\
+    \ evidence/PF01956/bai-2020-yeast-emc3.txt\n      cache_sha256: b298b570d28fb443ac0c8b2cf781dbbef7c54ab4a521f9e2c66a7be64fbb9526\n\
+    \  - edge_id: k26l-mrh1\n    subject: k26l\n    predicate: decreases\n    object:\
+    \ mrh1\n    mechanism: The K26L cells have reduced membrane-associated Mrh1 reporter\
+    \ fluorescence, without a directly\n      measured substrate-insertion intermediate.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:32494008\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7442705/\n\
+    \      snippet: Diminished amount\n      explanation: Original Figure3f Mrh1 row\
+    \ and associated Results; Figure3g is an assembly control,\n        not a flux\
+    \ assay.\n      cache_path: evidence/PF01956/bai-2020-yeast-emc3.txt\n      cache_sha256:\
+    \ b298b570d28fb443ac0c8b2cf781dbbef7c54ab4a521f9e2c66a7be64fbb9526\n  - edge_id:\
+    \ k26l-fet3\n    subject: k26l\n    predicate: decreases\n    object: fet3\n \
+    \   mechanism: K26L reduces membrane-associated Fet3 reporter fluorescence, an\
+    \ observed phenotype with\n      unresolved molecular mediation.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:32494008\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7442705/\n\
+    \      snippet: Diminished amount\n      explanation: Original Figure3f Fet3 row,\
+    \ microscopy Methods and three-repeat statement; not an isolated-domain\n    \
+    \    or iron-flux experiment.\n      cache_path: evidence/PF01956/bai-2020-yeast-emc3.txt\n\
+    \      cache_sha256: b298b570d28fb443ac0c8b2cf781dbbef7c54ab4a521f9e2c66a7be64fbb9526\n\
+    curation_events:\n- timestamp: '2026-10-12T13:19:05Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate scoped EMC reconstitution and\
+    \ EMC3 variant phenotypes\n  history_record: history/records/PF01956/2026-10-12T131905Z-codex-a00b7a.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: concern
+  summary: Q9P0I2 v3 maps PF01956 5-191, encompassing R31/R180 and M101/M106/M110/M111;
+    the second methionine loop lies outside. Yeast P36039 v3 maps 2-197 and has K26.
+    BY4741 cellular and W303-1a purification contexts are distinguished from S288c
+    reference identity. Historical plasmid sequences, exact allele junctions and TMCO1
+    isoform numbering remain unresolved; no cloned sequence is fabricated.
+  target_ids:
+  - PF01956
+  evidence_ids:
+  - identity
+  - primary
+  - purified-complex
+  - yeast-phenotypes
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: One MECHANISTIC graph has two DIRECT whole-complex effects; six PHENOTYPIC
+    graphs have 27 UNRESOLVED effects. All are OBSERVED/EXPERIMENTAL, with explicit
+    preparation and comparator scope. No crosslink-to-insertion, localization-to-growth,
+    universal client specificity, isolated-domain sufficiency or single-methionine
+    causation is inferred. Hxt3 RNA decline is retained as an alternative mediator.
+  target_ids:
+  - PF01956
+  evidence_ids:
+  - primary
+  - native
+  - purified-complex
+  - yeast-phenotypes
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Only selected EMC3-containing complex and human/yeast EMC3 experiments
+    are curated. TMCO1 full studies, archaeal Ylp1 evidence, original EMC genetics,
+    later topogenesis and holo-insertase work, native clients and additional taxa
+    remain open. Historical constructs, precise trypsin recipe, vesicle lane preparation,
+    RRL assay timing and supplementary raw yeast gels/tables need follow-up. The source's
+    UGA/amber wording is an unresolved method inconsistency, not silently fixed.
+  target_ids:
+  - PF01956
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01956-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve construct and protocol limits and extend the remaining PF01956 member
+    branches
+  description: Inspect TMCO1 channel and multipass-translocon primary experiments
+    with isoform-specific mapping, archaeal Ylp1 and additional EMC3 systems. Recover
+    historical constructs and assay details; distinguish direct insertion, contact,
+    reporter abundance and physiological effects. Preserve client-specific charge
+    rescue limits, Hxt3 RNA confounding and source discrepancies. Add supported edges
+    only through native history, guarded regeneration and a successor scoped review.
+  target_ids:
+  - PF01956
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - primary
+  - identity
+  - purified-complex
+  - yeast-phenotypes
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01956.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Inspect TMCO1 channel and multipass-translocon primary experiments
+    with isoform-specific mapping, archaeal Ylp1 and additional EMC3 systems. Recover
+    historical constructs and assay details; distinguish direct insertion, contact,
+    reporter abundance and physiological effects. Preserve client-specific charge
+    rescue limits, Hxt3 RNA confounding and source discrepancies. Add supported edges
+    only through native history, guarded regeneration and a successor scoped review.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01956
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Visually inspected Guna Figure4 and supplement S18/S19, Pleiner Figure3 and supplement
+  S9/S13, and Bai Figures1/3. Selected supplementary Methods were read as PDF text;
+  other figures, raw data, movies and yeast supplements were not exhaustively inspected.
+  PMC supplementary download returned HTML; legitimate author/institutional PDFs supplied
+  the reviewed methods without a challenge bypass.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.

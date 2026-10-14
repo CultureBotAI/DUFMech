@@ -9,14 +9,15 @@ curation. They are not interchangeable review states.
 - `data/families/PFxxxxx.yaml` is a reproducible projection of the latest verified
   snapshot. All imported families begin as `SEEDED`, not scientifically reviewed.
 - `curation/families/PFxxxxx.yaml` holds human-owned overlays. The closed
-  `FamilyCuration` schema permits assertions, discussions, datasets and cross-corpus
-  links, but cannot override the Pfam identity, source label or counters.
-- A non-seed status or any curated assertion, discussion, dataset or cross-corpus
-  link requires `curation_history: history/records/PFxxxxx` and at least one actual
-  canonical event about that family's overlay or projection. Append it through
-  `just new-history`; the generator does not invent actors or events.
+  `FamilyCuration` schema permits assertions, discussions, datasets, cross-corpus
+  links and causal graphs, but cannot override the Pfam identity, source label or
+  counters.
+- A non-seed status or any curated assertion, discussion, dataset, cross-corpus
+  link or causal graph requires `curation_history: history/records/PFxxxxx` and at
+  least one actual canonical event about that family's overlay or projection.
+  Append it through `just new-history`; the generator does not invent actors or events.
 - `evidence/*.txt` contains appropriately licensed, minimal source extracts for
-  assertion quotation checks. Never commit restricted full-text publications.
+  assertion and causal-edge quotation checks. Never commit restricted full-text publications.
 - Timestamped structured review bundles and canonical history YAML remain separate retained
   artifacts; a source freeze or regeneration is not a scientific review.
 - `curation_events` is a generated, read-only index of actual canonical sidecar
@@ -172,7 +173,8 @@ unmodeled GO or other ontology terms.
 ## Applicability
 
 KGX, SSSOM, paid/provider-specific research and embedding services are optional
-products without a committed downstream consumer here. Disease-specific exports,
-clinical metadata and causal graph rendering do not apply to a family seed corpus.
+products without a committed downstream consumer here. Disease-specific exports
+and clinical metadata do not apply to a family seed corpus. Evidence-backed causal
+graphs can be curated separately; see [causal-graphs.md](causal-graphs.md).
 The source adapters remain available, and curated discussions can hold unresolved
 questions without pretending that automated seed classification resolves them.

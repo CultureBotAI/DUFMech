@@ -1,0 +1,30 @@
+Hamasaki2015 online/2016 volume, PMID26152732, DOI10.1093/jb/mvv067.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4882637/
+Inspected2026-10-11:Methods,Results,TableI,original Figures2 and5.
+Minimal quotation: "Kinetic constants".
+25 C SPR, immobilized Ta-SL3,20mM phosphate pH7.2,500mM NH4Cl,
+0.05%Tween20; sequential4.8,24,120,600nM,3uM protein injections;
+double-reference subtraction,duplicate or more concentration series.
+Fitted Kd is2410nM for Pop5 alone and2.27nM for Pop5/Rpp30.
+Steady-state fitting for fast-dissociating Pop5 differs from Langmuir kinetics
+for the pair; Rmax differs. The printed830-fold assertion does not match
+2410/2.27. Retain apparent affinity improvement, not an exact observed fold.
+The pair lacks specific binding under the high-Mg cleavage buffer.
+
+Delta14C Pop5/Rpp30 Kd1770nM versusWTpair2.27nM; mutant uses steady-state
+fitting. Delta14C alone shows no detected binding in supplementary prose.
+SupplementS2 sensorgrams were not retrieved/visually inspected; TableI and
+the Results directly report the mutant result. DeltaL43-48/Rpp30 retains
+specific binding, Kd6.52nM; loss of dimerization does not abolish SL3 binding.
+Last14 residues107-120 overlap current PF01900 interval17-113 at107-113.
+The underlying 2006/2013 activity experiments are cited here, not new assays.
+
+Figure5 joint Pop5/Rpp30 dose increases pre-tRNATyr cleavage at75 C,15min,
+10pmol PhopRNA and10pmol each ofRpp21,Rpp29,Rpp38,50mM Tris7.6,
+50mM MgCl2,600mM NH4OAc,60mM NH4Cl.
+Open circles show roughly10% cleavage at2pmol pair,23%at5,34%at10,
+66%at20 and70%at30; plateau near70-75%,not100%.
+The edge uses5-to30pmol and is not a molecular stoichiometry measurement.
+Triplicate experiments; joint titration does not establish Pop5-alone activity.
+Bridging SL3/SL16, native-fold rescue and prevention of aggregation are models;
+SPR binding alone is not observed activation of full RNase P.

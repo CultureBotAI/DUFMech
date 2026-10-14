@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF07796
+  path: data/families/PF07796.yaml
+session:
+  id: 2026-10-11T061945Z-codex-01bcc9
+  timestamp: '2026-10-11T06:19:45Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of DUF1638 nutrient-dependent fitness
+  details: Two supported pooled-fitness edges, exact archived protein mapping and
+    full nutrient comparison retained. Specific B12-reactivation chemistry, clean
+    genetic rescue, experiment metadata and additional member contexts remain open;
+    same-agent review does not promote IN_PROGRESS.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T062155Z-pf07796-duf1638-causal-graph/review.yaml

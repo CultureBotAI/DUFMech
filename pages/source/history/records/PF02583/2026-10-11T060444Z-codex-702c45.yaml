@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF02583
+  path: curation/families/PF02583.yaml
+session:
+  id: 2026-10-11T060444Z-codex-702c45
+  timestamp: '2026-10-11T06:04:44Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add separate B. subtilis CsoR binding and reporter causal graphs
+  details: Primary 2009 anisotropy and 2007 complemented cellular reporter evidence,
+    visually inspected figures, O32222 reference mapping and explicit fit, construct
+    and family-transfer limits; IN_PROGRESS.
+  sections:
+  - causal_graphs

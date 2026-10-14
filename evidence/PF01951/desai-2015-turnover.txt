@@ -1,0 +1,58 @@
+PF01951 / Desai 2015 bacterial RtcB assays
+Inspected 2026-10-12 UTC. PMID:26385509; doi:10.1261/rna.052639.115.
+Primary author PDF: https://raineslab.com/sites/default/files/labs/raines/pdfs/Desai2015.pdf
+Journal: https://rnajournal.cshlp.org/content/21/11/1866.full
+Main text and Methods read; Figures 1-4 visually inspected on PDF pages 2-5.
+Minimal quotation: "multiple turnovers"
+
+All experiments use a LINEAR 20-nt RNA with 5'-OH, 3'-phosphate and an internal
+6-carboxyfluorescein label; the ligated product is circular. Buffer: 50 mM
+Tris-HCl pH 7.4, 300 mM NaCl, 0.5 mM MnCl2, 0.1 mM GTP. Purified proteins were
+expressed in E. coli; Thermus RtcB is untagged, Archease N-terminal His6-tagged.
+The paper does not identify the Thermus clone accession or strain. Candidate
+reference mappings are in identity-turnover-human-20261012.txt, not proof of
+the experimental clone. Thermobifida RtcB is His6-tagged and was used fresh:
+freezing caused activity loss. No species-wide mechanism is established.
+
+Figure 1: Thermus thermophilus RtcB 5 uM, RNA 1 uM, 70 C. Archease titration
+0-4 uM at 1 min reaches near-complete product at 2 uM versus 5.4% without it.
+Separate time courses yield apparent rate constants 0.026 +/- 0.003/min without
+and 0.73 +/- 0.21/min with 2 uM Archease, means +/- SD of two experiments.
+The single time-point titration and fitted time course are distinct datasets;
+the fit is not used to reconstruct the titration endpoint.
+
+Figure 2: Same Thermus RtcB/RNA/cofactors/temperature, with P. horikoshii
+Archease (O59205 reference, N-terminal His6 construct). A 10-min titration
+reaches maximal activation around 8 uM; the separate time course with 8 uM
+has apparent rate 0.12 +/- 0.05/min, about 4.6-fold above the no-Archease rate.
+Two experiments, mean +/- SD. This is an interspecies biochemical mixture,
+not a native P. horikoshii pathway or interchangeability of every Archease.
+
+Figure 3B: Thermobifida fusca RtcB 5 uM, RNA 1 uM, 45 C, 4.5 min. At 8 uM
+Archease the reported mean product change is 7% inhibition with P. horikoshii
+protein and 19% activation with Thermus protein. Two experiments +/- SD; no
+formal significance test or independently established physiological effect.
+These small effects are retained, not collapsed to a claim of zero activity.
+Figure 3A's RtcB-alone rate and activated RNA intermediate do not establish
+an Archease intervention or a mechanism for the small changes.
+
+Figure 4A/C: Thermus RtcB 0.5 uM, RNA 2 uM, 70 C, 2 uM Thermus Archease.
+Product approaches 2 uM within 6 min (four substrate turnovers per RtcB);
+without Archease no product is detected through 30 min. Two experiments
++/- SD. This supports repeated ligation under the tested joint conditions,
+not Archease-alone ligase activity or universal requirement in all organisms.
+
+Negative and alternative ledger:
+- Figure 4B/C: Thermobifida RtcB 0.5 uM and RNA 2 uM at 45 C plateau near
+  0.5 uM product even over 75 min. Figure 4D adds 8 uM of either Archease for
+  1 h without complete conversion of the 2 uM substrate. Its bars exceed the
+  nominal 0.5 uM enzyme concentration somewhat; do not assert exactly one
+  turnover or mathematically zero excess product from those bars. The authors'
+  conclusion is failure to acquire comparable multiple-turnover activity.
+- ATP fails to substitute for GTP with Thermus RtcB plus either Archease,
+  reported as data not shown. No universal ATP-utilization edge.
+- Nickel-column coelution of His6 P. horikoshii Archease and its RtcB was
+  negative (data not shown); this does not directly measure transient binding.
+- Coevolution, physiological selective pressure, and movement/positioning of
+  metal ions are interpretations, not observed directed edges in these assays.
+- Exact bacterial construct sequences and raw replicate data remain unresolved.

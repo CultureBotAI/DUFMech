@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01951
+  path: data/families/PF01951.yaml
+session:
+  id: 2026-10-12T102956Z-codex-6e237f
+  timestamp: '2026-10-12T10:29:56Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of partner controls and XBP1 contexts
+  details: Same-agent review of 42 graphs and 90 observed edges at digest 1bf56920395146dba1bf21ffc513dda47f166d090b2ec224db404fd9d390f601.
+    All 32 predecessor graphs, 62 edges and thirteen evidence hashes preserved; 28
+    new assay-specific edges and four ledgers reviewed. Excludes nonsignificant single-Archease
+    RNA trend and RTCB-only mouse transfer. Five OPEN discussions and stable context-coverage
+    finding remain. Native verdict NEEDS_FOLLOWUP; no independent expert endorsement
+    or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T102918Z-pf01951-partner-controls-and-xbp1-contexts/review.yaml

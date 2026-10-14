@@ -4,7 +4,7 @@ name: EAL domain
 short_name: EAL
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00563
 counters:
   proteins: 131837
@@ -25,3 +25,132 @@ description: This domain is found in diverse bacterial signaling proteins. It is
   conserved residues. The EAL domain is a good candidate for a diguanylate phosphodiesterase function
   [[cite:PUB00007150]]. The domain contains many conserved acidic residues that could participate in metal
   binding and might form the phosphodiesterase active site [[cite:PUB00007150]].
+curation_history: history/records/PF00563
+discussions:
+- discussion_id: rocr-atomic-regulation-and-family-limits
+  prompt: Resolve construct details, competing catalytic models and additional EAL member contexts before
+    expanding this graph.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Two direct assay-level edges do not determine atomistic catalysis, phosphorylation-dependent
+    activation or a downstream cellular phenotype. Family membership is not evidence of catalytic competence
+    for every EAL protein.
+  evidence:
+  - reference: PMID:18344366
+    supports: PARTIAL
+    evidence_source: full_text
+    explanation: Table 1 and Figures 3-4 were inspected. Mutant kinetics support a turnover defect; pH
+      dependence and docking motivate but do not directly observe a proton-transfer mechanism.
+  - reference: PMID:22753070
+    supports: PARTIAL
+    evidence_source: full_text
+    explanation: The later primary study explicitly leaves the one- versus two-metal distinction unresolved
+      in its R286W structure and presents phosphorylation-dependent modulation as putative.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: The 2012 interpretation is retained in evidence/PF00563/chen-2012-rocr-limits.txt. Other mutations,
+    experimental contexts and later literature have not received a complete family review. Status remains
+    IN_PROGRESS.
+causal_graphs:
+- graph_id: pao1-rocr-purified-hydrolysis
+  title: Purified PAO1 RocR hydrolysis and the E352Q turnover defect
+  scope: Recombinant full-length PA3947/RocR and its E352Q variant; not an isolated EAL domain, cellular
+    signaling chain or family-wide activity assignment.
+  context: His6-tagged protein expressed from pET-26(b+) in E. coli BL21(DE3). Table 1 assays use 100
+    mM Tris pH 8.0, 23 C, 20 mM KCl and 25 mM MgCl2. HPLC measures initial product formation below 10%
+    substrate conversion; higher mutant enzyme concentrations permit rate measurement. The substrate and
+    Mg2+ are joint assay inputs, not independent sufficient causes.
+  family_mapping: PAO1 rocR/sadR, locus PA3947, maps to UniProtKB:Q9HX69 and NCBIProtein:AAG07334.1. Reference
+    sequence version 1 has 392 residues, with PF00563 at 147-379 and E at position 352. The separate PROSITE
+    annotation at 140-392 is not the Pfam boundary. The final recombinant tag junctions were not independently
+    verified.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:208964
+  limitations: The substitution effect is measured directly, but does not uniquely establish a general-base
+    role or exclude subtle structural changes. The 2012 R286W structure could not discriminate one- versus
+    two-metal catalysis. No RocS1 phosphotransfer, biofilm effect or isolated-domain sufficiency is asserted.
+    Other EAL proteins may be catalytically inactive; this graph covers one tested member.
+  nodes:
+  - node_id: rocr-e352q
+    label: E352Q substitution in full-length purified RocR
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9HX69
+  - node_id: rocr-hydrolysis
+    label: RocR-catalyzed c-di-GMP hydrolysis with Mg2+
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9HX69
+  - node_id: pgpg-formation
+    label: Formation of linear 5'-pGpG
+    node_type: PROCESS
+  edges:
+  - edge_id: rocr-hydrolysis-produces-pgpg
+    subject: rocr-hydrolysis
+    predicate: produces
+    object: pgpg-formation
+    mechanism: Purified RocR converts c-di-GMP to the linear dinucleotide under the stated magnesium-containing
+      assay conditions. Product formation is monitored by HPLC and product mass checked by MALDI-MS; no
+      atomic intermediate is represented.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18344366
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2394985/
+      snippet: RocR readily hydrolyzes cyclic di-GMP
+      explanation: Methods, Results and Table 1 establish purified-protein conversion and kinetic measurement.
+        Reported cAMP/cGMP negative tests constrain substrate scope; Figure 1 is a reaction schematic,
+        not the measured time course.
+      cache_path: evidence/PF00563/rao-2008-rocr.txt
+      cache_sha256: e5faf9d64522fc85c9a395aed6d04769b4f88bf07e0a488863fb1a42f5a72646
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9HX69/entry/pfam/PF00563/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9HX69/entry/pfam/PF00563/
+      snippet: 'Pfam family interval: PF00563 at 147-379, inclusive.'
+      explanation: Maps the paper's locus to the family using matching reference sequences, not an isolated-domain
+        experiment.
+      cache_path: evidence/PF00563/Q9HX69-identity.txt
+      cache_sha256: 60d6924107f248a11f995cfc2b40ae8301a2e3888d21918a66e360ce6adef484
+  - edge_id: e352q-decreases-hydrolysis-turnover
+    subject: rocr-e352q
+    predicate: decreases
+    object: rocr-hydrolysis
+    mechanism: The E352Q variant has lower enzyme-normalized turnover than wild type in the same Table
+      1 assay. This is an observed substitution effect on catalysis, not direct observation of proton
+      transfer by E352.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18344366
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2394985/
+      snippet: Both mutants showed >10 4 -fold reduction
+      explanation: Table 1 reports WT kcat 0.67 +/- 0.03 per second and E352Q (1.1 +/- 0.1) x 10^-5 per
+        second, a 6.1 x 10^4-fold decrease. Figure 4 was visually inspected with its different vertical
+        scales. Figure 3 tests E352A at different magnesium levels and is not substituted for these rates.
+      cache_path: evidence/PF00563/rao-2008-rocr.txt
+      cache_sha256: e5faf9d64522fc85c9a395aed6d04769b4f88bf07e0a488863fb1a42f5a72646
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9HX69/entry/pfam/PF00563/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9HX69/entry/pfam/PF00563/
+      snippet: UniProt and InterPro sequences matched exactly; residue 352 is E.
+      explanation: Verifies reference numbering within the PF00563 interval; the paper supplies the mutagenesis
+        and assay evidence.
+      cache_path: evidence/PF00563/Q9HX69-identity.txt
+      cache_sha256: 60d6924107f248a11f995cfc2b40ae8301a2e3888d21918a66e360ce6adef484
+curation_events:
+- timestamp: '2026-10-11T06:29:00Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate scoped RocR EAL reaction and E352Q turnover edges
+  history_record: history/records/PF00563/2026-10-11T062900Z-codex-0f736e.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T06:31:46Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of RocR causal graph
+  history_record: history/records/PF00563/2026-10-11T063146Z-codex-c81a6b.yaml
+  event_index: 0
+  llm_assisted: true

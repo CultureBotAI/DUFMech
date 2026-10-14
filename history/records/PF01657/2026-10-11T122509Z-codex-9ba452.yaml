@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01657
+  path: data/families/PF01657.yaml
+session:
+  id: 2026-10-11T122509Z-codex-9ba452
+  timestamp: '2026-10-11T12:25:09Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped scientific review of Gnk2 binding and growth graphs
+  details: Saved structured partial self-review 20261011T122505Z-pf01657-gnk2-binding-and-growth-contexts.
+    Fourteen observed edges have tested-system scope and hashed evidence. Identified
+    the current mature10-105 Pfam interval, exact extra-Met construct mapping, twofold
+    SPR dose discrepancy and residual delta-mnn2/R93A phenotypes. Supplementary visual
+    controls, later actin work, structural-accession relationship and family coverage
+    remain open. Native projection validation and overlay equivalence passed; this
+    is NEEDS_FOLLOWUP, not REVIEWED or independent endorsement.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T122505Z-pf01657-gnk2-binding-and-growth-contexts/review.yaml

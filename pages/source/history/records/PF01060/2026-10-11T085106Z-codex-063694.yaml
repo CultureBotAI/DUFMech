@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01060
+  path: data/families/PF01060.yaml
+session:
+  id: 2026-10-11T085106Z-codex-063694
+  timestamp: '2026-10-11T08:51:06Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of TTR-52 scoped effects
+  details: Saved structured scientific self-review of the exact current digest 8296821bd6db13b7028e93c6784d4f8102fea3eb8834157a3b09cb8b52eb64fa.
+    Four graphs retain six observed effects with allele, stage, buffer and construct
+    distinctions, exact deposited-sequence mapping and native validation. M5/double-mutant
+    discrepancies, full constructs, supplemental data and broader receptor mechanisms
+    remain open. Partial same-agent review, not independent expert endorsement; status
+    remains IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T085104Z-pf01060-ttr52-clearance-and-lipid-binding/review.yaml

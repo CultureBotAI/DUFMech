@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: infrastructure
+  slug: causal-graphs
+  path: src/dufmech/causal_graphs.py
+session:
+  id: 2026-10-14T195307Z-codex-7bbca8
+  timestamp: '2026-10-14T19:53:07Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Prepare causal-graph publication and fix retained inventory drift
+  details: 'Checkpointed the existing native graph implementation, 130 IN_PROGRESS
+    overlays, their evidence/history and 143 scoped scientific review bundles; preserved
+    current main protein examples in the family page. Adversarial self-review found
+    issue 198: retained structural inventory was outside QC. Added read-only check,
+    guarded explicit refresh, QC and writer-governance wiring, failure-case tests
+    and combined-page browser coverage. Focused checks: 52 passed; all 8296 inventory
+    rows verify; lint and source governance pass with 16 pre-existing license warnings.
+    Retained baseline and successor repository reviews disclose self-review and unfinished
+    scientific scope. Full QC, browser execution, exact-head CI, source retention
+    and generated Pages remain release gates. No family content or review-status promotion
+    was performed during this publication pass.'
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/198
+  prs:
+  - https://github.com/CultureBotAI/DUFMech/pull/199

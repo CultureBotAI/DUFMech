@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01864
+  path: curation/families/PF01864.yaml
+session:
+  id: 2026-10-11T164143Z-codex-1a2be6
+  timestamp: '2026-10-11T16:41:43Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate ApCarS assay effects and separately qualified mechanism hypotheses
+  details: Eight graphs retain nineteen observed preparation-level effects and two
+    proposed steps from primary published figures, methods and supplements. Verified
+    Q9YF05/BAA79391.1 and Pfam12-174; preserve endogenous CTP, outside-domain D8/W9,
+    lipid-strip versus product polarity and AfCarS coverage limits. Baseline 8296
+    valid zero drift; regeneration and scoped self-review follow. No publication or
+    complete-family claim.

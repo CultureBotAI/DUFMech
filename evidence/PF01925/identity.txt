@@ -1,0 +1,39 @@
+PF01925 identity and experimental-member mapping
+Inspected UTC 2026-10-12. Curator: Codex. Identity facts are not causal evidence.
+Frozen interpro-pfam-duf-2026-10-10: PF01925, TauE, IPR002781, EX_DUF,
+UNSCORED, 74133 proteins. The frozen previous-name source records PF01925.26
+and DUF81. No imported identity, counter, source pin or snapshot was changed.
+
+MamO: UniProt Q2W8Q2 sequence version 1, 637 aa, amb0969,
+Paramagnetospirillum magneticum AMB-1, taxon342108 (paper: Magnetospirillum).
+https://rest.uniprot.org/uniprotkb/Q2W8Q2.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q2W8Q2/
+Current PF01925 is357-633; PF13365 is100-239. Tested H116,D149,T225,H148,H263
+are outside PF01925. Native whole-protein perturbations and LimO redundancy
+do not establish isolated357-633 sufficiency or a measured transported solute.
+
+CysZ: UniProt Q8NLX4 sequence version1,309aa,Cgl2812,taxon196627,
+Corynebacterium glutamicum ATCC13032. Current PF01925 is7-246.
+https://rest.uniprot.org/uniprotkb/Q8NLX4.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q8NLX4/
+The original CAF20834.1 ENA CDS is cg3112 on BX927156.1. Its entire translated
+sequence is identical to current Q8NLX4; the paper's length is also309aa.
+https://www.ebi.ac.uk/ena/browser/api/embl/CAF20834.1
+Unsuccessful gene-name searches did not imply this member was absent. Six
+PF01925 candidates in the strain were checked; only the exact sequence match
+was used. Do not substitute unrelated E. coli CysZ biochemical experiments.
+
+PmpC: UniProt E7BBJ3 sequence version1,271aa,taxon104623,Serratia sp.ATCC39006.
+Current locus Ser39006_020725; current PF01925 is5-260.
+https://rest.uniprot.org/uniprotkb/E7BBJ3.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/E7BBJ3/
+UniSave version1 names pmpC and cites the Gristwood et al. sequence submission,
+FR750283/CBY83979.1. ENA confirms gene pmpC and operon pigSpmpABC; archived,
+deposited and current translated sequences are identical. Primary primer MMO69
+encodes MFISL, matching the N-terminus. This is deposition/primer-supported
+reference mapping, not independent sequencing of the experimental plasmids.
+https://rest.uniprot.org/unisave/E7BBJ3?format=txt&versions=1
+https://www.ebi.ac.uk/ena/browser/api/embl/CBY83979.1
+Three other PF01925 members in the strain have different sequences. Chlamydia
+pmpC name matches are unrelated and were excluded. LacA is the paper's EMS
+derived Lac-minus parent, not an independently verified unchanged type strain.

@@ -1,0 +1,36 @@
+PF01881 causal coverage and access ledger; 2026-10-11
+
+Ignored/hidden-inclusive rg search of curation, evidence, history/records and
+reviews/structured for PF01881, DUF57 and Cas6 found no prior scoped curation
+before this addition. Frozen previous-name TSV independently verifies DUF57.
+Research searched Pfam/member identities, Cas6/PF1131, glycine-loop variants,
+RNA recognition, PF0393 and 3UFC. This is not an exhaustive literature survey.
+
+Primary PF1131 sources inspected: PMC2607076, PMC2957057, PMC3154685.
+Figure and supplement coverage is stated in the separate evidence extracts.
+Public PMC HTML and original figure CDN files were readable via curl; web
+opens sometimes returned a challenge. The 2011 supplementary DOC download
+returned challenge HTML, not a DOC, and is not counted as inspected. No
+challenge circumvention or permissions change was attempted. Repository and
+installed skill reads succeeded; skill validation succeeded. Biopython was
+not installed in the base venv, but the existing offline uv environment worked.
+This is a dependency distinction, not a repository filesystem-read denial.
+
+Pfu PF0393/Q8U3R3 is a different family-bearing paralog. PMID22447673,
+DOI10.1002/prot.24061, and 3UFC are verified leads; retrieved PubMed XML
+contains no abstract. The noncatalytic description found in secondary sources
+requires its own primary data review. No negative graph is adopted from it.
+https://pubmed.ncbi.nlm.nih.gov/22447673/
+Other leads include PMC3640268, PMC3652601 and PMID24150936 for different
+Cas6 members; member-specific PF01881 mapping and primary figure review are
+pending. Haloarchaeal cellular studies also remain outside the present graph.
+
+Next discriminating work: resolve the printed DTT discrepancy and assay times;
+inspect original missing figures/supplements and exact construct sequences;
+test the four glycines separately with folding/binding controls; test proposed
+K188/K190/R191 contacts; distinguish structural positioning from chemical
+catalysis; inspect other paralogs and cellular processing/antiviral assays.
+Do not connect purified repeat cleavage directly to mature crRNA production,
+viral resistance, or Cas5/Cas3 behavior from a broad imported description.
+All1831 frozen family proteins remain in scope. Partial same-agent assessment
+only; no full-family completion, independent endorsement or publication claim.

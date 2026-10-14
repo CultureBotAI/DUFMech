@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01876
+  path: data/families/PF01876.yaml
+session:
+  id: 2026-10-11T191026Z-codex-69d217
+  timestamp: '2026-10-11T19:10:26Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review Rpp30 causal assay scope and retained evidence
+  details: Same-agent partial scientific review supports twenty-four scoped effects
+    in fifteen graphs. Five member mappings and four primary studies are retained;
+    composite protocols, mixed RNP activity, residual mutation effects and uninspected
+    supplements constrain interpretation. Additional members, exact constructs, assay
+    discrepancies and folding or assembly controls remain open. No REVIEWED promotion
+    or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T191036Z-pf01876-rpp30-reconstitution-mutation-and-yeast-contexts/review.yaml

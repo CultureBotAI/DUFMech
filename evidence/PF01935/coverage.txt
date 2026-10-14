@@ -1,0 +1,44 @@
+PF01935 coverage and next discriminating work; accessed2026-10-12 UTC
+
+Current scope: selected2014 SSO2251 and2015 E233S primary experiments, not all
+11479 frozen proteins or87 architectures. No reviewed status or family-wide
+biochemical assignment follows. Six graph contexts retain separate readouts.
+
+The pre-edit ignored/hidden-inclusive search of curation,evidence,history and
+reviews/structured found no PF01935/DUF87/HerA/NurA text in the searched paths;
+inputs directories and JSON were excluded. Baseline8296 records valid/no drift.
+
+2004 PMID14990749, DOI10.1093/nar/gkh283: original bipolar helicase branch;
+not independently curated from full experimental text in this pass.
+2012 PMID22135300, PMC3326311, DOI10.1093/nar/gkr1157: primary full text read
+for dependency and substrate-specific context. HerA alone has basal ATPase and
+dsDNA stimulation; NurA-associated ATPase responds to DNA ends. Mutually dependent
+processing and D58A NurA-assisted unwinding differ across organisms/conditions.
+Its branch migration, triplex controls, 6:2 assembly, HAS truncation and NurA
+binding-variant experiments remain separate graph followups.
+2014 PMID25447518 assembly; 2015 PMID26560692 different binding/processing assays;
+2017 DOI10.1093/nar/gkx890 heptamer/hexamer nucleotide loading: leads requiring
+construct-aware primary assay review, not permission to impose one cycle.
+
+Bacterial branches: PMID25868646 Deinococcus biochemistry and phenotypes,
+PMID35841886 cryo-EM and nuclease activation, later bacterial end-resection work.
+Map each accession and domain before any transfer; archaeal essentiality is not
+a bacterial growth result. Reviewed UniProt annotations are not extra experiments.
+
+Antiviral branches: 2024 primary article PMC11291478
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11291478/
+and2025 PMID40010344, DOI10.1016/j.molcel.2025.02.001,
+https://pubmed.ncbi.nlm.nih.gov/40010344/
+describe HerA/DUF4297 systems. DUF4297 is the partner, not another name for DUF87.
+PDB9C5X has a PF01935 association and is a mapping lead, not itself edge evidence.
+2025 EuropePMC XML retrieval returned500; PMC browser challenge. An author-hosted
+full PDF was located at
+https://sites.gatech.edu/wysocki-group/files/2025/03/PIIS1097276525001066.pdf
+but not inspected here. This is an unperformed followup with an available route,
+not a claim that the article is globally inaccessible or lacks causal evidence.
+
+Next: resolve those full proteins/Pfam coordinates and assay figures, then extend
+antiviral, bacterial and other archaeal contexts. Also inspect2015 supplements,
+2014 omitted double mutants/doping/interface assays, and distinguish directly
+observed perturbation responses from the proposed atomic translocation model.
+Keep all existing cohort followups and the remaining family worklist active.

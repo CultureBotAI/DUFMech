@@ -1,0 +1,46 @@
+Source: Herzberg et al. 2006, PMID:16385049, DOI:10.1128/JB.188.2.587-598.2006.
+Author-hosted PDF: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/b/137198/files/2021/08/096.pdf
+Accessed: 2026-10-11. ASM copyright; only minimal quotation retained.
+PDF SHA256: b9221167627517781496bcbe4532a8e1fa96dafc2adaca086f8043b039890df6
+Exact short source name: "YdgG"
+
+Curator paraphrase, Methods/Table 1 pp. 588-589, Results pp. 589-591,
+Figure 3 p. 591 visually inspected, Discussion pp. 595-597:
+E. coli K-12 BW25113 is compared with a complete ydgG replacement by a
+kanamycin-resistance cassette, verified by five PCRs. The protein is b1601,
+344 aa. LBglu is LB + 0.2% glucose; M9Cglu contains 0.4% glucose and 0.4%
+Casamino Acids. A whole-gene deletion is not a selective domain perturbation.
+
+Extracellular activity is measured using filtered culture supernatants and
+V. harveyi BB170 luminescence, normalized per reporter cell. Donor cultures
+are diluted 1:100 from overnight cultures and harvested at OD600 0.6.
+WT/knockout activity ratios are 13 +/- 9 in LB and 4 +/- 2 in LBglu.
+These are bioassay ratios, not measured molar AI-2 concentrations or fluxes.
+
+The complementation assay differs: pCA24NydgG+ and empty-pCA24N controls are
+grown with IPTG and 30 ug/ml chloramphenicol. At OD600 0.6 cultures are washed
+twice, 10 min at 8820g, to remove antibiotic that inhibits the Vibrio reporter;
+20 ml LBglu resuspensions grow to OD600 0.9 before sampling. Increasing IPTG
+restores activity; at 1.5 mM the complemented knockout/WT-empty-vector ratio
+is 1.0 +/- 0.3. This does not establish direct protein-mediated export.
+
+The intracellular proxy is pLW11 lsrACDBFG::lacZ beta-galactosidase output,
+not a chemical measurement of intracellular AI-2. In LBglu the knockout/WT
+ratios are 16 +/- 5 at OD600 0.6 and 10 +/- 5 at OD600 6. Figure 3 reports
+duplicate experiments, mean with SD. Glucose catabolite repression and the
+unperformed luxS/ydgG double-mutant test limit an AI-2-specific interpretation.
+
+Separate 96-well assays start at OD600 0.05 and use 0.1% crystal violet for
+20 min, measuring attached material at both bottom and air-liquid interface.
+Two independent experiments, each four wells, are reported. Knockout/WT
+ratios are 3.8 +/- 0.2 in LBglu, 1.6 +/- 0.1 in M9Cglu and 0.5 +/- 0.1 in
+LB. Duration and temperature of this initial assay are not explicit in the
+inspected Methods; neither the flow experiment's 24 h/37 C nor Figure 5's
+other-gene assay is silently substituted. Trans-complementation of biofilm
+and motility is described separately, with different antibiotic conditions.
+Flow-cell images are spatial subsamples, not independent cultures.
+
+The authors retain export enhancement versus uptake inhibition as alternatives.
+Global gene-expression responses, neighborhood and topology predictions do
+not establish a directed domain-level molecular mechanism. The MIC prose
+has an ambiguous ordering of WT and mutant values; no MIC edge is adopted.

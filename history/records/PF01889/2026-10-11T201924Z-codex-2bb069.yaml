@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01889
+  path: curation/families/PF01889.yaml
+session:
+  id: 2026-10-11T201924Z-codex-2bb069
+  timestamp: '2026-10-11T20:19:24Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate archaeal AliA/AliB condition-specific causal effects with distinct
+    paralog and assay scopes.
+  details: Resolved PF01889/former DUF63, excluding pneumococcal Ali namesakes. Inspected
+    Hong2025 and Hong2026 primary text and original figures; verified D4GXF7/ADE04977.2
+    and D4GUE1/ADE03618.1/WP_004042703.1 sequences and domain boundaries. Added nine
+    PHENOTYPIC graphs with34 INDIRECT OBSERVED edges for tagged processing/partitioning,
+    shared-control lipid readouts, growth, morphology, halos, endogenous proteomic
+    distributions and HVO_1705 fractions. Preserved negative comparisons, tagged/endogenous
+    discrepancies, inaccessible supplements and untested catalytic mechanism. Stanford
+    metadata establish reused WT/double-mutant controls, not independent replication.
+    Kept IN_PROGRESS; no publication or exhaustive family completion.
+  sections:
+  - causal_graphs
+  - discussions

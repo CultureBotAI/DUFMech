@@ -1,0 +1,35 @@
+PF01950 genetic evidence; inspected 2026-10-12 UTC by Codex.
+PMID15317785; https://pmc.ncbi.nlm.nih.gov/articles/PMC516828/
+Locators: strain/disruption/culture Methods, Table1, Figures1-3, disruption,
+growth and cell-extract Results. Figures2/3 visually inspected.
+Minimal quotations: "was not able to grow"; "activity could not be detected"
+Additional locator quotation: "The same results"
+
+KW128 is KOD1-derived delta-pyrF delta-trpE::pyrF. Delta-fbp-8J replaces the
+entire1128-bp fbp coding region with the same-orientation trpE cassette.
+External/internal PCR, locus sequencing and Southern blotting support the
+replacement. Delta-imp-2A is a distinct comparison strain; its construction
+retains27bp at the imp3-prime end to protect the neighboring ORF.
+
+Growth experiment: anaerobic85C, preculture in rich ASW-YT, then synthetic
+ASW-AA (20 amino acids, sulfur), plus5g/L starch or5g/L sodium pyruvate.
+Figure3 shows OD660 over approximately30h: delta-fbp-8J lacks the pyruvate
+growth increase seen in KW128 and delta-imp-2A, while all grow with starch.
+An amino-acid-only medium gave the same qualitative growth defect according
+to Results; its curve is not shown. These are conditional optical-density
+phenotypes, not direct viable counts or universal gene essentiality.
+
+Cell-extract experiment is DIFFERENT: strains were grown in rich ASW-YT
+with pyruvate at85C for15h to early stationary phase. FBPase activity was
+0.37+/-0.02 U/mg in KW128 and0.34+/-0.01 in delta-imp-2A, but undetected in
+delta-fbp-8J. The mutant CAN grow in this rich medium. The authors suggest
+yeast-extract carbohydrates as an explanation, without directly measuring
+that rescue substrate. Do not join rich-medium extract measurements to
+the synthetic-medium growth curve as a measured causal intermediate.
+
+No fbp reintroduction/complementation experiment was found in the inspected
+full Methods/Results/Discussion. Native imp did not compensate; this is not
+a failed engineered imp overexpression rescue. A monocistronic fbp Northern
+band makes polarity less likely, not exhaustively excluded. Since later work
+assigns dual aldolase/phosphatase activity, the deletion cannot isolate the
+contribution of either chemical step. Retain UNRESOLVED phenotype edges.

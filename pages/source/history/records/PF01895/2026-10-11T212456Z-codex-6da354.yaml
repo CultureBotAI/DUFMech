@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01895
+  path: data/families/PF01895.yaml
+session:
+  id: 2026-10-11T212456Z-codex-6da354
+  timestamp: '2026-10-11T21:24:56Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of the PhoU causal graphs
+  details: Saved structured scientific self-review20261011T212426Z-pf01895-phou-metal-signaling-and-phosphorylation-contexts
+    for current digest ab410dbd92cb58626a89accea8786284aadcbf888902d2f436cf7e99a875eba9.
+    Reviewed exact member/domain references,11 original figures,four primary studies,24
+    scoped directed effects and unresolved assay/chemical/species coverage. Same-agent
+    pass_with_limitations maps to NEEDS_FOLLOWUP; family remains IN_PROGRESS. Five
+    retained evidence hashes and overlay/projection equality pass. No independent
+    endorsement,exhaustive family coverage or publication claimed.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T212426Z-pf01895-phou-metal-signaling-and-phosphorylation-contexts/review.yaml

@@ -1,0 +1,46 @@
+MrpE structural interpretation and family-coverage limits
+Accessed2026-10-11; curator-authored factual assessment, no long quotations.
+
+Steiner and Sazanov2020, PMID32735215, doi:10.7554/eLife.59407
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7419157/
+Read relevant Results, mutant/purification/growth Methods and captions.
+Visually inspected original Figure4 and Figure1-supplement1.
+A. flavithermus WK1 AF_Mrp, MrpG C-terminal His-tag, expressed in KNabc.
+Reference B7GL97 has PF01899 at8-156. MrpE has two short N-terminal TM helices,
+an amphipathic helix and cytoplasmic ferredoxin-like domain; the older four-TM
+cartoon is not an observed topology. Structural P114/H131 interpretation is
+homolog-scoped, not a new OF4 mutagenesis assay.
+Figure4 depicts proposed ion routes. The discussed H131e/histidine partner
+entry site is not a measured MrpE sodium-binding constant. Text calls the MrpG
+partner H32g in one paragraph, while Figure4 labels H42g; do not silently
+resolve this discrepancy into an exact causal-residue assignment.
+
+MrpE-L41W was designed to disrupt dimerization but retained a dimer SEC peak
+and salt-growth complementation (Figure1-supplement1d,e,j). Growth uses LBK,
+0-1200mM NaCl,16h,37C,three experiments. This is a negative result for that
+specific perturbation, not a demonstration that every dimer contact is essential
+or dispensable. Mutant vesicle traces for L41W are not displayed in f-h; those
+panels characterize AF_Mrp. Do not convert growth preservation into a direct
+measurement of mutant transport kinetics. MrpF-D35L is not a PF01899 mutation.
+
+Lee et al.2022, PMID36241630, doi:10.1038/s41467-022-33640-y
+https://www.nature.com/articles/s41467-022-33640-y
+Read MrpE-related Results/Discussion and expression/model-building Methods.
+No2022 figures or raw maps were visually inspected in this curation.
+The OF4-related7QRU structure also shows two short MrpE TM helices and a
+cytoplasmic domain, with inter-protomer contacts. Its MrpE sequence differs
+from the2008 parent at54,62,158 (see identity ledger). The authors found no
+strong evidence for bound Na or Mg in the structure after inspecting candidate
+densities. Competing sodium pathways and conformational gating remain proposed;
+do not infer an observed H131-sodium binding edge from the structural picture.
+
+Searches covered PF01899,DUF68,MrpE/MnhE,mutations,antiporter structures and
+recent work. The2025 histidine-switch study (S0005272825000295) is a lead only;
+publisher access was403, and its search summary concerns MrpA, not a new
+MrpE-specific experiment. Earlier S. aureus1998 (PMID9852009),R. meliloti1998
+(PMID9680201),B. subtilis2003 (doi:10.1016/S1389-1723(03)80035-X),2009 acidic-
+residue work and group2/Dietzia homologs need their own primary-method and
+member-mapping review. This is partial coverage, not an exhaustive literature
+review or evidence that the remaining10765-family-protein population lacks
+causal function. Association, conservation and cryo-EM proximity are not alone
+directed causal relations.

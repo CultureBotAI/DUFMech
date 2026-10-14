@@ -1,0 +1,12 @@
+Retrieved 2026-10-11. Accession facts and curator sequence comparison, not a paper quotation.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01255/
+PF01255 Prenyltransf; InterPro IPR001441. Frozen PF01255.25 history retains UPF0015 and UPP_synthetase. The family description cites Micrococcus luteus O82827 and PMID 9677368; this does not identify the E. coli assay protein.
+https://rest.uniprot.org/uniprotkb/Q47675.json
+Q47675 is inactive/DEMERGED to P60472, P60473, P60474 and P60475; archived sequence UPI0000137D08.
+https://www.ebi.ac.uk/Tools/dbfetch/dbfetch?db=uniparc&id=UPI0000137D08&format=fasta&style=raw
+The archived 253-aa sequence exactly matches current P60472, MD5 a95d322438644ad81c219c6322ffad06.
+https://rest.uniprot.org/uniprotkb/P60472.json
+UniProtKB:P60472; UPPS_ECOLI; ispU, rth, uppS, yaeS; b0174/JW0169. E. coli K12 reference, taxon 83333; sequence version 1, entry version 169.
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P60472/entry/pfam/PF01255/
+Pfam:PF01255; domain interval: 24-244, inclusive.
+InterPro and UniProt sequences agree exactly. Apfel 1999 explicitly used historical Q47675 and an upstream GTG initiation site; native one-/two-Met forms and recombinant untagged/His-tagged preparations are distinguished. The complete historical clone and donor strain were not independently reconstructed; a K12 reference is not proof that BL21 expression material came from K12.

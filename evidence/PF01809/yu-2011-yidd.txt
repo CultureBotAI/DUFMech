@@ -1,0 +1,74 @@
+PF01809 Yu 2011 primary evidence
+Assessed: 2026-10-11 UTC. Curator: Codex.
+PMID:21803992; DOI:10.1128/JB.05429-11; PMC3187451.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3187451/?report=reader
+Main HTML Methods, Results, Discussion and Table 1 inspected. Figures
+2, 4 and 5 visually checked. Figure 3/6 text and captions inspected,
+not their images. XML endpoint returned 500; HTML retrieval succeeded.
+Supplement PDF URL returned a preparing-to-download HTML page, not a PDF;
+the supplement was not inspected.
+
+Minimal verbatim anchors:
+"Function of YidD"
+"GFP fluorescence microscopy"
+"PspA expression"
+The remainder is curator paraphrase and assessment.
+
+Figure 5: separate processing and membrane-abundance readouts
+Deletion replaces almost all yidD coding sequence in MC4100(DE3), with
+kanamycin-cassette construction and PCR verification, while retaining
+the overlapping rnpA ORF. The paper reports no discernible growth or
+morphology defect in its tested conditions; much of that evidence is
+not shown. This does not prove universal dispensability.
+YidC abundance is similar in WT and deletion in Figure 5A, with Lep
+as control. No same-gene complementation is shown for the adopted effects.
+
+Cells carrying pCL-M13P2 or pCL-CyoA-HA are induced in early log phase
+with 100 uM IPTG for 1 h; LB is the default medium in Methods.
+Figure 5B: mature M13P2/(mature + precursor) is 89 +/- 2.1% in WT and
+69 +/- 3.9% in the deletion. Lep is the loading comparator.
+Figure 5C: mature CyoA-HA fraction is 43 +/- 2.6% in WT and
+26 +/- 3.2% in the deletion. OmpA processing/loading is the comparator
+and appears unchanged. Four biological replicates are stated for the
+processing fractions; the caption does not identify the +/- statistic.
+These are steady-state processing fractions, not insertion-rate constants.
+Changes in processing, abundance or turnover are not independently
+resolved by these blots, even though the authors interpret them in
+the context of YidC-dependent insertion.
+Figure 5D: F0c signal in deletion-derived inner membrane vesicles is
+labeled 48% of WT, with Lep control. Replicate number/error estimate
+for that panel is not given. It measures steady-state membrane abundance,
+not a direct F0c insertion or assembled ATP synthase activity assay.
+
+Figure 4: fusion-localization intervention
+MC4100-A carrying pEH3GFP, pEH3GFP-YidD or pEH3GFP-YidDH1 is grown in
+M9 and induced at OD660 approximately 0.3 with 50 uM IPTG for 1 h,
+then fixed for phase-contrast and fluorescence microscopy. GFP alone
+is diffuse; both YidD fusions show peripheral/halo fluorescence.
+H1 is residues 1-27, not the complete PF01809 interval 10-76.
+The phenotype is qualitative peripheral enrichment, not calibrated
+membrane affinity, isolated lipid binding or insertion across a bilayer.
+Expression may exceed endogenous YidD. No H1-loss mutant establishing
+necessity is presented here. Urea-resistant association is reported
+without shown data and is not promoted to direct lipid-binding chemistry.
+
+Figure 2C: tagged-protein induction
+MC4100-A with pEH3His-YidD grows in LB, induction at OD660 0.3 with
+1 mM IPTG for 1 h. Anti-His signal appears and PspA signal modestly
+increases relative to the uninduced preparation. YidC signal is not
+detectably altered. This is the joint IPTG/tagged-expression intervention,
+not proof that physiological YidD directly activates PspA transcription.
+An IPTG-only empty-vector control is not displayed in this panel.
+Do not borrow the 100-uM dose of the separate fractionation experiment.
+
+Association and models, not adopted directed biological edges
+His-YidD membrane fractionation and detergent extraction support membrane
+association but show recovery/instability limitations. Figure 3A caption
+says pEH3His-YidC where the surrounding experiment concerns His-YidD.
+Nascent 108FtsQ Cys15 yields a His-YidD-containing BMOE adduct; Cys36/61
+do not. This establishes proximity in an engineered arrested intermediate,
+not activation of FtsQ insertion, direct YidC recruitment or ribosome
+tethering. The authors report unsuccessful translocon/ribosome pulldowns
+without shown data. Chaperone and tethering functions remain hypotheses.
+Genomic proximity, co-transcription and predicted helices are not causal
+biochemical steps. Hemolysin labels and other taxa need independent review.

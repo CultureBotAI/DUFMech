@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01519
+  path: curation/families/PF01519.yaml
+session:
+  id: 2026-10-11T065330Z-codex-be071e
+  timestamp: '2026-10-11T06:53:30Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate separate MPN104 and MPN524 DUF16 phenotype graphs
+  details: Inspected the 2006 primary mutagenesis study, Tables 2/3 and Figure 5 image,
+    and sequence-verified separate domain mappings. Added four indirect observed insertion-associated
+    gliding and glass-binding outcomes. Retained missing genetic rescue, predicted-only
+    polarity controls, normalized table units and unresolved domain function. Status
+    remains IN_PROGRESS; no family-wide mechanism or publication.
+  sections:
+  - causal_graphs

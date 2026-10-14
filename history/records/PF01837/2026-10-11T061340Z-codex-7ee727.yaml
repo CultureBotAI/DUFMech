@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01837
+  path: curation/families/PF01837.yaml
+session:
+  id: 2026-10-11T061340Z-codex-7ee727
+  timestamp: '2026-10-11T06:13:40Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add separate DUF39 bacterial fitness and plate-growth causal graphs
+  details: Three indirect observed phenotype edges from 2018 Miyazaki pooled fitness
+    and 2014 G20 individual-mutant growth, with exact archived member mapping, corrected
+    complementation start, nutritional versus genetic rescue, and unresolved medium/construct
+    details retained; IN_PROGRESS.
+  sections:
+  - causal_graphs

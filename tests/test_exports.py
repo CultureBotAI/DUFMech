@@ -456,8 +456,10 @@ def test_real_corpus_exports_match_committed_artifacts_without_network(monkeypat
         ]
     family_nodes = [r for r in rows(artifacts[exports.KGX_NODES]) if r["id"].startswith("Pfam:")]
     assert len(family_nodes) == 8296
-    assert {r["curation_status"] for r in family_nodes} == {"SEEDED"}
     native = [yaml.safe_load(raw) for name, raw in before.items() if name.endswith(".yaml")]
+    assert {r["id"]: r["curation_status"] for r in family_nodes} == {
+        r["id"]: r["curation_status"] for r in native
+    }
     assert sum(len(record.get("assertions", [])) for record in native) == 0
 
 

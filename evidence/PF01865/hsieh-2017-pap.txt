@@ -1,0 +1,58 @@
+Daniel Hsieh, McMaster MSc thesis, September 2017.
+https://macsphere.mcmaster.ca/handle/11375/22200
+PDF: https://macsphere.mcmaster.ca/bitstreams/ed9a228f-14c0-4a9d-a324-390c60d1e757/download
+Inspected 2026-10-11. Thesis evidence, not a peer-reviewed journal article.
+Minimal quotation: "Initial Pi uptake velocities"
+Remaining content is factual transcription and curator interpretation.
+
+Identity and context: Table2-1 (PDF93/printed78), Table2-4 (PDF98/printed83),
+Methods2.8/2.10 (PDF39-40,45-48), Results3.2/3.3 (PDF57-66).
+RmP3924 delta-pap and RmP3926 delta-pap-pit derive from the RmP3421
+conditional Pho-regulon background. Assays without IPTG follow depletion of
+PstSCAB-PhoUB/PhoR; this is not an otherwise WT strain. Growth uses MOPS-P2,
+20 mM glucose, 2 mM Pi, 30 C, OD600 technical triplicates. Uptake uses 10 uM
+33P-Pi, 30 C, biological triplicates and the 30/60/90-s slope normalized to
+Bradford total protein. Toluene-treated cells supply the background correction.
+Methods calls the additional transporter allele phnC; Table2-1 calls it phoC.
+Do not silently resolve that discrepancy or assign effects to isolated Pap.
+
+Original Figures3-15/3-16 visually inspected (PDF118/119, printed103/104).
+RmP3924 with pap-only integration has poor growth and uptake velocity 0.78;
+full pap-pit pTH2824 gives 3.13; operon-restoring pap-pit-truncated integration
+gives 3.48; the alternative split-promoter architecture gives no growth rescue.
+Other constructs pap-truncated-pit and pit alone give 0.07 and 0.14. Units
+nmol Pi/mg protein/min. Figure3-15 groups 3.13/3.48 together and the three
+lower values together by ANOVA/Tukey, p<0.05. Figure3-16 PCR distinguishes
+the two recombinants; only the restored operon rescues growth. Polar effects
+on downstream pit expression remain unresolved; pap alone is not sufficient.
+
+Original Figure3-21 and Table3-21B visually inspected (PDF124/printed109).
+RmP3926 with WT pap-pit: uptake 3.12 SD0.142; empty deletion 0.332 SD0.121;
+P75A 0.198 SD0.124; R78A 0.983 SD0.502; T74A 0.893 SD0.892;
+E54A 1.665 SD1.35; D90A 2.21 SD0.953; D93A 2.99 SD1.37;
+D201A 1.50 SD0.819; D90A/H96Y 0.422 SD0.388; P75fs 0.401 SD0.367.
+P75A/R78A have delayed growth relative to WT in the displayed time course;
+P75A eventually approaches the WT OD. Main prose saying no uptake conflicts
+with the positive R78A estimate. Retain reduction, not zero transport or a
+specific catalytic role. pUCP30T-based native operons differ by the indicated
+substitution. No statistical significance is invented for unmarked comparisons.
+
+Original Table3-28 visually inspected (PDF131/printed116).
+Heterologous host MT2006: E.coli MG1655 delta-pitA, delta-pitB, delta-phnC,
+delta-(pstSCAB-phoU). pUC119 lac-driven intact S.meliloti pap-pit gives
+27.4 SD3.16 uptake versus empty pUC119 0.348 SD0.119 and untransformed
+0.548 SD0.183. Separately tested substitutions: E54A 4.61 SD2.16,
+D58A 2.00 SD0.987, P75A 2.38 SD1.44, R78A 0.629 SD0.282,
+D93A 1.23 SD0.221. Double D90A/H96Y gives 7.86 SD0.590, not zero;
+single D90A gives 25.1 SD2.55. Same uptake units; assay at 37 C and 10 uM Pi.
+Do not combine this with growth in M9 containing about 69 mM Pi or with the
+unsuccessful low-copy pMW119 SmPapPit expression. Table2-4 maps constructs.
+
+Original Figure3-29 visually inspected (PDF132/printed117): variant Pap bands
+can differ in size; E54A/D58A/D160A caption and D160A/D93A Results wording
+are not fully consistent. Folding, abundance, processing and Pit translation
+are not excluded explanations for reduced uptake. This is whole-cell function,
+not a purified Pap activity or a defined metal-coordination mechanism.
+BACTH/crosslinking supports Pap self-association, not a direct transport edge;
+no significant Pap-Pit BACTH interaction is reported. Figure4-1 ligand/dimer/
+activation chain remains a proposed model, not an observed causal sequence.

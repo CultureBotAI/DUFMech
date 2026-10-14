@@ -1,0 +1,49 @@
+PF01936 identity and scope ledger; accessed 2026-10-12 UTC
+
+Frozen identity: NYN domain, short name NYN, EX_DUF, UNSCORED,
+InterPro:IPR021139. Snapshot interpro-pfam-duf-2026-10-10 has SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+The previous-name snapshot verifies DUF88, PF01936.25. The current family API
+matches the frozen 25419 proteins, 25756 matches and 329 architectures.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01936/
+Temporary response SHA256:
+6a5345647f788891cda1f3727e0cbb55cac1bbfd1e2e5291ce0b437af156dc1d
+
+UniProt reviewed-member search returned ten entries, not the whole family.
+https://rest.uniprot.org/uniprotkb/search?query=%28xref%3Apfam-PF01936%29%20AND%20%28reviewed%3Atrue%29&format=json&size=500
+Temporary response SHA256:
+ceeeee2ff43cff9afd91fd2b30c4998594b9779cc25a12798330996596d97ae4
+Human MARF1 Q9Y4F3 canonical sequence version6 is1742aa, taxon9606.
+Mouse Marf1 Q8BJ34 canonical sequence version3 is1730aa, taxon10090.
+Current InterPro protein-domain endpoints:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q9Y4F3/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q8BJ34/
+Human PF01936 is353-490; mouse PF01936 is352-489, inclusive1-based.
+Separate RRM and LOTUS matches are not part of PF01936. Human353-490 lies
+inside the assayed238-510 fragment, distinct from crystallized352-500.
+Human D358/D426/D427/D452 identities were checked against canonical sequence.
+The D426A/D427A double substitution is not two independent single-mutant tests.
+
+Mouse numbering reconciliation uses the deposited experimental construct:
+https://www.ebi.ac.uk/pdbe/api/pdb/entry/molecules/5yaa
+https://www.rcsb.org/structure/5YAA
+PDBe response SHA256:
+e9b79865a71fc312688547f60710454ad5b6c559f3b31e411c1b0047094033ca
+PDB5YAA163aa corresponds to source158-320 and current Q8BJ34 residues337-499.
+Exhaustive contiguous-window comparison gives161/163 identical positions;
+the only mismatches are the deposited L253M/L303M crystallization substitutions,
+at construct96/146 (canonical432/482). No gap is required in this interval.
+Thus source D178/D215/D246/D272 map to canonical D357/D394/D425/D451,
+all within current PF01936. This proves local NYN numbering, not identity
+of every source full-length isoform residue or a global constant offset.
+The functional D-to-A variants are distinct from the crystallographic mutants.
+
+Historical NYN wording does not establish current Pfam membership:
+human N4BP1 O75113 and KHNYN O15037 have PF11977, not PF01936, in the
+inspected complete UniProt Pfam cross-reference arrays. B.subtilis168 Rae1/
+YacP P37574 has PF05991 (NYN_YacP), not PF01936, in that array.
+https://rest.uniprot.org/uniprotkb/O75113.json
+https://rest.uniprot.org/uniprotkb/O15037.json
+https://rest.uniprot.org/uniprotkb/P37574.json
+These are excluded transfers, not evidence against their nuclease activities.
+The frozen imported description is preserved, not silently corrected.

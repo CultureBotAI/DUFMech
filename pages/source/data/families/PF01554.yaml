@@ -4,7 +4,7 @@ name: MatE
 short_name: MatE
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01554
 counters:
   proteins: 99069
@@ -22,3 +22,265 @@ provenance:
   source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
 interpro_id: InterPro:IPR002528
 description: The MatE domain
+curation_history: history/records/PF01554
+discussions:
+- discussion_id: norm-ion-pathways-numbering-and-remaining-contexts
+  prompt: Extend NorM causal coverage with separately verified ionophore, mutant, chimera and reconstitution
+    contexts.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The measured cellular fluorescence and purified binding effects do not by themselves establish
+    the full two-pathway atomic model, stoichiometry or general MatE mechanism.
+  evidence:
+  - reference: PMID:33976372
+    supports: PARTIAL
+    evidence_source: full_text_and_figures_2_4
+    explanation: Six observations are retained with the 12.5-versus-20 mM glucose discrepancy and historical/current
+      residue mapping. Other functional figures and supplements need scoped review before additional edges;
+      a failed supplement download is an access limit, not a negative result.
+  - reference: PMID:24711447
+    supports: PARTIAL
+    evidence_source: abstract_only
+    explanation: The 2014 precursor is a relevant proteoliposome/energy-coupling lead, but retrieved XML
+      was front matter only and the publisher PDF was inaccessible. It is not used as inspected full-text
+      support for the present graphs.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Preserve separate NorM-PS and chimera identities, pH-dependent exceptions, single-mutant residual
+    binding and the distinction between simulations and observed ion trajectories. Partial scientific
+    self-review; IN_PROGRESS.
+causal_graphs:
+- graph_id: norm-vc-sodium-cellular-ethidium-response
+  title: Added sodium lowers the ethidium fluorescence endpoint in NorM-VC-expressing cells
+  scope: His10-tagged V. cholerae NorM-VC expressed in L. lactis NZ9000 delta lmrA delta lmrCD, Raturi
+    2021 Figure 2A; not a native Vibrio phenotype or all MatE proteins.
+  context: Cells are de-energized with 0.5 mM 2,4-dinitrophenol for 40 min at 30 C, washed three times,
+    diluted to OD660 0.5 and loaded with 2 uM ethidium in 50 mM KPi, 5 mM MgSO4, pH 7.0 at 30 C. Glucose
+    initiates efflux; Methods specify 12.5 mM glucose but Figure 2 specifies 20 mM. The comparison is
+    1 mM added Na+ versus no added Na+, with the 400-s fluorescence endpoint and three independently prepared
+    cell batches, mean +/- SEM.
+  family_mapping: Q9KRU4 / norM / VC_1540, V. cholerae O1 N16961, has current PF01554 repeats at 17-176
+    and 243-404 in the 457-aa sequence version 2. The paper's AAF94694.1 reference is 461 aa; its residues
+    6-461 exactly match current 2-457, with different N-terminal initiation. This reference reconciliation
+    does not independently resequence the N-terminal His10 assay plasmid. Intact protein is tested, not
+    isolated repeats.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:243277
+  limitations: Intracellular ethidium-associated fluorescence is an efflux proxy, not an absolute mass-flux
+    measurement. Sodium addition also changes cellular energetics; the edge does not establish an isolated
+    sodium-binding step or ion stoichiometry. Nonexpressing controls lack the comparable sodium response.
+    The glucose discrepancy remains unresolved. No universal sodium requirement is inferred from this
+    pH-7 comparison.
+  nodes:
+  - node_id: sodium-added-norm-cells
+    label: Add 1 mM Na+ to glucose-energized NorM-VC-expressing cells
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9KRU4
+  - node_id: cellular-ethidium-fluorescence
+    label: Normalized ethidium fluorescence at 400 s
+    node_type: STATE
+  edges:
+  - edge_id: sodium-decreases-cellular-fluorescence
+    subject: sodium-added-norm-cells
+    predicate: decreases
+    object: cellular-ethidium-fluorescence
+    mechanism: Added sodium lowers the normalized fluorescence endpoint relative to no added sodium in
+      the NorM-VC-expressing host, consistent with enhanced ethidium efflux. The matched control host
+      and the separate NorM-PS comparison constrain attribution; neither a physical ion path nor antibiotic
+      resistance in Vibrio is measured here.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33976372
+      source_url: https://www.nature.com/articles/s42003-021-02081-6
+      snippet: ethidium
+      explanation: Visually inspected Figure 2A, its caption, and transport Methods establish the sodium-versus-no-added-sodium
+        endpoint. The retained context records the conflicting glucose concentrations explicitly.
+      cache_path: evidence/PF01554/raturi-2021-assays.txt
+      cache_sha256: fe28ecded927079f3a936f9358af98e398e2808e1134b8eb10ac972bd449a371
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9KRU4/entry/pfam/PF01554/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9KRU4/entry/pfam/PF01554/
+      snippet: 'Q9KRU4 Pfam:PF01554; repeat intervals: 17-176 and 243-404, inclusive.'
+      explanation: Current UniProt/InterPro sequence equality and the historical AAF94694.1 comparison
+        establish the mapped intact protein, without transferring the assay to isolated repeats.
+      cache_path: evidence/PF01554/NorM-identity.txt
+      cache_sha256: 9d229500bafa50e827ff10fcd18a2912e9093b475535ee11363b2b54255b25dc
+- graph_id: norm-vc-sodium-binding-and-substitutions
+  title: Sodium enhances low-concentration ethidium binding in WT but not three NorM-VC variants
+  scope: Purified N-terminal His10-tagged NorM-VC WT and single substitutions D36N, E255Q and D371N, Raturi
+    2021 Figure 4A; paper residue numbering retained.
+  context: Protein is purified from L. lactis membranes using DDM and Ni-NTA. Titrations contain 2 uM
+    ethidium, 50 mM KPi pH 7.0, 0.2 mM KCl and 0.05% DDM, with 0.036-1 uM protein and either no added
+    sodium or 0.5 mM Na2SO4 (1 mM Na+). Fluorescence anisotropy uses 500/580 nm excitation/emission after
+    about 2 min equilibration and matched elution-buffer baseline. Three independent protein preparations
+    are reported, mean +/- SEM.
+  family_mapping: Historical AAF94694.1 D36/E255/D371 correspond to current Q9KRU4 D32/E251/D367, verified
+    by sequence comparison. D32 lies in PF01554 17-176 and E251/D367 in 243-404. Current protein begins
+    MHRY whereas the historical reference begins MENSVHRY; current sequence is M plus historical residues
+    6-461, not simply historical residues 5-461. Mutant labels refer to the paper's numbering, not current
+    UniProt coordinates.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:243277
+  limitations: Directness describes the purified-protein binding response, not an observed atomic sodium-coordination
+    or transport step. WT sodium enhancement is strongest at low protein concentrations; the curves converge
+    at high concentration. Single mutants retain binding. Apparent two-component fits do not independently
+    count sites. Supplementary expression/purity controls were not inspected, so equivalent folding is
+    not established. Li+, Cs+ and Rb+ do not mimic the WT sodium response in this assay.
+  nodes:
+  - node_id: sodium-added-purified-wt
+    label: Add 1 mM Na+ to purified WT NorM-VC titrations
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9KRU4
+  - node_id: wt-low-concentration-binding
+    label: Ethidium-binding anisotropy at low WT protein concentrations
+    node_type: ACTIVITY
+  - node_id: d36n-versus-wt
+    label: Paper D36N (current D32N) instead of WT
+    node_type: PERTURBATION
+  - node_id: e255q-versus-wt
+    label: Paper E255Q (current E251Q) instead of WT
+    node_type: PERTURBATION
+  - node_id: d371n-versus-wt
+    label: Paper D371N (current D367N) instead of WT
+    node_type: PERTURBATION
+  - node_id: sodium-enhancement-binding
+    label: Sodium-dependent enhancement of low-concentration ethidium binding
+    node_type: ACTIVITY
+  edges:
+  - edge_id: sodium-increases-wt-binding
+    subject: sodium-added-purified-wt
+    predicate: increases
+    object: wt-low-concentration-binding
+    mechanism: With sodium, WT anisotropy rises more strongly at low protein concentrations than without
+      sodium. The response supports sodium-modulated ethidium binding in detergent, not sodium-driven
+      transmembrane transport by this preparation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33976372
+      source_url: https://www.nature.com/articles/s42003-021-02081-6
+      snippet: ethidium
+      explanation: Figure 4A's WT sodium and no-addition curves, biochemical Results and binding Methods
+        support the scoped increase. The high-concentration convergence is preserved.
+      cache_path: evidence/PF01554/raturi-2021-assays.txt
+      cache_sha256: fe28ecded927079f3a936f9358af98e398e2808e1134b8eb10ac972bd449a371
+  - edge_id: d36n-decreases-sodium-binding-response
+    subject: d36n-versus-wt
+    predicate: decreases
+    object: sodium-enhancement-binding
+    mechanism: D36N lacks the WT positive sodium-dependent high-affinity component while retaining ethidium-associated
+      anisotropy. This is loss of the sodium response, not complete loss of binding or direct observation
+      of protonation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33976372
+      source_url: https://www.nature.com/articles/s42003-021-02081-6
+      snippet: ethidium
+      explanation: Figure 4A's D36N paired curves were compared with WT and the Results; current D32 mapping
+        is retained separately from paper numbering.
+      cache_path: evidence/PF01554/raturi-2021-assays.txt
+      cache_sha256: fe28ecded927079f3a936f9358af98e398e2808e1134b8eb10ac972bd449a371
+  - edge_id: e255q-decreases-sodium-binding-response
+    subject: e255q-versus-wt
+    predicate: decreases
+    object: sodium-enhancement-binding
+    mechanism: E255Q removes the WT positive sodium enhancement, with nearly overlapping sodium/no-sodium
+      titrations. Its residual anisotropy is not described as a binding-null phenotype, and the assay
+      does not isolate a specific ionic microstep.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33976372
+      source_url: https://www.nature.com/articles/s42003-021-02081-6
+      snippet: ethidium
+      explanation: Visually inspected Figure 4A and the matching mutation Results support the response
+        loss, not a general loss of ligand binding.
+      cache_path: evidence/PF01554/raturi-2021-assays.txt
+      cache_sha256: fe28ecded927079f3a936f9358af98e398e2808e1134b8eb10ac972bd449a371
+  - edge_id: d371n-decreases-sodium-binding-response
+    subject: d371n-versus-wt
+    predicate: decreases
+    object: sodium-enhancement-binding
+    mechanism: D371N lacks WT-like sodium stimulation of the high-affinity component but retains increasing
+      anisotropy as protein is added. This net response does not prove direct contact between D371 and
+      sodium or absence of all transport activity.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33976372
+      source_url: https://www.nature.com/articles/s42003-021-02081-6
+      snippet: ethidium
+      explanation: Figure 4A's D371N panel and Results support loss of sodium enhancement while showing
+        residual binding; transport and binding are kept distinct.
+      cache_path: evidence/PF01554/raturi-2021-assays.txt
+      cache_sha256: fe28ecded927079f3a936f9358af98e398e2808e1134b8eb10ac972bd449a371
+- graph_id: norm-vc-ph-dependent-binding
+  title: Raising pH increases ethidium-binding anisotropy of purified WT NorM-VC
+  scope: WT His10-NorM-VC in the separate constant-protein pH titration, Raturi 2021 Figure 4B.
+  context: No added sodium; 0.2 uM purified WT protein and 2 uM ethidium in the DDM/KPi binding assay.
+    Buffer pH is varied from 6 to 9 in 0.2 steps with concentrated KOH. Anisotropy uses 500/580 nm and
+    about 2 min equilibration; three independent protein batches, mean +/- SEM. This is not the glucose-energized
+    cell assay.
+  family_mapping: Intact historical 461-aa NorM-VC maps to Q9KRU4 sequence version 2 with the verified
+    initiation difference and four-position internal numbering offset. Both current PF01554 intervals,
+    17-176 and 243-404, belong to the tested protein context; neither repeat was isolated.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:243277
+  limitations: The double-sigmoid response is observed, but assigning fitted midpoints 6.9 and 8.0 to
+    specific carboxylates is an inference. Buffer alkalinization by KOH is the experimental intervention,
+    not an independently controlled change of only one residue's protonation. This binding response is
+    not an observed transport cycle or universal pH rule for the family.
+  nodes:
+  - node_id: raise-buffer-ph
+    label: Raise the no-added-sodium binding buffer from pH 6 to 9
+    node_type: PERTURBATION
+  - node_id: wt-ph-series-anisotropy
+    label: Ethidium-binding anisotropy at 0.2 uM WT NorM-VC
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9KRU4
+  edges:
+  - edge_id: alkalinization-increases-binding-readout
+    subject: raise-buffer-ph
+    predicate: increases
+    object: wt-ph-series-anisotropy
+    mechanism: WT anisotropy increases with two transitions across the tested pH range. The net biochemical
+      response is retained without promoting the authors' residue-specific pKa assignments to observed
+      molecular events.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33976372
+      source_url: https://www.nature.com/articles/s42003-021-02081-6
+      snippet: ethidium
+      explanation: Visually inspected Figure 4B, biochemical Results and binding Methods establish the
+        direction under fixed-protein conditions, separately from the sodium titration.
+      cache_path: evidence/PF01554/raturi-2021-assays.txt
+      cache_sha256: fe28ecded927079f3a936f9358af98e398e2808e1134b8eb10ac972bd449a371
+curation_events:
+- timestamp: '2026-10-11T11:42:11Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Add six scoped NorM cellular fluorescence and purified-binding effects, with historical/current
+    residue mapping and assay discrepancies.
+  history_record: history/records/PF01554/2026-10-11T114211Z-codex-5e37aa.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T11:50:25Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of scoped causal effects and unresolved mechanism coverage.
+  history_record: history/records/PF01554/2026-10-11T115025Z-codex-5d42c5.yaml
+  event_index: 0
+  llm_assisted: true

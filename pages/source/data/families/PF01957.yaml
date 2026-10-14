@@ -4,7 +4,7 @@ name: NfeD-like C-terminal, partner-binding domain
 short_name: NfeD
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01957
 counters:
   proteins: 15192
@@ -32,3 +32,221 @@ description: 'NfeD-like proteins are widely distributed throughout prokaryotes a
   are clearly reliant on their conserved gene neighbour which is assumed to be necessary for function,
   either through direct physical interaction or by functioning in the same pathway, possibly involve with
   lipid-rafts [[cite:PUB00064250]].'
+curation_history: history/records/PF01957
+discussions:
+- discussion_id: pf01957-causal-context-coverage
+  prompt: Resolve further NfeD member mechanisms without transferring cross-family or whole-operon effects
+    to PF01957 alone.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Current graphs retain conditional cellular endpoints for YbbJ and a YqeZ-containing operon,
+    not an isolated domain mechanism or complete family coverage.
+  evidence:
+  - reference: PMID:16573693
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Figure2 text and legend support conditional growth enhancement; original image and historical
+      clone sequence remain uninspected.
+  - reference: PMID:16629676
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Figure4 text/legend, Table3 and Methods distinguish whole-operon perturbations, xylose
+      controls and failed partial-operon complementation.
+  - reference: PMID:39181124
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Abstract and 8Z5G/EMD-39773 metadata establish a structural lead; full truncation assays
+      and map analysis remain unreviewed.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Inspect original 2006 figures/supplements, the 2024 QmcA-YbbJ experiments, archaeal PH0471/PH1510
+    and further YqiJ/bacterial contexts. Source access limits are retained in evidence/PF01957/structural-and-archaeal-followups.txt.
+    All earlier corpus follow-ups remain open.
+- discussion_id: pf01957-domain-and-paralog-boundaries
+  prompt: Preserve current Pfam boundaries and reconcile historical protein and figure labels before mechanistic
+    transfer.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Generic NfeD names span different Pfam families and multidomain proteins. A tested N-terminal
+    protease construct does not necessarily contain PF01957.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/O32077/
+    supports: SUPPORT
+    evidence_source: database
+    explanation: Complete current Pfam response maps Bacillus NfeD2/YuaF to PF25842/PF31148, not PF01957.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/O59179/
+    supports: SUPPORT
+    evidence_source: database
+    explanation: PH1510 PF01957 377-432 is separate from N-terminal PF25145 and the membrane domain.
+  - reference: PMID:22753055
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Original Figures4/6 expose text/legend panel mismatches; mapped YqeZ comparisons are
+      qualitative negatives, not observed recruitment edges.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Verify pre-2007 MC4100 YbbJ sequence, CU1065 YqeZ and partner alleles, and all truncation/fusion
+    junctions. Figure6 image A-I differs from its A-G caption, and Figure4 panel references conflict.
+    Do not import NfeD2-FloT effects, infer oligosaccharide binding from an OB fold, or assign YqeZ peptide
+    degradation without a direct assay.
+causal_graphs:
+- graph_id: ecoli-ybbj-qmca-growth-rescue-2006
+  title: YbbJ coexpression enhances QmcA-assisted conditional growth rescue
+  scope: E. coli AD1762 ftsH/htpX-disrupted cells with sfhC21; pSTD622 qmcA-ybbJ versus pSTD620 qmcA alone.
+  context: Chiba2006 Figure2A/B text and legend. L medium with 1mM IPTG; 3-ul serial-dilution plate spots
+    at 42C for 24h, and a separate liquid-growth time course shifted from 30C to 42C. Plate comparisons
+    at 30C for 17h and with 0.4% glucose provide conditional controls.
+  family_mapping: MC4100-derived YbbJ clone; current reference P0AAS3 v2 is 152 aa with PF01957 94-148.
+    The reference sequence changed in 2007 and is not a verified historical plasmid sequence. QmcA is
+    a required coexpressed partner, not a second PF01957 protein.
+  taxon: NCBITaxon:562
+  scope_status: PHENOTYPIC
+  limitations: YbbJ alone did not suppress. Similar QmcA abundance was reported without shown data. No
+    isolated PF01957 activity, direct chaperoning, proteolysis or FtsH activation is established. The
+    source images, replicate counts and exact effect sizes remain uninspected; graphs retain text-supported
+    direction only. Liquid and plate readouts are not sequential steps.
+  nodes:
+  - node_id: pair
+    label: qmcA-ybbJ coexpression versus qmcA alone in the same sensitized strain
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AAS3
+  - node_id: plate
+    label: Colony growth in serial-dilution spots at 42C
+    node_type: PHENOTYPE
+  - node_id: liquid
+    label: Liquid-culture growth after the shift to 42C
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: ybbj-plate-growth
+    subject: pair
+    predicate: increases
+    object: plate
+    mechanism: Adding ybbJ to the QmcA expression construct improves the reported colony-growth suppression
+      of the ftsH/htpX defect under induction; the cellular mediator is unresolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16573693
+      source_url: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2006.05104.x
+      snippet: stronger suppressor activity
+      explanation: Functional interaction Results, Figure2A legend and strain/plasmid Methods; text-supported
+        direction, not a visually quantified image or YbbJ-only rescue.
+      cache_path: evidence/PF01957/chiba-2006-ybbj-growth.txt
+      cache_sha256: eaac6e10c7bd3c34762336b024d0e46d1b01cca4a71695179c290c87fc5f238a
+  - edge_id: ybbj-liquid-growth
+    subject: pair
+    predicate: increases
+    object: liquid
+    mechanism: The joint expression construct improves reported liquid growth relative to qmcA-only cells
+      following the temperature shift, without identifying a direct protein-quality-control reaction.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16573693
+      source_url: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2006.05104.x
+      snippet: stronger suppressor activity
+      explanation: Figure2B legend and corresponding Results; same AD1762/sfhC21 background, pSTD622 versus
+        pSTD620, not ordinary wild-type thermotolerance.
+      cache_path: evidence/PF01957/chiba-2006-ybbj-growth.txt
+      cache_sha256: eaac6e10c7bd3c34762336b024d0e46d1b01cca4a71695179c290c87fc5f238a
+- graph_id: bacillus-yqez-operon-deletion-2006
+  title: Deleting the YqeZ-containing operon increases sublancin-associated inhibition
+  scope: B. subtilis CU1065 without SPbeta immunity; HB5331 yqeZyqfAB::kan versus the parent lawn, exposed
+    to JH642 producer.
+  context: Butcher2006 Figure4A text and legend, Table3 and spot-on-lawn Methods; 0.7% LB agar, 100ul
+    lawn OD600 0.4 in 2ml agar, 2ul producer OD600 0.6, overnight37C.
+  family_mapping: The jointly deleted operon contains YqeZ/NfeD1, current B. subtilis 168 reference P54465
+    v1, 437 aa, PF01957 382-435. CU1065 is the experimental strain, not the reference accession's exact
+    verified allele. YqfA and YqfB are not independently attributed to PF01957.
+  taxon: NCBITaxon:1423
+  scope_status: PHENOTYPIC
+  limitations: Whole-operon perturbation cannot isolate YqeZ or its domain. YqfB-only deletion is similarly
+    sensitive. Producer sunA deletion and SPbeta restoration remove inhibition, but no purified-peptide
+    MIC or degradation assay was performed in this comparison. Original Figure4/supplements and quantitative
+    replication remain uninspected; only the text-supported qualitative direction is retained.
+  nodes:
+  - node_id: operon_loss
+    label: Joint yqeZyqfAB deletion versus CU1065 parent
+    node_type: PERTURBATION
+  - node_id: inhibition
+    label: Sublancin-associated lawn inhibition by JH642
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: operon-loss-inhibition
+    subject: operon_loss
+    predicate: increases
+    object: inhibition
+    mechanism: Removing the three-gene locus increases the reported growth-inhibition zone in this immunity-deficient
+      lawn; the responsible molecular contribution of YqeZ is not isolated.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16629676
+      source_url: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2006.05131.x
+      snippet: yqeZyqfAB
+      explanation: Figure4A column4 and associated Results; the ledger records the native whole-operon
+        genotype and matched controls, not a single-domain intervention.
+      cache_path: evidence/PF01957/butcher-2006-operon-resistance.txt
+      cache_sha256: dbe96f4f6d5842c32a398ede4f6a737339309d4df79feb2f98df027724f46a97
+- graph_id: bacillus-yqez-operon-complementation-2006
+  title: Induced YqeZ-containing operon reduces inhibition in a sigW mutant
+  scope: CU1065 sigW::kan HB6161 with integrated Pxyl-yqeZyqfAB compared with the sigW mutant under matched
+    xylose conditions.
+  context: Butcher2006 Figure4B column3 and Methods; 20mM xylose induction, 0.7% LB agar, JH642 producer,
+    overnight37C. pSG1 single-crossover integration was PCR-confirmed; this is not deletion/rescue in
+    HB5331.
+  family_mapping: The entire operon includes YqeZ, reference P54465 v1 with PF01957 382-435. Neither isolated
+    YqeZ nor its PF01957 domain was shown sufficient. The study reports a YqfB V65E reference difference
+    in CU1065/JH642, not a YqeZ mutation.
+  taxon: NCBITaxon:1423
+  scope_status: PHENOTYPIC
+  limitations: Xylose itself reduces inhibition zones, so unmatched induced/uninduced comparisons would
+    confound the effect. Partial yqfAB or yqfB constructs failed to complement but do not demonstrate
+    YqeZ-only sufficiency. No direct peptide cleavage, independent domain action or complete restoration
+    magnitude is assigned; original figures/supplements remain uninspected.
+  nodes:
+  - node_id: induced_operon
+    label: Induced yqeZyqfAB in sigW mutant versus matched sigW control
+    node_type: PERTURBATION
+  - node_id: inhibition
+    label: Sublancin-associated inhibition zone under matched xylose
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: operon-expression-inhibition
+    subject: induced_operon
+    predicate: decreases
+    object: inhibition
+    mechanism: Expression of the complete operon bypasses part of the missing sigma-factor-dependent resistance
+      in the reported assay; it does not resolve which biochemical activity mediates protection.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16629676
+      source_url: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2006.05131.x
+      snippet: complemented a sigW mutant
+      explanation: Figure4B legend/Results and complementation Methods; whole-operon expression, matched20mM
+        xylose and separate sigW background.
+      cache_path: evidence/PF01957/butcher-2006-operon-resistance.txt
+      cache_sha256: dbe96f4f6d5842c32a398ede4f6a737339309d4df79feb2f98df027724f46a97
+curation_events:
+- timestamp: '2026-10-12T14:13:37Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate scoped YbbJ growth and YqeZ operon resistance effects
+  history_record: history/records/PF01957/2026-10-12T141337Z-codex-cfe501.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T14:17:40Z'
+  curator: Codex
+  action: REVIEW
+  outcome: no_change
+  summary: Retain partial PF01957 scientific review and causal boundaries
+  history_record: history/records/PF01957/2026-10-12T141740Z-codex-cfa1ed.yaml
+  event_index: 0
+  llm_assisted: true

@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01139
+  path: data/families/PF01139.yaml
+session:
+  id: 2026-10-11T064431Z-codex-704e74
+  timestamp: '2026-10-11T06:44:31Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped scientific self-review of RtcB biochemical graphs
+  details: Saved native review 20261011T064426Z-pf01139-rtcb-causal-graphs for semantic
+    digest 3a22646ea513e9cc89306b595cd6828b0cb0d7a07d201557e40d3f1c84df612b. Three
+    observed biochemical edges and one inferred RNA-intermediate assignment remain
+    separated by assay context. Exact clone provenance, source-caption discrepancies,
+    chemical assignment and additional member contexts remain open. Same-agent partial
+    scientific review is not independent endorsement; IN_PROGRESS retained. Native
+    overlay validation, 203 focused tests and schema drift checks passed. Regeneration
+    will project this real event.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T064426Z-pf01139-rtcb-causal-graphs/review.yaml

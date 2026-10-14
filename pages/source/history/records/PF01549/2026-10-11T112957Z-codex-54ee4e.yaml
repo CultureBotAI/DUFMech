@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01549
+  path: data/families/PF01549.yaml
+session:
+  id: 2026-10-11T112957Z-codex-54ee4e
+  timestamp: '2026-10-11T11:29:57Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Reviewed recombinant ShK current inhibition with qualified family association.
+  details: Partial scientific self-review supports two mouse-channel current effects.
+    Printed primers encode exact P29187; absent current direct Pfam/seed membership,
+    uninspected images and unresolved channel clones stay explicit. Native projection
+    and overlay checks passed; no atomic or family-wide transfer and status stays
+    IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T112953Z-pf01549-shk-current-inhibition-and-family-association/review.yaml

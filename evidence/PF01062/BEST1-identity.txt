@@ -1,0 +1,29 @@
+Identity facts, accessed 2026-10-11; not causal evidence.
+https://rest.uniprot.org/uniprotkb/E1C3A0.json
+https://rest.uniprot.org/uniparc/UPI0000E805B4.json
+https://rest.uniprot.org/uniprotkb/A0A8V0ZZU7.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A8V0ZZU7/entry/pfam/PF01062/
+The 2016 Methods explicitly cite chicken BEST1 E1C3A0. This accession is
+deleted from its Ensembl source; its archived UniParc sequence is 762 aa,
+MD5 33b3af7b0900c17872e8ae777495046b. Current A0A8V0ZZU7, BEST1,
+Gallus gallus NCBITaxon:9031, is also 762 aa, sequence version 1, entry
+version 19, MD5 5a01220bc5cf02179a93ba18facbaa70. UniProt and InterPro
+current sequences agree exactly.
+A0A8V0ZZU7 Pfam:PF01062 interval: 1-324, inclusive
+Historical and current references match exactly at residues 1-405, the
+tested construct region (MD5 7bb7c6c4c511aa5c125deb167cd654c0). They are
+NOT identical full-length: differences occur at 639, 656, 664, 703 and 708,
+outside this construct. Checked I76, F80, F84, V205, D301 and D304 directly.
+Do not replace chicken V205 with human I205 or adopt a different isoform.
+
+https://data.rcsb.org/rest/v1/core/polymer_entity/4RDQ/1
+4RDQ entity 1 maps by SIFTS to A0A8V0ZZU7 residues 2-405. Its 409-aa
+deposited sequence equals current residues 2-405 plus the EGEEF tag exactly.
+The experiment describes a 1-405 construct with this C-terminal tag;
+the deposited structure omits the initiator methionine. This validates the
+mapped construct region, not independent sequencing of every 2016 mutant.
+The cited 2014 purification Methods report MS/Edman confirmation of a Thr2
+N terminus after initiator-methionine removal.
+The 1-405 protein includes residues beyond the current Pfam profile and is
+not isolated residues 1-324 or the full 762-aa protein. Pichia pastoris is
+the production host, not the donor organism.

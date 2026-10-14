@@ -1,0 +1,28 @@
+Curator identity reconciliation, accessed and verified 2026-10-11.
+https://rest.uniprot.org/uniprotkb/P42406.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P42406/entry/pfam/PF01638/
+https://data.rcsb.org/rest/v1/core/polymer_entity/7BZD/1
+
+P42406 Pfam:PF01638; interval 19-107 inclusive.
+Bacillus subtilis strain 168, NCBITaxon:224308; hxlR; full length 120 aa.
+UniProt sequence version 3, entry version 138.
+Sequence MD5 F19666584A8BE65A74D3DD898234E769.
+UniProt and InterPro sequences exactly match (programmatically checked).
+Reference C11 and K13 verified, both OUTSIDE current PF01638 19-107.
+F9-K23 is FNCEKELTLAVIGGK; the F9-L15 synthetic peptide lies outside Pfam.
+The paper explicitly identifies P42406 and B. subtilis 168 as its gene source.
+
+RCSB 7BZD entity 1 canonical sequence is exactly GSH plus the 120-aa reference
+(programmatic equality check). This is consistent with the thrombin-cleaved
+pET28a preparation, not proof that all experimental samples have identical
+processing. The protein should not be called completely tag-free without
+acknowledging its cleavage extension. This PDB check does not establish
+the sequence of the distinct pBAD reporter plasmid. Its published forward
+primer raises an unresolved S2G possibility, retained in the source ledger.
+Mechanisms concern intact HxlR and are not isolated-domain sufficiency or
+evidence that C11/K13 belong to the current Pfam interval. Other HxlR-like
+proteins, including QsrR, HypR and YodB, require their own ligand/context tests.
+
+The heterologous reporter host is E. coli BW25113, NCBITaxon:679895,
+verified against https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=679895
+on 2026-10-11. It is distinct from the B. subtilis 168 protein source taxon.

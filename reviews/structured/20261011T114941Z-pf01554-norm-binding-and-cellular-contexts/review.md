@@ -1,0 +1,525 @@
+# PF01554 NorM binding effects and cellular sodium-response limits
+
+- Review: 20261011T114941Z-pf01554-norm-binding-and-cellular-contexts
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T11:49:08Z
+- Finished UTC: 2026-10-11T11:49:41Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Six observed effects are supported in three graphs, separating one indirect cellular fluorescence response from five direct purified-binding responses. Historical/current residue mapping, residual mutant binding and the glucose discrepancy remain explicit; a complete atomic transport cycle is not established.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Pending PF01554 selected in accession-ordered review of the full 8296-family corpus; NorM-VC is a tested example, not a family census.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01554 | data/families/PF01554.yaml | generated | PF01554 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01554 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01554.
+
+Current Q9KRU4 sequence version 2 is 457 aa, identical to InterPro, with PF01554 17-176 and 243-404. Historical AAF94694.1 is 461 aa; its residues 6-461 exactly equal current 2-457, preserving an initiation difference rather than claiming a simple four-residue truncation. Paper D36/E255/D371 map to D32/E251/D367 within the current repeats. The historical His10 assay plasmid was not independently sequenced, and isolated-repeat sufficiency is not claimed.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01554.
+
+The cellular edge is PHENOTYPIC/INDIRECT; the five purified-binding edges are MECHANISTIC/DIRECT, all OBSERVED. Sodium effects are restricted to the relevant concentration regime and mutant comparisons retain residual binding. Methods 12.5 mM glucose versus Figure 2's 20 mM is preserved. pH midpoints and two-site fits are not atomic protonation or site-count proof; MD/structural models are not promoted to observed transport edges.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01554.
+
+Other functional figures, NorM-PS/chimeras, ionophore contexts, supplementary expression/primer controls, historical plasmid sequence and the 2014 reconstitution study remain incompletely assessed. Binding and cellular assays do not exhaust MatE mechanisms or all family members.
+
+## Findings
+
+### additional-contexts: Resolve assay discrepancy and extend independently scoped transport evidence
+
+minor / open / confirmed; issue key: pf01554-causal-context-coverage.
+
+Obtain supplementary constructs and expression controls, resolve the glucose discrepancy, and inspect the 2014 full paper and remaining 2021 functional figures before adding ion-coupling, reconstitution or chimera effects. Keep mapped numbering, pH-dependent exceptions, residual activity and simulation-derived proposals distinct.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Obtain supplementary constructs and expression controls, resolve the glucose discrepancy, and inspect the 2014 full paper and remaining 2021 functional figures before adding ion-coupling, reconstitution or chimera effects. Keep mapped numbering, pH-dependent exceptions, residual activity and simulation-derived proposals distinct.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://www.nature.com/articles/s42003-021-02081-6; Raturi 2021 ion-availability and biochemical-binding Results, Discussion, expression/purification/transport/binding Methods; Figures 2 and 4 visually inspected, retained edges restricted to 2A and 4A/B. | supports | Added sodium lowers the cellular ethidium fluorescence endpoint at pH 7. In purified preparations it enhances low-concentration WT binding, but not the D36N/E255Q/D371N responses. Raising pH increases WT binding anisotropy in a separate constant-protein assay. These are net experimental responses, not directly observed ionic trajectories. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9KRU4/entry/pfam/PF01554/; Accession and domain locations; paired UniProt identity facts | supports | Current Q9KRU4 sequence version 2 is 457 aa, identical to InterPro, with PF01554 17-176 and 243-404. Historical AAF94694.1 is 461 aa; its residues 6-461 exactly equal current 2-457, preserving an initiation difference rather than claiming a simple four-residue truncation. Paper D36/E255/D371 map to D32/E251/D367 within the current repeats. The historical His10 assay plasmid was not independently sequenced, and isolated-repeat sufficiency is not claimed. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01554 | data/families/PF01554.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Figures 2 and 4 were visually inspected. Supplement download failed DNS resolution; expression blots and primers were not inspected. The 2014 XML was abstract/front matter only and publisher PDF access failed. No raw traces or experimental replication are claimed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T114941Z-pf01554-norm-binding-and-cellular-contexts
+title: PF01554 NorM binding effects and cellular sodium-response limits
+started_at: '2026-10-11T11:49:08Z'
+finished_at: '2026-10-11T11:49:41Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Six observed effects are supported in three graphs, separating one indirect
+  cellular fluorescence response from five direct purified-binding responses. Historical/current
+  residue mapping, residual mutant binding and the glucose discrepancy remain explicit;
+  a complete atomic transport cycle is not established.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01554.yaml
+    sha256: b34cd55de66d8b30e73eb881fe348a3d4f5d0b14912760b89abd66a611d8027c
+    role: context
+  - path: data/families/PF01554.yaml
+    sha256: aba78d8da2225384146a9b4103712fea389354523dfd2b238d17c16f513ae21a
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01554/raturi-2021-assays.txt
+    role: context
+    sha256: fe28ecded927079f3a936f9358af98e398e2808e1134b8eb10ac972bd449a371
+  - path: evidence/PF01554/NorM-identity.txt
+    role: context
+    sha256: 9d229500bafa50e827ff10fcd18a2912e9093b475535ee11363b2b54255b25dc
+targets:
+- target_id: PF01554
+  path: data/families/PF01554.yaml
+  label: PF01554
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01554.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 52630b3d3ee9911486e1206798fc86552fc0f40706888a65620677bc87aa8a9a
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Pending PF01554 selected in accession-ordered review of the full 8296-family
+    corpus; NorM-VC is a tested example, not a family census.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01554
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Other functional figures, NorM-PS/chimeras, ionophore contexts, supplementary
+      expression/primer controls, historical plasmid sequence and the 2014 reconstitution
+      study remain incompletely assessed. Binding and cellular assays do not exhaust
+      MatE mechanisms or all family members.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01554
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://www.nature.com/articles/s42003-021-02081-6
+  locator: Raturi 2021 ion-availability and biochemical-binding Results, Discussion,
+    expression/purification/transport/binding Methods; Figures 2 and 4 visually inspected,
+    retained edges restricted to 2A and 4A/B.
+  accessed_at: '2026-10-11T11:49:41Z'
+  support: supports
+  snapshot_sha256: fe28ecded927079f3a936f9358af98e398e2808e1134b8eb10ac972bd449a371
+  summary: Added sodium lowers the cellular ethidium fluorescence endpoint at pH 7.
+    In purified preparations it enhances low-concentration WT binding, but not the
+    D36N/E255Q/D371N responses. Raising pH increases WT binding anisotropy in a separate
+    constant-protein assay. These are net experimental responses, not directly observed
+    ionic trajectories.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9KRU4/entry/pfam/PF01554/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T11:49:41Z'
+  support: supports
+  snapshot_sha256: 9d229500bafa50e827ff10fcd18a2912e9093b475535ee11363b2b54255b25dc
+  summary: Current Q9KRU4 sequence version 2 is 457 aa, identical to InterPro, with
+    PF01554 17-176 and 243-404. Historical AAF94694.1 is 461 aa; its residues 6-461
+    exactly equal current 2-457, preserving an initiation difference rather than claiming
+    a simple four-residue truncation. Paper D36/E255/D371 map to D32/E251/D367 within
+    the current repeats. The historical His10 assay plasmid was not independently
+    sequenced, and isolated-repeat sufficiency is not claimed.
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T11:49:41Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01554
+  kind: record_content
+  reference: data/families/PF01554.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T11:49:41Z'
+  support: context_only
+  snapshot_sha256: aba78d8da2225384146a9b4103712fea389354523dfd2b238d17c16f513ae21a
+  quote: "id: Pfam:PF01554\npfam_id: PF01554\nname: MatE\nshort_name: MatE\nseed_status:\
+    \ EX_DUF\ncharacterization_status: UNSCORED\ncuration_status: IN_PROGRESS\nsource_url:\
+    \ https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01554\ncounters:\n  proteins:\
+    \ 99069\n  matches: 188649\n  proteomes: 20019\n  taxa: 31326\n  structures: 43\n\
+    \  alphafold_models: 70770\n  domain_architectures: 598\nprovenance:\n  snapshot_id:\
+    \ interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002528\ndescription: The MatE domain\ncuration_history:\
+    \ history/records/PF01554\ndiscussions:\n- discussion_id: norm-ion-pathways-numbering-and-remaining-contexts\n\
+    \  prompt: Extend NorM causal coverage with separately verified ionophore, mutant,\
+    \ chimera and reconstitution\n    contexts.\n  kind: CURATION_TODO\n  status:\
+    \ OPEN\n  rationale: The measured cellular fluorescence and purified binding effects\
+    \ do not by themselves establish\n    the full two-pathway atomic model, stoichiometry\
+    \ or general MatE mechanism.\n  evidence:\n  - reference: PMID:33976372\n    supports:\
+    \ PARTIAL\n    evidence_source: full_text_and_figures_2_4\n    explanation: Six\
+    \ observations are retained with the 12.5-versus-20 mM glucose discrepancy and\
+    \ historical/current\n      residue mapping. Other functional figures and supplements\
+    \ need scoped review before additional edges;\n      a failed supplement download\
+    \ is an access limit, not a negative result.\n  - reference: PMID:24711447\n \
+    \   supports: PARTIAL\n    evidence_source: abstract_only\n    explanation: The\
+    \ 2014 precursor is a relevant proteoliposome/energy-coupling lead, but retrieved\
+    \ XML\n      was front matter only and the publisher PDF was inaccessible. It\
+    \ is not used as inspected full-text\n      support for the present graphs.\n\
+    \  posed_by: Codex\n  posed_date: '2026-10-11'\n  notes: Preserve separate NorM-PS\
+    \ and chimera identities, pH-dependent exceptions, single-mutant residual\n  \
+    \  binding and the distinction between simulations and observed ion trajectories.\
+    \ Partial scientific\n    self-review; IN_PROGRESS.\ncausal_graphs:\n- graph_id:\
+    \ norm-vc-sodium-cellular-ethidium-response\n  title: Added sodium lowers the\
+    \ ethidium fluorescence endpoint in NorM-VC-expressing cells\n  scope: His10-tagged\
+    \ V. cholerae NorM-VC expressed in L. lactis NZ9000 delta lmrA delta lmrCD, Raturi\n\
+    \    2021 Figure 2A; not a native Vibrio phenotype or all MatE proteins.\n  context:\
+    \ Cells are de-energized with 0.5 mM 2,4-dinitrophenol for 40 min at 30 C, washed\
+    \ three times,\n    diluted to OD660 0.5 and loaded with 2 uM ethidium in 50 mM\
+    \ KPi, 5 mM MgSO4, pH 7.0 at 30 C. Glucose\n    initiates efflux; Methods specify\
+    \ 12.5 mM glucose but Figure 2 specifies 20 mM. The comparison is\n    1 mM added\
+    \ Na+ versus no added Na+, with the 400-s fluorescence endpoint and three independently\
+    \ prepared\n    cell batches, mean +/- SEM.\n  family_mapping: Q9KRU4 / norM /\
+    \ VC_1540, V. cholerae O1 N16961, has current PF01554 repeats at 17-176\n    and\
+    \ 243-404 in the 457-aa sequence version 2. The paper's AAF94694.1 reference is\
+    \ 461 aa; its residues\n    6-461 exactly match current 2-457, with different\
+    \ N-terminal initiation. This reference reconciliation\n    does not independently\
+    \ resequence the N-terminal His10 assay plasmid. Intact protein is tested, not\n\
+    \    isolated repeats.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:243277\n\
+    \  limitations: Intracellular ethidium-associated fluorescence is an efflux proxy,\
+    \ not an absolute mass-flux\n    measurement. Sodium addition also changes cellular\
+    \ energetics; the edge does not establish an isolated\n    sodium-binding step\
+    \ or ion stoichiometry. Nonexpressing controls lack the comparable sodium response.\n\
+    \    The glucose discrepancy remains unresolved. No universal sodium requirement\
+    \ is inferred from this\n    pH-7 comparison.\n  nodes:\n  - node_id: sodium-added-norm-cells\n\
+    \    label: Add 1 mM Na+ to glucose-energized NorM-VC-expressing cells\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q9KRU4\n  - node_id: cellular-ethidium-fluorescence\n\
+    \    label: Normalized ethidium fluorescence at 400 s\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: sodium-decreases-cellular-fluorescence\n    subject: sodium-added-norm-cells\n\
+    \    predicate: decreases\n    object: cellular-ethidium-fluorescence\n    mechanism:\
+    \ Added sodium lowers the normalized fluorescence endpoint relative to no added\
+    \ sodium in\n      the NorM-VC-expressing host, consistent with enhanced ethidium\
+    \ efflux. The matched control host\n      and the separate NorM-PS comparison\
+    \ constrain attribution; neither a physical ion path nor antibiotic\n      resistance\
+    \ in Vibrio is measured here.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:33976372\n\
+    \      source_url: https://www.nature.com/articles/s42003-021-02081-6\n      snippet:\
+    \ ethidium\n      explanation: Visually inspected Figure 2A, its caption, and\
+    \ transport Methods establish the sodium-versus-no-added-sodium\n        endpoint.\
+    \ The retained context records the conflicting glucose concentrations explicitly.\n\
+    \      cache_path: evidence/PF01554/raturi-2021-assays.txt\n      cache_sha256:\
+    \ fe28ecded927079f3a936f9358af98e398e2808e1134b8eb10ac972bd449a371\n    - reference:\
+    \ https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9KRU4/entry/pfam/PF01554/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9KRU4/entry/pfam/PF01554/\n\
+    \      snippet: 'Q9KRU4 Pfam:PF01554; repeat intervals: 17-176 and 243-404, inclusive.'\n\
+    \      explanation: Current UniProt/InterPro sequence equality and the historical\
+    \ AAF94694.1 comparison\n        establish the mapped intact protein, without\
+    \ transferring the assay to isolated repeats.\n      cache_path: evidence/PF01554/NorM-identity.txt\n\
+    \      cache_sha256: 9d229500bafa50e827ff10fcd18a2912e9093b475535ee11363b2b54255b25dc\n\
+    - graph_id: norm-vc-sodium-binding-and-substitutions\n  title: Sodium enhances\
+    \ low-concentration ethidium binding in WT but not three NorM-VC variants\n  scope:\
+    \ Purified N-terminal His10-tagged NorM-VC WT and single substitutions D36N, E255Q\
+    \ and D371N, Raturi\n    2021 Figure 4A; paper residue numbering retained.\n \
+    \ context: Protein is purified from L. lactis membranes using DDM and Ni-NTA.\
+    \ Titrations contain 2 uM\n    ethidium, 50 mM KPi pH 7.0, 0.2 mM KCl and 0.05%\
+    \ DDM, with 0.036-1 uM protein and either no added\n    sodium or 0.5 mM Na2SO4\
+    \ (1 mM Na+). Fluorescence anisotropy uses 500/580 nm excitation/emission after\n\
+    \    about 2 min equilibration and matched elution-buffer baseline. Three independent\
+    \ protein preparations\n    are reported, mean +/- SEM.\n  family_mapping: Historical\
+    \ AAF94694.1 D36/E255/D371 correspond to current Q9KRU4 D32/E251/D367, verified\n\
+    \    by sequence comparison. D32 lies in PF01554 17-176 and E251/D367 in 243-404.\
+    \ Current protein begins\n    MHRY whereas the historical reference begins MENSVHRY;\
+    \ current sequence is M plus historical residues\n    6-461, not simply historical\
+    \ residues 5-461. Mutant labels refer to the paper's numbering, not current\n\
+    \    UniProt coordinates.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:243277\n\
+    \  limitations: Directness describes the purified-protein binding response, not\
+    \ an observed atomic sodium-coordination\n    or transport step. WT sodium enhancement\
+    \ is strongest at low protein concentrations; the curves converge\n    at high\
+    \ concentration. Single mutants retain binding. Apparent two-component fits do\
+    \ not independently\n    count sites. Supplementary expression/purity controls\
+    \ were not inspected, so equivalent folding is\n    not established. Li+, Cs+\
+    \ and Rb+ do not mimic the WT sodium response in this assay.\n  nodes:\n  - node_id:\
+    \ sodium-added-purified-wt\n    label: Add 1 mM Na+ to purified WT NorM-VC titrations\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q9KRU4\n  - node_id:\
+    \ wt-low-concentration-binding\n    label: Ethidium-binding anisotropy at low\
+    \ WT protein concentrations\n    node_type: ACTIVITY\n  - node_id: d36n-versus-wt\n\
+    \    label: Paper D36N (current D32N) instead of WT\n    node_type: PERTURBATION\n\
+    \  - node_id: e255q-versus-wt\n    label: Paper E255Q (current E251Q) instead\
+    \ of WT\n    node_type: PERTURBATION\n  - node_id: d371n-versus-wt\n    label:\
+    \ Paper D371N (current D367N) instead of WT\n    node_type: PERTURBATION\n  -\
+    \ node_id: sodium-enhancement-binding\n    label: Sodium-dependent enhancement\
+    \ of low-concentration ethidium binding\n    node_type: ACTIVITY\n  edges:\n \
+    \ - edge_id: sodium-increases-wt-binding\n    subject: sodium-added-purified-wt\n\
+    \    predicate: increases\n    object: wt-low-concentration-binding\n    mechanism:\
+    \ With sodium, WT anisotropy rises more strongly at low protein concentrations\
+    \ than without\n      sodium. The response supports sodium-modulated ethidium\
+    \ binding in detergent, not sodium-driven\n      transmembrane transport by this\
+    \ preparation.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:33976372\n      source_url:\
+    \ https://www.nature.com/articles/s42003-021-02081-6\n      snippet: ethidium\n\
+    \      explanation: Figure 4A's WT sodium and no-addition curves, biochemical\
+    \ Results and binding Methods\n        support the scoped increase. The high-concentration\
+    \ convergence is preserved.\n      cache_path: evidence/PF01554/raturi-2021-assays.txt\n\
+    \      cache_sha256: fe28ecded927079f3a936f9358af98e398e2808e1134b8eb10ac972bd449a371\n\
+    \  - edge_id: d36n-decreases-sodium-binding-response\n    subject: d36n-versus-wt\n\
+    \    predicate: decreases\n    object: sodium-enhancement-binding\n    mechanism:\
+    \ D36N lacks the WT positive sodium-dependent high-affinity component while retaining\
+    \ ethidium-associated\n      anisotropy. This is loss of the sodium response,\
+    \ not complete loss of binding or direct observation\n      of protonation.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:33976372\n      source_url: https://www.nature.com/articles/s42003-021-02081-6\n\
+    \      snippet: ethidium\n      explanation: Figure 4A's D36N paired curves were\
+    \ compared with WT and the Results; current D32 mapping\n        is retained separately\
+    \ from paper numbering.\n      cache_path: evidence/PF01554/raturi-2021-assays.txt\n\
+    \      cache_sha256: fe28ecded927079f3a936f9358af98e398e2808e1134b8eb10ac972bd449a371\n\
+    \  - edge_id: e255q-decreases-sodium-binding-response\n    subject: e255q-versus-wt\n\
+    \    predicate: decreases\n    object: sodium-enhancement-binding\n    mechanism:\
+    \ E255Q removes the WT positive sodium enhancement, with nearly overlapping sodium/no-sodium\n\
+    \      titrations. Its residual anisotropy is not described as a binding-null\
+    \ phenotype, and the assay\n      does not isolate a specific ionic microstep.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:33976372\n      source_url: https://www.nature.com/articles/s42003-021-02081-6\n\
+    \      snippet: ethidium\n      explanation: Visually inspected Figure 4A and\
+    \ the matching mutation Results support the response\n        loss, not a general\
+    \ loss of ligand binding.\n      cache_path: evidence/PF01554/raturi-2021-assays.txt\n\
+    \      cache_sha256: fe28ecded927079f3a936f9358af98e398e2808e1134b8eb10ac972bd449a371\n\
+    \  - edge_id: d371n-decreases-sodium-binding-response\n    subject: d371n-versus-wt\n\
+    \    predicate: decreases\n    object: sodium-enhancement-binding\n    mechanism:\
+    \ D371N lacks WT-like sodium stimulation of the high-affinity component but retains\
+    \ increasing\n      anisotropy as protein is added. This net response does not\
+    \ prove direct contact between D371 and\n      sodium or absence of all transport\
+    \ activity.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:33976372\n      source_url:\
+    \ https://www.nature.com/articles/s42003-021-02081-6\n      snippet: ethidium\n\
+    \      explanation: Figure 4A's D371N panel and Results support loss of sodium\
+    \ enhancement while showing\n        residual binding; transport and binding are\
+    \ kept distinct.\n      cache_path: evidence/PF01554/raturi-2021-assays.txt\n\
+    \      cache_sha256: fe28ecded927079f3a936f9358af98e398e2808e1134b8eb10ac972bd449a371\n\
+    - graph_id: norm-vc-ph-dependent-binding\n  title: Raising pH increases ethidium-binding\
+    \ anisotropy of purified WT NorM-VC\n  scope: WT His10-NorM-VC in the separate\
+    \ constant-protein pH titration, Raturi 2021 Figure 4B.\n  context: No added sodium;\
+    \ 0.2 uM purified WT protein and 2 uM ethidium in the DDM/KPi binding assay.\n\
+    \    Buffer pH is varied from 6 to 9 in 0.2 steps with concentrated KOH. Anisotropy\
+    \ uses 500/580 nm and\n    about 2 min equilibration; three independent protein\
+    \ batches, mean +/- SEM. This is not the glucose-energized\n    cell assay.\n\
+    \  family_mapping: Intact historical 461-aa NorM-VC maps to Q9KRU4 sequence version\
+    \ 2 with the verified\n    initiation difference and four-position internal numbering\
+    \ offset. Both current PF01554 intervals,\n    17-176 and 243-404, belong to the\
+    \ tested protein context; neither repeat was isolated.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:243277\n  limitations: The double-sigmoid response is observed,\
+    \ but assigning fitted midpoints 6.9 and 8.0 to\n    specific carboxylates is\
+    \ an inference. Buffer alkalinization by KOH is the experimental intervention,\n\
+    \    not an independently controlled change of only one residue's protonation.\
+    \ This binding response is\n    not an observed transport cycle or universal pH\
+    \ rule for the family.\n  nodes:\n  - node_id: raise-buffer-ph\n    label: Raise\
+    \ the no-added-sodium binding buffer from pH 6 to 9\n    node_type: PERTURBATION\n\
+    \  - node_id: wt-ph-series-anisotropy\n    label: Ethidium-binding anisotropy\
+    \ at 0.2 uM WT NorM-VC\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q9KRU4\n\
+    \  edges:\n  - edge_id: alkalinization-increases-binding-readout\n    subject:\
+    \ raise-buffer-ph\n    predicate: increases\n    object: wt-ph-series-anisotropy\n\
+    \    mechanism: WT anisotropy increases with two transitions across the tested\
+    \ pH range. The net biochemical\n      response is retained without promoting\
+    \ the authors' residue-specific pKa assignments to observed\n      molecular events.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:33976372\n      source_url: https://www.nature.com/articles/s42003-021-02081-6\n\
+    \      snippet: ethidium\n      explanation: Visually inspected Figure 4B, biochemical\
+    \ Results and binding Methods establish the\n        direction under fixed-protein\
+    \ conditions, separately from the sodium titration.\n      cache_path: evidence/PF01554/raturi-2021-assays.txt\n\
+    \      cache_sha256: fe28ecded927079f3a936f9358af98e398e2808e1134b8eb10ac972bd449a371\n\
+    curation_events:\n- timestamp: '2026-10-11T11:42:11Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Add six scoped NorM cellular fluorescence\
+    \ and purified-binding effects, with historical/current\n    residue mapping and\
+    \ assay discrepancies.\n  history_record: history/records/PF01554/2026-10-11T114211Z-codex-5e37aa.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Current Q9KRU4 sequence version 2 is 457 aa, identical to InterPro, with
+    PF01554 17-176 and 243-404. Historical AAF94694.1 is 461 aa; its residues 6-461
+    exactly equal current 2-457, preserving an initiation difference rather than claiming
+    a simple four-residue truncation. Paper D36/E255/D371 map to D32/E251/D367 within
+    the current repeats. The historical His10 assay plasmid was not independently
+    sequenced, and isolated-repeat sufficiency is not claimed.
+  target_ids:
+  - PF01554
+  evidence_ids:
+  - identity
+  - primary
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: The cellular edge is PHENOTYPIC/INDIRECT; the five purified-binding edges
+    are MECHANISTIC/DIRECT, all OBSERVED. Sodium effects are restricted to the relevant
+    concentration regime and mutant comparisons retain residual binding. Methods 12.5
+    mM glucose versus Figure 2's 20 mM is preserved. pH midpoints and two-site fits
+    are not atomic protonation or site-count proof; MD/structural models are not promoted
+    to observed transport edges.
+  target_ids:
+  - PF01554
+  evidence_ids:
+  - primary
+  - native
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Other functional figures, NorM-PS/chimeras, ionophore contexts, supplementary
+    expression/primer controls, historical plasmid sequence and the 2014 reconstitution
+    study remain incompletely assessed. Binding and cellular assays do not exhaust
+    MatE mechanisms or all family members.
+  target_ids:
+  - PF01554
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01554-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve assay discrepancy and extend independently scoped transport evidence
+  description: Obtain supplementary constructs and expression controls, resolve the
+    glucose discrepancy, and inspect the 2014 full paper and remaining 2021 functional
+    figures before adding ion-coupling, reconstitution or chimera effects. Keep mapped
+    numbering, pH-dependent exceptions, residual activity and simulation-derived proposals
+    distinct.
+  target_ids:
+  - PF01554
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01554.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Obtain supplementary constructs and expression controls, resolve the
+    glucose discrepancy, and inspect the 2014 full paper and remaining 2021 functional
+    figures before adding ion-coupling, reconstitution or chimera effects. Keep mapped
+    numbering, pH-dependent exceptions, residual activity and simulation-derived proposals
+    distinct.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01554
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Figures 2 and 4 were visually inspected. Supplement download failed DNS resolution;
+  expression blots and primers were not inspected. The 2014 XML was abstract/front
+  matter only and publisher PDF access failed. No raw traces or experimental replication
+  are claimed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

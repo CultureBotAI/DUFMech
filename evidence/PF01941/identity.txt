@@ -1,0 +1,47 @@
+PF01941 identity and member mapping, inspected 2026-10-12 UTC
+
+Frozen owner: data/families/PF01941.yaml and the verified
+interpro-pfam-duf-2026-10-10 snapshot. Preserve AdoMet_Synthase,
+IPR027790, EX_DUF, UNSCORED and imported counters. The frozen Pfam
+previous-name table records DUF93; renaming does not characterize every member.
+Current family: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01941/
+
+UniProt reviewed PF01941 search returned 57 records, not a complete census.
+https://rest.uniprot.org/uniprotkb/search?query=%28xref%3Apfam-PF01941%29%20AND%20%28reviewed%3Atrue%29&format=json&size=100
+Current member facts (sequence versions; inclusive InterPro coordinates):
+- Q58605 v1, 406 aa, MJ1208/mat, Methanocaldococcus jannaschii JAL-1,
+  NCBITaxon:243232; PF01941 2-402. Former organism name Methanococcus.
+- Q5JF22 v1, 405 aa, TK0545/mat, Thermococcus kodakarensis KOD1,
+  NCBITaxon:69014; PF01941 6-401.
+- Q980S9 v2, 404 aa, SSO0199/mat, Saccharolobus solfataricus P2,
+  NCBITaxon:273057; PF01941 2-400. Former genus Sulfolobus.
+- Q8TZW1 v1, 401 aa, PF1866/mat, Pyrococcus furiosus Vc1,
+  NCBITaxon:186497; PF01941 3-397.
+Mapping endpoints:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q58605/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q5JF22/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q980S9/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q8TZW1/
+
+NCBI YP_182958.1 FASTA is 405 aa and exactly matches current Q5JF22.
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=YP_182958.1&rettype=fasta&retmode=text
+The 2013 paper's 1155-bp statement is inconsistent with this length. Its
+primer/restriction-enzyme wording also differs; exact tag/clone termini are
+not independently established. Do not claim a truncated 385-aa protein.
+Q58605 sequence verifies Y49/Y72/Y85/Y120/Y170/Y226/Y233/Y255/Y267/Y273/
+Y323/Y344/Y371, W387, L147 and I351 in current protein numbering. These checks
+support mutation mapping, not full historical plasmid resequencing.
+PDB 7P82 entity 1 is 426 aa: a 20-residue MGSSHHHHHHSSGLVPRGSH prefix
+followed by the exact Q58605 sequence with only L147A/I351A substitutions.
+https://data.rcsb.org/rest/v1/core/polymer_entity/7P82/1
+This independently verifies the deposited PC-MjMAT core, not every assay batch.
+
+The 2022 divergence paper's Sequence data collection paragraph mislabels
+accessions: Q58868 is METE_METJA, methionine synthase MJ1473, not MJ1208 MAT;
+Q58605 is M. jannaschii MAT, not E. coli MAT. Independently checked:
+https://rest.uniprot.org/uniprotkb/Q58868.json
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8727953/
+Its sequence set/ancestral constructs require separate rechecking before transfer.
+Reviewed bacterial members include Aquifex O67275 and Streptococcus P66768;
+the PF01941 family is not exclusively archaeal. Tested whole enzymes do not
+prove isolated-domain sufficiency or universal substrate specificity.

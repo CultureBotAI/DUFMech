@@ -1,0 +1,33 @@
+Desai et al. 2014. PMID:24435797; doi:10.1093/nar/gkt1375.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3973293/fullTextXML
+Inspected 2026-10-12: complete Methods and Results from primary XML,
+including figure captions. Figures 2/3/4 visually inspected from the public
+author PDF, pages 4/5/7, after initial image endpoints failed:
+https://raineslab.com/sites/default/files/labs/raines/pdfs/Desai2014a.pdf
+Minimal quotations:
+"accelerates"
+"enabled efficient utilization"
+
+P. horikoshii O59205 Archease and native RtcB, recombinant E. coli proteins.
+Archease clone has an extra L after initial M; paper uses native numbering.
+Figures 2/3: 70 C, 50 mM Bis-Tris pH 7.0, 300 mM NaCl, 0.25 mM MnCl2,
+0.10 mM GTP, 5 uM RtcB, 100 nM Archease, 1 uM RNA substrate(s).
+Two 10-nt fragments yield a 20-nt product; terminal 3'-P and 5'-OH.
+Archease raises single-turnover ligation kobs from 0.011 to 0.033/min.
+Figure 3 separately uses pre-guanylylated RtcB and a trapped 2'-F/3'-P
+RNA substrate without the 3' RNA fragment: RNA-ppG kobs 0.018 to 0.063/min.
+Two independent experiments; apparent rates, not cellular flux or kcat.
+No Archease-alone ligation/guanylylation reported (underlying control not shown).
+
+Figure 4a/b: 30-min matched assays, 100 nM Archease, each NTP 0.10 mM.
+ATP, dGTP and ITP support more product with Archease; CTP/UTP do not.
+ATP kinetic experiments instead use 800 nM Archease and are not pooled
+with the 100 nM comparison. Human ATP-negative results are not a contradiction
+within this tested species. Metal-site motion is not directly measured.
+
+Figures 6/7 contain Archease mutants and rescue of selected RtcB mutants;
+these are pending edge-by-edge control/figure review. D12A/D141A/deltaI142,
+H9A/K117A effects and E8A's nucleotide dependence must remain distinct.
+The purified 4N2P structure contains Ca supplied during crystallization;
+it does not establish the physiological metal or a universal oligomeric state.

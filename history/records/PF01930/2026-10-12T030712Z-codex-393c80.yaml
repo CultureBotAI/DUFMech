@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01930
+  path: data/families/PF01930.yaml
+session:
+  id: 2026-10-12T030712Z-codex-393c80
+  timestamp: '2026-10-12T03:07:12Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of PF01930 member-scoped causal graphs
+  details: Same-agent scientific assessment of thirteen graphs and seventeen observed
+    effects, primary figures and methods, exact protein/domain mappings, evidence
+    quotes and native projection integrity. Source conflicts, missing Pcal supplement,
+    native function and remaining member coverage remain open; no full-scope PASS
+    or publication claim. Retained structured review binds current scientific content
+    digest b5c88dcdd61ef7c68b904e4bc3c3751f792dfc0cee5ba438dd3280fa1302aaad.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T030857Z-pf01930-pcal-gsu-cas4-processing-and-acquisition-contexts/review.yaml

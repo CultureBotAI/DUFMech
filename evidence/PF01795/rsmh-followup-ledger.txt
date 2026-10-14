@@ -1,0 +1,63 @@
+PF01795 remaining evidence and version boundaries
+Assessed: 2026-10-11 UTC. Curator: Codex. All entries below are follow-ups,
+not additional curated edges or a claim of full-family coverage.
+
+2012 E. coli RsmH structure, PMID:22561317
+https://pubmed.ncbi.nlm.nih.gov/22561317/
+https://www.sciencedirect.com/science/article/abs/pii/S1047847712001141
+Abstract and returned article snippets only; full paper not inspected.
+Reported SAM/cytidine structure 3TKA and SAXS are leads. Dimerization or
+ligand occupancy does not prove a required catalytic dimer or a captured
+productive complex. A quoted introductory 12% doubling-time increase
+for rsmH disagrees with the 2010 table's approximately 15% (12% is rsmI).
+Use the primary growth table, not this secondary recap.
+
+2019 O157:H7 study, PMID:31798540, DOI:10.3389/fmicb.2019.02520
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6863780/fullTextXML
+Selected Results and Methods inspected from full XML: DNMT assay,
+expression/complementation, and bisulfite verification. Reported DNA
+methylation, flagellar effects and colonization require separate review.
+The enzymatic readout uses a commercial colorimetric anti-5-methylcytosine
+kit. Reported preparation purity is 93.4%, and the authors explicitly
+allow activity from the remaining impurity. This is not direct chemical
+identification of a particular DNA product or proof that the known rRNA
+N4 enzyme universally catalyzes DNA C5 methylation. Do not discard the
+reported phenotype or adopt its mechanistic attribution without resolving
+protein accession/construct provenance, controls, substrate identity,
+contamination and orthogonal product-specific evidence. Figures and SI
+not independently inspected in this pass; no O157:H7 graph is adopted.
+
+2026 B. subtilis MraW: distinguish final article from accessible preprint
+Final PMID:42632017, DOI:10.1016/j.celrep.2026.117887
+https://pubmed.ncbi.nlm.nih.gov/42632017/
+Final publisher full text returned 403; final abstract/metadata inspected.
+Accessible preprint PMID:42388804, DOI:10.64898/2026.04.20.719615,
+PMC13317604.1, bioRxiv April 20 2026 version:
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13317604/fullTextXML
+The PMC page links the final article but its content is still the preprint.
+Selected preprint Results and Methods were inspected, including ribosome
+purification and coupled transcription/translation. PY79 WT and ZP1
+deletion-derived ribosomes differ in GFP output in the reconstituted
+system, despite similar bulk RNA/protein measures. The selected Results
+also report no growth difference in three tested media and no comparable
+in-vivo GFP deficit. Methods specify biological triplicates, 4 ul of
+ribosome preparation per 25-ul reaction, 37 C for 4 h. Equal volume plus
+bulk similarity is not independently established identical active-ribosome
+dose. This is a promising context-specific follow-up, not grounds to
+transfer an E. coli growth edge to all Bacillus conditions.
+Other leads are suppression of spoIVA defects, CmpA regulation and an
+early mRNA stem-loop. Retrieve final Methods, map the B. subtilis member
+and exact strains, inspect figures/SI and review assay normalization
+before adopting final-version causal claims. No preprint graph is saved.
+
+Human METTL15 mitochondrial rRNA modification
+https://academic.oup.com/nar/article/47/19/10267/5563944
+Search-discovered lead only; no full-text, construct or PF01795 mapping
+assessment completed here. Distinguish mitochondrial 12S numbering from
+E. coli 16S C1402. RsmI studies are about the distinct 2'-O enzyme and
+must not be imported as RsmH biochemical evidence.
+
+Next priorities: recover 2010 SI and exact clone/reporters, resolve its
+UGA Discussion discrepancy, review 2026 final Bacillus experiments with
+member mapping, then assess the O157:H7 attribution and additional taxa.
+Keep the record IN_PROGRESS and append successor reviews for new evidence.

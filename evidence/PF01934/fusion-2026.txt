@@ -1,0 +1,62 @@
+Yao et al.2026, PMID:41854079, doi:10.1093/nar/gkag228
+https://pmc.ncbi.nlm.nih.gov/articles/PMC13000451/
+https://academic.oup.com/nar/article/54/6/gkag228/8528806
+Inspected 2026-10-12 UTC: Results and relevant Methods; main Figures1,2,4,5,6
+and supplement FiguresS1-S6 visually; TablesS1-S4 parsed from publisher DOCX.
+Publisher supplement retrieved after PMC challenge; TablesS5/S6 present in
+ZIP but raw MS/AUC spreadsheets not reanalyzed. Source numbering is276-aa
+WP_164925653.1, not252-aa Q8EGZ7; see identity ledger for verified projection.
+Minimal extracts: "Cell viability"; "self-oligoAMPylation";
+"The linker is critical"; "RNA cleavage assay"; "Disulfide bond formation".
+
+Figure1D: E. coli BW25113 expressing the isolated HEPN fragment136-276
+from pHGE has lower recoverable colony formation than full fusion or vector.
+Split two-plasmid expression does not fully rescue, but expression and
+stability differ. FigureS2 separately shows lower growth/CFU with fragment
+expression in native MR-1 versus vector (0.5mM IPTG,OD6000.1,30C).
+Do not turn either into evidence of endogenous proteolytic activation.
+
+Figure2A-B: wild-type fusion has a32628.89Da peak versus31669.31Da for
+D41E/D43E. The approximately987.6Da three-AMP assignment requires the
+approximately28Da sequence-mass correction for the two D-to-E changes;
+it is not their raw peak difference. PDE releases AMP. Y240F and D41E/D43E
+lose detectable modification. MNT is the
+transferase domain; HEPN contains the acceptor. Methods and TableS4 retain
+tag/initiator-Met mass qualifications. Figure5A andS4A show these mutants
+are still non-toxic: absence of modification alone is not sufficient activation.
+
+Figure4G/S3A: deleting AQNHFIIL (M1) or replacing linker SAQNHFIIL
+with FAQSLFIIL (M3) abolishes detectable AMP modification, whereas
+FGQIHNGIL (M2) retains modification. Folding/orientation effects unresolved.
+Figure4E-F trans-complementation negatives and AF3 models favor, but do
+not directly demonstrate, an intramolecular reaction path. Text alternates
+eight/nine-residue linker descriptions; record the actual construct strings.
+
+Figure6A andS5A: isolated HEPN fragment cleaves MS2 RNA under reducing
+conditions; the full fusion retains little detectable activity. The fragment
+has stronger cleavage after reducing preparation/1mM DTT than without it.
+Methods:1ug MS2 RNA with0.1ug protein,37C20min; short49nt FAM RNA
+uses100nM RNA,500nM protein,20mM Tris pH8,150mM NaCl,5mM MgCl2.
+The DTT comparison includes purification history, not a clean single acute
+ligand titration. Do not infer cleavage sequence, intracellular substrate,
+antiviral defense, or exact redox chemistry solely from degradation gels.
+
+Figure6B,C,E/S6: reducing preparation decreases high-MW SDS-PAGE bands;
+C163T/C270W decreases such bands without reducing agent. NEM/TCEP
+controls support pre-existing intermolecular assemblies but show that some
+monomer disulfides can arise during denaturation. Band shifts are not a
+direct in-cell demonstration of a particular bond topology or activity relay.
+Figure6F: native MR-1 expressing the double-mutant fragment has fewer
+recoverable colonies than the wild-type fragment under0.5mM H2O2 and
+0.5mM IPTG for2h. FigureS6B shows toxicity without H2O2 is retained.
+This is a genotype-by-condition phenotype, not proof that H2O2 simply
+activates an RNase or that all oxidative-stress survival changes are mediated
+by the measured in-vitro oligomers. Both cysteines lie outside the mapped
+PF01934 core; do not attribute the switch to the matched core alone.
+
+Other source discrepancies retained: full HEPN fragment136-276 versus
+140-276 in BACTH text; FigureS6 caption reverses A/B relative to the image;
+2026 Results repeats a2:6 HepT:MntA ratio though earlier primary work gives
+6:2. Its Aeromonas flos-aquae comparator is Aphanizomenon in the cited2020
+paper. W3-18-1 Figure2 Y136 does not match its142-aa RefSeq Y106 at the
+conserved motif; do not create residue claims for that comparator yet.

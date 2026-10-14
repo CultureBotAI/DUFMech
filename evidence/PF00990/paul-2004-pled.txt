@@ -1,0 +1,24 @@
+Reference: PMID:15075296; doi:10.1101/gad.289504
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC387245/
+Accessed: 2026-10-11 UTC
+Inspected: purification/assay methods, Table 2, Results, Figures 5-7 visually.
+
+Minimal excerpts:
+"Cyclic-di-GMP is produced by purified PleD protein."
+"strong inhibition was observed"
+"was significantly stimulated"
+
+Curator assay facts:
+pCC2 expresses full-length PleD with C-terminal His6 from pET11; pRP87 is
+D53N; pRP63 expresses the N-terminally His6-tagged soluble DivJ fragment.
+TLC initial rates: 50 uL, 75 mM Tris pH 7.8, 250 mM NaCl, 25 mM KCl,
+10 mM MgCl2, 100 uM GTP. TLC temperature is not specified in these methods.
+Figure 5B: 50 ug PleD and no-protein control, 30/45/60/300 s samples.
+HPLC-separated product has the reported 689 mass peak in Figure 5C.
+Figure 6A: 25 ug PleD; added c-di-GMP at 0.01 or 0.1 mM reduces initial
+product formation. Unlabeled GTP bars also involve tracer dilution.
+Figure 7A: 25 ug PleD; joint 12.5 ug DivJ plus 200 uM ATP stimulates WT,
+but ATP alone, DivJ alone and the D53N joint-treatment control do not.
+The later PNAS study changes the initial competitive-binding interpretation.
+The separate HPLC method uses 90 min at 25 C; do not transfer this to TLC.
+These assays do not measure cellular feedback or prove a structural motion.

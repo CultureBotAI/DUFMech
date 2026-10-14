@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01970
+  path: data/families/PF01970.yaml
+session:
+  id: 2026-10-12T205949Z-codex-b63398
+  timestamp: '2026-10-12T20:59:49Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial PF01970 scientific self-review with construct and coverage
+    follow-up
+  details: Six graphs and sixteen observed effects preserve exact archived member
+    mapping, insertion and joint-system scope, growth-delay polarity, opposite magnesium/strontium
+    effects and transcript-versus-transport boundaries. Original primary figures and
+    native projection checks pass in this scope. Supplement retrieval, host discrepancy,
+    final constructs, direct mechanisms and other members remain open; no independent
+    expert review or full-family completion.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T210007Z-pf01970-tcta-tpia-cellular-effects-and-cation-contexts/review.yaml

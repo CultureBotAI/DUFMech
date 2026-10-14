@@ -1,0 +1,41 @@
+PF01918/Alba, former DUF78; InterPro:IPR002775.
+Identity verification date2026-10-12; local ignored/hidden-inclusive search
+found no preexisting authoritative PF01918 overlay, evidence or review.
+Frozen interpro-pfam-duf-2026-10-10:8296 families; PF01918 EX_DUF/UNSCORED.
+Snapshot SHA25617fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+Frozen previous-name TSVs2026-10-07 and2026-10-10 both retain DUF78.
+Frozen counts8285proteins,8303matches,2523proteomes,7180taxa,
+36structures,7010AlphaFold models,155architectures are not new evidence.
+The imported description about coating without compaction is preserved,
+not used to overrule later condition-specific primary compaction assays.
+
+Current reference mapping, not independent sequencing of historic clones:
+P60849v2 SSO0962/albA1,Saccharolobus solfataricusP2,taxon273057,
+97aa,PF01918 10-72,MD5 17C4656CBBD04BD0FB49698E370414E0.
+P60848v2 S.shibataeB12 and F0NHH1v1 S.islandicusREY15A/SiRe_1125
+have the same reference sequence and MD5, not identical organisms or
+independent biological replication. F0NHH1 taxon930945,PF01918 10-72,
+ADX85192.1,WP_009992406.1. K16,K17,F60 reference numbering confirmed.
+Q97ZF4v1 SSO6877/albA2,S.solfataricusP2,89aa,PF01918 6-69,
+MD5 FEB5481C963ECA8727B4AA44B85A92E6,AAK41238.1.
+P60849 links CAC12668.1 and AAK41236.1; the latter is annotatedALT_INIT.
+Do not silently equate its historical start with current97aa numbering.
+Q9BUL9v1 humanRPP25,taxon9606,199aa,PF01918 37-100,
+MD5 1A9F496E00E2A35CC8D726BA2B66766A,NP_060263.2.
+O75817v2 humanRPP20 partner,140aa,PF12328 rather than PF01918,
+MD5 AD45512812ED7012CCF08D8E7752368C.
+Q8IJX8v1 P.falciparum3D7 ALBA3/PF3D7_1006200,taxon36329,
+107aa,PF01918 14-83,MD5 99588D7D76AE970B254A73734ACA1AB7,
+CZT98311.1,XP_001347348.1. Older paper aliasPf10_0063.
+Whole proteins and author-defined core constructs exceed Pfam match spans.
+
+Sources read as structured JSON:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01918/
+https://rest.uniprot.org/uniprotkb/search?query=(xref:pfam-PF01918)%20AND%20(reviewed:true)&format=json&size=500
+49 reviewed hits in returned family page; not49 experimentally validated graphs.
+https://rest.uniprot.org/uniprotkb/O75817.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01918/protein/uniprot/P60849/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01918/protein/uniprot/Q97ZF4/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01918/protein/uniprot/F0NHH1/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01918/protein/uniprot/Q9BUL9/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01918/protein/uniprot/Q8IJX8/

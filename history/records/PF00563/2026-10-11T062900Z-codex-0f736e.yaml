@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF00563
+  path: curation/families/PF00563.yaml
+session:
+  id: 2026-10-11T062900Z-codex-0f736e
+  timestamp: '2026-10-11T06:29:00Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped RocR EAL reaction and E352Q turnover edges
+  details: Inspected Rao 2008 methods, Table 1 and Figures 3-4; checked Chen 2012
+    structural limitations. Verified PA3947/Q9HX69 reference sequence and PF00563
+    coordinates. Added two directly observed biochemical edges, minimal hash-anchored
+    evidence, and explicit construct, atomic-mechanism, regulatory and family-transfer
+    limits. No isolated-domain or cellular signaling mechanism is inferred; IN_PROGRESS
+    retained. Native regeneration and validation follow.
+  sections:
+  - causal_graphs

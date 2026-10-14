@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF08759
+  path: data/families/PF08759.yaml
+session:
+  id: 2026-10-11T050246Z-codex-e1e245
+  timestamp: '2026-10-11T05:02:46Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped DUF1792 construct graph review
+  details: Reviewed the projected glucose-transfer edge against Figure 2 image, assay
+    controls, construct methods and current FW213 domain mapping. The graph does not
+    claim complete Fap1 maturation or identical construct and Pfam boundaries. Partial
+    scientific self-review; additional member and context coverage remains open.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T050315Z-pf08759-duf1792-causal-graph/review.yaml

@@ -1,0 +1,39 @@
+PF01795 RsmH/MraW identity assessment
+Accessed and assessed: 2026-10-11 UTC. Curator: Codex.
+
+Frozen DUFMech identity remains PF01795, Methyltransf_5, EX_DUF,
+IPR002903. The seed description cites the old P18595 accession; this is
+not permission to change imported identity or assign an invented DUF alias.
+
+Inspected database responses:
+https://rest.uniprot.org/uniprotkb/P18595.json
+https://rest.uniprot.org/uniprotkb/P60390.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P60390/entry/pfam/PF01795/
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=NP_414624.1&rettype=gb&retmode=text
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=WIA74303.1&rettype=gb&retmode=text
+
+P18595 is inactive, demerged into P60390 and P60391. P60390 is the
+313-aa E. coli K-12 RsmH reference, gene rsmH/mraW/yabC, b0082/JW0080,
+taxon 83333. The current PF01795 match is residues 5-310 inclusive.
+NP_414624.1 is the MG1655 reference on NC_000913.3, taxon 511145.
+WIA74303.1 has a source qualifier strain BW25113 and note parental strain;
+it was inspected in a twenty-record NCBI protein GenBank batch. Search hits
+also include engineered derivatives and unrelated organisms with BW25113
+as their laboratory host; those hits are not equivalent strain mappings.
+
+Structured parsing shows the unwrapped uppercase amino-acid sequences of
+P60390, NP_414624.1 and WIA74303.1 are identical, length 313, SHA-256:
+77d7f1bfb4aba98da0153b2c429261d026a234cf84d75da48505e613699e7607
+The hash excludes any FASTA header and terminal newline.
+
+Kimura and Suzuki, PMID:19965768, tested BW25113-derived deletion strains
+and recombinant E. coli RsmH from an ASKA pCA24N clone. The paper names
+the N-terminal His tag. Reference sequence equality strengthens the
+member mapping but is not resequencing of the historical plasmid, proof
+of all tag/linker termini, or evidence that isolated residues 5-310 suffice.
+No RsmH residue substitutions are tested in the adopted 2010 experiments.
+RsmI is a distinct enzyme supplying the 2'-O modification, not an alias of
+RsmH or an independently curated PF01795 member in these graphs.
+
+No family-wide specificity, universal essentiality, physical RsmH-RsmI
+interaction or methylation order is inferred from this identity assessment.

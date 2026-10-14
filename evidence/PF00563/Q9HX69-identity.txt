@@ -1,0 +1,17 @@
+Accessed: 2026-10-11 UTC
+Sources:
+https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ArocR%20AND%20organism_id%3A208964&format=json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9HX69/entry/pfam/PF00563/
+
+Structured identity facts transcribed from the retrieved database responses:
+UniProtKB:Q9HX69; ROCR_PSEAE; gene rocR; synonym sadR; locus PA3947.
+Pseudomonas aeruginosa PAO1 / ATCC 15692; NCBITaxon:208964.
+392 residues; sequence version 1; entry version 146.
+Sequence MD5: 4BE8E675748B694D7DC4EAF2266C5D73.
+UniProt and InterPro sequences matched exactly; residue 352 is E.
+NCBIProtein:AAG07334.1; RefSeq:NP_252636.1; chromosome AE004091.
+Pfam family interval: PF00563 at 147-379, inclusive.
+The separate UniProt/PROSITE EAL annotation is 140-392, not a Pfam boundary.
+The N-terminal response-regulatory domain is outside that Pfam interval.
+Database mapping supports family membership, not an isolated-domain assay,
+exact recombinant tag junctions or a causal function for every family member.

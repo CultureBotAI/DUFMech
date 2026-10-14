@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01959
+  path: curation/families/PF01959.yaml
+session:
+  id: 2026-10-12T144726Z-codex-ac3bba
+  timestamp: '2026-10-12T14:47:26Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate PF01959 joint-enzyme product graphs with explicit assay conflicts
+    and negative contexts.
+  details: Added two scoped graphs and three qualitative observed biochemical edges
+    for intact MJ0400 plus MJ1249, mapped Q58646 PF01959/PF26558 boundaries, retained
+    White2004 original-table review and yield/oxygen discrepancies, and recorded MMP0006
+    negative growth and GriH full-text follow-ups. Imported identity remains untouched;
+    status is IN_PROGRESS and no isolated-domain or family-wide mechanism is asserted.

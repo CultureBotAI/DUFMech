@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01255
+  path: data/families/PF01255.yaml
+session:
+  id: 2026-10-11T103449Z-codex-c95464
+  timestamp: '2026-10-11T10:34:49Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of UppS products and coupled-assay
+    limits
+  details: Retained native structured review binds the current semantic digest and
+    inspected evidence. One direct product edge and two unresolved coupled-output
+    edges are supported within the stated scope. Original product chromatograms, full
+    clone identity, coupling-step attribution and additional family contexts remain
+    open; no independent review or full-family completion is claimed and status remains
+    IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T103417Z-pf01255-upps-products-and-coupled-assay-limits/review.yaml

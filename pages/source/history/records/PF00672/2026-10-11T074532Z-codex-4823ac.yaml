@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF00672
+  path: data/families/PF00672.yaml
+session:
+  id: 2026-10-11T074532Z-codex-4823ac
+  timestamp: '2026-10-11T07:45:32Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial Tsr HAMP scientific phenotype self-review
+  details: Saved a scoped scientific self-review for digest a58af93f57493926ddd658072ed4e49a9449926a70343b7a4195a139d8174a3c.
+    Three observed indirect phenotype effects retain host-specific controls and distinct
+    rotation versus chemotaxis assays. Exact tethering conditions, direct molecular
+    assays, rescue and broader family coverage remain open. This is same-agent review,
+    not independent endorsement; status remains IN_PROGRESS.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T074517Z-pf00672-tsr-hamp-causal-phenotypes/review.yaml

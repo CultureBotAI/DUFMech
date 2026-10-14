@@ -1,0 +1,43 @@
+Panah2026,PMID42277007,DOI10.1038/s41467-026-74036-6.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC13408128/
+https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-026-74036-6/MediaObjects/41467_2026_74036_MOESM1_ESM.pdf
+https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-026-74036-6/MediaObjects/41467_2026_74036_MOESM4_ESM.xlsx
+Inspected2026-10-11:ResultsSecs5-8,MethodsSecs13/14/16/18/21/24,
+originalFig2 and supplementFig2PDFp3;Data2 parsed as structured XLSX/XML.
+Minimal quotation: "Gene rescue".
+
+HeLa Mirror reporter populations, lentiviralCas9/sgRNA,72h then4days3ug/ml
+blasticidin,FACS sorting,3hincubation before RNA extraction.
+37C DMEM10%FBS. RPP14 guide pAVA3507/Addgene239317:
+ACAGGCAGACTTTCATGTAG. POP5 guide pAVA3498: CCATGGTGCGGTTCAAGCAC.
+Negative control pAVA3773/Addgene239310.
+Do not call these fully genotyped null clones. RPP14 mRNA retains about35%
+in supplementFig2a; residual expression is material.
+
+MainFig2c/o,d/e,s: RPP14 targeting lowers H1RNA(reported9.1-fold) and
+MRPRNA(reported4.5-fold), increases unprocessed MALAT1-mascRNA,
+MEN-beta-menRNA and ITS1site2 pre-rRNA. These are RT-qPCR steady-state or
+cleavage-junction endpoints,not direct catalytic rates or RNA half-lives.
+18S normalization,delta-deltaCt,nestedPCR across lncRNA cleavage sites.
+SupplementFig2d/e: POP5 targeting lowers H1 and MRP RNA with28S normalization.
+Do not treat supplement and main RPP14 panels as independent replication.
+
+pAVA3915/GenScriptOHu15516D intronlessRPP14 rescues TRNAU1AP- and PRPF39-
+targeted populations separately. 30%confluence,10h before3ug plasmid with
+TransIT293,media changed24h,TRIlysis48h; vectorpAVA1221 control.
+MainFig2j/r increases H1/MRP;2k/l decreases unprocessed MALAT1/MEN-beta.
+The two backgrounds stay separate. These are upstream-knockout suppression,
+not direct complementation of RPP14 knockout; no direct pre-tRNA/pre-rRNA
+rescue endpoint was shown in these RPP14-cDNA panels.
+The transgene's exact sequence/tag is not established by the other-plasmid
+sequences inSupplementData3. ReferenceO95059 is gene mapping only.
+
+Replication discrepancy: Fig2caption says at least2 biological x3 technical,
+but Methods gives at least1 biological x4technical forRPP14/RPP21/RPPH1KO;
+rescue2biological xatleast3technical. SupplementFig2d/e also says at least
+1biological x4technical. Figurecaption lists pairedtwo-tailedt forrescue,
+whereasMethods generally says ANOVA/Dunnett. Preserve both; technical
+replicates do not become independent biological replicates.
+H1/MRPdestabilization is plausible but not measured decay.
+PRPF39/TRNAU1APtranslation/growth defects and other splice targets are not
+assigned to RPP14 without the corresponding endpoint-specific rescue.

@@ -4,7 +4,7 @@ name: Adenosylcobinamide amidohydrolase
 short_name: CbiZ
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01955
 counters:
   proteins: 2665
@@ -23,3 +23,2026 @@ provenance:
 interpro_id: InterPro:IPR002808
 description: This prokaryotic protein family includes CbiZ which converts adenosylcobinamide (AdoCbi)
   to adenosylcobyric acid (AdoCby), an intermediate of the de novo coenzyme B12 biosynthetic route [[cite:PUB00019258]].
+curation_history: history/records/PF01955
+discussions:
+- discussion_id: pf01955-constructs-and-protocols
+  prompt: Resolve the historical constructs, strain labels and quantitative assay protocol.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Current domain mapping does not verify historical clone sequence, and the source has unresolved
+    strain and rate-context discrepancies.
+  evidence:
+  - reference: PMID:14990804
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Main Methods/Results and original Figures2-6 inspected; supporting methods and Table1
+      remain inaccessible through the attempted public routes.
+  - reference: PMID:16740929
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Main Methods/Results/Table1 and original Figures3-6 inspected; deposited CDS comparison
+      exposes primer and fragment discrepancies, not a verified historical clone sequence.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Reconcile Woodson2004 JE6894 versus JE6984, AP recipes, tag-cleavage scar, deletion endpoints
+    and rate context. For CbiS2006 retain 0.9mg/40ul versus0.23mg/ml stock, cobD1272/cobD1230, metE labels,
+    208-250/208-357, predicted primer-imposed Y208S plusMet, and printed GTCGAG versusSalI GTCGAC. Do
+    not silently repair either paper's units, primers or clones. The2006 reference to6.4pmol/min/mg differs
+    from2004's6.4umol/min/mg.
+- discussion_id: pf01955-fusion-and-remodeling
+  prompt: Extend the CbiS fusion assessment to native mechanisms and bacterial CbiZ remodeling with exact
+    member mapping.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: CbiZ-associated chemistry, a fused CobZ phosphatase and host-specific corrinoid remodeling
+    must not be treated as one universal DUF105 pathway.
+  evidence:
+  - reference: PMID:16740929
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Main text/Table1 and original Figures3-6 now support scoped corrinoid chemistry, condition
+      effects and joint heterologous rescue; native roles, complete historical clones and source discrepancies
+      remain unresolved.
+  - reference: PMID:19889098
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Main text/Tables1-3 and original Figures1-4 inspected; four added graphs separate purified
+      conversion, assay conditions, acetate growth and succinate corrinoid profiles. SupplementS1/S2 and
+      historical clone junctions remain unresolved.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Q8TUT1 v1 maps PF01955 8-205 and PF04608 257-353; the N-terminal fragment supports growth jointly
+    with CobY but was not purified for a direct domain assay. CbiS substrate-loop independence, cysteine
+    roles and fusion thermostability remain hypotheses. Rhodobacter2009 contexts are now separately curated
+    using Q3J3R7v1/RSP_2406, PF01955 6-208, but not as a complete native pathway. The earlier coverage
+    ledger is a dated checkpoint; four Woodson2006 and three Gray2009 ledgers retain subsequent assessments.
+- discussion_id: pf01955-rhodobacter-constructs-and-controls
+  prompt: Resolve the Rhodobacter historical fusion, deletion alleles and supplemental assay controls.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Native parent mapping and measured effects do not verify the complete historical tagged construct
+    or every cellular intermediate.
+  evidence:
+  - reference: PMID:19889098
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Main Methods/Results, Tables1-3 and original Figures1-4 inspected. CDS-plus-flank mapping
+      resolves both reverse primers; supplementS1/S2 download returns challenge HTML, not a verified PDF.
+  - reference: PMID:19376876
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Main Methods/Table1 and supplementTableS1 PDF text allow a primer-based deletion reconstruction.
+      OriginalFigures2-6 were inspected; supplement images and historical clone sequence remain unverified.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Q3J3R7v1/ABA78567.1 is219aa; CP000143.2 CDS translation matches. Reverse primers span the stop/downstream
+    region and the rescue insert ends40bp afterCDS, so the earlier CDS-only nonmatch is resolved. MBP/His6
+    tags remain; full junction, historical deletion sequence, DMB dose, assay replicate count and remodeling
+    supplement controls are open. Native-salvage TableS1 primers predict CDS1-69 plusTCTAGA plus610-660,
+    a41aa product retaining native1-23 and204-219 aroundSR. This predicts deletion70-609 and51nt right
+    retention versus printed70-610 and48nt; it is not verification of the actual clone or residual peptide.
+    JE10708/JE10780 and tetracycline1ug/ml versus1ug/ul remain source conflicts. JE11844/JE11906 is a
+    parent/plasmid-derivative distinction. Author-manuscript remodeling Figure2 caption mentions a fourth
+    column absent from the image; publisher caption has onlyA-C. Retain25-250/50-250pM calibration discrepancy.
+    AdoCbl/CNCbl assay negatives, Cbi/Cbl growth controls and bluB controls limit transfer. No CbiZ-alone
+    pseudoCbl-to-Cbl or direct transport edge is claimed.
+- discussion_id: pf01955-cbis-domain-attribution
+  prompt: Keep CbiS phosphatase controls separate from PF01955 chemistry and resolve the fusion's native
+    role.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The C-terminal fragment lacks PF01955 yet rescues the phosphatase-associated phenotype; whole-fusion
+    phosphatase activity is not evidence for DUF105-domain catalysis.
+  evidence:
+  - reference: PMID:16740929
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Original Figure3C/D shows whole/C-terminal rescue versus N-terminal/vector controls;
+      Figures4C/D and5B identify alphaR from whole-fusion alphaRP reactions. The C-terminal segment contains
+      PF04608, not PF01955.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: No PF01955 phosphatase edges are added. Retain JE2192/JE6984, Figure4 product-caption and365/367nm
+    conflicts. O2-resistant phosphatase does not measure folding; alphaAMP, native lower ligands and split-fragment
+    function at90-100C remain unproved. See evidence/PF01955/woodson-2006-domain-boundaries.txt.
+- discussion_id: pf01955-family-coverage
+  prompt: Extend the scoped assessment to other tested members and the remaining primary literature.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The mapped archaeal examples and a reviewed-only database search do not establish the functions
+    of all 2665 frozen family proteins.
+  evidence:
+  - reference: PMID:18808385
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Main construction/growth/extract Methods, Results and originalFigures2-4 inspected. Four
+      graphs retain seven donor rescue arms, seven conditional AP effects, six midpoint induction effects
+      and three text-reported extract products. Historical clone mapping and supplements remain unresolved.
+  - reference: doi:10.1128/JB.00230-09
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Main text/Table1 and originalFigures2-6 inspected; two native conditional-salvage/bypass
+      graphs added. SupplementTablesS1/S2 inspected as PDF text only. Cross-figure CbiZ dependence is
+      labeled INFERRED; no complete native flux pathway is claimed.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Extend the2008 construct and assay assessment, later bacterial remodeling, Dehalococcoides and
+    substrate-specificity work, exact taxonomic aliases and native catalytic mechanisms. The2008 low CNCbl
+    activity in mixed extract and2009 tagged purified-enzyme negative remain distinct preparation/protocol
+    observations. Native2009 salvage controls oppose universal CbiZ essentiality and obligatory routing
+    of importedCbi throughCbiZ. Carbon/oxygen effects and CobD-only controls are not assigned as PF01955
+    catalytic steps. Do not transfer CbiR/CobS effects. This record and earlier open follow-ups remain
+    in the corpus-wide goal.
+- discussion_id: pf01955-2008-constructs-and-assays
+  prompt: Verify the2008 historical donor constructs, supplemental product traces and reporter assignments.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Donor-specific heterologous effects are observed, but current candidate accessions do not
+    independently verify historical insert sequences, and a mixed extract does not isolate CbiZ catalysis.
+  evidence:
+  - reference: PMID:18808385
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Main Methods/Results and originalFigures2-4 inspected; TableS3 donor strains, TableS4
+      primers and FigureS2 product traces remain uninspected. The main HPLC reporter paragraph conflicts
+      with earlier genotype/pathway descriptions.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Current candidates are RsQ3J3R7, RrQ2RX48, BhQ9KCI4, MmQ8Q0G3, MjQ59008, PfQ8U3Z5 and FaS0ASV7.
+    Fa's accession postdates the2008 study; none is asserted to be an independently verified historical
+    insert. Bh's whole BtuD-CbiZ fusion does not isolate PF01955 catalysis or prove transporter coupling.
+    Preserve Methodsug/ml versus captionsug/ul, unverified SD/SEM/N for extract rates, contradictory JE8312
+    Cbi/Cby reporter wording and duplicate FigureS2 references. AP rescue perturbs cobD context, not a
+    cbiB deletion. Negative heterologous rescue of Sc/DET0242/Ap constructs does not prove pseudogenization,
+    native inactivity or a missing-Asn mechanism. See the three gray-2008 evidence ledgers.
+causal_graphs:
+- graph_id: mma-cbiz-purified-conversion-2004
+  title: Purified M. mazei CbiZ produces a Cby-assigned corrinoid
+  scope: Whole-protein Mm0173 CbiZ expressed in E. coli ER2566, not an isolated PF01955 fragment.
+  context: Woodson2004 Methods and Figures5-6; pMmCBIZ5 C-terminal chitin-binding tag cleaved before assay.
+    AdoCbi reaction uses 4ug enzyme, 150uM substrate, 100ul, 50mM Na-HEPES pH7.5, 5mM DTT, 37C for2h in
+    dim light. DicyanoCbi is a separate reported substrate test.
+  family_mapping: Q8Q0G3 v1, 200aa, MM_0173/cbiZ, AAM29869.1; PF01955 residues15-198. Source M. mazei
+    Go1/Goe1, taxon192952. Exact historical tag-cleavage scar and clone sequence remain unresolved.
+  taxon: NCBITaxon:192952
+  scope_status: MECHANISTIC
+  limitations: HPLC follows cyanide derivatization; MALDI measures a ligand-free species, not intact AdoCby.
+    Aminopropanol coproduct was not separately measured. Dicyano-substrate activity is text-reported without
+    a separate chromatogram. Printed kinetic rates need protocol reconciliation; no residue-level mechanism
+    or family-wide specificity is claimed.
+  nodes:
+  - node_id: ado_reaction
+    label: Purified Mm0173 CbiZ with AdoCbi under assay conditions
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8Q0G3
+  - node_id: cyano_reaction
+    label: Purified Mm0173 CbiZ with dicyanoCbi in the reported substrate test
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8Q0G3
+  - node_id: cby
+    label: Cby-assigned corrinoid product after analytical processing
+    node_type: STATE
+  edges:
+  - edge_id: ado-substrate-cby
+    subject: ado_reaction
+    predicate: produces
+    object: cby
+    mechanism: The purified enzyme hydrolyzes the amide bond linking aminopropanol to the corrin side
+      chain; cyano-HPLC product at14.8min and isolated-product m/z932.4 support Cby formation. Preheated
+      enzyme lacks the product peak.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:14990804
+      source_url: https://www.pnas.org/doi/10.1073/pnas.0305939101
+      snippet: Cby was a product
+      explanation: Purification/activity/analysis Methods and final Results; original Figures5-6 visually
+        inspected. Analytical derivatives are distinguished from the original reaction species.
+      cache_path: evidence/PF01955/woodson-2004-chemistry.txt
+      cache_sha256: 06cdccd3ca4e6b0d34d1966513f6c5fd8044167874ecab606f41f7dc5bea17eb
+  - edge_id: cyano-substrate-cby
+    subject: cyano_reaction
+    predicate: produces
+    object: cby
+    mechanism: The Results report amidohydrolase activity with dicyanoCbi as an alternative substrate;
+      adenosylation is therefore not an absolute in-vitro requirement for this preparation. No quantitative
+      rate or in-vivo adenosylation order is inferred.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:14990804
+      source_url: https://www.pnas.org/doi/10.1073/pnas.0305939101
+      snippet: Cby was a product
+      explanation: Final Results and Discussion explicitly describe dicyanoCbi utilization and a lower
+        printed activity. This arm is text-reported; Figures5-6 do not independently display its chromatogram.
+      cache_path: evidence/PF01955/woodson-2004-chemistry.txt
+      cache_sha256: 06cdccd3ca4e6b0d34d1966513f6c5fd8044167874ecab606f41f7dc5bea17eb
+- graph_id: mma-cbiz-extract-bioassay-2004
+  title: CbiZ-enriched extract reaction supports indicator growth
+  scope: E. coli BL21(lambdaDE3)-RIL extract enriched for M. mazei CbiZ, followed by a separate Salmonella
+    indicator bioassay.
+  context: pMmCBIZ1; 65ug extract with30uM AdoCbi in100ul, 50mM Na-HEPES pH7.5, 5mM DTT, 37C for2h. Five
+    ul of1:10 deproteinated reaction dilution spotted onto JE824 metE205 cobU330 carrying pCOBY10(cobY+);
+    aerobic37C for24h.
+  family_mapping: Donor Mm0173 maps Q8Q0G3 v1, PF01955 15-198 of200aa. Whole-protein enrichment, not isolated-domain
+    expression or a native M. mazei growth test.
+  scope_status: PHENOTYPIC
+  limitations: Reporter growth is a Cby-responsive proxy, not chemical identification by itself. Extract
+    components and the indicator's remaining salvage enzymes contribute; purified-enzyme evidence is retained
+    in a separate graph. No physiological growth rate is extracted from spot size.
+  nodes:
+  - node_id: active_extract
+    label: Active CbiZ-enriched extract plus AdoCbi reaction versus negative controls
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8Q0G3
+  - node_id: reporter_growth
+    label: JE824 cobY-positive indicator growth around applied reaction sample
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: extract-reporter-growth
+    subject: active_extract
+    predicate: increases
+    object: reporter_growth
+    mechanism: Active enriched-extract reaction supplies a growth-supporting corrinoid to the indicator.
+      Authentic Cby is positive; authentic Cbi, vector extract and preheated CbiZ extract are negative
+      in the displayed bioassay.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:14990804
+      source_url: https://www.pnas.org/doi/10.1073/pnas.0305939101
+      snippet: Cby synthesis
+      explanation: Extract and detection Methods; original Figure4 spots1-5 visually inspected. The measured
+        endpoint is indicator growth, with product interpretation supported separately.
+      cache_path: evidence/PF01955/woodson-2004-chemistry.txt
+      cache_sha256: 06cdccd3ca4e6b0d34d1966513f6c5fd8044167874ecab606f41f7dc5bea17eb
+- graph_id: halo-cbiz-deletion-rescue-2004
+  title: Native cbiZ deletion and restoration change Cbi-supported growth
+  scope: H. salinarum NRC-1-derived delta-cbiP strains differing in native cbiZ function.
+  context: Defined liquid medium37C with100pM dicyanoCbi; OD650 time courses in Figure2A/B. Compare JE6812
+    delta-cbiP delta-cbiZ with JE6738 delta-cbiP cbiZ+; rescue JE7210 delta-cbiP delta-cbiZ ura3::cbiZ+
+    versus JE6812.
+  family_mapping: VNG_1583C/cbiZ, Q9HPK9 v1, 231aa, AAG19858.1; PF01955 14-208. Gene-level deletion/restoration;
+    exact allele endpoints await supporting Methods/Table1.
+  taxon: NCBITaxon:64091
+  scope_status: PHENOTYPIC
+  limitations: OD650 is not viability or a direct corrinoid measurement. Residual late OD in JE6812 is
+    not zero growth. Restoration requires supplied Cbi and remaining pathway enzymes; no universal essentiality
+    or isolated-domain mechanism. Replication/error bars are unspecified for these curves.
+  nodes:
+  - node_id: deletion
+    label: JE6812 cbiZ deletion versus JE6738 in the delta-cbiP background
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9HPK9
+  - node_id: restoration
+    label: JE7210 ura3-integrated cbiZ restoration versus JE6812
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9HPK9
+  - node_id: growth
+    label: Cbi-supported OD650 growth in the delta-cbiP background
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: native-deletion-growth
+    subject: deletion
+    predicate: decreases
+    object: growth
+    mechanism: Removing cbiZ from the delta-cbiP strain strongly reduces Cbi-supported OD increase. The
+      intracellular intermediates between gene loss and growth are not directly measured.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:14990804
+      source_url: https://www.pnas.org/doi/10.1073/pnas.0305939101
+      snippet: block in Cbi salvaging
+      explanation: Native genetic Results and visually inspected Figure2A, open-circle versus open-diamond
+        curves; both strains require exogenous precursor in this background.
+      cache_path: evidence/PF01955/woodson-2004-native-genetics.txt
+      cache_sha256: a69158dd90a979081df32a8c6eff1f04e6b057b30f945b88c8c11a69cfadd69a
+  - edge_id: native-restoration-growth
+    subject: restoration
+    predicate: increases
+    object: growth
+    mechanism: Reintroducing cbiZ at ura3 restores growth with supplied Cbi in the double mutant. The
+      same restored strain remains low without exogenous corrinoid, limiting the sufficiency claim to
+      this salvage context.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:14990804
+      source_url: https://www.pnas.org/doi/10.1073/pnas.0305939101
+      snippet: block in Cbi salvaging
+      explanation: Restoration Results and original Figure2B open-square rescue versus double mutant;
+        ura3::cbiP is a different control, not cbiZ restoration.
+      cache_path: evidence/PF01955/woodson-2004-native-genetics.txt
+      cache_sha256: a69158dd90a979081df32a8c6eff1f04e6b057b30f945b88c8c11a69cfadd69a
+- graph_id: halo-cby-bypass-2004
+  title: Supplied Cby bypasses the cbiZ-deficient growth block
+  scope: JE6812 delta-cbiP delta-cbiZ in the NRC-1 genetic background.
+  context: Defined liquid medium37C; add100pM dicyanoCby versus no corrinoid. Figure2A shows Cby-supported
+    OD650 increase while dicyanoCbi gives only a small late rise.
+  family_mapping: Missing native cbiZ is VNG_1583C/Q9HPK9 v1, PF01955 14-208 of231aa. This is a metabolite
+    bypass in a whole-gene-deficient background.
+  taxon: NCBITaxon:64091
+  scope_status: PHENOTYPIC
+  limitations: Cby bypass supports pathway placement but does not itself demonstrate native CbiZ chemistry
+    or transport. Cbi-GDP/Cbl rescue is text-reported without curves and retained as control context,
+    not extra graph edges. Other salvage machinery remains present.
+  nodes:
+  - node_id: cby_added
+    label: Addition of100pM dicyanoCby to JE6812
+    node_type: PERTURBATION
+  - node_id: growth
+    label: JE6812 OD650 growth in defined medium
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: cby-bypass-growth
+    subject: cby_added
+    predicate: increases
+    object: growth
+    mechanism: Exogenous Cby permits robust growth despite loss of cbiP and cbiZ, consistent with entry
+      downstream of the CbiZ-associated requirement without identifying every intervening reaction.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:14990804
+      source_url: https://www.pnas.org/doi/10.1073/pnas.0305939101
+      snippet: block in Cbi salvaging
+      explanation: First native genetic Results and original Figure2A, Cby triangle curve versus no-corrinoid
+        double mutant; this is a bypass experiment, not a direct substrate-product measurement.
+      cache_path: evidence/PF01955/woodson-2004-native-genetics.txt
+      cache_sha256: a69158dd90a979081df32a8c6eff1f04e6b057b30f945b88c8c11a69cfadd69a
+- graph_id: salmonella-joint-cbiz-coby-2004
+  title: Joint archaeal cbiZ and cobY provision rescues Salmonella
+  scope: Heterologous M. mazei genes in S. enterica JE824 metE205 cobU330.
+  context: pMmCBIZ2 carries BOTH cbiZ+ and cobY+; aerobic defined liquid medium37C, dicyanoCbi15nM; Figure3A
+    OD650. Methods state DMB3uM and AP10mM supplementation; per-arm AP details await supporting methods.
+  family_mapping: Donor cbiZ is MM_0173/Q8Q0G3 v1, PF01955 15-198 of200aa. CobY is a partner enzyme, not
+    assigned to PF01955; whole-protein coexpression, not isolated-domain testing.
+  scope_status: PHENOTYPIC
+  limitations: The intervention is joint cbiZ plus cobY provision, not independent sufficiency of either
+    gene. pMmCBIZ1 alone, pCOBY10 alone and vector lack comparable rescue; cobU+ is positive. Host enzymes
+    remain necessary; no native M. mazei growth or direct molecular intermediate is established.
+  nodes:
+  - node_id: joint_genes
+    label: Joint cbiZ+ and cobY+ on pMmCBIZ2 versus control plasmids
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8Q0G3
+  - node_id: growth
+    label: Cbi-supported JE824 OD650 growth
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: joint-genes-growth
+    subject: joint_genes
+    predicate: increases
+    object: growth
+    mechanism: Co-provision of the archaeal salvage functions restores robust growth in the cobU-deficient
+      host, which retains the rest of the required synthesis and methionine-use machinery.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:14990804
+      source_url: https://www.pnas.org/doi/10.1073/pnas.0305939101
+      snippet: provided in trans
+      explanation: Heterologous-complementation Results and original Figure3A; single-gene and vector
+        curves prevent splitting the joint intervention into sufficient single-gene claims.
+      cache_path: evidence/PF01955/woodson-2004-heterologous.txt
+      cache_sha256: 27566345fa70fc3e7e8c77a13faa9b2b77ab81167609905af7051ed7a07d718d
+- graph_id: salmonella-ap-rescue-2004
+  title: AP supplementation restores growth with joint cbiZ and cobY in a cobD mutant
+  scope: S. enterica metE205 cobU330 cobD1272 carrying pMmCBIZ2(cbiZ+ cobY+).
+  context: Figure3B AP-positive versus AP-negative arms, aerobic defined liquid medium37C, dicyanoCbi15nM,
+    OD650. General Methods give AP10mM; Figure3B labels explicitly distinguish its addition.
+  family_mapping: M. mazei donor CbiZ Q8Q0G3 v1, PF01955 15-198; host strain named JE6894 in caption but
+    JE6984 in Results. Exact host label and per-arm recipe remain unresolved.
+  scope_status: PHENOTYPIC
+  limitations: Conditional AP rescue requires both donor genes and other host machinery, not AP alone.
+    General Methods supplementation and AP-negative arms require reconciliation. This does not directly
+    show CbiZ catalysis, CobD chemistry or individual intracellular intermediates.
+  nodes:
+  - node_id: ap_added
+    label: AP addition with joint cbiZ+ cobY+ in the cobU cobD host
+    node_type: PERTURBATION
+  - node_id: growth
+    label: Cbi-supported OD650 growth of the triple-mutant host
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: ap-conditional-growth
+    subject: ap_added
+    predicate: increases
+    object: growth
+    mechanism: AP addition allows growth when pMmCBIZ2 alone does not rescue this cobD-deficient background.
+      Vector plus AP stays low, while cobU+ rescues with or without AP; the rescue is conditional, not
+      an independently sufficient nutrient effect.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:14990804
+      source_url: https://www.pnas.org/doi/10.1073/pnas.0305939101
+      snippet: AP was added
+      explanation: Alternative-pathway Results and original Figure3B visually inspected, circles versus
+        squares with matched joint donor genes. Caption/Results strain conflict remains explicit.
+      cache_path: evidence/PF01955/woodson-2004-heterologous.txt
+      cache_sha256: 27566345fa70fc3e7e8c77a13faa9b2b77ab81167609905af7051ed7a07d718d
+- graph_id: mk-cbis-corrinoid-conversion-2006
+  title: Purified M. kandleri CbiS converts several corrinoids to a Cby-assigned product
+  scope: Whole MK1672 CbiS fusion expressed in E. coli ER2566, not a purified PF01955 fragment.
+  context: Woodson2006 pMkCBIS3, C-terminal chitin-binding tag cleaved; anoxic90C, dim light,1h,360uMsubstrate,1.5MKPi
+    pH9. Printed0.9mg enzyme in40ul conflicts with0.23mg/ml stock and substrate mass balance; no corrected
+    amount or validated absolute rate is assumed.
+  family_mapping: Q8TUT1 v1/AAM02885.1,357aa,pgpA/MK1672 from M.kandleriAV19 taxon190192. PF01955 8-205
+    and PF04608 257-353. Deposited CDS translation matches, but historical purified-fusion junction/scar
+    is unresolved; see woodson-2006-identity-constructs ledger.
+  taxon: NCBITaxon:190192
+  scope_status: MECHANISTIC
+  limitations: Cby assignment follows HPLC and ligand-free MALDI, not intact AdoCby measurement or separate
+    coproduct detection. Alternative-substrate mass checks are text-reported without individual spectra.
+    No pseudoCbl negative, universal specificity, isolated-domain catalysis or native flux is inferred.
+    Figure4 axis365nm differs from caption367nm.
+  nodes:
+  - node_id: cbi_reaction
+    label: Purified whole CbiS with dicyanoCbi
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8TUT1
+  - node_id: adocbi_reaction
+    label: Purified whole CbiS with AdoCbi
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8TUT1
+  - node_id: cbip_reaction
+    label: Purified whole CbiS with dicyanoCbi-P
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8TUT1
+  - node_id: cbigdp_reaction
+    label: Purified whole CbiS with dicyanoCbi-GDP
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8TUT1
+  - node_id: cnb12_reaction
+    label: Purified whole CbiS with cyanocobalamin
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8TUT1
+  - node_id: cby
+    label: Cby-assigned corrinoid after analytical processing
+    node_type: STATE
+  edges:
+  - edge_id: cbi-cby
+    subject: cbi_reaction
+    predicate: produces
+    object: cby
+    mechanism: The purified fusion hydrolyzes the substrate's aminopropanol-linked amide bond. HPLC adds
+      a14.7min Cby-assigned peak and isolated product yields ligand-free m/z932.6; the enzyme-minus reaction
+      lacks the product peak.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: Cby was clearly detectable
+      explanation: Amidohydrolase/analytical Methods and Results; original Figures4A/B and5A visually
+        inspected. The assay uses whole fusion and does not resolve its exact historical C-terminal scar.
+      cache_path: evidence/PF01955/woodson-2006-corrinoid-assays.txt
+      cache_sha256: e7cd900a7fb85a764ff3d85c800946022526c5379dbfa78bdd630b43e258116d
+  - edge_id: adocbi-cby
+    subject: adocbi_reaction
+    predicate: produces
+    object: cby
+    mechanism: AdoCbi also yields Cby-assigned product in the substrate comparison. Analytical processing
+      and ligand-free mass do not establish the intact cobalt-ligand state of the initial product.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: Cby was clearly detectable
+      explanation: Original Figure6D AdoCbi bar and substrate Results; product mass validation is reported
+        without its separate spectrum. Rates are not silently reconciled with the printed protocol.
+      cache_path: evidence/PF01955/woodson-2006-corrinoid-assays.txt
+      cache_sha256: e7cd900a7fb85a764ff3d85c800946022526c5379dbfa78bdd630b43e258116d
+  - edge_id: cbip-cby
+    subject: cbip_reaction
+    predicate: produces
+    object: cby
+    mechanism: DicyanoCbi-P yields Cby-assigned product under the tested cell-free conditions. This shows
+      utilization of a phosphorylated substrate, not the native order of salvage intermediates.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: Cby was clearly detectable
+      explanation: Original Figure6D Cbi-P bar and substrate Results; its isolated-product m/z932.6 is
+        text-reported, not individually displayed.
+      cache_path: evidence/PF01955/woodson-2006-corrinoid-assays.txt
+      cache_sha256: e7cd900a7fb85a764ff3d85c800946022526c5379dbfa78bdd630b43e258116d
+  - edge_id: cbigdp-cby
+    subject: cbigdp_reaction
+    predicate: produces
+    object: cby
+    mechanism: DicyanoCbi-GDP yields Cby-assigned product in the purified-fusion assay. No independent
+      GDP release or native intracellular remodeling step is measured.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: Cby was clearly detectable
+      explanation: Original Figure6D Cbi-GDP bar and substrate Results; product identification is reported
+        by mass but its separate spectrum is not shown.
+      cache_path: evidence/PF01955/woodson-2006-corrinoid-assays.txt
+      cache_sha256: e7cd900a7fb85a764ff3d85c800946022526c5379dbfa78bdd630b43e258116d
+  - edge_id: cnb12-cby
+    subject: cnb12_reaction
+    predicate: produces
+    object: cby
+    mechanism: Cyanocobalamin with its nucleotide loop yields Cby-assigned product. The assay does not
+      show a universal loop-independent binding mode, pseudoCbl specificity or native B12 destruction.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: Cby was clearly detectable
+      explanation: Original Figure6D CNB12 bar and substrate Results; the Discussion binding explanation
+        remains a prediction. All alternative-substrate product mass spectra are data not shown.
+      cache_path: evidence/PF01955/woodson-2006-corrinoid-assays.txt
+      cache_sha256: e7cd900a7fb85a764ff3d85c800946022526c5379dbfa78bdd630b43e258116d
+- graph_id: mk-cbis-assay-conditions-2006
+  title: Defined assay changes alter CbiS corrinoid-hydrolysis output
+  scope: Separate cell-free condition comparisons using the purified whole MK1672 fusion, not native-cell
+    regulation or isolated-domain tests.
+  context: Woodson2006 Figure6A-C and O2 Results; dicyanoCbi assay. pH profile at90C/1.5MKPi; temperature
+    profile atpH9/1.5MKPi; buffer and Mg comparisons atpH8. Baseline1h protocol has unresolved0.9mg/40ul
+    and mass-balance discrepancies; only directional comparisons are retained.
+  family_mapping: Q8TUT1 v1,357aa,PF01955 8-205 andPF04608 257-353, M.kandleriAV19. Purified pMkCBIS3
+    fusion; exact historical junction and protein-fold state unresolved.
+  taxon: NCBITaxon:190192
+  scope_status: PHENOTYPIC
+  limitations: Molecular causes of O2, pH, temperature and salt effects are UNRESOLVED. Figure6 error
+    definition and replicate count are unspecified; no significance, precise fold change, binding mechanism
+    or universal optimum is claimed. Separate comparisons must not be joined into one reaction recipe
+    or a monotonic phosphate response.
+  nodes:
+  - node_id: oxygen
+    label: Atmospheric O2 versus the anoxic baseline
+    node_type: PERTURBATION
+  - node_id: ph6_to9
+    label: pH9 versus pH6 at90C in1.5MKPi
+    node_type: PERTURBATION
+  - node_id: ph9_to95
+    label: pH9.5 versus pH9 at90C in1.5MKPi
+    node_type: PERTURBATION
+  - node_id: temp70_to90
+    label: 90C versus70C atpH9 in1.5MKPi
+    node_type: PERTURBATION
+  - node_id: mg_hepes
+    label: Add10mMMgCl2 to50mMHEPES atpH8
+    node_type: PERTURBATION
+  - node_id: buffer_switch
+    label: Replace50mMHEPES with1.5MKPi atpH8 without addedMg
+    node_type: PERTURBATION
+  - node_id: kpi50_to500
+    label: 500mM versus50mMKPi atpH8
+    node_type: PERTURBATION
+  - node_id: kpi500_to1500
+    label: 1.5M versus500mMKPi atpH8
+    node_type: PERTURBATION
+  - node_id: output
+    label: Measured Cby-forming assay activity relative to each stated comparator
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8TUT1
+  edges:
+  - edge_id: oxygen-output
+    subject: oxygen
+    predicate: decreases
+    object: output
+    mechanism: Atmospheric oxygen suppresses measured amidohydrolase activity below the reported detection
+      limit. Failure of10mMDTT to restore it does not identify a cysteine mechanism or prove that the
+      protein remains correctly folded.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: no product was detected
+      explanation: CbiS-dependent conversion Results explicitly compare anoxic and atmosphericO2 reactions.
+        O2 and DTT arms are text-reported, data not shown; phosphatase persistence is not a folding assay.
+      cache_path: evidence/PF01955/woodson-2006-corrinoid-assays.txt
+      cache_sha256: e7cd900a7fb85a764ff3d85c800946022526c5379dbfa78bdd630b43e258116d
+  - edge_id: ph6-to9-output
+    subject: ph6_to9
+    predicate: increases
+    object: output
+    mechanism: Changing the assay frompH6 to9 increases measured Cby-forming activity. This is a buffer-pH
+      effect under the tested conditions, not identification of catalytic ionization states.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: highest level of activity
+      explanation: Original Figure6A pH6 and9 bars inspected; other tested values include7.5,8,8.5 and9.5.
+        Only the stated comparison is represented.
+      cache_path: evidence/PF01955/woodson-2006-corrinoid-assays.txt
+      cache_sha256: e7cd900a7fb85a764ff3d85c800946022526c5379dbfa78bdd630b43e258116d
+  - edge_id: ph9-to95-output
+    subject: ph9_to95
+    predicate: decreases
+    object: output
+    mechanism: Increasing pH beyond9 to9.5 lowers the measured output, preserving the observed nonmonotonic
+      profile without claiming a universal physiological optimum.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: highest level of activity
+      explanation: Original Figure6A pH9 and9.5 bars inspected; no catalytic-residue or stability measurement
+        accompanies the profile.
+      cache_path: evidence/PF01955/woodson-2006-corrinoid-assays.txt
+      cache_sha256: e7cd900a7fb85a764ff3d85c800946022526c5379dbfa78bdd630b43e258116d
+  - edge_id: temperature-output
+    subject: temp70_to90
+    predicate: increases
+    object: output
+    mechanism: The90C reaction has higher measured activity than70C. Similar90/100C output does not show
+      that fusion increases thermostability compared with separate domains.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: highest level of activity
+      explanation: Original Figure6B atpH9,1.5MKPi; Discussion fusion-thermostability proposal is explicitly
+        separate from these whole-protein activity measurements.
+      cache_path: evidence/PF01955/woodson-2006-corrinoid-assays.txt
+      cache_sha256: e7cd900a7fb85a764ff3d85c800946022526c5379dbfa78bdd630b43e258116d
+  - edge_id: magnesium-hepes-output
+    subject: mg_hepes
+    predicate: increases
+    object: output
+    mechanism: Adding magnesium chloride to the HEPES assay raises Cby-forming output. This does not establish
+      an obligatory metal cofactor or direct magnesium-binding site; Mg addition toKPi did not significantly
+      increase output in the text-reported control.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: highest level of activity
+      explanation: Original Figure6C first two bars and buffer Results; both contain50mMHEPES atpH8, with
+        versus without10mMMgCl2.
+      cache_path: evidence/PF01955/woodson-2006-corrinoid-assays.txt
+      cache_sha256: e7cd900a7fb85a764ff3d85c800946022526c5379dbfa78bdd630b43e258116d
+  - edge_id: buffer-composition-output
+    subject: buffer_switch
+    predicate: increases
+    object: output
+    mechanism: The1.5MKPi mixture gives more Cby-forming activity than50mMHEPES without addedMg. Buffer
+      identity and concentration both change, so this is not an isolated phosphate-binding effect.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: highest level of activity
+      explanation: Original Figure6C HEPES-only and final1.5MKPi bars, withpH8 comparison described in
+        Results. No exact fold is curated.
+      cache_path: evidence/PF01955/woodson-2006-corrinoid-assays.txt
+      cache_sha256: e7cd900a7fb85a764ff3d85c800946022526c5379dbfa78bdd630b43e258116d
+  - edge_id: phosphate50-to500-output
+    subject: kpi50_to500
+    predicate: increases
+    object: output
+    mechanism: Raising KPi from50 to500mM increases measured activity atpH8. Ionic-strength, buffer-capacity
+      and specific-ion mechanisms are not separated.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: highest level of activity
+      explanation: Figure6C visibly labels the50mM endpoint; Results identifies500mM as the peak. No unprinted
+        intermediate concentration is assigned.
+      cache_path: evidence/PF01955/woodson-2006-corrinoid-assays.txt
+      cache_sha256: e7cd900a7fb85a764ff3d85c800946022526c5379dbfa78bdd630b43e258116d
+  - edge_id: phosphate500-to1500-output
+    subject: kpi500_to1500
+    predicate: decreases
+    object: output
+    mechanism: Raising KPi above the reported500mM peak to1.5M lowers measured output. The graph therefore
+      does not present phosphate concentration as a monotonically activating input.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: highest level of activity
+      explanation: Original Figure6C final1.5M bar is below the peak identified as500mM in Results; no
+        mechanistic cause or precise fold is inferred.
+      cache_path: evidence/PF01955/woodson-2006-corrinoid-assays.txt
+      cache_sha256: e7cd900a7fb85a764ff3d85c800946022526c5379dbfa78bdd630b43e258116d
+- graph_id: salmonella-cbis-coby-rescue-2006
+  title: Whole or N-terminal CbiS jointly with CobY supports Cbi-dependent growth
+  scope: Heterologous M.kandleri CbiS constructs plus M.mazei CobY in S.entericaJE824, not native M.kandleri
+    growth.
+  context: Woodson2006 Figure3A; aerobic defined liquid medium37C,10nMdicyanoCbi,OD650 through9h. WholepMkCBIS4
+    or N-terminalpMkCBIS6 supplied together withpCOBY38(cobY+).
+  family_mapping: DonorQ8TUT1 v1,357aa,PF01955 8-205 andPF04608 257-353. pMkCBIS6 intends1-207, coveringPF01955;
+    its printedSalI primer discrepancy leaves exact historical clone verification open. The pMkCBIS7 C-terminal
+    control lacksPF01955.
+  scope_status: PHENOTYPIC
+  limitations: Joint donor functions and host machinery are required; not independent sufficiency of cbiS
+    or cobY. Main/captionmetE205cobU330 differs fromTable1cbiP236::Tn10d(Tet)cobU330. CobY-alone shows
+    residual late growth. No direct fragment catalysis, intracellular intermediate, abundance/folding
+    control or quantitative fitness estimate is established.
+  nodes:
+  - node_id: full_joint
+    label: Joint wholecbiS andcobY provision versus the single-gene controls
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8TUT1
+  - node_id: nterm_joint
+    label: N-terminalcbiS pluscobY versus C-terminalcbiS pluscobY
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8TUT1
+  - node_id: growth
+    label: JE824 Cbi-supported OD650 growth
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: full-joint-growth
+    subject: full_joint
+    predicate: increases
+    object: growth
+    mechanism: Joint wholecbiS andcobY expression restores robust growth; wholecbiS alone remainslow andcobY
+      alone gives a smaller lateincrease. The cobU-positive arm is an independent positive control.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: Cbi-dependent growth was observed
+      explanation: Original Figure3A and first salvage Results; compare joint full-length genes withcbiS-only
+        andcobY-only curves. Single genes are not represented as independently sufficient causes.
+      cache_path: evidence/PF01955/woodson-2006-heterologous.txt
+      cache_sha256: 60b9e872139f4cdb06b2e135943ffaffdf3009704c77ac27a1ccf12df8d7838d
+  - edge_id: nterm-joint-growth
+    subject: nterm_joint
+    predicate: increases
+    object: growth
+    mechanism: With CobY present, the N-terminal fragment supports robust growth whereas the C-terminal
+      fragment does not. This locates the rescue-associated function to a PF01955-containing segment without
+      proving purified-domain chemistry.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: Cbi-dependent growth was observed
+      explanation: Original Figure3A N-terminal+cobY and C-terminal+cobY curves; pMkCBIS6/7 Methods and
+        sequence mapping constrain interpretation. Negative-fragment expression/folding is not independently
+        shown.
+      cache_path: evidence/PF01955/woodson-2006-heterologous.txt
+      cache_sha256: 60b9e872139f4cdb06b2e135943ffaffdf3009704c77ac27a1ccf12df8d7838d
+- graph_id: salmonella-cbis-ap-context-2006
+  title: CbiS-dependent rescue remains conditional on the cobD and AP context
+  scope: S.entericaJE6984 cobU cobD background carrying archaeal donor constructs; no standalone AP or
+    CbiS sufficiency claim.
+  context: Woodson2006 Figure3B; aerobic defined liquid medium37C,10nMdicyanoCbi,OD650 through9h. WholecbiS+cobY
+    is compared with and withoutAP; N-terminal versus C-terminal fragments are compared with bothCobY
+    andAP supplied. AP concentration is not restated for these individual2006 arms.
+  family_mapping: Q8TUT1 v1 wholepMkCBIS4 or intended1-207pMkCBIS6; PF01955 8-205. ControlpMkCBIS7 intends208-357
+    and containsPF04608 but notPF01955; printed208-250 and predicted primerY208S plusMet remain unresolved.
+    CobY is not a PF01955 enzyme.
+  scope_status: PHENOTYPIC
+  limitations: Main/captioncobD1272 versusTable1cobD1230::Tn10d(Chl), metE labels and complete host background
+    require reconciliation. No N-terminal-minus-AP curve is shown, so its rescue is not modeled as an
+    isolated AP-addition comparison. Growth is not direct intracellular chemistry or proof of the negative
+    fragment's integrity.
+  nodes:
+  - node_id: ap_full
+    label: AP addition with joint wholecbiS andcobY inJE6984
+    node_type: PERTURBATION
+  - node_id: nterm_joint_ap
+    label: N-terminal versus C-terminalcbiS withCobY andAP inJE6984
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8TUT1
+  - node_id: growth
+    label: JE6984 Cbi-supported OD650 growth
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: ap-full-joint-growth
+    subject: ap_full
+    predicate: increases
+    object: growth
+    mechanism: AP addition restores growth with wholecbiS andcobY where the matched no-AP arm stayslow.
+      This is conditional rescue requiring donor and host functions, not AP-only sufficiency.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: Cbi-dependent growth was observed
+      explanation: Original Figure3B wholecbiS+cobY curves with versus withoutAP; Results andTable1 host-allele
+        conflict is retained rather than resolved by assumption.
+      cache_path: evidence/PF01955/woodson-2006-heterologous.txt
+      cache_sha256: 60b9e872139f4cdb06b2e135943ffaffdf3009704c77ac27a1ccf12df8d7838d
+  - edge_id: nterm-joint-ap-growth
+    subject: nterm_joint_ap
+    predicate: increases
+    object: growth
+    mechanism: Replacing the C-terminal construct with the PF01955-containing N-terminal construct increases
+      growth when CobY andAP are already present. The comparison changes the fragment and does not establish
+      a separate N-terminal AP-dependence experiment.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16740929
+      source_url: https://journals.asm.org/doi/10.1128/jb.00227-06
+      snippet: Cbi-dependent growth was observed
+      explanation: Original Figure3B N-terminal+cobY+AP versus C-terminal+cobY+AP curves; Figure3C/D phosphatase-related
+        controls remain outside PF01955 causal edges.
+      cache_path: evidence/PF01955/woodson-2006-heterologous.txt
+      cache_sha256: 60b9e872139f4cdb06b2e135943ffaffdf3009704c77ac27a1ccf12df8d7838d
+- graph_id: rs-cbiz-purified-conversion-2009
+  title: Tagged Rhodobacter CbiZ produces Cby-assigned material from four substrates
+  scope: Purified whole RSP_2406 with retained N-terminal MBP/His6 tags, expressed from pRsCBIZ3 in E.coli
+    BL21(DE3).
+  context: Gray2009 Figure3D; 200ul,2ug fusion,30uM indicated corrinoid,50mM CHES pH10,1mM DTT,50C,dim
+    light,10min. Heat95C10min then0.1M KCN/bright light15min before HPLC.
+  family_mapping: Q3J3R7v1/ABA78567.1,219aa,RSP_2406,PF01955 6-208 in R.sphaeroides2.4.1 (current Cereibacter
+    sphaeroides,taxon272943). CDS and flanking-primer matches support native-parent identity; full historical
+    tag/linker junction remains unresolved.
+  taxon: NCBITaxon:272943
+  scope_status: MECHANISTIC
+  limitations: Whole tagged enzyme, not isolated PF01955 or native untagged protein. Product is assigned
+    after cyanide derivatization, not intact AdoCby mass or coproduct measurement. AdoCbl/CNCbl show no
+    observed hydrolysis under these conditions. No MBP-only control is identified in the inspected main
+    report; supplementS2 is uninspected. No family-wide specificity, catalytic residue or direct pseudoCbl-to-Cbl
+    synthesis is claimed.
+  nodes:
+  - node_id: ado_cbi
+    label: Tagged CbiZ with AdoCbi under substrate-assay conditions
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q3J3R7
+  - node_id: cyano_cbi
+    label: Tagged CbiZ with dicyanoCbi under substrate-assay conditions
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q3J3R7
+  - node_id: ado_pseudo
+    label: Tagged CbiZ with AdopseudoCbl under substrate-assay conditions
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q3J3R7
+  - node_id: cyano_pseudo
+    label: Tagged CbiZ with CNpseudoCbl under substrate-assay conditions
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q3J3R7
+  - node_id: cby
+    label: Cby-assigned product after analytical derivatization
+    node_type: STATE
+  edges:
+  - edge_id: ado-cbi-product
+    subject: ado_cbi
+    predicate: produces
+    object: cby
+    mechanism: The purified fusion converts AdoCbi to material assigned as Cby by processed-sample HPLC.
+      Amidohydrolysis is supported at the whole-enzyme assay level, not at residue resolution.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19889098
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+      snippet: product formation
+      explanation: Original Figure3D AdoCbi bar and purified Results/assay Methods;10min substrate assay,
+        retained tags and cyano-product detection are explicit.
+      cache_path: evidence/PF01955/gray-2009-purified-assays.txt
+      cache_sha256: 392fc2d3d2379bc21614a0279b7d0a2f99d8d17fc596d29afcf766b5cba661f3
+  - edge_id: cyano-cbi-product
+    subject: cyano_cbi
+    predicate: produces
+    object: cby
+    mechanism: DicyanoCbi supports detectable Cby-assigned product formation by the fusion, at lower reported
+      activity than AdoCbi. This does not establish physiological substrate order.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19889098
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+      snippet: product formation
+      explanation: Original Figure3D dicyanoCbi bar and substrate Results; the small positive bar is not
+        confused with the undetected cobalamin arms.
+      cache_path: evidence/PF01955/gray-2009-purified-assays.txt
+      cache_sha256: 392fc2d3d2379bc21614a0279b7d0a2f99d8d17fc596d29afcf766b5cba661f3
+  - edge_id: ado-pseudo-product
+    subject: ado_pseudo
+    predicate: produces
+    object: cby
+    mechanism: The fusion cleaves AdopseudoCbl to Cby-assigned corrinoid material. The released nucleotide-loop
+      product is not independently measured, and subsequent Cbl assembly is not part of this purified
+      reaction.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19889098
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+      snippet: product formation
+      explanation: Original Figure3D AdopseudoCbl bar and substrate Results; observed conversion remains
+        distinct from the proposed complete cellular remodeling pathway.
+      cache_path: evidence/PF01955/gray-2009-purified-assays.txt
+      cache_sha256: 392fc2d3d2379bc21614a0279b7d0a2f99d8d17fc596d29afcf766b5cba661f3
+  - edge_id: cyano-pseudo-product
+    subject: cyano_pseudo
+    predicate: produces
+    object: cby
+    mechanism: CNpseudoCbl also supports detectable Cby-assigned product formation under the assay conditions.
+      The upper-ligand comparison is not generalized to all CbiZ members.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19889098
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+      snippet: product formation
+      explanation: Original Figure3D CNpseudoCbl bar and Results; no unperformed native-cell cyano-substrate
+        reaction is inferred.
+      cache_path: evidence/PF01955/gray-2009-purified-assays.txt
+      cache_sha256: 392fc2d3d2379bc21614a0279b7d0a2f99d8d17fc596d29afcf766b5cba661f3
+- graph_id: rs-cbiz-assay-conditions-2009
+  title: Buffer, temperature and DTT conditions change tagged-CbiZ assay output
+  scope: Separate purified MBP/His6-CbiZ AdoCbi activity comparisons, not native-cell perturbations.
+  context: Gray2009 Figure3A/B and DTT Results;200ul,2ug fusion,30uM AdoCbi. Figure3 default15min; pH
+    panels at30C and temperature panels atpH10. Tris pH7,CHES pH10,CAPS pH11 are50mM. DTT omission is
+    text-reported without a displayed time course.
+  family_mapping: Whole Q3J3R7v1 parent,RSP_2406,PF01955 6-208; retained N-terminal tags and historical
+    full-junction uncertainty as in the substrate graph.
+  taxon: NCBITaxon:272943
+  scope_status: PHENOTYPIC
+  limitations: Measured activity means and SD, not demonstrated statistical significance or a molecular
+    explanation. Buffer identity changes with pH. Temperature effects do not prove folding stability;
+    DTT dependence does not prove a catalytic cysteine. Enzyme-assay N and exact DTT-omission timing remain
+    unresolved. Do not transfer the10min substrate protocol to all condition panels.
+  nodes:
+  - node_id: buffer7_to10
+    label: Tris pH7 changed to CHES pH10 at30C
+    node_type: PERTURBATION
+  - node_id: buffer10_to11
+    label: CHES pH10 changed to CAPS pH11 at30C
+    node_type: PERTURBATION
+  - node_id: temp25_to50
+    label: Temperature raised from25C to50C atpH10
+    node_type: PERTURBATION
+  - node_id: temp50_to60
+    label: Temperature raised from50C to60C atpH10
+    node_type: PERTURBATION
+  - node_id: dtt_omitted
+    label: Omission of1mM DTT from the reported AdoCbi assay
+    node_type: PERTURBATION
+  - node_id: output
+    label: Measured Cby-assigned activity in the corresponding assay
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: buffer7-to10-output
+    subject: buffer7_to10
+    predicate: increases
+    object: output
+    mechanism: The combined buffer and pH change increases the displayed mean output. Proton concentration
+      and buffer chemistry are not separately controlled by this comparison.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19889098
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+      snippet: product formation
+      explanation: Original Figure3A pH7 versus10 bars, with buffer assignments from Methods; no pKa or
+        significant-difference claim.
+      cache_path: evidence/PF01955/gray-2009-purified-assays.txt
+      cache_sha256: 392fc2d3d2379bc21614a0279b7d0a2f99d8d17fc596d29afcf766b5cba661f3
+  - edge_id: buffer10-to11-output
+    subject: buffer10_to11
+    predicate: decreases
+    object: output
+    mechanism: Switching from CHES pH10 to CAPS pH11 decreases mean output, so the profile is not represented
+      as monotonic pH activation.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19889098
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+      snippet: product formation
+      explanation: Original Figure3A pH10 versus11 bars and Methods; both buffer identity and pH change.
+      cache_path: evidence/PF01955/gray-2009-purified-assays.txt
+      cache_sha256: 392fc2d3d2379bc21614a0279b7d0a2f99d8d17fc596d29afcf766b5cba661f3
+  - edge_id: temp25-to50-output
+    subject: temp25_to50
+    predicate: increases
+    object: output
+    mechanism: Raising reaction temperature from25C to50C increases the mean measured activity under the
+      matched pH10 assay conditions.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19889098
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+      snippet: product formation
+      explanation: Original Figure3B endpoint bars at25C and50C; catalytic and physical explanations are
+        not experimentally separated.
+      cache_path: evidence/PF01955/gray-2009-purified-assays.txt
+      cache_sha256: 392fc2d3d2379bc21614a0279b7d0a2f99d8d17fc596d29afcf766b5cba661f3
+  - edge_id: temp50-to60-output
+    subject: temp50_to60
+    predicate: decreases
+    object: output
+    mechanism: Raising the assay temperature from50C to60C decreases mean output. This is not evidence
+      for a measured unfolding transition or irreversible inactivation.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19889098
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+      snippet: product formation
+      explanation: Original Figure3B final two bars and caption; no thermal-stability assay is reported
+        for this comparison.
+      cache_path: evidence/PF01955/gray-2009-purified-assays.txt
+      cache_sha256: 392fc2d3d2379bc21614a0279b7d0a2f99d8d17fc596d29afcf766b5cba661f3
+  - edge_id: dtt-omission-output
+    subject: dtt_omitted
+    predicate: decreases
+    object: output
+    mechanism: The Results report output below0.1nmol/min/mg without DTT versus active DTT-containing
+      AdoCbi assays. The molecular reason for this requirement is unresolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19889098
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+      snippet: product formation
+      explanation: Purified-CbiZ Results explicitly report the DTT-omission observation as data not shown;
+        it is not claimed to be a visually verified Figure3 arm.
+      cache_path: evidence/PF01955/gray-2009-purified-assays.txt
+      cache_sha256: 392fc2d3d2379bc21614a0279b7d0a2f99d8d17fc596d29afcf766b5cba661f3
+- graph_id: rs-cbiz-acetate-growth-2009
+  title: Native cbiZ deletion and plasmid rescue change pseudoCbl-supported acetate growth
+  scope: R.sphaeroides2.4.1-derived delta-cobB strains, with whole-gene deletion or restoration.
+  context: Gray2009 Figure2A/B rows4/5;oxic30C48h,mSistrom30mM acetate,15nM CNpseudoCbl,1ug/ml tetracycline,triplicate
+    OD650 andSD. JE10778 delta-cobB/pRK404 versusJE10779 delta-cobBdelta-cbiZ/pRK404; rescueJE10781 haspRsCBIZ6.
+    Both no-DMB andDMB arms support the comparison; DMB dose remains unresolved.
+  family_mapping: RSP_2406/Q3J3R7v1,PF01955 6-208 of219aa. Rescue insert maps the native CDS plus40bpdownstream.
+    Exact historical deletion endpoints remain pending; this is not isolated-domain mutagenesis.
+  taxon: NCBITaxon:272943
+  scope_status: PHENOTYPIC
+  limitations: OD650 is not viability or direct corrinoid chemistry. The deletion retains residual growth.
+    Cbi/Cbl support growth withoutcbiZ; DMB alone does not restore the pseudoCbl defect. Other host functions
+    are required. No universal essentiality or direct CbiZ control of acetate-catabolism enzymes is inferred.
+    The author's phantom fourth-column caption is not used as an experiment.
+  nodes:
+  - node_id: deletion
+    label: cbiZ deletion in the delta-cobB vector background
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q3J3R7
+  - node_id: rescue
+    label: pRsCBIZ6 cbiZ provision versus vector in the double mutant
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q3J3R7
+  - node_id: growth
+    label: CNpseudoCbl-supported acetate OD650 growth
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: deletion-growth
+    subject: deletion
+    predicate: decreases
+    object: growth
+    mechanism: Loss ofcbiZ reduces the observed pseudoCbl-supported growth curves relative to the cbiZ-positive
+      parent in the matched delta-cobB context. The intervening cellular reactions are not directly measured
+      here.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19889098
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+      snippet: cells grew
+      explanation: Original Figure2A/B row4 vector curves, repeated in row5 withDMB; Results andTable2
+        identify the strains. Residual growth and substrate controls are retained.
+      cache_path: evidence/PF01955/gray-2009-cellular-contexts.txt
+      cache_sha256: fd3733e52154fe1e0c8723732b75097b2012509a2b7b08b0fff9787043fe9f63
+  - edge_id: rescue-growth
+    subject: rescue
+    predicate: increases
+    object: growth
+    mechanism: ProvidingcbiZ onpRsCBIZ6 restores robust pseudoCbl-supported growth in the double mutant
+      relative to its vector control. This is conditional genetic rescue, not standalone cobamide synthesis
+      byCbiZ.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19889098
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+      snippet: cells grew
+      explanation: Original Figure2B rows4/5 open triangles versus black squares, constructMethods/Table3
+        andTable2 JE10781. This rescue is not transferred to the separate succinate profile experiment.
+      cache_path: evidence/PF01955/gray-2009-cellular-contexts.txt
+      cache_sha256: fd3733e52154fe1e0c8723732b75097b2012509a2b7b08b0fff9787043fe9f63
+- graph_id: rs-cbiz-cellular-profiles-2009
+  title: cbiZ deletion shifts cellular corrinoid fraction profiles
+  scope: Separate R.sphaeroides2.4.1-derived delta-cobB versus delta-cobBdelta-cbiZ cultures, not the
+    acetate growth experiment.
+  context: Gray2009 Table1 and cellularResults;oxic3days,mSistrom30mM succinate,50nM CNpseudoCbl. Methanol
+    extraction55C2h,10mM KCN/bright light30min,HPLC2minfractions,JE8248 cobS bioassay andCFU normalization.
+  family_mapping: Native RSP_2406/Q3J3R7v1,PF01955 6-208; whole-gene deletion context with historical
+    allele endpoints pending.
+  taxon: NCBITaxon:272943
+  scope_status: PHENOTYPIC
+  limitations: Fraction identities use retention and growth bioassay because pigments mask direct corrinoid
+    peaks. This is not intact intracellular AdoCbl mass or a directly observed complete pathway. No profile-rescue
+    arm is reported. SupplementS1 traces remain uninspected; calibration25-250pM in Methods differs from50-250pM
+    in Results. The null retains pseudoCbl-like material, opposing complete uptake failure but not proving
+    a transporter interaction.
+  nodes:
+  - node_id: deletion
+    label: cbiZ deletion in the delta-cobB succinate culture context
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q3J3R7
+  - node_id: cbl_fraction
+    label: Fraction of detected cobamide signal at30min matching the Cbl-like profile
+    node_type: PHENOTYPE
+  - node_id: pseudo_fraction
+    label: Fraction of detected cobamide signal at24min matching the pseudoCbl-like profile
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: deletion-cbl-fraction
+    subject: deletion
+    predicate: decreases
+    object: cbl_fraction
+    mechanism: The parent has63percent of its bioassay-detected cobamide in the30min fraction, while the
+      deletion strain's detected signal is confined to24min. This supports a cbiZ-dependent change in
+      the Cbl-like profile without identifying all intracellular intermediates.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19889098
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+      snippet: elution profile
+      explanation: Table1 matched CNpseudoCbl rows and authentic standards, with Results/analysisMethods.
+        Blank fractions are interpreted alongside the explicit Results, not as a universal absence of
+        the molecule.
+      cache_path: evidence/PF01955/gray-2009-cellular-contexts.txt
+      cache_sha256: fd3733e52154fe1e0c8723732b75097b2012509a2b7b08b0fff9787043fe9f63
+  - edge_id: deletion-pseudo-fraction
+    subject: deletion
+    predicate: increases
+    object: pseudo_fraction
+    mechanism: In the deletion strain all detected cobamide activity is in the24min fraction, unlike the
+      parent's26-32min profile. The relative profile shift is not an increase in total cellular cobamide;
+      reported totals are about200 versus420molecules perCFU.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19889098
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2009.06928.x
+      snippet: elution profile
+      explanation: Table1 and cellularResults compare fraction percentages, not absolute uptake rates
+        or total abundance. SupplementS1 has not been visually verified.
+      cache_path: evidence/PF01955/gray-2009-cellular-contexts.txt
+      cache_sha256: fd3733e52154fe1e0c8723732b75097b2012509a2b7b08b0fff9787043fe9f63
+- graph_id: rs-cbiz-native-conditional-salvage-2009
+  title: Native Cbi salvage with CobP absent requires a conditional combination of functions
+  scope: R.sphaeroides2.4.1-derived delta-cobBdelta-cobP strains with native cbiZ and donor M.mazei CobY;
+    not CbiZ-alone sufficiency.
+  context: Gray2009 native-salvage Figures4/5 Cbi panels; oxic30C36h,mSistrom30mM acetate,15nM cyanoCbi,triplicate
+    OD650 withSD. JE11902 vector versusJE11903 pCOBY47; JE11906 additionally lacksCobD. JE10785 also lacksCbiZ
+    in the separateFigure4 experiment.
+  family_mapping: Native RSP_2406/Q3J3R7v1/ABA78567.1,219aa,PF01955 6-208,taxon272943. TableS1 primers
+    predict deletion70-609 and a41aa product retaining1-23 and204-219 aroundSR; printed70-610/48nt conflict
+    with that reconstruction. Actual historical clone sequence and residual peptide expression remain
+    unverified. CobY and nativeCobD/RSP_0430 are partner functions, not PF01955 enzymes.
+  taxon: NCBITaxon:272943
+  scope_status: PHENOTYPIC
+  limitations: CbiZ dependence is INFERRED across separate Figures4/5, not a matched plotted deletion/rescue
+    pair. Background effects are not exhaustively excluded. Methods tetracycline1ug/ml versus captions1ug/ul
+    is unresolved. OD650 is not intracellular chemistry, flux partition or statistical significance. Cbl
+    supports all tested strains; nativeCobP can bypass the CbiZ-dependent route. No universal essentiality
+    or direct transporter interaction is inferred.
+  nodes:
+  - node_id: coby_added
+    label: pCOBY47 CobY provision with nativeCbiZ andCobD retained
+    node_type: PERTURBATION
+  - node_id: cobd_deleted
+    label: CobD deletion with donorCobY and nativeCbiZ retained
+    node_type: PERTURBATION
+  - node_id: cbiz_absent
+    label: CbiZ-deficient JE10785 versus CbiZ-positive JE11903 across separate figures
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q3J3R7
+  - node_id: growth
+    label: Cbi-supported acetate OD650 growth in the specified background
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: coby-conditional-growth
+    subject: coby_added
+    predicate: increases
+    object: growth
+    mechanism: CobY provision restores robust Cbi-supported growth with nativeCbiZ andCobD present in
+      the delta-cobBdelta-cobP background. This requires the joint donor and host context, not CobY or
+      CbiZ independently.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19376876
+      source_url: https://journals.asm.org/doi/10.1128/jb.00230-09
+      snippet: growth
+      explanation: OriginalFigure5 Cbi panel, JE11903 pCOBY47 versusJE11902 vector; Table1 and native-growth
+        Methods. No-corrinoid andCbl controls constrain the effect.
+      cache_path: evidence/PF01955/gray-2009-native-salvage.txt
+      cache_sha256: 1d04a43a043270f109ca910b7c30a4f8c168d0c180787f020137dda3e90c43e1
+  - edge_id: cobd-conditional-growth
+    subject: cobd_deleted
+    predicate: decreases
+    object: growth
+    mechanism: RemovingCobD suppresses Cbi-supported growth when the CobY-dependent, nativeCbiZ-positive
+      route is being tested. This is a partner requirement in the joint salvage context, not direct PF01955
+      catalysis byCobD.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19376876
+      source_url: https://journals.asm.org/doi/10.1128/jb.00230-09
+      snippet: growth
+      explanation: OriginalFigure5 Cbi panel, JE11906 versusJE11903; both carrypCOBY47. Cbl still supports
+        growth; the CobD identity is nativeRSP_0430 rather than SalmonellaCobD.
+      cache_path: evidence/PF01955/gray-2009-native-salvage.txt
+      cache_sha256: 1d04a43a043270f109ca910b7c30a4f8c168d0c180787f020137dda3e90c43e1
+  - edge_id: cbiz-crossfigure-growth
+    subject: cbiz_absent
+    predicate: decreases
+    object: growth
+    mechanism: Comparing low Cbi-supported growth ofCbiZ-deficient JE10785 inFigure4 with robust growth
+      ofCbiZ-positive JE11903 inFigure5 supports a conditional CbiZ requirement when CobP is absent andCobY
+      supplied. This cross-figure inference does not establish a quantitative effect size or a directly
+      observed matched-pair deletion effect.
+    directness: UNRESOLVED
+    support: INFERRED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19376876
+      source_url: https://journals.asm.org/doi/10.1128/jb.00230-09
+      snippet: salvage Cbi
+      explanation: OriginalFigures4/5 Cbi panels, respectiveJE10785 andJE11903 arms, Table1 and native-salvage
+        Results. Separate experiments are not joined into an apparently observed molecular chain.
+      cache_path: evidence/PF01955/gray-2009-native-salvage.txt
+      cache_sha256: 1d04a43a043270f109ca910b7c30a4f8c168d0c180787f020137dda3e90c43e1
+- graph_id: rs-cbiz-native-cby-bypass-2009
+  title: Supplied Cby and donor CobY jointly bypass the native CbiZ-deficient salvage block
+  scope: R.sphaeroides2.4.1-derived delta-cobBdelta-cbiZdelta-cobP background; conditional bypass, not
+    restored CbiZ catalysis.
+  context: Gray2009 native-salvage Figure4; oxic30C36h,mSistrom30mM acetate,15nM indicated cyano-corrinoid,triplicate
+    OD650 withSD. JE10785 carriespCOBY47; Table1 vectorJE10780 is printedJE10708 in the caption. No-corrinoid,Cbi
+    andCbl arms remain controls.
+  family_mapping: Absent native RSP_2406/Q3J3R7v1 parent maps PF01955 6-208 of219aa. TableS1-based41aa
+    deletion-product prediction does not retain an intact domain and is not historical clone verification.
+    DonorCobY and retained nativeCobD are required context, not PF01955 biochemical activities.
+  taxon: NCBITaxon:272943
+  scope_status: PHENOTYPIC
+  limitations: NeitherCby norCobY is independently sufficient; both comparisons hold the other supplied
+    input fixed. Growth does not demonstrate direct uptake or each intracellular reaction. Methods1ug/ml
+    versus caption1ug/ul tetracycline and vector strain-label discrepancy remain unresolved. The48h Cbi
+    negative is text-reported,data not shown; displayed curves end36h.
+  nodes:
+  - node_id: cby_added
+    label: Cby versus no corrinoid with donorCobY in the triple mutant
+    node_type: PERTURBATION
+  - node_id: coby_added
+    label: DonorCobY versus vector with suppliedCby in the triple mutant
+    node_type: PERTURBATION
+  - node_id: growth
+    label: Cby-supported acetate OD650 growth in the triple mutant
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: cby-with-coby-growth
+    subject: cby_added
+    predicate: increases
+    object: growth
+    mechanism: ExogenousCby supports growth when donorCobY is already present, whereas the no-corrinoid
+      andCbi arms remain low. This condition bypasses the CbiZ-deficient entry step without restoringCbiZ
+      itself.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19376876
+      source_url: https://journals.asm.org/doi/10.1128/jb.00230-09
+      snippet: growth
+      explanation: OriginalFigure4 JE10785 open triangles, Cby versus no-corrinoid panels; Cbl supports
+        growth andCbi does not. BothCby andCobY are explicit conditions.
+      cache_path: evidence/PF01955/gray-2009-native-salvage.txt
+      cache_sha256: 1d04a43a043270f109ca910b7c30a4f8c168d0c180787f020137dda3e90c43e1
+  - edge_id: coby-with-cby-growth
+    subject: coby_added
+    predicate: increases
+    object: growth
+    mechanism: WithCby supplied, donorCobY restores growth relative to the vector in the CbiZ/CobP-deficient
+      background. The experiment requires other native salvage functions and does not imply a complete
+      pathway performed byCobY alone.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19376876
+      source_url: https://journals.asm.org/doi/10.1128/jb.00230-09
+      snippet: growth
+      explanation: OriginalFigure4 Cby panel, pCOBY47 open triangles versus vector filled inverted triangles;
+        Table1 andcaption strain-label conflict is retained rather than silently corrected.
+      cache_path: evidence/PF01955/gray-2009-native-salvage.txt
+      cache_sha256: 1d04a43a043270f109ca910b7c30a4f8c168d0c180787f020137dda3e90c43e1
+- graph_id: salmonella-cbiz-donor-rescue-2008
+  title: Seven alternative donor constructs support Cbi-dependent growth with CobY present
+  scope: Separate bacterial or archaeal donor arms in Salmonella JE8312, not seven jointly expressed genes
+    or native donor-organism growth.
+  context: Gray2008 Figure3 Cbi column; metE205 ara-9 cob1315(delta-cobU) ycfN112(delta-ycfN) withpCOBY38.
+    Oxic37C24h,NCE22mM glycerol,1mM MgSO4,15nM dicyanoCbi,triplicate OD650. Rs,Bh,Fa,Pf,Mj use0mM arabinose;
+    Rr,Mm use2.5mM, each compared with vector at the same induction condition.
+  family_mapping: Tested pBAD24 inserts are pCbiZRs,Rr,Bh,Mm,Fa,Pf,Mj. Current candidates and PF01955
+    intervals are Q3J3R7 6-208,Q2RX48 30-244,Q9KCI4 268-487,Q8Q0G3 15-198,S0ASV7 43-222,Q8U3Z5 6-190,Q59008
+    16-253 respectively. Candidate accessions are not verified historical clones; TableS3/S4 remain uninspected.
+    Bh is a whole BtuD-CbiZ fusion, whose current candidate also contains PF00005 19-168. S0ASV7 first
+    appeared in2013, after this experiment.
+  scope_status: PHENOTYPIC
+  limitations: Joint donor,CobY and host functions are required; no independent CbiZ sufficiency or intracellular
+    product measurement. Whole-protein complementation is not isolated-domain catalysis. Methods antibiotics100/50ug/ml
+    versus captionsug/ul remain a unit conflict. Expression abundance and folding are unmeasured. The
+    three negative donor constructs are text-reported,data not shown, not proof of native inactivity.
+  nodes:
+  - node_id: rs
+    label: R.sphaeroides pCbiZRs versus vector at0mM arabinose withCobY
+    node_type: PERTURBATION
+  - node_id: rr
+    label: R.rubrum pCbiZRr versus vector at2.5mM arabinose withCobY
+    node_type: PERTURBATION
+  - node_id: bh
+    label: B.halodurans whole BtuD-CbiZ pCbiZBh versus vector at0mM arabinose withCobY
+    node_type: PERTURBATION
+  - node_id: mm
+    label: M.mazei pCbiZMm versus vector at2.5mM arabinose withCobY
+    node_type: PERTURBATION
+  - node_id: fa
+    label: F.acidarmanus pCbiZFa versus vector at0mM arabinose withCobY
+    node_type: PERTURBATION
+  - node_id: pf
+    label: P.furiosus pCbiZPf versus vector at0mM arabinose withCobY
+    node_type: PERTURBATION
+  - node_id: mj
+    label: M.jannaschii pCbiZMj versus vector at0mM arabinose withCobY
+    node_type: PERTURBATION
+  - node_id: growth
+    label: Cbi-supported OD650 growth in the specified donor arm
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: rs-rescue
+    subject: rs
+    predicate: increases
+    object: growth
+    mechanism: The Rhodobacter donor restores robust growth in the CobY-containing host without added
+      inducer. This is conditional heterologous rescue, not directly observed intracellular Cby formation.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: supported growth
+      explanation: OriginalFigure3 pCbiZRs versuspBAD24 Cbi black curves; Cby,Cbl andno-corrinoid controls
+        inspected.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: rr-rescue
+    subject: rr
+    predicate: increases
+    object: growth
+    mechanism: The Rhodospirillum donor supports robust growth under2.5mM arabinose induction relative
+      to the equally induced vector. Basal expression does not give comparable rescue.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: supported growth
+      explanation: OriginalFigure3 pCbiZRr versuspBAD24 Cbi gray curves; induction state is not mixed
+        across comparators.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: bh-rescue
+    subject: bh
+    predicate: increases
+    object: growth
+    mechanism: The whole BtuD-CbiZ donor fusion supports growth without added inducer. The result does
+      not distinguish contributions of its two domains or demonstrate physical coupling to a transporter.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: supported growth
+      explanation: OriginalFigure3 pCbiZBh versuspBAD24 Cbi black curves and whole-fusion construction
+        Methods.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: mm-rescue
+    subject: mm
+    predicate: increases
+    object: growth
+    mechanism: The Methanosarcina donor restores robust Cbi-supported growth at2.5mM arabinose relative
+      to the induced vector. The donor's activity and expression abundance are not independently quantified.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: supported growth
+      explanation: OriginalFigure3 pCbiZMm versuspBAD24 Cbi gray curves; this2008 host/construct is distinct
+        from prior2004 experiments.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: fa-rescue
+    subject: fa
+    predicate: increases
+    object: growth
+    mechanism: The Ferroplasma donor gives substantial Cbi-supported growth without inducer, though its
+      time course differs from the induced arm. This does not establish the historical clone as the later-deposited
+      S0ASV7 sequence.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: supported growth
+      explanation: OriginalFigure3 pCbiZFa versuspBAD24 Cbi black curves; current candidate mapping is
+        explicitly separate from the observed donor-plasmid effect.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: pf-rescue
+    subject: pf
+    predicate: increases
+    object: growth
+    mechanism: The Pyrococcus donor supports Cbi-dependent growth in Salmonella at37C without added inducer.
+      This is not a measured native Pyrococcus growth requirement or thermal optimum.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: supported growth
+      explanation: OriginalFigure3 pCbiZPf versuspBAD24 Cbi black curves; host temperature is retained
+        separately from donor physiology.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: mj-rescue
+    subject: mj
+    predicate: increases
+    object: growth
+    mechanism: The Methanocaldococcus donor supports robust Cbi-dependent growth without inducer in the
+      CobY-containing host. No native archaeal pathway flux or isolated-domain reaction is measured by
+      this curve.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: supported growth
+      explanation: OriginalFigure3 pCbiZMj versuspBAD24 Cbi black curves; all seven donor effects are
+        alternative arms, not one combined construct.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+- graph_id: salmonella-cbiz-donor-ap-rescue-2008
+  title: AP restores Cbi-supported growth conditionally in seven donor arms
+  scope: Separate donor arms in Salmonella JE7864 withpCOBY38 and a cobD defect, not a direct cbiB knockout
+    experiment.
+  context: Gray2008 Figure4 Cbi versusCbi+AP columns; metE205 ara-9 cbiP236::Tn10d(tet) cobD1302::Tn10d(cat)
+    cobU330. Oxic37C24h,NCE22mM glycerol,1mM MgSO4,15nM dicyanoCbi,10mM AP,triplicate OD650. Rs,Bh,Fa,Pf,Mj
+    use0mM arabinose; Rr,Mm use2.5mM within each matched AP comparison.
+  family_mapping: The same seven pBAD24 donor constructs as Figure3, not the older2004 or2006 plasmids.
+    Current candidate mappings are qualified in the donor-rescue graph and gray-2008 construct ledger;
+    historical TableS3/S4 sequences/strains remain unverified. Bh is whole BtuD-CbiZ; AP andCobY are contextual
+    inputs, not PF01955 enzymes.
+  scope_status: PHENOTYPIC
+  limitations: No independent AP,CbiZ orCobY sufficiency. Actual host lesion is cobD1302, not cbiB; pathway
+    placement does not directly measure CbiB chemistry or AP phosphorylation. Some Cbi-alone curves show
+    late drift, not zero growth. Cbl supports all arms; vector plusAP does not give robust rescue. Antibiotic-unit
+    and historical-construct discrepancies remain open.
+  nodes:
+  - node_id: rs_ap
+    label: AP addition withpCbiZRs andCobY at0mM arabinose
+    node_type: PERTURBATION
+  - node_id: rr_ap
+    label: AP addition withpCbiZRr andCobY at2.5mM arabinose
+    node_type: PERTURBATION
+  - node_id: bh_ap
+    label: AP addition withpCbiZBh fusion andCobY at0mM arabinose
+    node_type: PERTURBATION
+  - node_id: mm_ap
+    label: AP addition withpCbiZMm andCobY at2.5mM arabinose
+    node_type: PERTURBATION
+  - node_id: fa_ap
+    label: AP addition withpCbiZFa andCobY at0mM arabinose
+    node_type: PERTURBATION
+  - node_id: pf_ap
+    label: AP addition withpCbiZPf andCobY at0mM arabinose
+    node_type: PERTURBATION
+  - node_id: mj_ap
+    label: AP addition withpCbiZMj andCobY at0mM arabinose
+    node_type: PERTURBATION
+  - node_id: growth
+    label: Cbi-supported OD650 growth in the specified AP comparison
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: rs-ap-growth
+    subject: rs_ap
+    predicate: increases
+    object: growth
+    mechanism: AP addition restores robust growth with the Rhodobacter donor in the cobD-deficient host.
+      It does not establish a reaction performed by AP orCbiZ alone.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: growth was restored
+      explanation: OriginalFigure4 pCbiZRs black curves, Cbi+AP versusCbi; vector/AP andCbl controls inspected.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: rr-ap-growth
+    subject: rr_ap
+    predicate: increases
+    object: growth
+    mechanism: With the Rhodospirillum donor induced, AP addition increases Cbi-supported growth relative
+      to the matched no-AP arm. The host retains the other salvage functions.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: growth was restored
+      explanation: OriginalFigure4 pCbiZRr gray curves, Cbi+AP versusCbi at the same2.5mM arabinose.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: bh-ap-growth
+    subject: bh_ap
+    predicate: increases
+    object: growth
+    mechanism: AP supports robust growth with the whole Bacillus fusion without inducer. The comparison
+      does not isolate its PF01955 domain from the ABC-domain context.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: growth was restored
+      explanation: OriginalFigure4 pCbiZBh black curves, Cbi+AP versusCbi; donor is the entire cloned
+        btuD-cbiZ coding sequence.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: mm-ap-growth
+    subject: mm_ap
+    predicate: increases
+    object: growth
+    mechanism: AP addition supports robust growth with induced Methanosarcina donor expression. The comparison
+      holds inducer andCobY constant and does not imply AP-independent rescue.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: growth was restored
+      explanation: OriginalFigure4 pCbiZMm gray curves, Cbi+AP versusCbi at2.5mM arabinose.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: fa-ap-growth
+    subject: fa_ap
+    predicate: increases
+    object: growth
+    mechanism: AP increases growth with the Ferroplasma donor without added inducer, compared with the
+      lower Cbi-alone curve. Residual late Cbi-alone growth is not described as complete absence.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: growth was restored
+      explanation: OriginalFigure4 pCbiZFa black curves, Cbi+AP versusCbi; donor sequence identification
+        remains qualified separately.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: pf-ap-growth
+    subject: pf_ap
+    predicate: increases
+    object: growth
+    mechanism: AP addition restores the robust Cbi-supported growth trajectory with the Pyrococcus donor.
+      This is a host-context rescue at37C, not a native archaeal essentiality result.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: growth was restored
+      explanation: OriginalFigure4 pCbiZPf black curves, Cbi+AP versusCbi; late Cbi-alone drift remains
+        visible.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: mj-ap-growth
+    subject: mj_ap
+    predicate: increases
+    object: growth
+    mechanism: AP addition supports robust Cbi-dependent growth with the Methanocaldococcus donor without
+      added inducer. Intervening chemical transformations are not directly observed in this growth assay.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: growth was restored
+      explanation: OriginalFigure4 pCbiZMj black curves, Cbi+AP versusCbi; Cbl positive andvector/AP controls
+        constrain interpretation.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+- graph_id: salmonella-cbiz-induction-effects-2008
+  title: Induction changes mid-assay growth in a donor- and corrinoid-dependent manner
+  scope: Within-donor comparisons in Salmonella JE8312 withCobY, not measured changes in native donor
+    physiology or protein abundance.
+  context: Gray2008 Figure3 gray2.5mM versusblack0mM arabinose at the12h midpoint, with15nM Cbi orCby.
+    Other growth conditions match the donor-rescue graph. This is a qualitative time-point contrast, not
+    fitted growth rate or a lower24h endpoint claim.
+  family_mapping: Whole pCbiZRs,Rr,Bh,Mm inserts; candidate parent intervals are qualified above. Bh includes
+    both BtuD andCbiZ domains; no domain-specific induction or purified activity measurement is available.
+  scope_status: PHENOTYPIC
+  limitations: Induction may alter expression or host physiology; protein abundance and causal intermediates
+    were not measured. The Rs Cbi endpoint approaches the uninduced plateau, so its effect is delay/suppression
+    during the time course, not necessarily reduced final biomass. Cbl andvector controls limit a general
+    arabinose effect. Hydrolysis of downstream intermediates remains a hypothesis.
+  nodes:
+  - node_id: rs_induced
+    label: Arabinose0 to2.5mM withpCbiZRs andCobY
+    node_type: PERTURBATION
+  - node_id: bh_induced
+    label: Arabinose0 to2.5mM withpCbiZBh fusion andCobY
+    node_type: PERTURBATION
+  - node_id: rr_induced
+    label: Arabinose0 to2.5mM withpCbiZRr andCobY
+    node_type: PERTURBATION
+  - node_id: mm_induced
+    label: Arabinose0 to2.5mM withpCbiZMm andCobY
+    node_type: PERTURBATION
+  - node_id: cbi_midpoint
+    label: Cbi-supported OD650 near12h in the corresponding donor arm
+    node_type: PHENOTYPE
+  - node_id: cby_midpoint
+    label: Cby-supported OD650 near12h in the corresponding donor arm
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: rs-cbi-induction
+    subject: rs_induced
+    predicate: decreases
+    object: cbi_midpoint
+    mechanism: Induced Rhodobacter-donor cells have lower mid-assay Cbi-supported optical density than
+      the uninduced arm. Their later convergence is retained rather than labeled a permanent biomass defect.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: supported growth
+      explanation: OriginalFigure3 pCbiZRs Cbi gray versusblack curve near12h; no exact digitized OD or
+        significance is assigned.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: rs-cby-induction
+    subject: rs_induced
+    predicate: decreases
+    object: cby_midpoint
+    mechanism: Induction lowers the Rhodobacter-donor Cby-supported midpoint OD. Downstream-intermediate
+      hydrolysis or interference with host functions is not directly measured.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: supported growth
+      explanation: OriginalFigure3 pCbiZRs Cby gray versusblack curve near12h, with largely preservedCbl
+        growth.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: bh-cbi-induction
+    subject: bh_induced
+    predicate: decreases
+    object: cbi_midpoint
+    mechanism: Induction of the whole Bacillus fusion reduces Cbi-supported midpoint OD. This does not
+      identify which fusion domain or host process causes the effect.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: supported growth
+      explanation: OriginalFigure3 pCbiZBh Cbi gray versusblack curve near12h; full fusion,not isolatedPF01955.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: bh-cby-induction
+    subject: bh_induced
+    predicate: decreases
+    object: cby_midpoint
+    mechanism: Induction also reduces Cby-supported midpoint OD with the whole fusion. This is not evidence
+      for direct inhibition of a named downstream enzyme or physical transporter coupling.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: supported growth
+      explanation: OriginalFigure3 pCbiZBh Cby gray versusblack curve near12h; Cbl controls remain distinct.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: rr-cbi-induction
+    subject: rr_induced
+    predicate: increases
+    object: cbi_midpoint
+    mechanism: Induction increases the Rhodospirillum-donor Cbi-supported midpoint OD relative to its
+      basal arm. The plot does not resolve protein amount from specific activity.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: supported growth
+      explanation: OriginalFigure3 pCbiZRr Cbi gray versusblack curve near12h; same donor andhost context.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+  - edge_id: mm-cbi-induction
+    subject: mm_induced
+    predicate: increases
+    object: cbi_midpoint
+    mechanism: Induction raises the Methanosarcina-donor Cbi-supported midpoint OD compared with no inducer.
+      The effect is conditional on suppliedCbi,CobY andhost salvage functions.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: supported growth
+      explanation: OriginalFigure3 pCbiZMm Cbi gray versusblack curve near12h; vector andno-corrinoid
+        controls do not show equivalent rescue.
+      cache_path: evidence/PF01955/gray-2008-heterologous-assays.txt
+      cache_sha256: 1e057203c8a9bd0e57eccb6b4eacc03153c7c5834f311dece40e232c8c43f01b
+- graph_id: rs-cbiz-enriched-extract-products-2008
+  title: Rhodobacter-donor cell extracts yield Cby-assigned products from three corrinoids
+  scope: Mixed Salmonella JE10789 extract expressingpCbiZRs, not purified CbiZ or a native Rhodobacter
+    cell assay.
+  context: Gray2008 extractResults andMethods; JE8268-derived delta-cobUdelta-ycfN host,1.5mM arabinose6h37C.
+    Assays use50ug total extract protein,200ul,30uM substrate,50mM HEPESpH7.5,5mM DTT,30C15min dark; heat
+    stop andKCN/light derivatization beforeHPLC.
+  family_mapping: pCbiZRs contains the native coding sequence plus3bp5prime and15bp3prime. Current parent
+    candidateQ3J3R7v1 is219aa withPF01955 6-208, but historical insert/junction verification remains open.
+    This construct is not the later MBP/His6-CbiZ preparation; no isolated-domain or residue perturbation
+    was tested.
+  scope_status: PHENOTYPIC
+  limitations: Text-reported Cby assignment uses5.2min retention andUV-vis comparison; supplementaryFigureS2
+    traces remain uninspected and product bioassay is data not shown. Vector extract was prepared but
+    its exact outcome is not available here. The reporter-method Cbi/Cby wording conflicts with genotype/pathway
+    descriptions. N andSD/SEM meaning of reported uncertainties are unresolved. Product formation is not
+    attributable to purified CbiZ alone or intactAdoCby; AdoCbl hydrolysis was undetectable. LowCNCbl
+    activity does not override the separate2009 purified-assay negative.
+  nodes:
+  - node_id: ado_cbi_extract
+    label: pCbiZRs-enriched mixed extract withAdoCbi under the2008 assay
+    node_type: ACTIVITY
+  - node_id: cyano_cbi_extract
+    label: pCbiZRs-enriched mixed extract withdicyanoCbi under the2008 assay
+    node_type: ACTIVITY
+  - node_id: cyano_cbl_extract
+    label: pCbiZRs-enriched mixed extract withCNCbl under the2008 assay
+    node_type: ACTIVITY
+  - node_id: cby_assigned
+    label: Cby-assigned product after cyano derivatization andHPLC analysis
+    node_type: STATE
+  edges:
+  - edge_id: ado-cbi-extract-product
+    subject: ado_cbi_extract
+    predicate: produces
+    object: cby_assigned
+    mechanism: The mixed extract assay reports Cby-forming activity of880+/-63pmol per mg total extract
+      protein per minute fromAdoCbi. Analytical assignment and enzyme attribution remain distinct claims.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: protein extract enriched with CbiZ
+      explanation: Main CbiZ-extract Results and preparation/activity/HPLC Methods; specific activity
+        is normalized to total extract,not purifiedCbiZ. FigureS2 is not visually verified.
+      cache_path: evidence/PF01955/gray-2008-extract-assays.txt
+      cache_sha256: e3b78e037bd058c0dbce093ce39f9c67ae9275d5a80472826de94277dda80c2b
+  - edge_id: cyano-cbi-extract-product
+    subject: cyano_cbi_extract
+    predicate: produces
+    object: cby_assigned
+    mechanism: DicyanoCbi yields a reported120+/-16pmol Cby-assigned product per mg extract per minute.
+      The unpurified preparation does not establish a domain-specific catalytic mechanism.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: protein extract enriched with CbiZ
+      explanation: Main CbiZ-extract Results substrate comparison, with shared assay conditions and text-reported
+        product assignment; no resolved upper-ligand mechanism.
+      cache_path: evidence/PF01955/gray-2008-extract-assays.txt
+      cache_sha256: e3b78e037bd058c0dbce093ce39f9c67ae9275d5a80472826de94277dda80c2b
+  - edge_id: cyano-cbl-extract-product
+    subject: cyano_cbl_extract
+    predicate: produces
+    object: cby_assigned
+    mechanism: CNCbl gives low reported product-forming activity of15+/-2pmol per mg extract per minute.
+      It remains a preparation-specific observation, distinct from the later tagged purified-enzyme CNCbl
+      negative under different conditions.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:18808385
+      source_url: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06437.x
+      snippet: protein extract enriched with CbiZ
+      explanation: Main CbiZ-extract Results explicitly reportCNCbl activity and anAdoCbl negative. No
+        universal cobalamin specificity or exact identity of the active extract component is claimed.
+      cache_path: evidence/PF01955/gray-2008-extract-assays.txt
+      cache_sha256: e3b78e037bd058c0dbce093ce39f9c67ae9275d5a80472826de94277dda80c2b
+curation_events:
+- timestamp: '2026-10-12T11:15:31Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate scoped CbiZ chemistry and cellular rescue graphs
+  history_record: history/records/PF01955/2026-10-12T111531Z-codex-255f1c.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T11:24:14Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of scoped CbiZ causal evidence
+  history_record: history/records/PF01955/2026-10-12T112414Z-codex-89cddd.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T11:31:08Z'
+  curator: Codex
+  action: EDIT
+  outcome: changed
+  summary: Clarify the CbiZ amide-bond hydrolysis mechanism
+  history_record: history/records/PF01955/2026-10-12T113108Z-codex-1d81b0.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T11:33:03Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain successor CbiZ review with precise bond-hydrolysis wording
+  history_record: history/records/PF01955/2026-10-12T113303Z-codex-ad812f.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T11:47:21Z'
+  curator: Codex
+  action: EDIT
+  outcome: changed
+  summary: Add scoped CbiS corrinoid and joint-rescue causal contexts
+  history_record: history/records/PF01955/2026-10-12T114721Z-codex-c87e27.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T11:56:30Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped CbiS conversion and rescue scientific review
+  history_record: history/records/PF01955/2026-10-12T115630Z-codex-5160e5.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T12:12:37Z'
+  curator: Codex
+  action: EDIT
+  outcome: changed
+  summary: Add scoped Rhodobacter CbiZ conversion, condition, growth and corrinoid-profile graphs
+  history_record: history/records/PF01955/2026-10-12T121237Z-codex-3c2221.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T12:19:28Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped review of Rhodobacter CbiZ conversion and cellular contexts
+  history_record: history/records/PF01955/2026-10-12T121928Z-codex-24faff.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T12:38:14Z'
+  curator: Codex
+  action: EDIT
+  outcome: changed
+  summary: Add native Rhodobacter conditional salvage and Cby bypass graphs
+  history_record: history/records/PF01955/2026-10-12T123814Z-codex-7561f2.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T12:52:04Z'
+  curator: Codex
+  action: EDIT
+  outcome: changed
+  summary: Add 2008 donor-specific rescue, AP, induction and extract graphs
+  history_record: history/records/PF01955/2026-10-12T125204Z-codex-299174.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T13:05:10Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial review of native salvage and 2008 donor contexts
+  history_record: history/records/PF01955/2026-10-12T130510Z-codex-92da4b.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T13:07:19Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain corrected PF01955 review with restored Git provenance
+  history_record: history/records/PF01955/2026-10-12T130719Z-codex-69e11f.yaml
+  event_index: 0
+  llm_assisted: true

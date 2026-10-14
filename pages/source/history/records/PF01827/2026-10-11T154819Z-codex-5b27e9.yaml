@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01827
+  path: data/families/PF01827.yaml
+session:
+  id: 2026-10-11T154819Z-codex-5b27e9
+  timestamp: '2026-10-11T15:48:19Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review FOG-2 construct and germline contexts
+  details: Retained a partial scientific self-review of five graphs and eight indirect
+    observed effects. Verified historical reference reconstruction, current domain
+    intervals, overlay/projection agreement and evidence hashes. Reporter calibration,
+    clone and figure discrepancies, missing controls, negative molecular readouts
+    and remaining family coverage stay explicit. Status remains IN_PROGRESS without
+    independent endorsement or a direct molecular mechanism claim.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T154842Z-pf01827-fog2-construct-and-germline-contexts/review.yaml

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01795
+  path: curation/families/PF01795.yaml
+session:
+  id: 2026-10-11T150103Z-codex-1817c5
+  timestamp: '2026-10-11T15:01:03Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped RsmH methylation, reporter and growth causal graphs
+  details: Four graphs retain five direct purified-preparation effects and twelve
+    indirect cellular genotype effects. Preserve the UGA Discussion conflict, substrate-dose
+    and construct limitations, and version-qualified later-source follow-ups; partial
+    coverage remains IN_PROGRESS.
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC2831307/

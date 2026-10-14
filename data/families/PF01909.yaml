@@ -4,7 +4,7 @@ name: Nucleotidyltransferase domain
 short_name: NTP_transf_2
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01909
 counters:
   proteins: 24660
@@ -25,3 +25,365 @@ description: Members of this family belong to a large family of nucleotidyltrans
   This family includes kanamycin nucleotidyltransferase (KNTase) which is a plasmid-coded enzyme responsible
   for some types of bacterial resistance to aminoglycosides. KNTase in-activates antibiotics by catalysing
   the addition of a nucleotidyl group onto the drug.
+curation_history: history/records/PF01909
+discussions:
+- discussion_id: duf76-mapping-and-family-coverage
+  prompt: Resolve the KNTase mapping boundary and extend distinct PF01909 functional branches.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: A family description and related fold are not exact protein-to-Pfam evidence, and GlnD is
+    only one branch of this large family.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P05057/
+    supports: PARTIAL
+    evidence_source: current_domain_mapping
+    explanation: P05057 currently returns PF07827 at 114-243 but no PF01909. ANT(4') WT/T130K/D80Y chemistry
+      was not imported into this graph.
+  - reference: PMID:33045733
+    supports: PARTIAL
+    evidence_source: uncurated_primary_source_lead
+    explanation: MntA/HepT adenylylation needs exact species and domain mapping before transfer to PF01909
+      members.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Preserve frozen metadata. Investigate CCA, OAS, DNA nucleotidylation, CdnE, AadA/ANT9, MntA and
+    Hailong branches separately; review their primary constructs rather than importing database summaries.
+    Most of 24660 frozen proteins remain unassessed.
+- discussion_id: glnd-assay-and-domain-limits
+  prompt: Extend GlnD evidence while preserving domain, species and endpoint boundaries.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: NT-containing fragment sufficiency is not isolated-Pfam-domain sufficiency; HD removal and
+    glutamine regulation cannot all be assigned to the NT domain.
+  evidence:
+  - reference: PMID:20363937
+    supports: SUPPORT
+    evidence_source: primary_methods_and_figures
+    explanation: Figures 3/4/5/8 distinguish truncations, substitutions, transfer/removal and Mg-only
+      versus Mg/Mn conditions. G94L and 1-371 glutamine response are explicit exceptions.
+  - reference: PMID:17337583
+    supports: PARTIAL
+    evidence_source: uncurated_primary_source_lead
+    explanation: R. rubrum regulation differs and needs its own mapped graph; 2010 nitrogenase phenotypes
+      are not direct E. coli chemistry.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Recover raw gels, replication/uncertainty, historical clone sequence and folding controls. Expand
+    D107 and other constructs with figure-label checks; test molecular ligand binding and catalytic intermediates
+    separately. Main 2010 text and figures do not establish a physiological futile cycle or all-member
+    mechanism. Keep IN_PROGRESS and retain successor review for additions.
+causal_graphs:
+- graph_id: glnd-nt-construct-and-residue-2010
+  title: GlnD N-terminal constructs and substitutions alter GlnB uridylylation
+  scope: Zhang2010 E. coli His-tagged full-length GlnD, 1-371 fragment, 329-890 deltaNT and individual
+    G93L, G93V or G94D variants; not isolated-Pfam-domain assays.
+  context: Purified proteins; native-PAGE GlnB modification endpoint at 30 C after 60 min, 60 uM GlnB,
+    UTP initiated by 1 ul of 50 mM stock into a 50 ul reaction, 1 mM ATP, 10 mM alpha-KG, 25 mM MgCl2
+    with or without 1 mM MnCl2. Figure 5 enzyme-free control and plotted enzyme concentrations 0.025-2
+    uM.
+  family_mapping: E. coli K-12 GlnD P27249 sequence version 2, b0167/JW0162, 890 aa; PF01909 at 85-144
+    includes G93/G94/D107. The paper draws NT at 74-169. The 1-371 fragment contains additional sequence
+    and domain context; deltaNT retains 329-890. Reference numbering agrees, without independent historical
+    clone sequencing.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:83333
+  limitations: Readout is average modified subunits per GlnB trimer, not initial velocity or an atomic
+    chemical step. Net transfer/removal competition can affect the endpoint. G94L retains substantial
+    activity, so loss is not universal for glycine substitutions. No precise bar-derived effect sizes,
+    equal-folding controls or isolated 85-144 sufficiency are claimed. NTase membership does not transfer
+    this substrate or mechanism across PF01909.
+  nodes:
+  - node_id: wt-reaction
+    label: Full-length GlnD with GlnB, UTP and assay cofactors
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P27249
+  - node_id: n-fragment-reaction
+    label: GlnD 1-371 with GlnB, UTP and assay cofactors
+    node_type: ACTIVITY
+  - node_id: delta-nt
+    label: Replace full-length GlnD with the 329-890 deltaNT construct
+    node_type: PERTURBATION
+  - node_id: g93l
+    label: G93L substitution in full-length GlnD
+    node_type: PERTURBATION
+  - node_id: g93v
+    label: G93V substitution in full-length GlnD
+    node_type: PERTURBATION
+  - node_id: g94d
+    label: G94D substitution in full-length GlnD
+    node_type: PERTURBATION
+  - node_id: glnb-ump
+    label: GlnB uridylylation endpoint
+    node_type: STATE
+  edges:
+  - edge_id: wt-produces-modification
+    subject: wt-reaction
+    predicate: produces
+    object: glnb-ump
+    mechanism: The full-length enzyme reaction increases GlnB modification above the no-GlnD control under
+      both tested cofactor protocols. This directly assayed biochemical conversion does not resolve individual
+      catalytic intermediates.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20363937
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2876476/
+      snippet: GlnD-N showed substantial UTase activity in both conditions
+      explanation: Methods and Figure 5A/B; inspected original plots, control and concentration series.
+      cache_path: evidence/PF01909/zhang-2010.txt
+      cache_sha256: 831ec3e3654e698c07a8dd8e8bf6d75032216e6afcd9189ece458caf1b3ce5b0
+  - edge_id: n-fragment-produces-modification
+    subject: n-fragment-reaction
+    predicate: produces
+    object: glnb-ump
+    mechanism: The 1-371 enzyme fragment produces GlnB modification above the no-GlnD control in both
+      protocols, with lower effectiveness than full-length in Mg alone. Activity is not assigned to an
+      isolated 60-aa Pfam match.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20363937
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2876476/
+      snippet: GlnD-N showed substantial UTase activity in both conditions
+      explanation: Figure 3 construct boundary and Figure 5A/B GlnD-N series; no extrapolation to the
+        minimal domain.
+      cache_path: evidence/PF01909/zhang-2010.txt
+      cache_sha256: 831ec3e3654e698c07a8dd8e8bf6d75032216e6afcd9189ece458caf1b3ce5b0
+  - edge_id: delta-nt-decreases-modification
+    subject: delta-nt
+    predicate: decreases
+    object: glnb-ump
+    mechanism: Replacing full-length enzyme with 329-890 deltaNT lowers the endpoint toward background
+      under both protocols. Loss is specific to this large truncation; it does not by itself distinguish
+      folding and catalytic contributions.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20363937
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2876476/
+      snippet: GlnD-N showed substantial UTase activity in both conditions
+      explanation: Figure 3 deltaNT boundary; Figure 5A/B deltaNT versus full-length at matched concentrations.
+        Figure 4B retains Mn-supported removal in deltaNT.
+      cache_path: evidence/PF01909/zhang-2010.txt
+      cache_sha256: 831ec3e3654e698c07a8dd8e8bf6d75032216e6afcd9189ece458caf1b3ce5b0
+  - edge_id: g93l-decreases-modification
+    subject: g93l
+    predicate: decreases
+    object: glnb-ump
+    mechanism: The G93L enzyme gives lower GlnB modification than full-length under both protocols. Residue
+      importance is observed; its particular catalytic or structural role remains unresolved.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20363937
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2876476/
+      snippet: GlnD-N showed substantial UTase activity in both conditions
+      explanation: Figures 3 and 5A/B G93L; Figure 4B retains removal activity, but no global folding
+        equivalence was demonstrated.
+      cache_path: evidence/PF01909/zhang-2010.txt
+      cache_sha256: 831ec3e3654e698c07a8dd8e8bf6d75032216e6afcd9189ece458caf1b3ce5b0
+  - edge_id: g93v-decreases-modification
+    subject: g93v
+    predicate: decreases
+    object: glnb-ump
+    mechanism: The G93V enzyme gives lower GlnB modification than full-length under both protocols. This
+      assay-specific substitution effect is not proof of a universal glycine requirement in every family
+      member.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20363937
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2876476/
+      snippet: GlnD-N showed substantial UTase activity in both conditions
+      explanation: Figures 3 and 5A/B G93V; Figure 4B retains removal activity. No precise bar-based ratio
+        is reported.
+      cache_path: evidence/PF01909/zhang-2010.txt
+      cache_sha256: 831ec3e3654e698c07a8dd8e8bf6d75032216e6afcd9189ece458caf1b3ce5b0
+  - edge_id: g94d-decreases-modification
+    subject: g94d
+    predicate: decreases
+    object: glnb-ump
+    mechanism: The G94D enzyme gives lower GlnB modification than full-length under both protocols. G94L
+      is a contrasting retained-activity variant and is not pooled with G94D.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20363937
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2876476/
+      snippet: GlnD-N showed substantial UTase activity in both conditions
+      explanation: Figures 3 and 5A/B distinguish G94D from G94L; Figure 4B retains removal activity.
+      cache_path: evidence/PF01909/zhang-2010.txt
+      cache_sha256: 831ec3e3654e698c07a8dd8e8bf6d75032216e6afcd9189ece458caf1b3ce5b0
+- graph_id: glnd-hd-removal-controls-2010
+  title: GlnD HD substitutions reduce GlnB demodification outside the PF01909 domain
+  scope: Full-length E. coli GlnD H514A/D515A and H514Q/D515N variants compared with full-length reference
+    enzyme.
+  context: Figure 4 native-PAGE endpoint after 60 min at 30 C, 40 uM fully modified GlnB, 0.1/0.5/2 uM
+    GlnD, no UTP. Mg-UR uses 50 mM MgCl2, 0.5 mM ATP, 0.5 mM alpha-KG and 2.5 mM glutamine. Mn-UR uses
+    1 mM MnCl2 and 10 mM glutamine, omitting MgCl2, ATP and alpha-KG.
+  family_mapping: P27249 sequence version 2 carries PF01909 at 85-144, but H514/D515 lie in PF01966 at
+    468-601. These whole-protein controls distinguish activities and do not assign demodification to PF01909.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:83333
+  limitations: Figure 4 plots remaining UMP on an inverted axis; the encoded outcome is extent of removal,
+    not the plotted ordinate or an initial rate. Protocols differ in several components, so comparisons
+    are within each protocol. Figure 5 retained transfer activity argues against completely inactive preparations
+    but does not exclude local structural changes. No metal-binding geometry is established.
+  nodes:
+  - node_id: hd-aa
+    label: GlnD H514A/D515A double substitution
+    node_type: PERTURBATION
+  - node_id: hd-qn
+    label: GlnD H514Q/D515N double substitution
+    node_type: PERTURBATION
+  - node_id: glnb-demodification
+    label: Extent of UMP removal from GlnB
+    node_type: PROCESS
+  edges:
+  - edge_id: hd-aa-decreases-removal
+    subject: hd-aa
+    predicate: decreases
+    object: glnb-demodification
+    mechanism: HD-AA reduces removal relative to full-length in both separately tested UR protocols. The
+      effect is outside PF01909 and is retained as a biochemical domain-separation control.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20363937
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2876476/
+      snippet: GlnD-N showed substantial UTase activity in both conditions
+      explanation: Figures 3 and 4A/B HD-AA; Figure 5A/B confirms retained transfer activity. Remaining
+        modification near background-control values means little removal.
+      cache_path: evidence/PF01909/zhang-2010.txt
+      cache_sha256: 831ec3e3654e698c07a8dd8e8bf6d75032216e6afcd9189ece458caf1b3ce5b0
+  - edge_id: hd-qn-decreases-removal
+    subject: hd-qn
+    predicate: decreases
+    object: glnb-demodification
+    mechanism: HD-QN reduces removal relative to full-length in both separately tested UR protocols while
+      retaining transfer activity. This supports distinct functional regions without defining the atomic
+      removal mechanism.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20363937
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2876476/
+      snippet: GlnD-N showed substantial UTase activity in both conditions
+      explanation: Figures 3 and 4A/B HD-QN; Figure 5A/B supplies the complementary transfer assay.
+      cache_path: evidence/PF01909/zhang-2010.txt
+      cache_sha256: 831ec3e3654e698c07a8dd8e8bf6d75032216e6afcd9189ece458caf1b3ce5b0
+- graph_id: glnd-glutamine-mg-response-2010
+  title: Glutamine lowers GlnB uridylylation under magnesium-only assay conditions
+  scope: Matched no-glutamine versus 10 mM glutamine conditions for 2 uM full-length, HD-AA or HD-QN E.
+    coli GlnD.
+  context: Figure 8A; Mg-only UTase protocol with GlnB, UTP, ATP and alpha-KG, 30 C/60 min endpoint. Every
+    edge compares glutamine addition within the same enzyme construct and cofactor condition.
+  family_mapping: Full-length P27249 sequence version 2 includes PF01909 at 85-144 and HD region 468-601.
+    HD-AA/QN alter residues 514/515 outside PF01909; glutamine response is a whole-enzyme property, not
+    a demonstrated ligand-binding function of PF01909.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:83333
+  limitations: HD variants lack detectable UR in the separate Figure 4 assays, helping distinguish inhibited
+    transfer from enhanced removal. Exact binding site and allosteric relay were not measured. The 1-371
+    fragment lacks the same inhibition, but its altered structure remains an alternative. Figure 8B Mg/Mn
+    results differ and must not be merged into this graph; its WT endpoint can fall through competing
+    removal.
+  nodes:
+  - node_id: glutamine-wt
+    label: Add 10 mM glutamine to the full-length Mg-only reaction
+    node_type: PERTURBATION
+  - node_id: glutamine-hd-aa
+    label: Add 10 mM glutamine to the HD-AA Mg-only reaction
+    node_type: PERTURBATION
+  - node_id: glutamine-hd-qn
+    label: Add 10 mM glutamine to the HD-QN Mg-only reaction
+    node_type: PERTURBATION
+  - node_id: wt-modification
+    label: Full-length enzyme GlnB uridylylation endpoint
+    node_type: STATE
+  - node_id: hd-aa-modification
+    label: HD-AA enzyme GlnB uridylylation endpoint
+    node_type: STATE
+  - node_id: hd-qn-modification
+    label: HD-QN enzyme GlnB uridylylation endpoint
+    node_type: STATE
+  edges:
+  - edge_id: glutamine-decreases-wt-modification
+    subject: glutamine-wt
+    predicate: decreases
+    object: wt-modification
+    mechanism: Glutamine lowers the full-length enzyme modification endpoint relative to its matched Mg-only,
+      no-glutamine reaction. This does not directly establish glutamine binding to the NT domain.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20363937
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2876476/
+      snippet: GlnD-N showed substantial UTase activity in both conditions
+      explanation: Figure 8A full-length paired bars; Methods define buffer and endpoint. Figure 8B is
+        a separate condition.
+      cache_path: evidence/PF01909/zhang-2010.txt
+      cache_sha256: 831ec3e3654e698c07a8dd8e8bf6d75032216e6afcd9189ece458caf1b3ce5b0
+  - edge_id: glutamine-decreases-hd-aa-modification
+    subject: glutamine-hd-aa
+    predicate: decreases
+    object: hd-aa-modification
+    mechanism: Glutamine lowers the HD-AA enzyme modification endpoint in Mg-only conditions despite its
+      loss of removal activity in Figure 4. The result supports inhibition of transfer without specifying
+      a molecular binding relay.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20363937
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2876476/
+      snippet: GlnD-N showed substantial UTase activity in both conditions
+      explanation: Figure 8A HD-AA paired bars and Figure 4 removal control; Figure 8B lacks a comparable
+        HD-AA response.
+      cache_path: evidence/PF01909/zhang-2010.txt
+      cache_sha256: 831ec3e3654e698c07a8dd8e8bf6d75032216e6afcd9189ece458caf1b3ce5b0
+  - edge_id: glutamine-decreases-hd-qn-modification
+    subject: glutamine-hd-qn
+    predicate: decreases
+    object: hd-qn-modification
+    mechanism: Glutamine lowers the HD-QN enzyme modification endpoint in Mg-only conditions despite its
+      loss of removal activity in Figure 4. The result is scoped to the assay and does not establish physiological
+      metal occupancy.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20363937
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2876476/
+      snippet: GlnD-N showed substantial UTase activity in both conditions
+      explanation: Figure 8A HD-QN paired bars and Figure 4 removal control; Figure 8B is not evidence
+        for the same inhibitory edge.
+      cache_path: evidence/PF01909/zhang-2010.txt
+      cache_sha256: 831ec3e3654e698c07a8dd8e8bf6d75032216e6afcd9189ece458caf1b3ce5b0
+curation_events:
+- timestamp: '2026-10-12T00:07:59Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate scoped GlnD transfer, removal controls and glutamine-response graphs
+  history_record: history/records/PF01909/2026-10-12T000759Z-codex-7a2581.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T00:15:34Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of GlnD assay and mapping boundaries
+  history_record: history/records/PF01909/2026-10-12T001534Z-codex-860829.yaml
+  event_index: 0
+  llm_assisted: true

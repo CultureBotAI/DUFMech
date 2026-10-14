@@ -1,0 +1,39 @@
+PF01923 identity and member mapping; inspected 2026-10-12 UTC.
+Frozen owner: data/worklists/interpro-pfam-duf-2026-10-10.json,
+SHA256 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+PF01923 Cob_adeno_trans, IPR016030, EX_DUF. The frozen previous-name
+snapshot pfam-previous-unknown-names-2026-10-10.json retains DUF80 for
+PF01923.24. Naming history is not experimental characterization.
+Current identity: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01923/
+Current member locations: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/ACCESSION/
+Current sequences: https://rest.uniprot.org/uniprotkb/ACCESSION.json
+All coordinates below are inclusive reference coordinates, not isolated-domain tests.
+
+Q8ZNR5 sequence v1: Salmonella enterica Typhimurium LT2 STM2050 PduO,
+336 aa, PF01923 3-166; distinct PF03928 201-328. The tested 1-185
+construct includes the complete PF01923 match and flanking sequence.
+Q9ZFV4 sequence v1: LT2 STM2467 EutT, 267 aa, PF01923 92-246,
+PF30419 4-62. H67/C79/C80/C83 are verified in the reference sequence
+but OUTSIDE PF01923. The 2014 preparation retains GT before native M1.
+Q50EJ2 sequence v1: Limosilactobacillus reuteri, 188 aa, PF01923 3-169,
+gene label cobA; the papers call this LrPduO and clone the CRL1098 gene
+from AY780645/AAX14514.1. PDB3CI1 maps reference2-188 to entity8-194;
+the deposited N terminus is not identical to reference M1. F112/F163
+fall inside the domain; F187 and the deleted183-188 tail do not.
+PDBe mapping: https://www.ebi.ac.uk/pdbe/api/mappings/uniprot/3ci1
+Q96EY8 sequence v1: human MMAB, 250 aa, PF01923 58-227; F170/R186/
+R190/E193 verified. The 2023 supplement cites purification methods
+including full-length and deltaN18 preparations; the exact construct
+used for each 2023 assay remains unresolved, not silently assumed250aa.
+A0A0H3GFM5 sequence v1: L. monocytogenes10403S, taxon393133,
+LMRG_00627/AEO06164.1, 251 aa, PF01923 83-242, EutT annotation.
+Costa2018 Figure2/S3 alignment and TableS2 terminal primers support this
+strain-matched mapping; experimental clone sequencing/tag remnant not
+independently verified. Do not substitute EGD-e Q8Y7U0 or the other two
+10403S PF01923 proteins A0A0H3GJJ8/A0A0H3GJN9.
+
+The reviewed-member UniProt query returned15 entries; this is not a census
+of all experimental literature or all15667 frozen proteins. Functional
+enzyme-class names and Pfam membership are different classifications.
+Salmonella CobA controls are not PF01923 merely because LrPduO has a
+current cobA gene label. Imported identity, counters and snapshot remain unchanged.

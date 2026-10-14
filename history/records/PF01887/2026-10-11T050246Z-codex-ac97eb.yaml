@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01887
+  path: data/families/PF01887.yaml
+session:
+  id: 2026-10-11T050246Z-codex-ac97eb
+  timestamp: '2026-10-11T05:02:46Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped SaDUF62 biochemical graph review
+  details: Reviewed exact member mapping, primary product-identification evidence,
+    Scheme 1 and methods. Kept the stereochemistry and broader-context finding open;
+    no family-wide, domain-only or intracellular-function claim. Scientific self-review
+    is partial and status remains IN_PROGRESS.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T050311Z-pf01887-saduf62-causal-graph/review.yaml

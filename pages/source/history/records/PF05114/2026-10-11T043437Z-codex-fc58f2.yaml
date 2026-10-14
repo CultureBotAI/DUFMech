@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF05114
+  path: curation/families/PF05114.yaml
+session:
+  id: 2026-10-11T043437Z-codex-fc58f2
+  timestamp: '2026-10-11T04:34:37Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate a scoped MbnBC causal graph for PF05114
+  details: Added a purified OB3b MbnBC activity graph, primary-source extracts and
+    current reference mappings. Preserved the mbnC-deficient cellular result as a
+    limit on universal partner necessity, including its complemented-deletion background
+    and source wording discrepancy. No MbnB-alone, isolated-domain or family-wide
+    mechanism is asserted. Native projection, evidence and retained-review validation
+    follow this actual edit.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://pubmed.ncbi.nlm.nih.gov/35320042/

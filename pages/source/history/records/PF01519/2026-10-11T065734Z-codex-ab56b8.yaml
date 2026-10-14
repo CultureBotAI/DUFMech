@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01519
+  path: data/families/PF01519.yaml
+session:
+  id: 2026-10-11T065734Z-codex-ab56b8
+  timestamp: '2026-10-11T06:57:34Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of DUF16 insertion phenotypes
+  details: Reviewed separate MPN104 and MPN524 mappings and four indirect phenotype
+    edges. The retained report keeps missing genetic rescue, predicted-only polarity
+    assessment and unresolved domain attribution open. Same-agent assessment, not
+    independent expert approval or complete-family review; IN_PROGRESS retained.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T065732Z-pf01519-duf16-causal-phenotypes/review.yaml

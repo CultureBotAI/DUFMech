@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01641
+  path: curation/families/PF01641.yaml
+session:
+  id: 2026-10-11T122926Z-codex-d6578c
+  timestamp: '2026-10-11T12:29:26Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate SelR product and conditional yeast-growth graphs
+  details: Added five graphs with six observed effects from inspected PNAS primary
+    full text and figures. Exact deposited fly clone matches Q8INK9-2; canonical interval
+    is transferred through annotated isoform deletions. Mouse Cys-for-Sec and separate
+    yeast genotypes remain distinct. Retained missing biochemical doses, unverified
+    vector tails, original mating-type notation, condition-specific negatives and
+    later JBC result-access limitations. No complete catalytic cycle, native Sec assay
+    or family-wide mechanism is claimed. IN_PROGRESS; guarded regeneration and scoped
+    review follow.

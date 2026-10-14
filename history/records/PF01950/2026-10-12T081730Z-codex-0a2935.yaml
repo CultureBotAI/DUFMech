@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01950
+  path: curation/families/PF01950.yaml
+session:
+  id: 2026-10-12T081730Z-codex-0a2935
+  timestamp: '2026-10-12T08:17:30Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: needs_followup
+  summary: Curate scoped PF01950 Thermococcus hydrolysis and conditional cellular
+    effects
+  details: 'Inspected Sato2004 primary Methods, Results and Figures2-4, current and
+    historical protein mappings, and public bifunctionality supplements. Added five
+    graphs with eight OBSERVED experimental edges: one DIRECT biochemical product
+    and seven UNRESOLVED conditional cellular effects. Six evidence ledgers and three
+    OPEN discussions retain assay, rescue, polarity, later dual-function and coverage
+    limitations. F9VMT6 versus 3R1M one-residue offset verified. Baseline: 8296 schema-valid
+    projections and zero drift. Partial same-agent curation remains IN_PROGRESS; no
+    complete family review, source adoption or publication. All records and earlier
+    follow-ups remain in scope.'
+  sections:
+  - causal_graphs

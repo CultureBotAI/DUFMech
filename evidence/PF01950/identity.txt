@@ -1,0 +1,36 @@
+PF01950 identity ledger; inspected 2026-10-12 UTC by Codex.
+Frozen family: FBPase_3, Fructose-1,6-bisphosphatase, IPR002803,
+EX_DUF, UNSCORED. PF01950.22 previous identifier DUF100 is retained in
+data/worklists/pfam-previous-unknown-names-2026-10-10.json.
+Source snapshot interpro-pfam-duf-2026-10-10, SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+Frozen counters are not experiments or a current membership census.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01950/
+https://rest.uniprot.org/uniprotkb/Q8NKR9.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01950/protein/uniprot/Q8NKR9/
+https://www.ebi.ac.uk/ena/browser/view/AB081839
+Thermococcus kodakarensis KOD1 (historical spelling kodakaraensis), taxon69014:
+Q8NKR9 sequence v1, 375 aa, fbp/TK2164; PF01950 spans6-372.
+The reviewed entry links historical AB081839.1/BAC10571.1 and genome
+AP006878/BAD86353.1. ENA AB081839.1 contains the complete1128-bp CDS and
+375-aa translation, linked to PMID12065581 and Q8NKR9. The translation was
+inspected alongside the UniProt sequence. No independently resequenced
+historical recombinant plasmid or KW128 clone is claimed.
+Sato2004 identifies its fbp and pET-fbp through Rashid2002; the later genome
+paper PMID15710748 identifies this enzyme as TK2164, not imp/TK0787.
+KW128 is a KOD1-derived engineered host, not wild-type KOD1.
+
+https://rest.uniprot.org/uniprotkb/F9VMT6.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01950/protein/uniprot/F9VMT6/
+https://data.rcsb.org/rest/v1/core/polymer_entity/3R1M/1
+Sulfurisphaera tokodaii strain7 (historical Sulfolobus tokodaii):
+F9VMT6 v1,384 aa, STK_03180/historical ST0318; PF01950 spans2-362.
+3R1M entity1 is385 aa. Its residues2-385 exactly equal F9VMT6 v1 residues1-384;
+the extra initial methionine and SIFTS alignment explain the offset.
+Paper/PDB Tyr229 and Lys232 map to UniProt Tyr228 and Lys231 respectively.
+These coordinates must not be transferred to TK2164 or other members.
+This is an identity/numbering result, not a new residue-mechanism graph.
+
+No class-I/II FBPase, conventional aldolase, human FBP1, or class-IV
+inositol monophosphatase result is imported as a PF01950 experiment.

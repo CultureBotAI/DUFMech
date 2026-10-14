@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01887
+  path: curation/families/PF01887.yaml
+session:
+  id: 2026-10-11T045921Z-codex-ed6875
+  timestamp: '2026-10-11T04:59:21Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate SaDUF62-dependent adenosine formation
+  details: Retain one biochemical edge for intact S. arenicola Sare_1364 with commercial
+    SAM. Primary Results, Scheme 1 and methods support the reaction. Explicitly leave
+    substrate stereochemistry, domain-only sufficiency and cellular function unresolved.
+  sections:
+  - causal_graphs

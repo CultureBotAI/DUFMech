@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01881
+  path: data/families/PF01881.yaml
+session:
+  id: 2026-10-11T195244Z-codex-639f8b
+  timestamp: '2026-10-11T19:52:44Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of PF01881 Cas6 causal contexts
+  details: Same-agent review assessed sixteen direct observed effects and one unresolved
+    hypothetical alignment step against primary methods, original figures and exact
+    domain mapping. Joint glycine-loop substitutions, outside-domain N-terminal variants,
+    residual activity, substrate-site rerouting, protocol discrepancies and missing
+    member/supplement coverage remain explicit. Native verdict NEEDS_FOLLOWUP; no
+    exhaustive family review, independent endorsement or publication is claimed.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T195259Z-pf01881-cas6-domain-boundaries-and-rna-contexts/review.yaml

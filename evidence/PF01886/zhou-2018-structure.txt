@@ -1,0 +1,24 @@
+Zhou et al. 2018, PMID29526782, DOI10.1016/j.jsb.2018.03.003.
+Accessed 2026-10-11; abstract and deposited metadata, not full paper or supplements.
+https://pubmed.ncbi.nlm.nih.gov/29526782/
+https://data.rcsb.org/rest/v1/core/entry/5VFK
+https://data.rcsb.org/rest/v1/core/assembly/5VFK/1
+
+Abstract assessment: SSO0941 has an NMR-defined core with flexible termini and
+an independently arranged acidic terminal helix. Fold similarities and proximity
+to box C/D RNA-complex genes motivate nucleic-acid hypotheses; the inspected
+abstract does not report a directed biological perturbation or substrate assay.
+InterPro and RCSB echo this paper, not independent functional experiments.
+
+Deposit facts: solution NMR, 100 conformers calculated and 20 submitted; these
+are not biological replicates. One protein entity, no RNA/DNA polymer entity.
+Author-defined monomer assignment is not proof that monomerization causes
+an activity. NMR metadata gives pH 4.4 and 310 K; these are structural-sample
+conditions, not an experimentally demonstrated physiological optimum.
+
+Full-text access remained incomplete: ScienceDirect returned HTTP403;
+Elsevier API returned bibliographic coredata only. The institutional CAS page
+links the DOI but supplies no full paper. RCSB links BMRB30279; the inspected
+BMRB summary says the entry does not exist or is not yet public, and the attempted
+STAR URL returned HTTP404. That does not establish withdrawal or universal
+unavailability of raw NMR data. No uninspected figure is described as reviewed.

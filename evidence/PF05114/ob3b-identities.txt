@@ -1,0 +1,31 @@
+Sources:
+https://rest.uniprot.org/uniprotkb/A0A2D2D5M1.json
+https://rest.uniprot.org/uniprotkb/A0A2D2CY73.json
+https://rest.uniprot.org/uniprotkb/search?query=%28gene%3AmbnA%29%20AND%20%28organism_id%3A595536%29&format=json&size=5
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A2D2D5M1/entry/pfam/PF05114/
+Accessed: 2026-10-11 UTC. Selected public database facts, not full response copies.
+
+MbnB accession: A0A2D2D5M1
+geneName: mbnB
+orfNames: CQW49_07160
+protein: ATQ70273.1
+sequenceVersion: 1; entryVersion: 27; length: 276
+sequence md5: 816C9885E211F80AFFEAF5B41C6D954C
+organism: Methylosinus trichosporium OB3b; taxonId: 595536
+entry accession: PF05114
+entry_protein_locations: start 15, end 248, CONTINUOUS
+entry_integrated: ipr007801
+
+MbnC accession: A0A2D2CY73
+geneName: mbnC; orfNames: CQW49_07155
+sequenceVersion: 1; entryVersion: 23; length: 195
+sequence md5: F8A959B5ED1FFCFD8E87C845F29A6F5A
+taxonId: 595536
+
+MbnA accession: E3YBA4
+geneName: mbnA; orfNames: CQW49_07165, MettrDRAFT_4473
+sequenceVersion: 1; entryVersion: 34; length: 30
+sequence md5: 9BEF779BD94CDD478711F9ECAD0CC59A
+
+These are reference identities, not proof of identical engineered constructs.
+The primary experiment, not the domain annotation, supports the causal edge.

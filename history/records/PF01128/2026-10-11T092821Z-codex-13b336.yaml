@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01128
+  path: data/families/PF01128.yaml
+session:
+  id: 2026-10-11T092821Z-codex-13b336
+  timestamp: '2026-10-11T09:28:21Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of IspD assay graphs
+  details: 'Saved the native structured review against the current semantic digest
+    and hash-anchored primary and identity evidence. Eleven OBSERVED edges remain
+    bounded to four experimental contexts: six DIRECT purified-assay effects and five
+    crude-extract effects with UNRESOLVED directness. Preserve primary-proof version
+    limits, contradictory numerical labels, incomplete clones, folding/normalization
+    alternatives and unreviewed distinct-member contexts. Native projection and overlay
+    validation passed. Same-agent partial scientific review, not independent endorsement;
+    NEEDS_FOLLOWUP and IN_PROGRESS remain. Final canonical-index regeneration and
+    all-corpus checks follow.'
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T092759Z-pf01128-ispd-product-and-scoped-mutant-effects/review.yaml

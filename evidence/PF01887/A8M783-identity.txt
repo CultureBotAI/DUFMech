@@ -1,0 +1,17 @@
+Identity facts inspected 2026-10-11, not experimental mechanism evidence.
+Sources:
+https://rest.uniprot.org/uniprotkb/search?query=gene%3ASare_1364&format=json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/A8M783/entry/pfam/PF01887/
+
+UniProt accession: A8M783
+Gene/locus: Sare_1364
+EMBL protein: ABV97265.1
+Organism: Salinispora arenicola CNS-205
+NCBI taxon: 391037
+Sequence version: 1; entry version: 75; length: 261 residues
+Sequence MD5: 67BCA2E0E19869FEFF82BC140B84075A
+entry accession: PF01887
+PF01887 interval: 7-151 inclusive; integrated entry: IPR046469
+The current Pfam record is N-terminal; UniProt also lists PF20257 at the C terminus.
+Current stereoselectivity annotation is by similarity, not direct evidence for
+this member's sulfur-isomer specificity.

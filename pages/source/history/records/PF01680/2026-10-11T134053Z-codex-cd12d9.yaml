@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01680
+  path: data/families/PF01680.yaml
+session:
+  id: 2026-10-11T134053Z-codex-cd12d9
+  timestamp: '2026-10-11T13:40:53Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of PdxS adduct and reconstitution graphs
+  details: Reviewed all eleven retained edges against their biochemical contexts,
+    K81 peptide/reference mapping and primary evidence. The 2008 NMR follow-up constrains
+    the older structural proposals; acid-induced Z2 is not encoded as a native intermediate.
+    Schema, evidence hashes and overlay/projection equivalence pass. Saved same-agent
+    NEEDS_FOLLOWUP review with open coverage finding. Complete clone provenance, protocol
+    discrepancies, later substrate/second-site work and other members remain unresolved.
+    Status remains IN_PROGRESS; no full-corpus completion or publication claim.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T134104Z-pf01680-pdxs-adduct-and-reconstitution-contexts/review.yaml

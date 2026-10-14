@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01930
+  path: curation/families/PF01930.yaml
+session:
+  id: 2026-10-12T025903Z-codex-ba7113
+  timestamp: '2026-10-12T02:59:03Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: needs_followup
+  summary: Curate member-scoped Pcal and Gsu Cas4 causal assay graphs
+  details: Added PF01930 overlay and four evidence ledgers from inspected primary
+    methods, figures and mapped protein identities. Retains Pcal DNA processing, residue
+    and cluster-context effects separately from Gsu fusion/Cas2 reconstitution and
+    E.coli surrogate-cell acquisition. SSO0001 current PF12705, source contradictions,
+    native function and remaining member coverage are explicit limits; IN_PROGRESS,
+    no publication or family-wide completion.

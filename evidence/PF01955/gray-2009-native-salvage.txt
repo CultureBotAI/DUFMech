@@ -1,0 +1,61 @@
+PF01955 conditional native Cbi salvage, 2026-10-12 UTC
+Primary: PMID:19376876; DOI:10.1128/JB.00230-09
+https://journals.asm.org/doi/10.1128/jb.00230-09
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2698395/
+Locators: native salvage Results, growth Methods, Table1 and originalFigures4-6.
+Minimal quotations: "growth"; "salvage Cbi"
+OriginalFigures2-6 were visually inspected; main Results/Methods/Table1 read.
+SupplementTablesS1/S2 and captions were read as PDF text only; supplement
+images and the complete original cloned sequences remain unverified.
+
+Common native growth assay: strain2.4.1 derivatives, oxic30C36h, modified
+Sistrom medium30mM acetate,15nM indicated cyano-corrinoid, OD650 triplicates
+withSD. Two-day aerobic succinate starters, washed twice,5% inoculum.
+Methods give tetracycline1ug/ml for R.sphaeroides; Figures4/5 instead print
+1ug/ul. Preserve the1000fold unit discrepancy, not a silent recipe correction.
+The gene/primer ledger retains theJE10708/JE10780 vector-strain label mismatch.
+
+Figure5,Cbi panel: with nativecbiZ andCobD retained, adding M.mazei cobY on
+pCOBY47 to delta-cobBdelta-cobP increases growth (JE11903 versusJE11902
+vector). With that donor present, deletingcobD reduces growth (JE11906 versus
+JE11903). These are conditional partner-function requirements in a
+cbiZ-positive host, not evidence thatCbiZ,CobY orCobD alone makesCbl.
+Figure4,Cbi panel: JE10785 delta-cobBdelta-cbiZdelta-cobP with the same
+pCOBY47 remains low. Comparing it withJE11903 inFigure5 supports a conditional
+cbiZ requirement. This is a CROSS-FIGURE inference from distinct strain
+experiments, not a simultaneously plotted matchedcbiZ-deletion/rescue pair.
+No quantitative effect size or statistical significance is inferred across
+figures; historical background/allele differences are not exhaustively excluded.
+
+Figure4,Cby panel: pCOBY47 restores growth of the triple deletion strain
+relative to its vector control. In the pCOBY47 strain, suppliedCby supports
+growth whereas no corrinoid orCbi does not. Both exogenousCby and donorCobY
+are conditions of this bypass; neither is independently sufficient.
+CNCbl supports growth with or withoutpCOBY47, arguing against a general
+inability to grow. Cbi does not rescue even withpCOBY47; extended48h negative
+is text-reported,data-notshown,not the displayed36h time course.
+
+Controls not assigned as direct PF01955 catalytic steps:
+Figure5: CobD loss also removesCby-supported growth but notCNCbl growth;
+no-corrinoid arms remain low. Figure6: delta-cobBdelta-cbiZ withCobP intact
+grows withCby,Cbi,Cbl; replacingcobD withaadA removesCby but notCbi/Cbl
+growth. ThereforeCbiZ is not universally essential for nativeCbi salvage.
+The text-reported delta-cobBdelta-cobD cbiZ-positive strainJE10966 still
+grows withCbi (ODmax0.61,rate0.04deltaOD/hour), rejecting obligatory passage
+of all importedCbi throughCbiZ. Flux partition and transporter binding remain
+unmeasured. Do not infer direct Btu-CbiZ interaction from gene proximity.
+
+Figure2calibration andFigure3wild-type fraction profiles are broader controls,
+not CbiZ-specific perturbations. Derivatized-HPLC plus cobamide bioassay does
+not determine native upper ligands. Methods11mM versusFigure2caption22mM
+glycerol is unresolved; Figure2caption describes eight-times-in-triplicate
+calibration, not the replication of every native assay. Photoheterotrophic
+cultures are oxygen-limited,not strictly anoxic. No newPF01955edge is assigned
+to the carbon-source effect or assumed oxygen control ofBluB from these data.
+SupplementS2 reports CobD rescue of a SalmonellacbiB defect; this is a partner
+control,not PF01955 catalysis, and its original plot was not visually inspected.
+
+The earlier2008 enriched-extract CNCbl activity and the later2009 tagged-enzyme
+CNCbl negative concern different preparations/protocols. Native2009Discussion
+does not add a new purified specificity experiment. Later pseudoCbl remodeling
+and earlier archaeal graphs remain separate, with their original limitations.

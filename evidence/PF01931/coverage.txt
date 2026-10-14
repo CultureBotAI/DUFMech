@@ -1,0 +1,37 @@
+PF01931 coverage and exclusions, 2026-10-12 UTC, Codex.
+Current work is a partial scientific assessment, not a complete family review.
+Frozen3984proteins/4030matches remain the source population, not newly re-counted.
+Ignored/hidden-inclusive search of curation,evidence,history,reviews/structured
+found no pre-existing PF01931/YjjX/PRRC1 curation before these files were added.
+Searches included DUF84/PF01931/NTPase_I-T/YjjX/PRRC1 and primary references.
+
+Open follow-ups:
+- Lawhorn2004, PMID15292217,doi:10.1074/jbc.M404284200. The actual DOI
+  resolves to PII S002192582068022X, but full text403. Bacimethrin/CF3-HMP
+  resistance remains a lead until primary constructs/controls are inspected;
+  YmfB/Cof enzyme results must not be assigned to YjjX.
+- VC0702 structure PMID16498616,doi:10.1002/prot.20919/PDB1ZWY and
+  Salmonella1U14 require exact strain/accession mapping and assay review.
+- Kotani2008 zebrafish misty somites PMID18342848, Q5XJA3 candidate:
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC2443191/
+  PKA regulation PMID20018846:
+  https://pubmed.ncbi.nlm.nih.gov/20018846/
+  Somite/maternal-effect and PKA experiments are discovered primary leads,
+  not yet reviewed graphs or a transfer to human PRRC1 trafficking.
+- Yang Liu2025 HKUST thesis,doi:10.14711/thesis-hdl152448, reports separate
+  proline-rich and NTPase-domain effects on COPII assembly. Abstract/search
+  lead only; PDF fetch ended after50redirects. Need actual constructs, domain
+  boundaries, figures and controls before domain-mechanism edges.
+  https://repository.hkust.edu.hk/ir/bitstream/1783.1-152448/1/1783.1-152448.pdf
+- Thermoplasma PPAT/PF01931 fusions and other members are unreviewed contexts.
+- A2017 YhdE fluorescence-probe paper mentions YjjX as a comparator; exact
+  product chemistry, sensor specificity and primary data need review.
+
+Source limits:2005 Structure paper inspected through the author's chapter4
+republication, not an independent second experiment; substrate-negative,
+Mn-activity and GDP-Km prose/table discrepancies retained. PNAS2021/2025 main
+figures inspected but supplementary methods unavailable. Human260-376 current
+domain match differs from historical264-355 lead. Gene-level perturbation
+is not domain sufficiency. PRRC1 ATP/ITP hydrolysis remains unestablished here.
+Do not convert docking, pull-down, coexpression or structural homology into
+an observed direct pathway. No absence of literature is claimed.

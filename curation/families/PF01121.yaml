@@ -1,0 +1,193 @@
+pfam_id: PF01121
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01121
+causal_graphs:
+  - graph_id: ecoli-coae-preparative-coa-formation
+    title: Recombinant E. coli CoaE supports preparative CoA formation
+    scope: W3110 coaE/yacE expressed in BL21(DE3) using pET28b(+), with an engineered Ala after the start codon and the measured processed N terminus ARYIVALTGGIG. Not the mycobacterial tagged fusion protein.
+    context: 2001 preparative reaction contains 3 umol dephospho-CoA, 0.1 umol ATP, 1 umol MgCl2, 1 umol KCl, 3.5 umol phosphoenolpyruvate, 5 U pyruvate kinase and 2 U recombinant CoaE in 5 ml water adjusted to pH 8, 30 min at room temperature. HPLC-purified product is compared with authentic CoA by proton NMR. ATP regeneration is part of the joint reaction.
+    family_mapping: K-12 reference P0A6I9, coaE/yacE/b0103/JW0100, 206 aa, sequence version 1, exactly matches InterPro and contains PF01121 at 3-177. Ala plus native residues 2-12 explains the measured N-terminal sequence after initiator removal. The modern record cites this W3110 study; complete plasmid sequence was not independently reconstructed.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:83333
+    limitations: Product identity is reported from NMR, but raw spectra and a preparative no-enzyme control are not supplied in the inspected material. Separate ADP and thioester-coupled assays corroborate activity under different conditions. This graph does not establish an elementary catalytic base, isolated-profile sufficiency or the products of minor alternative-substrate reactions.
+    nodes:
+      - node_id: coae-dcoa-atp-regeneration-system
+        label: Purified recombinant CoaE with dephospho-CoA, ATP, magnesium and ATP regeneration
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P0A6I9
+      - node_id: nmr-identified-coa-product
+        label: HPLC-purified product identified as CoA by proton NMR
+        node_type: STATE
+    edges:
+      - edge_id: coae-joint-system-produces-coa
+        subject: coae-dcoa-atp-regeneration-system
+        predicate: produces
+        object: nmr-identified-coa-product
+        mechanism: The purified enzyme reaction yields a product reported to match authentic CoA by proton NMR. The supported overall phosphorylation retains ATP, magnesium and regeneration components as joint conditions, without inventing independently observed phosphoryl-transfer microsteps.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:11292795
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC99492/
+            snippet: identical to that of authentic CoA
+            explanation: Preparative assay Methods and recombinant characterization Results establish product formation and reported NMR identity. Figure 1 is a reaction scheme, not raw proof of the product spectrum.
+            cache_path: evidence/PF01121/mishra-2001-coae.txt
+            cache_sha256: 75e61819739997294b8ea1563ceb16916263957b76704e47f2101f777fb073dd
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A6I9/entry/pfam/PF01121/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A6I9/entry/pfam/PF01121/
+            snippet: 'P0A6I9 Pfam:PF01121 interval: 3-177, inclusive'
+            explanation: Maps the native reference while explicitly accounting for the engineered Ala and processed N terminus of the experimental construct.
+            cache_path: evidence/PF01121/CoaE-identity.txt
+            cache_sha256: 411d10375ca1afd1834120b67c5ce42c21a066962a37ed5a89ee1ec11cb61e2d
+  - graph_id: mycobacterial-coae-dcoa-series-substitutions
+    title: Mycobacterial CoaE substitutions alter reported DCoA-series turnover
+    scope: Full-length hexahistidine-tagged mycobacterial CoaE and individual R140A/R140K/D32A/L114A substitutions in the 2011 study. The R140A loss claim is explicitly CONTESTED by inconsistent source presentations.
+    context: Single-coupled alpha-ketoglutarate-dehydrogenase assay, 25 C, five-minute A340 monitoring, no-DCoA blanks subtracted. DCoA varies with 10 mM ATP, 10 mM MgCl2, 20 mM KCl, 50 mM Tris pH 8, 2 U coupling enzyme, 2 mM alpha-ketoglutarate, 0.3 mM NADP and the source's 0.3 mM pyrophosphate cofactor. Exact CoaE dose is unreported. Table 2 gives apparent kcat; Figure 5 states two independent experiments in duplicate. Separate ITC kinetics use 20 C and different buffer, not this same reaction.
+    family_mapping: The cited P63826 demerged into P9WPA3/Rv1631 and P9WPA2/MT1667; both 407-aa sequences exactly match archived UPI0000127CE6. P9WPA3 PF01121 spans 4-178 and contains R140/D32/L114; the intact protein also has PF04229. The 2009 source names Rv1631 but its printed forward primer mismatches the reference N terminus, so complete clone and donor-strain reconstruction remain unresolved. Two identical successors do not imply two experiments.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:1773
+    limitations: Effects concern reported fitted turnover in this substrate series, not binding Kd or observed catalytic chemistry. Text/Table 2 report R140A no reaction while Figure 5A plots its Km as 240 uM. Other Km, ratio and fold-change inconsistencies prevent precise affinity/efficiency claims. Structural controls do not establish identical folding for every mutant. The printed cofactor name thymine pyrophosphate is not silently corrected, and raw kinetic fits remain unreviewed.
+    nodes:
+      - node_id: r140a-in-dcoa-series
+        label: R140A instead of WT in the DCoA-varied assay
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P9WPA3
+      - node_id: r140k-in-dcoa-series
+        label: R140K instead of WT in the DCoA-varied assay
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P9WPA3
+      - node_id: d32a-in-dcoa-series
+        label: D32A instead of WT in the DCoA-varied assay
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P9WPA3
+      - node_id: l114a-in-dcoa-series
+        label: L114A instead of WT in the DCoA-varied assay
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P9WPA3
+      - node_id: dcoa-series-apparent-turnover
+        label: Apparent turnover from the DCoA-varied kinetic series
+        node_type: ACTIVITY
+    edges:
+      - edge_id: r140a-reported-turnover-loss-contested
+        subject: r140a-in-dcoa-series
+        predicate: decreases
+        object: dcoa-series-apparent-turnover
+        mechanism: The text and Table 2 report loss of detectable kinetic activity, but Figure 5A supplies an R140A Km despite that no-reaction designation. This internally inconsistent loss claim is retained as contested, not an observed zero or proof that R140 is an essential catalytic charge stabilizer.
+        directness: DIRECT
+        support: CONTESTED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:21264299
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3019153/
+            snippet: completely abolishes kinetic activity
+            explanation: The R140A Results sentence and Table 2 conflict with the visually inspected Figure 5A R140A bar labeled Km=240 uM. The conflict is not resolved by choosing the strongest claim.
+            cache_path: evidence/PF01121/walia-2011-coae.txt
+            cache_sha256: 56fc6b31e07e99c5dcdff6d58e205acfa28323c6f6fff334130b5c87bbf0b520
+      - edge_id: r140k-decreases-dcoa-series-turnover
+        subject: r140k-in-dcoa-series
+        predicate: decreases
+        object: dcoa-series-apparent-turnover
+        mechanism: Table 2 reports lower DCoA-series kcat for R140K, 0.453 versus WT 1.758 per minute. This is not assigned the prose's inconsistent percentage or Km fold change, and does not directly reveal ATP shielding or transition-state geometry.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:21264299
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3019153/
+            snippet: dramatic loss of catalytic activity
+            explanation: Table 2 DCoA-varied turnover and the R140K Results support a decrease. The reported 518-fold Km statement does not match 181 versus 34.9 uM and is excluded from the graph's quantitative interpretation.
+            cache_path: evidence/PF01121/walia-2011-coae.txt
+            cache_sha256: 56fc6b31e07e99c5dcdff6d58e205acfa28323c6f6fff334130b5c87bbf0b520
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P9WPA3/entry/pfam/PF01121/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P9WPA3/entry/pfam/PF01121/
+            snippet: 'P9WPA3 Pfam:PF01121 interval: 4-178, inclusive'
+            explanation: Archived P63826 and both modern strain successors have identical sequences, with the mutation sites in the kinase profile. The full experimental clone and printed primer discrepancy remain distinct limits.
+            cache_path: evidence/PF01121/CoaE-identity.txt
+            cache_sha256: 411d10375ca1afd1834120b67c5ce42c21a066962a37ed5a89ee1ec11cb61e2d
+      - edge_id: d32a-decreases-dcoa-series-turnover
+        subject: d32a-in-dcoa-series
+        predicate: decreases
+        object: dcoa-series-apparent-turnover
+        mechanism: Table 2 reports a lower DCoA-series kcat for D32A, 0.1026 versus WT 1.758 per minute. No precise efficiency ratio, catalytic-base assignment or magnesium-coordination microstep is inferred from this fitted endpoint.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:21264299
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3019153/
+            snippet: Kcat dropped drastically
+            explanation: The DCoA column of Table 2 is the adopted endpoint; the separately varied ATP column has a different kcat. Its inconsistent printed efficiency ratio and the 57.5-versus-575 ATP Km conflict are retained as limitations, not corrected by inference.
+            cache_path: evidence/PF01121/walia-2011-coae.txt
+            cache_sha256: 56fc6b31e07e99c5dcdff6d58e205acfa28323c6f6fff334130b5c87bbf0b520
+      - edge_id: l114a-increases-dcoa-series-turnover
+        subject: l114a-in-dcoa-series
+        predicate: increases
+        object: dcoa-series-apparent-turnover
+        mechanism: L114A has higher apparent turnover in the DCoA-varied series, 3.414 versus WT 1.758 per minute. The direction reverses in the ATP-varied series, so this is not a universal catalytic activation claim or a direct binding-affinity measurement.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:21264299
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3019153/
+            snippet: increasing the enzymatic turnover
+            explanation: L114A Results and Table 2 DCoA columns support the increase. The ATP-series result is deliberately retained in a separate graph rather than averaged or silently discarded.
+            cache_path: evidence/PF01121/walia-2011-coae.txt
+            cache_sha256: 56fc6b31e07e99c5dcdff6d58e205acfa28323c6f6fff334130b5c87bbf0b520
+  - graph_id: mycobacterial-coae-l114a-atp-series
+    title: L114A lowers apparent turnover in the separately varied ATP series
+    scope: Full-length tagged mycobacterial CoaE L114A versus WT in the 2011 Table 2 ATP-varied kinetic comparison, not the DCoA-varied series.
+    context: Coupled A340 assay at 25 C, 50 mM Tris pH 8, fixed 0.5 mM DCoA and varying ATP, 10 mM MgCl2, 20 mM KCl, 2 U alpha-ketoglutarate dehydrogenase, 2 mM alpha-ketoglutarate, 0.3 mM NADP and 0.3 mM the source's pyrophosphate cofactor. Five-minute monitoring with no-DCoA blanks. Exact CoaE dose and raw fit uncertainty are not supplied in the inspected table/method.
+    family_mapping: L114 matches the archived P63826 sequence and both identical P9WPA3/P9WPA2 successors. PF01121 spans 4-178 in the 407-aa P9WPA3 reference. The second PF04229 domain and His tag remain part of the tested protein; a published forward-primer mismatch prevents exact clone reconstruction.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:1773
+    limitations: A condition-specific fitted kcat is not a universal turnover constant or affinity. The opposite DCoA-series direction and inconsistent reported parameters elsewhere in the paper remain explicit. No elementary contact, folding equivalence or family-wide behavior is proved. The assay cofactor's printed name and raw fit details require clarification.
+    nodes:
+      - node_id: l114a-in-atp-series
+        label: L114A instead of WT in the ATP-varied assay
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P9WPA3
+      - node_id: atp-series-apparent-turnover
+        label: Apparent turnover from the ATP-varied kinetic series
+        node_type: ACTIVITY
+    edges:
+      - edge_id: l114a-decreases-atp-series-turnover
+        subject: l114a-in-atp-series
+        predicate: decreases
+        object: atp-series-apparent-turnover
+        mechanism: The ATP-varied Table 2 column reports L114A kcat of 1.152 versus WT 2.886 per minute. This decrease is kept separate from the DCoA-series increase and is not interpreted as unique transition-state destabilization.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:21264299
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3019153/
+            snippet: Table 2
+            explanation: The ATP-specific kcat column, not the DCoA-specific narrative, supplies the comparison. Both parameter sets are recorded in the evidence ledger with the source's contradictions and unreviewed raw-data limitation.
+            cache_path: evidence/PF01121/walia-2011-coae.txt
+            cache_sha256: 56fc6b31e07e99c5dcdff6d58e205acfa28323c6f6fff334130b5c87bbf0b520
+discussions:
+  - discussion_id: coae-kinetic-conflicts-and-construct-reconciliation
+    prompt: Reconcile CoaE primary-source kinetic and construct conflicts before strengthening mechanistic claims.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: R140A no-activity text/Table 2 conflicts with Figure 5's Km fit. Other Km, efficiency and fold-change values disagree, and the original mycobacterial forward primer mismatches the archived reference N terminus. These are source conflicts, not permission to repair values silently or assert unobserved chemistry.
+    evidence:
+      - reference: PMID:21264299
+        supports: PARTIAL
+        evidence_source: selected_full_text
+        explanation: Table 2 and relevant Results support scoped reported turnover changes, with a contested R140A edge. Figure 5 exposes discrepancies; structural controls have exceptions and models are not directly observed microsteps.
+      - reference: PMID:19876400
+        supports: PARTIAL
+        evidence_source: selected_full_text
+        explanation: The cited construct study identifies Rv1631 and a two-domain 407-aa protein, but the printed cloning primer prevents independently reconstructing the full experimental sequence.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: Obtain raw kinetics, correction/author clarification and complete clones; resolve R140A, D32A/G8A parameter discrepancies, pyrophosphate-cofactor naming and magnesium/reporter controls. Assess CTP regulation, UPF0157 folding, other taxa and alternative substrates in separate graphs. The 2001 E. coli NMR spectrum was not available for independent reanalysis. Partial same-agent scientific review; remain IN_PROGRESS.

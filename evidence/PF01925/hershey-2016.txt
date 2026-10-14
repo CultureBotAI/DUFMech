@@ -1,0 +1,43 @@
+Hershey et al.2016, PMID26981620, DOI10.1371/journal.pbio.1002402.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+Inspected UTC2026-10-12: processing Results, culture/genetic/protein-analysis
+Methods, original Figure3 and supplementary FigureS3. Both figures visually
+inspected. Supplementary TablesS4/S5 were retrieved from the publisher and
+parsed as DOCX tables, despite the temporary filenames ending.pdf.
+https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.1002402.s015&type=supplementary
+https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.1002402.s016&type=supplementary
+Minimal quotations:
+"proteolysis of the two targets is minimal"
+"alleles restored processing"
+"restore wild-type biomineralization"
+
+Authored evidence assessment:
+Figure3A: the joint delta-mamO/delta-R9 background has diminished MamE and
+MamP processing; adding WT or H116A MamO restores shorter products. Figure3B
+separately tests single delta-mamO, which retains limO, and WT complementation.
+The single mutant has diminished processing despite LimO; rescue restores it.
+Sigma70 is a loading control; the MamE NS band is nonspecific. These are cell
+lysate processing patterns, not a purified MamO-mediated proteolysis reaction,
+direct MamE binding assay or measurement of an ion-transport intermediate.
+S4 names AK94 as delta-mamO/delta-R9 and AK30 as WT. S5 identifies pAK605 as
+pAK253 with the mamAB promoter replacing tac, pAK845 as MamO and pAK856 as
+H116A; pAK823 and its derivatives encode N-terminal M2/3xFLAG/BamHI-tagged
+MamO. Exact tagged-versus-untagged construct assignment for every Figure3
+lane remains unresolved; the S3 asterisks/anti-FLAG identify tagged alleles.
+Main Methods pAK243 versus S4/S5 pAK241 concerns an additional mamE deletion
+and is not silently normalized or assigned to the MamO comparisons.
+
+Standard cultures use MG with ferric malate30uM,HEPES25mM pH7.2,10%oxygen,
+30C; lysates are late-log. Temperature-comparison cultures were anaerobic
+and are not merged into this graph. Single-copy neutral-site complementation
+uses the mamAB promoter. In S3C the single delta-mamO background loses magnetic
+response; WT,H116A,D149A,T225A,H148A,H263A tagged alleles restore response when
+LimO is present. This is conditional complementation, not proof that the
+mutated residues are dispensable without LimO or that the Pfam segment alone
+suffices. H116/D149/T225/H148/H263 are all outside PF01925(357-633).
+The 2011 interpretation of MamO as a protease was superseded by the2016
+pseudoprotease analysis. Ni-binding in the separate46-281 protease-domain
+construct is not PF01925 binding. A solute-mediated activation model remains
+unresolved: no transported solute, physical MamE interaction or native metal
+flux was established. S3 CMYK TIFF required RGB conversion for PNG display;
+that format error was not a filesystem-read denial. No raw-data replication.

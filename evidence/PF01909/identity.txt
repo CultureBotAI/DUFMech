@@ -1,0 +1,39 @@
+PF01909 identity ledger; accessed 2026-10-12 UTC
+Frozen family: NTP_transf_2, Nucleotidyltransferase domain, IPR002934,
+former DUF76, EX_DUF/UNSCORED before this curation. Previous-name evidence
+is the frozen Pfam history, not inference from the current description.
+Snapshot interpro-pfam-duf-2026-10-10:
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+Frozen counters: 24660 proteins, 24705 matches, 12011 proteomes, 19472
+taxa, 133 structures, 16552 AlphaFold models, 272 architectures.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01909/
+Fresh metadata matches the retained identity; this is not a source update.
+
+https://rest.uniprot.org/uniprotkb/P27249.json
+Escherichia coli K-12 GlnD, b0167/JW0162, taxon 83333, 890 aa,
+sequence version 2; sequence MD5 EF4B2DD86AF8AAB2D64BAA976A7C4466.
+Sequence checks: G93, G94, D107, H514, D515 match paper numbering.
+RefSeq cross-reference NP_414709.1 is recorded, not independently aligned.
+Reference identification is not independent sequencing of assay clones.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P27249/
+PF01909 85-144; PF01966/HD 468-601; PF01842/ACT 709-762,817-874;
+PF08335 193-331; PF27444 354-447; PF27446 634-686.
+The 1-371 construct contains other sequence/domain context; its activity
+does not prove isolated 85-144 peptide sufficiency. HD-AA/QN substitutions
+are outside PF01909, retained only as whole-protein mechanistic controls.
+JSON hashes:
+P27249 16c1b954bd45157ab3fa6f6043ce022ab0474c8be42be1a9f634fcad14edcfc1
+domains d9d6b3626c831dc532eb1c96a95ea34980d043588f17e384d3a8bd1c5ba15b4a
+
+Excluded mapping lead:
+https://rest.uniprot.org/uniprotkb/P05057.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P05057/
+S. aureus kanamycin nucleotidyltransferase ANT(4'), 253 aa, currently
+has only PF07827 (114-243) among returned Pfam matches; no PF01909 match
+is returned. The frozen family description's KNTase example and related
+fold chemistry do not establish an exact PF01909 assignment. This does
+not prove biological unrelatedness or exclude a future revised mapping.
+Do not attach ANT(4') structures/kinetics to this record without resolving
+the family boundary. Imported description is preserved unchanged.
+P05057 JSON c55b7bb41913dd219a1764788c3e60c0bcffa7e3429cc86bff727de6f5ead00b
+domains 42655f50750d13f2ae9f1069fde32cb183cc6943dba69f27f3152148d9e74dbb

@@ -1,0 +1,24 @@
+PF01886 / DUF61 identity assessment, accessed 2026-10-11.
+Sources:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01886/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01886/protein/uniprot/Q97ZH2/
+https://rest.uniprot.org/uniprotkb/search?query=xref%3Apfam-PF01886&format=json&size=500
+https://data.rcsb.org/rest/v1/core/polymer_entity/5VFK/1
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=AAK41217.1,WP_009992374.1&rettype=fasta&retmode=text
+
+SSO0941/Q97ZH2 is Saccharolobus solfataricus P2 (historically Sulfolobus),
+taxon 273057; ATCC 35092 / DSM 1617 / JCM 11322. UniProt sequence version 1,
+entry version 93, 138 residues. Downloaded AAK41217.1 and WP_009992374.1
+sequences match Q97ZH2 exactly. Current member-specific InterPro maps PF01886
+to residues 4-123 inclusive, score 3.7e-19; integration is IPR002746.
+PDB 5VFK entity 1 is exactly the 138-residue reference plus LEHHHHHH (146 aa),
+not the isolated Pfam interval. Expression host is E. coli BL21(DE3), pET30a.
+These identity checks do not establish an activity or any residue mechanism.
+
+The returned current UniProt search contains 196 entries, seven reviewed;
+none has a FUNCTION comment. The only non-sequence/genome reference-position
+label in this returned set is Q97ZH2's NMR structure reference PMID29526782.
+This is a bounded annotation audit, not proof of absent functional literature.
+O29789/AF_0460 verifies the UPF0216 alias with PF01886/IPR002746 and HAMAP
+MF_00585. Reviewed status and the shared alias are not experimental function.
+Frozen DUFMech identity and its 196-protein counter are preserved unchanged.

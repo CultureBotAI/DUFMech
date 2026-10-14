@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01594
+  path: curation/families/PF01594.yaml
+session:
+  id: 2026-10-11T114211Z-codex-2cd742
+  timestamp: '2026-10-11T11:42:11Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add eight TqsA gene-perturbation reporter and medium-specific biofilm effects
+    without asserting direct AI-2 transport.
+  details: Add eight TqsA gene-perturbation reporter and medium-specific biofilm effects
+    without asserting direct AI-2 transport. Inspected primary methods/results and
+    relevant figures, retained minimal evidence and explicit access limits; baseline
+    8296 records valid with zero drift. Partial curation remains IN_PROGRESS.

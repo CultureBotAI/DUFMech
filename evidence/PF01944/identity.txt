@@ -1,0 +1,37 @@
+PF01944 identity assessment, 2026-10-12 UTC, Codex
+
+Frozen source: interpro-pfam-duf-2026-10-10, SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+PF01944, SpoIIM, Stage II sporulation protein M, IPR002798, former DUF95
+in the frozen previous-name table. Preserve EX_DUF, UNSCORED, imported
+description and counters. Renaming is not family-wide characterization.
+
+Inspected public database endpoints:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01944/
+https://rest.uniprot.org/uniprotkb/P37873.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P37873/
+Reviewed-family and species-subtree UniProt JSON queries were also inspected.
+P37873, spoIIM/BSU23530, B. subtilis strain 168, 214 aa, sequence v1,
+sequence date 1994-10-01, maps PF01944 at residues 25-203. The current
+sequence has Q75, S76, K82, I92 and K107. Experimental strains in the two
+2007 studies are PY79 derivatives, not silently relabeled strain 168.
+P37873 is the reference protein mapping; historical constructs were not
+independently resequenced or aligned to a separately retrieved PY79 genome.
+Graph taxon uses species NCBITaxon:1423 and context explicitly says PY79.
+
+The reviewed-family query returned P37873, Q58117 (MJ0706, 214 aa) and
+Q58203 (MJ0793, 178 aa), the latter two from M. jannaschii JAL-1.
+These three hits are not a family census. No sporulation or enzymatic
+function is inferred for the archaeal proteins from family membership.
+
+https://rest.uniprot.org/uniprotkb/search?query=CD630_12210&format=json&size=20
+https://rest.kegg.jp/get/cdf:CD630_12210
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q18B81/
+CD1221 in Ribis Figure 1B maps by the strain-630 locus CD630_12210 to
+Q18B81 v1, 201 aa, CAJ68075.1/WP_009902311.1, NCBITaxon:272563.
+Current UniProt cross-references contain no Pfam or InterPro assignment;
+the InterPro Pfam endpoint returned an empty body. Domain coordinates
+and membership remain unconfirmed, not disproved. No C. difficile edge
+is represented as an experimentally mapped PF01944-domain effect here.
+Initial exact-species-ID or legacy-locus queries returned no hits; successful
+current-locus retrieval demonstrates why those were not evidence of absence.

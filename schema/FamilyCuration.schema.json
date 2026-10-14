@@ -1,5 +1,214 @@
 {
   "$defs": {
+    "CausalDirectness": {
+      "description": "",
+      "enum": [
+        "DIRECT",
+        "INDIRECT",
+        "UNRESOLVED"
+      ],
+      "title": "CausalDirectness",
+      "type": "string"
+    },
+    "CausalEdge": {
+      "additionalProperties": false,
+      "description": "Evidence for a directed relation, rather than citations only establishing the endpoints.",
+      "properties": {
+        "directness": {
+          "$ref": "#/$defs/CausalDirectness"
+        },
+        "edge_id": {
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/ClaimEvidence"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "evidence_kind": {
+          "$ref": "#/$defs/EvidenceKind"
+        },
+        "mechanism": {
+          "description": "What the evidence supports about this directed step and its conditions.",
+          "type": "string"
+        },
+        "object": {
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "type": "string"
+        },
+        "predicate": {
+          "$ref": "#/$defs/CausalPredicate"
+        },
+        "subject": {
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "type": "string"
+        },
+        "support": {
+          "$ref": "#/$defs/CausalSupport"
+        }
+      },
+      "required": [
+        "edge_id",
+        "subject",
+        "predicate",
+        "object",
+        "mechanism",
+        "directness",
+        "support",
+        "evidence_kind",
+        "evidence"
+      ],
+      "title": "CausalEdge",
+      "type": "object"
+    },
+    "CausalGraph": {
+      "additionalProperties": false,
+      "description": "A scoped directed mechanism or phenotype graph, not family-wide functional proof.",
+      "properties": {
+        "context": {
+          "description": "Organism, strain, perturbation, conditions and necessary cofactors or partners.",
+          "type": "string"
+        },
+        "edges": {
+          "items": {
+            "$ref": "#/$defs/CausalEdge"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "family_mapping": {
+          "description": "Evidence mapping the tested object to this Pfam domain, with coordinate limits.",
+          "type": "string"
+        },
+        "feedback_explanation": {
+          "description": "Required when directed cycles or self-edges represent actual feedback.",
+          "type": "string"
+        },
+        "graph_id": {
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "type": "string"
+        },
+        "limitations": {
+          "description": "Unresolved steps, alternative explanations and unsupported transfers.",
+          "type": "string"
+        },
+        "nodes": {
+          "items": {
+            "$ref": "#/$defs/CausalNode"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "scope": {
+          "description": "Exact tested protein or construct and limits of generalization.",
+          "type": "string"
+        },
+        "scope_status": {
+          "$ref": "#/$defs/CausalScope"
+        },
+        "taxon": {
+          "pattern": "^NCBITaxon:[0-9]+$",
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "graph_id",
+        "title",
+        "scope",
+        "context",
+        "family_mapping",
+        "scope_status",
+        "limitations",
+        "nodes",
+        "edges"
+      ],
+      "title": "CausalGraph",
+      "type": "object"
+    },
+    "CausalNode": {
+      "additionalProperties": false,
+      "description": "",
+      "properties": {
+        "grounding": {
+          "description": "Verified entity CURIEs; absence means ungrounded, not a fabricated identifier.",
+          "items": {
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]*:\\S+$",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "label": {
+          "type": "string"
+        },
+        "node_id": {
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "type": "string"
+        },
+        "node_type": {
+          "$ref": "#/$defs/CausalNodeType"
+        }
+      },
+      "required": [
+        "node_id",
+        "label",
+        "node_type"
+      ],
+      "title": "CausalNode",
+      "type": "object"
+    },
+    "CausalNodeType": {
+      "description": "",
+      "enum": [
+        "STATE",
+        "ACTIVITY",
+        "PROCESS",
+        "PERTURBATION",
+        "PHENOTYPE"
+      ],
+      "title": "CausalNodeType",
+      "type": "string"
+    },
+    "CausalPredicate": {
+      "description": "",
+      "enum": [
+        "increases",
+        "decreases",
+        "required_for",
+        "enables",
+        "produces",
+        "degrades",
+        "converts_to"
+      ],
+      "title": "CausalPredicate",
+      "type": "string"
+    },
+    "CausalScope": {
+      "description": "",
+      "enum": [
+        "MECHANISTIC",
+        "PHENOTYPIC",
+        "HYPOTHETICAL"
+      ],
+      "title": "CausalScope",
+      "type": "string"
+    },
+    "CausalSupport": {
+      "description": "",
+      "enum": [
+        "OBSERVED",
+        "INFERRED",
+        "HYPOTHESIZED",
+        "CONTESTED"
+      ],
+      "title": "CausalSupport",
+      "type": "string"
+    },
     "CharacterizationStatus": {
       "description": "",
       "enum": [
@@ -421,6 +630,12 @@
           },
           "type": "array"
         },
+        "causal_graphs": {
+          "items": {
+            "$ref": "#/$defs/CausalGraph"
+          },
+          "type": "array"
+        },
         "cross_corpus_links": {
           "items": {
             "$ref": "#/$defs/CrossCorpusLink"
@@ -469,6 +684,12 @@
         "assertions": {
           "items": {
             "$ref": "#/$defs/FunctionalAssertion"
+          },
+          "type": "array"
+        },
+        "causal_graphs": {
+          "items": {
+            "$ref": "#/$defs/CausalGraph"
           },
           "type": "array"
         },
@@ -761,6 +982,12 @@
     "assertions": {
       "items": {
         "$ref": "#/$defs/FunctionalAssertion"
+      },
+      "type": "array"
+    },
+    "causal_graphs": {
+      "items": {
+        "$ref": "#/$defs/CausalGraph"
       },
       "type": "array"
     },

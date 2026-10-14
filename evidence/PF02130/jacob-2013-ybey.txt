@@ -1,0 +1,43 @@
+Source: Jacob et al., Molecular Cell 49, 427-438 (2013).
+PMID:23273979; doi:10.1016/j.molcel.2012.11.025
+URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC3570609/
+Inspected 2026-10-11: Results, Experimental Procedures, Figure 1 and Figure 3
+captions and images. Minimal quotations, with curator-authored factual notes;
+the full author manuscript is not redistributed here.
+
+Figure 1C result quotation:
+"YbeY cleaved the 30 nt ssRNA substrate"
+Figure 3B result quotation:
+"the rRNA in these 70S ribosomes was completely degraded"
+Figure 3C result quotation fragment:
+"kasugamycin-treated cells was completely degraded"
+
+Assay notes: Figure 1C uses purified E. coli YbeY and 5'-32P-labeled synthetic
+30-nt RNA at 5 uM each. The RNA contains 18 nt from the mature 16S 3' end and
+12 nt of the precursor trailer. The image shows cleavage fragments at 30, 90
+and 120 seconds versus buffer. Figure 1D's duplex substrate is not comparably
+cleaved. This is not an intact pre-16S maturation assay or a turnover estimate.
+
+Figure 3B/C: 70S preparations (5.5 uM) from MC4100 delta-ybeY or MC4100 treated
+with 200 ug/mL kasugamycin lose their rRNA bands after joint YbeY and RNase R
+treatment (5 uM each). Each enzyme alone and the YbeY H114A/H124A-plus-RNase-R
+control do not show that loss. Matched 30S preparations and untreated wild-type
+70S remain resistant under the tested conditions. RNA was extracted after
+incubation and analyzed by Synergel/agarose electrophoresis; this measures rRNA
+degradation, not complete destruction of ribosomal proteins. Figure 3D examines
+polysomes separately; those endpoints are not yet graph edges.
+
+Main methods: 20 uL reactions, 50 mM HEPES pH 7.5; commercial RNase R from
+Epicenter. YbeY purification uses affinity, ion exchange and size exclusion.
+The text describes efficient RNA cleavage at 37 C, but the precise temperature,
+duration and additional buffer components of Figure 3 are delegated to extended
+methods and have not been verified. Tag, expression construct and purification
+host are also unresolved in the inspected main text. The supplement URL returned
+HTML, and Europe PMC's supplementaryFiles endpoint reports this article outside
+its open-access subset. The .doc and extended methods were NOT inspected.
+
+Identity: Figure 2A explicitly cites former Swiss-Prot P77385 for E. coli YbeY.
+Current demerger and organism-specific mapping are retained separately. Mutant
+activity loss is corroboration, not proof of an individual residue's chemical
+step or exclusion of folding effects. Proposed ordered YbeY/RNase-R microsteps,
+specific recognition chemistry and family-wide activity are not adopted.

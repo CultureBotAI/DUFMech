@@ -1,0 +1,44 @@
+PF01959 primary assay assessment, 2026-10-12, Codex
+PMID15182204; DOI10.1021/bi0495127; White2004, Biochemistry43:7618-7627.
+Source: https://bioseed.mcs.anl.gov/~fangfang/aropath/Annotation/White_2004.pdf
+Read relevant Methods and Results, Figure3 and Table2 with footnote.
+Original PDF pages3,7,9 visually inspected, including Figure3 and Table2.
+This is a minimal factual ledger, not a retained full publication.
+
+Verbatim excerpts (18 words total):
+"Quantitation of DHQ Generated with Purified Recombinant Enzymes Incubated with Precursors"
+"the amount of quinic acid observed."
+
+Methods p7620: pT7-7 constructs for MJ0400/Q57843 and MJ1249/Q58646;
+E. coli BL21-CodonPlus(DE3)-RIL expression; heat treatment followed by
+MonoQ (MJ0400) or SephadexG25 (MJ1249). MJ0400 retained a small
+chloramphenicol-acetyltransferase contaminant. No isolated domain assay.
+
+Table2 p7626: MJ0400 12.8ug; MJ1249 35.7ug; 30min/60C.
+Rows1-3: 145ul, phosphate9.7mM pH7.2, DKFP1.9mM, ASA1.4mM.
+Single-enzyme measurements each <0.012nmol; pair7nmol.
+These values sum DHQ and DHB, measured as TMS derivatives by GC-MS;
+quinic-acid internal standard. They are not pure DHQ yields.
+Rows7-11: 125ul, Tris28mM pH7.5, MgCl2 5.6mM, ASA1.6mM,
+DKFP2.2mM. Rows9/10/11 add NAD+NADP/NAD/NADP respectively and report
+330/330/150nmol via postreaction NaBH4 reduction to quinic acid and GC-MS;
+shikimate internal standard. No individual cofactor concentration,
+replicate count or error estimate is supplied in this table.
+
+Source qualifications, not silently corrected:
+1. Methods uses 3,4-dihydroxybenzoic acid; Table2 uses 4,5-dihydroxybenzoic
+   acid. Reversing ring numbering maps these locants onto one another;
+   the wording difference is not evidence of distinct chemical products.
+2. Rows7-11 are described as in air; the same footnote ends with all
+   samples under argon. Oxygen conditions cannot be assigned confidently.
+3. Curator calculation: 125ul x 1.6mM ASA = 200nmol; DKFP = 275nmol.
+   The reported 330nmol exceeds both inputs for the proposed 1:1 pathway.
+   Concentrations, units or product quantitation require reconciliation.
+4. Rows1-3 and7-11 differ in buffer and readout; do not derive a clean
+   cofactor fold-stimulation or isolated-MJ1249 kinetics across them.
+
+Graphs retain qualitative joint-reaction product observations, not validated
+stoichiometry. Figure3 assigns oxidative deamination and cyclization to
+MJ1249; neither transient keto intermediate nor a residue-specific sequence
+is directly established by these assays. Cell-extract downstream shikimate
+reactions and partner MJ0400 chemistry are not separate PF01959 edges.

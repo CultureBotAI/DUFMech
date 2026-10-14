@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01026
+  path: data/families/PF01026.yaml
+session:
+  id: 2026-10-11T083337Z-codex-996c16
+  timestamp: '2026-10-11T08:33:37Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial same-agent scientific review of seven TatD causal effects
+  details: Saved review 20261011T083335Z-pf01026-tatd-nuclease-and-peroxide-contexts
+    binds the current semantic digest and inspected evidence. Four graphs separate
+    tagged nuclease, single-residue perturbations, untagged internal-THF incision
+    and chronic-peroxide growth. Native validation and overlay equality passed; all
+    primary quotations were checked in retrieved source text. Assay and construct
+    gaps, source discrepancies, controls and broader-family coverage remain open.
+    Scientific self-review is not independent endorsement; IN_PROGRESS remains.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T083335Z-pf01026-tatd-nuclease-and-peroxide-contexts/review.yaml

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01062
+  path: curation/families/PF01062.yaml
+session:
+  id: 2026-10-11T085542Z-codex-d83613
+  timestamp: '2026-10-11T08:55:42Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add scoped chicken BEST1 calcium, DIDS and substitution graphs
+  details: Retain five graphs and eight observed biochemical effects from the 2016
+    study, with original-method qualifications. Resolve retired E1C3A0 through UniParc
+    and exact 1-405 matching to A0A8V0ZZU7; deposited 2-405 plus EGEEF matches and
+    2014 MS/Edman confirms Thr2 processing. Keep bilateral chelation, trans calcium
+    reactivation, DIDS, normalized neck-mutant current and clasp-mutant flux/rescue
+    distinct. Native overlay and primary-quotation checks pass; projection and partial
+    same-agent scientific review follow. IN_PROGRESS, not family-wide characterization
+    or publication.

@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01955
+  path: data/families/PF01955.yaml
+session:
+  id: 2026-10-12T113303Z-codex-ad812f
+  timestamp: '2026-10-12T11:33:03Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain successor CbiZ review with precise bond-hydrolysis wording
+  details: Successor report 20261012T113218Z-pf01955-cbiz-amide-bond-precision binds
+    digest da5dceaced5d317d4b84c26a528da04d3c5f07d3dca7bb8a3c5f417f0186853f. Amide-bond
+    hydrolysis wording is corrected without changing the eight edge scopes or support
+    classes; original review remains immutable. Same-agent partial scientific review,
+    NEEDS_FOLLOWUP/pass_with_limitations. Earlier source/construct/fusion/remodeling
+    coverage finding remains open and status IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T113218Z-pf01955-cbiz-amide-bond-precision/review.yaml

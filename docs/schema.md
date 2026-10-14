@@ -25,6 +25,7 @@ A source-derived family projection; SEEDED is not scientific review.
 | provenance | SnapshotProvenance | True |
 | score_provenance | SnapshotProvenance | False |
 | assertions | FunctionalAssertion | False |
+| causal_graphs | CausalGraph | False |
 | discussions | Discussion | False |
 | datasets | Dataset | False |
 | cross_corpus_links | CrossCorpusLink | False |
@@ -40,6 +41,7 @@ Human-owned overlay. Imported identity and counters cannot be overridden.
 | review_id | string | False |
 | curation_history | string | False |
 | assertions | FunctionalAssertion | False |
+| causal_graphs | CausalGraph | False |
 | discussions | Discussion | False |
 | datasets | Dataset | False |
 | cross_corpus_links | CrossCorpusLink | False |
@@ -95,6 +97,51 @@ Scoped experimental or computational claim, not implied by a DUF name.
 | statement | string | True |
 | evidence_kind | EvidenceKind | True |
 | scope | string | True |
+| evidence | ClaimEvidence | True |
+
+## CausalGraph
+
+A scoped directed mechanism or phenotype graph, not family-wide functional proof.
+
+| Field | Type | Required |
+| --- | --- | --- |
+| graph_id | string | True |
+| title | string | True |
+| scope | string | True |
+| context | string | True |
+| family_mapping | string | True |
+| scope_status | CausalScope | True |
+| taxon | string | False |
+| limitations | string | True |
+| feedback_explanation | string | False |
+| nodes | CausalNode | True |
+| edges | CausalEdge | True |
+
+## CausalNode
+
+
+
+| Field | Type | Required |
+| --- | --- | --- |
+| node_id | string | True |
+| label | string | True |
+| node_type | CausalNodeType | True |
+| grounding | string | False |
+
+## CausalEdge
+
+Evidence for a directed relation, rather than citations only establishing the endpoints.
+
+| Field | Type | Required |
+| --- | --- | --- |
+| edge_id | string | True |
+| subject | string | True |
+| predicate | CausalPredicate | True |
+| object | string | True |
+| mechanism | string | True |
+| directness | CausalDirectness | True |
+| support | CausalSupport | True |
+| evidence_kind | EvidenceKind | True |
 | evidence | ClaimEvidence | True |
 
 ## ClaimEvidence

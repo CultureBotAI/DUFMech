@@ -1,0 +1,24 @@
+PF01950 conditional expression/activity evidence; inspected2026-10-12 UTC.
+PMID15317785; https://pmc.ncbi.nlm.nih.gov/articles/PMC516828/
+Locators: enzyme-assay/hybridization Methods, cell-extract and transcription
+Results, Figure4B. The public Northern-blot image was visually inspected.
+Minimal quotations: "highly reduced"; "no detectable FBPase activity"
+
+Compare starch versus pyruvate supplementation of rich ASW-YT separately
+within KW128 and within delta-imp-2A, not between unrelated strains.
+Supplement concentration5g/L, anaerobic85C. Early-stationary extracts
+(15h culture) have FBPase activity below0.01 U/mg with starch, versus
+0.37+/-0.02 (KW128) or0.34+/-0.01 (delta-imp-2A) with pyruvate.
+This is a carbon-regimen substitution, not a direct starch inhibitor assay.
+
+Early-exponential RNA,30ug/lane, probed for fbp: Figure4B shows much weaker
+approximately1.3-kb signal with starch in each background. Delta-fbp-8J
+is probe-negative. These observations concern transcript abundance, not
+directly measured transcription-initiation rate or a quantified fold change.
+RNA stability, carbon sensing and the molecular regulator are unresolved.
+Do not connect the RNA and extract nodes with an observed mechanistic edge:
+sampling phases differ and no mediator intervention was performed.
+The imp and fbp panels used different color-development times (>10-fold);
+their raw intensities cannot quantify the relative abundance of the genes.
+Neither an Fbp protein-abundance measurement nor a direct starch-binding
+mechanism is established by these experiments.

@@ -4,7 +4,7 @@ name: Archaeal holliday junction resolvase (hjc)
 short_name: Hjc
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01870
 counters:
   proteins: 744
@@ -24,3 +24,554 @@ interpro_id: InterPro:IPR002732
 description: This family of archaebacterial proteins are holliday junction resolvases (hjc gene) [[cite:PUB00007198]].
   The Holliday junction is an essential intermediate of homologous recombination. This protein is the
   archaeal equivalent of RuvC but is not sequence similar.
+curation_history: history/records/PF01870
+discussions:
+- discussion_id: hjc-phosphorylation-and-domain-boundaries
+  prompt: Verify supplementary constructs and controls before extending phosphorylation mechanisms.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Mutation-dependent labeling, phosphomimetic cleavage and cellular spot outgrowth are distinct
+    endpoints. S136/T138 are outside the current PF01870 match4-134; primary supplementary files were
+    not retrieved as valid source payloads.
+  evidence:
+  - reference: PMID:31214148
+    supports: PARTIAL
+    evidence_source: primary_main_methods_results_and_original_figures
+    explanation: Figures2/3/5 were inspected; supplementS1-S9 and TablesS1/S2 need direct inspection.
+      Homology-model Mg interference and proposed repair-pathway switching are not observed causal steps.
+  notes: See evidence/PF01870/hjc-identity.txt and hjc-gap-ledger.txt. Retrieve primers and kinase-dead/binding/kinase-treated-cleavage
+    controls, verify exact construct scope, and distinguish true site-specific phosphorylation from Glu
+    substitutions. No Hjc-specific epistasis or direct repair-kinetics claim.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+- discussion_id: hjc-other-members-and-mutagenesis
+  prompt: Extend primary causal review to Pfu residue studies and Hje members.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Nine graphs cover two Hjc preparations and selected protocols, not all744 frozen family proteins
+    or the additional Hje resolvases. Weak non-HJ cleavage also limits substrate exclusivity.
+  evidence:
+  - reference: PMID:11071944
+    supports: PARTIAL
+    evidence_source: primary_methods_results_and_original_figures
+    explanation: Substrate geometry, MBP/proteolysis and additional biochemical contexts remain uncurated.
+      A single activity peak is not proof that another nuclease is absent.
+  notes: Review PMID11005813 full mutagenesis methods/figures and PMID15479781 Hje with exact sequences
+    before adding edges. The former publisher PDF returned403; an abstract is not completed primary review.
+    Preserve IN_PROGRESS and partial same-agent review.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+causal_graphs:
+- graph_id: pfu-synthetic-junction-cleavage
+  title: Purified Pfu Hjc cleaves synthetic four-way DNA junctions
+  scope: Komori1999 Figure4, immobile4J and mobile4Jh in separate reactions.
+  context: 10 nM Hjc and10 nM substrate,10 mM Tris pH8.8,10 mM MgCl2,200 mM KCl,1 mM DTT,56 C1 h; denaturing
+    PAGE with strand-specific labels.
+  family_mapping: Pfu PF1503,E7FHX4 sequence version1,123 aa,equals BAA82839.1 from AB023635.1 and WP_011012650.1;
+    PF01870 1-97. Untagged pPFHJ2/pET21a preparation, not an isolated domain.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:186497
+  limitations: Predominant opposing strand2/4 cuts coexist with minor cuts. Other DNA structures can be
+    weak substrates, especially at higher enzyme doses. No family-wide exclusivity or cellular repair
+    claim.
+  nodes:
+  - node_id: hjc-reaction
+    label: Add purified Pfu Hjc to a Mg-containing four-way junction reaction
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:E7FHX4
+  - node_id: cleavage-products
+    label: Strand-specific junction cleavage products
+    node_type: STATE
+  edges:
+  - edge_id: hjc-produces-cleavage-products
+    subject: hjc-reaction
+    predicate: produces
+    object: cleavage-products
+    mechanism: Protein-containing reactions yield mapped cleavage products absent from matched no-protein
+      lanes; the major sites are symmetrical on opposing strands, with additional minor sites retained.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:10430863
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC17700/
+      snippet: Holliday junctions
+      explanation: Original Figure4A-D, substrate and endonuclease Methods; source mapping distinguishes
+        mobile from immobile substrates and does not add an unobserved ligation step.
+      cache_path: evidence/PF01870/komori-1999-resolution.txt
+      cache_sha256: 55a192e4d829df80943350dc2a29608a345b8b4eae99fce671790c2b7ffd3610
+- graph_id: pfu-reca-intermediate-resolution
+  title: Pfu Hjc resolves RecA-generated DNA intermediates in vitro
+  scope: Komori1999 Figure5, purified Hjc added after E.coli RecA strand exchange.
+  context: RecA2.7 uM with gapped pUC1186 uM nucleotides and labeled linear DNA3 uM nucleotides; strand
+    exchange37 C20 min after5 min preincubation. Hjc0-50 nM then55 C10 min; agarose analysis after deproteinization.
+  family_mapping: Pfu PF1503,E7FHX4/WP_011012650.1,PF01870 1-97. The RecA component is bacterial; this
+    is a mixed-species reconstitution, not a Pfu cellular pathway.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:186497
+  limitations: Resolved product classes are assigned by the source's gel interpretation. RuvC control
+    uses37 C1 h and cannot provide a matched rate comparison. No elementary reaction rate or intracellular
+    repair measurement.
+  nodes:
+  - node_id: add-hjc
+    label: Increase Hjc dose after RecA intermediate formation
+    node_type: PERTURBATION
+  - node_id: intermediates
+    label: RecA-generated intermediate gel signal
+    node_type: STATE
+  - node_id: resolved-products
+    label: Linear-dimer and nicked-circle product signals
+    node_type: STATE
+  edges:
+  - edge_id: hjc-decreases-intermediates
+    subject: add-hjc
+    predicate: decreases
+    object: intermediates
+    mechanism: Increasing Hjc from0 through1,2.5,5,10 and50 nM reduces the intermediate band under the
+      fixed post-exchange protocol.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:10430863
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC17700/
+      snippet: Holliday junctions
+      explanation: Original Figure5B dose labels and RecA-minus/Hjc-minus controls; the readout is intermediate
+        processing, not independent Hjc strand-exchange activity.
+      cache_path: evidence/PF01870/komori-1999-resolution.txt
+      cache_sha256: 55a192e4d829df80943350dc2a29608a345b8b4eae99fce671790c2b7ffd3610
+  - edge_id: hjc-increases-resolved-products
+    subject: add-hjc
+    predicate: increases
+    object: resolved-products
+    mechanism: The same Hjc titration increases product bands assigned as linear dimers and nicked circles,
+      alongside depletion of the intermediates. The two measured endpoints do not prove an unobserved
+      microscopic sequence.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:10430863
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC17700/
+      snippet: Holliday junctions
+      explanation: Figure5A product interpretation and original Figure5B gel; no Hjc-dependent RecA activation
+        or matched RuvC superiority is asserted.
+      cache_path: evidence/PF01870/komori-1999-resolution.txt
+      cache_sha256: 55a192e4d829df80943350dc2a29608a345b8b4eae99fce671790c2b7ffd3610
+- graph_id: pfu-extract-immunodepletion
+  title: Anti-Hjc depletion reduces extract junction cleavage
+  scope: Komori1999 Figure3, crude Pfu extract immunodepletion.
+  context: Antibody treatment at room temperature;4 ul treated extract with10 nM junction in standard
+    cleavage buffer,56 C30 min. Anti-PCNA and anti-PI-PfuI comparison antibodies; immunoprecipitate Western
+    blot.
+  family_mapping: Endogenous Pfu Hjc assigned to PF1503/E7FHX4,PF01870 1-97,via the original cloned gene
+    and antibody experiment. Whole extract, not purified domain.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:186497
+  limitations: Cell-free extract endpoint, not a cellular knockout. Co-depletion remains possible and
+    no add-back rescue is shown. Anti-PCNA co-precipitation is association evidence, not a PCNA activation
+    edge.
+  nodes:
+  - node_id: anti-hjc
+    label: Deplete crude extract with anti-Hjc antibody
+    node_type: PERTURBATION
+  - node_id: extract-cleavage
+    label: Extract-dependent junction cleavage product
+    node_type: ACTIVITY
+  edges:
+  - edge_id: depletion-decreases-cleavage
+    subject: anti-hjc
+    predicate: decreases
+    object: extract-cleavage
+    mechanism: Anti-Hjc treatment lowers cleavage relative to untreated and comparison-antibody extracts.
+      Hjc is present in the precipitate, but possible loss of partners prevents an individually isolated
+      molecular attribution.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:10430863
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC17700/
+      snippet: Holliday junctions
+      explanation: Original Figure3C cleavage lanes and immunoprecipitate blot with Methods; antibody
+        controls and lack of re-addition define the causal scope.
+      cache_path: evidence/PF01870/komori-1999-resolution.txt
+      cache_sha256: 55a192e4d829df80943350dc2a29608a345b8b4eae99fce671790c2b7ffd3610
+- graph_id: pfu-ligation-compatible-products
+  title: T4 ligase joins Hjc cleavage products
+  scope: Komori2000 Figure3, ligation after deproteinized Hjc digestion.
+  context: 10 nM asymmetric4Jhs with1 uM Hjc,56 C1 h; phenol extraction and ethanol precipitation; then
+    T4 ligase at16 C2 h with ATP and Mg. Starting labeled strand59 nt, cleavage product37 nt, ligation
+    product70 nt.
+  family_mapping: Same Pfu Hjc preparation method as1999,E7FHX4/WP_011012650.1,PF01870 1-97. T4 ligase
+    is an added enzyme, not an activity assigned to the Hjc domain.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:186497
+  limitations: Ligase unit dose is not specified. This establishes end compatibility under the supplied
+    reaction, not completed intracellular recombination or Hjc-catalyzed ligation.
+  nodes:
+  - node_id: ligase-and-cleaved-dna
+    label: Add T4 ligase to recovered Hjc-cleaved DNA in ligase buffer
+    node_type: PERTURBATION
+  - node_id: ligated-product
+    label: 70-nt ligation product
+    node_type: STATE
+  edges:
+  - edge_id: ligase-produces-joined-product
+    subject: ligase-and-cleaved-dna
+    predicate: produces
+    object: ligated-product
+    mechanism: A70-nt band matching the marker appears after ligase treatment of the recovered digestion
+      products and is absent from the no-ligase digest lane.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:11071944
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC113867/
+      snippet: Ligation reaction
+      explanation: Original Figure3A-B and ligation Methods distinguish sequential cleavage, deproteinization
+        and ligase addition.
+      cache_path: evidence/PF01870/komori-2000-biochemistry.txt
+      cache_sha256: 9bd33b0c725ce0cb49b135e745d455d90db38108c94dc97a5eae59e31177fd86
+- graph_id: pfu-magnesium-dependent-cleavage
+  title: Added magnesium supports Pfu Hjc cleavage
+  scope: Komori2000 Figure4B, MgCl2 titration in the specified reconstitution.
+  context: 10 nM Hjc,100 nM4Jh,56 C30 min;10 mM Tris pH8.8,200 mM KCl,1 mM DTT,variable added MgCl2. Product
+    readout by gel electrophoresis.
+  family_mapping: Pfu E7FHX4/WP_011012650.1,123 aa,PF01870 1-97. Intact enzyme preparation with DNA, not
+    isolated domain or metal alone.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:186497
+  limitations: Added-metal dependence does not identify metal ligands or prove a unique physiological
+    cofactor. Mn supports lesser activity in a separate panel; zinc salt is inconsistent between text
+    and figure. Temperature effects are not automatically enzyme denaturation.
+  nodes:
+  - node_id: add-magnesium
+    label: Add5-10 mM MgCl2 to the otherwise complete Hjc-junction reaction
+    node_type: PERTURBATION
+  - node_id: cleavage-product
+    label: Junction cleavage product yield
+    node_type: ACTIVITY
+  edges:
+  - edge_id: magnesium-increases-cleavage
+    subject: add-magnesium
+    predicate: increases
+    object: cleavage-product
+    mechanism: Cleavage product increases relative to zero added MgCl2, with maximal signal around5-10
+      mM in the source titration. Mg is a conditional co-input with Hjc and DNA, not an independently
+      sufficient cause.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:11071944
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC113867/
+      snippet: Reaction conditions
+      explanation: Original Figure4B and reaction-condition Methods/Results distinguish added-metal effects
+        from the other necessary reaction components.
+      cache_path: evidence/PF01870/komori-2000-biochemistry.txt
+      cache_sha256: 9bd33b0c725ce0cb49b135e745d455d90db38108c94dc97a5eae59e31177fd86
+- graph_id: pfu-junction-binding-competition
+  title: Unlabeled junction competes for Pfu Hjc binding
+  scope: Komori2000 Figure5A, cold-competitor binding assay.
+  context: 10 nM labeled4Jb,100 nM Hjc,0.1-1 uM unlabeled competitor,20 mM Tris-acetate pH8,1 mM DTT,0.1
+    mg/ml BSA,5% glycerol,ice10 min; no added Mg,6% native PAGE in TGE with2 mM EDTA.
+  family_mapping: Pfu E7FHX4/WP_011012650.1,PF01870 1-97; intact protein and synthetic DNA, not an isolated-domain
+    binding measurement.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:186497
+  limitations: Binding is measured without cleavage conditions. Linear Db2 competitor does not have the
+    same effect. A separate enzyme titration's apparent Kd is not a catalytic rate or proof that binding
+    activates cleavage.
+  nodes:
+  - node_id: competitor-junction
+    label: Increase unlabeled4Jb competitor in the Hjc binding reaction
+    node_type: PERTURBATION
+  - node_id: labeled-complex
+    label: Radiolabeled Hjc-junction shifted-complex signal
+    node_type: STATE
+  edges:
+  - edge_id: competitor-decreases-labeled-complex
+    subject: competitor-junction
+    predicate: decreases
+    object: labeled-complex
+    mechanism: Unlabeled four-way junction reduces labeled shifted-complex signal across the competitor
+      titration, unlike matched linear duplex competitor. No arrow from complex occupancy to catalysis
+      is inferred.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:11071944
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC113867/
+      snippet: Gel retardation assay
+      explanation: Original Figure5A HJ-versus-duplex competition lanes and binding Methods, separate
+        from Figure5B enzyme titration and the cleavage experiments.
+      cache_path: evidence/PF01870/komori-2000-biochemistry.txt
+      cache_sha256: 9bd33b0c725ce0cb49b135e745d455d90db38108c94dc97a5eae59e31177fd86
+- graph_id: sire-mutation-dependent-phosphorylation-readouts
+  title: Hjc substitutions lower kinase-specific labeling readouts
+  scope: Huang2019 Figure2, each substitution and kinase tested separately.
+  context: 5 uM tag-free Hjc or variant,65 C30 min,25 mM Tris pH8,10 mM NaCl,5 mM MgCl2,2 mM DTT,50 uM
+    ATP plus8.3 nM gamma-32P ATP; SDS-PAGE autoradiography. Methods allow1 or2 uM kinase; Figure2 dose
+    is not independently resolved.
+  family_mapping: SiRe_1431,F0NID3 sequence version1,143 aa,equals WP_012711550.1; PF01870 4-134. S9/S34
+    are inside; T138 is outside PF01870. Untagged pET15bM preparation; supplementary primers not verified.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:930945
+  limitations: Mutation-dependent radiolabeling is not direct phosphosite localization or in vivo occupancy.
+    Residual labeling remains. SiRe_2056KD is a kinase-domain construct. Similar gel-filtration elution
+    does not prove identical folding.
+  nodes:
+  - node_id: s34a-0171
+    label: Substitute Hjc S34A in the SiRe_0171 reaction
+    node_type: PERTURBATION
+  - node_id: s9a-2030
+    label: Substitute Hjc S9A in the SiRe_2030 reaction
+    node_type: PERTURBATION
+  - node_id: t138a-2030
+    label: Substitute Hjc T138A in the SiRe_2030 reaction
+    node_type: PERTURBATION
+  - node_id: t138a-2056kd
+    label: Substitute Hjc T138A in the SiRe_2056KD reaction
+    node_type: PERTURBATION
+  - node_id: label-0171
+    label: Hjc radiolabel signal with SiRe_0171
+    node_type: STATE
+  - node_id: label-2030
+    label: Hjc radiolabel signal with SiRe_2030
+    node_type: STATE
+  - node_id: label-2056kd
+    label: Hjc radiolabel signal with SiRe_2056KD
+    node_type: STATE
+  edges:
+  - edge_id: s34a-decreases-0171-label
+    subject: s34a-0171
+    predicate: decreases
+    object: label-0171
+    mechanism: S34A reduces Hjc-associated radiolabel relative to WT in the matched kinase reaction. This
+      supports a residue-dependent phosphorylation readout, without directly observing a uniquely occupied
+      S34 phosphosite.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31214148
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6555300/
+      snippet: In vitro Kinase Assay
+      explanation: Original Figure2A SiRe_0171 panel and relative-signal bars; three independent experiments
+        with SD are reported. SupplementS3 is not treated as independently inspected evidence.
+      cache_path: evidence/PF01870/huang-2019-variants.txt
+      cache_sha256: ab178add263937fd705ecdd6d100be412691087ee36160ee443dd6369651e8aa
+  - edge_id: s9a-decreases-2030-label
+    subject: s9a-2030
+    predicate: decreases
+    object: label-2030
+    mechanism: S9A reduces the Hjc band signal with SiRe_2030 while substantial labeling persists. The
+      source's site assignment is supported indirectly by substitution, not a measured site-specific phosphate
+      bond.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31214148
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6555300/
+      snippet: In vitro Kinase Assay
+      explanation: Original Figure2A SiRe_2030 S9A lane and normalized bars; no transfer to SiRe_0171
+        or SiRe_2056KD is made.
+      cache_path: evidence/PF01870/huang-2019-variants.txt
+      cache_sha256: ab178add263937fd705ecdd6d100be412691087ee36160ee443dd6369651e8aa
+  - edge_id: t138a-decreases-2030-label
+    subject: t138a-2030
+    predicate: decreases
+    object: label-2030
+    mechanism: T138A lowers labeling compared with WT in the SiRe_2030 reaction; the single-mutant comparison
+      distinguishes it from the S136A/T138A double mutant. T138 is outside the mapped Pfam domain.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31214148
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6555300/
+      snippet: In vitro Kinase Assay
+      explanation: Original Figure2B SiRe_2030 single-mutant lanes and bars, not the double-mutant-only
+        comparison in Figure2A.
+      cache_path: evidence/PF01870/huang-2019-variants.txt
+      cache_sha256: ab178add263937fd705ecdd6d100be412691087ee36160ee443dd6369651e8aa
+  - edge_id: t138a-decreases-2056kd-label
+    subject: t138a-2056kd
+    predicate: decreases
+    object: label-2056kd
+    mechanism: T138A reduces Hjc labeling with the SiRe_2056 kinase-domain preparation. Residual signal
+      and the weaker S136A effect preclude a unique-site or complete-ablation claim.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31214148
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6555300/
+      snippet: In vitro Kinase Assay
+      explanation: Original Figure2B SiRe_2056KD panel and matched normalized bars; the result is not
+        assigned to full-length SiRe_2056 in vivo.
+      cache_path: evidence/PF01870/huang-2019-variants.txt
+      cache_sha256: ab178add263937fd705ecdd6d100be412691087ee36160ee443dd6369651e8aa
+- graph_id: sire-cleavage-substitution-effects
+  title: Hjc S9E S34E and D42N reduce purified junction cleavage
+  scope: Huang2019 Figure3, three separate mutant-versus-WT contrasts.
+  context: 10 nM tag-free Hjc or each variant,1 nM labeled junction,25 mM Tris pH8,25 mM NaCl,5 mM MgCl2,1
+    mM DTT,0.01% BSA,65 C30 min; denaturing PAGE after formamide-EDTA stop and boiling.
+  family_mapping: SiRe_1431,F0NID3/WP_012711550.1,PF01870 4-134. S9,S34,D42 are inside the match; whole
+    proteins were expressed and purified, not isolated domains.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:930945
+  limitations: S9E and S34E are phosphomimetic substitutions, not verified phosphoserine. Endpoint fraction
+    is not a kinetic constant. WT-like T138A/E and retained S9A/S34A activity limit generalization; exact
+    folding equivalence is unproved.
+  nodes:
+  - node_id: s9e
+    label: Replace WT Hjc with S9E
+    node_type: PERTURBATION
+  - node_id: s34e
+    label: Replace WT Hjc with S34E
+    node_type: PERTURBATION
+  - node_id: d42n
+    label: Replace WT Hjc with D42N
+    node_type: PERTURBATION
+  - node_id: cleaved-fraction
+    label: Junction substrate fraction cleaved after30 min
+    node_type: ACTIVITY
+  edges:
+  - edge_id: s9e-decreases-cleavage
+    subject: s9e
+    predicate: decreases
+    object: cleaved-fraction
+    mechanism: S9E yields about20% cleavage compared with roughly70% for WT in the displayed endpoint
+      assay. Residual activity remains; no exact kinetic fold-change or true-phosphorylation effect is
+      assigned.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31214148
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6555300/
+      snippet: HJ DNA Cleavage Assay of Hjc
+      explanation: Original Figure3 S9E gel lane and quantified bar, matched WT and no-protein controls,
+        cleavage Methods.
+      cache_path: evidence/PF01870/huang-2019-variants.txt
+      cache_sha256: ab178add263937fd705ecdd6d100be412691087ee36160ee443dd6369651e8aa
+  - edge_id: s34e-decreases-cleavage
+    subject: s34e
+    predicate: decreases
+    object: cleaved-fraction
+    mechanism: S34E lowers cleavage to near the detection floor under this protocol, while the S34A comparison
+      retains substantial activity. No observed Mg-coordination disruption is inferred from the homology
+      model.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31214148
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6555300/
+      snippet: HJ DNA Cleavage Assay of Hjc
+      explanation: Original Figure3 S34E and S34A lanes/bars; supplementS5 kinase-treated cleavage is
+        not substituted for the directly inspected mutant experiment.
+      cache_path: evidence/PF01870/huang-2019-variants.txt
+      cache_sha256: ab178add263937fd705ecdd6d100be412691087ee36160ee443dd6369651e8aa
+  - edge_id: d42n-decreases-cleavage
+    subject: d42n
+    predicate: decreases
+    object: cleaved-fraction
+    mechanism: The D42N control has very little cleavage compared with WT. This is a measured substitution
+      effect, not direct visualization of metal coordination, proton transfer or the catalytic transition
+      state.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31214148
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6555300/
+      snippet: HJ DNA Cleavage Assay of Hjc
+      explanation: Original Figure3 D42N lane and nonzero low bar; retain the measured endpoint rather
+        than declaring universal complete inactivity.
+      cache_path: evidence/PF01870/huang-2019-variants.txt
+      cache_sha256: ab178add263937fd705ecdd6d100be412691087ee36160ee443dd6369651e8aa
+- graph_id: sire-s34e-damage-tolerance
+  title: Chromosomal Hjc S34E improves high-dose damage spot outgrowth
+  scope: Huang2019 Figure5B, E233S with Hje intact, two distinct damaging treatments.
+  context: REY15A delta-pyrEF delta-lacS host with hjc allele replacement; early-log OD6000.2-0.3,tenfold
+    dilutions,10 ul spots,75 C7-10 days. Compare25 J/m2 UV and15 ug/ml cisplatin separately.
+  family_mapping: SiRe_1431,F0NID3/WP_012711550.1,PF01870 4-134; S34 is within the match. Whole-cell allele
+    effect with Hje intact, not isolated-domain chemistry or unmodified wild-type REY15A.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:930945
+  limitations: Spot outgrowth is not direct repair kinetics or a quantitative growth-rate measurement.
+    No apparent benefit at15 J/m2 UV or10 ug/ml cisplatin, nor MMS/HU. Methods report at least3 trials;
+    caption says2-3. Do not merge delta-hje or kinase-knockout experiments.
+  nodes:
+  - node_id: s34e-uv
+    label: Replace chromosomal Hjc with S34E under25 J/m2 UV
+    node_type: PERTURBATION
+  - node_id: s34e-cisplatin
+    label: Replace chromosomal Hjc with S34E under15 ug/ml cisplatin
+    node_type: PERTURBATION
+  - node_id: uv-outgrowth
+    label: Spot outgrowth after high-dose UV
+    node_type: PHENOTYPE
+  - node_id: cisplatin-outgrowth
+    label: Spot outgrowth on high-dose cisplatin
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: s34e-increases-uv-outgrowth
+    subject: s34e-uv
+    predicate: increases
+    object: uv-outgrowth
+    mechanism: The S34E replacement strain shows greater spot outgrowth than the matched Hjc control at25
+      J/m2 UV. The intervening repair/fork processes are not directly measured.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31214148
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6555300/
+      snippet: DNA Damaging Agent Sensitivity Assay
+      explanation: Original Figure5B UV panels and damage-sensitivity Methods; lower-dose and untreated
+        comparisons constrain the phenotype.
+      cache_path: evidence/PF01870/huang-2019-variants.txt
+      cache_sha256: ab178add263937fd705ecdd6d100be412691087ee36160ee443dd6369651e8aa
+  - edge_id: s34e-increases-cisplatin-outgrowth
+    subject: s34e-cisplatin
+    predicate: increases
+    object: cisplatin-outgrowth
+    mechanism: Greater spot outgrowth occurs at15 ug/ml cisplatin, not at the lower tested dose. This
+      conditional phenotype does not establish enhanced repair as the directly observed endpoint or universal
+      damage resistance.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31214148
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6555300/
+      snippet: DNA Damaging Agent Sensitivity Assay
+      explanation: Original Figure5B cisplatin panels and Methods; MMS/HU comparisons in Figure5A limit
+        the phenotype. No kinase-to-Hjc epistasis experiment is inferred.
+      cache_path: evidence/PF01870/huang-2019-variants.txt
+      cache_sha256: ab178add263937fd705ecdd6d100be412691087ee36160ee443dd6369651e8aa
+curation_events:
+- timestamp: '2026-10-11T18:00:53Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate Hjc junction processing, biochemical controls and substitution-specific readouts.
+  history_record: history/records/PF01870/2026-10-11T180053Z-codex-602211.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T18:13:37Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of Hjc causal contexts.
+  history_record: history/records/PF01870/2026-10-11T181337Z-codex-5fbc54.yaml
+  event_index: 0
+  llm_assisted: true

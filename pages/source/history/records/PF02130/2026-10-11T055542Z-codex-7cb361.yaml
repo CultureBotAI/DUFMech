@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF02130
+  path: data/families/PF02130.yaml
+session:
+  id: 2026-10-11T055542Z-codex-7cb361
+  timestamp: '2026-10-11T05:55:42Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review scoped YbeY cleavage and joint-enzyme causal edges
+  details: Saved a partial scientific self-review of the current semantic digest,
+    resolving the historical accession and checking primary figures and evidence scope.
+    Three DIRECT OBSERVED edges are retained; exact extended methods, construct details
+    and further family contexts remain open. Native verdict NEEDS_FOLLOWUP; status
+    remains IN_PROGRESS. Not independent expert review or full-corpus completion.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T055552Z-pf02130-ybey-causal-graphs/review.yaml

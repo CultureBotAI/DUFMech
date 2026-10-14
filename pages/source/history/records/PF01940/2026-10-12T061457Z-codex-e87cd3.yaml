@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01940
+  path: curation/families/PF01940.yaml
+session:
+  id: 2026-10-12T061457Z-codex-e87cd3
+  timestamp: '2026-10-12T06:14:57Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: needs_followup
+  summary: Curate separated DUF92 plant and mammalian causal contexts
+  details: Added 13 graphs with 32 observed effects and one hypothetical phytyl-P
+    toxicity edge, six minimal evidence ledgers and two open discussions. Verified
+    current VTE6/PGR/TMEM19 domain mappings, primary figures and assay boundaries.
+    Crude extracts, whole-gene phenotypes, upstream regulation and cellular probe
+    labeling remain separate. Partial family coverage; no publication or independent
+    expert approval.

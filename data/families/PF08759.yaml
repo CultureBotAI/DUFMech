@@ -4,7 +4,7 @@ name: Glycosyltransferase GT-D fold
 short_name: GT-D
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF08759
 counters:
   proteins: 343
@@ -27,3 +27,69 @@ description: This domain is found at the C terminus of proteins such as the prob
   to catalyse the third step of Fap1 glycosylation [[cite:PUB00081880]]. This domain is structurally distinct
   from all known GT folds of glycosyltransferases and contains a metal binding site. This new glycosyltransferase
   fold has been named GT-D [[cite:PUB00081880]].
+curation_history: history/records/PF08759
+causal_graphs:
+- graph_id: dgt1-n-terminal-glucose-transfer
+  title: DUF1792 construct transfers glucose to premodified Fap1
+  scope: Streptococcus parasanguinis FW213 dGT1 N-terminal construct, residues 1-272 of AFJ26875; recombinant
+    in-vitro assay.
+  context: UDP-glucose donor, Gtf1/2/3-premodified Fap1 acceptor and MnCl2 in Hepes pH 7.0; 37 C for one
+    hour.
+  family_mapping: AFJ26875.1 maps to I1ZPA1, sequence version 1, 582 residues. PF08759 spans 26-249, fully
+    included with flanking residues in the assayed 1-272 construct.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:1114965
+  limitations: This transfer step does not produce mature Fap1 by itself. Construct boundaries exceed
+    the current Pfam match. Other acceptors, homologs, individual residues and later C-terminal functions
+    need separate assessment.
+  nodes:
+  - node_id: duf1792-transfer-system
+    label: dGT1 1-272, UDP-glucose, Mn and premodified Fap1
+    node_type: STATE
+    grounding:
+    - UniProtKB:I1ZPA1
+  - node_id: glucose-transfer-to-fap1
+    label: Glucose incorporation into the premodified Fap1 acceptor
+    node_type: PROCESS
+  edges:
+  - edge_id: duf1792-enables-glucose-transfer
+    subject: duf1792-transfer-system
+    predicate: enables
+    object: glucose-transfer-to-fap1
+    mechanism: The N-terminal construct transfers labeled glucose from UDP-glucose to the washed Fap1
+      acceptor; GST, C-terminal and heat-inactivated controls constrain the assignment.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25023666
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4352575/fullTextXML
+      snippet: catalyzes the third step of Fap1 glycosylation
+      explanation: Figure 2 image/caption, Results and glycosyltransferase methods identify the active
+        construct and required assay components; this is not a mature-glycan sufficiency claim.
+      cache_path: evidence/PF08759/zhang-2014-duf1792.txt
+      cache_sha256: 1904f31d487ec20e4f72d879a5abe19e4becf1cdb28c8745d24814d6604ba359
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/I1ZPA1/entry/pfam/PF08759/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/I1ZPA1/entry/pfam/PF08759/
+      snippet: 'entry accession: PF08759'
+      explanation: The article accession resolves to the FW213 GalT1/dGT1 reference and its N-terminal
+        Pfam match.
+      cache_path: evidence/PF08759/I1ZPA1-identity.txt
+      cache_sha256: 9e74856e647251dd0e2d322cba869cc54ad8ddd7193d78d44758e7e183150d55
+curation_events:
+- timestamp: '2026-10-11T04:59:21Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate DUF1792 construct-dependent glucose transfer
+  history_record: history/records/PF08759/2026-10-11T045921Z-codex-06d482.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T05:02:46Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped DUF1792 construct graph review
+  history_record: history/records/PF08759/2026-10-11T050246Z-codex-e1e245.yaml
+  event_index: 0
+  llm_assisted: true

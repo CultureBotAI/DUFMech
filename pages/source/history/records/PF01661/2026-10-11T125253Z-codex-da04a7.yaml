@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01661
+  path: curation/families/PF01661.yaml
+session:
+  id: 2026-10-11T125253Z-codex-da04a7
+  timestamp: '2026-10-11T12:52:53Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate Af1521 binding, coupled-product and separate demodification graphs
+  details: Added five scoped graphs with eight observed effects from Karras2005, Jankevicius2013
+    and Rosenthal2013. Sequence and current Pfam30-155 mapping distinguish intact192-aa
+    protein, out-of-interval D20/Y176 substitutions and unresolved vector termini.
+    Retained primary figures, tables, supplementary-method exceptions, minimal quotations
+    and source hashes. Jankevicius GST assay has unwashed NAD and unresolved directness;
+    Rosenthal filtration and substrate-loading evidence are separate. Status remains
+    IN_PROGRESS with explicit construct, dose, product-identity and family-coverage
+    gaps. Baseline8296 records validated with0 generated drift before edits; native
+    regeneration and scoped scientific review follow.

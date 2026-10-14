@@ -1,0 +1,30 @@
+Desai et al. 2014; PMID:24435797; doi:10.1093/nar/gkt1375.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3973293/
+https://raineslab.com/sites/default/files/labs/raines/pdfs/Desai2014a.pdf
+https://raineslab.com/sites/default/files/labs/raines/pdfs/Desai2014a.SuppInfo.pdf
+Inspected 2026-10-12: Methods/Results and Figures 5/6/7 (PDF pages 8-10),
+supplement pages 1-4; S4 alignment and S5 purity image on page 3.
+Minimal additional quotations: "reduced Archease-dependent activation";
+"were rescued". These supplement the four quoted words in desai-2014.txt.
+
+Figure 6A-C: 70 C, 30 min; 50 mM Bis-Tris pH 7.0, 300 mM NaCl,
+0.25 mM MnCl2, 0.10 mM GTP or ATP, 5 uM PhRtcB, 100 nM PhArchease,
+1 uM each 10-nt RNA half. Readout: 20-nt ligation product; two experiments.
+GTP reductions versus WT: H9A, D12A, K117A, D141A, deltaI142.
+ATP reductions: those five plus E8A. E8A has no detrimental GTP effect.
+Native O59205 v1 positions independently checked: E8/H9/D12/K117/D141/I142.
+Paper uses native numbering despite inserted L after the initiating M.
+S5 shows comparable predominant bands for WT and all six variants (~4 ug/lane),
+not a native-fold or thermal-stability test. Effects remain UNRESOLVED at the
+molecular level; crystal Ca and static contacts do not prove metal delivery.
+
+Figure 7A-C: same endpoint conditions, WT Archease added versus omitted.
+GTP: RtcB F204A/E206A/K480A recover ligation; D95A recovers RNA-ppG,
+not ligation. ATP: E206A/K480A recover ligation; F204A does not.
+RtcB D65A/N202A/H203A/H404A are not rescued for ligation in these assays.
+These are RtcB partner variants, not Archease residues. Archease addition is
+the intervention; no new Archease catalytic chemistry is assigned.
+Figure 7D is a 15-min titration; 7E/F use 800 nM Archease. Their kinetic
+comparisons with WT RtcB are not pooled with the 100 nM endpoint contrasts.
+Negative direct GTP-binding results do not establish a purine pocket in Archease.
+S1 pH titration changes buffer species; no isolated pH-causality edge is inferred.

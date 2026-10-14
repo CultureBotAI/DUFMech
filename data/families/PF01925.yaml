@@ -4,7 +4,7 @@ name: Sulfite exporter TauE/SafE
 short_name: TauE
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01925
 counters:
   proteins: 74133
@@ -25,3 +25,960 @@ description: This is a family of integral membrane proteins where the alignment 
   duplicated modules of three transmembrane helices. The proteins are involved in the transport of anions
   across the cytoplasmic membrane [[cite:PUB00060436]] during taurine metabolism as an exporter of sulfoacetate
   [[cite:PUB00060437]]. This family used to be known as DUF81.
+curation_history: history/records/PF01925
+discussions:
+- discussion_id: pf01925-transport-evidence-boundaries
+  prompt: Resolve biochemical transport mechanisms without transferring annotation or whole-protein phenotypes
+    to the Pfam domain.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Gene-level growth, processing and pigment effects do not establish substrate identity, transport
+    direction, coupling or isolated-domain sufficiency.
+  evidence:
+  - reference: PMID:16159395
+    supports: PARTIAL
+    evidence_source: primary_growth_and_complementation
+    explanation: CysZ sulfate uptake is a hypothesis based on conditional growth and rescue; direct flux
+      and affinity were not measured.
+  - reference: PMID:26981620
+    supports: PARTIAL
+    evidence_source: primary_processing_and_limo_controls
+    explanation: MamO affects processing in cells; tested protease-region mutations lie outside PF01925
+      and depend on the LimO background.
+  - reference: PMID:21183667
+    supports: PARTIAL
+    evidence_source: primary_pmp_expression_phenotypes
+    explanation: PmpC affects normalized pigment; exported substrate z and the coexpression mechanism
+      remain unknown.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Current reference intervals are MamO357-633,CysZ7-246,PmpC5-260. Deposited CysZ/PmpC sequences
+    match current accessions; exact historical plasmids/deletions remain qualified. Retain CysZ pEC-XK99E/pZ8-1
+    discrepancy, inaccessible primer supplement, unmatched WT/mutant sulfate doses and nested replication.
+    Retain PmpC abundance/localization gaps and printed antibiotic units. MamO metal binding belongs to
+    the separate N-terminal construct, not PF01925. The 2011 protease interpretation is not adopted over
+    the 2016 pseudoprotease evidence.
+- discussion_id: pf01925-negative-results-and-coverage
+  prompt: Extend remaining experimental contexts and keep proposed transport assignments separate from
+    demonstrated flux.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The three curated member systems do not characterize all74133 frozen proteins or all published
+    contexts.
+  evidence:
+  - reference: PMID:17768248
+    supports: PARTIAL
+    evidence_source: primary_taue_transcription
+    explanation: H16_B1872 transcription and pathway context motivate sulfite export; they are not TauE
+      flux measurements.
+  - reference: PMID:18506422
+    supports: PARTIAL
+    evidence_source: primary_safe_candidate_transcription
+    explanation: SafE1/2 are transcriptionally supported candidates, distinct from measured SafD chemistry.
+  - reference: PMID:32917752
+    supports: PARTIAL
+    evidence_source: primary_tauE_deletion_negative
+    explanation: JMP134 delta-tauE has no detectable sulfide-oxidation/sulfate-output defect in the tested
+      resting-cell context.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: 'Do not transfer TsaT reconstituted channel activity to TsaS, or Oenococcus plasmid prevalence
+    to TauE-specific fitness or transport. The JMP134 negative does not prove absent function across species.
+    Follow-ups include MSR-1 MamO truncations, RS-1 genetics, later MamO/MamE studies, H16 alternative
+    sulfonates, IsfE, BigR-linked systems, keratin pathways and eukaryotic/archaeal members. Source and
+    access ledger: evidence/PF01925/coverage.txt. This is same-agent partial scientific curation, not
+    exhaustive family coverage, independent endorsement or publication.'
+causal_graphs:
+- family_mapping: C.glutamicum ATCC13032 CysZ/cg3112 CAF20834.1 is sequence-identical to Q8NLX4 sequence
+    v1/Cgl2812,309aa; PF01925 maps7-246. Whole-gene deletion and complementation do not isolate this interval;
+    exact deletion/clone endpoints remain unresolved.
+  taxon: NCBITaxon:196627
+  scope_status: PHENOTYPIC
+  graph_id: cgcysz-solid-growth-2005
+  title: CysZ deletion impairs sulfate and sulfite growth
+  scope: Ruckert2005 CR018 delta-cg3112 and homologous complementation in C.glutamicum ATCC13032.
+  context: Table2 and complementation Results; solid MMS,5%glucose,2mM added sulfur as sulfate or sulfite,30C,48h.
+    pCR018e supplies cysZ in trans.
+  limitations: Qualitative growth scores, not uptake rates. CR018 still grows on thiosulfate,sulfide and
+    cysteine. Rescue is text-only. Table4 assigns pCR018e to pEC-XK99E but cloning Methods say pZ8-1;
+    exact endpoints and vector discrepancy remain unresolved.
+  nodes:
+  - node_id: deletion
+    label: Whole-gene cysZ deletion versus WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NLX4
+  - node_id: rescue
+    label: cysZ complementation in CR018 versus deletion parent
+    node_type: PERTURBATION
+  - node_id: sulfate
+    label: Growth on solid sulfate medium
+    node_type: PHENOTYPE
+  - node_id: sulfite
+    label: Growth on solid sulfite medium
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: delete-sulfate
+    subject: deletion
+    predicate: decreases
+    object: sulfate
+    mechanism: CR018 lacks scored growth on sulfate, whereas WT grows; this is a gene-level cellular effect,
+      not direct transport.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16159395
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1266029/
+      cache_path: evidence/PF01925/ruckert-2005.txt
+      cache_sha256: 1f2fcb7c05ae7d8d3221d66e887efff31f4ec137430a28a314c89359cd35dff7
+      snippet: unable to grow
+      explanation: Table2 sulfate column and mutant-analysis Results.
+  - edge_id: restore-sulfate
+    subject: rescue
+    predicate: increases
+    object: sulfate
+    mechanism: Supplying the deleted cysZ gene restores WT-like sulfate growth in the reported complementation
+      test, arguing against a polar-only explanation.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16159395
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1266029/
+      cache_path: evidence/PF01925/ruckert-2005.txt
+      cache_sha256: 1f2fcb7c05ae7d8d3221d66e887efff31f4ec137430a28a314c89359cd35dff7
+      snippet: was indistinguishable from that of the wild-type
+      explanation: Homologous-complementation paragraph and Table4; qualitative rescue not displayed as
+        a separate graph.
+  - edge_id: delete-sulfite
+    subject: deletion
+    predicate: decreases
+    object: sulfite
+    mechanism: CR018 lacks scored growth on sulfite, whereas WT grows; this is a gene-level cellular effect,
+      not direct transport.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16159395
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1266029/
+      cache_path: evidence/PF01925/ruckert-2005.txt
+      cache_sha256: 1f2fcb7c05ae7d8d3221d66e887efff31f4ec137430a28a314c89359cd35dff7
+      snippet: unable to grow
+      explanation: Table2 sulfite column and mutant-analysis Results.
+  - edge_id: restore-sulfite
+    subject: rescue
+    predicate: increases
+    object: sulfite
+    mechanism: Supplying the deleted cysZ gene restores WT-like sulfite growth in the reported complementation
+      test, arguing against a polar-only explanation.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16159395
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1266029/
+      cache_path: evidence/PF01925/ruckert-2005.txt
+      cache_sha256: 1f2fcb7c05ae7d8d3221d66e887efff31f4ec137430a28a314c89359cd35dff7
+      snippet: was indistinguishable from that of the wild-type
+      explanation: Homologous-complementation paragraph and Table4; qualitative rescue not displayed as
+        a separate graph.
+- family_mapping: C.glutamicum ATCC13032 CysZ/cg3112 CAF20834.1 is sequence-identical to Q8NLX4 sequence
+    v1/Cgl2812,309aa; PF01925 maps7-246. Whole-gene deletion and complementation do not isolate this interval;
+    exact deletion/clone endpoints remain unresolved.
+  taxon: NCBITaxon:196627
+  scope_status: PHENOTYPIC
+  graph_id: cgcysz-liquid-growth-2005
+  title: CysZ deletion restricts liquid sulfur-source growth
+  scope: Ruckert2005 CR018 versus ATCC13032 in liquid growth measurements.
+  context: Table3; MMES,2.5%glucose,2mM sulfur,30C,initial OD6000.01,100uL/well,15-min shaking/measurement
+    cycles. This differs from solid MMS.
+  limitations: No measured membrane flux or transport affinity. Retained thiosulfate/sulfide generation
+    times do not imply identical lag phases. The reported liquid results are not a second purified-protein
+    experiment.
+  nodes:
+  - node_id: deletion
+    label: cysZ deletion in the liquid-culture comparison
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8NLX4
+  - node_id: sulfate
+    label: Liquid sulfate-supported growth
+    node_type: PHENOTYPE
+  - node_id: sulfite
+    label: Liquid sulfite-supported growth
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: delete-sulfate
+    subject: deletion
+    predicate: decreases
+    object: sulfate
+    mechanism: CR018 does not yield a growth generation time on sulfate; WT has a reported generation
+      time of 2.1h.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16159395
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1266029/
+      cache_path: evidence/PF01925/ruckert-2005.txt
+      cache_sha256: 1f2fcb7c05ae7d8d3221d66e887efff31f4ec137430a28a314c89359cd35dff7
+      snippet: unable to grow
+      explanation: Table3 and adjacent liquid-growth Results; no growth-rate-to-transport-rate conversion.
+  - edge_id: delete-sulfite
+    subject: deletion
+    predicate: decreases
+    object: sulfite
+    mechanism: CR018 does not yield a growth generation time on sulfite; WT has a reported generation
+      time of 2.2h.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16159395
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1266029/
+      cache_path: evidence/PF01925/ruckert-2005.txt
+      cache_sha256: 1f2fcb7c05ae7d8d3221d66e887efff31f4ec137430a28a314c89359cd35dff7
+      snippet: unable to grow
+      explanation: Table3 and adjacent liquid-growth Results; no growth-rate-to-transport-rate conversion.
+- family_mapping: C.glutamicum ATCC13032 CysZ/cg3112 CAF20834.1 is sequence-identical to Q8NLX4 sequence
+    v1/Cgl2812,309aa; PF01925 maps7-246. Whole-gene deletion and complementation do not isolate this interval;
+    exact deletion/clone endpoints remain unresolved.
+  taxon: NCBITaxon:196627
+  scope_status: PHENOTYPIC
+  graph_id: cgcysz-sulfate-bypass-2005
+  title: Higher sulfate partly bypasses the cysZ growth defect
+  scope: Ruckert2005 sulfate titration of CR018, not restoration of CysZ protein.
+  context: Figure3 liquid MMES nephelometry over40h; mutant10,15,20,30,40mM sulfate; WT comparator5mM.18measurements/time
+    point from3cultivations with6parallels each.
+  limitations: WT and mutant curves are not concentration-matched. Turbidity is not intracellular sulfate
+    or transport affinity. Residual10mM output and incomplete20mM recovery are retained; the graph does
+    not identify a second transporter.
+  nodes:
+  - node_id: fifteen
+    label: 15mM versus10mM sulfate in CR018
+    node_type: PERTURBATION
+  - node_id: twenty
+    label: 20mM versus10mM sulfate in CR018
+    node_type: PERTURBATION
+  - node_id: high
+    label: 30/40mM versus10mM sulfate in CR018
+    node_type: PERTURBATION
+  - node_id: growth
+    label: Late culture turbidity
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: 15mM-bypass
+    subject: fifteen
+    predicate: increases
+    object: growth
+    mechanism: 15mM sulfate yields greater late turbidity than10mM in the deletion mutant, but not WT5mM-level
+      output.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16159395
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1266029/
+      cache_path: evidence/PF01925/ruckert-2005.txt
+      cache_sha256: 1f2fcb7c05ae7d8d3221d66e887efff31f4ec137430a28a314c89359cd35dff7
+      snippet: growth is gradually restored
+      explanation: Original Figure3 mutant square versus diamond curves.
+  - edge_id: 20mM-bypass
+    subject: twenty
+    predicate: increases
+    object: growth
+    mechanism: 20mM sulfate further improves mutant turbidity while remaining below the WT5mM curve.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16159395
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1266029/
+      cache_path: evidence/PF01925/ruckert-2005.txt
+      cache_sha256: 1f2fcb7c05ae7d8d3221d66e887efff31f4ec137430a28a314c89359cd35dff7
+      snippet: growth is gradually restored
+      explanation: Original Figure3 mutant triangle versus10mM curve.
+  - edge_id: high-dose-bypass
+    subject: high
+    predicate: increases
+    object: growth
+    mechanism: 30mM and40mM mutant cultures approach the WT5mM turbidity range; this is conditional nutritional
+      bypass, not gene complementation.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:16159395
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1266029/
+      cache_path: evidence/PF01925/ruckert-2005.txt
+      cache_sha256: 1f2fcb7c05ae7d8d3221d66e887efff31f4ec137430a28a314c89359cd35dff7
+      snippet: growth is gradually restored
+      explanation: Original Figure3 upper mutant curves, caption and concentration-dependent-rescue Results.
+- family_mapping: C.glutamicum ATCC13032 CysZ/cg3112 CAF20834.1 is sequence-identical to Q8NLX4 sequence
+    v1/Cgl2812,309aa; PF01925 maps7-246. Whole-gene deletion and complementation do not isolate this interval;
+    exact deletion/clone endpoints remain unresolved.
+  taxon: NCBITaxon:196627
+  scope_status: HYPOTHETICAL
+  graph_id: cgcysz-uptake-hypothesis-2005
+  title: Proposed CysZ-dependent sulfate uptake
+  scope: Ruckert2005 interpretation of native C.glutamicum growth genetics and predicted membrane topology.
+  context: Low external sulfate in native cells; deletion, in-trans rescue and high-sulfate bypass motivate
+    the proposal. Coupling ions and energetics are unmeasured.
+  limitations: The paper explicitly lacks biochemical transport proof. High-affinity is an interpretation
+    of growth, not a measured Km or binding affinity. Sulfite growth effects do not independently identify
+    its route of transport.
+  nodes:
+  - node_id: cysz
+    label: Functional CysZ in native cells with external sulfate
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q8NLX4
+  - node_id: uptake
+    label: Sulfate entry across the cytoplasmic membrane
+    node_type: PROCESS
+  edges:
+  - edge_id: proposed-uptake
+    subject: cysz
+    predicate: enables
+    object: uptake
+    mechanism: The authors propose that CysZ supports sulfate import. This explanation is consistent with
+      the growth comparisons but is not a directly measured molecular mechanism.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: CONTEXTUAL
+    evidence:
+    - reference: PMID:16159395
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1266029/
+      cache_path: evidence/PF01925/ruckert-2005.txt
+      cache_sha256: 1f2fcb7c05ae7d8d3221d66e887efff31f4ec137430a28a314c89359cd35dff7
+      snippet: CysZ acts as the high-affinity sulphate transporter
+      explanation: Sulfate-titration interpretation and Discussion's explicit absence of biochemical proof.
+- family_mapping: AMB-1 MamO/amb0969 Q2W8Q2 sequence v1,637aa; PF01925 maps357-633 and separate PF13365
+    maps100-239. H116,D149,T225,H148,H263 lie OUTSIDE PF01925. LimO is a near-identical N-terminal paralog
+    lacking the TauE region, not an engineered isolated-domain control.
+  taxon: NCBITaxon:342108
+  scope_status: PHENOTYPIC
+  graph_id: mamo-r9-processing-2016
+  title: MamO alleles restore processing in the joint deletion
+  scope: Hershey2016 delta-mamO/delta-R9 (AK94), with WT or H116A MamO complementation.
+  context: Hershey2016 Figure3 cellular immunoblots; late-log MG cultures,30uM ferric malate,25mM HEPES
+    pH7.2,10%oxygen,standard30C. Single-copy neutral-site alleles use the mamAB promoter.
+  limitations: Processing is an indirect cellular readout. Sigma70 loading controls and the MamE nonspecific
+    band are retained. No direct MamO-MamE interaction, transported solute or isolated357-633 sufficiency
+    is shown. Tagged/untagged Figure3 allele assignment remains unresolved; S5 lists both. Joint deletion
+    removes the LimO-containing R9 region; its effect is not attributed solely to a Pfam-domain deletion.
+    H116 is outside PF01925.
+  nodes:
+  - node_id: deletion
+    label: Joint mamO and R9 deletion versus WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2W8Q2
+  - node_id: wt
+    label: WT MamO added to delta-mamO/delta-R9
+    node_type: PERTURBATION
+  - node_id: h116a
+    label: H116A MamO added to delta-mamO/delta-R9
+    node_type: PERTURBATION
+  - node_id: mame
+    label: MamE proteolytic processing
+    node_type: PROCESS
+  - node_id: mamp
+    label: MamP proteolytic processing
+    node_type: PROCESS
+  edges:
+  - edge_id: loss-mame
+    subject: deletion
+    predicate: decreases
+    object: mame
+    mechanism: The joint deletion diminishes MamE shorter products relative to WT; it does not show which
+      molecular intermediate changed.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: proteolysis of the two targets is minimal
+      explanation: Original Figure3A/B immunoblots and processing Results.
+  - edge_id: wt-restores-mame
+    subject: wt
+    predicate: increases
+    object: mame
+    mechanism: WT MamO restores MamE processing in the joint mutant. This does not make MamO a protease;
+      the 2016 analysis identifies it as a pseudoprotease.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: alleles restored processing
+      explanation: Original Figure3A rescue lanes, processing Results and S5 construct table.
+  - edge_id: h116a-restores-mame
+    subject: h116a
+    predicate: increases
+    object: mame
+    mechanism: H116A MamO restores MamE processing in the joint mutant. This does not make MamO a protease;
+      the 2016 analysis identifies it as a pseudoprotease.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: alleles restored processing
+      explanation: Original Figure3A rescue lanes, processing Results and S5 construct table.
+  - edge_id: loss-mamp
+    subject: deletion
+    predicate: decreases
+    object: mamp
+    mechanism: The joint deletion diminishes MamP shorter products relative to WT; it does not show which
+      molecular intermediate changed.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: proteolysis of the two targets is minimal
+      explanation: Original Figure3A/B immunoblots and processing Results.
+  - edge_id: wt-restores-mamp
+    subject: wt
+    predicate: increases
+    object: mamp
+    mechanism: WT MamO restores MamP processing in the joint mutant. This does not make MamO a protease;
+      the 2016 analysis identifies it as a pseudoprotease.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: alleles restored processing
+      explanation: Original Figure3A rescue lanes, processing Results and S5 construct table.
+  - edge_id: h116a-restores-mamp
+    subject: h116a
+    predicate: increases
+    object: mamp
+    mechanism: H116A MamO restores MamP processing in the joint mutant. This does not make MamO a protease;
+      the 2016 analysis identifies it as a pseudoprotease.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: alleles restored processing
+      explanation: Original Figure3A rescue lanes, processing Results and S5 construct table.
+- family_mapping: AMB-1 MamO/amb0969 Q2W8Q2 sequence v1,637aa; PF01925 maps357-633 and separate PF13365
+    maps100-239. H116,D149,T225,H148,H263 lie OUTSIDE PF01925. LimO is a near-identical N-terminal paralog
+    lacking the TauE region, not an engineered isolated-domain control.
+  taxon: NCBITaxon:342108
+  scope_status: PHENOTYPIC
+  graph_id: mamo-single-processing-2016
+  title: MamO loss affects processing despite retained LimO
+  scope: Hershey2016 single delta-mamO retaining R9/limO, and WT MamO complementation.
+  context: Hershey2016 Figure3 cellular immunoblots; late-log MG cultures,30uM ferric malate,25mM HEPES
+    pH7.2,10%oxygen,standard30C. Single-copy neutral-site alleles use the mamAB promoter.
+  limitations: Processing is an indirect cellular readout. Sigma70 loading controls and the MamE nonspecific
+    band are retained. No direct MamO-MamE interaction, transported solute or isolated357-633 sufficiency
+    is shown. Tagged/untagged Figure3 allele assignment remains unresolved; S5 lists both. LimO is a native
+    paralog, not a purified isolated MamO domain. The result supports a requirement for MamO's C-terminal
+    region in this background without identifying transport chemistry.
+  nodes:
+  - node_id: deletion
+    label: Single mamO deletion with limO retained
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2W8Q2
+  - node_id: wt
+    label: WT MamO complementation in single delta-mamO
+    node_type: PERTURBATION
+  - node_id: mame
+    label: MamE proteolytic processing
+    node_type: PROCESS
+  - node_id: mamp
+    label: MamP proteolytic processing
+    node_type: PROCESS
+  edges:
+  - edge_id: loss-mame
+    subject: deletion
+    predicate: decreases
+    object: mame
+    mechanism: The single mutant retains LimO but has minimal shorter-product formation compared with
+      WT.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: proteolysis of the two targets is minimal
+      explanation: Original Figure3B single-deletion lanes and accompanying Results.
+  - edge_id: restore-mame
+    subject: wt
+    predicate: increases
+    object: mame
+    mechanism: WT MamO complementation restores the processing pattern in the single-deletion background.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: alleles restored processing
+      explanation: Original Figure3B delta-mamO/O-WT rescue lane; Figure3A separately tests the joint-deletion
+        background.
+  - edge_id: loss-mamp
+    subject: deletion
+    predicate: decreases
+    object: mamp
+    mechanism: The single mutant retains LimO but has minimal shorter-product formation compared with
+      WT.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: proteolysis of the two targets is minimal
+      explanation: Original Figure3B single-deletion lanes and accompanying Results.
+  - edge_id: restore-mamp
+    subject: wt
+    predicate: increases
+    object: mamp
+    mechanism: WT MamO complementation restores the processing pattern in the single-deletion background.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: alleles restored processing
+      explanation: Original Figure3B delta-mamO/O-WT rescue lane; Figure3A separately tests the joint-deletion
+        background.
+- family_mapping: AMB-1 MamO/amb0969 Q2W8Q2 sequence v1,637aa; PF01925 maps357-633 and separate PF13365
+    maps100-239. H116,D149,T225,H148,H263 lie OUTSIDE PF01925. LimO is a near-identical N-terminal paralog
+    lacking the TauE region, not an engineered isolated-domain control.
+  taxon: NCBITaxon:342108
+  scope_status: PHENOTYPIC
+  graph_id: mamo-limo-magnetism-2016
+  title: LimO-containing cells tolerate MamO domain substitutions
+  scope: Hershey2016 supplementary FigureS3C single delta-mamO with LimO retained and N-terminally FLAG-tagged
+    MamO variants.
+  context: S3A-C; standard MG magnetic-response cultures. S5 pAK823 derivatives carry M2/3xFLAG plus BamHI
+    linker. Coefficient of magnetism measures culture orientation, not a transport rate.
+  limitations: H116A,D149A,T225A,H148A,H263A all lie outside PF01925. Their complementation in the LimO-positive
+    strain must not be transferred to delta-R9 cells; other figures show severe defects in that background.
+    No isolated TauE-domain sufficiency or metal-binding function of PF01925 is inferred.
+  nodes:
+  - node_id: deletion
+    label: Single mamO deletion versus WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q2W8Q2
+  - node_id: wt
+    label: WT FLAG-MamO complementation in LimO-positive delta-mamO
+    node_type: PERTURBATION
+  - node_id: h116a
+    label: H116A FLAG-MamO complementation in LimO-positive delta-mamO
+    node_type: PERTURBATION
+  - node_id: d149a
+    label: D149A FLAG-MamO complementation in LimO-positive delta-mamO
+    node_type: PERTURBATION
+  - node_id: t225a
+    label: T225A FLAG-MamO complementation in LimO-positive delta-mamO
+    node_type: PERTURBATION
+  - node_id: h148a
+    label: H148A FLAG-MamO complementation in LimO-positive delta-mamO
+    node_type: PERTURBATION
+  - node_id: h263a
+    label: H263A FLAG-MamO complementation in LimO-positive delta-mamO
+    node_type: PERTURBATION
+  - node_id: response
+    label: Culture magnetic response
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: loss-response
+    subject: deletion
+    predicate: decreases
+    object: response
+    mechanism: The single delta-mamO strain loses the magnetic response despite retained LimO.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: restore wild-type biomineralization
+      explanation: Original S3C deletion and WT bars; S3A domain comparison.
+  - edge_id: wt-response
+    subject: wt
+    predicate: increases
+    object: response
+    mechanism: WT MamO restores magnetic response relative to the single-deletion strain when LimO is
+      present; this is a background-specific complementation result.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: restore wild-type biomineralization
+      explanation: Original S3C WT bar, S3B protein/loading controls and S5 plasmids.
+  - edge_id: h116a-response
+    subject: h116a
+    predicate: increases
+    object: response
+    mechanism: H116A MamO restores magnetic response relative to the single-deletion strain when LimO
+      is present; this is a background-specific complementation result.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: restore wild-type biomineralization
+      explanation: Original S3C H116A bar, S3B protein/loading controls and S5 plasmids.
+  - edge_id: d149a-response
+    subject: d149a
+    predicate: increases
+    object: response
+    mechanism: D149A MamO restores magnetic response relative to the single-deletion strain when LimO
+      is present; this is a background-specific complementation result.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: restore wild-type biomineralization
+      explanation: Original S3C D149A bar, S3B protein/loading controls and S5 plasmids.
+  - edge_id: t225a-response
+    subject: t225a
+    predicate: increases
+    object: response
+    mechanism: T225A MamO restores magnetic response relative to the single-deletion strain when LimO
+      is present; this is a background-specific complementation result.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: restore wild-type biomineralization
+      explanation: Original S3C T225A bar, S3B protein/loading controls and S5 plasmids.
+  - edge_id: h148a-response
+    subject: h148a
+    predicate: increases
+    object: response
+    mechanism: H148A MamO restores magnetic response relative to the single-deletion strain when LimO
+      is present; this is a background-specific complementation result.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: restore wild-type biomineralization
+      explanation: Original S3C H148A bar, S3B protein/loading controls and S5 plasmids.
+  - edge_id: h263a-response
+    subject: h263a
+    predicate: increases
+    object: response
+    mechanism: H263A MamO restores magnetic response relative to the single-deletion strain when LimO
+      is present; this is a background-specific complementation result.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26981620
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4794232/
+      cache_path: evidence/PF01925/hershey-2016.txt
+      cache_sha256: 8b07adcb5b36afddd20a179e54f24bc8b491492f7357a15bb388ca7bee31fc91
+      snippet: restore wild-type biomineralization
+      explanation: Original S3C H263A bar, S3B protein/loading controls and S5 plasmids.
+- graph_id: pmpc-laca-pigment-2011
+  title: PmpC expression alters pigment in LacA
+  scope: Gristwood2011 Figure6C LacA parent (paper WT); whole-gene expression constructs.
+  context: LB,30C,12h,0.1mM IPTG; pQE-80LoriT-derived pTA157(C),pTA132(ABC),pTA159(AC),pTA156(BC). Pigment
+    readout A534/OD600; three independent experiments,mean+/-SD.
+  family_mapping: Serratia sp.ATCC39006 PmpC E7BBJ3 sequence v1,271aa,PF01925 5-260; original FR750283/CBY83979.1,
+    archived UniSave v1 and current sequence are identical. Primary MMO69 encodes the matching MFISL start.
+    Current Ser39006_020725 is a reference mapping, not independent plasmid sequencing. LacA is an EMS-derived
+    Lac-minus parent.
+  taxon: NCBITaxon:104623
+  scope_status: PHENOTYPIC
+  limitations: Unknown transported substrate and molecular mechanism. Coexpression may alter abundance
+    or physiology; it is not demonstrated direct inhibition. PmpA/B/AB alone do not significantly change
+    pigment in the reported comparison. Tagged PmpC detection failed, so PmpB fractionation is not evidence
+    of PmpC localization. Printed antibiotic units remain unresolved.
+  nodes:
+  - node_id: c
+    label: pmpC expression versus empty vector
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:E7BBJ3
+  - node_id: abc-vector
+    label: pmpABC expression versus empty vector
+    node_type: PERTURBATION
+  - node_id: ac
+    label: pmpAC versus pmpC-only expression
+    node_type: PERTURBATION
+  - node_id: bc
+    label: pmpBC versus pmpC-only expression
+    node_type: PERTURBATION
+  - node_id: abc-c
+    label: pmpABC versus pmpC-only expression
+    node_type: PERTURBATION
+  - node_id: pig
+    label: Normalized prodigiosin signal
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: c-increases
+    subject: c
+    predicate: increases
+    object: pig
+    mechanism: pmpC expression increases normalized pigment relative to the vector control in this genetic
+      background.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21183667
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3067589/
+      cache_path: evidence/PF01925/gristwood-2011.txt
+      cache_sha256: 9d90112669e5c19d4fea8e55c28926b9b47d2cca13525eb0acf313dc5fdb902b
+      snippet: caused an increase in Pig production
+      explanation: Original Figure6C pmpC and vector bars; Table1 constructs.
+  - edge_id: abc-increases
+    subject: abc-vector
+    predicate: increases
+    object: pig
+    mechanism: pmpABC expression raises normalized pigment relative to vector, but less than pmpC alone.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21183667
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3067589/
+      cache_path: evidence/PF01925/gristwood-2011.txt
+      cache_sha256: 9d90112669e5c19d4fea8e55c28926b9b47d2cca13525eb0acf313dc5fdb902b
+      snippet: caused an increase in Pig production
+      explanation: Original Figure6C pmpABC/vector/pmpC bars; Figure6A also tests operon expression.
+  - edge_id: ac-attenuates
+    subject: ac
+    predicate: decreases
+    object: pig
+    mechanism: Coexpressing PmpA with PmpC yields less normalized pigment than pmpC-only expression; this
+      comparison is not a molecular transport-inhibition assay.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21183667
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3067589/
+      cache_path: evidence/PF01925/gristwood-2011.txt
+      cache_sha256: 9d90112669e5c19d4fea8e55c28926b9b47d2cca13525eb0acf313dc5fdb902b
+      snippet: partially attenuated the hyperpigmentation
+      explanation: Original Figure6C pmpAC versus pmpC bars in the same background.
+  - edge_id: bc-attenuates
+    subject: bc
+    predicate: decreases
+    object: pig
+    mechanism: Coexpressing PmpB with PmpC yields less normalized pigment than pmpC-only expression; this
+      comparison is not a molecular transport-inhibition assay.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21183667
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3067589/
+      cache_path: evidence/PF01925/gristwood-2011.txt
+      cache_sha256: 9d90112669e5c19d4fea8e55c28926b9b47d2cca13525eb0acf313dc5fdb902b
+      snippet: partially attenuated the hyperpigmentation
+      explanation: Original Figure6C pmpBC versus pmpC bars in the same background.
+  - edge_id: abc-c-attenuates
+    subject: abc-c
+    predicate: decreases
+    object: pig
+    mechanism: Coexpressing PmpA and PmpB with PmpC yields less normalized pigment than pmpC-only expression;
+      this comparison is not a molecular transport-inhibition assay.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21183667
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3067589/
+      cache_path: evidence/PF01925/gristwood-2011.txt
+      cache_sha256: 9d90112669e5c19d4fea8e55c28926b9b47d2cca13525eb0acf313dc5fdb902b
+      snippet: partially attenuated the hyperpigmentation
+      explanation: Original Figure6C pmpABC versus pmpC bars in the same background.
+- graph_id: pmpc-pigs-pigment-2011
+  title: PmpC expression alters pigment in the pigS mutant
+  scope: Gristwood2011 Figure6C HSPIG26 pigS::mini-Tn5lacZ1; whole-gene expression constructs.
+  context: LB,30C,12h,0.1mM IPTG; pQE-80LoriT-derived pTA157(C),pTA132(ABC),pTA159(AC),pTA156(BC). Pigment
+    readout A534/OD600; three independent experiments,mean+/-SD.
+  family_mapping: Serratia sp.ATCC39006 PmpC E7BBJ3 sequence v1,271aa,PF01925 5-260; original FR750283/CBY83979.1,
+    archived UniSave v1 and current sequence are identical. Primary MMO69 encodes the matching MFISL start.
+    Current Ser39006_020725 is a reference mapping, not independent plasmid sequencing. LacA is an EMS-derived
+    Lac-minus parent.
+  taxon: NCBITaxon:104623
+  scope_status: PHENOTYPIC
+  limitations: Unknown transported substrate and molecular mechanism. Coexpression may alter abundance
+    or physiology; it is not demonstrated direct inhibition. PmpA/B/AB alone do not significantly change
+    pigment in the reported comparison. Tagged PmpC detection failed, so PmpB fractionation is not evidence
+    of PmpC localization. Printed antibiotic units remain unresolved.
+  nodes:
+  - node_id: c
+    label: pmpC expression versus empty vector
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:E7BBJ3
+  - node_id: abc-vector
+    label: pmpABC expression versus empty vector
+    node_type: PERTURBATION
+  - node_id: ac
+    label: pmpAC versus pmpC-only expression
+    node_type: PERTURBATION
+  - node_id: bc
+    label: pmpBC versus pmpC-only expression
+    node_type: PERTURBATION
+  - node_id: abc-c
+    label: pmpABC versus pmpC-only expression
+    node_type: PERTURBATION
+  - node_id: pig
+    label: Normalized prodigiosin signal
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: c-increases
+    subject: c
+    predicate: increases
+    object: pig
+    mechanism: pmpC expression increases normalized pigment relative to the vector control in this genetic
+      background.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21183667
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3067589/
+      cache_path: evidence/PF01925/gristwood-2011.txt
+      cache_sha256: 9d90112669e5c19d4fea8e55c28926b9b47d2cca13525eb0acf313dc5fdb902b
+      snippet: caused an increase in Pig production
+      explanation: Original Figure6C pmpC and vector bars; Table1 constructs.
+  - edge_id: abc-increases
+    subject: abc-vector
+    predicate: increases
+    object: pig
+    mechanism: pmpABC expression raises normalized pigment relative to vector, but less than pmpC alone.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21183667
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3067589/
+      cache_path: evidence/PF01925/gristwood-2011.txt
+      cache_sha256: 9d90112669e5c19d4fea8e55c28926b9b47d2cca13525eb0acf313dc5fdb902b
+      snippet: caused an increase in Pig production
+      explanation: Original Figure6C pmpABC/vector/pmpC bars; Figure6A also tests operon expression.
+  - edge_id: ac-attenuates
+    subject: ac
+    predicate: decreases
+    object: pig
+    mechanism: Coexpressing PmpA with PmpC yields less normalized pigment than pmpC-only expression; this
+      comparison is not a molecular transport-inhibition assay.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21183667
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3067589/
+      cache_path: evidence/PF01925/gristwood-2011.txt
+      cache_sha256: 9d90112669e5c19d4fea8e55c28926b9b47d2cca13525eb0acf313dc5fdb902b
+      snippet: partially attenuated the hyperpigmentation
+      explanation: Original Figure6C pmpAC versus pmpC bars in the same background.
+  - edge_id: bc-attenuates
+    subject: bc
+    predicate: decreases
+    object: pig
+    mechanism: Coexpressing PmpB with PmpC yields less normalized pigment than pmpC-only expression; this
+      comparison is not a molecular transport-inhibition assay.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21183667
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3067589/
+      cache_path: evidence/PF01925/gristwood-2011.txt
+      cache_sha256: 9d90112669e5c19d4fea8e55c28926b9b47d2cca13525eb0acf313dc5fdb902b
+      snippet: partially attenuated the hyperpigmentation
+      explanation: Original Figure6C pmpBC versus pmpC bars in the same background.
+  - edge_id: abc-c-attenuates
+    subject: abc-c
+    predicate: decreases
+    object: pig
+    mechanism: Coexpressing PmpA and PmpB with PmpC yields less normalized pigment than pmpC-only expression;
+      this comparison is not a molecular transport-inhibition assay.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21183667
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3067589/
+      cache_path: evidence/PF01925/gristwood-2011.txt
+      cache_sha256: 9d90112669e5c19d4fea8e55c28926b9b47d2cca13525eb0acf313dc5fdb902b
+      snippet: partially attenuated the hyperpigmentation
+      explanation: Original Figure6C pmpABC versus pmpC bars in the same background.
+curation_events:
+- timestamp: '2026-10-12T02:13:39Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate scoped CysZ, PmpC and MamO causal contexts with qualified transport hypotheses
+  history_record: history/records/PF01925/2026-10-12T021339Z-codex-4744a4.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T02:19:22Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Reviewed PF01925 CysZ, PmpC and MamO graph contexts with unresolved transport mechanisms.
+  history_record: history/records/PF01925/2026-10-12T021922Z-codex-993d36.yaml
+  event_index: 0
+  llm_assisted: true

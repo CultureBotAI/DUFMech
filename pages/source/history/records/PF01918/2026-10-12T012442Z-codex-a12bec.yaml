@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01918
+  path: curation/families/PF01918.yaml
+session:
+  id: 2026-10-12T012442Z-codex-a12bec
+  timestamp: '2026-10-12T01:24:42Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Use assay-specific DNA-binding quotation for five Alba edges
+  details: Visual evidence-table inspection found that the five Bell2002 DNA-binding
+    edges displayed a transcription quotation from the same paper. Added a separately
+    retained Figure3 excerpt and updated only those snippet/cache references. Assay
+    directions, values, graph scope and counts are unchanged; prior evidence and the
+    first review are preserved.

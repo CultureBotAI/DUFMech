@@ -1,0 +1,24 @@
+Morett et al. 2008, PMID18178222, doi:10.1016/j.jmb.2007.12.017.
+https://pubmed.ncbi.nlm.nih.gov/18178222/
+https://www.sciencedirect.com/science/article/abs/pii/S0022283607016221
+Inspected 2026-10-11: primary abstract, publisher-accessible Introduction and
+partial Methods/Results excerpts. Full paper, original figures and supplements
+were not obtained. Elsevier API returned bibliographic coredata only.
+
+Minimal quotations:
+"we selected yjbQ, a gene that complemented a strain deleted"
+"In vitro studies confirmed TPS activity"
+
+Curator facts: overexpression of the E. coli gene rescues thiamine auxotrophy
+of MC1061 delta-thiE. Accessible text specifies minimal-medium plate selection;
+its complementation recipe is truncated. LB growth at37 C is reported but is
+not silently assigned to the distinct complementation incubation. Exact medium,
+inducer, assay duration, expression level, replicate count and figures remain
+unverified. This supports a bounded, qualitatively reported genetic effect,
+not a reconstructed kinetic assay. The paper reports in-vitro TPS activity,
+directed-evolution improvement and mutagenesis, but no numerical activity,
+specific residue effect or reaction microstep is adopted without full evidence.
+Remote Thermotoga, Sulfolobus and Pyrococcus homologs reportedly complement;
+their exact tested constructs have not been mapped here. The low activity is
+interpreted as secondary, not established as the universal physiological role.
+ThiE's carbocation mechanism cannot be transferred to nonhomologous YjbQ.

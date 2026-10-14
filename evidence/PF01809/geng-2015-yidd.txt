@@ -1,0 +1,114 @@
+PF01809 Geng 2015 thesis Chapter 4 primary evidence
+Assessed: 2026-10-11 UTC. Curator: Codex.
+Source: Geng, Membrane protein insertases of the YidC/Oxa1/Alb3 protein
+family, University of Groningen thesis (2015), Chapter 4, printed pp.90-109.
+https://pure.rug.nl/ws/portalfiles/portal/23714509/Chapter_4.pdf
+The chapter is marked Submitted. This assessment uses the thesis version,
+not an independently verified peer-reviewed journal version. Methods,
+Results, Discussion and Table 1 read. Figures 2/3/4/6/7 and S1/S2
+visually inspected at PDF pages 10/11/12/15/17/22 respectively.
+Figure 5 co-purification text/caption read, image not assessed.
+
+Minimal verbatim anchors:
+"Proton motive force measurements"
+"NADH dehydrogenase activity"
+"ATPase activity"
+"Deletion of yidD"
+"membrane insertion"
+All other text is curator paraphrase and assessment.
+
+Preparation and causal boundary
+BW25113 and Keio yidD::kan cells supply genotype-comparison vesicles;
+Figure 4 shows two independent deletion isolates. Default vesicles derive
+from LB cultures at 37 C, harvested at OD600 about 0.6. Overnight deletion
+cultures receive 25 ug/ml kanamycin; matched antibiotic exposure is not
+independently established for every subsequent assay.
+Deleting yidD slightly lowers downstream YidC abundance. pTrcyidC,
+25 uM IPTG, 30 C growth with 100 ug/ml ampicillin provides mild YidC
+expression; pTrc99A is its vector control. S2 shows restored YidC signal.
+This is YidC compensation, not same-gene YidD complementation.
+All retained effects are INDIRECT with respect to the YidD mechanism:
+they alter genotypes or vesicle preparations, not purified YidD alone.
+
+Figure 2: energization-dependent fluorescence quenching
+Buffer A: 50 mM HEPES-KOH pH 8, 50 mM KCl, 1 mM DTT, 5 mM MgCl2.
+For the delta-pH proxy: 1-ml reactions at 30 C, 12.5 ug/ml vesicles,
+1 uM ACMA, 0.625 mM NADH or 1 mM ATP. For the delta-psi proxy:
+100 ug/ml vesicles, oxonol VI, 1.25 mM NADH or 1 mM ATP. The inspected
+Methods do not specify oxonol concentration. ACMA uses 411/474 nm and
+oxonol 523/624 nm excitation/emission. Valinomycin and nigericin at 1 uM
+interconvert/collapse the components in separate traces.
+Deletion-derived vesicles show smaller fluorescence quenching for both
+energy sources with both dyes. Larger raw fluorescence is not a larger
+gradient. The graphs retain quenching amplitudes as gradient proxies,
+not calibrated pH units, membrane voltages or a direct YidD proton pump.
+The plotted traces do not establish replicate variance or membrane leak
+versus changed respiratory/ATPase capacity independently.
+
+Figure 3: three distinct biochemical readouts of genotype-derived vesicles
+Ferricyanide reduction: 80 ug/ml vesicles, 25 C, 50 mM potassium phosphate
+pH 7.5, 5 mM MgSO4, 1 mM ferricyanide and 1 mM NADH; absorbance 420 nm.
+The deletion preparation retains about half WT activity.
+NADH oxidation with oxygen: 75 ug/ml vesicles, 50 mM HEPES-KOH pH 7.5,
+350 uM NADH, absorbance 340 nm. The Results describe about 30% residual
+activity; the figure supports a substantial reduction, not a precise
+independently re-fitted ratio or exclusive assignment to one respiratory
+complex. Ferricyanide and oxygen assays are not interchangeable.
+ATP hydrolysis: 15 ug/ml vesicles, 50 mM HEPES-KOH pH 8, 50 mM KCl,
+2.5 mM MgCl2, 2 mM DTT, 1 mM ATP, 37 C; phosphate measured at 660 nm
+by malachite green. Methods mention 15 min plus stopping at various
+intervals. The DCCD-sensitive component is reduced about 40%; remaining
+DCCD-insensitive activity is similar. DCCD is 0.5 mM from ethanol stock;
+no independent solvent-control reconciliation. Three independent
+measurements, mean/SD, are stated for Figure 3.
+Neither a proton-pumping defect nor a specific F1-on-F0 assembly step
+is directly resolved by these bulk activity measurements.
+
+Figure 4: membrane protein abundance
+Deletion-derived vesicles show reduced NuoK and slightly reduced YidC,
+with a weak increase in PspA. LepB is similar. F0c is reported as little
+affected, unlike Yu 2011's MC4100(DE3) result. Different backgrounds and
+preparations prevent treating this as the same experiment or universal
+contradiction. No raw densitometry or statistical significance was re-fitted.
+
+Figures 6 and 7: coupled synthesis/protease-protection readouts
+The primary experiment inherits additional recipe details from cited
+methods, not fully reconstructed here. Buffer is 50 mM HEPES-KOH pH 7.6,
+37 C with T7 polymerase and radiolabeled protein mix; 30 min for NuoK,
+20 min for F0c. Final IMV dose and translation-extract recipe require
+the cited protocol. NuoK samples are pelleted through 20% sucrose,
+then exposed to 0.5 mg/ml proteinase K, 30 min on ice. F0c receives
+2.5 mg/ml proteinase K, 20 min at room temperature. TCA precipitation,
+16% tricine SDS-PAGE and phosphorimaging detect protected material.
+NuoK readout is an N-terminal protected fragment after C-terminal cleavage;
+F0c readout is protected full-length protein. Buffer-only reactions and
+4%/3% synthesis samples respectively control digestion and production.
+Protection supports insertion under this protocol, not an absolute measure
+of correct assembly, calibrated topology for every molecule or direct
+YidD catalytic activity. No detergent-plus-protease control is displayed
+in these panels. The no-vesicle controls argue against gross intrinsic
+protease resistance but do not exclude every preparation confounder.
+
+Figure 6B/C: BW25113 deletion reduces protected NuoK to roughly half WT
+with empty vector. The defect persists in the pTrcyidC background despite
+restored YidC abundance; compare matched pTrcyidC WT/deletion bars rather
+than calling restoration of YidC restoration of YidD. Five independent
+experiments, mean/SD. Figure 6 actual E/F (caption D/E) shows increased
+NuoK protection with pEK746 His-YidD overexpression versus pET15b.
+Results describe about 50% enhancement; the plotted bar is somewhat above
+150%. Only qualitative increase is retained. Methods/Figure identify
+Lemo21(DE3), while Results calls the host BL21(DE3). It is not a rescue
+of BW25113 deletion. Expression Methods use 30 C growth, induction at
+OD600 about 0.5, 500 uM IPTG for 2 h. Historical clone sequence is unverified.
+NuoK Results say two transmembrane segments but the schematic shows three;
+the graph does not adopt that unverified topology description.
+
+Figure 7B/C: deletion with empty vector reduces F0c protection about 20%.
+Mild YidC expression in the deletion restores it to approximately WT
+levels; it is not evidence that YidD is universally required for F0c
+insertion. Figure 7D/E shows little effect of His-YidD overexpression
+on F0c protection; the small plotted difference is not promoted to a
+new directional claim. Three independent experiments, mean/SD.
+Keep steady-state F0c abundance, protected insertion and DCCD-sensitive
+ATPase activity as different endpoints. No observed linear chain links
+all three to a specific molecular assembly event.

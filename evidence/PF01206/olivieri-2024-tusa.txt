@@ -1,0 +1,38 @@
+Inspected 2026-10-11. Olivieri et al., Microbiology Spectrum 2024.
+PMID:38980029; doi:10.1128/spectrum.00949-24; CC BY 4.0.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11302665/
+Minimal quotations:
+"increase in the IscS activity by a factor of about 3"
+"it did significantly impact Fe-S cluster assembly"
+
+Curator paraphrase and inspected locators:
+Figure 1 image, caption, Results and desulfurase Methods: purified IscS-TusA
+has higher sulfide-production activity than IscS alone. TusA-only and IscU-only
+controls have no detected activity. Precomplex formation uses a 1:3 ratio,
+20 min at 30 C, 50 mM Tris-HCl/200 mM NaCl, pH 8; gel filtration isolates
+complexes. Activity incubation is 10 min at 30 C with 1 mM DTT and 1 mM
+L-cysteine; acidic DMPD/FeCl3 and an Na2S standard quantify sulfide. Figure 1
+also shows intermediate activities after adding TusA or IscU to the reciprocal
+precomplex. These are not direct cellular sulfur-flux measurements.
+
+Figure 5A/D images and caption: 50 uM IscU, 25 uM Fe2+, 1 uM IscS,
+250 uM L-cysteine; TusA at 0, 1, 5, 10 or 50 uM. Anaerobic 50 mM Tris-HCl,
+100 mM NaCl, pH 8. Either 2 mM DTT or 1 uM Fdx + 1 uM Fpr + 100 uM
+NADPH supplies reduction. After 30 min preincubation, IscS and cysteine are
+added; A456 is followed every 5 min for 40 min, independent triplicates.
+Only the 50 uM TusA series shows the clear decrease under both reductant
+conditions. This is an assembly-associated optical readout, not direct proof
+of sulfur diversion or a particular inhibited elementary reaction. The assay
+temperature is not specified in this caption. Caption B/E refers to a yellow
+line while the no-TusA line key is red; no spectrum-specific comparison is
+adopted from those panels.
+
+Methods report BL21(DE3) expression and prior protocols. Results explicitly
+use untagged TusA and IscS for interaction studies; IscU His6 is thrombin-cleaved.
+The cited 2013 protocol (PMID:23281480, PMC3581435, Table 1) lists pJD34,
+tusA in pET11b NdeI/BamHI. Exact 2024 clone sequence, template strain and
+absolute Figure 1 assay protein concentrations were not independently verified.
+Do not substitute the 30/90 uM gel-filtration experiment for those missing doses.
+Native MS supports a mixed IscS2/IscU/TusA complex; exclusive whole-dimer
+occupancy and an observed intracellular flux-control chain are not asserted.
+Figures 1 and 5 visually inspected; supplemental figures not inspected.

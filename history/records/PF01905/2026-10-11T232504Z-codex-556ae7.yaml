@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01905
+  path: curation/families/PF01905.yaml
+session:
+  id: 2026-10-11T232504Z-codex-556ae7
+  timestamp: '2026-10-11T23:25:04Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add scoped Csa2 binding and DevR developmental causal graphs
+  details: Eleven graphs retain six direct biochemical and eight indirect phenotypic
+    observed effects. Preserve separate constructs, probe and temperature conditions,
+    H160A residual binding, suppressor rather than complementation genetics, partial
+    DevR domain mapping and unresolved regulatory mechanisms. Six hash-anchored evidence
+    ledgers and two open discussions retain source and coverage limits; IN_PROGRESS.

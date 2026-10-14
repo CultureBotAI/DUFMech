@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01935
+  path: data/families/PF01935.yaml
+session:
+  id: 2026-10-12T044221Z-codex-05713d
+  timestamp: '2026-10-12T04:42:21Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial HerA causal-graph scientific self-review with open member
+    and assay followups
+  details: Completed same-agent scoped review of six graphs and21 observed effects,
+    current domain mappings, primary2014/2015 experiments and four evidence ledgers.
+    Native verdict NEEDS_FOLLOWUP; common pass_with_limitations. Digest d4c20188a921242942a1815091e25eb0f5955ae652d7fd3f4c40cb99b801fcf3.
+    No direct atomic coupling or family-wide function is claimed; bacterial, antiviral,
+    omitted archaeal and supplemental contexts remain open.256 focused tests pass.
+    Final regeneration, export and browser checks follow; no publication or full-QC
+    pass claimed.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T044202Z-pf01935-hera-domain-boundaries-and-separated-assay-effects/review.yaml

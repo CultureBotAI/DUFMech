@@ -1,0 +1,57 @@
+Butschi et al., 2010, genotype-specific developmental and glycome evidence
+PMID:20062796; doi:10.1371/journal.ppat.1000717
+https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1000717
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2798750/fullTextXML
+CC BY, authors credited above. Inspected 2026-10-11 by Codex: genotype and
+glycome Results; strain, toxicity, Mos1, glycan release/analysis Methods;
+Figures4/7 and supplemental FigureS2 visually inspected.
+Minimal source quotations: "second exon"; "Peak A"; "fraction of animals".
+
+Figure4A/B and Methods: op497 is a Mos1 insertion in M03F8.4 exon2,
+identified by inverse PCR after selection in pmk-1(km25) and 2-6 outcrosses.
+The protein product/null status is not experimentally established here.
+50-100 newly hatched L1 were fed BL21(DE3) producing CGL2; L4 fraction was
+scored at72h. Plates were prepared overnight at23C, distinct from the 2009
+protocol. The specific assay's animal incubation temperature is not restated.
+pmk-1 alone gives no L4 animals in the displayed comparison; adding op497
+gives approximately0.7, without claiming an exact digitized value. Published
+statistical comparisons were to N2, not to the zero-valued pmk-1 population.
+Do not turn the higher developmental fraction into a direct binding effect,
+an unconditional growth advantage or a quantitative mortality decrease.
+The rescue in 2009 uses unc-119, not this pmk-1 background.
+
+Figure7 and glycome Methods: animals for glycan isolation were grown in
+OP50 liquid culture for five days at room temperature, not on CGL2 food.
+Sequential PNGaseF and PNGaseA release separates the F-resistant/A-sensitive
+fraction shown. PA-labeled glycans were separated by normal-phase followed
+by reversed-phase HPLC, then MALDI-TOF MS/MS and glycosidase treatments.
+pmk-1;galt-1(op497) has reduced late NP-HPLC peaks and lacks the selected
+RP-HPLC peakA (approximately14.5min), compared with pmk-1 alone. The selected
+NP fraction is34.0-35.5min. pmk-1;fut-8 is a distinct comparison, not a
+GALT-1 perturbation. No total-glycome abundance or rescue measurement is
+implied by the qualitative peak difference.
+
+PeakA has composition Hex5dHex2HexNAc2-PA, sodium adduct near m/z1605,
+and a core-associated fragment near753. Fucosidase alone does not remove
+the capped fucose; Aspergillus beta1,4-galactosidase removes one hexose,
+parent1443 / core fragment approximately591 and a retention shift; subsequent
+bovine kidney fucosidase removes a fucose, parent1297 / fragment445.
+These support the authors' core Galbeta1,4Fucalpha1,6 assignment. The 37C,
+two-day glycosidase digestion is analytical, not the worm culture condition.
+
+Supplement FigureS2 (one-page PDF) directly inspected:
+https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1000717.s006&type=supplementary
+The four corresponding MALDI and MS/MS rows show parent1605 and fragment753
+before/after fucosidase, parent1443 after galactosidase, and parent1297 after
+the sequential digest. The title's reference to Figure6 is an outdated panel
+cross-reference; the main glycome figure is7. MS/MS contains additional
+fragments and noise; no raw-spectrum processing or novel linkage assignment
+was performed. This supplement assesses purified peakA, not replicated
+genotype-level quantitative glycomics.
+
+Exclusion: Figure6 fluorescent CGL2 staining compares pmk-1 with pmk-1;fut-8,
+NOT galt-1. Do not assign that direct comparison to GALT-1. The CGL2-bound
+trisaccharide structure is also not a GALT-1 catalytic structure. No graph
+joins the extract product, glycome deficit and toxin phenotype into a wholly
+observed molecular sequence. Other alleles, purified GALT-1 and family-wide
+specificity remain independent research tasks.

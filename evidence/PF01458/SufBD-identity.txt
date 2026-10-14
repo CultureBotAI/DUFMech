@@ -1,0 +1,30 @@
+Identity assessment, accessed 2026-10-11 UTC.
+https://rest.uniprot.org/uniprotkb/search?query=%28gene%3AsufB%20OR%20gene%3AsufD%29%20AND%20organism_id%3A83333%20AND%20reviewed%3Atrue&format=json&size=10
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P77522/entry/pfam/PF01458/
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P77689/entry/pfam/PF01458/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01458/
+Frozen naming history: data/worklists/pfam-previous-unknown-names-2026-10-10.json.
+
+Curator-transcribed database facts, not experimental quotations:
+PF01458.24 is SUFBD_core, formerly UPF0051 and SUFBD. It contains homologous
+SufB and SufD regions; their different experimental functions are not conflated.
+UniProtKB:P77522; SUFB_ECOLI; sufB/ynhE; b1683/JW5273; 495 aa;
+sequence version 2, entry version 161; E. coli K12, NCBITaxon:83333.
+Sequence MD5: 0BC077E6469B6FFA4F275BBEC990E95E.
+SufB Pfam:PF01458; domain interval: 225-466, inclusive.
+Reference C254, Q285, W287 and C405 have the reported identities within it.
+UniProtKB:P77689; SUFD_ECOLI; sufD/ynhC; b1681/JW1671; 423 aa;
+sequence version 1, entry version 163; E. coli K12, NCBITaxon:83333.
+Sequence MD5: D96AA1288E0EDE85DA4731E1DD49E54F.
+SufD Pfam:PF01458; domain interval: 166-393, inclusive.
+Reference H360 lies within it. Both complete sequences match InterPro exactly.
+
+Yuda 2017 Table S1 identifies UT109 and YT2512 as MG1655 derivatives with
+specified isc/suf deletions. The reference K12 taxon is not an independently
+resequenced historical construct. Table S2 C254A forward/reverse-complement
+coding primers both translate to VSYIEGASAPV (reference starts 248); C405A primers
+both translate to ARNFTQADSMLI (reference starts 399). Each has only its intended
+local C-to-A mismatch. Full inserts and all construct junctions are unverified.
+The source reports sequencing its cloned inserts, which is not independent
+inspection of those sequence traces here. pGSO164-derived purified complexes
+are distinct from pBBR/pRK cellular and SufE-His pull-down preparations.

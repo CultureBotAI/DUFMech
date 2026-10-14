@@ -1,0 +1,21 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01861
+  path: curation/families/PF01861.yaml
+session:
+  id: 2026-10-11T155652Z-codex-e1688f
+  timestamp: '2026-10-11T15:56:52Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped BpsA catalytic and cellular causal graphs
+  details: Eight graphs retain sixteen observed effects and one hypothetical carrier-transfer
+    step. Versioned references and published primers reveal an acidic-residue numbering
+    discrepancy; whole-protein, domain, chimera, strain and partial-rescue scopes
+    remain distinct. Preserve frozen identity and IN_PROGRESS with open coverage gaps.

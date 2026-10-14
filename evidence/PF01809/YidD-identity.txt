@@ -1,0 +1,45 @@
+PF01809 YidD identity and construct assessment
+Assessed: 2026-10-11 UTC. Curator: Codex.
+
+Frozen identity is PF01809/YidD, EX_DUF, IPR002696. Yu 2011 identifies
+the historical family as DUF37. Its Figure 1B caption instead says DUF31;
+this discrepancy does not remap the record to the unrelated DUF31 family.
+
+Inspected reference responses:
+https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AyidD%20AND%20organism_id%3A83333&format=json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A8C8/entry/pfam/PF01809/
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=YP_588472.1&rettype=gb&retmode=text
+
+UniProt P0A8C8 is 85-aa K-12 YidD, b4557/JW3682, taxon 83333.
+PF01809 spans residues 10-76 inclusive. YP_588472.1 from MG1655,
+NC_000913.3:3884816..3885073, is an exact amino-acid sequence match:
+MAPPLSPGSRVLIALIRVYQRLISPLLGPHCRFTPTCSSYGIEALRRFGVIKGSWLTVKRVLKCHPLHPGGDDPVPPGPFDTREH
+SHA-256 of uppercase unwrapped sequence without terminal newline:
+d7057dc4c5ee6c2edf4da867fbf51316e13c4b085c146889f7c98259600d678e
+The cysteines are C31, C37 and C64 in this reference. Their conservation
+or cross-linking potential is not a residue-specific catalytic experiment.
+
+Yu 2011 uses MC4100 genomic DNA for YidD expression constructs,
+MC4100-A for expression/localization, and MC4100(DE3) for the deletion.
+The His-tag forward primer translates as MHHHHHHGSMAPPLS at its coding
+start, consistent with an N-terminal tag/linker followed by YidD.
+The GFP-H1 construct includes the first 81 coding bases, residues 1-27.
+Its reverse-primer annealing segment encodes RLISPLL, matching 21-27.
+Thus H1 contains only PF01809 residues 10-27 plus the native 1-9 flank,
+not an isolated complete PF01809 domain. Table/figure show GFP N-terminal
+to YidD; a Methods sentence says fused 3' to the first bases. Complete
+linker primers are not all listed in Table 1. Retain the reported
+GFP-YidD/H1 constructs without inventing a fully verified fusion sequence.
+
+Geng 2015 thesis Chapter 4 uses BW25113 Keio yidD::kan deletion cells.
+Its pEK746 encodes N-terminally His-tagged YidD, made from pBAD30YidD;
+the N-terminal primers agree with the reference start. The complete
+historical plasmid sequence and pBAD donor provenance are not independently
+verified. Methods and insertion Figure 6 identify Lemo21(DE3) for the
+overexpression vesicles, while the Results prose says BL21(DE3). The
+co-purification experiments explicitly use BL21(DE3) and are distinct.
+
+These bridges identify the experimental gene/member and current domain,
+not resequencing of MC4100, BW25113 or every historical plasmid. Whole-gene
+deletions, full-protein expression and partial-sequence GFP fusions do not
+demonstrate isolated-domain insertase activity. YidC is a different protein.

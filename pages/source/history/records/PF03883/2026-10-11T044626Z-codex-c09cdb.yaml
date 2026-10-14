@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF03883
+  path: curation/families/PF03883.yaml
+session:
+  id: 2026-10-11T044626Z-codex-c09cdb
+  timestamp: '2026-10-11T04:46:26Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate separate YaaA iron-pool and radical-signal graphs
+  details: Added two scoped phenotype graphs and hash-anchored primary and identity
+    evidence. Inspected primary Results, methods and Figure 10 image; Figure 9 assessed
+    from text and caption. Distinguished deficient-background effects from normal
+    cells and separated assay conditions. No direct iron-binding, transport or peroxide-scavenging
+    step is asserted. Guarded projection and retained scientific review follow.
+  sections:
+  - causal_graphs

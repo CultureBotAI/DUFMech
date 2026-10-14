@@ -1,0 +1,28 @@
+Reference: PMID:22730297; doi:10.1093/nar/gks558
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC3458531/
+Accessed: 2026-10-11 UTC
+Inspected: methods, Results including Figures 5-6 interpretation, Figures 2
+and 7 visually and their captions.
+
+Minimal excerpts:
+"being converted predominantly to the more rapidly migrating"
+"lagged behind the generation"
+"87% of the input substrate being ligated"
+
+Curator assay facts:
+Common conditions: 50 mM Tris pH 8.0, 2 mM MnCl2, 100 uM GTP, 1 uM RtcB,
+0.1 uM radiolabeled 20-mer RNA, 37 C. RNase T1 digestion precedes urea-PAGE.
+Figure 7 uses 5'-phosphorylated RNA with a 2',3'-cyclic phosphate end.
+The 3'-phosphate signal rises before the 3'-ppG-assigned band. Starting material includes
+about 10% 3'-phosphate; about 10% ligation is attributed to residual 5'-OH.
+Its no-GTP control is described as pRNAp in the caption but pRNA>p in the
+main text and appears cyclic in the image. The adopted processing edges use
+the unambiguous plus-GTP time course, not that control's disputed identity.
+Figure 2 separately uses 5'-OH RNA>p: WT plus GTP generates the ligation
+junction T1 fragment; GTP omission or H337A prevents efficient sealing.
+The panel time units differ (seconds versus minutes). Slow residual hydrolysis
+without GTP is not a universal zero. These are enzyme-excess experiments,
+not steady-state turnover, native tRNA repair or a mammalian cofactor assay.
+The RNA 3'-ppG assignment uses mobility, GTP dependence and prior intermediate
+chemistry; no independent chemical reidentification of this RNA product was
+performed here. Its specific chemical-conversion edge is retained as INFERRED.

@@ -1,0 +1,48 @@
+PF01949 causal-review coverage, 2026-10-12 UTC
+
+Primary Li2024 main text and Figures2-8 inspected. EuropePMC public
+supplementaryFiles archive successfully provided the10,564,052-byte mmc1.pdf,
+13pages. Read relevant captions/Methods/TableS1; visually inspectedS3/S4,
+S5,S6,S9,S11,S12,S13. Prior PMC bin download was HTML and publisher
+supplementURL returned403; these access outcomes are not absent evidence.
+Structure/conservation figures are not experimental catalytic intermediates.
+Full publications and images are retained only in temporary research storage;
+repository caches retain small quotations and independently authored ledgers.
+
+Identity searches included currentPfam, UniProt reviewed-family list, exact
+protein cross-references and species/locus queries, NCBI protein records,
+InterPro per-protein profile matches, and KEGG HVO_0443/HVO_0444. Reviewed
+UniProt hits are a filtered source, not a family census. Empty Halo/Gm queries
+do not mean those proteins or this family are biologically absent. Current
+Pfam boundaries for these two proteins remain unresolved; paper Methods and
+S1/S9 provide family assignment rather than invented profile coordinates.
+
+The earlier source CN113943722A was inspected at GooglePatents (description
+and Example1, published2022-01-18). It identifies the same Afu/Halo/Gm
+accessions and also OLS17807.1 (OdinLCB4) and PWI48783.1 (HeimdallB3).
+Example1 reports Afu/Halo ssDNA cleavage with a different concentration/time
+regime; figures and sequence listings need dedicated comparison before adding
+another experiment. Legal claim scope or70% identity is not experimental
+evidence that all homologs have the activity. Same inventors/group do not
+constitute independent replication. Machine-translated taxon labels are
+unreliable; accessions are retained as leads, not silently merged with the
+Loki/Thor proteins in Li2024. No patent legal-status assessment performed.
+https://patents.google.com/patent/CN113943722A/en
+
+Scoped literature queries included PF01949, DUF99, Endo_dU, later2025/2026
+nuclease work and the tested protein identifiers. They are not exhaustive.
+Imported PMID24464998, other family members, earlier patent experiments,
+independent biochemical replication and later renamed-member literature need
+further primary review. No whole-family completion is claimed.
+
+Outstanding: reconcile Figure7E H166R versus Results/S11 H166A using actual
+clone sequence; test single-residue/folding alternatives before catalytic
+assignment; independently reconstruct the H26 deletion allele, exclude
+polarity and resolve RNA-seq replicates; check full nucleotide/product chemistry,
+bound-metal status, native conditions, domain-only activity and repair partners.
+Retain Figure5 first-salt label and pH discrepancies and S5 timing conflict.
+
+Before curation, rg --no-ignore --hidden found noPF01949 match in curation,
+evidence, history or reviews/structured, excluding JSON. Ignored/hidden files
+were included in those named locations. All8296 records and earlier follow-ups
+remain in the active goal. This is a partial scientific pass, not publication.

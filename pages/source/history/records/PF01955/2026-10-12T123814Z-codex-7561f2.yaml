@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01955
+  path: curation/families/PF01955.yaml
+session:
+  id: 2026-10-12T123814Z-codex-7561f2
+  timestamp: '2026-10-12T12:38:14Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add native Rhodobacter conditional salvage and Cby bypass graphs
+  details: 'PMID19376876 main text and original Figures2-6 plus supplement TableS1/S2
+    PDF text support two new graphs and five edges: four observed partner/bypass effects
+    and one cross-figure CbiZ inference. Printed primers predict a 41-residue deletion
+    product; source endpoint, retained-length, strain-label and tetracycline-unit
+    discrepancies remain explicit. Preserve the prior fourteen graphs and thirty-eight
+    edges exactly. Two new minimal evidence ledgers retain findings. Historical clone
+    verification, supplementary images, earlier2008 and further members remain open.
+    IN_PROGRESS; native review finalization is blocked because original-checkout Git
+    metadata is unreadable even through an approved read-only retry. No REVIEW event
+    or status promotion is claimed.'

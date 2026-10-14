@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01724
+  path: curation/families/PF01724.yaml
+session:
+  id: 2026-10-11T072330Z-codex-42b484
+  timestamp: '2026-10-11T07:23:30Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Retain DUF29 identity and scoped causal-evidence gap
+  details: Inspected the Du Plessis thesis prediction sections and 3FCN structural
+    deposition, verified Q2RPE2 domain mapping, and retained an open native discussion.
+    No directed edge is supported by the inspected material; the separate TC11pol
+    experiments are excluded. Minimal evidence caches were begun at this session timestamp
+    and the overlay completed after continuation. Status remains IN_PROGRESS; family
+    coverage is partial.
+  sections:
+  - discussions

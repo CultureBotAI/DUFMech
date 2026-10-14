@@ -1,0 +1,86 @@
+Li et al. 2019; PMID31404065; doi:10.1371/journal.pgen.1008328.
+Primary source: https://pmc.ncbi.nlm.nih.gov/articles/PMC6705878/
+Inspected 2026-10-12 UTC: full Results and relevant Methods; Figures1,3,4,5,
+S2,S4,S7 visually; S1/S2 DOCX tables parsed from the valid EuropePMC ZIP.
+CC BY article, attributed here. Minimal exact excerpts, total24 words:
+"two partially complementary oligodeoxynucleotides"
+"also did not complement"
+"expression of mCherry"
+"RNA binding"
+"Growth of strain"
+"chloramphenicol resistance"
+"growth at low"
+"partially complemented"
+
+Figure1A,C and Methods: S0001 MMP0076 replaced by pac. At37C, growth rates
+are0.15+/-0.001 h^-1 parental and0.065+/-0.003 mutant; pMEV2-0076 restores
+growth. At22C, rates are0.042+/-0.002 and0.023+/-0.001. Triplicate OD600
+curves. Routine archaeal culture is pre-reduced DSMZ141 with40mM formate,
+N2/CO2 80:20 at0.1MPa. Empty-pMEV2 parental/mutant controls are described.
+RNA-seq reports no significant change in adjacent MMP0075/MMP0077, mitigating
+but not abolishing polar-effect concerns. No 22C complementation curve shown.
+
+Figure3A: tagged purified TRAM0076 shifts RNA Pentaprobes, including PP1
+and PP10. PP1 is5nM with0/25/50uM protein; PP10 is10nM with0/50/100uM.
+Methods: 20uL,25C,20min. S3 caption/Results report apparent SPR Kd4.6/6.3uM;
+S3 image was not used as independently inspected graph evidence. Binding is
+not itself proof of RNA unfolding, transcript activation or direct catalysis.
+
+Figure3C and nucleic-acid unfolding Methods: two partially complementary
+DNA oligos, FITC/BHQ1, annealed after95C5min and gradual cooling to4C;
+20pmol substrate,20uM purified His6-tagged TRAM0076,200uL,200mM Tris-Cl
+pH7.5,10mM MgCl2,room temperature,460/515nm. Relative fluorescence is
+13% annealed,54% with TRAM0076,100% heat-denatured; CspA88%,CspE97%.
+Figure5A uses DNA versions of MMP0127,1515,1697 5-primeUTR sequences,
+not RNA. TRAM0076 increases signal over annealed controls for each.
+These are direct optical assay effects consistent with duplex opening;
+they do not directly measure native RNA melting or ATP-dependent helicase
+chemistry. The stated substrate chemistry takes precedence over abstract
+RNA wording. No individual-mutant beacon results are shown in Figure4.
+
+Figure3B,4C: E. coli RL211 trpL-cat reporter, pINIII expression,1mM IPTG,
+30ug/mL chloramphenicol,37C2-3days. Figure3 caption says50ug/mL ampicillin,
+Methods100ug/mL; retain discrepancy. WT TRAM0076 improves growth over
+empty vector. Individual I33A,R35A,F39A,F42A,K62A,F63A,F65A give poorer
+growth on +Cm versus WT, while -Cm controls grow. D25A,K28A,G30A,G32A
+retain reporter activity. I33A protein abundance is reduced by the reported
+Western test; no quantitative matching of all mutant concentrations/folds
+is established. Growth is a reporter readout, not direct visualization of
+the trpL RNA hairpin or a purified-mutant unfolding assay.
+
+Figure4D,S4: in native S0001-derived deletion strain at37C, pMEV2 single
+R35A,F39A,F42A,F63A,F65A variants fail to restore WT growth kinetics;
+K62A partially restores. Compare variants to WT complementation, not to
+zero growth. I33A restores native growth despite its RL211 phenotype;
+K28A,G30A,G32A also restore. Do not assert that all eleven variants have
+the same outcome or that the two assay hosts have identical protein levels.
+
+Figure5C: pMEV4 UTR-mCherry reporter fluorescence normalized per mL*OD,
+575/610nm,triplicate early/middle/late cultures. Deletion reduces the
+MMP0127 signal modestly and1515/1697 more strongly versus parental.
+Figure5B,D: changing the1515 leader to predicted hairpin-disrupting
+UTR1515MT removes the parental fluorescence advantage; bars are not
+identical at every stage and mutant-host fluorescence can exceed parental.
+This is a genotype-by-leader reporter effect. Translation, RNA stability,
+fluorophore maturation and other cellular effects are not all separately
+resolved; a complete native transcription-antitermination chain is not
+directly measured by fluorescence alone.
+
+S2A,B: induced pIN-0076 improves BX04 delta-cspABGE growth at18C and22C
+relative to induced empty vector, with37C viability controls. Overnight
+cultures set toOD6000.9,tenfold dilutions to10^-5,LB/ampicillin,2-5days;
+Methods100ug/mL ampicillin. S2 does not specify the IPTG dose. Induction
+and protein bands are shown; no native archaeal cold mechanism follows
+automatically from this heterologous rescue.
+
+S7: middle-exponential37C cultures shifted to4C. In parental S0001,
+0127,1515,1697 UTR-mCherry fluorescence rises transiently over preshift
+values. The deletion curves have different baselines and smaller/fluctuating
+changes; they are not rigorously zero. UTR1515MT lacks the sustained
+parental increase. Do not equate a cold-shock reporter response to a direct
+TRAM-temperature sensing or RNA-transcription reaction.
+
+Figure2/Results:961 differentially expressed genes,495 up/466 down,
+biological triplicates,DESeq adjusted P<0.05. Figure6/RIP links numerous
+RNAs to tagged TRAM. These are not961 direct targets or a proven
+autoregulatory loop. Raw RNA-seq/RIP data were not reanalyzed here.

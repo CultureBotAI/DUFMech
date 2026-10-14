@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01870
+  path: curation/families/PF01870.yaml
+session:
+  id: 2026-10-11T180053Z-codex-602211
+  timestamp: '2026-10-11T18:00:53Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate Hjc junction processing, biochemical controls and substitution-specific
+    readouts.
+  details: Nine scoped graphs retain sixteen observed effects from inspected 1999,2000
+    and2019 primary methods/results and original figures. Reference sequences and
+    domain coordinates are verified; T138 lies outside the SiRe Pfam match. Distinguish
+    purified processing from extract depletion and cellular spot outgrowth, and mutation-dependent
+    labeling from direct phosphosite localization. Retain supplementary-access gaps,
+    unverified2019 primers and other family contexts; status IN_PROGRESS. No publication
+    or whole-family completion claim.

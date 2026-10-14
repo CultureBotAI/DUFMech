@@ -1,0 +1,20 @@
+PF01951 identity follow-up, inspected 2026-10-12.
+https://rest.uniprot.org/uniprotkb/Q9V105.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01951/protein/uniprot/Q9V105/
+Reviewed UniProt Q9V105: sequence version 1, 142 aa; PAB1946/PYRAB06240,
+Pyrococcus abyssi GE5/Orsay, NCBITaxon:272844. InterPro maps PF01951 4-142.
+The paper names PAB1946 and genomic cloning but does not explicitly name GE5;
+GE5 is reference-record provenance, not an independently resequenced assay clone.
+N-terminal His6 is an assay-construct addition, not part of reference coordinates.
+https://rest.uniprot.org/taxonomy/29292.json
+Verified species Pyrococcus abyssi: NCBITaxon:29292. Graphs use this species
+identifier, not the unconfirmed GE5 assay-strain assignment.
+PAB1947 is the separately encoded methyltransferase partner; its chemistry is
+not assigned to the PF01951 protein. No partner accession is fabricated.
+
+https://rest.uniprot.org/uniprotkb/O59205.json
+O59205 sequence version 1 residues: E8, H9, D12, K117, D141, I142;
+all within the previously verified PF01951 4-142 interval. Desai2014 S4
+independently supplies O59205 and the native 142-aa alignment. Its extra
+N-terminal L does not shift the authors' stated residue numbering.
+Existing identity.txt and frozen snapshot identities remain unchanged.

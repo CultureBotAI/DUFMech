@@ -1,0 +1,372 @@
+# PF01996 Af-CofE causal graph review
+
+- Review: 20261011T051610Z-pf01996-afcofe-causal-graph
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T05:15:58Z
+- Finished UTC: 2026-10-11T05:16:10Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+LC-MS supports the intact Af-CofE F420-2 product endpoint; unresolved assay details and proposed mechanistic microsteps remain explicit limits.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Historical unknown-family record selected for primary biochemical product identification and a deposited sequence-resolved construct.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01996 | data/families/PF01996.yaml | generated | PF01996 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01996 | Current projection validates and preserves the authored graphs exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01996.
+
+O28028/cofE/AF_2256 from A. fulgidus DSM 4304 maps to PF01996 at 11-220. The 2024 study's 7ULF construct matches the complete 249-residue reference with an N-terminal GA; the methods describe tag-cleaved intact protein, not an isolated Pfam interval.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01996.
+
+Figure 2 identifies F420-2 as the predominant Af-CofE product from F420-1. The GTP-containing reaction and its co-substrate are explicit. The shared FbiB/CofE methods' slash-separated salts, unspecified duration and absent stated omission control remain limitations. Binding structures and proposed activation/proton-transfer steps are not converted into directly observed reaction intermediates.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01996.
+
+Earlier F420-0 assays, alternate members including FbiB, chain termination and cellular chain-length regulation remain outside the completed scope. The 2007 abstract was available but its full XML failed with HTTP 500; its detailed kinetic claims are not adopted. Supplementary raw data and full mechanistic tests remain follow-up work.
+
+## Findings
+
+### additional-contexts: Resolve CofE assay details and extend member-specific reaction coverage
+
+minor / open / confirmed; issue key: pf01996-causal-context-coverage.
+
+Inspect supplementary or earlier primary methods to resolve the shared salt notation and assay timing; review F420-0 conversion, chain termination and other members separately. Keep proposed catalytic microsteps and whole-protein/domain distinctions explicit.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Inspect supplementary or earlier primary methods to resolve the shared salt notation and assay timing; review F420-0 conversion, chain termination and other members separately. Keep proposed catalytic microsteps and whole-protein/domain distinctions explicit.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| experiment | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10861534/fullTextXML; Biochemical Results, Figure 2 image and caption, protein purification and LC-MS methods | supports | LC-MS identifies the predominant F420-2 product in the Af-CofE reaction. The graph does not infer a universal tail length, cellular phenotype or directly observed structural catalytic sequence. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/O28028/entry/pfam/PF01996/; Accession and domain locations; paired UniProt identity facts | supports | O28028/cofE/AF_2256 from A. fulgidus DSM 4304 maps to PF01996 at 11-220. The 2024 study's 7ULF construct matches the complete 249-residue reference with an N-terminal GA; the methods describe tag-cleaved intact protein, not an isolated Pfam interval. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, graph endpoints, evidence quotations and hashes, and canonical history pass; scientific validity is assessed separately. |
+| duf-projection-pf01996 | data/families/PF01996.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Figure 2 was visually inspected. Structural models, raw mass spectra and supplementary data were not independently visually reviewed or reanalyzed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T051610Z-pf01996-afcofe-causal-graph
+title: PF01996 Af-CofE causal graph review
+started_at: '2026-10-11T05:15:58Z'
+finished_at: '2026-10-11T05:16:10Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: LC-MS supports the intact Af-CofE F420-2 product endpoint; unresolved assay
+  details and proposed mechanistic microsteps remain explicit limits.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01996.yaml
+    sha256: ce9872ab3618fbc205cd9f72971eb8199228a1df08372626d72db372ea1a529e
+    role: context
+  - path: data/families/PF01996.yaml
+    sha256: 1159c15c3542733dcda2ceeaf1429501a32c9942ca4b9ef3684685a42e313cac
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01996/bashiri-2024-cofe.txt
+    role: context
+    sha256: e7cc24ba42029d6b78c5f45344d54c7eff9fd3e62ce961f28c5ff29ce11fa703
+  - path: evidence/PF01996/O28028-identity.txt
+    role: context
+    sha256: db3a90a8d517b55bae6169e67dc9dda1c95583715b09561ee65f5aadcc4678e2
+targets:
+- target_id: PF01996
+  path: data/families/PF01996.yaml
+  label: PF01996
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01996.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 25610dca0fa80f3e8308a35126aeb3e4fbd1b3c5941cad1c90a554933c1201a8
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Historical unknown-family record selected for primary biochemical product
+    identification and a deposited sequence-resolved construct.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01996
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Earlier F420-0 assays, alternate members including FbiB, chain termination
+      and cellular chain-length regulation remain outside the completed scope. The
+      2007 abstract was available but its full XML failed with HTTP 500; its detailed
+      kinetic claims are not adopted. Supplementary raw data and full mechanistic
+      tests remain follow-up work.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection causal_graphs == overlay
+    causal_graphs
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graphs exactly.
+  target_ids:
+  - PF01996
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: experiment
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10861534/fullTextXML
+  locator: Biochemical Results, Figure 2 image and caption, protein purification and
+    LC-MS methods
+  accessed_at: '2026-10-11T05:16:10Z'
+  support: supports
+  snapshot_sha256: e7cc24ba42029d6b78c5f45344d54c7eff9fd3e62ce961f28c5ff29ce11fa703
+  summary: LC-MS identifies the predominant F420-2 product in the Af-CofE reaction.
+    The graph does not infer a universal tail length, cellular phenotype or directly
+    observed structural catalytic sequence.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O28028/entry/pfam/PF01996/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T05:16:10Z'
+  support: supports
+  snapshot_sha256: db3a90a8d517b55bae6169e67dc9dda1c95583715b09561ee65f5aadcc4678e2
+  summary: O28028/cofE/AF_2256 from A. fulgidus DSM 4304 maps to PF01996 at 11-220.
+    The 2024 study's 7ULF construct matches the complete 249-residue reference with
+    an N-terminal GA; the methods describe tag-cleaved intact protein, not an isolated
+    Pfam interval.
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T05:16:10Z'
+  support: supports
+  summary: Closed schema, graph endpoints, evidence quotations and hashes, and canonical
+    history pass; scientific validity is assessed separately.
+- evidence_id: duf-projection-pf01996
+  kind: record_content
+  reference: data/families/PF01996.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T05:16:10Z'
+  support: context_only
+  snapshot_sha256: 1159c15c3542733dcda2ceeaf1429501a32c9942ca4b9ef3684685a42e313cac
+  quote: "id: Pfam:PF01996\npfam_id: PF01996\nname: F420-0:Gamma-glutamyl ligase\n\
+    short_name: F420_ligase\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01996\n\
+    counters:\n  proteins: 5328\n  matches: 5452\n  proteomes: 4806\n  taxa: 6852\n\
+    \  structures: 6\n  alphafold_models: 3433\n  domain_architectures: 14\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002847\ndescription: F420-0:Gamma-glutamyl ligase ([ec:6.3.2.-])\
+    \ is an enzyme involved in F420 biosynthesis pathway.\n  It catalyses the GTP-dependent\
+    \ successive addition of multiple gamma-linked L-glutamates to the L-lactyl\n\
+    \  phosphodiester of 7,8-didemethyl-8-hydroxy-5-deazariboflavin (F420-0). This\
+    \ reaction produces polyglutamated\n  F420 derivatives. GTP + F420-0 + n L-glutamate\
+    \ -> GDP + phosphate + F420-n\ncuration_history: history/records/PF01996\ncausal_graphs:\n\
+    - graph_id: afcofe-f420-1-glutamylation\n  title: Af-CofE-dependent F420-2 formation\n\
+    \  scope: Purified intact, tag-cleaved CofE from Archaeoglobus fulgidus DSM 4304,\
+    \ recombinantly expressed\n    in E. coli.\n  context: 50 uM F420-1, 2 mM L-glutamate,\
+    \ 2 mM GTP, 20 mM Tris-HCl pH 8.5 at 37 C; shared FbiB/CofE methods\n    list\
+    \ 50 mM KCl/NaCl and 2 mM MgCl2/MnCl2.\n  family_mapping: O28028, cofE/AF_2256,\
+    \ sequence version 1, 249 residues; PF01996 spans 11-220. The study's\n    7ULF\
+    \ construct maps to the complete reference with an additional N-terminal GA.\n\
+    \  scope_status: MECHANISTIC\n  taxon: NCBITaxon:224325\n  limitations: The shared\
+    \ assay methods do not separately resolve the slash-separated salts, incubation\n\
+    \    duration or enzyme-omission control here. F420-2 is predominant, not an exclusive\
+    \ endpoint. No isolated-domain\n    sufficiency, cellular role, directly observed\
+    \ acyl intermediate or universal processivity is claimed.\n  nodes:\n  - node_id:\
+    \ afcofe-glutamylation-system\n    label: Intact Af-CofE with F420-1, L-glutamate,\
+    \ GTP and assay salts\n    node_type: STATE\n    grounding:\n    - UniProtKB:O28028\n\
+    \  - node_id: f420-2-formation\n    label: F420-2 formation by addition of L-glutamate\n\
+    \    node_type: PROCESS\n  edges:\n  - edge_id: afcofe-enables-f420-2-formation\n\
+    \    subject: afcofe-glutamylation-system\n    predicate: enables\n    object:\
+    \ f420-2-formation\n    mechanism: The purified intact enzyme supports addition\
+    \ of a glutamate to F420-1 in the GTP-containing\n      reaction, yielding a predominant\
+    \ product identified as F420-2 by LC-MS.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:38346985\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10861534/fullTextXML\n\
+    \      snippet: F420-2 (the predominant product)\n      explanation: Figure 2\
+    \ image and biochemical methods support the product endpoint; structural binding\n\
+    \        and proposed catalytic microsteps are not substituted for the assay.\n\
+    \      cache_path: evidence/PF01996/bashiri-2024-cofe.txt\n      cache_sha256:\
+    \ e7cc24ba42029d6b78c5f45344d54c7eff9fd3e62ce961f28c5ff29ce11fa703\n    - reference:\
+    \ https://www.ebi.ac.uk/interpro/api/protein/uniprot/O28028/entry/pfam/PF01996/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O28028/entry/pfam/PF01996/\n\
+    \      snippet: 'entry accession: PF01996'\n      explanation: UniProt, InterPro\
+    \ and the study's deposited construct resolve the intact protein, strain\n   \
+    \     and domain interval. The interval is not an isolated-domain assay.\n   \
+    \   cache_path: evidence/PF01996/O28028-identity.txt\n      cache_sha256: db3a90a8d517b55bae6169e67dc9dda1c95583715b09561ee65f5aadcc4678e2\n\
+    curation_events:\n- timestamp: '2026-10-11T05:13:11Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Add scoped Af-CofE glutamylation graph\n\
+    \  history_record: history/records/PF01996/2026-10-11T051311Z-codex-ddcceb.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: O28028/cofE/AF_2256 from A. fulgidus DSM 4304 maps to PF01996 at 11-220.
+    The 2024 study's 7ULF construct matches the complete 249-residue reference with
+    an N-terminal GA; the methods describe tag-cleaved intact protein, not an isolated
+    Pfam interval.
+  target_ids:
+  - PF01996
+  evidence_ids:
+  - identity
+  - experiment
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Figure 2 identifies F420-2 as the predominant Af-CofE product from F420-1.
+    The GTP-containing reaction and its co-substrate are explicit. The shared FbiB/CofE
+    methods' slash-separated salts, unspecified duration and absent stated omission
+    control remain limitations. Binding structures and proposed activation/proton-transfer
+    steps are not converted into directly observed reaction intermediates.
+  target_ids:
+  - PF01996
+  evidence_ids:
+  - experiment
+  - native
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Earlier F420-0 assays, alternate members including FbiB, chain termination
+    and cellular chain-length regulation remain outside the completed scope. The 2007
+    abstract was available but its full XML failed with HTTP 500; its detailed kinetic
+    claims are not adopted. Supplementary raw data and full mechanistic tests remain
+    follow-up work.
+  target_ids:
+  - PF01996
+  evidence_ids:
+  - experiment
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01996-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve CofE assay details and extend member-specific reaction coverage
+  description: Inspect supplementary or earlier primary methods to resolve the shared
+    salt notation and assay timing; review F420-0 conversion, chain termination and
+    other members separately. Keep proposed catalytic microsteps and whole-protein/domain
+    distinctions explicit.
+  target_ids:
+  - PF01996
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - experiment
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01996.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Inspect supplementary or earlier primary methods to resolve the shared
+    salt notation and assay timing; review F420-0 conversion, chain termination and
+    other members separately. Keep proposed catalytic microsteps and whole-protein/domain
+    distinctions explicit.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01996
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Figure 2 was visually inspected. Structural models, raw mass spectra and supplementary
+  data were not independently visually reviewed or reanalyzed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

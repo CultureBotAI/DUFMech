@@ -1,0 +1,20 @@
+Retrieved 2026-10-11. Identity facts, not experimental proof.
+https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ApdxT%20AND%20organism_id%3A224308%20AND%20reviewed%3Atrue&format=json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P37528/entry/pfam/PF01174/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01174/
+
+P37528/PDXT_BACSU is the 196-aa Bacillus subtilis strain-168 reference,
+sequence version 1, entry version 158. UniProt and InterPro sequences match
+exactly; MD5 c26e28a76c39a7911775f8ce619ecc0f. Names pdxT and yaaE refer to
+this protein; YaaD/PdxS is the separate synthase partner, not PF01174.
+P37528 Pfam:PF01174 interval: 6-188, inclusive.
+Current SNO integrates with IPR002161; the frozen previous-name snapshot
+retains UPF0030. Imported description is preserved despite later experiments.
+Raschle 2005 cloned strain-168 genomic yaaE and reports construct sequencing
+and N-terminal sequencing of purified protein. The forward primer encodes
+MLTIGVL; the stop-containing reverse primer matches the EYKQKALV terminus.
+Untagged YaaE is distinguished from the C-terminal His6 version used for
+pull-out assays. The reported peptide PMFGTCAGLIILAK matches residues 74-87,
+including C79 inside PF01174. Complete historical clones are not independently
+resequenced. Belitsky 2004 uses strain SMY and different His6 preparations;
+current strain-168 mapping is not proof of exact SMY clone identity.

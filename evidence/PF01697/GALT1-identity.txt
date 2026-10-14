@@ -1,0 +1,41 @@
+PF01697 / GALT-1 identity assessment, inspected 2026-10-11 by Codex
+
+Frozen owner: data/families/PF01697.yaml, October 10 InterPro/Pfam snapshot.
+PF01697 = Glyco_transf_92, Glycosyltransferase family 92; former DUF23;
+InterPro IPR008166. EX_DUF naming does not prove every member's function.
+Imported identity and counts are not changed by this assessment.
+
+https://rest.uniprot.org/uniprotkb/O16374.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/O16374/entry/pfam/PF01697/
+Current O16374 / GALT1_CAEEL, gene galt-1 / M03F8.4, Caenorhabditis elegans,
+NCBITaxon:6239, WormBase WBGene00019763. UniProt entry version 121,
+sequence version 4, sequence last updated 2012-01-25. The 425-aa UniProt
+and InterPro sequences match exactly; MD5 E18CC9F9B7D8DACA890E11B20D5A380B.
+PF01697 spans residues 189-394 inclusive. Predicted membrane segment 9-29
+and putative N-glycosylation positions N109/N152 are outside that interval.
+The D289-F290-D291 motif is within it, but its catalytic role was not tested
+by the retained GALT-1 substitution experiments: there were no such mutants.
+Full-length protein, crude expression extracts and whole-gene insertions
+must not be represented as experiments on an isolated PF01697 domain.
+
+Historical protein records, retrieved through NCBI Eutils and parsed with
+Bio.SeqIO: NP_504545.1 is a 274-aa superseded model; NP_504545.2 is 425 aa
+and exactly matches current O16374. The replacement date is 2008-06-27,
+before Titz 2009, which names unversioned NP_504545 and clones full coding
+cDNA from Bristol N2. Its N109/N152/D289/D291 numbering fits the long model.
+This supports association with the long reference, not retrospective proof
+that every historical expression clone was sequence-identical. The 2009
+supplemental primer table and complete historical clone sequence remain
+uninspected. RefSeq transcript NM_072144.8 is a current cross-reference.
+
+Primary studies: PMID:19858195 / doi:10.1074/jbc.M109.058354 and
+PMID:20062796 / doi:10.1371/journal.ppat.1000717. The latter identifies
+op497 as a Mos1 insertion in exon 2 of M03F8.4, not a targeted DUF deletion.
+Its pmk-1(km25) background differs from the 2009 unc-119(ed3) rescue assay.
+No exact truncated mutant protein or complete null status is established.
+
+Other-family leads, not adopted edge evidence: pigeon work PMID:19959475
+and Populus GalS1 PMID:36849618 / doi:10.1038/s41477-023-01358-4. Only the
+latter abstract was inspected; its plant galactan activity and arabinose
+capping require their own constructs, domain mapping and primary-method
+review. Do not transfer nematode core-fucose specificity to all GT92.

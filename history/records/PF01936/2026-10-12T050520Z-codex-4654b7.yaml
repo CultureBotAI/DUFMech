@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01936
+  path: data/families/PF01936.yaml
+session:
+  id: 2026-10-12T050520Z-codex-4654b7
+  timestamp: '2026-10-12T05:05:20Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of mapped MARF1 causal contexts for PF01936.
+  details: Reviewed the effective generated record,paired primary human/mouse assays,current
+    Pfam mappings,local mouse residue reconciliation,evidence hashes and context boundaries.
+    Saved20261012T050509Z-pf01936-marf1-domain-mapping-and-separated-rna-phenotypes
+    with semantic digest9903ec448d54288469906df062d9a72240df580dc263d37e9b4dc4ddd796c953.
+    Eight graphs/22 OBSERVED effects remain scoped; two OPEN discussions and the context-coverage
+    finding retain nonmammalian/native-target/later-study work. Same-agent partial
+    review,NEEDS_FOLLOWUP,IN_PROGRESS; no independent endorsement or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T050509Z-pf01936-marf1-domain-mapping-and-separated-rna-phenotypes/review.yaml

@@ -1,0 +1,33 @@
+PMID:20705647; DOI:10.1093/nar/gkq668
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3001054/
+https://research.cbc.osu.edu/gopalan.5/wp-content/uploads/Publications/RNaseP/Chen_NAR_2010_SI.zip
+Inspected 2026-10-11: main Methods/Results/Table1, original Figure7;
+24-page supplement Methods/TablesS1-S4 and FiguresS4-S6, with original
+primer table and kinetic-control plots visually checked.
+Minimal verbatim quotation: "Single-turnover kinetic studies"
+
+Curator evidence summary, not additional quotations:
+Mth RPR titration0.3-20 uM, ~2 nM internally radiolabeled E.coli pre-tRNATyr,
+55 C; denaturing PAGE/phosphorimaging. Proteins supplied at twice RNA molarity.
+At nominal pH5.8, optimized RPR-alone buffer2 M NH4/500 mM Mg gives
+KM(STO)21.3 +/-2.6 uM and maximum kobs0.13 +/-0.01/min. RPR+RPP21/RPP29
+at0.8 M NH4/120 mM Mg gives1.4 +/-0.2 uM and0.13 +/-0.01/min. These are
+joint protein/buffer protocols, not a protein-only controlled affinity assay.
+SupplementS4 dilution controls support rapid substrate escape relative to
+cleavage; fitted KM(STO) is still not an independently measured protein Kd.
+SupplementS5 shows incomplete (~40%) amplitude for the two-protein reaction.
+
+At3 uM RPR,30 mM Mg/0.8 M NH4, adding RPP21/RPP29 to RPR+POP5/RPP30
+changes the reported kobs0.016 +/-0.0004 to5.5 +/-0.18/min. Four-protein
+measurements were actually atpH5.4 then multiplied by2.5 forpH5.8 comparison.
+S6 supports near-unit log-rate/pH dependence but uses20 rather than30 mM Mg;
+its drawn fitted slope is1.1. Retain this normalization and transfer limit.
+RNA alone and RNA+RPP21/RPP29 at30 mM Mg are not reliably quantifiable.
+
+The enzymes contain catalytic RNA; no purified Rpp29-alone nuclease result.
+Supplement p4/TableS2 confirms MTH11 and MJ0464, with tag-free cloning design.
+Mth printed reverse-primer conflict is retained in rpp29-identity.txt, not
+silently repaired. The experiment remains scoped to the published preparation.
+Raw main HTML SHA256:0caf96a688a5e228ea8fbb83760800112f10973f8ab98f38c05d6657f315e8b6
+Author ZIP SHA256:02ee3a0f14009b3278ad28388de70b8d71ac2ecedc7427f11f2a6a1ff77bb1db
+ZIP integrity passed; sole member Chen_et_al_080210_Rev_Supp.pdf.

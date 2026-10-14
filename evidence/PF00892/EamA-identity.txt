@@ -1,0 +1,18 @@
+Retrieved: 2026-10-11
+UniProt query: (gene_exact:eamA OR gene_exact:emrE) AND organism_id:83333 AND reviewed:true
+URL: https://rest.uniprot.org/uniprotkb/search
+Domain URL: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P31125/entry/pfam/PF00892/
+
+Accession: UniProtKB:P31125 (EAMA_ECOLI); gene eamA, alias ydeD.
+Locus identifiers: b1533; JW5250.
+Reference taxon: NCBITaxon:83333, Escherichia coli K-12.
+Length: 299; sequence version: 2; entry version: 153.
+Sequence MD5: 79b628347d36b8533213c5a280fc5762.
+UniProt and InterPro reference sequences agree exactly.
+P31125 Pfam:PF00892 intervals: 7-130 and 143-286, inclusive
+NCBI protein: AAC74606.2; RefSeq NP_416050.4.
+
+This gene/locus mapping connects the named JW5250 deletion to the EamA
+reference; it is not independent sequencing of the experimental clone.
+Both repeats belong to the intact reference protein. No domain deletion
+or isolated-repeat assay is supplied by the adopted 2010 growth experiment.

@@ -4,7 +4,7 @@ name: Mechanosensitive ion channel, beta-domain
 short_name: MS_channel_2nd
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00924
 counters:
   proteins: 69957
@@ -27,3 +27,263 @@ description: This entry includes small conductance mechanosensitive channels (Ms
   of a five-stranded antiparallel beta-sheet (middle/second) domain and a C-terminal alpha/beta-domain
   [[cite:PUB00101036],[cite:PUB00062568],[cite:PUB00101037],[cite:PUB00064132]]. This is the beta domain
   which adopts a Sm-like barrel structure.
+curation_history: history/records/PF00924
+discussions:
+- discussion_id: mscs-state-chemistry-and-family-coverage
+  prompt: Resolve MscS interdomain chemistry and broaden member-specific causal coverage.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Channel-current perturbations establish functional coupling but do not directly demonstrate
+    the proposed salt bridge, specific disulfide geometry or cage-motion pathway. The two studies use
+    different state readouts and assay conditions.
+  evidence:
+  - reference: PMID:20978126
+    supports: PARTIAL
+    evidence_source: full_text
+    explanation: Figures 4/6 and Discussion support adaptation and reversible DTT responses while leaving
+      desensitization-versus-inactivation and structural chemistry unresolved.
+  - reference: PMID:24778428
+    supports: PARTIAL
+    evidence_source: selected_full_text
+    explanation: Figure 4D/E, electrophysiology Methods and G168D Results support crowding-conditioned
+      inactivation. Structural simulations, supplements and other gating contexts were not independently
+      curated.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Obtain complete clone sequences, per-panel host assignments, cited preparation protocols and
+    independent bond/state measurements. The 2018 N117C/N167C lead is a different double mutant, not N117C/G168C.
+    Other homologs and osmotic-survival phenotypes need separate evidence and domain mapping. Partial
+    same-agent review does not promote this IN_PROGRESS entry to REVIEWED.
+causal_graphs:
+- graph_id: mscs-interface-pressure-adaptation
+  title: G168D impairs MscS current adaptation and N117K restores it in the double mutant
+  scope: Full-length E. coli MscS variants in inside-out membrane patches from MJF465 lacking mscK, mscS
+    and mscL; adopted endpoint is current decline during sustained pressure, not an isolated beta-domain
+    activity.
+  context: pTRCMscS variants; bath 400 mM sucrose, 200 mM KCl, 90 mM MgCl2, 4 mM CaCl2, 5 mM HEPES at
+    pH 7.2. Pipette solution omits sucrose; pipette voltage is +15 mV. Pressure steps are separated by
+    at least 3 min. Figure 4 displays three pressure responses from the same patch per genotype, not three
+    independent replicates.
+  family_mapping: UniProtKB:P0C0S1, mscS/yggB/b2924/JW2891, is a 286-residue K-12 reference, sequence
+    version 1. Exact UniProt/InterPro agreement places PF00924 at 114-180, including N117 and G168. The
+    paper's structural beta domain is 128-181 and places N117 in TM3b. HMM and structural boundaries must
+    not be conflated; complete experimental clone junctions remain unverified.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:83333
+  limitations: The 2011 protocol does not distinguish desensitization from inactivation. No direct salt-bridge
+    formation or interdomain motion is measured; cartoons are interpretations. Pressure levels differ
+    among traces and no exact common-pressure rate is claimed. Temperature, patch-specific induction and
+    independent replication are not established by the adopted panels.
+  nodes:
+  - node_id: mscs-g168d-substitution
+    label: G168D replacing WT MscS in pressure-clamp assays
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0C0S1
+  - node_id: mscs-n117k-added-to-g168d
+    label: N117K added to the G168D full-length channel
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0C0S1
+  - node_id: sustained-pressure-current-adaptation
+    label: Decline of MscS current during sustained pressure
+    node_type: PROCESS
+  edges:
+  - edge_id: g168d-decreases-current-adaptation
+    subject: mscs-g168d-substitution
+    predicate: decreases
+    object: sustained-pressure-current-adaptation
+    mechanism: G168D traces retain activity during maintained pressure where WT traces decline. The edge
+      encodes the directly observed channel-current behavior without assigning a unique hidden gating
+      state or atomic explanation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20978126
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3013047/
+      snippet: no visible adaptation
+      explanation: Figure 4 WT and G168D recordings and the beta-domain Results show the loss of visible
+        decline. Discussion explicitly limits separation of desensitization and inactivation.
+      cache_path: evidence/PF00924/koprowski-2011-mscS.txt
+      cache_sha256: 15a5d51b3206a4adcec6c235105c55cd22b6d8b108e7dd06e0849578ccdea4f8
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0C0S1/entry/pfam/PF00924/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0C0S1/entry/pfam/PF00924/
+      snippet: 'P0C0S1 Pfam:PF00924 interval: 114-180, inclusive'
+      explanation: Maps both altered reference residues within the profile interval while preserving the
+        distinct structural TM3b/beta assignments.
+      cache_path: evidence/PF00924/MscS-identity.txt
+      cache_sha256: 1d27dac72e322e4c458dcf489defe30febc2613c2e2ebd1e4dd5d9c56aa14d0e
+  - edge_id: n117k-in-g168d-restores-current-adaptation
+    subject: mscs-n117k-added-to-g168d
+    predicate: increases
+    object: sustained-pressure-current-adaptation
+    mechanism: The N117K/G168D double mutant regains WT-like current decline compared with G168D. This
+      context-specific restoration is not an activating effect of N117K alone or direct proof of a compensating
+      salt bridge.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20978126
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3013047/
+      snippet: restored the wild type phenotype
+      explanation: Figure 4 compares the double mutant with both singles and WT. The double-mutant electrical
+        phenotype is adopted; its structural salt-bridge cartoon is not labeled observed.
+      cache_path: evidence/PF00924/koprowski-2011-mscS.txt
+      cache_sha256: 15a5d51b3206a4adcec6c235105c55cd22b6d8b108e7dd06e0849578ccdea4f8
+- graph_id: mscs-double-cysteine-redox-response
+  title: DTT reversibly restores pressure-evoked N117C/G168C MscS activity
+  scope: Full-length N117C/G168C MscS in MJF429, which lacks mscK and mscS but retains MscL. The endpoint
+    is detectable MscS channel activity, not a directly measured disulfide reaction.
+  context: Figure 6B inside-out patches with the 2011 pH 7.2 bath and +15 mV pipette protocol. Control,
+    2.5 mM DTT and washout are compared at the illustrated pressure steps; MscL openings remain a pressure-response
+    control. Single-cysteine channels are active in Figure 6A, but its caption does not assign their individual
+    patches to a strain.
+  family_mapping: P0C0S1 reference N117 and G168 both lie in PF00924 residues 114-180. N117 belongs structurally
+    to TM3b and G168 to the beta domain. Native full-length channel mutations, not a truncated-domain
+    reconstitution, underlie these comparisons.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:83333
+  limitations: Reversible reducing-agent dependence supports a redox-sensitive constraint but does not
+    itself measure an S-S bond or distinguish closed from inactivated states. Complete construct sequence,
+    temperature, independent replicate counts and folding controls are unresolved. No universal redox
+    regulation of WT MscS is inferred.
+  nodes:
+  - node_id: dtt-in-double-cysteine-assay
+    label: Addition of 2.5 mM DTT to N117C/G168C pressure assay
+    node_type: PERTURBATION
+  - node_id: dtt-washout-double-cysteine
+    label: DTT washout after the reducing condition
+    node_type: PERTURBATION
+  - node_id: double-cysteine-channel-activity
+    label: Pressure-evoked N117C/G168C MscS opening activity
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:P0C0S1
+  edges:
+  - edge_id: dtt-increases-double-cysteine-activity
+    subject: dtt-in-double-cysteine-assay
+    predicate: increases
+    object: double-cysteine-channel-activity
+    mechanism: DTT restores detected MscS openings in the double-mutant preparation where nonreducing
+      control pressures above the MscL threshold fail to open detectable MscS channels. The measured electrical
+      response is retained without a direct bond-cleavage arrow.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20978126
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3013047/
+      snippet: unless DTT
+      explanation: Figure 6B control and DTT traces show the reversible appearance of MscS activity; MscL
+        is retained in the MJF429 background.
+      cache_path: evidence/PF00924/koprowski-2011-mscS.txt
+      cache_sha256: 15a5d51b3206a4adcec6c235105c55cd22b6d8b108e7dd06e0849578ccdea4f8
+  - edge_id: dtt-washout-decreases-double-cysteine-activity
+    subject: dtt-washout-double-cysteine
+    predicate: decreases
+    object: double-cysteine-channel-activity
+    mechanism: Removing DTT after the reducing condition eliminates detected MscS activity while MscL
+      openings persist. This reversibility is part of the observed assay, not proof of one uniquely identified
+      nonconducting conformation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20978126
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3013047/
+      snippet: Washing out DTT
+      explanation: Figure 6B washout trace and caption establish loss of MscS activity after DTT removal.
+        The accompanying S-S cartoon remains interpretive.
+      cache_path: evidence/PF00924/koprowski-2011-mscS.txt
+      cache_sha256: 15a5d51b3206a4adcec6c235105c55cd22b6d8b108e7dd06e0849578ccdea4f8
+- graph_id: mscs-crowding-conditioned-inactivation
+  title: Cytoplasmic Ficoll promotes tension-conditioned WT MscS inactivation more than G168D
+  scope: Figure 4D/E of the 2014 study, using full-length WT and G168D MscS and pulse-step-pulse availability
+    measurements. This is distinct from the 2011 sustained-pressure adaptation protocol.
+  context: pB10b expression; Methods name MJF465 and PB113, with retained MscL in PB113 used for mutant
+    midpoint calibration, but do not assign each Figure 4 patch to one strain. Inside-out bath has 400
+    mM sucrose, 200 mM KCl, 50 mM MgCl2, 5 mM CaCl2, 5 mM HEPES at pH 7.4; pipette potential 30 mV. Cytoplasmic
+    Ficoll 400 is 5% w/v, n=3 patches per genotype, with a 10-second conditioning tension between test
+    pulses.
+  family_mapping: G168D changes the reference glycine within P0C0S1 PF00924 residues 114-180. The intact
+    channel, membrane and controlled mechanical perturbation are the tested system, not isolated beta-domain
+    sufficiency. Full pB10b clone sequence is not independently reconstructed.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:83333
+  limitations: Inactivation is operationally measured through the decreased channel population available
+    at the second test pulse. Tension is required; Ficoll alone is not assigned a sufficient cause. Pressure-to-tension
+    conversion uses reference midpoints and a constant-curvature assumption. Cage compression, salt bridges
+    and specific atomic trajectories are not directly observed. Panels A/B use 10% Ficoll and must not
+    be substituted for the D/E conditions.
+  nodes:
+  - node_id: wt-ficoll-conditioning-system
+    label: WT MscS with 5% Ficoll and conditioning tension
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0C0S1
+  - node_id: g168d-ficoll-conditioning-replacement
+    label: G168D replacing WT in the Ficoll-plus-tension assay
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0C0S1
+  - node_id: conditioned-inactivated-channel-fraction
+    label: Channel fraction unavailable at the second test pulse
+    node_type: STATE
+  edges:
+  - edge_id: ficoll-with-tension-increases-wt-inactivation
+    subject: wt-ficoll-conditioning-system
+    predicate: increases
+    object: conditioned-inactivated-channel-fraction
+    mechanism: Adding cytoplasmic 5% Ficoll increases the unavailable WT fraction under the conditioning-tension
+      protocol relative to no-Ficoll WT. Crowder and mechanical history form a joint context; the initially
+      activatable population remains available before conditioning.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24778428
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4003192/
+      snippet: greatly increased
+      explanation: Figure 4D and its caption quantify increased WT inactivation at 5% Ficoll. No complete-inactivation
+        claim at every tension is adopted, and the separate 10% panel-A example is not substituted for
+        this comparison.
+      cache_path: evidence/PF00924/rowe-2014-mscS.txt
+      cache_sha256: 40091e7b284047a5ca5f2346ee832ced69f4567144babe2897e4f6d3ed24070b
+  - edge_id: g168d-decreases-crowding-conditioned-inactivation
+    subject: g168d-ficoll-conditioning-replacement
+    predicate: decreases
+    object: conditioned-inactivated-channel-fraction
+    mechanism: Under the 5% Ficoll and conditioning-tension protocol, G168D retains a larger available
+      channel fraction than WT. This is relative resistance to inactivation, not an absolute inability
+      to inactivate or proof of cage compression as the sole cause.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24778428
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4003192/
+      snippet: remained largely unchanged
+      explanation: Figure 4D/E and the associated Results support the mutant-versus-WT comparison at 5%
+        Ficoll. No 2011 voltage, buffer or unresolved adaptation-state label is imported into this later
+        experiment.
+      cache_path: evidence/PF00924/rowe-2014-mscS.txt
+      cache_sha256: 40091e7b284047a5ca5f2346ee832ced69f4567144babe2897e4f6d3ed24070b
+curation_events:
+- timestamp: '2026-10-11T08:03:27Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate MscS interface, redox-response and crowding-context graphs
+  history_record: history/records/PF00924/2026-10-11T080327Z-codex-781890.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T08:16:08Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of MscS channel-current and crowding effects
+  history_record: history/records/PF00924/2026-10-11T081608Z-codex-01c1b0.yaml
+  event_index: 0
+  llm_assisted: true

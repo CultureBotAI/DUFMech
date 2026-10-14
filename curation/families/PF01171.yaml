@@ -1,0 +1,216 @@
+pfam_id: PF01171
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01171
+causal_graphs:
+  - graph_id: ecoli-tils-lysine-and-ethanolamine-products
+    title: TilS produces lysine- and ethanolamine-modified tRNA preparations
+    scope: Purified C-terminal His6 E. coli K12 TilS and transcribed E. coli tRNAIle2 in Salowe 2009 Table 4 reactions B/H, compared with no-amine reaction A. Intact-RNA mass and gel migration support modification products, not an independently localized atomic pathway.
+    context: 75 ul, 50 mM TAPS pH 8.5, 3 mM MgCl2, 0.5 mM TCEP, 0.1 mg/ml BSA, 20 uM transcript, 100 uM ATP and 500 nM TilS; 37 C for 4 h. Use 0.1 mM lysine in B or 20 mM ethanolamine in H. Preparations are frozen without further workup; product gels, intact-RNA MS and residual-substrate radiolysine assays are distinct readouts.
+    family_mapping: P52097/TILS_ECOLI, tilS/mesJ/yaeN/b0188, 432 aa, sequence version 1. UniProt, InterPro and cited Z50870.1/CAA90751.1 match exactly; PF01171 spans 10-197. Published primers match the coding start and terminal WQKTLS, excluding the native stop for a reported C-terminal His6 fusion. Complete vector scar and experimental clone are not independently reconstructed.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:83333
+    limitations: Whole TilS also contains C-terminal tRNA-recognition domains. Neither isolated PP-loop sufficiency nor a directly tracked adenylation/nucleophilic-attack sequence follows from these data. Raw spectra, exact modification-site localization, replicate counts and uncertainty are unverified here. N-alpha-methyllysine and ornithine samples gave lysine-like products attributed to contamination, not confirmed alternative incorporation.
+    nodes:
+      - node_id: tils-atp-transcript-lysine
+        label: Joint purified TilS, ATP, transcript and 0.1 mM lysine reaction
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P52097
+      - node_id: lysine-modified-trna-preparation
+        label: Reaction B tRNA product consistent with lysine incorporation
+        node_type: STATE
+      - node_id: tils-atp-transcript-ethanolamine
+        label: Joint purified TilS, ATP, transcript and 20 mM ethanolamine reaction
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P52097
+      - node_id: ethanolamine-modified-trna-preparation
+        label: Reaction H tRNA product consistent with ethanolamine incorporation
+        node_type: STATE
+    edges:
+      - edge_id: tils-lysine-reaction-produces-modified-trna
+        subject: tils-atp-transcript-lysine
+        predicate: produces
+        object: lysine-modified-trna-preparation
+        mechanism: Reaction B shifts the tRNA gel band and gives an intact mass consistent with the expected lysine-modified product. This supports net modification, not independent proof of its exact bond geometry or site from mass alone.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:19233850
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2665086/
+            snippet: modified tRNA products
+            explanation: Table 4 B versus A, visually inspected Figure 2 B lanes and preparative Methods; the mass discrepancy is within the paper's reported error.
+            cache_path: evidence/PF01171/salowe-2009-tils.txt
+            cache_sha256: 544b2a00f2d9713060c325b735c83fc1b2beaf0313fdc01c6c21bcbe8822966d
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P52097/entry/pfam/PF01171/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P52097/entry/pfam/PF01171/
+            snippet: 'P52097 Pfam:PF01171 interval: 10-197, inclusive.'
+            explanation: Exact reference and source-accession mapping; other TilS domains remain part of the experimental protein.
+            cache_path: evidence/PF01171/TilS-identity.txt
+            cache_sha256: b8259ad7ec4469d61461603e33b6d55118e11555a3295f8262cefe2f66975ab0
+      - edge_id: tils-ethanolamine-reaction-produces-modified-trna
+        subject: tils-atp-transcript-ethanolamine
+        predicate: produces
+        object: ethanolamine-modified-trna-preparation
+        mechanism: Reaction H yields a shifted tRNA species and an intact mass consistent with ethanolamine addition. The 20 mM alternative substrate condition is not evidence that this product normally occurs in cells or that its catalytic efficiency equals lysine's.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:19233850
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2665086/
+            snippet: modified tRNA products
+            explanation: Table 4 H versus A and Figure 2 H lane, distinct from the contaminated K/L reactions.
+            cache_path: evidence/PF01171/salowe-2009-tils.txt
+            cache_sha256: 544b2a00f2d9713060c325b735c83fc1b2beaf0313fdc01c6c21bcbe8822966d
+  - graph_id: ecoli-tils-preparations-s100-aminoacylation
+    title: TilS-modified preparations change aminoacylation in E. coli extract
+    scope: Reaction B or H preparations versus no-amine A in the separate E. coli S100 IleRS/MetRS activity columns of Table 5. S100 is a partially purified mixed extract from BL21(DE3), not either isolated synthetase.
+    context: Dilute frozen modification mixtures to 100 nM tRNA in 30 ul of 50 mM HEPES pH 7.3, 10 mM Mg(OAc)2, 100 mM KCl, 0.5 mM TCEP, 0.1 mg/ml BSA, 100 uM ATP, 100 nM tritiated isoleucine or methionine, and 40 ug/ml S100 protein. Two hours at room temperature, followed by acidic SPA capture.
+    family_mapping: The modifying enzyme is intact P52097-associated TilS, PF01171 10-197 plus its C-terminal domains. S100 reporter enzymes and transcript are separate components; the graph does not assign their catalysis to PF01171.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:562
+    limitations: Preparations were not repurified, so residual amine, ATP and TilS may carry over. The causal comparison is between reaction preparations, not purified RNAs proven to differ at only one atom. Table 5 columns use different normalization references; values are not absolute cross-enzyme rates. No replicate/error estimates or universal zero-activity threshold are supplied, and no in-vivo AUA decoding is measured here.
+    nodes:
+      - node_id: use-lysine-modified-preparation
+        label: Use lysine reaction B preparation rather than no-amine A
+        node_type: PERTURBATION
+      - node_id: use-ethanolamine-modified-preparation
+        label: Use ethanolamine reaction H preparation rather than no-amine A
+        node_type: PERTURBATION
+      - node_id: s100-isoleucine-incorporation
+        label: Isoleucine incorporation into tRNA in the S100 assay
+        node_type: ACTIVITY
+      - node_id: s100-methionine-incorporation
+        label: Methionine incorporation into tRNA in the S100 assay
+        node_type: ACTIVITY
+    edges:
+      - edge_id: lysine-preparation-increases-s100-isoleucine
+        subject: use-lysine-modified-preparation
+        predicate: increases
+        object: s100-isoleucine-incorporation
+        mechanism: The B preparation supports a higher isoleucine-incorporation signal than A, reported as 100 versus 2 on the E. coli IleRS column's own scale. It is a preparation-level biochemical effect, not a direct observation of anticodon hydrogen bonding.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:19233850
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2665086/
+            snippet: aminoacylation
+            explanation: Table 5 A/B E. coli IleRS column and synthetase-assay Methods; normalized to B, not tRNAMet.
+            cache_path: evidence/PF01171/salowe-2009-tils.txt
+            cache_sha256: 544b2a00f2d9713060c325b735c83fc1b2beaf0313fdc01c6c21bcbe8822966d
+      - edge_id: lysine-preparation-decreases-s100-methionine
+        subject: use-lysine-modified-preparation
+        predicate: decreases
+        object: s100-methionine-incorporation
+        mechanism: The B preparation gives less detected methionine incorporation than A, reported as 0 versus 23 on the MetRS column's tRNAMet-normalized scale. This is a bounded assay loss, not a universal impossibility of methionylation.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:19233850
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2665086/
+            snippet: aminoacylation
+            explanation: Table 5 A/B E. coli MetRS column, its distinct normalization footnote and matched assay protocol.
+            cache_path: evidence/PF01171/salowe-2009-tils.txt
+            cache_sha256: 544b2a00f2d9713060c325b735c83fc1b2beaf0313fdc01c6c21bcbe8822966d
+      - edge_id: ethanolamine-preparation-increases-s100-isoleucine
+        subject: use-ethanolamine-modified-preparation
+        predicate: increases
+        object: s100-isoleucine-incorporation
+        mechanism: The H preparation increases isoleucine incorporation relative to A, reported as 123 versus 2. The graph does not interpret 123 versus B's 100 as a statistically established improvement over the natural modifier.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:19233850
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2665086/
+            snippet: aminoacylation
+            explanation: Table 5 A/H E. coli IleRS column, linked to the mass-supported Table 4 H preparation.
+            cache_path: evidence/PF01171/salowe-2009-tils.txt
+            cache_sha256: 544b2a00f2d9713060c325b735c83fc1b2beaf0313fdc01c6c21bcbe8822966d
+      - edge_id: ethanolamine-preparation-decreases-s100-methionine
+        subject: use-ethanolamine-modified-preparation
+        predicate: decreases
+        object: s100-methionine-incorporation
+        mechanism: The H preparation lowers detected methionine incorporation relative to A, reported as 0 versus 23 on the MetRS-specific scale. Carryover and detection limits remain explicit.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:19233850
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2665086/
+            snippet: aminoacylation
+            explanation: Table 5 A/H E. coli MetRS column, not purified MetRS or an in-vivo decoding experiment.
+            cache_path: evidence/PF01171/salowe-2009-tils.txt
+            cache_sha256: 544b2a00f2d9713060c325b735c83fc1b2beaf0313fdc01c6c21bcbe8822966d
+  - graph_id: tils-preparations-bsubtilis-ilers
+    title: Modified E. coli tRNA preparations support B. subtilis IleRS
+    scope: A deliberately mixed-species biochemical system in Table 5, with E. coli TilS-treated E. coli transcript and purified B. subtilis 168 FLAG-IleRS. This is separate from the E. coli S100 experiment.
+    context: Reaction B or H preparations diluted to 100 nM tRNA, 0.1 nM recombinant IleRS, 100 nM tritiated isoleucine and 100 uM ATP in the 30-ul HEPES pH 7.3 synthetase assay with 10 mM Mg(OAc)2. Two hours at room temperature; acidic SPA capture. Compare each preparation with no-amine A.
+    family_mapping: P52097 TilS supplies PF01171 at 10-197 and produces the tested preparations. The partner accession Q45477 identifies B. subtilis 168 IleRS, not a PP-loop-family enzyme. Its current sequence version 3 is later than the 2009 experiment; complete historical FLAG construct identity is not independently reconstructed.
+    scope_status: MECHANISTIC
+    limitations: This mixed-species result is not a native cellular pathway or evidence for B. subtilis TilS activity. The B/H preparations are unrepurified and may retain reaction components. The reported 100/99 values have no supplied uncertainty establishing equivalence, and the zero control is bounded by assay detection. No codon recognition or translation rate is measured.
+    nodes:
+      - node_id: lysine-preparation-with-bsubtilis-ilers
+        label: Use reaction B rather than A with purified B. subtilis IleRS
+        node_type: PERTURBATION
+      - node_id: ethanolamine-preparation-with-bsubtilis-ilers
+        label: Use reaction H rather than A with purified B. subtilis IleRS
+        node_type: PERTURBATION
+      - node_id: bsubtilis-ilers-isoleucine-incorporation
+        label: Isoleucine incorporation by the purified B. subtilis IleRS system
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:Q45477
+    edges:
+      - edge_id: lysine-preparation-increases-bsubtilis-aminoacylation
+        subject: lysine-preparation-with-bsubtilis-ilers
+        predicate: increases
+        object: bsubtilis-ilers-isoleucine-incorporation
+        mechanism: The lysine-modified preparation supports greater isoleucine incorporation than the no-amine preparation with purified B. subtilis IleRS. This does not transfer the exact E. coli extract rate or its enzyme composition.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:19233850
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2665086/
+            snippet: aminoacylation
+            explanation: Table 5 A/B B. subtilis column and recombinant IleRS/assay Methods; 100 versus 0 on that column's scale.
+            cache_path: evidence/PF01171/salowe-2009-tils.txt
+            cache_sha256: 544b2a00f2d9713060c325b735c83fc1b2beaf0313fdc01c6c21bcbe8822966d
+      - edge_id: ethanolamine-preparation-increases-bsubtilis-aminoacylation
+        subject: ethanolamine-preparation-with-bsubtilis-ilers
+        predicate: increases
+        object: bsubtilis-ilers-isoleucine-incorporation
+        mechanism: The ethanolamine-modified preparation also supports increased incorporation relative to A, reported as 99 versus 0. Similarity to B is not treated as proof of identical kinetics or physiological substitution of ethanolamine for lysine.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:19233850
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2665086/
+            snippet: aminoacylation
+            explanation: Table 5 A/H B. subtilis column and Table 4 H identity, with mixed-species and carryover qualifications.
+            cache_path: evidence/PF01171/salowe-2009-tils.txt
+            cache_sha256: 544b2a00f2d9713060c325b735c83fc1b2beaf0313fdc01c6c21bcbe8822966d
+discussions:
+  - discussion_id: tils-atomic-steps-and-ortholog-coverage
+    prompt: Extend TilS evidence with exact constructs, modification-site chemistry and ortholog-specific substrate recognition.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Eight observed cell-free assay effects cover two product preparations and separate aminoacylation systems. They do not establish a fully observed atomic mechanism, purified-RNA-only causality or the activities of every PP-loop protein.
+    evidence:
+      - reference: PMID:19233850
+        supports: PARTIAL
+        evidence_source: inspected_primary_full_text
+        explanation: Tables 4/5 and Figure 2 support the adopted effects; contamination, isotope dilution, preparation carryover and normalization limits are retained.
+      - reference: PMID:40914250
+        supports: PARTIAL
+        evidence_source: primary_abstract_and_selected_results
+        explanation: Later ortholog-specific recognition findings identify additional work; methods, exact member mappings and figures were not fully reviewed.
+    notes: Resolve experimental clone scars, carryover controls and error estimates; inspect the original adenylated-intermediate and recognition studies before adding those microsteps. Curate remaining true alternative substrates separately from contaminated ornithine/N-alpha-methyllysine samples. Extend the 2025 ortholog study after member mapping and Methods/figure assessment. Do not infer cellular decoding, drug efficacy or family-wide chemistry from these preparations. Partial same-agent scientific review; remain IN_PROGRESS.
+    posed_by: Codex
+    posed_date: '2026-10-11'

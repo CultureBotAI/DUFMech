@@ -1,0 +1,443 @@
+# Scoped scientific self-review of YdeD peroxide-growth effects
+
+- Review: 20261011T075907Z-pf00892-eama-peroxide-growth-causal-effects
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T07:58:58Z
+- Finished UTC: 2026-10-11T07:59:07Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+One PHENOTYPIC graph retains three INDIRECT OBSERVED edges for ydeD deletion, plasmid rescue and WT plasmid expression under peroxide stress. P31125 and both EamA repeats are mapped, without claiming a complete cysteine shuttle or isolated-repeat chemistry. Coverage remains partial and status IN_PROGRESS.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: PF00892 EamA, the next accession-ordered SEEDED family, using the named YdeD/JW5250 perturbations in the 2010 primary study.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF00892 | data/families/PF00892.yaml | generated | PF00892 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF00892 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF00892.
+
+P31125 eamA/ydeD, b1533/JW5250, is a 299-residue K-12 reference, sequence version 2, with exact UniProt/InterPro sequence agreement. PF00892 intervals are 7-130 and 143-286. The JW5250 locus maps the deletion, but complete experimental plasmid junctions were not reconstructed and neither repeat is independently tested.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF00892.
+
+Whole-gene deletion, plasmid complementation and WT overexpression share one precisely scoped growth endpoint, with comparison backgrounds explicit on each edge. They do not establish a direct cysteine-export reaction, a complete periplasmic redox chain or independent repeat sufficiency. The multi-gene pDES and FliY interventions remain separate; source transcription discrepancies prevent an unqualified induction edge.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF00892.
+
+Exact insert sequence, induction, dilution factors and independent replication remain unverified. The 2009 clone-method article is subscription-only in the inspected route, and the 2000 source was not available as full text in the attempted route. Direct transport, other metabolites, newer production studies and other EamA members remain incompletely reviewed. Supplements and raw colony data were not assessed.
+
+## Findings
+
+### additional-contexts: Resolve YdeD transport mechanism and broaden EamA member coverage
+
+minor / open / confirmed; issue key: pf00892-causal-context-coverage.
+
+Retrieve construct details and direct transport experiments, distinguishing whole-cell growth from molecular flux and separately testing each repeat where supported. Resolve transcription condition discrepancies before adding those effects. Extend to additional members with their own sequence mapping and primary evidence, preserving an append-only successor review.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Retrieve construct details and direct transport experiments, distinguishing whole-cell growth from molecular flux and separately testing each repeat where supported. Resolve transcription condition discrepancies before adding those effects. Extend to additional members with their own sequence mapping and primary evidence, preserving an append-only successor review.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC2878512/; Methods, Table 1, Results and Discussion; Figure 1 visually inspected, with panel A adopted | supports | Figure 1A compares BW25113 and JW5250 ydeD::KmR with pSTV29 or pYdeD on LB agar at 30 C for 24 h with 0.5 mM H2O2 and peroxide-free controls. Deletion impairs growth, while plasmid YdeD improves growth in the deletion and WT backgrounds. Serial spots do not quantify an exact survival rate; no panel-B pretreatment is borrowed. The malformed HTML control concentration is retained as a source discrepancy rather than interpreted as 10 mM. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/P31125/entry/pfam/PF00892/; Accession and domain locations; paired UniProt identity facts | supports | P31125 eamA/ydeD, b1533/JW5250, is a 299-residue K-12 reference, sequence version 2, with exact UniProt/InterPro sequence agreement. PF00892 intervals are 7-130 and 143-286. The JW5250 locus maps the deletion, but complete experimental plasmid junctions were not reconstructed and neither repeat is independently tested. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf00892 | data/families/PF00892.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Figure 1 was visually inspected; the adopted graph uses panel A only. Source Table 1 and main Methods/Results/Discussion were read. Colonies were not counted or statistically reanalyzed, and supplemental redox assays were not independently inspected. The 2009 source supplied only an abstract-level access check, not verified clone junctions.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T075907Z-pf00892-eama-peroxide-growth-causal-effects
+title: Scoped scientific self-review of YdeD peroxide-growth effects
+started_at: '2026-10-11T07:58:58Z'
+finished_at: '2026-10-11T07:59:07Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: One PHENOTYPIC graph retains three INDIRECT OBSERVED edges for ydeD deletion,
+  plasmid rescue and WT plasmid expression under peroxide stress. P31125 and both
+  EamA repeats are mapped, without claiming a complete cysteine shuttle or isolated-repeat
+  chemistry. Coverage remains partial and status IN_PROGRESS.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF00892.yaml
+    sha256: 119116b7ac75e3fb798ebd0fc7c68526c0ff1915bc0552a36d12b734bfa68653
+    role: context
+  - path: data/families/PF00892.yaml
+    sha256: 9e05979d0e677d65e9e0f0e40244fbc63f9cebdee0644c212875edc0cd9a44f9
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF00892/ohtsu-2010-ydeD.txt
+    role: context
+    sha256: 7d16e7a250a0af9da3868347d615d892b027f22f2961290258b2d20e2500e7d5
+  - path: evidence/PF00892/EamA-identity.txt
+    role: context
+    sha256: 5c7525c6b91669661958d673be4415fb8d06724bd3304cd3f2d4e2d53eeb02f9
+targets:
+- target_id: PF00892
+  path: data/families/PF00892.yaml
+  label: PF00892
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF00892.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: ffe66419228bb40c799651acca9d7d4112b3d0875caeafc95a0e4f1f39949785
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: PF00892 EamA, the next accession-ordered SEEDED family, using the named
+    YdeD/JW5250 perturbations in the 2010 primary study.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF00892
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Exact insert sequence, induction, dilution factors and independent replication
+      remain unverified. The 2009 clone-method article is subscription-only in the
+      inspected route, and the 2000 source was not available as full text in the attempted
+      route. Direct transport, other metabolites, newer production studies and other
+      EamA members remain incompletely reviewed. Supplements and raw colony data were
+      not assessed.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF00892
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2878512/
+  locator: Methods, Table 1, Results and Discussion; Figure 1 visually inspected,
+    with panel A adopted
+  accessed_at: '2026-10-11T07:59:07Z'
+  support: supports
+  snapshot_sha256: 7d16e7a250a0af9da3868347d615d892b027f22f2961290258b2d20e2500e7d5
+  summary: Figure 1A compares BW25113 and JW5250 ydeD::KmR with pSTV29 or pYdeD on
+    LB agar at 30 C for 24 h with 0.5 mM H2O2 and peroxide-free controls. Deletion
+    impairs growth, while plasmid YdeD improves growth in the deletion and WT backgrounds.
+    Serial spots do not quantify an exact survival rate; no panel-B pretreatment is
+    borrowed. The malformed HTML control concentration is retained as a source discrepancy
+    rather than interpreted as 10 mM.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P31125/entry/pfam/PF00892/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T07:59:07Z'
+  support: supports
+  snapshot_sha256: 5c7525c6b91669661958d673be4415fb8d06724bd3304cd3f2d4e2d53eeb02f9
+  summary: P31125 eamA/ydeD, b1533/JW5250, is a 299-residue K-12 reference, sequence
+    version 2, with exact UniProt/InterPro sequence agreement. PF00892 intervals are
+    7-130 and 143-286. The JW5250 locus maps the deletion, but complete experimental
+    plasmid junctions were not reconstructed and neither repeat is independently tested.
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T07:59:07Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf00892
+  kind: record_content
+  reference: data/families/PF00892.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T07:59:07Z'
+  support: context_only
+  snapshot_sha256: 9e05979d0e677d65e9e0f0e40244fbc63f9cebdee0644c212875edc0cd9a44f9
+  quote: "id: Pfam:PF00892\npfam_id: PF00892\nname: EamA-like transporter family\n\
+    short_name: EamA\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status:\
+    \ IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00892\n\
+    counters:\n  proteins: 219191\n  matches: 383832\n  proteomes: 21278\n  taxa:\
+    \ 34197\n  structures: 3\n  alphafold_models: 143070\n  domain_architectures:\
+    \ 602\nprovenance:\n  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR000620\ndescription: This family includes many hypothetical\
+    \ membrane proteins of unknown function. Many of the\n  proteins contain two copies\
+    \ of the aligned region. The family used to be known as DUF6. Members of this\n\
+    \  family usually carry 5+5 transmembrane domains, and this domain attempts to\
+    \ model five of these.\ncuration_history: history/records/PF00892\ndiscussions:\n\
+    - discussion_id: eama-transport-mechanism-and-repeat-scope\n  prompt: Resolve\
+    \ YdeD transport chemistry and repeat-specific roles beyond the peroxide-growth\
+    \ phenotype.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Deletion, complementation\
+    \ and overexpression support whole-gene involvement. They do not\n    directly\
+    \ demonstrate the complete cysteine/cystine shuttle, proton coupling or independent\
+    \ activity\n    of either EamA repeat.\n  evidence:\n  - reference: PMID:20351115\n\
+    \    supports: PARTIAL\n    evidence_source: full_text\n    explanation: Figure\
+    \ 1A and Methods establish the adopted growth comparisons. Multi-gene pDES and\
+    \ FliY\n      experiments have different interventions, while Figure 7 is a proposed\
+    \ model. The transcription\n      results also have differing 20/30-min and 0.88/1-mM\
+    \ descriptions and are not added as a resolved\n      induction graph.\n  - reference:\
+    \ PMID:18828007\n    supports: PARTIAL\n    evidence_source: abstract\n    explanation:\
+    \ The cited pYdeD construction source is accessible only as a subscription preview\
+    \ in this\n      assessment; its TolC results are not transferred to YdeD or either\
+    \ repeat.\n  posed_by: Codex\n  posed_date: '2026-10-11'\n  notes: Retrieve original\
+    \ insert and assay details and inspect direct transport evidence, including the\n\
+    \    2000 source and newer production studies. Extend to other EamA proteins only\
+    \ with their own mappings\n    and assays. Figure 1 was visually inspected; raw\
+    \ colony data and supplements were not reanalyzed.\n    Family coverage remains\
+    \ partial and IN_PROGRESS.\ncausal_graphs:\n- graph_id: yded-peroxide-growth-and-rescue\n\
+    \  title: YdeD deletion and plasmid expression alter peroxide-stressed growth\n\
+    \  scope: Whole-gene ydeD perturbations in E. coli BW25113 and its JW5250 ydeD::KmR\
+    \ derivative. Comparisons\n    use pSTV29 or pYdeD; neither isolated EamA repeat\
+    \ is tested.\n  context: Figure 1A serial dilutions of overnight cultures on LB\
+    \ agar with 0.5 mM H2O2, incubated at\n    30 C for 24 h, with peroxide-free LB\
+    \ controls. pYdeD carries a 1.5-kb ydeD fragment in the lac-promoter\n    pSTV29\
+    \ vector. Panel A does not specify peroxide pretreatment or an IPTG dose; panel\
+    \ B pretreatment\n    is not transferred. The malformed HTML control-concentration\
+    \ text is resolved only to the image's\n    LB control, not an invented 10 mM\
+    \ condition.\n  family_mapping: UniProtKB:P31125, eamA/ydeD, b1533/JW5250, is\
+    \ a 299-residue K-12 reference with sequence\n    version 2. UniProt and InterPro\
+    \ sequences agree exactly; PF00892 maps at 7-130 and 143-286 inclusive.\n    The\
+    \ matching JW5250 locus grounds the deletion, but the assay host is BW25113 and\
+    \ the complete pYdeD\n    insert sequence was not independently reconstructed.\
+    \ No independent function is assigned to either\n    repeat.\n  scope_status:\
+    \ PHENOTYPIC\n  taxon: NCBITaxon:83333\n  limitations: Colony growth in serial\
+    \ spots is not a calibrated survival rate, purified cysteine flux\n    or a resolved\
+    \ peroxide-scavenging reaction. Plasmid rescue supports gene involvement but does\
+    \ not\n    exclude every dosage or secondary effect. Exact insert junctions, induction,\
+    \ dilution factors and\n    independent replicate count remain unresolved. The\
+    \ pDES multi-gene experiments and proposed FliY recycling\n    chain are not folded\
+    \ into this graph.\n  nodes:\n  - node_id: yded-deletion-vector\n    label: JW5250\
+    \ ydeD::KmR carrying pSTV29\n    node_type: PERTURBATION\n    grounding:\n   \
+    \ - UniProtKB:P31125\n  - node_id: yded-plasmid-in-deletion\n    label: pYdeD\
+    \ expression in JW5250 ydeD::KmR\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:P31125\n  - node_id: yded-plasmid-in-wt\n    label: pYdeD expression\
+    \ in BW25113\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:P31125\n\
+    \  - node_id: peroxide-stressed-spot-growth\n    label: Colony growth across serial\
+    \ spots on 0.5 mM H2O2 LB agar\n    node_type: PHENOTYPE\n  edges:\n  - edge_id:\
+    \ yded-deletion-decreases-growth\n    subject: yded-deletion-vector\n    predicate:\
+    \ decreases\n    object: peroxide-stressed-spot-growth\n    mechanism: The deletion/vector\
+    \ strain grows less under peroxide than BW25113/vector. The observed\n      consequence\
+    \ is stress-sensitive growth; the intermediate transport and redox steps are not\
+    \ directly\n      measured by this comparison.\n    directness: INDIRECT\n   \
+    \ support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:20351115\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2878512/\n\
+    \      snippet: The ydeD deletion mutant cells displayed increased H2O2 sensitivity\n\
+    \      explanation: Results and visually inspected Figure 1A compare the deletion\
+    \ and WT with matched empty\n        vector, alongside peroxide-free growth controls.\
+    \ Formula subscripts are normalized in the retained\n        quotation.\n    \
+    \  cache_path: evidence/PF00892/ohtsu-2010-ydeD.txt\n      cache_sha256: 7d16e7a250a0af9da3868347d615d892b027f22f2961290258b2d20e2500e7d5\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P31125/entry/pfam/PF00892/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P31125/entry/pfam/PF00892/\n\
+    \      snippet: 'P31125 Pfam:PF00892 intervals: 7-130 and 143-286, inclusive'\n\
+    \      explanation: The reference contains two family repeats; the experimental\
+    \ deletion affects the whole\n        gene rather than identifying a sufficient\
+    \ isolated repeat.\n      cache_path: evidence/PF00892/EamA-identity.txt\n   \
+    \   cache_sha256: 5c7525c6b91669661958d673be4415fb8d06724bd3304cd3f2d4e2d53eeb02f9\n\
+    \  - edge_id: yded-plasmid-restores-deletion-growth\n    subject: yded-plasmid-in-deletion\n\
+    \    predicate: increases\n    object: peroxide-stressed-spot-growth\n    mechanism:\
+    \ pYdeD improves peroxide-stressed growth of the deletion strain compared with\
+    \ pSTV29, providing\n      plasmid complementation of the adopted phenotype. Expression\
+    \ is not calibrated to the endogenous\n      WT level.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:20351115\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2878512/\n\
+    \      snippet: higher levels of H2O2 tolerance\n      explanation: Figure 1A\
+    \ directly displays JW5250 with pYdeD and with pSTV29. The comparison supports\n\
+    \        rescue of growth, not restoration of a measured molecular transport rate.\n\
+    \      cache_path: evidence/PF00892/ohtsu-2010-ydeD.txt\n      cache_sha256: 7d16e7a250a0af9da3868347d615d892b027f22f2961290258b2d20e2500e7d5\n\
+    \  - edge_id: yded-plasmid-increases-wt-growth\n    subject: yded-plasmid-in-wt\n\
+    \    predicate: increases\n    object: peroxide-stressed-spot-growth\n    mechanism:\
+    \ BW25113 carrying pYdeD grows better under the peroxide challenge than BW25113\
+    \ carrying\n      empty vector. This dosage-associated cellular phenotype is distinct\
+    \ from complementation in the\n      deletion background.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:20351115\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2878512/\n\
+    \      snippet: both wild-type cells and\n      explanation: Results describes\
+    \ improvement in both backgrounds; Figure 1A separately displays the\n       \
+    \ WT/vector and WT/pYdeD comparison. The truncated quotation is a locator, with\
+    \ the relation established\n        by the inspected result and image.\n     \
+    \ cache_path: evidence/PF00892/ohtsu-2010-ydeD.txt\n      cache_sha256: 7d16e7a250a0af9da3868347d615d892b027f22f2961290258b2d20e2500e7d5\n\
+    curation_events:\n- timestamp: '2026-10-11T07:52:00Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate YdeD peroxide-growth deletion\
+    \ and plasmid-expression effects\n  history_record: history/records/PF00892/2026-10-11T075200Z-codex-15f104.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: P31125 eamA/ydeD, b1533/JW5250, is a 299-residue K-12 reference, sequence
+    version 2, with exact UniProt/InterPro sequence agreement. PF00892 intervals are
+    7-130 and 143-286. The JW5250 locus maps the deletion, but complete experimental
+    plasmid junctions were not reconstructed and neither repeat is independently tested.
+  target_ids:
+  - PF00892
+  evidence_ids:
+  - identity
+  - primary
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Whole-gene deletion, plasmid complementation and WT overexpression share
+    one precisely scoped growth endpoint, with comparison backgrounds explicit on
+    each edge. They do not establish a direct cysteine-export reaction, a complete
+    periplasmic redox chain or independent repeat sufficiency. The multi-gene pDES
+    and FliY interventions remain separate; source transcription discrepancies prevent
+    an unqualified induction edge.
+  target_ids:
+  - PF00892
+  evidence_ids:
+  - primary
+  - native
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Exact insert sequence, induction, dilution factors and independent replication
+    remain unverified. The 2009 clone-method article is subscription-only in the inspected
+    route, and the 2000 source was not available as full text in the attempted route.
+    Direct transport, other metabolites, newer production studies and other EamA members
+    remain incompletely reviewed. Supplements and raw colony data were not assessed.
+  target_ids:
+  - PF00892
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf00892-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve YdeD transport mechanism and broaden EamA member coverage
+  description: Retrieve construct details and direct transport experiments, distinguishing
+    whole-cell growth from molecular flux and separately testing each repeat where
+    supported. Resolve transcription condition discrepancies before adding those effects.
+    Extend to additional members with their own sequence mapping and primary evidence,
+    preserving an append-only successor review.
+  target_ids:
+  - PF00892
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF00892.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Retrieve construct details and direct transport experiments, distinguishing
+    whole-cell growth from molecular flux and separately testing each repeat where
+    supported. Resolve transcription condition discrepancies before adding those effects.
+    Extend to additional members with their own sequence mapping and primary evidence,
+    preserving an append-only successor review.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF00892
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Figure 1 was visually inspected; the adopted graph uses panel A only. Source Table
+  1 and main Methods/Results/Discussion were read. Colonies were not counted or statistically
+  reanalyzed, and supplemental redox assays were not independently inspected. The
+  2009 source supplied only an abstract-level access check, not verified clone junctions.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

@@ -103,6 +103,7 @@ class FamilyRecord(YAMLRoot):
     counters: Optional[Union[dict, "FamilyCounters"]] = None
     score_provenance: Optional[Union[dict, "SnapshotProvenance"]] = None
     assertions: Optional[Union[Union[dict, "FunctionalAssertion"], list[Union[dict, "FunctionalAssertion"]]]] = empty_list()
+    causal_graphs: Optional[Union[Union[dict, "CausalGraph"], list[Union[dict, "CausalGraph"]]]] = empty_list()
     discussions: Optional[Union[Union[dict, "Discussion"], list[Union[dict, "Discussion"]]]] = empty_list()
     datasets: Optional[Union[Union[dict, "Dataset"], list[Union[dict, "Dataset"]]]] = empty_list()
     cross_corpus_links: Optional[Union[Union[dict, "CrossCorpusLink"], list[Union[dict, "CrossCorpusLink"]]]] = empty_list()
@@ -175,6 +176,8 @@ class FamilyRecord(YAMLRoot):
 
         self._normalize_inlined_as_list(slot_name="assertions", slot_type=FunctionalAssertion, key_name="assertion_id", keyed=False)
 
+        self._normalize_inlined_as_list(slot_name="causal_graphs", slot_type=CausalGraph, key_name="graph_id", keyed=False)
+
         self._normalize_inlined_as_list(slot_name="discussions", slot_type=Discussion, key_name="discussion_id", keyed=False)
 
         if not isinstance(self.datasets, list):
@@ -203,6 +206,7 @@ class FamilyCuration(YAMLRoot):
     review_id: Optional[str] = None
     curation_history: Optional[str] = None
     assertions: Optional[Union[Union[dict, "FunctionalAssertion"], list[Union[dict, "FunctionalAssertion"]]]] = empty_list()
+    causal_graphs: Optional[Union[Union[dict, "CausalGraph"], list[Union[dict, "CausalGraph"]]]] = empty_list()
     discussions: Optional[Union[Union[dict, "Discussion"], list[Union[dict, "Discussion"]]]] = empty_list()
     datasets: Optional[Union[Union[dict, "Dataset"], list[Union[dict, "Dataset"]]]] = empty_list()
     cross_corpus_links: Optional[Union[Union[dict, "CrossCorpusLink"], list[Union[dict, "CrossCorpusLink"]]]] = empty_list()
@@ -225,6 +229,8 @@ class FamilyCuration(YAMLRoot):
             self.curation_history = str(self.curation_history)
 
         self._normalize_inlined_as_list(slot_name="assertions", slot_type=FunctionalAssertion, key_name="assertion_id", keyed=False)
+
+        self._normalize_inlined_as_list(slot_name="causal_graphs", slot_type=CausalGraph, key_name="graph_id", keyed=False)
 
         self._normalize_inlined_as_list(slot_name="discussions", slot_type=Discussion, key_name="discussion_id", keyed=False)
 
@@ -424,6 +430,190 @@ class FunctionalAssertion(YAMLRoot):
             self.MissingRequiredField("scope")
         if not isinstance(self.scope, str):
             self.scope = str(self.scope)
+
+        if self._is_empty(self.evidence):
+            self.MissingRequiredField("evidence")
+        self._normalize_inlined_as_list(slot_name="evidence", slot_type=ClaimEvidence, key_name="reference", keyed=False)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class CausalGraph(YAMLRoot):
+    """
+    A scoped directed mechanism or phenotype graph, not family-wide functional proof.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DUFMECH["CausalGraph"]
+    class_class_curie: ClassVar[str] = "dufmech:CausalGraph"
+    class_name: ClassVar[str] = "CausalGraph"
+    class_model_uri: ClassVar[URIRef] = DUFMECH.CausalGraph
+
+    graph_id: str = None
+    title: str = None
+    scope: str = None
+    context: str = None
+    family_mapping: str = None
+    scope_status: Union[str, "CausalScope"] = None
+    limitations: str = None
+    nodes: Union[Union[dict, "CausalNode"], list[Union[dict, "CausalNode"]]] = None
+    edges: Union[Union[dict, "CausalEdge"], list[Union[dict, "CausalEdge"]]] = None
+    taxon: Optional[str] = None
+    feedback_explanation: Optional[str] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.graph_id):
+            self.MissingRequiredField("graph_id")
+        if not isinstance(self.graph_id, str):
+            self.graph_id = str(self.graph_id)
+
+        if self._is_empty(self.title):
+            self.MissingRequiredField("title")
+        if not isinstance(self.title, str):
+            self.title = str(self.title)
+
+        if self._is_empty(self.scope):
+            self.MissingRequiredField("scope")
+        if not isinstance(self.scope, str):
+            self.scope = str(self.scope)
+
+        if self._is_empty(self.context):
+            self.MissingRequiredField("context")
+        if not isinstance(self.context, str):
+            self.context = str(self.context)
+
+        if self._is_empty(self.family_mapping):
+            self.MissingRequiredField("family_mapping")
+        if not isinstance(self.family_mapping, str):
+            self.family_mapping = str(self.family_mapping)
+
+        if self._is_empty(self.scope_status):
+            self.MissingRequiredField("scope_status")
+        if not isinstance(self.scope_status, CausalScope):
+            self.scope_status = CausalScope(self.scope_status)
+
+        if self._is_empty(self.limitations):
+            self.MissingRequiredField("limitations")
+        if not isinstance(self.limitations, str):
+            self.limitations = str(self.limitations)
+
+        if self._is_empty(self.nodes):
+            self.MissingRequiredField("nodes")
+        self._normalize_inlined_as_list(slot_name="nodes", slot_type=CausalNode, key_name="node_id", keyed=False)
+
+        if self._is_empty(self.edges):
+            self.MissingRequiredField("edges")
+        self._normalize_inlined_as_list(slot_name="edges", slot_type=CausalEdge, key_name="edge_id", keyed=False)
+
+        if self.taxon is not None and not isinstance(self.taxon, str):
+            self.taxon = str(self.taxon)
+
+        if self.feedback_explanation is not None and not isinstance(self.feedback_explanation, str):
+            self.feedback_explanation = str(self.feedback_explanation)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class CausalNode(YAMLRoot):
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DUFMECH["CausalNode"]
+    class_class_curie: ClassVar[str] = "dufmech:CausalNode"
+    class_name: ClassVar[str] = "CausalNode"
+    class_model_uri: ClassVar[URIRef] = DUFMECH.CausalNode
+
+    node_id: str = None
+    label: str = None
+    node_type: Union[str, "CausalNodeType"] = None
+    grounding: Optional[Union[str, list[str]]] = empty_list()
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.node_id):
+            self.MissingRequiredField("node_id")
+        if not isinstance(self.node_id, str):
+            self.node_id = str(self.node_id)
+
+        if self._is_empty(self.label):
+            self.MissingRequiredField("label")
+        if not isinstance(self.label, str):
+            self.label = str(self.label)
+
+        if self._is_empty(self.node_type):
+            self.MissingRequiredField("node_type")
+        if not isinstance(self.node_type, CausalNodeType):
+            self.node_type = CausalNodeType(self.node_type)
+
+        if not isinstance(self.grounding, list):
+            self.grounding = [self.grounding] if self.grounding is not None else []
+        self.grounding = [v if isinstance(v, str) else str(v) for v in self.grounding]
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class CausalEdge(YAMLRoot):
+    """
+    Evidence for a directed relation, rather than citations only establishing the endpoints.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = DUFMECH["CausalEdge"]
+    class_class_curie: ClassVar[str] = "dufmech:CausalEdge"
+    class_name: ClassVar[str] = "CausalEdge"
+    class_model_uri: ClassVar[URIRef] = DUFMECH.CausalEdge
+
+    edge_id: str = None
+    subject: str = None
+    predicate: Union[str, "CausalPredicate"] = None
+    object: str = None
+    mechanism: str = None
+    directness: Union[str, "CausalDirectness"] = None
+    support: Union[str, "CausalSupport"] = None
+    evidence_kind: Union[str, "EvidenceKind"] = None
+    evidence: Union[Union[dict, "ClaimEvidence"], list[Union[dict, "ClaimEvidence"]]] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.edge_id):
+            self.MissingRequiredField("edge_id")
+        if not isinstance(self.edge_id, str):
+            self.edge_id = str(self.edge_id)
+
+        if self._is_empty(self.subject):
+            self.MissingRequiredField("subject")
+        if not isinstance(self.subject, str):
+            self.subject = str(self.subject)
+
+        if self._is_empty(self.predicate):
+            self.MissingRequiredField("predicate")
+        if not isinstance(self.predicate, CausalPredicate):
+            self.predicate = CausalPredicate(self.predicate)
+
+        if self._is_empty(self.object):
+            self.MissingRequiredField("object")
+        if not isinstance(self.object, str):
+            self.object = str(self.object)
+
+        if self._is_empty(self.mechanism):
+            self.MissingRequiredField("mechanism")
+        if not isinstance(self.mechanism, str):
+            self.mechanism = str(self.mechanism)
+
+        if self._is_empty(self.directness):
+            self.MissingRequiredField("directness")
+        if not isinstance(self.directness, CausalDirectness):
+            self.directness = CausalDirectness(self.directness)
+
+        if self._is_empty(self.support):
+            self.MissingRequiredField("support")
+        if not isinstance(self.support, CausalSupport):
+            self.support = CausalSupport(self.support)
+
+        if self._is_empty(self.evidence_kind):
+            self.MissingRequiredField("evidence_kind")
+        if not isinstance(self.evidence_kind, EvidenceKind):
+            self.evidence_kind = EvidenceKind(self.evidence_kind)
 
         if self._is_empty(self.evidence):
             self.MissingRequiredField("evidence")
@@ -799,6 +989,69 @@ class Dataset(YAMLRoot):
 
 
 # Enumerations
+class CausalScope(EnumDefinitionImpl):
+
+    MECHANISTIC = PermissibleValue(
+        text="MECHANISTIC",
+        description="Includes at least one directly observed experimental mechanism step.")
+    PHENOTYPIC = PermissibleValue(
+        text="PHENOTYPIC",
+        description="Includes an experimentally observed effect without claiming a resolved molecular mechanism.")
+    HYPOTHETICAL = PermissibleValue(
+        text="HYPOTHETICAL",
+        description="Proposed directed explanations, not observed causal effects.")
+
+    _defn = EnumDefinition(
+        name="CausalScope",
+    )
+
+class CausalNodeType(EnumDefinitionImpl):
+
+    STATE = PermissibleValue(text="STATE")
+    ACTIVITY = PermissibleValue(text="ACTIVITY")
+    PROCESS = PermissibleValue(text="PROCESS")
+    PERTURBATION = PermissibleValue(text="PERTURBATION")
+    PHENOTYPE = PermissibleValue(text="PHENOTYPE")
+
+    _defn = EnumDefinition(
+        name="CausalNodeType",
+    )
+
+class CausalPredicate(EnumDefinitionImpl):
+
+    increases = PermissibleValue(text="increases")
+    decreases = PermissibleValue(text="decreases")
+    required_for = PermissibleValue(text="required_for")
+    enables = PermissibleValue(text="enables")
+    produces = PermissibleValue(text="produces")
+    degrades = PermissibleValue(text="degrades")
+    converts_to = PermissibleValue(text="converts_to")
+
+    _defn = EnumDefinition(
+        name="CausalPredicate",
+    )
+
+class CausalDirectness(EnumDefinitionImpl):
+
+    DIRECT = PermissibleValue(text="DIRECT")
+    INDIRECT = PermissibleValue(text="INDIRECT")
+    UNRESOLVED = PermissibleValue(text="UNRESOLVED")
+
+    _defn = EnumDefinition(
+        name="CausalDirectness",
+    )
+
+class CausalSupport(EnumDefinitionImpl):
+
+    OBSERVED = PermissibleValue(text="OBSERVED")
+    INFERRED = PermissibleValue(text="INFERRED")
+    HYPOTHESIZED = PermissibleValue(text="HYPOTHESIZED")
+    CONTESTED = PermissibleValue(text="CONTESTED")
+
+    _defn = EnumDefinition(
+        name="CausalSupport",
+    )
+
 class SeedStatus(EnumDefinitionImpl):
 
     UNKNOWN_CANDIDATE = PermissibleValue(text="UNKNOWN_CANDIDATE")
@@ -1119,6 +1372,9 @@ slots.familyRecord__score_provenance = Slot(uri=DUFMECH.score_provenance, name="
 slots.familyRecord__assertions = Slot(uri=DUFMECH.assertions, name="familyRecord__assertions", curie=DUFMECH.curie('assertions'),
                    model_uri=DUFMECH.familyRecord__assertions, domain=None, range=Optional[Union[Union[dict, FunctionalAssertion], list[Union[dict, FunctionalAssertion]]]])
 
+slots.familyRecord__causal_graphs = Slot(uri=DUFMECH.causal_graphs, name="familyRecord__causal_graphs", curie=DUFMECH.curie('causal_graphs'),
+                   model_uri=DUFMECH.familyRecord__causal_graphs, domain=None, range=Optional[Union[Union[dict, CausalGraph], list[Union[dict, CausalGraph]]]])
+
 slots.familyRecord__discussions = Slot(uri=DUFMECH.discussions, name="familyRecord__discussions", curie=DUFMECH.curie('discussions'),
                    model_uri=DUFMECH.familyRecord__discussions, domain=None, range=Optional[Union[Union[dict, Discussion], list[Union[dict, Discussion]]]])
 
@@ -1145,6 +1401,9 @@ slots.familyCuration__curation_history = Slot(uri=DUFMECH.curation_history, name
 
 slots.familyCuration__assertions = Slot(uri=DUFMECH.assertions, name="familyCuration__assertions", curie=DUFMECH.curie('assertions'),
                    model_uri=DUFMECH.familyCuration__assertions, domain=None, range=Optional[Union[Union[dict, FunctionalAssertion], list[Union[dict, FunctionalAssertion]]]])
+
+slots.familyCuration__causal_graphs = Slot(uri=DUFMECH.causal_graphs, name="familyCuration__causal_graphs", curie=DUFMECH.curie('causal_graphs'),
+                   model_uri=DUFMECH.familyCuration__causal_graphs, domain=None, range=Optional[Union[Union[dict, CausalGraph], list[Union[dict, CausalGraph]]]])
 
 slots.familyCuration__discussions = Slot(uri=DUFMECH.discussions, name="familyCuration__discussions", curie=DUFMECH.curie('discussions'),
                    model_uri=DUFMECH.familyCuration__discussions, domain=None, range=Optional[Union[Union[dict, Discussion], list[Union[dict, Discussion]]]])
@@ -1235,6 +1494,85 @@ slots.functionalAssertion__scope = Slot(uri=DUFMECH.scope, name="functionalAsser
 
 slots.functionalAssertion__evidence = Slot(uri=DUFMECH.evidence, name="functionalAssertion__evidence", curie=DUFMECH.curie('evidence'),
                    model_uri=DUFMECH.functionalAssertion__evidence, domain=None, range=Union[Union[dict, ClaimEvidence], list[Union[dict, ClaimEvidence]]])
+
+slots.causalGraph__graph_id = Slot(uri=DUFMECH.graph_id, name="causalGraph__graph_id", curie=DUFMECH.curie('graph_id'),
+                   model_uri=DUFMECH.causalGraph__graph_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_-]+$'))
+
+slots.causalGraph__title = Slot(uri=DUFMECH.title, name="causalGraph__title", curie=DUFMECH.curie('title'),
+                   model_uri=DUFMECH.causalGraph__title, domain=None, range=str)
+
+slots.causalGraph__scope = Slot(uri=DUFMECH.scope, name="causalGraph__scope", curie=DUFMECH.curie('scope'),
+                   model_uri=DUFMECH.causalGraph__scope, domain=None, range=str)
+
+slots.causalGraph__context = Slot(uri=DUFMECH.context, name="causalGraph__context", curie=DUFMECH.curie('context'),
+                   model_uri=DUFMECH.causalGraph__context, domain=None, range=str)
+
+slots.causalGraph__family_mapping = Slot(uri=DUFMECH.family_mapping, name="causalGraph__family_mapping", curie=DUFMECH.curie('family_mapping'),
+                   model_uri=DUFMECH.causalGraph__family_mapping, domain=None, range=str)
+
+slots.causalGraph__scope_status = Slot(uri=DUFMECH.scope_status, name="causalGraph__scope_status", curie=DUFMECH.curie('scope_status'),
+                   model_uri=DUFMECH.causalGraph__scope_status, domain=None, range=Union[str, "CausalScope"])
+
+slots.causalGraph__taxon = Slot(uri=DUFMECH.taxon, name="causalGraph__taxon", curie=DUFMECH.curie('taxon'),
+                   model_uri=DUFMECH.causalGraph__taxon, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^NCBITaxon:[0-9]+$'))
+
+slots.causalGraph__limitations = Slot(uri=DUFMECH.limitations, name="causalGraph__limitations", curie=DUFMECH.curie('limitations'),
+                   model_uri=DUFMECH.causalGraph__limitations, domain=None, range=str)
+
+slots.causalGraph__feedback_explanation = Slot(uri=DUFMECH.feedback_explanation, name="causalGraph__feedback_explanation", curie=DUFMECH.curie('feedback_explanation'),
+                   model_uri=DUFMECH.causalGraph__feedback_explanation, domain=None, range=Optional[str])
+
+slots.causalGraph__nodes = Slot(uri=DUFMECH.nodes, name="causalGraph__nodes", curie=DUFMECH.curie('nodes'),
+                   model_uri=DUFMECH.causalGraph__nodes, domain=None, range=Union[Union[dict, CausalNode], list[Union[dict, CausalNode]]])
+
+slots.causalGraph__edges = Slot(uri=DUFMECH.edges, name="causalGraph__edges", curie=DUFMECH.curie('edges'),
+                   model_uri=DUFMECH.causalGraph__edges, domain=None, range=Union[Union[dict, CausalEdge], list[Union[dict, CausalEdge]]])
+
+slots.causalNode__node_id = Slot(uri=DUFMECH.node_id, name="causalNode__node_id", curie=DUFMECH.curie('node_id'),
+                   model_uri=DUFMECH.causalNode__node_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_-]+$'))
+
+slots.causalNode__label = Slot(uri=DUFMECH.label, name="causalNode__label", curie=DUFMECH.curie('label'),
+                   model_uri=DUFMECH.causalNode__label, domain=None, range=str)
+
+slots.causalNode__node_type = Slot(uri=DUFMECH.node_type, name="causalNode__node_type", curie=DUFMECH.curie('node_type'),
+                   model_uri=DUFMECH.causalNode__node_type, domain=None, range=Union[str, "CausalNodeType"])
+
+slots.causalNode__grounding = Slot(uri=DUFMECH.grounding, name="causalNode__grounding", curie=DUFMECH.curie('grounding'),
+                   model_uri=DUFMECH.causalNode__grounding, domain=None, range=Optional[Union[str, list[str]]],
+                   pattern=re.compile(r'^[A-Za-z][A-Za-z0-9_.-]*:\S+$'))
+
+slots.causalEdge__edge_id = Slot(uri=DUFMECH.edge_id, name="causalEdge__edge_id", curie=DUFMECH.curie('edge_id'),
+                   model_uri=DUFMECH.causalEdge__edge_id, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_-]+$'))
+
+slots.causalEdge__subject = Slot(uri=DUFMECH.subject, name="causalEdge__subject", curie=DUFMECH.curie('subject'),
+                   model_uri=DUFMECH.causalEdge__subject, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_-]+$'))
+
+slots.causalEdge__predicate = Slot(uri=DUFMECH.predicate, name="causalEdge__predicate", curie=DUFMECH.curie('predicate'),
+                   model_uri=DUFMECH.causalEdge__predicate, domain=None, range=Union[str, "CausalPredicate"])
+
+slots.causalEdge__object = Slot(uri=DUFMECH.object, name="causalEdge__object", curie=DUFMECH.curie('object'),
+                   model_uri=DUFMECH.causalEdge__object, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Za-z0-9_-]+$'))
+
+slots.causalEdge__mechanism = Slot(uri=DUFMECH.mechanism, name="causalEdge__mechanism", curie=DUFMECH.curie('mechanism'),
+                   model_uri=DUFMECH.causalEdge__mechanism, domain=None, range=str)
+
+slots.causalEdge__directness = Slot(uri=DUFMECH.directness, name="causalEdge__directness", curie=DUFMECH.curie('directness'),
+                   model_uri=DUFMECH.causalEdge__directness, domain=None, range=Union[str, "CausalDirectness"])
+
+slots.causalEdge__support = Slot(uri=DUFMECH.support, name="causalEdge__support", curie=DUFMECH.curie('support'),
+                   model_uri=DUFMECH.causalEdge__support, domain=None, range=Union[str, "CausalSupport"])
+
+slots.causalEdge__evidence_kind = Slot(uri=DUFMECH.evidence_kind, name="causalEdge__evidence_kind", curie=DUFMECH.curie('evidence_kind'),
+                   model_uri=DUFMECH.causalEdge__evidence_kind, domain=None, range=Union[str, "EvidenceKind"])
+
+slots.causalEdge__evidence = Slot(uri=DUFMECH.evidence, name="causalEdge__evidence", curie=DUFMECH.curie('evidence'),
+                   model_uri=DUFMECH.causalEdge__evidence, domain=None, range=Union[Union[dict, ClaimEvidence], list[Union[dict, ClaimEvidence]]])
 
 slots.claimEvidence__reference = Slot(uri=DUFMECH.reference, name="claimEvidence__reference", curie=DUFMECH.curie('reference'),
                    model_uri=DUFMECH.claimEvidence__reference, domain=None, range=str,

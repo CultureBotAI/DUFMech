@@ -1,0 +1,39 @@
+Takemoto et al.2018, PMID29878158, doi:10.1093/nar/gky481
+https://pmc.ncbi.nlm.nih.gov/articles/PMC6159521/
+Inspected2026-10-12: relevant Results/Methods; Figures1/2 and Supplement
+S3/S4 visually. S3 supports Mg activity and stronger Mn effects under
+different conditions; S4 shows the compared protein-abundance controls.
+Minimal quotation: "three-nucleotide long".
+
+Curator paraphrase:
+Figure1 caption and cloning Methods identify C.glutamicum ATCC13032,
+NCgl1168, matching Q8NR49. This is the SAME strain as Ishino2018, not
+strainR. Purified cleavage-assay EndoMS is from pColdIV and the clamp is
+His-tagged; pColdI His-EndoMS was also prepared for other purposes.
+
+Figure1B compares G/T duplex with matched control and purified D144A.
+WT makes cleavage products; D144A greatly reduces detectable cleavage.
+D144 is inside PF01939. Figure1C uses40-bp substrate and labeled size
+markers; the paper assigns a THREE-nucleotide5-prime overhang, not the
+five-nucleotide product in Ishino2018. Keep both reports visible.
+Default reactions use37C,pH8,10mM magnesium acetate,100mM potassium
+acetate,60min; these differ from Ishino2018's Mn,pH6.4,30C context.
+
+Figure2A Cdel removes only L229/F230, leaving228 residues, unlike
+Ishino's five-residue deletion. Figure2D/E: clamp addition increases WT
+cleavage; Cdel retains basal cleavage but loses stimulation. Excess clamp
+inhibition and unobserved DNA-affinity shifts are discussed separately in
+the text/supplement; do not assert monotonic activation at any clamp dose.
+Co-IP requires crosslinking; a dynamic intracellular assembly was not filmed.
+
+Figures1A and2C use fluctuation-derived mutation RATES. EndoMS deletion
+and the two-residue Cdel raise rates; WT complementation lowers the
+deletion readout; D144A does not restore WT-complemented fidelity.
+Native phenotypes are indirect effects, not observations of a particular
+DSB-resolution intermediate. The text's similar mutant protein abundance
+claim relies on SupplementS4, not a fully reanalyzed quantitative dataset.
+The mismatched-duplex and cellular graphs must remain separate contexts.
+
+Supplementary raw data and figure panels beyond1/2 have not all been
+visually verified. The cause of the3-versus5 overhang discrepancy is open;
+do not call either publication retracted or corrected without evidence.

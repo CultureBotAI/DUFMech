@@ -1,0 +1,47 @@
+Morino et al.2010, PMID20624916, doi:10.1074/jbc.M110.118661
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2945585/
+Accessed2026-10-11. Curator paraphrase; minimal quotation: "antiport".
+Read Experimental Procedures, Results/Discussion, Table1 caption/footnotes.
+Original Table1 was visually inspected at2150x1387 using all54 official zoom
+tiles (50% manifest832862,satellite22). Main MrpE data are table rows, not Figure4,
+which tests MrpG. Supplementary S2-S6 were not available for direct inspection.
+
+OF4 tagged pGEMmrpTFCHS7 in E. coli KNabc; see2008 and identity ledgers.
+Transport uses2ml,50mM BTP-chloride,140mM choline chloride,5mM MgCl2,AO1uM,
+66ug vesicle protein,succinate2.5mM,NaCl10mM. Vesicles derive from LBK+50mM
+NaCl cultures. Methods says duplicate assays from two preparations; Table1c
+says duplicates from three independent experiments. Retain that disagreement.
+
+Table1 T113Y dequenching at pH8.0/8.5/9.0:0.1+/-0.1,2.0+/-0.3,4.9+/-0.4%;
+tagged parent44.5+/-8.5,48.9+/-8.2,41.6+/-4.5%. Thus the prose claim of less
+than5% WT fits8.0/8.5, not9.0 (about11.8% WT). State the actual pH range.
+T113Y ratios A-G:1.25,1.09,0.92,1.04,1.14,1.04,1.13, and all four BN columns
+are positive. Comparable detected abundance/complex patterns weaken a gross-loss
+explanation but do not demonstrate unchanged conformation or sodium binding.
+Footnote e allows a complex-positive score without resolving every subunit.
+T113Y Km is not determined; the measurement threshold is >10% WT activity.
+ND is not zero affinity or absence of sodium binding.
+
+Table1 growth: T113Y is negative at200 and500mM NaCl, parent positive at both.
+Culture Methods: LBK pH7.5,37C,200rpm. The uninspected S2 contains the detailed
+growth curves; no exact figure-specific duration, rate or replicate count is
+invented from the unrelated Figure4 MrpG experiment.
+
+P114A is classed normal, not a loss-of-function mutant: it supports growth at
+both salt levels, all BN forms, and appreciable antiport. Its apparent Km at
+pH8/8.5/9 is0.12/0.11/0.069mM, versus0.084/0.079/0.060 for tagged parent.
+The substitution contrast prevents calling Pro114 absolutely indispensable.
+
+T113A and P114G rows carry footnote b, attributing data to the2008 paper.
+Their entries nevertheless differ numerically from2008 Figure5: T113A E/F/G
+ratios0.11/0.07/0.20 here versus0.07/0.12/0.02 there; P114G apparent Km at
+pH8/8.5/9 is2.4/1.6/1.4mM here versus1.67/1.30/1.29 there. Do not average
+or silently reconcile these values. Table1 scores P114G growth positive at both
+200/500mM, while prose describes reduced resistance and2008 reports failure
+without shown growth data. Retain the conflict; no quantitative growth edge.
+
+The proposed conformational activation of A-D by E-G is a model, not a directly
+observed intermediate. T113Y's retained complexes and severe transport loss are
+useful discrimination, not atomic proof. PMC supplementary requests returned HTML;
+EuropePMC supplementaryFiles returned an XML error, not a ZIP. Lack of access is
+not evidence that the controls were absent from the study.

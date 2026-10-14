@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01878
+  path: curation/families/PF01878.yaml
+session:
+  id: 2026-10-11T192504Z-codex-404ba6
+  timestamp: '2026-10-11T19:25:04Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped Thy28 cellular causal effects for PF01878
+  details: Retained nine phenotypic graphs with seventeen indirect observed edges
+    from Toyota2012 and Fujita2015. Verified reference/domain mapping, inspected original
+    assay figures and supplements, and preserved construct uncertainty, partial rescue,
+    baseline effects, negative mammalian Pax5 contexts, and unresolved VcaM4I family
+    mapping. No domain-specific molecular mechanism or complete family review is claimed;
+    status remains IN_PROGRESS.
+  sections:
+  - causal_graphs
+  - discussions

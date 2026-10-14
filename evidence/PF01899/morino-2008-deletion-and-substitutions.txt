@@ -1,0 +1,49 @@
+Morino et al.2008, PMID18408029, doi:10.1128/JB.00294-08
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2446749/
+Accessed2026-10-11. Curator paraphrase; minimal quotation: "dequenching".
+Read relevant Methods, Results, Discussion and captions. Original Figures1,2,4,5
+were visually inspected. Supplementary deletion-boundary figures were not obtained.
+
+OF4 811M,Met- supplied the mrp operon expressed in E. coli KNabc
+(TG1 delta-nhaA delta-nhaB delta-chaA). Tagged parent pGEMmrpTFCHS7 has T7/FLAG/
+c-myc/His7/S on A/B/C/D/G; E/F are untagged. The final construct corrects an
+earlier His10-associated mutation. EF468713.1 confirms the His7 parent and the
+158-aa MrpE sequence. Some intermediate deletion prose retains His10 wording.
+
+Transport: everted vesicles from LBK+50mM NaCl cultures,37C;2ml reaction,
+50mM BTP-sulfate,140mM choline chloride,5mM MgCl2,1uM acridine orange,
+66ug vesicle protein. Succinate2.5mM generates acid-in delta-pH; Na addition
+causes dequenching. Excitation420/emission500nm. Duplicate assays from three
+independent preparations; Figure1 describes at least three preparations.
+This is coupled vesicle delta-pH collapse, not isolated MrpE transport.
+
+Figure1B displays pH6.5-9.0, using the Methods-default2.5mM NaCl addition.
+Delta-mrpE reduces the signal at pH7-9 but retains a small response at alkaline
+pH. WT is also near zero at6.5, so do not claim a decrease at every tested pH.
+Figure2 lane7 retains all other six subunits. Figure4B lane3 mainly shows A-D;
+a weak fuzzy upper region does not identify an active six-subunit complex.
+The authors' six-subunit explanation remains a hypothesis, not an observed edge.
+
+Figure5B instead uses10mM Na,pH8.5. T113A loses the detectable antiport response;
+P114G retains a much smaller response. Empty vector and tagged parent are controls.
+Figure5C WT-normalized T113A membrane signals: A0.52,B0.60,C0.66,D0.48,
+E0.07,F0.12,G0.02. The E/F/G reductions are retained as three measured endpoints,
+not proof that E directly stabilizes each partner. SDS-PAGE uses20ug protein.
+Figure5D loads30ug solubilized protein for BN-PAGE, displaying A/D probes:
+T113A lacks the full-complex bands while retaining the A-D subcomplex.
+P114G retains both full-complex forms, with E/F/G signals1.35/0.81/0.73.
+Detergent-dependent migration does not directly measure assembly kinetics.
+
+Figure5B inset: apparent Na Km(mM) at pH8.0/8.5/9.0 is0.084/0.079/0.060
+for parent and1.67/1.30/1.29 for P114G (about19.9/16.5/21.5-fold).
+These are half-maximal fluorescence responses, not equilibrium binding Kd.
+Growth-complementation loss for T113A/P114G is reported without shown data;
+no P114G growth edge is curated. One Results sentence prints T114G, but
+construct definitions and Figure5 identify P114G. Do not invent a third allele.
+Other six substitutions are reported to retain complementation without shown data.
+
+The four-TM MrpE cartoon is a historical prediction, not structural evidence.
+Later structures show two short TM helices and a cytoplasmic domain. Whole-complex
+activation and MrpE/F/G-to-A/D conformational coupling are proposed interpretations.
+Read the2010 ledger for reused-row numerical and growth discrepancies; do not
+pool those values or count them as independent replication.

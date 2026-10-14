@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01027
+  path: data/families/PF01027.yaml
+session:
+  id: 2026-10-11T083337Z-codex-5884ea
+  timestamp: '2026-10-11T08:33:37Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial same-agent scientific review of two YetJ transport effects
+  details: Saved review 20261011T083337Z-pf01027-yetj-ph-and-d171n-calcium-flux binds
+    the exact current graph, identity and primary-source extracts. Native validation
+    and overlay equality passed; source quotations and Figure 5C were inspected. Supplementary
+    methods, exact constructs and other lipid/member contexts remain unresolved. No
+    observed protonation/gating microstep, universal optimum, purified-protein sufficiency
+    or human-apoptosis transfer is asserted. IN_PROGRESS remains; no independent review
+    or publication is claimed.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T083337Z-pf01027-yetj-ph-and-d171n-calcium-flux/review.yaml

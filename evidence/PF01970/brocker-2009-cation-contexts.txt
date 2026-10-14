@@ -1,0 +1,41 @@
+Brocker et al.2009, PMID:19376865, doi:10.1128/JB.00113-09.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2698389/
+Inspected2026-10-12: full relevant Methods and Results, Table3;
+original Figures2 and4 visually inspected from PMC CDN images.
+
+Minimal quotations:
+"can grow on citrate"
+"did not grow"
+"same rate"
+"25- to 100-fold lower"
+
+Native ATCC13032 in-frame delta-tctCBA removes the whole operon,
+not TctA alone. Fig4A/C: deletion suppresses growth with5mM MgCl2 but
+increases growth with5mM SrCl2; the latter reaches aboutOD12 rather
+than WT about4. Calcium cultures grow well in both. CitH remains in
+the single-operon mutant; the strontium improvement mechanism is open.
+CGXII50mM citrate sole carbon/energy,30C120rpm,glucose/citrate pregrowth.
+Curves are representative of three independent experiments, not means
+with inferential statistics. Do not generalize cation-specific polarity.
+Double delta-citH/delta-tctCBA sometimes grows after20-30h despite an
+initial10h block, so permanent essentiality is not established.
+
+Heterologous Fig2: whole pXMJ19-tctCBA construct increases E.coli OD
+relative to vector with5mM CaCl2 or MgCl2. M9 contains50mM citrate AND
+1g/l Casamino Acids,37C120rpm; citrate is not the only carbon input.
+Figure/Results label MG1655 but culture Methods label DH5alpha for the
+cation test: exact host discrepancy is retained. Joint-system effects,
+not TctA-alone sufficiency or direct cation-citrate symport measurements.
+Sr/Zn/no-added-cation conditions show little enhancement.5mM nickel
+also blocks glucose growth and is a toxicity confound, not evidence
+that nickel-citrate cannot be transported. CitH results are separate.
+
+Table3: delta-citAB / WT tctA(cg3125=NCgl2724) mRNA ratio0.04.
+Microarrays used four independent culture comparisons, CGXII50mM
+citrate +50mM glucose +50mM MgCl2, exponential phase. Table's means
+use3-4 experiments, with its stated fold-change and P<=0.05 selection.
+This is a regulator-deletion effect on transcript abundance, not direct
+CitB-to-TctA protein activation. EMSA binding alone is not an activation
+edge. Primer-extension25mM carbon experiments are not conflated with
+the microarray conditions. No tctA-alone rescue, protein abundance,
+transport stoichiometry or elementary molecular step is measured here.

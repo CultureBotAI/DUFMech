@@ -4,7 +4,7 @@ name: Endonuclease dU
 short_name: Endo_dU
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01949
 counters:
   proteins: 778
@@ -27,3 +27,684 @@ description: This family includes Endonuclease dU from Archaeoglobus fulgidus (E
   these proteins [[cite:PUB00098031]]. Endo_dU, which cleave the 3'-side of deoxyuridine (dU) on DNA substrates,
   shows a typical RNase H-like fold, with a core structure of five beta-strands and three alpha-helices.
   It may participate in DNA repair [[cite:PUB00160071]]. This family was formerly known as DUF99.
+curation_history: history/records/PF01949
+discussions:
+- discussion_id: pf01949-mutation-and-assay-conflicts
+  prompt: Resolve the double-mutant identity and assay-label discrepancies before assigning a catalytic
+    residue mechanism.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: D10A retains cleavage; Figure7E says D10A+H166R while Results and S11 say D10A-H166A. No
+    H166 single-mutant effect or native folding control is established.
+  evidence:
+  - reference: PMID:39426726
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Main Figures4/5/7 and supplementS5/S11 were inspected. Zinc precipitation, pH4 versus
+      tested5-10, first salt lane5 versus50mM and S5 timing remain explicit.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Obtain actual construct sequences and independently measured product termini, active protein
+    concentration and bound-metal information. EDTA resistance alone is not proof of an apoenzyme. See
+    evidence/PF01949/li-2024-perturbations.txt.
+- discussion_id: pf01949-cellular-and-member-mapping
+  prompt: Verify historical constructs and the H26 deletion allele without conflating HaloDL1 biochemistry
+    with H. volcanii physiology.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Whole-protein activity is not isolated-domain catalysis; partial deletion, neighboring UDG
+    and relative TPM do not demonstrate a complete repair pathway.
+  evidence:
+  - reference: PMID:39426726
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: S12 sequence/neighborhood and the reference24-bp gap support HVO_0443 mapping; full allele,
+      polarity, RNA-seq replication and rescue remain unresolved.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/D4GRY4/
+    supports: SUPPORT
+    evidence_source: database
+    explanation: DS2 reference D4GRY4 maps PF01949 26-197; this is not an independently sequenced H26
+      clone.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Resolve current Pfam boundaries for WP_009487363.1 and TLY50285.1; retain their primary DUF99
+    assignment and do not substitute COG1628 coordinates. RNA-seq deposit PRJNA1072706 remains unanalyzed.
+- discussion_id: pf01949-remaining-family-coverage
+  prompt: Extend member-specific primary coverage and compare the earlier patent experiments.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Five assayed homologs and one cellular background do not establish family-wide characterization
+    or universal repair partners.
+  evidence:
+  - reference: https://patents.google.com/patent/CN113943722A/en
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Example1 is an earlier Afu/Halo ssDNA experiment; OLS17807.1 and PWI48783.1 are additional
+      leads, not the Loki/Thor clones in Li2024.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Review patent figures and sequence listings, imported PMID24464998 and later renamed-member literature.
+    Conservation, fold similarity, gene proximity and EX_DUF naming are not direct catalytic evidence.
+    All records and prior follow-ups remain in scope.
+causal_graphs:
+- graph_id: afu-ssdna-cleavage-2024
+  title: AfuEndo_dU cleaves dU-containing single-stranded DNA
+  scope: Purified whole-protein AfuEndo_dU in Li2024 Figures2/3.
+  context: His-tagged WP_010878930.1 produced in E. coli; 300-nM protein with30-nM 5'-FAM ssDNA bearing
+    dU at23,37C30min in bufferA with5-mMMgCl2. Figure3 adds time and substrate-length controls.
+  family_mapping: O28839 v1 / AF_1433 reference is181 aa and sequence-identical to WP_010878930.1; PF01949
+    3-172. Source species is A. fulgidus; VC16 reference does not independently verify the historical
+    synthesized construct.
+  taxon: NCBITaxon:2234
+  scope_status: MECHANISTIC
+  limitations: Whole protein, not domain-only activity. Fragment migration supports the cut position but
+    does not determine end chemistry, free-uracil excision or complete DNA repair. No native thermophile
+    physiology or universal family activity is inferred.
+  nodes:
+  - node_id: reaction
+    label: Purified AfuEndo_dU with dU23 ssDNA
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:O28839
+  - node_id: fragment
+    label: 23-nt fluorescent DNA cleavage product
+    node_type: STATE
+  edges:
+  - edge_id: afu-ss-product
+    subject: reaction
+    predicate: produces
+    object: fragment
+    mechanism: Cleavage immediately3' of dU generates a labeled fragment comigrating with the23-nt marker;
+      not UDG-like base excision.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: forming a 23-nt product.
+      explanation: Figures2B/3 and cleavage Methods; substrate controls and tested35/50/58-nt lengths
+        inspected. The35-nt positive contradicts a strict longer-than35 rule.
+      cache_path: evidence/PF01949/li-2024-cleavage.txt
+      cache_sha256: 227a676ab0046dc0fb79e2a0a72af2ecd7dd7ff2e91a2629704e6c329b3da71d
+- graph_id: halo-ssdna-cleavage-2024
+  title: HaloDL1 Endo_dU cleaves dU-containing single-stranded DNA
+  scope: Purified HaloEndo_dU in Li2024 Figures2/3, not H. volcanii cells.
+  context: His-tagged WP_009487363.1 from Halobacterium sp. DL1 expressed in E. coli; 300-nM enzyme/30-nM
+    5'-FAM dU23 ssDNA,37C30min in bufferA.
+  family_mapping: WP_009487363.1 is192 aa; Methods and S1/S9 identify it as DUF99/PF01949. Current exact
+    Pfam boundaries and UniProt mapping unresolved. COG1628 3-165 is not a Pfam boundary.
+  taxon: NCBITaxon:751944
+  scope_status: MECHANISTIC
+  limitations: Primary family assignment and accession support this whole-protein observation, not a domain-only
+    mechanism. Do not transfer this assay to H. volcanii. Product end chemistry and historical clone sequence
+    remain unverified.
+  nodes:
+  - node_id: reaction
+    label: Purified HaloDL1 Endo_dU with dU23 ssDNA
+    node_type: ACTIVITY
+    grounding:
+    - RefSeq:WP_009487363.1
+  - node_id: fragment
+    label: 23-nt fluorescent DNA cleavage product
+    node_type: STATE
+  edges:
+  - edge_id: halo-ss-product
+    subject: reaction
+    predicate: produces
+    object: fragment
+    mechanism: The purified preparation cuts dU ssDNA on its3' side, producing the marker-length fragment
+      under the tested conditions.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: forming a 23-nt product.
+      explanation: Figures2B/3, Methods, and full-length alignment S9 inspected; negative alternative
+        substrates remain assay-specific.
+      cache_path: evidence/PF01949/li-2024-cleavage.txt
+      cache_sha256: 227a676ab0046dc0fb79e2a0a72af2ecd7dd7ff2e91a2629704e6c329b3da71d
+- graph_id: gm-ssdna-cleavage-2024
+  title: GmEndo_dU cleaves dU-containing single-stranded DNA
+  scope: Purified bacterial TLY50285.1 in supplementS3.
+  context: His-tagged, E. coli-produced GmEndo_dU; 30-nM 5'-FAM dU23 ssDNA,37C30min; main assay Methods
+    specify300-nM protein and bufferA.
+  family_mapping: TLY50285.1,201 aa, Gammaproteobacteria bacterium MAG, E6K50_09375. Primary Methods/S1/S9
+    assign DUF99; S9 uses GbEndo_dU. Current exact Pfam coordinates unresolved; COG1628 19-201 is not
+    a substitute.
+  taxon: NCBITaxon:1913989
+  scope_status: MECHANISTIC
+  limitations: S3 has alternative-substrate controls but no enzyme-minus dU lane. Whole-protein activity
+    is not a verified isolated-domain reaction. No dsDNA, native-cell or residue-level result is transferred
+    from Afu/Halo.
+  nodes:
+  - node_id: reaction
+    label: Purified GmEndo_dU with dU23 ssDNA
+    node_type: ACTIVITY
+    grounding:
+    - GenBank:TLY50285.1
+  - node_id: fragment
+    label: 23-nt fluorescent DNA cleavage product
+    node_type: STATE
+  edges:
+  - edge_id: gm-ss-product
+    subject: reaction
+    predicate: produces
+    object: fragment
+    mechanism: The dU lane produces the marker-length fluorescent fragment; A, dI and AP controls do not
+      show the analogous product.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: forming a 23-nt product.
+      explanation: SupplementS3 left gel visually inspected, pp4; main ssDNA Results and accession-specific
+        expression Methods.
+      cache_path: evidence/PF01949/li-2024-cleavage.txt
+      cache_sha256: 227a676ab0046dc0fb79e2a0a72af2ecd7dd7ff2e91a2629704e6c329b3da71d
+- graph_id: loki-ssdna-cleavage-2024
+  title: LokiEndo_dU cleaves dU-containing single-stranded DNA
+  scope: Purified TFG01626.1 in supplementS3.
+  context: His-tagged whole protein expressed in E. coli; 30-nM dU23 ssDNA with5'-FAM,37C30min, standard300-nM
+    enzyme/bufferA Methods.
+  family_mapping: TFG01626.1 maps A0A524DLA3 v1,187 aa, PF01949 8-185; EU540_03240. Current Promethearchaeota
+    archaeon label corresponds to the paper's Candidatus Lokiarchaeota member, not the patent OdinLCB4
+    protein.
+  taxon: NCBITaxon:2053489
+  scope_status: MECHANISTIC
+  limitations: Reference mapping is not independent historical-clone verification. Alternative substrates
+    but no enzyme-minus dU lane in S3. No domain-only assay, complete repair or native-cell effect established.
+  nodes:
+  - node_id: reaction
+    label: Purified LokiEndo_dU with dU23 ssDNA
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:A0A524DLA3
+  - node_id: fragment
+    label: 23-nt fluorescent DNA cleavage product
+    node_type: STATE
+  edges:
+  - edge_id: loki-ss-product
+    subject: reaction
+    predicate: produces
+    object: fragment
+    mechanism: This separately assayed preparation forms the marker-length product from dU ssDNA.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: forming a 23-nt product.
+      explanation: SupplementS3 middle gel visually inspected, pp4; identity from expression Methods and
+        current cross-reference/profile matches.
+      cache_path: evidence/PF01949/li-2024-cleavage.txt
+      cache_sha256: 227a676ab0046dc0fb79e2a0a72af2ecd7dd7ff2e91a2629704e6c329b3da71d
+- graph_id: thor-ssdna-cleavage-2024
+  title: ThorEndo_dU cleaves dU-containing single-stranded DNA
+  scope: Purified TFG14500.1 in supplementS3.
+  context: E. coli-produced His-tagged whole protein; 30-nM 5'-FAM dU23 ssDNA,37C30min, standard300-nM
+    enzyme/bufferA Methods.
+  family_mapping: TFG14500.1 maps A0A524EN15 v1,203 aa, PF01949 22-197; EU537_03525, Thorarchaeota archaeon
+    OWC. Not the patent HeimdallB3 protein.
+  taxon: NCBITaxon:2053491
+  scope_status: MECHANISTIC
+  limitations: S3 lacks enzyme-minus dU control; alternative substrates were tested. Whole-protein cleavage
+    does not establish domain-only or native-cell activity; historical clone not independently sequenced
+    here.
+  nodes:
+  - node_id: reaction
+    label: Purified ThorEndo_dU with dU23 ssDNA
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:A0A524EN15
+  - node_id: fragment
+    label: 23-nt fluorescent DNA cleavage product
+    node_type: STATE
+  edges:
+  - edge_id: thor-ss-product
+    subject: reaction
+    predicate: produces
+    object: fragment
+    mechanism: The dU substrate yields the fluorescent23-nt product in this independent member assay;
+      specificity is limited to inspected substrates.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: forming a 23-nt product.
+      explanation: SupplementS3 right gel visually inspected, pp4, with main ssDNA Results and expression
+        Methods.
+      cache_path: evidence/PF01949/li-2024-cleavage.txt
+      cache_sha256: 227a676ab0046dc0fb79e2a0a72af2ecd7dd7ff2e91a2629704e6c329b3da71d
+- graph_id: afu-dsdna-cleavage-2024
+  title: AfuEndo_dU cuts the dU-bearing strand of a duplex
+  scope: Purified AfuEndo_dU in Figure6, separate from ssDNA assays.
+  context: 300-nM enzyme/30-nM duplex, dU oppositeG with5'-FAM on the lesion strand;37C60min. Complement-labeled
+    duplex is a separate control.
+  family_mapping: WP_010878930.1 / O28839 v1, PF01949 3-172, whole tagged protein.
+  taxon: NCBITaxon:2234
+  scope_status: MECHANISTIC
+  limitations: No analogous opposite-strand cleavage is detected, but no universal mismatch activity or
+    complete repair pathway follows. End chemistry remains unknown; upper bands may reflect incomplete
+    denaturation.
+  nodes:
+  - node_id: reaction
+    label: AfuEndo_dU with lesion-labeled dU/G duplex
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:O28839
+  - node_id: fragment
+    label: Labeled23-nt lesion-strand fragment
+    node_type: STATE
+  edges:
+  - edge_id: afu-ds-product
+    subject: reaction
+    predicate: produces
+    object: fragment
+    mechanism: The enzyme cleaves the dU-containing strand3' to the lesion while the independently labeled
+      opposite strand lacks the corresponding product.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: forming a 23-nt product.
+      explanation: Figure6A/B visually inspected with60-min caption; supplementS6A includes ordinary-mismatch
+        negatives and a dU positive control.
+      cache_path: evidence/PF01949/li-2024-cleavage.txt
+      cache_sha256: 227a676ab0046dc0fb79e2a0a72af2ecd7dd7ff2e91a2629704e6c329b3da71d
+- graph_id: halo-dsdna-cleavage-2024
+  title: HaloDL1 Endo_dU cuts the dU-bearing strand of a duplex
+  scope: Purified HaloEndo_dU in Figure6, not H. volcanii physiology.
+  context: 300-nM enzyme and30-nM dU/G duplex, lesion strand5'-FAM;37C60min, not30min. Opposite-strand
+    label tested independently.
+  family_mapping: WP_009487363.1,192 aa; paper Methods/S1/S9 DUF99 assignment. Exact current Pfam boundary
+    remains unresolved; no COG-to-Pfam coordinate substitution.
+  taxon: NCBITaxon:751944
+  scope_status: MECHANISTIC
+  limitations: Whole-protein assay; no independently established reaction end chemistry or repair completion.
+    No dsDNA result is transferred to the other three assayed homologs.
+  nodes:
+  - node_id: reaction
+    label: HaloDL1 Endo_dU with lesion-labeled dU/G duplex
+    node_type: ACTIVITY
+    grounding:
+    - RefSeq:WP_009487363.1
+  - node_id: fragment
+    label: Labeled23-nt lesion-strand fragment
+    node_type: STATE
+  edges:
+  - edge_id: halo-ds-product
+    subject: reaction
+    predicate: produces
+    object: fragment
+    mechanism: The lesion strand yields the23-nt fluorescent fragment; the complement-label experiment
+      does not show the corresponding cut.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: forming a 23-nt product.
+      explanation: Figure6A/B and supplementS6B inspected with caption/Methods; lesion-strand product
+        is distinct from a mismatch-repair claim.
+      cache_path: evidence/PF01949/li-2024-cleavage.txt
+      cache_sha256: 227a676ab0046dc0fb79e2a0a72af2ecd7dd7ff2e91a2629704e6c329b3da71d
+- graph_id: afu-assay-perturbations-2024
+  title: Four separate conditions reduce the AfuEndo_dU cleavage readout
+  scope: Figure4A, Figure5A/B and supplementS5B, separate cell-free comparisons.
+  context: 300-nM purified His-AfuEndo_dU/30-nM dU ssDNA. Zinc and salt assays at37C30min; temperature
+    reaction30min; preheating followed by37C60min assay. Perturbations are not combined.
+  family_mapping: O28839 v1 / WP_010878930.1, PF01949 3-172, whole recombinant protein.
+  taxon: NCBITaxon:2234
+  scope_status: PHENOTYPIC
+  limitations: Zinc precipitation confounds active-site inhibition. Heat effects do not identify a molecular
+    step or native thermophile behavior. First NaCl label5 versus caption50mM is avoided; S5 last time50
+    versus60min is discrepant. EDTA activity does not prove metal absence.
+  nodes:
+  - node_id: zinc
+    label: Added5-mM ZnCl2 versus no added metal
+    node_type: PERTURBATION
+  - node_id: temperature
+    label: Reaction at65C versus37C
+    node_type: PERTURBATION
+  - node_id: salt
+    label: 400-mM versus200-mM NaCl
+    node_type: PERTURBATION
+  - node_id: preheat
+    label: 65C preincubation versus zero-time control
+    node_type: PERTURBATION
+  - node_id: readout
+    label: AfuEndo_dU23-nt product in each matched assay
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:O28839
+  edges:
+  - edge_id: afu-zinc-readout
+    subject: zinc
+    predicate: decreases
+    object: readout
+    mechanism: The zinc-containing reaction has less product; authors report protein precipitation, so
+      direct catalytic inhibition is not established.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: Endo_dU
+      explanation: Figure4A and optimal-condition Results/Methods; zinc versus no-added-metal bufferB
+        comparison.
+      cache_path: evidence/PF01949/li-2024-perturbations.txt
+      cache_sha256: 07b2b96eded75869d32f106b560fbc93d9bc92540599f8595f7fe9cbba8ebbbb
+  - edge_id: afu-hot-reaction
+    subject: temperature
+    predicate: decreases
+    object: readout
+    mechanism: Running the reaction at65C reduces product relative to37C; this does not distinguish destabilization
+      from altered substrate handling or catalysis.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: Endo_dU
+      explanation: Figure5A left panel and temperature Methods,30-min reactions in bufferB.
+      cache_path: evidence/PF01949/li-2024-perturbations.txt
+      cache_sha256: 07b2b96eded75869d32f106b560fbc93d9bc92540599f8595f7fe9cbba8ebbbb
+  - edge_id: afu-high-salt
+    subject: salt
+    predicate: decreases
+    object: readout
+    mechanism: Raising NaCl from200 to400mM reduces product under the reported concentration series; no
+      direct binding mechanism is resolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: Endo_dU
+      explanation: Figure5B left panel, caption and bufferC Methods; excludes the discrepant first-lane
+        concentration.
+      cache_path: evidence/PF01949/li-2024-perturbations.txt
+      cache_sha256: 07b2b96eded75869d32f106b560fbc93d9bc92540599f8595f7fe9cbba8ebbbb
+  - edge_id: afu-preheat-loss
+    subject: preheat
+    predicate: decreases
+    object: readout
+    mechanism: Preincubation at65C reduces subsequent37C cleavage relative to the zero-time preparation;
+      the first nonzero lane is nominally10min by caption.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: Endo_dU
+      explanation: SupplementS5B left panel, pp5, with S5A37C preincubation control. Later timing conflict
+        and absent folding assay retained.
+      cache_path: evidence/PF01949/li-2024-perturbations.txt
+      cache_sha256: 07b2b96eded75869d32f106b560fbc93d9bc92540599f8595f7fe9cbba8ebbbb
+- graph_id: halo-assay-perturbations-2024
+  title: Four separate conditions reduce the HaloDL1 cleavage readout
+  scope: Figure4B, Figure5A/B and supplementS5B, separate whole-protein assays.
+  context: Purified His-HaloEndo_dU,300-nM protein/30-nM dU ssDNA; each condition compared with its matched
+    control, not a four-treatment combination. Standard37C30min, except temperature series and60-min readout
+    after preheating.
+  family_mapping: WP_009487363.1, Halobacterium sp. DL1; primary DUF99 assignment with exact current Pfam
+    boundary unresolved. Not the H. volcanii cellular candidate.
+  taxon: NCBITaxon:751944
+  scope_status: PHENOTYPIC
+  limitations: Zinc-associated precipitation, salt-label discrepancy and S5 time-label conflict prevent
+    stronger molecular interpretation. Reaction temperature differs from protein preincubation. Native
+    halophile physiology and absence of bound metal are not established.
+  nodes:
+  - node_id: zinc
+    label: Added5-mM ZnCl2 versus no added metal
+    node_type: PERTURBATION
+  - node_id: temperature
+    label: Reaction at65C versus37C
+    node_type: PERTURBATION
+  - node_id: salt
+    label: 400-mM versus200-mM NaCl
+    node_type: PERTURBATION
+  - node_id: preheat
+    label: 65C preincubation versus zero-time control
+    node_type: PERTURBATION
+  - node_id: readout
+    label: HaloDL1 Endo_dU23-nt product in each matched assay
+    node_type: ACTIVITY
+    grounding:
+    - RefSeq:WP_009487363.1
+  edges:
+  - edge_id: halo-zinc-readout
+    subject: zinc
+    predicate: decreases
+    object: readout
+    mechanism: The zinc condition reduces product, with reported precipitation preventing assignment of
+      direct active-site inhibition.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: Endo_dU
+      explanation: Figure4B and optimal-condition Results/Methods,5-mMZnCl2 versus no-added-metal bufferB.
+      cache_path: evidence/PF01949/li-2024-perturbations.txt
+      cache_sha256: 07b2b96eded75869d32f106b560fbc93d9bc92540599f8595f7fe9cbba8ebbbb
+  - edge_id: halo-hot-reaction
+    subject: temperature
+    predicate: decreases
+    object: readout
+    mechanism: The65C reaction has less product than37C; the molecular reason is unresolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: Endo_dU
+      explanation: Figure5A right panel and temperature Methods,30-min bufferB reactions.
+      cache_path: evidence/PF01949/li-2024-perturbations.txt
+      cache_sha256: 07b2b96eded75869d32f106b560fbc93d9bc92540599f8595f7fe9cbba8ebbbb
+  - edge_id: halo-high-salt
+    subject: salt
+    predicate: decreases
+    object: readout
+    mechanism: The400-mMNaCl reaction has less product than the200-mM reaction; native salinity requirements
+      and direct DNA binding effects are not inferred.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: Endo_dU
+      explanation: Figure5B right panel with caption concentration series and bufferC Methods.
+      cache_path: evidence/PF01949/li-2024-perturbations.txt
+      cache_sha256: 07b2b96eded75869d32f106b560fbc93d9bc92540599f8595f7fe9cbba8ebbbb
+  - edge_id: halo-preheat-loss
+    subject: preheat
+    predicate: decreases
+    object: readout
+    mechanism: Protein preincubation at65C reduces cleavage measured later at37C; first nonzero interval
+      is nominally10min in the caption, not an independently determined thermal half-life.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: Endo_dU
+      explanation: SupplementS5B right gel, pp5; zero-time and S5A37C controls inspected. Later50/60-min
+        label disagreement retained.
+      cache_path: evidence/PF01949/li-2024-perturbations.txt
+      cache_sha256: 07b2b96eded75869d32f106b560fbc93d9bc92540599f8595f7fe9cbba8ebbbb
+- graph_id: afu-double-mutant-readout-2024
+  title: A double-substituted Afu preparation loses cleavage activity
+  scope: Figure7E preparation-level comparison, with disputed second substitution.
+  context: WT versus double-substituted His-AfuEndo_dU, dU ssDNA,37C30min. D10A single-mutant lane retains
+    cleavage. S11 protein gel uses the H166A label.
+  family_mapping: Reference O28839 v1 / WP_010878930.1 has D10 and H166 within PF01949 3-172. Results/S11
+    D10A-H166A conflicts with Figure7E D10A+H166R; no unambiguous double-mutant sequence is assigned.
+  taxon: NCBITaxon:2234
+  scope_status: PHENOTYPIC
+  limitations: The decreased product is observed, but exact mutant identity and molecular mechanism are
+    unresolved. Similar SDS-PAGE migration does not exclude folding or active-concentration effects. No
+    separate H166 requirement or obligatory D10 catalysis is established.
+  nodes:
+  - node_id: double-preparation
+    label: Figure7E double-mutant preparation with H166 identity unresolved
+    node_type: PERTURBATION
+  - node_id: product
+    label: AfuEndo_dU23-nt product relative to WT
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:O28839
+  edges:
+  - edge_id: double-preparation-loss
+    subject: double-preparation
+    predicate: decreases
+    object: product
+    mechanism: The double-preparation lane has substantially less product than WT; the arrow does not
+      assign the loss independently to D10 or to a confidently identified H166 allele.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: D10A-H166A
+      explanation: Results identity is qualified by visually inspected Figure7E D10A+H166R and supplementS11
+        H166A; observed product loss, not resolved residue catalysis.
+      cache_path: evidence/PF01949/li-2024-perturbations.txt
+      cache_sha256: 07b2b96eded75869d32f106b560fbc93d9bc92540599f8595f7fe9cbba8ebbbb
+- graph_id: hvol-udg-tpm-2024
+  title: Partial Endo_dU deletion changes the UDG RNA response to bisulfite
+  scope: H. volcanii H26 delta-pyrE2, Figure8B RNA-seq contrasts.
+  context: Internal Endo_dU deletion versus parental strain at0.5-mMSB, and mutant0.5-mMSB versus mutant
+    noSB. SB added nearOD6000.5;45C Hv-YPC, RNA sampled48h later, TPM relative normalization.
+  family_mapping: DS2 reference HVO_0443 / D4GRY4 v1, PF01949 26-197. S12 sequence/neighborhood and24-bp
+    gap to HVO_0444 support tested-locus mapping. Full H26 allele not independently reconstructed; reference
+    taxon shown.
+  taxon: NCBITaxon:309800
+  scope_status: PHENOTYPIC
+  limitations: Internal deletion is not a full-gene null. Relative TPM is not absolute transcription,
+    UDG activity or repair flux. RNA-seq replicate/error-bar details remain unresolved; no genetic rescue
+    or exclusion of polarity. Proximity does not establish an operon or direct interaction.
+  nodes:
+  - node_id: deletion-at-sb
+    label: Partial Endo_dU deletion at0.5-mMSB versus parental same dose
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GRY4
+  - node_id: sb-in-mutant
+    label: 0.5-mMSB in partial-deletion cells versus mutant noSB
+    node_type: PERTURBATION
+  - node_id: udg-tpm
+    label: Relative UDG transcript abundance in TPM
+    node_type: STATE
+  edges:
+  - edge_id: deletion-udg-response
+    subject: deletion-at-sb
+    predicate: increases
+    object: udg-tpm
+    mechanism: At matched0.5-mMSB, the partial-deletion strain has greater UDG TPM than parental H26;
+      mediator and polar effects are unresolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: the transcription level of the UDG gene
+      explanation: Figure8B genotype contrast visually inspected with cellular Methods and S12; TPM does
+        not establish compensatory repair.
+      cache_path: evidence/PF01949/li-2024-cellular.txt
+      cache_sha256: 33fe9d3557a6f7e59ce8bfcf7e743417527d1b703a5552025eada312bd3b7214
+  - edge_id: mutant-sb-udg-response
+    subject: sb-in-mutant
+    predicate: increases
+    object: udg-tpm
+    mechanism: Within the partial-deletion background, adding0.5-mMSB increases relative UDG RNA abundance
+      over noSB. This is not an independently proven feedback loop.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: the transcription level of the UDG gene
+      explanation: Figure8B within-mutant dose contrast; distinct from the genotype contrast at fixed0.5-mMSB.
+        No inferred repair-completion edge.
+      cache_path: evidence/PF01949/li-2024-cellular.txt
+      cache_sha256: 33fe9d3557a6f7e59ce8bfcf7e743417527d1b703a5552025eada312bd3b7214
+- graph_id: hvol-late-od-2024
+  title: Partial Endo_dU deletion lowers late culture optical density
+  scope: SupplementS13 no-SB comparison in H. volcanii H26.
+  context: Parental versus internal-deletion strain in Hv-YPC at45C without addedSB; OD600 at105h. Three
+    biological replicates, mean andSEM; no rescue condition shown.
+  family_mapping: HVO_0443 / D4GRY4 v1 reference, PF01949 26-197; mapping supported by S12 flanks and
+    adjacentUDG, but full experimental allele not independently reconstructed. Partial deletion, not domain-isolated
+    loss.
+  taxon: NCBITaxon:309800
+  scope_status: PHENOTYPIC
+  limitations: Optical density is not viable count or an independently fitted growth rate. No-SB baseline
+    defect does not prove SB-specific hypersensitivity;0.5-mMSB curves approach similar lateOD. Repair
+    chemistry, polarity and genetic rescue remain unresolved.
+  nodes:
+  - node_id: partial-deletion
+    label: Internal Endo_dU deletion versus parental no-SB culture
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:D4GRY4
+  - node_id: od
+    label: No-SB culture OD600 at105h
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: deletion-late-od
+    subject: partial-deletion
+    predicate: decreases
+    object: od
+    mechanism: The mutant's late no-SB culture has lower optical density than the parental culture; the
+      biological mediator is unresolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39426726
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11585767/
+      snippet: cell density in the stationary phase
+      explanation: SupplementS13 pp11 visually inspected with caption/Methods and Discussion; measured
+        late OD endpoint, not independently established viable cell count.
+      cache_path: evidence/PF01949/li-2024-cellular.txt
+      cache_sha256: 33fe9d3557a6f7e59ce8bfcf7e743417527d1b703a5552025eada312bd3b7214
+curation_events:
+- timestamp: '2026-10-12T07:56:15Z'
+  curator: Codex
+  action: CREATE
+  outcome: needs_followup
+  summary: Curate scoped Endo_dU cleavage, assay perturbation and cellular phenotype graphs.
+  history_record: history/records/PF01949/2026-10-12T075615Z-codex-5d5411.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T08:08:33Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial Endo_dU scientific self-review with mutation, mapping and physiological limits.
+  history_record: history/records/PF01949/2026-10-12T080833Z-codex-0cffa7.yaml
+  event_index: 0
+  llm_assisted: true

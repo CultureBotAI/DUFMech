@@ -1,0 +1,21 @@
+PF01579 / DUF19 member identity, inspected 2026-10-11
+https://rest.uniprot.org/uniprotkb/O01454.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/O01454/entry/pfam/PF01579/
+O01454 = exc-13 / C03G6.5, C. elegans, NCBITaxon:6239.
+203 residues; sequence version 4; entry version 126.
+UniProt and InterPro sequences agree exactly.
+Sequence MD5: a37a4833a4f4e719f9ced2448d597e19
+O01454 Pfam:PF01579 interval: 33-198, inclusive
+
+https://rest.uniprot.org/uniprotkb/O16405.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/O16405/entry/pfam/PF01579/
+O16405 = exh-1 / C36C5.5, C. elegans N2 reference, NCBITaxon:6239.
+204 residues; sequence version 1; entry version 134.
+UniProt and InterPro sequences agree exactly.
+Sequence MD5: 0c53b1643eee366a8e71b0361bee5b2d
+O16405 Pfam:PF01579 interval: 34-198, inclusive
+O16406 is the different gene C36C5.12; it must not replace O16405.
+
+Both map to IPR002542/PF01579; they are distinct family members. Database
+annotations ground the tested gene names, not the full experimental construct
+sequence, tag junction, mutant product or a whole-family biochemical function.

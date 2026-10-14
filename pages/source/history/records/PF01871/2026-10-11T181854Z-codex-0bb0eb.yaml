@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01871
+  path: curation/families/PF01871.yaml
+session:
+  id: 2026-10-11T181854Z-codex-0bb0eb
+  timestamp: '2026-10-11T18:18:54Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate six AMMECR1 phenotypic causal contexts with nine observed indirect
+    effects
+  details: Inspected human localization, zebrafish splice/rescue and mouse ESC marker
+    primary experiments; verified versioned reference sequences and Pfam boundaries.
+    Retained dose, isoform, rescue, off-target and biochemical gaps. Partial family
+    curation remains IN_PROGRESS.

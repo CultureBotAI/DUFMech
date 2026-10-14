@@ -1,0 +1,60 @@
+PF01949 identity and member mapping, inspected 2026-10-12 UTC
+
+Frozen record: Pfam:PF01949 / Endo_dU / Endonuclease dU, former DUF99,
+UPF0215, InterPro:IPR002802. EX_DUF and UNSCORED are imported states,
+not a scientific review. Snapshot interpro-pfam-duf-2026-10-10 and its
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+digest are unchanged. Current Pfam metadata links PMID39426726 and
+PMID24464998. The latter's fold classification is not an enzyme assay.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01949/
+
+Li2024 identifies five synthesized, codon-optimized His-tagged proteins by
+accession in Protein expression and purification. The historical constructs
+were reported Sanger-verified; this review has not read their raw sequences.
+Whole proteins were tested, not isolated PF01949 domains.
+
+AfuEndo_dU: WP_010878930.1, Archaeoglobus fulgidus, 181 aa. Current
+UniProt O28839 sequence version1 is sequence-identical to the retrieved NCBI
+accession. AF_1433 / VC16 reference taxon224325; species taxon2234. Current
+InterPro PF01949 coordinates3-172. D10 and H166 are present in this reference
+and within that interval. The PDB2QH9 fold is not a substrate-bound catalytic
+intermediate. The tag is not included in these native sequence coordinates.
+https://rest.uniprot.org/uniprotkb/O28839.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/O28839/
+
+HaloEndo_dU: WP_009487363.1, Halobacterium sp. DL1, taxon751944, 192 aa.
+GmEndo_dU: TLY50285.1, Gammaproteobacteria bacterium MAG, taxon1913989,
+201 aa, locus E6K50_09375. Current NCBI records and the paper's Methods,
+S1 and S9 support identity and its DUF99 assignment. Current UniProt
+cross-reference/family queries did not resolve these two proteins. Their exact
+current PF01949 boundaries remain unknown; CDD COG1628 intervals3-165 and
+19-201 respectively are NOT interchangeable with Pfam coordinates.
+https://www.ncbi.nlm.nih.gov/protein/WP_009487363.1
+https://www.ncbi.nlm.nih.gov/protein/TLY50285.1
+
+LokiEndo_dU: TFG01626.1 maps to UniProt A0A524DLA3 v1, 187 aa,
+PF01949 8-185, EU540_03240, taxon2053489. Current organism label is
+Promethearchaeota archaeon; the paper calls it Candidatus Lokiarchaeota.
+ThorEndo_dU: TFG14500.1 maps A0A524EN15 v1, 203 aa, PF01949 22-197,
+EU537_03525, Thorarchaeota archaeon OWC, taxon2053491. These are current
+reference mappings, not independent verification of the synthesized clones.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/A0A524DLA3/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/A0A524EN15/
+
+H. volcanii cellular experiment is different from the HaloDL1 biochemistry.
+DS2 reference D4GRY4 v1 / HVO_0443 / WP_004044481.1 / ADE04888.1 is
+203 aa, PF01949 26-197, taxon309800. KEGG positions393349-393960;
+adjacent udg3/HVO_0444/D4GRY5 is393985-394581: 24 intervening bases,
+matching Figure8A. SupplementS12 shows the matching N/C-terminal protein
+sequence and adjacent UDG at the edited locus. This supports HVO_0443
+mapping by sequence and neighborhood; the full H26 allele/deletion junction
+has not been independently reconstructed. H26 delta-pyrE2 is the tested
+background and DS2 the RNA-seq reference. The paper's internal deletion
+is not a full-gene null; flanking fragments and neighboring genes remain.
+https://rest.uniprot.org/uniprotkb/D4GRY4.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/D4GRY4/
+https://rest.kegg.jp/get/hvo:HVO_0443
+https://rest.kegg.jp/get/hvo:HVO_0444
+
+Source facts and mappings do not establish family-wide catalysis, physiological
+repair partners or universal residue requirements.

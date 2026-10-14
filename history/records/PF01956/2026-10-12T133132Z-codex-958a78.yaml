@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01956
+  path: data/families/PF01956.yaml
+session:
+  id: 2026-10-12T133132Z-codex-958a78
+  timestamp: '2026-10-12T13:31:32Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: no_change
+  summary: Retain partial scientific review of EMC and EMC3 causal contexts
+  details: Retained native structured report 20261012T133200Z-pf01956-emc-reconstitution-and-emc3-variant-contexts
+    for semantic digest 8f0001e203869e12c577d44395beb6c60a0dd9b7b1500f16dd7781d8ed0a481d.
+    Reviewed seven graphs with 29 observed edges and four evidence ledgers against
+    selected primary figures and Methods. This is a same-agent partial scientific
+    assessment, NEEDS_FOLLOWUP, not independent endorsement or a REVIEWED promotion.
+    Historical constructs, source details, TMCO1, archaeal and other EMC contexts
+    remain open.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T133200Z-pf01956-emc-reconstitution-and-emc3-variant-contexts/review.yaml

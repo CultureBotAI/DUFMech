@@ -4,7 +4,7 @@ name: PhoU domain
 short_name: PhoU
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01895
 counters:
   proteins: 24850
@@ -25,3 +25,869 @@ description: This family contains phosphate regulatory proteins including PhoU. 
   to play a role in the regulation of phosphate uptake. The PhoU domain is composed of a three helix bundle
   [[cite:PUB00031207]]. The PhoU protein contains two copies of this domain. The domain binds to an iron
   cluster via its conserved E/DXXXD motif.
+curation_history: history/records/PF01895
+discussions:
+- discussion_id: phou-chemical-and-interface-uncertainty
+  prompt: Resolve metal, phosphate and partner-interaction mechanisms without promoting reporter effects
+    or models to atomic causal steps.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: E. coli Mn-probe data and mycobacterial net RegX3 phosphorylation support distinct experimentally
+    scoped effects. Neither establishes universal iron occupancy, direct Pi binding, a PhoU phosphatase
+    active site, or inhibition of SenX3 autophosphorylation. Whole proteins carry two PF01895 repeats,
+    and mutations can affect folding or abundance.
+  evidence:
+  - reference: PMID:24563032
+    supports: PARTIAL
+    evidence_source: primary_methods_results_and_original_figures
+    explanation: Figure5 probe/dose limits, Figure6 plasmid-versus-integrant distinction and Figure7 qualitative
+      fractionation are retained. Unavailable supplementary Mg/SEC curves and the coelution condition
+      discrepancy need inspection.
+  - reference: PMID:25953406
+    supports: PARTIAL
+    evidence_source: primary_methods_results_and_original_figures
+    explanation: Separate AP, growth and BACTH results prevent a uniform loss-of-function claim. DCA/docking
+      remains a hypothesis; Figure5B omits R148E. Figure2 medium discrepancy and exact fusion orientation/dose
+      need resolution.
+  - reference: PMID:40588129
+    supports: PARTIAL
+    evidence_source: primary_methods_results_and_original_figures
+    explanation: PhoU1/Pi alters net RegX3 phosphorylation without reducing SenX3 autophosphorylation.
+      Direct Pi binding, a predicted alpha6 site and the balance of phosphotransfer versus phosphatase
+      activities need discriminating biochemical tests.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Recover supplements, verify constructs and matched protein concentrations, assay occupancy and
+    isolated reaction rates, and retain negative/condition-dependent results. Do not draw metal-to-membrane-to-kinase
+    arrows by joining distinct assays. Exact references and the access audit are retained under evidence/PF01895.
+- discussion_id: phou-family-and-species-coverage
+  prompt: Extend the evidence review to other PhoU members and physiological contexts without merging
+    PF01865/PitR into PF01895.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Three mapped reference proteins in two species do not establish the mechanism of24850 frozen
+    proteins. E. coli combined PstSCAB/PhoU reconstitution and M. smegmatis PstB-deficient overexpression
+    are different conditions, not interchangeable requirements or a controlled contradiction.
+  evidence:
+  - reference: PMID:19047379
+    supports: PARTIAL
+    evidence_source: selected_primary_transport_assay
+    explanation: Whole-cell uptake is curated; additional growth, suppressor, mutant and long-term accumulation
+      contexts remain unreviewed or reported without shown data.
+  - reference: doi:10.71150/jm.2505013
+    supports: PARTIAL
+    evidence_source: abstract_lead_only
+    explanation: Salmonella signaling/polyphosphate/virulence claims require full assay review and exact
+      member mapping before graph transfer.
+  - reference: PMID:42017666
+    supports: PARTIAL
+    evidence_source: related_pf01865_review_and_final_publication_lead
+    explanation: The final S. aureus publication replaces its preprint; conventional PhoU and PitR require
+      separate identities and allele scopes, and reused experiments are not independent replications.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Review mycobacterial2017 paralog phenotypes, conventional S. aureus PhoU, other structural homologs
+    and persistence/virulence studies. Preserve imported identities/counters and the graphless state of
+    unreviewed families. This is partial same-agent scientific curation, not exhaustive family coverage,
+    independent endorsement or publication.
+causal_graphs:
+- graph_id: ec-phou-uptake
+  title: Loss of PhoU increases cellular phosphate uptake
+  scope: Rice2009 Figure7; BM263 delta-phoU versus BM261 PhoU+ in the E. coli BW25113-derived transporter-control
+    background.
+  context: Both strains have PpstS::Ptac,delta-pitA,delta-pitB,pRR48. Overnight MOPS LoPi/IPTG200uM is
+    followed by2h phosphate starvation at37 C. Uptake uses32Pi100nM,OD6000.01,room temperature,15/30s
+    collection and three trials.
+  family_mapping: Whole E. coli PhoU reference P0A9K7 sequenceversion1,241 aa, equals NP_418180.1/AAC76747.1/BAE77564.1.
+    PF01895 maps26-112 and129-212. Experimental genomes were not independently sequenced; deleting the
+    whole protein does not isolate either repeat.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: PstS normalized to BLA appears comparable, but Figure7B band assignments are tentative
+    and do not quantify the full transporter. This is cellular uptake, not purified PstB ATPase inhibition.
+    A12min accumulation result is reported without shown data and is not a second curated edge.
+  nodes:
+  - node_id: delete-phou
+    label: Delete phoU in the transporter-controlled strain
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: cellular-pi-uptake
+    label: Initial cell-associated radiophosphate uptake rate
+    node_type: PROCESS
+  edges:
+  - edge_id: deletion-increases-uptake
+    subject: delete-phou
+    predicate: increases
+    object: cellular-pi-uptake
+    mechanism: The deletion derivative has a reported2.91 versus2.41nmol/min/OD600 uptake slope. Uninduced
+      BM261 gives0.16. This supports an indirect negative contribution of intact PhoU to uptake in this
+      controlled background, without identifying its molecular target.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:19047379
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2632118/
+      snippet: higher
+      explanation: Transport Methods and Results plus visually inspected Figure7A show the induced deletion-versus-parent
+        contrast. Figure7B bounds the abundance control; means and SD derive from three trials.
+      cache_path: evidence/PF01895/rice-2009-uptake.txt
+      cache_sha256: bae70509ec368e87c77f7de6482ac57b3ef6716dd194ffc482f805b64f734835
+- graph_id: ec-phou-mn-probe
+  title: Manganese changes an engineered PhoU fluorescence probe
+  scope: Gardner2014 Figure5; purified C-terminal His6 PhoU-F194W and Quad-F194W preparations.
+  context: At21 C in20mM sodium phosphate pH7.4,0.5MNaCl,0.1mMDTT,10%glycerol; MnCl2 at0/5/25/75/150uM,excitation280nm,mean
+    emission345-355nm,buffer/dilution corrections,triplicate. F194W70ug and QuadW26.4ug are different
+    protein loads.
+  family_mapping: P0A9K7/NP_418180.1 reference241 aa maps PF01895 at26-112 and129-212. F194W lies in the
+    second repeat; Quad E100A/R101A/E200A/R201A spans both repeats. Whole tagged proteins are tested,
+    not isolated domains or individual coordinating residues.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:83333
+  limitations: The direct endpoint is a biophysical fluorescence response, interpreted as apparent metal
+    binding. It is not native in-vivo metal occupancy. Quad comparisons include unequal protein loads
+    and preparation/solubility differences. The Methods QuadW residue list has a duplicated R201A; Table1
+    and construction define the four substitutions. The supplementary Mg curve was not inspected. E. coli
+    ICP-MS does not establish iron binding.
+  nodes:
+  - node_id: add-manganese
+    label: Titrate manganese into PhoU-F194W-His6
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: use-quadw-preparation
+    label: Use QuadW at26.4ug instead of F194W at70ug
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: corrected-probe-emission
+    label: Corrected engineered-tryptophan fluorescence
+    node_type: STATE
+  - node_id: normalized-mn-response
+    label: Fractional fluorescence response across the Mn titration
+    node_type: STATE
+  edges:
+  - edge_id: mn-increases-probe-emission
+    subject: add-manganese
+    predicate: increases
+    object: corrected-probe-emission
+    mechanism: Mn addition enhances the engineered probe's emission in the purified assay. A fitted apparent
+      Kd18.3+/-6.2uM supports an interaction but does not identify physiological occupancy, stoichiometry
+      or individual coordinating atoms.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24563032
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3993317/
+      snippet: fluorescence
+      explanation: Visually inspected Figure5A/B and fluorescence Methods identify the Mn series, engineered
+        probe, correction procedure and triplicate curve. Native WT fluorescence was not this measured
+        endpoint.
+      cache_path: evidence/PF01895/gardner-2014-metal-and-signaling.txt
+      cache_sha256: 333673d02b84097b4bb4a94110928e8809c93d41e465ddd1089ad8870142a324
+  - edge_id: quadw-preparation-decreases-normalized-response
+    subject: use-quadw-preparation
+    predicate: decreases
+    object: normalized-mn-response
+    mechanism: The QuadW preparation gives a smaller normalized Mn response than F194W across the inspected
+      titration. Reported apparent Kd85.2+/-26.3uM is weaker than18.3+/-6.2uM; the paper uses94% confidence
+      intervals. The intervention explicitly includes the changed protein load, so it is not a controlled
+      effect of each residue alone.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24563032
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3993317/
+      snippet: fluorescence
+      explanation: Figure5B dark QuadW curve is below the F194W curve; Methods and biochemical Results
+        state the different masses, fitted values and retained probe substitution. Folding/solubility
+        and combined-mutation alternatives remain explicit.
+      cache_path: evidence/PF01895/gardner-2014-metal-and-signaling.txt
+      cache_sha256: 333673d02b84097b4bb4a94110928e8809c93d41e465ddd1089ad8870142a324
+- graph_id: ec-phou-integrant-signaling
+  title: Chromosomal Quad PhoU fails to repress the AP reporter
+  scope: Gardner2014 Figure6B/C; BM266 Quad versus BM265 WT integrants in BM263 with recA1.
+  context: Whole plasmids integrated at pstB; overnight37 C MOPS2mMPi/glucose0.06%,IPTG50uM. AP measured
+    in triplicate. Parallel uninduced controls and PhoU immunoblots were inspected.
+  family_mapping: P0A9K7/NP_418180.1 reference241 aa; PF01895 at26-112 and129-212. Combined E100A/R101A/E200A/R201A
+    changes both repeats in a whole protein, not four independent assays.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Comparable immunoblot levels reduce an abundance explanation but do not establish proper
+    folding or direct PhoR phosphatase activation. Both uninduced strains derepress AP. Plasmid-expressed
+    Quad retains about80% repression in Figure6A, so Quad is not a context-independent null. Integrants
+    are not scarless replacements.
+  nodes:
+  - node_id: integrated-quad
+    label: Express integrated Quad instead of WT PhoU with IPTG
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: alkaline-phosphatase-output
+    label: Cellular alkaline-phosphatase reporter activity
+    node_type: ACTIVITY
+  edges:
+  - edge_id: integrated-quad-increases-ap
+    subject: integrated-quad
+    predicate: increases
+    object: alkaline-phosphatase-output
+    mechanism: In induced low-copy chromosomal context, the Quad integrant retains high AP while the WT
+      integrant represses it. This is a dosage-dependent signaling phenotype, not a measured atomic metal-binding-to-phosphatase
+      mechanism.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24563032
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3993317/
+      snippet: integrated
+      explanation: Original Figure6B and6C, integration Methods and Results define the induced contrast
+        and similar protein levels; Figure6A supplies the important plasmid-context limit.
+      cache_path: evidence/PF01895/gardner-2014-metal-and-signaling.txt
+      cache_sha256: 333673d02b84097b4bb4a94110928e8809c93d41e465ddd1089ad8870142a324
+- graph_id: ec-phou-fractionation
+  title: Conserved-site variants reduce PhoU in the membrane pellet
+  scope: Gardner2014 Figure7; separately expressed E100A, E100A/R101A and Quad versus p116U2 WT in BM263.
+  context: Stationary LB cultures at37 C; disruption and100000g/1h fractionation. Immunoblot lanes contain1.5ug
+    soluble or5ug membrane-fraction protein. Comparisons are within the membrane-fraction lanes, not between
+    equal fractions of total cellular PhoU.
+  family_mapping: Whole P0A9K7 reference241 aa maps PF01895 at26-112 and129-212. E100A/R101A lie in the
+    first repeat; Quad also changes E200/R201 in the second. Constructs do not test isolated-domain sufficiency.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Qualitative blot comparison, without a stated replicate count or densitometric effect size.
+    A lower pellet signal is not proof of direct lipid binding or a quantitative cellular membrane fraction.
+    These LB assays cannot be joined to MOPS AP assays as an observed causal chain.
+  nodes:
+  - node_id: e100a
+    label: Express PhoU E100A instead of WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: e100a-r101a
+    label: Express PhoU E100A/R101A instead of WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: quad
+    label: Express PhoU E100A/R101A/E200A/R201A instead of WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: pellet-phou
+    label: PhoU immunoblot signal in the membrane pellet
+    node_type: STATE
+  edges:
+  - edge_id: e100a-decreases-pellet-signal
+    subject: e100a
+    predicate: decreases
+    object: pellet-phou
+    mechanism: The E100A membrane lane has qualitatively less PhoU signal than WT under the reported expression/fractionation
+      conditions. The molecular basis of the changed distribution remains unresolved.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24563032
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3993317/
+      snippet: membrane
+      explanation: Original Figure7 WT/E100A membrane lanes and caption specify the protein load; accompanying
+        Results describes the progression. No statistical significance or magnitude is invented.
+      cache_path: evidence/PF01895/gardner-2014-metal-and-signaling.txt
+      cache_sha256: 333673d02b84097b4bb4a94110928e8809c93d41e465ddd1089ad8870142a324
+  - edge_id: double-decreases-pellet-signal
+    subject: e100a-r101a
+    predicate: decreases
+    object: pellet-phou
+    mechanism: The double-mutant membrane lane has qualitatively less PhoU signal than WT. This is one
+      combined substitution, not independent evidence that each site directly contacts a membrane.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24563032
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3993317/
+      snippet: membrane
+      explanation: Original Figure7 E100A/R101A and WT membrane lanes, with the shared soluble controls.
+        This is another construct within one experiment, not an independent replication.
+      cache_path: evidence/PF01895/gardner-2014-metal-and-signaling.txt
+      cache_sha256: 333673d02b84097b4bb4a94110928e8809c93d41e465ddd1089ad8870142a324
+  - edge_id: quad-decreases-pellet-signal
+    subject: quad
+    predicate: decreases
+    object: pellet-phou
+    mechanism: The four-substitution membrane lane has less signal than WT. The result does not establish
+      loss of all membrane association or identify which substitution accounts for the effect.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24563032
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3993317/
+      snippet: membrane
+      explanation: Original Figure7 Quad versus WT membrane lanes and retained soluble signal. Unequal
+        soluble/membrane loading prevents a direct mass-balance interpretation.
+      cache_path: evidence/PF01895/gardner-2014-metal-and-signaling.txt
+      cache_sha256: 333673d02b84097b4bb4a94110928e8809c93d41e465ddd1089ad8870142a324
+- graph_id: ec-phou-pst-joint-reconstitution
+  title: Joint PhoU and PstSCAB expression lowers AP output
+  scope: Gardner2015 Figure2; BW26337 delta-pstSCABphoU complemented with both p116U2 and p48SCAB.
+  context: Triplicate cellular AP assays. Figure2 caption states LB, while signaling Methods specifies
+    MOPS2mMPi/glucose0.06%,37 C overnight. The medium discrepancy remains unresolved; neither condition
+    is silently substituted for the other.
+  family_mapping: Whole PhoU P0A9K7/NP_418180.1 reference241 aa, PF01895 at26-112 and129-212, is supplied
+    jointly with PstSCAB. Transporter partners are not additional PF01895 proteins.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Neither PhoU nor PstSCAB alone reproduces the combined reduction. Residual reporter output
+    remains above the parental control. This is a joint cellular reconstitution, not isolated PhoU sufficiency
+    or direct PhoR phosphatase activation.
+  nodes:
+  - node_id: express-phou-and-pstscab
+    label: Coexpress PhoU AND PstSCAB in the operon-deleted host
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: ap-output
+    label: Cellular alkaline-phosphatase reporter activity
+    node_type: ACTIVITY
+  edges:
+  - edge_id: joint-expression-decreases-ap
+    subject: express-phou-and-pstscab
+    predicate: decreases
+    object: ap-output
+    mechanism: Combined expression reduces AP relative to both empty vectors; single-component controls
+      remain high. The graph encodes the conjunction as one perturbation instead of two independently
+      sufficient causes.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25953406
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4423584/
+      snippet: Signaling necessity
+      explanation: Original Figure2, its caption and signaling Methods establish the vector combinations,
+        reporter difference and unresolved medium mismatch. The star compares joint expression with empty
+        vectors at p<0.05.
+      cache_path: evidence/PF01895/gardner-2015-separation.txt
+      cache_sha256: 3793ba1075fe9aba3965f01bdd93be4511aa069115a1f8c01d4e86914af81f1c
+- graph_id: ec-phou-growth-yield
+  title: WT and A147E PhoU support overnight biomass yield
+  scope: Gardner2015 Figure3; STACdelta-phoU with p116U2 WT or A147E compared with pKG116.
+  context: Triplicate overnight LB cultures with IPTG100uM; OD600 measured at1:5 dilution and corrected.
+    STAC is the BW25113-derived PpstS::Ptac transporter-control background with pitA/pitB deletions.
+  family_mapping: P0A9K7/NP_418180.1 reference241 aa, PF01895 at26-112 and129-212. A147E is within the
+    second repeat; both constructs are whole proteins and p116U2 is not the earlier V126A-containing vector.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Overnight OD is biomass yield, not growth rate. Figure3 significance is against parental
+    STAC, not a formal equivalence test or an explicitly reported vector-versus-each-rescue test. No direct
+    phosphate efflux, uptake ATPase or cell-death mechanism is inferred.
+  nodes:
+  - node_id: express-wt
+    label: Express WT PhoU in STACdelta-phoU
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: express-a147e
+    label: Express PhoU A147E in STACdelta-phoU
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: overnight-yield
+    label: Overnight culture OD600
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: wt-increases-growth-yield
+    subject: express-wt
+    predicate: increases
+    object: overnight-yield
+    mechanism: WT PhoU expression raises the observed overnight biomass yield relative to the deletion/vector
+      control, toward the parental yield. The cellular route is not resolved by this endpoint.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25953406
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4423584/
+      snippet: Growth yield
+      explanation: Original Figure3 WT-plasmid versus empty-plasmid bars and growth Methods identify the
+        endpoint and IPTG dose. This is not a kinetic growth curve.
+      cache_path: evidence/PF01895/gardner-2015-separation.txt
+      cache_sha256: 3793ba1075fe9aba3965f01bdd93be4511aa069115a1f8c01d4e86914af81f1c
+  - edge_id: a147e-increases-growth-yield
+    subject: express-a147e
+    predicate: increases
+    object: overnight-yield
+    mechanism: A147E expression also raises the observed yield relative to deletion/vector, despite its
+      impaired AP signaling phenotype in a separate assay. Retained growth support is not proof of unchanged
+      native protein function.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25953406
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4423584/
+      snippet: Growth yield
+      explanation: Original Figure3 A147E bar and growth Methods support retained yield; absence of a
+        difference from parental STAC is not an equivalence test.
+      cache_path: evidence/PF01895/gardner-2015-separation.txt
+      cache_sha256: 3793ba1075fe9aba3965f01bdd93be4511aa069115a1f8c01d4e86914af81f1c
+- graph_id: ec-phou-interface-ap
+  title: Separate PhoU interface variants increase AP output
+  scope: Gardner2015 Figure4; separate p116U2 A147E,A147K,R148A,R148E constructs versus WT p116U2 in STACdelta-phoU.
+  context: Figure4 specifies LB, with triplicate overnight37 C AP assays. Empty pKG116 and WT BW25113
+    are controls. These are individual mutations, not the2014 Quad construct.
+  family_mapping: P0A9K7 sequenceversion1 equals NP_418180.1,241 aa; PF01895 at26-112 and129-212. A147/R148
+    and the tolerated D150A control are in the second repeat. Whole proteins are tested.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Increased AP is a signaling reporter, not direct PhoR catalysis or proof of a particular
+    atomic interface. D150A retains repression. Residual repression, folding and abundance effects remain
+    relevant; no universal null assignment follows.
+  nodes:
+  - node_id: a147e
+    label: Substitute PhoU A147E
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: a147k
+    label: Substitute PhoU A147K
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: r148a
+    label: Substitute PhoU R148A
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: r148e
+    label: Substitute PhoU R148E
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: ap-output
+    label: Cellular alkaline-phosphatase reporter activity
+    node_type: ACTIVITY
+  edges:
+  - edge_id: a147e-increases-ap
+    subject: a147e
+    predicate: increases
+    object: ap-output
+    mechanism: The A147E plasmid produces greater AP output than WT p116U2 in the deleted host. This is
+      a residue-specific indirect signaling effect, not isolated-domain activity.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25953406
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4423584/
+      snippet: A147E
+      explanation: Visually inspected Figure4 A147E versus WT-plasmid bars; caption specifies p<0.001
+        and triplicates. The separate growth-rescue result prevents treating this allele as uniformly
+        inactive.
+      cache_path: evidence/PF01895/gardner-2015-separation.txt
+      cache_sha256: 3793ba1075fe9aba3965f01bdd93be4511aa069115a1f8c01d4e86914af81f1c
+  - edge_id: a147k-increases-ap
+    subject: a147k
+    predicate: increases
+    object: ap-output
+    mechanism: A147K increases AP relative to WT PhoU expression; the endpoint supports impaired repression
+      without assigning a direct metal or catalytic role to A147.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25953406
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4423584/
+      snippet: A147K
+      explanation: Figure4 A147K versus WT p116U2, with the caption's triplicate and p<0.001 comparison.
+        This shares the experiment/control with the other variants.
+      cache_path: evidence/PF01895/gardner-2015-separation.txt
+      cache_sha256: 3793ba1075fe9aba3965f01bdd93be4511aa069115a1f8c01d4e86914af81f1c
+  - edge_id: r148a-increases-ap
+    subject: r148a
+    predicate: increases
+    object: ap-output
+    mechanism: R148A increases AP compared with WT plasmid expression. Loss of a side-chain interaction
+      is a possible explanation, not a directly measured atomic mechanism.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25953406
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4423584/
+      snippet: R148A
+      explanation: Figure4 R148A versus WT p116U2, p<0.001. The plot and construct description define
+        R148A despite a text typo elsewhere.
+      cache_path: evidence/PF01895/gardner-2015-separation.txt
+      cache_sha256: 3793ba1075fe9aba3965f01bdd93be4511aa069115a1f8c01d4e86914af81f1c
+  - edge_id: r148e-increases-ap
+    subject: r148e
+    predicate: increases
+    object: ap-output
+    mechanism: R148E increases AP compared with WT plasmid expression. The result is distinct from D150A,
+      which retains repression in the same assay.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25953406
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4423584/
+      snippet: R148E
+      explanation: Figure4 R148E versus WT p116U2, p<0.001, with D150A as a tolerated-substitution comparator.
+        No R148E-PstB binding result is inferred from another panel.
+      cache_path: evidence/PF01895/gardner-2015-separation.txt
+      cache_sha256: 3793ba1075fe9aba3965f01bdd93be4511aa069115a1f8c01d4e86914af81f1c
+- graph_id: ec-phou-interface-bacth
+  title: PhoU variants lower the PhoR interaction reporter
+  scope: Gardner2015 Figure5A; separate A147E,A147K,R148A,R148E PhoU fusion variants versus WT in BACTH.
+  context: Triplicate beta-galactosidase reporter assays. The cited2014 protocol uses BTH101, LB with
+    antibiotics/IPTG,30 C overnight and ONPG; the2015 Figure5 caption supplies the triplicate count. Exact
+    orientation and dose of every2015 PhoU fusion require supplement verification.
+  family_mapping: Full PhoU reference P0A9K7/NP_418180.1,241 aa, with PF01895 at26-112 and129-212. A147/R148
+    lie in the second repeat. Reporter fusions and PhoR-PAS scanning constructs are not isolated PhoU
+    domains.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: BACTH is a cellular complementation reporter, not a direct binding Kd. Fusion expression/folding
+    can affect signal. D150A retains the PhoR reporter. Figure5B tests retained PstB interaction only
+    for A147E,A147K,R148A, not R148E or D150A. DCA/docking does not convert these reporter effects into
+    observed atomic contacts.
+  nodes:
+  - node_id: a147e
+    label: Use the PhoU A147E fusion instead of WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: a147k
+    label: Use the PhoU A147K fusion instead of WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: r148a
+    label: Use the PhoU R148A fusion instead of WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: r148e
+    label: Use the PhoU R148E fusion instead of WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0A9K7
+  - node_id: phor-bacth-output
+    label: PhoU/PhoR BACTH beta-galactosidase output
+    node_type: ACTIVITY
+  edges:
+  - edge_id: a147e-decreases-phor-reporter
+    subject: a147e
+    predicate: decreases
+    object: phor-bacth-output
+    mechanism: The A147E fusion lowers the interaction-associated reporter relative to WT. Retained PstB
+      reporter activity in Figure5B argues against a uniform loss of all measured associations but does
+      not prove an unaltered fold.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25953406
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4423584/
+      snippet: PhoU/PhoR
+      explanation: Figure5A A147E versus WT, p<0.01, and Figure5B's separate PstB comparator. These are
+        reporter outcomes, not measured dissociation constants.
+      cache_path: evidence/PF01895/gardner-2015-separation.txt
+      cache_sha256: 3793ba1075fe9aba3965f01bdd93be4511aa069115a1f8c01d4e86914af81f1c
+  - edge_id: a147k-decreases-phor-reporter
+    subject: a147k
+    predicate: decreases
+    object: phor-bacth-output
+    mechanism: The A147K fusion lowers the PhoR-associated reporter while retaining measurable PstB-associated
+      signal in the separately plotted comparison. The assays do not resolve physical contact geometry.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25953406
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4423584/
+      snippet: PhoU/PhoR
+      explanation: Figure5A A147K versus WT, p<0.01; original Figure5B supplies the distinct retained
+        PstB reporter, not a second replicate of the PhoR result.
+      cache_path: evidence/PF01895/gardner-2015-separation.txt
+      cache_sha256: 3793ba1075fe9aba3965f01bdd93be4511aa069115a1f8c01d4e86914af81f1c
+  - edge_id: r148a-decreases-phor-reporter
+    subject: r148a
+    predicate: decreases
+    object: phor-bacth-output
+    mechanism: R148A lowers the PhoR reporter. Its PstB reporter remains positive in Figure5B; neither
+      result establishes that R148 directly contacts PhoR or that altered reporter signal fully explains
+      the AP phenotype.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25953406
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4423584/
+      snippet: PhoU/PhoR
+      explanation: Figure5A R148A versus WT, p<0.01, and Figure5B R148A versus empty vector. The graphs
+        keep the AP and BACTH assays separate.
+      cache_path: evidence/PF01895/gardner-2015-separation.txt
+      cache_sha256: 3793ba1075fe9aba3965f01bdd93be4511aa069115a1f8c01d4e86914af81f1c
+  - edge_id: r148e-decreases-phor-reporter
+    subject: r148e
+    predicate: decreases
+    object: phor-bacth-output
+    mechanism: R148E lowers the PhoR reporter close to the empty-vector background. No retained PstB effect
+      is assigned to this variant because it is not displayed in Figure5B.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:25953406
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4423584/
+      snippet: PhoU/PhoR
+      explanation: Original Figure5A R148E versus WT, p<0.01; the inspected5B axis omits R148E. This is
+        a near-background reporter result, not a measured zero binding affinity.
+      cache_path: evidence/PF01895/gardner-2015-separation.txt
+      cache_sha256: 3793ba1075fe9aba3965f01bdd93be4511aa069115a1f8c01d4e86914af81f1c
+- graph_id: ms-phou1-high-pi-reporters
+  title: PhoU1 overexpression lowers two reporters without PstB
+  scope: Seung2025 Figure6A/B; mc2 155 delta-pstB/MSMEG_5779 expressing C-terminal His6 PhoU1 from pMHphoU1
+    versus empty pMH201.
+  context: MOPS/glucose0.2%,Tween80 0.02%,pH7.2,37 C/200rpm,OD6000.45-0.5,10mM K2HPO4,acetamide0.1%. phoA-lacZ
+    and phoU1-lacZ are separately measured beta-galactosidase reporters; three biological replicates with
+    SD.
+  family_mapping: PhoU1/MSMEG_5776 is A0R4B7 sequenceversion1,222 aa, exactly matching ABK71681.1/WP_003897196.1.
+    PF01895 maps18-103 and122-204. The tagged full protein, not an isolated repeat, is overexpressed.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:246196
+  limitations: The50uM-Pi comparisons have weaker effects and are not assigned invented significance.
+    Figure6C expression blots use7H9 rather than MOPS. This is not direct promoter repression by PhoU,
+    nor proof that all physiological regulation is Pst-independent. The strain is termed Mycobacterium
+    smegmatis in the paper.
+  nodes:
+  - node_id: overexpress-phou1
+    label: Overexpress PhoU1 in delta-pstB at high phosphate
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0R4B7
+  - node_id: phoa-reporter
+    label: phoA-lacZ reporter output
+    node_type: ACTIVITY
+  - node_id: phou1-reporter
+    label: phoU1-lacZ reporter output
+    node_type: ACTIVITY
+  edges:
+  - edge_id: phou1-decreases-phoa-reporter
+    subject: overexpress-phou1
+    predicate: decreases
+    object: phoa-reporter
+    mechanism: PhoU1 overexpression lowers phoA reporter activity relative to empty vector despite loss
+      of PstB in this high-phosphate context. The cellular signaling intermediates are not directly measured
+      here.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40588129
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12301784/
+      snippet: decrease
+      explanation: Original Figure6A high-Pi blue bars and starred comparison, caption and culture Methods
+        identify the PhoU1-versus-vector contrast and conditions.
+      cache_path: evidence/PF01895/seung-2025-reporters-and-phosphorylation.txt
+      cache_sha256: 2c9d8f58c3461298251fc44513f7bc13387c706267c94f3e71e44008812f688f
+  - edge_id: phou1-decreases-phou1-reporter
+    subject: overexpress-phou1
+    predicate: decreases
+    object: phou1-reporter
+    mechanism: PhoU1 overexpression lowers output from the separate phoU1-lacZ fusion in the high-Pi delta-pstB
+      host. Feedback through the regulatory network is possible, but direct DNA binding is not demonstrated.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40588129
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12301784/
+      snippet: decrease
+      explanation: Figure6B high-Pi PhoU1/vector comparison and pNCIIphoU1 construction. This is a translational
+        lacZ fusion readout, not direct quantification of endogenous PhoU1 protein.
+      cache_path: evidence/PF01895/seung-2025-reporters-and-phosphorylation.txt
+      cache_sha256: 2c9d8f58c3461298251fc44513f7bc13387c706267c94f3e71e44008812f688f
+- graph_id: ms-phou2-high-pi-reporters
+  title: PhoU2 overexpression lowers two reporters without PstB
+  scope: Seung2025 Figure6A/B; mc2 155 delta-pstB/MSMEG_5779 expressing C-terminal His6 PhoU2 from pMHphoU2
+    versus empty pMH201.
+  context: MOPS/glucose0.2%,Tween80 0.02%,pH7.2,37 C/200rpm,OD6000.45-0.5,10mM K2HPO4,acetamide0.1%; separately
+    assayed phoA-lacZ and phoU1-lacZ,three biological replicates,SD.
+  family_mapping: PhoU2/MSMEG_1605 is A0QSU6 sequenceversion1,219 aa, exactly matching ABK73564.1/WP_011727768.1.
+    PF01895 maps17-103 and123-204. This paralog is distinct from PhoU1/A0R4B7, although both current gene-name
+    labels are phoU.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:246196
+  limitations: Same experiment/shared controls as the PhoU1 graph, not independent replication. Neither
+    endogenous expression equivalence nor identical biochemical mechanisms of the two paralogs are established.
+    No PhoU2 purified-RegX3 reaction is supplied by Figure7, and the7H9 expression blot is a different
+    medium.
+  nodes:
+  - node_id: overexpress-phou2
+    label: Overexpress PhoU2 in delta-pstB at high phosphate
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0QSU6
+  - node_id: phoa-reporter
+    label: phoA-lacZ reporter output
+    node_type: ACTIVITY
+  - node_id: phou1-reporter
+    label: phoU1-lacZ reporter output
+    node_type: ACTIVITY
+  edges:
+  - edge_id: phou2-decreases-phoa-reporter
+    subject: overexpress-phou2
+    predicate: decreases
+    object: phoa-reporter
+    mechanism: PhoU2 overexpression lowers the phoA reporter in the high-Pi delta-pstB strain. This is
+      an indirect cellular response, not a transfer of the purified PhoU1 assay to PhoU2.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40588129
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12301784/
+      snippet: decrease
+      explanation: Original Figure6A PhoU2-versus-vector high-Pi bars and caption; Table1 resolves the
+        actual PhoU2 locus and C-terminal tag.
+      cache_path: evidence/PF01895/seung-2025-reporters-and-phosphorylation.txt
+      cache_sha256: 2c9d8f58c3461298251fc44513f7bc13387c706267c94f3e71e44008812f688f
+  - edge_id: phou2-decreases-phou1-reporter
+    subject: overexpress-phou2
+    predicate: decreases
+    object: phou1-reporter
+    mechanism: PhoU2 overexpression lowers the phoU1-lacZ output compared with empty vector. The measured
+      endpoint is the PhoU1 regulatory fusion, not a PhoU2 promoter or endogenous protein concentration.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40588129
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12301784/
+      snippet: decrease
+      explanation: Original Figure6B high-Pi PhoU2/vector comparison with pNCIIphoU1, three biological
+        replicates and the caption's significance convention.
+      cache_path: evidence/PF01895/seung-2025-reporters-and-phosphorylation.txt
+      cache_sha256: 2c9d8f58c3461298251fc44513f7bc13387c706267c94f3e71e44008812f688f
+- graph_id: ms-phou1-regx3-net-phosphorylation
+  title: PhoU1 plus phosphate lowers net RegX3 phosphorylation
+  scope: Seung2025 Figure7A; purified His6 PhoU1,SenX3SD1 and less-prephosphorylated RegX3.
+  context: SenX3SD1 residues51-384 at46pmol,RegX3150pmol,PhoU1275pmol,+/-Pi500uM;300mMTris-HClpH8,50mMKCl,10mMMgCl2,ATP1mM,30
+    C,0/1/2min. RegX3 is purified from mid-exponential E. coli BL21(DE3),OD0.4; C-terminal His6 proteins
+    and Phos-tag readout.
+  family_mapping: Whole PhoU1 A0R4B7/ABK71681.1/WP_003897196.1 reference222 aa maps PF01895 at18-103 and122-204.
+    SenX3SD1 retains its PAS domain but lacks its membrane segment; that truncation is a partner construct,
+    not a PhoU repeat test.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:246196
+  limitations: Direct purified-system effect on net phosphorylation, not a resolved catalytic microstep.
+    Figure8 does not show inhibition of SenX3 autophosphorylation. Reduced phosphotransfer and/or greater
+    SenX3 phosphatase activity remain alternatives. No direct phosphate-binding Kd or PhoU catalytic activity
+    is demonstrated. Reaction volume and independent purification count are unspecified.
+  nodes:
+  - node_id: phou1-with-pi
+    label: Add PhoU1 together with phosphate to the SenX3SD1/RegX3 reaction
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0R4B7
+  - node_id: phosphorylated-regx3
+    label: Net phosphorylated RegX3 accumulation
+    node_type: STATE
+  edges:
+  - edge_id: phou1-and-pi-decrease-net-phosphorylation
+    subject: phou1-with-pi
+    predicate: decreases
+    object: phosphorylated-regx3
+    mechanism: In the purified partner reaction, PhoU1 with Pi reduces the phosphorylated RegX3 readout
+      relative to the no-PhoU1 reaction. PhoU1 without Pi and Pi without PhoU1 do not give the corresponding
+      reduction. The conjunction is retained as one intervention; SenX3 and ATP remain present in the
+      assay, without assigning a separately tested necessity claim to each.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40588129
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12301784/
+      snippet: dephosphorylation
+      explanation: Visually inspected Figure7A factorial Pi/PhoU1 comparisons, caption and Phos-tag Methods
+        support the net state change. Figure8's negative autokinase result prevents a stronger mechanistic
+        arrow; a Results typo naming less-phosphorylated SenX3 is resolved by the caption's RegX3 preparation.
+      cache_path: evidence/PF01895/seung-2025-reporters-and-phosphorylation.txt
+      cache_sha256: 2c9d8f58c3461298251fc44513f7bc13387c706267c94f3e71e44008812f688f
+- graph_id: ms-phou1-prephosphorylated-regx3
+  title: PhoU1 shifts a prephosphorylated RegX3 reaction toward net loss
+  scope: Seung2025 Figure7B; a distinct more-prephosphorylated RegX3 preparation with purified SenX3SD1
+    and PhoU1.
+  context: SenX3SD139pmol,RegX3144pmol,PhoU1200pmol,Pi500uM;300mMTris-HClpH8,50mMKCl,10mMMgCl2,ATP1mM,30
+    C,0/1/2/3min. RegX3 comes from late-exponential E. coli OD1. Samples are not boiled before Phos-tag
+    gels to limit phospho-Asp hydrolysis.
+  family_mapping: Full C-terminal His6 PhoU1 maps to A0R4B7 sequenceversion1/ABK71681.1/WP_003897196.1,222
+    aa; PF01895 at18-103 and122-204. The same whole-protein scope does not establish activity of either
+    isolated repeat or PhoU2.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:246196
+  limitations: ATP and SenX3 remain present. Net P-RegX3 loss cannot be assigned to isolated PhoU phosphatase
+    chemistry, an isolated forward/reverse rate constant or a measured phosphate-binding site. This preparation/dose
+    differs from Figure7A and is not a temporal continuation of that graph.
+  nodes:
+  - node_id: add-phou1
+    label: Add PhoU1 to the Pi-containing prephosphorylated-RegX3 reaction
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0R4B7
+  - node_id: p-regx3-level
+    label: Net phosphorylated RegX3 level over the assay
+    node_type: STATE
+  edges:
+  - edge_id: phou1-decreases-prephosphorylated-regx3
+    subject: add-phou1
+    predicate: decreases
+    object: p-regx3-level
+    mechanism: Adding PhoU1 to the SenX3SD1/Pi/ATP reaction shifts the more-prephosphorylated substrate
+      toward lower P-RegX3 over time, whereas the no-PhoU1 comparison does not show that net loss. The
+      actual phosphotransfer/phosphatase contributions are unresolved.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40588129
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12301784/
+      snippet: dephosphorylation
+      explanation: Original Figure7B Phos-tag time series and ordinary SDS-PAGE controls; caption defines
+        the distinct substrate preparation and protein amounts. Methods states ATP is added, so the endpoint
+        is a net balance rather than an isolated phosphatase assay.
+      cache_path: evidence/PF01895/seung-2025-reporters-and-phosphorylation.txt
+      cache_sha256: 2c9d8f58c3461298251fc44513f7bc13387c706267c94f3e71e44008812f688f
+curation_events:
+- timestamp: '2026-10-11T21:15:14Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Add twelve assay-scoped PhoU causal graphs from four primary studies
+  history_record: history/records/PF01895/2026-10-11T211514Z-codex-cebbb2.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T21:22:21Z'
+  curator: Codex
+  action: EDIT
+  outcome: changed
+  summary: Clarify retained components versus experimentally tested necessity
+  history_record: history/records/PF01895/2026-10-11T212221Z-codex-f59a5f.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T21:24:56Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of the PhoU causal graphs
+  history_record: history/records/PF01895/2026-10-11T212456Z-codex-6da354.yaml
+  event_index: 0
+  llm_assisted: true

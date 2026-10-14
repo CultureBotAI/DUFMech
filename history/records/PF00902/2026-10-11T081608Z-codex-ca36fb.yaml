@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF00902
+  path: data/families/PF00902.yaml
+session:
+  id: 2026-10-11T081608Z-codex-ca36fb
+  timestamp: '2026-10-11T08:16:08Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of TatC vesicle causal effects
+  details: Saved current-content review 20261011T081604Z-pf00902-tatc-vesicle-processing-and-transport
+    with digest af32143d43ccccc72094d5ac504f75e05d14df5b16216f4e1fe842bd5dea04c2.
+    Native schema, graph evidence and overlay-projection checks pass; full records
+    regeneration changed only two family projections and ownership manifest. Five
+    observed edges remain limited to three native vesicle contexts, with incomplete
+    constructs, methods, other substrates and insertion microsteps retained as open
+    coverage. Same-agent review, not independent endorsement; status remains IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T081604Z-pf00902-tatc-vesicle-processing-and-transport/review.yaml

@@ -1,0 +1,45 @@
+PF01930 coverage and access ledger, 2026-10-12 UTC
+
+Searched exact PF01930, DUF83, Cas_Cas4, Cas4 and verified member names;
+examined current InterPro and first100 UniProt Pfam-query entries, primary
+Lemak2013/2014, Lee2018/2019 and Hu2021 leads. This is partial source coverage.
+Local ignored/hidden-inclusive curation/evidence/history/review search found no
+earlier PF01930 overlay before this addition; prior retained snapshot inputs
+are not a curated mechanism graph.
+
+Adopted: Lemak2014 Pcal assays; Hu2021 Gsu fusion/complex and surrogate-cell
+assays, with individual edge scopes and negative conditions. No reviewed status
+or numerical confidence follows from a renamed Pfam family or database listing.
+
+Source limitations: Pcal supplement PMC link returned challenge HTML rather
+than a PDF; alternative path404 and publisher page403. The main paper and figures
+were accessible. Its oligo tables, metal titrations, ATP tests and exact cloning
+history are not fully reviewed. Do not treat access failure as absent evidence.
+Hu publisher supplement tables were accessible; relevant main/extended figures
+were inspected but raw gel/sequencing data and every supplementary panel were
+not independently reanalyzed. Table1 pET28b versus Methods pET28a and ED4g
+cellular-PAM-switch contradiction are explicit open source discrepancies.
+
+Remaining primary branches:
+- Lee2018 DOI10.1016/j.molcel.2018.03.003 PMC5889325 and Lee2019
+  DOI10.7554/eLife.44248 PMC6519985: Bacillus halodurans Cas4 context.
+  Selected Methods/Results read, but exact current Cas4 accession/Pfam mapping
+  remains unresolved. PDB8D3L entity1 is Cas1 Q9KFX9, not the Cas4 entity.
+  The empty gene:cas4/organism query is not proof the protein is absent.
+- Thermoproteus tenax PMID22408157: complex assembly, exact TTX locus/paralog
+  assignment must distinguish TTX_1245 current match from TTX_1548 paper lead.
+- Geobacter2019 DOI10.1093/nar/gkz217 prior cellular study; Pyrococcus2018
+  PMC5994930; Synechocystis2021 PMC7969031; Kieper2021 PMID34406043.
+  Full primary/domain mapping and construct review remain before new edges.
+- MbCas4/1 dual-nuclease2023 PMC10504553 is not the Gsu fusion; do not transfer
+  metal dependence or processing promiscuity between these tested objects.
+- H.volcanii HVO_A0210 and multidomain DNA2 matches need their own primary
+  review. Joint8-Cas-gene deletion is not isolated Cas4 causation.
+- Additional2026 primary leads, including PMID41909947 and
+  DOI10.1038/s41467-026-73084-2, are leads only, not adopted experiments.
+
+Remaining scientific questions include native Pcal function/partners, native Gsu
+processing nuclease, experimentally supported isolated-domain sufficiency,
+metal/cluster context, complete member coverage and resolution of the source
+discrepancies. Do not join these taxa/constructs into a single observed pathway.
+All8296 families and open follow-ups remain in the overall goal.

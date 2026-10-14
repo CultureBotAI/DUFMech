@@ -1,0 +1,20 @@
+AtPGR upstream-regulation ledger; inspected 2026-10-12 UTC.
+PMID:29321786; doi:10.3389/fpls.2017.02100
+https://pmc.ncbi.nlm.nih.gov/articles/PMC5732184/
+Full XML obtained from Europe PMC; Results, Methods and captions inspected.
+Figures 2 and 5 visually inspected; supplementary ZIP integrity passes.
+Minimal exact quotation: "AtPGR Expression in bHLH34 Transgenic Plants upon Glc Treatment"
+
+Figure 5A: 14-day Arabidopsis seedlings, 6% glucose for 12 h; bHLH34
+overexpression OX2-1/OX3-5 raises AtPGR mRNA and bHLH34 RNAi ri2-2/ri5-1
+lowers its induced abundance versus WT. This is regulation of At5g19930,
+not an assay of PF01940 protein catalysis. bHLH34 itself is At3g23210 and
+must not be assigned to PF01940 from this experiment.
+
+Figure 1 separately measures purified bHLH34 binding promoter DNA in vitro;
+Figure 2 measures P999-GUS reporter activity. GAGA and E-box binding does
+not by itself prove that all transcriptional or glucose phenotypes are
+mediated by PGR. No PGR epistasis/rescue is established here. The two
+bHLH34/bHLH104 genetic manipulations cannot substitute for PGR perturbation.
+Figure 2 has a 12-day/14-day age discrepancy between caption and Methods;
+the retained graph uses the separately specified Figure 5A context.

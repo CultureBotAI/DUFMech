@@ -1,0 +1,44 @@
+PF01958 identity and member boundaries
+Inspected 2026-10-12 by Codex.
+
+Frozen owner: data/families/PF01958.yaml; snapshot
+interpro-pfam-duf-2026-10-10, SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+Asp_DH_C / Aspartate dehydrogenase, C-terminal; InterPro:IPR002811;
+EX_DUF, imported characterization UNSCORED. These fields remain unchanged.
+
+Sources inspected as structured JSON:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01958/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q9X1X6/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/A6ND91/
+https://rest.uniprot.org/uniprotkb/search?query=%28gene%3ATM1643%20OR%20%28protein_name%3A%22aspartate%20dehydrogenase%22%20AND%20reviewed%3Atrue%29%29&format=json&size=100
+
+Q9X1X6, Thermotoga maritima MSB8, nadX/TM_1643: 241 aa,
+sequence version 1. Complete two-result InterPro Pfam response maps
+PF01958 to 121-234 and PF03447 to 41-106, one-based inclusive.
+Yang2003 assayed the full protein with an N-terminal hexahistidine tag,
+expressed in E. coli BL21(DE3), not the isolated Pfam segment. The paper's
+structural C-terminal domain 113-241 is not the current Pfam hit boundary.
+Its Rossmann domain 1-105 and linker 106-112 are distinct structural regions.
+No historical plasmid resequencing or sequence-level tag reconstruction was done.
+
+A6ND91, Homo sapiens ASPDH: 283 aa, sequence version 2. Complete
+two-result response maps PF01958 to 133-266 and PF03447 to 13-123.
+Human identity does not transfer the bacterial substrate or physiological role.
+The 2026 human preprint's exact construct remains unverified.
+
+Other reviewed reference leads, not curated experimental constructs:
+O28440 A. fulgidus VC-16 AF_1838, 236 aa v1;
+Q9HYA4 P. aeruginosa PAO1 PA3505, 267 aa v1;
+Q0K391 C. necator H16 H16_B0736, 266 aa v1 (NOT JMP134);
+Q89FY1 B. diazoefficiens USDA110 bll6567, 280 aa v1.
+UniProt responses list PF01958 and PF03447 for these references, but no
+accession-specific current Pfam coordinates were inspected for them here.
+
+RCSB primary depositions inspected:
+https://www.rcsb.org/structure/1H2H
+https://www.rcsb.org/structure/1J5P
+1H2H is the 2.6-A Yang2003 structure. 1J5P is a separate 1.9-A JCSG
+deposition with a different tagged construct, not the paper's structure.
+Coordinates/ligand association do not prove catalysis, substrate channeling
+or an isolated PF01958 mechanism.

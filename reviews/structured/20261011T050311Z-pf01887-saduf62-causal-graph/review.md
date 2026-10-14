@@ -1,0 +1,359 @@
+# PF01887 SaDUF62 causal graph review
+
+- Review: 20261011T050311Z-pf01887-saduf62-causal-graph
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T05:02:46Z
+- Finished UTC: 2026-10-11T05:03:11Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The intact-protein hydrolysis edge is supported in vitro; sulfur stereochemistry, isolated-domain function and cellular roles remain unresolved in this assessment.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Former DUF62 family selected for a primary biochemical assay with product identification.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01887 | data/families/PF01887.yaml | generated | PF01887 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01887 | Current projection validates and preserves the authored graphs exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01887.
+
+The experimentally named Sare_1364 locus resolves to A8M783 from CNS-205. The current PF01887 N-terminal match is only part of the tested 261-residue protein; current by-similarity stereoselectivity is not experimental evidence for this member.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01887.
+
+Primary product identification and Scheme 1 support adenosine formation. Commercial SAM is not relabeled as a purified sulfur stereoisomer. The graph omits an inferred intracellular SAM-homeostasis chain and an untested domain-only reaction.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01887.
+
+Other members, later stereoselectivity studies and catalytic-triad claims need separate primary assessment. The 2020 PMID32776704 abstract/caption was inspected but full-text access failed; it is a lead, not an adopted second member experiment.
+
+## Findings
+
+### additional-contexts: Additional DUF62 members and sulfur-isomer specificity require review
+
+minor / open / confirmed; issue key: pf01887-causal-context-coverage.
+
+Inspect later stereoselectivity studies and exact tested members before adding physiological or stereoisomer-specific edges. Do not assign a related species result to the 2008 SaDUF62 assay or treat N-terminal mapping as domain-only sufficiency.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Inspect later stereoselectivity studies and exact tested members before adding physiological or stereoisomer-specific edges. Do not assign a related species result to the 2008 SaDUF62 assay or treat N-terminal mapping as domain-only sufficiency.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| experiment | https://pmc.ncbi.nlm.nih.gov/articles/PMC2692205/; Results, Scheme 1 image, SaDUF62 purification and activity methods | supports | Intact SaDUF62 and commercial SAM yield identified adenosine; tested alternative substrates and chloride effects constrain the scope. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/A8M783/entry/pfam/PF01887/; Accession and domain locations; paired UniProt identity facts | supports | The experimentally named Sare_1364 locus resolves to A8M783 from CNS-205. The current PF01887 N-terminal match is only part of the tested 261-residue protein; current by-similarity stereoselectivity is not experimental evidence for this member. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, graph endpoints, evidence quotations and hashes, and canonical history pass; scientific validity is assessed separately. |
+| duf-projection-pf01887 | data/families/PF01887.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Scheme 1 was visually inspected; raw chromatography and later full-text stereoselectivity studies were not independently reviewed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T050311Z-pf01887-saduf62-causal-graph
+title: PF01887 SaDUF62 causal graph review
+started_at: '2026-10-11T05:02:46Z'
+finished_at: '2026-10-11T05:03:11Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: The intact-protein hydrolysis edge is supported in vitro; sulfur stereochemistry,
+  isolated-domain function and cellular roles remain unresolved in this assessment.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01887.yaml
+    sha256: 53599f1b1eb03f645ea550e41e06bbf9e1831b3db6c531ef5c877e84c1d4a984
+    role: context
+  - path: data/families/PF01887.yaml
+    sha256: a607f4c73a4b9e7476ce96b8e57c41a48db7cf2aba1d73ad40f00a561076486f
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01887/eustaquio-2008-saduf62.txt
+    role: context
+    sha256: 3e37906becfa90eea8ecf5b4c063dab4c6dd83684c6127669b1bb4acb921d0fc
+  - path: evidence/PF01887/A8M783-identity.txt
+    role: context
+    sha256: 3b8e9df25d2d554cb9ed08d7c4beac9c1ecadfa6b0858a5052e10e51d773067e
+targets:
+- target_id: PF01887
+  path: data/families/PF01887.yaml
+  label: PF01887
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01887.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 1c4dec0371383c579e3ad0e3286b51c1bcae89478bf73d84eb5f303b92783965
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Former DUF62 family selected for a primary biochemical assay with product
+    identification.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01887
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Other members, later stereoselectivity studies and catalytic-triad claims
+      need separate primary assessment. The 2020 PMID32776704 abstract/caption was
+      inspected but full-text access failed; it is a lead, not an adopted second member
+      experiment.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection causal_graphs == overlay
+    causal_graphs
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graphs exactly.
+  target_ids:
+  - PF01887
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: experiment
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2692205/
+  locator: Results, Scheme 1 image, SaDUF62 purification and activity methods
+  accessed_at: '2026-10-11T05:03:11Z'
+  support: supports
+  snapshot_sha256: 3e37906becfa90eea8ecf5b4c063dab4c6dd83684c6127669b1bb4acb921d0fc
+  summary: Intact SaDUF62 and commercial SAM yield identified adenosine; tested alternative
+    substrates and chloride effects constrain the scope.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A8M783/entry/pfam/PF01887/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T05:03:11Z'
+  support: supports
+  snapshot_sha256: 3b8e9df25d2d554cb9ed08d7c4beac9c1ecadfa6b0858a5052e10e51d773067e
+  summary: The experimentally named Sare_1364 locus resolves to A8M783 from CNS-205.
+    The current PF01887 N-terminal match is only part of the tested 261-residue protein;
+    current by-similarity stereoselectivity is not experimental evidence for this
+    member.
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T05:03:11Z'
+  support: supports
+  summary: Closed schema, graph endpoints, evidence quotations and hashes, and canonical
+    history pass; scientific validity is assessed separately.
+- evidence_id: duf-projection-pf01887
+  kind: record_content
+  reference: data/families/PF01887.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T05:03:11Z'
+  support: context_only
+  snapshot_sha256: a607f4c73a4b9e7476ce96b8e57c41a48db7cf2aba1d73ad40f00a561076486f
+  quote: "id: Pfam:PF01887\npfam_id: PF01887\nname: SAM hydroxide adenosyltransferase\
+    \ N-terminal domain\nshort_name: SAM_HAT_N\nseed_status: EX_DUF\ncharacterization_status:\
+    \ UNSCORED\ncuration_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01887\n\
+    counters:\n  proteins: 4611\n  matches: 4632\n  proteomes: 4378\n  taxa: 7070\n\
+    \  structures: 33\n  alphafold_models: 3211\n  domain_architectures: 11\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR046469\ndescription: This is a family of proteins, previously\
+    \ known as DUF62, found in archaebacteria and bacteria.\n  The structure of proteins\
+    \ in this family is similar to that of a bacterial fluorinating enzyme [[cite:PUB00047427]].\n\
+    \  S-adenosyl-l-methionine hydroxide adenosyltransferases utilises a rigorously\
+    \ conserved amino acid side\n  chain triad (Asp-Arg-His) which may have a role\
+    \ in activating water to hydroxide ion [[cite:PUB00054078]].\n  This family used\
+    \ to be known as DUF62.\ncuration_history: history/records/PF01887\ncausal_graphs:\n\
+    - graph_id: saduf62-sam-hydrolysis\n  title: SaDUF62-dependent adenosine formation\
+    \ from SAM\n  scope: Purified, tag-cleaved Sare_1364 from Salinispora arenicola\
+    \ CNS-205; intact protein.\n  context: Commercial SAM in 50 mM phosphate pH 7.9\
+    \ at 37 C; HPLC and LC/MS product identification.\n  family_mapping: A8M783, sequence\
+    \ version 1, 261 residues; current PF01887 spans 7-151. The tested protein\n \
+    \   also contains a C-terminal domain.\n  scope_status: MECHANISTIC\n  taxon:\
+    \ NCBITaxon:391037\n  limitations: The 2008 assay does not resolve SAM sulfur\
+    \ stereochemistry, isolated-domain sufficiency\n    or intracellular homeostasis.\
+    \ Later S. tropica stereoselectivity is not transferred to this member;\n    chloride\
+    \ inhibits the assay.\n  nodes:\n  - node_id: saduf62-sam-system\n    label: Purified\
+    \ SaDUF62 with commercial SAM in aqueous buffer\n    node_type: STATE\n    grounding:\n\
+    \    - UniProtKB:A8M783\n  - node_id: adenosine-formation\n    label: Adenosine\
+    \ formation\n    node_type: PROCESS\n  edges:\n  - edge_id: saduf62-enables-adenosine-formation\n\
+    \    subject: saduf62-sam-system\n    predicate: enables\n    object: adenosine-formation\n\
+    \    mechanism: The intact enzyme catalyzes hydrolysis of the supplied SAM; the\
+    \ adenosine product was identified\n      against standards and by mass spectrometry.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:18720493\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2692205/\n\
+    \      snippet: formation (optimum at pH 8) of adenosine\n      explanation: Results,\
+    \ Scheme 1 image and activity methods establish the biochemical reaction, not\n\
+    \        a cellular role or a specific SAM isomer.\n      cache_path: evidence/PF01887/eustaquio-2008-saduf62.txt\n\
+    \      cache_sha256: 3e37906becfa90eea8ecf5b4c063dab4c6dd83684c6127669b1bb4acb921d0fc\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A8M783/entry/pfam/PF01887/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A8M783/entry/pfam/PF01887/\n\
+    \      snippet: 'entry accession: PF01887'\n      explanation: Grounding of the\
+    \ tested locus and current N-terminal match; not proof that the isolated\n   \
+    \     domain performs the reaction.\n      cache_path: evidence/PF01887/A8M783-identity.txt\n\
+    \      cache_sha256: 3b8e9df25d2d554cb9ed08d7c4beac9c1ecadfa6b0858a5052e10e51d773067e\n\
+    curation_events:\n- timestamp: '2026-10-11T04:59:21Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate SaDUF62-dependent adenosine formation\n\
+    \  history_record: history/records/PF01887/2026-10-11T045921Z-codex-ed6875.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: The experimentally named Sare_1364 locus resolves to A8M783 from CNS-205.
+    The current PF01887 N-terminal match is only part of the tested 261-residue protein;
+    current by-similarity stereoselectivity is not experimental evidence for this
+    member.
+  target_ids:
+  - PF01887
+  evidence_ids:
+  - identity
+  - experiment
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Primary product identification and Scheme 1 support adenosine formation.
+    Commercial SAM is not relabeled as a purified sulfur stereoisomer. The graph omits
+    an inferred intracellular SAM-homeostasis chain and an untested domain-only reaction.
+  target_ids:
+  - PF01887
+  evidence_ids:
+  - experiment
+  - native
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Other members, later stereoselectivity studies and catalytic-triad claims
+    need separate primary assessment. The 2020 PMID32776704 abstract/caption was inspected
+    but full-text access failed; it is a lead, not an adopted second member experiment.
+  target_ids:
+  - PF01887
+  evidence_ids:
+  - experiment
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01887-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Additional DUF62 members and sulfur-isomer specificity require review
+  description: Inspect later stereoselectivity studies and exact tested members before
+    adding physiological or stereoisomer-specific edges. Do not assign a related species
+    result to the 2008 SaDUF62 assay or treat N-terminal mapping as domain-only sufficiency.
+  target_ids:
+  - PF01887
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - experiment
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01887.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Inspect later stereoselectivity studies and exact tested members before
+    adding physiological or stereoisomer-specific edges. Do not assign a related species
+    result to the 2008 SaDUF62 assay or treat N-terminal mapping as domain-only sufficiency.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01887
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Scheme 1 was visually inspected; raw chromatography and later full-text stereoselectivity
+  studies were not independently reviewed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

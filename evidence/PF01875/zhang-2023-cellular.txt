@@ -1,0 +1,29 @@
+Zhang et al.2023, PMID37487298, DOI10.1016/j.jinorgbio.2023.112335.
+Inspected2026-10-11: main Results/Discussion,all Methods,original Figures1-3.
+Institutional PDF has cover,paperpp1-5;Figures1/2 on PDFp3,Figure3 on PDFp4,
+Methods on PDFp5. Minimal quotations: "Cell viability analysis"; "ROS measurements".
+https://research.chalmers.se/publication/536802/file/536802_Fulltext.pdf
+
+MDA-MB-231,DMEM10% heat-inactivated FBS,37 C5% CO2,passage<20.
+RNAiMAX/four-siRNA MEMO1 pool versus AllStars negative control;Western/actin
+shows70-80% reduction,not complete knockout. Exact siRNA dose,sequences and
+transfection-to-assay interval are not specified in the inspected main Methods.
+No individual-siRNA deconvolution or rescue verified.
+
+Figure1A:1e4 cells/well,24 h seeding,then0/250/350/500/800 uM CuCl2 for18 h.
+MTT4 h in serum-free medium,DMSO solubilization,A570. Knockdown lowers signal
+at all doses including0; retain matched350-uM comparison without claiming a
+Cu-specific interaction or direct cell-death count. Two biological repeats,
+four technical replicates/condition; plotted errors are SEM.
+At350 uM CuCl2,18 h,knockdown increases each of three separate readouts:
+ROS-Glo H2O2-linked luminescence,CellROX Green,and MitoSOX Red fluorescence.
+ROS-Glo:1e5 cells/well,substrate added after18 h,6 h incubation,then detection
+reagent20 min before read. Thus it is not an instantaneous18-h measurement.
+CellROX5 uM30 min,flow~1e4 cells/sample,485/520 nm. MitoSOX5 uM10 min,
+flow~6000 cells/sample,386/610 nm as reported. Each probe has two biological
+repeats with four technical replicates. No product-resolved ROS chemistry
+or mitochondrial production rate was measured; fluorescence is the endpoint.
+At0 added Cu,ROS-Glo is not significantly changed,MitoSOX differs in only
+one repeat,CellROX changes in both. Do not merge these negatives into a
+single universal basal-ROS effect. Intracellular chelation/export is proposed,
+not established by direct metal-flux or Atox1 epistasis in this paper.

@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01947
+  path: curation/families/PF01947.yaml
+session:
+  id: 2026-10-12T072814Z-codex-c15c30
+  timestamp: '2026-10-12T07:28:14Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: needs_followup
+  summary: Curate scoped PF01947 enzyme and Sll1797 phenotype graphs
+  details: Added nine graphs with fourteen observed experimental edges, five evidence
+    ledgers and two open discussions. Primary Rv2949c cell-free product assays, Sll1797
+    enzymology, heterologous complementation and independent native deletion/rescue
+    contexts remain separated. Current PF01947 mapping differs from E. coli UbiC/PF04345.
+    Retained source-panel, unit, construct, coupled-readout and coverage limits; no
+    family-wide mechanism, publication or complete review claimed. Baseline8296 valid
+    projections with zero drift.

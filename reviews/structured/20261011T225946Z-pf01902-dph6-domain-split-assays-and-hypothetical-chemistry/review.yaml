@@ -1,0 +1,635 @@
+schema_version: 1.0.0
+review_id: 20261011T225946Z-pf01902-dph6-domain-split-assays-and-hypothetical-chemistry
+title: PF01902 Dph6 domain split, measured effects and hypothetical chemistry
+started_at: '2026-10-11T22:59:38Z'
+finished_at: '2026-10-11T22:59:46Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Nine graphs retain twelve OBSERVED effects and two HYPOTHESIZED chemical
+  steps: four direct preparation-level outputs,eight indirect cellular effects and
+  two unresolved proposed steps. Eight original figures plus selected primary text
+  and three publisher strain/construct tables were inspected. Two open discussions
+  preserve boundary,construct,source and member limits. Status remains IN_PROGRESS;
+  partial same-agent scientific review, not independent endorsement or completion
+  of the8296-record objective.'
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01902.yaml
+    sha256: 2bac5013ecdd7683ff6d0f63b7363ac48beb7f202507832c610add138f8d35c0
+    role: context
+  - path: data/families/PF01902.yaml
+    sha256: f21d5ee06d41feee5746672be4794c22eda4b9755e2a5d191f4bc69b07db0f52
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01902/su-2012.txt
+    role: context
+    sha256: 2595996512f83c317feb73b0d368c34523d26fd18572667c4e927160b1d6ce34
+  - path: evidence/PF01902/identity.txt
+    role: context
+    sha256: b0194526cbd8e62078c18e97b59f152169bab8505a0169a5aa935e84f66602c3
+  - path: evidence/PF01902/uthman-2013.txt
+    role: context
+    sha256: 3929a35398fe0c90671c93572d902afc0167eeaa775d553010ebe3aabea3809e
+  - path: evidence/PF01902/hawer-2018.txt
+    role: context
+    sha256: a2b51a1eceda38594dd7c8b7f1cdce040542bd63e5557b2045bc7bc2ac3fc78d
+  - path: evidence/PF01902/pathway-and-coverage.txt
+    role: context
+    sha256: 5a6e1b05aae02331009525aa12b0d28320ec078a5dc9337a1ac229294270b6b6
+targets:
+- target_id: PF01902
+  path: data/families/PF01902.yaml
+  label: PF01902
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01902.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 21ec7903520a0e45252648df59890ad8829fe61aa1c3bfd26aa4fb059678128f
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: PF01902 former DUF71; whole yeast and human reference proteins, selected2012/2013/2018
+    assays and a separated proposed chemical mechanism.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01902
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Most6563members,archaeal physiology,current PH1257/B12-subgroup mapping,
+      native-human assays and exact old clone identities remain unassessed. Su2012
+      and Lin2014 supplements were inaccessible through attempted endpoints. Other
+      yeast experiments and raw quantitative data are not exhaustively reviewed. The
+      later Dph7 methylesterase paper qualifies earlier pathway models but its perturbations
+      are not silently assigned to PF01902.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01902
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3523822/
+  locator: Main Results/Methods and visually inspected original Figures3/4.
+  accessed_at: '2026-10-11T22:59:46Z'
+  support: supports
+  snapshot_sha256: 2595996512f83c317feb73b0d368c34523d26fd18572667c4e927160b1d6ce34
+  summary: Purified whole yeast Dph6,ATP and ammonium jointly support a downstream
+    amidation reporter; an AMP-assigned spot appears with Dph6 and eEF2 together.
+    Full-length yeast or human protein restores the yeast cellular reporter. Truncation
+    and PH1257 negatives do not establish absent archaeal activity. The adenylation/ammonia-displacement
+    sequence is explicitly proposed, not intermediate detection; ADP control signals
+    and reporter dependence remain.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q12429/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T22:59:46Z'
+  support: supports
+  snapshot_sha256: b0194526cbd8e62078c18e97b59f152169bab8505a0169a5aa935e84f66602c3
+  summary: Frozen PF01902 is now Diphthami_syn_2_N/IPR060003, former DUF71/ATP_bind_4.
+    Current Q12429 equals NP_013244.1,685aa,with PF01902 at1-135,PF28410 at171-231
+    andPF01042 at332-416. Q7L8W6 equals NP_542381.1,267aa,with PF01902 at1-136 andPF28410
+    at146-232. Both InterPro sequences exactly match UniProt. G216N/E220A is a combined
+    perturbation in PF28410,not two PF01902 tests. Whole-protein assays and human-in-yeast
+    rescue preserve domain and species limits; exact historical clone sequences are
+    not independently verified.
+- evidence_id: yeast-cellular-contexts
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3585130/
+  locator: Selected Results/Methods,original Figures3/4/6/7,and publisher DOCX TablesS2/S3.
+  summary: Reporter and distal-construct effects retain whole-gene scope,double-mutant
+    identity,current domain split and source discrepancies.
+  accessed_at: '2026-10-11T22:59:46Z'
+  support: supports
+  snapshot_sha256: 3929a35398fe0c90671c93572d902afc0167eeaa775d553010ebe3aabea3809e
+- evidence_id: conditional-growth
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6193676/
+  locator: Original Figure5,selected Results/Methods and publisher TableS1.
+  summary: Longer doubling time is conditional on the combined dph6/eft2 context;
+    dph2-specific assays are not transferred.
+  accessed_at: '2026-10-11T22:59:46Z'
+  support: supports
+  snapshot_sha256: a2b51a1eceda38594dd7c8b7f1cdce040542bd63e5557b2045bc7bc2ac3fc78d
+- evidence_id: revised-pathway-context
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4015618/
+  locator: Selected main text and original Figure2; inaccessible supplement excluded.
+  summary: Later Dph7 substrate-processing evidence constrains the older scaffold
+    proposal without becoming a separate PF01902 perturbation experiment.
+  accessed_at: '2026-10-11T22:59:46Z'
+  support: supports
+  snapshot_sha256: 5a6e1b05aae02331009525aa12b0d28320ec078a5dc9337a1ac229294270b6b6
+- evidence_id: source-search-and-limits
+  kind: search
+  reference: evidence/PF01902/pathway-and-coverage.txt
+  locator: Dated source/member search and explicit alternative/context/access ledger.
+  search_scope: Ignored/hidden-inclusive local search ofcuration,evidence,history,reviews,
+    reports(exceptinventory.json) forPF01902,DUF71,DPH6 andQ12429. Public queries
+    forPF01902,DUF71,ATPBD4,DPH6,MJ0570,structure,biochemistry,B12salvage and translational/growth
+    work; two current protein domain responses and versioned NCBI reference comparisons.
+    No exhaustive all-member search.
+  summary: Cofitness,docking and B12-related prediction are not causal proof; actual
+    source access failures remain coverage limits.
+  accessed_at: '2026-10-11T22:59:46Z'
+  support: supports
+  snapshot_sha256: 5a6e1b05aae02331009525aa12b0d28320ec078a5dc9337a1ac229294270b6b6
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T22:59:46Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01902
+  kind: record_content
+  reference: data/families/PF01902.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T22:59:46Z'
+  support: context_only
+  snapshot_sha256: f21d5ee06d41feee5746672be4794c22eda4b9755e2a5d191f4bc69b07db0f52
+  quote: "id: Pfam:PF01902\npfam_id: PF01902\nname: Diphthamide synthase N-terminal\
+    \ domain\nshort_name: Diphthami_syn_2_N\nseed_status: EX_DUF\ncharacterization_status:\
+    \ UNSCORED\ncuration_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01902\n\
+    counters:\n  proteins: 6563\n  matches: 6660\n  proteomes: 5387\n  taxa: 11776\n\
+    \  structures: 4\n  alphafold_models: 5074\n  domain_architectures: 91\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR060003\ndescription: This entry represents the N-terminal\
+    \ domain of Diphthamide synthase. Diphthamide synthase\n  catalyses the last amidation\
+    \ step of diphthamide biosynthesis using ammonium and ATP. Diphthamide synthase\n\
+    \  is evolutionarily conserved in eukaryotes. Diphthamide is a post-translationally\
+    \ modified histidine\n  residue found on archaeal and eukaryotic translation elongation\
+    \ factor 2 (eEF-2) [[cite:PUB00073561]].\n  In some members of this family e.g.\
+    \ [swissprot:Q12429], this domain is associated with [pfam:PF01042].\n  The enzyme\
+    \ classification is [ec:6.3.1.14].\ncuration_history: history/records/PF01902\n\
+    discussions:\n- discussion_id: duf71-domain-boundaries-and-construct-attribution\n\
+    \  prompt: Preserve current domain boundaries and distinguish combined distal\
+    \ mutations from N-domain chemistry.\n  kind: CURATION_TODO\n  status: OPEN\n\
+    \  rationale: Whole-protein evidence supports Dph6 function,but current PF01902\
+    \ is narrower than historical\n    DUF71. Neither human rescue nor distal yeast\
+    \ mutations establish isolated N-terminal activity.\n  evidence:\n  - reference:\
+    \ https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q12429/\n    supports:\
+    \ SUPPORT\n    evidence_source: current_domain_mapping\n    explanation: PF01902\
+    \ is1-135; G216/E220 instead map toPF28410. Current reference length685 differs\n\
+    \      from the historical diagram endpoint686.\n  - reference: PMID:23468660\n\
+    \    supports: SUPPORT\n    evidence_source: primary_methods_and_supplement\n\
+    \    explanation: Methods and TableS3 establish the combined G216N/E220A perturbation\
+    \ and independent clones;\n      do not split it into two single-mutant edges.\n\
+    \  posed_by: Codex\n  posed_date: '2026-10-11'\n  notes: Resolve assembled constructs,matched\
+    \ protein abundance and historical family-split boundaries.\n    Preserve pJD204/pJD240\
+    \ and length discrepancies. Actual individual residue effects remain open despite\n\
+    \    stronger current database annotation wording.\n- discussion_id: duf71-pathway-model-and-member-coverage\n\
+    \  prompt: Extend member-specific evidence and test the proposed chemical steps\
+    \ without universal family\n    transfer.\n  kind: CURATION_TODO\n  status: OPEN\n\
+    \  rationale: Nine graphs retain twelve observed effects and two hypothetical\
+    \ steps; none covers all6563members.\n    Cofitness,ATP-bound structures and B12-neighborhood\
+    \ associations are not observed catalytic pathways.\n  evidence:\n  - reference:\
+    \ PMID:24739148\n    supports: PARTIAL\n    evidence_source: selected_primary_text_and_figure\n\
+    \    explanation: Later Dph7 methylesterase work changes interpretation of earlier\
+    \ scaffold models; inspected\n      Figure2 is context,not a new isolated PF01902\
+    \ experiment.\n  - reference: doi:10.1186/1745-6150-7-32\n    supports: PARTIAL\n\
+    \    evidence_source: comparative_primary_analysis\n    explanation: Historical\
+    \ DUF71 contains proposed functional subgroups; structural docking and B12-salvage\n\
+    \      predictions require member-specific experimental follow-up.\n  posed_by:\
+    \ Codex\n  posed_date: '2026-10-11'\n  notes: Su2012 and Lin2014 supplements remain\
+    \ inaccessible through attempted endpoints. Extend archaeal\n    and native-human\
+    \ contexts,verify PH1257 and B12-related member mapping,and examine other primary\
+    \ assays.\n    No automatic transfer of dph2-specific growth competition or translation\
+    \ phenotypes. Keep IN_PROGRESS;\n    same-agent partial research is not exhaustive\
+    \ scientific approval.\ncausal_graphs:\n- graph_id: dph6-amidation-reporter-controls-2012\n\
+    \  title: Dph6, ATP and ammonium jointly support the amidation reporter\n  scope:\
+    \ Su2012 Figure4A; purified whole yeast YLR143W, not isolated PF01902.\n  context:\
+    \ Deletion-derived eEF2 with His6-YLR143W at pH8,30C for30min; separate enzyme\
+    \ omission,ATP omission\n    and glutamine-for-ammonium comparisons. Fluorescence\
+    \ is measured after a downstream labeling reaction.\n  family_mapping: Q12429\
+    \ equals NP_013244.1,685aa; PF01902 1-135,PF28410 171-231,PF01042 332-416. Reference\n\
+    \    sequence is not independent verification of the historical His6 clone.\n\
+    \  scope_status: MECHANISTIC\n  taxon: NCBITaxon:559292\n  limitations: Each edge\
+    \ removes one component from the otherwise complete mixture; none makes a component\n\
+    \    independently sufficient. Fluorescence is an amidation-dependent proxy,not\
+    \ direct product quantitation.\n    Replicate count and exact assembled construct\
+    \ remain unverified.\n  nodes:\n  - node_id: omit-dph6\n    label: Omit Dph6 from\
+    \ the complete mixture\n    node_type: PERTURBATION\n  - node_id: omit-atp\n \
+    \   label: Omit ATP from the complete mixture\n    node_type: PERTURBATION\n \
+    \ - node_id: replace-ammonium\n    label: Replace ammonium with glutamine\n  \
+    \  node_type: PERTURBATION\n  - node_id: amidation-reporter\n    label: Amidation-dependent\
+    \ eEF2 fluorescence\n    node_type: STATE\n  edges:\n  - edge_id: enzyme-omission-decreases-reporter\n\
+    \    subject: omit-dph6\n    predicate: decreases\n    object: amidation-reporter\n\
+    \    mechanism: The enzyme-omission lane lacks the complete-mixture signal. This\
+    \ is a preparation-level\n      biochemical effect,not proof that the N-terminal\
+    \ domain acts alone.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:23169644\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC3523822/\n      snippet: ammonium\n\
+    \      explanation: Original Figure4A lanes2/5,with Coomassie loading and main\
+    \ Methods; downstream reporter\n        qualification retained.\n      cache_path:\
+    \ evidence/PF01902/su-2012.txt\n      cache_sha256: 2595996512f83c317feb73b0d368c34523d26fd18572667c4e927160b1d6ce34\n\
+    \  - edge_id: atp-omission-decreases-reporter\n    subject: omit-atp\n    predicate:\
+    \ decreases\n    object: amidation-reporter\n    mechanism: Omitting ATP reduces\
+    \ the detectable signal with the other required components retained;\n      this\
+    \ does not directly observe adenylation.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:23169644\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3523822/\n      snippet:\
+    \ ammonium\n      explanation: Original Figure4A lanes2/3; ATP dependence is conditional\
+    \ on this mixture.\n      cache_path: evidence/PF01902/su-2012.txt\n      cache_sha256:\
+    \ 2595996512f83c317feb73b0d368c34523d26fd18572667c4e927160b1d6ce34\n  - edge_id:\
+    \ nitrogen-source-replacement-decreases-reporter\n    subject: replace-ammonium\n\
+    \    predicate: decreases\n    object: amidation-reporter\n    mechanism: Glutamine\
+    \ does not replace ammonium in this purified preparation. This is not a universal\n\
+    \      absence of cellular glutamine contributions.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:23169644\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3523822/\n\
+    \      snippet: ammonium\n      explanation: Original Figure4A lanes1/2 compare\
+    \ the two nitrogen sources; no untested source is\n        excluded.\n      cache_path:\
+    \ evidence/PF01902/su-2012.txt\n      cache_sha256: 2595996512f83c317feb73b0d368c34523d26fd18572667c4e927160b1d6ce34\n\
+    - graph_id: dph6-amp-product-2012\n  title: The joint Dph6 and eEF2 reaction yields\
+    \ an AMP-assigned spot\n  scope: Su2012 Figure4B nucleotide-product assay,distinct\
+    \ from Figure4A fluorescence.\n  context: Radiolabeled ATP assay with enzymatically\
+    \ generated AMP/ADP standards; enzyme-plus-eEF2 compared\n    with either component\
+    \ alone.\n  family_mapping: Whole yeast Q12429/NP_013244.1,685aa,PF01902 1-135\
+    \ andPF28410 171-231; no isolated-domain\n    preparation.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:559292\n  limitations: ADP signal also occurs in controls.\
+    \ No exact nucleotide stoichiometry,PPi measurement,rate\n    or adenylated intermediate\
+    \ is established by this panel.\n  nodes:\n  - node_id: joint-reaction\n    label:\
+    \ Dph6 and deletion-derived eEF2 together with ATP\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q12429\n  - node_id: amp-spot\n    label: AMP-assigned\
+    \ chromatographic signal\n    node_type: STATE\n  edges:\n  - edge_id: joint-reaction-enables-amp-spot\n\
+    \    subject: joint-reaction\n    predicate: enables\n    object: amp-spot\n \
+    \   mechanism: The combined preparation produces the AMP-assigned signal lacking\
+    \ from either-component\n      control; mixed products prevent an all-ATP-to-AMP\
+    \ claim.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:23169644\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3523822/\n\
+    \      snippet: AMP\n      explanation: Original Figure4B lane4 versus lanes5/6\
+    \ and standards; directness refers to this biochemical\n        output,not atomic\
+    \ chemistry.\n      cache_path: evidence/PF01902/su-2012.txt\n      cache_sha256:\
+    \ 2595996512f83c317feb73b0d368c34523d26fd18572667c4e927160b1d6ce34\n- graph_id:\
+    \ dph6-cross-species-complementation-2012\n  title: Yeast and human Dph6 restore\
+    \ a modification-dependent reporter in yeast\n  scope: Su2012 Figure3D; dph6-deletion\
+    \ host with full-length yeast or human construct versus empty vector.\n  context:\
+    \ Cell-derived eEF2 fluorescence and Coomassie control; human protein is tested\
+    \ in yeast,not\n    native human cells.\n  family_mapping: Yeast Q12429=NP_013244.1,685aa,PF01902\
+    \ 1-135; human Q7L8W6=NP_542381.1,267aa,PF01902\n    1-136 andPF28410 146-232.\
+    \ Historical inserts were not independently sequenced here.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:559292\n  limitations: No quantitative equivalence or isolated-domain\
+    \ sufficiency claim. Yeast1-264 and PH1257\n    do not rescue this readout; folding,expression\
+    \ and host compatibility remain alternatives. PH1257\n    reference mapping is\
+    \ not verified here.\n  nodes:\n  - node_id: yeast-complementation\n    label:\
+    \ Full-length yeast Dph6 expression\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q12429\n  - node_id: human-complementation\n    label: Human\
+    \ ATPBD4 expression in yeast\n    node_type: PERTURBATION\n    grounding:\n  \
+    \  - UniProtKB:Q7L8W6\n  - node_id: cellular-reporter\n    label: Modification-dependent\
+    \ eEF2 fluorescence\n    node_type: STATE\n  edges:\n  - edge_id: yeast-protein-increases-reporter\n\
+    \    subject: yeast-complementation\n    predicate: increases\n    object: cellular-reporter\n\
+    \    mechanism: The full-length yeast construct restores signal relative to empty\
+    \ vector; the intervention\n      acts in cells and does not isolate a catalytic\
+    \ domain.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:23169644\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC3523822/\n      snippet: ATPBD4\n \
+    \     explanation: Original Figure3D lanes1/2; keep the truncation negative separate\
+    \ from full-length\n        rescue.\n      cache_path: evidence/PF01902/su-2012.txt\n\
+    \      cache_sha256: 2595996512f83c317feb73b0d368c34523d26fd18572667c4e927160b1d6ce34\n\
+    \  - edge_id: human-protein-increases-reporter\n    subject: human-complementation\n\
+    \    predicate: increases\n    object: cellular-reporter\n    mechanism: Human\
+    \ ATPBD4 restores the yeast readout. This does not establish a native-human phenotype\n\
+    \      or direct sufficiency of PF01902 without PF28410.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:23169644\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3523822/\n\
+    \      snippet: ATPBD4\n      explanation: Original Figure3D lanes1/4; protein\
+    \ and host species remain distinct.\n      cache_path: evidence/PF01902/su-2012.txt\n\
+    \      cache_sha256: 2595996512f83c317feb73b0d368c34523d26fd18572667c4e927160b1d6ce34\n\
+    - graph_id: dph6-deletion-labeling-2013\n  title: DPH6 deletion reduces the eEF2\
+    \ labeling signal under the tested conditions\n  scope: Uthman2013 Figure3B; BY4741\
+    \ versus Y04100 dph6 deletion extracts.\n  context: Biotin-NAD modification reporter\
+    \ with untreated controls and retained nonspecific loading bands;\n    not the\
+    \ separate purified-protein fluorescence assay.\n  family_mapping: TableS2 identifies\
+    \ BY4741-derived Y04100; Q12429/NP_013244.1 mapsPF01902 1-135 within685aa.\n \
+    \   A whole-gene deletion removes the other domains too.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:559292\n  limitations: No absolute toxin resistance is implied;\
+    \ Figure3C retains sensitivity under stronger expression.\n    Figure4's tagged-eEF2\
+    \ strain is distinct. No matched rescue in this specific panel or quantitative\n\
+    \    occupancy estimate.\n  nodes:\n  - node_id: dph6-deletion\n    label: DPH6\
+    \ deletion in the BY4741 background\n    node_type: PERTURBATION\n  - node_id:\
+    \ eef2-labeling\n    label: eEF2 modification-reporter band\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: deletion-decreases-labeling\n    subject: dph6-deletion\n\
+    \    predicate: decreases\n    object: eef2-labeling\n    mechanism: The deletion\
+    \ extract lacks the strong WT eEF2 reporter band under the displayed assay conditions;\n\
+    \      whole-cell changes are not an isolated-domain mechanism.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:23468660\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3585130/\n\
+    \      snippet: could not be ADP ribosylated\n      explanation: Original Figure3B\
+    \ plus TableS2 establish the strain comparison; Figure3C limits resistance\n \
+    \       interpretation.\n      cache_path: evidence/PF01902/uthman-2013.txt\n\
+    \      cache_sha256: 3929a35398fe0c90671c93572d902afc0167eeaa775d553010ebe3aabea3809e\n\
+    - graph_id: dph6-frameshift-reporter-2013\n  title: DPH6 deletion increases normalized\
+    \ minus-one frameshift reporter output\n  scope: Uthman2013 Figure6B; BY4741 and\
+    \ Y04100 cellular reporter comparison.\n  context: lacZ frameshift reporter normalized\
+    \ to the matched in-frame reporter. Methods/TableS3 name\n    pJD204 while the\
+    \ caption says pJD240; the identifier discrepancy remains explicit.\n  family_mapping:\
+    \ Q12429/NP_013244.1,685aa,PF01902 1-135; Y04100 is the whole-gene deletion strain,not\n\
+    \    a domain-specific allele.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:559292\n\
+    \  limitations: Caption reports ANOVA/Dunnett,p<0.001 for dph6; exact N and error-bar\
+    \ definition were not\n    established. Reporter output does not directly measure\
+    \ all endogenous translation errors or establish\n    a molecular chain from every\
+    \ modification intermediate.\n  nodes:\n  - node_id: dph6-deletion\n    label:\
+    \ DPH6 deletion in the BY4741 background\n    node_type: PERTURBATION\n  - node_id:\
+    \ minus-one-reporter\n    label: Normalized minus-one frameshift reporter ratio\n\
+    \    node_type: ACTIVITY\n  edges:\n  - edge_id: deletion-increases-frameshift-reporter\n\
+    \    subject: dph6-deletion\n    predicate: increases\n    object: minus-one-reporter\n\
+    \    mechanism: The dph6 bar is above WT. The reported plus-one negative is not\
+    \ converted into an unmeasured\n      universal translation defect.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:23468660\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3585130/\n\
+    \      snippet: frameshift\n      explanation: Original Figure6B,caption,Methods\
+    \ and parsed TablesS2/S3; no precise plotted effect\n        was digitized.\n\
+    \      cache_path: evidence/PF01902/uthman-2013.txt\n      cache_sha256: 3929a35398fe0c90671c93572d902afc0167eeaa775d553010ebe3aabea3809e\n\
+    - graph_id: dph6-distal-construct-sordarin-2013\n  title: Distal Dph6 changes\
+    \ fail to restore the WT sordarin response\n  scope: Uthman2013 Figure7B upper\
+    \ panel; mutant versus WT constructs in the same pSU6 backbone and dph6-deletion\n\
+    \    host.\n  context: Sordarin spot-growth comparison with drug-free controls.\
+    \ pMS61/62 are independent double-mutant\n    clones; pMS67/68 replace residues335-685\
+    \ with a myc3-tagged terminus.\n  family_mapping: Q12429=NP_013244.1,685aa,PF01902\
+    \ 1-135. G216N/E220A lie in PF28410 171-231; the T334-myc3\n    truncation removes\
+    \ distal sequence outside PF01902. These are not PF01902 residue tests.\n  scope_status:\
+    \ PHENOTYPIC\n  taxon: NCBITaxon:559292\n  limitations: Altered-protein abundance\
+    \ and folding are not matched by this panel. Methods/TableS3 establish\n    a\
+    \ double mutation,not two independent single-mutant results. Figure7 labels length686\
+    \ whereas reference\n    and Methods support685. Growth direction is not a purified\
+    \ enzyme activity measurement.\n  nodes:\n  - node_id: double-mutant\n    label:\
+    \ G216N/E220A double-mutant complementation instead of WT\n    node_type: PERTURBATION\n\
+    \  - node_id: distal-truncation\n    label: T334-myc3 truncated complementation\
+    \ instead of WT\n    node_type: PERTURBATION\n  - node_id: sordarin-growth\n \
+    \   label: Retained spot growth under sordarin\n    node_type: PHENOTYPE\n  edges:\n\
+    \  - edge_id: double-mutant-increases-drug-growth\n    subject: double-mutant\n\
+    \    predicate: increases\n    object: sordarin-growth\n    mechanism: Double-mutant\
+    \ constructs retain drug growth unlike WT complementation. The result cannot\n\
+    \      assign separate causal chemistry to G216 or E220,or to current PF01902.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:23468660\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3585130/\n\
+    \      snippet: G216N E220A\n      explanation: Original Figure7,construct Methods\
+    \ and TableS3 establish the double-mutant comparison\n        and clone identity.\n\
+    \      cache_path: evidence/PF01902/uthman-2013.txt\n      cache_sha256: 3929a35398fe0c90671c93572d902afc0167eeaa775d553010ebe3aabea3809e\n\
+    \  - edge_id: truncation-increases-drug-growth\n    subject: distal-truncation\n\
+    \    predicate: increases\n    object: sordarin-growth\n    mechanism: Truncated\
+    \ constructs retain growth relative to WT complementation. Removal and replacement\n\
+    \      of distal sequence does not demonstrate a specific catalytic role for the\
+    \ retained N-terminal domain.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:23468660\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3585130/\n      snippet:\
+    \ sordarin\n      explanation: Original Figure7 upper panel and Methods/TableS3;\
+    \ retained control growth does not\n        itself verify folding.\n      cache_path:\
+    \ evidence/PF01902/uthman-2013.txt\n      cache_sha256: 3929a35398fe0c90671c93572d902afc0167eeaa775d553010ebe3aabea3809e\n\
+    - graph_id: dph6-internal-deletion-sordarin-2013\n  title: An internal distal\
+    \ deletion fails to restore the WT drug response\n  scope: Uthman2013 Figure7B\
+    \ lower panel; pMS72 versus WT pSU7 in the dph6-deletion background.\n  context:\
+    \ Separate high-copy complementation series with drug-free controls; not pooled\
+    \ with the pSU6\n    series.\n  family_mapping: Q12429/NP_013244.1,PF01902 1-135;\
+    \ deletion347-471 is outside PF01902 and overlaps current\n    PF01042 332-416.\
+    \ The paper reports verification of the fusion,not a new isolated-domain enzyme\
+    \ assay.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:559292\n  limitations:\
+    \ Domain architecture,expression and folding remain alternative explanations.\
+    \ No transfer\n    to standalone RidA chemistry or all PF01042 members is made.\n\
+    \  nodes:\n  - node_id: internal-deletion\n    label: Dph6 deletion347-471 instead\
+    \ of WT in pSU7\n    node_type: PERTURBATION\n  - node_id: sordarin-growth\n \
+    \   label: Retained spot growth under sordarin\n    node_type: PHENOTYPE\n  edges:\n\
+    \  - edge_id: distal-deletion-increases-drug-growth\n    subject: internal-deletion\n\
+    \    predicate: increases\n    object: sordarin-growth\n    mechanism: The internal-deletion\
+    \ construct retains drug growth while WT complementation reduces it.\n      This\
+    \ supports a whole-protein functional requirement under these conditions,not N-domain\
+    \ sufficiency.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:23468660\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC3585130/\n      snippet: sordarin\n\
+    \      explanation: Original Figure7 lower panel,Methods and parsed TableS3 preserve\
+    \ the distinct copy-number\n        background.\n      cache_path: evidence/PF01902/uthman-2013.txt\n\
+    \      cache_sha256: 3929a35398fe0c90671c93572d902afc0167eeaa775d553010ebe3aabea3809e\n\
+    - graph_id: dph6-eft2-conditional-growth-2018\n  title: The combined dph6 and\
+    \ eft2 deletion prolongs doubling time\n  scope: Hawer2018 Figure5; BY4741-derived\
+    \ double mutant versus the single-deletion backgrounds.\n  context: Biological\
+    \ quadruplicates of23h batch growth; general growth temperature30C. TableS1 identifies\n\
+    \    HH7 dph6,HH14 eft2 and HH33 double deletion. Caption reports two-tailed t-test,p<=0.05\
+    \ without fully\n    naming each statistical comparator.\n  family_mapping: Whole-gene\
+    \ DPH6 loss maps to Q12429/NP_013244.1,PF01902 1-135 within685aa; EFT2 deletion\n\
+    \    is an explicit joint background,not an independent Dph6 biochemical substrate.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:559292\n  limitations: The dph6\
+    \ single mutant does not show a comparable ordinary-growth defect. Some prose\
+    \ says\n    reduced doubling times although the plot and preceding Results show\
+    \ increases. Exact effect size,marker\n    effects and raw growth curves were\
+    \ not reanalyzed; dph2 competition assays are not transferred.\n  nodes:\n  -\
+    \ node_id: combined-deletion\n    label: Add DPH6 loss in the EFT2-deletion context\n\
+    \    node_type: PERTURBATION\n  - node_id: doubling-time\n    label: Batch-culture\
+    \ doubling time\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: combined-loss-increases-doubling-time\n\
+    \    subject: combined-deletion\n    predicate: increases\n    object: doubling-time\n\
+    \    mechanism: The double-mutant bar exceeds both single-mutant bars. This conditional\
+    \ genotype effect\n      does not make loss of the PF01902 domain alone sufficient\
+    \ for a general growth defect.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.1371/journal.pone.0205870\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6193676/\n      snippet:\
+    \ doubling times\n      explanation: Original Figure5,selected Results/Methods\
+    \ and parsed TableS1; direction follows the\n        measured panel,with contradictory\
+    \ wording retained.\n      cache_path: evidence/PF01902/hawer-2018.txt\n     \
+    \ cache_sha256: a2b51a1eceda38594dd7c8b7f1cdce040542bd63e5557b2045bc7bc2ac3fc78d\n\
+    - graph_id: dph6-proposed-adenylation-2012\n  title: Proposed adenylation and\
+    \ amidation sequence, not observed intermediates\n  scope: Su2012 Figure4C mechanistic\
+    \ proposal informed by cofactor dependence and nucleotide products.\n  context:\
+    \ Whole Dph6 with diphthine-bearing eEF2,ATP and ammonium as joint reaction conditions.\
+    \ The individual\n    chemical steps are a model,not additional measured events.\n\
+    \  family_mapping: Q12429/NP_013244.1 carries PF01902 1-135 andPF28410 171-231;\
+    \ conserved SGGKDS starts\n    at8. Conservation does not isolate the N-terminal\
+    \ domain or prove residue-level chemistry.\n  scope_status: HYPOTHETICAL\n  taxon:\
+    \ NCBITaxon:559292\n  limitations: No adenylated intermediate was trapped,PPi\
+    \ stoichiometry measured or atomic trajectory\n    established in the inspected\
+    \ experiments. The separate observed reporter and AMP graphs do not convert\n\
+    \    this model into direct evidence.\n  nodes:\n  - node_id: substrate-in-joint-system\n\
+    \    label: Diphthine-bearing eEF2 in the Dph6 and ATP system\n    node_type:\
+    \ STATE\n  - node_id: proposed-adenylate\n    label: Proposed adenylated diphthine-bearing\
+    \ eEF2 intermediate\n    node_type: STATE\n  - node_id: proposed-amidated-product\n\
+    \    label: Diphthamide-bearing eEF2 after proposed ammonia displacement\n   \
+    \ node_type: STATE\n  edges:\n  - edge_id: proposed-substrate-adenylation\n  \
+    \  subject: substrate-in-joint-system\n    predicate: converts_to\n    object:\
+    \ proposed-adenylate\n    mechanism: The authors propose substrate activation\
+    \ by ATP with pyrophosphate release; this intermediate\n      and elementary step\
+    \ were not observed.\n    directness: UNRESOLVED\n    support: HYPOTHESIZED\n\
+    \    evidence_kind: CONTEXTUAL\n    evidence:\n    - reference: PMID:23169644\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3523822/\n      snippet:\
+    \ propose the reaction pathway\n      explanation: Original Figure4C is explicitly\
+    \ a model; panels4A/B provide supporting endpoints but\n        not direct intermediate\
+    \ detection.\n      cache_path: evidence/PF01902/su-2012.txt\n      cache_sha256:\
+    \ 2595996512f83c317feb73b0d368c34523d26fd18572667c4e927160b1d6ce34\n  - edge_id:\
+    \ proposed-ammonia-displacement\n    subject: proposed-adenylate\n    predicate:\
+    \ converts_to\n    object: proposed-amidated-product\n    mechanism: With the\
+    \ joint enzyme and ammonium conditions retained,the proposal invokes ammonia attack\n\
+    \      and AMP departure. Neither order nor transition state was measured.\n \
+    \   directness: UNRESOLVED\n    support: HYPOTHESIZED\n    evidence_kind: CONTEXTUAL\n\
+    \    evidence:\n    - reference: PMID:23169644\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3523822/\n\
+    \      snippet: propose the reaction pathway\n      explanation: Original Figure4C;\
+    \ modeled chemistry is kept separate from measured nucleotide and\n        fluorescence\
+    \ signals.\n      cache_path: evidence/PF01902/su-2012.txt\n      cache_sha256:\
+    \ 2595996512f83c317feb73b0d368c34523d26fd18572667c4e927160b1d6ce34\ncuration_events:\n\
+    - timestamp: '2026-10-11T22:47:47Z'\n  curator: Codex\n  action: CREATE\n  outcome:\
+    \ changed\n  summary: Curate PF01902 Dph6 biochemical and cellular contexts with\
+    \ current domain boundaries\n  history_record: history/records/PF01902/2026-10-11T224747Z-codex-9bd8ab.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Frozen PF01902 is now Diphthami_syn_2_N/IPR060003, former DUF71/ATP_bind_4.
+    Current Q12429 equals NP_013244.1,685aa,with PF01902 at1-135,PF28410 at171-231
+    andPF01042 at332-416. Q7L8W6 equals NP_542381.1,267aa,with PF01902 at1-136 andPF28410
+    at146-232. Both InterPro sequences exactly match UniProt. G216N/E220A is a combined
+    perturbation in PF28410,not two PF01902 tests. Whole-protein assays and human-in-yeast
+    rescue preserve domain and species limits; exact historical clone sequences are
+    not independently verified.
+  target_ids:
+  - PF01902
+  evidence_ids:
+  - identity
+  - primary
+  - yeast-cellular-contexts
+  - conditional-growth
+  - revised-pathway-context
+  - source-search-and-limits
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Joint requirements do not become independent sufficient causes. Fluorescence
+    and nucleotide outputs remain distinct from elementary chemistry, and the modeled
+    adenylate never becomes an observed intermediate. Yeast/human rescue, deletion
+    labeling,-1 reporter output,distal-construct drug response and EFT2-dependent
+    doubling time retain their different backgrounds/readouts. Independent double-mutant
+    clones are not independent single substitutions. C-terminal truncation/internal
+    deletion do not demonstrate isolated N-domain sufficiency. Source conflicts and
+    assay-specific negative findings remain visible. Co-IP,docking and cofitness are
+    not causal mechanism edges.
+  target_ids:
+  - PF01902
+  evidence_ids:
+  - primary
+  - native
+  - yeast-cellular-contexts
+  - conditional-growth
+  - revised-pathway-context
+  - source-search-and-limits
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Most6563members,archaeal physiology,current PH1257/B12-subgroup mapping,
+    native-human assays and exact old clone identities remain unassessed. Su2012 and
+    Lin2014 supplements were inaccessible through attempted endpoints. Other yeast
+    experiments and raw quantitative data are not exhaustively reviewed. The later
+    Dph7 methylesterase paper qualifies earlier pathway models but its perturbations
+    are not silently assigned to PF01902.
+  target_ids:
+  - PF01902
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01902-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve domain-specific attribution and extend member-specific coverage
+  description: Follow up exact historical constructs and family-boundary history,matched
+    abundance/folding controls,reporter identifiers,length and growth-wording conflicts.
+    Check independent single substitutions only when primary evidence exists; do not
+    split the tested double mutant. Extend archaeal and native- human contexts and
+    experimentally assess B12-related members. Retain unsupported chemistry as hypothetical,with
+    native history and successor review for any supported additions.
+  target_ids:
+  - PF01902
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - yeast-cellular-contexts
+  - conditional-growth
+  - revised-pathway-context
+  - source-search-and-limits
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01902.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Follow up exact historical constructs and family-boundary history,matched
+    abundance/folding controls,reporter identifiers,length and growth-wording conflicts.
+    Check independent single substitutions only when primary evidence exists; do not
+    split the tested double mutant. Extend archaeal and native- human contexts and
+    experimentally assess B12-related members. Retain unsupported chemistry as hypothetical,with
+    native history and successor review for any supported additions.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01902
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Visually inspected Su2012 Figures3/4,Uthman2013 Figures3/4/6/7,Lin2014 Figure2 andHawer2018
+  Figure5. Parsed Uthman TablesS2/S3 andHawer TableS1. Other supplements,raw MS,growth-curve
+  reanalysis and exact assembled-clone sequencing are not certified. No full family
+  or publication-QC pass.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.

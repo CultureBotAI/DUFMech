@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01867
+  path: data/families/PF01867.yaml
+session:
+  id: 2026-10-11T173709Z-codex-f21434
+  timestamp: '2026-10-11T17:37:09Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review scoped Cas1 biochemical and cellular graph evidence
+  details: Same-agent scientific assessment of fourteen retained effects, exact member/domain
+    mapping and primary source limits. Native projection validates and matches its
+    overlay. Preserve cellular/purified K224A discordance, IHF-dependent qualifications,
+    outside-match substitutions and unresolved ED5 image. Remaining Cas1 members,
+    host-factor contexts, supplements and exact laboratory constructs remain open;
+    no independent endorsement or REVIEWED promotion.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T173730Z-pf01867-cas1-integration-and-cellular-contexts/review.yaml

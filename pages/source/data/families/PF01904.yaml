@@ -4,7 +4,7 @@ name: Protein of unknown function DUF72
 short_name: DUF72
 seed_status: UNKNOWN_CANDIDATE
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01904
 counters:
   proteins: 14646
@@ -22,3 +22,643 @@ provenance:
   source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
 interpro_id: InterPro:IPR002763
 description: The function of this family is unknown.
+curation_history: history/records/PF01904
+discussions:
+- discussion_id: duf72-model-to-experiment-gap
+  prompt: Test the proposed Tm1631 chemistry without treating simulation as experimental characterization.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Two computational steps preserve the proposed reaction but do not establish nuclease activity.
+    The 2016 work extends the 2013 model rather than independently replicating an experiment.
+  evidence:
+  - reference: PMID:24244144
+    supports: PARTIAL
+    evidence_source: primary_computational_methods
+    explanation: Binding-site similarity, restrained molecular dynamics and an entropy-qualified MM/GBSA
+      comparison generate a candidate pose; beta-clamp association is motif based, not measured.
+  - reference: PMID:27398092
+    supports: PARTIAL
+    evidence_source: primary_computational_methods_and_supplement
+    explanation: Main figures and supplemental caption resolve the proposed path and model Lys73/native
+      K72 mapping. Initial protonation and ion chemistry remain assumptions, not experimentally tested
+      steps.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Seek independently verified DNA binding, product identity, metal dependence, substrate specificity
+    and residue perturbations with folding/abundance controls. Keep modeled/native numbering explicit.
+    Supplementary DOC text/tables were parsed but images were dropped by conversion, so their plots were
+    not visually checked. No simulation was rerun.
+- discussion_id: duf72-yece-assay-and-member-coverage
+  prompt: Independently validate YecE joint-genotype phenotypes and extend member-specific coverage.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Twenty-one observed indirect growth effects preserve a multiplicative single-mutant baseline,
+    not a molecular interaction network or general DUF72 DNA-repair mechanism.
+  evidence:
+  - reference: PMID:24586182
+    supports: SUPPORT
+    evidence_source: primary_tables_and_screen_protocols
+    explanation: All exact YecE recipient rows were retained with scores and donor identities; linkage
+      filtering and repeated colony measurements do not remove every marker, polar or secondary-mutation
+      alternative.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P37348/
+    supports: SUPPORT
+    evidence_source: current_member_mapping
+    explanation: Reference YecE maps PF01904 at 3-258; reference equality does not independently sequence
+      each historical assay clone.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Examine raw fitness data, independent alleles, complementation and exact Hfr/Keio-derived clone
+    identity. Positive interactions are not WT rescue. YunF expression, cofitness, prophage insertion
+    at the yecE locus and similarly named unrelated enzymes remain excluded leads. Most of the 14646 frozen
+    members and other structures remain unassessed. Keep IN_PROGRESS; this is partial same-agent curation.
+causal_graphs:
+- graph_id: yece-joint-deletion-relative-growth-2014
+  title: YecE joint deletions alter colony growth relative to multiplicative expectations
+  scope: Babu2014 Table S2; all 21 exact b1868__yecE recipient rows, each a separate joint genotype.
+  context: Hfr Cavalli donor deletion::Cm transferred into a Keio F- recipient deletion::Kan; rich LB
+    with dual selection, 36 h outgrowth at 32 C. Protocol S2 reports two screens, four biological recipient
+    colonies and eight measurements per pair.
+  family_mapping: E. coli K-12 YecE P37348, sequence version 4, equals NP_416382.1, AAC74938.1 and BAA15679.2;
+    272 aa with PF01904 at 3-258. b1868/JW1857 reference identity is not independent sequencing of the
+    historical assay clone.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Normalized double-mutant colony growth is compared with multiplicative expected fitness
+    from the single mutants, not WT or the addition of one deletion. Positive scores are not WT rescue
+    or faster absolute growth. All 21 donors are non-essential and labeled This Study in Table S1; Table
+    S16 verifies their Hfr Cavalli deletion::Cm context. Raw colony images, row-specific dispersion, exact
+    clone sequences and allele-specific rescue were not inspected. Marker, polar and secondary-mutation
+    effects remain alternatives; no gene-to-gene molecular pathway is inferred.
+  nodes:
+  - node_id: yece-caic-joint-loss
+    label: Joint yecE (b1868) and caiC (b0037) deletion
+    node_type: PERTURBATION
+  - node_id: yece-degp-joint-loss
+    label: Joint yecE (b1868) and degP (b0161) deletion
+    node_type: PERTURBATION
+  - node_id: yece-asnb-joint-loss
+    label: Joint yecE (b1868) and asnB (b0674) deletion
+    node_type: PERTURBATION
+  - node_id: yece-ycbx-joint-loss
+    label: Joint yecE (b1868) and ycbX (b0947) deletion
+    node_type: PERTURBATION
+  - node_id: yece-cbpa-joint-loss
+    label: Joint yecE (b1868) and cbpA (b1000) deletion
+    node_type: PERTURBATION
+  - node_id: yece-yceg-joint-loss
+    label: Joint yecE (b1868) and yceG (b1097) deletion
+    node_type: PERTURBATION
+  - node_id: yece-pspf-joint-loss
+    label: Joint yecE (b1868) and pspF (b1303) deletion
+    node_type: PERTURBATION
+  - node_id: yece-pspa-joint-loss
+    label: Joint yecE (b1868) and pspA (b1304) deletion
+    node_type: PERTURBATION
+  - node_id: yece-grxd-joint-loss
+    label: Joint yecE (b1868) and grxD (b1654) deletion
+    node_type: PERTURBATION
+  - node_id: yece-cspc-joint-loss
+    label: Joint yecE (b1868) and cspC (b1823) deletion
+    node_type: PERTURBATION
+  - node_id: yece-yfbj-joint-loss
+    label: Joint yecE (b1868) and yfbJ (b2258) deletion
+    node_type: PERTURBATION
+  - node_id: yece-csda-joint-loss
+    label: Joint yecE (b1868) and csdA (b2810) deletion
+    node_type: PERTURBATION
+  - node_id: yece-ygeo-joint-loss
+    label: Joint yecE (b1868) and ygeO (b2859) deletion
+    node_type: PERTURBATION
+  - node_id: yece-ygfz-joint-loss
+    label: Joint yecE (b1868) and ygfZ (b2898) deletion
+    node_type: PERTURBATION
+  - node_id: yece-yghd-joint-loss
+    label: Joint yecE (b1868) and yghD (b2968) deletion
+    node_type: PERTURBATION
+  - node_id: yece-exbb-joint-loss
+    label: Joint yecE (b1868) and exbB (b3006) deletion
+    node_type: PERTURBATION
+  - node_id: yece-ttdb-joint-loss
+    label: Joint yecE (b1868) and ttdB (b3062) deletion
+    node_type: PERTURBATION
+  - node_id: yece-gltb-joint-loss
+    label: Joint yecE (b1868) and gltB (b3212) deletion
+    node_type: PERTURBATION
+  - node_id: yece-gltd-joint-loss
+    label: Joint yecE (b1868) and gltD (b3213) deletion
+    node_type: PERTURBATION
+  - node_id: yece-alr-joint-loss
+    label: Joint yecE (b1868) and alr (b4053) deletion
+    node_type: PERTURBATION
+  - node_id: yece-idnd-joint-loss
+    label: Joint yecE (b1868) and idnD (b4267) deletion
+    node_type: PERTURBATION
+  - node_id: relative-colony-growth
+    label: Normalized colony growth relative to the multiplicative expectation
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: yece-caic-increases-relative-growth
+    subject: yece-caic-joint-loss
+    predicate: increases
+    object: relative-colony-growth
+    mechanism: The joint yecE/caiC deletion has an alleviating S-score of 3.37006, indicating normalized
+      colony growth above the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 770, b0037__caiC donor and b1868__yecE
+        recipient, score 3.37006. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-degp-decreases-relative-growth
+    subject: yece-degp-joint-loss
+    predicate: decreases
+    object: relative-colony-growth
+    mechanism: The joint yecE/degP deletion has an aggravating S-score of -5.62642, indicating normalized
+      colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 2485, b0161__degP donor and b1868__yecE
+        recipient, score -5.62642. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-asnb-increases-relative-growth
+    subject: yece-asnb-joint-loss
+    predicate: increases
+    object: relative-colony-growth
+    mechanism: The joint yecE/asnB deletion has an alleviating S-score of 4.08422, indicating normalized
+      colony growth above the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 5426, b0674__asnB donor and b1868__yecE
+        recipient, score 4.08422. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-ycbx-decreases-relative-growth
+    subject: yece-ycbx-joint-loss
+    predicate: decreases
+    object: relative-colony-growth
+    mechanism: The joint yecE/ycbX deletion has an aggravating S-score of -4.66203, indicating normalized
+      colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 8381, b0947__ycbX donor and b1868__yecE
+        recipient, score -4.66203. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-cbpa-decreases-relative-growth
+    subject: yece-cbpa-joint-loss
+    predicate: decreases
+    object: relative-colony-growth
+    mechanism: The joint yecE/cbpA deletion has an aggravating S-score of -5.59002, indicating normalized
+      colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 9826, b1000__cbpA donor and b1868__yecE
+        recipient, score -5.59002. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-yceg-decreases-relative-growth
+    subject: yece-yceg-joint-loss
+    predicate: decreases
+    object: relative-colony-growth
+    mechanism: The joint yecE/yceG deletion has an aggravating S-score of -3.49669, indicating normalized
+      colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 10464, b1097__yceG donor and b1868__yecE
+        recipient, score -3.49669. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-pspf-decreases-relative-growth
+    subject: yece-pspf-joint-loss
+    predicate: decreases
+    object: relative-colony-growth
+    mechanism: The joint yecE/pspF deletion has an aggravating S-score of -7.56451, indicating normalized
+      colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 12254, b1303__pspF donor and b1868__yecE
+        recipient, score -7.56451. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-pspa-increases-relative-growth
+    subject: yece-pspa-joint-loss
+    predicate: increases
+    object: relative-colony-growth
+    mechanism: The joint yecE/pspA deletion has an alleviating S-score of 4.29089, indicating normalized
+      colony growth above the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 12789, b1304__pspA donor and b1868__yecE
+        recipient, score 4.29089. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-grxd-decreases-relative-growth
+    subject: yece-grxd-joint-loss
+    predicate: decreases
+    object: relative-colony-growth
+    mechanism: The joint yecE/grxD deletion has an aggravating S-score of -3.97002, indicating normalized
+      colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 15375, b1654__grxD donor and b1868__yecE
+        recipient, score -3.97002. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-cspc-decreases-relative-growth
+    subject: yece-cspc-joint-loss
+    predicate: decreases
+    object: relative-colony-growth
+    mechanism: The joint yecE/cspC deletion has an aggravating S-score of -3.83624, indicating normalized
+      colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 17866, b1823__cspC donor and b1868__yecE
+        recipient, score -3.83624. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-yfbj-decreases-relative-growth
+    subject: yece-yfbj-joint-loss
+    predicate: decreases
+    object: relative-colony-growth
+    mechanism: The joint yecE/yfbJ deletion has an aggravating S-score of -4.12818, indicating normalized
+      colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 19366, b2258__yfbJ donor and b1868__yecE
+        recipient, score -4.12818. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-csda-increases-relative-growth
+    subject: yece-csda-joint-loss
+    predicate: increases
+    object: relative-colony-growth
+    mechanism: The joint yecE/csdA deletion has an alleviating S-score of 5.14678, indicating normalized
+      colony growth above the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 24559, b2810__csdA donor and b1868__yecE
+        recipient, score 5.14678. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-ygeo-decreases-relative-growth
+    subject: yece-ygeo-joint-loss
+    predicate: decreases
+    object: relative-colony-growth
+    mechanism: The joint yecE/ygeO deletion has an aggravating S-score of -4.1279, indicating normalized
+      colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 26960, b2859__ygeO donor and b1868__yecE
+        recipient, score -4.1279. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-ygfz-decreases-relative-growth
+    subject: yece-ygfz-joint-loss
+    predicate: decreases
+    object: relative-colony-growth
+    mechanism: The joint yecE/ygfZ deletion has an aggravating S-score of -13.2114, indicating normalized
+      colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 28298, b2898__ygfZ donor and b1868__yecE
+        recipient, score -13.2114. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-yghd-decreases-relative-growth
+    subject: yece-yghd-joint-loss
+    predicate: decreases
+    object: relative-colony-growth
+    mechanism: The joint yecE/yghD deletion has an aggravating S-score of -9.47303, indicating normalized
+      colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 29267, b2968__yghD donor and b1868__yecE
+        recipient, score -9.47303. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-exbb-decreases-relative-growth
+    subject: yece-exbb-joint-loss
+    predicate: decreases
+    object: relative-colony-growth
+    mechanism: The joint yecE/exbB deletion has an aggravating S-score of -8.29434, indicating normalized
+      colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 30395, b3006__exbB donor and b1868__yecE
+        recipient, score -8.29434. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-ttdb-decreases-relative-growth
+    subject: yece-ttdb-joint-loss
+    predicate: decreases
+    object: relative-colony-growth
+    mechanism: The joint yecE/ttdB deletion has an aggravating S-score of -3.844, indicating normalized
+      colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 31057, b3062__ttdB donor and b1868__yecE
+        recipient, score -3.844. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-gltb-decreases-relative-growth
+    subject: yece-gltb-joint-loss
+    predicate: decreases
+    object: relative-colony-growth
+    mechanism: The joint yecE/gltB deletion has an aggravating S-score of -3.71264, indicating normalized
+      colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 32697, b3212__gltB donor and b1868__yecE
+        recipient, score -3.71264. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-gltd-increases-relative-growth
+    subject: yece-gltd-joint-loss
+    predicate: increases
+    object: relative-colony-growth
+    mechanism: The joint yecE/gltD deletion has an alleviating S-score of 4.00211, indicating normalized
+      colony growth above the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 32995, b3213__gltD donor and b1868__yecE
+        recipient, score 4.00211. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-alr-decreases-relative-growth
+    subject: yece-alr-joint-loss
+    predicate: decreases
+    object: relative-colony-growth
+    mechanism: The joint yecE/alr deletion has an aggravating S-score of -12.8803, indicating normalized
+      colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 39573, b4053__alr donor and b1868__yecE
+        recipient, score -12.8803. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+  - edge_id: yece-idnd-decreases-relative-growth
+    subject: yece-idnd-joint-loss
+    predicate: decreases
+    object: relative-colony-growth
+    mechanism: The joint yecE/idnD deletion has an aggravating S-score of -8.24387, indicating normalized
+      colony growth below the multiplicative single-mutant expectation. This is an indirect joint-genotype
+      phenotype, not the isolated effect of either deletion or direct protein interaction.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24586182
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3930520/
+      snippet: high-confidence epistatic interactions
+      explanation: Table S2 sheet WG_GI_Score_Mar_06_2013, row 42250, b4267__idnD donor and b1868__yecE
+        recipient, score -8.24387. Parsed Tables S1/S16 establish donor origin; visually inspected Protocols
+        S2/S16 and main Methods establish design and baseline. No absolute growth fraction is inferred
+        from the S-score.
+      cache_path: evidence/PF01904/babu-2014.txt
+      cache_sha256: 2cfad6f2522638ae511ee44e50f5dd39aa657c64e71f2bb1524163e8d48ed2e4
+- graph_id: tm1631-modeled-dna-cleavage-2016
+  title: Proposed Tm1631 DNA cleavage in a preorganized computational system
+  scope: Ogrizek2016 Figures 1-3 and modeled coordinate subsets, extending the Konc2013 Tm1631-DNA pose;
+    no experimental nuclease assay.
+  context: Joint modeled Tm1631, DNA, two Mg ions and an assumed nucleophile; a 42-atom QM region treated
+    with B3LYP/6-31G* within CHARMM36. Sixteen interpolated replicas connect constructed reactant/product
+    endpoints.
+  family_mapping: Thermotoga maritima MSB8 Tm1631 Q9X1W6, sequence version 1, equals AAD36698.1 and WP_004082107.1;
+    261 aa, PF01904 at 3-259. PDB 1VPQ entity residues 13-273 match this sequence after a 12-residue tag.
+    Supplement Figure S2 maps modeled Lys73 to native K72; reference residue 73 is T.
+  scope_status: HYPOTHETICAL
+  taxon: NCBITaxon:243274
+  limitations: PDB 1VPQ contains sulfate and water, not observed bound DNA or Mg. The starting pose and
+    chemistry are constructed; 2013 restraints, initial neutral lysine, hydroxide generation and ion identity/count
+    remain assumptions. Relative potential-energy profiles are not measured rates or fully sampled activation
+    free energies. Figures 4/5 change ion or wider-environment conditions, not an isolated protein-only
+    deletion. Five coordinate subsets were parsed, not rerun as QM calculations. No demonstrated DNA binding,
+    residue-mutant effect, biological repair or family-wide nuclease activity.
+  nodes:
+  - node_id: modeled-reactant-system
+    label: Preorganized Tm1631-DNA system with two Mg ions and assumed nucleophile
+    node_type: STATE
+  - node_id: proposed-pentacovalent-state
+    label: Proposed pentacovalent DNA phosphate state in the joint modeled system
+    node_type: STATE
+  - node_id: proposed-nicked-dna
+    label: Proposed nicked DNA after modeled P-O3' cleavage
+    node_type: STATE
+  edges:
+  - edge_id: proposed-nucleophilic-attack
+    subject: modeled-reactant-system
+    predicate: converts_to
+    object: proposed-pentacovalent-state
+    mechanism: The proposed path places a nucleophile near the DNA phosphate and produces a pentacovalent
+      state; replica 5 is a modeled potential-energy minimum, not an experimentally trapped intermediate.
+      An early lysine-deprotonation event was not established and is not added as a separate edge.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: COMPUTATIONAL
+    evidence:
+    - reference: PMID:27398092
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4939058/
+      snippet: pentacovalent intermediate
+      explanation: Visually inspected original Figures 1-3, main Methods and parsed supplemental captions/coordinate
+        subsets support the authors' computational proposal only. Figure S2 explicitly resolves model
+        Lys73 as native K72; no K73 mutant or measured proton-transfer event.
+      cache_path: evidence/PF01904/ogrizek-2016.txt
+      cache_sha256: 14035fbe893099339ba98311c2b78203dfc6e94b87e81cac2f573700206708d0
+  - edge_id: proposed-phosphodiester-cleavage
+    subject: proposed-pentacovalent-state
+    predicate: converts_to
+    object: proposed-nicked-dna
+    mechanism: Under the same joint modeled conditions, the proposed phosphate intermediate proceeds to
+      P-O3' bond cleavage. Constructed product endpoints and relative potential energies do not establish
+      real turnover, product release, cleavage specificity or an independent experimental observation.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: COMPUTATIONAL
+    evidence:
+    - reference: PMID:27398092
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4939058/
+      snippet: pentacovalent intermediate
+      explanation: Original Figures 1-3 and Methods describe the proposed path to the constructed cleaved-DNA
+        endpoint. Figures 4/5 retain distinct ion and environment comparisons; their profiles are not
+        adopted as kinetic rate enhancements.
+      cache_path: evidence/PF01904/ogrizek-2016.txt
+      cache_sha256: 14035fbe893099339ba98311c2b78203dfc6e94b87e81cac2f573700206708d0
+curation_events:
+- timestamp: '2026-10-11T23:06:35Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate YecE joint-genotype phenotypes and a separate Tm1631 computational mechanism
+  history_record: history/records/PF01904/2026-10-11T230635Z-codex-014186.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T23:18:31Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial self-review of YecE fitness effects and hypothetical Tm1631 chemistry
+  history_record: history/records/PF01904/2026-10-11T231831Z-codex-7302c4.yaml
+  event_index: 0
+  llm_assisted: true

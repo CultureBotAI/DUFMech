@@ -1,0 +1,43 @@
+PF01870 Hjc identity assessment; accessed 2026-10-11.
+Frozen interpro-pfam-duf-2026-10-10 row: PF01870, Hjc, IPR002732,
+EX_DUF, UNSCORED; 744 proteins, 674 proteomes. Snapshot SHA-256:
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+This row is not a statement that every member was experimentally characterized.
+
+Sources inspected as structured JSON, GenBank and FASTA:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01870/
+https://rest.uniprot.org/uniprotkb/search?query=(gene:hjc)%20AND%20(organism_id:186497)&format=json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01870/protein/uniprot/E7FHX4/
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=AB023635&rettype=gb&retmode=text
+https://rest.uniprot.org/uniprotkb/search?query=SiRe_1431&format=json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01870/protein/uniprot/F0NID3/
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=WP_011012650.1,WP_012711550.1&rettype=fasta&retmode=text
+
+Pyrococcus furiosus Vc1/DSM3638, taxon186497: PF1503, E7FHX4 sequence
+version1, 123 aa. Exact equality to original AB023635.1 CDS BAA82839.1
+and current WP_011012650.1 was checked. Sequence SHA-256 (uppercase,
+unwrapped, no newline):
+a0b2e1f77c0b425dc7f7cbf87b6b56c91d78e55eb438e50c0d1c52d5a85cd073.
+Current PF01870 match1-97, score7.1e-26, representative false. The original
+1999 preparation was untagged pPFHJ2 in pET21a, with NdeI initiating M and
+a native stop; the authors report insert sequencing. 2000 uses this preparation
+method. Our sequence comparison is not independent sequencing of assay batches.
+
+Saccharolobus islandicus REY15A (called Sulfolobus islandicus in 2019),
+taxon930945: SiRe_1431, F0NID3 sequence version1, 143 aa, exactly matching
+WP_012711550.1. Sequence SHA-256:
+60167c51e810b0da7b410d9faecd67d2b09b739e120c2a029de377b5d726da87.
+Current PF01870 match4-134, score9.6e-45, representative false. S9,S34,D42
+are inside the match; S136 and T138 are outside. These are protein-coordinate
+assignments, not isolated-domain experiments. Main 2019 Methods specify
+tag-free Hjc in pET15bM, NdeI/SalI cloning, BL21(DE3)-CodonPlus-RIL expression,
+70 C heat treatment, heparin and gel filtration. Primers in the supplementary
+DOCX were not obtained as an actual DOCX and have not been inspected.
+The cellular host E233S is REY15A delta-pyrEF delta-lacS. The spot experiments
+retained here have Hje intact. Do not label that engineered background as
+unmodified wild-type REY15A or combine it with delta-hje experiments.
+
+PF01870 also contains Hje-family members; neither the Hjc label nor these two
+examples exhausts family function. Hje primary structural/functional follow-up
+PMID15479781 is not curated here. Sequence/domain matches do not transfer
+phosphorylation sites or damage-tolerance effects across the whole family.

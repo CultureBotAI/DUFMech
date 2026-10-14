@@ -4,7 +4,7 @@ name: Integral membrane protein DUF92
 short_name: DUF92
 seed_status: KNOWN_HISTORICAL_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01940
 counters:
   proteins: 6136
@@ -25,3 +25,906 @@ description: Members of this family have several predicted transmembrane helices
   has been characterised as protein PGR (AtPGR). PGR is suggested to be a potential glucose-responsive
   regulator in carbohydrate metabolism in plants. This entry also includes protein VTE6, which is a Pphytyl-phosphate
   kinase catalysing the conversion of phytyl-monophosphate to phytyl-diphosphate [[cite:PUB00092523]].
+curation_history: history/records/PF01940
+discussions:
+- discussion_id: pf01940-mechanism-and-assay-limits
+  prompt: Resolve DUF92 domain-specific mechanisms without joining plant and mammalian contexts.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Crude-extract chemistry, gene perturbations and cellular probe labeling do not establish
+    isolated-domain sufficiency or a universal molecular pathway.
+  evidence:
+  - reference: PMID:42321469
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Verify probe specificity, exact constructs, independent knockdown/rescue and laterality/statistics;
+      do not equate modified-probe engagement with native ligand activation.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: See evidence/PF01940/coverage.txt and source ledgers; VTE6 toxicity remains hypothetical.
+- discussion_id: pf01940-source-and-member-coverage
+  prompt: Extend VTE6, PGR, TMEM19 and microbial member coverage from remaining primary sources.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Phylloquinone/PSI, other PGR regulators, seed-storage, microbial and remaining mammalian
+    experiments remain uncurated.
+  evidence:
+  - reference: doi:10.1016/j.molp.2016.12.006
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Abstract was accessible but attempted full-text endpoints returned 403; inspect original
+      alleles, figures and controls before adding the PSI mechanism.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: All records and previous follow-ups remain in scope; current family curation is partial.
+causal_graphs:
+- graph_id: vte6-leaf-extract-2015
+  title: VTE6-associated phytyl-P conversion in crude leaf extracts
+  scope: vom Dorp 2015 Figure 5B preparation-level assay.
+  context: Arabidopsis leaf crude extract with phytyl-P and CTP, 30 C for 30 min; LC-MS/MS product readout.
+    WT versus first-exon insertion alleles vte6-1 and vte6-2.
+  family_mapping: Arabidopsis Q9SYM0 v1, 333 aa, VTE6/At1g78620; PF01940 97-316. Whole-protein/gene context,
+    not isolated PF01940.
+  taxon: NCBITaxon:3702
+  scope_status: MECHANISTIC
+  limitations: Directness refers to the complete extract reaction, not purified VTE6. Mutant extracts
+    can differ in composition. Residual activity and lack of isolated-domain assays preclude universal
+    catalytic sufficiency.
+  nodes:
+  - node_id: reaction
+    label: WT leaf extract plus phytyl-P and CTP
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9SYM0
+  - node_id: mut1
+    label: vte6-1 leaf extract instead of WT
+    node_type: PERTURBATION
+  - node_id: mut2
+    label: vte6-2 leaf extract instead of WT
+    node_type: PERTURBATION
+  - node_id: product
+    label: Phytyl-diphosphate product
+    node_type: STATE
+  edges:
+  - edge_id: extract-conversion
+    subject: reaction
+    predicate: produces
+    object: product
+    mechanism: The complete WT crude-extract reaction yields measured phytyl-PP from supplied phytyl-P.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 5B and kinase Methods; 300 ug crude extract and CTP, not purified enzyme.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+  - edge_id: vte6-1-lower-extract-activity
+    subject: mut1
+    predicate: decreases
+    object: product
+    mechanism: The vte6-1 extract has lower product formation than WT under matched assay conditions.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 5B; allele pst15134, not a residue-specific catalytic substitution.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+  - edge_id: vte6-2-lower-extract-activity
+    subject: mut2
+    predicate: decreases
+    object: product
+    mechanism: The vte6-2 extract has lower product formation than WT under matched assay conditions.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 5B; pst00121 was backcrossed to remove a secondary mutation.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+- graph_id: vte6-coupled-extract-2015
+  title: Joint VTE5/VTE6 extracts convert phytol to phytyl-PP
+  scope: vom Dorp 2015 Figure 5D coupled recombinant-extract assay.
+  context: Rosetta(DE3) crude extract coexpressing His-VTE6 and VTE5-S-tag; phytol and CTP supplied. Comparator
+    extracts express either protein alone.
+  family_mapping: Arabidopsis Q9SYM0 v1, 333 aa, VTE6/At1g78620; PF01940 97-316. Whole-protein/gene context,
+    not isolated PF01940.
+  taxon: NCBITaxon:3702
+  scope_status: MECHANISTIC
+  limitations: Host is E. coli, not Arabidopsis. Joint-input crude-extract chemistry is observed; VTE6
+    alone converting unphosphorylated phytol is not. Individual microscopic reactions or nucleotide specificity
+    were not resolved.
+  nodes:
+  - node_id: joint
+    label: VTE5/VTE6 extract plus phytol and CTP
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q9SYM0
+  - node_id: product
+    label: Phytyl-diphosphate product
+    node_type: STATE
+  edges:
+  - edge_id: joint-pathway-product
+    subject: joint
+    predicate: produces
+    object: product
+    mechanism: The combined preparation produces phytyl-PP, exceeding either single-expressor extract
+      in this coupled assay.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 5D; substrate is phytol, not the phytyl-P used in Figure 5B.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+- graph_id: vte6-cell-coexpression-2015
+  title: VTE6 coexpression changes phytol-derived pools in E. coli
+  scope: vom Dorp 2015 Figure 5C whole-cell feeding experiment.
+  context: Phytol-fed Rosetta(DE3) cells coexpressing VTE5/VTE6 compared with cells expressing VTE5 alone.
+  family_mapping: Arabidopsis Q9SYM0 v1, 333 aa, VTE6/At1g78620; PF01940 97-316. Whole-protein/gene context,
+    not isolated PF01940.
+  taxon: NCBITaxon:3702
+  scope_status: PHENOTYPIC
+  limitations: Arabidopsis proteins in an E. coli host. Intracellular pool changes are distinct from extract
+    turnover; no isolated-domain sufficiency or measured flux is asserted.
+  nodes:
+  - node_id: co
+    label: VTE6 added to VTE5-expressing cells
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9SYM0
+  - node_id: pp
+    label: Cellular phytyl-PP pool
+    node_type: STATE
+  - node_id: p
+    label: Cellular phytyl-P pool
+    node_type: STATE
+  edges:
+  - edge_id: coexpression-pp-increase
+    subject: co
+    predicate: increases
+    object: pp
+    mechanism: Adding VTE6 expression in the VTE5 and phytol context raises the measured phytyl-PP pool.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 5C bottom; compare VTE6/VTE5 with -/VTE5.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+  - edge_id: coexpression-p-decrease
+    subject: co
+    predicate: decreases
+    object: p
+    mechanism: The same comparison lowers the phytyl-P pool.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 5C top; no independent sufficient effect of VTE6 without VTE5 is inferred.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+- graph_id: vte6-leaf-phenotypes-2015
+  title: VTE6 insertion alleles alter plant growth and lipid pools
+  scope: vom Dorp 2015 Figures 2, 4 and 7; separate measured outputs.
+  context: Six-week Arabidopsis MS/sucrose plants; vte6-1 or vte6-2 compared with WT. Insertion-background
+    ecotype is not independently resolved here; do not assume the Col-0 overexpression background.
+  family_mapping: Arabidopsis Q9SYM0 v1, 333 aa, VTE6/At1g78620; PF01940 97-316. Whole-protein/gene context,
+    not isolated PF01940.
+  taxon: NCBITaxon:3702
+  scope_status: PHENOTYPIC
+  limitations: Gene-level effects do not establish a single causal chain linking every pool to growth.
+    GG-PP is not significantly altered in Figure 7. The backcrossed vte6-2 line addresses one known secondary
+    mutation, not every confound.
+  nodes:
+  - node_id: mut
+    label: vte6-1 or vte6-2 insertion instead of WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9SYM0
+  - node_id: pp
+    label: Leaf phytyl-PP
+    node_type: STATE
+  - node_id: p
+    label: Leaf phytyl-P
+    node_type: STATE
+  - node_id: toc
+    label: Leaf alpha-tocopherol
+    node_type: STATE
+  - node_id: chl
+    label: Leaf chlorophyll
+    node_type: STATE
+  - node_id: phytol
+    label: Leaf free phytol
+    node_type: STATE
+  - node_id: esters
+    label: 12:0, 14:0 and 16:0 fatty-acid phytyl esters
+    node_type: STATE
+  - node_id: stunt
+    label: Growth impairment on MS/sucrose
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: insertion-pp
+    subject: mut
+    predicate: decreases
+    object: pp
+    mechanism: Both insertion lines show the indicated change relative to WT in the stated growth context.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 7 visually inspected; separate measured output, not an inferred intermediary.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+  - edge_id: insertion-p
+    subject: mut
+    predicate: increases
+    object: p
+    mechanism: Both insertion lines show the indicated change relative to WT in the stated growth context.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 7 visually inspected; separate measured output, not an inferred intermediary.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+  - edge_id: insertion-toc
+    subject: mut
+    predicate: decreases
+    object: toc
+    mechanism: Both insertion lines show the indicated change relative to WT in the stated growth context.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figures 2D and 4A visually inspected; separate measured output, not an inferred intermediary.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+  - edge_id: insertion-chl
+    subject: mut
+    predicate: decreases
+    object: chl
+    mechanism: Both insertion lines show the indicated change relative to WT in the stated growth context.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 4B visually inspected; separate measured output, not an inferred intermediary.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+  - edge_id: insertion-phytol
+    subject: mut
+    predicate: increases
+    object: phytol
+    mechanism: Both insertion lines show the indicated change relative to WT in the stated growth context.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 4C visually inspected; separate measured output, not an inferred intermediary.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+  - edge_id: insertion-esters
+    subject: mut
+    predicate: increases
+    object: esters
+    mechanism: Both insertion lines show the indicated change relative to WT in the stated growth context.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 4D visually inspected; separate measured output, not an inferred intermediary.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+  - edge_id: insertion-stunt
+    subject: mut
+    predicate: increases
+    object: stunt
+    mechanism: Both insertion lines show the indicated change relative to WT in the stated growth context.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 2C visually inspected; separate measured output, not an inferred intermediary.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+- graph_id: vte6-double-mutant-2015
+  title: Additional vte5-2 partly suppresses vte6-1 phenotypes
+  scope: vom Dorp 2015 Figures 4, 6 and 7 genetic comparison.
+  context: vte5-2/pst12490 added to the vte6-1 background; comparisons with the vte6-1 single mutant on
+    MS/sucrose and after transfer to soil.
+  family_mapping: Arabidopsis Q9SYM0 v1, 333 aa, VTE6/At1g78620; PF01940 97-316. Whole-protein/gene context,
+    not isolated PF01940.
+  taxon: NCBITaxon:3702
+  scope_status: PHENOTYPIC
+  limitations: 'Partial suppression, not WT restoration: double mutants remain stunted and tocopherol-depleted.
+    Joint genotype changes cannot identify phytyl-P toxicity as the unique cause.'
+  nodes:
+  - node_id: double
+    label: vte5-2 added to vte6-1
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9SYM0
+  - node_id: growth
+    label: Vegetative growth and soil survival
+    node_type: PHENOTYPE
+  - node_id: chl
+    label: Leaf chlorophyll
+    node_type: STATE
+  - node_id: p
+    label: Leaf phytyl-P
+    node_type: STATE
+  edges:
+  - edge_id: double-growth-improvement
+    subject: double
+    predicate: increases
+    object: growth
+    mechanism: Additional vte5-2 permits improved growth and soil survival relative to vte6-1, without
+      restoring normal development.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 6C-E and Discussion; different ages and soil/MS panels remain distinct.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+  - edge_id: double-chlorophyll-increase
+    subject: double
+    predicate: increases
+    object: chl
+    mechanism: The double mutant has higher chlorophyll than the vte6-1 single mutant.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 4B; levels remain below WT.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+  - edge_id: double-phytyl-p-decrease
+    subject: double
+    predicate: decreases
+    object: p
+    mechanism: The double mutant suppresses the elevated phytyl-P pool of vte6-1.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 7; does not prove toxicity or direct chlorophyll-synthase inhibition.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+- graph_id: vte6-seed-overexpression-2015
+  title: VTE6 overexpression changes seed phytyl-PP and gamma-tocopherol
+  scope: vom Dorp 2015 Figure 8 seed measurements.
+  context: 'Col-0 35S-VTE6 lines #3/#4 versus empty-vector seeds; whole-gene gain of expression.'
+  family_mapping: Arabidopsis Q9SYM0 v1, 333 aa, VTE6/At1g78620; PF01940 97-316. Whole-protein/gene context,
+    not isolated PF01940.
+  taxon: NCBITaxon:3702
+  scope_status: PHENOTYPIC
+  limitations: Figure bars and Results specify empty vector although caption mentions WT. Phytyl-P and
+    GG-PP do not show the same significant increase. No direct PP-to-tocopherol flux is measured.
+  nodes:
+  - node_id: oe
+    label: '35S-VTE6 #3/#4 instead of empty vector'
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9SYM0
+  - node_id: pp
+    label: Seed phytyl-PP
+    node_type: STATE
+  - node_id: toc
+    label: Seed gamma-tocopherol
+    node_type: STATE
+  edges:
+  - edge_id: seed-pp-increase
+    subject: oe
+    predicate: increases
+    object: pp
+    mechanism: Both overexpression lines have a higher seed phytyl-PP pool than empty vector.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 8A, right axis for phytyl-PP; compare the eV bars.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+  - edge_id: seed-gamma-toc-increase
+    subject: oe
+    predicate: increases
+    object: toc
+    mechanism: Both overexpression lines have higher gamma-tocopherol than empty vector.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: VTE6 Harbors Phytyl-P Kinase Activity
+      explanation: Figure 8B; not all tocopherol forms increase.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+- graph_id: vte6-phytyl-p-toxicity-hypothesis
+  title: Candidate phytyl-P toxicity in vte6 plants
+  scope: Proposed explanation in vom Dorp 2015 Discussion, not an observed molecular step.
+  context: Elevated phytyl-P in vte6 insertion plants and partial suppression in the vte5-2 vte6-1 double
+    mutant.
+  family_mapping: Arabidopsis Q9SYM0 v1, 333 aa, VTE6/At1g78620; PF01940 97-316. Whole-protein/gene context,
+    not isolated PF01940.
+  taxon: NCBITaxon:3702
+  scope_status: HYPOTHETICAL
+  limitations: Free phytol, downstream derivatives and other metabolic changes are alternatives. No isolated
+    phytyl-P perturbation establishes necessity or sufficiency; epistasis does not uniquely identify the
+    toxic species.
+  nodes:
+  - node_id: p
+    label: Excess phytyl-P
+    node_type: STATE
+  - node_id: growth
+    label: Growth impairment
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: candidate-toxicity
+    subject: p
+    predicate: increases
+    object: growth
+    mechanism: Phytyl-P accumulation is proposed to contribute to growth impairment through unresolved
+      toxicity or metabolic interference.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: CONTEXTUAL
+    evidence:
+    - reference: PMID:26452599
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4682318/
+      snippet: it is possible that phytyl-P is toxic
+      explanation: Discussion section on suppression; explicitly speculative, distinct from measured genotype
+        effects.
+      cache_path: evidence/PF01940/vte6-2015.txt
+      cache_sha256: 26b4930c1e4bef9a259bfba4c753099a44c491a4c04e328c609142f36d399bbd
+- graph_id: pgr-glucose-induction-2011
+  title: Glucose exposure transiently induces AtPGR transcript
+  scope: Chung 2011 public Figure 4a and caption.
+  context: Ten-day Arabidopsis seedlings treated with 5% glucose; 3 h versus untreated, followed by declining
+    expression at later sampled times.
+  family_mapping: Arabidopsis Q0WP96 v1, 288 aa, PGR/At5g19930; PF01940 15-276. Distinct from VTE6/At1g78620.
+  taxon: NCBITaxon:3702
+  scope_status: PHENOTYPIC
+  limitations: Ecotype and full Methods are not accessible in this pass. This is transcript regulation,
+    not glucose binding, transport or protein activation. Figure 4c is a separate promoter reporter.
+  nodes:
+  - node_id: glc
+    label: 5% glucose for 3 h
+    node_type: PERTURBATION
+  - node_id: rna
+    label: AtPGR transcript abundance
+    node_type: STATE
+    grounding:
+    - UniProtKB:Q0WP96
+  edges:
+  - edge_id: glucose-transcript-increase
+    subject: glc
+    predicate: increases
+    object: rna
+    mechanism: Glucose treatment raises AtPGR mRNA at the sampled peak relative to untreated seedlings.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.1007/s12374-011-9145-z
+      source_url: https://link.springer.com/article/10.1007/s12374-011-9145-z
+      snippet: Glc sensitivity of AtPGR
+      explanation: Public Figure 4a image and caption, three biological RNA samples; full Methods not
+        inspected.
+      cache_path: evidence/PF01940/pgr-2011.txt
+      cache_sha256: e58498d8bdcb06384f557dba18f76a4263e824b90523bee3612b567f35ff98ba
+- graph_id: pgr-glucose-phenotypes-2011
+  title: AtPGR expression changes cotyledon greening under glucose
+  scope: Chung 2011 public Figure 5.
+  context: WT, OX7-6/OX15-1 and RNAi ri5-1/ri11-1 seedlings grown ten days on MS with 5% glucose; untreated
+    MS controls and transcript confirmation shown.
+  family_mapping: Arabidopsis Q0WP96 v1, 288 aa, PGR/At5g19930; PF01940 15-276. Distinct from VTE6/At1g78620.
+  taxon: NCBITaxon:3702
+  scope_status: PHENOTYPIC
+  limitations: Whole-gene interventions, not isolated-domain mechanism. Untreated seedlings green similarly.
+    Exact ecotype, complete constructs, off-target controls and resistant-transgene rescue are not resolved
+    from the public figures.
+  nodes:
+  - node_id: oe
+    label: AtPGR OX7-6/OX15-1 instead of WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q0WP96
+  - node_id: ri
+    label: AtPGR RNAi ri5-1/ri11-1 instead of WT
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q0WP96
+  - node_id: green
+    label: Cotyledon greening under 5% glucose
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: pgr-oe-greening-increase
+    subject: oe
+    predicate: increases
+    object: green
+    mechanism: The two overexpression lines retain more green expanded cotyledons than WT under glucose.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.1007/s12374-011-9145-z
+      source_url: https://link.springer.com/article/10.1007/s12374-011-9145-z
+      snippet: Glc sensitivity of AtPGR
+      explanation: Figure 5b/c visually inspected; three sets of 50 seedlings.
+      cache_path: evidence/PF01940/pgr-2011.txt
+      cache_sha256: e58498d8bdcb06384f557dba18f76a4263e824b90523bee3612b567f35ff98ba
+  - edge_id: pgr-rnai-greening-decrease
+    subject: ri
+    predicate: decreases
+    object: green
+    mechanism: The two RNAi lines have fewer green expanded cotyledons than WT under glucose.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.1007/s12374-011-9145-z
+      source_url: https://link.springer.com/article/10.1007/s12374-011-9145-z
+      snippet: Glc sensitivity of AtPGR
+      explanation: Figure 5a verifies relative transcript reduction; Figure 5c compares the phenotype,
+        not sugar transport.
+      cache_path: evidence/PF01940/pgr-2011.txt
+      cache_sha256: e58498d8bdcb06384f557dba18f76a4263e824b90523bee3612b567f35ff98ba
+- graph_id: pgr-bhlh34-expression-2017
+  title: bHLH34 perturbation changes glucose-induced AtPGR expression
+  scope: Min 2017 Figure 5A, upstream gene regulation.
+  context: Fourteen-day Arabidopsis seedlings, 6% glucose for 12 h; bHLH34 OX2-1/OX3-5 or RNAi ri2-2/ri5-1
+    compared with WT.
+  family_mapping: Arabidopsis Q0WP96 v1, 288 aa, PGR/At5g19930; PF01940 15-276. Distinct from VTE6/At1g78620.
+    The manipulated bHLH34 is At3g23210, not a PF01940 protein.
+  taxon: NCBITaxon:3702
+  scope_status: PHENOTYPIC
+  limitations: Separate promoter binding and reporter assays support regulation but do not establish that
+    bHLH34 growth phenotypes are mediated by AtPGR. No PGR epistasis/rescue is inferred.
+  nodes:
+  - node_id: oe
+    label: bHLH34 overexpression instead of WT
+    node_type: PERTURBATION
+  - node_id: ri
+    label: bHLH34 RNAi instead of WT
+    node_type: PERTURBATION
+  - node_id: rna
+    label: Glucose-treated AtPGR transcript abundance
+    node_type: STATE
+    grounding:
+    - UniProtKB:Q0WP96
+  edges:
+  - edge_id: bhlh34-oe-pgr-increase
+    subject: oe
+    predicate: increases
+    object: rna
+    mechanism: bHLH34 overexpression increases AtPGR mRNA in the glucose-treated comparison.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:29321786
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5732184/
+      snippet: AtPGR Expression in bHLH34 Transgenic Plants upon Glc Treatment
+      explanation: Figure 5A, 12-h bars; locus identities verified in Accession Numbers.
+      cache_path: evidence/PF01940/pgr-2017.txt
+      cache_sha256: d142fca5e220d69975bdeaed297fa15eb591ba62feea4f782c70483f877824d7
+  - edge_id: bhlh34-rnai-pgr-decrease
+    subject: ri
+    predicate: decreases
+    object: rna
+    mechanism: bHLH34 RNAi reduces AtPGR mRNA in the glucose-treated comparison.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:29321786
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5732184/
+      snippet: AtPGR Expression in bHLH34 Transgenic Plants upon Glc Treatment
+      explanation: Figure 5A, ri2-2/ri5-1 versus WT; not a PF01940 catalytic assay.
+      cache_path: evidence/PF01940/pgr-2017.txt
+      cache_sha256: d142fca5e220d69975bdeaed297fa15eb591ba62feea4f782c70483f877824d7
+- graph_id: tmem19-mouse-probe-labeling-2026
+  title: Erucamide probe engages tagged mouse TMEM19 in human cells
+  scope: Wei 2026 Figure 4d cellular photoaffinity labeling.
+  context: Mouse TMEM19 clone MG55126-NF expressed in human HEK293T; erucamide-diazirine probe with UV
+    and click-label detection. Compare mock, no-UV, oleamide and palmitamide probe conditions.
+  family_mapping: Mouse Q91W52 v1, 336 aa, Tmem19; PF01940 60-321. Human host does not change the mouse
+    construct identity.
+  taxon: NCBITaxon:10090
+  scope_status: MECHANISTIC
+  limitations: Directness is chemical probe labeling in cells, not purified native-erucamide affinity
+    or receptor activation. Domain boundaries are current mappings, not a mapped ligand site. Human HMC3
+    discovery proteomics is a separate experiment.
+  nodes:
+  - node_id: probe
+    label: Erucamide probe plus UV in mouse-TMEM19-expressing cells
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q91W52
+  - node_id: label
+    label: TMEM19-associated probe-labeling band
+    node_type: STATE
+  edges:
+  - edge_id: probe-label-formation
+    subject: probe
+    predicate: produces
+    object: label
+    mechanism: The complete labeling condition yields a prominent TMEM19-associated band relative to the
+      indicated controls.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42321469
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13433267/
+      snippet: Confirmation of selective engagement of TMEM19
+      explanation: Figure 4d and Cell culture/PAL Methods; expression is explicitly mouse TMEM19 in HEK293T.
+      cache_path: evidence/PF01940/tmem19-2026.txt
+      cache_sha256: 11aead27aad35ddaec6b3717ce34a0310fe0e0ce59cd73c209645962e905a88b
+- graph_id: tmem19-human-mpc-knockdown-2026
+  title: Human TMEM19 knockdown alters transcripts under erucamide
+  scope: Wei 2026 Figure 5d qPCR, not the RNA-seq pathway score.
+  context: Human iPSC-derived myeloid progenitor cells; siTMEM19 versus scrambled siRNA under Eru-C18-pSi
+    treatment, with empty-carrier groups retained as controls.
+  family_mapping: Human Q96HH6 v1, 336 aa, TMEM19; PF01940 60-321.
+  taxon: NCBITaxon:9606
+  scope_status: PHENOTYPIC
+  limitations: VEGF and TNF erucamide induction in scrambled cells is NS, although their knockdown contrasts
+    are significant. Transcript levels are not secretion measurements. Unknown intermediates and untested
+    off-target/rescue alternatives prevent a direct receptor-to-cytokine chain.
+  nodes:
+  - node_id: kd
+    label: siTMEM19 instead of scrambled siRNA under Eru-C18-pSi
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q96HH6
+  - node_id: fgf2
+    label: FGF2 transcript under Eru-C18-pSi
+    node_type: STATE
+  - node_id: pdgfa
+    label: PDGFA transcript under Eru-C18-pSi
+    node_type: STATE
+  - node_id: igf1
+    label: IGF1 transcript under Eru-C18-pSi
+    node_type: STATE
+  - node_id: bdnf
+    label: BDNF transcript under Eru-C18-pSi
+    node_type: STATE
+  - node_id: vegf
+    label: VEGF transcript under Eru-C18-pSi
+    node_type: STATE
+  - node_id: tnf
+    label: TNF transcript under Eru-C18-pSi
+    node_type: STATE
+  edges:
+  - edge_id: knockdown-fgf2-decrease
+    subject: kd
+    predicate: decreases
+    object: fgf2
+    mechanism: TMEM19 knockdown lowers the measured FGF2 transcript relative to scrambled cells under
+      erucamide treatment.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42321469
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13433267/
+      snippet: Confirmation of selective engagement of TMEM19
+      explanation: Figure 5d, Scr-Eru versus siTMEM19-Eru; separate qPCR output, not secretion or direct
+        transcriptional activation.
+      cache_path: evidence/PF01940/tmem19-2026.txt
+      cache_sha256: 11aead27aad35ddaec6b3717ce34a0310fe0e0ce59cd73c209645962e905a88b
+  - edge_id: knockdown-pdgfa-decrease
+    subject: kd
+    predicate: decreases
+    object: pdgfa
+    mechanism: TMEM19 knockdown lowers the measured PDGFA transcript relative to scrambled cells under
+      erucamide treatment.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42321469
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13433267/
+      snippet: Confirmation of selective engagement of TMEM19
+      explanation: Figure 5d, Scr-Eru versus siTMEM19-Eru; separate qPCR output, not secretion or direct
+        transcriptional activation.
+      cache_path: evidence/PF01940/tmem19-2026.txt
+      cache_sha256: 11aead27aad35ddaec6b3717ce34a0310fe0e0ce59cd73c209645962e905a88b
+  - edge_id: knockdown-igf1-decrease
+    subject: kd
+    predicate: decreases
+    object: igf1
+    mechanism: TMEM19 knockdown lowers the measured IGF1 transcript relative to scrambled cells under
+      erucamide treatment.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42321469
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13433267/
+      snippet: Confirmation of selective engagement of TMEM19
+      explanation: Figure 5d, Scr-Eru versus siTMEM19-Eru; separate qPCR output, not secretion or direct
+        transcriptional activation.
+      cache_path: evidence/PF01940/tmem19-2026.txt
+      cache_sha256: 11aead27aad35ddaec6b3717ce34a0310fe0e0ce59cd73c209645962e905a88b
+  - edge_id: knockdown-bdnf-decrease
+    subject: kd
+    predicate: decreases
+    object: bdnf
+    mechanism: TMEM19 knockdown lowers the measured BDNF transcript relative to scrambled cells under
+      erucamide treatment.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42321469
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13433267/
+      snippet: Confirmation of selective engagement of TMEM19
+      explanation: Figure 5d, Scr-Eru versus siTMEM19-Eru; separate qPCR output, not secretion or direct
+        transcriptional activation.
+      cache_path: evidence/PF01940/tmem19-2026.txt
+      cache_sha256: 11aead27aad35ddaec6b3717ce34a0310fe0e0ce59cd73c209645962e905a88b
+  - edge_id: knockdown-vegf-decrease
+    subject: kd
+    predicate: decreases
+    object: vegf
+    mechanism: TMEM19 knockdown lowers the measured VEGF transcript relative to scrambled cells under
+      erucamide treatment.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42321469
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13433267/
+      snippet: Confirmation of selective engagement of TMEM19
+      explanation: Figure 5d, Scr-Eru versus siTMEM19-Eru; do not infer significant erucamide induction
+        in the Scr comparison.
+      cache_path: evidence/PF01940/tmem19-2026.txt
+      cache_sha256: 11aead27aad35ddaec6b3717ce34a0310fe0e0ce59cd73c209645962e905a88b
+  - edge_id: knockdown-tnf-decrease
+    subject: kd
+    predicate: decreases
+    object: tnf
+    mechanism: TMEM19 knockdown lowers the measured TNF transcript relative to scrambled cells under erucamide
+      treatment.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42321469
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13433267/
+      snippet: Confirmation of selective engagement of TMEM19
+      explanation: Figure 5d, Scr-Eru versus siTMEM19-Eru; do not infer significant erucamide induction
+        in the Scr comparison.
+      cache_path: evidence/PF01940/tmem19-2026.txt
+      cache_sha256: 11aead27aad35ddaec6b3717ce34a0310fe0e0ce59cd73c209645962e905a88b
+- graph_id: tmem19-rd10-knockdown-2026
+  title: Retinal Tmem19 knockdown attenuates selected erucamide-associated outcomes
+  scope: Wei 2026 Figure 5f/g rd10 model.
+  context: B6.CXB1-Pde6brd10/J mice; retinal AAV2-shTMEM19 versus scrambled vector, erucamide-carrier
+    treatment at P12/P22 and readouts at P32.
+  family_mapping: Mouse Q91W52 v1, 336 aa, Tmem19; PF01940 60-321.
+  taxon: NCBITaxon:10090
+  scope_status: PHENOTYPIC
+  limitations: Fixed left-eye scrambled/right-eye knockdown assignment and reported unpaired tests limit
+    inference. No pan-retinal or clinical efficacy claim; many other vascular/ERG comparisons are NS.
+    Figure 5f caption comparator wording differs from the plotted bracket. Cell type and molecular intermediates
+    are unresolved.
+  nodes:
+  - node_id: kd
+    label: Retinal shTMEM19 versus scrambled vector under erucamide
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q91W52
+  - node_id: vascular
+    label: Deep-plexus vascular area
+    node_type: PHENOTYPE
+  - node_id: erg
+    label: Scotopic B-wave amplitude at 50 cd s/m2
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: retinal-vascular-decrease
+    subject: kd
+    predicate: decreases
+    object: vascular
+    mechanism: The knockdown condition has lower deep-plexus vascular area under erucamide treatment than
+      the scrambled comparison.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42321469
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13433267/
+      snippet: Confirmation of selective engagement of TMEM19
+      explanation: Figure 5f plotted comparison and Results; superficial/intermediate area is not significantly
+        altered.
+      cache_path: evidence/PF01940/tmem19-2026.txt
+      cache_sha256: 11aead27aad35ddaec6b3717ce34a0310fe0e0ce59cd73c209645962e905a88b
+  - edge_id: retinal-erg-decrease
+    subject: kd
+    predicate: decreases
+    object: erg
+    mechanism: The knockdown condition has lower scotopic B-wave amplitude at the indicated flash intensity
+      under erucamide.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:42321469
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13433267/
+      snippet: Confirmation of selective engagement of TMEM19
+      explanation: Figure 5g/h and Methods; not uniform impairment of every ERG endpoint.
+      cache_path: evidence/PF01940/tmem19-2026.txt
+      cache_sha256: 11aead27aad35ddaec6b3717ce34a0310fe0e0ce59cd73c209645962e905a88b
+curation_events:
+- timestamp: '2026-10-12T06:14:57Z'
+  curator: Codex
+  action: CREATE
+  outcome: needs_followup
+  summary: Curate separated DUF92 plant and mammalian causal contexts
+  history_record: history/records/PF01940/2026-10-12T061457Z-codex-e87cd3.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-12T06:18:11Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial DUF92 scientific self-review
+  history_record: history/records/PF01940/2026-10-12T061811Z-codex-e5508e.yaml
+  event_index: 0
+  llm_assisted: true

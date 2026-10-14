@@ -1,0 +1,16 @@
+PF00672 / Tsr identity, inspected 2026-10-11
+https://rest.uniprot.org/uniprotkb/P02942.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P02942/entry/pfam/PF00672/
+P02942 = tsr / cheD, b4355 / JW4318, E. coli K-12, NCBITaxon:83333.
+551 residues; sequence version 2; entry version 209.
+Sequence MD5: ef341e0061e3f93c9c7468f6d9d09ba0
+UniProt and InterPro sequences agree exactly.
+P02942 Pfam:PF00672 interval: 217-263, inclusive
+Reference residues 234/235/236/237/241/245 are G/G/D/L/I/G, matching
+the 2008 connector numbering. G235C/E/P are therefore inside this interval.
+One sequence-consistent NCBI reference is AAC77311.1; alternate-sequence
+CAA23676.1 is not adopted as an exact clone match.
+The study uses full-length pRR53 Tsr in RP437-derived deletion hosts,
+not isolated HAMP or native MG1655 cells. Reported whole-gene sequencing
+supports mutation specificity, but the complete reagent sequence and
+plasmid junctions were not independently reconstructed here.

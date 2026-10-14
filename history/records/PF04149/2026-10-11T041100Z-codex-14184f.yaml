@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF04149
+  path: curation/families/PF04149.yaml
+session:
+  id: 2026-10-11T041100Z-codex-14184f
+  timestamp: '2026-10-11T04:11:00Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Separate medium-specific SCO7615/SCO7616 deletion phenotypes
+  details: Added two PHENOTYPIC INDIRECT graphs, retaining joint-gene scope, opposite
+    medium-specific directions, current UniProt identity, the reported coordinate
+    discrepancy and Figure 5 caption mismatch. Inspected primary Results, Figure 5
+    image and Figure 6 caption; no isolated-domain mechanism or family-wide transfer
+    claimed. Existing Scr2 graph and prior review retained. Further DUF397 systems
+    remain uncurated.
+  sections:
+  - causal_graphs

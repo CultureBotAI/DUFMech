@@ -1,0 +1,32 @@
+PF01579 / EXC-13 primary-evidence extract
+Inspected 2026-10-11. Al-Hashimi et al. (2019), PMID:30885922.
+doi:10.1534/g3.119.200626
+https://pmc.ncbi.nlm.nih.gov/articles/PMC6505153/
+Locations: Methods, Tables 1-2, Results and Figure 4D/D'. Figure visually checked.
+Minimal quotation (Table 2): "vesicles along swollen cytoplasm"
+
+Curator's factual assay notes, not a transcription:
+Target exc-13 = C03G6.5. Feeding RNAi in BK540, rrf-3(pk1426) II;
+qpIs11[unc-119; Pvha-1::gfp] I. L2 parents were exposed and F1 young adults
+examined on days 4-6. General culture was at 20 C. BK541 sid-1(pk3321)
+with the same reporter was the RNAi-refractory negative control; dpy-11,
+exc-1 and erm-1 were induction controls. No target-specific rescue is established.
+Table 2: 79 canals; 19% affected; affected-canal length score 3.5, SD 0.32;
+BK540 control: 100 canals, 0% affected, length score 4.0, SD 0.0.
+Length is a 0-4 ordinal anatomical score, not micrometres. The 3.5 mean is
+conditioned on affected canals, not the mean across all 79. Fisher 3x2
+P=1.2e-6 is just outside the authors' high-significance cutoff of 1e-6.
+Figure 4D and Results show focal basal vesicles/cysts and irregular swollen
+cytoplasm. The VC40373 C44Y strain is a separate, multi-mutation background;
+its enlarged short lumens do not reproduce the RNAi's large lateral cysts.
+It is not evidence for an isolated C44Y or disulfide-mechanism causal edge.
+
+Public supplement: https://doi.org/10.25387/g3.7710362
+https://ndownloader.figshare.com/files/14349401
+Al-Hashimi TableS2.xlsx, Results Summary, exc-13 row: clone V-16K12;
+75 canals, all-canal mean 3.9, SD 0.24, 15 short canals, affected mean 3.5,
+reported short fraction 0.204. These values differ from Table 2; even 15/75
+does not equal 0.204. Do not silently pool, reconcile or replace either source.
+Data-MillionMut,Suppressors identifies VC40373 and C44Y. Exact RNAi insert
+sequence and a clean isogenic rescue remain unverified. Frozen family metadata
+is not changed by these whole-gene observations.

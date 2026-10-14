@@ -4,7 +4,7 @@ name: Condensation domain
 short_name: Condensation
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF00668
 counters:
   proteins: 68562
@@ -26,3 +26,187 @@ description: This domain is found in many multi-domain enzymes which synthesise 
   It is usually found to the carboxy side of a phosphopantetheine binding domain ([pfam:PF00550]). It
   has been shown that mutations in the HHXXXDG motif abolish activity suggesting this is part of the active
   site [[cite:PUB00007135]].
+curation_history: history/records/PF00668
+discussions:
+- discussion_id: tycb1-constructs-units-and-catalytic-mechanism
+  prompt: Resolve TycB1 construct and assay ambiguities before assigning an elementary condensation mechanism.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Coupled reaction output and domain-localized mutations support a scoped biochemical graph,
+    but not a universal histidine proton-transfer step. Exact fusion sequences, GrsA accession, phenylalanine
+    units and inconsistent D151 labels remain unresolved.
+  evidence:
+  - reference: doi:10.1046/j.0014-2956.2001.02691.x
+    supports: PARTIAL
+    evidence_source: full_text
+    explanation: Publisher text and captions support the reaction and three unambiguous mutant effects.
+      D151N/D151A and Y166F/Y151F inconsistencies and the Figure 1 tycA label are retained. Neither insoluble
+      mutants nor inhibitor sensitivity identifies a specific catalytic residue mechanism.
+  - reference: PMID:17637339
+    supports: PARTIAL
+    evidence_source: abstract
+    explanation: The separate TycC PCP-C study favors an electrostatic interpretation over general acid/base
+      catalysis. Its abstract is a qualification and follow-up lead, not a complete review of the TycC
+      assays or evidence transferred to TycB1.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Obtain accessible original figures, full clone descriptions and raw product/normalization evidence;
+    expand other family contexts separately. The 1998 JBC PDF and direct publisher figure downloads were
+    unavailable. Other substrates, epimerization/cyclization subfamilies and later studies remain incompletely
+    covered. Imported identity and classification are unchanged.
+causal_graphs:
+- graph_id: tycb1-grsa-dkp-production
+  title: Joint TycB1 and GrsA preparations produce a cyclic dipeptide
+  scope: Reconstituted recombinant holo-TycB1 Pro-CAT first module and GrsA Phe-ATE, with separately tested
+    TycB1 R62A, H147R and H147V substitutions. This is neither full tyrocidine biosynthesis nor an isolated
+    condensation-domain sufficiency assay.
+  context: C-terminal His6-tagged TycB1 variants were produced with gsp phosphopantetheinyl-transferase
+    expression and nickel-affinity purification. The DKP assay separately preincubates each enzyme at
+    1 uM with 2 mM ATP and its amino-acid substrate for 3 min at 37 C, mixes equal volumes, and incubates
+    45 min at 37 C before extraction and HPLC-MS. Assay buffer contains 50 mM HEPES pH 8.0, 100 mM NaCl,
+    10 mM MgCl2 and 1 mM EDTA. The HTML gives 0.5 M phenylalanine and 0.5 mM proline before mixing; the
+    phenylalanine unit remains unresolved rather than being silently corrected. Figure 4 uses three consecutive
+    experiments from the same protein batch and thiolation normalization.
+  family_mapping: TycB is UniProtKB:O30408, NCBIProtein:AAC45929.1, nucleotide AF004835, 3587 residues,
+    sequence version 1. Current reference taxon is Brevibacillus parabrevis 54914; the sequence-linked
+    primary operon study names historical Bacillus brevis ATCC 8185. Exact UniProt/InterPro sequence agreement
+    places the first PF00668 interval at 9-454, containing R62 and H147. The other three PF00668 matches,
+    including the terminal epimerization region, are not assigned this reaction. Complete construct boundaries
+    and cloning junctions were not independently reconstructed. The paper's GrsA partner is named but
+    not assigned an unverified accession from the two current reviewed GrsA references.
+  scope_status: MECHANISTIC
+  limitations: DKP is an observed product of the joint coupled system; it is an indirect readout of peptide
+    condensation followed by release/cyclization. No elementary proton transfer, isolated-domain reaction
+    or family-wide substrate specificity is established. Retained adenylation and thiolation do not prove
+    unchanged local C-domain folding. Absolute detection limits and independent-purification replication
+    are not reported here. Source D151N/D151A, Y166F/Y151F and Figure 1 tycB/tycA inconsistencies remain
+    open; no ambiguous D151 edge is adopted. Figure captions and text were inspected, not the unavailable
+    plotted images or raw chromatograms.
+  nodes:
+  - node_id: joint-holo-tycb1-grsa-system
+    label: Joint holo-TycB1 and GrsA with ATP, phenylalanine and proline
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:O30408
+  - node_id: d-phe-l-pro-dkp
+    label: HPLC-MS-detected d-Phe-l-Pro diketopiperazine output
+    node_type: STATE
+  - node_id: tycb1-r62a-joint-system
+    label: TycB1 R62A replacing WT TycB1 in the joint GrsA reaction
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O30408
+  - node_id: tycb1-h147r-joint-system
+    label: TycB1 H147R replacing WT TycB1 in the joint GrsA reaction
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O30408
+  - node_id: tycb1-h147v-joint-system
+    label: TycB1 H147V replacing WT TycB1 in the joint GrsA reaction
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:O30408
+  edges:
+  - edge_id: joint-system-produces-dkp
+    subject: joint-holo-tycb1-grsa-system
+    predicate: produces
+    object: d-phe-l-pro-dkp
+    mechanism: The WT joint preparation generates the d-Phe-l-Pro DKP product used as the HPLC-MS reference.
+      This is a directly observed reconstituted-system output requiring the combined preparations and
+      supplied substrates, not proof that TycB1 alone generates the product or that the C domain catalyzes
+      the final cyclization.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.1046/j.0014-2956.2001.02691.x
+      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1046/j.0014-2956.2001.02691.x
+      snippet: no DKP at all could be detected
+      explanation: The quotation locates the mutant-versus-WT comparison, not the WT outcome by itself.
+        The product Results and Figure 4 caption establish WT joint-system DKP as the normalized 100%
+        comparator; the Methods specify the coupled assay. The orthogonal radiolabel assay includes a
+        no-TycB1 control, which is not relabeled as an HPLC blank.
+      cache_path: evidence/PF00668/bergendahl-2002-tycb1.txt
+      cache_sha256: afdb1d419f9f5c4e907a75daecd5cfa600f31adbdb2485456db793b87cbc9237
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O30408/entry/pfam/PF00668/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/O30408/entry/pfam/PF00668/
+      snippet: 'O30408 first Pfam:PF00668 interval: 9-454, inclusive'
+      explanation: Grounds the first TycB module and residue numbering without transferring the result
+        to its other PF00668 domains or inventing the GrsA accession.
+      cache_path: evidence/PF00668/TycB-identity.txt
+      cache_sha256: d7a690117a33be42f9d4a97cec54bdf5e596aaec3cab3195e453513592cb58bd
+  - edge_id: r62a-decreases-dkp-output
+    subject: tycb1-r62a-joint-system
+    predicate: decreases
+    object: d-phe-l-pro-dkp
+    mechanism: Replacing WT TycB1 with its soluble R62A variant yields no detected DKP under the reported
+      assay, despite retained adenylation and thiolation. The radiolabel assay also lacks the WT increase
+      attributed to dipeptide formation. This establishes a reaction-output effect, not a directly observed
+      structural role or proton-transfer step for Arg62.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.1046/j.0014-2956.2001.02691.x
+      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1046/j.0014-2956.2001.02691.x
+      snippet: no DKP at all could be detected
+      explanation: Product Results identifies R62A in the no-detected-DKP group; Figure 3 uses R62A as
+        the representative impaired radiolabel trace. Solubility and other-domain controls limit, but
+        do not eliminate, folding alternatives.
+      cache_path: evidence/PF00668/bergendahl-2002-tycb1.txt
+      cache_sha256: afdb1d419f9f5c4e907a75daecd5cfa600f31adbdb2485456db793b87cbc9237
+  - edge_id: h147r-decreases-dkp-output
+    subject: tycb1-h147r-joint-system
+    predicate: decreases
+    object: d-phe-l-pro-dkp
+    mechanism: The soluble H147R TycB1 variant gives no detected DKP in the joint GrsA assay while retaining
+      adenylation and thiolation. This measured loss is not a proof that His147 normally acts as a general
+      base; coupled reactions and possible local structural effects remain unresolved.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.1046/j.0014-2956.2001.02691.x
+      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1046/j.0014-2956.2001.02691.x
+      snippet: while being still active in adenylation and thiolation activities
+      explanation: The H147R-specific membership of the no-DKP group is reported in Results and interpreted
+        with the other-domain controls in Discussion. No atomic mechanism is inferred from the His-to-Arg
+        substitution.
+      cache_path: evidence/PF00668/bergendahl-2002-tycb1.txt
+      cache_sha256: afdb1d419f9f5c4e907a75daecd5cfa600f31adbdb2485456db793b87cbc9237
+  - edge_id: h147v-decreases-dkp-output
+    subject: tycb1-h147v-joint-system
+    predicate: decreases
+    object: d-phe-l-pro-dkp
+    mechanism: The separately assayed H147V TycB1 variant also gives no detected DKP with the same GrsA
+      partner while retaining other-domain activities. The 2002 experiment is the adopted evidence; the
+      inaccessible 1998 precursor is not counted as an independently reviewed replication.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.1046/j.0014-2956.2001.02691.x
+      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1046/j.0014-2956.2001.02691.x
+      snippet: no DKP at all could be detected
+      explanation: H147V is explicitly included in the 2002 soluble-mutant and product-results groups.
+        The absence of detectable endpoint product is kept assay-specific, not a universal zero-activity
+        claim.
+      cache_path: evidence/PF00668/bergendahl-2002-tycb1.txt
+      cache_sha256: afdb1d419f9f5c4e907a75daecd5cfa600f31adbdb2485456db793b87cbc9237
+curation_events:
+- timestamp: '2026-10-11T07:40:11Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Add scoped TycB1 condensation-system and mutation effects
+  history_record: history/records/PF00668/2026-10-11T074011Z-codex-bfa3d1.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T07:45:32Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial TycB1 condensation scientific self-review
+  history_record: history/records/PF00668/2026-10-11T074532Z-codex-d0b85b.yaml
+  event_index: 0
+  llm_assisted: true

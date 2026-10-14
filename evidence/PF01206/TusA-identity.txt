@@ -1,0 +1,16 @@
+Accessed 2026-10-11; identity data, not experimental causal evidence.
+https://rest.uniprot.org/uniprotkb/P0A890.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A890/entry/pfam/PF01206/
+UniProtKB:P0A890; TUSA_ECOLI; tusA, sirA, yhhP; b3470, JW3435.
+Escherichia coli K12 reference; NCBITaxon:83333.
+Sequence version 1; entry version 144; 81 residues.
+Sequence MD5: 5A422DB384AAFFF6E9DE57F0759B81FB.
+MTDLFSSPDHTLDALGLRCPEPVMMVRKTVRNMQPGETLLIIADDPATTRDIPGFCTFMEHELVAKETDGLPYRYLIRKGG
+NCBIProtein:AAC76495.1; NCBIProtein:NP_417927.1.
+Pfam:PF01206; domain interval: 10-79, inclusive; InterPro:IPR001455.
+InterPro and UniProt reference sequences agree exactly.
+The 2024 experiment identifies E. coli TusA but does not independently establish
+the full clone sequence or the exact template strain. K12 is a reference mapping,
+not a claim that the recombinant protein was cloned from the BL21 expression host.
+The 2013 protocol Table 1 lists tusA in pET11b as pJD34; it does not establish
+the complete sequence of the later 2024 experimental preparation.

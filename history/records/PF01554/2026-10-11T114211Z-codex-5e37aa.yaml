@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01554
+  path: curation/families/PF01554.yaml
+session:
+  id: 2026-10-11T114211Z-codex-5e37aa
+  timestamp: '2026-10-11T11:42:11Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add six scoped NorM cellular fluorescence and purified-binding effects,
+    with historical/current residue mapping and assay discrepancies.
+  details: Add six scoped NorM cellular fluorescence and purified-binding effects,
+    with historical/current residue mapping and assay discrepancies. Inspected primary
+    methods/results and relevant figures, retained minimal evidence and explicit access
+    limits; baseline 8296 records valid with zero drift. Partial curation remains
+    IN_PROGRESS.

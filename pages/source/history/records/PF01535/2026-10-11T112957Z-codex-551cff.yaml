@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01535
+  path: data/families/PF01535.yaml
+session:
+  id: 2026-10-11T112957Z-codex-551cff
+  timestamp: '2026-10-11T11:29:57Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Reviewed four HCF152 mini-PPR binding effects and local repeat mapping.
+  details: Partial scientific self-review supports scoped binding losses and partial
+    rescues; current Pfam intervals, fusion context and inaccessible supplemental
+    gels/primers limit interpretation. Pet309 mapping is not transferred. Native projection
+    and overlay checks passed; status stays IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T112951Z-pf01535-hcf152-mini-ppr-binding-and-rescue/review.yaml

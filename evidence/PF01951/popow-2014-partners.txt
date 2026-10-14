@@ -1,0 +1,71 @@
+PF01951 / Popow2014 partner-context follow-up, 2026-10-12 UTC
+PMID:24870230; doi:10.1038/nature13284.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/
+Main Figure3/4 and ED7/8/9/10 images inspected with Methods/Results/captions.
+Earlier popow-2014.txt is unchanged. Minimal additional quotations:
+"ATP hydrolysis"; "diminished RNA ligase activity".
+
+Protein ownership: Q8IWT0-associated whole human Archease is present in these
+reactions; canonical reference PF01951 31-167 and recombinant N-terminal
+ambiguity are unchanged. DDX1 is a different protein, Q92499 v2, 740 aa;
+its K52/E371 mutations are NOT Archease residues. HEK293 FLAG-DDX1 isolates a
+multiprotein ligase complex, including RTCB, FAM98B and CGI99 (ED7c), not
+purified DDX1 plus Archease alone. No DDX1-only activity becomes a PF01951 edge.
+
+Figure3e: With Archease and alpha-32P-GTP, ATP enhances FLAG-RTCB-associated
+guanylate labeling versus no added ATP. Replacing ATP with AMPPcP reduces the
+signal. FLAG-DDX1 preparations containing K52N or E371Q also have less
+RTCB-associated label than the WT-DDX1 preparation; K52N is most affected.
+The main nucleotidylation Methods give 10 uM Archease and 37 C, but do not
+unambiguously give the added ATP/analogue concentration for this panel.
+Do not borrow the 0.5 mM ligation concentration or treat stock buffer as final.
+AMPPcP replacement does not by itself isolate hydrolysis from analogue binding.
+
+Figure3f: WT/K52N/E371Q FLAG-DDX1 complexes, 20 nM complex, 1 uM linear
+intron RNA, 10 uM Archease, 0.5 mM ATP versus AMPPcP. At 30/60/90 min,
+WT complex plus Archease/ATP has greater Pconcat accumulation than its
+buffer/ATP or Archease/AMPPcP controls. K52N and E371Q preparations yield
+less product than WT under the matched Archease/ATP condition. N=3 technical
+replicates, mean +/- SD. Pconcat includes linear and circular concatemer,
+not isolated circular intron. These are intervention/output comparisons,
+not independently observed ATP-to-guanylate-to-product mediation steps.
+
+ED7 controls: K52N and E371Q reduce ATP hydrolysis in the separate 60-min
+37 C assay (N=4, SEM). Both reduce ATP UV-crosslinking; loading is shown.
+K52N has lower RNA retention, while E371Q is not similarly reduced in the
+filter-binding assay (N=9, SEM). Do not claim unchanged RNA binding for every
+mutant or a uniquely hydrolysis-specific molecular defect. Purity/loading and
+assembly controls do not exclude all folding or complex-composition effects.
+
+ED8c-e/ED9: 20 nM FLAG-DDX1 ligase complex, 10 uM Archease, RNA 100 nM to
+4 uM. Rates come from the first 15 min (N=2, SEM), counting concatemerized
+AND circular product species, unlike the main-figure Pconcat-only convention.
+Reported apparent kcat values (10^-3/s, mean +/- SEM) are WT 4.32 +/- 0.24,
+K52N 0.99 +/- 0.14, E371Q 0.88 +/- 0.09; each K/E comparison is marked
+P<0.0004 by the paper's Bonferroni-corrected z-test. KM comparisons are
+nonsignificant. Do not treat these fitted complex parameters as elementary
+Archease catalytic constants or independently reanalyzed raw data.
+
+Source discrepancies and negatives:
+- ED8 caption says E271Q, but panels/table and main Figure3 say E371Q.
+  Current Q92499 has H271 and E371; retain the main/panel E371Q label without
+  claiming a verified historical clone sequence.
+- ED7 schematic/ED8 table say R557K; ED8 gel and ED9 tables say R577K.
+  Q92499 v2 has N557 and R577. No exact Arg-variant edge is added until its
+  historical clone is resolved. Its reported lower apparent turnover remains
+  a lead; a presumed typo is not silently repaired.
+- ED8 caption says kcat is Vmax multiplied by enzyme concentration. This is
+  dimensionally inconsistent; the plotted rates divided by 20 nM instead
+  agree with the reported scale. Retain reported parameters and the conflict,
+  not a silently corrected raw-data calculation.
+- ED8b uses AMPPnP, whereas Figure3f uses AMPPcP; do not conflate analogues.
+- H601Q has a smaller reported mean kcat change, marked nonsignificant;
+  no established H601-specific requirement is claimed.
+- ED7a is a tentative cycle model, not an observed release/transfer trajectory.
+
+Figure4d/ED10c: HeLa extracts after DDX1 or CGI99 RNAi, all supplemented
+with 10 uM recombinant Archease, show reduced pre-tRNA maturation at
+10/30/60 min versus siEGFP control. CGI99 depletion co-depletes DDX1;
+no independent direct CGI99 requirement or unique molecular mediation is
+assigned. RTCB depletion and other subunit controls remain separate. Added
+Archease does not justify assigning partner-only cellular defects to its domain.

@@ -1,0 +1,60 @@
+Costa et al. 2025, A global survey of intramolecular isopeptide bonds.
+PMID:41236442; DOI:10.1002/pro.70342. Accessed 2026-10-11 UTC.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12617251/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12617251/fullTextXML
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12617251/supplementaryFiles
+Open-access article, CC BY 4.0.
+Inspected: sections 2.3-2.4, Discussion, experimental Methods 4.7-4.11,
+Table 2, supplemental Table S6 coding sequences and Figures 5/6/S8 images and
+captions. Other plotted figures, raw spectra and raw gels were not independently
+analyzed. The displayed Figure 5 density was inspected, not independently
+re-refined or validated against raw diffraction data.
+
+Minimal verbatim anchors:
+"comparable"
+"incomplete"
+"proteolytic susceptibility"
+
+Curator interpretation and factual assay metadata:
+The tested unit is a synthetic 708-828 fragment of A. silvestris ANC4999
+B9T28_05395, not its full-length adhesin. pOPINF adds an N-terminal His6/3C
+sequence; BL21(DE3) expression uses 1 mM IPTG, 18 C, 16 h. Nickel affinity
+and SEC purify the preparations. Methods explicitly remove the tag for
+crystallization, but do not unambiguously establish that processing for the CD
+and proteolysis aliquots. Their tag status remains unresolved.
+
+CD: 10 mM sodium phosphate, 100 mM sodium fluoride, pH 7.4; 300 ul in a 1-mm
+cuvette; WT 0.36 mg/ml, K715A 0.38 mg/ml. Heating 5 to 95 C and subsequent
+cooling to 5 C in 5-C increments; 180-280 nm spectra. Each displayed spectrum
+averages four repeat scans, not four independently prepared protein batches.
+Initial WT/mutant spectra both resemble folded beta-sheet proteins. Figure 6a/c
+shows the mutant transition at lower temperatures than WT (source describes
+approximately 45 versus 80 C, not independently fitted melting constants).
+Figure 6b/c shows less return toward the initial CD spectrum for K715A after
+cooling. The comparisons concern normalized spectral behavior, not cell survival
+or an observed unfolding/refolding pathway for a single molecule. Independent
+replicate uncertainty, thermal equilibration time and detailed scan rate are not
+established by the inspected method.
+
+Proteolysis: mix 10 ul of 1 mg/ml polypeptide with 10 ul of 1 mg/ml Proteinase K
+in PBS, incubate 1 h at 20, 30, 40 or 50 C, then SDS-PAGE. Calculated final
+concentrations are 0.5 mg/ml each in the 20-ul mixture. PBS recipe: 137 mM NaCl,
+3 mM KCl, 10 mM Na2HPO4, 1.8 mM KH2PO4, pH 7.4. Figure 6d includes separate
+K715A, WT and protease lanes and shows less intact mutant-domain band remaining
+than WT in the matched protease-treated lanes. This is a qualitative gel result;
+there is no independently quantified degradation rate or replicate confidence.
+
+Table S6 coding sequences independently confirm the intended K715A substitution
+as the only protein difference. Both retain N748 and D749, contrary to Figure 5
+and the main text's Asp748 label. S8 shows similar principal SEC elution peaks
+and dominant domain bands for both preparations; low-temperature CD supplies
+an additional folding control, not proof of identical atomic structures.
+
+The mutation removes the reported crosslinking lysine. Both proteins initially
+show similar secondary structure, and the WT crystal is reported to contain a
+K715-N806 isopeptide bond. Nevertheless, mutation effects need not be exclusively
+due to that bond; local packing and the construct's separate disulfide can matter.
+No D748/D749 catalytic mechanism, formation-time course, force-resistance assay,
+native adhesion or family-wide bond presence is inferred. Methods' K517A labels
+conflict with K715A in the Results/figure and the independently translated
+Table S6 sequences; this discrepancy is retained rather than silently corrected.

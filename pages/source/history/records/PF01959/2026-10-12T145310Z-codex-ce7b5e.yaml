@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01959
+  path: data/families/PF01959.yaml
+session:
+  id: 2026-10-12T145310Z-codex-ce7b5e
+  timestamp: '2026-10-12T14:53:10Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial PF01959 scientific self-review with quantitative and member-coverage
+    follow-ups.
+  details: Reviewed two joint-enzyme graphs and three qualitative observed product
+    edges, preserving domain scope, readout chemistry, stoichiometric/oxygen conflicts
+    and separate MMP0006 negative and GriH evidence limits. Native report is NEEDS_FOLLOWUP/pass_with_limitations,
+    not independent review or family completion. An initial review command mistyped
+    the start as14:53:20 and failed the finished-before-started guard; it was rerun
+    using the actual14:53:10 review start, without rewriting a retained bundle.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T145330Z-pf01959-joint-enzyme-assays-and-quantitation-limits/review.yaml

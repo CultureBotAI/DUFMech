@@ -1,0 +1,30 @@
+Jankevicius et al. 2013, PMID23474712, doi:10.1038/nsmb.2523
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7097781/fullTextXML
+https://static-content.springer.com/esm/art%3A10.1038%2Fnsmb.2523/MediaObjects/41594_2013_BFnsmb2523_MOESM14_ESM.pdf
+Inspected 2026-10-11 UTC: Af1521 Results, main Methods, Figure4 and caption,
+Supplementary Note pp17-20; Figure4 and supplement pp19-20 visually inspected.
+Retrieved XML SHA256: e51c0e02d7d59019f3d4b8993029cba9722ab340368720450ee146055e063843
+Supplement PDF SHA256: 7a7e3df3cfc3c6323cc8a73d37b27e2a338c9816fcd69b1d8336a573b51c5744
+Minimal quotations only; remaining text is curator assessment of experimental facts.
+
+Figure4d quote: "normalized to buffer control"
+Supplement p19 quote: "was not washed off"
+GST-AF1521 reduces the PARP10-associated32P signal by roughly75% in Figure4d.
+No replicate count/error bars are given there. Human MacroD2, yeast Poa1p,
+PARG, MacroH2A1.1 and Ymx7 are separate comparators, not duplicate Af1521 assays.
+GST-AF1521 was expressed in Rosetta(DE3)pLysS,18C18h,200uM IPTG and eluted
+from glutathione Sepharose with20mM reduced glutathione. No Af GST cleavage
+is stated. Construct cited to Dani2009; exact vector residues remain unresolved.
+Substrate is GST-PARP10 catalytic domain818-1025. About30pmol is bound to10ul
+glutathione beads30min4C, washed3x in50mM HEPES pH7.2,150mM KCl,4mM MgCl2,
+0.2mM DTT,0.1%NP40, then labeled with0.625uM32P-NAD15min37C.
+The general procedure washes free NAD away, but the explicit GST-macrodomain
+exception omits that wash. GST-AF1521 therefore receives unwashed substrate/NAD,
+0.5uM GST-macrodomain15min37C. The retained endpoint is protein-associated
+label decrease, with UNRESOLVED directness: continuing automodification, NAD
+turnover and tag effects are not independently separated in this Af experiment.
+Af-specific released-product MS and exact bond/site chemistry are not shown.
+The MacroD2 mass-spectrometry/isotope assays on p20 and its proposed catalytic
+water/substrate-assisted mechanism cannot be reassigned to Af1521. Structure
+alignment and residue conservation are contextual evidence, not observed Af1521
+chemical intermediates or proof of activity for every PF01661 member.

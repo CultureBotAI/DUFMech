@@ -1,0 +1,35 @@
+PF01904 scope and search ledger, 2026-10-11 UTC
+Baseline: 8296 schema-valid records, zero generated drift. Ignored/hidden-inclusive
+search of curation, evidence, history, reviews and reports (except inventory.json)
+found no earlier PF01904/DUF72/IPR002763 curation. Exact new paths had no collision
+or symlink and git check-ignore did not exclude the planned artifacts.
+
+Public searches covered PF01904, DUF72, IPR002763, UPF0759, Tm1631, YecE,
+YunF, nuclease activity, DNA repair, deletion phenotypes and genetic interactions.
+Primary 2013/2016 computational papers and the 2014 eSGA source were followed
+through relevant methods and public supplements. Current protein/domain records,
+versioned reference sequences, PDB coordinates and supplemental model subsets
+were compared. No exhaustive search of all 14646 family members was performed.
+
+https://thebiogrid.org/interaction/1395459
+The ExbB/YecE interaction entry led to the primary 2014 source; the database
+summary is not separate experimental replication and its strain label is not
+substituted for the primary Hfr/Keio assay context.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7793946/
+YunF differential-expression search hit remains a lead, not a gene-perturbation
+mechanism or verified member mapping in this pass. Similarly named YecE proteins
+from unrelated enzyme families are not mapped by name alone. Prophage insertion
+at the yecE locus, cofitness, motif-based beta-clamp links and STRING associations
+are not evidence that DUF72 protein catalyzes integration or DNA repair.
+Experimental 1VPQ, 1VPY and 1ZTV structures are structural context, not nuclease
+assays; only 1VPQ's exact reference/coordinates were independently checked here.
+
+The initial PMC 2016 DOC response was challenge HTML; publisher DOC/ZIP downloads
+succeeded without bypassing a challenge. Public figure CDN DNS was unavailable
+in sandboxed calls and the scoped approved retrieval succeeded. The spreadsheet
+converter required an approved retry after exit 134. Offline xlrd was not cached;
+existing LibreOffice plus ZIP/XML supplied the parser without installing packages.
+An exact combined PDF-rendering command was denied at the UV cache marker
+/Users/marcin/.cache/uv/sdists-v9/.git; its narrowly approved retry succeeded.
+Repo/skill reads and separate offline Biopython calls worked. No permission or
+configuration change, global read-access fix, publication or full-QC pass is claimed.

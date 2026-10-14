@@ -1,0 +1,37 @@
+PF01959 identity and domain assessment, 2026-10-12, Codex
+
+Frozen source: interpro-pfam-duf-2026-10-10, SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+Name: 3-dehydroquinate synthase II N-terminal domain; short name DHQS;
+InterPro IPR030960; EX_DUF is naming history, not experimental coverage.
+The imported identity, counters and description are preserved unchanged.
+
+Current structured sources inspected:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01959/?extra_fields=all
+https://rest.uniprot.org/uniprotkb/search?query=xref%3Apfam-PF01959%20AND%20reviewed%3Atrue&format=json&size=100
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q58646/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q6M1B0/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/A0JC76/
+Each protein-specific InterPro response contains two entries and next=null.
+
+Q58646 sequence version1: 361 aa, MJ1249/aroB', Methanocaldococcus
+jannaschii JAL-1/DSM2661/ATCC43067, NCBITaxon243232.
+PF01959 1-173; PF26558 187-361. White2004 explicitly identifies Q58646.
+The experiment uses full recombinant protein, not either isolated domain.
+The historical plasmid sequence was not independently reconstructed.
+Q57843/MJ0400 is the separately expressed partner named in the paper;
+its activity is not assigned to PF01959. Current partner Pfam mapping is
+not part of this assessment. No His tag is stated in the inspected methods.
+
+Q6M1B0 sequence version1: 361 aa, MMP0006/aroB', Methanococcus maripaludis
+S2/LL/DSM14266, NCBITaxon267377; PF01959 1-173; PF26558 187-361.
+Porat2006 S140 targets this locus, not the MMP0686 aroA' partner.
+
+A0JC76 sequence version1: 396 aa, Streptomyces griseus griH,
+NCBITaxon1911; PF01959 30-208; PF26558 221-396.
+B1VTI7 sequence version1: 396 aa, griH/SGR_4248, S. griseus subsp.
+griseus NBRC13350, NCBITaxon455632. Current UniProt sequences are identical
+(both sequence MD5 BE168E4386E421A62F1224FC979F6A9A), not independent
+experimental replicates. Exact historical recombinant GriH construct and
+tag boundaries remain unreviewed. Its different chemistry is a coverage
+lead, not permission to transfer archaeal NAD dependence to this protein.

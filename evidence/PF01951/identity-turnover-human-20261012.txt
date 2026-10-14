@@ -1,0 +1,38 @@
+PF01951 incremental identity audit, 2026-10-12 UTC
+Frozen family identity remains Archease/former DUF101, EX_DUF, UNSCORED.
+Earlier identity ledgers and their hashes are preserved.
+
+Thermus reference candidates, NOT identified experimental clones:
+https://rest.uniprot.org/uniprotkb/search?query=(organism_name:%22Thermus%20thermophilus%22)%20AND%20(xref:pfam-PF01951)&format=json&size=50
+Current query returned two records, not an exhaustive historical clone census.
+Q5SHI5 sequence version 1, 139 aa, TTHA1745, HB8 reference taxon 300852,
+BAD71568.1 / WP_011228886.1; Q72HV1 sequence version 1, 139 aa, TT_C1383,
+HB27 reference taxon 262724, AAS81725.1 / WP_011173766.1.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01951/protein/uniprot/Q5SHI5/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01951/protein/uniprot/Q72HV1/
+Both map PF01951 6-139 and IPR023572. JSON entry/protein locations inspected.
+Desai2015 names synthetic codon-optimized T. thermophilus constructs, but
+neither exact strain nor accession/complete protein sequence. Its named assay
+Archease is retained without accession grounding or strain taxon. Candidate
+reference coordinates are NOT assigned to the unverified assay construct.
+P. horikoshii Archease derives from the Desai2014 clone with an N-terminal
+His6 addition; O59205 v1, PH1536, 142 aa, reference PF01951 4-142. Mixed-species
+assays do not give the Thermus or Thermobifida RtcB the archaeal taxon.
+
+Human construct limits:
+https://rest.uniprot.org/uniprotkb/Q8IWT0.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01951/protein/uniprot/Q8IWT0/
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4417724/
+Current Q8IWT0 sequence version 2: 167 aa, PF01951 31-167. Canonical residues
+39 D, 144 K, 147 T agree with Popow2014 ED4 alignment labels. The paper's
+FLAG/pDONR amplification begins canonical MAQ..., but the pET28a recombinant
+primer encodes MKGG..., matching the longer isoform's start, with an extra
+initiating codon at the cloning junction. Methods say mutants were subcloned
+into several vectors but do not supply their full clone sequences here.
+Use paper D39A/K144A names with the canonical ED4 numbering and explicit
+recombinant N-terminal ambiguity. Do not shift these labels by twelve solely
+because Gerber2024 used a 179-aa construct, or assert an exact full mutant
+sequence not inspected. The same protein can have different construct owners.
+HEK293 is the source of the affinity-purified multiprotein RTCB complex; E. coli
+produces recombinant Archease; HeLa/HeLa T-Rex are the cellular assay hosts.
+Figure 4e RNA is a tagged yeast tRNA transgene in the human host.

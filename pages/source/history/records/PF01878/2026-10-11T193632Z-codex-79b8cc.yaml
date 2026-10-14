@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01878
+  path: data/families/PF01878.yaml
+session:
+  id: 2026-10-11T193632Z-codex-79b8cc
+  timestamp: '2026-10-11T19:36:32Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of PF01878 Thy28 causal contexts
+  details: Same-agent review assessed seventeen indirect observed edges across nine
+    phenotype contexts against original primary figures, methods, supplements and
+    current member mapping. The retained report preserves mammalian Pax5 negatives,
+    construct uncertainty, assay-specific baselines and unresolved molecular/family
+    coverage. Native verdict NEEDS_FOLLOWUP; no independent expert endorsement, exhaustive
+    family review or publication is claimed.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T193644Z-pf01878-thy28-cellular-effects-and-species-limits/review.yaml

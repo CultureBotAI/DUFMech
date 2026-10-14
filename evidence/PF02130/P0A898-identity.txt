@@ -1,0 +1,23 @@
+Identity facts retrieved 2026-10-11, not experimental evidence.
+Sources:
+https://rest.uniprot.org/uniprotkb/P77385.json
+https://rest.uniprot.org/uniprotkb/P0A898.json
+https://rest.uniprot.org/uniprotkb/P0A899.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A898/entry/pfam/PF02130/
+
+P77385 is inactive with reason DEMERGED; successors P0A898 and P0A899.
+P0A898: YBEY_ECOLI; Escherichia coli K12; NCBITaxon:83333.
+gene ybeY; b0659; JW0656; RefSeq NP_415192.1; chromosome NC_000913.3.
+UniProt entry version 148; sequence version 1; 155 residues.
+sequence MD5: 83B737FFB679080AA9C0D56ED58FF728
+entry accession: PF02130
+Pfam coordinates: 21-144 inclusive; integrated IPR002036.
+
+P0A899 is Shigella flexneri YbeY (NCBITaxon:623), not the E. coli experimental
+organism, although its sequence MD5 is identical. Organism and gene context,
+not sequence equality alone, resolve the old identifier to P0A898 here.
+These are reference-protein coordinates, not evidence that an isolated domain
+was assayed. The 2013 main text does not establish the exact purified tag or
+construct sequence. Neither database's functional annotations substitute for
+primary assay evidence. An InterPro GO annotation of metalloendopeptidase
+activity is not adopted as an experimentally demonstrated YbeY protein substrate.

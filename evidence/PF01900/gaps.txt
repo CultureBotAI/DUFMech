@@ -1,0 +1,35 @@
+PF01900 scoped causal review and remaining work,2026-10-11.
+Ignored/hidden-inclusive searches in curation,evidence,history,reviews,reports
+found RNaseP evidence inPF01868/PF01876/PF01877; these are reused where
+applicable, not counted as independently replicated Pop5 experiments.
+Six member references do not characterize all5287 frozen proteins.
+
+Retained evidence supports conditional biochemical protocols and cell-level
+effects. Protein partners, RNAconstructs,buffer changes,cleavage fractions,
+preparation purity and knockdown limitations stay explicit. No isolated
+PF01900 sufficiency, family-wide exonuclease or RNA-stability mechanism.
+Do not assign Rpp30 R107A or yeastRPP1 depletion to this family.
+
+Primary abstracts inspected for PMID16430919 (2006 loop-deletion reconstitution)
+and PMID24120499 (2013 helix-deletion/FRET). Full primary figures and methods
+were not obtained in this pass; cited2015retellings are not substitutes.
+2015Delta14CSPR is a new directly reported assay; its supplementary sensorgrams
+remain unavailable. Earlier2012RNAchaperone work,2008Mjaself-cleavage,
+2011complexassembly,2018yeaststructure and2022Mja studies need their own
+complete causal assessment. Structural association alone gets no activation edge.
+PMID10024167(1999Rpp14discovery) andPMID11929972(2002Rpp14/OIP2)
+remain historical construct/catalysis leads.
+2024POP5telomere genetics,metazoanMRP and otherhomologs remain coverage leads,
+not proof that they lack causal data.
+
+The2023completeSIZIP succeeded after a prior transfer timed out; the nominal
+PMC directPDF returned HTML,not a scientific PDF. Figure4C does not show
+greater40minMono afterPop5; Figure6gradient and2026replicate discrepancies
+are retained. No subscription content was bypassed or deposited in the repo.
+Temporary full articles/figures are outside versioned evidence.
+
+Installedskill and repository reads work. One offline uv/Pillow renderer again
+reported an open error for ~/.cache/uv/sdists-v9/.git; its approved single-command
+retry succeeded. That does not establish a general ban on filesystem reads or
+the exact failed syscall access mode. No permissions/configuration changed.
+Status remainsIN_PROGRESS; same-agent review is partial,not independent approval.

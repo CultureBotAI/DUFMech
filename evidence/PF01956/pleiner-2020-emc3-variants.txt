@@ -1,0 +1,39 @@
+Pleiner et al., PMID32439656, DOI10.1126/science.abb5008; inspected 2026-10-12.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7547852/
+https://authors.library.caltech.edu/records/w0at6-5nc16/files/abb5008_Pleiner_SM.pdf
+Locators: main Figure3C-E; supplement Methods pp5-6, FigureS13 pp30-31,
+FigureS9 p26 and crosslink Methods pp4-5. Figures3, S9 and S13 visually inspected.
+Short source excerpts: "destabilized"; "rescued"; "UGA [amber]".
+Additional short excerpts: "disrupted biogenesis"; "insertion defect".
+
+Flp-In 293 T-Rex reporters express RFP-SQS or RFP-VAMP2 from GFP-2A-RFP
+cassettes, and OPRK1-GFP or TRAM2-GFP from GFP-2A-RFP configurations with
+the substrate fused to GFP. RFP is mCherry. Ratios are RFP:GFP for tail-anchored
+reporters and GFP:RFP for multipass reporters, not interchangeable axes.
+Lentiviral pHAGE2/CMV constructs express WT or mutant EMC3-TagBFP-3xFLAG;
+analysis selects BFP-positive cells. This is exogenous variant expression, not
+an endogenous point-mutant knock-in or an EMC3-null complementation experiment.
+R31/R180 and first-loop mutant effects were tested in at least three independent
+replicates in all cell lines; plotted histograms are representative distributions,
+not quantitative insertion rates or statistical tests of exact fold changes.
+
+R31A and R180A, and joint M101S/M106S/M110S/M111S (MCyt-1-S), reduce SQS
+and OPRK1 ratios relative to matched WT EMC3. VAMP2 and TRAM2 controls show
+little/no corresponding shift. R31E and R180E also reduce both client ratios.
+Replacing E with K at R180 improves SQS and OPRK1 relative to E, but does not
+establish complete restoration for every client. At R31, K improves SQS relative
+to E, but OPRK1 remains impaired; no R31K OPRK1 rescue edge is curated.
+S13A FLAG-IP at 72 h recovers EMC2/EMC4 with variants, limiting a gross assembly
+loss explanation. It does not prove identical complex abundance, folding,
+stoichiometry or kinetics. F173A and MCyt-2-S (five methionines at 198/199/
+203/208/210) show no appreciable reporter defect in the displayed assays.
+No individual effect is assigned to each methionine within the fourfold mutant.
+
+Reduced fluorescence is a substrate stability/abundance readout consistent with
+impaired biogenesis, not a direct observation of insertion intermediates. The
+loop-capture and membrane-thinning model is not turned into observed edges.
+S9 uses Sec61beta F85-BpA, CaM, EGTA and detergent-solubilized EMC; tag-dependent
+crosslink shifts identify EMC3 contact but not translocation. Supplement p4 calls
+an amber codon UGA, an internal terminology inconsistency (amber is UAG);
+historical construct sequence was not independently recovered. No crosslink
+edge is required to infer the distinct cellular perturbation effects.

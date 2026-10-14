@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01933
+  path: curation/families/PF01933.yaml
+session:
+  id: 2026-10-12T033819Z-codex-a1c77d
+  timestamp: '2026-10-12T03:38:19Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: needs_followup
+  summary: Add scoped CofD/FbiA and GlmR causal contexts
+  details: Curated seven graphs with ten OBSERVED effects from four primary studies,
+    six evidence ledgers and two OPEN discussions. Separate paired cofactor reactions,
+    cellular deletion, relative product fractions, GlmS regulation, competence and
+    scattering; preserve construct, numbering and supplement gaps. Reference maps
+    verified against current InterPro/UniProt. IN_PROGRESS; other members and uridyltransferase
+    contexts remain open. No publication or full-family completion.

@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01256
+  path: data/families/PF01256.yaml
+session:
+  id: 2026-10-11T103449Z-codex-296223
+  timestamp: '2026-10-11T10:34:49Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of NADHX repair nucleotide and domain
+    contexts
+  details: Retained native structured review binds the current semantic digest and
+    evidence for five directly observed biochemical conversions. Yeast ATP-dependent
+    and bacterial ADP-dependent reactions, full-length YjeF and the separate epimerase
+    domain remain distinct. Full clone and assay details, raw data and cellular/residue-level
+    extensions remain open; this is same-agent partial review, not independent endorsement
+    or complete family characterization.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T103421Z-pf01256-nadhx-repair-nucleotide-and-domain-contexts/review.yaml

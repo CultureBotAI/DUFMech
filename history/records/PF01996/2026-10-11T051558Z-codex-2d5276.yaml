@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01996
+  path: data/families/PF01996.yaml
+session:
+  id: 2026-10-11T051558Z-codex-2d5276
+  timestamp: '2026-10-11T05:15:58Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of Af-CofE product formation
+  details: The current projection preserves the LC-MS-backed endpoint and validates.
+    Review checks primary Figure 2, methods, deposited construct, Pfam identity and
+    product scope. Shared-method salt notation, assay timing, other substrates and
+    members remain open under pf01996-causal-context-coverage; IN_PROGRESS is unchanged.
+    Same-agent review, not independent expert endorsement.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T051610Z-pf01996-afcofe-causal-graph/review.yaml

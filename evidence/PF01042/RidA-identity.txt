@@ -1,0 +1,23 @@
+Identity facts, accessed 2026-10-11; not causal evidence.
+https://rest.uniprot.org/uniprotkb/Q7CP78.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q7CP78/entry/pfam/PF01042/
+Q7CP78 / RIDA_SALTY: Salmonella typhimurium LT2 / SGSC1412 / ATCC 700720,
+NCBITaxon:99287; ridA, alias yjgF, locus STM4458; 128 residues,
+sequence version 1, entry version 111. MD5 e2ee10f774a51c651f1a57616595dc6b.
+UniProt and InterPro reference sequences match exactly.
+Q7CP78 Pfam:PF01042 interval: 7-126, inclusive
+Reference Y17, R105, C107 and E120 were checked directly in the sequence.
+The experiments use intact, C-terminally His6-tagged Salmonella RidA/YjgF,
+not an isolated profile fragment; the 2013 paper identifies LT2 as the
+founding member. Complete experimental clone junctions remain unverified.
+The 2012 proteins were produced in E. coli BL21AI, which is not their donor.
+
+Partner identity facts:
+https://rest.uniprot.org/uniprotkb/P20506.json
+https://rest.uniprot.org/uniprotkb/P0A1A5.json
+LT2 IlvA: P20506, STM3905, 514 residues, sequence version 3.
+LT2 IlvE: P0A1A5, STM3903, 309 residues, sequence version 2.
+The 2013 IlvE construct carries a C-terminal His6 tag in pET28b(+), with
+production in the specified SB300A1-derived Salmonella strains. Reference
+mapping does not independently verify the sequence of every experimental
+clone or transfer the assay to other IlvA/IlvE homologs.

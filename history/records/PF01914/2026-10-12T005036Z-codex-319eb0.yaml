@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01914
+  path: data/families/PF01914.yaml
+session:
+  id: 2026-10-12T005036Z-codex-319eb0
+  timestamp: '2026-10-12T00:50:36Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review PF01914 SnatA, MarC and YchE contextual cellular graphs
+  details: Partial same-agent scientific review retains 39 observed indirect effects
+    in 13 phenotypic graphs, exact reference mappings and eight ledgers. Clone and
+    host context, source discrepancies, conflicting susceptibility results and unresolved
+    direct transport remain explicit. Native validation passes; IN_PROGRESS remains.
+    No independent expert endorsement, full-family completion or publication is claimed.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T005223Z-pf01914-snata-marc-yche-cellular-effects-and-conflicting-contexts/review.yaml

@@ -4,6 +4,13 @@ version: 1
 validators: [validate_record, _validate_record, _validate_content, check_manifest, verified_manifest]
 history_helpers: [new_history]
 helpers:
+  write_inventory:
+    path: "src/dufmech/causal_graphs.py"
+    formats: ["json"]
+    policy: "validated-structural-inventory-explicit-apply-with-recovery"
+    tests: ["tests/test_causal_graphs.py"]
+    apply_default: false
+    required_calls: [_writer_lock, safe_path, load_records, inventory, _publish_projection]
   _checkpoint_writer:
     path: "src/dufmech/protein_discovery.py"
     formats: ["jsonl"]

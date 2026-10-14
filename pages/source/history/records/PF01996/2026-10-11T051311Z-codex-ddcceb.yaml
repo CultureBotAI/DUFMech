@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01996
+  path: curation/families/PF01996.yaml
+session:
+  id: 2026-10-11T051311Z-codex-ddcceb
+  timestamp: '2026-10-11T05:13:11Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add scoped Af-CofE glutamylation graph
+  details: Inspected Bashiri 2024 biochemical Results, methods and Figure 2; mapped
+    the deposited intact construct and O28028 to PF01996. Retained one LC-MS-backed
+    F420-1 to F420-2 endpoint with shared-method salt ambiguity and no isolated-domain
+    or observed-intermediate claim. Overlay validation passed; guarded projection
+    and partial scientific review follow.
+  sections:
+  - causal_graphs

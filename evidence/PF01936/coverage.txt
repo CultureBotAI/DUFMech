@@ -1,0 +1,48 @@
+PF01936 coverage and exclusions;2026-10-12 UTC
+
+Ignored/hidden-inclusive scoped search across curation,evidence,history,
+reviews/structured found no PF01936/DUF88/NYN/YacP/N4BP1 text match before
+this curation; inputs/ and JSON were explicitly excluded. This is a scoped
+baseline, not a claim that the whole filesystem lacks these references.
+The8296-record baseline passed with no generated drift. Imported identity,
+frozen worklists and source-pins remain unchanged.
+
+Searched current primary family/member APIs, PF01936/DUF88/NYN/MARF1,
+N4BP1/KHNYN/Rae1, bacterial CRISPR NYN, LabA and DNE1 literature leads.
+The initial Rae1 gene query returned zero but was not treated as absence:
+the official P37574 record resolved it to PF05991. N4BP1/KHNYN resolve to
+PF11977. Shared historical labels are not evidence for current membership.
+Ten reviewed UniProt examples do not exhaust25419 proteins or329 architectures.
+
+Bacterial CRISPR-associated NYN:
+PMID38785320,DOI10.1042/BCJ20240151
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11346440/
+Primary Results/Methods/figure captions read. Purified Mn-dependent RNA
+cleavage and D13A effects are reported, but an exact tested accession and
+current Pfam interval were not established in this pass. Do not add those
+edges yet. Free-RNA digestion does not prove physiological crRNA maturation;
+the article retains no SAM-AMP degradation and no requirement in the tested
+heterologous interference system. PMC supplement link returned HTML;
+EuropePMC supplementaryFiles download made progress but timed out at60s.
+This is an access limit, not absence of the supplement or of experiments.
+
+Other mapped/credible followups not yet curated:
+LabA Q31LZ8 (Synechococcus elongatus PCC7942),PMID17210789,
+https://pmc.ncbi.nlm.nih.gov/articles/PMC1759901/
+Clock-output phenotypes need primary inspection, not an assumed RNase step.
+EuropePMC full-text request returned HTTP500; no absence claim follows.
+Later LabA studies: PMID20133618 and PMC11127020.
+Pseudomonas putidaS16 HspA B1N1A2 has PF01936; source protein AEJ10965.1
+has a UniProt erroneous-N-terminal-extension caution. PMID18203859 and
+PMID21949128 require careful separation of HspA from HspB.
+Arabidopsis DNE1: DOI10.1093/plcell/koad085,PMC10226599; map the exact
+protein and mutations before transferring plant RNA-turnover findings.
+Later MARF1: eLife54995/PMC7279887 and PMC9303261, including EDC4 and
+P-body effects. These are followups, not independently reviewed here.
+PMID17114934 is the original comparative NYN prediction, not experimental
+proof of every family's metal stoichiometry or bacterial RNA substrate.
+
+Retain distinct purified fragments, tethered reporter constructs, mouse
+resupply and knockin contexts. No diagrammed chain from one assay to
+female fertility, no experimentally proven direct cleavage of every changed
+oocyte transcript, and no family-wide status promotion are justified.

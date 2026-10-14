@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01951
+  path: curation/families/PF01951.yaml
+session:
+  id: 2026-10-12T091810Z-codex-557925
+  timestamp: '2026-10-12T09:18:10Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Extend Archease mutant, RtcB rescue and PAB1946 methyltransferase-support
+    graphs
+  details: Added26 OBSERVED edges in10 assay-scoped graphs, preserving17 existing
+    edges and all prior evidence/reviews. Desai2014 Figures5-7 and S4/S5 inspected;
+    O59205 residue numbering verified. Auxilien2007 primary author text supports RNA
+    methylation, affinity and aggregation comparisons with Q9V105 domain mapping;
+    image access and source RNA concentration/length discrepancies remain explicit.
+    Eleven new mutant effects remain molecularly UNRESOLVED. No family-wide completion,
+    publication or independent review is claimed; successor review and regeneration
+    follow.

@@ -4,7 +4,7 @@ name: Iron-sulfur cluster assembly protein
 short_name: FeS_assembly_P
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01883
 counters:
   proteins: 37284
@@ -45,3 +45,68 @@ description: This family has an alpha/beta topology, with 13 conserved hydrophob
   aureus is composed of this domain solely and is shown to be involved in the maturation of FeS proteins
   [[cite:PUB00085141]]. Given all this data, it is hypothesised that this domain might play a role in
   FeS cluster assembly.
+curation_history: history/records/PF01883
+causal_graphs:
+- graph_id: suft-deletion-acna-activity
+  title: SufT deletion and normalized aconitase activity
+  scope: USA300 LAC derivatives JMB4374 versus JMB4432, with JMB4373 complementation; all acnA::TN strains
+    carry pacnA.
+  context: Aerobic TSB plus 1% xylose, 37 C, eight hours; cell-free lysate activity normalized to AcnA_FLAG
+    abundance.
+  family_mapping: SAUSA300_0875 maps to reference SufT A0A0H2XI17, sequence version 1, 88 residues; PF01883
+    spans 2-66. The experiment deletes the gene, not only this domain segment.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:367830
+  limitations: Cluster occupancy is an interpretation of activity and controls, not a measured transfer
+    reaction. Fermentative conditions and oxidant-repair assays limit generalization; reference mapping
+    does not certify every derivative sequence.
+  nodes:
+  - node_id: suft-deletion
+    label: sufT deletion
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:A0A0H2XI17
+  - node_id: normalized-acna-activity
+    label: AcnA activity normalized to protein abundance
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: deletion-decreases-acna-activity
+    subject: suft-deletion
+    predicate: decreases
+    object: normalized-acna-activity
+    mechanism: Deletion lowers normalized activity; chromosomal reintroduction of sufT restores it.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:27517714
+      source_url: https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006233
+      snippet: This phenotype was genetically complemented.
+      explanation: Figure 3C image and caption, Results, growth and AcnA assay methods; inducible transcription
+        and abundance normalization address expression effects.
+      cache_path: evidence/PF01883/mashruwala-2016-suft.txt
+      cache_sha256: 1b952b9fba34223dded664d3db24795cda43e4f86b6458899f97e18b7ba8d55f
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A0H2XI17/entry/pfam/PF01883/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A0H2XI17/entry/pfam/PF01883/
+      snippet: 'entry accession: PF01883'
+      explanation: Reference-member identity and current domain boundaries, not experimental proof of
+        biochemical mechanism.
+      cache_path: evidence/PF01883/A0A0H2XI17-identity.txt
+      cache_sha256: d437e4fa94e9180b94fd09a382d779d80265e6201da32c9b2b843dabb40c5767
+curation_events:
+- timestamp: '2026-10-11T04:46:26Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate the SufT deletion effect on normalized AcnA activity
+  history_record: history/records/PF01883/2026-10-11T044626Z-codex-d1bf16.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T04:48:40Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped SufT causal graph scientific review
+  history_record: history/records/PF01883/2026-10-11T044840Z-codex-02b3e2.yaml
+  event_index: 0
+  llm_assisted: true

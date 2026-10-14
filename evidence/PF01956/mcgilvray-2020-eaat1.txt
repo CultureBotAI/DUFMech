@@ -1,0 +1,39 @@
+PF01956 TMCO1-containing genotype effects on endogenous EAAT1
+Accessed 2026-10-12. Curator-authored notes with one minimal source quotation.
+Primary source: PMID32820719, DOI10.7554/eLife.56889.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7505659/
+Full XML inspected through:
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7505659/fullTextXML
+Original Figure5 and Figure5-supplement1 images were visually inspected from
+the publisher CDN. Main functional Results, Discussion, cell culture and
+expression/glycosylation/qPCR methods were read; raw RIP-seq and mass spectra
+were not independently reanalysed.
+
+Minimal quotation, Results: "reduced".
+Figure5E-G: endogenous EAAT1 immunoblot signal in HEK293 lysates is lower than
+WT in TMCO1 knockout (about threefold), TMCO1/Nicalin double knockout (about
+2.8-fold) and TMCO1/CCDC47 double knockout (about 3.8-fold). Figure5G combines
+monomer and upper-band signal and reports mean/SD. The upper band is attributed
+to SDS-induced aggregation, not a native functional EAAT1 trimer. Do not infer
+epistasis or significance of the difference between the knockout genotypes.
+Separate Nicalin, CCDC47 and TRAM deletion arms are controls/context, not new
+TMCO1-specific perturbations. TRAM deletion does not reproduce the EAAT1 effect.
+Tubulin and Ponceau S provide loading comparisons in the displayed experiments.
+
+For each expression replicate, 750,000 cells were plated on poly-L-lysine and
+grown overnight; RIPA lysates were immunoblotted and quantified with ImageJ.
+Figure5-supplement1B compares EndoH/PNGaseF-sensitive patterns in WT and TMCO1
+knockout. Integrin alpha5 and TRAPalpha steady-state abundance and glycosylation
+are substantially preserved. This limits a general membrane-protein defect,
+not every possible targeting, translation, folding or turnover mechanism.
+Figure5-supplement1C GAPDH-normalized EAAT1 RNA changes by less than 1.5-fold;
+TMCO1 knockout is visibly lower than WT, about 0.7, not exactly unchanged.
+No direct transcription-rate, surface localization or glutamate-flux assay is
+this endpoint. No exclusive post-translational mechanism is assigned.
+
+RIP-seq enrichment of multipass transcripts and structural association identify
+candidate clients and a plausible translocon, not directed causal effects for
+all enriched proteins. The proposed TMCO1/TMEM147 funnels and shielding cavity
+are models, not experimentally observed substrate trajectories. The three
+retained genotype effects have unresolved molecular mediation. The double
+knockouts are joint perturbations, not independent TMCO1 sufficiency.

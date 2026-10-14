@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01957
+  path: curation/families/PF01957.yaml
+session:
+  id: 2026-10-12T141337Z-codex-cfe501
+  timestamp: '2026-10-12T14:13:37Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped YbbJ growth and YqeZ operon resistance effects
+  details: Created three phenotypic graphs with four observed experimental edges of
+    unresolved molecular directness, five minimal evidence ledgers and two open discussions.
+    Verified current YbbJ and YqeZ PF01957 coordinates; excluded Bacillus NfeD2/YuaF
+    now mapped to PF31148/PF25842 and distinguished the PH1510 N-terminal protease
+    from C-terminal PF01957. Read Chiba2006 Figure2 and Butcher2006 Figure4 text,
+    legends and relevant Methods; source images remain uninspected after access failures.
+    Inspected Dempwolff2012 Figures4/6 and retained source-panel inconsistencies and
+    qualitative negatives. No domain-specific protease, chaperone, binding-to-causation
+    or whole-family claim. Original identity, frozen snapshots and prior corpus follow-ups
+    preserved.

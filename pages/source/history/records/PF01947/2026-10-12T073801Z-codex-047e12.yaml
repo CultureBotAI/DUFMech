@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01947
+  path: data/families/PF01947.yaml
+session:
+  id: 2026-10-12T073801Z-codex-047e12
+  timestamp: '2026-10-12T07:38:01Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of PF01947 causal contexts
+  details: Saved reviews/structured/20261012T073748Z-pf01947-scoped-lyase-and-sll1797-phenotype-effects/review.yaml
+    and derived Markdown. Same-agent partial assessment of nine graphs/fourteen observed
+    edges and five evidence ledgers; current digest89760744789491d34689bc0fed02126c015f1e6b5cb85ca14658c6c4f1cfc566.
+    Native validation and overlay equivalence passed. Missing figures, source/construct
+    discrepancies, assay controls and remaining family coverage are open; IN_PROGRESS
+    retained. Not expert endorsement, full-corpus completion or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T073748Z-pf01947-scoped-lyase-and-sll1797-phenotype-effects/review.yaml

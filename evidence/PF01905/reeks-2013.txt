@@ -1,0 +1,24 @@
+PF01905 independent binding context, 2026-10-11 UTC
+Reeks2013, PMID:23846216, doi:10.4161/rna.23854
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3737334/
+Main Results/Methods and original Figure 2 visually inspected.
+Minimal quotation: "anisotropy".
+
+Figure 2A titrates recombinant Sso1441/Sso1442 Cas5/Cas7 into fluorescent
+crRNA and increases anisotropy. Fit Kd 1.38 +/- 0.14 uM; the +/- value is
+curve-fit error, while plotted error bars are SEM of triplicate experiments.
+The type of triplicate independence is not specified. Do not treat this Kd
+as a Cas7-alone value or compare it quantitatively with the 2011 EMSA.
+The protein genes are coexpressed using the cited 2011 method. The probe
+is spacer 26 from CRISPR A of P1, not the 2011 P2 spacer-1 probe.
+Methods: 20 nM fluorescent crRNA; 20 mM Tris pH 7.5, 150 mM NaCl,
+5% glycerol, 1 mM EDTA, room temperature; excitation/emission 490/535 nm.
+The general titration range is 0.04-11 uM; Figure 2A's displayed x-axis
+extends to about 8 uM. No assay incubation time is established here.
+
+Figure 2B/C lacks convincing Csa5-alone binding to RNA/DNA/heteroduplex
+or binding to a preformed Cas5/Cas7/crRNA complex. These negatives do not
+prove Csa5 dispensability in all systems. Cellular co-IP uses P1 lysate and
+is not an RNA-directed causal step or a measured affinity of isolated Cas7.
+The deposited Csa5 crystal and its mutations concern another protein family.
+Table S1 sequences and additional supplemental figures were not inspected.

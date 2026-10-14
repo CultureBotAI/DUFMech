@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01579
+  path: data/families/PF01579.yaml
+session:
+  id: 2026-10-11T071420Z-codex-2b6ab8
+  timestamp: '2026-10-11T07:14:20Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of four DUF19 phenotype graphs
+  details: Native structured review 20261011T071405Z-pf01579-duf19-causal-phenotypes
+    validates current projection and member mapping, and assesses four separate INDIRECT
+    OBSERVED experimental effects. The open finding retains EXC-13 source discrepancies
+    and specificity, inaccessible Nature Methods, unverified panel strains, and incomplete
+    mechanistic/member coverage. Same-agent review is pass_with_limitations / NEEDS_FOLLOWUP,
+    not independent endorsement or REVIEWED status. Focused suite passed 203 tests;
+    source publication was not performed.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T071405Z-pf01579-duf19-causal-phenotypes/review.yaml

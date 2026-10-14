@@ -1,0 +1,33 @@
+PF01906 Rv1762c evidence and revision assessment, 2026-10-11 UTC
+Lien2021, PMID:34751132, DOI:10.7554/eLife.74358
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8635971/
+https://elifesciences.org/articles/74358/peer-reviews
+https://cdn.elifesciences.org/articles/74358/elife-74358-supp1-v2.xlsx
+Selected primary Results/Methods, decision letter and author response read.
+Original Figure 1 visually inspected; publisher supplementary XLSX parsed
+through standard ZIP/XML, including its Key and exact gene row.
+Minimal quotation from author response: "removed the data as suggested".
+
+Figure 1D identifies Rv1762c by MS in a nanocompartment fraction. This is
+co-purification, not proof of direct encapsulation or a biochemical reaction.
+Reviewer-requested removal concerned an individual Rv1762c mutant phenotype
+without complementation or an established link to encapsulation; the authors
+confirmed removal. Final Figure 2F concerns Cfp29 complementation, not Rv1762c.
+This is a documented revision, not an allegation of retraction or misconduct.
+DyP/Cfp29/operon phenotypes and peroxide assays are not transferred to Rv1762c.
+
+Published supplement, sheet TnSeq H2O2 low pH, row 1802, RVBD_1762c:
+TA sites 10; hit sites 9; control read sum 9531.5; experimental sum 13664.1;
+difference 4132.6; log2 fold change +0.52; permutation p=0.3979;
+Benjamini-Hochberg adjusted p=1. The pooled acidic/peroxide comparison is
+not a significant Rv1762c hit and does not justify an observed increase edge.
+It is a different assay from the removed individual-mutant result; neither
+the point estimate nor nonsignificance proves absence of effects elsewhere.
+Raw WIG files were not reanalyzed and no new experimental protocol is proposed.
+
+Nichols2020 thesis lead, https://escholarship.org/uc/item/5rh0j6b2,
+has an indexed Figure 3.5F individual-mutant claim related to the earlier
+manuscript. Full PDF/figure was not obtained; access returned a challenge or
+zero-byte download. It is not counted as independent replication or a reviewed
+observed causal edge. Obtain the primary figure and construct/rescue details
+before any successor curation, preserving this published revision history.

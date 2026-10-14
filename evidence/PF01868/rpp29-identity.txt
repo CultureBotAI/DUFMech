@@ -1,0 +1,73 @@
+PF01868 Rpp29 identity and construct boundaries
+Researched 2026-10-11; curated scope is individual archaeal preparations.
+
+Frozen record: Pfam:PF01868, InterPro:IPR002730, RNase_P-MRP_p29,
+EX_DUF, UNSCORED; snapshot interpro-pfam-duf-2026-10-10, SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+Imported descriptions are preserved, not adopted as proof of protein-alone
+catalysis. RPR means the catalytic RNA; RPP means a protein component.
+
+Current reference and PF01868 mapping responses:
+https://rest.uniprot.org/uniprotkb/Q8U007.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01868/protein/uniprot/Q8U007/
+Pfu PF1816/rnp1, Q8U007 sequence version1,127 aa, taxon186497.
+PF01868 residues41-123, score1.2e-23, representative=false.
+NP_579545.1 equals the complete UniProt reference sequence and the deposited
+2KI7 entity1 sequence. This is sequence identity, not assay-clone resequencing.
+https://data.rcsb.org/rest/v1/core/polymer_entity/2KI7/1
+Rpp29 in 2KI7 has127 residues and no annotated artifact monomer. Entity2 is
+Rpp21, not Rpp29, and includes cloning-derived sequence; do not interchange them.
+The 2009 primary Methods uses pET-33b/Rpp29 and ion exchange/refolding;
+Rpp21 uses a separate affinity purification/thrombin protocol.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2782587/
+https://research.cbc.osu.edu/gopalan.5/wp-content/uploads/Publications/RNaseP/Xu_JMB_2009_SI.pdf
+Supplement FigureS2 explicitly identifies NP_579545 and NP_247439.
+
+2011 Figure3/Table3 identify the Pfu reference and N-terminal truncations.
+Published forward primers translate to initiating M plus the retained native
+sequence: delta17 MGSYQEII..., delta24 MGRTWIFR..., delta31 MGAHRGRVN....
+All three removed intervals lie outside the current PF01868 match41-123.
+The common reverse primer encodes a stop before XhoI; it does not encode a
+C-terminal affinity tag. Initiator-M processing and exact batch sequences
+remain unverified. Do not treat these as isolated-domain deletion assays.
+
+https://rest.uniprot.org/uniprotkb/O26119.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01868/protein/uniprot/O26119/
+Mth MTH_11/rnp1, O26119 sequence version1,93 aa, taxon187420 (Delta H).
+PF01868 residues6-88, score4.5e-22, representative=false.
+WP_010875653.1 equals the reference; a multispecies RefSeq alone does not
+prove strain provenance. The 2010 supplement TableS2 names MTH11.
+IMPORTANT: visually checked TableS1 Mth RPP29-R is
+GCGGATCCTACCATTTACGAAATTTCTTCTTTATTCTCTCCTC.
+Its reverse-complement coding frame ends EERIKKKFRKW*, whereas O26119 ends
+EERIKKKFRKP. This predicts P93W if the printed primer was used literally,
+outside the Pfam interval. It could instead be a publication error; the
+assay clone is not independently sequenced here. Retain published MTH11
+preparation identity, not an assertion of exact canonical-WT equality.
+The supplement says Mth/Mja cloning added no residues and authors sequenced
+their clones. That statement does not resolve this printed-primer discrepancy.
+https://data.rcsb.org/rest/v1/core/polymer_entity/1OQK/1
+1OQK has97 residues beginning GSHMLITPR..., versus reference MITPR....
+It cannot prove identity of the untagged 2010 biochemical preparation.
+
+https://rest.uniprot.org/uniprotkb/Q57903.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01868/protein/uniprot/Q57903/
+Mja MJ0464/rnp1, Q57903 sequence version1,95 aa, taxon243232 (JAL-1).
+PF01868 residues6-87, score2.4e-23, representative=false.
+NP_247439.1 equals the complete reference. The 2010 TableS2 names MJ0464;
+its TableS1 primers support native termini and tag-free expression design.
+No independent sequencing of the later assay batch is claimed.
+Reference FASTA retrieval:
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=NP_579545.1,NP_247439.1,WP_010875653.1&rettype=fasta&retmode=text
+
+Downloaded identity payload SHA256 values (raw files retained locally, not
+represented as committed source snapshots):
+Q8U007 JSON:8a7808fe00fe9277e90da8d01cda3833c3861bb31d7b075c1fe790ba3539a6ba
+Pfu domain:cb4cc6fb1c2a549ae128b87bf0e2f6309f713fd57c24316e63c8c1bf0a0972d5
+O26119 JSON:ae9fcc99c8ab39a04176a6ca665d45d948205ebff284e1af34e6aeba80456a37
+Mth domain:0be63cda881c8f51e56e8a20fad65fe83650f84a3b0ae555ea71c87f17eb1c29
+Q57903 JSON:0b7061cf32eed7a15064890793c81c45ddb701fb9dde907e1aa089f9eb51f9bc
+Mja domain:b93d248cfc1377c956bf8dd6076269f9578076c791a9fea8f8b2113eb8049fc1
+Reference FASTA:99c46b55b8b9006e9186a5af3ec6a94222e2d5deb4900e6b4abb0297ad20f6d5
+2KI7 entity1:b79115a3bc96f4b19d158d0ef8ed73fd900702cee534b5630d5546cdbf66dbd4
+1OQK entity1:56e6cd33c287dff7937c90c349c657833784c1ee7cc32d0b68f46b3887a646be

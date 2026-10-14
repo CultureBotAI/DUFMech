@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01954
+  path: curation/families/PF01954.yaml
+session:
+  id: 2026-10-12T105459Z-codex-493673
+  timestamp: '2026-10-12T10:54:59Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Retain PF01954 graphless scientific assessment and mapped evidence gaps
+  details: Assessed AF2212/DUF104 comparative predictions, O28071 and 2NWT identity,
+    conflicting profile/deposition metadata, and later Thermococcus TA supplement
+    with four non-PF01954 member mappings. Added five minimal evidence ledgers and
+    three OPEN discussions. No directed PF01954 effect was supported by inspected
+    material; no placeholder graph or family-wide absence claim. Baseline8296 projections
+    passed with zero drift. IN_PROGRESS and remaining coverage gaps are explicit.

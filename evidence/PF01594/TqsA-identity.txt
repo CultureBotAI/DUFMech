@@ -1,0 +1,19 @@
+Identity assessment, accessed 2026-10-11; database facts, not causal evidence.
+https://rest.uniprot.org/uniprotkb/P0AFS5.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0AFS5/entry/pfam/PF01594/
+P0AFS5 / TQSA_ECOLI; tqsA/ydgG, b1601/JW1593; E. coli K12, taxon 83333.
+UniProt entry 127, sequence version 1, length 344 aa.
+UniProt and InterPro sequences match exactly.
+Sequence MD5: D99504D69DE835A8516B33BBF623B36C.
+P0AFS5 Pfam:PF01594; domain interval: 17-328, inclusive.
+UniProt search JSON SHA256: d73447c9023f1940a5aab6d2a1bfe1270880659678b26687bbf07ca86be5b7e8
+InterPro JSON SHA256: 15f1abd2e40fa526fa5f1afb5eabaf6c7b6a5695d87455b2eb4c1e2e868b473d
+
+Herzberg 2006 identifies b1601/ydgG, 344 aa, in BW25113 and a PCR-confirmed
+complete deletion. This supports gene-level mapping to the K12 reference;
+the exact assay clone was not independently sequenced. Reference strain K12
+and the tested BW25113 derivatives are kept distinct. The deletion removes
+the complete protein, not specifically Pfam residues 17-328. Tag/linker
+architecture of the historical pCA24NydgG+ clone is not established here.
+Neither the current family name nor current annotations resolve the original
+study's export-versus-uptake ambiguity. Frozen metadata is preserved.

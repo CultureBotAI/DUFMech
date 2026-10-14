@@ -106,8 +106,9 @@ permitted empty-adapter skip rather than treating it as success.
 
 ## Future Scientific Capabilities
 
-METPO proposals and causal coverage remain disabled: the current seeded corpus
-does not supply curated phenotype proposals or directed causal mechanisms.
+METPO proposals and fleet causal coverage remain disabled. Native directed graph
+curation is described in [causal-graphs.md](causal-graphs.md); schema support alone
+does not establish fleet capability adoption or scientific corpus coverage.
 A real METPO proposal
 needs a curated microbial phenotype or mechanism claim, a demonstrated gap
 against the retained release and pending proposals, justified parents,

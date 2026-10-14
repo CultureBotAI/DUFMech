@@ -4,7 +4,7 @@ name: YjiS-like domain
 short_name: YjiS-like
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF06568
 counters:
   proteins: 9243
@@ -28,3 +28,91 @@ description: This arginine rich domain is found at the C-terminal end of YjiS fr
   in nutrient acquisition and central carbon metabolism [[cite:PUB00160928]]. CcaF1 from Rhodobacter sphaeroides
   is an RNA binding protein that has a role in the oxidative stress defence [[cite:PUB00160929]]. In some
   uncharacterised proteins, this domain, previously known as DUF1127, covers the whole sequence.
+curation_history: history/records/PF06568
+causal_graphs:
+- graph_id: ccaf1-overexpression-rna-half-lives
+  title: CcaF1 overexpression and RNA half-lives
+  scope: R. sphaeroides 2.4.1 carrying pRKCcaF1 compared with wild type; full-length RSP_6037, not the
+    KD131 homolog.
+  context: Microaerobic malate minimal-salt medium, 32 C; OD660 0.5, then 0.2 mg/ml rifampicin and Northern-blot
+    decay measurements.
+  family_mapping: RSP_6037 is reference Q3J4N6, sequence version 1, 71 residues; PF06568 spans 28-60.
+    Current taxonomy calls this strain Cereibacter sphaeroides; the experiment does not isolate the domain.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:272943
+  limitations: Overexpression effects do not prove native-dose necessity or intrinsic nuclease activity.
+    Binding is not a degradation reaction; other transcripts and growth regimes require separate assessment.
+  nodes:
+  - node_id: ccaf1-overexpression
+    label: CcaF1 overexpression
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q3J4N6
+  - node_id: ccsr1-half-life
+    label: CcsR1 RNA half-life
+    node_type: PHENOTYPE
+  - node_id: upsm-half-life
+    label: UpsM RNA half-life
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: overexpression-decreases-ccsr1-half-life
+    subject: ccaf1-overexpression
+    predicate: decreases
+    object: ccsr1-half-life
+    mechanism: Overexpression shortens the measured RNA half-life.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33706375
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8034643/fullTextXML
+      snippet: a destabilizing effect of CcaF1 on the sRNAs CcsR1 and UpsM
+      explanation: Figure 8 caption and Results; RNA stability methods. Three experiments with rRNA-normalized
+        signals; not a direct cleavage assay.
+      cache_path: evidence/PF06568/gruetzner-2021-ccaf1.txt
+      cache_sha256: a7cf6ba4f531042efb7a4515855c822e8f2e272df6b35bfe670d9a4472ea1a5c
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q3J4N6/entry/pfam/PF06568/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q3J4N6/entry/pfam/PF06568/
+      snippet: 'entry accession: PF06568'
+      explanation: Protein, strain and domain mapping only.
+      cache_path: evidence/PF06568/Q3J4N6-identity.txt
+      cache_sha256: 50342ed15765a58cf6ae82f5329f1464c15584b4bc642c088596618b92eef0da
+  - edge_id: overexpression-decreases-upsm-half-life
+    subject: ccaf1-overexpression
+    predicate: decreases
+    object: upsm-half-life
+    mechanism: Overexpression shortens the measured RNA half-life.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33706375
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8034643/fullTextXML
+      snippet: a destabilizing effect of CcaF1 on the sRNAs CcsR1 and UpsM
+      explanation: The separate UpsM measurement in Figure 8 and associated Results supports this arrow,
+        not transfer from CcsR1.
+      cache_path: evidence/PF06568/gruetzner-2021-ccaf1.txt
+      cache_sha256: a7cf6ba4f531042efb7a4515855c822e8f2e272df6b35bfe670d9a4472ea1a5c
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q3J4N6/entry/pfam/PF06568/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q3J4N6/entry/pfam/PF06568/
+      snippet: 'entry accession: PF06568'
+      explanation: Protein, strain and domain mapping only.
+      cache_path: evidence/PF06568/Q3J4N6-identity.txt
+      cache_sha256: 50342ed15765a58cf6ae82f5329f1464c15584b4bc642c088596618b92eef0da
+curation_events:
+- timestamp: '2026-10-11T04:46:26Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate CcaF1 overexpression effects on two RNA half-lives
+  history_record: history/records/PF06568/2026-10-11T044626Z-codex-299cb5.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T04:48:40Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped CcaF1 causal graph scientific review
+  history_record: history/records/PF06568/2026-10-11T044840Z-codex-4917b0.yaml
+  event_index: 0
+  llm_assisted: true

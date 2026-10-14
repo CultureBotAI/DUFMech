@@ -4,7 +4,7 @@ name: Nucleotide-binding C-terminal domain
 short_name: NBD_C
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF17042
 counters:
   proteins: 9377
@@ -34,3 +34,69 @@ description: This is the C-terminal domain found in proteins in a range of Prote
   and even one that is associated with pdxA2, have lost 4HT kinase activity [[cite:PUB00083215]]. Functional
   analysis demonstrate that family members include D-Threonate kinases (DtnK), D-Erythronate kinases (DenK)
   and 3-Oxo-tetronate kinases (OtnK) [[cite:PUB00085179]].
+curation_history: history/records/PF17042
+causal_graphs:
+- graph_id: redtnk-d-threonate-phosphorylation
+  title: Intact ReDtnK phosphorylation of D-threonate
+  scope: Purified ReDtnK Q0K4F6 from Ralstonia eutropha H16, currently Cupriavidus necator H16; whole-protein
+    activity.
+  context: ATP-dependent assay at 25 C, Tris-HCl pH 8.0, MgCl2 and KCl; ADP readout coupled through PK/LDH
+    to NADH consumption.
+  family_mapping: Q0K4F6, sequence version 1, 415 residues; PF17042 spans 246-400 and PF07005 spans 4-223.
+    This record maps the C-terminal domain within the assayed intact enzyme.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:381666
+  limitations: Neither isolated domain was assayed for sufficiency. Exact purification-tag details and
+    supplementary product/growth data were not independently checked. This is the same experiment retained
+    with PF07005, not independent replication; substrate specificity is not transferred to every member.
+  nodes:
+  - node_id: redtnk-atp-d-threonate
+    label: Intact ReDtnK with ATP, Mg and D-threonate
+    node_type: STATE
+    grounding:
+    - UniProtKB:Q0K4F6
+  - node_id: d-threonate-phosphorylation
+    label: D-threonate phosphorylation to D-threonate 4-phosphate
+    node_type: PROCESS
+  edges:
+  - edge_id: redtnk-enables-d-threonate-phosphorylation
+    subject: redtnk-atp-d-threonate
+    predicate: enables
+    object: d-threonate-phosphorylation
+    mechanism: The purified intact kinase transfers phosphate from ATP to D-threonate; Table 1 quantifies
+      the substrate-dependent activity.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:27402745
+      source_url: https://www.osti.gov/servlets/purl/1329421
+      snippet: ATP-dependent phosphorylation
+      explanation: Table 1 and biochemical Results on E4163, with kinetic methods on E4168; the assay
+        measures ADP through a coupling system, not direct product mass spectrometry.
+      cache_path: evidence/PF07005/zhang-2016-dtnk.txt
+      cache_sha256: 70418e45db58d9036f10aab982891b974c16090ff5230d7ff733d8d1f2290c29
+    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q0K4F6/entry/pfam/PF17042/
+      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q0K4F6/entry/pfam/PF17042/
+      snippet: 'entry accession: PF17042'
+      explanation: C-terminal Pfam mapping in the tested DtnK reference sequence; both modern domains
+        are retained in this full-protein context.
+      cache_path: evidence/PF07005/Q0K4F6-identity.txt
+      cache_sha256: 7d2525e5d02f57e674af1c7891732ac1fe5b713fe82451f88c6f7d053de57989
+curation_events:
+- timestamp: '2026-10-11T04:59:21Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate intact ReDtnK activity with its C-terminal domain mapping
+  history_record: history/records/PF17042/2026-10-11T045921Z-codex-747a47.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T05:02:46Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped ReDtnK C-terminal mapping review
+  history_record: history/records/PF17042/2026-10-11T050246Z-codex-6c3721.yaml
+  event_index: 0
+  llm_assisted: true

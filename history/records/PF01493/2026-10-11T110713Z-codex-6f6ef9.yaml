@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01493
+  path: data/families/PF01493.yaml
+session:
+  id: 2026-10-11T110713Z-codex-6f6ef9
+  timestamp: '2026-10-11T11:07:13Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retained partial GltS assembly and expression scientific self-review.
+  details: Assessed the current three-edge projection and primary evidence, including
+    visual recheck of supplemental DLS plots. Verified native projection and overlay
+    agreement. Two direct size effects and one indirect production phenotype remain
+    supported with explicit construct, domain and assay limitations. Saved NEEDS_FOLLOWUP
+    review; complete family coverage and isolated-domain mechanisms remain open. No
+    status promotion or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T111009Z-pf01493-glts-assembly-and-expression-contexts/review.yaml

@@ -1,0 +1,49 @@
+Kim et al. 2010, PMID21119630, doi:10.1038/msb.2010.88.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3010111/
+Inspected 2026-10-11: relevant Results, Discussion, Strains and multicopy
+suppression Methods, HTML TablesI/II, original Figure1. Subsequently obtained
+the original publisher DOC supplement and inspected relevant Methods, TablesI-III/V,
+and FigureS1/S4. LibreOffice-rendered supplement pages12,15,18,20 were visually
+inspected: the original plate images, growth-curve identities, serine table and
+printed primer layout agree with the scoped reading below.
+https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fmsb.2010.88/MediaObjects/44320_2010_BFMSB201088_MOESM1_ESM.doc
+
+Minimal quotations from Results:
+"enable growth"
+"YjbQ could not be assayed"
+Supplementary TableIII column header: "L-Ser (1.0 mM)"
+
+Curator facts: BW25113-derived delta-pdxB/JU283 cannot grow on M9/glucose
+at37 C without rescue. YjbQ expression gives TableII +++ both without and
+with the supplement mixture; +++ means 1 mm colonies after3-5 days, compared
+with1-2 days for pdxB. Supplements: serine1 mM; phenylalanine,tyrosine and
+tryptophan0.1 mM each; p-hydroxybenzoate,p-aminobenzoate and
+2,3-dihydroxybenzoate1 uM each. No pyridoxine in that mixture.
+The YjbQ row does not rescue delta-serC with supplements or delta-pdxA,
+delta-pdxJ or delta-pdxH. These are separate mutant backgrounds, not a complete
+isogenic double-knockout series. Main text reports liquid rescue; no YjbQ-specific
+liquid curve was identified in the inspected supplement text. FigureS4 concerns
+glycolaldehyde/pyridoxine, not YjbQ expression. Quantitative rates, replicate counts
+and detailed YjbQ liquid protocol remain unresolved. Methods confirm reintroduction with ASKA pCA24N
+and independently cloned pTrcHisB constructs. Figure1 labels the pathway2
+precursor as unknown. OHPB entry is a genetic inference, not a measured YjbQ
+product. The broad negative-dehydrogenase wording does not override the explicit
+unassayed-YjbQ limitation. No native physiological substrate is established.
+
+Supplementary Methods specifies M9 glucose0.2% and NH4Cl0.1% w/v; pTrcHisB
+confirmation uses five PBS washes, IPTG0.1 mM, kanamycin20 ug/ml and
+ampicillin100 ug/ml at37 C. Both vectors add N-terminal His6; ASKA adds five
+C-terminal residues absent from pTrcHisB. TableI traces JU283 to one selected
+BW25113/JWK2317 colony; heterogeneous Keio stocks differed at30 C but not37 C.
+TableIII yjbQ has +++ with and without serine1 mM; its footnote specifies
+ampicillin100 ug/ml, IPTG0.1 mM and the same3-5-day/1-mm category. It does not
+show enhancement by serine or independent replication of unsupplemented growth.
+FigureS1 shows colonies in YjbQ(H) and no comparable growth in vector(I).
+The caption labels YjbQ at4 days and empty vector at7 days. Its
+chloramphenicol35 ug/ml designation conflicts with pTrcHisB/ampicillin Methods;
+retain this discrepancy rather than silently correcting it.
+TableII of the supplement counts24 sequenced plasmids, including6 yjbQ;
+main text says28 colonies. These are not six independent phenotype replicates.
+Supplementary purification Methods confirms YjbQ was insoluble and unpurified.
+TableV forward-primer discrepancy is retained in the identity extract; no exact
+experimental construct or residue-level biochemical inference is made.

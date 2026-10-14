@@ -4,7 +4,7 @@ name: Branched-chain polyamine synthase A C-terminal domain
 short_name: BpsA_C
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01861
 counters:
   proteins: 927
@@ -24,3 +24,576 @@ interpro_id: InterPro:IPR002723
 description: This domain is found in the C terminus of N(4)-bis(aminopropyl)spermidine synthase ([ec:2.5.1.128],
   also known as Branched-chain polyamine synthase A, BpsA) from hyperthermophiles [[cite:PUB00074302]]
   and in uncharacterised proteins from bacteria and archaea.
+curation_history: history/records/PF01861
+discussions:
+- discussion_id: bpsa-residue-mapping-and-carrier-proof
+  prompt: Resolve terminal-site numbering and test whether the detected adduct is a productive carrier.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The reference sequences and published mutant primers support a two-residue offset for the
+    2019 acidic-cluster labels. Net product formation, peptide mass and proposed transfer must remain
+    distinct claims.
+  evidence:
+  - reference: PMID:31162806
+    supports: PARTIAL
+    evidence_source: primary_tables_methods_results_and_captions
+    explanation: Table 4 primer translation supports reference mapping but is not clone resequencing;
+      MS does not alone prove unique sites, ester chemistry or productive transfer.
+  - reference: PMID:28881427
+    supports: PARTIAL
+    evidence_source: primary_kinetics_and_structure_function_results
+    explanation: D159A/D160A losses support their activity contribution but not the original covalent-carrier
+      assignment.
+  notes: See evidence/PF01861/BpsA-identity.txt and bpsa-gap-ledger.txt. Obtain raw spectra, donor-free
+    and isotope controls, preloaded-enzyme transfer tests, historical clone sequences, folding controls
+    and corrected C9 kinetics. Preserve the native/construct terminal offsets and domain boundaries.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+- discussion_id: bpsa-genotype-mediation-and-family-coverage
+  prompt: Separate BpsA-specific cellular effects from genotype background and alternative polyamine compensation.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: DBP1 relocates pdaD, chemical rescue is partial, and KPS is an independent Pc-speE replacement
+    rather than a repaired DBP1 clone. These observations do not establish a serial membrane, RNA or DNA
+    mechanism.
+  evidence:
+  - reference: PMID:24610711
+    supports: PARTIAL
+    evidence_source: primary_strain_table_methods_and_visually_inspected_figure_6
+    explanation: Whole-locus disruption and added-polyamine recovery are condition-specific and not isolated-domain
+      sufficiency.
+  - reference: PMID:40434083
+    supports: PARTIAL
+    evidence_source: primary_methods_results_and_visually_inspected_figures_5_6
+    explanation: KPS compensation is incomplete in both high-temperature growth and repeated cold survival;
+      the image alt text must not override the plot.
+  notes: See evidence/PF01861/bpsa-gap-ledger.txt. Obtain matched same-gene restoration, supplementary
+    CFUs and other member-specific biochemical evidence. Uncurated transcriptomic, RNA-polymerase, surfactant
+    and DNA studies remain leads, not adopted edges. Eight graphs and seventeen edges do not complete
+    the family; keep IN_PROGRESS.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+causal_graphs:
+- graph_id: tkbpsa-acceptor-specific-products
+  title: Purified Tk-BpsA aminopropylates two separate acceptor substrates
+  scope: 'Hidese 2017 Tables 1/3: recombinant intact Tk-BpsA, D159A and D160A preparations in separate
+    spermidine and N4-aminopropylspermidine reactions.'
+  context: 'KOD1 TK1691 in pET28a, N-terminal His6, expressed in BL21-CodonPlus(DE3)-RIL; heat and Ni-affinity
+    purification. Standard 200 ul HPLC assay: 50 mM PIPES-NaOH pH 7.5, 80 C, 0.5 mM dcSAM and 1 mM acceptor
+    unless varied for initial-rate fitting.'
+  family_mapping: Q5JIZ3 sequence version 1 exactly equals BAD85880.1, 351 aa; PF01861 106-350 includes
+    D159 and D160. PDB 6J26 has the full reference plus the 20-aa MGSSHHHHHHSSGLVPRGSH tag. Tested intact
+    protein is not isolated-domain sufficiency.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:69014
+  limitations: DIRECT describes net purified-preparation effects. Separate substrate assays are not a
+    time-resolved single-molecule trajectory. Not-detected products are not proven absolute zero activity;
+    numeric detection limits and matched folding controls are unavailable. No Asp159 covalent-carrier
+    or proton-transfer step is asserted.
+  nodes:
+  - node_id: tk-spd-reaction
+    label: Intact Tk-BpsA plus dcSAM and spermidine
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JIZ3
+  - node_id: tk-branched-reaction
+    label: Intact Tk-BpsA plus dcSAM and N4-aminopropylspermidine
+    node_type: ACTIVITY
+  - node_id: d159a-preparation
+    label: Substitute D159A for WT Tk-BpsA
+    node_type: PERTURBATION
+  - node_id: d160a-preparation
+    label: Substitute D160A for WT Tk-BpsA
+    node_type: PERTURBATION
+  - node_id: mono-branched-product
+    label: N4-aminopropylspermidine produced from spermidine
+    node_type: STATE
+  - node_id: bis-branched-product
+    label: N4-bis(aminopropyl)spermidine produced from branched acceptor
+    node_type: STATE
+  edges:
+  - edge_id: tk-spd-produces-mono-branched
+    subject: tk-spd-reaction
+    predicate: produces
+    object: mono-branched-product
+    mechanism: The joint enzyme/donor/acceptor preparation yields the HPLC-assigned mono-branched product;
+      Table 3 WT kcat is 0.12 +/-0.02 s^-1.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:28881427
+      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.14262
+      snippet: Catalytic properties of recombinant Tk-BpsA
+      explanation: Primary Results, Tables 1/3 and enzymatic Methods; donor and acceptor are both required
+        assay inputs.
+      cache_path: evidence/PF01861/hidese-2017-bpsa.txt
+      cache_sha256: 7fc0a4adc98dac6b5f430819792c4abc75f1726eb9cf7ce7a3ab7ea724c0046c
+  - edge_id: tk-branched-produces-bis-branched
+    subject: tk-branched-reaction
+    predicate: produces
+    object: bis-branched-product
+    mechanism: The separately supplied branched acceptor yields the bis-branched product; WT kcat is 0.049
+      +/-0.005 s^-1. This does not measure intracellular flux.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:28881427
+      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.14262
+      snippet: Catalytic properties of recombinant Tk-BpsA
+      explanation: Primary Results, Tables 1/3 and HPLC Methods; second acceptor assay is distinct from
+        the spermidine reaction.
+      cache_path: evidence/PF01861/hidese-2017-bpsa.txt
+      cache_sha256: 7fc0a4adc98dac6b5f430819792c4abc75f1726eb9cf7ce7a3ab7ea724c0046c
+  - edge_id: d159a-decreases-mono-product
+    subject: d159a-preparation
+    predicate: decreases
+    object: mono-branched-product
+    mechanism: D159A product formation from spermidine is not detected relative to the active WT preparation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:28881427
+      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.14262
+      snippet: Kinetic parameters of wild-type and mutant Tk-BpsA
+      explanation: Table 3 D159A spermidine entries and ND definition; structure-function Results report
+        activity loss, not a directly observed chemical intermediate.
+      cache_path: evidence/PF01861/hidese-2017-bpsa.txt
+      cache_sha256: 7fc0a4adc98dac6b5f430819792c4abc75f1726eb9cf7ce7a3ab7ea724c0046c
+  - edge_id: d159a-decreases-bis-product
+    subject: d159a-preparation
+    predicate: decreases
+    object: bis-branched-product
+    mechanism: D159A product formation from N4-aminopropylspermidine is not detected in the separate branched-acceptor
+      assay.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:28881427
+      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.14262
+      snippet: Kinetic parameters of wild-type and mutant Tk-BpsA
+      explanation: Table 3 D159A branched-acceptor entries, triplicate assay convention and detection-qualified
+        ND definition.
+      cache_path: evidence/PF01861/hidese-2017-bpsa.txt
+      cache_sha256: 7fc0a4adc98dac6b5f430819792c4abc75f1726eb9cf7ce7a3ab7ea724c0046c
+  - edge_id: d160a-decreases-mono-product
+    subject: d160a-preparation
+    predicate: decreases
+    object: mono-branched-product
+    mechanism: D160A likewise loses detectable product formation from spermidine; folding and chemical
+      roles are not discriminated by this endpoint.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:28881427
+      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.14262
+      snippet: Kinetic parameters of wild-type and mutant Tk-BpsA
+      explanation: Table 3 D160A spermidine entries and accompanying Results; no universal enzymatic null
+        claim beyond assay detection.
+      cache_path: evidence/PF01861/hidese-2017-bpsa.txt
+      cache_sha256: 7fc0a4adc98dac6b5f430819792c4abc75f1726eb9cf7ce7a3ab7ea724c0046c
+  - edge_id: d160a-decreases-bis-product
+    subject: d160a-preparation
+    predicate: decreases
+    object: bis-branched-product
+    mechanism: D160A loses detectable product formation from the separately supplied branched acceptor.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:28881427
+      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.14262
+      snippet: Kinetic parameters of wild-type and mutant Tk-BpsA
+      explanation: Table 3 D160A branched-acceptor entries and Results; evidence supports preparation
+        activity loss only.
+      cache_path: evidence/PF01861/hidese-2017-bpsa.txt
+      cache_sha256: 7fc0a4adc98dac6b5f430819792c4abc75f1726eb9cf7ce7a3ab7ea724c0046c
+- graph_id: tkbpsa-donor-incubation-peptide
+  title: Donor-incubated Tk-BpsA yields a mass-shifted terminal peptide
+  scope: Hidese 2019 LC-MS/MS Results and Figure 5 caption; tryptic analysis of the intact Tk-BpsA/dcSAM
+    preparation without polyamine acceptor.
+  context: 100 uM protein plus 1 mM dcSAM, 50 mM PIPES-NaOH pH 7.6, 80 C for 30 min; nonreducing SDS/PAGE,
+    in-gel trypsin and Orbitrap analysis. Iodoacetamide alkylation omitted to avoid a near-isobaric modification.
+    10 mM dcSAM instead caused aggregation.
+  family_mapping: Q5JIZ3/BAD85880.1 terminal peptide 331-351 is GFEDEITVGQELYDDEESSTT; PF01861 is 106-350,
+    so the peptide includes one extra-domain terminal residue. Five acidic-site labels in the paper conflict
+    with this sequence; possible reference sites are E341/D344/D345/E346/E347.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:69014
+  limitations: Observed mass-shifted species, not uniquely localized occupancy, demonstrated ester chemistry
+    or productive carrier turnover. No donor-free MS comparison was established in the inspected text,
+    so no quantified donor-dependent increase is claimed. Missing single-adduct and D159/D160 signals
+    are detection-limited negatives. Raw spectra and original figure images were not independently inspected.
+  nodes:
+  - node_id: donor-incubated-tkbpsa
+    label: Intact Tk-BpsA and dcSAM incubation followed by tryptic analysis
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q5JIZ3
+  - node_id: terminal-mass-shift
+    label: Detected terminal peptide with approximately +114.118 Da
+    node_type: STATE
+  edges:
+  - edge_id: incubation-yields-terminal-mass-shift
+    subject: donor-incubated-tkbpsa
+    predicate: produces
+    object: terminal-mass-shift
+    mechanism: The preparation yields a 2477.099-Da terminal species versus unmodified 2362.981 Da, consistent
+      with two aminopropyl additions. This edge records the analytical product, not an exclusive atom-by-atom
+      assignment.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31162806
+      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.14949
+      snippet: Identification of an aminopropylated enzyme intermediate by LC-MS/MS
+      explanation: Primary Methods/Results and Figure 5 caption report both peptide masses and preparation
+        chemistry. Independent isotope tracing, raw-spectrum reanalysis and donor-free comparison remain
+        unverified.
+      cache_path: evidence/PF01861/hidese-2019-bpsa.txt
+      cache_sha256: 3027d64cd76d83031b4979a7aec40ad768501fd4d61cf42a373563961e33b742
+- graph_id: tkbpsa-terminal-quadruple-kinetics
+  title: A terminal acidic-cluster mutant retains reduced Tk-BpsA activity
+  scope: Hidese 2019 Table 3 published D342N/D343N/E344Q/E345Q preparation, compared with the WT values
+    reused from the 2017 study.
+  context: Intact recombinant Tk-BpsA; spermidine HPLC initial-rate assay, 50 mM PIPES-NaOH pH 7.5, 80
+    C, triplicate SD. Mutant extracts heat-treated at 80 C for 30 min. Exact fixed donor concentration
+    for this table is not explicitly restated; do not borrow the MS dose.
+  family_mapping: Q5JIZ3/BAD85880.1, PF01861 106-350. Table 4 quadruple primer translates ELYNNQQSSTT
+    and maps uniquely to D344N/D345N/E346Q/E347Q in the reference. Preserve the published labels plus
+    this primer-supported mapping; experimental clone resequencing is unavailable.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:69014
+  limitations: Two fitted kinetic summaries of one experiment, not independent replications. Historical
+    WT comparator, altered preparation and unmeasured folding remain limitations. Residual activity excludes
+    complete loss. Km is not a measured binding constant, and the four substitutions do not uniquely identify
+    a covalent carrier residue.
+  nodes:
+  - node_id: terminal-quadruple-preparation
+    label: Published D342N/D343N/E344Q/E345Q Tk-BpsA preparation
+    node_type: PERTURBATION
+  - node_id: spermidine-kcat
+    label: Fitted spermidine-assay turnover number
+    node_type: ACTIVITY
+  - node_id: spermidine-efficiency
+    label: Fitted spermidine-assay catalytic efficiency
+    node_type: ACTIVITY
+  edges:
+  - edge_id: quadruple-decreases-kcat
+    subject: terminal-quadruple-preparation
+    predicate: decreases
+    object: spermidine-kcat
+    mechanism: Reported kcat falls from historical WT 0.12 +/-0.02 to 0.0024 +/-0.0003 s^-1, retaining
+      about 2% of the WT value.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31162806
+      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.14949
+      snippet: Kinetic parameters of wild-type and mutant Tk-BpsA
+      explanation: Table 3 uses a 10^-2 multiplier for kcat; WT row explicitly cites the prior study.
+        Table 4 primers, not the inconsistent residue labels alone, anchor reference positions.
+      cache_path: evidence/PF01861/hidese-2019-bpsa.txt
+      cache_sha256: 3027d64cd76d83031b4979a7aec40ad768501fd4d61cf42a373563961e33b742
+  - edge_id: quadruple-decreases-efficiency
+    subject: terminal-quadruple-preparation
+    predicate: decreases
+    object: spermidine-efficiency
+    mechanism: Reported kcat/Km falls from 460 to 36 M^-1 s^-1, approximately 8% of the historical WT
+      value; this differs from the turnover fraction because fitted Km also changes.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31162806
+      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.14949
+      snippet: Kinetic parameters of wild-type and mutant Tk-BpsA
+      explanation: Table 3 quadruple and cited WT efficiency values; distinct kinetic parameters must
+        not be collapsed into a universal activity percentage.
+      cache_path: evidence/PF01861/hidese-2019-bpsa.txt
+      cache_sha256: 3027d64cd76d83031b4979a7aec40ad768501fd4d61cf42a373563961e33b742
+- graph_id: tthbpsa-c9-acceptor-specificity
+  title: The Tth-BpsA C9 tail replacement lowers efficiency for one branched acceptor
+  scope: 'Hidese 2019 Table 1: T. thermophilus HB27 TT_C0171 versus C9 chimera, with N4-aminopropylnorspermidine
+    as the supplied acceptor.'
+  context: pET28a N-terminal His6 constructs expressed in BL21-CodonPlus(DE3)-RIL. Initial HPLC rates
+    at 80 C, 50 mM PIPES-NaOH pH 7.6, 0.5 mM dcSAM, varied acceptor; triplicate SD. WT and C9 preparations
+    use different heat-treatment conditions.
+  family_mapping: Q72L89 sequence version 1 equals AAS80519.1, 353 aa; PF01861 115-351. 6J27/6J28 retain
+    the 20-aa tag followed by MV and reference residues 2 onward. C9 replaces reference 346-353 QDEEATTY
+    with YDDEESSTT; it overlaps the domain and extends past its boundary.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:262724
+  limitations: Net intact-chimera effect, not isolated-domain sufficiency or proof of a particular hydrogen
+    bond. The Table 1 spermidine C9 efficiency disagrees with its kcat/Km arithmetic and is excluded.
+    Norspermidine and N4-aminopropylspermidine are distinct acceptors, not synonyms of this assay substrate.
+  nodes:
+  - node_id: replace-tth-terminal-segment
+    label: Replace the eight-residue Tth-BpsA tail with the nine-residue Tk tail
+    node_type: PERTURBATION
+  - node_id: branched-norspermidine-efficiency
+    label: Catalytic efficiency with N4-aminopropylnorspermidine
+    node_type: ACTIVITY
+  edges:
+  - edge_id: c9-decreases-branched-norspermidine-efficiency
+    subject: replace-tth-terminal-segment
+    predicate: decreases
+    object: branched-norspermidine-efficiency
+    mechanism: Reported efficiency decreases from 4400 to 85 M^-1 s^-1; fitted Km rises from 2.9 to 155
+      uM while kcat remains 0.013 s^-1. No direct binding-affinity measurement is claimed.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31162806
+      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.14949
+      snippet: Tth-BpsA C9
+      explanation: Table 1 3(3)3 row, C9 Results, Table 4 construction and HPLC Methods; the table title
+        itself incorrectly refers to Tk-BpsA while columns identify Tth-BpsA.
+      cache_path: evidence/PF01861/hidese-2019-bpsa.txt
+      cache_sha256: 3027d64cd76d83031b4979a7aec40ad768501fd4d61cf42a373563961e33b742
+- graph_id: tkbpsa-candidate-carrier-transfer
+  title: Proposed transfer from terminal carriers to spermidine remains hypothetical
+  scope: Hidese 2019 revised mechanism, Figure 7 and Discussion; not an independently measured conversion
+    of isolated preloaded enzyme.
+  context: Candidate explanation combining terminal-peptide MS, kinetic perturbations and structural geometry
+    from separate preparations. No pulse-chase transfer or isotope provenance experiment was established
+    in the inspected text.
+  family_mapping: Intact Tk-BpsA Q5JIZ3/BAD85880.1; PF01861 106-350. Candidate acidic sites correspond
+    to reference E341/D344/D345/E346/E347, with inconsistent published labels explicitly retained in the
+    identity ledger.
+  scope_status: HYPOTHETICAL
+  taxon: NCBITaxon:69014
+  limitations: The terminal mass shift is observed elsewhere; the proposed productive transfer, ester
+    linkage, exact carrier pair and acid/base roles are not. The older D159 carrier assignment is not
+    promoted into an observed edge. This hypothesis is not a family-wide mechanism.
+  nodes:
+  - node_id: putative-preloaded-carrier-with-acceptor
+    label: Putative aminopropylated terminal Tk-BpsA carrier with spermidine
+    node_type: STATE
+  - node_id: hypothetical-carrier-derived-product
+    label: N4-aminopropylspermidine formed by transfer from the carrier
+    node_type: STATE
+  edges:
+  - edge_id: candidate-terminal-carrier-produces-product
+    subject: putative-preloaded-carrier-with-acceptor
+    predicate: produces
+    object: hypothetical-carrier-derived-product
+    mechanism: The revised model proposes that spermidine receives the group from an acidic terminal carrier.
+      Net product assays and a donor-incubated peptide adduct do not alone demonstrate this intervening
+      transfer.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:31162806
+      source_url: https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.14949
+      snippet: Identification of an aminopropylated enzyme intermediate by LC-MS/MS
+      explanation: MS and mutant experiments motivate the Figure 7 proposal; EXPERIMENTAL describes its
+        evidence basis, not observation of this edge. Productive carrier turnover requires a discriminating
+        test.
+      cache_path: evidence/PF01861/hidese-2019-bpsa.txt
+      cache_sha256: 3027d64cd76d83031b4979a7aec40ad768501fd4d61cf42a373563961e33b742
+- graph_id: tkbpsa-2014-sulfur-growth
+  title: DBP1 high-temperature growth loss is partially rescued by added branched polyamine
+  scope: 'Okada 2014 Figure 6B: KU216 versus DBP1 and chemical supplementation of DBP1.'
+  context: Anaerobic ASW-YT-S0 with 2 g/L elemental sulfur at 93 C; OD660 through 28 h, three independent
+    experiments with SD. Supplement is 1 mM N4-bis(aminopropyl)spermidine. At 85 C the lag delay largely
+    converges toward the parental final OD.
+  family_mapping: KOD1 TK1691 reference Q5JIZ3/BAD85880.1, PF01861 106-350. KU216 is delta-pyrF; DBP1
+    is delta-pdaD delta-bpsA::pdaD delta-pyrF, derived from DAD by pdaD insertion at bpsA. Whole-locus
+    disruption is not a domain-specific lesion.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:69014
+  limitations: INDIRECT genotype and supplementation effects; pdaD relocation is a confounder. Chemical
+    rescue is partial, not bpsA genetic complementation or a measured transport mechanism. OD increase
+    is not viability and cannot establish direct DNA, RNA or membrane stabilization.
+  nodes:
+  - node_id: dbp1-versus-ku216-sulfur
+    label: DBP1 genotype instead of KU216 in sulfur medium
+    node_type: PERTURBATION
+  - node_id: add-bcpa-to-dbp1
+    label: Add 1 mM N4-bis(aminopropyl)spermidine to DBP1
+    node_type: PERTURBATION
+  - node_id: sulfur-93c-od-growth
+    label: OD660 growth at 93 C in sulfur medium
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: dbp1-decreases-sulfur-growth
+    subject: dbp1-versus-ku216-sulfur
+    predicate: decreases
+    object: sulfur-93c-od-growth
+    mechanism: DBP1 lacks the parental increase in OD660 over the observed interval; this is strain-context
+      evidence, not proof that every BpsA homolog is essential.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24610711
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4010994/
+      snippet: partially restored
+      explanation: Figure 6B visually inspected alongside strain Table 1, disruption Methods and Results;
+        baseline and supplementation must both be retained.
+      cache_path: evidence/PF01861/okada-2014-bpsa.txt
+      cache_sha256: 05eded6460a1ae04752fba026388d324c35e3007a63602a2e1a9a71439d8bb85
+  - edge_id: added-bcpa-increases-dbp1-growth
+    subject: add-bcpa-to-dbp1
+    predicate: increases
+    object: sulfur-93c-od-growth
+    mechanism: Supplemented DBP1 shows delayed, lower OD recovery compared with KU216, but higher growth
+      than unsupplemented DBP1. No complete rescue or uptake pathway is inferred.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:24610711
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4010994/
+      snippet: partially restored
+      explanation: Figure 6B dashed supplemented curve and caption explicitly specify 1 mM; no extrapolation
+        to other polyamines or media.
+      cache_path: evidence/PF01861/okada-2014-bpsa.txt
+      cache_sha256: 05eded6460a1ae04752fba026388d324c35e3007a63602a2e1a9a71439d8bb85
+- graph_id: tkbpsa-2025-pyruvate-growth
+  title: A separate Pc-speE replacement strain grows at 93 C without BpsA
+  scope: 'Fujiwara 2025 Figure 5: KU216, historical DBP1 and separately constructed KPS, not an isogenic
+    repair of DBP1.'
+  context: ASW-YT with 0.5% sodium pyruvate, 93 C, OD660 through about 30 h. The 85 C panel is a distinct
+    permissive condition; do not merge with the 2014 sulfur-medium assay.
+  family_mapping: BpsA-deficient locus maps to Q5JIZ3/BAD85880.1, PF01861 106-350. KPS is delta-bpsA::Pc-speE
+    delta-pyrF, independently derived from KU216; DBP1 also carries the historical pdaD relocation. Pc-SpeE
+    is a different enzyme, not restoration of PF01861.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:69014
+  limitations: INDIRECT multi-genotype comparison. KPS accumulates thermospermine rather than restored
+    branched polyamine. Its growth is slower/lower than KU216; partial compensation does not prove a unique
+    molecular mediator. No matched DBP1 bpsA genetic rescue is supplied.
+  nodes:
+  - node_id: dbp1-pyruvate-genotype
+    label: DBP1 instead of KU216 in pyruvate medium
+    node_type: PERTURBATION
+  - node_id: kps-versus-dbp1-genotype
+    label: Independently constructed KPS instead of DBP1
+    node_type: PERTURBATION
+  - node_id: pyruvate-93c-growth
+    label: OD660 growth at 93 C in pyruvate medium
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: dbp1-decreases-pyruvate-growth
+    subject: dbp1-pyruvate-genotype
+    predicate: decreases
+    object: pyruvate-93c-growth
+    mechanism: DBP1 shows no sustained OD660 increase while KU216 grows. This reproduces a temperature-dependent
+      strain phenotype under a different medium, not an elementary biochemical effect.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40434083
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12175538/
+      snippet: Comparison of growth profiles of mutant strains
+      explanation: Figure 5 and primary Results/Methods; image visually checked for curve identities and
+        medium-specific partial recovery.
+      cache_path: evidence/PF01861/fujiwara-2025-bpsa.txt
+      cache_sha256: 800a494dbc932cd8fa4c9743d5b83596f4a244044c72ac1710f4ad6ce52f7b0b
+  - edge_id: kps-increases-pyruvate-growth-relative-dbp1
+    subject: kps-versus-dbp1-genotype
+    predicate: increases
+    object: pyruvate-93c-growth
+    mechanism: KPS grows where DBP1 does not, although more slowly and to lower OD than KU216. This is
+      alternative-pathway compensation, not same-gene rescue.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40434083
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12175538/
+      snippet: Comparison of growth profiles of mutant strains
+      explanation: Figure 5 squares versus triangles and circles; KPS construction and polyamine identity
+        qualify the comparison.
+      cache_path: evidence/PF01861/fujiwara-2025-bpsa.txt
+      cache_sha256: 800a494dbc932cd8fa4c9743d5b83596f4a244044c72ac1710f4ad6ce52f7b0b
+- graph_id: tkbpsa-cold-cycle-survival
+  title: BpsA-deficient strains differ in survival through repeated cold cycles
+  scope: 'Fujiwara 2025 Figure 6A: normalized CFU of KU216, DBP1 and KPS under alternating cold/hot stress.'
+  context: 17 h at 85 C in ASW-YT-S followed by 24 h at 85 C in ASW-AA-S; each cycle is 30 min ice bath
+    and 30 min at 85 C, repeated four times. Plate CFU on ASW-YT normalized to each strain's untreated
+    baseline.
+  family_mapping: BpsA Q5JIZ3/BAD85880.1 carries PF01861 106-350; DBP1 disrupts the whole locus with pdaD
+    relocation, while separately constructed KPS replaces bpsA with Pc-speE. No isolated PF01861 perturbation
+    or restored BpsA protein is tested.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:69014
+  limitations: INDIRECT survival phenotype, not a direct membrane or DNA-protection assay. KPS protection
+    is temporary and collapses after the third cycle. Supplementary raw CFUs/replicate details were not
+    independently verified. Figure 6 accessibility text reverses the strain ordering; the inspected plot,
+    legend and Results agree and take precedence.
+  nodes:
+  - node_id: dbp1-cold-genotype
+    label: DBP1 instead of KU216 during cold cycling
+    node_type: PERTURBATION
+  - node_id: kps-cold-genotype
+    label: KPS instead of DBP1 during the first two cold cycles
+    node_type: PERTURBATION
+  - node_id: cold-cycle-normalized-cfu
+    label: CFU survival relative to each strain's untreated baseline
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: dbp1-decreases-cold-survival
+    subject: dbp1-cold-genotype
+    predicate: decreases
+    object: cold-cycle-normalized-cfu
+    mechanism: DBP1 survival falls near zero after two cycles, whereas KU216 retains about 80% through
+      four cycles. This is a relative CFU result, not an absolute count or quantified molecular damage
+      rate.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40434083
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12175538/
+      snippet: Cold-stress tolerance
+      explanation: Figure 6A visually inspected with primary protocol and Results; misleading image alt
+        text is excluded from interpretation.
+      cache_path: evidence/PF01861/fujiwara-2025-bpsa.txt
+      cache_sha256: 800a494dbc932cd8fa4c9743d5b83596f4a244044c72ac1710f4ad6ce52f7b0b
+  - edge_id: kps-partially-increases-cold-survival
+    subject: kps-cold-genotype
+    predicate: increases
+    object: cold-cycle-normalized-cfu
+    mechanism: KPS retains roughly 50% survival after two cycles compared with near-zero DBP1, but loses
+      most survival after the third. This is conditional compensation, not full restoration or a claim
+      that KPS outperforms KU216.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:40434083
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12175538/
+      snippet: Cold-stress tolerance
+      explanation: Figure 6A squares/triangles/circles and Results; genotype backgrounds and normalization
+        remain explicit.
+      cache_path: evidence/PF01861/fujiwara-2025-bpsa.txt
+      cache_sha256: 800a494dbc932cd8fa4c9743d5b83596f4a244044c72ac1710f4ad6ce52f7b0b
+curation_events:
+- timestamp: '2026-10-11T15:56:52Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate scoped BpsA catalytic and cellular causal graphs
+  history_record: history/records/PF01861/2026-10-11T155652Z-codex-e1688f.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T16:04:03Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped scientific self-review of BpsA causal graphs
+  history_record: history/records/PF01861/2026-10-11T160403Z-codex-a0a1e6.yaml
+  event_index: 0
+  llm_assisted: true

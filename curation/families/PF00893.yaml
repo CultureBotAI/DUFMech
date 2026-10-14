@@ -1,0 +1,167 @@
+pfam_id: PF00893
+curation_status: IN_PROGRESS
+curation_history: history/records/PF00893
+causal_graphs:
+  - graph_id: emre-ph-gradient-proton-efflux
+    title: Ethidium addition drives EmrE-dependent proton release under a pH gradient
+    scope: Reconstituted E. coli EmrE in 3:1 POPC/POPG liposomes, Figure 7D. This is an intact-protein membrane assay, not an isolated Pfam interval or a cellular drug-resistance assay.
+    context: Interior 100 mM MES at pH 6; exterior 0.5 mM MOPS adjusted to about pH 8; 100 mM KCl on both sides. External ethidium is 50 uM. The experiment compares 1:500 and 1:1000 EmrE-to-lipid molar ratios at fixed liposome amount, empty liposomes and DCCD-inactivated EmrE. A microelectrode follows external pH; calibrated base additions quantify release. Subsequent valinomycin and protonophore additions are controls, not requirements for the initial release.
+    family_mapping: UniProtKB:P23895, emrE/b0543/JW0531, is a 110-residue K-12 reference, sequence version 1, with exact UniProt/InterPro sequence agreement and PF00893 at 3-94 inclusive. Reference E14 is within that interval. The paper names E. coli EmrE expressed in BL21(DE3) and cites the Chang pET15b protocol with N-terminal His6 removal leaving GS. Complete 2017 plasmid sequences were not independently verified; reference numbering excludes the GS remnant and K-12 is not the expression-host identity.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:83333
+    limitations: Proton release is directly measured, whereas drug accumulation and exact microscopic coupling ratios are not independently read out by this pH trace. Similar release at two protein densities argues against binding-only release but does not establish a unique transport cycle. Assay temperature remains unresolved; the unavailable supplement and raw traces were not reanalyzed. This result does not imply universal strict 2H-per-drug antiport.
+    nodes:
+      - node_id: ph-gradient-emre-ethidium-system
+        label: WT EmrE proteoliposomes plus external ethidium with acidic interior
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P23895
+      - node_id: outward-proton-flux
+        label: Proton release from liposome interior to external solution
+        node_type: PROCESS
+    edges:
+      - edge_id: ph-gradient-system-produces-proton-efflux
+        subject: ph-gradient-emre-ethidium-system
+        predicate: produces
+        object: outward-proton-flux
+        mechanism: Ethidium addition to the joint gradient-plus-EmrE system produces external acidification consistent with proton efflux. Empty-liposome and DCCD controls lack the WT response; protein-density controls distinguish transport-associated release from simple binding-related deprotonation.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:29114048
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5703289/
+            snippet: Proton release is EmrE-dependent
+            explanation: Figure 7D/H and transport Results directly compare the WT, empty-liposome and inactivated preparations. The graph adopts observed proton flux, not the simulated TPP uptake in Figure 6 or a fixed microscopic stoichiometry.
+            cache_path: evidence/PF00893/robinson-2017-emrE.txt
+            cache_sha256: 2bba299a8099dc22d646ff46c3333bd412cb270d77c54408dc24ce1bcc935ecb
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P23895/entry/pfam/PF00893/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P23895/entry/pfam/PF00893/
+            snippet: 'P23895 Pfam:PF00893 interval: 3-94, inclusive'
+            explanation: Maps the native reference and E14 to the family without asserting that the truncated Pfam interval or a monomer alone suffices for transport.
+            cache_path: evidence/PF00893/EmrE-identity.txt
+            cache_sha256: 60f575e332c9d645bb1c75488db1e0749d29006461ad2bcbb390c2bf84f373ac
+  - graph_id: emre-positive-potential-proton-efflux
+    title: Positive-inside potential supports outward proton flux through EmrE
+    scope: Figure 7F WT versus E14Q E. coli EmrE proteoliposomes after valinomycin then ethidium addition; neutral-potassium WT preparation is a separate comparator within the assay.
+    context: 3:1 POPC/POPG; pH about 7.5 on both sides, 50 mM MOPS inside and 0.05 mM outside. Inside contains 1 mM KCl and 99 mM NaCl; outside contains 100 mM KCl. Valinomycin at 1 ug/mL generates positive-inside potential. External pH is measured by microelectrode and acid/base calibration. Figure 7H reports SD and n=3; the main text does not resolve panel-specific ethidium dose, temperature or protein-to-lipid ratio within its overall 1:400-1:1000 range.
+    family_mapping: P23895 full-length reference has PF00893 at 3-94; E14Q changes the mapped glutamate. The 2017 experiment cites the pET15b/His6-cleavage protocol leaving GS at the N terminus. Purification-host BL21(DE3) and K-12 reference identity remain distinct; complete later construct sequences are not established here.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:83333
+    limitations: The observed variable is proton movement. Its compatibility with electrogenic antiport does not independently fix every drug/proton stoichiometry or prove an elementary proton-transfer role for E14. E14Q is a functional control, not a folding-rescue experiment. The figure does not show rapid drug-free leakage when potential is applied.
+    nodes:
+      - node_id: positive-inside-wt-system
+        label: WT EmrE with positive-inside potential and external ethidium
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P23895
+      - node_id: positive-inside-e14q-system
+        label: E14Q replacing WT EmrE in the positive-inside assay
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P23895
+      - node_id: positive-assay-proton-release
+        label: Outward proton flux in the positive-inside assay
+        node_type: PROCESS
+    edges:
+      - edge_id: positive-wt-system-produces-proton-efflux
+        subject: positive-inside-wt-system
+        predicate: produces
+        object: positive-assay-proton-release
+        mechanism: External ethidium triggers proton efflux in the positive-inside WT preparation. The response exceeds the neutral-potassium WT comparator; all inputs and the intact membrane preparation are part of the adopted cause.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:29114048
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5703289/
+            snippet: results in proton release from positive inside EmrE proteoliposomes
+            explanation: Figure 7F compares blue WT, gray neutral and black E14Q traces with timed additions. The edge retains the measured outward proton response, without an observed drug-translocation microstep.
+            cache_path: evidence/PF00893/robinson-2017-emrE.txt
+            cache_sha256: 2bba299a8099dc22d646ff46c3333bd412cb270d77c54408dc24ce1bcc935ecb
+      - edge_id: e14q-decreases-positive-proton-efflux
+        subject: positive-inside-e14q-system
+        predicate: decreases
+        object: positive-assay-proton-release
+        mechanism: Replacing WT with E14Q removes the detected ethidium-triggered proton efflux under the positive-inside condition. This is an assay-specific loss of function, not an absolute zero transport rate or proof of the unique molecular reason for loss.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:29114048
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5703289/
+            snippet: no proton flux
+            explanation: Figure 7F's inactive E14Q control lacks the WT response; protonophore addition confirms the retained driving potential. Reference residue mapping places E14 within PF00893.
+            cache_path: evidence/PF00893/robinson-2017-emrE.txt
+            cache_sha256: 2bba299a8099dc22d646ff46c3333bd412cb270d77c54408dc24ce1bcc935ecb
+  - graph_id: emre-negative-potential-proton-influx
+    title: Negative-inside potential reverses the net EmrE proton response
+    scope: Figure 7G WT and E14Q proteoliposomes with valinomycin added before ethidium. The reversed order-of-addition trace is a separate interpretive control, not the same time course.
+    context: 3:1 POPC/POPG at pH about 7.5, with 50 mM MOPS inside and 0.05 mM outside. Inside has 100 mM KCl; outside has 1 mM KCl and 99 mM NaCl. Valinomycin at 1 ug/mL establishes negative-inside potential before ethidium addition. A calibrated external-pH microelectrode reports net proton uptake. Exact panel-specific ethidium dose, temperature and protein-to-lipid ratio remain unresolved from the main text.
+    family_mapping: E. coli EmrE P23895, 110 native residues, sequence version 1; PF00893 interval 3-94 contains native E14. This is an intact reconstituted protein from the cited expression/purification workflow, not an isolated-domain assay or direct measurement in the K-12 reference strain.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:83333
+    limitations: Proton influx is observed, but a unique simultaneous proton/drug symport path is not. The source discusses mixed import/export stoichiometries as an alternative and acknowledges that the assay cannot definitively distinguish them. Raw traces, supplementary quantitation, folding controls and complete mutant clone sequence were not independently assessed. No universal proton leak or all-SMR mechanism is assigned.
+    nodes:
+      - node_id: negative-inside-wt-system
+        label: WT EmrE with negative-inside potential and external ethidium
+        node_type: ACTIVITY
+        grounding:
+          - UniProtKB:P23895
+      - node_id: negative-inside-e14q-system
+        label: E14Q replacing WT EmrE in the negative-inside assay
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P23895
+      - node_id: negative-assay-proton-uptake
+        label: Net inward proton flux into negative-inside liposomes
+        node_type: PROCESS
+    edges:
+      - edge_id: negative-wt-system-produces-proton-influx
+        subject: negative-inside-wt-system
+        predicate: produces
+        object: negative-assay-proton-uptake
+        mechanism: Following ethidium addition to negative-inside WT proteoliposomes, external pH rises as protons enter the liposomes. The measured direction is retained separately from the positive-inside efflux experiment and from modeled microscopic pathways.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:29114048
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5703289/
+            snippet: results in proton uptake
+            explanation: Figure 7G/H red traces/bars and Results establish the net inward proton response. The alternative pink order-of-addition trace and mechanistic discussion prevent presenting one unique symport cycle as directly observed.
+            cache_path: evidence/PF00893/robinson-2017-emrE.txt
+            cache_sha256: 2bba299a8099dc22d646ff46c3333bd412cb270d77c54408dc24ce1bcc935ecb
+      - edge_id: e14q-decreases-negative-proton-influx
+        subject: negative-inside-e14q-system
+        predicate: decreases
+        object: negative-assay-proton-uptake
+        mechanism: E14Q lacks the detected WT inward proton response in this condition. The decrease refers to the magnitude of inward flux, not a switch to outward flux or a demonstrated folding-independent catalytic defect.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:29114048
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5703289/
+            snippet: no proton flux
+            explanation: Figure 7G black E14Q control and the corresponding Results lack WT proton uptake; the terminal protonophore response verifies that a driving potential persists.
+            cache_path: evidence/PF00893/robinson-2017-emrE.txt
+            cache_sha256: 2bba299a8099dc22d646ff46c3333bd412cb270d77c54408dc24ce1bcc935ecb
+discussions:
+  - discussion_id: emre-microscopic-coupling-and-family-coverage
+    prompt: Resolve microscopic proton/drug coupling and extend beyond the three reconstituted EmrE contexts.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Direct proton-flux measurements do not independently identify every transported drug molecule, transient binding state or unique stoichiometric pathway. Neither a universal strict antiport cycle nor a rapid proton leak follows from these observations.
+    evidence:
+      - reference: PMID:29114048
+        supports: PARTIAL
+        evidence_source: full_text
+        explanation: Figure 7 and Results support three condition-specific proton responses and E14Q controls. Figure 6 is simulation, and the negative-potential discussion retains competing microscopic routes. The supplemental PDF route returned HTML; its additional tables and traces were not inspected.
+      - reference: PMID:22178925
+        supports: PARTIAL
+        evidence_source: selected_full_text
+        explanation: The cited expression method specifies Chang pET15b, N-terminal His6 cleavage and a GS remnant. Only relevant construct/purification sections were adopted, not an independent curation of its NMR or structural graphs.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: Obtain the supplement, exact later clone and assay conditions; test drug movement and microscopic alternatives with independent primary measurements. The 2026 proton-hopping study is a follow-up lead whose full text was inaccessible in the attempted routes, not adopted evidence. Other SMR members, substrates, mutation contexts and cellular resistance remain incompletely reviewed. Status remains IN_PROGRESS.

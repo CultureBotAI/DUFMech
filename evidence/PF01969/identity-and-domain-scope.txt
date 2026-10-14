@@ -1,0 +1,41 @@
+PF01969 identity and experimental scope
+Inspected 2026-10-12 by Codex. Curator paraphrases and database facts.
+
+Frozen family: PF01969, Ni_insertion, Nickel insertion protein, EX_DUF,
+InterPro IPR002822. Snapshot interpro-pfam-duf-2026-10-10, SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+Imported identity, description, counters and score provenance are not edited.
+
+Current structured sources:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01969/
+https://rest.uniprot.org/uniprotkb/search?query=xref%3Apfam-PF01969%20AND%20reviewed%3Atrue&format=json&size=100
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q2RFJ5/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/F9UST1/
+
+Q2RFJ5 sequence version1: Moorella thermoacetica ATCC39073/JCM9320,
+NCBITaxon264732, Moth_2512/larC, 396aa, PF01969 4-383. The PF01969 match
+spans both LarC1 and LarC2 structural regions, not only the C-terminal region.
+The current reference has the reported native residues H53,H70,H72,H108,H116,
+H118,H160,H226,D15,R71,E104,E119,D124,D128,E187,Y180,N238,Q241,E243,E300,
+R323,Q325,D256,E261,E364. This consistency does not sequence-verify every
+historical experimental plasmid or establish a direct catalytic role.
+
+The 2026 full-length structures 12BI/12BJ/12BK/12BL associate LarC with
+Q2RFJ5/Moth_2512; their tagged protein entity is longer than the native396aa.
+https://www.rcsb.org/structure/12BI
+The 2022 study identifies LarCMt and its synthetic pLW01 His6-TEV construct;
+its unavailable supplement prevents an independent exact insert audit here.
+
+F9UST1 sequence version2: Lactiplantibacillus plantarum WCFS1/ATCCBAA793/
+NCIMB8826, NCBITaxon220668, lp_0106/lp_0107/larC1/larC2, 420aa,
+PF01969 4-406. Programmed frameshifting, engineered full-length fusion,
+LarC1 alone, LarC2 alone and proteolysis products are distinct objects.
+No isolated LarC2 structure proves a full-family catalytic mechanism.
+The current65 reviewed members largely include transferred annotations,
+not65 independent experimental demonstrations.
+
+Coverage remains partial. Desguin2014 PMID24710389, Desguin2016 PMID27114550,
+Desguin2018 PMID29887527, Vucko2024 PMID39406107, and the2025 mBio study
+PMID39679682 are further primary leads, not newly curated observed edges.
+Earlier inaccessible primary full texts/supplements are access gaps, not
+negative evidence. No cross-species mutation effects are transferred.

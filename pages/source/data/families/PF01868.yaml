@@ -4,7 +4,7 @@ name: Ribonuclease P/MRP, subunit p29
 short_name: RNase_P-MRP_p29
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01868
 counters:
   proteins: 4328
@@ -30,3 +30,439 @@ description: This family consists of several archaeal and eukaryotic proteins. T
   could be involved in RNA contacts in the protein-RNA complex [[cite:PUB00028005]]. Rpp29 catalyses the
   endonucleolytic cleavage of RNA, removing 5'-extranucleotides from tRNA precursor. It interacts with
   the Rpp25 and Pop5 subunits.
+curation_history: history/records/PF01868
+discussions:
+- discussion_id: rpp29-construct-and-protocol-boundaries
+  prompt: Resolve the Mth primer discrepancy and maintain preparation-specific causal attribution.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Published MTH11 reverse primer predicts P93W relative to O26119, while tag-free cloning is
+    described. Pfu truncations remove extra-domain sequence, and optimized protocols change more than
+    protein composition.
+  evidence:
+  - reference: PMID:20705647
+    supports: PARTIAL
+    evidence_source: primary_methods_and_original_supplement
+    explanation: TableS1 was visually verified; literal primer translation conflicts with the current
+      terminal residue. S6 normalization is measured at20 rather than30 mM Mg.
+  - reference: PMID:21683084
+    supports: PARTIAL
+    evidence_source: primary_construct_table_and_original_figures
+    explanation: Delta24 impairs free-pair binding but retains substantial RNA-complex activity. The Figure4
+      panel-caption mismatch and undisplayed delta24 ITC trace remain explicit.
+  notes: See evidence/PF01868/rpp29-identity.txt and rpp29-gap-ledger.txt. No protein-alone catalysis,
+    isolated-domain sufficiency, directly observed assembly rescue or exact Mth canonical-WT clone claim.
+    Keep fitted KM, kobs, binding and correct-product fraction distinct.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+- discussion_id: rpp29-unreviewed-family-contexts
+  prompt: Extend coverage to further archaeal and verified eukaryotic RNase P-MRP contexts.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Seven graphs cover selected archaeal preparations, not all PF01868 members or RNA-processing
+    and chromatin functions.
+  evidence:
+  - reference: PMID:22298511
+    supports: PARTIAL
+    evidence_source: primary_methods_results_and_figures
+    explanation: Partially purified plant nuclear RNase P does not individually establish the tested Rpp29
+      identity; its results are not transferred here.
+  notes: Review Mja P4-bulged-U rescue, model substrates,2009 footprinting/interface experiments and L7Ae-containing
+    systems separately. Human hPop4 PMID10352175 and H3.3 papers PMID26842893/29921582 remain leads, not
+    completed reviews. Human POP4 is not PRR29. Retain IN_PROGRESS and partial same-agent assessment.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+causal_graphs:
+- graph_id: mth-optimized-protocol-km
+  title: The RPP21-RPP29 optimized protocol lowers fitted substrate KM
+  scope: Chen2010 Table1 and Figure7, Mth RNA titration under separately optimized conditions.
+  context: 55 C,50 mM MES pH5.8,0.3-20 uM RPR,about2 nM internally labeled E.coli pre-tRNATyr. RPR alone
+    uses2 M NH4/500 mM Mg; RPR plus twice-molar RPP21/RPP29 uses0.8 M NH4/120 mM Mg. Denaturing PAGE and
+    fitted single-turnover rates.
+  family_mapping: Published MTH11 preparation maps to O26119/WP_010875653.1,93 aa,PF01868 6-88. Printed
+    reverse primer predicts terminal W rather than reference P93; actual clone equality is unresolved.
+    No isolated-domain experiment.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:187420
+  limitations: Composite protein-and-buffer intervention, not isolated Rpp29 affinity. KM(STO) is fitted
+    from RNA titration, not protein Kd. Maximum kobs remains0.13/min; two-RPP amplitude can be about40%.
+    The tagged1OQK structure is not this assay preparation.
+  nodes:
+  - node_id: pair-and-buffer
+    label: Supply RPP21-RPP29 and use its lower-salt optimized protocol
+    node_type: PERTURBATION
+  - node_id: fitted-km
+    label: Fitted single-turnover substrate KM
+    node_type: STATE
+  edges:
+  - edge_id: pair-protocol-decreases-km
+    subject: pair-and-buffer
+    predicate: decreases
+    object: fitted-km
+    mechanism: The joint protocol lowers KM(STO) from21.3 +/-2.6 to1.4 +/-0.2 uM. Dilution controls support
+      rapid substrate escape relative to cleavage, but do not independently isolate the protein contribution
+      from salt changes.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20705647
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3001054/
+      snippet: Single-turnover kinetic studies
+      explanation: Table1, original Figure7 and supplementS4/S5; the edge targets the measured composite-protocol
+        endpoint rather than an unobserved binding microstep.
+      cache_path: evidence/PF01868/chen-2010-kinetics.txt
+      cache_sha256: 9c5971f41847ade662e681f724590dd58d32f47947e47ccf199a2542a636a129
+- graph_id: mth-low-magnesium-normalized-rate
+  title: RPP21-RPP29 increases the normalized rate with POP5-RPP30 at low magnesium
+  scope: Chen2010 Table1 right-hand comparison at3 uM Mth RPR.
+  context: 55 C,3 uM RPR,about2 nM E.coli pre-tRNATyr,30 mM Mg and0.8 M NH4,twice-molar proteins. Four-RPP
+    kobs measured atpH5.4 is multiplied by2.5 for comparison withpH5.8; these are not two raw same-pH
+    rates.
+  family_mapping: MTH11/O26119,PF01868 6-88; terminal-primer conflict remains unresolved. Both protein
+    pairs act with catalytic RNA; Rpp29-alone cleavage is not tested.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:187420
+  limitations: The pH dependence control used20 mM Mg rather than30 mM and a fitted slope1.1. Retain the
+    authors' normalization without interpreting it as a directly measured elementary chemical rate or
+    a general344-fold effect.
+  nodes:
+  - node_id: add-pair-normalized-protocol
+    label: Add RPP21-RPP29 to RPR-POP5-RPP30 with published pH normalization
+    node_type: PERTURBATION
+  - node_id: cleavage-kobs
+    label: Reported pH5.8-equivalent cleavage kobs
+    node_type: ACTIVITY
+  edges:
+  - edge_id: pair-protocol-increases-normalized-rate
+    subject: add-pair-normalized-protocol
+    predicate: increases
+    object: cleavage-kobs
+    mechanism: Under this protocol the reported rate changes from0.016 +/-0.0004 to5.5 +/-0.18/min. The
+      endpoint supports a preparation-level contribution in the other pair's presence, not independent
+      sufficiency of Rpp29 or proof of a particular catalytic microstep.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:20705647
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3001054/
+      snippet: Single-turnover kinetic studies
+      explanation: Table1 fixed30 mM Mg comparison and footnote c, single-turnover Methods and original
+        supplementS6 distinguish corrected from raw rates.
+      cache_path: evidence/PF01868/chen-2010-kinetics.txt
+      cache_sha256: 9c5971f41847ade662e681f724590dd58d32f47947e47ccf199a2542a636a129
+- graph_id: pfu-delta24-partner-association-readouts
+  title: Pfu delta24 weakens two separately measured partner-association readouts
+  scope: Chen2011 Figure4 and ITC Results, deletion versus full-length Rpp29.
+  context: NMR at55 C,about0.3 mM labeled Rpp29 plus small excess unlabeled Rpp21. Separate ITC at55 C,20
+    mM cacodylate pH6.7,10 mM KCl,0.3 mM ZnCl2,0.02%NaN3; about20 uM Rpp21 in cell and200 uM Rpp29 in
+    syringe.
+  family_mapping: Pfu PF1816,Q8U007/NP_579545.1,127 aa,PF01868 41-123. Delta24 removes residues1-24 outside
+    PF01868 and has primer-encoded initiating M before retained G25. Reference equals2KI7 entity1; the2011
+    batch was not independently sequenced.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:186497
+  limitations: Folded-core spectra persist. Weak NMR perturbations are not zero binding. Delta24 ITC has
+    no displayed thermogram. Rpp21 uses an earlier affinity-purification/thrombin method; exact residual
+    cloning residues in this batch remain unverified. Neither binding assay observes RNA cleavage.
+  nodes:
+  - node_id: delta24
+    label: Replace full-length Pfu Rpp29 with delta24
+    node_type: PERTURBATION
+  - node_id: nmr-response
+    label: Rpp21-induced Rpp29 NMR chemical-shift response
+    node_type: STATE
+  - node_id: itc-response
+    label: Detectable Rpp21-Rpp29 binding response by ITC
+    node_type: STATE
+  edges:
+  - edge_id: delta24-decreases-nmr-response
+    subject: delta24
+    predicate: decreases
+    object: nmr-response
+    mechanism: The deletion leaves only small partner-induced shifts compared with full-length protein.
+      It supports impaired association in this solution assay, not complete loss of binding under all
+      conditions or a domain-specific catalytic defect.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21683084
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3143260/
+      snippet: NMR and ITC studies
+      explanation: Original Figure4 labels show free WT/delta17/delta24 inA/B/C and partner-addedD/E/F;
+        the caption pairing differs. Delta17 preserves the strong response and limits deletion generalization.
+      cache_path: evidence/PF01868/chen-2011-truncations.txt
+      cache_sha256: c0bc049acf97ea4f10068fa61eebeed547b0c5803506225f7ecb79c68d413580
+  - edge_id: delta24-decreases-itc-response
+    subject: delta24
+    predicate: decreases
+    object: itc-response
+    mechanism: Binding becomes undetectable by ITC under the stated conditions; this is a detection-limited
+      result, not measured infinite Kd. WT and delta17 fitted Kd values are0.25 +/-0.01 and0.23 +/-0.01
+      uM.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21683084
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3143260/
+      snippet: NMR and ITC studies
+      explanation: ITC Results and Figure6/Table2 report delta24 nondetection; original Figure6 displays
+        only WT and delta17 traces. The negative assay is text-supported, not visually confirmed from
+        a delta24 trace.
+      cache_path: evidence/PF01868/chen-2011-truncations.txt
+      cache_sha256: c0bc049acf97ea4f10068fa61eebeed547b0c5803506225f7ecb79c68d413580
+- graph_id: pfu-two-rpp-truncation-activity
+  title: Pfu Rpp29 truncations reduce processing with Rpp21 and catalytic RNA
+  scope: Chen2011 Figure7 white bars, two separate deletion comparisons.
+  context: Pfu RPR plus RPP21 and WT or mutant RPP29; E.coli pre-tRNATyr at about2.5 times KM,55 C,50
+    mM Tris pH7.1,100 mM NH4/120 mM Mg. Initial velocity from less than30% cleavage; WT turnover reference0.54
+    +/-0.03/min.
+  family_mapping: Q8U007/NP_579545.1,PF01868 41-123. Delta24 and delta31 remove outside-match N-terminal
+    residues and encode initiating M before retained G25 orG32. These are intact-protein variants, not
+    isolated Pfam domains.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:186497
+  limitations: 'Substrate is not proved saturating; relative activity is not an elementary rate constant.
+    Each variant is separate. Delta17 retains84% with broad errors. No observed edge joins impaired free-pair
+    binding to inactivity: delta24 retains substantial RNP activity.'
+  nodes:
+  - node_id: delta24
+    label: Substitute Rpp29 delta24 in the two-RPP reaction
+    node_type: PERTURBATION
+  - node_id: delta31
+    label: Substitute Rpp29 delta31 in the two-RPP reaction
+    node_type: PERTURBATION
+  - node_id: processing-activity
+    label: Relative pre-tRNATyr processing activity
+    node_type: ACTIVITY
+  edges:
+  - edge_id: delta24-decreases-processing
+    subject: delta24
+    predicate: decreases
+    object: processing-activity
+    mechanism: Delta24 retains57% of its matched WT activity. This is incomplete loss in the RNA-containing
+      preparation; RNA-mediated assembly rescue remains an interpretation rather than an observed intermediate.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21683084
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3143260/
+      snippet: NMR and ITC studies
+      explanation: Original Figure7 white delta24 bar, reconstitution Results and trans-assay Methods;
+        mean and SD from three independent experiments.
+      cache_path: evidence/PF01868/chen-2011-truncations.txt
+      cache_sha256: c0bc049acf97ea4f10068fa61eebeed547b0c5803506225f7ecb79c68d413580
+  - edge_id: delta31-decreases-processing
+    subject: delta31
+    predicate: decreases
+    object: processing-activity
+    mechanism: Delta31 retains8% of matched WT activity. The longer deletion has a stronger endpoint effect,
+      without proving which lost residue or unmeasured assembly step causes it.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21683084
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3143260/
+      snippet: NMR and ITC studies
+      explanation: Original Figure7 white delta31 bar and reconstitution Results; residual processing
+        is preserved rather than reported as zero.
+      cache_path: evidence/PF01868/chen-2011-truncations.txt
+      cache_sha256: c0bc049acf97ea4f10068fa61eebeed547b0c5803506225f7ecb79c68d413580
+- graph_id: pfu-four-rpp-truncation-activity
+  title: Pfu truncation effects persist in the four-RPP preparation
+  scope: Chen2011 Figure7 grey bars, variants with POP5-RPP30 added.
+  context: Pfu RPR,RPP21,WT or mutant RPP29,POP5 and RPP30; pre-tRNATyr at about2.5 times KM,55 C,50 mM
+    Tris pH7.1,800 mM NH4/30 mM Mg. Initial-velocity protocol,WT turnover reference8.9 +/-1.6/min.
+  family_mapping: Pfu Q8U007/NP_579545.1,PF01868 41-123; deletions1-24 or1-31 are outside-match perturbations
+    of a larger protein. No separate domain sufficiency claim.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:186497
+  limitations: Different salt conditions and WT absolute activity from the two-RPP graph. Similar percentages
+    do not mean equal absolute rates. RNA-dependent binding rescue and individual residue roles are not
+    observed. Rpp29 is one of four protein components.
+  nodes:
+  - node_id: delta24
+    label: Substitute Rpp29 delta24 in the four-RPP reaction
+    node_type: PERTURBATION
+  - node_id: delta31
+    label: Substitute Rpp29 delta31 in the four-RPP reaction
+    node_type: PERTURBATION
+  - node_id: processing-activity
+    label: Relative pre-tRNATyr processing activity
+    node_type: ACTIVITY
+  edges:
+  - edge_id: delta24-decreases-processing
+    subject: delta24
+    predicate: decreases
+    object: processing-activity
+    mechanism: Delta24 retains56% of the four-RPP WT activity. Residual output prevents treating the free-protein
+      binding defect as obligatory complete complex inactivation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21683084
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3143260/
+      snippet: NMR and ITC studies
+      explanation: Original Figure7 grey delta24 bar and corresponding reconstitution Results; compare
+        only to the grey WT reference.
+      cache_path: evidence/PF01868/chen-2011-truncations.txt
+      cache_sha256: c0bc049acf97ea4f10068fa61eebeed547b0c5803506225f7ecb79c68d413580
+  - edge_id: delta31-decreases-processing
+    subject: delta31
+    predicate: decreases
+    object: processing-activity
+    mechanism: Delta31 retains4% of the four-RPP WT activity. The retained small signal is not zero; the
+      experiment does not identify an elementary catalytic defect.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:21683084
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3143260/
+      snippet: NMR and ITC studies
+      explanation: Original Figure7 grey delta31 bar and reconstitution Results; delta17 retains84% and
+        is not assigned a significant loss.
+      cache_path: evidence/PF01868/chen-2011-truncations.txt
+      cache_sha256: c0bc049acf97ea4f10068fa61eebeed547b0c5803506225f7ecb79c68d413580
+- graph_id: pfu-trans-cleavage-fidelity-protocols
+  title: Protein-containing Pfu protocols increase the fraction of correctly cleaved products
+  scope: Chen2012 Figure1C left panel, nonconsensus pre-tRNAGln in trans.
+  context: 55 C,2 nM5-prime-labeled SynechocystisPCC6803 pre-tRNAGln. RNA-only uses15 uM RPR for9 h; protein-containing
+    protocols use200 nM RPR and2 uM RPPs. Pair incubation9 h,four-RPP10 min; separately optimized buffers.
+  family_mapping: Pfu PF1816/Q8U007/NP_579545.1,PF01868 41-123,with the named partner proteins and catalytic
+    RNA. The2010 coexpression protocol specifies tag-free pairs; no independent2012 clone resequencing.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:186497
+  limitations: Composite protocols change RNA dose and buffer as well as protein composition; the four-RPP
+    comparison also changes time. Fraction correct uses cleaved products as denominator, not all starting
+    substrate. This is not a protein-only rate assay.
+  nodes:
+  - node_id: pair-protocol
+    label: Replace RNA-only protocol with RPP21-RPP29 protocol
+    node_type: PERTURBATION
+  - node_id: four-rpp-protocol
+    label: Replace RNA-only protocol with four-RPP protocol
+    node_type: PERTURBATION
+  - node_id: correct-fraction
+    label: Correct-site fraction among cleaved products
+    node_type: STATE
+  edges:
+  - edge_id: pair-protocol-increases-correct-fraction
+    subject: pair-protocol
+    predicate: increases
+    object: correct-fraction
+    mechanism: The reported correct-product fraction rises from0.11 +/-0.03 to0.57 +/-0.03 in the pair-containing
+      protocol. Attribution is to the composite protocol, not independently sufficient Rpp29.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:22298511
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/
+      snippet: Data analysis
+      explanation: Original Figure1C left lanes2/3, associated Results, and single-turnover trans Methods
+        distinguish dose and time from the separate Mja cis experiment.
+      cache_path: evidence/PF01868/chen-2012-fidelity.txt
+      cache_sha256: 95f54062a8a3d8b96f4487062346885a4feb90c07f572f54acc7c5b02697c9fc
+  - edge_id: four-rpp-protocol-increases-correct-fraction
+    subject: four-rpp-protocol
+    predicate: increases
+    object: correct-fraction
+    mechanism: The four-protein protocol raises the correct-product fraction to0.92 +/-0.01 relative to0.11
+      +/-0.03 for RNA alone. This does not resolve each protein's individual contribution or establish
+      complete substrate conversion.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:22298511
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/
+      snippet: Data analysis
+      explanation: Original Figure1C left lanes2/5 and associated Results; the POP5-RPP30-only fraction0.59
+        +/-0.01 is a distinct comparator, not an omitted zero control.
+      cache_path: evidence/PF01868/chen-2012-fidelity.txt
+      cache_sha256: 95f54062a8a3d8b96f4487062346885a4feb90c07f572f54acc7c5b02697c9fc
+- graph_id: mja-cis-cleavage-fidelity-protocols
+  title: Optimized Mja RNP protocols improve cis-cleavage fidelity without guaranteeing yield
+  scope: Chen2012 Figure2 and Table2, tethered pre-tRNAGln-AAU-RPR.
+  context: 55 C,pH6,50 nM cis transcript,500 nM proteins. RNA-only uses2.5 M NH4/500 mM Mg; RPP21-RPP29
+    uses0.8 M NH4/200 mM Mg. Four-RPP assembly uses25 mM Ca followed by nominal100 mM Mg/0.8 M NH4 cleavage
+    conditions.
+  family_mapping: Mja MJ0464,Q57903/NP_247439.1,95 aa,PF01868 6-87; reference taxon243232. Tag-free pair
+    design is supported by2010 Methods/TableS1/S2; no isolated-domain assay or independent batch sequencing.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:243232
+  limitations: Separately optimized ionic/assembly protocols, not same-buffer protein additions. Correct
+    fraction is among products. Earlier referenced Methods contains concentration/mixing ambiguities.
+    Rate components are model-derived; no arrow describes observed microscopic docking or RNA rescue.
+  nodes:
+  - node_id: pair-protocol
+    label: Switch RNA-only cis assay to optimized RPP21-RPP29 protocol
+    node_type: PERTURBATION
+  - node_id: four-rpp-protocol
+    label: Switch RNA-only cis assay to optimized four-RPP protocol
+    node_type: PERTURBATION
+  - node_id: correct-fraction
+    label: Correct-site fraction among cleaved cis products
+    node_type: STATE
+  edges:
+  - edge_id: pair-protocol-increases-correct-fraction
+    subject: pair-protocol
+    predicate: increases
+    object: correct-fraction
+    mechanism: The pair protocol increases the correct-product fraction from0.18 +/-0.01 to0.47 +/-0.02,
+      while overall kobs remains0.004/min. Improved fidelity is not increased overall cleavage rate; total
+      amplitudes are93% and86% respectively.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:22298511
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/
+      snippet: Data analysis
+      explanation: Original Figure2 upper panels and Table2 time-course means; do not substitute Figure1's
+        representative single-timepoint fractions.
+      cache_path: evidence/PF01868/chen-2012-fidelity.txt
+      cache_sha256: 95f54062a8a3d8b96f4487062346885a4feb90c07f572f54acc7c5b02697c9fc
+  - edge_id: four-rpp-protocol-increases-correct-fraction
+    subject: four-rpp-protocol
+    predicate: increases
+    object: correct-fraction
+    mechanism: The four-RPP protocol increases the fraction to0.84 +/-0.03 from0.18 +/-0.01 for RNA alone,
+      but total amplitude is61% rather than93%. Higher fidelity therefore does not establish complete
+      yield or individually sufficient Rpp29 action.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:22298511
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3378863/
+      snippet: Data analysis
+      explanation: Original Figure2 lower-right versus upper-left, Table2 and amplitude analysis. The
+        separately observed POP5-RPP30 fraction0.43 +/-0.01 is retained as context, not conflated with
+        the RNA-only comparator.
+      cache_path: evidence/PF01868/chen-2012-fidelity.txt
+      cache_sha256: 95f54062a8a3d8b96f4487062346885a4feb90c07f572f54acc7c5b02697c9fc
+curation_events:
+- timestamp: '2026-10-11T17:42:02Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate Rpp29 preparation-specific binding, processing and fidelity graphs
+  history_record: history/records/PF01868/2026-10-11T174202Z-codex-e0097c.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T17:55:14Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped scientific review of Rpp29 causal graphs
+  history_record: history/records/PF01868/2026-10-11T175514Z-codex-18acb8.yaml
+  event_index: 0
+  llm_assisted: true

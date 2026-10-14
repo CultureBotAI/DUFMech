@@ -1,0 +1,655 @@
+pfam_id: PF01934
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01934
+discussions:
+- discussion_id: pf01934-source-and-construct-contracts
+  prompt: Retain source discrepancies and resolve remaining construct mappings before transferring mechanisms.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: HEPN superfamily membership does not establish this Pfam, and source numbering differs between experimental constructs and current references.
+  evidence:
+  - reference: PMID:41854079
+    supports: PARTIAL
+    evidence_source: primary_supplement_and_sequence_comparison
+    explanation: TableS3 and RefSeq resolve the276-aa fusion; current Q8EGZ7 is252 aa, with an exact251-residue matching segment shifted by24 positions. W3-18-1 mapping and Y136/Y106 discrepancy remain open.
+  - reference: PMID:29555683
+    supports: PARTIAL
+    evidence_source: primary_structure_and_assays
+    explanation: Primary6 HepT:2 MntA stoichiometry conflicts with the frozen description's2:6; later AMPylation experiments revise binding-only inhibition.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: Preserve frozen typeII/stoichiometry metadata and expose the later typeVII interpretation. Legionella Q5ZRG2 is PF08780 and excluded. Retain2015 antibiotic-unit and2020 G27 substitution discrepancies; do not silently normalize them.
+- discussion_id: pf01934-member-and-physiology-coverage
+  prompt: Extend primary coverage of cyanobacterial, operon, archaeal and fusion branches without assuming family-wide RNase specificity.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The current graphs cover selected induced or purified-protein experiments, not all7949 frozen members or physiological activation.
+  evidence:
+  - reference: PMID:33290744
+    supports: PARTIAL
+    evidence_source: primary_abstract_followup
+    explanation: Aphanizomenon tRNA cleavage and diAMPylation require full-text figures and reconciliation of the revised reference N terminus.
+  - reference: PMID:33045733
+    supports: PARTIAL
+    evidence_source: primary_results_and_methods
+    explanation: Heterologous Thermococcus effects do not establish native substrates, AMP count or extreme-environment adaptation.
+  posed_by: Codex
+  posed_date: '2026-10-12'
+  notes: See coverage ledger for other2015 operon phenotypes,2018 MntA helix mutants,2020 homolog screen,2026 stability/protease and truncation effects, W3-18-1, YutE and other HEPN branches. ATP sensing, native toxin activation and antiviral roles remain unresolved.
+causal_graphs:
+- graph_id: so3166-ecoli-cfu-2015
+  title: Induced SO_3166 lowers E. coli colony recovery
+  scope: Yao2015 Figure1A-C; SO_3166 alone and SO_3165-3166 coexpression in BW25113.
+  context: pCA24N constructs, LB at37C,1mM IPTG from OD600 about0.1; vector and SO_3165-only controls; two independent cultures.
+  family_mapping: SO_3166/HepT reference Q8ECH6v1,133aa,MR-1 taxon211586; PF01934 matches12-130. Whole protein expressed heterologously, not an isolated Pfam construct.
+  scope_status: PHENOTYPIC
+  limitations: Overexpression does not establish basal killing or the intracellular RNA substrate. Figure1 antibiotic unit conflicts with Methods; partner expression changes the construct context.
+  nodes:
+  - {node_id: toxin, label: Induce SO_3166 rather than empty vector, node_type: PERTURBATION, grounding: [UniProtKB:Q8ECH6]}
+  - {node_id: partner, label: Coexpress SO_3165 with SO_3166 rather than toxin alone, node_type: PERTURBATION}
+  - {node_id: colonies, label: Recoverable BW25113 CFU, node_type: PHENOTYPE}
+  edges:
+  - edge_id: toxin-cfu-loss
+    subject: toxin
+    predicate: decreases
+    object: colonies
+    mechanism: Induction of the toxin construct lowers recoverable colonies relative to the vector control.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26112399
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4621449/
+      snippet: SO_3166 is a potent toxin
+      explanation: Figure1B-C CFU/spot assays with matched expression controls; growth in1A corroborates the cellular effect.
+      cache_path: evidence/PF01934/yao-2015.txt
+      cache_sha256: 84dc6731b489135f0d58dd1e88545ab44631d9eb91a23899f89576c251bd466f
+  - edge_id: partner-cfu-rescue
+    subject: partner
+    predicate: increases
+    object: colonies
+    mechanism: The coexpression construct raises colony recovery compared with toxin alone, without resolving the molecular neutralization mechanism in this experiment.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26112399
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4621449/
+      snippet: SO_3166 is a potent toxin
+      explanation: Figure1B-C SO_3165-3166 versus SO_3166, not a purified binding-only inhibition test.
+      cache_path: evidence/PF01934/yao-2015.txt
+      cache_sha256: 84dc6731b489135f0d58dd1e88545ab44631d9eb91a23899f89576c251bd466f
+- graph_id: so3166-native-cfu-2015
+  title: The SO_3166 pair changes colony recovery in MR-1
+  scope: Yao2015 Figure1D-F; induced constructs in S. oneidensis MR-1.
+  context: pHGE toxin or two-gene construct versus vector; LB at30C in strain Methods,1mM IPTG from OD600 about0.1; two independent cultures.
+  family_mapping: SO_3166 reference Q8ECH6v1,133aa,taxon211586,PF01934 12-130; native host but plasmid overexpression of whole proteins.
+  taxon: NCBITaxon:211586
+  scope_status: PHENOTYPIC
+  limitations: Native species does not make this an endogenous-expression experiment. No direct RNA-cleavage or physiological activation step was measured by CFU.
+  nodes:
+  - {node_id: toxin, label: Induce SO_3166 rather than vector, node_type: PERTURBATION, grounding: [UniProtKB:Q8ECH6]}
+  - {node_id: partner, label: Coexpress SO_3165 with SO_3166 rather than toxin alone, node_type: PERTURBATION}
+  - {node_id: colonies, label: Recoverable MR-1 CFU, node_type: PHENOTYPE}
+  edges:
+  - edge_id: native-cfu-loss
+    subject: toxin
+    predicate: decreases
+    object: colonies
+    mechanism: Induced toxin expression lowers recoverable colonies relative to vector in the separately tested MR-1 host.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26112399
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4621449/
+      snippet: SO_3166 is a potent toxin
+      explanation: Figure1E-F MR-1 viability and induced/uninduced plates, with growth in1D.
+      cache_path: evidence/PF01934/yao-2015.txt
+      cache_sha256: 84dc6731b489135f0d58dd1e88545ab44631d9eb91a23899f89576c251bd466f
+  - edge_id: native-partner-rescue
+    subject: partner
+    predicate: increases
+    object: colonies
+    mechanism: The two-gene construct restores colony recovery relative to SO_3166 alone in this host and induction regime.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26112399
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4621449/
+      snippet: SO_3166 is a potent toxin
+      explanation: Figure1E-F two-gene versus toxin-only pHGE comparison.
+      cache_path: evidence/PF01934/yao-2015.txt
+      cache_sha256: 84dc6731b489135f0d58dd1e88545ab44631d9eb91a23899f89576c251bd466f
+- graph_id: so3166-substitution-growth-2015
+  title: R97G and H102A relieve induced growth inhibition
+  scope: Yao2015 Figure5A; separately sequence-verified SO_3166 substitutions in E. coli DH5alpha.
+  context: pCA24N constructs on LB with30ug/ml chloramphenicol and0.5mM IPTG; uninduced control and toxic Y104A comparator; two cultures, representative plate shown.
+  family_mapping: Q8ECH6v1,133aa,PF01934 12-130; R97,H102,Y104 lie within the match. These are full-length variants, not isolated-domain catalysis assays.
+  scope_status: PHENOTYPIC
+  limitations: Protein abundance/folding and direct RNase activity were not established by these plates. The host differs from the Figure1 BW25113 assay. The separate N98T/Y104C double mutant does not isolate N98.
+  nodes:
+  - {node_id: r97g, label: SO_3166 R97G instead of wild type, node_type: PERTURBATION}
+  - {node_id: h102a, label: SO_3166 H102A instead of wild type, node_type: PERTURBATION}
+  - {node_id: growth, label: DH5alpha growth on inducing plates, node_type: PHENOTYPE}
+  edges:
+  - edge_id: r97g-growth-relief
+    subject: r97g
+    predicate: increases
+    object: growth
+    mechanism: R97G permits growth under induction that inhibits the wild-type construct.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26112399
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4621449/
+      snippet: R97G
+      explanation: Figure5A inducing and noninducing sectors, with mutagenesis Methods.
+      cache_path: evidence/PF01934/yao-2015.txt
+      cache_sha256: 84dc6731b489135f0d58dd1e88545ab44631d9eb91a23899f89576c251bd466f
+  - edge_id: h102a-growth-relief
+    subject: h102a
+    predicate: increases
+    object: growth
+    mechanism: H102A permits growth under the same induction comparison; a catalytic explanation remains qualified by untested protein-state alternatives.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:26112399
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4621449/
+      snippet: R97G
+      explanation: Figure5A H102A versus wild type and the separate Y104A control; Methods verify substitutions.
+      cache_path: evidence/PF01934/yao-2015.txt
+      cache_sha256: 84dc6731b489135f0d58dd1e88545ab44631d9eb91a23899f89576c251bd466f
+- graph_id: so3166-ompa-cleavage-2018
+  title: Purified SO_3166 cleaves an ompA RNA fragment
+  scope: Jia2018 Figure1A; purified full-length SO_3166 and in-vitro-transcribed ompA1-306nt.
+  context: 2ug protein and0.5ug RNA in8ul,Tris pH8,300mM NaCl,60mM KCl,25mM EDTA and30mM MgCl2;37C for20/40min. RNA-only and heat-inactivated controls.
+  family_mapping: Q8ECH6v1,133aa,PF01934 12-130; whole-protein preparation. RNA substrate is not itself evidence for a native intracellular target.
+  taxon: NCBITaxon:211586
+  scope_status: MECHANISTIC
+  limitations: Cleavage positions and elementary catalytic steps are unresolved. EDTA plus excess Mg does not establish metal independence; the total-tRNA and cellular-rRNA negatives are assay-specific and not interchangeable.
+  nodes:
+  - {node_id: enzyme, label: Active purified SO_3166 in the complete assay, node_type: ACTIVITY, grounding: [UniProtKB:Q8ECH6]}
+  - {node_id: substrate, label: Intact ompA1-306nt RNA, node_type: STATE}
+  edges:
+  - edge_id: ompa-degradation
+    subject: enzyme
+    predicate: degrades
+    object: substrate
+    mechanism: Active preparation converts intact RNA into shorter gel-resolved products while no-protein and heat-inactivated controls retain substrate.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:29555683
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5936836/
+      snippet: mRNA cleavage assay
+      explanation: Visually inspected Figure1A and RNA-assay Methods; not the structural RNA-path prediction.
+      cache_path: evidence/PF01934/jia-2018.txt
+      cache_sha256: c6492eae9fc4f2cadbf169b36f2b5c279b0b4c96265976bac20b9aad5c9e57ad
+- graph_id: so3166-mnta-amp-transfer-2020
+  title: MntA with ATP and Mg modifies HepT
+  scope: Yao2020 Figure4A-B; reconstituted reaction using purified MntA and unmodified SO_3166/HepT.
+  context: MntA has24 extra N-terminal residues including His6;10ug MntA,20ug HepT,Tris,10mM MgCl2,5mM DTT and ATP. Reaction and LC-MS stopping conditions retained in evidence.
+  family_mapping: The PF01934 component is HepT/Q8ECH6v1,133aa,match12-130 and acceptor Y104. MntA is a separate transferase, not PF01934 enzymatic activity.
+  taxon: NCBITaxon:211586
+  scope_status: MECHANISTIC
+  limitations: The joint input is required by the tested setup; no claim that an individual component is sufficient. Intermediate masses support AMP addition, not a directly observed atomic trajectory or physiological deAMPylation.
+  nodes:
+  - {node_id: reaction, label: MntA plus HepT plus ATP and Mg, node_type: STATE, grounding: [UniProtKB:Q8ECH6]}
+  - {node_id: product, label: HepT species carrying up to three AMP units, node_type: STATE}
+  edges:
+  - edge_id: amp-product
+    subject: reaction
+    predicate: produces
+    object: product
+    mechanism: The complete purified reaction yields mass-resolved mono-,di- and tri-AMP-modified HepT products.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33045733
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7641770/
+      snippet: In vitro enzymatic assays
+      explanation: Figure4A ATP and MntA controls; Figure4B EDTA-stopped3uM ATP reaction LC-MS products and Methods.
+      cache_path: evidence/PF01934/yao-2020.txt
+      cache_sha256: b2d542864063722ddbb8ba72502613c0aeac5f758b058064ab364bafc0d4b6a6
+- graph_id: so3166-modified-preparation-rnase-2020
+  title: AMP-modified HepT preparation has lower RNA cleavage
+  scope: Yao2020 Figure5A; modified and unmodified HepT preparations compared at the same nominal concentration.
+  context: ompA RNA assay,0-160nM protein,37C30min; modified preparation obtained after MntA coexpression and second elution,reported greater than90percent purity.
+  family_mapping: HepT/Q8ECH6v1,133aa,PF01934 12-130. This is the SO_3166 protein, not the SO_1440 fusion or a Thermococcus homolog.
+  taxon: NCBITaxon:211586
+  scope_status: MECHANISTIC
+  limitations: Preparation differences and residual partner are not fully excluded. No claim of zero residual cleavage, universal substrate specificity or directly demonstrated steric occlusion. Do not pool concentrations with the2018 assay.
+  nodes:
+  - {node_id: preparation, label: Use AMP-modified rather than unmodified HepT preparation, node_type: PERTURBATION}
+  - {node_id: cleavage, label: ompA RNA cleavage in the matched assay, node_type: ACTIVITY}
+  edges:
+  - edge_id: lower-rnase
+    subject: preparation
+    predicate: decreases
+    object: cleavage
+    mechanism: Replacing the unmodified preparation with the modified preparation reduces observed RNA fragmentation across the tested concentration series.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33045733
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7641770/
+      snippet: polyadenylylated HepT
+      explanation: Figure5A matched dose lanes and modified-protein purification Methods; interpretation remains preparation-specific.
+      cache_path: evidence/PF01934/yao-2020.txt
+      cache_sha256: b2d542864063722ddbb8ba72502613c0aeac5f758b058064ab364bafc0d4b6a6
+- graph_id: so3166-modification-variant-rescue-2020
+  title: Modification-disrupting substitutions weaken cellular protection
+  scope: Yao2020 Figure5B-C; wild-type and mutant HepT/MntA pairs in E. coli BL21.
+  context: Induced pET28b-based pair constructs; CFU compared with wild-type coexpression. HepT-alone and vector controls are present but have different translation-initiation contexts.
+  family_mapping: HepT reference Q8ECH6v1,133aa,PF01934 12-130 contains Y104. Partner D39/D41 are MntA residues and are not assigned to PF01934.
+  scope_status: PHENOTYPIC
+  limitations: Mutation effects on abundance/folding and RBS differences remain qualifications. Continued binding of mutant MntA does not establish sufficient neutralization; no direct intracellular RNA substrate was measured here.
+  nodes:
+  - {node_id: toxin-mutant, label: HepT Y104A with wild-type MntA instead of the wild-type pair, node_type: PERTURBATION}
+  - {node_id: partner-mutant, label: MntA D39E/D41E with wild-type HepT instead of the wild-type pair, node_type: PERTURBATION}
+  - {node_id: colonies, label: Recoverable BL21 CFU under coexpression, node_type: PHENOTYPE}
+  edges:
+  - edge_id: y104a-protection-loss
+    subject: toxin-mutant
+    predicate: decreases
+    object: colonies
+    mechanism: The acceptor-site substitution lowers colony recovery relative to the wild-type pair in the coexpression assay.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33045733
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7641770/
+      snippet: polyadenylylated HepT
+      explanation: Figure5B CFU curve and5C modified/unmodified protein comparison; distinct from2015 Y104A toxin-alone plates.
+      cache_path: evidence/PF01934/yao-2020.txt
+      cache_sha256: b2d542864063722ddbb8ba72502613c0aeac5f758b058064ab364bafc0d4b6a6
+  - edge_id: mnta-mutant-protection-loss
+    subject: partner-mutant
+    predicate: decreases
+    object: colonies
+    mechanism: The partner substitution lowers colony recovery despite retained interaction with HepT, consistent with modification-dependent protection but not proof of every intervening step.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33045733
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7641770/
+      snippet: polyadenylylated HepT
+      explanation: Figure5B-C D39E/D41E pair versus wild-type pair, with structural/pulldown qualification in Results.
+      cache_path: evidence/PF01934/yao-2020.txt
+      cache_sha256: b2d542864063722ddbb8ba72502613c0aeac5f758b058064ab364bafc0d4b6a6
+- graph_id: thermococcus-variant-modification-2020
+  title: Thermococcus pair substitutions reduce HepT modification
+  scope: Yao2020 Figure7B-C; T. cleftensis CL1 proteins expressed and purified from E. coli BL21.
+  context: His-tagged CL1_0071 and untagged CL1_0070 from pET28b constructs; gel/western detection and PDE digestion with HPLC-MS of released molecules.
+  family_mapping: HepT/CL1_0071 reference I3ZRF2v1,110aa,taxon163003,PF01934 12-107; Y82 lies within the match. G33/S34 belong to the separate MntA partner.
+  scope_status: PHENOTYPIC
+  limitations: These are cellular-production and preparation effects, not a purified transferase-rate assay. The archaeal AMP count is unresolved; do not import Shewanella triAMP stoichiometry or infer native archaeal regulation.
+  nodes:
+  - {node_id: hept-variant, label: HepT Y82F with wild-type MntA, node_type: PERTURBATION}
+  - {node_id: mnta-variant, label: MntA G33A/S34T with wild-type HepT, node_type: PERTURBATION}
+  - {node_id: modified, label: Detectable AMP-modified HepT relative to the wild-type pair, node_type: STATE}
+  edges:
+  - edge_id: y82f-modification-loss
+    subject: hept-variant
+    predicate: decreases
+    object: modified
+    mechanism: Y82F reduces the modified species and PDE-released AMP detected after pair expression.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33045733
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7641770/
+      snippet: HepT is adenylylated
+      explanation: Figure7B-C Y82F lanes, western and HPLC-MS comparison with wild type.
+      cache_path: evidence/PF01934/yao-2020.txt
+      cache_sha256: b2d542864063722ddbb8ba72502613c0aeac5f758b058064ab364bafc0d4b6a6
+  - edge_id: gs-mutant-modification-loss
+    subject: mnta-variant
+    predicate: decreases
+    object: modified
+    mechanism: The partner GS-to-AT substitution reduces detectable modification of coexpressed HepT; effects on partner protein state are not excluded.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33045733
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7641770/
+      snippet: HepT is adenylylated
+      explanation: Figure7B-C G33A/S34T lanes and PDE-released AMP comparison.
+      cache_path: evidence/PF01934/yao-2020.txt
+      cache_sha256: b2d542864063722ddbb8ba72502613c0aeac5f758b058064ab364bafc0d4b6a6
+- graph_id: thermococcus-pair-heterologous-cfu-2020
+  title: Thermococcus pair variants alter E. coli colony recovery
+  scope: Yao2020 Figure7D; CL1_0071/CL1_0070 constructs in BL21, not T. cleftensis physiology.
+  context: pET28b constructs,0.5mM IPTG at OD6000.1; growth/CFU time courses from three independent cultures.
+  family_mapping: I3ZRF2v1,110aa,PF01934 12-107; full-length archaeal HepT in a heterologous bacterial host. MntA mutations are partner perturbations.
+  scope_status: PHENOTYPIC
+  limitations: Relative rescue is not necessarily full vector-level restoration. Expression/folding differences and native substrates are unresolved; no observed chain links these CFU data to a particular archaeal RNA target.
+  nodes:
+  - {node_id: toxin, label: Express CL1 HepT rather than vector, node_type: PERTURBATION, grounding: [UniProtKB:I3ZRF2]}
+  - {node_id: pair, label: Add cognate MntA coexpression to HepT, node_type: PERTURBATION}
+  - {node_id: y82f, label: Use HepT Y82F instead of wild-type HepT in the pair, node_type: PERTURBATION}
+  - {node_id: gs-mutant, label: Use MntA G33A/S34T instead of wild-type MntA in the pair, node_type: PERTURBATION}
+  - {node_id: colonies, label: Recoverable BL21 CFU, node_type: PHENOTYPE}
+  edges:
+  - edge_id: archaeal-toxin-cfu-loss
+    subject: toxin
+    predicate: decreases
+    object: colonies
+    mechanism: Induced archaeal HepT expression lowers colony recovery in the bacterial assay host.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33045733
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7641770/
+      snippet: HepT is adenylylated
+      explanation: Figure7D HepT versus vector CFU curves, with matching growth curves.
+      cache_path: evidence/PF01934/yao-2020.txt
+      cache_sha256: b2d542864063722ddbb8ba72502613c0aeac5f758b058064ab364bafc0d4b6a6
+  - edge_id: archaeal-partner-rescue
+    subject: pair
+    predicate: increases
+    object: colonies
+    mechanism: Cognate partner coexpression raises colony recovery relative to toxin alone under these conditions.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33045733
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7641770/
+      snippet: HepT is adenylylated
+      explanation: Figure7D wild-type pair versus toxin-only CFU; not an assertion of full growth restoration.
+      cache_path: evidence/PF01934/yao-2020.txt
+      cache_sha256: b2d542864063722ddbb8ba72502613c0aeac5f758b058064ab364bafc0d4b6a6
+  - edge_id: y82f-protection-loss
+    subject: y82f
+    predicate: decreases
+    object: colonies
+    mechanism: The acceptor-site substitution weakens protection compared with wild-type pair expression.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33045733
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7641770/
+      snippet: HepT is adenylylated
+      explanation: Figure7D Y82F pair versus wild-type pair CFU.
+      cache_path: evidence/PF01934/yao-2020.txt
+      cache_sha256: b2d542864063722ddbb8ba72502613c0aeac5f758b058064ab364bafc0d4b6a6
+  - edge_id: gs-mutant-protection-loss
+    subject: gs-mutant
+    predicate: decreases
+    object: colonies
+    mechanism: The partner motif substitution weakens protection of bacterial colony recovery under coexpression.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:33045733
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7641770/
+      snippet: HepT is adenylylated
+      explanation: Figure7D G33A/S34T pair versus wild-type pair CFU.
+      cache_path: evidence/PF01934/yao-2020.txt
+      cache_sha256: b2d542864063722ddbb8ba72502613c0aeac5f758b058064ab364bafc0d4b6a6
+- graph_id: fhepta-fragment-ecoli-cfu-2026
+  title: Isolated fusion HEPN fragment lowers E. coli colony recovery
+  scope: Yao2026 Figure1D; MR-1 SO_1440/FhepTA full fusion versus its136-276 fragment in BW25113.
+  context: pHGE constructs,0.5mM IPTG for2h from OD6000.1,LB at37C; vector and MNT-only controls.
+  family_mapping: TableS3 WP_164925653.1 is276aa; Q8EGZ7v1 is252aa. WP26-276 equals Q8EGZ7 2-252; PF01934 Q8EGZ7 144-234 projects to WP168-258. All graph numbering is WP/source numbering, not the shorter UniProt sequence.
+  scope_status: PHENOTYPIC
+  limitations: The136-276 fragment includes flanks outside the Pfam match. Expression/stability and loss of MNT both change; this does not isolate dimerization as the sole cause or prove native cleavage activation.
+  nodes:
+  - {node_id: fragment, label: Express FhepTA136-276 rather than the full fusion, node_type: PERTURBATION, grounding: [RefSeq:WP_164925653.1]}
+  - {node_id: colonies, label: Recoverable BW25113 colonies, node_type: PHENOTYPE}
+  edges:
+  - edge_id: fragment-cfu-loss
+    subject: fragment
+    predicate: decreases
+    object: colonies
+    mechanism: The isolated fragment yields fewer colonies than the full fusion under the same induction comparison.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:41854079
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13000451/
+      snippet: Cell viability
+      explanation: Figure1D FhepTA-T versus full fusion and vector; FigureS4B provides additional truncation controls.
+      cache_path: evidence/PF01934/fusion-2026.txt
+      cache_sha256: 1e00630c43ebbef39a8e85bc9b9e48ae378587f684f7bbeebff103e917a4df1c
+- graph_id: fhepta-fragment-native-cfu-2026
+  title: Fusion HEPN fragment lowers colony recovery in MR-1
+  scope: Yao2026 FigureS2; induced SO_1440/FhepTA136-276 versus vector in S. oneidensis MR-1.
+  context: pHGE,0.5mM IPTG from OD6000.1,LB at30C; colony recovery at2h and growth time course; three cultures.
+  family_mapping: WP_164925653.1 fragment136-276 contains the PF01934 core projected to168-258 from Q8EGZ7v1 144-234. The reference sequences differ at the N terminus; source numbering is retained.
+  taxon: NCBITaxon:211586
+  scope_status: PHENOTYPIC
+  limitations: Plasmid-expressed fragment in the native species is not evidence of endogenous fragment production or physiological RNase activation. The W3-18-1 comparator is separately mapped and not represented by this edge.
+  nodes:
+  - {node_id: fragment, label: Induce FhepTA136-276 rather than vector, node_type: PERTURBATION, grounding: [RefSeq:WP_164925653.1]}
+  - {node_id: colonies, label: Recoverable MR-1 colonies, node_type: PHENOTYPE}
+  edges:
+  - edge_id: native-fragment-cfu-loss
+    subject: fragment
+    predicate: decreases
+    object: colonies
+    mechanism: Fragment expression lowers colony recovery relative to vector in this separate native-host assay.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:41854079
+      source_url: https://academic.oup.com/nar/article/54/6/gkag228/8528806
+      snippet: Cell viability
+      explanation: Publisher supplement FigureS2B spot dilution andS2A growth, with native-host Methods.
+      cache_path: evidence/PF01934/fusion-2026.txt
+      cache_sha256: 1e00630c43ebbef39a8e85bc9b9e48ae378587f684f7bbeebff103e917a4df1c
+- graph_id: fhepta-modification-variants-2026
+  title: Fusion substitutions reduce detectable AMP modification
+  scope: Yao2026 Figure2A-B; purified wild-type FhepTA and D41E/D43E or Y240F variants after E. coli expression.
+  context: C-terminal His-tagged full fusion; SDS-PAGE,PDE digestion and mass-spectrometric comparison. Tag and initiator-Met mass qualifications retained in TableS4.
+  family_mapping: WP_164925653.1 source numbering; PF01934 core168-258 by exact-segment projection. Y240 is Q8EGZ7 Y216; D41/D43 are Q8EGZ7 D17/D19 in the other NTase domain, not the HEPN core.
+  scope_status: PHENOTYPIC
+  limitations: Substitution effects on protein state are not excluded. Figure5A/S4A show modification loss alone does not activate full-fusion toxicity. The experiment does not directly resolve an intramolecular reaction path.
+  nodes:
+  - {node_id: donor-mutant, label: FhepTA D41E/D43E instead of wild type, node_type: PERTURBATION}
+  - {node_id: acceptor-mutant, label: FhepTA Y240F instead of wild type, node_type: PERTURBATION}
+  - {node_id: modified, label: Detectable AMP-modified fusion protein, node_type: STATE}
+  edges:
+  - edge_id: ntase-mutant-modification-loss
+    subject: donor-mutant
+    predicate: decreases
+    object: modified
+    mechanism: The N-terminal NTase motif substitution lowers detectable modification compared with wild-type full fusion.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:41854079
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13000451/
+      snippet: self-oligoAMPylation
+      explanation: Figure2A PDE-released AMP and2B mass difference; this is not NTase activity assigned to PF01934.
+      cache_path: evidence/PF01934/fusion-2026.txt
+      cache_sha256: 1e00630c43ebbef39a8e85bc9b9e48ae378587f684f7bbeebff103e917a4df1c
+  - edge_id: y240f-modification-loss
+    subject: acceptor-mutant
+    predicate: decreases
+    object: modified
+    mechanism: The acceptor Tyr substitution reduces the modified band and released AMP detected from the preparation.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:41854079
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13000451/
+      snippet: self-oligoAMPylation
+      explanation: Figure2A Y240F gel and PDE/HPLC comparison; use276-aa source numbering.
+      cache_path: evidence/PF01934/fusion-2026.txt
+      cache_sha256: 1e00630c43ebbef39a8e85bc9b9e48ae378587f684f7bbeebff103e917a4df1c
+- graph_id: fhepta-linker-modification-2026
+  title: Linker changes reduce fusion AMP modification
+  scope: Yao2026 Figure4G andS3A; M1 deletion and M3 replacement compared with wild-type fusion and M2 control.
+  context: pCA24N-based N-terminally tagged constructs expressed in BW25113, purified and analyzed by HPLC/Q-TOF-MS.
+  family_mapping: WP_164925653.1 numbering; linker is outside the projected PF01934 core168-258. Altered linkage between MNT and HEPN is a whole-fusion perturbation.
+  scope_status: PHENOTYPIC
+  limitations: M1 removes AQNHFIIL; M3 replaces SAQNHFIIL with FAQSLFIIL. Source eight/nine-residue descriptions vary. Folding/orientation changes are unresolved; negative trans-complementation and AF3 models do not directly prove a monomeric reaction trajectory.
+  nodes:
+  - {node_id: deletion, label: Delete linker AQNHFIIL in FhepTA, node_type: PERTURBATION}
+  - {node_id: replacement, label: Replace SAQNHFIIL with FAQSLFIIL in FhepTA, node_type: PERTURBATION}
+  - {node_id: modification, label: Detectable AMP-modified fusion relative to wild type, node_type: STATE}
+  edges:
+  - edge_id: linker-deletion-loss
+    subject: deletion
+    predicate: decreases
+    object: modification
+    mechanism: The M1 deletion removes the detectable AMP-modified mass species under the tested production conditions.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:41854079
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13000451/
+      snippet: The linker is critical
+      explanation: Figure4G M1 mass distribution andFigureS3A preparation gel, not an isolated catalytic-site assay.
+      cache_path: evidence/PF01934/fusion-2026.txt
+      cache_sha256: 1e00630c43ebbef39a8e85bc9b9e48ae378587f684f7bbeebff103e917a4df1c
+  - edge_id: linker-replacement-loss
+    subject: replacement
+    predicate: decreases
+    object: modification
+    mechanism: M3 replacement reduces detectable modification while the differently altered M2 linker retains it.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:41854079
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13000451/
+      snippet: The linker is critical
+      explanation: Figure4G M3 versus wild-type/M2 mass patterns, withFigureS3A controls.
+      cache_path: evidence/PF01934/fusion-2026.txt
+      cache_sha256: 1e00630c43ebbef39a8e85bc9b9e48ae378587f684f7bbeebff103e917a4df1c
+- graph_id: fhepta-fragment-rna-redox-2026
+  title: Fusion HEPN fragment cleaves MS2 RNA under reducing conditions
+  scope: Yao2026 Figure6A andS5A; isolated FhepTA136-276, not the full fusion or the W3-18-1 comparator.
+  context: Purified His-tagged fragment;1ug MS2 RNA,0.1ug protein,37C20min; reducing preparation with1mM DTT versus no reducing agent, and an additional protein-dose series.
+  family_mapping: WP_164925653.1 fragment136-276 includes projected PF01934 core168-258 and its flanks. Reference Q8EGZ7 coordinates are24 lower in this segment.
+  taxon: NCBITaxon:211586
+  scope_status: MECHANISTIC
+  limitations: The DTT comparison changes purification history as well as assay condition. Intracellular substrate, sequence specificity and causal mediation by a particular disulfide topology are unresolved. Full-fusion inactivity cannot be assigned solely to modification.
+  nodes:
+  - {node_id: reaction, label: Purified FhepTA136-276 with MS2 RNA under reducing conditions, node_type: ACTIVITY, grounding: [RefSeq:WP_164925653.1]}
+  - {node_id: substrate, label: Intact MS2 RNA, node_type: STATE}
+  - {node_id: reducing, label: Use reducing preparation and1mM DTT rather than nonreducing conditions, node_type: PERTURBATION}
+  - {node_id: cleavage, label: MS2 RNA fragmentation by the isolated HEPN fragment, node_type: ACTIVITY}
+  edges:
+  - edge_id: ms2-degradation
+    subject: reaction
+    predicate: degrades
+    object: substrate
+    mechanism: The purified fragment produces shorter RNA species under the specified reducing assay conditions.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:41854079
+      source_url: https://academic.oup.com/nar/article/54/6/gkag228/8528806
+      snippet: RNA cleavage assay
+      explanation: Figure6A lower gel andFigureS5A dose series, with buffer/no-protein controls and RNA-assay Methods.
+      cache_path: evidence/PF01934/fusion-2026.txt
+      cache_sha256: 1e00630c43ebbef39a8e85bc9b9e48ae378587f684f7bbeebff103e917a4df1c
+  - edge_id: reducing-condition-cleavage
+    subject: reducing
+    predicate: increases
+    object: cleavage
+    mechanism: The complete reducing preparation/assay condition yields stronger fragmentation than the nonreducing comparison.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:41854079
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13000451/
+      snippet: RNA cleavage assay
+      explanation: Figure6A FhepTA-T plus/minus DTT lanes; Methods distinguish preparation histories, preventing an acute-ligand-only interpretation.
+      cache_path: evidence/PF01934/fusion-2026.txt
+      cache_sha256: 1e00630c43ebbef39a8e85bc9b9e48ae378587f684f7bbeebff103e917a4df1c
+- graph_id: fhepta-cysteine-oxidative-cfu-2026
+  title: Cysteine substitutions change colony recovery during peroxide exposure
+  scope: Yao2026 Figure6F; FhepTA136-276 wild type versus C163T/C270W fragment in MR-1.
+  context: pHGE expression,0.5mM IPTG and0.5mM H2O2 added at OD about0.1 for2h; three replicate cultures, representative dilution plates; no-peroxide comparison retained.
+  family_mapping: WP_164925653.1 C163/C270 correspond to Q8EGZ7 C139/C246. Both lie outside the mapped PF01934 core (WP168-258), though inside the tested HEPN fragment136-276.
+  taxon: NCBITaxon:211586
+  scope_status: PHENOTYPIC
+  limitations: This is a genotype-by-condition effect, not proof that intracellular oligomerization mediates all colony loss. Expression, protein stability and other stress responses remain alternatives; no direct peroxide-to-RNase activation edge is asserted.
+  nodes:
+  - {node_id: mutant, label: C163T/C270W fragment instead of wild type during peroxide exposure, node_type: PERTURBATION}
+  - {node_id: colonies, label: Recoverable MR-1 colonies under the specified exposure, node_type: PHENOTYPE}
+  edges:
+  - edge_id: mutant-peroxide-cfu-loss
+    subject: mutant
+    predicate: decreases
+    object: colonies
+    mechanism: The double-mutant fragment retains stronger colony-suppressing effects than the wild-type fragment under the matched peroxide condition.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:41854079
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13000451/
+      snippet: Cell viability
+      explanation: Figure6F lower-panel mutant versus wild type, with no-peroxide panel andFigureS6B toxicity controls.
+      cache_path: evidence/PF01934/fusion-2026.txt
+      cache_sha256: 1e00630c43ebbef39a8e85bc9b9e48ae378587f684f7bbeebff103e917a4df1c
+- graph_id: fhepta-redox-band-states-2026
+  title: Reducing conditions and cysteine substitutions change high-mass bands
+  scope: Yao2026 Figure6B,C,E andS6; isolated FhepTA136-276 preparation under specified reducing and nonreducing conditions.
+  context: His-tagged purified protein, SDS-PAGE with nonreducing loading conditions;1mM DTT preparation comparison and C163T/C270W without reducing agent. NEM/TCEP controls distinguish some denaturation artifacts.
+  family_mapping: WP_164925653.1 fragment136-276 includes PF01934 core168-258. C163/C270 are outside that core; exact-segment projection to Q8EGZ7 gives C139/C246.
+  scope_status: PHENOTYPIC
+  limitations: Gel bands do not resolve every bond topology or prove the in-cell regulatory chain. Some intramolecular disulfides arise during denaturation; distinguish them from the supported pre-existing intermolecular species and from noncovalent active dimers.
+  nodes:
+  - {node_id: reducing, label: Reducing rather than nonreducing fragment preparation, node_type: PERTURBATION}
+  - {node_id: mutant, label: C163T/C270W fragment rather than wild type without reducing agent, node_type: PERTURBATION}
+  - {node_id: bands, label: High-molecular-weight fragment bands on SDS-PAGE, node_type: STATE}
+  edges:
+  - edge_id: reducing-high-mass-loss
+    subject: reducing
+    predicate: decreases
+    object: bands
+    mechanism: Reducing conditions diminish high-mass species retained under nonreducing gel conditions.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:41854079
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13000451/
+      snippet: Disulfide bond formation
+      explanation: Figure6B FhepTA-T DTT comparison, with6C NEM/TCEP controls andS6 reducing-state comparisons.
+      cache_path: evidence/PF01934/fusion-2026.txt
+      cache_sha256: 1e00630c43ebbef39a8e85bc9b9e48ae378587f684f7bbeebff103e917a4df1c
+  - edge_id: cysteine-high-mass-loss
+    subject: mutant
+    predicate: decreases
+    object: bands
+    mechanism: Replacing the two source-numbered cysteines reduces high-mass gel species in the nonreducing comparison.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:41854079
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13000451/
+      snippet: Disulfide bond formation
+      explanation: Figure6E C163T/C270W versus wild-type fragment; neither gel nor cellular phenotype alone proves a complete disulfide-mediated causal relay.
+      cache_path: evidence/PF01934/fusion-2026.txt
+      cache_sha256: 1e00630c43ebbef39a8e85bc9b9e48ae378587f684f7bbeebff103e917a4df1c

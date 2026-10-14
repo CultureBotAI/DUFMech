@@ -1,0 +1,54 @@
+PF01956 TMCO1 identity and construct assessment
+Accessed 2026-10-12. Curator-authored factual notes; not a primary-source transcript.
+
+Identity sources:
+https://rest.uniprot.org/uniprotkb/Q9UM00.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01956/protein/uniprot/Q9UM00/
+Human TMCO1 Q9UM00 has sequence version 2, 239 residues, last sequence update
+2019-04-10. Current displayed isoform 1 is Q9UM00-3. Isoform 3, Q9UM00-1,
+lacks canonical residues 1-51 and is therefore 188 residues long. Isoform 2
+Q9UM00-2 instead lacks residues 115-133. Names and accession suffixes are not
+interchangeable. PF01956 maps canonical residues 59-216; the arithmetic interval
+in the shorter Q9UM00-1 sequence is 8-165, not a separately run profile scan.
+The historical D140 label would map to canonical D191 under this exact deletion
+mapping. UniProt annotates D191A/E using PMID27212239. This database evidence
+does not independently verify the historical plasmid sequence or channel assay.
+
+McGilvray2020 DOI10.7554/eLife.56889, PMID32820719:
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7505659/fullTextXML
+The HEK293 Flp-In T-REx TMCO1 knockout derives from Anghel2017. Nicalin and
+CCDC47 deletions were made in parental and TMCO1-knockout backgrounds, with
+clonal isolation, genomic sequencing and immunoblots reported. These are
+whole-gene perturbations, not isolated-domain or residue tests. Endogenous
+EAAT1 abundance experiments are distinct from tagged TMCO1 affinity-purification
+and structural preparations. Stable overexpression lines are described, but no
+EAAT1 reintroduction-rescue endpoint is shown in the selected Figure5 experiments.
+
+Sundaram2022 DOI10.1038/s41586-022-05330-8, PMID36261522:
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9630114/fullTextXML
+The same source lineage supplies the knockout backgrounds. Reporter tags and
+N/C-terminal orientation vary by assay; whole-cell knockout, microsome-derived
+cell-free reactions and siRNA depletion are not interchangeable. Constructs
+were DNA-sequence checked by the authors; raw clone sequences were not inspected
+here. Current Q9UM00 mapping grounds the gene/family, not the exact historical
+isoform expressed in every clone. No new residue-level edge is assigned.
+
+Anghel2017 DOI10.1016/j.celrep.2017.12.006, PMID29281821:
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5868721/fullTextXML
+Inspected main TMCO1/ribosome interaction and topology/co-IP methods. Purified
+TMCO1 pelleting with ribosomes and cell/microsome co-IP are binding evidence,
+not by themselves insertion or ion-conduction effects. Supplementary construct
+and knockout details were not obtained: the PMC PDF endpoint returned HTML.
+
+Access and coverage limits:
+Wang2016 PMID27212239 abstract and CSU postprint landing metadata were inspected.
+https://engagedscholarship.csuohio.edu/scichem_facpub/535/
+The CSU PDF and publisher PDF returned HTTP403; publisher full-text endpoints
+failed. No challenge was bypassed and no inaccessible figures were treated as
+read. Channel selectivity, tetramerization, D140 assays and mouse physiology
+remain uncurated pending direct inspection. The 2020 authors' proposal that
+calcium phenotypes reflect client-biogenesis defects is not a demonstrated
+refutation of the 2016 channel model. Both possibilities remain distinguishable.
+Archaeal Ylp1 PMID26256539 remains a lead: PubMed was read, PMC returned a
+challenge and the Europe PMC XML endpoint returned HTTP500. This is an access
+limit, not evidence that no archaeal causal function exists.

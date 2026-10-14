@@ -1,0 +1,20 @@
+PF01933 cellular cofactor dependency
+Accessed 2026-10-12; PMID32430409; doi:10.1128/msystems.00389-20
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7253369/
+HTML SHA256 f0634c92875fd96dcf08e04d463f12923b0abe83d99fa2d61300ce4b855ad191.
+Inspected Results, deletion and LC-MS Methods and Figure2 visually.
+Minimal quotation: "Mutagenic dissection"
+
+In M.smegmatis mc2 155, deleting fbiA/MSMEG_1830 eliminates detectable
+mature F420 species in the tested lysates relative to wild type. The authors
+verify otherwise-isogenic mutants by genome sequencing. LC-MS measures the
+stationary-phase culture extracts, including glutamylated F420 species.
+Fo remains detectable in the fbiA mutant. No fbiA complementation is shown
+in the inspected experiment. This is a whole-gene pathway phenotype.
+
+Curator exclusions: the separate PEP-spiking experiment uses clarified lysates,
+not intact-cell uptake, and fluorescence alone cannot distinguish DH-F420-0
+from F420-0. DH-F420-0 accumulates in the fbiB mutant, a different gene.
+FbiA product copurification and crystal geometry are not independent turnover
+assays or observation of the proposed transition state. Crystallographic Ca
+reflects crystallization conditions, not a demonstrated physiological catalyst.

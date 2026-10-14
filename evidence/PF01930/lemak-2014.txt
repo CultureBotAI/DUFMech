@@ -1,0 +1,53 @@
+Pcal_0546 biochemical evidence, inspected 2026-10-12 UTC
+Lemak et al. 2014, PMID25200083, DOI10.1093/nar/gku797.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4176176/
+Main Methods, Results and Discussion read; original Figures2,3,5 inspected.
+The paper is CC-BY4.0. This ledger contains authored paraphrases and only these
+short verbatim quotation tokens: "ssDNA", "LC-MS", "colorless".
+
+Tested full-length 6His-tagged Pcal_0546, A3MTK6 sequencev1, not an isolated
+57-210 domain. Cloning refers to an earlier method; exact retained tag/scar
+and oligo table sequences were not independently resolved in this pass.
+
+Figure2A: protein dose series0.12-2.5uM, 0.1uM end-radiolabeled linear ssDNA,
+15min45C, default50mM Tris pH8,5mM MgCl2,1mM DTT; protein-free laneC.
+Different product ladders from 3'- versus5'-labeling support the authors'
+5'-to-3' exonuclease interpretation. The directly retained edge is substrate
+cleavage, not an independently filmed directional translocation mechanism.
+Figure2E uses a distinct high-concentration assay:55uM enzyme and10ug dC10,
+LC-MS against dC/dCMP standards. Retention/mass data support phosphate-bearing
+products, assigned by the authors to3'-phosphate/5'-hydroxyl termini. Do not
+claim a CRISPR-integration-ready3'-OH from these Pcal products.
+
+Figure2C: circular M13mp18 ssDNA5nM, Pcal0.9,1.9,3.7,4.6uM at45C,
+protein-free laneC, agarose/SYBR endpoint. Circular-substrate processing supports
+endonucleolysis. Methods default lists2mM MgCl2 for endonuclease assays, whereas
+Results describes Mn-dependent activity. The exact Figure2C metal assignment is
+not resolved here; no metal-specific necessity edge is retained.
+
+Figure3A: splayed-arm substrates with21bp duplex and21/22nt overhang models,
+one3'-radiolabeled strand;0.25-9.8uM Pcal,45min45C, laneC no protein.
+Products extend below the duplex-length region. Retain net processing, not a
+separate observed ATP-driven helicase step; transient duplex breathing and
+coupled processing are not excluded. The ATP comparison is in uninspected S3.
+
+Figure5A/C: individual D123A,E136A,Q149A,Y153A andY166A proteins show strongly
+reduced exonuclease and circular-substrate processing versusWT. Exo246nM15min;
+circular assay2.2uM10min45C. Figure5E uses1.9uM45min45C and shows residual
+processing for several motif mutants, so they are not universally inactive.
+F141A remains active; its proposed product-exit-channel widening is a hypothesis,
+not a directly observed elementary mechanism. K138A andH146A did not yield
+soluble protein and were not assayed as purified inactive enzymes.
+
+Individual C64A,C200A,C203A,C209A variants lose visible color/320-550nm
+absorbance according to Results, supporting disrupted assembled cluster signal.
+Figure5A/C/E retains DNA cleavage, with nonidentical band patterns. In5C Cys
+variants are1.1uM versus2.2uM other variants; do not infer identical rates from
+these gels or general Fe-S dispensability in cells. The proposed stabilizing
+extra beta sheet is not an observed causal rescue. Cluster mutation can affect
+folding and metal occupancy as well as a specific catalytic step.
+
+The study does not demonstrate Pcal-dependent cellular spacer acquisition,
+its native partner complex, PAM selection or a native physiological DNA target.
+Pcal's locus is outside the Cas operon; CRISPR/non-CRISPR roles remain open.
+SSO1391 andSSO0001 results are deliberately excluded from Pcal graph edges.

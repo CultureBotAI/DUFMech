@@ -1,0 +1,26 @@
+Identity sources accessed: 2026-10-11
+https://rest.uniprot.org/uniprotkb/O32222.json
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/O32222/entry/pfam/PF02583/
+
+Selected structured identity facts:
+primary accession: O32222
+entry name: CSOR_BACSU
+organism: Bacillus subtilis (strain 168)
+taxon: 224308
+gene: csoR; synonym: yvgZ; ordered locus: BSU33520
+sequence version: 1; entry version: 115
+length: 101
+sequence MD5: 0ECEA29122BD2DE8F7F64E7CC69AEE82
+RefSeq: NP_391232.1; WP_003228404.1
+entry accession: PF02583
+family interval: 17-97, inclusive
+integrated entry: IPR003735
+
+Mapping assessment:
+The 2007 paper names yvgZ/csoR in the W168-derived CU1065 background; the
+2009 paper uses B. subtilis CsoR supplied by the same laboratory. O32222
+anchors the reference gene/protein and domain interval, not an independently
+sequenced archived assay construct. Exact final tag is not established here.
+The reference is not an isolated 17-97 construct. This family also includes
+other metal-responsive repressors; membership alone does not transfer copper
+specificity, target promoter or the B. subtilis phenotype to other members.

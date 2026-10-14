@@ -1,0 +1,11 @@
+Deschamps et al., 2020. PMID:32024908. DOI:10.1038/s41598-020-58795-w.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7002768/
+Inspected 2026-10-11: pH calibration and in-vivo measurement Methods
+referenced by the 2023 Gdt1 study. No independent mechanism edges adopted.
+Mnn2-HA-pHluorin** calibration uses 0.16% digitonin-treated yeast,
+blank subtraction and a four-parameter curve. Yeast measurements use
+400/480-nm excitation, 507-nm emission, 28 C and 300-rpm stirring.
+Its glucose-starvation protocol uses an ice incubation, unlike 2023's
+explicit 60 min at 28 C; use the later experiment's own stated conditions.
+This yeast pHluorin protocol is distinct from bacterial sfpHluorin with
+390/470-nm excitation and nigericin calibration.

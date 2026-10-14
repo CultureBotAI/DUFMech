@@ -1,0 +1,193 @@
+pfam_id: PF01513
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01513
+causal_graphs:
+  - graph_id: ecoli-nadk-n75t-atp-activity
+    title: N75T lowers ATP-dependent NADK specific activity in the coupled assay
+    scope: Purified untagged E. coli NADK and N75T in Nakamichi 2013 Figure 2; intact enzyme, not isolated N-terminal PF01513.
+    context: Compare WT and N75T at 37 C with 5 mM ATP, 5 mM NAD+, 5 mM MgCl2, 100 mM Tris-HCl pH 7.5, 5 mM glucose 6-phosphate and 0.5 U glucose-6-phosphate dehydrogenase. Specific activity is normalized to Bradford protein concentration with BSA standard; the article defines U as umol NADP+ per minute. Figure 2 reports means and SD of three independent experiments. Exact assay enzyme dose, volume and initial-rate window are not fully specified in the inspected 2013 protocol.
+    family_mapping: K12 reference UniProtKB:P0A7B3, nadK/yfjB/yfjE, b2615/JW2596, is 292 aa and sequence version 1; its sequence matches InterPro. PF01513 spans 8-121 and contains N75 of GGDGN at 71-75. The inherited pET-14b construct derives from MG1655 according to the cited 2001 cloning paper and is expressed without a tag in BL21(DE3)pLysS. Historical primers differ at N2/D2 and at the translated C terminus from the current reference; the 2013 alignment shows the reference-like N terminus, but complete assay clones remain unverified.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:562
+    limitations: This is a net coupled-assay mutation effect, not proof of a particular ATP-binding or phosphate-transfer microstep. Activity remains measurable with N75T. Independent purification batches and mutant folding/oligomer equivalence are not established. Figure S4 shows expression extracts, not purified enzyme. The displayed HTML/XML kinetic table has inconsistent ratios; exact repaired kcat/Km values are not adopted.
+    nodes:
+      - node_id: nadk-n75t-atp-comparison
+        label: Purified E. coli NADK N75T rather than WT with 5 mM ATP
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P0A7B3
+      - node_id: atp-coupled-nadk-specific-activity
+        label: ATP-dependent NADK specific activity measured by G6PD coupling
+        node_type: ACTIVITY
+    edges:
+      - edge_id: n75t-decreases-atp-specific-activity
+        subject: nadk-n75t-atp-comparison
+        predicate: decreases
+        object: atp-coupled-nadk-specific-activity
+        mechanism: N75T has lower specific activity than WT in the matched ATP-dependent assay. The retained direction concerns the intact purified reaction system; it does not assert complete ATP loss or a uniquely established atomic cause.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:24022322
+            source_url: https://www.nature.com/articles/srep02632
+            snippet: specific activity
+            explanation: Visually inspected Figure 2, ATP data in supplemental S2, main Results and assay Methods support lower ATP-associated specific activity while preserving residual output.
+            cache_path: evidence/PF01513/nakamichi-2013-donor-specificity.txt
+            cache_sha256: 3360d638df72090f10d1357c260dcc383b0b6f720948c216f41056cb3c5babee
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A7B3/entry/pfam/PF01513/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P0A7B3/entry/pfam/PF01513/
+            snippet: 'P0A7B3 Pfam:PF01513; domain interval: 8-121, inclusive.'
+            explanation: Places N75 in the mapped domain while distinguishing the intact recombinant construct and unresolved historical-primer discrepancies from the database reference.
+            cache_path: evidence/PF01513/NadK-identity.txt
+            cache_sha256: 03693443f7a3e2b9358fc1ba1f23189884f84e4a6304fd0fc892a922943eee78
+  - graph_id: ecoli-nadk-n75t-tetrapolyphosphate-activity
+    title: N75T raises tetrapolyphosphate-dependent NADK specific activity
+    scope: Purified untagged E. coli NADK WT versus N75T in Nakamichi 2013 Figure 2, with poly(P)4 as the separate phosphoryl-donor condition.
+    context: At 37 C, the G6PD-coupled assay contains 5 mM tetrapolyphosphate, 5 mM NAD+, 5 mM MgCl2, 100 mM Tris-HCl pH 7.5, 5 mM glucose 6-phosphate and 0.5 U G6PD. Protein-normalized activities are compared within this donor condition, not directly equated to heterogeneous-polymer mass concentrations. Means/SD reflect three independent experiments; exact enzyme dose and rate window remain unspecified.
+    family_mapping: P0A7B3 is the 292-aa K12 reference matching InterPro; N75 lies within PF01513 residues 8-121. The 2013 untagged pET-14b_ecoNADK preparations are full-length proteins expressed in BL21(DE3)pLysS, not isolated domains. The cited MG1655-derived parent plasmid has unresolved printed-primer differences from the current reference.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:562
+    limitations: WT has small nonzero activity in this assay, so the effect is an increase rather than creation of activity from a proven zero. Tripolyphosphate does not show the same increase for E. coli N75T. Coupled output does not resolve donor-binding geometry, unique molecular mediation or physiological polyphosphate use; exact kinetic-table repair remains open.
+    nodes:
+      - node_id: nadk-n75t-poly4-comparison
+        label: NADK N75T rather than WT with 5 mM tetrapolyphosphate
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P0A7B3
+      - node_id: poly4-coupled-nadk-specific-activity
+        label: Tetrapolyphosphate-dependent specific activity in the coupled assay
+        node_type: ACTIVITY
+    edges:
+      - edge_id: n75t-increases-poly4-specific-activity
+        subject: nadk-n75t-poly4-comparison
+        predicate: increases
+        object: poly4-coupled-nadk-specific-activity
+        mechanism: The N75T preparation produces a larger protein-normalized coupled-assay signal than WT with tetrapolyphosphate. Supplementary substrate-series data support the direction without establishing that every polyphosphate or every family member behaves similarly.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:24022322
+            source_url: https://www.nature.com/articles/srep02632
+            snippet: specific activity
+            explanation: Figure 2 and supplemental Figure S3 were visually inspected; the poly(P)4 comparison and main Methods establish the donor concentration and scoped direction.
+            cache_path: evidence/PF01513/nakamichi-2013-donor-specificity.txt
+            cache_sha256: 3360d638df72090f10d1357c260dcc383b0b6f720948c216f41056cb3c5babee
+  - graph_id: ecoli-nadk-n75t-hexametaphosphate-activity
+    title: N75T raises activity with the tested hexametaphosphate mixture
+    scope: Purified E. coli NADK WT versus N75T in Nakamichi 2013 Figure 2; only the commercial hexameta(P)n preparation and stated assay conditions.
+    context: G6PD-coupled reactions at 37 C use 1 mg/ml hexameta(P)n, 5 mM NAD+, 5 mM MgCl2, 100 mM Tris-HCl pH 7.5, 5 mM glucose 6-phosphate and 0.5 U G6PD. Specific activity is normalized to Bradford protein; means and SD are reported for three independent experiments. This commercial reagent is a mixture of chain lengths, not an assumed pure six-unit molecule.
+    family_mapping: P0A7B3 reference N75 lies in the GGDGN motif within PF01513 8-121 of the 292-aa intact enzyme. The untagged MG1655-derived pET-14b lineage was expressed in BL21(DE3)pLysS; current reference identity is not a claim that historical primer and full-clone discrepancies have been resolved.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:562
+    limitations: Increased activity is relative to a nonzero WT signal and does not identify which polymer lengths supply phosphate. Exact enzyme dose, assay volume and rate window are incompletely reported; folding and oligomer equivalence are unestablished. This is not an exact donor-affinity measurement, isolated-domain sufficiency or cellular flux.
+    nodes:
+      - node_id: nadk-n75t-hexameta-comparison
+        label: NADK N75T rather than WT with the 1-mg/ml hexameta(P)n mixture
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P0A7B3
+      - node_id: hexameta-coupled-nadk-specific-activity
+        label: Hexameta(P)n-dependent specific activity in the coupled assay
+        node_type: ACTIVITY
+    edges:
+      - edge_id: n75t-increases-hexameta-specific-activity
+        subject: nadk-n75t-hexameta-comparison
+        predicate: increases
+        object: hexameta-coupled-nadk-specific-activity
+        mechanism: N75T has greater measured specific activity than WT using the same commercial hexametaphosphate mixture. The mutation effect is observed at the biochemical-assay level without assigning a chain-length-specific binding mechanism.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:24022322
+            source_url: https://www.nature.com/articles/srep02632
+            snippet: specific activity
+            explanation: Visually inspected Figure 2 and the donor-specific Results establish the increase; Methods explicitly identify hexameta(P)n as a chain-length mixture.
+            cache_path: evidence/PF01513/nakamichi-2013-donor-specificity.txt
+            cache_sha256: 3360d638df72090f10d1357c260dcc383b0b6f720948c216f41056cb3c5babee
+  - graph_id: ecoli-nadk-n75t-metaphosphate-activity
+    title: N75T raises activity with the tested metaphosphate mixture
+    scope: Purified E. coli NADK and N75T in the meta(P)n condition of Nakamichi 2013 Figure 2; distinct from the ten-hour TLC endpoint.
+    context: Compare WT and N75T at 37 C with 1 mg/ml meta(P)n, 5 mM NAD+, 5 mM MgCl2, 100 mM Tris-HCl pH 7.5, 5 mM glucose 6-phosphate and 0.5 U G6PD. Means/SD of three independent experiments describe protein-normalized specific activity. The metaphosphate reagent contains various polymer lengths; exact assay enzyme dose, volume and rate window are not fully specified.
+    family_mapping: The targeted N75 is within PF01513 8-121 of sequence-version-1 reference P0A7B3. Whole untagged recombinant enzyme retains all other regions. The 2013 source reports sequence-confirmed mutation of its inherited pET-14b construct, but no full sequence independently resolves the older primer/reference differences.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:562
+    limitations: The matched WT signal is small but nonzero. A higher meta(P)n/ATP ratio also reflects lower ATP activity and is not the same quantity as this absolute donor-specific increase. Separate TLC supports product formation but does not retroactively supply this assay's rate window. No atomic donor-recognition mechanism, physiological donor switch or universal GGDGN rule is inferred.
+    nodes:
+      - node_id: nadk-n75t-meta-comparison
+        label: NADK N75T rather than WT with the 1-mg/ml meta(P)n mixture in the coupled assay
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P0A7B3
+      - node_id: meta-coupled-nadk-specific-activity
+        label: Meta(P)n-dependent specific activity in the coupled assay
+        node_type: ACTIVITY
+    edges:
+      - edge_id: n75t-increases-meta-specific-activity
+        subject: nadk-n75t-meta-comparison
+        predicate: increases
+        object: meta-coupled-nadk-specific-activity
+        mechanism: N75T increases protein-normalized activity in the metaphosphate condition compared with WT. This direction is measured independently of expressing the result as a ratio to ATP-dependent activity and is confined to the tested mixture and intact protein.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:24022322
+            source_url: https://www.nature.com/articles/srep02632
+            snippet: specific activity
+            explanation: Visually inspected Figure 2, its caption, main Results and Methods support the donor-specific increase rather than relying solely on Figure 1's relative-to-ATP bars.
+            cache_path: evidence/PF01513/nakamichi-2013-donor-specificity.txt
+            cache_sha256: 3360d638df72090f10d1357c260dcc383b0b6f720948c216f41056cb3c5babee
+  - graph_id: ecoli-nadk-n75t-metaphosphate-tlc
+    title: N75T increases the NADP-comigrating TLC product in the metaphosphate reaction
+    scope: Purified E. coli NADK WT versus N75T in Nakamichi 2013 Figure 3; a qualitative product-endpoint comparison separate from the coupled specific-activity measurements.
+    context: Incubate 5-ul reactions for 10 h at 37 C with 5 mM NAD+, 5 mM MgCl2, 100 mM Tris-HCl pH 7.5, 1 mg/ml meta(P)n and 0.43 ug/ml enzyme. TLC uses isobutyrate/500 mM NH4OH at 5:3 and UV detection at 254 nm. Displayed no-enzyme reactions and NAD+, NADP+, ATP and ADP standards establish the comparison; the ATP lanes are separate donor conditions.
+    family_mapping: The untagged intact ecoNADK/N75T constructs map to P0A7B3 with N75 inside PF01513 8-121. MG1655-derived plasmid lineage and BL21(DE3)pLysS expression are distinguished from current K12 reference sequence and unresolved historical terminal-primer differences.
+    scope_status: MECHANISTIC
+    taxon: NCBITaxon:562
+    limitations: The stronger spot co-migrates with NADP+ but is not independently identified by mass spectrometry or NMR. The image supplies neither a calibrated product yield nor independent replicate uncertainty. Ten-hour product accumulation is not an initial rate or complete substrate conversion; no cellular production advantage, all-polyphosphate transfer or atomically resolved specificity change is inferred.
+    nodes:
+      - node_id: nadk-n75t-meta-tlc-comparison
+        label: NADK N75T rather than WT in the ten-hour meta(P)n reaction
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:P0A7B3
+      - node_id: nadp-comigrating-tlc-product
+        label: TLC product signal co-migrating with the NADP+ standard
+        node_type: STATE
+    edges:
+      - edge_id: n75t-increases-nadp-tlc-product
+        subject: nadk-n75t-meta-tlc-comparison
+        predicate: increases
+        object: nadp-comigrating-tlc-product
+        mechanism: The N75T metaphosphate reaction displays a stronger NADP+-position spot than the corresponding WT reaction; no-enzyme and nucleotide-standard lanes constrain its interpretation. This directly observed product-associated endpoint is not converted into an exact rate or a structural mechanism.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:24022322
+            source_url: https://www.nature.com/articles/srep02632
+            snippet: larger quantity
+            explanation: Figure 3 was visually inspected with its lane key, caption and TLC Methods. The adopted edge is qualitative and retains the distinct ten-hour, 5-ul product assay.
+            cache_path: evidence/PF01513/nakamichi-2013-donor-specificity.txt
+            cache_sha256: 3360d638df72090f10d1357c260dcc383b0b6f720948c216f41056cb3c5babee
+discussions:
+  - discussion_id: nadk-constructs-donor-chemistry-and-physiology
+    prompt: Resolve NADK construct and kinetic-table discrepancies before extending donor-recognition or physiological mechanisms.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: N75T has donor-specific effects in intact purified protein. Coupled assays and TLC do not establish a unique residue-level binding geometry, universal family donor preference or a cellular redox mechanism.
+    evidence:
+      - reference: PMID:24022322
+        supports: PARTIAL
+        evidence_source: full_text_and_supplement
+        explanation: Main Methods/Results/Discussion and supplemental captions/table were read, with Figures 2/3 and S1-S4 visually inspected. Exact table-ratio reconciliation, donor distributions, full clones, mutant assembly and purification replicates remain unresolved. S4 is an expression-extract gel. Vibrio's K2E engineering and other proteins must be separately mapped before transferring any effect.
+      - reference: PMID:11488932
+        supports: PARTIAL
+        evidence_source: selected_full_text
+        explanation: The parent-plasmid study identifies MG1655 but its printed forward and reverse primers differ from the present reference. Its stopped isocitrate-dehydrogenase assay, nmol/min units and undetected polyphosphate activity are not interchangeable with the 2013 G6PD assay and small WT signals. No older-paper figures were independently visually reviewed.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: Other mutations, microbial/archaeal/eukaryotic homologs, immobilized-cell yield and cyanobacterial phenotypes remain outside this partial assessment. The 2013 phylogenetic narrative is not an observed causal chain. Preserve terminal-primer uncertainty and differing KND/KNDE buffer descriptions instead of silently repairing the sources. Partial scientific self-review; IN_PROGRESS.

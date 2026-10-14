@@ -4,7 +4,7 @@ name: Menaquinone biosynthesis
 short_name: VitK2_biosynth
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02621
 counters:
   proteins: 6058
@@ -27,3 +27,45 @@ description: This family includes two enzymes which are involved in menaquinone 
   comprise two domains with alpha/beta structures, a large domain and a small domain. A pocket between
   the two domains may form the active site, a conserved histidine located within this pocket could be
   the catalytic base [[cite:PUB00057460]].
+curation_history: history/records/PF02621
+discussions:
+- discussion_id: mqnd-experimental-clone-identity
+  prompt: Resolve the exact accession or sequence of the Bacillus halodurans MqnD construct used in PMID:34143602
+    before adopting its reaction as a protein-grounded causal graph.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The paper and inspected supplement support reaction chemistry but do not identify the MqnD
+    clone by locus or accession. Q9K9F8/BH2689 matches this family and species but remains a candidate,
+    so no canonical edge is added from that identity assumption.
+  evidence:
+  - reference: PMID:34143602
+    supports: PARTIAL
+    evidence_source: full_text_and_supplement
+    explanation: Product and trapping experiments are informative; the remaining prerequisite is exact
+      construct-to-family grounding, not absence of biochemical evidence.
+  - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q9K9F8/entry/pfam/PF02621/
+    supports: PARTIAL
+    evidence_source: database
+    explanation: Establishes the candidate reference's PF02621 interval, not the experimental clone's
+      sequence.
+  posed_by: Codex
+  posed_date: '2026-10-11'
+  notes: Inspected-source extracts and candidate identity facts are retained under evidence/PF02621. No
+    graph is hidden in this discussion; MqnA and other MqnD members still need separate review.
+curation_events:
+- timestamp: '2026-10-11T05:25:42Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Retain MqnD construct-identity gap without an unsupported graph
+  history_record: history/records/PF02621/2026-10-11T052542Z-codex-c93ea0.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T05:30:47Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain graphless MqnD scientific review and clone-identity gap
+  history_record: history/records/PF02621/2026-10-11T053047Z-codex-4a832e.yaml
+  event_index: 0
+  llm_assisted: true

@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01904
+  path: data/families/PF01904.yaml
+session:
+  id: 2026-10-11T231831Z-codex-7302c4
+  timestamp: '2026-10-11T23:18:31Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial self-review of YecE fitness effects and hypothetical Tm1631
+    chemistry
+  details: Native structured review retains exact current semantic digest, 21 source-row-verified
+    indirect experimental effects and two hypothetical computational steps. Model/native
+    Lys numbering is resolved; multiplicative fitness baseline and joint conditions
+    remain explicit. Independent allele/rescue validation, exact clones, supplementary
+    figure inspection and most members remain open. Same-agent partial scientific
+    review, not independent endorsement or status promotion.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T231925Z-pf01904-yece-relative-growth-and-tm1631-computational-cleavage/review.yaml

@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01886
+  path: data/families/PF01886.yaml
+session:
+  id: 2026-10-11T200715Z-codex-d5a457
+  timestamp: '2026-10-11T20:07:15Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Partially review DUF61 structural evidence and the missing causal-function
+    prerequisite.
+  details: Same-agent scientific review of the current graphless projection, exact
+    SSO0941 reference/domain/construct mapping, Zhou2018 abstract and deposition,
+    selected Wang2024 benchmark text and original Figure2, and bounded member searches.
+    Saved native NEEDS_FOLLOWUP/common pass_with_limitations, partial coverage. No
+    inspected directed biological effect supports an edge; this is not a global absence
+    claim. Full paper/supplements, inaccessible NMR material and broader member-specific
+    functional data remain follow-up work. Status stays IN_PROGRESS; no independent
+    expert review, publication or completed corpus claim.
+  sections:
+  - discussions
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T200930Z-pf01886-duf61-structure-and-causal-evidence-gap/review.yaml

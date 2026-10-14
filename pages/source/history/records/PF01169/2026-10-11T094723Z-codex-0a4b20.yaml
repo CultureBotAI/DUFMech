@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01169
+  path: data/families/PF01169.yaml
+session:
+  id: 2026-10-11T094723Z-codex-0a4b20
+  timestamp: '2026-10-11T09:47:23Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of Gdt1 gradient and compartment-pH
+    effects.
+  details: 'Saved review 20261011T094431Z-pf01169-gdt1-gradient-and-compartment-ph
+    assesses six graphs and eight observed effects: two direct gradient-to-uptake
+    readouts, four unresolved expression-to-pH effects, and two indirect yeast deletion
+    phenotypes. Exact repeat mapping, 2023 versus 2016 construct boundaries, calibration
+    wording, salt-associated transients and timing-specific negatives remain explicit.
+    Native projection validation passed during review; this is same-agent partial
+    scientific assessment, not independent endorsement or complete family characterization.
+    Full clone sequences, protein-specific flux and coupling controls, rescue and
+    additional member contexts remain follow-up work. Status remains IN_PROGRESS.'
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T094431Z-pf01169-gdt1-gradient-and-compartment-ph/review.yaml

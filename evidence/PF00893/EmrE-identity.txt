@@ -1,0 +1,19 @@
+Retrieved: 2026-10-11
+UniProt query: (gene_exact:eamA OR gene_exact:emrE) AND organism_id:83333 AND reviewed:true
+URL: https://rest.uniprot.org/uniprotkb/search
+Domain URL: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P23895/entry/pfam/PF00893/
+
+Accession: UniProtKB:P23895 (EMRE_ECOLI); gene emrE; aliases eb, mvrC.
+Locus identifiers: b0543; JW0531.
+Reference taxon: NCBITaxon:83333, Escherichia coli K-12.
+Length: 110; sequence version: 1; entry version: 187.
+Sequence MD5: cc2acbbd9c610dff654a6bf231950827.
+UniProt and InterPro reference sequences agree exactly.
+P23895 Pfam:PF00893 interval: 3-94, inclusive
+Reference residue 14 is E, inside this interval.
+NCBI protein: AAC73644.1; RefSeq NP_415075.1.
+
+The 2017 source names E. coli EmrE, BL21(DE3) expression and the Chang
+plasmid, citing the 2011/2012 purification protocol. Reference identity
+does not relabel the expression host as K-12 or establish an exact complete
+2017 plasmid sequence. Native residue numbering excludes the cited GS scar.

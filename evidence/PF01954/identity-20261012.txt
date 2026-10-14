@@ -1,0 +1,35 @@
+PF01954 identity and annotation assessment, 2026-10-12
+
+Frozen identity: Pfam:PF01954, AF2212-like, EX_DUF, InterPro:IPR008203.
+Snapshot interpro-pfam-duf-2026-10-10;440 proteins. Imported identity,
+counters, UNSCORED characterization and snapshot provenance are unchanged.
+Historical aliases: DUF104, UPF0165, COG2880; not every AbrB-like antitoxin.
+
+https://rest.uniprot.org/uniprotkb/O28071.json
+O28071, entry109, sequence1,61aa, vapB21/AF_2212; Archaeoglobus fulgidus
+VC-16 (ATCC49558/DSM4304/JCM9628/NBRC100126), NCBITaxon:224325.
+Reference sequence:
+MPKIIEAVYENGVFKPLQKVDLKEGERVKIKLELKVEPIDLGEPVSVEEIKKIRDGTWMSS
+FUNCTION is ECO:0000305 and qualified as possible antitoxin/potential VapC21
+partner. References distinguish genome sequencing, possible function and NMR
+structure. Reviewed status does not supply a functional experiment.
+Raw response SHA256:f203f24d13027607fbf8306ec97d83f3db74fadc73f8f3195c80ffced39d46e7
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01954/protein/uniprot/O28071/
+Current InterPro Pfam match:1-34 inclusive, score3.3e-14, reference length61.
+Raw response SHA256:43e207f93be7874a843104b6ebf8dfbe465d3e47125fc99b9f93837941693003
+RCSB entity1 for2NWT retains a Pfam34.0 annotation at1-57, not1-34.
+These are versioned profile intervals, not experimentally proven active-domain
+boundaries. Neither interval is silently substituted for the whole protein.
+
+https://rest.uniprot.org/uniprotkb/search?query=xref%3Apfam-PF01954%20AND%20reviewed%3Atrue&format=json&size=500
+The response contains20 reviewed entries; all20 FUNCTION comments retain
+possible-antitoxin language. Inspected accessions:
+O29184 Q60265 Q9V0B8 O29173 O29181 O28561 O29189 O29929 Q8U394 O28071
+O29175 O29931 Q58385 Q8TZD7 Q9UZF0 Q9YFG3 O29170 O29178 O29926 Q9YEV9.
+Their citation PMIDs are10382966,10430560,12622808,15718296,22057919,8688087,
+9389475, plus the O28071 NMR submission. This response is an annotation-level
+screen, not a full literature review or an audit of all440 frozen proteins.
+Raw response SHA256:850eb679e02b54c91979065f20d21d61cdb78025d1e5ebcfc6ffb4c45365b101
+Q58385/MJ0975 is64aa in this current reference; historical sequence lengths
+must not be substituted without alignment and version reconciliation.

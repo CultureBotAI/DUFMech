@@ -1,0 +1,644 @@
+# PF01933: separated CofD/FbiA and GlmR causal contexts
+
+- Review: 20261012T035103Z-pf01933-cofd-fbia-and-glmr-separated-causal-contexts
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-12T03:48:47Z
+- Finished UTC: 2026-10-12T03:51:03Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Seven graphs retain10 OBSERVED effects,4 DIRECT,3 INDIRECT and3 UNRESOLVED, across3 MECHANISTIC and4 PHENOTYPIC contexts. Six ledgers and two OPEN discussions preserve unresolved access, construct, source and member limits. Partial same-agent scientific assessment; IN_PROGRESS, not full family completion.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Ascending uncurated Pfam after PF01931. All8296 families and existing follow-ups remain in scope.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01933 | data/families/PF01933.yaml | generated | PF01933 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01933 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01933.
+
+Frozen CofD/IPR002882/EX_DUF identity is unchanged. P9WP81v1 maps3-294 of331aa; A0QTG2v1 maps3-291 of327aa; O06974v1 maps7-292 of317aa; Q58653v1 maps5-275 of311aa. Reference maps do not verify synthetic inserts or Hasan strains. Current O06974 Y265/R301 agree with Results but Methods Y264A/R300A/His264 conflict; R301 lies outside the current match. Exact historical alias authority and additional clones remain open. CofC/FbiD and GlmS/YvcJ are distinct partner proteins.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01933.
+
+Paired cofactor formation is distinct from whole-cell fbiA deletion and relative competitive-product distributions. The latter measure compositional changes, not independent absolute turnover rates. GlmR regulation of a GlmS-dependent assay is retained without assigning isolated-domain catalysis or a cellular feedback chain. Variant transformation effects are indirect and keep numbering/domain limits. Mixed-solution scattering remains unresolved rather than proving YvcJ activation or competence mediation. Primary diagrams and static structures are not promoted to observed elementary reactions.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01933.
+
+Older CofD biochemistry, exact catalytic mutant numbering, inaccessible Hasan accessions and Foulquier product chromatograms, other cofactor pairs, GlmR accessory uridyltransferase contexts, earlier morphogenesis,2026 modifications and additional member branches remain open. Reviewed UniProt query is a71-entry sample, not all14174 frozen proteins. No all-member or family-wide negative conclusion.
+
+## Findings
+
+### additional-contexts: Resolve source conflicts and extend separately mapped CofD and GlmR branches
+
+minor / open / confirmed; issue key: pf01933-causal-context-coverage.
+
+Obtain missing supplementary controls and accession tables, reconcile GlmR residue numbering and older CofD constructs, inspect uridyltransferase figures and member identities, and extend species-specific causal contexts without adopting cross-family partner chemistry. Keep relative versus absolute effects and current domain boundaries explicit; retain IN_PROGRESS until scope-complete successor evidence supports a different status.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Obtain missing supplementary controls and accession tables, reconcile GlmR residue numbering and older CofD constructs, inspect uridyltransferase figures and member identities, and extend species-specific causal contexts without adopting cross-family partner chemistry. Keep relative versus absolute effects and current domain boundaries explicit; retain IN_PROGRESS until scope-complete successor evidence supports a different status.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC6450877/; Bashiri2019 Figure2b-c visually inspected; Results, expression/purification and HPLC/LC-MS Methods read. | supports | Two separately represented purified-enzyme pairs produce dehydro-F420-0. Their joint inputs are explicit and do not establish FbiA-alone sufficiency, observed channeling or universal archaeal substrate exclusion. |
+| identity | https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01933/; Accession and domain locations; paired UniProt identity facts | supports | Frozen CofD/IPR002882/EX_DUF identity is unchanged. P9WP81v1 maps3-294 of331aa; A0QTG2v1 maps3-291 of327aa; O06974v1 maps7-292 of317aa; Q58653v1 maps5-275 of311aa. Reference maps do not verify synthetic inserts or Hasan strains. Current O06974 Y265/R301 agree with Results but Methods Y264A/R300A/His264 conflict; R301 lies outside the current match. Exact historical alias authority and additional clones remain open. CofC/FbiD and GlmS/YvcJ are distinct partner proteins. |
+| cellular-cofactor | https://pmc.ncbi.nlm.nih.gov/articles/PMC7253369/; Grinter2020 Figure2B, deletion validation and LC-MS Methods. | supports | fbiA deletion reduces detectable mature cofactor in stationary-phase cell extracts; the whole-gene dependency is indirect and not a direct reductase assignment. |
+| partner-specificity | https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/; Hasan2022 Figure6C, CofD Results and combined-assay Methods. | supports | Changing the partner shifts relative product fractions. Construct identities and the surprising Fo unit remain unresolved; channeling is not directly observed. |
+| glmr-contexts | https://pmc.ncbi.nlm.nih.gov/articles/PMC7525490/; Foulquier2020 Figures1/4,Table1 and Methods. | supports | Separate GlmS reaction regulation, source-labeled variant competence effects and mixed-particle scattering; preserve residue discrepancy and missing supplemental product inspection. |
+| source-coverage | evidence/PF01933/coverage.txt; Search and source-access ledger. | supports | Uncurated biochemical and member contexts remain follow-ups. Discovery or inaccessible material is not negative evidence. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01933 | data/families/PF01933.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Bashiri Figure2, Grinter Figure2, Hasan Figure6 and Foulquier Figures1/4 visually inspected; corresponding Results and Methods read. Foulquier Table1 parsed as text. Its HPAEC-PAD supplement and Hasan accession supplement returned challenge HTML. Pensinger biochemical Results/captions inspected only; no completed figure/construct review. No raw-data reanalysis, clone resequencing, exhaustive member review or independent expert endorsement.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261012T035103Z-pf01933-cofd-fbia-and-glmr-separated-causal-contexts
+title: 'PF01933: separated CofD/FbiA and GlmR causal contexts'
+started_at: '2026-10-12T03:48:47Z'
+finished_at: '2026-10-12T03:51:03Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Seven graphs retain10 OBSERVED effects,4 DIRECT,3 INDIRECT and3 UNRESOLVED,
+  across3 MECHANISTIC and4 PHENOTYPIC contexts. Six ledgers and two OPEN discussions
+  preserve unresolved access, construct, source and member limits. Partial same-agent
+  scientific assessment; IN_PROGRESS, not full family completion.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01933.yaml
+    sha256: 103b77a2de7dc4842398d722b786f04ac3e3705fec2e370275336420e163002f
+    role: context
+  - path: data/families/PF01933.yaml
+    sha256: 6d0544bf0a7b3d7195feedc9a374d79bf18d29e62cf4e8396f355b6a54ae32d6
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01933/bashiri-2019.txt
+    role: context
+    sha256: 783504f269f3ececbea762a21a1788bf75600311aaba01f37894252ca59dc4ee
+  - path: evidence/PF01933/identity.txt
+    role: context
+    sha256: 1a8bf969a075e18c400563fc4392bea489901dcfe73478de1aa1fd0e6c291214
+  - path: evidence/PF01933/grinter-2020.txt
+    role: context
+    sha256: 56115db21eb8d911caa959cabcced91a2d00a18820793df642369d4dd8bc2194
+  - path: evidence/PF01933/hasan-2022.txt
+    role: context
+    sha256: 057f3404a419d50c6311f9ac1fc763b6e99dd952713d2330c0da409b58495282
+  - path: evidence/PF01933/foulquier-2020.txt
+    role: context
+    sha256: 8ffd6fe3ff1c4ef4f63e49cb68d776de8faa14f4d16151c73782f36503763685
+  - path: evidence/PF01933/coverage.txt
+    role: context
+    sha256: 03e4089d0424df1dbb5642afc7f1320ea3e154c43afc840bdf39a27b164e2b41
+targets:
+- target_id: PF01933
+  path: data/families/PF01933.yaml
+  label: PF01933
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01933.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 286191fbde6eec7333c8ad9a6a603b6690c5492cb2ac27d8cf30c56aabbc6cc1
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Ascending uncurated Pfam after PF01931. All8296 families and existing
+    follow-ups remain in scope.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01933
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Older CofD biochemistry, exact catalytic mutant numbering, inaccessible
+      Hasan accessions and Foulquier product chromatograms, other cofactor pairs,
+      GlmR accessory uridyltransferase contexts, earlier morphogenesis,2026 modifications
+      and additional member branches remain open. Reviewed UniProt query is a71-entry
+      sample, not all14174 frozen proteins. No all-member or family-wide negative
+      conclusion.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01933
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6450877/
+  locator: Bashiri2019 Figure2b-c visually inspected; Results, expression/purification
+    and HPLC/LC-MS Methods read.
+  accessed_at: '2026-10-12T03:51:03Z'
+  support: supports
+  snapshot_sha256: 783504f269f3ececbea762a21a1788bf75600311aaba01f37894252ca59dc4ee
+  summary: Two separately represented purified-enzyme pairs produce dehydro-F420-0.
+    Their joint inputs are explicit and do not establish FbiA-alone sufficiency, observed
+    channeling or universal archaeal substrate exclusion.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01933/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-12T03:51:03Z'
+  support: supports
+  snapshot_sha256: 1a8bf969a075e18c400563fc4392bea489901dcfe73478de1aa1fd0e6c291214
+  summary: Frozen CofD/IPR002882/EX_DUF identity is unchanged. P9WP81v1 maps3-294
+    of331aa; A0QTG2v1 maps3-291 of327aa; O06974v1 maps7-292 of317aa; Q58653v1 maps5-275
+    of311aa. Reference maps do not verify synthetic inserts or Hasan strains. Current
+    O06974 Y265/R301 agree with Results but Methods Y264A/R300A/His264 conflict; R301
+    lies outside the current match. Exact historical alias authority and additional
+    clones remain open. CofC/FbiD and GlmS/YvcJ are distinct partner proteins.
+- evidence_id: cellular-cofactor
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC7253369/
+  locator: Grinter2020 Figure2B, deletion validation and LC-MS Methods.
+  summary: fbiA deletion reduces detectable mature cofactor in stationary-phase cell
+    extracts; the whole-gene dependency is indirect and not a direct reductase assignment.
+  accessed_at: '2026-10-12T03:51:03Z'
+  support: supports
+  snapshot_sha256: 56115db21eb8d911caa959cabcced91a2d00a18820793df642369d4dd8bc2194
+- evidence_id: partner-specificity
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+  locator: Hasan2022 Figure6C, CofD Results and combined-assay Methods.
+  summary: Changing the partner shifts relative product fractions. Construct identities
+    and the surprising Fo unit remain unresolved; channeling is not directly observed.
+  accessed_at: '2026-10-12T03:51:03Z'
+  support: supports
+  snapshot_sha256: 057f3404a419d50c6311f9ac1fc763b6e99dd952713d2330c0da409b58495282
+- evidence_id: glmr-contexts
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC7525490/
+  locator: Foulquier2020 Figures1/4,Table1 and Methods.
+  summary: Separate GlmS reaction regulation, source-labeled variant competence effects
+    and mixed-particle scattering; preserve residue discrepancy and missing supplemental
+    product inspection.
+  accessed_at: '2026-10-12T03:51:03Z'
+  support: supports
+  snapshot_sha256: 8ffd6fe3ff1c4ef4f63e49cb68d776de8faa14f4d16151c73782f36503763685
+- evidence_id: source-coverage
+  kind: search
+  reference: evidence/PF01933/coverage.txt
+  locator: Search and source-access ledger.
+  search_scope: PF01933,CofD,FbiA,GlmR,YvcK,UPF0052; current public family and reviewed-member
+    maps, primary article references and ignored/hidden-inclusive local search.
+  summary: Uncurated biochemical and member contexts remain follow-ups. Discovery
+    or inaccessible material is not negative evidence.
+  accessed_at: '2026-10-12T03:51:03Z'
+  support: supports
+  snapshot_sha256: 03e4089d0424df1dbb5642afc7f1320ea3e154c43afc840bdf39a27b164e2b41
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-12T03:51:03Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01933
+  kind: record_content
+  reference: data/families/PF01933.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-12T03:51:03Z'
+  support: context_only
+  snapshot_sha256: 6d0544bf0a7b3d7195feedc9a374d79bf18d29e62cf4e8396f355b6a54ae32d6
+  quote: "id: Pfam:PF01933\npfam_id: PF01933\nname: 2-phospho-L-lactate transferase\
+    \ CofD\nshort_name: CofD\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01933\n\
+    counters:\n  proteins: 14174\n  matches: 14214\n  proteomes: 10830\n  taxa: 17069\n\
+    \  structures: 13\n  alphafold_models: 9318\n  domain_architectures: 45\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002882\ndescription: This entry contains 2-phospho-L-lactate\
+    \ transferase (CofD), phosphoenolpyruvate transferase\n  and related sequences.\
+    \ CofD catalyses the fourth step in the biosynthesis of coenzyme F420, which is\n\
+    \  the transfer of the 2-phospholactate moiety from lactyl (2)diphospho-(5') guanosine\
+    \ (LPPG) to 7,8-didemethyl-8-hydroxy-5-deazariboflavin\n  (FO) with the formation\
+    \ of the L-lactyl phosphodiester of 7,8-didemethyl- 8-hydroxy-5-deazariboflavin\n\
+    \  (F420-0) and GMP. F420 is a flavin derivative found in methanogens, Mycobacteria,\
+    \ and several other\n  lineages. This enzyme is characterised so far in Methanocaldococcus\
+    \ jannaschii (Methanococcus jannaschii)\n  [[cite:PUB00013496]] but appears restricted\
+    \ to F420-containing species and is predicted to carry out\n  the same function\
+    \ in these other species. CofD monomer contains 12 beta- strands, seven of them\
+    \ form\n  a Rossmann fold, and 13 alpha-helices [[cite:PUB00050875]].\ncuration_history:\
+    \ history/records/PF01933\ndiscussions:\n- discussion_id: pf01933-construct-and-assay-conflicts\n\
+    \  prompt: Resolve construct identities, conflicting residue numbering and inaccessible\
+    \ supplementary controls.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ Reference-sequence mapping supports scoped protein effects without proving every\
+    \ clone or\n    elementary catalytic step.\n  evidence:\n  - reference: PMID:32994436\n\
+    \    supports: PARTIAL\n    evidence_source: primary_results_and_methods\n   \
+    \ explanation: Results Y265A/R301A conflict with Methods Y264A/R300A and His264;\
+    \ current O06974 agrees\n      with Results but does not verify the clone.\n \
+    \ - reference: PMID:35038903\n    supports: PARTIAL\n    evidence_source: primary_assay_and_figure\n\
+    \    explanation: Relative product fractions are supported; accession supplement\
+    \ and reported0.14nM Fo\n      remain unresolved.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-12'\n  notes: Retain current domain boundaries, especially R301 outside7-292;\
+    \ do not repair primary-source\n    numbering silently. Foulquier HPAEC-PAD supplementary\
+    \ chromatogram and Hasan TableS3 were inaccessible\n    challenge responses.\n\
+    - discussion_id: pf01933-functional-branches-and-coverage\n  prompt: Extend CofD\
+    \ and GlmR primary coverage without transferring activities across all family\
+    \ members.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Cofactor synthesis,\
+    \ GlmS regulation and accessory uridyltransferase evidence describe distinct\n\
+    \    experimental contexts.\n  evidence:\n  - reference: PMID:18252724\n    supports:\
+    \ PARTIAL\n    evidence_source: primary_source_followup\n    explanation: Earlier\
+    \ CofD mutation and binding studies need exact construct and assay reconciliation.\n\
+    \  - reference: PMID:36939339\n    supports: PARTIAL\n    evidence_source: primary_biochemical_results\n\
+    \    explanation: GlmR uridyltransferase Results were inspected but construct,\
+    \ figure and member-specific\n      curation remains open.\n  posed_by: Codex\n\
+    \  posed_date: '2026-10-12'\n  notes: See coverage ledger for Graupner2002, Braga2019,\
+    \ other Hasan pairs, earlier Bacillus phenotypes,\n    Enterococcus, Salmonella,2026\
+    \ GlmR modifications, YbhK and CuvA. No exhaustive family characterization\n \
+    \   or graphless-member negative is claimed.\ncausal_graphs:\n- graph_id: mtb-fbia-fbid-product-2019\n\
+    \  title: Paired M.tuberculosis enzymes produce dehydro-F420-0\n  scope: Bashiri2019\
+    \ Figure2b-c; purified FbiA and FbiD, not FbiA alone.\n  context: Synthetic N-His6\
+    \ FbiA expressed in M.smegmatis; purified partners with PEP,GTP,Fo and Mg in\n\
+    \    HEPESpH7.5 at37C.\n  family_mapping: Rv3261/FbiA reference P9WP81 sequencev1,331aa,taxon83332;\
+    \ PF01933 matches3-294. Exact\n    synthetic insert not audited; FbiD is a separate\
+    \ enzyme.\n  taxon: NCBITaxon:83332\n  scope_status: MECHANISTIC\n  limitations:\
+    \ Composite product formation does not observe EPPG channeling or assign FbiD/FbiB\
+    \ chemistry\n    to PF01933. The2-PL negative is pairing-specific; mature reduced\
+    \ F420 is not the measured product.\n  nodes:\n  - node_id: paired-reaction\n\
+    \    label: FbiA plus FbiD with PEP,GTP,Fo and Mg\n    node_type: STATE\n    grounding:\n\
+    \    - UniProtKB:P9WP81\n  - node_id: product\n    label: MS/MS-supported dehydro-F420-0\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: paired-product\n    subject: paired-reaction\n\
+    \    predicate: produces\n    object: product\n    mechanism: The complete purified-enzyme\
+    \ reaction yields the identified dehydro cofactor intermediate;\n      the two\
+    \ proteins form one tested input condition.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30952857\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6450877/\n      snippet:\
+    \ Tandem mass spectral identification\n      explanation: Figure2b FbiD reaction\
+    \ and Figure2c product fragmentation, with HPLC/LC-MS Methods.\n      cache_path:\
+    \ evidence/PF01933/bashiri-2019.txt\n      cache_sha256: 783504f269f3ececbea762a21a1788bf75600311aaba01f37894252ca59dc4ee\n\
+    - graph_id: mtb-fbia-mjan-cofc-product-2019\n  title: A mixed-species enzyme pair\
+    \ produces dehydro-F420-0\n  scope: Bashiri2019 Figure2b-c; M.tuberculosis FbiA\
+    \ with M.jannaschii CofC/MJ0887.\n  context: Purified N-His6 proteins with PEP,GTP,Fo\
+    \ and Mg in HEPESpH7.5 at37C; synthetic constructs expressed\n    in different\
+    \ hosts.\n  family_mapping: The PF01933 component is Rv3261/FbiA reference P9WP81v1,331aa,match3-294.\
+    \ M.jannaschii\n    CofC is not CofD/Q58653. Exact synthetic inserts not sequence-audited.\n\
+    \  scope_status: MECHANISTIC\n  limitations: This mixed-species reaction is not\
+    \ an archaeal native pathway. Its2-PL negative cannot\n    establish universal\
+    \ archaeal substrate exclusion; Hasan2022 resolves a partner-selection confound.\n\
+    \  nodes:\n  - node_id: mixed-reaction\n    label: Mtb FbiA plus Mjan CofC with\
+    \ PEP,GTP,Fo and Mg\n    node_type: STATE\n    grounding:\n    - UniProtKB:P9WP81\n\
+    \  - node_id: product\n    label: MS/MS-supported dehydro-F420-0\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: mixed-product\n    subject: mixed-reaction\n \
+    \   predicate: produces\n    object: product\n    mechanism: The specified cross-species\
+    \ enzyme pair produces the dehydro intermediate under the tested\n      reaction\
+    \ conditions.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:30952857\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC6450877/\n      snippet: Tandem mass\
+    \ spectral identification\n      explanation: Figure2b CofC reaction and Figure2c\
+    \ product identification; each assay still contains\n        Mtb FbiA.\n     \
+    \ cache_path: evidence/PF01933/bashiri-2019.txt\n      cache_sha256: 783504f269f3ececbea762a21a1788bf75600311aaba01f37894252ca59dc4ee\n\
+    - graph_id: msmeg-fbia-deletion-cofactor-2020\n  title: fbiA deletion reduces\
+    \ detectable mature cofactor\n  scope: Grinter2020 Figure2B; M.smegmatis mc2 155\
+    \ whole-gene deletion versus wild type.\n  context: Stationary-phase LBT cultures;\
+    \ extracted lysates analyzed by LC-MS. Otherwise-isogenic deletion\n    verified\
+    \ by whole-genome sequencing.\n  family_mapping: MSMEG_1830/FbiA reference A0QTG2v1,327aa,taxon246196;\
+    \ PF01933 matches3-291. Whole-gene\n    perturbation, not isolated-domain sufficiency.\n\
+    \  taxon: NCBITaxon:246196\n  scope_status: PHENOTYPIC\n  limitations: No fbiA\
+    \ rescue shown in this experiment. Mature cofactor accumulation is downstream\
+    \ of\n    multiple enzymes; absence of a detectable peak is not a quantitative\
+    \ zero or direct reduction chemistry.\n  nodes:\n  - node_id: deletion\n    label:\
+    \ fbiA deletion\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:A0QTG2\n\
+    \  - node_id: cofactor\n    label: Detectable mature F420 species in cell extracts\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: cofactor-loss\n    subject: deletion\n\
+    \    predicate: decreases\n    object: cofactor\n    mechanism: Removing fbiA\
+    \ lowers mature cofactor signals below detection in the tested extracts while\n\
+    \      wild type retains them.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:32430409\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7253369/\n      snippet:\
+    \ Mutagenic dissection\n      explanation: Figure2B fbiA versus wild-type LC-MS\
+    \ peaks, deletion validation and extract Methods.\n      cache_path: evidence/PF01933/grinter-2020.txt\n\
+    \      cache_sha256: 56115db21eb8d911caa959cabcced91a2d00a18820793df642369d4dd8bc2194\n\
+    - graph_id: msmeg-partner-product-fractions-2022\n  title: FbiA partner exchange\
+    \ changes relative product fractions\n  scope: Hasan2022 Figure6C; fixed M.smegmatis\
+    \ FbiD with Mjan CofD or Msmeg FbiA.\n  context: Purified N-His6 pairs, competing\
+    \ PEP/2-PL/3-PG substrates,GTP,Mg,Fo and HEPESpH7.4; LC-MS relative\n    product\
+    \ formation.\n  family_mapping: Reference anchors A0QTG2v1,327aa,match3-291 and\
+    \ Q58653v1,311aa,match5-275. TableS3 unavailable;\n    exact synthetic accessions,\
+    \ strain and clone versions unresolved, not asserted from reference maps.\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: Relative fractions do not establish absolute catalytic\
+    \ rates. Methods0.14nM Fo remains\n    unresolved. Proposed intermediate channeling\
+    \ and a specific residue mechanism were not observed.\n  nodes:\n  - node_id:\
+    \ partner-exchange\n    label: Replace Mjan CofD with Msmeg FbiA in the fixed-FbiD\
+    \ assay\n    node_type: PERTURBATION\n  - node_id: pep-fraction\n    label: Relative\
+    \ PEP-derived product fraction\n    node_type: STATE\n  - node_id: lactate-fraction\n\
+    \    label: Relative2-PL-derived product fraction\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: pep-fraction-increase\n    subject: partner-exchange\n    predicate:\
+    \ increases\n    object: pep-fraction\n    mechanism: Partner replacement shifts\
+    \ the measured product distribution toward the PEP-derived species\n      in the\
+    \ competitive assay.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:35038903\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n      snippet: Role of CofD\
+    \ in substrate specificity\n      explanation: Figure6C PEP bars and relative\
+    \ LC-MS assay Methods; not an absolute rate comparison.\n      cache_path: evidence/PF01933/hasan-2022.txt\n\
+    \      cache_sha256: 057f3404a419d50c6311f9ac1fc763b6e99dd952713d2330c0da409b58495282\n\
+    \  - edge_id: lactate-fraction-decrease\n    subject: partner-exchange\n    predicate:\
+    \ decreases\n    object: lactate-fraction\n    mechanism: The same partner exchange\
+    \ reduces the2-PL-derived fraction; this is a second readout of\n      the shared\
+    \ distribution, not an independent rate measurement.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:35038903\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n\
+    \      snippet: Role of CofD in substrate specificity\n      explanation: Figure6C2-PL\
+    \ bars with the competing-substrate assay, not a CofC-alone substrate exclusion.\n\
+    \      cache_path: evidence/PF01933/hasan-2022.txt\n      cache_sha256: 057f3404a419d50c6311f9ac1fc763b6e99dd952713d2330c0da409b58495282\n\
+    - graph_id: bsub-glmr-glms-assay-2020\n  title: GlmR and UDP-GlcNAc modulate the\
+    \ GlmS assay\n  scope: Foulquier2020 Figure1; purified B.subtilis168 proteins\
+    \ with separate GlmR and UDP-GlcNAc titrations.\n  context: His-tagged GlmR and\
+    \ GlmS; F6P,Gln,GNA-1,acetyl-CoA and DTNB coupled assay,pH7.4,37C; no-GlmS\n \
+    \   blanks subtracted.\n  family_mapping: GlmR/YvcK/BSU34760 reference O06974v1,317aa,taxon224308;\
+    \ PF01933 matches7-292. Whole\n    recombinant protein; GlmS is the separate partner\
+    \ enzyme.\n  taxon: NCBITaxon:224308\n  scope_status: MECHANISTIC\n  limitations:\
+    \ Purified-assay regulation is not isolated-domain catalysis or proof of an in-cell\
+    \ feedback\n    chain. Supplementary HPAEC-PAD confirmation is reported by the\
+    \ authors but was inaccessible for independent\n    inspection.\n  nodes:\n  -\
+    \ node_id: glmr-addition\n    label: GlmR addition to the GlmS reaction\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:O06974\n  - node_id: activity\n\
+    \    label: Background-corrected GlmS-dependent reaction signal\n    node_type:\
+    \ ACTIVITY\n  - node_id: sugar-addition\n    label: UDP-GlcNAc addition with GlmR\
+    \ present\n    node_type: PERTURBATION\n  edges:\n  - edge_id: reaction-stimulation\n\
+    \    subject: glmr-addition\n    predicate: increases\n    object: activity\n\
+    \    mechanism: Added GlmR stimulates the purified GlmS-dependent assay above\
+    \ its no-GlmR control.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:32994436\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC7525490/\n      snippet: GlmS activity\
+    \ is directly stimulated by GlmR\n      explanation: Figure1A-B, coupled-assay\
+    \ Methods and no-GlmS blank control.\n      cache_path: evidence/PF01933/foulquier-2020.txt\n\
+    \      cache_sha256: 8ffd6fe3ff1c4ef4f63e49cb68d776de8faa14f4d16151c73782f36503763685\n\
+    \  - edge_id: stimulation-attenuation\n    subject: sugar-addition\n    predicate:\
+    \ decreases\n    object: activity\n    mechanism: UDP-GlcNAc attenuates the GlmR-stimulated\
+    \ signal; the edge is conditional on GlmR and does\n      not identify a binding\
+    \ site by itself.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:32994436\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC7525490/\n      snippet: GlmS activity\
+    \ is directly stimulated by GlmR\n      explanation: Figure1B-C compares UDP-GlcNAc\
+    \ titration with and without GlmR.\n      cache_path: evidence/PF01933/foulquier-2020.txt\n\
+    \      cache_sha256: 8ffd6fe3ff1c4ef4f63e49cb68d776de8faa14f4d16151c73782f36503763685\n\
+    - graph_id: bsub-glmr-competence-2020\n  title: Two GlmR variants reduce transformation\
+    \ frequency\n  scope: Foulquier2020 Table1; B.subtilis168-background variants,\
+    \ using Results residue labels.\n  context: Chromosomal-DNA transformation assay;\
+    \ frequency normalized by viable-cell count. T14A control\n    not reduced; equal\
+    \ abundance cited from earlier work.\n  family_mapping: O06974v1,317aa,PF01933\
+    \ 7-292; current Y265/R301 agree with Results. Methods Y264A/R300A\n    and His264\
+    \ conflict. R301 outside the match; exact clone numbering unresolved.\n  taxon:\
+    \ NCBITaxon:224308\n  scope_status: PHENOTYPIC\n  limitations: Neither isolated-domain\
+    \ specificity nor mediation by GlmR-YvcJ binding is established.\n    Reported\
+    \ abundance control does not prove unchanged folding or all other activities.\n\
+    \  nodes:\n  - node_id: y265a\n    label: Source-labeled GlmR Y265A variant\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:O06974\n  - node_id:\
+    \ r301a\n    label: Source-labeled GlmR R301A variant\n    node_type: PERTURBATION\n\
+    \  - node_id: transformation\n    label: Transformation frequency relative to\
+    \ wild type\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: y265a-frequency\n\
+    \    subject: y265a\n    predicate: decreases\n    object: transformation\n  \
+    \  mechanism: The source-labeled Y265A strain has a lower measured transformation\
+    \ frequency than its\n      wild-type comparator.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:32994436\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7525490/\n\
+    \      snippet: Preventing the interaction GlmR-YvcJ affects competence efficiency\n\
+    \      explanation: Table1 SG522 versus168 and transformation Methods; retain\
+    \ numbering conflict rather\n        than claim a resolved residue mechanism.\n\
+    \      cache_path: evidence/PF01933/foulquier-2020.txt\n      cache_sha256: 8ffd6fe3ff1c4ef4f63e49cb68d776de8faa14f4d16151c73782f36503763685\n\
+    \  - edge_id: r301a-frequency\n    subject: r301a\n    predicate: decreases\n\
+    \    object: transformation\n    mechanism: The source-labeled R301A strain has\
+    \ a lower measured transformation frequency; its residue\n      is outside the\
+    \ current Pfam match.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:32994436\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC7525490/\n      snippet: Preventing\
+    \ the interaction GlmR-YvcJ affects competence efficiency\n      explanation:\
+    \ Table1 SG523 versus168 and transformation Methods, with domain-boundary and\
+    \ construct-numbering\n        limits.\n      cache_path: evidence/PF01933/foulquier-2020.txt\n\
+    \      cache_sha256: 8ffd6fe3ff1c4ef4f63e49cb68d776de8faa14f4d16151c73782f36503763685\n\
+    - graph_id: bsub-glmr-yvcj-scattering-2020\n  title: GlmR reduces large-particle\
+    \ scattering in a YvcJ mixture\n  scope: Foulquier2020 Figure4; purified-protein\
+    \ mixture, not a cellular competence experiment.\n  context: YvcJ with0.4mM UDP-GlcNAc,\
+    \ with or without7uM GlmR; dynamic light scattering at25C in Tris/NaCl/glycerol.\n\
+    \  family_mapping: GlmR reference O06974v1,317aa,PF01933 7-292. YvcJ is a separate\
+    \ partner; assay uses\n    full-length proteins rather than an isolated PF01933\
+    \ fragment.\n  taxon: NCBITaxon:224308\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ Mixed-particle hydrodynamic sizes do not independently resolve oligomer stoichiometry,\n\
+    \    assign every particle to YvcJ or show YvcJ enzymatic activation. No causal\
+    \ link to transformation\n    frequency is demonstrated here.\n  nodes:\n  - node_id:\
+    \ addition\n    label: GlmR addition to YvcJ plus UDP-GlcNAc\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:O06974\n  - node_id: large-particles\n    label:\
+    \ Large-particle component of the scattering distribution\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: large-particle-reduction\n    subject: addition\n    predicate:\
+    \ decreases\n    object: large-particles\n    mechanism: Adding GlmR reduces the\
+    \ large-size component observed in the mixture; the molecular identity\n     \
+    \ and dissolution mechanism remain unresolved.\n    directness: UNRESOLVED\n \
+    \   support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:32994436\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7525490/\n\
+    \      snippet: GlmR stabilizes YvcJ\n      explanation: Figure4A size distribution\
+    \ and4B correlation curves, with DLS Methods; not a direct\n        YvcJ activation\
+    \ assay.\n      cache_path: evidence/PF01933/foulquier-2020.txt\n      cache_sha256:\
+    \ 8ffd6fe3ff1c4ef4f63e49cb68d776de8faa14f4d16151c73782f36503763685\ncuration_events:\n\
+    - timestamp: '2026-10-12T03:38:19Z'\n  curator: Codex\n  action: CREATE\n  outcome:\
+    \ needs_followup\n  summary: Add scoped CofD/FbiA and GlmR causal contexts\n \
+    \ history_record: history/records/PF01933/2026-10-12T033819Z-codex-a1c77d.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Frozen CofD/IPR002882/EX_DUF identity is unchanged. P9WP81v1 maps3-294
+    of331aa; A0QTG2v1 maps3-291 of327aa; O06974v1 maps7-292 of317aa; Q58653v1 maps5-275
+    of311aa. Reference maps do not verify synthetic inserts or Hasan strains. Current
+    O06974 Y265/R301 agree with Results but Methods Y264A/R300A/His264 conflict; R301
+    lies outside the current match. Exact historical alias authority and additional
+    clones remain open. CofC/FbiD and GlmS/YvcJ are distinct partner proteins.
+  target_ids:
+  - PF01933
+  evidence_ids:
+  - identity
+  - primary
+  - cellular-cofactor
+  - partner-specificity
+  - glmr-contexts
+  - source-coverage
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: Paired cofactor formation is distinct from whole-cell fbiA deletion and
+    relative competitive-product distributions. The latter measure compositional changes,
+    not independent absolute turnover rates. GlmR regulation of a GlmS-dependent assay
+    is retained without assigning isolated-domain catalysis or a cellular feedback
+    chain. Variant transformation effects are indirect and keep numbering/domain limits.
+    Mixed-solution scattering remains unresolved rather than proving YvcJ activation
+    or competence mediation. Primary diagrams and static structures are not promoted
+    to observed elementary reactions.
+  target_ids:
+  - PF01933
+  evidence_ids:
+  - primary
+  - native
+  - cellular-cofactor
+  - partner-specificity
+  - glmr-contexts
+  - source-coverage
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Older CofD biochemistry, exact catalytic mutant numbering, inaccessible
+    Hasan accessions and Foulquier product chromatograms, other cofactor pairs, GlmR
+    accessory uridyltransferase contexts, earlier morphogenesis,2026 modifications
+    and additional member branches remain open. Reviewed UniProt query is a71-entry
+    sample, not all14174 frozen proteins. No all-member or family-wide negative conclusion.
+  target_ids:
+  - PF01933
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01933-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve source conflicts and extend separately mapped CofD and GlmR branches
+  description: Obtain missing supplementary controls and accession tables, reconcile
+    GlmR residue numbering and older CofD constructs, inspect uridyltransferase figures
+    and member identities, and extend species-specific causal contexts without adopting
+    cross-family partner chemistry. Keep relative versus absolute effects and current
+    domain boundaries explicit; retain IN_PROGRESS until scope-complete successor
+    evidence supports a different status.
+  target_ids:
+  - PF01933
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - cellular-cofactor
+  - partner-specificity
+  - glmr-contexts
+  - source-coverage
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01933.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Obtain missing supplementary controls and accession tables, reconcile
+    GlmR residue numbering and older CofD constructs, inspect uridyltransferase figures
+    and member identities, and extend species-specific causal contexts without adopting
+    cross-family partner chemistry. Keep relative versus absolute effects and current
+    domain boundaries explicit; retain IN_PROGRESS until scope-complete successor
+    evidence supports a different status.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01933
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Bashiri Figure2, Grinter Figure2, Hasan Figure6 and Foulquier Figures1/4 visually
+  inspected; corresponding Results and Methods read. Foulquier Table1 parsed as text.
+  Its HPAEC-PAD supplement and Hasan accession supplement returned challenge HTML.
+  Pensinger biochemical Results/captions inspected only; no completed figure/construct
+  review. No raw-data reanalysis, clone resequencing, exhaustive member review or
+  independent expert endorsement.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

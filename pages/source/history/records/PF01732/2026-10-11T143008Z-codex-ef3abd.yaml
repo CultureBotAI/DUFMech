@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01732
+  path: curation/families/PF01732.yaml
+session:
+  id: 2026-10-11T143008Z-codex-ef3abd
+  timestamp: '2026-10-11T14:30:08Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate four scoped PF01732 MIB-MIP causal graphs
+  details: 'Added twenty observed effects: eleven direct purified-preparation effects
+    for antibody cleavage and antigen-complex dissociation, and nine indirect cellular
+    locus/ATPase effects. Verified exact GM12 ACU78687.1/UniParc mapping and retained
+    residue, construct, protocol, partner and family-transfer limits. Primary main
+    figures and 2026 serum-free control supplement inspected. Frozen identity unchanged;
+    partial coverage, IN_PROGRESS. Review and generated checks follow.'
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC4868467/
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC7935358/
+  - https://doi.org/10.1371/journal.ppat.1014043

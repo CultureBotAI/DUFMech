@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01638
+  path: data/families/PF01638.yaml
+session:
+  id: 2026-10-11T120923Z-codex-690454
+  timestamp: '2026-10-11T12:09:23Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific causal-graph self-review for PF01638
+  details: Validated the effective projection and reviewed its evidence-backed assay
+    effects, exact protein/domain scope, controls, direction and unresolved alternatives.
+    Saved the native structured YAML/Markdown assessment with NEEDS_FOLLOWUP, partial
+    coverage and self_review independence. Open context/construct follow-ups remain;
+    status stays IN_PROGRESS and no publication or exhaustive family review is claimed.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T120914Z-pf01638-hxlr-chemical-binding-and-reporter-contexts/review.yaml

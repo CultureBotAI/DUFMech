@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01934
+  path: data/families/PF01934.yaml
+session:
+  id: 2026-10-12T042108Z-codex-00bb97
+  timestamp: '2026-10-12T04:21:08Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of PF01934 HepT and fusion causal graphs.
+  details: Completed a same-agent review of16 graphs and28 observed effects with native
+    projection validation, six hash-anchored evidence ledgers, primary-source quotation
+    checks, inspected assay figures and2026 supplement/RefSeq construct reconciliation.
+    Saved pass_with_limitations and native NEEDS_FOLLOWUP with an open member/source/physiology
+    finding; semantic digest c716584a71ec4994e2931f9ea42dd797769573bb899f3e852d265a0793ba7207.
+    Confirmed the mass-accounting correction retained by EDIT2026-10-12T041851Z-codex-61b5eb.
+    Status remains IN_PROGRESS; no full family completion, independent expert endorsement
+    or publication claimed.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T042052Z-pf01934-hept-ampylation-and-fusion-causal-contexts/review.yaml

@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01950
+  path: data/families/PF01950.yaml
+session:
+  id: 2026-10-12T083413Z-codex-3a7b55
+  timestamp: '2026-10-12T08:34:13Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial PF01950 scientific self-review of eight scoped experimental
+    effects
+  details: Retained reviews/structured/20261012T083350Z-pf01950-thermococcus-hydrolysis-and-conditional-effects/review.yaml
+    and derived Markdown. Scientific self-review ran 08:30:56-08:33:50Z; semantic
+    digest 6029671d96f8a16ce2d1bda2ba8c9aca2ad0e3720b47c169335290c39f8ff1fa. Five
+    graphs distinguish purified F6P chemistry, conditional synthetic-medium growth,
+    rich-medium extract activity and strain-specific carbon-regimen responses. Native
+    projection/overlay and exact primary quotations/evidence hashes pass. Main later
+    bifunctionality methods, historical preparations, selective-activity rescue, carbon
+    regulation and additional member evidence remain open. NEEDS_FOLLOWUP/pass_with_limitations,
+    partial coverage, same agent, IN_PROGRESS; no independent endorsement, full-family
+    completion or publication.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T083350Z-pf01950-thermococcus-hydrolysis-and-conditional-effects/review.yaml

@@ -1,0 +1,132 @@
+pfam_id: PF01837
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01837
+causal_graphs:
+  - graph_id: miyazaki-duf39-pooled-fitness
+    title: DvMF_1464 insertion mutants have a methionine-rescuable fitness defect
+    scope: Pooled barcoded transposon mutants of D. vulgaris Miyazaki F, measuring relative abundance of DvMF_1464 insertion strains during lactate/sulfate growth; not a clean deletion, individual growth curve or purified DUF39 reaction.
+    context: Figure 3 compares defined lactate/sulfate medium without added amino acids with supplementation, including L-methionine at 1 or 10 mM. Pools are recovered in rich medium, transferred at OD600 0.02 and assayed at saturation by barcode sequencing. Miyazaki-specific methods describe anaerobic, unshaken Hungate cultures with 1 mM sulfide and 10 mL medium; generic fitness methods say 5 mL. Exact Figure 3 volume, temperature and elapsed time remain unverified.
+    family_mapping: DvMF_1464 maps to NCBIProtein:ACL08412.1, CP001197.1 positions 1794909-1796081, and the identical 390-aa sequence in UniParc UPI00018940C6, with PF01837 at 22-380. Historical UniProtKB B8DLN6 is deleted because it is not in a reference proteome; it is not an unresolved protein identity. The taxon 883 archive now uses Nitratidesulfovibrio vulgaris for the same Miyazaki F strain.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:883
+    limitations: Fitness is a normalized change in mutant abundance relative to the pool, not an absolute growth rate or a wild-type-versus-deletion monoculture comparison. Nutritional rescue is not genetic complementation. Insertion polarity, cross-feeding and insertion-level contributions were not independently resolved. Partial cysteine rescue and the different homoserine-dehydrogenase locus are not proof of this protein's catalytic substrate or a direct sulfur-transfer step. No isolated-domain or family-wide mechanism is assigned.
+    nodes:
+      - node_id: dvmf1464-insertions
+        label: Transposon disruption of DvMF_1464 in the Miyazaki mutant pool
+        node_type: PERTURBATION
+        grounding:
+          - NCBIProtein:ACL08412.1
+      - node_id: methionine-added-to-mutant-pool
+        label: L-methionine addition to the DvMF_1464-containing mutant pool
+        node_type: PERTURBATION
+      - node_id: dvmf1464-relative-fitness
+        label: Relative fitness of DvMF_1464 insertion mutants during pooled growth
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: insertions-decrease-minimal-medium-fitness
+        subject: dvmf1464-insertions
+        predicate: decreases
+        object: dvmf1464-relative-fitness
+        mechanism: Without added amino acids, DvMF_1464 insertion mutants decline in normalized relative abundance during growth, producing negative gene-fitness values. This is a conditional perturbation phenotype measured against the pool baseline.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:29324779
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5764234/
+            snippet: were important for growth in minimal media
+            explanation: The DvMF_1464 row of visually inspected Figure 3 and the adjacent results support negative pooled fitness; barcode methods define the endpoint. It is not a measurement of homocysteine synthesis or an individually complemented deletion.
+            cache_path: evidence/PF01837/price-2018-duf39.txt
+            cache_sha256: 4ea0c146f9c9c538677ffc501d586c07c8a76153c7fc191b27a55d8ec508ead7
+          - reference: https://rest.uniprot.org/uniparc/UPI00018940C6.json
+            source_url: https://rest.uniprot.org/uniparc/UPI00018940C6.json
+            snippet: 'database: Pfam; databaseId: PF01837; locations: 22-380, inclusive'
+            explanation: Exact-sequence archival mapping linked to NCBI ACL08412.1 and the paper's locus/strain; not experimental evidence for the phenotype.
+            cache_path: evidence/PF01837/DvMF1464-identity.txt
+            cache_sha256: e3f1fa5a527f1a142216ccbc40566cdf572c7601b36811e27172046c9df05cd5
+      - edge_id: methionine-increases-mutant-fitness
+        subject: methionine-added-to-mutant-pool
+        predicate: increases
+        object: dvmf1464-relative-fitness
+        mechanism: Adding L-methionine to the defined-medium mutant-pool assay relieves the negative DvMF_1464 gene-fitness phenotype compared with the unsupplemented condition; the source context includes the mutant pool rather than methionine as an independently sufficient protein activity.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:29324779
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5764234/
+            snippet: mutants in these genes were rescued by added methionine
+            explanation: Figure 3's DvMF_1464 row and caption support the nutritional-rescue comparison at the stated millimolar doses. The grouped cysteine mean is not assigned to this single gene, and a biochemical conversion is not inferred.
+            cache_path: evidence/PF01837/price-2018-duf39.txt
+            cache_sha256: 4ea0c146f9c9c538677ffc501d586c07c8a76153c7fc191b27a55d8ec508ead7
+          - reference: https://rest.uniprot.org/uniparc/UPI00018940C6.json
+            source_url: https://rest.uniprot.org/uniparc/UPI00018940C6.json
+            snippet: 'locus_tag: DvMF_1464'
+            explanation: Identifies the focal mutant gene and its family; shared-sequence records from other taxa are not substituted for Miyazaki F.
+            cache_path: evidence/PF01837/DvMF1464-identity.txt
+            cache_sha256: e3f1fa5a527f1a142216ccbc40566cdf572c7601b36811e27172046c9df05cd5
+  - graph_id: g20-duf39-individual-mutant-growth
+    title: Dde_3007 disruption reduces minimal-medium plate growth in G20
+    scope: Individual D. alaskensis G20 transposon mutant JK00771, wild type and plasmid controls in Figure 4C; separate from the 2014 and 2018 pooled-fitness assays.
+    context: JK00771 Dde_3007::Tn5 and its empty-vector pMO9075 derivative are compared with G20 and JK00771 carrying pJK2. The plate image says MOLS4, whereas the caption says LS4D; the exact minimal lactate/sulfate formulation remains unresolved. General culture conditions are anaerobic 30 C, but the plate assay duration is not established. Figure 4D separately shows homocysteine rescue without establishing its dose here.
+    family_mapping: Dde_3007 is reference UniProtKB:Q30WZ5, sequence version 1, 421 aa, PF01837 at 53-411, and NCBI ABB39801.1 on CP000112.1 positions 2993369-2994634. The paper's sequence-verified pJK2 uses revised start 2993462, corresponding to reference residue 32. Assuming the same stop predicts a 390-aa product and interval 22-380; this calculation is not an independently retrieved full clone sequence. The taxon 207559 current name is Oleidesulfovibrio alaskensis G20.
+    scope_status: PHENOTYPIC
+    taxon: NCBITaxon:207559
+    limitations: The endpoint is visible plate growth, not a quantitative colony count, direct reaction assay or proof of an isolated-domain function. pJK2 complementation supports gene dependence; exact insertion position and clone junctions remain unverified because supplements were inaccessible. The source's O-phosphohomoserine pathway is proposed, and later work questions homoserine participation. No such catalytic step or universal persulfide mechanism is adopted.
+    nodes:
+      - node_id: dde3007-disruption
+        label: Dde_3007 transposon disruption in JK00771
+        node_type: PERTURBATION
+        grounding:
+          - UniProtKB:Q30WZ5
+      - node_id: minimal-plate-growth
+        label: Visible growth on the Figure 4C minimal lactate/sulfate plate
+        node_type: PHENOTYPE
+    edges:
+      - edge_id: disruption-decreases-plate-growth
+        subject: dde3007-disruption
+        predicate: decreases
+        object: minimal-plate-growth
+        mechanism: The insertion mutant and empty-vector control show deficient plate growth relative to wild type, while pJK2 restores growth, supporting a locus-dependent cellular phenotype without resolving the metabolic reaction.
+        directness: INDIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:24865553
+            source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4045070/
+            snippet: we complemented the methionine auxotrophy
+            explanation: Visually inspected Figure 4C and genetic-complementation methods establish the insertion phenotype and rescue. The MOLS4-image versus LS4D-caption discrepancy and revised construct start are retained rather than silently normalized.
+            cache_path: evidence/PF01837/kuehl-2014-duf39.txt
+            cache_sha256: 6dfff3064a49efa1d8aa1feda776d9b08df2f68e1cc601fc31db53c72111d7b5
+          - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q30WZ5/entry/pfam/PF01837/
+            source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q30WZ5/entry/pfam/PF01837/
+            snippet: 'entry accession: PF01837; family interval: 53-411, inclusive'
+            explanation: Maps the reference locus, with the paper's revised-start distinction explicitly retained; not evidence that the complementation product is the unchanged 421-aa annotation.
+            cache_path: evidence/PF01837/Dde3007-identity.txt
+            cache_sha256: 2b7b67d20171a0d9ba77b94e8b39e7a183462e8930cc35391f25a3c176ce92a6
+discussions:
+  - discussion_id: duf39-assay-resolution-and-biochemistry
+    prompt: Resolve assay and construct details and inspect member-specific biochemical evidence before adding DUF39 reaction steps.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: The retained graphs establish conditional genetic and nutritional effects in two bacterial strains. Neither proves sulfur transfer, a thioaldehyde intermediate, isolated-domain catalysis or the functions of archaeal CBS/ferredoxin fusions.
+    evidence:
+      - reference: PMID:29324779
+        supports: PARTIAL
+        evidence_source: full_text
+        explanation: Figure 3 supports pooled fitness and methionine rescue; strain-specific and generic methods differ on culture volume. Insertion-level data, exact timing and genetic complementation of DvMF_1464 remain outside this assessment.
+      - reference: PMID:24865553
+        supports: PARTIAL
+        evidence_source: full_text
+        explanation: Figure 4 and complementation methods support the G20 plate phenotype; the image/caption medium discrepancy, full pJK2 junctions and insertion coordinate need follow-up. Supplemental PDF/XLSX retrieval returned HTML or HTTP 403.
+      - reference: PMID:25938369
+        supports: PARTIAL
+        evidence_source: abstract
+        explanation: Archaeal homocysteine synthesis from aspartate semialdehyde and hydrogen sulfide is a primary biochemical lead; its full assays and tested constructs were not independently inspected here.
+      - reference: PMID:28165724
+        supports: PARTIAL
+        evidence_source: abstract
+        explanation: MA1821 persulfide evidence is a distinct archaeal lead. The abstract's SepCysS single-turnover result must not be transferred to MA1821 or the bacterial proteins.
+    posed_by: Codex
+    posed_date: '2026-10-11'
+    notes: Preserve the historical UniProt deletion and corrected G20 start. Nutritional rescue is not the same as genetic rescue. Do not merge the 2014 proposed homoserine route and the later alternate model into an observed chain, or infer protein partners from cofitness alone.

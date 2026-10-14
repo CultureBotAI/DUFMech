@@ -1,0 +1,29 @@
+PF01901 evidence assessment: Sheng et al.,2020
+PMID32316415;doi:10.3390/microorganisms8040580
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7232329/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7232329/fullTextXML
+Inspected2026-10-11 UTC: selected Methods/Results concerning the wzy mutant,
+strain table and original Figure1A-D. Other curli engineering is outside scope.
+Minimal quotation: "biofilm-negative".
+
+Figure1B compares the parental O157 ATCC43895 with named transposon mutants.
+The wzy-Tn5 tube has much less crystal-violet ring staining than the parent.
+The caption identifies a static37 C tube assay. The30 C plate library screen
+in1A is a separate preliminary readout, not a quantitative replicate of1B.
+Retain the direction of lower tube staining rather than an exact zero biomass.
+The authors report insertion-junction sequencing followed by alignment, but
+the exact wzy junction, mutant sequence and allele-specific rescue are not
+established by the inspected material. csgB complementation is not wzy rescue.
+Whole-gene disruption can alter envelope biology and neighboring expression;
+it does not identify direct PF01901 chemistry or individual catalytic residues.
+
+Figure1D shows wzy-Tn5 intracellular recovery comparable to parental43895 in
+the MAC-T assay; the striking reduction is in the csgB mutant. Do not turn the
+paper's broad Figure1 title into a wzy-dependent invasion-defect edge. The
+authors also report retained Congo-red binding in the LPS mutants,with reduced
+intensity described as data not shown. A dye assay is not specific curli mass.
+The family mapping is reference-level as detailed in identity.txt,not a
+sequence-confirmed assay culture. No independent wzy complementation was read.
+The2024study reuses these O-antigen mutants and is not a second independently
+generated wzy genotype. Its residual ring/biomass result constrains any claim
+that this allele completely abolishes biofilm formation in every condition.

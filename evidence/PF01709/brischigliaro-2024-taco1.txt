@@ -1,0 +1,61 @@
+Primary evidence assessment, 2026-10-11 UTC
+Brischigliaro et al., PMID39036954, DOI10.1093/nar/gkae645.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11381339/
+https://academic.oup.com/nar/article/52/16/9710/7717834
+Read selected Results, cell/construct/pulse-label/profiling Methods and captions.
+Visually inspected main Figures1/2 and publisher supplement FigureS3 (PDFp4)
+and TableS4 (PDFp9). Supplement p7-10 resource/sequence tables read as text.
+
+Minimal quotation anchors: "newly synthesized"; "Relative ribosome
+occupancies". Figure1D and Figure2D captions supply these terms.
+
+Human HEK293T ATCC CRL3216 cells at37C/5%CO2, high-glucose DMEM with10%FBS,
+pyruvate/uridine/GlutaMAX. Exon1 CRISPR pool was cloned, screened by TACO1
+immunoblot, and edited regions subcloned for Sanger sequencing. Exact lesions
+are not enumerated in the inspected Methods/resources. OriGene TACO1 ORF
+was used for rescue, with tagged/untagged and full/delta5-CMV6 variants in
+Methods. Resources distinguish ordinary TACO1, TACO1-FLAG and TACO1-OE.
+Figures1/2 label the ordinary rescue, but complete per-panel clone sequence
+and promoter assignment remain unverified; do not identify it as FLAG-OE.
+
+Figure1C/D compares WT, KO+empty vector and KO+TACO1. Thirty-minute100uCi
+35S-methionine pulse after methionine-free preincubation, with emetine blocking
+cytosolic translation;17.5% SDS-PAGE, autoradiography and beta-actin loading.
+Methods print100ul/ml emetine without stock strength; do not silently replace
+with a mass concentration. Newly made full-length COX1 is severely reduced
+(roughly10%remaining) and COX3 moderately reduced in KO. Rescue restores both
+toward WT. Quantification uses3biological replicates, mean/SD and two-way
+ANOVA/Dunnett comparisons. No absolute synthesis-rate constant is assigned.
+Figure1F COX1 RNA increases rather than decreases; no transcription activation
+arrow or RNA-decay rate is established. Extra pulse bands do not identify
+each exact cleavage/termination position. These are whole-cell INDIRECT effects.
+
+Figure2D: mitoribosome profiling in WT, KO and reconstituted cells,80%confluent,
+RNaseI footprints from55S monosomes. Reads25-45nt aligned to the mitochondrial
+transcriptome; codon counts normalized within each transcript. Sliding5-aa
+windows grouped by0,1,2,3prolines and summed occupancies normalized to WT.
+The2-Pro and3-Pro bins rise in KO; both fall after TACO1 reconstitution but
+the3-Pro bar remains above WT. These are normalized footprint occupancies,
+not directly measured transit times, rates, collision frequencies or absolute
+ribosome numbers. No plotted replicate dispersion in Figure2D is claimed.
+
+Figure2C and FigureS3B support COX1 site-specific peaks and their alleviation;
+TableS4 distinguishes affected and unaffected motifs. COX1 VYPPLA and COX3
+HWPPTG are listed without a KO stall; some non-Pro-rich sites also pause
+(TableS6 text). Two prolines per5-aa window does not necessarily mean an
+adjacent PP motif. Do not universalize every polyproline site or transfer all
+human motifs to mouse. The gene's transcript-level share is not a direct
+initiation-rate assay. Proposed collision-triggered termination and PTC
+stabilization are not represented as directly observed causal microsteps.
+
+Methods describe P-site offsets15-18nt while Results discuss a12-nt offset
+from a32-nt footprint. Aggregate bin observations are retained without raw
+read reprocessing or claiming independently reproduced residue-level peaks.
+The cybrid Methods/Results differ on codon542/342; no exact cybrid-stop edge
+is curated. Interaction screens, bL27m substitutions and all additional
+polyproline/non-Pro sites require separate member/context review.
+
+PMC supplement URLs returned HTML challenge pages; the publisher-linked ZIP
+was successfully inspected. It contains the main supplementary PDF, separate
+S2/S3 interaction tables and SD1 sequence alignments. The latter separate
+files were not independently analyzed. This is partial source coverage.

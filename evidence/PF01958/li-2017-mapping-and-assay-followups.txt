@@ -1,0 +1,47 @@
+Li et al. 2017, PMID:28801651; doi:10.1038/s41598-017-05522-7.
+Inspected 2026-10-12 by Codex.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC5554190/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5554190/fullTextXML
+https://www.nature.com/articles/s41598-017-05522-7.pdf
+Full primary XML Results/Methods/tables read; downloaded publisher PDF pages
+2,4,5 visually inspected (Figure1, Figures2/3 and Tables3/4). Figure4
+sequence-alignment image and remaining PDF pages were not visually inspected.
+The source is CC BY4.0; this is a paraphrased assessment, not a full-text copy.
+
+Exact short extract: "very low level"
+
+The experiments use synthesized, codon-optimized genes expressed in E. coli;
+purified KpnAspDH (K. pneumoniae34618) and DelAspDH (Delftia sp.Cs1-4)
+carry C-terminal His6 tags. Table2 reports oxidative and reductive activity;
+Methods define these by NAD(P)H absorbance at340nm, not product-specific MS.
+OAA reduction uses ammonium chloride at pH8.2; oxidation uses L-Asp atpH10.
+These conditions must not be merged with the2003 Thermotoga conditions.
+
+Figure2 visibly assigns pH8.5 optimum to Kpn andpH8.0 toDel, agreeing
+with Results; Discussion reverses those assignments. Figure3b shows
+markedly greater Del thermal stability under the20-minute preincubation.
+Figure1A includes separate C/C-prime lanes plus1-6/1-prime-6-prime;
+its legend lists seven identities against six numbered lanes. Figure1B's
+purified lanes1/2 are expresslyKpn/Del. Do not silently normalize theA-lane
+legend or infer quantitative purity from the image alone.
+Reu/Bja low crude NADPH rates are reversed between Results andTable2,
+and the Results pointer toTable1 points to primers rather than activity.
+Kpn crude NADH activity was not detected, whereas Table4 reports NADH
+kinetics for purifiedKpn; this is a context-dependent discrepancy, not a
+demonstration that all Kpn preparations cannot useNADH.
+
+Construct-to-accession/domain mapping remains open. Complete article XML
+contains strain names, primers and a sequence-alignment figure but no
+experimentally validated current UniProt crosswalk was established here.
+A current UniProt search for Delftia/PF01958 returned four reference proteins
+from other strains/species, none labeledCs1-4. That search is not a census
+of historical/retired entries or proofCs1-4 lacks the protein. Q0K391 isH16,
+notJMP134; do not attachJMP134 experiments to it. Poor expression of the
+126-aa Roseibacterium construct does not establish isolated-domain inactivity.
+
+Next: inspectFigure4 at high resolution, map exact source sequences and
+tag boundaries through primary genomic records, resolve the label conflicts,
+then add separate readout/stability contexts. Also inspect full primary
+PMID16731057(A.fulgidus2006), PMID17651440(structure2007),
+PMID21468714(PAO12011), PMID21821928(JMP1342011),
+PMID23795474(nitrogen-fixers2013) and newer member studies.

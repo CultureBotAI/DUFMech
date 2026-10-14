@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01954
+  path: data/families/PF01954.yaml
+session:
+  id: 2026-10-12T105829Z-codex-936139
+  timestamp: '2026-10-12T10:58:29Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review PF01954 graphless evidence and cross-family exclusions
+  details: Completed a same-agent partial scientific review of comparative predictions,
+    O28071/2NWT scope, profile/deposition discrepancies and the later TA supplement
+    mapped to other Pfam families. Native validation and exact construct/member checks
+    pass. Retained review binds five evidence ledgers and current semantic digest353d02ad59639beefe3bcb4912cb972259e71204dc3961a15459cae71ed9da48.
+    No causal graph or family-wide absence claim; IN_PROGRESS with three OPEN discussions.
+    Additional members and primary-context coverage remain open.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T105749Z-pf01954-af2212-prediction-structure-and-cross-family-boundaries/review.yaml

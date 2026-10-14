@@ -4,7 +4,7 @@ name: Domain of unknown function (DUF397)
 short_name: DUF397
 seed_status: UNKNOWN_CANDIDATE
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF04149
 counters:
   proteins: 37657
@@ -22,6 +22,132 @@ provenance:
   source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/
 interpro_id: InterPro:IPR007278
 description: The function of this family is unknown.
+curation_history: history/records/PF04149
+causal_graphs:
+- graph_id: scr2-act-induction
+  title: Scr2-dependent actinorhodin induction
+  scope: Scr2 (SCO4442; UniProtKB:Q9KZY4), not all DUF397 proteins or an isolated domain.
+  context: S. coelicolor M145 and scr2-deletion derivatives, Scr1 overexpression, liquid YES plus xylose,
+    eight days.
+  family_mapping: UniProt Q9KZY4 sequence version 1 is 63 residues; its Pfam PF04149 annotation spans
+    residues 10-62. The experiment perturbs the whole gene.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:100226
+  limitations: No direct Scr1-Scr2 binding or catalytic mechanism established here; no family-wide transfer.
+    Other media, times and paralogs require separate graphs.
+  nodes:
+  - node_id: scr2-present
+    label: Scr2 present in a Scr1-overexpression background
+    node_type: STATE
+    grounding:
+    - UniProtKB:Q9KZY4
+  - node_id: induced-act
+    label: Scr1-induced actinorhodin production
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: scr2-required-for-act
+    subject: scr2-present
+    predicate: required_for
+    object: induced-act
+    mechanism: Loss of scr2 prevents induction by Scr1 alone; joint expression restores it. This is a
+      conditional requirement, not sufficiency of Scr2.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30524403
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6262351/
+      snippet: these two genes must act in conjunction
+      explanation: Figure 3A-B compares deletion strains and expression constructs, with empty-vector
+        controls and three independent experiments; supports the scoped phenotype dependency.
+      cache_path: evidence/PF04149/santamaria-2018-scr2.txt
+      cache_sha256: c97531aa06048cb9f369adde23d447f188da91fa169d533ecce0a5d7be0bb1a5
+    - reference: https://rest.uniprot.org/uniprotkb/Q9KZY4.json
+      source_url: https://rest.uniprot.org/uniprotkb/Q9KZY4.json
+      snippet: 'orderedLocusNames: SCO4442'
+      explanation: Identity/domain mapping only; the causal evidence comes from the primary experiment,
+        not this automated annotation.
+      cache_path: evidence/PF04149/uniprot-Q9KZY4-identity.txt
+      cache_sha256: 30972462904744d03cccc74c036a9dfc1c2e10ff1a91674bb4062aa2e8d5177f
+- graph_id: sco7615-7616-deletion-r2ye
+  title: SCO7615/SCO7616 deletion on R2YE
+  scope: Joint-gene perturbation in S. coelicolor M145, not isolated SCO7616 activity.
+  context: Solid R2YE, day 7; wild-type M145 comparator.
+  family_mapping: SCO7616 is UniProtKB:Q9F3E1, sequence version 1, 89 residues; current Pfam PF04149 feature
+    spans 27-73. The study's Table 2 instead reports 27-63.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:100226
+  limitations: Qualitative pigmentation phenotype; neither individual-gene contributions nor biochemical
+    mechanism resolved. NMMP has the opposite direction.
+  nodes:
+  - node_id: pair-deletion
+    label: Joint SCO7615/SCO7616 deletion
+    node_type: PERTURBATION
+  - node_id: act-production
+    label: Actinorhodin production
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: pair-deletion-decreases-act
+    subject: pair-deletion
+    predicate: decreases
+    object: act-production
+    mechanism: Double deletion reduces the phenotype; joint complementation supports locus-level causality.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:37492264
+      source_url: https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1217350/full
+      snippet: little or no ACT production
+      explanation: Results and Figure 5E image; Figure 6C includes joint complementation and empty-vector
+        controls. The Figure 5 caption mislabels panels.
+      cache_path: evidence/PF04149/riascos-2023-sco7615-7616.txt
+      cache_sha256: 6bb60a3bfd0ef6ca08c86664ee1f71d14cdcd279fb9a03a17c2adfccc3dd3357
+    - reference: https://rest.uniprot.org/uniprotkb/Q9F3E1.json
+      source_url: https://rest.uniprot.org/uniprotkb/Q9F3E1.json
+      snippet: 'orderedLocusNames: SCO7616'
+      explanation: Identity and current domain coordinates only, not causal evidence.
+      cache_path: evidence/PF04149/uniprot-Q9F3E1-identity.txt
+      cache_sha256: b611e4b689c0905e1fda9a47069640bbba1c3538f4b27f32afbbd4bc2d97966d
+- graph_id: sco7615-7616-deletion-nmmp
+  title: SCO7615/SCO7616 deletion on NMMP
+  scope: Joint-gene perturbation in S. coelicolor M145, not isolated SCO7616 activity.
+  context: Solid NMMP, day 7; wild-type M145 comparator.
+  family_mapping: SCO7616 is UniProtKB:Q9F3E1, sequence version 1, 89 residues; current Pfam PF04149 feature
+    spans 27-73. The study's Table 2 instead reports 27-63.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:100226
+  limitations: Qualitative pigmentation phenotype; no NMMP rescue demonstrated here. R2YE rescue cannot
+    establish medium-independent direction or a domain-specific mechanism.
+  nodes:
+  - node_id: pair-deletion
+    label: Joint SCO7615/SCO7616 deletion
+    node_type: PERTURBATION
+  - node_id: act-production
+    label: Actinorhodin production
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: pair-deletion-increases-act
+    subject: pair-deletion
+    predicate: increases
+    object: act-production
+    mechanism: Double deletion increases the phenotype in this medium.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:37492264
+      source_url: https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1217350/full
+      snippet: a greater amount of ACT
+      explanation: Results and Figure 5E image, NMMP column, day 7.
+      cache_path: evidence/PF04149/riascos-2023-sco7615-7616.txt
+      cache_sha256: 6bb60a3bfd0ef6ca08c86664ee1f71d14cdcd279fb9a03a17c2adfccc3dd3357
+    - reference: https://rest.uniprot.org/uniprotkb/Q9F3E1.json
+      source_url: https://rest.uniprot.org/uniprotkb/Q9F3E1.json
+      snippet: 'orderedLocusNames: SCO7616'
+      explanation: Identity and current domain coordinates only, not causal evidence.
+      cache_path: evidence/PF04149/uniprot-Q9F3E1-identity.txt
+      cache_sha256: b611e4b689c0905e1fda9a47069640bbba1c3538f4b27f32afbbd4bc2d97966d
 curation_events:
 - timestamp: '2026-10-07T12:26:02Z'
   curator: Codex
@@ -30,5 +156,45 @@ curation_events:
   summary: Completed a scoped PF04149 frozen-seed and native audit integration review; biological content
     unchanged.
   history_record: history/records/PF04149/2026-10-07T122602Z-codex-3e2c16.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T04:00:01Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Added a scoped DUF397 Scr2 phenotype graph.
+  history_record: history/records/PF04149/2026-10-11T040001Z-codex-e346d1.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T04:10:08Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Reviewed the first PF04149 graph with explicit limits.
+  history_record: history/records/PF04149/2026-10-11T041008Z-codex-e653c2.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T04:11:00Z'
+  curator: Codex
+  action: EDIT
+  outcome: changed
+  summary: Separate medium-specific SCO7615/SCO7616 deletion phenotypes
+  history_record: history/records/PF04149/2026-10-11T041100Z-codex-14184f.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T04:14:40Z'
+  curator: Codex
+  action: GENERAL
+  outcome: changed
+  summary: Correct the preceding edit session timestamp interpretation
+  history_record: history/records/PF04149/2026-10-11T041440Z-codex-a27d8b.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-11T04:16:44Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific reassessment of three PF04149 graphs
+  history_record: history/records/PF04149/2026-10-11T041644Z-codex-646d18.yaml
   event_index: 0
   llm_assisted: true

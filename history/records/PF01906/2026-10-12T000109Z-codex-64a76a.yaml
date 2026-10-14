@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01906
+  path: data/families/PF01906.yaml
+session:
+  id: 2026-10-12T000109Z-codex-64a76a
+  timestamp: '2026-10-12T00:01:09Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of YbjQ growth edges and qualified
+    mechanism leads
+  details: Saved structured review 20261012T000124Z-pf01906-ybjq-relative-growth-and-qualified-mechanism-leads
+    with native NEEDS_FOLLOWUP and common pass_with_limitations. One graph contains
+    ten experimentally observed indirect effects whose exact primary rows, donor identities,
+    scores and polarity were checked. Evidence assessments distinguish the multiplicative
+    comparator, exact reference/domain mapping, fusion-construct limits, ongoing metal
+    assays, inaccessible retron and Rv1762c thesis figures, removed individual-mutant
+    data and the published nonsignificant Rv1762c pooled result. The pf01906-causal-context-coverage
+    finding and three discussions remain OPEN; status remains IN_PROGRESS. Same agent
+    researched and curated the data. Semantic digest 9b8b1ff8c2f82f09a230d56cba81231cbfafa75b0705d1eb8dd35c45eb6c3514
+    binds reviewed scientific content. This event records the actual scoped review,
+    not full-family endorsement, publication or closure of remaining corpus work.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261012T000124Z-pf01906-ybjq-relative-growth-and-qualified-mechanism-leads/review.yaml

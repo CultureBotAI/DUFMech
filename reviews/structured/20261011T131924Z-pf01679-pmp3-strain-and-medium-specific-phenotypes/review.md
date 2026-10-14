@@ -1,0 +1,843 @@
+# PF01679 Pmp3 deletion and RCI2A replacement phenotypes in defined yeast contexts
+
+- Review: 20261011T131924Z-pf01679-pmp3-strain-and-medium-specific-phenotypes
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T13:19:12Z
+- Finished UTC: 2026-10-11T13:19:24Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Twelve graphs retain fifteen observed indirect effects from Navarre and Goffeau 2000. Separate W303-1B, YR93 and CY162 backgrounds, media, normalization controls and partial plant rescue prevent a falsely unified proton-transport pathway. The exact W303-1B and plant coding sequences map to distinct PF01679 intervals; whole-gene experiments do not isolate the domain. Later De Block 2015 work remains a partially inspected lead.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Pending PF01679 within all 8296 frozen families; selected member-specific primary experiments are not exhaustive family coverage.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01679 | data/families/PF01679.yaml | generated | PF01679 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01679 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01679.
+
+The 55-aa P87284 reference and current InterPro sequence match the complete W303-1B X91499.1 CDS translation CAA62799.1; PF01679 is 5-52. P87284's canonical S288c metadata is not assigned to every experimental strain. Plant Q9ZNQ7 is 54 aa with PF01679 6-52; the reverse-strand ORF complement(172..336), including stop, of cited EST T20621.1 clone 88O14T7 matches exactly by six-frame translation. This is a computed ORF rather than a deposited CDS annotation. YR93/CY162 alleles, final integrated RCI2A flanks and abundance were not independently verified; PCR establishes the interventions. The host is yeast taxon 4932 and the donor is Arabidopsis taxon 3702.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01679.
+
+All fifteen edges are OBSERVED, INDIRECT and PHENOTYPIC. The three salt-growth backgrounds stay distinct; retained sodium content is not initial flux. The 0.9 M YD caption versus 1 M buffered Methods discrepancy is visible. Methylammonium retention is not calibrated voltage, and toxic-cation spots are not killing assays. No-added-KCl YD is not potassium-free; EGTA/calcium replacement jointly changes two conditions. The pH series is normalized to pH 5.5, while Figure 7B is normalized to corresponding 10 mM calcium, not plain YD. Plant rescue is chromosomal whole-protein replacement with URA3 removal, not plasmid overexpression, an isolated domain or a plant-organism mechanism. Figure 6 single-deletion ATPase/ACMA comparisons do not establish Pma1 activation, and triple-deletion effects are not assigned uniquely to Pmp3.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01679.
+
+Native PMP3 add-backs are not shown for every retained endpoint; direct molecular mediator, isolated-domain effects and other PF01679 members remain open. The sodium protocol conflict, unverified YR93/CY162 alleles, expression abundance and final insert flanks constrain interpretation. De Block 2015 public text was inspected only through initial proteomics/PDR5 Results and Figure 1 caption; later Results, full Methods, figures and supplementary material remain to assess. No direct proton leak, NSC1 blockade, calcium binding or phosphoinositide sensor mechanism is adopted.
+
+## Findings
+
+### additional-contexts: Resolve the molecular mediator and extend later member-specific experimental coverage
+
+minor / open / confirmed; issue key: pf01679-causal-context-coverage.
+
+Resolve the conflicting Navarre sodium protocol where possible and inspect complete De Block 2015 methods, strains, figures and supplements before adding its proteomic, transcriptional, sphingolipid or lipid-binding observations. Preserve BY4742 versus W303/YR93/CY162 context, membrane versus total-cell fractions and unresolved Ena1/Ena2 peptides. Extend other family members only with verified accession/domain mapping and primary interventions. A direct transport or stress-sensor mechanism needs evidence beyond the retained indirect phenotypes, and a successor review must state remaining coverage limits.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Resolve the conflicting Navarre sodium protocol where possible and inspect complete De Block 2015 methods, strains, figures and supplements before adding its proteomic, transcriptional, sphingolipid or lipid-binding observations. Preserve BY4742 versus W303/YR93/CY162 context, membrane versus total-cell fractions and unresolved Ena1/Ena2 peptides. Extend other family members only with verified accession/domain mapping and primary interventions. A direct transport or stress-sensor mechanism needs evidence beyond the retained indirect phenotypes, and a successor review must state remaining coverage limits.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/; Navarre 2000 Results, Discussion, Methods and Table I; all eight figures visually inspected, with Figures 3, 4, 7 and 8 rechecked during curation. Figures 2B, 3, 4A/C/D, 5A/B, 7B and 8A/B support the retained edges. | supports | Whole-gene deletion changes salt growth in three backgrounds, sodium accumulation, methylammonium retention, toxic-cation plate growth and trk-background low-added-KCl/acidic growth. Divalent supplements have context-specific effects; replacing EGTA with calcium is a joint condition change. Chromosomal plant RCI2A improves two yeast phenotypes but hygromycin rescue is partial. Sodium dose/medium conflict and indirect voltage interpretation remain explicit. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/P87284/entry/pfam/PF01679/; Accession and domain locations; paired UniProt identity facts | supports | The 55-aa P87284 reference and current InterPro sequence match the complete W303-1B X91499.1 CDS translation CAA62799.1; PF01679 is 5-52. P87284's canonical S288c metadata is not assigned to every experimental strain. Plant Q9ZNQ7 is 54 aa with PF01679 6-52; the reverse-strand ORF complement(172..336), including stop, of cited EST T20621.1 clone 88O14T7 matches exactly by six-frame translation. This is a computed ORF rather than a deposited CDS annotation. YR93/CY162 alleles, final integrated RCI2A flanks and abundance were not independently verified; PCR establishes the interventions. The host is yeast taxon 4932 and the donor is Arabidopsis taxon 3702. |
+| deblock-followup | https://journals.biologists.com/jcs/article/128/19/3646/55210/Yeast-Pmp3p-has-an-important-role-in-plasma; De Block 2015 abstract, introduction, initial proteomics/PDR5 Results and Figure 1 caption only. | supports | A later BY4742 study provides follow-up leads concerning membrane proteomics, PDR5, sphingolipids and proposed lipid-related sensing. It is not edge evidence for the earlier strains; full relevant Methods, remaining Results, figures and supplement still require inspection. Membrane/total-cell and Ena1/Ena2 measurement boundaries are retained. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01679 | data/families/PF01679.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- All eight Navarre figures were visually inspected; Figures 3, 4, 7 and 8 were rechecked for strain symbols, medium differences and partial rescue. No raw growth/uptake reanalysis, quantitative image fitting, cell-volume calibration, clone resequencing or experimental replication was performed. De Block 2015 figures and supplementary material were not visually inspected; its successful public-text access is not negated by a separate curl 403.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T131924Z-pf01679-pmp3-strain-and-medium-specific-phenotypes
+title: PF01679 Pmp3 deletion and RCI2A replacement phenotypes in defined yeast contexts
+started_at: '2026-10-11T13:19:12Z'
+finished_at: '2026-10-11T13:19:24Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Twelve graphs retain fifteen observed indirect effects from Navarre and Goffeau
+  2000. Separate W303-1B, YR93 and CY162 backgrounds, media, normalization controls
+  and partial plant rescue prevent a falsely unified proton-transport pathway. The
+  exact W303-1B and plant coding sequences map to distinct PF01679 intervals; whole-gene
+  experiments do not isolate the domain. Later De Block 2015 work remains a partially
+  inspected lead.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01679.yaml
+    sha256: aa2316994a23ae0e8ad3990dd5f74a71ee27ce01a4eca963e0c3e09461a184a6
+    role: context
+  - path: data/families/PF01679.yaml
+    sha256: 46cf9b487c2221ac21da9529d9471b34bd70f9e41f6a8f537e180616e48ee96a
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01679/navarre-2000-pmp3.txt
+    role: context
+    sha256: 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab
+  - path: evidence/PF01679/Pmp3-identities.txt
+    role: context
+    sha256: 0aab0e32028312e4d24dbdfa24df983ae95682b4ec64bf1095270161c00530e8
+  - path: evidence/PF01679/deblock-2015-followup.txt
+    role: context
+    sha256: f7787e3b79ec00ad67af715ccc7ba6bba7162674787ec2c1499dc0896315ac07
+targets:
+- target_id: PF01679
+  path: data/families/PF01679.yaml
+  label: PF01679
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01679.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: e293f0f4adbea29e6a65b3960a6ddda61c8ad5f2e5e26ab23b67607250fca046
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Pending PF01679 within all 8296 frozen families; selected member-specific
+    primary experiments are not exhaustive family coverage.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01679
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Native PMP3 add-backs are not shown for every retained endpoint; direct
+      molecular mediator, isolated-domain effects and other PF01679 members remain
+      open. The sodium protocol conflict, unverified YR93/CY162 alleles, expression
+      abundance and final insert flanks constrain interpretation. De Block 2015 public
+      text was inspected only through initial proteomics/PDR5 Results and Figure 1
+      caption; later Results, full Methods, figures and supplementary material remain
+      to assess. No direct proton leak, NSC1 blockade, calcium binding or phosphoinositide
+      sensor mechanism is adopted.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01679
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/
+  locator: Navarre 2000 Results, Discussion, Methods and Table I; all eight figures
+    visually inspected, with Figures 3, 4, 7 and 8 rechecked during curation. Figures
+    2B, 3, 4A/C/D, 5A/B, 7B and 8A/B support the retained edges.
+  accessed_at: '2026-10-11T13:19:24Z'
+  support: supports
+  snapshot_sha256: 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab
+  summary: Whole-gene deletion changes salt growth in three backgrounds, sodium accumulation,
+    methylammonium retention, toxic-cation plate growth and trk-background low-added-KCl/acidic
+    growth. Divalent supplements have context-specific effects; replacing EGTA with
+    calcium is a joint condition change. Chromosomal plant RCI2A improves two yeast
+    phenotypes but hygromycin rescue is partial. Sodium dose/medium conflict and indirect
+    voltage interpretation remain explicit.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/P87284/entry/pfam/PF01679/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T13:19:24Z'
+  support: supports
+  snapshot_sha256: 0aab0e32028312e4d24dbdfa24df983ae95682b4ec64bf1095270161c00530e8
+  summary: The 55-aa P87284 reference and current InterPro sequence match the complete
+    W303-1B X91499.1 CDS translation CAA62799.1; PF01679 is 5-52. P87284's canonical
+    S288c metadata is not assigned to every experimental strain. Plant Q9ZNQ7 is 54
+    aa with PF01679 6-52; the reverse-strand ORF complement(172..336), including stop,
+    of cited EST T20621.1 clone 88O14T7 matches exactly by six-frame translation.
+    This is a computed ORF rather than a deposited CDS annotation. YR93/CY162 alleles,
+    final integrated RCI2A flanks and abundance were not independently verified; PCR
+    establishes the interventions. The host is yeast taxon 4932 and the donor is Arabidopsis
+    taxon 3702.
+- evidence_id: deblock-followup
+  kind: primary_source
+  reference: https://journals.biologists.com/jcs/article/128/19/3646/55210/Yeast-Pmp3p-has-an-important-role-in-plasma
+  locator: De Block 2015 abstract, introduction, initial proteomics/PDR5 Results and
+    Figure 1 caption only.
+  summary: A later BY4742 study provides follow-up leads concerning membrane proteomics,
+    PDR5, sphingolipids and proposed lipid-related sensing. It is not edge evidence
+    for the earlier strains; full relevant Methods, remaining Results, figures and
+    supplement still require inspection. Membrane/total-cell and Ena1/Ena2 measurement
+    boundaries are retained.
+  accessed_at: '2026-10-11T13:19:24Z'
+  support: supports
+  snapshot_sha256: f7787e3b79ec00ad67af715ccc7ba6bba7162674787ec2c1499dc0896315ac07
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T13:19:24Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01679
+  kind: record_content
+  reference: data/families/PF01679.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T13:19:24Z'
+  support: context_only
+  snapshot_sha256: 46cf9b487c2221ac21da9529d9471b34bd70f9e41f6a8f537e180616e48ee96a
+  quote: "id: Pfam:PF01679\npfam_id: PF01679\nname: Proteolipid membrane potential\
+    \ modulator\nshort_name: Pmp3\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01679\n\
+    counters:\n  proteins: 12165\n  matches: 12229\n  proteomes: 5976\n  taxa: 10614\n\
+    \  structures: 2\n  alphafold_models: 9376\n  domain_architectures: 139\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR000612\ndescription: Pmp3 is an evolutionarily conserved\
+    \ proteolipid in the plasma membrane which, in S. pombe,\n  is transcriptionally\
+    \ regulated by the Spc1 stress MAPK (mitogen-activated protein kinases) pathway.\n\
+    \  It functions to modulate the membrane potential, particularly to resist high\
+    \ cellular cation concentration.\n  In eukaryotic organisms, stress-activated\
+    \ mitogen-activated protein kinases play crucial roles in transmitting\n  environmental\
+    \ signals that will regulate gene expression for allowing the cell to adapt to\
+    \ cellular\n  stress. Pmp3-like proteins are highly conserved in bacteria, yeast,\
+    \ nematode and plants.\ncuration_history: history/records/PF01679\ndiscussions:\n\
+    - discussion_id: pmp3-molecular-mediator-and-member-coverage\n  prompt: Resolve\
+    \ Pmp3's molecular mediator and extend member-specific evidence beyond the retained\
+    \ yeast\n    phenotypes.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ The deletion, medium-supplement and plant-replacement experiments establish\
+    \ indirect effects\n    in defined yeast backgrounds. Methylammonium is a proxy\
+    \ and does not demonstrate a proton pore, direct\n    voltage change, Pma1 activation\
+    \ or NSC1 blockade. Domain conservation cannot fill those missing steps.\n  evidence:\n\
+    \  - reference: PMID:10835350\n    supports: PARTIAL\n    evidence_source: full_text_table_I_and_figures_1_to_8\n\
+    \    explanation: Twelve graphs retain fifteen observed indirect effects. Preserve\
+    \ the 0.9 M versus 1 M\n      sodium-protocol conflict, lack of endpoint-specific\
+    \ native add-backs, incomplete plant rescue, separate\n      normalization controls\
+    \ and medium/genotype distinctions. Figure 6 shows broadly similar ATPase and\n\
+    \      ACMA-quenching relations for the single deletion; the triple pmp1/pmp2/pmp3\
+    \ ATPase result cannot\n      be assigned uniquely to Pmp3. Proton-leak and NSC1\
+    \ interpretations, plus intracellular-pH/acidification\n      observations reported\
+    \ without displayed data, remain hypotheses or evidence limits.\n  - reference:\
+    \ doi:10.1242/jcs.173211\n    supports: PARTIAL\n    evidence_source: abstract_introduction_initial_results_and_figure_1_caption_only\n\
+    \    explanation: De Block 2015 follows BY4742-derived cells with proteomics,\
+    \ PDR5 expression, sphingolipid\n      interactions and proposed lipid-related\
+    \ stress sensing. Public text was accessible despite a separate\n      curl 403.\
+    \ Remaining Results, Methods, figures and supplement were not fully assessed,\
+    \ so this is\n      a follow-up lead, not evidence for the retained edges. Preserve\
+    \ plasma-membrane versus total-cell\n      measurements and unresolved Ena1/Ena2\
+    \ peptides when extending the graphs.\n  posed_by: Codex\n  posed_date: '2026-10-11'\n\
+    \  notes: Exact W303-1B X91499.1 and plant T20621.1 coding-sequence matches are\
+    \ established; YR93/CY162\n    alleles and integrated flanks are not independently\
+    \ resequenced. The imported Schizosaccharomyces\n    pombe description is not\
+    \ replaced with Saccharomyces data. Other PF01679 members, later experiments,\n\
+    \    domain-specific effects and the direct molecular mechanism remain unreviewed.\
+    \ Partial scientific self-review;\n    IN_PROGRESS.\ncausal_graphs:\n- graph_id:\
+    \ pmp3-w303-salt-growth\n  title: PMP3 deletion lowers salt-challenged growth\
+    \ in W303-1B\n  scope: W303-1B versus its pmp3::TRP1 derivative CN3 in Navarre\
+    \ and Goffeau 2000 Figure 3.\n  context: Seed 10 ul saturated culture into 3 ml\
+    \ YD with a 0-1.5 M NaCl series; measure OD600 after 15\n    h at 30 C and normalize\
+    \ each strain to its own no-added-salt culture. YD contains 2% yeast extract\n\
+    \    and 2% glucose, not peptone. Three repeats gave similar results; no error\
+    \ bars are displayed.\n  family_mapping: The W303-1B X91499.1 CDS encodes CAA62799.1,\
+    \ exactly matching 55-aa UniProt P87284 sequence\n    version 1. PF01679 spans\
+    \ residues 5-52 inclusive. Deletion removes the complete gene, not only this\n\
+    \    domain. S288c is the reference accession strain, not the experimental strain.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:4932\n  limitations: Relative\
+    \ OD is a growth endpoint, not a direct transport measurement or a universal salt\n\
+    \    threshold. PCR confirms deletion, but this endpoint lacks a native PMP3 add-back.\
+    \ Figure 2A independently\n    supports the same phenotype with plate growth;\
+    \ it is not counted as a second molecular step.\n  nodes:\n  - node_id: w303-pmp3-loss\n\
+    \    label: W303-1B pmp3::TRP1 rather than its PMP3-positive parent\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:P87284\n  - node_id: w303-salt-relative-growth\n\
+    \    label: Normalized OD600 at inhibitory NaCl concentrations\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: w303-deletion-decreases-salt-growth\n    subject:\
+    \ w303-pmp3-loss\n    predicate: decreases\n    object: w303-salt-relative-growth\n\
+    \    mechanism: CN3 has lower relative OD600 than W303-1B through the inhibitory\
+    \ portion of the NaCl series.\n      This is a whole-gene deletion effect under\
+    \ the specified conditions, not evidence that Pmp3 itself\n      transports sodium\
+    \ or protons.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:10835350\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/\n      snippet: Relative growth\n\
+    \      explanation: Figure 3 filled/open squares and its caption establish the\
+    \ W303-1B/CN3 comparison;\n        Table I and the yeast-strain Methods specify\
+    \ pmp3::TRP1 and PCR checks.\n      cache_path: evidence/PF01679/navarre-2000-pmp3.txt\n\
+    \      cache_sha256: 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab\n\
+    \    - reference: https://www.ncbi.nlm.nih.gov/nuccore/X91499.1\n      source_url:\
+    \ https://www.ncbi.nlm.nih.gov/nuccore/X91499.1\n      snippet: P87284 Pfam:PF01679\
+    \ interval 5-52 inclusive.\n      explanation: Retained GenBank, UniProt and InterPro\
+    \ assessment establishes the exact W303-1B peptide\n        match and current\
+    \ domain interval; it does not establish isolated-domain causality.\n      cache_path:\
+    \ evidence/PF01679/Pmp3-identities.txt\n      cache_sha256: 0aab0e32028312e4d24dbdfa24df983ae95682b4ec64bf1095270161c00530e8\n\
+    - graph_id: pmp3-pmr2-salt-growth\n  title: Additional PMP3 deletion lowers salt\
+    \ growth in the pmr2-deleted background\n  scope: YR93 versus YR93-3, not the\
+    \ W303-1B pair, in Navarre 2000 Figure 3.\n  context: YR93 carries pmr2-2::HIS3;\
+    \ YR93-3 additionally carries pmp3::URA3. Transfer 10 ul saturated\n    culture\
+    \ to 3 ml YD containing 2% yeast extract and 2% glucose with varying NaCl; 15\
+    \ h at 30 C. Normalize\n    each strain to its own YD no-added-salt OD600. Three\
+    \ repeats, no displayed error estimates.\n  family_mapping: The disrupted PMP3\
+    \ locus is grounded to 55-aa P87284, PF01679 5-52, through the yeast\n    gene\
+    \ and PCR-confirmed deletion. Unlike the W303-1B deposited X91499.1 sequence,\
+    \ the YR93 allele was\n    not independently resequenced here.\n  scope_status:\
+    \ PHENOTYPIC\n  taxon: NCBITaxon:4932\n  limitations: This comparison preserves\
+    \ the pre-existing PMR2 cluster deletion and intact NHA1. It does\n    not demonstrate\
+    \ a direct Pmp3-to-Pmr2 interaction or an isolated domain mechanism. Native PMP3\
+    \ rescue\n    for this liquid-growth endpoint is not shown.\n  nodes:\n  - node_id:\
+    \ yr93-pmp3-loss\n    label: Additional pmp3::URA3 in the YR93 pmr2 background\n\
+    \    node_type: PERTURBATION\n  - node_id: yr93-salt-relative-growth\n    label:\
+    \ YR93-background relative OD600 during salt challenge\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: yr93-deletion-decreases-salt-growth\n    subject: yr93-pmp3-loss\n\
+    \    predicate: decreases\n    object: yr93-salt-relative-growth\n    mechanism:\
+    \ The YR93-3 NaCl response shifts toward lower growth relative to YR93 at matched\
+    \ inhibitory\n      salt concentrations. Whole-cell genetic interaction does not\
+    \ identify the molecular pathway responsible.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:10835350\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/\n      snippet:\
+    \ Relative growth\n      explanation: Figure 3 filled/open triangles compare YR93\
+    \ and YR93-3; Table I distinguishes this\n        background from both W303-1B\
+    \ and nha1-deleted strains.\n      cache_path: evidence/PF01679/navarre-2000-pmp3.txt\n\
+    \      cache_sha256: 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab\n\
+    - graph_id: pmp3-pmr2-nha1-salt-growth\n  title: PMP3 deletion further lowers\
+    \ salt growth with both pmr2 and nha1 deleted\n  scope: YR93-1 versus YR93-31\
+    \ in Navarre 2000 Figure 3.\n  context: Both strains carry pmr2-2::HIS3 and nha1::LEU2;\
+    \ YR93-31 additionally has pmp3::URA3. Inoculate\n    10 ul saturated culture\
+    \ into 3 ml YD (2% yeast extract, 2% glucose) with a NaCl series. After 15 h\n\
+    \    at 30 C, normalize OD600 to each strain's own no-added-salt culture. Three\
+    \ repetitions, no displayed\n    error estimates.\n  family_mapping: The whole\
+    \ yeast PMP3 gene corresponds to P87284, 55 aa, PF01679 5-52. PCR verifies the\n\
+    \    deletion, not complete sequence identity of the YR93-derived genome or a\
+    \ domain-only intervention.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:4932\n\
+    \  limitations: This phenotype remains separate from single-background deletions,\
+    \ sodium-content assays\n    and later RCI2A replacement. It does not resolve\
+    \ the proposed membrane-voltage mediator or establish\n    a family-wide salt-resistance\
+    \ function.\n  nodes:\n  - node_id: yr93-nha1-pmp3-loss\n    label: Add pmp3::URA3\
+    \ to the YR93-1 pmr2/nha1 background\n    node_type: PERTURBATION\n  - node_id:\
+    \ yr93-nha1-salt-growth\n    label: Relative OD600 of pmr2/nha1-background salt-challenged\
+    \ cultures\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: triple-deletion-decreases-salt-growth\n\
+    \    subject: yr93-nha1-pmp3-loss\n    predicate: decreases\n    object: yr93-nha1-salt-growth\n\
+    \    mechanism: YR93-31 grows less than YR93-1 at matched inhibitory NaCl concentrations.\
+    \ The causal statement\n      concerns adding a complete-gene deletion to this\
+    \ defined double-mutant background.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:10835350\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/\n      snippet:\
+    \ Relative growth\n      explanation: Figure 3 open/filled circles and Table I\
+    \ support the additional pmp3 deletion effect\n        while preserving the common\
+    \ pmr2/nha1 background.\n      cache_path: evidence/PF01679/navarre-2000-pmp3.txt\n\
+    \      cache_sha256: 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab\n\
+    - graph_id: pmp3-sodium-accumulation\n  title: PMP3 deletion increases intracellular\
+    \ sodium accumulation during challenge\n  scope: CN3 versus W303-1B, Navarre 2000\
+    \ Figure 2B; exact challenge protocol remains disputed within\n    the paper.\n\
+    \  context: Figure 2B describes 0.9 M NaCl addition to exponentially growing YD\
+    \ cells. Results and Methods\n    specify 1 M; Methods additionally give a 1 h\
+    \ water incubation at 4 C, followed by 10 mM MES pH 6,\n    50 mM glucose and\
+    \ challenge at 28 C. After sampling, wash with 20 mM MgCl2 and 1.5 M sorbitol,\
+    \ extract\n    with 2 mM CTAB and measure sodium by atomic emission. Neither conflicting\
+    \ dose/medium is silently\n    preferred.\n  family_mapping: CN3 deletes the whole\
+    \ W303-1B PMP3 gene, whose X91499.1 peptide exactly matches P87284\n    sequence\
+    \ version 1; PF01679 spans 5-52 within 55 aa.\n  scope_status: PHENOTYPIC\n  taxon:\
+    \ NCBITaxon:4932\n  limitations: Intracellular content over 30-90 min is not initial\
+    \ influx, efflux, direct voltage or a\n    purified transport measurement. The\
+    \ exact challenge dose and medium remain unresolved. No raw cell-volume\n    calibration\
+    \ or replicate reanalysis was performed; an undisplayed sorbitol control is not\
+    \ independent\n    inspected evidence.\n  nodes:\n  - node_id: cn3-sodium-assay\n\
+    \    label: CN3 pmp3::TRP1 rather than W303-1B under sodium challenge\n    node_type:\
+    \ PERTURBATION\n  - node_id: intracellular-sodium-content\n    label: Reported\
+    \ intracellular sodium concentration at 30-90 min\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: deletion-increases-sodium-content\n    subject: cn3-sodium-assay\n\
+    \    predicate: increases\n    object: intracellular-sodium-content\n    mechanism:\
+    \ CN3 accumulates more sodium than the parental strain at the displayed post-challenge\
+    \ times.\n      The direction is retained as an indirect cellular effect despite\
+    \ unresolved protocol details; no\n      particular sodium channel or proton pathway\
+    \ is assigned.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:10835350\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/\n      snippet: intracellular\n\
+    \      explanation: Figure 2B establishes the higher CN3 content; its caption\
+    \ conflicts with the Results/Methods\n        dose and medium, explicitly retained\
+    \ in this graph's context.\n      cache_path: evidence/PF01679/navarre-2000-pmp3.txt\n\
+    \      cache_sha256: 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab\n\
+    - graph_id: pmp3-methylammonium-accumulation\n  title: PMP3 deletion increases\
+    \ retained methylammonium tracer\n  scope: W303-1B/CN3 uptake comparison in Navarre\
+    \ 2000 Figure 5B, not a calibrated membrane-potential\n    experiment.\n  context:\
+    \ Grow to OD600 0.8 in MM (0.7% yeast nitrogen base without amino acids, 2% glucose,\
+    \ required\n    amino acids), wash and resuspend to OD600 5 in 10 mM MES pH 6\
+    \ and 50 mM glucose. After 5 min add 2\n    mM 14C-methylammonium at 2.5 uCi/ml.\
+    \ Sample at 10-60 min, filter, wash with 20 mM MgCl2 and count\n    radioactivity.\
+    \ Uptake temperature is not explicitly restated; two repetitions had similar results.\n\
+    \  family_mapping: Complete W303-1B PMP3 deletion removes the gene encoding the\
+    \ X91499.1/P87284-matched\n    55-aa protein, with PF01679 at 5-52. Neither isolated\
+    \ domain nor purified protein is assayed.\n  scope_status: PHENOTYPIC\n  taxon:\
+    \ NCBITaxon:4932\n  limitations: Tracer uptake/retention is consistent with the\
+    \ authors' hyperpolarization model but is\n    not direct voltage or proton conductance.\
+    \ Transporter regulation, retention and other cellular effects\n    are not separated.\
+    \ A native PMP3 add-back for this endpoint is not shown.\n  nodes:\n  - node_id:\
+    \ cn3-methylammonium-assay\n    label: CN3 rather than W303-1B in the methylammonium\
+    \ uptake assay\n    node_type: PERTURBATION\n  - node_id: methylammonium-label-retention\n\
+    \    label: Filter-retained 14C-methylammonium signal over 10-60 min\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: deletion-increases-methylammonium-retention\n\
+    \    subject: cn3-methylammonium-assay\n    predicate: increases\n    object:\
+    \ methylammonium-label-retention\n    mechanism: CN3 retains more radiolabel than\
+    \ W303-1B throughout the displayed uptake interval. This\n      is an indirect\
+    \ accumulation effect; its voltage interpretation is a proposed mediator, not\
+    \ an additional\n      observed edge.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:10835350\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/\n      snippet:\
+    \ methylammonium uptake\n      explanation: Figure 5B and uptake Methods specify\
+    \ the tracer, wash/count protocol, genotype comparison\n        and two repetitions;\
+    \ no calibrated voltage measurement is supplied.\n      cache_path: evidence/PF01679/navarre-2000-pmp3.txt\n\
+    \      cache_sha256: 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab\n\
+    - graph_id: pmp3-toxic-cation-growth\n  title: PMP3 deletion decreases growth\
+    \ on two toxic-cation media\n  scope: Separate CN3/W303-1B hygromycin B and tetramethylammonium\
+    \ plate comparisons, Navarre 2000 Figure\n    5A.\n  context: Tenfold serial dilutions\
+    \ of saturated cultures on YD (2% yeast extract, 2% glucose, 2% agar),\n    supplemented\
+    \ separately with 100 ug/ml hygromycin B or 0.7 M tetramethylammonium chloride\
+    \ (TMA); 2\n    days at 30 C. These are not a combined-drug exposure.\n  family_mapping:\
+    \ W303-1B whole-gene pmp3::TRP1 intervention maps exactly through X91499.1 to\
+    \ P87284,\n    55 aa, PF01679 5-52.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:4932\n\
+    \  limitations: Spot growth is not a quantitative killing assay or direct transport\
+    \ test. TMA-treated CN3\n    retains growth at the most concentrated spot. The\
+    \ separate pH 2.2 plates look similar for CN3 and\n    W303-1B, excluding a universal\
+    \ single-deletion acid-protection claim.\n  nodes:\n  - node_id: cn3-hygromycin\n\
+    \    label: CN3 rather than W303-1B on 100 ug/ml hygromycin B\n    node_type:\
+    \ PERTURBATION\n  - node_id: hygromycin-spot-growth\n    label: Spot growth on\
+    \ hygromycin B medium\n    node_type: PHENOTYPE\n  - node_id: cn3-tma\n    label:\
+    \ CN3 rather than W303-1B on 0.7 M TMA\n    node_type: PERTURBATION\n  - node_id:\
+    \ tma-spot-growth\n    label: Spot growth on tetramethylammonium medium\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: deletion-decreases-hygromycin-growth\n   \
+    \ subject: cn3-hygromycin\n    predicate: decreases\n    object: hygromycin-spot-growth\n\
+    \    mechanism: PMP3 deletion reduces the visible dilution-series growth under\
+    \ hygromycin B challenge,\n      without establishing a unique voltage or drug-transport\
+    \ mediator.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:10835350\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/\n      snippet: hygromycin\
+    \ B\n      explanation: Figure 5A hygromycin panel and caption specify the paired\
+    \ strains, concentration and\n        2-day endpoint; this is not the Figure 8\
+    \ plant-gene rescue background.\n      cache_path: evidence/PF01679/navarre-2000-pmp3.txt\n\
+    \      cache_sha256: 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab\n\
+    \  - edge_id: deletion-decreases-tma-growth\n    subject: cn3-tma\n    predicate:\
+    \ decreases\n    object: tma-spot-growth\n    mechanism: CN3 has reduced TMA-exposed\
+    \ spot growth relative to W303-1B, with residual growth at the\n      dense spot.\
+    \ This establishes a conditional phenotype, not complete lethality or direct Pmp3\
+    \ transport.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:10835350\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/\n      snippet: growth\n  \
+    \    explanation: Figure 5A TMA panel visually supports the reduction and residual\
+    \ growth; the caption\n        and medium Methods identify the separate 0.7 M\
+    \ condition.\n      cache_path: evidence/PF01679/navarre-2000-pmp3.txt\n     \
+    \ cache_sha256: 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab\n\
+    - graph_id: pmp3-trk-low-added-potassium\n  title: PMP3 deletion and chelation/calcium\
+    \ conditions alter early growth in a trk mutant\n  scope: CY162 trk1/trk2 mutant\
+    \ versus its pmp3::URA3 derivative CY162-3, Navarre 2000 Figure 4A.\n  context:\
+    \ YD (2% yeast extract, 2% glucose) with no added KCl, supplemented either with\
+    \ 1 mM EGTA or\n    with 10 mM CaCl2. The displayed OD600 time course ends at\
+    \ 30 h; general yeast growth Methods use 30\n    C. No-added-KCl YD is not potassium-free\
+    \ medium. The EGTA-to-CaCl2 comparison jointly changes chelation\n    and calcium.\n\
+    \  family_mapping: PCR-verified deletion targets the complete CY162 PMP3 locus,\
+    \ reference-grounded to P87284,\n    55 aa, PF01679 5-52. CY162's full allele\
+    \ was not independently resequenced; this is not a domain-only\n    perturbation.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:4932\n  limitations: Retain the\
+    \ early 15-30 h growth advantage, not a permanent yield or survival advantage;\n\
+    \    later 48 h adaptation/suppressor observations are not plotted. The calcium/EGTA\
+    \ substitution is not\n    a single-variable calcium titration or direct NSC1\
+    \ blockade assay, and residual growth remains.\n  nodes:\n  - node_id: cy162-pmp3-loss-egta\n\
+    \    label: Additional pmp3::URA3 in trk1/trk2 cells with 1 mM EGTA\n    node_type:\
+    \ PERTURBATION\n  - node_id: cy162-early-growth-egta\n    label: OD600 over 15-30\
+    \ h in no-added-KCl YD plus EGTA\n    node_type: PHENOTYPE\n  - node_id: cy1623-egta-to-calcium\n\
+    \    label: Replace 1 mM EGTA with 10 mM CaCl2 in CY162-3 culture\n    node_type:\
+    \ PERTURBATION\n  - node_id: cy1623-early-growth\n    label: CY162-3 OD600 over\
+    \ 15-30 h in no-added-KCl YD\n    node_type: PHENOTYPE\n  edges:\n  - edge_id:\
+    \ trk-background-deletion-increases-early-growth\n    subject: cy162-pmp3-loss-egta\n\
+    \    predicate: increases\n    object: cy162-early-growth-egta\n    mechanism:\
+    \ With 1 mM EGTA, CY162-3 grows faster during the displayed interval than CY162.\
+    \ This conditional\n      genetic effect does not measure Pmp3-mediated potassium\
+    \ or proton flux.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:10835350\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/\n      snippet: growth\n  \
+    \    explanation: Figure 4A open/filled squares show the early growth difference;\
+    \ Table I defines the\n        trk background, and Discussion distinguishes later\
+    \ adaptation from the displayed time window.\n      cache_path: evidence/PF01679/navarre-2000-pmp3.txt\n\
+    \      cache_sha256: 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab\n\
+    \  - edge_id: egta-calcium-substitution-decreases-early-growth\n    subject: cy1623-egta-to-calcium\n\
+    \    predicate: decreases\n    object: cy1623-early-growth\n    mechanism: CY162-3\
+    \ grows less when 10 mM CaCl2 replaces 1 mM EGTA. Both interventions change together,\n\
+    \      so the observed reduction is assigned to the joint medium substitution,\
+    \ not uniquely to calcium\n      blocking a named channel.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:10835350\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/\n\
+    \      snippet: growth\n      explanation: Figure 4A open squares versus open\
+    \ triangles and its caption specify the joint chelation/calcium\n        comparison\
+    \ within CY162-3, including nonzero residual growth.\n      cache_path: evidence/PF01679/navarre-2000-pmp3.txt\n\
+    \      cache_sha256: 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab\n\
+    - graph_id: pmp3-trk-acid-growth\n  title: Additional PMP3 deletion improves relative\
+    \ acidic-pH growth in the trk background\n  scope: CY162 versus CY162-3, Navarre\
+    \ 2000 Figure 4C; not the single-deletion W303-1B acid comparison.\n  context:\
+    \ Pregrow cultures in YD with 100 mM KCl; transfer 10 ul into 3 ml YD plus 100\
+    \ mM KCl at varied\n    pH. After 15 h at 30 C, normalize each strain to its own\
+    \ pH 5.5 OD600. Three experiments gave similar\n    results. YD is 2% yeast extract\
+    \ plus 2% glucose.\n  family_mapping: CY162-3 has a complete pmp3::URA3 intervention\
+    \ in the trk1/trk2 background, grounded\n    to P87284 and PF01679 5-52. This\
+    \ gene-level link is not independent CY162 allele sequencing or isolated-domain\n\
+    \    evidence.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:4932\n  limitations:\
+    \ Higher normalized growth at pH 3-4 does not establish proton permeability, cytosolic\
+    \ pH\n    or the direct membrane-potential mechanism. The W303-1B/CN3 plate comparison\
+    \ at pH 2.2 shows no analogous\n    clear advantage, so the genetic background\
+    \ is essential.\n  nodes:\n  - node_id: cy162-pmp3-loss-acid\n    label: Additional\
+    \ pmp3::URA3 in CY162 during acidic-pH challenge\n    node_type: PERTURBATION\n\
+    \  - node_id: cy162-acid-relative-growth\n    label: OD600 at pH 3-4 relative\
+    \ to the same strain at pH 5.5\n    node_type: PHENOTYPE\n  edges:\n  - edge_id:\
+    \ trk-background-deletion-increases-acid-growth\n    subject: cy162-pmp3-loss-acid\n\
+    \    predicate: increases\n    object: cy162-acid-relative-growth\n    mechanism:\
+    \ The CY162-3 curve retains more relative growth than CY162 in the acidic part\
+    \ of the pH\n      series. The effect is conditional on the trk background and\
+    \ high added KCl, without an observed\n      proton-flow step.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:10835350\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/\n\
+    \      snippet: Relative growth\n      explanation: Figure 4C open/filled squares\
+    \ and caption specify the pH 5.5 normalization, 100 mM\n        KCl, inoculation\
+    \ and 15 h endpoint; Figure 5A supplies the distinct W303 negative context.\n\
+    \      cache_path: evidence/PF01679/navarre-2000-pmp3.txt\n      cache_sha256:\
+    \ 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab\n- graph_id:\
+    \ pmp3-trk-acid-calcium\n  title: Added calcium decreases acidic-plate growth\
+    \ of CY162-3\n  scope: CY162-3 at pH 3 with versus without 10 mM CaCl2, Navarre\
+    \ 2000 Figure 4D.\n  context: Tenfold serial dilutions from overnight YD plus\
+    \ 100 mM KCl cultures onto YD agar at pH 3 with\n    100 mM KCl; compare 0 versus\
+    \ 10 mM added CaCl2 after 2 days at 30 C. YD contains 2% yeast extract\n    and\
+    \ 2% glucose; plates add 2% agar. This is not the no-added-KCl/EGTA liquid assay.\n\
+    \  family_mapping: CY162-3 combines trk1/trk2 loss with pmp3::URA3 at the P87284-associated\
+    \ locus, PF01679\n    5-52. The intervention here is medium calcium in a fixed\
+    \ mutant, not another domain mutation.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:4932\n\
+    \  limitations: W303-1B/CN3 remain strongly growing and CY162 grows poorly in\
+    \ both panels. The mutant-specific\n    pattern does not prove direct channel\
+    \ blockade, proton leak or calcium binding by Pmp3. Spot intensity\n    is not\
+    \ a calibrated growth rate.\n  nodes:\n  - node_id: cy1623-added-calcium-acid\n\
+    \    label: Add 10 mM CaCl2 to CY162-3 acidic plates with 100 mM KCl\n    node_type:\
+    \ PERTURBATION\n  - node_id: cy1623-acid-spot-growth\n    label: CY162-3 dilution-series\
+    \ growth at pH 3 after 2 days\n    node_type: PHENOTYPE\n  edges:\n  - edge_id:\
+    \ calcium-decreases-cy1623-acid-growth\n    subject: cy1623-added-calcium-acid\n\
+    \    predicate: decreases\n    object: cy1623-acid-spot-growth\n    mechanism:\
+    \ Adding calcium reduces CY162-3 growth in this acidic medium, while the displayed\
+    \ controls\n      distinguish that effect from a uniform inhibition of all four\
+    \ strains. The molecular mediator is\n      unresolved.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:10835350\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/\n\
+    \      snippet: growth\n      explanation: Figure 4D calcium/no-calcium plates\
+    \ and caption support the within-CY162-3 effect at\n        pH 3 with 100 mM KCl\
+    \ and the contrasting control-strain patterns.\n      cache_path: evidence/PF01679/navarre-2000-pmp3.txt\n\
+    \      cache_sha256: 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab\n\
+    - graph_id: pmp3-pmr2-divalent-rescue\n  title: Calcium and magnesium separately\
+    \ improve salt-challenged YR93-3 growth\n  scope: Divalent-cation series in fixed\
+    \ pmr2/pmp3-deleted YR93-3, Navarre 2000 Figure 7B.\n  context: Transfer 10 ul\
+    \ saturated culture into 3 ml YD (2% yeast extract, 2% glucose) with 0.2 M NaCl\n\
+    \    and 0-10 mM CaCl2 or MgCl2; 15 h at 30 C. Normalize each series to its corresponding\
+    \ 10 mM CaCl2 culture,\n    not plain YD. YR93 is the PMP3-positive control; two\
+    \ repeats gave similar results.\n  family_mapping: YR93-3 carries PCR-verified\
+    \ pmp3::URA3 in the pmr2 background; P87284/PF01679 5-52 is\n    reference grounding,\
+    \ not a sequenced domain-only construct. Divalent supplements act on the whole\n\
+    \    mutant cell.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:4932\n  limitations:\
+    \ Calcium approaches a plateau near 7 mM, whereas magnesium only partly improves\
+    \ growth relative\n    to the calcium reference. No direct NSC1 activity, membrane\
+    \ depolarization or binding by Pmp3 is measured.\n    Separate supplements are\
+    \ not jointly sufficient inputs to a proven molecular reaction.\n  nodes:\n  -\
+    \ node_id: yr93-3-added-calcium\n    label: Increase CaCl2 from zero in salt-challenged\
+    \ YR93-3\n    node_type: PERTURBATION\n  - node_id: yr93-3-calcium-growth\n  \
+    \  label: Relative OD600 in the calcium series\n    node_type: PHENOTYPE\n  -\
+    \ node_id: yr93-3-added-magnesium\n    label: Increase MgCl2 from zero in salt-challenged\
+    \ YR93-3\n    node_type: PERTURBATION\n  - node_id: yr93-3-magnesium-growth\n\
+    \    label: Relative OD600 in the magnesium series\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: calcium-increases-yr93-3-salt-growth\n    subject: yr93-3-added-calcium\n\
+    \    predicate: increases\n    object: yr93-3-calcium-growth\n    mechanism: Added\
+    \ calcium increases YR93-3 relative growth toward the high-calcium reference level.\n\
+    \      This contextual suppression of a deletion phenotype is an indirect cellular\
+    \ effect, not a direct\n      Pmp3 reaction.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:10835350\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/\n      snippet:\
+    \ Relative growth\n      explanation: Figure 7B open triangles and caption specify\
+    \ the calcium series, fixed 0.2 M NaCl and\n        10 mM CaCl2 normalization;\
+    \ Methods define the 15 h incubation.\n      cache_path: evidence/PF01679/navarre-2000-pmp3.txt\n\
+    \      cache_sha256: 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab\n\
+    \  - edge_id: magnesium-increases-yr93-3-salt-growth\n    subject: yr93-3-added-magnesium\n\
+    \    predicate: increases\n    object: yr93-3-magnesium-growth\n    mechanism:\
+    \ Magnesium supplementation increases YR93-3 relative growth, but even 10 mM remains\
+    \ below\n      the calcium-normalized reference. Partial phenotypic improvement\
+    \ does not demonstrate an identical\n      molecular route for the two ions.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:10835350\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/\n\
+    \      snippet: growth\n      explanation: Figure 7B open squares show partial\
+    \ magnesium improvement against the shared calcium\n        reference; it is not\
+    \ normalized to a 10 mM magnesium control.\n      cache_path: evidence/PF01679/navarre-2000-pmp3.txt\n\
+    \      cache_sha256: 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab\n\
+    - graph_id: rci2a-yeast-salt-complementation\n  title: Chromosomal plant RCI2A\
+    \ replacement improves salt growth in yeast\n  scope: YR93-31 versus YR93-31-RCI2A,\
+    \ with YR93-1 as the PMP3-positive comparator, Navarre 2000 Figure\n    8A.\n\
+    \  context: RCI2A replaces the URA3 disruption at the yeast PMP3 locus under PMP3\
+    \ promoter and terminator\n    sequences; pmr2 and nha1 remain deleted. This is\
+    \ chromosomal replacement, not plasmid overexpression.\n    Seed 10 ul saturated\
+    \ culture into 3 ml YD with 0-0.5 M NaCl, 15 h at 30 C; normalize each strain\
+    \ to\n    its own no-added-salt OD600. Two repeats had similar results.\n  family_mapping:\
+    \ Yeast P87284 has PF01679 5-52. Plant donor Q9ZNQ7/RCI2A is 54 aa, sequence version\
+    \ 1,\n    PF01679 6-52, taxon 3702. The reverse-strand ORF of T20621.1 clone 88O14T7,\
+    \ complement(172..336) including\n    stop, exactly matches Q9ZNQ7. This is a\
+    \ computed EST translation; PCR confirms yeast integration but\n    the final\
+    \ insert/flanks were not independently resequenced.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:4932\n  limitations: The rescued curve approaches but is not\
+    \ identical to YR93-1; no formal equivalence test\n    is shown. Replacement also\
+    \ removes URA3 and expression abundance was not independently established.\n \
+    \   The result is whole-protein rescue in yeast, not an isolated-domain reaction,\
+    \ plant-organism salt\n    phenotype or proof of a shared proton pore.\n  nodes:\n\
+    \  - node_id: rci2a-replaces-ura3-salt\n    label: Replace pmp3::URA3 with chromosomal\
+    \ plant RCI2A in YR93-31\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q9ZNQ7\n\
+    \  - node_id: rci2a-yeast-salt-growth\n    label: Yeast relative OD600 under inhibitory\
+    \ NaCl challenge\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: rci2a-replacement-increases-salt-growth\n\
+    \    subject: rci2a-replaces-ura3-salt\n    predicate: increases\n    object:\
+    \ rci2a-yeast-salt-growth\n    mechanism: Integrated RCI2A increases the salt-challenged\
+    \ relative growth of YR93-31 toward its PMP3-positive\n      comparator. Functional\
+    \ complementation supports a scoped phenotype, without establishing direct\n \
+    \     ion transport or family-wide interchangeability.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:10835350\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/\n\
+    \      snippet: Relative growth\n      explanation: Figure 8A open circles, filled\
+    \ triangles and filled circles distinguish disrupted,\n        plant-replaced\
+    \ and PMP3-positive strains; yeast-strain Methods specify chromosomal integration\n\
+    \        and regulatory sequences.\n      cache_path: evidence/PF01679/navarre-2000-pmp3.txt\n\
+    \      cache_sha256: 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab\n\
+    \    - reference: https://www.ncbi.nlm.nih.gov/nuccore/T20621.1\n      source_url:\
+    \ https://www.ncbi.nlm.nih.gov/nuccore/T20621.1\n      snippet: Q9ZNQ7 Pfam:PF01679\
+    \ interval 6-52 inclusive.\n      explanation: Retained GenBank EST translation\
+    \ and paired UniProt/InterPro identity checks match\n        the full plant peptide\
+    \ and establish its distinct domain interval; they do not verify the final\n \
+    \       yeast construct's complete flanks.\n      cache_path: evidence/PF01679/Pmp3-identities.txt\n\
+    \      cache_sha256: 0aab0e32028312e4d24dbdfa24df983ae95682b4ec64bf1095270161c00530e8\n\
+    - graph_id: rci2a-yeast-hygromycin-complementation\n  title: Plant RCI2A replacement\
+    \ partially improves yeast hygromycin growth\n  scope: YR93-31-RCI2A versus YR93-31\
+    \ on hygromycin B, Navarre 2000 Figure 8B; YR93-1 defines the incomplete\n   \
+    \ rescue benchmark.\n  context: RCI2A from clone 88O14T7 replaces pmp3::URA3 chromosomally\
+    \ under PMP3 regulatory sequences\n    in the pmr2/nha1 background. Tenfold dilutions\
+    \ of saturated cultures on YD with 100 ug/ml hygromycin\n    B, 2 days at 30 C.\
+    \ YD contains 2% yeast extract, 2% glucose and 2% agar.\n  family_mapping: The\
+    \ 54-aa Q9ZNQ7 plant donor, PF01679 6-52, matches the computed T20621.1 reverse-strand\n\
+    \    ORF. The removed yeast PMP3 gene maps to P87284, 55 aa, PF01679 5-52. PCR\
+    \ confirms integration; no\n    isolated-domain construct or independent complete\
+    \ integrated-sequence verification is available.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:4932\n  limitations: RCI2A does not restore the complete YR93-1\
+    \ dilution pattern. This is partial growth rescue\n    in yeast, not a complete\
+    \ native PMP3 add-back, a direct drug-transport assay or an Arabidopsis whole-organism\n\
+    \    phenotype. URA3 replacement and unmeasured expression abundance remain construct\
+    \ limits.\n  nodes:\n  - node_id: rci2a-replaces-ura3-hygromycin\n    label: Chromosomal\
+    \ RCI2A replacement in hygromycin-challenged YR93-31\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q9ZNQ7\n  - node_id: rci2a-yeast-hygromycin-growth\n\
+    \    label: Yeast dilution-series growth on 100 ug/ml hygromycin B\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: rci2a-replacement-partly-increases-hygromycin-growth\n\
+    \    subject: rci2a-replaces-ura3-hygromycin\n    predicate: increases\n    object:\
+    \ rci2a-yeast-hygromycin-growth\n    mechanism: RCI2A replacement restores growth\
+    \ at the dense spot and weakly at the next dilution, while\n      PMP3-positive\
+    \ YR93-1 grows across the series. This is partial suppression of the deletion\
+    \ phenotype,\n      not complete equivalence.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:10835350\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC212770/\n      snippet:\
+    \ partially suppressing\n      explanation: Figure 8B's visually inspected spot\
+    \ pattern and complementation Results establish partial\n        hygromycin rescue;\
+    \ the Methods specify the integrated plant construct rather than a plasmid copy.\n\
+    \      cache_path: evidence/PF01679/navarre-2000-pmp3.txt\n      cache_sha256:\
+    \ 5f16446323cd4064ca439fb2e05d47c9139aa12707ed08cca41f51815cdcafab\ncuration_events:\n\
+    - timestamp: '2026-10-11T13:13:31Z'\n  curator: Codex\n  action: CREATE\n  outcome:\
+    \ changed\n  summary: Curate Pmp3 and RCI2A yeast phenotype causal graphs\n  history_record:\
+    \ history/records/PF01679/2026-10-11T131331Z-codex-cfc9c2.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: The 55-aa P87284 reference and current InterPro sequence match the complete
+    W303-1B X91499.1 CDS translation CAA62799.1; PF01679 is 5-52. P87284's canonical
+    S288c metadata is not assigned to every experimental strain. Plant Q9ZNQ7 is 54
+    aa with PF01679 6-52; the reverse-strand ORF complement(172..336), including stop,
+    of cited EST T20621.1 clone 88O14T7 matches exactly by six-frame translation.
+    This is a computed ORF rather than a deposited CDS annotation. YR93/CY162 alleles,
+    final integrated RCI2A flanks and abundance were not independently verified; PCR
+    establishes the interventions. The host is yeast taxon 4932 and the donor is Arabidopsis
+    taxon 3702.
+  target_ids:
+  - PF01679
+  evidence_ids:
+  - identity
+  - primary
+  - deblock-followup
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: All fifteen edges are OBSERVED, INDIRECT and PHENOTYPIC. The three salt-growth
+    backgrounds stay distinct; retained sodium content is not initial flux. The 0.9
+    M YD caption versus 1 M buffered Methods discrepancy is visible. Methylammonium
+    retention is not calibrated voltage, and toxic-cation spots are not killing assays.
+    No-added-KCl YD is not potassium-free; EGTA/calcium replacement jointly changes
+    two conditions. The pH series is normalized to pH 5.5, while Figure 7B is normalized
+    to corresponding 10 mM calcium, not plain YD. Plant rescue is chromosomal whole-protein
+    replacement with URA3 removal, not plasmid overexpression, an isolated domain
+    or a plant-organism mechanism. Figure 6 single-deletion ATPase/ACMA comparisons
+    do not establish Pma1 activation, and triple-deletion effects are not assigned
+    uniquely to Pmp3.
+  target_ids:
+  - PF01679
+  evidence_ids:
+  - primary
+  - native
+  - deblock-followup
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Native PMP3 add-backs are not shown for every retained endpoint; direct
+    molecular mediator, isolated-domain effects and other PF01679 members remain open.
+    The sodium protocol conflict, unverified YR93/CY162 alleles, expression abundance
+    and final insert flanks constrain interpretation. De Block 2015 public text was
+    inspected only through initial proteomics/PDR5 Results and Figure 1 caption; later
+    Results, full Methods, figures and supplementary material remain to assess. No
+    direct proton leak, NSC1 blockade, calcium binding or phosphoinositide sensor
+    mechanism is adopted.
+  target_ids:
+  - PF01679
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01679-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve the molecular mediator and extend later member-specific experimental
+    coverage
+  description: Resolve the conflicting Navarre sodium protocol where possible and
+    inspect complete De Block 2015 methods, strains, figures and supplements before
+    adding its proteomic, transcriptional, sphingolipid or lipid-binding observations.
+    Preserve BY4742 versus W303/YR93/CY162 context, membrane versus total-cell fractions
+    and unresolved Ena1/Ena2 peptides. Extend other family members only with verified
+    accession/domain mapping and primary interventions. A direct transport or stress-sensor
+    mechanism needs evidence beyond the retained indirect phenotypes, and a successor
+    review must state remaining coverage limits.
+  target_ids:
+  - PF01679
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - deblock-followup
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01679.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Resolve the conflicting Navarre sodium protocol where possible and
+    inspect complete De Block 2015 methods, strains, figures and supplements before
+    adding its proteomic, transcriptional, sphingolipid or lipid-binding observations.
+    Preserve BY4742 versus W303/YR93/CY162 context, membrane versus total-cell fractions
+    and unresolved Ena1/Ena2 peptides. Extend other family members only with verified
+    accession/domain mapping and primary interventions. A direct transport or stress-sensor
+    mechanism needs evidence beyond the retained indirect phenotypes, and a successor
+    review must state remaining coverage limits.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01679
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- All eight Navarre figures were visually inspected; Figures 3, 4, 7 and 8 were rechecked
+  for strain symbols, medium differences and partial rescue. No raw growth/uptake
+  reanalysis, quantitative image fitting, cell-volume calibration, clone resequencing
+  or experimental replication was performed. De Block 2015 figures and supplementary
+  material were not visually inspected; its successful public-text access is not negated
+  by a separate curl 403.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

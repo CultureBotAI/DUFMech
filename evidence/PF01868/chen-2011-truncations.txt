@@ -1,0 +1,31 @@
+PMID:21683084; DOI:10.1016/j.jmb.2011.05.012
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3143260/
+Inspected 2026-10-11: Results, Methods, Tables2/3, original Figures4/6/7.
+Minimal verbatim quotation: "NMR and ITC studies"
+
+Curator evidence summary:
+Pfu NP_579545 delta24 loses most RPP21-induced NMR perturbations; free
+spectra retain the folded-core pattern. NMR55 C,~0.3 mM labeled Rpp29 plus
+small excess unlabeled Rpp21. Small shifts remain: weak is not zero binding.
+Original Figure4 panelsA/B/C are free WT/delta17/delta24 andD/E/F are their
+partner-added spectra; caption pairing conflicts with the actual image labels.
+ITC55 C,20 mM cacodylatepH6.7,10 mM KCl,0.3 mM ZnCl2,0.02%NaN3;
+~20 uM RPP21 in cell/~200 uM RPP29 in syringe. WT Kd0.25 +/-0.01 uM and
+delta17 Kd0.23 +/-0.01. Delta24 binding is below detection in this assay;
+its thermogram is not shown. Binding readouts do not demonstrate catalysis.
+
+Figure7 trans-processing of E.coli pre-tRNATyr,55 C,TrispH7.1, substrate
+~2.5 times KM, initial velocity restricted to <30% cleavage. Two-RPP assays
+use100 mM NH4/120 mM Mg, WT reference0.54 +/-0.03/min; four-RPP assays
+use800 mM NH4/30 mM Mg, WT reference8.9 +/-1.6/min. With RPP21 plus
+delta24 or delta31 Rpp29, relative activities are57%/8% without POP5/RPP30
+and56%/4% with them. Each comparison is against WT in its own protocol.
+Delta17 retains84% in both, with broad errors; no significant-loss edge.
+Residual delta24 activity does not directly observe RNA-mediated assembly
+rescue. Do not join poor protein-pair binding to an obligatory inactive RNP.
+The deletion/primer/domain boundaries are in rpp29-identity.txt.
+
+Mja P4-bulged-U rescue experiments were read but not added to this graph set:
+RNA-only and RNP salts, pH normalization and amplitudes differ; Methods has
+50 uM versus50 nM and mixing-versus-nominal-Mg discrepancies.
+Raw HTML SHA256:347462a495d268beda13a03f945dbd3915b8f878489c06f26d7354600422ee6b

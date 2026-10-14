@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF00924
+  path: data/families/PF00924.yaml
+session:
+  id: 2026-10-11T081608Z-codex-01c1b0
+  timestamp: '2026-10-11T08:16:08Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of MscS channel-current and crowding
+    effects
+  details: Saved current-content review 20261011T081606Z-pf00924-mscs-interface-redox-and-crowding
+    with digest 2b38e2b5431bff1e3a8f9393d9322115d5871a1d321a4a1c6cf6558cf752dc9e.
+    Native graph/evidence and overlay-projection checks pass; six observed edges are
+    scoped to three distinct experimental contexts. Unresolved state chemistry, clone
+    sequences, strain metadata and remaining family coverage stay open. Direct current
+    or availability measurements do not establish salt bridges, disulfide geometry
+    or cage-compression trajectories. Same-agent review, not independent endorsement;
+    status remains IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T081606Z-pf00924-mscs-interface-redox-and-crowding/review.yaml

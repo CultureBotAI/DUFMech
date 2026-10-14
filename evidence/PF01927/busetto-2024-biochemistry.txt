@@ -1,0 +1,65 @@
+PF01927 biochemical assay ledger
+Busetto et al. 2024, PMID:39188014, doi:10.1093/nar/gkae610.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11347159/
+Inspected 2026-10-12: relevant Results/Methods and original Figures 5 and 7;
+supplement S8 and Tables S1/S2 inspected as PDF text and rendered pages.
+
+Minimal attributed excerpts (all quotations from this paper are counted jointly):
+"weaker affinity"
+"degraded RNA more efficiently"
+"some activity"
+"highest"
+"degraded"
+"trimmed"
+
+Figure7A: FAM 16-mer RNA at50nM, increasing CeMUT-7 constructs,30min at room
+temperature;20mM HEPES pH7.5,150mM NaCl,10%glycerol,5mM EDTA. FP is
+RNA-only-subtracted; three measurements,mean+/-SD,Hill fits. FL has greater
+binding response than1-625; isolated633-910 and its MUT-8 CTD complex bind
+weakly and have unstable fits in S8C. FL fitted Kd2.325uM; Results18.7uM
+and S8C18.69uM for1-625 conflict with Figure7A label33.4uM. Direction is
+consistent, but no single exact truncation affinity or fold effect is asserted.
+S8C Bmax differs greatly between FL213.2mP and1-625 46.01mP; no contact map
+or proof of isolated-Pfam-domain sufficiency follows from this binding assay.
+
+Figure7B:50nM FAM16-mer,30min,room temperature,20mM HEPES pH7.5,
+250mM NaCl. Human FL1-876 D399A versus1-582 D399A: fitted Kd1.862 versus
+11.15uM (S8D). CTD624-876 binds weakly with unstable fit. D399A is outside
+PF01927 and shared by both compared constructs. Different worm/human salt
+and catalytic backgrounds prevent direct cross-species affinity comparison.
+These FP assays are distinct from active-WT cleavage experiments. S8A/B
+supports Zn association with human CTD,mean1.04 Zn/protein,3technical
+replicates,RSD2%,estimated combined uncertainty10%; it does not establish
+a zinc-dependent RNA-binding or catalytic mechanism.
+
+Figure7C/D:0.5uM enzyme,1uM FAM28-mer AUUGCAUCUAAAGUUGAUUGAAGAGUUC,
+20mM HEPES,2mM MnCl2,room temperature; Ce150mM NaCl versus Hs250mM NaCl.
+Panels display2.5,10,15,30,60,120min and overnight. FL degrades RNA faster
+than NTD-EXO; the latter retains activity. Isolated CTDs are negative controls,
+not active nucleases. Controls and120min CTD lanes are visible. Gels provide
+qualitative product distributions, not fitted kinetic constants or native
+substrate identities. Figure7E/F forceps/contact models are proposed, not
+experimentally resolved RNA complexes.
+
+Figure5B:0.5uM CeMUT-7 FL,1uM FAM28-mer,30min,room temperature,
+20mM HEPES,50mM KCl;5mM divalent chloride salt. Mn gives strong cleavage,
+Mg weaker activity; no-ion,Zn andCa lanes lack detectable activity in this
+assay. This is not exclusive physiological cofactor specificity.
+Figure5C:0,0.01,0.05,0.2,1uM CeMUT-7 FL or FL/MUT-8 FL complex,
+1uM FAM28-mer,2mM MnCl2,30min,room temperature. Both active preparations
+degrade RNA similarly. No activation arrow is attributed to MUT-8. The
+inactive preparation has D435A plus MUT-8 CTD instead of WT/MUT-8 FL;
+the comparison changes both allele and partner construct. Results calls it
+D453A, whereas panel labels, caption, S1 and reference residue support D435A.
+
+Figure5D-G: GU14/GU8 pre-folded with KCl or LiCl; native PAGE supports a
+K-dependent compact GU14 state. Cleavage uses50mM KCl orLiCl,2mM MnCl2,
+1uM RNA,30min,room temperature. PanelsE/F titrate0-1uM enzyme. KCl:
+generic28-mer andGU8 are degraded; GU14 core resists efficient degradation;
+the10-A extension on GU14 is removed, leaving a core-sized product. LiCl:
+GU14,GU8,generic28-mer and GU14+A10 are degraded. PanelG does not print
+its positive enzyme concentration; do not invent an exact value. Salt and
+folding change together, so no salt-independent causal fold-blocking edge
+is claimed. Methods prints HEPES without a reaction-pH value. The 5-prime
+label preserves shortened products, but gels do not define every chemical
+product or prove an in-vivo22G trimming function.

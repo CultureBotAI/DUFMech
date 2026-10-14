@@ -1,0 +1,40 @@
+PF01947 coverage and alternatives, 2026-10-12
+
+Local prior-art search included ignored/hidden text in curation, evidence,
+history and reviews/structured, excluding JSON; no PF01947 match before this
+curation. This is not a whole-filesystem absence claim. Native baseline:
+8296 schema-valid records, zero generated differences.
+
+Sources/aliases checked: PF01947, DUF98, Rv2949c, Sll1797, ycf21, PlqC,
+MJ0807/Q58217, AF1396/O28875; current InterPro/UniProt/KEGG/RCSB and primary
+Stadthagen2005, Pfaff2014, Du2025. Broad name searches also returned unrelated
+commercial identifiers and were not used as protein evidence.
+
+PMID41039844 / doi:10.1111/febs.70272
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12998194/
+Primary XML, online2025-10-02, journalMarch2026. PlqC nomenclature and genomic
+distribution paragraphs inspected. HMM presence is not a new lyase assay.
+Its parenthetical slr0926/plqC and slr1099/plqA assignments conflict with its
+own earlier Sll1797/PlqC and Slr0926/PlqA definitions. Do not propagate those
+parenthetical locus assignments. Whole-pathway production and PlqH findings
+cannot be treated as isolated Sll1797 perturbations. Remaining results and
+supplements need dedicated review before further graphs.
+
+PMID20437231 / doi:10.1007/s00253-010-2620-5
+https://pubmed.ncbi.nlm.nih.gov/20437231/
+Primary abstract inspected through PubMed/EuropePMC. X. albilineans aromatic
+metabolism study, not an E. coli UbiC structural paper. Its ubiC source protein
+membership and full Methods remain unresolved here; no PF01947 edge inferred.
+Frozen source description remains unchanged and its citation/membership
+ambiguity is retained in the overlay discussion, not repaired in a projection.
+
+2NWI/AF1396 structure metadata inspected; no catalytic experiment inferred.
+MJ0807 annotation/MetaCyc pathway leads need primary enzyme evidence. Algal
+Ycf21 and other bacterial/archaeal members are not assigned cyanobacterial
+photosynthesis or mycobacterial cellular functions by similarity alone.
+
+Access limits: Pfaff XML endpoint500 but HTML and four figures available;
+Stadthagen publisher PDF/HTML download403, primary browser text accessible,
+figure6 unavailable. Du primary XML available but figure/PDF blocked. No
+claim of complete source, family or residue-mechanism coverage. All8296
+records and earlier follow-ups remain in scope; this pass stays IN_PROGRESS.

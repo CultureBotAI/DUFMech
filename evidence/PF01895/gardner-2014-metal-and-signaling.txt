@@ -1,0 +1,46 @@
+Gardner2014: PMID24563032; doi10.1128/JB.00029-14
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3993317/
+Inspected 2026-10-11: relevant Methods/Results, Table1, Figures5/6/7 captions
+and original images. Minimal exact quotations: "fluorescence", "integrated",
+"membrane". These are evidence locators, not stand-alone mechanistic proof.
+
+Figure5: C-terminal His6 PhoU-F194W, not native WT, excited280nm at21 C;
+20mM sodium phosphate pH7.4,0.5MNaCl,0.1mMDTT,10%glycerol. MnCl2 at
+0,5,25,75,150uM; average345-355nm with buffer/dilution correction,triplicate.
+Mn increases emission. Apparent fitted Kd18.3+/-6.2uM; QuadW85.2+/-26.3uM.
+Quad=E100A/R101A/E200A/R201A plus the sameF194W probe. Methods uses70ug
+F194W versus26.4ugQuadW and mistakenly repeatsR201A in its QuadW list;
+Table1 and integrant construction specify the correct four substitutions.
+The comparison includes different preparations/protein loads, not isolated
+single-residue metal coordination. Peak shifts4.2versus1.7nm,p0.020;
+the paper explicitly uses94%, not95%, confidence intervals for fittedKds.
+Lower Quad solubility and possible conformational effects remain alternatives.
+ICP-MS supports Mn enrichment, not significant Fe enrichment in this E. coli
+preparation. Ni/Zn may reflect the His tag. Mg response/Kd~1.5+/-0.68mM is
+reported with an unavailable supplementary curve; it is not visually verified.
+No detected QuadW Mg enhancement is not proof of zero metal occupancy.
+
+Figure6B/C: BM265 WT and BM266 Quad are whole-plasmid chromosomal integrants
+at pstB in BM263 with recA1, not scarless single-codon replacements. Overnight
+MOPS2mMPi/glucose0.06%,37 C,+/-IPTG50uM. Induced Quad yields more AP than
+WT despite comparable immunoblot levels. Without induction, both derepress.
+Figure6A plasmid Quad retains about80% repression: no universal null allele.
+
+Figure7: stationary LB37 C BM263 expressing p116U2 WT,E100A,E100A/R101A,
+or Quad. Soluble and100000g/1h membrane-pellet fractions; lanes load1.5ug
+soluble versus5ug membrane protein. Original blot shows lower pellet signal
+for each mutant, with a qualitative progression across these constructs.
+No replicate count, densitometric effect size or mass-balance membrane fraction
+is inferred. The AP and fractionation assays are distinct conditions; no
+observed metal-to-localization-to-phosphatase causal chain is established.
+
+Dimerization and PhoR association are retained with Quad, according to primary
+Results; uninspected supplementary SEC figures are not counted as visual proof.
+PstB-His coelution uses an altered-signaling tagged partner and mixed lysates;
+the Methods/Results phosphate-condition discrepancy needs resolution before
+claiming an in-vivo complex or downstream catalytic activation from association.
+
+Original images SHA256: F5
+0541afd7c78e3522ea343194dca52df46b6eb15665eefd12863f47141ba44426
+F6 d3711bc916c4276f64ba10edefb50d252be37460ae4fc28561eabd7f8798e891
+F7 8b8e2be0d6bb4ad49fc04950686cfb953ae9e0e0042d4f7f05c599b5e00755d0

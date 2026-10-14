@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01861
+  path: data/families/PF01861.yaml
+session:
+  id: 2026-10-11T160403Z-codex-a0a1e6
+  timestamp: '2026-10-11T16:04:03Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped scientific self-review of BpsA causal graphs
+  details: Reviewed sixteen observed effects and one proposed carrier-transfer step
+    against primary methods, tables, inspected growth/survival figures, versioned
+    sequences and mutant primers. Preserve acidic-residue numbering, historical WT
+    comparator, donor-free MS gap, pdaD relocation and partial alternative-polyamine
+    compensation. Native verdict NEEDS_FOLLOWUP; partial coverage remains IN_PROGRESS
+    with no independent endorsement or publication.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T160704Z-pf01861-bpsa-products-carrier-and-stress-contexts/review.yaml

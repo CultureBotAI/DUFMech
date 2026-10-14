@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF00902
+  path: curation/families/PF00902.yaml
+session:
+  id: 2026-10-11T080327Z-codex-10524c
+  timestamp: '2026-10-11T08:03:27Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped TatC vesicle transport and precursor-processing graphs
+  details: Inspected Frobel 2012 primary Methods, Results, Discussion and Figures
+    1-4, the cited Orriss pFAT588 construct method, and UniProt/InterPro member mapping.
+    Three graphs retain five directly observed assay effects while separating signal
+    cleavage from protected mature-product transport and excluding purified TatC sufficiency
+    or observed hairpin microsteps. Minimal evidence caches and explicit unresolved
+    contexts accompany an IN_PROGRESS overlay; schema validation passed. Whole-family
+    review and publication remain incomplete.

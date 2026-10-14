@@ -1,0 +1,60 @@
+Inspected 2026-10-11. PMID:17189272; DOI:10.1074/jbc.M610614200.
+https://archive-ouverte.unige.ch/unige:89518
+https://access.archive-ouverte.unige.ch/access/metadata/1bbd6a7e-d760-470a-816b-df5230b03582/download
+Author-deposited published paper: all main text read; Figures 2, 3, 4, 6
+and Table 1 visually inspected. Minimal quotations: "Lys-81";
+"chromophoric adduct"; "inorganic phosphate".
+
+Methods p6099: Pdx1-His6 and its K81R/K149R derivatives are whole proteins,
+not isolated PF01680 domains. Free Pdx1-His6 is prepared with 0.5 mM DL-G3P
+and 20 mM ammonium sulfate for 3 h at room temperature, then dialyzed into
+20 mM Tris-Cl pH7.5/20 mM NaCl. This clearance step is not R5P loading.
+
+Figures 3/4, pp6100-6101: R5P exposure produces a covalent early adduct.
+Radiolabeled R5P identifies a tryptic fraction; natural/13C-labeled peptide
+masses differ by five Da. MS/MS assigns modification to K81 in residues
+61-83, rather than the earlier K149 assignment. Figure 4 preincubates R5P
+for 3 h at 37 C: WT and K149R each acquire approximately 212.6 Da, whereas
+K81R does not show the new mass peak. Figure-specific concentrations are
+not stated there. Neither a folding control nor a universal zero-activity
+conclusion is supplied by those spectra. The 2007 imine interpretation
+is not adopted as settled chemistry: see the retained 2008 NMR follow-up.
+
+Figure 2A: 20 uM free Pdx1, 20 uM Pdx2, 0.2 mM R5P, 10 mM glutamine;
+the 315-nm signal rises across 0, 1.5, 3, 4.5, 6, 7.5 and 9 minutes.
+Reconstitution Methods use 50 mM Tris-Cl pH7.5; reaction temperature is
+not restated there. Do not import 37 C from the separate PLP kinetic assay.
+Pdx2 alone or glutamine alone does not support the rise, according to the
+text. The inset's Pdx2-His6 H170N trace stays near baseline relative to WT.
+This is a partner mutation, not a mutation in PF01680. External ammonium
+can replace Pdx2/glutamine; the reported tenfold rate difference is data
+not shown, so no quantitative edge is assigned to it.
+
+Figure 2C main panel: first prepare the chromophore as in 2A, then add
+0.4 mM DL-G3P; spectra at 3/9/15/25/40/60 min show A315 decreasing and
+A414 increasing. The product-associated signal is assigned to PLP, but this
+particular sample is not independently identified by product MS/NMR here.
+The separate inset dialyzes excess R5P/glutamine and states 0.4 uM DL-G3P,
+inconsistent with the main-panel mM dose. The caption ends with pH8.0 while
+reconstitution Methods use pH7.5. Preserve that ambiguity rather than
+silently fixing units or combining preparations. The inset shows partial,
+not quantitative, conversion. The two observed signals do not establish
+every intervening bond change or distinguish enzyme-bound from free PLP.
+
+Figure 6C/D and Methods: joint Pdx1/Pdx2, glutamine and R5P yield a coupled
+inorganic-phosphate signal at 360 nm, alongside the 315-nm time course.
+The phosphate assay uses 300 ul, 50 mM Tris-Cl pH8.0, 20 mM MgCl2 and
+EnzChek components; figure curves use equimolar 10/20/40 uM proteins.
+Glutamine/R5P doses and temperature are not explicitly enumerated for this
+assay. Do not transfer the 2A concentrations. The paper describes release
+as stoichiometric, but no precise completed one-to-one yield is assigned
+from these finite time courses. Chromophore formation and phosphate release
+are concomitant readouts, not proof that one measured signal causes the other.
+
+Figure 6A/B/Table 1 separately fractionate adduct species and assess protein
+phosphostaining. Text and table differ on species-a mass (33049 vs 33047 Da).
+The nitrogen-free C5H6O2 structure and absence of 15N incorporation rely in
+part on data not shown. Later isotope/NMR work challenges this interpretation;
+neither that formula nor the proposed ring-opening/tautomerization sequence
+is encoded as an observed edge. K149R has a slower chromophore signal and
+no detected PLP in text-only results; it is not simply inactive in all steps.

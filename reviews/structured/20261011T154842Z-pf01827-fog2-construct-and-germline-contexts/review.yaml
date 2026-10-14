@@ -1,0 +1,531 @@
+schema_version: 1.0.0
+review_id: 20261011T154842Z-pf01827-fog2-construct-and-germline-contexts
+title: PF01827 FOG-2 construct-dependent reporter and germline effects
+started_at: '2026-10-11T15:48:19Z'
+finished_at: '2026-10-11T15:48:42Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Five graphs retain eight observed indirect effects from FOG-2 truncation,
+  terminal-segment transfer, RNAi and distinct genetic backgrounds. Historical coding
+  sequence exactly matches the 327-aa reference, but the current FTH interval is smaller
+  than legacy schematics. Reporter activity, sexual phenotype and negative expression
+  readouts remain separate. Partial coverage remains IN_PROGRESS.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01827.yaml
+    sha256: 024097ef48faed6aa0568451848fe073a5cc30a190bd85da6aa4918bb7fd933a
+    role: context
+  - path: data/families/PF01827.yaml
+    sha256: ba70f401239a45f5dde7f7bbacbe99f6fd182f3e7ba4c571b688fa123d3b2f26
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01827/nayak-2005-fog2.txt
+    role: context
+    sha256: 3e2298c0efb128ed82d8abae84de9881fc6e8494c5e2cc62e4f2e73b56f78eaa
+  - path: evidence/PF01827/FOG2-identity.txt
+    role: context
+    sha256: e4b3aee21857912d94ecfd50d84d2dbbab3b50645634923b383994a35a7f46e5
+  - path: evidence/PF01827/hu-2019-fog2.txt
+    role: context
+    sha256: 288317e84560c9a543bdee0f2015244b93bbac492a690e11aca6b8cf71b652e5
+  - path: evidence/PF01827/clifford-2000-fog2.txt
+    role: context
+    sha256: 0dc0871440cbe733da50c70f7217262d675482a6d4454ad2828fa84f6d43c902
+  - path: evidence/PF01827/fog2-gap-ledger.txt
+    role: context
+    sha256: afa91dc1b9764c04d9c656a34f9d94aa1c55e8f5950df3e137e30b0b028312cc
+targets:
+- target_id: PF01827
+  path: data/families/PF01827.yaml
+  label: PF01827
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01827.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: bf052cfc03d83c34c1128aff61622f0fde66e7aa7ea2b58ce85c70ca3f1a2d74
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Pending PF01827 within all 8296 frozen families; selected C. elegans
+    FOG-2/FTR-1 contexts from three primary studies, not completion of other family
+    members or the corpus.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01827
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Resolve clone junctions, FTR-1 length, bait orientation, RNAi dosing/controls
+      and nm75/nmIs4 labeling. Obtain direct domain-specific biochemical tests and
+      rescue, improve detection of endogenous TRA-2 regulation, and assess other FTR/FTH
+      members and gene-conversion/mating-system studies independently. No exhaustive
+      family survey, direct ubiquitination chain or universal GLD-1 target repression
+      is established.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01827
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC539060/
+  locator: Nayak 2005 Results and construct Methods; Figure 4 visually inspected.
+    Earlier two-hybrid protocol checked in the Clifford 2000 primary-paper transcription.
+  accessed_at: '2026-10-11T15:48:42Z'
+  support: supports
+  snapshot_sha256: 3e2298c0efb128ed82d8abae84de9881fc6e8494c5e2cc62e4f2e73b56f78eaa
+  summary: Four terminal truncations lower ordinal GLD-1 reporter output with retained
+    SKR-1 interaction. A FTR-1/FOG-2 terminal chimera acquires reporter output without
+    equaling the full FOG-2 score. These are fusion-context effects, not isolated-domain
+    sufficiency or binding constants.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q2YS43/entry/pfam/PF01827/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T15:48:42Z'
+  support: supports
+  snapshot_sha256: e4b3aee21857912d94ecfd50d84d2dbbab3b50645634923b383994a35a7f46e5
+  summary: Q2YS43 exactly matches CAJ43447.1 and independent reconstruction of the
+    original AL110477.1 splice coordinates, yielding 327 aa. PF01827 is 144-271 and
+    F-box 20-59. Tail-only and partial-domain deletions are distinguished, as is transferred
+    segment 254-327. FTR-1 G5EC06 exactly matches CAB54326.1, 314 aa, PF01827 146-283.
+    The Methods 318-aa FTR-1 and historical fusion/junction discrepancies remain unresolved.
+    No substitution of the shorter FOG-2 isoform or mammalian FOG-2 name collision.
+- evidence_id: germline-genetic-contexts
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC9200065/?report=reader
+  locator: Hu 2019 Methods, Results, Tables 1-3 and Discussion; Figures 3/6 visually
+    inspected.
+  summary: q71 feminizes an e2020/q95 sensitized background in a selected genotyped
+    subset, and modified TRA-2 partially suppresses q71 self-sterility. No detected
+    FOG-2-loss elevation of germline TRA-2 is retained as a detection-qualified negative
+    result; model parameters are not measured repression constants.
+  accessed_at: '2026-10-11T15:48:42Z'
+  support: supports
+  snapshot_sha256: 288317e84560c9a543bdee0f2015244b93bbac492a690e11aca6b8cf71b652e5
+- evidence_id: founding-rnai-and-identity
+  kind: primary_source
+  reference: https://doi.org/10.1242/dev.127.24.5265
+  locator: Clifford 2000 primary-paper transcription on ResearchGate, Methods, relevant
+    Results, Table 1 and captions; no original image inspection.
+  summary: CD13.1 RNAi produces a female-germline phenotype with male-sibling negatives,
+    while residue variants and RNA cross-linking constrain assumptions about binding
+    and downstream mechanism. Missing RNAi controls and clone-length differences remain
+    explicit.
+  accessed_at: '2026-10-11T15:48:42Z'
+  support: supports
+  snapshot_sha256: 0dc0871440cbe733da50c70f7217262d675482a6d4454ad2828fa84f6d43c902
+- evidence_id: target-specificity-and-coverage
+  kind: primary_source
+  reference: https://genesdev.cshlp.org/content/15/18/2408.full.html
+  locator: Relevant primary-text RME-2 subsection only; the ledger separately marks
+    other publications as uncurated leads.
+  summary: Reported unchanged RME-2 accumulation in fog-2 mutants, with data not shown,
+    does not support universal target derepression. Additional member and phenotype
+    studies require independent inspection and mapping.
+  accessed_at: '2026-10-11T15:48:42Z'
+  support: supports
+  snapshot_sha256: afa91dc1b9764c04d9c656a34f9d94aa1c55e8f5950df3e137e30b0b028312cc
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T15:48:42Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01827
+  kind: record_content
+  reference: data/families/PF01827.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T15:48:42Z'
+  support: context_only
+  snapshot_sha256: ba70f401239a45f5dde7f7bbacbe99f6fd182f3e7ba4c571b688fa123d3b2f26
+  quote: "id: Pfam:PF01827\npfam_id: PF01827\nname: FTH domain\nshort_name: FTH\n\
+    seed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status: IN_PROGRESS\n\
+    source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01827\ncounters:\n\
+    \  proteins: 2413\n  matches: 2783\n  proteomes: 11\n  taxa: 27\n  structures:\
+    \ 0\n  alphafold_models: 2339\n  domain_architectures: 123\nprovenance:\n  snapshot_id:\
+    \ interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002900\ndescription: This presumed domain is likely to\
+    \ be a protein-protein interaction module. It is found in\n  many proteins from\
+    \ C. elegans. The domain is found associated with the F-box [pfam:PF00646]. This\
+    \ domain\n  is named FTH after FOG-2 homology domain [[cite:PUB00101027]].\ncuration_history:\
+    \ history/records/PF01827\ndiscussions:\n- discussion_id: fog2-domain-tail-and-protocol-boundaries\n\
+    \  prompt: Separate FTH, terminal-tail and whole-protein contributions to FOG-2\
+    \ function.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: The mapped 144-271\
+    \ domain is not the whole 327-aa protein or the transferred 254-327 segment.\n\
+    \    Five graphs retain eight observed indirect effects without assigning direct\
+    \ molecular sufficiency.\n  evidence:\n  - reference: PMID:15630478\n    supports:\
+    \ PARTIAL\n    evidence_source: primary_methods_results_and_visually_inspected_figure_4\n\
+    \    explanation: Reporter perturbations retain SKR-1 controls but do not resolve\
+    \ folding, affinity or\n      the 314/318 FTR-1 and bait-orientation discrepancies.\n\
+    \  - reference: PMID:11076749\n    supports: PARTIAL\n    evidence_source: primary_paper_transcription_methods_results_and_table_1\n\
+    \    explanation: RNAi, historical sequence and mutant-binding information constrain\
+    \ whole-gene effects;\n      exact RNAi controls and clone lengths need follow-up.\n\
+    \  notes: See evidence/PF01827/FOG2-identity.txt and paired primary notes. Historical\
+    \ AL110477.1 splice\n    reconstruction exactly matches Q2YS43, but tagged clones\
+    \ and chimera junctions were not independently\n    sequenced. G219R and G271R/E\
+    \ phenotypes are not loss-of-GLD-1-binding proof. Obtain domain-specific\n   \
+    \ orthogonal assays and rescue.\n  posed_by: Codex\n  posed_date: '2026-10-11'\n\
+    - discussion_id: fog2-translational-model-and-family-coverage\n  prompt: Test\
+    \ the molecular mediator without promoting a genetic model into an observed causal\
+    \ chain.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Tagged TRA-2 partly\
+    \ suppresses q71, while FOG-2 loss does not detectably raise germline TRA-2\n\
+    \    in the inspected assay. The sensitized e2020 result does not establish a\
+    \ specific alternative RNA\n    target or GLD-1 independence.\n  evidence:\n \
+    \ - reference: PMID:30599151\n    supports: PARTIAL\n    evidence_source: primary_methods_tables_1_2_3_results_discussion_and_figures_3_6\n\
+    \    explanation: Genotype effects, negative expression readouts, detection limits\
+    \ and model assumptions\n      remain separate. Table 2 Fog includes self-fertile\
+    \ animals and its genotyped subset is phenotype-selected.\n  notes: See evidence/PF01827/hu-2019-fog2.txt\
+    \ and fog2-gap-ledger.txt. Resolve nm75/nmIs4 labeling and\n    measurement sensitivity,\
+    \ inspect uncurated gene-conversion and mating studies, and independently map\n\
+    \    other FTR/FTH members. No direct ubiquitination, universal RNA-binding or\
+    \ family-wide sexual-fate\n    mechanism is adopted. Keep IN_PROGRESS with partial\
+    \ self-review.\n  posed_by: Codex\n  posed_date: '2026-10-11'\ncausal_graphs:\n\
+    - graph_id: fog2-terminal-truncation-reporter\n  title: FOG-2 terminal truncations\
+    \ reduce GLD-1 two-hybrid output\n  scope: 'Nayak 2005 Figure 4D: 327-aa C. elegans\
+    \ FOG-2 and constructs ending at residues 318, 299, 263\n    or 251, tested in\
+    \ yeast.'\n  context: GLD-1 in pAS1 and FOG-2 derivatives in pACTII per Methods,\
+    \ with 20 mM 3-amino-triazole. The\n    inherited Y190 two-hybrid protocol uses\
+    \ selective growth and beta-galactosidase reporting; the plotted\n    plus signs\
+    \ are ordinal and not calibrated binding constants. SKR-1 interaction is retained\
+    \ in every\n    displayed truncation.\n  family_mapping: Historical AL110477.1\
+    \ splice reconstruction exactly matches 327-aa Q2YS43/CAJ43447.1;\n    current\
+    \ PF01827 is 144-271, separate F-box 20-59. The 318/299 truncations remove tail\
+    \ only; 263/251\n    remove domain 264-271/252-271 plus tail. None isolates the\
+    \ entire FTH domain.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:6239\n  limitations:\
+    \ INDIRECT construct effects on a yeast reporter, not purified binding affinity\
+    \ or worm sexual\n    fate. Folding, fusion geometry and abundance may contribute\
+    \ despite retained SKR-1 output. Figure\n    4 labels derivatives Bait whereas\
+    \ Methods places them in activation fusions. Replicate count and quantitative\n\
+    \    reporter calibration are not supplied.\n  nodes:\n  - node_id: truncate-to-318\n\
+    \    label: Replace full-length FOG-2 with residues 1-318\n    node_type: PERTURBATION\n\
+    \  - node_id: truncate-to-299\n    label: Replace full-length FOG-2 with residues\
+    \ 1-299\n    node_type: PERTURBATION\n  - node_id: truncate-to-263\n    label:\
+    \ Replace full-length FOG-2 with residues 1-263\n    node_type: PERTURBATION\n\
+    \  - node_id: truncate-to-251\n    label: Replace full-length FOG-2 with residues\
+    \ 1-251\n    node_type: PERTURBATION\n  - node_id: gld1-two-hybrid-output\n  \
+    \  label: Ordinal GLD-1-dependent yeast two-hybrid output\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: truncation-318-decreases-reporter\n    subject: truncate-to-318\n\
+    \    predicate: decreases\n    object: gld1-two-hybrid-output\n    mechanism:\
+    \ The score falls from ++++ for 327-aa FOG-2 to ++ for 318 aa; deleting residues\
+    \ 319-327\n      outside the current FTH interval changes reporter output. SKR-1\
+    \ remains ++++.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:15630478\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC539060/\n      snippet: Constructs\
+    \ and transformation\n      explanation: Visually inspected Figure 4D rows 1/2\
+    \ and construct Methods; ordinal score, not a two-fold\n        affinity change.\n\
+    \      cache_path: evidence/PF01827/nayak-2005-fog2.txt\n      cache_sha256: 3e2298c0efb128ed82d8abae84de9881fc6e8494c5e2cc62e4f2e73b56f78eaa\n\
+    \  - edge_id: truncation-299-decreases-reporter\n    subject: truncate-to-299\n\
+    \    predicate: decreases\n    object: gld1-two-hybrid-output\n    mechanism:\
+    \ The 299-aa derivative scores +/- rather than ++++; residues 300-327 are outside\
+    \ the current\n      domain. This is residual weak reporter output, not complete\
+    \ absence of all binding.\n    directness: INDIRECT\n    support: OBSERVED\n \
+    \   evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:15630478\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC539060/\n      snippet:\
+    \ Constructs and transformation\n      explanation: Figure 4D rows 1/3, retained\
+    \ ++++ SKR-1 control and primary Results.\n      cache_path: evidence/PF01827/nayak-2005-fog2.txt\n\
+    \      cache_sha256: 3e2298c0efb128ed82d8abae84de9881fc6e8494c5e2cc62e4f2e73b56f78eaa\n\
+    \  - edge_id: truncation-263-decreases-reporter\n    subject: truncate-to-263\n\
+    \    predicate: decreases\n    object: gld1-two-hybrid-output\n    mechanism:\
+    \ Removing residues 264-327 eliminates detected GLD-1 reporter interaction while\
+    \ SKR-1 remains\n      positive. The deletion spans eight current-domain residues\
+    \ and the entire downstream tail.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:15630478\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC539060/\n      snippet:\
+    \ Constructs and transformation\n      explanation: Figure 4D row 4 versus full\
+    \ length; no isolated-domain or quantitative detection-limit\n        experiment.\n\
+    \      cache_path: evidence/PF01827/nayak-2005-fog2.txt\n      cache_sha256: 3e2298c0efb128ed82d8abae84de9881fc6e8494c5e2cc62e4f2e73b56f78eaa\n\
+    \  - edge_id: truncation-251-decreases-reporter\n    subject: truncate-to-251\n\
+    \    predicate: decreases\n    object: gld1-two-hybrid-output\n    mechanism:\
+    \ The 251-aa derivative also lacks detected GLD-1 output but retains SKR-1 interaction.\
+    \ Its\n      deletion spans domain residues 252-271 and tail, not precisely the\
+    \ separate 254-327 exon-transfer\n      segment.\n    directness: INDIRECT\n \
+    \   support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:15630478\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC539060/\n\
+    \      snippet: Constructs and transformation\n      explanation: Figure 4D row\
+    \ 5 and Methods; explicit 76-aa deletion versus the 74-aa exon-4 description.\n\
+    \      cache_path: evidence/PF01827/nayak-2005-fog2.txt\n      cache_sha256: 3e2298c0efb128ed82d8abae84de9881fc6e8494c5e2cc62e4f2e73b56f78eaa\n\
+    - graph_id: fog2-ftr1-exon-transfer-reporter\n  title: A FOG-2 terminal segment\
+    \ confers GLD-1 reporter interaction on FTR-1\n  scope: 'Nayak 2005 Figure 4B/D:\
+    \ FTR-1 versus the FTR-1/FOG-2 exon-4 chimera.'\n  context: Same yeast two-hybrid\
+    \ setup as the truncation study, 20 mM 3-amino-triazole and retained SKR-1\n \
+    \   positive interaction. Methods specify GLD-1 pAS1 and derivatives pACTII; the\
+    \ image Bait heading conflicts\n    with this orientation.\n  family_mapping:\
+    \ FOG-2 Q2YS43/CAJ43447.1 is 327 aa, PF01827 144-271; FTR-1 G5EC06/CAB54326.1\
+    \ is 314 aa,\n    PF01827 146-283. Figure 4B shows FOG-2 segment 254-327, combining\
+    \ domain 254-271 with tail 272-327.\n    The experiment is a protein chimera,\
+    \ not purified FTH sufficiency.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:6239\n\
+    \  limitations: INDIRECT reporter effect. FTR-1 is 314 aa in the image/reference\
+    \ but 318 aa in Methods;\n    exact historical chimera junctions remain unverified.\
+    \ The +++ chimera signal is not identical to ++++\n    FOG-2. No worm rescue,\
+    \ translational repression assay or family-wide GLD-1-binding transfer is established.\n\
+    \  nodes:\n  - node_id: transfer-fog2-terminal-exon\n    label: Replace the FTR-1\
+    \ terminal segment with reported FOG-2 exon 4\n    node_type: PERTURBATION\n \
+    \ - node_id: chimera-gld1-reporter\n    label: GLD-1-dependent yeast two-hybrid\
+    \ output of the chimera\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: exon-transfer-increases-reporter\n\
+    \    subject: transfer-fog2-terminal-exon\n    predicate: increases\n    object:\
+    \ chimera-gld1-reporter\n    mechanism: FTR-1 has no detected GLD-1 signal, whereas\
+    \ the 327-aa chimera scores +++; both retain\n      ++++ SKR-1 interaction. The\
+    \ transferred segment confers this assay behavior only within the tested\n   \
+    \   FTR-1 fusion context.\n    directness: INDIRECT\n    support: OBSERVED\n \
+    \   evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:15630478\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC539060/\n      snippet:\
+    \ Constructs and transformation\n      explanation: Figure 4D final two rows and\
+    \ Figure 4B terminal alignment, with the 314/318 and exon-boundary\n        discrepancies\
+    \ retained.\n      cache_path: evidence/PF01827/nayak-2005-fog2.txt\n      cache_sha256:\
+    \ 3e2298c0efb128ed82d8abae84de9881fc6e8494c5e2cc62e4f2e73b56f78eaa\n- graph_id:\
+    \ fog2-rnai-xx-germline\n  title: FOG-2-directed RNAi feminizes somatically female\
+    \ germlines\n  scope: 'Clifford 2000 Results: CD13.1-derived double-stranded RNA\
+    \ and sexual phenotype of cross-progeny.'\n  context: C. elegans, default 20 C\
+    \ culture; 292 gonad arms from somatically female cross-progeny and\n    100 male\
+    \ siblings examined. Exact RNAi dose, delivery details, scoring age and contemporaneous\
+    \ untreated\n    counts are not resolved in the inspected primary-paper transcription.\n\
+    \  family_mapping: CD13.1 maps to fog-2/Y113G7B.5; historical genomic reconstruction\
+    \ matches 327-aa Q2YS43/CAJ43447.1,\n    PF01827 144-271. RNAi perturbs the transcript/whole\
+    \ protein, not a specific FTH surface.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:6239\n\
+    \  limitations: INDIRECT organism phenotype with incomplete protocol/control detail.\
+    \ The denominator is\n    gonad arms, not independent animals. Male siblings show\
+    \ no reported sexual defect, so the result is\n    not generalized to XO spermatogenesis.\
+    \ No measured TRA-2 translation rate, RNAi-resistant rescue or\n    isolated-domain\
+    \ mechanism.\n  nodes:\n  - node_id: fog2-cd13-rnai\n    label: Introduce CD13.1-derived\
+    \ fog-2 double-stranded RNA\n    node_type: PERTURBATION\n    grounding:\n   \
+    \ - UniProtKB:Q2YS43\n  - node_id: feminized-xx-gonad-arms\n    label: Oocyte-producing\
+    \ instead of normally sperm-producing gonad arms\n    node_type: PHENOTYPE\n \
+    \ edges:\n  - edge_id: fog2-rnai-increases-feminization\n    subject: fog2-cd13-rnai\n\
+    \    predicate: increases\n    object: feminized-xx-gonad-arms\n    mechanism:\
+    \ The reported RNAi treatment yields feminization in 91% of 292 somatically female\
+    \ gonad\n      arms, while male siblings lack the sexual defect. This is the reported\
+    \ intervention phenotype, without\n      a reconstructed untreated effect-size\
+    \ estimate.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:11076749\n      source_url:\
+    \ https://www.researchgate.net/publication/351297301_FOG-2_a_novel_F-box_containing_protein_associates_with_the_GLD-1_RNA_binding_protein_and_directs_male_sex_determination_in_the_C_elegans_hermaphrodite_germline\n\
+    \      snippet: 91% of gonad arms\n      explanation: Primary-paper Results identifying\
+    \ Y113G7B.5 as fog-2, printed p.5267; text transcription\n        inspected, not\
+    \ raw phenotype images or lab supplements.\n      cache_path: evidence/PF01827/clifford-2000-fog2.txt\n\
+    \      cache_sha256: 0dc0871440cbe733da50c70f7217262d675482a6d4454ad2828fa84f6d43c902\n\
+    - graph_id: fog2-q71-sensitized-germline\n  title: Loss of FOG-2 shifts germline\
+    \ fate despite the tra-2 UTR deletion\n  scope: 'Hu 2019 Table 2: tra-2(e2020);\
+    \ fem-3(q95) families segregating fog-2(q71), not an otherwise\n    wild-type\
+    \ population.'\n  context: Temperature-sensitive fem-3(q95) strains maintained\
+    \ at 15 C; embryos shifted to 25 C and grown\n    to adults. Oocyte presence scored\
+    \ by compound microscopy, followed by PCR/sequencing of a phenotype-selected\n\
+    \    subset. Detailed strain construction retains unc-24(e138) and dpy-20(e1282)\
+    \ markers on IV.\n  family_mapping: fog-2(q71) is W148stop in the 327-aa Q2YS43/CAJ43447.1\
+    \ reference, within PF01827 144-271\n    but truncating most of the domain and\
+    \ tail. Genotype perturbation is not a single-residue binding\n    experiment.\
+    \ The 108-nt tra-2(e2020) deletion is in a different gene's 3-prime UTR.\n  scope_status:\
+    \ PHENOTYPIC\n  taxon: NCBITaxon:6239\n  limitations: INDIRECT genetic effect.\
+    \ Fog includes self-fertile animals and does not mean sperm-free.\n    Sequencing\
+    \ followed phenotyping, so 11/11 is not an unbiased penetrance estimate. Remaining\
+    \ in-vivo\n    RNA contacts, alternative targets and GLD-1-independent functions\
+    \ are not distinguished. A brief Methods\n    chromosome-I label for fem-3 conflicts\
+    \ with the detailed IV strain construction.\n  nodes:\n  - node_id: homozygous-q71-in-e2020-q95\n\
+    \    label: Make fog-2(q71) homozygous in the e2020/q95 sensitized background\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q2YS43\n  - node_id:\
+    \ oocyte-producing-germline\n    label: Oocyte-producing germline outcome instead\
+    \ of the Mog phenotype\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: q71-increases-oocyte-outcome\n\
+    \    subject: homozygous-q71-in-e2020-q95\n    predicate: increases\n    object:\
+    \ oocyte-producing-germline\n    mechanism: All eleven sequenced q71 homozygotes\
+    \ occur in the oocyte-positive group; four WT and five\n      heterozygous siblings\
+    \ occur in Mog, with one heterozygote in Fog. The segregating-family result\n\
+    \      supports a feminizing effect in this background without resolving its molecular\
+    \ mediator.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:30599151\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC9200065/?report=reader\n      snippet:\
+    \ presence of oocytes\n      explanation: Primary Table 2, strain Methods and\
+    \ sensitivity Results; 109 phenotyped animals but\n        only 21 selectively\
+    \ sequenced. No measured translation rate or family-wide effect.\n      cache_path:\
+    \ evidence/PF01827/hu-2019-fog2.txt\n      cache_sha256: 288317e84560c9a543bdee0f2015244b93bbac492a690e11aca6b8cf71b652e5\n\
+    - graph_id: fog2-tra2-tagged-suppression\n  title: Modified TRA-2 partially suppresses\
+    \ the FOG-2-null self-fertility defect\n  scope: 'Hu 2019 Results near Figure\
+    \ 3: XX tra-2(nm75); fog-2(q71) double mutants compared with the reported\n  \
+    \  untagged q71 phenotype.'\n  context: Endogenous nine-residue HA insertion four\
+    \ amino acids before the TRA-2 stop; CP153 derived\n    from JK574 and CP139/CP141,\
+    \ with q71 sequencing and tagged-locus PCR confirmation. Default NGM culture\n\
+    \    at 20 C; 40 double-mutant animals scored for self-fertility.\n  family_mapping:\
+    \ The deficient member is FOG-2 Q2YS43/CAJ43447.1, PF01827 144-271, affected by\
+    \ W148stop.\n    The intervention alters separate TRA-2, not FOG-2, its FTH domain\
+    \ or an equivalent family member.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:6239\n\
+    \  limitations: INDIRECT genetic suppression, not same-gene rescue or a direct\
+    \ binding/translation measurement.\n    Precise scoring age, biological replicate\
+    \ breakdown and contemporaneous untagged denominator are unstated.\n    Figure\
+    \ 3B says nmIs4 while Methods/caption and Figure 6 say nm75. The tagged allele\
+    \ is not a neutral\n    reporter, and suppression remains partial.\n  nodes:\n\
+    \  - node_id: insert-tra2-ha-in-q71\n    label: Introduce homozygous endogenous\
+    \ tra-2(nm75) into fog-2(q71)\n    node_type: PERTURBATION\n  - node_id: self-fertility-in-q71\n\
+    \    label: Self-fertility among XX fog-2(q71) animals\n    node_type: PHENOTYPE\n\
+    \  edges:\n  - edge_id: tra2-modification-increases-self-fertility\n    subject:\
+    \ insert-tra2-ha-in-q71\n    predicate: increases\n    object: self-fertility-in-q71\n\
+    \    mechanism: Self-fertility is reported in 35% of 40 double-mutant animals\
+    \ despite the untagged q71\n      sperm-deficient baseline. This supports partial\
+    \ compensation by altered TRA-2, not restoration of\n      FOG-2 protein or a\
+    \ quantified repression constant.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30599151\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9200065/?report=reader\n\
+    \      snippet: 35% (N=40)\n      explanation: Expression Results and strain/CRISPR\
+    \ Methods; Figure 3/6 images inspected for the separate\n        expression readouts\
+    \ and retained label discrepancy.\n      cache_path: evidence/PF01827/hu-2019-fog2.txt\n\
+    \      cache_sha256: 288317e84560c9a543bdee0f2015244b93bbac492a690e11aca6b8cf71b652e5\n\
+    curation_events:\n- timestamp: '2026-10-11T15:38:10Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate FOG-2 construct and germline causal\
+    \ contexts\n  history_record: history/records/PF01827/2026-10-11T153810Z-codex-35816b.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Q2YS43 exactly matches CAJ43447.1 and independent reconstruction of the
+    original AL110477.1 splice coordinates, yielding 327 aa. PF01827 is 144-271 and
+    F-box 20-59. Tail-only and partial-domain deletions are distinguished, as is transferred
+    segment 254-327. FTR-1 G5EC06 exactly matches CAB54326.1, 314 aa, PF01827 146-283.
+    The Methods 318-aa FTR-1 and historical fusion/junction discrepancies remain unresolved.
+    No substitution of the shorter FOG-2 isoform or mammalian FOG-2 name collision.
+  target_ids:
+  - PF01827
+  evidence_ids:
+  - identity
+  - primary
+  - germline-genetic-contexts
+  - founding-rnai-and-identity
+  - target-specificity-and-coverage
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: All eight effects are OBSERVED, EXPERIMENTAL and INDIRECT, with PHENOTYPIC
+    scope. Yeast ordinal scores do not become binding affinities, and residual +/-
+    or +++ outputs remain explicit. RNAi uses gonad arms, not independent animals,
+    as its denominator. The q71 sensitized cross retains phenotype-selected genotyping
+    and the definition of Fog including self-fertility. HA-tag suppression is partial
+    and is not FOG-2 complementation. Negative TRA-2/OMA-1 readouts and undetected
+    FOG-2 RNA cross-linking constrain the model rather than disappearing from the
+    record; they are not proof of absolute absence of an effect or interaction.
+  target_ids:
+  - PF01827
+  evidence_ids:
+  - primary
+  - native
+  - germline-genetic-contexts
+  - founding-rnai-and-identity
+  - target-specificity-and-coverage
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Resolve clone junctions, FTR-1 length, bait orientation, RNAi dosing/controls
+    and nm75/nmIs4 labeling. Obtain direct domain-specific biochemical tests and rescue,
+    improve detection of endogenous TRA-2 regulation, and assess other FTR/FTH members
+    and gene-conversion/mating-system studies independently. No exhaustive family
+    survey, direct ubiquitination chain or universal GLD-1 target repression is established.
+  target_ids:
+  - PF01827
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01827-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve FOG-2 construct provenance and molecular mediation
+  description: Reconcile historical construct and figure discrepancies, obtain missing
+    perturbation controls, and separate terminal-tail, F-box, FTH and whole-gene contributions
+    using orthogonal assays. Retain negative molecular results and ascertainment limits
+    while assessing uncurated members and contexts. Save successor reviews stating
+    their exact evidence coverage.
+  target_ids:
+  - PF01827
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  - germline-genetic-contexts
+  - founding-rnai-and-identity
+  - target-specificity-and-coverage
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01827.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Reconcile historical construct and figure discrepancies, obtain missing
+    perturbation controls, and separate terminal-tail, F-box, FTH and whole-gene contributions
+    using orthogonal assays. Retain negative molecular results and ascertainment limits
+    while assessing uncurated members and contexts. Save successor reviews stating
+    their exact evidence coverage.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01827
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Nayak Figure 4 and Hu Figures 3/6 were visually inspected. Clifford was assessed
+  through primary-paper transcription, not original figure images or lab supplements.
+  Hu tables were read directly; raw RNAseq, reporter measurements, statistical reanalysis,
+  historical experimental clones and remaining supplementary datasets were not independently
+  reconstructed. Historical reference sequence verification is not clone resequencing.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.

@@ -1,0 +1,34 @@
+Gerber et al. 2024. PMID:38493148; doi:10.1038/s41467-024-46568-2.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10944509/
+https://www.nature.com/articles/s41467-024-46568-2
+Inspected 2026-10-12: full Methods, relevant Results, Figures 1/5 visually;
+supplement S1/S2 text and images. Minimal quotations:
+"promotes guanylylation"
+"dependent upon addition of Archease"
+"Both variants abrogated guanylylation"
+
+Human 179-aa Archease (A8K0B5 historical designation) from E. coli and
+human RTCB Q9Y3I0 from Sf21 cells. Affinity-tag removal optional in Methods.
+Figure 1e: 1 uM each protein, 80 nM alpha-32P-GTP, 0.5 mM MnCl2, 30 C.
+RTCB-associated radiolabel requires Archease and Mn in this experiment.
+Methods specify SDS-PAGE; figure captions say urea-PAGE. Retain the
+discrepancy; it does not change the measured protein-labeling comparison.
+
+Figure 1b: IRE1-cleaved XBP1 stem-loop; 500 nM RTCB, 1 uM Archease,
+250 nM cleaved RNA, 1 mM GTP, 0.5 mM MnCl2, 30 C. With Archease,
+exon ligation and intron circularization occur. Unknown byproduct marked.
+Figure 1c/d: isolated 26-nt intron, 5'-OH/3'-P, 1 uM RNA, 250 nM RTCB,
+1 uM Archease; kobs 0.015/min, three technical replicates. Ligation buffer:
+20 mM HEPES pH 7.5, 70 mM NaCl, 2 mM MgCl2, 1 mM TCEP, 5% glycerol.
+The activation assay omits that buffer MgCl2; do not merge concentrations.
+
+Figure 5a/b: D51A and K156A separately eliminate detectable RTCB labeling
+and intron ligation relative to WT at matched concentrations. These are
+paper coordinates; current Q8IWT0 D39A/K144A. S1 is a WT purity gel,
+not an independent folding or abundance control for both mutants.
+Residue perturbation effects remain UNRESOLVED at the molecular level.
+
+S2b: ATP does not replace GTP. Structures 8ODP/8ODO support metal/phosphate
+contacts but do not directly record release kinetics or conformational
+trajectories. His428 and the five tested RTCB metal-binding residues belong
+to RTCB, not Archease. Archease alone is not assigned RNA ligase chemistry.

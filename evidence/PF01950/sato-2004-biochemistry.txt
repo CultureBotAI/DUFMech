@@ -1,0 +1,25 @@
+PF01950 biochemical evidence; inspected 2026-10-12 UTC by Codex.
+PMID15317785; DOI10.1128/JB.186.17.5799-5807.2004.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC516828/
+Locators: recombinant-enzyme Methods; first Results subsection; Table2
+including footnotes. Full public PMC HTML was inspected.
+Minimal quotation: "generate F6P"
+
+Fbp from Thermococcus KOD1 was expressed in E. coli and purified separately
+from Imp. Fbp purification follows Rashid2002; SDS-PAGE homogeneity is
+reported, with the gel not shown here. At85C and2-mM FBP, the Fbp preparation
+gave18.9+/-0.7 U/mg in three independent experiments. Product was measured by
+glucose-6-phosphate isomerase and NADP-dependent glucose-6-phosphate
+dehydrogenase coupling, with NADPH read at340nm. FBP-minus blanks and thermal
+substrate decomposition were accounted for. This supports whole-protein
+FBP hydrolysis yielding F6P, not an isolated-domain or residue mechanism.
+
+The table's Fbp Km0.1mM and kcat17/s were imported from a95C experiment;
+they are not measured at the85C activity endpoint. Exact Fbp assay buffer,
+metal concentration and purification details referred to the earlier paper
+were not independently verified here. Do not borrow20-mM MgCl2 from the
+separate IMPase protocol. Phosphate is chemically expected from hydrolysis,
+but this FBP product assay specifically detects F6P by coupling.
+Imp also hydrolyzes FBP in vitro, but is a different protein/family.
+The small IMP activity of Fbp is not proof of an absolute zero.
+No aldol-condensation experiment was performed in this2004 comparison.

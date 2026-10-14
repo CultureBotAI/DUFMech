@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01938
+  path: curation/families/PF01938.yaml
+session:
+  id: 2026-10-12T051759Z-codex-792f49
+  timestamp: '2026-10-12T05:17:59Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: needs_followup
+  summary: Curate PF01938 TRAM0076 assay-specific causal contexts
+  details: Added ten graphs with32 observed effects and four minimal evidence ledgers.
+    Verified Q6M142v1 PF01938 13-67 and native versus tagged construct scope; kept
+    RNA binding,DNA-beacon fluorescence,reporter phenotypes,native growth and cold-shock
+    effects separate. Primary Figures1,3,4,5,S2,S4,S7 and S1/S2 tables inspected.
+    Retain I33A abundance/host differences,K62A partial rescue,induction-dependent
+    R15 results and multidomain/other-member followups. Status IN_PROGRESS; no publication
+    or full-corpus completion.

@@ -36,6 +36,11 @@ the summary/details. An implementation change belongs to `infrastructure` or
 can target the frozen JSON path with the Pfam accession as their slug; they do not
 satisfy the current-projection `REVIEWED` gate.
 
+The URL helper expects the repository-relative report pointer, such as
+`reviews/structured/<timestamp>-<slug>/review.yaml`, not the bundle's shorter
+`review_id` field. The helper formats a URL; it does not resolve a short ID or
+verify that the target exists.
+
 Events live at `history/<kind-directory>/<slug>/<UTC>-<actor>-<shortid>.yaml`, with
 the filename stem equal to `session.id`. The layout and fields remain compatible
 with shared history consumers. Random suffixes and exclusive numeric collision

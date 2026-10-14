@@ -1,0 +1,24 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01042
+  path: curation/families/PF01042.yaml
+session:
+  id: 2026-10-11T084450Z-codex-599147
+  timestamp: '2026-10-11T08:44:50Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add scoped RidA coupled-biochemical causal graphs
+  details: Retain five graphs and nine direct observed assay effects from Lambrecht
+    2012 and 2013, with verified Q7CP78/PF01042 reference mapping and hash-anchored
+    evidence. Separate threonine rates, ferricyanide endpoints, individual substitutions,
+    serine rates and retained IlvE activity. Preserve addition-order ambiguity, clone
+    and endpoint-temperature limits, and unobserved catalytic microsteps. Overlay
+    validation passes; native projection and scoped scientific self-review follow.
+    Status remains IN_PROGRESS; no independent expert endorsement.

@@ -1,0 +1,594 @@
+# PF01595 CorB transport with compartment and mutant-control limits
+
+- Review: 20261011T120912Z-pf01595-corb-reconstitution-and-substitution-effects
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-11T12:09:03Z
+- Finished UTC: 2026-10-11T12:09:12Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Eleven directly observed reconstituted-assay effects are retained in three graphs. Intact MtCorB and TtCorB, separate loading/substrate series and seven TtCorB substitutions are scoped without a native transport direction, counterion or elementary structural-cycle claim.
+
+## Scope And Provenance
+
+Scientific assessment of the retained edges, exact member mapping, primary evidence, context and causal limits.
+
+Selection: Pending PF01595 in accession-ordered review of the full 8296-family corpus; two sequence-verified tested CorB proteins, not a family census.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9d7a87f74786813fcdf65801bdf940d79cc7a56e.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01595 | data/families/PF01595.yaml | generated | PF01595 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native projection and overlay validation | passed | True | PF01595 | Current projection validates and preserves the authored graph and discussion content exactly. |
+
+## Scientific And Domain Assessments
+
+### Protein, domain and experimental scope
+
+identity: supported. Targets: PF01595.
+
+Exact UniProt/InterPro sequence checks confirm Tepidiphilus thermophilus A0A0K6IWT9 1-445 with PF01595 19-189 and Methanoculleus thermophilus A0A1G8XA46 1-426 with PF01595 13-187. Paper cloning accessions and all nine queried Tt residues are verified. Tt is not Thermus thermophilus; full-length MtCorB is not the delta-C crystallization construct. Isolated-domain sufficiency is not established.
+
+### Directed effects and limits
+
+graph: supported. Targets: PF01595.
+
+All eleven edges are MECHANISTIC/DIRECT/OBSERVED at the purified-vesicle assay level. Empty controls, calibration, compartment, protein loading and substrate conditions are explicit. Three measurements are not silently relabeled independent preparations. Variant SEC shifts prevent a unique coordination/helix-motion assignment. The MtCorB DDM-versus-UDM discrepancy, near-WT E33A/N80A results, lack of valinomycin stimulation and unresolved counterion are preserved.
+
+### Remaining family coverage
+
+completeness: concern. Targets: PF01595.
+
+Human CNNM and other CorC contexts, the earlier Huang chimeric cellular assay, physiological transport direction, counter-substrate stoichiometry, active fraction and the MtCorB detergent discrepancy remain incompletely resolved. Isolated CBS ATP-binding and structural simulations are not adopted as this domain's observed causal mechanism.
+
+## Findings
+
+### additional-contexts: Resolve transport coupling and construct-specific controls before broader transfer
+
+minor / open / confirmed; issue key: pf01595-causal-context-coverage.
+
+Independently assess the earlier cellular chimera study and other CNNM members, resolve MtCorB detergent notation, and seek oriented-vesicle or direct counterion evidence. Keep variant incorporation distinct from equal folding/active fraction and retain condition-specific negative results.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-contexts
+
+Independently assess the earlier cellular chimera study and other CNNM members, resolve MtCorB detergent notation, and seek oriented-vesicle or direct counterion evidence. Keep variant incorporation distinct from equal folding/active fraction and retain condition-specific negative results.
+
+- Each added edge has member-specific primary evidence and explicit conditions.
+- Unsupported transfers and conflicting or negative results remain visible.
+- Native checks pass and a successor report states actual scope.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://www.nature.com/articles/s41467-021-24282-7; Chen 2021 transport Results; cloning, purification and proteoliposome Methods; Figure 6 and Supplementary Figure 8 visually inspected; Supplementary Table 1 mutagenic primers. | supports | Full-length CorB preparations increase intravesicular magnesium relative to empty controls. TtCorB loading and external MgCl2 increases raise accumulation in separate series. S26A/S30A/N76A increase the response; S117A/E118A/P121G/K122A reduce it without abolishing it. Near-WT controls and altered mutant SEC profiles limit unique atomic explanations. |
+| identity | https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A0K6IWT9/entry/pfam/PF01595/; Accession and domain locations; paired UniProt identity facts | supports | Exact UniProt/InterPro sequence checks confirm Tepidiphilus thermophilus A0A0K6IWT9 1-445 with PF01595 19-189 and Methanoculleus thermophilus A0A1G8XA46 1-426 with PF01595 13-187. Paper cloning accessions and all nine queried Tt residues are verified. Tt is not Thermus thermophilus; full-length MtCorB is not the delta-C crystallization construct. Isolated-domain sufficiency is not established. |
+| native | src/dufmech/records.py; Current projection validation and overlay equivalence in this retained-review session | supports | Closed schema, canonical history and applicable graph/evidence checks pass. Curated graphs and discussions match the overlay; scientific validity is assessed separately. |
+| duf-projection-pf01595 | data/families/PF01595.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Main Figure 6 and Supplementary Figure 8 were visually inspected, including SEC and reconstituted-protein gels. No source-data spreadsheet reanalysis, new statistical testing or experimental replication was performed. Remaining structural and cellular contexts were not exhaustively reviewed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion, publication or full publication-QC pass is claimed.
+- Assessments were authored from inspected primary evidence. Native inspection supplied provenance, not scientific conclusions.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261011T120912Z-pf01595-corb-reconstitution-and-substitution-effects
+title: PF01595 CorB transport with compartment and mutant-control limits
+started_at: '2026-10-11T12:09:03Z'
+finished_at: '2026-10-11T12:09:12Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched and curated the graph; no independent
+    expert endorsement.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Eleven directly observed reconstituted-assay effects are retained in three
+  graphs. Intact MtCorB and TtCorB, separate loading/substrate series and seven TtCorB
+  substitutions are scoped without a native transport direction, counterion or elementary
+  structural-cycle claim.
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9d7a87f74786813fcdf65801bdf940d79cc7a56e
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01595.yaml
+    sha256: 97c9d6a36d36f1f1dcf964bdb23c2ba36f9d54a09d82e39ef3af2f456dfe4e3f
+    role: context
+  - path: data/families/PF01595.yaml
+    sha256: 39d36e8f72f88fd68e3bb36bc5b76f3643bc81bdfbab7321180236b30963eb5e
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01595/chen-2021-transport.txt
+    role: context
+    sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
+  - path: evidence/PF01595/CorB-identities.txt
+    role: context
+    sha256: 19726a7da811f1d8ed8811f46263cfa3ce3a5f4a8923ea82eb2dd3833d94c06a
+targets:
+- target_id: PF01595
+  path: data/families/PF01595.yaml
+  label: PF01595
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01595.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 5a808b06bf431c59be7eb903e92aeeb790260c675e5de96ab93820895ddc5dc1
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+scope:
+  description: Scientific assessment of the retained edges, exact member mapping,
+    primary evidence, context and causal limits.
+  selection: Pending PF01595 in accession-ordered review of the full 8296-family corpus;
+    two sequence-verified tested CorB proteins, not a family census.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01595
+  exclusions:
+  - target: Remaining family members and uncurated experimental contexts
+    reason: Human CNNM and other CorC contexts, the earlier Huang chimeric cellular
+      assay, physiological transport direction, counter-substrate stoichiometry, active
+      fraction and the MtCorB detergent discrepancy remain incompletely resolved.
+      Isolated CBS ATP-binding and structural simulations are not adopted as this
+      domain's observed causal mechanism.
+checks:
+- check_id: native-projection
+  name: Native projection and overlay validation
+  command: validate_record(record, root); assert projection graphs and discussions
+    match overlay
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current projection validates and preserves the authored graph and discussion
+    content exactly.
+  target_ids:
+  - PF01595
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://www.nature.com/articles/s41467-021-24282-7
+  locator: Chen 2021 transport Results; cloning, purification and proteoliposome Methods;
+    Figure 6 and Supplementary Figure 8 visually inspected; Supplementary Table 1
+    mutagenic primers.
+  accessed_at: '2026-10-11T12:09:12Z'
+  support: supports
+  snapshot_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19
+  summary: Full-length CorB preparations increase intravesicular magnesium relative
+    to empty controls. TtCorB loading and external MgCl2 increases raise accumulation
+    in separate series. S26A/S30A/N76A increase the response; S117A/E118A/P121G/K122A
+    reduce it without abolishing it. Near-WT controls and altered mutant SEC profiles
+    limit unique atomic explanations.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A0K6IWT9/entry/pfam/PF01595/
+  locator: Accession and domain locations; paired UniProt identity facts
+  accessed_at: '2026-10-11T12:09:12Z'
+  support: supports
+  snapshot_sha256: 19726a7da811f1d8ed8811f46263cfa3ce3a5f4a8923ea82eb2dd3833d94c06a
+  summary: Exact UniProt/InterPro sequence checks confirm Tepidiphilus thermophilus
+    A0A0K6IWT9 1-445 with PF01595 19-189 and Methanoculleus thermophilus A0A1G8XA46
+    1-426 with PF01595 13-187. Paper cloning accessions and all nine queried Tt residues
+    are verified. Tt is not Thermus thermophilus; full-length MtCorB is not the delta-C
+    crystallization construct. Isolated-domain sufficiency is not established.
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Current projection validation and overlay equivalence in this retained-review
+    session
+  accessed_at: '2026-10-11T12:09:12Z'
+  support: supports
+  summary: Closed schema, canonical history and applicable graph/evidence checks pass.
+    Curated graphs and discussions match the overlay; scientific validity is assessed
+    separately.
+- evidence_id: duf-projection-pf01595
+  kind: record_content
+  reference: data/families/PF01595.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-11T12:09:12Z'
+  support: context_only
+  snapshot_sha256: 39d36e8f72f88fd68e3bb36bc5b76f3643bc81bdfbab7321180236b30963eb5e
+  quote: "id: Pfam:PF01595\npfam_id: PF01595\nname: Cyclin M transmembrane N-terminal\
+    \ domain\nshort_name: CNNM\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01595\n\
+    counters:\n  proteins: 56844\n  matches: 56920\n  proteomes: 21107\n  taxa: 33615\n\
+    \  structures: 4\n  alphafold_models: 38019\n  domain_architectures: 249\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002550\ndescription: This transmembrane domain is found\
+    \ in metal transporter proteins such as cyclin M 1/2 (CNNM).\n  CNNMs are integral\
+    \ membrane proteins that are conserved from bacteria to humans. CNNM family members\n\
+    \  influence metal ion homeostasis through mechanisms that may not involve direct\
+    \ membrane transport of\n  the ions. Structurally, CNNMs are complex proteins\
+    \ that contain an extracellular N-terminal domain preceding\n  a transmembrane\
+    \ domain, a 'Bateman module', which consists of two cystathionine- beta-synthase\
+    \ (CBS)\n  domains [pfam:PF00571], and a C-terminal cNMP (cyclic nucleotide monophosphate)\
+    \ binding domain [[cite:PUB00088668],[cite:PUB00088669],[cite:PUB00088670],[cite:PUB00088671]].\n\
+    \  This entry describes the CNNM transmembrane domain which contains four hydrophobic\
+    \ regions and forms\n  a dimer through hydrophobic contacts between TM2 and TM3,\
+    \ in which each chain is composed of three transmembrane\n  helices (TM1-3), a\
+    \ pair of short helices exposed on the intracellular side, and a juxtamembrane\
+    \ (JM)\n  helix that forms a belt-like structure [[cite:PUB00088669],[cite:PUB00098586]].\
+    \ The homodimer adopts\n  an inward-facing conformation with a negatively charged\
+    \ cavity containing a conserved pi-helical turn\n  in TM3 that coordinates a Mg2\
+    \ ion [[cite:PUB00098586]].\ncuration_history: history/records/PF01595\ndiscussions:\n\
+    - discussion_id: corb-counterions-constructs-and-family-transfer\n  prompt: Resolve\
+    \ counterion and native-direction questions, the MtCorB detergent discrepancy,\
+    \ and additional\n    CNNM/CorC contexts before family-wide mechanistic claims.\n\
+    \  kind: CURATION_TODO\n  status: OPEN\n  rationale: Eleven directly observed\
+    \ reconstituted-assay effects do not establish ion stoichiometry,\n    an elementary\
+    \ structural cycle or universal function across PF01595.\n  evidence:\n  - reference:\
+    \ PMID:34188059\n    supports: PARTIAL\n    evidence_source: full_text_figure_6_supplementary_figure_8\n\
+    \    explanation: No valinomycin stimulation, near-WT E33A/N80A results, mutant\
+    \ SEC changes and the different\n      earlier chimera context remain explicit.\
+    \ The earlier Huang study has not been independently full-text\n      reviewed\
+    \ here.\n  posed_by: Codex\n  posed_date: '2026-10-11'\n  notes: Examine human\
+    \ CNNM and bacterial CorC studies separately; retain whole-protein versus domain\n\
+    \    and cellular versus liposome distinctions. Current work is partial scientific\
+    \ self-review and IN_PROGRESS.\ncausal_graphs:\n- graph_id: ttcorb-liposome-magnesium-uptake\n\
+    \  title: Reconstituted TtCorB supports magnesium accumulation in proteoliposomes\n\
+    \  scope: Full-length Tepidiphilus thermophilus CorB 1-445 with C-terminal His6,\
+    \ Chen 2021 Figure 6a and\n    Supplementary Figure 8a/b; not Thermus thermophilus\
+    \ or isolated CNNM transmembrane domain.\n  context: POPE/POPG 3:1 vesicles contain\
+    \ 50 uM mag-fura-2 in 20 mM HEPES-KOH pH 7.5, 100 mM KCl, 50 mM\n    NaCl and\
+    \ initially 0.5 mM EDTA. UDM-purified protein is reconstituted by Sephadex G-50\
+    \ detergent removal,\n    one freeze/thaw and 0.8-um extrusion. Dilute 10 ul vesicles\
+    \ into 190 ul EDTA-free buffer at 25 C.\n    Following a 1-min baseline, add 5\
+    \ mM MgCl2 for the WT/empty and protein-loading comparisons. The separate\n  \
+    \  MgCl2 series uses 0.75, 1.5, 3 and 5 mM. Monitor 330/369-nm excitation and\
+    \ 509-nm emission for 10\n    min; Triton/EDTA calibration yields intravesicular\
+    \ magnesium. Captions report three independent measurements,\n    mean +/- SEM.\n\
+    \  family_mapping: A0A0K6IWT9 sequence version 1 is 445 aa and maps to PF01595\
+    \ at 19-189. UniProt and InterPro\n    sequences exactly match. The paper identifies\
+    \ this accession and intact pET29a construct. CBS/CorC\n    regions are also present;\
+    \ the isolated Pfam domain was not tested.\n  scope_status: MECHANISTIC\n  taxon:\
+    \ NCBITaxon:876478\n  limitations: Directness concerns magnesium accumulation\
+    \ in purified-protein vesicles, not an observed\n    atomic transport cycle. Orientation\
+    \ and active fraction are not measured, so influx into these vesicles\n    is\
+    \ not native cellular import/export direction. Independent measurements are not\
+    \ stated to be independent\n    purifications. Empty controls receive matched\
+    \ 0.05% UDM buffer. The concentration/loading series are\n    separate interventions,\
+    \ not a serial causal chain or a fitted Michaelis constant. Ion counter-substrates\n\
+    \    and exchange stoichiometry remain unresolved.\n  nodes:\n  - node_id: ttcorb-reconstituted\n\
+    \    label: Reconstitute full-length TtCorB at protein/lipid 1:30 instead of empty\
+    \ vesicles\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:A0A0K6IWT9\n\
+    \  - node_id: intravesicular-magnesium\n    label: Intravesicular magnesium accumulation\
+    \ after external MgCl2 addition\n    node_type: STATE\n  - node_id: higher-protein-loading\n\
+    \    label: Increase TtCorB loading from 1:810 to 1:30 at 5 mM external MgCl2\n\
+    \    node_type: PERTURBATION\n  - node_id: higher-external-magnesium\n    label:\
+    \ Increase external MgCl2 from 0.75 to 5 mM in the separate substrate series\n\
+    \    node_type: PERTURBATION\n  edges:\n  - edge_id: ttcorb-increases-magnesium-accumulation\n\
+    \    subject: ttcorb-reconstituted\n    predicate: increases\n    object: intravesicular-magnesium\n\
+    \    mechanism: Protein-containing liposomes accumulate magnesium above the empty-vesicle\
+    \ response after\n      MgCl2 addition. The purified reconstitution supports a\
+    \ direct transport-associated effect without\n      proving a specific counterion,\
+    \ native direction or isolated-domain sufficiency.\n    directness: DIRECT\n \
+    \   support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:34188059\n      source_url: https://www.nature.com/articles/s41467-021-24282-7\n\
+    \      snippet: transport activity\n      explanation: Figure 6a, its empty-liposome\
+    \ control and reconstitution Methods were inspected; the\n        graph retains\
+    \ the measured compartment and intact construct.\n      cache_path: evidence/PF01595/chen-2021-transport.txt\n\
+    \      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A0K6IWT9/entry/pfam/PF01595/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A0K6IWT9/entry/pfam/PF01595/\n\
+    \      snippet: A0A0K6IWT9 Pfam:PF01595; interval 19-189 inclusive.\n      explanation:\
+    \ Accession, taxon, full-length sequence equality and current domain interval\
+    \ identify\n        the tested protein, not an isolated-domain experiment.\n \
+    \     cache_path: evidence/PF01595/CorB-identities.txt\n      cache_sha256: 19726a7da811f1d8ed8811f46263cfa3ce3a5f4a8923ea82eb2dd3833d94c06a\n\
+    \  - edge_id: protein-loading-increases-accumulation\n    subject: higher-protein-loading\n\
+    \    predicate: increases\n    object: intravesicular-magnesium\n    mechanism:\
+    \ At fixed external magnesium, vesicles prepared with higher TtCorB loading have\
+    \ greater\n      magnesium accumulation across the 1:810, 1:270, 1:90 and 1:30\
+    \ wt/wt series. This is a loading-dependent\n      ensemble response, not turnover\
+    \ normalized to active oriented protein.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:34188059\n\
+    \      source_url: https://www.nature.com/articles/s41467-021-24282-7\n      snippet:\
+    \ transport activity\n      explanation: Visually inspected Supplementary Figure\
+    \ 8a and its caption show the protein-loading\n        series with an empty-vesicle\
+    \ baseline.\n      cache_path: evidence/PF01595/chen-2021-transport.txt\n    \
+    \  cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19\n\
+    \  - edge_id: external-magnesium-increases-accumulation\n    subject: higher-external-magnesium\n\
+    \    predicate: increases\n    object: intravesicular-magnesium\n    mechanism:\
+    \ Higher external MgCl2 produces greater intravesicular accumulation across the\
+    \ separate\n      0.75-to-5-mM series. The intervention changes the available\
+    \ substrate and gradient together; it\n      does not isolate binding affinity\
+    \ or establish transport saturation.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:34188059\n\
+    \      source_url: https://www.nature.com/articles/s41467-021-24282-7\n      snippet:\
+    \ transport activity\n      explanation: Visually inspected Supplementary Figure\
+    \ 8b and transport Methods support the concentration-dependent\n        response\
+    \ without a kinetic-fit claim.\n      cache_path: evidence/PF01595/chen-2021-transport.txt\n\
+    \      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19\n\
+    - graph_id: mtcorb-liposome-magnesium-uptake\n  title: Reconstituted MtCorB gives\
+    \ modest magnesium accumulation above empty vesicles\n  scope: Full-length Methanoculleus\
+    \ thermophilus CorB 1-426 with C-terminal His6, Chen 2021 Figure 6a;\n    distinct\
+    \ from MtCorB delta-C crystallization constructs.\n  context: POPE/POPG 3:1, protein/lipid\
+    \ 1:30 wt/wt, encapsulated 50 uM mag-fura-2, pH 7.5 with 100 mM\n    KCl and 50\
+    \ mM NaCl. After a 1-min baseline at 25 C, add 5 mM MgCl2 and follow calibrated\
+    \ intravesicular\n    magnesium for 10 min. Empty liposomes receive matched 0.05%\
+    \ UDM buffer. Three independent measurements,\n    mean +/- SEM; reconstitution\
+    \ Methods call MtCorB UDM-purified, whereas purification Methods specify\n   \
+    \ DDM.\n  family_mapping: A0A1G8XA46 sequence version 1, 426 aa, NCBITaxon 2200;\
+    \ current PF01595 13-187, verified\n    by exact UniProt/InterPro sequence equality.\
+    \ The Pfam interval is not identical to structural TM residues\n    1-154. Neither\
+    \ isolated CBS 199-322 nor the delta-C structure inherits this full-length transport\n\
+    \    assay.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:2200\n  limitations:\
+    \ The smaller MtCorB signal relative to TtCorB is not zero function or evidence\
+    \ of an intrinsically\n    slower transporter; lipid compatibility may differ.\
+    \ The purification/reconstitution detergent discrepancy\n    remains unresolved.\
+    \ Protein orientation, counterion and stoichiometry are not established. No archaeal\n\
+    \    cellular direction or human CNNM transport claim is inferred.\n  nodes:\n\
+    \  - node_id: mtcorb-reconstituted\n    label: Reconstitute full-length MtCorB\
+    \ instead of empty vesicles\n    node_type: PERTURBATION\n    grounding:\n   \
+    \ - UniProtKB:A0A1G8XA46\n  - node_id: mt-intravesicular-magnesium\n    label:\
+    \ Magnesium accumulation in MtCorB proteoliposomes\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: mtcorb-increases-magnesium-accumulation\n    subject: mtcorb-reconstituted\n\
+    \    predicate: increases\n    object: mt-intravesicular-magnesium\n    mechanism:\
+    \ MtCorB-containing vesicles give a modest positive magnesium-accumulation response\
+    \ above\n      empty vesicles after external MgCl2 addition. This is an intact-protein\
+    \ reconstitution result, not\n      an isolated-domain or physiological-direction\
+    \ demonstration.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:34188059\n      source_url:\
+    \ https://www.nature.com/articles/s41467-021-24282-7\n      snippet: transport\
+    \ activity\n      explanation: Figure 6a, full-length cloning labels and transport\
+    \ Methods support the positive MtCorB\n        response while preserving the unresolved\
+    \ detergent notation.\n      cache_path: evidence/PF01595/chen-2021-transport.txt\n\
+    \      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19\n\
+    \    - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A1G8XA46/entry/pfam/PF01595/\n\
+    \      source_url: https://www.ebi.ac.uk/interpro/api/protein/uniprot/A0A1G8XA46/entry/pfam/PF01595/\n\
+    \      snippet: A0A1G8XA46 Pfam:PF01595; interval 13-187 inclusive.\n      explanation:\
+    \ The paper accession and matching database sequence identify the archaeal intact\
+    \ construct\n        separately from TtCorB and domain-only constructs.\n    \
+    \  cache_path: evidence/PF01595/CorB-identities.txt\n      cache_sha256: 19726a7da811f1d8ed8811f46263cfa3ce3a5f4a8923ea82eb2dd3833d94c06a\n\
+    - graph_id: ttcorb-substitution-transport-effects\n  title: TtCorB cavity substitutions\
+    \ increase or decrease liposomal magnesium accumulation\n  scope: Separate single\
+    \ substitutions in intact His6-TtCorB, compared with WT under Chen 2021 Figure\n\
+    \    6d/e conditions.\n  context: POPE/POPG 3:1, protein/lipid 1:30 wt/wt, 5 mM\
+    \ added MgCl2, pH 7.5, 25 C, 100 mM KCl and 50\n    mM NaCl, mag-fura-2 excitation\
+    \ 330/369 nm and emission 509 nm. The 10-min time courses use empty-liposome\n\
+    \    and WT comparisons, three independent measurements, mean +/- SEM. Supplementary\
+    \ Figure 8c/d supplies\n    size-exclusion and reconstituted-protein SDS-PAGE\
+    \ controls.\n  family_mapping: Reference A0A0K6IWT9 S26, S30, N76, S117, E118,\
+    \ P121 and K122 were sequence-verified\n    and all lie inside PF01595 19-189.\
+    \ Each mutation is in the full 445-aa protein, not an isolated-domain\n    construct;\
+    \ domain position does not isolate its causal microstep.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:876478\n  limitations: All plotted loss-of-response mutants\
+    \ retain accumulation above empty controls. E33A and\n    N80A are described as\
+    \ near WT, not zero-effect proof. Several variants, especially S26A/S30A/N76A,\n\
+    \    have earlier or broadened SEC peaks. Strong incorporation bands do not establish\
+    \ equal folding, oligomerization,\n    orientation or active fraction. Directness\
+    \ means the net purified-vesicle effect; an elementary metal-coordination\n  \
+    \  or pi-helix-motion mechanism remains unresolved.\n  nodes:\n  - node_id: s26a\n\
+    \    label: S26A instead of WT TtCorB\n    node_type: PERTURBATION\n  - node_id:\
+    \ s30a\n    label: S30A instead of WT TtCorB\n    node_type: PERTURBATION\n  -\
+    \ node_id: n76a\n    label: N76A instead of WT TtCorB\n    node_type: PERTURBATION\n\
+    \  - node_id: s117a\n    label: S117A instead of WT TtCorB\n    node_type: PERTURBATION\n\
+    \  - node_id: e118a\n    label: E118A instead of WT TtCorB\n    node_type: PERTURBATION\n\
+    \  - node_id: p121g\n    label: P121G instead of WT TtCorB\n    node_type: PERTURBATION\n\
+    \  - node_id: k122a\n    label: K122A instead of WT TtCorB\n    node_type: PERTURBATION\n\
+    \  - node_id: mutant-magnesium-accumulation\n    label: Magnesium accumulation\
+    \ after external MgCl2 addition\n    node_type: STATE\n    grounding:\n    - UniProtKB:A0A0K6IWT9\n\
+    \  edges:\n  - edge_id: s26a-increases-accumulation\n    subject: s26a\n    predicate:\
+    \ increases\n    object: mutant-magnesium-accumulation\n    mechanism: S26A proteoliposomes\
+    \ accumulate more magnesium than WT in Figure 6d. Its altered SEC behavior\n \
+    \     prevents assigning the increase uniquely to altered ion coordination or\
+    \ release.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:34188059\n      source_url:\
+    \ https://www.nature.com/articles/s41467-021-24282-7\n      snippet: increased\
+    \ transport activity\n      explanation: Figure 6d and Supplementary 8c/d were\
+    \ visually checked together; the transport increase\n        and assembly-control\
+    \ qualification are both retained.\n      cache_path: evidence/PF01595/chen-2021-transport.txt\n\
+    \      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19\n\
+    \  - edge_id: s30a-increases-accumulation\n    subject: s30a\n    predicate: increases\n\
+    \    object: mutant-magnesium-accumulation\n    mechanism: S30A gives greater\
+    \ magnesium accumulation than WT in this purified TtCorB assay. It is\n      not\
+    \ assigned the opposite phenotype reported for an equivalent substitution in a\
+    \ different chimeric\n      cellular system.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:34188059\n\
+    \      source_url: https://www.nature.com/articles/s41467-021-24282-7\n      snippet:\
+    \ increased transport activity\n      explanation: Figure 6d supports the increase;\
+    \ Supplementary 8c/d limits a unique mechanistic explanation,\n        and Results\
+    \ explicitly distinguish earlier cellular chimera experiments.\n      cache_path:\
+    \ evidence/PF01595/chen-2021-transport.txt\n      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19\n\
+    \  - edge_id: n76a-increases-accumulation\n    subject: n76a\n    predicate: increases\n\
+    \    object: mutant-magnesium-accumulation\n    mechanism: N76A proteoliposomes\
+    \ accumulate more magnesium than WT despite the altered SEC profile.\n      The\
+    \ increased ensemble response is observed; a weakened metal-binding site causing\
+    \ faster release\n      is only an interpretation.\n    directness: DIRECT\n \
+    \   support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:34188059\n      source_url: https://www.nature.com/articles/s41467-021-24282-7\n\
+    \      snippet: increased transport activity\n      explanation: Figure 6d and\
+    \ Supplementary 8c/d establish the direction and relevant incorporation/assembly\n\
+    \        controls.\n      cache_path: evidence/PF01595/chen-2021-transport.txt\n\
+    \      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19\n\
+    \  - edge_id: s117a-decreases-accumulation\n    subject: s117a\n    predicate:\
+    \ decreases\n    object: mutant-magnesium-accumulation\n    mechanism: S117A lowers\
+    \ accumulation relative to WT but retains substantial signal above empty vesicles.\n\
+    \      This is not complete transport loss or proof that a particular pi-helix\
+    \ conformation was prevented.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:34188059\n\
+    \      source_url: https://www.nature.com/articles/s41467-021-24282-7\n      snippet:\
+    \ transport activity\n      explanation: Figure 6e and Supplementary 8c/d support\
+    \ reduced but nonzero accumulation in reconstituted\n        mutant protein.\n\
+    \      cache_path: evidence/PF01595/chen-2021-transport.txt\n      cache_sha256:\
+    \ 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19\n  - edge_id:\
+    \ e118a-decreases-accumulation\n    subject: e118a\n    predicate: decreases\n\
+    \    object: mutant-magnesium-accumulation\n    mechanism: E118A lowers accumulation\
+    \ relative to WT while retaining a response above empty vesicles.\n      The substitution\
+    \ does not uniquely establish loss of a proton-exchange or magnesium-coordination\n\
+    \      microstep.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:34188059\n      source_url:\
+    \ https://www.nature.com/articles/s41467-021-24282-7\n      snippet: transport\
+    \ activity\n      explanation: Figure 6e and Supplementary 8c/d retain the direction,\
+    \ residual activity and incorporation\n        controls.\n      cache_path: evidence/PF01595/chen-2021-transport.txt\n\
+    \      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19\n\
+    \  - edge_id: p121g-decreases-accumulation\n    subject: p121g\n    predicate:\
+    \ decreases\n    object: mutant-magnesium-accumulation\n    mechanism: P121G lowers\
+    \ magnesium accumulation in the intact protein. Residual transport and the absence\n\
+    \      of a direct conformational-motion measurement prevent describing the phenotype\
+    \ as proof of a specific\n      helix-kink mechanism.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:34188059\n      source_url: https://www.nature.com/articles/s41467-021-24282-7\n\
+    \      snippet: transport activity\n      explanation: Figure 6e and Supplementary\
+    \ 8c/d show reduced accumulation and retained protein incorporation.\n      cache_path:\
+    \ evidence/PF01595/chen-2021-transport.txt\n      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19\n\
+    \  - edge_id: k122a-decreases-accumulation\n    subject: k122a\n    predicate:\
+    \ decreases\n    object: mutant-magnesium-accumulation\n    mechanism: K122A lowers\
+    \ accumulation relative to WT, with a nonzero signal above empty vesicles. The\n\
+    \      net response does not identify a unique ion path or distinguish catalytic\
+    \ effects from changes in\n      active fraction.\n    directness: DIRECT\n  \
+    \  support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:34188059\n      source_url: https://www.nature.com/articles/s41467-021-24282-7\n\
+    \      snippet: transport activity\n      explanation: Figure 6e and Supplementary\
+    \ 8c/d support the scoped decrease and the retained limitations.\n      cache_path:\
+    \ evidence/PF01595/chen-2021-transport.txt\n      cache_sha256: 749f284d9182f483dd5122d24c377639036d9a50454275c6866fc027de28fd19\n\
+    curation_events:\n- timestamp: '2026-10-11T12:00:09Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Add scoped CorB proteoliposome causal\
+    \ graphs\n  history_record: history/records/PF01595/2026-10-11T120009Z-codex-9828d3.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: member-identity
+  area: identity
+  topic: Protein, domain and experimental scope
+  outcome: supported
+  summary: Exact UniProt/InterPro sequence checks confirm Tepidiphilus thermophilus
+    A0A0K6IWT9 1-445 with PF01595 19-189 and Methanoculleus thermophilus A0A1G8XA46
+    1-426 with PF01595 13-187. Paper cloning accessions and all nine queried Tt residues
+    are verified. Tt is not Thermus thermophilus; full-length MtCorB is not the delta-C
+    crystallization construct. Isolated-domain sufficiency is not established.
+  target_ids:
+  - PF01595
+  evidence_ids:
+  - identity
+  - primary
+- assessment_id: causal-scope
+  area: graph
+  topic: Directed effects and limits
+  outcome: supported
+  summary: All eleven edges are MECHANISTIC/DIRECT/OBSERVED at the purified-vesicle
+    assay level. Empty controls, calibration, compartment, protein loading and substrate
+    conditions are explicit. Three measurements are not silently relabeled independent
+    preparations. Variant SEC shifts prevent a unique coordination/helix-motion assignment.
+    The MtCorB DDM-versus-UDM discrepancy, near-WT E33A/N80A results, lack of valinomycin
+    stimulation and unresolved counterion are preserved.
+  target_ids:
+  - PF01595
+  evidence_ids:
+  - primary
+  - native
+- assessment_id: remaining-coverage
+  area: completeness
+  topic: Remaining family coverage
+  outcome: concern
+  summary: Human CNNM and other CorC contexts, the earlier Huang chimeric cellular
+    assay, physiological transport direction, counter-substrate stoichiometry, active
+    fraction and the MtCorB detergent discrepancy remain incompletely resolved. Isolated
+    CBS ATP-binding and structural simulations are not adopted as this domain's observed
+    causal mechanism.
+  target_ids:
+  - PF01595
+  evidence_ids:
+  - primary
+findings:
+- finding_id: additional-contexts
+  issue_key: pf01595-causal-context-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve transport coupling and construct-specific controls before broader
+    transfer
+  description: Independently assess the earlier cellular chimera study and other CNNM
+    members, resolve MtCorB detergent notation, and seek oriented-vesicle or direct
+    counterion evidence. Keep variant incorporation distinct from equal folding/active
+    fraction and retain condition-specific negative results.
+  target_ids:
+  - PF01595
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - primary
+  - identity
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01595.yaml
+    role: Human-owned scientific overlay
+actions:
+- action_id: extend-contexts
+  description: Independently assess the earlier cellular chimera study and other CNNM
+    members, resolve MtCorB detergent notation, and seek oriented-vesicle or direct
+    counterion evidence. Keep variant incorporation distinct from equal folding/active
+    fraction and retain condition-specific negative results.
+  finding_ids:
+  - additional-contexts
+  target_ids:
+  - PF01595
+  ownership_note: Curate overlay and minimal evidence; append actual history, regenerate
+    and retain successor review.
+  acceptance_checks:
+  - Each added edge has member-specific primary evidence and explicit conditions.
+  - Unsupported transfers and conflicting or negative results remain visible.
+  - Native checks pass and a successor report states actual scope.
+limitations:
+- Main Figure 6 and Supplementary Figure 8 were visually inspected, including SEC
+  and reconstituted-protein gels. No source-data spreadsheet reanalysis, new statistical
+  testing or experimental replication was performed. Remaining structural and cellular
+  contexts were not exhaustively reviewed.
+- Same-agent assessment, not independent expert review or experimental replication.
+- Partial family coverage; status remains IN_PROGRESS. No full-corpus completion,
+  publication or full publication-QC pass is claimed.
+notes:
+- Assessments were authored from inspected primary evidence. Native inspection supplied
+  provenance, not scientific conclusions.
+```

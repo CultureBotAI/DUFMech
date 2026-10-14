@@ -1,0 +1,59 @@
+PF01906 search and coverage ledger, 2026-10-11 UTC
+Ignored/hidden-inclusive search of curation, evidence, history, reviews and
+reports (excluding inventory.json) found no prior PF01906/DUF74/IPR002765
+curation in this worktree before this addition. New paths and their parents
+were checked for collisions, symlinks and gitignore exclusion.
+Public searches covered PF01906, DUF74, YbjQ/UPF0145, heavy-metal binding,
+Reddick/Barto, Rv1762c, self-association, deletion, genetic interactions and
+retron host-factor leads. This is not an exhaustive 9784-member survey.
+
+Family metal-binding label and structural pentamers are contextual predictions.
+RCSB 1Y2I (Shigella, 133-aa entity, three mutations, 2.30 A), 1VR4
+(B. cereus, 2.09 A; supersedes 1YBB) and 3QKB (Pediococcus, 2.73 A) are
+structural leads. Construct/reference comparisons and ligand identity were
+not completed; static assemblies do not establish a causal conformational
+transition. A similar fold such as 1VMF is not automatically PF01906.
+https://journals.iucr.org/f/issues/2010/10/00/wd5127/
+DOI:10.1107/S1744309110007177 provides structural-classification context,
+not a measured heavy-metal-binding or metamorphic-transition experiment.
+
+https://grs.uncg.edu/wp-content/uploads/2025/03/2025-Showcase-Directory.pdf
+PDF page 3, Barto/Reddick poster 35, text extracted and page visually inspected.
+The abstract reports expression/purification of three B. anthracis homologs,
+neighborhood-based predictions and "ongoing metal-binding assays". It gives
+no finished binding result, exact accession or construct mapping here. It is
+not adopted as an observed biochemical mechanism or universal family property.
+
+Bomponis thesis lead:
+https://archiv.ub.uni-heidelberg.de/volltextserver/31572/1/Bomponis_PhD_Thesis.pdf
+Search index points to section 2.6/Figure 19, a YbjQ deletion/retron-induction
+growth-screen candidate. PDF access returned challenge HTML, not a PDF;
+the figure and complete control/mapping context remain uninspected. No causal
+edge is made from the snippet. Related published Bobonis2022 primary HTML,
+PMID:35850148, DOI:10.1038/s41586-022-05091-4,
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11938430/,
+was fetched successfully; a case-insensitive whole-HTML text search has zero
+YbjQ occurrences. Its other retron effects are not transferred to this member.
+The published supplements were not exhaustively searched, so this is not a
+claim that the published study contains no YbjQ data anywhere.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7084401/ uses YbjQ wording for a
+thiamine lead citing Morett2008/PMID:18178222, whose tested YjbQ is PF01894.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3091646/ has ybjQ in a table and
+yjbQ/SG2130 in prose. Exact Leptospirillum/Sodalis member mapping remains open;
+do not silently correct the published identity or assign thiamine activity.
+DOI:10.1371/journal.pcbi.1006891 coevolution, predicted metal-regulator
+neighborhoods, coexpression and Mtb pangenome associations remain associations.
+The UniProt YbjQ/HldD interaction annotation is not a directed phenotype or
+proof of direct molecular action without its own primary assay assessment.
+
+Scope: ten Babu2014 joint-genotype phenotypes, not isolated YbjQ chemistry.
+Open work includes exact clones, independent alleles/rescue, raw growth data,
+fragment controls, retron source recovery, metal assays, Rv1762c-specific
+evidence and member-specific domain/structure mapping. Status stays IN_PROGRESS.
+Main/protocol figures were inspected; no raw-data replication, exact historical
+clone reconstruction, independent expert review or full publication QC is claimed.
+Repository/skill reads and validation succeeded. UV under an env wrapper still
+failed on its cache marker; direct reading succeeded, and UV 0.6.13 code opens
+that marker for create/write. Direct project Python and standalone offline UV
+imports/rendering worked. No global permission or cache setting was changed.

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01062
+  path: data/families/PF01062.yaml
+session:
+  id: 2026-10-11T090754Z-codex-48cf50
+  timestamp: '2026-10-11T09:07:54Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of chicken BEST1 assays
+  details: Saved the exact-content scientific self-review for digest 6a1d580b891da56e31591c1d6c5308a1b5e5ff24f14c7277070483632f3651c8.
+    Five graphs and eight observed effects retain construct mapping, orientation,
+    voltage, normalized-current and coupled-flux distinctions. Complete mutants, flux
+    metadata, later gating contexts and wider family coverage remain open. Partial
+    same-agent assessment, not independent endorsement or full-family PASS. Keep IN_PROGRESS.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T090737Z-pf01062-best1-calcium-and-substitution-assays/review.yaml

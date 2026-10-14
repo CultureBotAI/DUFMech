@@ -1,0 +1,32 @@
+PF01955 identity and member scope; inspected 2026-10-12 UTC
+
+Frozen owners: data/families/PF01955.yaml and the PF01955 row of
+data/worklists/pfam-previous-unknown-names-2026-10-10.json.
+PF01955.25 CbiZ, Adenosylcobinamide amidohydrolase, formerly DUF105;
+InterPro IPR002808. The retained October10 snapshot counts 2665 proteins.
+This identity is preserved, not replaced with current API counters.
+
+Public identity sources:
+https://rest.uniprot.org/uniprotkb/search?query=xref%3Apfam-PF01955%20AND%20reviewed%3Atrue&format=json&size=500
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01955/protein/uniprot/Q8Q0G3/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01955/protein/uniprot/Q9HPK9/
+
+Q8Q0G3 sequence version1, 200 residues; cbiZ/MM_0173; Methanosarcina mazei
+Go1/Goe1, taxon192952. EMBL AE008384 protein AAM29869.1. Current PF01955
+profile interval15-198. Woodson2004 identifies Mm0173/GI21226275; the locus,
+organism and reviewed functional reference PMID14990804 support the mapping.
+The paper's Goel spelling denotes the source strain, not a new species.
+The historical expression plasmids were not independently resequenced.
+
+Q9HPK9 sequence version1, 231 residues; cbiZ/VNG_1583C; Halobacterium
+salinarum NRC-1, taxon64091, historically Halobacterium sp. NRC-1.
+EMBL AE004437 protein AAG19858.1; current PF01955 interval14-208.
+Woodson2004 identifies Vng1583C/GI15790554 and tests native gene deletion
+and chromosomal restoration. Exact allele endpoints and plasmid sequences
+remain unavailable from the supporting material in this session.
+
+The reviewed-only search returned three entries. The third is Q59008,
+sequence version1, MJ1613, 255 residues, Methanocaldococcus jannaschii
+JAL-1 taxon243232, EMBL L77117/AAB99633.1. Its genome reference is not an
+independent functional experiment. This screen is not a 2665-protein audit.
+Whole proteins, genetic backgrounds and profile intervals are distinct scopes.

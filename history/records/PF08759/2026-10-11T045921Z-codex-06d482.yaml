@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF08759
+  path: curation/families/PF08759.yaml
+session:
+  id: 2026-10-11T045921Z-codex-06d482
+  timestamp: '2026-10-11T04:59:21Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate DUF1792 construct-dependent glucose transfer
+  details: Retain the FW213 dGT1 1-272 construct reaction with UDP-glucose, divalent
+    metal and premodified Fap1. Primary Figure 2, controls and methods support the
+    transfer. Preserve the distinction between construct and Pfam boundaries and between
+    a transfer step and mature Fap1 synthesis.
+  sections:
+  - causal_graphs

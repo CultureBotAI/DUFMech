@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01937
+  path: data/families/PF01937.yaml
+session:
+  id: 2026-10-11T043318Z-codex-1adadd
+  timestamp: '2026-10-11T04:33:18Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain a scoped scientific review of YMR027W causal graphs
+  details: Saved reviews/structured/20261011T043437Z-pf01937-causal-graphs/review.yaml
+    and its derived Markdown. Two graphs are supported within their separate enzyme
+    and deletion contexts; other members and substrates remain open under pf01937-causal-member-coverage.
+    Projection validation and 181 focused tests pass. This is self-review, partial
+    coverage and NEEDS_FOLLOWUP, not REVIEWED promotion or publication.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261011T043437Z-pf01937-causal-graphs/review.yaml
