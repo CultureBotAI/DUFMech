@@ -70,12 +70,16 @@ family content, history, or scientific review status.
 
 ## Progress
 
-Worktree: `/private/tmp/dufmech-causal-graphs`, branch `feat/duf-causal-graphs`.
+Worktree: `/private/tmp/dufmech-causal-graphs`, branch `feat/duf-causal-graphs-next`.
 Starting source revision: `9d7a87f74786813fcdf65801bdf940d79cc7a56e`.
 Initial inventory and implementation began at 2026-10-11T04:00:01Z.
+The initial batch was merged in PR #199. Continuation begins from
+`2da6c366b06615fbb6c34379318771fe09f4cfda`. PF01972 publication is tracked in
+[PR #200](https://github.com/CultureBotAI/DUFMech/pull/200); earlier local-only
+checkpoints below describe their state at the time, not the current release status.
 
-One hundred and twenty-four families now have 1,598 evidence-linked edge entries in 747
-scoped graphs. Of these, 1,574 are OBSERVED, twenty are HYPOTHESIZED,
+One hundred and twenty-five families now have 1,600 evidence-linked edge entries in 749
+scoped graphs. Of these, 1,575 are OBSERVED, twenty-one are HYPOTHESIZED,
 three are INFERRED and one is CONTESTED;
 counts are structural, not numbers of independent experiments:
 
@@ -1196,7 +1200,16 @@ growth and CitAB-dependent tctA transcript effects remain separate. Archived
 Pfam mapping, inactive UniProt IDs, uninspected supplement, E. coli host
 discrepancy and unresolved ion/transport chemistry are explicit.
 
-All 130 curated families remain IN_PROGRESS with partial scientific
+PF01972 (former DUF114, SDH_protease) adds one PHENOTYPIC assay-response
+graph and one HYPOTHETICAL catalytic-arrangement graph. Ammelburg2011
+identifies the Mm2878 comparator, mapped to Q8PT40/PF01972, but missing
+controls and preparation details prevent direct catalytic attribution.
+Pandit2004 supplies a computational proposal, not experimental proof of the
+SDH triad. PH1510 and MjMPM cross-family transfers are excluded. The 2026
+44FH/44FI structures remain unmapped functional research leads, not defense
+or cleavage edges.
+
+All 131 curated families remain IN_PROGRESS with partial scientific
 self-review, not exhaustive family reviews. Git access returned during the
 2008 follow-up, and PF01955's `20261012T130729Z` successor now covers all twenty
 graphs, including the previously unretained native2009 additions. It supersedes
@@ -1213,16 +1226,18 @@ construct/source discrepancies without promoting proposed chemistry.
 PF01970's `20261012T210007Z` report retains the six cellular graphs,
 archived member mapping, cation-specific signs and unresolved construct/host
 questions without asserting direct molecular transport.
-The other 8,166 families still need
+PF01972's `20261014T205229Z` report preserves the observation/hypothesis
+distinction, scoped mapping and open assay/coverage findings.
+The other 8,165 families still need
 individual evidence research and retained dispositions. The structural inventory
-has 8,172 graphless families, including PF01629, PF01724, PF01886, PF01954, PF02621 and PF20352.
+has 8,171 graphless families, including PF01629, PF01724, PF01886, PF01954, PF02621 and PF20352.
 No edge is invented for a graphless family. Do not mark the corpus-wide goal complete based on schema
 support or these examples.
 
 The complete structural membership is retained in
-`reports/causal_graphs/inventory.json`; regenerate it from the native `inventory`
-function after record changes. The CLI prints inventory JSON but does not save
-this artifact. It is not a list of completed scientific reviews. The first
+`reports/causal_graphs/inventory.json`; refresh with `just causal-graphs --apply`
+after record changes and verify with `just causal-graphs --check`. The default
+CLI prints JSON without saving. It is not a list of completed scientific reviews. The first
 scoped review is `reviews/structured/20261011T040849Z-pf04149-causal-pilot/`;
 its context-coverage finding requires successor evidence, not silent closure.
 The successor assessment is
@@ -5551,8 +5566,8 @@ scoped graphless assessment; member-specific functional evidence, supplementary
 mapping, later full papers and metadata reconciliation remain open. The former
 PF01952 pointer was incorrect: an ignored-file-inclusive search and the actual
 retained membership identify PF01954 through PF01959 and PF01969 among the now
-partially assessed records. PF01970 is now also partially assessed, with
-PF01972 the next ascending uncurated accession. PF01955's
+partially assessed records. PF01970 and PF01972 are now also partially assessed,
+with PF01973 the next ascending uncurated accession. PF01955's
 immediate follow-ups are unresolved CbiS2006 clones, assay conflicts and native
 mechanisms, the2008 historical donor strains/inserts, supplemental product traces,
 reporter and unit conflicts, historical deletion alleles and fusion junctions,
@@ -5594,3 +5609,78 @@ metagenomic2014 model is not observed transport; its length and source-organism
 questions are unresolved. Cellular effects are not universal family mechanisms.
 Every uncurated family and these open follow-ups remain in the corpus-wide goal.
 No full family or corpus completion is claimed.
+
+PF01972 needs the historical Mm2878 clone/preparation, matched reporter controls,
+direct products, replication and residue-level tests. The original2004 alignment
+image and mapping, the2026 structural-study experiments and broader member
+coverage remain open. Its one OBSERVED edge is a preparation-level reporter
+response, not proof of purified-enzyme or isolated-domain chemistry; the separate
+SDH mechanism remains HYPOTHESIZED.
+
+PF01972 continuation checkpoint (2026-10-14):
+
+- Native CREATE `history/records/PF01972/2026-10-14T204247Z-codex-3b40ac.yaml`
+  and REVIEW `history/records/PF01972/2026-10-14T204946Z-codex-4713e3.yaml`
+  accompany the human overlay and four minimal evidence ledgers. No full paper
+  or thesis was added to the repository.
+- The retained scientific self-review is
+  `reviews/structured/20261014T205229Z-pf01972-mm2878-assay-and-sdh-hypothesis/`.
+  Its current semantic digest, also verified against the inventory, is
+  `24faf6f67f7cf3f7646966e2e6d756868e9476c6ef3d8b0203081b9edf72c1d7`.
+  The report preserves a partial-scope NEEDS_FOLLOWUP verdict and open finding
+  `pf01972-causal-context-coverage`; no status promotion or independent approval.
+- The regenerated projection preserves every imported field. All other 8,295
+  projection manifest entries are unchanged. KGX and SSSOM each change only
+  PF01972's curation-status representation; association edges are unchanged.
+  The inventory verifies all 8,296 rows: 131 IN_PROGRESS, 8,165 SEEDED,
+  125 graph-bearing, 8,171 graphless, 749 graphs and 1,600 edge entries.
+- The graph/QC regression suite passed 52 tests. Schema generation is current;
+  record regeneration verifies 8,296 records with zero drift; all 303 canonical
+  history files validate. Export and inventory read-only checks pass. Current
+  overlay/evidence hashes match the retained review after REVIEW-index refresh.
+- Final `just validate-all` passed: 8,296 current projections, 303 history files,
+  four review-contract tests (126.85s), 154 structured bundles and 162 native
+  reports. Review validity covers declared scopes, not scientific completion.
+  The upstream LinkML `topClass` deprecation warning remains informational.
+- A separate unpinned local preview passes 1440px and 390px browser checks for
+  graph/edge counts, support labels, evidence disclosures, document width and
+  JavaScript errors. Both screenshots were inspected. The temporary harness's
+  initial title-case expectation was corrected to the native uppercase labels;
+  no renderer or scientific content was changed for that test.
+- Canonical Pages and source pins are unchanged. The actual source-pin check
+  rejects the changed PF01972 bytes pending a new authorized source checkpoint;
+  no full publication-QC pass, commit, push or publication is claimed. The main
+  checkout's three pre-existing untracked paths remain untouched.
+- Directory enumeration independent of gitignore identifies PF01973 as next.
+  Initial leads, not curated edges, are the MptE discovery study
+  [PMID22931285](https://pubmed.ncbi.nlm.nih.gov/22931285/),
+  [8SD5/MJ1634/Q59028](https://www.rcsb.org/structure/8SD5), and the bacterial
+  Maf study linked by [5MU5](https://www.rcsb.org/structure/5MU5),
+  [PMID29076618](https://pubmed.ncbi.nlm.nih.gov/29076618/).
+  Inspect full methods/figures and exact current domain mappings before combining
+  or transferring the archaeal kinase and bacterial glycosylation contexts.
+  PF01973 is still SEEDED; all earlier open family follow-ups remain in scope.
+
+PF01972 publication review (PR #200, 2026-10-14):
+
+- The initial source-pin failure was reproduced locally and in CI and tracked
+  in [issue #201](https://github.com/CultureBotAI/DUFMech/issues/201).
+  The published annotated candidate `source/dufmech-pr-200-candidate` retains
+  `b6793ba2005e4429f0cef96a31a328825e655a00`; all 9,098 candidate source pins
+  passed local byte verification and the canonical online retention gate.
+- Fresh integrity checks verify all 8,296 manifest hashes, unchanged imported
+  PF01972 fields, exact overlay/projection and review/inventory agreement, and
+  status-only KGX/SSSOM changes. The other 8,295 projections and all association
+  edges remain unchanged. The focused graph/QC suite passed 52 tests in 19.82s.
+- Native candidate Pages were regenerated and PF01972 passed 1440px/390px
+  browser checks for graph counts, support labels, disclosures and document
+  width, without JavaScript errors. Both screenshots were inspected.
+- The retained repository audit is a same-agent adversarial review, not
+  independent expert approval or a replacement for the partial scientific
+  review. Its own source-bearing checkpoint must be retained and rendered;
+  full local QC and exact-head CI are mandatory before merge. The PR records
+  those subsequent release outcomes. Preserve both annotated source tags
+  when deleting the feature branch.
+- No scientific finding is closed by publication. PF01972 stays IN_PROGRESS;
+  its assay-attribution, triad-validation and broader-context questions remain
+  open alongside the rest of the corpus.

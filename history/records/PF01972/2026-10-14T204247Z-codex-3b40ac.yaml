@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01972
+  path: curation/families/PF01972.yaml
+session:
+  id: 2026-10-14T204247Z-codex-3b40ac
+  timestamp: '2026-10-14T20:42:47Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped Mm2878 reporter observation and separate DUF114 catalytic
+    hypothesis.
+  details: Inspected the 2011 thesis Methods and original Figure24, 2004 computational
+    study text, current Q8PT40/PF01972 mapping and 2026 RCSB leads. Added two one-edge
+    graphs with distinct experimental-observation and hypothetical support, four minimal
+    evidence ledgers and open construct/control/coverage discussions. Excluded cross-family
+    PH1510 and MjMPM transfers. Baseline records-check passed for8296 projections
+    with zero drift. Historical clone verification, catalytic attribution, additional
+    members and the unpublished structural study remain unresolved; IN_PROGRESS, not
+    full family review.
+  sections:
+  - causal_graphs
+  - discussions

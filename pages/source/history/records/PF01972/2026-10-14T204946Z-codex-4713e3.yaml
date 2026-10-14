@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01972
+  path: data/families/PF01972.yaml
+session:
+  id: 2026-10-14T204946Z-codex-4713e3
+  timestamp: '2026-10-14T20:49:46Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of Mm2878 assay and SDH hypothesis.
+  details: Saved structured review20261014T205229Z-pf01972-mm2878-assay-and-sdh-hypothesis
+    with current semantic digest and four hashed evidence inputs. Reviewed native
+    projection, source-field preservation, experimental/computational distinction,
+    original thesis Figure24, current protein mapping and cross-family exclusions.
+    The52-test focused suite passed; local1440px/390px browser checks passed after
+    correcting the temporary harness label case. Historical preparation, missing controls,
+    direct products, triad validation,2026 structural experiments and broader coverage
+    remain open. Status stays IN_PROGRESS; no full family or corpus completion, independent
+    approval or publication is claimed.
+  sections:
+  - causal_graphs
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261014T205229Z-pf01972-mm2878-assay-and-sdh-hypothesis/review.yaml

@@ -1,0 +1,40 @@
+PF01972 research scope, 2026-10-14. Curator notes, not source quotations.
+
+Searched accession PF01972 and aliases DUF114, SDH_protease, MJ0137,
+Mm2878/MM_2878 and Q8PT40; examined Pandit2004, Ammelburg2011,
+current UniProt/InterPro member mapping and RCSB 44FH/44FI metadata.
+Ignored/hidden-inclusive search of curation, evidence, history/records,
+reviews/structured and reports/causal_graphs found only the existing inventory
+before this curation. This is not a search of every local or published source.
+
+Cross-family exclusion:
+https://rest.uniprot.org/uniprotkb/search?query=gene%3APH1510&format=json
+O59179/PH1510 entry130, sequence1 maps PF25145, PF24961 and PF01957,
+not PF01972 in the complete returned Pfam list. The MEROPS S49.005 name
+and general ClpP/crotonase fold are insufficient grounds to import its
+Ser/Lys chemistry or stomatin cleavage into PF01972. MjMPM/MJ_0548 in
+the thesis is DUF2121, not the Mm2878 comparator. Shared nomenclature and
+weak family hits in third-party resources are not experimental mapping.
+PH1510 UniProt response SHA-256: 39d75714146c6ffa8502a964086228d1a4d8277bef924bbb64eddda8af372976
+
+New structural leads, not accepted causal edges:
+https://www.rcsb.org/structure/44FH
+https://data.rcsb.org/rest/v1/core/polymer_entity/44FH/1
+https://www.rcsb.org/structure/44FI
+PDB 44FH (doi:10.2210/pdb44FH/pdb) is a 2.86-A cryo-EM SDH assembly
+from Klebsiella pneumoniae, released 2026-09-16. Entity1 is 304 residues;
+the fetched entity API has no reference-sequence identifier or Pfam annotation.
+PDB 44FI (doi:10.2210/pdb44FI/pdb) is a 3.51-A assembly including SDH
+and short hypothetical-protein chains. Both citation sections describe an
+unpublished phage-defense study. A title or bound peptide does not establish
+cleavage, activation, inhibition or an infection outcome. Exact construct-to-
+PF01972 mapping, original experiments and deposition validation remain open.
+The exact study-title search did not locate inspectable experimental text;
+this is not proof that no manuscript or experiment exists.
+44FH entity response SHA-256: 2969babbecf97be5ce79538afc0720e8f098a4fb80fb067e0229383b4cd3d21a
+
+Next discriminating work: verify the Mm2878 clone and purification, seek a
+matched blank/inactive-enzyme control and direct product identification,
+test rather than assume the SDH triad, follow the 2026 deposition citation,
+and research additional mapped family members. Frozen snapshot counters,
+including structures=0, were not silently refreshed from these later leads.

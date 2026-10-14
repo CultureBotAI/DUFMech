@@ -1434,14 +1434,17 @@
       ]
     },
     {
-      "curation_status": "SEEDED",
-      "edge_count": 0,
-      "graph_count": 0,
-      "graph_state": "ABSENT",
+      "curation_status": "IN_PROGRESS",
+      "edge_count": 2,
+      "graph_count": 2,
+      "graph_state": "PRESENT",
       "name": "SDH_protease",
       "pfam_id": "PF01972",
-      "record_digest": "e120374113a17f8b4cfebd152c83e45c8acdd8155ceebf7f84f309ed5c118a44",
-      "scope_statuses": []
+      "record_digest": "24faf6f67f7cf3f7646966e2e6d756868e9476c6ef3d8b0203081b9edf72c1d7",
+      "scope_statuses": [
+        "HYPOTHETICAL",
+        "PHENOTYPIC"
+      ]
     },
     {
       "curation_status": "SEEDED",
@@ -83273,8 +83276,8 @@
     }
   ],
   "graph_states": {
-    "ABSENT": 8172,
-    "PRESENT": 124
+    "ABSENT": 8171,
+    "PRESENT": 125
   },
   "kind": "structural_inventory_not_scientific_review",
   "records": 8296
