@@ -1,0 +1,55 @@
+PF01973: archaeal MptE experiments, inspected 2026-10-14
+Primary reference: de Crecy-Lagard et al., ACS Chemical Biology 7:1807-1816
+(2012), PMID:22931285, doi:10.1021/cb300342u, PMCID:PMC3500442.
+Text: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3500442/fullTextXML
+Figures/supplement: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3500442/supplementaryFiles
+Publisher supplement: https://doi.org/10.1021/cb300342u.s001
+
+Minimal verbatim excerpts (17 words total):
+1. "catalyze the formation of 6-HMDP"
+2. "Similar results were obtained with the MJ1634 protein."
+3. "complemented the dT auxotrophy"
+
+Curator's experimental ledger, not additional quotation:
+- Results and original Figure 4D: recombinant Pyrococcus furiosus PF0930
+  produced 6-hydroxymethyl-7,8-dihydropterin diphosphate from 6-HMD with ATP.
+  The measured chromatogram follows iodine oxidation. Product assignment uses
+  retention, optical spectra, and desalted LC-ESI-MS ions at 354.1/352.1 plus
+  MRM fragments matching a standard. Crude-mixture MS initially failed through
+  suspected ion suppression. A minor monophosphate peak has uncertain origin;
+  the authors suggest workup hydrolysis, not a demonstrated second enzyme step.
+- Figure 4D caption reports zero-time, no-added-enzyme and matching MonoQ
+  fractions from a non-PF0930-expressing E. coli extract as negative controls.
+  The displayed trace concerns PF0930. The same caption reports similar
+  results for MJ1634; do not relabel this trace or its approximately 90% yield
+  as separately displayed MJ1634 data.
+- Methods: 200 uL, 3.5 ng PF0930 or MJ1634, 100 uM 6-HMD, 1 mM ATP,
+  8 mM MgCl2, 16 mM DTT, 40 mM TES/KCl pH 7.4; argon, 70 C, 10 minutes.
+  Other tested nucleotides retain PF0930 activity (CTP 41%, UTP 40%, GTP 12%
+  relative to ATP). ATP preference is not absolute donor specificity.
+- Figure 4B and complementation Methods: pBAD24-borne MJ1634 rescues growth
+  of E. coli C600 delta-folK::tetB on LB without thymidine after 48 hours.
+  Empty vector, E. coli folK and thymidine supplementation are controls.
+  Rescue occurs without arabinose induction. This is a heterologous cellular
+  result, not an archaeal knockout or a direct measurement of cofactor pools.
+- MJ1634 genomic PCR clones were Sanger verified. Biochemical expression used
+  pT7-7 in BL21-Codon Plus (DE3)-RIL; PF0930 used modified pET24d with its
+  expression/purification referred to Sugar et al. The latter protocol and
+  exact construct-derived extra residues remain to be traced.
+- Original supplementary Figure 4 (page 9) shows MJ1634 purification and
+  identifies the major bands in MonoQ lanes 6/7 by MALDI TOF/TOF. Other lanes
+  contain chloramphenicol acetyltransferase. The main text reports >95% purity
+  and tryptic MS identity. Results say heat treatment at 80 C, whereas Methods
+  and the supplement specify 70 C; retain the discrepancy, not a silent choice.
+- No isolated PF01973 truncation, catalytic residue test, quantified kinetics,
+  native archaeal flux, or bacterial Maf kinase activity is established here.
+  MJ0408/MptD, PF1278 and their aldolase reactions are different targets.
+
+Inspected originals: Results, Methods sections 3.3-3.6 and 3.8-3.9, Figure 4
+image and caption, supporting PDF including its original Figure 4.
+XML SHA256: a48337c9fa0e2d48033ca5282e00928d94af6538965f46da4fc5766ebc6dacb5
+Supporting PDF SHA256: 2c5bb4105b1bedfd67112eeb7fc1f2eef5208affc2665a641eabd5bcafee8235
+Supporting PDF MD5 matches publisher Figshare file 3592755:
+316d9859995db978a7c053120fcbc8b0. Figshare declares CC BY-NC 4.0 for that
+supplement; no supplemental image or full publication is redistributed here.
+Only minimal source excerpts and this curator-authored ledger are retained.

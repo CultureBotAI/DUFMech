@@ -1,0 +1,49 @@
+PF01973 identity and exact member mapping, retrieved/inspected 2026-10-14
+
+Frozen identity remains interpro-pfam-duf-2026-10-10, PF01973, IPR002826,
+MptE-like, EX_DUF. The independently parsed frozen previous-name row in
+data/worklists/pfam-previous-unknown-names-2026-10-10.json is PF01973.24,
+previous_ids DUF115 and MAF_flag10. A rename is not family-wide enzyme proof.
+
+M. jannaschii MJ1634/mptE:
+https://rest.uniprot.org/uniprotkb/Q59028.json
+UniProt Q59028, sequence version 1, entry version 111, 241 residues;
+NCBITaxon:243232 (reference strain JAL-1 / DSM 2661 / ATCC 43067).
+Sequence MD5: 753256561f507000427a482eba3279f8.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01973/protein/uniprot/Q59028/
+Current PF01973 match 32-196 inclusive, score 3.8e-37, continuous.
+The 2012 Methods identify genomic MJ1634 / NP_248644.1 and sequenced clones.
+Current reference mapping does not supply the historical plasmid sequence.
+UniProt JSON SHA256: 1e7590501c13394123cf6806caba6bd74da36f73e636c4dc0636448d9e34324c
+InterPro JSON SHA256: 8434bbddf09167546e55abaabe92fbf75dd1c393c328f226134043d3ebc78aed
+
+P. furiosus PF0930/mptE:
+https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APF0930&format=json
+One returned record: Q8U2A9, sequence version 1, entry version 94, 231 residues;
+NCBITaxon:186497 (Vc1 / DSM 3638 / ATCC 43587), AAL81054.1,
+WP_011012066.1. Sequence MD5: 70fe4195fce784cc62e34c0c15a30130.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01973/protein/uniprot/Q8U2A9/
+Current PF01973 match 37-183 inclusive, score 6.9e-22, continuous.
+UniProt search JSON SHA256: fc91945b15e3a12251ee0f3ab39585258f32fbc0380c1cff4d865898356c32eb
+InterPro JSON SHA256: 72a6f200dabe611e171523d0ab46953feec1a53978d7d7e9ddc67dfe69935410
+
+AMB-1 amb0685/Maf:
+https://rest.uniprot.org/uniprotkb/Q2W9I6.json
+Q2W9I6, sequence version 1, entry version 87, 666 residues, WP_011383128.1,
+BAE49489.1, PDB 5MU5. Current taxon 342108, Paramagnetospirillum magneticum
+AMB-1 / ATCC 700264 (paper: Magnetospirillum magneticum AMB-1).
+Sequence MD5: 6666ab4aaa23ba044b7d8dae9e178087.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01973/protein/uniprot/Q2W9I6/
+Current PF01973 match 259-419 inclusive, score 2.2e-26, continuous.
+UniProt also lists PF20157 Maf_flag10_N and PF20156 Maf_C. The paper's
+structural 273-530 region is a different boundary definition. Verified native
+sequence residues: S283, D318, E324, D415, N491 and D494. E324/D415 lie within
+the current PF01973 interval; N491 is outside it but inside the structural
+region. Do not reinterpret a current profile endpoint as a tested truncation.
+UniProt JSON SHA256: 1bdc41475aa6b4e2778b5c02b4f03a597d85d7c62ac5f6633da637394844844c
+InterPro JSON SHA256: 510daddfc46980f0b9946d0f19281b8837a223c3866feb87ce3266e74a4dd542
+
+UniProt/InterPro supply identity and profile evidence, not independent repeats
+of the cited experiments. Reference-strain taxa identify these mappings; no
+unreported historical clone tag or complete plasmid sequence is invented.
+No live metadata overwrite of frozen names, counters or provenance occurred.

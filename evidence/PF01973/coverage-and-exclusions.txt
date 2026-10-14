@@ -1,0 +1,57 @@
+PF01973 causal coverage ledger, 2026-10-14
+
+Completed source scope: full primary MptE2012 text, original Figure 4 and
+supplement; Maf2018 author manuscript, experimental Methods and original
+Figures 1/5/S1/S4/S7 plus primer table. The two biochemical proteins and AMB-1
+Maf were mapped individually using current UniProt and InterPro responses.
+These sources justify scoped graphs, not a complete family characterization.
+
+Searches included PF01973, DUF115, MAF_flag10, MptE, MJ1634, PF0930,
+amb0685, exact paper titles, and MptE mutation/2014 follow-up leads. The local
+rg --no-ignore --hidden search in curation, evidence, history/records and
+reviews/structured found no previous PF01973 material before this curation.
+Ignored and hidden files were included in that explicitly bounded search.
+
+Remaining primary-source work, not reviewed causal evidence:
+- Aeromonas caviae Maf1: doi:10.1002/mbo3.19 (2012), and the 2014 study
+  at https://pmc.ncbi.nlm.nih.gov/articles/PMC4065374/ on glycosylation before
+  chaperone binding/export. Inspect exact constructs, mutants and Pfam mapping.
+- Maf1/Maf2 and GlfM specificity systems: the 2024 primary article at
+  https://www.sciencedirect.com/science/article/pii/S0960982224007012 .
+  Publisher text returned 403. Europe PMC bibliographic metadata verify
+  PMID:38897200 and doi:10.1016/j.cub.2024.05.058; verify primary full text, accession mappings,
+  acceptor sites and partner perturbations before importing any mechanism.
+- Clostridium botulinum mini-flagellin engineering:
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC11339370/ . Browser access returned
+  a challenge. The public Europe PMC XML was subsequently retrieved and its
+  identity verified as PMID:39169227, doi:10.1038/s42003-024-06736-y.
+  Methods, figures, supplements and exact member/construct mapping remain to
+  be assessed; successful retrieval alone is not a scientific review.
+- Campylobacter Maf4 labeling, doi:10.1002/anie.202107181; Helicobacter
+  PseE/Jhp0106 at https://pmc.ncbi.nlm.nih.gov/articles/PMC7988653/ ; earlier
+  glycoengineering and newer 2026 Clostridium/Vibrio leads remain unassessed.
+- Archaeal substrate breadth, native genetic flux, catalytic residues, the
+  PF0930 expression protocol cited as Sugar et al., and later MJ1634 structural
+  work remain open. The exact native substrate is not inferred solely from
+  a methanopterin pathway annotation or the folate-related in vitro substrate.
+
+Exclusions and interpretation safeguards:
+- Wang2014, doi:10.1128/JB.01812-14, concerns MJ0408/MptD aldolase. Its
+  title/abstract were checked via the author repository; it does not establish
+  MJ1634 catalytic-residue chemistry. MJ0408, MJ1099 and PF1278 are not MptE.
+- FlmG, Cst-I/Cst-II and thiamin pyrophosphokinases are comparisons, not
+  automatically PF01973 experimental members. No transfer of their catalytic
+  residues, substrate chemistry or phenotypes without exact mapping.
+- Do not join archaeal pterin kinase chemistry to AMB-1 glycosylation. The
+  frozen name covers a heterogeneous homologous family, not a shared substrate.
+- No isolated-domain sufficiency, universal pseudaminic donor, observed Glu324
+  acid/base chemistry, or Asp415 donor-contact measurement is claimed. Separate
+  Maf-abundance/folding controls and donor-bound structures are needed.
+- Unchanged S283A/D318A/N491A readouts and the N494A caption inconsistency
+  are retained. Uncertain mass stereochemistry, mono-P product origin, and
+  70/80 C purification wording remain explicit rather than silently resolved.
+
+Publication remains separate. This local assessment neither updates canonical
+Pages/source pins nor closes earlier family findings or the 8296-family goal.
+Continue PF01973's remaining member/partner mechanisms before treating this
+family as complete; PF01976 is the next untouched ascending accession.

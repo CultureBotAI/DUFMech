@@ -70,16 +70,19 @@ family content, history, or scientific review status.
 
 ## Progress
 
-Worktree: `/private/tmp/dufmech-causal-graphs`, branch `feat/duf-causal-graphs-next`.
+Worktree: `/private/tmp/dufmech-causal-graphs`, branch `feat/duf-pf01973-causal-graphs`.
 Starting source revision: `9d7a87f74786813fcdf65801bdf940d79cc7a56e`.
 Initial inventory and implementation began at 2026-10-11T04:00:01Z.
 The initial batch was merged in PR #199. Continuation begins from
-`2da6c366b06615fbb6c34379318771fe09f4cfda`. PF01972 publication is tracked in
-[PR #200](https://github.com/CultureBotAI/DUFMech/pull/200); earlier local-only
-checkpoints below describe their state at the time, not the current release status.
+`2da6c366b06615fbb6c34379318771fe09f4cfda`. PF01972 was published through merged
+[PR #200](https://github.com/CultureBotAI/DUFMech/pull/200); the current PF01973
+continuation starts from `c6a4d055de0a9ef0edc74f5c61cbbacfd8822904` and its
+publication is tracked in [PR #202](https://github.com/CultureBotAI/DUFMech/pull/202).
+Earlier local-only checkpoints below describe their state at the time, not the
+current release status.
 
-One hundred and twenty-five families now have 1,600 evidence-linked edge entries in 749
-scoped graphs. Of these, 1,575 are OBSERVED, twenty-one are HYPOTHESIZED,
+One hundred and twenty-six families now have 1,616 evidence-linked edge entries in 757
+scoped graphs. Of these, 1,589 are OBSERVED, twenty-three are HYPOTHESIZED,
 three are INFERRED and one is CONTESTED;
 counts are structural, not numbers of independent experiments:
 
@@ -1209,7 +1212,17 @@ SDH triad. PH1510 and MjMPM cross-family transfers are excluded. The 2026
 44FH/44FI structures remain unmapped functional research leads, not defense
 or cleavage edges.
 
-All 131 curated families remain IN_PROGRESS with partial scientific
+PF01973 (MptE-like, former DUF115/MAF_flag10) adds eight graphs with fourteen
+OBSERVED effects and two HYPOTHESIZED residue roles. Two archaeal whole-protein
+reactions, MJ1634 heterologous complementation, AMB-1 Maf deletion/rescue and
+separate E324A/D415A variants retain distinct contexts. The Maf profile 259-419
+is not its structural 273-530 region. Original figures, mutation primers and
+reference residues support N491A despite a conflicting N494A caption. Glu324
+catalytic-base and Asp415 donor-pocket proposals are not observed chemistry.
+Maf variant controls, exact glycan stereochemistry and later-member mechanisms
+remain open; no kinase/glycosyltransferase function is generalized across PF01973.
+
+All 132 curated families remain IN_PROGRESS with partial scientific
 self-review, not exhaustive family reviews. Git access returned during the
 2008 follow-up, and PF01955's `20261012T130729Z` successor now covers all twenty
 graphs, including the previously unretained native2009 additions. It supersedes
@@ -1228,9 +1241,11 @@ archived member mapping, cation-specific signs and unresolved construct/host
 questions without asserting direct molecular transport.
 PF01972's `20261014T205229Z` report preserves the observation/hypothesis
 distinction, scoped mapping and open assay/coverage findings.
-The other 8,165 families still need
+PF01973's `20261014T223640Z` report preserves the archaeal/bacterial boundaries,
+observed-versus-proposed residue effects and two open coverage findings.
+The other 8,164 families still need
 individual evidence research and retained dispositions. The structural inventory
-has 8,171 graphless families, including PF01629, PF01724, PF01886, PF01954, PF02621 and PF20352.
+has 8,170 graphless families, including PF01629, PF01724, PF01886, PF01954, PF02621 and PF20352.
 No edge is invented for a graphless family. Do not mark the corpus-wide goal complete based on schema
 support or these examples.
 
@@ -5566,8 +5581,9 @@ scoped graphless assessment; member-specific functional evidence, supplementary
 mapping, later full papers and metadata reconciliation remain open. The former
 PF01952 pointer was incorrect: an ignored-file-inclusive search and the actual
 retained membership identify PF01954 through PF01959 and PF01969 among the now
-partially assessed records. PF01970 and PF01972 are now also partially assessed,
-with PF01973 the next ascending uncurated accession. PF01955's
+partially assessed records. PF01970, PF01972 and PF01973 are now also partially
+assessed. Continue PF01973's later Maf/member contexts; PF01976 is the next
+untouched ascending accession, not a reason to drop earlier follow-ups. PF01955's
 immediate follow-ups are unresolved CbiS2006 clones, assay conflicts and native
 mechanisms, the2008 historical donor strains/inserts, supplemental product traces,
 reporter and unit conflicts, historical deletion alleles and fusion junctions,
@@ -5684,3 +5700,104 @@ PF01972 publication review (PR #200, 2026-10-14):
 - No scientific finding is closed by publication. PF01972 stays IN_PROGRESS;
   its assay-attribution, triad-validation and broader-context questions remain
   open alongside the rest of the corpus.
+
+PF01973 continuation checkpoint (2026-10-14):
+
+- The overlay contains eight graphs and sixteen edges: fourteen OBSERVED
+  effects and two HYPOTHESIZED/COMPUTATIONAL residue roles. PF0930 and MJ1634
+  whole-protein biochemical assays are separate from heterologous folK rescue,
+  AMB-1 deletion/rescue and the two independent Maf substitution experiments.
+- Four minimal evidence ledgers retain exact mappings, inspected original
+  figures/supplements, condition-specific negative results, uncertainties and
+  the additional-source queue. No full publication or figure is redistributed.
+  Current UniProt/Pfam data do not overwrite the frozen October10 snapshot.
+- Canonical CREATE history is
+  `history/records/PF01973/2026-10-14T222220Z-codex-7efd01.yaml`; REVIEW history is
+  `history/records/PF01973/2026-10-14T223424Z-codex-efe5ea.yaml`.
+  The saved report is
+  `reviews/structured/20261014T223640Z-pf01973-mpte-and-maf-contexts/`.
+  It is a partial scientific self-review, NEEDS_FOLLOWUP, with open findings
+  `pf01973-mpte-mechanistic-coverage` and
+  `pf01973-maf-mechanism-and-member-coverage`. No independent approval or
+  REVIEWED promotion is claimed.
+- Native initial preview and guarded apply each validated all 8,296 records
+  and identified only the PF01973 projection and ownership-manifest changes.
+  The graph/QC regression suite passed 52 tests in 35.34s; schema generation
+  found zero drift. Native record, overlay, evidence and source-preservation
+  assertions passed with semantic digest
+  `89129c238d759cb285e3ced3ca846405d18880302487db6e310c423ad29421bc`.
+- Final `just validate-all` passed: 8,296 current projections with zero drift,
+  306 valid history records, four review-contract tests (111.97s), 156 valid
+  structured bundles and 164 native reports. The existing LinkML `topClass`
+  deprecation warning is informational; these checks cover declared scopes.
+- Read-only inventory reproduction verified all 8,296 rows; export reproduction
+  reported current artifacts. A structured comparison verified every projection
+  manifest hash, unchanged other 8,295 records, matching review/inventory digests
+  after REVIEW-index regeneration, and unchanged reviewed overlay/evidence bytes.
+  KGX and SSSOM change only PF01973's status; association edges are unchanged.
+  `git diff --check` passed. No source snapshot, schema, application code or
+  canonical Page was modified.
+- The refreshed structural inventory has 132 IN_PROGRESS and 8,164 SEEDED
+  families, 126 graph-bearing and 8,170 graphless, 757 graphs and 1,616 edge entries.
+  These are structural counts, not independent experiments or completed reviews.
+- A separate unpinned preview passed 1440px and 390px browser checks for all
+  eight graphs, sixteen edges, support labels, evidence disclosures, document
+  width and JavaScript errors. Six screenshots were inspected. The initial
+  localhost bind was sandbox-denied; the approved rerun succeeded and closed
+  its temporary server. Canonical Pages remain unchanged.
+- The actual source-pin check rejects the changed PF01973 projection pending
+  a separately authorized retained source checkpoint. No full publication-QC,
+  commit, push or publication is claimed. Unrelated primary-checkout files
+  remain untouched.
+- Next: continue PF01973, especially the later Maf specificity/GlfM and
+  Clostridium engineering contexts with exact construct/domain mapping.
+  Europe PMC identity metadata confirm PMID38897200/doi:10.1016/j.cub.2024.05.058;
+  its full experimental paper remains unassessed. Public full-text XML for
+  PMID39169227/doi:10.1038/s42003-024-06736-y was retrieved and identity-checked;
+  its Methods, figures and supplements still need scientific assessment.
+  Every other family and all earlier open findings remain in the goal.
+- After saving the review, a public copy of the Maf/GlfM paper was retrieved
+  from [UNIGE](https://archive-ouverte.unige.ch/unige:178145). Its cover identifies
+  the published version and CC BY 4.0; its SHA256 is
+  `33b8af4c9c566d1fa0ec01b2e83528a2d88bf42d230136e4f51ca73b04d4e56c`.
+  Full experimental/figure assessment remains next. Its primary data deposition
+  is [Mendeley Data V1](https://data.mendeley.com/datasets/jrjkkb49vx/1).
+- The Clostridium study has an
+  [author correction](https://www.nature.com/articles/s42003-025-07774-w),
+  PMID40021896, replacing pLogo panels v-x in Supplementary Figure 3. Retrieve
+  the corrected supplement before assessing sequence-preference claims. Initial
+  Methods inspection also distinguishes three biological preparations for intact
+  mass analysis from one for tandem MS. Neither these preliminary checks nor
+  successful retrieval close the saved coverage finding or add causal edges.
+
+PF01973 publication review (PR #202, 2026-10-14):
+
+- The initial source-pin rejection was reproduced locally and in CI run
+  `38650949208`, tracked as [issue #203](https://github.com/CultureBotAI/DUFMech/issues/203).
+  The initial local QC attempt was interrupted after that reproduced failure:
+  288 tests passed and one failed before interruption; this is not a full-suite pass.
+- Candidate checkpoint `bf3279f826a5fbb982f962dba292a3f033f1a288` is retained by
+  annotated tag `source/dufmech-pr-202-candidate`. Native capture and online
+  retention verification cover all 9,106 candidate source files. Canonical Pages
+  were regenerated; no generated file or source ledger was hand-edited.
+- The adversarial self-review checked all fifteen initial change paths and the
+  candidate ledger/family page. Original MptE Figure 4 and Maf Results/Figure 5
+  spot checks support the existing bounded interpretations. All 8,296 manifest
+  hashes, unchanged other 8,295 projections, evidence quotes/hashes, review and
+  inventory digests, and status-only export changes passed the integrity audit.
+  The focused graph/QC regression suite passed 52 tests in 21.98 seconds.
+- Canonical PF01973 browser checks passed at 1440px and 390px: eight graphs,
+  sixteen edges, explicit observed/hypothetical support labels, evidence
+  disclosures, no document overflow and no JavaScript errors. Six screenshots
+  were inspected; the temporary server was closed.
+- Save the publication review as an immutable structured bundle, retain its
+  source-bearing checkpoint and recapture/regenerate before final full QC,
+  exact-head CI and merge. These candidate checks do not claim those later
+  release gates have already passed. Preserve annotated source tags after
+  deleting the feature branch.
+- Scientific findings remain open as
+  [issue #204](https://github.com/CultureBotAI/DUFMech/issues/204) for archaeal
+  constructs/native biochemical scope and
+  [issue #205](https://github.com/CultureBotAI/DUFMech/issues/205) for later
+  Maf/GlfM systems and discriminating residue mechanisms. Publication does not
+  close these findings, promote IN_PROGRESS, or complete the corpus-wide goal.

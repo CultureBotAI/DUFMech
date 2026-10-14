@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01973
+  path: data/families/PF01973.yaml
+session:
+  id: 2026-10-14T223424Z-codex-efe5ea
+  timestamp: '2026-10-14T22:34:24Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of PF01973 MptE and Maf contexts
+  details: Reviewed eight graphs with fourteen observed effects and two explicitly
+    hypothetical residue roles against inspected primary Methods, original figures,
+    supplements and exact UniProt/Pfam mappings. Retained structured review 20261014T223640Z-pf01973-mpte-and-maf-contexts
+    with open archaeal and Maf coverage findings; no independent approval or REVIEWED
+    promotion. Native projection/evidence/source-preservation assertions and 52 graph/QC
+    tests passed; schema generation is current. Separate unpinned desktop/mobile preview
+    passed eight-graph/sixteen-edge, support-label, disclosure, overflow and JavaScript
+    checks; six screenshots inspected. Full publication QC and canonical Pages/source-pin
+    update remain separate. This event refreshes only the generated history index
+    and does not resolve the remaining corpus goal.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261014T223640Z-pf01973-mpte-and-maf-contexts/review.yaml

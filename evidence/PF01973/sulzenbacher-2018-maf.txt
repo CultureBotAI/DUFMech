@@ -1,0 +1,57 @@
+PF01973: Maf deletion, rescue and substitutions, inspected 2026-10-14
+Primary reference: Sulzenbacher et al., Environmental Microbiology 20:228-240
+(2018; online 2017), PMID:29076618, doi:10.1111/1462-2920.13975.
+Author manuscript including figures/supplements:
+https://hal.science/hal-01802950v1/file/sulzenbacher-etal-2017-HAL.pdf
+SHA256: 1c45f132815ca3266b0ce47d9b3f5be3a26fd2c727e6988832c1b9b948d290c3
+
+Minimal verbatim excerpts (24 words total):
+1. "flagellin was still produced"
+2. "restored the wild type phenotype"
+3. "bacterial motility was not restored"
+4. "putative catalytic base Glu324"
+5. "Asp415 might exercise the same role"
+
+Curator's experimental ledger, not additional quotation:
+- Results, original Figure 1, Figure S1 and Figure S4: in AMB-1, deletion of
+  amb0685/maf loses the approximately 70-kDa flagellin band, nonulosonic-acid
+  modifications, detectable supernatant flagellin, flagellar filaments and
+  motility. The approximately 55-kDa intracellular flagellin remains. A short
+  linker replacement was designed to minimize polarity. In-trans wild-type
+  maf on pAK22 restores the 70-kDa band, filament and motility. Figure S1
+  compares wild type and deletion only; export rescue is not shown there.
+- MG medium, 30 C and microaerophilic conditions are specified for AMB-1
+  manipulation/complementation. The deletion is PCR checked and mutation
+  plasmids are sequence verified. Figure 1 uses anti-Fla Westerns and electron
+  micrographs; the text describes optical-microscope motility observations.
+  No quantitative motility rate or universal effect size is extracted.
+- DMB chemistry, LC-MS and tandem peptide MS support a nonulosonic acid.
+  Mass alone does not distinguish pseudaminic from legionaminic stereoisomers.
+  Biosynthetic context and amb0715 deletion/rescue support pseudaminic acid
+  or a related derivative, not an unambiguous stereochemical determination.
+  The amb0715 result is not a perturbation of PF01973 and is not a Maf edge.
+- Original Figure 5B: E324A and D415A complementation constructs lack the
+  70-kDa anti-Fla band; text reports failure to restore motility. S283A,
+  D318A and N491A retain those readouts in the tested conditions. A caption
+  says N494A, but the actual figure, Methods, Table S2 primers and the current
+  sequence support N491A; position 494 is D. The native negative results do
+  not prove these other residues dispensable under every condition.
+- E324A and D415A are separate whole-protein variants, not a double mutant
+  or isolated-domain assay. Maf abundance, folding and localization controls
+  are not shown in the inspected mutation experiment. Anti-Fla is not an
+  anti-Maf expression control. Loss of complementation does not identify the
+  molecular cause or establish catalytic necessity independently of stability.
+- Results, Discussion, Figures 4/S7: Glu324's catalytic role and Asp415's
+  proposed donor-pocket organizing role derive from structural comparisons
+  and docking. No Maf-bound donor was crystallographically observed; soaking
+  and CMP-Neu5Ac cocrystallization did not yield the proposed complex. The
+  figure's sulfate is not an experimentally bound sugar donor. These causal
+  proposals are hypotheses, distinct from observed mutation phenotypes.
+- The authors' central structural domain spans 273-530, not the current
+  PF01973 profile interval 259-419. The other terminal domains remain part
+  of the tested 666-residue protein. Crystal dimer contacts do not establish
+  a physiological dimer: SEC-MALLS supports a solution monomer.
+
+Inspected HAL PDF pages 7-24, figure legends 29-30, original Figures 1 and 5
+(pages 31/35), S1/S4/S7 (36/39/42), and Table S2 (44). No full paper or figure
+is retained in the repository. Later Maf studies remain a separate review task.
