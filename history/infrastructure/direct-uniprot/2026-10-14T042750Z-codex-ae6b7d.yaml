@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: infrastructure
+  slug: direct-uniprot
+  path: src/dufmech/protein_discovery.py
+session:
+  id: 2026-10-14T042750Z-codex-ae6b7d
+  timestamp: '2026-10-14T04:27:50Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Publish direct UniProt gap discovery with adversarial remediation
+  details: 'Added a bounded resumable direct-search pipeline and immutable 5,190-family
+    checkpoint. New sequence examples cover 5,184 prior gaps; six successful empty
+    searches remain explicit. Existing parent rows and frozen data are unchanged.
+    Adversarial self-review reproduced issues 196 and 197; stricter cross-family sequence
+    consistency and descriptor-bound append guards resolve them. Focused checks: 214
+    passed, one expected skip; production snapshot replay succeeds. Final source retention,
+    native Pages regeneration, full QC and exact-head CI remain release gates. No
+    functional scientific curation or status promotion.'
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/196
+  - https://github.com/CultureBotAI/DUFMech/issues/197
+  prs:
+  - https://github.com/CultureBotAI/DUFMech/pull/195

@@ -78,7 +78,12 @@ query contracts, duplicate families, mixed releases, wrong Pfam membership,
 invalid sequences, and rehashed-but-inconsistent derived rows fail validation.
 Snapshot-owned checkpoints cannot be extended; online resumption requires a
 separate staging file. Symlinked staging paths and writable hard-link aliases
-are refused. No failed request is serialized as a successful empty search.
+are refused. Descriptor identity, directory attachment, file size and manifest
+ownership are rechecked after network waits and before appends. These advisory
+guards do not protect against a noncooperating process mutating the same inode
+concurrently. The combined row validator rejects conflicting sequence hashes or
+versions for an accession within one UniProt release; differences across releases
+remain valid. No failed request is serialized as a successful empty search.
 
 The native latest-example selector recognizes both sibling and direct snapshot
 namespaces and chooses the direct successor on a same-date tie. Site datasets
@@ -111,14 +116,16 @@ publishing a snapshot.
 
 ## Publication Boundary
 
-This development snapshot is not yet a published source commit. The existing
-native source-pin ledger and committed Pages output are deliberately unchanged.
-An external-input local preview can be validated without manufacturing a git
-pin. A subsequent publication pass must commit the sources, retain a reachable
-source ref, capture verified pins, regenerate Pages, and pass the full native
-quality/publication gates before merging.
+[PR 195](https://github.com/CultureBotAI/DUFMech/pull/195) tracks publication,
+adversarial self-review, and remediation of issues
+[196](https://github.com/CultureBotAI/DUFMech/issues/196) and
+[197](https://github.com/CultureBotAI/DUFMech/issues/197). The publication procedure
+retains an annotated source tag, captures verified pins, regenerates native Pages,
+and requires fresh quality, source-retention, and exact-head CI gates before merge.
+The original external-input preview did not establish publication readiness or
+bypass those gates. Final release outcomes are recorded in the PR.
 
-## Validation
+## Pre-Publication Development Validation
 
 - The final Python suite passed 1,386 tests with three expected empty-parameter
   skips and one pre-existing LinkML deprecation warning. The focused sequence

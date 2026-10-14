@@ -305,6 +305,7 @@ def validate_rows(rows: list[dict], families: list[dict]) -> None:
     expected = {r["pfam_id"]: r["short_name"] for r in families}
     if len(rows) != len(expected) or {r["pfam_id"] for r in rows} != expected.keys():
         raise ValueError("example coverage must account for every worklist family exactly once")
+    sequence_identities = {}
     for row in rows:
         pfam = row["pfam_id"]
         if row["short_name"] != expected[pfam]:
@@ -347,6 +348,10 @@ def validate_rows(rows: list[dict], families: list[dict]) -> None:
                     raise ValueError("incomplete sibling provenance")
         for example in examples:
             sequence_valid(example)
+            key = (example["uniprot_accession"], example["uniprot_release"])
+            identity = (example["sequence_sha256"], example["sequence_version"])
+            if sequence_identities.setdefault(key, identity) != identity:
+                raise ValueError(f"conflicting sequence for {key[0]} in UniProt {key[1]}")
             if not ACCESSION.fullmatch(example["uniprot_accession"]):
                 raise ValueError("invalid example accession")
             if pfam not in example["pfam_ids"]:

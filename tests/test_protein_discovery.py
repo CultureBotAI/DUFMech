@@ -177,6 +177,117 @@ def test_hard_link_alias_cannot_mutate_a_retained_checkpoint(tmp_path):
     assert checkpoint.read_bytes() == before
 
 
+def test_checkpoint_linked_during_request_is_not_appended(tmp_path):
+    checkpoint = tmp_path / "checkpoint"
+    checkpoint.write_text(json.dumps(observation()) + "\n")
+    retained = tmp_path / "retained.jsonl"
+    before = checkpoint.read_bytes()
+
+    def handler(request):
+        os.link(checkpoint, retained)
+        row = observation("PF00003")
+        return httpx.Response(200, json={"results": row["results"]},
+                              headers={"x-uniprot-release": "2026_03", "x-total-results": "1"})
+
+    with pytest.raises(ValueError, match="hard-link"):
+        discover({"PF00002", "PF00003"}, checkpoint, transport=httpx.MockTransport(handler))
+    assert retained.read_bytes() == before
+    assert checkpoint.read_bytes() == before
+
+
+@pytest.mark.parametrize("field,value", [("sequence_version", 2), ("sequence", "AAAAAAAAAA")])
+def test_same_release_protein_cannot_have_conflicting_sequences(field, value):
+    families, parent = built()
+    rows = enrich_rows(parent, {"PF00002": observation()})
+    direct = next(row for row in rows if row["pfam_id"] == "PF00002")
+    example = direct["examples"][0]
+    example[field] = value
+    example["sequence_sha256"] = digest(example["sequence"].encode())
+    with pytest.raises(ValueError, match="conflicting sequence"):
+        validate_rows(rows, families)
+
+
+def test_same_protein_may_change_between_releases():
+    families, parent = built()
+    row = observation()
+    row["release"] = "2026_04"
+    row["results"][0]["entryAudit"]["sequenceVersion"] = 2
+    rows = enrich_rows(parent, {"PF00002": row})
+    validate_rows(rows, families)
+
+
+def test_conflicting_raw_responses_cannot_be_frozen(tmp_path):
+    families, parent = built()
+    path = write_snapshot(parent, tmp_path, families=families, snapshot_date="2026-10-13",
+                          worklist_id="test-worklist",
+                          source={"name": "fixture", "url": "https://rest.uniprot.org"})
+    row = observation()
+    row["results"][0]["entryAudit"]["sequenceVersion"] = 2
+    checkpoint = tmp_path / "staging.jsonl"
+    checkpoint.write_text(json.dumps(row) + "\n")
+    with pytest.raises(ValueError, match="conflicting sequence"):
+        freeze_discovery(path, checkpoint, tmp_path, families=families,
+                         worklist_id="test-worklist", snapshot_date="2026-10-13")
+    assert not list(tmp_path.glob(f"{DIRECT_STEM}*"))
+
+
+def test_independent_direct_queries_must_agree_on_same_release_sequence():
+    families, parent = built()
+    empty = next(row for row in parent if row["pfam_id"] == "PF00001")
+    empty.update(status="NO_SIBLING_CANDIDATE", candidate_count=0, unresolved=[])
+    first, second = observation("PF00001"), observation("PF00002")
+    second["results"][0]["entryAudit"]["sequenceVersion"] = 2
+    rows = enrich_rows(parent, {"PF00001": first, "PF00002": second})
+    with pytest.raises(ValueError, match="conflicting sequence"):
+        validate_rows(rows, families)
+
+
+@pytest.mark.parametrize("change", ["manifest", "replace", "symlink", "append", "parent"])
+def test_checkpoint_changed_during_request_is_preserved(tmp_path, change):
+    directory = tmp_path / "staging"
+    directory.mkdir()
+    checkpoint = directory / "checkpoint"
+    before = json.dumps(observation()) + "\n"
+    checkpoint.write_text(before)
+    replacement = "replacement data\n"
+
+    def handler(request):
+        if change == "manifest":
+            (directory / "new.manifest.json").write_text(
+                json.dumps({"files": {"queries": {"path": checkpoint.name}}}))
+        elif change == "append":
+            checkpoint.write_text(before + replacement)
+        elif change == "parent":
+            directory.rename(tmp_path / "retained")
+            directory.mkdir()
+            checkpoint.write_text(replacement)
+        else:
+            checkpoint.rename(directory / "retained")
+            if change == "replace":
+                checkpoint.write_text(replacement)
+            else:
+                checkpoint.symlink_to(directory / "retained")
+        row = observation("PF00003")
+        return httpx.Response(200, json={"results": row["results"]},
+                              headers={"x-uniprot-release": "2026_03", "x-total-results": "1"})
+
+    with pytest.raises((ValueError, ReportError)):
+        discover({"PF00002", "PF00003"}, checkpoint, transport=httpx.MockTransport(handler))
+    if change == "parent":
+        assert (tmp_path / "retained/checkpoint").read_text() == before
+    elif change in {"replace", "symlink"}:
+        assert (directory / "retained").read_text() == before
+    assert checkpoint.read_text() == (replacement if change in {"replace", "parent"} else
+                                     before + replacement if change == "append" else before)
+
+
+def test_nonregular_checkpoint_is_rejected_without_blocking(tmp_path):
+    checkpoint = tmp_path / "fifo"
+    os.mkfifo(checkpoint)
+    with pytest.raises(ValueError, match="regular file"):
+        discover({"PF00002"}, checkpoint, transport=transport())
+
+
 @pytest.mark.parametrize("workers,per_family", [(0, 3), (5, 3), (True, 3), (2, 0), (2, 26), (2, True)])
 def test_invalid_scope_is_rejected_before_requests(tmp_path, workers, per_family):
     calls = []

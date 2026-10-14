@@ -361,8 +361,9 @@ bringing coverage to 8,290 of 8,296 families and 23,836 distinct proteins. Six
 successful zero-result searches remain explicit. Family pages retain FASTA and
 query provenance; these ranked membership samples do not establish function or
 domain boundaries. Use `just protein-examples-direct --help` for explicit
-acquisition and offline replay. Native publication still requires a new source
-checkpoint and verified pins.
+acquisition and offline replay. Publication is tracked in
+[PR 195](https://github.com/CultureBotAI/DUFMech/pull/195), with a retained source
+checkpoint, verified pins, regenerated Pages, and fresh quality gates.
 
 After publishing a source checkpoint containing the frozen inputs, records, curation,
 history, reviews and schema, capture its full immutable SHA offline before final rendering:

@@ -4,12 +4,18 @@ version: 1
 validators: [validate_record, _validate_record, _validate_content, check_manifest, verified_manifest]
 history_helpers: [new_history]
 helpers:
+  _checkpoint_writer:
+    path: "src/dufmech/protein_discovery.py"
+    formats: ["jsonl"]
+    policy: "descriptor-bound-no-follow-checkpoint-open"
+    tests: ["tests/test_protein_discovery.py"]
+    required_calls: [output_tree, open, fstat]
   discover:
     path: "src/dufmech/protein_discovery.py"
     formats: ["jsonl"]
     policy: "locked-validated-resumable-release-bound-family-search"
     tests: ["tests/test_protein_discovery.py"]
-    required_calls: [parse_checkpoint, validate_observation, flock]
+    required_calls: [parse_checkpoint, validate_observation, flock, _checkpoint_writer, _check_append]
   freeze_discovery:
     path: "src/dufmech/protein_discovery.py"
     formats: ["json", "tsv", "manifest.json", "jsonl"]

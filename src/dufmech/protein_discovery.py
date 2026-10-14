@@ -9,7 +9,9 @@ import json
 import math
 import os
 import re
+import stat
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
+from contextlib import contextmanager
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -18,6 +20,7 @@ import httpx
 from dufmech.example_candidates import UniProtExampleClient
 from dufmech.protein_examples import FIELDS, STEM, URL, digest, load_snapshot, normalize_entry
 from dufmech.report import load_json_rows, verified_manifest
+from dufmech.site_files import output_tree
 
 DIRECT_STEM = f"{STEM}-direct"
 KIND = "UNIPROT_FAMILY_SEARCH"
@@ -132,6 +135,42 @@ def parse_checkpoint(content: str, settings: dict) -> dict[str, dict]:
     return observations
 
 
+@contextmanager
+def _checkpoint_writer(checkpoint: Path):
+    with output_tree(checkpoint.parent) as tree:
+        descriptor = os.open(checkpoint.name,
+                             os.O_RDWR | os.O_CREAT | os.O_APPEND | os.O_NOFOLLOW | os.O_NONBLOCK,
+                             0o644, dir_fd=tree.descriptor)
+        with os.fdopen(descriptor, "a+", encoding="utf-8") as sink:
+            if not stat.S_ISREG(os.fstat(sink.fileno()).st_mode):
+                raise ValueError("checkpoint must be a regular file")
+            yield sink, tree
+
+
+def _check_append(checkpoint: Path, sink, tree) -> None:
+    # Network waits allow other processes to replace, link or freeze a staging file.
+    tree.assert_attached()
+    if any(p.is_symlink() for p in (checkpoint, *checkpoint.absolute().parents)):
+        raise ValueError("checkpoint must not traverse symlinks")
+    actual = os.fstat(sink.fileno())
+    current = os.stat(checkpoint.name, dir_fd=tree.descriptor, follow_symlinks=False)
+    if (not stat.S_ISREG(current.st_mode)
+            or (actual.st_dev, actual.st_ino) != (current.st_dev, current.st_ino)):
+        raise ValueError("checkpoint was replaced during discovery")
+    if actual.st_nlink != 1:
+        raise ValueError("writable discovery checkpoint must not have hard-link aliases")
+    if actual.st_size != sink.tell():
+        raise ValueError("checkpoint size changed during discovery")
+    for name in os.listdir(tree.descriptor):
+        if name.endswith(".manifest.json"):
+            content = tree.read(name)
+            if content is None:
+                raise ValueError("checkpoint ownership changed during discovery")
+            if any(item.get("path") == checkpoint.name
+                   for item in json.loads(content).get("files", {}).values()):
+                raise ValueError("checkpoint belongs to an immutable snapshot; use a staging copy")
+
+
 def discover(targets: set[str], checkpoint: Path, *, per_family: int = 3,
              workers: int = 2, offline: bool = False,
              transport: httpx.BaseTransport | None = None) -> dict[str, dict]:
@@ -144,6 +183,8 @@ def discover(targets: set[str], checkpoint: Path, *, per_family: int = 3,
         raise ValueError("invalid discovery target")
     if any(p.is_symlink() for p in (checkpoint, *checkpoint.absolute().parents)):
         raise ValueError("checkpoint must not traverse symlinks")
+    if checkpoint.exists() and not stat.S_ISREG(checkpoint.stat().st_mode):
+        raise ValueError("checkpoint must be a regular file")
     existing = parse_checkpoint(checkpoint.read_text() if checkpoint.exists() else "", settings)
     if existing.keys() - targets:
         raise ValueError("checkpoint contains families outside the target cohort")
@@ -160,13 +201,13 @@ def discover(targets: set[str], checkpoint: Path, *, per_family: int = 3,
         if any(item.get("path") == checkpoint.name
                for item in json.loads(manifest.read_text()).get("files", {}).values()):
             raise ValueError("checkpoint belongs to an immutable snapshot; use a staging copy")
-    checkpoint.parent.mkdir(parents=True, exist_ok=True)
-    with checkpoint.open("a+", encoding="utf-8") as sink:
+    with _checkpoint_writer(checkpoint) as (sink, tree):
         fcntl.flock(sink, fcntl.LOCK_EX | fcntl.LOCK_NB)
         sink.seek(0)
         if parse_checkpoint(sink.read(), settings) != existing:
             raise ValueError("checkpoint changed while acquiring writer lock")
         sink.seek(0, 2)
+        _check_append(checkpoint, sink, tree)
         releases = {row["release"] for row in existing.values()}
         with httpx.Client(timeout=adapter.timeout, transport=transport,
                           headers={"User-Agent": "DUFMech/1.0 (https://github.com/CultureBotAI/DUFMech)"}) as client:
@@ -195,6 +236,7 @@ def discover(targets: set[str], checkpoint: Path, *, per_family: int = 3,
                         releases.add(observation["release"])
                         if len(releases) > 1:
                             raise ValueError("UniProt release changed; start a fresh discovery checkpoint")
+                        _check_append(checkpoint, sink, tree)
                         sink.write(json.dumps(observation, sort_keys=True) + "\n")
                         sink.flush()
                         os.fsync(sink.fileno())
