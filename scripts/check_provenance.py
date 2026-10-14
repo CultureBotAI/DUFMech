@@ -19,6 +19,7 @@ def main(argv: list[str] | None = None) -> int:
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--worklists-dir", type=Path, default=Path("data/worklists"))
+    parser.add_argument("--protein-examples-dir", type=Path, default=Path("data/protein_examples"))
     parser.add_argument(
         "--cross-mech-dir",
         type=Path,
@@ -30,6 +31,8 @@ def main(argv: list[str] | None = None) -> int:
     directories = [args.worklists_dir]
     if args.cross_mech_dir.exists():
         directories.append(args.cross_mech_dir)
+    if args.protein_examples_dir.exists():
+        directories.append(args.protein_examples_dir)
     issues = [issue for directory in directories for issue in check_worklist_manifests(directory)]
     if issues:
         print(
@@ -38,6 +41,20 @@ def main(argv: list[str] | None = None) -> int:
             file=sys.stderr,
         )
         return 1
+
+    from dufmech.protein_examples import load_snapshot
+    from dufmech.report import load_json_rows, verified_manifest
+
+    for path in args.protein_examples_dir.glob("duf-protein-examples-*.json"):
+        if path.name.endswith(".manifest.json"):
+            continue
+        manifest = verified_manifest(path)
+        worklist_id = manifest["snapshot"]["input_snapshot_ids"]["worklist"]
+        if Path(worklist_id).name != worklist_id:
+            raise ValueError("protein-example worklist ID must be a filename stem")
+        worklist = args.worklists_dir / f"{worklist_id}.json"
+        verified_manifest(worklist)
+        load_snapshot(path, list(load_json_rows(worklist)), worklist_id)
 
     count = sum(len(worklist_manifest_paths(directory)) for directory in directories)
     print(f"validated {count} DUFMech snapshot manifest(s)")

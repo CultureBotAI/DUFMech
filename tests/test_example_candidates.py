@@ -45,6 +45,30 @@ CROSS_ROWS = [
 ]
 
 
+@pytest.mark.parametrize("retry_after,delay", [
+    ("3", 3), ("Thu, 01 Jan 1970 00:00:03 GMT", 3), ("invalid", 2),
+])
+def test_custom_sequence_fields_and_provider_retry_after_are_honored(monkeypatch, retry_after, delay):
+    calls, sleeps = [], []
+    monkeypatch.setattr("dufmech.example_candidates.time.time", lambda: 0)
+
+    def handler(request):
+        calls.append(request)
+        if len(calls) == 1:
+            return httpx.Response(429, headers={"retry-after": retry_after})
+        return httpx.Response(200, json={"results": []},
+                              headers={"x-uniprot-release": "2026_03", "x-total-results": "0"})
+
+    client = UniProtExampleClient(fields="accession,sequence", sleep=sleeps.append,
+                                  transport=httpx.MockTransport(handler))
+    run = client.collect({"PF00001": []})
+    assert run.families_queried == 1
+    assert sleeps == [delay]
+    assert len(calls) == 2
+    assert client.settings["fields"] == "accession,sequence"
+    assert all(request.url.params["fields"] == "accession,sequence" for request in calls)
+
+
 def test_select_target_families_reasons() -> None:
     targets = select_target_families(CROSS_ROWS, renamed_traitmech_families=["PF14337", "PF00001"])
     assert targets == {

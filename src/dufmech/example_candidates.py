@@ -10,6 +10,7 @@ import time
 from collections.abc import Callable, Iterable, Mapping, Sequence
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Any
 
@@ -17,7 +18,7 @@ import httpx
 
 UNIPROTKB_SEARCH_URL = "https://rest.uniprot.org/uniprotkb/search"
 CANDIDATE_FIELDS = "accession,reviewed,annotation_score,protein_name,organism_name,organism_id,length"
-# Highest UniProt annotation score first; reviewed entries usually score highest.
+# Annotation richness ranks first; this is not a reviewed-only or functional filter.
 # Accession breaks ties so the selection is reproducible within one UniProt release.
 CANDIDATE_SORT = "annotation_score desc,accession asc"
 CANDIDATE_QUERY = "xref:pfam-{pfam_id}"
@@ -164,6 +165,7 @@ class UniProtExampleClient:
         retries: int = 4,
         backoff: float = 2.0,
         sleep: Callable[[float], None] = time.sleep,
+        fields: str = CANDIDATE_FIELDS,
     ) -> None:
         if not 1 <= per_family <= 25:
             raise ValueError("per_family must be between 1 and 25")
@@ -173,6 +175,7 @@ class UniProtExampleClient:
         self.retries = retries
         self.backoff = backoff
         self.sleep = sleep
+        self.fields = fields
 
     @property
     def settings(self) -> dict[str, Any]:
@@ -180,7 +183,7 @@ class UniProtExampleClient:
 
         return {
             "query": CANDIDATE_QUERY,
-            "fields": CANDIDATE_FIELDS,
+            "fields": self.fields,
             "sort": CANDIDATE_SORT,
             "per_family": self.per_family,
         }
@@ -272,7 +275,7 @@ class UniProtExampleClient:
     def _get(self, client: httpx.Client, pfam_id: str) -> tuple[Mapping[str, Any], httpx.Headers]:
         params = {
             "query": CANDIDATE_QUERY.format(pfam_id=pfam_id),
-            "fields": CANDIDATE_FIELDS,
+            "fields": self.fields,
             "sort": CANDIDATE_SORT,
             "size": str(self.per_family),
             "format": "json",
@@ -281,7 +284,16 @@ class UniProtExampleClient:
             try:
                 response = client.get(UNIPROTKB_SEARCH_URL, params=params)
                 if response.status_code in {429, 500, 502, 503, 504} and attempt < self.retries:
-                    self.sleep(self.backoff * 2**attempt)
+                    delay = self.backoff * 2**attempt
+                    retry_after = response.headers.get("retry-after", "")
+                    if retry_after.isdigit():
+                        delay = max(delay, int(retry_after))
+                    elif retry_after:
+                        try:
+                            delay = max(delay, parsedate_to_datetime(retry_after).timestamp() - time.time())
+                        except (ValueError, TypeError, OverflowError):
+                            pass
+                    self.sleep(delay)
                     continue
                 response.raise_for_status()
                 payload = response.json()

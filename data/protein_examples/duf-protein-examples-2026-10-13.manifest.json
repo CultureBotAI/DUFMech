@@ -1,0 +1,170 @@
+{
+  "files": {
+    "json": {
+      "bytes": 34892735,
+      "path": "duf-protein-examples-2026-10-13.json",
+      "sha256": "086fb9846de52d0d83d7efa5373883ebcc033425df93deb9f9c1ef7d9e841ea8"
+    },
+    "queries.jsonl": {
+      "bytes": 19735393,
+      "path": "duf-protein-examples-2026-10-13.queries.jsonl",
+      "sha256": "29c55ae4774f9780ca50babae02100493f829c74be915ffd456d434323446e31"
+    },
+    "tsv": {
+      "bytes": 422226,
+      "path": "duf-protein-examples-2026-10-13.tsv",
+      "sha256": "cf4ddd81c83233c2f29dff1f2bedb9dc5504ebb757daca4f1deb5aa433c7d1bd"
+    }
+  },
+  "rows": {
+    "by_status": {
+      "HAS_SEQUENCE_EXAMPLE": 3106,
+      "NO_SIBLING_CANDIDATE": 5190
+    },
+    "examples": 9378,
+    "proteins": 8947,
+    "total": 8296
+  },
+  "schema": {
+    "tsv_fieldnames": [
+      "pfam_id",
+      "short_name",
+      "status",
+      "candidate_count",
+      "example_count",
+      "accessions",
+      "unresolved_accessions"
+    ]
+  },
+  "snapshot": {
+    "date": "2026-10-13",
+    "generated_at": "2026-10-13T00:47:41.727270+00:00",
+    "id": "duf-protein-examples-2026-10-13",
+    "input_snapshot_ids": {
+      "worklist": "interpro-pfam-duf-2026-10-10"
+    }
+  },
+  "source": {
+    "acquisition_finished_at": "2026-10-13T00:46:57.923511+00:00",
+    "acquisition_started_at": "2026-10-13T00:25:33.612774+00:00",
+    "checkpoint_sha256": "29c55ae4774f9780ca50babae02100493f829c74be915ffd456d434323446e31",
+    "cross_mech_sha256": "ff9ea3afb8fc6977a84f3e11aba487d622bd537390e6bd1ef8f12ce885b5b474",
+    "cross_mech_snapshot": "cross-mech-duf-examples-2026-10-12",
+    "license": "CC-BY-4.0 (UniProt sequences and metadata)",
+    "license_url": "https://rest.uniprot.org/help/license",
+    "limitations": [
+      "Family membership is not experimental functional evidence.",
+      "No domain coordinates are inferred from whole-protein sequences.",
+      "No sibling candidate does not mean UniProt has no family members.",
+      "Inactive, merged and isoform accessions are not silently substituted.",
+      "Coverage is limited to the named source repositories and pinned commits."
+    ],
+    "mechs": {
+      "AntibioticMech": {
+        "commit": "18165f54cc13f9321330e34bdab71fd5bc03b05b",
+        "data_dir": "data/antibiotics",
+        "records_scanned": 2939,
+        "repository": "https://github.com/CultureBotAI/AntibioticMech",
+        "rows_before_uniprot": 0
+      },
+      "CellStructureMech": {
+        "commit": "937ba6254eb987adcbd92e82b21b2ce8651dc5e3",
+        "data_dir": "data/structures",
+        "records_scanned": 909,
+        "repository": "https://github.com/CultureBotAI/CellStructureMech",
+        "rows_before_uniprot": 11
+      },
+      "CommunityMech": {
+        "commit": "88050e999dd5699d08456f7f6495505618d6ead6",
+        "data_dir": "kb/communities",
+        "records_scanned": 458,
+        "repository": "https://github.com/CultureBotAI/CommunityMech",
+        "rows_before_uniprot": 0
+      },
+      "CultureMech": {
+        "commit": "9976e05b88c89c6c6b5a4c1fd60ed0d6a86033a6",
+        "data_dir": "data/normalized_yaml",
+        "records_scanned": 15910,
+        "repository": "https://github.com/CultureBotAI/CultureMech",
+        "rows_before_uniprot": 0
+      },
+      "HabitatMech": {
+        "commit": "679a57e04cd2581aec2cfbd1cdc5a78f09ec8a4a",
+        "data_dir": "data/habitats",
+        "records_scanned": 3208,
+        "repository": "https://github.com/CultureBotAI/HabitatMech",
+        "rows_before_uniprot": 0
+      },
+      "MediaIngredientMech": {
+        "commit": "1742bfd450470f5479720ace96ad2851bf4cd9d0",
+        "data_dir": "data/ingredients",
+        "records_scanned": 2953,
+        "repository": "https://github.com/CultureBotAI/MediaIngredientMech",
+        "rows_before_uniprot": 0
+      },
+      "NaturalProductMech": {
+        "commit": "e66f934111777c4ebfe69475d0520c0cfa074785",
+        "data_dir": "data/natural_products",
+        "records_scanned": 3115,
+        "repository": "https://github.com/CultureBotAI/NaturalProductMech",
+        "rows_before_uniprot": 0
+      },
+      "PathwayMech": {
+        "commit": "e1c66917e753105c4bf5b7b026193fcefa2b000f",
+        "data_dir": "data/pathways",
+        "records_scanned": 233,
+        "repository": "https://github.com/CultureBotAI/PathwayMech",
+        "rows_before_uniprot": 0
+      },
+      "ProteinTraitsMech": {
+        "commit": "70edd6f8458845f7d7783ac4f416df519f5e1de6",
+        "data_dir": "data/traits",
+        "records_scanned": 429293,
+        "repository": "https://github.com/CultureBotAI/proteintraitsmech",
+        "rows_before_uniprot": 37567
+      },
+      "TaxonMech": {
+        "commit": "9e35388d8c663fa8b682551efd5c72cc218011bb",
+        "data_dir": "data/taxa",
+        "records_scanned": 625960,
+        "repository": "https://github.com/CultureBotAI/TaxonMech",
+        "rows_before_uniprot": 10
+      },
+      "TraitMech": {
+        "commit": "62f45e1749fa3d3e5ca8b9a3a4ba5bb0361beb8b",
+        "data_dir": "data/traits",
+        "records_scanned": 1107,
+        "repository": "https://github.com/CultureBotAI/TraitMech",
+        "rows_before_uniprot": 33
+      }
+    },
+    "name": "UniProt Consortium; sibling Mech accession references and PTM sequence registry",
+    "ptm_direct_family_examples": {
+      "commit": "70edd6f8458845f7d7783ac4f416df519f5e1de6",
+      "examples": 7393,
+      "qualification_statuses": {
+        "LEGACY_OR_UNSPECIFIED": 7335,
+        "QUALIFIED": 58
+      },
+      "records_inspected": 8296
+    },
+    "ptm_registry_discovery": {
+      "family_protein_pairs": 1495,
+      "mode": "all",
+      "no_exact_current_entry": [],
+      "proteins_checked": 12699,
+      "without_target_family_count": 11283
+    },
+    "registry": {
+      "commit": "70edd6f8458845f7d7783ac4f416df519f5e1de6",
+      "path": "data/grounding/protein_registry.jsonl",
+      "repository": "https://github.com/CultureBotAI/proteintraitsmech",
+      "sha256": "1be0cf02b76b03a8fe9b80bcead9cd4a419157116eb8da038f266bcc33015eb9",
+      "url": "https://github.com/CultureBotAI/proteintraitsmech/blob/70edd6f8458845f7d7783ac4f416df519f5e1de6/data/grounding/protein_registry.jsonl"
+    },
+    "uniprot_releases": [
+      "2026_03"
+    ],
+    "url": "https://rest.uniprot.org/uniprotkb/search"
+  }
+}

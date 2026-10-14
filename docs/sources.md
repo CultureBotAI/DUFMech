@@ -1,12 +1,14 @@
 # Source Catalogue, Queue And Writer Audit
 
-`download.yaml` inventories the 20 implemented source pipelines. It was reviewed
+`download.yaml` inventories 21 implemented source pipelines. The original 20 were reviewed
 against every existing source-freeze module, the source roadmap, the October 1
 pilot reports, and the retained manifests on **2026-10-07**; the InterPro/Pfam and
 cross-Mech entries were updated on **2026-10-08** for the EX_DUF migration.
 Those entries and Pfam previous identifiers were updated on **2026-10-10** for
 the PF18141 re-freeze and migration. The derived score
-writer is covered by the writer audit; it is not a twenty-first upstream source.
+writer is covered by the writer audit and is not an upstream source. The sequence
+example pipeline was added on **2026-10-12**, with full-worklist gap accounting
+and exact-accession sequence checks against pinned sibling references.
 No provider data is fetched by the governance checker.
 
 ## Status And Provenance
@@ -69,8 +71,10 @@ It does not remove, relicense, redownload, or redate historical data.
 | Pfam previous identifiers | Pinned Pfam 38.2 `Pfam-A.seed.gz` headers | October 7 and 10 freezes: 1,834 families; October 10 corrects only PF18141's current-name flag; ADOPTED as reference |
 | UniProtKB example candidates | Per-family UniProtKB search by Pfam cross-reference | October 7 freeze for TraitMech and ProteinTraitsMech DUF gaps; ADOPTED as reference candidates |
 | Cross-Mech | Pinned sibling git records and UniProt cache | October 5 scan with October 6, 8 and 10 offline derivations; October 10 adds PF18141 to unscanned coverage; combined terms unverified |
+| UniProtKB sequence examples | Exact-primary UniProt sequences and pinned PTM registry | October 12 initial freeze and October 13 UTC full-registry follow-up: 8,947 proteins, 3,106 covered families, 5,190 explicit gaps; ADOPTED as reference examples, not functional claims |
+| Direct UniProtKB sequence discovery | Ranked Pfam searches for all 5,190 remaining sibling-scan gaps | [October 13 UTC successor](provenance/protein-examples-direct-2026-10-13.md): 5,184 newly covered families, six zero-result searches; combined 8,290 covered families and 23,836 distinct proteins; ADOPTED as reference, NOT_SCORED |
 
-Pilot counts above come from
+The original external pilot counts above come from
 [the expanded freeze report](provenance/expanded-first-pass-freeze-2026-10-01.md),
 not a new run. Searches included ignored and hidden files under `data/` and
 `docs/` and the two external pilot directories named in the reports. Both

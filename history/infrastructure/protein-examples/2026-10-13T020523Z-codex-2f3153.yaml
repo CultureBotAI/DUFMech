@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: infrastructure
+  slug: protein-examples
+  path: src/dufmech/protein_examples.py
+session:
+  id: 2026-10-13T020523Z-codex-2f3153
+  timestamp: '2026-10-13T02:05:23Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add verified DUF protein examples and address PR 192 adversarial findings
+  details: 'Retain two immutable sequence freezes with 8,947 proteins across 3,106
+    of 8,296 families in the successor. Add pinned sibling provenance, explicit gaps,
+    site JSON/FASTA, and the reusable protein-example skill. Reproduced and fixed
+    issues 193 and 194: frozen checkpoint resume mutation and insufficient origin/registry
+    validation. Focused suite: 128 passed; all 14 manifests and Ruff passed. Scientific
+    family assertions, overlays, sibling repositories and separate causal-graph work
+    remain unchanged. Full publication QC and Pages regeneration are still pending.'
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/193
+  - https://github.com/CultureBotAI/DUFMech/issues/194
+  prs:
+  - https://github.com/CultureBotAI/DUFMech/pull/192

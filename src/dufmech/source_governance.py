@@ -189,7 +189,7 @@ def check_sources(root: Path) -> list[Finding]:
         expected_adapters.add("src/dufmech/snapshot.py")
     for adapter in sorted(expected_adapters - adapters):
         error("UNCATALOGUED_ADAPTER", adapter, "freeze adapter is absent from download.yaml")
-    for directory in ("data/worklists", "data/cross_mech"):
+    for directory in ("data/worklists", "data/cross_mech", "data/protein_examples"):
         for path in sorted((root / directory).rglob("*.manifest.json")):
             relative = str(path.relative_to(root))
             if relative not in manifests and not path.name.startswith("duf-characterization-scores-"):
