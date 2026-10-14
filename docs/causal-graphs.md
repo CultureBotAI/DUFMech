@@ -76,7 +76,8 @@ Initial inventory and implementation began at 2026-10-11T04:00:01Z.
 The initial batch was merged in PR #199. Continuation begins from
 `2da6c366b06615fbb6c34379318771fe09f4cfda`. PF01972 was published through merged
 [PR #200](https://github.com/CultureBotAI/DUFMech/pull/200); the current PF01973
-continuation starts from `c6a4d055de0a9ef0edc74f5c61cbbacfd8822904`.
+continuation starts from `c6a4d055de0a9ef0edc74f5c61cbbacfd8822904` and its
+publication is tracked in [PR #202](https://github.com/CultureBotAI/DUFMech/pull/202).
 Earlier local-only checkpoints below describe their state at the time, not the
 current release status.
 
@@ -5768,3 +5769,35 @@ PF01973 continuation checkpoint (2026-10-14):
   Methods inspection also distinguishes three biological preparations for intact
   mass analysis from one for tandem MS. Neither these preliminary checks nor
   successful retrieval close the saved coverage finding or add causal edges.
+
+PF01973 publication review (PR #202, 2026-10-14):
+
+- The initial source-pin rejection was reproduced locally and in CI run
+  `38650949208`, tracked as [issue #203](https://github.com/CultureBotAI/DUFMech/issues/203).
+  The initial local QC attempt was interrupted after that reproduced failure:
+  288 tests passed and one failed before interruption; this is not a full-suite pass.
+- Candidate checkpoint `bf3279f826a5fbb982f962dba292a3f033f1a288` is retained by
+  annotated tag `source/dufmech-pr-202-candidate`. Native capture and online
+  retention verification cover all 9,106 candidate source files. Canonical Pages
+  were regenerated; no generated file or source ledger was hand-edited.
+- The adversarial self-review checked all fifteen initial change paths and the
+  candidate ledger/family page. Original MptE Figure 4 and Maf Results/Figure 5
+  spot checks support the existing bounded interpretations. All 8,296 manifest
+  hashes, unchanged other 8,295 projections, evidence quotes/hashes, review and
+  inventory digests, and status-only export changes passed the integrity audit.
+  The focused graph/QC regression suite passed 52 tests in 21.98 seconds.
+- Canonical PF01973 browser checks passed at 1440px and 390px: eight graphs,
+  sixteen edges, explicit observed/hypothetical support labels, evidence
+  disclosures, no document overflow and no JavaScript errors. Six screenshots
+  were inspected; the temporary server was closed.
+- Save the publication review as an immutable structured bundle, retain its
+  source-bearing checkpoint and recapture/regenerate before final full QC,
+  exact-head CI and merge. These candidate checks do not claim those later
+  release gates have already passed. Preserve annotated source tags after
+  deleting the feature branch.
+- Scientific findings remain open as
+  [issue #204](https://github.com/CultureBotAI/DUFMech/issues/204) for archaeal
+  constructs/native biochemical scope and
+  [issue #205](https://github.com/CultureBotAI/DUFMech/issues/205) for later
+  Maf/GlfM systems and discriminating residue mechanisms. Publication does not
+  close these findings, promote IN_PROGRESS, or complete the corpus-wide goal.
