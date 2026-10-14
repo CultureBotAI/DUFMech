@@ -1,0 +1,20 @@
+Sources: UniProtKB and InterPro/Pfam public APIs, accessed 2026-10-14.
+URLs:
+https://rest.uniprot.org/uniprotkb/search?query=gene%3AMM_2878&format=json
+https://rest.uniprot.org/uniprotkb/Q8PT40.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01972/protein/uniprot/Q8PT40/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01972/
+
+Factual mapping extracted from structured responses:
+MM_2878 -> Q8PT40, sequence version 1, entry version 106, 243 residues.
+Source organism: Methanosarcina mazei Goe1 (strain synonyms in UniProt);
+NCBITaxon:192952. Genomic accession AE008384, protein AAM32574.1.
+InterPro PF01972 match: residues 2-241 inclusive, continuous, score 1.4e-71.
+Integrated family IPR002825; historical alias DUF114.
+UniProt sequence MD5: 4B84FE1A1D7C647359CD4BAA3AC8BB9E.
+The thesis identifies species and locus, not a deposited experimental clone.
+The modern reference mapping does not verify tags, mutations or preparation
+purity in that historical assay. A profile interval is not a tested truncation.
+UniProt search response SHA-256: 5b01c436dc2bb0b8b32839a6769b3e32f18fa90279d2f5c052c53e80b9a7d2ac
+InterPro member response SHA-256: e0503741d97d30a7aab0949b9fa92605a6c27cfd4fcba7d83b1caeaf9f015367
+Attribution: UniProt Consortium (CC BY 4.0 database content) and EMBL-EBI InterPro/Pfam (CC0), as documented in docs/sources.md. No new source adoption is claimed.

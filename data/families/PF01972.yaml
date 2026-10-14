@@ -4,7 +4,7 @@ name: ClpP-like SDH-type serine proteinase
 short_name: SDH_protease
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01972
 counters:
   proteins: 1120
@@ -26,3 +26,170 @@ description: This family of archaebacterial proteins, formerly known as DUF114, 
   The family has a catalytic triad of Ser, Asp, His residues in a linear sequential arrangement (SDH),
   which shows an altered residue ordering compared with the classical ClpP proteinases (SHD) but similar
   to that of the carboxypeptidase clan [[cite:PUB00053691]].
+curation_history: history/records/PF01972
+discussions:
+- discussion_id: mm2878-assay-attribution
+  prompt: Verify the historical Mm2878 preparation and distinguish reporter response from direct enzyme
+    chemistry.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The thesis comparator is relevant to PF01972, but the displayed assay does not isolate catalytic
+    attribution or identify cleavage products.
+  evidence:
+  - reference: https://publikationen.uni-tuebingen.de/xmlui/handle/10900/49675
+    supports: PARTIAL
+    evidence_source: primary_doctoral_thesis
+    explanation: Pages 90-91 and original Figure24 on page94 were inspected. MjMPM purification must not
+      be relabeled as Mm2878 purification; blank, inactive-enzyme and replication information are unresolved.
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01972/protein/uniprot/Q8PT40/
+    supports: SUPPORT
+    evidence_source: database
+    explanation: Current Q8PT40/MM_2878 maps PF01972 at2-241 in a243-residue reference. The historical
+      clone is not sequence-verified.
+  posed_by: Codex
+  posed_date: '2026-10-14'
+  notes: Seek preparation/construct records, matched controls, products and independent replication. Do
+    not transfer MjMPM/DUF2121 properties or interpret comparator bar heights as kinetic superiority.
+- discussion_id: sdh-triad-and-family-transfer
+  prompt: Test the predicted catalytic arrangement and investigate additional mapped PF01972 members.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: A Pfam rename and remote ClpP similarity are not demonstrations of the Ser-Asp-His mechanism
+    or a universal physiological substrate.
+  evidence:
+  - reference: PMID:15752073
+    supports: PARTIAL
+    evidence_source: primary_computational_publication
+    explanation: The2004 Methods and Conclusions describe sequence/fold-based prediction. No residue-mutagenesis
+      or proteolysis experiment is reported there.
+  - reference: https://rest.uniprot.org/uniprotkb/O59179.json
+    supports: SUPPORT
+    evidence_source: database
+    explanation: PH1510's current Pfam list contains PF25145/PF24961/PF01957, not PF01972. Its S49 naming
+      does not authorize cross-family chemistry transfer.
+  posed_by: Codex
+  posed_date: '2026-10-14'
+  notes: Original2004 alignment-image verification, historical residue mapping, localization, natural
+    substrates and other member assays remain open. The imported description stays immutable; the hypothesis
+    graph does not endorse its experimental wording.
+- discussion_id: klebsiella-2026-structural-leads
+  prompt: Resolve the44FH/44FI construct mapping and primary experiments before adding defense or proteolysis
+    edges.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: An SDH-labeled structure and unpublished citation title do not establish a directed phage-defense
+    mechanism.
+  evidence:
+  - reference: doi:10.2210/pdb44FH/pdb
+    supports: PARTIAL
+    evidence_source: primary_structural_deposition
+    explanation: RCSB entry and entity1 metadata inspected;304-residue Klebsiella protein,2.86-A EM structure.
+      The entity response lacks a reference-sequence/Pfam annotation.
+  - reference: doi:10.2210/pdb44FI/pdb
+    supports: PARTIAL
+    evidence_source: primary_structural_deposition
+    explanation: Entry metadata describe a3.51-A complex with short hypothetical-protein chains and an
+      unpublished citation. Neither binding nor the title demonstrates cleavage or infection effects.
+  posed_by: Codex
+  posed_date: '2026-10-14'
+  notes: These are research leads, not confirmed PF01972 experimental mechanisms. evidence/PF01972 coverage
+    notes retain search/access limits. Frozen structures=0 is not overwritten.
+causal_graphs:
+- graph_id: mm2878-casein-reporter-2011
+  title: Mm2878 preparation produces a casein-reporter response
+  scope: Methanosarcina mazei Mm2878 comparator in Ammelburg2011 Figure24; preparation-level assay, not
+    isolated-domain chemistry.
+  context: 25nM preparation,200nM TR-X BODIPY-casein,20mM HEPES pH7.5,150mM NaCl,0.5mM TCEP;37C for2h;580/620nm
+    excitation/emission.
+  family_mapping: UniProt Q8PT40 sequence1/entry106 identifies MM_2878 in M. mazei Goe1,243aa; current
+    InterPro maps PF01972 at2-241 inclusive. Species/locus correspondence does not verify the thesis clone
+    or tags. See evidence/PF01972/member-mapping.txt.
+  taxon: NCBITaxon:192952
+  scope_status: PHENOTYPIC
+  limitations: No blank, inactive-Mm2878 control, replication or error bars are shown in Figure24. The
+    adjacent purification protocol concerns MjMPM. Reporter dequenching does not resolve Mm2878-specific
+    catalysis, contamination, cleavage sites, SDH residues or physiological function.
+  nodes:
+  - node_id: preparation
+    label: Mm2878 preparation incubated with quenched casein reporter
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q8PT40
+  - node_id: fluorescence
+    label: BODIPY-casein fluorescence readout
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: preparation-reporter-response
+    subject: preparation
+    predicate: increases
+    object: fluorescence
+    mechanism: The thesis reports fluorescence increase during this preparation-level assay. The edge
+      records that response, not a demonstrated purified-enzyme bond-cleavage mechanism.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: https://publikationen.uni-tuebingen.de/xmlui/handle/10900/49675
+      source_url: https://publikationen.uni-tuebingen.de/xmlui/bitstream/handle/10900/49675/pdf/Dissertation_Ammelburg.pdf
+      snippet: Increase of BODIPY fluorescence reflecting Casein cleavage
+      explanation: Assay Methods p.91 and original Figure24/caption p.94 identify Mm2878 as the arcClpP
+        comparator; retain direction only, without inventing a matched blank or product assay.
+      cache_path: evidence/PF01972/ammelburg-2011-casein.txt
+      cache_sha256: 37e12d65ba5695e667e9c08bbb231cf2de389925112f2f95f5b1e031b510d856
+- graph_id: duf114-predicted-sdh-catalysis-2004
+  title: Predicted SDH catalytic arrangement may enable proteolysis
+  scope: DUF114 homologs analyzed by Pandit and Srinivasan2004; proposed family mechanism, not experimental
+    transfer to every PF01972 member.
+  context: Sequence/profile comparisons and fold recognition against known ClpP-related structures; no
+    tested residue perturbation or biological compartment established.
+  family_mapping: The paper's DUF114 family is the current PF01972/IPR002825 identity. Related ClpP and
+    proteaseIV sequences are comparison families. Exact historical alignment-to-current residue numbering
+    is not asserted.
+  scope_status: HYPOTHETICAL
+  limitations: Conserved residues and predicted fold geometry do not prove catalytic necessity or sufficiency.
+    No residue numbers, substrate specificity, secretion requirement or measured catalytic intermediate
+    is assigned. The Mm2878 reporter assay does not validate this atomic mechanism.
+  nodes:
+  - node_id: proposed_arrangement
+    label: Proposed joint Ser-Asp-His active-site geometry
+    node_type: STATE
+    grounding:
+    - Pfam:PF01972
+  - node_id: proposed_hydrolysis
+    label: Proposed peptide-bond hydrolysis activity
+    node_type: ACTIVITY
+  edges:
+  - edge_id: predicted-triad-proteolysis
+    subject: proposed_arrangement
+    predicate: enables
+    object: proposed_hydrolysis
+    mechanism: The authors propose that a compatible geometry despite altered His/Asp sequence order could
+      support serine-proteinase activity. This is a computationally motivated causal hypothesis.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: COMPUTATIONAL
+    evidence:
+    - reference: PMID:15752073
+      source_url: https://journals.sagepub.com/doi/pdf/10.3233/ISB-00157
+      snippet: probable serine proteinase
+      explanation: Catalytic-geometry discussion pp.568-570 and Conclusions p.570; not an experimentally
+        determined active site or residue-mutant assay.
+      cache_path: evidence/PF01972/pandit-2004-prediction.txt
+      cache_sha256: 9a52c87650b016af7f97fd3ffc98ea0874c394470cfd0785da3fc38e50413c49
+curation_events:
+- timestamp: '2026-10-14T20:42:47Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate scoped Mm2878 reporter observation and separate DUF114 catalytic hypothesis.
+  history_record: history/records/PF01972/2026-10-14T204247Z-codex-3b40ac.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-14T20:49:46Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of Mm2878 assay and SDH hypothesis.
+  history_record: history/records/PF01972/2026-10-14T204946Z-codex-4713e3.yaml
+  event_index: 0
+  llm_assisted: true
