@@ -1447,14 +1447,18 @@
       ]
     },
     {
-      "curation_status": "SEEDED",
-      "edge_count": 0,
-      "graph_count": 0,
-      "graph_state": "ABSENT",
+      "curation_status": "IN_PROGRESS",
+      "edge_count": 16,
+      "graph_count": 8,
+      "graph_state": "PRESENT",
       "name": "MptE-like",
       "pfam_id": "PF01973",
-      "record_digest": "5c9582508d4ba693d27b5aa05e211dd20b5cbec8bd3e8aa0bda546044caddc1f",
-      "scope_statuses": []
+      "record_digest": "89129c238d759cb285e3ced3ca846405d18880302487db6e310c423ad29421bc",
+      "scope_statuses": [
+        "HYPOTHETICAL",
+        "MECHANISTIC",
+        "PHENOTYPIC"
+      ]
     },
     {
       "curation_status": "SEEDED",
@@ -83276,8 +83280,8 @@
     }
   ],
   "graph_states": {
-    "ABSENT": 8171,
-    "PRESENT": 125
+    "ABSENT": 8170,
+    "PRESENT": 126
   },
   "kind": "structural_inventory_not_scientific_review",
   "records": 8296

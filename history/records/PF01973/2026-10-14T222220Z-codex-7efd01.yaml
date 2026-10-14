@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01973
+  path: curation/families/PF01973.yaml
+session:
+  id: 2026-10-14T222220Z-codex-7efd01
+  timestamp: '2026-10-14T22:22:20Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped archaeal MptE and AMB-1 Maf causal graphs
+  details: Inspected primary 2012 MptE Methods, original Figure 4 and supplemental
+    purity gel; inspected 2018 Maf author manuscript, original perturbation/docking
+    figures and primers. Mapped Q59028, Q8U2A9 and Q2W9I6 individually. Added eight
+    graphs with fourteen experimentally observed biochemical or cellular effects and
+    two separate computational hypotheses; preserved exact domain-boundary distinctions,
+    mutation-caption discrepancy, assay limits and later-member follow-ups in four
+    minimal evidence ledgers. Baseline records-check validated 8296 records with zero
+    drift. Native regeneration and scientific review follow; IN_PROGRESS remains and
+    no publication or family-wide completion is claimed.
