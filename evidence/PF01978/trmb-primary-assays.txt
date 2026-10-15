@@ -1,0 +1,213 @@
+PF01978 TrmB: scoped primary-assay and reference ledger
+Research: 2026-10-15; curator: Codex, AI-assisted.
+This is a factual curation ledger with minimal quotations, not redistributed full
+articles, an independent replication, or a complete family review.
+
+IDENTITY AND SOURCE BOUNDARIES
+Frozen worklist: interpro-pfam-duf-2026-10-10, SHA-256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+PF01978 / InterPro:IPR002831 is the sugar-specific transcriptional-regulator
+domain. Lee2003 calls it DUF118. It is not the unrelated tRNA methyltransferase
+that also has the gene name trmB. No seed name, counter or classification changed.
+
+Retrieved UniProt and InterPro references (2026-10-15):
+https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AtrmB%20AND%20organism_name%3A%22Thermococcus%20litoralis%22&format=json&size=10
+SHA-256 329102f99fb60ae35da6bc49dae0b4d6db45e93f9af0092d797409247c11468f
+https://rest.uniprot.org/uniprotkb/Q9HGZ9.json
+SHA-256 d26c934d82ff6012180d0ae7ab6dab58fd66fc37682a653551939b4343fb03b8
+Q7LYW4: entry 91 / sequence 1, OCC_03542, Thermococcus litoralis reference
+ATCC 51850 / DSM 5473 / JCM 8560 / NS-C, NCBITaxon:523849.
+Q9HGZ9: entry 109 / sequence 1, PF1743, Pyrococcus furiosus reference
+ATCC 43587 / DSM 3638 / JCM 8422 / Vc1, NCBITaxon:186497.
+Both are 338 aa and their complete reference bodies compare identically;
+sequence MD5 2AE189D4C0313025F0AB309F8CDD3DF1. Reference identity does not
+establish a study's strain, tag sequence, complete insert or plasmid provenance.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q7LYW4/
+SHA-256 dd026e29bac1dc5782d8ff4fa6c66dc11bce61be6a71db05b9343167e132cf35
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q9HGZ9/
+SHA-256 a2ac86eec991fec5cf50c8823e56e12c80e4033a98c18f6c545f266d7dd72807
+Both complete responses have count 3, next null. In each reference:
+PF01978 11-77; PF11495 110-234; PF31112 249-335 (inclusive).
+Y50 lies in PF01978. E87 is outside that match; V161 and S229 are in PF11495;
+N305/G320/M321/V324/I325/E326 are in PF31112. The entire N-terminal structural
+region, coiled coil and sugar-binding domains must not be renamed PF01978.
+
+S1: LEE2003, PMID:12426307, doi:10.1074/jbc.M210236200
+Primary JBC article, 278:983-990. Accessible primary text and figure captions:
+https://www.researchgate.net/publication/11041114_TrmB_a_Sugar-specific_Transcriptional_Regulator_of_the_TrehaloseMaltose_ABC_Transporter_from_the_Hyperthermophilic_Archaeon_Thermococcus_litoralis
+The publisher/ResearchGate PDF and original figure images were not available
+through the attempted routes; no image inspection or local full-text hash is
+claimed. Statements below use the primary article's readable methods, results
+and captions, not the later citing-paper excerpts on the same web page.
+Minimal quotations: "the transcript of malE"; "TrmB-mediated EMSA";
+"complex was clearly increased"; "TrmB no longer protected";
+"prevention of TBP binding". These total 19 words.
+
+S1 construct: pSL152, T. litoralis chromosomal template, C-terminal His6,
+E. coli SF120 expression, 80 C/10 min heat treatment and Ni-NTA purification.
+The exact full insert/tag and study strain were not independently established.
+S1a, Figure 8 and transcription methods: 300 ng linearized pMLP with the
+T. litoralis malE promoter, P. furiosus TBP (200 ng), TFB (25 ng) and RNAP
+(110 ng), at 80 C. Buffer: 40 mM HEPES pH 7.3, 250 mM KCl, 2.5 mM MgCl2,
+0.1 mM EDTA, 1 mM DTT; ATP/GTP/CTP 0.44 mM each, UTP 0.002 mM plus label.
+Duration and total reaction volume were not established from the inspected
+text. TrmB 0.8-3.2 ug lowers the 110-nt transcript. The 89-nt gdh transcript
+is a transcription-system control, not a full gdh-plus-TrmB specificity series.
+With 3.2 ug TrmB, maltose at 100 uM (A8) or trehalose at 2.5 mM (B11)
+relieves repression. Prose also says above 2.5 mM for trehalose; retain the
+caption's lane condition without claiming a precise universal threshold.
+Sugar-only controls at 5 mM and no-regulator controls are reported. No native
+transporter flux, binding microstep or isolated-domain activity follows.
+
+S1b, Figure 6 and EMSA methods: 1.25 uM TrmB, labeled intergenic region 1,
+25 mM HEPES pH 7.5, 150 mM potassium glutamate, 10% glycerol, 1 mM DTT,
+poly(dI-dC) competitor, 70 C/10 min then 8% native PAGE at room temperature.
+Maltose 5/10/20/50 uM reduces retardation (reported half-effect 20-50 uM).
+Trehalose 1/2.5/5/10 mM does not reproduce maltose's loss of shift; 5-10 mM
+increases the shifted/stabilized complex. This is not a measured off-rate or
+proof of oligomer stoichiometry. Trehalose cannot be assigned a universal
+DNA-dissociation edge from its transcription effect.
+
+S1c, Figure 4 and footprint methods: TrmB 0/1.25/2.5/5 uM, 70 C/10 min
+binding, 0.005 U DNaseI at 37 C/5 min. Coding/noncoding strands protect the
+BRE/TATA region and part of an inverted repeat; 100 uM maltose with 5 uM
+TrmB removes protection. Reported trehalose footprint loss at 2.5 mM is
+data-not-shown and is not encoded as a separately inspected figure result.
+Protection overlapping BRE/TATA motivates TBP occlusion; it does not measure
+competitive TBP displacement. The proposed occlusion edge is HYPOTHESIZED.
+Native malE RNA induction with maltose lacks an isolated TrmB perturbation and
+is not adopted as a TrmB-specific causal effect. Sugar binding and reported
+fluorescence changes are background, not proof of an atomic allosteric path.
+
+S2: SURMA THESIS, doi:10.5283/epub.14529
+Melanie Surma, University of Regensburg, repository publication 2011-01-18;
+dissertation prepared January 2010, examination March 2010. This is a public
+doctoral thesis, not the peer-reviewed Lee2007 differential-signals paper.
+https://epub.uni-regensburg.de/14529/
+https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+PDF SHA-256 8b1fe2bb52f124a6bc07c6d34c4a069cf9a4f92c2202dccd947e17d055e0af0f
+174 PDF pages; printed page N is PDF N+6 for the inspected body. Institutional
+publishing license is not blanket CC-BY. Only facts and these minimal quotes
+are retained: "Transkriptionspuffer III."; "TrmB Y50N"; "TrmB E87A";
+"DNaseI"; "EMSA"; "Auf eine Dialyse" (11 words total).
+Original Figures 45, 46, 47, 48 and 51 visually inspected; the remaining
+promoter-engineering/anti-induction and TrmBL1 figures are not certified here.
+
+S2 provenance/conditions: methods printed pp. 38-42, 51-53. Thesis calls pSL152
+PF1743 with a C-terminal His6 tag, whereas Lee2003 describes its T. litoralis
+chromosomal origin. Identical reference bodies do not resolve this discrepancy.
+Expression host is printed C43/DE2 Walker; do not silently correct it to DE3.
+LB/ampicillin, 1 mM IPTG, 4 h at 37 C; heat treatment 80 C/10 min, Ni-NTA.
+Protein wash/elution includes 15% glycerol and 5 mM glucose. Page 41 explicitly
+says storage in elution buffer at -20 C without dialysis because of instability.
+Thus assays with no ADDED sugar are not established sugar-free. Buffer
+compensation is reported for equal salt; exact final glucose/imidazole,
+protein-stock concentrations and active fractions are not established here.
+General site-directed-mutagenesis methods report sequence verification, but
+Chapter 7 says TrmB mutant plasmids came from S.-J. Lee. No complete mutant
+insert or trace was independently inspected. Folding/oligomer controls are
+not established for these specific preparations. Retained activity on the
+other promoter argues against total inactivity, not against all conformational
+or abundance effects. Occasional Y50D prose conflicts with repeated Y50N
+figures/methods; use the explicitly labeled Y50N experiments and flag the typo.
+
+S2 transcription protocol: 25 uL, 150 fmol PCR template, 167 nM TBP, 118 nM TFB,
+32 nM endogenous P. furiosus RNAP, 1 uL NTP stock (ATP/CTP/GTP 11 mM each,
+UTP 0.67 mM) plus 2 uCi labeled UTP, 80 C/30 min. Figures 45/46/51 use buffer
+III: 40 mM NaHEPES pH 7.3, 600 mM potassium glutamate, 0.1 mM EDTA,
+2.5 mM MgCl2, 0.1 mg/mL BSA. Transcript PAGE is at room temperature.
+TM pMLP-derived PCR template 484 bp yields 156 nt; MD pSL195-derived template
+348 bp yields 168 nt. Template origin is described as PF1739/PF1938; the
+pMLP lineage shares the cross-paper provenance ambiguity. No native-cell
+transcription, transport phenotype or two independent species replications
+are inferred from these purified reconstituted assays.
+
+S2a, Figure 46A, printed p.108: 0.5 uM WT or E87A lowers TM transcript;
+1 mM added maltose restores output for each. Y50N at 0.5 uM has little
+repression compared with WT, with or without added maltose. Figure 45A/C
+(pp.105-107) shows residual TM repression at higher Y50N concentrations;
+do not say Y50N abolishes all repression. Quantified TM percentages relative
+to no regulator for 0/0.5/1/1.5/2/2.5/3 uM:
+Y50N 100/102/103/75/63/23/23; E87A 100/14/8/3/4/2/0.
+These are published gel quantifications, not estimated affinities or replicated
+significance tests; no error bars/sample count established from this figure.
+
+S2b, Figure 46B, printed p.108: 1.5 uM WT or Y50N lowers MD transcript;
+1 mM added maltotriose restores output for each. E87A at 1.5 uM represses
+less than WT; this is not proof of zero activity at every concentration.
+Figure 45B/C MD values at the same concentrations as above:
+Y50N 100/18/12/20/6/10/11; E87A 100/100/89/72/70/50/56.
+The 2.5/3 uM E87A residual repression and nonmonotonic values are preserved.
+The two mutant effects concern different promoters and concentrations; they
+are not a single potency ranking or proof that both residues contact DNA.
+
+S2c, Figure 47, printed p.109: TM coding-strand footprint, 1.5 uM protein,
+100 ng DNA in 25 uL, binding 70 C/15 min; DNaseI 40 C/5 min. Buffer I:
+40 mM NaHEPES pH 7.3, 250 mM NaCl, 0.1 mM EDTA, 5% PEG8000 as reported,
+2 mM CaCl2 and 2.5 mM MgCl2. WT and E87A protect the marked BRE/TATA region;
+adding 1 mM maltose removes each footprint at the SAME 0.02 U DNaseI.
+No-protein and Y50N lanes use 0.01 U, whereas WT/E87A lanes use 0.02 U.
+Y50N's lack of protection is supporting context, not a clean matched-nuclease
+mutant causal edge. The failed MD footprint comparison is explicitly reported.
+
+S2d, Figure 48, printed p.110: 3 uM WT or Y50N gives diffuse retarded MD DNA;
+E87A resembles free-DNA control. Figure caption specifies 25 ng DNA, versus
+generic methods' 30 ng; adopt the figure-specific amount, retain discrepancy.
+25 uL, 70 C/15 min binding, cool to 40 C then 6% native PAGE at room
+temperature. EMSA buffer: 25 mM NaHEPES pH 7.3, 120 mM potassium glutamate,
+0.1 mM EDTA, 2.5 mM MgCl2, 1 mM DTT, 0.1 mg/mL BSA, 5% PEG8000 as reported.
+A clean discrete shift was not obtained. E87A reduces detectable retardation,
+not a quantified Kd, an identified oligomer, or proof of an E87-DNA contact.
+
+S2e, Figures 49/51 and text, printed pp.111-115: artificial 589-bp TMMD PCR
+template joins TM and MD regions through EcoRI, retaining 156/168-nt products.
+Figure 51 is visually inspected; no-regulator activity is independently 100%
+for each promoter, not equal absolute transcript production. At WT TrmB
+1.5/3/4.5 uM, TM values are 10/5/0 and MD 140/88/52. At Y50N 1.5/3/4.5 uM,
+TM is 62/112/102 and MD 48/102/77. At E87A 1.5/3/4.5 uM, TM is 40/26/14
+and MD 158/142/180. Do not flatten these into uniform monotonic repression,
+native activation or exact zero molecular transcription. WT low-dose MD
+increase may reflect competition for shared machinery, but redistribution of
+TBP/TFB/RNAP was not directly measured. The two 4.5-uM mutant comparisons
+are against WT at the SAME dose, not against one another or isolated templates.
+No replicate statistics, quantitative direct occupancy or quaternary structure
+follows from these gel percentages. Composite-promoter EMSA alone cannot prove
+which site is occupied or establish dimer versus monomer stoichiometry.
+
+S3: KRUG2013, PMID:23576322, doi:10.1002/pro.2263
+https://d-nb.info/1093431121/34
+PDF SHA-256 56f31e33daf6138387f9bc778fbab8c9e16885c3129ef18a4b8ccfa648377e83
+Public institutional copy; 9 pages. Results, methods and Figures 1-5 inspected,
+selected original pages visually inspected. New experiment is a 3.0-A sucrose
+complex without DNA. Older regulatory assays and unpublished E87A observations
+are not new experimentally measured steps in this paper. N-terminal wHTH and
+coiled-coil architecture constrains possible mechanisms but does not measure
+an allosteric transition, promoter affinity or direct DNA contacts.
+The maltose comparator lacks residues 2-109: it is not a matched full-length
+ligand comparison. Most sugar contacts lie in other Pfam domains, not PF01978.
+No new structural-motion edge is adopted. Minimal quoted construct tokens:
+"Val161Ala" and "VDLQPSLIS".
+
+https://data.rcsb.org/rest/v1/core/polymer_entity/3QPH/1
+SHA-256 907aba34768a8392be419091423a4793816e3996393ade95347b93d7a3338c09
+https://files.rcsb.org/download/3QPH.cif
+SHA-256 0de4828ce4bd3851105e0fb1a7bcba297ebcb57e927953c39d6ff3be01b8760e
+Paper reports N-terminal MRGSHHHHHHTDP and accidental V161A; Figure 2 labels
+ALA161. Results gives C-tail VDLQPSLIS while Methods gives VDLQPSLV.
+Deposited entity sequence is Q9HGZ9's 338-aa body plus VDLQ, with V161.
+Actual atom_site auth_seq_id 161/auth_comp_id VAL/chain A confirms that even
+the modeled residue is Val, not just a reference-only SEQRES field. No
+correction, construct equivalence, V161A neutrality or full-tag identity is
+asserted. Crystal packing and absent DNA limit a residue-level causal story.
+
+OPEN COVERAGE / EXCLUSIONS
+Lee2005 PMID16135241 and differential-signals Lee2007 PMID17504272 are leads;
+complete methods/figures not independently inspected here. The different 2007
+PF0124/TrmBL1 article is not interchangeable with them. Remaining thesis
+anti-inducer, promoter-engineering and cross-promoter assays; Tgr/TrmBL1/2/4;
+and other taxa remain in scope for future primary-source assessment and mapping.
+Public-source access failures are coverage limits, not negative literature
+findings. No graph implies all 8,669 source-count proteins share these effects.
+No isolated PF01978 fragment, atomic DNA-recognition route, native sugar uptake
+or whole-family function is demonstrated by the adopted assays.

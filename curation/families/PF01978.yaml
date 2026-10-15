@@ -1,0 +1,588 @@
+pfam_id: PF01978
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01978
+discussions:
+  - discussion_id: trmb-construct-and-domain-boundaries
+    prompt: Resolve complete constructs and distinguish PF01978-dependent effects from other-domain and whole-protein effects.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Q7LYW4 and Q9HGZ9 have identical reference bodies and PF01978 at 11-77, but the pSL152 species attribution differs between Lee2003 and the Surma thesis. Y50 is within PF01978; E87 and the sugar-binding domains are not. Reference equivalence cannot establish identical experimental inserts or strains.
+    evidence:
+      - reference: PMID:12426307
+        supports: PARTIAL
+        evidence_source: primary_publication
+        explanation: The original cloning methods identify T. litoralis chromosomal DNA and C-terminal His6 pSL152; full inserted sequence was not independently inspected.
+      - reference: doi:10.5283/epub.14529
+        supports: PARTIAL
+        evidence_source: doctoral_thesis
+        explanation: Methods calls the same plasmid PF1743 and Chapter 7 uses supplied mutant plasmids; complete inserts and mutant-specific folding controls remain unresolved.
+      - reference: PMID:23576322
+        supports: PARTIAL
+        evidence_source: primary_publication_and_deposition
+        explanation: Reported V161A and inconsistent C-terminal tails disagree with the 3QPH sequence and actual Val161 atoms. No silent sequence correction or neutrality assumption is made.
+    posed_by: Codex
+    posed_date: '2026-10-15'
+    notes: See evidence/PF01978/trmb-primary-assays.txt for versioned references, complete Pfam mappings, deposition hashes and construct discrepancies. No isolated PF01978 sufficiency or universal sugar-regulator role is asserted.
+  - discussion_id: trmb-assay-context-and-residual-activity
+    prompt: Resolve preparation carryover and assay-specific outcomes before assigning a single sugar-to-DNA regulatory mechanism.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: Trehalose relieves transcriptional repression but increases region-1 EMSA retardation under different conditions. The thesis stores proteins in glucose-containing buffer without dialysis; no-added-sugar assays are not established sugar-free. Y50N and E87A retain concentration-dependent repression.
+    evidence:
+      - reference: PMID:12426307
+        supports: SUPPORT
+        evidence_source: primary_text_and_captions
+        explanation: Figures 6 and 8 describe different trehalose effects; original figure images were not available through the attempted access routes.
+      - reference: doi:10.5283/epub.14529
+        supports: SUPPORT
+        evidence_source: doctoral_thesis_and_original_figures
+        explanation: Methods pp.39-41, Figures 45-48 and 51 retain glucose carryover, residual/nonmonotonic activity, unequal footprint nuclease amounts and a diffuse MD shift. These prevent exact affinity, stoichiometry and atomic-contact claims.
+    posed_by: Codex
+    posed_date: '2026-10-15'
+    notes: Obtain complete stock compositions, matched nuclease comparisons, replicate/error estimates and direct occupancy/competition measurements. Retain Figure 45 residual repression and Figure 51 low-dose MD enhancement; do not flatten them into uniform inhibition or a native activation claim.
+  - discussion_id: trmb-family-and-promoter-coverage
+    prompt: Extend primary-assay coverage to remaining promoters, anti-inducers, paralogs and taxa with separate reference mapping.
+    kind: CURATION_TODO
+    status: OPEN
+    rationale: These scoped whole-protein experiments do not review all PF01978 proteins or establish a universal DNA-binding, sugar-response or transcriptional mechanism.
+    evidence:
+      - reference: doi:10.5283/epub.14529
+        supports: PARTIAL
+        evidence_source: doctoral_thesis
+        explanation: Remaining promoter-engineering, anti-inducer, cross-promoter and TrmBL1 results need their own methods, figure and identity assessment.
+      - reference: PMID:23576322
+        supports: PARTIAL
+        evidence_source: primary_publication
+        explanation: The sucrose-bound structure lacks DNA, while its maltose comparator lacks residues 2-109. Proposed allosteric motion is not directly observed and older/unpublished assays are not new measurements in this paper.
+    posed_by: Codex
+    posed_date: '2026-10-15'
+    notes: Inspect full Lee2005 and differential-signals Lee2007 sources, distinguish the separate PF0124 paper, and assess Tgr/TrmBL1/2/4 and other taxa without transferring TrmB endpoints by similarity alone. Native physiology and residue-level DNA contacts remain open.
+causal_graphs:
+  - graph_id: tl-trmb-tm-transcription-2003
+    title: TrmB represses reconstituted malE transcription with sugar-specific relief
+    scope: Full-length T. litoralis pSL152 TrmB with a C-terminal His6 tag; whole-protein activity in a heterologous reconstituted transcription system.
+    context: Linearized pMLP malE template, P. furiosus TBP/TFB/RNAP, 80 C; 0.8-3.2 ug TrmB. At 3.2 ug TrmB, added maltose at 100 uM or trehalose at 2.5 mM relieves repression. Buffer and component amounts are retained in ledger S1a; reaction duration and volume remain unresolved.
+    family_mapping: Q7LYW4 sequence 1/entry 91 is the 338-aa T. litoralis reference, with PF01978 11-77, PF11495 110-234 and PF31112 249-335. The exact study strain and full insert were not independently established; this is not isolated PF01978 activity.
+    scope_status: MECHANISTIC
+    limitations: Primary methods, results and Figure 8 caption inspected, not its original image. The gdh lane controls the transcription system, not a full TrmB specificity series. Relief of repression does not establish DNA release or native transporter flux; trehalose prose/caption threshold wording differs.
+    nodes:
+      - {node_id: protein, label: Added full-length TrmB in the reconstituted malE system, node_type: PERTURBATION, grounding: ['UniProtKB:Q7LYW4']}
+      - {node_id: transcript, label: 110-nt malE transcript output, node_type: PROCESS}
+      - {node_id: maltose, label: Added 100 uM maltose with 3.2 ug TrmB, node_type: PERTURBATION}
+      - {node_id: trehalose, label: Added 2.5 mM trehalose with 3.2 ug TrmB, node_type: PERTURBATION}
+    edges:
+      - edge_id: represses-transcript
+        subject: protein
+        predicate: decreases
+        object: transcript
+        mechanism: Increasing added TrmB reduces the runoff transcript in the reconstituted assay. This is direct whole-protein repression at the process level, not a measured elementary TBP-displacement step.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:12426307
+            source_url: https://www.researchgate.net/publication/11041114_TrmB_a_Sugar-specific_Transcriptional_Regulator_of_the_TrehaloseMaltose_ABC_Transporter_from_the_Hyperthermophilic_Archaeon_Thermococcus_litoralis
+            snippet: the transcript of malE
+            explanation: Figure 8 lanes 4-6, results and transcription methods; ledger S1a. No exact densitometry or native-cell repression is inferred.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+      - edge_id: maltose-relieves-repression
+        subject: maltose
+        predicate: increases
+        object: transcript
+        mechanism: Added maltose restores transcript relative to the TrmB-containing no-added-sugar reaction; the intervening conformational and DNA-binding steps are unresolved in this assay.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:12426307
+            source_url: https://www.researchgate.net/publication/11041114_TrmB_a_Sugar-specific_Transcriptional_Regulator_of_the_TrehaloseMaltose_ABC_Transporter_from_the_Hyperthermophilic_Archaeon_Thermococcus_litoralis
+            snippet: the transcript of malE
+            explanation: Figure 8A lane 8 and results; ledger S1a. The source includes both TrmB and the transcription machinery.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+      - edge_id: trehalose-relieves-repression
+        subject: trehalose
+        predicate: increases
+        object: transcript
+        mechanism: Added trehalose restores transcription in the reported lane condition. This endpoint is kept separate from the increased EMSA retardation observed at higher trehalose concentrations under another protocol.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:12426307
+            source_url: https://www.researchgate.net/publication/11041114_TrmB_a_Sugar-specific_Transcriptional_Regulator_of_the_TrehaloseMaltose_ABC_Transporter_from_the_Hyperthermophilic_Archaeon_Thermococcus_litoralis
+            snippet: the transcript of malE
+            explanation: Figure 8B lane 11 caption and results; ledger S1a. Prose also says above 2.5 mM; no universal threshold is assigned.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+  - graph_id: tl-trmb-sugar-emsa-2003
+    title: Maltose and trehalose have opposite effects on TrmB-associated DNA retardation
+    scope: Purified full-length T. litoralis TrmB and labeled intergenic region 1 in EMSA, not a native transcription assay.
+    context: 1.25 uM TrmB, 70 C for 10 min then 8% native PAGE at room temperature; maltose 5-50 uM or trehalose 1-10 mM in separate reactions. Buffer and competitor are retained in ledger S1b.
+    family_mapping: Q7LYW4 version 1 reference, PF01978 11-77 within a 338-aa multidomain protein; the sugar-binding matches PF11495 and PF31112 are separate. Complete assay insert remains unverified.
+    scope_status: MECHANISTIC
+    limitations: Original Figure 6 image unavailable; primary text/caption inspected. Shift intensity is not a measured off-rate, binding stoichiometry or transcriptional activity. Do not join these sugar-specific effects into a universal dissociation model.
+    nodes:
+      - {node_id: maltose, label: Added maltose up to 50 uM in the TrmB-region-1 reaction, node_type: PERTURBATION}
+      - {node_id: trehalose, label: Added trehalose at 5-10 mM in the TrmB-region-1 reaction, node_type: PERTURBATION}
+      - {node_id: retarded, label: Retarded TrmB-associated region-1 DNA, node_type: STATE}
+    edges:
+      - edge_id: maltose-reduces-retardation
+        subject: maltose
+        predicate: decreases
+        object: retarded
+        mechanism: Maltose reduces DNA retardation, with a reported half-effect at 20-50 uM in this assay. The direct complex-level response does not identify its atomic allosteric route.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:12426307
+            source_url: https://www.researchgate.net/publication/11041114_TrmB_a_Sugar-specific_Transcriptional_Regulator_of_the_TrehaloseMaltose_ABC_Transporter_from_the_Hyperthermophilic_Archaeon_Thermococcus_litoralis
+            snippet: TrmB-mediated EMSA
+            explanation: Figure 6 and sugar-dependent EMSA results/methods; ledger S1b.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+      - edge_id: trehalose-increases-retardation
+        subject: trehalose
+        predicate: increases
+        object: retarded
+        mechanism: At 5-10 mM trehalose the source reports greater stability/retardation of the complex. This does not establish increased transcriptional repression, since transcription behaves differently under its own conditions.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:12426307
+            source_url: https://www.researchgate.net/publication/11041114_TrmB_a_Sugar-specific_Transcriptional_Regulator_of_the_TrehaloseMaltose_ABC_Transporter_from_the_Hyperthermophilic_Archaeon_Thermococcus_litoralis
+            snippet: complex was clearly increased
+            explanation: Figure 6 results and caption; ledger S1b. A complex-level gel effect, not a fitted kinetic stability constant.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+  - graph_id: tl-trmb-maltose-footprint-2003
+    title: Maltose removes TrmB-associated promoter protection
+    scope: Full-length T. litoralis TrmB, coding and noncoding strands of the intergenic promoter region, DNaseI protection assay.
+    context: 5 uM TrmB with or without 100 uM maltose; binding 70 C for 10 min followed by 0.005 U DNaseI for 5 min at 37 C. BRE/TATA and inverted-repeat-associated regions are assessed.
+    family_mapping: Q7LYW4 version 1 reference, PF01978 11-77; whole-protein pSL152 preparation. Neither exact study strain nor complete tag/insert is inferred from reference taxonomy.
+    scope_status: MECHANISTIC
+    limitations: Primary Figure 4 caption and text, not original image, inspected. Loss of nuclease protection is not direct measurement of TBP recruitment. Trehalose footprint loss is reported data-not-shown and is not an independently inspected edge.
+    nodes:
+      - {node_id: maltose, label: 100 uM maltose added to 5 uM TrmB-DNA reaction, node_type: PERTURBATION}
+      - {node_id: protection, label: TrmB-associated DNaseI protection of promoter regions, node_type: STATE}
+    edges:
+      - edge_id: reduces-protection
+        subject: maltose
+        predicate: decreases
+        object: protection
+        mechanism: The protected regions lose protection after maltose addition in the matched protein-containing footprint condition; exact DNA-release kinetics are not measured.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:12426307
+            source_url: https://www.researchgate.net/publication/11041114_TrmB_a_Sugar-specific_Transcriptional_Regulator_of_the_TrehaloseMaltose_ABC_Transporter_from_the_Hyperthermophilic_Archaeon_Thermococcus_litoralis
+            snippet: TrmB no longer protected
+            explanation: Figure 4 M lane, results and footprint methods; ledger S1c. The digestion is at 37 C, not the transcription assay's 80 C.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+  - graph_id: trmb-tm-repression-and-maltose-thesis
+    title: WT and E87A TrmB repress TM transcription and retain maltose response
+    scope: Full-length pSL152-derived WT and E87A preparations in Surma's doctoral thesis, separate 484-bp TM template.
+    context: Figure 46A; 0.5 uM regulator, 150 fmol template, P. furiosus TBP/TFB/RNAP, 25 uL buffer III, 80 C for 30 min; 1 mM added maltose where indicated. Ledger S2 specifies salt, nucleotides and glucose-containing protein preparation.
+    family_mapping: Thesis calls pSL152 PF1743; Q9HGZ9 version 1 and T. litoralis Q7LYW4 version 1 have identical bodies and PF01978 11-77. Plasmid taxonomy conflicts with Lee2003 and remains unresolved. E87 is outside PF01978; no domain-specific E87 mechanism is asserted.
+    scope_status: MECHANISTIC
+    limitations: Public thesis evidence, not a new peer-reviewed 2007 result. No-added-sugar is not sugar-free because stock glucose was not dialyzed away. Complete constructs, final carryover and mutant folding/active fractions remain unresolved.
+    nodes:
+      - {node_id: wt, label: 0.5 uM WT TrmB added to TM transcription reaction, node_type: PERTURBATION}
+      - {node_id: e87a, label: 0.5 uM E87A TrmB added to TM transcription reaction, node_type: PERTURBATION}
+      - {node_id: maltose_wt, label: 1 mM added maltose with 0.5 uM WT TrmB, node_type: PERTURBATION}
+      - {node_id: maltose_e87a, label: 1 mM added maltose with 0.5 uM E87A TrmB, node_type: PERTURBATION}
+      - {node_id: transcript, label: 156-nt TM runoff transcript output, node_type: PROCESS}
+    edges:
+      - edge_id: wt-represses
+        subject: wt
+        predicate: decreases
+        object: transcript
+        mechanism: WT addition reduces transcript relative to the no-regulator lane, demonstrating whole-protein reconstituted repression without resolving initiation microsteps.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: Transkriptionspuffer III.
+            explanation: Original Figure 46A lanes 1/2 visually inspected with methods; ledger S2a.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+      - edge_id: e87a-represses
+        subject: e87a
+        predicate: decreases
+        object: transcript
+        mechanism: E87A addition still reduces TM transcript. Its weaker MD response must not be generalized to a globally inactive protein.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: TrmB E87A
+            explanation: Original Figure 46A lanes 1/6 and Figure 45B/C; ledger S2a. Figure 45 provides dose-specific residual values, not an affinity measurement.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+      - edge_id: wt-maltose-relief
+        subject: maltose_wt
+        predicate: increases
+        object: transcript
+        mechanism: Added maltose restores TM transcript relative to WT without added maltose; the causal intermediate is not directly tracked in this transcription assay.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: Transkriptionspuffer III.
+            explanation: Original Figure 46A lanes 2/3; ledger S2a. This differs from Lee2003 in preparation, template and buffer.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+      - edge_id: e87a-maltose-relief
+        subject: maltose_e87a
+        predicate: increases
+        object: transcript
+        mechanism: Added maltose restores TM transcript in the E87A reaction, preserving promoter-specific responsiveness despite the MD repression defect.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: TrmB E87A
+            explanation: Original Figure 46A lanes 6/7; ledger S2a. No isolated E87-region or sugar-binding-domain sufficiency follows.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+  - graph_id: trmb-md-repression-and-maltotriose-thesis
+    title: WT and Y50N TrmB repress MD transcription and retain maltotriose response
+    scope: Full-length pSL152-derived WT and Y50N preparations in the thesis, separate 348-bp MD template.
+    context: Figure 46B; 1.5 uM regulator and 1 mM added maltotriose where indicated; 150 fmol template, 25 uL buffer III, P. furiosus TBP/TFB/RNAP, 80 C for 30 min. Glucose carryover is unresolved.
+    family_mapping: Q9HGZ9 and Q7LYW4 version 1 references have PF01978 11-77 and Y50 within the match; PF11495 and PF31112 are separate. Thesis PF1743 attribution and Lee2003 pSL152 origin conflict; reference bodies are identical but exact constructs are unverified.
+    scope_status: MECHANISTIC
+    limitations: MD conditions differ from the 0.5-uM TM assay. Retained MD repression does not prove Y50 directly recognizes either promoter or that the entire protein is structurally unchanged. Thesis evidence and no-added-sugar conditions remain explicitly scoped.
+    nodes:
+      - {node_id: wt, label: 1.5 uM WT TrmB added to MD transcription reaction, node_type: PERTURBATION}
+      - {node_id: y50n, label: 1.5 uM Y50N TrmB added to MD transcription reaction, node_type: PERTURBATION}
+      - {node_id: maltotriose_wt, label: 1 mM added maltotriose with 1.5 uM WT TrmB, node_type: PERTURBATION}
+      - {node_id: maltotriose_y50n, label: 1 mM added maltotriose with 1.5 uM Y50N TrmB, node_type: PERTURBATION}
+      - {node_id: transcript, label: 168-nt MD runoff transcript output, node_type: PROCESS}
+    edges:
+      - edge_id: wt-represses
+        subject: wt
+        predicate: decreases
+        object: transcript
+        mechanism: WT addition lowers the MD runoff transcript relative to no regulator, a whole-protein biochemical repression effect without a resolved atomic route.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: Transkriptionspuffer III.
+            explanation: Original Figure 46B lanes 1/2 and methods; ledger S2b.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+      - edge_id: y50n-represses
+        subject: y50n
+        predicate: decreases
+        object: transcript
+        mechanism: Y50N retains MD transcript repression; the TM defect is not a universal loss of repressor function. Figure 45 quantification retains residual transcript rather than imposing zero output.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: TrmB Y50N
+            explanation: Original Figure 46B lanes 1/4, Figure 45A/C and text pp.105-108; ledger S2b.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+      - edge_id: wt-maltotriose-relief
+        subject: maltotriose_wt
+        predicate: increases
+        object: transcript
+        mechanism: Added maltotriose relieves WT-associated MD repression in this reaction; no observed allosteric trajectory is asserted.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: Transkriptionspuffer III.
+            explanation: Original Figure 46B lanes 2/3; ledger S2b.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+      - edge_id: y50n-maltotriose-relief
+        subject: maltotriose_y50n
+        predicate: increases
+        object: transcript
+        mechanism: Added maltotriose restores MD transcript in the Y50N reaction, showing retained promoter-specific regulation without establishing isolated-domain activity.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: TrmB Y50N
+            explanation: Original Figure 46B lanes 4/5; ledger S2b.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+  - graph_id: trmb-promoter-selective-mutant-effects-thesis
+    title: Y50N and E87A weaken repression of different isolated promoters
+    scope: Same-dose comparisons of full-length WT and mutant preparations in Figure 46, not a domain-fragment experiment or a mutant potency ranking across promoters.
+    context: TM at 0.5 uM regulator and MD at 1.5 uM, no added inducer, 25 uL buffer III with P. furiosus transcription components, 80 C for 30 min. Figures 45/46 and ledger S2a-b preserve dose dependence and protein-stock glucose.
+    family_mapping: Reference Y50 is inside PF01978 11-77; E87 is outside it in identical 338-aa Q9HGZ9/Q7LYW4 version 1 bodies. Complete WT/mutant inserts and the pSL152 species attribution remain unresolved.
+    scope_status: PHENOTYPIC
+    limitations: Endpoint changes are observed, but folding, active abundance, oligomerization and altered DNA affinity are not separated. Figure 45 retains Y50N TM repression at 2.5-3 uM and E87A MD repression at 2.5-3 uM. Occasional Y50D prose is not silently adopted over Y50N figure labels.
+    nodes:
+      - {node_id: y50n, label: Replace WT with Y50N at 0.5 uM on TM template, node_type: PERTURBATION}
+      - {node_id: tm, label: TM runoff transcript relative to same-dose WT, node_type: PROCESS}
+      - {node_id: e87a, label: Replace WT with E87A at 1.5 uM on MD template, node_type: PERTURBATION}
+      - {node_id: md, label: MD runoff transcript relative to same-dose WT, node_type: PROCESS}
+    edges:
+      - edge_id: y50n-weakens-tm-repression
+        subject: y50n
+        predicate: increases
+        object: tm
+        mechanism: Y50N produces much more TM transcript than WT at the same low dose. This is a mutation-associated loss of repression, not proof of a direct Tyr50-DNA contact or total inactivity at all concentrations.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: TrmB Y50N
+            explanation: Original Figure 46A lanes 2/4 and Figure 45 residual-activity series; ledger S2a. This reuses the same experiment, not independent replication of the TM graph.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+      - edge_id: e87a-weakens-md-repression
+        subject: e87a
+        predicate: increases
+        object: md
+        mechanism: E87A yields more MD transcript than WT at the same dose. E87 lies outside PF01978, and the affected molecular route is unresolved.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: TrmB E87A
+            explanation: Original Figure 46B lanes 2/6 and Figure 45B/C; ledger S2b. Do not convert retained residual repression into an absolute requirement claim.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+  - graph_id: trmb-tm-maltose-footprints-thesis
+    title: Maltose removes WT and E87A protection of the TM promoter
+    scope: Full-length WT or E87A pSL152-derived protein, separate matched-nuclease comparisons in thesis Figure 47.
+    context: 1.5 uM regulator, 100 ng labeled TM DNA, 25 uL footprint buffer I; 70 C for 15 min binding, then 0.02 U DNaseI at 40 C for 5 min. Added maltose is 1 mM. Full buffer and glucose-carryover caveat are in ledger S2c.
+    family_mapping: PF01978 is 11-77 in Q9HGZ9/Q7LYW4 version 1 reference bodies; E87 is outside that match. Plasmid lineage and complete constructs are not independently resolved.
+    scope_status: MECHANISTIC
+    limitations: No-protein and Y50N lanes use 0.01 U DNaseI, so they are not used as matched-nuclease mutant causal comparisons. Protection loss does not directly measure TBP competition or a structural transition. MD mutant footprinting failed in this source.
+    nodes:
+      - {node_id: maltose_wt, label: 1 mM added maltose with WT TrmB at matched DNaseI dose, node_type: PERTURBATION}
+      - {node_id: wt_protection, label: WT-associated TM BRE/TATA-region protection, node_type: STATE}
+      - {node_id: maltose_e87a, label: 1 mM added maltose with E87A TrmB at matched DNaseI dose, node_type: PERTURBATION}
+      - {node_id: e87a_protection, label: E87A-associated TM BRE/TATA-region protection, node_type: STATE}
+    edges:
+      - edge_id: removes-wt-protection
+        subject: maltose_wt
+        predicate: decreases
+        object: wt_protection
+        mechanism: Adding maltose eliminates the marked WT footprint at unchanged protein and nuclease amounts; a direct protection response, not a measured DNA-release rate.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: DNaseI
+            explanation: Original Figure 47 lanes 2/3 visually inspected, with explicit 0.02-U caption conditions; ledger S2c.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+      - edge_id: removes-e87a-protection
+        subject: maltose_e87a
+        predicate: decreases
+        object: e87a_protection
+        mechanism: Adding maltose eliminates the E87A footprint at matched 0.02-U nuclease dose, retaining a TM-specific response despite the MD-associated defect.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: TrmB E87A
+            explanation: Original Figure 47 lanes 5/6; ledger S2c. The Y50N lane has a different nuclease amount and is not substituted into this comparison.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+  - graph_id: trmb-e87a-md-retardation-thesis
+    title: E87A reduces detectable MD DNA retardation
+    scope: Full-length WT versus E87A preparations in thesis Figure 48, with Y50N and no-protein comparison lanes.
+    context: 3 uM protein, 25 ng MD template per figure caption, 25 uL EMSA buffer; 70 C for 15 min, cool to 40 C, then 6% native PAGE at room temperature. The generic method says 30 ng, a retained discrepancy.
+    family_mapping: E87 is outside PF01978 11-77 in the identical Q9HGZ9/Q7LYW4 version 1 reference bodies. Exact mutant insert and pSL152 lineage remain unresolved; reference mapping is not a verified mutant structure.
+    scope_status: PHENOTYPIC
+    limitations: WT and Y50N shifts are diffuse, explicitly not cleanly resolved. The endpoint is detectable retardation, not Kd, zero binding, oligomer stoichiometry or an E87-DNA contact. Stock glucose and mutant folding/active fractions remain unresolved.
+    nodes:
+      - {node_id: e87a, label: Replace WT with E87A at 3 uM in the MD EMSA, node_type: PERTURBATION}
+      - {node_id: retarded, label: Detectably retarded MD DNA, node_type: STATE}
+    edges:
+      - edge_id: reduces-md-retardation
+        subject: e87a
+        predicate: decreases
+        object: retarded
+        mechanism: E87A yields predominantly free-DNA-like migration relative to the diffuse retarded WT lane; the preparation-dependent molecular cause is unresolved.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: EMSA
+            explanation: Original Figure 48 lanes 2/3, with lanes 1/4 as no-protein/Y50N context; ledger S2d. The failed MD footprint experiment is not evidence of absent binding.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+  - graph_id: trmb-composite-promoter-dose-thesis
+    title: WT TrmB shifts TM and MD output differently on a composite template
+    scope: Artificial 589-bp TMMD template and full-length WT TrmB; distinct from isolated promoters and native operons.
+    context: Figure 51, 150 fmol template, 25 uL buffer III, P. furiosus TBP/TFB/RNAP, 80 C for 30 min; WT 0/1.5/3/4.5 uM. Each promoter is independently normalized to its own no-regulator output.
+    family_mapping: Thesis pSL152 preparation, mapped by identical Q9HGZ9/Q7LYW4 version 1 reference bodies with PF01978 11-77. Complete construct and taxonomy conflict remain unresolved.
+    scope_status: PHENOTYPIC
+    limitations: No added inducer does not mean no glucose. Percentages are published gel quantifications without established replicate statistics. Apparent MD enhancement is not proof of native activation; competition for machinery is an unmeasured explanation. Reported zero is a gel endpoint, not exact absence of molecular transcription.
+    nodes:
+      - {node_id: low, label: Add 1.5 uM WT TrmB to the composite-template reaction, node_type: PERTURBATION}
+      - {node_id: high, label: Increase WT TrmB from 1.5 to 4.5 uM on the composite template, node_type: PERTURBATION}
+      - {node_id: tm, label: Composite-template TM transcript output, node_type: PROCESS}
+      - {node_id: md, label: Composite-template MD transcript output, node_type: PROCESS}
+    edges:
+      - edge_id: low-dose-lowers-tm
+        subject: low
+        predicate: decreases
+        object: tm
+        mechanism: TM output decreases from its own 100% no-regulator baseline to 10% at 1.5 uM WT. The net output is observed; occupancy and competition are not directly quantified.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: Transkriptionspuffer III.
+            explanation: Original Figure 51 gel and TM numeric table, lanes 1/2; ledger S2e.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+      - edge_id: low-dose-raises-md
+        subject: low
+        predicate: increases
+        object: md
+        mechanism: MD output rises from its own 100% baseline to 140% at 1.5 uM WT in this joint-promoter system. The source proposes redistribution of shared transcription machinery, but this was not directly measured.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: Transkriptionspuffer III.
+            explanation: Original Figure 51 MD numeric table, lanes 1/2, and p.113 interpretation; ledger S2e. A context-specific endpoint, not direct activation by isolated PF01978.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+      - edge_id: higher-dose-lowers-tm
+        subject: high
+        predicate: decreases
+        object: tm
+        mechanism: Increasing WT from 1.5 to 4.5 uM lowers TM output from 10% to the reported 0% gel endpoint. The intermediate 3-uM condition is 5%; no molecular zero or affinity constant is inferred.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: Transkriptionspuffer III.
+            explanation: Original Figure 51 TM numeric table, lanes 2-4; ledger S2e. Baselines differ from the low-dose versus no-regulator edge.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+      - edge_id: higher-dose-lowers-md
+        subject: high
+        predicate: decreases
+        object: md
+        mechanism: Raising WT from 1.5 to 4.5 uM lowers MD output from 140% to 52%, crossing below its no-regulator baseline. This preserves the initial enhancement instead of claiming uniform inhibition at every dose.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: Transkriptionspuffer III.
+            explanation: Original Figure 51 MD numeric table, lanes 2-4, values 140/88/52; ledger S2e.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+  - graph_id: trmb-composite-promoter-mutants-thesis
+    title: Mutant effects remain promoter-dependent on the composite template
+    scope: Same-dose WT versus Y50N or E87A on the artificial TMMD template, not separate native operons.
+    context: Figure 51, 4.5 uM regulator, 150 fmol 589-bp template, 25 uL buffer III, P. furiosus TBP/TFB/RNAP, 80 C for 30 min. Compare lanes 4/7/10, with each promoter's no-regulator output normalized to 100%.
+    family_mapping: Y50 lies within PF01978 11-77 and E87 outside it in the identical Q9HGZ9/Q7LYW4 version 1 references. Exact pSL152 construct lineage, inserted mutations and active fractions remain independently unverified.
+    scope_status: PHENOTYPIC
+    limitations: Y50N MD values are nonmonotonic across doses and E87A retains TM repression; ledger S2e preserves all values. No replicate significance, matched native-cell phenotype, direct DNA contact or regulator stoichiometry follows. Protein-stock glucose is unresolved.
+    nodes:
+      - {node_id: y50n, label: Replace 4.5 uM WT with Y50N on composite template, node_type: PERTURBATION}
+      - {node_id: tm, label: Composite-template TM output relative to same-dose WT, node_type: PROCESS}
+      - {node_id: e87a, label: Replace 4.5 uM WT with E87A on composite template, node_type: PERTURBATION}
+      - {node_id: md, label: Composite-template MD output relative to same-dose WT, node_type: PROCESS}
+    edges:
+      - edge_id: y50n-raises-tm
+        subject: y50n
+        predicate: increases
+        object: tm
+        mechanism: The Y50N preparation yields 102% TM output versus the WT lane's reported 0%, relative to the shared TM baseline. Its MD output is 77%, not a claim of complete MD repression.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: TrmB Y50N
+            explanation: Original Figure 51 numeric tables and gel, lanes 4/7; ledger S2e. This is separate from the 0.5-uM isolated-TM comparison.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+      - edge_id: e87a-raises-md
+        subject: e87a
+        predicate: increases
+        object: md
+        mechanism: E87A yields 180% MD output versus WT's 52% at the same dose, while TM remains at 14%. The joint-template phenotype does not prove direct MD activation or an E87 contact with DNA.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: doi:10.5283/epub.14529
+            source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+            snippet: TrmB E87A
+            explanation: Original Figure 51 numeric tables and gel, lanes 4/10, plus text p.115; ledger S2e.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+  - graph_id: tl-trmb-tbp-occlusion-model
+    title: TrmB promoter occupancy may obstruct TBP recruitment
+    scope: Proposed interpretation of T. litoralis TrmB footprints and reconstituted malE repression; not a directly observed recruitment experiment.
+    context: TrmB protects a BRE/TATA-overlapping region and represses transcription in separate Lee2003 assays. The graph does not join their different temperatures and readouts into an observed atomic trajectory.
+    family_mapping: Q7LYW4 version 1 reference, PF01978 11-77 in full-length multidomain TrmB. Neither an isolated-domain interaction nor a DNA-bound residue contact is established.
+    scope_status: HYPOTHETICAL
+    limitations: No direct TBP competition, recruitment kinetics or TrmB-DNA structure was inspected. Krug2013 contains sucrose-bound protein without DNA and has unresolved construct/deposition discrepancies; it does not convert this proposal into an observed mechanism.
+    nodes:
+      - {node_id: occupancy, label: Proposed TrmB occupancy overlapping the TM BRE/TATA region, node_type: STATE}
+      - {node_id: tbp, label: TBP recruitment to the TM promoter, node_type: PROCESS}
+    edges:
+      - edge_id: proposed-tbp-occlusion
+        subject: occupancy
+        predicate: decreases
+        object: tbp
+        mechanism: The source proposes that overlapping TrmB occupancy obstructs TBP binding and subsequent initiation-complex formation; footprint overlap and repression motivate but do not directly measure this competition.
+        directness: DIRECT
+        support: HYPOTHESIZED
+        evidence_kind: CONTEXTUAL
+        evidence:
+          - reference: PMID:12426307
+            source_url: https://www.researchgate.net/publication/11041114_TrmB_a_Sugar-specific_Transcriptional_Regulator_of_the_TrehaloseMaltose_ABC_Transporter_from_the_Hyperthermophilic_Archaeon_Thermococcus_litoralis
+            snippet: prevention of TBP binding
+            explanation: Discussion interpretation following Figures 4/8; ledger S1c. Proposed directness describes the model, not experimental proof.
+            cache_path: evidence/PF01978/trmb-primary-assays.txt
+            cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
