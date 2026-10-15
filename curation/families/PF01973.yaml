@@ -48,7 +48,7 @@ discussions:
         explanation: Clostridium mini-flagellin glycoengineering identified for further assessment; no native-substrate or direct catalytic claim is transferred from search metadata.
     posed_by: Codex
     posed_date: '2026-10-14'
-    notes: Continue the explicit evidence/PF01973/coverage-and-exclusions.txt queue and the 2024 ledgers, including Kurthia/Irchel Maf profile mapping, earlier Aeromonas, Campylobacter, Helicobacter and newer studies. Clostridium2024 sequence-preference assessment requires its corrected supplement. Full family review remains incomplete, and all earlier corpus follow-ups stay open.
+    notes: Kurthia and Irchel3E13 reference Maf sequences now pass exact PF01973.24 profile mapping; six host-specific ortholog graphs retain eight cellular effects. Kurthia Maf/GlfM deposited design bodies match their references, but the Irchel synthetic fragment and all physical plasmid sequences remain unverified. Continue the coverage-and-exclusions queue, earlier Aeromonas, Campylobacter, Helicobacter and newer studies. Clostridium2024 sequence-preference assessment requires its corrected supplement. Full family review and issues204/205/207 remain open; see evidence/PF01973/unay-2024-ortholog-contexts.txt.
   - discussion_id: unay-2024-construct-identity
     prompt: Resolve the deposited Maf2 L230S sequence and conflicting plasmid descriptions before certifying reference-wild-type constructs.
     kind: CURATION_TODO
@@ -1647,3 +1647,193 @@ causal_graphs:
             explanation: "FigureS1B and legend; STAR Methods; original figure, Methods and supplementary constructs inspected. See the companion mapping ledger."
             cache_path: "evidence/PF01973/unay-2024-maf-glfm.txt"
             cache_sha256: "282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8"
+  - graph_id: kurthia-glfm-mr1-2024
+    title: "The Kurthia GlfM-containing cassette promotes slow Hag-HA signal in MR-1"
+    scope: "Kurthia sp. 11kri321 Maf/GlfM/Hag system expressed in S. oneidensis MR-1 WT or delta-maf1 delta-maf2; two separate cellular comparisons, not isolated Maf sufficiency."
+    context: "Figure5D; pSRK-Gm Plac triad pJU0046 versus glfM-deleted pair pJU0047. Hosts remain Pse-capable. STAR Methods report LB,30 C,0.5mM IPTG and OD-normalized lysate immunoblots; each condition contains Kurthia Maf and HA-tagged Hag."
+    family_mapping: "Kurthia sp. 11kri321 reference Maf WP_068455574.1 is 548 aa; exact PF01973.24 HMM alignment 159-329 (envelope 159-330); 142.216 domain bits, passes 34.6-bit gathering cutoff. Its full protein body and GlfM WP_068455571.1 match S6 row 5. This is computational domain mapping plus deposited-design identity, not a sequenced physical plasmid or isolated-domain assay; see evidence/PF01973/unay-2024-ortholog-contexts.txt."
+    scope_status: "PHENOTYPIC"
+    limitations: "Representative blot of two experiments, not a quantified abundance or stability measurement. GlfM deletion changes the polycistronic cassette; translation, folding and turnover are not separately controlled. No Hag/GlfM-positive but Kurthia-Maf-negative comparator is shown. Native host Maf loss excludes those two proteins, not other host factors or a need for the whole joint system."
+    nodes:
+      - {"node_id":"triad_wt","label":"GlfM-containing Maf/Hag cassette in WT MR-1","node_type":"PERTURBATION"}
+      - {"node_id":"slow_signal_wt","label":"Slow-migrating Hag-HA immunoreactivity in WT MR-1","node_type":"PHENOTYPE"}
+      - {"node_id":"triad_maf_null","label":"GlfM-containing Maf/Hag cassette in host Maf-null MR-1","node_type":"PERTURBATION"}
+      - {"node_id":"slow_signal_maf_null","label":"Slow-migrating Hag-HA immunoreactivity in host Maf-null MR-1","node_type":"PHENOTYPE"}
+    edges:
+      - edge_id: glfm-cassette-increases-wt-signal
+        subject: "triad_wt"
+        predicate: "increases"
+        object: "slow_signal_wt"
+        mechanism: "Relative to Maf/Hag without GlfM, the triad gives stronger slow Hag-HA signal in WT. The intervention is the expression cassette in this donor-capable host, not GlfM alone or direct observation of stabilization or glycosyl transfer."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - reference: PMID:38897200
+            source_url: "https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download"
+            snippet: "Maf-1 and Maf-2 promote flagellin glycosylation"
+            explanation: "Figure5D lanes1/3; legend on main PDF pages11-12 and Results page13; S4 rows57/58 and S6 row5. Original panel, full legend, Methods and construct lineage inspected. The quotation is background; the named perturbation/comparator provides the directed evidence."
+            cache_path: "evidence/PF01973/unay-2024-ortholog-contexts.txt"
+            cache_sha256: "3c840e71d100f31279f07f4e8784adb8720eb8592804329735aaf94a1d1a16f7"
+      - edge_id: glfm-cassette-increases-maf-null-signal
+        subject: "triad_maf_null"
+        predicate: "increases"
+        object: "slow_signal_maf_null"
+        mechanism: "The matched pair-versus-triad comparison in delta-maf1 delta-maf2 yields stronger slow Hag-HA signal with the triad. This does not establish an isolated Kurthia Maf reaction or join the WT and Maf-null observations into a causal chain."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - reference: PMID:38897200
+            source_url: "https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download"
+            snippet: "Maf-1 and Maf-2 promote flagellin glycosylation"
+            explanation: "Figure5D lanes5/6; legend and Results; the same Kurthia expression-cassette lineage as lanes1/3. Original panel, full legend, Methods and construct lineage inspected. The quotation is background; the named perturbation/comparator provides the directed evidence."
+            cache_path: "evidence/PF01973/unay-2024-ortholog-contexts.txt"
+            cache_sha256: "3c840e71d100f31279f07f4e8784adb8720eb8592804329735aaf94a1d1a16f7"
+  - graph_id: kurthia-pse-mr1-2024
+    title: "Host pseI loss reduces Kurthia Hag-HA retardation in MR-1"
+    scope: "Kurthia Maf/GlfM/Hag triad in WT versus delta-pseI S. oneidensis MR-1; donor-pathway perturbation with the same expression cassette."
+    context: "Figure5D lanes3/4, Plac pJU0046; Kurthia Maf, GlfM and Hag-HA present in both hosts. LB,30 C and0.5mM IPTG under the study immunoblot protocol."
+    family_mapping: "Kurthia sp. 11kri321 reference Maf WP_068455574.1 is 548 aa; exact PF01973.24 HMM alignment 159-329 (envelope 159-330); 142.216 domain bits, passes 34.6-bit gathering cutoff. Its full protein body and GlfM WP_068455571.1 match S6 row 5. This is computational domain mapping plus deposited-design identity, not a sequenced physical plasmid or isolated-domain assay; see evidence/PF01973/unay-2024-ortholog-contexts.txt."
+    scope_status: "PHENOTYPIC"
+    limitations: "Hag-HA remains detectable after pseI loss. Migration alone does not identify glycan chemistry, site occupancy, donor stereochemistry or purified enzyme kinetics. There is no isolated-domain test or independently controlled Kurthia Maf omission."
+    nodes:
+      - {"node_id":"psei_loss","label":"Host pseI deletion with Kurthia triad retained","node_type":"PERTURBATION"}
+      - {"node_id":"hag_retardation","label":"Hag-HA migration retardation","node_type":"PHENOTYPE"}
+    edges:
+      - edge_id: psei-loss-reduces-hag-retardation
+        subject: "psei_loss"
+        predicate: "decreases"
+        object: "hag_retardation"
+        mechanism: "With the same triad, delta-pseI produces a faster Hag-HA band than WT. This supports a host Pse-pathway-dependent component of the cellular readout, not a chemically resolved transfer step."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - reference: PMID:38897200
+            source_url: "https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download"
+            snippet: "Maf-1 and Maf-2 promote flagellin glycosylation"
+            explanation: "Figure5D lanes3/4; original legend and Results page13; S4 pJU0046 and STAR Methods. Original panel, full legend, Methods and construct lineage inspected. The quotation is background; the named perturbation/comparator provides the directed evidence."
+            cache_path: "evidence/PF01973/unay-2024-ortholog-contexts.txt"
+            cache_sha256: "3c840e71d100f31279f07f4e8784adb8720eb8592804329735aaf94a1d1a16f7"
+  - graph_id: kurthia-glfm-caulo-2024
+    title: "Kurthia GlfM enhances a residual Hag-HA shift in Caulobacter"
+    scope: "Kurthia Maf/Hag pair versus Maf/GlfM/Hag triad in C. crescentus delta-flmG; cognate whole-protein system in a heterologous host."
+    context: "FigureS5A lanes3/4, Plac pJU0047 versus pJU0046. Both hosts lack endogenous FlmG but retain neuB-dependent donor synthesis. PYE,30 C,0.5mM IPTG and HA immunoblot under the study protocol. Hosts are NA1000 and its specified deletion derivatives (Table S3)."
+    family_mapping: "Kurthia sp. 11kri321 reference Maf WP_068455574.1 is 548 aa; exact PF01973.24 HMM alignment 159-329 (envelope 159-330); 142.216 domain bits, passes 34.6-bit gathering cutoff. Its full protein body and GlfM WP_068455571.1 match S6 row 5. This is computational domain mapping plus deposited-design identity, not a sequenced physical plasmid or isolated-domain assay; see evidence/PF01973/unay-2024-ortholog-contexts.txt."
+    scope_status: "PHENOTYPIC"
+    limitations: "The Maf/Hag pair already has a partial shift without GlfM, so the edge is enhancement, not universal GlfM necessity. No Maf-minus/Hag-positive comparator, purified reaction, exact transferred glycan or expression-normalized molecular effect is established."
+    nodes:
+      - {"node_id":"glfm_cassette","label":"GlfM included with Kurthia Maf/Hag in delta-flmG","node_type":"PERTURBATION"}
+      - {"node_id":"hag_retardation","label":"Hag-HA migration retardation","node_type":"PHENOTYPE"}
+    edges:
+      - edge_id: glfm-increases-residual-retardation
+        subject: "glfm_cassette"
+        predicate: "increases"
+        object: "hag_retardation"
+        mechanism: "The triad has a more retarded Hag-HA band than the pair. The pair's remaining shift is retained explicitly; neither GlfM-alone sufficiency nor an all-or-none glycosylation gate follows from this comparison."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - reference: PMID:38897200
+            source_url: "https://access.archive-ouverte.unige.ch/access/metadata/fb5e8c12-7839-4626-a8d7-f0844c94d4e1/download"
+            snippet: "GlfM promotes this change in migration"
+            explanation: "FigureS5A lanes3/4, mmc1.pdf pages10-11, including the residual blue-caret band; S4/Methods pJU0046/47. Original panel, full legend, Methods and construct lineage inspected. The quotation is background; the named perturbation/comparator provides the directed evidence."
+            cache_path: "evidence/PF01973/unay-2024-ortholog-contexts.txt"
+            cache_sha256: "3c840e71d100f31279f07f4e8784adb8720eb8592804329735aaf94a1d1a16f7"
+  - graph_id: kurthia-pse-caulo-2024
+    title: "Host neuB loss reduces Kurthia Hag-HA shifts with and without GlfM"
+    scope: "Two separate Kurthia cassette comparisons in C. crescentus delta-flmG versus delta-flmG delta-neuB; the Pse-deficient host is a double mutant."
+    context: "FigureS5A lanes3/5 for Maf/Hag pair pJU0047 and lanes4/6 for triad pJU0046. Both host backgrounds lack endogenous FlmG. PYE,30 C,0.5mM IPTG and OD-normalized anti-HA immunoblot protocol. Hosts are NA1000 and its specified deletion derivatives (Table S3)."
+    family_mapping: "Kurthia sp. 11kri321 reference Maf WP_068455574.1 is 548 aa; exact PF01973.24 HMM alignment 159-329 (envelope 159-330); 142.216 domain bits, passes 34.6-bit gathering cutoff. Its full protein body and GlfM WP_068455571.1 match S6 row 5. This is computational domain mapping plus deposited-design identity, not a sequenced physical plasmid or isolated-domain assay; see evidence/PF01973/unay-2024-ortholog-contexts.txt."
+    scope_status: "PHENOTYPIC"
+    limitations: "Empty-vector lanes1/2 are tagged-signal background controls, not a Maf-minus/Hag-positive test. These are cellular migration effects, not site-resolved glycan identification or isolated-domain catalysis. Residual pair activity prevents universal GlfM necessity."
+    nodes:
+      - {"node_id":"neub_loss_pair","label":"neuB deletion in delta-flmG expressing Maf/Hag pair","node_type":"PERTURBATION"}
+      - {"node_id":"pair_shift","label":"Hag-HA retardation with Maf/Hag pair","node_type":"PHENOTYPE"}
+      - {"node_id":"neub_loss_triad","label":"neuB deletion in delta-flmG expressing Maf/GlfM/Hag triad","node_type":"PERTURBATION"}
+      - {"node_id":"triad_shift","label":"Hag-HA retardation with Maf/GlfM/Hag triad","node_type":"PHENOTYPE"}
+    edges:
+      - edge_id: neub-loss-reduces-pair-shift
+        subject: "neub_loss_pair"
+        predicate: "decreases"
+        object: "pair_shift"
+        mechanism: "The partial Hag-HA retardation present with Maf/Hag in delta-flmG is reduced in delta-flmG delta-neuB. The comparison supports donor-pathway dependence of the residual readout without requiring GlfM."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - reference: PMID:38897200
+            source_url: "https://access.archive-ouverte.unige.ch/access/metadata/fb5e8c12-7839-4626-a8d7-f0844c94d4e1/download"
+            snippet: "GlfM promotes this change in migration"
+            explanation: "FigureS5A lanes3/5 and full legend; distinguish the double-mutant label from the single delta-neuB hosts used in S5B. Original panel, full legend, Methods and construct lineage inspected. The quotation is background; the named perturbation/comparator provides the directed evidence."
+            cache_path: "evidence/PF01973/unay-2024-ortholog-contexts.txt"
+            cache_sha256: "3c840e71d100f31279f07f4e8784adb8720eb8592804329735aaf94a1d1a16f7"
+      - edge_id: neub-loss-reduces-triad-shift
+        subject: "neub_loss_triad"
+        predicate: "decreases"
+        object: "triad_shift"
+        mechanism: "The triad's Hag-HA band migrates faster after neuB loss in the same delta-flmG background. Neither abundance control nor a resolved glycosyl-transfer reaction is inferred from this shift."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - reference: PMID:38897200
+            source_url: "https://access.archive-ouverte.unige.ch/access/metadata/fb5e8c12-7839-4626-a8d7-f0844c94d4e1/download"
+            snippet: "GlfM promotes this change in migration"
+            explanation: "FigureS5A lanes4/6 and full legend; matched triad, distinct Pse-capable and Pse-deficient hosts. Original panel, full legend, Methods and construct lineage inspected. The quotation is background; the named perturbation/comparator provides the directed evidence."
+            cache_path: "evidence/PF01973/unay-2024-ortholog-contexts.txt"
+            cache_sha256: "3c840e71d100f31279f07f4e8784adb8720eb8592804329735aaf94a1d1a16f7"
+  - graph_id: irchel-glfm-caulo-2024
+    title: "Cognate Irchel GlfM increases FLAG-FliC retardation in Caulobacter"
+    scope: "Reported Pseudomonas sp. Irchel3E13 synthetic FliC/Maf pair plus its cognate GlfM in C. crescentus WT; reference-protein mapping with unresolved physical plasmid sequence."
+    context: "FigureS5B lane1 versus GlfM-positive WT lanes3/5; Plac pJU0005 FliC/Maf plus Pxyl pJU0039 GlfM. PYE,30 C,0.5mM IPTG and0.03-0.06% xylose under the study protocol. Endogenous FlmG is retained. Hosts are NA1000 and its specified deletion derivatives (Table S3)."
+    family_mapping: "Pseudomonas sp. Irchel3E13 reference Maf WP_095156947.1 is 430 aa; exact PF01973.24 HMM alignment 196-352 (envelope 185-354); 104.959 domain bits, passes 34.6-bit gathering cutoff. Methods identify synthetic FliC/Maf plasmid pJU0005, but S6 provides no corresponding fragment; physical construct sequence remains unverified. GlfM WP_095156948.1 is a separate partner, not the PF01973 carrier. See evidence/PF01973/unay-2024-ortholog-contexts.txt."
+    scope_status: "PHENOTYPIC"
+    limitations: "No Maf-minus/FliC-positive/GlfM-positive control is shown, and endogenous FlmG remains present. GlfM expression changes a joint cellular system; exact glycan chemistry, protein stability and isolated Maf sufficiency are not established. The synthetic Maf sequence is not available in S6 and is not certified reference-identical."
+    nodes:
+      - {"node_id":"glfm_addition","label":"Cognate GlfM co-expression with Irchel FliC/Maf in WT","node_type":"PERTURBATION"}
+      - {"node_id":"flic_retardation","label":"FLAG-FliC migration retardation","node_type":"PHENOTYPE"}
+    edges:
+      - edge_id: glfm-increases-flic-retardation
+        subject: "glfm_addition"
+        predicate: "increases"
+        object: "flic_retardation"
+        mechanism: "Adding cognate GlfM to the reported FliC/Maf system yields slower FLAG-FliC migration in WT. Attribution remains at the level of this joint expression intervention, not a purified Maf reaction or exclusion of host enzymes."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - reference: PMID:38897200
+            source_url: "https://access.archive-ouverte.unige.ch/access/metadata/fb5e8c12-7839-4626-a8d7-f0844c94d4e1/download"
+            snippet: "Pse-dependent reduction in migration"
+            explanation: "FigureS5B lane1 versus lanes3/5 and full legend; Methods e4 pJU0005 and e5 pJU0039; S4 row50. Original panel, full legend, Methods and construct lineage inspected. The quotation is background; the named perturbation/comparator provides the directed evidence."
+            cache_path: "evidence/PF01973/unay-2024-ortholog-contexts.txt"
+            cache_sha256: "3c840e71d100f31279f07f4e8784adb8720eb8592804329735aaf94a1d1a16f7"
+  - graph_id: irchel-pse-caulo-2024
+    title: "Host neuB loss reduces the Irchel system's FLAG-FliC retardation"
+    scope: "Irchel3E13 FliC/Maf plus cognate GlfM in WT versus single delta-neuB C. crescentus; no delta-flmG background is used here."
+    context: "FigureS5B GlfM-positive WT/delta-neuB pairs in lanes3/4 and5/6. Plac pJU0005 and Pxyl pJU0039 are retained; PYE,30 C,IPTG/xylose induction and FLAG immunoblot under the study protocol. Hosts are NA1000 and its specified deletion derivatives (Table S3)."
+    family_mapping: "Pseudomonas sp. Irchel3E13 reference Maf WP_095156947.1 is 430 aa; exact PF01973.24 HMM alignment 196-352 (envelope 185-354); 104.959 domain bits, passes 34.6-bit gathering cutoff. Methods identify synthetic FliC/Maf plasmid pJU0005, but S6 provides no corresponding fragment; physical construct sequence remains unverified. GlfM WP_095156948.1 is a separate partner, not the PF01973 carrier. See evidence/PF01973/unay-2024-ortholog-contexts.txt."
+    scope_status: "PHENOTYPIC"
+    limitations: "The displayed pairs are not independent quantitative effect-size estimates. Endogenous FlmG is present, no controlled Maf omission is shown, and the physical synthetic Maf sequence remains unresolved. This readout does not resolve donor structure, acceptor site, direct catalysis or isolated-domain function."
+    nodes:
+      - {"node_id":"neub_loss","label":"Host neuB deletion with Irchel FliC/Maf and GlfM retained","node_type":"PERTURBATION"}
+      - {"node_id":"flic_retardation","label":"FLAG-FliC migration retardation","node_type":"PHENOTYPE"}
+    edges:
+      - edge_id: neub-loss-reduces-flic-retardation
+        subject: "neub_loss"
+        predicate: "decreases"
+        object: "flic_retardation"
+        mechanism: "FLAG-FliC migrates faster in the GlfM-positive delta-neuB host than in WT. The donor-pathway-dependent shift is distinguished from no-GlfM lanes1/2, where fast FLAG-FliC remains detectable in both hosts."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - reference: PMID:38897200
+            source_url: "https://access.archive-ouverte.unige.ch/access/metadata/fb5e8c12-7839-4626-a8d7-f0844c94d4e1/download"
+            snippet: "Pse-dependent reduction in migration"
+            explanation: "FigureS5B lanes3/4 and5/6, with no-GlfM lanes1/2 and vector-only lanes7/8; full legend and STAR Methods. Original panel, full legend, Methods and construct lineage inspected. The quotation is background; the named perturbation/comparator provides the directed evidence."
+            cache_path: "evidence/PF01973/unay-2024-ortholog-contexts.txt"
+            cache_sha256: "3c840e71d100f31279f07f4e8784adb8720eb8592804329735aaf94a1d1a16f7"

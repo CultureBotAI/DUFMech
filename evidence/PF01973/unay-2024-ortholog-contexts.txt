@@ -1,0 +1,180 @@
+PF01973 Kurthia and Irchel ortholog assessment, 2026-10-15 UTC
+
+Source and retention
+Unay J, Kint N, Viollier PH (2024), PMID:38897200,
+doi:10.1016/j.cub.2024.05.058.
+https://archive-ouverte.unige.ch/unige:178145
+The repository lists the published article as CC BY 4.0 and the supplement
+as public. This ledger retains minimal quotations and original assessment,
+not the complete article, supplement, sequence records or model.
+Main PDF:
+https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+SHA256 33b8af4c9c566d1fa0ec01b2e83528a2d88bf42d230136e4f51ca73b04d4e56c
+Supplement ZIP:
+https://access.archive-ouverte.unige.ch/access/metadata/fb5e8c12-7839-4626-a8d7-f0844c94d4e1/download
+SHA256 a8909a565f36db88e68adb287707f3f088d654229c7e47098c21ec746668901c
+mmc1.pdf SHA256 997d6bf9a6cedec076ae3d87b9599a31543284951ee26360784a7dc9a91afbfc
+mmc2.xlsx, Table S4, SHA256 77f853413bff8e180a8db986078135b16748f848acb0a438fa098655942bccec
+mmc3.xlsx, Table S6, SHA256 1f06d916e422054b6585a14041f94e76df59d5e89d501e7a3091e6120f1f5462
+
+Minimal verbatim excerpts
+Q1, main article Results heading, also retained in the earlier ledger:
+Maf-1 and Maf-2 promote flagellin glycosylation
+Q2, Figure S5A legend (mmc1.pdf page 11):
+GlfM promotes this change in migration
+Q3, Figure S5B legend (mmc1.pdf page 11):
+Pse-dependent reduction in migration
+Q1 alone is background, not ortholog-specific proof. The original panels,
+comparators and Methods below provide the edge-specific evidence.
+
+Exact computational family mapping, not functional evidence
+Tables S1/S2 identify Kurthia sp. 11kri321 Maf WP_068455574.1 and GlfM
+WP_068455571.1, and Pseudomonas sp. Irchel 3E13 Maf WP_095156947.1 and
+GlfM WP_095156948.1. Some captions spell Kurthia 11kr321; the S1/Methods
+strain spelling is retained, not treated as a distinct strain. WP records
+may aggregate taxa; no strain-level NCBITaxon identifier is invented.
+NCBI protein efetch, rettype=gb, retmode=xml, versioned IDs:
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=WP_068455574.1,WP_095156947.1,WP_068455571.1,WP_095156948.1,WP_011919637.1,WP_006085654.1,AAN56257.1&rettype=gb&retmode=xml
+Retained temporary response SHA256:
+aedbfc2c087f0e84fc0f9c367078a79cf726012a36c42e486da8d9e1e6539161
+MR-1 comparison UniProt JSON SHA256:
+c6beb34963cf898901702e8c94e208377490f811e50eab3c64aa93d9d262c76e
+Its Q8EC71/Q8EC85 sequence-version-1 mappings were independently verified
+in unay-2024-member-mapping.txt before this local profile comparison.
+
+Exact profile source:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01973/?annotation=hmm
+PF01973.24, NAME MptE-like, length171, DATE May 28 2025, NSEQ56.
+Gathering thresholds: sequence34.6 and domain34.6 bits.
+Compressed SHA256 1c82b06138b0da26cd84393c942976d5281115a8d8160ad0a66152083f6a8dfe
+Uncompressed SHA256 42dfd8f7d163ed049332eefc6a6d404f66ed29f02fddd1f61c9f8fe0c9ae90a6
+A second download on 2026-10-15 has the identical compressed hash.
+PyHMMER0.12.3, plan7.Pipeline(alphabet, bit_cutoffs='gathering', seed=42),
+search_hmm against the12 exact sequences in the two responses; bias_filter
+and null2 enabled, F1=0.02/F2=0.001/F3=0.00001. Z=12, domZ=5.
+This bounded search is not a proteome-wide or live InterProScan result;
+E-values depend on its small search space. Coordinates below are one-based
+inclusive target alignment coordinates, with envelopes separately named.
+Official method reference:
+https://pyhmmer.readthedocs.io/en/stable/api/plan7/pli.html
+
+Kurthia Maf WP_068455574.1,548aa:
+sequence MD5 da602a289065d37fc100d307e59b6bc0
+sequence SHA256 dce14129ded75a277907c58490c37495708f75e9ffdda0101b9b0d2250a83c0e
+PF01973 alignment159-329; envelope159-330; model1-170.
+Domain142.216293 bits, sequence142.556625 bits, domain independent
+E=8.648041291489422e-45; hit and domain pass gathering thresholds.
+Irchel3E13 Maf WP_095156947.1,430aa:
+sequence MD5 f61fb2b142627da82ac14f307ea1931f
+sequence SHA256 5e34ea5a5681ed3401e4b94213e71c633b4ee5e84d9e01758799984086eb7df5
+PF01973 alignment196-352; envelope185-354; model13-169.
+Domain104.959137 bits, sequence105.441010 bits, domain independent
+E=2.417584697459817e-33; hit and domain pass gathering thresholds.
+The wider Irchel envelope is NOT the aligned residue interval.
+MR-1 controls reproduce the independently obtained PF01973 intervals:
+Q8EC71 Maf1,174-338,domain156.891327 bits; Q8EC85 Maf2,182-352,
+domain136.905502 bits. AAN56257.1 duplicates the Q8EC85 protein sequence;
+these are not independent biological samples. The seven non-Maf proteins
+in this bounded comparison are not reported at gathering thresholds;
+this is not a universal domain-absence claim for GlfM or flagellins.
+Temporary exact-result JSON SHA256:
+86f1365ec3ca293530c09726a13a4bafa302c6b5f4c1a1823f006c62bcb3044e
+Execution: uv run --offline --with pyhmmer python
+/private/tmp/duf-pf01973-ortholog-hmm-20261015.py
+The HMM supplies computational identity evidence, not isolated-domain
+sufficiency, a catalytic boundary or evidence for any directed phenotype.
+
+Construct checks
+S6 Sheet1 row5 Ku_maf_glfM_hagHAH6 was whitespace-normalized and translated
+in all three forward frames using Biopython1.88. Local PairwiseAligner
+(match2,mismatch-3,open_gap-5,extend_gap-0.5) comparisons require complete,
+ungapped reference coverage and zero mismatches, not merely a local hit.
+Kurthia Maf548aa matches DNA11-1654 with a following stop; GlfM117aa
+matches DNA1690-2040 with a following stop. Coordinates are one-based
+inclusive in the normalized S6 DNA cell. GlfM MD5:
+3688f44deb45e541309a8555e21d031c.
+Execution: uv run --offline --with biopython python
+/private/tmp/duf-pf01973-kurthia-construct-20261015.py
+Both assertions passed. These checks establish the deposited design's Maf
+and GlfM bodies, not the physical plasmid sequence, Hag identity, tag
+position effects, protein folding or activity of purified components.
+S4 rows57/58 and STAR Methods e6 identify pJU0046 as the synthetic
+Maf/GlfM/Hag-HAH6 cassette in pSRK-Gm, and pJU0047 as its glfM deletion
+made by inverse PCR. Changing the cassette may affect translation as well
+as protein partnership; no expression-normalized GlfM mechanism is proven.
+
+Irchel Methods e4 identify pJU0005 as a synthetic, E. coli-codon-optimized
+FliC/Maf pair in pSRK-Gm. It is not a genome-amplified Maf construct.
+Methods e5 and S4 row50 identify pJU0039 as the genome-amplified Irchel
+CKW37_RS17405 glfM inserted into pMT375 for Pxyl expression. S4 row49
+is the separate pSRK-Gm glfM construct pJU0038.
+All nonempty S6 rows3-14 were enumerated; none supplies an Irchel FliC/Maf
+synthetic fragment. This is a bounded workbook observation, not proof no
+construct sequence exists elsewhere. Full physical Irchel sequence identity
+is unresolved; the reference Maf mapping is not falsely assigned to a
+sequenced plasmid. No exact FliC or Hag accession is invented.
+
+Experimental contexts and adopted effects
+Figure5D was visually inspected in main PDF page11 with legend on pages11-12
+and Results page13. FigureS5A/B was visually inspected in mmc1.pdf page10
+with its full legend on page11. Each is reported as representative of two
+independent experiments, not a measured fold change or eight independent
+studies. STAR Methods e2-e3 specify30 C, LB for MR-1 and PYE for Caulobacter,
+0.5mM IPTG for Plac,0.03-0.06% xylose for Pxyl. Lysates were OD-normalized
+before SDS-PAGE/immunoblotting; this is not a matched Maf/GlfM abundance,
+folding, turnover or loading-protein control for these specific panels.
+Table S3 identifies the Caulobacter hosts as NA1000 and its deletion
+derivatives; NA1000 derives from CB15. The MR-1 background is separate.
+
+kurthia-glfm-mr1-2024, two edges:
+Figure5D lanes1/3 (WT) and5/6 (delta-maf1 delta-maf2) compare pJU0047
+Maf/Hag with pJU0046 Maf/GlfM/Hag. The GlfM-containing cassette gives
+stronger slow-migrating Hag-HA immunoreactivity in each background.
+The host-Maf-null result excludes a requirement for the two native Mafs
+in that displayed condition, not all host contributions. The cassette,
+Kurthia Maf, acceptor and donor-capable host are joint inputs. There is
+no Hag/GlfM-positive but Kurthia-Maf-negative comparator in this panel.
+
+kurthia-pse-mr1-2024, one edge:
+Figure5D lanes3/4 compare the same triad in WT and delta-pseI. Loss of
+the host Pse-synthesis gene reduces Hag-HA migration retardation; signal
+remains detectable. This is not a no-protein control or a direct glycan
+structure, donor stereochemistry, occupancy or catalytic-rate measurement.
+
+kurthia-glfm-caulo-2024, one edge:
+S5A lanes3/4 compare pair and triad in delta-flmG. GlfM inclusion increases
+the migration retardation of Hag-HA. The pair alone retains a partial
+shift. GlfM is therefore not represented as universally required.
+
+kurthia-pse-caulo-2024, two edges:
+S5A lanes3/5 compare the Maf/Hag pair in delta-flmG versus
+delta-flmG delta-neuB; lanes4/6 compare the triad in those same hosts.
+Loss of neuB reduces migration retardation in both comparisons.
+The Pse-deficient host in S5A is the DOUBLE mutant, not single delta-neuB.
+Both backgrounds lack endogenous FlmG. Empty-vector lanes1/2 establish
+tagged-signal background, not a Maf-minus/Hag-positive control. Thus no
+independent observed Maf-necessity edge is inferred from the caption.
+
+irchel-glfm-caulo-2024, one edge:
+S5B lane1 versus GlfM-positive WT lanes3/5 shows increased FLAG-FliC
+migration retardation when cognate GlfM is co-expressed with the Irchel
+FliC/Maf system. The host is WT Caulobacter, not delta-flmG.
+
+irchel-pse-caulo-2024, one edge:
+S5B GlfM-positive WT versus single delta-neuB pairs (lanes3/4 and5/6)
+show reduced retardation after loss of neuB. The no-GlfM pair has fast,
+detectable bands in both hosts (lanes1/2); vector-only lanes7/8 are
+background controls. Endogenous FlmG is present, and no Maf-minus but
+FliC/GlfM-positive control is shown. Host enzyme contributions and exact
+physical expression-construct sequences remain unresolved.
+
+All eight edges are observed cellular readouts with unresolved molecular
+directness. No glycan site, purified transfer, direct binding, protein
+stabilization pathway or universal family function is inferred from them.
+The earlier MR-1 Maf2 L230S and S4/Methods discrepancies remain open;
+Kurthia design agreement does not resolve the different MR-1 lineage.
+No raw Mendeley image series, PRIDE spectra or physical clones were analyzed.
+Local ignored-inclusive search in the PF01973 overlay/evidence/history and
+the prior scientific bundle found the earlier ortholog leads, not previously
+adopted Kurthia/Irchel graphs. Older evidence/review bytes remain historical.
+Scientific issues204/205/207 and all other corpus follow-ups remain open.

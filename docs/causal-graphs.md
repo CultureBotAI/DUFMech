@@ -5874,3 +5874,71 @@ PF01973 Maf/GlfM publication review (PR #208, 2026-10-15):
   [#205](https://github.com/CultureBotAI/DUFMech/issues/205) and
   [#207](https://github.com/CultureBotAI/DUFMech/issues/207) remain scientific
   follow-ups. None is resolved merely by publishing this bounded extension.
+
+PF01973 Kurthia/Irchel ortholog extension (local curation, 2026-10-15):
+
+- Six graphs add eight observed cellular effects from Unay2024 Figure 5D and
+  Figure S5A/B. PF01973 now has 42 graphs and 80 edges: 78 observed and two
+  hypothesized. The prior 36 graphs and their evidence are unchanged.
+- Exact PF01973.24 HMM mapping places Kurthia WP_068455574.1 at alignment
+  residues 159-329 and Irchel3E13 WP_095156947.1 at 196-352. Both pass the
+  profile gathering threshold. The distinct envelopes, model/sequence hashes,
+  software parameters and MR-1 positive controls are retained in
+  `evidence/PF01973/unay-2024-ortholog-contexts.txt`.
+- Kurthia's complete Maf/GlfM deposited design bodies match their references.
+  Irchel's FliC/Maf construct is synthetic, but its sequence is not supplied
+  among the nonempty S6 fragments. Physical plasmid identity remains unresolved.
+  Neither result resolves the earlier MR-1 Maf2 L230S discrepancy.
+- S5A retains partial Kurthia Hag modification-associated retardation without
+  GlfM and compares delta-flmG with the double delta-flmG delta-neuB mutant.
+  S5B instead uses WT and single delta-neuB, retaining host FlmG. The new
+  edges do not assert isolated Maf sufficiency, direct glycosyl transfer,
+  a protein-stability mechanism or universal GlfM necessity.
+- The partial scientific self-review is
+  `reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/`.
+  It preserves all three prior finding identities, targets and open issues
+  204/205/207. Canonical EDIT/REVIEW history was appended and regenerated;
+  PF01973 remains IN_PROGRESS, not a completed family characterization.
+- All 8,296 manifest hashes, original graph/evidence preservation, unchanged
+  other projections, frozen inputs and exports, 52 focused graph/QC tests,
+  schema reproduction and 1440px/390px unpinned preview checks passed.
+  The final inventory has 791 graphs and 1,680 edges across 126 families;
+  8,170 remain graphless. These counts do not establish scientific completion.
+- Final `just validate-all validate-schema` passed: 8,296 current projections
+  with zero drift, 310 history records, four review-contract tests, 160
+  structured bundles and 168 native reports. Inventory and export reproduction
+  passed after the REVIEW-index refresh. The scientific digest remains
+  `65179fa078d0fbfc89696fbeebcd5ac910c750601df893fb8475096322bf65ff`.
+- Canonical Pages and source pins are unchanged by this local pass. The full
+  8,296-family objective and earlier corpus findings remain active, including
+  remaining Maf studies, corrected Clostridium evidence and archaeal mechanisms.
+
+PF01973 Kurthia/Irchel publication audit (PR #210, 2026-10-15):
+
+- The initial local source-pin check and CI run `38672125477` rejected the
+  changed overlay. [Issue #209](https://github.com/CultureBotAI/DUFMech/issues/209)
+  tracks the publication blocker; neither the guard nor generated hashes were
+  bypassed. Candidate `5e92882f31859625c1061a17127001e59b307972` is retained by
+  annotated tag `source/dufmech-pr-210-candidate`. Native capture and canonical
+  remote verification pass for all 9,118 candidate source files.
+- Adversarial self-review visually rechecked Figure 5D and S5A/B, their legends,
+  Methods and the S4/S6 construct records. The exact HMM rerun reproduces the
+  original result bytes; both complete Kurthia design bodies match references.
+  No additional blocking scientific defect was established. This is not an
+  independent expert review or a completed family-wide assessment.
+- Fresh focused regressions pass 52 tests in 22.47s. The initial test invocation
+  omitted the required shared runtime path and failed one adapter test; the
+  configured rerun passed without code changes. All 148 checked runtime files
+  and 22 governed artifacts match the CI-pinned CLAW revision.
+- Canonical Pages were regenerated through the native writer. At 1440px and
+  390px, checks pass all 42 graphs/80 edges, the six new graph headings/eight
+  edge rows, mapping and support labels, evidence disclosures and pinned source
+  links, with no document overflow or JavaScript errors. Selected screenshots
+  were inspected. The scientific digest and prior 36 graphs remain unchanged.
+- The audit-bearing checkpoint must be retained and recaptured before final
+  full local QC, exact-head CI and merge. Subsequent release results belong in
+  PR #210; retain both source tags after branch cleanup. Scientific issues
+  [#204](https://github.com/CultureBotAI/DUFMech/issues/204),
+  [#205](https://github.com/CultureBotAI/DUFMech/issues/205) and
+  [#207](https://github.com/CultureBotAI/DUFMech/issues/207) remain open.
+  PF01973 stays IN_PROGRESS and the corpus-wide objective remains active.

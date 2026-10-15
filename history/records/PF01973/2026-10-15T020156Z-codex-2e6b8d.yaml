@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01973
+  path: curation/families/PF01973.yaml
+session:
+  id: 2026-10-15T020156Z-codex-2e6b8d
+  timestamp: '2026-10-15T02:01:56Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add six Kurthia and Irchel ortholog graphs with eight scoped cellular effects.
+  details: Reassessed Unay2024 Figure5D and S5A/B, Methods and S4/S6. Exact PF01973.24
+    HMM gathering-threshold mapping verifies Kurthia Maf alignment159-329 and Irchel3E13
+    Maf196-352; complete Kurthia Maf and GlfM design bodies match their versioned
+    references. Preserve residual GlfM-independent Kurthia shifts, different Caulobacter
+    host knockouts, unresolved Irchel synthetic and physical construct sequences,
+    and all36 earlier graphs. New edges describe observed cellular readouts with unresolved
+    molecular directness. Baseline records-check passed8296 records with zero drift.
+    Guarded regeneration, focused validation and successor scientific review follow;
+    status remains IN_PROGRESS, issues204/205/207 and the full corpus goal remain
+    open. The first history command was rejected because numeric issue arguments were
+    not URI values; this retry supplies their full GitHub URLs.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/205
+  - https://github.com/CultureBotAI/DUFMech/issues/207
+  urls:
+  - https://archive-ouverte.unige.ch/unige:178145
