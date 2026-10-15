@@ -6408,3 +6408,36 @@ PF01977 ScFdc substrate-scope continuation (2026-10-15, local curation):
   family is PF01978 (TrmB), currently SEEDED with no canonical graph in the
   validated inventory. Continue the full 8,296-family queue rather than treating
   this detailed source-specific update as completion of the corpus objective.
+
+PF01977 ScFdc substrate-scope publication audit (2026-10-15, PR #225):
+
+- Publication was explicitly requested. The adversarial self-review reread
+  Nagy2019 Sections 5/6/15-20 and Tables 1/2, and visually reinspected original
+  Figures 2/4 and S68/S70. No additional blocking scientific defect was found
+  in the scoped additions. This is not independent expert approval or full
+  PF01977 scientific review.
+- Issue #226 tracks the stale source-pin failure reproduced locally and in
+  initial CI run `38738851770`. Candidate source commit
+  `288ffa7e633395b2a777623fc161b661e434f123` is retained by annotated tag
+  `source/dufmech-pr-225-candidate`. Native capture and canonical online
+  retention verification pass for all 9,154 candidate source files.
+- Native rendering regenerated canonical Pages. At 1440px and 390px, the
+  changed record retains 43 graphs, 118 edges, 113 observed/five hypothesized
+  labels, 118 evidence links, three OPEN discussions, working disclosures and
+  the correct pinned record URL. No document overflow or JavaScript errors
+  were found; selected screenshots were visually inspected. Native horizontal
+  table scrolling is retained; browser and temporary server closed.
+- Fresh native validation passes 8,296 records with zero drift, 324 history
+  files, four review-contract tests, 170 structured bundles, 178 native reports
+  and schema reproduction. All 52 focused tests, 22 governed-artifact checks
+  and isolated OAK regression checks pass. Independent integrity checks verify
+  all record/evidence hashes and adopted table values, the saved semantic digest,
+  and preservation of all 32 earlier graphs, other records, frozen snapshots,
+  prior reviews/history, code and exports.
+- Scientific issues #217-219 received progress updates and remain open.
+  PF01977 remains IN_PROGRESS. PF01978 scratch research is not part of this PR;
+  the full 8,296-family objective remains active.
+- The append-only publication audit must itself be retained and recaptured
+  before final full QC, exact-head CI, merge integrity and deployment. These
+  future outcomes are not certified by this checkpoint. Preserve annotated
+  source tags after deleting the feature branch.
