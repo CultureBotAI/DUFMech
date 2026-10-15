@@ -5912,3 +5912,33 @@ PF01973 Kurthia/Irchel ortholog extension (local curation, 2026-10-15):
 - Canonical Pages and source pins are unchanged by this local pass. The full
   8,296-family objective and earlier corpus findings remain active, including
   remaining Maf studies, corrected Clostridium evidence and archaeal mechanisms.
+
+PF01973 Kurthia/Irchel publication audit (PR #210, 2026-10-15):
+
+- The initial local source-pin check and CI run `38672125477` rejected the
+  changed overlay. [Issue #209](https://github.com/CultureBotAI/DUFMech/issues/209)
+  tracks the publication blocker; neither the guard nor generated hashes were
+  bypassed. Candidate `5e92882f31859625c1061a17127001e59b307972` is retained by
+  annotated tag `source/dufmech-pr-210-candidate`. Native capture and canonical
+  remote verification pass for all 9,118 candidate source files.
+- Adversarial self-review visually rechecked Figure 5D and S5A/B, their legends,
+  Methods and the S4/S6 construct records. The exact HMM rerun reproduces the
+  original result bytes; both complete Kurthia design bodies match references.
+  No additional blocking scientific defect was established. This is not an
+  independent expert review or a completed family-wide assessment.
+- Fresh focused regressions pass 52 tests in 22.47s. The initial test invocation
+  omitted the required shared runtime path and failed one adapter test; the
+  configured rerun passed without code changes. All 148 checked runtime files
+  and 22 governed artifacts match the CI-pinned CLAW revision.
+- Canonical Pages were regenerated through the native writer. At 1440px and
+  390px, checks pass all 42 graphs/80 edges, the six new graph headings/eight
+  edge rows, mapping and support labels, evidence disclosures and pinned source
+  links, with no document overflow or JavaScript errors. Selected screenshots
+  were inspected. The scientific digest and prior 36 graphs remain unchanged.
+- The audit-bearing checkpoint must be retained and recaptured before final
+  full local QC, exact-head CI and merge. Subsequent release results belong in
+  PR #210; retain both source tags after branch cleanup. Scientific issues
+  [#204](https://github.com/CultureBotAI/DUFMech/issues/204),
+  [#205](https://github.com/CultureBotAI/DUFMech/issues/205) and
+  [#207](https://github.com/CultureBotAI/DUFMech/issues/207) remain open.
+  PF01973 stays IN_PROGRESS and the corpus-wide objective remains active.

@@ -1,0 +1,41 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01973
+  path: data/families/PF01973.yaml
+session:
+  id: 2026-10-15T021738Z-codex-d53a60
+  timestamp: '2026-10-15T02:17:38Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of PF01973 Kurthia and Irchel cellular
+    contexts.
+  details: Saved reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.yaml
+    and native-derived Markdown after primary panel/control assessment, exact HMM
+    and Kurthia design comparisons, guarded regeneration,52 focused tests,8296 manifest
+    hash checks and1440/390px unpinned browser checks. Six graphs add eight observed
+    cellular effects; the original36 graphs and two hypotheses are preserved. The
+    native save rejected an outdated publication evidence-kind token in the temporary
+    input; correction to primary_source passed without modifying an earlier retained
+    report. The temporary browser helper was corrected to select actual edge rows
+    after an initial heading/container mismatch; final checks passed. All three prior
+    finding identities/targets and issues204/205/207 remain open. IN_PROGRESS is unchanged;
+    direct molecular chemistry, physical constructs, other member studies and the
+    full8296-family goal remain incomplete. Final REVIEW-index regeneration and validation
+    follow. Canonical Pages/source pins and publication are outside this local pass.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/204
+  - https://github.com/CultureBotAI/DUFMech/issues/205
+  - https://github.com/CultureBotAI/DUFMech/issues/207
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.yaml

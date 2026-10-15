@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: report
+  slug: pr-210-pf01973-publication
+  path: reviews/structured/20261015T025110Z-pr-210-pf01973-ortholog-publication/review.yaml
+session:
+  id: 2026-10-15T025157Z-codex-2cbdac
+  timestamp: '2026-10-15T02:51:57Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: AUDIT
+  outcome: needs_followup
+  summary: Retain the scoped PF01973 ortholog adversarial publication audit.
+  details: 'Same-agent publication audit of PR210: exact HMM results and Kurthia deposited
+    design bodies reproduce; original graphs/evidence and 8296 projection manifest
+    hashes are preserved. Native record/history/review/schema checks, 52 focused tests,
+    candidate source retention and canonical desktop/mobile graph checks passed. Source-pin
+    drift is tracked in issue209. Retain and recapture this audit-bearing checkpoint,
+    then run full local QC and exact-head CI before merge. Scientific issues204/205/207
+    remain open; no family status promotion or corpus completion is claimed.'
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/209
+  prs:
+  - https://github.com/CultureBotAI/DUFMech/pull/210
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261015T025110Z-pr-210-pf01973-ortholog-publication/review.yaml

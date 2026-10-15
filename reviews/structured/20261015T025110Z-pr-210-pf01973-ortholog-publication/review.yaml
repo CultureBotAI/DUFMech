@@ -1,0 +1,464 @@
+schema_version: 1.0.0
+review_id: 20261015T025110Z-pr-210-pf01973-ortholog-publication
+repository: CultureBotAI/DUFMech
+kind: repository
+source:
+  git_revision: 5e92882f31859625c1061a17127001e59b307972
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: conf/site_source_pins.json
+    sha256: 253f15ced5c3ae75b06439c6969529a2c7b03af441384d9555741bae94b5d7c6
+    role: target
+  - path: curation/families/PF01973.yaml
+    sha256: 546c6efe3e8a938ce5e7fb728695ab1d8c7a1f62ffbb129c80ae8051533d2941
+    role: target
+  - path: data/families/PF01973.yaml
+    sha256: 5a7334501ade85ad1ff614fc90974f645854d13707da9c010a5d35e10fda3dcc
+    role: target
+  - path: data/families/manifest.json
+    sha256: 11d11a70b142c9e1396a0d4ec637b161353447f34d0b8a7929ad4d4583020c8d
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: docs/causal-graphs.md
+    sha256: 364205bbdbb80f136673d74f35a1aed693b6bedf8e04ac505d6aae9a872640b8
+    role: target
+  - path: evidence/PF01973/coverage-and-exclusions.txt
+    sha256: 4efc695e12f93f8fd4e0a7673140d3984f3d870163389e88cad8cc63eef49f53
+    role: target
+  - path: evidence/PF01973/unay-2024-ortholog-contexts.txt
+    sha256: 3c840e71d100f31279f07f4e8784adb8720eb8592804329735aaf94a1d1a16f7
+    role: target
+  - path: history/records/PF01973/2026-10-15T020156Z-codex-2e6b8d.yaml
+    sha256: 3ca04a804c85ea2bdf40c48527a57263d35e836bf69fd8c2b672f9fce72aa9db
+    role: target
+  - path: history/records/PF01973/2026-10-15T021738Z-codex-d53a60.yaml
+    sha256: 872cf74691e8b3dd9728cb05df38cbf35b842a2d59523c4ad79b676dd13fda52
+    role: target
+  - path: pages/families/PF01973.html
+    sha256: c5b1250d4ee932fad409de4498ec7ef849134107bcdf8ee9e7bcc3560c39aac2
+    role: target
+  - path: reports/causal_graphs/inventory.json
+    sha256: 6ae1f8b47c55631a46a03178f302bf5093bff93360e1fbfbfafc7e2ebd661491
+    role: target
+  - path: reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.md
+    sha256: 744c6c1de76be1bcf12cf5ee10d6ad2f62faffb368bb958756c871aa5a4d05a1
+    role: target
+  - path: reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.yaml
+    sha256: f92a9a3f86a3abd64e69e49027913814386d6f6e53be902da4a3b025a3e981d1
+    role: target
+  - path: src/dufmech/site_sources.py
+    role: context
+    sha256: bad39b4cb1d578ddec9c8ee5b415411110391e6f290b9e96651c550ef5738d65
+  - path: src/dufmech/qc.py
+    role: context
+    sha256: e75e5080000578ef5b794147fbd138810de552da9eb241d2cb7612322c093d6e
+  - path: .github/workflows/validate.yaml
+    role: context
+    sha256: 88da10d07212b66c1882b077cd02847037ecc88042432ebbae928356d4c9c4e5
+targets:
+- target_id: conf/site_source_pins.json
+  path: conf/site_source_pins.json
+  label: conf/site_source_pins.json
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: curation/families/PF01973.yaml
+  path: curation/families/PF01973.yaml
+  label: curation/families/PF01973.yaml
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: data/families/PF01973.yaml
+  path: data/families/PF01973.yaml
+  label: data/families/PF01973.yaml
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: data/families/manifest.json
+  path: data/families/manifest.json
+  label: data/families/manifest.json
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: docs/causal-graphs.md
+  path: docs/causal-graphs.md
+  label: docs/causal-graphs.md
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: evidence/PF01973/coverage-and-exclusions.txt
+  path: evidence/PF01973/coverage-and-exclusions.txt
+  label: evidence/PF01973/coverage-and-exclusions.txt
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: evidence/PF01973/unay-2024-ortholog-contexts.txt
+  path: evidence/PF01973/unay-2024-ortholog-contexts.txt
+  label: evidence/PF01973/unay-2024-ortholog-contexts.txt
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: history/records/PF01973/2026-10-15T020156Z-codex-2e6b8d.yaml
+  path: history/records/PF01973/2026-10-15T020156Z-codex-2e6b8d.yaml
+  label: history/records/PF01973/2026-10-15T020156Z-codex-2e6b8d.yaml
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: history/records/PF01973/2026-10-15T021738Z-codex-d53a60.yaml
+  path: history/records/PF01973/2026-10-15T021738Z-codex-d53a60.yaml
+  label: history/records/PF01973/2026-10-15T021738Z-codex-d53a60.yaml
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: pages/families/PF01973.html
+  path: pages/families/PF01973.html
+  label: pages/families/PF01973.html
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: reports/causal_graphs/inventory.json
+  path: reports/causal_graphs/inventory.json
+  label: reports/causal_graphs/inventory.json
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.md
+  path: reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.md
+  label: reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.md
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.yaml
+  path: reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.yaml
+  label: reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.yaml
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+title: PR 210 PF01973 Kurthia/Irchel adversarial publication audit
+started_at: '2026-10-15T02:37:43Z'
+finished_at: '2026-10-15T02:51:10Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same-agent adversarial challenge of the extension and publication
+    surfaces, not independent expert approval.
+skill: .claude/skills/review-repo/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: false
+summary: The reproduced source-pin blocker is tracked as issue 209. Candidate source
+  retention, native rendering, responsive graph checks, exact mapping/construct reproduction
+  and preservation checks pass. No additional blocking scientific defect was established
+  in this bounded self-review. The audit-bearing checkpoint and final full QC/CI remain
+  subsequent release gates. Scientific issues 204, 205 and 207 stay open.
+scope:
+  description: The 11 initial changed source paths plus the candidate pin ledger and
+    canonical PF01973 page; exact ortholog identity, host/comparator scope, evidence
+    and generated ownership, history/review preservation and publication readiness.
+  selection: Explicit PR changed-source set plus two publication surfaces, not a random
+    sample.
+  coverage: full
+  population_size: 13
+  reviewed_target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01973.yaml
+  - data/families/PF01973.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01973/coverage-and-exclusions.txt
+  - evidence/PF01973/unay-2024-ortholog-contexts.txt
+  - history/records/PF01973/2026-10-15T020156Z-codex-2e6b8d.yaml
+  - history/records/PF01973/2026-10-15T021738Z-codex-d53a60.yaml
+  - pages/families/PF01973.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.md
+  - reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.yaml
+  exclusions:
+  - target: Whole-family scientific completion and raw experimental datasets
+    reason: Primary figure/Methods and construct checks assess this extension, not
+      every member, raw image series or PRIDE spectra.
+  - target: Final audit-bearing revision, exact-head CI and deployed Pages
+    reason: This immutable review itself must first be committed, retained and pinned;
+      final release gates occur subsequently.
+checks:
+- check_id: integrity
+  name: integrity
+  command: PYTHONPATH=src .venv/bin/python /private/tmp/duf-ortholog-check.py --review
+    --publication
+  status: passed
+  required: true
+  exit_code: 0
+  summary: All 8296 manifest hashes; 42 graphs/80 edges; 78 observed/two hypotheses;
+    six new graphs/eight phenotypic edges; unchanged prior 36 graphs, original evidence,
+    imported fields, frozen inputs, other projections and exports; six canonical events
+    and exact scientific review digest.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01973.yaml
+  - data/families/PF01973.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01973/coverage-and-exclusions.txt
+  - evidence/PF01973/unay-2024-ortholog-contexts.txt
+  - history/records/PF01973/2026-10-15T020156Z-codex-2e6b8d.yaml
+  - history/records/PF01973/2026-10-15T021738Z-codex-d53a60.yaml
+  - pages/families/PF01973.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.md
+  - reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.yaml
+  evidence_ids:
+  - integrity
+- check_id: native
+  name: native
+  command: just validate-all validate-schema
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 8296 schema-valid records and zero drift; canonical history, review contract,
+    retained bundles/native reports and schema reproduction pass.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01973.yaml
+  - data/families/PF01973.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01973/coverage-and-exclusions.txt
+  - evidence/PF01973/unay-2024-ortholog-contexts.txt
+  - history/records/PF01973/2026-10-15T020156Z-codex-2e6b8d.yaml
+  - history/records/PF01973/2026-10-15T021738Z-codex-d53a60.yaml
+  - pages/families/PF01973.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.md
+  - reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.yaml
+  evidence_ids:
+  - integrity
+- check_id: regressions
+  name: regressions
+  command: CLAW_SRC=/private/tmp/dufmech-protein-claw/src PYTHONPATH=src:$CLAW_SRC
+    uv run --locked --extra dev pytest -q tests/test_causal_graphs.py tests/test_qc.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 52 tests passed in 22.47s. An initial invocation lacking the required CLAW
+    path failed one adapter test; the configured rerun passed without code changes.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01973.yaml
+  - data/families/PF01973.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01973/coverage-and-exclusions.txt
+  - evidence/PF01973/unay-2024-ortholog-contexts.txt
+  - history/records/PF01973/2026-10-15T020156Z-codex-2e6b8d.yaml
+  - history/records/PF01973/2026-10-15T021738Z-codex-d53a60.yaml
+  - pages/families/PF01973.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.md
+  - reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.yaml
+  evidence_ids:
+  - runtime
+- check_id: mapping
+  name: mapping
+  command: uv run --offline --with pyhmmer python /private/tmp/duf-pf01973-ortholog-hmm-20261015.py
+    /private/tmp/duf-ortholog-publication-hmm.json
+  status: passed
+  required: true
+  exit_code: 0
+  summary: The exact PF01973.24 profile rerun reproduces the prior result byte-for-byte,
+    SHA256 86f1365ec3ca293530c09726a13a4bafa302c6b5f4c1a1823f006c62bcb3044e.
+  target_ids:
+  - curation/families/PF01973.yaml
+  evidence_ids:
+  - primary
+- check_id: constructs
+  name: constructs
+  command: uv run --offline --with biopython python /private/tmp/duf-pf01973-kurthia-construct-20261015.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Kurthia Maf548aa and GlfM117aa full ungapped deposited design bodies exactly
+    match their references; physical plasmids and the Irchel synthetic fragment remain
+    unresolved.
+  target_ids:
+  - curation/families/PF01973.yaml
+  evidence_ids:
+  - primary
+- check_id: retention
+  name: retention
+  command: just site-sources-published
+  status: passed
+  required: true
+  exit_code: 0
+  summary: All 9118 candidate source files match canonical blobs at 5e92882f31859625c1061a17127001e59b307972,
+    retained by annotated source/dufmech-pr-210-candidate.
+  target_ids:
+  - conf/site_source_pins.json
+  evidence_ids:
+  - publication
+- check_id: render
+  name: render
+  command: just render
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Canonical Pages regenerated through the native writer, not manual HTML
+    or hash edits.
+  target_ids:
+  - pages/families/PF01973.html
+  evidence_ids:
+  - publication
+- check_id: browser
+  name: browser
+  command: DUF_CANONICAL=1 node /private/tmp/duf-ortholog-browser.cjs
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 1440px/390px checks verify 42 graphs/80 edges, all six new headings/eight
+    edge rows, exact mappings, visible support, expanded evidence, pinned source link,
+    no document overflow or JavaScript errors. Selected screenshots inspected; browser/server
+    closed.
+  target_ids:
+  - pages/families/PF01973.html
+  evidence_ids:
+  - publication
+- check_id: governed-runtime
+  name: governed-runtime
+  command: bash scripts/check_vendored_sync.sh
+  status: passed
+  required: true
+  exit_code: 0
+  summary: All 22 governed artifacts match the pinned revision. Separate comparison
+    of 148 runtime/source/lock files with the official adce6ce0d1720635f11268465003cf78f35b2acf
+    archive found zero differences.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01973.yaml
+  - data/families/PF01973.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01973/coverage-and-exclusions.txt
+  - evidence/PF01973/unay-2024-ortholog-contexts.txt
+  - history/records/PF01973/2026-10-15T020156Z-codex-2e6b8d.yaml
+  - history/records/PF01973/2026-10-15T021738Z-codex-d53a60.yaml
+  - pages/families/PF01973.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.md
+  - reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.yaml
+  evidence_ids:
+  - runtime
+evidence:
+- evidence_id: integrity
+  kind: validation
+  reference: data/families/manifest.json
+  locator: Structured comparison against 0c06f4eabcd15a137efb0c96bce8cf14c24c77f2
+    and current native checks
+  accessed_at: '2026-10-15T02:51:10Z'
+  support: supports
+  summary: Only PF01973 changes among 8296 projections; its scientific digest is 65179fa078d0fbfc89696fbeebcd5ac910c750601df893fb8475096322bf65ff.
+    Prior graphs, append-only reports, frozen sources and exports are preserved. Structural
+    counts do not imply scientific completion.
+- evidence_id: primary
+  kind: primary_source
+  reference: https://archive-ouverte.unige.ch/unige:178145
+  locator: Figure5D and S5A/B visually rechecked; full S5 legend, Methods e2-e6, S4
+    rows49/50/57/58 and all nonempty S6 fragments; exact HMM/construct reruns
+  accessed_at: '2026-10-15T02:51:10Z'
+  support: supports
+  summary: The new edges preserve cassette-level effects and host donor-pathway perturbations.
+    S5A uses delta-flmG versus delta-flmG delta-neuB and retains residual shift without
+    GlfM; S5B uses WT versus single delta-neuB, with endogenous FlmG. No Maf-minus
+    acceptor-positive comparator, isolated Maf sufficiency, direct glycan transfer
+    or physical plasmid identity is invented. Exact sequence mapping supports reference
+    identity, not biochemical function.
+- evidence_id: publication
+  kind: validation
+  reference: https://github.com/CultureBotAI/DUFMech/issues/209
+  locator: Local source-pin failure and initial CI run38672125477; native candidate
+    capture, canonical remote retention and responsive rendering checks
+  accessed_at: '2026-10-15T02:51:10Z'
+  support: supports
+  summary: The old source ledger rejected the changed PF01973 overlay before QC. The
+    candidate fix passes retention/rendering checks. Closure still requires the audit-bearing
+    checkpoint and final release gates.
+- evidence_id: runtime
+  kind: validation
+  reference: .github/workflows/validate.yaml
+  locator: Pinned CLAW runtime adce6ce0d1720635f11268465003cf78f35b2acf; focused regressions
+    and canonical artifact checker
+  accessed_at: '2026-10-15T02:51:10Z'
+  support: supports
+  summary: The missing-path test invocation was an environment error, not hidden by
+    skipping its test. The corrected environment passes all 52 focused tests and matches
+    the CI runtime source bytes.
+- evidence_id: followups
+  kind: prior_review
+  reference: reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.yaml
+  locator: Findings mpte-contexts, maf-contexts, unay-constructs; issue205 partial-progress
+    comment
+  accessed_at: '2026-10-15T02:51:10Z'
+  support: supports
+  summary: All prior scientific finding identities and targets remain open. New ortholog
+    profile evidence and Kurthia design agreement do not close other Maf contexts,
+    archaeal MptE coverage, corrected Clostridium evidence or the MR-1 Maf2 L230S
+    discrepancy.
+assessments:
+- assessment_id: bounded-extension
+  area: scope
+  topic: Ortholog identity, causal scope and maintained ownership
+  outcome: supported
+  target_ids:
+  - curation/families/PF01973.yaml
+  - data/families/PF01973.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01973/coverage-and-exclusions.txt
+  - evidence/PF01973/unay-2024-ortholog-contexts.txt
+  - history/records/PF01973/2026-10-15T020156Z-codex-2e6b8d.yaml
+  - history/records/PF01973/2026-10-15T021738Z-codex-d53a60.yaml
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.md
+  - reviews/structured/20261015T021620Z-pf01973-kurthia-irchel-contexts/review.yaml
+  evidence_ids:
+  - integrity
+  - primary
+  - followups
+  - runtime
+  summary: Exact reference mappings and construct checks reproduce; the eight new
+    effects remain experimentally observed cellular readouts with unresolved molecular
+    directness. The extension preserves prior evidence and does not promote IN_PROGRESS
+    or close scientific findings.
+- assessment_id: candidate-release
+  area: provenance
+  topic: Retained candidate and visible graph evidence
+  outcome: supported
+  target_ids:
+  - conf/site_source_pins.json
+  - pages/families/PF01973.html
+  evidence_ids:
+  - publication
+  - integrity
+  summary: The native source ledger and rendered page reflect retained candidate bytes;
+    evidence and uncertainty remain accessible at both viewports. Final audit-bearing
+    QC/CI remain mandatory.
+findings: []
+actions: []
+limitations:
+- Same-agent adversarial review, not independent expert approval or family-wide scientific
+  completion.
+- Full local QC, final source retention, exact-head CI and deployment follow this
+  immutable report; no future outcome is claimed here.
+- Scientific issues204/205/207 remain open; no raw image series, PRIDE spectra or
+  physical plasmids were reanalyzed.
+- Primary originals and temporary reproduction/browser scripts are outside the repository;
+  exact hashes, minimal evidence and bounded check methods are retained.
+- Poppler pdftotext was unavailable; text was read with cached PyMuPDF and relevant
+  original figure images were visually inspected.
+related_reviews:
+- repository: CultureBotAI/DUFMech
+  review_id: 20261015T021620Z-pf01973-kurthia-irchel-contexts
+  relationship: Publication audit of the extension; does not supersede its open scientific
+    findings.
+tags:
+- adversarial-self-review
+- pr-210
+- pf01973
+- publication
