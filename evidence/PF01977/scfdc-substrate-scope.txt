@@ -1,0 +1,190 @@
+PF01977 / ScFdc substrate-scope evidence ledger
+Curator: Codex; research and inspection date: 2026-10-15 UTC.
+Primary: Nagy et al. (2019), Exploring the substrate scope of ferulic acid
+decarboxylase (FDC1) from Saccharomyces cerevisiae. Scientific Reports 9:647.
+PMID:30679592; PMCID:PMC6345843; DOI:10.1038/s41598-018-36977-x.
+https://www.nature.com/articles/s41598-018-36977-x
+Article and supplement: CC BY 4.0, as stated in the public PMC deposit.
+This ledger contains minimal quotations, factual transcriptions and curator
+interpretation, not a redistributed article, supplement or original figure.
+
+SOURCE RETENTION AND INSPECTION
+Public OAI manuscript:
+https://pmc.ncbi.nlm.nih.gov/api/oai/v1/mh/?verb=GetRecord&identifier=oai:pubmedcentral.nih.gov:6345843&metadataPrefix=pmc
+SHA256 cd4043cfa450dc180bfc3a9155c10469ee88af7591289b06d4f9824bf1a1b24c
+Namespace-aware XML traversal; Sec3-6, Sec8-9, Sec14-20 and Tables 1/2 inspected.
+Public PMC OA deposit metadata:
+https://pmc-oa-opendata.s3.amazonaws.com/PMC6345843.1/PMC6345843.1.json
+SHA256 79413090bb01d6ce8a79bfc520e03bfbdce04c2c31e5c2af6a3885abb28320dc
+Supplement:
+https://pmc-oa-opendata.s3.amazonaws.com/PMC6345843.1/41598_2018_36977_MOESM1_ESM.docx
+SHA256 6fff50bc857fe41c5ae75c49993d48fb1d1fb61e95d487252d0e92fa6e41a044
+MD5 b47e59b8c439731864350c2064edbc87 matches the public deposit metadata.
+OOXML paragraphs, tables and image relationships inspected using structured XML.
+Figures 1-4, S25/S26, S67/S68, S70 and S78 visually inspected. S67/S68 EMF
+assets rendered faithfully with Inkscape; S68 contains a structure and spectrum,
+not two independent measured spectra. S67 peak is labeled 7.801 min; S68 has a
+dominant m/z 187 ion, supporting the source's product-2w assignment, not 2x.
+Other individual HPLC/GC-MS supplement traces were not all visually reviewed.
+Figure URLs share the supplement's public directory; filenames and SHA256:
+41598_2018_36977_Fig1_HTML.jpg 46924424a93fdea917520661df1095b370ffc60799439336b5e6e373e5281681
+41598_2018_36977_Fig2_HTML.jpg f7d38b664f230adf1752aa6e735d6e774787bd3660aa52e196da49d46f65a79a
+41598_2018_36977_Fig3_HTML.jpg f712e49c77f736ddc240e0a3fab7fa68ad6d51e1a15f03c928375346b6184d08
+41598_2018_36977_Fig4_HTML.jpg 990286d3be5ed6a8b7a8bdb74edb41ead43ba348774172007e26ff62cf9387c9
+All four image MD5 values match the public deposit metadata.
+PMC HTML currently presents a browser check; Nature HTML previously failed.
+The already retrieved official OAI/OA deposit was used, without bypassing either.
+
+M: IDENTITY AND CONSTRUCT LIMITS
+ScFdc is FDC1/YDR539W, related to the 503-aa Q03034 reference, sequence version 1.
+Reference species is S. cerevisiae; S288c reference taxonomy does not establish
+the yeast strain used to make the assay plasmid. Graph taxon is NCBITaxon:4932.
+Reference intervals: PF01977 119-320; PF20695 14-102; PF20696 328-464.
+Q192 is inside PF01977; I330 is outside it, within PF20696.
+UniProt JSON https://rest.uniprot.org/uniprotkb/Q03034.json
+SHA256 8de18cb55557c4bb98943b61a0a08218766e84b9933d7e4278c47ac631398a47
+Complete InterPro Pfam response (next=null):
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q03034/
+SHA256 4a300b19a733edfda76662821a91fe4c655a308c9fea1aeb60209a6db5920ef8
+For the earlier separate 4ZAC reference-body match, see scfdc-primary-assays.txt;
+it does not establish the 2019 plasmid's complete sequence.
+Initial WT uses pTfdc1Sc (Addgene 78287), a pTrc99A construct. Mutagenesis uses
+a SalI/HindIII subclone in pCDF-Duet1, called pCFDfdc1/pCDFDuet_ScFDC1 in text.
+Table 2 does not independently establish vector-matched WT comparisons.
+Sequencing of mutations is reported, not independently repeated here.
+Public https://www.addgene.org/78287/ metadata confirms FDC1, pTrc99A, 1512-bp
+insert and EcoRI/BamHI cloning. The sequence page requires login for downloads;
+no gated sequence was retrieved or an older download endpoint used to bypass it.
+S78 is an induced/uninduced WT expression gel, not variant-abundance or active-
+cofactor normalization. Full inserts, tags, occupancy and isogenic controls remain
+unresolved. Mutant host is BL21(DE3) pLysS; general Methods omits pLysS.
+
+M1: PARTIAL PRIMER AND HOMOLOG CHECKS
+Table S4 primers were translated with Biopython 1.88 in all three frames, using
+reverse complements for reverse primers, and matched to Q03034 with the named
+single substitution. Frame offsets are zero based; protein coordinates are 1 based.
+Q192N FP: frame 2, KPNHIRQIADSW, 190-201; RPrc: frame 1, HITGLVIKPNHIR, 183-195.
+Q192A FP: frame 2, KPAHIRQIADSW, 190-201; RPrc: frame 2, HITGLVIKPAHI, 183-194.
+I330A FP: frame 2, LAGSLVATEA, 329-338; RPrc: frame 0, LCTDETHTLAG, 321-331.
+I330V FP: frame 2, LVGSLVATEAK, 329-339; RPrc: frame 2, LCTDETHTLVGS, 321-332.
+Q192A primers exist but no Q192A conversion result is supplied in Table 2.
+A2QHE5 reference JSON https://rest.uniprot.org/uniprotkb/A2QHE5.json
+SHA256 c9b6b4743e800d05b2f0af05b37694fded9d0be11a41fc5647fb08a2d0222035
+Global reference-protein alignment (BLOSUM62, gap open -10, extend -0.5) maps
+ScQ192 to AnQ190 and ScI330 to AnI327, agreeing with the S71 alignment table.
+This verifies homolog numbering, not the unpublished mutated docking coordinates.
+
+A: ASSAY AND READOUT
+Sec3/4/8/9/14/18, Table 1, Figure 3 and supplement S1-S3.
+Expression: 37 C to OD600 about 0.6, 0.2 mM IPTG, another 4.5 h; wash in
+100 mM sodium phosphate pH 7, resuspend to OD about 1, pellet and store at -20 C.
+Assay: 1 mL in PTFE-sealed 1.5-mL glass vials; substrates supplied from DMSO.
+Optimized time series: 2 mM acid, OD600 about 1, 35 C, 100 mM phosphate pH 7;
+sampling at 1,2,3,4,8,24,30,48,72 h. Do not combine with the initial 1-mM,
+30-C, 24-h Table S1 screen, or treat differently timed maxima as initial rates.
+HPLC uses authentic acid calibration and anisole internal standard; conversion
+means acid disappearance. GC-MS is EI 70 eV with NIST/Wiley spectral analogy,
+not authentic product standards for every substrate. Whole-cell endpoints do
+not isolate ScFdc catalysis, cofactor supply, transport or PF01977 chemistry.
+No-biocat and plasmid-negative host controls are text-reported in Sec4. The
+cited S25/S26 figures are actually substrate-free matrix extracts (hexane/MTBE),
+not plotted plasmid-negative-host or no-biocat assays. Preserve this miscitation.
+Quote Q1: "substrate depletion"
+
+A1: TABLE 1 FACTUAL TRANSCRIPTION (substrate | time h | HPLC conversion %)
+1a cinnamic acid | 24 | >99
+1b (E)-3-(2-bromophenyl)acrylic acid | 48 | 83
+1c (E)-3-(3-bromophenyl)acrylic acid | 8 | >99
+1d (E)-3-(4-bromophenyl)acrylic acid | 24 | >99
+1e (E)-3-(2-methoxyphenyl)acrylic acid | 48 | 92
+1f (E)-3-(3-methoxyphenyl)acrylic acid | 48 | >99
+1g (E)-3-(4-methoxyphenyl)acrylic acid | 72 | >99
+1h (E)-3-(2-(trifluoromethyl)phenyl)acrylic acid | 72 | 62
+1i (E)-3-(3-(trifluoromethyl)phenyl)acrylic acid | 48 | 87
+1j (E)-3-(4-(trifluoromethyl)phenyl)acrylic acid | 48 | 82
+1k (2E,4E)-5-phenylpenta-2,4-dienoic acid | 48 | >99
+1l (E)-5-phenylpent-2-enoic acid | 72 | <1
+1m (E)-3-(naphthalen-2-yl)acrylic acid | 48 | >99
+1n (E)-3-(quinolin-2-yl)acrylic acid | 8 | 39
+1o (E)-3-(quinolin-4-yl)acrylic acid | 8 | 28
+1p (E)-3-(benzofuran-2-yl)acrylic acid | 8 | >99
+1q (E)-3-(benzofuran-3-yl)acrylic acid | 30 | 79
+1r (E)-3-(5-chlorobenzofuran-2-yl)acrylic acid | 8 | >99
+1s (E)-3-([1,1'-biphenyl]-4-yl)acrylic acid | 30 | 59
+1t (E)-3-(4'-fluoro-[1,1'-biphenyl]-4-yl)acrylic acid | 48 | 70
+1u (E)-3-(5-phenylthiophen-2-yl)acrylic acid | 72 | 85
+1v (E)-3-(5-(4-bromophenyl)furan-2-yl)acrylic acid | 72 | <1
+1w (E)-3-(2-phenylthiazol-4-yl)acrylic acid | 72 | <1
+1x phenothiazine derivative as labeled by the source | 72 | <1
+Main tables call 1x phenothiazin-2-yl; SI synthesis calls it phenothiazin-3-yl.
+No external compound identifier or resolution of this isomer discrepancy is invented.
+Figure 3 broadly supports the positive time series, but some plotted later points
+(e.g. 1e at 72 h) exceed the Table 1 listed maximum. Table values are attributed
+as printed, not fitted as raw data or used for cross-substrate kinetic ranking.
+No positive conversion edge is inferred for 1l/v/w/x in the WT panel.
+
+B: FRESH-CELL SUPPLEMENTATION
+Sec5/18 and Table 1 note [a]: 1b,e,h,i,j,q,s,t,u are reported to reach complete
+conversion after fresh cells (OD600=1) and an additional 24 h at the plateau.
+The edge source includes both cell addition and additional incubation; matched
+no-addition controls for this extra interval are not established. This is not
+proof that loss of viability caused the plateau, nor a measured viability rescue.
+For 1n/o, Table 1 note [b] reports no increase, whereas Sec5 reports a moderate
+increase. No unqualified positive/negative fresh-cell edge is adopted for n/o.
+Product toxicity/inhibition are interpretations, not directly discriminated tests.
+Quote Q2: "fresh cells"
+
+C: VARIANTS, TABLE 2 (24 h; conversion %; WT / I330A / I330V / Q192N)
+1a: >99 / >99 / >99 / 92
+1v: <1 / <1 / <1 / <1
+1w: <1 / 15 / 5 / 0
+1x: <1 / <1 / <1 / <1
+Sec6 and SI S67/S68 support thiazole 1w to assigned vinyl product 2w for I330A.
+The abstract instead says gained phenothiazine activity; Table 2 and the inspected
+product identity contradict that wording. No phenothiazine-gain edge is adopted.
+I330A/V whole-cell preparations increase 1w depletion relative to the reported WT
+preparation. The vector difference and unnormalized expression/occupancy prevent
+unique attribution to steric gating or a PF01977-specific change.
+All three variants retain 1a depletion; 92 versus >99 is not a measured change
+in intrinsic kcat, and no statistical significance is assigned.
+Table 2 gives 24 h; optimized panel conditions provide context but exact matching
+of every Table 2 preparation/assay parameter is not independently established.
+Quotes Q3/Q4: "I330V and I330A"; "92% conversion"
+
+D: CELL QUANTITY, TEMPERATURE AND PH
+Sec5 reports 4-h conversion of 1i: OD600 1/2/3 gives 42/76/about 100%.
+Sec17 describes 15-h sampling. Retain the text-only 4-h comparison, not a merged
+4/15-h observation or per-molecule rate; more cells also change the assay matrix.
+Figure 2 shows 1i at 30/35/40/45 C and 2/3/4 h; 45 C is flat/undetected relative
+to positive 35-C bars. Methods Sec16 specifies 15 h, inconsistent with that plot.
+35 C exceeds 30 C at 3/4 h, but not at 2 h; no universal 35>30 edge is adopted.
+No thermal-denaturation, viability or transport mechanism was directly measured.
+S70 plots about 100% at pH 6.0/6.5/7.0, 90% at 7.5 and 80% at 8.0; Sec15
+describes 2 mM 1i, OD about 1, 30 C, phosphate buffer, 15 h. The pH 6.0 point
+must not disappear because the prose emphasizes 6.5/7.0. No error bars are shown.
+S70's 100% at 15 h and Table 1's 87% at 48 h use different contexts and are not
+reconciled as one progress curve. No pKa or isolated-enzyme pH optimum is inferred.
+Quotes Q5/Q6/Q7: "OD600"; "at 45"; "pH values"
+
+E: COMPUTATIONAL GATE HYPOTHESIS
+Sec6/20, Figure 4c/d and S71 alignment: rigid AutoDock Vina 1.1.2 docking uses
+AnFdc 4ZA7, not a measured ScFdc ligand complex. A 20-A box includes a surface
+pocket; 10-16-A boxes restrict the search. The text and figure use Sc numbering.
+Q192/I330 are proposed to narrow access; replacing I330 with Ala is modeled to
+reduce a clash and favor 1w double-bond orientation relative to prFMN. This is
+one separate hypothesis edge, not an observed causal intermediate or proof of
+domain sufficiency. Actual model coordinates were not retrieved or rerun.
+ScQ192/AnQ190 and ScI330/AnI327 reference mapping is verified in M1.
+Gas-phase B3LYP adduct models for 1a/v/w and structural overlays do not measure
+the in-enzyme trajectory. Planarity/LUMO associations do not establish a general
+causal rate law; several modeled nonplanar substrates do complete after fresh cells.
+The I330A discussion contains an F133A binding-energy label; no F133A experiment
+or corrected numerical affinity is invented. Q192A remains primer-only here.
+Quotes Q8/Q9: "forming a gate"; "favourable position"
+
+REMAINING COVERAGE
+This source advances the initial ScFdc record but does not complete PF01977.
+Earlier AnFdc/VdcCD and ScFdc2015 evidence is preserved. Later chemistry,
+maturation, physiological contexts, other PF01977 members, full construct
+sequences, raw replicates and domain-specific tests remain open. No family-wide
+function, REVIEWED status or completed 8296-family assessment is asserted.

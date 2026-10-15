@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01977
+  path: data/families/PF01977.yaml
+session:
+  id: 2026-10-15T123008Z-codex-bac27f
+  timestamp: '2026-10-15T12:30:08Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of ScFdc substrate-scope graphs
+  details: Saved reviews/structured/20261015T123233Z-pf01977-scfdc-substrate-scope/review.yaml
+    and derived Markdown through native inspection/save. Assessed all 11 new graphs
+    against primary tables, methods and selected original figures; verified domain/primer
+    boundaries, 20 substrate values, nine fresh-cell labels and five variant values.
+    All 118 edge quotations and 8296 manifest hashes pass, prior 32 graphs are preserved,
+    52 focused tests pass, exports/schema/inventory and desktop/mobile preview pass.
+    Source-pin check fails as expected for unpublished edits. Three scientific predecessor
+    findings remain OPEN with original identities; verdict NEEDS_FOLLOWUP, partial
+    same-agent scientific review, not family or corpus completion. Final history-index
+    regeneration and full native validation follow; no publication.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/217
+  - https://github.com/CultureBotAI/DUFMech/issues/218
+  - https://github.com/CultureBotAI/DUFMech/issues/219
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261015T123233Z-pf01977-scfdc-substrate-scope/review.yaml

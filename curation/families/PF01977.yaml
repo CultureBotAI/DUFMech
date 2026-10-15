@@ -3,7 +3,7 @@ curation_status: IN_PROGRESS
 curation_history: history/records/PF01977
 discussions:
   - discussion_id: ubid-member-and-partner-coverage
-    prompt: Extend the family assessment beyond the mapped AnFdc, scoped VdcCD and initial ScFdc experimental systems.
+    prompt: Extend the family assessment beyond the mapped AnFdc, scoped VdcCD and assessed ScFdc activation and substrate-panel systems.
     kind: CURATION_TODO
     status: OPEN
     rationale: PF01977 is the central domain of diverse multidomain enzymes; AnFdc chemistry does not establish a universal substrate, partner requirement or native physiological role.
@@ -16,9 +16,13 @@ discussions:
         supports: PARTIAL
         evidence_source: primary_publication
         explanation: Initial ScFdc catalysis, activation/rescue and preparation effects are scoped to synthetic whole-enzyme preparations. Complete inserts, native-system physiology, later mechanisms and the tPAD1 truncation boundary remain unresolved.
+      - reference: PMID:30679592
+        supports: PARTIAL
+        evidence_source: primary_publication
+        explanation: The 2019 whole-cell substrate panel, fresh-cell conditions, variants and assay environment are now assessed. Full inserts, vector-matched comparisons, active occupancy and native yeast physiology remain unresolved; the docking receptor is AnFdc rather than ScFdc.
     posed_by: Codex
     posed_date: '2026-10-15'
-    notes: Continue later ScFdc studies including PMID27119435 and PMID28753302, EcUbiD, AroY, HmfF, HudA and maturation/specificity work, plus VdcCD native-system and construct follow-up. Preserve the full family and corpus scope; see evidence/PF01977/anfdc-primary-assays.txt, vdcc-primary-assays.txt and scfdc-primary-assays.txt.
+    notes: Continue remaining ScFdc studies including PMID27119435 and PMID28753302, EcUbiD, AroY, HmfF, HudA and maturation/specificity work, plus VdcCD native-system and construct follow-up. Preserve the full family and corpus scope; see evidence/PF01977/anfdc-primary-assays.txt, vdcc-primary-assays.txt, scfdc-primary-assays.txt and scfdc-substrate-scope.txt.
   - discussion_id: anfdc-atomic-steps-and-domain-attribution
     prompt: Resolve intermediate transitions and separate whole-enzyme effects from PF01977-specific chemistry.
     kind: CURATION_TODO
@@ -29,11 +33,16 @@ discussions:
         supports: PARTIAL
         evidence_source: primary_publication
         explanation: Figures 2/3 and supplement S4/S5 support scoped adduct and activity observations; F437/L439 belong to PF20696. The computed Int1-open state and specific proton-transfer sequence are not directly measured trajectories.
+      - reference: PMID:30679592
+        supports: PARTIAL
+        evidence_source: primary_publication
+        explanation: Whole-cell HPLC depletion and modeled substrate orientation are separate evidence types. ScQ192 is within PF01977, whereas ScI330 is in PF20696; a model-based gate explanation is not an observed isolated-domain mechanism.
     posed_by: Codex
     posed_date: '2026-10-15'
     notes: Extend the remaining substrate/inhibitor and small-analogue graphs after their individual assay review. Resolve solution-MS incubation details, active-cofactor normalization, construct sequences and the limits of domain transfer. Do not combine E282Q Int2 and WT Int3 into one observed mutant-independent trajectory.
       VdcCD docking and partner-allostery graphs remain hypotheses; apo structures and viscosity effects do not measure the proposed catalytic trajectory or isolate PF01977 sufficiency.
       ScFdc transferable activation does not directly measure cofactor synthesis or establish a chemically pure activating species; UV depletion does not independently identify every product.
+      The 2019 AnFdc-based docking model and whole-cell variant results do not prove a ScFdc atomic trajectory, residue-specific rate change or general planarity rule. Fresh-cell supplementation plus extra time does not isolate viability rescue.
   - discussion_id: anfdc-assay-discrepancies
     prompt: Resolve primary-source label discrepancies while retaining condition-specific negative and residual activities.
     kind: CURATION_TODO
@@ -56,9 +65,14 @@ discussions:
         supports: PARTIAL
         evidence_source: primary_publication
         explanation: Original ScFdc Figures 3/4 retain low baseline and tPAD1-only activity despite simplified prose. Coexpression also changes FDC tag placement; published tPAD1 primer maps to reference residue 55 despite reported deletion of 1-58. Figure/prose mass, abstract/table kinetics and host-background discrepancies remain explicit.
+      - reference: PMID:30679592
+        supports: PARTIAL
+        evidence_source: primary_publication
+        explanation: Table 2 and S68 identify gained thiazole 1w conversion, not the abstract's phenothiazine gain. S25/S26 are substrate-free blanks, not the cited host controls. Fresh-cell n/o outcomes, timepoints, pH results, vector matching, 1x isomer naming and the F133A energy label remain explicitly discrepant or unresolved.
     posed_by: Codex
     posed_date: '2026-10-15'
     notes: R173 is verified in A2QHE5; position 172 is Ala. F437L is verified in deposited 6R2Z despite the 2019 F439L prose typo. Obtain missing raw assay/construct details and measured active occupancy; absence of detected product is not proof of zero activity under all conditions. Do not equate ScFdc native-PAGE migration with a definitive oligomer or use a hypothesized occupancy correction as measured turnover.
+      The 2019 Q192N/A and I330A/V primer segments match the specified reference substitutions, but only Q192N and I330A/V have Table 2 activity results. Addgene sequence download is login-gated; complete insert identity remains unresolved. Preserve Table 1 versus Figure 3 endpoint differences and do not fit separate assay contexts as one kinetic series.
 causal_graphs:
   - graph_id: anfdc-cinnamate-decarboxylation-2015
     title: AnFdc converts cinnamic acid to styrene
@@ -1432,3 +1446,579 @@ causal_graphs:
         evidence_kind: EXPERIMENTAL
         evidence:
           - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: followed by neutralization, explanation: 'S6 base-treatment paragraph, text-only activity report; ledger L7. No specific chemical-bond cleavage is labeled observed.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+  - graph_id: scfdc-cinnamate-panel-2019
+    title: "ScFdc whole-cell assays deplete ten substituted cinnamic acids"
+    scope: "Separate WT-containing whole-cell substrate assays; no cross-substrate causal chain or family-wide substrate claim."
+    context: "E. coli BL21(DE3) pLysS expressing pTfdc1Sc; separate 2 mM substrate assays, OD600 about 1, 100 mM sodium phosphate pH 7, 35 C, 1-mL sealed reactions. Table 1 times are substrate-specific endpoints, not initial-rate comparisons."
+    family_mapping: "ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa); PF01977 is 119-320, PF20695 14-102 and PF20696 328-464. The 2019 full plasmid insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt M/M1."
+    taxon: "NCBITaxon:4932"
+    scope_status: "PHENOTYPIC"
+    limitations: "Whole-cell HPLC acid disappearance does not isolate enzyme chemistry, transport or PF01977 sufficiency. GC-MS product assignments use spectral-library analogy; not every individual trace was visually reviewed. Host-negative/no-biocat controls are text-reported; the cited S25/S26 show substrate-free matrix blanks. Table 1 and some later Figure 3 points differ."
+    nodes:
+      - {"node_id":"assay_1a","label":"ScFdc-containing cells with substrate 1a","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1a","label":"Cinnamic acid (1a) remaining in assay","node_type":"STATE"}
+      - {"node_id":"assay_1b","label":"ScFdc-containing cells with substrate 1b","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1b","label":"(E)-3-(2-bromophenyl)acrylic acid (1b) remaining in assay","node_type":"STATE"}
+      - {"node_id":"assay_1c","label":"ScFdc-containing cells with substrate 1c","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1c","label":"(E)-3-(3-bromophenyl)acrylic acid (1c) remaining in assay","node_type":"STATE"}
+      - {"node_id":"assay_1d","label":"ScFdc-containing cells with substrate 1d","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1d","label":"(E)-3-(4-bromophenyl)acrylic acid (1d) remaining in assay","node_type":"STATE"}
+      - {"node_id":"assay_1e","label":"ScFdc-containing cells with substrate 1e","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1e","label":"(E)-3-(2-methoxyphenyl)acrylic acid (1e) remaining in assay","node_type":"STATE"}
+      - {"node_id":"assay_1f","label":"ScFdc-containing cells with substrate 1f","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1f","label":"(E)-3-(3-methoxyphenyl)acrylic acid (1f) remaining in assay","node_type":"STATE"}
+      - {"node_id":"assay_1g","label":"ScFdc-containing cells with substrate 1g","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1g","label":"(E)-3-(4-methoxyphenyl)acrylic acid (1g) remaining in assay","node_type":"STATE"}
+      - {"node_id":"assay_1h","label":"ScFdc-containing cells with substrate 1h","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1h","label":"(E)-3-(2-(trifluoromethyl)phenyl)acrylic acid (1h) remaining in assay","node_type":"STATE"}
+      - {"node_id":"assay_1i","label":"ScFdc-containing cells with substrate 1i","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1i","label":"(E)-3-(3-(trifluoromethyl)phenyl)acrylic acid (1i) remaining in assay","node_type":"STATE"}
+      - {"node_id":"assay_1j","label":"ScFdc-containing cells with substrate 1j","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1j","label":"(E)-3-(4-(trifluoromethyl)phenyl)acrylic acid (1j) remaining in assay","node_type":"STATE"}
+    edges:
+      - edge_id: depletes-1a
+        subject: "assay_1a"
+        predicate: "decreases"
+        object: "acid_1a"
+        mechanism: "The separately incubated whole-cell preparation shows >99% HPLC substrate depletion at the Table 1 endpoint of 24 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1a; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: depletes-1b
+        subject: "assay_1b"
+        predicate: "decreases"
+        object: "acid_1b"
+        mechanism: "The separately incubated whole-cell preparation shows 83% HPLC substrate depletion at the Table 1 endpoint of 48 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1b; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: depletes-1c
+        subject: "assay_1c"
+        predicate: "decreases"
+        object: "acid_1c"
+        mechanism: "The separately incubated whole-cell preparation shows >99% HPLC substrate depletion at the Table 1 endpoint of 8 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1c; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: depletes-1d
+        subject: "assay_1d"
+        predicate: "decreases"
+        object: "acid_1d"
+        mechanism: "The separately incubated whole-cell preparation shows >99% HPLC substrate depletion at the Table 1 endpoint of 24 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1d; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: depletes-1e
+        subject: "assay_1e"
+        predicate: "decreases"
+        object: "acid_1e"
+        mechanism: "The separately incubated whole-cell preparation shows 92% HPLC substrate depletion at the Table 1 endpoint of 48 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1e; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: depletes-1f
+        subject: "assay_1f"
+        predicate: "decreases"
+        object: "acid_1f"
+        mechanism: "The separately incubated whole-cell preparation shows >99% HPLC substrate depletion at the Table 1 endpoint of 48 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1f; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: depletes-1g
+        subject: "assay_1g"
+        predicate: "decreases"
+        object: "acid_1g"
+        mechanism: "The separately incubated whole-cell preparation shows >99% HPLC substrate depletion at the Table 1 endpoint of 72 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1g; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: depletes-1h
+        subject: "assay_1h"
+        predicate: "decreases"
+        object: "acid_1h"
+        mechanism: "The separately incubated whole-cell preparation shows 62% HPLC substrate depletion at the Table 1 endpoint of 72 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1h; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: depletes-1i
+        subject: "assay_1i"
+        predicate: "decreases"
+        object: "acid_1i"
+        mechanism: "The separately incubated whole-cell preparation shows 87% HPLC substrate depletion at the Table 1 endpoint of 48 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1i; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: depletes-1j
+        subject: "assay_1j"
+        predicate: "decreases"
+        object: "acid_1j"
+        mechanism: "The separately incubated whole-cell preparation shows 82% HPLC substrate depletion at the Table 1 endpoint of 48 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1j; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+  - graph_id: scfdc-conjugated-chain-2019
+    title: "ScFdc whole-cell assay depletes extended-conjugation substrate 1k"
+    scope: "Separate WT-containing whole-cell substrate assays; no cross-substrate causal chain or family-wide substrate claim."
+    context: "E. coli BL21(DE3) pLysS expressing pTfdc1Sc; separate 2 mM substrate assays, OD600 about 1, 100 mM sodium phosphate pH 7, 35 C, 1-mL sealed reactions. Table 1 times are substrate-specific endpoints, not initial-rate comparisons."
+    family_mapping: "ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa); PF01977 is 119-320, PF20695 14-102 and PF20696 328-464. The 2019 full plasmid insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt M/M1."
+    taxon: "NCBITaxon:4932"
+    scope_status: "PHENOTYPIC"
+    limitations: "Whole-cell HPLC acid disappearance does not isolate enzyme chemistry, transport or PF01977 sufficiency. GC-MS product assignments use spectral-library analogy; not every individual trace was visually reviewed. Host-negative/no-biocat controls are text-reported; the cited S25/S26 show substrate-free matrix blanks. Table 1 and some later Figure 3 points differ. Nonconjugated analogue 1l remains <1% at 72 h; the comparison does not isolate conjugation from geometry."
+    nodes:
+      - {"node_id":"assay_1k","label":"ScFdc-containing cells with substrate 1k","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1k","label":"(2E,4E)-5-phenylpenta-2,4-dienoic acid (1k) remaining in assay","node_type":"STATE"}
+    edges:
+      - edge_id: depletes-1k
+        subject: "assay_1k"
+        predicate: "decreases"
+        object: "acid_1k"
+        mechanism: "The separately incubated whole-cell preparation shows >99% HPLC substrate depletion at the Table 1 endpoint of 48 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1k; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+  - graph_id: scfdc-fused-aryl-panel-2019
+    title: "ScFdc whole-cell assays deplete six fused-aryl substrates"
+    scope: "Separate WT-containing whole-cell substrate assays; no cross-substrate causal chain or family-wide substrate claim."
+    context: "E. coli BL21(DE3) pLysS expressing pTfdc1Sc; separate 2 mM substrate assays, OD600 about 1, 100 mM sodium phosphate pH 7, 35 C, 1-mL sealed reactions. Table 1 times are substrate-specific endpoints, not initial-rate comparisons."
+    family_mapping: "ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa); PF01977 is 119-320, PF20695 14-102 and PF20696 328-464. The 2019 full plasmid insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt M/M1."
+    taxon: "NCBITaxon:4932"
+    scope_status: "PHENOTYPIC"
+    limitations: "Whole-cell HPLC acid disappearance does not isolate enzyme chemistry, transport or PF01977 sufficiency. GC-MS product assignments use spectral-library analogy; not every individual trace was visually reviewed. Host-negative/no-biocat controls are text-reported; the cited S25/S26 show substrate-free matrix blanks. Table 1 and some later Figure 3 points differ."
+    nodes:
+      - {"node_id":"assay_1m","label":"ScFdc-containing cells with substrate 1m","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1m","label":"(E)-3-(naphthalen-2-yl)acrylic acid (1m) remaining in assay","node_type":"STATE"}
+      - {"node_id":"assay_1n","label":"ScFdc-containing cells with substrate 1n","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1n","label":"(E)-3-(quinolin-2-yl)acrylic acid (1n) remaining in assay","node_type":"STATE"}
+      - {"node_id":"assay_1o","label":"ScFdc-containing cells with substrate 1o","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1o","label":"(E)-3-(quinolin-4-yl)acrylic acid (1o) remaining in assay","node_type":"STATE"}
+      - {"node_id":"assay_1p","label":"ScFdc-containing cells with substrate 1p","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1p","label":"(E)-3-(benzofuran-2-yl)acrylic acid (1p) remaining in assay","node_type":"STATE"}
+      - {"node_id":"assay_1q","label":"ScFdc-containing cells with substrate 1q","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1q","label":"(E)-3-(benzofuran-3-yl)acrylic acid (1q) remaining in assay","node_type":"STATE"}
+      - {"node_id":"assay_1r","label":"ScFdc-containing cells with substrate 1r","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1r","label":"(E)-3-(5-chlorobenzofuran-2-yl)acrylic acid (1r) remaining in assay","node_type":"STATE"}
+    edges:
+      - edge_id: depletes-1m
+        subject: "assay_1m"
+        predicate: "decreases"
+        object: "acid_1m"
+        mechanism: "The separately incubated whole-cell preparation shows >99% HPLC substrate depletion at the Table 1 endpoint of 48 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1m; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: depletes-1n
+        subject: "assay_1n"
+        predicate: "decreases"
+        object: "acid_1n"
+        mechanism: "The separately incubated whole-cell preparation shows 39% HPLC substrate depletion at the Table 1 endpoint of 8 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1n; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: depletes-1o
+        subject: "assay_1o"
+        predicate: "decreases"
+        object: "acid_1o"
+        mechanism: "The separately incubated whole-cell preparation shows 28% HPLC substrate depletion at the Table 1 endpoint of 8 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1o; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: depletes-1p
+        subject: "assay_1p"
+        predicate: "decreases"
+        object: "acid_1p"
+        mechanism: "The separately incubated whole-cell preparation shows >99% HPLC substrate depletion at the Table 1 endpoint of 8 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1p; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: depletes-1q
+        subject: "assay_1q"
+        predicate: "decreases"
+        object: "acid_1q"
+        mechanism: "The separately incubated whole-cell preparation shows 79% HPLC substrate depletion at the Table 1 endpoint of 30 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1q; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: depletes-1r
+        subject: "assay_1r"
+        predicate: "decreases"
+        object: "acid_1r"
+        mechanism: "The separately incubated whole-cell preparation shows >99% HPLC substrate depletion at the Table 1 endpoint of 8 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1r; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+  - graph_id: scfdc-biaryl-panel-2019
+    title: "ScFdc whole-cell assays deplete three biaryl substrates"
+    scope: "Separate WT-containing whole-cell substrate assays; no cross-substrate causal chain or family-wide substrate claim."
+    context: "E. coli BL21(DE3) pLysS expressing pTfdc1Sc; separate 2 mM substrate assays, OD600 about 1, 100 mM sodium phosphate pH 7, 35 C, 1-mL sealed reactions. Table 1 times are substrate-specific endpoints, not initial-rate comparisons."
+    family_mapping: "ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa); PF01977 is 119-320, PF20695 14-102 and PF20696 328-464. The 2019 full plasmid insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt M/M1."
+    taxon: "NCBITaxon:4932"
+    scope_status: "PHENOTYPIC"
+    limitations: "Whole-cell HPLC acid disappearance does not isolate enzyme chemistry, transport or PF01977 sufficiency. GC-MS product assignments use spectral-library analogy; not every individual trace was visually reviewed. Host-negative/no-biocat controls are text-reported; the cited S25/S26 show substrate-free matrix blanks. Table 1 and some later Figure 3 points differ."
+    nodes:
+      - {"node_id":"assay_1s","label":"ScFdc-containing cells with substrate 1s","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1s","label":"(E)-3-([1,1'-biphenyl]-4-yl)acrylic acid (1s) remaining in assay","node_type":"STATE"}
+      - {"node_id":"assay_1t","label":"ScFdc-containing cells with substrate 1t","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1t","label":"(E)-3-(4'-fluoro-[1,1'-biphenyl]-4-yl)acrylic acid (1t) remaining in assay","node_type":"STATE"}
+      - {"node_id":"assay_1u","label":"ScFdc-containing cells with substrate 1u","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"acid_1u","label":"(E)-3-(5-phenylthiophen-2-yl)acrylic acid (1u) remaining in assay","node_type":"STATE"}
+    edges:
+      - edge_id: depletes-1s
+        subject: "assay_1s"
+        predicate: "decreases"
+        object: "acid_1s"
+        mechanism: "The separately incubated whole-cell preparation shows 59% HPLC substrate depletion at the Table 1 endpoint of 30 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1s; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: depletes-1t
+        subject: "assay_1t"
+        predicate: "decreases"
+        object: "acid_1t"
+        mechanism: "The separately incubated whole-cell preparation shows 70% HPLC substrate depletion at the Table 1 endpoint of 48 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1t; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: depletes-1u
+        subject: "assay_1u"
+        predicate: "decreases"
+        object: "acid_1u"
+        mechanism: "The separately incubated whole-cell preparation shows 85% HPLC substrate depletion at the Table 1 endpoint of 72 h. This is an operational conversion readout, not an independently quantified product yield or per-enzyme rate."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"substrate depletion","explanation":"Table 1 row 1u; Figure 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as printed; individual chromatographic traces are not all claimed visually inspected.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+  - graph_id: scfdc-fresh-cell-supplementation-2019
+    title: "Fresh cells plus additional incubation extend nine incomplete reactions"
+    scope: "Nine separately supplemented whole-cell reactions at their reported plateaus; composite intervention, not isolated viability rescue."
+    context: "E. coli BL21(DE3) pLysS expressing pTfdc1Sc; separate 2 mM substrate assays, OD600 about 1, 100 mM sodium phosphate pH 7, 35 C, 1-mL sealed reactions. Table 1 times are substrate-specific endpoints, not initial-rate comparisons. Fresh cells at OD600=1 are added at the plateau, then incubation continues for 24 h."
+    family_mapping: "ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa); PF01977 is 119-320, PF20695 14-102 and PF20696 328-464. The 2019 full plasmid insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt M/M1."
+    taxon: "NCBITaxon:4932"
+    scope_status: "PHENOTYPIC"
+    limitations: "Table 1 note [a] and Sec5/18 are text reports; a matched extra-time/no-addition series is not established. Viability, product toxicity and inhibition are not directly measured. For 1n/o, note [b] says no increase while prose says moderate increase; neither is encoded as an unqualified edge."
+    nodes:
+      - {"node_id":"addition_1b","label":"Fresh cells and 24 h more incubation for plateaued 1b","node_type":"PERTURBATION"}
+      - {"node_id":"conversion_1b","label":"HPLC substrate depletion in the 1b reaction","node_type":"PROCESS"}
+      - {"node_id":"addition_1e","label":"Fresh cells and 24 h more incubation for plateaued 1e","node_type":"PERTURBATION"}
+      - {"node_id":"conversion_1e","label":"HPLC substrate depletion in the 1e reaction","node_type":"PROCESS"}
+      - {"node_id":"addition_1h","label":"Fresh cells and 24 h more incubation for plateaued 1h","node_type":"PERTURBATION"}
+      - {"node_id":"conversion_1h","label":"HPLC substrate depletion in the 1h reaction","node_type":"PROCESS"}
+      - {"node_id":"addition_1i","label":"Fresh cells and 24 h more incubation for plateaued 1i","node_type":"PERTURBATION"}
+      - {"node_id":"conversion_1i","label":"HPLC substrate depletion in the 1i reaction","node_type":"PROCESS"}
+      - {"node_id":"addition_1j","label":"Fresh cells and 24 h more incubation for plateaued 1j","node_type":"PERTURBATION"}
+      - {"node_id":"conversion_1j","label":"HPLC substrate depletion in the 1j reaction","node_type":"PROCESS"}
+      - {"node_id":"addition_1q","label":"Fresh cells and 24 h more incubation for plateaued 1q","node_type":"PERTURBATION"}
+      - {"node_id":"conversion_1q","label":"HPLC substrate depletion in the 1q reaction","node_type":"PROCESS"}
+      - {"node_id":"addition_1s","label":"Fresh cells and 24 h more incubation for plateaued 1s","node_type":"PERTURBATION"}
+      - {"node_id":"conversion_1s","label":"HPLC substrate depletion in the 1s reaction","node_type":"PROCESS"}
+      - {"node_id":"addition_1t","label":"Fresh cells and 24 h more incubation for plateaued 1t","node_type":"PERTURBATION"}
+      - {"node_id":"conversion_1t","label":"HPLC substrate depletion in the 1t reaction","node_type":"PROCESS"}
+      - {"node_id":"addition_1u","label":"Fresh cells and 24 h more incubation for plateaued 1u","node_type":"PERTURBATION"}
+      - {"node_id":"conversion_1u","label":"HPLC substrate depletion in the 1u reaction","node_type":"PROCESS"}
+    edges:
+      - edge_id: extends-1b
+        subject: "addition_1b"
+        predicate: "increases"
+        object: "conversion_1b"
+        mechanism: "The fresh-cell-plus-extra-time condition is reported to reach complete substrate depletion from an incomplete plateau. The design does not isolate cell replacement from elapsed time or identify why the plateau occurred."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"fresh cells","explanation":"Table 1 note [a], Sec5 and Sec18; ledger B. Substrate 1b is one of the nine explicitly reported complete-conversion cases.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: extends-1e
+        subject: "addition_1e"
+        predicate: "increases"
+        object: "conversion_1e"
+        mechanism: "The fresh-cell-plus-extra-time condition is reported to reach complete substrate depletion from an incomplete plateau. The design does not isolate cell replacement from elapsed time or identify why the plateau occurred."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"fresh cells","explanation":"Table 1 note [a], Sec5 and Sec18; ledger B. Substrate 1e is one of the nine explicitly reported complete-conversion cases.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: extends-1h
+        subject: "addition_1h"
+        predicate: "increases"
+        object: "conversion_1h"
+        mechanism: "The fresh-cell-plus-extra-time condition is reported to reach complete substrate depletion from an incomplete plateau. The design does not isolate cell replacement from elapsed time or identify why the plateau occurred."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"fresh cells","explanation":"Table 1 note [a], Sec5 and Sec18; ledger B. Substrate 1h is one of the nine explicitly reported complete-conversion cases.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: extends-1i
+        subject: "addition_1i"
+        predicate: "increases"
+        object: "conversion_1i"
+        mechanism: "The fresh-cell-plus-extra-time condition is reported to reach complete substrate depletion from an incomplete plateau. The design does not isolate cell replacement from elapsed time or identify why the plateau occurred."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"fresh cells","explanation":"Table 1 note [a], Sec5 and Sec18; ledger B. Substrate 1i is one of the nine explicitly reported complete-conversion cases.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: extends-1j
+        subject: "addition_1j"
+        predicate: "increases"
+        object: "conversion_1j"
+        mechanism: "The fresh-cell-plus-extra-time condition is reported to reach complete substrate depletion from an incomplete plateau. The design does not isolate cell replacement from elapsed time or identify why the plateau occurred."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"fresh cells","explanation":"Table 1 note [a], Sec5 and Sec18; ledger B. Substrate 1j is one of the nine explicitly reported complete-conversion cases.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: extends-1q
+        subject: "addition_1q"
+        predicate: "increases"
+        object: "conversion_1q"
+        mechanism: "The fresh-cell-plus-extra-time condition is reported to reach complete substrate depletion from an incomplete plateau. The design does not isolate cell replacement from elapsed time or identify why the plateau occurred."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"fresh cells","explanation":"Table 1 note [a], Sec5 and Sec18; ledger B. Substrate 1q is one of the nine explicitly reported complete-conversion cases.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: extends-1s
+        subject: "addition_1s"
+        predicate: "increases"
+        object: "conversion_1s"
+        mechanism: "The fresh-cell-plus-extra-time condition is reported to reach complete substrate depletion from an incomplete plateau. The design does not isolate cell replacement from elapsed time or identify why the plateau occurred."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"fresh cells","explanation":"Table 1 note [a], Sec5 and Sec18; ledger B. Substrate 1s is one of the nine explicitly reported complete-conversion cases.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: extends-1t
+        subject: "addition_1t"
+        predicate: "increases"
+        object: "conversion_1t"
+        mechanism: "The fresh-cell-plus-extra-time condition is reported to reach complete substrate depletion from an incomplete plateau. The design does not isolate cell replacement from elapsed time or identify why the plateau occurred."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"fresh cells","explanation":"Table 1 note [a], Sec5 and Sec18; ledger B. Substrate 1t is one of the nine explicitly reported complete-conversion cases.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: extends-1u
+        subject: "addition_1u"
+        predicate: "increases"
+        object: "conversion_1u"
+        mechanism: "The fresh-cell-plus-extra-time condition is reported to reach complete substrate depletion from an incomplete plateau. The design does not isolate cell replacement from elapsed time or identify why the plateau occurred."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"fresh cells","explanation":"Table 1 note [a], Sec5 and Sec18; ledger B. Substrate 1u is one of the nine explicitly reported complete-conversion cases.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+  - graph_id: scfdc-i330-preparations-thiazole-2019
+    title: "I330A and I330V preparations show gained thiazole-substrate conversion"
+    scope: "Reported variant-versus-WT whole-cell comparisons for 1w, not phenothiazine 1x."
+    context: "Table 2 whole-cell reactions at 24 h. Initial WT uses pTfdc1Sc/pTrc99A; mutations are made in a pCDF-Duet1 subclone and expressed in BL21(DE3) pLysS. Exact matching of all Table 2 assay parameters and the WT vector is not independently established."
+    family_mapping: "ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa); PF01977 is 119-320, PF20695 14-102 and PF20696 328-464. The 2019 full plasmid insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt M/M1."
+    taxon: "NCBITaxon:4932"
+    scope_status: "PHENOTYPIC"
+    limitations: "These are whole-preparation comparisons without matched protein abundance, folding, active-cofactor occupancy or verified full inserts. Q192 is within PF01977; I330 is in PF20696. S78 is not a mutant-normalization gel. No intrinsic kinetic or domain-specific causal effect is inferred. The abstract's phenothiazine-gain wording conflicts with Table 2 and S68 product identity. 1v/1x remain <1%; Q192N is 0 for 1w."
+    nodes:
+      - {"node_id":"I330A","label":"I330A preparation versus reported WT, with thiazole acid 1w","node_type":"PERTURBATION","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"I330V","label":"I330V preparation versus reported WT, with thiazole acid 1w","node_type":"PERTURBATION","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"conversion","label":"HPLC depletion of (E)-3-(2-phenylthiazol-4-yl)acrylic acid (1w)","node_type":"PROCESS"}
+    edges:
+      - edge_id: i330a-increases-1w
+        subject: "I330A"
+        predicate: "increases"
+        object: "conversion"
+        mechanism: "The I330A preparation gives 15% conversion at 24 h compared with <1% for the reported WT preparation. S67/S68 separately support product 2w assignment for I330A. These data do not uniquely identify steric-gate relief as the route of the whole-cell effect."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"I330V and I330A","explanation":"Table 2 row 1w and Sec6; S67/S68 visually inspected for I330A; ledger C/M. No corresponding product spectrum is claimed separately inspected for I330V.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: i330v-increases-1w
+        subject: "I330V"
+        predicate: "increases"
+        object: "conversion"
+        mechanism: "The I330V preparation gives 5% conversion at 24 h compared with <1% for the reported WT preparation. S67/S68 separately support product 2w assignment for I330A. These data do not uniquely identify steric-gate relief as the route of the whole-cell effect."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"I330V and I330A","explanation":"Table 2 row 1w and Sec6; S67/S68 visually inspected for I330A; ledger C/M. No corresponding product spectrum is claimed separately inspected for I330V.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+  - graph_id: scfdc-variant-cinnamate-retention-2019
+    title: "Three ScFdc variant preparations retain cinnamate depletion"
+    scope: "Separate I330A, I330V and Q192N whole-cell assays with 1a."
+    context: "Table 2 whole-cell reactions at 24 h. Initial WT uses pTfdc1Sc/pTrc99A; mutations are made in a pCDF-Duet1 subclone and expressed in BL21(DE3) pLysS. Exact matching of all Table 2 assay parameters and the WT vector is not independently established."
+    family_mapping: "ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa); PF01977 is 119-320, PF20695 14-102 and PF20696 328-464. The 2019 full plasmid insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt M/M1."
+    taxon: "NCBITaxon:4932"
+    scope_status: "PHENOTYPIC"
+    limitations: "These are whole-preparation comparisons without matched protein abundance, folding, active-cofactor occupancy or verified full inserts. Q192 is within PF01977; I330 is in PF20696. S78 is not a mutant-normalization gel. No intrinsic kinetic or domain-specific causal effect is inferred. Q192A primers do not establish an assayed Q192A phenotype. 92% versus >99% conversion is not automatically a significant activity loss."
+    nodes:
+      - {"node_id":"I330A","label":"I330A-containing cells incubated with cinnamic acid 1a","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"I330A_acid","label":"Cinnamic acid remaining in the I330A assay","node_type":"STATE"}
+      - {"node_id":"I330V","label":"I330V-containing cells incubated with cinnamic acid 1a","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"I330V_acid","label":"Cinnamic acid remaining in the I330V assay","node_type":"STATE"}
+      - {"node_id":"Q192N","label":"Q192N-containing cells incubated with cinnamic acid 1a","node_type":"PROCESS","grounding":["UniProtKB:Q03034"]}
+      - {"node_id":"Q192N_acid","label":"Cinnamic acid remaining in the Q192N assay","node_type":"STATE"}
+    edges:
+      - edge_id: i330a-depletes-1a
+        subject: "I330A"
+        predicate: "decreases"
+        object: "I330A_acid"
+        mechanism: "The I330A whole-cell assay retains >99% HPLC depletion of 1a after 24 h. This measures retained endpoint conversion, not unchanged intrinsic catalytic efficiency."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"I330V and I330A","explanation":"Table 2 row 1a and Sec6; ledger C. No equal-expression or active-site normalization is supplied.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: i330v-depletes-1a
+        subject: "I330V"
+        predicate: "decreases"
+        object: "I330V_acid"
+        mechanism: "The I330V whole-cell assay retains >99% HPLC depletion of 1a after 24 h. This measures retained endpoint conversion, not unchanged intrinsic catalytic efficiency."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"I330V and I330A","explanation":"Table 2 row 1a and Sec6; ledger C. No equal-expression or active-site normalization is supplied.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: q192n-depletes-1a
+        subject: "Q192N"
+        predicate: "decreases"
+        object: "Q192N_acid"
+        mechanism: "The Q192N whole-cell assay retains 92% HPLC depletion of 1a after 24 h. This measures retained endpoint conversion, not unchanged intrinsic catalytic efficiency."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"92% conversion","explanation":"Table 2 row 1a and Sec6; ledger C. No equal-expression or active-site normalization is supplied.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+  - graph_id: scfdc-cell-density-2019
+    title: "Higher cell loading increases reported 1i conversion"
+    scope: "Text-reported whole-cell loading series, not enzyme concentration-normalized kinetics."
+    context: "Sec5 reports 2 mM 1i, OD600 1/2/3, phosphate pH 7 and 35 C; its result is at 4 h, whereas Sec17 describes 15-h sampling."
+    family_mapping: "ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa); PF01977 is 119-320, PF20695 14-102 and PF20696 328-464. The 2019 full plasmid insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt M/M1."
+    taxon: "NCBITaxon:4932"
+    scope_status: "PHENOTYPIC"
+    limitations: "The timing conflict is unresolved; the graph explicitly retains the Sec5 4-h comparison. Whole-cell loading also changes uptake, cofactor supply and matrix composition. No plot/raw replicates or significant-difference test is claimed."
+    nodes:
+      - {"node_id":"od2","label":"Cell loading increased from OD600 1 to 2","node_type":"PERTURBATION"}
+      - {"node_id":"od3","label":"Cell loading increased from OD600 1 to 3","node_type":"PERTURBATION"}
+      - {"node_id":"conversion","label":"Reported 4-h HPLC depletion of 1i","node_type":"PROCESS"}
+    edges:
+      - edge_id: od2-increases-conversion
+        subject: "od2"
+        predicate: "increases"
+        object: "conversion"
+        mechanism: "Sec5 reports conversion increasing from 42% at OD600 1 to 76% at OD600 2. Sec17's 15-h sampling description is not silently substituted for this 4-h observation."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"OD600","explanation":"Sec5 versus Sec17, text-only result; ledger D.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+      - edge_id: od3-increases-conversion
+        subject: "od3"
+        predicate: "increases"
+        object: "conversion"
+        mechanism: "Sec5 reports conversion increasing from 42% at OD600 1 to about 100% at OD600 3. This is a whole-cell loading effect with unresolved molecular route."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"OD600","explanation":"Sec5 versus Sec17, text-only result; ledger D.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+  - graph_id: scfdc-temperature-endpoint-2019
+    title: "Raising the assay from 35 to 45 C lowers plotted 1i conversion"
+    scope: "Whole-cell temperature comparison within the original Figure 2 series."
+    context: "Figure 2 shows 2/3/4-h results at 30/35/40/45 C; Sec16 specifies 2 mM 1i, OD600 about 1, phosphate pH 7, but describes 15-h sampling."
+    family_mapping: "ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa); PF01977 is 119-320, PF20695 14-102 and PF20696 328-464. The 2019 full plasmid insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt M/M1."
+    taxon: "NCBITaxon:4932"
+    scope_status: "PHENOTYPIC"
+    limitations: "The plot/Methods timing conflict remains explicit. Flat 45-C bars mean no detected conversion in this series, not zero activity in all conditions or measured thermal denaturation. At 2 h, 35 C does not exceed 30 C."
+    nodes:
+      - {"node_id":"temperature","label":"Change from 35 to 45 C in the plotted assay","node_type":"PERTURBATION"}
+      - {"node_id":"conversion","label":"HPLC depletion of 1i in the 2-4-h series","node_type":"PROCESS"}
+    edges:
+      - edge_id: 45c-lowers-conversion
+        subject: "temperature"
+        predicate: "decreases"
+        object: "conversion"
+        mechanism: "Positive 35-C bars contrast with flat/undetected 45-C conversion at the displayed 2, 3 and 4 h. No unique effect on viability, transport, cofactor integrity or enzyme folding is identified."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"at 45","explanation":"Original Figure 2 visually inspected, Sec5/16; ledger D. No digitized exact bar values or statistical inference.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+  - graph_id: scfdc-ph-endpoint-2019
+    title: "Increasing pH from 7 to 8 lowers plotted 1i conversion"
+    scope: "Whole-cell phosphate-buffer pH comparison, not an isolated ScFdc ionization experiment."
+    context: "S70 with Sec15: 2 mM 1i, OD600 about 1, 30 C, 100 mM sodium phosphate, 15 h; plotted pH 6.0/6.5/7.0/7.5/8.0."
+    family_mapping: "ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa); PF01977 is 119-320, PF20695 14-102 and PF20696 328-464. The 2019 full plasmid insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt M/M1."
+    taxon: "NCBITaxon:4932"
+    scope_status: "PHENOTYPIC"
+    limitations: "S70 also shows maximal conversion at pH 6.0; prose emphasis on 6.5/7.0 is incomplete. S70's 100% at 15 h is not reconciled with the different Table 1 1i context (87% at 48 h). No raw replicates/error bars, pKa or domain mechanism is established."
+    nodes:
+      - {"node_id":"ph","label":"Change from pH 7 to pH 8 in phosphate-buffered whole-cell assay","node_type":"PERTURBATION"}
+      - {"node_id":"conversion","label":"HPLC depletion of 1i in the pH series","node_type":"PROCESS"}
+    edges:
+      - edge_id: ph8-lowers-conversion
+        subject: "ph"
+        predicate: "decreases"
+        object: "conversion"
+        mechanism: "S70 plots about 100% at pH 7 and 80% at pH 8. The directional whole-cell endpoint effect is retained separately from an unmeasured residue-protonation or transport mechanism."
+        directness: "UNRESOLVED"
+        support: "OBSERVED"
+        evidence_kind: "EXPERIMENTAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"pH values","explanation":"Original S70 visually inspected; Sec5/15; ledger D. No merged cross-experiment kinetic fit.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}
+  - graph_id: scfdc-anfdc-based-gate-hypothesis-2019
+    title: "AnFdc-based docking suggests a steric route for I330A substrate access"
+    scope: "Computational interpretation of an AnFdc receptor using ScFdc residue numbering; not an observed ScFdc intermediate."
+    context: "Sec6/20 and Figure 4c/d: rigid AutoDock Vina 1.1.2 with AnFdc 4ZA7, 20-A and 10-16-A grid searches; substrate 1w. Reference alignment maps ScQ192/ScI330 to AnQ190/AnI327."
+    family_mapping: "ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa); PF01977 is 119-320, PF20695 14-102 and PF20696 328-464. The 2019 full plasmid insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt M/M1."
+    taxon: "NCBITaxon:4932"
+    scope_status: "HYPOTHETICAL"
+    limitations: "Model coordinates and the exact mutant receptor preparation were not retrieved or rerun. Experimental I330A/V effects are separate, confounded whole-cell comparisons. I330 lies outside PF01977. The F133A energy label is inconsistent with I330A context; no F133A result or corrected affinity is invented. Geometry/planarity associations are not a proven catalytic trajectory."
+    nodes:
+      - {"node_id":"modeled_mutation","label":"I330A substitution in the AnFdc-based model, using Sc numbering","node_type":"PERTURBATION","grounding":["UniProtKB:Q03034","UniProtKB:A2QHE5"]}
+      - {"node_id":"pose","label":"Modeled favorable orientation of 1w double bond relative to prFMN","node_type":"STATE"}
+    edges:
+      - edge_id: modeled-gate-relief
+        subject: "modeled_mutation"
+        predicate: "enables"
+        object: "pose"
+        mechanism: "The proposed Q192/I330 gate narrows substrate access; replacing the modeled I330 side chain with Ala removes a predicted clash and permits a favorable 1w pose. This is a computational explanation to test, not an observed intermediate or a demonstrated PF01977-only mechanism."
+        directness: "UNRESOLVED"
+        support: "HYPOTHESIZED"
+        evidence_kind: "COMPUTATIONAL"
+        evidence:
+          - {"reference":"PMID:30679592","source_url":"https://www.nature.com/articles/s41598-018-36977-x","snippet":"favourable position","explanation":"Sec6/20, original Figure 4c/d and S71 alignment table; ledger E/M1. Q192 and I330 have distinct Pfam-domain locations.","cache_path":"evidence/PF01977/scfdc-substrate-scope.txt","cache_sha256":"c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2"}

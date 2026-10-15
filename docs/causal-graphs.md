@@ -6336,3 +6336,75 @@ PF01977 initial ScFdc publication audit (2026-10-15, PR #223):
   full QC, exact-head CI, merge integrity and deployment. This checkpoint does
   not claim those future results. Keep source-retention tags after deleting
   the feature branch; the all-family causal-graph objective remains active.
+
+PF01977 ScFdc substrate-scope continuation (2026-10-15, local curation):
+
+- Nagy2019 (PMID:30679592; DOI:10.1038/s41598-018-36977-x) adds 11 graphs
+  and 39 edges: 38 observed whole-cell effects with unresolved molecular
+  routes, plus one separate computational gate hypothesis. The 32 prior
+  graphs remain unchanged. PF01977 now has 43 graphs/118 edges, comprising
+  113 observed and five hypothesized relations. It stays IN_PROGRESS with
+  three OPEN discussions; graph counts are not scientific completion.
+- The maintained evidence ledger is
+  `evidence/PF01977/scfdc-substrate-scope.txt`, SHA-256
+  `c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2`.
+  Primary Methods, Tables 1/2, original Figures 1-4 and selected supplement
+  figures/tables were inspected. Source/supplement hashes and exact visual
+  coverage are retained; not every individual chromatogram was reviewed.
+- The graphs retain 20 positive substrate-depletion endpoints, nine
+  fresh-cell-plus-extra-time effects, five variant endpoints/comparisons,
+  four cell-loading/temperature/pH effects and the modeled gate relation.
+  Whole-cell acid disappearance is not isolated-domain chemistry or a
+  calibrated product yield. Different endpoint times are not initial rates.
+- Q192 lies within PF01977; I330 lies in PF20696. All eight Q192N/A and
+  I330A/V primer segments match the named Q03034 substitutions, but Q192A
+  has no Table 2 activity result. Reference alignment maps ScQ192/I330 to
+  AnQ190/I327; the docking receptor is AnFdc 4ZA7, not a measured ScFdc
+  ligand complex. Full inserts and mutated model coordinates remain unverified.
+- The abstract's phenothiazine-gain statement conflicts with the thiazole
+  1w result in Table 2 and inspected S67/S68. S25/S26 are substrate-free
+  matrix blanks, not the host controls cited in prose. Fresh-cell n/o
+  outcomes, timing, pH 6.0, Table 1/Figure 3 endpoints, 1x isomer naming,
+  F133A energy label, vector matching and active occupancy remain explicit
+  limitations. No viability-rescue, pKa, universal planarity or atomic
+  trajectory claim is invented to connect these observations.
+- The partial same-agent scientific successor is
+  `reviews/structured/20261015T123233Z-pf01977-scfdc-substrate-scope/review.yaml`
+  and its derived Markdown. It preserves all three OPEN finding identities,
+  issue keys and target PF01977 from scientific predecessor
+  `20261015T102731Z-pf01977-scfdc-causal-evidence`; the PR223 repository audit
+  is not substituted as the scientific predecessor. Verdict remains
+  `pass_with_limitations` / `NEEDS_FOLLOWUP`, not independent approval.
+- Actual canonical EDIT/REVIEW events are
+  `history/records/PF01977/2026-10-15T121340Z-codex-f1b621.yaml` and
+  `history/records/PF01977/2026-10-15T123008Z-codex-bac27f.yaml`.
+  Scientific digest:
+  `0a024aac4aafd7effa8974820c0928f4b9861f68fe5a95f8fe0d1f33799b297a`.
+- Pre-review validation verified all 8,296 manifest hashes and 118
+  cache/primary-XML quotations, independently recovered 20 substrate values,
+  nine fresh-cell labels and five variant values, and preserved earlier
+  graphs, other records, imported fields, evidence, reviews/history, frozen
+  sources, code, exports and canonical Pages/pins. Two scratch extraction
+  errors (XML subscript spacing and Table 1 cell selection) were corrected
+  against the actual structured source before the passing recheck.
+- Schema reproduction, 52 focused graph/QC tests and exports checks pass.
+  The inventory changes only PF01977: 834 graphs/1,798 edges across 127
+  graph-bearing families, 8,169 graphless. These are structural counts.
+  Native unpinned preview passes at 1440px and 390px with all graphs/edges,
+  evidence labels, 118 source links, working disclosures and three OPEN
+  discussions. No document overflow or JavaScript errors; selected screenshots
+  were visually inspected. Native horizontal table scrolling is preserved.
+  The temporary browser and server closed.
+- The source-pin check fails for the changed overlay. Canonical Pages and
+  source pins remain unchanged; no commit, push, PR, release or full release
+  QC is claimed. Final history-index preview/apply changed only PF01977 and
+  its manifest. `just validate-all validate-schema` passes: 8,296 records
+  with zero drift, 324 history files, four review-contract tests, 170
+  structured bundles, 178 native reports and zero schema differences.
+  Final integrity recheck verifies all manifest/evidence hashes, the saved
+  semantic digest, stable predecessor findings and unchanged earlier graphs.
+- PF01977's remaining chemistry/maturation, native systems, constructs and
+  other-member questions stay open under issues #217-219. The next sequential
+  family is PF01978 (TrmB), currently SEEDED with no canonical graph in the
+  validated inventory. Continue the full 8,296-family queue rather than treating
+  this detailed source-specific update as completion of the corpus objective.
