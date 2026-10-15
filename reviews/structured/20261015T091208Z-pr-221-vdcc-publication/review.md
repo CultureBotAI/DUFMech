@@ -1,0 +1,573 @@
+# PR 221 VdcCD adversarial publication audit
+
+- Review: 20261015T091208Z-pr-221-vdcc-publication
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-15T09:00:05Z
+- Finished UTC: 2026-10-15T09:12:08Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: false
+
+## Summary
+
+The scoped publication recheck found no additional blocking scientific defect. The stale source-pin failure was reproduced locally and in initial CI, tracked in issue 222, then corrected for the candidate by retained source capture and native rendering. Existing scientific findings 217-219 remain open and received VdcCD progress updates. This audit itself still requires a retained source checkpoint, final full QC and exact-head CI before release.
+
+## Scope And Provenance
+
+All ten candidate changed paths plus the source-pin ledger and canonical PF01977 page; inspect native ownership, graph evidence boundaries, unchanged AnFdc content, minimal primary evidence, scientific review/history and publication surfaces.
+
+Selection: Explicit PR 221 candidate source/artifact set, not a sampled corpus scientific audit.
+Coverage: full; 12 reviewed / 12 in the declared population.
+Source: working_tree at Git base 4716dd2f9372a0bbf5d03747c383ae41464765a5.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| conf/site_source_pins.json | conf/site_source_pins.json | source | conf/site_source_pins.json |
+| curation/families/PF01977.yaml | curation/families/PF01977.yaml | source | curation/families/PF01977.yaml |
+| data/families/PF01977.yaml | data/families/PF01977.yaml | source | data/families/PF01977.yaml |
+| data/families/manifest.json | data/families/manifest.json | source | data/families/manifest.json |
+| docs/causal-graphs.md | docs/causal-graphs.md | source | docs/causal-graphs.md |
+| evidence/PF01977/vdcc-primary-assays.txt | evidence/PF01977/vdcc-primary-assays.txt | source | evidence/PF01977/vdcc-primary-assays.txt |
+| history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml | history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml | source | history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml |
+| history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml | history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml | source | history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml |
+| pages/families/PF01977.html | pages/families/PF01977.html | source | pages/families/PF01977.html |
+| reports/causal_graphs/inventory.json | reports/causal_graphs/inventory.json | source | reports/causal_graphs/inventory.json |
+| reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md | reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md | source | reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md |
+| reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml | reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml | source | reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| native | passed | True | conf/site_source_pins.json, curation/families/PF01977.yaml, data/families/PF01977.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01977/vdcc-primary-assays.txt, history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml, history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml, pages/families/PF01977.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml | 8296 records validate with zero drift; canonical history, common/native reviews and schema reproduction pass. |
+| preservation | passed | True | conf/site_source_pins.json, curation/families/PF01977.yaml, data/families/PF01977.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01977/vdcc-primary-assays.txt, history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml, history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml, pages/families/PF01977.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml | All 8296 manifest hashes and 60 edge quotation/cache/primary-XML matches pass. Only PF01977 changes. Ten AnFdc graphs, imported fields, other records, prior reviews/history, frozen snapshots, code and exports remain unchanged. Current 23 graphs/60 edges and three OPEN discussions match the successor scientific digest. |
+| focused | passed | True | conf/site_source_pins.json, curation/families/PF01977.yaml, data/families/PF01977.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01977/vdcc-primary-assays.txt, history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml, history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml, pages/families/PF01977.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml | 52 tests passed in 21.30 seconds. |
+| governed | passed | True | conf/site_source_pins.json, curation/families/PF01977.yaml, data/families/PF01977.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01977/vdcc-primary-assays.txt, history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml, history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml, pages/families/PF01977.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml | All 22 governed artifacts match their immutable CLAW revision. Initial sandbox DNS failure was retried with network authorization and is not counted as a pass. |
+| retention | passed | True | conf/site_source_pins.json, curation/families/PF01977.yaml, data/families/PF01977.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01977/vdcc-primary-assays.txt, history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml, history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml, pages/families/PF01977.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml | 9141 source files verified against canonical remote commit 4716dd2f9372a0bbf5d03747c383ae41464765a5 retained by annotated source/dufmech-pr-221-candidate. |
+| render | passed | True | conf/site_source_pins.json, curation/families/PF01977.yaml, data/families/PF01977.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01977/vdcc-primary-assays.txt, history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml, history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml, pages/families/PF01977.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml | Canonical Pages regenerated through the native writer, without hand-edited HTML or source hashes. |
+| browser | passed | True | conf/site_source_pins.json, curation/families/PF01977.yaml, data/families/PF01977.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01977/vdcc-primary-assays.txt, history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml, history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml, pages/families/PF01977.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml | At 1440px and 390px, canonical PF01977 retains 23 graphs, 60 edges, 56 observed and four hypothesized labels, 60 evidence links and three OPEN questions. Evidence disclosures and partial-rescue text work, pinned record URL matches, no document overflow or JavaScript errors. Selected screenshots visually inspected; browser/server closed. |
+
+## Scientific And Domain Assessments
+
+### Context, causal direction and scientific scope
+
+graph: supported. Targets: conf/site_source_pins.json, curation/families/PF01977.yaml, data/families/PF01977.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01977/vdcc-primary-assays.txt, history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml, history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml, pages/families/PF01977.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml.
+
+Joint protein/cofactor/substrate conditions, cognate versus noncognate preparations, experimental endpoints versus hypothesized routes, whole-enzyme versus central-domain attribution and incomplete Bs construct identity remain explicit. Four hypotheses are not presented as observations.
+
+### Native ownership and retained evidence
+
+provenance: supported. Targets: conf/site_source_pins.json, curation/families/PF01977.yaml, data/families/PF01977.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01977/vdcc-primary-assays.txt, history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml, history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml, pages/families/PF01977.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml.
+
+Maintained overlay and minimal evidence ledgers are authoritative; native projection, actual EDIT/REVIEW history and the partial scientific successor review agree. Earlier reports and ten AnFdc graphs are preserved.
+
+### Candidate source retention and usable publication
+
+other: supported. Targets: conf/site_source_pins.json, curation/families/PF01977.yaml, data/families/PF01977.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01977/vdcc-primary-assays.txt, history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml, history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml, pages/families/PF01977.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md, reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml.
+
+The candidate fixes the reproduced stale-pin prerequisite through retained source capture and native rendering. Desktop/mobile graph labels, evidence and source links are intact. The audit must itself be retained before final release verification.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| integrity | data/families/manifest.json; Executed native validation and structured comparison with base ffec8fdaebbdbae9b06702fb065eb0abd0db9f50 | supports | Artifact validity, semantic review binding and preservation are checked separately from scientific completeness. |
+| primary | https://doi.org/10.1038/s41467-021-25278-z; Original Figure 2 re-viewed; HPLC, stoichiometry and KSVE methods re-read in primary XML; Fig 2c and Fig 4d workbook values re-parsed from public supplementary ZIP; full 60-edge quotation check | supports | Product standards support scoped endpoint chemistry; intervention effects retain unresolved molecular routes. Low activities, partial rescue, text-only L182V and labeled computational/contextual hypotheses remain visible. Workbook SHA256 15b0f5fd9d51053bc162f2639747f8d98dff362bd31277fe5b390bae38c19494 matches the retained ledger. |
+| publication | https://github.com/CultureBotAI/DUFMech/issues/222; Initial CI run 38709795244 failed at published-source retention; subsequent candidate native capture, fresh remote verification, render and responsive browser checks | supports | Candidate source retention and canonical rendering now pass. Final audit-bearing checkpoint and full release gates remain mandatory. |
+| followups | reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml; Three open findings and exact predecessor identities; GitHub issues 217, 218 and 219 updated without closing | supports | This publication audit does not supersede or resolve scientific findings and cannot promote PF01977 from IN_PROGRESS. |
+
+## Limits And Additional Notes
+
+- Adversarial self-review, not independent expert approval, full literature coverage, experimental replication or raw diffraction/model validation.
+- Scientific issues 217-219 remain open; no graph, family or corpus completion claim follows from passing software checks.
+- Canonical browser checks cover PF01977 at two widths, not a visual sweep of all family pages.
+- Final full QC, audit-bearing source capture, exact-head CI and deployment follow this retained audit and are not certified here.
+- Issue 222 remains open until final release verification; the initial failed local and CI checks are retained as failures, not overwritten.
+- The publisher cookie redirect was inaccessible. Public primary XML and original media already retrieved were used. A standalone scratch XLSX path was not a valid ZIP; the workbook inside the primary supplementary archive was parsed instead and matched the retained hash. An initial XML section query was corrected for titleless sections. Neither failed scratch attempt is counted as verification.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261015T091208Z-pr-221-vdcc-publication
+repository: CultureBotAI/DUFMech
+kind: repository
+source:
+  git_revision: 4716dd2f9372a0bbf5d03747c383ae41464765a5
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: conf/site_source_pins.json
+    sha256: e0a7375bbf29f9d4df1fcf6741c7ba398e9522e68bf522970a1dee65ebd8c037
+    role: target
+  - path: curation/families/PF01977.yaml
+    sha256: bf530846a7d715721c276c180dee99fc55c506e3f327d1aa2bb42cc3f2cc3b6c
+    role: target
+  - path: data/families/PF01977.yaml
+    sha256: d21e36b090d32bfe69154c95fd7a266671f4b1a64caab5ace12d07b132bde360
+    role: target
+  - path: data/families/manifest.json
+    sha256: b661d5ac46b1da3d994c7fab9c406d60b066ffac5f6a814f97141de067ad9e7a
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: docs/causal-graphs.md
+    sha256: a21730913061ea76a49ca1b41d6d8a3c1f3fe8548ff2002366c3c2c37ab3bf7d
+    role: target
+  - path: evidence/PF01977/vdcc-primary-assays.txt
+    sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+    role: target
+  - path: history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml
+    sha256: ed4458be0f63537456b2b28bcd96f5ca41130f596f5a3c6ffd56cf12f66180fb
+    role: target
+  - path: history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml
+    sha256: c53ad6753a6e033e98022599f8d0bb2e6cec0129db2486d59d8370b63ac6727f
+    role: target
+  - path: pages/families/PF01977.html
+    sha256: 71b5e7c45b520143d54e6e6c008922e876785988687cbb4c1048ab8ed6a28004
+    role: target
+  - path: reports/causal_graphs/inventory.json
+    sha256: 234577064b63e9d8b77c78adedd8a3a313cb170d55aa457e874c6b19a3a04643
+    role: target
+  - path: reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md
+    sha256: d93eca97b178755688c5a5e8bf1535c694e8c02c9f84709f186f5e89909ccb8d
+    role: target
+  - path: reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
+    sha256: 4e50a905800df9dca4588b1613fcd23d1e70dc7b2ad92e601f9f8526e41a03d0
+    role: target
+targets:
+- target_id: conf/site_source_pins.json
+  path: conf/site_source_pins.json
+  label: conf/site_source_pins.json
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: curation/families/PF01977.yaml
+  path: curation/families/PF01977.yaml
+  label: curation/families/PF01977.yaml
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: data/families/PF01977.yaml
+  path: data/families/PF01977.yaml
+  label: data/families/PF01977.yaml
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: data/families/manifest.json
+  path: data/families/manifest.json
+  label: data/families/manifest.json
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: docs/causal-graphs.md
+  path: docs/causal-graphs.md
+  label: docs/causal-graphs.md
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: evidence/PF01977/vdcc-primary-assays.txt
+  path: evidence/PF01977/vdcc-primary-assays.txt
+  label: evidence/PF01977/vdcc-primary-assays.txt
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml
+  path: history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml
+  label: history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml
+  path: history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml
+  label: history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: pages/families/PF01977.html
+  path: pages/families/PF01977.html
+  label: pages/families/PF01977.html
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: reports/causal_graphs/inventory.json
+  path: reports/causal_graphs/inventory.json
+  label: reports/causal_graphs/inventory.json
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md
+  path: reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md
+  label: reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
+  path: reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
+  label: reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+title: PR 221 VdcCD adversarial publication audit
+started_at: '2026-10-15T09:00:05Z'
+finished_at: '2026-10-15T09:12:08Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent performed an adversarial recheck of its curation;
+    no independent reviewer or experimental replication.
+skill: .claude/skills/review-repo/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: false
+summary: The scoped publication recheck found no additional blocking scientific defect.
+  The stale source-pin failure was reproduced locally and in initial CI, tracked in
+  issue 222, then corrected for the candidate by retained source capture and native
+  rendering. Existing scientific findings 217-219 remain open and received VdcCD progress
+  updates. This audit itself still requires a retained source checkpoint, final full
+  QC and exact-head CI before release.
+scope:
+  description: All ten candidate changed paths plus the source-pin ledger and canonical
+    PF01977 page; inspect native ownership, graph evidence boundaries, unchanged AnFdc
+    content, minimal primary evidence, scientific review/history and publication surfaces.
+  selection: Explicit PR 221 candidate source/artifact set, not a sampled corpus scientific
+    audit.
+  coverage: full
+  population_size: 12
+  reviewed_target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/vdcc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml
+  - history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
+  exclusions:
+  - target: Complete PF01977 and corpus science
+    reason: Other members, complete Bs inserts, raw L182V data, active occupancy,
+      source-label clarification and causal atomic/domain-motion evidence remain open
+      in issues 217-219.
+  - target: Final audit-bearing source checkpoint, release QC, exact-head CI and deployment
+    reason: The append-only audit precedes these mandatory release gates; no future
+      result is asserted passed.
+checks:
+- check_id: native
+  name: native
+  command: just validate-all validate-schema
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 8296 records validate with zero drift; canonical history, common/native
+    reviews and schema reproduction pass.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/vdcc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml
+  - history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
+  evidence_ids:
+  - integrity
+- check_id: preservation
+  name: preservation
+  command: uv run --locked python /private/tmp/duf-pf01977-vdc-check.py --review --inventory
+  status: passed
+  required: true
+  exit_code: 0
+  summary: All 8296 manifest hashes and 60 edge quotation/cache/primary-XML matches
+    pass. Only PF01977 changes. Ten AnFdc graphs, imported fields, other records,
+    prior reviews/history, frozen snapshots, code and exports remain unchanged. Current
+    23 graphs/60 edges and three OPEN discussions match the successor scientific digest.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/vdcc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml
+  - history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
+  evidence_ids:
+  - integrity
+- check_id: focused
+  name: focused
+  command: uv run --locked python -m pytest -q tests/test_causal_graphs.py tests/test_qc.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 52 tests passed in 21.30 seconds.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/vdcc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml
+  - history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
+  evidence_ids:
+  - integrity
+- check_id: governed
+  name: governed
+  command: bash scripts/check_vendored_sync.sh
+  status: passed
+  required: true
+  exit_code: 0
+  summary: All 22 governed artifacts match their immutable CLAW revision. Initial
+    sandbox DNS failure was retried with network authorization and is not counted
+    as a pass.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/vdcc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml
+  - history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
+  evidence_ids:
+  - integrity
+- check_id: retention
+  name: retention
+  command: uv run --locked python -m dufmech.site_source_publication
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 9141 source files verified against canonical remote commit 4716dd2f9372a0bbf5d03747c383ae41464765a5
+    retained by annotated source/dufmech-pr-221-candidate.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/vdcc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml
+  - history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
+  evidence_ids:
+  - publication
+- check_id: render
+  name: render
+  command: just render
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Canonical Pages regenerated through the native writer, without hand-edited
+    HTML or source hashes.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/vdcc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml
+  - history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
+  evidence_ids:
+  - publication
+- check_id: browser
+  name: browser
+  command: DUF_CANONICAL=1 node /private/tmp/duf-pf01977-vdc-browser.cjs
+  status: passed
+  required: true
+  exit_code: 0
+  summary: At 1440px and 390px, canonical PF01977 retains 23 graphs, 60 edges, 56
+    observed and four hypothesized labels, 60 evidence links and three OPEN questions.
+    Evidence disclosures and partial-rescue text work, pinned record URL matches,
+    no document overflow or JavaScript errors. Selected screenshots visually inspected;
+    browser/server closed.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/vdcc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml
+  - history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
+  evidence_ids:
+  - publication
+evidence:
+- evidence_id: integrity
+  kind: validation
+  reference: data/families/manifest.json
+  locator: Executed native validation and structured comparison with base ffec8fdaebbdbae9b06702fb065eb0abd0db9f50
+  accessed_at: '2026-10-15T09:12:08Z'
+  support: supports
+  summary: Artifact validity, semantic review binding and preservation are checked
+    separately from scientific completeness.
+- evidence_id: primary
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41467-021-25278-z
+  locator: Original Figure 2 re-viewed; HPLC, stoichiometry and KSVE methods re-read
+    in primary XML; Fig 2c and Fig 4d workbook values re-parsed from public supplementary
+    ZIP; full 60-edge quotation check
+  accessed_at: '2026-10-15T09:12:08Z'
+  support: supports
+  summary: Product standards support scoped endpoint chemistry; intervention effects
+    retain unresolved molecular routes. Low activities, partial rescue, text-only
+    L182V and labeled computational/contextual hypotheses remain visible. Workbook
+    SHA256 15b0f5fd9d51053bc162f2639747f8d98dff362bd31277fe5b390bae38c19494 matches
+    the retained ledger.
+- evidence_id: publication
+  kind: validation
+  reference: https://github.com/CultureBotAI/DUFMech/issues/222
+  locator: Initial CI run 38709795244 failed at published-source retention; subsequent
+    candidate native capture, fresh remote verification, render and responsive browser
+    checks
+  accessed_at: '2026-10-15T09:12:08Z'
+  support: supports
+  summary: Candidate source retention and canonical rendering now pass. Final audit-bearing
+    checkpoint and full release gates remain mandatory.
+- evidence_id: followups
+  kind: prior_review
+  reference: reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
+  locator: Three open findings and exact predecessor identities; GitHub issues 217,
+    218 and 219 updated without closing
+  accessed_at: '2026-10-15T09:12:08Z'
+  support: supports
+  summary: This publication audit does not supersede or resolve scientific findings
+    and cannot promote PF01977 from IN_PROGRESS.
+assessments:
+- assessment_id: boundaries
+  area: graph
+  topic: Context, causal direction and scientific scope
+  outcome: supported
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/vdcc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml
+  - history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
+  evidence_ids:
+  - primary
+  - followups
+  summary: Joint protein/cofactor/substrate conditions, cognate versus noncognate
+    preparations, experimental endpoints versus hypothesized routes, whole-enzyme
+    versus central-domain attribution and incomplete Bs construct identity remain
+    explicit. Four hypotheses are not presented as observations.
+- assessment_id: ownership
+  area: provenance
+  topic: Native ownership and retained evidence
+  outcome: supported
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/vdcc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml
+  - history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
+  evidence_ids:
+  - integrity
+  - followups
+  summary: Maintained overlay and minimal evidence ledgers are authoritative; native
+    projection, actual EDIT/REVIEW history and the partial scientific successor review
+    agree. Earlier reports and ten AnFdc graphs are preserved.
+- assessment_id: publication
+  area: other
+  topic: Candidate source retention and usable publication
+  outcome: supported
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/vdcc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml
+  - history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md
+  - reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
+  evidence_ids:
+  - publication
+  summary: The candidate fixes the reproduced stale-pin prerequisite through retained
+    source capture and native rendering. Desktop/mobile graph labels, evidence and
+    source links are intact. The audit must itself be retained before final release
+    verification.
+findings: []
+actions: []
+limitations:
+- Adversarial self-review, not independent expert approval, full literature coverage,
+  experimental replication or raw diffraction/model validation.
+- Scientific issues 217-219 remain open; no graph, family or corpus completion claim
+  follows from passing software checks.
+- Canonical browser checks cover PF01977 at two widths, not a visual sweep of all
+  family pages.
+- Final full QC, audit-bearing source capture, exact-head CI and deployment follow
+  this retained audit and are not certified here.
+notes:
+- Issue 222 remains open until final release verification; the initial failed local
+  and CI checks are retained as failures, not overwritten.
+- The publisher cookie redirect was inaccessible. Public primary XML and original
+  media already retrieved were used. A standalone scratch XLSX path was not a valid
+  ZIP; the workbook inside the primary supplementary archive was parsed instead and
+  matched the retained hash. An initial XML section query was corrected for titleless
+  sections. Neither failed scratch attempt is counted as verification.
+tags:
+- adversarial-review
+- self-review
+- pr-221
+- pf01977
+- publication
+```

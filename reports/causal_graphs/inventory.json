@@ -1472,13 +1472,14 @@
     },
     {
       "curation_status": "IN_PROGRESS",
-      "edge_count": 26,
-      "graph_count": 10,
+      "edge_count": 60,
+      "graph_count": 23,
       "graph_state": "PRESENT",
       "name": "UbiD",
       "pfam_id": "PF01977",
-      "record_digest": "5aeae5af394c7337f1aaf9db47f46484bf775f085ac1c24854c302efcba97705",
+      "record_digest": "d89063df2e8726ac5fc1bab28a2c9aa557f2e10d263ca43831b24c0b3cb72a94",
       "scope_statuses": [
+        "HYPOTHETICAL",
         "MECHANISTIC",
         "PHENOTYPIC"
       ]

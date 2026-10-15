@@ -28,7 +28,7 @@ description: This family has been characterised as 3-octaprenyl-4- hydroxybenzoa
 curation_history: history/records/PF01977
 discussions:
 - discussion_id: ubid-member-and-partner-coverage
-  prompt: Extend the family assessment beyond the mapped AnFdc experimental system.
+  prompt: Extend the family assessment beyond the mapped AnFdc and scoped VdcCD experimental systems.
   kind: CURATION_TODO
   status: OPEN
   rationale: PF01977 is the central domain of diverse multidomain enzymes; AnFdc chemistry does not establish
@@ -36,13 +36,15 @@ discussions:
   evidence:
   - reference: PMID:34417452
     supports: PARTIAL
-    evidence_source: primary_publication_lead
-    explanation: VdcCD partner-dependent aromatic decarboxylation requires its own exact member mappings,
-      methods and figure assessment before graph adoption.
+    evidence_source: primary_publication
+    explanation: VdcCD substrate, partner, oxygen, viscosity and variant assays are now assessed separately
+      from the proposed dynamic mechanism. Sh deposited bodies are mapped; complete synthetic Bs constructs
+      remain unresolved.
   posed_by: Codex
   posed_date: '2026-10-15'
-  notes: Continue ScFdc and PMID28753302, EcUbiD, AroY, VdcCD, HmfF, HudA and later maturation/specificity
-    studies. Preserve the full family and corpus scope; see evidence/PF01977/anfdc-primary-assays.txt.
+  notes: Continue ScFdc and PMID28753302, EcUbiD, AroY, HmfF, HudA and later maturation/specificity studies,
+    plus VdcCD native-system and construct follow-up. Preserve the full family and corpus scope; see evidence/PF01977/anfdc-primary-assays.txt
+    and vdcc-primary-assays.txt.
 - discussion_id: anfdc-atomic-steps-and-domain-attribution
   prompt: Resolve intermediate transitions and separate whole-enzyme effects from PF01977-specific chemistry.
   kind: CURATION_TODO
@@ -61,7 +63,8 @@ discussions:
   notes: Extend the remaining substrate/inhibitor and small-analogue graphs after their individual assay
     review. Resolve solution-MS incubation details, active-cofactor normalization, construct sequences
     and the limits of domain transfer. Do not combine E282Q Int2 and WT Int3 into one observed mutant-independent
-    trajectory.
+    trajectory. VdcCD docking and partner-allostery graphs remain hypotheses; apo structures and viscosity
+    effects do not measure the proposed catalytic trajectory or isolate PF01977 sufficiency.
 - discussion_id: anfdc-assay-discrepancies
   prompt: Resolve primary-source label discrepancies while retaining condition-specific negative and residual
     activities.
@@ -81,6 +84,13 @@ discussions:
     evidence_source: primary_publication
     explanation: Extended Data 1 has a detector-wavelength discrepancy and Extended Data 8 has a third-panel
       color-caption discrepancy; neither is silently corrected or mistaken for a new biological result.
+  - reference: PMID:34417452
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Sh sequence verifies R168/G178 despite inconsistent figure labels. Source data retain
+      low C-alone vanillate activity, a nonzero BsCD gallic replicate and loss of low ShCD gallic activity
+      after partner-tail deletion. L182V is reported only in text; active-cofactor normalization and complete
+      Bs insert identity remain unresolved.
   posed_by: Codex
   posed_date: '2026-10-15'
   notes: R173 is verified in A2QHE5; position 172 is Ala. F437L is verified in deposited 6R2Z despite
@@ -834,6 +844,962 @@ causal_graphs:
         sequence confirms L439G. Ledger S3c.
       cache_path: evidence/PF01977/anfdc-primary-assays.txt
       cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a
+- graph_id: shvdccd-substrate-products-2021
+  title: ShVdcCD forms substrate-specific decarboxylation products
+  scope: Co-purified full ShVdcC with its ShVdcD partner, reconstituted with prFMN and Mn; five separate
+    substrate assays.
+  context: Recombinant E. coli BL21(DE3) preparation; 10 uM C, 5 mM substrate, 18 h in an anoxic chamber;
+    substrates not oxygen-purged. HPLC uses authentic substrate/product standards and calibration; two
+    independent replicates.
+  family_mapping: Q9S4M7 sequence 1 is the 480-aa ShC body in 7AE4/7AE5/7AE7; PF01977 106-312, PF20695
+    12-89 and PF20696 319-442. ShD Q4R102 belongs to PF26358, not PF01977. Assay tags and methods are
+    retained in evidence/PF01977/vdcc-primary-assays.txt.
+  taxon: NCBITaxon:29345
+  scope_status: MECHANISTIC
+  limitations: Whole-complex endpoint chemistry, not isolated-domain sufficiency or native flux. No syringic-acid
+    product detected in WT. Gallic activity is low; detection limits and the atomic reaction trajectory
+    are not measured. Product assignments do not directly measure CO2 release.
+  nodes:
+  - node_id: phb_mix
+    label: ShCD-prFMN-Mn with PHB
+    node_type: PROCESS
+    grounding:
+    - UniProtKB:Q9S4M7
+    - UniProtKB:Q4R102
+  - node_id: van_mix
+    label: ShCD-prFMN-Mn with vanillic acid
+    node_type: PROCESS
+  - node_id: proto_mix
+    label: ShCD-prFMN-Mn with protocatechuic acid
+    node_type: PROCESS
+  - node_id: methyl_mix
+    label: ShCD-prFMN-Mn with 3-Me-4-hydroxybenzoic acid
+    node_type: PROCESS
+  - node_id: gallic_mix
+    label: ShCD-prFMN-Mn with gallic acid
+    node_type: PROCESS
+  - node_id: phb_product
+    label: PHB-derived phenol product
+    node_type: STATE
+  - node_id: van_product
+    label: Vanillate-derived guaiacol product
+    node_type: STATE
+  - node_id: proto_product
+    label: Protocatechuate-derived catechol product
+    node_type: STATE
+  - node_id: methyl_product
+    label: Methyl-PHB-derived 2-methylphenol product
+    node_type: STATE
+  - node_id: gallic_product
+    label: Gallic-acid-derived pyrogallol product
+    node_type: STATE
+  edges:
+  - edge_id: phb-product
+    subject: phb_mix
+    predicate: produces
+    object: phb_product
+    mechanism: The joint enzyme-partner-cofactor-substrate assay yields 100% PHB decarboxylation in both
+      endpoint replicates; no single input is asserted sufficient.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: substrate scope
+      explanation: Figure 2a ShVdcCD row substrate 1; source Fig 2a and HPLC methods. Ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: vanillate-product
+    subject: van_mix
+    predicate: produces
+    object: van_product
+    mechanism: Both vanillic-acid endpoint replicates yield 100% conversion in the co-purified reconstituted
+      complex assay.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: substrate scope
+      explanation: Figure 2a ShVdcCD substrate 2; distinguish co-purified CD from separately mixed C+D.
+        Ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: protocatechuate-product
+    subject: proto_mix
+    predicate: produces
+    object: proto_product
+    mechanism: Protocatechuic-acid endpoint conversion is 99.9 +/- 0.1% mean +/- SEM, not a catalytic
+      rate constant.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: substrate scope
+      explanation: Figure 2a ShVdcCD substrate 3 and source replicates; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: methyl-phb-product
+    subject: methyl_mix
+    predicate: produces
+    object: methyl_product
+    mechanism: 3-Me-4-hydroxybenzoic-acid endpoint conversion is 99.7 +/- 0.1% mean +/- SEM under the
+      same joint conditions.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: substrate scope
+      explanation: Figure 2a ShVdcCD substrate 4; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: gallic-product
+    subject: gallic_mix
+    predicate: produces
+    object: gallic_product
+    mechanism: Low gallic-acid endpoint conversion is 5.3 +/- 0.5% mean +/- SEM; source replicates 4.78839
+      and 5.79144%. This is not high substrate efficiency.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: substrate scope
+      explanation: Figure 2a ShVdcCD substrate 5 and source workbook; ledger V1 retains WT and V59X contrast.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+- graph_id: bsvdccd-substrate-products-2021
+  title: Published BsVdcCD preparation decarboxylates aromatic acids
+  scope: Co-purified recombinant B. subtilis VdcC/D constructs from Marshall2021; reference-related but
+    not fully sequence-resolved synthetic inserts.
+  context: prFMN/Mn reconstitution; 10 uM C, 5 mM substrate, 18 h anoxic-chamber endpoint assays with
+    non-degassed substrates. Two independent HPLC replicates, authentic expected-product standards and
+    no-protein cofactor-mix control.
+  family_mapping: Reference P94405 sequence 1 has PF01977 106-308 within 473 aa; BsD reference C0H3U9
+    belongs to PF26358. Published terminal primers support these references but do not prove the complete
+    BsC insert or strain 168 identity. See ledger identity and construct limits; taxon below is species
+    only.
+  taxon: NCBITaxon:1423
+  scope_status: MECHANISTIC
+  limitations: Do not equate synthetic constructs with exact P94405/C0H3U9 sequences or transfer to every
+    Bacillus strain. Endpoint products do not establish domain sufficiency. Gallic signal occurs in only
+    one of two replicates and qualifies the text's Sh-only claim; detection threshold unspecified.
+  nodes:
+  - node_id: phb_mix
+    label: Published BsCD-prFMN-Mn with PHB
+    node_type: PROCESS
+  - node_id: van_mix
+    label: Published BsCD-prFMN-Mn with vanillic acid
+    node_type: PROCESS
+  - node_id: proto_mix
+    label: Published BsCD-prFMN-Mn with protocatechuic acid
+    node_type: PROCESS
+  - node_id: methyl_mix
+    label: Published BsCD-prFMN-Mn with 3-Me-4-hydroxybenzoic acid
+    node_type: PROCESS
+  - node_id: gallic_mix
+    label: Published BsCD-prFMN-Mn with gallic acid
+    node_type: PROCESS
+  - node_id: syr_mix
+    label: Published BsCD-prFMN-Mn with syringic acid
+    node_type: PROCESS
+  - node_id: phb_product
+    label: PHB-derived phenol product
+    node_type: STATE
+  - node_id: van_product
+    label: Vanillate-derived guaiacol product
+    node_type: STATE
+  - node_id: proto_product
+    label: Protocatechuate-derived catechol product
+    node_type: STATE
+  - node_id: methyl_product
+    label: Methyl-PHB-derived 2-methylphenol product
+    node_type: STATE
+  - node_id: gallic_product
+    label: Low gallic-acid-derived pyrogallol signal
+    node_type: STATE
+  - node_id: syr_product
+    label: Syringate-derived 2,6-dimethoxyphenol product
+    node_type: STATE
+  edges:
+  - edge_id: phb-product
+    subject: phb_mix
+    predicate: produces
+    object: phb_product
+    mechanism: PHB endpoint conversion is 99.2 +/- 0.8% mean +/- SEM for the joint reconstituted complex
+      assay.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: substrate scope
+      explanation: Figure 2a BsVdcCD substrate 1; source workbook and HPLC methods; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: vanillate-product
+    subject: van_mix
+    predicate: produces
+    object: van_product
+    mechanism: Vanillic-acid endpoint conversion is 99.6 +/- 0.3% mean +/- SEM, distinct from residual
+      C-alone activity.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: substrate scope
+      explanation: Figure 2a BsVdcCD substrate 2; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: protocatechuate-product
+    subject: proto_mix
+    predicate: produces
+    object: proto_product
+    mechanism: Protocatechuic-acid endpoint conversion is 99.6 +/- 0.1% mean +/- SEM in this preparation;
+      do not transfer it to earlier differently prepared BsdC assays.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: substrate scope
+      explanation: Figure 2a BsVdcCD substrate 3; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: methyl-phb-product
+    subject: methyl_mix
+    predicate: produces
+    object: methyl_product
+    mechanism: Methyl-PHB endpoint conversion is 97.8 +/- 1.9% mean +/- SEM with the co-purified complex.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: substrate scope
+      explanation: Figure 2a BsVdcCD substrate 4; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: low-gallic-product
+    subject: gallic_mix
+    predicate: produces
+    object: gallic_product
+    mechanism: Source replicates show 0 and 2.16910% gallic-acid conversion, displayed as 1.1 +/- 1.1%.
+      This is a low single-replicate signal, not reproducibly strong activity or a universal negative.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: substrate scope
+      explanation: Figure 2a and raw source Fig 2a BsVdcCD substrate 5 qualify the Sh-only gallic prose;
+        ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: syringate-product
+    subject: syr_mix
+    predicate: produces
+    object: syr_product
+    mechanism: Syringic-acid endpoint conversion is 99.8 +/- 0.1% mean +/- SEM; this positive Bs result
+      is not assigned to WT ShCD.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: substrate scope
+      explanation: Figure 2a BsVdcCD substrate 6 and specificity Results; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+- graph_id: shvdccd-cognate-partner-2021
+  title: Adding ShVdcD increases reconstituted ShVdcC activity
+  scope: Separately purified recombinant ShC and ShD mixed before prFMN/Mn reconstitution; whole-complex
+    effect.
+  context: Figure 2a assays with 10 uM C and 10 uM added D, 5 mM PHB or vanillate, 18 h in anoxic chamber;
+    two independent HPLC replicates. D alone and no-protein cofactor mix are controls.
+  family_mapping: ShC Q9S4M7 sequence 1 contains PF01977 106-312; its 7AE4/5/7 body matches. Added ShD
+    Q4R102 is a separate PF26358 partner. No isolated central-domain construct was tested.
+  taxon: NCBITaxon:29345
+  scope_status: PHENOTYPIC
+  limitations: Addition establishes increased endpoint conversion, not the exact allosteric route. C-alone
+    vanillate activity is low but not uniformly zero; occupancy, assembly and maturation remain possible
+    contributions.
+  nodes:
+  - node_id: add_d
+    label: Add cognate ShD before C-prFMN-Mn reconstitution
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q4R102
+  - node_id: phb_yield
+    label: PHB decarboxylation endpoint yield
+    node_type: ACTIVITY
+  - node_id: van_yield
+    label: Vanillate decarboxylation endpoint yield
+    node_type: ACTIVITY
+  edges:
+  - edge_id: d-increases-phb
+    subject: add_d
+    predicate: increases
+    object: phb_yield
+    mechanism: Adding ShD increases PHB conversion from undetected with C alone to 100% in both mixed
+      C+D replicates; D alone is inactive under these conditions.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: considerable activity in contrast to isolated VdcC
+      explanation: Figure 2a ShC/ShD/ShC+ShD substrate 1; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: d-increases-vanillate
+    subject: add_d
+    predicate: increases
+    object: van_yield
+    mechanism: Adding ShD increases vanillate conversion from 0.7 +/- 0.7% to 97.9 +/- 1.1% mean +/- SEM;
+      this does not support an absolute zero-activity claim for C alone.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: considerable activity in contrast to isolated VdcC
+      explanation: Figure 2a and source Fig 2a ShC/ShC+ShD substrate 2; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+- graph_id: bsvdccd-cognate-partner-2021
+  title: Adding BsVdcD increases the published BsVdcC preparation's activity
+  scope: Separately purified published synthetic BsC and BsD constructs, mixed before reconstitution;
+    not exact accession-sequence proof.
+  context: 10 uM C and 10 uM added D, prFMN/Mn, 5 mM PHB or vanillate, 18 h anoxic-chamber HPLC endpoints;
+    two independent replicates and D-alone/cofactor-only controls.
+  family_mapping: BsC reference P94405 sequence 1 maps PF01977 106-308; partner reference C0H3U9 maps
+    PF26358 1-51. Primer evidence supports reference relationship, not full insert or strain identity;
+    species-level taxon only. See Vdc ledger.
+  taxon: NCBITaxon:1423
+  scope_status: PHENOTYPIC
+  limitations: Active assembly, cofactor occupancy and allostery are not separated. Low C-alone vanillate
+    turnover contradicts an unqualified strict-zero claim; synthetic BsC C-terminal junction remains unresolved.
+  nodes:
+  - node_id: add_d
+    label: Add cognate BsD before BsC-prFMN-Mn reconstitution
+    node_type: PERTURBATION
+  - node_id: phb_yield
+    label: PHB endpoint conversion
+    node_type: ACTIVITY
+  - node_id: van_yield
+    label: Vanillate endpoint conversion
+    node_type: ACTIVITY
+  edges:
+  - edge_id: d-increases-phb
+    subject: add_d
+    predicate: increases
+    object: phb_yield
+    mechanism: Adding BsD raises PHB conversion from undetected with BsC alone to 98.9 +/- 1.1% mean +/-
+      SEM; the D-only control remains undetected.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: considerable activity in contrast to isolated VdcC
+      explanation: Figure 2a BsC/BsD/BsC+BsD substrate 1; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: d-increases-vanillate
+    subject: add_d
+    predicate: increases
+    object: van_yield
+    mechanism: Adding BsD raises vanillate conversion from about 5.8% with BsC alone to 100% in both mixed-complex
+      replicates. Residual C-alone activity is retained, not rounded to absence.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: considerable activity in contrast to isolated VdcC
+      explanation: Figure 2a and source Fig 2a BsC/BsC+BsD substrate 2; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+- graph_id: shvdc-bsd-cross-partner-products-2021
+  title: ShVdcC with noncognate BsVdcD supports limited product formation
+  scope: Recombinant ShC combined with the published synthetic BsD partner, not a native interspecies
+    complex.
+  context: 10 uM ShC plus 20 uM BsD, prFMN/Mn reconstitution; 5 mM separately tested substrates, 18 h
+    anoxic-chamber HPLC, two independent replicates. Noncognate D ratio differs from the 1:1 cognate mixed
+    assay.
+  family_mapping: ShC Q9S4M7 sequence 1 has PF01977 106-312. BsD is reference-related to C0H3U9, PF26358,
+    with incomplete synthetic insert verification. Mixed-species assay; no single native taxon or PF01977-only
+    sufficiency asserted.
+  scope_status: MECHANISTIC
+  limitations: Low endpoint yields do not isolate a matched partner-identity effect or demonstrate the
+    in vivo existence of this pairing. Gallic and syringic products are undetected. Distinguish source
+    mixture from co-purified cognate complexes.
+  nodes:
+  - node_id: phb_mix
+    label: ShC-BsD-prFMN-Mn with PHB
+    node_type: PROCESS
+  - node_id: van_mix
+    label: ShC-BsD-prFMN-Mn with vanillic acid
+    node_type: PROCESS
+  - node_id: proto_mix
+    label: ShC-BsD-prFMN-Mn with protocatechuic acid
+    node_type: PROCESS
+  - node_id: methyl_mix
+    label: ShC-BsD-prFMN-Mn with methyl-PHB
+    node_type: PROCESS
+  - node_id: phb_product
+    label: PHB-derived phenol product
+    node_type: STATE
+  - node_id: van_product
+    label: Vanillate-derived guaiacol product
+    node_type: STATE
+  - node_id: proto_product
+    label: Protocatechuate-derived catechol product
+    node_type: STATE
+  - node_id: methyl_product
+    label: Methyl-PHB-derived 2-methylphenol product
+    node_type: STATE
+  edges:
+  - edge_id: phb-product
+    subject: phb_mix
+    predicate: produces
+    object: phb_product
+    mechanism: The joint noncognate mixture yields 9.3 +/- 0.3% PHB endpoint conversion; activity is limited
+      but detected in both replicates.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: limited activation
+      explanation: Figure 2a ShC+BsD substrate 1; source data and cross-activation methods; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: vanillate-product
+    subject: van_mix
+    predicate: produces
+    object: van_product
+    mechanism: Vanillate conversion is approximately 1.7% in each replicate; do not confuse the rounded
+      SEM of zero with an exact absence of variation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: limited activation
+      explanation: Figure 2a ShC+BsD substrate 2; source replicates 1.67053 and 1.70697%; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: protocatechuate-product
+    subject: proto_mix
+    predicate: produces
+    object: proto_product
+    mechanism: Protocatechuic-acid endpoint conversion is 2.7 +/- 0.3% mean +/- SEM in the noncognate
+      mixture.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: limited activation
+      explanation: Figure 2a ShC+BsD substrate 3; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: methyl-phb-product
+    subject: methyl_mix
+    predicate: produces
+    object: methyl_product
+    mechanism: Methyl-PHB endpoint conversion is 3.8 +/- 0.5% mean +/- SEM; no independent sufficiency
+      is assigned to BsD.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: limited activation
+      explanation: Figure 2a ShC+BsD substrate 4; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+- graph_id: bsvdc-shd-cross-partner-products-2021
+  title: Published BsVdcC with ShVdcD yields three low-activity products
+  scope: Published synthetic BsC construct combined in vitro with ShD; whole recombinant proteins, not
+    a native physiological partnership.
+  context: 10 uM BsC plus 20 uM ShD, prFMN/Mn; 5 mM substrate, 18 h anoxic-chamber HPLC, two independent
+    replicates. Authentic standards support product assignment.
+  family_mapping: Reference-related BsC P94405 maps PF01977 106-308, with complete synthetic insert unresolved.
+    ShD Q4R102 sequence 1 is the 68-aa deposited partner, mapping to PF26358 2-42 rather than PF01977.
+  scope_status: MECHANISTIC
+  limitations: Protocatechuic, gallic and syringic products undetected. Different D ratios and preparation
+    types prevent attributing all yield differences to partner identity alone. Low PHB conversion has
+    unspecified detection limits.
+  nodes:
+  - node_id: phb_mix
+    label: BsC-ShD-prFMN-Mn with PHB
+    node_type: PROCESS
+  - node_id: van_mix
+    label: BsC-ShD-prFMN-Mn with vanillic acid
+    node_type: PROCESS
+  - node_id: methyl_mix
+    label: BsC-ShD-prFMN-Mn with methyl-PHB
+    node_type: PROCESS
+  - node_id: phb_product
+    label: PHB-derived phenol product
+    node_type: STATE
+  - node_id: van_product
+    label: Vanillate-derived guaiacol product
+    node_type: STATE
+  - node_id: methyl_product
+    label: Methyl-PHB-derived 2-methylphenol product
+    node_type: STATE
+  edges:
+  - edge_id: phb-product
+    subject: phb_mix
+    predicate: produces
+    object: phb_product
+    mechanism: PHB conversion is 0.9 +/- 0.1% mean +/- SEM, with source replicates 0.94695 and 0.80836%;
+      retained as a low measured endpoint.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: limited activation
+      explanation: Figure 2a BsC+ShD substrate 1; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: vanillate-product
+    subject: van_mix
+    predicate: produces
+    object: van_product
+    mechanism: Vanillic-acid endpoint conversion is 29 +/- 1.8% mean +/- SEM for this mixed-complex preparation.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: limited activation
+      explanation: Figure 2a BsC+ShD substrate 2; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: methyl-phb-product
+    subject: methyl_mix
+    predicate: produces
+    object: methyl_product
+    mechanism: Methyl-PHB endpoint conversion is 8.9 +/- 0.2% mean +/- SEM. Gallic/syringic/other negative
+      tests remain separate limitations.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: limited activation
+      explanation: Figure 2a BsC+ShD substrate 4; ledger V1.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+- graph_id: shvdccd-partner-stoichiometry-2021
+  title: Greater ShVdcD availability increases PHB decarboxylation activity
+  scope: ShC at fixed concentration, reconstituted with substoichiometric or excess ShD.
+  context: Reconstitution ShC 50 uM, ShD 10 or 200 uM, prFMN and Mn 200 uM each. Assays use 0.25 uM C
+    and 100 uM non-degassed PHB, A247 over 3 h; three technical replicates and three independent trend
+    repeats.
+  family_mapping: ShC Q9S4M7 PF01977 106-312 within a multidomain enzyme; titrated ShD Q4R102 is a PF26358
+    partner, not a second PF01977 domain.
+  taxon: NCBITaxon:29345
+  scope_status: PHENOTYPIC
+  limitations: Activity does not resolve an exact catalytic assembly stoichiometry or separate binding,
+    assembly and cofactor maturation/occupancy. Different time points are reconstitution-dependent activities,
+    not direct single-molecule transitions.
+  nodes:
+  - node_id: excess_d
+    label: Increase D:C from 0.2 to 4 at fixed ShC
+    node_type: PERTURBATION
+  - node_id: phb_rate
+    label: Measured PHB decarboxylation rate
+    node_type: ACTIVITY
+  edges:
+  - edge_id: excess-d-increases-rate
+    subject: excess_d
+    predicate: increases
+    object: phb_rate
+    mechanism: Excess D yields a higher activity plateau; at 90 min approximately 16.5-18.0 uM/min versus
+      7.0-8.2 with substoichiometric D. It is not evidence that free D alone catalyzes decarboxylation.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: slower decarboxylation of PHB
+      explanation: Figure 2b and complete source Fig 2b time course; stoichiometry Methods; ledger V2.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+- graph_id: shvdccd-air-exposure-cofactor-rescue-2021
+  title: Air exposure lowers ShVdcCD activity and added cofactor partly restores it
+  scope: Reconstituted and desalted ShCD exposed to air in an opaque open tube; subsequent prFMN addition
+    to the same aged preparation.
+  context: 90 min exposure, PHB assays at 100 uM in 50 mM NaPi/50 mM KCl pH 6 by A247. After 90 min return
+    to anoxic chamber and add two equivalents prFMN without extra Mn, then immediately reassay; two independent
+    replicates.
+  family_mapping: ShC deposited body Q9S4M7 sequence 1, PF01977 106-312, with ShD Q4R102 PF26358. Effect
+    concerns the full cofactor-bearing complex, not an isolated PF01977 region.
+  taxon: NCBITaxon:29345
+  scope_status: PHENOTYPIC
+  limitations: No chemical identity of an oxidized cofactor lesion or controlled oxygen-dose response
+    established. Rescue is partial and consistent with a cofactor contribution; neither full reversibility
+    nor sole causation is claimed. Opaque tube limits light effects, distinct from AnFdc light assays.
+  nodes:
+  - node_id: air_time
+    label: Extend ShCD air exposure from 2 to 90 min
+    node_type: PERTURBATION
+  - node_id: cofactor_addition
+    label: Add prFMN after 90-min exposure and return to anoxic chamber
+    node_type: PERTURBATION
+  - node_id: activity
+    label: PHB decarboxylation activity
+    node_type: ACTIVITY
+  edges:
+  - edge_id: air-lowers-activity
+    subject: air_time
+    predicate: decreases
+    object: activity
+    mechanism: Mean measured activity falls from 2.49 s^-1 at 2 min to 0.855 at 90 min. The reported approximate
+      40-min half-life is not a newly fitted intrinsic cofactor-oxidation constant.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: partially restores activity
+      explanation: Figure 2c time course before rescue; source Fig 2c and aerobic decay Methods; ledger
+        V3.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: cofactor-partly-restores-activity
+    subject: cofactor_addition
+    predicate: increases
+    object: activity
+    mechanism: Cofactor addition after air exposure yields mean activity 1.97841 s^-1, about 79.5% of
+      the 2-min mean, without additional Mn. This intervention is a partial rescue, not a direct identification
+      of the inactivation chemistry.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: partially restores activity
+      explanation: Figure 2c 90+prFMN and source values 2.09035/1.86647; ledger V3.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+- graph_id: shvdccd-viscosogen-effects-2021
+  title: Glycerol and sucrose lower apparent ShVdcCD turnover
+  scope: Whole ShCD-prFMN complex in separate solvent-viscosogen kinetic assays, not direct observation
+    of domain motion.
+  context: PHB 50-750 uM, 50 mM NaPi/50 mM KCl pH 6; 45% v/v glycerol or 40% w/v sucrose. prFMN:CD:Mn
+    0.5:1:2; active protein assumed equal to prFMN after overnight trace-oxygen maturation. Buffer n=3
+    and each viscosogen n=2 technical replicates; trends in two independent repeats.
+  family_mapping: Q9S4M7 PF01977 106-312 with Q4R102 PF26358. The proposed interdomain hinge T325/S326
+    is outside PF01977; the assay does not isolate either domain.
+  taxon: NCBITaxon:29345
+  scope_status: PHENOTYPIC
+  limitations: Apparent kinetic normalization assumes complete UbiX conversion and active-cofactor occupancy.
+    Km confidence intervals overlap. Estimated viscosity and solvent effects cannot uniquely prove a hinge-motion
+    mechanism or exclude noncompetitive solvent effects.
+  nodes:
+  - node_id: glycerol
+    label: Add 45% glycerol at controlled pH
+    node_type: PERTURBATION
+  - node_id: sucrose
+    label: Add 40% sucrose at controlled pH
+    node_type: PERTURBATION
+  - node_id: kcat_app
+    label: Apparent PHB turnover constant
+    node_type: ACTIVITY
+  edges:
+  - edge_id: glycerol-lowers-kcat-app
+    subject: glycerol
+    predicate: decreases
+    object: kcat_app
+    mechanism: Fitted kcat_app decreases from 0.856 s^-1 in buffer to 0.244 with glycerol; source 95%
+      limits 0.7607-0.9686 and 0.1885-0.3407. This is a measured rate effect, not measured domain closure.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: drastically reduced
+      explanation: Figure 4d and source Fig 4d fit values, KSVE methods; ledger V4 retains occupancy and
+        viscosity assumptions.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: sucrose-lowers-kcat-app
+    subject: sucrose
+    predicate: decreases
+    object: kcat_app
+    mechanism: Fitted kcat_app decreases from 0.856 s^-1 in buffer to 0.341 with sucrose; source 95% limits
+      0.2518-0.4757 for sucrose. The direction is observed without resolving the molecular cause.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: drastically reduced
+      explanation: Figure 4d sucrose curve and source fit values; ledger V4.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+- graph_id: shvdccd-partner-tail-deletion-2021
+  title: ShVdcD tail deletion has substrate-dependent effects
+  scope: ShCD containing partner variant V59X, deleting ShD residues 59-68; not a mutation in the PF01977
+    domain.
+  context: Co-purified WT and V59X complexes, prFMN/Mn reconstitution, 10 uM C, 5 mM substrate, 18 h endpoint
+    HPLC; two independent replicates. PHB/protocatechuate/methyl-PHB yields remain near WT and syringate
+    is undetected in both.
+  family_mapping: 7AE7 entity 1 equals Q9S4M7, PF01977 106-312; entity 2 equals Q4R102 1-58 versus 68-aa
+    WT. Deleted VIPPIPPLKK belongs to the separate ShD protein; PF26358 core maps 2-42.
+  taxon: NCBITaxon:29345
+  scope_status: PHENOTYPIC
+  limitations: Yield changes are not proportional changes in catalytic rates. No significance test is
+    inferred from n=2 endpoints; most retained activity does not make the partner wholly dispensable.
+    Assembly/occupancy and local geometry can contribute.
+  nodes:
+  - node_id: tail_deletion
+    label: Delete ShD residues 59-68 in V59X complex
+    node_type: PERTURBATION
+  - node_id: van_yield
+    label: Vanillate endpoint conversion relative to WT
+    node_type: ACTIVITY
+  - node_id: gallic_yield
+    label: Low gallic-acid endpoint conversion relative to WT
+    node_type: ACTIVITY
+  edges:
+  - edge_id: tail-deletion-lowers-vanillate-mean
+    subject: tail_deletion
+    predicate: decreases
+    object: van_yield
+    mechanism: Vanillate mean endpoint conversion falls from 100% WT to 91.5 +/- 3.7% V59X, with V59X
+      replicates 87.88321 and 95.19112%. This describes the observed mean, not a demonstrated universal
+      rate deficit.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: yields only slightly diminished
+      explanation: Figure 2a ShCD and V59X substrate 2; source replicates and 7AE7 identity; ledger V5.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: tail-deletion-removes-detected-gallic-yield
+    subject: tail_deletion
+    predicate: decreases
+    object: gallic_yield
+    mechanism: Gallic-acid conversion falls from WT 4.78839/5.79144% to 0/0% for V59X. A small absolute
+      yield difference is loss of the detectable low activity, not uniform retention of more than 90%
+      of WT function.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: yields only slightly diminished
+      explanation: Figure 2a and source Fig 2a substrate 5 qualify the broad tail-deletion prose; ledger
+        V5.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+- graph_id: shvdccd-l182v-syringate-2021
+  title: ShVdcC L182V permits low syringic-acid turnover
+  scope: Published L182V mutation in ShC within the complete ShCD system; experimental result reported
+    in text only.
+  context: The substrate-specificity section reports 6.5 +/- 0.6% syringic-acid turnover versus undetected
+    WT. General substrate scope uses overnight 5 mM endpoints with reconstituted complexes; a separate
+    L182V raw dataset, replicate count and complete insert were not supplied in the inspected files.
+  family_mapping: Q9S4M7 sequence 1 and WT 7AE4/5/7 bodies verify L182 within PF01977 106-312. Mutation
+    is reported and cloning methods describe sequence confirmation, but no deposited mutant sequence/structure
+    is equated with this construct. ShD remains the separate PF26358 partner.
+  taxon: NCBITaxon:29345
+  scope_status: PHENOTYPIC
+  limitations: Text-only result, not independently inspected raw replicates. Supplement table labels both
+    mutagenesis primers Q5F. The activity gain supports altered specificity but does not uniquely prove
+    greater cavity volume or exclude maturation/assembly effects.
+  nodes:
+  - node_id: l182v
+    label: ShC L182V in reconstituted ShCD
+    node_type: PERTURBATION
+  - node_id: syr_yield
+    label: Reported syringic-acid endpoint turnover
+    node_type: ACTIVITY
+  edges:
+  - edge_id: l182v-increases-syringate-turnover
+    subject: l182v
+    predicate: increases
+    object: syr_yield
+    mechanism: The authors report 6.5 +/- 0.6% turnover for L182V versus no detected WT turnover. This
+      scoped reported observation is not an observed atomistic explanation of substrate positioning.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: '6.5'
+      explanation: Substrate-specificity Results and supplement Figure 4 model; the numeric L182V result
+        is absent from all five source-data sheets. Ledger V5 distinguishes text from raw data.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+- graph_id: shvdccd-domain-closure-model-2021
+  title: Proposed ShVdcCD domain closure promotes prFMN-adduct turnover
+  scope: Computational model of PHB chemistry in full ShCD, based on apo structures, docked cofactor/intermediates
+    and a morphed interdomain trajectory; not an observed sequence of catalytic intermediates.
+  context: Hybrid closed prFMN-binding region and open oligomerization region, 16 Chimera morph models,
+    DFT Int2/Int3Quinoid and Vina docking. prFMN positioning and selected side-chain conformations constrain
+    the model; cofactor, partner and substrate are joint premises.
+  family_mapping: ShC Q9S4M7 PF01977 106-312 within the 480-aa enzyme; T325/S326 hinge and L425 are outside
+    this domain. 7AE4/7AE5 are apo closed/open structures. R168 is sequence-verified; R178 labels in main
+    figures and R138 in supplement Figure 3 are inconsistent source labels, not verified Arg residues.
+  taxon: NCBITaxon:29345
+  scope_status: HYPOTHETICAL
+  limitations: Docking energies are not activation free energies. No holo crystal, trapped VdcCD intermediate
+    trajectory or hinge perturbation establishes these steps. Viscosity data are separate observations
+    that do not uniquely identify domain motion; no isolated PF01977 sufficiency or family-wide transfer.
+  nodes:
+  - node_id: closure_int2
+    label: Proposed closure around ShCD-prFMN-PHB Int2
+    node_type: PROCESS
+  - node_id: strained_int2
+    label: Proposed strained aromatic Int2 within full ShCD
+    node_type: STATE
+  - node_id: quinoid
+    label: Proposed Int3Quinoid-prFMN complex
+    node_type: STATE
+  - node_id: product
+    label: Proposed released phenol product and regenerated cofactor complex
+    node_type: STATE
+  edges:
+  - edge_id: closure-strains-int2
+    subject: closure_int2
+    predicate: produces
+    object: strained_int2
+    mechanism: Open models preferentially accommodate Int2 while closure changes its fit; the authors
+      propose that closure exerts strain on the aromatic adduct. This interpretation is not a measured
+      force or captured strain trajectory.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: COMPUTATIONAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: domain closure leads to a strained conformation
+      explanation: Figures 4b/5, docking Methods and archived model design; ledger V6. Source Fig 4b contains
+        relative docking energies only.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: strained-int2-to-quinoid
+    subject: strained_int2
+    predicate: converts_to
+    object: quinoid
+    mechanism: The proposed closure-coupled rearrangement converts stable Int2 toward Int3Quinoid, whose
+      docked geometry favors more closed models. Neither its rate nor the intervening proton transfers
+      is experimentally resolved in VdcCD.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: COMPUTATIONAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: domain closure leads to a strained conformation
+      explanation: Figure 5 proposed mechanism and Figure 4b Int2/Int3Quinoid docking profiles; ledger
+        V6, not AnFdc trapped-adduct transfer.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+  - edge_id: quinoid-to-product
+    subject: quinoid
+    predicate: produces
+    object: product
+    mechanism: The authors' scheme completes adduct turnover with phenol liberation and regeneration of
+      the catalytic cofactor complex. Endpoint HPLC observes product but does not establish that this
+      exact quinoid-to-product route was traversed.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: COMPUTATIONAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: domain closure leads to a strained conformation
+      explanation: Figure 5 proposed product branch and modeling Results; ledger V6 separates modeled
+        trajectory from observed V1 endpoints.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
+- graph_id: shvdccd-partner-allostery-model-2021
+  title: Proposed ShVdcD stabilization of catalytic loops
+  scope: Hypothesis for how the separate ShD partner enables an active whole ShCD complex; association
+    and activity effects do not alone prove this route.
+  context: Apo ShCD structures show the partner interface near ERE-containing loops; mixed-partner activity
+    and V59X retained activity motivate the model. Cofactor and substrate remain required premises for
+    turnover, not independent consequences of D binding.
+  family_mapping: ShC Q9S4M7 PF01977 106-312 includes R168/E273/E278. ShD Q4R102 PF26358 2-42 and its
+    tail are a separate protein. Main-figure R178 is inconsistent with sequence G178; the reference motif
+    contains R168.
+  taxon: NCBITaxon:29345
+  scope_status: HYPOTHETICAL
+  limitations: No direct loop-dynamics assay or selective interface perturbation establishes stabilization
+    as the activity-restoring mechanism. Alternatives include altered assembly, cofactor occupancy and
+    maturation. Zinc association and structural proximity are not sufficient causal proof.
+  nodes:
+  - node_id: partner_interface
+    label: Proposed ShD association at the ShC loop interface
+    node_type: PROCESS
+  - node_id: competent_loops
+    label: Proposed catalytically competent ERE-loop configuration
+    node_type: STATE
+  edges:
+  - edge_id: partner-stabilizes-loops
+    subject: partner_interface
+    predicate: enables
+    object: competent_loops
+    mechanism: Interface contacts could maintain loop geometry needed for chemistry in the full cofactor-bearing
+      enzyme. The directed stabilization explanation is proposed from structural context, not directly
+      observed as the causal activation route.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: CONTEXTUAL
+    evidence:
+    - reference: PMID:34417452
+      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+      snippet: maintaining the structure of the key catalytic ERE motif
+      explanation: Figure 3b interface and V59X discussion; ledger V6. Physical contacts and endpoint
+        effects remain distinct from demonstrated allostery.
+      cache_path: evidence/PF01977/vdcc-primary-assays.txt
+      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629
 curation_events:
 - timestamp: '2026-10-15T06:07:07Z'
   curator: Codex
@@ -849,5 +1815,21 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of PF01977 AnFdc causal evidence.
   history_record: history/records/PF01977/2026-10-15T063259Z-codex-ee021b.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-15T08:16:08Z'
+  curator: Codex
+  action: EDIT
+  outcome: changed
+  summary: Extend PF01977 with scoped VdcCD causal evidence and labeled mechanism hypotheses
+  history_record: history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-15T08:37:43Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial VdcCD scientific review and three successor open findings
+  history_record: history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml
   event_index: 0
   llm_assisted: true

@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01977
+  path: data/families/PF01977.yaml
+session:
+  id: 2026-10-15T083743Z-codex-b0918e
+  timestamp: '2026-10-15T08:37:43Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial VdcCD scientific review and three successor open findings
+  details: 'Saved native structured review 20261015T083743Z-pf01977-vdcc-causal-evidence
+    with pass_with_limitations / NEEDS_FOLLOWUP, scientific_review true and partial
+    coverage. Assessed thirteen new VdcCD graphs against primary methods, figures,
+    source data and mapped constructs; retained all ten AnFdc graphs unchanged. Record
+    now has 23 graphs and 60 edges: 56 observed experimental and four hypotheses.
+    All three predecessor issue keys/targets remain open through exact previous_occurrences.
+    Baseline and guarded generation, 8296-hash preservation and 60 quote checks, schema
+    reproduction, 52 focused tests, inventory/export and 1440/390 browser checks passed.
+    Publication pin check fails honestly for changed source bytes; no new source checkpoint
+    or canonical Pages. IN_PROGRESS retained; family/corpus completion not claimed.'
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/217
+  - https://github.com/CultureBotAI/DUFMech/issues/218
+  - https://github.com/CultureBotAI/DUFMech/issues/219
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml
