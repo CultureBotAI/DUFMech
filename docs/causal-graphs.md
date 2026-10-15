@@ -6850,3 +6850,30 @@ PF01980 publication prerequisite (2026-10-15):
 - The current baseline has 8,296 schema-valid projections with zero drift, and
   52 focused causal-graph/QC tests pass. Publication checks and final exact-head
   CI are subsequent work, not certified by this prerequisite review.
+
+PF01980 candidate publication audit (PR #243, 2026-10-15):
+
+- Issue #239 was reproduced locally and in initial CI run `38809497953`.
+  Annotated tag `source/dufmech-pr-243-candidate` retains source commit
+  `79f43fbdfff30a7238dd84b70f734016bd4bb70a`. Native capture and fresh canonical
+  remote verification pass for 9,199 inputs; 8,997 rendered source copies and
+  the current PF01980 JSON are byte-exact. Candidate science, history, earlier
+  reviews, all other 8,295 records, runtime and frozen inputs remain unchanged.
+- Native rendering and site contract pass: 8,296 families, 8,633 HTML pages and
+  420,633,132 total bytes within the unchanged 430 MB archive budget. At 1440px
+  and 390px, all 24 disclosures and evidence links work, source links are pinned,
+  and the 23 observed effects / one hypothesis retain their labels. Selected
+  screenshots were inspected; wide tables remain horizontally accessible, with
+  no document overflow or JavaScript errors. Temporary browser/server closed.
+- All 22 governed CLAW artifacts match their published pin, and isolated OAK
+  validates all 8,296 canonical pairs plus rejection cases with network denied.
+  Original Figures 3, 4 and 6 and selected methods were re-inspected against the
+  ledger: joint interventions, residual signals, carryover, enzyme/donor controls
+  and source discrepancies remain visible. No new biological claim was added.
+- The append-only adversarial self-review is
+  `reviews/structured/20261015T213313Z-pr-243-trmo-publication/review.yaml`
+  with derived Markdown. It resolves the exact publication predecessor, not
+  scientific issues #240-242, which remain OPEN. This is not independent approval.
+- This audit must itself be committed, retained, recaptured and rendered before
+  final full QC, exact-head PR/merge-group CI and branch cleanup. Those subsequent
+  results are not certified by this candidate audit. Status remains IN_PROGRESS.
