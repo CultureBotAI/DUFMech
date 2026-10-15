@@ -1,0 +1,28 @@
+PF01980: Qian, Curran and Bjork (1998), PMID:9537379
+doi:10.1128/JB.180.7.1808-1813.1998. Inspected 2026-10-15 by Codex.
+https://journals.asm.org/doi/full/10.1128/jb.180.7.1808-1813.1998
+Publisher HTML Methods, Table1, Results and Discussion inspected; Figure2
+visually inspected. Copyright ASM; no CC license established. No full text
+or figure is redistributed. Public XML returned500; reader download returned403.
+Figure2 JPEG SHA256:
+0a3491e06839e7fa0f3e0f8a13bb35c0f112ffacfbc6ccc379f735ee1a4e6fef.
+
+R. Reporter evidence anchor: "twofold derepression"
+Locator: final Results subsection, paired Miller-unit values and Table1.
+The graphs retain the two media separately. Their +/- values are reported
+errors, not assigned SD/SEM or replicate counts. Fold ratios are curator
+calculations, not measured rate constants.
+
+N. Condition-specific negatives, not zero-effect edges
+GRB1108/1109: growth at37C in rich MOPS and glucose/glycerol/acetate MOPS;
+average lacZ elongation;27 amino-acid analogs, excluding threonine analogs.
+GRB1319/1320: pTHF71 ACC-A frameshifting; prfB ACC-U context also negative.
+pJC1131/1132: ACU/ACC selection inferred through an RF2 frameshift reporter.
+These reported nulls lack displayed quantitative data; do not claim equivalence.
+
+X. Curator exclusions
+Mapping donor labels conflict (GRB928/proAB8 versus CAG18447/proAB81).
+Crude-methylation substrate labels conflict (GRB105 versus GRB1109).
+Neither experiment is promoted to an isolated-protein causal edge here.
+Historical tsaA1 is not a sequenced deletion. Later mapping and ct6A handling
+are assessed separately in kimura2014-supplement.txt T5 and kimura2014-assays.txt.

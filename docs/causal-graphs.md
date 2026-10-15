@@ -6877,3 +6877,33 @@ PF01980 candidate publication audit (PR #243, 2026-10-15):
 - This audit must itself be committed, retained, recaptured and rendered before
   final full QC, exact-head PR/merge-group CI and branch cleanup. Those subsequent
   results are not certified by this candidate audit. Status remains IN_PROGRESS.
+
+PF01980 original tsaA1 reporter extension (2026-10-15):
+
+- The original PMID9537379 publisher text and Figure 2 were inspected. Two
+  medium-specific reporter contexts are retained separately, with unresolved
+  allele/domain attribution and explicit negative-assay and source-label limits.
+  The minimal ledger is `evidence/PF01980/qian1998-contexts.txt`; copyrighted
+  full text and images are not redistributed.
+- All 12 prior graphs are preserved. PF01980 now has 14 graphs / 26 edges,
+  including 25 observed effects and one hypothesis. Three discussions remain
+  OPEN; status is IN_PROGRESS without a REVIEWED pointer. The semantic digest is
+  `4e2f2ee8da541a825535f74d7b6b2406e7f7f988d194a09bb51a0a1927083058`.
+- The partial scientific self-review is
+  `reviews/structured/20261015T222235Z-pf01980-tsaa-reporter-contexts/review.yaml`
+  with derived Markdown. All three finding lineages are preserved. Issues
+  #240-242 remain OPEN; inspecting the original paper advances, but does not
+  complete, the wider literature finding.
+- Native generation, schema/history, inventory/exports, 52 focused tests,
+  all 8,296 manifest hashes and the unpinned 1440px/390px preview passed.
+  The preview checks every disclosure/link and horizontal table access with
+  no document overflow or JavaScript errors. Initial rejected history input,
+  concurrent-history projection refusal and a corrected browser-helper assertion
+  are disclosed in the review, not counted as successful runs.
+- The whole-corpus structural inventory has 890 graphs / 1,920 edges in
+  129 families; 8,167 remain graphless. Presence is not scientific completion.
+  All other 8,295 family records and earlier evidence/history/reviews are preserved.
+- Publication is separately authorized. Issue #244 and
+  `reviews/structured/20261015T221829Z-tsaa-publication-prerequisite/review.yaml`
+  retain the failed stale-source gate. Source retention/capture, canonical Pages,
+  final full QC and exact-head PR/merge-group checks follow this checkpoint.
