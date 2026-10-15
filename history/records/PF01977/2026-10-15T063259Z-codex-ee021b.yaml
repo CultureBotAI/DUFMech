@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01977
+  path: data/families/PF01977.yaml
+session:
+  id: 2026-10-15T063259Z-codex-ee021b
+  timestamp: '2026-10-15T06:32:59Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific self-review of PF01977 AnFdc causal evidence.
+  details: Review reviews/structured/20261015T063259Z-pf01977-anfdc-causal-evidence/review.yaml
+    has common pass_with_limitations and native NEEDS_FOLLOWUP. Ten graphs retain26
+    observed experimental edges,14 DIRECT and12 molecular-directness UNRESOLVED. Exact
+    member/domain/deposited sequence checks, primary figures/methods,8296 manifest
+    hashes,52 focused tests,schema reproduction and desktop/mobile preview pass. Three
+    open findings cover other-member coverage, atomic/domain attribution and assay/construct
+    details. The first unsaved review payload lacked the dedicated bounded search_scope
+    field; it was corrected and the native saver succeeded without modifying any retained
+    review. No REVIEWED promotion, full release QC or publication is claimed; source-pin
+    check still rejects changed record bytes. Keep all8296 families and prior findings
+    in scope.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261015T063259Z-pf01977-anfdc-causal-evidence/review.yaml

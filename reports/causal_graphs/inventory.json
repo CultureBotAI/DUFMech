@@ -1471,14 +1471,17 @@
       "scope_statuses": []
     },
     {
-      "curation_status": "SEEDED",
-      "edge_count": 0,
-      "graph_count": 0,
-      "graph_state": "ABSENT",
+      "curation_status": "IN_PROGRESS",
+      "edge_count": 26,
+      "graph_count": 10,
+      "graph_state": "PRESENT",
       "name": "UbiD",
       "pfam_id": "PF01977",
-      "record_digest": "36aec248d9055e64b28752cfed65df363fe81becd99bd8bf1e7bc867e54dd863",
-      "scope_statuses": []
+      "record_digest": "5aeae5af394c7337f1aaf9db47f46484bf775f085ac1c24854c302efcba97705",
+      "scope_statuses": [
+        "MECHANISTIC",
+        "PHENOTYPIC"
+      ]
     },
     {
       "curation_status": "SEEDED",
@@ -83280,8 +83283,8 @@
     }
   ],
   "graph_states": {
-    "ABSENT": 8170,
-    "PRESENT": 126
+    "ABSENT": 8169,
+    "PRESENT": 127
   },
   "kind": "structural_inventory_not_scientific_review",
   "records": 8296
