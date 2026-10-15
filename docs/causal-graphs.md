@@ -6026,3 +6026,68 @@ PF01976 publication audit (PR #211, 2026-10-15):
   full QC, exact-head CI, merge and deployed-page verification. Those outcomes
   are subsequent release gates, not claims made by this candidate audit.
   All 8,296 families and prior follow-ups remain in the scientific objective.
+
+PF01977 AnFdc primary-evidence pass (2026-10-15, local):
+
+- Base is merged PR #211, `9531391dd98c6ac48e6d0f9393659c7da2241b80`, in
+  isolated branch `feat/duf-pf01977-causal-graphs`. Ignored/hidden-inclusive
+  searches found no earlier PF01977 overlay or graph in the maintained curation,
+  evidence, history and review paths. The frozen EX_DUF identity, historical
+  DUF117/UPF0096 names and all imported fields are preserved.
+- Added ten whole-AnFdc graphs with 26 experimentally supported edges: 14 direct
+  biochemical/state transitions and 12 perturbation effects with unresolved
+  molecular directness. They cover forward/reverse reactions, three terminal
+  alkenes, six internal residue substitutions, styrene isotope exchange,
+  solution light sensitivity, crystal photoisomerization, E282Q Int2 trapping,
+  slow alkyne-adduct decarboxylation and two C-terminal-domain substitutions.
+- `evidence/PF01977/member-mapping.txt` records A2QHE5 sequence 1/entry 95 and
+  exact deposited 4ZA4/6R3F/6R30/6R2Z/6R33 sequence comparisons. PF01977 is
+  119-318; R173/E277/E282 lie inside it, but F437/L439 are in PF20696 at
+  324-460. Complete-protein activity never establishes isolated-domain
+  sufficiency. Deposited designs do not certify every physical assay plasmid.
+- `evidence/PF01977/anfdc-primary-assays.txt` retains minimal quotations,
+  hashes, methods, original-figure locators and exclusions for Payne2015,
+  Bailey2018 and Bailey2019. Original assay/structural figures and selected
+  supplement pages were visually inspected. Low R173A/E277Q activity refines
+  the earlier inactivity claim; detector/color-label discrepancies, negative
+  assays, cofactor occupancy and apparent-rate limitations remain visible.
+  Different mutants and alkyne/alkene substrates are not combined into one
+  falsely observed atomistic trajectory.
+- Saved partial scientific self-review:
+  `reviews/structured/20261015T063259Z-pf01977-anfdc-causal-evidence/review.yaml`
+  and its derived Markdown. Verdict `pass_with_limitations`, native
+  `NEEDS_FOLLOWUP`; three OPEN findings and discussions. PF01977 remains
+  IN_PROGRESS, not REVIEWED. Semantic digest:
+  `5aeae5af394c7337f1aaf9db47f46484bf775f085ac1c24854c302efcba97705`.
+- Canonical CREATE and REVIEW events are
+  `history/records/PF01977/2026-10-15T060707Z-codex-18c546.yaml` and
+  `history/records/PF01977/2026-10-15T063259Z-codex-ee021b.yaml`.
+  Each preceded its guarded projection refresh. The initial unsaved review
+  payload needed the dedicated bounded-search field; the corrected native save
+  succeeded without rewriting any retained report.
+- Final record reproduction validates all 8,296 records with zero drift and
+  all 316 history events validate. All 8,296 manifest hashes match; only PF01977
+  changes. Schema reproduction is current; 52 graph/QC tests and four
+  review-contract tests pass. Final `just validate-all` passes, including all
+  164 structured bundles and 172 native retained reports.
+- Native inventory and export checks pass. Only PF01977's inventory row changes;
+  totals are 801 graphs/1,706 edges across 127 families, 8,169 graphless,
+  134 IN_PROGRESS and 8,162 SEEDED. These are structural/partial-assessment
+  counts, not scientific completion. KGX/SSSOM change only PF01977's curation
+  status; association edges, all other families, frozen sources, old reports,
+  schemas and application code are preserved.
+- Unpinned native preview passes at 1440px and 390px: all ten graphs, 26 edges,
+  support/directness labels, evidence disclosures and three OPEN questions;
+  no document overflow or JavaScript errors. Desktop evidence and mobile domain
+  boundary screenshots were inspected. Temporary browser/server were closed.
+- Canonical Pages and pins are unchanged. The actual pin check exits 1 for
+  changed PF01977 bytes; full publication QC and a retained source checkpoint
+  remain a separate authorized workflow. No commit, PR or deployment is claimed.
+- Continue PF01977 member and mechanism coverage, especially individually
+  mapped ScFdc and VdcCD contexts, then the remaining family queue. The VdcCD
+  primary Results and cloning methods distinguish Bacillus subtilis and
+  Sedimentibacter hydroxybenzoicus partner-addition/reconstitution experiments;
+  exact constructs, Pfam mappings, original assay figures and supplements are
+  still required before adoption. Other AnFdc experiments, EcUbiD, AroY, HmfF,
+  HudA and later work remain open. All earlier findings and the full 8,296-family
+  objective remain active.

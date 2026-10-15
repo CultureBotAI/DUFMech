@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01977
+  path: curation/families/PF01977.yaml
+session:
+  id: 2026-10-15T060707Z-codex-18c546
+  timestamp: '2026-10-15T06:07:07Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate ten scoped AnFdc causal graphs for PF01977 with primary assay and
+    domain evidence.
+  details: Reviewed the 2015, 2018 and 2019 AnFdc primary results, methods and original
+    figures, including the 2019 supplement. Verified A2QHE5 version1, PF01977 residues119-318,
+    and five deposited construct sequences. Added 26 experimentally supported edges
+    distinguishing biochemical endpoints from unresolved mutation/light effects; retained
+    low residual activity, negative assays, source discrepancies and separate C-terminal-domain
+    scope. Three OPEN discussions preserve other-member, atomic-mechanism and assay
+    follow-ups. Baseline records-check passed for8296 records with zero drift. Scientific
+    completeness, independent review and publication are not claimed; native regeneration
+    and validation follow.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  urls:
+  - https://doi.org/10.1038/nature14560
+  - https://doi.org/10.1074/jbc.RA117.000881
+  - https://doi.org/10.1038/s41557-019-0324-8

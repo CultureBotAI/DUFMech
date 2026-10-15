@@ -1,0 +1,937 @@
+schema_version: 1.0.0
+review_id: 20261015T063259Z-pf01977-anfdc-causal-evidence
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 9531391dd98c6ac48e6d0f9393659c7da2241b80
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01977.yaml
+    sha256: 7406b60fef3e567fb787c7346e91c417a29d98a33ba9f7ffc8dca955a8835138
+    role: context
+  - path: data/families/PF01977.yaml
+    sha256: ca681fbc0543f832f7c7f77874550c03648a26b2a5643084d3a2e86301df8b84
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01977/anfdc-primary-assays.txt
+    sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a
+    role: context
+  - path: evidence/PF01977/member-mapping.txt
+    sha256: 465125d46c286a9be91a1c44ca15e99f0b2e65b9868ce529fdb886fed89f5264
+    role: context
+targets:
+- target_id: PF01977
+  path: data/families/PF01977.yaml
+  label: PF01977
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01977.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 5aeae5af394c7337f1aaf9db47f46484bf775f085ac1c24854c302efcba97705
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+title: PF01977 AnFdc reactions, perturbations and cofactor-adduct boundaries
+started_at: '2026-10-15T06:07:07Z'
+finished_at: '2026-10-15T06:32:59Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched, curated and challenged the evidence;
+    not independent expert approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: 'Ten AnFdc graphs retain 26 experimentally supported edges: 14 direct biochemical/state
+  transitions and 12 observed perturbation effects with unresolved molecular directness.
+  Exact reference/domain boundaries and deposited construct differences are verified.
+  Residual activity, detection-limited negatives, conflicting labels and other-member
+  gaps remain explicit. This partial review does not complete PF01977 or the 8296-family
+  objective.'
+scope:
+  description: Assess all ten newly curated AnFdc graphs and three discussions against
+    Payne2015, Bailey2018 and Bailey2019 primary results, methods, original assay/structural
+    figures and selected supplementary pages, with exact A2QHE5 and Pfam mapping.
+  selection: Continue the next seeded family PF01977 after published PF01976; the
+    whole 8296-family scientific objective is unchanged.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01977
+  exclusions:
+  - target: Other UbiD-family proteins and the complete literature/citation network
+    reason: ScFdc, AroY, EcUbiD, VdcCD, HmfF and HudA require separately mapped constructs
+      and inspected experiments; no AnFdc transfer is assumed.
+  - target: All AnFdc atomic transitions, inhibitor/analogue assays and raw structural
+      refinement
+    reason: Selected supported experiments are adopted. Remaining substrate/inhibitor
+      contexts and computational proposals are retained as extension targets, not
+      dismissed as unsupported biology.
+  - target: Canonical Pages publication and full release QC
+    reason: Local curation only. Source-pin check fails honestly for changed PF01977
+      bytes; no new source checkpoint, commit or deployment is part of this continuation.
+checks:
+- check_id: baseline
+  name: Baseline and guarded projection
+  command: just records-check; just records; just records --apply
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Baseline validates 8296 records with zero drift. Preview and apply validate
+    8296 and change only PF01977 plus its ownership manifest. Real CREATE history
+    precedes generation.
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - native
+- check_id: integrity
+  name: Native record, manifest and corpus preservation
+  command: uv run --locked python /private/tmp/duf-pf01977-check.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: All 8296 hashes verified; only PF01977 changes. Ten graphs/26 edges/three
+    OPEN discussions and 14 DIRECT versus12 UNRESOLVED edges confirmed. Imported fields,
+    prior families/reviews/history, frozen snapshots, code, source pins and canonical
+    Pages preserved.
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - native
+- check_id: schema
+  name: Schema reproduction
+  command: just validate-schema
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Schema generation reports zero differences; no schema or capability rollout.
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - native
+- check_id: regressions
+  name: Graph and QC regression tests
+  command: uv run --locked python -m pytest -q tests/test_causal_graphs.py tests/test_qc.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 52 tests passed in29.88seconds with the pinned CLAW runtime. These are
+    software checks, not scientific completion.
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - native
+- check_id: quotes
+  name: Primary-source quotation and cache verification
+  command: Structured XML/YAML comparison of every edge quotation and SHA256 evidence
+    cache
+  status: passed
+  required: true
+  exit_code: 0
+  summary: All26 edge quotations occur in both the inspected primary XML and hash-matching
+    retained ledger.2015/2019 use13/18 unique quoted words;2018 uses30 with explicit
+    CC BY4.0 permission.
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - native
+- check_id: preview
+  name: Native local render and responsive browser checks
+  command: uv run --locked python /private/tmp/duf-pf01977-preview.py; node /private/tmp/duf-pf01977-browser.cjs
+  status: passed
+  required: true
+  exit_code: 0
+  summary: At1440px and390px, all10 graphs/26 edges,14 direct/12 unresolved labels,26
+    evidence references and3 OPEN questions are retained. Evidence disclosure opens/closes;
+    no document overflow or JavaScript errors. Desktop evidence and mobile domain-boundary
+    screenshots visually inspected. Temporary browser/server closed; canonical publication
+    unchanged.
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - native
+- check_id: publication
+  name: Current source-pin publication prerequisite
+  command: uv run --locked python -m dufmech.site_sources check
+  status: failed
+  required: false
+  exit_code: 1
+  summary: 'Exit1: source-pin bytes differ for data/families/PF01977.yaml. A later
+    authorized retained checkpoint and native Pages rebuild are required; no bypass
+    or fabricated pin.'
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: identity
+  kind: database
+  reference: evidence/PF01977/member-mapping.txt
+  locator: A2QHE5 sequence1/entry95; complete InterPro response and five deposited
+    PDB sequence comparisons with retained raw hashes
+  accessed_at: '2026-10-15T06:32:59Z'
+  support: supports
+  summary: PF01977 maps119-318. R173/E277/E282 are internal; F437/L439 are in PF20696.4ZA4/6R33
+    match the reference body;6R3F/6R30/6R2Z have only E282Q/L439G/F437L respectively,
+    all with LEHHHHHH suffix. Deposited sequences do not certify every physical assay
+    plasmid.
+  snapshot_sha256: 465125d46c286a9be91a1c44ca15e99f0b2e65b9868ce529fdb886fed89f5264
+- evidence_id: payne
+  kind: primary_source
+  reference: https://doi.org/10.1038/nature14560
+  locator: Figure1c/d, Extended Data1/8 actual images, relevant Results and cloning/UV/GC/HPLC
+    methods; ledger S1
+  accessed_at: '2026-10-15T06:32:59Z'
+  support: supports
+  summary: Forward and high-bicarbonate reverse reactions plus three standard-matched
+    alkenes are retained. Separate assay contexts, wavelength/color-caption discrepancies
+    and unshown2-nonenoic negative remain explicit.
+  snapshot_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a
+- evidence_id: bailey2018
+  kind: primary_source
+  reference: https://doi.org/10.1074/jbc.RA117.000881
+  locator: Original Figures2/5/6/7, complete Results and Experimental procedures;
+    ledger S2
+  accessed_at: '2026-10-15T06:32:59Z'
+  support: supports
+  summary: Residual R173A/E277Q activity refines the earlier blanket inactivity claim.
+    Light/activity comparisons, cofactor crystal changes and isotope exchange are
+    separate observations; apparent rates and maturation confounds prevent unqualified
+    catalytic-residue assignments.
+  snapshot_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a
+- evidence_id: bailey2019
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41557-019-0324-8
+  locator: Main Figures2/3, Results/Discussion, supplement methods pp2-6 and original
+    S4/S5 pages11/12; ledger S3
+  accessed_at: '2026-10-15T06:32:59Z'
+  support: supports
+  summary: E282Q traps Int2; WT forms and slowly decarboxylates an alkyne cycloadduct.
+    F437L/L439G reduce cinnamate turnover without abolishing it. Different mutants/substrates
+    are not assembled into a falsely observed atomic pathway.
+  snapshot_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a
+- evidence_id: coverage
+  kind: search
+  reference: evidence/PF01977/anfdc-primary-assays.txt
+  locator: Ignored/hidden-inclusive PF01977 search in curation/evidence/history/reviews;
+    primary-reference and member research queue
+  accessed_at: '2026-10-15T06:32:59Z'
+  support: context_only
+  summary: No pre-existing PF01977 overlay or graph was found in those paths including
+    ignored files. Selected AnFdc studies do not establish complete family or later-literature
+    coverage. Public XML/media archives supplied originals when PMC HTML challenged.
+  snapshot_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a
+  search_scope: PF01977 ignored/hidden-inclusive searches under curation, evidence,
+    history and reviews; primary accession/member queries and cited AnFdc2015/2018/2019
+    studies. No whole-filesystem or exhaustive-literature absence claim.
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Executed baseline, guarded generation, schema check, manifest/preservation
+    check,52 tests,26 source-quote comparisons and responsive local preview
+  accessed_at: '2026-10-15T06:32:59Z'
+  support: supports
+  summary: Structural validity and source preservation are verified separately from
+    scientific adequacy. Publication pin remains stale and no release claim is made.
+- evidence_id: duf-projection-pf01977
+  kind: record_content
+  reference: data/families/PF01977.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-15T06:32:59Z'
+  support: context_only
+  snapshot_sha256: ca681fbc0543f832f7c7f77874550c03648a26b2a5643084d3a2e86301df8b84
+  quote: "id: Pfam:PF01977\npfam_id: PF01977\nname: 3-octaprenyl-4-hydroxybenzoate\
+    \ carboxy-lyase Rift-related domain\nshort_name: UbiD\nseed_status: EX_DUF\ncharacterization_status:\
+    \ UNSCORED\ncuration_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01977\n\
+    counters:\n  proteins: 11717\n  matches: 11748\n  proteomes: 9103\n  taxa: 13944\n\
+    \  structures: 83\n  alphafold_models: 7643\n  domain_architectures: 34\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR048304\ndescription: This family has been characterised\
+    \ as 3-octaprenyl-4- hydroxybenzoate carboxy-lyase enzymes\n  [[cite:PUB00020511]].\
+    \ This enzyme catalyses the third reaction in ubiquinone biosynthesis. For optimal\n\
+    \  activity the carboxy-lase was shown to require Mn2+ [[cite:PUB00020511]]. This\
+    \ entry represents the\n  central RIFT-related domain.\ncuration_history: history/records/PF01977\n\
+    discussions:\n- discussion_id: ubid-member-and-partner-coverage\n  prompt: Extend\
+    \ the family assessment beyond the mapped AnFdc experimental system.\n  kind:\
+    \ CURATION_TODO\n  status: OPEN\n  rationale: PF01977 is the central domain of\
+    \ diverse multidomain enzymes; AnFdc chemistry does not establish\n    a universal\
+    \ substrate, partner requirement or native physiological role.\n  evidence:\n\
+    \  - reference: PMID:34417452\n    supports: PARTIAL\n    evidence_source: primary_publication_lead\n\
+    \    explanation: VdcCD partner-dependent aromatic decarboxylation requires its\
+    \ own exact member mappings,\n      methods and figure assessment before graph\
+    \ adoption.\n  posed_by: Codex\n  posed_date: '2026-10-15'\n  notes: Continue\
+    \ ScFdc and PMID28753302, EcUbiD, AroY, VdcCD, HmfF, HudA and later maturation/specificity\n\
+    \    studies. Preserve the full family and corpus scope; see evidence/PF01977/anfdc-primary-assays.txt.\n\
+    - discussion_id: anfdc-atomic-steps-and-domain-attribution\n  prompt: Resolve\
+    \ intermediate transitions and separate whole-enzyme effects from PF01977-specific\
+    \ chemistry.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Trapped adducts,\
+    \ residue perturbations and computed transition states provide different levels\n\
+    \    of evidence. No isolated PF01977 fragment was shown sufficient for catalysis.\n\
+    \  evidence:\n  - reference: PMID:31527849\n    supports: PARTIAL\n    evidence_source:\
+    \ primary_publication\n    explanation: Figures 2/3 and supplement S4/S5 support\
+    \ scoped adduct and activity observations; F437/L439\n      belong to PF20696.\
+    \ The computed Int1-open state and specific proton-transfer sequence are not directly\n\
+    \      measured trajectories.\n  posed_by: Codex\n  posed_date: '2026-10-15'\n\
+    \  notes: Extend the remaining substrate/inhibitor and small-analogue graphs after\
+    \ their individual assay\n    review. Resolve solution-MS incubation details,\
+    \ active-cofactor normalization, construct sequences\n    and the limits of domain\
+    \ transfer. Do not combine E282Q Int2 and WT Int3 into one observed mutant-independent\n\
+    \    trajectory.\n- discussion_id: anfdc-assay-discrepancies\n  prompt: Resolve\
+    \ primary-source label discrepancies while retaining condition-specific negative\
+    \ and residual\n    activities.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ The 2015 blanket inactivity claim is refined by 2018 residual R173A/E277Q activity;\
+    \ detection\n    methods and cofactor preparation matter.\n  evidence:\n  - reference:\
+    \ PMID:29259125\n    supports: PARTIAL\n    evidence_source: primary_publication\n\
+    \    explanation: Original Figures 5/6/7 distinguish low turnover, absent detectable\
+    \ exchange and apparent\n      kinetics. R173A cofactor maturation and variant-dependent\
+    \ occupancy prevent a simple catalytic-residue\n      inference.\n  - reference:\
+    \ PMID:26083754\n    supports: PARTIAL\n    evidence_source: primary_publication\n\
+    \    explanation: Extended Data 1 has a detector-wavelength discrepancy and Extended\
+    \ Data 8 has a third-panel\n      color-caption discrepancy; neither is silently\
+    \ corrected or mistaken for a new biological result.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-15'\n  notes: R173 is verified in A2QHE5; position 172 is Ala. F437L\
+    \ is verified in deposited 6R2Z despite\n    the 2019 F439L prose typo. Obtain\
+    \ missing raw assay/construct details; absence of detected product\n    is not\
+    \ proof of zero activity under all conditions.\ncausal_graphs:\n- graph_id: anfdc-cinnamate-decarboxylation-2015\n\
+    \  title: AnFdc converts cinnamic acid to styrene\n  scope: Purified full-length\
+    \ Aspergillus niger Fdc1 coexpressed with E. coli UbiX; a whole-enzyme reaction,\n\
+    \    not an isolated-domain assay.\n  context: Recombinant AnFdc from E. coli\
+    \ BL21(DE3), with bound prFMN; 350 uL, 50 mM KCl and 50 mM sodium\n    phosphate\
+    \ pH 6, 25 C. Cinnamic acid disappearance and styrene-assigned UV appearance are\
+    \ followed\n    over time.\n  family_mapping: A2QHE5 sequence 1/entry 95 is the\
+    \ 500-aa An03g06590 reference. PF01977 maps to 119-318;\n    PF20695 to 14-103\
+    \ and PF20696 to 324-460. Deposited 4ZA4 equals the reference plus LEHHHHHH. See\
+    \ evidence/PF01977/member-mapping.txt.\n  taxon: NCBITaxon:425011\n  scope_status:\
+    \ MECHANISTIC\n  limitations: Does not measure native fungal flux, isolated-domain\
+    \ sufficiency or the complete atomistic\n    trajectory. UbiX supplies cofactor\
+    \ and is not assigned this decarboxylation. Reference taxonomy is\n    not the\
+    \ expression host.\n  nodes:\n  - node_id: reaction\n    label: AnFdc-prFMN with\
+    \ cinnamic acid in assay buffer\n    node_type: PROCESS\n    grounding:\n    -\
+    \ UniProtKB:A2QHE5\n  - node_id: styrene\n    label: Styrene product\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: produces-styrene\n    subject: reaction\n    predicate:\
+    \ produces\n    object: styrene\n    mechanism: Purified holoenzyme consumes the\
+    \ acid with a decrease at 270 nm and appearance of the styrene-assigned\n    \
+    \  peak at 245 nm. The joint source includes enzyme, cofactor and substrate; none\
+    \ alone is asserted\n      sufficient.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:26083754\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4988494/fullTextXML\n\
+    \      snippet: conversion of cinnamic acid to styrene\n      explanation: Original\
+    \ Figure 1c-d, Results and UV-Vis methods inspected; ledger S1a. Product formation\n\
+    \        is measured spectroscopically, not direct CO2 release.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-styrene-carboxylation-2015\n  title: AnFdc supports reverse\
+    \ carboxylation under high bicarbonate\n  scope: Purified whole AnFdc-prFMN in\
+    \ an overnight reverse-reaction assay.\n  context: 10 mM styrene, 100 mM sodium\
+    \ phosphate initially pH 6 and 3 M bicarbonate, final pH 7.5, 25\n    C overnight;\
+    \ enzyme-containing and no-enzyme samples compared by HPLC.\n  family_mapping:\
+    \ A2QHE5 version 1, PF01977 residues 119-318 within a 500-aa multidomain enzyme;\
+    \ 4ZA4\n    deposited reference body is identical plus a C-terminal tag. Same\
+    \ cloning lineage as the forward assay,\n    with different reaction conditions.\n\
+    \  taxon: NCBITaxon:425011\n  scope_status: MECHANISTIC\n  limitations: High-bicarbonate\
+    \ assay is not native carboxylative flux. Exact enzyme amount and full calibration\n\
+    \    are not established here. Figure A254 versus methods264 nm discrepancy is\
+    \ retained. Forward/reverse\n    graphs are separate, not a biological feedback\
+    \ loop.\n  nodes:\n  - node_id: reverse_mix\n    label: AnFdc-prFMN with styrene\
+    \ and high bicarbonate\n    node_type: PROCESS\n    grounding:\n    - UniProtKB:A2QHE5\n\
+    \  - node_id: cinnamate\n    label: Cinnamic-acid-assigned HPLC product\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: produces-cinnamate\n    subject: reverse_mix\n\
+    \    predicate: produces\n    object: cinnamate\n    mechanism: Enzyme addition\
+    \ yields the cinnamic-acid-assigned chromatographic peak absent from the\n   \
+    \   otherwise matched no-enzyme styrene control.\n    directness: DIRECT\n   \
+    \ support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:26083754\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4988494/fullTextXML\n\
+    \      snippet: reversible decarboxylation\n      explanation: Original Extended\
+    \ Data 1 and carboxylation HPLC methods inspected; ledger S1b. No isotope-traced\n\
+    \        CO2 incorporation or physiological rate is claimed.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-alkene-products-2015\n  title: AnFdc forms three terminal alkenes\
+    \ in separate substrate assays\n  scope: Purified whole AnFdc-prFMN, three separately\
+    \ tested aliphatic substrates.\n  context: Each reaction contains one 10 mM acid\
+    \ in 500 uL, 50 mM KCl/50 mM sodium phosphate pH 6, 25\n    C with shaking; headspace\
+    \ GC-FID, authentic product standards and matched no-enzyme controls.\n  family_mapping:\
+    \ A2QHE5 version 1 / An03g06590; PF01977 at 119-318, with separate N- and C-terminal\
+    \ Pfam\n    domains. Same 2015 AnFdc construct lineage; no domain truncation is\
+    \ tested.\n  taxon: NCBITaxon:425011\n  scope_status: MECHANISTIC\n  limitations:\
+    \ Method does not establish exact enzyme concentration or incubation duration\
+    \ here. Caption\n    reports no detected 1-octene from 2-nonenoic acid without\
+    \ a displayed separate trace. Third-panel\n    caption colors disagree with image\
+    \ labels; product identity uses standards and labels.\n  nodes:\n  - node_id:\
+    \ hexenoate_mix\n    label: AnFdc-prFMN plus 2-hexenoic acid\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:A2QHE5\n  - node_id: pentene\n    label: 1-Pentene\n\
+    \    node_type: STATE\n  - node_id: heptenoate_mix\n    label: AnFdc-prFMN plus\
+    \ 2-heptenoic acid\n    node_type: PROCESS\n    grounding:\n    - UniProtKB:A2QHE5\n\
+    \  - node_id: hexene\n    label: 1-Hexene\n    node_type: STATE\n  - node_id:\
+    \ octenoate_mix\n    label: AnFdc-prFMN plus 2-octenoic acid\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:A2QHE5\n  - node_id: heptene\n    label: 1-Heptene\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: produces-pentene\n    subject: hexenoate_mix\n\
+    \    predicate: produces\n    object: pentene\n    mechanism: The enzyme-containing\
+    \ 2-hexenoic-acid sample produces the authentic-standard-matched 1-pentene\n \
+    \     peak relative to its no-enzyme control.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:26083754\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4988494/fullTextXML\n\
+    \      snippet: comparison with pure 1-alkene standards\n      explanation: Original\
+    \ Extended Data 8 left panel and GC methods; ledger S1c.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: produces-hexene\n    subject: heptenoate_mix\n    predicate: produces\n\
+    \    object: hexene\n    mechanism: The enzyme-containing 2-heptenoic-acid sample\
+    \ produces the standard-matched 1-hexene peak\n      relative to its separate\
+    \ no-enzyme control.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:26083754\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4988494/fullTextXML\n  \
+    \    snippet: comparison with pure 1-alkene standards\n      explanation: Original\
+    \ Extended Data 8 middle panel and GC methods; ledger S1c.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: produces-heptene\n    subject: octenoate_mix\n    predicate: produces\n\
+    \    object: heptene\n    mechanism: The enzyme-containing 2-octenoic-acid sample\
+    \ produces the standard-matched 1-heptene peak.\n      Original panel labels,\
+    \ not conflicting caption colors, distinguish the reaction and control.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:26083754\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4988494/fullTextXML\n\
+    \      snippet: comparison with pure 1-alkene standards\n      explanation: Original\
+    \ Extended Data 8 right panel and GC methods; ledger S1c records the discrepancy\n\
+    \        and separately reported2-nonenoic negative.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-ere-variant-activity-2018\n  title: AnFdc active-site substitutions\
+    \ reduce measured cinnamate turnover\n  scope: Six individual R173/E277/E282 substitutions\
+    \ in full AnFdc, not combined mutations or isolated\n    PF01977.\n  context:\
+    \ EcUbiX-coexpressed proteins; cinnamic-acid UV rate assays at 25 C in 50 mM KCl/50\
+    \ mM sodium\n    phosphate pH 6, plus 10 mM substrate/50 uM enzyme HPLC endpoints\
+    \ after 2 h. Protein concentration\n    and active-cofactor occupancy differ between\
+    \ preparations.\n  family_mapping: R173/E277/E282 are verified A2QHE5 version\
+    \ 1 residues within PF01977 119-318. The papers\n    report sequence-confirmed\
+    \ mutations; deposited 6R3F independently matches only E282Q plus the reference\n\
+    \    tag, not every assay plasmid.\n  taxon: NCBITaxon:425011\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: Observed activity perturbations do not uniquely resolve\
+    \ acid/base chemistry, cofactor maturation\n    or structural effects. Apparent\
+    \ rates are not occupancy-normalized. R173A and E277Q are low-activity,\n    not\
+    \ universally inactive; E282Q/R173K negatives are assay-bounded.\n  nodes:\n \
+    \ - node_id: r173a\n    label: R173A substitution in AnFdc\n    node_type: PERTURBATION\n\
+    \  - node_id: r173k\n    label: R173K substitution in AnFdc\n    node_type: PERTURBATION\n\
+    \  - node_id: e277d\n    label: E277D substitution in AnFdc\n    node_type: PERTURBATION\n\
+    \  - node_id: e277q\n    label: E277Q substitution in AnFdc\n    node_type: PERTURBATION\n\
+    \  - node_id: e282d\n    label: E282D substitution in AnFdc\n    node_type: PERTURBATION\n\
+    \  - node_id: e282q\n    label: E282Q substitution in AnFdc\n    node_type: PERTURBATION\n\
+    \  - node_id: turnover\n    label: Measured cinnamic-acid decarboxylation relative\
+    \ to WT\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:A2QHE5\n  edges:\n\
+    \  - edge_id: r173a-reduces-turnover\n    subject: r173a\n    predicate: decreases\n\
+    \    object: turnover\n    mechanism: R173A retains low styrene formation by HPLC.\
+    \ Cofactor-maturation defects prevent interpreting\n      the reduction as a direct\
+    \ catalytic proton-transfer assignment.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: decarboxylation of cinnamic acid\n      explanation: Figure 5\
+    \ R173A trace, Arg173 Results and methods; ledger S2b. Refines the earlier2015\n\
+    \        inactivity claim.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: r173k-reduces-turnover\n    subject: r173k\n    predicate: decreases\n\
+    \    object: turnover\n    mechanism: No R173K turnover was detected by the reported\
+    \ assays despite a mature-cofactor-consistent\n      mass signal. The mutant was\
+    \ not crystallized, so its active-site structural effect remains unresolved.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:29259125\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: decarboxylation of cinnamic acid\n      explanation: Figure 5\
+    \ R173K trace and Arg173 Results; ledger S2b. This is a detection-bounded negative,\n\
+    \        not proof of absolute inactivity.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: e277d-reduces-turnover\n    subject: e277d\n    predicate: decreases\n\
+    \    object: turnover\n    mechanism: E277D retains product formation but has\
+    \ apparent turnover 1.2 +/- 0.2 s^-1 versus WT 9.4\n      +/- 0.1 s^-1. Its substrate\
+    \ dependence is not Michaelis-Menten; no Km is assigned.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:29259125\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: decarboxylation of cinnamic acid\n      explanation: Original\
+    \ Figures 5 and 6A/D, Results and rate methods; ledger S2b. Apparent values\n\
+    \        may reflect active-cofactor occupancy as well as chemistry.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: e277q-reduces-turnover\n    subject: e277q\n    predicate: decreases\n\
+    \    object: turnover\n    mechanism: E277Q forms a small styrene peak with reported\
+    \ apparent turnover upper bound0.3 min^-1;\n      this is reduced residual activity,\
+    \ not a fully abolished reaction.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: only very low levels of decarboxylase activity\n      explanation:\
+    \ Original Figure 5 E277Q trace and Glu-variant Results; ledger S2b. Preparation-dependent\n\
+    \        cofactor adducts are an explicit alternative contributor.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: e282d-reduces-turnover\n    subject: e282d\n    predicate: decreases\n\
+    \    object: turnover\n    mechanism: E282D retains styrene production with apparent\
+    \ turnover 0.63 +/- 0.04 s^-1 versus WT 9.4\n      +/- 0.1 s^-1, not zero activity.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:29259125\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: decarboxylation of cinnamic acid\n      explanation: Original\
+    \ Figures 5 and 6A/C and Results; ledger S2b. Complete protein and cofactor\n\
+    \        preparation, not isolated-domain kinetics.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: e282q-reduces-turnover\n    subject: e282q\n    predicate: decreases\n\
+    \    object: turnover\n    mechanism: E282Q has no detected cinnamate turnover\
+    \ under these2018 solution assays. Later trapping\n      of a decarboxylated cofactor\
+    \ adduct does not establish complete catalytic turnover by this mutant.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:29259125\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: decarboxylation of cinnamic acid\n      explanation: Original\
+    \ Figure 5 E282Q trace, Results and methods; ledger S2b. Binding or a mature-cofactor-like\n\
+    \        structure alone is not restored catalysis.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-styrene-isotope-exchange-2018\n  title: AnFdc supports position-specific\
+    \ styrene hydrogen-deuterium exchange\n  scope: Purified whole AnFdc WT and individually\
+    \ tested E282D/E277D/R173A variants; isotope exchange,\n    not net carboxylation.\n\
+    \  context: 35 uM enzyme in styrene-saturated D2O with 50 mM potassium phosphate\
+    \ pH 6, 298K; proton NMR\n    compared with no-enzyme control. Normal acquisition\
+    \ dead time is approximately 20 min.\n  family_mapping: A2QHE5 version 1, PF01977\
+    \ at 119-318; all three substitutions lie inside that interval.\n    Complete\
+    \ enzyme retains PF20695/PF20696. Exact individual assay plasmids have not been\
+    \ independently\n    resequenced.\n  taxon: NCBITaxon:425011\n  scope_status:\
+    \ MECHANISTIC\n  limitations: Proton-signal exchange is directly measured; the\
+    \ identity of a proton-transferring residue\n    and each covalent intermediate\
+    \ are not. E277Q/E282Q/R173K lack significant detectable exchange in\n    these\
+    \ conditions. R173A four-hour result is reported in Results, not a separate inspected\
+    \ four-hour\n    trace.\n  nodes:\n  - node_id: wt_mix\n    label: WT AnFdc-prFMN\
+    \ with styrene in D2O\n    node_type: PROCESS\n    grounding:\n    - UniProtKB:A2QHE5\n\
+    \  - node_id: e282d_mix\n    label: E282D AnFdc with styrene in D2O\n    node_type:\
+    \ PROCESS\n  - node_id: e277d_mix\n    label: E277D AnFdc with styrene in D2O\n\
+    \    node_type: PROCESS\n  - node_id: r173a_mix\n    label: R173A AnFdc with styrene\
+    \ in D2O for 4 h\n    node_type: PROCESS\n  - node_id: exchange\n    label: Styrene\
+    \ trans-C1 hydrogen-deuterium exchange\n    node_type: PROCESS\n  edges:\n  -\
+    \ edge_id: wt-enables-exchange\n    subject: wt_mix\n    predicate: enables\n\
+    \    object: exchange\n    mechanism: WT eliminates the5.3 ppm proton signal and\
+    \ simplifies the6.9 ppm signal within the approximately\n      20 min dead time\
+    \ relative to the no-enzyme control.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: exchange has taken place\n      explanation: Original Figure 7\
+    \ WT/control spectra and H/D methods; ledger S2c. No net CO2 incorporation\n \
+    \       is measured.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: e282d-enables-exchange\n    subject: e282d_mix\n    predicate: enables\n\
+    \    object: exchange\n    mechanism: E282D retains position-specific exchange\
+    \ within the acquisition dead time; slower cinnamate\n      turnover does not\
+    \ imply loss of this distinct exchange reaction.\n    directness: DIRECT\n   \
+    \ support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:29259125\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: exchange has taken place\n      explanation: Original Figure 7\
+    \ E282D/control spectra, Results and H/D methods; ledger S2c.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: e277d-enables-slow-exchange\n    subject: e277d_mix\n    predicate:\
+    \ enables\n    object: exchange\n    mechanism: E277D supports slower exchange,\
+    \ reaching approximately 90 percent by 2 h rather than completing\n      within\
+    \ the initial dead time.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n  \
+    \    snippet: exchange has taken place\n      explanation: Original Figure 7 E277D\
+    \ and E277D+2 h spectra and Results; ledger S2c.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: r173a-enables-reported-low-exchange\n    subject: r173a_mix\n  \
+    \  predicate: enables\n    object: exchange\n    mechanism: The Results report\
+    \ very low exchange after 4 h with R173A, consistent with residual activity\n\
+    \      rather than an absolute loss. No precise rate or independently inspected\
+    \ four-hour spectrum is asserted.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: exchange has taken place\n      explanation: Arg173-variant Results\
+    \ and H/D methods; Figure 7 supplies the assay context but not\n        a separate4\
+    \ h trace. Ledger S2c distinguishes reported from displayed evidence.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-light-inactivation-2018\n  title: Illumination reduces AnFdc\
+    \ activity relative to dark controls\n  scope: Purified whole AnFdc WT, E277D\
+    \ and E282D; solution activity perturbations.\n  context: Preparations incubated\
+    \ on ice in clear or black tubes, assayed for cinnamate consumption; assay\n \
+    \   concentrations WT 45 nM, E277D300 nM, E282D600 nM. Separate dark-purified\
+    \ WT exposure to 365 nm UV\n    for 5 min is reported.\n  family_mapping: A2QHE5\
+    \ version 1, PF01977 119-318; E277D/E282D are internal substitutions, but illumination\n\
+    \    acts on the complete cofactor-containing enzyme rather than an isolated domain.\n\
+    \  taxon: NCBITaxon:425011\n  scope_status: PHENOTYPIC\n  limitations: Directness\
+    \ of the molecular route to solution inactivation is unresolved in this graph.\n\
+    \    Separate crystal observations support photoisomerization but are not a simultaneous\
+    \ single-molecule\n    time course. Irradiance and universal exposure thresholds\
+    \ are not established.\n  nodes:\n  - node_id: wt_light\n    label: Ambient-light\
+    \ incubation of WT AnFdc\n    node_type: PERTURBATION\n  - node_id: e277d_light\n\
+    \    label: Ambient-light incubation of E277D AnFdc\n    node_type: PERTURBATION\n\
+    \  - node_id: e282d_light\n    label: Ambient-light incubation of E282D AnFdc\n\
+    \    node_type: PERTURBATION\n  - node_id: wt_uv\n    label: Five-minute365 nm\
+    \ illumination of dark-purified WT\n    node_type: PERTURBATION\n  - node_id:\
+    \ wt_activity\n    label: WT cinnamate-decarboxylation activity\n    node_type:\
+    \ ACTIVITY\n    grounding:\n    - UniProtKB:A2QHE5\n  - node_id: e277d_activity\n\
+    \    label: E277D cinnamate-decarboxylation activity\n    node_type: ACTIVITY\n\
+    \  - node_id: e282d_activity\n    label: E282D cinnamate-decarboxylation activity\n\
+    \    node_type: ACTIVITY\n  edges:\n  - edge_id: light-reduces-wt\n    subject:\
+    \ wt_light\n    predicate: decreases\n    object: wt_activity\n    mechanism:\
+    \ WT activity declines on ice under illumination, unlike the matched dark control;\
+    \ oxygen\n      exposure alone does not explain this light-versus-dark contrast.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:29259125\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: decarboxylation of cinnamic acid\n      explanation: Original\
+    \ Figure 2A, light/dark Results and methods; ledger S2d. The observed solution\n\
+    \        effect is distinguished from the proposed molecular explanation.\n  \
+    \    cache_path: evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256:\
+    \ 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n  - edge_id:\
+    \ light-reduces-e277d\n    subject: e277d_light\n    predicate: decreases\n  \
+    \  object: e277d_activity\n    mechanism: E277D loses more normalized activity\
+    \ in light than in its dark control; the mutation does\n      not prevent light\
+    \ sensitivity.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n  \
+    \    snippet: decarboxylation of cinnamic acid\n      explanation: Original Figure\
+    \ 2A E277D paired time courses and methods; ledger S2d. Dark stability\n     \
+    \   is not claimed perfectly constant for this variant.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: light-reduces-e282d\n    subject: e282d_light\n    predicate: decreases\n\
+    \    object: e282d_activity\n    mechanism: E282D loses normalized activity with\
+    \ illumination relative to its dark control, despite\n      retaining measurable\
+    \ turnover before exposure.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: decarboxylation of cinnamic acid\n      explanation: Original\
+    \ Figure 2A E282D paired time courses and methods; ledger S2d.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: uv-reduces-wt\n    subject: wt_uv\n    predicate: decreases\n  \
+    \  object: wt_activity\n    mechanism: Five-minute365 nm exposure is reported\
+    \ to remove detectable activity from the dark-purified\n      WT preparation while\
+    \ changing its optical spectrum.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: complete loss of activity\n      explanation: Light-dependent-inactivation\
+    \ Results, Figure 2B spectra and light/dark methods; ledger\n        S2d. The\
+    \ five-minute activity endpoint is reported in text, not Figure 2A's ambient-light\
+    \ series.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n     \
+    \ cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-crystal-photoisomerization-2018\n  title: UV exposure produces\
+    \ ketimine-containing AnFdc crystal states\n  scope: Whole AnFdc WT and E282Q\
+    \ crystals prepared in darkness; molecular-state changes, separate from\n    solution\
+    \ activity assays.\n  context: Dark-purified/crystallized protein compared with\
+    \ UV-exposed crystals. Structures resolve iminium\n    versus ketimine-containing\
+    \ states; WT ketimine persists after return to darkness.\n  family_mapping: A2QHE5\
+    \ version 1, PF01977 119-318; E282 is internal. The complete enzyme has additional\n\
+    \    Pfam domains; no isolated-domain photochemistry is tested.\n  taxon: NCBITaxon:425011\n\
+    \  scope_status: MECHANISTIC\n  limitations: Structural occupancy is not complete\
+    \ quantitative solution conversion. E282Q also contains\n    hydroxylated cofactor;\
+    \ its ketimine occupancy is below 50 percent. Specific internal/external proton-transfer\n\
+    \    mechanisms remain proposed.\n  nodes:\n  - node_id: wt_uv_crystal\n    label:\
+    \ UV exposure of dark-prepared WT AnFdc crystals\n    node_type: PROCESS\n   \
+    \ grounding:\n    - UniProtKB:A2QHE5\n  - node_id: wt_ketimine\n    label: WT\
+    \ crystal with increased prFMN ketimine occupancy\n    node_type: STATE\n  - node_id:\
+    \ e282q_uv_crystal\n    label: UV exposure of dark-prepared E282Q crystals\n \
+    \   node_type: PROCESS\n  - node_id: e282q_ketimine\n    label: E282Q crystal\
+    \ with detectable prFMN ketimine\n    node_type: STATE\n  edges:\n  - edge_id:\
+    \ wt-uv-produces-ketimine-state\n    subject: wt_uv_crystal\n    predicate: produces\n\
+    \    object: wt_ketimine\n    mechanism: UV exposure converts a dark WT crystal\
+    \ population containing iminium cofactor to a mixed\n      state with at least\
+    \ approximately 50 percent ketimine; prolonged return to darkness does not restore\n\
+    \      the original cofactor state.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: isomerization of at least 50%\n      explanation: Figure 2 C/D\
+    \ electron-density panels and adjacent crystal-isomerization Results establish\n\
+    \        the structural direction, distinct from the solution-activity experiment.\
+    \ Ledger S2d.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n \
+    \     cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: e282q-uv-produces-ketimine-state\n    subject: e282q_uv_crystal\n\
+    \    predicate: produces\n    object: e282q_ketimine\n    mechanism: UV-exposed\
+    \ E282Q crystals contain ketimine despite replacement of the glutamate side chain;\n\
+    \      that residue's acidic group is therefore not an absolute requirement for\
+    \ the observed photoisomerization.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: ketimine form can also be observed\n      explanation: Figure\
+    \ 2E/F and isomerization Results, not E282Q turnover, support this edge. Ledger\n\
+    \        S2d records the directly inspected structural comparison.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-e282q-int2-trapping-2019\n  title: Cinnamic acid exposure traps\
+    \ a decarboxylated AnFdc E282Q adduct\n  scope: Complete E282Q AnFdc-prFMN construct\
+    \ in a crystallographic trapping experiment, not WT turnover.\n  context: Cinnamic\
+    \ acid supplied at 1 mM from 2 h after expression induction and in purification\
+    \ buffers,\n    followed by crystallization at 4 C. The resulting6R3F structure\
+    \ resolves the Int2 cofactor-substrate\n    adduct.\n  family_mapping: Deposited\
+    \ 6R3F entity1 matches A2QHE5 version 1 except E282Q plus LEHHHHHH. E282 lies\n\
+    \    inside PF01977 119-318; the other domains are retained. Exact comparison\
+    \ is in evidence/PF01977/member-mapping.txt.\n  taxon: NCBITaxon:425011\n  scope_status:\
+    \ MECHANISTIC\n  limitations: Adduct accumulation establishes a chemical endpoint,\
+    \ not sustained turnover, free product\n    release or direct observation of each\
+    \ preceding transition. No edge joins this mutant endpoint to\n    WT intermediates\
+    \ as an observed chain.\n  nodes:\n  - node_id: e282q_cinnamate\n    label: E282Q\
+    \ AnFdc-prFMN exposed to cinnamic acid\n    node_type: PROCESS\n    grounding:\n\
+    \    - UniProtKB:A2QHE5\n  - node_id: int2\n    label: Decarboxylated covalent\
+    \ prFMN-substrate Int2 adduct\n    node_type: STATE\n  edges:\n  - edge_id: forms-int2\n\
+    \    subject: e282q_cinnamate\n    predicate: produces\n    object: int2\n   \
+    \ mechanism: The exposed construct yields electron density for a covalent substrate-cofactor\
+    \ adduct\n      lacking the substrate carboxylate and retaining one substrate-to-prFMN\
+    \ linkage, assigned Int2. This\n      does not contradict absent complete turnover\
+    \ in the2018 solution assay.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:31527849\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6817360/fullTextXML\n\
+    \      snippet: covalent prFMN-substrate complex\n      explanation: Original\
+    \ Figure 2b/c, Int2 Results, supplement p4 methods and Table1; exact deposited\n\
+    \        E282Q sequence checked. Ledger S3a.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-phenylpropiolate-adducts-2019\n  title: AnFdc forms and slowly\
+    \ decarboxylates a phenylpropiolate cycloadduct\n  scope: WT full AnFdc-prFMN\
+    \ reacting with the alkyne analogue phenylpropiolic acid, not ordinary cinnamic-acid\n\
+    \    turnover.\n  context: Rapid crystal soaks use100 mM ligand; prolonged cocrystallization\
+    \ uses 1 mM ligand at 4 C.\n    Separate solution cofactor-MS samples at 0/21/50\
+    \ h track a44 Da mass loss. Exact solution incubation\n    concentration/temperature\
+    \ remain unresolved.\n  family_mapping: A2QHE5 version 1, PF01977 119-318, additional\
+    \ domains intact. Deposited 6R33 Int3-prime\n    construct exactly matches the\
+    \ reference body plus LEHHHHHH; the paper identifies the same AnFdc lineage\n\
+    \    for the rapid-soak experiment.\n  taxon: NCBITaxon:425011\n  scope_status:\
+    \ MECHANISTIC\n  limitations: Complementary crystallographic endpoints and solution-MS\
+    \ time courses are not one observed\n    atomic trajectory. Slow adduct decarboxylation\
+    \ does not demonstrate free phenylacetylene release or\n    sustained alkyne turnover.\
+    \ L439G retains the carboxylated mass through 48 h.\n  nodes:\n  - node_id: alkyne_mix\n\
+    \    label: WT AnFdc-prFMN with phenylpropiolic acid\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:A2QHE5\n  - node_id: int1_prime\n    label: Enzyme-bound\
+    \ carboxylated prFMN cycloadduct Int1-prime\n    node_type: STATE\n  - node_id:\
+    \ int3_prime\n    label: Enzyme-bound decarboxylated cycloadduct Int3-prime\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: forms-int1-prime\n    subject: alkyne_mix\n\
+    \    predicate: produces\n    object: int1_prime\n    mechanism: Rapid ligand\
+    \ soaking and flash-cooling trap the carboxylated covalent cycloadduct. The\n\
+    \      source includes mature cofactor and whole enzyme, rather than asserting\
+    \ spontaneous substrate binding\n      is catalysis.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:31527849\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6817360/fullTextXML\n\
+    \      snippet: clear density for a 3-pyrroline cycloadduct\n      explanation:\
+    \ Original Figure 3b and associated rapid-soak Results; supplement pp3-4. Figure\
+    \ 3a is\n        the later decarboxylated state, not the same snapshot. Ledger\
+    \ S3b.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256:\
+    \ 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n  - edge_id:\
+    \ slowly-decarboxylates-adduct\n    subject: int1_prime\n    predicate: converts_to\n\
+    \    object: int3_prime\n    mechanism: WT cofactor-MS time points show loss of\
+    \ the approximately 669 Da species and accumulation\n      of approximately 625\
+    \ Da material, supporting slow adduct decarboxylation; prolonged cocrystallization\n\
+    \      independently resolves the decarboxylated cyclic endpoint.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:31527849\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6817360/fullTextXML\n\
+    \      snippet: slow decarboxylation occurs\n      explanation: Original Figure\
+    \ 3a and visually inspected supplement S4a/b on PDF p11, plus MS methods.\n  \
+    \      Times are 0/21/50 h for WT and 0/27/48 h for L439G; not an assumed 24 h\
+    \ endpoint. Ledger S3b.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-c-terminal-variant-activity-2019\n  title: C-terminal-domain\
+    \ substitutions reduce whole-AnFdc turnover\n  scope: Full AnFdc F437L and L439G\
+    \ variants; these mutations are outside PF01977 and are retained as\n    whole-enzyme\
+    \ context.\n  context: EcUbiX-coexpressed, dark-purified variants; cinnamate-consumption\
+    \ assays in 350 uL, 50 mM KCl/50\n    mM sodium phosphate pH 6 at 25 C. Apparent\
+    \ turnover is calculated from total protein concentration.\n  family_mapping:\
+    \ Exact deposited 6R2Z and 6R30 bodies differ from A2QHE5 version 1 only at F437L\
+    \ or L439G,\n    respectively, plus LEHHHHHH. PF01977 is 119-318; both mutated\
+    \ residues lie in PF20696 324-460, not\n    this entry's domain.\n  taxon: NCBITaxon:425011\n\
+    \  scope_status: PHENOTYPIC\n  limitations: Rate effects support the role of the\
+    \ intact multidomain active site; they do not establish\n    a PF01977-specific\
+    \ residue mechanism. Altered binding, occupancy and active-site geometry can contribute.\n\
+    \    Reduced cinnamate turnover is distinct from absent alkyne-adduct decarboxylation.\n\
+    \  nodes:\n  - node_id: f437l\n    label: F437L substitution in the C-terminal\
+    \ domain\n    node_type: PERTURBATION\n  - node_id: l439g\n    label: L439G substitution\
+    \ in the C-terminal domain\n    node_type: PERTURBATION\n  - node_id: turnover\n\
+    \    label: Whole-AnFdc cinnamate turnover relative to WT\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:A2QHE5\n  edges:\n  - edge_id: f437l-reduces-turnover\n\
+    \    subject: f437l\n    predicate: decreases\n    object: turnover\n    mechanism:\
+    \ F437L retains apparent turnover 0.39 +/- 0.01 s^-1 with Km 5.3 +/- 1.0 uM, but\
+    \ is substantially\n      slower than WT. The experiment does not report zero\
+    \ activity or an F439L substitution.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:31527849\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6817360/fullTextXML\n\
+    \      snippet: both mutations severely compromised enzyme activity\n      explanation:\
+    \ Original supplement S5d, PDF p12 caption/plot and kinetic methods pp2-3; deposited\n\
+    \        6R2Z sequence confirms F437L. Ledger S3c.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: l439g-reduces-turnover\n    subject: l439g\n    predicate: decreases\n\
+    \    object: turnover\n    mechanism: L439G has reduced but measurable cinnamate\
+    \ turnover and shifted substrate dependence. No\n      precise Km is invented\
+    \ from the plot; the separate failure to decarboxylate an alkyne adduct is\n \
+    \     not transferred to cinnamate.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:31527849\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6817360/fullTextXML\n\
+    \      snippet: both mutations severely compromised enzyme activity\n      explanation:\
+    \ Original supplement S5b, PDF p12 plot and main mutagenesis Results; deposited\
+    \ 6R30\n        sequence confirms L439G. Ledger S3c.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    curation_events:\n- timestamp: '2026-10-15T06:07:07Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate ten scoped AnFdc causal graphs\
+    \ for PF01977 with primary assay and domain evidence.\n  history_record: history/records/PF01977/2026-10-15T060707Z-codex-18c546.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact family and construct scope
+  outcome: supported
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - identity
+  - native
+  summary: Frozen identity and aliases are preserved; the graph scopes distinguish
+    the tested whole protein, current Pfam interval and additional domains. Sequence
+    comparisons resolve R173 and F437L numbering without inventing mutant identities.
+- assessment_id: causality
+  area: graph
+  topic: Measured effects versus molecular interpretation
+  outcome: supported
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - payne
+  - bailey2018
+  - bailey2019
+  summary: All26 edges have experimentally supported direction within their stated
+    contexts. Twelve perturbation effects retain unresolved molecular directness.
+    Adduct trapping is not complete turnover; DFT transitions and untested family
+    transfer are not observed edges.
+- assessment_id: provenance
+  area: provenance
+  topic: Evidence caches, history and ownership
+  outcome: supported
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - identity
+  - native
+  summary: Minimal licensed extracts, source hashes, mapped reference evidence and
+    canonical CREATE history accompany maintained overlays and guarded projections.
+    Other records and prior retained reviews/history are unchanged.
+- assessment_id: coverage
+  area: completeness
+  topic: Unfinished member and mechanistic coverage
+  outcome: concern
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - coverage
+  - bailey2018
+  - bailey2019
+  summary: Other members, remaining AnFdc experiments, quantitative assay discrepancies
+    and physical construct verification remain open. IN_PROGRESS and three discussions
+    honestly preserve the unfinished scientific work.
+findings:
+- finding_id: member-and-partner-coverage
+  issue_key: pf01977-member-and-partner-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Other UbiD-family systems need independently mapped causal review
+  description: Review ScFdc, EcUbiD, AroY, VdcCD, HmfF, HudA and later specificity/maturation
+    studies. Retain exact taxon, sequence/domain boundary, perturbation, control and
+    compartment before extending beyond AnFdc.
+  target_ids:
+  - PF01977
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - identity
+  - coverage
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01977.yaml
+    role: Maintained scientific overlay; evidence, canonical history and native regeneration
+      required.
+- finding_id: atomic-steps-and-domain-attribution
+  issue_key: pf01977-atomic-steps-and-domain-attribution
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Atomic transitions and additional AnFdc contexts remain incomplete
+  description: Extend unrepresented inhibitor/analogue assays and distinguish directly
+    observed chemical endpoints from DFT or structural inference. Do not assign PF20696
+    residues to PF01977 or combine mutant/analogue snapshots into one observed pathway.
+  target_ids:
+  - PF01977
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - bailey2019
+  - identity
+  - coverage
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01977.yaml
+    role: Maintained scientific overlay; evidence, canonical history and native regeneration
+      required.
+- finding_id: assay-discrepancies-and-normalization
+  issue_key: pf01977-assay-discrepancies-and-normalization
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Raw assay and construct details remain unresolved
+  description: Resolve the2015 detector/color-label discrepancies, solution-MS incubation
+    details, active-cofactor normalization and final assay plasmid sequences. Preserve
+    residual versus detection-limited activity and the explicitly reported-only R173A
+    four-hour exchange.
+  target_ids:
+  - PF01977
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - payne
+  - bailey2018
+  - bailey2019
+  - identity
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01977.yaml
+    role: Maintained scientific overlay; evidence, canonical history and native regeneration
+      required.
+actions:
+- action_id: extend-scientific-coverage
+  description: Continue the three open scientific questions without weakening context,
+    evidence or domain-attribution boundaries.
+  finding_ids:
+  - member-and-partner-coverage
+  - atomic-steps-and-domain-attribution
+  - assay-discrepancies-and-normalization
+  target_ids:
+  - PF01977
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01977.yaml
+    role: Maintained scientific overlay; evidence, canonical history and native regeneration
+      required.
+  acceptance_checks:
+  - Every added member is mapped to an exact reference/construct and current Pfam
+    interval; its experimental host and partners are explicit.
+  - Every edge has primary evidence for direction, conditions and controls; structural/computational
+    proposals are labeled separately from observed transitions.
+  - Retain source discrepancies, missing measurements, negative results and residual
+    activity; do not infer absolute inactivity or domain sufficiency.
+  - Append actual history and a successor scoped review, regenerate through the native
+    writer, preserve all other families and keep incomplete coverage explicit.
+limitations:
+- Partial same-agent scientific review, not independent expert approval, experimental
+  replication or complete family/corpus coverage.
+- Reference/PDB sequence comparisons verify deposited designs, not all physical plasmids.
+  Live provider mappings are not a new bulk source release.
+- Only selected supplementary figures were visually inspected; no raw diffraction
+  refinement, raw assay reanalysis or exhaustive2026 citation census.
+- Publication remains separate. Actual source-pin check fails for changed record bytes;
+  full release QC, canonical Pages and deployment were not performed.
+tags:
+- causal-graphs
+- pf01977
+- ubid
+- anfdc
+- scientific-self-review

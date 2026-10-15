@@ -1,0 +1,61 @@
+PF01977 / UbiD: AnFdc reference and domain boundaries
+Assessment date: 2026-10-15 UTC; curator: Codex (GPT-5).
+
+Frozen identity
+data/worklists/interpro-pfam-duf-2026-10-10.json, SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+The PF01977 row is EX_DUF, integrated into IPR048304, and describes the
+central RIFT-related domain, not the complete multidomain UbiD enzyme.
+The frozen pfam-previous-unknown-names-2026-10-10.json row identifies
+PF01977.23, current short name UbiD, previous names DUF117 and UPF0096.
+These are naming-history facts, not family-wide experimental evidence.
+
+Exact reference, retrieved and parsed 2026-10-15
+https://rest.uniprot.org/uniprotkb/A2QHE5.json
+Raw SHA256 c9b6b4743e800d05b2f0af05b37694fded9d0be11a41fc5647fb08a2d0222035.
+A2QHE5 / FDC1_ASPNC, gene An03g06590 / fdc1, sequence version 1,
+entry version 95, length 500. Aspergillus niger ATCC MYA-4892 / CBS 513.88 /
+FGSC A1513, NCBITaxon:425011. Reference residues are A172, R173, E277,
+E282, F437 and L439. Reference strain identity is not a native fungal
+phenotype experiment: the papers express recombinant proteins in E. coli.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/A2QHE5/
+Raw SHA256 160e8e40701599f1c1661ac3c096c6e911583e9d18249f3eec3695b54c0a6322.
+Three returned matches, no next page; inclusive reference coordinates:
+PF01977 119-318, PF20695 14-103, PF20696 324-460.
+R173/E277/E282 are inside PF01977. F437/L439 are outside it, in PF20696.
+The biochemical experiments test the complete protein, not an isolated
+119-318 fragment. No edge establishes domain-only sufficiency.
+
+Deposited construct comparisons, retrieved 2026-10-15
+API pattern: https://data.rcsb.org/rest/v1/core/polymer_entity/PDB_ID/1
+All five sequences are 508 residues. Direct comparison of deposited canonical
+polymer sequence to A2QHE5 version 1 gives the full 500-residue reference body
+with the specified differences only, followed by LEHHHHHH:
+4ZA4: no difference; DOI 10.1038/nature14560 reference structure.
+  SHA256 9e23f9d7c51f969ef73b33dc81227de5c193e055ff8ec844b96227350f227082
+6R3F: E282Q only; 2019 cinnamic-acid-derived Int2 structure.
+  SHA256 27a0f1f67e9d17b33447c96a22d9fa5e47bc0e318b1d42677b4e8b466068f5e4
+6R30: L439G only; 2019 phenylpropiolic-acid-derived Int1-prime structure.
+  SHA256 027390889edd532f4e8a7b0b53fc463db6af4e7ca1d55ed7a5b262e2dbf05f5e
+6R2Z: F437L only; 2019 phenylpropiolic-acid-derived Int1-prime structure.
+  SHA256 c2369307b8db0e486155d1ccc4f3e091c86055bbe507ebfb141c5f109c4b0445
+6R33: no difference; 2019 phenylpropiolic-acid-derived Int3-prime structure.
+  SHA256 c8aab5a0f27fa757decf15dbc7c8c5ec57f9f78866e4ff7301e1a3df958920af
+These establish deposited sequence designs, not resequencing of every assay
+plasmid. The papers report sequencing the intended mutations. Assay-lineage
+assignment also uses their cloning methods and explicit reference to prior
+AnFdc constructs; uninspected individual plasmid sequences remain a limit.
+
+Interpretation safeguards
+The 2015 prose mentions R172 but names the tested variant R173A; sequence
+position 172 is Ala and position 173 is Arg. The 2018 paper consistently uses
+R173. The 2019 computational section's F439L spelling conflicts with F437L in
+the experiments, supplement and exact deposited 6R2Z sequence. Use F437L for
+that experiment; do not invent an F439L construct or a PF01977 F437 residue.
+UbiX/Pad is the separate cofactor-producing partner, not this Pfam domain.
+S. cerevisiae Fdc, AroY, bacterial UbiD and VdcCD require their own mappings
+and assay contexts before transfer; none is inferred from the AnFdc example.
+UniProt attribution: UniProt Consortium, CC BY 4.0. InterPro/Pfam and PDB
+native mapping data are reference facts; original downloaded files remain
+outside the repository. No upstream snapshot or source-adoption status changes.

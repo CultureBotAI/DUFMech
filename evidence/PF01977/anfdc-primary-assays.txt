@@ -1,0 +1,148 @@
+PF01977: primary AnFdc causal evidence ledger
+Assessed 2026-10-15 UTC by Codex (GPT-5). This is a partial family assessment,
+not a complete UbiD-family review. All retained prose below is curator-authored
+except the short expressly marked quotations. Full articles, figures and PDF
+supplements are inspection copies outside the repository, not redistributed.
+Exact reference/domain/construct assignments: member-mapping.txt in this folder.
+
+S1. Payne et al. 2015, PMID:26083754, doi:10.1038/nature14560
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4988494/fullTextXML
+XML SHA256 4824630eb856aac54f15a4b04cbc70ff672062698ae97c94d58ec6452c19076f.
+Original figures acquired through the public supplementaryFiles endpoint:
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4988494/supplementaryFiles
+Inspected image hashes:
+Fig1 emss-63448-f001.jpg: 1b52c303d757fd4c7fc9e48e2b79f995c9af85678c7e74d6021e806bc204a7e3
+Extended Data1 emss-63448-f005.jpg: 707bb0a07d39aeff074ac10c68fdec9097ee98528b27ae17678f3e6eb8f795a1
+Extended Data8 emss-63448-f012.jpg: 68fac24957569dcf2ca41130285cf7f7c9736fd65327a0d544311e0914da2897
+Also inspected main Figure4 and the relevant cloning/purification/assay methods.
+Minimal source quotations:
+Q1: "conversion of cinnamic acid to styrene"
+Q2: "reversible decarboxylation"
+Q3: "comparison with pure 1-alkene standards"
+Q4: "reversible enzyme inhibition"
+
+S1a, Figure1c-d / UV-Vis methods: purified AnFdc coexpressed with EcUbiX
+consumes cinnamic acid and forms the styrene-assigned UV peak. Assay: 350 uL,
+50 mM KCl, 50 mM sodium phosphate pH6, 25 C, 1-mm path. The 270-nm signal
+falls as the 245-nm signal rises. This is a complete-protein reaction with
+bound prFMN, not a domain-only test or a direct CO2 measurement.
+S1b, Extended Data1 / carboxylation methods: 10 mM styrene, 100 mM sodium
+phosphate initially pH6 and 3 M bicarbonate (final pH7.5), 25 C overnight.
+The enzyme-containing sample has the cinnamic-acid-assigned HPLC peak absent
+from the no-enzyme control. Figure ordinate says A254, methods say detection
+264 nm. Retain this discrepancy, not an invented corrected wavelength. The
+enzyme amount and raw integration/calibration series are not established here.
+S1c, Extended Data8 / GC methods: separate 10 mM 2-hexenoic, 2-heptenoic or
+2-octenoic acid assays, 500 uL, 50 mM KCl/50 mM sodium phosphate pH6, 25 C,
+shaking, enzyme versus no-enzyme, headspace GC-FID with authentic standards.
+Products are respectively 1-pentene, 1-hexene and 1-heptene. Exact enzyme
+amount/incubation duration are not supplied by this method. The caption reports
+no detected 1-octene from 2-nonenoic acid; that negative has no separate panel.
+The third displayed panel is red enzyme/black control, conflicting with the
+caption's color description. Product labels, standards and paired control,
+not the erroneous color prose, identify the retained outcome.
+S1d: phenylpyruvate inhibition/recovery, NaBH3CN inactivation and other substrate
+kinetics are identified but not yet represented as separate graphs. The 2015
+atomistic scheme is a proposal, not a directly observed sequence of all steps.
+
+S2. Bailey et al. 2018, PMID:29259125, doi:10.1074/jbc.RA117.000881
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML
+XML SHA256 5aa2b87200bc04163f770f2644ef5a735ee5ea069017b513c602aa3531ae37ef.
+Article explicitly CC BY 4.0. Results and Experimental procedures inspected.
+Original Figures2/5/6/7 were retrieved from their actual PMC image URLs and
+visually inspected, not just their captions. Image SHA256 respectively:
+0a8f3d30e5728162b90799aee12048021d1c074c792402aaf51eb2e186f38aa8
+51051ed72a492f92ba0ea1e7e542171bc6da81d0dbcbc40008b3ea1400132e87
+837b9d06961695bca96d7742a5e86868578ee186732552952d6d09116e587570
+9a791528da75805869535e2eae1dafac17760aade8086d5ff61313cfb8d39731
+Minimal quotations:
+Q5: "complete loss of activity"
+Q6: "decarboxylation of cinnamic acid"
+Q7: "only very low levels of decarboxylase activity"
+Q8: "exchange has taken place"
+Q13: "isomerization of at least 50%"
+Q14: "ketimine form can also be observed"
+
+S2a: AnFdc pET30a, EcUbiX pET21b, E. coli BL21(DE3); intended mutations
+sequence-confirmed. MnCl2 supplied at induction; purified complete proteins.
+Rate assays follow cinnamic acid consumption in 350 uL 50 mM KCl/50 mM
+sodium phosphate pH6 at 25 C. Apparent kcat uses total protein, not an exact
+active-prFMN occupancy correction. HPLC: 10 mM cinnamic acid, 50 uM enzyme,
+same salts/pH, 2 h at 25 C; standards for styrene and cinnamic acid are shown.
+S2b, Figures5/6: E282D retains activity (apparent kcat 0.63 +/-0.04 s^-1),
+E277D 1.2 +/-0.2 s^-1 versus WT 9.4 +/-0.1 s^-1. E277D does not follow
+Michaelis-Menten kinetics; no fitted Km is adopted. E277Q has small product
+formation (reported upper kcat bound 0.3 min^-1); R173A also has low residual
+product formation. E282Q and R173K have no detected turnover in these assays.
+This refines the 2015 blanket inactivity statement for R173A and E277Q.
+Loss/reduction does not by itself assign a proton-transfer step. R173A has
+cofactor-maturation defects; R173K was not crystallized; preparation-dependent
+occupancy/adduct differences and structural perturbations remain relevant.
+S2c, Figure7 / NMR methods: 35 uM protein, styrene-saturated D2O with 50 mM
+potassium phosphate pH6, 298 K, no-enzyme control. Loss of the 5.3-ppm proton
+and simplification of the 6.9-ppm signal establish trans-C1 exchange. WT and
+E282D exchange within the approximately 20-minute dead time; E277D reaches
+approximately 90% after 2 h. Results report very low R173A exchange at 4 h;
+the inspected Figure7 does not display that separate four-hour spectrum.
+E277Q, E282Q and R173K lack detectable/significant exchange under the tested
+conditions. Exchange is not measured net carboxylation or isotope-traced CO2.
+S2d, Figure2: ambient-light exposure on ice reduces WT, E277D and E282D
+activity compared with dark controls. The WT assay concentration is 45 nM;
+E277D 300 nM and E282D 600 nM. This is an observed perturbation effect,
+not a directly time-resolved molecular causal trajectory. Five minutes of
+365-nm UV exposure of dark-purified WT is reported to abolish activity.
+Separately, dark-grown WT crystals contain iminium prFMN; illuminated crystals
+show at least approximately 50% ketimine, without reversion after returning to
+darkness. E282Q crystals also form ketimine after UV exposure. Acid/base
+details of that photoisomerization remain proposed, not demonstrated edges.
+
+S3. Bailey et al. 2019, PMID:31527849, doi:10.1038/s41557-019-0324-8
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6817360/fullTextXML
+XML SHA256 00621cc83dafe2fb162744d61303bb5be85a6119a8562e10562b963866ca4b79.
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6817360/supplementaryFiles
+EMS83924-supplement-1.pdf SHA256
+892198009fdbb4b58044c8d6fdea25ba92124879f34adc437eed5a3e0a8463a4.
+Main results/discussion, supplement methods pp2-6, figures S1-S5 captions,
+S4/S5 actual PDF pages11-12 and Table1 assignments inspected. Main figures2/3
+visually inspected; hashes 9f3d9b0a62fd87f0001fa73cb73521b8bba6acd6a2eba886413cee45727ae59b
+and 52ae0296cbe13c2885a1ef39b972ae9d2775357abb953f49142d230fbb18f8c0.
+Minimal quotations:
+Q9: "covalent prFMN-substrate complex"
+Q10: "slow decarboxylation occurs"
+Q11: "both mutations severely compromised enzyme activity"
+Q12: "clear density for a 3-pyrroline cycloadduct"
+
+S3a: E282Q exposed to cinnamic acid traps decarboxylated Int2 (6R3F), not a
+complete turnover cycle. Supplement p4 specifies 1 mM cinnamic acid during
+expression from 2 h after induction and during purification. WT rapidly soaked
+crystals show mixed Int3/product/inactive-cofactor occupancies, not isolated
+intermediates followed in one active site through time. Glu282 proton transfer
+and a computed Int1-open pathway are not directly observed transitions.
+S3b: WT phenylpropiolic acid rapid soaks trap Int1-prime; prolonged
+cocrystallization traps Int3-prime. S4 shows the corresponding cofactor mass
+shift from about 669 to 625 over 0/21/50 h in solution. This is slow adduct
+decarboxylation, not demonstrated free phenylacetylene turnover. The L439G
+control retains the higher-mass species through 48 h. Crystals: 4 C, 1 mM
+ligand for cocrystallization, 100 mM for soaks. Exact solution time-course
+temperature and concentration are not established by the cited MS methods.
+S3c: S5 shows reduced but nonzero cinnamic-acid turnover for F437L and L439G.
+F437L apparent kcat 0.39 +/-0.01 s^-1, Km 5.3 +/-1.0 uM; do not report
+zero cinnamic-acid turnover from the separate alkyne-adduct negative result.
+These residues are in PF20696, not PF01977. Rates remain apparent.
+S3d: butynoic/crotonic adduct trapping, phenylacetylene addition, substrate
+exchange, and DFT strain proposals remain extension targets. Binding, trapped
+structures, time-course MS and computed transition states are distinct evidence
+types. No observed graph chains together different mutants or alkyne/alkene
+substrates as if they were one measured catalytic trajectory.
+
+Remaining family coverage and exclusions
+Resolve exact ScFdc constructs and the 2017 JACS mechanism study (PMID28753302);
+inspect and map AroY (PMID28857436), EcUbiD (PMID28057757), VdcCD
+(PMID34417452), HmfF, HudA and subsequent specificity/maturation work.
+PMID34417452 / doi:10.1038/s41467-021-25278-z is a lead for partner-dependent
+aromatic decarboxylation, not evidence transferred into the AnFdc graphs.
+Arabidopsis ferredoxin FdC1 is a different protein and is excluded.
+Provider HTML challenges were not treated as missing science: public full-text
+XML and public media archives supplied the inspected originals. No raw PDB
+refinement, independent expert review or complete 2026 literature census is
+claimed. PF01977 stays IN_PROGRESS with explicit follow-up questions.
