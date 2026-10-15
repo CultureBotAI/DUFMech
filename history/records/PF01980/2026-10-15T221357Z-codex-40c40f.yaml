@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01980
+  path: curation/families/PF01980.yaml
+session:
+  id: 2026-10-15T221357Z-codex-40c40f
+  timestamp: '2026-10-15T22:13:57Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review original tsaA1 reporter contexts with inherited scientific follow-ups
+  details: Partial scientific self-review inspected the original1998 source and retained
+    two separate reporter effects plus negative-assay and source-conflict limits.
+    Fourteen graphs and26edges retain25observed effects and1hypothesis; all12prior
+    graphs remain unchanged. Native generation/schema/history, inventory/exports,52focused
+    tests, all8296manifest hashes and desktop/mobile preview checks passed. Three
+    scientific findings preserve predecessor lineage and remain OPEN; no REVIEWED
+    promotion. Final publication, post-REVIEW indexing and exact-head CI follow this
+    observation. Initial history, projection and browser-helper failures and their
+    successful corrections are disclosed in the report.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/240
+  - https://github.com/CultureBotAI/DUFMech/issues/241
+  - https://github.com/CultureBotAI/DUFMech/issues/242
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261015T222235Z-pf01980-tsaa-reporter-contexts/review.yaml

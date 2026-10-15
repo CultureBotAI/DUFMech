@@ -14,7 +14,7 @@ discussions:
         explanation: Figures 3 and 6 support whole-protein mutation and biochemical effects. Protein abundance/folding, complete inserts and isolated-domain sufficiency remain unresolved; AF0241 contacts are not direct E. coli structural measurements.
     posed_by: Codex
     posed_date: '2026-10-15'
-    notes: See the three ledgers under evidence/PF01980. S5 and Table S2 confirm reference accessions and human primer endpoints, not complete inserts. Resolve E. coli D125 versus Discussion Asp111 and Table S2's identical WT/Thr4-U34G primer strings; distinguish tRNA binding from methyl transfer.
+    notes: See the ledgers under evidence/PF01980. S5 and Table S2 confirm reference accessions and human primer endpoints, not complete inserts. Resolve E. coli D125 versus Discussion Asp111 and Table S2's identical WT/Thr4-U34G primer strings; distinguish tRNA binding from methyl transfer. The historical tsaA1 lesion and linked transferred segment also require verification; the 1998 reporter comparisons do not isolate PF01980.
   - discussion_id: trmo-physiology-and-source-discrepancies
     prompt: Resolve the primary-source discrepancies and test physiological interpretations separately from measured reporter and biochemical outcomes.
     kind: CURATION_TODO
@@ -25,9 +25,13 @@ discussions:
         supports: PARTIAL
         evidence_source: primary_publication
         explanation: Original Figures 2-6 were inspected. The ledger retains probe carryover, ct6A hydrolysis, residual mutation signals, human text16% versus figure28% A37, and secondary-modification and RNA-position label discrepancies.
+      - reference: PMID:9537379
+        supports: PARTIAL
+        evidence_source: primary_publication
+        explanation: The original reporter comparisons and assay-specific nulls are now assessed in qian1998-contexts.txt. They do not identify a direct decoding mechanism or resolve the older allele's sequence.
     posed_by: Codex
     posed_date: '2026-10-15'
-    notes: Do not infer direct decoding, ribosome stalling, native transcription flux, human splicing regulation or universal zero activity from the scoped assays. Resolve source data and matched expression/folding controls before stronger conclusions.
+    notes: Do not infer direct decoding, ribosome stalling, native transcription flux, human splicing regulation or universal zero activity from the scoped assays. The 1998 selection assay is itself a reporter proxy; its null result is not equivalence proof. Donor and crude-substrate label conflicts remain unresolved. Resolve source data and matched expression/folding controls before stronger conclusions.
   - discussion_id: trmo-family-and-literature-coverage
     prompt: Extend the scientific review to other PF01980 members, structural studies and later literature.
     kind: CURATION_TODO
@@ -40,7 +44,7 @@ discussions:
         explanation: Initial main-paper experiments are curated with distinct reference mappings. Archaeal functions, all supplements, later functional studies and family-wide coverage are not completed by these graphs.
     posed_by: Codex
     posed_date: '2026-10-15'
-    notes: Structure 7BU1 is a P. aeruginosa SAM-complex lead, not an assessed causal experiment. S3/S5/S7/S9 and Table S2 are inspected; remaining supplemental datasets, PMID9537379, later studies and other members still need review. IN_PROGRESS is intentional.
+    notes: Structure 7BU1 is a P. aeruginosa SAM-complex lead, not an assessed causal experiment. S3/S5/S7/S9 and Table S2 are inspected. PMID9537379 now has a bounded original-source assessment; remaining supplements, underlying historical assay methods, later studies and other members still need review. IN_PROGRESS is intentional.
 causal_graphs:
   - graph_id: ectrmo-native-trna-deletion-2014
     title: E. coli trmO deletion lowers the native Thr1 and Thr3 m6t6A signals
@@ -473,3 +477,57 @@ causal_graphs:
             explanation: Main Discussion and visually inspected S9A/B with the exact scaffold specified by its caption; supplemental ledger T4 preserves the cross-tRNA and modeling limits.
             cache_path: evidence/PF01980/kimura2014-supplement.txt
             cache_sha256: 78421486274b932b6c336952a7e934c1f4b86d56bac8fb60a133d5fa03b3ecb2
+  - graph_id: tsaa1-thra-reporter-lb-1998
+    title: Historical tsaA1-associated reporter increase in LB
+    scope: E. coli K-12 GRB1216(tsaA1) versus GRB1215(tsaA+); Phi(thrA1-lacZ)Hyb2-1; shared zae-3095::Tn10kan marker.
+    context: LB, 37 C, approximately 3e8 cells/mL; beta-galactosidase in Miller units. Table1 and final Results subsection.
+    family_mapping: Later TrmO assignment supplies family context, not lesion proof; P28634 reference PF01980 11-142. See member-mapping.txt and kimura2014-supplement.txt T5. No isolated domain was tested.
+    taxon: NCBITaxon:83333
+    scope_status: PHENOTYPIC
+    limitations: Allele/linked-segment causality remains unresolved. No matched rescue, direct decoding measurement or native transcription-rate measurement is established here. Error type and replicate count are not assigned. Do not join this comparison to the 2014 deletion as one intervention.
+    nodes:
+      - {node_id: strain_comparison, label: GRB1216 versus GRB1215 in LB, node_type: PERTURBATION}
+      - {node_id: reporter, label: thrA-lacZ beta-galactosidase output, node_type: PHENOTYPE}
+    edges:
+      - edge_id: increases-lb-reporter
+        subject: strain_comparison
+        predicate: increases
+        object: reporter
+        mechanism: Reported means change from 9.3 +/- 1.8 to 16 +/- 1.0 Miller units. Their ratio is approximately 1.72, not exactly two. This is an allele-associated reporter phenotype, not a resolved molecular step.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9537379
+            source_url: https://journals.asm.org/doi/full/10.1128/jb.180.7.1808-1813.1998
+            snippet: twofold derepression
+            explanation: Paired Results values, Table1 and ledger R. The quoted approximation is not substituted for the reported means; ledger N/X limits causal interpretation.
+            cache_path: evidence/PF01980/qian1998-contexts.txt
+            cache_sha256: 31d1a0dda0d7278d65c7ce91edc6b66f961374b678e08c71753628dd4061c2b2
+  - graph_id: tsaa1-thra-reporter-mops-1998
+    title: Historical tsaA1-associated reporter increase in minimal medium
+    scope: GRB1216(tsaA1) versus GRB1215(tsaA+), the same fusion-bearing K-12 strain pair as the LB comparison.
+    context: MOPS-glucose minimal medium, 37 C, approximately 3e8 cells/mL; Miller-unit readout. Separate growth condition, not an independent allele.
+    family_mapping: P28634 reference PF01980 spans 11-142; unsequenced tsaA1 is not a verified P28634 variant or isolated-domain perturbation. Kimura2014 supplemental mapping supplies family context only; see the retained ledgers.
+    taxon: NCBITaxon:83333
+    scope_status: PHENOTYPIC
+    limitations: Preserve the condition-specific comparison rather than pooling media. Error type, replicate count, allele sequence and intervening mechanism remain unresolved; reported nulls do not prove global equivalence.
+    nodes:
+      - {node_id: strain_comparison, label: GRB1216 versus GRB1215 in MOPS-glucose, node_type: PERTURBATION}
+      - {node_id: reporter, label: thrA-lacZ beta-galactosidase output, node_type: PHENOTYPE}
+    edges:
+      - edge_id: increases-mops-reporter
+        subject: strain_comparison
+        predicate: increases
+        object: reporter
+        mechanism: Reported means change from 177 +/- 17 to 363 +/- 22 Miller units, approximately 2.05-fold by division. The graph does not infer a corresponding fold change in decoding efficiency.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:9537379
+            source_url: https://journals.asm.org/doi/full/10.1128/jb.180.7.1808-1813.1998
+            snippet: twofold derepression
+            explanation: Separate MOPS-glucose values in the final Results subsection; ledger R/N/X. Medium-specific output is not pooled with LB or the later luciferase experiment.
+            cache_path: evidence/PF01980/qian1998-contexts.txt
+            cache_sha256: 31d1a0dda0d7278d65c7ce91edc6b66f961374b678e08c71753628dd4061c2b2
