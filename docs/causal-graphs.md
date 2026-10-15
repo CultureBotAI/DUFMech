@@ -6197,3 +6197,40 @@ PF01977 VdcCD evidence extension (2026-10-15, local):
   work, together with unresolved VdcCD constructs, raw L182V data, active
   occupancy and causal domain-motion evidence. Earlier family findings and
   the full 8,296-family objective remain active.
+
+PF01977 VdcCD publication audit (PR #221, 2026-10-15):
+
+- The user authorized commit, PR, adversarial review, issue remediation,
+  merge and branch cleanup. The completed VdcCD changes were committed as
+  `4716dd2f9372a0bbf5d03747c383ae41464765a5`; unfinished ScFdc research is
+  excluded. Existing unrelated primary-checkout files remain untouched.
+- Adversarial self-review rechecked Figure 2, primary HPLC/stoichiometry/KSVE
+  methods, source-workbook rescue and viscosity values, all 60 quotations,
+  domain/partner limitations and preservation of the ten AnFdc graphs.
+  No additional blocking scientific defect was established in this scope.
+  The archive workbook matches the retained SHA256; a standalone scratch
+  XLSX was invalid and was not used as evidence. Publisher cookie redirection
+  remained inaccessible; retained public primary XML/media were used.
+- Issue #222 tracks the stale source-pin failure reproduced locally and in
+  initial CI run `38709795244`. Candidate capture now verifies 9,141 source
+  files at the published annotated tag `source/dufmech-pr-221-candidate`.
+  Native rendering refreshes canonical Pages; generated source-link churn
+  across other pages is not additional scientific curation.
+- Fresh checks verify all 8,296 manifest hashes, unchanged imported fields,
+  only PF01977's record/inventory change, preserved old reviews/history and
+  frozen inputs, 52 focused tests, and all 22 governed artifacts. Responsive
+  canonical-page checks at 1440px and 390px retain all 23 graphs, 60 edges,
+  60 evidence links, four hypothesis labels and three OPEN questions, with
+  working disclosures, current pinned source links, no document overflow
+  and no JavaScript errors. Selected screenshots were visually inspected;
+  browser and server closed.
+- Issues #217-#219 received VdcCD-specific progress and remaining acceptance
+  gaps, without duplicate issues or closure. The partial scientific review
+  and IN_PROGRESS status remain unchanged. Publication does not establish
+  complete family coverage, active occupancy, exact Bs inserts, raw L182V
+  evidence or an observed domain-motion mechanism.
+- An append-only publication review is retained separately from the scientific
+  review. Its audit-bearing source checkpoint, final full QC, exact-head CI
+  and merge verification are subsequent release gates; this entry does not
+  claim those future results. Source-retention tags must remain after deleting
+  the development branch.

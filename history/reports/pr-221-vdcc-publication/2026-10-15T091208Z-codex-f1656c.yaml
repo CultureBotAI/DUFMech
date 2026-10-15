@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: report
+  slug: pr-221-vdcc-publication
+  path: reviews/structured/20261015T091208Z-pr-221-vdcc-publication/review.yaml
+session:
+  id: 2026-10-15T091208Z-codex-f1656c
+  timestamp: '2026-10-15T09:12:08Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: AUDIT
+  outcome: changed
+  summary: Retain adversarial VdcCD publication audit and candidate source-pin remediation
+  details: Adversarial self-review rechecked primary assay boundaries, all 60 quotations,
+    exact review digest and preservation. Candidate source retention and canonical
+    desktop/mobile rendering pass after reproducing stale pins locally and in CI,
+    tracked as issue 222. All 8296 records, 319 history files, 166 structured and
+    174 native reports validate with zero schema drift; 52 focused tests, 22 governed
+    artifacts and isolated OAK rejection cases pass. Scientific issues 217-219 remain
+    open and PF01977 stays IN_PROGRESS. Audit-bearing source capture, final full QC,
+    exact-head CI and merge verification remain release gates; no future pass or complete
+    scientific coverage is claimed. Initial history call rejected numeric issue/PR
+    references without saving; this call supplies canonical URLs.
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/222
+  prs:
+  - https://github.com/CultureBotAI/DUFMech/pull/221
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261015T091208Z-pr-221-vdcc-publication/review.yaml
