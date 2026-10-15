@@ -71,14 +71,17 @@ discussions:
   - reference: doi:10.5283/epub.14529
     supports: SUPPORT
     evidence_source: doctoral_thesis_and_original_figures
-    explanation: Methods pp.39-41, Figures 45-48 and 51 retain glucose carryover, residual/nonmonotonic
-      activity, unequal footprint nuclease amounts and a diffuse MD shift. These prevent exact affinity,
-      stoichiometry and atomic-contact claims.
+    explanation: Methods pp.39-41 and Figures 18-23, 32-35, 45-48 and 51 retain glucose carryover, residual/nonmonotonic
+      activity, unmatched buffers or nuclease amounts and diffuse shifts. Figure 22B retains 2% signal
+      despite zero-output prose; Figure 35 tables contradict blanket below-10% wording. These prevent
+      exact affinity, stoichiometry and atomic-contact claims.
   posed_by: Codex
   posed_date: '2026-10-15'
-  notes: Obtain complete stock compositions, matched nuclease comparisons, replicate/error estimates and
-    direct occupancy/competition measurements. Retain Figure 45 residual repression and Figure 51 low-dose
-    MD enhancement; do not flatten them into uniform inhibition or a native activation claim.
+  notes: Obtain complete stock compositions, matched nuclease/buffer comparisons, replicate/error estimates
+    and direct occupancy/competition measurements. Retain residual repression, nonmonotonic sugar responses
+    and Figure 51 low-dose MD enhancement. The Figure 20 maltotriose decrease is 26 percentage points
+    on the basal-normalized scale, not a 26% relative decrease. See both TrmB ledgers; no uniform inhibition
+    or native activation claim is made.
 - discussion_id: trmb-family-and-promoter-coverage
   prompt: Extend primary-assay coverage to remaining promoters, anti-inducers, paralogs and taxa with
     separate reference mapping.
@@ -90,8 +93,9 @@ discussions:
   - reference: doi:10.5283/epub.14529
     supports: PARTIAL
     evidence_source: doctoral_thesis
-    explanation: Remaining promoter-engineering, anti-inducer, cross-promoter and TrmBL1 results need
-      their own methods, figure and identity assessment.
+    explanation: Figures 18-23 and 32-35 now support scoped promoter-engineering, anti-inducer and cross-promoter
+      graphs with retained controls and conditional negatives. TrmBL1 as the tested regulator and remaining
+      paralog/native-cell results still need their own methods, figure and identity assessment.
   - reference: PMID:23576322
     supports: PARTIAL
     evidence_source: primary_publication
@@ -102,7 +106,8 @@ discussions:
   posed_date: '2026-10-15'
   notes: Inspect full Lee2005 and differential-signals Lee2007 sources, distinguish the separate PF0124
     paper, and assess Tgr/TrmBL1/2/4 and other taxa without transferring TrmB endpoints by similarity
-    alone. Native physiology and residue-level DNA contacts remain open.
+    alone. PF0124 is a target promoter, not the tested regulator, in the new TrmB cross-promoter graphs.
+    Native physiology and residue-level DNA contacts remain open.
 causal_graphs:
 - graph_id: tl-trmb-tm-transcription-2003
   title: TrmB represses reconstituted malE transcription with sugar-specific relief
@@ -825,6 +830,473 @@ causal_graphs:
         the model, not experimental proof.
       cache_path: evidence/PF01978/trmb-primary-assays.txt
       cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62
+- graph_id: trmb-tm-operator-perturbations-thesis
+  title: TM operator changes reduce the fractional transcriptional repression by TrmB
+  scope: Engineered TM promoter templates with full-length pSL152-derived TrmB in the thesis reconstituted
+    transcription system; DNA perturbations, not protein mutants.
+  context: Figure 18B, 0.3 uM TrmB, 150 fmol template, 25 uL buffer I, 80 C for 30 min. Compare lanes
+    2 and 7 without added maltose, normalizing each promoter to its own no-regulator baseline. Full matrices
+    and methods are in ledger R0-R1.
+  family_mapping: Whole-protein TrmB; Q9HGZ9 and Q7LYW4 sequence version 1 references share PF01978 11-77,
+    PF11495 110-234 and PF31112 249-335. pSL152 species/insert ambiguity remains; the operator experiment
+    does not localize a protein contact to PF01978.
+  scope_status: PHENOTYPIC
+  limitations: TM2 and TM6 products are shorter than WT's 156 nt; TM4 retains that length. Separate basal
+    normalizations do not establish equal absolute transcript output, affinity loss or unchanged initiation.
+    TM6 maltose outputs are nonmonotonic. Replicate errors and complete template inserts remain unresolved.
+  nodes:
+  - node_id: tm2
+    label: Replace TM operator AGTA half-site with GACT
+    node_type: PERTURBATION
+  - node_id: tm4
+    label: Replace TM operator TACT half-site with CTGA
+    node_type: PERTURBATION
+  - node_id: tm6
+    label: Expand TM operator spacer from three to six T residues
+    node_type: PERTURBATION
+  - node_id: retained
+    label: Fraction of each promoter's basal transcript output retained with 0.3 uM TrmB
+    node_type: STATE
+  edges:
+  - edge_id: tm2-increases-retained-output
+    subject: tm2
+    predicate: increases
+    object: retained
+    mechanism: TM2 retains 83% of its own basal output versus 27% for WT in the paired panel. The effect
+      is on normalized repression sensitivity, not a measured dissociation constant or equal-length absolute
+      transcript production.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.5283/epub.14529
+      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+      snippet: Transkriptionspuffer I.
+      explanation: Original Figure 18Ba lanes 1/2 and 6/7, numeric table and caption, printed65/PDF71;
+        ledger R1.
+      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt
+      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d
+  - edge_id: tm4-increases-retained-output
+    subject: tm4
+    predicate: increases
+    object: retained
+    mechanism: TM4 retains 110% of its own basal output versus 26% for WT. The mutation diminishes the
+      observed fractional repression, without proving the atomic recognition mechanism or a significant
+      activation above basal.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.5283/epub.14529
+      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+      snippet: Transkriptionspuffer I.
+      explanation: Original Figure 18Bb lanes 1/2 and 6/7, numeric table and caption, printed65/PDF71;
+        ledger R1.
+      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt
+      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d
+  - edge_id: tm6-increases-retained-output
+    subject: tm6
+    predicate: increases
+    object: retained
+    mechanism: TM6 retains 110% of its basal output versus WT's reported 0%. This supports altered normalized
+      repression sensitivity; its shorter product and nonmonotonic maltose series prevent a general no-binding
+      or no-sugar-response claim.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.5283/epub.14529
+      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+      snippet: Transkriptionspuffer I.
+      explanation: Original Figure 18Bc lanes 1/2 and 6/7 plus full sugar series, printed65/PDF71; ledger
+        R1.
+      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt
+      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d
+- graph_id: trmb-mdta-repression-and-maltose-thesis
+  title: TrmB represses engineered MDTA transcription with partial maltose relief
+  scope: Full-length pSL152-derived TrmB and an MD-background promoter carrying the TM TrmB site; reconstituted
+    transcription.
+  context: Figure 19Bb, 0.3 uM TrmB, 150 fmol MDTA DNA, 25 uL buffer I, 80 C for 30 min; 25 mM added maltose
+    or maltotriose in separate lanes. Ledger R0/R2 retains controls and the unequal comparator doses.
+  family_mapping: Q9HGZ9/Q7LYW4 sequence version 1 reference bodies are identical; PF01978 11-77 is one
+    of three domains. Experimental species/insert identity remains unresolved; this is whole-protein activity
+    on engineered DNA.
+  scope_status: MECHANISTIC
+  limitations: MD comparator uses 1.5 uM TrmB versus 0.3 uM for MDTA/TM, and each panel has its own basal
+    normalization. This does not isolate a DNA-only switch of sugar specificity or observe allosteric
+    motion. Maltotriose leaves MDTA at reported 0%; no universal lack-of-effect claim is made.
+  nodes:
+  - node_id: protein
+    label: 0.3 uM TrmB added to the MDTA transcription reaction
+    node_type: PERTURBATION
+  - node_id: maltose
+    label: Add 25 mM maltose with 0.3 uM TrmB on MDTA
+    node_type: PERTURBATION
+  - node_id: transcript
+    label: MDTA runoff transcript output
+    node_type: PROCESS
+  edges:
+  - edge_id: represses-mdta-transcript
+    subject: protein
+    predicate: decreases
+    object: transcript
+    mechanism: Added TrmB lowers MDTA output from its basal 100% to reported 0%. This is direct whole-protein
+      repression at the reconstituted-process level, not a resolved recruitment step.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.5283/epub.14529
+      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+      snippet: Transkriptionspuffer I.
+      explanation: Original Figure 19Bb lanes 1/2, printed67/PDF73; ledger R2. Stock glucose carryover
+        remains unresolved.
+      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt
+      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d
+  - edge_id: maltose-restores-mdta-output
+    subject: maltose
+    predicate: increases
+    object: transcript
+    mechanism: Maltose raises the TrmB-containing MDTA output from reported 0% to 74% of basal. The route
+      between sugar addition and transcription is unresolved, and relief is not complete restoration.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.5283/epub.14529
+      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+      snippet: Transkriptionspuffer I.
+      explanation: Original Figure 19Bb lanes 2/3; maltotriose lane 4 remains at 0%, printed67/PDF73;
+        ledger R2.
+      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt
+      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d
+- graph_id: trmb-tm-anti-inducers-thesis
+  title: Glucose and maltotriose lower maltose-associated TM transcript output
+  scope: Separate glucose and maltotriose additions to the full-length TrmB-containing TM transcription
+    system, not a measured sugar-binding competition reaction.
+  context: Figure 20, 0.2 uM TrmB plus 0.5 mM added maltose, 150 fmol TM template, 25 uL buffer I, 80
+    C for 30 min. Compare each sugar panel with its own induced lane 3. Ledger R0/R3 retains full dose
+    series.
+  family_mapping: pSL152-derived multidomain TrmB; identical Q9HGZ9/Q7LYW4 version 1 reference bodies
+    have PF01978 11-77. Sugar-response endpoints do not identify an isolated PF01978 mechanism; exact
+    assay insert/taxon remains unresolved.
+  scope_status: PHENOTYPIC
+  limitations: Figure 21 glucose-only control lacks TrmB/maltose and uses buffer II, not buffer I. No
+    unique occupancy/competition route is established. Maltotriose intermediates are nonmonotonic; the
+    44-to-18 change is 26 percentage points, not 26% of induced output. Stock carryover and replicate
+    errors remain unresolved.
+  nodes:
+  - node_id: glucose
+    label: Add 1 mM glucose with TrmB and 0.5 mM maltose
+    node_type: PERTURBATION
+  - node_id: maltotriose
+    label: Add 5 mM maltotriose with TrmB and 0.5 mM maltose
+    node_type: PERTURBATION
+  - node_id: transcript
+    label: 156-nt TM runoff transcript within its matched sugar panel
+    node_type: PROCESS
+  edges:
+  - edge_id: glucose-lowers-tm-output
+    subject: glucose
+    predicate: decreases
+    object: transcript
+    mechanism: In the glucose panel, output decreases from 103% to reported 0% of the no-regulator baseline.
+      A transcript endpoint does not directly show increased TrmB affinity or rule out a buffer-dependent
+      machinery contribution.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.5283/epub.14529
+      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+      snippet: Transkriptionspuffer I.
+      explanation: Original Figure 20a lanes 3/8 and Figure 21's differently buffered control, printed69-70/PDF75-76;
+        ledger R3.
+      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt
+      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d
+  - edge_id: maltotriose-lowers-tm-output
+    subject: maltotriose
+    predicate: decreases
+    object: transcript
+    mechanism: In the maltotriose panel, output decreases from 44% to 18% of basal at 5 mM added maltotriose.
+      Intermediate values 34,39,21,30% are nonmonotonic; no universal dose-response or sugar-potency ranking
+      follows.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.5283/epub.14529
+      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+      snippet: Transkriptionspuffer I.
+      explanation: Original Figure 20b lanes 3-8, printed69/PDF75, and normalization wording printed72/PDF78;
+        ledger R3.
+      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt
+      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d
+- graph_id: trmb-tm-sucrose-contexts-thesis
+  title: TM sucrose responses retain separate sugar-addition and protein-addition controls
+  scope: Full-length pSL152-derived TrmB in two distinct TM transcription panels; the two maltose concentrations
+    are not joined into one observed trajectory.
+  context: Figure 22, 150 fmol TM DNA, 25 uL buffer II, 80 C for 30 min. A uses 0.2 uM TrmB plus 0.5 mM
+    maltose; B uses 1 mM maltose with 5 or 10 mM sucrose and matched presence/absence of 0.2 uM TrmB.
+    Ledger R0/R4.
+  family_mapping: Q9HGZ9/Q7LYW4 version 1 reference bodies are identical, with PF01978 11-77 and separate
+    sugar-binding domains. pSL152 physical insert/species and final stock carryover are unresolved; this
+    is whole-preparation activity.
+  scope_status: MECHANISTIC
+  limitations: Panel A's lower sucrose doses are nonmonotonic. Panel B retains 2% output at 5 mM sucrose
+    despite prose describing both protein-containing lanes as zero. Sugar-matched controls do not establish
+    an atomic allosteric route, isolated-domain sufficiency or complete stock matching.
+  nodes:
+  - node_id: sucrose_a
+    label: Add 5 mM sucrose with TrmB and 0.5 mM maltose in panel A
+    node_type: PERTURBATION
+  - node_id: transcript_a
+    label: Panel A 156-nt TM runoff output
+    node_type: PROCESS
+  - node_id: protein_b5
+    label: Add 0.2 uM TrmB with 1 mM maltose and 5 mM sucrose in panel B
+    node_type: PERTURBATION
+  - node_id: transcript_b5
+    label: Panel B TM output with 1 mM maltose and 5 mM sucrose
+    node_type: PROCESS
+  - node_id: protein_b10
+    label: Add 0.2 uM TrmB with 1 mM maltose and 10 mM sucrose in panel B
+    node_type: PERTURBATION
+  - node_id: transcript_b10
+    label: Panel B TM output with 1 mM maltose and 10 mM sucrose
+    node_type: PROCESS
+  edges:
+  - edge_id: sucrose-lowers-induced-output
+    subject: sucrose_a
+    predicate: decreases
+    object: transcript_a
+    mechanism: Added 5 mM sucrose decreases panel A output from 55% to 17% of basal in the TrmB/maltose-containing
+      reaction; the molecular intermediate is unresolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.5283/epub.14529
+      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+      snippet: Transkriptionspuffer II.
+      explanation: Original Figure 22A lanes 3/9 and full numeric series, printed71/PDF77; ledger R4.
+      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt
+      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d
+  - edge_id: trmb-represses-with-five-mm-sucrose
+    subject: protein_b5
+    predicate: decreases
+    object: transcript_b5
+    mechanism: Adding TrmB at fixed 1 mM maltose and 5 mM sucrose lowers output from 100% to 2%. This
+      supports direct whole-protein repression in the reconstituted system, retaining the residual rather
+      than rounding it to zero.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.5283/epub.14529
+      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+      snippet: Transkriptionspuffer II.
+      explanation: Original Figure 22B lanes 1/3, printed71/PDF77; compare prose printed72/PDF78; ledger
+        R4.
+      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt
+      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d
+  - edge_id: trmb-represses-with-ten-mm-sucrose
+    subject: protein_b10
+    predicate: decreases
+    object: transcript_b10
+    mechanism: Adding TrmB at fixed 1 mM maltose and 10 mM sucrose lowers output from 96% to reported
+      0% on panel B's scale. This is process-level repression, not proof of molecular absence or direct
+      DNA competition.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.5283/epub.14529
+      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+      snippet: Transkriptionspuffer II.
+      explanation: Original Figure 22B lanes 2/4, printed71/PDF77; ledger R4. Both lanes contain the same
+        added sugars.
+      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt
+      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d
+- graph_id: trmb-md-anti-inducers-thesis
+  title: Glucose and maltose lower maltotriose-associated MD transcript output
+  scope: Full-length TrmB with separate glucose and maltose perturbations in the reconstituted MD transcription
+    system.
+  context: Figure 23, 1.6 uM TrmB plus 1 mM maltotriose, 150 fmol MD template, 25 uL buffer I, 80 C for
+    30 min. Compare added sugar with the same panel's lane 3. Ledger R0/R5 retains all doses and residuals.
+  family_mapping: pSL152-derived whole TrmB; Q9HGZ9/Q7LYW4 version 1 references share PF01978 11-77 and
+    two separate sugar-binding domains. No isolated-domain activity or experimentally resolved strain/insert
+    is asserted.
+  scope_status: PHENOTYPIC
+  limitations: No fully matched MD sugar-only control was established; stock glucose and replicate errors
+    remain unresolved. TM comparisons use different protein and inducer concentrations. Maltose retains
+    6% signal at 0.5 mM and rebounds at higher doses; prior gel-well aggregation is not clean affinity
+    evidence.
+  nodes:
+  - node_id: glucose
+    label: Add 0.5 mM glucose with 1.6 uM TrmB and 1 mM maltotriose
+    node_type: PERTURBATION
+  - node_id: maltose
+    label: Add 0.5 mM maltose with 1.6 uM TrmB and 1 mM maltotriose
+    node_type: PERTURBATION
+  - node_id: transcript
+    label: 168-nt MD runoff output within its matched sugar panel
+    node_type: PROCESS
+  edges:
+  - edge_id: glucose-lowers-md-output
+    subject: glucose
+    predicate: decreases
+    object: transcript
+    mechanism: Added glucose lowers output from 75% to reported 0% of basal. The endpoint does not uniquely
+      identify increased promoter occupancy or establish intrinsically greater glucose sensitivity than
+      TM.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.5283/epub.14529
+      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+      snippet: Transkriptionspuffer I.
+      explanation: Original Figure 23a lanes 3/6, printed73/PDF79; ledger R5.
+      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt
+      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d
+  - edge_id: maltose-lowers-md-output
+    subject: maltose
+    predicate: decreases
+    object: transcript
+    mechanism: Added 0.5 mM maltose lowers output from 95% to 6% of basal; 1 and 5 mM retain 16% and 17%.
+      The nonmonotonic residual series supports a condition-specific effect, not complete or uniformly
+      dose-dependent repression.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.5283/epub.14529
+      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+      snippet: Transkriptionspuffer I.
+      explanation: Original Figure 23b lanes 3/6-8 and numeric table, printed73/PDF79; ledger R5.
+      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt
+      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d
+- graph_id: trmb-pfk-repression-thesis
+  title: TrmB represses reconstituted PFK promoter transcription
+  scope: Full-length pSL152-derived TrmB acting on a PF1784 PFK promoter template, not a TrmBL1 protein
+    experiment or native glycolysis phenotype.
+  context: Figure 33A, 232-bp pUC19-derived PFK DNA amplified with 3PF1784/5PF1784, 150 fmol, 25 uL buffer
+    II, 80 C for 30 min. TrmB 0-2 uM, 108-nt runoff. Template provenance and complete dose series in ledger
+    R0/R6.
+  family_mapping: TrmB Q9HGZ9/Q7LYW4 sequence version 1 reference bodies share PF01978 11-77; physical
+    pSL152 identity remains unresolved. PF1784 identifies the target promoter, not the PF01978-containing
+    regulator.
+  scope_status: MECHANISTIC
+  limitations: The 1 uM endpoint retains 4% output and the low-dose series is nonmonotonic. Figure 34
+    sugars at 0.05-15 mM do not substantially restore output under that protocol, not proof of universal
+    sugar insensitivity. Native relevance and direct recruitment steps remain unresolved; Figure 32 varies
+    nuclease dose.
+  nodes:
+  - node_id: protein
+    label: Add 1 uM TrmB to the reconstituted PFK promoter system
+    node_type: PERTURBATION
+  - node_id: transcript
+    label: 108-nt PF1784 promoter runoff transcript output
+    node_type: PROCESS
+  edges:
+  - edge_id: trmb-lowers-pfk-output
+    subject: protein
+    predicate: decreases
+    object: transcript
+    mechanism: Added TrmB lowers output from 100% to 4% at 1 uM, reaching 1% at 1.5-2 uM. This is direct
+      repression at the whole-protein process level, not a measured RNAP-occlusion step or complete absence
+      of transcription.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.5283/epub.14529
+      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+      snippet: Transkriptionspuffer II.
+      explanation: Original Figure 33A lanes 1/5 and full dose series, printed89/PDF95; Figure 24 template
+        and Figure 34 sugar controls retained in ledger R6.
+      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt
+      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d
+- graph_id: trmb-trmbl1-promoter-repression-thesis
+  title: TrmB represses the PF0124 TrmBL1 promoter in vitro
+  scope: Full-length TrmB is the added regulator; PF0124/TrmBL1 is the target promoter. This is not evidence
+    for TrmBL1 autoregulation.
+  context: Figure 33B, 344-bp pUC19-derived PF0124 promoter DNA amplified with M13/pUC F/R, 150 fmol,
+    25 uL buffer I, 80 C for 30 min; 180-nt runoff, TrmB 0-6.3 uM. Ledger R0/R6 retains template provenance
+    and sugar panels.
+  family_mapping: Whole TrmB mapped by Q9HGZ9/Q7LYW4 sequence version 1 references to PF01978 11-77; complete
+    pSL152 insert and experimental species remain unresolved. Do not assign this perturbation to TrmBL1
+    accession Q8U4G4.
+  scope_status: MECHANISTIC
+  limitations: At 4.2 uM TrmB the dose panel retains 1% output. Figure 35 uses separate baselines; glucose's
+    19% peak is relative to a matched 12%, not 1%. Its tables contradict blanket below-10% prose. No native
+    regulatory importance, universal sugar insensitivity or significant activation is established.
+  nodes:
+  - node_id: protein
+    label: Add 4.2 uM TrmB to the PF0124 promoter transcription system
+    node_type: PERTURBATION
+  - node_id: transcript
+    label: 180-nt PF0124 promoter runoff transcript output
+    node_type: PROCESS
+  edges:
+  - edge_id: trmb-lowers-pf0124-output
+    subject: protein
+    predicate: decreases
+    object: transcript
+    mechanism: Added TrmB lowers PF0124 promoter output from 100% to 1% at 4.2 uM in the dose panel. This
+      is direct whole-protein repression in vitro, not TrmBL1 protein activity or a direct measurement
+      of initiation-factor recruitment.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: doi:10.5283/epub.14529
+      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+      snippet: Transkriptionspuffer I.
+      explanation: Original Figure 33B lanes 1/5 and full dose series, printed89/PDF95; Figures 29/35
+        provenance and conditional negatives in ledger R6.
+      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt
+      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d
+- graph_id: trmb-pfk-rnap-occlusion-model
+  title: TrmB occupancy may obstruct RNAP recruitment at the PFK promoter
+  scope: Proposed explanation for full-length TrmB-associated PFK footprinting and transcriptional repression;
+    not a directly observed recruitment experiment.
+  context: Figure 32 locates a protected region at -15 to +27 around the PFK start, with unequal DNaseI
+    doses across no-protein/protein lanes. Separate Figure 33A shows repression. Ledger R6 retains the
+    protocol mismatch and the source's proposed interpretation.
+  family_mapping: Q9HGZ9/Q7LYW4 version 1 reference PF01978 11-77 in multidomain TrmB; neither isolated-domain
+    occupancy nor a residue-level DNA contact is established. Exact assay insert/taxon remains unresolved.
+  scope_status: HYPOTHETICAL
+  limitations: Footprint DNA protection and runoff inhibition do not directly measure RNAP recruitment.
+    DNaseI amounts vary from 0.0025 U without protein to 0.01-0.02 U with protein. No matched-nuclease
+    no-protein comparison, recruitment kinetics or DNA-bound atomic structure was established.
+  nodes:
+  - node_id: occupancy
+    label: Proposed TrmB occupancy around the PFK transcription start
+    node_type: STATE
+  - node_id: recruitment
+    label: RNAP recruitment to the PFK promoter
+    node_type: PROCESS
+  edges:
+  - edge_id: proposed-pfk-rnap-occlusion
+    subject: occupancy
+    predicate: decreases
+    object: recruitment
+    mechanism: The thesis proposes that TrmB occupying the start-overlapping region prevents RNAP recruitment.
+      Directness describes this proposed competition, not an experimentally resolved step, and the graph
+      remains separate from observed runoff effects.
+    directness: DIRECT
+    support: HYPOTHESIZED
+    evidence_kind: CONTEXTUAL
+    evidence:
+    - reference: doi:10.5283/epub.14529
+      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+      snippet: DNaseI
+      explanation: Original Figure 32, caption and interpretive paragraph below it, printed88/PDF94; ledger
+        R6. The source proposes recruitment inhibition rather than measuring it.
+      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt
+      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d
 curation_events:
 - timestamp: '2026-10-15T14:00:02Z'
   curator: Codex
@@ -840,5 +1312,21 @@ curation_events:
   outcome: needs_followup
   summary: Review scoped TrmB causal graphs and retain three open scientific findings
   history_record: history/records/PF01978/2026-10-15T141322Z-codex-701838.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-15T15:45:44Z'
+  curator: Codex
+  action: EDIT
+  outcome: changed
+  summary: Extend TrmB causal graphs with promoter perturbations, anti-inducers and cross-promoter assays.
+  history_record: history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-15T15:54:52Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Review added TrmB regulatory contexts with explicit residuals, controls and hypotheses.
+  history_record: history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml
   event_index: 0
   llm_assisted: true
