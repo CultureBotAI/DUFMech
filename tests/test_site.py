@@ -208,3 +208,16 @@ def test_contract_rejects_broken_links_and_budget_overrun(tmp_path):
     assert any("broken local link" in error for error in errors)
     assert any("index_html_bytes" in error for error in errors)
     assert contrast("#000000", "#ffffff") == 21
+
+
+@pytest.mark.parametrize("headroom", [0, -1])
+def test_archive_budget_counts_source_downloads_at_exact_boundary(tmp_path, headroom):
+    render_site([worklist_row("PF00001", proteins=10)], [], input_ids={}, out_dir=tmp_path,
+                extra_artifacts={"source/reports/yaml_record_review/fixture.md": "x" * 4096})
+    total = sum(path.stat().st_size for path in tmp_path.rglob("*") if path.is_file())
+    budgets = json.loads(Path("conf/pages_budgets.json").read_text())
+    budgets["site_total_bytes"] = total + headroom
+    errors, measurements = check_site(tmp_path, budgets)
+    assert measurements["total_bytes"] == total
+    expected = [f"total_bytes: {total} exceeds {total - 1}"] if headroom < 0 else []
+    assert errors == expected

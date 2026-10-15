@@ -22,7 +22,7 @@ discussions:
         explanation: Reported V161A and inconsistent C-terminal tails disagree with the 3QPH sequence and actual Val161 atoms. No silent sequence correction or neutrality assumption is made.
     posed_by: Codex
     posed_date: '2026-10-15'
-    notes: See all four PF01978 ledgers for reference, construct and assay provenance. Q8U4G4 sequence version 1/entry 96 maps PF01978 to 10-77; TrmBL1 E40/D50 are inside it, but E81/E85/D86 are outside. ED85AA is a double perturbation, not two independently tested causes. Materials list VC1 and the methods report sending mutant plasmids for sequencing, but complete physical inserts remain independently unverified. Thesis pCS19/C-terminal His6 differs from the 2007 transcription preparation; FBPase cloning sites disagree. No isolated-domain sufficiency or atomic DNA contact is asserted.
+    notes: See all five PF01978 ledgers for reference, construct and assay provenance. Q8U4G4 sequence version 1/entry 96 maps PF01978 to 10-77; TrmBL1 E40/D50 are inside it, but E81/E85/D86 are outside. ED85AA is a double perturbation, not two independently tested causes. Materials list VC1 and the methods report sending mutant plasmids for sequencing, but complete physical inserts remain independently unverified. Thesis pCS19/C-terminal His6 differs from the 2007 transcription preparation; FBPase cloning sites disagree. No isolated-domain sufficiency or atomic DNA contact is asserted. Lee2007 Y49 also maps inside PF01978; pSL242 mutants carry C-terminal His6, while general WT DNA assays use N-terminal His6. The Figure 10 WT comparator tag and assay-specific tags for SEC and radioligand binding remain unresolved.
   - discussion_id: trmb-assay-context-and-residual-activity
     prompt: Resolve preparation carryover and assay-specific outcomes before assigning a single sugar-to-DNA regulatory mechanism.
     kind: CURATION_TODO
@@ -39,7 +39,7 @@ discussions:
         explanation: Methods pp.39-41 and Figures 18-23, 32-35, 45-48 and 51 retain glucose carryover, residual/nonmonotonic activity, unmatched buffers or nuclease amounts and diffuse shifts. Figure 22B retains 2% signal despite zero-output prose; Figure 35 tables contradict blanket below-10% wording. These prevent exact affinity, stoichiometry and atomic-contact claims.
     posed_by: Codex
     posed_date: '2026-10-15'
-    notes: Obtain stock compositions, active fractions, replicate/error estimates and direct occupancy/competition measurements. Retain prior residuals, nonmonotonicity, Figure 20 percentage-point distinction and Figure 28/41-43 discrepancies. Figure 52 requires same-dose and panel-specific WT controls; some nominally complete repression retains 8/12/10. Figure 53 has template-label and 25/30 ng DNA conflicts. Figure 54 WT/mutant comparisons match nuclease dose even though no-protein lanes do not. Own-promoter EMSA/footprints failed through aggregation; that is not measured loss of mutant binding. See all four ledgers; no uniform inhibition, stable activation or native flux claim is made.
+    notes: Obtain stock compositions, active fractions, replicate/error estimates and direct occupancy/competition measurements. Retain prior residuals, nonmonotonicity, Figure 20 percentage-point distinction and Figure 28/41-43 discrepancies. Figure 52 requires same-dose and panel-specific WT controls; some nominally complete repression retains 8/12/10. Figure 53 has template-label and 25/30 ng DNA conflicts. Figure 54 WT/mutant comparisons match nuclease dose even though no-protein lanes do not. Own-promoter EMSA/footprints failed through aggregation; that is not measured loss of mutant binding. See all five ledgers; no uniform inhibition, stable activation or native flux claim is made. The fifth ledger retains Lee2007's reported maltotriose competition, not a fitted Kd/Km; Results fructose versus Methods sucrose remains conflicting. SEC apparent mass is not measured subunit stoichiometry. Original 2007 figure images were not inspected.
   - discussion_id: trmb-family-and-promoter-coverage
     prompt: Extend primary-assay coverage to remaining promoters, anti-inducers, paralogs and taxa with separate reference mapping.
     kind: CURATION_TODO
@@ -56,7 +56,7 @@ discussions:
         explanation: The sucrose-bound structure lacks DNA, while its maltose comparator lacks residues 2-109. Proposed allosteric motion is not directly observed and older/unpublished assays are not new measurements in this paper.
     posed_by: Codex
     posed_date: '2026-10-15'
-    notes: Inspect full Lee2005 and differential-signals Lee2007 sources, complete the separate PF0124 paper's original mutant/oligomerization/sugar-binding experiments, and assess Tgr/TrmBL2/4 and other taxa without transferring endpoints by similarity. Thesis E40N/D50N/E81A/ED85AA assays are now scoped separately; Y49N from the 2007 paper is not D50N. PF0124 is a target promoter in the TrmB graphs and the tested regulator in the TrmBL1 graphs. Native physiology and residue-level DNA contacts remain open.
+    notes: Inspect full Lee2005 and differential-signals Lee2007 sources, complete the separate PF0124 paper's original mutant/oligomerization/sugar-binding experiments, and assess Tgr/TrmBL2/4 and other taxa without transferring endpoints by similarity. Thesis E40N/D50N/E81A/ED85AA assays are now scoped separately; Y49N from the 2007 paper is not D50N. PF0124 is a target promoter in the TrmB graphs and the tested regulator in the TrmBL1 graphs. Native physiology and residue-level DNA contacts remain open. Lee2007 PF0124 text, captions and methods now support three separately scoped reported-assay graphs for SEC, maltotriose competition and mutant MD EMSA, but original Figures 3/10 images and remaining promoter/transcription experiments still need review. Different preparations are not merged or counted as independent replication.
 causal_graphs:
   - graph_id: tl-trmb-tm-transcription-2003
     title: TrmB represses reconstituted malE transcription with sugar-specific relief
@@ -1891,3 +1891,129 @@ causal_graphs:
             explanation: "Printed119/PDF125 failed binding assays and printed136/PDF142 interpretation; ledger M4."
             cache_path: "evidence/PF01978/trmbl1-mutant-assays.txt"
             cache_sha256: "6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b"
+  - graph_id: trmbl1-size-exclusion-2007
+    title: Added sugars shift the reported TrmBL1 size-exclusion distribution
+    scope: Recombinant full-length P. furiosus PF0124/TrmBL1 from Lee2007; assay-specific His-tag orientation and complete physical insert remain unresolved. This is a protein-preparation response, not isolated PF01978 function.
+    context: Figure 3 caption and Results describe no-added-ligand versus 1 mM maltotriose or 5 mM maltose. Inject 250 uL at 0.5 ug/uL after 70 C for 10 min; Superdex 200 10/30 at room temperature, 25 mM HEPES pH 7.5/300 mM NaCl, 0.25 mL/min for 140 min. No-added-ligand apparent peaks are major 148.8 kDa and minor 271.3 kDa.
+    family_mapping: Q8U4G4 reference sequence 1/entry 96 has 341 aa, PF01978 at 10-77, PF11495 at 112-248 and PF31112 at 256-339. Reference taxon 186497 is not independent verification of the assay strain. Whole-protein sugar responses cannot be assigned to PF01978 alone.
+    scope_status: PHENOTYPIC
+    limitations: Original figure traces were not inspected; effects are author-reported primary Results/caption observations. SEC mass depends on hydrodynamic behavior, not directly counted subunits. Peak areas, errors, assay tag and assembly alternatives remain unresolved; no proven tetramer-to-octamer conversion or downstream repression step is asserted. See ledger L1.
+    nodes:
+      - {node_id: maltotriose, label: Added 1 mM maltotriose in the reported SEC preparation, node_type: PERTURBATION}
+      - {node_id: maltose, label: Added 5 mM maltose in the reported SEC preparation, node_type: PERTURBATION}
+      - {node_id: larger_signal, label: Relative TrmBL1 SEC signal at the larger apparent-mass species, node_type: STATE, grounding: ['UniProtKB:Q8U4G4']}
+    edges:
+      - edge_id: maltotriose-larger-species
+        subject: maltotriose
+        predicate: increases
+        object: larger_signal
+        mechanism: Relative to no added ligand, 1 mM maltotriose is reported to shift the SEC distribution toward the larger apparent species. The intervening ligand-binding and assembly mechanism is unresolved.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:17587231
+            source_url: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2007.05780.x
+            snippet: shifted this equilibrium to the larger species
+            explanation: Results quaternary-structure subsection, Figure 3 caption and purification methods; ledger L1. Reported experiment, not independently inspected traces or subunit counts.
+            cache_path: evidence/PF01978/trmbl1-lee2007-assays.txt
+            cache_sha256: ff18e9e8e58908e785a6ae08a3dc0d945c99c05328cc8c70e35036ae37e8690d
+      - edge_id: maltose-larger-species
+        subject: maltose
+        predicate: increases
+        object: larger_signal
+        mechanism: At 5 mM maltose the paper reports a weaker shift toward the larger apparent species than with 1 mM maltotriose. This is not an equimolar potency comparison or proof of an octameric product.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:17587231
+            source_url: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2007.05780.x
+            snippet: shifted this equilibrium to the larger species
+            explanation: Same original Results/caption/methods, separate 5 mM maltose intervention; ledger L1. Glucose negative and protein-concentration dependence are retained as limits, not generalized specificity.
+            cache_path: evidence/PF01978/trmbl1-lee2007-assays.txt
+            cache_sha256: ff18e9e8e58908e785a6ae08a3dc0d945c99c05328cc8c70e35036ae37e8690d
+  - graph_id: trmbl1-maltotriose-chase-2007
+    title: Unlabelled maltotriose reduces the reported TrmBL1-associated tracer signal
+    scope: Lee2007 recombinant full-length P. furiosus PF0124/TrmBL1 preparation, assay-specific tag and complete insert unresolved. This precipitation/filter assay does not isolate the PF01978 domain.
+    context: Reported 5 uM protein/0.47 uM radiolabelled maltotriose with a 5 mM unlabelled competitor. General assay 100 uL, 25 mM HEPES pH 7.5/300 mM KCl, 70 C for 5 min; saturated ammonium-sulphate precipitation, ice for 10 min, 0.45 um cellulose-nitrate filtration, 95%-saturated wash and scintillation counting. Chase timing is unspecified.
+    family_mapping: Q8U4G4 sequence 1/entry 96 reference has 341 aa; PF01978 10-77, PF11495 112-248, PF31112 256-339. The reference body does not establish the full tagged construct or the domain responsible for the sugar response.
+    scope_status: PHENOTYPIC
+    limitations: Primary Results/methods report a weak specific component around 180 cpm from 120000 cpm input; these are not raw before/after counts. No fitted Kd/Km or directly measured sugar-binding site is established. Methods sucrose versus Results fructose conflicts remain. No stoichiometry, native physiological affinity or direct transcriptional consequence follows; ledger L2.
+    nodes:
+      - {node_id: competitor, label: Added 5 mM unlabelled maltotriose in the reported tracer assay, node_type: PERTURBATION}
+      - {node_id: retained_tracer, label: Specific retained maltotriose tracer signal with 5 uM TrmBL1, node_type: STATE, grounding: ['UniProtKB:Q8U4G4']}
+    edges:
+      - edge_id: competition-reduces-retention
+        subject: competitor
+        predicate: decreases
+        object: retained_tracer
+        mechanism: The paper identifies the small specific signal as removable by excess unlabelled maltotriose. This supports a competition-associated decrease in retained tracer, not complete disappearance of all filter counts or a quantitatively resolved binding mechanism.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:17587231
+            source_url: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2007.05780.x
+            snippet: chasable by
+            explanation: Results maltotriose-binding subsection and Methods sugar-binding assay; ledger L2. Competition is explicitly reported, but the extrapolated mM-range Km is not an experimental fit.
+            cache_path: evidence/PF01978/trmbl1-lee2007-assays.txt
+            cache_sha256: ff18e9e8e58908e785a6ae08a3dc0d945c99c05328cc8c70e35036ae37e8690d
+  - graph_id: trmbl1-md-mutants-2007
+    title: TrmBL1 mutant preparations reduce reported MD-promoter EMSA retardation
+    scope: Full-length P. furiosus PF0124/TrmBL1 C-His6 pSL242-derived Y49N, D50N and Y49N/D50N preparations compared with the paper's WT comparator. Its exact tag is unresolved; general WT DNA experiments use N-His6. These are preparation comparisons, not isolated substitution effects proven free of tag/folding confounds.
+    context: Original Figure 10 caption gives 1.25 and 2.5 uM WT/mutant protein. General EMSA 10 uL, 25 mM HEPES pH 7.5/150 mM NaCl, 40 nCi labelled PCR DNA stated as 0.5-1 uM, 0.5 ug poly(dI-dC), 40 C for 10 min; 6% native PAGE at room temperature, 200 V/1x TBE. MD fragment endpoints and lane order remain unverified.
+    family_mapping: Q8U4G4 sequence 1/entry 96 reference has 341 aa with Y49/D50 inside PF01978 (10-77); PF11495 (112-248) and PF31112 (256-339) are separate regions. Mutant sequencing is reported but complete inserts were not inspected. TrmB Y50/D51 are not these residues/protein.
+    scope_status: PHENOTYPIC
+    limitations: Original Figure 10 image was not inspected; source Results/caption/methods support reported outcomes only. WT-tag equivalence is asserted generally without shown data; exact comparator, active fraction and mutant folding/assembly remain unresolved. No zero affinity, atomic DNA contact, isolated-domain sufficiency, epistasis or family-wide essentiality is concluded. D50N is not Y49N; ledger L3-L5.
+    nodes:
+      - {node_id: y49n, label: Y49N preparation replacing the reported WT comparator, node_type: PERTURBATION, grounding: ['UniProtKB:Q8U4G4']}
+      - {node_id: d50n, label: D50N preparation replacing the reported WT comparator, node_type: PERTURBATION, grounding: ['UniProtKB:Q8U4G4']}
+      - {node_id: double, label: Joint Y49N/D50N preparation replacing the reported WT comparator, node_type: PERTURBATION, grounding: ['UniProtKB:Q8U4G4']}
+      - {node_id: shifted_md, label: Reported retardation of the MD promoter probe, node_type: STATE}
+    edges:
+      - edge_id: y49n-md-retardation
+        subject: y49n
+        predicate: decreases
+        object: shifted_md
+        mechanism: The paper reports no detectable MD-probe binding for Y49N even at 2.5 uM, relative to WT. This is loss of detectable retardation under those assay conditions, not measured zero affinity or a demonstrated tyrosine-base contact.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:17587231
+            source_url: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2007.05780.x
+            snippet: The Y49N TrmBL1 mutant
+            explanation: Original DNA-recognition Results, Figure 10 caption and mutagenesis/EMSA methods; ledger L3-L5. Image and exact WT tag not established.
+            cache_path: evidence/PF01978/trmbl1-lee2007-assays.txt
+            cache_sha256: ff18e9e8e58908e785a6ae08a3dc0d945c99c05328cc8c70e35036ae37e8690d
+      - edge_id: d50n-md-retardation
+        subject: d50n
+        predicate: decreases
+        object: shifted_md
+        mechanism: D50N is reported to impair MD-probe binding less strongly than Y49N. A qualitative reduction is retained without inventing a percentage, Kd or complete loss of binding.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:17587231
+            source_url: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2007.05780.x
+            snippet: The replacement of D50N was less dramatic.
+            explanation: Original Results immediately compare the three MD-binding mutant outcomes; caption gives both nominal protein doses. Ledger L3-L5 retains the tag confound and missing quantitative image review.
+            cache_path: evidence/PF01978/trmbl1-lee2007-assays.txt
+            cache_sha256: ff18e9e8e58908e785a6ae08a3dc0d945c99c05328cc8c70e35036ae37e8690d
+      - edge_id: double-mutant-md-retardation
+        subject: double
+        predicate: decreases
+        object: shifted_md
+        mechanism: The joint Y49N/D50N preparation is reported to lack detectable MD-probe binding relative to WT. This does not measure independent contributions or additivity of the two replacements.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - reference: PMID:17587231
+            source_url: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2007.05780.x
+            snippet: C-terminal His-tag versions
+            explanation: Original Results identify the three constructs and state the double-mutant binding outcome; Figure 10 caption and methods bound its assay. Ledger L3-L5; no figure-image inspection claimed.
+            cache_path: evidence/PF01978/trmbl1-lee2007-assays.txt
+            cache_sha256: ff18e9e8e58908e785a6ae08a3dc0d945c99c05328cc8c70e35036ae37e8690d

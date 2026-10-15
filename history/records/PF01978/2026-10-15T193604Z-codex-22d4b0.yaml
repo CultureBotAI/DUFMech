@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01978
+  path: data/families/PF01978.yaml
+session:
+  id: 2026-10-15T193604Z-codex-22d4b0
+  timestamp: '2026-10-15T19:36:04Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review original Lee2007 TrmBL1 reported-assay causal contexts
+  details: Saved partial scientific self-review 20261015T193546Z-pf01978-lee2007-reported-assays.
+    Reassessed six new effects against primary Results/captions/methods and exact
+    member mapping, not original figure images. Corrected initial overstrong graph
+    scope labels to PHENOTYPIC; source mechanisms stay UNRESOLVED. Preserved all39
+    earlier graphs, eight prior events, prior notes and other8295 records. Final generation,
+    8296 manifest hashes, native inventory, 52 focused tests, schema/history, exports
+    and desktop/mobile six-disclosure preview checks passed. Exact record JSON matched;
+    original figure access remains unavailable. All three stable scientific findings
+    remain OPEN and PF01978 stays IN_PROGRESS. Canonical source pins, Pages, full
+    release QC and publication remain outside this tranche; final audit-index regeneration
+    and repository validation follow.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261015T193546Z-pf01978-lee2007-reported-assays/review.yaml

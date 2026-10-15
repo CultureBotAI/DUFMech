@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01978
+  path: curation/families/PF01978.yaml
+session:
+  id: 2026-10-15T191407Z-codex-1aa9a7
+  timestamp: '2026-10-15T19:14:07Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add original Lee2007 TrmBL1 reported-assay causal contexts
+  details: Inspected original publisher Results, captions and methods and rechecked
+    pinned Q8U4G4/Pfam mapping. Added three graphs with six reported experimental
+    effects for sugar-dependent SEC, maltotriose tracer competition and Y49N/D50N/double-mutant
+    MD EMSA. Preserved all39 prior graphs and appended a minimal-extract evidence
+    ledger; retained construct/tag confounds, fructose/sucrose conflict, no fitted
+    affinity or measured oligomer stoichiometry, and explicit absence of figure-image
+    inspection. Baseline8296 records reproduce without drift. New projection, formal
+    partial review and validation follow; PF01978 remains IN_PROGRESS and all three
+    discussions remain OPEN. Initial event attempt used invalid actor enum AI and
+    was rejected; this event uses the canonical ai_agent value. No Git publication
+    is performed.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  urls:
+  - https://doi.org/10.1111/j.1365-2958.2007.05780.x
