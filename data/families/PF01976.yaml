@@ -4,7 +4,7 @@ name: Protein of unknown function DUF116
 short_name: DUF116
 seed_status: UNKNOWN_CANDIDATE
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01976
 counters:
   proteins: 974
@@ -23,3 +23,105 @@ provenance:
 interpro_id: InterPro:IPR002829
 description: This archaebacterial protein has no known function. The protein contains seven conserved
   cysteines containing a CxxCxxC motif and may also be an integral membrane protein [[cite:PUB00096938]].
+curation_history: history/records/PF01976
+discussions:
+- discussion_id: duf116-redox-mechanism
+  prompt: Identify a tested DUF116-dependent reaction or perturbation with a defined outcome before adopting
+    an electron-transfer edge.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Makarova2015 section 3.6 proposes a redox role from comparative sequence and genomic-context
+    analysis. It does not establish a donor, acceptor, metal occupancy or directed reaction for MMP0162,
+    MJ1141 or the entire family. Motif and fold predictions are not observed chemistry.
+  evidence:
+  - reference: PMID:25583072
+    supports: PARTIAL
+    evidence_source: full_text
+    explanation: Section 3.6 and Table 1 provide a mechanistic lead, not a DUF116 biochemical assay. Experiments
+      discussed for other membrane-protein families are not transferred here.
+  - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q6M0V6/entry/pfam/PF01976/
+    supports: PARTIAL
+    evidence_source: database
+    explanation: MMP0162 reference Q6M0V6 is 214 aa with PF01976 at 47-210; reference membership does
+      not identify a tested construct or demonstrate function.
+  - reference: https://rest.uniprot.org/uniprotkb/Q58541.json
+    supports: PARTIAL
+    evidence_source: database
+    explanation: Reviewed MJ1141 remains uncharacterized with predicted protein existence and inferred
+      membrane annotation; its retained reference concerns genome sequencing.
+  posed_by: Codex
+  posed_date: '2026-10-15'
+  notes: No causal edge is supported by the inspected sources. This is a scoped graphless assessment,
+    not proof that no functional evidence exists. Search, access limits and mapped references are retained
+    in evidence/PF01976/causal-evidence-assessment.txt.
+- discussion_id: duf116-prenyl-domain-attribution
+  prompt: Resolve which domain and experiment support prenyl-synthase labels before assigning that activity
+    to DUF116.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: In D5SS13/Plim_2915, PF01976 occupies 67-231 and the separate PF00348 domain occupies 297-545.
+    Whole-protein enzyme labels cannot establish catalysis by the DUF116 domain. Q8TSV5/MA_0690 also has
+    a polyprenyl-synthetase name explicitly attributed to ProtNLM, not a cited activity assay.
+  evidence:
+  - reference: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/D5SS13/
+    supports: SUPPORT
+    evidence_source: database
+    explanation: The inspected response identifies two separate Pfam domain intervals in this 634-aa reference
+      protein.
+  - reference: https://rest.uniprot.org/uniprotkb/Q8TSV5.json
+    supports: PARTIAL
+    evidence_source: database
+    explanation: The name carries ECO:0008006 with source Google and id ProtNLM; the entry's sole cited
+      reference is a genome paper. This does not establish that the name is wrong or that the protein
+      lacks activity.
+  - reference: https://rest.uniprot.org/uniprotkb/D5SS13.json
+    supports: PARTIAL
+    evidence_source: database
+    explanation: ProtNLM supplies the name and ARBA supplies cofactor/similarity annotations; no experimental
+      DUF116-specific catalytic claim is adopted from these fields.
+  posed_by: Codex
+  posed_date: '2026-10-15'
+  notes: Current protein/domain annotations are retained as provenance and research leads, not native
+    functional assertions. Bacterial fusion membership also prevents treating the imported archaebacterial
+    description as a verified exclusive taxonomic range.
+- discussion_id: duf116-dvu3364-allele-causality
+  prompt: Reconstruct and test the DVU3364 allele separately from the salt-evolved strain's other mutations
+    before assigning a salt-tolerance effect to DUF116.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Zhou2017 Table 1 reports a one-C deletion, predicted loss of 145 aa and DUF116 disruption
+    in DVU3364 of ES10-5. The strain contains numerous other mutations and large deletions. Its improved
+    salt tolerance cannot be attributed to this allele alone from the inspected comparison.
+  evidence:
+  - reference: PMID:29138306
+    supports: PARTIAL
+    evidence_source: full_text_and_table_image
+    explanation: The original Table 1 continuation was visually inspected, together with Results, Discussion
+      and sequencing/growth methods. These establish a co-occurring mutation and strain phenotype, not
+      an isolated DVU3364 perturbation/rescue effect.
+  - reference: https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q725R0/entry/pfam/PF01976/
+    supports: PARTIAL
+    evidence_source: database
+    explanation: Reference Q725R0/AAS97833.1/WP_010940619.1 is 307 aa with PF01976 at 92-260. This maps
+      the reference, not the exact evolved allele or its protein product.
+  posed_by: Codex
+  posed_date: '2026-10-15'
+  notes: Exact allele reconstruction, primer/supplement verification, controlled reversion or complementation
+    and other member experiments remain open. A mutation association is not a directed family mechanism.
+curation_events:
+- timestamp: '2026-10-15T04:18:26Z'
+  curator: Codex
+  action: CREATE
+  outcome: needs_followup
+  summary: Retain scoped DUF116 causal-evidence assessment without unsupported edges.
+  history_record: history/records/PF01976/2026-10-15T041826Z-codex-0441fd.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-15T04:27:12Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of DUF116 causal-evidence boundaries.
+  history_record: history/records/PF01976/2026-10-15T042712Z-codex-3918bc.yaml
+  event_index: 0
+  llm_assisted: true

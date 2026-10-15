@@ -1,0 +1,147 @@
+PF01976 / DUF116: scoped causal-evidence assessment
+Research date: 2026-10-15 UTC. Curator: Codex, GPT-5.
+Base: d53afef37b7e7f0667511c3e919a44c1270631a4.
+Frozen identity: interpro-pfam-duf-2026-10-10; IPR002829.
+Frozen JSON SHA256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+
+Disposition
+No canonical causal edge is adopted from the sources inspected below. The
+record remains IN_PROGRESS, with three OPEN native discussions. This is not a
+claim that no function exists, an exhaustive literature review, or completion
+of the family or the 8,296-family goal. Computational predictions, database
+names and a multi-mutant strain association remain distinct evidence types.
+
+Primary comparative analysis
+PMID:25583072; DOI:10.1016/j.biochi.2015.01.004; PMCID:PMC5898192.
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC5898192/
+Inspected: section 2 methods, Table 1, complete section 3.6 and Discussion;
+nearby sections were checked to prevent transfer from other arCOGs.
+Minimal quotation, section 3.6:
+"these observations are best compatible with a role of arCOG02078 in electron transfer."
+Paraphrase: the authors connect PF01976/DUF116 with arCOG02078/COG1852 and
+MMP0162. Cysteine conservation, predicted membrane segments and a Metho_1507
+HHpred match motivate a fold/redox hypothesis. Neighborhoods include reductase
+components in Methanomicrobia and an oxyanion ATPase near MJ1141; bacterial
+Psta_0175 illustrates domain fusion. These are comparative observations, not
+measurements of metal binding or electron flow. No specific donor/acceptor
+pair, product or DUF116 perturbation is established in this section.
+Boundary: the preceding arCOG04002/cytochrome-b analysis is a different family.
+The general ferredoxin reference cited for the motif is not a DUF116 assay.
+The inspected methods use sequence/profile, topology and genomic-context
+analysis. A resemblance to a REC/flavodoxin-like fold does not establish
+flavin binding, response-regulator phosphorylation or ferredoxin chemistry.
+Supplemental Table 3 was requested but returned a download-challenge HTML
+document, not XLSX. It was not analyzed. The Europe PMC XML request returned
+HTTP 500; the full PMC HTML was successfully retrieved and inspected instead.
+HTML SHA256: b6f838a79f958bd5a75211fd3203fbab22f87368917bd26296ce32b62a6dc34f.
+
+Reference mapping and annotation provenance
+InterPro source: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01976/
+Response SHA256: af9cdaddb9276ac77e3023c14e03668ed8f5a1e4550a479b9b051817ba19d480.
+The current family response resolves PUB00096938 to PMID:25583072. Its
+description is not independent experimental evidence. No frozen metadata is
+changed. Coordinates below are provider-reported 1-based inclusive reference
+matches, not experimental constructs and not a new profile-search rerun.
+
+UniProt query, retrieved 2026-10-15T02:31:58Z:
+https://rest.uniprot.org/uniprotkb/search?query=%28xref%3Apfam-PF01976%29%20AND%20%28reviewed%3Atrue%29&format=json&size=500
+Response headers: release 2026_03, release date 02-September-2026,
+X-Total-Results 1; one result returned, no next Link header. This completes
+this reviewed-entry query, not the unreviewed family or literature coverage.
+JSON SHA256: cde012de561050bdf52d3f960bf8899269ad30c15907912225f32351bb598ccb.
+Q58541/Y1141_METJA, MJ1141, taxon 243232, 214 aa, sequence version 1,
+entry version 106. Name: Uncharacterized protein MJ1141. Protein existence
+4: Predicted. Membrane annotation uses ECO:0000305; TM 19-39 and 50-70
+use ECO:0000255. Sole entry reference PMID:8688087 concerns genome sequence,
+not functional measurement. PANTHER labels are not adopted as experiments.
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q58541/entry/pfam/PF01976/
+maps PF01976 to 50-213. Mapping SHA256:
+55c5ca4142374ce20750c62bb58b662952dd05d3bf9e7a63078e40ea7e2a5c8e.
+
+Selected-member query, retrieved 2026-10-15T02:32:53Z:
+https://rest.uniprot.org/uniprotkb/search?query=%28gene%3AMMP0162%29%20OR%20%28accession%3AQ8TSV5%29%20OR%20%28accession%3AD5SS13%29&format=json&size=25
+Release 2026_03; X-Total-Results 3, three results, no next Link header.
+JSON SHA256: 1482dd25dd9d666ba933bb40dc93bfc93753204060a34938fb7f79d18fc90914.
+MMP0162 is Q6M0V6/CAF29718.1/WP_011170106.1, Methanococcus maripaludis S2,
+taxon 267377, 214 aa. PMID:15466049 is genome-sequence provenance.
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q6M0V6/entry/pfam/PF01976/
+maps PF01976 to 47-210. Mapping SHA256:
+361a12939bfcd908bb5b977f87fdf1cab144cb6cfb50fae6e7a541ee55c2a636.
+Do not substitute the neighboring CAF29717.1/Q6M0V7 sequence.
+
+Q8TSV5/MA_0690/WP_011020735.1, Methanosarcina acetivorans C2A,
+taxon 188937, 210 aa: its polyprenyl-synthetase name is explicitly annotated
+ECO:0008006, source Google, id ProtNLM. The sole cited paper PMID:11932238
+is genome provenance. The inspected entry supplies no catalytic experiment.
+NCBI Gene1472582 independently maps MA0690/MA_0690 to MA_RS03615; adjacent
+MA_0689/MA_RS03610 is not the same locus. This is not proof the name is false.
+Source: https://www.ncbi.nlm.nih.gov/gene/1472582
+
+D5SS13/Plim_2915/ADG68737.1, Planctopirus limnophila DSM3776, taxon521674,
+634 aa: the name has ProtNLM provenance; Mg2+ and FPP/GGPP-family annotations
+have ARBA provenance. Its sole cited reference PMID:21304691 is a genome paper.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/D5SS13/
+returns PF01976 67-231 and separate PF00348 297-545, count2, next null.
+Mapping SHA256: 7fdf371891b2a1667a488c258a6ea23d1ae24659b8756b03d2217aaecb9e259c.
+KEGG https://www.kegg.jp/entry/plm:Plim_2915 assigns whole-protein K13789
+and lists both domains. Neither whole-protein KO nor the other domain's
+name establishes catalysis by DUF116. Exact domain contribution requires
+experimental dissection. Bacterial membership is verified, so the frozen
+archaebacterial wording cannot establish an exclusive taxonomic distribution.
+
+Salt-evolution association, not a gene-specific effect
+PMID:29138306; DOI:10.1128/mBio.01780-17; PMCID:PMC5686539.
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC5686539/
+Inspected: Results mutation analysis, Discussion, growth/sequencing methods,
+Table1 caption/footnotes and original continuation image, visually checked.
+Table image:
+https://cdn.ncbi.nlm.nih.gov/pmc/blobs/cfec/5686539/de28ef401918/mbo00617-3579-t01a.jpg
+Minimal quotation from Table1 row: "DVU3364"; "Loss of 145 aa".
+Paraphrase: ES10-5 carries a one-C deletion at genomic position 3,535,331;
+the table labels a frameshift, predicted loss of DUF116 and 100% variant
+frequency. This is DNA-sequence-based inference about protein disruption,
+not an observed truncated protein. ES10-5 was selected after 5,000 generations
+in LS4D plus100mM NaCl. The study reports36 single-gene-affecting mutations
+and large chromosomal/plasmid deletions. Growth comparisons include higher
+salinity, but do not isolate this allele's contribution. The authors explicitly
+acknowledge difficulty linking individual mutations to salt phenotypes.
+No DUF116-to-salt-tolerance edge is adopted. TableS3 primers, exact evolved
+allele/protein reconstruction and independent reversion/rescue remain unassessed.
+HTML SHA256: 07af3e41c8c594927db9617799304deccda6259a03f4a3249efd66f74e393498.
+Image SHA256: a9e6c467cbf76076570ec44d091a6bdea46c941a0ed76a6c6bcadf7ef3c4b444.
+
+https://rest.uniprot.org/uniprotkb/search?query=gene%3ADVU3364&format=json&size=25
+returns reference Q725R0/AAS97833.1/WP_010940619.1, 307 aa,
+sequence version1, entry version96, ordered locus DVU_3364.
+JSON SHA256: 4bc231caf166e0801ce71576ad6dd182a71d05c4c26399ba2ed8228ed2945aa7.
+https://www.ebi.ac.uk/interpro/api/protein/uniprot/Q725R0/entry/pfam/PF01976/
+maps reference PF01976 to92-260. Mapping SHA256:
+aa58d3a3ec3436748435039554a05676c4d008440d647fa77b5295c67c6ec07b.
+The reference mapping does not verify the evolved clone or historical numbering.
+
+Search coverage, exclusions and next discriminating work
+Ignored/hidden-inclusive rg searched curation, evidence, history, reviews and
+docs/causal-graphs.md for PF01976/DUF116/COG1852/arCOG02078 (reviews searched
+PF01976/DUF116). Only earlier next-target markers were found in the first
+set; reviews returned no matches. No whole-filesystem absence is claimed.
+Web queries covered DUF116/PF01976, COG1852/arCOG02078, MMP0162, MJ1141,
+Metho_1507, Psta_0175, MA0690/Q8TSV5 and DVU3364 with function, experiment,
+biochemical, mutation, deletion, essential and redox terms. Search hits are
+leads, not evidence of function. No exhaustive citation-network claim is made.
+The COG categoryR page calls COG1852 predicted; that label does not add an
+independent experiment to Makarova2015. STRING/coexpression associations
+cannot supply a direction, sign or catalytic substrate.
+An RSC supplement lead (DOI:10.1039/c3ee42189a, Gmet_3340) returned HTTP404
+on direct retrieval and was not assessed. A later archaeal-lipoprotein paper
+(DOI:10.1038/s41467-025-63625-6) could not be opened in this session and its
+DUF116 relevance remains unverified. Thesis, patent and other supplemental
+hits were not comprehensively inspected. These are coverage limits, not negatives.
+Follow up primary member experiments, accessible supplements and exact allele
+identity. A controlled phenotype may justify a scoped phenotypic edge without
+requiring full biochemical resolution; a redox mechanism needs a defined
+reaction and supporting assay. Do not require a fabricated graph to close a gap.
+Next untouched ascending family by actual directory membership is PF01977;
+this scheduling marker does not remove any prior open family follow-up.
+Original downloaded documents and API responses remain session scratch files;
+this retained ledger contains minimal quotations and curator-authored facts,
+not a licensed full-text mirror or a reproducible whole-provider snapshot.
