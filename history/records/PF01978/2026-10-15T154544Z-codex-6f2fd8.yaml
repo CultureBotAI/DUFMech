@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01978
+  path: curation/families/PF01978.yaml
+session:
+  id: 2026-10-15T154544Z-codex-6f2fd8
+  timestamp: '2026-10-15T15:45:44Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Extend TrmB causal graphs with promoter perturbations, anti-inducers and
+    cross-promoter assays.
+  details: Inspected Surma thesis original Figures 18-23 and 32-35, methods and template
+    provenance. Appended eight graphs with fourteen observed effects and one explicit
+    RNAP-recruitment hypothesis, a minimal hash-anchored ledger and updated open discussions.
+    Preserved the eleven prior graphs and their evidence. Retained unequal buffers/doses,
+    residual signal, nonmonotonicity, numerical/prose discrepancies, carryover and
+    construct limits. PF01978 stays IN_PROGRESS; generation, formal successor review
+    and validation follow this actual edit. No publication performed.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/228
+  - https://github.com/CultureBotAI/DUFMech/issues/229
+  - https://github.com/CultureBotAI/DUFMech/issues/230

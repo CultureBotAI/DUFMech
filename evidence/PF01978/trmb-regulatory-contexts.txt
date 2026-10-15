@@ -1,0 +1,194 @@
+PF01978 TrmB regulatory-context evidence ledger
+Research date: 2026-10-15. Curator: Codex (GPT-5).
+This is an assay-scoped addition, not a complete PF01978 family review.
+
+PRIMARY SOURCE AND RIGHTS
+Melanie Surma, doctoral thesis, DOI 10.5283/epub.14529.
+Landing: https://epub.uni-regensburg.de/14529/
+PDF: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+Thesis prepared January 2010; examination 17 March 2010; repository publication
+18 January 2011. The landing page labels the work 2011. The institutional
+publishing license is not a blanket CC-BY reuse grant. Only minimal anchors,
+experimental facts and curator interpretation are retained, not the full PDF.
+Inspected PDF SHA256:
+8b1fe2bb52f124a6bc07c6d34c4a069cf9a4f92c2202dccd947e17d055e0af0f
+174 PDF pages; body printed page N corresponds to PDF page N+6.
+Original figure images, labels, lanes and numeric tables were visually inspected.
+Verbatim anchors used by graph evidence:
+"Transkriptionspuffer I."
+"Transkriptionspuffer II."
+"DNaseI"
+These are locators, not independently sufficient support for a causal claim.
+
+R0. SHARED IDENTITY AND ASSAY LIMITS
+The tested regulator in all experiments below is full-length pSL152-derived
+TrmB, not TrmBL1. The thesis calls it P. furiosus PF1743; Lee2003 attributes
+pSL152 to T. litoralis. Reference Q9HGZ9 sequence version 1/entry 109 and Q7LYW4
+sequence version 1/entry 91 have identical 338-aa bodies. This does not resolve
+the physical insert or strain. Reference Pfam intervals are PF01978 11-77,
+PF11495 110-234 and PF31112 249-335. All graph claims concern the whole protein;
+none establishes isolated PF01978 sufficiency or an atomic DNA contact.
+Versioned reference/deposition provenance and construct discrepancies are retained
+unchanged in trmb-primary-assays.txt, SHA256
+e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62.
+
+Preparation: methods printed pp.39-41/PDF45-47 describe C-terminal His6 protein,
+heat treatment and Ni-NTA purification, storage in glucose-containing elution
+buffer without dialysis. Added sugar concentrations below are not total free
+sugar concentrations. Final carryover, active protein fractions and complete
+matched stock compositions remain unresolved. Salt compensation is described,
+but it does not establish that every carried component is matched.
+
+Transcription methods printed p.51/PDF57: 25 uL reactions, 150 fmol PCR template,
+167 nM TBP, 118 nM TFB, 32 nM P. furiosus endogenous RNAP, 1 uL NTP stock
+(ATP/CTP/GTP each 11 mM, UTP 0.67 mM) and 2 uCi alpha-32P-UTP; 80 C for
+30 min. These are reconstituted runoff endpoints, not cellular expression,
+transporter flux, binding constants, recruitment kinetics or allosteric motion.
+Buffer I (printed31/PDF37): 32 mM NaHEPES pH7.3, 0.08 mM EDTA, 250 mM KCl,
+4 mM MgCl2. Buffer II: 40 mM NaHEPES pH7.3, 250 mM NaCl, 0.1 mM EDTA,
+2.5 mM MgCl2, 5 mM beta-mercaptoethanol, 0.1 mg/mL BSA.
+TM: pMLP-derived 484-bp template, usual 156-nt runoff; MD: pSL195-derived
+348-bp template, 168-nt runoff. Operator changes can change runoff length.
+Quantifications below are published percentages, not independently remeasured
+gel intensities. Each panel's no-regulator baseline is normalized separately.
+Reported zero is a quantified assay endpoint, not proof of molecular absence.
+Replication/error estimates were not established for Figures18-20,22-23,33-35.
+Figure21 explicitly averages four experiments; its error-bar definition remains
+unresolved. Line joining does not establish a monotonic mechanistic dose curve.
+
+R1. TM OPERATOR CHANGES: FIGURE18, PRINTED65/PDF71
+Buffer I; 0.3 uM TrmB. WT core TACT-3nt-AGTA, shown TACTtttAGTA.
+TM2 replaces AGTA with GACT; TM4 replaces TACT with CTGA; TM6 expands the
+three-T spacer to six T residues. Figure18B lanes1-5 use mutant DNA, lanes6-8
+WT DNA. TrmB absent in lanes1/6, present in lanes2-5/7-8.
+Added maltose (mM), lanes1-8: 0,0,1,2.5,5,0,0,5.
+TM2 panel output: 100,83,100,83,85,100,27,45.
+TM4 panel output: 100,110,115,89,89,100,26,115.
+TM6 panel output: 100,110,91,50,80,100,0,115.
+TM2/TM6 yield shorter products than WT's 156 nt; TM4 retains that length.
+Supported: under no-added-maltose conditions, each operator change increases
+the fraction of its own basal output retained with TrmB (83 vs27, 110 vs26,
+110 vs0). This is a promoter perturbation phenotype, not an absolute output
+comparison or direct binding-affinity measurement. Altered basal initiation or
+product stability are not separated by those normalizations. TM6's maltose
+series 110,91,50,80 is nonmonotonic; do not call all mutant sugar responses null.
+
+R2. MDTA ENGINEERED PROMOTER: FIGURE19, PRINTED67/PDF73
+The MD background's TrmB site is replaced with the TM site; the original diagram
+was inspected, not a complete independently verified plasmid insert. Buffer I.
+Order: no regulator, TrmB, TrmB+25mM maltose, TrmB+25mM maltotriose.
+TM at 0.3 uM TrmB: 100,0,88,1.
+MDTA at 0.3 uM TrmB: 100,0,74,0.
+MD at 1.5 uM TrmB: 100,0,0,104.
+Supported on MDTA: TrmB decreases runoff; maltose restores part of it in the
+protein-containing assay. Maltotriose does not restore output in this tested
+condition. Unequal TrmB doses and independent basal normalizations prevent a
+DNA-only causal claim about switching inducer specificity between MD and MDTA.
+No observed DNA-induced conformational trajectory is supplied by this assay.
+
+R3. TM GLUCOSE/MALTOTRIOSE: FIGURES20-21, PRINTED69-70/PDF75-76
+Figure20: buffer I, 0.2 uM TrmB and 0.5 mM maltose in lanes3-8.
+Lanes1/2: no regulator and TrmB without added maltose, respectively.
+Glucose added in lanes4-8 (mM): 0.05,0.10,0.25,0.50,1.00.
+Glucose-panel outputs, lanes1-8: 100,6,103,79,64,48,11,0.
+Maltotriose added in lanes4-8 (mM): 0.25,0.50,1.00,2.50,5.00.
+Maltotriose-panel outputs: 100,1,44,34,39,21,30,18.
+Supported within panels: 1mM glucose decreases 103 to0; 5mM maltotriose
+decreases 44 to18. Intermediates in the latter are nonmonotonic. Printed72/PDF78
+describes the maltotriose change as a 26% decrease; the table establishes a
+26-percentage-point decrease on the no-regulator-normalized scale, not a 26%
+relative decrease from44. Do not substitute a renormalized endpoint silently.
+Figure21 has NO TrmB or maltose and uses buffer II, not Figure20's buffer I.
+Glucose (mM): 0,0.05,0.10,0.25,0.50,1,2.5,5.
+Outputs (mean of four experiments): 100,96,89,90,99,94,88,74.
+This contextual control shows transcription with glucose under its own protocol;
+it does not fully exclude a machinery/buffer contribution under Figure20's
+different conditions. Transcription does not directly identify sugar competition,
+promoter occupancy or DNA-affinity changes. Panel baselines differ; no potency
+ranking or universal sugar-to-DNA mechanism is inferred.
+
+R4. TM SUCROSE: FIGURE22, PRINTED71/PDF77; PROSE PRINTED72/PDF78
+Buffer II. A: 0.2 uM TrmB +0.5mM maltose in lanes3-9.
+Lanes1/2 are no regulator and TrmB without added maltose.
+Sucrose (mM), lanes4-9: 0.05,0.10,0.25,0.50,1,5.
+Outputs, lanes1-9: 100,0,55,55,47,54,56,49,17.
+Supported: 5mM sucrose lowers maltose-associated output55 to17; lower doses
+are not a monotonic inhibition curve.
+B: 1mM maltose in all four lanes; sucrose5/10mM without TrmB in lanes1/2,
+and sucrose5/10mM with0.2uM TrmB in lanes3/4.
+Outputs: 100,96,2,0. Thus TrmB addition decreases100 to2 at5mM sucrose and
+96 to0 at10mM. The prose describes both protein-containing outcomes as zero;
+the table's2% residual is retained. Sugar-matched no-protein comparisons support
+whole-preparation repression, not the atomic route or a domain-specific effect.
+Do not merge A's0.5mM maltose and B's1mM into one observed trajectory.
+
+R5. MD GLUCOSE/MALTOSE: FIGURE23, PRINTED73/PDF79
+Buffer I; 1.6uM TrmB +1mM maltotriose in lanes3-8. Lanes1/2 are no regulator
+and TrmB without added maltotriose. Added glucose or maltose in lanes4-8 (mM):
+0.05,0.10,0.50,1,5.
+Glucose-panel outputs: 100,13,75,50,27,0,0,0.
+Maltose-panel outputs: 100,25,95,100,55,6,16,17.
+Supported within panels: 0.5mM glucose decreases75 to0; 0.5mM maltose
+decreases95 to6. The maltose response rebounds to16/17 at1/5mM, so it is
+not a strictly monotonic curve. No fully matched MD sugar-only control was
+established. TM and MD use unequal protein and inducer doses; do not infer
+intrinsic promoter-specific anti-inducer potency from their threshold comparison.
+The source's discussion of prior Lee2007 EMSAs is not a new primary experiment:
+maltose-associated aggregation/retention in wells is not clean affinity evidence.
+
+R6. PFK AND PF0124 PROMOTERS: FIGURES24/29/32-35
+PFK/PF1784 template (printed75/PDF81, Figure24): promoter plus initial coding
+region cloned in pUC19 at EcoRI/HindIII, primers3PF1784/5PF1784, 232-bp PCR
+product, 108-nt runoff. PF0124/TrmBL1 promoter (printed84/PDF90, Figure29):
+pUC19 at EcoRI/HindIII, primersM13/pUC F/R, 344-bp product, 180-nt runoff;
+the source calls its start position putative. Template sequences were not
+independently resequenced. PF0124 is the TARGET promoter here, not the regulator.
+
+Figure32 printed88/PDF94: 100ng PFK DNA, TrmB0/1/2/3/4uM, footprint buffer I.
+DNaseI amounts by lane: 0.0025/0.01/0.02/0.02/0.02U. Source locates protection
+at -15 to+27, overlapping the start and the TrmBL1-associated region. There is
+no matched-nuclease no-protein comparison. Retain this as contextual support
+for a hypothesis, not an unconfounded new observed direct-binding edge.
+General footprint protocol:70C15min binding,40C5min digestion. The paragraph
+below Figure32 proposes that TrmB occupancy blocks RNAP recruitment. No direct
+recruitment experiment is shown; this stays a separate hypothetical graph.
+
+Figure33 printed89/PDF95: 150fmol template, transcription protocol R0.
+A, PFK in buffer II: TrmB(uM)0,0.25,0.50,0.75,1,1.25,1.5,2;
+outputs100,32,40,25,4,3,1,1. Protein addition reduces runoff, but the low-dose
+series is nonmonotonic and the1uM endpoint is4%, not molecular zero.
+B, PF0124 promoter in buffer I: TrmB(uM)0,1.4,2.8,3.5,4.2,4.9,5.6,6.3;
+outputs100,83,32,16,1,0,0,0. At4.2uM a1% residual remains.
+These support direct whole-protein process-level repression, not an elementary
+RNAP-displacement measurement. Native-cell regulation is unresolved; the
+source's speculation about weak physiological relevance is not a negative test.
+
+Figure34 printed90/PDF96: PFK, buffer II, 1uM TrmB. Lane1 no protein, lane2
+protein without added sugar; lanes3-11 sugar(mM)0.05,0.10,0.25,0.50,1,2.5,5,10,15.
+Maltose outputs: 100,4,3,4,0,0,0,0,0,4,8.
+Maltotriose: 100,4,2,2,2,3,2,4,1,2,1.
+Fructose: 100,5,2,3,6,3,2,2,4,1,2.
+Glucose: 100,6,3,3,2,3,3,4,5,1,4.
+No panel shows substantial restoration to basal output; all sugar endpoints
+remain below10%. This is a conditional negative, not universal sugar insensitivity.
+
+Figure35 printed91/PDF97: PF0124 promoter, buffer I, 4.2uM TrmB; same lane
+order and nine sugar doses as Figure34.
+Maltose outputs: 100,11,14,7,4,3,2,2,0,4,0.
+Maltotriose: 100,5,0,1,0,1,0,0,0,0,0.
+Glucose: 100,12,17,19,16,7,5,5,2,0,0.
+Prose says maltose values all stay below10%, but the0.05mM value is14.
+It says glucose falls below10% above0.10mM, but0.25mM is16. Retain the tables,
+not a blanket no-response claim. No sugar restores basal100, but small residual
+changes remain. The glucose peak19 must be compared with its own matched
+baseline12, not Figure33B's1. Replicate/error limits preclude a general activation
+claim from these small changes. No fabricated zero-effect predicate is added.
+
+REMAINING GAPS
+Complete physical construct/taxon identity, active fractions, glucose carryover,
+matched controls and raw replicated quantification remain open (issues228/229).
+Promoter/anti-inducer coverage is extended, not finished (issue230). TrmBL1 as
+the tested regulator, other paralogs/taxa, native physiology, direct DNA contacts
+and isolated-domain function still require independent primary assessment.
+The observed transcription endpoints must not be joined to hypothetical RNAP
+recruitment, uninspected older EMSAs or other protein members as a proven chain.
