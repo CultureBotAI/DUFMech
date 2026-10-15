@@ -1,0 +1,213 @@
+PF01978 TrmBL1 wild-type transcription evidence ledger
+Research date: 2026-10-15. Curator: Codex (GPT-5).
+Partial exact-member curation, not a complete PF01978 review.
+
+SOURCE, RIGHTS AND QUOTATION ANCHORS
+Melanie Surma doctoral thesis, DOI 10.5283/epub.14529.
+Landing: https://epub.uni-regensburg.de/14529/
+PDF: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+Prepared January 2010, examined 17 March 2010, repository publication
+18 January 2011. Institutional publishing license, not a blanket CC-BY grant.
+Only minimal anchors, experimental facts and curator interpretation retained.
+Inspected 174-page PDF SHA256:
+8b1fe2bb52f124a6bc07c6d34c4a069cf9a4f92c2202dccd947e17d055e0af0f
+Printed page N is PDF page N+6. Original figure images and tables inspected.
+Minimal verbatim anchors (locators, not sufficient causal evidence alone):
+"Transkriptionspuffer II."
+"Transkriptionspuffer III."
+"DNaseI"
+
+L0. IDENTITY, PREPARATION AND COMMON ASSAY
+The regulator is P. furiosus PF0124/TrmBL1, NOT PF1743/TrmB. Methods
+printed38-41/PDF44-47 identify pCS19, C-terminal His6, E. coli SF120 expression.
+Reference Q8U4G4 (TMBL1_PYRFU), sequence version1/entry96, has 341 residues,
+sequence MD5 B5A55D1DD460F61AC0CD1982CA91C297, CRC64 6D94DC1D059EBB26.
+First public2014-05-14; annotation2026-09-02; sequence date2002-06-01.
+UniProt reference taxon186497 is P. furiosus ATCC43587/DSM3638/JCM8422/Vc1;
+it does not independently identify the historical experimental strain/insert.
+Parsed UniProt JSON SHA256:
+eee6e25cee1a60779c9ddcf1afc5cf58626f1cfbe5a62774ccbb7fc8e93238d1
+The cache is a search response; its exact acquisition URL was not retained here.
+Reference endpoint: https://rest.uniprot.org/uniprotkb/Q8U4G4.json
+Parsed InterPro Pfam response (count3, nextnull) SHA256:
+0e90ef82df08212eb7e961bec40716fcef268eda7ae10cc3e3b6a06021732fa5
+Source: https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q8U4G4/
+PF01978 10-77/IPR002831; PF11495 112-248/IPR021586;
+PF31112 256-339/IPR064034, inclusive reference-body coordinates.
+These parsed research caches are not a new adopted source snapshot. Whole-protein
+experiments do not prove isolated PF01978 sufficiency or residue-DNA contacts.
+
+Expression: LB/ampicillin100ug/mL, 1mM IPTG at OD600 .4-.6, 4h37C.
+French press, heat80C10min, Ni-NTA; concentration by Bradford against BSA.
+Wash/elution buffers contain 15% glycerol and5mM glucose; storage in elution
+buffer at-20C without dialysis. No-added-sugar is not sugar-free. Final stock
+carryover, active protein fraction and complete physical inserts are unresolved.
+Salt compensation is described; matching of every carried component is not.
+
+Methods printed31/51, PDF37/57: 25uL,150fmol PCR template,167nM TBP,118nM TFB,
+32nM endogenous P. furiosus RNAP;1uL NTP stock (ATP/CTP/GTP each11mM,
+UTP.67mM),2uCi alpha-32P-UTP;80C30min unless specified below.
+BufferII:40mM NaHEPES pH7.3,250mM NaCl,.1mM EDTA,2.5mM MgCl2,
+5mM beta-mercaptoethanol,.1mg/mL BSA.
+BufferIII:40mM NaHEPES pH7.3,600mM potassium glutamate,.1mM EDTA,
+2.5mM MgCl2,.1mg/mL BSA.
+PFK/PF1784: pUC19 EcoRI/HindIII,3PF1784/5PF1784 PCR,232bp,108nt runoff
+(Figure24,printed75/PDF81). Own PF0124 promoter: pUC19 EcoRI/HindIII,
+M13/pUCF/R PCR,344bp,180nt runoff,putative start (Figure29,printed84/PDF90).
+MD:348bp pSL195-derived,168nt. TM:484bp pMLP-derived,156nt.
+FBPase/PF0613:432bp PF0613BF/BR PCR,pUC19,320nt major/375nt minor runoff
+(Figure39,printed97/PDF103). Prose printed96 says EcoRI/HindIII; Figure39
+caption says EcoRI/BamHI. Both are retained; full insert not independently
+verified. Two translation products remain speculative, not measured here.
+
+All numeric outputs below are published percentages, NOT remeasured intensities.
+Each panel/product uses its own no-regulator output=100. Cross-panel baseline
+strength differs. Replicate/error estimates were not established for these
+tables; small changes are descriptive endpoints, not statistical significance.
+Zero means the reported quantified endpoint, not molecular absence. These
+experiments measure runoff transcription, not native metabolic flux or affinity.
+
+L1. PFK REPRESSION AND CONTROL: FIGURE26, PRINTED78/PDF84
+BufferII. PFK TrmBL1(uM):0,.25,.50,.75,1,1.25,1.5,1.75.
+108nt output:100,49,31,25,10,8,12,4.
+gdh control TrmBL1(uM):0,1,3,6;248nt output:100,91,115,98.
+Whole-preparation addition represses PFK with residual and nonmonotonic output.
+The gdh context argues against indiscriminate repression in that assay, not
+all nonspecific DNA binding or a uniquely identified molecular initiation step.
+
+L2. PFK SUGARS: FIGURE27, PRINTED80/PDF86
+BufferII,1uM TrmBL1. Lane1:no regulator;lane2:regulator,no added sugar;
+lanes3-11 added sugar(mM):.05,.10,.25,.50,1,2.5,5,10,15.
+Maltose outputs:100,42,36,18,58,22,28,54,54,74,50.
+Maltotriose:100,14,18,39,36,22,18,10,14,49,2.
+Fructose:100,14,34,40,30,26,23,25,34,30,45.
+Glucose:100,4,4,0,19,11,10,2,14,5,36.
+Within-panel endpoints support partial relief at10mM maltose(42to74),10mM
+maltotriose(14to49),15mM fructose(14to45),15mM glucose(4to36).
+All intermediate and contrary responses are retained; e.g.15mM maltotriose
+gives2,not monotonic induction. Shared peaks at.25/10mM in prose do not fit
+all tables. No temporal oscillation, potency ranking or sugar-only machinery
+control is established. Molecular sugar-to-DNA route remains unresolved.
+
+L3. PFK MALTOSE PROTOCOL VARIANTS: FIGURE28, PRINTED82/PDF88
+Lane1:no regulator;lane2:regulator/no added sugar;lanes3-11 same maltose
+doses asL2. BufferII for a/b/c;bufferIII for d. Caption says1uM TrmBL1.
+a, phenol extraction before electrophoresis:
+100,30,38,74,30,17,9,28,86,22,0.
+b,1mM glucose added ONLY to lanes3-11:
+100,29,32,81,21,9,63,53,19,16,0.
+c,preincubation5min60C with RNAP/factors,then NTP addition and5min80C:
+100,30,25,28,39,26,31,36,22,36,14.
+d,streptavidin/biotin-immobilized DNA plus600mM potassium glutamate:
+100,9,13,28,32,24,29,7,2,0,0.
+IMPORTANT: prose printed83/PDF89 explicitly says2uM instead of1uM TrmBL1
+in d lanes2-11. Figure28 caption/header says1uM. Exact d dose is unresolved.
+Within a,.1mM maltose raises30to74; within b,combined .1mM maltose+1mM
+glucose raises29to81,not an isolated maltose effect. Within c,.25mM gives39
+vs30 (small,unreplicated); within d,.25mM gives32vs9 under the reported
+but dose-conflicted protocol. No clean salt-,phenol-,duration- or
+immobilization-only causal comparison is made across these experiments.
+
+L4. OWN-PROMOTER REPRESSION/SUGARS: FIGURES30-31, PRINTED85-86/PDF91-92
+Figure30,bufferII,TrmBL1(uM):0,.25,.5,.75,1,1.25,1.5,1.75.
+180nt output:100,52,37,22,17,8,9,3.
+Figure31,bufferII,1.25uM TrmBL1;lane1:no regulator,lane2:no added sugar;
+lanes3-11 same sugar doses asL2.
+Maltose:100,11,9,9,6,4,6,7,9,2,0.
+Glucose:100,16,59,66,65,63,55,61,73,67,53.
+5mM added glucose raises16to73; maltose does not restore the suppressed
+output in this series. Own-promoter repression is an in vitro feedback
+endpoint, not a measured native homeostatic loop. No TGM reported at this
+promoter; failed footprint attempts leave the exact occupancy site unknown.
+The older cited EMSA is not a new measurement in this thesis.
+
+L5. MD/TM REPRESSION AND SUGARS: FIGURES37-38, PRINTED94-95/PDF100-101
+Figure37A MD,bufferII,TrmBL1(uM):0,.05,.10,.20,.30,.40,.50.
+168nt output:100,92,56,54,22,5,0.
+Figure37B TM,bufferIII,TrmBL1(uM):0,.50,1,1.5,2,2.5,3.
+156nt output:100,85,96,33,43,14,14.
+Different buffers/doses prevent an intrinsic promoter-affinity ranking.
+Figure38A,MD,.3uM TrmBL1;lane1:no regulator,lane2:no added sugar;
+lanes3-7 sugar(mM):.25,.50,1,2.5,5.
+a,maltotriose,bufferII:100,0,0,4,6,0,0.
+b,glucose,bufferII:100,10,3,3,2,3,5.
+c,maltose,bufferIII:100,0,36,22,65,86,98.
+Figure38B,TM,1.5uM TrmBL1,bufferIII;lanes3-5 maltose(mM):.25,.50,1.
+Output:100,25,84,98,108.
+Supported:5mM maltose raises MD0to98;.5mM maltose raises TM25to98.
+No broad sugar-specificity ranking from unmatched buffers. Maltotriose/glucose
+do not restore basal MD transcription in their own conditions, and the zero
+baseline in a is not Figure37A's22. Prose printed94 says .3uM TrmB once;
+chapter, gel header and Figure38 caption identify TrmBL1. Preserve this label
+discrepancy, not a claim that the PF1743 regulator was tested here.
+
+L6. FBPASE VARIABLE ACTIVATION: FIGURE41, PRINTED100/PDF106
+BufferIII,major320nt and minor375nt measured separately.
+A,TrmBL1(uM):0,.20,.40,.60,.80,1.
+Major:100,1170,2090,2410,2210,2164.
+Minor:100,140,109,73,78,79.
+B,TrmBL1(uM):0,.05,.10,.20.
+Major:100,123,93,108.
+Minor:100,111,57,53.
+At.6uM in A,major increases100to2410 and minor decreases100to73.
+At.2uM in B,minor decreases100to53,while major is108 rather than A's1170
+at that same nominal dose. Prose printed99-100 explicitly reports that the
+large major-product activation was not consistently reproducible. This is a
+retained limitation, not a universal24-fold activation claim or evidence for
+an unexplained factor's existence. Low-dose minor enhancement is also retained.
+
+L7. FBPASE PYRUVATE: FIGURE42, PRINTED101/PDF107
+BufferIII,75nM TrmBL1 in lanes2-10,none in lane1.
+Pyruvate(mM),lanes1-10:0,0,.025,.05,.10,.25,.50,1,5,10.
+Major320nt:100,579,40,134,233,136,225,189,55,90.
+Minor375nt:100,153,36,83,88,32,94,56,75,74.
+TrmBL1 addition increases both products in this particular assay. At.5mM
+pyruvate,major falls579to225 and minor153to94 relative to the matched
+protein-containing lane. No pyruvate-only control or direct TrmBL1-binding
+mechanism established. The prose's claim that all pyruvate outputs remain
+above basal is contradicted by the tables (major40/55/90; all minor36-94).
+Pyruvate does not consistently stabilize activation; no smooth dose law inferred.
+
+L8. FBPASE FACTOR CONDITIONS: FIGURE43, PRINTED103/PDF109
+BufferIII,TrmBL1(nM)0,50,75 in each panel. RNAP32nM and DNA150fmol.
+A,TBP83nM/TFB118nM:major100,77,89;minor100,50,74.
+B,TBP167nM/TFB59nM:major100,65,48;minor100,52,30.
+C,TBP83nM/TFB59nM:major100,133,166;minor100,125,150.
+At75nM regulator,each product decreases in A/B and increases in C relative
+to its own factor-matched no-regulator lane. C major table166 contradicts
+the printed102 prose's60% increase (which would imply160); retain table166.
+Factor conditions are necessary context, not separate independently sufficient
+activation inputs. Unequal basal output prevents absolute cross-panel output
+comparison. The results do not directly measure TBP/TFB binding or recruitment.
+
+L9. FOOTPRINT CONTEXT AND SEPARATE HYPOTHESES
+Figure25,printed76/PDF82:PFK100ng,.5uM TrmBL1,footprint bufferII;
+no-protein .0025U DNaseI vsprotein .01U;source protection+1to+28,
+hypersensitivity+7. Figure36,printed92/PDF98:MD100ng,1.5uM TrmBL1,
+footprint bufferI;no-protein .005U vsprotein .01U;protection-18to+17.
+Figure40,printed98/PDF104:FBPase100ng,.2uM TrmBL1,footprint bufferII;
+no-protein .0025U vsprotein .01U;protection-72to-41,hyper-62 relative to
+major+1. FBPase protection lies between the two TATA boxes and overlaps the
+minor start;PF0613AF is the labelled footprint primer.
+Unequal nuclease amounts prevent treating each contrast as an isolated
+protein-addition footprint effect. Locations support author-proposed models,
+not measured polymerase/factor competition. Keep PFK and MD recruitment
+occlusion hypotheses separate from FBPase TBP/TFB recruitment assistance.
+No atomic DNA contacts, observed allosteric trajectory or native flux inferred.
+
+L10. RELATED PRIMARY PAPER AND UNREVIEWED COVERAGE
+Lee et al.2007,PMID17587231,DOI10.1111/j.1365-2958.2007.05780.x,
+https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1365-2958.2007.05780.x
+Indexed text printed308/316 identifies N-terminal His6/pQE31 for EMSA,
+footprints and transcription, and C-terminal His6/pCS19 as a separate
+preparation. Purification includes size exclusion. The thesis instead specifies
+C-terminal pCS19 and a different expression/purification protocol. Their assays
+must not be treated as identical constructs or independent replications without
+further checking. Original 2007 figure images were not inspected; indexed
+micro-unit corruption prevents adopting exact numeric conditions from that
+text alone. Its mutagenesis, oligomerization and sugar binding remain separate
+research tasks, not new graph evidence in this extension.
+Remaining: thesis TrmBL1 mutants, exact constructs/strains, matched stock and
+nuclease controls, replicate/raw intensities, native-cell regulation, other
+PF01978 members/taxa and the remaining primary TrmB literature. Three existing
+scientific follow-up findings remain open. No complete family review claimed.

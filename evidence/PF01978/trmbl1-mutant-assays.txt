@@ -1,0 +1,160 @@
+PF01978 TrmBL1 mutant evidence ledger
+Research date: 2026-10-15. Curator: Codex (GPT-5).
+Partial exact-member review, not complete family or corpus characterization.
+
+SOURCE AND MINIMAL ANCHORS
+Melanie Surma doctoral thesis, DOI10.5283/epub.14529.
+https://epub.uni-regensburg.de/14529/
+https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf
+Prepared January2010, examined17March2010, repository publication18January2011.
+Institutional publishing license, not a blanket CC-BY grant. Retained material
+is limited to experimental facts, curator interpretation and minimal anchors.
+Inspected174-page PDF SHA256:
+8b1fe2bb52f124a6bc07c6d34c4a069cf9a4f92c2202dccd947e17d055e0af0f
+Printed page N=PDF page N+6. Original Figures52-54 visually inspected,
+including enlarged Figure52 quantitative tables. No gel intensities remeasured.
+Verbatim anchors used as locators, not independently sufficient evidence:
+"Transkriptionspuffer III."
+"EMSA"
+"DNaseI"
+
+M0. IDENTITY AND EXPERIMENTAL PREPARATION
+Tested protein: full-length P. furiosus PF0124/TrmBL1, pCS19-derived,
+C-terminal His6, not PF1743/TrmB and not TrmBL2. Material table printed34/PDF40
+lists P. furiosus VC1. This supports organism context but is not independent
+verification of the complete historical pCS19 insert or each assay preparation.
+Reference Q8U4G4 sequence1/entry96 is341aa; MD5
+B5A55D1DD460F61AC0CD1982CA91C297, CRC64 6D94DC1D059EBB26.
+Actual cached search-response SHA256:
+eee6e25cee1a60779c9ddcf1afc5cf58626f1cfbe5a62774ccbb7fc8e93238d1
+Reference endpoint: https://rest.uniprot.org/uniprotkb/Q8U4G4.json
+The exact original search URL is not retained; this is not a new source freeze.
+Actual complete InterPro Pfam response SHA256:
+0e90ef82df08212eb7e961bec40716fcef268eda7ae10cc3e3b6a06021732fa5
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q8U4G4/
+Reference intervals:PF01978 10-77,PF11495 112-248,PF31112 256-339.
+Verified reference residues:40E,49Y,50D,81E,85E,86D.
+Thesis mutants:E40N,D50N,E81A,ED85AA (E85A/D86A double substitution).
+E40N is NOT E40A. E40 and D50 are within PF01978; E81,E85,D86 lie outside it.
+Y49N in the separate2007 paper is not the same substitution as D50N.
+These are reference-body coordinates, not sequence-verified tagged inserts.
+
+Methods printed38-43/PDF44-49: pCS19/C-terminal His6, E. coli SF120;
+QuikChangeII/PfuUltra mutagenesis, DpnI digestion, transformation into DHL5alpha,
+colony PCR with pQE F/R, plasmids sent to Geneart for sequence verification,
+then transformation into an expression strain and purification as for WT.
+The sequencing workflow is reported; chromatograms/full mutant inserts were
+not independently inspected. Purification uses heat80C10min and Ni-NTA;
+Bradford/BSA concentration,15% glycerol and5mM glucose in wash/elution buffers,
+storage at-20C without dialysis. Active fractions, folding/assembly and final
+carried components are unresolved; no-added-sugar is not sugar-free.
+Retained promoter-specific activity is a useful functional control but does
+not establish identical folding, oligomerization or protein concentration.
+See unchanged trmbl1-primary-assays.txt SHA256
+4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682
+for wild-type context, template provenance and preparation differences from2007.
+
+M1. TRANSCRIPTION METHODS AND FULL FIGURE52 MATRIX
+Figure52 printed116/PDF122; adjacent results printed115/117,PDF121/123.
+BufferIII,25uL,150fmol PCR template,167nM TBP,118nM TFB,32nM P. furiosus
+RNAP,80C30min. BufferIII:40mM NaHEPES pH7.3,600mM potassium glutamate,
+.1mM EDTA,2.5mM MgCl2,.1mg/mL BSA. NTP stock1uL (ATP/CTP/GTP each11mM,
+UTP.67mM) plus2uCi alpha-32P-UTP. General transcription methods printed51/PDF57.
+PFK:232bp PF1784 promoter template,108nt runoff. Own PF0124 promoter:
+344bp template,180nt runoff. Template provenance remains in the prior ledger.
+Each row is a separately normalized panel with its own basal=100.
+Lane1:no regulator;lane2:WT1.5uM;lane3:mutant1.5uM;lane4:mutant2.2uM.
+Published output percentages:
+                    no regulator | WT1.5 | mutant1.5 | mutant2.2
+PFK E40N:                 100          30        86          78
+PFK D50N:                 100          11        50          58
+PFK E81A:                 100           0        29          10
+PFK ED85AA:               100           0        14          18
+Own E40N:                 100           0         0           0
+Own D50N:                 100           8         5           0
+Own E81A:                 100          12        89          91
+Own ED85AA:               100          10       130         126
+Same-dose mutation contrasts use lanes2/3,not WT1.5 versus mutant2.2.
+PFK:E40N30to86,D50N11to50,E81A0to29,ED85AA0to14.
+Own:E81A12to89,ED85AA10to130. These are changes relative to each
+panel's WT control,not absolute output comparisons across panels.
+Complementary protein-addition contrasts use lanes1/3: E40N represses own
+100to0,D50N own100to5,E81A PFK100to29,ED85AA PFK100to14.
+The E40N/D50N PFK rows also retain partial repression (100to86/50 at1.5uM)
+and the own D50N row retains5 versus WT8. These are not global inactive
+proteins or perfectly unchanged activity at the complementary promoter.
+Higher dose is not uniformly stronger: D50N PFK50to58 and ED85AA PFK14to18.
+Zero is the reported quantified endpoint,not molecular absence. Replicate/error
+estimates were not established; no statistical significance or fitted affinity
+is inferred. Transcript endpoints do not directly measure DNA occupancy.
+Source discrepancies: printed115 prose once calls lane2 WT TrmB; chapter,
+caption and gel headers identify WT TrmBL1. Printed117 says WT completely
+represses its own promoter,while the table retains8,12,10 in three panels.
+Its blanket greater-than50 statement does not fit D50N's exactly50 at1.5uM.
+Tables are retained without silently rewriting these source statements.
+
+M2. EMSA METHODS AND FIGURE53
+General methods printed52/PDF58:25uL,30ng labelled PCR DNA,70C15min binding,
+cool40C,6% native PAGE at room temperature for2h,25mA/200V.
+Buffer printed33/PDF39:25mM NaHEPES pH7.3,.1mM EDTA,120mM potassium
+glutamate,2.5mM MgCl2,1mM DTT,.1mg/mL BSA,5%(v/v) PEG8000.
+Figure53 printed118/PDF124 caption instead specifies25ng and names TMMD
+template in its final sentence,while its title and surrounding results identify
+PFK(panelA) and FBPase(panelB). Both DNA-amount and template-label discrepancies
+remain unresolved; promoter assignment here follows the title/results,not
+independently verified physical fragments. No silent TMMD-to-FBPase correction.
+
+Figure53A,source-assigned PFK,all proteins0.7uM:
+lanes1:none,2:WT,3:E40N,4:D50N,5:E81A,6:ED85AA.
+WT gives an upper retarded-DNA band. Replacing WT with E40N or D50N at the
+same dose reduces that distinct upper band and leaves predominantly free DNA.
+This supports qualitative retardation loss,not proof of zero affinity.
+E81A and ED85AA retain upper bands; no exact WT-equivalent affinity is measured.
+Figure53B,source-assigned FBPase,all proteins0.5uM:
+left image1:none,2:WT,3:E40N,4:D50N;right image5:none,6:E81A,7:ED85AA.
+E40N/D50N reduce the distinct WT-associated upper band in the left image.
+E81A/ED85AA show retarded species in the separate right image,which lacks
+its own WT lane. Do not fit or rank affinities across the image panels.
+FBPase template cloning discrepancy (EcoRI/HindIII versus EcoRI/BamHI) remains
+in the prior ledger. Neither EMSA nor promoter identity alone proves TGM-specific
+base contacts or a causal effect on native metabolism.
+
+M3. FOOTPRINT METHODS AND FIGURE54
+Figure54 printed120/PDF126,results printed119/PDF125.
+PFK100ng,25uL,all proteins0.5uM,footprint bufferII.
+Footprint bufferII (printed33/PDF39) is the EMSA buffer above plus2mM CaCl2.
+Binding70C15min,then DNaseI5min40C;phenol extraction stops digestion;
+7% urea PAGE at room temperature2h,80mA/2200V (printed53/PDF59).
+Lanes1:none,2:WT,3:E40N,4:D50N;lanes5:none,6:WT,7:E81A,8:ED85AA.
+No-protein lanes1/5 use.0025U DNaseI;all protein lanes use.01U.
+Thus WT2 versus mutants3/4 IS nuclease- and protein-dose-matched,unlike the
+no-protein comparison. E40N/D50N reduce the WT-associated protected pattern
+in the PFK TGM-containing region. E81A/ED85AA retain protection relative to
+the separately adjacent WT6; exact magnitude and binding constants are not given.
+This is a mutation-associated protection effect,not direct proof that E40/D50
+touch DNA. Active fraction,folding and assembly alternatives remain open.
+The source labels the protected region a) and compares it to the WT footprint
+mapped +1to+28 in Figure25; an independent mutant contact map is not supplied.
+
+M4. FAILED OWN-PROMOTER BINDING ASSAYS AND MODEL LIMITS
+Printed119/PDF125 explicitly reports unsuccessful own-promoter EMSA/footprint
+experiments due to DNA/TrmBL1 aggregation retained in gel wells. This is an
+assay limitation,not an observation that E81A/ED85AA cannot bind the promoter.
+The authors infer two region-dependent recognition modes from the combination
+of transcription,EMSA and footprints (printed115-120 and136/PDF121-126,142).
+The proposed first region includes E40/D50 (predicted32-53);the proposed
+second includes E81/E85/D86 (predicted80-99,outside reference PF01978).
+Keep regional contributions to occupancy HYPOTHESIZED,not observed atomic
+recognition helices. No cis-TGM replacement control,isolated-domain sufficiency,
+direct residue-base contacts or intact complex structure is established here.
+Printed136 discusses a TrmB dimerization helix,not direct experimental proof
+of identical TrmBL1 contacts; altered folding/assembly is an alternative.
+Do not turn the two substitutions in ED85AA into separate sufficient causes.
+
+M5. REMAINING COVERAGE
+These experiments advance the exact-member follow-up,not complete PF01978.
+Original2007 TrmBL1 mutation,oligomerization and sugar-binding figures remain
+unadopted;their preparation and units must be assessed independently.
+Remaining TrmB primary papers,other paralogs/taxa,native-cell regulation,
+full physical constructs and matched molecular/replicate controls stay open.
+All earlier graphs,three previous ledgers,history and reviews are preserved.

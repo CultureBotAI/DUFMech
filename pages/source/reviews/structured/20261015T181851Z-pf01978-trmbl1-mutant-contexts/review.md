@@ -1,0 +1,2298 @@
+# PF01978 TrmBL1 mutant promoter selectivity and matched footprint evidence
+
+- Review: 20261015T181851Z-pf01978-trmbl1-mutant-contexts
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-15T18:07:54Z
+- Finished UTC: 2026-10-15T18:18:51Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Six new graphs retain sixteen observed effects and two separate regional-recognition hypotheses. The record contains39 graphs/90 edges,83 observed/seven hypothesized, with all33 earlier graphs preserved. Three scientific findings remain OPEN; PF01978 remains IN_PROGRESS.
+
+## Scope And Provenance
+
+Assess the six mutant graphs against thesis methods and original Figures52-54, exact reference residues and the source conflicts. Check preservation rather than fresh scientific reassessment of the33 previous graphs.
+
+Selection: Continue the wild-type TrmBL1 assessment with dose-matched mutant contrasts.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base b4f92772776516dd1c54a26fd836d95f112f3e38.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01978 | data/families/PF01978.yaml | generated | PF01978 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| generation | passed | True | PF01978 | 8296 schema-valid records; only PF01978 and its manifest changed after actual EDIT. Prior imported fields, graphs and audit entries remain intact. |
+| integrity | passed | True | PF01978 | Stable rerun passed all8296 manifest hashes;39 graphs/90 edges;33 earlier graphs,six prior events and uncommitted predecessor artifacts preserved. Inventory873 graphs/1888 edges,128 graph-bearing families and8168 graphless. |
+| focused | passed | True | PF01978 | 52 tests passed in13.99s with pinned CLAW environment. |
+| schema-history-exports | passed | True | PF01978 | Schema reproduction has zero differences;331 valid history records; exports current. |
+| preview | passed | True | PF01978 | 1440px/390px pass:39 graphs/90 edges,83 observed/seven hypothesized,90 source links,three OPEN discussions. All18 new evidence disclosures work and six graph contexts match. Exact metadata.record equality; selected footprint/recognition screenshots inspected. No document overflow/JS errors; browser/server closed. |
+| primary | passed | True | PF01978 | Actual thesis PDF hash and three minimal anchors verified; reference residues40E,49Y,50D,81E,85E,86D and complete three-Pfam response verified. Original52-54 images and fullFigure52 matrices inspected. |
+
+## Scientific And Domain Assessments
+
+### Whole-protein and domain scope
+
+identity: supported. Targets: PF01978.
+
+E40N and D50N lie inside reference PF01978; the other three mutated positions lie outside. ED85AA is not split. VC1 and sequencing workflow are source-reported, not independently verified physical insert identity.
+
+### Matched contrasts and explicit hypotheses
+
+graph: supported. Targets: PF01978.
+
+Sixteen observed effects distinguish same-dose mutant-versus-WT phenotype from whole-preparation repression. Figure54 WT2 versus mutant3/4 matches0.5uM protein and.01U DNaseI. Two regional occupancy models remain HYPOTHESIZED/UNRESOLVED/CONTEXTUAL, not direct DNA contacts.
+
+### Counterevidence and residual activity
+
+evidence: supported. Targets: PF01978.
+
+AllFigure52 rows retain normalization, residuals and nonmonotonicity. Figure53 template/amount conflicts and separate-image controls remain explicit. Failed own-promoter EMSA/footprints are not recast as absent mutant binding.
+
+### Maintained ownership and historical artifacts
+
+provenance: supported. Targets: PF01978.
+
+Overlay, new ledger, actual EDIT, generated record and inventory agree; all33 prior graphs, earlier events and predecessor artifacts are preserved. Canonical Pages/pins remain unchanged in this scientific tranche.
+
+### Remaining scientific scope
+
+completeness: concern. Targets: PF01978.
+
+Original2007 experiments, other members, exact constructs, raw controls and native regulation remain open. Graph presence is not scientific completion.
+
+## Findings
+
+### construct-and-domain-boundaries: Resolve complete constructs and domain-specific attribution
+
+minor / open / confirmed; issue key: pf01978-construct-and-domain-boundaries.
+
+VC1 is listed in thesis materials and sequencing is reported, but the physical inserts were not independently inspected. E40/D50 map inside PF01978; E81/E85/D86 do not. ED85AA is one double perturbation, not independent single-residue effects. Earlier TrmB construct discrepancies and issue228 remain open.
+
+### assay-context-and-residual-activity: Resolve carryover, failed assays and source conflicts
+
+minor / open / confirmed; issue key: pf01978-assay-context-and-residual-activity.
+
+WT-versus-mutant footprint comparisons are nuclease- and protein-dose-matched, unlike no-protein controls. Figure53 retains its TMMD versus PFK/FBPase template and 25 versus30ng conflicts. Own-promoter binding attempts failed through aggregation, not demonstrated loss of affinity. Carryover, active fraction, folding, assembly and replicate errors remain open under issue229.
+
+### family-and-promoter-coverage: Continue original-paper and native-context evidence
+
+minor / open / confirmed; issue key: pf01978-family-and-promoter-coverage.
+
+Thesis Figures52-54 are now assessed. Original2007 mutation, oligomerization and sugar-binding images remain unadopted, as do other members and native physiology. The six new graphs do not complete PF01978 or the8296-record goal; issue230 remains open.
+
+## Recommended Actions And Acceptance Checks
+
+### continue-primary-evidence
+
+Continue exact-member source assessment without closing existing gaps from graph counts.
+
+- Obtain inspectable original2007 figures and verify units, WT/mutant tags and assay comparators independently from the thesis.
+- Resolve physical inserts,Figure53 template/amount conflicts and active-fraction/folding alternatives when primary evidence permits.
+- Retain complete matrices, source conflicts, matched controls, stable finding lineage and IN_PROGRESS status until full scientific gates are genuinely met.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://doi.org/10.5283/epub.14529; evidence/PF01978/trmbl1-mutant-assays.txt M0-M5; methods printed33-43/51-53; originalFigures52-54,printed115-120/PDF121-126; discussion136/PDF142 | supports | Matched transcription, retardation and protection contrasts support scoped effects. Two-region occupancy models remain hypotheses; the failed own-promoter assay cannot establish absent binding. |
+| identity | https://rest.uniprot.org/uniprotkb/Q8U4G4.json; Ledger M0: reference341aa, sequence1/entry96, exact response hashes and PF01978 10-77; PF11495 112-248; PF31112 256-339 | supports | Reference sequence and residue mapping support member/domain limits, not independently verified tagged experimental inserts. |
+| predecessor | reviews/structured/20261015T174757Z-pf01978-trmbl1-wildtype-contexts/review.yaml; Three OPEN findings with preserved stable keys and targetPF01978 | context_only | Mutant evidence advances but does not close the existing construct,assay and family-coverage follow-ups. |
+| validation | data/families/PF01978.yaml; Executed guarded generation,integrity,focusedtests,schema/history/export checks and unpinned browser preview | supports | Structural checks support faithful representation,not full family review. REVIEW history and final release gates occur after saving this report. |
+| duf-projection-pf01978 | data/families/PF01978.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Partial scientific self-review; not independent expert approval or complete family/corpus coverage.
+- The33 prior graphs were preserved rather than all freshly re-reviewed. Original2007 image retrieval yielded citation text only; no image-based claims are adopted.
+- An initial ASCII DNA-Shift anchor failed due to source typography; verified EMSA replaced it before graph adoption. The first inventory integrity attempt overlapped the inventory writer and failed on old aggregate counts. A stable rerun passed after completion, without changing content or guards.
+- Full release QC, source checkpoint retention, canonical rendering, CI and publication remain subsequent separately authorized gates.
+- Issues228-230 remain open; no REVIEWED promotion.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261015T181851Z-pf01978-trmbl1-mutant-contexts
+kind: record
+repository: CultureBotAI/DUFMech
+source:
+  git_revision: b4f92772776516dd1c54a26fd836d95f112f3e38
+  inputs:
+  - path: curation/families/PF01978.yaml
+    role: context
+    sha256: 54a111f48cfc29c674374c47834fb56ea531ecde1c3b3efb0e06e8362a330a6d
+  - path: data/families/PF01978.yaml
+    role: target
+    sha256: 2b29c4a7003c09e5bfebedbca1bffcb002a248f29b3bbc00de94509dc39fc4be
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    role: context
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    role: context
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    role: context
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+  - path: evidence/PF01978/trmbl1-mutant-assays.txt
+    role: context
+    sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b
+  - path: evidence/PF01978/trmbl1-primary-assays.txt
+    role: context
+    sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682
+  - path: history/records/PF01978/2026-10-15T175823Z-codex-2575ff.yaml
+    role: context
+    sha256: de41752837593542a79dcf644317d80d92bd6b5923fbb12408eafb1de3c0f6cc
+  - path: reviews/structured/20261015T174757Z-pf01978-trmbl1-wildtype-contexts/review.yaml
+    role: context
+    sha256: 9324a7b0d4b1adbd69314d5de22b8eaa861f43fe9eaf0425d77de118dcac37be
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  state: working_tree
+targets:
+- kind: generated
+  label: PF01978
+  owner_paths:
+  - path: curation/families/PF01978.yaml
+    repository: CultureBotAI/DUFMech
+    role: Maintained scientific overlay; create only with authorized curation.
+  - path: src/dufmech/records.py
+    repository: CultureBotAI/DUFMech
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  path: data/families/PF01978.yaml
+  record_class: FamilyRecord
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+    sha256: f4e9e52e45b361771693fb5c269d654682cdc4804b5b6d5a4c37978c238e761e
+  target_id: PF01978
+title: PF01978 TrmBL1 mutant promoter selectivity and matched footprint evidence
+started_at: '2026-10-15T18:07:54Z'
+finished_at: '2026-10-15T18:18:51Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent curated and challenged this tranche; not independent
+    expert approval or experimental replication.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Six new graphs retain sixteen observed effects and two separate regional-recognition
+  hypotheses. The record contains39 graphs/90 edges,83 observed/seven hypothesized,
+  with all33 earlier graphs preserved. Three scientific findings remain OPEN; PF01978
+  remains IN_PROGRESS.
+scope:
+  description: Assess the six mutant graphs against thesis methods and original Figures52-54,
+    exact reference residues and the source conflicts. Check preservation rather than
+    fresh scientific reassessment of the33 previous graphs.
+  selection: Continue the wild-type TrmBL1 assessment with dose-matched mutant contrasts.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01978
+  exclusions:
+  - target: Original2007 experiments, complete PF01978 literature and native physiology
+    reason: Original2007 figure image retrieval did not yield an inspectable image.
+      No new edges are adopted from it; other taxa and members remain unreviewed.
+  - target: Publication certification
+    reason: This scientific review covers the unpinned preview. Current user authorization
+      separately requests PR publication, which has not yet passed release gates.
+checks:
+- check_id: generation
+  name: generation
+  command: just records; just records --apply
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 8296 schema-valid records; only PF01978 and its manifest changed after
+    actual EDIT. Prior imported fields, graphs and audit entries remain intact.
+  target_ids:
+  - PF01978
+  evidence_ids:
+  - validation
+- check_id: integrity
+  name: integrity
+  command: uv run --locked --offline python /private/tmp/duf-trmbl1-mutant-integrity.py
+    --inventory
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Stable rerun passed all8296 manifest hashes;39 graphs/90 edges;33 earlier
+    graphs,six prior events and uncommitted predecessor artifacts preserved. Inventory873
+    graphs/1888 edges,128 graph-bearing families and8168 graphless.
+  target_ids:
+  - PF01978
+  evidence_ids:
+  - validation
+- check_id: focused
+  name: focused
+  command: uv run --locked --offline --extra dev pytest -q tests/test_causal_graphs.py
+    tests/test_qc.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 52 tests passed in13.99s with pinned CLAW environment.
+  target_ids:
+  - PF01978
+  evidence_ids:
+  - validation
+- check_id: schema-history-exports
+  name: schema-history-exports
+  command: just validate-schema; just history-check; just exports --check
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Schema reproduction has zero differences;331 valid history records; exports
+    current.
+  target_ids:
+  - PF01978
+  evidence_ids:
+  - validation
+- check_id: preview
+  name: preview
+  command: uv run --locked --offline python /private/tmp/duf-pf01978-preview.py; node
+    /private/tmp/duf-trmbl1-mutant-browser.cjs
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 1440px/390px pass:39 graphs/90 edges,83 observed/seven hypothesized,90
+    source links,three OPEN discussions. All18 new evidence disclosures work and six
+    graph contexts match. Exact metadata.record equality; selected footprint/recognition
+    screenshots inspected. No document overflow/JS errors; browser/server closed.
+  target_ids:
+  - PF01978
+  evidence_ids:
+  - validation
+- check_id: primary
+  name: primary
+  command: PyMuPDF source SHA256/anchor checks and structured reference JSON parsing
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Actual thesis PDF hash and three minimal anchors verified; reference residues40E,49Y,50D,81E,85E,86D
+    and complete three-Pfam response verified. Original52-54 images and fullFigure52
+    matrices inspected.
+  target_ids:
+  - PF01978
+  evidence_ids:
+  - validation
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://doi.org/10.5283/epub.14529
+  locator: evidence/PF01978/trmbl1-mutant-assays.txt M0-M5; methods printed33-43/51-53;
+    originalFigures52-54,printed115-120/PDF121-126; discussion136/PDF142
+  accessed_at: '2026-10-15T18:18:51Z'
+  support: supports
+  summary: Matched transcription, retardation and protection contrasts support scoped
+    effects. Two-region occupancy models remain hypotheses; the failed own-promoter
+    assay cannot establish absent binding.
+- evidence_id: identity
+  kind: primary_source
+  reference: https://rest.uniprot.org/uniprotkb/Q8U4G4.json
+  locator: 'Ledger M0: reference341aa, sequence1/entry96, exact response hashes and
+    PF01978 10-77; PF11495 112-248; PF31112 256-339'
+  accessed_at: '2026-10-15T18:18:51Z'
+  support: supports
+  summary: Reference sequence and residue mapping support member/domain limits, not
+    independently verified tagged experimental inserts.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261015T174757Z-pf01978-trmbl1-wildtype-contexts/review.yaml
+  locator: Three OPEN findings with preserved stable keys and targetPF01978
+  accessed_at: '2026-10-15T18:18:51Z'
+  support: context_only
+  summary: Mutant evidence advances but does not close the existing construct,assay
+    and family-coverage follow-ups.
+- evidence_id: validation
+  kind: validation
+  reference: data/families/PF01978.yaml
+  locator: Executed guarded generation,integrity,focusedtests,schema/history/export
+    checks and unpinned browser preview
+  accessed_at: '2026-10-15T18:18:51Z'
+  support: supports
+  summary: Structural checks support faithful representation,not full family review.
+    REVIEW history and final release gates occur after saving this report.
+- evidence_id: duf-projection-pf01978
+  kind: record_content
+  reference: data/families/PF01978.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-15T18:18:51Z'
+  support: context_only
+  snapshot_sha256: 2b29c4a7003c09e5bfebedbca1bffcb002a248f29b3bbc00de94509dc39fc4be
+  quote: "id: Pfam:PF01978\npfam_id: PF01978\nname: Sugar-specific transcriptional\
+    \ regulator TrmB\nshort_name: TrmB\nseed_status: EX_DUF\ncharacterization_status:\
+    \ UNSCORED\ncuration_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01978\n\
+    counters:\n  proteins: 8669\n  matches: 8670\n  proteomes: 3373\n  taxa: 5343\n\
+    \  structures: 15\n  alphafold_models: 6625\n  domain_architectures: 86\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002831\ndescription: One member of this family, TrmB,\
+    \ has been shown to be a sugar-specific transcriptional regulator\n  of the trehalose/maltose\
+    \ ABC transporter [[cite:PUB00015607]] in Thermococcus litoralis.\ncuration_history:\
+    \ history/records/PF01978\ndiscussions:\n- discussion_id: trmb-construct-and-domain-boundaries\n\
+    \  prompt: Resolve complete constructs and distinguish PF01978-dependent effects\
+    \ from other-domain and\n    whole-protein effects.\n  kind: CURATION_TODO\n \
+    \ status: OPEN\n  rationale: Q7LYW4 and Q9HGZ9 have identical reference bodies\
+    \ and PF01978 at 11-77, but the pSL152 species\n    attribution differs between\
+    \ Lee2003 and the Surma thesis. Y50 is within PF01978; E87 and the sugar-binding\n\
+    \    domains are not. Reference equivalence cannot establish identical experimental\
+    \ inserts or strains.\n  evidence:\n  - reference: PMID:12426307\n    supports:\
+    \ PARTIAL\n    evidence_source: primary_publication\n    explanation: The original\
+    \ cloning methods identify T. litoralis chromosomal DNA and C-terminal His6\n\
+    \      pSL152; full inserted sequence was not independently inspected.\n  - reference:\
+    \ doi:10.5283/epub.14529\n    supports: PARTIAL\n    evidence_source: doctoral_thesis\n\
+    \    explanation: Methods calls the same plasmid PF1743 and Chapter 7 uses supplied\
+    \ mutant plasmids; complete\n      inserts and mutant-specific folding controls\
+    \ remain unresolved.\n  - reference: PMID:23576322\n    supports: PARTIAL\n  \
+    \  evidence_source: primary_publication_and_deposition\n    explanation: Reported\
+    \ V161A and inconsistent C-terminal tails disagree with the 3QPH sequence and\n\
+    \      actual Val161 atoms. No silent sequence correction or neutrality assumption\
+    \ is made.\n  posed_by: Codex\n  posed_date: '2026-10-15'\n  notes: See all four\
+    \ PF01978 ledgers for reference, construct and assay provenance. Q8U4G4 sequence\
+    \ version\n    1/entry 96 maps PF01978 to 10-77; TrmBL1 E40/D50 are inside it,\
+    \ but E81/E85/D86 are outside. ED85AA\n    is a double perturbation, not two independently\
+    \ tested causes. Materials list VC1 and the methods\n    report sending mutant\
+    \ plasmids for sequencing, but complete physical inserts remain independently\n\
+    \    unverified. Thesis pCS19/C-terminal His6 differs from the 2007 transcription\
+    \ preparation; FBPase cloning\n    sites disagree. No isolated-domain sufficiency\
+    \ or atomic DNA contact is asserted.\n- discussion_id: trmb-assay-context-and-residual-activity\n\
+    \  prompt: Resolve preparation carryover and assay-specific outcomes before assigning\
+    \ a single sugar-to-DNA\n    regulatory mechanism.\n  kind: CURATION_TODO\n  status:\
+    \ OPEN\n  rationale: Trehalose relieves transcriptional repression but increases\
+    \ region-1 EMSA retardation under\n    different conditions. The thesis stores\
+    \ proteins in glucose-containing buffer without dialysis; no-added-sugar\n   \
+    \ assays are not established sugar-free. Y50N and E87A retain concentration-dependent\
+    \ repression.\n  evidence:\n  - reference: PMID:12426307\n    supports: SUPPORT\n\
+    \    evidence_source: primary_text_and_captions\n    explanation: Figures 6 and\
+    \ 8 describe different trehalose effects; original figure images were not\n  \
+    \    available through the attempted access routes.\n  - reference: doi:10.5283/epub.14529\n\
+    \    supports: SUPPORT\n    evidence_source: doctoral_thesis_and_original_figures\n\
+    \    explanation: Methods pp.39-41 and Figures 18-23, 32-35, 45-48 and 51 retain\
+    \ glucose carryover, residual/nonmonotonic\n      activity, unmatched buffers\
+    \ or nuclease amounts and diffuse shifts. Figure 22B retains 2% signal\n     \
+    \ despite zero-output prose; Figure 35 tables contradict blanket below-10% wording.\
+    \ These prevent\n      exact affinity, stoichiometry and atomic-contact claims.\n\
+    \  posed_by: Codex\n  posed_date: '2026-10-15'\n  notes: Obtain stock compositions,\
+    \ active fractions, replicate/error estimates and direct occupancy/competition\n\
+    \    measurements. Retain prior residuals, nonmonotonicity, Figure 20 percentage-point\
+    \ distinction and\n    Figure 28/41-43 discrepancies. Figure 52 requires same-dose\
+    \ and panel-specific WT controls; some nominally\n    complete repression retains\
+    \ 8/12/10. Figure 53 has template-label and 25/30 ng DNA conflicts. Figure\n \
+    \   54 WT/mutant comparisons match nuclease dose even though no-protein lanes\
+    \ do not. Own-promoter EMSA/footprints\n    failed through aggregation; that is\
+    \ not measured loss of mutant binding. See all four ledgers; no\n    uniform inhibition,\
+    \ stable activation or native flux claim is made.\n- discussion_id: trmb-family-and-promoter-coverage\n\
+    \  prompt: Extend primary-assay coverage to remaining promoters, anti-inducers,\
+    \ paralogs and taxa with\n    separate reference mapping.\n  kind: CURATION_TODO\n\
+    \  status: OPEN\n  rationale: These scoped whole-protein experiments do not review\
+    \ all PF01978 proteins or establish a\n    universal DNA-binding, sugar-response\
+    \ or transcriptional mechanism.\n  evidence:\n  - reference: doi:10.5283/epub.14529\n\
+    \    supports: PARTIAL\n    evidence_source: doctoral_thesis\n    explanation:\
+    \ Figures 18-23 and 32-35 support scoped TrmB contexts. Independently mapped TrmBL1\
+    \ Figures\n      25-31 and 36-43 retain wild-type contexts; Figures 52-54 now\
+    \ add same-dose mutant transcription,\n      EMSA and footprint effects with separate\
+    \ regional hypotheses. Remaining original primary-paper experiments,\n      paralogs\
+    \ and native-cell results still require assessment.\n  - reference: PMID:23576322\n\
+    \    supports: PARTIAL\n    evidence_source: primary_publication\n    explanation:\
+    \ The sucrose-bound structure lacks DNA, while its maltose comparator lacks residues\
+    \ 2-109.\n      Proposed allosteric motion is not directly observed and older/unpublished\
+    \ assays are not new measurements\n      in this paper.\n  posed_by: Codex\n \
+    \ posed_date: '2026-10-15'\n  notes: Inspect full Lee2005 and differential-signals\
+    \ Lee2007 sources, complete the separate PF0124 paper's\n    original mutant/oligomerization/sugar-binding\
+    \ experiments, and assess Tgr/TrmBL2/4 and other taxa\n    without transferring\
+    \ endpoints by similarity. Thesis E40N/D50N/E81A/ED85AA assays are now scoped\
+    \ separately;\n    Y49N from the 2007 paper is not D50N. PF0124 is a target promoter\
+    \ in the TrmB graphs and the tested\n    regulator in the TrmBL1 graphs. Native\
+    \ physiology and residue-level DNA contacts remain open.\ncausal_graphs:\n- graph_id:\
+    \ tl-trmb-tm-transcription-2003\n  title: TrmB represses reconstituted malE transcription\
+    \ with sugar-specific relief\n  scope: Full-length T. litoralis pSL152 TrmB with\
+    \ a C-terminal His6 tag; whole-protein activity in a\n    heterologous reconstituted\
+    \ transcription system.\n  context: Linearized pMLP malE template, P. furiosus\
+    \ TBP/TFB/RNAP, 80 C; 0.8-3.2 ug TrmB. At 3.2 ug TrmB,\n    added maltose at 100\
+    \ uM or trehalose at 2.5 mM relieves repression. Buffer and component amounts\
+    \ are\n    retained in ledger S1a; reaction duration and volume remain unresolved.\n\
+    \  family_mapping: Q7LYW4 sequence 1/entry 91 is the 338-aa T. litoralis reference,\
+    \ with PF01978 11-77,\n    PF11495 110-234 and PF31112 249-335. The exact study\
+    \ strain and full insert were not independently\n    established; this is not\
+    \ isolated PF01978 activity.\n  scope_status: MECHANISTIC\n  limitations: Primary\
+    \ methods, results and Figure 8 caption inspected, not its original image. The\
+    \ gdh\n    lane controls the transcription system, not a full TrmB specificity\
+    \ series. Relief of repression does\n    not establish DNA release or native transporter\
+    \ flux; trehalose prose/caption threshold wording differs.\n  nodes:\n  - node_id:\
+    \ protein\n    label: Added full-length TrmB in the reconstituted malE system\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q7LYW4\n  - node_id:\
+    \ transcript\n    label: 110-nt malE transcript output\n    node_type: PROCESS\n\
+    \  - node_id: maltose\n    label: Added 100 uM maltose with 3.2 ug TrmB\n    node_type:\
+    \ PERTURBATION\n  - node_id: trehalose\n    label: Added 2.5 mM trehalose with\
+    \ 3.2 ug TrmB\n    node_type: PERTURBATION\n  edges:\n  - edge_id: represses-transcript\n\
+    \    subject: protein\n    predicate: decreases\n    object: transcript\n    mechanism:\
+    \ Increasing added TrmB reduces the runoff transcript in the reconstituted assay.\
+    \ This is\n      direct whole-protein repression at the process level, not a measured\
+    \ elementary TBP-displacement\n      step.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:12426307\n\
+    \      source_url: https://www.researchgate.net/publication/11041114_TrmB_a_Sugar-specific_Transcriptional_Regulator_of_the_TrehaloseMaltose_ABC_Transporter_from_the_Hyperthermophilic_Archaeon_Thermococcus_litoralis\n\
+    \      snippet: the transcript of malE\n      explanation: Figure 8 lanes 4-6,\
+    \ results and transcription methods; ledger S1a. No exact densitometry\n     \
+    \   or native-cell repression is inferred.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    \  - edge_id: maltose-relieves-repression\n    subject: maltose\n    predicate:\
+    \ increases\n    object: transcript\n    mechanism: Added maltose restores transcript\
+    \ relative to the TrmB-containing no-added-sugar reaction;\n      the intervening\
+    \ conformational and DNA-binding steps are unresolved in this assay.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:12426307\n      source_url: https://www.researchgate.net/publication/11041114_TrmB_a_Sugar-specific_Transcriptional_Regulator_of_the_TrehaloseMaltose_ABC_Transporter_from_the_Hyperthermophilic_Archaeon_Thermococcus_litoralis\n\
+    \      snippet: the transcript of malE\n      explanation: Figure 8A lane 8 and\
+    \ results; ledger S1a. The source includes both TrmB and the transcription\n \
+    \       machinery.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    \  - edge_id: trehalose-relieves-repression\n    subject: trehalose\n    predicate:\
+    \ increases\n    object: transcript\n    mechanism: Added trehalose restores transcription\
+    \ in the reported lane condition. This endpoint is\n      kept separate from the\
+    \ increased EMSA retardation observed at higher trehalose concentrations under\n\
+    \      another protocol.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:12426307\n\
+    \      source_url: https://www.researchgate.net/publication/11041114_TrmB_a_Sugar-specific_Transcriptional_Regulator_of_the_TrehaloseMaltose_ABC_Transporter_from_the_Hyperthermophilic_Archaeon_Thermococcus_litoralis\n\
+    \      snippet: the transcript of malE\n      explanation: Figure 8B lane 11 caption\
+    \ and results; ledger S1a. Prose also says above 2.5 mM; no\n        universal\
+    \ threshold is assigned.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    - graph_id: tl-trmb-sugar-emsa-2003\n  title: Maltose and trehalose have opposite\
+    \ effects on TrmB-associated DNA retardation\n  scope: Purified full-length T.\
+    \ litoralis TrmB and labeled intergenic region 1 in EMSA, not a native\n    transcription\
+    \ assay.\n  context: 1.25 uM TrmB, 70 C for 10 min then 8% native PAGE at room\
+    \ temperature; maltose 5-50 uM or trehalose\n    1-10 mM in separate reactions.\
+    \ Buffer and competitor are retained in ledger S1b.\n  family_mapping: Q7LYW4\
+    \ version 1 reference, PF01978 11-77 within a 338-aa multidomain protein; the\
+    \ sugar-binding\n    matches PF11495 and PF31112 are separate. Complete assay\
+    \ insert remains unverified.\n  scope_status: MECHANISTIC\n  limitations: Original\
+    \ Figure 6 image unavailable; primary text/caption inspected. Shift intensity\
+    \ is\n    not a measured off-rate, binding stoichiometry or transcriptional activity.\
+    \ Do not join these sugar-specific\n    effects into a universal dissociation\
+    \ model.\n  nodes:\n  - node_id: maltose\n    label: Added maltose up to 50 uM\
+    \ in the TrmB-region-1 reaction\n    node_type: PERTURBATION\n  - node_id: trehalose\n\
+    \    label: Added trehalose at 5-10 mM in the TrmB-region-1 reaction\n    node_type:\
+    \ PERTURBATION\n  - node_id: retarded\n    label: Retarded TrmB-associated region-1\
+    \ DNA\n    node_type: STATE\n  edges:\n  - edge_id: maltose-reduces-retardation\n\
+    \    subject: maltose\n    predicate: decreases\n    object: retarded\n    mechanism:\
+    \ Maltose reduces DNA retardation, with a reported half-effect at 20-50 uM in\
+    \ this assay.\n      The direct complex-level response does not identify its atomic\
+    \ allosteric route.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:12426307\n      source_url:\
+    \ https://www.researchgate.net/publication/11041114_TrmB_a_Sugar-specific_Transcriptional_Regulator_of_the_TrehaloseMaltose_ABC_Transporter_from_the_Hyperthermophilic_Archaeon_Thermococcus_litoralis\n\
+    \      snippet: TrmB-mediated EMSA\n      explanation: Figure 6 and sugar-dependent\
+    \ EMSA results/methods; ledger S1b.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    \  - edge_id: trehalose-increases-retardation\n    subject: trehalose\n    predicate:\
+    \ increases\n    object: retarded\n    mechanism: At 5-10 mM trehalose the source\
+    \ reports greater stability/retardation of the complex. This\n      does not establish\
+    \ increased transcriptional repression, since transcription behaves differently\n\
+    \      under its own conditions.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:12426307\n\
+    \      source_url: https://www.researchgate.net/publication/11041114_TrmB_a_Sugar-specific_Transcriptional_Regulator_of_the_TrehaloseMaltose_ABC_Transporter_from_the_Hyperthermophilic_Archaeon_Thermococcus_litoralis\n\
+    \      snippet: complex was clearly increased\n      explanation: Figure 6 results\
+    \ and caption; ledger S1b. A complex-level gel effect, not a fitted\n        kinetic\
+    \ stability constant.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    - graph_id: tl-trmb-maltose-footprint-2003\n  title: Maltose removes TrmB-associated\
+    \ promoter protection\n  scope: Full-length T. litoralis TrmB, coding and noncoding\
+    \ strands of the intergenic promoter region,\n    DNaseI protection assay.\n \
+    \ context: 5 uM TrmB with or without 100 uM maltose; binding 70 C for 10 min followed\
+    \ by 0.005 U DNaseI\n    for 5 min at 37 C. BRE/TATA and inverted-repeat-associated\
+    \ regions are assessed.\n  family_mapping: Q7LYW4 version 1 reference, PF01978\
+    \ 11-77; whole-protein pSL152 preparation. Neither\n    exact study strain nor\
+    \ complete tag/insert is inferred from reference taxonomy.\n  scope_status: MECHANISTIC\n\
+    \  limitations: Primary Figure 4 caption and text, not original image, inspected.\
+    \ Loss of nuclease protection\n    is not direct measurement of TBP recruitment.\
+    \ Trehalose footprint loss is reported data-not-shown\n    and is not an independently\
+    \ inspected edge.\n  nodes:\n  - node_id: maltose\n    label: 100 uM maltose added\
+    \ to 5 uM TrmB-DNA reaction\n    node_type: PERTURBATION\n  - node_id: protection\n\
+    \    label: TrmB-associated DNaseI protection of promoter regions\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: reduces-protection\n    subject: maltose\n   \
+    \ predicate: decreases\n    object: protection\n    mechanism: The protected regions\
+    \ lose protection after maltose addition in the matched protein-containing\n \
+    \     footprint condition; exact DNA-release kinetics are not measured.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:12426307\n      source_url: https://www.researchgate.net/publication/11041114_TrmB_a_Sugar-specific_Transcriptional_Regulator_of_the_TrehaloseMaltose_ABC_Transporter_from_the_Hyperthermophilic_Archaeon_Thermococcus_litoralis\n\
+    \      snippet: TrmB no longer protected\n      explanation: Figure 4 M lane,\
+    \ results and footprint methods; ledger S1c. The digestion is at 37\n        C,\
+    \ not the transcription assay's 80 C.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    - graph_id: trmb-tm-repression-and-maltose-thesis\n  title: WT and E87A TrmB repress\
+    \ TM transcription and retain maltose response\n  scope: Full-length pSL152-derived\
+    \ WT and E87A preparations in Surma's doctoral thesis, separate 484-bp\n    TM\
+    \ template.\n  context: Figure 46A; 0.5 uM regulator, 150 fmol template, P. furiosus\
+    \ TBP/TFB/RNAP, 25 uL buffer III,\n    80 C for 30 min; 1 mM added maltose where\
+    \ indicated. Ledger S2 specifies salt, nucleotides and glucose-containing\n  \
+    \  protein preparation.\n  family_mapping: Thesis calls pSL152 PF1743; Q9HGZ9\
+    \ version 1 and T. litoralis Q7LYW4 version 1 have\n    identical bodies and PF01978\
+    \ 11-77. Plasmid taxonomy conflicts with Lee2003 and remains unresolved.\n   \
+    \ E87 is outside PF01978; no domain-specific E87 mechanism is asserted.\n  scope_status:\
+    \ MECHANISTIC\n  limitations: Public thesis evidence, not a new peer-reviewed\
+    \ 2007 result. No-added-sugar is not sugar-free\n    because stock glucose was\
+    \ not dialyzed away. Complete constructs, final carryover and mutant folding/active\n\
+    \    fractions remain unresolved.\n  nodes:\n  - node_id: wt\n    label: 0.5 uM\
+    \ WT TrmB added to TM transcription reaction\n    node_type: PERTURBATION\n  -\
+    \ node_id: e87a\n    label: 0.5 uM E87A TrmB added to TM transcription reaction\n\
+    \    node_type: PERTURBATION\n  - node_id: maltose_wt\n    label: 1 mM added maltose\
+    \ with 0.5 uM WT TrmB\n    node_type: PERTURBATION\n  - node_id: maltose_e87a\n\
+    \    label: 1 mM added maltose with 0.5 uM E87A TrmB\n    node_type: PERTURBATION\n\
+    \  - node_id: transcript\n    label: 156-nt TM runoff transcript output\n    node_type:\
+    \ PROCESS\n  edges:\n  - edge_id: wt-represses\n    subject: wt\n    predicate:\
+    \ decreases\n    object: transcript\n    mechanism: WT addition reduces transcript\
+    \ relative to the no-regulator lane, demonstrating whole-protein\n      reconstituted\
+    \ repression without resolving initiation microsteps.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 46A lanes 1/2 visually inspected with methods; ledger S2a.\n      cache_path:\
+    \ evidence/PF01978/trmb-primary-assays.txt\n      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    \  - edge_id: e87a-represses\n    subject: e87a\n    predicate: decreases\n  \
+    \  object: transcript\n    mechanism: E87A addition still reduces TM transcript.\
+    \ Its weaker MD response must not be generalized\n      to a globally inactive\
+    \ protein.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n     \
+    \ source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: TrmB E87A\n      explanation: Original Figure 46A lanes 1/6 and\
+    \ Figure 45B/C; ledger S2a. Figure 45 provides dose-specific\n        residual\
+    \ values, not an affinity measurement.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    \  - edge_id: wt-maltose-relief\n    subject: maltose_wt\n    predicate: increases\n\
+    \    object: transcript\n    mechanism: Added maltose restores TM transcript relative\
+    \ to WT without added maltose; the causal intermediate\n      is not directly\
+    \ tracked in this transcription assay.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 46A lanes 2/3; ledger S2a. This differs from Lee2003 in preparation,\n     \
+    \   template and buffer.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    \  - edge_id: e87a-maltose-relief\n    subject: maltose_e87a\n    predicate: increases\n\
+    \    object: transcript\n    mechanism: Added maltose restores TM transcript in\
+    \ the E87A reaction, preserving promoter-specific\n      responsiveness despite\
+    \ the MD repression defect.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: TrmB E87A\n      explanation: Original Figure 46A lanes 6/7; ledger\
+    \ S2a. No isolated E87-region or sugar-binding-domain\n        sufficiency follows.\n\
+    \      cache_path: evidence/PF01978/trmb-primary-assays.txt\n      cache_sha256:\
+    \ e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n- graph_id:\
+    \ trmb-md-repression-and-maltotriose-thesis\n  title: WT and Y50N TrmB repress\
+    \ MD transcription and retain maltotriose response\n  scope: Full-length pSL152-derived\
+    \ WT and Y50N preparations in the thesis, separate 348-bp MD template.\n  context:\
+    \ Figure 46B; 1.5 uM regulator and 1 mM added maltotriose where indicated; 150\
+    \ fmol template,\n    25 uL buffer III, P. furiosus TBP/TFB/RNAP, 80 C for 30\
+    \ min. Glucose carryover is unresolved.\n  family_mapping: Q9HGZ9 and Q7LYW4 version\
+    \ 1 references have PF01978 11-77 and Y50 within the match;\n    PF11495 and PF31112\
+    \ are separate. Thesis PF1743 attribution and Lee2003 pSL152 origin conflict;\
+    \ reference\n    bodies are identical but exact constructs are unverified.\n \
+    \ scope_status: MECHANISTIC\n  limitations: MD conditions differ from the 0.5-uM\
+    \ TM assay. Retained MD repression does not prove Y50\n    directly recognizes\
+    \ either promoter or that the entire protein is structurally unchanged. Thesis\
+    \ evidence\n    and no-added-sugar conditions remain explicitly scoped.\n  nodes:\n\
+    \  - node_id: wt\n    label: 1.5 uM WT TrmB added to MD transcription reaction\n\
+    \    node_type: PERTURBATION\n  - node_id: y50n\n    label: 1.5 uM Y50N TrmB added\
+    \ to MD transcription reaction\n    node_type: PERTURBATION\n  - node_id: maltotriose_wt\n\
+    \    label: 1 mM added maltotriose with 1.5 uM WT TrmB\n    node_type: PERTURBATION\n\
+    \  - node_id: maltotriose_y50n\n    label: 1 mM added maltotriose with 1.5 uM\
+    \ Y50N TrmB\n    node_type: PERTURBATION\n  - node_id: transcript\n    label:\
+    \ 168-nt MD runoff transcript output\n    node_type: PROCESS\n  edges:\n  - edge_id:\
+    \ wt-represses\n    subject: wt\n    predicate: decreases\n    object: transcript\n\
+    \    mechanism: WT addition lowers the MD runoff transcript relative to no regulator,\
+    \ a whole-protein biochemical\n      repression effect without a resolved atomic\
+    \ route.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 46B lanes 1/2 and methods; ledger S2b.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    \  - edge_id: y50n-represses\n    subject: y50n\n    predicate: decreases\n  \
+    \  object: transcript\n    mechanism: Y50N retains MD transcript repression; the\
+    \ TM defect is not a universal loss of repressor\n      function. Figure 45 quantification\
+    \ retains residual transcript rather than imposing zero output.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: TrmB Y50N\n      explanation: Original Figure 46B lanes 1/4, Figure\
+    \ 45A/C and text pp.105-108; ledger S2b.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    \  - edge_id: wt-maltotriose-relief\n    subject: maltotriose_wt\n    predicate:\
+    \ increases\n    object: transcript\n    mechanism: Added maltotriose relieves\
+    \ WT-associated MD repression in this reaction; no observed allosteric\n     \
+    \ trajectory is asserted.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 46B lanes 2/3; ledger S2b.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    \  - edge_id: y50n-maltotriose-relief\n    subject: maltotriose_y50n\n    predicate:\
+    \ increases\n    object: transcript\n    mechanism: Added maltotriose restores\
+    \ MD transcript in the Y50N reaction, showing retained promoter-specific\n   \
+    \   regulation without establishing isolated-domain activity.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: TrmB Y50N\n      explanation: Original Figure 46B lanes 4/5; ledger\
+    \ S2b.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n      cache_sha256:\
+    \ e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n- graph_id:\
+    \ trmb-promoter-selective-mutant-effects-thesis\n  title: Y50N and E87A weaken\
+    \ repression of different isolated promoters\n  scope: Same-dose comparisons of\
+    \ full-length WT and mutant preparations in Figure 46, not a domain-fragment\n\
+    \    experiment or a mutant potency ranking across promoters.\n  context: TM at\
+    \ 0.5 uM regulator and MD at 1.5 uM, no added inducer, 25 uL buffer III with P.\
+    \ furiosus\n    transcription components, 80 C for 30 min. Figures 45/46 and ledger\
+    \ S2a-b preserve dose dependence\n    and protein-stock glucose.\n  family_mapping:\
+    \ Reference Y50 is inside PF01978 11-77; E87 is outside it in identical 338-aa\
+    \ Q9HGZ9/Q7LYW4\n    version 1 bodies. Complete WT/mutant inserts and the pSL152\
+    \ species attribution remain unresolved.\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ Endpoint changes are observed, but folding, active abundance, oligomerization\
+    \ and altered\n    DNA affinity are not separated. Figure 45 retains Y50N TM repression\
+    \ at 2.5-3 uM and E87A MD repression\n    at 2.5-3 uM. Occasional Y50D prose is\
+    \ not silently adopted over Y50N figure labels.\n  nodes:\n  - node_id: y50n\n\
+    \    label: Replace WT with Y50N at 0.5 uM on TM template\n    node_type: PERTURBATION\n\
+    \  - node_id: tm\n    label: TM runoff transcript relative to same-dose WT\n \
+    \   node_type: PROCESS\n  - node_id: e87a\n    label: Replace WT with E87A at\
+    \ 1.5 uM on MD template\n    node_type: PERTURBATION\n  - node_id: md\n    label:\
+    \ MD runoff transcript relative to same-dose WT\n    node_type: PROCESS\n  edges:\n\
+    \  - edge_id: y50n-weakens-tm-repression\n    subject: y50n\n    predicate: increases\n\
+    \    object: tm\n    mechanism: Y50N produces much more TM transcript than WT\
+    \ at the same low dose. This is a mutation-associated\n      loss of repression,\
+    \ not proof of a direct Tyr50-DNA contact or total inactivity at all concentrations.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: TrmB Y50N\n      explanation: Original Figure 46A lanes 2/4 and\
+    \ Figure 45 residual-activity series; ledger S2a. This\n        reuses the same\
+    \ experiment, not independent replication of the TM graph.\n      cache_path:\
+    \ evidence/PF01978/trmb-primary-assays.txt\n      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    \  - edge_id: e87a-weakens-md-repression\n    subject: e87a\n    predicate: increases\n\
+    \    object: md\n    mechanism: E87A yields more MD transcript than WT at the\
+    \ same dose. E87 lies outside PF01978, and\n      the affected molecular route\
+    \ is unresolved.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n     \
+    \ source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: TrmB E87A\n      explanation: Original Figure 46B lanes 2/6 and\
+    \ Figure 45B/C; ledger S2b. Do not convert retained\n        residual repression\
+    \ into an absolute requirement claim.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    - graph_id: trmb-tm-maltose-footprints-thesis\n  title: Maltose removes WT and\
+    \ E87A protection of the TM promoter\n  scope: Full-length WT or E87A pSL152-derived\
+    \ protein, separate matched-nuclease comparisons in thesis\n    Figure 47.\n \
+    \ context: 1.5 uM regulator, 100 ng labeled TM DNA, 25 uL footprint buffer I;\
+    \ 70 C for 15 min binding,\n    then 0.02 U DNaseI at 40 C for 5 min. Added maltose\
+    \ is 1 mM. Full buffer and glucose-carryover caveat\n    are in ledger S2c.\n\
+    \  family_mapping: PF01978 is 11-77 in Q9HGZ9/Q7LYW4 version 1 reference bodies;\
+    \ E87 is outside that match.\n    Plasmid lineage and complete constructs are\
+    \ not independently resolved.\n  scope_status: MECHANISTIC\n  limitations: No-protein\
+    \ and Y50N lanes use 0.01 U DNaseI, so they are not used as matched-nuclease mutant\n\
+    \    causal comparisons. Protection loss does not directly measure TBP competition\
+    \ or a structural transition.\n    MD mutant footprinting failed in this source.\n\
+    \  nodes:\n  - node_id: maltose_wt\n    label: 1 mM added maltose with WT TrmB\
+    \ at matched DNaseI dose\n    node_type: PERTURBATION\n  - node_id: wt_protection\n\
+    \    label: WT-associated TM BRE/TATA-region protection\n    node_type: STATE\n\
+    \  - node_id: maltose_e87a\n    label: 1 mM added maltose with E87A TrmB at matched\
+    \ DNaseI dose\n    node_type: PERTURBATION\n  - node_id: e87a_protection\n   \
+    \ label: E87A-associated TM BRE/TATA-region protection\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: removes-wt-protection\n    subject: maltose_wt\n    predicate:\
+    \ decreases\n    object: wt_protection\n    mechanism: Adding maltose eliminates\
+    \ the marked WT footprint at unchanged protein and nuclease amounts;\n      a\
+    \ direct protection response, not a measured DNA-release rate.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: DNaseI\n      explanation: Original Figure 47 lanes 2/3 visually\
+    \ inspected, with explicit 0.02-U caption conditions;\n        ledger S2c.\n \
+    \     cache_path: evidence/PF01978/trmb-primary-assays.txt\n      cache_sha256:\
+    \ e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n  - edge_id:\
+    \ removes-e87a-protection\n    subject: maltose_e87a\n    predicate: decreases\n\
+    \    object: e87a_protection\n    mechanism: Adding maltose eliminates the E87A\
+    \ footprint at matched 0.02-U nuclease dose, retaining\n      a TM-specific response\
+    \ despite the MD-associated defect.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: TrmB E87A\n      explanation: Original Figure 47 lanes 5/6; ledger\
+    \ S2c. The Y50N lane has a different nuclease amount\n        and is not substituted\
+    \ into this comparison.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    - graph_id: trmb-e87a-md-retardation-thesis\n  title: E87A reduces detectable\
+    \ MD DNA retardation\n  scope: Full-length WT versus E87A preparations in thesis\
+    \ Figure 48, with Y50N and no-protein comparison\n    lanes.\n  context: 3 uM\
+    \ protein, 25 ng MD template per figure caption, 25 uL EMSA buffer; 70 C for 15\
+    \ min, cool\n    to 40 C, then 6% native PAGE at room temperature. The generic\
+    \ method says 30 ng, a retained discrepancy.\n  family_mapping: E87 is outside\
+    \ PF01978 11-77 in the identical Q9HGZ9/Q7LYW4 version 1 reference bodies.\n \
+    \   Exact mutant insert and pSL152 lineage remain unresolved; reference mapping\
+    \ is not a verified mutant\n    structure.\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ WT and Y50N shifts are diffuse, explicitly not cleanly resolved. The endpoint\
+    \ is detectable\n    retardation, not Kd, zero binding, oligomer stoichiometry\
+    \ or an E87-DNA contact. Stock glucose and\n    mutant folding/active fractions\
+    \ remain unresolved.\n  nodes:\n  - node_id: e87a\n    label: Replace WT with\
+    \ E87A at 3 uM in the MD EMSA\n    node_type: PERTURBATION\n  - node_id: retarded\n\
+    \    label: Detectably retarded MD DNA\n    node_type: STATE\n  edges:\n  - edge_id:\
+    \ reduces-md-retardation\n    subject: e87a\n    predicate: decreases\n    object:\
+    \ retarded\n    mechanism: E87A yields predominantly free-DNA-like migration relative\
+    \ to the diffuse retarded WT lane;\n      the preparation-dependent molecular\
+    \ cause is unresolved.\n    directness: UNRESOLVED\n    support: OBSERVED\n  \
+    \  evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: EMSA\n      explanation: Original Figure 48 lanes 2/3, with lanes\
+    \ 1/4 as no-protein/Y50N context; ledger S2d.\n        The failed MD footprint\
+    \ experiment is not evidence of absent binding.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    - graph_id: trmb-composite-promoter-dose-thesis\n  title: WT TrmB shifts TM and\
+    \ MD output differently on a composite template\n  scope: Artificial 589-bp TMMD\
+    \ template and full-length WT TrmB; distinct from isolated promoters and\n   \
+    \ native operons.\n  context: Figure 51, 150 fmol template, 25 uL buffer III,\
+    \ P. furiosus TBP/TFB/RNAP, 80 C for 30 min;\n    WT 0/1.5/3/4.5 uM. Each promoter\
+    \ is independently normalized to its own no-regulator output.\n  family_mapping:\
+    \ Thesis pSL152 preparation, mapped by identical Q9HGZ9/Q7LYW4 version 1 reference\
+    \ bodies\n    with PF01978 11-77. Complete construct and taxonomy conflict remain\
+    \ unresolved.\n  scope_status: PHENOTYPIC\n  limitations: No added inducer does\
+    \ not mean no glucose. Percentages are published gel quantifications\n    without\
+    \ established replicate statistics. Apparent MD enhancement is not proof of native\
+    \ activation;\n    competition for machinery is an unmeasured explanation. Reported\
+    \ zero is a gel endpoint, not exact\n    absence of molecular transcription.\n\
+    \  nodes:\n  - node_id: low\n    label: Add 1.5 uM WT TrmB to the composite-template\
+    \ reaction\n    node_type: PERTURBATION\n  - node_id: high\n    label: Increase\
+    \ WT TrmB from 1.5 to 4.5 uM on the composite template\n    node_type: PERTURBATION\n\
+    \  - node_id: tm\n    label: Composite-template TM transcript output\n    node_type:\
+    \ PROCESS\n  - node_id: md\n    label: Composite-template MD transcript output\n\
+    \    node_type: PROCESS\n  edges:\n  - edge_id: low-dose-lowers-tm\n    subject:\
+    \ low\n    predicate: decreases\n    object: tm\n    mechanism: TM output decreases\
+    \ from its own 100% no-regulator baseline to 10% at 1.5 uM WT. The net\n     \
+    \ output is observed; occupancy and competition are not directly quantified.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 51 gel and TM numeric table, lanes 1/2; ledger S2e.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    \  - edge_id: low-dose-raises-md\n    subject: low\n    predicate: increases\n\
+    \    object: md\n    mechanism: MD output rises from its own 100% baseline to\
+    \ 140% at 1.5 uM WT in this joint-promoter\n      system. The source proposes\
+    \ redistribution of shared transcription machinery, but this was not directly\n\
+    \      measured.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n     \
+    \ source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 51 MD numeric table, lanes 1/2, and p.113 interpretation; ledger S2e.\n    \
+    \    A context-specific endpoint, not direct activation by isolated PF01978.\n\
+    \      cache_path: evidence/PF01978/trmb-primary-assays.txt\n      cache_sha256:\
+    \ e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n  - edge_id:\
+    \ higher-dose-lowers-tm\n    subject: high\n    predicate: decreases\n    object:\
+    \ tm\n    mechanism: Increasing WT from 1.5 to 4.5 uM lowers TM output from 10%\
+    \ to the reported 0% gel endpoint.\n      The intermediate 3-uM condition is 5%;\
+    \ no molecular zero or affinity constant is inferred.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 51 TM numeric table, lanes 2-4; ledger S2e. Baselines differ from the\n    \
+    \    low-dose versus no-regulator edge.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    \  - edge_id: higher-dose-lowers-md\n    subject: high\n    predicate: decreases\n\
+    \    object: md\n    mechanism: Raising WT from 1.5 to 4.5 uM lowers MD output\
+    \ from 140% to 52%, crossing below its no-regulator\n      baseline. This preserves\
+    \ the initial enhancement instead of claiming uniform inhibition at every\n  \
+    \    dose.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n     \
+    \ source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 51 MD numeric table, lanes 2-4, values 140/88/52; ledger S2e.\n      cache_path:\
+    \ evidence/PF01978/trmb-primary-assays.txt\n      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    - graph_id: trmb-composite-promoter-mutants-thesis\n  title: Mutant effects remain\
+    \ promoter-dependent on the composite template\n  scope: Same-dose WT versus Y50N\
+    \ or E87A on the artificial TMMD template, not separate native operons.\n  context:\
+    \ Figure 51, 4.5 uM regulator, 150 fmol 589-bp template, 25 uL buffer III, P.\
+    \ furiosus TBP/TFB/RNAP,\n    80 C for 30 min. Compare lanes 4/7/10, with each\
+    \ promoter's no-regulator output normalized to 100%.\n  family_mapping: Y50 lies\
+    \ within PF01978 11-77 and E87 outside it in the identical Q9HGZ9/Q7LYW4 version\n\
+    \    1 references. Exact pSL152 construct lineage, inserted mutations and active\
+    \ fractions remain independently\n    unverified.\n  scope_status: PHENOTYPIC\n\
+    \  limitations: Y50N MD values are nonmonotonic across doses and E87A retains\
+    \ TM repression; ledger S2e\n    preserves all values. No replicate significance,\
+    \ matched native-cell phenotype, direct DNA contact\n    or regulator stoichiometry\
+    \ follows. Protein-stock glucose is unresolved.\n  nodes:\n  - node_id: y50n\n\
+    \    label: Replace 4.5 uM WT with Y50N on composite template\n    node_type:\
+    \ PERTURBATION\n  - node_id: tm\n    label: Composite-template TM output relative\
+    \ to same-dose WT\n    node_type: PROCESS\n  - node_id: e87a\n    label: Replace\
+    \ 4.5 uM WT with E87A on composite template\n    node_type: PERTURBATION\n  -\
+    \ node_id: md\n    label: Composite-template MD output relative to same-dose WT\n\
+    \    node_type: PROCESS\n  edges:\n  - edge_id: y50n-raises-tm\n    subject: y50n\n\
+    \    predicate: increases\n    object: tm\n    mechanism: The Y50N preparation\
+    \ yields 102% TM output versus the WT lane's reported 0%, relative to\n      the\
+    \ shared TM baseline. Its MD output is 77%, not a claim of complete MD repression.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: TrmB Y50N\n      explanation: Original Figure 51 numeric tables\
+    \ and gel, lanes 4/7; ledger S2e. This is separate\n        from the 0.5-uM isolated-TM\
+    \ comparison.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n  \
+    \    cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    \  - edge_id: e87a-raises-md\n    subject: e87a\n    predicate: increases\n  \
+    \  object: md\n    mechanism: E87A yields 180% MD output versus WT's 52% at the\
+    \ same dose, while TM remains at 14%. The\n      joint-template phenotype does\
+    \ not prove direct MD activation or an E87 contact with DNA.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: TrmB E87A\n      explanation: Original Figure 51 numeric tables\
+    \ and gel, lanes 4/10, plus text p.115; ledger S2e.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    - graph_id: tl-trmb-tbp-occlusion-model\n  title: TrmB promoter occupancy may\
+    \ obstruct TBP recruitment\n  scope: Proposed interpretation of T. litoralis TrmB\
+    \ footprints and reconstituted malE repression; not\n    a directly observed recruitment\
+    \ experiment.\n  context: TrmB protects a BRE/TATA-overlapping region and represses\
+    \ transcription in separate Lee2003\n    assays. The graph does not join their\
+    \ different temperatures and readouts into an observed atomic\n    trajectory.\n\
+    \  family_mapping: Q7LYW4 version 1 reference, PF01978 11-77 in full-length multidomain\
+    \ TrmB. Neither an\n    isolated-domain interaction nor a DNA-bound residue contact\
+    \ is established.\n  scope_status: HYPOTHETICAL\n  limitations: No direct TBP\
+    \ competition, recruitment kinetics or TrmB-DNA structure was inspected. Krug2013\n\
+    \    contains sucrose-bound protein without DNA and has unresolved construct/deposition\
+    \ discrepancies;\n    it does not convert this proposal into an observed mechanism.\n\
+    \  nodes:\n  - node_id: occupancy\n    label: Proposed TrmB occupancy overlapping\
+    \ the TM BRE/TATA region\n    node_type: STATE\n  - node_id: tbp\n    label: TBP\
+    \ recruitment to the TM promoter\n    node_type: PROCESS\n  edges:\n  - edge_id:\
+    \ proposed-tbp-occlusion\n    subject: occupancy\n    predicate: decreases\n \
+    \   object: tbp\n    mechanism: The source proposes that overlapping TrmB occupancy\
+    \ obstructs TBP binding and subsequent\n      initiation-complex formation; footprint\
+    \ overlap and repression motivate but do not directly measure\n      this competition.\n\
+    \    directness: DIRECT\n    support: HYPOTHESIZED\n    evidence_kind: CONTEXTUAL\n\
+    \    evidence:\n    - reference: PMID:12426307\n      source_url: https://www.researchgate.net/publication/11041114_TrmB_a_Sugar-specific_Transcriptional_Regulator_of_the_TrehaloseMaltose_ABC_Transporter_from_the_Hyperthermophilic_Archaeon_Thermococcus_litoralis\n\
+    \      snippet: prevention of TBP binding\n      explanation: Discussion interpretation\
+    \ following Figures 4/8; ledger S1c. Proposed directness describes\n        the\
+    \ model, not experimental proof.\n      cache_path: evidence/PF01978/trmb-primary-assays.txt\n\
+    \      cache_sha256: e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62\n\
+    - graph_id: trmb-tm-operator-perturbations-thesis\n  title: TM operator changes\
+    \ reduce the fractional transcriptional repression by TrmB\n  scope: Engineered\
+    \ TM promoter templates with full-length pSL152-derived TrmB in the thesis reconstituted\n\
+    \    transcription system; DNA perturbations, not protein mutants.\n  context:\
+    \ Figure 18B, 0.3 uM TrmB, 150 fmol template, 25 uL buffer I, 80 C for 30 min.\
+    \ Compare lanes\n    2 and 7 without added maltose, normalizing each promoter\
+    \ to its own no-regulator baseline. Full matrices\n    and methods are in ledger\
+    \ R0-R1.\n  family_mapping: Whole-protein TrmB; Q9HGZ9 and Q7LYW4 sequence version\
+    \ 1 references share PF01978 11-77,\n    PF11495 110-234 and PF31112 249-335.\
+    \ pSL152 species/insert ambiguity remains; the operator experiment\n    does not\
+    \ localize a protein contact to PF01978.\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ TM2 and TM6 products are shorter than WT's 156 nt; TM4 retains that length.\
+    \ Separate basal\n    normalizations do not establish equal absolute transcript\
+    \ output, affinity loss or unchanged initiation.\n    TM6 maltose outputs are\
+    \ nonmonotonic. Replicate errors and complete template inserts remain unresolved.\n\
+    \  nodes:\n  - node_id: tm2\n    label: Replace TM operator AGTA half-site with\
+    \ GACT\n    node_type: PERTURBATION\n  - node_id: tm4\n    label: Replace TM operator\
+    \ TACT half-site with CTGA\n    node_type: PERTURBATION\n  - node_id: tm6\n  \
+    \  label: Expand TM operator spacer from three to six T residues\n    node_type:\
+    \ PERTURBATION\n  - node_id: retained\n    label: Fraction of each promoter's\
+    \ basal transcript output retained with 0.3 uM TrmB\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: tm2-increases-retained-output\n    subject: tm2\n    predicate:\
+    \ increases\n    object: retained\n    mechanism: TM2 retains 83% of its own basal\
+    \ output versus 27% for WT in the paired panel. The effect\n      is on normalized\
+    \ repression sensitivity, not a measured dissociation constant or equal-length\
+    \ absolute\n      transcript production.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer I.\n      explanation: Original Figure 18Ba\
+    \ lanes 1/2 and 6/7, numeric table and caption, printed65/PDF71;\n        ledger\
+    \ R1.\n      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt\n     \
+    \ cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d\n\
+    \  - edge_id: tm4-increases-retained-output\n    subject: tm4\n    predicate:\
+    \ increases\n    object: retained\n    mechanism: TM4 retains 110% of its own\
+    \ basal output versus 26% for WT. The mutation diminishes the\n      observed\
+    \ fractional repression, without proving the atomic recognition mechanism or a\
+    \ significant\n      activation above basal.\n    directness: UNRESOLVED\n   \
+    \ support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer I.\n      explanation: Original Figure 18Bb\
+    \ lanes 1/2 and 6/7, numeric table and caption, printed65/PDF71;\n        ledger\
+    \ R1.\n      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt\n     \
+    \ cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d\n\
+    \  - edge_id: tm6-increases-retained-output\n    subject: tm6\n    predicate:\
+    \ increases\n    object: retained\n    mechanism: TM6 retains 110% of its basal\
+    \ output versus WT's reported 0%. This supports altered normalized\n      repression\
+    \ sensitivity; its shorter product and nonmonotonic maltose series prevent a general\
+    \ no-binding\n      or no-sugar-response claim.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer I.\n      explanation: Original Figure 18Bc\
+    \ lanes 1/2 and 6/7 plus full sugar series, printed65/PDF71; ledger\n        R1.\n\
+    \      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt\n      cache_sha256:\
+    \ b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d\n- graph_id:\
+    \ trmb-mdta-repression-and-maltose-thesis\n  title: TrmB represses engineered\
+    \ MDTA transcription with partial maltose relief\n  scope: Full-length pSL152-derived\
+    \ TrmB and an MD-background promoter carrying the TM TrmB site; reconstituted\n\
+    \    transcription.\n  context: Figure 19Bb, 0.3 uM TrmB, 150 fmol MDTA DNA, 25\
+    \ uL buffer I, 80 C for 30 min; 25 mM added maltose\n    or maltotriose in separate\
+    \ lanes. Ledger R0/R2 retains controls and the unequal comparator doses.\n  family_mapping:\
+    \ Q9HGZ9/Q7LYW4 sequence version 1 reference bodies are identical; PF01978 11-77\
+    \ is one\n    of three domains. Experimental species/insert identity remains unresolved;\
+    \ this is whole-protein activity\n    on engineered DNA.\n  scope_status: MECHANISTIC\n\
+    \  limitations: MD comparator uses 1.5 uM TrmB versus 0.3 uM for MDTA/TM, and\
+    \ each panel has its own basal\n    normalization. This does not isolate a DNA-only\
+    \ switch of sugar specificity or observe allosteric\n    motion. Maltotriose leaves\
+    \ MDTA at reported 0%; no universal lack-of-effect claim is made.\n  nodes:\n\
+    \  - node_id: protein\n    label: 0.3 uM TrmB added to the MDTA transcription\
+    \ reaction\n    node_type: PERTURBATION\n  - node_id: maltose\n    label: Add\
+    \ 25 mM maltose with 0.3 uM TrmB on MDTA\n    node_type: PERTURBATION\n  - node_id:\
+    \ transcript\n    label: MDTA runoff transcript output\n    node_type: PROCESS\n\
+    \  edges:\n  - edge_id: represses-mdta-transcript\n    subject: protein\n    predicate:\
+    \ decreases\n    object: transcript\n    mechanism: Added TrmB lowers MDTA output\
+    \ from its basal 100% to reported 0%. This is direct whole-protein\n      repression\
+    \ at the reconstituted-process level, not a resolved recruitment step.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer I.\n      explanation: Original Figure 19Bb\
+    \ lanes 1/2, printed67/PDF73; ledger R2. Stock glucose carryover\n        remains\
+    \ unresolved.\n      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt\n\
+    \      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d\n\
+    \  - edge_id: maltose-restores-mdta-output\n    subject: maltose\n    predicate:\
+    \ increases\n    object: transcript\n    mechanism: Maltose raises the TrmB-containing\
+    \ MDTA output from reported 0% to 74% of basal. The route\n      between sugar\
+    \ addition and transcription is unresolved, and relief is not complete restoration.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer I.\n      explanation: Original Figure 19Bb\
+    \ lanes 2/3; maltotriose lane 4 remains at 0%, printed67/PDF73;\n        ledger\
+    \ R2.\n      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt\n     \
+    \ cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d\n\
+    - graph_id: trmb-tm-anti-inducers-thesis\n  title: Glucose and maltotriose lower\
+    \ maltose-associated TM transcript output\n  scope: Separate glucose and maltotriose\
+    \ additions to the full-length TrmB-containing TM transcription\n    system, not\
+    \ a measured sugar-binding competition reaction.\n  context: Figure 20, 0.2 uM\
+    \ TrmB plus 0.5 mM added maltose, 150 fmol TM template, 25 uL buffer I, 80\n \
+    \   C for 30 min. Compare each sugar panel with its own induced lane 3. Ledger\
+    \ R0/R3 retains full dose\n    series.\n  family_mapping: pSL152-derived multidomain\
+    \ TrmB; identical Q9HGZ9/Q7LYW4 version 1 reference bodies\n    have PF01978 11-77.\
+    \ Sugar-response endpoints do not identify an isolated PF01978 mechanism; exact\n\
+    \    assay insert/taxon remains unresolved.\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ Figure 21 glucose-only control lacks TrmB/maltose and uses buffer II, not buffer\
+    \ I. No\n    unique occupancy/competition route is established. Maltotriose intermediates\
+    \ are nonmonotonic; the\n    44-to-18 change is 26 percentage points, not 26%\
+    \ of induced output. Stock carryover and replicate\n    errors remain unresolved.\n\
+    \  nodes:\n  - node_id: glucose\n    label: Add 1 mM glucose with TrmB and 0.5\
+    \ mM maltose\n    node_type: PERTURBATION\n  - node_id: maltotriose\n    label:\
+    \ Add 5 mM maltotriose with TrmB and 0.5 mM maltose\n    node_type: PERTURBATION\n\
+    \  - node_id: transcript\n    label: 156-nt TM runoff transcript within its matched\
+    \ sugar panel\n    node_type: PROCESS\n  edges:\n  - edge_id: glucose-lowers-tm-output\n\
+    \    subject: glucose\n    predicate: decreases\n    object: transcript\n    mechanism:\
+    \ In the glucose panel, output decreases from 103% to reported 0% of the no-regulator\
+    \ baseline.\n      A transcript endpoint does not directly show increased TrmB\
+    \ affinity or rule out a buffer-dependent\n      machinery contribution.\n   \
+    \ directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer I.\n      explanation: Original Figure 20a\
+    \ lanes 3/8 and Figure 21's differently buffered control, printed69-70/PDF75-76;\n\
+    \        ledger R3.\n      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt\n\
+    \      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d\n\
+    \  - edge_id: maltotriose-lowers-tm-output\n    subject: maltotriose\n    predicate:\
+    \ decreases\n    object: transcript\n    mechanism: In the maltotriose panel,\
+    \ output decreases from 44% to 18% of basal at 5 mM added maltotriose.\n     \
+    \ Intermediate values 34,39,21,30% are nonmonotonic; no universal dose-response\
+    \ or sugar-potency ranking\n      follows.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer I.\n      explanation: Original Figure 20b\
+    \ lanes 3-8, printed69/PDF75, and normalization wording printed72/PDF78;\n   \
+    \     ledger R3.\n      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt\n\
+    \      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d\n\
+    - graph_id: trmb-tm-sucrose-contexts-thesis\n  title: TM sucrose responses retain\
+    \ separate sugar-addition and protein-addition controls\n  scope: Full-length\
+    \ pSL152-derived TrmB in two distinct TM transcription panels; the two maltose\
+    \ concentrations\n    are not joined into one observed trajectory.\n  context:\
+    \ Figure 22, 150 fmol TM DNA, 25 uL buffer II, 80 C for 30 min. A uses 0.2 uM\
+    \ TrmB plus 0.5 mM\n    maltose; B uses 1 mM maltose with 5 or 10 mM sucrose and\
+    \ matched presence/absence of 0.2 uM TrmB.\n    Ledger R0/R4.\n  family_mapping:\
+    \ Q9HGZ9/Q7LYW4 version 1 reference bodies are identical, with PF01978 11-77 and\
+    \ separate\n    sugar-binding domains. pSL152 physical insert/species and final\
+    \ stock carryover are unresolved; this\n    is whole-preparation activity.\n \
+    \ scope_status: MECHANISTIC\n  limitations: Panel A's lower sucrose doses are\
+    \ nonmonotonic. Panel B retains 2% output at 5 mM sucrose\n    despite prose describing\
+    \ both protein-containing lanes as zero. Sugar-matched controls do not establish\n\
+    \    an atomic allosteric route, isolated-domain sufficiency or complete stock\
+    \ matching.\n  nodes:\n  - node_id: sucrose_a\n    label: Add 5 mM sucrose with\
+    \ TrmB and 0.5 mM maltose in panel A\n    node_type: PERTURBATION\n  - node_id:\
+    \ transcript_a\n    label: Panel A 156-nt TM runoff output\n    node_type: PROCESS\n\
+    \  - node_id: protein_b5\n    label: Add 0.2 uM TrmB with 1 mM maltose and 5 mM\
+    \ sucrose in panel B\n    node_type: PERTURBATION\n  - node_id: transcript_b5\n\
+    \    label: Panel B TM output with 1 mM maltose and 5 mM sucrose\n    node_type:\
+    \ PROCESS\n  - node_id: protein_b10\n    label: Add 0.2 uM TrmB with 1 mM maltose\
+    \ and 10 mM sucrose in panel B\n    node_type: PERTURBATION\n  - node_id: transcript_b10\n\
+    \    label: Panel B TM output with 1 mM maltose and 10 mM sucrose\n    node_type:\
+    \ PROCESS\n  edges:\n  - edge_id: sucrose-lowers-induced-output\n    subject:\
+    \ sucrose_a\n    predicate: decreases\n    object: transcript_a\n    mechanism:\
+    \ Added 5 mM sucrose decreases panel A output from 55% to 17% of basal in the\
+    \ TrmB/maltose-containing\n      reaction; the molecular intermediate is unresolved.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer II.\n      explanation: Original Figure 22A\
+    \ lanes 3/9 and full numeric series, printed71/PDF77; ledger R4.\n      cache_path:\
+    \ evidence/PF01978/trmb-regulatory-contexts.txt\n      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d\n\
+    \  - edge_id: trmb-represses-with-five-mm-sucrose\n    subject: protein_b5\n \
+    \   predicate: decreases\n    object: transcript_b5\n    mechanism: Adding TrmB\
+    \ at fixed 1 mM maltose and 5 mM sucrose lowers output from 100% to 2%. This\n\
+    \      supports direct whole-protein repression in the reconstituted system, retaining\
+    \ the residual rather\n      than rounding it to zero.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer II.\n      explanation: Original Figure 22B\
+    \ lanes 1/3, printed71/PDF77; compare prose printed72/PDF78; ledger\n        R4.\n\
+    \      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt\n      cache_sha256:\
+    \ b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d\n  - edge_id:\
+    \ trmb-represses-with-ten-mm-sucrose\n    subject: protein_b10\n    predicate:\
+    \ decreases\n    object: transcript_b10\n    mechanism: Adding TrmB at fixed 1\
+    \ mM maltose and 10 mM sucrose lowers output from 96% to reported\n      0% on\
+    \ panel B's scale. This is process-level repression, not proof of molecular absence\
+    \ or direct\n      DNA competition.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer II.\n      explanation: Original Figure 22B\
+    \ lanes 2/4, printed71/PDF77; ledger R4. Both lanes contain the same\n       \
+    \ added sugars.\n      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt\n\
+    \      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d\n\
+    - graph_id: trmb-md-anti-inducers-thesis\n  title: Glucose and maltose lower maltotriose-associated\
+    \ MD transcript output\n  scope: Full-length TrmB with separate glucose and maltose\
+    \ perturbations in the reconstituted MD transcription\n    system.\n  context:\
+    \ Figure 23, 1.6 uM TrmB plus 1 mM maltotriose, 150 fmol MD template, 25 uL buffer\
+    \ I, 80 C for\n    30 min. Compare added sugar with the same panel's lane 3. Ledger\
+    \ R0/R5 retains all doses and residuals.\n  family_mapping: pSL152-derived whole\
+    \ TrmB; Q9HGZ9/Q7LYW4 version 1 references share PF01978 11-77 and\n    two separate\
+    \ sugar-binding domains. No isolated-domain activity or experimentally resolved\
+    \ strain/insert\n    is asserted.\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ No fully matched MD sugar-only control was established; stock glucose and replicate\
+    \ errors\n    remain unresolved. TM comparisons use different protein and inducer\
+    \ concentrations. Maltose retains\n    6% signal at 0.5 mM and rebounds at higher\
+    \ doses; prior gel-well aggregation is not clean affinity\n    evidence.\n  nodes:\n\
+    \  - node_id: glucose\n    label: Add 0.5 mM glucose with 1.6 uM TrmB and 1 mM\
+    \ maltotriose\n    node_type: PERTURBATION\n  - node_id: maltose\n    label: Add\
+    \ 0.5 mM maltose with 1.6 uM TrmB and 1 mM maltotriose\n    node_type: PERTURBATION\n\
+    \  - node_id: transcript\n    label: 168-nt MD runoff output within its matched\
+    \ sugar panel\n    node_type: PROCESS\n  edges:\n  - edge_id: glucose-lowers-md-output\n\
+    \    subject: glucose\n    predicate: decreases\n    object: transcript\n    mechanism:\
+    \ Added glucose lowers output from 75% to reported 0% of basal. The endpoint does\
+    \ not uniquely\n      identify increased promoter occupancy or establish intrinsically\
+    \ greater glucose sensitivity than\n      TM.\n    directness: UNRESOLVED\n  \
+    \  support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer I.\n      explanation: Original Figure 23a\
+    \ lanes 3/6, printed73/PDF79; ledger R5.\n      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt\n\
+    \      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d\n\
+    \  - edge_id: maltose-lowers-md-output\n    subject: maltose\n    predicate: decreases\n\
+    \    object: transcript\n    mechanism: Added 0.5 mM maltose lowers output from\
+    \ 95% to 6% of basal; 1 and 5 mM retain 16% and 17%.\n      The nonmonotonic residual\
+    \ series supports a condition-specific effect, not complete or uniformly\n   \
+    \   dose-dependent repression.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer I.\n      explanation: Original Figure 23b\
+    \ lanes 3/6-8 and numeric table, printed73/PDF79; ledger R5.\n      cache_path:\
+    \ evidence/PF01978/trmb-regulatory-contexts.txt\n      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d\n\
+    - graph_id: trmb-pfk-repression-thesis\n  title: TrmB represses reconstituted\
+    \ PFK promoter transcription\n  scope: Full-length pSL152-derived TrmB acting\
+    \ on a PF1784 PFK promoter template, not a TrmBL1 protein\n    experiment or native\
+    \ glycolysis phenotype.\n  context: Figure 33A, 232-bp pUC19-derived PFK DNA amplified\
+    \ with 3PF1784/5PF1784, 150 fmol, 25 uL buffer\n    II, 80 C for 30 min. TrmB\
+    \ 0-2 uM, 108-nt runoff. Template provenance and complete dose series in ledger\n\
+    \    R0/R6.\n  family_mapping: TrmB Q9HGZ9/Q7LYW4 sequence version 1 reference\
+    \ bodies share PF01978 11-77; physical\n    pSL152 identity remains unresolved.\
+    \ PF1784 identifies the target promoter, not the PF01978-containing\n    regulator.\n\
+    \  scope_status: MECHANISTIC\n  limitations: The 1 uM endpoint retains 4% output\
+    \ and the low-dose series is nonmonotonic. Figure 34\n    sugars at 0.05-15 mM\
+    \ do not substantially restore output under that protocol, not proof of universal\n\
+    \    sugar insensitivity. Native relevance and direct recruitment steps remain\
+    \ unresolved; Figure 32 varies\n    nuclease dose.\n  nodes:\n  - node_id: protein\n\
+    \    label: Add 1 uM TrmB to the reconstituted PFK promoter system\n    node_type:\
+    \ PERTURBATION\n  - node_id: transcript\n    label: 108-nt PF1784 promoter runoff\
+    \ transcript output\n    node_type: PROCESS\n  edges:\n  - edge_id: trmb-lowers-pfk-output\n\
+    \    subject: protein\n    predicate: decreases\n    object: transcript\n    mechanism:\
+    \ Added TrmB lowers output from 100% to 4% at 1 uM, reaching 1% at 1.5-2 uM. This\
+    \ is direct\n      repression at the whole-protein process level, not a measured\
+    \ RNAP-occlusion step or complete absence\n      of transcription.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer II.\n      explanation: Original Figure 33A\
+    \ lanes 1/5 and full dose series, printed89/PDF95; Figure 24 template\n      \
+    \  and Figure 34 sugar controls retained in ledger R6.\n      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt\n\
+    \      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d\n\
+    - graph_id: trmb-trmbl1-promoter-repression-thesis\n  title: TrmB represses the\
+    \ PF0124 TrmBL1 promoter in vitro\n  scope: Full-length TrmB is the added regulator;\
+    \ PF0124/TrmBL1 is the target promoter. This is not evidence\n    for TrmBL1 autoregulation.\n\
+    \  context: Figure 33B, 344-bp pUC19-derived PF0124 promoter DNA amplified with\
+    \ M13/pUC F/R, 150 fmol,\n    25 uL buffer I, 80 C for 30 min; 180-nt runoff,\
+    \ TrmB 0-6.3 uM. Ledger R0/R6 retains template provenance\n    and sugar panels.\n\
+    \  family_mapping: Whole TrmB mapped by Q9HGZ9/Q7LYW4 sequence version 1 references\
+    \ to PF01978 11-77; complete\n    pSL152 insert and experimental species remain\
+    \ unresolved. Do not assign this perturbation to TrmBL1\n    accession Q8U4G4.\n\
+    \  scope_status: MECHANISTIC\n  limitations: At 4.2 uM TrmB the dose panel retains\
+    \ 1% output. Figure 35 uses separate baselines; glucose's\n    19% peak is relative\
+    \ to a matched 12%, not 1%. Its tables contradict blanket below-10% prose. No\
+    \ native\n    regulatory importance, universal sugar insensitivity or significant\
+    \ activation is established.\n  nodes:\n  - node_id: protein\n    label: Add 4.2\
+    \ uM TrmB to the PF0124 promoter transcription system\n    node_type: PERTURBATION\n\
+    \  - node_id: transcript\n    label: 180-nt PF0124 promoter runoff transcript\
+    \ output\n    node_type: PROCESS\n  edges:\n  - edge_id: trmb-lowers-pf0124-output\n\
+    \    subject: protein\n    predicate: decreases\n    object: transcript\n    mechanism:\
+    \ Added TrmB lowers PF0124 promoter output from 100% to 1% at 4.2 uM in the dose\
+    \ panel. This\n      is direct whole-protein repression in vitro, not TrmBL1 protein\
+    \ activity or a direct measurement\n      of initiation-factor recruitment.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer I.\n      explanation: Original Figure 33B\
+    \ lanes 1/5 and full dose series, printed89/PDF95; Figures 29/35\n        provenance\
+    \ and conditional negatives in ledger R6.\n      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt\n\
+    \      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d\n\
+    - graph_id: trmb-pfk-rnap-occlusion-model\n  title: TrmB occupancy may obstruct\
+    \ RNAP recruitment at the PFK promoter\n  scope: Proposed explanation for full-length\
+    \ TrmB-associated PFK footprinting and transcriptional repression;\n    not a\
+    \ directly observed recruitment experiment.\n  context: Figure 32 locates a protected\
+    \ region at -15 to +27 around the PFK start, with unequal DNaseI\n    doses across\
+    \ no-protein/protein lanes. Separate Figure 33A shows repression. Ledger R6 retains\
+    \ the\n    protocol mismatch and the source's proposed interpretation.\n  family_mapping:\
+    \ Q9HGZ9/Q7LYW4 version 1 reference PF01978 11-77 in multidomain TrmB; neither\
+    \ isolated-domain\n    occupancy nor a residue-level DNA contact is established.\
+    \ Exact assay insert/taxon remains unresolved.\n  scope_status: HYPOTHETICAL\n\
+    \  limitations: Footprint DNA protection and runoff inhibition do not directly\
+    \ measure RNAP recruitment.\n    DNaseI amounts vary from 0.0025 U without protein\
+    \ to 0.01-0.02 U with protein. No matched-nuclease\n    no-protein comparison,\
+    \ recruitment kinetics or DNA-bound atomic structure was established.\n  nodes:\n\
+    \  - node_id: occupancy\n    label: Proposed TrmB occupancy around the PFK transcription\
+    \ start\n    node_type: STATE\n  - node_id: recruitment\n    label: RNAP recruitment\
+    \ to the PFK promoter\n    node_type: PROCESS\n  edges:\n  - edge_id: proposed-pfk-rnap-occlusion\n\
+    \    subject: occupancy\n    predicate: decreases\n    object: recruitment\n \
+    \   mechanism: The thesis proposes that TrmB occupying the start-overlapping region\
+    \ prevents RNAP recruitment.\n      Directness describes this proposed competition,\
+    \ not an experimentally resolved step, and the graph\n      remains separate from\
+    \ observed runoff effects.\n    directness: DIRECT\n    support: HYPOTHESIZED\n\
+    \    evidence_kind: CONTEXTUAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: DNaseI\n      explanation: Original Figure 32, caption and interpretive\
+    \ paragraph below it, printed88/PDF94; ledger\n        R6. The source proposes\
+    \ recruitment inhibition rather than measuring it.\n      cache_path: evidence/PF01978/trmb-regulatory-contexts.txt\n\
+    \      cache_sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d\n\
+    - graph_id: trmbl1-pfk-repression-thesis\n  title: TrmBL1 represses reconstituted\
+    \ PFK transcription with residual activity\n  scope: Full-length P. furiosus PF0124/TrmBL1,\
+    \ C-terminal His6 pCS19 preparation expressed in E. coli\n    SF120; whole-protein\
+    \ assay, distinct from PF1743/TrmB.\n  context: Figure 26A, buffer II; 232-bp\
+    \ PF1784 template, TrmBL1 0-1.75 uM. 25 uL, 150 fmol PCR template,\n    167 nM\
+    \ TBP, 118 nM TFB, 32 nM P. furiosus RNAP, 80 C for 30 min; buffer composition\
+    \ and glucose-containing\n    undialyzed preparation in ledger L0.\n  family_mapping:\
+    \ 'Q8U4G4 sequence version 1/entry 96 is the 341-aa PF0124 reference: PF01978\
+    \ 10-77, PF11495\n    112-248, PF31112 256-339. Reference taxon 186497 does not\
+    \ establish the historical strain or complete\n    pCS19 insert; no isolated-domain\
+    \ sufficiency is inferred.'\n  scope_status: MECHANISTIC\n  limitations: No-added-sugar\
+    \ is not sugar-free; final stock carryover, exact inserts, active fraction\n \
+    \   and replicate/error estimates remain unresolved. Published percentages are\
+    \ panel-normalized, not independently\n    remeasured. No native-cell flux or\
+    \ family-wide mechanism is established. The gdh control remains 91-115%\n    over\
+    \ 1-6 uM regulator, but does not exclude all nonspecific binding.\n  nodes:\n\
+    \  - node_id: protein\n    label: Added 1.75 uM TrmBL1 in the PFK reaction\n \
+    \   node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n  - node_id:\
+    \ transcript\n    label: 108-nt PFK runoff output\n    node_type: PROCESS\n  edges:\n\
+    \  - edge_id: represses-pfk\n    subject: protein\n    predicate: decreases\n\
+    \    object: transcript\n    mechanism: TrmBL1 lowers the quantified output from\
+    \ 100 to 4 at 1.75 uM; the full series is 100,49,31,25,10,8,12,4.\n      This\
+    \ is whole-preparation process-level repression, not an observed RNAP-displacement\
+    \ microstep.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n     \
+    \ source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer II.\n      explanation: Original Figure 26A\
+    \ lanes 1/8 and Figure 26B control, printed78/PDF84; ledger L1.\n      cache_path:\
+    \ evidence/PF01978/trmbl1-primary-assays.txt\n      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    - graph_id: trmbl1-pfk-sugars-thesis\n  title: Sugars partially relieve PFK repression\
+    \ in distinct TrmBL1 assays\n  scope: Full-length P. furiosus PF0124/TrmBL1, C-terminal\
+    \ His6 pCS19 preparation expressed in E. coli\n    SF120; whole-protein assay,\
+    \ distinct from PF1743/TrmB.\n  context: Figure 27A, buffer II, 1 uM TrmBL1; four\
+    \ independently normalized sugar panels. 25 uL, 150\n    fmol PCR template, 167\
+    \ nM TBP, 118 nM TFB, 32 nM P. furiosus RNAP, 80 C for 30 min; buffer composition\n\
+    \    and glucose-containing undialyzed preparation in ledger L0.\n  family_mapping:\
+    \ 'Q8U4G4 sequence version 1/entry 96 is the 341-aa PF0124 reference: PF01978\
+    \ 10-77, PF11495\n    112-248, PF31112 256-339. Reference taxon 186497 does not\
+    \ establish the historical strain or complete\n    pCS19 insert; no isolated-domain\
+    \ sufficiency is inferred.'\n  scope_status: PHENOTYPIC\n  limitations: No-added-sugar\
+    \ is not sugar-free; final stock carryover, exact inserts, active fraction\n \
+    \   and replicate/error estimates remain unresolved. Published percentages are\
+    \ panel-normalized, not independently\n    remeasured. No native-cell flux or\
+    \ family-wide mechanism is established. Responses are nonmonotonic;\n    15 mM\
+    \ maltotriose yields 2 rather than continued induction. No sugar-only control,\
+    \ uniform potency\n    ranking, temporal oscillation or unique oligomerization\
+    \ route is established.\n  nodes:\n  - node_id: maltose\n    label: Added 10 mM\
+    \ maltose with 1 uM TrmBL1\n    node_type: PERTURBATION\n  - node_id: maltotriose\n\
+    \    label: Added 10 mM maltotriose with 1 uM TrmBL1\n    node_type: PERTURBATION\n\
+    \  - node_id: fructose\n    label: Added 15 mM fructose with 1 uM TrmBL1\n   \
+    \ node_type: PERTURBATION\n  - node_id: glucose\n    label: Added 15 mM glucose\
+    \ with 1 uM TrmBL1\n    node_type: PERTURBATION\n  - node_id: transcript\n   \
+    \ label: 108-nt PFK output relative to each panel's basal control\n    node_type:\
+    \ PROCESS\n  edges:\n  - edge_id: maltose-relief\n    subject: maltose\n    predicate:\
+    \ increases\n    object: transcript\n    mechanism: Output rises from the matched\
+    \ protein/no-added-sugar value 42 to 74; other doses include\n      decreases.\
+    \ Relief does not directly identify sugar binding or DNA release.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer II.\n      explanation: Original Figure 27Aa\
+    \ lanes 2/10, printed80/PDF86; full series and contrary endpoints\n        in\
+    \ ledger L2.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n \
+    \     cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    \  - edge_id: maltotriose-relief\n    subject: maltotriose\n    predicate: increases\n\
+    \    object: transcript\n    mechanism: Output rises from 14 to 49 at 10 mM, but\
+    \ falls to 2 at 15 mM. The edge is restricted to\n      the stated comparison.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer II.\n      explanation: Original Figure 27Ab\
+    \ lanes 2/10/11; ledger L2.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    \  - edge_id: fructose-relief\n    subject: fructose\n    predicate: increases\n\
+    \    object: transcript\n    mechanism: Output rises from 14 to 45 at 15 mM; neither\
+    \ full basal restoration nor a universal induction\n      threshold is claimed.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer II.\n      explanation: Original Figure 27Ac\
+    \ lanes 2/11; ledger L2.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    \  - edge_id: glucose-relief\n    subject: glucose\n    predicate: increases\n\
+    \    object: transcript\n    mechanism: Output rises from 4 to 36 at 15 mM in\
+    \ this panel; the intermediate responses and stock-glucose\n      uncertainty\
+    \ remain explicit.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n     \
+    \ source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer II.\n      explanation: Original Figure 27Ad\
+    \ lanes 2/11; ledger L2.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    - graph_id: trmbl1-pfk-maltose-protocols-thesis\n  title: Maltose-associated PFK\
+    \ outputs depend on the retained assay protocol\n  scope: Full-length P. furiosus\
+    \ PF0124/TrmBL1, C-terminal His6 pCS19 preparation expressed in E. coli\n    SF120;\
+    \ whole-protein assay, distinct from PF1743/TrmB.\n  context: 'Figure 28A: a phenol\
+    \ extraction, b glucose coaddition, c 5 min preincubation at 60 C followed\n \
+    \   by 5 min transcription at 80 C, d immobilized DNA in buffer III. a/b/c use\
+    \ buffer II and 1 uM TrmBL1;\n    d is 1 uM in caption/header but 2 uM in prose.\
+    \ Other components follow ledger L0; all panels use 150\n    fmol PFK template.'\n\
+    \  family_mapping: 'Q8U4G4 sequence version 1/entry 96 is the 341-aa PF0124 reference:\
+    \ PF01978 10-77, PF11495\n    112-248, PF31112 256-339. Reference taxon 186497\
+    \ does not establish the historical strain or complete\n    pCS19 insert; no isolated-domain\
+    \ sufficiency is inferred.'\n  scope_status: PHENOTYPIC\n  limitations: No-added-sugar\
+    \ is not sugar-free; final stock carryover, exact inserts, active fraction\n \
+    \   and replicate/error estimates remain unresolved. Published percentages are\
+    \ panel-normalized, not independently\n    remeasured. No native-cell flux or\
+    \ family-wide mechanism is established. The d dose conflict is unresolved.\n \
+    \   In b, glucose is added only to lanes 3-11, so the edge represents combined\
+    \ sugar addition. No isolated\n    salt, extraction, duration or immobilization\
+    \ effect is inferred across panels; c's small change lacks\n    error estimates.\n\
+    \  nodes:\n  - node_id: phenol_maltose\n    label: Added 0.1 mM maltose in phenol-extracted\
+    \ assay a\n    node_type: PERTURBATION\n  - node_id: mixed_sugars\n    label:\
+    \ Added 0.1 mM maltose plus 1 mM glucose in assay b\n    node_type: PERTURBATION\n\
+    \  - node_id: short_maltose\n    label: Added 0.25 mM maltose in shortened assay\
+    \ c\n    node_type: PERTURBATION\n  - node_id: immobilized_maltose\n    label:\
+    \ Added 0.25 mM maltose in immobilized assay d; TrmBL1 dose disputed\n    node_type:\
+    \ PERTURBATION\n  - node_id: transcript\n    label: 108-nt PFK output within the\
+    \ respective matched panel\n    node_type: PROCESS\n  edges:\n  - edge_id: phenol-context-relief\n\
+    \    subject: phenol_maltose\n    predicate: increases\n    object: transcript\n\
+    \    mechanism: Within the phenol-extracted panel, output rises from 30 to 74;\
+    \ this does not show that\n      phenol itself causes induction.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer II.\n      explanation: Original Figure 28Aa\
+    \ lanes 2/4, printed82/PDF88; ledger L3.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    \  - edge_id: combined-sugar-relief\n    subject: mixed_sugars\n    predicate:\
+    \ increases\n    object: transcript\n    mechanism: Combined maltose and glucose\
+    \ addition raises output from 29 to 81; the contrast cannot\n      be attributed\
+    \ to maltose alone.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n     \
+    \ source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer II.\n      explanation: Original Figure 28Ab\
+    \ lanes 2/4 and caption restricting glucose to lanes 3-11; ledger\n        L3.\n\
+    \      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n      cache_sha256:\
+    \ 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n  - edge_id:\
+    \ short-context-increase\n    subject: short_maltose\n    predicate: increases\n\
+    \    object: transcript\n    mechanism: Within the shortened protocol, the reported\
+    \ endpoint rises from 30 to 39; it is a descriptive\n      small change, not demonstrated\
+    \ statistical significance or robust induction.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer II.\n      explanation: Original Figure 28Ac\
+    \ lanes 2/5 and printed81/PDF87 duration protocol; ledger L3.\n      cache_path:\
+    \ evidence/PF01978/trmbl1-primary-assays.txt\n      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    \  - edge_id: immobilized-context-relief\n    subject: immobilized_maltose\n \
+    \   predicate: increases\n    object: transcript\n    mechanism: Within the immobilized\
+    \ high-glutamate panel, output rises from 9 to 32. Exact regulator\n      dose\
+    \ remains unresolved between the caption's 1 uM and prose's 2 uM; no dose-specific\
+    \ affinity is\n      inferred.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 28Ad lanes 2/5, printed82/PDF88, and conflicting printed83/PDF89 prose;\n  \
+    \      ledger L3.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    - graph_id: trmbl1-self-promoter-repression-thesis\n  title: TrmBL1 represses\
+    \ transcription from its own promoter\n  scope: Full-length P. furiosus PF0124/TrmBL1,\
+    \ C-terminal His6 pCS19 preparation expressed in E. coli\n    SF120; whole-protein\
+    \ assay, distinct from PF1743/TrmB.\n  context: Figure 30, buffer II, 344-bp PF0124\
+    \ promoter template, TrmBL1 0-1.75 uM. 25 uL, 150 fmol PCR\n    template, 167\
+    \ nM TBP, 118 nM TFB, 32 nM P. furiosus RNAP, 80 C for 30 min; buffer composition\
+    \ and\n    glucose-containing undialyzed preparation in ledger L0.\n  family_mapping:\
+    \ 'Q8U4G4 sequence version 1/entry 96 is the 341-aa PF0124 reference: PF01978\
+    \ 10-77, PF11495\n    112-248, PF31112 256-339. Reference taxon 186497 does not\
+    \ establish the historical strain or complete\n    pCS19 insert; no isolated-domain\
+    \ sufficiency is inferred.'\n  scope_status: MECHANISTIC\n  limitations: No-added-sugar\
+    \ is not sugar-free; final stock carryover, exact inserts, active fraction\n \
+    \   and replicate/error estimates remain unresolved. Published percentages are\
+    \ panel-normalized, not independently\n    remeasured. No native-cell flux or\
+    \ family-wide mechanism is established. This is an in vitro autoregulatory\n \
+    \   endpoint, not a measured cellular feedback cycle. The exact binding site remains\
+    \ unresolved after\n    unsuccessful footprint attempts; transcription thresholds\
+    \ are not affinity constants.\n  nodes:\n  - node_id: protein\n    label: Added\
+    \ 1.75 uM TrmBL1 to its own-promoter reaction\n    node_type: PERTURBATION\n \
+    \   grounding:\n    - UniProtKB:Q8U4G4\n  - node_id: transcript\n    label: 180-nt\
+    \ PF0124 runoff output\n    node_type: PROCESS\n  edges:\n  - edge_id: represses-own-transcript\n\
+    \    subject: protein\n    predicate: decreases\n    object: transcript\n    mechanism:\
+    \ Output falls from 100 to 3 at 1.75 uM; the full series 100,52,37,22,17,8,9,3\
+    \ retains residual/nonmonotonic\n      signal. No protein-production-to-occupancy\
+    \ cycle is fabricated.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n     \
+    \ source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer II.\n      explanation: Original Figure 30\
+    \ lanes 1/8, printed85/PDF91; ledger L4.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    - graph_id: trmbl1-self-promoter-glucose-thesis\n  title: Glucose partially relieves\
+    \ TrmBL1 own-promoter repression\n  scope: Full-length P. furiosus PF0124/TrmBL1,\
+    \ C-terminal His6 pCS19 preparation expressed in E. coli\n    SF120; whole-protein\
+    \ assay, distinct from PF1743/TrmB.\n  context: Figure 31, buffer II, 1.25 uM\
+    \ TrmBL1 and 0.05-15 mM added glucose or maltose in separate panels.\n    25 uL,\
+    \ 150 fmol PCR template, 167 nM TBP, 118 nM TFB, 32 nM P. furiosus RNAP, 80 C\
+    \ for 30 min; buffer\n    composition and glucose-containing undialyzed preparation\
+    \ in ledger L0.\n  family_mapping: 'Q8U4G4 sequence version 1/entry 96 is the\
+    \ 341-aa PF0124 reference: PF01978 10-77, PF11495\n    112-248, PF31112 256-339.\
+    \ Reference taxon 186497 does not establish the historical strain or complete\n\
+    \    pCS19 insert; no isolated-domain sufficiency is inferred.'\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: No-added-sugar is not sugar-free; final stock carryover,\
+    \ exact inserts, active fraction\n    and replicate/error estimates remain unresolved.\
+    \ Published percentages are panel-normalized, not independently\n    remeasured.\
+    \ No native-cell flux or family-wide mechanism is established. Maltose outputs\
+    \ remain 0-9\n    against their matched no-added-sugar value 11; glucose responses\
+    \ are not monotonic or complete restoration.\n    No universal promoter-independent\
+    \ glucose response is assigned.\n  nodes:\n  - node_id: glucose\n    label: Added\
+    \ 5 mM glucose with 1.25 uM TrmBL1\n    node_type: PERTURBATION\n  - node_id:\
+    \ transcript\n    label: 180-nt PF0124 runoff output\n    node_type: PROCESS\n\
+    \  edges:\n  - edge_id: glucose-relieves-own-repression\n    subject: glucose\n\
+    \    predicate: increases\n    object: transcript\n    mechanism: Glucose raises\
+    \ output from 16 to 73 at 5 mM in its own panel. This does not directly measure\n\
+    \      TrmBL1 dissociation or native autoregulation.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer II.\n      explanation: Original Figure 31b\
+    \ lanes 2/9, printed86/PDF92; maltose negative series and all glucose\n      \
+    \  values in ledger L4.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    - graph_id: trmbl1-md-repression-thesis\n  title: TrmBL1 represses the MD promoter\
+    \ in buffer II\n  scope: Full-length P. furiosus PF0124/TrmBL1, C-terminal His6\
+    \ pCS19 preparation expressed in E. coli\n    SF120; whole-protein assay, distinct\
+    \ from PF1743/TrmB.\n  context: Figure 37A, 348-bp MD template, buffer II, TrmBL1\
+    \ 0-0.5 uM. 25 uL, 150 fmol PCR template, 167\n    nM TBP, 118 nM TFB, 32 nM P.\
+    \ furiosus RNAP, 80 C for 30 min; buffer composition and glucose-containing\n\
+    \    undialyzed preparation in ledger L0.\n  family_mapping: 'Q8U4G4 sequence\
+    \ version 1/entry 96 is the 341-aa PF0124 reference: PF01978 10-77, PF11495\n\
+    \    112-248, PF31112 256-339. Reference taxon 186497 does not establish the historical\
+    \ strain or complete\n    pCS19 insert; no isolated-domain sufficiency is inferred.'\n\
+    \  scope_status: MECHANISTIC\n  limitations: No-added-sugar is not sugar-free;\
+    \ final stock carryover, exact inserts, active fraction\n    and replicate/error\
+    \ estimates remain unresolved. Published percentages are panel-normalized, not\
+    \ independently\n    remeasured. No native-cell flux or family-wide mechanism\
+    \ is established. Do not rank MD and TM intrinsic\n    affinities from this experiment\
+    \ and Figure 37B, which uses a different buffer and dose series.\n  nodes:\n \
+    \ - node_id: protein\n    label: Added 0.5 uM TrmBL1 in MD buffer-II reaction\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n  - node_id:\
+    \ transcript\n    label: 168-nt MD runoff output\n    node_type: PROCESS\n  edges:\n\
+    \  - edge_id: represses-md\n    subject: protein\n    predicate: decreases\n \
+    \   object: transcript\n    mechanism: Whole-preparation addition lowers output\
+    \ from 100 to reported 0 at 0.5 uM; the complete\n      series is 100,92,56,54,22,5,0.\
+    \ Zero is not proof that all initiation molecules are absent.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer II.\n      explanation: Original Figure 37A\
+    \ lanes 1/7, printed94/PDF100; ledger L5.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    - graph_id: trmbl1-tm-repression-thesis\n  title: TrmBL1 represses the TM promoter\
+    \ with substantial residual output\n  scope: Full-length P. furiosus PF0124/TrmBL1,\
+    \ C-terminal His6 pCS19 preparation expressed in E. coli\n    SF120; whole-protein\
+    \ assay, distinct from PF1743/TrmB.\n  context: Figure 37B, 484-bp TM template,\
+    \ buffer III, TrmBL1 0-3 uM. 25 uL, 150 fmol PCR template, 167\n    nM TBP, 118\
+    \ nM TFB, 32 nM P. furiosus RNAP, 80 C for 30 min; buffer composition and glucose-containing\n\
+    \    undialyzed preparation in ledger L0.\n  family_mapping: 'Q8U4G4 sequence\
+    \ version 1/entry 96 is the 341-aa PF0124 reference: PF01978 10-77, PF11495\n\
+    \    112-248, PF31112 256-339. Reference taxon 186497 does not establish the historical\
+    \ strain or complete\n    pCS19 insert; no isolated-domain sufficiency is inferred.'\n\
+    \  scope_status: MECHANISTIC\n  limitations: No-added-sugar is not sugar-free;\
+    \ final stock carryover, exact inserts, active fraction\n    and replicate/error\
+    \ estimates remain unresolved. Published percentages are panel-normalized, not\
+    \ independently\n    remeasured. No native-cell flux or family-wide mechanism\
+    \ is established. The response is nonmonotonic\n    and retains 14% at 2.5-3 uM.\
+    \ Different buffer/doses from MD prevent an intrinsic-affinity conclusion.\n \
+    \ nodes:\n  - node_id: protein\n    label: Added 3 uM TrmBL1 in TM buffer-III\
+    \ reaction\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n\
+    \  - node_id: transcript\n    label: 156-nt TM runoff output\n    node_type: PROCESS\n\
+    \  edges:\n  - edge_id: represses-tm\n    subject: protein\n    predicate: decreases\n\
+    \    object: transcript\n    mechanism: Output decreases from 100 to 14 at 3 uM,\
+    \ with full series 100,85,96,33,43,14,14. The effect\n      is neither complete\
+    \ repression nor an exact binding constant.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 37B lanes 1/7, printed94/PDF100; ledger L5.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    - graph_id: trmbl1-md-tm-maltose-thesis\n  title: Maltose relieves TrmBL1 repression\
+    \ of MD and TM under stated conditions\n  scope: Full-length P. furiosus PF0124/TrmBL1,\
+    \ C-terminal His6 pCS19 preparation expressed in E. coli\n    SF120; whole-protein\
+    \ assay, distinct from PF1743/TrmB.\n  context: Figure 38Ac MD at 0.3 uM TrmBL1\
+    \ and Figure 38B TM at 1.5 uM; both buffer III, separate basal\n    normalizations.\
+    \ 25 uL, 150 fmol PCR template, 167 nM TBP, 118 nM TFB, 32 nM P. furiosus RNAP,\
+    \ 80 C\n    for 30 min; buffer composition and glucose-containing undialyzed preparation\
+    \ in ledger L0.\n  family_mapping: 'Q8U4G4 sequence version 1/entry 96 is the\
+    \ 341-aa PF0124 reference: PF01978 10-77, PF11495\n    112-248, PF31112 256-339.\
+    \ Reference taxon 186497 does not establish the historical strain or complete\n\
+    \    pCS19 insert; no isolated-domain sufficiency is inferred.'\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: No-added-sugar is not sugar-free; final stock carryover,\
+    \ exact inserts, active fraction\n    and replicate/error estimates remain unresolved.\
+    \ Published percentages are panel-normalized, not independently\n    remeasured.\
+    \ No native-cell flux or family-wide mechanism is established. Figure 38Aa/b maltotriose/glucose\n\
+    \    controls use buffer II, not III; no broad sugar ranking follows. Prose once\
+    \ names TrmB, while chapter,\n    gel header and caption identify TrmBL1; the\
+    \ discrepancy is retained in ledger L5.\n  nodes:\n  - node_id: md_maltose\n \
+    \   label: Added 5 mM maltose with 0.3 uM TrmBL1 at MD\n    node_type: PERTURBATION\n\
+    \  - node_id: tm_maltose\n    label: Added 0.5 mM maltose with 1.5 uM TrmBL1 at\
+    \ TM\n    node_type: PERTURBATION\n  - node_id: md_output\n    label: 168-nt MD\
+    \ output\n    node_type: PROCESS\n  - node_id: tm_output\n    label: 156-nt TM\
+    \ output\n    node_type: PROCESS\n  edges:\n  - edge_id: maltose-relieves-md\n\
+    \    subject: md_maltose\n    predicate: increases\n    object: md_output\n  \
+    \  mechanism: Within the MD buffer-III panel, output increases from 0 to 98; intermediate\
+    \ values 36,22,65,86\n      are nonmonotonic. This baseline is not Figure 37A's\
+    \ 22.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 38Ac lanes 2/7, printed95/PDF101; ledger L5.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    \  - edge_id: maltose-relieves-tm\n    subject: tm_maltose\n    predicate: increases\n\
+    \    object: tm_output\n    mechanism: Within the TM panel, output increases from\
+    \ 25 to 98 at 0.5 mM maltose; 0.25 and 1 mM give\n      84 and 108. This is transcript\
+    \ relief, not measured DNA release.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 38B lanes 2/4; ledger L5.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    - graph_id: trmbl1-fbpase-variable-transcription-thesis\n  title: FBPase major-product\
+    \ activation varies while minor-product repression is retained\n  scope: Full-length\
+    \ P. furiosus PF0124/TrmBL1, C-terminal His6 pCS19 preparation expressed in E.\
+    \ coli\n    SF120; whole-protein assay, distinct from PF1743/TrmB.\n  context:\
+    \ Figure 41A/B, buffer III, 432-bp PF0613 template, major 320-nt and minor 375-nt\
+    \ products normalized\n    separately. A uses 0.2-1 uM TrmBL1; B 0.05-0.2 uM.\
+    \ 25 uL, 150 fmol PCR template, 167 nM TBP, 118 nM\n    TFB, 32 nM P. furiosus\
+    \ RNAP, 80 C for 30 min; buffer composition and glucose-containing undialyzed\n\
+    \    preparation in ledger L0.\n  family_mapping: 'Q8U4G4 sequence version 1/entry\
+    \ 96 is the 341-aa PF0124 reference: PF01978 10-77, PF11495\n    112-248, PF31112\
+    \ 256-339. Reference taxon 186497 does not establish the historical strain or\
+    \ complete\n    pCS19 insert; no isolated-domain sufficiency is inferred.'\n \
+    \ scope_status: MECHANISTIC\n  limitations: 'No-added-sugar is not sugar-free;\
+    \ final stock carryover, exact inserts, active fraction\n    and replicate/error\
+    \ estimates remain unresolved. Published percentages are panel-normalized, not\
+    \ independently\n    remeasured. No native-cell flux or family-wide mechanism\
+    \ is established. Large activation is explicitly\n    not consistently reproducible:\
+    \ at the same 0.2 uM dose major output is 1170 in A versus 108 in B.\n    Complete\
+    \ series, low-dose minor enhancement and EcoRI/HindIII versus EcoRI/BamHI cloning\
+    \ discrepancy\n    are retained in L0/L6. No universal activation magnitude is\
+    \ assigned.'\n  nodes:\n  - node_id: protein_a\n    label: Added 0.6 uM TrmBL1\
+    \ in Figure 41A\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n\
+    \  - node_id: protein_b\n    label: Added 0.2 uM TrmBL1 in Figure 41B\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n  - node_id: major\n \
+    \   label: 320-nt FBPase output in the indicated panel\n    node_type: PROCESS\n\
+    \  - node_id: minor\n    label: 375-nt FBPase output in the indicated panel\n\
+    \    node_type: PROCESS\n  edges:\n  - edge_id: major-activation-a\n    subject:\
+    \ protein_a\n    predicate: increases\n    object: major\n    mechanism: In panel\
+    \ A, output increases from 100 to 2410 at 0.6 uM. This observed run-specific activation\n\
+    \      is not a reproducible 24-fold law; panel B's major series is 100,123,93,108.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 41A lanes 1/4 and Figure 41B, printed100/PDF106; reproducibility prose\n   \
+    \     printed99-100; ledger L6.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    \  - edge_id: minor-repression-a\n    subject: protein_a\n    predicate: decreases\n\
+    \    object: minor\n    mechanism: In panel A, minor output decreases from 100\
+    \ to 73 at 0.6 uM, despite low-dose enhancement\n      to 140 at 0.2 uM.\n   \
+    \ directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 41A minor-product table, lanes 1/4; ledger L6.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    \  - edge_id: minor-repression-b\n    subject: protein_b\n    predicate: decreases\n\
+    \    object: minor\n    mechanism: In panel B, minor output decreases from 100\
+    \ to 53 at 0.2 uM. Independent basal normalizations\n      do not establish absolute\
+    \ output differences between A and B.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 41B lanes 1/4; ledger L6.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    - graph_id: trmbl1-fbpase-pyruvate-thesis\n  title: Pyruvate lowers TrmBL1-associated\
+    \ FBPase outputs in a variable assay\n  scope: Full-length P. furiosus PF0124/TrmBL1,\
+    \ C-terminal His6 pCS19 preparation expressed in E. coli\n    SF120; whole-protein\
+    \ assay, distinct from PF1743/TrmB.\n  context: Figure 42, buffer III, 75 nM TrmBL1\
+    \ in lanes 2-10, pyruvate 0.025-10 mM. 25 uL, 150 fmol PCR\n    template, 167\
+    \ nM TBP, 118 nM TFB, 32 nM P. furiosus RNAP, 80 C for 30 min; buffer composition\
+    \ and\n    glucose-containing undialyzed preparation in ledger L0.\n  family_mapping:\
+    \ 'Q8U4G4 sequence version 1/entry 96 is the 341-aa PF0124 reference: PF01978\
+    \ 10-77, PF11495\n    112-248, PF31112 256-339. Reference taxon 186497 does not\
+    \ establish the historical strain or complete\n    pCS19 insert; no isolated-domain\
+    \ sufficiency is inferred.'\n  scope_status: PHENOTYPIC\n  limitations: No-added-sugar\
+    \ is not sugar-free; final stock carryover, exact inserts, active fraction\n \
+    \   and replicate/error estimates remain unresolved. Published percentages are\
+    \ panel-normalized, not independently\n    remeasured. No native-cell flux or\
+    \ family-wide mechanism is established. Pyruvate-only controls and\n    direct\
+    \ ligand binding are unestablished. Some major outputs and all pyruvate-associated\
+    \ minor outputs\n    are below basal, contrary to the source's blanket above-basal\
+    \ prose. No stable activation or smooth\n    dose law is inferred.\n  nodes:\n\
+    \  - node_id: protein\n    label: Added 75 nM TrmBL1 without added pyruvate\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n  - node_id:\
+    \ pyruvate\n    label: Added 0.5 mM pyruvate with 75 nM TrmBL1\n    node_type:\
+    \ PERTURBATION\n  - node_id: major\n    label: 320-nt FBPase runoff output\n \
+    \   node_type: PROCESS\n  - node_id: minor\n    label: 375-nt FBPase runoff output\n\
+    \    node_type: PROCESS\n  edges:\n  - edge_id: major-increase-with-protein\n\
+    \    subject: protein\n    predicate: increases\n    object: major\n    mechanism:\
+    \ In this experiment only, TrmBL1 addition raises major output from 100 to 579;\
+    \ inconsistent\n      activation in Figure 41 remains a limitation.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 42 lanes 1/2, printed101/PDF107; ledger L7.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    \  - edge_id: minor-increase-with-protein\n    subject: protein\n    predicate:\
+    \ increases\n    object: minor\n    mechanism: At 75 nM in this experiment, minor\
+    \ output increases from 100 to 153; it must not be collapsed\n      into a universal\
+    \ minor-product repression model.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 42 minor table, lanes 1/2; ledger L7.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    \  - edge_id: pyruvate-lowers-major\n    subject: pyruvate\n    predicate: decreases\n\
+    \    object: major\n    mechanism: Added 0.5 mM pyruvate reduces major output\
+    \ from the matched protein-containing value 579\n      to 225. The intervening\
+    \ target and molecular route are unresolved.\n    directness: UNRESOLVED\n   \
+    \ support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 42 lanes 2/7 and full nonmonotonic series; ledger L7.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    \  - edge_id: pyruvate-lowers-minor\n    subject: pyruvate\n    predicate: decreases\n\
+    \    object: minor\n    mechanism: Added 0.5 mM pyruvate reduces minor output\
+    \ from 153 to 94, below its own basal 100. No\n      direct TrmBL1-inhibitor mechanism\
+    \ is claimed.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n     \
+    \ source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 42 minor table, lanes 2/7; ledger L7.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    - graph_id: trmbl1-fbpase-factor-contexts-thesis\n  title: TrmBL1 changes FBPase\
+    \ output in opposite directions under different factor conditions\n  scope: Full-length\
+    \ P. furiosus PF0124/TrmBL1, C-terminal His6 pCS19 preparation expressed in E.\
+    \ coli\n    SF120; whole-protein assay, distinct from PF1743/TrmB.\n  context:\
+    \ 'Figure 43, buffer III, 25 uL, 150 fmol PF0613 template, RNAP 32 nM, 80 C for\
+    \ 30 min. A: TBP\n    83 nM/TFB 118 nM; B: TBP 167 nM/TFB 59 nM; C: TBP 83 nM/TFB\
+    \ 59 nM. Each has its own no-regulator,\n    50 nM and 75 nM TrmBL1 series.'\n\
+    \  family_mapping: 'Q8U4G4 sequence version 1/entry 96 is the 341-aa PF0124 reference:\
+    \ PF01978 10-77, PF11495\n    112-248, PF31112 256-339. Reference taxon 186497\
+    \ does not establish the historical strain or complete\n    pCS19 insert; no isolated-domain\
+    \ sufficiency is inferred.'\n  scope_status: MECHANISTIC\n  limitations: No-added-sugar\
+    \ is not sugar-free; final stock carryover, exact inserts, active fraction\n \
+    \   and replicate/error estimates remain unresolved. Published percentages are\
+    \ panel-normalized, not independently\n    remeasured. No native-cell flux or\
+    \ family-wide mechanism is established. Factor concentrations are\n    joint context,\
+    \ not independent sufficient activation inputs. Figure 43C major table gives 166\
+    \ while\n    prose implies 160; the table is retained. No direct factor-binding\
+    \ or recruitment measurement and\n    no absolute cross-panel comparison is established.\n\
+    \  nodes:\n  - node_id: protein_a\n    label: Added 75 nM TrmBL1 with TBP 83 nM\
+    \ and TFB 118 nM\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n\
+    \  - node_id: protein_b\n    label: Added 75 nM TrmBL1 with TBP 167 nM and TFB\
+    \ 59 nM\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n\
+    \  - node_id: protein_c\n    label: Added 75 nM TrmBL1 with TBP 83 nM and TFB\
+    \ 59 nM\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n\
+    \  - node_id: major\n    label: 320-nt FBPase output versus factor-matched basal\
+    \ control\n    node_type: PROCESS\n  - node_id: minor\n    label: 375-nt FBPase\
+    \ output versus factor-matched basal control\n    node_type: PROCESS\n  edges:\n\
+    \  - edge_id: major-decrease-a\n    subject: protein_a\n    predicate: decreases\n\
+    \    object: major\n    mechanism: With TBP83/TFB118 nM, regulator addition lowers\
+    \ major output from 100 to 89; the 50 nM\n      regulator value is 77.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 43A lanes 1/3, printed103/PDF109; ledger L8.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    \  - edge_id: minor-decrease-a\n    subject: protein_a\n    predicate: decreases\n\
+    \    object: minor\n    mechanism: With TBP83/TFB118 nM, minor output decreases\
+    \ from 100 to 74; the 50 nM regulator value\n      is 50.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 43A minor table, lanes 1/3; ledger L8.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    \  - edge_id: major-decrease-b\n    subject: protein_b\n    predicate: decreases\n\
+    \    object: major\n    mechanism: With TBP167/TFB59 nM, major output decreases\
+    \ from 100 to 48; the 50 nM regulator value\n      is 65.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 43B lanes 1/3; ledger L8.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    \  - edge_id: minor-decrease-b\n    subject: protein_b\n    predicate: decreases\n\
+    \    object: minor\n    mechanism: With TBP167/TFB59 nM, minor output decreases\
+    \ from 100 to 30; the 50 nM regulator value\n      is 52.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 43B minor table, lanes 1/3; ledger L8.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    \  - edge_id: major-increase-c\n    subject: protein_c\n    predicate: increases\n\
+    \    object: major\n    mechanism: With both factors reduced to TBP83/TFB59 nM,\
+    \ major output increases from 100 to the table's\n      166; the 50 nM regulator\
+    \ value is 133.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n     \
+    \ source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 43C lanes 1/3, with prose/table discrepancy at printed102/PDF108; ledger\n \
+    \       L8.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n  \
+    \    cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    \  - edge_id: minor-increase-c\n    subject: protein_c\n    predicate: increases\n\
+    \    object: minor\n    mechanism: With TBP83/TFB59 nM, minor output increases\
+    \ from 100 to 150; the 50 nM regulator value\n      is 125. This is distinct from\
+    \ repression with only one factor reduced.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 43C minor table, lanes 1/3; ledger L8.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n\
+    \      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    - graph_id: trmbl1-pfk-rnap-occlusion-model\n  title: TrmBL1 occupancy may obstruct\
+    \ RNAP recruitment at PFK\n  scope: Full-length P. furiosus PF0124/TrmBL1, C-terminal\
+    \ His6 pCS19 preparation expressed in E. coli\n    SF120; whole-protein assay,\
+    \ distinct from PF1743/TrmB.\n  context: 0.5 uM TrmBL1, 100 ng PFK DNA, footprint\
+    \ buffer II, 0.0025 U DNaseI without protein versus\n    0.01 U with protein.\
+    \ Source-reported protection at +1 to +28 overlaps the transcription start; separate\n\
+    \    runoff assays show repression.\n  family_mapping: 'Q8U4G4 sequence version\
+    \ 1/entry 96 is the 341-aa PF0124 reference: PF01978 10-77, PF11495\n    112-248,\
+    \ PF31112 256-339. Reference taxon 186497 does not establish the historical strain\
+    \ or complete\n    pCS19 insert; no isolated-domain sufficiency is inferred.'\n\
+    \  scope_status: HYPOTHETICAL\n  limitations: Nuclease amounts differ across no-protein/protein\
+    \ lanes. Footprinting and runoff endpoints\n    do not measure RNAP recruitment,\
+    \ atomic contacts or a causal competition trajectory; exact construct\n    and\
+    \ domain attribution remain unresolved.\n  nodes:\n  - node_id: occupancy\n  \
+    \  label: Proposed TrmBL1 occupancy around the PFK start\n    node_type: STATE\n\
+    \    grounding:\n    - UniProtKB:Q8U4G4\n  - node_id: recruitment\n    label:\
+    \ RNAP recruitment at PFK\n    node_type: PROCESS\n  edges:\n  - edge_id: proposed-recruitment-occlusion\n\
+    \    subject: occupancy\n    predicate: decreases\n    object: recruitment\n \
+    \   mechanism: Start-overlapping occupancy is proposed to obstruct polymerase\
+    \ recruitment. Directness\n      describes the proposed molecular competition,\
+    \ not an experimentally observed step.\n    directness: DIRECT\n    support: HYPOTHESIZED\n\
+    \    evidence_kind: CONTEXTUAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: DNaseI\n      explanation: Original Figure 25, printed76/PDF82,\
+    \ interpretation printed77/PDF83; ledger L9 and\n        separate transcription\
+    \ matrices.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n  \
+    \    cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    - graph_id: trmbl1-md-rnap-occlusion-model\n  title: TrmBL1 occupancy may obstruct\
+    \ RNAP recruitment at MD\n  scope: Full-length P. furiosus PF0124/TrmBL1, C-terminal\
+    \ His6 pCS19 preparation expressed in E. coli\n    SF120; whole-protein assay,\
+    \ distinct from PF1743/TrmB.\n  context: 1.5 uM TrmBL1, 100 ng MD DNA, footprint\
+    \ buffer I, 0.005 U DNaseI without protein versus 0.01\n    U with protein. Source-reported\
+    \ protection at -18 to +17 overlaps the transcription start; separate\n    runoff\
+    \ assays show repression.\n  family_mapping: 'Q8U4G4 sequence version 1/entry\
+    \ 96 is the 341-aa PF0124 reference: PF01978 10-77, PF11495\n    112-248, PF31112\
+    \ 256-339. Reference taxon 186497 does not establish the historical strain or\
+    \ complete\n    pCS19 insert; no isolated-domain sufficiency is inferred.'\n \
+    \ scope_status: HYPOTHETICAL\n  limitations: Nuclease amounts differ across no-protein/protein\
+    \ lanes. Footprinting and runoff endpoints\n    do not measure RNAP recruitment,\
+    \ atomic contacts or a causal competition trajectory; exact construct\n    and\
+    \ domain attribution remain unresolved.\n  nodes:\n  - node_id: occupancy\n  \
+    \  label: Proposed TrmBL1 occupancy around the MD start\n    node_type: STATE\n\
+    \    grounding:\n    - UniProtKB:Q8U4G4\n  - node_id: recruitment\n    label:\
+    \ RNAP recruitment at MD\n    node_type: PROCESS\n  edges:\n  - edge_id: proposed-recruitment-occlusion\n\
+    \    subject: occupancy\n    predicate: decreases\n    object: recruitment\n \
+    \   mechanism: Start-overlapping occupancy is proposed to obstruct polymerase\
+    \ recruitment. Directness\n      describes the proposed molecular competition,\
+    \ not an experimentally observed step.\n    directness: DIRECT\n    support: HYPOTHESIZED\n\
+    \    evidence_kind: CONTEXTUAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: DNaseI\n      explanation: Original Figure 36, printed92/PDF98,\
+    \ interpretation printed93/PDF99; ledger L9 and\n        separate transcription\
+    \ matrices.\n      cache_path: evidence/PF01978/trmbl1-primary-assays.txt\n  \
+    \    cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    - graph_id: trmbl1-fbpase-factor-recruitment-model\n  title: TrmBL1 may assist\
+    \ joint transcription-factor recruitment at FBPase\n  scope: Full-length P. furiosus\
+    \ PF0124/TrmBL1, C-terminal His6 pCS19 preparation expressed in E. coli\n    SF120;\
+    \ whole-protein assay, distinct from PF1743/TrmB.\n  context: Figures 39-40 place\
+    \ reported protection -72 to -41 upstream of major-start TATA1 and overlapping\n\
+    \    the minor start. Figure 43C shows increased major output with TBP83/TFB59\
+    \ nM plus TrmBL1; other factor\n    conditions differ.\n  family_mapping: 'Q8U4G4\
+    \ sequence version 1/entry 96 is the 341-aa PF0124 reference: PF01978 10-77, PF11495\n\
+    \    112-248, PF31112 256-339. Reference taxon 186497 does not establish the historical\
+    \ strain or complete\n    pCS19 insert; no isolated-domain sufficiency is inferred.'\n\
+    \  scope_status: HYPOTHETICAL\n  limitations: Figure 40 uses unequal DNaseI amounts,\
+    \ and Figure 43 measures transcripts, not TBP/TFB\n    occupancy. Variable activation,\
+    \ opposing minor-product effects and unresolved construct details prevent\n  \
+    \  an observed recruitment mechanism or a universal gluconeogenesis claim.\n \
+    \ nodes:\n  - node_id: occupancy\n    label: Proposed TrmBL1 occupancy upstream\
+    \ of major FBPase TATA1\n    node_type: STATE\n    grounding:\n    - UniProtKB:Q8U4G4\n\
+    \  - node_id: recruitment\n    label: Joint TBP/TFB promoter recruitment or stabilization\n\
+    \    node_type: PROCESS\n  edges:\n  - edge_id: proposed-factor-assistance\n \
+    \   subject: occupancy\n    predicate: increases\n    object: recruitment\n  \
+    \  mechanism: The thesis proposes assistance to TBP/TFB binding as one explanation\
+    \ for activation. Neither\n      direct recruitment nor an additional unknown\
+    \ factor is experimentally established; this is separate\n      from observed\
+    \ transcript changes.\n    directness: DIRECT\n    support: HYPOTHESIZED\n   \
+    \ evidence_kind: CONTEXTUAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: DNaseI\n      explanation: Original Figures 39-40 and 43, printed97-103/PDF103-109;\
+    \ interpretation printed102/PDF108;\n        ledger L8-L9.\n      cache_path:\
+    \ evidence/PF01978/trmbl1-primary-assays.txt\n      cache_sha256: 4c68a284139ba36575c98721589d8f468d93589157d56a9164ea727084be3682\n\
+    - graph_id: trmbl1-mutant-promoter-selectivity-thesis\n  title: TrmBL1 substitutions\
+    \ alter promoter-specific transcription at matched protein dose\n  scope: Full-length\
+    \ P. furiosus PF0124/TrmBL1 pCS19-derived C-terminal His6 WT and mutant preparations;\n\
+    \    materials list VC1, but exact physical inserts and assay-preparation identity\
+    \ remain incompletely\n    verified. This is not PF1743/TrmB or isolated PF01978\
+    \ activity.\n  context: Figure 52, buffer III, 25 uL, 150 fmol PCR DNA, 167 nM\
+    \ TBP, 118 nM TFB, 32 nM P. furiosus RNAP,\n    80 C for 30 min. PFK 232-bp template\
+    \ gives 108-nt runoff; own PF0124 344-bp template gives 180-nt\n    runoff. Each\
+    \ panel has its own basal=100. Mutation comparisons use WT 1.5 uM versus mutant\
+    \ 1.5 uM\n    (lanes 2/3), not the unequal-dose lane 4.\n  family_mapping: 'Q8U4G4\
+    \ sequence version 1/entry 96 reference: 341 aa, PF01978 10-77, PF11495 112-248,\n\
+    \    PF31112 256-339. E40/D50 lie inside PF01978; E81/E85/D86 do not. ED85AA is\
+    \ the E85A/D86A double substitution,\n    not two independent perturbations. Full\
+    \ tagged mutant inserts are not independently sequence-verified.'\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: No-added-sugar is not sugar-free because glucose-containing\
+    \ stocks were not dialyzed. Active\n    fraction, folding/assembly and raw replicate\
+    \ errors remain unresolved; no atomic contact, isolated-domain\n    sufficiency\
+    \ or native-cell mechanism is established. Full matrices retain residuals and\
+    \ variable WT\n    controls. The source's blanket complete own-promoter repression\
+    \ is contradicted by WT values 8,12,10;\n    prose once names WT TrmB while caption/headers\
+    \ identify TrmBL1. Transcript differences are not binding-affinity\n    measurements.\n\
+    \  nodes:\n  - node_id: e40n\n    label: Replace WT with E40N TrmBL1 at 1.5 uM\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n  - node_id:\
+    \ d50n\n    label: Replace WT with D50N TrmBL1 at 1.5 uM\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q8U4G4\n  - node_id: e81a\n    label: Replace\
+    \ WT with E81A TrmBL1 at 1.5 uM\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q8U4G4\n  - node_id: double\n    label: Replace WT with E85A/D86A\
+    \ TrmBL1 at 1.5 uM\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n\
+    \  - node_id: pfk\n    label: 108-nt PFK output within the mutation's own panel\n\
+    \    node_type: PROCESS\n  - node_id: own\n    label: 180-nt PF0124 output within\
+    \ the mutation's own panel\n    node_type: PROCESS\n  edges:\n  - edge_id: e40n-pfk-output\n\
+    \    subject: e40n\n    predicate: increases\n    object: pfk\n    mechanism:\
+    \ At the same nominal protein dose, E40N raises PFK output from WT30 to mutant86,\
+    \ indicating\n      reduced repression relative to that WT control, not a wholly\
+    \ inactive protein.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n     \
+    \ source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 52A/C PFK E40N row, lanes2/3, printed116/PDF122; ledger M1.\n      cache_path:\
+    \ evidence/PF01978/trmbl1-mutant-assays.txt\n      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    \  - edge_id: d50n-pfk-output\n    subject: d50n\n    predicate: increases\n \
+    \   object: pfk\n    mechanism: D50N raises PFK output from WT11 to mutant50 at\
+    \ 1.5 uM; the table gives exactly50, not\n      the prose's blanket greater-than50.\
+    \ Residual repression remains.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 52A/C PFK D50N row, lanes2/3; ledger M1.\n      cache_path: evidence/PF01978/trmbl1-mutant-assays.txt\n\
+    \      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    \  - edge_id: e81a-pfk-output\n    subject: e81a\n    predicate: increases\n \
+    \   object: pfk\n    mechanism: E81A raises PFK output from WT0 to mutant29 at\
+    \ 1.5 uM. Its retained ability to repress\n      does not mean quantitatively\
+    \ unchanged activity.\n    directness: UNRESOLVED\n    support: OBSERVED\n   \
+    \ evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 52B/C PFK E81A row, lanes2/3; ledger M1.\n      cache_path: evidence/PF01978/trmbl1-mutant-assays.txt\n\
+    \      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    \  - edge_id: double-pfk-output\n    subject: double\n    predicate: increases\n\
+    \    object: pfk\n    mechanism: The double substitution raises PFK output from\
+    \ WT0 to mutant14 at 1.5 uM; do not assign\n      separate sufficient effects\
+    \ to E85A and D86A.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n     \
+    \ source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 52B/C PFK ED85AA row, lanes2/3; ledger M1.\n      cache_path: evidence/PF01978/trmbl1-mutant-assays.txt\n\
+    \      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    \  - edge_id: e81a-own-output\n    subject: e81a\n    predicate: increases\n \
+    \   object: own\n    mechanism: E81A raises own-promoter output from WT12 to mutant89\
+    \ at 1.5 uM. This supports reduced\n      repression, not directly observed loss\
+    \ of promoter binding.\n    directness: UNRESOLVED\n    support: OBSERVED\n  \
+    \  evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 52B/C PF0124 E81A row, lanes2/3; failed own-promoter binding experiments\n \
+    \       in M4.\n      cache_path: evidence/PF01978/trmbl1-mutant-assays.txt\n\
+    \      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    \  - edge_id: double-own-output\n    subject: double\n    predicate: increases\n\
+    \    object: own\n    mechanism: The E85A/D86A preparation raises own-promoter\
+    \ output from WT10 to mutant130 at 1.5 uM.\n      It does not establish a native\
+    \ activator or a direct second-helix DNA contact.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 52B/C PF0124 ED85AA row, lanes2/3; ledger M1/M4.\n      cache_path: evidence/PF01978/trmbl1-mutant-assays.txt\n\
+    \      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    - graph_id: trmbl1-mutant-retained-repression-thesis\n  title: TrmBL1 mutants\
+    \ retain complementary promoter repression\n  scope: Full-length P. furiosus PF0124/TrmBL1\
+    \ pCS19-derived C-terminal His6 WT and mutant preparations;\n    materials list\
+    \ VC1, but exact physical inserts and assay-preparation identity remain incompletely\n\
+    \    verified. This is not PF1743/TrmB or isolated PF01978 activity.\n  context:\
+    \ Figure 52, buffer III, 25 uL, 150 fmol PCR DNA, 167 nM TBP, 118 nM TFB, 32 nM\
+    \ P. furiosus RNAP,\n    80 C for 30 min. PFK 232-bp template gives 108-nt runoff;\
+    \ own PF0124 344-bp template gives 180-nt\n    runoff. Each panel has its own\
+    \ basal=100. Protein-addition comparisons use no regulator versus mutant\n   \
+    \ 1.5 uM (lanes 1/3), distinct from replacing WT with a mutant.\n  family_mapping:\
+    \ 'Q8U4G4 sequence version 1/entry 96 reference: 341 aa, PF01978 10-77, PF11495\
+    \ 112-248,\n    PF31112 256-339. E40/D50 lie inside PF01978; E81/E85/D86 do not.\
+    \ ED85AA is the E85A/D86A double substitution,\n    not two independent perturbations.\
+    \ Full tagged mutant inserts are not independently sequence-verified.'\n  scope_status:\
+    \ MECHANISTIC\n  limitations: No-added-sugar is not sugar-free because glucose-containing\
+    \ stocks were not dialyzed. Active\n    fraction, folding/assembly and raw replicate\
+    \ errors remain unresolved; no atomic contact, isolated-domain\n    sufficiency\
+    \ or native-cell mechanism is established. Retained activity is a functional control,\
+    \ not\n    proof of identical folding or occupancy. E40N/D50N also retain partial\
+    \ PFK repression; E81A/ED85AA\n    are weaker than WT at PFK. Higher-dose responses\
+    \ are not uniformly monotonic.\n  nodes:\n  - node_id: e40n\n    label: Add 1.5\
+    \ uM E40N TrmBL1 to own-promoter reaction\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q8U4G4\n  - node_id: d50n\n    label: Add 1.5 uM D50N TrmBL1\
+    \ to own-promoter reaction\n    node_type: PERTURBATION\n    grounding:\n    -\
+    \ UniProtKB:Q8U4G4\n  - node_id: e81a\n    label: Add 1.5 uM E81A TrmBL1 to PFK\
+    \ reaction\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n\
+    \  - node_id: double\n    label: Add 1.5 uM E85A/D86A TrmBL1 to PFK reaction\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n  - node_id:\
+    \ own\n    label: 180-nt PF0124 output versus its basal control\n    node_type:\
+    \ PROCESS\n  - node_id: pfk\n    label: 108-nt PFK output versus its basal control\n\
+    \    node_type: PROCESS\n  edges:\n  - edge_id: e40n-represses-own\n    subject:\
+    \ e40n\n    predicate: decreases\n    object: own\n    mechanism: Whole-preparation\
+    \ addition reduces own-promoter output from100 to reported0. Reported zero\n \
+    \     is not proof that every initiation event is absent.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 52A/C PF0124 E40N row, lanes1/3; ledger M1.\n      cache_path: evidence/PF01978/trmbl1-mutant-assays.txt\n\
+    \      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    \  - edge_id: d50n-represses-own\n    subject: d50n\n    predicate: decreases\n\
+    \    object: own\n    mechanism: D50N addition reduces own-promoter output from100\
+    \ to5 at1.5 uM, retaining measurable residual\n      transcription.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 52A/C PF0124 D50N row, lanes1/3; ledger M1.\n      cache_path: evidence/PF01978/trmbl1-mutant-assays.txt\n\
+    \      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    \  - edge_id: e81a-represses-pfk\n    subject: e81a\n    predicate: decreases\n\
+    \    object: pfk\n    mechanism: E81A addition reduces PFK output from100 to29\
+    \ at1.5 uM. This is process-level repression\n      without a measured recruitment\
+    \ intermediate.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n     \
+    \ source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 52B/C PFK E81A row, lanes1/3; ledger M1.\n      cache_path: evidence/PF01978/trmbl1-mutant-assays.txt\n\
+    \      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    \  - edge_id: double-represses-pfk\n    subject: double\n    predicate: decreases\n\
+    \    object: pfk\n    mechanism: E85A/D86A addition reduces PFK output from100\
+    \ to14 at1.5 uM. Both substitutions are one\n      tested preparation, and no\
+    \ isolated-domain mechanism follows.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: Transkriptionspuffer III.\n      explanation: Original Figure\
+    \ 52B/C PFK ED85AA row, lanes1/3; ledger M1.\n      cache_path: evidence/PF01978/trmbl1-mutant-assays.txt\n\
+    \      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    - graph_id: trmbl1-mutant-pfk-emsa-thesis\n  title: E40N and D50N reduce TrmBL1-associated\
+    \ retardation of source-assigned PFK DNA\n  scope: Full-length P. furiosus PF0124/TrmBL1\
+    \ pCS19-derived C-terminal His6 WT and mutant preparations;\n    materials list\
+    \ VC1, but exact physical inserts and assay-preparation identity remain incompletely\n\
+    \    verified. This is not PF1743/TrmB or isolated PF01978 activity.\n  context:\
+    \ Figure 53A; WT versus E40N/D50N at 0.7 uM, lanes2/3/4. General EMSA:25 uL,70\
+    \ C15min, cool40\n    C,6% native PAGE at room temperature2h; buffer in ledger\
+    \ M2. Methods specify30 ng DNA, caption25 ng.\n    Title/results assign PFK, but\
+    \ the caption's final sentence names TMMD template.\n  family_mapping: 'Q8U4G4\
+    \ sequence version 1/entry 96 reference: 341 aa, PF01978 10-77, PF11495 112-248,\n\
+    \    PF31112 256-339. E40/D50 lie inside PF01978; E81/E85/D86 do not. ED85AA is\
+    \ the E85A/D86A double substitution,\n    not two independent perturbations. Full\
+    \ tagged mutant inserts are not independently sequence-verified.'\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: No-added-sugar is not sugar-free because glucose-containing\
+    \ stocks were not dialyzed. Active\n    fraction, folding/assembly and raw replicate\
+    \ errors remain unresolved; no atomic contact, isolated-domain\n    sufficiency\
+    \ or native-cell mechanism is established. The DNA-amount and template-label conflicts\
+    \ remain\n    unresolved; promoter identity follows source title/results, not\
+    \ verified physical fragments. Gel retardation\n    is qualitative, not zero affinity,\
+    \ a fitted Kd or TGM-specific atomic recognition. E81A/ED85AA retain\n    shifted\
+    \ species, but identical WT affinity is not demonstrated.\n  nodes:\n  - node_id:\
+    \ e40n\n    label: Replace WT with E40N at 0.7 uM in the source-assigned PFK assay\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n  - node_id:\
+    \ d50n\n    label: Replace WT with D50N at 0.7 uM in the same assay\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n  - node_id: retarded\n\
+    \    label: Distinct upper retarded-DNA species in Figure 53A\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: e40n-reduces-retardation\n    subject: e40n\n\
+    \    predicate: decreases\n    object: retarded\n    mechanism: The E40N lane\
+    \ lacks the distinct WT-associated upper band and retains predominantly free\n\
+    \      DNA. The molecular reason for the mutation-associated loss of retardation\
+    \ is unresolved.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n     \
+    \ source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: EMSA\n      explanation: Original Figure 53A lanes2/3, printed118/PDF124,\
+    \ adjacent results printed117/PDF123;\n        ledger M2.\n      cache_path: evidence/PF01978/trmbl1-mutant-assays.txt\n\
+    \      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    \  - edge_id: d50n-reduces-retardation\n    subject: d50n\n    predicate: decreases\n\
+    \    object: retarded\n    mechanism: The D50N lane shows reduced distinct upper-band\
+    \ retardation compared with WT at the same\n      dose. This does not by itself\
+    \ identify a direct residue-base contact.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: EMSA\n      explanation: Original Figure 53A lanes2/4; ledger\
+    \ M2, including caption/method discrepancies.\n      cache_path: evidence/PF01978/trmbl1-mutant-assays.txt\n\
+    \      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    - graph_id: trmbl1-mutant-fbpase-emsa-thesis\n  title: E40N and D50N reduce TrmBL1-associated\
+    \ retardation of source-assigned FBPASE DNA\n  scope: Full-length P. furiosus\
+    \ PF0124/TrmBL1 pCS19-derived C-terminal His6 WT and mutant preparations;\n  \
+    \  materials list VC1, but exact physical inserts and assay-preparation identity\
+    \ remain incompletely\n    verified. This is not PF1743/TrmB or isolated PF01978\
+    \ activity.\n  context: Figure 53B; WT versus E40N/D50N at 0.5 uM, lanes2/3/4.\
+    \ General EMSA:25 uL,70 C15min, cool40\n    C,6% native PAGE at room temperature2h;\
+    \ buffer in ledger M2. Methods specify30 ng DNA, caption25 ng.\n    Title/results\
+    \ assign FBPASE, but the caption's final sentence names TMMD template.\n  family_mapping:\
+    \ 'Q8U4G4 sequence version 1/entry 96 reference: 341 aa, PF01978 10-77, PF11495\
+    \ 112-248,\n    PF31112 256-339. E40/D50 lie inside PF01978; E81/E85/D86 do not.\
+    \ ED85AA is the E85A/D86A double substitution,\n    not two independent perturbations.\
+    \ Full tagged mutant inserts are not independently sequence-verified.'\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: No-added-sugar is not sugar-free because glucose-containing\
+    \ stocks were not dialyzed. Active\n    fraction, folding/assembly and raw replicate\
+    \ errors remain unresolved; no atomic contact, isolated-domain\n    sufficiency\
+    \ or native-cell mechanism is established. The DNA-amount and template-label conflicts\
+    \ remain\n    unresolved; promoter identity follows source title/results, not\
+    \ verified physical fragments. Gel retardation\n    is qualitative, not zero affinity,\
+    \ a fitted Kd or TGM-specific atomic recognition. E81A/ED85AA show\n    shifted\
+    \ species in a separate image without its own WT lane; FBPase cloning sites also\
+    \ differ in source\n    prose/caption.\n  nodes:\n  - node_id: e40n\n    label:\
+    \ Replace WT with E40N at 0.5 uM in the source-assigned FBPASE assay\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n  - node_id: d50n\n  \
+    \  label: Replace WT with D50N at 0.5 uM in the same assay\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q8U4G4\n  - node_id: retarded\n    label: Distinct\
+    \ upper retarded-DNA species in Figure 53B\n    node_type: STATE\n  edges:\n \
+    \ - edge_id: e40n-reduces-retardation\n    subject: e40n\n    predicate: decreases\n\
+    \    object: retarded\n    mechanism: The E40N lane lacks the distinct WT-associated\
+    \ upper band and retains predominantly free\n      DNA. The molecular reason for\
+    \ the mutation-associated loss of retardation is unresolved.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: EMSA\n      explanation: Original Figure 53B lanes2/3, printed118/PDF124,\
+    \ adjacent results printed117/PDF123;\n        ledger M2.\n      cache_path: evidence/PF01978/trmbl1-mutant-assays.txt\n\
+    \      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    \  - edge_id: d50n-reduces-retardation\n    subject: d50n\n    predicate: decreases\n\
+    \    object: retarded\n    mechanism: The D50N lane shows reduced distinct upper-band\
+    \ retardation compared with WT at the same\n      dose. This does not by itself\
+    \ identify a direct residue-base contact.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: EMSA\n      explanation: Original Figure 53B lanes2/4; ledger\
+    \ M2, including caption/method discrepancies.\n      cache_path: evidence/PF01978/trmbl1-mutant-assays.txt\n\
+    \      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    - graph_id: trmbl1-mutant-pfk-footprint-thesis\n  title: E40N and D50N reduce\
+    \ PFK protection in matched-nuclease TrmBL1 comparisons\n  scope: Full-length\
+    \ P. furiosus PF0124/TrmBL1 pCS19-derived C-terminal His6 WT and mutant preparations;\n\
+    \    materials list VC1, but exact physical inserts and assay-preparation identity\
+    \ remain incompletely\n    verified. This is not PF1743/TrmB or isolated PF01978\
+    \ activity.\n  context: Figure54,100 ng PFK DNA,25 uL,WT/E40N/D50N each0.5 uM\
+    \ and0.01 U DNaseI in lanes2/3/4. Footprint\n    bufferII:25 mM NaHEPES pH7.3,120\
+    \ mM potassium glutamate,0.1 mM EDTA,2.5 mM MgCl2,1 mM DTT,5% PEG8000,2\n    mM\
+    \ CaCl2,0.1 mg/mL BSA. Binding70 C15min,digestion40 C5min.\n  family_mapping:\
+    \ 'Q8U4G4 sequence version 1/entry 96 reference: 341 aa, PF01978 10-77, PF11495\
+    \ 112-248,\n    PF31112 256-339. E40/D50 lie inside PF01978; E81/E85/D86 do not.\
+    \ ED85AA is the E85A/D86A double substitution,\n    not two independent perturbations.\
+    \ Full tagged mutant inserts are not independently sequence-verified.'\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: No-added-sugar is not sugar-free because glucose-containing\
+    \ stocks were not dialyzed. Active\n    fraction, folding/assembly and raw replicate\
+    \ errors remain unresolved; no atomic contact, isolated-domain\n    sufficiency\
+    \ or native-cell mechanism is established. These protein-containing comparisons\
+    \ match nuclease\n    dose; no-protein lanes1/5 instead use0.0025 U and are not\
+    \ the causal comparator. E81A/ED85AA retain\n    qualitative protection in lanes7/8\
+    \ versus adjacent WT6. No mutant-specific atomic contact map or binding\n    constant\
+    \ is measured.\n  nodes:\n  - node_id: e40n\n    label: Replace WT with E40N at0.5\
+    \ uM under0.01 U DNaseI\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n\
+    \  - node_id: d50n\n    label: Replace WT with D50N at0.5 uM under0.01 U DNaseI\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8U4G4\n  - node_id:\
+    \ protection\n    label: WT-associated protection of the PFK TGM-containing region\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: e40n-reduces-protection\n    subject:\
+    \ e40n\n    predicate: decreases\n    object: protection\n    mechanism: At matched\
+    \ nominal protein and nuclease doses, E40N reduces the protected pattern seen\n\
+    \      with WT. Altered folding or assembly remains an alternative to losing a\
+    \ direct DNA contact.\n    directness: UNRESOLVED\n    support: OBSERVED\n   \
+    \ evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: doi:10.5283/epub.14529\n\
+    \      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: DNaseI\n      explanation: Original Figure54 lanes2/3, printed120/PDF126,\
+    \ results printed119/PDF125; ledger M3.\n      cache_path: evidence/PF01978/trmbl1-mutant-assays.txt\n\
+    \      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    \  - edge_id: d50n-reduces-protection\n    subject: d50n\n    predicate: decreases\n\
+    \    object: protection\n    mechanism: D50N reduces the WT-associated protection\
+    \ pattern under the same protein-containing digestion\n      protocol; this is\
+    \ not inferred from unequal-nuclease no-protein lanes.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: DNaseI\n      explanation: Original Figure54 lanes2/4; ledger\
+    \ M3.\n      cache_path: evidence/PF01978/trmbl1-mutant-assays.txt\n      cache_sha256:\
+    \ 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n- graph_id:\
+    \ trmbl1-regional-recognition-model\n  title: Distinct TrmBL1 regions may support\
+    \ promoter-dependent occupancy\n  scope: Full-length P. furiosus PF0124/TrmBL1\
+    \ pCS19-derived C-terminal His6 WT and mutant preparations;\n    materials list\
+    \ VC1, but exact physical inserts and assay-preparation identity remain incompletely\n\
+    \    verified. This is not PF1743/TrmB or isolated PF01978 activity.\n  context:\
+    \ Author-proposed interpretation of Figures52-54 and discussion printed136/PDF142.\
+    \ E40N/D50N\n    affect reported PFK/FBPase retardation and PFK protection; E81A/E85A-D86A\
+    \ chiefly weaken own-promoter\n    transcriptional repression. Own-promoter binding\
+    \ assays failed through aggregation and gel-well retention.\n  family_mapping:\
+    \ 'Q8U4G4 sequence version 1/entry 96 reference: 341 aa, PF01978 10-77, PF11495\
+    \ 112-248,\n    PF31112 256-339. E40/D50 lie inside PF01978; E81/E85/D86 do not.\
+    \ ED85AA is the E85A/D86A double substitution,\n    not two independent perturbations.\
+    \ Full tagged mutant inserts are not independently sequence-verified.'\n  scope_status:\
+    \ HYPOTHETICAL\n  limitations: The proposed regions are not experimentally resolved\
+    \ independent DNA-recognition helices.\n    No isolated-domain assay, cis-TGM\
+    \ replacement control or direct residue-base contact is established.\n    The\
+    \ E81/E85/D86 region is outside reference PF01978; folding/assembly or indirect\
+    \ effects remain alternatives.\n    Failed own-promoter binding assays are not\
+    \ measured loss of binding.\n  nodes:\n  - node_id: first_region\n    label: Proposed\
+    \ functional contribution of the E40/D50-containing region\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:Q8U4G4\n  - node_id: second_region\n    label:\
+    \ Proposed functional contribution of the E81/E85/D86-containing region\n    node_type:\
+    \ ACTIVITY\n    grounding:\n    - UniProtKB:Q8U4G4\n  - node_id: tgm_occupancy\n\
+    \    label: TrmBL1 occupancy of the tested source-assigned PFK/FBPase fragments\n\
+    \    node_type: STATE\n  - node_id: own_occupancy\n    label: TrmBL1 occupancy\
+    \ of its own PF0124 promoter\n    node_type: STATE\n  edges:\n  - edge_id: proposed-first-region-contribution\n\
+    \    subject: first_region\n    predicate: enables\n    object: tgm_occupancy\n\
+    \    mechanism: The source proposes a regional recognition contribution from the\
+    \ E40/D50-containing segment.\n      The route may involve folding or assembly;\
+    \ neither TGM base specificity nor direct atomic contacts\n      are established.\n\
+    \    directness: UNRESOLVED\n    support: HYPOTHESIZED\n    evidence_kind: CONTEXTUAL\n\
+    \    evidence:\n    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: DNaseI\n      explanation: Figures52-54 and printed136/PDF142\
+    \ interpretation; ledger M4, with M1-M3 assay limits.\n      cache_path: evidence/PF01978/trmbl1-mutant-assays.txt\n\
+    \      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    \  - edge_id: proposed-second-region-contribution\n    subject: second_region\n\
+    \    predicate: enables\n    object: own_occupancy\n    mechanism: The source\
+    \ infers a second-region contribution from transcription phenotypes, but own-promoter\n\
+    \      occupancy could not be resolved because the DNA-protein complexes aggregated.\
+    \ This remains a hypothesis,\n      not an observed DNA-binding effect.\n    directness:\
+    \ UNRESOLVED\n    support: HYPOTHESIZED\n    evidence_kind: CONTEXTUAL\n    evidence:\n\
+    \    - reference: doi:10.5283/epub.14529\n      source_url: https://epub.uni-regensburg.de/14529/1/Dissertation_Melanie_Surma.pdf\n\
+    \      snippet: DNaseI\n      explanation: Printed119/PDF125 failed binding assays\
+    \ and printed136/PDF142 interpretation; ledger\n        M4.\n      cache_path:\
+    \ evidence/PF01978/trmbl1-mutant-assays.txt\n      cache_sha256: 6fbba82a1db8371fba01fc2466ae26ac1a6be614879147567e3331d086d4b45b\n\
+    curation_events:\n- timestamp: '2026-10-15T14:00:02Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate scoped TrmB repression, sugar-response\
+    \ and promoter-selective mutant graphs\n  history_record: history/records/PF01978/2026-10-15T140002Z-codex-211131.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-15T14:13:22Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Review\
+    \ scoped TrmB causal graphs and retain three open scientific findings\n  history_record:\
+    \ history/records/PF01978/2026-10-15T141322Z-codex-701838.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-15T15:45:44Z'\n  curator: Codex\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Extend TrmB causal graphs with\
+    \ promoter perturbations, anti-inducers and cross-promoter assays.\n  history_record:\
+    \ history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-15T15:54:52Z'\n  curator: Codex\n\
+    \  action: REVIEW\n  outcome: needs_followup\n  summary: Review added TrmB regulatory\
+    \ contexts with explicit residuals, controls and hypotheses.\n  history_record:\
+    \ history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-15T17:29:48Z'\n  curator: Codex\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Extend PF01978 with assay-scoped\
+    \ wild-type TrmBL1 causal graphs\n  history_record: history/records/PF01978/2026-10-15T172948Z-codex-f4a6c3.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-15T17:41:07Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Retain\
+    \ partial scientific review of PF01978 TrmBL1 wild-type causal contexts\n  history_record:\
+    \ history/records/PF01978/2026-10-15T174107Z-codex-a4a434.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-15T17:58:23Z'\n  curator: Codex\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Curate PF01978 TrmBL1 mutant transcription\
+    \ and DNA-assay contexts\n  history_record: history/records/PF01978/2026-10-15T175823Z-codex-2575ff.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Whole-protein and domain scope
+  outcome: supported
+  summary: E40N and D50N lie inside reference PF01978; the other three mutated positions
+    lie outside. ED85AA is not split. VC1 and sequencing workflow are source-reported,
+    not independently verified physical insert identity.
+  evidence_ids:
+  - identity
+  - primary
+  target_ids:
+  - PF01978
+- assessment_id: causality
+  area: graph
+  topic: Matched contrasts and explicit hypotheses
+  outcome: supported
+  summary: Sixteen observed effects distinguish same-dose mutant-versus-WT phenotype
+    from whole-preparation repression. Figure54 WT2 versus mutant3/4 matches0.5uM
+    protein and.01U DNaseI. Two regional occupancy models remain HYPOTHESIZED/UNRESOLVED/CONTEXTUAL,
+    not direct DNA contacts.
+  evidence_ids:
+  - primary
+  - validation
+  target_ids:
+  - PF01978
+- assessment_id: conflicts
+  area: evidence
+  topic: Counterevidence and residual activity
+  outcome: supported
+  summary: AllFigure52 rows retain normalization, residuals and nonmonotonicity. Figure53
+    template/amount conflicts and separate-image controls remain explicit. Failed
+    own-promoter EMSA/footprints are not recast as absent mutant binding.
+  evidence_ids:
+  - primary
+  target_ids:
+  - PF01978
+- assessment_id: preservation
+  area: provenance
+  topic: Maintained ownership and historical artifacts
+  outcome: supported
+  summary: Overlay, new ledger, actual EDIT, generated record and inventory agree;
+    all33 prior graphs, earlier events and predecessor artifacts are preserved. Canonical
+    Pages/pins remain unchanged in this scientific tranche.
+  evidence_ids:
+  - validation
+  - predecessor
+  target_ids:
+  - PF01978
+- assessment_id: coverage
+  area: completeness
+  topic: Remaining scientific scope
+  outcome: concern
+  summary: Original2007 experiments, other members, exact constructs, raw controls
+    and native regulation remain open. Graph presence is not scientific completion.
+  evidence_ids:
+  - primary
+  - predecessor
+  target_ids:
+  - PF01978
+findings:
+- finding_id: construct-and-domain-boundaries
+  issue_key: pf01978-construct-and-domain-boundaries
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve complete constructs and domain-specific attribution
+  description: VC1 is listed in thesis materials and sequencing is reported, but the
+    physical inserts were not independently inspected. E40/D50 map inside PF01978;
+    E81/E85/D86 do not. ED85AA is one double perturbation, not independent single-residue
+    effects. Earlier TrmB construct discrepancies and issue228 remain open.
+  target_ids:
+  - PF01978
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - primary
+  - identity
+  - predecessor
+  owner_paths:
+  - path: curation/families/PF01978.yaml
+    repository: CultureBotAI/DUFMech
+    role: Maintained scientific overlay; create only with authorized curation.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261015T174757Z-pf01978-trmbl1-wildtype-contexts
+    finding_id: construct-and-domain-boundaries
+- finding_id: assay-context-and-residual-activity
+  issue_key: pf01978-assay-context-and-residual-activity
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve carryover, failed assays and source conflicts
+  description: WT-versus-mutant footprint comparisons are nuclease- and protein-dose-matched,
+    unlike no-protein controls. Figure53 retains its TMMD versus PFK/FBPase template
+    and 25 versus30ng conflicts. Own-promoter binding attempts failed through aggregation,
+    not demonstrated loss of affinity. Carryover, active fraction, folding, assembly
+    and replicate errors remain open under issue229.
+  target_ids:
+  - PF01978
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - primary
+  - identity
+  - predecessor
+  owner_paths:
+  - path: curation/families/PF01978.yaml
+    repository: CultureBotAI/DUFMech
+    role: Maintained scientific overlay; create only with authorized curation.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261015T174757Z-pf01978-trmbl1-wildtype-contexts
+    finding_id: assay-context-and-residual-activity
+- finding_id: family-and-promoter-coverage
+  issue_key: pf01978-family-and-promoter-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Continue original-paper and native-context evidence
+  description: Thesis Figures52-54 are now assessed. Original2007 mutation, oligomerization
+    and sugar-binding images remain unadopted, as do other members and native physiology.
+    The six new graphs do not complete PF01978 or the8296-record goal; issue230 remains
+    open.
+  target_ids:
+  - PF01978
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - primary
+  - identity
+  - predecessor
+  owner_paths:
+  - path: curation/families/PF01978.yaml
+    repository: CultureBotAI/DUFMech
+    role: Maintained scientific overlay; create only with authorized curation.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261015T174757Z-pf01978-trmbl1-wildtype-contexts
+    finding_id: family-and-promoter-coverage
+actions:
+- action_id: continue-primary-evidence
+  description: Continue exact-member source assessment without closing existing gaps
+    from graph counts.
+  finding_ids:
+  - construct-and-domain-boundaries
+  - assay-context-and-residual-activity
+  - family-and-promoter-coverage
+  target_ids:
+  - PF01978
+  owner_paths:
+  - path: curation/families/PF01978.yaml
+    repository: CultureBotAI/DUFMech
+    role: Maintained scientific overlay; create only with authorized curation.
+  acceptance_checks:
+  - Obtain inspectable original2007 figures and verify units, WT/mutant tags and assay
+    comparators independently from the thesis.
+  - Resolve physical inserts,Figure53 template/amount conflicts and active-fraction/folding
+    alternatives when primary evidence permits.
+  - Retain complete matrices, source conflicts, matched controls, stable finding lineage
+    and IN_PROGRESS status until full scientific gates are genuinely met.
+limitations:
+- Partial scientific self-review; not independent expert approval or complete family/corpus
+  coverage.
+- The33 prior graphs were preserved rather than all freshly re-reviewed. Original2007
+  image retrieval yielded citation text only; no image-based claims are adopted.
+- An initial ASCII DNA-Shift anchor failed due to source typography; verified EMSA
+  replaced it before graph adoption. The first inventory integrity attempt overlapped
+  the inventory writer and failed on old aggregate counts. A stable rerun passed after
+  completion, without changing content or guards.
+- Full release QC, source checkpoint retention, canonical rendering, CI and publication
+  remain subsequent separately authorized gates.
+- Issues228-230 remain open; no REVIEWED promotion.
+```
