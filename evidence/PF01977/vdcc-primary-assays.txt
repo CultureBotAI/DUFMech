@@ -1,0 +1,230 @@
+PF01977 VdcCD evidence ledger, assessed 2026-10-15 UTC
+
+Marshall SA et al. UbiD domain dynamics underpins aromatic decarboxylation.
+Nature Communications 12:5065 (2021), PMID:34417452, PMC8379154,
+doi:10.1038/s41467-021-25278-z.
+Primary text: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML
+Media: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/supplementaryFiles
+Publisher: https://www.nature.com/articles/s41467-021-25278-z
+CC BY 4.0, authors 2021, verified in the primary XML permissions element.
+The statements below are curator paraphrases except explicitly marked quotations.
+This minimal ledger is not a retained full-text copy. Nature's cookie redirect
+was inaccessible during this assessment; public primary XML and original media
+were inspected instead. Original Figures 2-5, supplement Figures 2-5, tables,
+methods and all five source-data sheets were inspected; movies were not reviewed.
+
+IDENTITY AND DOMAIN BOUNDARY
+Frozen PF01977.23 is UbiD, former DUF117/UPF0096, IPR048304, EX_DUF.
+It is the central RIFT-related domain, not the entire enzyme or the D partner.
+The October 10 worklist SHA256 is
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+
+ShC: UniProt Q9S4M7 sequence 1, entry 75, 480 aa, shdC/ohb1,
+Sedimentibacter hydroxybenzoicus (formerly Clostridium hydroxybenzoicum),
+NCBITaxon:29345. InterPro's complete three-result response maps PF01977
+106-312, PF20695 12-89 and PF20696 319-442 (one-based inclusive).
+ShD: Q4R102 sequence 1, entry 28, 68 aa, shdD, same taxon.
+Its complete InterPro response maps PF26358 2-42, not PF01977.
+7AE4 (closed), 7AE5 (open) and 7AE7 (V59X) entity 1 deposited bodies
+are identical to Q9S4M7. Entities 2 of 7AE4/7AE5 equal Q4R102;
+7AE7 entity 2 equals Q4R102 residues 1-58. The deleted 59-68 tail is
+VIPPIPPLKK. Deposited sequences are not a claim that assay proteins lack tags.
+ShC L182 is inside PF01977; T325/S326 hinge and L425 are outside it.
+ShD C3/C6/C28/C31 coordinate Zn in the apo structure, not an assay proving
+isolated zinc binding sufficient for decarboxylation. No isolated PF01977
+fragment was tested for activity; domain-level sufficiency remains unproven.
+
+BsC reference candidate: P94405 sequence 1, entry 148, 473 aa, bsdC/ubiD/yclC,
+B. subtilis strain 168, NCBITaxon:224308. PF01977 106-308, PF20695 10-88,
+PF20696 314-438. BsD reference candidate C0H3U9 sequence 1, entry 74,
+75 aa, bsdD, same reference strain; PF26358 1-51. C0SPB5 (yclD) is a
+different 154-aa entry and is NOT substituted for the small BsdD partner.
+The paper identifies synthetic B. subtilis genes but does not give an exact
+strain/accession/complete synthetic insert. Supplement Table 2 BsC N-primer
+translates to MAYQDFREF, matching P94405. The reverse-primer homology segment
+TTCATCAGATCCATCAGTTTTTGTTC has reverse complement
+GAACAAAAACTGATGGATCTGATGAA; its complete in-frame codons encode EQKLMDLM.
+That matches an internal C-terminal segment, not the complete P94405 tail
+EQKLMDLMNK. The partial terminal codon and vector junction prevent an exact
+full-construct identity assertion. BsD terminal primer encodes VPERKA, matching
+C0H3U9's terminus. Biopython 1.88 was used for these translations.
+The archived docking models concern ShVdcCD; inspection of all 325 ZIP member
+names and Information.txt did not supply a Bs synthetic insert or model
+sequence. Graphs describe the published Bs constructs at species scope, using
+these accessions only as reference mappings, not exact experimental sequences.
+This uncertainty is not evidence that the central domain is absent.
+
+All UniProt entries above were retrieved 2026-10-15 and last annotated
+2026-09-02. API provenance URLs are https://rest.uniprot.org/uniprotkb/ID.json
+and https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/ID/ with the
+listed exact accessions substituted for ID. PDB entity provenance is
+https://data.rcsb.org/rest/v1/core/polymer_entity/7AE4/1 and corresponding
+7AE4/2, 7AE5/1, 7AE5/2, 7AE7/1 and 7AE7/2 endpoints.
+
+V1. ENDPOINT SUBSTRATE AND PARTNER ASSAYS: Figure 2a, source sheet Fig 2a
+Methods: E. coli BL21(DE3) expression; C-terminal His C or N-terminal His D
+and untagged partners in the listed pET vectors. Coexpressed complexes were
+purified by affinity/size exclusion; isolated C and D were also mixed in vitro.
+These are distinct preparations, not interchangeable labels. Preferred ShCD
+purification used N-His D. UbiX coexpression did not yield holo VdcCD; in vitro
+prFMN reconstitution was required. UbiX/Fre were filtered out of cofactor
+preparations before addition to decarboxylation assays.
+HPLC reactions: 10 uM C, 5 mM substrate, protein:prFMN:MnCl2 1:2:2,
+18 h in a nitrogen anoxic chamber. Initial PHB/vanillate stock: 10 mM in
+100 mM potassium phosphate pH 6, diluted for assay; substrates were not
+oxygen-purged. Cognate mixed partners: 10 uM each. Noncognate mixtures used
+20 uM D with 10 uM C. Acetonitrile/TFA quench; C18 HPLC; authentic substrate
+and expected-product standards and concentration curves. Substrate plus
+20 uM prFMN reconstitution mix was the no-protein side-reaction control.
+Two independent replicates. These are endpoint yields, not kinetic constants.
+
+Substrate order: PHB; vanillic; protocatechuic; 3-Me-4-hydroxybenzoic;
+gallic; syringic acid. Corresponding decarboxylated products are phenol,
+guaiacol, catechol, 2-methylphenol, pyrogallol and 2,6-dimethoxyphenol.
+The graph labels use the substrate-assigned HPLC products; direct CO2 release
+was not measured by this assay. Percent mean +/- SEM shown in Figure 2a:
+BsC alone: 0; 5.8 +/- 0; remaining substrates not determined.
+BsD alone: 0; 0; remaining not determined.
+BsC + BsD: 98.9 +/- 1.1; 100; remaining not determined.
+ShC alone: 0; 0.7 +/- 0.7; remaining not determined.
+ShD alone: 0; 0; remaining not determined.
+ShC + ShD: 100; 97.9 +/- 1.1; remaining not determined.
+Co-purified BsCD: 99.2 +/- 0.8; 99.6 +/- 0.3; 99.6 +/- 0.1;
+97.8 +/- 1.9; 1.1 +/- 1.1; 99.8 +/- 0.1.
+BsC + ShD: 0.9 +/- 0.1; 29 +/- 1.8; 0; 8.9 +/- 0.2; 0; 0.
+Co-purified ShCD: 100; 100; 99.9 +/- 0.1; 99.7 +/- 0.1; 5.3 +/- 0.5; 0.
+ShC + BsD: 9.3 +/- 0.3; 1.7 +/- 0; 2.7 +/- 0.3; 3.8 +/- 0.5; 0; 0.
+ShCD V59X: 100; 91.5 +/- 3.7; 99.6 +/- 0.3; 99.9 +/- 0.1; 0; 0.
+The source workbook resolves rounded zeros and low endpoints: BsC vanillate
+replicates are 5.83864/5.74359%; ShC 1.38854/0%; BsCD gallic 0/2.16910%;
+ShCD gallic 4.78839/5.79144%; V59X gallic 0/0%. Blank cells mean not
+determined, not zero. The text's strict partner requirement does not erase
+low C-alone vanillate activity. The text's Sh-only gallic claim is qualified
+by a nonzero BsCD replicate in the table. Detection limits are not reported.
+Noncognate products show limited activity; mismatched D ratios and preparation
+differences do not identify a matched, isolated causal effect of partner identity.
+Minimal quotations: "considerable activity in contrast to isolated VdcC";
+"limited activation"; "substrate scope".
+
+V2. PARTNER STOICHIOMETRY: Figure 2b and source sheet Fig 2b
+Anaerobic reconstitution: ShC 50 uM, ShD 10 or 200 uM, prFMN/MnCl2
+200 uM each. Assay: 0.25 uM C, 100 uM PHB, A247 decrease over 3 h;
+substrate not oxygen-purged. At 90 min the 4:1 D:C rates are
+18.02083/17.86111/16.53472 uM/min versus 7.45139/7.03472/8.18750 at
+0.2:1. Three technical replicates; trend in three independent repeats.
+Higher D availability increases measured activity at fixed C in this context;
+it does not prove the stoichiometry of each active catalytic assembly or rule
+out differences in assembly, maturation or active-cofactor occupancy.
+Quotation: "slower decarboxylation of PHB".
+
+V3. OXYGEN EXPOSURE AND PARTIAL COFACTOR RESCUE: Figure 2c, source Fig 2c
+Anaerobic ShCD reconstitution with two equivalents prFMN/Mn, then desalting.
+Protein was kept in an opaque open tube exposed to air for 90 min; aliquots
+assayed with 100 uM PHB in 50 mM NaPi/50 mM KCl pH 6 by A247.
+Mean plotted activity: 2 min 2.49 s^-1 (2.61/2.37); 90 min 0.855
+(0.94/0.77). At 90 min sample returned to anoxic chamber, two equivalents
+prFMN added, then immediately reassayed: 2.09035/1.86647, mean 1.97841 s^-1.
+This is partial recovery (~79.5% of 2-min mean), without added Mn. Two
+independent replicates; reported approximate activity half-life 40 min was not
+refitted here. Cofactor-related inactivation is consistent with rescue, but no
+chemical lesion or oxidation product was directly measured. Time in air is
+the perturbation, not a controlled oxygen concentration series. Do not
+transfer these observations to AnFdc's separate light-inactivation assay.
+Quotation: "partially restores activity".
+
+V4. VISCOSOGENS: Figure 4d and source sheet Fig 4d
+PHB 50-750 uM in 50 mM NaPi/50 mM KCl pH 6 with no viscosogen, 45%
+v/v glycerol or 40% w/v sucrose. A247 rates; pathlength 1 cm at <=100 uM
+and 0.2 cm at >=250 uM; 100 uL assay. Buffer n=3, each viscosogen n=2
+technical replicates; similar trends in two independent repeats.
+Source fit kcat_app (s^-1): buffer 0.856 [0.7607,0.9686], sucrose 0.341
+[0.2518,0.4757], glycerol 0.244 [0.1885,0.3407], brackets 95% limits.
+Figure labels Km_app: buffer 127 [89,182] uM; sucrose 85 [23,241];
+glycerol 183 [88,416]. Intervals overlap; no significant Km change claimed.
+Relative viscosity was estimated from literature, not measured here. Figure
+axis says eta (cP), whereas prose describes relative viscosity; do not turn
+these estimates into a new experimentally measured physical parameter.
+prFMN:CD:Mn 0.5:1:2, apparent active concentration assumed equal to prFMN
+assuming complete UbiX conversion. Stock Et_app 30 uM; 1:3 aerobic:anaerobic
+buffer, overnight trace-oxygen maturation. Actual active occupancy not measured.
+The viscosity-associated rate decrease supports a dynamic model but does not
+uniquely identify domain motion as its cause or exclude other solvent effects.
+Quotation: "drastically reduced".
+
+V5. VARIANTS: Figure 2a, source Fig 2a, specificity text, supplement tables
+ShD V59X removes residues 59-68; 7AE7 confirms the 58-aa deposited partner.
+Most endpoint yields remain near WT; vanillate falls from 100 to 91.5% mean,
+while the small gallic-acid signal falls from 5.3% to undetected. Do not
+translate <10 percentage-point yield change into uniform relative retention.
+No syringate product was detected in either WT or V59X. The tail is not
+universally essential for activity, but this does not show every D function
+dispensable. The deletion acts in PF26358 partner, not PF01977.
+The source text reports ShC L182V syringic acid turnover 6.5 +/- 0.6%
+versus undetected WT. This exact result is not in Figure 2a's table or any
+of the five source workbook sheets. Report it as a text-only experimental
+result, not inspected raw replicates or an independently reproduced assay.
+L182 maps within PF01977; improved acceptance need not uniquely demonstrate
+steric-volume causality versus folding, assembly or active-cofactor effects.
+Supplement Table 2 labels both L182V primers Q5F, an unresolved label issue.
+Minimal quotations: "yields only slightly diminished"; "6.5".
+
+V6. STRUCTURE AND PROPOSED DYNAMIC CHEMISTRY: Figures 3-5, supplements 2-5
+Structures are apo ShCD; no holo ShCD or isolated subunit crystal obtained.
+Closed 7AE4, open 7AE5, V59X 7AE7 resolve 3.31, 2.19 and 2.66 A,
+respectively. The C hexamer has six D partners. Both open and closed forms
+contain D but lack prFMN: these are not measured ligand-triggered transitions.
+DynDom identifies ~32-degree hinge rotation at T325/S326, <1 A translation.
+Modeling used closed residues 1-323 plus open oligomerization domain to make
+a hybrid, then 16 Chimera morph models. DFT intermediates were optimized
+with Gaussian09 B3LYP/6-311++G(d,p), D3/BJ dispersion and dielectric 5.7.
+AutoDock Vina docked them to these models; prFMN geometry was fixed after
+Rosetta docking; side-chain conformers fixed except chosen E278 rotamer for
+PHB to avoid clashes. Selected substrate poses require the anticipated
+carboxy/hydroxy orientation. Normal-mode similarity is qualitative support,
+not observed catalytic dynamics. Docking energies are not activation barriers.
+Int2 prefers more open models; Int3Quinoid a more closed model (~10 A R-L).
+The proposed route uses closure to strain aromatic Int2 and assist quinoid
+conversion and product release. No VdcCD intermediate trajectory/adduct
+trapping or causal hinge perturbation establishes this sequence experimentally.
+No observed edge is inferred merely from the existence of open/closed structures.
+D contacts near ERE loops suggest allosteric stabilization, not direct proof
+of loop stabilization as the activity-restoring route. Cofactor/partner/PHB
+must be present jointly in catalytic hypotheses; D alone is not sufficient.
+Quotations: "domain closure leads to a strained conformation";
+"maintaining the structure of the key catalytic ERE motif".
+
+NUMBERING AND CONSTRUCT LIMITS
+Q9S4M7 and all three deposited C bodies have R168, G178, E273, E278,
+L182, T325, S326 and L425. Prose/supplement Figure 4 use R168, main
+Figures 3-5 show R178, supplement Figure 3 image shows R138 while its caption
+uses R168. Preserve these inconsistent labels; do not curate G178 as Arg or
+quietly alter the source. R-L distances are source-reported model metrics,
+not newly calculated structural measurements here. Bs insert/vector junction
+and L182V raw replicates need additional primary clarification.
+The AnFdc graphs and their distinct source discrepancies remain unchanged.
+Unreviewed ScFdc, EcUbiD, AroY, HmfF, HudA and later specificity/maturation
+work remain part of the family-wide objective, not an assertion of no evidence.
+
+SOURCE BYTE HASHES (SHA256; retrieved sources, not all committed)
+Primary XML b3fedd97acdeb4e8afbdb12044678bcfb54ec91902d0721c352805f446840ef5
+MOESM1 supplement 00f45093636229a4c70e7cb86263d2c885be51adfd0ddd53fc0c7c718fbe1f84
+MOESM7 source XLSX 15b0f5fd9d51053bc162f2639747f8d98dff362bd31277fe5b390bae38c19494
+Q9S4M7 1c929fd9f9902450231931cf56a112dc91fc0a18e0aff6d09fbaaf0418c95668
+Q9S4M7 Pfam 871c2bb09107d9e6073db84646220e1a5b38c92367d7469847fdf4023e689bce
+Q4R102 45df47b4226c3dff67c29e2def386e936a6c22f6a16471e07a7b1d34e703ddff
+Q4R102 Pfam be586702508f19b7e1f8e61e18fb44b146b45920d26c8295fdf536da3279ad82
+P94405 c0a4b8310dc033a5eb72aeaa6ec8a8b2e9e19a28100051477018bb8d2714447e
+P94405 Pfam eca2de7c96f860cabc6a73b51197eb881c2922237fa6469968817db4e715223f
+C0H3U9 5d483473c7614df52eb594c07d00de46fffe80f78146dd8b32541c62c8596070
+C0H3U9 Pfam 807177cad9fb68c8e032d6268b3c7c8502f4992a379f3b959a6a6dc753dfdc99
+7AE4/1 c1c81bd87dbd95c99e07e7b7d5db1dfbfe30cf08415367ce7eb2beafe34ea42e
+7AE4/2 ed5d39ccfa2f567bc62586ecdc395323b1921bbec17dc19a91cef3ed1ab5b984
+7AE5/1 fe7cff1df01a4d7b56ce6b88556489e9fb955dd4a15142bce34c9437c00d7dca
+7AE5/2 449118ebabf4f6a53a114fbeb57ee48610e19074643887dff8a5a0b254b716c2
+7AE7/1 394bb3072f3c79a908a8c6d71a23115d97da51ed4b1e744b21741b4355231b03
+7AE7/2 9678ce49fd4f4cbccd83e6985e27da38db042b85ea62192726b19749c222dbc8
+Docking dataset: Marshall and Leys, doi:10.5281/zenodo.5101187, version of
+doi:10.5281/zenodo.5101186, CC BY 4.0 metadata inspected 2026-10-15.
+https://zenodo.org/api/records/5101187/files/VdcCD-Ligand_docking-AutoDock_Vina.zip/content
+ZIP 9e94a626373979dc1dc56203181051da0f570481a3c7511501ded1f40d71d825
+Published ZIP MD5 ca3c3316496cb5e0aa243b032324fe2d matched downloaded bytes.

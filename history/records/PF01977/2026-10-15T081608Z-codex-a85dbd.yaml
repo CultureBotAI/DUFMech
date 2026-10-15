@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01977
+  path: curation/families/PF01977.yaml
+session:
+  id: 2026-10-15T081608Z-codex-a85dbd
+  timestamp: '2026-10-15T08:16:08Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Extend PF01977 with scoped VdcCD causal evidence and labeled mechanism
+    hypotheses
+  details: Inspected Marshall2021 primary XML, original figures, supplement, source
+    workbook, deposited ShC/D sequences, UniProt/InterPro mappings and archived model
+    provenance. Added thirteen graphs with thirty experimentally observed edges and
+    four hypotheses; preserved all ten AnFdc graphs, imported identity and three OPEN
+    discussions. Retained residual/negative activity, partial cofactor rescue, substrate-specific
+    tail effects, text-only L182V, source numbering conflicts, apparent-cofactor normalization
+    and unresolved complete Bs synthetic constructs. Native baseline records-check
+    passed for 8296 records with zero drift; regeneration and successor partial scientific
+    review follow this actual edit. No family-wide or corpus completion and no publication
+    are claimed.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/217
+  - https://github.com/CultureBotAI/DUFMech/issues/218
+  - https://github.com/CultureBotAI/DUFMech/issues/219
+  urls:
+  - https://doi.org/10.1038/s41467-021-25278-z

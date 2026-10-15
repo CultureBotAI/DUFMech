@@ -6125,3 +6125,75 @@ PF01977 publication audit (PR #220, 2026-10-15):
   CLAW runtime were rebuilt with a fresh cache after missing cache metadata.
   Final full QC must run in this recovered checkout; the failed attempt is
   not counted as a pass.
+
+PF01977 VdcCD evidence extension (2026-10-15, local):
+
+- Continued from merged PR #220, base
+  `ffec8fdaebbdbae9b06702fb065eb0abd0db9f50`, in an isolated worktree.
+  Baseline `just records-check` validated 8,296 records with zero drift.
+  All ten AnFdc graphs and their evidence remain unchanged.
+- Added thirteen VdcCD graphs with 34 edges: 30 experimentally observed
+  effects, three computational hypotheses and one contextual hypothesis.
+  PF01977 now has 23 graphs and 60 edges: 32 DIRECT/OBSERVED/EXPERIMENTAL,
+  24 UNRESOLVED/OBSERVED/EXPERIMENTAL and four UNRESOLVED/HYPOTHESIZED.
+  Eleven graphs are MECHANISTIC, ten PHENOTYPIC and two HYPOTHETICAL.
+- The new `evidence/PF01977/vdcc-primary-assays.txt` retains minimal licensed
+  quotations, source hashes, exact locators, assay conditions and limitations
+  from Marshall2021, PMID:34417452. Primary XML, original Figures 2-5,
+  supplement Figures 2-5/tables, all five source-data sheets and the archived
+  docking-model inventory/provenance were inspected. Supplementary movies,
+  raw structural refinement and physical plasmids were not assessed.
+- Q9S4M7 sequence 1 has PF01977 at 106-312. All three deposited ShVdcC
+  bodies agree; ShVdcD Q4R102 is the separate PF26358 partner. The 7AE7
+  V59X partner equals Q4R102 residues 1-58. L182 lies inside PF01977;
+  the T325/S326 hinge and L425 are outside it. Whole-enzyme activity is not
+  isolated-domain sufficiency. P94405/C0H3U9 are explicitly reference mappings
+  for the published Bs constructs, not proof of full synthetic-insert or
+  strain 168 identity. C0SPB5 yclD is not substituted for small BsdD.
+- Substrate-specific products, cognate partner addition, noncognate mixtures,
+  D:C ratio, air exposure/cofactor rescue, viscosogens and two variant contexts
+  remain separate experiments. Low C-alone vanillate activity, a nonzero
+  BsCD gallic replicate, loss of low ShCD gallic activity after tail deletion,
+  WT syringate negatives and text-only L182V data are retained. Rescue is
+  partial, not complete; apparent turnover depends on cofactor assumptions.
+- Domain closure/Int2 strain/quinoid turnover and partner-loop stabilization
+  are visibly labeled hypotheses. Apo conformations, docking energies and
+  viscosity effects do not establish the proposed atomic sequence. Sequence
+  R168/G178 conflicts with main-figure R178 and supplement-image R138 labels;
+  these source discrepancies are not silently corrected into new biology.
+- The partial same-agent scientific successor review is
+  `reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml`
+  and its derived Markdown. Verdict is `pass_with_limitations` /
+  `NEEDS_FOLLOWUP`; all three earlier issue keys/targets are retained through
+  exact `previous_occurrences`. Issues #217, #218 and #219 remain open.
+  PF01977 stays IN_PROGRESS; no old review is reused as approval.
+- Canonical EDIT and REVIEW events are
+  `history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml` and
+  `history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml`.
+  Semantic digest:
+  `d89063df2e8726ac5fc1bab28a2c9aa557f2e10d263ca43831b24c0b3cb72a94`.
+- The 52 focused graph/QC tests pass; schema reproduction has zero drift.
+  All 8,296 manifest hashes and 60 cache/primary-XML quotations were checked.
+  Only PF01977's inventory row changes: 814 graphs/1,740 edges across 127
+  graph-bearing families, 8,169 graphless. KGX/SSSOM exports remain current
+  and unchanged. These are structural counts, not scientific completion.
+- A native unpinned PF01977 preview passes at 1440px and 390px: all graphs,
+  edge support labels, evidence disclosures and three OPEN discussions remain
+  accessible, without document overflow or JavaScript errors. Mobile
+  hypothesis/construct and desktop partial-rescue screenshots were visually
+  inspected; native horizontal table scrolling is retained. Browser/server
+  were closed. This is not a corpus-wide browser sweep or canonical release.
+- Source-pin verification honestly fails for the changed overlay. No source
+  checkpoint, canonical Pages, full release QC or publication is performed in
+  this continuation. Existing snapshots, other records, old reviews/history,
+  source pins and canonical Pages are preserved. Final history-index preview
+  and apply changed only PF01977 and its manifest. `just validate-all
+  validate-schema` passes: 8,296 records with zero drift, 319 canonical
+  history files, four review-contract tests, 166 structured bundles, 174
+  native reports and zero schema differences. The final integrity check
+  confirms the saved review digest still matches after history indexing;
+  `just causal-graphs --check` verifies all 8,296 inventory rows.
+- Continue ScFdc, EcUbiD, AroY, HmfF, HudA and later specificity/maturation
+  work, together with unresolved VdcCD constructs, raw L182V data, active
+  occupancy and causal domain-motion evidence. Earlier family findings and
+  the full 8,296-family objective remain active.
