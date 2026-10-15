@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01977
+  path: curation/families/PF01977.yaml
+session:
+  id: 2026-10-15T100720Z-codex-be8396
+  timestamp: '2026-10-15T10:07:20Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Extend PF01977 with nine evidence-scoped ScFdc graphs
+  details: 'Inspected Lin2015 primary manuscript, Methods, Table 1 and original Figures
+    2/3/4/6. Added nine graphs with 19 experimental edges: one direct product endpoint
+    and 18 unresolved activation, preparation or readout effects. Verified Q03034
+    reference/domain mapping and exact separate 4ZAC body; FDC terminal primers support
+    reference relationship, not full synthetic-insert identity. Retained tPAD1 residue-55
+    primer versus reported 1-58 deletion discrepancy, tag/coexpression and host-background
+    confounds, residual activity, apparent kinetics and text-only rescue/stability
+    results. All 23 earlier graphs and prior evidence preserved. Updated three OPEN
+    discussions; IN_PROGRESS retained. Baseline records-check passed for 8296 records
+    with zero drift; guarded regeneration and successor scientific review follow this
+    actual edit. No publication or family-completion claim.'
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/217
+  - https://github.com/CultureBotAI/DUFMech/issues/218
+  - https://github.com/CultureBotAI/DUFMech/issues/219
+  urls:
+  - https://doi.org/10.1021/cb5008103
