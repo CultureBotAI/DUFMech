@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01980
+  path: data/families/PF01980.yaml
+session:
+  id: 2026-10-15T210601Z-codex-1fe7b5
+  timestamp: '2026-10-15T21:06:01Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of initial TrmO_N causal contexts
+  details: Saved review20261015T210544Z-pf01980-trmo-causal-contexts with native NEEDS_FOLLOWUP
+    and common pass_with_limitations. Assessed all24 new edges against main original
+    figures and inspected supplements:23observed effects and1computational hypothesis.
+    Three OPEN findings retain physical-construct/domain attribution, source-discrepancy/physiology
+    and family/literature-coverage limits. Verified all8296 manifest hashes with onlyPF01980
+    changing,52focused tests, schema/history/inventory/export checks and unpinned
+    desktop/mobile disclosures. Not independent replication, full family completion
+    or canonical publication. Final audit-index regeneration follows; IN_PROGRESS
+    and no qualifying review pointer remain.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261015T210544Z-pf01980-trmo-causal-contexts/review.yaml

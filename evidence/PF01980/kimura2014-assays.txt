@@ -1,0 +1,168 @@
+PF01980 / TrmO_N: Kimura et al. 2014 assay evidence ledger
+Inspected 2026-10-15 by Codex; scoped scientific curation, not replication.
+PMID:25063302; PMCID:PMC4132733; doi:10.1093/nar/gku618.
+Discovery of the beta-barrel-type RNA methyltransferase responsible for
+N6-methylation of N6-threonylcarbamoyladenosine in tRNAs.
+Nucleic Acids Research42:9350-9365. Article license CC BY4.0, verified in JATS.
+Primary text: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML
+XML SHA256 1ec84e1482420da928b0af74ab2bd1e486067f12e5af3d2280eba50222f3f469.
+PDF: https://pdfs.semanticscholar.org/8437/f0718e6d3485f685b3251cfa86a04d6cb056.pdf
+PDF SHA256 3b438e01ac7ba2fe4c9a3f378009f5e81caebafc52f8b85b4423088c2a6dddaa.
+Main Results, Methods and Discussion inspected; original Figures2,3,4,5,6
+visually inspected on PDF pages6,7,9,11,12. Figure1 and Figure7 are pathway
+context, not newly established causal transitions. Supplementary analyses and
+later homolog studies require their own review. Minimal quotation anchors below
+are verbatim; all other text is an explicitly scoped curator paraphrase.
+Subsequent inspection of S3/S5/S7/S9, captions and Table S2 is retained in
+kimura2014-supplement.txt; it refines the construct and negative-control limits.
+Reference-body mappings and their limits: evidence/PF01980/member-mapping.txt.
+
+S1. Native RNA deletion phenotype (Figure2A/B, PDF6/p9355)
+Quote: "no m6t6A-containing tetramer was detected"
+Deletion screen: OCR36 removes23ORFs, so that initial result alone is not
+gene-specific. Ten individual uncharacterized-gene deletions were examined;
+the yaeB/trmO deletion lacked the total-RNA m/z427 peak. The graph uses the
+individual-deletion comparison, not the large deletion as isolated attribution.
+For isolated Thr1(GGU) and Thr3(GGU), RNaseT1/LCMS detects m6t6A-containing
+Um6t6AAGp in WT but not delta-yaeB; ct6A-containing Uct6AAGp appears instead,
+with a small t6A fraction. Doubly negative ions742.11,726.11,735.10 respectively.
+Two RNA substrates are distinct observations, not independent gene knockouts.
+ct6A can hydrolyze to t6A during handling; no quantitative in-cell flux or direct
+TcdA activation by TrmO deletion is inferred. General growth LB37Covernight.
+RNA isolated with RCC oligo-DNA probe purification; T1 digest1pmolRNA/50U,
+20mM ammonium acetate pH5.3,37C30min. Tetramer identification is not atomistic
+mechanism or isolated-PF01980 necessity. Figure3G provides separate rescue.
+
+S2. Complementation and residue substitutions (Figure3E-G, PDF7/p9356)
+Quotes: "Wild-type trmO fully rescued m6t6A formation"
+"the R92A and K136A mutants did not"
+"dramatically reduced in the Q25A and D125A mutants"
+"Mutation of the conserved motif in the C-terminal domain (D194A/R196A)"
+Flanked trmO in pHSG415 (rpSC101), EcoRI/XhoI; flanks described as probably
+including native promoter/terminator. Site-directed constructs were Sanger
+verified by authors; physical full inserts not independently inspected here.
+delta-trmO transformants in midlog; total-nucleoside m6t6A m/z427 peak height
+divided by m2A m/z282 and normalized to delta-trmO + WT-trmO plasmid. n3,
+SD error bars. WT BW25113 + empty vector also shown near WT rescue.
+WT plasmid rescues versus deletion+empty vector. Figure3G labels R92A,K136A,
+and D194A/R196A N.D.; Q25A and D125A retain lower nonzero signals. Do not
+replace residual activity with zero, fit rate constants, or equate peak height
+with a fully calibrated catalytic rate. D194A/R196A is ONE joint substitution;
+neither single mutant's independent necessity is measured.
+No matched protein abundance, folding, localization or active-enzyme occupancy
+control was established in inspected panels. All mutations are in the whole
+protein. Q25/R92/D125/K136 map inside PF01980; D194/R196 map outside it to
+PF18389. Figure3F depicts A. fulgidus AF0241, not the E. coli enzyme: Q22/R82/
+D111/K122 correspond to E. coli Q25/R92/D125/K136; AF K122 comes from the other
+subunit. Do not turn homology plus loss of m6t6A into directly observed E. coli
+atomic contacts. Discussion says EcAsp111; Results, Figure3 and P28634 support
+D125 (P28634 residue111=V). Source conflict retained, not silently repaired.
+
+S3. Binding versus chemistry (Figure3A-C, PDF7/p9356)
+Quotes: "a larger amount of this complex was formed"
+"does not require t6A37 to interact with tRNAThr3(GGU)"
+"no methylation occurred in the absence of AdoMet"
+"No methylation took place in this tRNA"
+Purified ASKA pCA24N N-terminal6xHis EcTrmO; induction0.1mMIPTG,Ni-NTA.
+Binding:15pmoltRNA/10uL plus0,15,30,45pmolTrmO,50mMTris8,5mMMgCl2,
+100mMKCl,2mMspermine,37C30min. Native4%PAGE; SYBRgold then Coomassie.
+Thr3(t6A37) complex increases with protein in lanes1-4; unmodified Thr3(A37)
+also complexes in lanes5/6. Thr4(t6A37) + protein yields an unstable/smeared
+band in lanes7/8. Lane9 is45pmolprotein-only, despite caption's general claim
+that all conditions contain15pmoltRNA. No Kd or methylation follows from a band.
+Chemistry: enzymatically pre-t6A-modified Thr3 transcript1uM,EcTrmO10uM,
+AdoMet1mM,20uL,50mMHEPES6.7,100mMKCl,5mMMgCl2,1mMDTT,37C1h.
+T1/LCMS shows m6t6A tetramer with TrmO+AdoMet but not TrmO without donor.
+Figure3B displays87%product and13%substrate, one illustrated endpoint rather
+than fitted kinetics. Unmodified A37-Thr3 is not methylated in Figure3C even
+with enzyme+donor: binding does not establish methylation of an unmodified A.
+Substrate t6A37 was first introduced with YrdC/YgjD/YeaZ/YjeE plusThr/ATP/
+bicarbonate; these upstream enzymes are substrate preparation, not a newly
+proved PF01980-mediated pathway. Joint source nodes include all reaction inputs.
+
+S4. Native mixed-modification substrate (Figure3D, PDF7/p9356)
+Quote: "m6t6A was formed in response to a reduction in t6A"
+Same methylation conditions, using isolated delta-trmO Thr3 containing both
+t6A37 and ct6A37. UponTrmO addition m6t6A fraction51% versus7% in comparison,
+t6A23% versus65%,ct6A26% versus27%. These are displayed normalized fractions,
+not error-estimated rates or mass balances of independently calibrated species.
+Critically, the asterisk-marked7% m6t6A in the no-TrmO preparation is identified
+by the authors as WT-tRNA carryover on the oligo-DNA probe. It is not mutant
+residual synthesis. The supported change is increased product with diminished
+t6A; unchanged ct6A argues against detectable ct6A methylation under this assay.
+Do not assert absolute zero ct6A turnover at every condition or native competition
+kinetics. This preparation is separate from synthetic Thr3 in Figure3B.
+
+S5. Substrate identity interventions (Figure4A/B, PDF9/p9358)
+Quotes: "When C31-G39 was replaced by A31-U39, little methylation was observed"
+"lost the ability to be methylated by TrmO"
+"When G34 was replaced with C or U"
+"Neither variant was significantly methylated"
+"when both determinants were introduced simultaneously (A31C/U39G/U34G)"
+"when the entire anticodon stem-loop"
+t6A37-bearing transcripts1uM,EcTrmO0.1uM,25uM[14C-methyl]AdoMet,
+1.74GBq/mmol,10uL,sameHEPES6.7/KCl/Mg/DTT,37C5min. Incorporatedradioactivity
+after organic extraction,TCAfilterwashes,ethanolwash,scintillation; n3 mean+SD,
+normalizedtoWTThr3. Not a kcat/Km determination or direct RNA contact map.
+Thr3 separate interventions: AS4 wholeThr4anticodonstem replacement; joint
+C31A/G39U base-pair substitution; G34C; G34U; G35A; G35C. Each decreases
+readout; AS4/C31A-G39U/G35A/G35C remain small nonzero displayedbars. G34C and
+G34U have substantial residual signals. Use decreases, not absolute abolition.
+Controls C30G/G40C,C29U/G41A,A28C/U42G,C27A/G43U,G26A,U3C/A70G,U62C,
+A52G/U62C remain nearerWT than the strong-loss variants in the displayed graph.
+The paper's prose calls the acceptor pairU3-A71 but Figure4 labelU3C/A70G;
+retain the numbering discrepancy, do not silently substitute a sequence.
+Thr4 is poorly methylated; A31C/U39G alone and U34G alone do not restore a
+large signal. The JOINT A31C/U39G/U34G change increases incorporation;
+ASL3 wholeThr3anticodonstem-loop gives a larger illustratedsignal thantriple.
+Each gain is compared with the WTThr4 baseline, not an assertion that any
+single altered base is sufficient. No universal tRNA identity rule or direct
+base-reading contact is proved, and humanTRMO has different specificity.
+
+S6. Reporter contexts (Figure5A-C, PDF11/p9360)
+Quotes: "a 1.5-fold increase in luciferase activity relative to WT"
+"a 2-fold increase in luciferase activity relative to"
+E. coliBW25113 WT/delta-trmO/delta-tcdA/doubledeletion;2mLLB37C,
+midlogOD6000.4-0.6. Sequenced pBR322 ThrL-Luc(promoter/leader/terminator/
+firefly) and Lucwithoutattenuator. Lysozyme,freeze-thawlysis;5uLlysate,
+GLOMAX96DualLuc; signal normalizedtoOD600; n4independentexperiments,SD.
+delta-trmO versusWT increasesThrL-Luc about1.5fold; controlLucnear1.
+doubledeletion versusdelta-tcdA increasesThrL-Luc about2fold; controlLucnear1.
+These are DIFFERENT normalization backgrounds: never comparebothbars as a
+common-baseline quantification of ct6A versus t6A decoding. Model increased
+measuredreporteroutput, not decreased reporter or a measuredribosomalstall.
+The proposed ThrLtranslation/attenuation mechanism is indirect interpretation;
+no nativeoperontranscriptflux, single-ribosome trajectory or directPF01980-RNA
+interaction is measured by this reporter. No reporter-rescue series is shown.
+
+S7. Human TRMO biochemical assay and native observation (Figure6, PDF12/p9361)
+Quote: "only in the presence of both recombinant C9orf156 and AdoMet"
+HeLa totalRNA hasm6t6Am/z427; isolatedSer(GCU)T1fragments andCID support
+modificationat37. This native presence is NOT a TRMOknockout/rescue experiment.
+Prose reports56%m6t6A,16%t6A,16%A(sum88). Figure6B instead shows40%+16%
+m6t6A-bearingfragments,16%t6A,and28%unmodifiedA(sum100). Retain both; no
+silentnormalization. Figure6caption also labelsUm43 thenpredictsUm44/Psi39
+byratRNAsequence; do not callpredictedsecondarypositionsdirectlyprovedhuman.
+HeLa-derivedC9orf156recombinantprotein fromBL21(DE3)Rosetta,pET28a,Ni-NTA.
+HumanSer(GCU)transcriptpre-t6A-modified usingEcenzymes. Assay100uL,
+TRMO1uM,tRNA1uM,AdoMet1mM,50mMHEPES6.7,100mMKCl,5mMMgCl2,1mMDTT,
+37C1h. RNaseAtrimerLCMS m/z1126.17substrate versus1140.19product;
+nucleosides413versus427 confirmproduct inFigure6E/F. JointTRMO+donorproduces
+m6t6A, whileTRMO-only,donor-only,EcTrmO+donor donotshowproduct. Displayed90%
+endpoint is not human-vsEc intrinsicpotency or kinetics; comparator enzyme
+concentrationmatching is not independently established. NohumanTRMO genetic
+necessity, splicingregulation, nativeflux or isolateddomain sufficiency claim.
+
+Remaining/excluded mechanisms
+ProposedDPRxxY-mediatedtRNAbinding, atomicEcAdoMetcontacts, modeledm6t6A
+stacking and altereddecoding, intracellularTrmO/TcdAcompetition, humanSR/splicing
+regulation and a universalarchaealYaeBfunction are not observed causal edges.
+Manyarchaealparalogs lack the bacterial/mammalianCterminalmotif; familypresence
+doesnotproveallmembers methylatethesametRNA. Laterstructurelead7BU1
+(P.aeruginosa,2.49A,SAMcomplex,"To be published") wasfound viaRCSB;
+it is not a reviewedfunctionalexperiment or evidence ofEc/humanatomiccontacts.
+Searches on2026-10-15 for TrmO+tRNA+methyltransferase+structure+mutants and
+PF01980+TrmO+experiment are bounded leads, not an exhaustive modernliterature
+review. Completeinserts, variantabundance/folding, atomicsteps, othermembers,
+and physiologicalcoverage remain open. No biological edge was inferred solely
+from a database summary, keyword hit or absence of a search result.

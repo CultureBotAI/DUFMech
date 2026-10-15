@@ -1,0 +1,1021 @@
+# PF01980 TrmO_N original assays and separate decoding model
+
+- Review: 20261015T210544Z-pf01980-trmo-causal-contexts
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-15T20:57:48Z
+- Finished UTC: 2026-10-15T21:05:44Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Twelve graphs retain23 observed effects and one computational hypothesis from scoped E. coli/human TrmO assays and the downstream Lys-ASL model. Three OPEN scientific follow-ups preserve construct, source-discrepancy and family-coverage limits. IN_PROGRESS without a REVIEWED pointer.
+
+## Scope And Provenance
+
+Assess all24 new edges against main methods/Results/Discussion and original Figures2-6, supplemented by S3/S5/S7/S9, captions and TableS2. Check reference mapping, exact evidence, polarity, conjunctive inputs, domain limits and local preview. This is partial family coverage, not a census of all members or studies.
+
+Selection: Initial primary-evidence curation of previously seeded PF01980, with E. coli and human assay contexts kept distinct.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base b6e9a5d811a33d76dd392be315d05cf7ccabfbe5.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01980 | data/families/PF01980.yaml | generated | PF01980 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| generation | passed | True | PF01980 | 8296 schema-valid records; exactly PF01980 and its ownership manifest regenerated after actual history. |
+| focused | passed | True | PF01980 | 52 tests passed in13.20s; runtime code unchanged. |
+| schema-history | passed | True | PF01980 | No generated-schema drift; canonical history validates. These checks do not establish scientific truth. |
+| inventory-exports | passed | True | PF01980 | Native inventory and association exports current; inventory preserves8296 members. Status export changes are scoped to PF01980. |
+| integrity | passed | True | PF01980 | All8296 manifest hashes pass; onlyPF01980 changes;24 exact primary quotations and evidence hashes pass; prior artifacts and other8295 records preserved. |
+| preview | passed | True | PF01980 | Unpinned native preview at1440px and390px:12graphs/24edges,23observed/1hypothesis,all evidence disclosures and links; no overflow or JavaScript errors. Selected screenshots visually inspected. |
+
+## Scientific And Domain Assessments
+
+### Tested proteins versus the PF01980 domain
+
+identity: supported. Targets: PF01980.
+
+Reference mapping verifies N-terminal-domain coordinates and keeps C-terminal D194/R196 outside PF01980. Human primer endpoints support the canonical body design without claiming physical insert verification.
+
+### Directed readouts, controls and context boundaries
+
+graph: supported. Targets: PF01980.
+
+All24 edges retain exact endpoints and evidence. Enzyme/donor/substrate and double/triple perturbations are conjunctive. Observed chemistry, binding, cellular effects and the separate hypothesis are not stitched into one measured pathway.
+
+### Source discrepancies and negative controls
+
+evidence: supported. Targets: PF01980.
+
+Original images retain residual activity, mixed t6A/ct6A and probe carryover. Mutation, RNA-control and percentage discrepancies are disclosed; reporter normalization and human cellular necessity are not overstated.
+
+### Owned inputs and preserved corpus
+
+provenance: supported. Targets: PF01980.
+
+Only the new PF01980 scientific input and its native generated outputs change. Frozen identities, prior retained artifacts and canonical Pages/pins remain unchanged. Exact evidence quotation/hash checks pass.
+
+### Full family and physiological coverage remains open
+
+completeness: concern. Targets: PF01980.
+
+This first primary-paper assessment does not complete later studies, other members, full inserts, atomic steps or native physiology. Three scoped follow-ups remain OPEN and status is IN_PROGRESS.
+
+## Findings
+
+### construct-and-domain-mechanism: Resolve full constructs and domain-specific mechanism
+
+minor / open / confirmed; issue key: pf01980-construct-and-domain-mechanism.
+
+Reference intervals, S5 accessions and primer termini support mapping, but physical inserts, folding/abundance controls and isolated-domain necessity or sufficiency remain unverified. Ec contacts inferred from AF0241 are not direct Ec structural measurements.
+
+### source-discrepancies-and-physiology: Resolve source discrepancies and physiological interpretation
+
+minor / open / confirmed; issue key: pf01980-source-discrepancies-and-physiology.
+
+Identical WT/U34G-only primers, human16% prose versus28% figure A37, EcAsp111 versusD125, RNA positions and Um labels remain unresolved. Carryover and residual signals are retained. Reporter outputs do not directly measure decoding, and human TRMO cellular necessity is not tested.
+
+### family-and-literature-coverage: Continue remaining primary and family contexts
+
+minor / open / confirmed; issue key: pf01980-family-and-literature-coverage.
+
+PMID9537379, later structural/functional studies including7BU1 leads, remaining supplemental datasets and archaeal/other members require independent assessment. Present graphs do not complete PF01980 or the whole corpus.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-and-resolve-trmo-evidence
+
+Continue primary-evidence research while preserving the bounded current observations and explicit hypotheses.
+
+- Verify complete physical inserts and assay-specific tags; assess protein abundance/folding and domain-attribution evidence before stronger residue mechanisms.
+- Resolve the source discrepancies with original data or author clarification; preserve uncertainty when unavailable. Do not silently repair the U34G primer or normalize conflicting percentages.
+- Review original1998 experiments, later studies and separately mapped homologs; retain negative and conflicting evidence and keep IN_PROGRESS until full scope is genuinely supported.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML; Kimura2014 methods,Results,Discussion; original Figures2-6; evidence/PF01980/kimura2014-assays.txt S1-S7 | supports | Inspected original figure images and source text. Supports observed binding, methylation and perturbation readouts, not direct atomic contacts or universal function. Exact source hashes and licensed quotation anchors retained. |
+| supplement | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/supplementaryFiles?inlineImages=no; S3/S5/S7/S9 images; captions and genetic-mapping paragraph; TableS2; evidence/PF01980/kimura2014-supplement.txt T1-T5 | supports | Primer endpoint support, explicit reference accessions, joint mutant design and a WT/U34G-only primer conflict. S9 is a Lys/AAG-based hypothesis, not a directly observed EcThr/ACC mechanism. |
+| identity | evidence/PF01980/member-mapping.txt; Hash-anchored UniProt P28634/Q9BU70 and complete InterPro Pfam responses; sequence-indexed E. coli residues | supports | EcPF01980 11-142 versus PF18389 159-234; humanPF01980 36-165. Exact reference versions and sequences retained without claiming complete physical constructs. |
+| validation | data/families/PF01980.yaml; Executed native generation/schema/history/export/inventory checks,52focused tests, integrity helper and desktop/mobile unpinned preview | supports | Structural integrity and rendering are checked separately from scientific interpretation; all8295 other family records and prior evidence/reviews remain unchanged. |
+| duf-projection-pf01980 | data/families/PF01980.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Scientific self-review is partial; the complete8296-record objective remains unfinished. Graph presence is not completed family review.
+- A reference protein is not a verified physical construct. D194A/R196A is a joint PF18389 perturbation outside PF01980, not two isolated PF01980 residue mechanisms.
+- Figure6 human A37 percentages, EcAsp111/D125, RNA acceptor-pair labels, Um positions and identical WT/U34G-only primer strings remain explicitly unresolved.
+- The first supplement transfer timed out; only the successful complete ZIP and its extracted files support the supplement assessment. Initial Bio import failed; translation succeeded in the available offline Biopython environment.
+- No protein-expression/folding normalization or human genetic-necessity experiment is established. Distinct reporter normalizations cannot be pooled into decoding-rate estimates.
+- Full release QC and canonical source-pin/Pages refresh remain publication work. Post-review history/index validation follows this retained scientific observation.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: b6e9a5d811a33d76dd392be315d05cf7ccabfbe5
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01980.yaml
+    sha256: 04fd1a76aaf61cee22ed61f6c4b44490c94a5c5a24eb075712d5018024a19495
+    role: context
+  - path: data/families/PF01980.yaml
+    sha256: d56469ce4276e6399fff6c7e71ed62d9d2661ed602e022ae059e099d277d651e
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01980/kimura2014-assays.txt
+    role: context
+    sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a
+  - path: evidence/PF01980/kimura2014-supplement.txt
+    role: context
+    sha256: 78421486274b932b6c336952a7e934c1f4b86d56bac8fb60a133d5fa03b3ecb2
+  - path: evidence/PF01980/member-mapping.txt
+    role: context
+    sha256: 2f37d5cd25181331eec15e7f6477dc24695b6e6c4222fd1b97252758069b2cd5
+  - path: history/records/PF01980/2026-10-15T204713Z-codex-309275.yaml
+    role: context
+    sha256: 0a736a7a03833868f8be944e8bfc8183c82a50c15ca645d9c926447d236beb54
+  - path: history/records/PF01980/2026-10-15T205616Z-codex-6cf4c9.yaml
+    role: context
+    sha256: 5e02e19ef2687e2891f494d1a77de4959a417e0cd517b491b3e468554da23fc1
+targets:
+- target_id: PF01980
+  path: data/families/PF01980.yaml
+  label: PF01980
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01980.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 666de005f3ad8023fda2a920d0e15eafd79800589d9b4cd7688641d15187e88c
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+schema_version: 1.0.0
+review_id: 20261015T210544Z-pf01980-trmo-causal-contexts
+title: PF01980 TrmO_N original assays and separate decoding model
+started_at: '2026-10-15T20:57:48Z'
+finished_at: '2026-10-15T21:05:44Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent curated and adversarially checked the source interpretations,
+    original figures and generated record; not independent approval or replication.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Twelve graphs retain23 observed effects and one computational hypothesis
+  from scoped E. coli/human TrmO assays and the downstream Lys-ASL model. Three OPEN
+  scientific follow-ups preserve construct, source-discrepancy and family-coverage
+  limits. IN_PROGRESS without a REVIEWED pointer.
+scope:
+  description: Assess all24 new edges against main methods/Results/Discussion and
+    original Figures2-6, supplemented by S3/S5/S7/S9, captions and TableS2. Check
+    reference mapping, exact evidence, polarity, conjunctive inputs, domain limits
+    and local preview. This is partial family coverage, not a census of all members
+    or studies.
+  selection: Initial primary-evidence curation of previously seeded PF01980, with
+    E. coli and human assay contexts kept distinct.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01980
+  exclusions:
+  - target: Other members, later studies, original1998 tsaA experiments and remaining
+      supplemental datasets
+    reason: Not scientifically assessed here;7BU1 and PMID9537379 are follow-up leads,
+      not adopted functional evidence.
+  - target: Full physical inserts, raw replicate reanalysis and independent replication
+    reason: Reference bodies, primer endpoints and figures do not establish these.
+  - target: Canonical release
+    reason: Only an unpinned local preview is rendered; no source checkpoint, canonical
+      Pages refresh, full release QC or publication is performed.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Tested proteins versus the PF01980 domain
+  outcome: supported
+  summary: Reference mapping verifies N-terminal-domain coordinates and keeps C-terminal
+    D194/R196 outside PF01980. Human primer endpoints support the canonical body design
+    without claiming physical insert verification.
+  target_ids:
+  - PF01980
+  evidence_ids:
+  - identity
+  - supplement
+- assessment_id: causality
+  area: graph
+  topic: Directed readouts, controls and context boundaries
+  outcome: supported
+  summary: All24 edges retain exact endpoints and evidence. Enzyme/donor/substrate
+    and double/triple perturbations are conjunctive. Observed chemistry, binding,
+    cellular effects and the separate hypothesis are not stitched into one measured
+    pathway.
+  target_ids:
+  - PF01980
+  evidence_ids:
+  - primary
+  - supplement
+  - validation
+- assessment_id: conflicts
+  area: evidence
+  topic: Source discrepancies and negative controls
+  outcome: supported
+  summary: Original images retain residual activity, mixed t6A/ct6A and probe carryover.
+    Mutation, RNA-control and percentage discrepancies are disclosed; reporter normalization
+    and human cellular necessity are not overstated.
+  target_ids:
+  - PF01980
+  evidence_ids:
+  - primary
+  - supplement
+- assessment_id: provenance
+  area: provenance
+  topic: Owned inputs and preserved corpus
+  outcome: supported
+  summary: Only the new PF01980 scientific input and its native generated outputs
+    change. Frozen identities, prior retained artifacts and canonical Pages/pins remain
+    unchanged. Exact evidence quotation/hash checks pass.
+  target_ids:
+  - PF01980
+  evidence_ids:
+  - validation
+  - identity
+- assessment_id: coverage
+  area: completeness
+  topic: Full family and physiological coverage remains open
+  outcome: concern
+  summary: This first primary-paper assessment does not complete later studies, other
+    members, full inserts, atomic steps or native physiology. Three scoped follow-ups
+    remain OPEN and status is IN_PROGRESS.
+  target_ids:
+  - PF01980
+  evidence_ids:
+  - primary
+  - supplement
+findings:
+- finding_id: construct-and-domain-mechanism
+  issue_key: pf01980-construct-and-domain-mechanism
+  title: Resolve full constructs and domain-specific mechanism
+  description: Reference intervals, S5 accessions and primer termini support mapping,
+    but physical inserts, folding/abundance controls and isolated-domain necessity
+    or sufficiency remain unverified. Ec contacts inferred from AF0241 are not direct
+    Ec structural measurements.
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01980
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - identity
+  - supplement
+  - primary
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01980.yaml
+    role: Maintained scientific overlay; generated family YAML is not edited directly.
+- finding_id: source-discrepancies-and-physiology
+  issue_key: pf01980-source-discrepancies-and-physiology
+  title: Resolve source discrepancies and physiological interpretation
+  description: Identical WT/U34G-only primers, human16% prose versus28% figure A37,
+    EcAsp111 versusD125, RNA positions and Um labels remain unresolved. Carryover
+    and residual signals are retained. Reporter outputs do not directly measure decoding,
+    and human TRMO cellular necessity is not tested.
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01980
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - primary
+  - supplement
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01980.yaml
+    role: Maintained scientific overlay; generated family YAML is not edited directly.
+- finding_id: family-and-literature-coverage
+  issue_key: pf01980-family-and-literature-coverage
+  title: Continue remaining primary and family contexts
+  description: PMID9537379, later structural/functional studies including7BU1 leads,
+    remaining supplemental datasets and archaeal/other members require independent
+    assessment. Present graphs do not complete PF01980 or the whole corpus.
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01980
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - primary
+  - supplement
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01980.yaml
+    role: Maintained scientific overlay; generated family YAML is not edited directly.
+actions:
+- action_id: extend-and-resolve-trmo-evidence
+  description: Continue primary-evidence research while preserving the bounded current
+    observations and explicit hypotheses.
+  finding_ids:
+  - construct-and-domain-mechanism
+  - source-discrepancies-and-physiology
+  - family-and-literature-coverage
+  target_ids:
+  - PF01980
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01980.yaml
+    role: Maintained scientific overlay; generated family YAML is not edited directly.
+  acceptance_checks:
+  - Verify complete physical inserts and assay-specific tags; assess protein abundance/folding
+    and domain-attribution evidence before stronger residue mechanisms.
+  - Resolve the source discrepancies with original data or author clarification; preserve
+    uncertainty when unavailable. Do not silently repair the U34G primer or normalize
+    conflicting percentages.
+  - Review original1998 experiments, later studies and separately mapped homologs;
+    retain negative and conflicting evidence and keep IN_PROGRESS until full scope
+    is genuinely supported.
+checks:
+- check_id: generation
+  name: generation
+  command: just records; just records --apply
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 8296 schema-valid records; exactly PF01980 and its ownership manifest regenerated
+    after actual history.
+  target_ids:
+  - PF01980
+  evidence_ids:
+  - validation
+- check_id: focused
+  name: focused
+  command: uv run --locked --extra dev pytest -q tests/test_causal_graphs.py tests/test_qc.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 52 tests passed in13.20s; runtime code unchanged.
+  target_ids:
+  - PF01980
+  evidence_ids:
+  - validation
+- check_id: schema-history
+  name: schema-history
+  command: just validate-schema; just history-check
+  status: passed
+  required: true
+  exit_code: 0
+  summary: No generated-schema drift; canonical history validates. These checks do
+    not establish scientific truth.
+  target_ids:
+  - PF01980
+  evidence_ids:
+  - validation
+- check_id: inventory-exports
+  name: inventory-exports
+  command: just causal-graphs --apply; just causal-graphs --check; just exports --apply;
+    just exports --check
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Native inventory and association exports current; inventory preserves8296
+    members. Status export changes are scoped to PF01980.
+  target_ids:
+  - PF01980
+  evidence_ids:
+  - validation
+- check_id: integrity
+  name: integrity
+  command: uv run --locked --offline python /private/tmp/duf-pf01980-integrity.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: All8296 manifest hashes pass; onlyPF01980 changes;24 exact primary quotations
+    and evidence hashes pass; prior artifacts and other8295 records preserved.
+  target_ids:
+  - PF01980
+  evidence_ids:
+  - validation
+- check_id: preview
+  name: preview
+  command: uv run --locked --offline python /private/tmp/duf-pf01980-preview.py; node
+    /private/tmp/duf-pf01980-browser.cjs
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Unpinned native preview at1440px and390px:12graphs/24edges,23observed/1hypothesis,all
+    evidence disclosures and links; no overflow or JavaScript errors. Selected screenshots
+    visually inspected.
+  target_ids:
+  - PF01980
+  evidence_ids:
+  - validation
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML
+  locator: Kimura2014 methods,Results,Discussion; original Figures2-6; evidence/PF01980/kimura2014-assays.txt
+    S1-S7
+  accessed_at: '2026-10-15T21:05:44Z'
+  support: supports
+  summary: Inspected original figure images and source text. Supports observed binding,
+    methylation and perturbation readouts, not direct atomic contacts or universal
+    function. Exact source hashes and licensed quotation anchors retained.
+- evidence_id: supplement
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/supplementaryFiles?inlineImages=no
+  locator: S3/S5/S7/S9 images; captions and genetic-mapping paragraph; TableS2; evidence/PF01980/kimura2014-supplement.txt
+    T1-T5
+  accessed_at: '2026-10-15T21:05:44Z'
+  support: supports
+  summary: Primer endpoint support, explicit reference accessions, joint mutant design
+    and a WT/U34G-only primer conflict. S9 is a Lys/AAG-based hypothesis, not a directly
+    observed EcThr/ACC mechanism.
+- evidence_id: identity
+  kind: primary_source
+  reference: evidence/PF01980/member-mapping.txt
+  locator: Hash-anchored UniProt P28634/Q9BU70 and complete InterPro Pfam responses;
+    sequence-indexed E. coli residues
+  accessed_at: '2026-10-15T21:05:44Z'
+  support: supports
+  summary: EcPF01980 11-142 versus PF18389 159-234; humanPF01980 36-165. Exact reference
+    versions and sequences retained without claiming complete physical constructs.
+- evidence_id: validation
+  kind: validation
+  reference: data/families/PF01980.yaml
+  locator: Executed native generation/schema/history/export/inventory checks,52focused
+    tests, integrity helper and desktop/mobile unpinned preview
+  accessed_at: '2026-10-15T21:05:44Z'
+  support: supports
+  summary: Structural integrity and rendering are checked separately from scientific
+    interpretation; all8295 other family records and prior evidence/reviews remain
+    unchanged.
+- evidence_id: duf-projection-pf01980
+  kind: record_content
+  reference: data/families/PF01980.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-15T21:05:44Z'
+  support: context_only
+  snapshot_sha256: d56469ce4276e6399fff6c7e71ed62d9d2661ed602e022ae059e099d277d651e
+  quote: "id: Pfam:PF01980\npfam_id: PF01980\nname: tRNA-methyltransferase O N-terminal\
+    \ domain\nshort_name: TrmO_N\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01980\n\
+    counters:\n  proteins: 8639\n  matches: 8684\n  proteomes: 7015\n  taxa: 12908\n\
+    \  structures: 6\n  alphafold_models: 5968\n  domain_architectures: 76\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR023370\ndescription: This family includes members such\
+    \ as TrmO (tRNA-methyltransferase O) also known as YaeB,\n  which contains a single-sheeted\
+    \ beta-barrel structure. TrmO is an AdoMet-dependent methyltransferase\n  responsible\
+    \ for m6t6A formation [[cite:PUB00086552]]. Its human homolog, is responsible\
+    \ for formation\n  of m6t6A37 in cytoplasmic tRNASer. Lack of TrmO decreases attenuation\
+    \ activity of the thr operon, indicating\n  that N6 methylation of m6t6A37 ensures\
+    \ efficient decoding of ACY codons [[cite:PUB00137799]]. In bacteria\n  and eukaryotes,\
+    \ TrmO has a C-terminal domain containing the conserved DPRxxY motif. Where the\
+    \ Asp194\n  and Arg196 in this motif of E. coli TrmO are necessary for N6-methylation.\
+    \ However, no archaeal YaeB\n  has a C-terminal domain containing the DPRxxY motif\
+    \ that is conserved in bacterial and mammalian TrmO\n  homologs [[cite:PUB00086552]].\
+    \ This entry represents the N-terminal domain of TrmO.\ncuration_history: history/records/PF01980\n\
+    discussions:\n- discussion_id: trmo-constructs-and-domain-mechanism\n  prompt:\
+    \ Resolve physical constructs, variant abundance and domain-specific mechanism\
+    \ without transferring\n    whole-protein results to isolated PF01980.\n  kind:\
+    \ CURATION_TODO\n  status: OPEN\n  rationale: E. coli reference PF01980 spans\
+    \ 11-142, whereas the jointly tested D194/R196 motif belongs\n    to PF18389.\
+    \ Human canonical mapping does not establish the HeLa-derived insert sequence.\n\
+    \  evidence:\n  - reference: PMID:25063302\n    supports: PARTIAL\n    evidence_source:\
+    \ primary_publication\n    explanation: Figures 3 and 6 support whole-protein\
+    \ mutation and biochemical effects. Protein abundance/folding,\n      complete\
+    \ inserts and isolated-domain sufficiency remain unresolved; AF0241 contacts are\
+    \ not direct\n      E. coli structural measurements.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-15'\n  notes: See the three ledgers under evidence/PF01980. S5 and\
+    \ Table S2 confirm reference accessions and\n    human primer endpoints, not complete\
+    \ inserts. Resolve E. coli D125 versus Discussion Asp111 and Table\n    S2's identical\
+    \ WT/Thr4-U34G primer strings; distinguish tRNA binding from methyl transfer.\n\
+    - discussion_id: trmo-physiology-and-source-discrepancies\n  prompt: Resolve the\
+    \ primary-source discrepancies and test physiological interpretations separately\
+    \ from\n    measured reporter and biochemical outcomes.\n  kind: CURATION_TODO\n\
+    \  status: OPEN\n  rationale: Two reporter backgrounds have different normalizations;\
+    \ human native modification is not\n    a TRMO genetic necessity experiment. Text\
+    \ and Figure 6 disagree on the unmodified human tRNA fraction.\n  evidence:\n\
+    \  - reference: PMID:25063302\n    supports: PARTIAL\n    evidence_source: primary_publication\n\
+    \    explanation: Original Figures 2-6 were inspected. The ledger retains probe\
+    \ carryover, ct6A hydrolysis,\n      residual mutation signals, human text16%\
+    \ versus figure28% A37, and secondary-modification and RNA-position\n      label\
+    \ discrepancies.\n  posed_by: Codex\n  posed_date: '2026-10-15'\n  notes: Do not\
+    \ infer direct decoding, ribosome stalling, native transcription flux, human splicing\
+    \ regulation\n    or universal zero activity from the scoped assays. Resolve source\
+    \ data and matched expression/folding\n    controls before stronger conclusions.\n\
+    - discussion_id: trmo-family-and-literature-coverage\n  prompt: Extend the scientific\
+    \ review to other PF01980 members, structural studies and later literature.\n\
+    \  kind: CURATION_TODO\n  status: OPEN\n  rationale: E. coli and human enzymes\
+    \ have different substrate specificity; archaeal paralogs and domain\n    architectures\
+    \ do not establish a universal family function.\n  evidence:\n  - reference: PMID:25063302\n\
+    \    supports: PARTIAL\n    evidence_source: primary_publication\n    explanation:\
+    \ Initial main-paper experiments are curated with distinct reference mappings.\
+    \ Archaeal\n      functions, all supplements, later functional studies and family-wide\
+    \ coverage are not completed\n      by these graphs.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-15'\n  notes: Structure 7BU1 is a P. aeruginosa SAM-complex lead, not\
+    \ an assessed causal experiment. S3/S5/S7/S9\n    and Table S2 are inspected;\
+    \ remaining supplemental datasets, PMID9537379, later studies and other\n    members\
+    \ still need review. IN_PROGRESS is intentional.\ncausal_graphs:\n- graph_id:\
+    \ ectrmo-native-trna-deletion-2014\n  title: E. coli trmO deletion lowers the\
+    \ native Thr1 and Thr3 m6t6A signals\n  scope: Single yaeB/trmO deletion and WT\
+    \ E. coli; separately purified native tRNAThr1(GGU) and tRNAThr3(GGU).\n  context:\
+    \ Kimura2014 Figure 2B; LB-grown cells, oligo-DNA tRNA purification, RNase T1\
+    \ digestion and LC/MS\n    of position-37-containing fragments. This is not the\
+    \ 23-ORF OCR36 deletion alone.\n  family_mapping: YaeB is renamed TrmO in the\
+    \ study. P28634 sequence2/entry158 is the 235-aa K-12 reference;\n    PF01980\
+    \ maps to 11-142, PF18389 to 159-234. Whole-gene deletion does not isolate either\
+    \ domain; see\n    evidence/PF01980/member-mapping.txt.\n  scope_status: PHENOTYPIC\n\
+    \  limitations: No direct catalytic step is measured in cells. Increased ct6A\
+    \ and some t6A do not establish\n    native flux or direct TcdA activation; ct6A\
+    \ can hydrolyze during handling. Reference sequence is not\n    an independently\
+    \ verified assay-strain genome.\n  nodes:\n  - node_id: deletion\n    label: Single\
+    \ trmO deletion versus WT\n    node_type: PERTURBATION\n  - node_id: thr1_m6t6a\n\
+    \    label: Native Thr1 m6t6A37-containing fragment signal\n    node_type: STATE\n\
+    \  - node_id: thr3_m6t6a\n    label: Native Thr3 m6t6A37-containing fragment signal\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: lowers-thr1-modification\n    subject:\
+    \ deletion\n    predicate: decreases\n    object: thr1_m6t6a\n    mechanism: The\
+    \ m6t6A-containing Thr1 tetramer detected in WT is not detected in the single\
+    \ deletion,\n      while ct6A and a small t6A fraction appear. Detection absence\
+    \ is assay-specific.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25063302\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n  \
+    \    snippet: no m6t6A-containing tetramer was detected\n      explanation: Original\
+    \ Figure 2B left panels and Results; ledger S1. This is a native-RNA phenotype,\n\
+    \        not isolated-domain chemistry.\n      cache_path: evidence/PF01980/kimura2014-assays.txt\n\
+    \      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    \  - edge_id: lowers-thr3-modification\n    subject: deletion\n    predicate:\
+    \ decreases\n    object: thr3_m6t6a\n    mechanism: The corresponding m6t6A-containing\
+    \ Thr3 tetramer is detected in WT but not the deletion\n      under the same analytical\
+    \ workflow; ct6A is observed instead.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25063302\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: no m6t6A-containing tetramer was detected\n      explanation:\
+    \ Original Figure 2B right panels; ledger S1. The two tRNAs are separate substrates,\n\
+    \        not independent deletion replicates.\n      cache_path: evidence/PF01980/kimura2014-assays.txt\n\
+    \      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    - graph_id: ectrmo-complementation-2014\n  title: Plasmid WT trmO restores the\
+    \ deletion's m6t6A signal\n  scope: Whole-gene complementation in E. coli delta-trmO,\
+    \ not a purified domain assay.\n  context: Figure 3G; flanked WT trmO in pHSG415,\
+    \ midlog cells, total-nucleoside m/z427 peak height divided\n    by m2A m/z282\
+    \ and normalized to WT-plasmid rescue. Empty-vector deletion and WT BW25113 controls;\n\
+    \    n3, SD.\n  family_mapping: P28634 reference PF01980 11-142 within 235 aa;\
+    \ pHSG construct is distinct from the His-tagged\n    pCA24N biochemical preparation.\
+    \ Complete physical insert is not independently verified.\n  scope_status: PHENOTYPIC\n\
+    \  limitations: Relative cellular peak height is not a catalytic rate or measurement\
+    \ of expression-normalized\n    enzyme activity. Flanks probably include native\
+    \ promoter/terminator, but that is not direct promoter\n    mapping.\n  nodes:\n\
+    \  - node_id: wt_rescue\n    label: WT trmO plasmid in delta-trmO versus empty\
+    \ vector\n    node_type: PERTURBATION\n  - node_id: signal\n    label: Normalized\
+    \ cellular m6t6A signal\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: restores-modification\n\
+    \    subject: wt_rescue\n    predicate: increases\n    object: signal\n    mechanism:\
+    \ WT trmO restores the m6t6A signal absent from the empty-vector deletion, to\
+    \ a level comparable\n      with the WT-strain control in the displayed assay.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:25063302\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: Wild-type trmO fully rescued m6t6A formation\n      explanation:\
+    \ Figure 3G, complementation methods and ledger S2; rescue does not establish\
+    \ isolated\n        PF01980 sufficiency.\n      cache_path: evidence/PF01980/kimura2014-assays.txt\n\
+    \      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    - graph_id: ectrmo-thr3-binding-2014\n  title: Purified E. coli TrmO forms complexes\
+    \ with modified and unmodified Thr3\n  scope: N-terminal 6xHis-tagged whole EcTrmO\
+    \ from pCA24N; binding assay, not a methylation assay.\n  context: Figure 3A;\
+    \ 15 pmol RNA, 0-45 pmol protein in 10 uL, 50 mM Tris pH8, 5 mM MgCl2, 100 mM\
+    \ KCl,\n    2 mM spermine, 37 C 30 min; native PAGE with RNA and protein stains.\n\
+    \  family_mapping: P28634 sequence2 reference maps PF01980 to 11-142; no isolated\
+    \ domain tested. Exact\n    tag/linker-bearing assay body has not been independently\
+    \ sequenced here.\n  scope_status: MECHANISTIC\n  limitations: Mobility shift\
+    \ establishes complex formation, not a Kd, stoichiometry, direct base contacts\n\
+    \    or methylation. Thr4 yields a smeared/unstable band. Lane9 is protein only\
+    \ despite the caption's blanket\n    RNA statement.\n  nodes:\n  - node_id: modified_mix\n\
+    \    label: EcTrmO plus t6A37-bearing Thr3\n    node_type: PROCESS\n    grounding:\n\
+    \    - UniProtKB:P28634\n  - node_id: modified_complex\n    label: TrmO complex\
+    \ with t6A37-bearing Thr3\n    node_type: STATE\n  - node_id: unmodified_mix\n\
+    \    label: EcTrmO plus unmodified A37 Thr3\n    node_type: PROCESS\n    grounding:\n\
+    \    - UniProtKB:P28634\n  - node_id: unmodified_complex\n    label: TrmO complex\
+    \ with A37 Thr3\n    node_type: STATE\n  edges:\n  - edge_id: binds-modified-thr3\n\
+    \    subject: modified_mix\n    predicate: produces\n    object: modified_complex\n\
+    \    mechanism: Addition of increasing protein to fixed modified RNA increases\
+    \ the shifted complex in lanes1-4;\n      this supports a physical association\
+    \ under the assay conditions.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25063302\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: a larger amount of this complex was formed\n      explanation:\
+    \ Figure 3A lanes1-4, Results and binding methods; ledger S3.\n      cache_path:\
+    \ evidence/PF01980/kimura2014-assays.txt\n      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    \  - edge_id: binds-unmodified-thr3\n    subject: unmodified_mix\n    predicate:\
+    \ produces\n    object: unmodified_complex\n    mechanism: Unmodified A37-Thr3\
+    \ also shifts upon protein addition in lanes5/6. Thus t6A37 is not necessary\n\
+    \      for this observed binding, although unmodified A37 is not methylated in\
+    \ Figure 3C.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25063302\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n  \
+    \    snippet: does not require t6A37 to interact with tRNAThr3(GGU)\n      explanation:\
+    \ Binding Results and original Figure 3A lanes5/6, interpreted separately from\
+    \ the concentration\n        series; ledger S3 records both observations and the\
+    \ chemistry negative control.\n      cache_path: evidence/PF01980/kimura2014-assays.txt\n\
+    \      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    - graph_id: ectrmo-thr3-methylation-2014\n  title: EcTrmO and AdoMet methylate\
+    \ premodified Thr3 transcript\n  scope: Purified His-tagged whole EcTrmO with\
+    \ a synthetic t6A37-bearing tRNAThr3(GGU) transcript.\n  context: Figure 3B/C;\
+    \ 1 uM RNA, 10 uM enzyme, 1 mM AdoMet, 20 uL, 50 mM HEPES pH6.7, 100 mM KCl, 5\
+    \ mM\n    MgCl2, 1 mM DTT, 37 C 1 h; RNase T1/LCMS.\n  family_mapping: P28634\
+    \ sequence2, PF01980 11-142 and PF18389 159-234. Whole-enzyme preparation includes\n\
+    \    both domains and an N-terminal His tag; reference body does not prove exact\
+    \ physical insert.\n  scope_status: MECHANISTIC\n  limitations: Joint enzyme/donor/substrate\
+    \ requirement, not independent sufficiency of any input. A37-Thr3\n    binds but\
+    \ is not methylated. Endpoint conversion is not kcat/Km, native flux or an atomic\
+    \ trajectory.\n  nodes:\n  - node_id: reaction\n    label: EcTrmO plus AdoMet\
+    \ and t6A37-Thr3\n    node_type: PROCESS\n    grounding:\n    - UniProtKB:P28634\n\
+    \  - node_id: product\n    label: m6t6A37-bearing Thr3\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: produces-methylated-thr3\n    subject: reaction\n    predicate:\
+    \ produces\n    object: product\n    mechanism: The combined reaction yields the\
+    \ m6t6A-containing tetramer; omission of AdoMet gives no\n      detected methylation.\
+    \ Pre-existing t6A37 is the methylated substrate, not unmodified A37.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:25063302\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: no methylation occurred in the absence of AdoMet\n      explanation:\
+    \ Original Figure 3B with donor and no-donor panels, Figure 3C negative substrate,\
+    \ Results\n        and methods; ledger S3.\n      cache_path: evidence/PF01980/kimura2014-assays.txt\n\
+    \      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    - graph_id: ectrmo-native-mixed-substrate-2014\n  title: EcTrmO increases m6t6A\
+    \ in an isolated mixed-modification Thr3 preparation\n  scope: Purified EcTrmO\
+    \ acting on native Thr3 isolated from delta-trmO; separate from synthetic-transcript\n\
+    \    assays.\n  context: Figure 3D; t6A37/ct6A37 mixture from RNA purification,\
+    \ 1 uM RNA, 10 uM enzyme, 1 mM AdoMet,\n    HEPES6.7/KCl/MgCl2/DTT, 37 C 1 h;\
+    \ matched no-TrmO comparison.\n  family_mapping: P28634 reference PF01980 11-142\
+    \ in the whole 235-aa protein; native RNA modification\n    state is not a change\
+    \ to protein-domain mapping.\n  scope_status: MECHANISTIC\n  limitations: The\
+    \ no-enzyme m6t6A peak includes author-identified WT-RNA probe carryover, not\
+    \ mutant\n    residual synthesis. ct6A hydrolysis during handling contributes\
+    \ t6A. Unchanged ct6A is a condition-specific\n    negative, not universal zero\
+    \ turnover.\n  nodes:\n  - node_id: enzyme_addition\n    label: Add EcTrmO to\
+    \ AdoMet and isolated mixed Thr3\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:P28634\n  - node_id: product\n    label: m6t6A-containing Thr3\
+    \ fragment signal\n    node_type: STATE\n  edges:\n  - edge_id: increases-native-rna-product\n\
+    \    subject: enzyme_addition\n    predicate: increases\n    object: product\n\
+    \    mechanism: Product rises while t6A substrate falls, and the ct6A fraction\
+    \ is approximately unchanged.\n      The effect supports t6A methylation in this\
+    \ mixture without attributing the carryover baseline to\n      TrmO-independent\
+    \ biology.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25063302\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n  \
+    \    snippet: m6t6A was formed in response to a reduction in t6A\n      explanation:\
+    \ Original Figure 3D, asterisk/carryover caption and native-RNA Results; ledger\
+    \ S4. Fractions\n        are not fitted rates.\n      cache_path: evidence/PF01980/kimura2014-assays.txt\n\
+    \      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    - graph_id: ectrmo-residue-perturbations-2014\n  title: Whole-protein substitutions\
+    \ reduce cellular m6t6A complementation\n  scope: Five separate pHSG415-encoded\
+    \ EcTrmO variants in delta-trmO; D194A/R196A is one double mutant,\n    not two\
+    \ single-mutant experiments.\n  context: Figure 3G; midlog transformants; m6t6A/m2A\
+    \ peak-height ratio normalized to WT-plasmid rescue,\n    n3 and SD. Empty vector\
+    \ and WT strain are retained controls.\n  family_mapping: P28634 sequence2 verifies\
+    \ Q25,R92,D125,K136 inside PF01980 11-142 and D194,R196 in PF18389\n    159-234.\
+    \ P28634 position111 is V; AF0241 D111 is a different protein's numbering.\n \
+    \ scope_status: PHENOTYPIC\n  limitations: No matched abundance/folding or active-enzyme\
+    \ normalization established. Mutation effects\n    do not directly demonstrate\
+    \ E. coli AdoMet contacts, RNA-binding defects or isolated-domain catalysis.\n\
+    \    Discussion Asp111 conflicts with Results/Figure3 D125.\n  nodes:\n  - node_id:\
+    \ q25a\n    label: Q25A versus WT trmO complementation\n    node_type: PERTURBATION\n\
+    \  - node_id: r92a\n    label: R92A versus WT trmO complementation\n    node_type:\
+    \ PERTURBATION\n  - node_id: d125a\n    label: D125A versus WT trmO complementation\n\
+    \    node_type: PERTURBATION\n  - node_id: k136a\n    label: K136A versus WT trmO\
+    \ complementation\n    node_type: PERTURBATION\n  - node_id: cterm_double\n  \
+    \  label: Joint D194A/R196A versus WT trmO complementation\n    node_type: PERTURBATION\n\
+    \  - node_id: signal\n    label: Normalized cellular m6t6A signal\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: q25a-reduces-signal\n    subject: q25a\n \
+    \   predicate: decreases\n    object: signal\n    mechanism: Q25A retains a reduced\
+    \ nonzero m6t6A signal relative to WT rescue; no absolute loss or\n      measured\
+    \ binding defect is asserted.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25063302\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: dramatically reduced in the Q25A and D125A mutants\n      explanation:\
+    \ Figure 3G Q25A bar; ledger S2. Protein abundance and folding remain alternatives.\n\
+    \      cache_path: evidence/PF01980/kimura2014-assays.txt\n      cache_sha256:\
+    \ 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n  - edge_id:\
+    \ r92a-reduces-signal\n    subject: r92a\n    predicate: decreases\n    object:\
+    \ signal\n    mechanism: R92A has no detected m6t6A signal in this assay versus\
+    \ WT rescue, without establishing\n      absolute inactivity in every condition.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:25063302\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: the R92A and K136A mutants did not\n      explanation: Figure\
+    \ 3G R92A N.D. label; ledger S2. No direct Ec atomic contact follows.\n      cache_path:\
+    \ evidence/PF01980/kimura2014-assays.txt\n      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    \  - edge_id: d125a-reduces-signal\n    subject: d125a\n    predicate: decreases\n\
+    \    object: signal\n    mechanism: D125A retains a smaller nonzero signal than\
+    \ WT rescue. The experimental label is D125A,\n      not the Discussion's conflicting\
+    \ Asp111 designation.\n    directness: UNRESOLVED\n    support: OBSERVED\n   \
+    \ evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25063302\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: dramatically reduced in the Q25A and D125A mutants\n      explanation:\
+    \ Figure 3G D125A bar and verified P28634 residue; ledger S2 and member mapping.\n\
+    \      cache_path: evidence/PF01980/kimura2014-assays.txt\n      cache_sha256:\
+    \ 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n  - edge_id:\
+    \ k136a-reduces-signal\n    subject: k136a\n    predicate: decreases\n    object:\
+    \ signal\n    mechanism: K136A fails to restore a detectable signal in the cellular\
+    \ complementation assay; catalytic\n      and structural causes are unresolved.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:25063302\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: the R92A and K136A mutants did not\n      explanation: Figure\
+    \ 3G K136A N.D. label; ledger S2. AF0241 structural contacts are a separate homolog\n\
+    \        context.\n      cache_path: evidence/PF01980/kimura2014-assays.txt\n\
+    \      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    \  - edge_id: cterm-double-reduces-signal\n    subject: cterm_double\n    predicate:\
+    \ decreases\n    object: signal\n    mechanism: The joint D194A/R196A substitution\
+    \ outside PF01980 yields no detected signal versus WT\n      rescue. Independent\
+    \ effects of D194A and R196A, or a direct RNA-binding role, are not measured.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:25063302\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: Mutation of the conserved motif in the C-terminal domain (D194A/R196A)\n\
+    \      explanation: Figure 3G double-mutant label and Results; ledger S2. PF18389\
+    \ attribution is explicit.\n      cache_path: evidence/PF01980/kimura2014-assays.txt\n\
+    \      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    - graph_id: ectrmo-thr3-identity-loss-2014\n  title: Thr3 RNA substitutions reduce\
+    \ EcTrmO-dependent methyl incorporation\n  scope: Six distinct t6A37-bearing Thr3\
+    \ transcript variants in purified whole-EcTrmO reactions; perturbations\n    are\
+    \ in RNA, not protein.\n  context: Figure 4; 1 uM RNA, 0.1 uM EcTrmO, 25 uM radiolabeled\
+    \ AdoMet, 10 uL, HEPES6.7/KCl/MgCl2/DTT,\n    37 C 5 min; TCA-retained methyl\
+    \ incorporation normalized to WT Thr3, n3 and SD.\n  family_mapping: EcTrmO reference\
+    \ P28634, PF01980 11-142; RNA positions31/34/35/39 are tRNA numbering,\n    not\
+    \ coordinates in PF01980. Whole tagged enzyme is held constant.\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: Relative endpoint incorporation does not identify\
+    \ direct base contacts or distinguish altered\n    RNA folding from recognition.\
+    \ Small residual bars are preserved; other tested substitutions remain\n    near\
+    \ WT. No universal tRNA specificity rule is asserted.\n  nodes:\n  - node_id:\
+    \ as4\n    label: Replace Thr3 anticodon stem with Thr4 stem\n    node_type: PERTURBATION\n\
+    \  - node_id: pair\n    label: Joint Thr3 C31A/G39U substitution\n    node_type:\
+    \ PERTURBATION\n  - node_id: g34c\n    label: Thr3 G34C\n    node_type: PERTURBATION\n\
+    \  - node_id: g34u\n    label: Thr3 G34U\n    node_type: PERTURBATION\n  - node_id:\
+    \ g35a\n    label: Thr3 G35A\n    node_type: PERTURBATION\n  - node_id: g35c\n\
+    \    label: Thr3 G35C\n    node_type: PERTURBATION\n  - node_id: signal\n    label:\
+    \ Methyl incorporation relative to WT Thr3\n    node_type: PHENOTYPE\n  edges:\n\
+    \  - edge_id: as4-lowers-incorporation\n    subject: as4\n    predicate: decreases\n\
+    \    object: signal\n    mechanism: AS4 has a small residual signal compared with\
+    \ WT Thr3. It is a whole-stem replacement,\n      not a single-base intervention.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:25063302\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: lost the ability to be methylated by TrmO\n      explanation:\
+    \ Original Figure 4B AS4 bar and Results stem-swap paragraph; ledger S5 retains\
+    \ the small\n        displayed residual despite the categorical prose.\n     \
+    \ cache_path: evidence/PF01980/kimura2014-assays.txt\n      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    \  - edge_id: pair-lowers-incorporation\n    subject: pair\n    predicate: decreases\n\
+    \    object: signal\n    mechanism: Changing the C31-G39 pair jointly to A31-U39\
+    \ reduces incorporation to a small residual\n      signal; the individual base\
+    \ effects are not separated.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25063302\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: When C31-G39 was replaced by A31-U39, little methylation was observed\n\
+    \      explanation: Figure 4B C31A/G39U bar; ledger S5 retains joint scope and\
+    \ nonzero residual.\n      cache_path: evidence/PF01980/kimura2014-assays.txt\n\
+    \      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    \  - edge_id: g34c-lowers-incorporation\n    subject: g34c\n    predicate: decreases\n\
+    \    object: signal\n    mechanism: G34C lowers but does not abolish methyl incorporation\
+    \ under the assay conditions.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25063302\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: When G34 was replaced with C or U\n      explanation: Figure 4B\
+    \ G34C bar and Results; ledger S5. No base-contact geometry is inferred.\n   \
+    \   cache_path: evidence/PF01980/kimura2014-assays.txt\n      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    \  - edge_id: g34u-lowers-incorporation\n    subject: g34u\n    predicate: decreases\n\
+    \    object: signal\n    mechanism: G34U has substantial residual incorporation\
+    \ but less than WT Thr3. This is a separate RNA\n      variant from G34C.\n  \
+    \  directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:25063302\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: When G34 was replaced with C or U\n      explanation: Figure 4B\
+    \ G34U bar; ledger S5 retains residual methylation.\n      cache_path: evidence/PF01980/kimura2014-assays.txt\n\
+    \      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    \  - edge_id: g35a-lowers-incorporation\n    subject: g35a\n    predicate: decreases\n\
+    \    object: signal\n    mechanism: G35A reduces methyl incorporation to a small\
+    \ displayed residual relative to WT Thr3; this\n      is not an assay of native\
+    \ Ile tRNA.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25063302\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n  \
+    \    snippet: Neither variant was significantly methylated\n      explanation:\
+    \ Figure 4B G35A and Results; ledger S5. No zero-activity or direct atomic-contact\
+    \ conclusion.\n      cache_path: evidence/PF01980/kimura2014-assays.txt\n    \
+    \  cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    \  - edge_id: g35c-lowers-incorporation\n    subject: g35c\n    predicate: decreases\n\
+    \    object: signal\n    mechanism: G35C reduces incorporation in the Thr3 scaffold,\
+    \ not an experiment proving all Ser tRNAs\n      cannot be methylated by every\
+    \ homolog.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25063302\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n  \
+    \    snippet: Neither variant was significantly methylated\n      explanation:\
+    \ Figure 4B G35C and Results; ledger S5. Human TRMO has a distinct tested substrate.\n\
+    \      cache_path: evidence/PF01980/kimura2014-assays.txt\n      cache_sha256:\
+    \ 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n- graph_id:\
+    \ ectrmo-thr4-identity-gain-2014\n  title: Combined Thr4 RNA changes increase\
+    \ EcTrmO-dependent methyl incorporation\n  scope: Two t6A37-bearing Thr4 transcript\
+    \ interventions compared with WT Thr4; no single-base sufficiency\n    claim.\n\
+    \  context: Figure 4; 1 uM RNA, 0.1 uM EcTrmO, 25 uM radiolabeled AdoMet, 37 C\
+    \ 5 min in HEPES6.7/KCl/MgCl2/DTT.\n    Plot normalization is to WT Thr3; comparison\
+    \ here is the Thr4 variants versus WT Thr4.\n  family_mapping: P28634 reference\
+    \ PF01980 11-142; mutations are RNA positions in Thr4, not protein residues.\n\
+    \    The whole protein and donor are required assay inputs.\n  scope_status: PHENOTYPIC\n\
+    \  limitations: A31C/U39G alone and the labeled U34G control have low signals,\
+    \ but Table S2 prints identical\n    WT and U34G-only primer strings, leaving\
+    \ that control's exact sequence unresolved. Combined effects\n    do not establish\
+    \ independent sufficient causes or direct RNA contacts; see the supplemental ledger.\n\
+    \  nodes:\n  - node_id: triple\n    label: Joint Thr4 A31C/U39G/U34G substitution\n\
+    \    node_type: PERTURBATION\n  - node_id: asl3\n    label: Replace Thr4 anticodon\
+    \ stem-loop with Thr3 stem-loop\n    node_type: PERTURBATION\n  - node_id: signal\n\
+    \    label: Methyl incorporation versus WT Thr4\n    node_type: PHENOTYPE\n  edges:\n\
+    \  - edge_id: triple-increases-incorporation\n    subject: triple\n    predicate:\
+    \ increases\n    object: signal\n    mechanism: The combined base-pair and wobble\
+    \ changes increase incorporation over poorly methylated\n      WT Thr4. Separately\
+    \ labeled determinant controls have lower signals, but the U34G-only primer discrepancy\n\
+    \      limits sequence-level interpretation of that negative control.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:25063302\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: when both determinants were introduced simultaneously (A31C/U39G/U34G)\n\
+    \      explanation: Figure 4B final Thr4 bars and Results; ledger S5. Conjunctive\
+    \ intervention is retained\n        as one node.\n      cache_path: evidence/PF01980/kimura2014-assays.txt\n\
+    \      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    \  - edge_id: asl3-increases-incorporation\n    subject: asl3\n    predicate:\
+    \ increases\n    object: signal\n    mechanism: Transplanting the entire Thr3\
+    \ anticodon stem-loop increases methyl incorporation over WT\n      Thr4; its\
+    \ displayed signal also exceeds the triple mutant, without isolating any additional\
+    \ causal\n      base.\n    directness: UNRESOLVED\n    support: OBSERVED\n   \
+    \ evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25063302\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: when the entire anticodon stem-loop\n      explanation: Figure\
+    \ 4 ASL3 construct and bar; ledger S5. Whole-loop scope is explicit.\n      cache_path:\
+    \ evidence/PF01980/kimura2014-assays.txt\n      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    - graph_id: ectrmo-thrl-reporter-wt-background-2014\n  title: trmO deletion increases\
+    \ ThrL-Luc output in a tcdA-positive background\n  scope: E. coli BW25113 delta-trmO\
+    \ versus WT reporter comparison; not direct observation of ribosome\n    movement\
+    \ or native transcription.\n  context: Figure 5C left; pBR322 ThrL-Luc and attenuator-free\
+    \ Luc, 2 mL LB37 C, OD6000.4-0.6; lysate\n    luminescence normalized to culture\
+    \ OD600 and WT, n4 with SD.\n  family_mapping: Whole trmO gene perturbation; P28634\
+    \ reference PF01980 11-142 within the 235-aa multidomain\n    protein. No isolated-domain\
+    \ perturbation.\n  scope_status: PHENOTYPIC\n  limitations: About1.5-fold ThrL-Luc\
+    \ effect, while Luc remains near baseline. Proposed impaired decoding/attenuation\n\
+    \    is not a directly measured intermediate. This WT normalization is distinct\
+    \ from the delta-tcdA comparison.\n  nodes:\n  - node_id: deletion\n    label:\
+    \ trmO deletion in tcdA-positive cells versus WT\n    node_type: PERTURBATION\n\
+    \  - node_id: reporter\n    label: OD-normalized ThrL-Luc luminescence\n    node_type:\
+    \ PHENOTYPE\n  edges:\n  - edge_id: increases-reporter\n    subject: deletion\n\
+    \    predicate: increases\n    object: reporter\n    mechanism: trmO deletion\
+    \ increases the attenuator-containing reporter relative to WT without a comparable\n\
+    \      increase in attenuator-free Luc; no reporter rescue or native transcription-rate\
+    \ measurement is\n      supplied.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25063302\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: a 1.5-fold increase in luciferase activity relative to WT\n  \
+    \    explanation: Original Figure 5C left, reporter methods and Results; ledger\
+    \ S6.\n      cache_path: evidence/PF01980/kimura2014-assays.txt\n      cache_sha256:\
+    \ 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n- graph_id:\
+    \ ectrmo-thrl-reporter-tcda-background-2014\n  title: trmO deletion increases\
+    \ ThrL-Luc output in a delta-tcdA background\n  scope: E. coli BW25113-derived\
+    \ delta-trmO/delta-tcdA versus delta-tcdA; conditional trmO effect, not\n    double\
+    \ deletion versus WT.\n  context: Figure 5C right; same LB midlog luminescence\
+    \ assay, OD600 normalization, then normalization\n    to delta-tcdA rather than\
+    \ WT; ThrL-Luc and attenuator-free Luc controls, n4 and SD.\n  family_mapping:\
+    \ Whole trmO gene effect in a separate genetic background; P28634 reference PF01980\
+    \ 11-142.\n    TcdA is a separate enzyme, not a PF01980 activity.\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: About2-fold ThrL-Luc change does not quantify ct6A\
+    \ versus t6A decoding on a common baseline\n    with the WT-background graph.\
+    \ No direct ribosome stalling, native flux or isolated-domain mechanism\n    is\
+    \ shown.\n  nodes:\n  - node_id: deletion\n    label: Add trmO deletion to delta-tcdA\
+    \ cells\n    node_type: PERTURBATION\n  - node_id: reporter\n    label: OD-normalized\
+    \ ThrL-Luc luminescence versus delta-tcdA\n    node_type: PHENOTYPE\n  edges:\n\
+    \  - edge_id: increases-conditional-reporter\n    subject: deletion\n    predicate:\
+    \ increases\n    object: reporter\n    mechanism: The double deletion increases\
+    \ the attenuator-containing reporter relative to delta-tcdA,\n      with attenuator-free\
+    \ Luc near its own baseline. The observed output is luminescence, not directly\n\
+    \      measured decoding efficiency.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25063302\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: a 2-fold increase in luciferase activity relative to\n      explanation:\
+    \ Original Figure 5C right, caption normalization and Results; ledger S6.\n  \
+    \    cache_path: evidence/PF01980/kimura2014-assays.txt\n      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    - graph_id: human-trmo-ser-methylation-2014\n  title: Human TRMO and AdoMet methylate\
+    \ premodified Ser(GCU) transcript\n  scope: Recombinant HeLa-derived C9orf156/TRMO\
+    \ expressed in E. coli, assayed with synthetic human tRNASer(GCU);\n    not a\
+    \ human knockout/rescue experiment.\n  context: Figure 6E/F; 1 uM TRMO, 1 uM t6A37-bearing\
+    \ RNA, 1 mM AdoMet, 100 uL, 50 mM HEPES6.7, 100 mM\n    KCl, 5 mM MgCl2, 1 mM\
+    \ DTT, 37 C1h; RNase A fragments and nucleosides analyzed by LC/MS.\n  family_mapping:\
+    \ Human Q9BU70 sequence2/entry154 is441 aa with PF01980 36-165; S5 names NP_057565.3.\n\
+    \    Table S2 primers match reference termini MRGLE and LVSLGS, not the entire\
+    \ physical insert. HeLa cDNA\n    was cloned into pET28a and Ni-NTA-purified;\
+    \ exact tag/linker remains unverified.\n  taxon: NCBITaxon:9606\n  scope_status:\
+    \ MECHANISTIC\n  limitations: No isolated-domain sufficiency, human cellular necessity\
+    \ or splicing mechanism. HeLa modification\n    fractions conflict between prose\
+    \ and Figure6B; they are not used as causal evidence. Negative Ec comparator\n\
+    \    does not establish relative intrinsic potency.\n  nodes:\n  - node_id: reaction\n\
+    \    label: Human TRMO plus AdoMet and t6A37-Ser(GCU)\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:Q9BU70\n  - node_id: product\n    label: m6t6A37-bearing\
+    \ human Ser(GCU)\n    node_type: STATE\n  edges:\n  - edge_id: produces-methylated-ser\n\
+    \    subject: reaction\n    predicate: produces\n    object: product\n    mechanism:\
+    \ The combined reaction produces the m6t6A-containing RNase A trimer and m6t6A\
+    \ nucleoside;\n      enzyme-only and donor-only controls lack detected product.\
+    \ EcTrmO plus donor does not methylate\n      this substrate under the tested\
+    \ comparison.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25063302\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n  \
+    \    snippet: only in the presence of both recombinant C9orf156 and AdoMet\n \
+    \     explanation: Original Figure 6E/F, Results and human assay methods; ledger\
+    \ S7. Joint inputs and\n        distinct human substrate are retained.\n     \
+    \ cache_path: evidence/PF01980/kimura2014-assays.txt\n      cache_sha256: 3ac5e14920be5c6353364bf1b9e390db564ebf74e2c2c2391d5b39be4349c22a\n\
+    - graph_id: trmo-product-decoding-model-2014\n  title: Proposed m6t6A-dependent\
+    \ anticodon stabilization in a structural model\n  scope: Author-proposed downstream\
+    \ effect of the TrmO product, modeled on a Lys anticodon stem-loop rather\n  \
+    \  than measured in EcThr3 or human Ser RNA.\n  context: Supplement Figure S9\
+    \ modifies the t6A-containing Lys ASL in the Thermus thermophilus 30S-mRNA\n \
+    \   complex PDB1XMO recognizing AAG. The added N6-methyl carbon is modeled 3.3\
+    \ A from U36 O4 and 3.2 A\n    from A38 N6.\n  family_mapping: This concerns the\
+    \ chemical product made by mapped whole TrmO enzymes, not a PF01980-containing\n\
+    \    structure. EcP28634 PF01980 11-142 and humanQ9BU70 PF01980 36-165 provide\
+    \ upstream context only; no\n    observed chain is joined across these systems.\n\
+    \  scope_status: HYPOTHETICAL\n  limitations: No dynamics, interaction energy,\
+    \ EcThr/ACC structure or decoding-rate measurement supports\n    this proposed\
+    \ transition directly. Lys/AAG model transfer is explicit. Reporter effects and\
+    \ measured\n    methylation remain separate graphs, not validation of the modeled\
+    \ contacts.\n  nodes:\n  - node_id: methylated_asl\n    label: Modeled N6 methylation\
+    \ of t6A37 in Lys ASL\n    node_type: PERTURBATION\n  - node_id: stabilization\n\
+    \    label: Proposed anticodon stacking and U36 stabilization\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: proposed-anticodon-stabilization\n    subject:\
+    \ methylated_asl\n    predicate: increases\n    object: stabilization\n    mechanism:\
+    \ The authors propose that the modeled methyl group favors contacts with U36 and\
+    \ A38 and\n      reduces U36 fluctuation. The displayed distances motivate a hypothesis,\
+    \ not a measured energetic\n      or dynamic effect.\n    directness: UNRESOLVED\n\
+    \    support: HYPOTHESIZED\n    evidence_kind: COMPUTATIONAL\n    evidence:\n\
+    \    - reference: PMID:25063302\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML\n\
+    \      snippet: might have a function in stabilizing the anticodon\n      explanation:\
+    \ Main Discussion and visually inspected S9A/B with the exact scaffold specified\
+    \ by its\n        caption; supplemental ledger T4 preserves the cross-tRNA and\
+    \ modeling limits.\n      cache_path: evidence/PF01980/kimura2014-supplement.txt\n\
+    \      cache_sha256: 78421486274b932b6c336952a7e934c1f4b86d56bac8fb60a133d5fa03b3ecb2\n\
+    curation_events:\n- timestamp: '2026-10-15T20:47:13Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate scoped TrmO_N causal graphs from\
+    \ original E. coli and human assays\n  history_record: history/records/PF01980/2026-10-15T204713Z-codex-309275.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-15T20:56:16Z'\n\
+    \  curator: Codex\n  action: EDIT\n  outcome: changed\n  summary: Integrate inspected\
+    \ TrmO supplements and separate the modeled decoding hypothesis\n  history_record:\
+    \ history/records/PF01980/2026-10-15T205616Z-codex-6cf4c9.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+limitations:
+- Scientific self-review is partial; the complete8296-record objective remains unfinished.
+  Graph presence is not completed family review.
+- A reference protein is not a verified physical construct. D194A/R196A is a joint
+  PF18389 perturbation outside PF01980, not two isolated PF01980 residue mechanisms.
+- Figure6 human A37 percentages, EcAsp111/D125, RNA acceptor-pair labels, Um positions
+  and identical WT/U34G-only primer strings remain explicitly unresolved.
+- The first supplement transfer timed out; only the successful complete ZIP and its
+  extracted files support the supplement assessment. Initial Bio import failed; translation
+  succeeded in the available offline Biopython environment.
+- No protein-expression/folding normalization or human genetic-necessity experiment
+  is established. Distinct reporter normalizations cannot be pooled into decoding-rate
+  estimates.
+- Full release QC and canonical source-pin/Pages refresh remain publication work.
+  Post-review history/index validation follows this retained scientific observation.
+```

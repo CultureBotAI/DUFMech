@@ -1,0 +1,26 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01980
+  path: curation/families/PF01980.yaml
+session:
+  id: 2026-10-15T205616Z-codex-6cf4c9
+  timestamp: '2026-10-15T20:56:16Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Integrate inspected TrmO supplements and separate the modeled decoding
+    hypothesis
+  details: Retrieved complete open-access supplement; inspected S3/S5/S7/S9 images,
+    captions, genetic-mapping paragraph and Table S2. Verified human cloning-primer
+    endpoints with Biopython and reference sequence; retained full-insert uncertainty
+    and identical WT/U34G-only primer discrepancy. Added one COMPUTATIONAL/HYPOTHESIZED
+    downstream stabilization graph without joining the Lys/AAG model to observed EcThr/ACC
+    assays. Tightened two quotation anchors and corrected the RNA control label. Total12
+    graphs/24 edges,23 observed and1hypothesized; broader family and physiological
+    coverage remains incomplete.

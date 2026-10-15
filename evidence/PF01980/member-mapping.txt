@@ -1,0 +1,55 @@
+PF01980 TrmO_N: member mapping and construct boundaries
+Inspected 2026-10-15 by Codex. Database mappings are context, not causal evidence.
+
+Frozen family identity
+interpro-pfam-duf-2026-10-10; PF01980 / TrmO_N / IPR023370; EX_DUF.
+Worklist SHA256 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+The paper calls the conserved N-terminal region UPF0066. Its experimental name
+YaeB was renamed TrmO; these are not the unrelated toxin YoeB.
+
+E. coli reference, not an independently verified physical assay insert
+https://rest.uniprot.org/uniprotkb/P28634.json
+Response SHA256 4b525a0de48af144a153989183d4d98bc309d8e8c7ae88b0c1dbc418ea6b8cce.
+P28634, trmO / tsaA / yaeB, b0195 / JW0191; E. coli K-12, taxon83333.
+Sequence version2 (1994-10-01), entry158 (2026-01-28), 235 aa.
+CRC64 B19F8D50DECCB572; MD5 7362A2591A895BF47E3333890B401D15.
+Reference sequence:
+MSSFQFEQIGVIRSPYKEKFAVPRQPGLVKSANGELHLIAPYNQADAVRGLEAFSHLWILFVFHQTMEGGWRPTVRPPRLGGNARMGVFATRSTFRPNPIGMSLVELKEVVCHKDSVILKLGSLDLVDGTPVVDIKPYLPFAESLPDASASYAQSAPAAEMAVSFTAEVEKQLLTLEKRYPQLTLFIREVLAQDPRPAYRKGEETGKTYAVWLHDFNVRWRVTDAGFEVFALEPR
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P28634/
+Response SHA256 409654b100e25f68039ed46d587895593b17e5b8edfe99e76d40f17178fb4fd7.
+Complete response count2, next=null: PF01980 residues11-142, IPR023370;
+PF18389 residues159-234, IPR041369; both continuous, 235-aa reference body.
+Direct sequence indexing confirms Q25,R92,D125,K136 within PF01980 and
+D194,R196 in PF18389. Position111 is V, not D, in this E. coli reference.
+Figure3F uses AF0241 numbering D111 for the archaeal homolog; Figure3G and
+Results use E. coli D125A. Discussion's E. coli Asp111 is retained as a source
+numbering conflict, not silently adopted as a tested E. coli mutation.
+UniProt AdoMet-binding annotations are by similarity, not E. coli atomic data.
+
+Kimura2014 methods: purified E. coli protein is N-terminally 6xHis-tagged
+TrmO from pCA24N (ASKA collection). Complementation instead uses trmO with
+flanking sequences in pHSG415 (rpSC101); these are distinct preparations.
+BW25113 is explicitly the reporter/complementation wild-type strain; reference
+taxon83333 denotes the K-12 reference, not an independently verified BW25113
+assay-genome accession. Neither the complete ASKA nor pHSG insert is verified
+by the reference lookup. No isolated PF01980 construct is tested here.
+
+Human reference, not an independently verified HeLa-derived physical insert
+https://rest.uniprot.org/uniprotkb/Q9BU70.json
+Response SHA256 1d7e2bc0172a386923efa6c4e411a338dd528fd8bcf94ee3fee3619cc6e41085.
+Q9BU70, TRMO / C9orf156 / HSPC219; Homo sapiens, taxon9606.
+Sequence version2 (2007-05-29), entry154 (2026-09-02), 441 aa.
+CRC64 84E6CF8BD294EDD2; MD5 8FF7C2F75E68B6406EAC10279FDA8451.
+Reference sequence:
+MRGLEESGPRPTATPCGCVKPALETGNLLTEPVGYLESCFSAKNGTPRQPSICSYSRACLRIRKRIFNNPEHSLMGLEQFSHVWILFVFHKNGHLSCKAKVQPPRLNGAKTGVFSTRSPHRPNAIGLTLAKLEKVEGGAIYLSGIDMIHGTPVLDIKPYIAEYDSPQNVMEPLADFNLQNNQHTPNTVSQSDSKTDSCDQRQLSGCDEPQPHHSTKRKPKCPEDRTSEENYLTHSDTARIQQAFPMHREIAVDFGLESRRDQSSSVAEEQIGPYCPEKSFSEKGTDKKLERVEGAAVLQGSRAETQPMAPHCPAGRADGAPRSVVPAWVTEAPVATLEVRFTPHAEMDLGQLSSQDVGQASFKYFQSAEEAKRAIEAVLSADPRSVYRRKLCQDRLFYFTVDIAHVTCWFGDGFAEVLRIKPASEPVHMTGPVGSLVSLGS
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q9BU70/
+Response SHA256 a31833f7e71b340375deb34c353de539a12907802b6c3de258c573edc22c1f34.
+Complete response count1,next=null: PF01980 residues36-165, IPR023370,
+continuous on the 441-aa reference. Lack of a second returned Pfam match does
+not mean the remaining protein has no functional C-terminal region.
+Paper cDNA was amplified from HeLa RNA and cloned into pET28a, NheI/SalI,
+expressed in BL21(DE3) Rosetta, induced at OD6000.7 with0.1mM IPTG at18C3h,
+and purified with Ni-NTA. Current canonical sequence is not proof of the exact
+studied HeLa transcript or tag/linker residues. Do not transfer E. coli residue
+numbers into human TRMO. The family and both reference bodies are contextual
+grounding; specific assay constructs and taxonomic transfer remain separate.
