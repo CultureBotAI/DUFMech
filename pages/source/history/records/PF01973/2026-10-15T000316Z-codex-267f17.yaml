@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01973
+  path: curation/families/PF01973.yaml
+session:
+  id: 2026-10-15T000316Z-codex-267f17
+  timestamp: '2026-10-15T00:03:16Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Extend PF01973 Maf and GlfM causal contexts from primary 2024 experiments
+  details: Assessed Unay2024 article and public supplements, mapped MR-1 Maf1/Maf2
+    and separate GlfM/flagellins, compared synthetic sequences to UniProt and NCBI,
+    and added 28 scoped graphs with 56 observed effects. Preserved original eight
+    graphs and two hypotheses. Deposited Maf2 L230S, plasmid-description conflicts,
+    donor/site limitations and unmapped ortholog profiles remain explicit. No direct
+    purified chemistry, full family completion, promotion or publication is claimed.
+    Baseline records-check passed 8296 records with zero drift.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/205

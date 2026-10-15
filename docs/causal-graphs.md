@@ -5848,3 +5848,29 @@ PF01973 Maf/GlfM continuation (2026-10-15, local curation):
   A retained source checkpoint, canonical rendering, adversarial publication
   review, full local QC and exact-head CI are required before merge. Publication
   does not resolve the three scientific findings or complete the corpus goal.
+
+PF01973 Maf/GlfM publication review (PR #208, 2026-10-15):
+
+- The candidate checkpoint `0fc1b328560ad751c28eebfb5093414f59205e0c` is
+  retained by annotated tag `source/dufmech-pr-208-candidate`. Native capture
+  and canonical online retention verification pass for all 9,112 source files.
+  Initial CI run `38660518906` reproduced the source-pin failure before full QC.
+- Fresh focused regressions pass 52 tests in 27.18s. Integrity checks verify
+  all 8,296 manifest hashes, four canonical PF01973 events, unchanged original
+  graphs and imported fields, exact review/inventory digest agreement, and
+  unchanged other family projections, frozen inputs, exports and old reviews.
+  The corpus inventory now has 785 graphs and 1,672 edges across 126 families;
+  this is structural coverage, not a count of independent experiments.
+- Primary Tables 1/2, Figure 4 and supplemental Figure S4C were visually
+  rechecked. S4 plasmid descriptions and S6 translation/alignment reproduce
+  the recorded construct conflict. Native FLAG-tag abundance controls do not
+  certify every SPOT-tag or BACTH lineage. No new blocking scientific defect
+  was established in this scoped adversarial self-review.
+- The publication review is not independent approval. Retain its own source
+  checkpoint, recapture and regenerate through native writers, then require
+  full local QC and exact-head CI before merge. The PR records subsequent
+  release outcomes. Preserve both source tags after deleting the branch.
+- Issues [#204](https://github.com/CultureBotAI/DUFMech/issues/204),
+  [#205](https://github.com/CultureBotAI/DUFMech/issues/205) and
+  [#207](https://github.com/CultureBotAI/DUFMech/issues/207) remain scientific
+  follow-ups. None is resolved merely by publishing this bounded extension.

@@ -77,11 +77,12 @@ discussions:
     evidence_source: primary_publication_lead
     explanation: Aeromonas Maf1 study identified for a separate full-text, construct and domain-mapping
       assessment; not used as evidence for the current graphs.
-  - reference: https://www.sciencedirect.com/science/article/pii/S0960982224007012
+  - reference: PMID:38897200
     supports: PARTIAL
-    evidence_source: primary_publication_lead
-    explanation: The 2024 multicomponent specificity study remains a full-methods/figure and exact-member
-      follow-up; publisher access returned 403 in this session.
+    evidence_source: primary_publication
+    explanation: Original article and public supplement now support native MR-1, Maf1 CTD, GlfM perturbation
+      and heterologous reconstitution graphs. The S6 synthetic Maf2 sequence discrepancy, other Maf member
+      mappings and atomic chemistry remain unresolved.
   - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11339370/
     supports: PARTIAL
     evidence_source: primary_publication_lead
@@ -89,9 +90,30 @@ discussions:
       or direct catalytic claim is transferred from search metadata.
   posed_by: Codex
   posed_date: '2026-10-14'
-  notes: Continue the explicit evidence/PF01973/coverage-and-exclusions.txt queue, including earlier Aeromonas,
-    Campylobacter, Helicobacter and newer studies. Full family review remains incomplete, and all earlier
-    corpus follow-ups stay open.
+  notes: Continue the explicit evidence/PF01973/coverage-and-exclusions.txt queue and the 2024 ledgers,
+    including Kurthia/Irchel Maf profile mapping, earlier Aeromonas, Campylobacter, Helicobacter and newer
+    studies. Clostridium2024 sequence-preference assessment requires its corrected supplement. Full family
+    review remains incomplete, and all earlier corpus follow-ups stay open.
+- discussion_id: unay-2024-construct-identity
+  prompt: Resolve the deposited Maf2 L230S sequence and conflicting plasmid descriptions before certifying
+    reference-wild-type constructs.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The S6 synthetic Maf2 design differs from both Q8EC85 and AAN56257.1 at residue230. Genomic
+    deletions and genome-amplified BACTH constructs are distinct from this expression lineage.
+  evidence:
+  - reference: PMID:38897200
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: TableS6 Sheet1 row4 translation covers all441 Maf2 residues and encodes Ser230 rather
+      than reference Leu230. TableS4 and Methods also disagree on pJU0014, pJU0025 and some parent plasmids.
+      This is a deposited-data discrepancy, not proof about physical plasmid sequence or a mutation's
+      functional effect.
+  posed_by: Codex
+  posed_date: '2026-10-15'
+  notes: Obtain final sequenced constructs or author-supported correction. Retain native residue numbering,
+    the S180/A181 correction and expression-lineage caveats. Do not assume detected HA/FLAG signal proves
+    folding. See evidence/PF01973/unay-2024-member-mapping.txt and unay-2024-maf-glfm.txt.
 causal_graphs:
 - graph_id: pf0930-pterin-diphosphate-2012
   title: PF0930 produces pterin diphosphate in a purified-protein assay
@@ -598,6 +620,1624 @@ causal_graphs:
         the D415A cellular phenotype cannot discriminate this proposal from destabilization.
       cache_path: evidence/PF01973/sulzenbacher-2018-maf.txt
       cache_sha256: d386fe9982f5703ceec75be5306af2e3ddee108f8a9be1fae34bf2b6bc7bb16b
+- graph_id: mr1-maf1-deletion-2024
+  title: Maf1 loss changes native flagellin modification and flagellar phenotypes
+  scope: Genomic SO_3273 deletion; no isolated-domain or synthetic Maf2 mutation.
+  context: Shewanella oneidensis MR-1; in-frame genomic deletions, host Pse pathway and flagellins retained
+    unless specified. 0.25% LB agar spread, TEM or immunoblot/LC-MS/MS as indicated. Methods and Figure1B
+    differ in incubation schedule; see evidence ledger.
+  family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
+    Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+  scope_status: PHENOTYPIC
+  limitations: Whole-gene effects do not identify the molecular transfer step. Site preference is not
+    exclusivity; sheared signal is not a measured secretion rate.
+  nodes:
+  - node_id: deletion
+    label: Native delta-maf1
+    node_type: PERTURBATION
+  - node_id: s143_modification
+    label: Detected S143-containing FlaA/FlaB glycopeptide adducts
+    node_type: PHENOTYPE
+  - node_id: filament_length
+    label: Flagellar filament length
+    node_type: PHENOTYPE
+  - node_id: spread
+    label: Spread on semisolid LB agar
+    node_type: PHENOTYPE
+  - node_id: sheared_signal
+    label: FlaA/B signal in mechanically sheared fraction
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-maf1-deletion-2024-1
+    subject: deletion
+    predicate: decreases
+    object: s143_modification
+    mechanism: Table1 loses the S143-containing modified peptides in delta-maf1 while delta-maf2 retains
+      them. Tagged flagellins were purified separately; absent detection is not a quantitative occupancy
+      measurement.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Table1; Figure2B; primary article, Methods and supplement inspected. Mapping and construct
+        caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf1-deletion-2024-2
+    subject: deletion
+    predicate: decreases
+    object: filament_length
+    mechanism: TEM measurements show markedly shorter filaments than WT; complementation is a separate
+      tested intervention.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure1C/D; primary article, Methods and supplement inspected. Mapping and construct
+        caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf1-deletion-2024-3
+    subject: deletion
+    predicate: decreases
+    object: spread
+    mechanism: The deletion produces little spread relative to WT under the reported motility assay; growth,
+      chemotaxis and rotation are not separately resolved.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 have opposing roles on motility
+      explanation: Figure1B; primary article, Methods and supplement inspected. Mapping and construct
+        caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf1-deletion-2024-4
+    subject: deletion
+    predicate: decreases
+    object: sheared_signal
+    mechanism: The sheared fraction contains less detectable flagellin; sigma70 controls assess lysis.
+      This does not isolate export from filament assembly or retention.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure1E; primary article, Methods and supplement inspected. Mapping and construct
+        caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-maf2-deletion-2024
+  title: Maf2 loss reduces a FlaA glycopeptide signal but increases spreading
+  scope: Genomic SO_3259 deletion; native Maf1 and GlfM remain.
+  context: Shewanella oneidensis MR-1; in-frame genomic deletions, host Pse pathway and flagellins retained
+    unless specified. 0.25% LB agar spread, TEM or immunoblot/LC-MS/MS as indicated. Methods and Figure1B
+    differ in incubation schedule; see evidence ledger.
+  family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
+    genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
+    to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+  scope_status: PHENOTYPIC
+  limitations: Do not generalize the FlaA S105-containing-peptide result to absolute loss at every FlaB
+    site. Table1 retains a rare FlaB +538 match; native filament length is not assumed identical to WT.
+  nodes:
+  - node_id: deletion
+    label: Native delta-maf2
+    node_type: PERTURBATION
+  - node_id: s105_modification
+    label: Detected S105-containing FlaA glycopeptide adducts
+    node_type: PHENOTYPE
+  - node_id: spread
+    label: Spread on semisolid LB agar
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-maf2-deletion-2024-1
+    subject: deletion
+    predicate: decreases
+    object: s105_modification
+    mechanism: The native deletion removes detected modification on this FlaA peptide while delta-maf1
+      retains it. The peptide contains multiple serines; raw site-localization spectra were not reanalyzed.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Table1; Figure2B; primary article, Methods and supplement inspected. Mapping and construct
+        caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf2-deletion-2024-2
+    subject: deletion
+    predicate: increases
+    object: spread
+    mechanism: The deletion expands more than WT, opposite to maf1 loss. This is a whole-cell phenotype,
+      not proof of direct inhibition of the flagellar motor by Maf2.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 have opposing roles on motility
+      explanation: Figure1B; FigureS4B; primary article, Methods and supplement inspected. Mapping and
+        construct caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-double-maf-deletion-2024
+  title: Combined Maf loss gives stronger flagellar defects
+  scope: Joint genomic SO_3273/SO_3259 deletion; both perturbations form one input.
+  context: Shewanella oneidensis MR-1; in-frame genomic deletions, host Pse pathway and flagellins retained
+    unless specified. 0.25% LB agar spread, TEM or immunoblot/LC-MS/MS as indicated. Methods and Figure1B
+    differ in incubation schedule; see evidence ledger.
+  family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
+    Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+    Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native genomic and synthetic
+    expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative to the reference;
+    the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+  scope_status: PHENOTYPIC
+  limitations: One rare modified FlaB peptide remains in Table1; do not call all glycosylation absolutely
+    abolished. Filaments and spread are not direct catalytic readouts.
+  nodes:
+  - node_id: double_loss
+    label: Native delta-maf1 delta-maf2
+    node_type: PERTURBATION
+  - node_id: modified_flagellin
+    label: Detected modified FLAG-FlaA peptides
+    node_type: PHENOTYPE
+  - node_id: length
+    label: Flagellar filament length relative to delta-maf1
+    node_type: PHENOTYPE
+  - node_id: spread
+    label: Spread relative to WT
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-double-maf-deletion-2024-1
+    subject: double_loss
+    predicate: decreases
+    object: modified_flagellin
+    mechanism: No modified FlaA peptides were detected in the double deletion under the Table1 analysis;
+      absence of detection is scoped to sampled peptides.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Table1; Figure2B; primary article, Methods and supplement inspected. Mapping and construct
+        caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-double-maf-deletion-2024-2
+    subject: double_loss
+    predicate: decreases
+    object: length
+    mechanism: The joint deletion further shortens filaments compared with maf1 loss alone; the two gene
+      losses are not represented as independently sufficient.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure1C/D; primary article, Methods and supplement inspected. Mapping and construct
+        caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-double-maf-deletion-2024-3
+    subject: double_loss
+    predicate: decreases
+    object: spread
+    mechanism: Combined loss produces very little spread, without establishing which downstream motor,
+      assembly or growth step is responsible.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 have opposing roles on motility
+      explanation: Figure1B; primary article, Methods and supplement inspected. Mapping and construct
+        caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-maf1-rescue-2024
+  title: Full-length Maf1 restores deletion phenotypes
+  scope: Full-length HA-Maf1 complementation in delta-maf1, including pJU0080.
+  context: MR-1 cognate maf deletion complemented from IPTG-inducible pSRK-Gm with HA-tagged Maf derivatives;
+    0.5mM IPTG condition for motility comparison. Anti-HA controls show detectable variant protein.
+  family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
+    Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+  scope_status: PHENOTYPIC
+  limitations: Plasmid rescue is conditional on the recipient and intact donor/acceptor machinery. It
+    does not establish isolated PF01973 sufficiency or native expression-normalized catalysis.
+  nodes:
+  - node_id: rescue
+    label: Full-length HA-Maf1 in delta-maf1
+    node_type: PERTURBATION
+  - node_id: slow_band
+    label: WT-like slow-migrating FlaA/B signal
+    node_type: PHENOTYPE
+  - node_id: spread
+    label: Spreading relative to empty-vector deletion
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-maf1-rescue-2024-1
+    subject: rescue
+    predicate: increases
+    object: slow_band
+    mechanism: Full-length complementation restores the slow band relative to empty vector; matched anti-HA
+      establishes production, not enzyme kinetics.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figures2D/3B; primary article, Methods and supplement inspected. Mapping and construct
+        caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf1-rescue-2024-2
+    subject: rescue
+    predicate: increases
+    object: spread
+    mechanism: Full-length Maf1 restores motility-associated spreading in the deletion host.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 have opposing roles on motility
+      explanation: Figure3C; FigureS2B; primary article, Methods and supplement inspected. Mapping and
+        construct caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-maf2-rescue-2024
+  title: Expressed Maf2 restores the native flagellin mobility pattern
+  scope: HA-Maf2 expression lineage pJU0017 in delta-maf2.
+  context: MR-1 cognate maf deletion complemented from IPTG-inducible pSRK-Gm with HA-tagged Maf derivatives;
+    0.5mM IPTG condition for motility comparison. Anti-HA controls show detectable variant protein.
+  family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
+    genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
+    to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+  scope_status: PHENOTYPIC
+  limitations: Synthetic-sequence L230S discrepancy is unresolved. The labeled WT construct in the figure
+    is not certified sequence-identical to Q8EC85; rescue does not resolve atomic chemistry.
+  nodes:
+  - node_id: rescue
+    label: Reported HA-Maf2 control in delta-maf2
+    node_type: PERTURBATION
+  - node_id: slow_band
+    label: WT-like slow-migrating FlaA/B signal
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-maf2-rescue-2024-1
+    subject: rescue
+    predicate: increases
+    object: slow_band
+    mechanism: The reported full-length control restores the slower mobility pattern compared with deletion/empty
+      vector. Exact physical construct identity remains subject to S6 verification.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure2E; FigureS2D; TablesS4/S6; primary article, Methods and supplement inspected.
+        Mapping and construct caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-maf1-d247a-2024
+  title: Maf1 D247A fails native complementation
+  scope: Single D247A substitution in the study's Maf1 expression lineage; not an isolated domain.
+  context: MR-1 cognate maf deletion complemented from IPTG-inducible pSRK-Gm with HA-tagged Maf derivatives;
+    0.5mM IPTG condition for motility comparison. Anti-HA controls show detectable variant protein.
+  family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
+    Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+  scope_status: PHENOTYPIC
+  limitations: Detectable anti-HA signal excludes complete absence of the tagged product, not misfolding
+    or altered localization. No acid/base, metal-binding or direct donor-contact role is established.
+    D333A construct naming conflicts are retained in the evidence ledger.
+  nodes:
+  - node_id: variant
+    label: HA-Maf1 D247A in cognate deletion
+    node_type: PERTURBATION
+  - node_id: slow_band
+    label: WT-like slow-migrating FlaA/B signal
+    node_type: PHENOTYPE
+  - node_id: spread
+    label: Spreading in the stated comparator
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-maf1-d247a-2024-1
+    subject: variant
+    predicate: decreases
+    object: slow_band
+    mechanism: Relative to the reported full-length complementation control, the substitution fails to
+      restore the WT-like flagellin mobility pattern.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figures2D/S2B; pJU0083; primary article, Methods and supplement inspected. Mapping
+        and construct caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf1-d247a-2024-2
+    subject: variant
+    predicate: decreases
+    object: spread
+    mechanism: D247A fails the spreading rescue produced by full-length Maf1 under the same induction
+      condition.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 have opposing roles on motility
+      explanation: Figures2D/S2B; pJU0083; primary article, Methods and supplement inspected. Mapping
+        and construct caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-maf1-d333a-2024
+  title: Maf1 D333A retains partial complementation
+  scope: Single D333A substitution in the study's Maf1 expression lineage; not an isolated domain.
+  context: MR-1 cognate maf deletion complemented from IPTG-inducible pSRK-Gm with HA-tagged Maf derivatives;
+    0.5mM IPTG condition for motility comparison. Anti-HA controls show detectable variant protein.
+  family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
+    Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+  scope_status: PHENOTYPIC
+  limitations: Detectable anti-HA signal excludes complete absence of the tagged product, not misfolding
+    or altered localization. No acid/base, metal-binding or direct donor-contact role is established.
+    D333A construct naming conflicts are retained in the evidence ledger.
+  nodes:
+  - node_id: variant
+    label: HA-Maf1 D333A in cognate deletion
+    node_type: PERTURBATION
+  - node_id: slow_band
+    label: Partially restored slow-migrating FlaA/B signal
+    node_type: PHENOTYPE
+  - node_id: spread
+    label: Partial spreading relative to empty-vector deletion
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-maf1-d333a-2024-1
+    subject: variant
+    predicate: increases
+    object: slow_band
+    mechanism: Relative to deletion/empty vector, the substitution retains partial modification-associated
+      mobility. This is not a measured fractional catalytic activity.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figures2D/S2B; pJU0084; conflicting pJU0014 row in TableS4; primary article, Methods
+        and supplement inspected. Mapping and construct caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf1-d333a-2024-2
+    subject: variant
+    predicate: increases
+    object: spread
+    mechanism: D333A produces partial spread recovery under induction relative to empty-vector delta-maf1;
+      the result is not full WT rescue.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 have opposing roles on motility
+      explanation: Figures2D/S2B; pJU0084; conflicting pJU0014 row in TableS4; primary article, Methods
+        and supplement inspected. Mapping and construct caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-maf2-d261a-2024
+  title: Maf2 D261A separates glycosylation and motility readouts
+  scope: Single D261A substitution in the study's Maf2 expression lineage; not an isolated domain.
+  context: MR-1 cognate maf deletion complemented from IPTG-inducible pSRK-Gm with HA-tagged Maf derivatives;
+    0.5mM IPTG condition for motility comparison. Anti-HA controls show detectable variant protein.
+  family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
+    genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
+    to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+  scope_status: PHENOTYPIC
+  limitations: Detectable anti-HA signal excludes complete absence of the tagged product, not misfolding
+    or altered localization. No acid/base, metal-binding or direct donor-contact role is established.
+    The synthetic Maf2 L230S discrepancy also applies.
+  nodes:
+  - node_id: variant
+    label: HA-Maf2 D261A in cognate deletion
+    node_type: PERTURBATION
+  - node_id: slow_band
+    label: WT-like slow-migrating FlaA/B signal
+    node_type: PHENOTYPE
+  - node_id: spread
+    label: Spreading in the stated comparator
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-maf2-d261a-2024-1
+    subject: variant
+    predicate: decreases
+    object: slow_band
+    mechanism: Relative to the reported full-length complementation control, the substitution fails to
+      restore the WT-like flagellin mobility pattern.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figures2E/S2C/D; pJU0018; primary article, Methods and supplement inspected. Mapping
+        and construct caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf2-d261a-2024-2
+    subject: variant
+    predicate: decreases
+    object: spread
+    mechanism: Both single Maf2 variants suppress spreading relative to delta-maf2 even though sheared
+      flagellin remains detectable; no blocked-export mechanism is assigned.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 have opposing roles on motility
+      explanation: Figures2E/S2C/D; pJU0018; primary article, Methods and supplement inspected. Mapping
+        and construct caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-maf2-d347a-2024
+  title: Maf2 D347A retains partial modification but suppresses spreading
+  scope: Single D347A substitution in the study's Maf2 expression lineage; not an isolated domain.
+  context: MR-1 cognate maf deletion complemented from IPTG-inducible pSRK-Gm with HA-tagged Maf derivatives;
+    0.5mM IPTG condition for motility comparison. Anti-HA controls show detectable variant protein.
+  family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
+    genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
+    to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+  scope_status: PHENOTYPIC
+  limitations: Detectable anti-HA signal excludes complete absence of the tagged product, not misfolding
+    or altered localization. No acid/base, metal-binding or direct donor-contact role is established.
+    The synthetic Maf2 L230S discrepancy also applies.
+  nodes:
+  - node_id: variant
+    label: HA-Maf2 D347A in cognate deletion
+    node_type: PERTURBATION
+  - node_id: slow_band
+    label: Partially restored slow-migrating FlaA/B signal
+    node_type: PHENOTYPE
+  - node_id: spread
+    label: Spreading in the stated comparator
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-maf2-d347a-2024-1
+    subject: variant
+    predicate: increases
+    object: slow_band
+    mechanism: Relative to deletion/empty vector, the substitution retains partial modification-associated
+      mobility. This is not a measured fractional catalytic activity.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figures2E/S2C/D; pJU0019; primary article, Methods and supplement inspected. Mapping
+        and construct caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf2-d347a-2024-2
+    subject: variant
+    predicate: decreases
+    object: spread
+    mechanism: Both single Maf2 variants suppress spreading relative to delta-maf2 even though sheared
+      flagellin remains detectable; no blocked-export mechanism is assigned.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 have opposing roles on motility
+      explanation: Figures2E/S2C/D; pJU0019; primary article, Methods and supplement inspected. Mapping
+        and construct caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-maf1-truncation-420-2024
+  title: Maf1 residues1-420 fail to restore native readouts
+  scope: HA-Maf1(1-420) in MR-1 delta-maf1; pJU0081 and FLAG-FlaA/B co-expression counterparts.
+  context: MR-1 cognate maf deletion complemented from IPTG-inducible pSRK-Gm with HA-tagged Maf derivatives;
+    0.5mM IPTG condition for motility comparison. Anti-HA controls show detectable variant protein.
+  family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
+    Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+  scope_status: PHENOTYPIC
+  limitations: The truncation contains more than PF01973 and may change folding. Anti-HA shows production.
+    Maf1(1-699) does not establish full rescue; BACTH experiments are represented separately.
+  nodes:
+  - node_id: truncation
+    label: HA-Maf1(1-420) in delta-maf1
+    node_type: PERTURBATION
+  - node_id: slow_band
+    label: WT-like FlaA/B mobility shift
+    node_type: PHENOTYPE
+  - node_id: spread
+    label: Spreading relative to full-length rescue
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-maf1-truncation-420-2024-1
+    subject: truncation
+    predicate: decreases
+    object: slow_band
+    mechanism: Removal of residues421-822 prevents WT-like mobility rescue compared with full-length HA-Maf1.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: The C-terminal TPR domain
+      explanation: Figure3B; FigureS3A/C; primary article, Methods and supplement inspected. Mapping and
+        construct caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf1-truncation-420-2024-2
+    subject: truncation
+    predicate: decreases
+    object: spread
+    mechanism: The truncated construct fails the motility rescue provided by full-length Maf1.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: The C-terminal TPR domain
+      explanation: Figure3C; FigureS3B/D; primary article, Methods and supplement inspected. Mapping and
+        construct caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-maf1-truncation-699-2024
+  title: Maf1 residues1-699 partly restore native readouts
+  scope: HA-Maf1(1-699) in MR-1 delta-maf1; pJU0082 and FLAG-FlaA/B co-expression counterparts.
+  context: MR-1 cognate maf deletion complemented from IPTG-inducible pSRK-Gm with HA-tagged Maf derivatives;
+    0.5mM IPTG condition for motility comparison. Anti-HA controls show detectable variant protein.
+  family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
+    Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+  scope_status: PHENOTYPIC
+  limitations: The truncation contains more than PF01973 and may change folding. Anti-HA shows production.
+    Maf1(1-699) does not establish full rescue; BACTH experiments are represented separately.
+  nodes:
+  - node_id: truncation
+    label: HA-Maf1(1-699) in delta-maf1
+    node_type: PERTURBATION
+  - node_id: slow_band
+    label: Partially restored FlaA/B mobility shift
+    node_type: PHENOTYPE
+  - node_id: spread
+    label: Partial spreading relative to empty-vector deletion
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-maf1-truncation-699-2024-1
+    subject: truncation
+    predicate: increases
+    object: slow_band
+    mechanism: The retained CTD segment allows partial mobility restoration versus empty-vector deletion,
+      without establishing a minimal sufficient catalytic domain.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: The C-terminal TPR domain
+      explanation: Figure3B; FigureS3A/C; primary article, Methods and supplement inspected. Mapping and
+        construct caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf1-truncation-699-2024-2
+    subject: truncation
+    predicate: increases
+    object: spread
+    mechanism: Under induction, the shorter CTD construct retains partial spreading compared with empty-vector
+      deletion.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: The C-terminal TPR domain
+      explanation: Figure3C; FigureS3B/D; primary article, Methods and supplement inspected. Mapping and
+        construct caveats are retained in the companion ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-maf1-bacth-2024
+  title: Maf1 C-terminal regions alter the flagellin association reporter
+  scope: Genome-amplified Maf1/FlaA or FlaB T18/T25 fusion combinations, not the synthetic co-expression
+    constructs.
+  context: E. coli BTH101 BACTH with X-Gal/IPTG and quantitative LacZ assays; pJU0048-0071/0085-0092 as
+    relevant. Most cultures pool five transformant clones; these are not five biological replicates.
+  family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
+    Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+  scope_status: PHENOTYPIC
+  limitations: Reporter activity is indirect evidence of association/proximity, not a measured binding
+    constant or purified direct contact. Signals vary with fusion orientation. CTDs421-822/550-822 exclude
+    PF01973 and are not claimed to catalyze transfer.
+  nodes:
+  - node_id: full_pair
+    label: Full-length Maf1 plus FlaA/B reporter fusions
+    node_type: PERTURBATION
+  - node_id: reporter
+    label: LacZ reporter activity
+    node_type: PHENOTYPE
+  - node_id: short_pair
+    label: Maf1(1-420) plus FlaA/B reporter fusions
+    node_type: PERTURBATION
+  - node_id: full_signal
+    label: Reporter activity relative to full-length pairs
+    node_type: PHENOTYPE
+  - node_id: partial_pair
+    label: Maf1(1-699) plus FlaA/B reporter fusions
+    node_type: PERTURBATION
+  - node_id: residual_signal
+    label: Reporter activity above selected negative controls
+    node_type: PHENOTYPE
+  - node_id: ctd421_pair
+    label: Maf1 CTD421-822 plus FlaA/B reporter fusions
+    node_type: PERTURBATION
+  - node_id: ctd_signal
+    label: Weak reporter signal in productive orientations
+    node_type: PHENOTYPE
+  - node_id: ctd550_pair
+    label: Maf1 CTD550-822 plus FlaA/B reporter fusions
+    node_type: PERTURBATION
+  edges:
+  - edge_id: mr1-maf1-bacth-2024-1
+    subject: full_pair
+    predicate: increases
+    object: reporter
+    mechanism: Selected full-length pairs exceed empty/unfused controls. The joint pair, not Maf1 alone,
+      supplies the reporter-reconstitution condition.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: The C-terminal TPR domain
+      explanation: Figure3D-F; FigureS3F; primary article, Methods and supplement inspected. See the companion
+        mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf1-bacth-2024-2
+    subject: short_pair
+    predicate: decreases
+    object: full_signal
+    mechanism: Removing the CTD greatly reduces reporter output in tested combinations; this does not
+      discriminate lost contact from altered protein conformation or stability.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: The C-terminal TPR domain
+      explanation: Figure3D-F; primary article, Methods and supplement inspected. See the companion mapping
+        and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf1-bacth-2024-3
+    subject: partial_pair
+    predicate: increases
+    object: residual_signal
+    mechanism: The partial CTD construct retains orientation-dependent activity, often below full-length
+      pairs.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: The C-terminal TPR domain
+      explanation: Figure3D-F; FigureS3F; primary article, Methods and supplement inspected. See the companion
+        mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf1-bacth-2024-4
+    subject: ctd421_pair
+    predicate: increases
+    object: ctd_signal
+    mechanism: Isolated CTD421-822 supports weak association-reporting signals in selected orientations;
+      two quantitative combinations had only one transformant.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: The C-terminal TPR domain
+      explanation: Figure3D-F; FigureS3F; primary article, Methods and supplement inspected. See the companion
+        mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf1-bacth-2024-5
+    subject: ctd550_pair
+    predicate: increases
+    object: ctd_signal
+    mechanism: The isolated predicted TPR-region construct supports weak reporter activity above matched
+      controls in productive orientations; no glycosyltransferase sufficiency is shown.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: The C-terminal TPR domain
+      explanation: Figure3D-F; FigureS3F; primary article, Methods and supplement inspected. See the companion
+        mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-glfm-deletion-2024
+  title: Loss of GlfM changes Maf2-associated readouts
+  scope: Native SO_3260 deletion with genomic Maf1/Maf2 intact.
+  context: Shewanella oneidensis MR-1; in-frame genomic deletions, host Pse pathway and flagellins retained
+    unless specified. 0.25% LB agar spread, TEM or immunoblot/LC-MS/MS as indicated. Methods and Figure1B
+    differ in incubation schedule; see evidence ledger.
+  family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
+    genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
+    to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+    GlfM Q8EC84/SO_3260 is PF26154, a separate partner.
+  scope_status: PHENOTYPIC
+  limitations: The targeted gene is a partner, not PF01973. Genetic effects do not show direct Maf2 activation;
+    FlaA peptide detection is not a universal occupancy result.
+  nodes:
+  - node_id: glfm_loss
+    label: Native delta-glfM
+    node_type: PERTURBATION
+  - node_id: s105_modified
+    label: Detected modified S105-containing FlaA peptide
+    node_type: PHENOTYPE
+  - node_id: spread
+    label: Spread relative to MR-1 WT
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-glfm-deletion-2024-1
+    subject: glfm_loss
+    predicate: decreases
+    object: s105_modified
+    mechanism: Table1 shows loss of detected adducts on this FlaA peptide, matching the maf2-deletion
+      pattern rather than maf1 deletion.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Table1; Figure4D; primary article, Methods and supplement inspected. See the companion
+        mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-glfm-deletion-2024-2
+    subject: glfm_loss
+    predicate: increases
+    object: spread
+    mechanism: The deletion spreads more than WT, like delta-maf2; direct motor inhibition is not established.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 have opposing roles on motility
+      explanation: FigureS4B; primary article, Methods and supplement inspected. See the companion mapping
+        and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-glfm-double-deletion-2024
+  title: GlfM loss further changes flagellin mobility without Maf1
+  scope: Deletion of SO_3260 in an existing delta-maf1 background.
+  context: Shewanella oneidensis MR-1; in-frame genomic deletions, host Pse pathway and flagellins retained
+    unless specified. 0.25% LB agar spread, TEM or immunoblot/LC-MS/MS as indicated. Methods and Figure1B
+    differ in incubation schedule; see evidence ledger.
+  family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
+    genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
+    to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+    Maf1 Q8EC71 is absent; GlfM is a distinct PF26154 partner.
+  scope_status: PHENOTYPIC
+  limitations: A mobility shift is not an exact glycan structure or a molecular transfer measurement.
+    This double background is not interchangeable with WT.
+  nodes:
+  - node_id: double_loss
+    label: delta-glfM introduced into delta-maf1
+    node_type: PERTURBATION
+  - node_id: slow_band
+    label: Residual slow-migrating FlaA/B forms
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-glfm-double-deletion-2024-1
+    subject: double_loss
+    predicate: decreases
+    object: slow_band
+    mechanism: Compared with the delta-maf1 parent, loss of GlfM further increases mobility to a pattern
+      similar to delta-maf1 delta-maf2.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure4E; primary article, Methods and supplement inspected. See the companion mapping
+        and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-glfm-rescue-2024
+  title: GlfM rescue depends on the Maf1 background
+  scope: Plasmid GlfM expression in single and double deletion backgrounds; distinct outcome states.
+  context: Shewanella oneidensis MR-1; in-frame genomic deletions, host Pse pathway and flagellins retained
+    unless specified. 0.25% LB agar spread, TEM or immunoblot/LC-MS/MS as indicated. Methods and Figure1B
+    differ in incubation schedule; see evidence ledger.
+  family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
+    genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
+    to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+    Q8EC84/GlfM is the non-PF01973 partner; Q8EC71/Maf1 remains present only in the single-deletion host.
+  scope_status: PHENOTYPIC
+  limitations: Rescue in delta-maf1 delta-glfM restores the delta-maf1 parental pattern, not WT-like complete
+    modification. Donor pathway and Maf2 remain necessary context.
+  nodes:
+  - node_id: single_rescue
+    label: GlfM expression in delta-glfM
+    node_type: PERTURBATION
+  - node_id: wt_pattern
+    label: WT-like slow-migrating FlaA/B signal
+    node_type: PHENOTYPE
+  - node_id: double_rescue
+    label: GlfM expression in delta-maf1 delta-glfM
+    node_type: PERTURBATION
+  - node_id: parental_pattern
+    label: Residual modification matching delta-maf1
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-glfm-rescue-2024-1
+    subject: single_rescue
+    predicate: increases
+    object: wt_pattern
+    mechanism: GlfM expression restores the single-deletion mobility defect while endogenous Maf1/Maf2
+      remain.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure4D; FigureS4C; primary article, Methods and supplement inspected. See the companion
+        mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-glfm-rescue-2024-2
+    subject: double_rescue
+    predicate: increases
+    object: parental_pattern
+    mechanism: Complementing only GlfM restores the Maf2-associated residual shift; absent Maf1 is not
+      restored by this plasmid.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure4E; FigureS4C; primary article, Methods and supplement inspected. See the companion
+        mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-glfm-d77a-2024
+  title: GlfM D77A fails functional rescue despite detectable protein
+  scope: FLAG-GlfM D77A versus FLAG-GlfM in native delta-glfM and delta-maf1 delta-glfM cells.
+  context: Shewanella oneidensis MR-1; in-frame genomic deletions, host Pse pathway and flagellins retained
+    unless specified. 0.25% LB agar spread, TEM or immunoblot/LC-MS/MS as indicated. Methods and Figure1B
+    differ in incubation schedule; see evidence ledger.
+  family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
+    genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
+    to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+    GlfM Q8EC84 D77 is verified; it is not a residue in the PF01973 carrier.
+  scope_status: PHENOTYPIC
+  limitations: The variant is detectable on anti-FLAG blots. Folding, localization and direct partner-contact
+    chemistry are not resolved; the result is not proof that GlfM Asp77 is a catalytic residue.
+  nodes:
+  - node_id: variant
+    label: GlfM D77A in either tested deletion background
+    node_type: PERTURBATION
+  - node_id: restored_shift
+    label: Mobility rescue relative to matched WT GlfM
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-glfm-d77a-2024-1
+    subject: variant
+    predicate: decreases
+    object: restored_shift
+    mechanism: In each background, the single substitution fails to restore the shift obtained with WT
+      GlfM; S4C checks tagged partner abundance in both backgrounds.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure4G; FigureS4C; pJU0035/0037; primary article, Methods and supplement inspected.
+        See the companion mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-glfm-tolerated-variants-2024
+  title: Three GlfM substitutions retain native complementation
+  scope: Separate F24L, R25K and E80A GlfM constructs in delta-glfM, not a triple mutant.
+  context: Shewanella oneidensis MR-1; in-frame genomic deletions, host Pse pathway and flagellins retained
+    unless specified. 0.25% LB agar spread, TEM or immunoblot/LC-MS/MS as indicated. Methods and Figure1B
+    differ in incubation schedule; see evidence ledger.
+  family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
+    genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
+    to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+    Partner Q8EC84 reference residues F24/R25/E80 verified; synthetic C-terminal SPOT-tag constructs pJU0033/0034/0036.
+  scope_status: PHENOTYPIC
+  limitations: Positive rescue is condition-specific; residues are not declared universally dispensable.
+    Figure4G shows two clones per variant, not quantified catalytic efficiencies.
+  nodes:
+  - node_id: f24l
+    label: GlfM F24L expression in delta-glfM
+    node_type: PERTURBATION
+  - node_id: shift
+    label: WT-like FlaA/B mobility shift
+    node_type: PHENOTYPE
+  - node_id: r25k
+    label: GlfM R25K expression in delta-glfM
+    node_type: PERTURBATION
+  - node_id: e80a
+    label: GlfM E80A expression in delta-glfM
+    node_type: PERTURBATION
+  edges:
+  - edge_id: mr1-glfm-tolerated-variants-2024-1
+    subject: f24l
+    predicate: increases
+    object: shift
+    mechanism: The individual F24L variant retains complementation compared with empty-vector delta-glfM;
+      no claim about its exact molecular activity follows.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure4G; TablesS4/S6; primary article, Methods and supplement inspected. See the companion
+        mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-glfm-tolerated-variants-2024-2
+    subject: r25k
+    predicate: increases
+    object: shift
+    mechanism: The individual R25K variant retains complementation compared with empty-vector delta-glfM;
+      no claim about its exact molecular activity follows.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure4G; TablesS4/S6; primary article, Methods and supplement inspected. See the companion
+        mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-glfm-tolerated-variants-2024-3
+    subject: e80a
+    predicate: increases
+    object: shift
+    mechanism: The individual E80A variant retains complementation compared with empty-vector delta-glfM;
+      no claim about its exact molecular activity follows.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure4G; TablesS4/S6; primary article, Methods and supplement inspected. See the companion
+        mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-maf2-glfm-bacth-2024
+  title: GlfM changes the Maf2-flagellin association reporter
+  scope: Genome-amplified Maf2 and FlaA/FlaB T18/T25 fusions, with separately co-expressed GlfM.
+  context: E. coli BTH101; Figure4C quantifies selected T18-C-Maf2/T25-FlaA or FlaB combinations with
+    and without GlfM. Figure4H compares WT GlfM and D77A. These are not the pJU0002 synthetic Maf2 lineage.
+  family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
+    genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
+    to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+    GlfM Q8EC84 is an accessory protein; BACTH Methods amplify the Maf2 ORF from MR-1.
+  scope_status: PHENOTYPIC
+  limitations: BACTH reports proximity-dependent adenylate-cyclase/LacZ reconstitution, not direct transfer
+    or exact ternary stoichiometry. Co-IP supports association but is not an activation edge; weak Maf1
+    co-IP and orientation-specific background remain in the ledger.
+  nodes:
+  - node_id: glfm_addition
+    label: GlfM with Maf2 and FlaA/B reporter fusions
+    node_type: PERTURBATION
+  - node_id: reporter
+    label: LacZ reporter output
+    node_type: PHENOTYPE
+  - node_id: d77a
+    label: GlfM D77A with the same reporter components
+    node_type: PERTURBATION
+  - node_id: wt_reporter
+    label: Reporter output relative to WT GlfM
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-maf2-glfm-bacth-2024-1
+    subject: glfm_addition
+    predicate: increases
+    object: reporter
+    mechanism: Adding the third partner raises activity above selected two-component and empty controls;
+      the source explicitly requires all reporter components.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: GlfM promotes complex formation
+      explanation: Figure4A/C; Methods pJU0060-0063/0076-0079; primary article, Methods and supplement
+        inspected. See the companion mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf2-glfm-bacth-2024-2
+    subject: d77a
+    predicate: decreases
+    object: wt_reporter
+    mechanism: The variant fails to promote the selected tripartite reporter signals. Native anti-FLAG
+      controls do not by themselves certify folding or expression in every BACTH cell.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: GlfM promotes complex formation
+      explanation: Figure4H; FigureS4C; primary article, Methods and supplement inspected. See the companion
+        mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-maf1-caulo-reconstitution-2024
+  title: Maf1 supports Pse-dependent FlaA modification in Caulobacter
+  scope: Synthetic reference-matching Maf1 with tagged MR-1 FlaA, expressed in a heterologous host.
+  context: C. crescentus NA1000-derived cells, PYE at30C; IPTG-inducible FLAG-FlaA/Maf constructs and,
+    when indicated, xylose-inducible GlfM. Table2 uses delta-flmG (Pse competent) versus delta-neuB (Pse
+    deficient), not uniformly WT.
+  family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
+    Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+    FLAG-FlaA maps to Q8ECA5 residues2-273 plus tag/linker.
+  scope_status: PHENOTYPIC
+  limitations: Host-dependent cellular reconstitution is not a purified reaction or native donor comparison.
+    +359/+375 masses are consistent with host Pse derivatives; raw stereochemistry and every site localization
+    were not independently reanalyzed.
+  nodes:
+  - node_id: joint_expression
+    label: Maf1 plus FLAG-FlaA in Pse-positive delta-flmG
+    node_type: PERTURBATION
+  - node_id: s143_adducts
+    label: FlaA S143-peptide +359/+375 Da adducts
+    node_type: PHENOTYPE
+  - node_id: s105_adducts
+    label: S105-containing FlaA peptide +359/+375 Da adducts
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-maf1-caulo-reconstitution-2024-1
+    subject: joint_expression
+    predicate: produces
+    object: s143_adducts
+    mechanism: The combination yields modified S143-containing peptide absent in the corresponding Pse-deficient
+      condition; the endogenous FlmG enzyme is absent in the Pse-positive MS comparison.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Table2; Figures5B/S1A; primary article, Methods and supplement inspected. See the companion
+        mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-maf1-caulo-reconstitution-2024-2
+    subject: joint_expression
+    predicate: produces
+    object: s105_adducts
+    mechanism: Maf1 also supports this peptide modification in the heterologous host, preventing an erroneous
+      rule that only Maf2 can modify the S105 region.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Table2; primary article, Methods and supplement inspected. See the companion mapping
+        and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-maf2-glfm-caulo-reconstitution-2024
+  title: Maf2 and GlfM jointly support a FlaA glycopeptide modification
+  scope: Synthetic Maf2 lineage, MR-1 GlfM and FLAG-FlaA in Caulobacter; construct L230S question retained.
+  context: C. crescentus NA1000-derived cells, PYE at30C; IPTG-inducible FLAG-FlaA/Maf constructs and,
+    when indicated, xylose-inducible GlfM. Table2 uses delta-flmG (Pse competent) versus delta-neuB (Pse
+    deficient), not uniformly WT.
+  family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
+    genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
+    to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+    GlfM Q8EC84 and acceptor Q8ECA5 are separate proteins, not PF01973 domains.
+  scope_status: PHENOTYPIC
+  limitations: The required joint condition is explicit. This is cellular reconstitution, not isolated-Maf
+    catalysis. Other Table2 peptides are sometimes unobserved, so exclusive site specificity is not proven.
+  nodes:
+  - node_id: joint_system
+    label: Maf2, GlfM and FLAG-FlaA in Pse-positive delta-flmG
+    node_type: PERTURBATION
+  - node_id: s105_adducts
+    label: S105-containing FlaA peptide +359/+375 Da adducts
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-maf2-glfm-caulo-reconstitution-2024-1
+    subject: joint_system
+    predicate: produces
+    object: s105_adducts
+    mechanism: The adducts are detected with GlfM and the Pse-producing host, but not with the corresponding
+      Maf2/acceptor pair lacking GlfM or the Pse-deficient donor condition. Neither Maf2 nor GlfM alone
+      is shown sufficient.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Table2; Figure5B; primary article, Methods and supplement inspected. See the companion
+        mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-maf1-neub-adduct-2024
+  title: A different FlaA mass adduct appears in Pse-deficient cells
+  scope: Maf1 plus FLAG-FlaA in Caulobacter delta-neuB, separate from Pse-positive reconstitution.
+  context: C. crescentus NA1000-derived cells, PYE at30C; IPTG-inducible FLAG-FlaA/Maf constructs and,
+    when indicated, xylose-inducible GlfM. Table2 uses delta-flmG (Pse competent) versus delta-neuB (Pse
+    deficient), not uniformly WT.
+  family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
+    Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+  scope_status: PHENOTYPIC
+  limitations: The +220 Da adduct is observed, while KDO identity is proposed rather than chemically resolved.
+    Do not label the main-text S181 typo as a verified serine; Table2 and sequence use S180/A181.
+  nodes:
+  - node_id: pse_deficient_system
+    label: Maf1 plus FLAG-FlaA in delta-neuB
+    node_type: PERTURBATION
+  - node_id: adduct220
+    label: Reported +220 Da adduct on a multi-serine FlaA peptide
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-maf1-neub-adduct-2024-1
+    subject: pse_deficient_system
+    predicate: produces
+    object: adduct220
+    mechanism: Table2 reports one +220 match on the peptide spanning the S171/S180 region while +359/+375
+      forms are absent. The graph retains measured mass without assigning a proven donor structure.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Table2; Results following Figure5C; primary article, Methods and supplement inspected.
+        See the companion mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-maf2-glfm-neub-adduct-2024
+  title: Maf2/GlfM reconstitution can yield a non-Pse mass adduct
+  scope: Synthetic Maf2 lineage with GlfM/FLAG-FlaA in Caulobacter delta-neuB.
+  context: C. crescentus NA1000-derived cells, PYE at30C; IPTG-inducible FLAG-FlaA/Maf constructs and,
+    when indicated, xylose-inducible GlfM. Table2 uses delta-flmG (Pse competent) versus delta-neuB (Pse
+    deficient), not uniformly WT.
+  family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
+    genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
+    to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+  scope_status: PHENOTYPIC
+  limitations: Nine peptide-spectrum matches are not nine biological replicates or an occupancy measurement.
+    KDO identity and the physical Maf2 sequence remain unresolved.
+  nodes:
+  - node_id: pse_deficient_system
+    label: Maf2, GlfM and FLAG-FlaA in delta-neuB
+    node_type: PERTURBATION
+  - node_id: adduct220
+    label: S105-containing FlaA peptide +220 Da adduct
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-maf2-glfm-neub-adduct-2024-1
+    subject: pse_deficient_system
+    predicate: produces
+    object: adduct220
+    mechanism: The Pse-deficient context yields the reported +220 mass rather than the +359/+375 forms;
+      no independent sufficiency or verified KDO stereochemistry is asserted.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Table2; primary article, Methods and supplement inspected. See the companion mapping
+        and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-joint-mafs-caulo-2024
+  title: GlfM further shifts FlaA mobility when both Mafs are expressed
+  scope: Joint synthetic Maf1/Maf2 and FLAG-FlaA expression with a GlfM-supporting plasmid.
+  context: C. crescentus WT and delta-neuB controls; Plac tri-cistronic FLAG-FlaA/Maf1/Maf2 plus Pxyl-GlfM.
+    Figure5C is a gel-shift experiment, distinct from Table2's individual enzyme comparisons.
+  family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
+    Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+    Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native genomic and synthetic
+    expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative to the reference;
+    the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+  scope_status: PHENOTYPIC
+  limitations: The pJU0025 TableS4 cargo description conflicts with its Methods lineage, and S6 Maf2 carries
+    the L230S discrepancy. The combined input is retained descriptively; exact physical plasmid verification
+    and glycan stoichiometry remain open.
+  nodes:
+  - node_id: glfm_addition
+    label: GlfM added to Maf1/Maf2/FLAG-FlaA in WT Caulobacter
+    node_type: PERTURBATION
+  - node_id: retardation
+    label: FLAG-FlaA migration retardation
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-joint-mafs-caulo-2024-1
+    subject: glfm_addition
+    predicate: increases
+    object: retardation
+    mechanism: With both Mafs and a Pse-positive host, adding GlfM further slows FLAG-FlaA migration relative
+      to the no-GlfM combination. This does not measure the number or arrangement of glycans.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure5C; Methods pJU0025; primary article, Methods and supplement inspected. See the
+        companion mapping and construct ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-flaa-serine-sets-2024
+  title: Flagellin acceptor substitutions change migration
+  scope: Five separately expressed FLAG-FlaA variant sets, not five isolated single mutants.
+  context: MR-1 delta-flaA with native Maf1/Maf2 and Pse pathway; pJU0026-0030 versus FLAG-FlaA control.
+    Serine numbering is native, not tag-inclusive.
+  family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
+    Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+    Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native genomic and synthetic
+    expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative to the reference;
+    the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt. FlaA
+    Q8ECA5 is the PF00669/PF00700 acceptor, not a PF01973 protein.
+  scope_status: PHENOTYPIC
+  limitations: Gel mobility is not a site-resolved stoichiometry measurement. Multi-site changes cannot
+    establish the effect of each individual substitution. The 143/171/185 pattern does not fully phenocopy
+    maf1 deletion.
+  nodes:
+  - node_id: five_sa
+    label: FLAG-FlaA with S-to-A set 105/143/171/180/185
+    node_type: PERTURBATION
+  - node_id: slow_migration
+    label: Migration retardation relative to unmodified-sequence FLAG-FlaA
+    node_type: PHENOTYPE
+  - node_id: two_105
+    label: FLAG-FlaA with S-to-A set 105/180
+    node_type: PERTURBATION
+  - node_id: three_105
+    label: FLAG-FlaA with S-to-A set 105/171/180
+    node_type: PERTURBATION
+  - node_id: two_143
+    label: FLAG-FlaA with S-to-A set 143/185
+    node_type: PERTURBATION
+  - node_id: three_143
+    label: FLAG-FlaA with S-to-A set 143/171/185
+    node_type: PERTURBATION
+  edges:
+  - edge_id: mr1-flaa-serine-sets-2024-1
+    subject: five_sa
+    predicate: decreases
+    object: slow_migration
+    mechanism: The joint 105/143/171/180/185 acceptor substitutions reduce migration retardation in this
+      host. This is not an independent intervention on each site and does not prove complete absence of
+      glycosylation.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure2C; pJU0026; TableS6; original figure, Methods and supplementary constructs inspected.
+        See the companion mapping ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-flaa-serine-sets-2024-2
+    subject: two_105
+    predicate: decreases
+    object: slow_migration
+    mechanism: The joint 105/180 acceptor substitutions reduce migration retardation in this host. This
+      is not an independent intervention on each site and does not prove complete absence of glycosylation.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure2C; pJU0027; TableS6; original figure, Methods and supplementary constructs inspected.
+        See the companion mapping ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-flaa-serine-sets-2024-3
+    subject: three_105
+    predicate: decreases
+    object: slow_migration
+    mechanism: The joint 105/171/180 acceptor substitutions reduce migration retardation in this host.
+      This is not an independent intervention on each site and does not prove complete absence of glycosylation.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure2C; pJU0028; TableS6; original figure, Methods and supplementary constructs inspected.
+        See the companion mapping ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-flaa-serine-sets-2024-4
+    subject: two_143
+    predicate: decreases
+    object: slow_migration
+    mechanism: The joint 143/185 acceptor substitutions reduce migration retardation in this host. This
+      is not an independent intervention on each site and does not prove complete absence of glycosylation.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure2C; pJU0029; TableS6; original figure, Methods and supplementary constructs inspected.
+        See the companion mapping ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-flaa-serine-sets-2024-5
+    subject: three_143
+    predicate: decreases
+    object: slow_migration
+    mechanism: The joint 143/171/185 acceptor substitutions reduce migration retardation in this host.
+      This is not an independent intervention on each site and does not prove complete absence of glycosylation.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure2C; pJU0030; TableS6; original figure, Methods and supplementary constructs inspected.
+        See the companion mapping ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-pse-pathway-2024
+  title: Pse-pathway loss changes native flagellin mobility
+  scope: Separate SO_3261/pseI and SO_3270/pseC genomic deletions with Maf1/Maf2 present.
+  context: Shewanella oneidensis MR-1; in-frame genomic deletions, host Pse pathway and flagellins retained
+    unless specified. 0.25% LB agar spread, TEM or immunoblot/LC-MS/MS as indicated. Methods and Figure1B
+    differ in incubation schedule; see evidence ledger.
+  family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
+    Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+    Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native genomic and synthetic
+    expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative to the reference;
+    the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt. PseI/PseC
+    are donor-pathway proteins, not assigned to PF01973 by this graph.
+  scope_status: PHENOTYPIC
+  limitations: Pathway dependence does not prove donor stereochemistry, direct Maf-substrate contacts
+    or sufficient activity of either isolated Maf.
+  nodes:
+  - node_id: psei_loss
+    label: Native delta-pseI
+    node_type: PERTURBATION
+  - node_id: slow_band
+    label: Slow-migrating native FlaA/B forms
+    node_type: PHENOTYPE
+  - node_id: psec_loss
+    label: Native delta-pseC
+    node_type: PERTURBATION
+  edges:
+  - edge_id: mr1-pse-pathway-2024-1
+    subject: psei_loss
+    predicate: decreases
+    object: slow_band
+    mechanism: Pse synthase loss removes the native slow-mobility pattern; Table1 additionally lacks sampled
+      FlaA glycan modifications, with some peptides unobserved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure5A; Table1; original figure, Methods and supplementary constructs inspected.
+        See the companion mapping ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+  - edge_id: mr1-pse-pathway-2024-2
+    subject: psec_loss
+    predicate: decreases
+    object: slow_band
+    mechanism: The independent pathway deletion also removes the slow band. The perturbation is not conflated
+      with removal of the Maf proteins.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure5A; original figure, Methods and supplementary constructs inspected. See the
+        companion mapping ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-cn32-glfm-rescue-2024
+  title: A noncognate GlfM supports MR-1 flagellin modification
+  scope: S. putrefaciens CN-32 GlfM expressed in MR-1 delta-glfM, with native MR-1 Mafs retained.
+  context: pSRK-Gm pJU0040; Figure5E compares 0.5 and1mM IPTG, MR-1 GlfM positive control, empty vector
+    and other noncognate GlfM partners.
+  family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
+    genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
+    to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+    Partner WP_011919637.1 is a97-aa CN-32 GlfM according to TableS2/Methods, not a PF01973 protein.
+  scope_status: PHENOTYPIC
+  limitations: Failure of the other tested GlfM partners is condition-specific and lacks matched abundance
+    evidence for every ortholog. It does not establish intrinsic donor specificity or universal incompatibility.
+  nodes:
+  - node_id: cn32_partner
+    label: CN-32 GlfM in MR-1 delta-glfM
+    node_type: PERTURBATION
+  - node_id: shift
+    label: WT-like native FlaA/B mobility shift
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-cn32-glfm-rescue-2024-1
+    subject: cn32_partner
+    predicate: increases
+    object: shift
+    mechanism: The noncognate partner restores the migration pattern relative to empty-vector delta-glfM,
+      showing functional substitution in this recipient rather than native CN-32 Maf chemistry.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: Figure5E; TableS2; Methods pJU0040; original figure, Methods and supplementary constructs
+        inspected. See the companion mapping ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-cn32-glfm-caulo-2024
+  title: CN-32 GlfM supports the MR-1 Maf2 system in Caulobacter
+  scope: MR-1 synthetic Maf2/FLAG-FlaB lineage plus CN-32 GlfM, not CN-32 Maf.
+  context: C. crescentus delta-flmG and delta-neuB comparisons; Plac FLAG-FlaB/Maf2 and Pxyl GlfM pJU0041,
+    FigureS5C.
+  family_mapping: Maf2 SO_3259/AAN56257.1 = UniProtKB:Q8EC85 sequence1, 441aa; PF01973 182-352. Native
+    genomic and synthetic expression lineages must be distinguished. S6 synthetic Maf2 encodes L230S relative
+    to the reference; the physical plasmid sequence is unresolved. See evidence/PF01973/unay-2024-member-mapping.txt.
+    Acceptor Q8ECA6 and partner WP_011919637.1 are distinct proteins; the latter is not a PF01973 carrier.
+  scope_status: PHENOTYPIC
+  limitations: The S6 Maf2 sequence discrepancy remains open. A mobility shift and donor-pathway comparison
+    do not identify exact sites or prove isolated-enzyme catalysis.
+  nodes:
+  - node_id: cross_system
+    label: CN-32 GlfM with MR-1 Maf2/FlaB in Pse-positive host
+    node_type: PERTURBATION
+  - node_id: shift
+    label: FLAG-FlaB migration retardation
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-cn32-glfm-caulo-2024-1
+    subject: cross_system
+    predicate: increases
+    object: shift
+    mechanism: The cross-species partner supports the slower band in the Pse-positive condition; compare
+      the no-partner and delta-neuB controls. The host, acceptor, carrier and partner are jointly specified.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: FigureS5C; Methods pJU0041; original figure, Methods and supplementary constructs inspected.
+        See the companion mapping ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
+- graph_id: mr1-maf1-ecoli-reconstitution-2024
+  title: A donor-pathway operon supports Maf1-dependent migration shift
+  scope: Synthetic reference-matching MR-1 Maf1 and FLAG-FlaA, with Caulobacter donor-biosynthesis genes
+    in E. coli.
+  context: E. coli Ec100 with pUCIDT-T5-flm operon and Plac FLAG-FlaA/Maf1; 5 hours at30C. S1B includes
+    no-operon, no-Maf1 and empty controls and sigma70 blots.
+  family_mapping: Maf1 SO_3273/AAN56271.1 = UniProtKB:Q8EC71 sequence1, 822aa; PF01973 174-338. S6 synthetic
+    Maf1 matches the reference; CTD constructs extend beyond or exclude that profile. See evidence/PF01973/unay-2024-member-mapping.txt.
+    The flm operon supplies six Pse biosynthesis genes; it is not an added PF01973 enzyme.
+  scope_status: PHENOTYPIC
+  limitations: SDS-PAGE retardation supports donor-pathway-dependent modification but does not directly
+    identify the transferred glycan or show purified catalytic chemistry.
+  nodes:
+  - node_id: joint_system
+    label: FLAG-FlaA, Maf1 and donor operon in Ec100
+    node_type: PERTURBATION
+  - node_id: shift
+    label: FLAG-FlaA migration retardation
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: mr1-maf1-ecoli-reconstitution-2024-1
+    subject: joint_system
+    predicate: increases
+    object: shift
+    mechanism: The complete co-expression condition gives a slower band than matched Maf1/FlaA expression
+      without the donor operon. The no-Maf1 lane does not establish matched acceptor abundance, so it
+      is not treated as a quantitative catalytic-null control.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:38897200
+      source_url: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+      snippet: Maf-1 and Maf-2 promote flagellin glycosylation
+      explanation: FigureS1B and legend; STAR Methods; original figure, Methods and supplementary constructs
+        inspected. See the companion mapping ledger.
+      cache_path: evidence/PF01973/unay-2024-maf-glfm.txt
+      cache_sha256: 282c5e288b6240e549f12180537e9792920e60feb15e7463fb262a0bcc0369b8
 curation_events:
 - timestamp: '2026-10-14T22:22:20Z'
   curator: Codex
@@ -613,5 +2253,21 @@ curation_events:
   outcome: needs_followup
   summary: Retain partial scientific self-review of PF01973 MptE and Maf contexts
   history_record: history/records/PF01973/2026-10-14T223424Z-codex-efe5ea.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-15T00:03:16Z'
+  curator: Codex
+  action: EDIT
+  outcome: changed
+  summary: Extend PF01973 Maf and GlfM causal contexts from primary 2024 experiments
+  history_record: history/records/PF01973/2026-10-15T000316Z-codex-267f17.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-15T00:25:41Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain partial PF01973 Maf/GlfM scientific successor review
+  history_record: history/records/PF01973/2026-10-15T002541Z-codex-1400a3.yaml
   event_index: 0
   llm_assisted: true
