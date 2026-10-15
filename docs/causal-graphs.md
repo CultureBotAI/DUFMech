@@ -6091,3 +6091,37 @@ PF01977 AnFdc primary-evidence pass (2026-10-15, local):
   still required before adoption. Other AnFdc experiments, EcUbiD, AroY, HmfF,
   HudA and later work remain open. All earlier findings and the full 8,296-family
   objective remain active.
+
+PF01977 publication audit (PR #220, 2026-10-15):
+
+- The user authorized commit, PR, adversarial review, issue remediation, merge
+  and branch cleanup. This release contains the ten AnFdc graphs and 26 edges;
+  the unfinished VdcCD research is not adopted.
+- The source-pin failure for PF01977 was reproduced and is tracked in
+  [#216](https://github.com/CultureBotAI/DUFMech/issues/216). Candidate commit
+  `f2b12dd9f59d877f0869f185c281f887471e63be` is retained by annotated tag
+  `source/dufmech-pr-220-candidate`. Native capture and fresh canonical remote
+  verification pass for all 9,134 candidate source files.
+- Same-agent adversarial review rechecked all 26 edge quotations against the
+  primary XML, exact record/overlay correspondence, all 8,296 manifest hashes,
+  and the original Bailey2018 light-response and isotope-exchange figures.
+  The 52 focused graph/QC tests pass. This is not independent expert approval.
+- Scientific follow-ups remain OPEN as
+  [#217](https://github.com/CultureBotAI/DUFMech/issues/217) (member/partner scope),
+  [#218](https://github.com/CultureBotAI/DUFMech/issues/218) (atomic transitions
+  and domain attribution), and
+  [#219](https://github.com/CultureBotAI/DUFMech/issues/219) (assay discrepancies,
+  normalization and construct details). Existing discussions and the partial
+  scientific review remain unchanged; PF01977 stays IN_PROGRESS.
+- The audit-bearing source commit must also be retained, captured and rendered
+  before final full QC, exact-head CI, merge and deployment verification.
+  Those are subsequent release gates, not results asserted by this note.
+  All other family records, old reviews/history and frozen sources are preserved.
+- Verification encountered loss of the old temporary worktree's Git pointer
+  and tracked test files; its isolated OAK check failed with a missing-file
+  error. The cause was not established. The published candidate was recovered
+  into a fresh locked worktree, local docs/pins preserved byte-for-byte, and
+  responsive checks repeated. Locked dependencies and the separate pinned
+  CLAW runtime were rebuilt with a fresh cache after missing cache metadata.
+  Final full QC must run in this recovered checkout; the failed attempt is
+  not counted as a pass.
