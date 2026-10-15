@@ -1,0 +1,30 @@
+PF01981 / Rosas-Sandoval et al. 2002
+PMID:12475929; doi:10.1073/pnas.222659199
+https://pmc.ncbi.nlm.nih.gov/articles/PMC139208/
+Inspected 2026-10-15: original Methods, Results, Figure 1 caption, Table 1,
+and yeast deletion results. Figure 1 image page returned a browser challenge;
+the image itself was not inspected. No bypass or raw-data reanalysis.
+Copyright NAS2002. Only minimal quotations retained; no full text or images.
+
+Exact snippets (20 words total):
+The enzyme was able to hydrolyze both substrates
+Both pth genes, but not the empty vector
+rescued the temperature sensitivity
+
+Curator's factual assay ledger:
+R1. MJ0051: pGR51C/pET20b, C-terminal His6, purified >95% by SDS-PAGE.
+Figure 1B: 37 C, 187 nM recombinant enzyme; diacetyl-[14C]Lys-tRNA and
+acetyl-[14C]Phe-tRNA; E. coli Pth and no-enzyme comparators. Released tRNAs
+were reaminoacylatable. Methods substrate units conflict with Figure 1A
+(micromolar versus nanomolar); do not silently correct or assign those
+concentrations to Figure 1B. TLC product identification concerns cell extract,
+not independently shown TLC of the recombinant enzyme.
+R2. C600 pth-ts: pGR518/MJ0051, LB, ampicillin0.1mg/ml, IPTG1uM; 42 C
+growth versus empty-vector failure; 32 C permissive control. Cured clones
+lost rescue. The pth-null result is stated without displayed data.
+R3. pGR87L deletes the historical yeast YBL057c first86 residues and changes
+the next initiation codon; rescues C600 at42 C. Full-length pGRAS failed.
+No matched abundance/localization measurement establishes why.
+N1. Yeast single/double deletions remained viable under tested conditions;
+glycerol slow-growth absence is reported without displayed data. This neither
+proves universal dispensability nor identifies an alternative hydrolase.

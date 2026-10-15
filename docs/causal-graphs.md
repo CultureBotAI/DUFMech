@@ -6932,3 +6932,33 @@ PF01980 tsaA1 candidate publication audit (PR #245, 2026-10-15):
 - This audit must itself be retained, recaptured and rendered before final full
   QC and exact-head PR/merge-group validation. Those later checks are not certified
   by the candidate audit. This is self-review, not independent approval.
+
+PF01981 PTH2 initial causal-context checkpoint (2026-10-15):
+
+- The maintained overlay adds nine graphs with sixteen observed experimental
+  edges: five DIRECT substrate-hydrolysis effects, four INDIRECT heterologous
+  rescue effects and seven assay effects with UNRESOLVED molecular directness.
+  Three OPEN discussions keep historical constructs, source discrepancies and
+  additional primary/member coverage explicit. PF01981 remains IN_PROGRESS.
+- Rosas-Sandoval2002, Fromant2003 and Kawashima2026 support distinct tested
+  contexts. Pth1 results are not transferred to Pth2; bacterial rescue is not
+  native essentiality, and one-minute temperature responses are not organismal
+  growth optima or irreversible denaturation. Archived UniProt entry 19 links
+  the exact Lokiarchaeum core to PF01981 while its current deletion and unresolved
+  HMM boundaries remain visible. No atomic residue mechanism is asserted.
+- The partial scientific self-review is retained in
+  `reviews/structured/20261015T233126Z-pf01981-pth2-causal-contexts/review.yaml`
+  and derived `review.md`. Actual CREATE, prose-spacing EDIT and REVIEW events
+  live under `history/records/PF01981/`; the review does not promote the record.
+- The initial native generation/schema/history, inventory/export checks,
+  52 focused tests, all-family manifest preservation and 1440px/390px unpinned
+  preview pass. The post-REVIEW regeneration and publication gates are separate
+  obligations. All other 8,295 records and earlier scientific artifacts remain
+  unchanged. The inventory has 899 graphs / 1,936 edges in 130 families;
+  8,166 remain graphless. Presence is not scientific completion.
+- Publication is separately authorized. Issue #246 and
+  `reviews/structured/20261015T233404Z-pf01981-publication-prerequisite/review.yaml`
+  retain the reproduced stale-source failure. Issues #247-249 track the three
+  scientific follow-ups and will not be closed by publication. A retained source
+  checkpoint, native capture/rendering, adversarial disposition and full exact-head
+  checks are required before merging this batch.
