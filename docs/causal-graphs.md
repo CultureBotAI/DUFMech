@@ -6543,3 +6543,85 @@ PF01978 TrmB publication audit (2026-10-15, PR #231):
   later outcomes are not certified by this checkpoint. Preserve annotated
   source tags after deleting the feature branch. PF01978 remains IN_PROGRESS,
   and the full corpus objective remains unfinished.
+
+PF01978 TrmB regulatory-context extension (2026-10-15, unpublished):
+
+- Inspected Surma thesis original Figures 18-23 and 32-35, transcription and
+  preparation methods, buffer definitions, and PFK/PF0124 template provenance.
+  Added eight graphs containing 14 observed effects and one explicitly
+  hypothesized PFK RNAP-recruitment block. The earlier 11 graphs and their
+  evidence remain unchanged. PF01978 now has 19 graphs and 41 edges: 39
+  observed and two hypothesized, with 10 mechanistic, seven phenotypic and two
+  hypothetical graphs. Directness is scoped to the stated assay/process,
+  not inferred atomic contacts or isolated PF01978 sufficiency.
+- The new ledger `evidence/PF01978/trmb-regulatory-contexts.txt` retains complete
+  published numeric matrices and minimal quotation anchors. Operator mutants
+  use their own basal normalization and can change transcript length. MDTA/MD
+  comparisons use unequal regulator doses; the glucose-only control uses a
+  different buffer. Sucrose retains 2% output in a lane described as zero in
+  prose, and PFK/PF0124 repression retains 4%/1% at the stated doses. Figure 35
+  tables contradict blanket below-10% language. Nonmonotonic responses,
+  conditional negatives, stock carryover and unmatched nuclease doses remain
+  visible; none is converted into a universal sugar-to-DNA mechanism.
+- PF0124/TrmBL1 is a target promoter in this extension, not the tested
+  regulator. Whole TrmB reference mapping is rechecked for identical
+  Q9HGZ9/Q7LYW4 version-1 bodies and PF01978 11-77, with separate PF11495 and
+  PF31112 matches. Complete physical constructs, species attribution and
+  domain-specific function remain unresolved.
+- Actual EDIT `2026-10-15T154544Z-codex-6f2fd8` and REVIEW
+  `2026-10-15T155452Z-codex-e80937` retain the work. The append-only successor
+  [Markdown review](../reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md)
+  and [YAML review](../reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml)
+  record a partial scientific self-review, `NEEDS_FOLLOWUP`, with all three
+  predecessor findings still open. Issues #228-230 are not closed, the previous
+  publication audit is not superseded, and PF01978 remains `IN_PROGRESS`.
+- Independent checks verify all 8,296 manifest hashes, all 41 edge evidence
+  hashes/quotations, prior graph/evidence/review/history preservation and
+  unchanged imported fields, other records, snapshots, code, exports, canonical
+  Pages and pins. All 52 focused tests and schema reproduction pass; exports
+  report current. An unpinned native preview at 1440px and 390px retains all
+  graphs, support labels, source links and three OPEN discussions. All eight
+  new evidence disclosures work; selected screenshots were visually inspected.
+  Native tables scroll horizontally, without document overflow or JS errors.
+  The browser/server closed. After the actual REVIEW event, guarded
+  regeneration refreshes only PF01978 and its manifest. Final
+  `just validate-all validate-schema` passes: 8,296 records with zero drift,
+  328 history files, four review-contract tests, 174 structured bundles,
+  182 native reports and zero schema differences. The independent integrity
+  check, exact preview JSON comparison and desktop/mobile browser recheck pass
+  again. The scientific digest remains
+  `3eb38434eefe93d79547d8021c3baf1ac28cd137cb36fb5866a674bd3535826a`.
+  Full release QC and canonical publication remain unperformed.
+- Structural inventory is now 853 graphs/1,839 edges across 128 graph-bearing
+  families, with 8,168 graphless families out of 8,296. These are presence
+  counts, not scientific completion counts. Continue with independently mapped
+  TrmBL1 protein assays, remaining primary TrmB papers and other member/taxon
+  contexts; retain the full family and corpus objective.
+
+PF01978 regulatory-context publication checkpoint (2026-10-15, PR #233):
+
+- Publication is explicitly authorized. The adversarial reread covers the
+  eight added graphs, original thesis Figures 18-23 and 32-35, retained numeric
+  matrices, evidence limits and generated ownership. No additional scientific
+  claim correction is required in this bounded extension. It is a self-review,
+  not independent expert approval or complete family review.
+- Issue #232 tracks the reproduced stale source-pin and canonical-page blocker.
+  Its append-only initial audit is retained under
+  `reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/`.
+  Candidate `e3c273b3075de43cca97908e3d0b5a80f313a409` is published and retained
+  by annotated tag `source/dufmech-pr-233-candidate`. Native capture and the
+  canonical online gate verify 9,169 source files; native Pages regeneration
+  and desktop/mobile checks pass for all 19 graphs and 41 edges, all eight
+  new disclosures, source links and three OPEN discussions.
+- Native validation passes 8,296 records with zero drift, 328 history files,
+  four review-contract tests, 175 structured bundles, 183 native reports and
+  schema reproduction. All 52 focused tests pass with the required shared
+  runtime; 22 governed artifacts match their pinned source, isolated offline
+  OAK checks pass, and exports are current. Initial missing-runtime and sandbox
+  DNS failures were corrected and rerun, not counted as passing attempts.
+- The successor publication audit must retain the blocker disposition and its
+  exact predecessor. Its audit-bearing source checkpoint, recapture, final
+  full QC, exact-head CI, merge integrity and deployment follow this candidate
+  checkpoint; those future outcomes are not certified here. Keep both annotated
+  source tags after deleting the merged branch. Issues #228-230 remain open,
+  PF01978 remains IN_PROGRESS, and unfinished TrmBL1 research is not adopted.

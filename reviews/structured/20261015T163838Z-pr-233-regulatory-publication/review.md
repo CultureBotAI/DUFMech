@@ -1,0 +1,641 @@
+# PR 233 PF01978 regulatory-context adversarial publication audit
+
+- Review: 20261015T163838Z-pr-233-regulatory-publication
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-15T16:23:02Z
+- Finished UTC: 2026-10-15T16:38:38Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: false
+
+## Summary
+
+The bounded extension preserves assay-specific controls, residual activity, whole-protein scope and explicit hypotheses. The stale candidate publication finding is resolved after retained source capture and native rendering. No further release defect was found in this scope. Final audit-bearing capture, full QC and exact-head CI remain required. Scientific issues 228-230 remain open.
+
+## Scope And Provenance
+
+All twelve candidate-commit paths plus source pins and the canonical PF01978 page.
+
+Selection: Explicit PR 233 changes and affected release surfaces, not a scientific corpus sample.
+Coverage: full; 14 reviewed / 14 in the declared population.
+Source: working_tree at Git base e3c273b3075de43cca97908e3d0b5a80f313a409.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| conf/site_source_pins.json | conf/site_source_pins.json | source | conf/site_source_pins.json |
+| curation/families/PF01978.yaml | curation/families/PF01978.yaml | source | curation/families/PF01978.yaml |
+| data/families/PF01978.yaml | data/families/PF01978.yaml | source | data/families/PF01978.yaml |
+| data/families/manifest.json | data/families/manifest.json | source | data/families/manifest.json |
+| docs/causal-graphs.md | docs/causal-graphs.md | source | docs/causal-graphs.md |
+| evidence/PF01978/trmb-regulatory-contexts.txt | evidence/PF01978/trmb-regulatory-contexts.txt | source | evidence/PF01978/trmb-regulatory-contexts.txt |
+| history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml | history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml | source | history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml |
+| history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml | history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml | source | history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml |
+| pages/families/PF01978.html | pages/families/PF01978.html | source | pages/families/PF01978.html |
+| reports/causal_graphs/inventory.json | reports/causal_graphs/inventory.json | source | reports/causal_graphs/inventory.json |
+| reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md | reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md | source | reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md |
+| reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml | reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml | source | reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml |
+| reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md | reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md | source | reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md |
+| reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml | reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml | source | reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| native | passed | True | conf/site_source_pins.json, curation/families/PF01978.yaml, data/families/PF01978.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01978/trmb-regulatory-contexts.txt, history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml, history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml, pages/families/PF01978.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml | 8296 records with zero drift, 328 history files, four review-contract tests, 175 structured bundles, 183 native reports and schema reproduction pass. |
+| focused | passed | True | conf/site_source_pins.json, curation/families/PF01978.yaml, data/families/PF01978.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01978/trmb-regulatory-contexts.txt, history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml, history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml, pages/families/PF01978.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml | 52 focused tests pass in 23.87 seconds with CLAW_ROOT, CLAW_SRC and PYTHONPATH configured. The initial run omitted the shared runtime and failed one adapter test; that setup failure is not hidden. |
+| governed | passed | True | conf/site_source_pins.json, curation/families/PF01978.yaml, data/families/PF01978.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01978/trmb-regulatory-contexts.txt, history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml, history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml, pages/families/PF01978.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml | 22 artifacts match their pinned public CLAW source after an authorized retry; initial sandbox DNS failure was environmental. |
+| oak | passed | True | conf/site_source_pins.json, curation/families/PF01978.yaml, data/families/PF01978.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01978/trmb-regulatory-contexts.txt, history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml, history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml, pages/families/PF01978.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml | Isolated OAK acceptance/rejection regression passes for 8296 pairs with network denied. |
+| retention | passed | True | conf/site_source_pins.json, curation/families/PF01978.yaml, data/families/PF01978.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01978/trmb-regulatory-contexts.txt, history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml, history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml, pages/families/PF01978.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml | 9169 source files match e3c273b3075de43cca97908e3d0b5a80f313a409 retained by the canonical annotated candidate tag. |
+| preservation | passed | True | conf/site_source_pins.json, curation/families/PF01978.yaml, data/families/PF01978.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01978/trmb-regulatory-contexts.txt, history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml, history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml, pages/families/PF01978.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml | All 8296 manifest hashes and rendered YAML downloads match; PF01978 JSON equals its record. All 41 edge evidence hashes and quotations verify. Previous graphs, candidate inputs, prior evidence/reviews/history, exports, other records and imported fields are preserved. |
+| render-browser | passed | True | conf/site_source_pins.json, curation/families/PF01978.yaml, data/families/PF01978.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01978/trmb-regulatory-contexts.txt, history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml, history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml, pages/families/PF01978.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml | Native canonical rendering completes. At 1440px and 390px, all 19 graphs, 41 edges, 39 observed/two hypothesized labels, source links, three OPEN discussions and all eight new evidence disclosures pass. Pinned record link, condition labels, no document overflow and no JS errors verified; selected screenshots visually inspected. |
+
+## Scientific And Domain Assessments
+
+### Conditions, causal direction and uncertainty
+
+graph: supported. Targets: conf/site_source_pins.json, curation/families/PF01978.yaml, data/families/PF01978.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01978/trmb-regulatory-contexts.txt, history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml, history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml, pages/families/PF01978.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml.
+
+The reviewed change retains 14 new observed effects and one hypothesis without conflating regulators, promoter contexts or molecular inference. PF01978 remains IN_PROGRESS with three OPEN scientific discussions.
+
+### Maintained owners and append-only preservation
+
+provenance: supported. Targets: conf/site_source_pins.json, curation/families/PF01978.yaml, data/families/PF01978.yaml, data/families/manifest.json, docs/causal-graphs.md, evidence/PF01978/trmb-regulatory-contexts.txt, history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml, history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml, pages/families/PF01978.html, reports/causal_graphs/inventory.json, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md, reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md, reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml.
+
+Overlay/evidence, native generated record and manifest, actual EDIT/REVIEW history, successor review and inventory agree. Older graphs and artifacts remain unchanged. Source snapshots, exports and code are preserved.
+
+### Retained candidate and canonical rendering
+
+other: supported. Targets: conf/site_source_pins.json, pages/families/PF01978.html.
+
+The candidate pin and canonical page now agree with the retained source commit and exact record downloads; all new graph disclosures are usable on desktop and mobile.
+
+## Findings
+
+### stale-publication: Current sources are not represented by canonical pins and Pages
+
+blocker / resolved / confirmed; issue key: pf01978-regulatory-stale-publication.
+
+The stale candidate source pins and missing canonical graphs were corrected through retained source publication, native capture and rendering. This disposition concerns those inspected candidate surfaces, not certification of future release gates.
+
+Disposition: Canonical source retention verifies 9169 files at the annotated candidate tag. Regenerated PF01978 content matches the current record and all eight added graph disclosures work on desktop/mobile. This new audit must itself be retained and recaptured before final QC/CI and merge.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://doi.org/10.5283/epub.14529; Original Figure images 18-23 and 32-35, printed65/67/69-71/73/88-91; retained ledger R0-R6 | supports | Visual reread confirms per-panel normalization, unequal comparator doses, differing buffer/nuclease conditions, retained 2%/4%/1% residuals and nonmonotonic sugar responses. The overlay separates whole TrmB from PF0124 target-promoter identity and keeps RNAP recruitment hypothetical. No new scientific graph is introduced by this publication audit. |
+| integrity | data/families/manifest.json; Executed validation, focused tests, native schema, governed artifacts, OAK, hash/preservation and exact download comparisons | supports | Generated ownership and evidence references agree; only PF01978 scientific content changes. Ignored/hidden review bundles and source files are included by native review checking and source capture. Deterministic success is not scientific completeness. |
+| publication | https://github.com/CultureBotAI/DUFMech/issues/232; Initial failure, annotated candidate tag, native capture/render, canonical remote check and desktop/mobile browser checks | supports | The inspected candidate resolves the earlier stale pins and missing graphs. Its source tag is retained for squash-merge reproducibility. This audit adds two new source files and requires its own subsequent checkpoint. |
+| scientific-followups | reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml; Three OPEN findings, predecessor lineage, exact semantic digest and partial scientific coverage | supports | Issues 228-230 remain open. The extension makes partial progress on 230; physical constructs, domain attribution, matched controls/carryover and remaining exact-member/native contexts are not resolved by publication. |
+| predecessor | reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml; stale-publication on the same two source targets | supports | The initial failed publication observation is preserved unchanged. This successor explicitly resolves only that finding against the repaired candidate. |
+
+## Limits And Additional Notes
+
+- Adversarial self-review, not an independent scientist review or family-wide completion claim.
+- Complete historical constructs, raw replicated measurements, remaining primary/member contexts and native physiology remain open under issues 228-230.
+- Visual checks cover the ten original figures supporting this extension and selected rendered views, not all family pages or all historical literature.
+- Initial focused-test environment omission and governed-source DNS failure were corrected and rerun successfully; no scientific input changed to force a pass.
+- Final audit-bearing capture, full QC, exact-head CI, merge integrity and deployment are subsequent gates, not completed outcomes of this report.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+kind: repository
+repository: CultureBotAI/DUFMech
+source:
+  git_revision: e3c273b3075de43cca97908e3d0b5a80f313a409
+  inputs:
+  - path: conf/site_source_pins.json
+    role: target
+    sha256: f81e2646e0dffb98b5ef0459154c1d1e1e88e930fa2e78f65f059d1587fe1fc1
+  - path: curation/families/PF01978.yaml
+    role: target
+    sha256: 6e456bda58cabfe87724c51424980f1f256d095b5da6f993d8b49e506963731b
+  - path: data/families/PF01978.yaml
+    role: target
+    sha256: 71936795e8e82d4b0f4c3aab8232baf7ae16397eaf23e1bb83091efbdd7bf3a9
+  - path: data/families/manifest.json
+    role: target
+    sha256: aeaa9405206e2afed4e8f986a69e98072250b12f891c585ed8bbd76242162abd
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    role: context
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    role: context
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    role: context
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+  - path: docs/causal-graphs.md
+    role: target
+    sha256: 7b1def0c787f882c17d42996d192a5f0379ada8196608ee164fcd6865a42b9d7
+  - path: evidence/PF01978/trmb-regulatory-contexts.txt
+    role: target
+    sha256: b16dea219cd36b335e3f43acea31ac7184eea4e7011d6c01e4e99b9851e6b71d
+  - path: history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml
+    role: target
+    sha256: 99caca3d98b50377ec15efeeec58373883163a5dfa7b395d965be6d296ffeda6
+  - path: history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml
+    role: target
+    sha256: 918c0b23704a3b64b3ca5b3c71fa607d37dd7c004500a9443fd66abadddaeb00
+  - path: pages/families/PF01978.html
+    role: target
+    sha256: ce6aea05a6e50429bbb811f3a50d6655d547577f26619518423ac1f5314de348
+  - path: reports/causal_graphs/inventory.json
+    role: target
+    sha256: b70e29e50cb1d575327fb39882c77bcea79132aada9fe60cfbc69e5c83fc51a3
+  - path: reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md
+    role: target
+    sha256: cca26936ab56ba0b811c352dfbcdf929b8f3490749dc225384e782b4a2583aae
+  - path: reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml
+    role: target
+    sha256: 043cf7964f14c4ef2ec17bc3c9bcf5df4d836edff22681136f49a569c244c9b4
+  - path: reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md
+    role: target
+    sha256: 6b8d0971cdd96e0d46917002a441efce409f0390f4f4ac1c978dab49617f8f39
+  - path: reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml
+    role: target
+    sha256: 175973c465b41c8ef2a9ae2dbf1e22abadb1a5b60a1c35b92722f48039c2013f
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  state: working_tree
+targets:
+- kind: source
+  label: conf/site_source_pins.json
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: conf/site_source_pins.json
+  target_id: conf/site_source_pins.json
+- kind: source
+  label: curation/families/PF01978.yaml
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: curation/families/PF01978.yaml
+  target_id: curation/families/PF01978.yaml
+- kind: source
+  label: data/families/PF01978.yaml
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: data/families/PF01978.yaml
+  target_id: data/families/PF01978.yaml
+- kind: source
+  label: data/families/manifest.json
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: data/families/manifest.json
+  target_id: data/families/manifest.json
+- kind: source
+  label: docs/causal-graphs.md
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: docs/causal-graphs.md
+  target_id: docs/causal-graphs.md
+- kind: source
+  label: evidence/PF01978/trmb-regulatory-contexts.txt
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: evidence/PF01978/trmb-regulatory-contexts.txt
+  target_id: evidence/PF01978/trmb-regulatory-contexts.txt
+- kind: source
+  label: history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml
+  target_id: history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml
+- kind: source
+  label: history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml
+  target_id: history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml
+- kind: source
+  label: pages/families/PF01978.html
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: pages/families/PF01978.html
+  target_id: pages/families/PF01978.html
+- kind: source
+  label: reports/causal_graphs/inventory.json
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: reports/causal_graphs/inventory.json
+  target_id: reports/causal_graphs/inventory.json
+- kind: source
+  label: reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md
+  target_id: reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md
+- kind: source
+  label: reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml
+  target_id: reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml
+- kind: source
+  label: reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md
+  target_id: reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md
+- kind: source
+  label: reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml
+  target_id: reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml
+schema_version: 1.0.0
+review_id: 20261015T163838Z-pr-233-regulatory-publication
+title: PR 233 PF01978 regulatory-context adversarial publication audit
+started_at: '2026-10-15T16:23:02Z'
+finished_at: '2026-10-15T16:38:38Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent authored the curation and performs a skeptical publication
+    reread. Not independent expert approval or experimental replication.
+skill: .claude/skills/review-repo/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: false
+summary: The bounded extension preserves assay-specific controls, residual activity,
+  whole-protein scope and explicit hypotheses. The stale candidate publication finding
+  is resolved after retained source capture and native rendering. No further release
+  defect was found in this scope. Final audit-bearing capture, full QC and exact-head
+  CI remain required. Scientific issues 228-230 remain open.
+scope:
+  description: All twelve candidate-commit paths plus source pins and the canonical
+    PF01978 page.
+  selection: Explicit PR 233 changes and affected release surfaces, not a scientific
+    corpus sample.
+  coverage: full
+  population_size: 14
+  reviewed_target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01978.yaml
+  - data/families/PF01978.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01978/trmb-regulatory-contexts.txt
+  - history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml
+  - history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml
+  - pages/families/PF01978.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml
+  exclusions:
+  - target: Full PF01978 and corpus scientific review
+    reason: Exact constructs, carryover and broader member/taxon mechanisms remain
+      unresolved; unfinished TrmBL1 research is not adopted.
+  - target: Audit-bearing capture, full QC, exact-head CI, merge and deployment
+    reason: These mandatory release stages occur after this append-only report and
+      are not certified here.
+checks:
+- check_id: native
+  name: native
+  command: just validate-all validate-schema
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 8296 records with zero drift, 328 history files, four review-contract tests,
+    175 structured bundles, 183 native reports and schema reproduction pass.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01978.yaml
+  - data/families/PF01978.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01978/trmb-regulatory-contexts.txt
+  - history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml
+  - history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml
+  - pages/families/PF01978.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml
+  evidence_ids:
+  - integrity
+- check_id: focused
+  name: focused
+  command: uv run --locked --offline --extra dev pytest -q tests/test_causal_graphs.py
+    tests/test_qc.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 52 focused tests pass in 23.87 seconds with CLAW_ROOT, CLAW_SRC and PYTHONPATH
+    configured. The initial run omitted the shared runtime and failed one adapter
+    test; that setup failure is not hidden.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01978.yaml
+  - data/families/PF01978.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01978/trmb-regulatory-contexts.txt
+  - history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml
+  - history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml
+  - pages/families/PF01978.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml
+  evidence_ids:
+  - integrity
+- check_id: governed
+  name: governed
+  command: bash scripts/check_vendored_sync.sh
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 22 artifacts match their pinned public CLAW source after an authorized
+    retry; initial sandbox DNS failure was environmental.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01978.yaml
+  - data/families/PF01978.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01978/trmb-regulatory-contexts.txt
+  - history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml
+  - history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml
+  - pages/families/PF01978.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml
+  evidence_ids:
+  - integrity
+- check_id: oak
+  name: oak
+  command: just id-labels-oak-test
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Isolated OAK acceptance/rejection regression passes for 8296 pairs with
+    network denied.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01978.yaml
+  - data/families/PF01978.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01978/trmb-regulatory-contexts.txt
+  - history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml
+  - history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml
+  - pages/families/PF01978.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml
+  evidence_ids:
+  - integrity
+- check_id: retention
+  name: retention
+  command: uv run --locked --offline python -m dufmech.site_source_publication
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 9169 source files match e3c273b3075de43cca97908e3d0b5a80f313a409 retained
+    by the canonical annotated candidate tag.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01978.yaml
+  - data/families/PF01978.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01978/trmb-regulatory-contexts.txt
+  - history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml
+  - history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml
+  - pages/families/PF01978.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml
+  evidence_ids:
+  - publication
+- check_id: preservation
+  name: preservation
+  command: uv run --locked --offline python /private/tmp/duf-regulatory-publication-integrity.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: All 8296 manifest hashes and rendered YAML downloads match; PF01978 JSON
+    equals its record. All 41 edge evidence hashes and quotations verify. Previous
+    graphs, candidate inputs, prior evidence/reviews/history, exports, other records
+    and imported fields are preserved.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01978.yaml
+  - data/families/PF01978.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01978/trmb-regulatory-contexts.txt
+  - history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml
+  - history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml
+  - pages/families/PF01978.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml
+  evidence_ids:
+  - integrity
+- check_id: render-browser
+  name: render-browser
+  command: uv run --locked --offline python scripts/render_pages.py; DUF_SITE_ROOT=pages
+    DUF_SOURCE_COMMIT=e3c273b3075de43cca97908e3d0b5a80f313a409 node /private/tmp/duf-pf01978-regulatory-browser.cjs
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Native canonical rendering completes. At 1440px and 390px, all 19 graphs,
+    41 edges, 39 observed/two hypothesized labels, source links, three OPEN discussions
+    and all eight new evidence disclosures pass. Pinned record link, condition labels,
+    no document overflow and no JS errors verified; selected screenshots visually
+    inspected.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01978.yaml
+  - data/families/PF01978.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01978/trmb-regulatory-contexts.txt
+  - history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml
+  - history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml
+  - pages/families/PF01978.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml
+  evidence_ids:
+  - publication
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://doi.org/10.5283/epub.14529
+  locator: Original Figure images 18-23 and 32-35, printed65/67/69-71/73/88-91; retained
+    ledger R0-R6
+  accessed_at: '2026-10-15T16:38:38Z'
+  support: supports
+  summary: Visual reread confirms per-panel normalization, unequal comparator doses,
+    differing buffer/nuclease conditions, retained 2%/4%/1% residuals and nonmonotonic
+    sugar responses. The overlay separates whole TrmB from PF0124 target-promoter
+    identity and keeps RNAP recruitment hypothetical. No new scientific graph is introduced
+    by this publication audit.
+- evidence_id: integrity
+  kind: validation
+  reference: data/families/manifest.json
+  locator: Executed validation, focused tests, native schema, governed artifacts,
+    OAK, hash/preservation and exact download comparisons
+  accessed_at: '2026-10-15T16:38:38Z'
+  support: supports
+  summary: Generated ownership and evidence references agree; only PF01978 scientific
+    content changes. Ignored/hidden review bundles and source files are included by
+    native review checking and source capture. Deterministic success is not scientific
+    completeness.
+- evidence_id: publication
+  kind: validation
+  reference: https://github.com/CultureBotAI/DUFMech/issues/232
+  locator: Initial failure, annotated candidate tag, native capture/render, canonical
+    remote check and desktop/mobile browser checks
+  accessed_at: '2026-10-15T16:38:38Z'
+  support: supports
+  summary: The inspected candidate resolves the earlier stale pins and missing graphs.
+    Its source tag is retained for squash-merge reproducibility. This audit adds two
+    new source files and requires its own subsequent checkpoint.
+- evidence_id: scientific-followups
+  kind: prior_review
+  reference: reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml
+  locator: Three OPEN findings, predecessor lineage, exact semantic digest and partial
+    scientific coverage
+  accessed_at: '2026-10-15T16:38:38Z'
+  support: supports
+  summary: Issues 228-230 remain open. The extension makes partial progress on 230;
+    physical constructs, domain attribution, matched controls/carryover and remaining
+    exact-member/native contexts are not resolved by publication.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml
+  locator: stale-publication on the same two source targets
+  accessed_at: '2026-10-15T16:38:38Z'
+  support: supports
+  summary: The initial failed publication observation is preserved unchanged. This
+    successor explicitly resolves only that finding against the repaired candidate.
+assessments:
+- assessment_id: evidence-boundaries
+  area: graph
+  topic: Conditions, causal direction and uncertainty
+  outcome: supported
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01978.yaml
+  - data/families/PF01978.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01978/trmb-regulatory-contexts.txt
+  - history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml
+  - history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml
+  - pages/families/PF01978.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml
+  evidence_ids:
+  - primary
+  - scientific-followups
+  summary: The reviewed change retains 14 new observed effects and one hypothesis
+    without conflating regulators, promoter contexts or molecular inference. PF01978
+    remains IN_PROGRESS with three OPEN scientific discussions.
+- assessment_id: ownership
+  area: provenance
+  topic: Maintained owners and append-only preservation
+  outcome: supported
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01978.yaml
+  - data/families/PF01978.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01978/trmb-regulatory-contexts.txt
+  - history/records/PF01978/2026-10-15T154544Z-codex-6f2fd8.yaml
+  - history/records/PF01978/2026-10-15T155452Z-codex-e80937.yaml
+  - pages/families/PF01978.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.md
+  - reviews/structured/20261015T160001Z-pf01978-trmb-regulatory-contexts/review.yaml
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.md
+  - reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/review.yaml
+  evidence_ids:
+  - integrity
+  - scientific-followups
+  - predecessor
+  summary: Overlay/evidence, native generated record and manifest, actual EDIT/REVIEW
+    history, successor review and inventory agree. Older graphs and artifacts remain
+    unchanged. Source snapshots, exports and code are preserved.
+- assessment_id: publication
+  area: other
+  topic: Retained candidate and canonical rendering
+  outcome: supported
+  target_ids:
+  - conf/site_source_pins.json
+  - pages/families/PF01978.html
+  evidence_ids:
+  - publication
+  - integrity
+  summary: The candidate pin and canonical page now agree with the retained source
+    commit and exact record downloads; all new graph disclosures are usable on desktop
+    and mobile.
+findings:
+- finding_id: stale-publication
+  issue_key: pf01978-regulatory-stale-publication
+  category: provenance
+  severity: blocker
+  status: resolved
+  certainty: confirmed
+  title: Current sources are not represented by canonical pins and Pages
+  description: The stale candidate source pins and missing canonical graphs were corrected
+    through retained source publication, native capture and rendering. This disposition
+    concerns those inspected candidate surfaces, not certification of future release
+    gates.
+  target_ids:
+  - conf/site_source_pins.json
+  - pages/families/PF01978.html
+  evidence_ids:
+  - publication
+  - integrity
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/site_sources.py
+    role: Use native capture against a published retained checkpoint, not manual ledger
+      edits.
+  - repository: CultureBotAI/DUFMech
+    path: scripts/render_pages.py
+    role: Regenerate canonical Pages from verified sources.
+  disposition_reason: Canonical source retention verifies 9169 files at the annotated
+    candidate tag. Regenerated PF01978 content matches the current record and all
+    eight added graph disclosures work on desktop/mobile. This new audit must itself
+    be retained and recaptured before final QC/CI and merge.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261015T162719Z-pf01978-regulatory-publication-blocker
+    finding_id: stale-publication
+  external_issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/232
+actions: []
+limitations:
+- Adversarial self-review, not an independent scientist review or family-wide completion
+  claim.
+- Complete historical constructs, raw replicated measurements, remaining primary/member
+  contexts and native physiology remain open under issues 228-230.
+- Visual checks cover the ten original figures supporting this extension and selected
+  rendered views, not all family pages or all historical literature.
+- Initial focused-test environment omission and governed-source DNS failure were corrected
+  and rerun successfully; no scientific input changed to force a pass.
+- Final audit-bearing capture, full QC, exact-head CI, merge integrity and deployment
+  are subsequent gates, not completed outcomes of this report.
+```

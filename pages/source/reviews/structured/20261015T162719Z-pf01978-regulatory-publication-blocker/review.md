@@ -1,0 +1,228 @@
+# PF01978 regulatory-context publication prerequisite audit
+
+- Review: 20261015T162719Z-pf01978-regulatory-publication-blocker
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-15T16:23:02Z
+- Finished UTC: 2026-10-15T16:27:19Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: false
+
+## Summary
+
+The pending regulatory extension cannot be released with the preceding source pins and canonical page. Issue 232 tracks the verified publication blocker; scientific issues 228-230 remain separate.
+
+## Scope And Provenance
+
+Source pins and canonical PF01978 page before publication.
+
+Selection: Two explicit release surfaces affected by the pending extension.
+Coverage: full; 2 reviewed / 2 in the declared population.
+Source: working_tree at Git base 573dcc067c11e331e099e138ba92fab1b8e4eb79.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| conf/site_source_pins.json | conf/site_source_pins.json | source | conf/site_source_pins.json |
+| pages/families/PF01978.html | pages/families/PF01978.html | source | pages/families/PF01978.html |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Native source-pin verification | failed | True | conf/site_source_pins.json, pages/families/PF01978.html | site source pin bytes differ: curation/families/PF01978.yaml; capture a new source checkpoint |
+
+## Scientific And Domain Assessments
+
+### Current source publication
+
+provenance: concern. Targets: conf/site_source_pins.json, pages/families/PF01978.html.
+
+The preceding publication does not represent the current 19-graph record. Native capture and render must follow retained checkpoint publication.
+
+## Findings
+
+### stale-publication: Current sources are not represented by canonical pins and Pages
+
+blocker / open / confirmed; issue key: pf01978-regulatory-stale-publication.
+
+Release with these bytes fails closed at native pin verification and omits the eight regulatory-context graphs from the canonical family page. This is a publication prerequisite, not a scientific claim defect.
+
+## Recommended Actions And Acceptance Checks
+
+### publish
+
+Retain the complete source checkpoint and regenerate Pages
+
+- Publish an annotated canonical source tag and capture its exact commit with the native writer.
+- Regenerate Pages and verify exact record downloads, graph content and source links.
+- Retain a successor audit, recapture its source-bearing checkpoint, and pass full QC and exact-head CI before merge.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| stale | https://github.com/CultureBotAI/DUFMech/issues/232; Native site_sources check and direct canonical page inspection | supports | Pins name ead477b32543baeb6f866ac73623636a01a53bf6. The canonical page lacks trmb-tm-operator-perturbations-thesis, which is present in the current generated record. Native pin verification fails on the changed overlay. |
+
+## Limits And Additional Notes
+
+- This bounded prerequisite audit is not a full scientific reassessment or release approval.
+- Research findings in the retained partial scientific review and GitHub issues 228-230 remain open.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+kind: repository
+repository: CultureBotAI/DUFMech
+source:
+  git_revision: 573dcc067c11e331e099e138ba92fab1b8e4eb79
+  inputs:
+  - path: conf/site_source_pins.json
+    role: target
+    sha256: 9066b906cda393953cb6816f862e9cf34016bb518db9401f1e150d9e523ac6c9
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    role: context
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    role: context
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    role: context
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+  - path: pages/families/PF01978.html
+    role: target
+    sha256: 330a16615d9a8c37e70b59e4d3fab24820b12fcb0a325a5034c5393f4d83a306
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  state: working_tree
+targets:
+- kind: source
+  label: conf/site_source_pins.json
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: conf/site_source_pins.json
+  target_id: conf/site_source_pins.json
+- kind: source
+  label: pages/families/PF01978.html
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+  path: pages/families/PF01978.html
+  target_id: pages/families/PF01978.html
+schema_version: 1.0.0
+review_id: 20261015T162719Z-pf01978-regulatory-publication-blocker
+title: PF01978 regulatory-context publication prerequisite audit
+started_at: '2026-10-15T16:23:02Z'
+finished_at: '2026-10-15T16:27:19Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent reviews the pending work; no independent approval.
+skill: .claude/skills/review-repo/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: FAIL
+scientific_review: false
+summary: The pending regulatory extension cannot be released with the preceding source
+  pins and canonical page. Issue 232 tracks the verified publication blocker; scientific
+  issues 228-230 remain separate.
+scope:
+  description: Source pins and canonical PF01978 page before publication.
+  selection: Two explicit release surfaces affected by the pending extension.
+  coverage: full
+  population_size: 2
+  reviewed_target_ids:
+  - conf/site_source_pins.json
+  - pages/families/PF01978.html
+checks:
+- check_id: pins
+  name: Native source-pin verification
+  command: uv run --locked python -m dufmech.site_sources check
+  status: failed
+  required: true
+  exit_code: 1
+  target_ids:
+  - conf/site_source_pins.json
+  - pages/families/PF01978.html
+  evidence_ids:
+  - stale
+  summary: 'site source pin bytes differ: curation/families/PF01978.yaml; capture
+    a new source checkpoint'
+evidence:
+- evidence_id: stale
+  kind: validation
+  reference: https://github.com/CultureBotAI/DUFMech/issues/232
+  locator: Native site_sources check and direct canonical page inspection
+  accessed_at: '2026-10-15T16:27:19Z'
+  support: supports
+  summary: Pins name ead477b32543baeb6f866ac73623636a01a53bf6. The canonical page
+    lacks trmb-tm-operator-perturbations-thesis, which is present in the current generated
+    record. Native pin verification fails on the changed overlay.
+assessments:
+- assessment_id: release
+  area: provenance
+  topic: Current source publication
+  outcome: concern
+  target_ids:
+  - conf/site_source_pins.json
+  - pages/families/PF01978.html
+  evidence_ids:
+  - stale
+  summary: The preceding publication does not represent the current 19-graph record.
+    Native capture and render must follow retained checkpoint publication.
+findings:
+- finding_id: stale-publication
+  issue_key: pf01978-regulatory-stale-publication
+  category: provenance
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: Current sources are not represented by canonical pins and Pages
+  description: Release with these bytes fails closed at native pin verification and
+    omits the eight regulatory-context graphs from the canonical family page. This
+    is a publication prerequisite, not a scientific claim defect.
+  target_ids:
+  - conf/site_source_pins.json
+  - pages/families/PF01978.html
+  evidence_ids:
+  - stale
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/site_sources.py
+    role: Use native capture against a published retained checkpoint, not manual ledger
+      edits.
+  - repository: CultureBotAI/DUFMech
+    path: scripts/render_pages.py
+    role: Regenerate canonical Pages from verified sources.
+actions:
+- action_id: publish
+  description: Retain the complete source checkpoint and regenerate Pages
+  finding_ids:
+  - stale-publication
+  target_ids:
+  - conf/site_source_pins.json
+  - pages/families/PF01978.html
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/site_sources.py
+    role: Use native capture against a published retained checkpoint, not manual ledger
+      edits.
+  - repository: CultureBotAI/DUFMech
+    path: scripts/render_pages.py
+    role: Regenerate canonical Pages from verified sources.
+  acceptance_checks:
+  - Publish an annotated canonical source tag and capture its exact commit with the
+    native writer.
+  - Regenerate Pages and verify exact record downloads, graph content and source links.
+  - Retain a successor audit, recapture its source-bearing checkpoint, and pass full
+    QC and exact-head CI before merge.
+limitations:
+- This bounded prerequisite audit is not a full scientific reassessment or release
+  approval.
+- Research findings in the retained partial scientific review and GitHub issues 228-230
+  remain open.
+```
