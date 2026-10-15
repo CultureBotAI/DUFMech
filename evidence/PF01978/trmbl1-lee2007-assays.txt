@@ -1,0 +1,119 @@
+PF01978 / PF0124 TrmBL1: original Lee2007 reported assays
+Research session began 2026-10-15T19:14:07Z; curator Codex, GPT-5.
+Primary reference PMID:17587231; DOI:10.1111/j.1365-2958.2007.05780.x.
+Source: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2007.05780.x
+
+ACCESS AND RIGHTS
+Inspected the publisher's Free Access HTML Results, figure captions and
+Experimental procedures. Original figure images were NOT inspected. The public
+Figure10 PowerPoint link was exposed by the publisher, but the web tool could
+not display its format and direct download returned HTTP403. This is not an
+independent lane/trace analysis. These are author-reported experimental outcomes,
+not new measurements. Retain only five brief verbatim anchors (25 words total):
+L1: "shifted this equilibrium to the larger species"
+L2: "chasable by"
+L3: "The Y49N TrmBL1 mutant"
+L4: "The replacement of D50N was less dramatic."
+L5: "C-terminal His-tag versions"
+Everything below is curator interpretation or factual assay bookkeeping, not a
+verbatim full-text copy. The captions alone do not prove image inspection.
+
+IDENTITY AND CONSTRUCTS
+The tested regulator is P. furiosus PF0124/TrmBL1, not PF1743/TrmB. Re-inspected
+the pinned reference mappings used by the preceding TrmBL1 ledgers:
+UniProt Q8U4G4 sequence1/entry96, 341aa, MD5 B5A55D1DD460F61AC0CD1982CA91C297,
+CRC64 6D94DC1D059EBB26; Y49 and D50 occur at reference positions49 and50.
+The reference is taxon186497, ATCC43587/DSM3638/JCM8422/Vc1; this does not
+independently identify the experimental preparation's strain or complete insert.
+Reference endpoint: https://rest.uniprot.org/uniprotkb/Q8U4G4.json
+Inspected search-response SHA256:
+eee6e25cee1a60779c9ddcf1afc5cf58626f1cfbe5a62774ccbb7fc8e93238d1.
+Its original acquisition query was not retained; this is a reused pinned mapping,
+not a claim of a fresh UniProt retrieval in this session.
+InterPro per-protein Pfam response, count3/next=null, SHA256:
+0e90ef82df08212eb7e961bec40716fcef268eda7ae10cc3e3b6a06021732fa5.
+It maps PF01978 to10-77, PF11495 to112-248, PF31112 to256-339. Thus Y49/D50
+are inside PF01978, but sugar responses of the full protein are not isolated
+PF01978 activities. See the preceding trmbl1-primary-assays ledger for endpoints.
+
+Results purification and Methods purification/site-directed mutation analysis:
+N-His6 pQE31 and C-His6 pCS19 proteins were expressed in E. coli SF120; NZA37C,
+0.5mM IPTG at OD0.7, then5h28C. French press, heat70C20min, Ni-sepharose and
+Superdex20026/60 purification are reported. DNA experiments generally use
+N-His6 WT. The paper reports comparable promoter binding by N/C-tagged WT,
+without showing that comparison. All three mutants are C-His6 constructs from
+pSL242; mutation sequencing is reported, but complete inserts were not inspected.
+The Figure10 WT comparator tag is not explicitly resolved. Do not silently
+substitute the thesis's C-terminal-tagged WT preparation or its different methods.
+For SEC and radioligand experiments the assay-specific tag remains unassigned.
+
+L1 / SIZE-EXCLUSION RESPONSE
+Locator: Results quaternary-structure subsection, Figure3 caption, and Methods
+purification/quaternary structure. No-added-ligand protein is reported to have a
+major apparent148.8kDa peak and minor271.3kDa peak. At1mM maltotriose or5mM
+maltose the distribution shifts toward the larger apparent species; maltose is
+reported weaker. These two separately tested additions support two edges to
+increased relative larger-species SEC signal. The paper also describes only the
+larger species at5mM maltotriose, but this is not a separate inspected trace.
+Protocol:250uL at0.5ug/uL (same as0.5mg/mL),70C10min preincubation, room-temperature
+Superdex20010/30,25mM HEPES pH7.5/300mM NaCl,0.25mL/min for140min. Standards are
+BSA67, aldolase160, catalase232 and ferritin440kDa. Exact peak areas, replicate
+errors, tag-specific assembly and sugar retention through the column are not
+established by this text inspection. Apparent hydrodynamic mass is not direct
+subunit counting. Do not encode a proven tetramer-to-octamer conversion, nor
+link this result directly to transcription. Glucose is reported not to shift
+the distribution (data not shown); that is a scoped negative, not universal
+absence of sugar recognition. Higher protein concentration is a separate variable.
+
+L2 / MALTOTRIOSE COMPETITION READOUT
+Locator: Results maltotriose-binding subsection and Methods sugar-binding assay.
+At5uM TrmBL1 and0.47uM radiolabelled maltotriose, about180cpm specific signal
+out of120000cpm input is reported, removable with5mM unlabelled maltotriose.
+The edge represents this competition-associated reduction of retained tracer,
+not the addition of protein causing binding without an inspected blank series.
+General method:100uL,25mM HEPES pH7.5/300mM KCl;5min70C,2mL ice-cold saturated
+ammonium sulphate,10min on ice,0.45um cellulose-nitrate filter,2mL95%-saturated
+wash, scintillation counting. The chase's exact timing is not specified.
+General titrations use2.5or5uM protein, fixed radiolabel with5-1000uM total sugar;
+the separately reported5mM chase lies outside that titration range. The source
+describes the small specific signal as reproducible but supplies no raw replicate
+counts/errors here. Do not interpret180cpm as a separately reported post-chase
+count or claim complete loss of all filter radioactivity. Signal was inadequate
+for a fitted affinity constant; the proposed mM-range Km is an extrapolation,
+not a measured Kd/Km. Likewise the discussion's >500uM half-saturation estimate
+is not a measured binding curve.
+Results report no specific maltose or fructose signal, while Methods list
+radiolabelled maltose, maltotriose and SUCROSE. Preserve that fructose/sucrose
+conflict. A negative precipitation assay does not prove no binding in other
+conditions; SEC/EMSA responses cannot repair the missing affinity measurement.
+
+L3-L5 / MUTANT MD-PROMOTER EMSA
+Locator: Results DNA-recognition-helix subsection, Figure10 caption, Methods
+EMSA and site-directed mutation analysis. WT and mutant concentrations are
+1.25and2.5uM. Reported Y49N and Y49N/D50N preparations lack detectable MD-probe
+binding in this range; D50N has a weaker reduction. Three separate edges compare
+the reported mutant preparations to WT, not three demonstrated atomic contacts.
+The double substitution is one perturbation; no epistasis/additivity is inferred.
+EMSA:10uL,25mM HEPES pH7.5/150mM NaCl,40nCi labelled PCR DNA (source says
+0.5-1uM; units not silently changed),0.5ug poly(dI-dC) competitor,40C10min.
+Add3uL loading buffer with50% glycerol/.05% bromophenol blue;6% nativePAGE,
+room temperature,200V,1xTBE. Exact MD fragment ends, lane ordering and fractional
+retardation have not been visually checked. The transcription template pSL195
+is not silently assigned to this EMSA fragment.
+No detection-limit-calibrated zero affinity, matched active fraction, mutant
+folding/assembly control, direct Y49/D50-base contact, or isolated-domain assay
+is established by the inspected sections. General WT tag comparison does not
+settle the specific Figure10 comparator. Preserve this confound explicitly.
+The source's family-wide essential-Y49 interpretation exceeds these measured
+construct comparisons and is not adopted. TrmB Y50/D51 and TrmBL1 Y49/D50 are
+different proteins/numberings; the thesis D50N is not this paper's Y49N.
+
+REMAINING COVERAGE
+Original Figures3/10 images and raw numerical data remain uninspected. These
+graphs deliberately stop at reported SEC, tracer-retention and EMSA outcomes.
+Do not stitch different buffers, temperatures, tags and promoters into an
+observed sugar-binding -> octamerization -> DNA occupancy -> repression chain.
+Other 2007 promoter/transcription experiments and TrmBL2 require separate review;
+the thesis contexts and earlier39 graphs are retained unchanged. Native-cell
+function, all PF01978 members, direct residue contacts and complete construct
+identity remain open. This ledger does not complete the family review.
