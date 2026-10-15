@@ -1,5 +1,5 @@
 {
-  "commit": "4716dd2f9372a0bbf5d03747c383ae41464765a5",
+  "commit": "a39a20bf4cbe38fabb711e7c06343668f6e8269f",
   "files": {
     "curation/families/PF00563.yaml": "399ed027223b1cdbd02cbd683e008beeb20717bfd6c26747460f0a2563a3cc64",
     "curation/families/PF00668.yaml": "a51b576b995e3fb1592a4f50092d6ebeed6ba7bbe1d4aea63f4ab2d603cadbf0",
@@ -8798,6 +8798,7 @@
     "history/reports/pr-210-pf01973-publication/2026-10-15T025157Z-codex-2cbdac.yaml": "2df198b149310886e9d61a76c43745e91ca01f589ed9b8594cfeaf5e8810d36a",
     "history/reports/pr-211-pf01976-publication/2026-10-15T045541Z-codex-2d9a94.yaml": "57fa305a44d1fd333fed19ee4ad7f0ef03f0d1fd795a5e347584f0232a7699c9",
     "history/reports/pr-220-pf01977-publication/2026-10-15T070720Z-codex-992bc2.yaml": "9dc92a937c2ac7cb19c8f5112de928c5e329ada80f8bf3590da1d672adcf3c08",
+    "history/reports/pr-221-vdcc-publication/2026-10-15T091208Z-codex-f1656c.yaml": "e548a5769ace021beb835647d993c1c18726afb440c75d238a002fc30a1f2473",
     "history/reports/upf1-refreeze-20261010/2026-10-10T073828Z-codex-a2edf6.yaml": "b072af23372b90f28d3734a92aebb0b6edd255dec9990ffdf453697959e28b95",
     "reports/repo_review/20261007T072423Z-review-history-workflows.md": "a25f5bd5ed598b322d89dfac9e4ff252bc60370692d4fc423f10fb7eb0c189ad",
     "reports/repo_review/20261008T071432Z-classification-release-guards.md": "5246b4b13299747a313695f8ed7ace16d72c5195fb2b514ec4d43e0c5cb6807d",
@@ -9139,6 +9140,8 @@
     "reviews/structured/20261015T070720Z-pr-220-pf01977-publication/review.yaml": "8dd67a8e731eb6eb52d26bb59b1de5d57065e1bfad145e652eed466a39e9f432",
     "reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.md": "d93eca97b178755688c5a5e8bf1535c694e8c02c9f84709f186f5e89909ccb8d",
     "reviews/structured/20261015T083743Z-pf01977-vdcc-causal-evidence/review.yaml": "4e50a905800df9dca4588b1613fcd23d1e70dc7b2ad92e601f9f8526e41a03d0",
+    "reviews/structured/20261015T091208Z-pr-221-vdcc-publication/review.md": "539b97c28389cafed891274d47bf47ed127eb04450c89a425d38d34ff195e9dd",
+    "reviews/structured/20261015T091208Z-pr-221-vdcc-publication/review.yaml": "0bbebc9f043792a25d1a2a3fdbf98a0d54d416ca44e6761cd17d8bc7bdf7770e",
     "src/dufmech/schema/dufmech.yaml": "5ca9b9cd1fdefdbe8066b08c319b5144a5f2631710f2271e84dc346283b608e9",
     "src/dufmech/schema/history.yaml": "b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d",
     "src/dufmech/schema/mech_shared.yaml": "c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895"
