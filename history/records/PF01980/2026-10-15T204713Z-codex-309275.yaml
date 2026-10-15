@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01980
+  path: curation/families/PF01980.yaml
+session:
+  id: 2026-10-15T204713Z-codex-309275
+  timestamp: '2026-10-15T20:47:13Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped TrmO_N causal graphs from original E. coli and human assays
+  details: Inspected Kimura2014 primary methods, Results, Discussion and original
+    Figures2-6; mapped E. coli P28634 and human Q9BU70 reference bodies to PF01980.
+    Added 11 graphs with 23 observed effects, separating binding, biochemical methylation,
+    residue and RNA variants, cellular deletion/rescue and two reporter backgrounds.
+    Retained source discrepancies, carryover, residual signals, joint mutations, domain
+    boundaries and unverified construct/folding and family-coverage limits. Baseline
+    records-check validated8296 records with zero generated drift. Regeneration and
+    scoped scientific review follow; status remains IN_PROGRESS.

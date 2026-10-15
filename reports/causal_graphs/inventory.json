@@ -1499,14 +1499,18 @@
       ]
     },
     {
-      "curation_status": "SEEDED",
-      "edge_count": 0,
-      "graph_count": 0,
-      "graph_state": "ABSENT",
+      "curation_status": "IN_PROGRESS",
+      "edge_count": 24,
+      "graph_count": 12,
+      "graph_state": "PRESENT",
       "name": "TrmO_N",
       "pfam_id": "PF01980",
-      "record_digest": "62b44877449ef73aaaa112cb30c507c762fb8ce782451a34badd71a904a1e341",
-      "scope_statuses": []
+      "record_digest": "666de005f3ad8023fda2a920d0e15eafd79800589d9b4cd7688641d15187e88c",
+      "scope_statuses": [
+        "HYPOTHETICAL",
+        "MECHANISTIC",
+        "PHENOTYPIC"
+      ]
     },
     {
       "curation_status": "SEEDED",
@@ -83288,8 +83292,8 @@
     }
   ],
   "graph_states": {
-    "ABSENT": 8168,
-    "PRESENT": 128
+    "ABSENT": 8167,
+    "PRESENT": 129
   },
   "kind": "structural_inventory_not_scientific_review",
   "records": 8296

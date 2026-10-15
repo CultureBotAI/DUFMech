@@ -1,0 +1,87 @@
+PF01980 / TrmO_N: inspected Kimura2014 supplemental context and limitations
+Inspected 2026-10-15 by Codex. PMID:25063302; doi:10.1093/nar/gku618.
+Article is CC BY4.0; minimal quotations and scoped paraphrases retained here.
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/supplementaryFiles?inlineImages=no
+Successful ZIP SHA256 06748685f8c442c1665d56cb35f20001c3257172d8a226f9942e9c38a2c2bc79.
+The first transfer timed out and is not counted as a complete source. The
+successful response still contains inline images despite the request parameter.
+Extracted source filenames and SHA256:
+supp_gku618_nar-01435-r-2014-File003.docx (results/captions)
+0db92671ff7aa318d21ad3b54c760a67295fd8cdb2f3bf1890c2a4e3e623dd28
+supp_gku618_nar-01435-r-2014-File004.pdf (9 figure pages)
+6471ea4985b24c9fb8dfbe90700d9113f7344022a1f99a095cc1378113eeac22
+supp_gku618_nar-01435-r-2014-File006.docx (Table S2 primers)
+20c70a0e1b2f14b174c89e376d3b80fa176c2bf4ac2112e7ed7209c3b40610f5
+DOCX paragraph/table text was parsed from WordprocessingML w:t nodes; embedded
+EndNote field instructions were not mistaken for displayed text. PDF S3/S5/S7/S9
+images were rendered and visually inspected. S1/S2/S4/S6/S8 images, the SEED
+workbook, phylogeny archives and the large alignment image remain unassessed.
+
+T1. Reference and construct support
+S5 caption explicitly names E. coli NP_414737.1 and human NP_057565.3, with
+235-aa and441-aa sequences in the alignment. Visual endpoints match P28634
+and Q9BU70 reference ends; no full residue-by-residue alignment to the physical
+insert is established. S5 labels EcQ25/R92/D125/K136 and D194/R196. It also
+shows mammalian internal insertions and shorter archaeal proteins. This is
+sequence-context evidence, not proof of identical function across the alignment.
+Human second-PCR primers from Table S2:
+hTrmO_2ndPCR_f AGTCAGTCgctagcATGCGCGGCTTGGAGG
+hTrmO_2ndPCR_r AGTCAGTCgtcgacTTAAGACCCTAGAGACACCAAGG
+Biopython translation: forward coding segment startsMRGLE. Reverse binding
+segment reverse-complements to CCTTGGTGTCTCTAGGGTCTTAA; its matching reading
+frame endsLVSLGS*, agreeing with the current441-aa human reference tail.
+Endpoint agreement supports a full-body design, not complete internal sequence,
+HeLa isoform, physical insert or tag/linker verification. No truncation boundary
+was inferred merely from the internal insertion shown in S5.
+Table S2 explicitly labels Q25A,R92A,D125A,K136A and D194A_R196A primer pairs;
+the latter supports a joint intervention, not separate single-mutant assays.
+Full genomic primer alignment and mutant protein sequencing remain unfinished.
+
+T2. RNA control construct discrepancy
+Table S2 lists these two primers with IDENTICAL nucleotide strings:
+Thr4_body
+GCCGACTTAGCTCAGTAGGTAGAGCAACTGACTTGTAATCAGTAGGTCACCAGTTCGATTCC
+Thr4_U34G_body
+GCCGACTTAGCTCAGTAGGTAGAGCAACTGACTTGTAATCAGTAGGTCACCAGTTCGATTCC
+The labeled U34G-only negative control therefore has unresolved sequence
+documentation. Do not repair the primer silently or claim its physical sequence
+was verified. Figure4's reported low U34G-control signal remains a reported
+assay result, but the isolated U34G intervention is not independently confirmed.
+The listed triple-mutant primer differs and reads
+GCCGACTTAGCTCAGTAGGTAGAGCAACTGCCTGGTAAGCAGTAGGTCACCAGTTCGATTCC.
+The A31C/U39G pair-only primer reads
+GCCGACTTAGCTCAGTAGGTAGAGCAACTGCCTTGTAAGCAGTAGGTCACCAGTTCGATTCC.
+Table S2 U3C_A70G labels agree with Figure4, while Results says U3-A71.
+Neither this table nor the displayed assay proves a general identity rule.
+
+T3. Homolog structures are not Ec atomic measurements
+S3 labels AF0241/2NV4 (Archaeoglobus fulgidus), RPA0152/3OKX
+(Rhodopseudomonas palustris) and HI0510/1XQB (Haemophilus influenzae).
+AF0241/RPA0152 show AdoMet; HI0510 has an additional domain. S7 is their
+best-fit superposition with positions labeled in Ec-equivalent numbering.
+No E. coli or human structure is measured in these figures. The PF01980
+mutation graphs therefore retain UNRESOLVED directness. A ligand contact in
+a homolog is not proof of Ec methyl transfer or a reaction transition state.
+
+T4. Downstream decoding hypothesis, not an observed TrmO reaction
+S9 caption quote: "The N6-methyl group was added to the crystal structure coordinates"
+Main Discussion quote: "might have a function in stabilizing the anticodon"
+Main source: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4132733/fullTextXML
+The model modifies PDB1XMO: T. thermophilus30S, mRNA and tRNALys anticodon
+stem-loop recognizing AAG, not the EcThr3/ACC reporter substrate or a TrmO-RNA
+cocrystal. S9B displays methyl-carbon distances3.3A to U36O4 and3.2A to A38N6.
+The authors propose favorable van der Waals interactions, stronger stacking
+and less U36 fluctuation. No measured contact energy, RNA dynamics or decoding
+rate follows from these modeled distances. S9C's ct6A model is separate and
+does not turn the two independently normalized reporters into matched kinetics.
+The graph retains only the hypothesized m6t6A-dependent stabilization step as
+COMPUTATIONAL/HYPOTHESIZED, with unresolved directness and explicit scaffold
+transfer limits; it is not joined to observed biochemical edges as one pathway.
+
+T5. Historical tsaA mapping is not mutation-level proof
+Supplementary Result uses the earlier75% cotransduction frequency and Wu
+distance formula to place tsaA9-10kb left of yafC near proS/yaeB/rcsF/metQ.
+The selection of yaeB as the sole then-unknown gene is a candidate argument,
+not sequencing of the historical tsaA lesion. No exact nucleotide or amino-acid
+change is reported in this supplemental paragraph. Reassess the original1998
+PMID9537379 experiments before adding their separate physiological claims.

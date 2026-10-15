@@ -6793,3 +6793,60 @@ PF01978 original Lee2007 reported-assay checkpoint (PR #237, 2026-10-15):
   independent scientific approval. Retain and render this audit's checkpoint
   before final full QC, exact-head CI and merge; those future results are not
   certified by the review artifact.
+
+PF01980 initial TrmO_N local checkpoint (2026-10-15):
+
+- Twelve graphs retain 23 observed effects and one explicitly computational
+  hypothesis. The contexts distinguish E. coli deletion/rescue, binding,
+  synthetic and native-RNA methylation, protein and tRNA substitutions, two
+  separately normalized reporters, human TRMO biochemistry, and the modeled
+  Lys-ASL decoding hypothesis. No isolated-domain sufficiency is asserted.
+- Reference mapping places E. coli Q25/R92/D125/K136 in PF01980 (11-142),
+  but the jointly mutated D194/R196 pair in PF18389 (159-234). Human Q9BU70
+  maps PF01980 to 36-165; S5 accessions and Table S2 primer endpoints support
+  the reference-body design, not complete physical-insert verification.
+- Main Figures 2-6 and supplemental S3/S5/S7/S9 were visually inspected.
+  Three ledgers under `evidence/PF01980/` retain source hashes, methods,
+  residual signals, WT-RNA probe carryover, distinct reporter normalizations,
+  and conflicts in residue/RNA numbering and human modification percentages.
+  Table S2 prints identical WT and U34G-only Thr4 primer sequences; that
+  negative control's physical sequence remains unresolved, not silently fixed.
+- The partial scientific self-review is
+  `reviews/structured/20261015T210544Z-pf01980-trmo-causal-contexts/review.yaml`.
+  Three findings remain OPEN: construct/domain mechanism, source discrepancies
+  and physiology, and remaining family/literature coverage. Actual CREATE,
+  supplemental EDIT and REVIEW events are retained. Status stays IN_PROGRESS
+  with no qualifying REVIEWED pointer. The semantic digest is
+  `666de005f3ad8023fda2a920d0e15eafd79800589d9b4cd7688641d15187e88c`.
+- The 52 focused tests, schema reproduction, pre-review history, current
+  inventory/exports, all-family manifest preservation and unpinned 1440px/390px
+  disclosure checks pass. Final post-REVIEW index regeneration and validation
+  are separate subsequent checks, not certified by the earlier review artifact.
+- Post-REVIEW checks now pass: all 8,296 projections have zero generated drift,
+  337 history files validate, four review-contract tests pass, and 184 structured
+  bundles / 192 native reports validate. The final preservation audit retains
+  every other family and all prior review/evidence/history bytes. The refreshed
+  preview contains all three events and passes desktop/mobile disclosure and
+  horizontal-table-access checks. The scientific digest remains unchanged.
+- Structural inventory is 888 graphs and 1,918 edges in 129 families; 8,167
+  remain graphless. Presence is not scientific completion. The full 8,296-record
+  objective remains open. Follow up PMID9537379, later TrmO structures/studies,
+  remaining supplements and separately mapped homologs without pooling contexts.
+- This checkpoint is local only. Canonical Pages and source pins remain at the
+  merged release; full release QC, source retention and publication are not
+  performed by this scientific continuation.
+
+PF01980 publication prerequisite (2026-10-15):
+
+- Publication is now separately authorized. The source-pin check rejects the
+  changed PF01980 projection; issue #239 tracks retained checkpoints, native
+  capture, canonical rendering and release gates. The adversarial prerequisite
+  self-review is retained at
+  `reviews/structured/20261015T212235Z-pf01980-publication-blocker/review.yaml`.
+- Issues #240-242 track the three scientific findings: physical constructs and
+  domain mechanism, source discrepancies and physiology, and remaining exact-member
+  literature coverage. These remain OPEN and do not prevent publication of the
+  current explicitly scoped graphs. No additional 1998 assay has been curated.
+- The current baseline has 8,296 schema-valid projections with zero drift, and
+  52 focused causal-graph/QC tests pass. Publication checks and final exact-head
+  CI are subsequent work, not certified by this prerequisite review.
