@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01981
+  path: data/families/PF01981.yaml
+session:
+  id: 2026-10-15T233126Z-codex-34d6da
+  timestamp: '2026-10-15T23:31:26Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Self-review of nine PF01981 graphs and sixteen scoped experimental edges;
+    three scientific follow-ups remain open.
+  details: Reviewed all sixteen edges against retained primary-source observations,
+    exact-member mappings, negatives and conflicting contexts. Native record/schema/history/inventory/export
+    checks, 52 focused tests, whole-corpus preservation and the refreshed 1440px/390px
+    unpinned preview pass. The saved partial scientific review remains NEEDS_FOLLOWUP;
+    PF01981 remains IN_PROGRESS. This event does not certify canonical publication
+    or complete family coverage.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261015T233126Z-pf01981-pth2-causal-contexts/review.yaml

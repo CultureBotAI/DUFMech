@@ -6962,3 +6962,35 @@ PF01981 PTH2 initial causal-context checkpoint (2026-10-15):
   scientific follow-ups and will not be closed by publication. A retained source
   checkpoint, native capture/rendering, adversarial disposition and full exact-head
   checks are required before merging this batch.
+
+PF01981 candidate publication audit (PR #250, 2026-10-15):
+
+- Issue #246 was reproduced locally and in draft CI `38824815058`. Annotated
+  tag `source/dufmech-pr-250-candidate` retains source commit
+  `39df6f38da08c971df1f02ab247f2c7513d44adb`. Native capture and fresh canonical
+  remote verification pass for 9,217 sources; 9,014 rendered source copies and
+  the current PF01981 JSON are byte-exact. All other 8,295 records, earlier
+  scientific artifacts, frozen datasets and runtime remain unchanged.
+- Post-REVIEW generation, complete record/schema/history/review validation,
+  inventory and exports pass. Three canonical events are indexed without changing
+  the scientific digest. Four review-contract tests, 191 structured bundles and
+  199 native reports validate before this publication audit.
+- Canonical rendering and the site contract pass for 8,296 families / 8,633 HTML
+  pages, totaling 421,152,518 bytes within the unchanged 430 MB archive budget.
+  At 1440px/390px, all sixteen evidence disclosures and primary links, the pinned
+  record link and horizontally accessible tables pass without document overflow
+  or JavaScript errors. Selected screenshots were visually inspected.
+- All 22 governed artifacts match the pinned published CLAW source. Real isolated
+  offline OAK correspondence and rejection tests pass for 8,296 canonical pairs.
+  The append-only adversarial self-review is
+  `reviews/structured/20261015T235256Z-pr-250-pf01981-publication/review.yaml`
+  with derived Markdown. It resolves the exact candidate publication predecessor,
+  not scientific issues #247-249. No new scientific assertion is made by this audit.
+- The variadic render recipe rejected a combined recipe invocation before writing;
+  separate render and site-contract commands passed. The first draft review save
+  rejected an invalid evidence-kind label before persistence; the native enum was
+  corrected. Neither event required a runtime or validator change.
+- This audit must itself be retained, recaptured and rendered. Final full release
+  QC is required on the exact PR head, followed by merge-group checks; those later
+  checks are not certified by this candidate audit. This is self-review, not
+  independent approval or completion of the all-record scientific goal.

@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01981
+  path: curation/families/PF01981.yaml
+session:
+  id: 2026-10-15T232145Z-codex-18fd80
+  timestamp: '2026-10-15T23:21:45Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Improve spacing in PTH2 assay contexts and reference mappings after visual
+    inspection.
+  details: The initial native projection,52focused tests and1440px/390px browser checks
+    passed. Visual inspection showed cramped numeric units and reference-version prose.
+    Normalized those maintained overlay fields and labels without changing measured
+    values, experimental scope, evidence, predicates or support. Regenerate the current
+    projection and recheck its local preview before retaining the scientific review.
+  sections:
+  - causal_graphs

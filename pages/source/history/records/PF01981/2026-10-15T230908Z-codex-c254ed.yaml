@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01981
+  path: curation/families/PF01981.yaml
+session:
+  id: 2026-10-15T230908Z-codex-c254ed
+  timestamp: '2026-10-15T23:09:08Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Add scoped PTH2 hydrolysis, complementation and assay-condition causal
+    graphs.
+  details: Curated nine graphs and sixteen observed edges from primary 2002, 2003
+    and 2026 studies. Retained minimal extracts and mapping ledger, retired-accession
+    provenance, separate historical yeast constructs, source discrepancies and three
+    open follow-ups. Native record baseline passed for8296records. This remains partial
+    scientific curation, IN_PROGRESS; no atomic catalytic, universal family, localization
+    or environmental-growth claim. Regeneration and scientific self-review follow.
+  sections:
+  - causal_graphs
+  - discussions
