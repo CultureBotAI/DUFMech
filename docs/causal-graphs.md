@@ -6505,3 +6505,41 @@ PF01978 TrmB initial causal assessment (2026-10-15, local continuation):
   reviews, 180 native reports and zero schema differences. Final integrity and
   current unpinned desktop/mobile preview rechecks pass. Canonical publication
   and full release QC remain unperformed; no status promotion is made.
+
+PF01978 TrmB publication audit (2026-10-15, PR #231):
+
+- Publication was explicitly requested. The adversarial self-review reread
+  Lee2003 primary methods/results/captions and the thesis preparation and assay
+  methods, and visually reinspected original Figures 45-48/51. No additional
+  blocking scientific defect was found in these scoped graphs. This is not
+  independent expert approval or complete PF01978 scientific review.
+- Structured rechecks confirm identical Q7LYW4/Q9HGZ9 reference bodies, the
+  three separate Pfam intervals, Y50 inside PF01978 and E87 outside it, and
+  actual 3QPH Val161 atoms. Construct ambiguity, glucose carryover, residual
+  activity, nonmonotonic outputs and the hypothesized TBP step remain explicit.
+  Issues #228-230 retain the three scientific findings with acceptance criteria;
+  none is closed by publication. Remaining scratch research is not in this PR.
+- Issue #227 tracks the stale source-pin failure reproduced locally and in
+  initial CI run `38753200582`. Candidate commit
+  `2f81f77105785fc28cb6a1282a69715c8d176b6c` is retained by annotated tag
+  `source/dufmech-pr-231-candidate`. Native capture and online canonical
+  retention verification pass for all 9,161 candidate source files.
+- Native rendering regenerated canonical Pages. At 1440px and 390px, the
+  changed record retains 11 graphs, 26 edges, 25 observed/one hypothesized
+  labels, 26 source links, three OPEN discussions, working disclosures and
+  the correct pinned record URL. Selected screenshots were visually inspected;
+  no document overflow or JavaScript errors occurred. Native horizontal table
+  scrolling remains; the temporary browser/server closed.
+- Fresh native validation passes 8,296 records with zero drift, 326 history
+  files, four review-contract tests, 172 structured bundles, 180 native reports
+  and schema reproduction. All 52 focused tests, 22 governed-artifact checks
+  and isolated offline OAK regressions pass. Independent checks verify all
+  record/evidence hashes, the saved semantic digest, all 8,296 rendered YAML
+  downloads and the exact PF01978 JSON. Scientific candidate inputs, imported
+  fields, other records, frozen inputs, prior artifacts and code are preserved;
+  export changes are PF01978's curation status only.
+- The append-only publication audit must itself be retained and recaptured
+  before final full QC, exact-head CI, merge integrity and deployment. Those
+  later outcomes are not certified by this checkpoint. Preserve annotated
+  source tags after deleting the feature branch. PF01978 remains IN_PROGRESS,
+  and the full corpus objective remains unfinished.
