@@ -6234,3 +6234,71 @@ PF01977 VdcCD publication audit (PR #221, 2026-10-15):
   and merge verification are subsequent release gates; this entry does not
   claim those future results. Source-retention tags must remain after deleting
   the development branch.
+
+PF01977 initial ScFdc evidence extension (2026-10-15, local):
+
+- Continued from merged PR #221 at
+  `9ed1e01059158ac4159dbe817725da7cd4b2002a` in the isolated worktree
+  `/private/tmp/dufmech-pr220-20261015`, branch
+  `feat/duf-pf01977-scfdc-causal-graphs`. Baseline validates all 8,296
+  records with zero drift. All 23 earlier AnFdc/VdcCD graphs are preserved.
+- Added nine ScFdc graphs and 19 experimental edges: one direct styrene
+  endpoint and 18 activation, preparation or readout effects with unresolved
+  molecular routes. PF01977 now has 32 graphs/79 edges, comprising 33
+  DIRECT/OBSERVED, 42 UNRESOLVED/OBSERVED and four preserved hypotheses.
+  There are 12 MECHANISTIC, 18 PHENOTYPIC and two HYPOTHETICAL graphs.
+- `evidence/PF01977/scfdc-primary-assays.txt` retains 24 words of distinct
+  primary excerpts plus factual metadata, curator explanations, exact
+  locators and raw-source hashes. Lin2015, PMID:25647642, was inspected
+  through the public author manuscript, Methods, Table 1 and original
+  Figures 2/3/4/6. The manuscript and images are not redistributed.
+- Q03034 sequence 1 maps PF01977 to 119-320, with PF20695/PF20696 also
+  present. Separate 4ZAC entity 1 exactly matches the 503-aa reference,
+  not necessarily the experimental synthetic insert. FDC terminal primers
+  support reference relationship only. Species-level taxonomy does not
+  assign S288c as the experimental strain. PAD1 reference P33751 maps
+  PF02441, not PF01977; the published tPAD1 primer maps at residue 55
+  despite a reported deletion of residues 1-58. This remains unresolved.
+- Direct-mix and membrane-separated activation stay separate. Low residual
+  bars, tPAD1-only activation and fresh-lysate rescue above the isolated
+  reference are preserved. Coexpression also changes FDC tag placement;
+  host labels do not independently establish a matched parental comparison.
+  UV depletion is not promoted to product-MS identification or measured
+  active-site-normalized kinetics. Fraction rescue and acid/base effects
+  are text-only observations, not proof of a unique chemical route.
+- The partial scientific successor review is
+  `reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml`
+  and its derived Markdown. It retains all three OPEN findings and exact
+  VdcCD predecessor identities. Verdict is `pass_with_limitations` /
+  `NEEDS_FOLLOWUP`; same-agent review is not independent expert approval.
+  The record remains IN_PROGRESS, with no reused review approval.
+- Actual canonical EDIT/REVIEW events are
+  `history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml` and
+  `history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml`.
+  The semantic digest is
+  `1590bf1fb0c344af770e21a6a248840f39e9d0c19928da9b4ccd66ec3d86cfb3`.
+- All 8,296 manifest hashes and 79 cache/primary-XML quotations pass;
+  imported fields, other records, previous evidence/reviews/history,
+  snapshots, code and exports remain unchanged. Schema reproduction and
+  52 focused graph/QC tests pass. Only PF01977's inventory row changes:
+  823 graphs/1,759 edges across 127 graph-bearing families, 8,169 graphless.
+  Counts describe structure, not independent experiments or completion.
+- Native unpinned preview passes at 1440px and 390px: all graphs, edge
+  labels, 79 evidence links, working disclosures and three OPEN questions,
+  with no document overflow or JavaScript errors. Selected screenshots
+  were visually inspected; native horizontal table scrolling is retained.
+  The temporary browser and server closed. Canonical Pages are unchanged.
+- Source-pin verification fails for the edited overlay, as expected for
+  local curation. Source capture, canonical rendering and full release QC
+  remain an authorized publication workflow. No commit, push or new PR is
+  claimed. Final history-index preview/apply changed only PF01977 and its
+  manifest. `just validate-all validate-schema` passes with 8,296 records
+  and zero drift, 322 history files, four review-contract tests, 168
+  structured bundles, 176 native reports and zero schema differences.
+  The saved semantic digest still matches after history indexing. Final
+  integrity, all 8,296 inventory rows and documentation checks pass.
+- Continue later ScFdc mechanisms and maturation, exact constructs and
+  matched controls, active occupancy and source discrepancies, then other
+  PF01977 members and the remaining family queue. The 2017 SI is an
+  inspected lead, not newly adopted cycloaddition-topology proof. Earlier
+  AnFdc/VdcCD findings and the full 8,296-family objective remain active.

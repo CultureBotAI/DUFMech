@@ -3,7 +3,7 @@ curation_status: IN_PROGRESS
 curation_history: history/records/PF01977
 discussions:
   - discussion_id: ubid-member-and-partner-coverage
-    prompt: Extend the family assessment beyond the mapped AnFdc and scoped VdcCD experimental systems.
+    prompt: Extend the family assessment beyond the mapped AnFdc, scoped VdcCD and initial ScFdc experimental systems.
     kind: CURATION_TODO
     status: OPEN
     rationale: PF01977 is the central domain of diverse multidomain enzymes; AnFdc chemistry does not establish a universal substrate, partner requirement or native physiological role.
@@ -12,9 +12,13 @@ discussions:
         supports: PARTIAL
         evidence_source: primary_publication
         explanation: VdcCD substrate, partner, oxygen, viscosity and variant assays are now assessed separately from the proposed dynamic mechanism. Sh deposited bodies are mapped; complete synthetic Bs constructs remain unresolved.
+      - reference: PMID:25647642
+        supports: PARTIAL
+        evidence_source: primary_publication
+        explanation: Initial ScFdc catalysis, activation/rescue and preparation effects are scoped to synthetic whole-enzyme preparations. Complete inserts, native-system physiology, later mechanisms and the tPAD1 truncation boundary remain unresolved.
     posed_by: Codex
     posed_date: '2026-10-15'
-    notes: Continue ScFdc and PMID28753302, EcUbiD, AroY, HmfF, HudA and later maturation/specificity studies, plus VdcCD native-system and construct follow-up. Preserve the full family and corpus scope; see evidence/PF01977/anfdc-primary-assays.txt and vdcc-primary-assays.txt.
+    notes: Continue later ScFdc studies including PMID27119435 and PMID28753302, EcUbiD, AroY, HmfF, HudA and maturation/specificity work, plus VdcCD native-system and construct follow-up. Preserve the full family and corpus scope; see evidence/PF01977/anfdc-primary-assays.txt, vdcc-primary-assays.txt and scfdc-primary-assays.txt.
   - discussion_id: anfdc-atomic-steps-and-domain-attribution
     prompt: Resolve intermediate transitions and separate whole-enzyme effects from PF01977-specific chemistry.
     kind: CURATION_TODO
@@ -29,6 +33,7 @@ discussions:
     posed_date: '2026-10-15'
     notes: Extend the remaining substrate/inhibitor and small-analogue graphs after their individual assay review. Resolve solution-MS incubation details, active-cofactor normalization, construct sequences and the limits of domain transfer. Do not combine E282Q Int2 and WT Int3 into one observed mutant-independent trajectory.
       VdcCD docking and partner-allostery graphs remain hypotheses; apo structures and viscosity effects do not measure the proposed catalytic trajectory or isolate PF01977 sufficiency.
+      ScFdc transferable activation does not directly measure cofactor synthesis or establish a chemically pure activating species; UV depletion does not independently identify every product.
   - discussion_id: anfdc-assay-discrepancies
     prompt: Resolve primary-source label discrepancies while retaining condition-specific negative and residual activities.
     kind: CURATION_TODO
@@ -47,9 +52,13 @@ discussions:
         supports: PARTIAL
         evidence_source: primary_publication
         explanation: Sh sequence verifies R168/G178 despite inconsistent figure labels. Source data retain low C-alone vanillate activity, a nonzero BsCD gallic replicate and loss of low ShCD gallic activity after partner-tail deletion. L182V is reported only in text; active-cofactor normalization and complete Bs insert identity remain unresolved.
+      - reference: PMID:25647642
+        supports: PARTIAL
+        evidence_source: primary_publication
+        explanation: Original ScFdc Figures 3/4 retain low baseline and tPAD1-only activity despite simplified prose. Coexpression also changes FDC tag placement; published tPAD1 primer maps to reference residue 55 despite reported deletion of 1-58. Figure/prose mass, abstract/table kinetics and host-background discrepancies remain explicit.
     posed_by: Codex
     posed_date: '2026-10-15'
-    notes: R173 is verified in A2QHE5; position 172 is Ala. F437L is verified in deposited 6R2Z despite the 2019 F439L prose typo. Obtain missing raw assay/construct details; absence of detected product is not proof of zero activity under all conditions.
+    notes: R173 is verified in A2QHE5; position 172 is Ala. F437L is verified in deposited 6R2Z despite the 2019 F439L prose typo. Obtain missing raw assay/construct details and measured active occupancy; absence of detected product is not proof of zero activity under all conditions. Do not equate ScFdc native-PAGE migration with a definitive oligomer or use a hypothesized occupancy correction as measured turnover.
 causal_graphs:
   - graph_id: anfdc-cinnamate-decarboxylation-2015
     title: AnFdc converts cinnamic acid to styrene
@@ -1111,3 +1120,315 @@ causal_graphs:
         evidence_kind: CONTEXTUAL
         evidence:
           - {reference: 'PMID:34417452', source_url: 'https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML', snippet: maintaining the structure of the key catalytic ERE motif, explanation: 'Figure 3b interface and V59X discussion; ledger V6. Physical contacts and endpoint effects remain distinct from demonstrated allostery.', cache_path: evidence/PF01977/vdcc-primary-assays.txt, cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629}
+  - graph_id: scfdc-cinnamate-decarboxylation-2015
+    title: Purified ScFdc preparation converts cinnamate to styrene
+    scope: Synthetic whole S. cerevisiae FDC/YDR539W expressed in E. coli BL21, with an N-terminal six-His tag; not an isolated-domain assay.
+    context: Routine assay uses 500 uL PBS pH 8, 6.7 mM cinnamic acid, typically 1 uM FDC, 32 C and variable incubation. GC-MS after ethyl-acetate extraction is calibrated with authentic styrene standards.
+    family_mapping: Q03034 sequence 1 is the 503-aa FDC1/YDR539W reference, PF01977 119-320, PF20695 14-102 and PF20696 328-464. Published FDC terminal primers match; the complete synthetic insert and yeast strain are unresolved. Separate 4ZAC body equals Q03034 but is not this assay plasmid. See scfdc-primary-assays.txt M.
+    taxon: NCBITaxon:4932
+    scope_status: MECHANISTIC
+    limitations: Whole cofactor-containing preparation supports product formation, not a defined isolated PF01977 reaction, native yeast flux or directly measured CO2. The cofactor structure was unresolved in this study; PAD1 is not assigned the decarboxylation.
+    nodes:
+      - {node_id: reaction, label: Purified ScFdc preparation with bound activating material and cinnamate, node_type: PROCESS}
+      - {node_id: product, label: Styrene measured against authentic standards, node_type: STATE}
+    edges:
+      - edge_id: produces-styrene
+        subject: reaction
+        predicate: produces
+        object: product
+        mechanism: The joint enzyme-containing reaction yields styrene quantified by GC-MS; the reported preparation-specific activity is about 0.54 umol/min/mg. No single component is presented as independently sufficient.
+        directness: DIRECT
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: styrene, explanation: 'Results S2 and GC-MS Methods S12; original Figures 2/3 and ledger L1. Authentic product calibration supports endpoint chemistry, not atomic steps.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+  - graph_id: scfdc-low-ph-activity-2015
+    title: Lower pH reduces ScFdc styrene output in phosphate buffer
+    scope: Whole N-His ScFdc preparation, same-buffer pH comparison within Figure 2C.
+    context: 1 uM FDC and 6.7 mM cinnamate, 32 C for 10 min; 50 mM potassium phosphate with 100 mM NaCl. Compare pH 6-6.5 with 7-7.5; substrate saturation was checked.
+    family_mapping: Reference-related Q03034/YDR539W has PF01977 119-320 within the 503-aa multidomain enzyme. Synthetic insert and yeast strain are not independently established; no domain truncation is tested.
+    taxon: NCBITaxon:4932
+    scope_status: PHENOTYPIC
+    limitations: Does not identify a catalytic pKa, residue protonation or isolated-domain mechanism. The pH 8-9 Tris series is not treated as a pure pH intervention against the phosphate series; raw replicates are not available in this assessment.
+    nodes:
+      - {node_id: lower_ph, label: Lowering assay pH from 7-7.5 to 6-6.5 in phosphate buffer, node_type: PERTURBATION}
+      - {node_id: output, label: Styrene accumulated in 10 min, node_type: STATE}
+    edges:
+      - edge_id: lowers-output
+        subject: lower_ph
+        predicate: decreases
+        object: output
+        mechanism: Lower-pH phosphate-buffer points have substantially less GC-MS-measured styrene. Enzyme stability, cofactor state and protonation are not separated by this endpoint comparison.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: below pH 7.0, explanation: 'Original Figure 2C, S2 and pH-assay Methods S12; ledger L1. Comparison stays within the phosphate series.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+  - graph_id: scfdc-dialysis-lysate-rescue-2015
+    title: Dialysis lowers ScFdc activity and fresh lysate restores it
+    scope: N-His FDC purified from BL21; dialysis and donor-lysate comparisons, not a purified cofactor-synthesis assay.
+    context: 24-h dialysis through a 3.5-kDa-cutoff membrane followed by the cinnamate-to-styrene assay. Fresh or separately predialyzed WT BL21 lysate is added to dialyzed FDC. Figure 3 normalizes isolated FDC to 100%.
+    family_mapping: Reference Q03034 PF01977 119-320 within whole FDC/YDR539W; exact synthetic insert remains unresolved. The lysate is a complex host preparation, not another PF01977 entity.
+    taxon: NCBITaxon:4932
+    scope_status: PHENOTYPIC
+    limitations: Original bars retain low nonzero signals after FDC dialysis and with predialyzed lysate. Fresh-lysate rescue exceeds the isolated reference, not exactly 100%. Molecular identity, occupancy and stability contributions remain unresolved; approximate bar heights are not raw values.
+    nodes:
+      - {node_id: dialysis, label: Dialyzing isolated FDC for 24 h, node_type: PERTURBATION}
+      - {node_id: isolated_activity, label: Activity relative to undialyzed isolated FDC, node_type: ACTIVITY}
+      - {node_id: fresh_donor, label: Adding fresh WT lysate to dialyzed FDC and cinnamate, node_type: PERTURBATION}
+      - {node_id: rescue_activity, label: Styrene-producing activity of the dialyzed-FDC assay, node_type: ACTIVITY}
+      - {node_id: dialyzed_donor, label: Substituting predialyzed lysate for fresh lysate in the rescue assay, node_type: PERTURBATION}
+    edges:
+      - edge_id: dialysis-lowers-activity
+        subject: dialysis
+        predicate: decreases
+        object: isolated_activity
+        mechanism: The dialyzed preparation has a small residual bar near 5% visually versus isolated FDC at 100%; this is strong loss, not universal zero activity.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: almost complete loss, explanation: 'S2 and original Figure 3 first/second bars; ledger L2. Visual approximation, not digitized measurement.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+      - edge_id: fresh-lysate-rescues
+        subject: fresh_donor
+        predicate: increases
+        object: rescue_activity
+        mechanism: Fresh WT lysate raises activity of dialyzed FDC to above the isolated reference, visually around 240%. A complex-mixture rescue does not identify the active molecule or its biosynthetic route.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: activate FDC, explanation: 'S2 and original Figure 3 second/third bars; ledger L2. Rescue includes FDC and substrate, not lysate alone.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+      - edge_id: donor-dialysis-lowers-rescue
+        subject: dialyzed_donor
+        predicate: decreases
+        object: rescue_activity
+        mechanism: Predialyzed donor lysate gives much less activation than fresh lysate, with a low nonzero bar visually around 15% of isolated FDC. This comparison is not proof that every donor component is removed.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: activate FDC, explanation: 'S2 and original Figure 3 third/fourth bars; ledger L2 preserves residual response despite simplified loss wording.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+  - graph_id: scfdc-host-and-direct-rescue-2015
+    title: Host preparation and tPAD1-containing mixtures alter ScFdc activity
+    scope: Whole synthetic N-His FDC expressed in the reported delta-ubiX host, with separate direct-mix activation conditions.
+    context: Figure 4 apo-FDC preparation; routine GC-MS conditions are PBS pH 8, 6.7 mM cinnamate and 32 C, typically 1 uM FDC and 10 uM tPAD1. WT-derived isolated FDC is the 100% reference. Methods distinguish BL21(DE3) from a BL21 Star(DE3)-derived deletion host.
+    family_mapping: FDC is Q03034/YDR539W-reference-related, PF01977 119-320. Paper tPAD1/YDR538W is a distinct cofactor-producing preparation; P33751 reference maps PF02441 50-201. Its reported deletion of 1-58 conflicts with a primer matching residue 55; no exact truncation grounding is asserted.
+    taxon: NCBITaxon:4932
+    scope_status: PHENOTYPIC
+    limitations: Whole host/preparation effects do not isolate UbiX chemistry; a strictly matched WT parental background is not independently established. Low Figure 4 baseline and tPAD1-only activation are retained. WT-lysate rescue is text-only here; exact doses for each bar and complete synthetic inserts remain unresolved.
+    nodes:
+      - {node_id: delta_host, label: FDC production in reported delta-ubiX host versus WT preparation, node_type: PERTURBATION}
+      - {node_id: isolated_activity, label: Isolated FDC preparation activity, node_type: ACTIVITY}
+      - {node_id: tpad, label: Adding purified tPAD1 to apo-FDC and cinnamate, node_type: PERTURBATION}
+      - {node_id: joint, label: Adding tPAD1 plus delta-ubiX lysate to apo-FDC and cinnamate, node_type: PERTURBATION}
+      - {node_id: wt_lysate, label: Adding WT lysate to delta-host-derived FDC and cinnamate, node_type: PERTURBATION}
+      - {node_id: output, label: Apo-FDC assay styrene-producing activity, node_type: ACTIVITY}
+    edges:
+      - edge_id: delta-host-preparation-lowers-activity
+        subject: delta_host
+        predicate: decreases
+        object: isolated_activity
+        mechanism: The deletion-host-derived preparation has much lower measured activity than the WT-derived reference. This supports a host-associated activation dependency, not a demonstrated single molecular step or perfectly isolated genetic intervention.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: completely lacking, explanation: 'S3, Figure 4 baseline and Figure 3 normalization; Methods S10, ledger L3. Small plotted baseline and host-background limits qualify the prose.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+      - edge_id: tpad-alone-raises-fdc-activity
+        subject: tpad
+        predicate: increases
+        object: output
+        mechanism: The tPAD1-added FDC assay has a modest positive bar, visually around 50% of the isolated-WT reference, above apo-FDC baseline. This is activation of an FDC-containing reaction, not direct decarboxylation by tPAD1.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: activate FDC, explanation: 'Original Figure 4 first/third bars; S4 distinguishes tPAD1-alone decarboxylase negativity; ledger L3. Purified tPAD1 may carry activating material.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+      - edge_id: joint-donor-raises-fdc-activity
+        subject: joint
+        predicate: increases
+        object: output
+        mechanism: The joint tPAD1/lysate addition gives strong activation, visually around 800% of the isolated-WT reference. Delta-ubiX lysate alone remains near baseline; the two-component treatment is not split into independently sufficient causes.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: activate FDC, explanation: 'Original Figure 4 and S3, ledger L3; the fourth bar contains both donor components. Specific cofactor synthesis is inferred, not directly measured.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+      - edge_id: wt-lysate-raises-fdc-activity
+        subject: wt_lysate
+        predicate: increases
+        object: output
+        mechanism: The Results report WT-lysate activation of otherwise inactive deletion-host-derived FDC. This is a reported complex-mixture rescue with unresolved constituents and no separate Figure 4 WT-donor bar.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: activate FDC, explanation: 'Results S3 text-only WT-lysate rescue; ledger L3. Not mislabeled as a separately inspected Figure 4 measurement.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+  - graph_id: scfdc-membrane-separated-activation-2015
+    title: Separated donor preparations activate ScFdc-containing receiver assays
+    scope: Whole apo-FDC in a two-compartment dialysis experiment; transferable activation rather than a resolved molecular-contact mechanism.
+    context: Receiver contains 1 uM apo-FDC and 6.7 mM cinnamate behind a 3.5-kDa-cutoff membrane. Donors are WT BL21 lysate, 10 uM purified tPAD1, or delta-ubiX lysate plus 10 uM tPAD1. Figure 6 measures GC-MS styrene over 120 min; delta-ubiX lysate alone remains at baseline.
+    family_mapping: FDC/YDR539W is reference-related to Q03034, PF01977 119-320; tPAD1/YDR538W is a separate PF02441-reference-related preparation with unresolved truncation numbering. Neither complete insert nor an isolated PF01977 assay is established.
+    taxon: NCBITaxon:4932
+    scope_status: PHENOTYPIC
+    limitations: Exact compartment volumes and protein-leakage tests are not established. A diffusible activator is consistent with these results, but its exact identity and synthesis are not directly measured. tPAD1 alone may carry copurified activating material; do not infer synthesis without precursor.
+    nodes:
+      - {node_id: wt_donor, label: WT lysate donor with separated apo-FDC/cinnamate receiver, node_type: PROCESS}
+      - {node_id: tpad_donor, label: Purified tPAD1 donor with separated apo-FDC/cinnamate receiver, node_type: PROCESS}
+      - {node_id: joint_donor, label: tPAD1 plus delta-ubiX lysate donor with separated apo-FDC/cinnamate receiver, node_type: PROCESS}
+      - {node_id: output, label: Receiver assay styrene accumulation relative to delta-ubiX lysate donor, node_type: STATE}
+    edges:
+      - edge_id: wt-donor-raises-output
+        subject: wt_donor
+        predicate: increases
+        object: output
+        mechanism: WT-donor assays accumulate styrene at later times while the delta-ubiX donor control remains at baseline. The measured outcome does not directly resolve transfer or activation chemistry.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: production of styrene, explanation: 'S5 and original Figure 6 triangles versus open circles; ledger L4. Distinct from direct-mix rescue.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+      - edge_id: tpad-donor-raises-output
+        subject: tpad_donor
+        predicate: increases
+        object: output
+        mechanism: Purified tPAD1 in the donor compartment supports rising styrene in the receiver assay. Copurified transferable material is an alternative to new synthesis; a protein-contact-independent molecular route is not directly demonstrated.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: production of styrene, explanation: 'S5 and original Figure 6 squares; ledger L4. The source itself considers retained cofactor carryover.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+      - edge_id: joint-donor-raises-output
+        subject: joint_donor
+        predicate: increases
+        object: output
+        mechanism: The joint tPAD1/delta-ubiX-lysate donor yields the greatest displayed styrene accumulation, whereas deletion lysate alone does not. Donor constituents and receiver enzyme/substrate remain a joint condition.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: production of styrene, explanation: 'S5 and original Figure 6 filled versus open circles; ledger L4. No reaction trajectory or exact activating species is assigned.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+  - graph_id: scfdc-coexpression-construct-effect-2015
+    title: The tandem tPAD1/FDC preparation has higher specific activity
+    scope: Comparison of two whole-FDC expression preparations that differ in both tPAD1 coexpression and FDC tag placement/vector architecture.
+    context: N-His FDC expressed alone versus C-His FDC expressed with untagged tPAD1 from one tandem pET28b construct in BL21; reported styrene-specific activities about 0.54 and 4.3 +/-0.2 umol/min/mg, respectively.
+    family_mapping: Q03034/YDR539W reference maps PF01977 119-320; coexpression primers match terminal reference segments but do not verify the complete insert. The paper's tPAD1 is separate from PF01977 and has an unresolved 1-58 deletion versus residue-55 primer discrepancy.
+    taxon: NCBITaxon:4932
+    scope_status: PHENOTYPIC
+    limitations: No tag-matched single-factor control isolates tPAD1 coexpression as the sole cause. Cofactor occupancy is not directly quantified. The separate 4ZAC reference match does not prove these plasmid sequences.
+    nodes:
+      - {node_id: preparation_change, label: Switching from singly expressed N-His FDC to tandem untagged-tPAD1/C-His FDC, node_type: PERTURBATION}
+      - {node_id: activity, label: Purified FDC styrene-specific activity per total protein, node_type: ACTIVITY}
+    edges:
+      - edge_id: joint-preparation-change-raises-activity
+        subject: preparation_change
+        predicate: increases
+        object: activity
+        mechanism: The joint expression/construct change is associated with approximately eightfold greater measured activity. Increased loading is a proposed explanation, not a measured occupancy-normalized or isolated coexpression effect.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: '~8-fold higher', explanation: 'S6 activity values plus S10 cloning methods; ledger L5 and M. Both FDC tag placement and tPAD1 expression differ.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+  - graph_id: scfdc-three-substrate-uv-assays-2015
+    title: ScFdc preparations decrease three substrate-associated UV signals
+    scope: Separate cinnamate, ferulate and p-coumarate assays with high-activity C-His FDC coexpressed with untagged tPAD1.
+    context: 100 mM potassium phosphate pH 7, 250-500 nM FDC, 0.05-1.5 mM substrate; Results specifies 25 C and Methods room temperature. Readouts are A304, A344 and A334 for cinnamate, ferulate and p-coumarate, respectively.
+    family_mapping: Reference-related whole Q03034/YDR539W contains PF01977 119-320 and two other Pfam domains. Exact synthetic insert and strain are unresolved; this is not the singly expressed N-His preparation or an isolated domain.
+    taxon: NCBITaxon:4932
+    scope_status: PHENOTYPIC
+    limitations: These edges record UV substrate-depletion proxies, not independently product-identified chemistry for each substrate. Apparent kcat uses total FDC, not measured active sites. Estimated 20-25% occupancy and a proposed 4-5-fold correction are not adopted as measurements; Table 1 versus abstract/Kn-label discrepancies remain in ledger L6.
+    nodes:
+      - {node_id: cinnamate_assay, label: Coexpressed FDC preparation with cinnamate, node_type: PROCESS}
+      - {node_id: cinnamate_signal, label: Cinnamate-associated A304 signal, node_type: STATE}
+      - {node_id: ferulate_assay, label: Coexpressed FDC preparation with ferulate, node_type: PROCESS}
+      - {node_id: ferulate_signal, label: Ferulate-associated A344 signal, node_type: STATE}
+      - {node_id: coumarate_assay, label: Coexpressed FDC preparation with p-coumarate, node_type: PROCESS}
+      - {node_id: coumarate_signal, label: p-Coumarate-associated A334 signal, node_type: STATE}
+    edges:
+      - edge_id: cinnamate-signal-decreases
+        subject: cinnamate_assay
+        predicate: decreases
+        object: cinnamate_signal
+        mechanism: The reported UV decrease is fitted to apparent kcat 4.6 +/-0.2 s^-1 and Km 180 +/-24 uM. This readout is not a measured atomic sequence or an occupancy-corrected turnover constant.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: decrease in absorbance, explanation: 'S7/S13 and Table 1 cinnamic-acid row; ledger L6. Direct styrene identification belongs to the separate GC-MS context.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+      - edge_id: ferulate-signal-decreases
+        subject: ferulate_assay
+        predicate: decreases
+        object: ferulate_signal
+        mechanism: The ferulate-associated absorbance decrease is fitted to apparent kcat 3.8 +/-0.3 s^-1 and Km 180 +/-41 uM. No independent product-MS identification in this assay is inferred from substrate depletion.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: decrease in absorbance, explanation: 'S7/S13 and Table 1 ferulic-acid row; ledger L6. The graph deliberately preserves the measured readout.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+      - edge_id: coumarate-signal-decreases
+        subject: coumarate_assay
+        predicate: decreases
+        object: coumarate_signal
+        mechanism: The p-coumarate-associated absorbance decrease is fitted to apparent kcat 1.5 +/-0.1 s^-1 and Km 110 +/-26 uM. Table 1 supplies 1.5 despite the abstract's 1.4 lower bound; no measured active-site correction is applied.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: decrease in absorbance, explanation: 'S7/S13 and Table 1 coumaric-acid row; ledger L6. Product identity and active-site normalization are not independently resolved.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+  - graph_id: scfdc-extracted-fraction-rescue-2015
+    title: An FDC-derived protein-free fraction activates apo-FDC
+    scope: Transfer of an activating fraction extracted from high-activity FDC, not a chemically pure or structurally resolved cofactor sufficiency assay.
+    context: FDC protein precipitation with 1-to-1 dichloromethane/methanol followed by organic-solvent removal; the resulting fraction is added to apo-FDC for functional activation. S6 reports the outcome without a separate rescue plot.
+    family_mapping: Donor and recipient FDC are whole YDR539W preparations, reference-related to Q03034 with PF01977 119-320. Exact synthetic inserts and chemical identity of the activating fraction remain unresolved.
+    taxon: NCBITaxon:4932
+    scope_status: PHENOTYPIC
+    limitations: Dose, full quantitative rescue and fraction purity are not established. The m/z 661 species is not assigned as proven intact prFMN, and a yellow chromophore alone does not prove unique chemical identity. No domain-specific activation route is demonstrated.
+    nodes:
+      - {node_id: fraction_addition, label: Adding solvent-cleared FDC-derived fraction to an apo-FDC assay, node_type: PERTURBATION}
+      - {node_id: activity, label: Apo-FDC assay activity, node_type: ACTIVITY}
+    edges:
+      - edge_id: fraction-restores-activity
+        subject: fraction_addition
+        predicate: increases
+        object: activity
+        mechanism: The source reports functional activation after transfer of the extracted fraction. This supports transferable activating material, not a resolved biosynthetic step or proof that one isolated molecular species is sufficient.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: activating apo-FDC, explanation: 'S6 protein precipitation and functional transfer, text-only outcome; ledger L7. No separate rescue trace was inspected or asserted.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+  - graph_id: scfdc-activating-fraction-acid-base-treatment-2015
+    title: Acid or base pretreatment lowers the fraction's activating capacity
+    scope: Separate chemical pretreatments of extracted FDC-associated material followed by an apo-FDC activation readout.
+    context: 0.1 M HCl for 1 h or 0.1 M NaOH for 1 h, followed by neutralization. The source separately reports retained activity after milder 0.1% formic acid exposure; these are not equivalent treatments.
+    family_mapping: Recipient whole FDC/YDR539W is Q03034-reference-related, PF01977 119-320. The intervention is on an extracted fraction, not a mutation or deletion of the PF01977 domain.
+    taxon: NCBITaxon:4932
+    scope_status: PHENOTYPIC
+    limitations: Text-only activity-loss reports lack a displayed quantitative rescue series, exact dose and established neutralization-matched controls. Degradation, carryover and other preparation effects are not separated. FMN detection after base treatment does not identify a unique cleavage pathway.
+    nodes:
+      - {node_id: acid, label: Acid pretreatment and neutralization of the activating fraction, node_type: PERTURBATION}
+      - {node_id: base, label: Base pretreatment and neutralization of the activating fraction, node_type: PERTURBATION}
+      - {node_id: activation, label: Fraction-dependent activation of an apo-FDC assay, node_type: ACTIVITY}
+    edges:
+      - edge_id: acid-pretreatment-lowers-activation
+        subject: acid
+        predicate: decreases
+        object: activation
+        mechanism: The acid-treated and neutralized fraction is reported to lose activating activity. The experiment does not directly resolve the chemical degradation products responsible for this change.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: followed by neutralization, explanation: 'S6 acid-treatment paragraph, text-only activity report; ledger L7 retains unavailable controls and quantitative detail.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
+      - edge_id: base-pretreatment-lowers-activation
+        subject: base
+        predicate: decreases
+        object: activation
+        mechanism: The base-treated and neutralized fraction is reported to lose activating activity. Detection of an FMN-associated mass among several products does not uniquely establish how the active material was destroyed.
+        directness: UNRESOLVED
+        support: OBSERVED
+        evidence_kind: EXPERIMENTAL
+        evidence:
+          - {reference: 'PMID:25647642', source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/', snippet: followed by neutralization, explanation: 'S6 base-treatment paragraph, text-only activity report; ledger L7. No specific chemical-bond cleavage is labeled observed.', cache_path: evidence/PF01977/scfdc-primary-assays.txt, cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b}
