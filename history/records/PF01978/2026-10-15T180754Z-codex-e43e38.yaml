@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01978
+  path: data/families/PF01978.yaml
+session:
+  id: 2026-10-15T180754Z-codex-e43e38
+  timestamp: '2026-10-15T18:07:54Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Reviewed TrmBL1 mutant promoter selectivity and matched footprint contexts
+  details: Partial scientific self-review of six new graphs with sixteen observed
+    effects and two hypotheses; record39 graphs/90 edges,83 observed/seven hypothesized.
+    Source conflicts, failed own-promoter assays, domain limits and unmatched no-protein
+    controls remain explicit. All33 prior graphs preserved.52 focused tests, schema,331
+    history records, exports, integrity and1440px/390px preview passed. Existing findings228-230
+    remain open; IN_PROGRESS retained. Full publication gates are separate.
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/228
+  - https://github.com/CultureBotAI/DUFMech/issues/229
+  - https://github.com/CultureBotAI/DUFMech/issues/230
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261015T181851Z-pf01978-trmbl1-mutant-contexts/review.yaml

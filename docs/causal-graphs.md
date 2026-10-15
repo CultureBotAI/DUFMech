@@ -6625,3 +6625,91 @@ PF01978 regulatory-context publication checkpoint (2026-10-15, PR #233):
   checkpoint; those future outcomes are not certified here. Keep both annotated
   source tags after deleting the merged branch. Issues #228-230 remain open,
   PF01978 remains IN_PROGRESS, and unfinished TrmBL1 research is not adopted.
+
+PF01978 TrmBL1 wild-type continuation (2026-10-15, unpublished):
+
+- Independently mapped PF0124/TrmBL1 (Q8U4G4 sequence version 1/entry 96,
+  PF01978 10-77) now has 14 added graphs with 28 observed edges and three
+  separate recruitment hypotheses. PF01978 totals 33 graphs/72 edges,
+  67 observed/five hypothesized. All 19 prior TrmB graphs are unchanged.
+- The new `evidence/PF01978/trmbl1-primary-assays.txt` retains the inspected
+  thesis figure matrices, methods, reference hashes and minimal quotations.
+  PFK, own-promoter, MD/TM and FBPase assays keep their exact protein doses,
+  buffers and within-panel controls. Figure 28b is combined sugar addition;
+  Figure 28d has an unresolved 1/2 uM regulator-dose conflict. FBPase cloning
+  sites differ between prose and caption, large activation is not consistently
+  reproducible, and Figures 42/43 tables disagree with some prose. Small
+  unreplicated changes, residuals and contrary endpoints remain explicit.
+- Neither undialyzed stock glucose nor unequal footprint nuclease doses are
+  treated as resolved controls. Whole-protein transcript effects do not prove
+  isolated-domain sufficiency, direct factor/polymerase recruitment or native
+  metabolic flux. The 2007 paper's preparation differs from the thesis;
+  its original figure images and remaining experiments are not adopted here.
+- Actual EDIT `2026-10-15T172948Z-codex-f4a6c3` and REVIEW
+  `2026-10-15T174107Z-codex-a4a434` retain this work. The append-only
+  [Markdown review](../reviews/structured/20261015T174757Z-pf01978-trmbl1-wildtype-contexts/review.md)
+  and [YAML review](../reviews/structured/20261015T174757Z-pf01978-trmbl1-wildtype-contexts/review.yaml)
+  record partial scientific self-review, `NEEDS_FOLLOWUP`, with all three
+  stable predecessor findings still open. Issues #228-230 remain open and
+  PF01978 stays `IN_PROGRESS`; this does not supersede publication audits.
+- Guarded scientific regeneration changes only PF01978 and its manifest.
+  Independent verification checks all 8,296 manifest hashes, 72 edge evidence
+  hashes/quotations, endpoints and preservation of prior graphs, imported
+  fields, evidence, reviews and history. Other records, snapshots, code,
+  exports, canonical Pages and source pins remain unchanged. All 52 focused
+  tests pass, schema reproduction has zero differences, and exports are current.
+  The pre-review validation passes 8,296 records with zero drift, 329 history
+  files, four review-contract tests, 176 structured bundles and 184 native
+  reports. The new review and REVIEW event require final revalidation below.
+- An unpinned native preview at 1440px/390px passes all 31 new evidence
+  disclosures, 14 graph contexts, support/source labels and three OPEN
+  discussions, without document overflow or JS errors. Selected screenshots
+  were visually inspected; native edge tables scroll horizontally. The
+  browser/server closed. Exact JSON `metadata.record` matches the projection;
+  an initial comparison incorrectly used the surrounding JSON envelope and
+  was corrected without changing scientific content or the renderer.
+- Structural inventory is 867 graphs/1,870 edges across 128 graph-bearing
+  families, with 8,168 graphless families out of 8,296. These remain presence
+  counts, not completion counts. Continue with thesis TrmBL1 mutants
+  (Figures 52 onward, PDF122 onward), original 2007 figures and remaining
+  TrmB/member/native-context evidence. The full family and corpus goal remains
+  active. No new source checkpoint, canonical publication or full release QC
+  has been performed for this continuation.
+- After the actual REVIEW event, guarded preview/apply refreshes only PF01978
+  and its manifest with the sixth history event. Final
+  `just validate-all validate-schema` passes: 8,296 records with zero drift,
+  330 history files, four review-contract tests (83.43 seconds), 177 structured
+  bundles, 185 native reports and zero schema differences. Independent
+  inventory/review integrity, exact preview `metadata.record` equality and the
+  desktop/mobile browser checks pass again. The scientific digest remains
+  `b552eb45507e457c49637b91dfc8917f8b8cc671896de47c69fefc902b8ecce9`.
+
+PF01978 TrmBL1 mutant checkpoint (2026-10-15):
+
+- Six additional graphs retain sixteen observed mutant-assay effects and two
+  separate regional-recognition hypotheses. PF01978 now has 39 graphs and
+  90 edges (83 observed, seven hypothesized). All 33 earlier graphs are intact.
+- The new `evidence/PF01978/trmbl1-mutant-assays.txt` retains complete Figure 52
+  matrices, matched-dose contrasts, Figure 53 template/amount conflicts, and
+  Figure 54's matched WT/mutant nuclease comparison. Failed own-promoter binding
+  assays are not negative affinity measurements. E81/E85/D86 are outside the
+  reference PF01978 interval; ED85AA is one double perturbation.
+- The partial scientific successor is
+  `reviews/structured/20261015T181851Z-pf01978-trmbl1-mutant-contexts/review.yaml`.
+  It preserves the three OPEN finding lineages and IN_PROGRESS status. Actual
+  EDIT and REVIEW events retain session starts 17:58:23Z and 18:07:54Z.
+- All 52 focused graph/QC tests pass (13.99 seconds), schema reproduction has
+  no differences, exports remain current, and the stable integrity rerun checks
+  all 8,296 manifest hashes and preserved prior artifacts. The initial inventory
+  check overlapped its writer and failed on old aggregate counts; the rerun
+  passed after that writer finished without altering a guard or scientific data.
+- The refreshed structural inventory has 873 graphs and 1,888 edges across
+  128 graph-bearing families; 8,168 remain graphless. These are presence counts,
+  not scientific completion. The full 8,296-record objective remains unfinished.
+- The unpinned native preview passes at 1440px/390px, including all 18 new
+  evidence disclosures, exact record JSON, 90 source links and three OPEN
+  discussions. Selected screenshots were visually inspected. The scientific
+  digest is `f4e9e52e45b361771693fb5c269d654682cdc4804b5b6d5a4c37978c238e761e`.
+- Publication is now separately authorized. The actual source-pin check rejects
+  the changed PF01978 overlay; issue #234 tracks the retained checkpoint and
+  canonical Pages refresh. No full release-QC or merge result is claimed here.
