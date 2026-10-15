@@ -6907,3 +6907,28 @@ PF01980 original tsaA1 reporter extension (2026-10-15):
   `reviews/structured/20261015T221829Z-tsaa-publication-prerequisite/review.yaml`
   retain the failed stale-source gate. Source retention/capture, canonical Pages,
   final full QC and exact-head PR/merge-group checks follow this checkpoint.
+
+PF01980 tsaA1 candidate publication audit (PR #245, 2026-10-15):
+
+- Issue #244 was reproduced locally and in draft CI `38817098504`. Annotated
+  tag `source/dufmech-pr-245-candidate` retains source commit
+  `d2b5963a60c497b0c5517ff16628e39e95b970d8`. Native capture and fresh canonical
+  remote verification pass for 9,207 sources; 9,005 rendered source copies and
+  the current PF01980 JSON are byte-exact. Candidate claims, five history events,
+  previous evidence/reviews and all other 8,295 family records are preserved.
+- Canonical rendering and site contract pass for 8,296 families / 8,633 HTML
+  pages, totaling 420,861,867 bytes within the unchanged 430 MB archive budget.
+  At 1440px/390px, all 26 evidence disclosures and links, pinned source links and
+  horizontally accessible tables pass without document overflow or JavaScript
+  errors. Selected screenshots were inspected; the temporary server/browser closed.
+- All 22 governed artifacts match the published CLAW pin. The real offline OAK
+  check passes 8,296 canonical pairs and rejection cases. Four review-contract
+  tests, 188 structured bundles and 196 native reports validate before this audit.
+- The append-only adversarial self-review is
+  `reviews/structured/20261015T223207Z-pr-245-tsaa-publication/review.yaml`
+  with derived Markdown. It resolves the exact publication predecessor, not
+  scientific issues #240-242. Primary-source reinspection confirms the retained
+  claim boundaries; no new scientific assertion is added by this publication audit.
+- This audit must itself be retained, recaptured and rendered before final full
+  QC and exact-head PR/merge-group validation. Those later checks are not certified
+  by the candidate audit. This is self-review, not independent approval.

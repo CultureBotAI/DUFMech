@@ -1,0 +1,37 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01980
+  path: curation/families/PF01980.yaml
+session:
+  id: 2026-10-15T220801Z-codex-8f4a07
+  timestamp: '2026-10-15T22:08:01Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add historical tsaA1 reporter contexts and retain assay-specific negative
+    evidence
+  details: Inspected Qian1998 publisher Methods, Table1, Results and Discussion and
+    original Figure2. Added separate LB and MOPS-glucose reporter comparisons with
+    exact reported values, calculated fold ratios and unresolved allele/domain mechanism.
+    Preserved all twelve prior graphs; retained negative-assay limits and conflicting
+    donor/crude-substrate labels without inventing direct decoding, equivalence or
+    purified-enzyme effects. Evidence ledger is minimal; full text and images are
+    not redistributed. Baseline8296 records had zero drift; post-edit generation and
+    scientific review follow. Initial history attempt rejected bare issue numbers;
+    this event uses canonical issue URLs.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/240
+  - https://github.com/CultureBotAI/DUFMech/issues/241
+  - https://github.com/CultureBotAI/DUFMech/issues/242
+  urls:
+  - https://journals.asm.org/doi/full/10.1128/jb.180.7.1808-1813.1998
