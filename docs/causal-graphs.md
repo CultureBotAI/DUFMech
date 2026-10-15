@@ -6302,3 +6302,37 @@ PF01977 initial ScFdc evidence extension (2026-10-15, local):
   PF01977 members and the remaining family queue. The 2017 SI is an
   inspected lead, not newly adopted cycloaddition-topology proof. Earlier
   AnFdc/VdcCD findings and the full 8,296-family objective remain active.
+
+PF01977 initial ScFdc publication audit (2026-10-15, PR #223):
+
+- Publication was explicitly requested after the local curation checkpoint.
+  The adversarial self-review re-read primary sections S2/S3/S5/S6/S10/S12/S13
+  and Table 1 and visually re-inspected original Figures 3/4/6. No additional
+  blocking scientific defect was found in the scoped additions. This is not
+  independent expert approval or complete PF01977 scientific review.
+- Issue #224 tracks the stale source-pin failure reproduced locally and in
+  initial CI run `38723137823`. Candidate source commit
+  `a68429163ce3e907977dbe1103a3c1b668731862` is retained by annotated tag
+  `source/dufmech-pr-223-candidate`. Native capture and canonical online
+  retention verification pass for all 9,148 candidate source files.
+- Native rendering regenerated canonical Pages. Browser checks at 1440px and
+  390px verify 32 graphs, 79 edges, 75 observed/four hypothesized labels,
+  79 evidence links, three OPEN questions, working disclosures and the pinned
+  record URL. No document overflow or JavaScript errors were found. Selected
+  screenshots were visually inspected; native table scrolling is retained.
+  Browser and temporary server closed.
+- Fresh checks pass all 8,296 record-manifest hashes and 79 primary-quotation
+  and evidence-cache matches, preserving the 23 earlier graphs and all other
+  records, frozen snapshots, code, exports and prior reviews/history. Native
+  validation passes 8,296 records with zero drift, 322 history files, four
+  review-contract tests, 168 structured bundles, 176 native reports and schema
+  reproduction. All 52 focused graph/QC tests and 22 governed-artifact checks
+  pass. These are artifact gates, not scientific completeness measurements.
+- Scientific issues #217, #218 and #219 received progress updates and remain
+  open. PF01977 remains IN_PROGRESS; the partial scientific review is not
+  superseded by the repository publication audit. Later ScFdc research remains
+  outside this release's new graph claims.
+- The append-only audit must itself be retained and recaptured before final
+  full QC, exact-head CI, merge integrity and deployment. This checkpoint does
+  not claim those future results. Keep source-retention tags after deleting
+  the feature branch; the all-family causal-graph objective remains active.
