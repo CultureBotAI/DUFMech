@@ -6713,3 +6713,26 @@ PF01978 TrmBL1 mutant checkpoint (2026-10-15):
 - Publication is now separately authorized. The actual source-pin check rejects
   the changed PF01978 overlay; issue #234 tracks the retained checkpoint and
   canonical Pages refresh. No full release-QC or merge result is claimed here.
+
+PF01978 TrmBL1 publication checkpoint (PR #235, 2026-10-15):
+
+- Issue #234 records the stale-pin failure reproduced locally and in CI run
+  `38785235188`. Candidate `79a54d2ea0c7454e400aa522caa7bcf36fa2e13f` is
+  retained by annotated tag `source/dufmech-pr-235-candidate`; native capture
+  and canonical remote verification pass for all 9,181 source files.
+- Native canonical rendering and the site contract pass. Independent integrity
+  checks preserve candidate science, history, earlier reviews, code and frozen
+  sources, validate every family manifest hash, and compare 8,980 source
+  downloads byte-for-byte. PF01978 JSON exactly matches its current projection.
+- At 1440px/390px, all 90 evidence disclosures and the current pinned record
+  link work. The page retains 39 graphs, 83 observed edges, seven hypotheses
+  and three OPEN discussions, without document overflow or JavaScript errors.
+  Selected desktop/mobile screenshots were inspected; browser/server closed.
+- All 22 governed artifacts match the pinned CLAW source. Real isolated offline
+  OAK rejection cases pass with network denied and no native DUF import.
+- The append-only adversarial self-review successor is
+  `reviews/structured/20261015T183154Z-pr-235-trmbl1-publication/review.yaml`.
+  It resolves the candidate publication blocker, not scientific issues
+  #228-230. Its own retained checkpoint, final full QC, exact-head CI, merge
+  integrity and deployment remain subsequent release gates, not claims made
+  by this candidate audit. Source-retention tags must survive branch deletion.
