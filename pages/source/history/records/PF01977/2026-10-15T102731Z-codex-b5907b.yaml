@@ -1,0 +1,41 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01977
+  path: data/families/PF01977.yaml
+session:
+  id: 2026-10-15T102731Z-codex-b5907b
+  timestamp: '2026-10-15T10:27:31Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific successor review of ScFdc causal evidence
+  details: Saved reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+    and derived Markdown through the native saver. Assessed all nine new graphs and
+    three discussions against Lin2015 primary text, Methods, Table 1 and original
+    Figures 2/3/4/6; verified reference/domain and primer boundaries. The record has
+    32 graphs/79 edges, including 75 observed effects and four preserved hypotheses.
+    All 23 prior graphs and old evidence/history/reviews remain unchanged. All 8296
+    manifest hashes, 79 primary quotations, schema reproduction, 52 focused tests,
+    inventory/exports and desktop/mobile native preview pass. Source-pin check fails
+    for local changed bytes; no release is claimed. Verdict pass_with_limitations
+    / NEEDS_FOLLOWUP, partial same-agent scientific review. All three predecessor
+    finding identities, issue keys and PF01977 targets remain OPEN. Full family/corpus
+    coverage, exact constructs, active occupancy and atomic/domain causality remain
+    unfinished; IN_PROGRESS retained. Final history-index regeneration and native
+    validation follow this event.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/217
+  - https://github.com/CultureBotAI/DUFMech/issues/218
+  - https://github.com/CultureBotAI/DUFMech/issues/219
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml

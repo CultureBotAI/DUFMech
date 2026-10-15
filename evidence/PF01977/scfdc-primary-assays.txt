@@ -1,0 +1,205 @@
+PF01977 ScFdc evidence ledger, inspected 2026-10-15 UTC
+
+Scope and rights
+Lin et al., ACS Chemical Biology 2015, DOI 10.1021/cb5008103,
+PMID:25647642, PMCID:PMC11756644, author manuscript version 1.
+Public primary manuscript, Methods, Results, Table 1 and original Figures
+2, 3, 4 and 6 inspected. The PMC XML permissions allow text mining and
+fair-use use, not blanket CC BY redistribution. This file retains only
+minimal quotations, factual assay metadata and curator interpretations;
+the article, figures and database payloads are not redistributed here.
+UniProt attribution: UniProt Consortium, Q03034 and P33751 (CC BY 4.0).
+InterPro/Pfam and native PDB data provide identity context, not causal proof.
+
+Primary source and exact raw-response hashes (SHA256)
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/
+https://pmc.ncbi.nlm.nih.gov/api/oai/v1/mh/?verb=GetRecord&identifier=oai:pubmedcentral.nih.gov:11756644&metadataPrefix=pmc
+OAI XML: 74227be48b2551134b87c9004d28e1c9aa851b530aeae1b39268e3d77c76648b
+https://rest.uniprot.org/uniprotkb/Q03034.json
+Q03034 JSON: 8de18cb55557c4bb98943b61a0a08218766e84b9933d7e4278c47ac631398a47
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/Q03034/
+Q03034 Pfam JSON: 4a300b19a733edfda76662821a91fe4c655a308c9fea1aeb60209a6db5920ef8
+https://data.rcsb.org/rest/v1/core/polymer_entity/4ZAC/1
+4ZAC entity 1 JSON: 2c3de5294d0b2ef8843ec64783ad59ec245288833a012e774e08493bf0522a03
+https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APAD1%20AND%20organism_id%3A559292&format=json
+PAD1 search JSON: 857525ac05ab76171d92a731ec22313418a8e3c113107aa692df9861e11981ac
+https://www.ebi.ac.uk/interpro/api/entry/pfam/protein/uniprot/P33751/
+PAD1 Pfam JSON: ee1ec2a29d97b1040d41509adec3e4453de3f5a30fed3ad37a131d136d327d53
+https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e5e9/11756644/f78bb35e0756/nihms-2045618-f0003.jpg
+Figure 2: 998d655d5346a0b24f48db40c2e16671427badef66c2cbb9ba29b9768209638f
+https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e5e9/11756644/048d7cc80298/nihms-2045618-f0004.jpg
+Figure 3: bc8afaa336d33680dfd246d1c2c65eb823da6423e9d5fc4d7cffe5cee021d756
+https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e5e9/11756644/900395c0b04a/nihms-2045618-f0005.jpg
+Figure 4: efffd86f0f35e95f099bfc4f0e2375b8aebc469f9fdc41976f9b41bbdcc3c4c6
+https://cdn.ncbi.nlm.nih.gov/pmc/blobs/e5e9/11756644/1a7f91162a2c/nihms-2045618-f0007.jpg
+Figure 6: d0959fd84cad0b47a1d9d21894e4543b2c16393ecefb08febac11a1802e1480c
+
+M: Identity, constructs and domain boundaries
+Q03034 is the 503-aa S. cerevisiae S288c FDC1/YDR539W reference,
+sequence version 1, entry version 170, annotation date 2026-09-02.
+Reference taxon 559292 does not establish the experimental yeast strain.
+Species-level graph taxon is 4932; E. coli is the expression host.
+The complete InterPro Pfam response (three results, next=null) maps
+PF01977 to 119-320, PF20695 to 14-102 and PF20696 to 328-464,
+one-based inclusive. No isolated PF01977 construct was assayed.
+4ZAC entity 1 is exactly the 503-aa Q03034 reference string, confirmed
+programmatically; SIFTS aligns residues 1-503 without a reported difference.
+Reference-sequence SHA256: f05dbbdc4cf14abe1913b1f6f4344affff5b7686d56f27af7c646665cdd76261
+4ZAC belongs to the separate Payne2015 study. It does not establish the
+complete sequence of the Lin2015 synthetic expression plasmids.
+
+Lin2015 Methods S10 identifies codon-optimized synthetic YDR539W/YDR538W.
+Singly expressed FDC is pET28b-derived, N-terminal six-His tagged; the
+coexpression preparation has C-terminal six-His FDC and untagged tPAD1
+in a tandem construct. Thus an eightfold preparation difference is not
+an isolated tPAD1-expression intervention. Protein purification uses Ni
+affinity followed by desalting; protein concentration is not active-site
+concentration. Expression is at 32 C, 0.2 mM IPTG overnight.
+The reported delta-ubiX host was constructed in BL21 Star(DE3); the
+ordinary expression strain is described as BL21(DE3). A strictly matched
+WT-parent comparison is not independently established by these methods.
+
+Published FDC coexpression primer homology segments, translated with
+Biopython 1.88: ATGCGCAAACTGAACCCGG gives MRKLNP, matching Q03034 1-6;
+reverse homology TTTGTAACCGTAGCGTTTCCAGTTTTCATT corresponds to terminal
+NENWKRYGYK, matching 494-503. Partial end matches do not prove the
+internal synthetic insert or vector junctions.
+
+PAD1 reference P33751, sequence version 2 / entry 182, is 242 aa, YDR538W.
+Its complete Pfam response (one result, next=null) maps PF02441 to 50-201,
+not PF01977. The source calls tPAD1 a deletion of residues 1-58. However,
+the published forward homology AAACGTATTGTGGTTGCGAT translates KRIVVA,
+which maps to reference 55-60, not 59-64. Reverse homology
+TTATTTTGATTTGATACCTTCCC has reverse complement GGGAAGGTATCAAATCAAAATAA;
+the stop-aligned frame translates EGIKSK*, matching the reference tail.
+An initial frame-zero translation was discarded as incorrectly aligned.
+This is an unresolved construct/numbering discrepancy, not a correction
+to the paper or proof of a particular full tPAD1 insert. Graphs name the
+paper's tPAD1 preparation without claiming an exact P33751 truncation.
+
+Minimal primary quotations (24 words across distinct excerpts)
+Q1, S12: "styrene"
+Q2, S2: "below pH 7.0"
+Q3, S2: "almost complete loss"
+Q4, S2: "activate FDC"
+Q5, S3: "completely lacking"
+Q6, S5: "production of styrene"
+Q7, S6: "~8-fold higher"
+Q8, S13: "decrease in absorbance"
+Q9, S6: "activating apo-FDC"
+Q10, S6: "followed by neutralization"
+
+L1: Cinnamate conversion and pH dependence, S2/S12, Figures 2 and 3
+Routine GC-MS: 500 uL PBS pH 8, 6.7 mM cinnamic acid, typically 1 uM
+FDC, 32 C, variable incubation, ethyl-acetate extraction. Styrene is
+quantified against authentic styrene calibration standards. N-His FDC
+purified from BL21 has reported activity about 0.54 umol/min/mg. This
+supports whole-preparation chemistry, not isolated-domain sufficiency,
+native yeast flux, directly measured CO2 or a complete atomic pathway.
+For pH measurements incubation is 10 min; substrate saturation was checked.
+Figure 2C shows much lower styrene at pH 6/6.5 than 7/7.5 within the
+same phosphate-buffer regime (50 mM potassium phosphate, 100 mM NaCl).
+At pH 8 the phosphate and Tris series differ; pH 8-9 uses Tris/Cl.
+No single catalytic pKa or purely pH-driven cross-buffer comparison is inferred.
+Figure 2B peak label is 57899.1529 Da versus prose 57898.15 +/-0.5 Da;
+the stated predicted mass is 57897.8 Da. Do not silently reconcile these.
+Native PAGE's approximately 480-kDa migration is not a definitive oligomer
+stoichiometry and is not equated with the later native-MS dimer assignment.
+
+L2: Dialysis and lysate rescue, S2 and original Figure 3
+24-h dialysis through a 3.5-kDa-cutoff membrane greatly lowers activity.
+The plotted dialyzed-FDC bar is small but nonzero (roughly 5% visually).
+Fresh WT BL21 lysate raises it above the as-isolated 100% reference
+(roughly 240% visually), not merely back to exactly 100%. Predialyzed
+lysate yields a much lower, nonzero bar (roughly 15%). These are visual
+approximations, not digitized/raw values. Replicate count and error-bar
+definition were not established in the inspected caption/methods.
+The three directed comparisons are dialysis versus isolated preparation,
+fresh-lysate addition to dialyzed FDC, and predialyzed versus fresh lysate
+as donors. Complex-lysate constituents, occupancy and stability remain
+unresolved; no individual cofactor-synthesis reaction is directly measured.
+
+L3: Host preparation and direct-mix rescue, S3/S4, Figure 4
+FDC from the reported delta-ubiX host has very low activity compared with
+the WT-derived preparation; the figure shows small baseline bars rather
+than an assay-independent proof of zero. Adding delta-ubiX lysate alone
+does not visibly increase the baseline. Purified N-His tPAD1 alone raises
+activity to roughly 50% of the Figure 3 isolated-WT reference, whereas
+tPAD1 plus delta-ubiX lysate gives roughly 800%. The joint condition,
+not either component alone, is the strongly activating preparation.
+These approximate bar heights are not raw quantitative data. Typical
+routine concentrations are FDC 1 uM and tPAD1 10 uM, not separately
+confirmed amounts for every plotted bar. WT-lysate activation of the
+delta-host preparation is reported in S3 but not separately plotted in
+Figure 4. This text-only edge retains that distinction.
+tPAD1 alone does not directly decarboxylate cinnamate (S4), distinct from
+its ability to activate an FDC-containing assay. Do not attribute styrene
+production to PAD1. No exact tPAD1 truncation grounding is asserted.
+
+L4: Membrane-separated activation, S5 and Figure 6
+Receiver: 1 uM apo-FDC with 6.7 mM cinnamate; donor and receiver separated
+by 3.5-kDa-cutoff membrane. Donors are WT BL21 lysate, delta-ubiX lysate,
+10 uM tPAD1, or delta-ubiX lysate plus 10 uM tPAD1. GC-MS time course
+to 120 min shows increasing styrene for WT donor, tPAD1 donor and the
+joint donor; delta-ubiX donor stays at baseline. The joint donor rises
+fastest in the displayed experiment. Exact compartment volumes, protein
+leakage controls and diffusible species identity were not established.
+Transferable activation is consistent with a small cofactor; tPAD1-alone
+activation may reflect copurified material. It is not proof of de novo
+cofactor synthesis from no supplied precursor or of a particular contact
+mechanism. Direct-mix and membrane-separated assays are separate graphs.
+
+L5: Coexpression/construct-associated activity, S6/S10
+C-His FDC from the tandem untagged-tPAD1 construct has reported specific
+activity 4.3 +/-0.2 umol styrene/min/mg, versus about 0.54 for singly
+expressed N-His FDC. The joint preparation change is observed. No
+tag-matched single-factor comparison or measured occupancy correction
+is supplied. The 342-nm chromophore and higher activity motivate, but
+do not by themselves quantify, cofactor loading.
+
+L6: Apparent kinetics, S7/S13 and Table 1
+Separate substrates in 100 mM potassium phosphate pH 7, 250-500 nM
+high-activity coexpressed FDC, 0.05-1.5 mM substrate; Results says 25 C,
+Methods says room temperature. Readouts: A304 cinnamate, A334 p-coumarate,
+A344 ferulate; stated extinction coefficients 1140, 988 and 1330 M^-1cm^-1.
+Apparent kcat (s^-1), Km (uM), respectively:
+cinnamate 4.6 +/-0.2, 180 +/-24;
+ferulate 3.8 +/-0.3, 180 +/-41;
+p-coumarate 1.5 +/-0.1, 110 +/-26.
+The XML table labels its middle column Kn while the prose and efficiency
+column use Km; the abstract's lower kcat bound 1.4 differs from Table 1's
+1.5. Values above follow Table 1. These are total-protein-normalized UV
+substrate-depletion proxies, not measured active-site turnover constants.
+The proposed 20-25% occupancy assumes a reduced-FMN-like extinction
+coefficient. Do not publish the proposed 4-5-fold correction as measured.
+The new graph records each absorbance decrease, without inventing direct
+product-MS assignments for ferulate or coumarate in these assays.
+
+L7: Transferable FDC-derived fraction and stability, S6 (text-only effects)
+Protein precipitation with 1:1 dichloromethane/methanol, followed by
+solvent removal, produces a fraction reported to activate apo-FDC.
+This is functional transfer from a preparation, not proof that one pure
+identified molecular species is sufficient. The source's major m/z
+661.2212 +/-0.0132 (Figure 8 caption 661.2279) could be a fragment;
+the 2015 study does not resolve its structure. Do not equate that ion
+with a proven intact prFMN species using a later paper's interpretation.
+Pretreatment with 0.1 M HCl for 1 h or 0.1 M NaOH for 1 h, then
+neutralization, loses activating activity. Mild 0.1% formic acid retains
+activity. Exact dose, quantitative rescue traces, neutralization-matched
+controls and precise degradation chemistry are not established here.
+FMN detection among base-treated products does not uniquely define a
+reaction path. Acid/base pretreatment effects are unresolved, not direct
+observations of a specified chemical-bond cleavage.
+
+Open follow-up, not family completion
+Retrieve and review Ferguson2016 (PMID:27119435), Ferguson2017
+(PMID:28753302) main-paper contexts, native yeast and later ScFdc
+maturation/specificity work. The accessible 2017 SI has been inspected
+as a lead: a potassium-associated prFMN-FNVB composition and native-MS
+shifts do not alone establish unique cycloaddition bond topology or an
+entire catalytic trajectory. No new graph adopts that lead in this pass.
+Resolve synthetic FDC/tPAD1 inserts, truncation numbering, host matching,
+tag-matched preparation controls, mass/table discrepancies, raw low bars,
+active occupancy and domain-specific causality. Existing AnFdc/VdcCD
+findings and EcUbiD, AroY, HmfF, HudA coverage remain open. A full-text
+access failure is a coverage limit, never a negative biological result.

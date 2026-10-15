@@ -1,0 +1,462 @@
+schema_version: 1.0.0
+review_id: 20261015T105917Z-pr-223-scfdc-publication
+repository: CultureBotAI/DUFMech
+kind: repository
+source:
+  git_revision: a68429163ce3e907977dbe1103a3c1b668731862
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: conf/site_source_pins.json
+    sha256: 74695ccaebf9c3c71fdb3f09798c773843acfd27056f742edf6294c6b9fff675
+    role: target
+  - path: curation/families/PF01977.yaml
+    sha256: c427b82618f7e87391ec073d5249c18078d10f2aa6de64f541e30fe267490676
+    role: target
+  - path: data/families/PF01977.yaml
+    sha256: 545754f870ebb723070eb2e33788947bcc096280ace9129337e20de60637a986
+    role: target
+  - path: data/families/manifest.json
+    sha256: a55bb4e516a1c68707019fbf6e94eaade36a01a26534f3ca249b124f401d5937
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: docs/causal-graphs.md
+    sha256: bd48ee3244c68b45f3776cf2da94577eb9d33fc4fd373199abb17f41659e185f
+    role: target
+  - path: evidence/PF01977/scfdc-primary-assays.txt
+    sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b
+    role: target
+  - path: history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml
+    sha256: ba04e689eff076ae6a9c0c656dadd97d46db426c6f0f3b44a397bbd93f2835a2
+    role: target
+  - path: history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml
+    sha256: 1d820a96d1c2d345b0f4c1dba47045528088c54b4e0dcc30f1f588fa643f0223
+    role: target
+  - path: pages/families/PF01977.html
+    sha256: ce98764c41a4002ec863437eb914f9a789552e96fd0fc2d5b46406235728d8d3
+    role: target
+  - path: reports/causal_graphs/inventory.json
+    sha256: 3d48d5268dbb8878476fe4513f5201514cf22f88e302fd2e57ece82dd0c9f35f
+    role: target
+  - path: reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.md
+    sha256: c4fb7a81d5bacc7c8d6e531f1b2f9ebd8a5036cb66350336e2da2438bada52c7
+    role: target
+  - path: reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+    sha256: 276ab74ed7e06c7561f83eddeec83c052d512faf945279f9b3b28620cc5bd790
+    role: target
+targets:
+- target_id: conf/site_source_pins.json
+  path: conf/site_source_pins.json
+  label: conf/site_source_pins.json
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: curation/families/PF01977.yaml
+  path: curation/families/PF01977.yaml
+  label: curation/families/PF01977.yaml
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: data/families/PF01977.yaml
+  path: data/families/PF01977.yaml
+  label: data/families/PF01977.yaml
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: data/families/manifest.json
+  path: data/families/manifest.json
+  label: data/families/manifest.json
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: docs/causal-graphs.md
+  path: docs/causal-graphs.md
+  label: docs/causal-graphs.md
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: evidence/PF01977/scfdc-primary-assays.txt
+  path: evidence/PF01977/scfdc-primary-assays.txt
+  label: evidence/PF01977/scfdc-primary-assays.txt
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml
+  path: history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml
+  label: history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml
+  path: history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml
+  label: history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: pages/families/PF01977.html
+  path: pages/families/PF01977.html
+  label: pages/families/PF01977.html
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: reports/causal_graphs/inventory.json
+  path: reports/causal_graphs/inventory.json
+  label: reports/causal_graphs/inventory.json
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.md
+  path: reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.md
+  label: reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.md
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+  path: reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+  label: reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+title: PR 223 ScFdc adversarial publication audit
+started_at: '2026-10-15T10:50:01Z'
+finished_at: '2026-10-15T10:59:17Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent challenged the curation and publication artifacts;
+    no independent reviewer, expert endorsement or experimental replication.
+skill: .claude/skills/review-repo/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: false
+summary: The scoped adversarial recheck found no additional blocking defect in the
+  nine ScFdc graphs. Initial stale source pins were reproduced locally and in CI,
+  tracked in issue 224, and corrected for the candidate through retained source capture
+  and native rendering. Scientific issues 217-219 remain open. The audit itself must
+  be retained and recaptured before final full QC, exact-head CI and deployment.
+scope:
+  description: All ten source/artifact paths changed by the ScFdc curation plus the
+    source-pin ledger and canonical PF01977 page. Recheck evidence boundaries, native
+    ownership, prior content preservation and candidate publication.
+  selection: Explicit PR 223 candidate changes and publication surfaces; not a corpus
+    scientific sample.
+  coverage: full
+  population_size: 12
+  reviewed_target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/scfdc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml
+  - history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.md
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+  exclusions:
+  - target: Complete PF01977 and corpus scientific review
+    reason: Later ScFdc studies, other members, exact constructs, raw assay clarification,
+      active occupancy and isolated-domain mechanisms remain open.
+  - target: Final audit-bearing checkpoint, full release QC, exact-head CI and deployment
+    reason: These mandatory release checks follow this append-only audit; future results
+      are not asserted.
+checks:
+- check_id: native
+  name: native
+  command: just validate-all validate-schema
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 8296 schema-valid records with zero drift; 322 history files, four common-contract
+    tests, 168 structured bundles, 176 native reports and schema reproduction pass.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/scfdc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml
+  - history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.md
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+  evidence_ids:
+  - integrity
+- check_id: preservation
+  name: preservation
+  command: uv run --locked python /private/tmp/duf-pf01977-scfdc-check.py --review
+    --inventory
+  status: passed
+  required: true
+  exit_code: 0
+  summary: All 8296 manifest hashes and 79 edge evidence/cache/primary-XML matches
+    pass. All 23 prior graphs and other records, imported fields, prior reviews/history,
+    snapshots, code and exports are preserved. PF01977 has 32 graphs, 79 edges and
+    three OPEN discussions; scientific digest matches. This check preceded canonical
+    rendering and verified the then-unchanged Pages/pins.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/scfdc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml
+  - history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.md
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+  evidence_ids:
+  - integrity
+- check_id: focused
+  name: focused
+  command: uv run --locked python -m pytest -q tests/test_causal_graphs.py tests/test_qc.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 52 tests passed in 64.97 seconds.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/scfdc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml
+  - history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.md
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+  evidence_ids:
+  - integrity
+- check_id: governed
+  name: governed
+  command: bash scripts/check_vendored_sync.sh
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 22 governed artifacts match the pinned published CLAW revision.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/scfdc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml
+  - history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.md
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+  evidence_ids:
+  - integrity
+- check_id: retention
+  name: retention
+  command: just site-sources-published
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 9148 candidate source files verified at a68429163ce3e907977dbe1103a3c1b668731862,
+    retained by annotated source/dufmech-pr-223-candidate.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/scfdc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml
+  - history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.md
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+  evidence_ids:
+  - publication
+- check_id: render
+  name: render
+  command: just render
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Canonical Pages regenerated through the native writer, not hand-edited
+    HTML or invented source hashes.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/scfdc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml
+  - history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.md
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+  evidence_ids:
+  - publication
+- check_id: browser
+  name: browser
+  command: DUF_CANONICAL=1 node /private/tmp/duf-pf01977-scfdc-browser.cjs
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Canonical PF01977 at 1440px and 390px retains all 32 graphs, 79 edges,
+    75 observed/four hypothesized labels, 79 evidence links, three OPEN discussions
+    and working disclosures. Pinned record URL matches; no document overflow or JavaScript
+    errors. Selected screenshots visually inspected and browser/server closed.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/scfdc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml
+  - history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.md
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+  evidence_ids:
+  - publication
+evidence:
+- evidence_id: integrity
+  kind: validation
+  reference: data/families/manifest.json
+  locator: Native validation and structured comparison with base 9ed1e01059158ac4159dbe817725da7cd4b2002a
+  accessed_at: '2026-10-15T10:59:17Z'
+  support: supports
+  summary: Artifact validity, prior-content preservation and semantic review binding
+    are verified separately from scientific completeness.
+- evidence_id: primary
+  kind: primary_source
+  reference: https://doi.org/10.1021/cb5008103
+  locator: Public primary OAI XML sections S2/S3/S5/S6/S10/S12/S13 and Table 1 re-read;
+    original Figures 3/4/6 visually re-inspected; all 79 edge snippets checked against
+    primary XML
+  accessed_at: '2026-10-15T10:59:17Z'
+  support: supports
+  summary: Residual activities, donor joint conditions, text-only outcomes, tag/host
+    confounds and total-protein kinetic normalization remain explicit. Direct GC-MS
+    endpoint evidence is distinct from UV proxies and unresolved activation chemistry.
+    No complete article or original figure is redistributed.
+- evidence_id: publication
+  kind: validation
+  reference: https://github.com/CultureBotAI/DUFMech/issues/224
+  locator: Initial CI run 38723137823 failed at published-source retention, matching
+    the local failure; candidate capture, remote retention, native render and responsive
+    browser checks then pass
+  accessed_at: '2026-10-15T10:59:17Z'
+  support: supports
+  summary: The candidate publication prerequisite is corrected. Final audit-bearing
+    retention, full QC and exact-head CI remain required.
+- evidence_id: followups
+  kind: prior_review
+  reference: reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+  locator: Three OPEN successor findings; GitHub issues 217, 218 and 219 updated with
+    ScFdc progress and remaining limits
+  accessed_at: '2026-10-15T10:59:17Z'
+  support: supports
+  summary: This repository audit does not supersede or close scientific findings or
+    promote the IN_PROGRESS record.
+assessments:
+- assessment_id: boundaries
+  area: graph
+  topic: Directed effects and assay scope
+  outcome: supported
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/scfdc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml
+  - history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.md
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+  evidence_ids:
+  - primary
+  - followups
+  summary: One direct styrene endpoint and 18 unresolved-route experimental effects
+    are scoped to their actual whole-protein preparations. No cofactor synthesis,
+    chemically pure activator, isolated-domain sufficiency or UV product identity
+    is invented. Existing AnFdc/VdcCD hypotheses remain labeled.
+- assessment_id: ownership
+  area: provenance
+  topic: Native ownership and preserved evidence
+  outcome: supported
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/scfdc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml
+  - history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.md
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+  evidence_ids:
+  - integrity
+  - followups
+  summary: Maintained overlay and minimal ledger, native projection, actual EDIT/REVIEW
+    events and the partial scientific successor agree. Earlier graphs, scientific
+    records, frozen snapshots and prior reports remain preserved.
+- assessment_id: publication
+  area: other
+  topic: Retained candidate and usable website
+  outcome: supported
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01977.yaml
+  - data/families/PF01977.yaml
+  - data/families/manifest.json
+  - docs/causal-graphs.md
+  - evidence/PF01977/scfdc-primary-assays.txt
+  - history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml
+  - history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml
+  - pages/families/PF01977.html
+  - reports/causal_graphs/inventory.json
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.md
+  - reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+  evidence_ids:
+  - publication
+  summary: The stale-pin failure is tracked and corrected for the candidate. Canonical
+    graph labels, citations, discussions and source links are usable at desktop/mobile
+    widths; final release verification must include the new audit.
+findings: []
+actions: []
+limitations:
+- Adversarial self-review, not independent scientific approval, experimental replication,
+  full literature review or corpus completion.
+- Existing scientific issues 217-219 remain open and are not superseded by this publication
+  audit.
+- Browser coverage is PF01977 at two widths, not a visual sweep of all family pages.
+- Final full QC, audit-bearing source capture, exact-head CI and deployment follow
+  this retained audit and are not certified here.
+notes:
+- Issue 224 remains open until final release verification; initial failing local/CI
+  results remain historical failures.
+- An initial XML selector omitted the OAI namespace and returned no sections; the
+  namespace-aware traversal was used before assessing the primary text. A broad scratch
+  filename search was canceled without making an absence claim. A GitHub issue-list
+  network failure was retried through authorized network access.
+tags:
+- adversarial-review
+- self-review
+- pr-223
+- pf01977
+- publication
