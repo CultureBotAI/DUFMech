@@ -6597,3 +6597,31 @@ PF01978 TrmB regulatory-context extension (2026-10-15, unpublished):
   counts, not scientific completion counts. Continue with independently mapped
   TrmBL1 protein assays, remaining primary TrmB papers and other member/taxon
   contexts; retain the full family and corpus objective.
+
+PF01978 regulatory-context publication checkpoint (2026-10-15, PR #233):
+
+- Publication is explicitly authorized. The adversarial reread covers the
+  eight added graphs, original thesis Figures 18-23 and 32-35, retained numeric
+  matrices, evidence limits and generated ownership. No additional scientific
+  claim correction is required in this bounded extension. It is a self-review,
+  not independent expert approval or complete family review.
+- Issue #232 tracks the reproduced stale source-pin and canonical-page blocker.
+  Its append-only initial audit is retained under
+  `reviews/structured/20261015T162719Z-pf01978-regulatory-publication-blocker/`.
+  Candidate `e3c273b3075de43cca97908e3d0b5a80f313a409` is published and retained
+  by annotated tag `source/dufmech-pr-233-candidate`. Native capture and the
+  canonical online gate verify 9,169 source files; native Pages regeneration
+  and desktop/mobile checks pass for all 19 graphs and 41 edges, all eight
+  new disclosures, source links and three OPEN discussions.
+- Native validation passes 8,296 records with zero drift, 328 history files,
+  four review-contract tests, 175 structured bundles, 183 native reports and
+  schema reproduction. All 52 focused tests pass with the required shared
+  runtime; 22 governed artifacts match their pinned source, isolated offline
+  OAK checks pass, and exports are current. Initial missing-runtime and sandbox
+  DNS failures were corrected and rerun, not counted as passing attempts.
+- The successor publication audit must retain the blocker disposition and its
+  exact predecessor. Its audit-bearing source checkpoint, recapture, final
+  full QC, exact-head CI, merge integrity and deployment follow this candidate
+  checkpoint; those future outcomes are not certified here. Keep both annotated
+  source tags after deleting the merged branch. Issues #228-230 remain open,
+  PF01978 remains IN_PROGRESS, and unfinished TrmBL1 research is not adopted.
