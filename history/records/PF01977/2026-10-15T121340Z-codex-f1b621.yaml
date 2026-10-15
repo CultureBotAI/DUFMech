@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01977
+  path: curation/families/PF01977.yaml
+session:
+  id: 2026-10-15T121340Z-codex-f1b621
+  timestamp: '2026-10-15T12:13:40Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add evidence-scoped ScFdc substrate-panel and variant causal graphs
+  details: Inspected Nagy2019 primary tables, Methods, original Figures 1-4 and selected
+    supplementary plots; verified reference-domain and primer segments. Added 11 graphs
+    with 38 observed whole-cell effects and one computational gate hypothesis, plus
+    a minimal hash-anchored ledger. Retained vector, control, timing, substrate-identity,
+    fresh-cell and normalization discrepancies. All 32 prior graphs remain; IN_PROGRESS
+    and three OPEN discussions are preserved. Full constructs, other family contexts
+    and the 8296-family objective remain unfinished. Native regeneration and scientific
+    successor review follow this actual edit; no publication is performed.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/217
+  - https://github.com/CultureBotAI/DUFMech/issues/218
+  - https://github.com/CultureBotAI/DUFMech/issues/219
+  urls:
+  - https://doi.org/10.1038/s41598-018-36977-x

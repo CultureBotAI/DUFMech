@@ -1,0 +1,2833 @@
+# PF01977 ScFdc substrate scope, preparation effects and modeled gate
+
+- Review: 20261015T123233Z-pf01977-scfdc-substrate-scope
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-15T12:30:08Z
+- Finished UTC: 2026-10-15T12:32:33Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Eleven graphs add 38 observed whole-cell effects and one computational hypothesis from Nagy2019. The 32 earlier graphs are preserved. PF01977 has 43 graphs/118 edges, with three OPEN discussions and IN_PROGRESS status. Substrate, construct, control, timing and normalization discrepancies remain explicit. This partial successor does not complete PF01977 or the full 8296-family objective.
+
+## Scope And Provenance
+
+Review all 11 new graphs and updated discussions against Nagy2019 Tables 1/2, Methods, original Figures 1-4, selected supplementary plots and structured supplement tables; verify exact reference/domain/primer mapping. Earlier graphs receive preservation/quotation checks, not a repeated full scientific review.
+
+Selection: Continue the unfinished ScFdc specificity work after the initial activation/catalysis assessment; retain the original all-family objective.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 9035e28ec9314d71ddcbfc6ebce6809b62aa30ab.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01977 | data/families/PF01977.yaml | generated | PF01977 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| baseline | passed | True | PF01977 | Baseline: 8296 valid records, zero drift. Preview/apply: two generated files differ, only PF01977 and its manifest, following the actual EDIT event. |
+| integrity | passed | True | PF01977 | All 8296 manifest hashes, 118 edge cache/primary-XML quotations, 20 substrate-panel endpoint values, nine fresh-cell labels and five variant values verify. All 32 prior graphs, other families/imported fields, prior evidence/reviews/history, frozen sources, code, exports and canonical Pages/pins are preserved. |
+| mapping | passed | True | PF01977 | Q03034 sequence 1 retains Q192 and I330; complete Pfam response maps PF01977 119-320 and PF20696 328-464. All eight Q192N/A and I330A/V primer segments match specified substitutions. Reference alignment maps ScQ192/I330 to AnQ190/I327. These are partial checks, not verified full assay inserts. |
+| schema | passed | True | PF01977 | Schema reproduction passes with zero generated differences. |
+| focused | passed | True | PF01977 | 52 tests pass in 17.39 seconds. |
+| inventory | passed | True | PF01977 | 8296 inventory rows refreshed; only PF01977 changes. Corpus has 834 graphs/1798 edges across 127 graph-bearing families, with 8169 graphless. Exports are unchanged/current. Counts are structural, not scientific completion. |
+| preview | passed | True | PF01977 | Native unpinned preview at 1440px and 390px retains 43 graphs/118 edges, 113 observed/five hypothesized labels, 118 source links, three OPEN discussions and working disclosures. No document overflow/JavaScript errors; selected screenshots visually inspected. Native horizontal table scrolling is preserved; browser/server closed. |
+| publication | failed | False | PF01977 | Expected source-pin mismatch for edited PF01977 overlay; no checkpoint, pin fabrication, canonical render, full release QC or publication performed. |
+
+## Scientific And Domain Assessments
+
+### Reference, construct and domain boundaries
+
+identity: supported. Targets: PF01977.
+
+Species-level scope, PF01977/PF20696 distinction, partial primer checks and AnFdc/ScFdc numbering are explicit. No full plasmid or exact yeast strain is inferred from a reference protein or short primers.
+
+### Directed observed endpoints versus modeled mechanism
+
+graph: supported. Targets: PF01977.
+
+38 effects retain unresolved molecular routes and one separate gate hypothesis is computational. Joint assay conditions and fresh-cell-plus-time interventions are explicit. Negatives and discrepancies are retained without unsupported zero-effect, viability, pKa or atomistic claims.
+
+### Assay readouts and conflicting source claims
+
+evidence: supported. Targets: PF01977.
+
+Table/figure differences, substrate-free versus host controls, abstract 1w/1x mismatch, variant vector context, 1x isomer naming and F133A labeling remain visible. No statistical significance, pure-enzyme kinetics or calibrated product yield is invented.
+
+### Minimal evidence, append-only history and native projection
+
+provenance: supported. Targets: PF01977.
+
+CC-BY primary material is represented by a minimal factual ledger, short excerpts, hashes and locators. Earlier graphs/evidence/history/reviews are preserved; only the maintained overlay is manually edited, with guarded projection and actual EDIT event.
+
+### Unfinished member, mechanism and corpus coverage
+
+completeness: concern. Targets: PF01977.
+
+One source-specific update does not complete PF01977 or all 8296 families. Full constructs, matched controls, raw assays, active occupancy and other members remain open; IN_PROGRESS is retained.
+
+## Findings
+
+### member-and-partner-coverage: Continue the remaining PF01977 member and partner contexts
+
+minor / open / confirmed; issue key: pf01977-member-and-partner-coverage.
+
+Nagy2019 whole-cell substrate scope and condition/variant effects now advance issue 217. Continue remaining ScFdc mechanism/maturation and native-system work plus EcUbiD, AroY, HmfF, HudA and earlier AnFdc/VdcCD follow-ups. This is not family-wide functional completion.
+
+### atomic-steps-and-domain-attribution: Separate whole-cell effects from unmeasured atomic and domain mechanisms
+
+minor / open / confirmed; issue key: pf01977-atomic-steps-and-domain-attribution.
+
+Nagy2019 AnFdc-based docking does not observe ScFdc gate motion or isolate PF01977. I330 lies in PF20696; Q192 lies in PF01977. Cell loading, pH, temperature and fresh-cell effects do not identify unique molecular routes. Earlier cofactor/intermediate and partner-allostery gaps remain; issue 218 stays open.
+
+### assay-discrepancies-and-normalization: Resolve source contradictions, full constructs and normalized comparisons
+
+minor / open / confirmed; issue key: pf01977-assay-discrepancies-and-normalization.
+
+Retain 1w versus abstract phenothiazine gain, n/o fresh-cell conflicts, control-figure miscitation, 2-4/4-h versus 15-h timing, pH 6.0 omission and cross-context values, Table 1/Figure 3 differences, 1x isomer naming and F133A energy label. Complete inserts, vector-matched WT, variant expression and active occupancy remain unresolved alongside earlier issues. Issue 219 stays open.
+
+## Recommended Actions And Acceptance Checks
+
+### continue-primary-mechanism-review
+
+Continue the three existing scientific findings with exact-member primary evidence and discriminating construct/assay checks.
+
+- Map new tested members and partners to verified reference/domain coordinates while retaining unverified full inserts and strains.
+- Support each directed relation with its actual assay and controls; distinguish observed endpoint, inferred route and computational hypothesis.
+- Resolve disagreements using raw/primary construct or assay evidence without silently correcting figures, equating contexts or assuming occupancy.
+- Retain stable finding identities, actual history and guarded generation while completing remaining family and corpus coverage.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| identity | evidence/PF01977/scfdc-substrate-scope.txt; M/M1; exact UniProt/InterPro response hashes, S71 alignment and S4 primer checks | supports | Sc reference-domain locations and partial mutant segments are verified. The paper uses AnFdc 4ZA7 for docking. S288c reference taxonomy does not establish the yeast source strain; I330 is not in PF01977. |
+| panel | https://doi.org/10.1038/s41598-018-36977-x; Tables 1/2, Figures 1/3, Sec3/4/8/9/14/18; ledger A/A1/C | supports | Separate whole-cell HPLC depletion endpoints are retained without interpreting them as initial rates or isolated enzyme/domain chemistry. GC-MS uses library analogy; selected S67/S68 supports 2w, not the abstract phenothiazine gain. WT negative substrates remain explicit. |
+| conditions | https://doi.org/10.1038/s41598-018-36977-x; Table 1 footnotes, Figure 2, S25/S26/S70/S78, Sec5/14-19; ledger B/C/D/M | supports | Fresh cells plus extra time are a composite intervention; n/o prose and footnotes conflict. Temperature/cell-loading timepoints disagree with Methods, and pH 6.0 is also maximal in S70. Cited host controls are actually matrix-blank figures. Vector matching, variant abundance and occupancy are unresolved. |
+| model | https://doi.org/10.1038/s41598-018-36977-x; Figure 4c/d, S71 alignment, Sec6/20; ledger E/M1 | supports | The AnFdc-based modeled gate is a separately labeled computational hypothesis. Partial homolog mapping does not verify the mutant model coordinates, a ScFdc atomic trajectory, a universal planarity rule or PF01977 sufficiency. F133A label inconsistency is not silently repaired. |
+| predecessor | reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml; Three OPEN findings, stable issue keys and target PF01977 | context_only | This successor advances source-specific coverage while preserving the full member, atomic/domain and assay-normalization findings. The intervening PR223 repository audit is not substituted for the scientific predecessor. |
+| native | src/dufmech/records.py; Executed baseline/generation, schema, 52 focused tests, corpus integrity, inventory/exports and responsive preview | supports | Artifact validity is established separately from scientific completeness. Native save and final history-index validation follow this assessment; source-pin failure is retained. |
+| search | evidence/PF01977/scfdc-substrate-scope.txt; Ignored-inclusive scoped overlay/evidence/docs search; public OAI/OA deposit and exact reference queries | context_only | No previous Nagy2019 graph/ledger reference was found in the searched PF01977 overlay/evidence/docs, including ignored/hidden files. This is not an exhaustive literature or filesystem absence claim. |
+| duf-projection-pf01977 | data/families/PF01977.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Partial same-agent scientific review, not independent expert approval, experimental replication or completion of PF01977/all-family work.
+- Selected original figures only: main 1-4 and supplement S25/S26/S67/S68/S70/S78; other individual chromatograms were not all visually reviewed. Docking was not rerun; raw replicate measurements and full assay constructs remain unverified.
+- PMC HTML presented a browser check and Nature HTML had failed; already retrieved official OAI/OA deposits were used. Addgene sequence download requires login and was not bypassed. Access failures are not absence evidence.
+- Initial scratch integrity checks failed because XML subscript text was separated and Table 1 chemical labels were incorrectly expected in the name cell. Structured extraction was corrected against the actual XML, then all checks passed; no scientific value was changed to satisfy them.
+- Canonical source pins/Pages and full release QC remain separate, unperformed publication work. The source-pin check fails for the edited overlay; no release claim is made.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261015T123233Z-pf01977-scfdc-substrate-scope
+kind: record
+repository: CultureBotAI/DUFMech
+source:
+  git_revision: 9035e28ec9314d71ddcbfc6ebce6809b62aa30ab
+  inputs:
+  - path: curation/families/PF01977.yaml
+    role: context
+    sha256: f4ab2476eb9c66aa873ef9140e439f1f30cd192b4c50c5495fc56df2ea77f533
+  - path: data/families/PF01977.yaml
+    role: target
+    sha256: e1fbc8473407c21ad2ef7547d5ad6ba6ccd085139fbe747cf9a5ba3db3345860
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    role: context
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    role: context
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    role: context
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+  - path: evidence/PF01977/scfdc-substrate-scope.txt
+    sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2
+    role: context
+  - path: reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+    sha256: 276ab74ed7e06c7561f83eddeec83c052d512faf945279f9b3b28620cc5bd790
+    role: context
+  - path: evidence/PF01977/scfdc-primary-assays.txt
+    sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b
+    role: context
+  - path: evidence/PF01977/member-mapping.txt
+    sha256: 465125d46c286a9be91a1c44ca15e99f0b2e65b9868ce529fdb886fed89f5264
+    role: context
+  - path: history/records/PF01977/2026-10-15T121340Z-codex-f1b621.yaml
+    sha256: bb78206062adbbcf938c103b55d52a9db3f52f2d7cf93293bbf739b661d21e18
+    role: context
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  state: working_tree
+targets:
+- kind: generated
+  label: PF01977
+  owner_paths:
+  - path: curation/families/PF01977.yaml
+    repository: CultureBotAI/DUFMech
+    role: Maintained scientific overlay; create only with authorized curation.
+  - path: src/dufmech/records.py
+    repository: CultureBotAI/DUFMech
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  path: data/families/PF01977.yaml
+  record_class: FamilyRecord
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+    sha256: 0a024aac4aafd7effa8974820c0928f4b9861f68fe5a95f8fe0d1f33799b297a
+  target_id: PF01977
+title: PF01977 ScFdc substrate scope, preparation effects and modeled gate
+started_at: '2026-10-15T12:30:08Z'
+finished_at: '2026-10-15T12:32:33Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent researched, curated and challenged these claims;
+    no independent expert approval or experimental replication.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Eleven graphs add 38 observed whole-cell effects and one computational hypothesis
+  from Nagy2019. The 32 earlier graphs are preserved. PF01977 has 43 graphs/118 edges,
+  with three OPEN discussions and IN_PROGRESS status. Substrate, construct, control,
+  timing and normalization discrepancies remain explicit. This partial successor does
+  not complete PF01977 or the full 8296-family objective.
+scope:
+  description: Review all 11 new graphs and updated discussions against Nagy2019 Tables
+    1/2, Methods, original Figures 1-4, selected supplementary plots and structured
+    supplement tables; verify exact reference/domain/primer mapping. Earlier graphs
+    receive preservation/quotation checks, not a repeated full scientific review.
+  selection: Continue the unfinished ScFdc specificity work after the initial activation/catalysis
+    assessment; retain the original all-family objective.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01977
+  exclusions:
+  - target: Remaining PF01977 members and mechanistic contexts
+    reason: Ferguson2016/2017, other ScFdc studies, native yeast physiology, EcUbiD,
+      AroY, HmfF, HudA and earlier AnFdc/VdcCD follow-ups remain unfinished.
+  - target: All individual supplement chromatograms, full constructs and raw replicate/model
+      coordinates
+    reason: Selected figures and all adopted tables/Methods were inspected, but not
+      every individual HPLC/GC-MS trace. Full Addgene sequence download is login-gated.
+      Protein abundance, active occupancy and matched vector backgrounds are unresolved.
+  - target: Canonical Pages and release
+    reason: Only unpinned local preview is checked. Canonical Pages/pins remain unchanged;
+      new source retention, full release QC and publication require separate authorization.
+checks:
+- check_id: baseline
+  name: baseline
+  command: just records-check; just records; just records --apply
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 'Baseline: 8296 valid records, zero drift. Preview/apply: two generated
+    files differ, only PF01977 and its manifest, following the actual EDIT event.'
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - native
+- check_id: integrity
+  name: integrity
+  command: uv run --locked python /private/tmp/duf2019-integrity.py --inventory
+  status: passed
+  required: true
+  exit_code: 0
+  summary: All 8296 manifest hashes, 118 edge cache/primary-XML quotations, 20 substrate-panel
+    endpoint values, nine fresh-cell labels and five variant values verify. All 32
+    prior graphs, other families/imported fields, prior evidence/reviews/history,
+    frozen sources, code, exports and canonical Pages/pins are preserved.
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - native
+- check_id: mapping
+  name: mapping
+  command: Structured UniProt/InterPro checks and Biopython 1.88 translation/alignment
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Q03034 sequence 1 retains Q192 and I330; complete Pfam response maps PF01977
+    119-320 and PF20696 328-464. All eight Q192N/A and I330A/V primer segments match
+    specified substitutions. Reference alignment maps ScQ192/I330 to AnQ190/I327.
+    These are partial checks, not verified full assay inserts.
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - native
+- check_id: schema
+  name: schema
+  command: just validate-schema
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Schema reproduction passes with zero generated differences.
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - native
+- check_id: focused
+  name: focused
+  command: uv run --locked python -m pytest -q tests/test_causal_graphs.py tests/test_qc.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 52 tests pass in 17.39 seconds.
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - native
+- check_id: inventory
+  name: inventory
+  command: just causal-graphs --apply; just exports --check
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 8296 inventory rows refreshed; only PF01977 changes. Corpus has 834 graphs/1798
+    edges across 127 graph-bearing families, with 8169 graphless. Exports are unchanged/current.
+    Counts are structural, not scientific completion.
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - native
+- check_id: preview
+  name: preview
+  command: uv run --locked python /private/tmp/duf2019-preview.py; node /private/tmp/duf2019-browser.cjs
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Native unpinned preview at 1440px and 390px retains 43 graphs/118 edges,
+    113 observed/five hypothesized labels, 118 source links, three OPEN discussions
+    and working disclosures. No document overflow/JavaScript errors; selected screenshots
+    visually inspected. Native horizontal table scrolling is preserved; browser/server
+    closed.
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - native
+- check_id: publication
+  name: publication
+  command: uv run --locked python -m dufmech.site_sources check
+  status: failed
+  required: false
+  exit_code: 1
+  summary: Expected source-pin mismatch for edited PF01977 overlay; no checkpoint,
+    pin fabrication, canonical render, full release QC or publication performed.
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - native
+evidence:
+- evidence_id: identity
+  kind: database
+  reference: evidence/PF01977/scfdc-substrate-scope.txt
+  locator: M/M1; exact UniProt/InterPro response hashes, S71 alignment and S4 primer
+    checks
+  accessed_at: '2026-10-15T12:32:33Z'
+  support: supports
+  summary: Sc reference-domain locations and partial mutant segments are verified.
+    The paper uses AnFdc 4ZA7 for docking. S288c reference taxonomy does not establish
+    the yeast source strain; I330 is not in PF01977.
+- evidence_id: panel
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41598-018-36977-x
+  locator: Tables 1/2, Figures 1/3, Sec3/4/8/9/14/18; ledger A/A1/C
+  accessed_at: '2026-10-15T12:32:33Z'
+  support: supports
+  summary: Separate whole-cell HPLC depletion endpoints are retained without interpreting
+    them as initial rates or isolated enzyme/domain chemistry. GC-MS uses library
+    analogy; selected S67/S68 supports 2w, not the abstract phenothiazine gain. WT
+    negative substrates remain explicit.
+- evidence_id: conditions
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41598-018-36977-x
+  locator: Table 1 footnotes, Figure 2, S25/S26/S70/S78, Sec5/14-19; ledger B/C/D/M
+  accessed_at: '2026-10-15T12:32:33Z'
+  support: supports
+  summary: Fresh cells plus extra time are a composite intervention; n/o prose and
+    footnotes conflict. Temperature/cell-loading timepoints disagree with Methods,
+    and pH 6.0 is also maximal in S70. Cited host controls are actually matrix-blank
+    figures. Vector matching, variant abundance and occupancy are unresolved.
+- evidence_id: model
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41598-018-36977-x
+  locator: Figure 4c/d, S71 alignment, Sec6/20; ledger E/M1
+  accessed_at: '2026-10-15T12:32:33Z'
+  support: supports
+  summary: The AnFdc-based modeled gate is a separately labeled computational hypothesis.
+    Partial homolog mapping does not verify the mutant model coordinates, a ScFdc
+    atomic trajectory, a universal planarity rule or PF01977 sufficiency. F133A label
+    inconsistency is not silently repaired.
+- evidence_id: predecessor
+  kind: prior_review
+  reference: reviews/structured/20261015T102731Z-pf01977-scfdc-causal-evidence/review.yaml
+  locator: Three OPEN findings, stable issue keys and target PF01977
+  accessed_at: '2026-10-15T12:32:33Z'
+  support: context_only
+  summary: This successor advances source-specific coverage while preserving the full
+    member, atomic/domain and assay-normalization findings. The intervening PR223
+    repository audit is not substituted for the scientific predecessor.
+- evidence_id: native
+  kind: validation
+  reference: src/dufmech/records.py
+  locator: Executed baseline/generation, schema, 52 focused tests, corpus integrity,
+    inventory/exports and responsive preview
+  accessed_at: '2026-10-15T12:32:33Z'
+  support: supports
+  summary: Artifact validity is established separately from scientific completeness.
+    Native save and final history-index validation follow this assessment; source-pin
+    failure is retained.
+- evidence_id: search
+  kind: search
+  reference: evidence/PF01977/scfdc-substrate-scope.txt
+  locator: Ignored-inclusive scoped overlay/evidence/docs search; public OAI/OA deposit
+    and exact reference queries
+  accessed_at: '2026-10-15T12:32:33Z'
+  support: context_only
+  summary: No previous Nagy2019 graph/ledger reference was found in the searched PF01977
+    overlay/evidence/docs, including ignored/hidden files. This is not an exhaustive
+    literature or filesystem absence claim.
+  search_scope: rg --no-ignore --hidden scoped to curation/families/PF01977.yaml,
+    evidence/PF01977 and docs/causal-graphs.md. Public primary source coverage is
+    Nagy2019; whole-family literature coverage remains partial.
+- evidence_id: duf-projection-pf01977
+  kind: record_content
+  reference: data/families/PF01977.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-15T12:32:33Z'
+  support: context_only
+  snapshot_sha256: e1fbc8473407c21ad2ef7547d5ad6ba6ccd085139fbe747cf9a5ba3db3345860
+  quote: "id: Pfam:PF01977\npfam_id: PF01977\nname: 3-octaprenyl-4-hydroxybenzoate\
+    \ carboxy-lyase Rift-related domain\nshort_name: UbiD\nseed_status: EX_DUF\ncharacterization_status:\
+    \ UNSCORED\ncuration_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01977\n\
+    counters:\n  proteins: 11717\n  matches: 11748\n  proteomes: 9103\n  taxa: 13944\n\
+    \  structures: 83\n  alphafold_models: 7643\n  domain_architectures: 34\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR048304\ndescription: This family has been characterised\
+    \ as 3-octaprenyl-4- hydroxybenzoate carboxy-lyase enzymes\n  [[cite:PUB00020511]].\
+    \ This enzyme catalyses the third reaction in ubiquinone biosynthesis. For optimal\n\
+    \  activity the carboxy-lase was shown to require Mn2+ [[cite:PUB00020511]]. This\
+    \ entry represents the\n  central RIFT-related domain.\ncuration_history: history/records/PF01977\n\
+    discussions:\n- discussion_id: ubid-member-and-partner-coverage\n  prompt: Extend\
+    \ the family assessment beyond the mapped AnFdc, scoped VdcCD and assessed ScFdc\
+    \ activation\n    and substrate-panel systems.\n  kind: CURATION_TODO\n  status:\
+    \ OPEN\n  rationale: PF01977 is the central domain of diverse multidomain enzymes;\
+    \ AnFdc chemistry does not establish\n    a universal substrate, partner requirement\
+    \ or native physiological role.\n  evidence:\n  - reference: PMID:34417452\n \
+    \   supports: PARTIAL\n    evidence_source: primary_publication\n    explanation:\
+    \ VdcCD substrate, partner, oxygen, viscosity and variant assays are now assessed\
+    \ separately\n      from the proposed dynamic mechanism. Sh deposited bodies are\
+    \ mapped; complete synthetic Bs constructs\n      remain unresolved.\n  - reference:\
+    \ PMID:25647642\n    supports: PARTIAL\n    evidence_source: primary_publication\n\
+    \    explanation: Initial ScFdc catalysis, activation/rescue and preparation effects\
+    \ are scoped to synthetic\n      whole-enzyme preparations. Complete inserts,\
+    \ native-system physiology, later mechanisms and the\n      tPAD1 truncation boundary\
+    \ remain unresolved.\n  - reference: PMID:30679592\n    supports: PARTIAL\n  \
+    \  evidence_source: primary_publication\n    explanation: The 2019 whole-cell\
+    \ substrate panel, fresh-cell conditions, variants and assay environment\n   \
+    \   are now assessed. Full inserts, vector-matched comparisons, active occupancy\
+    \ and native yeast physiology\n      remain unresolved; the docking receptor is\
+    \ AnFdc rather than ScFdc.\n  posed_by: Codex\n  posed_date: '2026-10-15'\n  notes:\
+    \ Continue remaining ScFdc studies including PMID27119435 and PMID28753302, EcUbiD,\
+    \ AroY, HmfF,\n    HudA and maturation/specificity work, plus VdcCD native-system\
+    \ and construct follow-up. Preserve the\n    full family and corpus scope; see\
+    \ evidence/PF01977/anfdc-primary-assays.txt, vdcc-primary-assays.txt,\n    scfdc-primary-assays.txt\
+    \ and scfdc-substrate-scope.txt.\n- discussion_id: anfdc-atomic-steps-and-domain-attribution\n\
+    \  prompt: Resolve intermediate transitions and separate whole-enzyme effects\
+    \ from PF01977-specific chemistry.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ Trapped adducts, residue perturbations and computed transition states provide\
+    \ different levels\n    of evidence. No isolated PF01977 fragment was shown sufficient\
+    \ for catalysis.\n  evidence:\n  - reference: PMID:31527849\n    supports: PARTIAL\n\
+    \    evidence_source: primary_publication\n    explanation: Figures 2/3 and supplement\
+    \ S4/S5 support scoped adduct and activity observations; F437/L439\n      belong\
+    \ to PF20696. The computed Int1-open state and specific proton-transfer sequence\
+    \ are not directly\n      measured trajectories.\n  - reference: PMID:30679592\n\
+    \    supports: PARTIAL\n    evidence_source: primary_publication\n    explanation:\
+    \ Whole-cell HPLC depletion and modeled substrate orientation are separate evidence\
+    \ types.\n      ScQ192 is within PF01977, whereas ScI330 is in PF20696; a model-based\
+    \ gate explanation is not an\n      observed isolated-domain mechanism.\n  posed_by:\
+    \ Codex\n  posed_date: '2026-10-15'\n  notes: Extend the remaining substrate/inhibitor\
+    \ and small-analogue graphs after their individual assay\n    review. Resolve\
+    \ solution-MS incubation details, active-cofactor normalization, construct sequences\n\
+    \    and the limits of domain transfer. Do not combine E282Q Int2 and WT Int3\
+    \ into one observed mutant-independent\n    trajectory. VdcCD docking and partner-allostery\
+    \ graphs remain hypotheses; apo structures and viscosity\n    effects do not measure\
+    \ the proposed catalytic trajectory or isolate PF01977 sufficiency. ScFdc transferable\n\
+    \    activation does not directly measure cofactor synthesis or establish a chemically\
+    \ pure activating\n    species; UV depletion does not independently identify every\
+    \ product. The 2019 AnFdc-based docking\n    model and whole-cell variant results\
+    \ do not prove a ScFdc atomic trajectory, residue-specific rate\n    change or\
+    \ general planarity rule. Fresh-cell supplementation plus extra time does not\
+    \ isolate viability\n    rescue.\n- discussion_id: anfdc-assay-discrepancies\n\
+    \  prompt: Resolve primary-source label discrepancies while retaining condition-specific\
+    \ negative and residual\n    activities.\n  kind: CURATION_TODO\n  status: OPEN\n\
+    \  rationale: The 2015 blanket inactivity claim is refined by 2018 residual R173A/E277Q\
+    \ activity; detection\n    methods and cofactor preparation matter.\n  evidence:\n\
+    \  - reference: PMID:29259125\n    supports: PARTIAL\n    evidence_source: primary_publication\n\
+    \    explanation: Original Figures 5/6/7 distinguish low turnover, absent detectable\
+    \ exchange and apparent\n      kinetics. R173A cofactor maturation and variant-dependent\
+    \ occupancy prevent a simple catalytic-residue\n      inference.\n  - reference:\
+    \ PMID:26083754\n    supports: PARTIAL\n    evidence_source: primary_publication\n\
+    \    explanation: Extended Data 1 has a detector-wavelength discrepancy and Extended\
+    \ Data 8 has a third-panel\n      color-caption discrepancy; neither is silently\
+    \ corrected or mistaken for a new biological result.\n  - reference: PMID:34417452\n\
+    \    supports: PARTIAL\n    evidence_source: primary_publication\n    explanation:\
+    \ Sh sequence verifies R168/G178 despite inconsistent figure labels. Source data\
+    \ retain\n      low C-alone vanillate activity, a nonzero BsCD gallic replicate\
+    \ and loss of low ShCD gallic activity\n      after partner-tail deletion. L182V\
+    \ is reported only in text; active-cofactor normalization and complete\n     \
+    \ Bs insert identity remain unresolved.\n  - reference: PMID:25647642\n    supports:\
+    \ PARTIAL\n    evidence_source: primary_publication\n    explanation: Original\
+    \ ScFdc Figures 3/4 retain low baseline and tPAD1-only activity despite simplified\n\
+    \      prose. Coexpression also changes FDC tag placement; published tPAD1 primer\
+    \ maps to reference residue\n      55 despite reported deletion of 1-58. Figure/prose\
+    \ mass, abstract/table kinetics and host-background\n      discrepancies remain\
+    \ explicit.\n  - reference: PMID:30679592\n    supports: PARTIAL\n    evidence_source:\
+    \ primary_publication\n    explanation: Table 2 and S68 identify gained thiazole\
+    \ 1w conversion, not the abstract's phenothiazine\n      gain. S25/S26 are substrate-free\
+    \ blanks, not the cited host controls. Fresh-cell n/o outcomes, timepoints,\n\
+    \      pH results, vector matching, 1x isomer naming and the F133A energy label\
+    \ remain explicitly discrepant\n      or unresolved.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-15'\n  notes: R173 is verified in A2QHE5; position 172 is Ala. F437L\
+    \ is verified in deposited 6R2Z despite\n    the 2019 F439L prose typo. Obtain\
+    \ missing raw assay/construct details and measured active occupancy;\n    absence\
+    \ of detected product is not proof of zero activity under all conditions. Do not\
+    \ equate ScFdc\n    native-PAGE migration with a definitive oligomer or use a\
+    \ hypothesized occupancy correction as measured\n    turnover. The 2019 Q192N/A\
+    \ and I330A/V primer segments match the specified reference substitutions,\n \
+    \   but only Q192N and I330A/V have Table 2 activity results. Addgene sequence\
+    \ download is login-gated;\n    complete insert identity remains unresolved. Preserve\
+    \ Table 1 versus Figure 3 endpoint differences\n    and do not fit separate assay\
+    \ contexts as one kinetic series.\ncausal_graphs:\n- graph_id: anfdc-cinnamate-decarboxylation-2015\n\
+    \  title: AnFdc converts cinnamic acid to styrene\n  scope: Purified full-length\
+    \ Aspergillus niger Fdc1 coexpressed with E. coli UbiX; a whole-enzyme reaction,\n\
+    \    not an isolated-domain assay.\n  context: Recombinant AnFdc from E. coli\
+    \ BL21(DE3), with bound prFMN; 350 uL, 50 mM KCl and 50 mM sodium\n    phosphate\
+    \ pH 6, 25 C. Cinnamic acid disappearance and styrene-assigned UV appearance are\
+    \ followed\n    over time.\n  family_mapping: A2QHE5 sequence 1/entry 95 is the\
+    \ 500-aa An03g06590 reference. PF01977 maps to 119-318;\n    PF20695 to 14-103\
+    \ and PF20696 to 324-460. Deposited 4ZA4 equals the reference plus LEHHHHHH. See\
+    \ evidence/PF01977/member-mapping.txt.\n  taxon: NCBITaxon:425011\n  scope_status:\
+    \ MECHANISTIC\n  limitations: Does not measure native fungal flux, isolated-domain\
+    \ sufficiency or the complete atomistic\n    trajectory. UbiX supplies cofactor\
+    \ and is not assigned this decarboxylation. Reference taxonomy is\n    not the\
+    \ expression host.\n  nodes:\n  - node_id: reaction\n    label: AnFdc-prFMN with\
+    \ cinnamic acid in assay buffer\n    node_type: PROCESS\n    grounding:\n    -\
+    \ UniProtKB:A2QHE5\n  - node_id: styrene\n    label: Styrene product\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: produces-styrene\n    subject: reaction\n    predicate:\
+    \ produces\n    object: styrene\n    mechanism: Purified holoenzyme consumes the\
+    \ acid with a decrease at 270 nm and appearance of the styrene-assigned\n    \
+    \  peak at 245 nm. The joint source includes enzyme, cofactor and substrate; none\
+    \ alone is asserted\n      sufficient.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:26083754\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4988494/fullTextXML\n\
+    \      snippet: conversion of cinnamic acid to styrene\n      explanation: Original\
+    \ Figure 1c-d, Results and UV-Vis methods inspected; ledger S1a. Product formation\n\
+    \        is measured spectroscopically, not direct CO2 release.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-styrene-carboxylation-2015\n  title: AnFdc supports reverse\
+    \ carboxylation under high bicarbonate\n  scope: Purified whole AnFdc-prFMN in\
+    \ an overnight reverse-reaction assay.\n  context: 10 mM styrene, 100 mM sodium\
+    \ phosphate initially pH 6 and 3 M bicarbonate, final pH 7.5, 25\n    C overnight;\
+    \ enzyme-containing and no-enzyme samples compared by HPLC.\n  family_mapping:\
+    \ A2QHE5 version 1, PF01977 residues 119-318 within a 500-aa multidomain enzyme;\
+    \ 4ZA4\n    deposited reference body is identical plus a C-terminal tag. Same\
+    \ cloning lineage as the forward assay,\n    with different reaction conditions.\n\
+    \  taxon: NCBITaxon:425011\n  scope_status: MECHANISTIC\n  limitations: High-bicarbonate\
+    \ assay is not native carboxylative flux. Exact enzyme amount and full calibration\n\
+    \    are not established here. Figure A254 versus methods264 nm discrepancy is\
+    \ retained. Forward/reverse\n    graphs are separate, not a biological feedback\
+    \ loop.\n  nodes:\n  - node_id: reverse_mix\n    label: AnFdc-prFMN with styrene\
+    \ and high bicarbonate\n    node_type: PROCESS\n    grounding:\n    - UniProtKB:A2QHE5\n\
+    \  - node_id: cinnamate\n    label: Cinnamic-acid-assigned HPLC product\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: produces-cinnamate\n    subject: reverse_mix\n\
+    \    predicate: produces\n    object: cinnamate\n    mechanism: Enzyme addition\
+    \ yields the cinnamic-acid-assigned chromatographic peak absent from the\n   \
+    \   otherwise matched no-enzyme styrene control.\n    directness: DIRECT\n   \
+    \ support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:26083754\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4988494/fullTextXML\n\
+    \      snippet: reversible decarboxylation\n      explanation: Original Extended\
+    \ Data 1 and carboxylation HPLC methods inspected; ledger S1b. No isotope-traced\n\
+    \        CO2 incorporation or physiological rate is claimed.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-alkene-products-2015\n  title: AnFdc forms three terminal alkenes\
+    \ in separate substrate assays\n  scope: Purified whole AnFdc-prFMN, three separately\
+    \ tested aliphatic substrates.\n  context: Each reaction contains one 10 mM acid\
+    \ in 500 uL, 50 mM KCl/50 mM sodium phosphate pH 6, 25\n    C with shaking; headspace\
+    \ GC-FID, authentic product standards and matched no-enzyme controls.\n  family_mapping:\
+    \ A2QHE5 version 1 / An03g06590; PF01977 at 119-318, with separate N- and C-terminal\
+    \ Pfam\n    domains. Same 2015 AnFdc construct lineage; no domain truncation is\
+    \ tested.\n  taxon: NCBITaxon:425011\n  scope_status: MECHANISTIC\n  limitations:\
+    \ Method does not establish exact enzyme concentration or incubation duration\
+    \ here. Caption\n    reports no detected 1-octene from 2-nonenoic acid without\
+    \ a displayed separate trace. Third-panel\n    caption colors disagree with image\
+    \ labels; product identity uses standards and labels.\n  nodes:\n  - node_id:\
+    \ hexenoate_mix\n    label: AnFdc-prFMN plus 2-hexenoic acid\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:A2QHE5\n  - node_id: pentene\n    label: 1-Pentene\n\
+    \    node_type: STATE\n  - node_id: heptenoate_mix\n    label: AnFdc-prFMN plus\
+    \ 2-heptenoic acid\n    node_type: PROCESS\n    grounding:\n    - UniProtKB:A2QHE5\n\
+    \  - node_id: hexene\n    label: 1-Hexene\n    node_type: STATE\n  - node_id:\
+    \ octenoate_mix\n    label: AnFdc-prFMN plus 2-octenoic acid\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:A2QHE5\n  - node_id: heptene\n    label: 1-Heptene\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: produces-pentene\n    subject: hexenoate_mix\n\
+    \    predicate: produces\n    object: pentene\n    mechanism: The enzyme-containing\
+    \ 2-hexenoic-acid sample produces the authentic-standard-matched 1-pentene\n \
+    \     peak relative to its no-enzyme control.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:26083754\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4988494/fullTextXML\n\
+    \      snippet: comparison with pure 1-alkene standards\n      explanation: Original\
+    \ Extended Data 8 left panel and GC methods; ledger S1c.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: produces-hexene\n    subject: heptenoate_mix\n    predicate: produces\n\
+    \    object: hexene\n    mechanism: The enzyme-containing 2-heptenoic-acid sample\
+    \ produces the standard-matched 1-hexene peak\n      relative to its separate\
+    \ no-enzyme control.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:26083754\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4988494/fullTextXML\n  \
+    \    snippet: comparison with pure 1-alkene standards\n      explanation: Original\
+    \ Extended Data 8 middle panel and GC methods; ledger S1c.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: produces-heptene\n    subject: octenoate_mix\n    predicate: produces\n\
+    \    object: heptene\n    mechanism: The enzyme-containing 2-octenoic-acid sample\
+    \ produces the standard-matched 1-heptene peak.\n      Original panel labels,\
+    \ not conflicting caption colors, distinguish the reaction and control.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:26083754\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4988494/fullTextXML\n\
+    \      snippet: comparison with pure 1-alkene standards\n      explanation: Original\
+    \ Extended Data 8 right panel and GC methods; ledger S1c records the discrepancy\n\
+    \        and separately reported2-nonenoic negative.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-ere-variant-activity-2018\n  title: AnFdc active-site substitutions\
+    \ reduce measured cinnamate turnover\n  scope: Six individual R173/E277/E282 substitutions\
+    \ in full AnFdc, not combined mutations or isolated\n    PF01977.\n  context:\
+    \ EcUbiX-coexpressed proteins; cinnamic-acid UV rate assays at 25 C in 50 mM KCl/50\
+    \ mM sodium\n    phosphate pH 6, plus 10 mM substrate/50 uM enzyme HPLC endpoints\
+    \ after 2 h. Protein concentration\n    and active-cofactor occupancy differ between\
+    \ preparations.\n  family_mapping: R173/E277/E282 are verified A2QHE5 version\
+    \ 1 residues within PF01977 119-318. The papers\n    report sequence-confirmed\
+    \ mutations; deposited 6R3F independently matches only E282Q plus the reference\n\
+    \    tag, not every assay plasmid.\n  taxon: NCBITaxon:425011\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: Observed activity perturbations do not uniquely resolve\
+    \ acid/base chemistry, cofactor maturation\n    or structural effects. Apparent\
+    \ rates are not occupancy-normalized. R173A and E277Q are low-activity,\n    not\
+    \ universally inactive; E282Q/R173K negatives are assay-bounded.\n  nodes:\n \
+    \ - node_id: r173a\n    label: R173A substitution in AnFdc\n    node_type: PERTURBATION\n\
+    \  - node_id: r173k\n    label: R173K substitution in AnFdc\n    node_type: PERTURBATION\n\
+    \  - node_id: e277d\n    label: E277D substitution in AnFdc\n    node_type: PERTURBATION\n\
+    \  - node_id: e277q\n    label: E277Q substitution in AnFdc\n    node_type: PERTURBATION\n\
+    \  - node_id: e282d\n    label: E282D substitution in AnFdc\n    node_type: PERTURBATION\n\
+    \  - node_id: e282q\n    label: E282Q substitution in AnFdc\n    node_type: PERTURBATION\n\
+    \  - node_id: turnover\n    label: Measured cinnamic-acid decarboxylation relative\
+    \ to WT\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:A2QHE5\n  edges:\n\
+    \  - edge_id: r173a-reduces-turnover\n    subject: r173a\n    predicate: decreases\n\
+    \    object: turnover\n    mechanism: R173A retains low styrene formation by HPLC.\
+    \ Cofactor-maturation defects prevent interpreting\n      the reduction as a direct\
+    \ catalytic proton-transfer assignment.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: decarboxylation of cinnamic acid\n      explanation: Figure 5\
+    \ R173A trace, Arg173 Results and methods; ledger S2b. Refines the earlier2015\n\
+    \        inactivity claim.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: r173k-reduces-turnover\n    subject: r173k\n    predicate: decreases\n\
+    \    object: turnover\n    mechanism: No R173K turnover was detected by the reported\
+    \ assays despite a mature-cofactor-consistent\n      mass signal. The mutant was\
+    \ not crystallized, so its active-site structural effect remains unresolved.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:29259125\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: decarboxylation of cinnamic acid\n      explanation: Figure 5\
+    \ R173K trace and Arg173 Results; ledger S2b. This is a detection-bounded negative,\n\
+    \        not proof of absolute inactivity.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: e277d-reduces-turnover\n    subject: e277d\n    predicate: decreases\n\
+    \    object: turnover\n    mechanism: E277D retains product formation but has\
+    \ apparent turnover 1.2 +/- 0.2 s^-1 versus WT 9.4\n      +/- 0.1 s^-1. Its substrate\
+    \ dependence is not Michaelis-Menten; no Km is assigned.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:29259125\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: decarboxylation of cinnamic acid\n      explanation: Original\
+    \ Figures 5 and 6A/D, Results and rate methods; ledger S2b. Apparent values\n\
+    \        may reflect active-cofactor occupancy as well as chemistry.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: e277q-reduces-turnover\n    subject: e277q\n    predicate: decreases\n\
+    \    object: turnover\n    mechanism: E277Q forms a small styrene peak with reported\
+    \ apparent turnover upper bound0.3 min^-1;\n      this is reduced residual activity,\
+    \ not a fully abolished reaction.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: only very low levels of decarboxylase activity\n      explanation:\
+    \ Original Figure 5 E277Q trace and Glu-variant Results; ledger S2b. Preparation-dependent\n\
+    \        cofactor adducts are an explicit alternative contributor.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: e282d-reduces-turnover\n    subject: e282d\n    predicate: decreases\n\
+    \    object: turnover\n    mechanism: E282D retains styrene production with apparent\
+    \ turnover 0.63 +/- 0.04 s^-1 versus WT 9.4\n      +/- 0.1 s^-1, not zero activity.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:29259125\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: decarboxylation of cinnamic acid\n      explanation: Original\
+    \ Figures 5 and 6A/C and Results; ledger S2b. Complete protein and cofactor\n\
+    \        preparation, not isolated-domain kinetics.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: e282q-reduces-turnover\n    subject: e282q\n    predicate: decreases\n\
+    \    object: turnover\n    mechanism: E282Q has no detected cinnamate turnover\
+    \ under these2018 solution assays. Later trapping\n      of a decarboxylated cofactor\
+    \ adduct does not establish complete catalytic turnover by this mutant.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:29259125\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: decarboxylation of cinnamic acid\n      explanation: Original\
+    \ Figure 5 E282Q trace, Results and methods; ledger S2b. Binding or a mature-cofactor-like\n\
+    \        structure alone is not restored catalysis.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-styrene-isotope-exchange-2018\n  title: AnFdc supports position-specific\
+    \ styrene hydrogen-deuterium exchange\n  scope: Purified whole AnFdc WT and individually\
+    \ tested E282D/E277D/R173A variants; isotope exchange,\n    not net carboxylation.\n\
+    \  context: 35 uM enzyme in styrene-saturated D2O with 50 mM potassium phosphate\
+    \ pH 6, 298K; proton NMR\n    compared with no-enzyme control. Normal acquisition\
+    \ dead time is approximately 20 min.\n  family_mapping: A2QHE5 version 1, PF01977\
+    \ at 119-318; all three substitutions lie inside that interval.\n    Complete\
+    \ enzyme retains PF20695/PF20696. Exact individual assay plasmids have not been\
+    \ independently\n    resequenced.\n  taxon: NCBITaxon:425011\n  scope_status:\
+    \ MECHANISTIC\n  limitations: Proton-signal exchange is directly measured; the\
+    \ identity of a proton-transferring residue\n    and each covalent intermediate\
+    \ are not. E277Q/E282Q/R173K lack significant detectable exchange in\n    these\
+    \ conditions. R173A four-hour result is reported in Results, not a separate inspected\
+    \ four-hour\n    trace.\n  nodes:\n  - node_id: wt_mix\n    label: WT AnFdc-prFMN\
+    \ with styrene in D2O\n    node_type: PROCESS\n    grounding:\n    - UniProtKB:A2QHE5\n\
+    \  - node_id: e282d_mix\n    label: E282D AnFdc with styrene in D2O\n    node_type:\
+    \ PROCESS\n  - node_id: e277d_mix\n    label: E277D AnFdc with styrene in D2O\n\
+    \    node_type: PROCESS\n  - node_id: r173a_mix\n    label: R173A AnFdc with styrene\
+    \ in D2O for 4 h\n    node_type: PROCESS\n  - node_id: exchange\n    label: Styrene\
+    \ trans-C1 hydrogen-deuterium exchange\n    node_type: PROCESS\n  edges:\n  -\
+    \ edge_id: wt-enables-exchange\n    subject: wt_mix\n    predicate: enables\n\
+    \    object: exchange\n    mechanism: WT eliminates the5.3 ppm proton signal and\
+    \ simplifies the6.9 ppm signal within the approximately\n      20 min dead time\
+    \ relative to the no-enzyme control.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: exchange has taken place\n      explanation: Original Figure 7\
+    \ WT/control spectra and H/D methods; ledger S2c. No net CO2 incorporation\n \
+    \       is measured.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: e282d-enables-exchange\n    subject: e282d_mix\n    predicate: enables\n\
+    \    object: exchange\n    mechanism: E282D retains position-specific exchange\
+    \ within the acquisition dead time; slower cinnamate\n      turnover does not\
+    \ imply loss of this distinct exchange reaction.\n    directness: DIRECT\n   \
+    \ support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:29259125\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: exchange has taken place\n      explanation: Original Figure 7\
+    \ E282D/control spectra, Results and H/D methods; ledger S2c.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: e277d-enables-slow-exchange\n    subject: e277d_mix\n    predicate:\
+    \ enables\n    object: exchange\n    mechanism: E277D supports slower exchange,\
+    \ reaching approximately 90 percent by 2 h rather than completing\n      within\
+    \ the initial dead time.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n  \
+    \    snippet: exchange has taken place\n      explanation: Original Figure 7 E277D\
+    \ and E277D+2 h spectra and Results; ledger S2c.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: r173a-enables-reported-low-exchange\n    subject: r173a_mix\n  \
+    \  predicate: enables\n    object: exchange\n    mechanism: The Results report\
+    \ very low exchange after 4 h with R173A, consistent with residual activity\n\
+    \      rather than an absolute loss. No precise rate or independently inspected\
+    \ four-hour spectrum is asserted.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: exchange has taken place\n      explanation: Arg173-variant Results\
+    \ and H/D methods; Figure 7 supplies the assay context but not\n        a separate4\
+    \ h trace. Ledger S2c distinguishes reported from displayed evidence.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-light-inactivation-2018\n  title: Illumination reduces AnFdc\
+    \ activity relative to dark controls\n  scope: Purified whole AnFdc WT, E277D\
+    \ and E282D; solution activity perturbations.\n  context: Preparations incubated\
+    \ on ice in clear or black tubes, assayed for cinnamate consumption; assay\n \
+    \   concentrations WT 45 nM, E277D300 nM, E282D600 nM. Separate dark-purified\
+    \ WT exposure to 365 nm UV\n    for 5 min is reported.\n  family_mapping: A2QHE5\
+    \ version 1, PF01977 119-318; E277D/E282D are internal substitutions, but illumination\n\
+    \    acts on the complete cofactor-containing enzyme rather than an isolated domain.\n\
+    \  taxon: NCBITaxon:425011\n  scope_status: PHENOTYPIC\n  limitations: Directness\
+    \ of the molecular route to solution inactivation is unresolved in this graph.\n\
+    \    Separate crystal observations support photoisomerization but are not a simultaneous\
+    \ single-molecule\n    time course. Irradiance and universal exposure thresholds\
+    \ are not established.\n  nodes:\n  - node_id: wt_light\n    label: Ambient-light\
+    \ incubation of WT AnFdc\n    node_type: PERTURBATION\n  - node_id: e277d_light\n\
+    \    label: Ambient-light incubation of E277D AnFdc\n    node_type: PERTURBATION\n\
+    \  - node_id: e282d_light\n    label: Ambient-light incubation of E282D AnFdc\n\
+    \    node_type: PERTURBATION\n  - node_id: wt_uv\n    label: Five-minute365 nm\
+    \ illumination of dark-purified WT\n    node_type: PERTURBATION\n  - node_id:\
+    \ wt_activity\n    label: WT cinnamate-decarboxylation activity\n    node_type:\
+    \ ACTIVITY\n    grounding:\n    - UniProtKB:A2QHE5\n  - node_id: e277d_activity\n\
+    \    label: E277D cinnamate-decarboxylation activity\n    node_type: ACTIVITY\n\
+    \  - node_id: e282d_activity\n    label: E282D cinnamate-decarboxylation activity\n\
+    \    node_type: ACTIVITY\n  edges:\n  - edge_id: light-reduces-wt\n    subject:\
+    \ wt_light\n    predicate: decreases\n    object: wt_activity\n    mechanism:\
+    \ WT activity declines on ice under illumination, unlike the matched dark control;\
+    \ oxygen\n      exposure alone does not explain this light-versus-dark contrast.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:29259125\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: decarboxylation of cinnamic acid\n      explanation: Original\
+    \ Figure 2A, light/dark Results and methods; ledger S2d. The observed solution\n\
+    \        effect is distinguished from the proposed molecular explanation.\n  \
+    \    cache_path: evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256:\
+    \ 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n  - edge_id:\
+    \ light-reduces-e277d\n    subject: e277d_light\n    predicate: decreases\n  \
+    \  object: e277d_activity\n    mechanism: E277D loses more normalized activity\
+    \ in light than in its dark control; the mutation does\n      not prevent light\
+    \ sensitivity.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n  \
+    \    snippet: decarboxylation of cinnamic acid\n      explanation: Original Figure\
+    \ 2A E277D paired time courses and methods; ledger S2d. Dark stability\n     \
+    \   is not claimed perfectly constant for this variant.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: light-reduces-e282d\n    subject: e282d_light\n    predicate: decreases\n\
+    \    object: e282d_activity\n    mechanism: E282D loses normalized activity with\
+    \ illumination relative to its dark control, despite\n      retaining measurable\
+    \ turnover before exposure.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: decarboxylation of cinnamic acid\n      explanation: Original\
+    \ Figure 2A E282D paired time courses and methods; ledger S2d.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: uv-reduces-wt\n    subject: wt_uv\n    predicate: decreases\n  \
+    \  object: wt_activity\n    mechanism: Five-minute365 nm exposure is reported\
+    \ to remove detectable activity from the dark-purified\n      WT preparation while\
+    \ changing its optical spectrum.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: complete loss of activity\n      explanation: Light-dependent-inactivation\
+    \ Results, Figure 2B spectra and light/dark methods; ledger\n        S2d. The\
+    \ five-minute activity endpoint is reported in text, not Figure 2A's ambient-light\
+    \ series.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n     \
+    \ cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-crystal-photoisomerization-2018\n  title: UV exposure produces\
+    \ ketimine-containing AnFdc crystal states\n  scope: Whole AnFdc WT and E282Q\
+    \ crystals prepared in darkness; molecular-state changes, separate from\n    solution\
+    \ activity assays.\n  context: Dark-purified/crystallized protein compared with\
+    \ UV-exposed crystals. Structures resolve iminium\n    versus ketimine-containing\
+    \ states; WT ketimine persists after return to darkness.\n  family_mapping: A2QHE5\
+    \ version 1, PF01977 119-318; E282 is internal. The complete enzyme has additional\n\
+    \    Pfam domains; no isolated-domain photochemistry is tested.\n  taxon: NCBITaxon:425011\n\
+    \  scope_status: MECHANISTIC\n  limitations: Structural occupancy is not complete\
+    \ quantitative solution conversion. E282Q also contains\n    hydroxylated cofactor;\
+    \ its ketimine occupancy is below 50 percent. Specific internal/external proton-transfer\n\
+    \    mechanisms remain proposed.\n  nodes:\n  - node_id: wt_uv_crystal\n    label:\
+    \ UV exposure of dark-prepared WT AnFdc crystals\n    node_type: PROCESS\n   \
+    \ grounding:\n    - UniProtKB:A2QHE5\n  - node_id: wt_ketimine\n    label: WT\
+    \ crystal with increased prFMN ketimine occupancy\n    node_type: STATE\n  - node_id:\
+    \ e282q_uv_crystal\n    label: UV exposure of dark-prepared E282Q crystals\n \
+    \   node_type: PROCESS\n  - node_id: e282q_ketimine\n    label: E282Q crystal\
+    \ with detectable prFMN ketimine\n    node_type: STATE\n  edges:\n  - edge_id:\
+    \ wt-uv-produces-ketimine-state\n    subject: wt_uv_crystal\n    predicate: produces\n\
+    \    object: wt_ketimine\n    mechanism: UV exposure converts a dark WT crystal\
+    \ population containing iminium cofactor to a mixed\n      state with at least\
+    \ approximately 50 percent ketimine; prolonged return to darkness does not restore\n\
+    \      the original cofactor state.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: isomerization of at least 50%\n      explanation: Figure 2 C/D\
+    \ electron-density panels and adjacent crystal-isomerization Results establish\n\
+    \        the structural direction, distinct from the solution-activity experiment.\
+    \ Ledger S2d.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n \
+    \     cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: e282q-uv-produces-ketimine-state\n    subject: e282q_uv_crystal\n\
+    \    predicate: produces\n    object: e282q_ketimine\n    mechanism: UV-exposed\
+    \ E282Q crystals contain ketimine despite replacement of the glutamate side chain;\n\
+    \      that residue's acidic group is therefore not an absolute requirement for\
+    \ the observed photoisomerization.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:29259125\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5818171/fullTextXML\n\
+    \      snippet: ketimine form can also be observed\n      explanation: Figure\
+    \ 2E/F and isomerization Results, not E282Q turnover, support this edge. Ledger\n\
+    \        S2d records the directly inspected structural comparison.\n      cache_path:\
+    \ evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-e282q-int2-trapping-2019\n  title: Cinnamic acid exposure traps\
+    \ a decarboxylated AnFdc E282Q adduct\n  scope: Complete E282Q AnFdc-prFMN construct\
+    \ in a crystallographic trapping experiment, not WT turnover.\n  context: Cinnamic\
+    \ acid supplied at 1 mM from 2 h after expression induction and in purification\
+    \ buffers,\n    followed by crystallization at 4 C. The resulting6R3F structure\
+    \ resolves the Int2 cofactor-substrate\n    adduct.\n  family_mapping: Deposited\
+    \ 6R3F entity1 matches A2QHE5 version 1 except E282Q plus LEHHHHHH. E282 lies\n\
+    \    inside PF01977 119-318; the other domains are retained. Exact comparison\
+    \ is in evidence/PF01977/member-mapping.txt.\n  taxon: NCBITaxon:425011\n  scope_status:\
+    \ MECHANISTIC\n  limitations: Adduct accumulation establishes a chemical endpoint,\
+    \ not sustained turnover, free product\n    release or direct observation of each\
+    \ preceding transition. No edge joins this mutant endpoint to\n    WT intermediates\
+    \ as an observed chain.\n  nodes:\n  - node_id: e282q_cinnamate\n    label: E282Q\
+    \ AnFdc-prFMN exposed to cinnamic acid\n    node_type: PROCESS\n    grounding:\n\
+    \    - UniProtKB:A2QHE5\n  - node_id: int2\n    label: Decarboxylated covalent\
+    \ prFMN-substrate Int2 adduct\n    node_type: STATE\n  edges:\n  - edge_id: forms-int2\n\
+    \    subject: e282q_cinnamate\n    predicate: produces\n    object: int2\n   \
+    \ mechanism: The exposed construct yields electron density for a covalent substrate-cofactor\
+    \ adduct\n      lacking the substrate carboxylate and retaining one substrate-to-prFMN\
+    \ linkage, assigned Int2. This\n      does not contradict absent complete turnover\
+    \ in the2018 solution assay.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:31527849\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6817360/fullTextXML\n\
+    \      snippet: covalent prFMN-substrate complex\n      explanation: Original\
+    \ Figure 2b/c, Int2 Results, supplement p4 methods and Table1; exact deposited\n\
+    \        E282Q sequence checked. Ledger S3a.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-phenylpropiolate-adducts-2019\n  title: AnFdc forms and slowly\
+    \ decarboxylates a phenylpropiolate cycloadduct\n  scope: WT full AnFdc-prFMN\
+    \ reacting with the alkyne analogue phenylpropiolic acid, not ordinary cinnamic-acid\n\
+    \    turnover.\n  context: Rapid crystal soaks use100 mM ligand; prolonged cocrystallization\
+    \ uses 1 mM ligand at 4 C.\n    Separate solution cofactor-MS samples at 0/21/50\
+    \ h track a44 Da mass loss. Exact solution incubation\n    concentration/temperature\
+    \ remain unresolved.\n  family_mapping: A2QHE5 version 1, PF01977 119-318, additional\
+    \ domains intact. Deposited 6R33 Int3-prime\n    construct exactly matches the\
+    \ reference body plus LEHHHHHH; the paper identifies the same AnFdc lineage\n\
+    \    for the rapid-soak experiment.\n  taxon: NCBITaxon:425011\n  scope_status:\
+    \ MECHANISTIC\n  limitations: Complementary crystallographic endpoints and solution-MS\
+    \ time courses are not one observed\n    atomic trajectory. Slow adduct decarboxylation\
+    \ does not demonstrate free phenylacetylene release or\n    sustained alkyne turnover.\
+    \ L439G retains the carboxylated mass through 48 h.\n  nodes:\n  - node_id: alkyne_mix\n\
+    \    label: WT AnFdc-prFMN with phenylpropiolic acid\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:A2QHE5\n  - node_id: int1_prime\n    label: Enzyme-bound\
+    \ carboxylated prFMN cycloadduct Int1-prime\n    node_type: STATE\n  - node_id:\
+    \ int3_prime\n    label: Enzyme-bound decarboxylated cycloadduct Int3-prime\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: forms-int1-prime\n    subject: alkyne_mix\n\
+    \    predicate: produces\n    object: int1_prime\n    mechanism: Rapid ligand\
+    \ soaking and flash-cooling trap the carboxylated covalent cycloadduct. The\n\
+    \      source includes mature cofactor and whole enzyme, rather than asserting\
+    \ spontaneous substrate binding\n      is catalysis.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:31527849\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6817360/fullTextXML\n\
+    \      snippet: clear density for a 3-pyrroline cycloadduct\n      explanation:\
+    \ Original Figure 3b and associated rapid-soak Results; supplement pp3-4. Figure\
+    \ 3a is\n        the later decarboxylated state, not the same snapshot. Ledger\
+    \ S3b.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n      cache_sha256:\
+    \ 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n  - edge_id:\
+    \ slowly-decarboxylates-adduct\n    subject: int1_prime\n    predicate: converts_to\n\
+    \    object: int3_prime\n    mechanism: WT cofactor-MS time points show loss of\
+    \ the approximately 669 Da species and accumulation\n      of approximately 625\
+    \ Da material, supporting slow adduct decarboxylation; prolonged cocrystallization\n\
+    \      independently resolves the decarboxylated cyclic endpoint.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:31527849\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6817360/fullTextXML\n\
+    \      snippet: slow decarboxylation occurs\n      explanation: Original Figure\
+    \ 3a and visually inspected supplement S4a/b on PDF p11, plus MS methods.\n  \
+    \      Times are 0/21/50 h for WT and 0/27/48 h for L439G; not an assumed 24 h\
+    \ endpoint. Ledger S3b.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: anfdc-c-terminal-variant-activity-2019\n  title: C-terminal-domain\
+    \ substitutions reduce whole-AnFdc turnover\n  scope: Full AnFdc F437L and L439G\
+    \ variants; these mutations are outside PF01977 and are retained as\n    whole-enzyme\
+    \ context.\n  context: EcUbiX-coexpressed, dark-purified variants; cinnamate-consumption\
+    \ assays in 350 uL, 50 mM KCl/50\n    mM sodium phosphate pH 6 at 25 C. Apparent\
+    \ turnover is calculated from total protein concentration.\n  family_mapping:\
+    \ Exact deposited 6R2Z and 6R30 bodies differ from A2QHE5 version 1 only at F437L\
+    \ or L439G,\n    respectively, plus LEHHHHHH. PF01977 is 119-318; both mutated\
+    \ residues lie in PF20696 324-460, not\n    this entry's domain.\n  taxon: NCBITaxon:425011\n\
+    \  scope_status: PHENOTYPIC\n  limitations: Rate effects support the role of the\
+    \ intact multidomain active site; they do not establish\n    a PF01977-specific\
+    \ residue mechanism. Altered binding, occupancy and active-site geometry can contribute.\n\
+    \    Reduced cinnamate turnover is distinct from absent alkyne-adduct decarboxylation.\n\
+    \  nodes:\n  - node_id: f437l\n    label: F437L substitution in the C-terminal\
+    \ domain\n    node_type: PERTURBATION\n  - node_id: l439g\n    label: L439G substitution\
+    \ in the C-terminal domain\n    node_type: PERTURBATION\n  - node_id: turnover\n\
+    \    label: Whole-AnFdc cinnamate turnover relative to WT\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:A2QHE5\n  edges:\n  - edge_id: f437l-reduces-turnover\n\
+    \    subject: f437l\n    predicate: decreases\n    object: turnover\n    mechanism:\
+    \ F437L retains apparent turnover 0.39 +/- 0.01 s^-1 with Km 5.3 +/- 1.0 uM, but\
+    \ is substantially\n      slower than WT. The experiment does not report zero\
+    \ activity or an F439L substitution.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:31527849\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6817360/fullTextXML\n\
+    \      snippet: both mutations severely compromised enzyme activity\n      explanation:\
+    \ Original supplement S5d, PDF p12 caption/plot and kinetic methods pp2-3; deposited\n\
+    \        6R2Z sequence confirms F437L. Ledger S3c.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    \  - edge_id: l439g-reduces-turnover\n    subject: l439g\n    predicate: decreases\n\
+    \    object: turnover\n    mechanism: L439G has reduced but measurable cinnamate\
+    \ turnover and shifted substrate dependence. No\n      precise Km is invented\
+    \ from the plot; the separate failure to decarboxylate an alkyne adduct is\n \
+    \     not transferred to cinnamate.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:31527849\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6817360/fullTextXML\n\
+    \      snippet: both mutations severely compromised enzyme activity\n      explanation:\
+    \ Original supplement S5b, PDF p12 plot and main mutagenesis Results; deposited\
+    \ 6R30\n        sequence confirms L439G. Ledger S3c.\n      cache_path: evidence/PF01977/anfdc-primary-assays.txt\n\
+    \      cache_sha256: 403f6306f44f138f074dee8c6bdd5faa29d49dc25e4dd2f2346070d512f5db1a\n\
+    - graph_id: shvdccd-substrate-products-2021\n  title: ShVdcCD forms substrate-specific\
+    \ decarboxylation products\n  scope: Co-purified full ShVdcC with its ShVdcD partner,\
+    \ reconstituted with prFMN and Mn; five separate\n    substrate assays.\n  context:\
+    \ Recombinant E. coli BL21(DE3) preparation; 10 uM C, 5 mM substrate, 18 h in\
+    \ an anoxic chamber;\n    substrates not oxygen-purged. HPLC uses authentic substrate/product\
+    \ standards and calibration; two\n    independent replicates.\n  family_mapping:\
+    \ Q9S4M7 sequence 1 is the 480-aa ShC body in 7AE4/7AE5/7AE7; PF01977 106-312,\
+    \ PF20695\n    12-89 and PF20696 319-442. ShD Q4R102 belongs to PF26358, not PF01977.\
+    \ Assay tags and methods are\n    retained in evidence/PF01977/vdcc-primary-assays.txt.\n\
+    \  taxon: NCBITaxon:29345\n  scope_status: MECHANISTIC\n  limitations: Whole-complex\
+    \ endpoint chemistry, not isolated-domain sufficiency or native flux. No syringic-acid\n\
+    \    product detected in WT. Gallic activity is low; detection limits and the\
+    \ atomic reaction trajectory\n    are not measured. Product assignments do not\
+    \ directly measure CO2 release.\n  nodes:\n  - node_id: phb_mix\n    label: ShCD-prFMN-Mn\
+    \ with PHB\n    node_type: PROCESS\n    grounding:\n    - UniProtKB:Q9S4M7\n \
+    \   - UniProtKB:Q4R102\n  - node_id: van_mix\n    label: ShCD-prFMN-Mn with vanillic\
+    \ acid\n    node_type: PROCESS\n  - node_id: proto_mix\n    label: ShCD-prFMN-Mn\
+    \ with protocatechuic acid\n    node_type: PROCESS\n  - node_id: methyl_mix\n\
+    \    label: ShCD-prFMN-Mn with 3-Me-4-hydroxybenzoic acid\n    node_type: PROCESS\n\
+    \  - node_id: gallic_mix\n    label: ShCD-prFMN-Mn with gallic acid\n    node_type:\
+    \ PROCESS\n  - node_id: phb_product\n    label: PHB-derived phenol product\n \
+    \   node_type: STATE\n  - node_id: van_product\n    label: Vanillate-derived guaiacol\
+    \ product\n    node_type: STATE\n  - node_id: proto_product\n    label: Protocatechuate-derived\
+    \ catechol product\n    node_type: STATE\n  - node_id: methyl_product\n    label:\
+    \ Methyl-PHB-derived 2-methylphenol product\n    node_type: STATE\n  - node_id:\
+    \ gallic_product\n    label: Gallic-acid-derived pyrogallol product\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: phb-product\n    subject: phb_mix\n    predicate:\
+    \ produces\n    object: phb_product\n    mechanism: The joint enzyme-partner-cofactor-substrate\
+    \ assay yields 100% PHB decarboxylation in both\n      endpoint replicates; no\
+    \ single input is asserted sufficient.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:34417452\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: substrate scope\n      explanation: Figure 2a ShVdcCD row substrate\
+    \ 1; source Fig 2a and HPLC methods. Ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: vanillate-product\n    subject: van_mix\n    predicate: produces\n\
+    \    object: van_product\n    mechanism: Both vanillic-acid endpoint replicates\
+    \ yield 100% conversion in the co-purified reconstituted\n      complex assay.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: substrate scope\n      explanation: Figure 2a ShVdcCD substrate\
+    \ 2; distinguish co-purified CD from separately mixed C+D.\n        Ledger V1.\n\
+    \      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n      cache_sha256:\
+    \ 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n  - edge_id:\
+    \ protocatechuate-product\n    subject: proto_mix\n    predicate: produces\n \
+    \   object: proto_product\n    mechanism: Protocatechuic-acid endpoint conversion\
+    \ is 99.9 +/- 0.1% mean +/- SEM, not a catalytic\n      rate constant.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: substrate scope\n      explanation: Figure 2a ShVdcCD substrate\
+    \ 3 and source replicates; ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: methyl-phb-product\n    subject: methyl_mix\n    predicate: produces\n\
+    \    object: methyl_product\n    mechanism: 3-Me-4-hydroxybenzoic-acid endpoint\
+    \ conversion is 99.7 +/- 0.1% mean +/- SEM under the\n      same joint conditions.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: substrate scope\n      explanation: Figure 2a ShVdcCD substrate\
+    \ 4; ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: gallic-product\n    subject: gallic_mix\n    predicate: produces\n\
+    \    object: gallic_product\n    mechanism: Low gallic-acid endpoint conversion\
+    \ is 5.3 +/- 0.5% mean +/- SEM; source replicates 4.78839\n      and 5.79144%.\
+    \ This is not high substrate efficiency.\n    directness: DIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:34417452\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: substrate scope\n      explanation: Figure 2a ShVdcCD substrate\
+    \ 5 and source workbook; ledger V1 retains WT and V59X contrast.\n      cache_path:\
+    \ evidence/PF01977/vdcc-primary-assays.txt\n      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    - graph_id: bsvdccd-substrate-products-2021\n  title: Published BsVdcCD preparation\
+    \ decarboxylates aromatic acids\n  scope: Co-purified recombinant B. subtilis\
+    \ VdcC/D constructs from Marshall2021; reference-related but\n    not fully sequence-resolved\
+    \ synthetic inserts.\n  context: prFMN/Mn reconstitution; 10 uM C, 5 mM substrate,\
+    \ 18 h anoxic-chamber endpoint assays with\n    non-degassed substrates. Two independent\
+    \ HPLC replicates, authentic expected-product standards and\n    no-protein cofactor-mix\
+    \ control.\n  family_mapping: Reference P94405 sequence 1 has PF01977 106-308\
+    \ within 473 aa; BsD reference C0H3U9\n    belongs to PF26358. Published terminal\
+    \ primers support these references but do not prove the complete\n    BsC insert\
+    \ or strain 168 identity. See ledger identity and construct limits; taxon below\
+    \ is species\n    only.\n  taxon: NCBITaxon:1423\n  scope_status: MECHANISTIC\n\
+    \  limitations: Do not equate synthetic constructs with exact P94405/C0H3U9 sequences\
+    \ or transfer to every\n    Bacillus strain. Endpoint products do not establish\
+    \ domain sufficiency. Gallic signal occurs in only\n    one of two replicates\
+    \ and qualifies the text's Sh-only claim; detection threshold unspecified.\n \
+    \ nodes:\n  - node_id: phb_mix\n    label: Published BsCD-prFMN-Mn with PHB\n\
+    \    node_type: PROCESS\n  - node_id: van_mix\n    label: Published BsCD-prFMN-Mn\
+    \ with vanillic acid\n    node_type: PROCESS\n  - node_id: proto_mix\n    label:\
+    \ Published BsCD-prFMN-Mn with protocatechuic acid\n    node_type: PROCESS\n \
+    \ - node_id: methyl_mix\n    label: Published BsCD-prFMN-Mn with 3-Me-4-hydroxybenzoic\
+    \ acid\n    node_type: PROCESS\n  - node_id: gallic_mix\n    label: Published\
+    \ BsCD-prFMN-Mn with gallic acid\n    node_type: PROCESS\n  - node_id: syr_mix\n\
+    \    label: Published BsCD-prFMN-Mn with syringic acid\n    node_type: PROCESS\n\
+    \  - node_id: phb_product\n    label: PHB-derived phenol product\n    node_type:\
+    \ STATE\n  - node_id: van_product\n    label: Vanillate-derived guaiacol product\n\
+    \    node_type: STATE\n  - node_id: proto_product\n    label: Protocatechuate-derived\
+    \ catechol product\n    node_type: STATE\n  - node_id: methyl_product\n    label:\
+    \ Methyl-PHB-derived 2-methylphenol product\n    node_type: STATE\n  - node_id:\
+    \ gallic_product\n    label: Low gallic-acid-derived pyrogallol signal\n    node_type:\
+    \ STATE\n  - node_id: syr_product\n    label: Syringate-derived 2,6-dimethoxyphenol\
+    \ product\n    node_type: STATE\n  edges:\n  - edge_id: phb-product\n    subject:\
+    \ phb_mix\n    predicate: produces\n    object: phb_product\n    mechanism: PHB\
+    \ endpoint conversion is 99.2 +/- 0.8% mean +/- SEM for the joint reconstituted\
+    \ complex\n      assay.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:34417452\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n  \
+    \    snippet: substrate scope\n      explanation: Figure 2a BsVdcCD substrate\
+    \ 1; source workbook and HPLC methods; ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: vanillate-product\n    subject: van_mix\n    predicate: produces\n\
+    \    object: van_product\n    mechanism: Vanillic-acid endpoint conversion is\
+    \ 99.6 +/- 0.3% mean +/- SEM, distinct from residual\n      C-alone activity.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: substrate scope\n      explanation: Figure 2a BsVdcCD substrate\
+    \ 2; ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: protocatechuate-product\n    subject: proto_mix\n    predicate:\
+    \ produces\n    object: proto_product\n    mechanism: Protocatechuic-acid endpoint\
+    \ conversion is 99.6 +/- 0.1% mean +/- SEM in this preparation;\n      do not\
+    \ transfer it to earlier differently prepared BsdC assays.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: substrate scope\n      explanation: Figure 2a BsVdcCD substrate\
+    \ 3; ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: methyl-phb-product\n    subject: methyl_mix\n    predicate: produces\n\
+    \    object: methyl_product\n    mechanism: Methyl-PHB endpoint conversion is\
+    \ 97.8 +/- 1.9% mean +/- SEM with the co-purified complex.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: substrate scope\n      explanation: Figure 2a BsVdcCD substrate\
+    \ 4; ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: low-gallic-product\n    subject: gallic_mix\n    predicate: produces\n\
+    \    object: gallic_product\n    mechanism: Source replicates show 0 and 2.16910%\
+    \ gallic-acid conversion, displayed as 1.1 +/- 1.1%.\n      This is a low single-replicate\
+    \ signal, not reproducibly strong activity or a universal negative.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: substrate scope\n      explanation: Figure 2a and raw source Fig\
+    \ 2a BsVdcCD substrate 5 qualify the Sh-only gallic prose;\n        ledger V1.\n\
+    \      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n      cache_sha256:\
+    \ 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n  - edge_id:\
+    \ syringate-product\n    subject: syr_mix\n    predicate: produces\n    object:\
+    \ syr_product\n    mechanism: Syringic-acid endpoint conversion is 99.8 +/- 0.1%\
+    \ mean +/- SEM; this positive Bs result\n      is not assigned to WT ShCD.\n \
+    \   directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: substrate scope\n      explanation: Figure 2a BsVdcCD substrate\
+    \ 6 and specificity Results; ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    - graph_id: shvdccd-cognate-partner-2021\n  title: Adding ShVdcD increases reconstituted\
+    \ ShVdcC activity\n  scope: Separately purified recombinant ShC and ShD mixed\
+    \ before prFMN/Mn reconstitution; whole-complex\n    effect.\n  context: Figure\
+    \ 2a assays with 10 uM C and 10 uM added D, 5 mM PHB or vanillate, 18 h in anoxic\
+    \ chamber;\n    two independent HPLC replicates. D alone and no-protein cofactor\
+    \ mix are controls.\n  family_mapping: ShC Q9S4M7 sequence 1 contains PF01977\
+    \ 106-312; its 7AE4/5/7 body matches. Added ShD\n    Q4R102 is a separate PF26358\
+    \ partner. No isolated central-domain construct was tested.\n  taxon: NCBITaxon:29345\n\
+    \  scope_status: PHENOTYPIC\n  limitations: Addition establishes increased endpoint\
+    \ conversion, not the exact allosteric route. C-alone\n    vanillate activity\
+    \ is low but not uniformly zero; occupancy, assembly and maturation remain possible\n\
+    \    contributions.\n  nodes:\n  - node_id: add_d\n    label: Add cognate ShD\
+    \ before C-prFMN-Mn reconstitution\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:Q4R102\n  - node_id: phb_yield\n    label: PHB decarboxylation\
+    \ endpoint yield\n    node_type: ACTIVITY\n  - node_id: van_yield\n    label:\
+    \ Vanillate decarboxylation endpoint yield\n    node_type: ACTIVITY\n  edges:\n\
+    \  - edge_id: d-increases-phb\n    subject: add_d\n    predicate: increases\n\
+    \    object: phb_yield\n    mechanism: Adding ShD increases PHB conversion from\
+    \ undetected with C alone to 100% in both mixed\n      C+D replicates; D alone\
+    \ is inactive under these conditions.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:34417452\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: considerable activity in contrast to isolated VdcC\n      explanation:\
+    \ Figure 2a ShC/ShD/ShC+ShD substrate 1; ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: d-increases-vanillate\n    subject: add_d\n    predicate: increases\n\
+    \    object: van_yield\n    mechanism: Adding ShD increases vanillate conversion\
+    \ from 0.7 +/- 0.7% to 97.9 +/- 1.1% mean +/- SEM;\n      this does not support\
+    \ an absolute zero-activity claim for C alone.\n    directness: UNRESOLVED\n \
+    \   support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: considerable activity in contrast to isolated VdcC\n      explanation:\
+    \ Figure 2a and source Fig 2a ShC/ShC+ShD substrate 2; ledger V1.\n      cache_path:\
+    \ evidence/PF01977/vdcc-primary-assays.txt\n      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    - graph_id: bsvdccd-cognate-partner-2021\n  title: Adding BsVdcD increases the\
+    \ published BsVdcC preparation's activity\n  scope: Separately purified published\
+    \ synthetic BsC and BsD constructs, mixed before reconstitution;\n    not exact\
+    \ accession-sequence proof.\n  context: 10 uM C and 10 uM added D, prFMN/Mn, 5\
+    \ mM PHB or vanillate, 18 h anoxic-chamber HPLC endpoints;\n    two independent\
+    \ replicates and D-alone/cofactor-only controls.\n  family_mapping: BsC reference\
+    \ P94405 sequence 1 maps PF01977 106-308; partner reference C0H3U9 maps\n    PF26358\
+    \ 1-51. Primer evidence supports reference relationship, not full insert or strain\
+    \ identity;\n    species-level taxon only. See Vdc ledger.\n  taxon: NCBITaxon:1423\n\
+    \  scope_status: PHENOTYPIC\n  limitations: Active assembly, cofactor occupancy\
+    \ and allostery are not separated. Low C-alone vanillate\n    turnover contradicts\
+    \ an unqualified strict-zero claim; synthetic BsC C-terminal junction remains\
+    \ unresolved.\n  nodes:\n  - node_id: add_d\n    label: Add cognate BsD before\
+    \ BsC-prFMN-Mn reconstitution\n    node_type: PERTURBATION\n  - node_id: phb_yield\n\
+    \    label: PHB endpoint conversion\n    node_type: ACTIVITY\n  - node_id: van_yield\n\
+    \    label: Vanillate endpoint conversion\n    node_type: ACTIVITY\n  edges:\n\
+    \  - edge_id: d-increases-phb\n    subject: add_d\n    predicate: increases\n\
+    \    object: phb_yield\n    mechanism: Adding BsD raises PHB conversion from undetected\
+    \ with BsC alone to 98.9 +/- 1.1% mean +/-\n      SEM; the D-only control remains\
+    \ undetected.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:34417452\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n  \
+    \    snippet: considerable activity in contrast to isolated VdcC\n      explanation:\
+    \ Figure 2a BsC/BsD/BsC+BsD substrate 1; ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: d-increases-vanillate\n    subject: add_d\n    predicate: increases\n\
+    \    object: van_yield\n    mechanism: Adding BsD raises vanillate conversion\
+    \ from about 5.8% with BsC alone to 100% in both mixed-complex\n      replicates.\
+    \ Residual C-alone activity is retained, not rounded to absence.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: considerable activity in contrast to isolated VdcC\n      explanation:\
+    \ Figure 2a and source Fig 2a BsC/BsC+BsD substrate 2; ledger V1.\n      cache_path:\
+    \ evidence/PF01977/vdcc-primary-assays.txt\n      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    - graph_id: shvdc-bsd-cross-partner-products-2021\n  title: ShVdcC with noncognate\
+    \ BsVdcD supports limited product formation\n  scope: Recombinant ShC combined\
+    \ with the published synthetic BsD partner, not a native interspecies\n    complex.\n\
+    \  context: 10 uM ShC plus 20 uM BsD, prFMN/Mn reconstitution; 5 mM separately\
+    \ tested substrates, 18 h\n    anoxic-chamber HPLC, two independent replicates.\
+    \ Noncognate D ratio differs from the 1:1 cognate mixed\n    assay.\n  family_mapping:\
+    \ ShC Q9S4M7 sequence 1 has PF01977 106-312. BsD is reference-related to C0H3U9,\
+    \ PF26358,\n    with incomplete synthetic insert verification. Mixed-species assay;\
+    \ no single native taxon or PF01977-only\n    sufficiency asserted.\n  scope_status:\
+    \ MECHANISTIC\n  limitations: Low endpoint yields do not isolate a matched partner-identity\
+    \ effect or demonstrate the\n    in vivo existence of this pairing. Gallic and\
+    \ syringic products are undetected. Distinguish source\n    mixture from co-purified\
+    \ cognate complexes.\n  nodes:\n  - node_id: phb_mix\n    label: ShC-BsD-prFMN-Mn\
+    \ with PHB\n    node_type: PROCESS\n  - node_id: van_mix\n    label: ShC-BsD-prFMN-Mn\
+    \ with vanillic acid\n    node_type: PROCESS\n  - node_id: proto_mix\n    label:\
+    \ ShC-BsD-prFMN-Mn with protocatechuic acid\n    node_type: PROCESS\n  - node_id:\
+    \ methyl_mix\n    label: ShC-BsD-prFMN-Mn with methyl-PHB\n    node_type: PROCESS\n\
+    \  - node_id: phb_product\n    label: PHB-derived phenol product\n    node_type:\
+    \ STATE\n  - node_id: van_product\n    label: Vanillate-derived guaiacol product\n\
+    \    node_type: STATE\n  - node_id: proto_product\n    label: Protocatechuate-derived\
+    \ catechol product\n    node_type: STATE\n  - node_id: methyl_product\n    label:\
+    \ Methyl-PHB-derived 2-methylphenol product\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: phb-product\n    subject: phb_mix\n    predicate: produces\n   \
+    \ object: phb_product\n    mechanism: The joint noncognate mixture yields 9.3\
+    \ +/- 0.3% PHB endpoint conversion; activity is limited\n      but detected in\
+    \ both replicates.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:34417452\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n  \
+    \    snippet: limited activation\n      explanation: Figure 2a ShC+BsD substrate\
+    \ 1; source data and cross-activation methods; ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: vanillate-product\n    subject: van_mix\n    predicate: produces\n\
+    \    object: van_product\n    mechanism: Vanillate conversion is approximately\
+    \ 1.7% in each replicate; do not confuse the rounded\n      SEM of zero with an\
+    \ exact absence of variation.\n    directness: DIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:34417452\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: limited activation\n      explanation: Figure 2a ShC+BsD substrate\
+    \ 2; source replicates 1.67053 and 1.70697%; ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: protocatechuate-product\n    subject: proto_mix\n    predicate:\
+    \ produces\n    object: proto_product\n    mechanism: Protocatechuic-acid endpoint\
+    \ conversion is 2.7 +/- 0.3% mean +/- SEM in the noncognate\n      mixture.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: limited activation\n      explanation: Figure 2a ShC+BsD substrate\
+    \ 3; ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: methyl-phb-product\n    subject: methyl_mix\n    predicate: produces\n\
+    \    object: methyl_product\n    mechanism: Methyl-PHB endpoint conversion is\
+    \ 3.8 +/- 0.5% mean +/- SEM; no independent sufficiency\n      is assigned to\
+    \ BsD.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: limited activation\n      explanation: Figure 2a ShC+BsD substrate\
+    \ 4; ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    - graph_id: bsvdc-shd-cross-partner-products-2021\n  title: Published BsVdcC with\
+    \ ShVdcD yields three low-activity products\n  scope: Published synthetic BsC\
+    \ construct combined in vitro with ShD; whole recombinant proteins, not\n    a\
+    \ native physiological partnership.\n  context: 10 uM BsC plus 20 uM ShD, prFMN/Mn;\
+    \ 5 mM substrate, 18 h anoxic-chamber HPLC, two independent\n    replicates. Authentic\
+    \ standards support product assignment.\n  family_mapping: Reference-related BsC\
+    \ P94405 maps PF01977 106-308, with complete synthetic insert unresolved.\n  \
+    \  ShD Q4R102 sequence 1 is the 68-aa deposited partner, mapping to PF26358 2-42\
+    \ rather than PF01977.\n  scope_status: MECHANISTIC\n  limitations: Protocatechuic,\
+    \ gallic and syringic products undetected. Different D ratios and preparation\n\
+    \    types prevent attributing all yield differences to partner identity alone.\
+    \ Low PHB conversion has\n    unspecified detection limits.\n  nodes:\n  - node_id:\
+    \ phb_mix\n    label: BsC-ShD-prFMN-Mn with PHB\n    node_type: PROCESS\n  - node_id:\
+    \ van_mix\n    label: BsC-ShD-prFMN-Mn with vanillic acid\n    node_type: PROCESS\n\
+    \  - node_id: methyl_mix\n    label: BsC-ShD-prFMN-Mn with methyl-PHB\n    node_type:\
+    \ PROCESS\n  - node_id: phb_product\n    label: PHB-derived phenol product\n \
+    \   node_type: STATE\n  - node_id: van_product\n    label: Vanillate-derived guaiacol\
+    \ product\n    node_type: STATE\n  - node_id: methyl_product\n    label: Methyl-PHB-derived\
+    \ 2-methylphenol product\n    node_type: STATE\n  edges:\n  - edge_id: phb-product\n\
+    \    subject: phb_mix\n    predicate: produces\n    object: phb_product\n    mechanism:\
+    \ PHB conversion is 0.9 +/- 0.1% mean +/- SEM, with source replicates 0.94695\
+    \ and 0.80836%;\n      retained as a low measured endpoint.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: limited activation\n      explanation: Figure 2a BsC+ShD substrate\
+    \ 1; ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: vanillate-product\n    subject: van_mix\n    predicate: produces\n\
+    \    object: van_product\n    mechanism: Vanillic-acid endpoint conversion is\
+    \ 29 +/- 1.8% mean +/- SEM for this mixed-complex preparation.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: limited activation\n      explanation: Figure 2a BsC+ShD substrate\
+    \ 2; ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: methyl-phb-product\n    subject: methyl_mix\n    predicate: produces\n\
+    \    object: methyl_product\n    mechanism: Methyl-PHB endpoint conversion is\
+    \ 8.9 +/- 0.2% mean +/- SEM. Gallic/syringic/other negative\n      tests remain\
+    \ separate limitations.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:34417452\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n  \
+    \    snippet: limited activation\n      explanation: Figure 2a BsC+ShD substrate\
+    \ 4; ledger V1.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    - graph_id: shvdccd-partner-stoichiometry-2021\n  title: Greater ShVdcD availability\
+    \ increases PHB decarboxylation activity\n  scope: ShC at fixed concentration,\
+    \ reconstituted with substoichiometric or excess ShD.\n  context: Reconstitution\
+    \ ShC 50 uM, ShD 10 or 200 uM, prFMN and Mn 200 uM each. Assays use 0.25 uM C\n\
+    \    and 100 uM non-degassed PHB, A247 over 3 h; three technical replicates and\
+    \ three independent trend\n    repeats.\n  family_mapping: ShC Q9S4M7 PF01977\
+    \ 106-312 within a multidomain enzyme; titrated ShD Q4R102 is a PF26358\n    partner,\
+    \ not a second PF01977 domain.\n  taxon: NCBITaxon:29345\n  scope_status: PHENOTYPIC\n\
+    \  limitations: Activity does not resolve an exact catalytic assembly stoichiometry\
+    \ or separate binding,\n    assembly and cofactor maturation/occupancy. Different\
+    \ time points are reconstitution-dependent activities,\n    not direct single-molecule\
+    \ transitions.\n  nodes:\n  - node_id: excess_d\n    label: Increase D:C from\
+    \ 0.2 to 4 at fixed ShC\n    node_type: PERTURBATION\n  - node_id: phb_rate\n\
+    \    label: Measured PHB decarboxylation rate\n    node_type: ACTIVITY\n  edges:\n\
+    \  - edge_id: excess-d-increases-rate\n    subject: excess_d\n    predicate: increases\n\
+    \    object: phb_rate\n    mechanism: Excess D yields a higher activity plateau;\
+    \ at 90 min approximately 16.5-18.0 uM/min versus\n      7.0-8.2 with substoichiometric\
+    \ D. It is not evidence that free D alone catalyzes decarboxylation.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: slower decarboxylation of PHB\n      explanation: Figure 2b and\
+    \ complete source Fig 2b time course; stoichiometry Methods; ledger V2.\n    \
+    \  cache_path: evidence/PF01977/vdcc-primary-assays.txt\n      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    - graph_id: shvdccd-air-exposure-cofactor-rescue-2021\n  title: Air exposure lowers\
+    \ ShVdcCD activity and added cofactor partly restores it\n  scope: Reconstituted\
+    \ and desalted ShCD exposed to air in an opaque open tube; subsequent prFMN addition\n\
+    \    to the same aged preparation.\n  context: 90 min exposure, PHB assays at\
+    \ 100 uM in 50 mM NaPi/50 mM KCl pH 6 by A247. After 90 min return\n    to anoxic\
+    \ chamber and add two equivalents prFMN without extra Mn, then immediately reassay;\
+    \ two independent\n    replicates.\n  family_mapping: ShC deposited body Q9S4M7\
+    \ sequence 1, PF01977 106-312, with ShD Q4R102 PF26358. Effect\n    concerns the\
+    \ full cofactor-bearing complex, not an isolated PF01977 region.\n  taxon: NCBITaxon:29345\n\
+    \  scope_status: PHENOTYPIC\n  limitations: No chemical identity of an oxidized\
+    \ cofactor lesion or controlled oxygen-dose response\n    established. Rescue\
+    \ is partial and consistent with a cofactor contribution; neither full reversibility\n\
+    \    nor sole causation is claimed. Opaque tube limits light effects, distinct\
+    \ from AnFdc light assays.\n  nodes:\n  - node_id: air_time\n    label: Extend\
+    \ ShCD air exposure from 2 to 90 min\n    node_type: PERTURBATION\n  - node_id:\
+    \ cofactor_addition\n    label: Add prFMN after 90-min exposure and return to\
+    \ anoxic chamber\n    node_type: PERTURBATION\n  - node_id: activity\n    label:\
+    \ PHB decarboxylation activity\n    node_type: ACTIVITY\n  edges:\n  - edge_id:\
+    \ air-lowers-activity\n    subject: air_time\n    predicate: decreases\n    object:\
+    \ activity\n    mechanism: Mean measured activity falls from 2.49 s^-1 at 2 min\
+    \ to 0.855 at 90 min. The reported approximate\n      40-min half-life is not\
+    \ a newly fitted intrinsic cofactor-oxidation constant.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: partially restores activity\n      explanation: Figure 2c time\
+    \ course before rescue; source Fig 2c and aerobic decay Methods; ledger\n    \
+    \    V3.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n      cache_sha256:\
+    \ 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n  - edge_id:\
+    \ cofactor-partly-restores-activity\n    subject: cofactor_addition\n    predicate:\
+    \ increases\n    object: activity\n    mechanism: Cofactor addition after air\
+    \ exposure yields mean activity 1.97841 s^-1, about 79.5% of\n      the 2-min\
+    \ mean, without additional Mn. This intervention is a partial rescue, not a direct\
+    \ identification\n      of the inactivation chemistry.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: partially restores activity\n      explanation: Figure 2c 90+prFMN\
+    \ and source values 2.09035/1.86647; ledger V3.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    - graph_id: shvdccd-viscosogen-effects-2021\n  title: Glycerol and sucrose lower\
+    \ apparent ShVdcCD turnover\n  scope: Whole ShCD-prFMN complex in separate solvent-viscosogen\
+    \ kinetic assays, not direct observation\n    of domain motion.\n  context: PHB\
+    \ 50-750 uM, 50 mM NaPi/50 mM KCl pH 6; 45% v/v glycerol or 40% w/v sucrose. prFMN:CD:Mn\n\
+    \    0.5:1:2; active protein assumed equal to prFMN after overnight trace-oxygen\
+    \ maturation. Buffer n=3\n    and each viscosogen n=2 technical replicates; trends\
+    \ in two independent repeats.\n  family_mapping: Q9S4M7 PF01977 106-312 with Q4R102\
+    \ PF26358. The proposed interdomain hinge T325/S326\n    is outside PF01977; the\
+    \ assay does not isolate either domain.\n  taxon: NCBITaxon:29345\n  scope_status:\
+    \ PHENOTYPIC\n  limitations: Apparent kinetic normalization assumes complete UbiX\
+    \ conversion and active-cofactor occupancy.\n    Km confidence intervals overlap.\
+    \ Estimated viscosity and solvent effects cannot uniquely prove a hinge-motion\n\
+    \    mechanism or exclude noncompetitive solvent effects.\n  nodes:\n  - node_id:\
+    \ glycerol\n    label: Add 45% glycerol at controlled pH\n    node_type: PERTURBATION\n\
+    \  - node_id: sucrose\n    label: Add 40% sucrose at controlled pH\n    node_type:\
+    \ PERTURBATION\n  - node_id: kcat_app\n    label: Apparent PHB turnover constant\n\
+    \    node_type: ACTIVITY\n  edges:\n  - edge_id: glycerol-lowers-kcat-app\n  \
+    \  subject: glycerol\n    predicate: decreases\n    object: kcat_app\n    mechanism:\
+    \ Fitted kcat_app decreases from 0.856 s^-1 in buffer to 0.244 with glycerol;\
+    \ source 95%\n      limits 0.7607-0.9686 and 0.1885-0.3407. This is a measured\
+    \ rate effect, not measured domain closure.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:34417452\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: drastically reduced\n      explanation: Figure 4d and source Fig\
+    \ 4d fit values, KSVE methods; ledger V4 retains occupancy and\n        viscosity\
+    \ assumptions.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n \
+    \     cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: sucrose-lowers-kcat-app\n    subject: sucrose\n    predicate: decreases\n\
+    \    object: kcat_app\n    mechanism: Fitted kcat_app decreases from 0.856 s^-1\
+    \ in buffer to 0.341 with sucrose; source 95% limits\n      0.2518-0.4757 for\
+    \ sucrose. The direction is observed without resolving the molecular cause.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: drastically reduced\n      explanation: Figure 4d sucrose curve\
+    \ and source fit values; ledger V4.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    - graph_id: shvdccd-partner-tail-deletion-2021\n  title: ShVdcD tail deletion\
+    \ has substrate-dependent effects\n  scope: ShCD containing partner variant V59X,\
+    \ deleting ShD residues 59-68; not a mutation in the PF01977\n    domain.\n  context:\
+    \ Co-purified WT and V59X complexes, prFMN/Mn reconstitution, 10 uM C, 5 mM substrate,\
+    \ 18 h endpoint\n    HPLC; two independent replicates. PHB/protocatechuate/methyl-PHB\
+    \ yields remain near WT and syringate\n    is undetected in both.\n  family_mapping:\
+    \ 7AE7 entity 1 equals Q9S4M7, PF01977 106-312; entity 2 equals Q4R102 1-58 versus\
+    \ 68-aa\n    WT. Deleted VIPPIPPLKK belongs to the separate ShD protein; PF26358\
+    \ core maps 2-42.\n  taxon: NCBITaxon:29345\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ Yield changes are not proportional changes in catalytic rates. No significance\
+    \ test is\n    inferred from n=2 endpoints; most retained activity does not make\
+    \ the partner wholly dispensable.\n    Assembly/occupancy and local geometry can\
+    \ contribute.\n  nodes:\n  - node_id: tail_deletion\n    label: Delete ShD residues\
+    \ 59-68 in V59X complex\n    node_type: PERTURBATION\n  - node_id: van_yield\n\
+    \    label: Vanillate endpoint conversion relative to WT\n    node_type: ACTIVITY\n\
+    \  - node_id: gallic_yield\n    label: Low gallic-acid endpoint conversion relative\
+    \ to WT\n    node_type: ACTIVITY\n  edges:\n  - edge_id: tail-deletion-lowers-vanillate-mean\n\
+    \    subject: tail_deletion\n    predicate: decreases\n    object: van_yield\n\
+    \    mechanism: Vanillate mean endpoint conversion falls from 100% WT to 91.5\
+    \ +/- 3.7% V59X, with V59X\n      replicates 87.88321 and 95.19112%. This describes\
+    \ the observed mean, not a demonstrated universal\n      rate deficit.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: yields only slightly diminished\n      explanation: Figure 2a\
+    \ ShCD and V59X substrate 2; source replicates and 7AE7 identity; ledger V5.\n\
+    \      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n      cache_sha256:\
+    \ 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n  - edge_id:\
+    \ tail-deletion-removes-detected-gallic-yield\n    subject: tail_deletion\n  \
+    \  predicate: decreases\n    object: gallic_yield\n    mechanism: Gallic-acid\
+    \ conversion falls from WT 4.78839/5.79144% to 0/0% for V59X. A small absolute\n\
+    \      yield difference is loss of the detectable low activity, not uniform retention\
+    \ of more than 90%\n      of WT function.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:34417452\n\
+    \      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: yields only slightly diminished\n      explanation: Figure 2a\
+    \ and source Fig 2a substrate 5 qualify the broad tail-deletion prose; ledger\n\
+    \        V5.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n   \
+    \   cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    - graph_id: shvdccd-l182v-syringate-2021\n  title: ShVdcC L182V permits low syringic-acid\
+    \ turnover\n  scope: Published L182V mutation in ShC within the complete ShCD\
+    \ system; experimental result reported\n    in text only.\n  context: The substrate-specificity\
+    \ section reports 6.5 +/- 0.6% syringic-acid turnover versus undetected\n    WT.\
+    \ General substrate scope uses overnight 5 mM endpoints with reconstituted complexes;\
+    \ a separate\n    L182V raw dataset, replicate count and complete insert were\
+    \ not supplied in the inspected files.\n  family_mapping: Q9S4M7 sequence 1 and\
+    \ WT 7AE4/5/7 bodies verify L182 within PF01977 106-312. Mutation\n    is reported\
+    \ and cloning methods describe sequence confirmation, but no deposited mutant\
+    \ sequence/structure\n    is equated with this construct. ShD remains the separate\
+    \ PF26358 partner.\n  taxon: NCBITaxon:29345\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ Text-only result, not independently inspected raw replicates. Supplement table\
+    \ labels both\n    mutagenesis primers Q5F. The activity gain supports altered\
+    \ specificity but does not uniquely prove\n    greater cavity volume or exclude\
+    \ maturation/assembly effects.\n  nodes:\n  - node_id: l182v\n    label: ShC L182V\
+    \ in reconstituted ShCD\n    node_type: PERTURBATION\n  - node_id: syr_yield\n\
+    \    label: Reported syringic-acid endpoint turnover\n    node_type: ACTIVITY\n\
+    \  edges:\n  - edge_id: l182v-increases-syringate-turnover\n    subject: l182v\n\
+    \    predicate: increases\n    object: syr_yield\n    mechanism: The authors report\
+    \ 6.5 +/- 0.6% turnover for L182V versus no detected WT turnover. This\n     \
+    \ scoped reported observation is not an observed atomistic explanation of substrate\
+    \ positioning.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:34417452\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n  \
+    \    snippet: '6.5'\n      explanation: Substrate-specificity Results and supplement\
+    \ Figure 4 model; the numeric L182V result\n        is absent from all five source-data\
+    \ sheets. Ledger V5 distinguishes text from raw data.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    - graph_id: shvdccd-domain-closure-model-2021\n  title: Proposed ShVdcCD domain\
+    \ closure promotes prFMN-adduct turnover\n  scope: Computational model of PHB\
+    \ chemistry in full ShCD, based on apo structures, docked cofactor/intermediates\n\
+    \    and a morphed interdomain trajectory; not an observed sequence of catalytic\
+    \ intermediates.\n  context: Hybrid closed prFMN-binding region and open oligomerization\
+    \ region, 16 Chimera morph models,\n    DFT Int2/Int3Quinoid and Vina docking.\
+    \ prFMN positioning and selected side-chain conformations constrain\n    the model;\
+    \ cofactor, partner and substrate are joint premises.\n  family_mapping: ShC Q9S4M7\
+    \ PF01977 106-312 within the 480-aa enzyme; T325/S326 hinge and L425 are outside\n\
+    \    this domain. 7AE4/7AE5 are apo closed/open structures. R168 is sequence-verified;\
+    \ R178 labels in main\n    figures and R138 in supplement Figure 3 are inconsistent\
+    \ source labels, not verified Arg residues.\n  taxon: NCBITaxon:29345\n  scope_status:\
+    \ HYPOTHETICAL\n  limitations: Docking energies are not activation free energies.\
+    \ No holo crystal, trapped VdcCD intermediate\n    trajectory or hinge perturbation\
+    \ establishes these steps. Viscosity data are separate observations\n    that\
+    \ do not uniquely identify domain motion; no isolated PF01977 sufficiency or family-wide\
+    \ transfer.\n  nodes:\n  - node_id: closure_int2\n    label: Proposed closure\
+    \ around ShCD-prFMN-PHB Int2\n    node_type: PROCESS\n  - node_id: strained_int2\n\
+    \    label: Proposed strained aromatic Int2 within full ShCD\n    node_type: STATE\n\
+    \  - node_id: quinoid\n    label: Proposed Int3Quinoid-prFMN complex\n    node_type:\
+    \ STATE\n  - node_id: product\n    label: Proposed released phenol product and\
+    \ regenerated cofactor complex\n    node_type: STATE\n  edges:\n  - edge_id: closure-strains-int2\n\
+    \    subject: closure_int2\n    predicate: produces\n    object: strained_int2\n\
+    \    mechanism: Open models preferentially accommodate Int2 while closure changes\
+    \ its fit; the authors\n      propose that closure exerts strain on the aromatic\
+    \ adduct. This interpretation is not a measured\n      force or captured strain\
+    \ trajectory.\n    directness: UNRESOLVED\n    support: HYPOTHESIZED\n    evidence_kind:\
+    \ COMPUTATIONAL\n    evidence:\n    - reference: PMID:34417452\n      source_url:\
+    \ https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n  \
+    \    snippet: domain closure leads to a strained conformation\n      explanation:\
+    \ Figures 4b/5, docking Methods and archived model design; ledger V6. Source Fig\
+    \ 4b contains\n        relative docking energies only.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: strained-int2-to-quinoid\n    subject: strained_int2\n    predicate:\
+    \ converts_to\n    object: quinoid\n    mechanism: The proposed closure-coupled\
+    \ rearrangement converts stable Int2 toward Int3Quinoid, whose\n      docked geometry\
+    \ favors more closed models. Neither its rate nor the intervening proton transfers\n\
+    \      is experimentally resolved in VdcCD.\n    directness: UNRESOLVED\n    support:\
+    \ HYPOTHESIZED\n    evidence_kind: COMPUTATIONAL\n    evidence:\n    - reference:\
+    \ PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: domain closure leads to a strained conformation\n      explanation:\
+    \ Figure 5 proposed mechanism and Figure 4b Int2/Int3Quinoid docking profiles;\
+    \ ledger\n        V6, not AnFdc trapped-adduct transfer.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    \  - edge_id: quinoid-to-product\n    subject: quinoid\n    predicate: produces\n\
+    \    object: product\n    mechanism: The authors' scheme completes adduct turnover\
+    \ with phenol liberation and regeneration of\n      the catalytic cofactor complex.\
+    \ Endpoint HPLC observes product but does not establish that this\n      exact\
+    \ quinoid-to-product route was traversed.\n    directness: UNRESOLVED\n    support:\
+    \ HYPOTHESIZED\n    evidence_kind: COMPUTATIONAL\n    evidence:\n    - reference:\
+    \ PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: domain closure leads to a strained conformation\n      explanation:\
+    \ Figure 5 proposed product branch and modeling Results; ledger V6 separates modeled\n\
+    \        trajectory from observed V1 endpoints.\n      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n\
+    \      cache_sha256: 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n\
+    - graph_id: shvdccd-partner-allostery-model-2021\n  title: Proposed ShVdcD stabilization\
+    \ of catalytic loops\n  scope: Hypothesis for how the separate ShD partner enables\
+    \ an active whole ShCD complex; association\n    and activity effects do not alone\
+    \ prove this route.\n  context: Apo ShCD structures show the partner interface\
+    \ near ERE-containing loops; mixed-partner activity\n    and V59X retained activity\
+    \ motivate the model. Cofactor and substrate remain required premises for\n  \
+    \  turnover, not independent consequences of D binding.\n  family_mapping: ShC\
+    \ Q9S4M7 PF01977 106-312 includes R168/E273/E278. ShD Q4R102 PF26358 2-42 and\
+    \ its\n    tail are a separate protein. Main-figure R178 is inconsistent with\
+    \ sequence G178; the reference motif\n    contains R168.\n  taxon: NCBITaxon:29345\n\
+    \  scope_status: HYPOTHETICAL\n  limitations: No direct loop-dynamics assay or\
+    \ selective interface perturbation establishes stabilization\n    as the activity-restoring\
+    \ mechanism. Alternatives include altered assembly, cofactor occupancy and\n \
+    \   maturation. Zinc association and structural proximity are not sufficient causal\
+    \ proof.\n  nodes:\n  - node_id: partner_interface\n    label: Proposed ShD association\
+    \ at the ShC loop interface\n    node_type: PROCESS\n  - node_id: competent_loops\n\
+    \    label: Proposed catalytically competent ERE-loop configuration\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: partner-stabilizes-loops\n    subject: partner_interface\n\
+    \    predicate: enables\n    object: competent_loops\n    mechanism: Interface\
+    \ contacts could maintain loop geometry needed for chemistry in the full cofactor-bearing\n\
+    \      enzyme. The directed stabilization explanation is proposed from structural\
+    \ context, not directly\n      observed as the causal activation route.\n    directness:\
+    \ UNRESOLVED\n    support: HYPOTHESIZED\n    evidence_kind: CONTEXTUAL\n    evidence:\n\
+    \    - reference: PMID:34417452\n      source_url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8379154/fullTextXML\n\
+    \      snippet: maintaining the structure of the key catalytic ERE motif\n   \
+    \   explanation: Figure 3b interface and V59X discussion; ledger V6. Physical\
+    \ contacts and endpoint\n        effects remain distinct from demonstrated allostery.\n\
+    \      cache_path: evidence/PF01977/vdcc-primary-assays.txt\n      cache_sha256:\
+    \ 0d0969ab85a81b8d52b993c6e7c878b7819bad98a0f9072c8cdeeba7fb626629\n- graph_id:\
+    \ scfdc-cinnamate-decarboxylation-2015\n  title: Purified ScFdc preparation converts\
+    \ cinnamate to styrene\n  scope: Synthetic whole S. cerevisiae FDC/YDR539W expressed\
+    \ in E. coli BL21, with an N-terminal six-His\n    tag; not an isolated-domain\
+    \ assay.\n  context: Routine assay uses 500 uL PBS pH 8, 6.7 mM cinnamic acid,\
+    \ typically 1 uM FDC, 32 C and variable\n    incubation. GC-MS after ethyl-acetate\
+    \ extraction is calibrated with authentic styrene standards.\n  family_mapping:\
+    \ Q03034 sequence 1 is the 503-aa FDC1/YDR539W reference, PF01977 119-320, PF20695\
+    \ 14-102\n    and PF20696 328-464. Published FDC terminal primers match; the complete\
+    \ synthetic insert and yeast\n    strain are unresolved. Separate 4ZAC body equals\
+    \ Q03034 but is not this assay plasmid. See scfdc-primary-assays.txt\n    M.\n\
+    \  taxon: NCBITaxon:4932\n  scope_status: MECHANISTIC\n  limitations: Whole cofactor-containing\
+    \ preparation supports product formation, not a defined isolated\n    PF01977\
+    \ reaction, native yeast flux or directly measured CO2. The cofactor structure\
+    \ was unresolved\n    in this study; PAD1 is not assigned the decarboxylation.\n\
+    \  nodes:\n  - node_id: reaction\n    label: Purified ScFdc preparation with bound\
+    \ activating material and cinnamate\n    node_type: PROCESS\n  - node_id: product\n\
+    \    label: Styrene measured against authentic standards\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: produces-styrene\n    subject: reaction\n    predicate:\
+    \ produces\n    object: product\n    mechanism: The joint enzyme-containing reaction\
+    \ yields styrene quantified by GC-MS; the reported preparation-specific\n    \
+    \  activity is about 0.54 umol/min/mg. No single component is presented as independently\
+    \ sufficient.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25647642\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n      snippet: styrene\n\
+    \      explanation: Results S2 and GC-MS Methods S12; original Figures 2/3 and\
+    \ ledger L1. Authentic product\n        calibration supports endpoint chemistry,\
+    \ not atomic steps.\n      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n\
+    \      cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n\
+    - graph_id: scfdc-low-ph-activity-2015\n  title: Lower pH reduces ScFdc styrene\
+    \ output in phosphate buffer\n  scope: Whole N-His ScFdc preparation, same-buffer\
+    \ pH comparison within Figure 2C.\n  context: 1 uM FDC and 6.7 mM cinnamate, 32\
+    \ C for 10 min; 50 mM potassium phosphate with 100 mM NaCl.\n    Compare pH 6-6.5\
+    \ with 7-7.5; substrate saturation was checked.\n  family_mapping: Reference-related\
+    \ Q03034/YDR539W has PF01977 119-320 within the 503-aa multidomain enzyme.\n \
+    \   Synthetic insert and yeast strain are not independently established; no domain\
+    \ truncation is tested.\n  taxon: NCBITaxon:4932\n  scope_status: PHENOTYPIC\n\
+    \  limitations: Does not identify a catalytic pKa, residue protonation or isolated-domain\
+    \ mechanism. The\n    pH 8-9 Tris series is not treated as a pure pH intervention\
+    \ against the phosphate series; raw replicates\n    are not available in this\
+    \ assessment.\n  nodes:\n  - node_id: lower_ph\n    label: Lowering assay pH from\
+    \ 7-7.5 to 6-6.5 in phosphate buffer\n    node_type: PERTURBATION\n  - node_id:\
+    \ output\n    label: Styrene accumulated in 10 min\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: lowers-output\n    subject: lower_ph\n    predicate: decreases\n\
+    \    object: output\n    mechanism: Lower-pH phosphate-buffer points have substantially\
+    \ less GC-MS-measured styrene. Enzyme\n      stability, cofactor state and protonation\
+    \ are not separated by this endpoint comparison.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:25647642\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n\
+    \      snippet: below pH 7.0\n      explanation: Original Figure 2C, S2 and pH-assay\
+    \ Methods S12; ledger L1. Comparison stays within\n        the phosphate series.\n\
+    \      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n      cache_sha256:\
+    \ 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n- graph_id:\
+    \ scfdc-dialysis-lysate-rescue-2015\n  title: Dialysis lowers ScFdc activity and\
+    \ fresh lysate restores it\n  scope: N-His FDC purified from BL21; dialysis and\
+    \ donor-lysate comparisons, not a purified cofactor-synthesis\n    assay.\n  context:\
+    \ 24-h dialysis through a 3.5-kDa-cutoff membrane followed by the cinnamate-to-styrene\
+    \ assay.\n    Fresh or separately predialyzed WT BL21 lysate is added to dialyzed\
+    \ FDC. Figure 3 normalizes isolated\n    FDC to 100%.\n  family_mapping: Reference\
+    \ Q03034 PF01977 119-320 within whole FDC/YDR539W; exact synthetic insert remains\n\
+    \    unresolved. The lysate is a complex host preparation, not another PF01977\
+    \ entity.\n  taxon: NCBITaxon:4932\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ Original bars retain low nonzero signals after FDC dialysis and with predialyzed\
+    \ lysate.\n    Fresh-lysate rescue exceeds the isolated reference, not exactly\
+    \ 100%. Molecular identity, occupancy\n    and stability contributions remain\
+    \ unresolved; approximate bar heights are not raw values.\n  nodes:\n  - node_id:\
+    \ dialysis\n    label: Dialyzing isolated FDC for 24 h\n    node_type: PERTURBATION\n\
+    \  - node_id: isolated_activity\n    label: Activity relative to undialyzed isolated\
+    \ FDC\n    node_type: ACTIVITY\n  - node_id: fresh_donor\n    label: Adding fresh\
+    \ WT lysate to dialyzed FDC and cinnamate\n    node_type: PERTURBATION\n  - node_id:\
+    \ rescue_activity\n    label: Styrene-producing activity of the dialyzed-FDC assay\n\
+    \    node_type: ACTIVITY\n  - node_id: dialyzed_donor\n    label: Substituting\
+    \ predialyzed lysate for fresh lysate in the rescue assay\n    node_type: PERTURBATION\n\
+    \  edges:\n  - edge_id: dialysis-lowers-activity\n    subject: dialysis\n    predicate:\
+    \ decreases\n    object: isolated_activity\n    mechanism: The dialyzed preparation\
+    \ has a small residual bar near 5% visually versus isolated FDC\n      at 100%;\
+    \ this is strong loss, not universal zero activity.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:25647642\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n\
+    \      snippet: almost complete loss\n      explanation: S2 and original Figure\
+    \ 3 first/second bars; ledger L2. Visual approximation, not digitized\n      \
+    \  measurement.\n      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n\
+    \      cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n\
+    \  - edge_id: fresh-lysate-rescues\n    subject: fresh_donor\n    predicate: increases\n\
+    \    object: rescue_activity\n    mechanism: Fresh WT lysate raises activity of\
+    \ dialyzed FDC to above the isolated reference, visually\n      around 240%. A\
+    \ complex-mixture rescue does not identify the active molecule or its biosynthetic\n\
+    \      route.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25647642\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n      snippet: activate\
+    \ FDC\n      explanation: S2 and original Figure 3 second/third bars; ledger L2.\
+    \ Rescue includes FDC and substrate,\n        not lysate alone.\n      cache_path:\
+    \ evidence/PF01977/scfdc-primary-assays.txt\n      cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n\
+    \  - edge_id: donor-dialysis-lowers-rescue\n    subject: dialyzed_donor\n    predicate:\
+    \ decreases\n    object: rescue_activity\n    mechanism: Predialyzed donor lysate\
+    \ gives much less activation than fresh lysate, with a low nonzero\n      bar\
+    \ visually around 15% of isolated FDC. This comparison is not proof that every\
+    \ donor component\n      is removed.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25647642\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n      snippet:\
+    \ activate FDC\n      explanation: S2 and original Figure 3 third/fourth bars;\
+    \ ledger L2 preserves residual response despite\n        simplified loss wording.\n\
+    \      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n      cache_sha256:\
+    \ 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n- graph_id:\
+    \ scfdc-host-and-direct-rescue-2015\n  title: Host preparation and tPAD1-containing\
+    \ mixtures alter ScFdc activity\n  scope: Whole synthetic N-His FDC expressed\
+    \ in the reported delta-ubiX host, with separate direct-mix\n    activation conditions.\n\
+    \  context: Figure 4 apo-FDC preparation; routine GC-MS conditions are PBS pH\
+    \ 8, 6.7 mM cinnamate and 32\n    C, typically 1 uM FDC and 10 uM tPAD1. WT-derived\
+    \ isolated FDC is the 100% reference. Methods distinguish\n    BL21(DE3) from\
+    \ a BL21 Star(DE3)-derived deletion host.\n  family_mapping: FDC is Q03034/YDR539W-reference-related,\
+    \ PF01977 119-320. Paper tPAD1/YDR538W is a distinct\n    cofactor-producing preparation;\
+    \ P33751 reference maps PF02441 50-201. Its reported deletion of 1-58\n    conflicts\
+    \ with a primer matching residue 55; no exact truncation grounding is asserted.\n\
+    \  taxon: NCBITaxon:4932\n  scope_status: PHENOTYPIC\n  limitations: Whole host/preparation\
+    \ effects do not isolate UbiX chemistry; a strictly matched WT parental\n    background\
+    \ is not independently established. Low Figure 4 baseline and tPAD1-only activation\
+    \ are retained.\n    WT-lysate rescue is text-only here; exact doses for each\
+    \ bar and complete synthetic inserts remain\n    unresolved.\n  nodes:\n  - node_id:\
+    \ delta_host\n    label: FDC production in reported delta-ubiX host versus WT\
+    \ preparation\n    node_type: PERTURBATION\n  - node_id: isolated_activity\n \
+    \   label: Isolated FDC preparation activity\n    node_type: ACTIVITY\n  - node_id:\
+    \ tpad\n    label: Adding purified tPAD1 to apo-FDC and cinnamate\n    node_type:\
+    \ PERTURBATION\n  - node_id: joint\n    label: Adding tPAD1 plus delta-ubiX lysate\
+    \ to apo-FDC and cinnamate\n    node_type: PERTURBATION\n  - node_id: wt_lysate\n\
+    \    label: Adding WT lysate to delta-host-derived FDC and cinnamate\n    node_type:\
+    \ PERTURBATION\n  - node_id: output\n    label: Apo-FDC assay styrene-producing\
+    \ activity\n    node_type: ACTIVITY\n  edges:\n  - edge_id: delta-host-preparation-lowers-activity\n\
+    \    subject: delta_host\n    predicate: decreases\n    object: isolated_activity\n\
+    \    mechanism: The deletion-host-derived preparation has much lower measured\
+    \ activity than the WT-derived\n      reference. This supports a host-associated\
+    \ activation dependency, not a demonstrated single molecular\n      step or perfectly\
+    \ isolated genetic intervention.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25647642\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n      snippet:\
+    \ completely lacking\n      explanation: S3, Figure 4 baseline and Figure 3 normalization;\
+    \ Methods S10, ledger L3. Small plotted\n        baseline and host-background\
+    \ limits qualify the prose.\n      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n\
+    \      cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n\
+    \  - edge_id: tpad-alone-raises-fdc-activity\n    subject: tpad\n    predicate:\
+    \ increases\n    object: output\n    mechanism: The tPAD1-added FDC assay has\
+    \ a modest positive bar, visually around 50% of the isolated-WT\n      reference,\
+    \ above apo-FDC baseline. This is activation of an FDC-containing reaction, not\
+    \ direct\n      decarboxylation by tPAD1.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25647642\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n      snippet:\
+    \ activate FDC\n      explanation: Original Figure 4 first/third bars; S4 distinguishes\
+    \ tPAD1-alone decarboxylase negativity;\n        ledger L3. Purified tPAD1 may\
+    \ carry activating material.\n      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n\
+    \      cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n\
+    \  - edge_id: joint-donor-raises-fdc-activity\n    subject: joint\n    predicate:\
+    \ increases\n    object: output\n    mechanism: The joint tPAD1/lysate addition\
+    \ gives strong activation, visually around 800% of the isolated-WT\n      reference.\
+    \ Delta-ubiX lysate alone remains near baseline; the two-component treatment is\
+    \ not split\n      into independently sufficient causes.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:25647642\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n\
+    \      snippet: activate FDC\n      explanation: Original Figure 4 and S3, ledger\
+    \ L3; the fourth bar contains both donor components.\n        Specific cofactor\
+    \ synthesis is inferred, not directly measured.\n      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n\
+    \      cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n\
+    \  - edge_id: wt-lysate-raises-fdc-activity\n    subject: wt_lysate\n    predicate:\
+    \ increases\n    object: output\n    mechanism: The Results report WT-lysate activation\
+    \ of otherwise inactive deletion-host-derived FDC.\n      This is a reported complex-mixture\
+    \ rescue with unresolved constituents and no separate Figure 4\n      WT-donor\
+    \ bar.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25647642\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n      snippet: activate\
+    \ FDC\n      explanation: Results S3 text-only WT-lysate rescue; ledger L3. Not\
+    \ mislabeled as a separately inspected\n        Figure 4 measurement.\n      cache_path:\
+    \ evidence/PF01977/scfdc-primary-assays.txt\n      cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n\
+    - graph_id: scfdc-membrane-separated-activation-2015\n  title: Separated donor\
+    \ preparations activate ScFdc-containing receiver assays\n  scope: Whole apo-FDC\
+    \ in a two-compartment dialysis experiment; transferable activation rather than\
+    \ a\n    resolved molecular-contact mechanism.\n  context: Receiver contains 1\
+    \ uM apo-FDC and 6.7 mM cinnamate behind a 3.5-kDa-cutoff membrane. Donors\n \
+    \   are WT BL21 lysate, 10 uM purified tPAD1, or delta-ubiX lysate plus 10 uM\
+    \ tPAD1. Figure 6 measures\n    GC-MS styrene over 120 min; delta-ubiX lysate\
+    \ alone remains at baseline.\n  family_mapping: FDC/YDR539W is reference-related\
+    \ to Q03034, PF01977 119-320; tPAD1/YDR538W is a separate\n    PF02441-reference-related\
+    \ preparation with unresolved truncation numbering. Neither complete insert\n\
+    \    nor an isolated PF01977 assay is established.\n  taxon: NCBITaxon:4932\n\
+    \  scope_status: PHENOTYPIC\n  limitations: Exact compartment volumes and protein-leakage\
+    \ tests are not established. A diffusible activator\n    is consistent with these\
+    \ results, but its exact identity and synthesis are not directly measured.\n \
+    \   tPAD1 alone may carry copurified activating material; do not infer synthesis\
+    \ without precursor.\n  nodes:\n  - node_id: wt_donor\n    label: WT lysate donor\
+    \ with separated apo-FDC/cinnamate receiver\n    node_type: PROCESS\n  - node_id:\
+    \ tpad_donor\n    label: Purified tPAD1 donor with separated apo-FDC/cinnamate\
+    \ receiver\n    node_type: PROCESS\n  - node_id: joint_donor\n    label: tPAD1\
+    \ plus delta-ubiX lysate donor with separated apo-FDC/cinnamate receiver\n   \
+    \ node_type: PROCESS\n  - node_id: output\n    label: Receiver assay styrene accumulation\
+    \ relative to delta-ubiX lysate donor\n    node_type: STATE\n  edges:\n  - edge_id:\
+    \ wt-donor-raises-output\n    subject: wt_donor\n    predicate: increases\n  \
+    \  object: output\n    mechanism: WT-donor assays accumulate styrene at later\
+    \ times while the delta-ubiX donor control remains\n      at baseline. The measured\
+    \ outcome does not directly resolve transfer or activation chemistry.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:25647642\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n\
+    \      snippet: production of styrene\n      explanation: S5 and original Figure\
+    \ 6 triangles versus open circles; ledger L4. Distinct from direct-mix\n     \
+    \   rescue.\n      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n   \
+    \   cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n\
+    \  - edge_id: tpad-donor-raises-output\n    subject: tpad_donor\n    predicate:\
+    \ increases\n    object: output\n    mechanism: Purified tPAD1 in the donor compartment\
+    \ supports rising styrene in the receiver assay.\n      Copurified transferable\
+    \ material is an alternative to new synthesis; a protein-contact-independent\n\
+    \      molecular route is not directly demonstrated.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:25647642\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n\
+    \      snippet: production of styrene\n      explanation: S5 and original Figure\
+    \ 6 squares; ledger L4. The source itself considers retained cofactor\n      \
+    \  carryover.\n      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n \
+    \     cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n\
+    \  - edge_id: joint-donor-raises-output\n    subject: joint_donor\n    predicate:\
+    \ increases\n    object: output\n    mechanism: The joint tPAD1/delta-ubiX-lysate\
+    \ donor yields the greatest displayed styrene accumulation,\n      whereas deletion\
+    \ lysate alone does not. Donor constituents and receiver enzyme/substrate remain\n\
+    \      a joint condition.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25647642\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n      snippet:\
+    \ production of styrene\n      explanation: S5 and original Figure 6 filled versus\
+    \ open circles; ledger L4. No reaction trajectory\n        or exact activating\
+    \ species is assigned.\n      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n\
+    \      cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n\
+    - graph_id: scfdc-coexpression-construct-effect-2015\n  title: The tandem tPAD1/FDC\
+    \ preparation has higher specific activity\n  scope: Comparison of two whole-FDC\
+    \ expression preparations that differ in both tPAD1 coexpression and\n    FDC\
+    \ tag placement/vector architecture.\n  context: N-His FDC expressed alone versus\
+    \ C-His FDC expressed with untagged tPAD1 from one tandem pET28b\n    construct\
+    \ in BL21; reported styrene-specific activities about 0.54 and 4.3 +/-0.2 umol/min/mg,\
+    \ respectively.\n  family_mapping: Q03034/YDR539W reference maps PF01977 119-320;\
+    \ coexpression primers match terminal reference\n    segments but do not verify\
+    \ the complete insert. The paper's tPAD1 is separate from PF01977 and has\n  \
+    \  an unresolved 1-58 deletion versus residue-55 primer discrepancy.\n  taxon:\
+    \ NCBITaxon:4932\n  scope_status: PHENOTYPIC\n  limitations: No tag-matched single-factor\
+    \ control isolates tPAD1 coexpression as the sole cause. Cofactor\n    occupancy\
+    \ is not directly quantified. The separate 4ZAC reference match does not prove\
+    \ these plasmid\n    sequences.\n  nodes:\n  - node_id: preparation_change\n \
+    \   label: Switching from singly expressed N-His FDC to tandem untagged-tPAD1/C-His\
+    \ FDC\n    node_type: PERTURBATION\n  - node_id: activity\n    label: Purified\
+    \ FDC styrene-specific activity per total protein\n    node_type: ACTIVITY\n \
+    \ edges:\n  - edge_id: joint-preparation-change-raises-activity\n    subject:\
+    \ preparation_change\n    predicate: increases\n    object: activity\n    mechanism:\
+    \ The joint expression/construct change is associated with approximately eightfold\
+    \ greater\n      measured activity. Increased loading is a proposed explanation,\
+    \ not a measured occupancy-normalized\n      or isolated coexpression effect.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:25647642\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n\
+    \      snippet: ~8-fold higher\n      explanation: S6 activity values plus S10\
+    \ cloning methods; ledger L5 and M. Both FDC tag placement\n        and tPAD1\
+    \ expression differ.\n      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n\
+    \      cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n\
+    - graph_id: scfdc-three-substrate-uv-assays-2015\n  title: ScFdc preparations\
+    \ decrease three substrate-associated UV signals\n  scope: Separate cinnamate,\
+    \ ferulate and p-coumarate assays with high-activity C-His FDC coexpressed\n \
+    \   with untagged tPAD1.\n  context: 100 mM potassium phosphate pH 7, 250-500\
+    \ nM FDC, 0.05-1.5 mM substrate; Results specifies 25\n    C and Methods room\
+    \ temperature. Readouts are A304, A344 and A334 for cinnamate, ferulate and p-coumarate,\n\
+    \    respectively.\n  family_mapping: Reference-related whole Q03034/YDR539W contains\
+    \ PF01977 119-320 and two other Pfam domains.\n    Exact synthetic insert and\
+    \ strain are unresolved; this is not the singly expressed N-His preparation\n\
+    \    or an isolated domain.\n  taxon: NCBITaxon:4932\n  scope_status: PHENOTYPIC\n\
+    \  limitations: These edges record UV substrate-depletion proxies, not independently\
+    \ product-identified\n    chemistry for each substrate. Apparent kcat uses total\
+    \ FDC, not measured active sites. Estimated 20-25%\n    occupancy and a proposed\
+    \ 4-5-fold correction are not adopted as measurements; Table 1 versus abstract/Kn-label\n\
+    \    discrepancies remain in ledger L6.\n  nodes:\n  - node_id: cinnamate_assay\n\
+    \    label: Coexpressed FDC preparation with cinnamate\n    node_type: PROCESS\n\
+    \  - node_id: cinnamate_signal\n    label: Cinnamate-associated A304 signal\n\
+    \    node_type: STATE\n  - node_id: ferulate_assay\n    label: Coexpressed FDC\
+    \ preparation with ferulate\n    node_type: PROCESS\n  - node_id: ferulate_signal\n\
+    \    label: Ferulate-associated A344 signal\n    node_type: STATE\n  - node_id:\
+    \ coumarate_assay\n    label: Coexpressed FDC preparation with p-coumarate\n \
+    \   node_type: PROCESS\n  - node_id: coumarate_signal\n    label: p-Coumarate-associated\
+    \ A334 signal\n    node_type: STATE\n  edges:\n  - edge_id: cinnamate-signal-decreases\n\
+    \    subject: cinnamate_assay\n    predicate: decreases\n    object: cinnamate_signal\n\
+    \    mechanism: The reported UV decrease is fitted to apparent kcat 4.6 +/-0.2\
+    \ s^-1 and Km 180 +/-24 uM.\n      This readout is not a measured atomic sequence\
+    \ or an occupancy-corrected turnover constant.\n    directness: UNRESOLVED\n \
+    \   support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:25647642\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n\
+    \      snippet: decrease in absorbance\n      explanation: S7/S13 and Table 1\
+    \ cinnamic-acid row; ledger L6. Direct styrene identification belongs\n      \
+    \  to the separate GC-MS context.\n      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n\
+    \      cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n\
+    \  - edge_id: ferulate-signal-decreases\n    subject: ferulate_assay\n    predicate:\
+    \ decreases\n    object: ferulate_signal\n    mechanism: The ferulate-associated\
+    \ absorbance decrease is fitted to apparent kcat 3.8 +/-0.3 s^-1\n      and Km\
+    \ 180 +/-41 uM. No independent product-MS identification in this assay is inferred\
+    \ from substrate\n      depletion.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25647642\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n      snippet:\
+    \ decrease in absorbance\n      explanation: S7/S13 and Table 1 ferulic-acid row;\
+    \ ledger L6. The graph deliberately preserves the\n        measured readout.\n\
+    \      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n      cache_sha256:\
+    \ 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n  - edge_id:\
+    \ coumarate-signal-decreases\n    subject: coumarate_assay\n    predicate: decreases\n\
+    \    object: coumarate_signal\n    mechanism: The p-coumarate-associated absorbance\
+    \ decrease is fitted to apparent kcat 1.5 +/-0.1 s^-1\n      and Km 110 +/-26\
+    \ uM. Table 1 supplies 1.5 despite the abstract's 1.4 lower bound; no measured\
+    \ active-site\n      correction is applied.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25647642\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n      snippet:\
+    \ decrease in absorbance\n      explanation: S7/S13 and Table 1 coumaric-acid\
+    \ row; ledger L6. Product identity and active-site normalization\n        are\
+    \ not independently resolved.\n      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n\
+    \      cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n\
+    - graph_id: scfdc-extracted-fraction-rescue-2015\n  title: An FDC-derived protein-free\
+    \ fraction activates apo-FDC\n  scope: Transfer of an activating fraction extracted\
+    \ from high-activity FDC, not a chemically pure or\n    structurally resolved\
+    \ cofactor sufficiency assay.\n  context: FDC protein precipitation with 1-to-1\
+    \ dichloromethane/methanol followed by organic-solvent\n    removal; the resulting\
+    \ fraction is added to apo-FDC for functional activation. S6 reports the outcome\n\
+    \    without a separate rescue plot.\n  family_mapping: Donor and recipient FDC\
+    \ are whole YDR539W preparations, reference-related to Q03034\n    with PF01977\
+    \ 119-320. Exact synthetic inserts and chemical identity of the activating fraction\
+    \ remain\n    unresolved.\n  taxon: NCBITaxon:4932\n  scope_status: PHENOTYPIC\n\
+    \  limitations: Dose, full quantitative rescue and fraction purity are not established.\
+    \ The m/z 661 species\n    is not assigned as proven intact prFMN, and a yellow\
+    \ chromophore alone does not prove unique chemical\n    identity. No domain-specific\
+    \ activation route is demonstrated.\n  nodes:\n  - node_id: fraction_addition\n\
+    \    label: Adding solvent-cleared FDC-derived fraction to an apo-FDC assay\n\
+    \    node_type: PERTURBATION\n  - node_id: activity\n    label: Apo-FDC assay\
+    \ activity\n    node_type: ACTIVITY\n  edges:\n  - edge_id: fraction-restores-activity\n\
+    \    subject: fraction_addition\n    predicate: increases\n    object: activity\n\
+    \    mechanism: The source reports functional activation after transfer of the\
+    \ extracted fraction. This\n      supports transferable activating material, not\
+    \ a resolved biosynthetic step or proof that one isolated\n      molecular species\
+    \ is sufficient.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:25647642\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n      snippet: activating\
+    \ apo-FDC\n      explanation: S6 protein precipitation and functional transfer,\
+    \ text-only outcome; ledger L7. No\n        separate rescue trace was inspected\
+    \ or asserted.\n      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n\
+    \      cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n\
+    - graph_id: scfdc-activating-fraction-acid-base-treatment-2015\n  title: Acid\
+    \ or base pretreatment lowers the fraction's activating capacity\n  scope: Separate\
+    \ chemical pretreatments of extracted FDC-associated material followed by an apo-FDC\
+    \ activation\n    readout.\n  context: 0.1 M HCl for 1 h or 0.1 M NaOH for 1 h,\
+    \ followed by neutralization. The source separately\n    reports retained activity\
+    \ after milder 0.1% formic acid exposure; these are not equivalent treatments.\n\
+    \  family_mapping: Recipient whole FDC/YDR539W is Q03034-reference-related, PF01977\
+    \ 119-320. The intervention\n    is on an extracted fraction, not a mutation or\
+    \ deletion of the PF01977 domain.\n  taxon: NCBITaxon:4932\n  scope_status: PHENOTYPIC\n\
+    \  limitations: Text-only activity-loss reports lack a displayed quantitative\
+    \ rescue series, exact dose\n    and established neutralization-matched controls.\
+    \ Degradation, carryover and other preparation effects\n    are not separated.\
+    \ FMN detection after base treatment does not identify a unique cleavage pathway.\n\
+    \  nodes:\n  - node_id: acid\n    label: Acid pretreatment and neutralization\
+    \ of the activating fraction\n    node_type: PERTURBATION\n  - node_id: base\n\
+    \    label: Base pretreatment and neutralization of the activating fraction\n\
+    \    node_type: PERTURBATION\n  - node_id: activation\n    label: Fraction-dependent\
+    \ activation of an apo-FDC assay\n    node_type: ACTIVITY\n  edges:\n  - edge_id:\
+    \ acid-pretreatment-lowers-activation\n    subject: acid\n    predicate: decreases\n\
+    \    object: activation\n    mechanism: The acid-treated and neutralized fraction\
+    \ is reported to lose activating activity. The\n      experiment does not directly\
+    \ resolve the chemical degradation products responsible for this change.\n   \
+    \ directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:25647642\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n\
+    \      snippet: followed by neutralization\n      explanation: S6 acid-treatment\
+    \ paragraph, text-only activity report; ledger L7 retains unavailable\n      \
+    \  controls and quantitative detail.\n      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n\
+    \      cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n\
+    \  - edge_id: base-pretreatment-lowers-activation\n    subject: base\n    predicate:\
+    \ decreases\n    object: activation\n    mechanism: The base-treated and neutralized\
+    \ fraction is reported to lose activating activity. Detection\n      of an FMN-associated\
+    \ mass among several products does not uniquely establish how the active material\n\
+    \      was destroyed.\n    directness: UNRESOLVED\n    support: OBSERVED\n   \
+    \ evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:25647642\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11756644/\n      snippet:\
+    \ followed by neutralization\n      explanation: S6 base-treatment paragraph,\
+    \ text-only activity report; ledger L7. No specific chemical-bond\n        cleavage\
+    \ is labeled observed.\n      cache_path: evidence/PF01977/scfdc-primary-assays.txt\n\
+    \      cache_sha256: 252c1dabe554879309f77a5e8c77c1b330da8f6b90a31954421f819afb43968b\n\
+    - graph_id: scfdc-cinnamate-panel-2019\n  title: ScFdc whole-cell assays deplete\
+    \ ten substituted cinnamic acids\n  scope: Separate WT-containing whole-cell substrate\
+    \ assays; no cross-substrate causal chain or family-wide\n    substrate claim.\n\
+    \  context: E. coli BL21(DE3) pLysS expressing pTfdc1Sc; separate 2 mM substrate\
+    \ assays, OD600 about 1,\n    100 mM sodium phosphate pH 7, 35 C, 1-mL sealed\
+    \ reactions. Table 1 times are substrate-specific endpoints,\n    not initial-rate\
+    \ comparisons.\n  family_mapping: ScFdc/FDC1/YDR539W is related to Q03034 sequence\
+    \ 1 (503 aa); PF01977 is 119-320, PF20695\n    14-102 and PF20696 328-464. The\
+    \ 2019 full plasmid insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \    M/M1.\n  taxon: NCBITaxon:4932\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ Whole-cell HPLC acid disappearance does not isolate enzyme chemistry, transport\
+    \ or PF01977\n    sufficiency. GC-MS product assignments use spectral-library\
+    \ analogy; not every individual trace was\n    visually reviewed. Host-negative/no-biocat\
+    \ controls are text-reported; the cited S25/S26 show substrate-free\n    matrix\
+    \ blanks. Table 1 and some later Figure 3 points differ.\n  nodes:\n  - node_id:\
+    \ assay_1a\n    label: ScFdc-containing cells with substrate 1a\n    node_type:\
+    \ PROCESS\n    grounding:\n    - UniProtKB:Q03034\n  - node_id: acid_1a\n    label:\
+    \ Cinnamic acid (1a) remaining in assay\n    node_type: STATE\n  - node_id: assay_1b\n\
+    \    label: ScFdc-containing cells with substrate 1b\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:Q03034\n  - node_id: acid_1b\n    label: (E)-3-(2-bromophenyl)acrylic\
+    \ acid (1b) remaining in assay\n    node_type: STATE\n  - node_id: assay_1c\n\
+    \    label: ScFdc-containing cells with substrate 1c\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:Q03034\n  - node_id: acid_1c\n    label: (E)-3-(3-bromophenyl)acrylic\
+    \ acid (1c) remaining in assay\n    node_type: STATE\n  - node_id: assay_1d\n\
+    \    label: ScFdc-containing cells with substrate 1d\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:Q03034\n  - node_id: acid_1d\n    label: (E)-3-(4-bromophenyl)acrylic\
+    \ acid (1d) remaining in assay\n    node_type: STATE\n  - node_id: assay_1e\n\
+    \    label: ScFdc-containing cells with substrate 1e\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:Q03034\n  - node_id: acid_1e\n    label: (E)-3-(2-methoxyphenyl)acrylic\
+    \ acid (1e) remaining in assay\n    node_type: STATE\n  - node_id: assay_1f\n\
+    \    label: ScFdc-containing cells with substrate 1f\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:Q03034\n  - node_id: acid_1f\n    label: (E)-3-(3-methoxyphenyl)acrylic\
+    \ acid (1f) remaining in assay\n    node_type: STATE\n  - node_id: assay_1g\n\
+    \    label: ScFdc-containing cells with substrate 1g\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:Q03034\n  - node_id: acid_1g\n    label: (E)-3-(4-methoxyphenyl)acrylic\
+    \ acid (1g) remaining in assay\n    node_type: STATE\n  - node_id: assay_1h\n\
+    \    label: ScFdc-containing cells with substrate 1h\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:Q03034\n  - node_id: acid_1h\n    label: (E)-3-(2-(trifluoromethyl)phenyl)acrylic\
+    \ acid (1h) remaining in assay\n    node_type: STATE\n  - node_id: assay_1i\n\
+    \    label: ScFdc-containing cells with substrate 1i\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:Q03034\n  - node_id: acid_1i\n    label: (E)-3-(3-(trifluoromethyl)phenyl)acrylic\
+    \ acid (1i) remaining in assay\n    node_type: STATE\n  - node_id: assay_1j\n\
+    \    label: ScFdc-containing cells with substrate 1j\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:Q03034\n  - node_id: acid_1j\n    label: (E)-3-(4-(trifluoromethyl)phenyl)acrylic\
+    \ acid (1j) remaining in assay\n    node_type: STATE\n  edges:\n  - edge_id: depletes-1a\n\
+    \    subject: assay_1a\n    predicate: decreases\n    object: acid_1a\n    mechanism:\
+    \ The separately incubated whole-cell preparation shows >99% HPLC substrate depletion\
+    \ at\n      the Table 1 endpoint of 24 h. This is an operational conversion readout,\
+    \ not an independently quantified\n      product yield or per-enzyme rate.\n \
+    \   directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:30679592\n      source_url: https://www.nature.com/articles/s41598-018-36977-x\n\
+    \      snippet: substrate depletion\n      explanation: Table 1 row 1a; Figure\
+    \ 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as\n        printed;\
+    \ individual chromatographic traces are not all claimed visually inspected.\n\
+    \      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n      cache_sha256:\
+    \ c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n  - edge_id:\
+    \ depletes-1b\n    subject: assay_1b\n    predicate: decreases\n    object: acid_1b\n\
+    \    mechanism: The separately incubated whole-cell preparation shows 83% HPLC\
+    \ substrate depletion at the\n      Table 1 endpoint of 48 h. This is an operational\
+    \ conversion readout, not an independently quantified\n      product yield or\
+    \ per-enzyme rate.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n      source_url:\
+    \ https://www.nature.com/articles/s41598-018-36977-x\n      snippet: substrate\
+    \ depletion\n      explanation: Table 1 row 1b; Figure 3 and Sec3/4/9/18; ledger\
+    \ A/A1. Table values are retained as\n        printed; individual chromatographic\
+    \ traces are not all claimed visually inspected.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: depletes-1c\n    subject: assay_1c\n    predicate: decreases\n \
+    \   object: acid_1c\n    mechanism: The separately incubated whole-cell preparation\
+    \ shows >99% HPLC substrate depletion at\n      the Table 1 endpoint of 8 h. This\
+    \ is an operational conversion readout, not an independently quantified\n    \
+    \  product yield or per-enzyme rate.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ substrate depletion\n      explanation: Table 1 row 1c; Figure 3 and Sec3/4/9/18;\
+    \ ledger A/A1. Table values are retained as\n        printed; individual chromatographic\
+    \ traces are not all claimed visually inspected.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: depletes-1d\n    subject: assay_1d\n    predicate: decreases\n \
+    \   object: acid_1d\n    mechanism: The separately incubated whole-cell preparation\
+    \ shows >99% HPLC substrate depletion at\n      the Table 1 endpoint of 24 h.\
+    \ This is an operational conversion readout, not an independently quantified\n\
+    \      product yield or per-enzyme rate.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ substrate depletion\n      explanation: Table 1 row 1d; Figure 3 and Sec3/4/9/18;\
+    \ ledger A/A1. Table values are retained as\n        printed; individual chromatographic\
+    \ traces are not all claimed visually inspected.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: depletes-1e\n    subject: assay_1e\n    predicate: decreases\n \
+    \   object: acid_1e\n    mechanism: The separately incubated whole-cell preparation\
+    \ shows 92% HPLC substrate depletion at the\n      Table 1 endpoint of 48 h. This\
+    \ is an operational conversion readout, not an independently quantified\n    \
+    \  product yield or per-enzyme rate.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ substrate depletion\n      explanation: Table 1 row 1e; Figure 3 and Sec3/4/9/18;\
+    \ ledger A/A1. Table values are retained as\n        printed; individual chromatographic\
+    \ traces are not all claimed visually inspected.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: depletes-1f\n    subject: assay_1f\n    predicate: decreases\n \
+    \   object: acid_1f\n    mechanism: The separately incubated whole-cell preparation\
+    \ shows >99% HPLC substrate depletion at\n      the Table 1 endpoint of 48 h.\
+    \ This is an operational conversion readout, not an independently quantified\n\
+    \      product yield or per-enzyme rate.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ substrate depletion\n      explanation: Table 1 row 1f; Figure 3 and Sec3/4/9/18;\
+    \ ledger A/A1. Table values are retained as\n        printed; individual chromatographic\
+    \ traces are not all claimed visually inspected.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: depletes-1g\n    subject: assay_1g\n    predicate: decreases\n \
+    \   object: acid_1g\n    mechanism: The separately incubated whole-cell preparation\
+    \ shows >99% HPLC substrate depletion at\n      the Table 1 endpoint of 72 h.\
+    \ This is an operational conversion readout, not an independently quantified\n\
+    \      product yield or per-enzyme rate.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ substrate depletion\n      explanation: Table 1 row 1g; Figure 3 and Sec3/4/9/18;\
+    \ ledger A/A1. Table values are retained as\n        printed; individual chromatographic\
+    \ traces are not all claimed visually inspected.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: depletes-1h\n    subject: assay_1h\n    predicate: decreases\n \
+    \   object: acid_1h\n    mechanism: The separately incubated whole-cell preparation\
+    \ shows 62% HPLC substrate depletion at the\n      Table 1 endpoint of 72 h. This\
+    \ is an operational conversion readout, not an independently quantified\n    \
+    \  product yield or per-enzyme rate.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ substrate depletion\n      explanation: Table 1 row 1h; Figure 3 and Sec3/4/9/18;\
+    \ ledger A/A1. Table values are retained as\n        printed; individual chromatographic\
+    \ traces are not all claimed visually inspected.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: depletes-1i\n    subject: assay_1i\n    predicate: decreases\n \
+    \   object: acid_1i\n    mechanism: The separately incubated whole-cell preparation\
+    \ shows 87% HPLC substrate depletion at the\n      Table 1 endpoint of 48 h. This\
+    \ is an operational conversion readout, not an independently quantified\n    \
+    \  product yield or per-enzyme rate.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ substrate depletion\n      explanation: Table 1 row 1i; Figure 3 and Sec3/4/9/18;\
+    \ ledger A/A1. Table values are retained as\n        printed; individual chromatographic\
+    \ traces are not all claimed visually inspected.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: depletes-1j\n    subject: assay_1j\n    predicate: decreases\n \
+    \   object: acid_1j\n    mechanism: The separately incubated whole-cell preparation\
+    \ shows 82% HPLC substrate depletion at the\n      Table 1 endpoint of 48 h. This\
+    \ is an operational conversion readout, not an independently quantified\n    \
+    \  product yield or per-enzyme rate.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ substrate depletion\n      explanation: Table 1 row 1j; Figure 3 and Sec3/4/9/18;\
+    \ ledger A/A1. Table values are retained as\n        printed; individual chromatographic\
+    \ traces are not all claimed visually inspected.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    - graph_id: scfdc-conjugated-chain-2019\n  title: ScFdc whole-cell assay depletes\
+    \ extended-conjugation substrate 1k\n  scope: Separate WT-containing whole-cell\
+    \ substrate assays; no cross-substrate causal chain or family-wide\n    substrate\
+    \ claim.\n  context: E. coli BL21(DE3) pLysS expressing pTfdc1Sc; separate 2 mM\
+    \ substrate assays, OD600 about 1,\n    100 mM sodium phosphate pH 7, 35 C, 1-mL\
+    \ sealed reactions. Table 1 times are substrate-specific endpoints,\n    not initial-rate\
+    \ comparisons.\n  family_mapping: ScFdc/FDC1/YDR539W is related to Q03034 sequence\
+    \ 1 (503 aa); PF01977 is 119-320, PF20695\n    14-102 and PF20696 328-464. The\
+    \ 2019 full plasmid insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \    M/M1.\n  taxon: NCBITaxon:4932\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ Whole-cell HPLC acid disappearance does not isolate enzyme chemistry, transport\
+    \ or PF01977\n    sufficiency. GC-MS product assignments use spectral-library\
+    \ analogy; not every individual trace was\n    visually reviewed. Host-negative/no-biocat\
+    \ controls are text-reported; the cited S25/S26 show substrate-free\n    matrix\
+    \ blanks. Table 1 and some later Figure 3 points differ. Nonconjugated analogue\
+    \ 1l remains <1%\n    at 72 h; the comparison does not isolate conjugation from\
+    \ geometry.\n  nodes:\n  - node_id: assay_1k\n    label: ScFdc-containing cells\
+    \ with substrate 1k\n    node_type: PROCESS\n    grounding:\n    - UniProtKB:Q03034\n\
+    \  - node_id: acid_1k\n    label: (2E,4E)-5-phenylpenta-2,4-dienoic acid (1k)\
+    \ remaining in assay\n    node_type: STATE\n  edges:\n  - edge_id: depletes-1k\n\
+    \    subject: assay_1k\n    predicate: decreases\n    object: acid_1k\n    mechanism:\
+    \ The separately incubated whole-cell preparation shows >99% HPLC substrate depletion\
+    \ at\n      the Table 1 endpoint of 48 h. This is an operational conversion readout,\
+    \ not an independently quantified\n      product yield or per-enzyme rate.\n \
+    \   directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:30679592\n      source_url: https://www.nature.com/articles/s41598-018-36977-x\n\
+    \      snippet: substrate depletion\n      explanation: Table 1 row 1k; Figure\
+    \ 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as\n        printed;\
+    \ individual chromatographic traces are not all claimed visually inspected.\n\
+    \      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n      cache_sha256:\
+    \ c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n- graph_id:\
+    \ scfdc-fused-aryl-panel-2019\n  title: ScFdc whole-cell assays deplete six fused-aryl\
+    \ substrates\n  scope: Separate WT-containing whole-cell substrate assays; no\
+    \ cross-substrate causal chain or family-wide\n    substrate claim.\n  context:\
+    \ E. coli BL21(DE3) pLysS expressing pTfdc1Sc; separate 2 mM substrate assays,\
+    \ OD600 about 1,\n    100 mM sodium phosphate pH 7, 35 C, 1-mL sealed reactions.\
+    \ Table 1 times are substrate-specific endpoints,\n    not initial-rate comparisons.\n\
+    \  family_mapping: ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa);\
+    \ PF01977 is 119-320, PF20695\n    14-102 and PF20696 328-464. The 2019 full plasmid\
+    \ insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \    M/M1.\n  taxon: NCBITaxon:4932\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ Whole-cell HPLC acid disappearance does not isolate enzyme chemistry, transport\
+    \ or PF01977\n    sufficiency. GC-MS product assignments use spectral-library\
+    \ analogy; not every individual trace was\n    visually reviewed. Host-negative/no-biocat\
+    \ controls are text-reported; the cited S25/S26 show substrate-free\n    matrix\
+    \ blanks. Table 1 and some later Figure 3 points differ.\n  nodes:\n  - node_id:\
+    \ assay_1m\n    label: ScFdc-containing cells with substrate 1m\n    node_type:\
+    \ PROCESS\n    grounding:\n    - UniProtKB:Q03034\n  - node_id: acid_1m\n    label:\
+    \ (E)-3-(naphthalen-2-yl)acrylic acid (1m) remaining in assay\n    node_type:\
+    \ STATE\n  - node_id: assay_1n\n    label: ScFdc-containing cells with substrate\
+    \ 1n\n    node_type: PROCESS\n    grounding:\n    - UniProtKB:Q03034\n  - node_id:\
+    \ acid_1n\n    label: (E)-3-(quinolin-2-yl)acrylic acid (1n) remaining in assay\n\
+    \    node_type: STATE\n  - node_id: assay_1o\n    label: ScFdc-containing cells\
+    \ with substrate 1o\n    node_type: PROCESS\n    grounding:\n    - UniProtKB:Q03034\n\
+    \  - node_id: acid_1o\n    label: (E)-3-(quinolin-4-yl)acrylic acid (1o) remaining\
+    \ in assay\n    node_type: STATE\n  - node_id: assay_1p\n    label: ScFdc-containing\
+    \ cells with substrate 1p\n    node_type: PROCESS\n    grounding:\n    - UniProtKB:Q03034\n\
+    \  - node_id: acid_1p\n    label: (E)-3-(benzofuran-2-yl)acrylic acid (1p) remaining\
+    \ in assay\n    node_type: STATE\n  - node_id: assay_1q\n    label: ScFdc-containing\
+    \ cells with substrate 1q\n    node_type: PROCESS\n    grounding:\n    - UniProtKB:Q03034\n\
+    \  - node_id: acid_1q\n    label: (E)-3-(benzofuran-3-yl)acrylic acid (1q) remaining\
+    \ in assay\n    node_type: STATE\n  - node_id: assay_1r\n    label: ScFdc-containing\
+    \ cells with substrate 1r\n    node_type: PROCESS\n    grounding:\n    - UniProtKB:Q03034\n\
+    \  - node_id: acid_1r\n    label: (E)-3-(5-chlorobenzofuran-2-yl)acrylic acid\
+    \ (1r) remaining in assay\n    node_type: STATE\n  edges:\n  - edge_id: depletes-1m\n\
+    \    subject: assay_1m\n    predicate: decreases\n    object: acid_1m\n    mechanism:\
+    \ The separately incubated whole-cell preparation shows >99% HPLC substrate depletion\
+    \ at\n      the Table 1 endpoint of 48 h. This is an operational conversion readout,\
+    \ not an independently quantified\n      product yield or per-enzyme rate.\n \
+    \   directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:30679592\n      source_url: https://www.nature.com/articles/s41598-018-36977-x\n\
+    \      snippet: substrate depletion\n      explanation: Table 1 row 1m; Figure\
+    \ 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as\n        printed;\
+    \ individual chromatographic traces are not all claimed visually inspected.\n\
+    \      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n      cache_sha256:\
+    \ c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n  - edge_id:\
+    \ depletes-1n\n    subject: assay_1n\n    predicate: decreases\n    object: acid_1n\n\
+    \    mechanism: The separately incubated whole-cell preparation shows 39% HPLC\
+    \ substrate depletion at the\n      Table 1 endpoint of 8 h. This is an operational\
+    \ conversion readout, not an independently quantified\n      product yield or\
+    \ per-enzyme rate.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n      source_url:\
+    \ https://www.nature.com/articles/s41598-018-36977-x\n      snippet: substrate\
+    \ depletion\n      explanation: Table 1 row 1n; Figure 3 and Sec3/4/9/18; ledger\
+    \ A/A1. Table values are retained as\n        printed; individual chromatographic\
+    \ traces are not all claimed visually inspected.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: depletes-1o\n    subject: assay_1o\n    predicate: decreases\n \
+    \   object: acid_1o\n    mechanism: The separately incubated whole-cell preparation\
+    \ shows 28% HPLC substrate depletion at the\n      Table 1 endpoint of 8 h. This\
+    \ is an operational conversion readout, not an independently quantified\n    \
+    \  product yield or per-enzyme rate.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ substrate depletion\n      explanation: Table 1 row 1o; Figure 3 and Sec3/4/9/18;\
+    \ ledger A/A1. Table values are retained as\n        printed; individual chromatographic\
+    \ traces are not all claimed visually inspected.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: depletes-1p\n    subject: assay_1p\n    predicate: decreases\n \
+    \   object: acid_1p\n    mechanism: The separately incubated whole-cell preparation\
+    \ shows >99% HPLC substrate depletion at\n      the Table 1 endpoint of 8 h. This\
+    \ is an operational conversion readout, not an independently quantified\n    \
+    \  product yield or per-enzyme rate.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ substrate depletion\n      explanation: Table 1 row 1p; Figure 3 and Sec3/4/9/18;\
+    \ ledger A/A1. Table values are retained as\n        printed; individual chromatographic\
+    \ traces are not all claimed visually inspected.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: depletes-1q\n    subject: assay_1q\n    predicate: decreases\n \
+    \   object: acid_1q\n    mechanism: The separately incubated whole-cell preparation\
+    \ shows 79% HPLC substrate depletion at the\n      Table 1 endpoint of 30 h. This\
+    \ is an operational conversion readout, not an independently quantified\n    \
+    \  product yield or per-enzyme rate.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ substrate depletion\n      explanation: Table 1 row 1q; Figure 3 and Sec3/4/9/18;\
+    \ ledger A/A1. Table values are retained as\n        printed; individual chromatographic\
+    \ traces are not all claimed visually inspected.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: depletes-1r\n    subject: assay_1r\n    predicate: decreases\n \
+    \   object: acid_1r\n    mechanism: The separately incubated whole-cell preparation\
+    \ shows >99% HPLC substrate depletion at\n      the Table 1 endpoint of 8 h. This\
+    \ is an operational conversion readout, not an independently quantified\n    \
+    \  product yield or per-enzyme rate.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ substrate depletion\n      explanation: Table 1 row 1r; Figure 3 and Sec3/4/9/18;\
+    \ ledger A/A1. Table values are retained as\n        printed; individual chromatographic\
+    \ traces are not all claimed visually inspected.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    - graph_id: scfdc-biaryl-panel-2019\n  title: ScFdc whole-cell assays deplete\
+    \ three biaryl substrates\n  scope: Separate WT-containing whole-cell substrate\
+    \ assays; no cross-substrate causal chain or family-wide\n    substrate claim.\n\
+    \  context: E. coli BL21(DE3) pLysS expressing pTfdc1Sc; separate 2 mM substrate\
+    \ assays, OD600 about 1,\n    100 mM sodium phosphate pH 7, 35 C, 1-mL sealed\
+    \ reactions. Table 1 times are substrate-specific endpoints,\n    not initial-rate\
+    \ comparisons.\n  family_mapping: ScFdc/FDC1/YDR539W is related to Q03034 sequence\
+    \ 1 (503 aa); PF01977 is 119-320, PF20695\n    14-102 and PF20696 328-464. The\
+    \ 2019 full plasmid insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \    M/M1.\n  taxon: NCBITaxon:4932\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ Whole-cell HPLC acid disappearance does not isolate enzyme chemistry, transport\
+    \ or PF01977\n    sufficiency. GC-MS product assignments use spectral-library\
+    \ analogy; not every individual trace was\n    visually reviewed. Host-negative/no-biocat\
+    \ controls are text-reported; the cited S25/S26 show substrate-free\n    matrix\
+    \ blanks. Table 1 and some later Figure 3 points differ.\n  nodes:\n  - node_id:\
+    \ assay_1s\n    label: ScFdc-containing cells with substrate 1s\n    node_type:\
+    \ PROCESS\n    grounding:\n    - UniProtKB:Q03034\n  - node_id: acid_1s\n    label:\
+    \ (E)-3-([1,1'-biphenyl]-4-yl)acrylic acid (1s) remaining in assay\n    node_type:\
+    \ STATE\n  - node_id: assay_1t\n    label: ScFdc-containing cells with substrate\
+    \ 1t\n    node_type: PROCESS\n    grounding:\n    - UniProtKB:Q03034\n  - node_id:\
+    \ acid_1t\n    label: (E)-3-(4'-fluoro-[1,1'-biphenyl]-4-yl)acrylic acid (1t)\
+    \ remaining in assay\n    node_type: STATE\n  - node_id: assay_1u\n    label:\
+    \ ScFdc-containing cells with substrate 1u\n    node_type: PROCESS\n    grounding:\n\
+    \    - UniProtKB:Q03034\n  - node_id: acid_1u\n    label: (E)-3-(5-phenylthiophen-2-yl)acrylic\
+    \ acid (1u) remaining in assay\n    node_type: STATE\n  edges:\n  - edge_id: depletes-1s\n\
+    \    subject: assay_1s\n    predicate: decreases\n    object: acid_1s\n    mechanism:\
+    \ The separately incubated whole-cell preparation shows 59% HPLC substrate depletion\
+    \ at the\n      Table 1 endpoint of 30 h. This is an operational conversion readout,\
+    \ not an independently quantified\n      product yield or per-enzyme rate.\n \
+    \   directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:30679592\n      source_url: https://www.nature.com/articles/s41598-018-36977-x\n\
+    \      snippet: substrate depletion\n      explanation: Table 1 row 1s; Figure\
+    \ 3 and Sec3/4/9/18; ledger A/A1. Table values are retained as\n        printed;\
+    \ individual chromatographic traces are not all claimed visually inspected.\n\
+    \      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n      cache_sha256:\
+    \ c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n  - edge_id:\
+    \ depletes-1t\n    subject: assay_1t\n    predicate: decreases\n    object: acid_1t\n\
+    \    mechanism: The separately incubated whole-cell preparation shows 70% HPLC\
+    \ substrate depletion at the\n      Table 1 endpoint of 48 h. This is an operational\
+    \ conversion readout, not an independently quantified\n      product yield or\
+    \ per-enzyme rate.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n      source_url:\
+    \ https://www.nature.com/articles/s41598-018-36977-x\n      snippet: substrate\
+    \ depletion\n      explanation: Table 1 row 1t; Figure 3 and Sec3/4/9/18; ledger\
+    \ A/A1. Table values are retained as\n        printed; individual chromatographic\
+    \ traces are not all claimed visually inspected.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: depletes-1u\n    subject: assay_1u\n    predicate: decreases\n \
+    \   object: acid_1u\n    mechanism: The separately incubated whole-cell preparation\
+    \ shows 85% HPLC substrate depletion at the\n      Table 1 endpoint of 72 h. This\
+    \ is an operational conversion readout, not an independently quantified\n    \
+    \  product yield or per-enzyme rate.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ substrate depletion\n      explanation: Table 1 row 1u; Figure 3 and Sec3/4/9/18;\
+    \ ledger A/A1. Table values are retained as\n        printed; individual chromatographic\
+    \ traces are not all claimed visually inspected.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    - graph_id: scfdc-fresh-cell-supplementation-2019\n  title: Fresh cells plus additional\
+    \ incubation extend nine incomplete reactions\n  scope: Nine separately supplemented\
+    \ whole-cell reactions at their reported plateaus; composite intervention,\n \
+    \   not isolated viability rescue.\n  context: E. coli BL21(DE3) pLysS expressing\
+    \ pTfdc1Sc; separate 2 mM substrate assays, OD600 about 1,\n    100 mM sodium\
+    \ phosphate pH 7, 35 C, 1-mL sealed reactions. Table 1 times are substrate-specific\
+    \ endpoints,\n    not initial-rate comparisons. Fresh cells at OD600=1 are added\
+    \ at the plateau, then incubation continues\n    for 24 h.\n  family_mapping:\
+    \ ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa); PF01977 is 119-320,\
+    \ PF20695\n    14-102 and PF20696 328-464. The 2019 full plasmid insert is not\
+    \ independently verified; see evidence/PF01977/scfdc-substrate-scope.txt\n   \
+    \ M/M1.\n  taxon: NCBITaxon:4932\n  scope_status: PHENOTYPIC\n  limitations: Table\
+    \ 1 note [a] and Sec5/18 are text reports; a matched extra-time/no-addition series\n\
+    \    is not established. Viability, product toxicity and inhibition are not directly\
+    \ measured. For 1n/o,\n    note [b] says no increase while prose says moderate\
+    \ increase; neither is encoded as an unqualified\n    edge.\n  nodes:\n  - node_id:\
+    \ addition_1b\n    label: Fresh cells and 24 h more incubation for plateaued 1b\n\
+    \    node_type: PERTURBATION\n  - node_id: conversion_1b\n    label: HPLC substrate\
+    \ depletion in the 1b reaction\n    node_type: PROCESS\n  - node_id: addition_1e\n\
+    \    label: Fresh cells and 24 h more incubation for plateaued 1e\n    node_type:\
+    \ PERTURBATION\n  - node_id: conversion_1e\n    label: HPLC substrate depletion\
+    \ in the 1e reaction\n    node_type: PROCESS\n  - node_id: addition_1h\n    label:\
+    \ Fresh cells and 24 h more incubation for plateaued 1h\n    node_type: PERTURBATION\n\
+    \  - node_id: conversion_1h\n    label: HPLC substrate depletion in the 1h reaction\n\
+    \    node_type: PROCESS\n  - node_id: addition_1i\n    label: Fresh cells and\
+    \ 24 h more incubation for plateaued 1i\n    node_type: PERTURBATION\n  - node_id:\
+    \ conversion_1i\n    label: HPLC substrate depletion in the 1i reaction\n    node_type:\
+    \ PROCESS\n  - node_id: addition_1j\n    label: Fresh cells and 24 h more incubation\
+    \ for plateaued 1j\n    node_type: PERTURBATION\n  - node_id: conversion_1j\n\
+    \    label: HPLC substrate depletion in the 1j reaction\n    node_type: PROCESS\n\
+    \  - node_id: addition_1q\n    label: Fresh cells and 24 h more incubation for\
+    \ plateaued 1q\n    node_type: PERTURBATION\n  - node_id: conversion_1q\n    label:\
+    \ HPLC substrate depletion in the 1q reaction\n    node_type: PROCESS\n  - node_id:\
+    \ addition_1s\n    label: Fresh cells and 24 h more incubation for plateaued 1s\n\
+    \    node_type: PERTURBATION\n  - node_id: conversion_1s\n    label: HPLC substrate\
+    \ depletion in the 1s reaction\n    node_type: PROCESS\n  - node_id: addition_1t\n\
+    \    label: Fresh cells and 24 h more incubation for plateaued 1t\n    node_type:\
+    \ PERTURBATION\n  - node_id: conversion_1t\n    label: HPLC substrate depletion\
+    \ in the 1t reaction\n    node_type: PROCESS\n  - node_id: addition_1u\n    label:\
+    \ Fresh cells and 24 h more incubation for plateaued 1u\n    node_type: PERTURBATION\n\
+    \  - node_id: conversion_1u\n    label: HPLC substrate depletion in the 1u reaction\n\
+    \    node_type: PROCESS\n  edges:\n  - edge_id: extends-1b\n    subject: addition_1b\n\
+    \    predicate: increases\n    object: conversion_1b\n    mechanism: The fresh-cell-plus-extra-time\
+    \ condition is reported to reach complete substrate depletion\n      from an incomplete\
+    \ plateau. The design does not isolate cell replacement from elapsed time or identify\n\
+    \      why the plateau occurred.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ fresh cells\n      explanation: Table 1 note [a], Sec5 and Sec18; ledger B.\
+    \ Substrate 1b is one of the nine explicitly\n        reported complete-conversion\
+    \ cases.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n     \
+    \ cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: extends-1e\n    subject: addition_1e\n    predicate: increases\n\
+    \    object: conversion_1e\n    mechanism: The fresh-cell-plus-extra-time condition\
+    \ is reported to reach complete substrate depletion\n      from an incomplete\
+    \ plateau. The design does not isolate cell replacement from elapsed time or identify\n\
+    \      why the plateau occurred.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ fresh cells\n      explanation: Table 1 note [a], Sec5 and Sec18; ledger B.\
+    \ Substrate 1e is one of the nine explicitly\n        reported complete-conversion\
+    \ cases.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n     \
+    \ cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: extends-1h\n    subject: addition_1h\n    predicate: increases\n\
+    \    object: conversion_1h\n    mechanism: The fresh-cell-plus-extra-time condition\
+    \ is reported to reach complete substrate depletion\n      from an incomplete\
+    \ plateau. The design does not isolate cell replacement from elapsed time or identify\n\
+    \      why the plateau occurred.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ fresh cells\n      explanation: Table 1 note [a], Sec5 and Sec18; ledger B.\
+    \ Substrate 1h is one of the nine explicitly\n        reported complete-conversion\
+    \ cases.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n     \
+    \ cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: extends-1i\n    subject: addition_1i\n    predicate: increases\n\
+    \    object: conversion_1i\n    mechanism: The fresh-cell-plus-extra-time condition\
+    \ is reported to reach complete substrate depletion\n      from an incomplete\
+    \ plateau. The design does not isolate cell replacement from elapsed time or identify\n\
+    \      why the plateau occurred.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ fresh cells\n      explanation: Table 1 note [a], Sec5 and Sec18; ledger B.\
+    \ Substrate 1i is one of the nine explicitly\n        reported complete-conversion\
+    \ cases.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n     \
+    \ cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: extends-1j\n    subject: addition_1j\n    predicate: increases\n\
+    \    object: conversion_1j\n    mechanism: The fresh-cell-plus-extra-time condition\
+    \ is reported to reach complete substrate depletion\n      from an incomplete\
+    \ plateau. The design does not isolate cell replacement from elapsed time or identify\n\
+    \      why the plateau occurred.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ fresh cells\n      explanation: Table 1 note [a], Sec5 and Sec18; ledger B.\
+    \ Substrate 1j is one of the nine explicitly\n        reported complete-conversion\
+    \ cases.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n     \
+    \ cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: extends-1q\n    subject: addition_1q\n    predicate: increases\n\
+    \    object: conversion_1q\n    mechanism: The fresh-cell-plus-extra-time condition\
+    \ is reported to reach complete substrate depletion\n      from an incomplete\
+    \ plateau. The design does not isolate cell replacement from elapsed time or identify\n\
+    \      why the plateau occurred.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ fresh cells\n      explanation: Table 1 note [a], Sec5 and Sec18; ledger B.\
+    \ Substrate 1q is one of the nine explicitly\n        reported complete-conversion\
+    \ cases.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n     \
+    \ cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: extends-1s\n    subject: addition_1s\n    predicate: increases\n\
+    \    object: conversion_1s\n    mechanism: The fresh-cell-plus-extra-time condition\
+    \ is reported to reach complete substrate depletion\n      from an incomplete\
+    \ plateau. The design does not isolate cell replacement from elapsed time or identify\n\
+    \      why the plateau occurred.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ fresh cells\n      explanation: Table 1 note [a], Sec5 and Sec18; ledger B.\
+    \ Substrate 1s is one of the nine explicitly\n        reported complete-conversion\
+    \ cases.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n     \
+    \ cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: extends-1t\n    subject: addition_1t\n    predicate: increases\n\
+    \    object: conversion_1t\n    mechanism: The fresh-cell-plus-extra-time condition\
+    \ is reported to reach complete substrate depletion\n      from an incomplete\
+    \ plateau. The design does not isolate cell replacement from elapsed time or identify\n\
+    \      why the plateau occurred.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ fresh cells\n      explanation: Table 1 note [a], Sec5 and Sec18; ledger B.\
+    \ Substrate 1t is one of the nine explicitly\n        reported complete-conversion\
+    \ cases.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n     \
+    \ cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: extends-1u\n    subject: addition_1u\n    predicate: increases\n\
+    \    object: conversion_1u\n    mechanism: The fresh-cell-plus-extra-time condition\
+    \ is reported to reach complete substrate depletion\n      from an incomplete\
+    \ plateau. The design does not isolate cell replacement from elapsed time or identify\n\
+    \      why the plateau occurred.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ fresh cells\n      explanation: Table 1 note [a], Sec5 and Sec18; ledger B.\
+    \ Substrate 1u is one of the nine explicitly\n        reported complete-conversion\
+    \ cases.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n     \
+    \ cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    - graph_id: scfdc-i330-preparations-thiazole-2019\n  title: I330A and I330V preparations\
+    \ show gained thiazole-substrate conversion\n  scope: Reported variant-versus-WT\
+    \ whole-cell comparisons for 1w, not phenothiazine 1x.\n  context: Table 2 whole-cell\
+    \ reactions at 24 h. Initial WT uses pTfdc1Sc/pTrc99A; mutations are made\n  \
+    \  in a pCDF-Duet1 subclone and expressed in BL21(DE3) pLysS. Exact matching of\
+    \ all Table 2 assay parameters\n    and the WT vector is not independently established.\n\
+    \  family_mapping: ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa);\
+    \ PF01977 is 119-320, PF20695\n    14-102 and PF20696 328-464. The 2019 full plasmid\
+    \ insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \    M/M1.\n  taxon: NCBITaxon:4932\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ These are whole-preparation comparisons without matched protein abundance, folding,\
+    \ active-cofactor\n    occupancy or verified full inserts. Q192 is within PF01977;\
+    \ I330 is in PF20696. S78 is not a mutant-normalization\n    gel. No intrinsic\
+    \ kinetic or domain-specific causal effect is inferred. The abstract's phenothiazine-gain\n\
+    \    wording conflicts with Table 2 and S68 product identity. 1v/1x remain <1%;\
+    \ Q192N is 0 for 1w.\n  nodes:\n  - node_id: I330A\n    label: I330A preparation\
+    \ versus reported WT, with thiazole acid 1w\n    node_type: PERTURBATION\n   \
+    \ grounding:\n    - UniProtKB:Q03034\n  - node_id: I330V\n    label: I330V preparation\
+    \ versus reported WT, with thiazole acid 1w\n    node_type: PERTURBATION\n   \
+    \ grounding:\n    - UniProtKB:Q03034\n  - node_id: conversion\n    label: HPLC\
+    \ depletion of (E)-3-(2-phenylthiazol-4-yl)acrylic acid (1w)\n    node_type: PROCESS\n\
+    \  edges:\n  - edge_id: i330a-increases-1w\n    subject: I330A\n    predicate:\
+    \ increases\n    object: conversion\n    mechanism: The I330A preparation gives\
+    \ 15% conversion at 24 h compared with <1% for the reported WT\n      preparation.\
+    \ S67/S68 separately support product 2w assignment for I330A. These data do not\
+    \ uniquely\n      identify steric-gate relief as the route of the whole-cell effect.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:30679592\n      source_url: https://www.nature.com/articles/s41598-018-36977-x\n\
+    \      snippet: I330V and I330A\n      explanation: Table 2 row 1w and Sec6; S67/S68\
+    \ visually inspected for I330A; ledger C/M. No corresponding\n        product\
+    \ spectrum is claimed separately inspected for I330V.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: i330v-increases-1w\n    subject: I330V\n    predicate: increases\n\
+    \    object: conversion\n    mechanism: The I330V preparation gives 5% conversion\
+    \ at 24 h compared with <1% for the reported WT\n      preparation. S67/S68 separately\
+    \ support product 2w assignment for I330A. These data do not uniquely\n      identify\
+    \ steric-gate relief as the route of the whole-cell effect.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:30679592\n      source_url: https://www.nature.com/articles/s41598-018-36977-x\n\
+    \      snippet: I330V and I330A\n      explanation: Table 2 row 1w and Sec6; S67/S68\
+    \ visually inspected for I330A; ledger C/M. No corresponding\n        product\
+    \ spectrum is claimed separately inspected for I330V.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    - graph_id: scfdc-variant-cinnamate-retention-2019\n  title: Three ScFdc variant\
+    \ preparations retain cinnamate depletion\n  scope: Separate I330A, I330V and\
+    \ Q192N whole-cell assays with 1a.\n  context: Table 2 whole-cell reactions at\
+    \ 24 h. Initial WT uses pTfdc1Sc/pTrc99A; mutations are made\n    in a pCDF-Duet1\
+    \ subclone and expressed in BL21(DE3) pLysS. Exact matching of all Table 2 assay\
+    \ parameters\n    and the WT vector is not independently established.\n  family_mapping:\
+    \ ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa); PF01977 is 119-320,\
+    \ PF20695\n    14-102 and PF20696 328-464. The 2019 full plasmid insert is not\
+    \ independently verified; see evidence/PF01977/scfdc-substrate-scope.txt\n   \
+    \ M/M1.\n  taxon: NCBITaxon:4932\n  scope_status: PHENOTYPIC\n  limitations: These\
+    \ are whole-preparation comparisons without matched protein abundance, folding,\
+    \ active-cofactor\n    occupancy or verified full inserts. Q192 is within PF01977;\
+    \ I330 is in PF20696. S78 is not a mutant-normalization\n    gel. No intrinsic\
+    \ kinetic or domain-specific causal effect is inferred. Q192A primers do not establish\n\
+    \    an assayed Q192A phenotype. 92% versus >99% conversion is not automatically\
+    \ a significant activity\n    loss.\n  nodes:\n  - node_id: I330A\n    label:\
+    \ I330A-containing cells incubated with cinnamic acid 1a\n    node_type: PROCESS\n\
+    \    grounding:\n    - UniProtKB:Q03034\n  - node_id: I330A_acid\n    label: Cinnamic\
+    \ acid remaining in the I330A assay\n    node_type: STATE\n  - node_id: I330V\n\
+    \    label: I330V-containing cells incubated with cinnamic acid 1a\n    node_type:\
+    \ PROCESS\n    grounding:\n    - UniProtKB:Q03034\n  - node_id: I330V_acid\n \
+    \   label: Cinnamic acid remaining in the I330V assay\n    node_type: STATE\n\
+    \  - node_id: Q192N\n    label: Q192N-containing cells incubated with cinnamic\
+    \ acid 1a\n    node_type: PROCESS\n    grounding:\n    - UniProtKB:Q03034\n  -\
+    \ node_id: Q192N_acid\n    label: Cinnamic acid remaining in the Q192N assay\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: i330a-depletes-1a\n    subject:\
+    \ I330A\n    predicate: decreases\n    object: I330A_acid\n    mechanism: The\
+    \ I330A whole-cell assay retains >99% HPLC depletion of 1a after 24 h. This measures\n\
+    \      retained endpoint conversion, not unchanged intrinsic catalytic efficiency.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:30679592\n      source_url: https://www.nature.com/articles/s41598-018-36977-x\n\
+    \      snippet: I330V and I330A\n      explanation: Table 2 row 1a and Sec6; ledger\
+    \ C. No equal-expression or active-site normalization\n        is supplied.\n\
+    \      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n      cache_sha256:\
+    \ c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n  - edge_id:\
+    \ i330v-depletes-1a\n    subject: I330V\n    predicate: decreases\n    object:\
+    \ I330V_acid\n    mechanism: The I330V whole-cell assay retains >99% HPLC depletion\
+    \ of 1a after 24 h. This measures\n      retained endpoint conversion, not unchanged\
+    \ intrinsic catalytic efficiency.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ I330V and I330A\n      explanation: Table 2 row 1a and Sec6; ledger C. No equal-expression\
+    \ or active-site normalization\n        is supplied.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: q192n-depletes-1a\n    subject: Q192N\n    predicate: decreases\n\
+    \    object: Q192N_acid\n    mechanism: The Q192N whole-cell assay retains 92%\
+    \ HPLC depletion of 1a after 24 h. This measures retained\n      endpoint conversion,\
+    \ not unchanged intrinsic catalytic efficiency.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:30679592\n      source_url: https://www.nature.com/articles/s41598-018-36977-x\n\
+    \      snippet: 92% conversion\n      explanation: Table 2 row 1a and Sec6; ledger\
+    \ C. No equal-expression or active-site normalization\n        is supplied.\n\
+    \      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n      cache_sha256:\
+    \ c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n- graph_id:\
+    \ scfdc-cell-density-2019\n  title: Higher cell loading increases reported 1i\
+    \ conversion\n  scope: Text-reported whole-cell loading series, not enzyme concentration-normalized\
+    \ kinetics.\n  context: Sec5 reports 2 mM 1i, OD600 1/2/3, phosphate pH 7 and\
+    \ 35 C; its result is at 4 h, whereas Sec17\n    describes 15-h sampling.\n  family_mapping:\
+    \ ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa); PF01977 is 119-320,\
+    \ PF20695\n    14-102 and PF20696 328-464. The 2019 full plasmid insert is not\
+    \ independently verified; see evidence/PF01977/scfdc-substrate-scope.txt\n   \
+    \ M/M1.\n  taxon: NCBITaxon:4932\n  scope_status: PHENOTYPIC\n  limitations: The\
+    \ timing conflict is unresolved; the graph explicitly retains the Sec5 4-h comparison.\n\
+    \    Whole-cell loading also changes uptake, cofactor supply and matrix composition.\
+    \ No plot/raw replicates\n    or significant-difference test is claimed.\n  nodes:\n\
+    \  - node_id: od2\n    label: Cell loading increased from OD600 1 to 2\n    node_type:\
+    \ PERTURBATION\n  - node_id: od3\n    label: Cell loading increased from OD600\
+    \ 1 to 3\n    node_type: PERTURBATION\n  - node_id: conversion\n    label: Reported\
+    \ 4-h HPLC depletion of 1i\n    node_type: PROCESS\n  edges:\n  - edge_id: od2-increases-conversion\n\
+    \    subject: od2\n    predicate: increases\n    object: conversion\n    mechanism:\
+    \ Sec5 reports conversion increasing from 42% at OD600 1 to 76% at OD600 2. Sec17's\
+    \ 15-h\n      sampling description is not silently substituted for this 4-h observation.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:30679592\n      source_url: https://www.nature.com/articles/s41598-018-36977-x\n\
+    \      snippet: OD600\n      explanation: Sec5 versus Sec17, text-only result;\
+    \ ledger D.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n  \
+    \    cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    \  - edge_id: od3-increases-conversion\n    subject: od3\n    predicate: increases\n\
+    \    object: conversion\n    mechanism: Sec5 reports conversion increasing from\
+    \ 42% at OD600 1 to about 100% at OD600 3. This is\n      a whole-cell loading\
+    \ effect with unresolved molecular route.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n\
+    \      source_url: https://www.nature.com/articles/s41598-018-36977-x\n      snippet:\
+    \ OD600\n      explanation: Sec5 versus Sec17, text-only result; ledger D.\n \
+    \     cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n      cache_sha256:\
+    \ c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n- graph_id:\
+    \ scfdc-temperature-endpoint-2019\n  title: Raising the assay from 35 to 45 C\
+    \ lowers plotted 1i conversion\n  scope: Whole-cell temperature comparison within\
+    \ the original Figure 2 series.\n  context: Figure 2 shows 2/3/4-h results at\
+    \ 30/35/40/45 C; Sec16 specifies 2 mM 1i, OD600 about 1, phosphate\n    pH 7,\
+    \ but describes 15-h sampling.\n  family_mapping: ScFdc/FDC1/YDR539W is related\
+    \ to Q03034 sequence 1 (503 aa); PF01977 is 119-320, PF20695\n    14-102 and PF20696\
+    \ 328-464. The 2019 full plasmid insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \    M/M1.\n  taxon: NCBITaxon:4932\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ The plot/Methods timing conflict remains explicit. Flat 45-C bars mean no detected\
+    \ conversion\n    in this series, not zero activity in all conditions or measured\
+    \ thermal denaturation. At 2 h, 35 C\n    does not exceed 30 C.\n  nodes:\n  -\
+    \ node_id: temperature\n    label: Change from 35 to 45 C in the plotted assay\n\
+    \    node_type: PERTURBATION\n  - node_id: conversion\n    label: HPLC depletion\
+    \ of 1i in the 2-4-h series\n    node_type: PROCESS\n  edges:\n  - edge_id: 45c-lowers-conversion\n\
+    \    subject: temperature\n    predicate: decreases\n    object: conversion\n\
+    \    mechanism: Positive 35-C bars contrast with flat/undetected 45-C conversion\
+    \ at the displayed 2, 3\n      and 4 h. No unique effect on viability, transport,\
+    \ cofactor integrity or enzyme folding is identified.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:30679592\n      source_url: https://www.nature.com/articles/s41598-018-36977-x\n\
+    \      snippet: at 45\n      explanation: Original Figure 2 visually inspected,\
+    \ Sec5/16; ledger D. No digitized exact bar values\n        or statistical inference.\n\
+    \      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n      cache_sha256:\
+    \ c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n- graph_id:\
+    \ scfdc-ph-endpoint-2019\n  title: Increasing pH from 7 to 8 lowers plotted 1i\
+    \ conversion\n  scope: Whole-cell phosphate-buffer pH comparison, not an isolated\
+    \ ScFdc ionization experiment.\n  context: 'S70 with Sec15: 2 mM 1i, OD600 about\
+    \ 1, 30 C, 100 mM sodium phosphate, 15 h; plotted pH 6.0/6.5/7.0/7.5/8.0.'\n \
+    \ family_mapping: ScFdc/FDC1/YDR539W is related to Q03034 sequence 1 (503 aa);\
+    \ PF01977 is 119-320, PF20695\n    14-102 and PF20696 328-464. The 2019 full plasmid\
+    \ insert is not independently verified; see evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \    M/M1.\n  taxon: NCBITaxon:4932\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ S70 also shows maximal conversion at pH 6.0; prose emphasis on 6.5/7.0 is incomplete.\
+    \ S70's\n    100% at 15 h is not reconciled with the different Table 1 1i context\
+    \ (87% at 48 h). No raw replicates/error\n    bars, pKa or domain mechanism is\
+    \ established.\n  nodes:\n  - node_id: ph\n    label: Change from pH 7 to pH 8\
+    \ in phosphate-buffered whole-cell assay\n    node_type: PERTURBATION\n  - node_id:\
+    \ conversion\n    label: HPLC depletion of 1i in the pH series\n    node_type:\
+    \ PROCESS\n  edges:\n  - edge_id: ph8-lowers-conversion\n    subject: ph\n   \
+    \ predicate: decreases\n    object: conversion\n    mechanism: S70 plots about\
+    \ 100% at pH 7 and 80% at pH 8. The directional whole-cell endpoint effect\n \
+    \     is retained separately from an unmeasured residue-protonation or transport\
+    \ mechanism.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:30679592\n      source_url:\
+    \ https://www.nature.com/articles/s41598-018-36977-x\n      snippet: pH values\n\
+    \      explanation: Original S70 visually inspected; Sec5/15; ledger D. No merged\
+    \ cross-experiment kinetic\n        fit.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    - graph_id: scfdc-anfdc-based-gate-hypothesis-2019\n  title: AnFdc-based docking\
+    \ suggests a steric route for I330A substrate access\n  scope: Computational interpretation\
+    \ of an AnFdc receptor using ScFdc residue numbering; not an observed\n    ScFdc\
+    \ intermediate.\n  context: 'Sec6/20 and Figure 4c/d: rigid AutoDock Vina 1.1.2\
+    \ with AnFdc 4ZA7, 20-A and 10-16-A grid\n    searches; substrate 1w. Reference\
+    \ alignment maps ScQ192/ScI330 to AnQ190/AnI327.'\n  family_mapping: ScFdc/FDC1/YDR539W\
+    \ is related to Q03034 sequence 1 (503 aa); PF01977 is 119-320, PF20695\n    14-102\
+    \ and PF20696 328-464. The 2019 full plasmid insert is not independently verified;\
+    \ see evidence/PF01977/scfdc-substrate-scope.txt\n    M/M1.\n  taxon: NCBITaxon:4932\n\
+    \  scope_status: HYPOTHETICAL\n  limitations: Model coordinates and the exact\
+    \ mutant receptor preparation were not retrieved or rerun.\n    Experimental I330A/V\
+    \ effects are separate, confounded whole-cell comparisons. I330 lies outside PF01977.\n\
+    \    The F133A energy label is inconsistent with I330A context; no F133A result\
+    \ or corrected affinity is\n    invented. Geometry/planarity associations are\
+    \ not a proven catalytic trajectory.\n  nodes:\n  - node_id: modeled_mutation\n\
+    \    label: I330A substitution in the AnFdc-based model, using Sc numbering\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q03034\n    - UniProtKB:A2QHE5\n\
+    \  - node_id: pose\n    label: Modeled favorable orientation of 1w double bond\
+    \ relative to prFMN\n    node_type: STATE\n  edges:\n  - edge_id: modeled-gate-relief\n\
+    \    subject: modeled_mutation\n    predicate: enables\n    object: pose\n   \
+    \ mechanism: The proposed Q192/I330 gate narrows substrate access; replacing the\
+    \ modeled I330 side chain\n      with Ala removes a predicted clash and permits\
+    \ a favorable 1w pose. This is a computational explanation\n      to test, not\
+    \ an observed intermediate or a demonstrated PF01977-only mechanism.\n    directness:\
+    \ UNRESOLVED\n    support: HYPOTHESIZED\n    evidence_kind: COMPUTATIONAL\n  \
+    \  evidence:\n    - reference: PMID:30679592\n      source_url: https://www.nature.com/articles/s41598-018-36977-x\n\
+    \      snippet: favourable position\n      explanation: Sec6/20, original Figure\
+    \ 4c/d and S71 alignment table; ledger E/M1. Q192 and I330 have\n        distinct\
+    \ Pfam-domain locations.\n      cache_path: evidence/PF01977/scfdc-substrate-scope.txt\n\
+    \      cache_sha256: c64925d60370bcb23d1135530203da778f4e83dc6db3ad98a51b5dc981e7c0c2\n\
+    curation_events:\n- timestamp: '2026-10-15T06:07:07Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate ten scoped AnFdc causal graphs\
+    \ for PF01977 with primary assay and domain evidence.\n  history_record: history/records/PF01977/2026-10-15T060707Z-codex-18c546.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-15T06:32:59Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Retain\
+    \ partial scientific self-review of PF01977 AnFdc causal evidence.\n  history_record:\
+    \ history/records/PF01977/2026-10-15T063259Z-codex-ee021b.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-15T08:16:08Z'\n  curator: Codex\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Extend PF01977 with scoped VdcCD\
+    \ causal evidence and labeled mechanism hypotheses\n  history_record: history/records/PF01977/2026-10-15T081608Z-codex-a85dbd.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-15T08:37:43Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Retain\
+    \ partial VdcCD scientific review and three successor open findings\n  history_record:\
+    \ history/records/PF01977/2026-10-15T083743Z-codex-b0918e.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-15T10:07:20Z'\n  curator: Codex\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Extend PF01977 with nine evidence-scoped\
+    \ ScFdc graphs\n  history_record: history/records/PF01977/2026-10-15T100720Z-codex-be8396.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-15T10:27:31Z'\n\
+    \  curator: Codex\n  action: REVIEW\n  outcome: needs_followup\n  summary: Retain\
+    \ partial scientific successor review of ScFdc causal evidence\n  history_record:\
+    \ history/records/PF01977/2026-10-15T102731Z-codex-b5907b.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-15T12:13:40Z'\n  curator: Codex\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Add evidence-scoped ScFdc substrate-panel\
+    \ and variant causal graphs\n  history_record: history/records/PF01977/2026-10-15T121340Z-codex-f1b621.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: mapping
+  area: identity
+  topic: Reference, construct and domain boundaries
+  outcome: supported
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - identity
+  - conditions
+  summary: Species-level scope, PF01977/PF20696 distinction, partial primer checks
+    and AnFdc/ScFdc numbering are explicit. No full plasmid or exact yeast strain
+    is inferred from a reference protein or short primers.
+- assessment_id: edges
+  area: graph
+  topic: Directed observed endpoints versus modeled mechanism
+  outcome: supported
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - panel
+  - conditions
+  - model
+  summary: 38 effects retain unresolved molecular routes and one separate gate hypothesis
+    is computational. Joint assay conditions and fresh-cell-plus-time interventions
+    are explicit. Negatives and discrepancies are retained without unsupported zero-effect,
+    viability, pKa or atomistic claims.
+- assessment_id: confounds
+  area: evidence
+  topic: Assay readouts and conflicting source claims
+  outcome: supported
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - panel
+  - conditions
+  - model
+  summary: Table/figure differences, substrate-free versus host controls, abstract
+    1w/1x mismatch, variant vector context, 1x isomer naming and F133A labeling remain
+    visible. No statistical significance, pure-enzyme kinetics or calibrated product
+    yield is invented.
+- assessment_id: provenance
+  area: provenance
+  topic: Minimal evidence, append-only history and native projection
+  outcome: supported
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - native
+  - predecessor
+  summary: CC-BY primary material is represented by a minimal factual ledger, short
+    excerpts, hashes and locators. Earlier graphs/evidence/history/reviews are preserved;
+    only the maintained overlay is manually edited, with guarded projection and actual
+    EDIT event.
+- assessment_id: coverage
+  area: completeness
+  topic: Unfinished member, mechanism and corpus coverage
+  outcome: concern
+  target_ids:
+  - PF01977
+  evidence_ids:
+  - predecessor
+  - identity
+  - search
+  summary: One source-specific update does not complete PF01977 or all 8296 families.
+    Full constructs, matched controls, raw assays, active occupancy and other members
+    remain open; IN_PROGRESS is retained.
+findings:
+- finding_id: member-and-partner-coverage
+  issue_key: pf01977-member-and-partner-coverage
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Continue the remaining PF01977 member and partner contexts
+  description: Nagy2019 whole-cell substrate scope and condition/variant effects now
+    advance issue 217. Continue remaining ScFdc mechanism/maturation and native-system
+    work plus EcUbiD, AroY, HmfF, HudA and earlier AnFdc/VdcCD follow-ups. This is
+    not family-wide functional completion.
+  target_ids:
+  - PF01977
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - panel
+  - identity
+  - predecessor
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01977.yaml
+    role: Maintained graph/discussion overlay with minimal evidence, canonical history
+      and guarded regeneration.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261015T102731Z-pf01977-scfdc-causal-evidence
+    finding_id: member-and-partner-coverage
+- finding_id: atomic-steps-and-domain-attribution
+  issue_key: pf01977-atomic-steps-and-domain-attribution
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Separate whole-cell effects from unmeasured atomic and domain mechanisms
+  description: Nagy2019 AnFdc-based docking does not observe ScFdc gate motion or
+    isolate PF01977. I330 lies in PF20696; Q192 lies in PF01977. Cell loading, pH,
+    temperature and fresh-cell effects do not identify unique molecular routes. Earlier
+    cofactor/intermediate and partner-allostery gaps remain; issue 218 stays open.
+  target_ids:
+  - PF01977
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - model
+  - conditions
+  - identity
+  - predecessor
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01977.yaml
+    role: Maintained graph/discussion overlay with minimal evidence, canonical history
+      and guarded regeneration.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261015T102731Z-pf01977-scfdc-causal-evidence
+    finding_id: atomic-steps-and-domain-attribution
+- finding_id: assay-discrepancies-and-normalization
+  issue_key: pf01977-assay-discrepancies-and-normalization
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Resolve source contradictions, full constructs and normalized comparisons
+  description: Retain 1w versus abstract phenothiazine gain, n/o fresh-cell conflicts,
+    control-figure miscitation, 2-4/4-h versus 15-h timing, pH 6.0 omission and cross-context
+    values, Table 1/Figure 3 differences, 1x isomer naming and F133A energy label.
+    Complete inserts, vector-matched WT, variant expression and active occupancy remain
+    unresolved alongside earlier issues. Issue 219 stays open.
+  target_ids:
+  - PF01977
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - panel
+  - conditions
+  - identity
+  - model
+  - predecessor
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01977.yaml
+    role: Maintained graph/discussion overlay with minimal evidence, canonical history
+      and guarded regeneration.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261015T102731Z-pf01977-scfdc-causal-evidence
+    finding_id: assay-discrepancies-and-normalization
+actions:
+- action_id: continue-primary-mechanism-review
+  description: Continue the three existing scientific findings with exact-member primary
+    evidence and discriminating construct/assay checks.
+  finding_ids:
+  - member-and-partner-coverage
+  - atomic-steps-and-domain-attribution
+  - assay-discrepancies-and-normalization
+  target_ids:
+  - PF01977
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01977.yaml
+    role: Maintained graph/discussion overlay with minimal evidence, canonical history
+      and guarded regeneration.
+  acceptance_checks:
+  - Map new tested members and partners to verified reference/domain coordinates while
+    retaining unverified full inserts and strains.
+  - Support each directed relation with its actual assay and controls; distinguish
+    observed endpoint, inferred route and computational hypothesis.
+  - Resolve disagreements using raw/primary construct or assay evidence without silently
+    correcting figures, equating contexts or assuming occupancy.
+  - Retain stable finding identities, actual history and guarded generation while
+    completing remaining family and corpus coverage.
+limitations:
+- Partial same-agent scientific review, not independent expert approval, experimental
+  replication or completion of PF01977/all-family work.
+- 'Selected original figures only: main 1-4 and supplement S25/S26/S67/S68/S70/S78;
+  other individual chromatograms were not all visually reviewed. Docking was not rerun;
+  raw replicate measurements and full assay constructs remain unverified.'
+- PMC HTML presented a browser check and Nature HTML had failed; already retrieved
+  official OAI/OA deposits were used. Addgene sequence download requires login and
+  was not bypassed. Access failures are not absence evidence.
+- Initial scratch integrity checks failed because XML subscript text was separated
+  and Table 1 chemical labels were incorrectly expected in the name cell. Structured
+  extraction was corrected against the actual XML, then all checks passed; no scientific
+  value was changed to satisfy them.
+- Canonical source pins/Pages and full release QC remain separate, unperformed publication
+  work. The source-pin check fails for the edited overlay; no release claim is made.
+tags:
+- causal-graphs
+- pf01977
+- scfdc
+- substrate-scope
+- scientific-self-review
+```
