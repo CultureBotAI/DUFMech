@@ -6441,3 +6441,67 @@ PF01977 ScFdc substrate-scope publication audit (2026-10-15, PR #225):
   before final full QC, exact-head CI, merge integrity and deployment. These
   future outcomes are not certified by this checkpoint. Preserve annotated
   source tags after deleting the feature branch.
+
+PF01978 TrmB initial causal assessment (2026-10-15, local continuation):
+
+- Continued from merged PR #225 at
+  `1681f523e90533997fbdc3c42612b66b321ea3e8` in
+  `/private/tmp/dufmech-pr220-20261015`, branch
+  `feat/duf-pf01978-trmb-causal-evidence`. The previous publication-status
+  turn did not add scientific content; this continuation creates the native
+  PF01978 overlay, evidence ledger, history and scoped review.
+- Lee2003 primary text/captions support reconstituted repression, separate
+  maltose/trehalose responses and footprint loss. Original figure images were
+  not available through attempted routes. The Surma dissertation's methods
+  and original Figures 45-48/51 were inspected for promoter-selective Y50N/E87A
+  effects, retained repression and artificial composite-promoter responses.
+  This is thesis evidence, published in 2011, not a newly inspected 2007 paper.
+- Complete Q7LYW4/Q9HGZ9 reference bodies are identical; PF01978 maps to
+  11-77, PF11495 to 110-234 and PF31112 to 249-335. Y50 is in PF01978,
+  E87 outside it. pSL152 provenance differs across sources. Krug2013 reports
+  V161A while 3QPH's actual atoms model Val161; terminal extensions also differ.
+  These are unresolved discrepancies, not silently corrected constructs.
+- Eleven graphs retain 25 OBSERVED edges and one HYPOTHESIZED TBP-occlusion
+  edge. Six graphs are MECHANISTIC, four PHENOTYPIC and one HYPOTHETICAL.
+  Counts are structural and include reuse of an assay for different comparisons,
+  not independent experiments. Whole-protein effects do not establish isolated
+  PF01978 sufficiency, direct residue contacts or native transporter flux.
+- Explicit limits include opposite trehalose EMSA/transcription readouts,
+  glucose-containing protein stock without dialysis, residual mutant repression,
+  unequal nuclease doses, diffuse MD shifts and nonmonotonic/composite-template
+  outputs. Footprint edges use matched nuclease conditions. Remaining constructs,
+  promoters, anti-inducers, paralogs/taxa and native mechanisms stay open.
+- Ledger: `evidence/PF01978/trmb-primary-assays.txt`, SHA-256
+  `e15a096c12490afde76bbd6367bcdabd42b7103faac3a2db1147f79093aaed62`.
+  Review: `reviews/structured/20261015T141642Z-pf01978-trmb-causal-evidence/`
+  (`review.yaml` and derived `review.md`), partial scientific self-review,
+  NEEDS_FOLLOWUP, three OPEN findings. The family remains IN_PROGRESS.
+  Semantic digest:
+  `9f0d9472055392c3286704593c2427b244f1c94dc46f98d1c6038e443e72cb07`.
+- Baseline/initial guarded regeneration pass, changing only PF01978 and its
+  manifest. All 8,296 manifest hashes and 26 evidence hashes/quotations verify;
+  imported fields and other records, frozen sources, prior reviews/history,
+  evidence, code and canonical Pages/pins are preserved. The structural inventory
+  now has 845 graphs/1,824 edges across 128 families and 8,168 graphless families.
+  KGX/SSSOM change only PF01978's curation status and reproduce natively.
+- Schema reproduction and 52 focused graph/QC tests pass. The initial test
+  invocation lacked the pinned CLAW dependency setting; corrected invocation
+  passed without code changes. Native unpinned preview passes at 1440px/390px
+  with all graphs, edge labels, evidence links, disclosures and three OPEN
+  discussions; selected screenshots inspected. A scratch check was corrected
+  to expand folded evidence before testing visible values. No document overflow
+  or JavaScript errors; native table scrolling remains, browser/server closed.
+- Source-pin currentness fails for `data/families/PF01978.yaml`; canonical
+  Pages/pins are unchanged. No new commit, push, PR, merge, publication or full
+  release-QC claim is made. Actual REVIEW-history index regeneration and final
+  native validation follow the retained review. The full 8,296-family goal
+  remains active; continue PF01978's remaining primary contexts and the corpus
+  queue rather than treating graph presence as completion.
+- Final preview/apply refreshes only PF01978's generated audit index and its
+  manifest after CREATE `2026-10-15T140002Z-codex-211131` and REVIEW
+  `2026-10-15T141322Z-codex-701838`. The reviewed scientific digest stays
+  unchanged. `just validate-all validate-schema` passes: 8,296 records with
+  zero drift, 326 history files, four review-contract tests, 172 structured
+  reviews, 180 native reports and zero schema differences. Final integrity and
+  current unpinned desktop/mobile preview rechecks pass. Canonical publication
+  and full release QC remain unperformed; no status promotion is made.

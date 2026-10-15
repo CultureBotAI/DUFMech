@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01978
+  path: curation/families/PF01978.yaml
+session:
+  id: 2026-10-15T140002Z-codex-211131
+  timestamp: '2026-10-15T14:00:02Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped TrmB repression, sugar-response and promoter-selective mutant
+    graphs
+  details: Inspected Lee2003 primary text/captions, Surma thesis methods and original
+    Figures 45-48/51, Krug2013 structure and 3QPH deposition, and complete UniProt/InterPro
+    reference mappings. Added a minimal evidence ledger and 11 graphs with 25 observed
+    edges and one explicitly hypothesized TBP-occlusion edge. Preserved whole-protein/domain
+    boundaries, residual activity, glucose carryover, differing trehalose outcomes,
+    incomplete constructs and publication/deposition discrepancies. Baseline records-check
+    passed for all 8296 records with zero drift. Family remains IN_PROGRESS with three
+    open evidence/coverage discussions; projection, retained review and validation
+    follow this actual curation event.
+  sections:
+  - causal_graphs
+  - discussions

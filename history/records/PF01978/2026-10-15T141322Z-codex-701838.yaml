@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01978
+  path: data/families/PF01978.yaml
+session:
+  id: 2026-10-15T141322Z-codex-701838
+  timestamp: '2026-10-15T14:13:22Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review scoped TrmB causal graphs and retain three open scientific findings
+  details: Saved partial scientific self-review 20261015T141642Z-pf01978-trmb-causal-evidence
+    against semantic digest 9f0d9472055392c3286704593c2427b244f1c94dc46f98d1c6038e443e72cb07.
+    All 11 graphs/26 edges were assessed against named primary text, original thesis
+    figures, reference mappings and deposition checks. Native generation, evidence
+    hashes, all-record preservation, 52 focused tests, schema reproduction, inventory/exports
+    and responsive unpinned preview pass. Initial dependency-setting and folded-content
+    browser-check errors were corrected without scientific edits. Construct/domain
+    boundaries, assay carryover/discrepancies and remaining family/promoter coverage
+    stay open. Source-pin currentness fails for the changed projection; no release
+    claim or REVIEWED promotion. Final history-index regeneration and native validation
+    follow.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261015T141642Z-pf01978-trmb-causal-evidence/review.yaml
