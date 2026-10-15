@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01976
+  path: data/families/PF01976.yaml
+session:
+  id: 2026-10-15T042712Z-codex-3918bc
+  timestamp: '2026-10-15T04:27:12Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial scientific review of DUF116 causal-evidence boundaries.
+  details: Saved 20261015T042712Z-pf01976-causal-evidence-boundaries as a same-agent
+    scientific self-review, pass_with_limitations/native NEEDS_FOLLOWUP. Three open
+    findings cover redox reactions and member evidence, prenyl-domain attribution
+    and DVU3364 allele causality. Verified exact reference mappings, primary comparison
+    limits, all8296 manifest hashes, unchanged imported fields and other families,52
+    passing focused regressions, schema reproduction and1440px/390px graphless preview.
+    KGX/SSSOM differ only in PF01976 curation status. Source-pin check correctly rejects
+    the changed projection pending a separately authorized retained source checkpoint;
+    no publication or family-wide completion is claimed.
+  sections:
+  - discussions
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261015T042712Z-pf01976-causal-evidence-boundaries/review.yaml

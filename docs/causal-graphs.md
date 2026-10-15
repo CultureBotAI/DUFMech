@@ -70,19 +70,19 @@ family content, history, or scientific review status.
 
 ## Progress
 
-Worktree: `/private/tmp/dufmech-causal-graphs`, branch `feat/duf-pf01973-causal-graphs`.
+Worktree: `/private/tmp/dufmech-causal-graphs`, branch `feat/duf-pf01976-causal-evidence`.
 Starting source revision: `9d7a87f74786813fcdf65801bdf940d79cc7a56e`.
 Initial inventory and implementation began at 2026-10-11T04:00:01Z.
 The initial batch was merged in PR #199. Continuation begins from
 `2da6c366b06615fbb6c34379318771fe09f4cfda`. PF01972 was published through merged
-[PR #200](https://github.com/CultureBotAI/DUFMech/pull/200); the current PF01973
-continuation starts from `c6a4d055de0a9ef0edc74f5c61cbbacfd8822904` and its
-publication is tracked in [PR #202](https://github.com/CultureBotAI/DUFMech/pull/202).
+[PR #200](https://github.com/CultureBotAI/DUFMech/pull/200). PF01973 was published
+through PRs #202, #208 and #210. The current PF01976 continuation starts from
+`d53afef37b7e7f0667511c3e919a44c1270631a4`, the merged PR #210 revision.
 Earlier local-only checkpoints below describe their state at the time, not the
 current release status.
 
-One hundred and twenty-six families now have 1,616 evidence-linked edge entries in 757
-scoped graphs. Of these, 1,589 are OBSERVED, twenty-three are HYPOTHESIZED,
+One hundred and twenty-six families now have 1,680 evidence-linked edge entries in 791
+scoped graphs. Of these, 1,653 are OBSERVED, twenty-three are HYPOTHESIZED,
 three are INFERRED and one is CONTESTED;
 counts are structural, not numbers of independent experiments:
 
@@ -1222,7 +1222,14 @@ catalytic-base and Asp415 donor-pocket proposals are not observed chemistry.
 Maf variant controls, exact glycan stereochemistry and later-member mechanisms
 remain open; no kinase/glycosyltransferase function is generalized across PF01973.
 
-All 132 curated families remain IN_PROGRESS with partial scientific
+PF01976 (DUF116) retains a graphless assessment: the comparative redox
+prediction, automated prenyl-synthase annotations and a DVU3364 frameshift in
+a multi-mutant salt-adapted strain do not establish a directed DUF116 effect.
+Three OPEN discussions distinguish reaction evidence, fusion-domain attribution
+and allele-specific causality. Exact reference mappings and access limits are
+retained in `evidence/PF01976/causal-evidence-assessment.txt`.
+
+All 133 curated families remain IN_PROGRESS with partial scientific
 self-review, not exhaustive family reviews. Git access returned during the
 2008 follow-up, and PF01955's `20261012T130729Z` successor now covers all twenty
 graphs, including the previously unretained native2009 additions. It supersedes
@@ -1243,9 +1250,10 @@ PF01972's `20261014T205229Z` report preserves the observation/hypothesis
 distinction, scoped mapping and open assay/coverage findings.
 PF01973's `20261014T223640Z` report preserves the archaeal/bacterial boundaries,
 observed-versus-proposed residue effects and two open coverage findings.
-The other 8,164 families still need
+The other 8,163 families still need
 individual evidence research and retained dispositions. The structural inventory
-has 8,170 graphless families, including PF01629, PF01724, PF01886, PF01954, PF02621 and PF20352.
+has 8,170 graphless families, including PF01629, PF01724, PF01886, PF01954,
+PF01976, PF02621 and PF20352.
 No edge is invented for a graphless family. Do not mark the corpus-wide goal complete based on schema
 support or these examples.
 
@@ -5582,8 +5590,9 @@ mapping, later full papers and metadata reconciliation remain open. The former
 PF01952 pointer was incorrect: an ignored-file-inclusive search and the actual
 retained membership identify PF01954 through PF01959 and PF01969 among the now
 partially assessed records. PF01970, PF01972 and PF01973 are now also partially
-assessed. Continue PF01973's later Maf/member contexts; PF01976 is the next
-untouched ascending accession, not a reason to drop earlier follow-ups. PF01955's
+assessed. PF01976 now has a scoped graphless assessment. Continue PF01973's
+later Maf/member contexts and PF01976's open evidence questions; PF01977 is the
+next untouched ascending accession, not a reason to drop earlier follow-ups. PF01955's
 immediate follow-ups are unresolved CbiS2006 clones, assay conflicts and native
 mechanisms, the2008 historical donor strains/inserts, supplemental product traces,
 reporter and unit conflicts, historical deletion alleles and fusion junctions,
@@ -5942,3 +5951,78 @@ PF01973 Kurthia/Irchel publication audit (PR #210, 2026-10-15):
   [#205](https://github.com/CultureBotAI/DUFMech/issues/205) and
   [#207](https://github.com/CultureBotAI/DUFMech/issues/207) remain open.
   PF01973 stays IN_PROGRESS and the corpus-wide objective remains active.
+
+PF01976 DUF116 causal-evidence assessment (local curation, 2026-10-15):
+
+- Added three OPEN discussions and a minimal, source-hashed evidence ledger.
+  Makarova2015's redox proposal remains comparative; automated prenyl-synthase
+  labels do not identify DUF116 catalysis; the Zhou2017 DVU3364 frameshift is
+  associated with a multi-mutant salt-evolved strain, not an isolated allele
+  effect. No directed edge is adopted from the inspected material. This is
+  a scoped graphless assessment, not a claim of functional absence.
+- Verified reference intervals: Q58541/MJ1141 50-213, Q6M0V6/MMP0162 47-210,
+  Q725R0/DVU3364 92-260; D5SS13 has PF01976 67-231 separately from PF00348
+  297-545. Reference mappings do not certify experimental/evolved constructs.
+  The original salt-study Table 1 continuation was visually inspected;
+  exact allele reconstruction and supplementary primer checks remain open.
+- Retained partial scientific self-review:
+  `reviews/structured/20261015T042712Z-pf01976-causal-evidence-boundaries/review.yaml`
+  and its derived Markdown. Verdict is `pass_with_limitations`, native
+  `NEEDS_FOLLOWUP`, with three open findings. PF01976 remains IN_PROGRESS.
+  Semantic digest is
+  `9b7bc79ac8aed0744b99795e721badc52fc8b5ae5a6d4dfc34002190ec4ce868`.
+- CREATE history is
+  `history/records/PF01976/2026-10-15T041826Z-codex-0441fd.yaml`; REVIEW history is
+  `history/records/PF01976/2026-10-15T042712Z-codex-3918bc.yaml`.
+  Both events were appended before the respective guarded regeneration.
+- Final records-check validates all 8,296 records with zero drift. All 8,296
+  manifest hashes match; only PF01976 changes. Schema reproduction is current,
+  313 history records, 162 structured bundles and 170 native reports validate.
+  The 52 graph/QC tests and four review-contract tests pass. KGX/SSSOM are
+  current and change only PF01976's curation status; association edges,
+  imported metadata, PF01973, frozen sources and prior reports are unchanged.
+- The refreshed inventory retains 791 graphs and 1,680 edges across 126
+  families, with 8,170 graphless. Only PF01976's status/digest changes among
+  all 8,296 compared inventory rows; the native inventory check also verifies
+  all 8,296 rows. There are 133 IN_PROGRESS and 8,163
+  SEEDED records; these are partial-assessment counts, not completed science.
+- The unpinned one-family preview passes at 1440px and 390px: graphless
+  disclaimer, all three questions, exact mappings, evidence links, no overflow
+  and no JavaScript errors. Selected desktop/mobile screenshots were inspected.
+  An initial case-sensitive test selector was corrected to the existing
+  lowercase heading; application/rendering code was not changed.
+- Canonical Pages and source pins are unchanged. The actual source-pin check
+  rejects the changed PF01976 bytes pending an authorized retained checkpoint.
+  Full publication QC was not run and no new GitHub publication is claimed.
+  Makarova supplement download challenges, the RSC 404, uninspected allele
+  primers and later member literature remain explicit coverage limits.
+  PF01977 is next by actual directory membership; all earlier follow-ups and
+  the full 8,296-family objective remain active.
+
+PF01976 publication audit (PR #211, 2026-10-15):
+
+- The user authorized commit, PR, adversarial review, issue remediation, merge
+  and branch cleanup. The PR contains the completed local PF01976 assessment;
+  PF01977 research remains scratch work and is not adopted by this release.
+- The publication blocker was reproduced locally and in initial CI run
+  `38683378652`: the preceding source ledger rejects the changed PF01976 bytes.
+  [Issue #212](https://github.com/CultureBotAI/DUFMech/issues/212) tracks native
+  source capture, Pages regeneration and final release verification.
+- Candidate commit `13b3b6b3058c22af38a792ecf6aafd436ea91dcd` is retained by
+  annotated tag `source/dufmech-pr-211-candidate`. Native capture and canonical
+  remote verification pass for all 9,126 source files. Prior tags are preserved.
+- The adversarial same-agent recheck confirms the comparative redox scope,
+  separate fusion-domain intervals and multi-mutant salt-strain confounding.
+  The original Zhou2017 table image and the retained provider mappings were
+  rechecked; no new causal edge or experimental construct identity is inferred.
+  This is not independent expert approval or a completed family review.
+- Scientific findings remain open as
+  [#213](https://github.com/CultureBotAI/DUFMech/issues/213) (redox/member evidence),
+  [#214](https://github.com/CultureBotAI/DUFMech/issues/214) (prenyl-domain
+  attribution), and [#215](https://github.com/CultureBotAI/DUFMech/issues/215)
+  (DVU3364 allele causality). The existing native discussions guard against
+  unsupported claims; publishing them does not resolve the underlying science.
+- The audit-bearing checkpoint must also be retained and captured before final
+  full QC, exact-head CI, merge and deployed-page verification. Those outcomes
+  are subsequent release gates, not claims made by this candidate audit.
+  All 8,296 families and prior follow-ups remain in the scientific objective.

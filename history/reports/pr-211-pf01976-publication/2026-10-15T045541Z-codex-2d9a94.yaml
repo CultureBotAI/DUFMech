@@ -1,0 +1,31 @@
+history_version: 1
+target:
+  kind: report
+  slug: pr-211-pf01976-publication
+  path: reviews/structured/20261015T045541Z-pr-211-pf01976-publication/review.yaml
+session:
+  id: 2026-10-15T045541Z-codex-2d9a94
+  timestamp: '2026-10-15T04:55:41Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: changed
+  summary: Retain PF01976 adversarial publication audit and track evidence gaps
+  details: Same-agent bounded publication review rechecked primary evidence boundaries,
+    four reference mappings, all 8296 projection hashes, native validation, governed
+    runtime, candidate source retention and responsive canonical Pages. Initial stale-pin
+    failure is tracked in issue 212; candidate retention passes. Scientific issues
+    213, 214 and 215 remain open. Final audit-bearing source capture, full QC, exact-head
+    CI and deployment are subsequent mandatory gates. This report does not promote
+    PF01976 or complete the corpus-wide scientific goal.
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/212
+  prs:
+  - https://github.com/CultureBotAI/DUFMech/pull/211
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261015T045541Z-pr-211-pf01976-publication/review.yaml

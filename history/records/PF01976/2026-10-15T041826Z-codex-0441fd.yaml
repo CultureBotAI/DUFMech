@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01976
+  path: curation/families/PF01976.yaml
+session:
+  id: 2026-10-15T041826Z-codex-0441fd
+  timestamp: '2026-10-15T04:18:26Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: needs_followup
+  summary: Retain scoped DUF116 causal-evidence assessment without unsupported edges.
+  details: Inspected Makarova2015 comparative analysis and Zhou2017 mutation-table
+    image, mapped MMP0162/MJ1141/D5SS13/DVU3364 references and separated automated
+    prenyl labels from domain-specific activity. Added three OPEN discussions and
+    a minimal evidence ledger. Baseline records-check passed for all8296 records with
+    zero drift. No causal edge is established by the inspected sources; exact redox
+    reactions, fusion-domain function, evolved allele causality, inaccessible supplements
+    and other member evidence remain open. This is not family-wide completion or publication.
+  sections:
+  - discussions
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC5898192/
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC5686539/
