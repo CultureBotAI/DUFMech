@@ -5998,3 +5998,31 @@ PF01976 DUF116 causal-evidence assessment (local curation, 2026-10-15):
   primers and later member literature remain explicit coverage limits.
   PF01977 is next by actual directory membership; all earlier follow-ups and
   the full 8,296-family objective remain active.
+
+PF01976 publication audit (PR #211, 2026-10-15):
+
+- The user authorized commit, PR, adversarial review, issue remediation, merge
+  and branch cleanup. The PR contains the completed local PF01976 assessment;
+  PF01977 research remains scratch work and is not adopted by this release.
+- The publication blocker was reproduced locally and in initial CI run
+  `38683378652`: the preceding source ledger rejects the changed PF01976 bytes.
+  [Issue #212](https://github.com/CultureBotAI/DUFMech/issues/212) tracks native
+  source capture, Pages regeneration and final release verification.
+- Candidate commit `13b3b6b3058c22af38a792ecf6aafd436ea91dcd` is retained by
+  annotated tag `source/dufmech-pr-211-candidate`. Native capture and canonical
+  remote verification pass for all 9,126 source files. Prior tags are preserved.
+- The adversarial same-agent recheck confirms the comparative redox scope,
+  separate fusion-domain intervals and multi-mutant salt-strain confounding.
+  The original Zhou2017 table image and the retained provider mappings were
+  rechecked; no new causal edge or experimental construct identity is inferred.
+  This is not independent expert approval or a completed family review.
+- Scientific findings remain open as
+  [#213](https://github.com/CultureBotAI/DUFMech/issues/213) (redox/member evidence),
+  [#214](https://github.com/CultureBotAI/DUFMech/issues/214) (prenyl-domain
+  attribution), and [#215](https://github.com/CultureBotAI/DUFMech/issues/215)
+  (DVU3364 allele causality). The existing native discussions guard against
+  unsupported claims; publishing them does not resolve the underlying science.
+- The audit-bearing checkpoint must also be retained and captured before final
+  full QC, exact-head CI, merge and deployed-page verification. Those outcomes
+  are subsequent release gates, not claims made by this candidate audit.
+  All 8,296 families and prior follow-ups remain in the scientific objective.
