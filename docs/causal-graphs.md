@@ -6736,3 +6736,60 @@ PF01978 TrmBL1 publication checkpoint (PR #235, 2026-10-15):
   #228-230. Its own retained checkpoint, final full QC, exact-head CI, merge
   integrity and deployment remain subsequent release gates, not claims made
   by this candidate audit. Source-retention tags must survive branch deletion.
+
+PF01978 original Lee2007 reported-assay checkpoint (PR #237, 2026-10-15):
+
+- Three added graphs retain six author-reported effects from the original
+  PF0124/TrmBL1 paper: two SEC distribution shifts, maltotriose tracer
+  competition, and three mutant MD-promoter EMSA comparisons. The paper's
+  Results, captions and methods were inspected; original Figures 3/10 images
+  were not. These are PHENOTYPIC/OBSERVED/UNRESOLVED/EXPERIMENTAL effects, not
+  direct subunit counts, measured affinity constants or atomic DNA contacts.
+- The new hash-anchored ledger is
+  `evidence/PF01978/trmbl1-lee2007-assays.txt`. It preserves assay-specific tag
+  ambiguity, the fructose/sucrose discrepancy, weak tracer signal, unmatched
+  sugar doses and incomplete construct verification. Paper and thesis
+  preparations are separate contexts, not independent replication.
+- All 39 earlier graphs and all other 8,295 family projections are preserved.
+  PF01978 now has 42 graphs and 96 edges (89 observed, seven hypothesized),
+  ten canonical events and three OPEN discussions. Its scientific digest is
+  `07473dc0884399c826ed0614b6dedf22bdc2468a9447d8aeebd3f27f434fee65`.
+  Status stays IN_PROGRESS, with no qualifying REVIEWED pointer.
+- The partial scientific successor is
+  `reviews/structured/20261015T193546Z-pf01978-lee2007-reported-assays/review.yaml`.
+  Scientific issues #228-230 remain open and received the new limitations.
+  Structural coverage is 876 graphs/1,894 edges in 128 families; 8,168 families
+  remain graphless. Presence is not completed scientific review.
+- Issue #236 records the stale source-pin failure, reproduced locally and in
+  CI run `38797832510`. The retained prerequisite audit is
+  `reviews/structured/20261015T195616Z-pr-237-publication-blocker/review.yaml`.
+  Annotated tag `source/dufmech-pr-237-candidate` retains source commit
+  `38467c6685ee5df681c285d05313d06f804be60a`; native capture and canonical
+  retention verification pass for all 9,189 candidate source files.
+- All 52 focused graph/QC tests, schema generation, 334 history records,
+  the 22 governed-artifact checks and isolated real OAK rejection cases pass.
+  Canonical rendering, successor audit retention, final full QC, exact-head CI,
+  merge and deployment are subsequent gates, not certified by this checkpoint.
+  Source tags must survive feature-branch deletion. PF01980 research is not
+  included in this publication batch; the full 8,296-record goal remains open.
+
+- The first canonical render exposed archive-capacity issue #238:
+  420,264,931 bytes exceeded the 420,000,000-byte budget. Prior main contained
+  419,783,677 bytes, so the accounted increase is 481,254 bytes: 414,066 in
+  retained review downloads, 31,924 in family HTML/JSON, 12,688 in the family
+  YAML download, 2,839 in history downloads, 908 in the ownership manifest,
+  and 18,829 in other generated metadata. Exact-download checks found no
+  altered historical evidence. The archive cap is now 430,000,000 bytes,
+  a bounded 2.38% capacity increase with roughly 9.7 MB headroom at this
+  candidate. This is an explicit archive-capacity adjustment, not a claim
+  that the old budget passed. Per-page, initial-load, catalogue and file-count
+  limits are unchanged. A focused regression includes source downloads and
+  proves exact-budget acceptance and one-byte-over rejection.
+- The passing candidate successor is
+  `reviews/structured/20261015T200629Z-pr-237-lee2007-publication/review.yaml`.
+  It resolves the exact source-pin predecessor, documents the archive-capacity
+  adjustment and records 76 passing focused tests, the full site contract and
+  desktop/mobile disclosure checks. It is adversarial self-review, not
+  independent scientific approval. Retain and render this audit's checkpoint
+  before final full QC, exact-head CI and merge; those future results are not
+  certified by the review artifact.
