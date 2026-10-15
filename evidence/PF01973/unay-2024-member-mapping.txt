@@ -1,0 +1,92 @@
+PF01973 Unay2024 member/construct audit, 2026-10-15 UTC
+
+Primary identity: PMID:38897200, doi:10.1016/j.cub.2024.05.058.
+Supplement Tables S1-S3 and S6 establish the experimental names/accessions.
+UniProt query (gene:SO_3273 OR gene:SO_3259 OR gene:SO_3260 OR gene:SO_3238
+OR gene:SO_3237) AND organism_id:211586, JSON size=10:
+https://rest.uniprot.org/uniprotkb/search
+Response SHA256 c6beb34963cf898901702e8c94e208377490f811e50eab3c64aa93d9d262c76e.
+All five reference sequences have sequence version 1. Species/strain is
+Shewanella oneidensis MR-1, NCBITaxon:211586.
+
+Maf1: SO_3273, AAN56271.1, WP_011073156.1, UniProtKB:Q8EC71,
+822 aa, entry114, sequence MD5 328135ca0c68b4b65415a77ace36ddd9.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01973/protein/uniprot/Q8EC71/
+Response SHA256 4b1ecdd898ca12c4079916b31a44c0bf154803641616e3149279e094b45129e6.
+PF01973 174-338 inclusive, reported score1.4e-42. Reference D247/D333 verified.
+S6 Sheet1 row3 (3xFLAG-FlaA-Maf1) encodes a full 822-aa exact match to Q8EC71
+when translated in its coding frame. Assayed 1-420 and 1-699 truncations are
+not isolated profile fragments. TPR576-822 is an HHpred/structure prediction;
+421-822 and 550-822 are experimental CTD constructs entirely outside PF01973.
+
+Maf2: SO_3259, AAN56257.1, WP_011073142.1, UniProtKB:Q8EC85,
+441 aa, entry90, sequence MD5 bd3eb965e42f94d71467f592b08ca90a.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01973/protein/uniprot/Q8EC85/
+Response SHA256 525014e2d5cd79b344b794d72d203ae77f5e6aa3cdf2ebaf9808ed9aecb7be4b.
+PF01973 182-352 inclusive, reported score1.9e-36. Reference D261/D347 verified.
+NCBI AAN56257.1 independently matches the entire Q8EC85 sequence.
+S6 Sheet1 row4 (3xFLAG-FlaB-Maf2) encodes 441 residues but differs at 230:
+reference Leu, deposited synthetic design Ser. The CDS occupies one-based
+nucleotides953-2275 of that cell's sequence; codon230 is TCA at1640-1642.
+Translated design MD5 12149770e6cd2e04c7c1a868a82528e1. This is a data-file
+discrepancy, not proof that the physical experimental plasmid carried L230S.
+Do not call the synthetic lineage sequence-identical to wild type. Genomic
+deletions and genome-amplified BACTH constructs are distinct evidence contexts.
+The pJU0002-derived expression/mutagenesis/reconstitution lineage inherits
+this unresolved identity question; final plasmid sequences were not inspected.
+
+GlfM: SO_3260, AAN56258.1, WP_011073143.1, UniProtKB:Q8EC84,
+89 aa, entry80, MD5 22e482e95fc335653b98df9bceea3e25.
+UniProt Pfam cross-reference is PF26154, not PF01973. F24/R25/D77/E80 verified.
+It is a partner in graphs of Maf2 function, never the PF01973 catalytic domain.
+
+FlaA: SO_3238, AAN56237.1, WP_011073122.1, UniProtKB:Q8ECA5,
+273 aa, entry121, MD5 d04d3c3e7883bc5cc511407a95216cae.
+FlaB: SO_3237, AAN56236.1, WP_011073121.1, UniProtKB:Q8ECA6,
+272 aa, entry126, MD5 0bb01d94214f4ef08883218126486d76.
+Both currently use gene label fliC in UniProt; the study's FlaA/FlaB names are
+resolved through locus/sequence, not gene-name text alone. Pfam PF00669/PF00700
+are flagellin domains, not PF01973. S6 tagged constructs exactly contain native
+residues2-end, with an N-terminal tag/linker in place of reference initiator Met.
+Native S105/S143/S171/S180/S185 are verified; residue181 is Ala in both.
+No tag-inclusive residue renumbering or S181 site is asserted.
+
+Reproducible construct comparison
+S6 mmc3.xlsx SHA256 1f06d916e422054b6585a14041f94e76df59d5e89d501e7a3091e6120f1f5462.
+Parsed with openpyxl, translated three forward reading frames with Biopython1.88;
+local protein alignment used match2/mismatch-3/open-gap-5/extend-gap-0.5.
+Maf1 and Maf2 cover every reference residue without gaps; Maf2 has exactly one
+mismatch. Direct translation of the Maf2 CDS and equality with NCBI sequence
+independently confirmed the result. These comparisons are curator computations,
+not experiments or evidence of a functional effect caused by L230S.
+The same parser/translation/alignment also checked all five S6 FlaA mutant
+designs (rows6-10): each covers native residues2-273 with exactly its named
+S-to-A set (105/143/171/180/185;105/180;105/171/180;143/185;143/171/185).
+GlfM designs in rows11-14 each cover all89 native residues with exactly the
+named single substitution F24L, R25K, D77A or E80A. No other mismatch or
+internal gap was found in those aligned protein bodies. Tags/other vector
+sequences are outside these protein-body comparisons.
+
+Ortholog accession checks, not completed PF01973 mapping
+NCBI efetch db=protein, rettype=gb, retmode=xml for WP_068455574.1,
+WP_095156947.1, WP_068455571.1, WP_095156948.1, WP_011919637.1,
+WP_006085654.1 and AAN56257.1:
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi
+Response SHA256 aedbfc2c087f0e84fc0f9c367078a79cf726012a36c42e486da8d9e1e6539161.
+S1/S2 identify Kurthia sp.11kri321 Maf548aa/GlfM117aa and Irchel3E13
+Maf430aa/GlfM86aa. Their retrieved Maf feature is COG2604/CDD442016,
+not a demonstrated PF01973 coordinate interval. CDD esummary442016 confirms
+COG2604; response SHA256 bd77b15af0c477485a75ffd086d41f43ab0efec484735e6deed0fa36ce25f273.
+No equivalence of COG2604 with PF01973 is invented. UniProt exact-RefSeq
+queries returned no entries in this session; that is an API result, not proof
+that no UniProt entry exists. A Kurthia/PF01973 query returned other strains,
+which are not substituted for the tested protein.
+S. putrefaciens CN-32 GlfM WP_011919637.1 is97aa; S. baltica NCTC10735
+GlfM WP_006085654.1 is92aa. NCBI WP records aggregate species/genus membership;
+tested strain assignments come from S2 and Methods, not an invented strain
+taxon inferred from the WP response. Noncognate partner graphs remain scoped
+to the verified MR-1 PF01973 carrier, not a putative Maf of the partner species.
+
+No frozen snapshot, imported identity field, old evidence ledger or old review
+was rewritten by these current live mapping checks. PMID38897200 is one study,
+not family-wide biochemical equivalence or independent support from each database.

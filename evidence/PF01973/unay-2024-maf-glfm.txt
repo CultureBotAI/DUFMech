@@ -1,0 +1,175 @@
+PF01973: Unay, Kint and Viollier 2024, assessed 2026-10-15 UTC
+PMID:38897200; doi:10.1016/j.cub.2024.05.058.
+Primary archive: https://archive-ouverte.unige.ch/unige:178145
+Article PDF: https://access.archive-ouverte.unige.ch/access/metadata/45ee5ef6-3cad-493c-af65-99301007bf5a/download
+Article SHA256: 33b8af4c9c566d1fa0ec01b2e83528a2d88bf42d230136e4f51ca73b04d4e56c
+Supplement: https://access.archive-ouverte.unige.ch/access/metadata/fb5e8c12-7839-4626-a8d7-f0844c94d4e1/download
+ZIP SHA256: a8909a565f36db88e68adb287707f3f088d654229c7e47098c21ec746668901c
+mmc1.pdf (22 pages, Figures S1-S5, Tables S1-S3/S5) SHA256:
+997d6bf9a6cedec076ae3d87b9599a31543284951ee26360784a7dc9a91afbfc
+mmc2.xlsx (Table S4, plasmids) SHA256:
+77f853413bff8e180a8db986078135b16748f848acb0a438fa098655942bccec
+mmc3.xlsx (Table S6, synthetic fragments) SHA256:
+1f06d916e422054b6585a14041f94e76df59d5e89d501e7a3091e6120f1f5462
+mmc4.pdf is the combined article/supplement, not an independent experiment:
+6afc08e3805b83599b972ed8d585d299826c8e3957b14d561a6ef6f97ad9e8cc
+The archive identifies the published article as CC BY 4.0 and the supplement
+as public. Full originals and rendered figures stay outside the repository.
+The source PDF includes a cover and in-press page labels. Locators below use
+figure/table numbers rather than treating PDF and printed page numbers as equal.
+
+Minimal source quotations, 23 whitespace-delimited words total:
+Q1, Results heading: "Maf-1 and Maf-2 have opposing roles on motility"
+Q2, Results glycopeptide paragraph: "Maf-1 and Maf-2 promote flagellin glycosylation"
+Q3, Results introductory summary: "GlfM promotes complex formation"
+Q4, Results heading: "The C-terminal TPR domain"
+PDF ligatures normalized to ASCII. All following text is curator interpretation.
+
+Inspected material
+Results, Discussion and STAR Methods including plasmid construction and
+statistics; original Figures 1-5 and Tables 1-2 visually inspected; supplemental
+Figures S2/S4/S5 visually inspected and S1-S5 legends read; Tables S1-S3/S5,
+S4 plasmid table and S6 synthetic sequences parsed. Raw PRIDE PXD051215 spectra
+and Mendeley jrjkkb49vx.1 unprocessed images were not reanalyzed. Main Fig3 and
+supplemental S3 are not independent replication of every claimed phenotype.
+
+Native MR-1 phenotypes: Figure 1 and Figure 2B, Table 1
+In-frame deletions were PCR/Sanger-checked. WT, delta-maf1, delta-maf2 and the
+double mutant were compared. Loss of maf1 strongly reduces spread on 0.25%
+LB agar; loss of maf2 increases it. Double loss has very little spread. TEM
+shows strongly shortened filaments for maf1 loss and a further shortening in
+the double mutant. Complementation restores filament lengths toward WT.
+Figure 1D includes 22-32 cells per strain across two experiments; avoid claiming
+maf2 deletion leaves length quantitatively identical to WT. Main text describes
+similar lengths, whereas the plotted distributions differ. Sheared-fraction
+FlaA/B signal decreases for maf1 and double loss; anti-sigma70 checks lysis.
+This is not a direct assay of export rate or an isolated glycosylation step.
+The Figure 1B legend describes overnight 30 C followed by room temperature;
+general Methods describe 2 days at 30 C. Keep this protocol discrepancy visible.
+
+Flagellin glycopeptides: Table 1
+FLAG-FlaA and FLAG-FlaB were immunopurified separately. S143-containing peptides
+lose detected glycan masses in delta-maf1 but retain modification in delta-maf2.
+The S105-containing FlaA peptide loses modification in delta-maf2 and delta-glfM
+but retains it in delta-maf1. These are preferences, not exclusive site rules.
+FlaB S105 retains one +538 Da match in delta-maf2 and also one in the double
+mutant. Authors consider rare promiscuity or carryover; do not claim absolute
+absence of all modification in double loss. Other peptides carry multiple
+potential serines, and the table's bold positions refer to prior site assignments.
+"None", "peptide not observed" and "not analyzed" are distinct outcomes.
+Reported filtering: Byonic score >200, mass error 3 ppm. Spectral counts are not
+occupancies or biological replicate counts. Native glycan masses include
+510/524/538/539 Da and more complex adducts; Pse-derivative assignment combines
+MS and pathway dependence, not an independently resolved stereochemical structure.
+
+Acceptor substitutions: Figure 2C; pJU0026-pJU0030
+Five simultaneous S-to-A substitutions (105/143/171/180/185), two-site sets
+105/180 and 143/185, and three-site sets 105/171/180 and 143/171/185 each change
+FLAG-FlaA mobility in delta-flaA cells. The 105/171/180 set resembles delta-maf2.
+The 143/171/185 set does not fully resemble delta-maf1. Do not infer that each
+single serine is independently necessary, or that the five-site construct
+establishes absence of every possible glycan. These are acceptor variants, not
+mutations inside PF01973. Reference/native numbering excludes the FLAG tag.
+
+Maf variants: Figures 2D/E and S2
+Maf1 D247A fails to restore the WT-like FlaA/B mobility or motility; D333A
+partially restores these readouts relative to deletion/empty-vector cells.
+Maf2 D261A fails to restore WT-like mobility; D347A partly restores it. Both
+Maf2 variants reduce spreading relative to delta-maf2, including under IPTG
+induction, despite detectable sheared flagellin. Do not equate reduced spread
+with blocked export, or assume the D347A residual modification rescues motility.
+Anti-HA panels show expression of these Maf constructs. They do not measure
+folding, localization, normalized turnover, acid/base roles or metal coordination.
+Maf1 D247/D333 and Maf2 D261/D347 lie in their respective profile intervals.
+S2A aligns corresponding regions, but does not establish identical residue
+functions across AMB-1 and MR-1. Preserve the AMB-1 evidence separately.
+Synthetic Maf2 construct identity has the L230S discrepancy documented in the
+mapping ledger. It applies to this expression lineage, not automatically to
+genome-amplified BACTH constructs or native deletion experiments.
+
+Maf1 C-terminal deletions and reporter assays: Figure 3, S3 legends
+HA-Maf1(1-420), detectable on anti-HA blots, fails to restore modification and
+spreading in delta-maf1. HA-Maf1(1-699) yields partial recovery; filaments remain
+shorter than full-length complementation in the reported S3E experiment.
+Neither truncation is an isolated PF01973 fragment: the profile is 174-338.
+TPR prediction 576-822 differs from assayed CTDs 421-822 and 550-822.
+In E. coli BTH101, full-length Maf1/FlaA or FlaB T18/T25 combinations give
+positive LacZ reporters. Maf1(1-420) combinations have very low signal, whereas
+1-699 and isolated CTDs retain orientation-dependent signals. The isolated CTDs
+give weaker quantitative signals than full length and are outside PF01973.
+Unfused/empty controls, host control and FlgL/GlfM comparison are described.
+Five clones were pooled for most quantitative cultures, not five independent
+biological replicates. Two CTD421-822 combinations yielded only one clone.
+BACTH supports construct-dependent association/proximity, not an affinity,
+purified binary contact, catalytic rate or a demonstrated acceptor-positioning
+trajectory. Do not convert this assay into an observed binding-to-transfer chain.
+
+GlfM genetics and association: Figure 4, Table 1, Figure S4
+GlfM/SO_3260 is a distinct 89-aa partner (PF26154), not a PF01973 member.
+delta-glfM reproduces the maf2-like mobility and increased-spread phenotype;
+it removes detected S105-containing FlaA glycopeptides. Deleting glfM in
+delta-maf1 further increases mobility, similar to double-maf loss.
+Expression of GlfM restores the single-deletion pattern toward WT and the
+double mutant toward the delta-maf1 parental pattern, not WT glycosylation.
+WT GlfM raises the Maf2/FlaA or FlaB BACTH reporter relative to selected
+two-component controls. Do not read every differently oriented spot as a
+universal negative: the quantitative Figure 4C comparison is the clean test.
+FLAG-GlfM pull-down enriches Maf2 (26 unique peptides, 46 spectra, 59% coverage)
+versus empty-vector control (3/3/6%). Maf1 also appears weakly (2/2/3%) in
+the pull-down. These data do not prove absence of any Maf1 association or exact
+ternary stoichiometry. Interaction evidence is context for the causal reporter
+and functional effects, not itself an activation edge.
+D77A GlfM fails to restore the mobility pattern in both native backgrounds
+and fails to promote the selected tripartite BACTH signals. S4C detects
+FLAG-GlfM and FLAG-GlfM-D77A: no complete expression-loss claim is warranted.
+F24L, R25K and E80A variants retain native complementation under tested conditions;
+they are not generally dispensable residues. D77A does not prove a direct
+Maf2 contact or catalytic contribution by Asp77. Folding remains untested.
+
+Reconstitution and donor dependence: Figures 5A-C, S1, Table 2
+The important glycopeptide comparison uses C. crescentus NA1000-derived
+delta-flmG (endogenous flagellin GT removed, Pse pathway present) and delta-neuB
+(Pse deficient); the immunoblot also includes WT. Do not relabel all hosts WT.
+FLAG-FlaA plus Maf1 yields +359/+375 Da glycopeptides including S143 and the
+S105-containing peptide in delta-flmG. Maf2 plus GlfM and FLAG-FlaA yields
++359/+375 Da on the S105-containing peptide. Without GlfM those Maf2-dependent
+adducts are not detected. Other Table 2 peptides may be unobserved, so lack of
+their entry is not proof that Maf2 can never modify them. Donor-pathway state,
+acceptor, enzyme and partner are joint conditions, not independently sufficient.
+In delta-neuB, the +359/+375 forms disappear; +220 Da is detected on a
+multi-serine FlaA peptide with Maf1 and the S105-containing peptide with
+Maf2/GlfM. KDO is a proposed identity for +220, not chemically proven here.
+Main-text S181 conflicts with Table 2's S180 and reference Ala181; do not invent
+a serine at 181. Combined Maf1/Maf2 with GlfM further retards FLAG-FlaA in
+WT Caulobacter, but gel shifts alone do not quantify glycan count per molecule.
+Native delta-pseI/delta-pseC controls lose the slow-mobility flagellin form.
+These pathway perturbations do not identify the enzyme's atomic transfer step.
+The heterologous co-expression system is not purified Maf catalysis and uses
+host-generated, non-native glycan derivatives. Its synthetic Maf2 sequence
+discrepancy remains unresolved, not silently corrected to reference wild type.
+
+Orthologs and limits: Figure 5D/E, Figure S5, Tables S1/S2/S6
+Kurthia Maf/GlfM/Hag has a different outcome across hosts. GlfM promotes
+Hag-HA abundance and mobility shift in Shewanella. In Caulobacter, Hag is
+detectable without GlfM and there is residual Maf/Pse-dependent shift without
+GlfM (explicit S5A legend). GlfM is therefore not shown universally necessary.
+Pseudomonas Irchel 3E13 FliC/Maf/GlfM gives a Pse-dependent shift in Caulobacter.
+Exact WP_068455574.1 and WP_095156947.1 records were retrieved, but their
+COG2604 hits are not verified PF01973 coordinates; these two Maf systems are
+retained as mapped-accession leads pending profile/construct verification.
+S. putrefaciens CN-32 GlfM WP_011919637.1 restores MR-1 flagellin mobility in
+delta-glfM and supports the MR-1 Maf2/FlaB system in Caulobacter. Other tested
+GlfM partners (Kurthia, Irchel 3E13, S. baltica) do not give the same recovery.
+No matched abundance controls for every noncognate partner were established;
+failed complementation is not proof of intrinsic incompatibility or Leg preference.
+Only the carrier MR-1 Maf2 is assigned PF01973 in these cross-partner graphs.
+
+Unresolved construct/source discrepancies
+S6 deposited Maf2 differs from Q8EC85/AAN56257.1 at L230S. S4 lists pJU0014
+as D247A, but Methods and pJU0084 identify D333A. Methods' pJU0008 parent
+pJU0006 and pJU0037 parent pJU0028 conflict with their stated cargo in S4.
+S4 pJU0025 description differs from its Methods lineage (joint Maf1/Maf2).
+Native readout claims follow labeled figures; exact final plasmid sequencing
+is still required. No author confirmation or biological effect of L230S claimed.
+All earlier family findings remain open. This ledger is not a completed family
+review, a reanalysis of raw spectra, or a direct-mechanism claim for every edge.

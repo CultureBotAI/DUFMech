@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01973
+  path: data/families/PF01973.yaml
+session:
+  id: 2026-10-15T002541Z-codex-1400a3
+  timestamp: '2026-10-15T00:25:41Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain partial PF01973 Maf/GlfM scientific successor review
+  details: Reviewed the 28 added study-specific graphs and their 56 observed cellular/reporter
+    effects, preserving original graphs and earlier issue keys/targets. Saved review
+    20261015T002305Z-pf01973-maf-glfm-contexts with native NEEDS_FOLLOWUP and three
+    open findings, including deposited Maf2 L230S and plasmid conflicts. Verified
+    8296 manifest hashes, 52 focused tests, guarded regeneration, schema reproduction,
+    and 1440px/390px unpinned preview. No independent approval, raw-data reanalysis,
+    family completion or publication is claimed.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/204
+  - https://github.com/CultureBotAI/DUFMech/issues/205
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261015T002305Z-pf01973-maf-glfm-contexts/review.yaml

@@ -5801,3 +5801,50 @@ PF01973 publication review (PR #202, 2026-10-14):
   [issue #205](https://github.com/CultureBotAI/DUFMech/issues/205) for later
   Maf/GlfM systems and discriminating residue mechanisms. Publication does not
   close these findings, promote IN_PROGRESS, or complete the corpus-wide goal.
+
+PF01973 Maf/GlfM continuation (2026-10-15, local curation):
+
+- Assessed Unay2024 (PMID38897200) through the primary article and its public
+  UNIGE supplement, including Methods, Figures 1-5/S1-S5, Tables 1-2 and S1-S6.
+  Exact MR-1 Maf1/Maf2 profiles are 174-338/822 aa and 182-352/441 aa. GlfM is a
+  separate PF26154 partner; FlaA/B are acceptors, not PF01973 members.
+- Added 28 graphs with 56 observed, context-specific effects. The family now has
+  36 graphs and 72 edges: 70 OBSERVED and the two unchanged HYPOTHESIZED edges.
+  New cellular/reporter effects are not labeled direct purified-enzyme chemistry.
+  Original eight graphs, three older primary/mapping ledgers and prior reviews
+  remain unchanged; the dated coverage ledger has a successor entry.
+- Coverage includes native deletion/rescue, individual Maf substitutions,
+  CTD truncations, BACTH readouts, GlfM variants, grouped acceptor substitutions,
+  donor-pathway loss, heterologous reconstitution and CN-32 partner substitution.
+  Joint inputs, host backgrounds, residual activity and unobserved peptide
+  distinctions remain explicit. A +220 Da adduct is not presented as proven KDO.
+- S6's deposited synthetic Maf2 sequence encodes L230S relative to both Q8EC85
+  and AAN56257.1. Translation/alignment verified the full 441 aa, one mismatch,
+  and its exact codon; the physical experimental plasmid is not known to match
+  that deposited design. Genomic deletions and genome-amplified BACTH constructs
+  remain separate. S4/Methods plasmid conflicts and S180/A181 numbering are
+  retained in evidence/PF01973/unay-2024-member-mapping.txt.
+- Kurthia and Irchel Maf experiments were inspected, but exact PF01973 profile
+  mapping remains open; a COG2604 hit is not substituted for it. S5A also shows
+  residual Kurthia modification without GlfM, preventing universal necessity.
+  Archaeal findings, other bacterial contexts and the corrected Clostridium
+  supplement remain open. This does not close issues 204/205 or the corpus goal.
+- Baseline records-check passed 8,296 records with zero drift. Focused native
+  graph/QC regression tests passed 52 tests in 27.19s. The first history command
+  rejected an invalid actor enum without creating an event; the corrected
+  ai_agent command succeeded. A preview overlapping that append detected stale
+  history indexing and refused it; subsequent preview/apply must use the settled
+  sidecars. No guard was bypassed. Final regeneration/review checks follow.
+- The settled REVIEW event is
+  `history/records/PF01973/2026-10-15T002541Z-codex-1400a3.yaml`; subsequent
+  guarded regeneration validated 8,296 records and applied only the projection
+  and ownership manifest. The saved partial scientific successor is
+  `reviews/structured/20261015T002305Z-pf01973-maf-glfm-contexts/`.
+  Its three findings remain open, with the new construct-identity finding tracked
+  in [issue #207](https://github.com/CultureBotAI/DUFMech/issues/207).
+- Publication is now separately authorized. The initial native source-pin check
+  rejected the changed overlay, tracked in
+  [issue #206](https://github.com/CultureBotAI/DUFMech/issues/206).
+  A retained source checkpoint, canonical rendering, adversarial publication
+  review, full local QC and exact-head CI are required before merge. Publication
+  does not resolve the three scientific findings or complete the corpus goal.
