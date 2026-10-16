@@ -1,0 +1,50 @@
+PF01985 plant-splicing reference identity, checked 2026-10-16 UTC
+
+These reference mappings identify the genes and domain-bearing proteins, not
+the exact physical mutant genomes, residual polypeptides or domain-specific
+mechanisms. Coordinates below are 1-based inclusive Pfam matches from the
+InterPro entry/protein API, not the broader PROSITE annotations.
+
+Maize CAF1: UniProtKB:Q84N49, CAF1P_MAIZE, NCBITaxon:4577; sequence1,
+entry105 (2026-09-02),674aa, MD5 4B160E32CE1667B509081F5C3B593854.
+PF01985 matches185-268 and303-386. NCBIGene:542118.
+Original AY264368.1 CDS43-2067 translates to AAP22135.1 and exactly matches
+the674aa UniProt sequence. Biopython parsed both the CDS translation qualifier
+and nucleotide-derived translation; both comparisons passed.
+Maize CAF2: UniProtKB:Q84N48, CAF2P_MAIZE, NCBITaxon:4577; sequence1,
+entry103 (2026-09-02),611aa, MD5 9A7626166094BD4EF45E519A25FA1472.
+PF01985 matches234-317 and353-435. NCBIGene:542682.
+Original AY264369.1 CDS22-1857 translates to AAP22136.1 and exactly matches
+the611aa UniProt sequence by both independent parsed translation comparisons.
+The CDS coordinates include the stop codon; they are not insertion coordinates.
+
+Arabidopsis CFM2: UniProtKB:Q8L7C2, CFM2_ARATH, NCBITaxon:3702;
+At3g01370/TAIR:AT3G01370/NCBIGene:821288; sequence1, entry136
+(2026-09-02),1011aa, MD5 D043757EE0B6F173C6B31F3B8A4E3E5B.
+PF01985 matches166-249,378-462,579-666 and875-961.
+The gene identifier in Asakura/Barkan2007 maps exactly to this reference entry.
+UniProt links NP_186786.2 and the AY136347/AAM97013.1 and BT010594/AAQ89616.1
+cDNAs. These CFM2 nucleotide sequences were not independently translated here.
+AC010870/AAF24608.1 carries an ALT_SEQ flag and is not asserted identical.
+No actual CFM2 mutant protein abundance, truncation boundary, residual domain
+activity or maize-to-Arabidopsis physical-complex identity is established.
+
+Endpoints queried in the earlier same-day research, inspected again here:
+https://rest.uniprot.org/uniprotkb/Q84N49.json
+https://rest.uniprot.org/uniprotkb/Q84N48.json
+https://rest.uniprot.org/uniprotkb/Q8L7C2.json
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01985/protein/uniprot/Q84N49/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01985/protein/uniprot/Q84N48/
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01985/protein/uniprot/Q8L7C2/
+https://www.ebi.ac.uk/ena/browser/api/embl/AY264368.1
+https://www.ebi.ac.uk/ena/browser/api/embl/AY264369.1
+
+Downloaded source SHA256:
+Q84N49.json a804232e331a53360b7e20df80038026b9754851dd2ec896cd75f46f89048152
+Q84N49-pfam.json 4cc679545f7eaf9413dd410e3c15ff903c1cc24fe9ea24dce54b5996d3b5f619
+AY264368.embl e9ae3a7d4128f9afe32fae17a408448060c83b533db95b9cefce98b4dfa22514
+Q84N48.json 186ac5ef9800eedd7e2bb49f6574b2d47270fefa52c8938509f3dd7aff1476da
+Q84N48-pfam.json 152bcd30d6890afff470fd82d3b059b2f31213e664c3189b4d47ed67d3b57c3f
+AY264369.embl 23715dccab1a538c5c0813a841e40468021d7a81f3c82fec41df291311cea194
+Q8L7C2.json 9c59bcb770fe09679b381bd0776feca4e7a3d58eebbff3875fccee6dc3d13a87
+Q8L7C2-pfam.json bc296eaea36f8bf5ffea73e916186799ae5c44cbae56e4ed9adffa0ab4556a44

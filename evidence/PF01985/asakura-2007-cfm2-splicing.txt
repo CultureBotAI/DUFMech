@@ -1,0 +1,59 @@
+Asakura and Barkan (2007), PMID:18065687, doi:10.1105/tpc.107.055160
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2217638/
+Inspected 2026-10-16 UTC: cached primary Results/Methods and Figures5-8
+captions/images. Minimal quotation anchors: "splicing" and "PsaD".
+Remaining text is factual paraphrase and interpretation; no full text or image
+is redistributed. Figure8 is a summary, not the clpP experimental panel.
+HTML SHA256 56bf1adff30d1883b770a02346b9548561702b235f40e142de7acf32d86d9c2f
+Figure5 SHA256 f5a1118f722e6501f8af98b26b1261d78daa10ed0fc68dec6247227d5d4d4d63
+Figure6 SHA256 0285d0265adbe89bcb028b644ef0cf5317a5cd1eb2c282f6edd7b40d951674ef
+Figure7 SHA256 4b9d03125b9a308d54a4c5cb0d1177f7a50e26eaaddda055e82f83f2018bcd2a
+Figure8 SHA256 6715474f773a5acd9e64f91e30f8bd664db9404f74c018ee6babf83eb64700d7
+
+Arabidopsis At3g01370 alleles: SALK_000703=Atcfm2-1, a central insertion;
+SAIL_67_E05=Atcfm2-2, a near-3prime insertion. Main text reports cosegregation
+and failure of allelic complementation. This is not transgenic WT rescue.
+AtCFM2 protein levels were not assayed because the maize antibody did not
+detect the Arabidopsis protein; null/truncation/residual-activity assignments
+are therefore not measured protein properties. Supplemental genotyping was
+not separately inspected; Figure5 and main-text genetic descriptions were.
+
+RNA assays use leaves from2-3week plants on MS with2% sucrose,pH5.7; general
+growth14h light(23C,200uE/m2/s)/10h dark(21C). Rare Atcfm2-1 homozygous leaves
+came from10h-light/14h-dark growth. Figure5C includes parallel short-day plants,
+but exact matching of all RNA/protein assay controls to that regimen is not
+specified. Strong homozygote effects are not adopted as genotype-only edges.
+An ecotype and exact per-blot age/growth assignment are not asserted here.
+
+Figure7A/D poisoned-primer extension uses10ug total leaf RNA. Both homozygous
+Atcfm2-2 and heteroallelic Atcfm2-1/Atcfm2-2 show lower spliced-to-unspliced
+readouts for ycf3-int1,ndhA and clpP-int2 versus WT. ycf3-int2,atpF,clpP-int1
+and rpoC1 are unaffected in the shown comparisons. Atcrs1-1 controls selected
+effects of impaired photosynthesis. Figure7B's5ug RNA blots also show lower
+fully spliced ycf3 and excised intron1 with increased precursor; these favor a
+processing defect over only mature-mRNA instability, not an elementary step.
+The extra ycf3-int1 band is consistent with edited unspliced RNA; an unlabeled
+clpP-int2 product may be a structure-induced RT stop, not a new spliced form.
+
+Figure7C uses1ug leaf RNA with an exon/intron trnL-UAA probe, cytosolic25S/18S
+loading controls and phosphor-imager U/S ratios. Heteroallelic Atcfm2-1/Atcfm2-2
+has a higher U/S ratio than WT and the shown photosynthesis-impaired controls.
+The paper reports about4fold versus the other impaired mutants, not a universal
+4fold WT comparison. The weak homozygote effect is modest; the larger strong
+homozygote effect is retained as a differently sampled context, not pooled.
+No kinetic splicing rate, complete abolition or numerical replicate/error
+estimate is inferred from these steady-state RNA assays.
+
+Figure6 compares10ug leaf protein with serial WT dilutions and PonceauS/RbcL
+loading context. The reported Atcfm2-2 preparation has much lower PsaD and PsaF
+signals (authors estimate greater than10fold), unlike most other monitored
+proteins. Exact per-lane growth/age and densitometric replication are not given.
+The graph retains this sample comparison, not a growth-matched gene-only cause
+or a proven ycf3-splicing-to-photosystem-I mediation chain.
+
+Maize CFM2 RNA association is a different taxon/assay from Arabidopsis genetics;
+the maize antibody detects multiple protein bands. Neither direct Arabidopsis
+RNA contact nor CAF1/CAF2/CFM2 joint catalytic sufficiency follows from co-IP.
+clpP-int2 is absent in maize; its direct AtCFM2 binding was not tested here.
+The distinct CFM2 mRNA RT-PCR recipe must not be assigned to primer-extension
+splicing assays. Supplemental Figures5/6 remain uninspected.

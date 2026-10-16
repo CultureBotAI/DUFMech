@@ -1,0 +1,23 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01985
+  path: curation/families/PF01985.yaml
+session:
+  id: 2026-10-16T075217Z-codex-24d3f6
+  timestamp: '2026-10-16T07:52:17Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Add six scoped CAF/CFM2 plant-splicing and protein-preparation graphs
+  details: Inspected cached primary Methods, Results and figures from PMID12881426
+    and PMID18065687, verified CAF reference translations and CRM mappings, and added
+    22 indirect observed effects. Retained heteroallelic CAF1 tissue, summary-only
+    targets, secondary CAF2 subgroup-IIA effects, CFM2 ratio polarity and protein-preparation
+    matching limits. Original eight graphs and historical evidence are unchanged.
+    IN_PROGRESS remains; no direct-domain or cross-species catalytic chain is claimed.
