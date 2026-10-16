@@ -1527,13 +1527,14 @@
     },
     {
       "curation_status": "IN_PROGRESS",
-      "edge_count": 25,
-      "graph_count": 13,
+      "edge_count": 33,
+      "graph_count": 16,
       "graph_state": "PRESENT",
       "name": "CTP-dep_RFKase",
       "pfam_id": "PF01982",
-      "record_digest": "70f27c9a783a542d17bb0d41d4634501888defa1c06fa4a763bc124878b46b9c",
+      "record_digest": "945e2cb8725b674b1a972b118cb245b36135a7c10afea99473ba3e863c99c3a5",
       "scope_statuses": [
+        "HYPOTHETICAL",
         "MECHANISTIC",
         "PHENOTYPIC"
       ]

@@ -1,0 +1,51 @@
+PF01982: historical MJ0056 sequence and residue-coordinate reconciliation
+Inspected 2026-10-16 UTC. Factual sequence/database annotations, not a new
+experiment, domain-boundary computation or physical construct resequencing.
+
+UniSave Q60365 entry version 1 (1997-11-01):
+https://rest.uniprot.org/unisave/Q60365?format=txt&versions=1
+Retrieved flat-file SHA256: 3dda9e207cc98a19f37f002c784b9958fb8e0377c5625dbbef7a44b1f8ac7109
+The archived record contains a 136-aa MJ0056 reference beginning MVKLMIIEGE.
+Current Q60365 entry117/sequence2 contains 132 aa beginning MIIEGE; sequence
+update 2011-04-05. Its exact retrieved payload and PF01982 7-125 boundary are
+already anchored in member-mapping.txt; those historical notes remain unchanged.
+
+RCSB entity1 retrievals:
+https://data.rcsb.org/rest/v1/core/polymer_entity/2VBV/1
+SHA256: 22a169809cb6606b8ed3898bca6cab619ed508d2c371cddabf6f279590fd3552
+https://data.rcsb.org/rest/v1/core/polymer_entity/2VBU/1
+SHA256: 1a6ad17f5ed1721544828ddeaef5cd9ab387d5f413888740bb0e649fe8943261
+https://data.rcsb.org/rest/v1/core/polymer_entity/2P3M/1
+SHA256: 8dddf47460726dd7ac95d78c9c8e2aa68907ab3cbcddc49b494ba1ce13be6e7e
+All three deposited entity sequences have 136 residues and equal MVKL plus
+the current 132-aa Q60365 sequence exactly. SIFTS aligns entity5-136 to
+UniProt1-132. The archived sequence also contains the MVKL prefix: there is no
+basis here to designate it an expression-vector tag. Database identity does not
+independently authenticate every molecule used in the biochemical preparation.
+
+PDBe/SIFTS cross-check:
+https://www.ebi.ac.uk/pdbe/api/mappings/uniprot/2vbv
+SHA256: 1e447f2dd836d202daa39e5db5d3e531f10741a445f78f32799cd659372ac7b5
+Both author chains A/B map entity5-136 to Q60365 1-132 at identity1.0.
+Unresolved terminal atom positions are not proof that all residues were modeled.
+
+Residue letters checked against all three entity sequences and current Q60365:
+Dissertation/deposited numbering -> current Q60365 sequence2 numbering
+G14-G18 -> G10-G14 (glycine-rich segment)
+E17-S23 -> E13-S19 (proposed transient alpha0 segment)
+Y40 -> Y36
+T43 -> T39
+L44 -> L40
+N45 -> N41
+E107 -> E103 (proposed catalytic base, not mutationally established here)
+R115 -> R111
+Current reference PF01982 7-125 therefore maps to entity11-129 by the exact
+four-residue offset. This is coordinate transfer, not a new HMM search.
+
+Interpretive boundary
+The thesis compares apo NMR and product-bound X-ray models. Its residue labels
+are not current UniProt numbering; neither conserved contacts nor the exact
+sequence offset proves causal necessity or substrate binding order. The 2008
+132-aa preparation and the thesis's historical 136-aa structural reference
+must not be silently treated as sequence-identical constructs. Their difference
+is a candidate assay distinction, not an established explanation of donor use.

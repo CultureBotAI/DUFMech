@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01982
+  path: curation/families/PF01982.yaml
+session:
+  id: 2026-10-16T020126Z-codex-449dc9
+  timestamp: '2026-10-16T02:01:26Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Extend PF01982 with original RibK assays and explicitly hypothetical catalytic
+    steps
+  details: 'Inspected Ammelburg2011 primary author account linked to the2007 work,
+    its methods and rendered Figures9/11/12, archived UniSave Q60365 and RCSB/PDBe
+    structure sequence mappings. Added three graphs: direct CTP-dependent FMN production,
+    three qualitative donor contrasts and four explicitly HYPOTHESIZED contextual
+    binding/base/phosphotransfer steps. Historical E107 maps to current E103 with
+    a verified four-residue reference offset; no physical insert resequencing or causal
+    mutagenesis claimed. Retained ATP panel/caption discrepancy, unshown controls
+    and spectra, Mg inclusion versus necessity, source dependence and unresolved2008
+    contrasts. Existing13 graphs/25 edges and prior artifacts preserved; three discussions
+    remain OPEN and record IN_PROGRESS. Baseline8296 records had zero drift; local
+    generation, scientific self-review and verification follow. No journal-fulltext
+    identity, native physiology or publication claim.'
+  sections:
+  - causal_graphs
+  - discussions

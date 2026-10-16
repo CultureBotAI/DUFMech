@@ -1,0 +1,73 @@
+PF01982: Ammelburg's primary account of the original MJ0056 experiments
+Accessed and assessed: 2026-10-16 UTC.
+Source: Moritz Ammelburg, AAA Proteins and the Origins of Proteasomal Protein
+Degradation, dissertation, 2011. https://hdl.handle.net/10900/49675
+Official PDF: https://bibliographie.uni-tuebingen.de/xmlui/bitstream/handle/10900/49675/pdf/Dissertation_Ammelburg.pdf
+Retrieved PDF SHA256: 1a808dca2b80455c5000dc6adcbdb589e4e9a1a277fc79b3816f089490381ab0
+The full PDF is not redistributed. Only the five short quotation anchors below
+are verbatim excerpts (21 words total); other text is factual curator annotation.
+
+Source identity and dependence
+The university identifies this as a 2011 dissertation. Page 38 assigns the
+MJ0056 biochemical work to Ammelburg and links it to bibliography item 4
+(page 139), PMID:18073108, doi:10.1016/j.str.2007.09.027. This is a primary
+author account of that work, not independent replication or a verified identical
+copy of the 2007 journal article. The latter full text remains uninspected.
+PDF/printed page numbers agree. Methods pages 49-51, results 55-62, Figure 9
+(page 56), Figure 11 (page 60) and Figure 12 (page 63) were inspected; the
+figures were also viewed as rendered images, not only text extraction.
+
+A1. Purified kinase observation; pages 49-50, Figure 9D/E, page 57.
+Quote: Formation of FMN
+Protocol facts: pET-30b MJ0056, E. coli C41(DE3)RIL, IPTG induction; MonoQ,
+SP Sepharose, 80 C/20 min heating; the colorless fraction was gel-filtered.
+Reaction: 40 mM Tris/HCl pH 8, 50 mM NaCl, 5 mM MgCl2, 1 mM DTT,
+50 uM riboflavin, 3 mM nucleotide, 1 uM enzyme, 60 min. Temperatures:
+25, 37, 50, 70, 85 C. Figure 9D/E shows the CTP assay at 50 C. Positive/
+negative ESI-MS and RF/FMN standards support FMN production. Complete conversion
+is the author's interpretation, not an independently recalculated quantitative
+yield. Methods describe enzyme-minus controls; Figure 9B/C are standards,
+not demonstrated matched enzyme-minus traces. CDP was not separately quantified.
+
+A2. ATP/GTP contrasts; Figure 9F/G and page 57.
+Quote: did not yield significant amounts of FMN
+The text reports much less FMN with ATP/GTP than with CTP across the tested
+temperatures. Figure 9G nevertheless labels a small peak at 455.11 as FMN-H,
+while its caption describes absent product. Preserve this internal discrepancy:
+neither literal zero turnover nor a detection limit follows from these panels.
+No GTP spectrum, replicate error or donor-purity measurement was found in this
+inspected section. This is not a claim about uninspected supplements or raw data.
+
+A3. UTP contrast; page 57.
+Quote: supports product formation
+UTP is reported to support FMN production about an order of magnitude less
+efficiently than CTP. No UTP spectrum or fitted rate constant is supplied here.
+The graph records the reported direction, not a measured tenfold kinetic ratio.
+
+A4. Ordered binding model; pages 59-61 and Figure 11.
+Quote: sequential substrate binding cycle
+The comparison is apo NMR 2P3M versus MgCDP complex 2VBU and MgCDP/FMN complex
+2VBV, not observed CTP/substrate binding trajectories. The proposed cycle places
+nucleotide-associated alpha0 formation before riboflavin binding and second-loop
+closure. Failed flavin-only crystallization does not establish impossible binding.
+Mg is an assay input and a structural ion, not a tested necessity: this section
+does not report metal-removal/readdition experiments. Dimerization, evolutionary
+clustering and wHTH gene context are not represented as causal activity edges.
+
+A5. Proposed catalytic base; page 60, supported by contacts discussed on page 62.
+Quote: functioning as a base
+The author proposes E107-mediated activation of the terminal riboflavin hydroxyl
+from the position of E107 relative to FMN oxygen atoms in the product structure.
+No residue perturbation, folding control, proton-transfer observation or
+time-resolved phosphotransfer is described here. This remains a contextual
+hypothesis; current Q60365 sequence2 calls the corresponding residue E103.
+See ribk-residue-mapping.txt for exact sequence-coordinate evidence.
+
+Contrasts and remaining uncertainties
+The 2008 preparation, buffer, donor/substrate concentrations, added Mg, reaction
+time and temperature differ. None is proven to explain its ATP/GTP residuals.
+Do not pool the assays or transfer CTP exclusivity to all family members.
+The PDF prints ml for two unusually large preparation/reservoir volumes on
+page 50. No silent unit correction is made; those volumes are not graph inputs.
+The original journal text, unshown controls/spectra, exact historical physical
+construct and native physiology still require further evidence.
