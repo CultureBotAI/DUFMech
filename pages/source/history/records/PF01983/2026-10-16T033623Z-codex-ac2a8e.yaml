@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01983
+  path: curation/families/PF01983.yaml
+session:
+  id: 2026-10-16T033623Z-codex-ac2a8e
+  timestamp: '2026-10-16T03:36:23Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate CofC/FbiD paired reactions, mutation effects and partner-dependent
+    product fractions
+  details: Inspected Bashiri2019 and Hasan2022 Methods, primary figures and recovered
+    complete supplement entries; resolved RefSeq/UniProt offsets and exact B3 pMH43
+    translation to7P97. Added seven graphs with18 observed relations, preserving composite
+    assay inputs and unresolved elementary mechanisms. Baseline8296 records passed
+    with zero drift. Original2008, earlier2019, native genetics, other homologs and
+    unresolved Fo units remain explicit follow-ups; IN_PROGRESS, no review pointer
+    or publication.

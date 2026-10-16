@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01983
+  path: data/families/PF01983.yaml
+session:
+  id: 2026-10-16T035024Z-codex-4d58e5
+  timestamp: '2026-10-16T03:50:24Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review scoped CofC/FbiD causal evidence with unresolved source and mechanism
+    follow-ups
+  details: 'Saved scientific self-review 20261016T035526Z-pf01983-cofc-coupled-assay-contexts:
+    seven graphs and18 observed relations, two direct composite reconstitutions and16
+    unresolved mutation/partner effects. Native generation/schema/history/reviews,52
+    focused tests, exact sequence/provenance preservation and desktop/mobile preview
+    passed before report save. Three findings remain open for constructs/assay details,
+    quantitative/atomic mechanisms and primary/member coverage. The record remains
+    IN_PROGRESS without an approval pointer; canonical source pins are stale and publication
+    is not claimed.'
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261016T035526Z-pf01983-cofc-coupled-assay-contexts/review.yaml
