@@ -1513,14 +1513,17 @@
       ]
     },
     {
-      "curation_status": "SEEDED",
-      "edge_count": 0,
-      "graph_count": 0,
-      "graph_state": "ABSENT",
+      "curation_status": "IN_PROGRESS",
+      "edge_count": 16,
+      "graph_count": 9,
+      "graph_state": "PRESENT",
       "name": "PTH2",
       "pfam_id": "PF01981",
-      "record_digest": "ea7ec1c27206b7d8291825f5853a9155d38251969b82540019eef6f6f5bd3dca",
-      "scope_statuses": []
+      "record_digest": "fd0a909e5221414e6149a7044415b70a66a85a507f44a74f08e5953480e081d5",
+      "scope_statuses": [
+        "MECHANISTIC",
+        "PHENOTYPIC"
+      ]
     },
     {
       "curation_status": "SEEDED",
@@ -83292,8 +83295,8 @@
     }
   ],
   "graph_states": {
-    "ABSENT": 8167,
-    "PRESENT": 129
+    "ABSENT": 8166,
+    "PRESENT": 130
   },
   "kind": "structural_inventory_not_scientific_review",
   "records": 8296

@@ -1,0 +1,90 @@
+PF01981 identity and tested-member mapping; inspected2026-10-15
+
+Frozen identity: interpro-pfam-duf-2026-10-10, SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+PF01981/PTH2, InterProIPR002833, EX_DUF. Frozen previous identifiers:
+DUF119, UPF0099, Pep-tRNA_hydrol. This is not the bacterial Pth1 family.
+
+M. jannaschii MJ0051:
+UniProt Q60363 entry131/sequence1,115aa, reference taxon243232/DSM2661.
+Current InterPro PF01981 interval1-115. PMID12475929 cites NP_247015.1
+and MJ0051. Protein/gene identity is supported; the physical pGR51C and
+pGR518 insert sequences were not independently recovered. Reference sequence
+does not verify assay-strain mutations or vector-derived residues.
+
+S. solfataricus P2 (current name Saccharolobus solfataricus):
+UniProt Q980V1 entry128/sequence1,120aa,taxon273057,SSO0175.
+The2003 source varies SS00175/SS000175 typography; its MIKMVIVVRS
+Edman sequence matches Q980V1. SIFTS1XTY chainsA-D map1-120 to Q980V1
+with identity1.0; PF01981 covers2-120 in that structure. This later structure
+is a reference-domain mapping, not proof that its sample is the2003 sample.
+
+Yeast YBL057C:
+Current UniProt P34222 entry190/sequence2,208aa,taxon559292/S288c;
+PF01981 interval89-208. The2002 construct is described by an older ORF and
+deletion of86 N-terminal residues, followed by an initiation-codon change.
+Do not call that today's P34222(87-208) without historical sequence alignment.
+MHY500-derived and BY474-derived experiments are not an exact match to the
+current S288c reference merely because the gene symbol agrees. The2003
+full-length pKKpthY2 and2002 pGRAS/pGR87L are distinct constructs and hosts.
+
+Lokiarchaeum GC14_75:
+RCSB24BT entity1 identifies LCGC14_0646670, taxon1538547 and UniProt
+A0A0F9U5Y0. UniProt's current entry is INACTIVE/DELETED, reason "Not part
+of a reference proteome", with UniParcUPI000628CBEC. No replacement assumed.
+UniSave entry19/sequence1 (2025-06-18; last release2026_01) explicitly
+cross-references PF01981/PTH2 and IPR002833. Its taxonomy is the historical
+marine-sediment metagenome412755, NOT a contradictory cultured strain.
+The archived118-aa sequence is:
+MEEYKQVILIRTDLKMSTGKKCVQSCHASVSASDLVRVQNKSIWKNWKNTGQKKVVLKVKDIEHLKEMVKLIEANKFHYFVVKDAGLTQLTPGTITAVGIGPLSSGEIDKITRELKLL
+24BT's deposited127-aa sequence equals this sequence plus GSSHHHHHH;
+the assay sequence in Table1 instead equals GPH plus this sequence.
+Thus exact sequence identity connects the tested core to a historical Pfam
+assignment. Current HMM boundary coordinates are unresolved: SIFTS24BT has
+empty UniProt/Pfam mappings; the InterPro accession query failed. No invented
+domain interval or current active-UniProt status is used. Taxon follows the
+paper/deposition, with metagenomic provenance explicit. Construct sequence
+comparison is not independent physical-plasmid sequencing.
+
+Retrieved public payloads (SHA256 of exact bytes; raw files kept in session
+scratch, not a new corpus snapshot). These metadata are identity evidence,
+not independent proof of any causal edge. UniProt data are attributed to the
+UniProt Consortium under CC BY4.0; only mapping facts/sequence retained.
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01981/
+d7af65c99d55f4b096df3635f932a3c2453db981f5147f6374c69f0891741122
+https://rest.uniprot.org/uniprotkb/Q60363.json
+9afc5bd93a1aaad1c729658910f3c471e56fb585268756731d7bda899f2b0fee
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01981/protein/uniprot/Q60363/
+8fc22862669855f1ee079ba5466feac5bb0011f8f8186248f2e246b1299f0c2e
+https://rest.uniprot.org/uniprotkb/Q980V1.json
+280d4aec34fba89b1041c6d6e6da141bb02dfe777312660a2d7d4e477dc4b6fc
+https://www.ebi.ac.uk/pdbe/api/mappings/1xty
+d662bf22522138e58368a8783ba75ff79328f8a9275f0f0dda111e82305a326c
+https://rest.uniprot.org/uniprotkb/P34222.json
+0a1c7e634df2dc6d275aed6fde4f240791b342f503a6536afbcb22e9741dc83f
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01981/protein/uniprot/P34222/
+14eb927804b188c16233590190506377dda1807d12fa4f4835a8eabf0a290660
+https://data.rcsb.org/rest/v1/core/polymer_entity/24BT/1
+1ccfc940bdc630431137b5eea9ebac3c112d96e42451d463cef739f6332060f1
+https://www.ebi.ac.uk/pdbe/api/mappings/24bt
+46b84e760f2c995bb9f9641d2c81affb881397842f0ce75ddf5956a043799217
+https://rest.uniprot.org/uniprotkb/A0A0F9U5Y0.json
+b79afc4728542ca4f0b0c60d2fb9c44918f94d3e7935d27d6997404c4a4e4b8f
+https://rest.uniprot.org/unisave/A0A0F9U5Y0?format=txt&versions=19
+4ed6c546b3c022304a774c11f877e8ed65664db7ad1709efaffb75b8a7212298
+
+Follow-up ledger:
+- Retrieve original Fromant2005 PMID15766258 mutant assays and controls
+  before residue-level K18/D86/T90 catalytic edges. Abstract-only leads and
+  later structural discussion do not establish proton transfers or nucleophiles.
+- Investigate yeast proteasome roles (PMC1679763), human PTRH2/BIT1 and other
+  exact members separately; no complete later-literature census performed.
+- Preserve the2002/2003 full-length yeast complementation discrepancy,
+  experimental media and native deletion negatives. Pth1/YHR189w growth
+  phenotypes cannot be reassigned to PF01981.
+- Resolve original substrate units, Table6 ionic conditions and2026 structure
+  resolution discrepancy. Inaccessible figures/supplements are access limits.
+- Authoritative local pre-edit search included ignored/hidden files under
+  curation,evidence,history,reviews and legacy review directories; no PF01981
+  assessment was found there. This is not a claim of exhaustive literature search.
