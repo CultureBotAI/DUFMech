@@ -1540,14 +1540,17 @@
       ]
     },
     {
-      "curation_status": "SEEDED",
-      "edge_count": 0,
-      "graph_count": 0,
-      "graph_state": "ABSENT",
+      "curation_status": "IN_PROGRESS",
+      "edge_count": 18,
+      "graph_count": 7,
+      "graph_state": "PRESENT",
       "name": "CofC",
       "pfam_id": "PF01983",
-      "record_digest": "0fd4f72ba2051fb5dbcbc97992adadc6f13f15dc5a059c58eca25ab86e2010e8",
-      "scope_statuses": []
+      "record_digest": "582f51bb963d05987102fad96a0a75f21e977576ad2e7ade0b222e38b98571d6",
+      "scope_statuses": [
+        "MECHANISTIC",
+        "PHENOTYPIC"
+      ]
     },
     {
       "curation_status": "SEEDED",
@@ -83299,8 +83302,8 @@
     }
   ],
   "graph_states": {
-    "ABSENT": 8165,
-    "PRESENT": 131
+    "ABSENT": 8164,
+    "PRESENT": 132
   },
   "kind": "structural_inventory_not_scientific_review",
   "records": 8296

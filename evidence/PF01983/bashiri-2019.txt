@@ -1,0 +1,69 @@
+Bashiri et al. 2019: joint FbiD/CofC-FbiA product formation
+PMID:30952857; doi:10.1038/s41467-019-09534-x; PMCID:PMC6450877.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC6450877/
+Inspected 2026-10-16 UTC through Europe PMC public fullTextXML API.
+XML SHA256 8010ad6315e1195450ac6aa6b89cafc28b1abef3ef696c1a878b5b4b6f2faaea.
+
+Minimal verbatim anchor, also used in the earlier PF01933 ledger:
+"Tandem mass spectral identification"
+The two family ledgers describe different participants in the SAME experiment,
+not independent replication. The interpretation below is curator paraphrase.
+
+Actually inspected: Results Sec3; Methods Sec8/Sec9/Sec12/Sec13/Sec14;
+Figure2 image and caption; reporting summary page2 visually inspected.
+Figure2 SHA256 cfb9f09fc80c6f712401412a31bf5ba8e56f417d2d112e1a877c66e0503c4774.
+The supplementary archive download ended before its main supplementary PDF
+completed. Selected earlier Figure2 and reporting-summary entries were
+successfully extracted with tar --fast-read, exit0. The reporting summary
+says coupled assays were repeated on at least two occasions; it does not
+give an exact n or variance for each Figure2 trace. No claim of triplicate
+Figure2 assays is made. Publisher HTML redirected to an unavailable identity
+endpoint; a direct supplement request failed DNS. Incomplete supplements are
+an access limit, not negative evidence or a reason to correct source text.
+
+Graph mtb-fbid-fbia-product-2019
+Rv2983/fbiD from M.tuberculosis H37Rv was cloned from genomic DNA into
+pYUBDuet-fbiABD, carrying N-His6 FbiD and untagged coexpressed FbiA/FbiB.
+Expression in M.smegmatis mc2 4517; Ni-NTA and Superdex75 purification.
+Separately prepared synthetic N-His6 Mtb-FbiA in pYUB28b-fbiA was expressed
+in the same host and purified. Reference anchors are P9WP83 sequence1
+(214aa, PF01983 match12-166) and partner P9WP81/FbiA in PF01933.
+No independent physical-insert or exhaustive preparation-purity proof is
+claimed. The assay tests a purified-protein combination, not FbiD alone.
+
+Graph mjan-cofc-mtb-fbia-product-2019
+Synthetic Mjan-CofC MJ0887 was cloned in pYUB28b via NdeI/HindIII, expressed
+in E.coli and purified by Ni-NTA/SEC. Sec8 lists BL21(DE3)/LOBSTR-BL21(DE3)
+as E.coli hosts without assigning this construct unambiguously to one.
+Reference Q58297 sequence1 is224aa, PF01983 match7-224. The2019 insert
+sequence/length was not audited, so the distinct2022 TableS3 RefSeq218aa
+construct is not substituted for it. The assay partner is Mtb-FbiA, not
+Mjan-CofD; this cross-species reconstitution is not a native archaeal pathway.
+
+Shared conditions and measured effect, Sec12/Sec13 and Figure2b/c
+100mM HEPES pH7.5,2mM GTP,0.1mM Fo,5mM MgCl2,1mM PEP (or separate
+1mM2-PL comparison),1uM FbiD/CofC and5uM FbiA,37C. Samples stopped with
+20mM EDTA at varied times; the inspected main Figure2 does not specify its
+incubation endpoint. HPLC fluorescence420nm excitation/480nm emission plus
+LC-MS/MS supports dehydro-F420-0, not mature reduced F420. Both specified
+enzyme pairs with PEP/GTP give a product trace distinct from the Fo control.
+The MS/MS experiment is product-identity evidence, not direct observation of
+every intermediate or a separately replicated mass spectrum for every lane.
+
+Controls, alternatives and excluded edges
+Figure2 shows separate2-PL and ATP conditions. With Mtb-FbiA as partner,
+2-PL does not yield the detected product in either enzyme pairing. Mtb-FbiD
+does not yield the ATP/PEP signal seen with Mjan-CofC; the latter is lower
+than its GTP/PEP output according to Results. No rates or substrate-affinity
+rankings are inferred from these illustrative traces. Results also report
+no FbiD/CofC activity without FbiA; corresponding supplement controls were
+not visually recovered, so no separate necessity edge is adopted here.
+EPPG is a proposed unstable activated intermediate, not directly observed
+in these Figure2 reactions. Neither a stable CofC/FbiA complex, intermediate
+channeling nor a partner-induced nucleotide-binding conformation was directly
+demonstrated. Hasan2022 partner replacements show why the coupled2-PL
+negative cannot establish universal archaeal or PF01983 substrate exclusion.
+Protein-bound PEP structural contacts and the absence of observed GTP binding
+are not sufficient to assign a catalytic residue intervention. The paper's
+text attributes comparator2I5E to M.mazei, while Figure3's caption says
+M.jannaschii; this unresolved comparator discrepancy is not normalized away.

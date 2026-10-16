@@ -1,0 +1,101 @@
+PF01983 identity, reference sequences and construct coordinate ledger
+Research dates: 2026-10-16 UTC; primary-source curation, not a source refresh.
+
+Frozen identity
+PF01983 / CofC / Guanylyl transferase CofC like; InterPro IPR002835.
+Former DUF121 is supported by the frozen Pfam previous-name inventory, not
+inferred from the present functional name. The current projection remains tied
+to interpro-pfam-duf-2026-10-10, SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+EX_DUF naming history is not experimental characterization of every member.
+Imported description, counters, scoring and frozen inputs are unchanged.
+
+Primary identity payloads, retrieved 2026-10-16
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01983/
+SHA256 3ad5098a8e11922e521c0430911cd8002cf60d1be029e4b12a067a22640da60d
+The imported PUB00045885 resolves to PMID:18260642, doi:10.1021/bi702475t.
+This citation resolution is not a new inspection of that paper's experiments.
+
+UniProt JSON endpoints: https://rest.uniprot.org/uniprotkb/ACCESSION.json
+InterPro mappings:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01983/protein/uniprot/ACCESSION/
+All positions below are one-based inclusive and refer to the named sequence.
+
+E5ASS2 entry57, sequence1, 221 aa; RBRH_02550/cofC;
+Mycetohabitans rhizoxinica HKI454, NCBITaxon:882378.
+UniProt SHA256 cef89ea52e71ea05b658f851378f901a64be616c98298256be79bfe6277b015f
+PF01983 match20-206; mapping SHA256
+c81b324b5873f921661bac82e318016096e90401aa87113d99dc09efd99ae375.
+Hasan2022 TableS3 instead identifies WP_041753721.1, 216 aa.
+Retrieved versioned RefSeq is EXACTLY E5ASS2 residues6-221, without indels.
+Thus reference match20-206 transfers to RefSeq15-201. Paper-native positions:
+M91 -> E5ASS2 M96; C95 -> C100; H145 -> H150; S162 -> S167.
+Do not call these E5ASS2 M91/C95/H145/S162 or include tag residues in numbering.
+These are reference-sequence transfers, not authentication of physical pFS03
+or every Sanger-confirmed mutant plasmid. TextS2 does not contain those inserts.
+
+A0QUZ4 entry101, sequence1, 221 aa; MSMEG_2392/MSMEI_2332;
+Mycolicibacterium smegmatis mc2 155, NCBITaxon:246196.
+UniProt SHA256 db0722090c0eecba61e821fa9bdcc08f760fb282caf694099b24564e63c7c566
+PF01983 match20-170; mapping SHA256
+cddbb86533ed6eee2ba639e6517e58b94a2cb647bc4bcca0a85fc50f3b1311e8.
+TableS3 YP_886732.1 is exactly identical to A0QUZ4 sequence1.
+Paper L98, T152 and G169 therefore retain their reference coordinates, all
+inside the reported Pfam match. Full-length recombinant protein was tested;
+the match boundary is not an experimentally isolated active domain.
+
+Q58297 entry108, sequence1, 224 aa; cofC/MJ0887;
+Methanocaldococcus jannaschii reference taxon243232.
+UniProt SHA256 d4c83e643077cfc51814f9e7452daa87d426b4efdfc4b9f3eb22bc3074cedd8f
+PF01983 match7-224; mapping SHA256
+e7a89d3cfd202846dd3acc3dd7cb6897dd8a18e46d8adc8e3957799abdab4196.
+Hasan2022 TableS3 gives WP_064496647.1, 218 aa, DSM2661;
+its retrieved sequence is EXACTLY Q58297 residues7-224.
+Do not apply this 2022 construct length to the separate Bashiri2019 synthetic
+MJ0887 insert: the 2019 insert was not sequence-audited in this review.
+MJ1117 is a different protein: the bounded UniProt gene query returned Q58517,
+cobY, PF12804/NTP_transf_3, not PF01983. Historical CofD assay mentions of
+MJ1117 cannot be silently corrected to MJ0887 or counted as CofC evidence.
+Query payload SHA256
+f18d509fc44523a973e1b98baa9a098d97190fadff4f863a547311b9f19ba701.
+
+P9WP83 entry52, sequence1, 214 aa; fbiD/Rv2983;
+Mycobacterium tuberculosis H37Rv, NCBITaxon:83332.
+UniProt SHA256 7dc19dcccaedaaa8efa91cc5d4d96781156cfb3293b1cc126b9cb00b68111157
+PF01983 match12-166; mapping SHA256
+c750ee8b952283d03e410afc31e98b57201b2ab8dfb46355ef1e1a6e8cd85bec.
+The 2019 genomic clone is described as Rv2983; exact physical insert sequence
+is not independently authenticated. D188/D190 contacts discussed in the paper
+are outside this particular Pfam match and must not be relabeled as domain-
+contained residues. A match boundary does not exclude whole-protein function.
+
+RefSeq retrieval for the three exact sequence comparisons:
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=WP_041753721.1,WP_064496647.1,YP_886732.1&rettype=fasta&retmode=text
+FASTA SHA256 eed7550e4343c468549f7e51f452da85e23d81e0a50abcee17a1ab8bf96b5757.
+Exact suffix comparisons and Biopython1.88 translation were run locally.
+
+Mycetohabitans sp. B3, not HKI454
+TableS3: CofC locus KQH55_09515, 216 aa; genome JAHLKN000000000.
+TableS2: N-His-CofC pMH43. TextS2 supplies its DNA sequence.
+The forward translated ORF at plasmid nucleotide71 encodes the EXACT 243-aa
+RCSB7P97 entity1 canonical sequence, followed by a stop codon. Removing the
+27-aa N-terminal tag/linker gives the 216-aa native sequence. Relative to
+WP_041753721.1 there are seven replacements and no indels:
+S30A, G122E, C175R, I182V, I205V, K206R, I216N (Mrhiz -> B3).
+Identity is209/216=96.7593%, consistent with the paper's rounded96.8%.
+The E5ASS2 Pfam match transfers by this explicit ungapped homology alignment
+to B3 residues15-201. This is NOT a newly computed B3 HMM match.
+https://data.rcsb.org/rest/v1/core/polymer_entity/7P97/1
+SHA256 b695641c7bd9926363d9afcd89ebf2cc8ddcb90839c938fbc69218256b902446.
+The deposition maps to E5ASS2 and lists HKI454/RBRH_02550, with differences;
+that database reference does not make the construct sequence-identical to
+E5ASS2 or justify transferring HKI454 taxonomy to B3. No exact B3 UniProt
+accession or taxon CURIE is invented. This supports identity and family
+membership, not ligand-induced motion, catalytic order or residue necessity.
+
+Partner identities are from Hasan2022 TableS3:
+Mjan-CofD WP_010870769.1 (311 aa); Mrhiz-CofD WP_013435881.1 (328 aa);
+Msmeg-FbiA WP_011727938.1 (327 aa); B3-CofD KQH55_09505 (323 aa).
+They are distinct CofD/FbiA partners, not PF01983 CofC/FbiD proteins.
+The existing PF01933 partner ledger is retained unchanged. Neither current
+reference metadata nor a supplied plasmid file authenticates a physical tube.

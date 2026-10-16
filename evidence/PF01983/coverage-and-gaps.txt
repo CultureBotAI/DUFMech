@@ -1,0 +1,77 @@
+PF01983 scoped scientific coverage and unresolved branches, 2026-10-16 UTC
+
+This is a partial scientific review of an8296-family corpus member, not a
+declaration that CofC is universally characterized or all literature exhausted.
+The record remains IN_PROGRESS with no qualifying REVIEWED pointer.
+
+Repository search
+An ignored/hidden-inclusive search for PF01983, DUF121, CofC and cofC across
+curation,evidence,history,reviews,reports found the inventory and the earlier
+PF01933 overlay, identity/coverage/Hasan/Bashiri ledgers and retained review.
+No existing PF01983 overlay, evidence ledger or canonical graph was returned
+in those searched owners before this edit. Frozen inputs and generated Pages
+were not part of that evidence-owner absence assertion. Prior PF01933 work
+is retained byte-for-byte and is not silently upgraded by this new review.
+
+Source discovery
+Current InterPro/Pfam and UniProt accessions were inspected; versioned RefSeq
+sequences and the exact B3 pMH43 supplied DNA resolved coordinate transfers.
+The EuroPMC query (CofC OR FbiD OR DUF121), core JSON, pageSize100, returned
+335 hits. Only the first100 were retrieved; no all-results or exhaustive
+negative claim is made. Hits include unrelated acronym usage and a2021
+preprint of Hasan2022, which is not independent replication. A2025 docking
+study PMID40326994 is computational, not direct evidence for drug binding,
+activation or clinical resistance. Its experiments, if any, are not assessed.
+
+Specific follow-ups, not unsupported graph edges
+1. Grochowski2008 PMID18260642 / doi:10.1021/bi702475t is the imported
+   family's original CofC biochemical citation. Inspect original Methods,
+   constructs, nucleotide conditions and product confirmation before adding
+   its2PL activation results. Database annotation is not a replacement.
+2. Braga2019 PMID31469543 / doi:10.1021/acschembio.9b00605 concerns3PG-F420
+   in the rhizoxinica lineage and supplies the earlier pFS03 construct.
+   Its original full experiments and all exact mutant inserts remain to be
+   inspected. The verified RefSeq/E5ASS2 suffix mapping does not authenticate
+   the physical clone or establish the native translational start site.
+3. Lopez2007 PMID17660436 / doi:10.1099/mic.0.2006/009241-0 concerns
+   MSMEG_2392/FbiD, dye decolorization and F420 biosynthesis. Inspect actual
+   deletion/complementation and cofactor controls before native phenotype
+   or antibiotic-response causality is represented. Other native genetic
+   FbiD studies and Grinter2020 PMID32430409 are not reviewed for FbiD here.
+   The preprint lead was resolved to Rifat et al., PMID33077652,
+   doi:10.1128/AAC.01948-20, PMCID:PMC7927868 (2020 online/2021 issue).
+   Its citation and abstract identify native cofactor and susceptibility
+   experiments; their controls and full biological scope are not assessed
+   here. No allele-specific resistance mechanism is imported from snippets.
+4. Hasan2022 additional archaeal/bacterial homologs and Figure6D-F remain
+   outside the adopted member contexts. Their TableS3 entries are leads, not
+   completed mapping/experimental reviews. Braga2020 redox-pathway work is
+   another source, not automatically independent proof of CofC chemistry.
+5. Hasan2022 prints Fo0.14nM in s4-5. Resolve with the authors' original
+   assay records or an authoritative correction, not a guessed unit change.
+   Obtain absolute conversion data and mutant folding/abundance controls
+   before converting relative product fractions to affinity or rate claims.
+6. Complete the structural/nanoDSF branch, including B3 product-bound7P97,
+   TableS1 ligand contacts, TextS1/TableS5, and source-specific residue maps.
+   Homology-model predictions and a static product complex do not establish
+   S162 side-chain contact, ligand motion or a catalytic sequence. B3 is not
+   sequence-identical to deposited reference E5ASS2 despite that mapping.
+7. The2019 main supplement remains incomplete; exact synthetic inserts,
+   Figure2 incubation endpoint and per-condition replicate counts need
+   stronger evidence. The main-paper no-partner assertion is recorded as a
+   source statement, not promoted to a separate observed requirement graph.
+8. Historical MJ1117 and modern MJ0887 are distinct proteins/families.
+   Revisit the original2008 CofD assay context separately rather than repair
+   its locus name by assumption. Q58517/CobY/PF12804 is not PF01983 CofC.
+
+Representational boundary
+Seven adopted graphs contain18 observed directed relations: two composite
+purified-pair product formations, seven separate Mrhiz mutation effects,
+one Msmeg double-mutant effect, and eight relative-fraction changes from
+three partner exchanges. Only the two composite reconstitutions are marked
+direct MECHANISTIC; mutation/partner effects are PHENOTYPIC with unresolved
+elementary mechanism. Every effect retains its full conjunction of proteins,
+substrates, cofactors and assay context. No family-wide physiological effect,
+residue-binding mechanism, mature-cofactor reduction, channeling or isolated-
+Pfam-domain sufficiency is inferred. No graph has been added to satisfy a
+count when its causal evidence was missing.
