@@ -1,0 +1,464 @@
+pfam_id: PF01983
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01983
+discussions:
+- discussion_id: pf01983-numbering-and-assay-context
+  prompt: Resolve physical constructs and assay details before assigning elementary residue mechanisms.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Exact reference transfers resolve numbering but not every physical clone, and coupled product fractions depend on the downstream partner.
+  evidence:
+  - reference: PMID:35038903
+    supports: PARTIAL
+    evidence_source: primary_methods_figures_and_supplements
+    explanation: TableS3 RefSeq sequences resolve the Mrhiz five-residue offset; TextS2 pMH43 translates exactly to the B3 structure construct. Fo units and absolute mutant activities remain unresolved.
+  - reference: PMID:30952857
+    supports: PARTIAL
+    evidence_source: primary_results_methods_and_figure
+    explanation: Figure2 supports paired product formation; the exact synthetic insert, incubation endpoint and supplemental no-partner controls were not fully audited.
+  posed_by: Codex
+  posed_date: '2026-10-16'
+  notes: See evidence/PF01983/identity-and-coordinates.txt and the two primary-source ledgers. Paper Mrhiz S162 maps to E5ASS2 S167. B3 is not sequence-identical to E5ASS2, and MJ1117 is not MJ0887. Model contacts, channeling and folding-independent mutant mechanisms are not observed edges.
+- discussion_id: pf01983-primary-and-member-coverage
+  prompt: Extend original CofC biochemistry, native FbiD genetics and additional homolog coverage without family-wide transfer.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The retained graphs explain selected experiments, not all PF01983 proteins or their native pathways.
+  evidence:
+  - reference: PMID:18260642
+    supports: PARTIAL
+    evidence_source: resolved_primary_citation_lead
+    explanation: Original CofC paper identified through the family citation; its complete experiments remain a follow-up.
+  - reference: PMID:31469543
+    supports: PARTIAL
+    evidence_source: primary_reference_and_construct_provenance
+    explanation: Earlier rhizoxinica study supplies the pFS03 background; complete primary curation is not inferred from the later paper.
+  - reference: PMID:17660436
+    supports: PARTIAL
+    evidence_source: primary_reference_lead
+    explanation: MSMEG_2392 native cofactor and dye phenotypes require inspection of genetic and complementation controls.
+  posed_by: Codex
+  posed_date: '2026-10-16'
+  notes: evidence/PF01983/coverage-and-gaps.txt retains bounded searches, other homologs, structural follow-ups and access limits. The first100 of335 broad literature hits were retrieved; this is not an exhaustive review. The earlier PF01933 record and its review remain unchanged.
+causal_graphs:
+- graph_id: mtb-fbid-fbia-product-2019
+  title: Paired Mtb FbiD and FbiA produce dehydro-F420-0
+  scope: Bashiri2019 Figure2b/c; purified Rv2983/FbiD plus separately prepared Mtb-FbiA, not FbiD alone.
+  context: N-His6 FbiD from genomic H37Rv Rv2983 in pYUBDuet-fbiABD expressed in M.smegmatis mc2 4517; purified pair with PEP,GTP,Fo and Mg in100mM HEPES pH7.5 at37C. See assay ledger for concentrations and coexpression background.
+  family_mapping: P9WP83 sequence1,214aa,Rv2983,taxon83332 has PF01983 match12-166. This is a full-protein reference mapping, not isolated-domain sufficiency or physical-clone authentication. FbiA/P9WP81 belongs to the separate PF01933 family.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:83332
+  limitations: HPLC and MS/MS identify the composite reaction product, not an observed EPPG intermediate or mature reduced F420. The2PL/ATP negatives are assay-specific. Exact insert, endpoint, preparation purity and per-condition replicate counts are not independently resolved.
+  nodes:
+  - node_id: paired-reaction
+    label: Purified Mtb FbiD plus FbiA with PEP,GTP,Fo and Mg
+    node_type: STATE
+    grounding: [UniProtKB:P9WP83, UniProtKB:P9WP81]
+  - node_id: dehydro-product
+    label: MS/MS-supported dehydro-F420-0 product
+    node_type: STATE
+  edges:
+  - edge_id: paired-product
+    subject: paired-reaction
+    predicate: produces
+    object: dehydro-product
+    mechanism: The complete purified-enzyme combination produces the chromatographically detected dehydro cofactor intermediate, whose identity is supported by MS/MS. All required assay inputs form one condition; no single-enzyme sufficiency is asserted.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30952857
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6450877/
+      snippet: Tandem mass spectral identification
+      explanation: Figure2b FbiD traces and Figure2c product identification with Sec9/Sec12/Sec13 Methods; the same experiment also informs the partner family's record.
+      cache_path: evidence/PF01983/bashiri-2019.txt
+      cache_sha256: 54a354e96fad787ba8de16b92c0d49516a921b8b7de993fff702e2c91b7bd9d9
+- graph_id: mjan-cofc-mtb-fbia-product-2019
+  title: Mjan CofC and Mtb FbiA produce dehydro-F420-0
+  scope: Bashiri2019 Figure2b/c; synthetic MJ0887/CofC paired with Mtb-FbiA in a mixed-species reconstitution.
+  context: N-His6 MJ0887 expressed from pYUB28b in E.coli and purified by Ni-NTA/SEC; Mtb-FbiA separately expressed in M.smegmatis. PEP,GTP,Fo,Mg and100mM HEPES pH7.5 at37C; concentration details in the source ledger.
+  family_mapping: M.jannaschii CofC reference Q58297 sequence1,224aa,MJ0887 has PF01983 match7-224. The2019 synthetic insert was not sequence-audited; the218aa2022 RefSeq construct is not substituted. Mtb-FbiA/P9WP81 is a separate PF01933 partner; MJ1117/CobY is excluded.
+  scope_status: MECHANISTIC
+  limitations: Not a native archaeal pathway or CofC-only activity. A2PL negative with Mtb-FbiA does not establish universal2PL exclusion; partner selection changes coupled output. EPPG and direct channeling were not observed, and an exact per-lane endpoint/n is unresolved.
+  nodes:
+  - node_id: mixed-reaction
+    label: Purified Mjan CofC plus Mtb FbiA with PEP,GTP,Fo and Mg
+    node_type: STATE
+    grounding: [UniProtKB:Q58297, UniProtKB:P9WP81]
+  - node_id: dehydro-product
+    label: MS/MS-supported dehydro-F420-0 product
+    node_type: STATE
+  edges:
+  - edge_id: mixed-product
+    subject: mixed-reaction
+    predicate: produces
+    object: dehydro-product
+    mechanism: The specified mixed-species purified pair gives the dehydro product under the tested PEP/GTP conditions. The composite observed effect does not identify a free activated intermediate or assign the partner's transfer chemistry to CofC.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:30952857
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6450877/
+      snippet: Tandem mass spectral identification
+      explanation: Figure2b CofC traces, Figure2c product identity and Methods. The2PL/ATP comparisons and reported no-partner result are retained with their limits in the ledger.
+      cache_path: evidence/PF01983/bashiri-2019.txt
+      cache_sha256: 54a354e96fad787ba8de16b92c0d49516a921b8b7de993fff702e2c91b7bd9d9
+- graph_id: mrhiz-mutant-product-fractions-2022
+  title: Mrhiz CofC substitutions lower the relative 3PG product fraction
+  scope: Hasan2022 Figure3B; separate full-protein mutants versus WT pFS03, each coupled to Mjan-CofD.
+  context: Purified N-His6 proteins produced in E.coli; standard coupled50uL assay,100mM HEPES pH7.4,2mM GTP,2mM MgCl2,34uM CofD,26uM CofC and0.5mM each3PG,PEP,2PL. Fo is printed0.14nM, unresolved; temperature unspecified. LC-MS normalized product fractions over0-20min,n=3 biological replicates,SD.
+  family_mapping: TableS3 WP_041753721.1,216aa,HKI454 equals E5ASS2 sequence1 residues6-221. PF01983 reference20-206 transfers to15-201. Paper M91/C95/H145/S162 map to E5ASS2 M96/C100/H150/S167. Full tagged proteins were tested; exact individual inserts were not independently authenticated.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:882378
+  limitations: These are relative fractions in coupled reactions, not absolute activity, binding affinity or an isolated-domain mechanism. S162T,C95A,M91A,H145A/H145T retain mostly3PG profiles. S162G retains detectable3PG; no universal zero or double-mutant synergy is inferred. Folding, abundance and partner effects are not independently excluded.
+  nodes:
+  - node_id: s162a
+    label: Replace WT by paper S162A (E5ASS2 S167A),pMH25
+    node_type: PERTURBATION
+    grounding: [UniProtKB:E5ASS2]
+  - node_id: s162e
+    label: Replace WT by paper S162E (E5ASS2 S167E),pMH22
+    node_type: PERTURBATION
+    grounding: [UniProtKB:E5ASS2]
+  - node_id: s162g
+    label: Replace WT by paper S162G (E5ASS2 S167G),pMH24
+    node_type: PERTURBATION
+    grounding: [UniProtKB:E5ASS2]
+  - node_id: s162y
+    label: Replace WT by paper S162Y (E5ASS2 S167Y),pMH23
+    node_type: PERTURBATION
+    grounding: [UniProtKB:E5ASS2]
+  - node_id: c95l
+    label: Replace WT by paper C95L (E5ASS2 C100L),pMH66
+    node_type: PERTURBATION
+    grounding: [UniProtKB:E5ASS2]
+  - node_id: m91l
+    label: Replace WT by paper M91L (E5ASS2 M96L),pMH77
+    node_type: PERTURBATION
+    grounding: [UniProtKB:E5ASS2]
+  - node_id: s162g-c95l
+    label: Replace WT by paper S162G/C95L (E5ASS2 S167G/C100L),pMH68
+    node_type: PERTURBATION
+    grounding: [UniProtKB:E5ASS2]
+  - node_id: relative-3pg-product
+    label: 3PG-derived fraction of the measured F420-0 product mixture
+    node_type: STATE
+  edges:
+  - edge_id: s162a-relative-decrease
+    subject: s162a
+    predicate: decreases
+    object: relative-3pg-product
+    mechanism: With Mjan-CofD and competing substrates held in the assay, the S162A preparation shifts the normalized product distribution away from3PG relative to WT; the elementary cause is unresolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Residues determining substrate specificities of CofC homologs.
+      explanation: Figure3B WT versus S162A; TableS2 pMH25, TableS3 reference mapping and s4-5 normalization. Not a directly measured binding defect.
+      cache_path: evidence/PF01983/hasan-2022.txt
+      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf
+  - edge_id: s162e-relative-decrease
+    subject: s162e
+    predicate: decreases
+    object: relative-3pg-product
+    mechanism: S162E replacement lowers the3PG-derived relative product fraction versus WT in the specified coupled reaction; no absolute turnover loss is inferred from normalized bars.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Residues determining substrate specificities of CofC homologs.
+      explanation: Figure3B WT/S162E, TableS2 pMH22 and s4-5 LC-MS analysis.
+      cache_path: evidence/PF01983/hasan-2022.txt
+      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf
+  - edge_id: s162g-relative-decrease
+    subject: s162g
+    predicate: decreases
+    object: relative-3pg-product
+    mechanism: S162G replacement lowers but does not eliminate the visible3PG-derived relative fraction versus WT in the coupled product profile.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Residues determining substrate specificities of CofC homologs.
+      explanation: Figure3B retains a green S162G bar; TableS2 pMH24. The observation does not establish universal loss of3PG activation.
+      cache_path: evidence/PF01983/hasan-2022.txt
+      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf
+  - edge_id: s162y-relative-decrease
+    subject: s162y
+    predicate: decreases
+    object: relative-3pg-product
+    mechanism: S162Y replacement lowers the3PG-derived relative fraction and favors alternative measured products versus WT in the same coupled assay.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Residues determining substrate specificities of CofC homologs.
+      explanation: Figure3B WT/S162Y and TableS2 pMH23; no digitized zero or rate estimate.
+      cache_path: evidence/PF01983/hasan-2022.txt
+      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf
+  - edge_id: c95l-relative-decrease
+    subject: c95l
+    predicate: decreases
+    object: relative-3pg-product
+    mechanism: C95L replacement lowers the3PG-derived relative product fraction versus WT. The suggested repositioning of M91 is a model explanation, not observed by this product assay.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Residues determining substrate specificities of CofC homologs.
+      explanation: Figure3B WT/C95L with C95A comparator and TableS2 pMH66/pMH67; not direct evidence for pocket motion.
+      cache_path: evidence/PF01983/hasan-2022.txt
+      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf
+  - edge_id: m91l-relative-decrease
+    subject: m91l
+    predicate: decreases
+    object: relative-3pg-product
+    mechanism: M91L replacement reduces the3PG-derived fraction of the coupled product mixture versus WT; a remaining3PG contribution is visible and intrinsic affinity is not measured.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Residues determining substrate specificities of CofC homologs.
+      explanation: Figure3B WT/M91L with M91A comparator, TableS2 pMH77/pMH76 and the verified+5 reference offset.
+      cache_path: evidence/PF01983/hasan-2022.txt
+      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf
+  - edge_id: double-relative-decrease
+    subject: s162g-c95l
+    predicate: decreases
+    object: relative-3pg-product
+    mechanism: The combined S162G/C95L replacement lowers the3PG-derived relative fraction versus WT while2PL/PEP-derived products dominate. This is one joint intervention, not independent sufficient effects or a measured synergy coefficient.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Residues determining substrate specificities of CofC homologs.
+      explanation: Figure3B WT versus S162G;C95L, TableS2 pMH68 and standard assay Methods.
+      cache_path: evidence/PF01983/hasan-2022.txt
+      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf
+- graph_id: msmeg-double-mutant-product-fractions-2022
+  title: A paired FbiD substitution enables a 3PG-derived product fraction
+  scope: Hasan2022 Figure3C; Msmeg-FbiD G169S/T152H pMH80 versus WT pMH10, both coupled to Mjan-CofD.
+  context: Purified N-His6 full proteins produced in E.coli; competing0.5mM each3PG,PEP,2PL with GTP,Mg,Fo and Mjan-CofD in HEPES pH7.4. Standard assay concentrations and unresolved printed Fo0.14nM are retained in the source ledger; LC-MS relative formation over0-20min,n=3,SD.
+  family_mapping: TableS3 YP_886732.1,221aa,mc2 155 is identical to A0QUZ4 sequence1,PF01983 match20-170. G169 and T152 lie within the reference match with no numbering offset. This is a full-protein mutation comparison, not isolated-domain sufficiency.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:246196
+  limitations: The19.6% value is a relative product fraction, not total conversion or affinity. Single G169S,T152H,L98C and G169S/L98C do not reproduce the gain. The triple G169S/T152H/L98C is insoluble and excluded from catalytic inference. Folding/partner mechanisms and the physical insert are not independently resolved.
+  nodes:
+  - node_id: double-mutant
+    label: Replace WT FbiD with joint G169S/T152H mutant,pMH80
+    node_type: PERTURBATION
+    grounding: [UniProtKB:A0QUZ4]
+  - node_id: relative-3pg-product
+    label: 3PG-derived fraction of the measured F420-0 product mixture
+    node_type: STATE
+  edges:
+  - edge_id: double-relative-increase
+    subject: double-mutant
+    predicate: increases
+    object: relative-3pg-product
+    mechanism: The joint G169S/T152H replacement yields a reported19.6%3PG-derived fraction where the WT comparison has no visible3PG bar. Both substitutions and the coupled assay inputs are one tested condition; no direct substrate-binding mechanism is resolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Residues determining substrate specificities of CofC homologs.
+      explanation: Figure3C and Results s2-4 with the single/double-mutant comparators, TableS2 pMH80 and TableS3 identical sequence mapping.
+      cache_path: evidence/PF01983/hasan-2022.txt
+      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf
+- graph_id: mrhiz-partner-product-fractions-2022
+  title: Mrhiz CofD changes the coupled output of fixed Mrhiz CofC
+  scope: Hasan2022 Figure6A; keep WT Mrhiz-CofC pFS03 fixed and exchange Mjan-CofD pFS04 for cognate Mrhiz-CofD pFS02.
+  context: Purified N-His6 proteins, competing3PG/PEP/2PL,GTP,Mg,Fo and HEPES pH7.4; standard assay and unresolved Fo unit as recorded in the source ledger. LC-MS normalized product fractions,n=3 biological replicates,SD. Figure6 baselines are not pooled with Figure3.
+  family_mapping: CofC WP_041753721.1,216aa,equals E5ASS2 sequence1 residues6-221; reference PF01983 match20-206 transfers to15-201. Partners WP_010870769.1 and WP_013435881.1 are CofD, not PF01983 proteins; exact source identities are in TableS3.
+  scope_status: PHENOTYPIC
+  limitations: Partner replacement tests the two-enzyme product distribution, not intrinsic CofC substrate affinity, catalytic acceleration, native physiology or physical channeling. Minor2PL/PEP products are traces rather than assumed zero; absolute reaction rates are not provided by these fractions.
+  nodes:
+  - node_id: partner-exchange
+    label: Replace Mjan-CofD with Mrhiz-CofD while retaining Mrhiz-CofC
+    node_type: PERTURBATION
+  - node_id: relative-3pg
+    label: 3PG-derived product fraction
+    node_type: STATE
+  - node_id: relative-2pl
+    label: 2PL-derived product fraction
+    node_type: STATE
+  - node_id: relative-pep
+    label: PEP-derived product fraction
+    node_type: STATE
+  edges:
+  - edge_id: relative-3pg-increase
+    subject: partner-exchange
+    predicate: increases
+    object: relative-3pg
+    mechanism: Changing the downstream partner to cognate Mrhiz-CofD raises the3PG-derived relative fraction with the CofC protein unchanged.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Role of CofD in substrate specificity
+      explanation: Figure6A partner comparison, Results s2-8, TablesS2/S3 and s4-5 normalized LC-MS analysis.
+      cache_path: evidence/PF01983/hasan-2022.txt
+      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf
+  - edge_id: relative-2pl-decrease
+    subject: partner-exchange
+    predicate: decreases
+    object: relative-2pl
+    mechanism: The same partner substitution lowers the2PL-derived fraction to a trace contribution in the coupled product mixture, without establishing lower absolute CofC turnover.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Role of CofD in substrate specificity
+      explanation: Figure6A dark bars and s2-8; the input is a partner change, not a CofC mutation.
+      cache_path: evidence/PF01983/hasan-2022.txt
+      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf
+  - edge_id: relative-pep-decrease
+    subject: partner-exchange
+    predicate: decreases
+    object: relative-pep
+    mechanism: The cognate partner decreases the PEP-derived relative product fraction, with residual traces retained rather than modeled as complete pathway exclusion.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Role of CofD in substrate specificity
+      explanation: Figure6A pale bars, Results s2-8 and the standard competing-substrate assay.
+      cache_path: evidence/PF01983/hasan-2022.txt
+      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf
+- graph_id: b3-partner-product-fractions-2022
+  title: Cognate B3 CofD changes the coupled output of fixed B3 CofC
+  scope: Hasan2022 Figure6B; retain Mycetohabitans sp.B3 CofC pMH43 and replace Mjan-CofD pFS04 with cognate B3-CofD pMH60.
+  context: Purified tagged proteins in the standard3PG/PEP/2PL competing-substrate assay with GTP,Mg,Fo and HEPES pH7.4. LC-MS relative products,n=3,SD; printed Fo0.14nM and unreported assay temperature are unresolved. The measured system is in vitro, not a perturbed B3 culture.
+  family_mapping: B3 KQH55_09515,216aa; supplied pMH43 DNA translates exactly to the243aa7P97 entity1 including27aa tag/linker. Native B3 is209/216 identical to WP_041753721.1 with no indels; E5ASS2 PF01983 match transfers to B3 15-201 by homology, not a new HMM call. B3 is not E5ASS2/HKI454; no unsupported taxon or UniProt ID is assigned.
+  scope_status: PHENOTYPIC
+  limitations: The deposition's E5ASS2/HKI454 reference mapping is not construct identity. Partner KQH55_09505 is a separate CofD. Relative product changes do not prove intrinsic CofC affinity, absolute rates, native cofactor output, a stable complex or intermediate channeling.
+  nodes:
+  - node_id: partner-exchange
+    label: Replace Mjan-CofD with B3-CofD while retaining B3-CofC
+    node_type: PERTURBATION
+  - node_id: relative-3pg
+    label: 3PG-derived product fraction
+    node_type: STATE
+  - node_id: relative-2pl
+    label: 2PL-derived product fraction
+    node_type: STATE
+  - node_id: relative-pep
+    label: PEP-derived product fraction
+    node_type: STATE
+  edges:
+  - edge_id: relative-3pg-increase
+    subject: partner-exchange
+    predicate: increases
+    object: relative-3pg
+    mechanism: The cognate B3-CofD replacement raises the3PG-derived fraction of the coupled product mixture with B3-CofC unchanged.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Role of CofD in substrate specificity
+      explanation: Figure6B, TablesS2/S3 and TextS2-supported B3 identity; the comparison does not mutate CofC.
+      cache_path: evidence/PF01983/hasan-2022.txt
+      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf
+  - edge_id: relative-2pl-decrease
+    subject: partner-exchange
+    predicate: decreases
+    object: relative-2pl
+    mechanism: With B3-CofC fixed, the B3-CofD replacement lowers the2PL-derived relative fraction to a small residual contribution rather than proving complete exclusion of2PL chemistry.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Role of CofD in substrate specificity
+      explanation: Figure6B dark bars and Results s2-8; the output is a normalized mixture, not an absolute rate.
+      cache_path: evidence/PF01983/hasan-2022.txt
+      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf
+  - edge_id: relative-pep-decrease
+    subject: partner-exchange
+    predicate: decreases
+    object: relative-pep
+    mechanism: The same downstream-partner replacement lowers the PEP-derived relative product fraction while a trace contribution remains visible.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Role of CofD in substrate specificity
+      explanation: Figure6B pale bars and Results s2-8 with the source's coupled-assay limitations.
+      cache_path: evidence/PF01983/hasan-2022.txt
+      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf
+- graph_id: msmeg-partner-product-fractions-2022
+  title: Cognate FbiA changes the coupled output of fixed Msmeg FbiD
+  scope: Hasan2022 Figure6C; keep WT Msmeg-FbiD pMH10 fixed and exchange Mjan-CofD pFS04 for cognate Msmeg-FbiA pMH59.
+  context: Purified N-His6 pairs with equal competing3PG,PEP,2PL,GTP,Mg,Fo and HEPES pH7.4 in the standard assay; LC-MS normalized fractions,n=3 biological replicates,SD. Printed Fo0.14nM remains unresolved; no temperature is imported from2019.
+  family_mapping: YP_886732.1 equals A0QUZ4 sequence1,221aa,MSMEG_2392,PF01983 match20-170. CofD/FbiA partners WP_010870769.1 and WP_011727938.1 are distinct proteins; the latter is the327aa Msmeg-FbiA, not FbiD. Reference mapping is not an isolated-domain assay.
+  scope_status: PHENOTYPIC
+  limitations: This changes the downstream partner, not the FbiD sequence. The2PL loss is an assay-specific relative-fraction effect, not universal FbiD substrate exclusion. Absolute rates, intrinsic affinity, complex formation and channeling are unresolved; the earlier PF01933 partner graph describes the same experiment, not replication.
+  nodes:
+  - node_id: partner-exchange
+    label: Replace Mjan-CofD with Msmeg-FbiA while retaining Msmeg-FbiD
+    node_type: PERTURBATION
+  - node_id: relative-2pl
+    label: 2PL-derived product fraction
+    node_type: STATE
+  - node_id: relative-pep
+    label: PEP-derived product fraction
+    node_type: STATE
+  edges:
+  - edge_id: relative-2pl-decrease
+    subject: partner-exchange
+    predicate: decreases
+    object: relative-2pl
+    mechanism: Replacing the archaeal partner with Msmeg-FbiA almost eliminates the2PL-derived relative product contribution while FbiD and the competing substrates remain fixed.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Role of CofD in substrate specificity
+      explanation: Figure6C dark bars, Results s2-8 and TablesS2/S3 partner identities.
+      cache_path: evidence/PF01983/hasan-2022.txt
+      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf
+  - edge_id: relative-pep-increase
+    subject: partner-exchange
+    predicate: increases
+    object: relative-pep
+    mechanism: The same cognate-partner substitution shifts the relative product mixture toward the PEP-derived product. A higher normalized fraction does not by itself establish increased absolute catalytic flux.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:35038903
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+      snippet: Role of CofD in substrate specificity
+      explanation: Figure6C pale bars and the s4-5 relative-product calculation; no direct FbiD binding change is inferred.
+      cache_path: evidence/PF01983/hasan-2022.txt
+      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf

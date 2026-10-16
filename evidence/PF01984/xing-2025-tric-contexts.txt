@@ -1,0 +1,119 @@
+PF01984 primary experiment ledger
+Curator: Codex; inspected 2026-10-16 UTC.
+Xing et al., In situ analysis reveals the TRiC duty cycle and PDCD5 as an
+open-state cofactor. Nature637:983-990 (2025), online2024-12-11.
+PMID39663456; DOI10.1038/s41586-024-08321-z.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11754096/
+https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11754096/fullTextXML
+XML SHA256 3feba1aa8c62bcd7713ed6eadb4a7a609afcefe261eeebca2fa85dc659a01b67
+License: https://creativecommons.org/licenses/by/4.0/.
+This is an attributed, abbreviated extract and curator paraphrase, not a
+copy of the article. Only the short phrases below are verbatim.
+
+Source assets, fetched from
+https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-024-08321-z/MediaObjects/
+41586_2024_8321_MOESM1_ESM.pdf
+SHA256 ddd524d7571709671bb2f8097ca266e49216e7644cb55acfc708a60db69c532e
+41586_2024_8321_MOESM16_ESM.xlsx (Extended Data Fig.6 source images)
+SHA256 2233f9b4cac6704c6e651377a3537461126a1d448f7597a0024fca4a9bbf261f
+41586_2024_8321_MOESM17_ESM.xlsx (Extended Data Fig.7 source images)
+SHA256 8b47275156c169d8d43f1452a5075ab86ce8e69750ae8aaf49529e77d92e3b86
+41586_2024_8321_MOESM5_ESM.xlsx (Supplementary Fig.7 source images)
+SHA256 c9dc7284a42c0617418534204e046e531ef7e34efc786c13837dedcbf04d5777
+Inspected XML Results/Methods and ED6/7 captions, all five ED6 source
+images, ED7 source images2/3, and rendered supplement PDF pages10,11,14.
+MOESM5 was retrieved but its embedded source images were not separately
+inspected; no raw-image replication or re-quantification is claimed.
+
+IL co-IP edge: Par9 phrase "reduced its interaction".
+ED6f/g; Methods Par30/Par32. Human PDCD5-Flag WT versus I93G/L96G (IL)
+transfected for48h in HEK293F. Clarified500ug lysate was bound to20uL
+packed anti-Flag M2 beads for1h at4C, washed3times, then immunoblotted.
+Lysis: PBS pH7.4,0.1%IGEPAL,5mM MgCl2,0.6mM PMSF and inhibitors.
+ED6g defines co-IP CCT1 divided by co-IP PDCD5, normalized to WT100%.
+The reported IL association is lower. Five source-image replicates are
+present (MOESM16 image1:1/2, image2:3/4, image3:5), agreeing with the
+ED6 caption's n=5 but not Methods Par32's n=4. Par32 gives IL11.04+/-9.68,
+WT100+/-0; these are not reasserted as a resolved five-replicate estimate.
+Input and IP anti-PDCD5, anti-CCT1 and GAPDH controls are visible.
+Replicate4's raw CCT1 IP difference is less pronounced than the others;
+do not claim complete binding loss in every replicate. RKK cellular
+expression is much lower, so its co-IP ratio cannot establish an intact
+interface or refute the recombinant result. No cellular RKK causal edge.
+IL substitution is a combined perturbation, not two separately sufficient
+residues. Interface contacts are model-supported, not observed atomistic
+causal steps; altered fold/abundance/localization are not fully excluded.
+
+RKK native-gel edge: Par9 phrase "severely impaired".
+ED6h; Methods Par27/29; MOESM16 image4. Human recombinant PDCD5-His6
+R55A/K63A/K66A versus WT at0,0.075,0.15,0.225,0.3,0.6,0.9,1.5,3uM,
+with300nM recombinant human TRiC,20min at25C, without ATP. Buffer50mM
+Tris pH7.4,100mM KCl,5mM MgCl2,10%glycerol,1mM TCEP. Anti-PDCD5 native
+complex signal is strongly reduced for RKK; anti-CCT8 tracks TRiC.
+Caption says two independent experiments; the source image shows the
+displayed titration, not two separately labelled replicate series.
+This is a binding-readout effect, not a measured Kd, complete absolute
+absence of association, independent effects of each residue, or proof
+that neutralizing electrostatics alone explains the loss.
+
+IL native-gel edge: Par9 phrase "binding kinetics".
+ED6i/j; Par29; MOESM16 image5. PDCD5 WT/IL3uM plus TRiC300nM,25C,
+same ATPase buffer,10/15/20/30min. At10min the IL native-complex PDCD5
+signal is lower than WT; later bands approach WT more closely. Graph
+retains the early10min comparison, not permanent loss or a fitted
+on-rate/off-rate. Caption specifies n=2, SEM for the plotted timecourse;
+one displayed blot series is present. Anti-CCT8 is the complex control.
+
+Bead-release edge: Par11 phrase "CCT1 enrichment".
+ED7h-j; Methods Par30/33/35; MOESM17 image2, four labelled replicates.
+PDCD5-Flag/TRiC complexes captured from HEK293F as above were exposed
+on beads to lysis buffer plus1mM ATP,5mM Al(NO3)3,30mM NaF for1h at37C,
+then washed3times in the same treatment buffer. Control beads underwent
+the corresponding incubation/washes without ATP/AlFx. CCT1 measured in
+supernatant relative to bead fraction rises: reported1.53+/-0.51 versus
+0.38+/-0.06, n=4, SD. PDCD5 supernatant/bead values0.09+/-0.05 versus
+0.10+/-0.04 are not detectably changed. Thus the endpoint is TRiC release
+from immobilized PDCD5, not PDCD5 release from beads, substrate release,
+or an ATP-alone effect. The combined closure-favouring treatment is one
+input; chemical/structural microsteps are not independently resolved.
+
+Native nucleotide-treatment edge: Par11 word "disrupted".
+ED7k; Par29; MOESM17 image3. PDCD5-His6 WT3uM and human TRiC300nM,
+20min at25C in ATPase buffer with1mM nucleotide/analogue. The ATP/AlFx
+condition reduces PDCD5 signal at the TRiC complex relative to no
+nucleotide. ATP, ATPgammaS, ADP and AMPPCP do not reproduce that loss;
+TRiC-only lane and CCT8 blot are controls. Residual PDCD5 signal remains,
+so do not claim zero binding. Caption reports two repetitions; one
+source blot series is displayed. Exact Al/F concentrations for this
+native-gel preparation are not specified in Par29; do not silently copy
+the bead-release recipe. Effect retained at the measured complex-signal
+level, not as a direct proof that ring closure causes dissociation.
+
+Thermal-profile edges: Par12 word "stabilization".
+Supplementary Fig.7e-h, PDF pages10-11; Methods Par36/37. Commercial
+HEK293T WT ab255449 and PDCD5-knockout ab266229, DMEM/10%FBS,37C/5%CO2.
+5e5 cells per aliquot in PBS were heated3min, lysed40min at4C, aggregates
+removed, soluble fractions immunoblotted and normalized to GAPDH.
+Actin temperatures37,44.1,49.9,55.5,62C; means WT100,85.3,73.8,46.3,26.3
+and KO100,100.3,109,83,57.6. Tubulin temperatures56.8,58.3,59.5,60.7,62.1C;
+means WT100,78.2,49.3,20,5.4 and KO138,99.7,63.9,34.8,8.3.
+Both panels report n=2 independent experiments, SD; not a formal proof
+of significance at every point. Graphs retain higher measured mean
+soluble-protein signal, not folding flux, intrinsic melting temperature,
+substrate release or a demonstrated TRiC-dependent mechanism. Tubulin
+starts at different normalized baseline signal; this prevents treating
+its difference as an abundance-independent stability shift. Target
+rescue/clone-specific controls were not established in the inspected
+experiment. Figure7e and7f are different temperature series. The source
+caption's tubulin panel letter slip is resolved using the actual panels,
+not by merging the two assays. Antibodies: actinAM4302, tubulinT5168;
+do not invent a single substrate gene/isoform identity from these blots.
+
+Condition-specific negative and excluded arrows:
+Supplementary Fig.10, PDF p14, Par21/28:300nM TRiC +/-3uM PDCD5,
+quinaldine-red phosphate assay at37C, n=2, SEM, no-TRiC background.
+The displayed phosphate-release trajectories overlap; no observed
+PDCD5-to-increased/decreased-ATPase edge is supported in this assay.
+Co-IP, cryo-ET occupancy, AlphaFold-Multimer, DepMap correlations and
+yeast genetic associations do not independently prove substrate release,
+apoptosis or PDCD5-caused opening. No such edges are introduced here.

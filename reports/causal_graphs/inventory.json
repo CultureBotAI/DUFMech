@@ -1540,34 +1540,43 @@
       ]
     },
     {
-      "curation_status": "SEEDED",
-      "edge_count": 0,
-      "graph_count": 0,
-      "graph_state": "ABSENT",
+      "curation_status": "IN_PROGRESS",
+      "edge_count": 18,
+      "graph_count": 7,
+      "graph_state": "PRESENT",
       "name": "CofC",
       "pfam_id": "PF01983",
-      "record_digest": "0fd4f72ba2051fb5dbcbc97992adadc6f13f15dc5a059c58eca25ab86e2010e8",
-      "scope_statuses": []
+      "record_digest": "582f51bb963d05987102fad96a0a75f21e977576ad2e7ade0b222e38b98571d6",
+      "scope_statuses": [
+        "MECHANISTIC",
+        "PHENOTYPIC"
+      ]
     },
     {
-      "curation_status": "SEEDED",
-      "edge_count": 0,
-      "graph_count": 0,
-      "graph_state": "ABSENT",
+      "curation_status": "IN_PROGRESS",
+      "edge_count": 7,
+      "graph_count": 6,
+      "graph_state": "PRESENT",
       "name": "dsDNA_bind",
       "pfam_id": "PF01984",
-      "record_digest": "3a7195c5a41bccfa9c265ed40d0a57ff0cd116e4a4a57c350ed08e7e23a00e70",
-      "scope_statuses": []
+      "record_digest": "7609dbe70546ec5646e4de1abc49a6c227f44f4f4befb8900aa53a70e1b04834",
+      "scope_statuses": [
+        "MECHANISTIC",
+        "PHENOTYPIC"
+      ]
     },
     {
-      "curation_status": "SEEDED",
-      "edge_count": 0,
-      "graph_count": 0,
-      "graph_state": "ABSENT",
+      "curation_status": "IN_PROGRESS",
+      "edge_count": 34,
+      "graph_count": 14,
+      "graph_state": "PRESENT",
       "name": "CRS1_YhbY",
       "pfam_id": "PF01985",
-      "record_digest": "c54a224d22034fffe34e5ed3e3fc968fbed5185d5c822c785fc48bbe213eec12",
-      "scope_statuses": []
+      "record_digest": "92c1cc32ecbf72bdd36a9c2b8c5882fb8a4f6d5744e2273202e927a22bf2470d",
+      "scope_statuses": [
+        "MECHANISTIC",
+        "PHENOTYPIC"
+      ]
     },
     {
       "curation_status": "SEEDED",
@@ -83299,8 +83308,8 @@
     }
   ],
   "graph_states": {
-    "ABSENT": 8165,
-    "PRESENT": 131
+    "ABSENT": 8162,
+    "PRESENT": 134
   },
   "kind": "structural_inventory_not_scientific_review",
   "records": 8296

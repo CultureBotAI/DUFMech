@@ -1,0 +1,1018 @@
+# PF01983 CofC/FbiD paired reactions, mutation effects and partner-dependent product fractions
+
+- Review: 20261016T035526Z-pf01983-cofc-coupled-assay-contexts
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-16T03:50:24Z
+- Finished UTC: 2026-10-16T03:55:26Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+Seven new graphs retain18 observed relations in distinct biochemical contexts. Two are direct composite reconstitutions;16 mutation/partner effects leave elementary mechanisms unresolved. The Mrhiz five-residue reference offset and exact B3 pMH43 translation are explicit. Three scientific follow-ups remain open; no family-wide characterization or REVIEWED promotion is claimed.
+
+## Scope And Provenance
+
+Scientific review of all18 adopted relations in the new PF01983 overlay, its evidence/coordinate ledgers and generated projection. Partial source/member coverage within the full-family objective.
+
+Selection: First native PF01983 graph curation, following ignored/hidden-inclusive searches of curation,evidence,history,reviews,reports. Existing PF01933 partner evidence was identified and retained without treating the same experiments as replication.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 82063899e75b14f698e07408696179ec071ffe8f.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01983 | data/families/PF01983.yaml | generated | PF01983 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| baseline-and-generation | passed | True | PF01983 | Baseline8296 valid records with zero drift; native dry run and apply changed only PF01983 and its ownership manifest. |
+| native | passed | True | PF01983 | Full native record/history/retained-review and schema checks pass, including the four review-contract tests; checks before this new report and REVIEW event, which require subsequent revalidation. |
+| focused | passed | True | PF01983 | 52 tests pass. These test graph/evidence contracts and orchestration, not biological truth. |
+| derived | passed | True | PF01983 | Native inventory and exports reproduce;922 graphs/1987 edges across132 families, with8164 graphless. The two changed association-export rows reflect PF01983 IN_PROGRESS, not newly inferred cross-family edges. |
+| integrity | passed | True | PF01983 | All8296 manifest hashes,18 edge evidence hashes/primary XML anchor matches, imported PF01983 fields and all8295 other records pass preservation checks. Prior tracked source/review/history bytes are unchanged. |
+| sequence-transfer | passed | True | PF01983 | Exact RefSeq/UniProt suffix comparisons confirm+5/+6/zero offsets; all tested mapped residues match. B3 pMH43 translation exactly equals7P97 entity1 and native B3 differs from Mrhiz at seven of216 positions without indels. |
+| preview | passed | True | PF01983 | Native unpinned JSON equals the current record. At1440px/390px all18 disclosures work, directness labels and coordinate qualifications remain visible, and no document overflow or JS errors occur. Both selected graph screenshots at both widths were visually inspected. |
+| Canonical source pins require a new checkpoint | failed | False | PF01983 | Expected unpublished-curation mismatch: site source pin bytes differ for data/families/PF01983.yaml. Canonical Pages and full release QC are not claimed current; no pin or generated page was manually changed. |
+
+## Scientific And Domain Assessments
+
+### Exact family and construct/reference distinctions
+
+identity: supported. Targets: PF01983.
+
+Frozen PF01983/former DUF121 identity is preserved. The E5ASS2 offset, Q58297 versus MJ1117 distinction and B3 reference mismatch are explicit; no unsupported B3 taxon/accession or new HMM match is invented.
+
+### Composite observed product formation
+
+graph: supported. Targets: PF01983.
+
+Both2019 graphs represent full paired-enzyme reaction conditions. Observed dehydro product formation does not become single-enzyme sufficiency, a mature-cofactor effect or directly observed EPPG/channeling.
+
+### Scoped mutation effects and negative comparators
+
+graph: supported. Targets: PF01983.
+
+Seven separate Mrhiz substitutions and one Msmeg joint substitution retain their relative-output semantics and exact reference mapping. Partial output, retained profiles and the insoluble triple mutant constrain claims; no binding/folding mechanism is asserted.
+
+### Partner-dependent product fractions
+
+graph: supported. Targets: PF01983.
+
+Three distinct fixed-CofC comparisons change only the downstream partner. Their eight relative-fraction effects are not intrinsic CofC affinities or evidence of physical channeling.
+
+### Native ownership and unchanged corpus
+
+provenance: supported. Targets: PF01983.
+
+Human overlay, minimal hash-bound evidence and actual CREATE history own the new record content. All8295 other family projections, frozen sources and prior tracked reviews/evidence/history remain unchanged; old partner evidence is not counted as replication.
+
+### Original sources, constructs and elementary mechanisms
+
+completeness: concern. Targets: PF01983.
+
+Partial scientific coverage remains: original biochemical papers, native genetics, additional homologs, Fo units, physical inserts and quantitative/structural mechanisms need discriminating evidence.
+
+## Findings
+
+### constructs-and-assay-details: Resolve exact constructs and source assay details
+
+minor / open / confirmed; issue key: pf01983-constructs-and-assay-details.
+
+Reference suffix mappings and B3 supplied-plasmid translation are established, but physical insert authentication,2019 exact endpoint/per-condition n and Hasan Fo units remain unresolved. Do not silently correct source units or reuse the2022 Mjan construct for2019.
+
+### quantitative-and-atomic-mechanisms: Separate absolute catalysis and atomic mechanisms from relative fractions
+
+minor / open / confirmed; issue key: pf01983-quantitative-and-atomic-mechanisms.
+
+The observed fractions support mutation/partner effects but not intrinsic affinity, unchanged folding, absolute flux, isolated-domain sufficiency or a directly observed channeling/ligand-motion mechanism. Retain unresolved labels until discriminating measurements exist.
+
+### primary-and-member-coverage: Extend original-source and exact-member evidence
+
+minor / open / confirmed; issue key: pf01983-primary-and-member-coverage.
+
+Original2008 and earlier2019 biochemical studies, native cofactor evidence, additional homologs and remaining structure/nanoDSF branches are not fully reviewed. The bounded discovery search and accessible figures do not establish a complete family census or universal substrate preference.
+
+## Recommended Actions And Acceptance Checks
+
+### extend-cofc-evidence
+
+Resolve the named evidence gaps through primary-source inspection and explicit successor curation, without upgrading coupled assay observations into unmeasured mechanisms.
+
+- Resolve source-specific insert/coordinate and Fo-unit ambiguities or preserve them explicitly.
+- Require quantitative product and relevant protein controls before absolute activity or affinity claims.
+- Distinguish direct intermediate/complex/residue evidence from static structures or docking models.
+- Inspect original source and additional member contexts before adding new causal relations; preserve contradictory assay contexts and evidence dependence.
+- Retain current graph IDs, append successor reviews/history and pass native generation/evidence/integrity checks.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| identity | evidence/PF01983/identity-and-coordinates.txt; Frozen previous-name row; current InterPro/UniProt JSON; versioned RefSeq FASTA; TableS3; exact TextS2 pMH43 translation and RCSB7P97 entity1. Payload hashes retained. | supports | Resolves PF01983/former DUF121, tested protein references and coordinate offsets without equating whole proteins with isolated domains or database homology references with physical constructs. |
+| bashiri | https://pmc.ncbi.nlm.nih.gov/articles/PMC6450877/; Sec3,Sec8,Sec9,Sec12,Sec13,Sec14; Figure2b/c viewed; reporting-summary page2 viewed; evidence/PF01983/bashiri-2019.txt. | supports | Two separately scoped complete enzyme-pair reactions produce the dehydro intermediate. Product identity, nucleotide/substrate comparisons and context-specific negatives are distinguished from intermediate/channeling mechanisms. |
+| hasan | https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/; Results s2-2 through s2-4 and s2-8; Methods s4-1 through s4-5; Figures3B/C and6A/B/C; TableS2B,TableS3 and TextS2; evidence/PF01983/hasan-2022.txt. | supports | Seven Mrhiz mutation effects, one Msmeg joint substitution effect and eight fraction changes from three partner replacements are observed; normalized fractions and negative/retained comparators constrain interpretation. |
+| coverage | evidence/PF01983/coverage-and-gaps.txt; Ignored-inclusive owner search; explicit search extent, primary leads and eight follow-up branches. | supports | Retains inaccessible or uninspected sources, original biochemical papers, native/member coverage and unresolved mechanism requirements without treating access failures as negative biology. |
+| validation | data/families/PF01983.yaml; Native record/schema/history/review checks, graph inventory/exports, focused tests, exact preservation checks and1440px/390px local preview. | supports | Confirms representation, evidence anchors, coordinate bookkeeping and preservation, not scientific completeness. |
+| duf-projection-pf01983 | data/families/PF01983.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Same-agent review. The full objective remains8296 records; structural graph presence in132 families is not completed scientific review of those families.
+- All18 adopted relations are observed experimental outcomes, but only two composite reactions are DIRECT/MECHANISTIC. The16 remaining relations are UNRESOLVED/PHENOTYPIC; no direct residue-binding or channeling edge is adopted.
+- Mrhiz paper M91/C95/H145/S162 map to E5ASS2 M96/C100/H150/S167. The2022 Mjan RefSeq is a218aa suffix of224aa Q58297, but that length is not retroactively assigned to the2019 synthetic clone.
+- B3 pMH43 translates exactly to7P97 entity1; its216aa native sequence is209/216 identical to the Mrhiz RefSeq. The deposition reference E5ASS2/HKI454 is not exact B3 identity; its Pfam boundary is an explicitly labeled homology transfer.
+- Hasan2022 prints Fo0.14nM; the unit is unresolved. Relative LC-MS fractions are not total conversion, absolute rates or affinity. The insoluble triple mutant is not a catalytic negative.
+- Bashiri2019 paired product formation is not a free EPPG observation. Its2PL negatives remain partner-specific; no universal archaeal substrate exclusion or direct complex formation is inferred.
+- The reporting summary supplies only at-least-two repetitions for coupled assays, not an exact per-lane n. The main Figure2 incubation endpoint and exact2019 insert remain unresolved.
+- Some evidence also appears in PF01933 because the assays test both proteins. This is the same evidential origin, not independent replication. The earlier PF01933 review is not superseded or silently changed.
+- Whole supplementary archives are incomplete; selected entries extracted successfully with tar --fast-read and selected DOCX inner CRC checks passed. Main figures and TableS2B/TableS3 were visually inspected; the unrecovered main2019 supplement and remaining files are not claimed inspected.
+- Native REVIEW history and final audit-index regeneration follow this saved observation. The record remains IN_PROGRESS without a review_id approval pointer.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 82063899e75b14f698e07408696179ec071ffe8f
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01983.yaml
+    sha256: ca8b26e4f406f0f9e4bf2e2b4a6788c10570c5a7f61350d888e205ecb9c667ee
+    role: context
+  - path: data/families/PF01983.yaml
+    sha256: 26b7dd897808c7e5ff1b8ab3bc1f3ef06ece803e8214ed563489789a4f75890b
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01983/bashiri-2019.txt
+    role: context
+    sha256: 54a354e96fad787ba8de16b92c0d49516a921b8b7de993fff702e2c91b7bd9d9
+  - path: evidence/PF01983/coverage-and-gaps.txt
+    role: context
+    sha256: a2f196ae4de943ef8744c7a23cafb252074f69966a4eefb8a2189bc7ee01c420
+  - path: evidence/PF01983/hasan-2022.txt
+    role: context
+    sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf
+  - path: evidence/PF01983/identity-and-coordinates.txt
+    role: context
+    sha256: 5d9b1b72cba6afa147eeddd6b023be7493bd6765c3d4c56958cc55f918419a84
+  - path: history/records/PF01983/2026-10-16T033623Z-codex-ac2a8e.yaml
+    role: context
+    sha256: 2b6005a92b5af010e4f3bf7b39208a43edabbf550ab1c1b2b9a23e70fc53335e
+  - path: data/worklists/pfam-previous-unknown-names-2026-10-10.json
+    role: context
+    sha256: a9f70f265bfe7039f5abf8e8a4545f389b66636edaf8e102c7e1a08ca1c1c10e
+  - path: curation/families/PF01933.yaml
+    role: context
+    sha256: 103b77a2de7dc4842398d722b786f04ac3e3705fec2e370275336420e163002f
+  - path: evidence/PF01933/identity.txt
+    role: context
+    sha256: 1a8bf969a075e18c400563fc4392bea489901dcfe73478de1aa1fd0e6c291214
+  - path: evidence/PF01933/coverage.txt
+    role: context
+    sha256: 03e4089d0424df1dbb5642afc7f1320ea3e154c43afc840bdf39a27b164e2b41
+  - path: evidence/PF01933/hasan-2022.txt
+    role: context
+    sha256: 057f3404a419d50c6311f9ac1fc763b6e99dd952713d2330c0da409b58495282
+  - path: evidence/PF01933/bashiri-2019.txt
+    role: context
+    sha256: 783504f269f3ececbea762a21a1788bf75600311aaba01f37894252ca59dc4ee
+  - path: src/dufmech/schema/dufmech.yaml
+    role: context
+    sha256: 5ca9b9cd1fdefdbe8066b08c319b5144a5f2631710f2271e84dc346283b608e9
+  - path: reports/causal_graphs/inventory.json
+    role: context
+    sha256: 7c7e65daeaa15b74203b58e52478f2823ea0f6d7a282d3fa2c2015875edc3b76
+targets:
+- target_id: PF01983
+  path: data/families/PF01983.yaml
+  label: PF01983
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01983.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 582f51bb963d05987102fad96a0a75f21e977576ad2e7ade0b222e38b98571d6
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+schema_version: 1.0.0
+review_id: 20261016T035526Z-pf01983-cofc-coupled-assay-contexts
+title: PF01983 CofC/FbiD paired reactions, mutation effects and partner-dependent
+  product fractions
+started_at: '2026-10-16T03:50:24Z'
+finished_at: '2026-10-16T03:55:26Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Author self-review against primary Methods, visually inspected
+    figures/tables and exact sequence comparisons; not independent approval or experimental
+    replication.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Seven new graphs retain18 observed relations in distinct biochemical contexts.
+  Two are direct composite reconstitutions;16 mutation/partner effects leave elementary
+  mechanisms unresolved. The Mrhiz five-residue reference offset and exact B3 pMH43
+  translation are explicit. Three scientific follow-ups remain open; no family-wide
+  characterization or REVIEWED promotion is claimed.
+scope:
+  description: Scientific review of all18 adopted relations in the new PF01983 overlay,
+    its evidence/coordinate ledgers and generated projection. Partial source/member
+    coverage within the full-family objective.
+  selection: First native PF01983 graph curation, following ignored/hidden-inclusive
+    searches of curation,evidence,history,reviews,reports. Existing PF01933 partner
+    evidence was identified and retained without treating the same experiments as
+    replication.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01983
+  exclusions:
+  - target: All PF01983 members and original2008/earlier2019/native genetic evidence
+    reason: Named primary follow-ups remain in the coverage ledger; the broad literature
+      query retrieved only the first100 of335 hits.
+  - target: Atomic catalytic trajectory, intrinsic substrate affinities and physical
+      clone authentication
+    reason: Coupled relative product profiles, reference alignment and a supplied
+      plasmid sequence do not establish these claims.
+  - target: Unrecovered2019 main supplement and uninspected2022 structural/nanoDSF
+      branches
+    reason: The archive transfers ended incomplete; only independently complete selected
+      entries were extracted and inspected.
+  - target: Publication, canonical Pages regeneration and full release QC
+    reason: This continuation authorizes curation, not a new source checkpoint/push.
+      The stale pin is explicitly reproduced and the preview is local/unpinned.
+checks:
+- check_id: baseline-and-generation
+  name: baseline-and-generation
+  command: uv run --locked python -m dufmech.records --check; uv run --locked python
+    -m dufmech.records; uv run --locked python -m dufmech.records --apply
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Baseline8296 valid records with zero drift; native dry run and apply changed
+    only PF01983 and its ownership manifest.
+  target_ids:
+  - PF01983
+  evidence_ids:
+  - validation
+- check_id: native
+  name: native
+  command: just validate-all validate-schema
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Full native record/history/retained-review and schema checks pass, including
+    the four review-contract tests; checks before this new report and REVIEW event,
+    which require subsequent revalidation.
+  target_ids:
+  - PF01983
+  evidence_ids:
+  - validation
+- check_id: focused
+  name: focused
+  command: uv run --locked pytest -q tests/test_causal_graphs.py tests/test_qc.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 52 tests pass. These test graph/evidence contracts and orchestration, not
+    biological truth.
+  target_ids:
+  - PF01983
+  evidence_ids:
+  - validation
+- check_id: derived
+  name: derived
+  command: uv run --locked python -m dufmech.causal_graphs --apply; uv run --locked
+    python -m dufmech.causal_graphs --check; uv run --locked python -m dufmech.exports
+    --apply; uv run --locked python -m dufmech.exports --check
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Native inventory and exports reproduce;922 graphs/1987 edges across132
+    families, with8164 graphless. The two changed association-export rows reflect
+    PF01983 IN_PROGRESS, not newly inferred cross-family edges.
+  target_ids:
+  - PF01983
+  evidence_ids:
+  - validation
+- check_id: integrity
+  name: integrity
+  command: uv run --locked python /private/tmp/duf-pf01983-20261016-plWvqx/verify.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: All8296 manifest hashes,18 edge evidence hashes/primary XML anchor matches,
+    imported PF01983 fields and all8295 other records pass preservation checks. Prior
+    tracked source/review/history bytes are unchanged.
+  target_ids:
+  - PF01983
+  evidence_ids:
+  - validation
+- check_id: sequence-transfer
+  name: sequence-transfer
+  command: uv run --no-project --offline --with biopython python /private/tmp/duf-pf01983-20261016-plWvqx/map_sequences.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Exact RefSeq/UniProt suffix comparisons confirm+5/+6/zero offsets; all
+    tested mapped residues match. B3 pMH43 translation exactly equals7P97 entity1
+    and native B3 differs from Mrhiz at seven of216 positions without indels.
+  target_ids:
+  - PF01983
+  evidence_ids:
+  - validation
+- check_id: preview
+  name: preview
+  command: uv run --locked python /private/tmp/duf-pf01983-20261016-plWvqx/preview.py;
+    node /private/tmp/duf-pf01983-20261016-plWvqx/browser.cjs
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Native unpinned JSON equals the current record. At1440px/390px all18 disclosures
+    work, directness labels and coordinate qualifications remain visible, and no document
+    overflow or JS errors occur. Both selected graph screenshots at both widths were
+    visually inspected.
+  target_ids:
+  - PF01983
+  evidence_ids:
+  - validation
+- check_id: publication-prerequisite
+  name: Canonical source pins require a new checkpoint
+  command: uv run --locked python -m dufmech.site_sources check
+  status: failed
+  required: false
+  exit_code: 1
+  summary: 'Expected unpublished-curation mismatch: site source pin bytes differ for
+    data/families/PF01983.yaml. Canonical Pages and full release QC are not claimed
+    current; no pin or generated page was manually changed.'
+  target_ids:
+  - PF01983
+  evidence_ids:
+  - validation
+evidence:
+- evidence_id: identity
+  kind: primary_source
+  reference: evidence/PF01983/identity-and-coordinates.txt
+  locator: Frozen previous-name row; current InterPro/UniProt JSON; versioned RefSeq
+    FASTA; TableS3; exact TextS2 pMH43 translation and RCSB7P97 entity1. Payload hashes
+    retained.
+  accessed_at: '2026-10-16T03:55:26Z'
+  support: supports
+  summary: Resolves PF01983/former DUF121, tested protein references and coordinate
+    offsets without equating whole proteins with isolated domains or database homology
+    references with physical constructs.
+- evidence_id: bashiri
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC6450877/
+  locator: Sec3,Sec8,Sec9,Sec12,Sec13,Sec14; Figure2b/c viewed; reporting-summary
+    page2 viewed; evidence/PF01983/bashiri-2019.txt.
+  accessed_at: '2026-10-16T03:55:26Z'
+  support: supports
+  summary: Two separately scoped complete enzyme-pair reactions produce the dehydro
+    intermediate. Product identity, nucleotide/substrate comparisons and context-specific
+    negatives are distinguished from intermediate/channeling mechanisms.
+- evidence_id: hasan
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+  locator: Results s2-2 through s2-4 and s2-8; Methods s4-1 through s4-5; Figures3B/C
+    and6A/B/C; TableS2B,TableS3 and TextS2; evidence/PF01983/hasan-2022.txt.
+  accessed_at: '2026-10-16T03:55:26Z'
+  support: supports
+  summary: Seven Mrhiz mutation effects, one Msmeg joint substitution effect and eight
+    fraction changes from three partner replacements are observed; normalized fractions
+    and negative/retained comparators constrain interpretation.
+- evidence_id: coverage
+  kind: record_content
+  reference: evidence/PF01983/coverage-and-gaps.txt
+  locator: Ignored-inclusive owner search; explicit search extent, primary leads and
+    eight follow-up branches.
+  accessed_at: '2026-10-16T03:55:26Z'
+  support: supports
+  summary: Retains inaccessible or uninspected sources, original biochemical papers,
+    native/member coverage and unresolved mechanism requirements without treating
+    access failures as negative biology.
+- evidence_id: validation
+  kind: validation
+  reference: data/families/PF01983.yaml
+  locator: Native record/schema/history/review checks, graph inventory/exports, focused
+    tests, exact preservation checks and1440px/390px local preview.
+  accessed_at: '2026-10-16T03:55:26Z'
+  support: supports
+  summary: Confirms representation, evidence anchors, coordinate bookkeeping and preservation,
+    not scientific completeness.
+- evidence_id: duf-projection-pf01983
+  kind: record_content
+  reference: data/families/PF01983.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-16T03:55:26Z'
+  support: context_only
+  snapshot_sha256: 26b7dd897808c7e5ff1b8ab3bc1f3ef06ece803e8214ed563489789a4f75890b
+  quote: "id: Pfam:PF01983\npfam_id: PF01983\nname: Guanylyl transferase CofC like\n\
+    short_name: CofC\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status:\
+    \ IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01983\n\
+    counters:\n  proteins: 3120\n  matches: 3136\n  proteomes: 3017\n  taxa: 4189\n\
+    \  structures: 4\n  alphafold_models: 1969\n  domain_architectures: 10\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002835\ndescription: Coenzyme F420 is a hydride carrier\
+    \ cofactor that functions during methanogenesis. This family\n  of proteins represents\
+    \ CofC, a nucleotidyl transferase that is involved in coenzyme F420 biosynthesis.\n\
+    \  CofC has been shown to catalyse the formation of lactyl-2-diphospho-5'-guanosine\
+    \ from 2-phospho-L-lactate\n  and GTP [[cite:PUB00045885]].\ncuration_history:\
+    \ history/records/PF01983\ndiscussions:\n- discussion_id: pf01983-numbering-and-assay-context\n\
+    \  prompt: Resolve physical constructs and assay details before assigning elementary\
+    \ residue mechanisms.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: Exact\
+    \ reference transfers resolve numbering but not every physical clone, and coupled\
+    \ product\n    fractions depend on the downstream partner.\n  evidence:\n  - reference:\
+    \ PMID:35038903\n    supports: PARTIAL\n    evidence_source: primary_methods_figures_and_supplements\n\
+    \    explanation: TableS3 RefSeq sequences resolve the Mrhiz five-residue offset;\
+    \ TextS2 pMH43 translates\n      exactly to the B3 structure construct. Fo units\
+    \ and absolute mutant activities remain unresolved.\n  - reference: PMID:30952857\n\
+    \    supports: PARTIAL\n    evidence_source: primary_results_methods_and_figure\n\
+    \    explanation: Figure2 supports paired product formation; the exact synthetic\
+    \ insert, incubation endpoint\n      and supplemental no-partner controls were\
+    \ not fully audited.\n  posed_by: Codex\n  posed_date: '2026-10-16'\n  notes:\
+    \ See evidence/PF01983/identity-and-coordinates.txt and the two primary-source\
+    \ ledgers. Paper Mrhiz\n    S162 maps to E5ASS2 S167. B3 is not sequence-identical\
+    \ to E5ASS2, and MJ1117 is not MJ0887. Model\n    contacts, channeling and folding-independent\
+    \ mutant mechanisms are not observed edges.\n- discussion_id: pf01983-primary-and-member-coverage\n\
+    \  prompt: Extend original CofC biochemistry, native FbiD genetics and additional\
+    \ homolog coverage without\n    family-wide transfer.\n  kind: CURATION_TODO\n\
+    \  status: OPEN\n  rationale: The retained graphs explain selected experiments,\
+    \ not all PF01983 proteins or their native\n    pathways.\n  evidence:\n  - reference:\
+    \ PMID:18260642\n    supports: PARTIAL\n    evidence_source: resolved_primary_citation_lead\n\
+    \    explanation: Original CofC paper identified through the family citation;\
+    \ its complete experiments\n      remain a follow-up.\n  - reference: PMID:31469543\n\
+    \    supports: PARTIAL\n    evidence_source: primary_reference_and_construct_provenance\n\
+    \    explanation: Earlier rhizoxinica study supplies the pFS03 background; complete\
+    \ primary curation is\n      not inferred from the later paper.\n  - reference:\
+    \ PMID:17660436\n    supports: PARTIAL\n    evidence_source: primary_reference_lead\n\
+    \    explanation: MSMEG_2392 native cofactor and dye phenotypes require inspection\
+    \ of genetic and complementation\n      controls.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-16'\n  notes: evidence/PF01983/coverage-and-gaps.txt retains bounded\
+    \ searches, other homologs, structural follow-ups\n    and access limits. The\
+    \ first100 of335 broad literature hits were retrieved; this is not an exhaustive\n\
+    \    review. The earlier PF01933 record and its review remain unchanged.\ncausal_graphs:\n\
+    - graph_id: mtb-fbid-fbia-product-2019\n  title: Paired Mtb FbiD and FbiA produce\
+    \ dehydro-F420-0\n  scope: Bashiri2019 Figure2b/c; purified Rv2983/FbiD plus separately\
+    \ prepared Mtb-FbiA, not FbiD alone.\n  context: N-His6 FbiD from genomic H37Rv\
+    \ Rv2983 in pYUBDuet-fbiABD expressed in M.smegmatis mc2 4517;\n    purified pair\
+    \ with PEP,GTP,Fo and Mg in100mM HEPES pH7.5 at37C. See assay ledger for concentrations\n\
+    \    and coexpression background.\n  family_mapping: P9WP83 sequence1,214aa,Rv2983,taxon83332\
+    \ has PF01983 match12-166. This is a full-protein\n    reference mapping, not\
+    \ isolated-domain sufficiency or physical-clone authentication. FbiA/P9WP81 belongs\n\
+    \    to the separate PF01933 family.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:83332\n\
+    \  limitations: HPLC and MS/MS identify the composite reaction product, not an\
+    \ observed EPPG intermediate\n    or mature reduced F420. The2PL/ATP negatives\
+    \ are assay-specific. Exact insert, endpoint, preparation\n    purity and per-condition\
+    \ replicate counts are not independently resolved.\n  nodes:\n  - node_id: paired-reaction\n\
+    \    label: Purified Mtb FbiD plus FbiA with PEP,GTP,Fo and Mg\n    node_type:\
+    \ STATE\n    grounding:\n    - UniProtKB:P9WP83\n    - UniProtKB:P9WP81\n  - node_id:\
+    \ dehydro-product\n    label: MS/MS-supported dehydro-F420-0 product\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: paired-product\n    subject: paired-reaction\n\
+    \    predicate: produces\n    object: dehydro-product\n    mechanism: The complete\
+    \ purified-enzyme combination produces the chromatographically detected dehydro\n\
+    \      cofactor intermediate, whose identity is supported by MS/MS. All required\
+    \ assay inputs form one\n      condition; no single-enzyme sufficiency is asserted.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:30952857\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6450877/\n\
+    \      snippet: Tandem mass spectral identification\n      explanation: Figure2b\
+    \ FbiD traces and Figure2c product identification with Sec9/Sec12/Sec13 Methods;\n\
+    \        the same experiment also informs the partner family's record.\n     \
+    \ cache_path: evidence/PF01983/bashiri-2019.txt\n      cache_sha256: 54a354e96fad787ba8de16b92c0d49516a921b8b7de993fff702e2c91b7bd9d9\n\
+    - graph_id: mjan-cofc-mtb-fbia-product-2019\n  title: Mjan CofC and Mtb FbiA produce\
+    \ dehydro-F420-0\n  scope: Bashiri2019 Figure2b/c; synthetic MJ0887/CofC paired\
+    \ with Mtb-FbiA in a mixed-species reconstitution.\n  context: N-His6 MJ0887 expressed\
+    \ from pYUB28b in E.coli and purified by Ni-NTA/SEC; Mtb-FbiA separately\n   \
+    \ expressed in M.smegmatis. PEP,GTP,Fo,Mg and100mM HEPES pH7.5 at37C; concentration\
+    \ details in the source\n    ledger.\n  family_mapping: M.jannaschii CofC reference\
+    \ Q58297 sequence1,224aa,MJ0887 has PF01983 match7-224. The2019\n    synthetic\
+    \ insert was not sequence-audited; the218aa2022 RefSeq construct is not substituted.\
+    \ Mtb-FbiA/P9WP81\n    is a separate PF01933 partner; MJ1117/CobY is excluded.\n\
+    \  scope_status: MECHANISTIC\n  limitations: Not a native archaeal pathway or\
+    \ CofC-only activity. A2PL negative with Mtb-FbiA does not\n    establish universal2PL\
+    \ exclusion; partner selection changes coupled output. EPPG and direct channeling\n\
+    \    were not observed, and an exact per-lane endpoint/n is unresolved.\n  nodes:\n\
+    \  - node_id: mixed-reaction\n    label: Purified Mjan CofC plus Mtb FbiA with\
+    \ PEP,GTP,Fo and Mg\n    node_type: STATE\n    grounding:\n    - UniProtKB:Q58297\n\
+    \    - UniProtKB:P9WP81\n  - node_id: dehydro-product\n    label: MS/MS-supported\
+    \ dehydro-F420-0 product\n    node_type: STATE\n  edges:\n  - edge_id: mixed-product\n\
+    \    subject: mixed-reaction\n    predicate: produces\n    object: dehydro-product\n\
+    \    mechanism: The specified mixed-species purified pair gives the dehydro product\
+    \ under the tested PEP/GTP\n      conditions. The composite observed effect does\
+    \ not identify a free activated intermediate or assign\n      the partner's transfer\
+    \ chemistry to CofC.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:30952857\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC6450877/\n      snippet: Tandem mass\
+    \ spectral identification\n      explanation: Figure2b CofC traces, Figure2c product\
+    \ identity and Methods. The2PL/ATP comparisons\n        and reported no-partner\
+    \ result are retained with their limits in the ledger.\n      cache_path: evidence/PF01983/bashiri-2019.txt\n\
+    \      cache_sha256: 54a354e96fad787ba8de16b92c0d49516a921b8b7de993fff702e2c91b7bd9d9\n\
+    - graph_id: mrhiz-mutant-product-fractions-2022\n  title: Mrhiz CofC substitutions\
+    \ lower the relative 3PG product fraction\n  scope: Hasan2022 Figure3B; separate\
+    \ full-protein mutants versus WT pFS03, each coupled to Mjan-CofD.\n  context:\
+    \ Purified N-His6 proteins produced in E.coli; standard coupled50uL assay,100mM\
+    \ HEPES pH7.4,2mM\n    GTP,2mM MgCl2,34uM CofD,26uM CofC and0.5mM each3PG,PEP,2PL.\
+    \ Fo is printed0.14nM, unresolved; temperature\n    unspecified. LC-MS normalized\
+    \ product fractions over0-20min,n=3 biological replicates,SD.\n  family_mapping:\
+    \ TableS3 WP_041753721.1,216aa,HKI454 equals E5ASS2 sequence1 residues6-221. PF01983\
+    \ reference20-206\n    transfers to15-201. Paper M91/C95/H145/S162 map to E5ASS2\
+    \ M96/C100/H150/S167. Full tagged proteins\n    were tested; exact individual\
+    \ inserts were not independently authenticated.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:882378\n  limitations: These are relative fractions in coupled\
+    \ reactions, not absolute activity, binding affinity\n    or an isolated-domain\
+    \ mechanism. S162T,C95A,M91A,H145A/H145T retain mostly3PG profiles. S162G retains\n\
+    \    detectable3PG; no universal zero or double-mutant synergy is inferred. Folding,\
+    \ abundance and partner\n    effects are not independently excluded.\n  nodes:\n\
+    \  - node_id: s162a\n    label: Replace WT by paper S162A (E5ASS2 S167A),pMH25\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:E5ASS2\n  - node_id:\
+    \ s162e\n    label: Replace WT by paper S162E (E5ASS2 S167E),pMH22\n    node_type:\
+    \ PERTURBATION\n    grounding:\n    - UniProtKB:E5ASS2\n  - node_id: s162g\n \
+    \   label: Replace WT by paper S162G (E5ASS2 S167G),pMH24\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:E5ASS2\n  - node_id: s162y\n    label: Replace\
+    \ WT by paper S162Y (E5ASS2 S167Y),pMH23\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:E5ASS2\n  - node_id: c95l\n    label: Replace WT by paper C95L\
+    \ (E5ASS2 C100L),pMH66\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:E5ASS2\n\
+    \  - node_id: m91l\n    label: Replace WT by paper M91L (E5ASS2 M96L),pMH77\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:E5ASS2\n  - node_id:\
+    \ s162g-c95l\n    label: Replace WT by paper S162G/C95L (E5ASS2 S167G/C100L),pMH68\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:E5ASS2\n  - node_id:\
+    \ relative-3pg-product\n    label: 3PG-derived fraction of the measured F420-0\
+    \ product mixture\n    node_type: STATE\n  edges:\n  - edge_id: s162a-relative-decrease\n\
+    \    subject: s162a\n    predicate: decreases\n    object: relative-3pg-product\n\
+    \    mechanism: With Mjan-CofD and competing substrates held in the assay, the\
+    \ S162A preparation shifts\n      the normalized product distribution away from3PG\
+    \ relative to WT; the elementary cause is unresolved.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:35038903\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n\
+    \      snippet: Residues determining substrate specificities of CofC homologs.\n\
+    \      explanation: Figure3B WT versus S162A; TableS2 pMH25, TableS3 reference\
+    \ mapping and s4-5 normalization.\n        Not a directly measured binding defect.\n\
+    \      cache_path: evidence/PF01983/hasan-2022.txt\n      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf\n\
+    \  - edge_id: s162e-relative-decrease\n    subject: s162e\n    predicate: decreases\n\
+    \    object: relative-3pg-product\n    mechanism: S162E replacement lowers the3PG-derived\
+    \ relative product fraction versus WT in the specified\n      coupled reaction;\
+    \ no absolute turnover loss is inferred from normalized bars.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:35038903\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n\
+    \      snippet: Residues determining substrate specificities of CofC homologs.\n\
+    \      explanation: Figure3B WT/S162E, TableS2 pMH22 and s4-5 LC-MS analysis.\n\
+    \      cache_path: evidence/PF01983/hasan-2022.txt\n      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf\n\
+    \  - edge_id: s162g-relative-decrease\n    subject: s162g\n    predicate: decreases\n\
+    \    object: relative-3pg-product\n    mechanism: S162G replacement lowers but\
+    \ does not eliminate the visible3PG-derived relative fraction\n      versus WT\
+    \ in the coupled product profile.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:35038903\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n      snippet:\
+    \ Residues determining substrate specificities of CofC homologs.\n      explanation:\
+    \ Figure3B retains a green S162G bar; TableS2 pMH24. The observation does not\
+    \ establish\n        universal loss of3PG activation.\n      cache_path: evidence/PF01983/hasan-2022.txt\n\
+    \      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf\n\
+    \  - edge_id: s162y-relative-decrease\n    subject: s162y\n    predicate: decreases\n\
+    \    object: relative-3pg-product\n    mechanism: S162Y replacement lowers the3PG-derived\
+    \ relative fraction and favors alternative measured\n      products versus WT\
+    \ in the same coupled assay.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:35038903\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n      snippet:\
+    \ Residues determining substrate specificities of CofC homologs.\n      explanation:\
+    \ Figure3B WT/S162Y and TableS2 pMH23; no digitized zero or rate estimate.\n \
+    \     cache_path: evidence/PF01983/hasan-2022.txt\n      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf\n\
+    \  - edge_id: c95l-relative-decrease\n    subject: c95l\n    predicate: decreases\n\
+    \    object: relative-3pg-product\n    mechanism: C95L replacement lowers the3PG-derived\
+    \ relative product fraction versus WT. The suggested\n      repositioning of M91\
+    \ is a model explanation, not observed by this product assay.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:35038903\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n\
+    \      snippet: Residues determining substrate specificities of CofC homologs.\n\
+    \      explanation: Figure3B WT/C95L with C95A comparator and TableS2 pMH66/pMH67;\
+    \ not direct evidence\n        for pocket motion.\n      cache_path: evidence/PF01983/hasan-2022.txt\n\
+    \      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf\n\
+    \  - edge_id: m91l-relative-decrease\n    subject: m91l\n    predicate: decreases\n\
+    \    object: relative-3pg-product\n    mechanism: M91L replacement reduces the3PG-derived\
+    \ fraction of the coupled product mixture versus\n      WT; a remaining3PG contribution\
+    \ is visible and intrinsic affinity is not measured.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:35038903\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n\
+    \      snippet: Residues determining substrate specificities of CofC homologs.\n\
+    \      explanation: Figure3B WT/M91L with M91A comparator, TableS2 pMH77/pMH76\
+    \ and the verified+5 reference\n        offset.\n      cache_path: evidence/PF01983/hasan-2022.txt\n\
+    \      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf\n\
+    \  - edge_id: double-relative-decrease\n    subject: s162g-c95l\n    predicate:\
+    \ decreases\n    object: relative-3pg-product\n    mechanism: The combined S162G/C95L\
+    \ replacement lowers the3PG-derived relative fraction versus WT while2PL/PEP-derived\n\
+    \      products dominate. This is one joint intervention, not independent sufficient\
+    \ effects or a measured\n      synergy coefficient.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:35038903\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n\
+    \      snippet: Residues determining substrate specificities of CofC homologs.\n\
+    \      explanation: Figure3B WT versus S162G;C95L, TableS2 pMH68 and standard\
+    \ assay Methods.\n      cache_path: evidence/PF01983/hasan-2022.txt\n      cache_sha256:\
+    \ f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf\n- graph_id:\
+    \ msmeg-double-mutant-product-fractions-2022\n  title: A paired FbiD substitution\
+    \ enables a 3PG-derived product fraction\n  scope: Hasan2022 Figure3C; Msmeg-FbiD\
+    \ G169S/T152H pMH80 versus WT pMH10, both coupled to Mjan-CofD.\n  context: Purified\
+    \ N-His6 full proteins produced in E.coli; competing0.5mM each3PG,PEP,2PL with\
+    \ GTP,Mg,Fo\n    and Mjan-CofD in HEPES pH7.4. Standard assay concentrations and\
+    \ unresolved printed Fo0.14nM are retained\n    in the source ledger; LC-MS relative\
+    \ formation over0-20min,n=3,SD.\n  family_mapping: TableS3 YP_886732.1,221aa,mc2\
+    \ 155 is identical to A0QUZ4 sequence1,PF01983 match20-170.\n    G169 and T152\
+    \ lie within the reference match with no numbering offset. This is a full-protein\
+    \ mutation\n    comparison, not isolated-domain sufficiency.\n  scope_status:\
+    \ PHENOTYPIC\n  taxon: NCBITaxon:246196\n  limitations: The19.6% value is a relative\
+    \ product fraction, not total conversion or affinity. Single\n    G169S,T152H,L98C\
+    \ and G169S/L98C do not reproduce the gain. The triple G169S/T152H/L98C is insoluble\n\
+    \    and excluded from catalytic inference. Folding/partner mechanisms and the\
+    \ physical insert are not\n    independently resolved.\n  nodes:\n  - node_id:\
+    \ double-mutant\n    label: Replace WT FbiD with joint G169S/T152H mutant,pMH80\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:A0QUZ4\n  - node_id:\
+    \ relative-3pg-product\n    label: 3PG-derived fraction of the measured F420-0\
+    \ product mixture\n    node_type: STATE\n  edges:\n  - edge_id: double-relative-increase\n\
+    \    subject: double-mutant\n    predicate: increases\n    object: relative-3pg-product\n\
+    \    mechanism: The joint G169S/T152H replacement yields a reported19.6%3PG-derived\
+    \ fraction where the\n      WT comparison has no visible3PG bar. Both substitutions\
+    \ and the coupled assay inputs are one tested\n      condition; no direct substrate-binding\
+    \ mechanism is resolved.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:35038903\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n      snippet:\
+    \ Residues determining substrate specificities of CofC homologs.\n      explanation:\
+    \ Figure3C and Results s2-4 with the single/double-mutant comparators, TableS2\
+    \ pMH80\n        and TableS3 identical sequence mapping.\n      cache_path: evidence/PF01983/hasan-2022.txt\n\
+    \      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf\n\
+    - graph_id: mrhiz-partner-product-fractions-2022\n  title: Mrhiz CofD changes\
+    \ the coupled output of fixed Mrhiz CofC\n  scope: Hasan2022 Figure6A; keep WT\
+    \ Mrhiz-CofC pFS03 fixed and exchange Mjan-CofD pFS04 for cognate Mrhiz-CofD\n\
+    \    pFS02.\n  context: Purified N-His6 proteins, competing3PG/PEP/2PL,GTP,Mg,Fo\
+    \ and HEPES pH7.4; standard assay and\n    unresolved Fo unit as recorded in the\
+    \ source ledger. LC-MS normalized product fractions,n=3 biological\n    replicates,SD.\
+    \ Figure6 baselines are not pooled with Figure3.\n  family_mapping: CofC WP_041753721.1,216aa,equals\
+    \ E5ASS2 sequence1 residues6-221; reference PF01983 match20-206\n    transfers\
+    \ to15-201. Partners WP_010870769.1 and WP_013435881.1 are CofD, not PF01983 proteins;\
+    \ exact\n    source identities are in TableS3.\n  scope_status: PHENOTYPIC\n \
+    \ limitations: Partner replacement tests the two-enzyme product distribution,\
+    \ not intrinsic CofC substrate\n    affinity, catalytic acceleration, native physiology\
+    \ or physical channeling. Minor2PL/PEP products\n    are traces rather than assumed\
+    \ zero; absolute reaction rates are not provided by these fractions.\n  nodes:\n\
+    \  - node_id: partner-exchange\n    label: Replace Mjan-CofD with Mrhiz-CofD while\
+    \ retaining Mrhiz-CofC\n    node_type: PERTURBATION\n  - node_id: relative-3pg\n\
+    \    label: 3PG-derived product fraction\n    node_type: STATE\n  - node_id: relative-2pl\n\
+    \    label: 2PL-derived product fraction\n    node_type: STATE\n  - node_id: relative-pep\n\
+    \    label: PEP-derived product fraction\n    node_type: STATE\n  edges:\n  -\
+    \ edge_id: relative-3pg-increase\n    subject: partner-exchange\n    predicate:\
+    \ increases\n    object: relative-3pg\n    mechanism: Changing the downstream\
+    \ partner to cognate Mrhiz-CofD raises the3PG-derived relative fraction\n    \
+    \  with the CofC protein unchanged.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:35038903\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n      snippet:\
+    \ Role of CofD in substrate specificity\n      explanation: Figure6A partner comparison,\
+    \ Results s2-8, TablesS2/S3 and s4-5 normalized LC-MS analysis.\n      cache_path:\
+    \ evidence/PF01983/hasan-2022.txt\n      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf\n\
+    \  - edge_id: relative-2pl-decrease\n    subject: partner-exchange\n    predicate:\
+    \ decreases\n    object: relative-2pl\n    mechanism: The same partner substitution\
+    \ lowers the2PL-derived fraction to a trace contribution in\n      the coupled\
+    \ product mixture, without establishing lower absolute CofC turnover.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:35038903\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n\
+    \      snippet: Role of CofD in substrate specificity\n      explanation: Figure6A\
+    \ dark bars and s2-8; the input is a partner change, not a CofC mutation.\n  \
+    \    cache_path: evidence/PF01983/hasan-2022.txt\n      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf\n\
+    \  - edge_id: relative-pep-decrease\n    subject: partner-exchange\n    predicate:\
+    \ decreases\n    object: relative-pep\n    mechanism: The cognate partner decreases\
+    \ the PEP-derived relative product fraction, with residual\n      traces retained\
+    \ rather than modeled as complete pathway exclusion.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:35038903\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n\
+    \      snippet: Role of CofD in substrate specificity\n      explanation: Figure6A\
+    \ pale bars, Results s2-8 and the standard competing-substrate assay.\n      cache_path:\
+    \ evidence/PF01983/hasan-2022.txt\n      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf\n\
+    - graph_id: b3-partner-product-fractions-2022\n  title: Cognate B3 CofD changes\
+    \ the coupled output of fixed B3 CofC\n  scope: Hasan2022 Figure6B; retain Mycetohabitans\
+    \ sp.B3 CofC pMH43 and replace Mjan-CofD pFS04 with cognate\n    B3-CofD pMH60.\n\
+    \  context: Purified tagged proteins in the standard3PG/PEP/2PL competing-substrate\
+    \ assay with GTP,Mg,Fo\n    and HEPES pH7.4. LC-MS relative products,n=3,SD; printed\
+    \ Fo0.14nM and unreported assay temperature\n    are unresolved. The measured\
+    \ system is in vitro, not a perturbed B3 culture.\n  family_mapping: B3 KQH55_09515,216aa;\
+    \ supplied pMH43 DNA translates exactly to the243aa7P97 entity1\n    including27aa\
+    \ tag/linker. Native B3 is209/216 identical to WP_041753721.1 with no indels;\
+    \ E5ASS2 PF01983\n    match transfers to B3 15-201 by homology, not a new HMM\
+    \ call. B3 is not E5ASS2/HKI454; no unsupported\n    taxon or UniProt ID is assigned.\n\
+    \  scope_status: PHENOTYPIC\n  limitations: The deposition's E5ASS2/HKI454 reference\
+    \ mapping is not construct identity. Partner KQH55_09505\n    is a separate CofD.\
+    \ Relative product changes do not prove intrinsic CofC affinity, absolute rates,\n\
+    \    native cofactor output, a stable complex or intermediate channeling.\n  nodes:\n\
+    \  - node_id: partner-exchange\n    label: Replace Mjan-CofD with B3-CofD while\
+    \ retaining B3-CofC\n    node_type: PERTURBATION\n  - node_id: relative-3pg\n\
+    \    label: 3PG-derived product fraction\n    node_type: STATE\n  - node_id: relative-2pl\n\
+    \    label: 2PL-derived product fraction\n    node_type: STATE\n  - node_id: relative-pep\n\
+    \    label: PEP-derived product fraction\n    node_type: STATE\n  edges:\n  -\
+    \ edge_id: relative-3pg-increase\n    subject: partner-exchange\n    predicate:\
+    \ increases\n    object: relative-3pg\n    mechanism: The cognate B3-CofD replacement\
+    \ raises the3PG-derived fraction of the coupled product mixture\n      with B3-CofC\
+    \ unchanged.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:35038903\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n      snippet: Role of CofD\
+    \ in substrate specificity\n      explanation: Figure6B, TablesS2/S3 and TextS2-supported\
+    \ B3 identity; the comparison does not mutate\n        CofC.\n      cache_path:\
+    \ evidence/PF01983/hasan-2022.txt\n      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf\n\
+    \  - edge_id: relative-2pl-decrease\n    subject: partner-exchange\n    predicate:\
+    \ decreases\n    object: relative-2pl\n    mechanism: With B3-CofC fixed, the\
+    \ B3-CofD replacement lowers the2PL-derived relative fraction to\n      a small\
+    \ residual contribution rather than proving complete exclusion of2PL chemistry.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:35038903\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n\
+    \      snippet: Role of CofD in substrate specificity\n      explanation: Figure6B\
+    \ dark bars and Results s2-8; the output is a normalized mixture, not an absolute\n\
+    \        rate.\n      cache_path: evidence/PF01983/hasan-2022.txt\n      cache_sha256:\
+    \ f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf\n  - edge_id:\
+    \ relative-pep-decrease\n    subject: partner-exchange\n    predicate: decreases\n\
+    \    object: relative-pep\n    mechanism: The same downstream-partner replacement\
+    \ lowers the PEP-derived relative product fraction\n      while a trace contribution\
+    \ remains visible.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:35038903\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n      snippet: Role of CofD\
+    \ in substrate specificity\n      explanation: Figure6B pale bars and Results\
+    \ s2-8 with the source's coupled-assay limitations.\n      cache_path: evidence/PF01983/hasan-2022.txt\n\
+    \      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf\n\
+    - graph_id: msmeg-partner-product-fractions-2022\n  title: Cognate FbiA changes\
+    \ the coupled output of fixed Msmeg FbiD\n  scope: Hasan2022 Figure6C; keep WT\
+    \ Msmeg-FbiD pMH10 fixed and exchange Mjan-CofD pFS04 for cognate Msmeg-FbiA\n\
+    \    pMH59.\n  context: Purified N-His6 pairs with equal competing3PG,PEP,2PL,GTP,Mg,Fo\
+    \ and HEPES pH7.4 in the standard\n    assay; LC-MS normalized fractions,n=3 biological\
+    \ replicates,SD. Printed Fo0.14nM remains unresolved;\n    no temperature is imported\
+    \ from2019.\n  family_mapping: YP_886732.1 equals A0QUZ4 sequence1,221aa,MSMEG_2392,PF01983\
+    \ match20-170. CofD/FbiA\n    partners WP_010870769.1 and WP_011727938.1 are distinct\
+    \ proteins; the latter is the327aa Msmeg-FbiA,\n    not FbiD. Reference mapping\
+    \ is not an isolated-domain assay.\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ This changes the downstream partner, not the FbiD sequence. The2PL loss is an\
+    \ assay-specific\n    relative-fraction effect, not universal FbiD substrate exclusion.\
+    \ Absolute rates, intrinsic affinity,\n    complex formation and channeling are\
+    \ unresolved; the earlier PF01933 partner graph describes the same\n    experiment,\
+    \ not replication.\n  nodes:\n  - node_id: partner-exchange\n    label: Replace\
+    \ Mjan-CofD with Msmeg-FbiA while retaining Msmeg-FbiD\n    node_type: PERTURBATION\n\
+    \  - node_id: relative-2pl\n    label: 2PL-derived product fraction\n    node_type:\
+    \ STATE\n  - node_id: relative-pep\n    label: PEP-derived product fraction\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: relative-2pl-decrease\n    subject:\
+    \ partner-exchange\n    predicate: decreases\n    object: relative-2pl\n    mechanism:\
+    \ Replacing the archaeal partner with Msmeg-FbiA almost eliminates the2PL-derived\
+    \ relative\n      product contribution while FbiD and the competing substrates\
+    \ remain fixed.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:35038903\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n      snippet: Role of CofD\
+    \ in substrate specificity\n      explanation: Figure6C dark bars, Results s2-8\
+    \ and TablesS2/S3 partner identities.\n      cache_path: evidence/PF01983/hasan-2022.txt\n\
+    \      cache_sha256: f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf\n\
+    \  - edge_id: relative-pep-increase\n    subject: partner-exchange\n    predicate:\
+    \ increases\n    object: relative-pep\n    mechanism: The same cognate-partner\
+    \ substitution shifts the relative product mixture toward the PEP-derived\n  \
+    \    product. A higher normalized fraction does not by itself establish increased\
+    \ absolute catalytic\n      flux.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:35038903\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/\n      snippet:\
+    \ Role of CofD in substrate specificity\n      explanation: Figure6C pale bars\
+    \ and the s4-5 relative-product calculation; no direct FbiD binding\n        change\
+    \ is inferred.\n      cache_path: evidence/PF01983/hasan-2022.txt\n      cache_sha256:\
+    \ f2e8f6026258575874f3561fb0f6508c6f072df21e71d0d7dc28e5be640c9adf\ncuration_events:\n\
+    - timestamp: '2026-10-16T03:36:23Z'\n  curator: Codex\n  action: CREATE\n  outcome:\
+    \ changed\n  summary: Curate CofC/FbiD paired reactions, mutation effects and\
+    \ partner-dependent product fractions\n  history_record: history/records/PF01983/2026-10-16T033623Z-codex-ac2a8e.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact family and construct/reference distinctions
+  outcome: supported
+  summary: Frozen PF01983/former DUF121 identity is preserved. The E5ASS2 offset,
+    Q58297 versus MJ1117 distinction and B3 reference mismatch are explicit; no unsupported
+    B3 taxon/accession or new HMM match is invented.
+  target_ids:
+  - PF01983
+  evidence_ids:
+  - identity
+- assessment_id: paired-reactions
+  area: graph
+  topic: Composite observed product formation
+  outcome: supported
+  summary: Both2019 graphs represent full paired-enzyme reaction conditions. Observed
+    dehydro product formation does not become single-enzyme sufficiency, a mature-cofactor
+    effect or directly observed EPPG/channeling.
+  target_ids:
+  - PF01983
+  evidence_ids:
+  - bashiri
+- assessment_id: mutations
+  area: graph
+  topic: Scoped mutation effects and negative comparators
+  outcome: supported
+  summary: Seven separate Mrhiz substitutions and one Msmeg joint substitution retain
+    their relative-output semantics and exact reference mapping. Partial output, retained
+    profiles and the insoluble triple mutant constrain claims; no binding/folding
+    mechanism is asserted.
+  target_ids:
+  - PF01983
+  evidence_ids:
+  - hasan
+  - identity
+- assessment_id: partner-effects
+  area: graph
+  topic: Partner-dependent product fractions
+  outcome: supported
+  summary: Three distinct fixed-CofC comparisons change only the downstream partner.
+    Their eight relative-fraction effects are not intrinsic CofC affinities or evidence
+    of physical channeling.
+  target_ids:
+  - PF01983
+  evidence_ids:
+  - hasan
+- assessment_id: provenance
+  area: provenance
+  topic: Native ownership and unchanged corpus
+  outcome: supported
+  summary: Human overlay, minimal hash-bound evidence and actual CREATE history own
+    the new record content. All8295 other family projections, frozen sources and prior
+    tracked reviews/evidence/history remain unchanged; old partner evidence is not
+    counted as replication.
+  target_ids:
+  - PF01983
+  evidence_ids:
+  - identity
+  - validation
+  - coverage
+- assessment_id: coverage
+  area: completeness
+  topic: Original sources, constructs and elementary mechanisms
+  outcome: concern
+  summary: 'Partial scientific coverage remains: original biochemical papers, native
+    genetics, additional homologs, Fo units, physical inserts and quantitative/structural
+    mechanisms need discriminating evidence.'
+  target_ids:
+  - PF01983
+  evidence_ids:
+  - coverage
+  - identity
+  - bashiri
+  - hasan
+findings:
+- finding_id: constructs-and-assay-details
+  issue_key: pf01983-constructs-and-assay-details
+  title: Resolve exact constructs and source assay details
+  description: Reference suffix mappings and B3 supplied-plasmid translation are established,
+    but physical insert authentication,2019 exact endpoint/per-condition n and Hasan
+    Fo units remain unresolved. Do not silently correct source units or reuse the2022
+    Mjan construct for2019.
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01983
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - identity
+  - bashiri
+  - hasan
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01983.yaml
+    role: Maintained scientific overlay; generated records and historical reviews
+      are not direct correction surfaces.
+- finding_id: quantitative-and-atomic-mechanisms
+  issue_key: pf01983-quantitative-and-atomic-mechanisms
+  title: Separate absolute catalysis and atomic mechanisms from relative fractions
+  description: The observed fractions support mutation/partner effects but not intrinsic
+    affinity, unchanged folding, absolute flux, isolated-domain sufficiency or a directly
+    observed channeling/ligand-motion mechanism. Retain unresolved labels until discriminating
+    measurements exist.
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01983
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - hasan
+  - bashiri
+  - coverage
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01983.yaml
+    role: Maintained scientific overlay; generated records and historical reviews
+      are not direct correction surfaces.
+- finding_id: primary-and-member-coverage
+  issue_key: pf01983-primary-and-member-coverage
+  title: Extend original-source and exact-member evidence
+  description: Original2008 and earlier2019 biochemical studies, native cofactor evidence,
+    additional homologs and remaining structure/nanoDSF branches are not fully reviewed.
+    The bounded discovery search and accessible figures do not establish a complete
+    family census or universal substrate preference.
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01983
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - coverage
+  - identity
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01983.yaml
+    role: Maintained scientific overlay; generated records and historical reviews
+      are not direct correction surfaces.
+actions:
+- action_id: extend-cofc-evidence
+  description: Resolve the named evidence gaps through primary-source inspection and
+    explicit successor curation, without upgrading coupled assay observations into
+    unmeasured mechanisms.
+  finding_ids:
+  - constructs-and-assay-details
+  - quantitative-and-atomic-mechanisms
+  - primary-and-member-coverage
+  target_ids:
+  - PF01983
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01983.yaml
+    role: Maintained scientific overlay; generated records and historical reviews
+      are not direct correction surfaces.
+  acceptance_checks:
+  - Resolve source-specific insert/coordinate and Fo-unit ambiguities or preserve
+    them explicitly.
+  - Require quantitative product and relevant protein controls before absolute activity
+    or affinity claims.
+  - Distinguish direct intermediate/complex/residue evidence from static structures
+    or docking models.
+  - Inspect original source and additional member contexts before adding new causal
+    relations; preserve contradictory assay contexts and evidence dependence.
+  - Retain current graph IDs, append successor reviews/history and pass native generation/evidence/integrity
+    checks.
+limitations:
+- Same-agent review. The full objective remains8296 records; structural graph presence
+  in132 families is not completed scientific review of those families.
+- All18 adopted relations are observed experimental outcomes, but only two composite
+  reactions are DIRECT/MECHANISTIC. The16 remaining relations are UNRESOLVED/PHENOTYPIC;
+  no direct residue-binding or channeling edge is adopted.
+- Mrhiz paper M91/C95/H145/S162 map to E5ASS2 M96/C100/H150/S167. The2022 Mjan RefSeq
+  is a218aa suffix of224aa Q58297, but that length is not retroactively assigned to
+  the2019 synthetic clone.
+- B3 pMH43 translates exactly to7P97 entity1; its216aa native sequence is209/216 identical
+  to the Mrhiz RefSeq. The deposition reference E5ASS2/HKI454 is not exact B3 identity;
+  its Pfam boundary is an explicitly labeled homology transfer.
+- Hasan2022 prints Fo0.14nM; the unit is unresolved. Relative LC-MS fractions are
+  not total conversion, absolute rates or affinity. The insoluble triple mutant is
+  not a catalytic negative.
+- Bashiri2019 paired product formation is not a free EPPG observation. Its2PL negatives
+  remain partner-specific; no universal archaeal substrate exclusion or direct complex
+  formation is inferred.
+- The reporting summary supplies only at-least-two repetitions for coupled assays,
+  not an exact per-lane n. The main Figure2 incubation endpoint and exact2019 insert
+  remain unresolved.
+- Some evidence also appears in PF01933 because the assays test both proteins. This
+  is the same evidential origin, not independent replication. The earlier PF01933
+  review is not superseded or silently changed.
+- Whole supplementary archives are incomplete; selected entries extracted successfully
+  with tar --fast-read and selected DOCX inner CRC checks passed. Main figures and
+  TableS2B/TableS3 were visually inspected; the unrecovered main2019 supplement and
+  remaining files are not claimed inspected.
+- Native REVIEW history and final audit-index regeneration follow this saved observation.
+  The record remains IN_PROGRESS without a review_id approval pointer.
+```

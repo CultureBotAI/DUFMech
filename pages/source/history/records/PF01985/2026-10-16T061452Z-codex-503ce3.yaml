@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01985
+  path: curation/families/PF01985.yaml
+session:
+  id: 2026-10-16T061452Z-codex-503ce3
+  timestamp: '2026-10-16T06:14:52Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate PF01985 CRM assay-context causal graphs from three primary studies
+  details: Added eight graphs with twelve scoped observed assay relations, five brief
+    evidence ledgers and open construct/allele/source-coverage discussions. Verified
+    P0AGK4 and Q9FYT6 Pfam matches and AF290414.1 translation; mapped joint GRRG586-589
+    substitution while leaving full fusion boundaries unresolved. Preserved rrmJ promoter
+    deletion and Jiang control-temperature uncertainty; separated RNP co-IP from maturation
+    rescue and RNA accessibility from splicing. Baseline validated8296 records with
+    zero drift before edits. Native regeneration and scientific self-review follow;
+    family-wide completeness and publication are not claimed.

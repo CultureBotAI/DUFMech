@@ -1,0 +1,28 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01984
+  path: data/families/PF01984.yaml
+session:
+  id: 2026-10-16T051059Z-codex-622678
+  timestamp: '2026-10-16T05:10:59Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review seven scoped PDCD5 causal effects with explicit scientific follow-ups.
+  details: Same-agent partial scientific review of all seven adopted edges, exact
+    O14737 domain/residue mapping, primary Methods/source blots and supplementary
+    thermal/ATPase panels. Native record/schema/history/review checks,56focused tests,
+    inventory/exports and desktop/mobile preview pass. Three retained findings cover
+    construct/replicate accounting, unresolved mechanisms and additional primary/member
+    coverage. No full-family PASS or REVIEWED promotion. Canonical site pins fail
+    after this unpublished change; no source checkpoint, commit or push is authorized
+    in this continuation. Regenerate the actual REVIEW history index and revalidate.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261016T051807Z-pf01984-pdcd5-assay-contexts/review.yaml

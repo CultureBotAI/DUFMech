@@ -1,0 +1,28 @@
+Barkan et al., RNA13:55-64 (2007), PMID:17105995, doi:10.1261/rna.139607
+https://pmc.ncbi.nlm.nih.gov/articles/PMC1705760/
+Inspected 2026-10-16: Results, Methods, Figure4A/5/8 captions and images.
+HTML SHA256 f85d69b348ad2e747082770ef3fcccd2075c30c51db2b2682757f956dc0f4bfd
+Figure4 SHA256 901556fbff96cef34c0807ce9aea51ee0ff34d3d53e6723fdeb3b7901f380023
+Figure5 SHA256 934e6024311bf3956a59690e4b9a4491e67034a6b5909e94de2caea0b79fe01e
+Figure8 SHA256 7632770fe8282c74e19b714407581a16f0e9411b2640554cffbfd3e8ee33556a
+Attributed minimal quotation anchors: "RNA binding activity" (Fig8);
+"increased levels" and "reduced levels" (Results, deletion profile);
+"reconstituted" (Fig4A). Remaining text is assay-fact extraction and interpretation.
+
+Fig8: GST-CRM3 WT versus joint GxxG-to-AAAA, plus GST control; nine experiments,
+four preparations. Apparent Kd21.4+/-4.3 versus79.3+/-14.4nM; floating plateau
+also differs. RNA25pM, complete atpF intron with22/24nt flanking exons;
+protein0-1uM,15min25C,10mMTris pH7,150mMKOAc,10mMMgOAc,5mMDTT,
+10ug/mLBSA,1U/uL RNase inhibitor; stacked nitrocellulose/nylon detection.
+No measured folding control establishes an atomistic loop-contact mechanism.
+
+Fig5: deletion removes internal yhbY codons AND an rrmJ promoter -35 region.
+EMG2/K38 listed, panel-specific strain unresolved. LB37C; dissociating gradient
+1mMMgCl2. Pre50S peak rises, mature50S falls. Recombinant addback associates
+with pre50S but does not alter the A260 profile. Near-normal RrmJ and incomplete
+RrmJ-plasmid rescue are reported without displayed data, not definitive exclusion.
+
+Fig4A: adding recombinant YhbY to deletion lysate increases antibody-pellet
+23S recovery; no-antibody/WT/deletion controls, four reported repetitions.
+This is RNP reassociation, not maturation rescue or proven direct RNA contact.
+Dose/incubation and panel-specific strain remain unresolved.
