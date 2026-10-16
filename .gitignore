@@ -14,3 +14,7 @@ dist/
 data/raw/
 reports/*.tsv
 reports/*.json
+data/embeddings/*.npy
+data/embeddings/ids.json
+data/embeddings/records.json
+data/embeddings/meta.json

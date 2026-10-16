@@ -70,6 +70,8 @@ def render_site(
     protein_examples: list[dict[str, Any]] | None = None,
     provenance: dict[str, Any] | None = None,
     extra_artifacts: dict[str, str] | None = None,
+    text_map_json: str | None = None,
+    sequence_map_json: str | None = None,
 ) -> None:
     """Render snapshots with optional curated metadata and actual history artifacts.
 
@@ -92,6 +94,7 @@ def render_site(
         families, report, input_ids=input_ids, cross_rows=cross_mech_rows,
         cross_sources=cross_mech_sources or {}, family_metadata=family_metadata,
         member_rows=member_rows, protein_examples=protein_examples, provenance=provenance,
+        text_map_json=text_map_json, sequence_map_json=sequence_map_json,
     )
     for name, content in (extra_artifacts or {}).items():
         relative = Path(name)
@@ -253,6 +256,15 @@ def render_from_paths(
         for name in retained:
             source_path = protein_examples_json.parent / name
             extra_artifacts[f"datasets/{source_path.name}"] = source_path.read_text()
+    text_map_json = None
+    sequence_map_json = None
+    if default_corpus:
+        tmap_path = REPO_ROOT / "data/embeddings/corpus_map.json"
+        if tmap_path.is_file():
+            text_map_json = tmap_path.read_text()
+        smap_path = REPO_ROOT / "data/embeddings/sequence_map.json"
+        if smap_path.is_file():
+            sequence_map_json = smap_path.read_text()
     render_site(
         [dict(row) for row in worklist_rows], [dict(row) for row in score_rows],
         input_ids=input_ids, out_dir=out_dir, cross_mech_rows=cross_mech_rows,
@@ -260,6 +272,7 @@ def render_from_paths(
         family_metadata=metadata,
         member_rows=members, protein_examples=protein_examples,
         provenance=provenance, extra_artifacts=extra_artifacts,
+        text_map_json=text_map_json, sequence_map_json=sequence_map_json,
     )
 
 
