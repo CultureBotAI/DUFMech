@@ -1,0 +1,61 @@
+PF01982 / MJ0056 (RibK), assessed 2026-10-16 UTC.
+Mashhadi Z, Zhang H, Xu H, White RH. J Bacteriol 190:2615-2618 (2008).
+PMID:18245297; doi:10.1128/JB.01900-07.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC2293203/
+Minimal quotations and curator factual assay notes; not a redistributed article.
+PMC HTML SHA256: 3005e0bf73a02ef917ae18d6b520e48bc4455a3c5fecfd5e31224ff1b09fd58e.
+Full main text, Methods/Results paragraphs and Figure 1 caption inspected.
+The figure is a pathway schematic, not an additional causal assay.
+
+Permitted quotation anchors (19 words total):
+M1: "consumed and converted into FMN"
+M2: "sixfold higher"
+M3: "The activities with ATP and GTP"
+M4: "Some divalent metals"
+M5: "retained 40%"
+
+M1, standard assay/product-identification paragraphs: MJ0056 was PCR-amplified
+from M. jannaschii genomic DNA, cloned into pT7-7 and expressed in E. coli
+BL21-CodonPlus(DE3)-RIL. The authors verified the insert by sequencing. Heat
+treatment and MonoQ purification yielded >95% purity; measured mass 15218.1
++/-10 Da agrees with the 132-aa calculated 15213.8 Da reference. No affinity
+tag is described for this preparation. The retained reference mapping is not
+independent sequencing of the historical physical insert.
+The 60-ul assay used 47 mM TES pH 7.2, 1.2 ug RibK, 1.7 mM CTP and 0.37 mM
+riboflavin, 70 C for 10 min. Reported conversion was 42%. HPLC separation and
+positive/negative-ion MS and MS-MS matched authentic FMN. This supports direct
+phosphorylation, not an experimentally resolved proton-transfer trajectory.
+CDP production is the reaction interpretation, not separately quantified here.
+No enzyme-minus time-course is described in the inspected paragraph; do not
+invent one. Kinase specificity is not family-wide proof.
+
+M2, extract paragraph: lactose-induced expression in the bacterial host yielded
+8.7 uM FMN in the extract, six times comparator extracts expressing unrelated
+enzymes. This is a whole-expression intervention with indirect cellular effects,
+not native archaeal flux, a knockout/rescue, or an empty-vector comparison.
+
+M3, nucleotide-specificity paragraph: replacing CTP with an equal concentration
+of ATP or GTP yielded 30% or 11% of the CTP activity. These reported assay
+contrasts are retained separately. IUBMB EC2.7.1.161 cites Ammelburg2007 for
+UTP but not ATP/GTP use. The original 2007 full text was inaccessible (403);
+its abstract was inspected, not its raw donor assay. Do not erase the2008
+positive residuals, call them contamination, or assert universal strict CTP
+specificity. Purity, donor contamination, metal state and conditions are
+possible discriminating questions, not established explanations.
+
+M4, metal-addition paragraph: separate 1.6 mM additions gave specific activities
+(umol/min/mg) none 0.70, Mg2+ 0.60, Mn2+ 0.35, Zn2+ 0.12, Ni2+ 0.40,
+Cu2+ 0.02, Co2+ 0.27. Mark stronger Mn/Zn/Ni/Cu/Co decreases as assay effects,
+not a known inhibitory binding site; no uncertainties or statistical tests were
+given. The small Mg difference is retained here without claiming inhibition.
+ICP analysis measured 4-5 mol Mg/mol purified protein and 0.0013 mol Zn/mol.
+Activity without ADDED metal therefore does not demonstrate metal-free catalysis.
+
+M5, acid/thermal paragraph: 0.1 M HCl (~pH1.05), 10 min at room temperature,
+then dilution in pH6 acetate left 0.13 versus control 0.32 nmol/min (~40%).
+The loss could reflect unfolding or other damage; neither was isolated.
+Heating up to100 C for10 min caused no significant activity change under the
+reported conditions (DTT used; detection limit ~2%). This negative is not a
+growth optimum or a complete unfolding curve. Monomer size-exclusion estimate
+and genomic neighbors are context, not causal edges. MJ1179/RibL FAD synthesis
+and other riboflavin pathway enzymes are not reassigned to this family.

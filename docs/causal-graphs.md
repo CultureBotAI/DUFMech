@@ -6994,3 +6994,63 @@ PF01981 candidate publication audit (PR #250, 2026-10-15):
   QC is required on the exact PR head, followed by merge-group checks; those later
   checks are not certified by this candidate audit. This is self-review, not
   independent approval or completion of the all-record scientific goal.
+
+PF01982 RibK/RbkR local causal-context checkpoint (2026-10-16 UTC):
+
+- Thirteen graphs retain 25 observed effects across MJ0056, myRbkR, pyRbkR
+  and taRbkR. Eight DIRECT edges concern purified kinase or DNA association,
+  one INDIRECT edge concerns heterologous extract FMN, and sixteen assay
+  effects retain UNRESOLVED molecular directness. No native transcriptional
+  activation, isolated-domain sufficiency or atomic catalytic path is asserted.
+- Mashhadi2008 main text and Rodionova2017 main Methods/Results, Figure 4,
+  supplementary Figure S3 and Table S3 were inspected. Three minimal ledgers
+  under `evidence/PF01982/` retain conditions, controls, negatives, source hashes
+  and donor/metal, binding-unit and probe-length discrepancies. The original
+  Ammelburg2007 full text remains an access/coverage gap, not a negative result.
+- Exact reference mappings are Q60365 7-125, H2C8H2 93-214, Q9HJA6 99-218
+  and archived A0A0K1E2F9 88-208. The archived entry33/sequence1 matches
+  AKT35049.1 across all 210 residues; its current deletion is explicit.
+  Reference sequences and HMM intervals do not independently verify physical
+  historical constructs or assign wHTH DNA recognition to PF01982 alone.
+- The partial scientific self-review is
+  `reviews/structured/20261016T005023Z-pf01982-ribk-rbkr-causal-contexts/review.yaml`
+  with derived `review.md`. Three findings remain OPEN. Actual CREATE and
+  REVIEW sidecars are retained under `history/records/PF01982/`. Status remains
+  IN_PROGRESS without a qualifying REVIEWED pointer. Scientific digest:
+  `70f27c9a783a542d17bb0d41d4634501888defa1c06fa4a763bc124878b46b9c`.
+- Pre-review full native/schema/history/review checks, 52 focused tests,
+  all-family preservation and native unpinned 1440px/390px checks passed.
+  All 25 disclosures and source links work; wide tables remain horizontally
+  accessible without document overflow or JavaScript errors. An initial YAML
+  quoting rejection and sandbox-denied local preview bind were corrected or
+  rerun with the proper permission, not treated as successful checks.
+- Post-REVIEW generation now has zero drift across 8,296 records and 344 valid
+  history files. Both events are indexed with the exact reviewed scientific
+  digest preserved. Final validation passes for 193 structured bundles and
+  201 native reports, including four passing review-contract tests. Schema,
+  inventory, exports, all-family preservation and refreshed 1440px/390px
+  preview checks pass. Temporary browser/server processes have closed.
+- Structural inventory: 912 graphs / 1,961 edges in 131 families; 8,165 remain
+  graphless. Presence is not scientific completion. All other 8,295 records,
+  earlier scientific artifacts and frozen source bytes remain unchanged.
+  The full 8,296-record objective stays open. Next scientific work should inspect
+  the original 2007 assays and extend the unresolved residue/physiology evidence.
+- This batch is local only on `feat/duf-pf01982-ribk-causal-contexts` in
+  `/private/tmp/dufmech-pr220-20261015`. Canonical Pages and source pins remain
+  at the merged release. No new source checkpoint, full release QC, commit,
+  GitHub issue, PR, merge or deployment is implied by this continuation.
+
+PF01982 authorized publication prerequisite (2026-10-16 UTC):
+
+- The subsequent user request authorizes PR publication. Issue #251 and
+  `reviews/structured/20261016T010737Z-pf01982-prerequisite/review.yaml`
+  retain the reproduced stale source-pin failure. Native source retention,
+  capture and canonical rendering are required; validators remain unchanged.
+- Issues #252-254 track the existing donor/metal, construct/residue/physiology
+  and source/member-coverage findings. They remain open and are not resolved
+  by publishing the explicitly scoped observations.
+- Publication adversarial self-review re-reads the retained primary HTML/XML
+  and inspected figures. Fresh PMC web opens returned browser checks; no fresh
+  retrieval or independent approval is claimed. All 8,296 manifest hashes and
+  the prior scientific digest remain valid; only PF01982 changes. Full release
+  validation and exact-head PR/merge-group checks remain obligations.
