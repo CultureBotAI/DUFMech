@@ -1,0 +1,53 @@
+PF01982 identity and exact-member ledger, 2026-10-16 UTC.
+Frozen identity: DUF120 / CTP-dep_RFKase, InterPro:IPR023602, EX_DUF;
+snapshot interpro-pfam-duf-2026-10-10, SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+No source identity, counters or description were rewritten. The frozen EC2.7.1.26
+is retained as imported text; current nomenclature for the CTP reaction is
+EC2.7.1.161 (https://iubmb.qmul.ac.uk/enzyme/EC2/7/1/161.html).
+O28174 in the imported description is not an alias for tested taRbkR Q9HJA6.
+
+Provider payloads retrieved and inspected at these stable URLs:
+https://rest.uniprot.org/uniprotkb/Q60365.json
+SHA256 50e5b3358bfe1bbe9a953d5db89a0d769e4ecf34cb0d928fb618e2190b6a5535
+Q60365 entry117/sequence2 (2011-04-05),132aa, MJ0056/ribK,
+M. jannaschii DSM2661 and aliases, NCBITaxon:243232. Paper2008 explicitly
+names Q60365, reports132aa/mass, and forward primer encodes MIIEGE matching
+the current start. Sequence-version change still prevents treating the modern
+reference as independent full verification of the old assay insert.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01982/protein/uniprot/Q60365/
+SHA256 6f182745a898f0f404f6a0de1046b82833598bf9b44158d474d708fb3285639a
+Current PF01982 HMM interval7-125 of132aa, not whole132aa.
+
+https://rest.uniprot.org/uniprotkb/search?query=%28xref%3AEMBL-EHP68448.1%20OR%20xref%3AEMBL-AKT35049.1%20OR%20accession%3AQ9HJA6%29&format=json
+SHA256 31cf2a80acb49715a579a0dfc71905256fb50c3bf2790e10090fc6b19ef5e25e
+H2C8H2 entry53/sequence1,217aa, EHP68448.1, MetMK1DRAFT_00028820,
+M. yellowstonensis MK1, NCBITaxon:671065. PfamPF01982 and MarR_2/PF12802.
+Q9HJA6 entry130/sequence1,220aa, Ta1064, T. acidophilum DSM1728 and aliases,
+NCBITaxon:273075. PfamPF01982 plus HTH_Crp_2/PF13545. These different
+DNA-binding-domain annotations are not evidence that PF01982 alone binds DNA.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01982/protein/uniprot/H2C8H2/
+SHA256 cc667a85b9d5311ce237cdd16de6b0f584c4097ab391696a024aaa42e4fec81b
+Current PF01982 interval93-214 of217aa.
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01982/protein/uniprot/Q9HJA6/
+SHA256 54036ccaa9e592df8f8cedb172123dc6dd086f2b7d4abdcf2436b96964b49763
+Current PF01982 interval99-218 of220aa. The2017 structural partition91-220
+is different but not contradictory to a sequence HMM boundary.
+
+https://rest.uniprot.org/uniprotkb/A0A0K1E2F9.json
+Current entry is DELETED, reason not part of a reference proteome;
+UniParc UPI00067A2CA3. A failed current search is not protein absence.
+https://rest.uniprot.org/unisave/A0A0K1E2F9?format=txt&versions=33
+SHA256 54433add1e7f07ffc80722fbf68aa60f73de6b72ce606912678f33eb4dbe3198
+Archived entry33/sequence1 (2025-02-05) retains AKT35049.1,210aa,
+PYWP30_01425, NCBITaxon:1227555, and PfamPF01982 DOMAIN88-208.
+https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=AKT35049.1&rettype=gb&retmode=text
+SHA256 4fb488fef3ca595bac3fce0b2817b71d38a58fc8140e710d0787de87d8fe11d5
+GenBank AKT35049.1 is Pyrobaculum sp.WP30, matching the study's
+P. yellowstonensis WP30 via explicit accession and the linked genome paper.
+The210aa reference sequence is identical to archived UniProt sequence1.
+Archived HMM88-208, not a freshly computed current model alignment.
+Codon optimization/tag cleavage are documented by2017 Methods; exact physical
+inserts and post-cleavage residues have not been independently sequenced here.
+Protein associations and reference mappings do not prove native gene essentiality,
+kinase-domain sufficiency, residue chemistry or family-wide regulatory function.

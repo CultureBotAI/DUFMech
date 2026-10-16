@@ -1,0 +1,82 @@
+PF01982 / RbkR, assessed 2026-10-16 UTC.
+Rodionova IA et al. Nucleic Acids Res 45:3785-3799 (2017).
+PMID:28073944; doi:10.1093/nar/gkw1331.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/
+Publisher: https://academic.oup.com/nar/article/45/7/3785/2877632
+Article CC BY-NC4.0; retain only minimal quotations and original factual notes,
+not the paper, figures or supplement. Main Methods/Results/Discussion inspected.
+Figure4 image and supplement PDF pages5 (S3) and16 (TableS3) visually inspected.
+XML SHA256: 6317da2c4cf9fd70c5fe5d353d52cd07c0ad2d45823cb766295ed56df8f7e4a4.
+Figure4 SHA256: 335cbaa2835b2a9d123f2ca970c2301cb6e907739061cabc7a32ed6babdb8b3b.
+Publisher supplement ZIP SHA256: 39b539158a914dc4386425097985ec2b7b023bee53826054a96014bc4c7367ed.
+The PMC supplement endpoint returned HTML; the actual linked publisher ZIP
+successfully yielded nar-03207-i-2016-File008.pdf. No access failure is a negative.
+
+Quotation anchors (23 words total, including supplement):
+R1: "displayed high riboflavin kinase activities"
+R2: "concentration-dependent binding"
+R3: "improved the binding"
+R4: "disruptive effect on DNA binding"
+R5: "substantially diminished the binding affinity"
+R6: "Temperature dependence"
+
+R1, cloning/kinase Methods, dual-function Results and FigureS3: EHP68448.1
+(Metallosphaera yellowstonensis MK1, myRbkR) and AKT35049.1 (Pyrobaculum WP30,
+pyRbkR) were codon-optimized, expressed in pSMT3/BL21-DE3; His6-Smt3 was
+removed with Ulp1 after >90% purification. Whole fusions, not isolated kinase
+domains, were assayed. 0.2 ml, 0.15 M HEPES pH8, 0.1 M NaCl, 5 mM MgCl2,
+0.2 mM CTP and 0.6 ug protein, 60 C/20 min; riboflavin varied0.016-1.3 mM.
+HPLC450nm measured FMN. Apparent riboflavin Km my90+/-37 uM, py73+/-26 uM;
+S3 gives activities0.047+/-0.005 and0.030+/-0.003 U/mg, respectively, and
+py CTP Km18+/-3 uM. S3A is a reaction cartoon, not a chromatogram or blank.
+Protein/donor-minus raw chromatograms were not shown in inspected materials.
+No purified taRbkR kinase measurement is transferred from these two proteins.
+
+R2, Methods, Figure4A/C/E/F, TableS3: purified-protein additions increase
+binding-associated FP for myRbkR with ribB/ribT, pyRbkR with arfA/ribB,
+taRbkR(Q9HJA6/Ta1064, C-terminal His6) with ribT. FPA:24 C/20 min, 10 nM
+labeled DNA, 50 mM Tris-acetate pH6, 0.5 mM EDTA, 10 mM MgSO4, 2.5%
+glycerol,50 mM KCl,1 ug herring DNA. Triplicate SD shown, not raw replicates.
+TableS3 assigns my ribB38/ribT60 nt; py ribB60/arfA62 nt; ta ribT35 nt.
+Controls are my trxA28nt, py mutated arfA62nt, ta scrambled ribT35nt. They
+have low rather than necessarily exactly zero FP. Figure4C caption swaps py
+length order relative to TableS3. TableS3 and Methods say104bp EMSA targets;
+Figure4F caption says102bp. The EMSA experiment (62 C/25min,0.2 nM DNA,
+2.5-10 nM protein;50 mM Tris pH8,0.2 M NaCl,5 mM MgCl2,1 mM printed DDT,
+0.05% NP-40,2.5% glycerol,herring competitor) shifts arfA/ribB but not yceI
+243bp control. No normalization of these distinct conditions into one affinity.
+TableS3 printed sequences/lengths were inspected, not independently synthesized.
+
+R3, Figure4A: adding100 uM CTP improves myRbkR binding-associated FP at both
+targets. R4, Figure4B: myRbkR16 uM preincubated with100 uM FMN for3h at24 C,
+unbound FMN removed by ultrafiltration, then DNA titration; FP substantially
+lower than untreated, with residual signal. These effects do not resolve the
+allosteric intermediate or establish native transcription polarity. Text claims
+my EC50 100-110 nM, whereas the plotted Figure4A/B protein axis is uM and
+half-responses occur around micromolar concentrations. No silently corrected
+binding constant is curated. ta text16nM also needs checking against4E's axis.
+
+R5, Figure4D:60 nM pyRbkR with15 nM ribB DNA plus200 nM FMN or riboflavin
+decreases FP; FAD has no significant reported effect (image shows a smaller
+numerical decrease). General Methods say10nM DNA;4D says15nM, which is kept
+for this context. Text gives inhibitory half-effects FMN41+/-5nM and
+riboflavin144+/-17nM, but concentration series are not shown in4D. No IC50
+refit. Riboflavin effect is not proof it was converted to FMN in this mixture.
+
+R6, FigureS3B: displayed pyRbkR temperature points20/40/60/80 C show maximal
+measured activity at60 C with lower activity at20 and80 C. Graph only the
+observed contrasts. It is not an irreversible-denaturation experiment or a
+native growth optimum. Main prose says both enzymes peak60 C; displayed
+temperature curve is py only. No separate my thermal curve is asserted.
+
+Structure/physiology limits: taRbkR wHTH1-90 and kinase91-220 are structural
+boundaries, distinct from current Pfam99-218. The CTP/DNA structure (5TRD)
+uses a consensus-improving C-to-T operator substitution versus native site;
+do not silently equate it with the FPA probe. Predicted Glu195 base, loop
+closure and FMN-induced conformational switch are models, not measured
+residue causality. Text prints210-KYLR-203 and Glu39/Gln39 inconsistently.
+Native activation/deactivation and transport/regulon membership require genetics
+or transcriptomics; the authors explicitly leave positive regulation unresolved.
+Do not call this proven repression/autorepression, even if a later summary does.
+Figures5/6 and remaining supplement pages were text-read or located only, not
+fully reviewed images. No literature census or all-family transfer was performed.

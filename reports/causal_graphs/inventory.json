@@ -1526,14 +1526,17 @@
       ]
     },
     {
-      "curation_status": "SEEDED",
-      "edge_count": 0,
-      "graph_count": 0,
-      "graph_state": "ABSENT",
+      "curation_status": "IN_PROGRESS",
+      "edge_count": 25,
+      "graph_count": 13,
+      "graph_state": "PRESENT",
       "name": "CTP-dep_RFKase",
       "pfam_id": "PF01982",
-      "record_digest": "3cb43704e6f6c2ac140ae1b086bce4a0b0f0402a834ed69ec782da56cb675ca0",
-      "scope_statuses": []
+      "record_digest": "70f27c9a783a542d17bb0d41d4634501888defa1c06fa4a763bc124878b46b9c",
+      "scope_statuses": [
+        "MECHANISTIC",
+        "PHENOTYPIC"
+      ]
     },
     {
       "curation_status": "SEEDED",
@@ -83295,8 +83298,8 @@
     }
   ],
   "graph_states": {
-    "ABSENT": 8166,
-    "PRESENT": 130
+    "ABSENT": 8165,
+    "PRESENT": 131
   },
   "kind": "structural_inventory_not_scientific_review",
   "records": 8296

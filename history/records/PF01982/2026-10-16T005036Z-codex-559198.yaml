@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01982
+  path: data/families/PF01982.yaml
+session:
+  id: 2026-10-16T005036Z-codex-559198
+  timestamp: '2026-10-16T00:50:36Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review scoped PF01982 RibK/RbkR causal evidence and retain three scientific
+    follow-ups
+  details: Completed partial scientific self-review of all25 observed edges in13 graphs.
+    Exact proteins and Pfam intervals, conjunctive reaction inputs, effect direction,
+    negative/conflicting results, source quotations, whole-corpus preservation and
+    desktop/mobile native preview were assessed. Eight direct biochemical/binding
+    edges, one indirect extract effect and sixteen unresolved-directness assay effects
+    remain scoped. Donor/metal discrepancies, physical constructs/residue/native physiology
+    and source/member coverage remain open. Native/schema/history/review contracts
+    and52 focused tests pass before this REVIEW index append. IN_PROGRESS remains;
+    no qualifying REVIEWED pointer, full-family completion or publication claim.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261016T005023Z-pf01982-ribk-rbkr-causal-contexts/review.yaml
