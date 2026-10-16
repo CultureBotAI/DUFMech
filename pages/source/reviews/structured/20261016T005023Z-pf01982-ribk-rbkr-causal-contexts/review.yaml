@@ -1,0 +1,881 @@
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: e5a942839917253b96afe479dedaa786214bb4d0
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01982.yaml
+    sha256: 82e0f3ecab70e0ae07df028c442edbfed2b36c661a69c9f90594d92c53cf4c64
+    role: context
+  - path: data/families/PF01982.yaml
+    sha256: ba9851f395de3d7e5b9c7dcc7165932ff802332fa932d835702a55b38595d22b
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: evidence/PF01982/mashhadi2008.txt
+    role: context
+    sha256: 69cce653e475450b3ea29f716e864760f25628c2d5c0f3105dc53dad356160f0
+  - path: evidence/PF01982/member-mapping.txt
+    role: context
+    sha256: 844eb5bfc14cd823a64e6573b84baccc0bdf6882f1633d2a483ee5a1129c56f5
+  - path: evidence/PF01982/rodionova2017.txt
+    role: context
+    sha256: 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d
+  - path: history/records/PF01982/2026-10-16T002350Z-codex-4d6e9c.yaml
+    role: context
+    sha256: 48b19daaa054bc4d5138c27a8fb25f9db8ae058e5047229bf1e6fad5b6326f35
+targets:
+- target_id: PF01982
+  path: data/families/PF01982.yaml
+  label: PF01982
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01982.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 70f27c9a783a542d17bb0d41d4634501888defa1c06fa4a763bc124878b46b9c
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+schema_version: 1.0.0
+review_id: 20261016T005023Z-pf01982-ribk-rbkr-causal-contexts
+title: PF01982 RibK and RbkR biochemical and DNA-binding causal contexts
+started_at: '2026-10-16T00:36:11Z'
+finished_at: '2026-10-16T00:50:23Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: The author challenged every new relation against primary assay
+    text, Figure4, supplement S3/TableS3 and reference mapping. Not independent approval
+    or experimental replication.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Thirteen graphs retain 25 observed effects in four exact protein contexts,
+  with direct kinase/binding evidence distinguished from cellular and unresolved assay
+  effects. Three open findings preserve donor/metal discrepancies, construct/residue/physiology
+  limits and remaining source/member coverage. IN_PROGRESS remains appropriate.
+scope:
+  description: Review all newly curated edges for direction, scope, experimental basis,
+    quotation integrity and limitations. Full2008 main text and2017 main Methods/Results/Discussion,
+    Figure4 image and supplement S3/TableS3 assessed. Partial family coverage, not
+    a literature census.
+  selection: PF01982 was the next untouched seeded family after the published PF01981
+    batch; ignored/hidden-inclusive search of curation/evidence/history/reviews and
+    legacy review paths found no prior target curation.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01982
+  exclusions:
+  - target: Original Ammelburg2007 full text and full family literature/member census
+    reason: Original article returned403; its abstract and curated nomenclature were
+      inspected as leads, not its raw experiments.
+  - target: Full2017 structural-image/supplement assessment and raw replicate reanalysis
+    reason: Main Figure4 and supplementary pages5/16 were visually inspected; other
+      images and raw data were not comprehensively reviewed.
+  - target: Physical historical insert sequencing, isolated-domain sufficiency and
+      atomic catalytic intermediates
+    reason: Reference mappings and biochemical assays do not establish these stronger
+      claims.
+  - target: Canonical source retention, Pages release and full release QC
+    reason: Only a local unpinned native preview was generated; current source pins
+      and canonical Pages remain at the merged release.
+checks:
+- check_id: generation
+  name: generation
+  command: just records; just records --apply
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 8296 valid records; only PF01982 and its ownership manifest change after
+    actual CREATE history.
+  target_ids:
+  - PF01982
+  evidence_ids:
+  - validation
+- check_id: native
+  name: native
+  command: just validate-all validate-schema
+  status: passed
+  required: true
+  exit_code: 0
+  summary: All-record generation, canonical history, retained-review contracts and
+    generated schemas pass.
+  target_ids:
+  - PF01982
+  evidence_ids:
+  - validation
+- check_id: focused
+  name: focused
+  command: uv run --locked --offline --extra dev pytest -q tests/test_causal_graphs.py
+    tests/test_qc.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 52 focused tests pass; graph/evidence/scope/digest guards and QC orchestration
+    are structural, not scientific proof.
+  target_ids:
+  - PF01982
+  evidence_ids:
+  - validation
+- check_id: inventory-exports
+  name: inventory-exports
+  command: just causal-graphs --apply; just causal-graphs --check; just exports --apply;
+    just exports --check
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 912 graphs/1961 edges in131 families;8165 graphless. Association exports
+    reflect the PF01982 status change and do not export causal edges.
+  target_ids:
+  - PF01982
+  evidence_ids:
+  - validation
+- check_id: integrity
+  name: integrity
+  command: uv run --locked --offline python /private/tmp/duf-pf01982-20261016-UPG01T/integrity.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: All8296 manifest hashes and25 quote/hash anchors pass; earlier records,
+    scientific artifacts, frozen sources and canonical Pages/pins preserved.
+  target_ids:
+  - PF01982
+  evidence_ids:
+  - validation
+- check_id: preview
+  name: preview
+  command: uv run --locked --offline python /private/tmp/duf-pf01982-20261016-UPG01T/preview.py;
+    node /private/tmp/duf-pf01982-20261016-UPG01T/browser.cjs
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Exact native unpinned JSON;1440px/390px checks all25 evidence disclosures
+    and10/15 primary links; no document overflow or JS errors. Selected screenshots
+    visually inspected.
+  target_ids:
+  - PF01982
+  evidence_ids:
+  - validation
+evidence:
+- evidence_id: mashhadi
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2293203/
+  locator: Expression/purification, extract, standard assay/product MS, nucleotide,
+    metal/ICP and acid/thermal paragraphs; evidence/PF01982/mashhadi2008.txt
+  accessed_at: '2026-10-16T00:50:23Z'
+  support: supports
+  summary: Supports the scoped purified kinase, extract-FMN and assay perturbation
+    effects; preserves donor residuals, metal carryover and heating negative.
+- evidence_id: rodionova
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/
+  locator: Cloning/kinase/binding Methods; dual-function and structural Results; Figure4
+    image; supplement PDF pages5 and16; evidence/PF01982/rodionova2017.txt
+  accessed_at: '2026-10-16T00:50:23Z'
+  support: supports
+  summary: Supports two fusion kinase assays, three exact-member binding contexts
+    and specific effector/temperature effects without native transcription or residue
+    mechanism transfer.
+- evidence_id: mapping
+  kind: primary_source
+  reference: evidence/PF01982/member-mapping.txt
+  locator: Dated UniProt/InterPro payloads, archived UniSave entry33 and GenBank AKT35049.1;
+    explicit SHA256 values
+  accessed_at: '2026-10-16T00:50:23Z'
+  support: supports
+  summary: Grounds four exact references and domain boundaries, including deleted-accession
+    history, while keeping physical constructs distinct.
+- evidence_id: nomenclature
+  kind: primary_source
+  reference: https://iubmb.qmul.ac.uk/enzyme/EC2/7/1/161.html
+  locator: EC2.7.1.161 reaction and donor comment citing Ammelburg2007
+  accessed_at: '2026-10-16T00:50:23Z'
+  support: supports
+  summary: Curated nomenclature, not an independent enzyme experiment; motivates follow-up
+    of the2008 ATP/GTP discrepancy.
+- evidence_id: validation
+  kind: validation
+  reference: data/families/PF01982.yaml
+  locator: Native generation/schema/history/reviews, focused tests, inventory/exports,
+    preservation and unpinned browser preview
+  accessed_at: '2026-10-16T00:50:23Z'
+  support: supports
+  summary: Checks all-family manifest integrity and exact local representation; does
+    not prove causal truth or complete family coverage.
+- evidence_id: duf-projection-pf01982
+  kind: record_content
+  reference: data/families/PF01982.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-16T00:50:23Z'
+  support: context_only
+  snapshot_sha256: ba9851f395de3d7e5b9c7dcc7165932ff802332fa932d835702a55b38595d22b
+  quote: "id: Pfam:PF01982\npfam_id: PF01982\nname: Domain of unknown function DUF120\n\
+    short_name: CTP-dep_RFKase\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01982\n\
+    counters:\n  proteins: 682\n  matches: 683\n  proteomes: 657\n  taxa: 1274\n \
+    \ structures: 8\n  alphafold_models: 625\n  domain_architectures: 18\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR023602\ndescription: This domain is a CTP-dependent riboflavin\
+    \ kinase (RFK), found in archaea, that catalyses\n  the phosphorylation of riboflavin\
+    \ to form flavin mononucleotide in riboflavin biosynthesis [ec:2.7.1.26].\n  Its\
+    \ structure resembles a RIFT barrel, structurally similar to but topologically\
+    \ distinct from bacterial\n  and eukaryotic examples. The N-terminal is a winged\
+    \ helix-turn-helix DNA-binding domain, and the C-terminal\n  half is most similar\
+    \ in sequence to a group of cradle-loop barrels. [swissprot:O28174] has this domain\n\
+    \  attached to [pfam:PF00325].\ncuration_history: history/records/PF01982\ndiscussions:\n\
+    - discussion_id: ribk-donor-and-metal-discrepancies\n  prompt: Resolve nucleotide-donor\
+    \ and metal dependence across the original RibK studies.\n  kind: CURATION_TODO\n\
+    \  status: OPEN\n  rationale: The 2008 enzyme retains ATP/GTP activity and copurified\
+    \ Mg; strict CTP-only and metal-independent\n    claims are not justified by these\
+    \ assays.\n  evidence:\n  - reference: PMID:18245297\n    supports: PARTIAL\n\
+    \    evidence_source: primary_publication\n    explanation: Equal-concentration\
+    \ ATP/GTP yield 30%/11% of CTP activity; no-added-metal protein contains\n   \
+    \   4-5 mol Mg per mol protein.\n  - reference: PMID:18073108\n    supports: PARTIAL\n\
+    \    evidence_source: primary_publication\n    explanation: Abstract inspected\
+    \ but original full text returned 403; IUBMB cites this study for lack\n     \
+    \ of ATP/GTP use.\n  posed_by: Codex\n  posed_date: '2026-10-16'\n  notes: Inspect\
+    \ original 2007 Methods and donor-purity/metal controls before resolving the discrepancy.\n\
+    \    EC2.7.1.161 is current nomenclature; the frozen EC2.7.1.26 description remains\
+    \ imported source text,\n    not curated chemistry.\n- discussion_id: rbkr-constructs-residues-and-physiology\n\
+    \  prompt: Resolve exact constructs, causal residue roles and native regulatory\
+    \ polarity without assigning\n    wHTH activity to PF01982 alone.\n  kind: CURATION_TODO\n\
+    \  status: OPEN\n  rationale: Reference-domain annotations and static contacts\
+    \ do not establish domain sufficiency, proton\n    transfer or native transcriptional\
+    \ activation.\n  evidence:\n  - reference: PMID:28073944\n    supports: PARTIAL\n\
+    \    evidence_source: primary_publication\n    explanation: Whole-fusion biochemical\
+    \ assays and DNA-bound structure support distinct observations;\n      activation\
+    \ and FMN-induced structural switching remain proposed.\n  posed_by: Codex\n \
+    \ posed_date: '2026-10-16'\n  notes: Archived A0A0K1E2F9 entry33 maps AKT35049.1\
+    \ to PF01982 at 88-208; the current entry is deleted.\n    Q60365 sequence2 postdates\
+    \ the 2008 experiment. Verify physical inserts, cleavage junctions, folding/abundance\n\
+    \    and residue perturbations before stronger transfer.\n- discussion_id: rbkr-source-discrepancies-and-coverage\n\
+    \  prompt: Reconcile binding units and probe descriptions, then extend the primary-source\
+    \ and exact-member\n    review.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale:\
+    \ Figure4 axes, text affinity values and probe lengths differ; the reviewed studies\
+    \ do not\n    cover all PF01982 members.\n  evidence:\n  - reference: PMID:28073944\n\
+    \    supports: PARTIAL\n    evidence_source: primary_publication\n    explanation:\
+    \ Figure4 and supplement S3/TableS3 were visually inspected; myRbkR text nanomolar\
+    \ affinity\n      differs from plotted micromolar titrations, and EMSA length\
+    \ is 104 versus 102 bp.\n  posed_by: Codex\n  posed_date: '2026-10-16'\n  notes:\
+    \ Preserve 4D's 15 nM DNA versus general Methods 10 nM and TableS3's py probe\
+    \ ordering. No numerical\n    correction or replicate refit. Obtain original 2007\
+    \ full text, remaining structural images/supplements\n    and later experiments.\
+    \ Gene adjacency and predicted regulons are not causal proof.\ncausal_graphs:\n\
+    - graph_id: mjribk-fmn-production-2008\n  title: Purified MJ0056 phosphorylates\
+    \ riboflavin with CTP\n  scope: Recombinant M. jannaschii MJ0056 purified by heat\
+    \ treatment and MonoQ, not every PF01982 member.\n  context: 60 ul with 47 mM\
+    \ TES pH 7.2, 1.2 ug enzyme, 1.7 mM CTP and 0.37 mM riboflavin, 70 C for 10\n\
+    \    min; HPLC and authentic-product MS/MS comparison.\n  family_mapping: Q60365\
+    \ entry117/sequence2 is 132 aa, PF01982 at 7-125; the paper names Q60365 and reports\n\
+    \    132 aa with matching start and mass. Physical historical insert not independently\
+    \ resequenced; evidence/PF01982/member-mapping.txt.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:243232\n  limitations: No claim of metal-free catalysis; purified\
+    \ protein contains Mg. No atomic catalytic trajectory,\n    universal donor exclusivity\
+    \ or native pathway flux. CDP is not separately quantified in this assay.\n  nodes:\n\
+    \  - node_id: reaction\n    label: Purified MJ0056 plus riboflavin and CTP in\
+    \ the defined assay\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q60365\n\
+    \  - node_id: fmn\n    label: FMN matching authentic product\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: produces-fmn\n    subject: reaction\n    predicate: produces\n\
+    \    object: fmn\n    mechanism: Reported 42% riboflavin conversion with product\
+    \ HPLC and MS/MS supports direct kinase activity\n      in this purified preparation.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:18245297\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2293203/\n\
+    \      snippet: consumed and converted into FMN\n      explanation: Standard assay\
+    \ and product-identification paragraphs; M1 in retained ledger. No invented\n\
+    \        enzyme-minus control.\n      cache_path: evidence/PF01982/mashhadi2008.txt\n\
+    \      cache_sha256: 69cce653e475450b3ea29f716e864760f25628c2d5c0f3105dc53dad356160f0\n\
+    - graph_id: mjribk-heterologous-fmn-2008\n  title: MJ0056 expression raises FMN\
+    \ in E. coli extracts\n  scope: pMJ0056 in E. coli BL21-CodonPlus(DE3)-RIL, not\
+    \ native archaeal regulation.\n  context: pT7-7 construct, lactose induction at\
+    \ OD600 1.0, 37 C for four more hours; MonoQ extract fractions\n    quantified\
+    \ by HPLC against extracts expressing unrelated enzymes.\n  family_mapping: MJ0056\
+    \ corresponds to Q60365/PF01982 reference 7-125 of 132 aa; whole-gene expression,\n\
+    \    not domain deletion or rescue.\n  scope_status: PHENOTYPIC\n  limitations:\
+    \ Comparator is unrelated-enzyme expression, not a described empty vector. No\
+    \ matched intracellular\n    protein abundance or direct flux measurement.\n \
+    \ nodes:\n  - node_id: expression\n    label: MJ0056 expression versus unrelated-enzyme\
+    \ comparators\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q60365\n\
+    \  - node_id: extract_fmn\n    label: FMN concentration in bacterial extract\n\
+    \    node_type: PHENOTYPE\n  edges:\n  - edge_id: raises-extract-fmn\n    subject:\
+    \ expression\n    predicate: increases\n    object: extract_fmn\n    mechanism:\
+    \ Extract FMN is reported as 8.7 uM and sixfold above comparator preparations;\
+    \ intervening\n      cellular processes remain unresolved.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:18245297\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2293203/\n\
+    \      snippet: sixfold higher\n      explanation: Extract quantification paragraph;\
+    \ M2. Not native essentiality or a direct transcriptional\n        mechanism.\n\
+    \      cache_path: evidence/PF01982/mashhadi2008.txt\n      cache_sha256: 69cce653e475450b3ea29f716e864760f25628c2d5c0f3105dc53dad356160f0\n\
+    - graph_id: mjribk-donor-comparison-2008\n  title: ATP and GTP replacement reduce\
+    \ measured RibK activity\n  scope: Equal-concentration nucleotide substitutions\
+    \ in the 2008 purified MJ0056 assay.\n  context: CTP reference activity versus\
+    \ ATP or GTP at the same concentration; standard RibK assay described\n    in\
+    \ the source, not a pooled comparison with the 2007 preparation.\n  family_mapping:\
+    \ Q60365/PF01982 reference 7-125 of 132 aa; sequence-version and physical-construct\
+    \ limits\n    retained in the mapping ledger.\n  scope_status: PHENOTYPIC\n  taxon:\
+    \ NCBITaxon:243232\n  limitations: Residual activity is positive in this paper.\
+    \ IUBMB's 2007-based ATP/GTP exclusion is unresolved;\n    no contamination diagnosis\
+    \ or universal donor-exclusion claim. Binding versus catalytic causes are\n  \
+    \  not separated.\n  nodes:\n  - node_id: atp\n    label: Replace CTP with equal-concentration\
+    \ ATP\n    node_type: PERTURBATION\n  - node_id: gtp\n    label: Replace CTP with\
+    \ equal-concentration GTP\n    node_type: PERTURBATION\n  - node_id: activity\n\
+    \    label: RibK activity relative to CTP condition\n    node_type: ACTIVITY\n\
+    \  edges:\n  - edge_id: atp-lowers-activity\n    subject: atp\n    predicate:\
+    \ decreases\n    object: activity\n    mechanism: ATP yields 30% of CTP activity\
+    \ in the reported preparation; the assay contrast does not\n      resolve the\
+    \ molecular basis of selectivity.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:18245297\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2293203/\n      snippet:\
+    \ The activities with ATP and GTP\n      explanation: Nucleotide comparison paragraph;\
+    \ M3 retains the discrepant curated summary without\n        deleting residual\
+    \ activity.\n      cache_path: evidence/PF01982/mashhadi2008.txt\n      cache_sha256:\
+    \ 69cce653e475450b3ea29f716e864760f25628c2d5c0f3105dc53dad356160f0\n  - edge_id:\
+    \ gtp-lowers-activity\n    subject: gtp\n    predicate: decreases\n    object:\
+    \ activity\n    mechanism: GTP yields 11% of CTP activity; this is not an experimentally\
+    \ resolved inhibition mechanism.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:18245297\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2293203/\n      snippet:\
+    \ The activities with ATP and GTP\n      explanation: Same M3 experiment with\
+    \ a distinct replacement donor; not independent replication.\n      cache_path:\
+    \ evidence/PF01982/mashhadi2008.txt\n      cache_sha256: 69cce653e475450b3ea29f716e864760f25628c2d5c0f3105dc53dad356160f0\n\
+    - graph_id: mjribk-metal-additions-2008\n  title: Separate divalent-metal additions\
+    \ lower measured RibK activity\n  scope: Purified MJ0056 under the source's standard\
+    \ assay with separate 1.6 mM metal additions.\n  context: No-added-metal comparator\
+    \ gives 0.70 umol/min/mg; additions are separate interventions, not\n    a mixture.\
+    \ The preparation already carries 4-5 mol Mg per mol protein by ICP analysis.\n\
+    \  family_mapping: Q60365 reference 132 aa with PF01982 at 7-125; no residue-specific\
+    \ metal-site intervention.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:243232\n\
+    \  limitations: No uncertainty estimates, site occupancy or folding controls are\
+    \ given for these rates.\n    Mg addition gives 0.60 and is retained in the ledger\
+    \ without calling the small difference inhibition.\n    No-added-metal is not\
+    \ metal-free.\n  nodes:\n  - node_id: mn\n    label: Add 1.6 mM Mn2+\n    node_type:\
+    \ PERTURBATION\n  - node_id: zn\n    label: Add 1.6 mM Zn2+\n    node_type: PERTURBATION\n\
+    \  - node_id: ni\n    label: Add 1.6 mM Ni2+\n    node_type: PERTURBATION\n  -\
+    \ node_id: cu\n    label: Add 1.6 mM Cu2+\n    node_type: PERTURBATION\n  - node_id:\
+    \ co\n    label: Add 1.6 mM Co2+\n    node_type: PERTURBATION\n  - node_id: activity\n\
+    \    label: FMN-producing specific activity\n    node_type: ACTIVITY\n  edges:\n\
+    \  - edge_id: manganese-lowers-activity\n    subject: mn\n    predicate: decreases\n\
+    \    object: activity\n    mechanism: Measured rate is 0.35 versus 0.70 umol/min/mg;\
+    \ inhibitory chemistry is unresolved.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:18245297\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2293203/\n      snippet:\
+    \ Some divalent metals\n      explanation: Metal-addition and ICP paragraphs;\
+    \ M4. Direction follows the specific rate comparison\n        rather than the\
+    \ abstract alone.\n      cache_path: evidence/PF01982/mashhadi2008.txt\n     \
+    \ cache_sha256: 69cce653e475450b3ea29f716e864760f25628c2d5c0f3105dc53dad356160f0\n\
+    \  - edge_id: zinc-lowers-activity\n    subject: zn\n    predicate: decreases\n\
+    \    object: activity\n    mechanism: Measured rate is 0.12 versus 0.70 umol/min/mg;\
+    \ no inhibitory binding site is established.\n    directness: UNRESOLVED\n   \
+    \ support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference:\
+    \ PMID:18245297\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2293203/\n\
+    \      snippet: Some divalent metals\n      explanation: Metal-addition paragraph;\
+    \ separate Zn condition in M4.\n      cache_path: evidence/PF01982/mashhadi2008.txt\n\
+    \      cache_sha256: 69cce653e475450b3ea29f716e864760f25628c2d5c0f3105dc53dad356160f0\n\
+    \  - edge_id: nickel-lowers-activity\n    subject: ni\n    predicate: decreases\n\
+    \    object: activity\n    mechanism: Measured rate is 0.40 versus 0.70 umol/min/mg;\
+    \ catalytic and structural explanations are\n      not distinguished.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:18245297\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2293203/\n\
+    \      snippet: Some divalent metals\n      explanation: Metal-addition paragraph;\
+    \ separate Ni condition in M4.\n      cache_path: evidence/PF01982/mashhadi2008.txt\n\
+    \      cache_sha256: 69cce653e475450b3ea29f716e864760f25628c2d5c0f3105dc53dad356160f0\n\
+    \  - edge_id: copper-lowers-activity\n    subject: cu\n    predicate: decreases\n\
+    \    object: activity\n    mechanism: Measured rate is 0.02 versus 0.70 umol/min/mg;\
+    \ no claim of complete inhibition or a resolved\n      molecular target.\n   \
+    \ directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:18245297\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2293203/\n\
+    \      snippet: Some divalent metals\n      explanation: Metal-addition paragraph;\
+    \ separate Cu condition in M4.\n      cache_path: evidence/PF01982/mashhadi2008.txt\n\
+    \      cache_sha256: 69cce653e475450b3ea29f716e864760f25628c2d5c0f3105dc53dad356160f0\n\
+    \  - edge_id: cobalt-lowers-activity\n    subject: co\n    predicate: decreases\n\
+    \    object: activity\n    mechanism: Measured rate is 0.27 versus 0.70 umol/min/mg;\
+    \ the observation does not identify an active-site\n      inhibitory pathway.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:18245297\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2293203/\n\
+    \      snippet: Some divalent metals\n      explanation: Metal-addition paragraph;\
+    \ separate Co condition in M4.\n      cache_path: evidence/PF01982/mashhadi2008.txt\n\
+    \      cache_sha256: 69cce653e475450b3ea29f716e864760f25628c2d5c0f3105dc53dad356160f0\n\
+    - graph_id: mjribk-acid-treatment-2008\n  title: Acid pretreatment lowers residual\
+    \ RibK activity\n  scope: Purified MJ0056 acid challenge followed by activity\
+    \ measurement.\n  context: 0.1 M HCl, approximately pH 1.05, ten minutes at room\
+    \ temperature, then dilution in acetate\n    pH 6; untreated comparator.\n  family_mapping:\
+    \ Q60365/PF01982 at reference 7-125 of 132 aa; no isolated-domain perturbation.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:243232\n  limitations: Loss does\
+    \ not isolate unfolding, chemical damage or reversibility. The separate heating\n\
+    \    negative is retained in the ledger; no native acid tolerance or growth claim.\n\
+    \  nodes:\n  - node_id: acid\n    label: Acid pretreatment versus untreated enzyme\n\
+    \    node_type: PERTURBATION\n  - node_id: residual\n    label: Residual kinase\
+    \ activity after dilution\n    node_type: ACTIVITY\n  edges:\n  - edge_id: lowers-residual-activity\n\
+    \    subject: acid\n    predicate: decreases\n    object: residual\n    mechanism:\
+    \ Residual rate 0.13 versus control 0.32 nmol/min corresponds to about 40% retention;\
+    \ the\n      intervening molecular damage is unresolved.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:18245297\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2293203/\n\
+    \      snippet: retained 40%\n      explanation: Acid/thermal paragraph; M5. Detection\
+    \ limit about 2% does not establish an unfolding\n        transition.\n      cache_path:\
+    \ evidence/PF01982/mashhadi2008.txt\n      cache_sha256: 69cce653e475450b3ea29f716e864760f25628c2d5c0f3105dc53dad356160f0\n\
+    - graph_id: myrbkr-fmn-production-2017\n  title: Metallosphaera RbkR catalyzes\
+    \ FMN production\n  scope: Whole codon-optimized EHP68448.1 fusion protein after\
+    \ His6-Smt3 cleavage, M. yellowstonensis\n    MK1.\n  context: 0.2 ml, 0.15 M\
+    \ HEPES pH 8, 0.1 M NaCl, 5 mM MgCl2, 0.2 mM CTP, 0.6 ug protein, riboflavin 0.016-1.3\n\
+    \    mM; 60 C for 20 min, HPLC450nm endpoint.\n  family_mapping: H2C8H2 entry53/sequence1\
+    \ is 217 aa with PF01982 at 93-214; EHP68448.1 exact cross-reference.\n    Additional\
+    \ N-terminal DNA-binding domain is not PF01982; physical cleavage junction not\
+    \ independently\n    verified.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:671065\n\
+    \  limitations: No isolated-domain sufficiency, native flux or atomic mechanism.\
+    \ Inspected S3 lacks raw\n    enzyme/donor-minus chromatograms; HPLC product assay\
+    \ supports the reported activity, not a new control\n    result.\n  nodes:\n \
+    \ - node_id: reaction\n    label: Purified myRbkR plus riboflavin and CTP in Mg-containing\
+    \ buffer\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:H2C8H2\n  -\
+    \ node_id: fmn\n    label: HPLC-detected FMN product\n    node_type: STATE\n \
+    \ edges:\n  - edge_id: produces-fmn\n    subject: reaction\n    predicate: produces\n\
+    \    object: fmn\n    mechanism: Direct biochemical kinase activity is supported\
+    \ by the substrate-dependent product assay;\n      apparent riboflavin Km 90 +/-\
+    \ 37 uM is assay-specific.\n    directness: DIRECT\n    support: OBSERVED\n  \
+    \  evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:28073944\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/\n      snippet:\
+    \ displayed high riboflavin kinase activities\n      explanation: Kinase Methods\
+    \ and S3C inspected; R1. Not a measurement of taRbkR or all fusion members.\n\
+    \      cache_path: evidence/PF01982/rodionova2017.txt\n      cache_sha256: 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d\n\
+    - graph_id: pyrbkr-fmn-production-2017\n  title: Pyrobaculum RbkR catalyzes FMN\
+    \ production\n  scope: Codon-optimized AKT35049.1 from Pyrobaculum WP30, whole\
+    \ fusion after His6-Smt3 cleavage.\n  context: Same published HPLC assay formulation,\
+    \ 60 C for 20 min, with the separately purified pyRbkR\n    preparation and varied\
+    \ riboflavin.\n  family_mapping: AKT35049.1 is 210 aa and identical to archived\
+    \ A0A0K1E2F9 entry33/sequence1; archived\n    PF01982 DOMAIN88-208. Current accession\
+    \ is deleted, not a current reference-proteome member; exact\n    construct remains\
+    \ distinct from reference.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:1227555\n\
+    \  limitations: Archaeal native flux and isolated-domain necessity are untested.\
+    \ Archived coordinates are\n    not a new current HMM alignment. No enzyme/donor-minus\
+    \ chromatogram was available in inspected materials.\n  nodes:\n  - node_id: reaction\n\
+    \    label: Purified pyRbkR plus riboflavin and CTP in Mg-containing buffer\n\
+    \    node_type: ACTIVITY\n    grounding:\n    - GenBank:AKT35049.1\n  - node_id:\
+    \ fmn\n    label: HPLC-detected FMN product\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: produces-fmn\n    subject: reaction\n    predicate: produces\n \
+    \   object: fmn\n    mechanism: Purified-protein substrate-dependent FMN production\
+    \ supports direct kinase activity; apparent\n      riboflavin Km 73 +/- 26 uM\
+    \ belongs to this assay.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:28073944\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/\n      snippet: displayed\
+    \ high riboflavin kinase activities\n      explanation: Kinase Methods and S3D\
+    \ inspected; R1. Separate protein context from myRbkR.\n      cache_path: evidence/PF01982/rodionova2017.txt\n\
+    \      cache_sha256: 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d\n\
+    - graph_id: myrbkr-target-binding-2017\n  title: Purified myRbkR forms target\
+    \ DNA complexes\n  scope: Whole H2C8H2/EHP68448.1 fusion, not isolated PF01982\
+    \ or a native transcription assay.\n  context: Figure4A, no-added-CTP curves;\
+    \ 10 nM ribB38nt or ribT60nt DNA, 24 C for 20 min, Tris-acetate\n    pH 6, MgSO4/EDTA/KCl/glycerol\
+    \ and herring competitor. trxA28nt negative control.\n  family_mapping: H2C8H2\
+    \ 217 aa, PF01982 at 93-214 plus an N-terminal DNA-binding domain. The whole-protein\n\
+    \    assay cannot assign DNA recognition to the kinase domain.\n  scope_status:\
+    \ MECHANISTIC\n  taxon: NCBITaxon:671065\n  limitations: Directness refers only\
+    \ to purified protein-DNA association. FP is a binding proxy, not\n    transcription.\
+    \ Text EC50 values and plotted micromolar axes differ; no affinity is silently\
+    \ corrected.\n  nodes:\n  - node_id: ribb_mix\n    label: Purified myRbkR added\
+    \ to ribB probe in binding buffer\n    node_type: ACTIVITY\n    grounding:\n \
+    \   - UniProtKB:H2C8H2\n  - node_id: ribb_complex\n    label: ribB-probe protein\
+    \ complex detected by FP\n    node_type: STATE\n  - node_id: ribt_mix\n    label:\
+    \ Purified myRbkR added to ribT probe in binding buffer\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:H2C8H2\n  - node_id: ribt_complex\n    label:\
+    \ ribT-probe protein complex detected by FP\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: forms-ribb-complex\n    subject: ribb_mix\n    predicate: produces\n\
+    \    object: ribb_complex\n    mechanism: Concentration-dependent FP supports\
+    \ target association relative to the control DNA; no\n      transcriptional direction\
+    \ is inferred.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:28073944\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/\n      snippet: concentration-dependent\
+    \ binding\n      explanation: Figure4A image and TableS3; R2. The conjunctive\
+    \ input includes protein and the exact\n        DNA probe.\n      cache_path:\
+    \ evidence/PF01982/rodionova2017.txt\n      cache_sha256: 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d\n\
+    \  - edge_id: forms-ribt-complex\n    subject: ribt_mix\n    predicate: produces\n\
+    \    object: ribt_complex\n    mechanism: The separate tandem-site ribT probe\
+    \ shows protein-dependent FP; this does not demonstrate\n      transport or cooperative\
+    \ regulation in vivo.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:28073944\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/\n      snippet: concentration-dependent\
+    \ binding\n      explanation: Figure4A and TableS3; R2 retains the distinct ribT\
+    \ probe.\n      cache_path: evidence/PF01982/rodionova2017.txt\n      cache_sha256:\
+    \ 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d\n- graph_id:\
+    \ pyrbkr-target-binding-2017\n  title: Purified pyRbkR forms arfA and ribB DNA\
+    \ complexes\n  scope: Whole AKT35049.1 Pyrobaculum WP30 fusion, separately measured\
+    \ target probes.\n  context: Figure4C FPA at 24 C and Figure4F EMSA at 62 C. TableS3\
+    \ assigns FPA arfA62nt/ribB60nt; EMSA\n    targets104bp in Methods/TableS3 versus102bp\
+    \ in caption. Mutated arfA FPA and yceI243bp EMSA controls\n    remain separate.\n\
+    \  family_mapping: AKT35049.1 matches archived A0A0K1E2F9 entry33 sequence1; PF01982\
+    \ at 88-208 of 210 aa.\n    No isolated-domain DNA-binding claim.\n  scope_status:\
+    \ MECHANISTIC\n  taxon: NCBITaxon:1227555\n  limitations: FPA and EMSA confirm\
+    \ association in different buffers/temperatures, not one pooled affinity.\n  \
+    \  Source length discrepancies and unresolved physical oligos are explicit. No\
+    \ native regulatory polarity.\n  nodes:\n  - node_id: arfa_mix\n    label: Purified\
+    \ pyRbkR plus the defined arfA-region probe\n    node_type: ACTIVITY\n    grounding:\n\
+    \    - GenBank:AKT35049.1\n  - node_id: arfa_complex\n    label: arfA-probe protein\
+    \ association\n    node_type: STATE\n  - node_id: ribb_mix\n    label: Purified\
+    \ pyRbkR plus the defined ribB-region probe\n    node_type: ACTIVITY\n    grounding:\n\
+    \    - GenBank:AKT35049.1\n  - node_id: ribb_complex\n    label: ribB-probe protein\
+    \ association\n    node_type: STATE\n  edges:\n  - edge_id: forms-arfa-complex\n\
+    \    subject: arfa_mix\n    predicate: produces\n    object: arfa_complex\n  \
+    \  mechanism: Target-dependent FP and a separately observed mobility shift support\
+    \ direct protein-DNA\n      association; no downstream expression effect is measured.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:28073944\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/\n\
+    \      snippet: concentration-dependent binding\n      explanation: Figure4C/F\
+    \ images and dual-function Results; R2. Global quotation anchors the binding\n\
+    \        finding; the exact py experiment is retained by locator.\n      cache_path:\
+    \ evidence/PF01982/rodionova2017.txt\n      cache_sha256: 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d\n\
+    \  - edge_id: forms-ribb-complex\n    subject: ribb_mix\n    predicate: produces\n\
+    \    object: ribb_complex\n    mechanism: Protein-dependent FP and EMSA shift\
+    \ with the distinct ribB probe support association, not\n      activation or repression.\n\
+    \    directness: DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:28073944\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/\n\
+    \      snippet: concentration-dependent binding\n      explanation: Figure4C/F\
+    \ images and TableS3; R2 preserves separate assay conditions.\n      cache_path:\
+    \ evidence/PF01982/rodionova2017.txt\n      cache_sha256: 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d\n\
+    - graph_id: tarbkr-target-binding-2017\n  title: Purified taRbkR forms a ribT\
+    \ DNA complex\n  scope: Q9HJA6/Ta1064 full-length C-terminal His6 protein from\
+    \ T. acidophilum, not a purified PF01982\n    fragment.\n  context: Figure4E,\
+    \ 35nt ribT probe at 10 nM, 24 C FPA conditions with scrambled35nt control. Protein\n\
+    \    expressed from pSGX3 in Rosetta2(DE3)pLysS; Ni/size-exclusion/phenyl purification\
+    \ and FMN removal.\n  family_mapping: Q9HJA6 entry130/sequence1, 220 aa; current\
+    \ PF01982 at 99-218, structural kinase91-220\n    and wHTH1-90. These boundaries\
+    \ are not interchangeable.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:273075\n\
+    \  limitations: Directness is limited to protein-DNA binding. The 5TRD crystallization\
+    \ operator includes\n    a C-to-T substitution and is not equated with the native\
+    \ probe. No taRbkR kinase assay or FMN titration\n    is borrowed from another\
+    \ member.\n  nodes:\n  - node_id: mix\n    label: Purified taRbkR plus ribT probe\
+    \ under FPA conditions\n    node_type: ACTIVITY\n    grounding:\n    - UniProtKB:Q9HJA6\n\
+    \  - node_id: complex\n    label: ribT-probe protein association detected by FP\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: forms-ribt-complex\n    subject:\
+    \ mix\n    predicate: produces\n    object: complex\n    mechanism: Target FP\
+    \ increases with protein concentration while scrambled DNA remains low; this supports\n\
+    \      direct association, not transcriptional activation.\n    directness: DIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:28073944\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/\n\
+    \      snippet: concentration-dependent binding\n      explanation: Figure4E image\
+    \ and structural Results; R2. Text affinity needs comparison with plotted\n  \
+    \      units.\n      cache_path: evidence/PF01982/rodionova2017.txt\n      cache_sha256:\
+    \ 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d\n- graph_id:\
+    \ myrbkr-effector-binding-2017\n  title: CTP and FMN treatments alter myRbkR DNA\
+    \ binding\n  scope: Whole M. yellowstonensis H2C8H2/EHP68448.1, two target probes\
+    \ and two distinct effector treatments.\n  context: Figure4A adds 100 uM CTP during\
+    \ binding; Figure4B preincubates 16 uM protein with 100 uM FMN\n    for 3 h at\
+    \ 24 C then removes free FMN by ultrafiltration. Subsequent target FPA versus\
+    \ untreated protein.\n  family_mapping: PF01982 at 93-214 of 217 aa plus an N-terminal\
+    \ DNA-binding domain; interdomain causal\n    route is unresolved.\n  scope_status:\
+    \ PHENOTYPIC\n  taxon: NCBITaxon:671065\n  limitations: Assay perturbations do\
+    \ not identify an allosteric intermediate or native activation/deactivation.\n\
+    \    FMN leaves residual FP; no complete abolition. CTP/free-FMN protocols are\
+    \ not equivalent titrations.\n  nodes:\n  - node_id: ctp\n    label: Add 100 uM\
+    \ CTP in the myRbkR binding assay\n    node_type: PERTURBATION\n  - node_id: fmn\n\
+    \    label: FMN pretreatment and free-ligand removal versus untreated protein\n\
+    \    node_type: PERTURBATION\n  - node_id: ribb\n    label: myRbkR ribB-binding-associated\
+    \ FP\n    node_type: PHENOTYPE\n  - node_id: ribt\n    label: myRbkR ribT-binding-associated\
+    \ FP\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: ctp-enhances-ribb-binding\n\
+    \    subject: ctp\n    predicate: increases\n    object: ribb\n    mechanism:\
+    \ CTP improves the ribB binding-associated signal under the compared protein concentrations;\n\
+    \      no numerical affinity correction is imposed.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:28073944\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/\n\
+    \      snippet: improved the binding\n      explanation: Figure4A plus Methods;\
+    \ R3. Not a native transcription measurement.\n      cache_path: evidence/PF01982/rodionova2017.txt\n\
+    \      cache_sha256: 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d\n\
+    \  - edge_id: ctp-enhances-ribt-binding\n    subject: ctp\n    predicate: increases\n\
+    \    object: ribt\n    mechanism: The separate ribT target also shows improved\
+    \ FP with CTP; a direct atomic coupling path\n      is not measured.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:28073944\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/\n\
+    \      snippet: improved the binding\n      explanation: Figure4A; R3 retains\
+    \ the ribT target separately.\n      cache_path: evidence/PF01982/rodionova2017.txt\n\
+    \      cache_sha256: 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d\n\
+    \  - edge_id: fmn-reduces-ribb-binding\n    subject: fmn\n    predicate: decreases\n\
+    \    object: ribb\n    mechanism: FMN-pretreated protein gives substantially lower\
+    \ ribB FP after free-ligand removal; the\n      molecular switching step remains\
+    \ unresolved.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:28073944\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/\n      snippet: disruptive\
+    \ effect on DNA binding\n      explanation: Figure4B and pretreatment Methods;\
+    \ R4 includes residual signal.\n      cache_path: evidence/PF01982/rodionova2017.txt\n\
+    \      cache_sha256: 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d\n\
+    \  - edge_id: fmn-reduces-ribt-binding\n    subject: fmn\n    predicate: decreases\n\
+    \    object: ribt\n    mechanism: The distinct ribT probe also shows reduced FP\
+    \ after FMN pretreatment; no transport phenotype\n      is inferred.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:28073944\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/\n\
+    \      snippet: disruptive effect on DNA binding\n      explanation: Figure4B;\
+    \ R4 retains the ribT-specific comparison.\n      cache_path: evidence/PF01982/rodionova2017.txt\n\
+    \      cache_sha256: 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d\n\
+    - graph_id: pyrbkr-flavin-binding-2017\n  title: FMN and riboflavin lower pyRbkR\
+    \ binding-associated FP\n  scope: Purified AKT35049.1 with the ribB DNA probe,\
+    \ not myRbkR or taRbkR.\n  context: Figure4D uses 60 nM pyRbkR and 15 nM ribB\
+    \ DNA with separate 200 nM flavins in the FPA buffer;\n    no-effector comparator.\
+    \ General Methods' 10 nM DNA differs from this panel's stated condition.\n  family_mapping:\
+    \ Archived A0A0K1E2F9 entry33 sequence1 matches AKT35049.1; PF01982 at 88-208\
+    \ of 210 aa,\n    whole DNA-binding fusion.\n  scope_status: PHENOTYPIC\n  taxon:\
+    \ NCBITaxon:1227555\n  limitations: FAD has no significant reported effect and\
+    \ remains a negative in the ledger. No claim that\n    riboflavin is converted\
+    \ to FMN in this binding assay, no IC50 refit and no native transcription effect.\n\
+    \  nodes:\n  - node_id: fmn\n    label: Add 200 nM FMN to the pyRbkR ribB assay\n\
+    \    node_type: PERTURBATION\n  - node_id: riboflavin\n    label: Add 200 nM riboflavin\
+    \ to the same assay\n    node_type: PERTURBATION\n  - node_id: fp\n    label:\
+    \ pyRbkR ribB-binding-associated FP\n    node_type: PHENOTYPE\n  edges:\n  - edge_id:\
+    \ fmn-reduces-binding-signal\n    subject: fmn\n    predicate: decreases\n   \
+    \ object: fp\n    mechanism: FMN lowers FP relative to no effector; the specific\
+    \ conformational or occupancy mechanism\n      is not measured.\n    directness:\
+    \ UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:28073944\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/\n\
+    \      snippet: substantially diminished the binding affinity\n      explanation:\
+    \ Figure4D image and Results; R5. Graph stores the observed signal decrease rather\
+    \ than\n        a fitted affinity.\n      cache_path: evidence/PF01982/rodionova2017.txt\n\
+    \      cache_sha256: 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d\n\
+    \  - edge_id: riboflavin-reduces-binding-signal\n    subject: riboflavin\n   \
+    \ predicate: decreases\n    object: fp\n    mechanism: Riboflavin lowers FP in\
+    \ its separate treatment; kinase turnover is not demonstrated in\n      this mixture.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:28073944\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/\n\
+    \      snippet: substantially diminished the binding affinity\n      explanation:\
+    \ Figure4D; R5 preserves the distinct substrate addition and the FAD negative.\n\
+    \      cache_path: evidence/PF01982/rodionova2017.txt\n      cache_sha256: 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d\n\
+    - graph_id: pyrbkr-temperature-response-2017\n  title: Assay temperature changes\
+    \ pyRbkR kinase activity\n  scope: Pyrobaculum WP30 recombinant AKT35049.1 in\
+    \ the FigureS3B HPLC kinase temperature series.\n  context: Supplement page5 S3B\
+    \ displays 20, 40, 60 and 80 C points; 60 C has the highest measured activity.\n\
+    \    Defined Mg/CTP/riboflavin enzyme assay, not preheating followed by a common-temperature\
+    \ assay.\n  family_mapping: Archived PF01982 at 88-208 in the 210-aa AKT35049.1\
+    \ reference; physical construct and\n    tag-cleavage limits are unchanged.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:1227555\n  limitations: No irreversible\
+    \ unfolding, native growth optimum or exact continuous optimum. Main prose\n \
+    \   mentions both proteins but the displayed temperature series is pyRbkR only;\
+    \ no myRbkR curve is inferred.\n  nodes:\n  - node_id: warming\n    label: Change\
+    \ reaction temperature from 20 to 60 C\n    node_type: PERTURBATION\n  - node_id:\
+    \ hotter\n    label: Change reaction temperature from 60 to 80 C\n    node_type:\
+    \ PERTURBATION\n  - node_id: activity\n    label: Relative FMN-producing activity\
+    \ in the temperature series\n    node_type: ACTIVITY\n  edges:\n  - edge_id: warming-increases-activity\n\
+    \    subject: warming\n    predicate: increases\n    object: activity\n    mechanism:\
+    \ The measured 60 C point exceeds 20 C; substrate chemistry and protein conformational\
+    \ contributions\n      are not separated.\n    directness: UNRESOLVED\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:28073944\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/\n      snippet:\
+    \ Temperature dependence\n      explanation: Supplement S3B image and caption\
+    \ on page5; R6. No digitized exact activity is asserted.\n      cache_path: evidence/PF01982/rodionova2017.txt\n\
+    \      cache_sha256: 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d\n\
+    \  - edge_id: hotter-lowers-activity\n    subject: hotter\n    predicate: decreases\n\
+    \    object: activity\n    mechanism: The measured 80 C point is lower than 60\
+    \ C; no irreversible denaturation mechanism is assigned.\n    directness: UNRESOLVED\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:28073944\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/\n\
+    \      snippet: Temperature dependence\n      explanation: Supplement S3B image;\
+    \ R6 keeps this distinct from the 2008 MJ0056 preheating negative.\n      cache_path:\
+    \ evidence/PF01982/rodionova2017.txt\n      cache_sha256: 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d\n\
+    curation_events:\n- timestamp: '2026-10-16T00:23:50Z'\n  curator: Codex\n  action:\
+    \ CREATE\n  outcome: changed\n  summary: Curate PF01982 RibK and RbkR causal assay\
+    \ contexts\n  history_record: history/records/PF01982/2026-10-16T002350Z-codex-4d6e9c.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Frozen family and exact protein/domain scopes
+  outcome: supported
+  summary: Frozen source identity/counters remain unchanged. Exact named sequences
+    link the studies to PF01982. wHTH binding belongs to whole fusions, not the catalytic
+    HMM alone; historical and current sequence versions are distinguished.
+  target_ids:
+  - PF01982
+  evidence_ids:
+  - mapping
+  - mashhadi
+  - rodionova
+- assessment_id: graphs
+  area: graph
+  topic: Directed effects without invented intermediates
+  outcome: supported
+  summary: Every edge has source/target direction and conjunctive assay inputs. Purified
+    product and DNA-association effects are distinct from cellular extract changes
+    and unresolved perturbation mechanisms. No native activation or general essentiality
+    chain is asserted.
+  target_ids:
+  - PF01982
+  evidence_ids:
+  - mashhadi
+  - rodionova
+  - validation
+- assessment_id: evidence
+  area: evidence
+  topic: Minimal quotation anchors and source conflicts
+  outcome: supported
+  summary: Minimal licensed extracts are hash-checked and source-located. ATP/GTP
+    residuals, Mg carryover, heating/FAD negatives and source units/oligo discrepancies
+    are retained rather than silently reconciled.
+  target_ids:
+  - PF01982
+  evidence_ids:
+  - mashhadi
+  - rodionova
+  - nomenclature
+- assessment_id: provenance
+  area: provenance
+  topic: Native ownership and corpus preservation
+  outcome: supported
+  summary: The overlay, three evidence ledgers and actual CREATE history own the new
+    science. Native records, inventory and association exports are regenerated; all8295
+    other records and pre-existing scientific artifacts are preserved.
+  target_ids:
+  - PF01982
+  evidence_ids:
+  - mapping
+  - validation
+- assessment_id: coverage
+  area: completeness
+  topic: Remaining original-source, residue and physiological work
+  outcome: concern
+  summary: Three open discussions/findings remain. The original2007 experiments, physical
+    constructs, native regulation, full structural evidence and other members prevent
+    a complete family verdict.
+  target_ids:
+  - PF01982
+  evidence_ids:
+  - mashhadi
+  - rodionova
+  - mapping
+  - nomenclature
+findings:
+- finding_id: donor-and-metal-discrepancies
+  issue_key: pf01982-donor-and-metal-discrepancies
+  title: Resolve donor specificity and metal dependence across RibK studies
+  description: Inspect original2007 methods, controls and data against2008 residual
+    ATP/GTP activity and copurified Mg. Do not label no-added-metal activity metal-free
+    or discard positive donor residuals without evidence.
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01982
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - mashhadi
+  - nomenclature
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01982.yaml
+    role: Maintained scientific overlay; generated record is not manually edited.
+- finding_id: constructs-residues-and-physiology
+  issue_key: pf01982-constructs-residues-and-physiology
+  title: Resolve physical constructs, residue mechanisms and native regulation
+  description: Modern and archived reference mappings do not independently authenticate
+    physical inserts, cleavage junctions or old numbering. Verify domain sufficiency
+    and residue perturbation controls before atomic chemistry; native activation/deactivation
+    requires direct genetic/transcriptomic evidence.
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01982
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - mapping
+  - rodionova
+  - mashhadi
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01982.yaml
+    role: Maintained scientific overlay; generated record is not manually edited.
+- finding_id: source-discrepancies-and-coverage
+  issue_key: pf01982-source-discrepancies-and-coverage
+  title: Reconcile assay descriptions and extend source/member coverage
+  description: Binding-unit and oligo-length discrepancies remain. Figure4 and S3/TableS3
+    were inspected, not all structural images or complete later literature. Full-family
+    completion requires further exact-member source assessment and preserved negatives.
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01982
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - rodionova
+  - mapping
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01982.yaml
+    role: Maintained scientific overlay; generated record is not manually edited.
+actions:
+- action_id: extend-ribk-rbkr-evidence
+  description: Resolve original-source discrepancies and extend exact-member causal
+    evidence without broadening claims beyond tested contexts.
+  finding_ids:
+  - donor-and-metal-discrepancies
+  - constructs-residues-and-physiology
+  - source-discrepancies-and-coverage
+  target_ids:
+  - PF01982
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01982.yaml
+    role: Maintained scientific overlay; generated record is not manually edited.
+  acceptance_checks:
+  - Inspect original2007 assays and explicitly reconcile or retain donor/metal discrepancies.
+  - Verify physical constructs and residue/domain perturbation controls before stronger
+    mechanisms.
+  - Retain native regulatory polarity as unproven until appropriate experiments are
+    inspected.
+  - Resolve source units/probe descriptions from primary data or retain them as unresolved.
+  - Extend remaining literature/member coverage and append successor evidence, reviews
+    and actual history.
+limitations:
+- The full8296-record goal remains active; 131 graph-bearing families are structural
+  presence, not scientific completion.
+- Eight DIRECT edges concern purified kinase/product formation or protein-DNA association;
+  one INDIRECT edge concerns bacterial extract FMN; sixteen UNRESOLVED edges retain
+  assay effects without inventing molecular intermediates.
+- Reference PF01982 boundaries are Q60365 7-125, H2C8H2 93-214, Q9HJA6 99-218 and
+  archived A0A0K1E2F9 88-208. Whole RbkR fusions do not establish kinase-domain DNA
+  recognition.
+- Current A0A0K1E2F9 is deleted for reference-proteome selection. Archived entry33/sequence1
+  and AKT35049.1 retain the same210aa sequence and Pfam assignment; this is not a
+  current HMM recomputation.
+- 2008 residual ATP/GTP activity and copurified Mg remain explicit; no-added-metal
+  is not metal-free catalysis, and missing2007 full text is not evidence of an experimental
+  negative.
+- 2017 binding-unit and probe-length discrepancies remain unresolved. No affinity
+  correction, IC50 refit or exact temperature optimum was fabricated.
+- Native activation/deactivation, transport roles, Glu195 base chemistry and FMN-induced
+  conformational switching are not observed edges. They remain hypotheses or future
+  work.
+- Initial native generation rejected an unquoted comma in a flow mapping; the maintained
+  overlay was corrected. No generated output or validator was manually altered to
+  bypass the failure.
+- EuropePMC2008 XML failed; PMC HTML succeeded. PMC supplement returned HTML, but
+  the actual linked publisher ZIP succeeded. A temporary PDF reader was used because
+  Poppler was not available on the attempted paths; repo dependencies were unchanged.
+- The initial browser command was denied a localhost bind by the sandbox before rendering;
+  the temporary loopback-only check was rerun with approved local-preview permissions.
+- Canonical REVIEW indexing and final post-review checks follow this retained observation.
+  No publication or REVIEWED promotion is implied.

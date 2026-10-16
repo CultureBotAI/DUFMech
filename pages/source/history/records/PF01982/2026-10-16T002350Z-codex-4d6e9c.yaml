@@ -1,0 +1,32 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01982
+  path: curation/families/PF01982.yaml
+session:
+  id: 2026-10-16T002350Z-codex-4d6e9c
+  timestamp: '2026-10-16T00:23:50Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate PF01982 RibK and RbkR causal assay contexts
+  details: Inspected Mashhadi2008 full text and Rodionova2017 Methods/Results, Figure4
+    and supplement S3/TableS3. Added thirteen scoped graphs and twenty-five observed
+    edges, three open discussions, minimal hashed evidence and exact reference mappings
+    including deleted A0A0K1E2F9 archived entry33. Retained donor/metal, binding-unit
+    and probe discrepancies; no native transcription, isolated-domain sufficiency
+    or atomic chemistry claim. Structural graph checks pass; native generation, full
+    schema validation and retained scientific self-review follow. Canonical Pages
+    and publication remain unchanged.
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC2293203/
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC5397151/
