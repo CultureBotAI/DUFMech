@@ -1,0 +1,33 @@
+history_version: 1
+target:
+  kind: infrastructure
+  slug: pr-256-publication
+  path: docs/causal-graphs.md
+session:
+  id: 2026-10-16T024602Z-codex-0b45b2
+  timestamp: '2026-10-16T02:46:02Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: AUDIT
+  outcome: changed
+  summary: Audit PF01982 original-assay publication and repair candidate source retention
+  details: Adversarial same-agent review retained issue257 and an evidence-backed
+    successor disposition. Candidate2698be1490ec651eeae2f5330a95e084355a0ce1 has canonical
+    annotated-tag retention, native capture/render, source-copy integrity and1440px/390px
+    disclosure checks. Native records/history/reviews/schema, four contract tests
+    and52 focused tests passed. Scientific issues252-254 remain open;16 graphs/33
+    edges include four explicit hypotheses and IN_PROGRESS status. This audit still
+    requires its own retained checkpoint, final full QC and exact-head CI before merge.
+    Initial timestamp and numeric-link arguments were rejected before writing; corrected
+    ISO time and full URLs preserve actual audit provenance.
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/257
+  prs:
+  - https://github.com/CultureBotAI/DUFMech/pull/256
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261016T025401Z-pr-256-publication/review.yaml

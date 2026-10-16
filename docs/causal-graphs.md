@@ -7149,3 +7149,39 @@ PF01982 original RibK assay account and catalytic-model checkpoint
   `site source pin bytes differ: curation/families/PF01982.yaml; capture a new source checkpoint`.
   This is the expected unpublished-source prerequisite, not a passed release
   gate. Full release QC was not run, and no pin or validator was weakened.
+
+PF01982 original-assay publication audit (PR #256, 2026-10-16 UTC):
+
+- Publication is now explicitly authorized. The native source-pin check and
+  draft CI both reproduced a stale-overlay failure, tracked as issue #257 and
+  retained in `reviews/structured/20261016T024546Z-pr-256-publication-prerequisite/`.
+  This is a new release prerequisite after PR #255, not a reopened scientific
+  finding or a defect in the source-pin validator.
+- Candidate `2698be1490ec651eeae2f5330a95e084355a0ce1` is published and retained
+  by annotated tag `source/dufmech-pr-256-candidate`. Native capture and online
+  canonical retention pass for 9,234 source files. Full rendering and unchanged
+  site contracts/budgets pass; all 9,030 rendered source copies match exactly.
+- Adversarial self-review reread the cached primary PDF Methods, assay results
+  and binding-model prose and inspected Figures 9/11. All five quotation anchors
+  match (21 words). Reference mappings and the current RCSB 2VBV entry retain
+  the distinction between historical E107 and current E103, product structures
+  and substrate trajectories, and reference identity and physical constructs.
+  No additional scientific representation defect was found in the new edges.
+- Native validation passes for 8,296 records, 346 history files, 197 structured
+  bundles and 205 retained reports; the four contract and 52 focused tests pass.
+  Candidate integrity checks preserve the 13 original graphs, all 8,295 other
+  family records and earlier artifacts. PF01982 retains 16 graphs / 33 edges,
+  four explicitly contextual hypotheses, four history events, three OPEN
+  discussions and IN_PROGRESS status without a qualifying review pointer.
+- At 1440px and 390px all 33 evidence disclosures work; the four hypotheses and
+  pinned source link are visible, without document overflow or JavaScript errors.
+  Selected screenshots were inspected. No renderer, schema or validator changed.
+- The append-only successor disposition is
+  `reviews/structured/20261016T025401Z-pr-256-publication/review.yaml` with derived
+  Markdown. It resolves the reproduced candidate publication mismatch, not the
+  scientific questions. Existing issues #252-254 received evidence-backed partial
+  progress updates and remain open; duplicate scientific issues were not created.
+- This observation does not certify its own subsequent source capture, final
+  full QC, exact-head PR/merge-group checks or deployment. Those remain required
+  release gates. Retain both annotated source tags after branch deletion. The
+  complete 8,296-record scientific objective remains open.
