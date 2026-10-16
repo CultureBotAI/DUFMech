@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01986
+  path: data/families/PF01986.yaml
+session:
+  id: 2026-10-16T091811Z-codex-6539d2
+  timestamp: '2026-10-16T09:18:11Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped scientific review of DUF123 repair hypotheses and unresolved
+    evidence.
+  details: Completed same-agent scientific review of the two proposed MJ0613 repair
+    alternatives, exact reference mapping, independent CDS translation and false-family
+    exclusion. Saved native structured report 20261016T093144Z-pf01986-repair-hypotheses
+    with common pass_with_limitations and native NEEDS_FOLLOWUP, partial coverage,
+    two open findings and no REVIEWED promotion. Pre-review generation, 56 focused
+    tests, full native/schema/history/review checks, inventory/exports and 1440px/390px
+    unpinned preview passed. The publication guard rejects changed family bytes; canonical
+    Pages and source pins remain untouched. Final history-index regeneration and report
+    validation follow this real REVIEW event. The 8296-family objective remains incomplete.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261016T093144Z-pf01986-repair-hypotheses/review.yaml
