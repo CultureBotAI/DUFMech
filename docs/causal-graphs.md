@@ -7054,3 +7054,32 @@ PF01982 authorized publication prerequisite (2026-10-16 UTC):
   retrieval or independent approval is claimed. All 8,296 manifest hashes and
   the prior scientific digest remain valid; only PF01982 changes. Full release
   validation and exact-head PR/merge-group checks remain obligations.
+
+PF01982 candidate publication audit (PR #255, 2026-10-16 UTC):
+
+- Draft CI `38833477081` reproduces issue #251's stale-source failure. Annotated
+  tag `source/dufmech-pr-255-candidate` retains commit
+  `1dd0919391b090b6a95255afa2a690abf4826675`. Native capture and fresh canonical
+  remote retention pass for 9,226 sources. All 9,022 rendered source copies and
+  the current PF01982 JSON are byte-exact; all other 8,295 records, prior science,
+  frozen data and runtime remain unchanged.
+- Canonical rendering and the site contract pass for 8,296 families / 8,633 HTML
+  pages, totaling 421,505,550 bytes within the unchanged 430 MB budget. Both
+  1440px and 390px browser checks pass for all 25 evidence disclosures, 10/15
+  primary links and the pinned record link, without document overflow or JS
+  errors. Wide tables remain horizontally accessible; selected screenshots
+  were visually inspected. Temporary browser/server processes have closed.
+- All 56 focused/review-contract tests pass. There are 344 valid history files
+  and 194 valid structured bundles before this audit. All 22 governed artifacts
+  match the CLAW pin. Isolated offline OAK correspondence and rejection tests
+  pass for 8,296 canonical pairs. The exact scientific digest, two history
+  events, 13 graphs / 25 edges and three OPEN discussions are unchanged.
+- The append-only adversarial self-review is
+  `reviews/structured/20261016T011542Z-pf01982-publication/review.yaml`
+  with derived Markdown. It resolves the candidate publication prerequisite,
+  not scientific issues #252-254. No new scientific claim or status promotion
+  is made. This is self-review, not independent approval.
+- This audit itself must be retained and recaptured before final canonical
+  rendering, full release QC and exact-head PR/merge-group validation. Those
+  later outcomes are not certified by this candidate observation. The complete
+  8,296-record scientific objective remains open.
