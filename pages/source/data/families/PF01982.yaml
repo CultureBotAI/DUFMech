@@ -46,11 +46,18 @@ discussions:
     evidence_source: primary_publication
     explanation: Abstract inspected but original full text returned 403; IUBMB cites this study for lack
       of ATP/GTP use.
+  - reference: https://hdl.handle.net/10900/49675
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Ammelburg's 2011 primary account supplies the original assay protocol and qualitative
+      donor contrasts; Figure9G retains a small FMN-labeled ATP peak despite its negative caption.
   posed_by: Codex
   posed_date: '2026-10-16'
-  notes: Inspect original 2007 Methods and donor-purity/metal controls before resolving the discrepancy.
-    EC2.7.1.161 is current nomenclature; the frozen EC2.7.1.26 description remains imported source text,
-    not curated chemistry.
+  notes: The 2011 dissertation is a primary account of the 2007 work, not independent replication or verified
+    journal-text identity. Its assay contains 5 mM MgCl2 without a metal-removal intervention. Different
+    constructs and assay conditions do not establish why 2008 ATP/GTP activity differs. Original journal
+    text and donor-purity/metal controls remain follow-ups. EC2.7.1.161 is current nomenclature; the frozen
+    EC2.7.1.26 description remains imported source text, not curated chemistry.
 - discussion_id: rbkr-constructs-residues-and-physiology
   prompt: Resolve exact constructs, causal residue roles and native regulatory polarity without assigning
     wHTH activity to PF01982 alone.
@@ -64,11 +71,18 @@ discussions:
     evidence_source: primary_publication
     explanation: Whole-fusion biochemical assays and DNA-bound structure support distinct observations;
       activation and FMN-induced structural switching remain proposed.
+  - reference: https://hdl.handle.net/10900/49675
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: Static apo and product complexes motivate an explicitly hypothetical ordered-binding
+      and E107 base model; no causal residue intervention was inspected.
   posed_by: Codex
   posed_date: '2026-10-16'
   notes: Archived A0A0K1E2F9 entry33 maps AKT35049.1 to PF01982 at 88-208; the current entry is deleted.
-    Q60365 sequence2 postdates the 2008 experiment. Verify physical inserts, cleavage junctions, folding/abundance
-    and residue perturbations before stronger transfer.
+    Q60365 sequence2 postdates the original studies. The 136-aa archived Q60365 and 2P3M/2VBU/2VBV references
+    have an MVKL prefix relative to current 132-aa Q60365; deposited E107 maps to current E103 and PF01982
+    7-125 maps to deposited 11-129. The prefix is not established as a vector tag. Verify physical inserts,
+    cleavage junctions, folding/abundance and residue perturbations before stronger transfer.
 - discussion_id: rbkr-source-discrepancies-and-coverage
   prompt: Reconcile binding units and probe descriptions, then extend the primary-source and exact-member
     review.
@@ -85,8 +99,10 @@ discussions:
   posed_by: Codex
   posed_date: '2026-10-16'
   notes: Preserve 4D's 15 nM DNA versus general Methods 10 nM and TableS3's py probe ordering. No numerical
-    correction or replicate refit. Obtain original 2007 full text, remaining structural images/supplements
-    and later experiments. Gene adjacency and predicted regulons are not causal proof.
+    correction or replicate refit. Ammelburg2011 Methods and Figures9/11/12 are now inspected, with an
+    ATP panel/caption discrepancy and printed preparation-volume ambiguity retained. Original 2007 journal
+    text, remaining supplements and later experiments are still gaps. Gene adjacency and predicted regulons
+    are not causal proof.
 causal_graphs:
 - graph_id: mjribk-fmn-production-2008
   title: Purified MJ0056 phosphorylates riboflavin with CTP
@@ -803,6 +819,235 @@ causal_graphs:
       explanation: Supplement S3B image; R6 keeps this distinct from the 2008 MJ0056 preheating negative.
       cache_path: evidence/PF01982/rodionova2017.txt
       cache_sha256: 482000c81a0fd7ef89db5336ab1fd172873eda9fa7c2fe79f6bc9cca0032c18d
+- graph_id: mjribk-fmn-production-thesis2011
+  title: Original MJ0056 CTP assay reported in Ammelburg's dissertation
+  scope: Purified colorless MJ0056 fraction from pET-30b expression in E. coli C41(DE3)RIL; primary author
+    account of the 2007 work, not a new independent 2011 replication.
+  context: 40 mM Tris/HCl pH 8, 50 mM NaCl, 5 mM MgCl2, 1 mM DTT, 50 uM riboflavin, 3 mM CTP and 1 uM
+    enzyme; 60 min at 50 C in Figure9D/E, with positive/negative ESI-MS and RF/FMN standards.
+  family_mapping: MJ0056 is linked to archived 136-aa Q60365 and deposited 2P3M/2VBU/2VBV sequences; current
+    Q60365 sequence2 7-125 maps to deposited 11-129. Physical assay insert was not independently sequenced;
+    evidence/PF01982/ribk-residue-mapping.txt.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:2190
+  limitations: Methods describe enzyme-minus controls but Figure9B/C are standards, not demonstrated matched
+    reaction blanks. Complete conversion is the author's interpretation, not a recalculated yield. No
+    separately quantified CDP, Mg necessity experiment, native flux or family-wide exclusivity.
+  nodes:
+  - node_id: reaction
+    label: Purified MJ0056 plus riboflavin and CTP in the Mg-containing assay
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q60365
+  - node_id: fmn
+    label: FMN product identified by ESI-MS comparison with standards
+    node_type: STATE
+  edges:
+  - edge_id: produces-fmn
+    subject: reaction
+    predicate: produces
+    object: fmn
+    mechanism: Product spectra in the purified CTP reaction support direct riboflavin kinase activity
+      under these conditions; assay inputs are conjunctive, not independent sufficient causes.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: https://hdl.handle.net/10900/49675
+      source_url: https://bibliographie.uni-tuebingen.de/xmlui/bitstream/handle/10900/49675/pdf/Dissertation_Ammelburg.pdf
+      snippet: Formation of FMN
+      explanation: A1; Methods pages49-50 and Figure9D/E page56 with results page57. Source is the 2011
+        dissertation recounting the 2007 work; not journal-text identity.
+      cache_path: evidence/PF01982/ammelburg2011.txt
+      cache_sha256: 29d5f99a9a6316e5893ff3eb154afee59b2856bcdd74ff9832401285909577ef
+- graph_id: mjribk-donor-comparison-thesis2011
+  title: Reported donor substitutions reduce FMN formation relative to CTP
+  scope: The dissertation's original purified MJ0056 preparation and nucleotide screen, separate from
+    the 2008 preparation.
+  context: Replace 3 mM CTP separately with 3 mM ATP, GTP or UTP; 50 uM riboflavin, 1 uM enzyme, 5 mM
+    MgCl2 and the pH8 assay buffer for 60 min. Methods list 25/37/50/70/85 C; ATP spectra shown at 50
+    C.
+  family_mapping: Historical 136-aa MJ0056 reference maps to current Q60365 by a four-residue offset;
+    reference PF01982 7-125 corresponds to deposited 11-129, not a newly measured domain boundary.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:2190
+  limitations: These are reported assay contrasts, not kinetic fits or donor-binding mechanisms. Figure9G
+    labels a small FMN peak despite the caption's negative wording. GTP/UTP spectra, quantitative limits,
+    donor purity and replicate errors are not supplied in the inspected section. Retain the conflicting
+    2008 ATP/GTP residuals.
+  nodes:
+  - node_id: atp
+    label: Replace CTP with equal-concentration ATP
+    node_type: PERTURBATION
+  - node_id: gtp
+    label: Replace CTP with equal-concentration GTP
+    node_type: PERTURBATION
+  - node_id: utp
+    label: Replace CTP with equal-concentration UTP
+    node_type: PERTURBATION
+  - node_id: fmn
+    label: Reported FMN formation relative to the CTP condition
+    node_type: ACTIVITY
+  edges:
+  - edge_id: atp-lowers-product
+    subject: atp
+    predicate: decreases
+    object: fmn
+    mechanism: ATP gives much less FMN than CTP in the reported comparison; the small FMN-labeled signal
+      in Figure9G prevents an assertion of literal zero turnover.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: https://hdl.handle.net/10900/49675
+      source_url: https://bibliographie.uni-tuebingen.de/xmlui/bitstream/handle/10900/49675/pdf/Dissertation_Ammelburg.pdf
+      snippet: did not yield significant amounts of FMN
+      explanation: A2; Figure9F/G visually inspected against the caption and page57 prose. No detection
+        threshold or absence of all product is inferred.
+      cache_path: evidence/PF01982/ammelburg2011.txt
+      cache_sha256: 29d5f99a9a6316e5893ff3eb154afee59b2856bcdd74ff9832401285909577ef
+  - edge_id: gtp-lowers-product
+    subject: gtp
+    predicate: decreases
+    object: fmn
+    mechanism: The author reports little FMN with GTP compared with the CTP reaction across tested temperatures;
+      no GTP spectrum or numerical rate is provided here.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: https://hdl.handle.net/10900/49675
+      source_url: https://bibliographie.uni-tuebingen.de/xmlui/bitstream/handle/10900/49675/pdf/Dissertation_Ammelburg.pdf
+      snippet: did not yield significant amounts of FMN
+      explanation: A2; page57 reported GTP observation with page50 assay methods. An author-reported result
+        is not an independently inspected raw trace.
+      cache_path: evidence/PF01982/ammelburg2011.txt
+      cache_sha256: 29d5f99a9a6316e5893ff3eb154afee59b2856bcdd74ff9832401285909577ef
+  - edge_id: utp-lowers-product
+    subject: utp
+    predicate: decreases
+    object: fmn
+    mechanism: UTP supports product formation but is described as less efficient than CTP; preserve this
+      qualitative direction without treating the approximate order-of-magnitude statement as a fitted
+      kinetic ratio.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: https://hdl.handle.net/10900/49675
+      source_url: https://bibliographie.uni-tuebingen.de/xmlui/bitstream/handle/10900/49675/pdf/Dissertation_Ammelburg.pdf
+      snippet: supports product formation
+      explanation: A3; page57 positive UTP result and comparative wording. Neither a strict CTP-only enzyme
+        nor a measured UTP binding constant follows.
+      cache_path: evidence/PF01982/ammelburg2011.txt
+      cache_sha256: 29d5f99a9a6316e5893ff3eb154afee59b2856bcdd74ff9832401285909577ef
+- graph_id: mjribk-proposed-catalytic-cycle-thesis2011
+  title: Hypothesized MJ0056 binding and E107-assisted phosphate-transfer cycle
+  scope: Author-proposed mechanism for MJ0056, based on apo and product-bound structures; not an observed
+    residue-level pathway or a PF01982-wide mechanism.
+  context: The candidate cycle is posed for MJ0056 with CTP, riboflavin and Mg together. The experimental
+    comparisons are apo NMR 2P3M, MgCDP-bound 2VBU and MgCDP/FMN-bound 2VBV, not substrate-bound time-resolved
+    intermediates. Each state retains the remaining reaction inputs.
+  family_mapping: All three deposited entity1 sequences are 136 aa, equal to MVKL plus current Q60365
+    sequence2. Historical E107 is current E103; E17-S23 is E13-S19 and T43-N45 is T39-N41. Current PF01982
+    7-125 maps to deposited 11-129; see the residue-mapping ledger.
+  scope_status: HYPOTHETICAL
+  taxon: NCBITaxon:2190
+  limitations: All four relations are hypotheses. Static CDP/FMN structures and failed flavin-only crystallization
+    do not establish CTP-first binding, conformational causality, Mg necessity or proton transfer. No
+    E107 mutant, folding control or isolated-domain sufficiency test is described in the inspected source.
+    No current-reference E107 claim.
+  nodes:
+  - node_id: reactants
+    label: MJ0056 with CTP and Mg available in the presence of riboflavin
+    node_type: STATE
+    grounding:
+    - UniProtKB:Q60365
+  - node_id: nucleotide_loaded
+    label: Proposed MgCTP-loaded alpha0 state with riboflavin available
+    node_type: STATE
+  - node_id: closed_complex
+    label: Proposed closed MJ0056-MgCTP-riboflavin complex
+    node_type: STATE
+  - node_id: activated_complex
+    label: Proposed closed complex with E107-activated riboflavin 5-prime hydroxyl
+    node_type: STATE
+  - node_id: products
+    label: Proposed phosphate-transfer product state with FMN and CDP
+    node_type: STATE
+  edges:
+  - edge_id: proposed-nucleotide-induced-helix
+    subject: reactants
+    predicate: enables
+    object: nucleotide_loaded
+    mechanism: The model assigns CTP/Mg loading a permissive alpha0 conformation involving historical
+      E17-S23. This is inferred from an apo versus MgCDP product-complex comparison, not directly observed
+      CTP-induced motion.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: CONTEXTUAL
+    evidence:
+    - reference: https://hdl.handle.net/10900/49675
+      source_url: https://bibliographie.uni-tuebingen.de/xmlui/bitstream/handle/10900/49675/pdf/Dissertation_Ammelburg.pdf
+      snippet: sequential substrate binding cycle
+      explanation: A4; pages59-61 and Figure11. The relation is the author's binding-order proposal; static
+        structures are its rationale rather than direct kinetic evidence.
+      cache_path: evidence/PF01982/ammelburg2011.txt
+      cache_sha256: 29d5f99a9a6316e5893ff3eb154afee59b2856bcdd74ff9832401285909577ef
+  - edge_id: proposed-substrate-loop-closure
+    subject: nucleotide_loaded
+    predicate: enables
+    object: closed_complex
+    mechanism: With riboflavin available, the proposed nucleotide-loaded state permits substrate binding
+      and second-cradle-loop closure. The observed comparison instead contains FMN and CDP; unsuccessful
+      flavin-only crystals do not prove obligate order.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: CONTEXTUAL
+    evidence:
+    - reference: https://hdl.handle.net/10900/49675
+      source_url: https://bibliographie.uni-tuebingen.de/xmlui/bitstream/handle/10900/49675/pdf/Dissertation_Ammelburg.pdf
+      snippet: sequential substrate binding cycle
+      explanation: A4; Figure11B/C and page61 model. No independent sufficiency of a loop or nucleotide
+        alone is represented.
+      cache_path: evidence/PF01982/ammelburg2011.txt
+      cache_sha256: 29d5f99a9a6316e5893ff3eb154afee59b2856bcdd74ff9832401285909577ef
+  - edge_id: proposed-e107-base-activation
+    subject: closed_complex
+    predicate: enables
+    object: activated_complex
+    mechanism: Historical E107, corresponding to current Q60365 E103, is proposed to act as a base on
+      the terminal riboflavin hydroxyl. Product-state oxygen contacts motivate this hypothesis; they do
+      not observe proton transfer or establish residue necessity.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: CONTEXTUAL
+    evidence:
+    - reference: https://hdl.handle.net/10900/49675
+      source_url: https://bibliographie.uni-tuebingen.de/xmlui/bitstream/handle/10900/49675/pdf/Dissertation_Ammelburg.pdf
+      snippet: functioning as a base
+      explanation: A5; page60 proposal and page62 contact comparison. Exact four-residue coordinate transfer
+        is documented separately in ribk-residue-mapping.txt; no mutational evidence is claimed.
+      cache_path: evidence/PF01982/ammelburg2011.txt
+      cache_sha256: 29d5f99a9a6316e5893ff3eb154afee59b2856bcdd74ff9832401285909577ef
+  - edge_id: proposed-phosphate-transfer
+    subject: activated_complex
+    predicate: produces
+    object: products
+    mechanism: In the candidate closed MgCTP-riboflavin complex, the activated hydroxyl attacks the donor
+      phosphate to form FMN and CDP. The sequential trajectory and base-assisted intermediate are unobserved
+      even though overall FMN formation is experimentally supported in a separate graph.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: CONTEXTUAL
+    evidence:
+    - reference: https://hdl.handle.net/10900/49675
+      source_url: https://bibliographie.uni-tuebingen.de/xmlui/bitstream/handle/10900/49675/pdf/Dissertation_Ammelburg.pdf
+      snippet: sequential substrate binding cycle
+      explanation: A4/A5; pages60-61 proposed base chemistry and loop-associated phosphate transfer. Figure9A
+        is a reaction scheme, not a measured CDP time course.
+      cache_path: evidence/PF01982/ammelburg2011.txt
+      cache_sha256: 29d5f99a9a6316e5893ff3eb154afee59b2856bcdd74ff9832401285909577ef
 curation_events:
 - timestamp: '2026-10-16T00:23:50Z'
   curator: Codex
@@ -818,5 +1063,22 @@ curation_events:
   outcome: needs_followup
   summary: Review scoped PF01982 RibK/RbkR causal evidence and retain three scientific follow-ups
   history_record: history/records/PF01982/2026-10-16T005036Z-codex-559198.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-16T02:01:26Z'
+  curator: Codex
+  action: EDIT
+  outcome: changed
+  summary: Extend PF01982 with original RibK assays and explicitly hypothetical catalytic steps
+  history_record: history/records/PF01982/2026-10-16T020126Z-codex-449dc9.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-16T02:07:26Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Review original RibK assay account and separate observed effects from the proposed catalytic
+    cycle
+  history_record: history/records/PF01982/2026-10-16T020726Z-codex-397fca.yaml
   event_index: 0
   llm_assisted: true
