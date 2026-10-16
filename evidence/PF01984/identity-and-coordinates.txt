@@ -1,0 +1,46 @@
+PF01984 identity and coordinate ledger
+Research date: 2026-10-16 UTC. Curator: Codex.
+
+Frozen owner: data/worklists/interpro-pfam-duf-2026-10-10.json
+SHA256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+The previous-name snapshot pfam-previous-unknown-names-2026-10-10.json
+records PF01984.26, dsDNA_bind, former DUF122. PF01984 integrates into
+IPR002836. The imported DNA-binding name/description remain unchanged;
+neither the rename nor EX_DUF classification establishes family-wide function.
+
+Primary database responses inspected on 2026-10-16:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01984/
+SHA256 b5de8c380152008d40990629d1f710923a7aafec137eddb5c3f0cdfc3ebce26c
+https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR002836/
+SHA256 df626e18aa64d589d490ea4735cfa2560c0220635cf2d9774679f8d8103c6610
+These resolve imported PUB00008047 to Christendat et al., 2000,
+PMID11017201, DOI10.1038/82823. Its MTH1615 experiment is not adopted
+from the database summary. PDCD5/TFAR19 and archaeal homologs belong to
+the same family but cannot be joined into a shared observed pathway.
+
+Human reference:
+https://rest.uniprot.org/uniprotkb/O14737.json
+SHA256 c8539ca08357d3bc09fc0264ef59b74f7e001a4cb5e2f5455797ca4f70841efb
+O14737, PDCD5_HUMAN, Homo sapiens, NCBITaxon9606, 125 residues;
+sequence version3, entry version207, last sequence update2007-01-23.
+Sequence MD5: 60FC499941BC8E0335DBAB41D3BC4E54.
+Sequence:
+MADEELEALRRQRLAELQAKHGDPGDAAQQEAKHREAEMRNSILAQVLDQSARARLSNLALVKPEKTKAVENYLIQMARYGQLSEKVSEQGLIEILKKVSQQTEKTTTVKFNRRKVMDSDEDDDY
+
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01984/protein/uniprot/O14737/
+SHA256 66c18def88cd088971a85bf5a58663918364828b48b8ddba69f4930bf9697c83
+PF01984 match9-114 inclusive, continuous, score2.8e-30 on the125aa
+reference. Direct sequence indexing verifies R55, K63, K66, I93 and L96;
+all lie inside this reference match. No residue-number offset is required.
+
+Xing et al. explicitly use O14737 for structural modelling (Methods,
+Par42). Their experiments use full PDCD5, C-terminal His6 recombinant
+proteins or PDCD5-Flag cellular constructs, not an isolated9-114 domain.
+Purified WT and mutant PDCD5 are produced in E.coli Rosetta DE3 and
+purified by nickel affinity and two Superdex200 passes. The complete
+physical inserts, tag/linker sequences and recombinant human TRiC
+production/lot provenance were not independently authenticated here.
+The reference mapping does not authenticate those physical reagents.
+Flag transfections are in HEK293F; the thermal experiment uses commercial
+HEK293T WT ab255449 and PDCD5-knockout ab266229. These are distinct assays,
+not interchangeable cell lines or an observed molecular-to-cellular chain.
