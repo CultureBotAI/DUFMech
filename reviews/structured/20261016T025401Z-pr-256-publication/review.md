@@ -1,0 +1,457 @@
+# PR 256 original RibK assay adversarial publication review
+
+- Review: 20261016T025401Z-pr-256-publication
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-16T02:46:02Z
+- Finished UTC: 2026-10-16T02:54:01Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: false
+
+## Summary
+
+Candidate source retention, native capture and rendering repair issue257. The 16 graphs / 33 edges retain four explicit hypotheses and unchanged scientific scope. Issues252-254 remain open. This new audit still requires its own retained checkpoint, final full QC and exact-head CI before merge.
+
+## Scope And Provenance
+
+Current source pins, maintained PF01982 overlay and published family page.
+
+Selection: All three publication surfaces affected by this batch; ignored-inclusive retained-review enumeration and GitHub issue search distinguish closed PR255 issue251 from this release.
+Coverage: full; 3 reviewed / 3 in the declared population.
+Source: working_tree at Git base 2698be1490ec651eeae2f5330a95e084355a0ce1.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| conf/site_source_pins.json | conf/site_source_pins.json | source | conf/site_source_pins.json |
+| curation/families/PF01982.yaml | curation/families/PF01982.yaml | source | curation/families/PF01982.yaml |
+| pages/families/PF01982.html | pages/families/PF01982.html | source | pages/families/PF01982.html |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| records | passed | True | conf/site_source_pins.json, curation/families/PF01982.yaml, pages/families/PF01982.html | 8296 valid records; zero generated drift. |
+| focused | passed | True | conf/site_source_pins.json, curation/families/PF01982.yaml, pages/families/PF01982.html | 52 tests pass. |
+| native | passed | True | conf/site_source_pins.json, curation/families/PF01982.yaml, pages/families/PF01982.html | Native records,346 history files,197 structured bundles,205 retained reviews, four contract tests and schema validation pass. |
+| quotes | passed | True | conf/site_source_pins.json, curation/families/PF01982.yaml, pages/families/PF01982.html | Five anchors match the primary PDF;21 quoted words. |
+| retention | passed | True | conf/site_source_pins.json, curation/families/PF01982.yaml, pages/families/PF01982.html | 9234 source files pinned; online canonical annotated-tag retention passes. |
+| render | passed | True | conf/site_source_pins.json, curation/families/PF01982.yaml, pages/families/PF01982.html | Native full-corpus render and unchanged site contracts/budgets pass. |
+| integrity | passed | True | conf/site_source_pins.json, curation/families/PF01982.yaml, pages/families/PF01982.html | 8296 manifest hashes; exact science and prior artifacts; every rendered source copy and current family JSON match. |
+| browser | passed | True | conf/site_source_pins.json, curation/families/PF01982.yaml, pages/families/PF01982.html | At1440px/390px all33 disclosures work, four hypotheses remain distinct, pinned source link resolves locally, and no overflow or JS errors occur. Screenshots inspected. |
+
+## Scientific And Domain Assessments
+
+### Retained candidate checkpoint and canonical page
+
+provenance: supported. Targets: conf/site_source_pins.json, curation/families/PF01982.yaml, pages/families/PF01982.html.
+
+Native publication repairs the stale pin/page without bypassing validation or manually editing generated content.
+
+### Scientific qualifier preservation under publication
+
+graph: supported. Targets: conf/site_source_pins.json, curation/families/PF01982.yaml, pages/families/PF01982.html.
+
+The three added graphs retain all observed-versus-hypothesized distinctions, competing explanations, source dependence and exact reference-numbering qualifiers.
+
+### Maintained owners and unchanged scientific records
+
+representation: supported. Targets: conf/site_source_pins.json, curation/families/PF01982.yaml, pages/families/PF01982.html.
+
+Overlay/evidence/history remain authoritative; publication changes only generated outputs and audit artifacts. All8295 other records and earlier review bytes are preserved.
+
+## Findings
+
+### stale-publication: Retain and render the original RibK assay source batch
+
+blocker / resolved / confirmed; issue key: pr256-pf01982-original-assays-publication.
+
+Candidate checkpoint is published and retained; native capture and rendering now match the new source bytes. The audit-bearing checkpoint and final CI remain required before merge.
+
+Disposition: The exact stale-source mismatch is repaired and verified on the retained candidate; no scientific follow-up is closed by this disposition.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| release | https://github.com/CultureBotAI/DUFMech/commit/2698be1490ec651eeae2f5330a95e084355a0ce1; Annotated source/dufmech-pr-256-candidate; native capture/online retention/render/integrity/browser checks | supports | Candidate source is retained canonically and reproduced natively; the publication preserves the exact scientific digest and every other family. |
+| previous | reviews/structured/20261016T024546Z-pr-256-publication-prerequisite/review.yaml; stale-publication | supports | The reproduced pin mismatch is retained append-only; current capture and rendering repair that specific release prerequisite. |
+| science | reviews/structured/20261016T022705Z-pf01982-original-ribk-assays/review.yaml; Partial scientific review and three open successor findings | supports | Four observed assay effects and four contextual hypotheses remain distinct; historical E107 maps to current E103 without physical insert authentication. |
+| primary | https://hdl.handle.net/10900/49675; Cached PDF SHA256 1a808dca2b80455c5000dc6adcbdb589e4e9a1a277fc79b3816f089490381ab0; Methods49-50, Results57/59-61; rendered Figures9/11 | supports | Adversarial re-reading confirms assay qualifiers, the ATP figure/caption discrepancy and the proposed rather than observed catalytic sequence. Five quotation anchors match,21 words total. |
+| mapping | https://www.rcsb.org/structure/2VBV; 136-aa entity and CDP/FMN ligands; cached UniSave/RCSB/SIFTS payload checks | supports | Reference coordinate transfer is exact and separately documented; no substrate trajectory or residue intervention is inferred. |
+
+## Limits And Additional Notes
+
+- Same-agent adversarial review, not independent scientific approval or experimental replication.
+- Not a new complete PF01982 literature review. The newly added claims were challenged against the cached primary PDF Methods49-50, Results57/59-61 and rendered Figures9/11; original journal text and broader member coverage remain unresolved.
+- The thesis is a primary-author account of earlier work, not independent replication; product structures do not demonstrate substrate-binding order, Mg necessity, proton transfer or residue necessity.
+- The handle resolver was unavailable to the web tool this session. The existing PDF with its retained SHA256 was re-read locally; the current RCSB2VBV page confirms the 136-aa CDP/FMN product complex.
+- Scientific issues252-254 have evidence-backed progress comments but remain open. PF01982 stays IN_PROGRESS with no qualifying review pointer.
+- This is a candidate publication observation. Its own audit-bearing source capture, final full release QC, exact-head PR/merge-group CI and deployment are subsequent gates, not claimed completed here.
+- The 8296-record scientific objective is incomplete; structural graph presence in131 families is not scientific completion.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+repository: CultureBotAI/DUFMech
+kind: repository
+source:
+  git_revision: 2698be1490ec651eeae2f5330a95e084355a0ce1
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: conf/site_source_pins.json
+    sha256: 56fa788f67af7e5afce3f9580d6ad3af7fe1be5d31f266b0f0ff7bb9a581bec0
+    role: target
+  - path: curation/families/PF01982.yaml
+    sha256: cbff6e44b49326348ed3fec7e14bfc5cdb47f5094d901ba4a1371d8fcd39b4f4
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: pages/families/PF01982.html
+    sha256: 8ab95035bfa8c32bbf312a4a4b9ab36114a97e71b6430b1fc837594c014a8656
+    role: target
+  - path: data/families/PF01982.yaml
+    role: context
+    sha256: 53b34a1f62922754174601eeddfafca1276eff1a13382b4de6d661613c57f45b
+  - path: reviews/structured/20261016T022705Z-pf01982-original-ribk-assays/review.yaml
+    role: context
+    sha256: c90ffe6ae307423c3ea5862850918121d0f3e58c95307609f641ba7036dd32b2
+  - path: evidence/PF01982/ammelburg2011.txt
+    role: context
+    sha256: 29d5f99a9a6316e5893ff3eb154afee59b2856bcdd74ff9832401285909577ef
+  - path: evidence/PF01982/ribk-residue-mapping.txt
+    role: context
+    sha256: e99ac434689b039c073094c9590aff501a371382bf5b4d625540725f989adcb7
+  - path: reviews/structured/20261016T024546Z-pr-256-publication-prerequisite/review.yaml
+    role: context
+    sha256: 28f9cecfc3b7aaeca7da981cb9c293a2007a86edccc714be4116ba41d227f5c2
+  - path: reports/causal_graphs/inventory.json
+    role: context
+    sha256: 0cf48922cf9620156d0094a979750ce9553e9c8fb16e008efc68856b8df4a72c
+  - path: src/dufmech/site_sources.py
+    role: context
+    sha256: bad39b4cb1d578ddec9c8ee5b415411110391e6f290b9e96651c550ef5738d65
+  - path: src/dufmech/site_source_publication.py
+    role: context
+    sha256: 401f34614494bb898c21b61d5085038bd71c898cd10017b7c1655ae51118aa6e
+  - path: src/dufmech/site.py
+    role: context
+    sha256: 3d60ee72f88ca48153148a155a454c21b5da663d2ffd8931d7d00e948bd6cbfb
+  - path: scripts/render_pages.py
+    role: context
+    sha256: b3f2a86f2a6c362914493670c9ca6473544e5945ed0db2af21b9449fb9672399
+targets:
+- target_id: conf/site_source_pins.json
+  path: conf/site_source_pins.json
+  label: conf/site_source_pins.json
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: curation/families/PF01982.yaml
+  path: curation/families/PF01982.yaml
+  label: curation/families/PF01982.yaml
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+- target_id: pages/families/PF01982.html
+  path: pages/families/PF01982.html
+  label: pages/families/PF01982.html
+  kind: source
+  ownership_note: Inspect the selected source's ownership before proposing an edit.
+schema_version: 1.0.0
+review_id: 20261016T025401Z-pr-256-publication
+title: PR 256 original RibK assay adversarial publication review
+started_at: '2026-10-16T02:46:02Z'
+finished_at: '2026-10-16T02:54:01Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same-agent adversarial publication review, not independent scientific
+    approval.
+skill: .claude/skills/review-repo/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: false
+summary: Candidate source retention, native capture and rendering repair issue257.
+  The 16 graphs / 33 edges retain four explicit hypotheses and unchanged scientific
+  scope. Issues252-254 remain open. This new audit still requires its own retained
+  checkpoint, final full QC and exact-head CI before merge.
+scope:
+  description: Current source pins, maintained PF01982 overlay and published family
+    page.
+  selection: All three publication surfaces affected by this batch; ignored-inclusive
+    retained-review enumeration and GitHub issue search distinguish closed PR255 issue251
+    from this release.
+  coverage: full
+  population_size: 3
+  reviewed_target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01982.yaml
+  - pages/families/PF01982.html
+checks:
+- check_id: records
+  name: records
+  command: uv run --locked --offline python -m dufmech.records --check
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 8296 valid records; zero generated drift.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01982.yaml
+  - pages/families/PF01982.html
+  evidence_ids:
+  - release
+- check_id: focused
+  name: focused
+  command: uv run --locked --offline --extra dev pytest -q tests/test_causal_graphs.py
+    tests/test_qc.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 52 tests pass.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01982.yaml
+  - pages/families/PF01982.html
+  evidence_ids:
+  - release
+- check_id: native
+  name: native
+  command: just validate-all validate-schema
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Native records,346 history files,197 structured bundles,205 retained reviews,
+    four contract tests and schema validation pass.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01982.yaml
+  - pages/families/PF01982.html
+  evidence_ids:
+  - release
+- check_id: quotes
+  name: quotes
+  command: uv run --no-project --offline --with pymupdf python /private/tmp/duf-pf01982-original-20261016-J222wz/quotes.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Five anchors match the primary PDF;21 quoted words.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01982.yaml
+  - pages/families/PF01982.html
+  evidence_ids:
+  - release
+- check_id: retention
+  name: retention
+  command: python -m dufmech.site_sources capture --commit 2698be1490ec651eeae2f5330a95e084355a0ce1;
+    python -m dufmech.site_source_publication
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 9234 source files pinned; online canonical annotated-tag retention passes.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01982.yaml
+  - pages/families/PF01982.html
+  evidence_ids:
+  - release
+- check_id: render
+  name: render
+  command: just render; just site-check
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Native full-corpus render and unchanged site contracts/budgets pass.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01982.yaml
+  - pages/families/PF01982.html
+  evidence_ids:
+  - release
+- check_id: integrity
+  name: integrity
+  command: uv run --locked --offline python /private/tmp/duf-publication-20261016-t0Ut19/integrity.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 8296 manifest hashes; exact science and prior artifacts; every rendered
+    source copy and current family JSON match.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01982.yaml
+  - pages/families/PF01982.html
+  evidence_ids:
+  - release
+- check_id: browser
+  name: browser
+  command: node /private/tmp/duf-publication-20261016-t0Ut19/browser.cjs
+  status: passed
+  required: true
+  exit_code: 0
+  summary: At1440px/390px all33 disclosures work, four hypotheses remain distinct,
+    pinned source link resolves locally, and no overflow or JS errors occur. Screenshots
+    inspected.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01982.yaml
+  - pages/families/PF01982.html
+  evidence_ids:
+  - release
+evidence:
+- evidence_id: release
+  kind: validation
+  reference: https://github.com/CultureBotAI/DUFMech/commit/2698be1490ec651eeae2f5330a95e084355a0ce1
+  locator: Annotated source/dufmech-pr-256-candidate; native capture/online retention/render/integrity/browser
+    checks
+  accessed_at: '2026-10-16T02:54:01Z'
+  support: supports
+  summary: Candidate source is retained canonically and reproduced natively; the publication
+    preserves the exact scientific digest and every other family.
+- evidence_id: previous
+  kind: prior_review
+  reference: reviews/structured/20261016T024546Z-pr-256-publication-prerequisite/review.yaml
+  locator: stale-publication
+  accessed_at: '2026-10-16T02:54:01Z'
+  support: supports
+  summary: The reproduced pin mismatch is retained append-only; current capture and
+    rendering repair that specific release prerequisite.
+- evidence_id: science
+  kind: prior_review
+  reference: reviews/structured/20261016T022705Z-pf01982-original-ribk-assays/review.yaml
+  locator: Partial scientific review and three open successor findings
+  accessed_at: '2026-10-16T02:54:01Z'
+  support: supports
+  summary: Four observed assay effects and four contextual hypotheses remain distinct;
+    historical E107 maps to current E103 without physical insert authentication.
+- evidence_id: primary
+  kind: primary_source
+  reference: https://hdl.handle.net/10900/49675
+  locator: Cached PDF SHA256 1a808dca2b80455c5000dc6adcbdb589e4e9a1a277fc79b3816f089490381ab0;
+    Methods49-50, Results57/59-61; rendered Figures9/11
+  accessed_at: '2026-10-16T02:54:01Z'
+  support: supports
+  summary: Adversarial re-reading confirms assay qualifiers, the ATP figure/caption
+    discrepancy and the proposed rather than observed catalytic sequence. Five quotation
+    anchors match,21 words total.
+- evidence_id: mapping
+  kind: primary_source
+  reference: https://www.rcsb.org/structure/2VBV
+  locator: 136-aa entity and CDP/FMN ligands; cached UniSave/RCSB/SIFTS payload checks
+  accessed_at: '2026-10-16T02:54:01Z'
+  support: supports
+  summary: Reference coordinate transfer is exact and separately documented; no substrate
+    trajectory or residue intervention is inferred.
+assessments:
+- assessment_id: publication
+  area: provenance
+  topic: Retained candidate checkpoint and canonical page
+  outcome: supported
+  summary: Native publication repairs the stale pin/page without bypassing validation
+    or manually editing generated content.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01982.yaml
+  - pages/families/PF01982.html
+  evidence_ids:
+  - release
+  - previous
+- assessment_id: scope
+  area: graph
+  topic: Scientific qualifier preservation under publication
+  outcome: supported
+  summary: The three added graphs retain all observed-versus-hypothesized distinctions,
+    competing explanations, source dependence and exact reference-numbering qualifiers.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01982.yaml
+  - pages/families/PF01982.html
+  evidence_ids:
+  - science
+  - primary
+  - mapping
+  - release
+- assessment_id: ownership
+  area: representation
+  topic: Maintained owners and unchanged scientific records
+  outcome: supported
+  summary: Overlay/evidence/history remain authoritative; publication changes only
+    generated outputs and audit artifacts. All8295 other records and earlier review
+    bytes are preserved.
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01982.yaml
+  - pages/families/PF01982.html
+  evidence_ids:
+  - release
+  - science
+findings:
+- finding_id: stale-publication
+  issue_key: pr256-pf01982-original-assays-publication
+  title: Retain and render the original RibK assay source batch
+  description: Candidate checkpoint is published and retained; native capture and
+    rendering now match the new source bytes. The audit-bearing checkpoint and final
+    CI remain required before merge.
+  category: provenance
+  severity: blocker
+  status: resolved
+  certainty: confirmed
+  target_ids:
+  - conf/site_source_pins.json
+  - curation/families/PF01982.yaml
+  - pages/families/PF01982.html
+  evidence_ids:
+  - release
+  - previous
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/site_sources.py
+    role: Native checkpoint capture; runtime unchanged.
+  - repository: CultureBotAI/DUFMech
+    path: scripts/render_pages.py
+    role: Native renderer; no manual page edits.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261016T024546Z-pr-256-publication-prerequisite
+    finding_id: stale-publication
+  disposition_reason: The exact stale-source mismatch is repaired and verified on
+    the retained candidate; no scientific follow-up is closed by this disposition.
+actions: []
+limitations:
+- Same-agent adversarial review, not independent scientific approval or experimental
+  replication.
+- Not a new complete PF01982 literature review. The newly added claims were challenged
+  against the cached primary PDF Methods49-50, Results57/59-61 and rendered Figures9/11;
+  original journal text and broader member coverage remain unresolved.
+- The thesis is a primary-author account of earlier work, not independent replication;
+  product structures do not demonstrate substrate-binding order, Mg necessity, proton
+  transfer or residue necessity.
+- The handle resolver was unavailable to the web tool this session. The existing PDF
+  with its retained SHA256 was re-read locally; the current RCSB2VBV page confirms
+  the 136-aa CDP/FMN product complex.
+- Scientific issues252-254 have evidence-backed progress comments but remain open.
+  PF01982 stays IN_PROGRESS with no qualifying review pointer.
+- This is a candidate publication observation. Its own audit-bearing source capture,
+  final full release QC, exact-head PR/merge-group CI and deployment are subsequent
+  gates, not claimed completed here.
+- The 8296-record scientific objective is incomplete; structural graph presence in131
+  families is not scientific completion.
+```

@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01982
+  path: data/families/PF01982.yaml
+session:
+  id: 2026-10-16T020726Z-codex-397fca
+  timestamp: '2026-10-16T02:07:26Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review original RibK assay account and separate observed effects from the
+    proposed catalytic cycle
+  details: 'Partial scientific self-review assessed eight added relations: one direct
+    CTP kinase effect, three qualitative donor contrasts and four contextual hypotheses
+    for binding, loop closure, E107 base activation and phosphate transfer. Inspected
+    primary2011 author account of2007 work, rendered Figures9/11/12, archived Q60365
+    and three deposited structure sequences; historical E107 maps to current E103.
+    Source dependence, ATP panel/caption conflict, Mg inclusion versus necessity and
+    physical-construct limits remain explicit. Existing13 graphs/25 edges and all8295
+    other records preserved. Native/schema/history/review checks,52 focused tests,
+    source hashes and exact unpinned desktop/mobile preview pass before this REVIEW
+    index append. Three predecessor findings remain OPEN with partial advances; no
+    independent approval, REVIEWED status, full-family completion or publication claim.'
+  sections:
+  - causal_graphs
+  - discussions
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261016T022705Z-pf01982-original-ribk-assays/review.yaml

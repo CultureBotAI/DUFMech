@@ -7083,3 +7083,105 @@ PF01982 candidate publication audit (PR #255, 2026-10-16 UTC):
   rendering, full release QC and exact-head PR/merge-group validation. Those
   later outcomes are not certified by this candidate observation. The complete
   8,296-record scientific objective remains open.
+
+PF01982 original RibK assay account and catalytic-model checkpoint
+(2026-10-16 UTC, after merged PR #255):
+
+- Three additional graphs retain four reported experimental effects and four
+  explicitly HYPOTHESIZED / CONTEXTUAL relations. PF01982 now has 16 graphs
+  and 33 edges: 29 observed and four hypothesized. The original 13 graphs and
+  25 edges are unchanged. Directness totals are nine DIRECT, one INDIRECT
+  and 23 UNRESOLVED; proposed atomic steps are not counted as observed chemistry.
+- Ammelburg's 2011 dissertation provides a primary author account of the 2007
+  work. Methods, results and rendered Figures 9, 11 and 12 were inspected.
+  It is not independent replication or a verified identical copy of the
+  inaccessible journal full text. `evidence/PF01982/ammelburg2011.txt` retains
+  assay conditions, source dependence, limitations and five quotation anchors
+  totaling 21 words, checked against the original PDF. The full PDF is not
+  redistributed. A clerical count of 22 was corrected before review retention.
+- `evidence/PF01982/ribk-residue-mapping.txt` reconciles archived Q60365 and
+  2P3M/2VBU/2VBV deposited references with current Q60365 sequence 2. The
+  136-residue references equal MVKL plus the current 132-residue sequence;
+  historical E107 is current E103, and current PF01982 7-125 maps to deposited
+  11-129. Neither a vector-tag origin nor physical insert identity is assumed.
+- The new kinase and donor graphs preserve the small FMN-labeled ATP signal
+  despite the source caption's negative wording. GTP/UTP raw spectra and
+  quantitative limits remain uninspected/unprovided in the assessed section.
+  Added Mg is not proof of metal necessity. Static product complexes motivate
+  a separate proposed binding/loop/base/phosphotransfer cycle, not a directly
+  observed trajectory. The 2008 donor discrepancy remains unresolved.
+- The partial scientific self-review is
+  `reviews/structured/20261016T022705Z-pf01982-original-ribk-assays/review.yaml`,
+  with derived Markdown. It preserves all three predecessor issue keys,
+  affected targets and explicit occurrence links as OPEN. PF01982 remains
+  IN_PROGRESS without a qualifying REVIEWED pointer. This is self-review,
+  not independent approval or full family characterization.
+- Actual EDIT and REVIEW events are retained as
+  `history/records/PF01982/2026-10-16T020126Z-codex-449dc9.yaml` and
+  `history/records/PF01982/2026-10-16T020726Z-codex-397fca.yaml`. All four
+  events are indexed. Post-REVIEW generation has zero drift across 8,296
+  records; 346 history files, 196 structured bundles and 204 native reports
+  validate. The 52 focused tests and four review-contract tests pass.
+- Native inventory/export checks and all-family preservation pass. The
+  corrected evidence hash was propagated through the native record and
+  inventory writers. All 8,295 other records, earlier graphs, evidence,
+  reviews, history, frozen inputs, runtime and canonical Pages/pin files are
+  unchanged. Current semantic digest:
+  `945e2cb8725b674b1a972b118cb245b36135a7c10afea99473ba3e863c99c3a5`.
+- The unpinned native preview has byte-equivalent record JSON. At 1440px and
+  390px all 33 disclosures work, with 10/15/8 primary links to the respective
+  2008/2017/dissertation sources. Hypotheses are explicitly visible, tables
+  remain horizontally accessible, and there is no document overflow or JS
+  error. Selected screenshots were visually inspected.
+- Structural inventory is now 915 graphs / 1,969 edges in 131 families;
+  8,165 families remain graphless. Presence is not scientific completion.
+  The full 8,296-record objective remains active. PF01983/CofC (former
+  DUF121) is the next seeded candidate; preliminary reading of PMID35038903
+  highlights coupled-assay partner selection and residue-numbering scope.
+  No PF01983 curation or formal review was performed in this checkpoint.
+- Work is local on `feat/duf-pf01982-original-ribk-assays` in
+  `/private/tmp/dufmech-pr220-20261015`. No new source checkpoint, canonical
+  rendering, full release QC, commit, push, PR, merge or deployment is claimed.
+  Publication still requires separate authorization and refreshed retained
+  source pins; the published release is not silently replaced by this preview.
+- The final post-REVIEW 1440px/390px browser pass also succeeded and closed
+  its temporary browser/server. The native site-source check returned exit 1:
+  `site source pin bytes differ: curation/families/PF01982.yaml; capture a new source checkpoint`.
+  This is the expected unpublished-source prerequisite, not a passed release
+  gate. Full release QC was not run, and no pin or validator was weakened.
+
+PF01982 original-assay publication audit (PR #256, 2026-10-16 UTC):
+
+- Publication is now explicitly authorized. The native source-pin check and
+  draft CI both reproduced a stale-overlay failure, tracked as issue #257 and
+  retained in `reviews/structured/20261016T024546Z-pr-256-publication-prerequisite/`.
+  This is a new release prerequisite after PR #255, not a reopened scientific
+  finding or a defect in the source-pin validator.
+- Candidate `2698be1490ec651eeae2f5330a95e084355a0ce1` is published and retained
+  by annotated tag `source/dufmech-pr-256-candidate`. Native capture and online
+  canonical retention pass for 9,234 source files. Full rendering and unchanged
+  site contracts/budgets pass; all 9,030 rendered source copies match exactly.
+- Adversarial self-review reread the cached primary PDF Methods, assay results
+  and binding-model prose and inspected Figures 9/11. All five quotation anchors
+  match (21 words). Reference mappings and the current RCSB 2VBV entry retain
+  the distinction between historical E107 and current E103, product structures
+  and substrate trajectories, and reference identity and physical constructs.
+  No additional scientific representation defect was found in the new edges.
+- Native validation passes for 8,296 records, 346 history files, 197 structured
+  bundles and 205 retained reports; the four contract and 52 focused tests pass.
+  Candidate integrity checks preserve the 13 original graphs, all 8,295 other
+  family records and earlier artifacts. PF01982 retains 16 graphs / 33 edges,
+  four explicitly contextual hypotheses, four history events, three OPEN
+  discussions and IN_PROGRESS status without a qualifying review pointer.
+- At 1440px and 390px all 33 evidence disclosures work; the four hypotheses and
+  pinned source link are visible, without document overflow or JavaScript errors.
+  Selected screenshots were inspected. No renderer, schema or validator changed.
+- The append-only successor disposition is
+  `reviews/structured/20261016T025401Z-pr-256-publication/review.yaml` with derived
+  Markdown. It resolves the reproduced candidate publication mismatch, not the
+  scientific questions. Existing issues #252-254 received evidence-backed partial
+  progress updates and remain open; duplicate scientific issues were not created.
+- This observation does not certify its own subsequent source capture, final
+  full QC, exact-head PR/merge-group checks or deployment. Those remain required
+  release gates. Retain both annotated source tags after branch deletion. The
+  complete 8,296-record scientific objective remains open.
