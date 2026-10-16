@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sequence map (pLM) | DUFMech</title><link rel="icon" href="data:,">
+<script src="theme.js"></script><link rel="stylesheet" href="style.css">
+<script src="dashboard.js" defer></script></head><body>
+<a class="skip-link" href="#main">Skip to content</a><header>
+<a class="brand" href="index.html">DUFMech</a>
+<nav aria-label="Project navigation"><a href="index.html#families">Browse families</a>
+<a href="map.html">Text map</a><a href="sequence-map.html">Sequence map (pLM)</a>
+<a href="categories.html">Categories</a><a href="sources.html">Sources &amp; schema</a>
+<a href="https://github.com/CultureBotAI/DUFMech">Repository</a>
+<a href="https://culturebotai.github.io/mechs/">All Mech projects</a></nav>
+<form class="header-search" action="index.html#families" method="get" role="search">
+<input type="search" name="q" placeholder="Search Pfam, DUF, InterPro…" aria-label="Search DUF/Pfam families">
+<button type="submit">Search</button></form>
+<label class="theme-label">Theme <select id="theme-control" aria-label="Color theme">
+<option value="system">System</option><option value="light">Light</option>
+<option value="dark">Dark</option></select></label></header>
+<main id="main"><h1>Protein sequence embedding map (pLM)</h1>
+<p class="lede">Interactive 2D PaCMAP projection of 634 verified UniProtKB protein sequence examples across 660 DUF/Pfam families,
+embedded with protein language model <code>facebook/esm2_t33_650M_UR50D</code> (1280-dimensional mean-pooled residue representations).</p>
+<p><a href="index.html#families">Catalogue table</a> | <a href="map.html">Text embedding map</a> |
+<a href="sequence-map.json" download>Download sequence map coordinates (JSON)</a></p>
+<div class="browse-layout" data-sequence-map data-src="sequence-map.json">
+<aside class="facet-sidebar" aria-label="Sequence map filters">
+<form id="seq-controls" class="controls" role="search">
+<label>Search UniProt, Pfam, protein, or organism <input id="seq-search" type="search" name="q" placeholder="e.g. P0A855, PF01951, Escherichia…"></label>
+<label>Color by <select id="seq-color">
+<option value="seed">Primary seed status</option>
+<option value="curation">Primary curation status</option>
+<option value="channel">Discovery channel</option>
+<option value="length_bin">Sequence length</option>
+</select></label>
+<label>Seed status <select id="seq-seed"><option value="">All seed statuses</option><option value="UNKNOWN_CANDIDATE">UNKNOWN CANDIDATE</option><option value="EX_DUF">EX DUF</option><option value="KNOWN_HISTORICAL_DUF">KNOWN HISTORICAL DUF</option></select></label>
+<label>Curation status <select id="seq-curation"><option value="">All curation statuses</option><option value="IN_PROGRESS">IN PROGRESS</option><option value="SEEDED">SEEDED</option></select></label>
+<label>Discovery channel <select id="seq-channel"><option value="">All channels</option><option value="PTM_REGISTRY_MIRROR">PTM REGISTRY MIRROR</option><option value="UNIPROT_FETCH">UNIPROT FETCH</option></select></label>
+<label>Sequence length <select id="seq-length"><option value="">All lengths</option><option value="&lt;= 200 aa">&lt;= 200 aa</option><option value="201-500 aa">201-500 aa</option><option value="501-1,022 aa">501-1,022 aa</option><option value="&gt; 1,022 aa">&gt; 1,022 aa</option></select></label>
+<button id="seq-reset" type="button">Reset view and filters</button>
+</form>
+<div id="seq-legend" class="map-legend" aria-label="Color legend"></div>
+</aside>
+<div class="browse-results map-panel">
+<p id="seq-status" role="status" aria-live="polite">Loading 634 protein sequence embeddings…</p>
+<div class="map-canvas-wrap">
+<canvas id="seq-canvas" width="900" height="620" role="img" aria-label="2D PaCMAP scatter plot of ESM-2 protein sequence embeddings"></canvas>
+</div>
+<div id="seq-selection" class="map-selection" aria-live="polite">
+<p>Click or hover any protein point to inspect its UniProtKB accession, organism, length, and linked DUF/Pfam families.</p>
+</div>
+</div></div><section class="section legend" aria-labelledby="status-guide">
+<h2 id="status-guide">Status and evidence</h2><dl>
+<dt>Seed status</dt><dd>A name-based classification of frozen InterPro/Pfam metadata.
+UNKNOWN CANDIDATE means the metadata explicitly says the function is unknown.
+KNOWN HISTORICAL DUF means a DUF name matched without that wording;
+this heuristic is not proof of a known function and does not establish experimental
+characterization. EX DUF means Pfam renamed the family away from a DUF/UPF name, as
+recorded in Pfam's previous identifiers; a rename usually follows published work on some
+members but is naming history, not proof of function for every member. Some EX DUF
+families' current names or descriptions still say the function is unknown; their
+classification basis lists this, and scoring does not treat them as characterized.
+FALSE POSITIVE TEXT HIT means the naming rules did not match.</dd>
+<dt>Characterization</dt><dd>A separate evidence-scoring result. UNSCORED means no score
+has been calculated; it is not evidence that the family lacks a known function.
+Missing scores are not negative evidence. PARTIALLY CHARACTERIZED has partial support;
+KNOWN HISTORICAL DUF can inherit the seed label or reflect a known-function signal.
+Neither label implies experimental validation.</dd>
+<dt>Evidence counts</dt><dd>Source-specific signals, not unique proteins, publications,
+or confidence scores. Known counts Rhea reactions and experimentally supported GO
+molecular-function annotations. Partial counts functional/domain assignments.
+Context counts structural, environmental, orthology, interaction and neighborhood signals;
+context alone does not assign function. Repeated annotations may not be independent.</dd>
+<dt>Curation status</dt><dd>Reported separately from seed classification and characterization.
+SNAPSHOT ONLY means no curated metadata was supplied for this build. SEEDED denotes
+a source-derived record, not an expert-reviewed functional claim.</dd>
+<dt>Missing counts</dt><dd>Not available means the source did not supply that counter.
+A zero is a reported count. Not scored means evidence counts are unavailable.</dd>
+</dl></section></main><footer>
+<p>Site build <code>bffdc4446a48e281</code>. <a href="https://github.com/CultureBotAI/DUFMech/blob/33c9c152cb7766e402daff82183dde9f85ad1fac/data/worklists/interpro-pfam-duf-2026-10-10.json">Corpus source 33c9c152cb77</a><br>cross_mech: cross-mech-duf-examples-2026-10-10 / members: pfam-uniprot-uniref90-2026-10-07 / protein_examples: duf-protein-examples-direct-2026-10-13 / worklist: interpro-pfam-duf-2026-10-10</p>
+<p>Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+Code: <a href="https://github.com/CultureBotAI/DUFMech/blob/main/LICENSE-CODE">BSD 3-Clause</a>.
+Redistributed source material retains its applicable third-party terms.
+<a href="https://github.com/CultureBotAI/DUFMech/blob/main/LICENSE">License policy</a>.</p></footer></body></html>

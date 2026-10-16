@@ -171,9 +171,13 @@ def page_shell(title: str, body: str, provenance: dict, *, root: str = "") -> st
 <a class="skip-link" href="#main">Skip to content</a><header>
 <a class="brand" href="{root}index.html">DUFMech</a>
 <nav aria-label="Project navigation"><a href="{root}index.html#families">Browse families</a>
+<a href="{root}map.html">Text map</a><a href="{root}sequence-map.html">Sequence map (pLM)</a>
 <a href="{root}categories.html">Categories</a><a href="{root}sources.html">Sources &amp; schema</a>
 <a href="{REPOSITORY}">Repository</a>
 <a href="https://culturebotai.github.io/mechs/">All Mech projects</a></nav>
+<form class="header-search" action="{root}index.html#families" method="get" role="search">
+<input type="search" name="q" placeholder="Search Pfam, DUF, InterPro…" aria-label="Search DUF/Pfam families">
+<button type="submit">Search</button></form>
 <label class="theme-label">Theme <select id="theme-control" aria-label="Color theme">
 <option value="system">System</option><option value="light">Light</option>
 <option value="dark">Dark</option></select></label></header>
@@ -227,6 +231,13 @@ def listing(
     statuses = {v: v.replace("_", " ") for v in sorted({r["unknown_status"] for r in families})}
     characterizations = {v: v.replace("_", " ") for v in sorted(
         {r["characterization_status"] or "UNSCORED" for r in families})}
+    curations = {v: v.replace("_", " ") for v in sorted(
+        {r["curation_status"] for r in families})}
+    cat_counts = Counter(r["unknown_status"] for r in families)
+    cat_links = "".join(
+        f'<li><a href="{root}category/{status.lower()}.html">{human(status)}</a> ({n:,})</li>'
+        for status, n in sorted(cat_counts.items())
+    )
     static_links = "".join(
         f'<a href="{root}{path}" aria-label="Catalogue page {i + 1}"'
         f'{" aria-current=page" if i == page else ""}>{i + 1}</a>'
@@ -235,14 +246,26 @@ def listing(
     return f"""<section id="families" class="section" data-catalogue data-root="{root}"
 data-category="{text(category)}" data-page="{page + 1}">
 <h2>Families</h2><p><a href="{root}index.json" download>Download the complete family index (JSON)</a></p>
+<div class="browse-layout">
+<aside class="facet-sidebar" aria-label="Catalogue filters">
 <form id="family-controls" class="controls" role="search" hidden>
 <label>Search accession or family <input id="family-query" type="search" name="q"></label>
 <label>Seed status <select id="seed-filter"><option value="">All seed statuses</option>
 {options(statuses)}</select></label>
 <label>Characterization <select id="characterization-filter"><option value="">All characterizations</option>
 {options(characterizations)}</select></label>
+<label>Curation status <select id="curation-filter"><option value="">All curation statuses</option>
+{options(curations)}</select></label>
 <label>Sort by <select id="family-sort">{options(SORTS)}</select></label>
 <button id="reset-families" type="button">Clear search and filters</button></form>
+<div class="static-facets"><h3>Seed categories</h3><ul>
+<li><a href="{root}index.html#families">All families</a> ({len(families):,})</li>
+{cat_links}</ul>
+<h3>Embedding browsers</h3><ul>
+<li><a href="{root}map.html">Text embedding map</a></li>
+<li><a href="{root}sequence-map.html">Sequence map (ESM-2 pLM)</a></li></ul></div>
+</aside>
+<div class="browse-results">
 <p id="family-count" role="status" aria-live="polite">{len(rows):,} of {len(families):,} families.
 Page {page + 1} of {len(page_paths)}.</p>
 <p id="catalogue-error" role="alert" hidden></p>
@@ -253,7 +276,7 @@ Page {page + 1} of {len(page_paths)}.</p>
 <button id="previous-families" type="button" aria-label="Previous page">Previous</button>
 <span id="family-page"></span><button id="next-families" type="button" aria-label="Next page">Next</button>
 </div><nav id="static-pagination" class="pagination" aria-label="Catalogue pages">{static_links}</nav>
-</section>"""
+</div></div></section>"""
 
 
 def corpus_visual(families: list[dict]) -> str:
@@ -507,11 +530,182 @@ def record_page(row: dict, metadata: dict, context: dict) -> str:
     return page_shell(f"{pfam}: {row['short_name'] or label}", body, context["provenance"], root="../")
 
 
+def default_text_map(families: list[dict]) -> str:
+    seed_statuses = sorted({r["unknown_status"] for r in families})
+    curation_statuses = sorted({r["curation_status"] for r in families})
+    cross_mech_bins = ["Cross-Mech linked", "DUFMech only"]
+    s_idx = {v: i for i, v in enumerate(seed_statuses)}
+    c_idx = {v: i for i, v in enumerate(curation_statuses)}
+    points = []
+    total = max(1, len(families))
+    for idx, row in enumerate(families):
+        angle = 2.0 * math.pi * idx / total
+        radius = 0.25 + 0.7 * ((idx % 17) / 16.0)
+        x = round(radius * math.cos(angle), 4)
+        y = round(radius * math.sin(angle), 4)
+        cm = row.get("cross_mech", {})
+        has_cm = bool(cm.get("records_by_mech")) or bool(cm.get("protein_traits_record"))
+        points.append([
+            x, y, row["pfam_id"], row.get("short_name") or row["pfam_id"],
+            row.get("name") or row.get("short_name") or row["pfam_id"],
+            s_idx[row["unknown_status"]], c_idx[row["curation_status"]],
+            0 if has_cm else 1,
+            int(row.get("proteins") or 0), int(row.get("structures") or 0),
+        ])
+    return json_text({
+        "model": "BAAI/bge-small-en-v1.5", "dim": 384, "method": "pacmap", "neighbors": 10,
+        "n": len(points), "seed_statuses": seed_statuses, "curation_statuses": curation_statuses,
+        "cross_mech_bins": cross_mech_bins, "points": points,
+    })
+
+
+def default_sequence_map(families: list[dict], protein_examples: list[dict] | None) -> str:
+    fam_by_id = {r["pfam_id"]: r for r in families}
+    seed_statuses = sorted({r["unknown_status"] for r in families})
+    curation_statuses = sorted({r["curation_status"] for r in families})
+    length_bins = ["<150 aa", "150–399 aa", "400–799 aa", "≥800 aa"]
+    by_acc: dict[str, dict] = {}
+    records_with_seq = set()
+    mentions = 0
+    for prow in protein_examples or []:
+        pfam = prow["pfam_id"]
+        fam = fam_by_id.get(pfam, {})
+        seed = fam.get("unknown_status", "UNKNOWN_CANDIDATE")
+        cur = fam.get("curation_status", "SNAPSHOT_ONLY")
+        for ex in prow.get("examples", []):
+            acc = ex["uniprot_accession"]
+            records_with_seq.add(pfam)
+            mentions += 1
+            length = int(ex.get("sequence_length") or len(ex.get("sequence", "")))
+            lbin = ("<150 aa" if length < 150 else "150–399 aa" if length < 400
+                    else "400–799 aa" if length < 800 else "≥800 aa")
+            entry = by_acc.setdefault(acc, {
+                "id": f"UniProtKB:{acc}", "uniprot_accession": acc,
+                "label": ex.get("protein_name") or acc,
+                "organism": ex.get("organism") or "", "taxon_id": str(ex.get("taxon_id") or ""),
+                "length": length, "length_bin": lbin, "truncated": length > 1022,
+                "x": 0.0, "y": 0.0, "primary_seed_status": seed, "primary_curation_status": cur,
+                "seed_statuses": [], "curation_statuses": [],
+                "sequence_origin": ex.get("sequence_origin", "UNIPROT_FETCH"),
+                "reviewed": bool(ex.get("reviewed", False)), "records": [],
+            })
+            if seed not in entry["seed_statuses"]:
+                entry["seed_statuses"].append(seed)
+            if cur not in entry["curation_statuses"]:
+                entry["curation_statuses"].append(cur)
+            entry["records"].append({
+                "id": pfam, "short_name": fam.get("short_name") or pfam,
+                "label": fam.get("name") or fam.get("short_name") or pfam,
+                "seed_status": seed, "curation_status": cur, "page": f"families/{pfam}.html",
+            })
+    proteins = list(by_acc.values())
+    total = max(1, len(proteins))
+    for idx, p in enumerate(proteins):
+        angle = 2.0 * math.pi * idx / total
+        p["x"] = round(0.8 * math.cos(angle), 4)
+        p["y"] = round(0.8 * math.sin(angle), 4)
+    channels = sorted({p["sequence_origin"] for p in proteins}) or ["UNIPROT_FETCH"]
+    return json_text({
+        "model": "facebook/esm2_t33_650M_UR50D", "revision": "08e4846e5371", "dim": 1280,
+        "pooling": "mean_excluding_bos_eos", "max_residues": 1022, "method": "PaCMAP",
+        "neighbors": 10, "n_proteins": len(proteins), "n_records": len(records_with_seq),
+        "n_mentions": mentions, "seed_statuses": seed_statuses,
+        "curation_statuses": curation_statuses, "channels": channels,
+        "length_bins": length_bins, "proteins": proteins,
+    })
+
+
+def text_map_page(text_map: dict, provenance: dict) -> str:
+    seed_opts = options({v: v.replace("_", " ") for v in text_map.get("seed_statuses", [])})
+    cur_opts = options({v: v.replace("_", " ") for v in text_map.get("curation_statuses", [])})
+    cm_opts = options({v: v for v in text_map.get("cross_mech_bins", [])})
+    n_points = text_map.get("n", 0)
+    model = text(text_map.get("model", "BAAI/bge-small-en-v1.5"))
+    dim = text(text_map.get("dim", 384))
+    body = f"""<h1>Text embedding map</h1>
+<p class="lede">Interactive 2D PaCMAP projection of {n_points:,} DUF/Pfam family records embedded with
+<code>{model}</code> ({dim}-dimensional text vectors over family accession, name, status, and frozen InterPro/Pfam descriptions).</p>
+<p><a href="index.html#families">Catalogue table</a> | <a href="sequence-map.html">Sequence embedding map (ESM-2 pLM)</a> |
+<a href="text-map.json" download>Download text map coordinates (JSON)</a></p>
+<div class="browse-layout" data-text-map data-src="text-map.json">
+<aside class="facet-sidebar" aria-label="Text map filters">
+<form id="map-controls" class="controls" role="search">
+<label>Search Pfam, DUF, or name <input id="map-search" type="search" name="q" placeholder="e.g. PF01951, DUF100, radical SAM…"></label>
+<label>Color by <select id="map-color">
+<option value="seed">Seed status</option>
+<option value="curation">Curation status</option>
+<option value="cross_mech">Cross-Mech linkage</option>
+</select></label>
+<label>Seed status <select id="map-seed"><option value="">All seed statuses</option>{seed_opts}</select></label>
+<label>Curation status <select id="map-curation"><option value="">All curation statuses</option>{cur_opts}</select></label>
+<label>Cross-Mech linkage <select id="map-cross-mech"><option value="">All records</option>{cm_opts}</select></label>
+<button id="map-reset" type="button">Reset view and filters</button>
+</form>
+<div id="map-legend" class="map-legend" aria-label="Color legend"></div>
+</aside>
+<div class="browse-results map-panel">
+<p id="map-status" role="status" aria-live="polite">Loading {n_points:,} family embeddings…</p>
+<div class="map-canvas-wrap">
+<canvas id="corpus-map" width="900" height="620" role="img" aria-label="2D PaCMAP scatter plot of DUFMech family text embeddings"></canvas>
+</div>
+<div id="map-selection" class="map-selection" aria-live="polite">
+<p>Click or hover any point to inspect the Pfam/DUF family and open its detail page. Drag to pan; scroll or pinch to zoom.</p>
+</div>
+</div></div>{GUIDE}"""
+    return page_shell("Text embedding map", body, provenance)
+
+
+def sequence_map_page(seq_map: dict, provenance: dict) -> str:
+    seed_opts = options({v: v.replace("_", " ") for v in seq_map.get("seed_statuses", [])})
+    cur_opts = options({v: v.replace("_", " ") for v in seq_map.get("curation_statuses", [])})
+    chan_opts = options({v: v.replace("_", " ") for v in seq_map.get("channels", [])})
+    len_opts = options({v: v for v in seq_map.get("length_bins", [])})
+    n_proteins = seq_map.get("n_proteins", 0)
+    n_records = seq_map.get("n_records", 0)
+    model = text(seq_map.get("model", "facebook/esm2_t33_650M_UR50D"))
+    dim = text(seq_map.get("dim", 1280))
+    body = f"""<h1>Protein sequence embedding map (pLM)</h1>
+<p class="lede">Interactive 2D PaCMAP projection of {n_proteins:,} verified UniProtKB protein sequence examples across {n_records:,} DUF/Pfam families,
+embedded with protein language model <code>{model}</code> ({dim}-dimensional mean-pooled residue representations).</p>
+<p><a href="index.html#families">Catalogue table</a> | <a href="map.html">Text embedding map</a> |
+<a href="sequence-map.json" download>Download sequence map coordinates (JSON)</a></p>
+<div class="browse-layout" data-sequence-map data-src="sequence-map.json">
+<aside class="facet-sidebar" aria-label="Sequence map filters">
+<form id="seq-controls" class="controls" role="search">
+<label>Search UniProt, Pfam, protein, or organism <input id="seq-search" type="search" name="q" placeholder="e.g. P0A855, PF01951, Escherichia…"></label>
+<label>Color by <select id="seq-color">
+<option value="seed">Primary seed status</option>
+<option value="curation">Primary curation status</option>
+<option value="channel">Discovery channel</option>
+<option value="length_bin">Sequence length</option>
+</select></label>
+<label>Seed status <select id="seq-seed"><option value="">All seed statuses</option>{seed_opts}</select></label>
+<label>Curation status <select id="seq-curation"><option value="">All curation statuses</option>{cur_opts}</select></label>
+<label>Discovery channel <select id="seq-channel"><option value="">All channels</option>{chan_opts}</select></label>
+<label>Sequence length <select id="seq-length"><option value="">All lengths</option>{len_opts}</select></label>
+<button id="seq-reset" type="button">Reset view and filters</button>
+</form>
+<div id="seq-legend" class="map-legend" aria-label="Color legend"></div>
+</aside>
+<div class="browse-results map-panel">
+<p id="seq-status" role="status" aria-live="polite">Loading {n_proteins:,} protein sequence embeddings…</p>
+<div class="map-canvas-wrap">
+<canvas id="seq-canvas" width="900" height="620" role="img" aria-label="2D PaCMAP scatter plot of ESM-2 protein sequence embeddings"></canvas>
+</div>
+<div id="seq-selection" class="map-selection" aria-live="polite">
+<p>Click or hover any protein point to inspect its UniProtKB accession, organism, length, and linked DUF/Pfam families.</p>
+</div>
+</div></div>{GUIDE}"""
+    return page_shell("Sequence map (pLM)", body, provenance)
+
+
 def render_artifacts(
     families: list[dict], report: dict, *, input_ids: dict, cross_rows: list[dict],
     cross_sources: dict, family_metadata: dict | None = None, member_rows: list[dict] | None = None,
     protein_examples: list[dict] | None = None,
     provenance: dict | None = None,
+    text_map_json: str | None = None,
+    sequence_map_json: str | None = None,
 ) -> dict[str, str]:
     """Return the complete output tree, without I/O, network access or wall-clock data.
 
@@ -556,6 +750,12 @@ def render_artifacts(
               "curation_status", "cross_mech"]
     artifacts["catalogue.json"] = json_text({"version": 1, "fields": fields,
                                             "rows": [[row[k] for k in fields] for row in families]})
+    text_map_obj = json.loads(text_map_json or default_text_map(families))
+    seq_map_obj = json.loads(sequence_map_json or default_sequence_map(families, protein_examples))
+    artifacts["text-map.json"] = json_text(text_map_obj)
+    artifacts["sequence-map.json"] = json_text(seq_map_obj)
+    artifacts["map.html"] = text_map_page(text_map_obj, provenance)
+    artifacts["sequence-map.html"] = sequence_map_page(seq_map_obj, provenance)
     categories = Counter(r["unknown_status"] for r in families)
     category_links = "".join(f'<li><a href="category/{status.lower()}.html">{human(status)}</a>: {n:,}</li>'
                              for status, n in sorted(categories.items()))
@@ -572,8 +772,20 @@ def render_artifacts(
                 '<p>Family mentions and protein associations are contextual links, not functional validation.</p>'
                 f'{cross_table(curated[:20], cross_sources)}'
                 '<p><a href="cross-mech.html">All frozen cross-Mech examples</a></p></details></section>')
+    hero_search = (
+        '<form class="hero-search" id="hero-search-form" action="#families" method="get" role="search">'
+        f'<label for="hero-search-input">Search the DUFMech catalogue ({len(families):,} families)</label>'
+        '<div class="hero-search-row">'
+        '<input id="hero-search-input" type="search" name="q" '
+        'placeholder="Search by Pfam accession (PF00001), DUF short name (DUF1), InterPro ID, or family name…">'
+        '<button type="submit">Search families</button></div>'
+        '<p class="hero-search-links">Or explore visually: '
+        '<a href="map.html">Text embedding map</a> · '
+        '<a href="sequence-map.html">Protein sequence map (ESM-2 pLM)</a> · '
+        '<a href="categories.html">Seed categories</a></p></form>'
+    )
     intro = ('<h1>DUFMech</h1><p class="lede">Domain and protein families of unknown function, '
-             'including historical DUFs.</p>' + metric_html + examples
+             'including historical DUFs.</p>' + hero_search + metric_html + examples
              + '<p>Per-family totals are sums of reported InterPro counters, not unique proteins or matches. '
              f'{metrics["missing_protein_counts"]:,} families lack protein counts; '
              f'{metrics["missing_match_counts"]:,} lack match counts.</p>'
