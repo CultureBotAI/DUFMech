@@ -1159,3 +1159,11 @@ curation_events:
   history_record: history/records/PF01985/2026-10-16T075217Z-codex-24d3f6.yaml
   event_index: 0
   llm_assisted: true
+- timestamp: '2026-10-16T07:52:17Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Review scoped PF01985 plant-splicing graphs adversarially
+  history_record: history/records/PF01985/2026-10-16T075217Z-codex-898273.yaml
+  event_index: 0
+  llm_assisted: true

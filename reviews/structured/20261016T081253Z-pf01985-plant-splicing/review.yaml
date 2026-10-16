@@ -1,0 +1,1280 @@
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: db34c187a42f7a37a04a7238e43ed5e02c84f530
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01985.yaml
+    sha256: 289d0b293cfcf3d437cc8a0566f70d9400654ffbccd9a6809de92e56c190cc22
+    role: context
+  - path: data/families/PF01985.yaml
+    sha256: 7c84babce2920a675cdd267b9192df3e81fa01bc4ad60ebac89ddcf969d605f5
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: reviews/structured/20261016T062851Z-pf01985-crm-assay-contexts/review.yaml
+    role: context
+    sha256: 37305ef06276877c64ea3a25ece755139c8b5a46689050597f3c4522ced5463c
+  - path: reports/causal_graphs/inventory.json
+    role: context
+    sha256: a21613c334bface332f909b1443e4b6622365835f2fac8517d5ef5d369d28658
+  - path: src/dufmech/schema/dufmech.yaml
+    role: context
+    sha256: 5ca9b9cd1fdefdbe8066b08c319b5144a5f2631710f2271e84dc346283b608e9
+  - path: evidence/PF01985/asakura-2007-cfm2-splicing.txt
+    role: context
+    sha256: 48b1c26d4708f9bcfd5bed0e4851a3a8ed2823975e6df77a497b2a80156972eb
+  - path: evidence/PF01985/barkan-2007-contexts.txt
+    role: context
+    sha256: 4367c213be7fe19c440de1e422a6371e42fc3049abf674874e75bf56cb2c4675
+  - path: evidence/PF01985/coverage-and-gaps.txt
+    role: context
+    sha256: f1b7f87ed49a0b9a8aceb8fab137947a895c7787b6c9f7fec79b1fcd2541547c
+  - path: evidence/PF01985/identity-and-coordinates.txt
+    role: context
+    sha256: 0b9dc67414bd4ead95cb6ee9c7d0d8fc4707f7b4c10be24a584a28cb32eae36f
+  - path: evidence/PF01985/jiang-2007-contexts.txt
+    role: context
+    sha256: 29c25f7d3274371c2f6ea0d181796fffd8cb98df9b4a7ffc012e6d7c7b9ccec7
+  - path: evidence/PF01985/osters-2005-contexts.txt
+    role: context
+    sha256: 8ef51c123199bdb609c838a7ae8741d42faca54ad5991b3ffe0c556b1b1a7048
+  - path: evidence/PF01985/osters-2005-salt-discrepancy.txt
+    role: context
+    sha256: 5bd573caad23a5047bb8e1b4daab108a13d43a4f3cc7012245fa90fac6a6366d
+  - path: evidence/PF01985/ostheimer-2003-caf-splicing.txt
+    role: context
+    sha256: 10b6656f2fddef7e040f36f932e3c41ae7cf92e71dbd7e6b03592e41372e7bd0
+  - path: evidence/PF01985/plant-splicing-coverage.txt
+    role: context
+    sha256: 43c0932417bd16030c5b3d682e31e01c048aace0020b45cbc0a34d091be45e96
+  - path: evidence/PF01985/plant-splicing-identity.txt
+    role: context
+    sha256: 8d9b7df1971b79878e7482740fec3ab7a63aa2c4bb461c3ed3aa3a6a09f3f1ba
+  - path: history/records/PF01985/2026-10-16T061452Z-codex-503ce3.yaml
+    role: context
+    sha256: aad0aa8d1747c0dfbfcdce49d28cb2816a611f041ee350c468ce8d4f8a942091
+  - path: history/records/PF01985/2026-10-16T062854Z-codex-a25251.yaml
+    role: context
+    sha256: 34125fa9be3fb424faba743d670440a0495fe8cd8ab0f8a95b9ec0dcf0fe563b
+  - path: history/records/PF01985/2026-10-16T065107Z-codex-a996f0.yaml
+    role: context
+    sha256: 3918c7ddd67b0be95f3f0935f5e5cdab221728ba05ed0883a9ee4892e01350de
+  - path: history/records/PF01985/2026-10-16T075217Z-codex-24d3f6.yaml
+    role: context
+    sha256: dd867604c46e347525d02a5a7b14d407c5f9ac1bf47e784147fddf6cd701a516
+targets:
+- target_id: PF01985
+  path: data/families/PF01985.yaml
+  label: PF01985
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01985.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: 92c1cc32ecbf72bdd36a9c2b8c5882fb8a4f6d5744e2273202e927a22bf2470d
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+schema_version: 1.0.0
+review_id: 20261016T081253Z-pf01985-plant-splicing
+title: PF01985 plant-splicing adversarial scientific review
+started_at: '2026-10-16T07:52:17Z'
+finished_at: '2026-10-16T08:12:53Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same-agent adversarial reread of primary Methods, Results, captions
+    and selected figure images, with independently recomputed mappings, translations,
+    preservation checks and assay-boundary comparisons. Not independent expert approval
+    or experimental replication.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: Six new PHENOTYPIC graphs add22 INDIRECT/OBSERVED/EXPERIMENTAL effects. CAF1
+  heteroallelic, CAF2 subgroup-IIB and secondary-IIA, CFM2 genotype-specific group-II,
+  group-I U/S and protein-preparation comparisons remain separate. Original eight
+  graphs/twelve edges are unchanged.14graphs/34edges total; IN_PROGRESS without approval.
+  Four scientific follow-ups remain open; publication issue275 is a separate release
+  gate.
+scope:
+  description: Adversarial scientific review of22 newly adopted plant effects, member
+    mappings and preservation of the original eight graphs. Partial full-family coverage
+    within the8296-record objective.
+  selection: Explicit PF01985 continuation. Prior source/review discovery included
+    hidden/ignored files; all-state GitHub PF01985 search preceded issue creation.
+    Each new relation was compared with the inspected source/figure locator; five
+    summary-only CAF targets are distinguished from displayed raw gels.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01985
+  exclusions:
+  - target: Full CRM-family literature and every member
+    reason: Till2001 full Results, other bacterial/archaeal/newer contexts and supplements
+      remain incomplete; old assay edges are preserved, not independently re-reviewed
+      end to end.
+  - target: Direct individual-domain mechanisms and observed cross-species causal
+      chains
+    reason: Genetic/preparation comparisons and association evidence do not establish
+      these stronger relations.
+  - target: Final canonical Pages, full release QC and merge checks
+    reason: Subsequent publication gates; source-pin mismatch is reproduced and tracked
+      as issue275, not waived.
+checks:
+- check_id: generation
+  name: generation
+  command: just records; just records --apply
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 8296 schema-valid records; only PF01985 and its manifest entry changed.
+    Actual EDIT history was appended first.
+  target_ids:
+  - PF01985
+  evidence_ids:
+  - validation
+- check_id: integrity
+  name: integrity
+  command: uv run --locked --with biopython python /private/tmp/duf-pf01985-splicing-20261016-3jGG6K/integrity.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: All8296 manifest entries verified;8295 other records, original eight graph
+    objects and historical evidence/history/reviews unchanged. New cache hashes/primary
+    anchors, CAF translations and three Pfam reference mappings passed. Initial helper
+    lacked optional Bio; rerun used the cached ephemeral Biopython environment, without
+    changing project dependencies.
+  target_ids:
+  - PF01985
+  evidence_ids:
+  - validation
+- check_id: focused
+  name: focused
+  command: uv run --locked pytest -q tests/test_causal_graphs.py tests/test_qc.py
+    tests/test_record_review_contract.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 56 focused tests passed; contract tests do not establish biological truth.
+  target_ids:
+  - PF01985
+  evidence_ids:
+  - validation
+- check_id: derived
+  name: derived
+  command: just causal-graphs --apply; just causal-graphs --check; just exports --apply;
+    just exports --check
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Native inventory/export generation and checks pass.942graphs/2028edges
+    in134graph-bearing families;8162graphless. Counts are structural coverage, not
+    completed scientific review.
+  target_ids:
+  - PF01985
+  evidence_ids:
+  - validation
+- check_id: publication-prerequisite
+  name: publication-prerequisite
+  command: uv run --locked python -m dufmech.site_sources check
+  status: failed
+  required: false
+  exit_code: 1
+  summary: Changed curation/families/PF01985.yaml rejects the old source pins. Issue275
+    tracks a retained authorized checkpoint, native capture/render and final release
+    gates. No check is weakened.
+  target_ids:
+  - PF01985
+  evidence_ids:
+  - publication
+evidence:
+- evidence_id: identity
+  kind: primary_source
+  reference: evidence/PF01985/plant-splicing-identity.txt
+  locator: UniProt and InterPro JSON plus parsed ENA CDS translations and retained
+    hashes
+  accessed_at: '2026-10-16T08:12:53Z'
+  support: supports
+  summary: CAF1Q84N49/CAF2Q84N48 original cDNAs translate exactly to the respective
+    reference sequences. CFM2At3g01370 mapsQ8L7C2. Exact Pfam intervals are retained;
+    reference identity does not authenticate physical mutant proteins.
+- evidence_id: caf
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC169045/
+  locator: Cached ordinary HTML Results/Methods; Figures2,5,7 images/captions; evidence/PF01985/ostheimer-2003-caf-splicing.txt
+  accessed_at: '2026-10-16T08:12:53Z'
+  support: supports
+  summary: CAF1 tissue is heteroallelic;6ugWT versus10ugmutant RNA. Six CAF1 and five
+    CAF2 subgroup-IIB targets are supported with displayed versus summary-only results
+    distinguished. Two CAF2 subgroup-IIA outcomes retain the iojap/secondary alternative.
+    Figure5/7 supportycf3-int1 despite conflicting co-IP prose.
+- evidence_id: cfm
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2217638/
+  locator: Cached ordinary HTML Results/Methods; Figures5-8 images/captions; evidence/PF01985/asakura-2007-cfm2-splicing.txt
+  accessed_at: '2026-10-16T08:12:53Z'
+  support: supports
+  summary: Figure7A/D supports six separate genotype/RNA readouts;7C supports heteroallelic
+    higher U/S, not an invented WT-relative4fold estimate. Figure6 supports lower
+    PsaD/PsaF preparation signals with per-lane matching unresolved. No direct Arabidopsis
+    contact follows from maize co-IP.
+- evidence_id: prior
+  kind: prior_review
+  reference: reviews/structured/20261016T062851Z-pf01985-crm-assay-contexts/review.yaml
+  locator: Three predecessor issue keys; original eight graph objects and PR268 salt
+    qualifier
+  accessed_at: '2026-10-16T08:12:53Z'
+  support: supports
+  summary: Scientific issues270/271 remain open;272 is partly addressed by the new
+    plant curation. Original graphs, earlier evidence and historical reviews remain
+    intact.
+- evidence_id: coverage
+  kind: record_content
+  reference: evidence/PF01985/plant-splicing-coverage.txt
+  locator: Coverage/exclusions ledger and three OPEN record discussions
+  accessed_at: '2026-10-16T08:12:53Z'
+  support: supports
+  summary: Allele, residual-protein, exact sampling, inaccessible supplement and wider-member
+    gaps remain explicit. Supplemental HTML challenges were not treated as PDFs or
+    negative biological evidence.
+- evidence_id: validation
+  kind: validation
+  reference: data/families/PF01985.yaml
+  locator: Native generation, focused tests, derived checks and scratch integrity
+    assertions
+  accessed_at: '2026-10-16T08:12:53Z'
+  support: supports
+  summary: Fourteen graphs and34observed edges validate with2DIRECT/5UNRESOLVED/27INDIRECT;
+    all22new edges are indirect and explicitly scoped. Native status remainsIN_PROGRESS
+    withoutreview_id.
+- evidence_id: publication
+  kind: validation
+  reference: https://github.com/CultureBotAI/DUFMech/issues/275
+  locator: site_sources check exit1 after generation
+  accessed_at: '2026-10-16T08:12:53Z'
+  support: supports
+  summary: The intended stale-source guard rejects the changed overlay. Publication
+    repair and final verification are not certified by this scientific review.
+- evidence_id: duf-projection-pf01985
+  kind: record_content
+  reference: data/families/PF01985.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-16T08:12:53Z'
+  support: context_only
+  snapshot_sha256: 7c84babce2920a675cdd267b9192df3e81fa01bc4ad60ebac89ddcf969d605f5
+  quote: "id: Pfam:PF01985\npfam_id: PF01985\nname: CRS1 / YhbY (CRM) domain\nshort_name:\
+    \ CRS1_YhbY\nseed_status: EX_DUF\ncharacterization_status: UNSCORED\ncuration_status:\
+    \ IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01985\n\
+    counters:\n  proteins: 15752\n  matches: 23182\n  proteomes: 8486\n  taxa: 12703\n\
+    \  structures: 6\n  alphafold_models: 11674\n  domain_architectures: 130\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR001890\ndescription: Escherichia coli YhbY is associated\
+    \ with pre-50S ribosomal subunits, which implies a function\n  in ribosome assembly.\
+    \ GFP fused to a single-domain CRM protein from maize localises to the nucleolus,\n\
+    \  suggesting that an analogous activity may have been retained in plants [[cite:PUB00043747]].\
+    \ A CRM domain\n  containing protein in plant chloroplasts has been shown to function\
+    \ in group I and II intron splicing\n  [[cite:PUB00044700]]. In vitro experiments\
+    \ with an isolated maize CRM domain have shown it to have RNA\n  binding activity.\
+    \ These and other results suggest that the CRM domain evolved in the context of\
+    \ ribosome\n  function prior to the divergence of Archaea and Bacteria, that this\
+    \ function has been maintained in\n  extant prokaryotes, and that the domain was\
+    \ recruited to serve as an RNA binding module during the evolution\n  of plant\
+    \ genomes [[cite:PUB00043747]]. YhbY has a fold similar to that of the C-terminal\
+    \ domain of translation\n  initiation factor 3 (IF3C), which binds to 16S rRNA\
+    \ in the 30S ribosome [[cite:PUB00019352]][[cite:PUB00019353]].\ncuration_history:\
+    \ history/records/PF01985\ndiscussions:\n- discussion_id: pf01985-bacterial-allele-and-preparation-controls\n\
+    \  prompt: Resolve deletion alleles, neighboring-promoter effects and culture\
+    \ matching before assigning\n    a YhbY-specific maturation mechanism.\n  kind:\
+    \ CURATION_TODO\n  status: OPEN\n  rationale: The original deletion also removes\
+    \ an rrmJ promoter region; the later preparation comparison\n    does not explicitly\
+    \ resolve control growth temperature.\n  evidence:\n  - reference: PMID:17105995\n\
+    \    supports: PARTIAL\n    evidence_source: primary_results_methods_and_figures\n\
+    \    explanation: Figure5 supports a locus-deletion phenotype, while Figure4A\
+    \ addback restores co-IP rather\n      than ribosome maturation.\n  - reference:\
+    \ PMID:17337586\n    supports: PARTIAL\n    evidence_source: primary_methods_table1_and_figures5_6\n\
+    \    explanation: JM4690 has a cold-growth phenotype; Figure6 peak ratios are\
+    \ relative readouts with unresolved\n      BW25113 culture-temperature matching.\n\
+    \  posed_by: Codex\n  posed_date: '2026-10-16'\n  notes: evidence/PF01985/coverage-and-gaps.txt\
+    \ retains exact allele, panel-strain, promoter-sparing rescue\n    and addback-dose\
+    \ follow-ups. Do not conflate YhbY with YbeY or YhbO.\n- discussion_id: pf01985-crm-constructs-and-family-coverage\n\
+    \  prompt: Authenticate CRM constructs and extend primary-source coverage before\
+    \ connecting binding, folding\n    and in-vivo splicing.\n  kind: CURATION_TODO\n\
+    \  status: OPEN\n  rationale: Joint CRM3 substitutions and RNA deletions do not\
+    \ isolate atomic contacts; multivalent mature\n    CRS1 and isolated GST-CRM3\
+    \ are different reagents.\n  evidence:\n  - reference: PMID:17105995\n    supports:\
+    \ PARTIAL\n    evidence_source: primary_figure8_and_cloning_methods\n    explanation:\
+    \ The mutant has a higher apparent Kd and lower plateau, without demonstrated\
+    \ fold preservation;\n      reference GRRG586-589 mapping is not physical-insert\
+    \ authentication.\n  - reference: PMID:15598799\n    supports: PARTIAL\n    evidence_source:\
+    \ primary_results_methods_and_figures2_5_6_7_8\n    explanation: RNA retention\
+    \ and accessibility change, but RNA-deletion folding alternatives and missing\n\
+    \      CRS1-alone splicing remain explicit.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-16'\n  notes: Scoped CAF1/CAF2 and Arabidopsis CFM2 assay effects are\
+    \ now included; see plant-splicing-identity.txt\n    and plant-splicing-coverage.txt.\
+    \ Original CRS1 genetics, other bacterial/archaeal/plant contexts and\n    supplements\
+    \ remain incomplete. The earlier identity-and-coordinates.txt and coverage-and-gaps.txt\n\
+    \    remain historical inputs, not full-family approval. The footprinting potassium\
+    \ discrepancy (Results330mM\n    versus Methods150mM KOAc) is retained in osters-2005-salt-discrepancy.txt;\
+    \ the actual panel-specific\n    recipe remains unresolved.\n- discussion_id:\
+    \ pf01985-plant-alleles-and-splicing-scope\n  prompt: Resolve plant allele, residual-protein\
+    \ and sampling details before assigning direct CRM-domain\n    splicing mechanisms.\n\
+    \  kind: CURATION_TODO\n  status: OPEN\n  rationale: Whole-gene insertion phenotypes\
+    \ and steady-state RNA readouts do not isolate catalytic steps,\n    individual\
+    \ CRM domains or downstream mediation.\n  evidence:\n  - reference: PMID:12881426\n\
+    \    supports: PARTIAL\n    evidence_source: primary_results_methods_figures2_5_7\n\
+    \    explanation: CAF1 tissue is heteroallelic, RNA loads differ, some targets\
+    \ appear only in the assay\n      summary, and CAF2 subgroup-IIA defects may be\
+    \ secondary to ribosome loss.\n  - reference: PMID:18065687\n    supports: PARTIAL\n\
+    \    evidence_source: primary_results_methods_figures5_6_7_8\n    explanation:\
+    \ CFM2 allelic and RNA/protein effects remain separate from maize associations,\
+    \ strong-allele\n      growth conditions and unmeasured direct contact or splicing\
+    \ sufficiency.\n  posed_by: Codex\n  posed_date: '2026-10-16'\n  notes: See plant-splicing-coverage.txt\
+    \ for genotype, sampling, supplement and raw-data follow-ups. Retain\n    the\
+    \ CAF ycf3 intron-label discrepancy and do not infer a measured absence of CAF/CFM2\
+    \ protein or a\n    ycf3-splicing-to-PSI causal chain.\ncausal_graphs:\n- graph_id:\
+    \ maize-crm3-joint-loop-substitution-2007\n  title: Joint CRM3 loop substitution\
+    \ raises the apparent RNA-binding Kd\n  scope: Barkan2007 Figure8; isolated maize\
+    \ CRS1 third CRM domain fused to GST, WT versus joint GxxG-to-AAAA\n    substitution.\n\
+    \  context: Complete atpF intron plus22/24nt exon flanks,25pM RNA;0-1uM protein,15min25C,10mMTris\
+    \ pH7,150mMKOAc,10mMMgOAc,5mMDTT,10ug/mLBSA,1U/uL\n    RNase inhibitor. Stacked\
+    \ nitrocellulose/nylon; GST control; nine experiments/four preparations,SD.\n\
+    \  family_mapping: Q9FYT6 sequence1,715aa,PF01985 matches170-254,352-436,564-651.\
+    \ AF290414.1 translation\n    matches exactly; reference GRRG586-589 and mutagenic-primer\
+    \ flanks ground the joint substitution inside\n    CRM3. Complete fusion boundaries\
+    \ are not authenticated.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:4577\n\
+    \  limitations: Single-site fits allow different maxima; the mutant also has a\
+    \ lower plateau. Folding,\n    active fraction and filter behavior are not independently\
+    \ excluded. No individual-residue necessity,\n    atomic contact mechanism, native\
+    \ full-length CRS1 effect or splicing effect is asserted.\n  nodes:\n  - node_id:\
+    \ joint-aaaa\n    label: Replace GST-CRM3 WT by joint GRRG586-589-to-AAAA mutant\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q9FYT6\n  - node_id:\
+    \ apparent-kd\n    label: Fitted apparent atpF RNA-binding Kd\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: aaaa-raises-apparent-kd\n    subject: joint-aaaa\n\
+    \    predicate: increases\n    object: apparent-kd\n    mechanism: The joint-mutant\
+    \ preparation shifts the fitted apparent Kd from21.4+/-4.3 to79.3+/-14.4nM.\n\
+    \      This is a binding-readout effect; the molecular cause of the changed curve\
+    \ and plateau remains unresolved.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:17105995\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1705760/\n      snippet:\
+    \ RNA binding activity\n      explanation: Figure8 curve/caption and filter-binding/cloning\
+    \ Methods; WT, mutant and GST were compared,\n        but the authors' expected\
+    \ fold preservation is not a measured control.\n      cache_path: evidence/PF01985/barkan-2007-contexts.txt\n\
+    \      cache_sha256: 4367c213be7fe19c440de1e422a6371e42fc3049abf674874e75bf56cb2c4675\n\
+    - graph_id: ecoli-yhby-locus-deletion-profile-2007\n  title: Original yhbY-region\
+    \ deletion changes pre50S and mature50S profiles\n  scope: Barkan2007 Figure5;\
+    \ original locus deletion versus its progenitor, not a promoter-sparing YhbY\n\
+    \    knockout.\n  context: EMG2 and K38 deletions are listed; panel-specific strain\
+    \ remains unresolved. Internal yhbY\n    codons removed, start/stop retained.\
+    \ LB37C,OD6000.4;10-40%sucrose dissociating gradient,20mMTris pH7.8,1mMMgCl2,100mMNH4Cl,35krpm7h.\n\
+    \  family_mapping: E.coli K12 reference P0AGK4 sequence1,97aa,PF01985 match3-86.\
+    \ Reference mapping does\n    not authenticate the experimental strain allele.\
+    \ The perturbation also removes the -35 region of an\n    upstream rrmJ promoter\
+    \ within yhbY.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:83333\n  limitations:\
+    \ These are relative sedimentation-profile effects, not absolute particles per\
+    \ cell or a\n    YhbY-only causal mechanism. RrmJ abundance and incomplete plasmid\
+    \ rescue are reported without displayed\n    data. Recombinant YhbY added before\
+    \ sedimentation does not restore the A260 profile.\n  nodes:\n  - node_id: combined-locus-deletion\n\
+    \    label: Delete internal yhbY coding region and overlapping rrmJ promoter segment\n\
+    \    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:P0AGK4\n  - node_id:\
+    \ pre50s-peak\n    label: Relative pre50S sedimentation peak\n    node_type: PHENOTYPE\n\
+    \  - node_id: mature50s-peak\n    label: Relative mature50S sedimentation peak\n\
+    \    node_type: PHENOTYPE\n  edges:\n  - edge_id: locus-deletion-raises-pre50s\n\
+    \    subject: combined-locus-deletion\n    predicate: increases\n    object: pre50s-peak\n\
+    \    mechanism: The locus-deletion preparation has a larger precursor-particle\
+    \ peak than its progenitor.\n      Loss of YhbY, altered neighboring expression\
+    \ and their combination are not separated by this experiment.\n    directness:\
+    \ INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:17105995\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1705760/\n\
+    \      snippet: increased levels\n      explanation: Figure5 profile and the adjoining\
+    \ Results paragraph explicitly state the rrmJ-promoter\n        confound; the\
+    \ graph retains the combined perturbation.\n      cache_path: evidence/PF01985/barkan-2007-contexts.txt\n\
+    \      cache_sha256: 4367c213be7fe19c440de1e422a6371e42fc3049abf674874e75bf56cb2c4675\n\
+    \  - edge_id: locus-deletion-lowers-mature50s\n    subject: combined-locus-deletion\n\
+    \    predicate: decreases\n    object: mature50s-peak\n    mechanism: The same\
+    \ locus-deletion comparison has a smaller mature50S peak. It does not identify\
+    \ an\n      elementary YhbY-catalyzed processing step or prove domain-specific\
+    \ necessity.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:17105995\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC1705760/\n      snippet: reduced levels\n\
+    \      explanation: Figure5 and Results; this second endpoint belongs to the same\
+    \ preparation comparison,\n        not an independent mechanistic discovery.\n\
+    \      cache_path: evidence/PF01985/barkan-2007-contexts.txt\n      cache_sha256:\
+    \ 4367c213be7fe19c440de1e422a6371e42fc3049abf674874e75bf56cb2c4675\n- graph_id:\
+    \ ecoli-yhby-lysate-reassociation-2007\n  title: Recombinant YhbY addback restores\
+    \ antibody-pellet 23S recovery\n  scope: Barkan2007 Figure4A; biochemical addition\
+    \ to deletion lysate, not living-cell complementation\n    or maturation rescue.\n\
+    \  context: E.coli deletion lysate plus recombinant full-length YhbY and affinity-purified\
+    \ anti-YhbY antibody;\n    slot-blot23S hybridization of equal pellet/supernatant\
+    \ proportions. WT, deletion and no-antibody controls;\n    four reported repetitions\
+    \ with different extracts. Addback dose/incubation and panel-specific EMG2/K38\n\
+    \    attribution remain unresolved.\n  family_mapping: P0AGK4 sequence1,97aa,PF01985\
+    \ match3-86 grounds the E.coli reference. Recombinant protein\n    was expressed\
+    \ from pET28; exact physical insert/tag residues are not independently authenticated.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:83333\n  limitations: Whole lysate\
+    \ contains RNP partners. Increased co-IP does not prove direct YhbY-RNA contact,\n\
+    \    de-novo ribosome assembly or correction of the deletion phenotype. Figure5\
+    \ addback leaves the sedimentation\n    profile unchanged.\n  nodes:\n  - node_id:\
+    \ ryhby-addition\n    label: Add recombinant YhbY to deletion lysate with anti-YhbY\
+    \ antibody\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:P0AGK4\n\
+    \  - node_id: pellet-23s\n    label: 23S RNA recovered in the antibody pellet\n\
+    \    node_type: STATE\n  edges:\n  - edge_id: ryhby-increases-23s-recovery\n \
+    \   subject: ryhby-addition\n    predicate: increases\n    object: pellet-23s\n\
+    \    mechanism: Recombinant-protein addition restores antibody-mediated recovery\
+    \ of23S-containing particles\n      from the deletion extract. The observed association-readout\
+    \ effect leaves direct contact and intervening\n      RNP components unresolved.\n\
+    \    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:17105995\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1705760/\n\
+    \      snippet: reconstituted\n      explanation: Figure4A lanes/caption and immunoprecipitation\
+    \ Methods; recovery is the measured endpoint,\n        not a claim of restored50S\
+    \ maturation.\n      cache_path: evidence/PF01985/barkan-2007-contexts.txt\n \
+    \     cache_sha256: 4367c213be7fe19c440de1e422a6371e42fc3049abf674874e75bf56cb2c4675\n\
+    - graph_id: ecoli-jm4690-cold-growth-2007\n  title: JM4690 yhbY-deletion strain\
+    \ has reduced colony growth at18C\n  scope: Jiang2007 Figure5; Keio-derived JM4690\
+    \ versus isogenic BW25113 under matched18C plating conditions.\n  context: Two\
+    \ overnight cultures per strain,37C regrowth,OD6000.15, four tenfold serial dilutions,5uL\n\
+    \    duplicate LB spots;18C three days in Figure5,37C overnight comparison. Methods\
+    \ permits3-5days for\n    cold incubation.\n  family_mapping: P0AGK4 sequence1\
+    \ is the97aa E.coli K12 YhbY reference with PF01985 at3-86. Table1 identifies\n\
+    \    JM4690 as the deletion strain; it is not the SPA-tagged JM4199 association\
+    \ construct.\n  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:83333\n  limitations:\
+    \ Colony spot growth is not a quantitative instantaneous growth rate. Exact deletion/promoter\n\
+    \    boundaries and a target-specific rescue are not established in the inspected\
+    \ material; do not assume\n    the neighboring rrmJ-promoter concern is excluded\
+    \ for this allele.\n  nodes:\n  - node_id: jm4690-line\n    label: Use JM4690\
+    \ deletion strain rather than BW25113\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:P0AGK4\n  - node_id: cold-colony-growth\n    label: Colony growth\
+    \ in equal serial spots after18C incubation\n    node_type: PHENOTYPE\n  edges:\n\
+    \  - edge_id: jm4690-lowers-cold-growth\n    subject: jm4690-line\n    predicate:\
+    \ decreases\n    object: cold-colony-growth\n    mechanism: Under matched cold\
+    \ plating conditions, JM4690 gives weaker colony growth than BW25113.\n      This\
+    \ indirect strain phenotype does not resolve a YhbY-domain-dependent ribosome\
+    \ assembly pathway.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:17337586\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC1855874/\n      snippet: impaired in\
+    \ the cold\n      explanation: Figure5 spots/caption, Table1 and growth Methods\
+    \ distinguish the cold phenotype from\n        the separately prepared Figure6\
+    \ lysates.\n      cache_path: evidence/PF01985/jiang-2007-contexts.txt\n     \
+    \ cache_sha256: 29c25f7d3274371c2f6ea0d181796fffd8cb98df9b4a7ffc012e6d7c7b9ccec7\n\
+    - graph_id: ecoli-jm4690-profile-preparations-2007\n  title: Reported JM4690 preparation\
+    \ has higher free-subunit-to70S peak ratios\n  scope: Jiang2007 Figure6; composite\
+    \ strain/culture-preparation comparison, not an isolated gene or temperature\n\
+    \    intervention.\n  context: Methods assigns deletion strains18C and remaining\
+    \ strains37C; the Figure6 BW25113 culture temperature\n    is not explicitly resolved.\
+    \ HarvestOD6000.4-0.8;7-47%sucrose,10mMTris pH7.5,10mMMgCl2,100mMNH4Cl,13OD260\n\
+    \    units,41krpm3h;A254 peak heights above post70S trough. At least three independent\
+    \ profiles;SEM.\n  family_mapping: JM4690 deletion is linked to E.coli K12 YhbY\
+    \ reference P0AGK4 sequence1,PF01985 match3-86;\n    physical allele and promoter\
+    \ integrity are not authenticated by this mapping.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:83333\n  limitations: Unresolved temperature matching precludes\
+    \ attributing the comparison solely to genotype.\n    Ratios are peak heights,\
+    \ not areas, absolute subunit abundance, processing rates or particles per\n \
+    \   cell. No promoter-sparing rescue establishes a YhbY-specific mechanism.\n\
+    \  nodes:\n  - node_id: jm4690-preparation\n    label: Use reported JM4690 preparation\
+    \ instead of reported BW25113 preparation\n    node_type: PERTURBATION\n    grounding:\n\
+    \    - UniProtKB:P0AGK4\n  - node_id: ratio30s70s\n    label: 30S-to70S A254 peak-height\
+    \ ratio\n    node_type: PHENOTYPE\n  - node_id: ratio50s70s\n    label: 50S-to70S\
+    \ A254 peak-height ratio\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: preparation-raises-30s70s\n\
+    \    subject: jm4690-preparation\n    predicate: increases\n    object: ratio30s70s\n\
+    \    mechanism: The reported mutant preparation has a larger30S/70S ratio. Genotype\
+    \ and potentially different\n      culture temperature are not separated; no single\
+    \ causal component is assigned.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:17337586\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1855874/\n      snippet:\
+    \ relative peak height ratios\n      explanation: Figure6A/B dark-gray series,\
+    \ its caption and quantification Methods; cell-preparation\n        Methods impose\
+    \ the explicit temperature-matching limitation.\n      cache_path: evidence/PF01985/jiang-2007-contexts.txt\n\
+    \      cache_sha256: 29c25f7d3274371c2f6ea0d181796fffd8cb98df9b4a7ffc012e6d7c7b9ccec7\n\
+    \  - edge_id: preparation-raises-50s70s\n    subject: jm4690-preparation\n   \
+    \ predicate: increases\n    object: ratio50s70s\n    mechanism: The same preparation\
+    \ comparison has a larger50S/70S ratio. This second endpoint is not\n      independent\
+    \ proof of defective50S maturation or an absolute increase in50S particles.\n\
+    \    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:17337586\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1855874/\n\
+    \      snippet: relative peak height ratios\n      explanation: Figure6B light-gray\
+    \ series and Methods; retain the composite preparation scope and\n        shared70S\
+    \ denominator.\n      cache_path: evidence/PF01985/jiang-2007-contexts.txt\n \
+    \     cache_sha256: 29c25f7d3274371c2f6ea0d181796fffd8cb98df9b4a7ffc012e6d7c7b9ccec7\n\
+    - graph_id: maize-mcrs1-magnesium-retention-2005\n  title: MgCl2 increase enhances\
+    \ RNA retention with mature CRS1\n  scope: Ostersetzer2005 Figure2B;0-to10mM MgCl2\
+    \ range in a purified mature CRS1/atpF RNA binding assay.\n  context: 2.5nM mature\
+    \ CRS1 monomer units,25pM atpF RNA,150mMKOAc,50mMTris pH7,5mMDTT,10ug/mLBSA,0.5U/uL\n\
+    \    RNase inhibitor;15min25C; stacked nitrocellulose/nylon retention. Four experiments,SD;\
+    \ protein and\n    RNA are both present.\n  family_mapping: Q9FYT6 sequence1,715aa,PF01985\
+    \ matches170-254,352-436,564-651. Recombinant mature protein\n    starts at40;\
+    \ GST removed, C-terminalHis6 retained. All three CRM domains remain, not isolated\
+    \ CRM3.\n  scope_status: MECHANISTIC\n  taxon: NCBITaxon:4577\n  limitations:\
+    \ DIRECT denotes the measured biochemical condition effect, not a proven Mg-binding\
+    \ site\n    or atomic folding mechanism. Retention plateaus around10-20mM; no\
+    \ monotonic extrapolation beyond the\n    chosen range. This is not Mg-alone RNA\
+    \ binding or evidence of splicing.\n  nodes:\n  - node_id: magnesium-increase\n\
+    \    label: Raise MgCl2 from0 to10mM with fixed mature CRS1 and RNA\n    node_type:\
+    \ PERTURBATION\n  - node_id: retained-rna\n    label: Fraction of atpF RNA retained\
+    \ with protein\n    node_type: STATE\n  edges:\n  - edge_id: magnesium-increases-retention\n\
+    \    subject: magnesium-increase\n    predicate: increases\n    object: retained-rna\n\
+    \    mechanism: Raising MgCl2 over the stated range increases the nitrocellulose-retained\
+    \ RNA fraction\n      with fixed protein/RNA inputs. RNA conformation, ionic effects\
+    \ and protein interactions are not\n      separately resolved.\n    directness:\
+    \ DIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n\
+    \    - reference: PMID:15598799\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC544502/\n\
+    \      snippet: increasing\n      explanation: Figure2B curve/caption and binding\
+    \ Methods establish the conditional direction and\n        plateau; the graph\
+    \ does not assert an intrinsic affinity constant for all preparations.\n     \
+    \ cache_path: evidence/PF01985/osters-2005-contexts.txt\n      cache_sha256: 8ef51c123199bdb609c838a7ae8741d42faca54ad5991b3ffe0c556b1b1a7048\n\
+    - graph_id: maize-mcrs1-rna-deletions-2005\n  title: Separate atpF RNA deletions\
+    \ reduce mature CRS1 binding readouts\n  scope: Ostersetzer2005 Figures5A and8A/B;\
+    \ three separate RNA-fragment perturbations, not sequential\n    edits or protein\
+    \ mutations.\n  context: Purified mature CRS1,25pM RNA,150mMKOAc,10mMMgCl2,50mMTris\
+    \ pH7,50ug/mL tRNA,15min25C. D1 comparison\n    at2.5nMCRS1 in Figure5A; D4/111nt\
+    \ titrations through50nM in Figure8, at least three experiments. Figure8\n   \
+    \ fractions normalize to intact-fragment saturation near80%.\n  family_mapping:\
+    \ Q9FYT6 sequence1 with PF01985 matches170-254,352-436,564-651; mature40-715 reference\n\
+    \    region, cleaved GST and retainedHis6. RNA coordinates are published intron-relative\
+    \ nucleotides, not\n    protein residues or independently verified genome coordinates.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:4577\n  limitations: Loss of retention\
+    \ can reflect altered RNA structure or active fraction as well as contact-site\n\
+    \    removal. No necessity of every deleted nucleotide, CRM3-specific recognition,\
+    \ zero residual binding,\n    or observed pseudoknot is inferred. Each branch\
+    \ has its own RNA and matched intact-fragment comparator.\n  nodes:\n  - node_id:\
+    \ d1-delete111\n    label: Delete RNA nucleotides446-556 from D1(1-570)\n    node_type:\
+    \ PERTURBATION\n  - node_id: d1-retention\n    label: D1 RNA retention at2.5nM\
+    \ mature CRS1\n    node_type: STATE\n  - node_id: d4-delete16\n    label: Delete\
+    \ RNA nucleotides687-702 from D4(673-747)\n    node_type: PERTURBATION\n  - node_id:\
+    \ d4-retention\n    label: D4 normalized RNA retention during CRS1 titration\n\
+    \    node_type: STATE\n  - node_id: loop-delete30\n    label: Delete RNA nucleotides500-529\
+    \ from111nt fragment(446-556)\n    node_type: PERTURBATION\n  - node_id: loop-retention\n\
+    \    label: 111nt-fragment normalized retention during CRS1 titration\n    node_type:\
+    \ STATE\n  edges:\n  - edge_id: d1-deletion-lowers-retention\n    subject: d1-delete111\n\
+    \    predicate: decreases\n    object: d1-retention\n    mechanism: Removing the\
+    \ accessory111nt segment lowers retention relative to intact D1 at2.5nMCRS1.\n\
+    \      The supporting titration also loses high-affinity binding, but a contact-only\
+    \ mechanism is unresolved.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:15598799\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC544502/\n      snippet:\
+    \ low-affinity nonspecific binding\n      explanation: Figure5A fixed-concentration\
+    \ comparison, Figure5B and Results; D1 joins1-445 to557-570,\n        independently\
+    \ of the Figure8 constructs.\n      cache_path: evidence/PF01985/osters-2005-contexts.txt\n\
+    \      cache_sha256: 8ef51c123199bdb609c838a7ae8741d42faca54ad5991b3ffe0c556b1b1a7048\n\
+    \  - edge_id: d4-deletion-lowers-retention\n    subject: d4-delete16\n    predicate:\
+    \ decreases\n    object: d4-retention\n    mechanism: Removing687-702 lowers the\
+    \ normalized retained fraction over the displayed nonzero titration\n      range\
+    \ relative to intact D4. Binding is not abolished at all concentrations, and RNA-folding\
+    \ alternatives\n      remain.\n    directness: UNRESOLVED\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:15598799\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC544502/\n      snippet:\
+    \ dramatic reduction\n      explanation: Figure8A left curve/caption and Results;\
+    \ D4 joins673-686 to703-747. Competition and\n        footprinting are contextual\
+    \ support, not proof that all16bases directly contact protein.\n      cache_path:\
+    \ evidence/PF01985/osters-2005-contexts.txt\n      cache_sha256: 8ef51c123199bdb609c838a7ae8741d42faca54ad5991b3ffe0c556b1b1a7048\n\
+    \  - edge_id: loop-deletion-lowers-retention\n    subject: loop-delete30\n   \
+    \ predicate: decreases\n    object: loop-retention\n    mechanism: Removing500-529\
+    \ lowers retention of the isolated111nt RNA region relative to its intact\n  \
+    \    counterpart. Distinct terminal deletions also alter plateaus, consistent\
+    \ with unresolved structural\n      contributions rather than a demonstrated contact\
+    \ map.\n    directness: UNRESOLVED\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:15598799\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC544502/\n      snippet: eliminated\
+    \ specific binding\n      explanation: Figure8B left curve/caption and Results;\
+    \ the deletion joins446-499 to530-556. The proposed\n        pseudoknot remains\
+    \ unverified and is not an observed edge.\n      cache_path: evidence/PF01985/osters-2005-contexts.txt\n\
+    \      cache_sha256: 8ef51c123199bdb609c838a7ae8741d42faca54ad5991b3ffe0c556b1b1a7048\n\
+    - graph_id: maize-mcrs1-intron-accessibility-2005\n  title: Mature CRS1 reduces\
+    \ hydroxyl-radical accessibility of atpF RNA\n  scope: Ostersetzer2005 Figure6\
+    \ matched10mMMgCl2 lanes and Figure7 summary; purified mature CRS1 addition\n\
+    \    to intron RNA.\n  context: 40nM intron RNA,0 versus100nM mature CRS1 monomer\
+    \ units,50mMHEPES pH7,10mMMgCl2; Methods specifies150mMKOAc\n    but Results describes330mM\
+    \ potassium, so the actual Figure6 ionic condition is unresolved. Methods\n  \
+    \  incubation10min25C then30min on ice; Fe/EDTA/ascorbate/peroxide cleavage10min\
+    \ on ice, primer-extension\n    mapping; protein-free and sequencing controls.\n\
+    \  family_mapping: Q9FYT6 sequence1,PF01985 matches170-254,352-436,564-651; mature\
+    \ protein begins40 with\n    all three CRM domains, GST removed and His6 retained.\
+    \ RNA positions use published atpF intron numbering.\n  scope_status: MECHANISTIC\n\
+    \  taxon: NCBITaxon:4577\n  limitations: DIRECT denotes measured biochemical protection,\
+    \ not direct contact at every protected nucleotide.\n    Compaction and contact\
+    \ assignments are inferred; several intron regions lack high-resolution data.\n\
+    \    Results/Methods disagree on potassium concentration (evidence/PF01985/osters-2005-salt-discrepancy.txt);\n\
+    \    no resolved recipe or salt-independent effect is asserted. No detected CRS1-promoted\
+    \ splicing was\n    reported in vitro or in E.coli, so no protection-to-splicing\
+    \ edge is asserted.\n  nodes:\n  - node_id: mature-crs1-addition\n    label: Add100nM\
+    \ mature CRS1 to40nM intron RNA at10mMMgCl2\n    node_type: PERTURBATION\n   \
+    \ grounding:\n    - UniProtKB:Q9FYT6\n  - node_id: radical-cleavage\n    label:\
+    \ Hydroxyl-radical cleavage at protected intron segments\n    node_type: STATE\n\
+    \  edges:\n  - edge_id: crs1-lowers-cleavage\n    subject: mature-crs1-addition\n\
+    \    predicate: decreases\n    object: radical-cleavage\n    mechanism: Addition\
+    \ reduces cleavage/accessibility in observed segments including445-462,498-557\
+    \ and684-710,\n      with additional weaker protections. RNA shielding and conformational\
+    \ reorganization are consistent\n      explanations, not independently resolved\
+    \ elementary steps.\n    directness: DIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:15598799\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC544502/\n      snippet: widespread\
+    \ protection\n      explanation: Figure6 lanes/caption, Figure7 map and hydroxyl-radical\
+    \ Methods; the graph uses the\n        measured accessibility endpoint rather\
+    \ than catalytic folding or splicing sufficiency.\n      cache_path: evidence/PF01985/osters-2005-contexts.txt\n\
+    \      cache_sha256: 8ef51c123199bdb609c838a7ae8741d42faca54ad5991b3ffe0c556b1b1a7048\n\
+    - graph_id: maize-caf1-heteroallelic-splicing-2003\n  title: CAF1 heteroallelic\
+    \ mutants lower six reported intron-splicing readouts\n  scope: Ostheimer2003\
+    \ Figure5B/D, Results and Figure7 summary; caf1-1/caf1-2 versus WT. Methods explicitly\n\
+    \    identifies heteroallelic assayed tissue despite generic homozygous Results\
+    \ wording.\n  context: 'Maize total-leaf RNase protection: 6ug WT versus 10ug\
+    \ mutant RNA; spliced/unspliced products,\n    WT/crs2-1/iojap and tRNA controls.\
+    \ Exact mutant age, growth and background are not assigned; 14-day\n    B73 library\
+    \ conditions are not mutant assay conditions. Allelic tests are not transgenic\
+    \ rescue.'\n  family_mapping: Maize CAF1 Q84N49 sequence1,674aa,PF01985 intervals185-268,303-386.\
+    \ AY264368.1/AAP22135.1\n    coding translation matches this reference exactly;\
+    \ Mu8(caf1-1) and Mu3(caf1-2) insertions near the\n    ORF start. Physical mutant\
+    \ sequence/protein not verified; evidence/PF01985/plant-splicing-identity.txt.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:4577\n  limitations: Whole-locus\
+    \ perturbation, not isolated-domain necessity or direct RNA contact. Near-normal\n\
+    \    RNA does not establish residual protein; raw loading differs and no numerical\
+    \ biological replicate/error\n    summary is supplied. No absolute transcript\
+    \ abundance, kinetic rate, catalytic sufficiency or all-family\n    transfer is\
+    \ asserted. The co-IP paragraph's ycf3-2 label conflicts with Figure5D/7 and earlier\
+    \ Results;\n    this graph uses supported ycf3 intron1. ycf3 intron2 and shown\
+    \ CAF2-specific comparisons are unaffected\n    controls, not universal negatives.\n\
+    \  nodes:\n  - node_id: caf1-heteroallelic\n    label: Use caf1-1/caf1-2 heteroallelic\
+    \ leaf tissue instead of WT\n    node_type: PERTURBATION\n    grounding:\n   \
+    \ - UniProtKB:Q84N49\n  - node_id: petd-splicing\n    label: petD reported splicing\
+    \ readout\n    node_type: STATE\n  - node_id: rps16-splicing\n    label: rps16\
+    \ reported splicing readout\n    node_type: STATE\n  - node_id: ycf3-int1-splicing\n\
+    \    label: ycf3 intron1 reported splicing readout\n    node_type: STATE\n  -\
+    \ node_id: rpl16-splicing\n    label: rpl16 reported splicing readout\n    node_type:\
+    \ STATE\n  - node_id: trng-splicing\n    label: trnG reported splicing readout\n\
+    \    node_type: STATE\n  - node_id: ndha-splicing\n    label: ndhA reported splicing\
+    \ readout\n    node_type: STATE\n  edges:\n  - edge_id: caf1-lowers-petd\n   \
+    \ subject: caf1-heteroallelic\n    predicate: decreases\n    object: petd-splicing\n\
+    \    mechanism: The heteroallelic tissue has a lower petD splicing readout than\
+    \ WT. This is an indirect\n      genetic processing phenotype, not proof of direct\
+    \ CRM-mediated catalysis.\n    directness: INDIRECT\n    support: OBSERVED\n \
+    \   evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:12881426\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC169045/\n      snippet:\
+    \ splicing\n      cache_path: evidence/PF01985/ostheimer-2003-caf-splicing.txt\n\
+    \      cache_sha256: 10b6656f2fddef7e040f36f932e3c41ae7cf92e71dbd7e6b03592e41372e7bd0\n\
+    \      explanation: Figure5B; RNase-protection Methods identifies the CAF1 genotype\
+    \ and unequal total-RNA\n        inputs. Summary-only targets are retained as\
+    \ reported results, not independently quantified gels.\n  - edge_id: caf1-lowers-rps16\n\
+    \    subject: caf1-heteroallelic\n    predicate: decreases\n    object: rps16-splicing\n\
+    \    mechanism: The heteroallelic tissue has a lower rps16 splicing readout than\
+    \ WT. This is an indirect\n      genetic processing phenotype, not proof of direct\
+    \ CRM-mediated catalysis.\n    directness: INDIRECT\n    support: OBSERVED\n \
+    \   evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:12881426\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC169045/\n      snippet:\
+    \ splicing\n      cache_path: evidence/PF01985/ostheimer-2003-caf-splicing.txt\n\
+    \      cache_sha256: 10b6656f2fddef7e040f36f932e3c41ae7cf92e71dbd7e6b03592e41372e7bd0\n\
+    \      explanation: Figure5B; RNase-protection Methods identifies the CAF1 genotype\
+    \ and unequal total-RNA\n        inputs. Summary-only targets are retained as\
+    \ reported results, not independently quantified gels.\n  - edge_id: caf1-lowers-ycf3-int1\n\
+    \    subject: caf1-heteroallelic\n    predicate: decreases\n    object: ycf3-int1-splicing\n\
+    \    mechanism: The heteroallelic tissue has a lower ycf3 intron1 splicing readout\
+    \ than WT. This is an\n      indirect genetic processing phenotype, not proof\
+    \ of direct CRM-mediated catalysis.\n    directness: INDIRECT\n    support: OBSERVED\n\
+    \    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:12881426\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC169045/\n      snippet:\
+    \ splicing\n      cache_path: evidence/PF01985/ostheimer-2003-caf-splicing.txt\n\
+    \      cache_sha256: 10b6656f2fddef7e040f36f932e3c41ae7cf92e71dbd7e6b03592e41372e7bd0\n\
+    \      explanation: Figure5D; RNase-protection Methods identifies the CAF1 genotype\
+    \ and unequal total-RNA\n        inputs. Summary-only targets are retained as\
+    \ reported results, not independently quantified gels.\n  - edge_id: caf1-lowers-rpl16\n\
+    \    subject: caf1-heteroallelic\n    predicate: decreases\n    object: rpl16-splicing\n\
+    \    mechanism: The heteroallelic tissue has a lower rpl16 splicing readout than\
+    \ WT. This is an indirect\n      genetic processing phenotype, not proof of direct\
+    \ CRM-mediated catalysis.\n    directness: INDIRECT\n    support: OBSERVED\n \
+    \   evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:12881426\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC169045/\n      snippet:\
+    \ splicing\n      cache_path: evidence/PF01985/ostheimer-2003-caf-splicing.txt\n\
+    \      cache_sha256: 10b6656f2fddef7e040f36f932e3c41ae7cf92e71dbd7e6b03592e41372e7bd0\n\
+    \      explanation: Results/Figure7 summary; raw gel not displayed in Figure5;\
+    \ RNase-protection Methods\n        identifies the CAF1 genotype and unequal total-RNA\
+    \ inputs. Summary-only targets are retained as\n        reported results, not\
+    \ independently quantified gels.\n  - edge_id: caf1-lowers-trng\n    subject:\
+    \ caf1-heteroallelic\n    predicate: decreases\n    object: trng-splicing\n  \
+    \  mechanism: The heteroallelic tissue has a lower trnG splicing readout than\
+    \ WT. This is an indirect\n      genetic processing phenotype, not proof of direct\
+    \ CRM-mediated catalysis.\n    directness: INDIRECT\n    support: OBSERVED\n \
+    \   evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:12881426\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC169045/\n      snippet:\
+    \ splicing\n      cache_path: evidence/PF01985/ostheimer-2003-caf-splicing.txt\n\
+    \      cache_sha256: 10b6656f2fddef7e040f36f932e3c41ae7cf92e71dbd7e6b03592e41372e7bd0\n\
+    \      explanation: Results/Figure7 summary; raw gel not displayed in Figure5;\
+    \ RNase-protection Methods\n        identifies the CAF1 genotype and unequal total-RNA\
+    \ inputs. Summary-only targets are retained as\n        reported results, not\
+    \ independently quantified gels.\n  - edge_id: caf1-lowers-ndha\n    subject:\
+    \ caf1-heteroallelic\n    predicate: decreases\n    object: ndha-splicing\n  \
+    \  mechanism: The heteroallelic tissue has a lower ndhA splicing readout than\
+    \ WT. This is an indirect\n      genetic processing phenotype, not proof of direct\
+    \ CRM-mediated catalysis.\n    directness: INDIRECT\n    support: OBSERVED\n \
+    \   evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:12881426\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC169045/\n      snippet:\
+    \ splicing\n      cache_path: evidence/PF01985/ostheimer-2003-caf-splicing.txt\n\
+    \      cache_sha256: 10b6656f2fddef7e040f36f932e3c41ae7cf92e71dbd7e6b03592e41372e7bd0\n\
+    \      explanation: Results/Figure7 summary; raw gel not displayed in Figure5;\
+    \ RNase-protection Methods\n        identifies the CAF1 genotype and unequal total-RNA\
+    \ inputs. Summary-only targets are retained as\n        reported results, not\
+    \ independently quantified gels.\n- graph_id: maize-caf2-subgroup-iib-splicing-2003\n\
+    \  title: CAF2 homozygous mutants lower five subgroup-IIB splicing readouts\n\
+    \  scope: Ostheimer2003 Figure5C/D, Results and Figure7 summary; homozygous caf2-1\
+    \ versus WT, excluding\n    subgroup-IIA outcomes.\n  context: 'Maize total-leaf\
+    \ RNase protection: 6ug WT versus 10ug mutant RNA; spliced/unspliced products,\n\
+    \    WT/crs2-1/iojap and tRNA controls. Exact mutant age, growth and background\
+    \ are not assigned; 14-day\n    B73 library conditions are not mutant assay conditions.\
+    \ Allelic tests are not transgenic rescue.'\n  family_mapping: Maize CAF2 Q84N48\
+    \ sequence1,611aa,PF01985 intervals234-317,353-435. AY264369.1/AAP22136.1\n  \
+    \  coding translation matches exactly; internal Mu1(caf2-1) insertion considered\
+    \ likely null by authors,\n    not measured protein absence. Physical mutant sequence/protein\
+    \ not verified; evidence/PF01985/plant-splicing-identity.txt.\n  scope_status:\
+    \ PHENOTYPIC\n  taxon: NCBITaxon:4577\n  limitations: Whole-locus perturbation,\
+    \ not isolated-domain necessity or direct RNA contact. Near-normal\n    RNA does\
+    \ not establish residual protein; raw loading differs and no numerical biological\
+    \ replicate/error\n    summary is supplied. No absolute transcript abundance,\
+    \ kinetic rate, catalytic sufficiency or all-family\n    transfer is asserted.\
+    \ ycf3 intron1 follows Figure5D/7 and earlier Results, not the conflicting co-IP\n\
+    \    paragraph's intron2 label. Shared CAF1/CAF2 targets do not show independent\
+    \ sufficiency or a simultaneous\n    single complex.\n  nodes:\n  - node_id: caf2-homozygous\n\
+    \    label: Use homozygous caf2-1 leaf tissue instead of WT\n    node_type: PERTURBATION\n\
+    \    grounding:\n    - UniProtKB:Q84N48\n  - node_id: ndhb-splicing\n    label:\
+    \ ndhB reported splicing readout\n    node_type: STATE\n  - node_id: petb-splicing\n\
+    \    label: petB reported splicing readout\n    node_type: STATE\n  - node_id:\
+    \ ycf3-int1-splicing\n    label: ycf3 intron1 reported splicing readout\n    node_type:\
+    \ STATE\n  - node_id: rps12-int1-splicing\n    label: rps12 intron1 reported splicing\
+    \ readout\n    node_type: STATE\n  - node_id: ndha-splicing\n    label: ndhA reported\
+    \ splicing readout\n    node_type: STATE\n  edges:\n  - edge_id: caf2-lowers-ndhb\n\
+    \    subject: caf2-homozygous\n    predicate: decreases\n    object: ndhb-splicing\n\
+    \    mechanism: The mutant tissue has a lower ndhB splicing readout than WT within\
+    \ the subgroup-IIB comparison.\n      Association assays do not resolve direct\
+    \ RNA contact or individual-domain action.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:12881426\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC169045/\n      snippet:\
+    \ splicing\n      cache_path: evidence/PF01985/ostheimer-2003-caf-splicing.txt\n\
+    \      cache_sha256: 10b6656f2fddef7e040f36f932e3c41ae7cf92e71dbd7e6b03592e41372e7bd0\n\
+    \      explanation: Figure5C; Methods and Figure5 controls delimit the genetic\
+    \ comparison. Undisplayed\n        raw gels are not treated as measured numeric\
+    \ ratios.\n  - edge_id: caf2-lowers-petb\n    subject: caf2-homozygous\n    predicate:\
+    \ decreases\n    object: petb-splicing\n    mechanism: The mutant tissue has a\
+    \ lower petB splicing readout than WT within the subgroup-IIB comparison.\n  \
+    \    Association assays do not resolve direct RNA contact or individual-domain\
+    \ action.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:12881426\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC169045/\n      snippet: splicing\n\
+    \      cache_path: evidence/PF01985/ostheimer-2003-caf-splicing.txt\n      cache_sha256:\
+    \ 10b6656f2fddef7e040f36f932e3c41ae7cf92e71dbd7e6b03592e41372e7bd0\n      explanation:\
+    \ Figure5C; Methods and Figure5 controls delimit the genetic comparison. Undisplayed\n\
+    \        raw gels are not treated as measured numeric ratios.\n  - edge_id: caf2-lowers-ycf3-int1\n\
+    \    subject: caf2-homozygous\n    predicate: decreases\n    object: ycf3-int1-splicing\n\
+    \    mechanism: The mutant tissue has a lower ycf3 intron1 splicing readout than\
+    \ WT within the subgroup-IIB\n      comparison. Association assays do not resolve\
+    \ direct RNA contact or individual-domain action.\n    directness: INDIRECT\n\
+    \    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    -\
+    \ reference: PMID:12881426\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC169045/\n\
+    \      snippet: splicing\n      cache_path: evidence/PF01985/ostheimer-2003-caf-splicing.txt\n\
+    \      cache_sha256: 10b6656f2fddef7e040f36f932e3c41ae7cf92e71dbd7e6b03592e41372e7bd0\n\
+    \      explanation: Figure5D; Methods and Figure5 controls delimit the genetic\
+    \ comparison. Undisplayed\n        raw gels are not treated as measured numeric\
+    \ ratios.\n  - edge_id: caf2-lowers-rps12-int1\n    subject: caf2-homozygous\n\
+    \    predicate: decreases\n    object: rps12-int1-splicing\n    mechanism: The\
+    \ mutant tissue has a lower rps12 intron1 splicing readout than WT within the\
+    \ subgroup-IIB\n      comparison. Association assays do not resolve direct RNA\
+    \ contact or individual-domain action.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:12881426\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC169045/\n      snippet:\
+    \ splicing\n      cache_path: evidence/PF01985/ostheimer-2003-caf-splicing.txt\n\
+    \      cache_sha256: 10b6656f2fddef7e040f36f932e3c41ae7cf92e71dbd7e6b03592e41372e7bd0\n\
+    \      explanation: Results/Figure7 summary; raw gel not displayed in Figure5;\
+    \ Methods and Figure5 controls\n        delimit the genetic comparison. Undisplayed\
+    \ raw gels are not treated as measured numeric ratios.\n  - edge_id: caf2-lowers-ndha\n\
+    \    subject: caf2-homozygous\n    predicate: decreases\n    object: ndha-splicing\n\
+    \    mechanism: The mutant tissue has a lower ndhA splicing readout than WT within\
+    \ the subgroup-IIB comparison.\n      Association assays do not resolve direct\
+    \ RNA contact or individual-domain action.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:12881426\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC169045/\n      snippet:\
+    \ splicing\n      cache_path: evidence/PF01985/ostheimer-2003-caf-splicing.txt\n\
+    \      cache_sha256: 10b6656f2fddef7e040f36f932e3c41ae7cf92e71dbd7e6b03592e41372e7bd0\n\
+    \      explanation: Results/Figure7 summary; raw gel not displayed in Figure5;\
+    \ Methods and Figure5 controls\n        delimit the genetic comparison. Undisplayed\
+    \ raw gels are not treated as measured numeric ratios.\n- graph_id: maize-caf2-subgroup-iia-phenotypes-2003\n\
+    \  title: CAF2-associated subgroup-IIA defects retain a secondary-effect alternative\n\
+    \  scope: Ostheimer2003 Figure5E; homozygous caf2-1 versus WT, separated from\
+    \ subgroup-IIB targets.\n  context: 'Maize total-leaf RNase protection: 6ug WT\
+    \ versus 10ug mutant RNA; spliced/unspliced products,\n    WT/crs2-1/iojap and\
+    \ tRNA controls. Exact mutant age, growth and background are not assigned; 14-day\n\
+    \    B73 library conditions are not mutant assay conditions. Allelic tests are\
+    \ not transgenic rescue. Ribosome-deficient\n    iojap shows similar subgroup-IIA\
+    \ defects.'\n  family_mapping: Maize CAF2 Q84N48 sequence1,611aa,PF01985 intervals234-317,353-435.\
+    \ AY264369.1/AAP22136.1\n    coding translation matches exactly; internal Mu1(caf2-1)\
+    \ insertion considered likely null by authors,\n    not measured protein absence.\
+    \ Physical mutant sequence/protein not verified; evidence/PF01985/plant-splicing-identity.txt.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:4577\n  limitations: Whole-locus\
+    \ perturbation, not isolated-domain necessity or direct RNA contact. Near-normal\n\
+    \    RNA does not establish residual protein; raw loading differs and no numerical\
+    \ biological replicate/error\n    summary is supplied. No absolute transcript\
+    \ abundance, kinetic rate, catalytic sufficiency or all-family\n    transfer is\
+    \ asserted. Authors favor secondary plastid-ribosome deficiency; that mediation\
+    \ is not directly\n    measured as a CAF2-to-ribosome-to-splicing chain. These\
+    \ endpoints do not establish direct CAF2 action\n    on subgroup-IIA introns.\n\
+    \  nodes:\n  - node_id: caf2-homozygous\n    label: Use homozygous caf2-1 leaf\
+    \ tissue instead of WT\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q84N48\n\
+    \  - node_id: atpf-splicing\n    label: atpF subgroup-IIA splicing readout\n \
+    \   node_type: STATE\n  - node_id: rpl2-splicing\n    label: rpl2 subgroup-IIA\
+    \ splicing readout\n    node_type: STATE\n  edges:\n  - edge_id: caf2-lowers-atpf\n\
+    \    subject: caf2-homozygous\n    predicate: decreases\n    object: atpf-splicing\n\
+    \    mechanism: The mutant tissue has a lower atpF splicing readout. The iojap\
+    \ phenocopy and association\n      context favor an indirect secondary explanation,\
+    \ not a demonstrated molecular intermediate.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:12881426\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC169045/\n      snippet:\
+    \ splicing\n      cache_path: evidence/PF01985/ostheimer-2003-caf-splicing.txt\n\
+    \      cache_sha256: 10b6656f2fddef7e040f36f932e3c41ae7cf92e71dbd7e6b03592e41372e7bd0\n\
+    \      explanation: Figure5E and Results discussing subgroup-IIA defects, iojap\
+    \ and absence of the corresponding\n        CAF1 defect; no causal mediation edge\
+    \ is added.\n  - edge_id: caf2-lowers-rpl2\n    subject: caf2-homozygous\n   \
+    \ predicate: decreases\n    object: rpl2-splicing\n    mechanism: The mutant tissue\
+    \ has a lower rpl2 splicing readout. The iojap phenocopy and association\n   \
+    \   context favor an indirect secondary explanation, not a demonstrated molecular\
+    \ intermediate.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:12881426\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC169045/\n      snippet: splicing\n\
+    \      cache_path: evidence/PF01985/ostheimer-2003-caf-splicing.txt\n      cache_sha256:\
+    \ 10b6656f2fddef7e040f36f932e3c41ae7cf92e71dbd7e6b03592e41372e7bd0\n      explanation:\
+    \ Figure5E and Results discussing subgroup-IIA defects, iojap and absence of the\
+    \ corresponding\n        CAF1 defect; no causal mediation edge is added.\n- graph_id:\
+    \ arabidopsis-cfm2-group-ii-splicing-2007\n  title: Two CFM2 mutant genotypes\
+    \ lower three group-II processing readouts\n  scope: Asakura/Barkan2007 Figure7A/D;\
+    \ homozygous Atcfm2-2 and heteroallelic Atcfm2-1/Atcfm2-2 separately\n    compared\
+    \ with WT. Rare strong homozygotes are excluded.\n  context: Poisoned-primer extension,10ug\
+    \ total leaf RNA from2-3week MS/2%sucrose plants,pH5.7; general14h\n    light23C/10h\
+    \ dark21C. Exact per-lane age/ecotype not assigned. Atcrs1-1 photosynthesis-defective\
+    \ control\n    and unaffected ycf3-int2,atpF,clpP-int1,rpoC1 comparisons limit\
+    \ general chloroplast-deficiency explanations.\n  family_mapping: Arabidopsis\
+    \ At3g01370/NCBIGene:821288,CFM2 Q8L7C2 sequence1,1011aa,PF01985 intervals166-249,378-462,579-666,875-961.\n\
+    \    SALK_000703=Atcfm2-1 central insertion; SAIL_67_E05=Atcfm2-2 near-3prime\
+    \ insertion. Reference identity\n    is not residual mutant-protein identity;\
+    \ evidence/PF01985/plant-splicing-identity.txt.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:3702\n  limitations: AtCFM2 protein was not assayed; null/truncation/residual-activity\
+    \ assignments are not measured\n    properties. Allelic noncomplementation is\
+    \ not transgenic rescue. Supplemental genotyping/controls\n    remain uninspected.\
+    \ Whole-gene effects are not individual CRM-domain mechanisms; no direct RNA contact,\n\
+    \    catalytic step, kinetic rate or cross-species co-IP chain is inferred. Steady-state\
+    \ spliced/unspliced\n    readouts, not absolute splicing rates. No numeric replicate/error\
+    \ summary. Unlabeled ycf3 editing-associated\n    and clpP RT-stop products are\
+    \ not new spliced isoforms; the CFM2-mRNA RT-PCR recipe is a different\n    assay.\n\
+    \  nodes:\n  - node_id: cfm2-2-homozygous\n    label: Use homozygous Atcfm2-2\
+    \ leaf tissue instead of WT\n    node_type: PERTURBATION\n    grounding:\n   \
+    \ - UniProtKB:Q8L7C2\n  - node_id: cfm2-heteroallelic\n    label: Use Atcfm2-1/Atcfm2-2\
+    \ leaf tissue instead of WT\n    node_type: PERTURBATION\n    grounding:\n   \
+    \ - UniProtKB:Q8L7C2\n  - node_id: ycf3-int1-su\n    label: ycf3 intron1 spliced-to-unspliced\
+    \ readout\n    node_type: STATE\n  - node_id: ndha-su\n    label: ndhA spliced-to-unspliced\
+    \ readout\n    node_type: STATE\n  - node_id: clpp-int2-su\n    label: clpP intron2\
+    \ spliced-to-unspliced readout\n    node_type: STATE\n  edges:\n  - edge_id: cfm2-2-homozygous-lowers-ycf3-int1\n\
+    \    subject: cfm2-2-homozygous\n    predicate: decreases\n    object: ycf3-int1-su\n\
+    \    mechanism: This genotype lowers the ycf3 intron1 spliced-to-unspliced readout\
+    \ relative to WT. The\n      separate genetic comparison supports an indirect\
+    \ RNA-processing phenotype, not direct contact, sufficiency\n      or a sequential\
+    \ pathway.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:18065687\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC2217638/\n      snippet: splicing\n\
+    \      cache_path: evidence/PF01985/asakura-2007-cfm2-splicing.txt\n      cache_sha256:\
+    \ 48b1c26d4708f9bcfd5bed0e4851a3a8ed2823975e6df77a497b2a80156972eb\n      explanation:\
+    \ Figure7A; Figure7B RNA blots provide processing context; Figure7 caption and\
+    \ RNA Methods.\n        Each genotype is a distinct comparison; maize CFM2 RNA\
+    \ association is not used as an Arabidopsis\n        causal intermediate.\n  -\
+    \ edge_id: cfm2-2-homozygous-lowers-ndha\n    subject: cfm2-2-homozygous\n   \
+    \ predicate: decreases\n    object: ndha-su\n    mechanism: This genotype lowers\
+    \ the ndhA spliced-to-unspliced readout relative to WT. The separate\n      genetic\
+    \ comparison supports an indirect RNA-processing phenotype, not direct contact,\
+    \ sufficiency\n      or a sequential pathway.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:18065687\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2217638/\n      snippet:\
+    \ splicing\n      cache_path: evidence/PF01985/asakura-2007-cfm2-splicing.txt\n\
+    \      cache_sha256: 48b1c26d4708f9bcfd5bed0e4851a3a8ed2823975e6df77a497b2a80156972eb\n\
+    \      explanation: Figure7A; Figure7 caption and RNA Methods. Each genotype is\
+    \ a distinct comparison;\n        maize CFM2 RNA association is not used as an\
+    \ Arabidopsis causal intermediate.\n  - edge_id: cfm2-2-homozygous-lowers-clpp-int2\n\
+    \    subject: cfm2-2-homozygous\n    predicate: decreases\n    object: clpp-int2-su\n\
+    \    mechanism: This genotype lowers the clpP intron2 spliced-to-unspliced readout\
+    \ relative to WT. The\n      separate genetic comparison supports an indirect\
+    \ RNA-processing phenotype, not direct contact, sufficiency\n      or a sequential\
+    \ pathway.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:18065687\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC2217638/\n      snippet: splicing\n\
+    \      cache_path: evidence/PF01985/asakura-2007-cfm2-splicing.txt\n      cache_sha256:\
+    \ 48b1c26d4708f9bcfd5bed0e4851a3a8ed2823975e6df77a497b2a80156972eb\n      explanation:\
+    \ Figure7D; Figure8 is only a summary; Figure7 caption and RNA Methods. Each genotype\n\
+    \        is a distinct comparison; maize CFM2 RNA association is not used as an\
+    \ Arabidopsis causal intermediate.\n  - edge_id: cfm2-heteroallelic-lowers-ycf3-int1\n\
+    \    subject: cfm2-heteroallelic\n    predicate: decreases\n    object: ycf3-int1-su\n\
+    \    mechanism: This genotype lowers the ycf3 intron1 spliced-to-unspliced readout\
+    \ relative to WT. The\n      separate genetic comparison supports an indirect\
+    \ RNA-processing phenotype, not direct contact, sufficiency\n      or a sequential\
+    \ pathway.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:18065687\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC2217638/\n      snippet: splicing\n\
+    \      cache_path: evidence/PF01985/asakura-2007-cfm2-splicing.txt\n      cache_sha256:\
+    \ 48b1c26d4708f9bcfd5bed0e4851a3a8ed2823975e6df77a497b2a80156972eb\n      explanation:\
+    \ Figure7A; Figure7B RNA blots provide processing context; Figure7 caption and\
+    \ RNA Methods.\n        Each genotype is a distinct comparison; maize CFM2 RNA\
+    \ association is not used as an Arabidopsis\n        causal intermediate.\n  -\
+    \ edge_id: cfm2-heteroallelic-lowers-ndha\n    subject: cfm2-heteroallelic\n \
+    \   predicate: decreases\n    object: ndha-su\n    mechanism: This genotype lowers\
+    \ the ndhA spliced-to-unspliced readout relative to WT. The separate\n      genetic\
+    \ comparison supports an indirect RNA-processing phenotype, not direct contact,\
+    \ sufficiency\n      or a sequential pathway.\n    directness: INDIRECT\n    support:\
+    \ OBSERVED\n    evidence_kind: EXPERIMENTAL\n    evidence:\n    - reference: PMID:18065687\n\
+    \      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2217638/\n      snippet:\
+    \ splicing\n      cache_path: evidence/PF01985/asakura-2007-cfm2-splicing.txt\n\
+    \      cache_sha256: 48b1c26d4708f9bcfd5bed0e4851a3a8ed2823975e6df77a497b2a80156972eb\n\
+    \      explanation: Figure7A; Figure7 caption and RNA Methods. Each genotype is\
+    \ a distinct comparison;\n        maize CFM2 RNA association is not used as an\
+    \ Arabidopsis causal intermediate.\n  - edge_id: cfm2-heteroallelic-lowers-clpp-int2\n\
+    \    subject: cfm2-heteroallelic\n    predicate: decreases\n    object: clpp-int2-su\n\
+    \    mechanism: This genotype lowers the clpP intron2 spliced-to-unspliced readout\
+    \ relative to WT. The\n      separate genetic comparison supports an indirect\
+    \ RNA-processing phenotype, not direct contact, sufficiency\n      or a sequential\
+    \ pathway.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:18065687\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC2217638/\n      snippet: splicing\n\
+    \      cache_path: evidence/PF01985/asakura-2007-cfm2-splicing.txt\n      cache_sha256:\
+    \ 48b1c26d4708f9bcfd5bed0e4851a3a8ed2823975e6df77a497b2a80156972eb\n      explanation:\
+    \ Figure7D; Figure8 is only a summary; Figure7 caption and RNA Methods. Each genotype\n\
+    \        is a distinct comparison; maize CFM2 RNA association is not used as an\
+    \ Arabidopsis causal intermediate.\n- graph_id: arabidopsis-cfm2-trnl-ratio-2007\n\
+    \  title: Heteroallelic CFM2 tissue increases the trnL-UAA unspliced/spliced ratio\n\
+    \  scope: Asakura/Barkan2007 Figure7C; Atcfm2-1/Atcfm2-2 versus WT. Weak/strong\
+    \ homozygote results remain\n    contextual rather than pooled.\n  context: 1ug\
+    \ total leaf RNA, trnL-UAA exon/intron probe, phosphor-imager U/S ratio and25S/18S\
+    \ loading\n    context. MS/2%sucrose RNA growth context as in Figure7; photosynthesis-impaired\
+    \ mutants provide comparison\n    controls. Exact per-lane age is not assigned.\n\
+    \  family_mapping: Arabidopsis At3g01370/NCBIGene:821288,CFM2 Q8L7C2 sequence1,1011aa,PF01985\
+    \ intervals166-249,378-462,579-666,875-961.\n    SALK_000703=Atcfm2-1 central\
+    \ insertion; SAIL_67_E05=Atcfm2-2 near-3prime insertion. Reference identity\n\
+    \    is not residual mutant-protein identity; evidence/PF01985/plant-splicing-identity.txt.\n\
+    \  scope_status: PHENOTYPIC\n  taxon: NCBITaxon:3702\n  limitations: AtCFM2 protein\
+    \ was not assayed; null/truncation/residual-activity assignments are not measured\n\
+    \    properties. Allelic noncomplementation is not transgenic rescue. Supplemental\
+    \ genotyping/controls\n    remain uninspected. Whole-gene effects are not individual\
+    \ CRM-domain mechanisms; no direct RNA contact,\n    catalytic step, kinetic rate\
+    \ or cross-species co-IP chain is inferred. The reported roughly4fold comparison\n\
+    \    is versus other impaired mutants, not universally WT. No quantitative fold-WT\
+    \ edge is asserted. Strong\n    homozygote sampling and supplemental Figure6 remain\
+    \ unresolved; no full abolition or kinetic mechanism\n    is inferred.\n  nodes:\n\
+    \  - node_id: cfm2-heteroallelic\n    label: Use Atcfm2-1/Atcfm2-2 leaf tissue\
+    \ instead of WT\n    node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8L7C2\n\
+    \  - node_id: trnl-us\n    label: trnL-UAA unspliced-to-spliced RNA ratio\n  \
+    \  node_type: STATE\n  edges:\n  - edge_id: heteroallelic-raises-trnl-us\n   \
+    \ subject: cfm2-heteroallelic\n    predicate: increases\n    object: trnl-us\n\
+    \    mechanism: The heteroallelic leaf preparation has a higher unspliced-to-spliced\
+    \ trnL-UAA ratio than\n      WT and the shown impaired controls. This supports\
+    \ an indirect group-I processing effect with steady-state\n      RNA alternatives\
+    \ retained.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind:\
+    \ EXPERIMENTAL\n    evidence:\n    - reference: PMID:18065687\n      source_url:\
+    \ https://pmc.ncbi.nlm.nih.gov/articles/PMC2217638/\n      snippet: splicing\n\
+    \      cache_path: evidence/PF01985/asakura-2007-cfm2-splicing.txt\n      cache_sha256:\
+    \ 48b1c26d4708f9bcfd5bed0e4851a3a8ed2823975e6df77a497b2a80156972eb\n      explanation:\
+    \ Figure7C lanes, ratio display/caption and Results; do not reverse the U/S polarity\n\
+    \        or substitute the control-relative4fold estimate for a WT effect size.\n\
+    - graph_id: arabidopsis-cfm2-protein-preparations-2007\n  title: Reported CFM2\
+    \ mutant leaf preparations have lower PsaD/PsaF signals\n  scope: Asakura/Barkan2007\
+    \ Figure6; reported weak homozygous Atcfm2-2 preparation versus WT preparation,\n\
+    \    not a growth-matched gene-only intervention.\n  context: Leaf immunoblot\
+    \ with10ug protein and WT serial dilutions1,1/2,1/4,1/10; PonceauS/RbcL loading\n\
+    \    context. Exact per-lane age, growth and photoperiod are unassigned. Figure5C\
+    \ includes parallel short-day\n    plants, but does not establish matching for\
+    \ every Figure6 lane.\n  family_mapping: Arabidopsis At3g01370/NCBIGene:821288,CFM2\
+    \ Q8L7C2 sequence1,1011aa,PF01985 intervals166-249,378-462,579-666,875-961.\n\
+    \    SALK_000703=Atcfm2-1 central insertion; SAIL_67_E05=Atcfm2-2 near-3prime\
+    \ insertion. Reference identity\n    is not residual mutant-protein identity;\
+    \ evidence/PF01985/plant-splicing-identity.txt.\n  scope_status: PHENOTYPIC\n\
+    \  taxon: NCBITaxon:3702\n  limitations: AtCFM2 protein was not assayed; null/truncation/residual-activity\
+    \ assignments are not measured\n    properties. Allelic noncomplementation is\
+    \ not transgenic rescue. Supplemental genotyping/controls\n    remain uninspected.\
+    \ Whole-gene effects are not individual CRM-domain mechanisms; no direct RNA contact,\n\
+    \    catalytic step, kinetic rate or cross-species co-IP chain is inferred. Unresolved\
+    \ sample matching\n    prevents genotype-only causal attribution. Authors estimate\
+    \ greater than10fold reduction, but edges\n    retain qualitative signals without\
+    \ invented densitometric replication or isoform accessions. No observed\n    ycf3-splicing-to-photosystem-I\
+    \ mediation is asserted.\n  nodes:\n  - node_id: cfm2-2-preparation\n    label:\
+    \ Use reported Atcfm2-2 leaf protein preparation instead of WT preparation\n \
+    \   node_type: PERTURBATION\n    grounding:\n    - UniProtKB:Q8L7C2\n  - node_id:\
+    \ psad-signal\n    label: PsaD antibody-detected protein signal\n    node_type:\
+    \ PHENOTYPE\n  - node_id: psaf-signal\n    label: PsaF antibody-detected protein\
+    \ signal\n    node_type: PHENOTYPE\n  edges:\n  - edge_id: preparation-lowers-psad\n\
+    \    subject: cfm2-2-preparation\n    predicate: decreases\n    object: psad-signal\n\
+    \    mechanism: The reported mutant preparation has a lower PsaD immunoblot signal\
+    \ than the WT preparation.\n      Genotype and incompletely specified sample conditions\
+    \ are not separated, and this is not proof of\n      splicing-mediated photosystem\
+    \ loss.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:18065687\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2217638/\n\
+    \      snippet: PsaD\n      cache_path: evidence/PF01985/asakura-2007-cfm2-splicing.txt\n\
+    \      cache_sha256: 48b1c26d4708f9bcfd5bed0e4851a3a8ed2823975e6df77a497b2a80156972eb\n\
+    \      explanation: Figure6 immunoblot/dilution series and Results; growth Methods\
+    \ and Figure5C delimit\n        sample-matching uncertainty. PsaD/PsaF are readout\
+    \ labels, not verified isoform identifiers.\n  - edge_id: preparation-lowers-psaf\n\
+    \    subject: cfm2-2-preparation\n    predicate: decreases\n    object: psaf-signal\n\
+    \    mechanism: The reported mutant preparation has a lower PsaF immunoblot signal\
+    \ than the WT preparation.\n      Genotype and incompletely specified sample conditions\
+    \ are not separated, and this is not proof of\n      splicing-mediated photosystem\
+    \ loss.\n    directness: INDIRECT\n    support: OBSERVED\n    evidence_kind: EXPERIMENTAL\n\
+    \    evidence:\n    - reference: PMID:18065687\n      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2217638/\n\
+    \      snippet: PsaD\n      cache_path: evidence/PF01985/asakura-2007-cfm2-splicing.txt\n\
+    \      cache_sha256: 48b1c26d4708f9bcfd5bed0e4851a3a8ed2823975e6df77a497b2a80156972eb\n\
+    \      explanation: Figure6 immunoblot/dilution series and Results; growth Methods\
+    \ and Figure5C delimit\n        sample-matching uncertainty. PsaD/PsaF are readout\
+    \ labels, not verified isoform identifiers.\ncuration_events:\n- timestamp: '2026-10-16T06:14:52Z'\n\
+    \  curator: Codex\n  action: CREATE\n  outcome: changed\n  summary: Curate PF01985\
+    \ CRM assay-context causal graphs from three primary studies\n  history_record:\
+    \ history/records/PF01985/2026-10-16T061452Z-codex-503ce3.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-16T06:28:54Z'\n  curator: Codex\n\
+    \  action: REVIEW\n  outcome: needs_followup\n  summary: Review PF01985 CRM assay\
+    \ graphs with explicit scientific follow-ups\n  history_record: history/records/PF01985/2026-10-16T062854Z-codex-a25251.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-16T06:51:07Z'\n\
+    \  curator: Codex\n  action: EDIT\n  outcome: changed\n  summary: Retain conflicting\
+    \ footprinting potassium descriptions found in PR 268 review\n  history_record:\
+    \ history/records/PF01985/2026-10-16T065107Z-codex-a996f0.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n- timestamp: '2026-10-16T07:52:17Z'\n  curator: Codex\n\
+    \  action: EDIT\n  outcome: changed\n  summary: Add six scoped CAF/CFM2 plant-splicing\
+    \ and protein-preparation graphs\n  history_record: history/records/PF01985/2026-10-16T075217Z-codex-24d3f6.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Reference versus experimental allele mapping
+  outcome: supported
+  summary: Three plant reference mappings and both CAF original translations are verified;
+    unmeasured residual mutant proteins remain unasserted.
+  target_ids:
+  - PF01985
+  evidence_ids:
+  - identity
+  - caf
+  - cfm
+- assessment_id: caf-boundaries
+  area: graph
+  topic: CAF genotypes, target labels and secondary effects
+  outcome: supported
+  summary: Six/ five/ two effect branches preserve heteroallelic versus homozygous
+    scope, raw-versus-summary distinction and subgroup-IIA alternatives; no direct
+    contact or independent sufficiency is added.
+  target_ids:
+  - PF01985
+  evidence_ids:
+  - caf
+  - validation
+- assessment_id: cfm-boundaries
+  area: graph
+  topic: CFM2 steady-state RNA and protein-preparation comparisons
+  outcome: supported
+  summary: Six group-II readouts, one U/S increase and two protein-preparation decreases
+    remain separate. Strong homozygote and unmeasured mediation are excluded; Figure8
+    is not mislabeled as rawclpPdata.
+  target_ids:
+  - PF01985
+  evidence_ids:
+  - cfm
+  - validation
+- assessment_id: preservation
+  area: representation
+  topic: Preserved prior graphs and immutable evidence
+  outcome: supported
+  summary: Exact object comparison preserves all eight prior graphs, including conflicting
+    footprinting potassium conditions. Other8295family records and previous evidence/history/reviews
+    are unchanged.
+  target_ids:
+  - PF01985
+  evidence_ids:
+  - prior
+  - validation
+- assessment_id: scope
+  area: provenance
+  topic: Qualified curation and open research work
+  outcome: supported
+  summary: The new graph scope matches inspected evidence, while broader family coverage
+    and four scientific issues remain explicitly open. No family-wide approval or
+    completed8296-record objective is claimed.
+  target_ids:
+  - PF01985
+  evidence_ids:
+  - coverage
+  - prior
+  - validation
+findings:
+- finding_id: bacterial-controls
+  issue_key: pf01985-bacterial-controls
+  title: Resolve bacterial allele and culture-control attribution
+  description: Authenticate promoter-sparing deletion/rescue, identify Barkan panel-specific
+    strains and addback conditions, and resolve Jiang Figure6 BW25113 culture temperature.
+    Current locus/preparation scopes prevent a false YhbY-only mechanism but leave
+    that biological question open.
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01985
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - prior
+  - coverage
+  - validation
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01985.yaml
+    role: Maintained scientific overlay; regenerate the projection after evidence-backed
+      edits.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261016T062851Z-pf01985-crm-assay-contexts
+    finding_id: bacterial-controls
+- finding_id: construct-and-folding-controls
+  issue_key: pf01985-construct-and-folding-controls
+  title: Authenticate constructs and distinguish contact loss from conformational
+    effects
+  description: Verify complete GST-CRM3 inserts and folding/active fractions, mature-CRS1
+    stoichiometry at assay concentration, RNA-deletion structural controls and raw
+    footprint coverage. Partial primer matches and reference GRRG mapping are not
+    physical clone authentication. PR268 preserved the Results330mM versus Methods150mM
+    footprinting salt discrepancy; the actual recipe remains unresolved under issue271.
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01985
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - prior
+  - coverage
+  - validation
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01985.yaml
+    role: Maintained scientific overlay; regenerate the projection after evidence-backed
+      edits.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261016T062851Z-pf01985-crm-assay-contexts
+    finding_id: construct-and-folding-controls
+- finding_id: primary-and-member-coverage
+  issue_key: pf01985-primary-and-member-coverage
+  title: Extend original genetics and other CRM-family primary contexts
+  description: 'CAF1/CAF2 and Arabidopsis CFM2 Methods/selected figures now support
+    22 scoped effects. This partly addresses the predecessor, not its full acceptance:
+    Till2001 full Results, other bacterial/archaeal/newer members and relevant supplements
+    remain incomplete. Access challenges are not negative results.'
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01985
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - prior
+  - coverage
+  - validation
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01985.yaml
+    role: Maintained scientific overlay; regenerate the projection after evidence-backed
+      edits.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261016T062851Z-pf01985-crm-assay-contexts
+    finding_id: primary-and-member-coverage
+- finding_id: plant-allele-and-sampling-controls
+  issue_key: pf01985-plant-allele-and-sampling-controls
+  title: Resolve plant allele and per-assay sampling controls
+  description: Residual CAF/CFM2 proteins and exact physical mutant backgrounds are
+    unverified. Per-assay age/growth matching, biological replication and CFM2 supplementary
+    genotyping remain incomplete. Figure6 supports a preparation comparison, not a
+    matched gene-only effect. Track as GitHub issue274; keep qualified graphs and
+    research gaps distinct.
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01985
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - identity
+  - caf
+  - cfm
+  - coverage
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01985.yaml
+    role: Maintained scientific overlay; regenerate the projection after evidence-backed
+      changes.
+actions:
+- action_id: extend-and-resolve-primary-controls
+  description: Continue issue270/271/272 and new274 with discriminating primary evidence,
+    not invented controls or stronger causal labels.
+  finding_ids:
+  - bacterial-controls
+  - construct-and-folding-controls
+  - primary-and-member-coverage
+  - plant-allele-and-sampling-controls
+  target_ids:
+  - PF01985
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01985.yaml
+    role: Maintained scientific overlay; regenerate the projection after evidence-backed
+      changes.
+  acceptance_checks:
+  - Authenticate physical alleles/constructs and residual proteins or retain current
+    scope limits.
+  - Resolve relevant culture, growth/age and biological-replicate matching before
+    genotype-only claims.
+  - Inspect accessible primary supplements and missing member studies; report access
+    barriers without bypassing them.
+  - Keep source contradictions, ratio polarity, indirect endpoints and excluded molecular
+    mechanisms explicit.
+  - Append evidence-backed successor reviews/history retaining predecessor issue keys;
+    pass native generation, evidence and publication gates.
+limitations:
+- Same-agent adversarial scientific review is not independent approval or experimental
+  replication.
+- The original eight graphs were preservation-checked; previous bacterial/construct
+  findings are carried forward, not newly resolved.
+- Four minor completeness findings remain open. These are qualified research gaps,
+  not hidden unsupported direct mechanisms.
+- All live PMC requests in this turn returned browser challenges. Previously obtained
+  ordinary HTML and figures were re-inspected; no access challenge was bypassed.
+- CFM2 supplements and Till2001full Results remain uninspected; cached apparent PDFs
+  are HTML challenges.
+- Reference mappings and two CAF cDNA translations do not authenticate physical experimental
+  alleles or measure residual proteins.
+- No exact effect sizes are invented from qualitative bands; summary-only CAF targets
+  are not independently quantified raw gels.
+- Canonical publication and full QC occur after saving this review and appending actual
+  REVIEW history; issue275 remains a release gate at this point.
+- The8296-record scientific objective remains active and incomplete;134graph-bearing
+  families do not mean134fullyreviewed families.
