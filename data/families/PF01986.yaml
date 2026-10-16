@@ -4,7 +4,7 @@ name: Domain of unknown function DUF123
 short_name: DUF123
 seed_status: UNKNOWN_CANDIDATE
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01986
 counters:
   proteins: 924
@@ -24,3 +24,142 @@ interpro_id: InterPro:IPR002837
 description: This archaebacterial domain has no known function. It is attached to an endonuclease domain
   in [swissprot:Q58030]. The domain contains several conserved cysteines and histidines. This suggests
   that the domain may be a zinc binding nucleic acid interaction domain (Bateman A unpubl.).
+curation_history: history/records/PF01986
+discussions:
+- discussion_id: duf123-experimental-discrimination
+  prompt: Establish whether the appended DUF123 region contributes nuclease activity and distinguish the
+    published repair alternatives.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The adopted relations are computationally motivated hypotheses, not observed reactions or
+    proof of domain sufficiency.
+  evidence:
+  - reference: doi:10.1186/1471-2164-7-98
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: COG1833 subsection proposes alternative lesion-flanking cleavage and nick-to-gap routes
+      without a DUF123 activity assay.
+  posed_by: Codex
+  posed_date: '2026-10-16'
+  notes: Authenticate full-length and separated-domain constructs, substrate/product identities and protein
+    integrity. Establish catalytic residues, metal dependence and physiological repair roles independently.
+    Do not transfer HAMAP Endonuclease III chemistry or N-terminal Fe-S sites into the DUF.
+- discussion_id: duf123-primary-and-member-coverage
+  prompt: Extend the primary-source review and resolve additional COG1833 member mappings.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The retained scope is one reference fusion and two alternatives, not complete family characterization.
+  evidence:
+  - reference: doi:10.1186/1471-2164-7-98
+    supports: PARTIAL
+    evidence_source: primary_publication
+    explanation: MJ0613 is explicitly identified; the additional M. maripaludis GI/locus pairing and standalone
+      partners require separate authentication.
+  posed_by: Codex
+  posed_date: '2026-10-16'
+  notes: Original 1999 full text, other primary member studies and systematic citation coverage remain
+    incomplete. The CMASA/3BDV hit resolves to PF06821/DUF1234 and is excluded. See evidence/PF01986/coverage-and-exclusions.txt;
+    access failures are not negative evidence.
+causal_graphs:
+- graph_id: mj0613-lesion-flanking-cleavage-hypothesis
+  title: Proposed joint MJ0613 activities enable lesion-flanking DNA cleavage
+  scope: Published COG1833 proposal instantiated for the named MJ0613 fusion, not an experimentally tested
+    construct or every DUF123 member.
+  context: Methanocaldococcus jannaschii DSM 2661 reference; joint Endonuclease III AP-lyase and appended
+    candidate GIY-YIG activities on damaged DNA. No assay temperature, buffer, metal or compartment was
+    established for this proposal.
+  family_mapping: Q58030 entry133/sequence2 and ENA AAB98606.1 encode the same 344-aa MJ0613 reference;
+    PF01986 is 233-343 inclusive. The whole fusion also contains the N-terminal Endonuclease III region;
+    evidence/PF01986/reference-identity.txt. Reference mapping is not domain sufficiency.
+  scope_status: HYPOTHETICAL
+  taxon: NCBITaxon:243232
+  limitations: A candidate explanation, not measured cleavage, verified base-excision repair or UvrC-equivalent
+    specificity. No lesion identity, cleavage positions, strand polarity, active residues or metal requirement
+    is assigned. The separate nick-to-gap graph is an alternative, not a subsequent step.
+  nodes:
+  - node_id: joint_activities
+    label: Proposed MJ0613 AP-lyase plus appended GIY-YIG activities on damaged DNA
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q58030
+  - node_id: flanking_cleavage
+    label: Proposed DNA cleavage on both sides of a lesion
+    node_type: PROCESS
+  edges:
+  - edge_id: enables-flanking-cleavage
+    subject: joint_activities
+    predicate: enables
+    object: flanking_cleavage
+    mechanism: The source proposes cooperation of the two activities by analogy to UvrC. Both prerequisites
+      remain in one node; neither activity alone is asserted sufficient and no catalytic microsteps are
+      inferred.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: COMPUTATIONAL
+    evidence:
+    - reference: doi:10.1186/1471-2164-7-98
+      source_url: https://link.springer.com/article/10.1186/1471-2164-7-98
+      snippet: could use the AP lyase and nuclease functions
+      explanation: COG1833 subsection, PDF p.11 left column, H1. Relation is an explicit proposal motivated
+        by sequence/domain analysis, not an observed effect.
+      cache_path: evidence/PF01986/dunin-horkawicz-2006.txt
+      cache_sha256: 87efe2247a4fb3137438da568c8950b3623093fbe75417a9855038bf0e2690da
+- graph_id: mj0613-nick-to-gap-hypothesis
+  title: Proposed MJ0613 GIY-YIG exonuclease activity extends an AP-lyase nick
+  scope: Alternative COG1833 repair proposal instantiated for the MJ0613 fusion; no isolated DUF123 assay
+    or family-wide role is asserted.
+  context: Same M. jannaschii reference, conditional on an Endonuclease III AP-lyase-generated nick and
+    candidate appended GIY-YIG exonuclease activity. No experimentally established reaction conditions
+    or processivity.
+  family_mapping: Q58030 entry133/sequence2, 344 aa; exact ENA AAB98606.1 translation; PF01986 reference
+    match 233-343. UniProt GIY-YIG feature 229-328 is a different annotation interval. See evidence/PF01986/reference-identity.txt.
+  scope_status: HYPOTHETICAL
+  taxon: NCBITaxon:243232
+  limitations: Alternative to lesion-flanking cleavage, not a linked observed pathway. Exonuclease direction,
+    gap length, lesion substrate, catalytic residues, cofactors and cellular role remain unresolved. No
+    causal claim about the C-terminal Cys/His motif follows.
+  nodes:
+  - node_id: nick_and_candidate_activity
+    label: AP-lyase-generated nick plus proposed MJ0613 GIY-YIG exonuclease activity
+    node_type: ACTIVITY
+    grounding:
+    - UniProtKB:Q58030
+  - node_id: gapped_dna
+    label: Proposed single-stranded DNA gap extending from that nick
+    node_type: STATE
+  edges:
+  - edge_id: produces-gap-from-nick
+    subject: nick_and_candidate_activity
+    predicate: produces
+    object: gapped_dna
+    mechanism: The authors propose exonucleolytic processing from the Endonuclease III nick as another
+      possible GIY-YIG role. The substrate and candidate activity are joint conditions, not independently
+      sufficient causes.
+    directness: UNRESOLVED
+    support: HYPOTHESIZED
+    evidence_kind: COMPUTATIONAL
+    evidence:
+    - reference: doi:10.1186/1471-2164-7-98
+      source_url: https://link.springer.com/article/10.1186/1471-2164-7-98
+      snippet: creates a single-stranded gap starting from the nick
+      explanation: COG1833 subsection, PDF p.11 left column, H2. Explicit alternative mechanism proposal;
+        no product-identification or enzyme perturbation experiment is supplied.
+      cache_path: evidence/PF01986/dunin-horkawicz-2006.txt
+      cache_sha256: 87efe2247a4fb3137438da568c8950b3623093fbe75417a9855038bf0e2690da
+curation_events:
+- timestamp: '2026-10-16T09:18:11Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Retain scoped scientific review of DUF123 repair hypotheses and unresolved evidence.
+  history_record: history/records/PF01986/2026-10-16T091811Z-codex-6539d2.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-16T09:18:11Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate two explicitly hypothetical MJ0613 repair alternatives for DUF123.
+  history_record: history/records/PF01986/2026-10-16T091811Z-codex-de36d2.yaml
+  event_index: 0
+  llm_assisted: true
