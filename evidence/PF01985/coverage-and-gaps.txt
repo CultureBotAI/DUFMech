@@ -1,0 +1,44 @@
+PF01985 coverage and excluded causal leaps, 2026-10-16 UTC
+
+This is partial scientific curation of three primary studies, not complete
+coverage of this family or completion of the 8,296-record objective. Hidden and
+ignored files were included in searches of curation,evidence,history,reviews,
+reports,docs,.claude,.agents. Only the pre-existing structural inventory matched.
+
+Adopted evidence: Barkan2007 isolated CRM3 mutation, original deletion-locus
+profiles and recombinant lysate addback; Jiang2007 cold-growth and preparation
+profile comparisons; Ostersetzer2005 mature CRS1 cofactor, RNA deletion and
+accessibility experiments. All endpoints are assay-specific. The footprinting
+change is biochemical, but protected bases are not all authenticated contacts.
+
+Open: authenticate exact GST-CRM3 insert/tag/linker, folding and active fractions;
+map physical bacterial deletion alleles and intact rrmJ promoters; identify
+Barkan panel-specific strains, recombinant addback dose/incubation; resolve
+Jiang Figure6 control temperature. The latter does not invalidate the separately
+temperature-matched Figure5 cold-growth observation. Do not treat RrmJ data
+reported without displayed measurements as proof that the promoter effect is absent.
+
+Open: RNA-deletion folding controls, binding stoichiometry at assay concentration,
+raw footprint quantification and coverage of poorly resolved intron regions.
+Reference sequence grounding does not authenticate the physical experimental
+constructs. No mutation edge establishes independent causation by each residue.
+No inferred pseudoknot, atomic contact, catalytic splicing, YhbY enzymatic step,
+or universal RNA target is represented as an observed causal relation.
+
+Still to inspect: Till2001 PMID11565746 original CRS1 genetics; Ostheimer2002
+PMID12429100 and Willis2002 PMID12360533 bacterial structures; Ostheimer2003
+CAF1/CAF2 experiments; Asakura/Barkan2007 PMID18065687 CFM2 groupI/II splicing;
+archaeal and additional plant/bacterial contexts, newer literature and relevant
+supplements. The Barkan external supplement has not been inspected. No exhaustive
+literature search is claimed. Structural homology, localization, co-IP and
+co-sedimentation do not themselves establish a directed maturation pathway.
+
+Ordinary PMC HTML was available in research scratch for all three studies;
+EuropePMC XML requests failed and one publisher PDF returned403. The later
+web-tool request for Ostersetzer hit a browser challenge; the previously obtained
+ordinary HTML/figures were used, without bypassing the challenge. Full articles
+and copyrighted figures stay outside the repository; retained extracts are brief.
+
+IN_PROGRESS is required. Schema/graph integrity is not full scientific review.
+Canonical Pages publication requires a separately authorized source checkpoint;
+local unpinned rendering must not be presented as published site content.

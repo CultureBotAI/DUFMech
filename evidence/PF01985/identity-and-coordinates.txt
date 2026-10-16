@@ -1,0 +1,46 @@
+PF01985 identity and reference-coordinate ledger
+Research: 2026-10-16 UTC; Codex. Coordinates are 1-based, inclusive.
+
+Frozen identity: Pfam:PF01985 / CRS1_YhbY / InterPro:IPR001890, former
+UPF0044 in pfam-previous-unknown-names-2026-10-10.json (PF01985.27).
+Source snapshot interpro-pfam-duf-2026-10-10 has SHA256
+17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383.
+EX_DUF is naming history, not proof of function for every member.
+
+Primary database responses inspected:
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01985/
+PF01985.json SHA256 acde08b0eeea1bdded1e3e180f9799a3857a7c7524252615f2dd847f1983e432
+https://rest.uniprot.org/uniprotkb/P0AGK4.json
+P0AGK4.json SHA256 1a542c3578a22d8229c359362590e067965b32db133562b557c594ab5cebb3ae
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01985/protein/uniprot/P0AGK4/
+P0AGK4-pfam.json SHA256 3bda5d86d804eddab63ed29e0c4cc76dc750235db943ad02cef3d2dbfa52a29a
+https://rest.uniprot.org/uniprotkb/Q9FYT6.json
+Q9FYT6.json SHA256 237f50ee4ed91d89985fc06edc5a1ab9d760ff9d454aba75299776c033ca5fc7
+https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01985/protein/uniprot/Q9FYT6/
+Q9FYT6-pfam.json SHA256 e3a7e49068270df42feb7b10e68b2a4d1848cd754be1c31fc721cea219130f05
+https://www.ebi.ac.uk/ena/browser/api/embl/AF290414?download=false
+AF290414.embl SHA256 e90322d83cf481c886671ddde50ce316962dbc1076c427b6b0c5382a4349130b
+
+E. coli K12 YhbY: P0AGK4, sequence version1, entry version143,
+NCBITaxon:83333, 97aa, MD5 6430A14F5B78B1E75288BBC6F448E0C5.
+PF01985 matches residues3-86. This reference grounds identity, not physical
+authentication of the EMG2, K38 or BW25113 alleles or recombinant inserts.
+YbeY and YhbO are different proteins, not alternate spellings of YhbY.
+
+Zea mays CRS1: Q9FYT6, sequence version1, entry version90,
+NCBITaxon:4577, 715aa, MD5 2FB703CE14D58D4169B237BE3171DB3A.
+PF01985 matches170-254,352-436,564-651. Biopython parsing of AF290414.1
+CDS9-2156 (including stop) reproduces AAG00595.1 and all715 reference residues.
+GRRG is at586-589, inside CRM3. The published mutagenic-primer flanks match
+AF290414.1 immediately around the native four-codon region1764-1775.
+This grounds the joint G586A/R587A/R588A/G589A reference substitution;
+it does not authenticate the physical GST fusion or four independent effects.
+The full forward gene-side primer matches at1693; only the last16 bases
+of the reverse gene-side primer match exactly (reverse complement at1971).
+Do not turn these partial matches into an asserted complete insert boundary.
+
+Ostersetzer2005 Figure1 specifies recombinant mature CRS1 starting at residue40,
+with GST removed by thrombin and C-terminal His6 retained. All three CRM matches
+are present. Barkan2007 instead assays a GST-fused isolated third CRM domain.
+RNA deletion coordinates in Ostersetzer2005 are intron-relative nucleotides,
+not CRS1 residues or independently mapped chloroplast genome coordinates.
