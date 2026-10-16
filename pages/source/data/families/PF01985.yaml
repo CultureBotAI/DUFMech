@@ -4,7 +4,7 @@ name: CRS1 / YhbY (CRM) domain
 short_name: CRS1_YhbY
 seed_status: EX_DUF
 characterization_status: UNSCORED
-curation_status: SEEDED
+curation_status: IN_PROGRESS
 source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01985
 counters:
   proteins: 15752
@@ -31,3 +31,495 @@ description: Escherichia coli YhbY is associated with pre-50S ribosomal subunits
   extant prokaryotes, and that the domain was recruited to serve as an RNA binding module during the evolution
   of plant genomes [[cite:PUB00043747]]. YhbY has a fold similar to that of the C-terminal domain of translation
   initiation factor 3 (IF3C), which binds to 16S rRNA in the 30S ribosome [[cite:PUB00019352]][[cite:PUB00019353]].
+curation_history: history/records/PF01985
+discussions:
+- discussion_id: pf01985-bacterial-allele-and-preparation-controls
+  prompt: Resolve deletion alleles, neighboring-promoter effects and culture matching before assigning
+    a YhbY-specific maturation mechanism.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: The original deletion also removes an rrmJ promoter region; the later preparation comparison
+    does not explicitly resolve control growth temperature.
+  evidence:
+  - reference: PMID:17105995
+    supports: PARTIAL
+    evidence_source: primary_results_methods_and_figures
+    explanation: Figure5 supports a locus-deletion phenotype, while Figure4A addback restores co-IP rather
+      than ribosome maturation.
+  - reference: PMID:17337586
+    supports: PARTIAL
+    evidence_source: primary_methods_table1_and_figures5_6
+    explanation: JM4690 has a cold-growth phenotype; Figure6 peak ratios are relative readouts with unresolved
+      BW25113 culture-temperature matching.
+  posed_by: Codex
+  posed_date: '2026-10-16'
+  notes: evidence/PF01985/coverage-and-gaps.txt retains exact allele, panel-strain, promoter-sparing rescue
+    and addback-dose follow-ups. Do not conflate YhbY with YbeY or YhbO.
+- discussion_id: pf01985-crm-constructs-and-family-coverage
+  prompt: Authenticate CRM constructs and extend primary-source coverage before connecting binding, folding
+    and in-vivo splicing.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Joint CRM3 substitutions and RNA deletions do not isolate atomic contacts; multivalent mature
+    CRS1 and isolated GST-CRM3 are different reagents.
+  evidence:
+  - reference: PMID:17105995
+    supports: PARTIAL
+    evidence_source: primary_figure8_and_cloning_methods
+    explanation: The mutant has a higher apparent Kd and lower plateau, without demonstrated fold preservation;
+      reference GRRG586-589 mapping is not physical-insert authentication.
+  - reference: PMID:15598799
+    supports: PARTIAL
+    evidence_source: primary_results_methods_and_figures2_5_6_7_8
+    explanation: RNA retention and accessibility change, but RNA-deletion folding alternatives and missing
+      CRS1-alone splicing remain explicit.
+  posed_by: Codex
+  posed_date: '2026-10-16'
+  notes: Original CRS1 genetics, CAF1/CAF2, CFM2, bacterial structures, archaeal contexts, newer studies
+    and supplements remain incomplete. See identity-and-coordinates.txt and coverage-and-gaps.txt; no
+    full-family scientific approval. The footprinting potassium discrepancy (Results330mM versus Methods150mM
+    KOAc) is retained in osters-2005-salt-discrepancy.txt; the actual panel-specific recipe remains unresolved.
+causal_graphs:
+- graph_id: maize-crm3-joint-loop-substitution-2007
+  title: Joint CRM3 loop substitution raises the apparent RNA-binding Kd
+  scope: Barkan2007 Figure8; isolated maize CRS1 third CRM domain fused to GST, WT versus joint GxxG-to-AAAA
+    substitution.
+  context: Complete atpF intron plus22/24nt exon flanks,25pM RNA;0-1uM protein,15min25C,10mMTris pH7,150mMKOAc,10mMMgOAc,5mMDTT,10ug/mLBSA,1U/uL
+    RNase inhibitor. Stacked nitrocellulose/nylon; GST control; nine experiments/four preparations,SD.
+  family_mapping: Q9FYT6 sequence1,715aa,PF01985 matches170-254,352-436,564-651. AF290414.1 translation
+    matches exactly; reference GRRG586-589 and mutagenic-primer flanks ground the joint substitution inside
+    CRM3. Complete fusion boundaries are not authenticated.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:4577
+  limitations: Single-site fits allow different maxima; the mutant also has a lower plateau. Folding,
+    active fraction and filter behavior are not independently excluded. No individual-residue necessity,
+    atomic contact mechanism, native full-length CRS1 effect or splicing effect is asserted.
+  nodes:
+  - node_id: joint-aaaa
+    label: Replace GST-CRM3 WT by joint GRRG586-589-to-AAAA mutant
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9FYT6
+  - node_id: apparent-kd
+    label: Fitted apparent atpF RNA-binding Kd
+    node_type: STATE
+  edges:
+  - edge_id: aaaa-raises-apparent-kd
+    subject: joint-aaaa
+    predicate: increases
+    object: apparent-kd
+    mechanism: The joint-mutant preparation shifts the fitted apparent Kd from21.4+/-4.3 to79.3+/-14.4nM.
+      This is a binding-readout effect; the molecular cause of the changed curve and plateau remains unresolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:17105995
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1705760/
+      snippet: RNA binding activity
+      explanation: Figure8 curve/caption and filter-binding/cloning Methods; WT, mutant and GST were compared,
+        but the authors' expected fold preservation is not a measured control.
+      cache_path: evidence/PF01985/barkan-2007-contexts.txt
+      cache_sha256: 4367c213be7fe19c440de1e422a6371e42fc3049abf674874e75bf56cb2c4675
+- graph_id: ecoli-yhby-locus-deletion-profile-2007
+  title: Original yhbY-region deletion changes pre50S and mature50S profiles
+  scope: Barkan2007 Figure5; original locus deletion versus its progenitor, not a promoter-sparing YhbY
+    knockout.
+  context: EMG2 and K38 deletions are listed; panel-specific strain remains unresolved. Internal yhbY
+    codons removed, start/stop retained. LB37C,OD6000.4;10-40%sucrose dissociating gradient,20mMTris pH7.8,1mMMgCl2,100mMNH4Cl,35krpm7h.
+  family_mapping: E.coli K12 reference P0AGK4 sequence1,97aa,PF01985 match3-86. Reference mapping does
+    not authenticate the experimental strain allele. The perturbation also removes the -35 region of an
+    upstream rrmJ promoter within yhbY.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: These are relative sedimentation-profile effects, not absolute particles per cell or a
+    YhbY-only causal mechanism. RrmJ abundance and incomplete plasmid rescue are reported without displayed
+    data. Recombinant YhbY added before sedimentation does not restore the A260 profile.
+  nodes:
+  - node_id: combined-locus-deletion
+    label: Delete internal yhbY coding region and overlapping rrmJ promoter segment
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AGK4
+  - node_id: pre50s-peak
+    label: Relative pre50S sedimentation peak
+    node_type: PHENOTYPE
+  - node_id: mature50s-peak
+    label: Relative mature50S sedimentation peak
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: locus-deletion-raises-pre50s
+    subject: combined-locus-deletion
+    predicate: increases
+    object: pre50s-peak
+    mechanism: The locus-deletion preparation has a larger precursor-particle peak than its progenitor.
+      Loss of YhbY, altered neighboring expression and their combination are not separated by this experiment.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:17105995
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1705760/
+      snippet: increased levels
+      explanation: Figure5 profile and the adjoining Results paragraph explicitly state the rrmJ-promoter
+        confound; the graph retains the combined perturbation.
+      cache_path: evidence/PF01985/barkan-2007-contexts.txt
+      cache_sha256: 4367c213be7fe19c440de1e422a6371e42fc3049abf674874e75bf56cb2c4675
+  - edge_id: locus-deletion-lowers-mature50s
+    subject: combined-locus-deletion
+    predicate: decreases
+    object: mature50s-peak
+    mechanism: The same locus-deletion comparison has a smaller mature50S peak. It does not identify an
+      elementary YhbY-catalyzed processing step or prove domain-specific necessity.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:17105995
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1705760/
+      snippet: reduced levels
+      explanation: Figure5 and Results; this second endpoint belongs to the same preparation comparison,
+        not an independent mechanistic discovery.
+      cache_path: evidence/PF01985/barkan-2007-contexts.txt
+      cache_sha256: 4367c213be7fe19c440de1e422a6371e42fc3049abf674874e75bf56cb2c4675
+- graph_id: ecoli-yhby-lysate-reassociation-2007
+  title: Recombinant YhbY addback restores antibody-pellet 23S recovery
+  scope: Barkan2007 Figure4A; biochemical addition to deletion lysate, not living-cell complementation
+    or maturation rescue.
+  context: E.coli deletion lysate plus recombinant full-length YhbY and affinity-purified anti-YhbY antibody;
+    slot-blot23S hybridization of equal pellet/supernatant proportions. WT, deletion and no-antibody controls;
+    four reported repetitions with different extracts. Addback dose/incubation and panel-specific EMG2/K38
+    attribution remain unresolved.
+  family_mapping: P0AGK4 sequence1,97aa,PF01985 match3-86 grounds the E.coli reference. Recombinant protein
+    was expressed from pET28; exact physical insert/tag residues are not independently authenticated.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Whole lysate contains RNP partners. Increased co-IP does not prove direct YhbY-RNA contact,
+    de-novo ribosome assembly or correction of the deletion phenotype. Figure5 addback leaves the sedimentation
+    profile unchanged.
+  nodes:
+  - node_id: ryhby-addition
+    label: Add recombinant YhbY to deletion lysate with anti-YhbY antibody
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AGK4
+  - node_id: pellet-23s
+    label: 23S RNA recovered in the antibody pellet
+    node_type: STATE
+  edges:
+  - edge_id: ryhby-increases-23s-recovery
+    subject: ryhby-addition
+    predicate: increases
+    object: pellet-23s
+    mechanism: Recombinant-protein addition restores antibody-mediated recovery of23S-containing particles
+      from the deletion extract. The observed association-readout effect leaves direct contact and intervening
+      RNP components unresolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:17105995
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1705760/
+      snippet: reconstituted
+      explanation: Figure4A lanes/caption and immunoprecipitation Methods; recovery is the measured endpoint,
+        not a claim of restored50S maturation.
+      cache_path: evidence/PF01985/barkan-2007-contexts.txt
+      cache_sha256: 4367c213be7fe19c440de1e422a6371e42fc3049abf674874e75bf56cb2c4675
+- graph_id: ecoli-jm4690-cold-growth-2007
+  title: JM4690 yhbY-deletion strain has reduced colony growth at18C
+  scope: Jiang2007 Figure5; Keio-derived JM4690 versus isogenic BW25113 under matched18C plating conditions.
+  context: Two overnight cultures per strain,37C regrowth,OD6000.15, four tenfold serial dilutions,5uL
+    duplicate LB spots;18C three days in Figure5,37C overnight comparison. Methods permits3-5days for
+    cold incubation.
+  family_mapping: P0AGK4 sequence1 is the97aa E.coli K12 YhbY reference with PF01985 at3-86. Table1 identifies
+    JM4690 as the deletion strain; it is not the SPA-tagged JM4199 association construct.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Colony spot growth is not a quantitative instantaneous growth rate. Exact deletion/promoter
+    boundaries and a target-specific rescue are not established in the inspected material; do not assume
+    the neighboring rrmJ-promoter concern is excluded for this allele.
+  nodes:
+  - node_id: jm4690-line
+    label: Use JM4690 deletion strain rather than BW25113
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AGK4
+  - node_id: cold-colony-growth
+    label: Colony growth in equal serial spots after18C incubation
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: jm4690-lowers-cold-growth
+    subject: jm4690-line
+    predicate: decreases
+    object: cold-colony-growth
+    mechanism: Under matched cold plating conditions, JM4690 gives weaker colony growth than BW25113.
+      This indirect strain phenotype does not resolve a YhbY-domain-dependent ribosome assembly pathway.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:17337586
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1855874/
+      snippet: impaired in the cold
+      explanation: Figure5 spots/caption, Table1 and growth Methods distinguish the cold phenotype from
+        the separately prepared Figure6 lysates.
+      cache_path: evidence/PF01985/jiang-2007-contexts.txt
+      cache_sha256: 29c25f7d3274371c2f6ea0d181796fffd8cb98df9b4a7ffc012e6d7c7b9ccec7
+- graph_id: ecoli-jm4690-profile-preparations-2007
+  title: Reported JM4690 preparation has higher free-subunit-to70S peak ratios
+  scope: Jiang2007 Figure6; composite strain/culture-preparation comparison, not an isolated gene or temperature
+    intervention.
+  context: Methods assigns deletion strains18C and remaining strains37C; the Figure6 BW25113 culture temperature
+    is not explicitly resolved. HarvestOD6000.4-0.8;7-47%sucrose,10mMTris pH7.5,10mMMgCl2,100mMNH4Cl,13OD260
+    units,41krpm3h;A254 peak heights above post70S trough. At least three independent profiles;SEM.
+  family_mapping: JM4690 deletion is linked to E.coli K12 YhbY reference P0AGK4 sequence1,PF01985 match3-86;
+    physical allele and promoter integrity are not authenticated by this mapping.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:83333
+  limitations: Unresolved temperature matching precludes attributing the comparison solely to genotype.
+    Ratios are peak heights, not areas, absolute subunit abundance, processing rates or particles per
+    cell. No promoter-sparing rescue establishes a YhbY-specific mechanism.
+  nodes:
+  - node_id: jm4690-preparation
+    label: Use reported JM4690 preparation instead of reported BW25113 preparation
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:P0AGK4
+  - node_id: ratio30s70s
+    label: 30S-to70S A254 peak-height ratio
+    node_type: PHENOTYPE
+  - node_id: ratio50s70s
+    label: 50S-to70S A254 peak-height ratio
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: preparation-raises-30s70s
+    subject: jm4690-preparation
+    predicate: increases
+    object: ratio30s70s
+    mechanism: The reported mutant preparation has a larger30S/70S ratio. Genotype and potentially different
+      culture temperature are not separated; no single causal component is assigned.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:17337586
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1855874/
+      snippet: relative peak height ratios
+      explanation: Figure6A/B dark-gray series, its caption and quantification Methods; cell-preparation
+        Methods impose the explicit temperature-matching limitation.
+      cache_path: evidence/PF01985/jiang-2007-contexts.txt
+      cache_sha256: 29c25f7d3274371c2f6ea0d181796fffd8cb98df9b4a7ffc012e6d7c7b9ccec7
+  - edge_id: preparation-raises-50s70s
+    subject: jm4690-preparation
+    predicate: increases
+    object: ratio50s70s
+    mechanism: The same preparation comparison has a larger50S/70S ratio. This second endpoint is not
+      independent proof of defective50S maturation or an absolute increase in50S particles.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:17337586
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC1855874/
+      snippet: relative peak height ratios
+      explanation: Figure6B light-gray series and Methods; retain the composite preparation scope and
+        shared70S denominator.
+      cache_path: evidence/PF01985/jiang-2007-contexts.txt
+      cache_sha256: 29c25f7d3274371c2f6ea0d181796fffd8cb98df9b4a7ffc012e6d7c7b9ccec7
+- graph_id: maize-mcrs1-magnesium-retention-2005
+  title: MgCl2 increase enhances RNA retention with mature CRS1
+  scope: Ostersetzer2005 Figure2B;0-to10mM MgCl2 range in a purified mature CRS1/atpF RNA binding assay.
+  context: 2.5nM mature CRS1 monomer units,25pM atpF RNA,150mMKOAc,50mMTris pH7,5mMDTT,10ug/mLBSA,0.5U/uL
+    RNase inhibitor;15min25C; stacked nitrocellulose/nylon retention. Four experiments,SD; protein and
+    RNA are both present.
+  family_mapping: Q9FYT6 sequence1,715aa,PF01985 matches170-254,352-436,564-651. Recombinant mature protein
+    starts at40; GST removed, C-terminalHis6 retained. All three CRM domains remain, not isolated CRM3.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:4577
+  limitations: DIRECT denotes the measured biochemical condition effect, not a proven Mg-binding site
+    or atomic folding mechanism. Retention plateaus around10-20mM; no monotonic extrapolation beyond the
+    chosen range. This is not Mg-alone RNA binding or evidence of splicing.
+  nodes:
+  - node_id: magnesium-increase
+    label: Raise MgCl2 from0 to10mM with fixed mature CRS1 and RNA
+    node_type: PERTURBATION
+  - node_id: retained-rna
+    label: Fraction of atpF RNA retained with protein
+    node_type: STATE
+  edges:
+  - edge_id: magnesium-increases-retention
+    subject: magnesium-increase
+    predicate: increases
+    object: retained-rna
+    mechanism: Raising MgCl2 over the stated range increases the nitrocellulose-retained RNA fraction
+      with fixed protein/RNA inputs. RNA conformation, ionic effects and protein interactions are not
+      separately resolved.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15598799
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC544502/
+      snippet: increasing
+      explanation: Figure2B curve/caption and binding Methods establish the conditional direction and
+        plateau; the graph does not assert an intrinsic affinity constant for all preparations.
+      cache_path: evidence/PF01985/osters-2005-contexts.txt
+      cache_sha256: 8ef51c123199bdb609c838a7ae8741d42faca54ad5991b3ffe0c556b1b1a7048
+- graph_id: maize-mcrs1-rna-deletions-2005
+  title: Separate atpF RNA deletions reduce mature CRS1 binding readouts
+  scope: Ostersetzer2005 Figures5A and8A/B; three separate RNA-fragment perturbations, not sequential
+    edits or protein mutations.
+  context: Purified mature CRS1,25pM RNA,150mMKOAc,10mMMgCl2,50mMTris pH7,50ug/mL tRNA,15min25C. D1 comparison
+    at2.5nMCRS1 in Figure5A; D4/111nt titrations through50nM in Figure8, at least three experiments. Figure8
+    fractions normalize to intact-fragment saturation near80%.
+  family_mapping: Q9FYT6 sequence1 with PF01985 matches170-254,352-436,564-651; mature40-715 reference
+    region, cleaved GST and retainedHis6. RNA coordinates are published intron-relative nucleotides, not
+    protein residues or independently verified genome coordinates.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:4577
+  limitations: Loss of retention can reflect altered RNA structure or active fraction as well as contact-site
+    removal. No necessity of every deleted nucleotide, CRM3-specific recognition, zero residual binding,
+    or observed pseudoknot is inferred. Each branch has its own RNA and matched intact-fragment comparator.
+  nodes:
+  - node_id: d1-delete111
+    label: Delete RNA nucleotides446-556 from D1(1-570)
+    node_type: PERTURBATION
+  - node_id: d1-retention
+    label: D1 RNA retention at2.5nM mature CRS1
+    node_type: STATE
+  - node_id: d4-delete16
+    label: Delete RNA nucleotides687-702 from D4(673-747)
+    node_type: PERTURBATION
+  - node_id: d4-retention
+    label: D4 normalized RNA retention during CRS1 titration
+    node_type: STATE
+  - node_id: loop-delete30
+    label: Delete RNA nucleotides500-529 from111nt fragment(446-556)
+    node_type: PERTURBATION
+  - node_id: loop-retention
+    label: 111nt-fragment normalized retention during CRS1 titration
+    node_type: STATE
+  edges:
+  - edge_id: d1-deletion-lowers-retention
+    subject: d1-delete111
+    predicate: decreases
+    object: d1-retention
+    mechanism: Removing the accessory111nt segment lowers retention relative to intact D1 at2.5nMCRS1.
+      The supporting titration also loses high-affinity binding, but a contact-only mechanism is unresolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15598799
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC544502/
+      snippet: low-affinity nonspecific binding
+      explanation: Figure5A fixed-concentration comparison, Figure5B and Results; D1 joins1-445 to557-570,
+        independently of the Figure8 constructs.
+      cache_path: evidence/PF01985/osters-2005-contexts.txt
+      cache_sha256: 8ef51c123199bdb609c838a7ae8741d42faca54ad5991b3ffe0c556b1b1a7048
+  - edge_id: d4-deletion-lowers-retention
+    subject: d4-delete16
+    predicate: decreases
+    object: d4-retention
+    mechanism: Removing687-702 lowers the normalized retained fraction over the displayed nonzero titration
+      range relative to intact D4. Binding is not abolished at all concentrations, and RNA-folding alternatives
+      remain.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15598799
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC544502/
+      snippet: dramatic reduction
+      explanation: Figure8A left curve/caption and Results; D4 joins673-686 to703-747. Competition and
+        footprinting are contextual support, not proof that all16bases directly contact protein.
+      cache_path: evidence/PF01985/osters-2005-contexts.txt
+      cache_sha256: 8ef51c123199bdb609c838a7ae8741d42faca54ad5991b3ffe0c556b1b1a7048
+  - edge_id: loop-deletion-lowers-retention
+    subject: loop-delete30
+    predicate: decreases
+    object: loop-retention
+    mechanism: Removing500-529 lowers retention of the isolated111nt RNA region relative to its intact
+      counterpart. Distinct terminal deletions also alter plateaus, consistent with unresolved structural
+      contributions rather than a demonstrated contact map.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15598799
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC544502/
+      snippet: eliminated specific binding
+      explanation: Figure8B left curve/caption and Results; the deletion joins446-499 to530-556. The proposed
+        pseudoknot remains unverified and is not an observed edge.
+      cache_path: evidence/PF01985/osters-2005-contexts.txt
+      cache_sha256: 8ef51c123199bdb609c838a7ae8741d42faca54ad5991b3ffe0c556b1b1a7048
+- graph_id: maize-mcrs1-intron-accessibility-2005
+  title: Mature CRS1 reduces hydroxyl-radical accessibility of atpF RNA
+  scope: Ostersetzer2005 Figure6 matched10mMMgCl2 lanes and Figure7 summary; purified mature CRS1 addition
+    to intron RNA.
+  context: 40nM intron RNA,0 versus100nM mature CRS1 monomer units,50mMHEPES pH7,10mMMgCl2; Methods specifies150mMKOAc
+    but Results describes330mM potassium, so the actual Figure6 ionic condition is unresolved. Methods
+    incubation10min25C then30min on ice; Fe/EDTA/ascorbate/peroxide cleavage10min on ice, primer-extension
+    mapping; protein-free and sequencing controls.
+  family_mapping: Q9FYT6 sequence1,PF01985 matches170-254,352-436,564-651; mature protein begins40 with
+    all three CRM domains, GST removed and His6 retained. RNA positions use published atpF intron numbering.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:4577
+  limitations: DIRECT denotes measured biochemical protection, not direct contact at every protected nucleotide.
+    Compaction and contact assignments are inferred; several intron regions lack high-resolution data.
+    Results/Methods disagree on potassium concentration (evidence/PF01985/osters-2005-salt-discrepancy.txt);
+    no resolved recipe or salt-independent effect is asserted. No detected CRS1-promoted splicing was
+    reported in vitro or in E.coli, so no protection-to-splicing edge is asserted.
+  nodes:
+  - node_id: mature-crs1-addition
+    label: Add100nM mature CRS1 to40nM intron RNA at10mMMgCl2
+    node_type: PERTURBATION
+    grounding:
+    - UniProtKB:Q9FYT6
+  - node_id: radical-cleavage
+    label: Hydroxyl-radical cleavage at protected intron segments
+    node_type: STATE
+  edges:
+  - edge_id: crs1-lowers-cleavage
+    subject: mature-crs1-addition
+    predicate: decreases
+    object: radical-cleavage
+    mechanism: Addition reduces cleavage/accessibility in observed segments including445-462,498-557 and684-710,
+      with additional weaker protections. RNA shielding and conformational reorganization are consistent
+      explanations, not independently resolved elementary steps.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:15598799
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC544502/
+      snippet: widespread protection
+      explanation: Figure6 lanes/caption, Figure7 map and hydroxyl-radical Methods; the graph uses the
+        measured accessibility endpoint rather than catalytic folding or splicing sufficiency.
+      cache_path: evidence/PF01985/osters-2005-contexts.txt
+      cache_sha256: 8ef51c123199bdb609c838a7ae8741d42faca54ad5991b3ffe0c556b1b1a7048
+curation_events:
+- timestamp: '2026-10-16T06:14:52Z'
+  curator: Codex
+  action: CREATE
+  outcome: changed
+  summary: Curate PF01985 CRM assay-context causal graphs from three primary studies
+  history_record: history/records/PF01985/2026-10-16T061452Z-codex-503ce3.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-16T06:28:54Z'
+  curator: Codex
+  action: REVIEW
+  outcome: needs_followup
+  summary: Review PF01985 CRM assay graphs with explicit scientific follow-ups
+  history_record: history/records/PF01985/2026-10-16T062854Z-codex-a25251.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-16T06:51:07Z'
+  curator: Codex
+  action: EDIT
+  outcome: changed
+  summary: Retain conflicting footprinting potassium descriptions found in PR 268 review
+  history_record: history/records/PF01985/2026-10-16T065107Z-codex-a996f0.yaml
+  event_index: 0
+  llm_assisted: true

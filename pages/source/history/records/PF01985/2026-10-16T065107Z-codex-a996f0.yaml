@@ -1,0 +1,22 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01985
+  path: curation/families/PF01985.yaml
+session:
+  id: 2026-10-16T065107Z-codex-a996f0
+  timestamp: '2026-10-16T06:51:07Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: EDIT
+  outcome: changed
+  summary: Retain conflicting footprinting potassium descriptions found in PR 268
+    review
+  details: 'Issue273: Ostersetzer2005 Results describes330mM potassium while Methods
+    specifies150mM KOAc. Preserve both, keep the actual Figure6 ionic condition unresolved,
+    and add a source-hash-linked discrepancy ledger. Eight graph IDs and twelve observed
+    effects remain unchanged; the underlying recipe question remains open under issue271.'
