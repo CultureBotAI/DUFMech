@@ -1,0 +1,581 @@
+# PR280 adversarial review of PF01986 repair hypotheses
+
+- Review: 20261016T095834Z-pr280-adversarial-review
+- Repository: CultureBotAI/DUFMech
+- Started UTC: 2026-10-16T09:49:38Z
+- Finished UTC: 2026-10-16T09:58:34Z
+- Reviewer: Codex (self_review)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The two MJ0613 alternatives are supported as explicitly hypothetical relations, not observed mechanisms. No new unsupported polarity, conjunction or domain attribution was found in this scoped pass. Research findings remain open in issues277/278. Issue279 separately tracks the reproduced publication prerequisite and must be fixed before merge.
+
+## Scope And Provenance
+
+Adversarial scientific and representation review of the two pending PF01986 graphs for PR280.
+
+Selection: Complete PF01986 curation diff and retained source evidence, plus native corpus checks; not a family-wide literature census.
+Coverage: partial; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 7619bbd5376db6a9527fc767acb61a2a3f0b8bcf.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| PF01986 | data/families/PF01986.yaml | generated | PF01986 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| focused | passed | True | PF01986 | 56 passed in 101.43 seconds. |
+| native | passed | True | PF01986 | 8296 valid records with zero drift; native history/review/schema validation passed before this new report. |
+| integrity | passed | True | PF01986 | Exact CDS translation, Pfam233-343 reference mapping, seven source hashes, two quotation anchors, exclusion of PF06821 and all8296 manifest hashes passed. Other8295 records and prior retained artifacts were unchanged before the source commit. |
+| preview | passed | True | PF01986 | Fresh 1440px/390px checks passed for both hypotheses, two evidence disclosures, support labels, alternative interpretation and document overflow; no JS errors. This preview is explicitly unpinned. |
+| Existing site pins reject the changed record | failed | False | PF01986 | Reproduced changed data/families/PF01986.yaml rejection. Issue279 requires retained checkpoint, canonical regeneration and full QC before merging. Outside this completed scientific-review scope, not an acceptable release state. |
+
+## Scientific And Domain Assessments
+
+### identity-and-scope
+
+identity: supported. Targets: PF01986.
+
+Reference fusion, domain boundaries and excluded false-family lead are explicit and independently checked.
+
+### causal-claims
+
+graph: supported. Targets: PF01986.
+
+Both relations retain HYPOTHESIZED/UNRESOLVED/COMPUTATIONAL labels. They do not assert individual prerequisites are sufficient, a completed pathway, experimental activity or family-wide transfer.
+
+### evidence-and-preservation
+
+representation: supported. Targets: PF01986.
+
+Minimal hash-checked quotations and native generated ownership preserve identity, prior artifacts and other records. No scientific-status promotion occurs.
+
+### coverage-limits
+
+provenance: supported. Targets: PF01986.
+
+Research gaps are retained as OPEN findings and separate from the publication repair; the review does not claim exhaustive coverage or merge readiness.
+
+## Findings
+
+### experimental-discrimination: Establish experimental activity and discriminate repair alternatives
+
+minor / open / confirmed; issue key: pf01986-experimental-discrimination.
+
+The inspected sources do not supply DUF123 activity measurements. The two proposed routes remain hypotheses; exact substrates, products, catalytic residues, metals and physiological roles are unresolved. This is a qualified research gap, not evidence that the family has no function. Reassessed during PR280; tracked at https://github.com/CultureBotAI/DUFMech/issues/277. Remains open: retaining qualified hypotheses does not establish missing experimental or member evidence.
+
+### primary-and-member-coverage: Complete original-source review and additional member mappings
+
+minor / open / confirmed; issue key: pf01986-primary-and-member-coverage.
+
+Aravind1999 full text, other primary member studies and systematic citation coverage remain incomplete. The M. maripaludis GI45358100/MMP0538 pairing needs authentication before graph transfer. The 3BDV hit is resolved to PF06821 and excluded, not counted as a DUF123 experiment. Reassessed during PR280; tracked at https://github.com/CultureBotAI/DUFMech/issues/278. Remains open: retaining qualified hypotheses does not establish missing experimental or member evidence.
+
+## Recommended Actions And Acceptance Checks
+
+### research-followups
+
+Complete issues277/278 with primary evidence, not status or label changes alone.
+
+- Authenticate exact member and construct identities.
+- Inspect missing primary sources and domain-specific assay evidence.
+- Discriminate proposed repair alternatives before strengthening causal support.
+- Append successor dispositions and canonical history; preserve earlier reviews.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| primary | https://link.springer.com/article/10.1186/1471-2164-7-98 | supports | Re-read COG1833 section: the two repair routes are alternatives proposed from comparative analysis. The graphs preserve joint conditions, uncertainty and nonsequential topology. |
+| identity | evidence/PF01986/reference-identity.txt | supports | Recomputed exact reference/CDS identity and Pfam interval from retained public downloads. N-terminal Endonuclease III chemistry and its Fe-S sites are not assigned to the DUF. |
+| coverage | evidence/PF01986/coverage-and-exclusions.txt | supports | Incomplete original-source/member coverage remains explicit, including the unresolved M.maripaludis identifier pair. Open GitHub issues277/278 retain concrete acceptance criteria. |
+| validation | data/families/PF01986.yaml | supports | Focused tests, full native schema/history/review gates, independent hash/translation checks and fresh local browser checks passed; status remains IN_PROGRESS. |
+| publication | conf/site_source_pins.json | supports | The current pin ledger fails against changed PF01986 bytes. This is an expected but mandatory release blocker recorded in issue279. |
+| duf-projection-pf01986 | data/families/PF01986.yaml; dufmech-reviewed-projection-v1 | context_only | Byte-exact projection retained at save for digest verification, not scientific assessment. |
+
+## Limits And Additional Notes
+
+- Same-agent adversarial review, not independent approval.
+- Two source-backed hypotheses do not establish that either route operates in vivo or across PF01986.
+- Original-source/member and experimental evidence gaps remain open; no new scientific evidence was manufactured to close issues.
+- The optional failed publication check is excluded only from scientific review scope; it remains mandatory before merge.
+- Final post-review history/projection regeneration, canonical Pages, full QC and exact-head/merge-group CI must be verified after this report.
+- The all8296-record causal-graph objective remains incomplete.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+repository: CultureBotAI/DUFMech
+kind: record
+source:
+  git_revision: 7619bbd5376db6a9527fc767acb61a2a3f0b8bcf
+  state: working_tree
+  snapshot_id: interpro-pfam-duf-2026-10-10
+  inputs:
+  - path: curation/families/PF01986.yaml
+    sha256: 3a23ef38a59653e3287549d327720c5c408ce1e832a0fd031ce4caa14c25d170
+    role: context
+  - path: data/families/PF01986.yaml
+    sha256: 5deb1bcb8d106ae5a72f747b58c99e290febb66776177ae806dc6b3943bb4e47
+    role: target
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.json
+    sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.manifest.json
+    sha256: 31c07ffb6a169c851ea0e6e9dd527a10c04028eafeb29187bd62dc2ae848696e
+    role: context
+  - path: data/worklists/interpro-pfam-duf-2026-10-10.tsv
+    sha256: be023c8dd9d8d3864926b5032d6f7e87a884b1a567391696822dbbecc692dae7
+    role: context
+  - path: reports/causal_graphs/inventory.json
+    role: context
+    sha256: 6ca7adaa191d2a7be926e2481fef1b9a85e8e6321cdef018fdfd6aa8426e7375
+  - path: reviews/structured/20261016T093144Z-pf01986-repair-hypotheses/review.yaml
+    role: context
+    sha256: 4188a8b8ac4678c5f4ba8a409244136dae7033d30950a677c07ee5e9f6b936f1
+  - path: evidence/PF01986/coverage-and-exclusions.txt
+    role: context
+    sha256: c66e1e179fecfa2d32540b71889387247fb98406015edaaf1a5ee67947461851
+  - path: evidence/PF01986/dunin-horkawicz-2006.txt
+    role: context
+    sha256: 87efe2247a4fb3137438da568c8950b3623093fbe75417a9855038bf0e2690da
+  - path: evidence/PF01986/reference-identity.txt
+    role: context
+    sha256: 17705a0979ae79abaff49833510e538b18481e3645798cc7558f0cd4731c6abb
+  - path: history/records/PF01986/2026-10-16T091811Z-codex-6539d2.yaml
+    role: context
+    sha256: dfa36992b2c47c66d1149c2086d8711f9c0e06f92f7ca946f60b57da995d20b4
+  - path: history/records/PF01986/2026-10-16T091811Z-codex-de36d2.yaml
+    role: context
+    sha256: a02c4f1ed87efa5b218d5568d1bf1826b73566254065904e0f4ef437b19b1b8b
+targets:
+- target_id: PF01986
+  path: data/families/PF01986.yaml
+  label: PF01986
+  kind: generated
+  record_class: FamilyRecord
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01986.yaml
+    role: Maintained scientific overlay; create only with authorized curation.
+  - repository: CultureBotAI/DUFMech
+    path: src/dufmech/records.py
+    role: Projection generator; frozen snapshot identity is not hand-edited.
+  semantic_digest:
+    algorithm: dufmech-record-content-v1
+    sha256: b3c60716859be55d21abc70488df04feb0dffd3658316dd8a5de3408614093d4
+    description: Canonical JSON SHA-256 of effective FamilyRecord excluding only curation_status,
+      review_id and curation_events.
+schema_version: 1.0.0
+review_id: 20261016T095834Z-pr280-adversarial-review
+title: PR280 adversarial review of PF01986 repair hypotheses
+started_at: '2026-10-16T09:49:38Z'
+finished_at: '2026-10-16T09:58:34Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  model: GPT-5
+  independence: self_review
+  independence_basis: Same agent performing a fresh adversarial pass over the complete
+    scoped diff, primary COG1833 text, mapping evidence, native gates and preview.
+    Not independent expert approval.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: NEEDS_FOLLOWUP
+scientific_review: true
+summary: The two MJ0613 alternatives are supported as explicitly hypothetical relations,
+  not observed mechanisms. No new unsupported polarity, conjunction or domain attribution
+  was found in this scoped pass. Research findings remain open in issues277/278. Issue279
+  separately tracks the reproduced publication prerequisite and must be fixed before
+  merge.
+scope:
+  description: Adversarial scientific and representation review of the two pending
+    PF01986 graphs for PR280.
+  selection: Complete PF01986 curation diff and retained source evidence, plus native
+    corpus checks; not a family-wide literature census.
+  coverage: partial
+  population_size: 1
+  reviewed_target_ids:
+  - PF01986
+  exclusions:
+  - target: All family members and missing primary studies
+    reason: No additional literature census or activity experiments performed.
+  - target: Final canonical publication and full release QC
+    reason: Source checkpoint, pin capture, canonical rendering and final QC follow
+      this source review; issue279 is a mandatory release gate, not waived by this
+      review.
+  - target: PF01987
+    reason: Uncommitted external research only; no PF01987 changes in PR280.
+checks:
+- check_id: focused
+  name: focused
+  command: uv run --locked --extra dev pytest -q tests/test_causal_graphs.py tests/test_qc.py
+    tests/test_record_review_contract.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 56 passed in 101.43 seconds.
+  target_ids:
+  - PF01986
+  evidence_ids:
+  - validation
+- check_id: native
+  name: native
+  command: just validate-all validate-schema
+  status: passed
+  required: true
+  exit_code: 0
+  summary: 8296 valid records with zero drift; native history/review/schema validation
+    passed before this new report.
+  target_ids:
+  - PF01986
+  evidence_ids:
+  - validation
+- check_id: integrity
+  name: integrity
+  command: uv run --locked --with pymupdf --with biopython python /private/tmp/duf-pf01986-20261016-BPrjkp/verify_preview.py
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Exact CDS translation, Pfam233-343 reference mapping, seven source hashes,
+    two quotation anchors, exclusion of PF06821 and all8296 manifest hashes passed.
+    Other8295 records and prior retained artifacts were unchanged before the source
+    commit.
+  target_ids:
+  - PF01986
+  evidence_ids:
+  - validation
+- check_id: preview
+  name: preview
+  command: node /private/tmp/duf-pf01986-20261016-BPrjkp/browser.cjs
+  status: passed
+  required: true
+  exit_code: 0
+  summary: Fresh 1440px/390px checks passed for both hypotheses, two evidence disclosures,
+    support labels, alternative interpretation and document overflow; no JS errors.
+    This preview is explicitly unpinned.
+  target_ids:
+  - PF01986
+  evidence_ids:
+  - validation
+- check_id: publication-prerequisite
+  name: Existing site pins reject the changed record
+  command: uv run --locked python -m dufmech.site_sources check
+  status: failed
+  required: false
+  exit_code: 1
+  summary: Reproduced changed data/families/PF01986.yaml rejection. Issue279 requires
+    retained checkpoint, canonical regeneration and full QC before merging. Outside
+    this completed scientific-review scope, not an acceptable release state.
+  target_ids:
+  - PF01986
+  evidence_ids:
+  - publication
+evidence:
+- evidence_id: primary
+  kind: primary_source
+  reference: https://link.springer.com/article/10.1186/1471-2164-7-98
+  accessed_at: '2026-10-16T09:58:34Z'
+  support: supports
+  summary: 'Re-read COG1833 section: the two repair routes are alternatives proposed
+    from comparative analysis. The graphs preserve joint conditions, uncertainty and
+    nonsequential topology.'
+- evidence_id: identity
+  kind: record_content
+  reference: evidence/PF01986/reference-identity.txt
+  accessed_at: '2026-10-16T09:58:34Z'
+  support: supports
+  summary: Recomputed exact reference/CDS identity and Pfam interval from retained
+    public downloads. N-terminal Endonuclease III chemistry and its Fe-S sites are
+    not assigned to the DUF.
+- evidence_id: coverage
+  kind: record_content
+  reference: evidence/PF01986/coverage-and-exclusions.txt
+  accessed_at: '2026-10-16T09:58:34Z'
+  support: supports
+  summary: Incomplete original-source/member coverage remains explicit, including
+    the unresolved M.maripaludis identifier pair. Open GitHub issues277/278 retain
+    concrete acceptance criteria.
+- evidence_id: validation
+  kind: validation
+  reference: data/families/PF01986.yaml
+  accessed_at: '2026-10-16T09:58:34Z'
+  support: supports
+  summary: Focused tests, full native schema/history/review gates, independent hash/translation
+    checks and fresh local browser checks passed; status remains IN_PROGRESS.
+- evidence_id: publication
+  kind: validation
+  reference: conf/site_source_pins.json
+  accessed_at: '2026-10-16T09:58:34Z'
+  support: supports
+  summary: The current pin ledger fails against changed PF01986 bytes. This is an
+    expected but mandatory release blocker recorded in issue279.
+- evidence_id: duf-projection-pf01986
+  kind: record_content
+  reference: data/families/PF01986.yaml
+  locator: dufmech-reviewed-projection-v1
+  accessed_at: '2026-10-16T09:58:34Z'
+  support: context_only
+  snapshot_sha256: 5deb1bcb8d106ae5a72f747b58c99e290febb66776177ae806dc6b3943bb4e47
+  quote: "id: Pfam:PF01986\npfam_id: PF01986\nname: Domain of unknown function DUF123\n\
+    short_name: DUF123\nseed_status: UNKNOWN_CANDIDATE\ncharacterization_status: UNSCORED\n\
+    curation_status: IN_PROGRESS\nsource_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/PF01986\n\
+    counters:\n  proteins: 924\n  matches: 931\n  proteomes: 912\n  taxa: 1943\n \
+    \ structures: 0\n  alphafold_models: 790\n  domain_architectures: 10\nprovenance:\n\
+    \  snapshot_id: interpro-pfam-duf-2026-10-10\n  path: data/worklists/interpro-pfam-duf-2026-10-10.json\n\
+    \  sha256: 17fb625876c9326ed284263a47bcd84e0d7844a31c040dc06cd2260c36f1c383\n\
+    \  generated_at: '2026-10-10T07:44:21.614711Z'\n  source_url: https://www.ebi.ac.uk/interpro/api/entry/pfam/\n\
+    interpro_id: InterPro:IPR002837\ndescription: This archaebacterial domain has\
+    \ no known function. It is attached to an endonuclease domain\n  in [swissprot:Q58030].\
+    \ The domain contains several conserved cysteines and histidines. This suggests\n\
+    \  that the domain may be a zinc binding nucleic acid interaction domain (Bateman\
+    \ A unpubl.).\ncuration_history: history/records/PF01986\ndiscussions:\n- discussion_id:\
+    \ duf123-experimental-discrimination\n  prompt: Establish whether the appended\
+    \ DUF123 region contributes nuclease activity and distinguish the\n    published\
+    \ repair alternatives.\n  kind: CURATION_TODO\n  status: OPEN\n  rationale: The\
+    \ adopted relations are computationally motivated hypotheses, not observed reactions\
+    \ or\n    proof of domain sufficiency.\n  evidence:\n  - reference: doi:10.1186/1471-2164-7-98\n\
+    \    supports: PARTIAL\n    evidence_source: primary_publication\n    explanation:\
+    \ COG1833 subsection proposes alternative lesion-flanking cleavage and nick-to-gap\
+    \ routes\n      without a DUF123 activity assay.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-16'\n  notes: Authenticate full-length and separated-domain constructs,\
+    \ substrate/product identities and protein\n    integrity. Establish catalytic\
+    \ residues, metal dependence and physiological repair roles independently.\n \
+    \   Do not transfer HAMAP Endonuclease III chemistry or N-terminal Fe-S sites\
+    \ into the DUF.\n- discussion_id: duf123-primary-and-member-coverage\n  prompt:\
+    \ Extend the primary-source review and resolve additional COG1833 member mappings.\n\
+    \  kind: CURATION_TODO\n  status: OPEN\n  rationale: The retained scope is one\
+    \ reference fusion and two alternatives, not complete family characterization.\n\
+    \  evidence:\n  - reference: doi:10.1186/1471-2164-7-98\n    supports: PARTIAL\n\
+    \    evidence_source: primary_publication\n    explanation: MJ0613 is explicitly\
+    \ identified; the additional M. maripaludis GI/locus pairing and standalone\n\
+    \      partners require separate authentication.\n  posed_by: Codex\n  posed_date:\
+    \ '2026-10-16'\n  notes: Original 1999 full text, other primary member studies\
+    \ and systematic citation coverage remain\n    incomplete. The CMASA/3BDV hit\
+    \ resolves to PF06821/DUF1234 and is excluded. See evidence/PF01986/coverage-and-exclusions.txt;\n\
+    \    access failures are not negative evidence.\ncausal_graphs:\n- graph_id: mj0613-lesion-flanking-cleavage-hypothesis\n\
+    \  title: Proposed joint MJ0613 activities enable lesion-flanking DNA cleavage\n\
+    \  scope: Published COG1833 proposal instantiated for the named MJ0613 fusion,\
+    \ not an experimentally tested\n    construct or every DUF123 member.\n  context:\
+    \ Methanocaldococcus jannaschii DSM 2661 reference; joint Endonuclease III AP-lyase\
+    \ and appended\n    candidate GIY-YIG activities on damaged DNA. No assay temperature,\
+    \ buffer, metal or compartment was\n    established for this proposal.\n  family_mapping:\
+    \ Q58030 entry133/sequence2 and ENA AAB98606.1 encode the same 344-aa MJ0613 reference;\n\
+    \    PF01986 is 233-343 inclusive. The whole fusion also contains the N-terminal\
+    \ Endonuclease III region;\n    evidence/PF01986/reference-identity.txt. Reference\
+    \ mapping is not domain sufficiency.\n  scope_status: HYPOTHETICAL\n  taxon: NCBITaxon:243232\n\
+    \  limitations: A candidate explanation, not measured cleavage, verified base-excision\
+    \ repair or UvrC-equivalent\n    specificity. No lesion identity, cleavage positions,\
+    \ strand polarity, active residues or metal requirement\n    is assigned. The\
+    \ separate nick-to-gap graph is an alternative, not a subsequent step.\n  nodes:\n\
+    \  - node_id: joint_activities\n    label: Proposed MJ0613 AP-lyase plus appended\
+    \ GIY-YIG activities on damaged DNA\n    node_type: ACTIVITY\n    grounding:\n\
+    \    - UniProtKB:Q58030\n  - node_id: flanking_cleavage\n    label: Proposed DNA\
+    \ cleavage on both sides of a lesion\n    node_type: PROCESS\n  edges:\n  - edge_id:\
+    \ enables-flanking-cleavage\n    subject: joint_activities\n    predicate: enables\n\
+    \    object: flanking_cleavage\n    mechanism: The source proposes cooperation\
+    \ of the two activities by analogy to UvrC. Both prerequisites\n      remain in\
+    \ one node; neither activity alone is asserted sufficient and no catalytic microsteps\
+    \ are\n      inferred.\n    directness: UNRESOLVED\n    support: HYPOTHESIZED\n\
+    \    evidence_kind: COMPUTATIONAL\n    evidence:\n    - reference: doi:10.1186/1471-2164-7-98\n\
+    \      source_url: https://link.springer.com/article/10.1186/1471-2164-7-98\n\
+    \      snippet: could use the AP lyase and nuclease functions\n      explanation:\
+    \ COG1833 subsection, PDF p.11 left column, H1. Relation is an explicit proposal\
+    \ motivated\n        by sequence/domain analysis, not an observed effect.\n  \
+    \    cache_path: evidence/PF01986/dunin-horkawicz-2006.txt\n      cache_sha256:\
+    \ 87efe2247a4fb3137438da568c8950b3623093fbe75417a9855038bf0e2690da\n- graph_id:\
+    \ mj0613-nick-to-gap-hypothesis\n  title: Proposed MJ0613 GIY-YIG exonuclease\
+    \ activity extends an AP-lyase nick\n  scope: Alternative COG1833 repair proposal\
+    \ instantiated for the MJ0613 fusion; no isolated DUF123 assay\n    or family-wide\
+    \ role is asserted.\n  context: Same M. jannaschii reference, conditional on an\
+    \ Endonuclease III AP-lyase-generated nick and\n    candidate appended GIY-YIG\
+    \ exonuclease activity. No experimentally established reaction conditions\n  \
+    \  or processivity.\n  family_mapping: Q58030 entry133/sequence2, 344 aa; exact\
+    \ ENA AAB98606.1 translation; PF01986 reference\n    match 233-343. UniProt GIY-YIG\
+    \ feature 229-328 is a different annotation interval. See evidence/PF01986/reference-identity.txt.\n\
+    \  scope_status: HYPOTHETICAL\n  taxon: NCBITaxon:243232\n  limitations: Alternative\
+    \ to lesion-flanking cleavage, not a linked observed pathway. Exonuclease direction,\n\
+    \    gap length, lesion substrate, catalytic residues, cofactors and cellular\
+    \ role remain unresolved. No\n    causal claim about the C-terminal Cys/His motif\
+    \ follows.\n  nodes:\n  - node_id: nick_and_candidate_activity\n    label: AP-lyase-generated\
+    \ nick plus proposed MJ0613 GIY-YIG exonuclease activity\n    node_type: ACTIVITY\n\
+    \    grounding:\n    - UniProtKB:Q58030\n  - node_id: gapped_dna\n    label: Proposed\
+    \ single-stranded DNA gap extending from that nick\n    node_type: STATE\n  edges:\n\
+    \  - edge_id: produces-gap-from-nick\n    subject: nick_and_candidate_activity\n\
+    \    predicate: produces\n    object: gapped_dna\n    mechanism: The authors propose\
+    \ exonucleolytic processing from the Endonuclease III nick as another\n      possible\
+    \ GIY-YIG role. The substrate and candidate activity are joint conditions, not\
+    \ independently\n      sufficient causes.\n    directness: UNRESOLVED\n    support:\
+    \ HYPOTHESIZED\n    evidence_kind: COMPUTATIONAL\n    evidence:\n    - reference:\
+    \ doi:10.1186/1471-2164-7-98\n      source_url: https://link.springer.com/article/10.1186/1471-2164-7-98\n\
+    \      snippet: creates a single-stranded gap starting from the nick\n      explanation:\
+    \ COG1833 subsection, PDF p.11 left column, H2. Explicit alternative mechanism\
+    \ proposal;\n        no product-identification or enzyme perturbation experiment\
+    \ is supplied.\n      cache_path: evidence/PF01986/dunin-horkawicz-2006.txt\n\
+    \      cache_sha256: 87efe2247a4fb3137438da568c8950b3623093fbe75417a9855038bf0e2690da\n\
+    curation_events:\n- timestamp: '2026-10-16T09:18:11Z'\n  curator: Codex\n  action:\
+    \ REVIEW\n  outcome: needs_followup\n  summary: Retain scoped scientific review\
+    \ of DUF123 repair hypotheses and unresolved evidence.\n  history_record: history/records/PF01986/2026-10-16T091811Z-codex-6539d2.yaml\n\
+    \  event_index: 0\n  llm_assisted: true\n- timestamp: '2026-10-16T09:18:11Z'\n\
+    \  curator: Codex\n  action: CREATE\n  outcome: changed\n  summary: Curate two\
+    \ explicitly hypothetical MJ0613 repair alternatives for DUF123.\n  history_record:\
+    \ history/records/PF01986/2026-10-16T091811Z-codex-de36d2.yaml\n  event_index:\
+    \ 0\n  llm_assisted: true\n"
+  summary: Byte-exact projection retained at save for digest verification, not scientific
+    assessment.
+assessments:
+- assessment_id: identity-and-scope
+  area: identity
+  topic: identity-and-scope
+  outcome: supported
+  summary: Reference fusion, domain boundaries and excluded false-family lead are
+    explicit and independently checked.
+  target_ids:
+  - PF01986
+  evidence_ids:
+  - identity
+  - validation
+- assessment_id: causal-claims
+  area: graph
+  topic: causal-claims
+  outcome: supported
+  summary: Both relations retain HYPOTHESIZED/UNRESOLVED/COMPUTATIONAL labels. They
+    do not assert individual prerequisites are sufficient, a completed pathway, experimental
+    activity or family-wide transfer.
+  target_ids:
+  - PF01986
+  evidence_ids:
+  - primary
+  - validation
+- assessment_id: evidence-and-preservation
+  area: representation
+  topic: evidence-and-preservation
+  outcome: supported
+  summary: Minimal hash-checked quotations and native generated ownership preserve
+    identity, prior artifacts and other records. No scientific-status promotion occurs.
+  target_ids:
+  - PF01986
+  evidence_ids:
+  - identity
+  - validation
+- assessment_id: coverage-limits
+  area: provenance
+  topic: coverage-limits
+  outcome: supported
+  summary: Research gaps are retained as OPEN findings and separate from the publication
+    repair; the review does not claim exhaustive coverage or merge readiness.
+  target_ids:
+  - PF01986
+  evidence_ids:
+  - coverage
+  - publication
+findings:
+- finding_id: experimental-discrimination
+  issue_key: pf01986-experimental-discrimination
+  title: Establish experimental activity and discriminate repair alternatives
+  description: 'The inspected sources do not supply DUF123 activity measurements.
+    The two proposed routes remain hypotheses; exact substrates, products, catalytic
+    residues, metals and physiological roles are unresolved. This is a qualified research
+    gap, not evidence that the family has no function. Reassessed during PR280; tracked
+    at https://github.com/CultureBotAI/DUFMech/issues/277. Remains open: retaining
+    qualified hypotheses does not establish missing experimental or member evidence.'
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01986
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - primary
+  - identity
+  - coverage
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01986.yaml
+    role: Maintained scientific overlay; regenerate with native writer after evidence-backed
+      changes.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261016T093144Z-pf01986-repair-hypotheses
+    finding_id: experimental-discrimination
+- finding_id: primary-and-member-coverage
+  issue_key: pf01986-primary-and-member-coverage
+  title: Complete original-source review and additional member mappings
+  description: 'Aravind1999 full text, other primary member studies and systematic
+    citation coverage remain incomplete. The M. maripaludis GI45358100/MMP0538 pairing
+    needs authentication before graph transfer. The 3BDV hit is resolved to PF06821
+    and excluded, not counted as a DUF123 experiment. Reassessed during PR280; tracked
+    at https://github.com/CultureBotAI/DUFMech/issues/278. Remains open: retaining
+    qualified hypotheses does not establish missing experimental or member evidence.'
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  target_ids:
+  - PF01986
+  field_paths:
+  - causal_graphs
+  - discussions
+  evidence_ids:
+  - primary
+  - identity
+  - coverage
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01986.yaml
+    role: Maintained scientific overlay; regenerate with native writer after evidence-backed
+      changes.
+  previous_occurrences:
+  - repository: CultureBotAI/DUFMech
+    review_id: 20261016T093144Z-pf01986-repair-hypotheses
+    finding_id: primary-and-member-coverage
+actions:
+- action_id: research-followups
+  description: Complete issues277/278 with primary evidence, not status or label changes
+    alone.
+  finding_ids:
+  - experimental-discrimination
+  - primary-and-member-coverage
+  target_ids:
+  - PF01986
+  owner_paths:
+  - repository: CultureBotAI/DUFMech
+    path: curation/families/PF01986.yaml
+    role: Maintained scientific overlay; regenerate with native writer after evidence-backed
+      changes.
+  acceptance_checks:
+  - Authenticate exact member and construct identities.
+  - Inspect missing primary sources and domain-specific assay evidence.
+  - Discriminate proposed repair alternatives before strengthening causal support.
+  - Append successor dispositions and canonical history; preserve earlier reviews.
+limitations:
+- Same-agent adversarial review, not independent approval.
+- Two source-backed hypotheses do not establish that either route operates in vivo
+  or across PF01986.
+- Original-source/member and experimental evidence gaps remain open; no new scientific
+  evidence was manufactured to close issues.
+- The optional failed publication check is excluded only from scientific review scope;
+  it remains mandatory before merge.
+- Final post-review history/projection regeneration, canonical Pages, full QC and
+  exact-head/merge-group CI must be verified after this report.
+- The all8296-record causal-graph objective remains incomplete.
+related_reviews:
+- repository: CultureBotAI/DUFMech
+  review_id: 20261016T093144Z-pf01986-repair-hypotheses
+  relationship: Reassesses the same two hypotheses and preserves both open research
+    findings with GitHub follow-ups.
+```

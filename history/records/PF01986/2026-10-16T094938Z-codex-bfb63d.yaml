@@ -1,0 +1,35 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01986
+  path: data/families/PF01986.yaml
+session:
+  id: 2026-10-16T094938Z-codex-bfb63d
+  timestamp: '2026-10-16T09:49:38Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review PF01986 repair hypotheses adversarially for PR280
+  details: Fresh same-agent review of both proposed relations, joint prerequisites,
+    alternate topology, exact reference mapping and preserved uncertainty. Retained
+    20261016T095834Z-pr280-adversarial-review with partial scope, pass_with_limitations
+    and NEEDS_FOLLOWUP; issues277 and278 preserve the open scientific findings. Focused56
+    tests, native validation, independent source hashes and CDS translation, all-record
+    preservation and1440px/390px preview passed. Issue279 tracks the reproduced stale
+    publication pins, also confirmed by initial draft CI. This REVIEW event precedes
+    guarded regeneration and the retained source checkpoint; final fullQC and exact-head/merge-group
+    CI remain mandatory. No REVIEWED promotion or PF01987 adoption.
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/277
+  - https://github.com/CultureBotAI/DUFMech/issues/278
+  - https://github.com/CultureBotAI/DUFMech/issues/279
+  prs:
+  - https://github.com/CultureBotAI/DUFMech/pull/280
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261016T095834Z-pr280-adversarial-review/review.yaml
