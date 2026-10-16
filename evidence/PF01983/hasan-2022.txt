@@ -1,0 +1,107 @@
+Hasan et al. 2022: mutation and partner effects in coupled CofC/D reactions
+PMID:35038903; doi:10.1128/mbio.03501-21; PMCID:PMC8764529.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8764529/
+Retrieved and inspected 2026-10-16 UTC through the public Europe PMC XML and
+supplementaryFiles APIs. XML SHA256
+90112ed17101c9bed089a4b07a1d8e279ec9f11c9b9e1f0841945caa499aca45.
+Article/supplement license: CC BY4.0. Only minimal quotation anchors are retained.
+
+Verbatim anchors:
+"Residues determining substrate specificities of CofC homologs."
+"Role of CofD in substrate specificity"
+The second anchor also appears in the pre-existing PF01933 ledger; it is not
+an independent source. The interpretations below are curator paraphrases.
+
+Actually inspected
+Results s2-2/s2-3/s2-4/s2-8; Methods s4-1 through s4-5; Figures3 and6 viewed
+at full downloaded image size; TableS2B plasmids and TableS3 accession/length
+rows extracted as OOXML and visually checked after LibreOffice PDF rendering.
+TableS2A primer strings were extracted but not all visual primer rows audited.
+TextS2 supplied plasmid pMH43 was translated and compared with RCSB7P97 entity1.
+TableS3 is an accession/organism/length table despite its sequence-oriented
+title; it is not a printout of every full amino-acid sequence.
+
+Source payload SHA256 values
+Figure3 jpg 1edab4233cf03bd66dadb8eefc9acf537a34d54aea52baa8d921a2b32e9c78c0
+Figure6 jpg 8fd1d91f12dd2122d9877441c120a1e1ee290f61f47d8e76209ad7313aeba397
+TableS2 docx 227ecc48e1a236e28e95c655f5ed3561a01dd2118814cbf2689e531f6e0497ca
+TableS3 docx 7a2b42fcd6e5bfae38ff262398bda3719a26e88587930011b4ff9ffb3fbcbe95
+TextS2 docx d68370298e7da8f157ac65c32ba455c956eb552fc3e239a9b414746dd897ea91
+The archive download timed out after300s and has no complete ZIP directory.
+These selected earlier entries were extracted successfully with libarchive
+tar --fast-read (exit0), stopping before the incomplete later member; every
+selected DOCX also passed its internal ZIP CRC test. No completeness claim is
+made for the whole archive or for the unextracted TableS5/other later files.
+
+Construct and assay context
+Synthetic or previous-study constructs carry N-terminal His6 tags; proteins
+were produced in E.coli BL21(DE3) or LOBSTR-BL21 (individual host allocation
+not resolved), induced at OD0.7 with1mM IPTG, then18C for18h. Ni-NTA/PD10
+purification is described; no tag cleavage is assumed. Mutations use native,
+not tagged, numbering. Methods report Sanger verification of constructed
+plasmids; that statement is not independent access to all clone sequences.
+The standard coupled assay has Mjan-CofD as the partner. In50uL:
+100mM HEPES pH7.4,2mM GTP,2mM MgCl2,34uM CofD,26uM CofC, and0.5mM EACH
+competing substrate3-PG,PEP,2-PL. Fo is printed as0.14nM in s4-5; retain the
+unresolved unit rather than silently substitute a plausible concentration.
+No assay temperature is supplied in this subsection; do not import37C from
+Bashiri2019. Products are measured by LC-MS extracted-ion chromatogram AUC,
+normalized relative formation over the linear0-20min interval, n=3 biological
+replicates with SD. These fractions are not absolute rates, turnover numbers,
+binding affinities or direct measurements of CofC's activated intermediates.
+
+Graph mrhiz-mutant-product-fractions-2022, Figure3B
+WT pFS03 is the comparison, with Mjan-CofD held as partner. Individual S162A
+(pMH25), S162E(pMH22), S162G(pMH24), S162Y(pMH23), C95L(pMH66), M91L(pMH77)
+and combined S162G/C95L(pMH68) lower the measured3PG-derived product fraction.
+These are distinct tested interventions, not a chronological causal chain.
+Each input means replacement of WT in the same coupled reaction.
+The visually inspected WT profile is mostly3PG; the alternatives favor2PL,
+with differing PEP fractions. S162G still has a visible3PG contribution, so
+do not describe every S162 replacement as absolute loss. No bar values were
+digitized. The combined S162G/C95L profile has little visible3PG and sizable
+2PL/PEP components; no synergy statistic or absolute zero is inferred.
+Controls/comparators: S162T(pMH26), C95A(pMH67), M91A(pMH76), H145A(pMH74),
+H145T(pMH75) retain predominantly3PG-derived relative profiles. Retained
+fractions do not prove unchanged absolute catalytic activity. See identity
+ledger: paper S162 is E5ASS2 S167; M91/C95/H145 likewise have+5 offsets.
+The paper's model-based binding/pocket explanations are not established by
+these coupled product profiles. Folding, abundance and partner coupling are
+not independently excluded as explanations for mutation effects.
+
+Graph msmeg-double-mutant-product-fractions-2022, Figure3C
+WT pMH10/YP_886732.1 versus G169S/T152H pMH80, with Mjan-CofD and equal
+competing substrates. The double mutant yields a reported19.6%3PG-derived
+fraction; WT has no visible3PG bar. This is not19.6% total conversion.
+Comparators G169S(pMH32), L98C(pMH70), G169S/L98C(pMH69), T152H(pMH82)
+do not acquire the double mutant's3PG output. No unperformed complementation,
+direct binding assay, evolutionary reconstruction or mutant structure is
+invented. Triple G169S/T152H/L98C(pMH81) was reported insoluble; it is NOT a
+purified catalytic negative or evidence that L98C specifically blocks3PG.
+
+Graphs mrhiz-partner-product-fractions-2022 and b3-partner-product-fractions-2022
+Figure6A/B changes ONLY the assayed CofD homolog while retaining the specified
+CofC protein and general standard reaction. Mjan-CofD is replaced with the
+cognate Mrhiz-CofD(pFS02) or B3-CofD(pMH60), respectively. Both comparisons
+increase the relative3PG-derived product fraction and decrease the2PL- and
+PEP-derived fractions. Residual non3PG products are traces, not assumed zero.
+B3 CofC is pMH43/KQH55_09515; do not ground it as sequence-identical E5ASS2.
+Different WT baselines in Figures3 and6 are separate experiments; do not pool
+their relative percentages into a single replicated quantitative estimate.
+
+Graph msmeg-partner-product-fractions-2022, Figure6C
+With Msmeg-FbiD fixed, replace Mjan-CofD(pFS04) with cognate Msmeg-FbiA(pMH59).
+The2PL-derived fraction drops almost entirely while the PEP-derived fraction
+increases to the dominant product. The variable is the downstream partner,
+not an FbiD mutation. This experimentally demonstrates context dependence
+of the coupled assay; it does not directly measure intrinsic FbiD affinity.
+
+Unadopted atomic and transfer interpretations
+Figure3D/FigureS1 are homology/docking models. S162 side-chain direct3PG
+contact in that model is not established by the B3 product-bound structure,
+whose discussed S162 interaction is through backbone. Crystallographic ligand
+contact is not a mutant mechanism or an observed catalytic trajectory.
+Figure6G's channeling cartoon is an explanatory model, not direct evidence of
+a stable complex or transport of a labeled intermediate. The structural,
+nanoDSF and other-family-member branches remain follow-ups. Do not transfer
+the observed fractions to all PF01983 proteins or a native whole-cell pathway.
