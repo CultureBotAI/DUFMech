@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01985
+  path: data/families/PF01985.yaml
+session:
+  id: 2026-10-16T075217Z-codex-898273
+  timestamp: '2026-10-16T07:52:17Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review scoped PF01985 plant-splicing graphs adversarially
+  details: 'Same-agent partial scientific review retained as 20261016T081253Z-pf01985-plant-splicing.
+    Verified 22 new indirect effects, exact CAF translations and reference mappings,
+    genotype/assay/ratio boundaries, 56 focused tests and all-record preservation.
+    Four minor scientific findings remain open: bacterial controls, constructs/folding,
+    broader member coverage and plant allele/sampling controls. Existing coverage
+    finding is partially addressed, not closed. IN_PROGRESS persists; final source
+    publication and full QC remain release gates. Initial history invocation rejected
+    numeric issue/PR arguments before writing; the corrected invocation uses full
+    GitHub URLs.'
+links:
+  issues:
+  - https://github.com/CultureBotAI/DUFMech/issues/274
+  - https://github.com/CultureBotAI/DUFMech/issues/275
+  prs:
+  - https://github.com/CultureBotAI/DUFMech/pull/276
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261016T081253Z-pf01985-plant-splicing/review.yaml

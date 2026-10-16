@@ -1,0 +1,47 @@
+Ostheimer et al. (2003), PMID:12881426, doi:10.1093/emboj/cdg372
+https://pmc.ncbi.nlm.nih.gov/articles/PMC169045/
+Inspected 2026-10-16 UTC: cached primary Results/Methods and Figures2,5,7
+captions/images. Minimal quotation anchor: "splicing". Remaining text is factual
+paraphrase and scoped interpretation, not a full article or copied figure.
+HTML SHA256 83c6bee915d794dde216f1d63d91420e27dff578895d47224df6ecd72ad1d9be
+Figure2 SHA256 5bf92954534623619d3edcc39a908e1f612bb5eaaef179ff2d8a7ec863e998b0
+Figure5 SHA256 5e23dc4d3cee2984205f7f44b09d0706a09f8f6f9809546c804d283c1817fa67
+Figure7 SHA256 c3b92ad302f9ba502ca6da4d489c0197679a948a0c0d48042c4fa6a7cfb210aa
+
+Methods explicitly identifies the assayed CAF1 tissue as caf1-1/caf1-2 from
+a heteroallelic cross, despite generic homozygous wording in Results. CAF2 is
+caf2-1 homozygous. The insertions are Mu8(caf1-1), Mu3(caf1-2), Mu1(caf2-1).
+The first two are near the ORF start and may retain expression; the internal
+caf2 insertion is considered likely null, not a measured absence of protein.
+Lines were propagated through inbred crosses; the exact assayed background,
+age and growth regimen are not assigned by the inspected Methods. The14-day
+B73 seedling conditions describe the library, not these mutant RNA assays.
+
+RNase protection uses6ug WT versus10ug mutant total leaf RNA. Spliced and
+unspliced products support qualitative processing comparisons, not absolute
+normalized transcript counts, numerical kinetic rates or equal raw-band loads.
+Controls include WT, crs2-1, fully albino ribosome-deficient iojap and tRNA.
+No assay replicate/error/statistical summary or transgenic WT rescue is supplied
+for the displayed protection gels in the inspected material.
+
+CAF1 heteroallelic tissue: lower splicing readouts for petD,rps16,ycf3-int1
+are displayed in Figure5B/D; rpl16,trnG,ndhA effects are reported in Results and
+Figure7's summary but their raw gels are not displayed in Figure5.
+CAF2 homozygous tissue: lower ndhB,petB,ycf3-int1 readouts are displayed in
+Figure5C/D; rps12-int1 and ndhA effects are reported in Results/Figure7 only.
+Figure5E also shows lower atpF and rpl2 splicing readouts in CAF2 mutants.
+These subgroup-IIA effects are explicitly separated: iojap phenocopies them,
+and the authors favor secondary plastid-ribosome deficiency over direct CAF2
+splicing action. That proposed mediation is not itself an observed causal edge.
+
+ycf3-int2 is unaffected in the shown CAF comparisons. One co-IP Results
+paragraph incorrectly names ycf3-2 as jointly CAF-dependent; the earlier
+Results, Figure5D and Figure7 consistently identify ycf3-int1. The graphs use
+intron1 and retain this discrepancy rather than silently reproducing the typo.
+CAF1 does not show the displayed CAF2-specific or subgroup-IIA defects, and
+CAF2 does not show the displayed CAF1-specific defects. These are scoped
+negative controls, not evidence that either protein has no other functions.
+
+CRS2/CAF and intron co-IP/two-hybrid results supply context, not a demonstrated
+direct RNA contact, simultaneous single CAF1/CAF2 complex, catalytic step or
+isolated CRM-domain requirement. No all-family transfer is made.
