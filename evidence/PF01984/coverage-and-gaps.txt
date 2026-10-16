@@ -1,0 +1,68 @@
+PF01984 causal coverage and gap ledger
+Research session began2026-10-16T04:56:52Z; Codex.
+
+Scope is one family, former DUF122, not every member experimentally
+characterized. Hidden/ignored-inclusive search over curation,evidence,
+history,reviews,reports,.claude,.agents,docs found no earlier PF01984,
+PDCD5,Sso0352 or MTH1615 curation beyond the structural inventory;
+DUF122-prefix matches for other numbered families were not conflated.
+Frozen source fields are preserved. This overlay remains IN_PROGRESS.
+
+Adopted evidence: selected perturbation assays of human PDCD5 in Xing
+et al., PMID39663456, full XML, relevant Methods/captions, source blots
+and supplement inspected. This is not a systematic literature review.
+Graphs keep cellular co-IP, purified native gels, bead release and
+thermal profiles distinct. Only treatment-induced molecular-complex
+separation/readout effects are classified DIRECT; mutation mechanisms
+remain UNRESOLVED and whole-cell thermal phenotypes INDIRECT. No graph
+transfers the human mechanism to archaeal homologs or every PF01984.
+
+Outstanding evidence and contradictions:
+1. Christendat2000, PMID11017201, DOI10.1038/82823, is the frozen
+   DNA-binding description's source. InterPro resolves the citation, but
+   its actual MTH1615 DNA assay/controls were not fully inspected here.
+2. Lin2019, PMID30713157, DOI10.1107/S2053230X18017673, concerns Sso0352
+   and structures6IQC/6IQO. Indexed source text points to tryptophan
+   fluorescence quenching with DNA. The complete assay and supplement
+   were not available for inspection, so no binding/function edge is
+   imported from the abstract or indexed excerpt.
+3. Burroughs/Aravind2016, DOI10.1093/nar/gkw722, PMC5062991, questions
+   the DNA-binding label and proposes an RNA-associated PSalpha domain
+   using comparative context. This is a computational/contextual lead,
+   not experimental RNA binding or a disproval of every archaeal assay.
+4. Tracy2014, PMID24375412, DOI10.1074/jbc.M113.542159, PMC3924310,
+   reports CCT/PDCD5 and beta-tubulin effects. Metadata and abstract are
+   resolved; full Methods/figures were not independently inspected.
+   Do not treat the 2025 paper's citation as a fresh review of that work.
+5. Wei2026, PMID41506263, DOI10.1016/j.molcel.2025.12.012, reports mouse
+   cilia/flagella and substrate release. Full-text publisher requests
+   failed; indexed Figure2/7 excerpts are leads, not adopted observations.
+   Compare its opening/PhLP2A competition experiments with Xing2025's
+   limited ATPase negative and Tracy2014's folding assays before claiming
+   reconciliation or a contradiction in the same experimental system.
+6. PMID42455925 (class-I HDAC/TRiC work), PDCD5/Tip60/p53/apoptosis
+   papers and yeast Sdd2 remain additional primary coverage, not imported
+   from annotation or searches. The goal still includes those relevant
+   mechanisms and every other family; seven edges do not complete it.
+
+Acquisition limits observed in this session:
+- PMC HTML sometimes returned a browser verification challenge. No
+  challenge was bypassed; the available official API was used instead.
+- Europe PMC XML failed for the2014 and2019 papers. Entrez returned
+  metadata-only XML explicitly disallowing full-text XML download for
+  these papers; this is not evidence that the articles have no methods.
+- Publisher HTML/PDF routes returned403/401 or unavailable responses;
+  the university2014 PDF lead returned404. BioC returned429. No further
+  BioC request was used to evade that limit.
+- A Europe PMC supplement ZIP for Xing2025 timed out after90s and is
+  incomplete; it was not used as evidence. The separate official
+  supplementary PDF and source-data workbooks downloaded successfully.
+- An initially queried PMID24371146 resolved to an unrelated GM-CSF
+  paper and was rejected. Exact PMC3924310 metadata resolves24375412.
+
+Specific follow-ups: audit exact full-length inserts/TRiC preparation;
+resolve ED6g n=5/source-blot versus Methods n=4 numerical summaries;
+recover native-gel Al/F recipe, variant folding controls and independent
+binding constants; test KO rescue and baseline-normalized thermal effects;
+inspect missing original, archaeal and2026 primary assays before adding
+DNA/RNA binding, substrate-release or apoptosis mechanism chains.

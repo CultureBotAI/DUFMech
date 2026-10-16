@@ -1553,14 +1553,17 @@
       ]
     },
     {
-      "curation_status": "SEEDED",
-      "edge_count": 0,
-      "graph_count": 0,
-      "graph_state": "ABSENT",
+      "curation_status": "IN_PROGRESS",
+      "edge_count": 7,
+      "graph_count": 6,
+      "graph_state": "PRESENT",
       "name": "dsDNA_bind",
       "pfam_id": "PF01984",
-      "record_digest": "3a7195c5a41bccfa9c265ed40d0a57ff0cd116e4a4a57c350ed08e7e23a00e70",
-      "scope_statuses": []
+      "record_digest": "7609dbe70546ec5646e4de1abc49a6c227f44f4f4befb8900aa53a70e1b04834",
+      "scope_statuses": [
+        "MECHANISTIC",
+        "PHENOTYPIC"
+      ]
     },
     {
       "curation_status": "SEEDED",
@@ -83302,8 +83305,8 @@
     }
   ],
   "graph_states": {
-    "ABSENT": 8164,
-    "PRESENT": 132
+    "ABSENT": 8163,
+    "PRESENT": 133
   },
   "kind": "structural_inventory_not_scientific_review",
   "records": 8296

@@ -1,0 +1,254 @@
+pfam_id: PF01984
+curation_status: IN_PROGRESS
+curation_history: history/records/PF01984
+discussions:
+- discussion_id: pf01984-assay-and-construct-limits
+  prompt: Resolve physical constructs, replicate accounting and variant-specific mechanisms before assigning atomic causality.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: Reference coordinates are verified, but mutational association readouts do not isolate a contact mechanism or binding constant.
+  evidence:
+  - reference: PMID:39663456
+    supports: PARTIAL
+    evidence_source: primary_methods_captions_source_blots_and_supplement
+    explanation: ED6 has five co-IP source replicates and a five-replicate caption, while Methods reports four; native-gel Al/F concentrations and complete physical inserts remain unresolved.
+  posed_by: Codex
+  posed_date: '2026-10-16'
+  notes: See evidence/PF01984/identity-and-coordinates.txt and xing-2025-tric-contexts.txt. All five substituted reference residues lie in PF01984 match9-114 on O14737 sequence3. Full proteins were tested. RKK cellular expression is low; no cellular RKK binding-loss edge is asserted. KO thermal profiles lack established target rescue and have a tubulin baseline difference.
+- discussion_id: pf01984-family-and-primary-coverage
+  prompt: Extend archaeal, earlier human and newer mouse primary evidence without conflating DNA binding, TRiC association, substrate release and apoptosis.
+  kind: CURATION_TODO
+  status: OPEN
+  rationale: PF01984 is former DUF122; its frozen DNA-binding label is not a complete or universally experimentally verified functional description.
+  evidence:
+  - reference: PMID:11017201
+    supports: PARTIAL
+    evidence_source: verified_interpro_primary_citation
+    explanation: Resolves PUB00008047 to the original archaeal structural-proteomics paper; its DNA assay was not fully inspected.
+  - reference: PMID:30713157
+    supports: PARTIAL
+    evidence_source: primary_abstract_and_indexed_lead
+    explanation: Sso0352 structure and DNA-quenching lead require complete assay and supplement inspection.
+  - reference: PMID:24375412
+    supports: PARTIAL
+    evidence_source: verified_primary_metadata_and_abstract
+    explanation: Earlier CCT and beta-tubulin study remains a full-text follow-up, not evidence imported through the later paper.
+  - reference: PMID:41506263
+    supports: PARTIAL
+    evidence_source: primary_metadata_and_indexed_lead
+    explanation: Mouse substrate-release and ciliogenesis results require full Methods and figure review before integration.
+  posed_by: Codex
+  posed_date: '2026-10-16'
+  notes: evidence/PF01984/coverage-and-gaps.txt records access failures, the PSalpha/RNA-context alternative and further HDAC/apoptosis/yeast leads. The Xing2025 ATPase negative is condition-specific, not a universal lack of regulation. Family coverage is incomplete.
+causal_graphs:
+- graph_id: human-pdcd5-il-coip-2025
+  title: PDCD5 I93G/L96G lowers normalized CCT1 co-immunoprecipitation
+  scope: Xing2025 ED6f/g, full-length human PDCD5-Flag WT versus combined I93G/L96G in HEK293F.
+  context: Constructs expressed48h;500ug clarified lysate with20uL anti-Flag M2 beads,1h at4C,three washes. PBS pH7.4,0.1%IGEPAL,5mM MgCl2,PMSF/inhibitors. CCT1 IP divided by PDCD5 IP, normalized to WT; input/empty-construct and GAPDH controls.
+  family_mapping: O14737 sequence3,125aa,NCBITaxon9606 has PF01984 match9-114. I93 and L96 verified by direct sequence indexing. Full Flag-tagged protein was tested; no isolated-domain sufficiency or physical-insert authentication.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:9606
+  limitations: Association readout, not a folding rate or atomic contact mechanism. ED6 caption/source images show5replicates; Methods numerical summary says4. No uniform complete binding loss is claimed; folding/localization effects are not excluded. RKK co-IP is excluded because its expression is low.
+  nodes:
+  - node_id: il-substitution
+    label: Replace PDCD5-Flag WT by I93G/L96G
+    node_type: PERTURBATION
+    grounding: [UniProtKB:O14737]
+  - node_id: normalized-cct1-ip
+    label: CCT1 co-IP per recovered PDCD5-Flag
+    node_type: STATE
+    grounding: [UniProtKB:P17987]
+  edges:
+  - edge_id: il-lowers-coip
+    subject: il-substitution
+    predicate: decreases
+    object: normalized-cct1-ip
+    mechanism: The combined substitution lowers the normalized CCT1 association readout compared with WT in the stated cell assay. Individual residue necessity, hydrophobic-contact causation and downstream folding effects are not resolved.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39663456
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11754096/
+      snippet: reduced its interaction
+      explanation: Par9, ED6f/g, Methods Par30/32 and MOESM16 source images1-3; five displayed replicates substantiate the qualitative comparison while the n/summary discrepancy remains explicit.
+      cache_path: evidence/PF01984/xing-2025-tric-contexts.txt
+      cache_sha256: 45b497097e21133710e221cc6363447e43bdef4c4c6eba6ee17f800e079601e6
+- graph_id: human-pdcd5-rkk-native-2025
+  title: Recombinant PDCD5 R55A/K63A/K66A lowers TRiC-associated signal
+  scope: Xing2025 ED6h, full-length human PDCD5-His6 triple mutant versus WT with recombinant human TRiC.
+  context: PDCD5 produced in E.coli Rosetta DE3, nickel/SEC purification;0-3uM PDCD5 with300nM TRiC,20min at25C without ATP. Buffer50mM Tris pH7.4,100mM KCl,5mM MgCl2,10%glycerol,1mM TCEP; native immunoblots for PDCD5/CCT8.
+  family_mapping: O14737 sequence3 has PF01984 match9-114; R55,K63,K66 verified in that interval. Whole His6-tagged proteins, not the isolated domain or three separate single mutants. Exact inserts/TRiC preparation details remain unauthenticated.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:9606
+  limitations: Binding-readout loss has unresolved molecular directness; no Kd, zero-binding or electrostatics-only claim. Folding and antibody-response alternatives are not fully excluded. Caption reports2independent experiments; one titration series is displayed in source data.
+  nodes:
+  - node_id: rkk-substitution
+    label: Replace PDCD5-His6 WT by R55A/K63A/K66A
+    node_type: PERTURBATION
+    grounding: [UniProtKB:O14737]
+  - node_id: pdcd5-complex-signal
+    label: PDCD5 native-gel signal at the TRiC complex
+    node_type: STATE
+  edges:
+  - edge_id: rkk-lowers-native-association
+    subject: rkk-substitution
+    predicate: decreases
+    object: pdcd5-complex-signal
+    mechanism: At the tested nonzero PDCD5 concentrations, the triple-mutant preparation gives much less PDCD5 signal co-migrating with TRiC than WT, with CCT8 tracking the complex. The joint residue substitution is not decomposed into independent causes.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39663456
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11754096/
+      snippet: severely impaired
+      explanation: Par9, ED6h, Methods Par27/29 and MOESM16 image4. The purified assay is kept separate from low cellular RKK expression.
+      cache_path: evidence/PF01984/xing-2025-tric-contexts.txt
+      cache_sha256: 45b497097e21133710e221cc6363447e43bdef4c4c6eba6ee17f800e079601e6
+- graph_id: human-pdcd5-il-early-native-2025
+  title: PDCD5 I93G/L96G lowers early TRiC-associated native-gel signal
+  scope: Xing2025 ED6i/j;10min comparison of full-length human PDCD5-His6 WT and combined I93G/L96G.
+  context: PDCD5 WT/IL3uM with recombinant human TRiC300nM at25C in50mM Tris pH7.4,100mM KCl,5mM MgCl2,10%glycerol,1mM TCEP; native PDCD5/CCT8 immunoblots over10,15,20,30min.
+  family_mapping: O14737 sequence3,PF01984 match9-114 contains verified I93/L96. Full recombinant His6-tagged protein from E.coli Rosetta DE3; exact physical insert and TRiC preparation not authenticated.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:9606
+  limitations: The edge is the early10min readout, not permanent loss or a measured association/dissociation rate constant. Later IL bands approach WT. Caption reports n=2 and SEM; one displayed blot series was inspected. Variant conformation and detection alternatives remain unresolved.
+  nodes:
+  - node_id: il-substitution
+    label: Replace PDCD5-His6 WT by I93G/L96G
+    node_type: PERTURBATION
+    grounding: [UniProtKB:O14737]
+  - node_id: ten-minute-complex-signal
+    label: PDCD5 native-complex signal after10min
+    node_type: STATE
+  edges:
+  - edge_id: il-lowers-early-signal
+    subject: il-substitution
+    predicate: decreases
+    object: ten-minute-complex-signal
+    mechanism: In the displayed early comparison the combined mutant gives less TRiC-associated PDCD5 signal than WT. The timecourse is compatible with delayed association but does not isolate a kinetic constant or individual contact mechanism.
+    directness: UNRESOLVED
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39663456
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11754096/
+      snippet: binding kinetics
+      explanation: Par9, ED6i/j, Methods Par29 and MOESM16 image5; the graph retains the measured early direction without extrapolating it to later equilibrium.
+      cache_path: evidence/PF01984/xing-2025-tric-contexts.txt
+      cache_sha256: 45b497097e21133710e221cc6363447e43bdef4c4c6eba6ee17f800e079601e6
+- graph_id: human-pdcd5-atpalfx-bead-release-2025
+  title: ATP/AlFx treatment releases TRiC from immobilized PDCD5
+  scope: Xing2025 ED7h-j; PDCD5-Flag/TRiC captured from HEK293F and treated on anti-Flag beads.
+  context: Captured complex incubated1h at37C in lysis buffer with1mM ATP,5mM Al(NO3)3,30mM NaF,then three treatment-buffer washes; matched no-ATP/AlFx control. Western blot quantifies supernatant/bead CCT1, n=4,SD.
+  family_mapping: Human PDCD5 reference O14737 sequence3,125aa,PF01984 match9-114; full Flag-tagged protein and endogenous human TRiC, not isolated domain. Physical insert/tag linker not independently authenticated.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:9606
+  limitations: DIRECT refers only to treatment-induced complex separation measured in this cell-free captured preparation. It does not prove an elementary ring-motion mechanism, ATP-alone sufficiency, substrate release, or PDCD5 detachment from the beads. Co-purified components are not exhaustively excluded.
+  nodes:
+  - node_id: combined-atpalfx-treatment
+    label: Joint ATP,Al(NO3)3,NaF treatment of captured complex
+    node_type: PERTURBATION
+  - node_id: released-tric-ratio
+    label: Supernatant-to-bead CCT1 ratio
+    node_type: STATE
+    grounding: [UniProtKB:P17987]
+  edges:
+  - edge_id: treatment-increases-tric-release
+    subject: combined-atpalfx-treatment
+    predicate: increases
+    object: released-tric-ratio
+    mechanism: The combined treatment increases CCT1 in the supernatant relative to bead-associated CCT1, from reported0.38 to1.53 mean ratio. PDCD5 remains predominantly bead-bound with no detectable ratio change, supporting TRiC separation from immobilized PDCD5 at this measured level.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39663456
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11754096/
+      snippet: CCT1 enrichment
+      explanation: Par11, ED7h-j, Methods Par33/35 and MOESM17 image2 show four paired treated/control preparations and the opposite compartment orientation from a PDCD5-release assay.
+      cache_path: evidence/PF01984/xing-2025-tric-contexts.txt
+      cache_sha256: 45b497097e21133710e221cc6363447e43bdef4c4c6eba6ee17f800e079601e6
+- graph_id: human-pdcd5-atpalfx-native-2025
+  title: ATP/AlFx lowers PDCD5 association with purified TRiC
+  scope: Xing2025 ED7k; full-length recombinant human PDCD5-His6 with human TRiC under nucleotide/analogue conditions.
+  context: PDCD5 WT3uM,TRiC300nM,20min at25C in ATPase buffer;1mM nucleotide/analogue. Compare joint ATP/AlFx with no nucleotide; ATP,ATPgammaS,ADP,AMPPCP and TRiC-only lanes are controls. Native PDCD5/CCT8 blots.
+  family_mapping: O14737 sequence3,PF01984 match9-114; full recombinant PDCD5-His6,not an isolated-domain reaction. The exact native-gel Al/F recipe and complete reagent provenance remain unresolved.
+  scope_status: MECHANISTIC
+  taxon: NCBITaxon:9606
+  limitations: Reduced complex-associated PDCD5 signal is observed, not absolute zero binding or an independently demonstrated causal ring-closure step. Other nucleotide conditions do not reproduce this loss. Caption reports two repeats but only one source series is displayed. Do not transfer the bead-release Al/F recipe without verification.
+  nodes:
+  - node_id: atpalfx-condition
+    label: Joint ATP/AlFx condition instead of no nucleotide
+    node_type: PERTURBATION
+  - node_id: native-bound-pdcd5
+    label: PDCD5 signal co-migrating with the TRiC complex
+    node_type: STATE
+    grounding: [UniProtKB:O14737]
+  edges:
+  - edge_id: atpalfx-lowers-associated-signal
+    subject: atpalfx-condition
+    predicate: decreases
+    object: native-bound-pdcd5
+    mechanism: Adding the combined nucleotide/AlFx condition reduces PDCD5 at the TRiC complex band compared with nucleotide-free incubation. This directly measured biochemical association effect is not a claim that PDCD5 opens TRiC or releases its folding substrates.
+    directness: DIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39663456
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11754096/
+      snippet: disrupted
+      explanation: Par11, ED7k, Methods Par29 and MOESM17 image3; residual signal and distinct nucleotide-control lanes constrain the interpretation.
+      cache_path: evidence/PF01984/xing-2025-tric-contexts.txt
+      cache_sha256: 45b497097e21133710e221cc6363447e43bdef4c4c6eba6ee17f800e079601e6
+- graph_id: human-pdcd5-ko-thermal-profiles-2025
+  title: PDCD5-knockout cell line has higher soluble actin and tubulin heat-challenge signals
+  scope: Xing2025 Supplementary Fig.7e-h; commercial HEK293T PDCD5-knockout ab266229 versus WT ab255449.
+  context: DMEM/10%FBS,37C/5%CO2;5e5 cells per PBS aliquot heated3min,lysed40min at4C,aggregates removed. Soluble immunoblots normalized to GAPDH. Actin44.1-62C after37C reference; tubulin56.8-62.1C in a distinct series. n=2 independent experiments,SD.
+  family_mapping: Human PDCD5 reference O14737 sequence3 contains PF01984 at9-114. The whole-gene cell-line comparison does not establish an isolated-domain effect or authenticate the knockout allele. Actin/tubulin antibody readouts are not assigned to a fabricated single substrate accession.
+  scope_status: PHENOTYPIC
+  taxon: NCBITaxon:9606
+  limitations: No established rescue/clone control proves a target-specific pathway here. Higher mean soluble signal is not a folding rate or significant difference at every point. Tubulin starts with different baseline abundance; intrinsic stabilization, TRiC dependence and substrate release remain unresolved. The two temperature series are not one continuous assay.
+  nodes:
+  - node_id: ko-line
+    label: Use commercial PDCD5-knockout rather than WT HEK293T line
+    node_type: PERTURBATION
+    grounding: [UniProtKB:O14737]
+  - node_id: soluble-actin
+    label: Mean GAPDH-normalized soluble actin signal after44.1-62C challenges
+    node_type: PHENOTYPE
+  - node_id: soluble-tubulin
+    label: Mean GAPDH-normalized soluble tubulin signal after56.8-62.1C challenges
+    node_type: PHENOTYPE
+  edges:
+  - edge_id: ko-line-higher-actin
+    subject: ko-line
+    predicate: increases
+    object: soluble-actin
+    mechanism: Under the stated heat-challenge protocol the knockout-line mean actin signal exceeds WT at the measured elevated temperatures. This indirect cell-line phenotype leaves abundance, compensatory pathways and intrinsic stability unresolved.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39663456
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11754096/
+      snippet: stabilization
+      explanation: Par12/36/37 and Supplementary Fig.7e/g on PDF pages10-11. The graph narrows the authors' interpretation to the measured mean soluble-protein signal; n=2 is not universal significance.
+      cache_path: evidence/PF01984/xing-2025-tric-contexts.txt
+      cache_sha256: 45b497097e21133710e221cc6363447e43bdef4c4c6eba6ee17f800e079601e6
+  - edge_id: ko-line-higher-tubulin
+    subject: ko-line
+    predicate: increases
+    object: soluble-tubulin
+    mechanism: The knockout-line mean soluble tubulin signal is higher in the separately measured56.8-62.1C series. The starting normalized signal also differs, so this is not an abundance-independent melting shift or proof of increased tubulin folding.
+    directness: INDIRECT
+    support: OBSERVED
+    evidence_kind: EXPERIMENTAL
+    evidence:
+    - reference: PMID:39663456
+      source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11754096/
+      snippet: stabilization
+      explanation: Par12/36/37 and Supplementary Fig.7f/h on PDF pages10-11; the140%-versus100%-approximate initial difference is retained as a major limitation, not normalized away.
+      cache_path: evidence/PF01984/xing-2025-tric-contexts.txt
+      cache_sha256: 45b497097e21133710e221cc6363447e43bdef4c4c6eba6ee17f800e079601e6
