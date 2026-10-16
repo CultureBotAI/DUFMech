@@ -1,0 +1,25 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01984
+  path: curation/families/PF01984.yaml
+session:
+  id: 2026-10-16T045652Z-codex-7cf5eb
+  timestamp: '2026-10-16T04:56:52Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: CREATE
+  outcome: changed
+  summary: Curate scoped human PDCD5 association and thermal-profile causal effects.
+  details: 'Resolve former DUF122/PF01984 identity and O14737 reference coordinates;
+    inspect Xing2025 primary XML, Methods, source blots and supplementary figures.
+    Add six graphs with seven observed edges: two direct biochemical association/separation
+    effects, three mutation-readout effects with unresolved directness, and two indirect
+    whole-cell thermal phenotypes. Retain five-versus-four replicate discrepancy,
+    baseline and construct limitations, negative ATPase result, missing primary coverage
+    and access failures. No family-wide mechanism, isolated-domain sufficiency, REVIEWED
+    promotion or publication is claimed.'
