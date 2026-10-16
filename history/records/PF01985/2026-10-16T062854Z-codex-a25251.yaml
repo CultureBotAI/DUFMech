@@ -1,0 +1,30 @@
+history_version: 1
+target:
+  kind: record
+  slug: PF01985
+  path: data/families/PF01985.yaml
+session:
+  id: 2026-10-16T062854Z-codex-a25251
+  timestamp: '2026-10-16T06:28:54Z'
+  actors:
+  - type: ai_agent
+    name: Codex
+    model: GPT-5
+    agent_tool: Codex
+events:
+- type: REVIEW
+  outcome: needs_followup
+  summary: Review PF01985 CRM assay graphs with explicit scientific follow-ups
+  details: Completed partial scientific self-review of all twelve adopted relations
+    in eight graphs against three primary studies, Methods and ten figure images.
+    Saved pass_with_limitations/native NEEDS_FOLLOWUP, scientific_review true, with
+    three open minor findings on bacterial controls, construct/folding controls and
+    primary/member coverage. Verified reference mapping, evidence hashes/quotations,8296manifest
+    entries and preservation of8295other records/prior artifacts.56focused tests,
+    native record/history/review/schema checks, inventory/exports and1440px/390px
+    preview passed. Post-generation canonical source pin fails as expected; no new
+    publication. IN_PROGRESS remains, no approval pointer, all8296record goal incomplete.
+    Regenerate the audit index and revalidate after this actual REVIEW event.
+links:
+  urls:
+  - https://github.com/CultureBotAI/DUFMech/blob/main/reviews/structured/20261016T062851Z-pf01985-crm-assay-contexts/review.yaml

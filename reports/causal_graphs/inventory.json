@@ -1566,14 +1566,17 @@
       ]
     },
     {
-      "curation_status": "SEEDED",
-      "edge_count": 0,
-      "graph_count": 0,
-      "graph_state": "ABSENT",
+      "curation_status": "IN_PROGRESS",
+      "edge_count": 12,
+      "graph_count": 8,
+      "graph_state": "PRESENT",
       "name": "CRS1_YhbY",
       "pfam_id": "PF01985",
-      "record_digest": "c54a224d22034fffe34e5ed3e3fc968fbed5185d5c822c785fc48bbe213eec12",
-      "scope_statuses": []
+      "record_digest": "87090e5cee24385443161c1e01ac38438437131ca1171087d388c37af989b0a9",
+      "scope_statuses": [
+        "MECHANISTIC",
+        "PHENOTYPIC"
+      ]
     },
     {
       "curation_status": "SEEDED",
@@ -83305,8 +83308,8 @@
     }
   ],
   "graph_states": {
-    "ABSENT": 8163,
-    "PRESENT": 133
+    "ABSENT": 8162,
+    "PRESENT": 134
   },
   "kind": "structural_inventory_not_scientific_review",
   "records": 8296
