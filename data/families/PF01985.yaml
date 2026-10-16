@@ -77,7 +77,8 @@ discussions:
   posed_date: '2026-10-16'
   notes: Original CRS1 genetics, CAF1/CAF2, CFM2, bacterial structures, archaeal contexts, newer studies
     and supplements remain incomplete. See identity-and-coordinates.txt and coverage-and-gaps.txt; no
-    full-family scientific approval.
+    full-family scientific approval. The footprinting potassium discrepancy (Results330mM versus Methods150mM
+    KOAc) is retained in osters-2005-salt-discrepancy.txt; the actual panel-specific recipe remains unresolved.
 causal_graphs:
 - graph_id: maize-crm3-joint-loop-substitution-2007
   title: Joint CRM3 loop substitution raises the apparent RNA-binding Kd
@@ -456,17 +457,19 @@ causal_graphs:
   title: Mature CRS1 reduces hydroxyl-radical accessibility of atpF RNA
   scope: Ostersetzer2005 Figure6 matched10mMMgCl2 lanes and Figure7 summary; purified mature CRS1 addition
     to intron RNA.
-  context: 40nM intron RNA,0 versus100nM mature CRS1 monomer units,50mMHEPES pH7,150mMKOAc,10mMMgCl2;10min25C
-    then30min on ice. Fe/EDTA/ascorbate/peroxide cleavage10min on ice, primer-extension mapping; protein-free
-    and sequencing controls.
+  context: 40nM intron RNA,0 versus100nM mature CRS1 monomer units,50mMHEPES pH7,10mMMgCl2; Methods specifies150mMKOAc
+    but Results describes330mM potassium, so the actual Figure6 ionic condition is unresolved. Methods
+    incubation10min25C then30min on ice; Fe/EDTA/ascorbate/peroxide cleavage10min on ice, primer-extension
+    mapping; protein-free and sequencing controls.
   family_mapping: Q9FYT6 sequence1,PF01985 matches170-254,352-436,564-651; mature protein begins40 with
     all three CRM domains, GST removed and His6 retained. RNA positions use published atpF intron numbering.
   scope_status: MECHANISTIC
   taxon: NCBITaxon:4577
   limitations: DIRECT denotes measured biochemical protection, not direct contact at every protected nucleotide.
     Compaction and contact assignments are inferred; several intron regions lack high-resolution data.
-    No detected CRS1-promoted splicing was reported in vitro or in E.coli, so no protection-to-splicing
-    edge is asserted.
+    Results/Methods disagree on potassium concentration (evidence/PF01985/osters-2005-salt-discrepancy.txt);
+    no resolved recipe or salt-independent effect is asserted. No detected CRS1-promoted splicing was
+    reported in vitro or in E.coli, so no protection-to-splicing edge is asserted.
   nodes:
   - node_id: mature-crs1-addition
     label: Add100nM mature CRS1 to40nM intron RNA at10mMMgCl2
@@ -510,5 +513,13 @@ curation_events:
   outcome: needs_followup
   summary: Review PF01985 CRM assay graphs with explicit scientific follow-ups
   history_record: history/records/PF01985/2026-10-16T062854Z-codex-a25251.yaml
+  event_index: 0
+  llm_assisted: true
+- timestamp: '2026-10-16T06:51:07Z'
+  curator: Codex
+  action: EDIT
+  outcome: changed
+  summary: Retain conflicting footprinting potassium descriptions found in PR 268 review
+  history_record: history/records/PF01985/2026-10-16T065107Z-codex-a996f0.yaml
   event_index: 0
   llm_assisted: true
